@@ -1,0 +1,8 @@
+<script>
+  import { forwardAttribution } from '../lib/attribution';
+  // Carry only submission-source tags in internal links. No cookies or storage.
+  document.querySelectorAll<HTMLAnchorElement>('a[href]').forEach(link => {
+    const href = link.getAttribute('href');
+    if (href) link.setAttribute('href', forwardAttribution(href, location.href, document.referrer));
+  });
+</script>

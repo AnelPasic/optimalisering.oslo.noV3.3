@@ -1,0 +1,37 @@
+name: medon-web-system-v3.3
+version: 3.3.0
+self_contained: true
+purpose: commercial-web-production-operating-system
+default_frontend: astro
+entrypoints:
+  new_project: START-NEW-PROJECT.md
+  existing_project: START-EXISTING-PROJECT.md
+router: SiteGrowthSKILL.md
+workflow_profiles: [FAST, STANDARD, ADVANCED, EXISTING_SITE]
+implementation_profiles: [astro-static, astro-pages-cms, astro-sanity, nuxt4]
+roles: [OWNER, STRATEGY_CONTENT, DESIGN, IMPLEMENTATION, RED_TEAM]
+material_gates:
+  - project-technical-foundation
+  - commercial-truth
+  - search-aio-page-portfolio
+  - complete-content-argument
+  - cro-information-architecture
+  - visual-system-representative-page
+  - implementation-technical-qa
+  - red-team-launch
+principles:
+  - truth-veto
+  - be-found-understood-believed-chosen
+  - seo-aio-and-cro-parallel-gates
+  - least-complex-architecture
+  - page-existence-before-url
+  - complete-page-content-before-implementation
+  - git-content-source-of-truth
+  - pages-cms-human-editor
+  - implementation-agent-does-not-invent-commercial-content
+  - owner-approves-material-wholes-not-micro-decisions
+  - one-major-visual-variable-at-a-time-when-diagnosing
+  - representative-page-before-scale
+  - red-team-does-not-edit
+  - canary-before-scaled-publishing
+  - measure-and-learn

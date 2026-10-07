@@ -1,0 +1,20 @@
+{
+  "slug": "vilkar",
+  "kind": "utility",
+  "status": "REVIEW_REQUIRED",
+  "seo": { "title": "Vilkår – hva må avtales før videre arbeid? | Medon", "description": "Omfang, pris, fakturering og oppsigelse må avklares før betalt arbeid. Dette utkastet beskriver åpne avtalespørsmål og den gratis sjekkens grenser." },
+  "eyebrow": "Avtalegrunnlag – utkast",
+  "title": "Videre arbeid trenger en tydelig avtale.",
+  "intro": "Dette er en oversikt over hva som må avklares. Det er ikke et ferdig sett med salgs- eller kontraktsvilkår. Medon AS er leverandør av Optimalisering Oslo.",
+  "sections": [
+    { "id": "gratis", "heading": "Den gratis sjekken er avgrenset.", "body": ["Sjekken er en manuell vurdering som gir kort veiledning om hva Medon ville startet med, hvorfor, og om Synlighet, Konvertering eller begge ser mest relevant ut.", "Den inkluderer ikke automatisk poengsum, full revisjon, komplett feilliste, prognose eller gjennomføring. Det er ikke fastsatt et løfte om svartid. Å be om sjekken fastsetter ikke en avtale om betalt arbeid."] },
+    { "id": "omfang", "heading": "Tjeneste, ansvar og leveransegrenser må avtales.", "body": ["Videre arbeid kan gjelde Synlighet, Konvertering, begge eller et større omfang. Hovednettsiden eller nettbutikken er normalt utgangspunktet. Flere nettsteder og ekstra landingssider må vurderes særskilt.", "Avtalen må beskrive hva som inngår og faller utenfor, hvem som gir nødvendige tilganger, og hvem som har ansvar for arbeid i systemer eller hos andre leverandører.", "Medon skal prioritere arbeidet innenfor avtalt omfang. Dette utkastet fastsetter ikke endelige inkluderinger eller leveransekvoter."], "links": [ { "label": "Se tjenestealternativene", "href": "/priser/" } ] },
+    { "id": "pris", "heading": "Pris, fakturering og oppsigelse er ikke fastsatt her.", "body": ["Videre arbeid skal ha avtalt pris og omfang. Offentlige månedspriser, faktureringsregler, eventuell binding og oppsigelsesvilkår er ikke ferdigstilt i dette utkastet.", "Annonsebudsjett og aktuelle eksterne plattformkostnader er utenom den normale tjenesteprisen dersom det ikke uttrykkelig er avtalt noe annet. Aktuelle kostnader må beskrives konkret i tilbudet.", "Denne siden innfører ikke betalingsfrist, bindingstid, oppsigelsesperiode, rabatt eller refusjonsordning."] },
+    { "id": "resultat", "heading": "Arbeid og forventet nytte skal ikke forveksles med garantier.", "body": ["Medon undersøker, gjennomfører avtalt arbeid og følger effekten. Det er ikke lovet bestemte søkeplasseringer, AI-anbefalinger, trafikkmengder eller nye kunder.", "Forutsetninger, rapportering, håndtering av endringer og eventuelle øvrige kontraktsbestemmelser må avklares i en konkret avtale før gjennomføring."] }
+  ],
+  "faq": [
+    { "question": "Er dette gjeldende kontraktsvilkår?", "answer": "Nei. Dette er en oversikt til gjennomgang. Endelig avtale må fastsette pris, omfang, ansvar og øvrige vilkår." },
+    { "question": "Bestiller jeg betalt arbeid ved å sende skjemaet?", "answer": "Den gratis sjekken er inngangen til en mulig vurdering av videre behov. Betalt arbeid må ha eget avtalt omfang og pris." }
+  ],
+  "cta": { "label": "Ta en gratis sjekk", "href": "/vurdering/" }
+}

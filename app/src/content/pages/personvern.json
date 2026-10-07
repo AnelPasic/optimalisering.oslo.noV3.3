@@ -1,0 +1,20 @@
+{
+  "slug": "personvern",
+  "kind": "utility",
+  "status": "REVIEW_REQUIRED",
+  "seo": { "title": "Personvern – utkast for Optimalisering Oslo", "description": "Utkast om opplysningene i kontaktskjemaet og planlagt behandling. Mottaker, lagringstid og endelig personverninformasjon må avklares før lansering." },
+  "eyebrow": "Personvernutkast – krever gjennomgang",
+  "title": "Du skal vite hva som skjer med opplysningene dine.",
+  "intro": "Dette er et utkast for en lokal forhåndsvisning. Det beskriver den planlagte løsningen og åpne spørsmål. Det er ikke en ferdig personvernerklæring for en lansert tjeneste.",
+  "sections": [
+    { "id": "leverandor", "heading": "Medon AS står bak tjenesten.", "body": ["Medon AS er eier og leverandør av Optimalisering Oslo. Endelig personverninformasjon må identifisere behandlingsansvarlig og gi verifiserte kontaktopplysninger for spørsmål og rettigheter.", "Disse kontaktopplysningene og det juridiske behandlingsgrunnlaget er ikke ferdigstilt i dette utkastet."] },
+    { "id": "opplysninger", "heading": "Skjemaet skal be om det som trengs for å forstå henvendelsen.", "body": ["Planlagte felt er nettadresse og e-postadresse for bedriften. Du kan også oppgi et behov og en valgfri melding. Ikke send innlogging, sensitive opplysninger eller personopplysninger om andre.", "Løsningen er også planlagt å lagre begrenset kildeinformasjon sammen med innsendingen: siden henvendelsen kom fra, henvisende nettsted og eventuelle kampanjemerker i nettadressen. Dette skal brukes til å vurdere hvilke innganger som fører til henvendelser." ] },
+    { "id": "plan", "heading": "E-postvarsel og lagring på server er valgt som startpunkt.", "body": ["Det planlegges e-postvarsler gjennom Resend og lokal lagring på server av henvendelser og tilhørende kildeinformasjon. Personopplysningene skal ikke lagres i nettleseren som del av denne løsningen.", "Kildeinformasjonen skal være knyttet til en konkret innsending. Det er ikke planlagt vedvarende anonyme besøksidentifikatorer i denne løsningen.", "Mottaker og avsender av varslene, databehandlerforhold, lagringssted, tilgang og nødvendige avtaler må gjennomgås før produksjonsbruk. Ingen fungerende live-behandling er dokumentert i dette utkastet."] },
+    { "id": "avklaringer", "heading": "Før lansering må lagring og rettigheter være konkret beskrevet.", "body": ["Endelig tekst må beskrive formål og behandlingsgrunnlag, hvem som mottar opplysningene, hvor lenge de lagres, og hvordan de slettes. Den må også beskrive eventuelle overføringer og avtaler som gjelder for den valgte løsningen.", "Det må finnes en verifisert kontaktvei for innsyn, retting, sletting og andre aktuelle rettigheter, samt nødvendig informasjon om klage. Dette skal tilpasses den faktiske behandlingen.", "Denne siden gir ikke en generell erklæring om at løsningen oppfyller alle personvernkrav. Den må kontrolleres mot den ferdige løsningen før skjemaet brukes med reelle henvendelser."] }
+  ],
+  "faq": [
+    { "question": "Er dette endelig personverninformasjon?", "answer": "Nei. Det er et utkast for lokal gjennomgang. Endelig tekst, kontaktopplysninger, behandlingsgrunnlag og lagringstid må avklares før lansering." },
+    { "question": "Er den planlagte e-postleveringen testet i drift?", "answer": "Det er ikke dokumentert fungerende live-behandling eller mottak av e-post i dette utkastet. Lokal teknisk testing er ikke i seg selv bevis på produksjonsberedskap." }
+  ],
+  "cta": { "label": "Tilbake til den gratis sjekken", "href": "/vurdering/" }
+}

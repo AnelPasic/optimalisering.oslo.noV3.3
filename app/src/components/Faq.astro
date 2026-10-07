@@ -1,0 +1,5 @@
+---
+interface Props { items: { question: string; answer: string }[]; }
+const { items } = Astro.props;
+---
+{items.length > 0 && <section class="faq-section section-space"><div class="shell faq-grid"><div><p class="eyebrow">Greit å vite</p><h2>Før du tar<br />neste steg.</h2></div><div class="faq-list">{items.map(item => <details><summary>{item.question}<span aria-hidden="true">+</span></summary><p>{item.answer}</p></details>)}</div></div></section>}

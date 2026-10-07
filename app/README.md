@@ -1,0 +1,53 @@
+# Optimalisering Oslo v3.3
+
+The actual website is in this directory. `../system/` and `../project/` are read-only reference inputs. There are 15 Norwegian content routes, a responsive homepage, two service pillars, SEO and AI pages, store optimization, two distinct guides, a pricing decision page, and assessment/contact/provider/legal pages.
+
+## Run locally
+
+Requires Node 24.12 or newer. Install with `npm ci`, build with `npm run build`, then start `npm run preview`.
+
+Open http://127.0.0.1:4321. Preview serves static `dist/` and the local lead API. For active development run `npm run dev` and, in a second terminal, `npm run dev:api`. The Astro dev server proxies `/api` to port 4322.
+
+This checkout defaults to a noindex review preview. All commercial content is `REVIEW_REQUIRED`. Forms demonstrate validation but do not transmit enquiries until explicitly configured. The legal drafts and price-by-agreement presentation reflect missing approved business inputs; historic price candidates and unapproved proof are excluded.
+
+## Content and CMS
+
+Source: `src/content/pages/*.json`, validated by `src/content.config.ts`. `slug` controls static URLs; `kind` chooses the template. Content owns commercial wording. Normal CMS edits change this semantic layer, rather than a separate hard-coded copy fallback.
+
+Repository-root `../.pages.yml` points into these JSON files. Pages CMS requires its configuration at the repository root. Connect the repository to Pages CMS when repository/app permissions are available; this build creates the schema, not an authenticated CMS account. Slugs, page types and approval states are read-only in the CMS. Material changes to approved commercial meaning must return to content/owner review.
+
+The site uses self-hosted Instrument Sans/Figtree fonts and local explanatory SVGs. No external font requests, client proof/logos, analytics cookies, localStorage tracking, pixels or persistent anonymous visitor identifiers are included.
+
+## Interim enquiries and conversions
+
+The owner selected Resend notifications plus local server-side storage until a better system is ready. This implementation uses a reusable Node HTTP API and SQLite, with no separate CRM interface.
+
+Copy `.env.example` to `.env` and enter the verified Resend sender, server-only API key and notification recipient. Set `PUBLIC_LEADS_ENABLED=true` and `PRIVACY_APPROVED=true` only when the actual processing details are settled. Rebuild the frontend after changing public configuration and restart the API after changing server configuration. Never enter secrets through Pages CMS or PUBLIC_ variables.
+
+The API validates and stores an enquiry and one `assessment_received` conversion atomically before acknowledgement. Campaign/source fields belong to the submitted enquiry. They are attribution clues, not proof of the full customer journey or won revenue. Internal links carry sanitized UTM values, landing path and referring origin in URLs; no cookies or browser storage are used. No raw referrer query, click IDs or cross-session visitor IDs are retained.
+
+Default storage: `var/leads.sqlite`, outside public assets and ignored by Git. Set `LEAD_DATA_DIR` to a persistent protected directory on the eventual backend server. Keep that directory and backups access-controlled. An empty database is created when preview starts; synthetic tests use in-memory databases and do not add sample leads to the operational file.
+
+Resend notifications use server-only credentials, plain-text messages, Reply-To and a deterministic idempotency key. A failed or ambiguous email remains pending without losing the enquiry. `npm run leads:retry` retries pending notifications after configuration. Requests older than the provider's idempotency safety window require manual review to avoid duplicate mail. Resend acceptance proves an API send, not inbox delivery; a real mailbox test still remains.
+
+For local operations, `server/store.mjs` exposes `export()` and `delete(id)`; deletion cascades to the matching conversion. They have no public HTTP endpoints. Do not print exports into chat/logs or store them in Git. Exact retention, deletion schedule and owner-access procedures need approval before live processing. There is no automatic retention policy invented by the build.
+
+The server binds to loopback by default. The intended Cloudflare frontend remains static. This interim Node/SQLite API needs a persistent Node host behind HTTPS/reverse proxy, or later replacement by the shared Medon engine; deploying only `dist/` does not deploy the database or API. Configure an approved HTTPS endpoint with PUBLIC_LEAD_ENDPOINT and corresponding ALLOWED_ORIGINS if the API is hosted separately. API rate limiting currently uses local socket addresses; a reverse-proxy integration must establish trusted client-IP handling before production.
+
+## Verification
+
+- `npm run verify`: Astro diagnostics, functional tests, static build and HTML audit.
+- `node scripts/qa-browser.mjs`: installed Chrome browser checks, desktop/mobile screenshots and synthetic form flow. Set CHROME_PATH if Chrome lives elsewhere.
+- `qa-output/`: ignored screenshots and browser results.
+
+No-JavaScript submission stays disabled and has an explicit POST fallback, so personal details cannot be placed in a GET query. Server intake remains disabled without full local configuration. No real emails are sent by tests.
+
+Node 24's built-in SQLite currently emits an experimental-feature warning. Pin the supported Node runtime and exercise backups/migration when selecting production infrastructure.
+
+## Publication gate
+
+Astro's build lifecycle checks the same resolved environment files used by Astro, including `.env.local` and `.env.production*`. Setting SITE_STAGE=production requires every page to be CONTENT_LOCKED/PUBLISHED, privacy and lead readiness, Resend configuration and LAUNCH_APPROVED=true. That flag is an operational assertion of an actual owner decision, not a substitute for obtaining one.
+
+Before launch: review complete content and representative desktop/mobile composition; finalize public pricing/scope/terms and privacy/retention; configure and verify real notification delivery; establish persistent hosting/backups, trusted proxy/rate limits, domain/redirect/native Git deployment and production conversion measurement/Search Console; obtain launch authorization. The current task builds locally and does not publish or push.
+
+Documentation references: [Astro content collections](https://docs.astro.build/en/guides/content-collections/), [Pages CMS configuration](https://pagescms.org/docs/configuration/), [Resend send API](https://resend.com/docs/api-reference/emails/send-email), [Resend idempotency](https://resend.com/docs/dashboard/emails/idempotency-keys).

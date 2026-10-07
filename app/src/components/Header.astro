@@ -1,0 +1,44 @@
+---
+import { navigation } from '../config/site';
+import Arrow from './Arrow.astro';
+const current = Astro.url.pathname;
+---
+<header class="site-header">
+  <div class="shell header-inner">
+    <a href="/" class="wordmark" aria-label="Optimalisering Oslo – forsiden">
+      <svg viewBox="0 0 42 42" width="40" height="40" fill="none" aria-hidden="true"><path d="M5 31V19a14 14 0 0 1 28 0v12" stroke="currentColor" stroke-width="8"/><path d="m15 27 9-9m-9 0h9v9" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>optimalisering<span class="wordmark-second">oslo<span class="wordmark-dot">.</span></span></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Hovedmeny">
+      {navigation.map(link => <a href={link.href} aria-current={current === link.href ? 'page' : undefined}>{link.label}</a>)}
+    </nav>
+    <div class="header-actions">
+      <a href="/vurdering/" class="button button-small">Gratis sjekk <Arrow diagonal /></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Åpne meny"><span></span><span></span></button>
+    </div>
+  </div>
+  <nav id="mobile-menu" class="mobile-menu shell" aria-label="Mobilmeny" hidden>
+    {navigation.map(link => <a href={link.href} aria-current={current === link.href ? 'page' : undefined}>{link.label}<Arrow /></a>)}
+    <a href="/om/">Om Medon <Arrow /></a>
+  </nav>
+</header>
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>('.menu-toggle');
+  const menu = document.querySelector<HTMLElement>('#mobile-menu');
+  function closeMenu() {
+    if (!toggle || !menu) return;
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Åpne meny');
+    menu.hidden = true;
+  }
+  toggle?.addEventListener('click', () => {
+    if (!menu) return;
+    const open = toggle.getAttribute('aria-expanded') !== 'true';
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Lukk meny' : 'Åpne meny');
+    menu.hidden = !open;
+  });
+  menu?.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+  document.addEventListener('keydown', event => { if (event.key === 'Escape' && toggle?.getAttribute('aria-expanded') === 'true') { closeMenu(); toggle.focus(); } });
+  matchMedia('(min-width: 901px)').addEventListener('change', event => { if (event.matches) closeMenu(); });
+</script>

@@ -1,0 +1,15 @@
+{
+  "slug": "innsikt",
+  "kind": "index",
+  "status": "REVIEW_REQUIRED",
+  "seo": { "title": "Innsikt – velg startpunkt og vurder effekten | Medon", "description": "To praktiske guider om nettsiden: hva du bør optimalisere først, og hvordan du vurderer om arbeidet gir relevante henvendelser eller nyttige kjøp." },
+  "eyebrow": "Innsikt for deg som skal prioritere",
+  "title": "Et bedre grunnlag for neste beslutning.",
+  "intro": "Du trenger ikke lære alle kanalene for å ta stilling til nettsiden. Begynn med to spørsmål: hvor bør vi undersøke først, og hvordan skal vi vurdere om arbeidet er nyttig?",
+  "sections": [
+    { "id": "guider", "heading": "Velg spørsmålet du trenger svar på.", "body": ["Guidene forklarer beslutninger og måling i enkelt språk. Eksemplene er illustrative og gir ingen løfter om resultat."], "items": [ { "title": "Hva bør optimaliseres først?", "text": "Undersøk om de rette finner deg, om de kommer videre, og om handlingene har verdi. Se hypotetiske situasjoner og en enkel beslutningsrekkefølge.", "href": "/innsikt/hva-bor-optimaliseres-forst/", "label": "Les startguiden" }, { "title": "Hvordan måle effekten?", "text": "Skill mellom visninger, handlinger og forretningsverdi. Definer relevante henvendelser eller nyttige kjøp, og gjør forutsetningene synlige.", "href": "/innsikt/male-effekt-av-optimalisering/", "label": "Les måleguiden" } ] },
+    { "id": "egen-side", "heading": "Vil du vurdere din egen nettside?", "body": ["Send nettadressen og en e-postadresse for bedriften. Medon gjør en gratis, avgrenset manuell sjekk og gir kort veiledning om hva vi ville startet med og hvorfor.", "Sjekken er ikke en automatisk poengsum, full revisjon, komplett feilliste, prognose eller gjennomføring. Videre arbeid må ha eget avtalt omfang og pris."], "links": [ { "label": "Ta en gratis sjekk", "href": "/vurdering/" }, { "label": "Se Synlighet og Konvertering", "href": "/priser/" } ] }
+  ],
+  "faq": [],
+  "cta": { "label": "Ta en gratis sjekk", "href": "/vurdering/" }
+}

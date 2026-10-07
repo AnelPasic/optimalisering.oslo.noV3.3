@@ -1,0 +1,20 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Arrow from './Arrow.astro';
+import ContentSection from './ContentSection.astro';
+import AssessmentForm from './AssessmentForm.astro';
+import Faq from './Faq.astro';
+interface Props { page: CollectionEntry<'pages'>['data']; }
+const { page } = Astro.props;
+const isAssessment = page.kind === 'assessment';
+const isArticle = page.kind === 'article';
+---
+<section class:list={['inner-hero', `inner-${page.kind}`]}>
+  <div class="shell">
+    <nav class="breadcrumbs" aria-label="Brødsmuler"><a href="/">Forsiden</a><span aria-hidden="true">/</span>{isArticle && <><a href="/innsikt/">Innsikt</a><span aria-hidden="true">/</span></>}<span>{page.eyebrow}</span></nav>
+    <div class:list={['inner-hero-grid', { 'assessment-hero-grid': isAssessment }]}><div><p class="eyebrow">{page.eyebrow}</p><h1>{page.title}</h1><p class="hero-intro">{page.intro}</p>{!isAssessment && <a class="button" href={page.cta.href}>{page.cta.label}<Arrow diagonal /></a>}</div>{isAssessment && <AssessmentForm />}</div>
+  </div>
+</section>
+<div class:list={{ 'article-content': isArticle }}>{page.sections.map((section, index) => <ContentSection section={section} index={index} />)}</div>
+<Faq items={page.faq} />
+{!isAssessment && page.kind !== 'utility' && <section class="closing-cta"><div class="shell"><div><p class="eyebrow">En gratis sjekk. En tydelig start.</p><h2>Finn ut hvor vi<br />ville startet.</h2></div><a class="button button-light" href={page.cta.href}>{page.cta.label}<Arrow diagonal /></a></div></section>}

@@ -1,0 +1,18 @@
+{
+  "slug": "kontakt",
+  "kind": "utility",
+  "status": "REVIEW_REQUIRED",
+  "seo": { "title": "Kontakt om Optimalisering Oslo | Medon AS", "description": "Vil du diskutere nettsiden, et samarbeid eller et annet behov? Optimalisering Oslo leveres av Medon AS. Bruk skjemaet og beskriv spørsmålet kort." },
+  "eyebrow": "Kontakt Medon om tjenesten",
+  "title": "Har du et annet spørsmål enn en sjekk av nettsiden?",
+  "intro": "Du kan også ta kontakt om et mulig samarbeid eller et behov som ikke passer helt i tjenestebeskrivelsene. Medon AS er leverandøren bak Optimalisering Oslo.",
+  "sections": [
+    { "id": "sporsmal", "heading": "Fortell kort hva det gjelder.", "body": ["Bruk skjemaet på vurderingssiden og skriv i meldingen at det gjelder et annet spørsmål. Oppgi en e-postadresse for bedriften og nettadressen som er relevant for spørsmålet.", "Du trenger ikke sende innlogging eller sensitive opplysninger. En kort forklaring av behovet er et bedre sted å starte enn å dele interne dokumenter."], "links": [ { "label": "Gå til skjemaet", "href": "/vurdering/#skjema" } ] },
+    { "id": "retning", "heading": "Usikker på hvor du bør starte? Be om en gratis sjekk.", "body": ["For spørsmål om hva som begrenser nettsiden, er den gratis sjekken den vanlige inngangen. Den er avgrenset og manuell, og gir kort veiledning om hva Medon ville startet med og hvorfor.", "Den inkluderer ikke en full revisjon, komplett feilliste, prognose eller gjennomføring. Det er ikke fastsatt et løfte om svartid i dette utkastet."], "links": [ { "label": "Les om den gratis sjekken", "href": "/vurdering/" }, { "label": "Om leverandøren", "href": "/om/" } ] }
+  ],
+  "faq": [
+    { "question": "Kan jeg kontakte dere uten å bestille en tjeneste?", "answer": "Ja. Bruk meldingen til å beskrive spørsmålet. Videre betalt arbeid krever et eget avtalt omfang og en avtalt pris." },
+    { "question": "Hvor finner jeg telefon eller direkte e-post?", "answer": "Direkte kontaktopplysninger er ikke verifisert for dette utkastet. Vi viser derfor skjemaet som kontaktvei i forhåndsvisningen." }
+  ],
+  "cta": { "label": "Gå til skjemaet", "href": "/vurdering/#skjema" }
+}

@@ -1,0 +1,119 @@
+# Pages CMS requires this file at the repository root. Website files live in app/.
+media:
+  input: app/src/assets
+  output: /assets
+components:
+  link:
+    type: object
+    fields:
+      - name: label
+        label: Lenketekst
+        type: string
+        required: true
+      - name: href
+        label: Intern lenke
+        type: string
+        pattern: '^/'
+        required: true
+content:
+  - name: pages
+    label: Nettsider
+    type: collection
+    path: app/src/content/pages
+    format: json
+    filename: '{primary}.json'
+    view:
+      primary: title
+      fields: [title, status, kind]
+    fields:
+      - name: slug
+        label: Nettadresse
+        type: string
+        readonly: true
+      - name: kind
+        label: Sidetype
+        type: string
+        readonly: true
+      - name: status
+        label: Godkjenningsstatus
+        description: Endres i Git etter innholds- og eiergjennomgang. Kladd er ikke publiseringstillatelse.
+        type: string
+        readonly: true
+      - name: seo
+        label: Søkeresultat
+        type: object
+        fields:
+          - name: title
+            label: Sidetittel
+            type: string
+            required: true
+          - name: description
+            label: Beskrivelse
+            type: text
+            required: true
+      - name: eyebrow
+        label: Overtekst
+        type: string
+      - name: title
+        label: Hovedoverskrift
+        type: string
+        required: true
+      - name: intro
+        label: Innledning
+        type: text
+        required: true
+      - name: sections
+        label: Innhold
+        type: object
+        list: true
+        fields:
+          - name: id
+            label: Seksjonens lenkeanker
+            type: string
+            readonly: true
+          - name: eyebrow
+            label: Overtekst
+            type: string
+          - name: heading
+            label: Overskrift
+            type: string
+          - name: body
+            label: Avsnitt
+            type: text
+            list: true
+          - name: items
+            label: Alternativer eller steg
+            type: object
+            list: true
+            fields:
+              - name: title
+                label: Tittel
+                type: string
+              - name: text
+                label: Beskrivelse
+                type: text
+              - name: href
+                label: Intern lenke
+                type: string
+                pattern: '^/'
+              - name: label
+                label: Lenketekst
+                type: string
+          - name: links
+            label: Relaterte lenker
+            component: link
+            list: true
+      - name: faq
+        label: Spørsmål og svar
+        type: object
+        list: true
+        fields:
+          - name: question
+            label: Spørsmål
+            type: string
+          - name: answer
+            label: Svar
+            type: text
+      - name: cta
+        label: Neste steg
+        component: link

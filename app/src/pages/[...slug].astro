@@ -1,0 +1,16 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import SiteLayout from '../layouts/SiteLayout.astro';
+import HomePage from '../components/HomePage.astro';
+import InnerPage from '../components/InnerPage.astro';
+
+export async function getStaticPaths() {
+  const pages = await getCollection('pages');
+  return pages.map(page => ({ params: { slug: page.data.slug === 'home' ? undefined : page.data.slug }, props: { page: page.data } }));
+}
+interface Props { page: CollectionEntry<'pages'>['data']; }
+const { page } = Astro.props;
+---
+<SiteLayout title={page.seo.title} description={page.seo.description}>
+  {page.kind === 'home' ? <HomePage page={page} /> : <InnerPage page={page} />}
+</SiteLayout>

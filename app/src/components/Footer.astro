@@ -1,0 +1,11 @@
+---
+import { navigation, site } from '../config/site';
+---
+<footer class="site-footer">
+  <div class="shell footer-grid">
+    <div><a class="footer-brand" href="/">optimalisering oslo<span>.</span></a><p>En tjeneste fra Medon AS.<br />Synlighet og konvertering for bedrifter.</p>{site.preview && <span class="preview-tag">Forhåndsvisning · til vurdering</span>}</div>
+    <nav aria-label="Tjenester og veiledning">{navigation.map(link => <a href={link.href}>{link.label}</a>)}<a href="/nettbutikkoptimalisering/">For nettbutikker</a></nav>
+    <nav aria-label="Kontakt og informasjon"><a href="/vurdering/">Gratis sjekk</a><a href="/om/">Om Medon</a><a href="/kontakt/">Kontakt</a><a href="/personvern/">Personvern</a><a href="/vilkar/">Vilkår</a></nav>
+  </div>
+  <div class="shell footer-bottom"><span>© {new Date().getFullYear()} Medon AS</span><span>Et godt sted å begynne.</span></div>
+</footer>

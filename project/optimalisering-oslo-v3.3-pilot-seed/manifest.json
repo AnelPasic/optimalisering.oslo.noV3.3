@@ -1,0 +1,61 @@
+{
+  "name": "optimalisering-oslo-v3.3-pilot-seed",
+  "generated": "2026-10-08",
+  "files": [
+    {
+      "path": "COMMERCIAL-TRUTH.md",
+      "bytes": 2314,
+      "sha256": "0966f7ee93881163a7e1d7d5fe964db0897b68b322528756b0b767e3993dbd27"
+    },
+    {
+      "path": "COPY-SEEDS.md",
+      "bytes": 3123,
+      "sha256": "75d453fa619dde77667c58ba4d364a4a2f3da0420f339102ab2ca090260faa07"
+    },
+    {
+      "path": "DESIGN-PRIORS.md",
+      "bytes": 1583,
+      "sha256": "aca802ddb55040a38446e466368f2d1b9431a12ca41382a489d47b9d69458a10"
+    },
+    {
+      "path": "FRESH-CODEX-TEST-PROMPT.md",
+      "bytes": 1344,
+      "sha256": "72b186f1fb129e689aafe898fb81167bfb8e6b44a719932b311b6d0e51c45618"
+    },
+    {
+      "path": "MIGRATION-AUDIT.md",
+      "bytes": 1496,
+      "sha256": "9a27a218a39e63acaf4a7a508812470a5c3d30ffe197a199ddae0c794743f40f"
+    },
+    {
+      "path": "PAGE-PORTFOLIO.csv",
+      "bytes": 15095,
+      "sha256": "dbd9a6e8638695cf355b063c822d0c3ae196cf77290970ba5bf14697bcb31288"
+    },
+    {
+      "path": "PROJECT-BRIEF.md",
+      "bytes": 2133,
+      "sha256": "976f708f0ec86d4bda7a20f1220257eb20026e667867b38b664b5a446b5afb36"
+    },
+    {
+      "path": "PROOF-REGISTRY.csv",
+      "bytes": 2434,
+      "sha256": "892d4770a8b2e1f8b43f8ef13ce4088a2b0fd017fc54f8de83441536614beffa"
+    },
+    {
+      "path": "PROOF-STATUS.md",
+      "bytes": 878,
+      "sha256": "149d1c79ff1d98518038f81ae3e354550bca1c6bccb2898dd8efef05f037d495"
+    },
+    {
+      "path": "README-FIRST.md",
+      "bytes": 1074,
+      "sha256": "f2b899caa6692e28f03a43152874feeab97ef43642be944a063c1cb851849d1d"
+    },
+    {
+      "path": "TECHNICAL-BASELINE.md",
+      "bytes": 6232,
+      "sha256": "55113228125eb3e9ada408854e102b7df83a36e866d6e09789de73f299aef13a"
+    }
+  ]
+}
