@@ -1,7 +1,15 @@
 # Pages CMS: separate homepage review editor; all other content remains frozen.
 media:
-  input: app/src/assets
-  output: /assets
+  - name: assets
+    label: Eksisterende media
+    input: app/src/assets
+    output: /assets
+  - name: heroImages
+    label: Forsidefoto – valgte bilde og alternativer
+    input: app/public/images/home
+    output: /images/home
+    extensions: [webp]
+    rename: safe
 components:
   link:
     type: object
@@ -200,13 +208,15 @@ content:
                 type: string
                 pattern: ^/
           - name: heroPhoto
-            label: Forsidefoto – separat generert bilde
+            label: Forsidefoto
             type: object
             fields:
               - name: src
-                label: Lokal bildefil
-                type: string
-                pattern: ^/images/home/[a-z0-9][a-z0-9-]*\.webp$
+                label: Valgt bilde
+                type: image
+                options:
+                  media: heroImages
+                  extensions: [webp]
               - name: positionX
                 label: Horisontalt utsnitt (%)
                 type: number

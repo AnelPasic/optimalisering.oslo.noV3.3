@@ -1,0 +1,80 @@
+{
+  "baselineImplementation": "7e69c079d57281d5126d2c94dbc3f1dfac90f265",
+  "sourceDelivery": "1e5f5edfee8127a4726a9b05ca4fbf7e13af9a81",
+  "options": [
+    {
+      "original": "happycustomer.png",
+      "asset": "hero-customer.webp",
+      "width": 1402,
+      "height": 1122,
+      "originalBytes": 1944318,
+      "webpBytes": 81652,
+      "originalSha256": "f94c83621f12f3c0828f0cc910947c22bb2f4a44114c5cf2a4583422a9c94ff7",
+      "webpSha256": "84756d154b710a75c7bf8a4b8f5c3c36e03ff6fe01c7e7cccf6a8dc5d9ff08c7",
+      "selected": true
+    },
+    {
+      "original": "happycustomer2.png",
+      "asset": "hero-customer-02.webp",
+      "width": 1328,
+      "height": 1062,
+      "originalBytes": 1774806,
+      "webpBytes": 68184,
+      "originalSha256": "4bf02ff0d92bf943c061f0b4c1f76ceefcc6737a45db0e3691cc744a5a9349a8",
+      "webpSha256": "20190965a8a08a61d6ae73e6d29e7e05d843186f129f683ec8242bb85aca5c91",
+      "selected": false
+    },
+    {
+      "original": "happycustomer3.png",
+      "asset": "hero-customer-03.webp",
+      "width": 1402,
+      "height": 1122,
+      "originalBytes": 1870848,
+      "webpBytes": 70886,
+      "originalSha256": "72d91b2e1d911830c5583033b4b22b30764b7ada9bc8bf09e92522b27e00a355",
+      "webpSha256": "f18db9a1421c663ff0b8454fb9ba5e9783af64f2d6a3370370ce3f185792b795",
+      "selected": false
+    }
+  ],
+  "geometry": [
+    {
+      "width": 1440,
+      "shell": 1360,
+      "heroHeight": 459.953125,
+      "photoHeight": 369.765625,
+      "layoutUnchanged": true
+    },
+    {
+      "width": 390,
+      "shell": 350,
+      "heroHeight": 629.046875,
+      "photoHeight": 196.875,
+      "layoutUnchanged": true
+    },
+    {
+      "width": 320,
+      "shell": 288,
+      "heroHeight": 606.375,
+      "photoHeight": 162,
+      "layoutUnchanged": true
+    },
+    {
+      "width": 1920,
+      "shell": 1440,
+      "heroHeight": 463,
+      "photoHeight": 375,
+      "layoutUnchanged": true
+    }
+  ],
+  "copyAndStylesChanged": false,
+  "sliderOrGallery": false,
+  "verify": {
+    "checkedFiles": 56,
+    "diagnostics": 0,
+    "tests": 24,
+    "links": 449,
+    "browserChecks": 40,
+    "preservedFiles": 174
+  },
+  "authenticatedCmsSaveVerified": false
+}
