@@ -3,22 +3,91 @@
   "kind": "pricing",
   "status": "REVIEW_REQUIRED",
   "authority": "DRAFT / NON-AUTHORITATIVE",
-  "seo": { "title": "Pris og omfang – Synlighet og Konvertering | Medon", "description": "Velg ut fra behovet: Synlighet, Konvertering, begge eller et større omfang. Pris og innhold avtales. En gratis manuell sjekk kan gi en startretning." },
-  "eyebrow": "Velg etter behovet",
-  "title": "Riktig hjelp begynner med riktig omfang.",
-  "intro": "Synlighet og Konvertering er to løpende tjenester. Du kan starte med én, vurdere begge eller avtale et større omfang. Pris og konkret innhold må avklares før videre arbeid.",
+  "seo": {
+    "title": "Priser på SEO, CRO og digital optimalisering | Medon",
+    "description": "Fast månedlig optimalisering fra 4 500 kr/mnd eks. mva. Velg Optimalisering, Vekst eller Partner. Annonsebudsjett kommer i tillegg."
+  },
+  "eyebrow": "Priser",
+  "title": "Start med det viktigste. Utvid når behovet er større.",
+  "intro": "Vi prioriterer det som begrenser resultatet mest. Velg ett prioritert område, to områder som jobber sammen eller større kapasitet på tvers.",
   "sections": [
-    { "id": "alternativer", "heading": "Hva er det som begrenser veien til kunde?", "body": ["Alternativene beskriver behovet, ikke en ferdig liste med leveranser. Vi må avklare hva bedriften trenger, hva som kan gjennomføres, og hvor grensene for arbeidet går."], "items": [ { "title": "Synlighet", "text": "For behovet for å bli funnet av relevante kunder. SEO og AI-synlighet vurderes ut fra tilbudet og kundespørsmålene. Pris og omfang avtales.", "href": "/synlighet/", "label": "Les om Synlighet" }, { "title": "Konvertering", "text": "For behovet for å gjøre veien fra interesse til henvendelse eller kjøp tydeligere. Budskap, sider, skjema og kjøpsvei vurderes. Pris og omfang avtales.", "href": "/konvertering/", "label": "Les om Konvertering" } ] },
-    { "id": "begge", "eyebrow": "En samlet prioritering", "heading": "Begge – når både oppdagelse og handling trenger arbeid.", "body": ["Det kan være nyttig å se Synlighet og Konvertering sammen når flere deler av kundens vei begrenser resultatet. Arbeidet skal fortsatt prioriteres, fremfor at alt settes i gang samtidig.", "Pris, ansvar og samlet omfang må avtales. Her er det ikke fastsatt en offentlig kombinasjonspris eller rabatt."], "links": [ { "label": "Få hjelp til å vurdere hvor du bør starte", "href": "/vurdering/" } ] },
-    { "id": "storrelse", "heading": "Større eller andre behov vurderes særskilt.", "body": ["Hovednettsiden eller nettbutikken er normalt utgangspunktet for standardarbeidet. Flere nettsteder, ekstra landingssider eller andre behov må vurderes mot omfang og tekniske muligheter.", "Vi skal avklare hva som inngår, hva som faller utenfor, og hvem som har ansvar for nødvendige endringer. Et konkret tilbud må beskrive dette før du tar stilling til videre arbeid."] },
-    { "id": "kostnader", "heading": "Tjenestepris og eksterne kostnader må holdes tydelig fra hverandre.", "body": ["Annonsebudsjett og aktuelle eksterne plattformkostnader er utenom den normale tjenesteprisen hvis de ikke uttrykkelig er inkludert i avtalen.", "Betalt synlighet kan være relevant når behov og økonomi tilsier det. Det skal vurderes som en begrunnet del av arbeidet, ikke som en automatisk ekstra kostnad.", "Fakturering, eventuell binding, oppsigelse og andre kontraktsvilkår må avklares. Denne siden fastsetter ikke slike vilkår."], "links": [ { "label": "Hva må en avtale avklare?", "href": "/vilkar/" } ] },
-    { "id": "gratis", "heading": "Du kan begynne med en gratis sjekk.", "body": ["Send en nettadresse og en e-postadresse for bedriften. Medon gjør en avgrenset, manuell vurdering og gir kort veiledning om hva vi ville startet med, hvorfor, og om Synlighet, Konvertering eller begge bør komme først.", "Sjekken er ikke en full revisjon, komplett feilliste, prognose eller gratis gjennomføring. Eventuelt videre arbeid får eget avtalt omfang og pris."], "links": [ { "label": "Ta en gratis sjekk", "href": "/vurdering/" } ] }
+    {
+      "id": "arbeidsomrader",
+      "eyebrow": "Hva vi kan jobbe med",
+      "heading": "Fire områder. Én prioritering av gangen.",
+      "body": [
+        "Arbeidet kan omfatte konvertering, SEO og AI-synlighet, Google Ads og Meta Ads. Måling og sporing ligger i bunn, så vi kan følge med på hva som faktisk skjer.",
+        "Hva vi starter med avgjøres av behovet og hva som mest sannsynlig begrenser resultatet akkurat nå."
+      ],
+      "items": [
+        {
+          "title": "Konvertering",
+          "text": "Nettsider, landingssider, skjema og kjøpsvei."
+        },
+        {
+          "title": "Synlighet",
+          "text": "SEO, lokal SEO og AI-synlighet."
+        },
+        {
+          "title": "Google Ads",
+          "text": "Kampanjer, søkeintensjon, budskap og landingssider."
+        },
+        {
+          "title": "Meta Ads",
+          "text": "Kampanjer, budskap, målgrupper og landingssider."
+        }
+      ]
+    },
+    {
+      "id": "kostnader",
+      "eyebrow": "Greit å vite",
+      "heading": "Tjenestepris og annonsebudsjett er to forskjellige ting.",
+      "body": [
+        "Annonsebudsjett kommer i tillegg. Eksterne verktøy og plattformkostnader kommer også i tillegg når de er nødvendige og ikke er avtalt inkludert.",
+        "Mindre justeringer og arbeid på eksisterende landingssider kan inngå i avtalt omfang. Større nye landingssider, nettsider, omfattende teknisk arbeid og redesign prises separat.",
+        "Avtalt kapasitet gjelder per måned og overføres ikke til senere måneder."
+      ]
+    },
+    {
+      "id": "gratis",
+      "eyebrow": "Usikker på hvor du bør starte?",
+      "heading": "Få våre 3 viktigste funn innen 2 virkedager.",
+      "body": [
+        "Send nettsiden eller nettbutikken. Vi gjør en kort, manuell vurdering og sier hva vi ville undersøkt eller forbedret først – og hvorfor.",
+        "Sjekken er ikke en full revisjon, prognose eller gratis gjennomføring. Videre arbeid avtales separat."
+      ],
+      "links": [
+        {
+          "label": "Ta en gratis sjekk",
+          "href": "/#sjekk"
+        }
+      ]
+    }
   ],
   "faq": [
-    { "question": "Hvorfor står det ikke månedspriser her?", "answer": "Offentlige priser og endelig standardomfang er ikke fastsatt i dette utkastet. Vi skal ikke vise en pris uten at det er tydelig hva den dekker og hvilke vilkår som gjelder. Pris og innhold må avtales før videre arbeid." },
-    { "question": "Kan jeg starte med bare én tjeneste?", "answer": "Ja. Synlighet og Konvertering er to separate behovsbaserte tjenester. Det kan også være riktig å vurdere begge. Den gratis sjekken er ment å gi en begrunnet startretning." },
-    { "question": "Er annonser og plattformkostnader inkludert?", "answer": "Annonsebudsjett og aktuelle eksterne plattformkostnader er utenom den normale tjenesteprisen hvis de ikke uttrykkelig avtales inkludert." },
-    { "question": "Hva får jeg i den gratis sjekken?", "answer": "Kort, begrunnet veiledning fra en manuell vurdering av nettsiden. Sjekken angir en mulig startretning. Den er ikke en komplett revisjon eller et løfte om resultat." }
+    {
+      "question": "Hva koster pakkene?",
+      "answer": "Optimalisering koster 4 500 kr/mnd, Vekst 6 900 kr/mnd og Partner 14 900 kr/mnd. Alle priser er eks. mva."
+    },
+    {
+      "question": "Hva er forskjellen på pakkene?",
+      "answer": "Optimalisering er for ett prioritert område om gangen. Vekst er for to områder som jobber sammen. Partner gir større kapasitet på tvers av relevante områder."
+    },
+    {
+      "question": "Er annonsebudsjett inkludert?",
+      "answer": "Nei. Annonsebudsjett kommer i tillegg. Eksterne verktøy og plattformkostnader kommer også i tillegg når de er nødvendige og ikke er avtalt inkludert."
+    },
+    {
+      "question": "Er større nettsidearbeid inkludert?",
+      "answer": "Mindre justeringer og arbeid på eksisterende landingssider kan inngå i avtalt omfang. Større nye landingssider, nettsider, omfattende teknisk arbeid og redesign prises separat."
+    },
+    {
+      "question": "Hva hvis jeg ikke vet hvilken pakke jeg trenger?",
+      "answer": "Start med den gratis sjekken. Vi ser på nettsiden og sier hvor vi ville startet og hvorfor."
+    }
   ],
-  "cta": { "label": "Ta en gratis sjekk", "href": "/vurdering/" }
+  "cta": {
+    "label": "Ta en gratis sjekk",
+    "href": "/#sjekk"
+  }
 }
