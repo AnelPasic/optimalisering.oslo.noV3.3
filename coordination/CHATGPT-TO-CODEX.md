@@ -1,5 +1,239 @@
 # ChatGPT to Codex
 
+## Active handoff — H-009
+
+**Date:** 2026-10-09  
+**Authority:** STRATEGY_CONTENT D-027/D-028 + OWNER/STRATEGY_CONTENT D-029  
+**Scope:** controlled visual/commercial propagation to `/synlighet/` only
+
+### Objective
+
+The homepage and /priser/ patterns are now validated.
+
+Use `/synlighet/` as the first service-page test.
+
+Do not rewrite the page. Render the exact D-028 content and give it the accepted visual confidence, airiness and commercial clarity without turning it into another homepage.
+
+### Authoritative content
+
+Use the current exact bytes of:
+
+`app/src/content/pages/synlighet.json`
+
+locked at:
+`cc02995a5b43d3d0ee28df23a4588ff09a16cd21`
+
+Key locked signals include:
+
+**Eyebrow**
+> SEO, lokal SEO og AI-synlighet
+
+**H1**
+> De søker etter løsningen. Så etter deg.
+
+Do not restore the earlier “Du skal bli funnet…” version.
+
+### 1. Visual system
+
+Apply the accepted H-006/H-008 system:
+- Instrument Sans headings/major figures;
+- Figtree body/UI;
+- 1440px max shell with narrower text measures;
+- current plum/teal/mint/lavender family;
+- current accepted header/footer;
+- Storebrand-like whitespace and task clarity;
+- Mementor-like competence and commercial restraint.
+
+Do not create a generic old inner-page clone.
+
+Do not introduce a new brand direction.
+
+### 2. Hero
+
+The hero should be simpler than the old InnerPage hero and clearly service-specific.
+
+Use:
+- breadcrumb, but visually quiet;
+- locked eyebrow;
+- locked H1;
+- locked intro;
+- primary CTA: Ta en gratis sjekk.
+
+Add one restrained secondary path:
+- Se priser → /priser/
+
+Do not add a second keyword-heavy headline.
+
+For visual balance, a restrained semantic side treatment may show the three concepts:
+- SEO
+- Lokal SEO
+- AI-synlighet
+
+This may be typographic/graphic, but:
+- no fake search rankings;
+- no fake AI citations;
+- no analytics dashboard;
+- no stock image;
+- no invented metrics;
+- no visual that needs a paragraph to explain it.
+
+If the page is stronger without that side treatment, keep the hero text-led. Clarity wins.
+
+### 3. Section hierarchy
+
+Render the locked content in this sequence:
+
+1. Hero
+2. “Hvis bare de som kjenner navnet ditt finner deg…”
+3. “SEO, lokal SEO og AI-synlighet løser ulike deler av samme jobb.”
+4. “Vi starter med det som kan gjøre det lettere for en relevant kunde å finne deg.”
+5. “Mer trafikk er lite verdt hvis de rette besøkende ikke går videre.”
+6. Compact commercial/pricing bridge using the shared package source
+7. Free manual check
+8. FAQ
+9. Footer
+
+Do not add filler sections.
+
+### 4. Cards / open composition
+
+Use cards only where they improve choice/comprehension:
+- the three need/path items in the first main section;
+- SEO / Lokal SEO / AI-synlighet can use three clear service cards or open columns.
+
+The prioritization and Synlighet × Konvertering sections should feel more editorial/open, not another wall of cards.
+
+Use asymmetry/whitespace where useful, but keep the information obvious.
+
+### 5. Commercial bridge — no duplicated prices
+
+Add a compact price block after the Synlighet × Konvertering section.
+
+It must consume the existing shared package source from the homepage, not hard-code prices again.
+
+Customer logic:
+- **Optimalisering — 4 500 kr/mnd eks. mva.** when Synlighet is the one prioritized area.
+- **Vekst — 6 900 kr/mnd eks. mva.** when Synlighet works together with another area.
+- Link to full `/priser/`.
+- Partner does not need a full third card here unless required for layout; the goal is routing, not reproducing the entire pricing page.
+
+The source must remain one-source-of-truth and CMS-editable.
+
+Do not expose internal hour guardrails or invent terms.
+
+### 6. Free check
+
+Use the locked D-028 copy:
+- 3 most important findings;
+- within 2 business days;
+- manual/bounded;
+- no complete SEO audit;
+- no forecast/guarantee/free implementation.
+
+Route the CTA to the current accepted homepage check:
+`/#sjekk`
+
+Do not create a second form on /synlighet/ in H-009.
+
+### 7. Authority / SEO structure
+
+The page is an umbrella authority page for:
+- SEO;
+- Lokal SEO;
+- AI-synlighet.
+
+Preserve clear internal links:
+- /seo/
+- /ai-synlighet/
+- /konvertering/
+- /priser/
+
+Do not create `/lokal-seo/` in H-009.
+
+Do not force AEO/AIO/GEO synonym lists into the page. Those belong under the AI visibility topic when useful.
+
+Use semantic headings cleanly:
+- one H1;
+- section H2s;
+- item H3s.
+
+### 8. Current proofs
+
+Do not publish Nysta or Oslo Privatklinikk on this page.
+
+D-025 proof candidates remain non-public.
+
+Do not change proof registry fields or renderer guards.
+
+### 9. Code/system direction
+
+The old generic InnerPage renderer may be insufficient for the accepted service-page system.
+
+You may:
+- add a dedicated ServicePage component or service visual mode;
+- extract reusable service section patterns;
+- add a service-specific stylesheet based on the accepted tokens.
+
+Prefer reusable architecture because /konvertering/, /seo/ and /ai-synlighet/ may follow after review.
+
+But do **not** automatically switch the other service pages to the new component/styles in H-009.
+
+Gate the new renderer to `/synlighet/` only until reviewed.
+
+### 10. Frozen scope
+
+Do not redesign/rewrite:
+- /konvertering/
+- /seo/
+- /ai-synlighet/
+- /nettbutikkoptimalisering/
+- /vurdering/
+- /om/
+- /kontakt/
+- /personvern/
+- /vilkar/
+- /innsikt/ and articles
+- backend/intake
+- /system/
+- /project/
+
+Homepage and /priser/ must remain materially unchanged apart from any safe shared-component refactor with proven identical output.
+
+### Acceptance criteria
+
+1. /synlighet/ renders exact D-028 copy.
+2. Locked H1 is exactly “De søker etter løsningen. Så etter deg.”
+3. Page visually belongs to homepage + /priser/ system.
+4. SEO / Lokal SEO / AI-synlighet are immediately understandable as distinct but related.
+5. The page explains commercial relevance before technical detail.
+6. Compact pricing bridge derives from the shared package source.
+7. No duplicated package price source is introduced.
+8. No fake rankings, AI proof, client proof or invented claims appear.
+9. Free check retains exact bounded promise.
+10. Homepage and /priser/ remain unchanged.
+11. Other pages remain frozen.
+12. 1440 / 390 / 320 responsive QA passes.
+
+### Evidence / delivery
+
+- Run full verify/tests/browser checks.
+- Add exact-copy checks for D-028 H1/eyebrow/section order.
+- Add regression proving the service pricing bridge reads shared package values.
+- Capture:
+  - /synlighet/ full page 1440 and 390;
+  - hero + first section 1440 and 390;
+  - three-area section 1440 and 390;
+  - commercial bridge + free check 1440 and 390.
+- Recheck homepage and /priser/ after shared-component changes.
+- Push to main and verify Worker.
+- Update coordination state/report/evidence.
+- Stop for STRATEGY_CONTENT review of /synlighet/.
+
+Do not continue to /konvertering/ or deeper service pages until the next handoff.
+
+
+---
+
 ## Completed handoff — H-008
 
 **Date:** 2026-10-09  
