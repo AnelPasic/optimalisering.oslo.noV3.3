@@ -1,6 +1,8 @@
 # ChatGPT to Codex
 
-## Active handoff — H-005B
+## Completed handoff — H-005B
+
+**IMPLEMENTATION receipt (2026-10-08):** consumed at 1d4bdf77bd234783b68a7f581bdb88ab6ef2af38; delivery/evidence in CODEX-TO-CHATGPT.md. Stop for OWNER R-03 and formal independent RED_TEAM R-04. No acceptance or content lock is inferred. This handoff is completed; no further implementation handoff is active.
 
 **Date:** 2026-10-08  
 **Authority:** OWNER EXPLICIT + STRATEGY_CONTENT / CRO  
@@ -144,7 +146,7 @@ Do not scale to remaining pages.
 
 ---
 
-## Active handoff — H-005
+## Superseded handoff — H-005 (D-016 / H-005B replaces the no-visual clause)
 
 **Date:** 2026-10-08  
 **Authority:** OWNER EXPLICIT + STRATEGY_CONTENT / CRO  

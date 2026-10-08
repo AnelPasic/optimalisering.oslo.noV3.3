@@ -2,19 +2,19 @@
 
 Updated: 2026-10-08. Owner: Medon AS. Implementation repository: AnelPasic/optimalisering.oslo.noV3.3.
 
-**State: H-005B HERO SIMPLIFICATION + DREAM-OUTCOME VISUAL AUTHORIZED UNDER D-015/D-016; R-03 REMAINS REVISE; ALL OTHER PAGES FROZEN.** H-005's simplification stays active, except the hero should retain one restrained, realistic-ish outcome visual. The visual must support the promise without repeating the H1 or adding visual clutter.
+**State: H-005B IMPLEMENTATION COMPLETE AT 1d4bdf77bd234783b68a7f581bdb88ab6ef2af38; STOPPED FOR OWNER R-03 AND FORMAL RED_TEAM R-04; ALL OTHER PAGES FROZEN.** D-015/D-016’s simpler hero, single outcome visual and shorter selector are delivered. No further implementation handoff is active; no acceptance/content lock is inferred.
 
 Original exploratory implementation: `a98dbaefbb10a9039c9b025e5c3907e83f24de8b`, pushed to `origin/main` on 2026-10-08. The coordination/draft-label revision follows that commit; use this file's Git history for its exact SHA. A push permits repository inspection; it does not authorize publication or live processing.
 
 Historical publication H-003 / D-013: [V3.3 review target](https://optimalisering-oslo-v33.anel.workers.dev), Worker version `9c4f4691-8ac7-4515-be65-d9e99e04f2ba`. Live 1440/390/320px and all 15 routes are verified in `coordination/evidence/h003-publication/`. Static frontend only; noindex and intake-disabled state remain. See the latest outbound report for the exact delivery Git revision. This OWNER-requested web review is distinct from production launch or representative acceptance.
 
-H-004 current web review: [V3.3 preview](https://optimalisering-oslo-v33.anel.workers.dev), source delivery `87daa54`, verified Worker version `b2c527a3-e60e-458c-b7f9-c257afda6c21`. Native build succeeded. Live 1440/390/320px focused QA, all 15 HTML byte comparisons, stylesheet equivalence, noindex/robots/sitemap and static-intake GET 404 pass. Separate live evidence is in `coordination/evidence/h004-live/`. The following receipt-only revision changes no website assets; use Git history for its own SHA.
+Historical H-004 web review: [V3.3 preview](https://optimalisering-oslo-v33.anel.workers.dev), source delivery `87daa54`, verified Worker version `b2c527a3-e60e-458c-b7f9-c257afda6c21`. Native build succeeded. Live 1440/390/320px focused QA, all 15 HTML byte comparisons, stylesheet equivalence, noindex/robots/sitemap and static-intake GET 404 pass. Separate live evidence is in `coordination/evidence/h004-live/`. The following receipt-only revision changes no website assets; use Git history for its own SHA.
 
 ## Implemented baseline
 
 - Astro static website under `app/`, with semantic JSON content, responsive shared templates, self-hosted Instrument Sans/Figtree, local SVG illustrations, metadata and internal links.
 - 15 exploratory content routes: `/`, `/synlighet/`, `/konvertering/`, `/priser/`, `/vurdering/`, `/om/`, `/kontakt/`, `/personvern/`, `/vilkar/`, `/seo/`, `/ai-synlighet/`, `/nettbutikkoptimalisering/`, `/innsikt/`, `/innsikt/hva-bor-optimaliseres-forst/`, `/innsikt/male-effekt-av-optimalisering/`. A technical 404 also exists. No later portfolio/case/city-grid expansion was implemented.
-- H-004 homepage: category-aware semantic H1 and paragraph display hook; immediate need selector; combined traffic/conversion calculator; explicit non-price package cards; no proof block; diagnosis/fit/manual check/provider/FAQ. Editable homepage-only header/footer/form keep the remaining pages unchanged.
+- H-005B homepage: one task-focused semantic/display H1, short category/geography support and one restrained outcome visual; immediate need selector; combined traffic/conversion calculator; explicit non-price package cards; no proof block; diagnosis/fit/manual check/provider/FAQ. Editable homepage-only header/footer/form keep the remaining pages unchanged.
 - Root `.pages.yml` points Pages CMS to `app/src/content/pages/`; it is configuration, not proof of an authenticated editor/account integration.
 - Interim Node HTTP API plus local server-side SQLite storage for enquiries, one `assessment_received` conversion and source tags. Idempotent submissions, separately retryable Resend notifications, input/origin/size checks and basic socket-IP rate limiting. Operational databases/secrets are ignored by Git.
 - Source tags travel through internal URLs and are sanitized at submission; no cookies, localStorage tracking or persistent visitor IDs. This is limited submission attribution, not a verified cross-session journey, lead-quality system or revenue pipeline.
@@ -56,7 +56,7 @@ Templates were applied across the portfolio before a representative full-page re
 
 ## Representative page and review boundary
 
-Representative page: **the complete homepage `/`** at `caa88817152b23f5c67fabe8a328ed868ea7c9cb`, using revised `home.json`, `HomePage`, `HomeJourney`, `HomeLeverage`, `HomeSection`, and new homepage-only `HomeAssessment`, `HomeHeader`, `HomeFooter` plus `home-invite.css`. Shared SiteLayout/routing passes homepage data only; content.config imports the testable schema. Existing global CSS, inner templates and shared form/header/footer stay intact. Current full-page/hero-selector/calculator evidence is in `coordination/evidence/h004/`; review the whole running page where interaction matters.
+Representative page: **the complete homepage `/`** at `1d4bdf77bd234783b68a7f581bdb88ab6ef2af38`, using revised `home.json`, `HomePage`, `HomeJourney`, `HomeLeverage`, `HomeSection`, and homepage-only `HomeAssessment`, `HomeHeader`, `HomeFooter` plus `home-invite.css`. Shared SiteLayout/routing passes homepage data only; content.config imports the testable schema. Existing global CSS, inner templates and shared form/header/footer stay intact. Current full-page/hero-selector evidence is in `coordination/evidence/h005b/`; historical calculator captures remain in `coordination/evidence/h004/`; review the whole running page where interaction matters.
 
 `/vurdering/` supports review of the form flow; it is not a second design-direction candidate. All other pages remain frozen. Homepage approval is scoped to the reviewed content/visual revision; each remaining page still needs appropriate content review before publication. Implementation revisions require a concrete inbound handoff.
 
@@ -102,7 +102,7 @@ The homepage must now optimize for immediate comprehension by a Norwegian busine
 
 Customer language is **Bli funnet** and **Gjør flere besøk til henvendelser og salg**. Do not reuse “Så må de velge deg” as headline, illustration caption, aria label or substitute concept in the new homepage. Authority architecture must support SEO, AI visibility (AIO/GEO/AEO concepts consolidated rather than synonym-spam), Local SEO, CRO and campaign optimization over time, while keeping the homepage commercially simple.
 
-## H-004 current technical delivery
+## Historical H-004 technical delivery
 
 Implementation/evidence `caa88817152b23f5c67fabe8a328ed868ea7c9cb` consumes `d0e5a30`. Astro check: 53 files, zero diagnostics; 24 tests; build; 449-link static audit; 40 browser regression checks; focused 1440/390/320px QA and production guard pass. CMS section/default constraints and rate-precision/overflow fixes have failing-before/passing-after regressions and a separate technical re-review. All 174 protected/frozen output inputs match the fresh baseline (144 reference files, 14 other JSON, 15 non-home HTML including 404, one shared CSS). Nine screenshots and receipts are in `evidence/h004/`. Authenticated CMS save and real intake/delivery remain unverified and unauthorized; the static review form is disabled. See the outbound report for final repository/Worker verification. Stop for R-03/R-04.
 
@@ -118,7 +118,7 @@ Target hero:
 - CTAs: **Ta en gratis sjekk** and **Se priser**
 - no separate small keyword H1
 - no hero note
-- no hero illustration
+- old repetitive illustration removed; D-016 supersedes the no-visual clause with one restrained outcome visual
 
 Need-selector copy should be shortened so each card reads as a clear task choice, not a mini landing page. Calculator, packages, mechanism, fit/not-fit, assessment, provider, FAQ and footer remain structurally unchanged.
 
@@ -133,3 +133,8 @@ The visual should plausibly suggest:
 - improved commercial outcome.
 
 It should feel real-ish/productized, not like a stock photo, fake case, dense dashboard or abstract decoration. The need selector must still arrive quickly below the hero, especially on mobile.
+
+
+## H-005B current technical delivery
+
+Implementation/evidence 1d4bdf77bd234783b68a7f581bdb88ab6ef2af38 consumes b6d035a under D-015/D-016. Only hero/selector copy, hero markup/visual/styles and corresponding CMS/schema/QA changed. Final verify: 55 files without diagnostics, 24 tests, 449 links; 40 existing browser checks; focused 1440/390/320px and production guard pass. Hero heights fall from 607.64/799.42/824.34px to 476.03/665.59/677.80px. All lower DOM/computed styles and relative geometry are preserved across 207 elements per width; all 174 protected/frozen files match the fresh baseline. Six captures, reproducible baselines and a clean technical review are in evidence/h005b/. Generated support/visual wording remains draft. Main/Worker delivery is recorded in CODEX-TO-CHATGPT and its Git history. OWNER R-03 remains REVISE / awaiting this iteration’s verdict; formal RED_TEAM R-04 is ready and pending. No scale-out, real intake, launch or new content lock.

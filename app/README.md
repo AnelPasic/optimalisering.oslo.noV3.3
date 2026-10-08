@@ -1,6 +1,6 @@
 # Optimalisering Oslo v3.3
 
-**Exploratory baseline; expansion paused.** H-004 / D-014 revises the homepage into a task-first representative page, superseding conflicting H-001 / D-010 copy/order. The revised homepage is `REVIEW_REQUIRED` / **DRAFT / NON-AUTHORITATIVE** pending review; the other 14 pages and shared wording remain draft and frozen. OWNER R-03 and independent RED_TEAM R-04 are pending. Read `../coordination/PROJECT-STATE.md`, `CHATGPT-TO-CODEX.md` and `DECISIONS.md` before substantial work. Preserve the remaining pages until the recorded gates pass. See root `../AGENTS.md` for durable coordination rules.
+**Exploratory baseline; expansion paused.** H-005B / D-015 / D-016 simplifies the homepage hero and selector while preserving H-004’s lower-page architecture. The revised homepage is `REVIEW_REQUIRED` / **DRAFT / NON-AUTHORITATIVE** pending review; the other 14 pages and shared wording remain draft and frozen. OWNER R-03 and independent RED_TEAM R-04 are pending. Read `../coordination/PROJECT-STATE.md`, `CHATGPT-TO-CODEX.md` and `DECISIONS.md` before substantial work. Preserve the remaining pages until the recorded gates pass. See root `../AGENTS.md` for durable coordination rules.
 
 The actual website is in this directory. `../system/` and `../project/` are read-only reference inputs. There are 15 Norwegian content routes, a responsive homepage, two service pillars, SEO and AI pages, store optimization, two distinct guides, a pricing decision page, and assessment/contact/provider/legal pages.
 
@@ -42,8 +42,8 @@ The server binds to loopback by default. The intended Cloudflare frontend remain
 
 - `npm run verify`: Astro diagnostics, functional tests, static build and HTML audit.
 - `node scripts/qa-browser.mjs`: installed Chrome browser checks, desktop/mobile screenshots and synthetic form flow. Set CHROME_PATH if Chrome lives elsewhere.
-- `node scripts/qa-home-h004.mjs`: current homepage/CMS/calculator/intake checks and nine 1440/390/320px review captures. Optional `QA_BASE_URL` and `QA_EVIDENCE_DIR` select the review host/evidence directory. Historical H-001/Invite scripts target their historical content revisions.
-- `node scripts/qa-preservation.mjs snapshot` before implementation, then `node scripts/qa-preservation.mjs` after building: compares protected inputs, remaining-page JSON/HTML and shared CSS against the ignored local snapshot. H-004's receipt is in `../coordination/evidence/h004/`.
+- `node scripts/qa-home-h005b.mjs`: current hero/CMS/calculator/intake and lower-page preservation checks, plus six 1440/390/320px review captures. Optional `QA_BASE_URL` and `QA_EVIDENCE_DIR` select the review host/evidence directory. Historical H-001/Invite/H-004 scripts target their historical content revisions.
+- `node scripts/qa-preservation.mjs snapshot` before implementation, then `node scripts/qa-preservation.mjs` after building: compares protected inputs, remaining-page JSON/HTML and shared CSS against the ignored local snapshot. For the saved H-005B baseline, set `QA_BASELINE_FILE=../coordination/evidence/h005b/files-baseline.json` and run the comparison after building. See `../coordination/evidence/h005b/README.md` for the separate rendered-homepage baseline.
 - `qa-output/`: ignored screenshots and browser results.
 
 No-JavaScript submission stays disabled and has an explicit POST fallback, so personal details cannot be placed in a GET query. Server intake remains disabled without full local configuration. No real emails are sent by tests.
@@ -52,7 +52,7 @@ Node 24's built-in SQLite currently emits an experimental-feature warning. Pin t
 
 ## Publication gate
 
-OWNER authorized web publication for review rounds under H-003 / D-013; H-004 specifically delivers to `main` for the connected review Worker. The existing V3.3 target in `wrangler.jsonc` serves static `dist/` through Workers; it does not deploy the Node/SQLite API. Future pushes/deployments require their actual scoped handoff. Keep default preview environment/intake settings. `public/_headers` adds `X-Robots-Tag: noindex, nofollow` to deployed assets, alongside preview metadata/robots. A production launch must revisit that preview header and all readiness gates below.
+OWNER authorized web publication for review rounds under H-003 / D-013; H-005B specifically delivers to `main` for the connected review Worker. The existing V3.3 target in `wrangler.jsonc` serves static `dist/` through Workers; it does not deploy the Node/SQLite API. Future pushes/deployments require their actual scoped handoff. Keep default preview environment/intake settings. `public/_headers` adds `X-Robots-Tag: noindex, nofollow` to deployed assets, alongside preview metadata/robots. A production launch must revisit that preview header and all readiness gates below.
 
 Astro's build lifecycle checks the same resolved environment files used by Astro, including `.env.local` and `.env.production*`. Setting SITE_STAGE=production requires every page to be CONTENT_LOCKED/PUBLISHED, privacy and lead readiness, Resend configuration and LAUNCH_APPROVED=true. That flag is an operational assertion of an actual owner decision, not a substitute for obtaining one.
 

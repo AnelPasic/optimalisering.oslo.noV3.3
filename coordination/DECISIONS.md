@@ -60,3 +60,8 @@ Content lock, material offer approval, representative visual acceptance, indepen
 ## D-014 implementation receipt (no new approval)
 
 2026-10-08, IMPLEMENTATION: H-004 at handoff `d0e5a30` is implemented at `caa88817152b23f5c67fabe8a328ed868ea7c9cb`. D-014 supplies the revised direction/exact required phrases, while newly generated homepage content is REVIEW_REQUIRED / DRAFT / NON-AUTHORITATIVE. No new content lock, commercial terms, proof approval, OWNER acceptance, independent RED_TEAM verdict or launch permission is recorded. R-03/R-04 remain pending; future work requires the corresponding genuine review and scoped handoff. See CODEX-TO-CHATGPT and its Git revision for final repository/Worker delivery evidence.
+
+
+## D-015 / D-016 implementation receipt (no new approval)
+
+2026-10-08, IMPLEMENTATION: H-005B at b6d035a99513d007a905cbc64c2f0e10c1f5421b is implemented at 1d4bdf77bd234783b68a7f581bdb88ab6ef2af38. One semantic/display H1, shorter support, two CTAs and one restrained outcome illustration replace the layered H-004 hero; selector descriptions use the supplied exact text. Calculator downward and all other pages/reference inputs are preserved. Technical QA/review and publication receipts are in CODEX-TO-CHATGPT/evidence/h005b. Generated support/visual copy remains REVIEW_REQUIRED / DRAFT / NON-AUTHORITATIVE. No content lock, OWNER acceptance, formal RED_TEAM verdict, scale-out or launch approval is recorded. Stop for R-03/R-04.

@@ -8,11 +8,11 @@ The repository is the durable coordination layer between ChatGPT / STRATEGY_CONT
 
 ## Current scope: preserve the exploratory baseline
 
-The existing 15-page website in `app/` is an exploratory baseline, not approved production. Pause page/content expansion. The representative design page is the complete homepage `/`, assessed on desktop and mobile. H-004 / D-014 authorizes one homepage-only task-first revision, superseding conflicting D-010 wording/order while retaining D-012's Invite DNA and font roles. The iteration is complete at `caa8881`; stop for OWNER R-03 and RED_TEAM R-04 review. Do not redesign, delete or polish the other 14 pages.
+The existing 15-page website in `app/` is an exploratory baseline, not approved production. Pause page/content expansion. The representative design page is the complete homepage `/`, assessed on desktop and mobile. H-005B / D-015 / D-016 authorizes the homepage hero simplification, one restrained outcome visual and shorter need-selector descriptions, preserving the H-004 lower page and D-012 Invite DNA/font roles. The iteration is complete at `1d4bdf7`; stop for OWNER R-03 and RED_TEAM R-04 review. Do not redesign, delete or polish the other 14 pages.
 
 Do not expand, redesign or polish the remaining pages until the representative page and content/visual direction have passed the reviews recorded in `coordination/REVIEW-QUEUE.md` and the resulting approvals are recorded in `coordination/DECISIONS.md`. A review request alone does not authorize a representative-page revision; wait for an explicit, scoped handoff in `coordination/CHATGPT-TO-CODEX.md`.
 
-The baseline and H-001 through H-003 are completed history. H-004 includes delivery to `main` for the connected review Worker, with preview/noindex and intake disabled. Keep the repository coordination record synchronized as part of delivery. This does not authorize production lead processing, domain cutover, visual acceptance or propagation. Future repository writes/pushes/deployments must follow the scope of their actual handoff.
+The baseline and H-001 through H-005B are completed history. H-005B includes delivery to `main` for the connected review Worker, with preview/noindex and intake disabled. Keep the repository coordination record synchronized as part of delivery. This does not authorize production lead processing, domain cutover, visual acceptance or propagation. Future repository writes/pushes/deployments must follow the scope of their actual handoff.
 
 ## Missing decisions are dependencies
 

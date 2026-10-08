@@ -1,6 +1,30 @@
 # Codex to ChatGPT
 
-## Active delivery: H-004 / IMPLEMENTATION COMPLETE; STOP FOR R-03/R-04
+## Active delivery: H-005B / IMPLEMENTATION COMPLETE; STOP FOR R-03/R-04
+
+2026-10-08, IMPLEMENTATION. Pulled main with fast-forward only to b6d035a99513d007a905cbc64c2f0e10c1f5421b, then consumed active H-005B under D-015/D-016. **Implementation/content/local-evidence SHA: 1d4bdf77bd234783b68a7f581bdb88ab6ef2af38.** Use this report’s Git history for its own coordination-delivery SHA. H-005B is complete; no further implementation handoff is active.
+
+Delivered only the homepage hero and need-selector copy revision: exact eyebrow **For bedrifter som konkurrerer om kundene**; one semantic/display H1 **Bli funnet. Gjør flere besøk til henvendelser og salg.**; one short support paragraph covering SEO, AI-synlighet, konverteringsoptimalisering, Oslo/rest of Norway and Medon’s starting point; unchanged **Ta en gratis sjekk** / **Se priser** CTAs. Removed the small category H1, paragraph display layer, hero note and repetitive illustration. One restrained search → webpage → enquiry composition replaces it, with generic **Din bedrift** and explicit **Illustrasjon** labeling, no invented client, metric or case. Shortened the three selector descriptions exactly as supplied; cards/links remain intact.
+
+JSON, Zod and dedicated Pages CMS fields remain synchronized; obsolete displayHook/heroNote fields are removed and visual labels are editable in home.json. Instrument Sans/Figtree roles and Invite palette remain. No dependency/backend/other-page change. Generated support/visual copy remains **REVIEW_REQUIRED / DRAFT / NON-AUTHORITATIVE**; D-015/D-016 authorize this revision, not a complete new content lock.
+
+**Validation:** final npm run verify passed (55 checked files, zero errors/warnings/hints; 24 tests; 15 content routes + 404; 449 internal links/anchors). Existing browser QA passed 40 synthetic checks. Focused H-005B checks passed at 1440/390/320px: exact hero structure, one accessible visual, shorter hero/earlier selector, supplied descriptions, CMS coverage, no overflow, prescribed fonts, calculator edge cases, menu/FAQ and disabled form/no-POST/no-JavaScript behavior. Actual production-mode build is still refused. A fresh-context read-only technical reviewer independently checked fit, accessibility, CMS and preservation and found no Critical/Important/Minor issues; this is implementation QA, not formal R-04. The initial sandbox localhost denial was resolved by the authorized verification rerun. No live email or real lead submission occurred.
+
+| Width | H-004 hero | H-005B hero | Selector appears earlier |
+| --- | --- | --- | --- |
+| 1440px | 607.64px | 476.03px | 131.61px |
+| 390px | 799.42px | 665.59px | 133.83px |
+| 320px | 824.34px | 677.80px | 146.55px |
+
+**Preservation:** calculator through footer keep identical rendered DOM and computed styles, with relative geometry within 0.1px across eight blocks / 207 elements per width. Lower content, metadata, CTAs and header/footer copy are unchanged. All 174 file hashes match the fresh pre-change build: 144 system/project reference files, 14 other page JSON, 15 non-home HTML including 404, one shared CSS. Only page position changes as the hero/selector shrink. The complete lower architecture, copy, calculator behavior, packages, proof slot, assessment and chrome stay intact. All other 14 pages are frozen. Final whitespace checks run before delivery.
+
+**Local evidence:** [full page 1440](evidence/h005b/home-1440.png), [390](evidence/h005b/home-390.png), [320](evidence/h005b/home-320.png); [hero + selector 1440](evidence/h005b/hero-selector-1440.png), [390](evidence/h005b/hero-selector-390.png), [320](evidence/h005b/hero-selector-320.png). [Focused checks](evidence/h005b/checks.json), [verification](evidence/h005b/verification.txt), [browser regression](evidence/h005b/browser-regression.json), [preservation](evidence/h005b/preservation.json), [technical review](evidence/h005b/implementation-review.md), [baseline/commands](evidence/h005b/README.md).
+
+**Publication:** implementation and this synchronized coordination record are being delivered to main for the connected static review Worker. Live build/route verification follows below when complete. Preview/noindex and disabled intake remain; no production launch or domain/DNS cutover is authorized.
+
+**Next receivers / concrete request:** OWNER reviews the complete homepage at 1d4bdf77bd234783b68a7f581bdb88ab6ef2af38 for R-03: does this shorter hero plus restrained outcome visual satisfy the simplicity/clarity direction? Formal independent RED_TEAM reviews the same revision/evidence for R-04: return its commercial/content/visual verdict with concrete evidence. Record genuine verdicts and any scoped next handoff in the repository. STRATEGY_CONTENT records any actual content lock. R-05 and all remaining-page work stay blocked. Existing prices/terms/proof/privacy/backend/delivery/authenticated-CMS/launch dependencies remain unresolved; implementation cannot continue past this gate independently.
+
+## Previous delivery: H-004 / IMPLEMENTATION COMPLETE; STOP FOR R-03/R-04
 
 2026-10-08, IMPLEMENTATION. Pulled active handoff/authoritative coordination state at `d0e5a30` using fast-forward only. **Implementation/content/evidence SHA: `caa88817152b23f5c67fabe8a328ed868ea7c9cb`.** This coordination report follows that commit; use its Git history for the exact report/delivery revision. H-004 / D-014 is consumed. OWNER R-03 and independent RED_TEAM R-04 remain pending; no further implementation handoff is active.
 
