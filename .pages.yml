@@ -1,4 +1,4 @@
-# Pages CMS: homepage commercial editor and evidence-only proof registry; other pages remain frozen.
+# Pages CMS: shared homepage/pricing commercial source; other 13 pages remain frozen.
 media:
   - name: assets
     label: Eksisterende media
@@ -100,6 +100,7 @@ content:
             type: string
           - name: body
             label: Avsnitt
+            description: På /priser/ er kostnader.body en D-024-referanse. Synlige kostnadsregler og gjentatte prisfakta styres av Forside > Forsidens innhold > Felles pakker for forsiden og /priser/. Rediger disse reglene der; andre støtteavsnitt redigeres her etter scoped content-review.
             type: text
             list: true
           - name: items
@@ -263,7 +264,7 @@ content:
         type: boolean
         default: false
   - name: homepage
-    label: Forside – H-007 kommersielt innhold til vurdering
+    label: Forside og felles pakker – D-024 kommersiell del-lås
     type: file
     path: app/src/content/pages/home.json
     format: json
@@ -458,7 +459,8 @@ content:
                 label: Forbehold
                 type: text
           - name: packages
-            label: Pakker, priser og omfang
+            label: Felles pakker for forsiden og /priser/
+            description: Eneste kommersielle pakkekilde. Navn, priser, merking, områder og kostnadsregler brukes på begge sider, også ved gjentatte fakta i FAQ og metadata. D-024-verdiene endres bare etter et nytt uttrykkelig kommersielt/content-handoff.
             type: object
             fields:
               - name: eyebrow

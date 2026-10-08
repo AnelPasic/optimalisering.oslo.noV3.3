@@ -20,19 +20,19 @@ test('H-007 renders the exact reconfirmed ladder, VAT and Vekst recommendation',
   assert.ok(!/Sprint|ubegrenset|bindingstid|oppsigelsestid|minimumsperiode|oppstartsgebyr|onboarding|fakturavilkår|\d+\s*(?:timer|h\/mnd)/i.test(JSON.stringify(packages)));
 });
 
-test('H-007 keeps four work areas, shared measurement, budget and separate-cost rules', () => {
-  assert.deepEqual(packages.areas, ['Konvertering', 'Synlighet: SEO + Lokal SEO + AI-søk / AI-synlighet', 'Google Ads', 'Meta Ads']);
+test('D-024 retains four work areas, shared measurement, budget and separate-cost rules', () => {
+  assert.deepEqual(packages.areas, ['Konvertering', 'SEO, lokal SEO og AI-synlighet', 'Google Ads', 'Meta Ads']);
   assert.equal(packages.adBudgetNote, 'Annonsebudsjett kommer i tillegg.');
-  assert.match(packages.foundationNote, /Måling & sporing/);
+  assert.match(packages.foundationNote, /Måling og sporing ligger i bunn/);
   assert.match(packages.externalCostsNote, /tillegg.*avtalt/);
   assert.match(packages.separateWorkNote, /landingssider.*nettsider.*teknisk arbeid.*redesign.*prises separat/);
-  assert.match(packages.capacityNote, /Ubrukt kapasitet.*ikke/);
+  assert.match(packages.capacityNote, /kapasitet.*per måned.*ikke/);
 });
 
-test('H-007 adds the supplied free-check promise and retains manual bounded safeguards', () => {
+test('D-024 keeps the exact free-check promise and approved bounded manual safeguards', () => {
   assert.equal(page.homepage.form.promise, 'Få våre 3 viktigste funn innen 2 virkedager.');
   const assessment = page.sections.find((section: any) => section.id === 'sjekk');
-  assert.match(assessment.body.join(' '), /avgrenset, manuell.*Ingen automatisk poengsum, full revisjon, prognose eller gratis gjennomføring/);
+  assert.match(assessment.body.join(' '), /kort, manuell vurdering.*ikke en full revisjon, prognose eller gratis gjennomføring/);
   assert.equal(page.status, 'REVIEW_REQUIRED');
   assert.equal(page.authority, 'DRAFT / NON-AUTHORITATIVE');
   assert.ok(!/ikke avklart|ikke.*fastsatt/.test(page.faq.find((item: any) => item.question === 'Hva koster videre arbeid?').answer));

@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-10-08T23:29:30.209Z",
+  "actualAstroRoutes": [
+    "/",
+    "/priser/"
+  ],
+  "changedSharedFields": [
+    "price",
+    "fit",
+    "capacityNote",
+    "areas",
+    "externalCostsNote",
+    "separateWorkNote",
+    "recommended"
+  ],
+  "staleOriginalPriceInFaqOrMetadata": false,
+  "legacyAnchorIndependentOfRecommendation": true,
+  "secondPricingSourceChanged": false,
+  "proofRendered": false,
+  "originalHomeBytesRestored": true,
+  "result": "PASS",
+  "finalBuild": "Run npm run verify after this check"
+}

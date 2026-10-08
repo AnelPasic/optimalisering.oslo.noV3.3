@@ -1,0 +1,28 @@
+/* H-008: only /priser/, using the accepted homepage palette, type and spacing. */
+.invite-pricing .pricing-hero { padding-block: 64px 12px; }
+.invite-pricing .pricing-hero h1 { max-width: 940px; font-size: clamp(40px, 4vw, 56px); line-height: 1.08; letter-spacing: -.045em; }
+.invite-pricing .hero-intro { margin-top: 24px; max-width: 720px; font-size: 18px; line-height: 1.65; color: var(--muted); }
+.invite-pricing .pricing-hero .button { margin-top: 28px; }
+.invite-pricing .package-section { padding-top: 44px; }
+.invite-pricing .package-grid { margin-top: 0; }
+.invite-pricing .package-card h2 { font-size: 32px; }
+.invite-pricing .home-section-arbeidsomrader { background: #fff; }
+.invite-pricing .home-section-arbeidsomrader .section-items { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.invite-pricing .home-section-kostnader { background: #fbf9fc; }
+.invite-pricing .home-section-gratis { background: #e5f2ed; }
+.invite-pricing .home-section-gratis .section-links .text-link { background: var(--green); color: #fff; padding: 16px 24px; border-radius: 7px; }
+.invite-pricing .home-section-gratis .section-links .text-link:hover { background: #06675f; }
+@media (max-width: 1100px) {
+  .invite-pricing .pricing-hero { padding-top: 48px; }
+  .invite-pricing .home-section-arbeidsomrader .section-items { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 650px) {
+  .invite-pricing .pricing-hero { padding-top: 32px; }
+  .invite-pricing .pricing-hero h1 { font-size: 38px; }
+  .invite-pricing .hero-intro { font-size: 16px; margin-top: 20px; }
+  .invite-pricing .package-section { padding-top: 36px; }
+  .invite-pricing .home-section-arbeidsomrader .section-items { grid-template-columns: 1fr; gap: 28px; }
+}
+@media (max-width: 359px) {
+  .invite-pricing .pricing-hero h1 { font-size: 33px; }
+}

@@ -13,7 +13,7 @@
     "test": "node --test tests/*.test.ts tests/*.test.mjs",
     "build": "astro build",
     "preview": "node --env-file-if-exists=.env server/index.mjs",
-    "qa:static": "node scripts/audit-build.mjs && node scripts/audit-h007.mjs",
+    "qa:static": "node scripts/audit-build.mjs && node scripts/audit-h007.mjs && node scripts/audit-h008.mjs",
     "verify": "npm run check && npm test && npm run build && npm run qa:static",
     "deploy:review": "npm run verify && wrangler deploy",
     "leads:retry": "node --env-file-if-exists=.env server/retry.mjs"

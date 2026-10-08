@@ -1,0 +1,29 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Arrow from './Arrow.astro';
+import Packages from './PackageSection.astro';
+import ContentSection from './HomeSection.astro';
+interface Props {
+  page: CollectionEntry<'pages'>['data'];
+  commercial: NonNullable<CollectionEntry<'pages'>['data']['homepage']>;
+}
+const { page, commercial } = Astro.props;
+const packages = commercial.packages;
+// D-024's pricing context adds "også" to the shared external-cost rule.
+// Keep that locked connector while rendering the rules from one CMS source.
+const sections = page.sections.map(section => section.id === 'kostnader' ? {
+  ...section, body: [`${packages.adBudgetNote} ${packages.externalCostsNote.replace('kommer i tillegg', 'kommer også i tillegg')}`, packages.separateWorkNote, packages.capacityNote],
+} : section);
+---
+<div class="invite-home invite-pricing">
+  <section id="pricing-hero" class="pricing-hero shell">
+    <p class="eyebrow">{page.eyebrow}</p><h1 id="pricing-title">{page.title}</h1>
+    <p class="hero-intro">{page.intro}</p>
+    <a class="button" href={page.cta.href}>{page.cta.label}<Arrow diagonal /></a>
+  </section>
+  <Packages content={packages} showHeading={false} showNotes={false} headingTag="h2" labelledBy="pricing-title" recommendedAnchor="begge" />
+  {sections.map(section => <ContentSection section={section}>
+    {section.id === 'arbeidsomrader' && <div class="package-notes body-copy"><p>{packages.areasLabel}: {packages.areas.join(' · ')}.</p><p>{packages.foundationNote}</p></div>}
+  </ContentSection>)}
+  <section id="sporsmal" class="faq-section section-space"><div class="shell faq-grid"><div><p class="eyebrow">{commercial.faqEyebrow}</p><h2>{commercial.faqHeading}</h2></div><div class="faq-list">{page.faq.map(item => <details><summary>{item.question}<span aria-hidden="true">+</span></summary><p>{item.answer}</p></details>)}</div></div></section>
+</div>

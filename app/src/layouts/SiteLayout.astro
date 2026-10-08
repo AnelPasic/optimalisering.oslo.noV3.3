@@ -9,8 +9,8 @@ import HomeFooter from '../components/HomeFooter.astro';
 import type { CollectionEntry } from 'astro:content';
 import Attribution from '../components/Attribution.astro';
 import { site } from '../config/site';
-interface Props { title: string; description: string; noindex?: boolean; homeVisual?: boolean; homeChrome?: NonNullable<CollectionEntry<'pages'>['data']['homepage']>['chrome']; }
-const { title, description, noindex = false, homeVisual = false, homeChrome } = Astro.props;
+interface Props { title: string; description: string; noindex?: boolean; homeVisual?: boolean; pricingVisual?: boolean; homeChrome?: NonNullable<CollectionEntry<'pages'>['data']['homepage']>['chrome']; }
+const { title, description, noindex = false, homeVisual = false, pricingVisual = false, homeChrome } = Astro.props;
 const canonical = new URL(Astro.url.pathname, site.url).href;
 const organization = { '@context': 'https://schema.org', '@type': 'Organization', name: 'Medon AS', url: 'https://medon.no' };
 ---
@@ -32,6 +32,7 @@ const organization = { '@context': 'https://schema.org', '@type': 'Organization'
     <meta property="og:url" content={canonical} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     {homeVisual && <link rel="stylesheet" href="/styles/home-invite.css" />}
+    {pricingVisual && <link rel="stylesheet" href="/styles/pricing-invite.css" />}
     <script type="application/ld+json" set:html={JSON.stringify(organization).replace(/</g, '\\u003c')} />
   </head>
   <body class={homeVisual ? 'invite-homepage' : undefined}>

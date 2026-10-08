@@ -3,14 +3,29 @@ import { getCollection, type CollectionEntry } from 'astro:content';
 import SiteLayout from '../layouts/SiteLayout.astro';
 import HomePage from '../components/HomePage.astro';
 import InnerPage from '../components/InnerPage.astro';
+import PricingPage from '../components/PricingPage.astro';
+import { createCommercialTextBinding } from '../lib/commercial-text';
 
 export async function getStaticPaths() {
   const pages = await getCollection('pages');
-  return pages.map(page => ({ params: { slug: page.data.slug === 'home' ? undefined : page.data.slug }, props: { page: page.data } }));
+  const home = pages.find(page => page.data.slug === 'home')?.data;
+  const pricing = pages.find(page => page.data.slug === 'priser')?.data;
+  if (!home?.homepage || !pricing) throw new Error('Homepage commercial source and approved pricing support are required');
+  const commercial = home.homepage;
+  const bind = createCommercialTextBinding(home, pricing);
+  return pages.map(entry => {
+    const data = entry.data;
+    const page = ['home', 'priser'].includes(data.slug) ? {
+      ...data, seo: { title: bind(data.seo.title), description: bind(data.seo.description) },
+      faq: data.faq.map(item => ({ ...item, answer: bind(item.answer) })),
+    } : data;
+    return { params: { slug: data.slug === 'home' ? undefined : data.slug }, props: { page, ...(data.slug === 'priser' ? { commercial } : {}) } };
+  });
 }
-interface Props { page: CollectionEntry<'pages'>['data']; }
-const { page } = Astro.props;
+interface Props { page: CollectionEntry<'pages'>['data']; commercial?: NonNullable<CollectionEntry<'pages'>['data']['homepage']>; }
+const { page, commercial } = Astro.props;
+const pricing = page.slug === 'priser';
 ---
-<SiteLayout title={page.seo.title} description={page.seo.description} homeVisual={page.kind === 'home'} homeChrome={page.kind === 'home' ? page.homepage?.chrome : undefined}>
-  {page.kind === 'home' ? <HomePage page={page} /> : <InnerPage page={page} />}
+<SiteLayout title={page.seo.title} description={page.seo.description} homeVisual={page.kind === 'home' || pricing} pricingVisual={pricing} homeChrome={page.kind === 'home' ? page.homepage?.chrome : pricing ? commercial!.chrome : undefined}>
+  {page.kind === 'home' ? <HomePage page={page} /> : pricing ? <PricingPage page={page} commercial={commercial!} /> : <InnerPage page={page} />}
 </SiteLayout>

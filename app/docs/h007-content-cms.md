@@ -1,5 +1,7 @@
 # H-007 commercial content and proof editing
 
+Historical H-007 implementation note. D-024 subsequently locks the commercial fields and pricing support copy at the revisions named in coordination/DECISIONS.md. For H-008's shared homepage/pricing source and current editing location, see [h008-pricing-cms.md](h008-pricing-cms.md). The original review status below describes H-007 before that partial lock; it does not override D-024.
+
 Authoritative facts: coordination/H007-COMMERCIAL-INPUT.md and D-022/D-023 in coordination/DECISIONS.md. Current full homepage remains REVIEW_REQUIRED / DRAFT / NON-AUTHORITATIVE; only the supplied package labels/prices/descriptors/rules and free-check promise have the handoff's specific authority. Generated headings, fit/scope connective copy, CTA reuse and two reconciled pricing/cost FAQ answers need STRATEGY_CONTENT review. No remaining page content is approved by this change.
 
 ## Homepage editor
