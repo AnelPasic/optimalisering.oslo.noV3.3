@@ -1063,3 +1063,29 @@ The prepared photo slot/composition is acceptable. The eventual generated image 
 ### Next receiver
 
 OWNER R-03 for the H-006 representative layout, followed by the separately supplied/generated hero-photo asset review. Do not infer full visual acceptance until both are accepted.
+
+
+## RED_TEAM return — H-006 SELECTED PHOTO REVIEW COMPLETE
+
+**Date:** 2026-10-08  
+**Role:** RED_TEAM  
+**Reviewed revision:** `dc045748180897c20efa418ac739b4135bf5e517`  
+**Verdict:** **PASS**, with a positioning caveat.
+
+### Findings
+
+- The subject reads as a plausible small-business owner rather than an obvious corporate stock model.
+- Expression is positive but not exaggerated; the image supports the dream-outcome idea without implying a real testimonial.
+- Desktop and mobile crops retain the subject well and do not crowd the hero copy.
+- The image materially improves warmth/humanity over the neutral placeholder and the previous UI illustration.
+- No client logo, metric, testimonial or case-result implication is introduced.
+
+### Positioning caveat
+
+The boutique/e-commerce workspace makes the hero feel slightly more retail/e-commerce-specific than the service's actual broad SMB positioning.
+
+This does not fail the image for the current representative baseline. If OWNER wants maximum cross-industry neutrality, the broader office/service-business alternative may be worth comparing later. Do not create a gallery or slider.
+
+### Next receiver
+
+OWNER R-03 only. RED_TEAM layout and selected-photo gates are complete for the current representative.
