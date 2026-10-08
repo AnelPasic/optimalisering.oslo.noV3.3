@@ -61,3 +61,5 @@ For each completed review, append date, actual reviewer/role, inspected SHA, sco
 - 2026-10-08: H-004 delivery `87daa54` was pushed to main and the connected review Worker rebuilt successfully. Version `b2c527a3-e60e-458c-b7f9-c257afda6c21` passed live 1440/390/320px QA, all 15 route/build comparisons and preview/disabled-intake checks. A following receipt/evidence-only revision records this verification; website assets are unchanged. IMPLEMENTATION is stopped for OWNER R-03 and independent RED_TEAM R-04.
 
 - 2026-10-08: OWNER authorized H-005 / D-015. H-004's lower-page architecture stays in place. Only simplify the hero and tighten need-selector copy; test whether subtraction improves Storebrand/NAV-like task clarity.
+
+- 2026-10-08: OWNER clarified H-005 through D-016: keep hero simplification, but replace the old repetitive explanatory illustration with one calmer, realistic-ish dream-outcome visual. R-03 remains REVISE pending this exact iteration.
