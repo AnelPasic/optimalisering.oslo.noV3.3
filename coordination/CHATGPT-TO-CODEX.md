@@ -1,5 +1,157 @@
 # ChatGPT to Codex
 
+## Active handoff — H-005
+
+**Date:** 2026-10-08  
+**Authority:** OWNER EXPLICIT + STRATEGY_CONTENT / CRO  
+**Decision:** D-015  
+**Baseline:** H-004 implementation `caa88817152b23f5c67fabe8a328ed868ea7c9cb`  
+**Scope:** homepage hero + need-selector copy only
+
+### Objective
+
+H-004 got the overall page architecture right, but the hero is too dense.
+
+This is **not a redesign**. Test whether clarity improves by removing redundant layers.
+
+Keep everything below the need selector structurally unchanged:
+- calculator;
+- packages/pricing;
+- proof slot behavior;
+- mechanism;
+- fit/not-fit;
+- assessment;
+- Medon/provider;
+- FAQ/footer.
+
+### Hero — exact direction
+
+Use only these layers:
+
+**Eyebrow**
+> For bedrifter som konkurrerer om kundene
+
+**Semantic H1 — also the main visual headline**
+> Bli funnet. Gjør flere besøk til henvendelser og salg.
+
+Do **not** keep a separate small SEO/category H1 above it.
+
+**Support**
+Use one short paragraph that plainly communicates:
+- SEO;
+- AI-synlighet;
+- konverteringsoptimalisering;
+- for businesses in Oslo and the rest of Norway;
+- Medon starts where the customer journey stops.
+
+Keep this to roughly 1–2 short sentences. Do not repeat the H1.
+
+**CTAs**
+- Primary: `Ta en gratis sjekk`
+- Secondary: `Se priser`
+
+Remove:
+- hero note;
+- large hero illustration / HomeJourney from the hero;
+- any duplicated find/contact/sales explanation that exists only because of the illustration.
+
+The hero should feel materially calmer and shorter on both desktop and mobile.
+
+### SEO / authority constraint
+
+Do not treat removal of the keyword-heavy H1 as permission to weaken category/entity clarity elsewhere.
+
+Keep/strengthen appropriately through:
+- SEO title/meta;
+- support paragraph;
+- need selector;
+- internal links;
+- existing dedicated pages;
+- later authority content architecture.
+
+Do not keyword-stuff the hero.
+
+### Need selector — shorten copy only
+
+Keep:
+> Hva trenger du hjelp med?
+
+Keep the three choices and links.
+
+Use concise descriptions:
+
+**Bli funnet**  
+Discipline: `Synlighet`  
+Suggested description:
+> SEO, AI-synlighet og lokal synlighet når kundene leter etter det du tilbyr.
+
+**Gjør flere besøk til henvendelser og salg**  
+Discipline: `Konvertering`  
+Suggested description:
+> Konverteringsoptimalisering for nettsider, landingssider og nettbutikker.
+
+**Begge deler**  
+Discipline: `Synlighet + konvertering`  
+Suggested description:
+> Vi finner flaskehalsen og starter der det kan gi mest effekt.
+
+You may make tiny wording adjustments for grammar/fit only. Do not expand these into explanatory paragraphs.
+
+### CMS/content model
+
+Keep all public hero/selector wording content-driven in `home.json` / Pages CMS model.
+
+Remove unused hero illustration/note fields from the homepage content model if they are no longer needed and doing so is clean/safe. Do not modify unrelated page schemas unnecessarily.
+
+### Visual constraints
+
+KEEP:
+- Invite-derived palette and visual DNA;
+- Instrument Sans / Figtree roles;
+- current need-card treatment;
+- current section order;
+- current calculator/packages/lower-page design.
+
+CHANGE:
+- hero becomes a clean single-column or restrained composition with no large illustrative panel;
+- reduce vertical height materially;
+- ensure the need selector arrives sooner, especially on mobile.
+
+Do not compensate for removed illustration by adding new decorative clutter.
+
+### Acceptance criteria
+
+1. Hero contains only eyebrow + one H1 + one short support block + two CTAs.
+2. No separate keyword H1 exists.
+3. No hero note exists.
+4. No large hero illustration exists.
+5. The semantic H1 is exactly:
+   **Bli funnet. Gjør flere besøk til henvendelser og salg.**
+6. SEO/AI-synlighet/konverteringsoptimalisering still appear naturally in the support/category architecture.
+7. Need-selector descriptions are materially shorter.
+8. Need selector appears substantially earlier on mobile than in H-004.
+9. Everything from calculator downward is unchanged except unavoidable selector/hero fit ripple.
+10. Other 14 pages and `system/` / `project/` remain untouched.
+11. 1440 / 390 / 320px checks pass with no overflow.
+
+### Evidence / delivery
+
+- Run existing verify/tests/browser QA.
+- Add focused H-005 checks for exact hero structure and absence of illustration/note.
+- Capture:
+  - full page 1440 / 390 / 320;
+  - hero + first row of need selector at 1440;
+  - hero + need selector at 390 and 320.
+- Push to `main` so the review Worker rebuilds.
+- Verify the live review Worker if build timing allows.
+- Update `CODEX-TO-CHATGPT.md`, `PROJECT-STATE.md`, `REVIEW-QUEUE.md`.
+- Stop for OWNER R-03 and RED_TEAM R-04.
+
+Do not scale or polish the remaining pages.
+
+
+---
+
 ## Completed handoff — H-004 / awaiting OWNER and RED_TEAM review
 
 **Date:** 2026-10-08  
