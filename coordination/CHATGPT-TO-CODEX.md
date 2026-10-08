@@ -1,5 +1,237 @@
 # ChatGPT to Codex
 
+## Active handoff — H-007
+
+**Date:** 2026-10-08  
+**Authority:** OWNER R-03 PASS + STRATEGY_CONTENT / COMMERCIAL  
+**Decisions:** D-021, D-022, D-023  
+**Authoritative commercial input:** `coordination/H007-COMMERCIAL-INPUT.md`  
+**Scope:** homepage commercial layer + proof data model + Pages CMS wiring
+
+### Objective
+
+Stop iterating on the representative layout.
+
+Use the accepted current homepage as the visual/IA baseline and move the project forward commercially:
+
+1. implement the previously locked V3 package ladder;
+2. prepare the real case/proof evidence as structured evidence-only records with hard publication gating;
+3. make the commercial fields cleanly editable through Pages CMS;
+4. preserve the rest of the current homepage architecture and current visual direction.
+
+Codex is implementation. Do not improvise marketing strategy or customer-facing claims beyond the exact factual inputs supplied.
+
+### 1. Replace the temporary package section with the D-022 ladder
+
+The current temporary Synlighet / Konvertering / Begge price placeholders are superseded as **packages**.
+
+The need selector above remains:
+- Bli funnet
+- Gjør flere besøk til henvendelser og salg
+- Begge deler
+
+The package/pricing section must instead use:
+
+#### Optimalisering
+- **4 500 kr/mnd eks. mva.**
+- descriptor: **Ett prioritert hovedområde**
+- one main area / one priority at a time
+
+#### Vekst
+- **6 900 kr/mnd eks. mva.**
+- badge: **Anbefalt**
+- descriptor: **To områder som jobber sammen**
+- two connected areas
+
+#### Partner
+- **14 900 kr/mnd eks. mva.**
+- descriptor: **Helheten + større kapasitet**
+- greater capacity across relevant areas
+- never describe it as unlimited
+
+Use Instrument Sans for major price figures per the established typography rule.
+
+Do not publicly expose internal hourly guardrails unless later authorized.
+
+### 2. Package scope facts
+
+The monthly work can combine these four areas:
+- Konvertering
+- Synlighet: SEO + Lokal SEO + AI-søk / AI-synlighet
+- Google Ads
+- Meta Ads
+
+Måling & sporing is a shared foundation, not a fifth package/service card.
+
+Make this understandable without turning each pricing card into a feature dump.
+
+Hard rules that must be visible near pricing where relevant:
+- **Annonsebudsjett kommer i tillegg.**
+- applicable external platform costs are additional unless explicitly agreed otherwise
+- larger/new landing pages, websites, substantial technical work and redesigns are quoted separately
+
+Do not invent:
+- binding period
+- cancellation period
+- minimum term
+- setup/onboarding fee
+- invoice terms
+- unlimited work
+
+Do not reintroduce Sprint.
+
+### 3. Free check
+
+Integrate the established offer:
+> **Få våre 3 viktigste funn innen 2 virkedager.**
+
+Keep the existing bounded/manual wording and safeguards:
+- not a complete audit
+- not free implementation
+- not a forecast/result guarantee
+- not an automated score presented as human expertise
+
+Do not make the form longer.
+
+### 4. Proof/case registry
+
+Create a structured proof/case content model that can later drive homepage proof and result pages without code changes.
+
+Import the exact evidence records from `coordination/H007-COMMERCIAL-INPUT.md`:
+- Nysta
+- Oslo Privatklinikk
+
+Both must remain:
+- `EVIDENCE_ONLY`
+- `NEEDS_PERMISSION`
+- non-rendering on public pages
+
+Required model fields should support at minimum:
+- id
+- client/display name
+- anonymized label
+- result/dominant metric
+- before
+- after
+- delta
+- period/timeframe
+- intervention/change
+- source/provenance
+- limitations/attribution caveat
+- naming permission
+- artifact/screenshot status
+- publication status
+- publicationApproved boolean
+
+Implement a hard renderer guard so no case can appear publicly unless publication status/approval explicitly permits it.
+
+No test fixture, environment flag or missing field may accidentally make a case public.
+
+Do not create fake testimonials, fake logos or public anonymized claims in H-007.
+
+### 5. Homepage proof slot
+
+Keep the homepage proof position in the established sequence.
+
+For now, because there is no PUBLISHABLE case:
+- do not render a fake proof card;
+- do not fill the space with generic praise;
+- it is acceptable for the public proof slot to remain omitted.
+
+The purpose of H-007 is to make the real proof data ready for later permission, not to manufacture visible proof.
+
+### 6. Pages CMS
+
+Make the following commercially meaningful data editable through Pages CMS without touching component code:
+
+Homepage:
+- package section eyebrow/heading/intro
+- package names
+- descriptor
+- price
+- VAT suffix
+- recommended badge/state
+- customer-facing fit/scope copy
+- CTA label/href
+- external-cost note
+- free-check promise/copy
+- existing hero/selector/calculator/form/FAQ fields
+
+Proof registry:
+- all evidence/status/permission fields listed above
+- publication controls must be explicit and safe
+
+Do not make internal delivery-hour guardrails a public CMS marketing field. If stored, keep them in a non-public operational field/file.
+
+Authenticated Pages CMS account/GitHub-app operation is still not proven. Validate schema/config locally and report the exact manual authentication/connection step that remains; do not claim it works live unless actually tested.
+
+### 7. Visual/layout preservation
+
+Preserve the current visual baseline including OWNER's direct small color/selector changes.
+
+Do not:
+- reopen hero design
+- change image
+- change section order
+- rework palette
+- redesign need cards
+- redesign calculator
+- propagate homepage visual system to the other 14 pages
+
+You may make minimal pricing/proof/CMS layout adjustments required to render the new package ladder cleanly.
+
+### 8. Content authority
+
+The exact package labels/prices/rules in D-022 are authoritative.
+
+Generated connective copy remains DRAFT / REVIEW_REQUIRED unless supplied verbatim by this handoff.
+
+Do not mark the entire homepage CONTENT_LOCKED.
+
+ChatGPT will perform the next copy/content refinement directly against the CMS/content layer after H-007.
+
+### 9. Existing pages
+
+Do not expand/redesign the remaining 14 pages in this handoff.
+
+A later controlled propagation/content phase will decide:
+- which service pages stay
+- page-specific copy
+- /priser/ synchronization
+- result/case URLs
+- authority/insight expansion
+
+### Acceptance criteria
+
+1. Homepage visually preserves the accepted D-021 baseline.
+2. Pricing section renders 4 500 / 6 900 / 14 900 kr/mnd eks. mva. accurately.
+3. Vekst is visibly but tastefully marked Anbefalt.
+4. Sprint is absent.
+5. Ad-budget-extra rule is visible.
+6. No invented contract/term language appears.
+7. Free check states 3 key findings within 2 business days while retaining bounded/manual safeguards.
+8. Nysta and Oslo Privatklinikk exist as structured evidence-only records and render nowhere publicly.
+9. Automated tests prove proof cannot render without explicit publishability.
+10. Pages CMS exposes the intended homepage commercial fields and proof registry safely.
+11. Other 14 pages, `system/`, `project/` and backend/intake behavior remain unchanged.
+12. 1440 / 390 / 320 responsive checks pass.
+
+### Delivery
+
+- Run full verify/tests/browser QA.
+- Add focused H-007 tests for exact package prices, VAT suffix, recommended state, Sprint absence, ad-budget note, free-check promise and proof-publication guard.
+- Capture homepage package section at 1440 and 390.
+- Capture free-check section at 1440 and 390.
+- Do not create screenshots of hidden proof as if public.
+- Push to `main` and verify the review Worker.
+- Update `CODEX-TO-CHATGPT.md`, `PROJECT-STATE.md`, `REVIEW-QUEUE.md`.
+- Stop after H-007 for STRATEGY_CONTENT review.
+
+Do not independently continue into remaining-page propagation.
+
+
+---
+
 ## Completed OWNER selector follow-up — H-006
 
 **IMPLEMENTATION receipt:** consumed at 7b7a970f301a1cb47dff7307a61f97175c5589d1. Local verification/evidence passes; exact delivery and live receipt belong in CODEX-TO-CHATGPT and Git history. Stop for OWNER R-03. D-019/D-020 remain the genuine prior layout/photo verdicts, not an invented review of this selector delta.
