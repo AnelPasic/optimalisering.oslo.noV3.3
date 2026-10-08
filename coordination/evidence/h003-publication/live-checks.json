@@ -1,0 +1,121 @@
+{
+  "baseUrl": "https://optimalisering-oslo-v33.anel.workers.dev",
+  "deploymentVersion": "9c4f4691-8ac7-4515-be65-d9e99e04f2ba",
+  "routes": [
+    {
+      "path": "/ai-synlighet/",
+      "status": 200,
+      "xRobotsTag": "noindex, nofollow",
+      "exactBuiltHtml": true
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "xRobotsTag": "noindex, nofollow",
+      "exactBuiltHtml": true
+    },
+    {
+      "path": "/innsikt/hva-bor-optimaliseres-forst/",
+      "status": 200,
+      "xRobotsTag": "noindex, nofollow",
+      "exactBuiltHtml": true
+    },
+    {
+      "path": "/innsikt/",
+      "status": 200,
+      "xRobotsTag": "noindex, nofollow",
+      "exactBuiltHtml": true
+    },
+    {
+      "path": "/kontakt/",
+      "status": 200,
+      "xRobotsTag": "noindex, nofollow",
+      "exactBuiltHtml": true
+    },
+    {
+      "path": "/konvertering/",
+      "status": 200,
+      "xRobotsTag": "noindex, nofollow",
+      "exactBuiltHtml": true
+    },
+    {
+      "path": "/innsikt/male-effekt-av-optimalisering/",
+      "status": 200,
+      "xRobotsTag": "noindex, nofollow",
+      "exactBuiltHtml": true
+    },
+    {
+      "path": "/nettbutikkoptimalisering/",
+      "status": 200,
+      "xRobotsTag": "noindex, nofollow",
+      "exactBuiltHtml": true
+    },
+    {
+      "path": "/om/",
+      "status": 200,
+      "xRobotsTag": "noindex, nofollow",
+      "exactBuiltHtml": true
+    },
+    {
+      "path": "/personvern/",
+      "status": 200,
+      "xRobotsTag": "noindex, nofollow",
+      "exactBuiltHtml": true
+    },
+    {
+      "path": "/priser/",
+      "status": 200,
+      "xRobotsTag": "noindex, nofollow",
+      "exactBuiltHtml": true
+    },
+    {
+      "path": "/seo/",
+      "status": 200,
+      "xRobotsTag": "noindex, nofollow",
+      "exactBuiltHtml": true
+    },
+    {
+      "path": "/synlighet/",
+      "status": 200,
+      "xRobotsTag": "noindex, nofollow",
+      "exactBuiltHtml": true
+    },
+    {
+      "path": "/vilkar/",
+      "status": 200,
+      "xRobotsTag": "noindex, nofollow",
+      "exactBuiltHtml": true
+    },
+    {
+      "path": "/vurdering/",
+      "status": 200,
+      "xRobotsTag": "noindex, nofollow",
+      "exactBuiltHtml": true
+    }
+  ],
+  "visual": [
+    {
+      "width": 1440,
+      "footerBackground": "rgb(50, 12, 67)",
+      "teachingBackground": "rgb(50, 12, 67)",
+      "afterHero": "regneeksempel"
+    },
+    {
+      "width": 390,
+      "footerBackground": "rgb(50, 12, 67)",
+      "teachingBackground": "rgb(50, 12, 67)",
+      "afterHero": "regneeksempel"
+    },
+    {
+      "width": 320,
+      "footerBackground": "rgb(50, 12, 67)",
+      "teachingBackground": "rgb(50, 12, 67)",
+      "afterHero": "regneeksempel"
+    }
+  ],
+  "custom404": 404,
+  "robotsDisallowed": true,
+  "emptyPreviewSitemap": true,
+  "apiNotDeployed": 404,
+  "liveEmailsSent": 0
+}

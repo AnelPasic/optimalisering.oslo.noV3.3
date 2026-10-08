@@ -48,8 +48,10 @@ Node 24's built-in SQLite currently emits an experimental-feature warning. Pin t
 
 ## Publication gate
 
+OWNER authorized web publication for review rounds under H-003 / D-013. The existing V3.3 target in `wrangler.jsonc` serves static `dist/` through Workers; it does not deploy the Node/SQLite API. Run `npm run deploy:review` after a scoped review change. Keep default preview environment/intake settings. `public/_headers` adds `X-Robots-Tag: noindex, nofollow` to the deployed assets, alongside preview metadata/robots. A later production launch must explicitly revisit that preview header and all readiness gates below.
+
 Astro's build lifecycle checks the same resolved environment files used by Astro, including `.env.local` and `.env.production*`. Setting SITE_STAGE=production requires every page to be CONTENT_LOCKED/PUBLISHED, privacy and lead readiness, Resend configuration and LAUNCH_APPROVED=true. That flag is an operational assertion of an actual owner decision, not a substitute for obtaining one.
 
-Before launch: review complete content and representative desktop/mobile composition; finalize public pricing/scope/terms and privacy/retention; configure and verify real notification delivery; establish persistent hosting/backups, trusted proxy/rate limits, domain/redirect/native Git deployment and production conversion measurement/Search Console; obtain launch authorization. The current task builds locally and does not publish or push.
+Before launch: review complete content and representative desktop/mobile composition; finalize public pricing/scope/terms and privacy/retention; configure and verify real notification delivery; establish persistent hosting/backups, trusted proxy/rate limits, domain/redirect/native Git deployment and production conversion measurement/Search Console; obtain launch authorization. H-003 authorizes review publication only; these production requirements remain unresolved.
 
 Documentation references: [Astro content collections](https://docs.astro.build/en/guides/content-collections/), [Pages CMS configuration](https://pagescms.org/docs/configuration/), [Resend send API](https://resend.com/docs/api-reference/emails/send-email), [Resend idempotency](https://resend.com/docs/dashboard/emails/idempotency-keys).

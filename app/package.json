@@ -15,6 +15,7 @@
     "preview": "node --env-file-if-exists=.env server/index.mjs",
     "qa:static": "node scripts/audit-build.mjs",
     "verify": "npm run check && npm test && npm run build && npm run qa:static",
+    "deploy:review": "npm run verify && wrangler deploy",
     "leads:retry": "node --env-file-if-exists=.env server/retry.mjs"
   },
   "dependencies": {
@@ -26,6 +27,7 @@
     "@astrojs/check": "^0.9.10",
     "@playwright/test": "^1.64.0",
     "@types/node": "^24.19.1",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "wrangler": "^4.148.0"
   }
 }

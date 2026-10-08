@@ -1,6 +1,12 @@
 # ChatGPT to Codex
 
-## Active handoff — H-002 / OWNER R-03 visual revision
+## Active handoff — H-003 / OWNER review publication
+
+2026-10-08. Actual OWNER instruction in Codex: “publiser så vi kan ta noen runder”. IMPLEMENTATION records this request; it authorizes publishing the current review version for iterative OWNER inspection. Consume the existing `app/wrangler.jsonc` target `optimalisering-oslo-v33` from upstream `125d472`, reconcile upstream review records with local homepage work, validate, deploy static review assets and return a verified reachable URL. Keep `SITE_STAGE=preview`, noindex/robots restrictions and intake disabled. No content expansion, visual acceptance, production lead processing or custom-domain/DNS cutover is supplied. Preserve the repository coordination record and current homepage; record deployment revision/results in the outbound report. See D-013.
+
+**Status: COMPLETE.** Review URL: [optimalisering-oslo-v33.anel.workers.dev](https://optimalisering-oslo-v33.anel.workers.dev). Worker version `9c4f4691-8ac7-4515-be65-d9e99e04f2ba`. Live viewport and route checks passed; see the outbound report/evidence. Await the next scoped OWNER review input; no scale-out is active.
+
+## Completed handoff — H-002 / OWNER R-03 visual revision
 
 **Date:** 2026-10-08
 
@@ -22,7 +28,7 @@ OWNER judged the existing representative homepage structurally sound but too vis
 
 ### Authorized scope and constraints
 
-- Homepage composition may be redesigned to express this direction. This supersedes H-001's minimal-fit/no-redesign limitation for `/` alone; see D-011.
+- Homepage composition may be redesigned to express this direction. This supersedes H-001's minimal-fit/no-redesign limitation for `/` alone; see D-012.
 - Instrument Sans for display, headings and major metrics/price figures; Figtree for body, navigation, UI, forms, tables and metadata. These override reference typography.
 - Preserve the complete locked homepage copy and commercial argument without rewriting. Preserve copy authority; shared/source-embedded wording remains draft.
 - Strengthen light/tinted/dark rhythm, hierarchy, distinctive components, the find → choose model and the illustrative 1% → 2% teaching. Use purposeful explanatory visuals with a credible Nordic B2B feel.
@@ -114,3 +120,37 @@ Do not infer visual approval from this handoff.
 ## Previous handoff history
 
 The previous coordination-recovery handoff is complete and represented by commit `9143d24bb9caa064dbbb56fed9339284055e63d3`. Git history remains the authoritative record for that delivery.
+
+
+## RED_TEAM return — R-04 COMPLETE
+
+**Date:** 2026-10-08  
+**Role:** RED_TEAM  
+**Reviewed implementation:** `e6261de18ed4a7b1877dbf06a450d1b23a980e6e`  
+**Locked content:** `55c31b523a50e3e6112fcb5f324adbfa663e21eb`
+
+**Verdict:** PASS for the representative direction; NOT production approval.
+
+### Findings
+
+- The find → choose commercial model is understandable and aligns with the project brief.
+- The 1% → 2% section now teaches the leverage directly instead of hiding it behind abstract wording.
+- The bounded manual assessment remains visible and commercially coherent.
+- No historical prices, fabricated proof, guaranteed uplift, ranking promises or AI-placement promises were introduced.
+- IMPLEMENTATION respected scope: only grouped-number wrapping changed in the rendered homepage; the visual system was not silently redesigned.
+- H-001 evidence reports clean 1440/390/320 responsive checks and no horizontal overflow.
+- The current visual direction is sufficiently coherent to continue testing rather than restart.
+
+### Production caveats — DO NOT silently solve
+
+- No quantitative/client proof is currently publication-ready.
+- Public pricing, standard inclusions/exclusions and contract economics remain unresolved.
+- Shared/source-embedded form/footer/illustration/legal wording remains DRAFT / NON-AUTHORITATIVE unless separately locked.
+- Privacy, retention, Resend/persistent backend and production lead-processing operations remain unresolved.
+- This RED_TEAM PASS does not substitute for OWNER visual acceptance.
+
+### NEXT RECEIVER
+
+OWNER for R-03 only.
+
+If OWNER accepts the representative homepage direction, record that exact scope in `DECISIONS.md` and create a new scoped handoff for controlled scale-out. If OWNER rejects part of the direction, return a bounded diagnosis/change direction rather than a broad redesign.

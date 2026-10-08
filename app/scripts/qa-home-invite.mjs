@@ -7,7 +7,7 @@ import { chromium } from '@playwright/test';
 const content = JSON.parse(readFileSync('src/content/pages/home.json', 'utf8'));
 const normalize = text => text.replace(/\s+/g, ' ').trim();
 const base = process.env.QA_BASE_URL || 'http://127.0.0.1:4321';
-const directory = resolve('../coordination/evidence/r03-invite');
+const directory = resolve(process.env.QA_EVIDENCE_DIR || '../coordination/evidence/r03-invite');
 mkdirSync(directory, { recursive: true });
 assert.equal(content.status, 'CONTENT_LOCKED');
 assert.equal(content.authority, 'CONTENT_LOCKED / AUTHORITATIVE');
@@ -93,6 +93,6 @@ try {
   await page.getByRole('button', { name: 'Åpne meny' }).click();
   assert.ok(await page.locator('#mobile-menu').getByRole('link', { name: 'Synlighet', exact: true }).isVisible());
   assert.deepEqual(errors, []);
-  writeFileSync(resolve(directory, 'checks.json'), JSON.stringify({ handoff: 'OWNER R-03 REVISE / Invite DNA', contentSourceCommit: '55c31b523a50e3e6112fcb5f324adbfa663e21eb', implementationBaseline: '4c577f9a11c9e212689771a0261154846b6e2f77', results, errors, menuAt320px: true, leadsEnabled: false, liveEmailsSent: 0 }, null, 2) + '\n');
-  console.log('Invite DNA homepage QA passed: exact locked content, 1440/390/320px fit, first-screen CTA, form visibility, illustrative 1%/2% math and 320px menu. Evidence saved in coordination/evidence/r03-invite/.');
+  writeFileSync(resolve(directory, 'checks.json'), JSON.stringify({ handoff: process.env.QA_HANDOFF || 'OWNER R-03 REVISE / Invite DNA', baseUrl: base, contentSourceCommit: '55c31b523a50e3e6112fcb5f324adbfa663e21eb', implementationBaseline: '4c577f9a11c9e212689771a0261154846b6e2f77', results, errors, menuAt320px: true, leadsEnabled: false, liveEmailsSent: 0 }, null, 2) + '\n');
+  console.log(`Invite DNA homepage QA passed: exact locked content, 1440/390/320px fit, first-screen CTA, form visibility, illustrative 1%/2% math and 320px menu. Evidence saved in ${directory}.`);
 } finally { await browser.close(); }
