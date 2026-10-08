@@ -1,5 +1,246 @@
 # ChatGPT to Codex
 
+## Active handoff — H-006
+
+**Date:** 2026-10-08  
+**Authority:** OWNER EXPLICIT / DESIGN + CRO POLISH  
+**Decision:** D-018  
+**Baseline:** H-005B implementation `1d4bdf77bd234783b68a7f581bdb88ab6ef2af38`  
+**Scope:** representative homepage visual/layout polish only
+
+### Objective
+
+H-005B has the right information architecture and the clearest hero so far, but the page still feels too compact and slightly too component-designed.
+
+Move it toward:
+- **Storebrand-like airiness and task clarity**
+- **Mementor-like competence and commercial confidence**
+- while keeping the existing Invite-derived visual life.
+
+This is **not a redesign** and not a content rewrite.
+
+### 1. Large-screen width
+
+Set the homepage large-screen shell to a **maximum content width of 1440px**.
+
+Do not stretch readable text to 1440px.
+
+Use nested measures:
+- full homepage shell: max 1440px;
+- hero content/photo composition: can use most of the shell;
+- normal body/readable copy: roughly 650–760px where appropriate;
+- split explanatory sections: keep each text column comfortably readable;
+- FAQ/form content may use narrower internal widths even inside the larger shell.
+
+Use responsive side gutters rather than allowing content to touch viewport edges.
+
+The goal is more breathing room, not simply bigger components.
+
+### 2. Spacing / page rhythm
+
+Increase whitespace materially across the homepage.
+
+Target direction, not rigid pixel law:
+- major desktop sections: roughly 96–120px vertical padding where the section job benefits from it;
+- tighter utility/transition sections may be smaller;
+- tablet: roughly 72–88px;
+- mobile: roughly 52–64px.
+
+Also increase:
+- space between section eyebrow/title/body;
+- space between section intro and cards/tools;
+- internal card padding;
+- space around calculator and package grids.
+
+Do not make the page feel sparse for its own sake. The visitor should feel that every block has room to breathe.
+
+### 3. Reduce “card wall” feeling
+
+The homepage currently relies heavily on similarly sized rounded cards.
+
+Keep the need selector as clear cards, but make the overall page feel less like a component gallery.
+
+Allowed:
+- more open sections with typography + whitespace instead of containers;
+- lighter borders;
+- calmer radii;
+- stronger difference between primary choice cards and secondary informational blocks;
+- fewer unnecessary panel backgrounds where open space communicates better.
+
+Do not flatten everything into white rectangles. Preserve visual rhythm and color.
+
+### 4. Competence / hierarchy
+
+Strengthen the sense of a competent optimization partner through:
+- confident typography;
+- clear section hierarchy;
+- disciplined alignment;
+- fewer decorative micro-elements;
+- deliberate use of color;
+- visibly separated decision points;
+- less “cute UI demo” treatment.
+
+Do not add claims, awards, logos, fake metrics or proof.
+
+The page should feel like a firm that understands commercial optimization, not a SaaS template.
+
+### 5. Hero composition
+
+Keep the exact H-005B content structure:
+- eyebrow;
+- one H1;
+- one short support paragraph;
+- `Ta en gratis sjekk`;
+- `Se priser`.
+
+Keep the current H1 wording.
+
+Replace the current UI-style dream-outcome illustration with a **real-photo hero slot** prepared for an image that ChatGPT will generate separately.
+
+The desired eventual image:
+- authentic-looking happy/relieved business customer;
+- Nordic/European business context;
+- believable small/medium-business owner or decision-maker;
+- natural expression, not exaggerated stock-photo happiness;
+- bright, calm, credible environment;
+- conveys “things are working / I have more control / business is going well”;
+- should complement the copy rather than explain SEO literally.
+
+Do **not** fetch or introduce a stock image.
+
+For H-006:
+- create the photo composition/slot using a stable asset path such as `/images/home/hero-customer.webp`;
+- preserve build stability if the final asset is not present yet, using a neutral preview placeholder/fallback that is clearly non-production and does not become public copy;
+- use an image aspect ratio/composition that can accept a generated photo later without redesign;
+- plan for responsive crop via `object-fit: cover` / `object-position`;
+- use rounded treatment consistent with the design system, but avoid looking like another UI card.
+
+A subtle overlay may be supported later, but **do not add fake metric/outcome overlays now**.
+
+### 6. Hero size and first-screen behavior
+
+Do not undo H-005B's simplification.
+
+The photo must not make the hero tall again.
+
+On desktop:
+- hero should use a balanced text/photo split;
+- task selector should remain visually close after the hero.
+
+On mobile:
+- text first;
+- photo second;
+- selector should still arrive quickly;
+- avoid a tall portrait photo that consumes an entire screen.
+
+### 7. Need selector
+
+Keep the H-005B copy and three choices.
+
+Do not rewrite.
+
+Use the increased 1440px shell to give the cards more horizontal breathing room on desktop.
+
+Cards should feel clear and confident, not oversized.
+
+### 8. Lower homepage
+
+Preserve content and section order.
+
+You may adjust **spacing, max-widths, alignment, open-vs-contained treatment, padding and visual hierarchy** across:
+- calculator;
+- packages;
+- mechanism;
+- fit/not-fit;
+- free check;
+- provider;
+- FAQ/footer.
+
+Do not rewrite their content or change their jobs.
+
+Particularly:
+- keep the calculator prominent, but give it more breathing room;
+- packages should feel like a serious buying decision, not generic feature cards;
+- mechanism can use more open space and less card treatment;
+- free-check form should remain obvious but not visually cramped.
+
+### 9. Typography
+
+Keep:
+- Instrument Sans = display / headings / major metrics / future major price figures
+- Figtree = body / navigation / UI / forms / tables / metadata
+
+Do not change font families.
+
+Use improved width/spacing/hierarchy rather than simply making headings larger.
+
+### 10. Color / visual DNA
+
+Keep the current general plum / teal / mint / lavender family and the H-005B brand direction.
+
+Use color more deliberately:
+- white/cream/open space should carry more of the page;
+- stronger color blocks should become meaningful peaks, not constant background noise;
+- preserve the dark plum calculator/footer role unless a minor spacing/composition adjustment is needed.
+
+Do not introduce a new palette.
+
+### 11. CMS / content / code boundaries
+
+Do not change public copy unless strictly required to remove a preview-only placeholder label.
+
+Keep meaningful content CMS-driven.
+
+Do not modify:
+- other 14 page content/design;
+- `system/`;
+- `project/`;
+- pricing/commercial terms;
+- proof;
+- backend/intake behavior.
+
+### Acceptance criteria
+
+1. Homepage shell supports max 1440px on sufficiently large screens.
+2. Text measures remain comfortably narrow; no 1440px-wide paragraphs.
+3. Whole page is visibly airier than H-005B at 1440px.
+4. Hero remains simpler/shorter than H-004 and does not regress into layered messaging.
+5. Hero composition is ready for a real generated customer photo without structural redesign.
+6. No external/stock image is introduced.
+7. Need selector remains immediately understandable and close to the hero.
+8. Lower-page IA and copy stay unchanged.
+9. Card-wall feeling is reduced.
+10. Calculator and package decision areas remain prominent.
+11. 1440 / 390 / 320px pass with no overflow or awkward crop.
+12. Other pages and protected reference inputs remain unchanged.
+
+### Evidence
+
+Capture:
+- full page at 1440 / 390 / 320;
+- hero + need selector at 1440 / 390 / 320;
+- calculator + packages at 1440;
+- at least one wider desktop check (e.g. 1600 or 1920) proving the 1440px max shell behaves correctly.
+
+Record:
+- old vs new shell width;
+- key section vertical spacing before/after;
+- hero height before/after;
+- any card/radius/container changes;
+- exact asset path reserved for the generated hero image.
+
+Run:
+- full verify/test suite;
+- existing browser regression;
+- focused H-006 visual/fit checks.
+
+Push to `main` so the connected review Worker rebuilds, verify the live review version, update coordination/evidence, then **stop for OWNER R-03 and new formal RED_TEAM R-04**.
+
+Do not propagate H-006 to the remaining pages.
+
+
+---
+
 ## Completed handoff — H-005B
 
 **IMPLEMENTATION receipt (2026-10-08):** consumed at 1d4bdf77bd234783b68a7f581bdb88ab6ef2af38; delivery/evidence in CODEX-TO-CHATGPT.md. Stop for OWNER R-03 and formal independent RED_TEAM R-04. No acceptance or content lock is inferred. This handoff is completed; no further implementation handoff is active.
