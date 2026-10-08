@@ -1,6 +1,33 @@
 # Codex to ChatGPT
 
-## Active delivery: H-005B / IMPLEMENTATION COMPLETE; STOP FOR R-03/R-04
+## Active delivery: H-006 / IMPLEMENTATION COMPLETE; STOP FOR OWNER R-03 / FRESH FORMAL R-04
+
+2026-10-08, IMPLEMENTATION. Pulled latest main with fast-forward only to **99734a73a3f3cd0ba93a1155cfbdd95395a91245**, then consumed active H-006 / D-018. **Implementation/local-evidence SHA: 7e69c079d57281d5126d2c94dbc3f1dfac90f265.** Use this report's Git history for its own coordination revision. No further implementation handoff is active. D-017 remains the genuine historical H-005B RED_TEAM PASS, not H-006 approval.
+
+Delivered homepage-only visual polish: max 1440px shell with responsive gutters and nested readable widths; materially more section/intro/grid/internal spacing; primary selector cards with calmer radii; open package decision columns, mechanism and fit information; prominent calculator with more air and less enclosing panel; roomier form and footer. Instrument Sans/Figtree, plum/teal/mint/lavender, exact H-005B hero/selector copy, CTAs, metadata, lower-page copy/IA/order/jobs and calculator behavior stay unchanged. No numerical prices, terms, proof or public wording are added. Status/authority remain REVIEW_REQUIRED / DRAFT / NON-AUTHORITATIVE.
+
+The retired UI outcome illustration is replaced by **HomeHeroPhoto**. Reserved asset: **app/public/images/home/hero-customer.webp** → **/images/home/hero-customer.webp**. The final generated customer photo is supplied separately by ChatGPT and is not present. A neutral wordless local SVG is selected at build time, so preview remains valid without a broken image. Desktop 8:5 and shallow mobile 16:9 cover crops use JSON/CMS position defaults 50%/45%. The local WebP path and 0–100% crop values are constrained in schema/CMS. Both absent-asset and supplied-asset branches pass; the supplied test used a temporary neutral synthetic WebP, removed before delivery. No stock/external/customer photo is generated or fetched. Actual subject/crop/brand acceptance awaits the supplied asset; authenticated CMS upload/save remains unverified.
+
+| Viewport | Shell before → after | Hero before → after | Major section padding before → after |
+| --- | --- | --- | --- |
+| 1440px | 1200px → 1360px | 476.03px → 459.95px | 72px → 104px |
+| 390px | 350px → 350px | 665.59px → 629.05px | 48px → 56px |
+| 320px | 288px → 288px | 677.80px → 606.38px | 48px → 56px |
+| 1920px | 1200px → 1440px | 476.03px → 463.00px | 72px → 104px |
+
+Normal body/split text caps at 720/650px; hero support at 620px; form composition/form at 1280/640px; FAQ at 1200px. Tablet major padding is 80px. Desktop need-card padding 28→36px/radius 22→14px; form padding 32→40px/radius 24→12px. Detailed container/spacing receipt: [layout changes](evidence/h006/layout-changes.md).
+
+**Validation:** final npm run verify passed (56 checked files, zero errors/warnings/hints; 24 tests; 15 content routes + 404; 449 links/anchors). Existing browser regression passed 40 synthetic checks. Focused H-006 passed at 1440/390/320/1920px: shell cap, nested text widths, no overflow, exact copy/IA/DOM, shorter hero/early selector, photo fallback/crop, fonts, CMS/schema, calculator edges, menu/FAQ, disabled form/no-POST/no-JavaScript and preview guards. Eight required screenshots captured. The contract failed against unchanged H-005B before implementation, then passed. Production-mode build remains refused. Fresh-context read-only technical review found no Critical/Important issues; an optional minor 901px long-word overflow was reproduced with a stable scrollbar, fixed through scoped paragraph wrapping and verified failing-before/passing-after. Final verify/browser/focused captures were rerun after that fix. This is technical QA, not formal RED_TEAM R-04.
+
+**Preservation:** all 174 hashes match the fresh pre-change baseline (144 system/project reference files, 14 other page JSON, 15 non-home HTML including 404 and one shared CSS). Retained homepage content and lower/chrome DOM hashes are unchanged; lower CSS geometry changes are explicitly authorized under D-018. Backend/intake, all other 14 pages and protected references remain untouched. No real lead/email, production launch or DNS/domain cutover occurs.
+
+**Local review packet:** [full page 1440](evidence/h006/home-1440.png), [390](evidence/h006/home-390.png), [320](evidence/h006/home-320.png); [hero + selector 1440](evidence/h006/hero-selector-1440.png), [390](evidence/h006/hero-selector-390.png), [320](evidence/h006/hero-selector-320.png); [calculator + packages 1440](evidence/h006/calculator-packages-1440.png); [wide 1920 / 1440px shell](evidence/h006/wide-1920.png). [Focused checks](evidence/h006/checks.json), [verification](evidence/h006/verification.txt), [browser](evidence/h006/browser-regression.json), [preservation](evidence/h006/preservation.json), [photo branches](evidence/h006/photo-slot-test.json), [901px regression](evidence/h006/breakpoint-901.json), [technical review](evidence/h006/implementation-review.md), [baseline/commands](evidence/h006/README.md).
+
+**Publication:** authorized delivery to main and connected review Worker verification are recorded in the following live receipt. Keep preview/noindex and intake disabled. Implementation success does not supply visual/content acceptance or launch authorization.
+
+**Next receivers / concrete request:** OWNER R-03 reviews the complete H-006 homepage at **7e69c079d57281d5126d2c94dbc3f1dfac90f265**: does its width, spacing, open decision areas and prepared photo composition satisfy the airiness/competence direction? Fresh formal independent RED_TEAM R-04 reviews that exact revision and local/live evidence: return a commercial/content/visual verdict with concrete findings, treating D-017 as historical only. ChatGPT supplies the separate generated WebP and a scoped integration/review handoff; actual subject/framing/crop cannot be accepted before supply. STRATEGY_CONTENT records any genuine applicable content lock. Source paths: home.json, HomePage/HomeHeroPhoto, home-invite.css, schema/CMS and evidence/h006. Record actual decisions and any next scope in the repository. No further implementation can continue independently past this gate. R-05 and other-page propagation remain blocked; prices/scope/terms/proof/privacy/backend/delivery/authenticated-CMS/launch dependencies remain unresolved.
+
+## Previous delivery: H-005B / IMPLEMENTATION COMPLETE; STOP FOR R-03/R-04
 
 2026-10-08, IMPLEMENTATION. Pulled main with fast-forward only to b6d035a99513d007a905cbc64c2f0e10c1f5421b, then consumed active H-005B under D-015/D-016. **Implementation/content/local-evidence SHA: 1d4bdf77bd234783b68a7f581bdb88ab6ef2af38.** Use this report’s Git history for its own coordination-delivery SHA. H-005B is complete; no further implementation handoff is active.
 

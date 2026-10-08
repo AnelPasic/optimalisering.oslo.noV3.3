@@ -53,7 +53,7 @@ OWNER subsequently explicitly applies `#320c43` also to the homepage footer. Thi
 | P-004 | PROVISIONAL TECHNICAL CHOICE / operations + IMPLEMENTATION | Reusable Node API + SQLite satisfies interim local-storage preview. Persistent host/shared-system migration/HTTPS/proxy operations remain unresolved; no approved production hosting commitment. |
 | P-005 | EXPLORATORY PORTFOLIO IMPLEMENTATION / STRATEGY_CONTENT | Implemented all 15 seed BUILD_NOW candidates before content/representative review. Existence of URLs/templates does not approve public page roles, production content or scaling sequence. |
 
-D-010 remains historical evidence of the first complete homepage content/CRO lock, but D-014 explicitly reopens and supersedes its conflicting homepage wording/order for the next representative iteration. D-011 records a RED_TEAM PASS for the older H-001 direction at `e6261de`; no verdict for the current Invite iteration or OWNER acceptance/launch authorization is recorded. Earlier build-spec/handoff documents and technical success cannot supply those decisions.
+D-010 remains historical evidence of the first complete homepage content/CRO lock, but D-014 explicitly reopens and supersedes its conflicting homepage wording/order. D-011 records a RED_TEAM PASS for the older H-001 direction at `e6261de`; D-017 records the genuine H-005B representative PASS at `1d4bdf77`. Neither covers the D-018/H-006 visual revision, which needs fresh formal R-04. No OWNER representative acceptance or launch authorization is recorded. Earlier build-spec/handoff documents and technical success cannot supply those decisions.
 
 ## Recording subsequent decisions
 
@@ -69,3 +69,7 @@ Content lock, material offer approval, representative visual acceptance, indepen
 ## D-015 / D-016 implementation receipt (no new approval)
 
 2026-10-08, IMPLEMENTATION: H-005B at b6d035a99513d007a905cbc64c2f0e10c1f5421b is implemented at 1d4bdf77bd234783b68a7f581bdb88ab6ef2af38. One semantic/display H1, shorter support, two CTAs and one restrained outcome illustration replace the layered H-004 hero; selector descriptions use the supplied exact text. Calculator downward and all other pages/reference inputs are preserved. Technical QA/review and publication receipts are in CODEX-TO-CHATGPT/evidence/h005b. Generated support/visual copy remains REVIEW_REQUIRED / DRAFT / NON-AUTHORITATIVE. No content lock, OWNER acceptance, formal RED_TEAM verdict, scale-out or launch approval is recorded. Stop for R-03/R-04.
+
+## D-018 implementation receipt (no new approval)
+
+2026-10-08, IMPLEMENTATION: H-006 at incoming main 99734a73a3f3cd0ba93a1155cfbdd95395a91245 is implemented at 7e69c079d57281d5126d2c94dbc3f1dfac90f265. Wider shell/narrower text, more spacing, calmer containers and prepared photo slot preserve H-005B copy/IA, fonts/palette, all other pages and read-only inputs. Final generated customer photo is not supplied; valid neutral fallback and synthetic supplied-asset branch are technically verified. Delivery/QA/live evidence is recorded in CODEX-TO-CHATGPT and evidence/h006. D-017 remains the actual historical H-005B RED_TEAM PASS only. No new content lock, OWNER acceptance, formal H-006 R-04, commercial/proof authority, scale-out or launch approval is supplied by implementation. Stop for OWNER R-03 and fresh formal RED_TEAM R-04.

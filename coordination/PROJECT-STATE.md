@@ -2,13 +2,13 @@
 
 Updated: 2026-10-08. Owner: Medon AS. Implementation repository: AnelPasic/optimalisering.oslo.noV3.3.
 
-**State: H-006 HOMEPAGE SPACING / COMPETENCE POLISH AUTHORIZED UNDER D-018; OWNER R-03 REMAINS REVISE; FORMAL R-04 MUST BE RE-RUN ON H-006; ALL OTHER PAGES FROZEN.** H-005B remains the strongest validated baseline, but OWNER wants more Storebrand-like airiness, more Mementor-like competence and a real-photo hero composition before representative acceptance.
+**State: H-006 IMPLEMENTED AT 7e69c079d57281d5126d2c94dbc3f1dfac90f265; STOP FOR OWNER R-03 AND FRESH FORMAL RED_TEAM R-04; ALL OTHER PAGES FROZEN.** D-018 visual polish preserves H-005B copy/IA, widens the shell, adds air and calmer hierarchy, and prepares a customer-photo composition. Final generated asset is not yet supplied. D-017 remains the genuine historical H-005B PASS, not approval of H-006. No further implementation handoff is active.
 
 Original exploratory implementation: `a98dbaefbb10a9039c9b025e5c3907e83f24de8b`, pushed to `origin/main` on 2026-10-08. The coordination/draft-label revision follows that commit; use this file's Git history for its exact SHA. A push permits repository inspection; it does not authorize publication or live processing.
 
 Historical publication H-003 / D-013: [V3.3 review target](https://optimalisering-oslo-v33.anel.workers.dev), Worker version `9c4f4691-8ac7-4515-be65-d9e99e04f2ba`. Live 1440/390/320px and all 15 routes are verified in `coordination/evidence/h003-publication/`. Static frontend only; noindex and intake-disabled state remain. See the latest outbound report for the exact delivery Git revision. This OWNER-requested web review is distinct from production launch or representative acceptance.
 
-H-005B current web review: [V3.3 preview](https://optimalisering-oslo-v33.anel.workers.dev), source delivery 7b800ceb5ae787638ce113ab1a885a600c13dbaa, verified Worker version **f62c33fe-6391-4fae-a96b-d26922ae1c91**. Native build succeeded; live 1440/390/320px checks, six captures, lower-page preservation, 15 HTML/build comparisons and preview/disabled-intake checks pass. Separate live evidence is in coordination/evidence/h005b-live/. The following receipt-only revision changes no website assets; use Git history for its own SHA. Stop for OWNER R-03 and formal independent RED_TEAM R-04.
+Historical H-005B web review: [V3.3 preview](https://optimalisering-oslo-v33.anel.workers.dev), source delivery 7b800ceb5ae787638ce113ab1a885a600c13dbaa, verified Worker version **f62c33fe-6391-4fae-a96b-d26922ae1c91**. Native build succeeded; live 1440/390/320px checks, six captures, lower-page preservation, 15 HTML/build comparisons and preview/disabled-intake checks pass. Separate live evidence is in coordination/evidence/h005b-live/. The following receipt-only revision changes no website assets; use Git history for its own SHA. Subsequent formal H-005B RED_TEAM PASS is recorded under D-017; H-006 needs fresh review.
 
 Historical H-004 web review: [V3.3 preview](https://optimalisering-oslo-v33.anel.workers.dev), source delivery `87daa54`, verified Worker version `b2c527a3-e60e-458c-b7f9-c257afda6c21`. Native build succeeded. Live 1440/390/320px focused QA, all 15 HTML byte comparisons, stylesheet equivalence, noindex/robots/sitemap and static-intake GET 404 pass. Separate live evidence is in `coordination/evidence/h004-live/`. The following receipt-only revision changes no website assets; use Git history for its own SHA.
 
@@ -16,7 +16,7 @@ Historical H-004 web review: [V3.3 preview](https://optimalisering-oslo-v33.anel
 
 - Astro static website under `app/`, with semantic JSON content, responsive shared templates, self-hosted Instrument Sans/Figtree, local SVG illustrations, metadata and internal links.
 - 15 exploratory content routes: `/`, `/synlighet/`, `/konvertering/`, `/priser/`, `/vurdering/`, `/om/`, `/kontakt/`, `/personvern/`, `/vilkar/`, `/seo/`, `/ai-synlighet/`, `/nettbutikkoptimalisering/`, `/innsikt/`, `/innsikt/hva-bor-optimaliseres-forst/`, `/innsikt/male-effekt-av-optimalisering/`. A technical 404 also exists. No later portfolio/case/city-grid expansion was implemented.
-- H-005B homepage: one task-focused semantic/display H1, short category/geography support and one restrained outcome visual; immediate need selector; combined traffic/conversion calculator; explicit non-price package cards; no proof block; diagnosis/fit/manual check/provider/FAQ. Editable homepage-only header/footer/form keep the remaining pages unchanged.
+- H-006 homepage: unchanged H-005B semantic/display H1, support, two CTAs and immediate need selector; prepared photo slot with neutral fallback; combined traffic/conversion calculator; open non-price package columns; no proof block; diagnosis/fit/manual check/provider/FAQ. Wider max 1440px shell, readable nested widths and increased rhythm preserve all copy/IA. Editable homepage-only header/footer/form keep the remaining pages unchanged.
 - Root `.pages.yml` points Pages CMS to `app/src/content/pages/`; it is configuration, not proof of an authenticated editor/account integration.
 - Interim Node HTTP API plus local server-side SQLite storage for enquiries, one `assessment_received` conversion and source tags. Idempotent submissions, separately retryable Resend notifications, input/origin/size checks and basic socket-IP rate limiting. Operational databases/secrets are ignored by Git.
 - Source tags travel through internal URLs and are sanitized at submission; no cookies, localStorage tracking or persistent visitor IDs. This is limited submission attribution, not a verified cross-session journey, lead-quality system or revenue pipeline.
@@ -31,10 +31,10 @@ Historical H-001 / D-010 locked the reviewed homepage at `55c31b5`. H-004 / D-01
 
 | Source | Covered draft wording |
 | --- | --- |
-| `app/src/content/pages/*.json` | All current records are draft. H-004 home JSON supplies meaningful homepage copy, including navigation/illustration/calculator/form/footer. D-010 is a lock of its historical revision only. |
+| `app/src/content/pages/*.json` | All current records are draft. Revised home JSON supplies meaningful homepage copy, including navigation/calculator/form/footer. H-006 removes only retired illustration wording and adds technical photo config; retained copy is unchanged. D-010 is a lock of its historical revision only. |
 | `app/src/config/site.ts`, `app/src/components/Header.astro`, `Footer.astro`, `app/src/layouts/SiteLayout.astro` | Navigation, provider sentence, wordmark arrangement, preview labels, accessibility/link labels and shared footer text |
 | `HomePage.astro`, `HomeSection.astro`, `InnerPage.astro`, `AssessmentSection.astro`, `ContentSection.astro`, `Faq.astro` under `app/src/components/` | Template-written hero/support/breadcrumb/section/closing CTA text and all fallback/shared wording |
-| `Journey.astro`, `Leverage.astro`, `HomeJourney.astro`, `HomeLeverage.astro` under `app/src/components/` | Historical source-embedded labels remain draft. Current HomeJourney/HomeLeverage render the H-004 JSON; values are computed hypothetical examples, not proof |
+| `Journey.astro`, `Leverage.astro`, `HomeLeverage.astro`, `HomeHeroPhoto.astro` under `app/src/components/` | Historical shared labels remain draft. HomeLeverage renders homepage JSON; values are hypothetical examples, not proof. H-006 retires HomeJourney and its visual labels; HomeHeroPhoto adds no public wording |
 | `app/src/components/AssessmentForm.astro`, `app/src/lib/*.ts`, `app/server/*.mjs` | Form labels/options/helpers, validation/error/success text and generated customer-facing response/notification wording |
 | `app/src/pages/404.astro`, any other source-embedded public text | Error-page wording and all public text not otherwise listed |
 
@@ -58,7 +58,7 @@ Templates were applied across the portfolio before a representative full-page re
 
 ## Representative page and review boundary
 
-Representative page: **the complete homepage `/`** at `1d4bdf77bd234783b68a7f581bdb88ab6ef2af38`, using revised `home.json`, `HomePage`, `HomeJourney`, `HomeLeverage`, `HomeSection`, and homepage-only `HomeAssessment`, `HomeHeader`, `HomeFooter` plus `home-invite.css`. Shared SiteLayout/routing passes homepage data only; content.config imports the testable schema. Existing global CSS, inner templates and shared form/header/footer stay intact. Current full-page/hero-selector evidence is in `coordination/evidence/h005b/`; historical calculator captures remain in `coordination/evidence/h004/`; review the whole running page where interaction matters.
+Representative page: **the complete homepage `/`** at `7e69c079d57281d5126d2c94dbc3f1dfac90f265`, using revised `home.json`, `HomePage`, `HomeHeroPhoto`, `HomeLeverage`, `HomeSection`, and homepage-only `HomeAssessment`, `HomeHeader`, `HomeFooter` plus `home-invite.css`. Shared SiteLayout/routing passes homepage data only; content.config imports the testable schema. Existing global CSS, inner templates and shared form/header/footer stay intact. Current full-page/hero-selector/calculator-packages/wide evidence is in `coordination/evidence/h006/`; historical evidence remains preserved. Review the whole running page where interaction matters.
 
 `/vurdering/` supports review of the form flow; it is not a second design-direction candidate. All other pages remain frozen. Homepage approval is scoped to the reviewed content/visual revision; each remaining page still needs appropriate content review before publication. Implementation revisions require a concrete inbound handoff.
 
@@ -137,7 +137,7 @@ The visual should plausibly suggest:
 It should feel real-ish/productized, not like a stock photo, fake case, dense dashboard or abstract decoration. The need selector must still arrive quickly below the hero, especially on mobile.
 
 
-## H-005B current technical delivery
+## Historical H-005B technical delivery
 
 Implementation/evidence 1d4bdf77bd234783b68a7f581bdb88ab6ef2af38 consumes b6d035a under D-015/D-016. Only hero/selector copy, hero markup/visual/styles and corresponding CMS/schema/QA changed. Final verify: 55 files without diagnostics, 24 tests, 449 links; 40 existing browser checks; focused 1440/390/320px and production guard pass. Hero heights fall from 607.64/799.42/824.34px to 476.03/665.59/677.80px. All lower DOM/computed styles and relative geometry are preserved across 207 elements per width; all 174 protected/frozen files match the fresh baseline. Six captures, reproducible baselines and a clean technical review are in evidence/h005b/. Generated support/visual wording remains draft. Main/Worker delivery is recorded in CODEX-TO-CHATGPT and its Git history. OWNER R-03 remains REVISE / awaiting this iteration’s verdict; formal RED_TEAM R-04 is ready and pending. No scale-out, real intake, launch or new content lock.
 
@@ -163,3 +163,11 @@ Change:
 - prepare a real-photo hero slot for a generated happy-customer image, replacing the current UI illustration.
 
 The final hero image is not yet supplied. H-006 should create the composition and asset slot cleanly without inventing or fetching a stock image.
+
+## H-006 technical delivery
+
+Implementation/evidence 7e69c079d57281d5126d2c94dbc3f1dfac90f265 consumes incoming main 99734a73a3f3cd0ba93a1155cfbdd95395a91245 under D-018. Shell at 1440px grows 1200→1360px; at 1920px grows 1200→1440px. Major desktop section padding grows 72→104px, mobile 48→56px; tablet uses 80px. Body/split text is capped at 720/650px. Need cards remain primary; packages/mechanism/fit use more open treatments; calculator/form gain space. Hero heights fall from 476.03/665.59/677.80px to 459.95/629.05/606.38px at 1440/390/320. Fonts, palette, retained copy and lower/chrome DOM are unchanged. All 174 protected/frozen files match the fresh baseline.
+
+The reserved asset is app/public/images/home/hero-customer.webp, with CMS/schema local-path and bounded crop config. Missing asset builds a valid neutral wordless SVG; no stock/generated customer photo is introduced. Both missing and temporary synthetic supplied branches passed responsive checks; fixture removed and fallback build restored. Real customer-photo composition/framing/brand acceptance remains a ChatGPT asset dependency.
+
+Final verify: 56 files with zero diagnostics, 24 tests, build and 449-link audit. Existing browser: 40 checks. Focused H-006: 1440/390/320/1920, eight captures, interactions/noindex/intake-disabled/copy/fit checks and a reproduced-then-fixed 901px selector wrap regression. Production-mode guard and preservation pass. Fresh technical review found no blocking issues; it is not formal R-04. Evidence/commands are in evidence/h006/; final main/Worker receipt is in CODEX-TO-CHATGPT. Stop for OWNER R-03 and fresh formal RED_TEAM R-04; R-05 remains blocked. No new content lock, commercial/proof authority, launch or real lead/email processing.
