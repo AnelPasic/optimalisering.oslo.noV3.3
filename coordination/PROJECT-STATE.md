@@ -2,7 +2,7 @@
 
 Updated: 2026-10-08. Owner: Medon AS. Implementation repository: AnelPasic/optimalisering.oslo.noV3.3.
 
-**State: HOMEPAGE CONTENT/CRO LOCKED / R-03 REVISE / REVIEW VERSION PUBLISHED FOR OWNER ITERATION.** H-001 / D-010 at `55c31b523a50e3e6112fcb5f324adbfa663e21eb` completed R-01/R-02 for the homepage JSON scope. OWNER subsequently returned R-03 REVISE and authorized H-002 / D-012's Invite DNA translation on the homepage only. The new local iteration and 1440/390/320px evidence are ready; see `CODEX-TO-CHATGPT.md` for the exact implementation commit. The 15-page build remains exploratory, not approved production. The received RED_TEAM PASS covers H-001 at `e6261de`; no OWNER acceptance or independent verdict on the new Invite revision has been received. The other 14 pages remain frozen; technical QA does not supply those approvals.
+**State: D-014 / H-004 HOMEPAGE TASK-FIRST REVISION AUTHORIZED; R-03 REVISE; ALL OTHER PAGES FROZEN.** OWNER has explicitly reopened the representative homepage information architecture. The next iteration must simplify the page around clear need selection, a combined visibility/conversion calculator, package/pricing clarity, evidence, diagnosis, fit and a low-friction manual assessment. D-012 Invite-derived visual DNA and Instrument Sans/Figtree roles remain active; D-014 supersedes conflicting D-010 homepage wording/order. No prices, proof or terms may be invented.
 
 Original exploratory implementation: `a98dbaefbb10a9039c9b025e5c3907e83f24de8b`, pushed to `origin/main` on 2026-10-08. The coordination/draft-label revision follows that commit; use this file's Git history for its exact SHA. A push permits repository inspection; it does not authorize publication or live processing.
 
@@ -40,7 +40,7 @@ The previous STRATEGY_CONTENT subtask produced the 15 complete draft records and
 
 ## Inferred visual and content decisions
 
-The initial implementation selected a new homepage hook (“De rette må finne deg. Så må de velge deg.”), complete-page arguments, section sequences, FAQ answers, educational examples, article explanations, price-by-agreement presentation and shared form/CTA phrasing. These were generated interpretations informed by the seed. H-001 subsequently reviewed/revised the complete homepage JSON and retained its hook; the remainder has not been promoted.
+The initial implementation selected a homepage hook (“De rette må finne deg. Så må de velge deg.”), complete-page arguments, section sequences, FAQ answers, educational examples, article explanations, price-by-agreement presentation and shared form/CTA phrasing. These were generated interpretations informed by the seed. H-001 subsequently reviewed/revised the complete homepage JSON and retained its hook; the remainder has not been promoted.
 
 Design priors suggested Instrument Sans/Figtree, comfortable Nordic presentation, controlled rounded shapes and prominent useful teaching. Implementation inferred their execution: warm cream `#f5f3ec`, forest green `#214f3e`, paper `#fffef9`, sage `#dce6d8`, apricot `#efc4a2`, ink `#223a30`; 1200px shell; headline weight/scale/spacing; lowercase wordmark with a custom arch/arrow symbol; rotated find/choose illustration cards; section/card/form treatments and responsive composition. These are exploratory visual choices, not an approved identity/system.
 
@@ -81,3 +81,21 @@ OWNER's later R-03 REVISE replaces that limited visual scope for the homepage th
 Before the original baseline push on 2026-10-08, `npm run verify` passed: Astro check (40 files, zero errors/warnings/hints), 16 tests, static build (15 content routes + 404), and audit of 454 internal links/anchors. Earlier browser QA recorded 40 checks; it was synthetic technical evidence, not business/content/visual acceptance. An earlier independent implementation red-team pass reported issues; fixes were regression-checked, but no final independent production/content/visual PASS has been received.
 
 Fresh H-001 validation is reported in `CODEX-TO-CHATGPT.md`: Astro check/build, 17 tests, static audit of 454 links/anchors, 40 existing browser checks, focused 1440/390/320px exact-copy/fit/math/form checks and production guard passed. All 26 built files outside the homepage and all 144 protected reference files are byte-for-byte unchanged. No real customer submission, live email/inbox test, production deployment, external analytics activation or OWNER visual approval is claimed. Only the actual H-001 homepage JSON content/CRO lock is recorded; protected `system/` and `project/` inputs remain unchanged.
+
+
+## Current owner direction — D-014
+
+The homepage must now optimize for immediate comprehension by a Norwegian business buyer:
+
+1. Hero: category clarity + who it is for + direct actions.
+2. Need selector immediately below hero.
+3. Simple calculator showing the combined effect of relevant visibility and conversion rate.
+4. Package/pricing decision support.
+5. One strongest verified proof block when proof exists; render no decorative substitute while proof is unavailable.
+6. Diagnostic mechanism: find bottleneck → prioritize → implement → measure.
+7. Fit/not-fit qualification.
+8. Bounded free manual check.
+9. Medon/provider responsibility.
+10. FAQ/footer.
+
+Customer language is **Bli funnet** and **Gjør flere besøk til henvendelser og salg**. Do not reuse “Så må de velge deg” as headline, illustration caption, aria label or substitute concept in the new homepage. Authority architecture must support SEO, AI visibility (AIO/GEO/AEO concepts consolidated rather than synonym-spam), Local SEO, CRO and campaign optimization over time, while keeping the homepage commercially simple.
