@@ -741,3 +741,37 @@ The previous coordination-recovery handoff is complete and represented by commit
 OWNER for R-03 only.
 
 If OWNER accepts the representative homepage direction, record that exact scope in `DECISIONS.md` and create a new scoped handoff for controlled scale-out. If OWNER rejects part of the direction, return a bounded diagnosis/change direction rather than a broad redesign.
+
+
+## RED_TEAM return — R-04 COMPLETE FOR H-005B
+
+**Date:** 2026-10-08  
+**Role:** RED_TEAM  
+**Reviewed implementation:** `1d4bdf77bd234783b68a7f581bdb88ab6ef2af38`  
+**Current main receipt:** `a3725c29ba91560acb47fe658643e307f8bc1b72`  
+**Verdict:** **PASS** for representative direction; NOT production approval.
+
+### Why this passes
+
+- The hero now has one clear hierarchy: audience qualifier → one H1 → one short support paragraph → two actions.
+- The outcome visual is useful and restrained. It suggests search/discovery → offer/page → enquiry without pretending to be a real client case or dashboard.
+- The need selector is immediately understandable and its descriptions are materially shorter.
+- The page still exposes the actual commercial model: relevant visibility × conversion rate → enquiries/purchases.
+- SEO, AI-synlighet and konverteringsoptimalisering remain explicit without forcing a second keyword-heavy headline.
+- H-005B did not introduce unapproved numerical prices, proof, guarantees, client logos or ranking/AI-placement promises.
+- Diff and preservation evidence show the change stayed within the authorized homepage hero/selector scope; lower sections and frozen pages were preserved.
+- Desktop and mobile evidence show a meaningful reduction in hero height and earlier access to the need selector.
+
+### Remaining concerns / blockers
+
+These do not fail the representative direction:
+- homepage wording remains draft until STRATEGY_CONTENT/OWNER actually locks the final content;
+- public package prices, inclusions/exclusions, terms and combination economics are unresolved;
+- no client proof is yet publication-ready;
+- privacy/lead-processing operations and production intake remain unresolved;
+- authenticated Pages CMS operation has not yet been proven;
+- OWNER R-03 is still required before scale-out.
+
+### Next receiver
+
+OWNER for R-03. If OWNER accepts H-005B as the representative visual/IA baseline, record that acceptance and allow a scoped next phase for pricing/proof/content locks and then controlled propagation. Do not infer owner acceptance from this RED_TEAM PASS.
