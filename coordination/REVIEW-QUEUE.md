@@ -1,6 +1,6 @@
 # Review queue
 
-State: H-008 IMPLEMENTED / STOP FOR STRATEGY_CONTENT R-06 / D-024 LOCK PRESERVED / PROOF PUBLICATION STILL BLOCKED BY MISSING CASE FACTS.
+State: R-06 /PRISER/ PASS UNDER D-027 / H-009 /SYNLIGHET/ CONTROLLED PROPAGATION OPEN / OTHER SERVICE PAGES FROZEN / PROOF NON-PUBLIC.
 
 | Order / ID | Scope | Responsible role | State / completion evidence |
 | --- | --- | --- | --- |
@@ -9,7 +9,7 @@ State: H-008 IMPLEMENTED / STOP FOR STRATEGY_CONTENT R-06 / D-024 LOCK PRESERVED
 | 3 / R-03 | Complete representative homepage `/`, spacing/composition, photo-led hero direction and desktop/mobile usability | OWNER, informed by DESIGN/STRATEGY_CONTENT | **PASS / COMPLETE under D-021.** Current H-006-derived visual/IA baseline, including owner color/selector tweaks, is accepted for continued commercial/content work. Cosmetic refinements may happen later without reopening the representative gate. |
 | 4 / R-04 | Independent commercial/content/visual review of the exact representative revision | RED_TEAM | **PASS / COMPLETE for H-006 under D-019 + selected-photo review under D-020.** Layout/spacing/IA pass; selected hero photo also passes authenticity/tone/crop/proof-implication review. Positioning caveat: boutique/e-commerce setting slightly narrows cross-industry perception. |
 | 5 / R-05 | H-007 commercial/content review | STRATEGY_CONTENT | **PASS / COMPLETE under D-024 after direct copy refinements.** Exact homepage commercial fields and pricing-page support copy are locked at the commits named in D-024. Proof publication is explicitly excluded. |
-| 6 / R-06 | First controlled propagation: `/priser/` visual + commercial consistency | STRATEGY_CONTENT + OWNER; IMPLEMENTATION receives | **REVIEW REQUIRED / H-008 IMPLEMENTATION COMPLETE at 87a839216db412305337daae24c01858176db15e.** D-024 copy preserved; accepted homepage visual system and one CMS package source reused under D-026. Other 13 non-home pages remain frozen; no further implementation active. |
+| 6 / R-06 | First controlled propagation: `/priser/` visual + commercial consistency | STRATEGY_CONTENT + OWNER; IMPLEMENTATION receives | **PASS / COMPLETE under D-027.** H-008 hierarchy, shared package source and responsive presentation pass. One support heading was clarified post-review; corrected revision is locked. |
 | Later / R-07 | Privacy/processing operations, Resend delivery, persistent backend, CMS/Cloudflare/DNS/redirects, measurement/Search Console, final launch QA/authorization | OWNER / operations + IMPLEMENTATION + RED_TEAM | DEFERRED / BLOCKS LIVE USE (C-05, C-06). H-003 authorizes static web review only; no real intake or production launch is authorized. |
 
 ## Current review packet — H-008 / STRATEGY_CONTENT R-06
@@ -145,3 +145,5 @@ For each completed review, append date, actual reviewer/role, inspected SHA, sco
 - 2026-10-08: OWNER explicitly accepted the representative direction as a working baseline and authorized moving on. Prior V3 pricing is reconfirmed under D-022. Proof data from the separate Medon case work is imported as evidence-only under D-023; no named case is public without permission.
 
 - 2026-10-09: STRATEGY_CONTENT completed H-007 commercial review. Generated H-007 package copy was too implementation-centric, so customer-facing fit/scope, package intro, cost notes, free-check wording and pricing FAQ were refined directly in content. D-024 locks those exact commercial fields. D-025 prioritizes Oslo Privatklinikk for homepage proof and Nysta for ecommerce/conversion, but neither may render until missing proof facts are supplied and exact public wording is locked. H-008 now receives /priser/ only.
+
+- 2026-10-09: STRATEGY_CONTENT completed R-06 for H-008: PASS. The only material copy issue was the potentially contradictory heading “Fire områder. Én prioritering av gangen.”; it was changed to “Fire områder. Prioritert etter behov.”. D-028 locks the next page's copy and H-009 now receives /synlighet/ only.
