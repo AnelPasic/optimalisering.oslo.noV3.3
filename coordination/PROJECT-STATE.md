@@ -2,7 +2,7 @@
 
 Updated: 2026-10-09. Owner: Medon AS. Implementation repository: AnelPasic/optimalisering.oslo.noV3.3.
 
-**State: H-007 IMPLEMENTATION COMPLETE / STOP FOR STRATEGY_CONTENT; OWNER R-03 BASELINE PASS UNDER D-021; REMAINING PAGE COPY/DESIGN FROZEN.** Incoming main 7b98ff8184e7a8063682877b1edfcff3d4941f20 authorizes D-022/D-023; implementation/evidence acda06ab880a4dbc43af43bf1903cf674c3446f4 delivers the exact price ladder, free-check promise, evidence-only guarded proof registry and Pages CMS fields. Generated connective wording and full-home authority remain REVIEW_REQUIRED / DRAFT / NON-AUTHORITATIVE. Main/review Worker receipt is in CODEX-TO-CHATGPT.md. No further implementation is active.
+**State: H-007 IMPLEMENTATION COMPLETE / STOP FOR STRATEGY_CONTENT; OWNER R-03 BASELINE PASS UNDER D-021; REMAINING PAGE COPY/DESIGN FROZEN.** Incoming main 7b98ff8184e7a8063682877b1edfcff3d4941f20 authorizes D-022/D-023; implementation/evidence fdcdaf84020ae4ecf8446806329b74cb3e4320d2 delivers the exact price ladder, free-check promise, evidence-only guarded proof registry and Pages CMS fields. Generated connective wording and full-home authority remain REVIEW_REQUIRED / DRAFT / NON-AUTHORITATIVE. Main/review Worker receipt is in CODEX-TO-CHATGPT.md. No further implementation is active.
 
 H-007 local evidence: coordination/evidence/h007/. Final verify passes 63 files with zero diagnostics, 34 tests, 15 content routes + 404 and 449 links; static leak scan checks 19 outputs and finds 0 public cases. Existing browser QA passes 40 checks. Focused 1440/390/320 and four package/free-check captures preserve unchanged accepted blocks. All 174 protected/frozen files match. Source artifacts and authenticated CMS operation remain unverified; the exact manual GitHub App/repository/editor-save step is in app/docs/h007-content-cms.md.
 
@@ -66,7 +66,7 @@ Templates were applied across the portfolio before a representative full-page re
 
 ## Representative page and review boundary
 
-Representative page: **the complete homepage `/`**, with D-021 accepting the H-006-derived layout/photo/owner selector baseline at incoming main 7b98ff8. H-007 commercial/proof/CMS implementation is acda06ab880a4dbc43af43bf1903cf674c3446f4; new pricing/free-check evidence is in coordination/evidence/h007/. Hero, selector, calculator, mechanism, fit, provider, form and chrome retain accepted DOM/styles and visible relative geometry. The single photo and alternatives remain unchanged. Shared/global/inner templates and all other pages stay intact. Review the whole running page where interaction matters; earlier photo/layout captures remain historical evidence.
+Representative page: **the complete homepage `/`**, with D-021 accepting the H-006-derived layout/photo/owner selector baseline at incoming main 7b98ff8. H-007 commercial/proof/CMS implementation is fdcdaf84020ae4ecf8446806329b74cb3e4320d2; new pricing/free-check evidence is in coordination/evidence/h007/. Hero, selector, calculator, mechanism, fit, provider, form and chrome retain accepted DOM/styles and visible relative geometry. The single photo and alternatives remain unchanged. Shared/global/inner templates and all other pages stay intact. Review the whole running page where interaction matters; earlier photo/layout captures remain historical evidence.
 
 `/vurdering/` supports review of the form flow; it is not a second design-direction candidate. All other pages remain frozen. Homepage approval is scoped to the reviewed content/visual revision; each remaining page still needs appropriate content review before publication. Implementation revisions require a concrete inbound handoff.
 
@@ -79,7 +79,7 @@ OWNER's later R-03 REVISE replaces that limited visual scope for the homepage th
 | Dependency | Required role | Effect |
 | --- | --- | --- |
 | Shared/source-embedded wording and remaining page-specific content locks; consequential commercial choices outside reviewed homepage facts | STRATEGY_CONTENT; OWNER for material commercial decisions | D-010 records historical completion; H-004-generated copy awaits its reviewed lock. Other copy/decisions still block their affected production scope; no expansion is authorized. |
-| H-007 generated commercial connective wording and full-home content review | STRATEGY_CONTENT | CURRENT_GATE: review acda06ab880a4dbc43af43bf1903cf674c3446f4; D-022 facts stay authoritative; no further implementation active |
+| H-007 generated commercial connective wording and full-home content review | STRATEGY_CONTENT | CURRENT_GATE: review fdcdaf84020ae4ecf8446806329b74cb3e4320d2; D-022 facts stay authoritative; no further implementation active |
 | Representative visual acceptance / independent layout and photo verdicts | OWNER / RED_TEAM | D-021 / D-019 / D-020 complete in their recorded scopes; H-007 technical QA adds no formal role verdict or propagation approval |
 | Commercial decisions outside D-022, including any billing/commitment/cancellation/final terms | OWNER + STRATEGY_CONTENT | D-022 public ladder/scope is implemented; missing terms remain uninvented and production-gated |
 | Case comparable periods/intervention/limitations/provenance and exact STRATEGY_CONTENT presentation lock; other contact/search evidence | OWNER + STRATEGY_CONTENT | OWNER permission is GRANTED under updated D-023; evidence-only / READY_FOR_STRATEGY_REVIEW records stay hidden until complete reviewed presentation/publication handoff; no invented claims |
@@ -187,6 +187,8 @@ dc045748180897c20efa418ac739b4135bf5e517 integrates OWNER-selected happycustomer
 
 
 ## H-007 delivered phase
+
+Actual latest main 209063989df3911acde3c4d95c06a2ea76457216 was integrated before publication. D-023 now confirms OWNER name/case permission GRANTED for both cases; this is not a dependency. Final implementation fdcdaf84020ae4ecf8446806329b74cb3e4320d2 preserves EVIDENCE_ONLY / READY_FOR_STRATEGY_REVIEW and requires exact STRATEGY_CONTENT presentation lock/evidence before any public rendering. All final technical checks were repeated for the clarified model.
 
 R-03 is complete under D-021. H-007 implementation is complete on that accepted baseline; stop for STRATEGY_CONTENT commercial/content review. The live delivery receipt is in CODEX-TO-CHATGPT.md. Generated copy/full-home authority stays draft; both proof records stay private and unapproved.
 
