@@ -1,0 +1,163 @@
+{
+  "base": "https://optimalisering-oslo-v33.anel.workers.dev",
+  "checkedAt": "2026-10-08T09:58:25.808Z",
+  "sourceRevision": "87daa541300a2a0fb56bd89d344ad35aca18785c",
+  "implementationRevision": "caa88817152b23f5c67fabe8a328ed868ea7c9cb",
+  "workerBuild": {
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://dash.cloudflare.com/f772a1f16c82756f67e76357c4e5adaf/workers/services/view/optimalisering-oslo-v33/production/builds/7cbf955d-9e01-4806-82b5-9d8d5596dc1c",
+    "version": "b2c527a3-e60e-458c-b7f9-c257afda6c21"
+  },
+  "assets": [
+    {
+      "path": "/ai-synlighet/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "sha256": "b65cd96312040bb9893436000fb7b314660ae877920b85872ea43a0d10723a96"
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "sha256": "801c3c0b97ffd9b0a70a23da79e4a286436b0f655d72d219cc549e8671bb6695"
+    },
+    {
+      "path": "/innsikt/hva-bor-optimaliseres-forst/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "sha256": "33b11276000a6560d612e76cc17b6d4965bc5c2203ad0c98292cd63125b82f13"
+    },
+    {
+      "path": "/innsikt/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "sha256": "b3490ade6ab47ada62a8a12e9efe0409676665763ea766b652426bf3719e54f7"
+    },
+    {
+      "path": "/kontakt/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "sha256": "ca963f33971e1abb1b61709277e7225f6c888208c62310a34d581530defac8dd"
+    },
+    {
+      "path": "/konvertering/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "sha256": "300fb0fc1eafb693758b6615eaf5e354d533e2fe9cb191f8473b1735037e0077"
+    },
+    {
+      "path": "/innsikt/male-effekt-av-optimalisering/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "sha256": "5143ef75bf3dbfecac48149f8caddef77c7f9e2e5f4e8406dc18a457c9239071"
+    },
+    {
+      "path": "/nettbutikkoptimalisering/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "sha256": "7442d7e3398563a2853d3bf810bbb52bcef4df8b549e469ca349bef17606888e"
+    },
+    {
+      "path": "/om/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "sha256": "327b9a91f3e49d5147e21ae1b1f3af13bdc47830e6a6fde6ebb0875ff5b72e57"
+    },
+    {
+      "path": "/personvern/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "sha256": "e032313a33d8e875e253c5a6b15747c367289f177793750cc07240ea90c5980d"
+    },
+    {
+      "path": "/priser/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "sha256": "6677ee212949c6808f78129ffce97786b2160f31997dbc7951d16402e38a02ca"
+    },
+    {
+      "path": "/seo/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "sha256": "6c259b820b48c6f004f179107ba8ccddffa4cfb59fc98332419d87b7630fd3e8"
+    },
+    {
+      "path": "/synlighet/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "sha256": "4ef2ef2751b0c8ddad3678f39839cf39a6565eacf1a90bfd236116f7e5949a9f"
+    },
+    {
+      "path": "/vilkar/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "sha256": "8b3aa8f5e1a1c242d770211f82b1137d105b3c3429ceec4cf11f7b2c7e62f678"
+    },
+    {
+      "path": "/vurdering/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "sha256": "1fe19837d515cbceb407530d54d91a0aad34edf04f9b0442d2d2bdde4b056793"
+    },
+    {
+      "path": "/styles/home-invite.css",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": false,
+      "lineEndingEquivalent": true,
+      "matchesTestedBuild": true,
+      "sha256": "ee05e7e544e248c8699d6480afcbe903719764f67b4cc70ea85eeaa4d9b92134"
+    }
+  ],
+  "robotsDisallow": true,
+  "emptyPreviewSitemap": true,
+  "staticIntakeGetStatus": 404,
+  "personalDataSent": 0,
+  "stylesheetNote": "Only the final CRLF/LF differs between the Windows local file and Linux Git build."
+}

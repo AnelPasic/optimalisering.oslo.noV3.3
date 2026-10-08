@@ -18,6 +18,8 @@ Current representative: **`caa88817152b23f5c67fabe8a328ed868ea7c9cb` / H-004**. 
 
 Current content is the D-014 revised `home.json`, marked draft pending a new actual lock. Composition adds homepage-only HomeAssessment/HomeHeader/HomeFooter and consumes the new CMS-editable model; required shared layout/routing/schema changes preserve all other page output. Nine screenshots and technical QA are evidence for review, not role verdicts.
 
+Live H-004: [1440](evidence/h004-live/home-1440.png), [390](evidence/h004-live/home-390.png), [320](evidence/h004-live/home-320.png); [live checks](evidence/h004-live/checks.json), [native build / route receipt](evidence/h004-live/deployment.json). Source delivery `87daa54`, verified Worker version `b2c527a3-e60e-458c-b7f9-c257afda6c21`. All 15 HTML outputs match local; preview/noindex and disabled intake are preserved. This evidence does not supply R-03/R-04 acceptance.
+
 ### Historical review packets
 
 Web review under H-003: [V3.3 preview](https://optimalisering-oslo-v33.anel.workers.dev), [live 1440px](evidence/h003-publication/home-1440.png), [390px](evidence/h003-publication/home-390.png), [320px](evidence/h003-publication/home-320.png), [browser checks](evidence/h003-publication/checks.json), [live route/color checks](evidence/h003-publication/live-checks.json).
@@ -55,3 +57,5 @@ For each completed review, append date, actual reviewer/role, inspected SHA, sco
 - 2026-10-08: OWNER authorized D-014 / H-004: simplify the homepage around task selection and commercial clarity. Exact sequence: Hero → need selector → combined traffic/conversion calculator → packages/pricing → strongest verified proof when available → diagnostic mechanism → fit/not-fit → free manual check → Medon/provider → FAQ/footer. “Så må de velge deg” is explicitly retired in favor of “Gjør flere besøk til henvendelser og salg”. SEO/AI visibility/conversion entity clarity must be designed in from the start without keyword stuffing.
 
 - 2026-10-08: IMPLEMENTATION completed H-004 / D-014 at `caa88817152b23f5c67fabe8a328ed868ea7c9cb`, consuming `d0e5a30`. All requested homepage blocks/CMS model and nine 1440/390/320px captures are ready. Astro check/build, 24 tests, 449-link audit, 40 browser checks, focused QA, preservation and production guard pass. Read-only technical code review and fix verification do not supply R-04. Next receivers: OWNER R-03 and independent RED_TEAM R-04. R-05 remains blocked; all other pages stay frozen.
+
+- 2026-10-08: H-004 delivery `87daa54` was pushed to main and the connected review Worker rebuilt successfully. Version `b2c527a3-e60e-458c-b7f9-c257afda6c21` passed live 1440/390/320px QA, all 15 route/build comparisons and preview/disabled-intake checks. A following receipt/evidence-only revision records this verification; website assets are unchanged. IMPLEMENTATION is stopped for OWNER R-03 and independent RED_TEAM R-04.
