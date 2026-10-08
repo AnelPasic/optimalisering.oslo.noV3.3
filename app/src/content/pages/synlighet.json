@@ -3,21 +3,130 @@
   "kind": "service",
   "status": "REVIEW_REQUIRED",
   "authority": "DRAFT / NON-AUTHORITATIVE",
-  "seo": { "title": "Synlighet – bli funnet av relevante kunder | Medon", "description": "Er det for få relevante kunder som finner bedriften? Se forskjellen på SEO og AI-synlighet, og få en gratis manuell sjekk av hvor du bør starte." },
-  "eyebrow": "SEO og AI-synlighet",
-  "title": "Du skal bli funnet av folk som kan bli kunder.",
-  "intro": "Mange besøk er ikke målet i seg selv. Synlighet handler om å være mulig å finne når de rette menneskene undersøker et behov du kan løse – også før de kjenner navnet på bedriften.",
+  "seo": {
+    "title": "SEO, lokal SEO og AI-synlighet | Optimalisering Oslo",
+    "description": "Bli funnet når relevante kunder leter etter det du tilbyr. Vi jobber med SEO, lokal SEO og AI-synlighet – og starter der synligheten faktisk stopper."
+  },
+  "eyebrow": "SEO, lokal SEO og AI-synlighet",
+  "title": "De søker etter løsningen. Så etter deg.",
+  "intro": "Synlighet handler ikke om flest mulig besøk. Det handler om å bli funnet når relevante kunder leter etter det du tilbyr – før de allerede kjenner navnet ditt.",
   "sections": [
-    { "id": "behov", "heading": "Søker de etter løsningen, eller etter deg?", "body": ["Søk på bedriftsnavnet sier noe annet enn søk på en tjeneste, et produkt eller et problem. Hvis bare de som allerede kjenner deg finner frem, kan du gå glipp av relevante kunder som fortsatt velger leverandør.", "Vi ser på hva du tilbyr, hvem tilbudet passer for, og hvilke sider som skal hjelpe dem å forstå det. Den prioriteringen kommer før en liste med flere søkeord eller mer innhold."], "items": [ { "title": "Kjenner de ikke navnet?", "text": "Undersøk om nettsiden har tydelige svar på behovet og tjenesten kunden faktisk leter etter." }, { "title": "Finner de feil side?", "text": "Undersøk om søket leder til en side som forklarer riktig tilbud og gir en relevant vei videre." }, { "title": "Finner de deg, men går videre?", "text": "Da kan problemet være budskapet eller veien til kontakt. Konvertering bør vurderes sammen med synligheten.", "href": "/konvertering/", "label": "Se Konvertering" } ] },
-    { "id": "seo-ai", "eyebrow": "To spørsmål om oppdagelse", "heading": "SEO og AI-synlighet må vurderes hver for seg.", "body": ["Søkemotoroptimalisering handler om hvordan relevante søk møter sidene på nettstedet. AI-synlighet handler også om hvordan bedriften og tilbudet blir omtalt og forstått i AI-baserte svar.", "God og konkret informasjon kan være nyttig for begge. Det betyr ikke at en plassering i søk gir en AI-omtale, eller at en AI-omtale gir besøk eller kunder."], "items": [ { "title": "SEO", "text": "Hvilke søk passer bedriften, hvilke sider skal svare på dem, og er disse sidene mulig å finne og forstå?", "href": "/seo/", "label": "Les om SEO" }, { "title": "AI-synlighet", "text": "Stemmer informasjonen om bedriften, kan tilbudet forstås, og hva vet vi faktisk om omtale og kilder?", "href": "/ai-synlighet/", "label": "Les om AI-synlighet" } ] },
-    { "id": "prioritering", "heading": "Vi begynner med det som mangler mellom søket og tilbudet.", "body": ["Et mulig første steg kan være å gjøre en viktig tjenesteside tydeligere, rette et teknisk hinder eller avklare informasjon om bedriften. Behovet avgjør hvilket arbeid som er relevant.", "Synlighet er en løpende tjeneste. Medon undersøker, gjennomfører avtalt arbeid og følger effekten. Hovednettsiden eller nettbutikken er utgangspunktet. Flere nettsteder og landingssider må vurderes mot behov og omfang.", "Detaljert innhold, prioriteringer, pris og grenser for arbeidet avtales før gjennomføring. Vi lover ikke bestemte plasseringer eller anbefalinger fra en AI-tjeneste."] },
-    { "id": "sammenheng", "heading": "Mer oppdagelse hjelper når resten av veien fungerer.", "body": ["Hvis relevante besøkende ikke forstår tilbudet eller finner neste steg, kan synlighet og konvertering trenge en felles prioritering. Det betyr ikke at alt må gjøres samtidig.", "Betalt synlighet kan være et tillegg når den gir en fornuftig vei til markedet. Annonsebudsjett og aktuelle eksterne plattformkostnader er utenom tjenesteprisen hvis ikke annet er uttrykkelig avtalt."], "links": [ { "label": "Se Synlighet, Konvertering og begge", "href": "/priser/" }, { "label": "Hva bør komme først?", "href": "/innsikt/hva-bor-optimaliseres-forst/" } ] },
-    { "id": "sjekk", "heading": "Du trenger ikke velge mellom SEO og AI før du tar kontakt.", "body": ["Send nettadressen og bedriftens e-postadresse. I en gratis, avgrenset manuell sjekk gir Medon kort veiledning om hva vi ville startet med og hvorfor.", "Sjekken er ikke en komplett revisjon, prognose eller automatisk poengsum. Den er et utgangspunkt for å vurdere om Synlighet, Konvertering eller begge passer behovet."], "links": [ { "label": "Ta en gratis sjekk", "href": "/vurdering/" } ] }
+    {
+      "id": "behov",
+      "eyebrow": "Bli funnet før kunden har valgt leverandør",
+      "heading": "Hvis bare de som kjenner navnet ditt finner deg, kommer du sent inn i valget.",
+      "body": [
+        "Kunden kan søke etter en tjeneste, et produkt, et problem eller en leverandør i nærheten. Da må nettsiden gi et tydelig svar på det kunden faktisk prøver å finne.",
+        "Vi starter med tilbudet, kundens spørsmål og sidene som skal gjøre jobben. Flere søkeord og mer innhold er ikke et mål i seg selv."
+      ],
+      "items": [
+        {
+          "title": "Riktig søk",
+          "text": "Bli synlig på søk og spørsmål som passer det bedriften faktisk tilbyr."
+        },
+        {
+          "title": "Riktig side",
+          "text": "Send kunden til en side som svarer på behovet og gjør tilbudet lett å forstå."
+        },
+        {
+          "title": "Riktig neste steg",
+          "text": "Gjør veien videre tydelig når kunden er klar for kontakt eller kjøp.",
+          "href": "/konvertering/",
+          "label": "Se Konvertering"
+        }
+      ]
+    },
+    {
+      "id": "kanaler",
+      "eyebrow": "Tre deler av synligheten",
+      "heading": "SEO, lokal SEO og AI-synlighet løser ulike deler av samme jobb.",
+      "body": [
+        "De overlapper, men de er ikke det samme. Derfor må vi se på hvor kundene faktisk leter og hva som mangler i dag."
+      ],
+      "items": [
+        {
+          "title": "SEO",
+          "text": "Søk, sider og tekniske forhold som påvirker om relevante kunder finner og forstår tilbudet.",
+          "href": "/seo/",
+          "label": "Les om SEO"
+        },
+        {
+          "title": "Lokal SEO",
+          "text": "Bedriftsinformasjon, lokale søk og sider som gjør det tydelig hvor og hvem du hjelper."
+        },
+        {
+          "title": "AI-synlighet",
+          "text": "Hvordan bedriften og tilbudet blir forstått og omtalt i AI-baserte søk og svar.",
+          "href": "/ai-synlighet/",
+          "label": "Les om AI-synlighet"
+        }
+      ]
+    },
+    {
+      "id": "prioritering",
+      "eyebrow": "Kommersiell prioritering",
+      "heading": "Vi starter med det som kan gjøre det lettere for en relevant kunde å finne deg.",
+      "body": [
+        "Det kan være en viktig tjenesteside som mangler, en side som svarer uklart, intern struktur som skjuler viktig innhold eller bedriftsinformasjon som ikke henger godt nok sammen.",
+        "Vi prioriterer ut fra tilbudet, kundene og hva vi faktisk kan måle. Du skal forstå hvorfor et tiltak kommer før et annet.",
+        "Vi kan forbedre grunnlaget for synlighet. Vi kan ikke love en bestemt Google-plassering, AI-anbefaling eller et bestemt antall nye kunder."
+      ]
+    },
+    {
+      "id": "sammenheng",
+      "eyebrow": "Synlighet × konvertering",
+      "heading": "Mer trafikk er lite verdt hvis de rette besøkende ikke går videre.",
+      "body": [
+        "Når relevante kunder finner siden, må de også forstå tilbudet og komme enkelt videre til kontakt eller kjøp.",
+        "Hvis både oppdagelse og handling begrenser resultatet, kan vi jobbe med begge. Betalt synlighet kan også brukes når det er en fornuftig snarvei til markedet."
+      ],
+      "links": [
+        {
+          "label": "Se Konvertering",
+          "href": "/konvertering/"
+        },
+        {
+          "label": "Se pakker og priser",
+          "href": "/priser/"
+        }
+      ]
+    },
+    {
+      "id": "sjekk",
+      "eyebrow": "Gratis, manuell sjekk",
+      "heading": "Send nettsiden. Vi sier hvor vi ville startet – og hvorfor.",
+      "body": [
+        "Få våre 3 viktigste funn innen 2 virkedager. Vi ser kort på den offentlige nettsiden eller nettbutikken og peker ut hva vi ville undersøkt eller forbedret først.",
+        "Sjekken er ikke en full SEO-revisjon, komplett feilliste, prognose eller gratis gjennomføring."
+      ],
+      "links": [
+        {
+          "label": "Ta en gratis sjekk",
+          "href": "/#sjekk"
+        }
+      ]
+    }
   ],
   "faq": [
-    { "question": "Trenger jeg mer innhold for å bli synlig?", "answer": "Kanskje, men mer innhold er ikke et mål i seg selv. Først bør vi se om de viktige spørsmålene er besvart på riktig side, og om eksisterende innhold er tydelig og mulig å finne." },
-    { "question": "Kan dere garantere en plassering eller AI-anbefaling?", "answer": "Nei. Vi kan avtale arbeid og undersøke utviklingen. Vi kan ikke styre hvilke plasseringer eller svar andre tjenester viser." },
-    { "question": "Hvordan vet vi om synligheten er nyttig?", "answer": "Vi må skille mellom å bli sett, få relevante besøk og få henvendelser eller kjøp. For tjenestebedrifter må kvaliteten på henvendelsene også vurderes. Tilgjengelige data setter grenser for hva vi kan si." }
+    {
+      "question": "Hva er forskjellen på SEO, lokal SEO og AI-synlighet?",
+      "answer": "SEO handler om relevante søk og sidene som skal svare på dem. Lokal SEO handler særlig om lokale søk, bedriftsinformasjon og geografisk relevans. AI-synlighet ser også på hvordan bedriften og tilbudet blir forstått og omtalt i AI-baserte svar."
+    },
+    {
+      "question": "Trenger vi mer innhold for å bli mer synlige?",
+      "answer": "Ikke nødvendigvis. Først bør vi se om de viktigste sidene finnes, svarer tydelig på kundens behov og kan bli funnet. Nytt innhold bør ha en tydelig jobb, ikke bare øke antall sider."
+    },
+    {
+      "question": "Kan dere garantere førsteplass på Google eller en AI-anbefaling?",
+      "answer": "Nei. Vi kan forbedre nettsiden, informasjonen og andre forhold vi kontrollerer. Vi kan ikke styre hvilke plasseringer eller svar Google og AI-tjenester viser."
+    },
+    {
+      "question": "Hva koster arbeidet med synlighet?",
+      "answer": "Synlighet kan være det prioriterte området i Optimalisering til 4 500 kr/mnd eks. mva. Hvis synlighet skal jobbe sammen med et annet område, kan Vekst eller Partner være mer relevant. Se pakkene for full oversikt."
+    }
   ],
-  "cta": { "label": "Ta en gratis sjekk", "href": "/vurdering/" }
+  "cta": {
+    "label": "Ta en gratis sjekk",
+    "href": "/#sjekk"
+  }
 }
