@@ -1,0 +1,65 @@
+{
+  "base": "https://optimalisering-oslo-v33.anel.workers.dev",
+  "checkedAt": "2026-10-08T23:35:11.252Z",
+  "sourceBaseline": "73ce60d8789ba0b44661ce5222adff53a4831127",
+  "frozenFilesChecked": 182,
+  "checks": [
+    {
+      "route": "/",
+      "width": 1440,
+      "sharedPackages": true,
+      "exactSupportingCopy": true,
+      "noOverflow": true,
+      "proofRendered": false,
+      "noindex": true
+    },
+    {
+      "route": "/priser/",
+      "width": 1440,
+      "sharedPackages": true,
+      "exactSupportingCopy": true,
+      "noOverflow": true,
+      "proofRendered": false,
+      "noindex": true
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "sharedPackages": true,
+      "exactSupportingCopy": true,
+      "noOverflow": true,
+      "proofRendered": false,
+      "noindex": true
+    },
+    {
+      "route": "/priser/",
+      "width": 390,
+      "sharedPackages": true,
+      "exactSupportingCopy": true,
+      "noOverflow": true,
+      "proofRendered": false,
+      "noindex": true
+    },
+    {
+      "route": "/",
+      "width": 320,
+      "sharedPackages": true,
+      "exactSupportingCopy": true,
+      "noOverflow": true,
+      "proofRendered": false,
+      "noindex": true
+    },
+    {
+      "route": "/priser/",
+      "width": 320,
+      "sharedPackages": true,
+      "exactSupportingCopy": true,
+      "noOverflow": true,
+      "proofRendered": false,
+      "noindex": true
+    }
+  ],
+  "errors": [],
+  "posts": 0,
+  "liveEmailsSent": 0
+}
