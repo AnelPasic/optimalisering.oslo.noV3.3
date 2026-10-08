@@ -1,5 +1,149 @@
 # ChatGPT to Codex
 
+## Active handoff — H-005B
+
+**Date:** 2026-10-08  
+**Authority:** OWNER EXPLICIT + STRATEGY_CONTENT / CRO  
+**Decisions:** D-015 + D-016  
+**Baseline:** H-004 / current main  
+**Scope:** homepage hero + need-selector copy only
+
+### Objective
+
+Keep the H-005 simplification direction, but do **not** leave the hero visually empty.
+
+We want a simpler hero with one strong message and one restrained visual that helps the buyer picture the dream outcome.
+
+### Hero structure
+
+Keep exactly:
+- one eyebrow;
+- one semantic H1;
+- one short support paragraph;
+- two CTAs;
+- one outcome-oriented visual.
+
+Use:
+
+**Eyebrow**
+> For bedrifter som konkurrerer om kundene
+
+**H1**
+> Bli funnet. Gjør flere besøk til henvvendelser og salg.
+
+If the repository already contains the correct spelling “henvendelser”, preserve that spelling. Do not introduce typos.
+
+**Support**
+Use one short paragraph that naturally communicates:
+- SEO;
+- AI-synlighet;
+- konverteringsoptimalisering;
+- for businesses in Oslo and the rest of Norway;
+- Medon starts where the customer journey stops.
+
+**CTAs**
+- Ta en gratis sjekk
+- Se priser
+
+Remove:
+- the separate small SEO/category H1;
+- hero note;
+- the current repetitive explanatory hero illustration.
+
+### New hero visual
+
+Replace the current visual with **one calmer, realistic-ish “dream outcome” visual**.
+
+The visual should plausibly suggest:
+- improved visibility / being found by relevant customers;
+- a clearer path from visit to enquiry or purchase;
+- better commercial outcome.
+
+Preferred character:
+- believable UI/editorial hybrid;
+- simple, productized;
+- grounded and Nordic;
+- visually supportive, not dominant.
+
+It may combine a plausible search/discovery cue, a webpage/landing-page cue and a simple enquiry/purchase outcome cue, but should remain one coherent composition.
+
+Do not use:
+- generic stock-photo business people;
+- fake client logos or case numbers;
+- dense analytics dashboards;
+- SaaS admin-panel aesthetics;
+- generic AI gradients;
+- decorative abstract shapes with no communication role;
+- a visual that simply repeats the H1 in card form.
+
+The buyer should understand the text first. The visual should make the outcome easier to imagine.
+
+### Need selector
+
+Keep:
+> Hva trenger du hjelp med?
+
+Use the same three cards and links, but shorten the descriptions:
+
+**Bli funnet**
+> SEO, AI-synlighet og lokal synlighet når kundene leter etter det du tilbyr.
+
+**Gjør flere besøk til henvendelser og salg**
+> Konverteringsoptimalisering for nettsider, landingssider og nettbutikker.
+
+**Begge deler**
+> Vi finner flaskehalsen og starter der det kan gi mest effekt.
+
+Tiny grammar/fit edits are allowed. Do not expand them.
+
+### Everything else
+
+Do not redesign or rewrite:
+- calculator;
+- packages/pricing;
+- mechanism;
+- fit/not-fit;
+- free check;
+- Medon/provider;
+- FAQ/footer.
+
+Do not touch the other 14 pages.
+
+Keep:
+- Invite-derived palette and visual DNA;
+- Instrument Sans / Figtree roles;
+- current content-driven / Pages CMS-ready architecture.
+
+### Acceptance criteria
+
+1. Hero is materially shorter and calmer than H-004.
+2. Only one headline layer exists.
+3. One restrained dream-outcome visual exists.
+4. The visual does not repeat the headline or resemble a fake dashboard/case.
+5. Need selector appears sooner, especially on mobile.
+6. Need-card descriptions are materially shorter.
+7. Everything from calculator downward remains unchanged except unavoidable layout ripple.
+8. 1440 / 390 / 320px QA passes with no overflow.
+9. Other pages and `system/` / `project/` remain untouched.
+
+### Evidence / delivery
+
+- Run existing verify/tests/browser QA.
+- Add focused H-005B checks for hero structure and visual presence.
+- Capture:
+  - full page 1440 / 390 / 320;
+  - hero + selector 1440;
+  - hero + selector 390 / 320.
+- Push to `main` so the review Worker rebuilds.
+- Verify the live review Worker if build timing allows.
+- Update `CODEX-TO-CHATGPT.md`, `PROJECT-STATE.md` and `REVIEW-QUEUE.md`.
+- Stop for OWNER R-03 and RED_TEAM R-04.
+
+Do not scale to remaining pages.
+
+
+---
+
 ## Active handoff — H-005
 
 **Date:** 2026-10-08  
