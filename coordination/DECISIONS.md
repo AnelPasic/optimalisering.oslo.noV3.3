@@ -33,6 +33,8 @@ OWNER subsequently explicitly applies `#320c43` also to the homepage footer. Thi
 
 | D-016 | OWNER EXPLICIT / H-005 VISUAL ADJUSTMENT | Keep the H-005 hero simplification, but do **not** leave the hero visually empty. Replace the current explanatory/repetitive hero illustration with one calmer, realistic-ish, outcome-oriented visual that suggests improved visibility, a clearer path to enquiry/purchase, and better commercial outcome. The visual must support rather than repeat the H1. No stock-photo cliché, fake proof, cluttered analytics dashboard or decorative abstraction. | OWNER instruction in ChatGPT, 2026-10-08. Supersedes only H-005's “no hero illustration” clause. All other D-015 simplification constraints remain active. |
 
+| D-017 | RED_TEAM / H-005B REPRESENTATIVE PASS | Independent review passes H-005B at implementation commit `1d4bdf77bd234783b68a7f581bdb88ab6ef2af38` as the strongest representative direction so far. The simplified hero materially improves clarity, the outcome visual supports rather than repeats the promise, need selection is faster, the combined calculator explains the visibility × conversion mechanism, and no unapproved price/proof claims were introduced. PASS is for representative direction only, not production launch/content finalization. | ChatGPT RED_TEAM review, 2026-10-08, based on exact diff, H-005B live evidence at 1440/390/320, content model and delivery report. Remaining blockers: OWNER R-03, final prices/scope/terms, publishable proof, privacy/lead operations, authenticated CMS and launch QA. |
+
 ## Review publication authority
 
 | ID | Authority / state | Decision | Source and scope |
