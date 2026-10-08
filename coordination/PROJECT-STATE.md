@@ -2,7 +2,7 @@
 
 Updated: 2026-10-08. Owner: Medon AS. Implementation repository: AnelPasic/optimalisering.oslo.noV3.3.
 
-**State: H-005B IMPLEMENTATION COMPLETE AT 1d4bdf77bd234783b68a7f581bdb88ab6ef2af38; STOPPED FOR OWNER R-03 AND FORMAL RED_TEAM R-04; ALL OTHER PAGES FROZEN.** D-015/D-016’s simpler hero, single outcome visual and shorter selector are delivered. No further implementation handoff is active; no acceptance/content lock is inferred.
+**State: H-005B IMPLEMENTED; FORMAL RED_TEAM R-04 PASS UNDER D-017; OWNER R-03 PENDING; ALL OTHER PAGES FROZEN.** The simplified hero/outcome visual/selector direction is independently accepted as a representative baseline, but no scale-out or production approval follows until OWNER explicitly accepts R-03.
 
 Original exploratory implementation: `a98dbaefbb10a9039c9b025e5c3907e83f24de8b`, pushed to `origin/main` on 2026-10-08. The coordination/draft-label revision follows that commit; use this file's Git history for its exact SHA. A push permits repository inspection; it does not authorize publication or live processing.
 
