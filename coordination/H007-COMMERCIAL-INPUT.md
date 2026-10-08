@@ -69,9 +69,9 @@ Preserve the current bounded/manual-check constraints:
 - no guaranteed result
 - no automated score presented as expert work
 
-## 2. Proof/case evidence — IMPORT AS EVIDENCE ONLY
+## 2. Proof/case evidence — PUBLICATION PERMISSION CONFIRMED
 
-These entries come from the separate Medon proof/case work. They are useful evidence inputs, but **not automatically publishable**.
+These entries come from the separate Medon proof/case work. OWNER confirms that **publication permission exists for all customer cases in the approved proof work, including the Nysta and Oslo Privatklinikk cases below**. Permission is therefore not a blocker. The exact public claim/case presentation still requires STRATEGY_CONTENT review before rendering.
 
 ### Nysta
 
@@ -90,10 +90,11 @@ Evidence-backed measurements from the case registry work:
 Provenance/status:
 - documented Shopify data and Vipps/CRO periods
 - prior registry: NYSTA-PROOF-REGISTRY-v2.md in the separate case/proof work
-- explicit customer-name publication permission is NOT established in this repo/context
+- OWNER confirms customer-name/case publication permission is granted
 - screenshots/source artifacts are NOT imported into this repo
-- status for current site: **EVIDENCE_ONLY / NEEDS_PERMISSION**
-- do not render publicly
+- permission status: **GRANTED**
+- content status for H-007: **EVIDENCE_ONLY / READY_FOR_STRATEGY_REVIEW**
+- do not render publicly during H-007; ChatGPT/STRATEGY_CONTENT will select and lock the exact public case presentation next
 
 ### Oslo Privatklinikk
 
@@ -107,10 +108,11 @@ Evidence-backed Ads/Gmail measurements:
 Provenance/status:
 - verified from Ads/Gmail in the separate case/proof work
 - prior registry/master noted as v3/master v6
-- explicit client-name publication permission is NOT established in this repo/context
+- OWNER confirms client-name/case publication permission is granted
 - screenshot/source artifact is NOT imported into this repo
-- status for current site: **EVIDENCE_ONLY / NEEDS_PERMISSION**
-- do not render publicly
+- permission status: **GRANTED**
+- content status for H-007: **EVIDENCE_ONLY / READY_FOR_STRATEGY_REVIEW**
+- do not render publicly during H-007; ChatGPT/STRATEGY_CONTENT will select and lock the exact public case presentation next
 
 ### Proof safety rule
 
@@ -120,7 +122,8 @@ A proof entry may render publicly only when all required publication fields are 
 - intervention/change
 - source/provenance
 - limitations/attribution caveat
-- naming/anonymization permission
+- naming/anonymization permission (OWNER has confirmed this for the approved case set)
+- exact public claim/copy has passed STRATEGY_CONTENT review
 - publication status = PUBLISHABLE
 
 No implementation/test flag may bypass this.
