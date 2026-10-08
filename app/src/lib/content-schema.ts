@@ -3,7 +3,7 @@ import { z } from 'astro/zod';
 const link = z.object({ label: z.string(), href: z.string().startsWith('/') });
 const homepage = z.object({
   secondaryCta: link,
-  illustration: z.object({ label: z.string(), ariaLabel: z.string(), search: z.string(), business: z.string(), heading: z.string(), description: z.string(), action: z.string(), outcome: z.string() }),
+  heroPhoto: z.object({ src: z.string().regex(/^\/images\/home\/[a-z0-9][a-z0-9-]*\.webp$/), positionX: z.number().min(0).max(100), positionY: z.number().min(0).max(100) }),
   selector: z.object({ heading: z.string(), items: z.array(z.object({ title: z.string(), discipline: z.string(), description: z.string(), link })).length(3) }),
   calculator: z.object({
     eyebrow: z.string(), heading: z.string(), intro: z.string(), formula: z.string(), caveat: z.string(),

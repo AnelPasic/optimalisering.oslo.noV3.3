@@ -1,0 +1,1875 @@
+{
+  "320": {
+    "heroHeight": 677.796875,
+    "selectorY": 752.796875,
+    "shell": 288,
+    "spacing": {
+      "behov": {
+        "top": 48,
+        "bottom": 48,
+        "height": 1119.125
+      },
+      "regneeksempel": {
+        "top": 48,
+        "bottom": 48,
+        "height": 1067.578125
+      },
+      "priser": {
+        "top": 48,
+        "bottom": 48,
+        "height": 2169.875
+      },
+      "mekanisme": {
+        "top": 48,
+        "bottom": 48,
+        "height": 1167.5
+      },
+      "passer": {
+        "top": 48,
+        "bottom": 48,
+        "height": 748.296875
+      },
+      "sjekk": {
+        "top": 48,
+        "bottom": 48,
+        "height": 1276.671875
+      },
+      "medon": {
+        "top": 48,
+        "bottom": 48,
+        "height": 586.234375
+      },
+      "sporsmal": {
+        "top": 48,
+        "bottom": 48,
+        "height": 679.515625
+      }
+    },
+    "containers": {
+      ".need-card": {
+        "padding": "22px",
+        "radius": "20px",
+        "background": "rgb(224, 241, 233)",
+        "border": "1px"
+      },
+      ".package-card": {
+        "padding": "22px",
+        "radius": "20px",
+        "background": "rgb(255, 255, 255)",
+        "border": "1px"
+      },
+      ".leverage-tool": {
+        "padding": "16px",
+        "radius": "20px",
+        "background": "rgb(73, 57, 79)",
+        "border": "1px"
+      },
+      ".info-item": {
+        "padding": "0px",
+        "radius": "20px",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px"
+      },
+      ".item-number": {
+        "padding": "0px 0px 13px",
+        "radius": "50%",
+        "background": "rgb(224, 241, 233)",
+        "border": "0px"
+      },
+      ".assessment-form": {
+        "padding": "22px",
+        "radius": "20px",
+        "background": "rgb(255, 255, 255)",
+        "border": "1px"
+      }
+    },
+    "readable": [
+      {
+        "selector": "hero-intro",
+        "width": 288
+      },
+      {
+        "selector": "body-copy",
+        "width": 288
+      },
+      {
+        "selector": "body-copy",
+        "width": 288
+      },
+      {
+        "selector": "body-copy",
+        "width": 288
+      },
+      {
+        "selector": "body-copy",
+        "width": 288
+      },
+      {
+        "selector": "eyebrow",
+        "width": 288
+      },
+      {
+        "selector": "",
+        "width": 288
+      },
+      {
+        "selector": "",
+        "width": 288
+      },
+      {
+        "selector": "body-copy",
+        "width": 288
+      },
+      {
+        "selector": "faq-list",
+        "width": 288
+      }
+    ],
+    "lower": [
+      {
+        "id": "regneeksempel",
+        "htmlHash": "81e927b2adc5e4896db49d236017afc5fd9044eb89461929476d62c831bd666d"
+      },
+      {
+        "id": "priser",
+        "htmlHash": "fb1e60f50f5539282e1274af612ca28a790acd84e1e8240e9f8519a1243ed130"
+      },
+      {
+        "id": "mekanisme",
+        "htmlHash": "04d7dbb5641e95f763fc8aea753724948ff004ba27968631177a6a315dfc94a2"
+      },
+      {
+        "id": "passer",
+        "htmlHash": "39a1c6ccdeb128c227dd08b9570e8d03b5d146a590f51e6d73132139261872e7"
+      },
+      {
+        "id": "sjekk",
+        "htmlHash": "e417c46e5acc5e7f4e84478586e0f3205ba7bf0c47d55e992f724cad9b42b9a7"
+      },
+      {
+        "id": "medon",
+        "htmlHash": "0be83645349175ecad8a7324f5a3112ac875faef8595e65bf64b93d46f21e1a3"
+      },
+      {
+        "id": "sporsmal",
+        "htmlHash": "2af354e3ef3612800a3b5b483a16fc81dc6d9744c7814b8d16415ac130b61c08"
+      },
+      {
+        "id": "site-header",
+        "htmlHash": "24cb438e0453392540cef80c1b764338e51d3087ecb4b3f5281170f4c5446824"
+      },
+      {
+        "id": "site-footer",
+        "htmlHash": "e40ca7fa74c338a9a43720e233f29aa3ace580af6cf6edfcd8978eb569b30b1d"
+      }
+    ],
+    "content": {
+      "slug": "home",
+      "kind": "home",
+      "status": "REVIEW_REQUIRED",
+      "authority": "DRAFT / NON-AUTHORITATIVE",
+      "seo": {
+        "title": "SEO, AI-synlighet og konverteringsoptimalisering | Medon",
+        "description": "Bli funnet og gjør flere besøk til henvendelser og salg. Medon hjelper bedrifter i Norge med synlighet, konvertering eller begge. Ta en gratis, manuell sjekk."
+      },
+      "eyebrow": "For bedrifter som konkurrerer om kundene",
+      "title": "Bli funnet. Gjør flere besøk til henvendelser og salg.",
+      "intro": "SEO, AI-synlighet og konverteringsoptimalisering for bedrifter i Oslo og resten av Norge. Medon starter der kundereisen stopper.",
+      "cta": {
+        "label": "Ta en gratis sjekk",
+        "href": "/#sjekk"
+      },
+      "homepage": {
+        "secondaryCta": {
+          "label": "Se priser",
+          "href": "/#priser"
+        },
+        "selector": {
+          "heading": "Hva trenger du hjelp med?",
+          "items": [
+            {
+              "title": "Bli funnet",
+              "discipline": "Synlighet",
+              "description": "SEO, AI-synlighet og lokal synlighet når kundene leter etter det du tilbyr.",
+              "link": {
+                "label": "Se Synlighet",
+                "href": "/synlighet/"
+              }
+            },
+            {
+              "title": "Gjør flere besøk til henvendelser og salg",
+              "discipline": "Konvertering",
+              "description": "Konverteringsoptimalisering for nettsider, landingssider og nettbutikker.",
+              "link": {
+                "label": "Se Konvertering",
+                "href": "/konvertering/"
+              }
+            },
+            {
+              "title": "Begge deler",
+              "discipline": "Synlighet + konvertering",
+              "description": "Vi finner flaskehalsen og starter der det kan gi mest effekt.",
+              "link": {
+                "label": "Se alternativene",
+                "href": "/#priser"
+              }
+            }
+          ]
+        },
+        "calculator": {
+          "eyebrow": "To grep som virker sammen",
+          "heading": "Hva kan flere relevante besøk og en bedre kjøpsvei bety?",
+          "intro": "Endre trafikken, andelen som tar kontakt eller kjøper – eller begge. Se hvordan de to grepene virker sammen.",
+          "formula": "Relevante besøk × konverteringsrate = henvendelser / kjøp",
+          "labels": {
+            "visits": "Relevante besøk per måned",
+            "conversion": "Konverteringsrate i dag (%)",
+            "trafficIncrease": "Mer relevant trafikk (%)",
+            "newConversion": "Ny konverteringsrate (%)",
+            "current": "I dag",
+            "scenario": "Scenario",
+            "difference": "Forskjell",
+            "outcome": "henvendelser / kjøp per måned",
+            "increase": "endring",
+            "undefinedIncrease": "Prosentvis endring kan ikke beregnes for dette utgangspunktet",
+            "invalid": "Bruk besøk fra 0 til 10 000 000, trafikkøkning fra 0 til 1 000 % og konverteringsrater fra 0 til 100 %."
+          },
+          "defaults": {
+            "visits": 1000,
+            "conversion": 1,
+            "trafficIncrease": 50,
+            "newConversion": 2
+          },
+          "caveat": "Hypotetisk regneeksempel – ikke et kundecase eller en resultatgaranti."
+        },
+        "packages": {
+          "eyebrow": "Avtalt arbeid, tydelig start",
+          "heading": "Synlighet, Konvertering eller Begge",
+          "intro": "Velg det som passer behovet. Omfang og pris må avklares før betalt arbeid starter.",
+          "fitLabel": "Passer for",
+          "scopeLabel": "Hva vi jobber med",
+          "items": [
+            {
+              "title": "Synlighet",
+              "fit": "Bedrifter som trenger flere relevante besøk.",
+              "scope": "Avtalt arbeid med hvordan kundene finner bedriften i søk, AI-tjenester eller lokalt. Kampanjeoptimalisering kan støtte betalt synlighet når det er relevant.",
+              "priceState": "Pris avklares før publisering",
+              "externalCosts": "Annonsebudsjett og aktuelle eksterne plattformkostnader kommer i tillegg hvis ikke annet er avtalt.",
+              "cta": {
+                "label": "Sjekk synligheten",
+                "href": "/#sjekk"
+              }
+            },
+            {
+              "title": "Konvertering",
+              "fit": "Bedrifter som har besøk, men for få henvendelser eller kjøp.",
+              "scope": "Avtalt konverteringsoptimalisering av budskap, landingssider, skjema eller kjøpsvei – på nettsiden eller i nettbutikken.",
+              "priceState": "Pris avklares før publisering",
+              "externalCosts": "Aktuelle eksterne plattformkostnader kommer i tillegg hvis ikke annet er avtalt.",
+              "cta": {
+                "label": "Sjekk veien til kontakt og kjøp",
+                "href": "/#sjekk"
+              }
+            },
+            {
+              "title": "Begge",
+              "fit": "Bedrifter der både synlighet og kjøpsvei kan forbedres.",
+              "scope": "Avtalt arbeid med begge områdene. Vi starter med flaskehalsen og prioriterer i riktig rekkefølge.",
+              "priceState": "Pris avklares før publisering",
+              "externalCosts": "Annonsebudsjett og aktuelle eksterne plattformkostnader kommer i tillegg hvis ikke annet er avtalt.",
+              "cta": {
+                "label": "Finn hvor vi bør starte",
+                "href": "/#sjekk"
+              }
+            }
+          ]
+        },
+        "proof": {
+          "publicationApproved": false,
+          "case": null
+        },
+        "form": {
+          "heading": "Send nettsiden",
+          "websiteLabel": "Nettside eller nettbutikk",
+          "websitePlaceholder": "dinbedrift.no",
+          "emailLabel": "E-post",
+          "emailPlaceholder": "deg@dinbedrift.no",
+          "messageLabel": "Kort kommentar",
+          "optional": "Valgfritt",
+          "messagePlaceholder": "Noe vi bør vite?",
+          "sensitiveNotice": "Ikke send innlogging, sensitive opplysninger eller personopplysninger om andre.",
+          "previewNotice": "Dette er en forhåndsvisning. Innsending er ikke åpnet ennå.",
+          "submitLabel": "Ta en gratis sjekk",
+          "privacyText": "Vi bruker opplysningene for å følge opp forespørselen.",
+          "privacyLink": {
+            "label": "Les om personvern",
+            "href": "/personvern/"
+          },
+          "disabledStatus": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt."
+        },
+        "faqHeading": "Før du tar neste steg",
+        "faqEyebrow": "Greit å vite",
+        "chrome": {
+          "brand": "optimalisering",
+          "brandLocation": "oslo",
+          "homeLabel": "Optimalisering Oslo – forsiden",
+          "skipLabel": "Hopp til innhold",
+          "navigationLabel": "Hovedmeny",
+          "mobileNavigationLabel": "Mobilmeny",
+          "openMenu": "Åpne meny",
+          "closeMenu": "Lukk meny",
+          "assessmentLink": {
+            "label": "Gratis sjekk",
+            "href": "/#sjekk"
+          },
+          "navigation": [
+            {
+              "label": "Synlighet",
+              "href": "/synlighet/"
+            },
+            {
+              "label": "Konvertering",
+              "href": "/konvertering/"
+            },
+            {
+              "label": "Priser",
+              "href": "/#priser"
+            },
+            {
+              "label": "Innsikt",
+              "href": "/innsikt/"
+            }
+          ],
+          "providerText": "En tjeneste fra Medon AS. Synlighet og konvertering for bedrifter.",
+          "previewLabel": "Forhåndsvisning · til vurdering",
+          "serviceNavigationLabel": "Tjenester og veiledning",
+          "informationNavigationLabel": "Kontakt og informasjon",
+          "storeLink": {
+            "label": "For nettbutikker",
+            "href": "/nettbutikkoptimalisering/"
+          },
+          "informationLinks": [
+            {
+              "label": "Gratis sjekk",
+              "href": "/#sjekk"
+            },
+            {
+              "label": "Om Medon",
+              "href": "/om/"
+            },
+            {
+              "label": "Kontakt",
+              "href": "/kontakt/"
+            },
+            {
+              "label": "Personvern",
+              "href": "/personvern/"
+            },
+            {
+              "label": "Vilkår",
+              "href": "/vilkar/"
+            }
+          ],
+          "copyrightProvider": "Medon AS",
+          "footerNote": "Et godt sted å begynne."
+        }
+      },
+      "sections": [
+        {
+          "id": "mekanisme",
+          "eyebrow": "Start med det som begrenser resultatet",
+          "heading": "Slik finner vi hva som bør gjøres først",
+          "body": [
+            "Behovet avgjør tiltakene. Vi starter ikke med SEO eller en annen kanal bare fordi du kom inn på en bestemt side."
+          ],
+          "items": [
+            {
+              "title": "Finn flaskehalsen",
+              "text": "Se hvor kundereisen stopper: før besøket, på siden eller i veien til kontakt og kjøp."
+            },
+            {
+              "title": "Prioriter tiltak",
+              "text": "Velg en fornuftig start ut fra behov, kommersiell verdi og det vi faktisk vet."
+            },
+            {
+              "title": "Gjennomfør",
+              "text": "Gjør arbeidet som er avtalt. Omfang og ansvar skal være tydelig."
+            },
+            {
+              "title": "Mål effekt",
+              "text": "Følg med på relevante henvendelser og kjøp. Se resultatene sammen med verdi og kostnader."
+            }
+          ]
+        },
+        {
+          "id": "passer",
+          "eyebrow": "Er dette aktuelt for bedriften?",
+          "heading": "For deg som vil forbedre veien til kunder",
+          "body": [],
+          "items": [
+            {
+              "title": "Passer godt hvis…",
+              "text": "Bedriften konkurrerer om kundene, og en henvendelse eller ordre har økonomisk verdi. Du har en nettside eller nettbutikk som kan forbedres og vil måle kommersiell effekt."
+            },
+            {
+              "title": "Passer dårlig hvis…",
+              "text": "Du ønsker en garantert rangering eller et bestemt antall kunder, en full gratis revisjon eller aktivitet uten et tydelig mål."
+            }
+          ]
+        },
+        {
+          "id": "sjekk",
+          "eyebrow": "Gratis, manuell sjekk",
+          "heading": "Send nettsiden. Vi sier hvor vi ville startet – og hvorfor.",
+          "body": [
+            "Vi ser kort på den offentlige nettsiden eller nettbutikken og begrunner hva vi ville undersøkt eller forbedret først.",
+            "Dette er en avgrenset, manuell vurdering. Ingen automatisk poengsum, full revisjon, prognose eller gratis gjennomføring. Videre arbeid avtales separat."
+          ]
+        },
+        {
+          "id": "medon",
+          "eyebrow": "Medon AS står bak",
+          "heading": "Én ansvarlig leverandør, tydelig avtalt arbeid",
+          "body": [
+            "Optimalisering Oslo er en tjeneste fra Medon AS. Vi jobber først og fremst med norske bedrifter, og kan også hjelpe bedrifter i andre nordiske land.",
+            "Du skal forstå hva vi foreslår, hvorfor vi foreslår det og hva som faktisk er avtalt. Vi lover ikke en bestemt Google-plassering, en AI-anbefaling eller et bestemt antall nye kunder."
+          ],
+          "links": [
+            {
+              "label": "Om leverandøren",
+              "href": "/om/"
+            }
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Hva skjer etter den gratis sjekken?",
+          "answer": "Vi gjør en kort, manuell vurdering og begrunner hvor vi ville startet. Hvis det er noe vi kan hjelpe med, avtaler vi omfang og pris før betalt arbeid. Sjekken er ikke en full revisjon eller gratis gjennomføring."
+        },
+        {
+          "question": "Hva koster videre arbeid?",
+          "answer": "Endelige offentlige priser og tjenesteomfang er ikke avklart for denne forhåndsvisningen. Prisen avhenger av behov og avtalt arbeid, og avklares før vi starter."
+        },
+        {
+          "question": "Er annonsebudsjett og eksterne kostnader inkludert?",
+          "answer": "Annonsebudsjett og aktuelle eksterne plattformkostnader kommer i tillegg hvis vi ikke avtaler noe annet. Vi avklarer relevante kostnader før arbeidet starter."
+        },
+        {
+          "question": "Hva hvis både synlighet og konvertering begrenser resultatet?",
+          "answer": "Da ser vi på sammenhengen. Vi finner flaskehalsen og prioriterer tiltakene i riktig rekkefølge, fremfor å starte med en fast kanal."
+        },
+        {
+          "question": "Jobber dere bare med bedrifter i Oslo?",
+          "answer": "Nei. Medon AS jobber først og fremst med bedrifter i Norge, og kan også hjelpe bedrifter i andre nordiske land. Navnet innebærer ikke at vi har et Oslo-kontor."
+        }
+      ]
+    }
+  },
+  "390": {
+    "heroHeight": 665.59375,
+    "selectorY": 744.59375,
+    "shell": 350,
+    "spacing": {
+      "behov": {
+        "top": 48,
+        "bottom": 48,
+        "height": 1060.25
+      },
+      "regneeksempel": {
+        "top": 48,
+        "bottom": 48,
+        "height": 1039.515625
+      },
+      "priser": {
+        "top": 48,
+        "bottom": 48,
+        "height": 1958.875
+      },
+      "mekanisme": {
+        "top": 48,
+        "bottom": 48,
+        "height": 826.40625
+      },
+      "passer": {
+        "top": 48,
+        "bottom": 48,
+        "height": 708.96875
+      },
+      "sjekk": {
+        "top": 48,
+        "bottom": 48,
+        "height": 1213.09375
+      },
+      "medon": {
+        "top": 48,
+        "bottom": 48,
+        "height": 530.8125
+      },
+      "sporsmal": {
+        "top": 48,
+        "bottom": 48,
+        "height": 624.40625
+      }
+    },
+    "containers": {
+      ".need-card": {
+        "padding": "25px",
+        "radius": "20px",
+        "background": "rgb(224, 241, 233)",
+        "border": "1px"
+      },
+      ".package-card": {
+        "padding": "25px",
+        "radius": "20px",
+        "background": "rgb(255, 255, 255)",
+        "border": "1px"
+      },
+      ".leverage-tool": {
+        "padding": "20px",
+        "radius": "20px",
+        "background": "rgb(73, 57, 79)",
+        "border": "1px"
+      },
+      ".info-item": {
+        "padding": "0px",
+        "radius": "20px",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px"
+      },
+      ".item-number": {
+        "padding": "0px 0px 13px",
+        "radius": "50%",
+        "background": "rgb(224, 241, 233)",
+        "border": "0px"
+      },
+      ".assessment-form": {
+        "padding": "26px",
+        "radius": "20px",
+        "background": "rgb(255, 255, 255)",
+        "border": "1px"
+      }
+    },
+    "readable": [
+      {
+        "selector": "hero-intro",
+        "width": 350
+      },
+      {
+        "selector": "body-copy",
+        "width": 350
+      },
+      {
+        "selector": "body-copy",
+        "width": 350
+      },
+      {
+        "selector": "body-copy",
+        "width": 350
+      },
+      {
+        "selector": "body-copy",
+        "width": 350
+      },
+      {
+        "selector": "eyebrow",
+        "width": 350
+      },
+      {
+        "selector": "",
+        "width": 350
+      },
+      {
+        "selector": "",
+        "width": 350
+      },
+      {
+        "selector": "body-copy",
+        "width": 350
+      },
+      {
+        "selector": "faq-list",
+        "width": 350
+      }
+    ],
+    "lower": [
+      {
+        "id": "regneeksempel",
+        "htmlHash": "81e927b2adc5e4896db49d236017afc5fd9044eb89461929476d62c831bd666d"
+      },
+      {
+        "id": "priser",
+        "htmlHash": "fb1e60f50f5539282e1274af612ca28a790acd84e1e8240e9f8519a1243ed130"
+      },
+      {
+        "id": "mekanisme",
+        "htmlHash": "04d7dbb5641e95f763fc8aea753724948ff004ba27968631177a6a315dfc94a2"
+      },
+      {
+        "id": "passer",
+        "htmlHash": "39a1c6ccdeb128c227dd08b9570e8d03b5d146a590f51e6d73132139261872e7"
+      },
+      {
+        "id": "sjekk",
+        "htmlHash": "e417c46e5acc5e7f4e84478586e0f3205ba7bf0c47d55e992f724cad9b42b9a7"
+      },
+      {
+        "id": "medon",
+        "htmlHash": "0be83645349175ecad8a7324f5a3112ac875faef8595e65bf64b93d46f21e1a3"
+      },
+      {
+        "id": "sporsmal",
+        "htmlHash": "2af354e3ef3612800a3b5b483a16fc81dc6d9744c7814b8d16415ac130b61c08"
+      },
+      {
+        "id": "site-header",
+        "htmlHash": "24cb438e0453392540cef80c1b764338e51d3087ecb4b3f5281170f4c5446824"
+      },
+      {
+        "id": "site-footer",
+        "htmlHash": "e40ca7fa74c338a9a43720e233f29aa3ace580af6cf6edfcd8978eb569b30b1d"
+      }
+    ],
+    "content": {
+      "slug": "home",
+      "kind": "home",
+      "status": "REVIEW_REQUIRED",
+      "authority": "DRAFT / NON-AUTHORITATIVE",
+      "seo": {
+        "title": "SEO, AI-synlighet og konverteringsoptimalisering | Medon",
+        "description": "Bli funnet og gjør flere besøk til henvendelser og salg. Medon hjelper bedrifter i Norge med synlighet, konvertering eller begge. Ta en gratis, manuell sjekk."
+      },
+      "eyebrow": "For bedrifter som konkurrerer om kundene",
+      "title": "Bli funnet. Gjør flere besøk til henvendelser og salg.",
+      "intro": "SEO, AI-synlighet og konverteringsoptimalisering for bedrifter i Oslo og resten av Norge. Medon starter der kundereisen stopper.",
+      "cta": {
+        "label": "Ta en gratis sjekk",
+        "href": "/#sjekk"
+      },
+      "homepage": {
+        "secondaryCta": {
+          "label": "Se priser",
+          "href": "/#priser"
+        },
+        "selector": {
+          "heading": "Hva trenger du hjelp med?",
+          "items": [
+            {
+              "title": "Bli funnet",
+              "discipline": "Synlighet",
+              "description": "SEO, AI-synlighet og lokal synlighet når kundene leter etter det du tilbyr.",
+              "link": {
+                "label": "Se Synlighet",
+                "href": "/synlighet/"
+              }
+            },
+            {
+              "title": "Gjør flere besøk til henvendelser og salg",
+              "discipline": "Konvertering",
+              "description": "Konverteringsoptimalisering for nettsider, landingssider og nettbutikker.",
+              "link": {
+                "label": "Se Konvertering",
+                "href": "/konvertering/"
+              }
+            },
+            {
+              "title": "Begge deler",
+              "discipline": "Synlighet + konvertering",
+              "description": "Vi finner flaskehalsen og starter der det kan gi mest effekt.",
+              "link": {
+                "label": "Se alternativene",
+                "href": "/#priser"
+              }
+            }
+          ]
+        },
+        "calculator": {
+          "eyebrow": "To grep som virker sammen",
+          "heading": "Hva kan flere relevante besøk og en bedre kjøpsvei bety?",
+          "intro": "Endre trafikken, andelen som tar kontakt eller kjøper – eller begge. Se hvordan de to grepene virker sammen.",
+          "formula": "Relevante besøk × konverteringsrate = henvendelser / kjøp",
+          "labels": {
+            "visits": "Relevante besøk per måned",
+            "conversion": "Konverteringsrate i dag (%)",
+            "trafficIncrease": "Mer relevant trafikk (%)",
+            "newConversion": "Ny konverteringsrate (%)",
+            "current": "I dag",
+            "scenario": "Scenario",
+            "difference": "Forskjell",
+            "outcome": "henvendelser / kjøp per måned",
+            "increase": "endring",
+            "undefinedIncrease": "Prosentvis endring kan ikke beregnes for dette utgangspunktet",
+            "invalid": "Bruk besøk fra 0 til 10 000 000, trafikkøkning fra 0 til 1 000 % og konverteringsrater fra 0 til 100 %."
+          },
+          "defaults": {
+            "visits": 1000,
+            "conversion": 1,
+            "trafficIncrease": 50,
+            "newConversion": 2
+          },
+          "caveat": "Hypotetisk regneeksempel – ikke et kundecase eller en resultatgaranti."
+        },
+        "packages": {
+          "eyebrow": "Avtalt arbeid, tydelig start",
+          "heading": "Synlighet, Konvertering eller Begge",
+          "intro": "Velg det som passer behovet. Omfang og pris må avklares før betalt arbeid starter.",
+          "fitLabel": "Passer for",
+          "scopeLabel": "Hva vi jobber med",
+          "items": [
+            {
+              "title": "Synlighet",
+              "fit": "Bedrifter som trenger flere relevante besøk.",
+              "scope": "Avtalt arbeid med hvordan kundene finner bedriften i søk, AI-tjenester eller lokalt. Kampanjeoptimalisering kan støtte betalt synlighet når det er relevant.",
+              "priceState": "Pris avklares før publisering",
+              "externalCosts": "Annonsebudsjett og aktuelle eksterne plattformkostnader kommer i tillegg hvis ikke annet er avtalt.",
+              "cta": {
+                "label": "Sjekk synligheten",
+                "href": "/#sjekk"
+              }
+            },
+            {
+              "title": "Konvertering",
+              "fit": "Bedrifter som har besøk, men for få henvendelser eller kjøp.",
+              "scope": "Avtalt konverteringsoptimalisering av budskap, landingssider, skjema eller kjøpsvei – på nettsiden eller i nettbutikken.",
+              "priceState": "Pris avklares før publisering",
+              "externalCosts": "Aktuelle eksterne plattformkostnader kommer i tillegg hvis ikke annet er avtalt.",
+              "cta": {
+                "label": "Sjekk veien til kontakt og kjøp",
+                "href": "/#sjekk"
+              }
+            },
+            {
+              "title": "Begge",
+              "fit": "Bedrifter der både synlighet og kjøpsvei kan forbedres.",
+              "scope": "Avtalt arbeid med begge områdene. Vi starter med flaskehalsen og prioriterer i riktig rekkefølge.",
+              "priceState": "Pris avklares før publisering",
+              "externalCosts": "Annonsebudsjett og aktuelle eksterne plattformkostnader kommer i tillegg hvis ikke annet er avtalt.",
+              "cta": {
+                "label": "Finn hvor vi bør starte",
+                "href": "/#sjekk"
+              }
+            }
+          ]
+        },
+        "proof": {
+          "publicationApproved": false,
+          "case": null
+        },
+        "form": {
+          "heading": "Send nettsiden",
+          "websiteLabel": "Nettside eller nettbutikk",
+          "websitePlaceholder": "dinbedrift.no",
+          "emailLabel": "E-post",
+          "emailPlaceholder": "deg@dinbedrift.no",
+          "messageLabel": "Kort kommentar",
+          "optional": "Valgfritt",
+          "messagePlaceholder": "Noe vi bør vite?",
+          "sensitiveNotice": "Ikke send innlogging, sensitive opplysninger eller personopplysninger om andre.",
+          "previewNotice": "Dette er en forhåndsvisning. Innsending er ikke åpnet ennå.",
+          "submitLabel": "Ta en gratis sjekk",
+          "privacyText": "Vi bruker opplysningene for å følge opp forespørselen.",
+          "privacyLink": {
+            "label": "Les om personvern",
+            "href": "/personvern/"
+          },
+          "disabledStatus": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt."
+        },
+        "faqHeading": "Før du tar neste steg",
+        "faqEyebrow": "Greit å vite",
+        "chrome": {
+          "brand": "optimalisering",
+          "brandLocation": "oslo",
+          "homeLabel": "Optimalisering Oslo – forsiden",
+          "skipLabel": "Hopp til innhold",
+          "navigationLabel": "Hovedmeny",
+          "mobileNavigationLabel": "Mobilmeny",
+          "openMenu": "Åpne meny",
+          "closeMenu": "Lukk meny",
+          "assessmentLink": {
+            "label": "Gratis sjekk",
+            "href": "/#sjekk"
+          },
+          "navigation": [
+            {
+              "label": "Synlighet",
+              "href": "/synlighet/"
+            },
+            {
+              "label": "Konvertering",
+              "href": "/konvertering/"
+            },
+            {
+              "label": "Priser",
+              "href": "/#priser"
+            },
+            {
+              "label": "Innsikt",
+              "href": "/innsikt/"
+            }
+          ],
+          "providerText": "En tjeneste fra Medon AS. Synlighet og konvertering for bedrifter.",
+          "previewLabel": "Forhåndsvisning · til vurdering",
+          "serviceNavigationLabel": "Tjenester og veiledning",
+          "informationNavigationLabel": "Kontakt og informasjon",
+          "storeLink": {
+            "label": "For nettbutikker",
+            "href": "/nettbutikkoptimalisering/"
+          },
+          "informationLinks": [
+            {
+              "label": "Gratis sjekk",
+              "href": "/#sjekk"
+            },
+            {
+              "label": "Om Medon",
+              "href": "/om/"
+            },
+            {
+              "label": "Kontakt",
+              "href": "/kontakt/"
+            },
+            {
+              "label": "Personvern",
+              "href": "/personvern/"
+            },
+            {
+              "label": "Vilkår",
+              "href": "/vilkar/"
+            }
+          ],
+          "copyrightProvider": "Medon AS",
+          "footerNote": "Et godt sted å begynne."
+        }
+      },
+      "sections": [
+        {
+          "id": "mekanisme",
+          "eyebrow": "Start med det som begrenser resultatet",
+          "heading": "Slik finner vi hva som bør gjøres først",
+          "body": [
+            "Behovet avgjør tiltakene. Vi starter ikke med SEO eller en annen kanal bare fordi du kom inn på en bestemt side."
+          ],
+          "items": [
+            {
+              "title": "Finn flaskehalsen",
+              "text": "Se hvor kundereisen stopper: før besøket, på siden eller i veien til kontakt og kjøp."
+            },
+            {
+              "title": "Prioriter tiltak",
+              "text": "Velg en fornuftig start ut fra behov, kommersiell verdi og det vi faktisk vet."
+            },
+            {
+              "title": "Gjennomfør",
+              "text": "Gjør arbeidet som er avtalt. Omfang og ansvar skal være tydelig."
+            },
+            {
+              "title": "Mål effekt",
+              "text": "Følg med på relevante henvendelser og kjøp. Se resultatene sammen med verdi og kostnader."
+            }
+          ]
+        },
+        {
+          "id": "passer",
+          "eyebrow": "Er dette aktuelt for bedriften?",
+          "heading": "For deg som vil forbedre veien til kunder",
+          "body": [],
+          "items": [
+            {
+              "title": "Passer godt hvis…",
+              "text": "Bedriften konkurrerer om kundene, og en henvendelse eller ordre har økonomisk verdi. Du har en nettside eller nettbutikk som kan forbedres og vil måle kommersiell effekt."
+            },
+            {
+              "title": "Passer dårlig hvis…",
+              "text": "Du ønsker en garantert rangering eller et bestemt antall kunder, en full gratis revisjon eller aktivitet uten et tydelig mål."
+            }
+          ]
+        },
+        {
+          "id": "sjekk",
+          "eyebrow": "Gratis, manuell sjekk",
+          "heading": "Send nettsiden. Vi sier hvor vi ville startet – og hvorfor.",
+          "body": [
+            "Vi ser kort på den offentlige nettsiden eller nettbutikken og begrunner hva vi ville undersøkt eller forbedret først.",
+            "Dette er en avgrenset, manuell vurdering. Ingen automatisk poengsum, full revisjon, prognose eller gratis gjennomføring. Videre arbeid avtales separat."
+          ]
+        },
+        {
+          "id": "medon",
+          "eyebrow": "Medon AS står bak",
+          "heading": "Én ansvarlig leverandør, tydelig avtalt arbeid",
+          "body": [
+            "Optimalisering Oslo er en tjeneste fra Medon AS. Vi jobber først og fremst med norske bedrifter, og kan også hjelpe bedrifter i andre nordiske land.",
+            "Du skal forstå hva vi foreslår, hvorfor vi foreslår det og hva som faktisk er avtalt. Vi lover ikke en bestemt Google-plassering, en AI-anbefaling eller et bestemt antall nye kunder."
+          ],
+          "links": [
+            {
+              "label": "Om leverandøren",
+              "href": "/om/"
+            }
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Hva skjer etter den gratis sjekken?",
+          "answer": "Vi gjør en kort, manuell vurdering og begrunner hvor vi ville startet. Hvis det er noe vi kan hjelpe med, avtaler vi omfang og pris før betalt arbeid. Sjekken er ikke en full revisjon eller gratis gjennomføring."
+        },
+        {
+          "question": "Hva koster videre arbeid?",
+          "answer": "Endelige offentlige priser og tjenesteomfang er ikke avklart for denne forhåndsvisningen. Prisen avhenger av behov og avtalt arbeid, og avklares før vi starter."
+        },
+        {
+          "question": "Er annonsebudsjett og eksterne kostnader inkludert?",
+          "answer": "Annonsebudsjett og aktuelle eksterne plattformkostnader kommer i tillegg hvis vi ikke avtaler noe annet. Vi avklarer relevante kostnader før arbeidet starter."
+        },
+        {
+          "question": "Hva hvis både synlighet og konvertering begrenser resultatet?",
+          "answer": "Da ser vi på sammenhengen. Vi finner flaskehalsen og prioriterer tiltakene i riktig rekkefølge, fremfor å starte med en fast kanal."
+        },
+        {
+          "question": "Jobber dere bare med bedrifter i Oslo?",
+          "answer": "Nei. Medon AS jobber først og fremst med bedrifter i Norge, og kan også hjelpe bedrifter i andre nordiske land. Navnet innebærer ikke at vi har et Oslo-kontor."
+        }
+      ]
+    }
+  },
+  "1440": {
+    "heroHeight": 476.03125,
+    "selectorY": 578.03125,
+    "shell": 1200,
+    "spacing": {
+      "behov": {
+        "top": 52,
+        "bottom": 72,
+        "height": 521.09375
+      },
+      "regneeksempel": {
+        "top": 72,
+        "bottom": 72,
+        "height": 726.359375
+      },
+      "priser": {
+        "top": 72,
+        "bottom": 72,
+        "height": 844.296875
+      },
+      "mekanisme": {
+        "top": 72,
+        "bottom": 72,
+        "height": 534.6875
+      },
+      "passer": {
+        "top": 72,
+        "bottom": 72,
+        "height": 474.71875
+      },
+      "sjekk": {
+        "top": 72,
+        "bottom": 72,
+        "height": 780.5
+      },
+      "medon": {
+        "top": 72,
+        "bottom": 72,
+        "height": 377.453125
+      },
+      "sporsmal": {
+        "top": 72,
+        "bottom": 72,
+        "height": 542.5
+      }
+    },
+    "containers": {
+      ".need-card": {
+        "padding": "28px",
+        "radius": "22px",
+        "background": "rgb(224, 241, 233)",
+        "border": "1px"
+      },
+      ".package-card": {
+        "padding": "28px",
+        "radius": "22px",
+        "background": "rgb(255, 255, 255)",
+        "border": "1px"
+      },
+      ".leverage-tool": {
+        "padding": "26px",
+        "radius": "24px",
+        "background": "rgb(73, 57, 79)",
+        "border": "1px"
+      },
+      ".info-item": {
+        "padding": "0px",
+        "radius": "20px",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px"
+      },
+      ".item-number": {
+        "padding": "0px 0px 15px",
+        "radius": "50%",
+        "background": "rgb(224, 241, 233)",
+        "border": "0px"
+      },
+      ".assessment-form": {
+        "padding": "32px",
+        "radius": "24px",
+        "background": "rgb(255, 255, 255)",
+        "border": "1px"
+      }
+    },
+    "readable": [
+      {
+        "selector": "hero-intro",
+        "width": 620
+      },
+      {
+        "selector": "body-copy",
+        "width": 511.1875
+      },
+      {
+        "selector": "body-copy",
+        "width": 780
+      },
+      {
+        "selector": "body-copy",
+        "width": 568
+      },
+      {
+        "selector": "body-copy",
+        "width": 1200
+      },
+      {
+        "selector": "eyebrow",
+        "width": 568
+      },
+      {
+        "selector": "",
+        "width": 520
+      },
+      {
+        "selector": "",
+        "width": 520
+      },
+      {
+        "selector": "body-copy",
+        "width": 568
+      },
+      {
+        "selector": "faq-list",
+        "width": 672
+      }
+    ],
+    "lower": [
+      {
+        "id": "regneeksempel",
+        "htmlHash": "81e927b2adc5e4896db49d236017afc5fd9044eb89461929476d62c831bd666d"
+      },
+      {
+        "id": "priser",
+        "htmlHash": "fb1e60f50f5539282e1274af612ca28a790acd84e1e8240e9f8519a1243ed130"
+      },
+      {
+        "id": "mekanisme",
+        "htmlHash": "04d7dbb5641e95f763fc8aea753724948ff004ba27968631177a6a315dfc94a2"
+      },
+      {
+        "id": "passer",
+        "htmlHash": "39a1c6ccdeb128c227dd08b9570e8d03b5d146a590f51e6d73132139261872e7"
+      },
+      {
+        "id": "sjekk",
+        "htmlHash": "e417c46e5acc5e7f4e84478586e0f3205ba7bf0c47d55e992f724cad9b42b9a7"
+      },
+      {
+        "id": "medon",
+        "htmlHash": "0be83645349175ecad8a7324f5a3112ac875faef8595e65bf64b93d46f21e1a3"
+      },
+      {
+        "id": "sporsmal",
+        "htmlHash": "2af354e3ef3612800a3b5b483a16fc81dc6d9744c7814b8d16415ac130b61c08"
+      },
+      {
+        "id": "site-header",
+        "htmlHash": "24cb438e0453392540cef80c1b764338e51d3087ecb4b3f5281170f4c5446824"
+      },
+      {
+        "id": "site-footer",
+        "htmlHash": "e40ca7fa74c338a9a43720e233f29aa3ace580af6cf6edfcd8978eb569b30b1d"
+      }
+    ],
+    "content": {
+      "slug": "home",
+      "kind": "home",
+      "status": "REVIEW_REQUIRED",
+      "authority": "DRAFT / NON-AUTHORITATIVE",
+      "seo": {
+        "title": "SEO, AI-synlighet og konverteringsoptimalisering | Medon",
+        "description": "Bli funnet og gjør flere besøk til henvendelser og salg. Medon hjelper bedrifter i Norge med synlighet, konvertering eller begge. Ta en gratis, manuell sjekk."
+      },
+      "eyebrow": "For bedrifter som konkurrerer om kundene",
+      "title": "Bli funnet. Gjør flere besøk til henvendelser og salg.",
+      "intro": "SEO, AI-synlighet og konverteringsoptimalisering for bedrifter i Oslo og resten av Norge. Medon starter der kundereisen stopper.",
+      "cta": {
+        "label": "Ta en gratis sjekk",
+        "href": "/#sjekk"
+      },
+      "homepage": {
+        "secondaryCta": {
+          "label": "Se priser",
+          "href": "/#priser"
+        },
+        "selector": {
+          "heading": "Hva trenger du hjelp med?",
+          "items": [
+            {
+              "title": "Bli funnet",
+              "discipline": "Synlighet",
+              "description": "SEO, AI-synlighet og lokal synlighet når kundene leter etter det du tilbyr.",
+              "link": {
+                "label": "Se Synlighet",
+                "href": "/synlighet/"
+              }
+            },
+            {
+              "title": "Gjør flere besøk til henvendelser og salg",
+              "discipline": "Konvertering",
+              "description": "Konverteringsoptimalisering for nettsider, landingssider og nettbutikker.",
+              "link": {
+                "label": "Se Konvertering",
+                "href": "/konvertering/"
+              }
+            },
+            {
+              "title": "Begge deler",
+              "discipline": "Synlighet + konvertering",
+              "description": "Vi finner flaskehalsen og starter der det kan gi mest effekt.",
+              "link": {
+                "label": "Se alternativene",
+                "href": "/#priser"
+              }
+            }
+          ]
+        },
+        "calculator": {
+          "eyebrow": "To grep som virker sammen",
+          "heading": "Hva kan flere relevante besøk og en bedre kjøpsvei bety?",
+          "intro": "Endre trafikken, andelen som tar kontakt eller kjøper – eller begge. Se hvordan de to grepene virker sammen.",
+          "formula": "Relevante besøk × konverteringsrate = henvendelser / kjøp",
+          "labels": {
+            "visits": "Relevante besøk per måned",
+            "conversion": "Konverteringsrate i dag (%)",
+            "trafficIncrease": "Mer relevant trafikk (%)",
+            "newConversion": "Ny konverteringsrate (%)",
+            "current": "I dag",
+            "scenario": "Scenario",
+            "difference": "Forskjell",
+            "outcome": "henvendelser / kjøp per måned",
+            "increase": "endring",
+            "undefinedIncrease": "Prosentvis endring kan ikke beregnes for dette utgangspunktet",
+            "invalid": "Bruk besøk fra 0 til 10 000 000, trafikkøkning fra 0 til 1 000 % og konverteringsrater fra 0 til 100 %."
+          },
+          "defaults": {
+            "visits": 1000,
+            "conversion": 1,
+            "trafficIncrease": 50,
+            "newConversion": 2
+          },
+          "caveat": "Hypotetisk regneeksempel – ikke et kundecase eller en resultatgaranti."
+        },
+        "packages": {
+          "eyebrow": "Avtalt arbeid, tydelig start",
+          "heading": "Synlighet, Konvertering eller Begge",
+          "intro": "Velg det som passer behovet. Omfang og pris må avklares før betalt arbeid starter.",
+          "fitLabel": "Passer for",
+          "scopeLabel": "Hva vi jobber med",
+          "items": [
+            {
+              "title": "Synlighet",
+              "fit": "Bedrifter som trenger flere relevante besøk.",
+              "scope": "Avtalt arbeid med hvordan kundene finner bedriften i søk, AI-tjenester eller lokalt. Kampanjeoptimalisering kan støtte betalt synlighet når det er relevant.",
+              "priceState": "Pris avklares før publisering",
+              "externalCosts": "Annonsebudsjett og aktuelle eksterne plattformkostnader kommer i tillegg hvis ikke annet er avtalt.",
+              "cta": {
+                "label": "Sjekk synligheten",
+                "href": "/#sjekk"
+              }
+            },
+            {
+              "title": "Konvertering",
+              "fit": "Bedrifter som har besøk, men for få henvendelser eller kjøp.",
+              "scope": "Avtalt konverteringsoptimalisering av budskap, landingssider, skjema eller kjøpsvei – på nettsiden eller i nettbutikken.",
+              "priceState": "Pris avklares før publisering",
+              "externalCosts": "Aktuelle eksterne plattformkostnader kommer i tillegg hvis ikke annet er avtalt.",
+              "cta": {
+                "label": "Sjekk veien til kontakt og kjøp",
+                "href": "/#sjekk"
+              }
+            },
+            {
+              "title": "Begge",
+              "fit": "Bedrifter der både synlighet og kjøpsvei kan forbedres.",
+              "scope": "Avtalt arbeid med begge områdene. Vi starter med flaskehalsen og prioriterer i riktig rekkefølge.",
+              "priceState": "Pris avklares før publisering",
+              "externalCosts": "Annonsebudsjett og aktuelle eksterne plattformkostnader kommer i tillegg hvis ikke annet er avtalt.",
+              "cta": {
+                "label": "Finn hvor vi bør starte",
+                "href": "/#sjekk"
+              }
+            }
+          ]
+        },
+        "proof": {
+          "publicationApproved": false,
+          "case": null
+        },
+        "form": {
+          "heading": "Send nettsiden",
+          "websiteLabel": "Nettside eller nettbutikk",
+          "websitePlaceholder": "dinbedrift.no",
+          "emailLabel": "E-post",
+          "emailPlaceholder": "deg@dinbedrift.no",
+          "messageLabel": "Kort kommentar",
+          "optional": "Valgfritt",
+          "messagePlaceholder": "Noe vi bør vite?",
+          "sensitiveNotice": "Ikke send innlogging, sensitive opplysninger eller personopplysninger om andre.",
+          "previewNotice": "Dette er en forhåndsvisning. Innsending er ikke åpnet ennå.",
+          "submitLabel": "Ta en gratis sjekk",
+          "privacyText": "Vi bruker opplysningene for å følge opp forespørselen.",
+          "privacyLink": {
+            "label": "Les om personvern",
+            "href": "/personvern/"
+          },
+          "disabledStatus": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt."
+        },
+        "faqHeading": "Før du tar neste steg",
+        "faqEyebrow": "Greit å vite",
+        "chrome": {
+          "brand": "optimalisering",
+          "brandLocation": "oslo",
+          "homeLabel": "Optimalisering Oslo – forsiden",
+          "skipLabel": "Hopp til innhold",
+          "navigationLabel": "Hovedmeny",
+          "mobileNavigationLabel": "Mobilmeny",
+          "openMenu": "Åpne meny",
+          "closeMenu": "Lukk meny",
+          "assessmentLink": {
+            "label": "Gratis sjekk",
+            "href": "/#sjekk"
+          },
+          "navigation": [
+            {
+              "label": "Synlighet",
+              "href": "/synlighet/"
+            },
+            {
+              "label": "Konvertering",
+              "href": "/konvertering/"
+            },
+            {
+              "label": "Priser",
+              "href": "/#priser"
+            },
+            {
+              "label": "Innsikt",
+              "href": "/innsikt/"
+            }
+          ],
+          "providerText": "En tjeneste fra Medon AS. Synlighet og konvertering for bedrifter.",
+          "previewLabel": "Forhåndsvisning · til vurdering",
+          "serviceNavigationLabel": "Tjenester og veiledning",
+          "informationNavigationLabel": "Kontakt og informasjon",
+          "storeLink": {
+            "label": "For nettbutikker",
+            "href": "/nettbutikkoptimalisering/"
+          },
+          "informationLinks": [
+            {
+              "label": "Gratis sjekk",
+              "href": "/#sjekk"
+            },
+            {
+              "label": "Om Medon",
+              "href": "/om/"
+            },
+            {
+              "label": "Kontakt",
+              "href": "/kontakt/"
+            },
+            {
+              "label": "Personvern",
+              "href": "/personvern/"
+            },
+            {
+              "label": "Vilkår",
+              "href": "/vilkar/"
+            }
+          ],
+          "copyrightProvider": "Medon AS",
+          "footerNote": "Et godt sted å begynne."
+        }
+      },
+      "sections": [
+        {
+          "id": "mekanisme",
+          "eyebrow": "Start med det som begrenser resultatet",
+          "heading": "Slik finner vi hva som bør gjøres først",
+          "body": [
+            "Behovet avgjør tiltakene. Vi starter ikke med SEO eller en annen kanal bare fordi du kom inn på en bestemt side."
+          ],
+          "items": [
+            {
+              "title": "Finn flaskehalsen",
+              "text": "Se hvor kundereisen stopper: før besøket, på siden eller i veien til kontakt og kjøp."
+            },
+            {
+              "title": "Prioriter tiltak",
+              "text": "Velg en fornuftig start ut fra behov, kommersiell verdi og det vi faktisk vet."
+            },
+            {
+              "title": "Gjennomfør",
+              "text": "Gjør arbeidet som er avtalt. Omfang og ansvar skal være tydelig."
+            },
+            {
+              "title": "Mål effekt",
+              "text": "Følg med på relevante henvendelser og kjøp. Se resultatene sammen med verdi og kostnader."
+            }
+          ]
+        },
+        {
+          "id": "passer",
+          "eyebrow": "Er dette aktuelt for bedriften?",
+          "heading": "For deg som vil forbedre veien til kunder",
+          "body": [],
+          "items": [
+            {
+              "title": "Passer godt hvis…",
+              "text": "Bedriften konkurrerer om kundene, og en henvendelse eller ordre har økonomisk verdi. Du har en nettside eller nettbutikk som kan forbedres og vil måle kommersiell effekt."
+            },
+            {
+              "title": "Passer dårlig hvis…",
+              "text": "Du ønsker en garantert rangering eller et bestemt antall kunder, en full gratis revisjon eller aktivitet uten et tydelig mål."
+            }
+          ]
+        },
+        {
+          "id": "sjekk",
+          "eyebrow": "Gratis, manuell sjekk",
+          "heading": "Send nettsiden. Vi sier hvor vi ville startet – og hvorfor.",
+          "body": [
+            "Vi ser kort på den offentlige nettsiden eller nettbutikken og begrunner hva vi ville undersøkt eller forbedret først.",
+            "Dette er en avgrenset, manuell vurdering. Ingen automatisk poengsum, full revisjon, prognose eller gratis gjennomføring. Videre arbeid avtales separat."
+          ]
+        },
+        {
+          "id": "medon",
+          "eyebrow": "Medon AS står bak",
+          "heading": "Én ansvarlig leverandør, tydelig avtalt arbeid",
+          "body": [
+            "Optimalisering Oslo er en tjeneste fra Medon AS. Vi jobber først og fremst med norske bedrifter, og kan også hjelpe bedrifter i andre nordiske land.",
+            "Du skal forstå hva vi foreslår, hvorfor vi foreslår det og hva som faktisk er avtalt. Vi lover ikke en bestemt Google-plassering, en AI-anbefaling eller et bestemt antall nye kunder."
+          ],
+          "links": [
+            {
+              "label": "Om leverandøren",
+              "href": "/om/"
+            }
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Hva skjer etter den gratis sjekken?",
+          "answer": "Vi gjør en kort, manuell vurdering og begrunner hvor vi ville startet. Hvis det er noe vi kan hjelpe med, avtaler vi omfang og pris før betalt arbeid. Sjekken er ikke en full revisjon eller gratis gjennomføring."
+        },
+        {
+          "question": "Hva koster videre arbeid?",
+          "answer": "Endelige offentlige priser og tjenesteomfang er ikke avklart for denne forhåndsvisningen. Prisen avhenger av behov og avtalt arbeid, og avklares før vi starter."
+        },
+        {
+          "question": "Er annonsebudsjett og eksterne kostnader inkludert?",
+          "answer": "Annonsebudsjett og aktuelle eksterne plattformkostnader kommer i tillegg hvis vi ikke avtaler noe annet. Vi avklarer relevante kostnader før arbeidet starter."
+        },
+        {
+          "question": "Hva hvis både synlighet og konvertering begrenser resultatet?",
+          "answer": "Da ser vi på sammenhengen. Vi finner flaskehalsen og prioriterer tiltakene i riktig rekkefølge, fremfor å starte med en fast kanal."
+        },
+        {
+          "question": "Jobber dere bare med bedrifter i Oslo?",
+          "answer": "Nei. Medon AS jobber først og fremst med bedrifter i Norge, og kan også hjelpe bedrifter i andre nordiske land. Navnet innebærer ikke at vi har et Oslo-kontor."
+        }
+      ]
+    }
+  },
+  "1920": {
+    "heroHeight": 476.03125,
+    "selectorY": 578.03125,
+    "shell": 1200,
+    "spacing": {
+      "behov": {
+        "top": 52,
+        "bottom": 72,
+        "height": 521.09375
+      },
+      "regneeksempel": {
+        "top": 72,
+        "bottom": 72,
+        "height": 726.359375
+      },
+      "priser": {
+        "top": 72,
+        "bottom": 72,
+        "height": 844.296875
+      },
+      "mekanisme": {
+        "top": 72,
+        "bottom": 72,
+        "height": 534.6875
+      },
+      "passer": {
+        "top": 72,
+        "bottom": 72,
+        "height": 474.71875
+      },
+      "sjekk": {
+        "top": 72,
+        "bottom": 72,
+        "height": 780.5
+      },
+      "medon": {
+        "top": 72,
+        "bottom": 72,
+        "height": 377.453125
+      },
+      "sporsmal": {
+        "top": 72,
+        "bottom": 72,
+        "height": 542.5
+      }
+    },
+    "containers": {
+      ".need-card": {
+        "padding": "28px",
+        "radius": "22px",
+        "background": "rgb(224, 241, 233)",
+        "border": "1px"
+      },
+      ".package-card": {
+        "padding": "28px",
+        "radius": "22px",
+        "background": "rgb(255, 255, 255)",
+        "border": "1px"
+      },
+      ".leverage-tool": {
+        "padding": "26px",
+        "radius": "24px",
+        "background": "rgb(73, 57, 79)",
+        "border": "1px"
+      },
+      ".info-item": {
+        "padding": "0px",
+        "radius": "20px",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px"
+      },
+      ".item-number": {
+        "padding": "0px 0px 15px",
+        "radius": "50%",
+        "background": "rgb(224, 241, 233)",
+        "border": "0px"
+      },
+      ".assessment-form": {
+        "padding": "32px",
+        "radius": "24px",
+        "background": "rgb(255, 255, 255)",
+        "border": "1px"
+      }
+    },
+    "readable": [
+      {
+        "selector": "hero-intro",
+        "width": 620
+      },
+      {
+        "selector": "body-copy",
+        "width": 511.1875
+      },
+      {
+        "selector": "body-copy",
+        "width": 780
+      },
+      {
+        "selector": "body-copy",
+        "width": 568
+      },
+      {
+        "selector": "body-copy",
+        "width": 1200
+      },
+      {
+        "selector": "eyebrow",
+        "width": 568
+      },
+      {
+        "selector": "",
+        "width": 520
+      },
+      {
+        "selector": "",
+        "width": 520
+      },
+      {
+        "selector": "body-copy",
+        "width": 568
+      },
+      {
+        "selector": "faq-list",
+        "width": 672
+      }
+    ],
+    "lower": [
+      {
+        "id": "regneeksempel",
+        "htmlHash": "81e927b2adc5e4896db49d236017afc5fd9044eb89461929476d62c831bd666d"
+      },
+      {
+        "id": "priser",
+        "htmlHash": "fb1e60f50f5539282e1274af612ca28a790acd84e1e8240e9f8519a1243ed130"
+      },
+      {
+        "id": "mekanisme",
+        "htmlHash": "04d7dbb5641e95f763fc8aea753724948ff004ba27968631177a6a315dfc94a2"
+      },
+      {
+        "id": "passer",
+        "htmlHash": "39a1c6ccdeb128c227dd08b9570e8d03b5d146a590f51e6d73132139261872e7"
+      },
+      {
+        "id": "sjekk",
+        "htmlHash": "e417c46e5acc5e7f4e84478586e0f3205ba7bf0c47d55e992f724cad9b42b9a7"
+      },
+      {
+        "id": "medon",
+        "htmlHash": "0be83645349175ecad8a7324f5a3112ac875faef8595e65bf64b93d46f21e1a3"
+      },
+      {
+        "id": "sporsmal",
+        "htmlHash": "2af354e3ef3612800a3b5b483a16fc81dc6d9744c7814b8d16415ac130b61c08"
+      },
+      {
+        "id": "site-header",
+        "htmlHash": "24cb438e0453392540cef80c1b764338e51d3087ecb4b3f5281170f4c5446824"
+      },
+      {
+        "id": "site-footer",
+        "htmlHash": "e40ca7fa74c338a9a43720e233f29aa3ace580af6cf6edfcd8978eb569b30b1d"
+      }
+    ],
+    "content": {
+      "slug": "home",
+      "kind": "home",
+      "status": "REVIEW_REQUIRED",
+      "authority": "DRAFT / NON-AUTHORITATIVE",
+      "seo": {
+        "title": "SEO, AI-synlighet og konverteringsoptimalisering | Medon",
+        "description": "Bli funnet og gjør flere besøk til henvendelser og salg. Medon hjelper bedrifter i Norge med synlighet, konvertering eller begge. Ta en gratis, manuell sjekk."
+      },
+      "eyebrow": "For bedrifter som konkurrerer om kundene",
+      "title": "Bli funnet. Gjør flere besøk til henvendelser og salg.",
+      "intro": "SEO, AI-synlighet og konverteringsoptimalisering for bedrifter i Oslo og resten av Norge. Medon starter der kundereisen stopper.",
+      "cta": {
+        "label": "Ta en gratis sjekk",
+        "href": "/#sjekk"
+      },
+      "homepage": {
+        "secondaryCta": {
+          "label": "Se priser",
+          "href": "/#priser"
+        },
+        "selector": {
+          "heading": "Hva trenger du hjelp med?",
+          "items": [
+            {
+              "title": "Bli funnet",
+              "discipline": "Synlighet",
+              "description": "SEO, AI-synlighet og lokal synlighet når kundene leter etter det du tilbyr.",
+              "link": {
+                "label": "Se Synlighet",
+                "href": "/synlighet/"
+              }
+            },
+            {
+              "title": "Gjør flere besøk til henvendelser og salg",
+              "discipline": "Konvertering",
+              "description": "Konverteringsoptimalisering for nettsider, landingssider og nettbutikker.",
+              "link": {
+                "label": "Se Konvertering",
+                "href": "/konvertering/"
+              }
+            },
+            {
+              "title": "Begge deler",
+              "discipline": "Synlighet + konvertering",
+              "description": "Vi finner flaskehalsen og starter der det kan gi mest effekt.",
+              "link": {
+                "label": "Se alternativene",
+                "href": "/#priser"
+              }
+            }
+          ]
+        },
+        "calculator": {
+          "eyebrow": "To grep som virker sammen",
+          "heading": "Hva kan flere relevante besøk og en bedre kjøpsvei bety?",
+          "intro": "Endre trafikken, andelen som tar kontakt eller kjøper – eller begge. Se hvordan de to grepene virker sammen.",
+          "formula": "Relevante besøk × konverteringsrate = henvendelser / kjøp",
+          "labels": {
+            "visits": "Relevante besøk per måned",
+            "conversion": "Konverteringsrate i dag (%)",
+            "trafficIncrease": "Mer relevant trafikk (%)",
+            "newConversion": "Ny konverteringsrate (%)",
+            "current": "I dag",
+            "scenario": "Scenario",
+            "difference": "Forskjell",
+            "outcome": "henvendelser / kjøp per måned",
+            "increase": "endring",
+            "undefinedIncrease": "Prosentvis endring kan ikke beregnes for dette utgangspunktet",
+            "invalid": "Bruk besøk fra 0 til 10 000 000, trafikkøkning fra 0 til 1 000 % og konverteringsrater fra 0 til 100 %."
+          },
+          "defaults": {
+            "visits": 1000,
+            "conversion": 1,
+            "trafficIncrease": 50,
+            "newConversion": 2
+          },
+          "caveat": "Hypotetisk regneeksempel – ikke et kundecase eller en resultatgaranti."
+        },
+        "packages": {
+          "eyebrow": "Avtalt arbeid, tydelig start",
+          "heading": "Synlighet, Konvertering eller Begge",
+          "intro": "Velg det som passer behovet. Omfang og pris må avklares før betalt arbeid starter.",
+          "fitLabel": "Passer for",
+          "scopeLabel": "Hva vi jobber med",
+          "items": [
+            {
+              "title": "Synlighet",
+              "fit": "Bedrifter som trenger flere relevante besøk.",
+              "scope": "Avtalt arbeid med hvordan kundene finner bedriften i søk, AI-tjenester eller lokalt. Kampanjeoptimalisering kan støtte betalt synlighet når det er relevant.",
+              "priceState": "Pris avklares før publisering",
+              "externalCosts": "Annonsebudsjett og aktuelle eksterne plattformkostnader kommer i tillegg hvis ikke annet er avtalt.",
+              "cta": {
+                "label": "Sjekk synligheten",
+                "href": "/#sjekk"
+              }
+            },
+            {
+              "title": "Konvertering",
+              "fit": "Bedrifter som har besøk, men for få henvendelser eller kjøp.",
+              "scope": "Avtalt konverteringsoptimalisering av budskap, landingssider, skjema eller kjøpsvei – på nettsiden eller i nettbutikken.",
+              "priceState": "Pris avklares før publisering",
+              "externalCosts": "Aktuelle eksterne plattformkostnader kommer i tillegg hvis ikke annet er avtalt.",
+              "cta": {
+                "label": "Sjekk veien til kontakt og kjøp",
+                "href": "/#sjekk"
+              }
+            },
+            {
+              "title": "Begge",
+              "fit": "Bedrifter der både synlighet og kjøpsvei kan forbedres.",
+              "scope": "Avtalt arbeid med begge områdene. Vi starter med flaskehalsen og prioriterer i riktig rekkefølge.",
+              "priceState": "Pris avklares før publisering",
+              "externalCosts": "Annonsebudsjett og aktuelle eksterne plattformkostnader kommer i tillegg hvis ikke annet er avtalt.",
+              "cta": {
+                "label": "Finn hvor vi bør starte",
+                "href": "/#sjekk"
+              }
+            }
+          ]
+        },
+        "proof": {
+          "publicationApproved": false,
+          "case": null
+        },
+        "form": {
+          "heading": "Send nettsiden",
+          "websiteLabel": "Nettside eller nettbutikk",
+          "websitePlaceholder": "dinbedrift.no",
+          "emailLabel": "E-post",
+          "emailPlaceholder": "deg@dinbedrift.no",
+          "messageLabel": "Kort kommentar",
+          "optional": "Valgfritt",
+          "messagePlaceholder": "Noe vi bør vite?",
+          "sensitiveNotice": "Ikke send innlogging, sensitive opplysninger eller personopplysninger om andre.",
+          "previewNotice": "Dette er en forhåndsvisning. Innsending er ikke åpnet ennå.",
+          "submitLabel": "Ta en gratis sjekk",
+          "privacyText": "Vi bruker opplysningene for å følge opp forespørselen.",
+          "privacyLink": {
+            "label": "Les om personvern",
+            "href": "/personvern/"
+          },
+          "disabledStatus": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt."
+        },
+        "faqHeading": "Før du tar neste steg",
+        "faqEyebrow": "Greit å vite",
+        "chrome": {
+          "brand": "optimalisering",
+          "brandLocation": "oslo",
+          "homeLabel": "Optimalisering Oslo – forsiden",
+          "skipLabel": "Hopp til innhold",
+          "navigationLabel": "Hovedmeny",
+          "mobileNavigationLabel": "Mobilmeny",
+          "openMenu": "Åpne meny",
+          "closeMenu": "Lukk meny",
+          "assessmentLink": {
+            "label": "Gratis sjekk",
+            "href": "/#sjekk"
+          },
+          "navigation": [
+            {
+              "label": "Synlighet",
+              "href": "/synlighet/"
+            },
+            {
+              "label": "Konvertering",
+              "href": "/konvertering/"
+            },
+            {
+              "label": "Priser",
+              "href": "/#priser"
+            },
+            {
+              "label": "Innsikt",
+              "href": "/innsikt/"
+            }
+          ],
+          "providerText": "En tjeneste fra Medon AS. Synlighet og konvertering for bedrifter.",
+          "previewLabel": "Forhåndsvisning · til vurdering",
+          "serviceNavigationLabel": "Tjenester og veiledning",
+          "informationNavigationLabel": "Kontakt og informasjon",
+          "storeLink": {
+            "label": "For nettbutikker",
+            "href": "/nettbutikkoptimalisering/"
+          },
+          "informationLinks": [
+            {
+              "label": "Gratis sjekk",
+              "href": "/#sjekk"
+            },
+            {
+              "label": "Om Medon",
+              "href": "/om/"
+            },
+            {
+              "label": "Kontakt",
+              "href": "/kontakt/"
+            },
+            {
+              "label": "Personvern",
+              "href": "/personvern/"
+            },
+            {
+              "label": "Vilkår",
+              "href": "/vilkar/"
+            }
+          ],
+          "copyrightProvider": "Medon AS",
+          "footerNote": "Et godt sted å begynne."
+        }
+      },
+      "sections": [
+        {
+          "id": "mekanisme",
+          "eyebrow": "Start med det som begrenser resultatet",
+          "heading": "Slik finner vi hva som bør gjøres først",
+          "body": [
+            "Behovet avgjør tiltakene. Vi starter ikke med SEO eller en annen kanal bare fordi du kom inn på en bestemt side."
+          ],
+          "items": [
+            {
+              "title": "Finn flaskehalsen",
+              "text": "Se hvor kundereisen stopper: før besøket, på siden eller i veien til kontakt og kjøp."
+            },
+            {
+              "title": "Prioriter tiltak",
+              "text": "Velg en fornuftig start ut fra behov, kommersiell verdi og det vi faktisk vet."
+            },
+            {
+              "title": "Gjennomfør",
+              "text": "Gjør arbeidet som er avtalt. Omfang og ansvar skal være tydelig."
+            },
+            {
+              "title": "Mål effekt",
+              "text": "Følg med på relevante henvendelser og kjøp. Se resultatene sammen med verdi og kostnader."
+            }
+          ]
+        },
+        {
+          "id": "passer",
+          "eyebrow": "Er dette aktuelt for bedriften?",
+          "heading": "For deg som vil forbedre veien til kunder",
+          "body": [],
+          "items": [
+            {
+              "title": "Passer godt hvis…",
+              "text": "Bedriften konkurrerer om kundene, og en henvendelse eller ordre har økonomisk verdi. Du har en nettside eller nettbutikk som kan forbedres og vil måle kommersiell effekt."
+            },
+            {
+              "title": "Passer dårlig hvis…",
+              "text": "Du ønsker en garantert rangering eller et bestemt antall kunder, en full gratis revisjon eller aktivitet uten et tydelig mål."
+            }
+          ]
+        },
+        {
+          "id": "sjekk",
+          "eyebrow": "Gratis, manuell sjekk",
+          "heading": "Send nettsiden. Vi sier hvor vi ville startet – og hvorfor.",
+          "body": [
+            "Vi ser kort på den offentlige nettsiden eller nettbutikken og begrunner hva vi ville undersøkt eller forbedret først.",
+            "Dette er en avgrenset, manuell vurdering. Ingen automatisk poengsum, full revisjon, prognose eller gratis gjennomføring. Videre arbeid avtales separat."
+          ]
+        },
+        {
+          "id": "medon",
+          "eyebrow": "Medon AS står bak",
+          "heading": "Én ansvarlig leverandør, tydelig avtalt arbeid",
+          "body": [
+            "Optimalisering Oslo er en tjeneste fra Medon AS. Vi jobber først og fremst med norske bedrifter, og kan også hjelpe bedrifter i andre nordiske land.",
+            "Du skal forstå hva vi foreslår, hvorfor vi foreslår det og hva som faktisk er avtalt. Vi lover ikke en bestemt Google-plassering, en AI-anbefaling eller et bestemt antall nye kunder."
+          ],
+          "links": [
+            {
+              "label": "Om leverandøren",
+              "href": "/om/"
+            }
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Hva skjer etter den gratis sjekken?",
+          "answer": "Vi gjør en kort, manuell vurdering og begrunner hvor vi ville startet. Hvis det er noe vi kan hjelpe med, avtaler vi omfang og pris før betalt arbeid. Sjekken er ikke en full revisjon eller gratis gjennomføring."
+        },
+        {
+          "question": "Hva koster videre arbeid?",
+          "answer": "Endelige offentlige priser og tjenesteomfang er ikke avklart for denne forhåndsvisningen. Prisen avhenger av behov og avtalt arbeid, og avklares før vi starter."
+        },
+        {
+          "question": "Er annonsebudsjett og eksterne kostnader inkludert?",
+          "answer": "Annonsebudsjett og aktuelle eksterne plattformkostnader kommer i tillegg hvis vi ikke avtaler noe annet. Vi avklarer relevante kostnader før arbeidet starter."
+        },
+        {
+          "question": "Hva hvis både synlighet og konvertering begrenser resultatet?",
+          "answer": "Da ser vi på sammenhengen. Vi finner flaskehalsen og prioriterer tiltakene i riktig rekkefølge, fremfor å starte med en fast kanal."
+        },
+        {
+          "question": "Jobber dere bare med bedrifter i Oslo?",
+          "answer": "Nei. Medon AS jobber først og fremst med bedrifter i Norge, og kan også hjelpe bedrifter i andre nordiske land. Navnet innebærer ikke at vi har et Oslo-kontor."
+        }
+      ]
+    }
+  },
+  "source": {
+    "commit": "99734a73a3f3cd0ba93a1155cfbdd95395a91245",
+    "browser": "154.0.8037.98",
+    "stage": "Fresh pre-H-006 H-005B build"
+  }
+}

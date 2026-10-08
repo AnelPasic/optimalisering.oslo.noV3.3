@@ -1,0 +1,44 @@
+{
+  "test": "Temporary local synthetic WebP only; no stock/customer image",
+  "checks": [
+    {
+      "width": 1440,
+      "src": "/images/home/hero-customer.webp",
+      "state": "supplied",
+      "loaded": true,
+      "fit": "cover",
+      "position": "50% 45%",
+      "height": 369.765625
+    },
+    {
+      "width": 390,
+      "src": "/images/home/hero-customer.webp",
+      "state": "supplied",
+      "loaded": true,
+      "fit": "cover",
+      "position": "50% 45%",
+      "height": 196.875
+    },
+    {
+      "width": 320,
+      "src": "/images/home/hero-customer.webp",
+      "state": "supplied",
+      "loaded": true,
+      "fit": "cover",
+      "position": "50% 45%",
+      "height": 162
+    },
+    {
+      "width": 1920,
+      "src": "/images/home/hero-customer.webp",
+      "state": "supplied",
+      "loaded": true,
+      "fit": "cover",
+      "position": "50% 45%",
+      "height": 375
+    }
+  ],
+  "fixturePublished": false,
+  "fixtureRemoved": true,
+  "restoredBuild": "preview-placeholder"
+}

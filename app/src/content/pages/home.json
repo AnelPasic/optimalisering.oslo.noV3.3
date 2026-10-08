@@ -13,16 +13,7 @@
   "cta": { "label": "Ta en gratis sjekk", "href": "/#sjekk" },
   "homepage": {
     "secondaryCta": { "label": "Se priser", "href": "/#priser" },
-    "illustration": {
-      "label": "Illustrasjon",
-      "ariaLabel": "Illustrert kundereise: et relevant søk leder til en tydelig nettside og en ny henvendelse.",
-      "search": "Det kunden leter etter",
-      "business": "Din bedrift",
-      "heading": "Et tilbud som treffer",
-      "description": "Tydelig hva du får. Enkelt å ta neste steg.",
-      "action": "Ta kontakt",
-      "outcome": "En ny henvendelse"
-    },
+    "heroPhoto": { "src": "/images/home/hero-customer.webp", "positionX": 50, "positionY": 45 },
     "selector": {
       "heading": "Hva trenger du hjelp med?",
       "items": [

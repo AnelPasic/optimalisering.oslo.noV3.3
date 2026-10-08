@@ -1,7 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import Arrow from './Arrow.astro';
-import Journey from './HomeJourney.astro';
+import HeroPhoto from './HomeHeroPhoto.astro';
 import Leverage from './HomeLeverage.astro';
 import ContentSection from './HomeSection.astro';
 import Assessment from './HomeAssessment.astro';
@@ -20,7 +20,7 @@ const headlineBreak = page.title.indexOf('.') + 1;
     <p class="hero-intro">{page.intro}</p>
     <div class="hero-actions"><a class="button" href={page.cta.href}>{page.cta.label}<Arrow diagonal /></a><a class="text-link" href={home.secondaryCta.href}>{home.secondaryCta.label}<Arrow /></a></div>
   </div>
-  <Journey content={home.illustration} />
+  <HeroPhoto content={home.heroPhoto} />
 </section>
 <section id="behov" class="need-section section-space">
   <div class="shell">

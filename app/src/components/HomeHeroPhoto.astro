@@ -1,0 +1,14 @@
+---
+import { existsSync } from 'node:fs';
+import { resolve } from 'node:path';
+import type { CollectionEntry } from 'astro:content';
+interface Props { content: NonNullable<CollectionEntry<'pages'>['data']['homepage']>['heroPhoto']; }
+const { content } = Astro.props;
+// The generated customer photo is supplied separately. Build a valid preview
+// without requesting a missing asset or turning a placeholder into public copy.
+const supplied = existsSync(resolve('public', content.src.slice(1)));
+const image = supplied ? content.src : '/images/home/hero-customer-preview.svg';
+---
+<div class="hero-photo" data-photo-src={content.src} data-photo-state={supplied ? 'supplied' : 'preview-placeholder'}>
+  <img src={image} width="1200" height="750" alt="" fetchpriority="high" decoding="async" style={{ objectPosition: `${content.positionX}% ${content.positionY}%` }} />
+</div>

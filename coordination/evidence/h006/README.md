@@ -1,0 +1,13 @@
+# H-006 visual-polish evidence
+
+Fresh pre-H-006 H-005B baseline: 99734a73a3f3cd0ba93a1155cfbdd95395a91245. h005b-baseline.json records layout/spacing/container measurements and retained content/lower/chrome DOM hashes at 1440/390/320/1920px. files-baseline.json covers 174 protected/frozen files. All retained public copy and lower/chrome DOM remain identical; CSS layout changes are intentional under D-018. The retired outcome illustration is replaced, with no new public wording.
+
+Eight screenshots: full page and hero+selector at 1440/390/320; calculator+packages at 1440; wide 1920px viewport showing the 1440px shell cap. checks.json records before/after shell, hero, section padding, card/container treatments, readable widths and crop properties. It also checks selector word wrapping at 901px with a stable scrollbar gutter; breakpoint-901.json and implementation-review.md record the reproduced/fixed review observation.
+
+Run from app/: npm run verify; node scripts/qa-browser.mjs; node scripts/qa-home-h006.mjs; node scripts/qa-production-guard.mjs. Set QA_BASELINE_FILE=../coordination/evidence/h006/files-baseline.json then run node scripts/qa-preservation.mjs to compare frozen files. Focused QA reads its saved H-005B baseline by default. QA_BASE_URL/QA_EVIDENCE_DIR select local/live output. Snapshot mode is only for recording a fresh pre-change baseline, never accepting a changed page as its own baseline. The focused H-006 contract failed on the unchanged H-005B UI illustration, then passed after implementation.
+
+Reserved generated-photo asset: /images/home/hero-customer.webp, repository app/public/images/home/hero-customer.webp. Not yet supplied. Neutral local hero-customer-preview.svg has no wording, person, claim or metric. Missing asset is resolved at build time to a valid preview SVG, avoiding a broken request. Once the separately supplied WebP exists, rebuilding uses it automatically; no structural redesign. Decorative alt is empty. Desktop 8:5/mobile 16:9 cover crops use CMS positionX/positionY defaults 50%/45%; 1200x750 or larger is a suitable source canvas. Actual subject/crop/brand acceptance remains unverified until that asset is supplied.
+
+photo-slot-test.json records a temporary local synthetic WebP fixture test of the supplied branch at all four widths. Fixture removed immediately; fallback build restored; fixture never committed/published and no external/stock image introduced.
+
+All tests are synthetic technical evidence. No real lead/email, production deployment, content lock, OWNER acceptance or formal RED_TEAM verdict is supplied. Stop for OWNER R-03 and fresh formal RED_TEAM R-04; D-017 is historical H-005B approval only.

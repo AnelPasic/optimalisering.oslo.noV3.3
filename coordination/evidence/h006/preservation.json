@@ -1,0 +1,20 @@
+{
+  "source": {
+    "commit": "99734a73a3f3cd0ba93a1155cfbdd95395a91245",
+    "browser": "154.0.8037.98",
+    "stage": "Fresh pre-H-006 H-005B build"
+  },
+  "files": 174,
+  "groups": {
+    "readOnlyReferences": 144,
+    "otherPageJson": 14,
+    "nonHomeHtmlIncluding404": 15,
+    "sharedCss": 1
+  },
+  "hashes": "all identical",
+  "retainedHomepageCopy": "identical except removal of retired illustration; heroPhoto adds only technical asset/crop config",
+  "lowerAndChromeDom": "identical",
+  "newPublicCopy": false,
+  "newStockImages": false,
+  "backendChanges": false
+}

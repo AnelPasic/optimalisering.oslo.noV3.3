@@ -1,0 +1,5 @@
+(node:38124) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+Desktop/mobile route and screenshot checks passed.
+Menu, calculator and preview form checks passed.
+Browser QA passed: 40 checks; 15 pages; desktop, mobile, menu, calculator, validation, synthetic persistence, no-JavaScript privacy and error recovery. No live emails.

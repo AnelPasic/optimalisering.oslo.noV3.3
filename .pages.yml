@@ -131,7 +131,7 @@ content:
         label: Neste steg
         component: link
   - name: homepage
-    label: Forside – H-005B til vurdering
+    label: Forside – H-006 til vurdering
     type: file
     path: app/src/content/pages/home.json
     format: json
@@ -152,7 +152,7 @@ content:
         label: Innholdsautoritet
         type: string
         readonly: true
-        description: H-005B er en representativ revisjon til vurdering. Faktisk
+        description: H-006 er en representativ revisjon til vurdering. Faktisk
           innholdslås må registreres i coordination/DECISIONS.md.
       - name: seo
         label: Søkeresultat
@@ -199,34 +199,26 @@ content:
                 label: Intern lenke
                 type: string
                 pattern: ^/
-          - name: illustration
-            label: Illustrasjon
+          - name: heroPhoto
+            label: Forsidefoto – separat generert bilde
             type: object
             fields:
-              - name: label
-                label: Tekst
+              - name: src
+                label: Lokal bildefil
                 type: string
-              - name: ariaLabel
-                label: Tilgjengelig beskrivelse
-                type: string
-              - name: search
-                label: Søketekst
-                type: string
-              - name: business
-                label: Illustrert bedrift
-                type: string
-              - name: heading
-                label: Nettsidens budskap
-                type: string
-              - name: description
-                label: Nettsidens beskrivelse
-                type: string
-              - name: action
-                label: Illustrert handling
-                type: string
-              - name: outcome
-                label: Illustrert utfall
-                type: string
+                pattern: ^/images/home/[a-z0-9][a-z0-9-]*\.webp$
+              - name: positionX
+                label: Horisontalt utsnitt (%)
+                type: number
+                options:
+                  min: 0
+                  max: 100
+              - name: positionY
+                label: Vertikalt utsnitt (%)
+                type: number
+                options:
+                  min: 0
+                  max: 100
           - name: selector
             label: Behovsvelger
             type: object
