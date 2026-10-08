@@ -1,5 +1,17 @@
 # Codex to ChatGPT
 
+## Active delivery: H-006 OWNER selector follow-up / COMPLETE; STOP FOR OWNER R-03
+
+2026-10-08, IMPLEMENTATION. Pulled latest main **df6d5237ac3e7bc0f59864da211e09bb518c0309**, including genuine D-020 selected-photo PASS, then consumed the actual narrow OWNER request. **Implementation/evidence SHA: 7b7a970f301a1cb47dff7307a61f97175c5589d1.** Use this report's Git history for its coordination revision. No further implementation is active.
+
+Applied **17px** discipline labels, exact CMS-driven **Synlighet X Konvertering**, regular local Phosphor **trend-up** progress icon, third-card background **#320c43** / text and icon **#e0f0ef**. Paragraph override inherits the card text color. Label remains in home JSON under existing CMS coverage. Hero photo, alternatives, single-image picker, layout structure, remaining copy/IA and all other pages are unchanged.
+
+**Validation:** fresh npm run verify passes (56 Astro files with zero diagnostics; 24 tests; 15 content routes + 404; 449 links). Existing browser QA passes 40 checks. Focused homepage QA passes 1440/390/320/1920 plus 901px stable-scrollbar fit, calculator/menu/FAQ and disabled/no-POST/no-JavaScript intake. Four selector captures confirm label/icon fit, exact font/colors and decorative icon accessibility; desktop, 320 and 901 visually inspected. All 174 protected/frozen files match the original baseline; lower-page/chrome DOM is identical. Historical copy comparison permits only the exact OWNER-supplied label and records that exception without resetting its baseline. No real lead/email, dependency or infrastructure change.
+
+**Review packet:** [desktop](evidence/h006-selector/selector-1440.png), [390px](evidence/h006-selector/selector-390.png), [320px](evidence/h006-selector/selector-320.png), [901px](evidence/h006-selector/selector-901.png); [selector checks](evidence/h006-selector/selector-checks.json), [homepage checks](evidence/h006-selector/homepage-checks.json), [40 browser checks](evidence/h006-selector/browser-checks.json), [notes](evidence/h006-selector/README.md). Static review publication receipt follows after source delivery; no live completion is claimed here.
+
+**Next receiver:** OWNER R-03 on the complete homepage including this supplied selector delta. D-019 remains the genuine layout/spacing/IA PASS at 7e69c07; D-020 remains the genuine selected-photo PASS at dc04574, with its boutique/e-commerce positioning caveat. Preserve both actual scopes; no new formal verdict is invented for the selector change. Whole-page acceptance, expansion, final content/commercial/proof authority and production launch remain gated. Stop for OWNER review.
+
 ## Active delivery: H-006 selected-photo follow-up / COMPLETE; STOP FOR OWNER R-03 / SEPARATE PHOTO REVIEW
 
 2026-10-08, IMPLEMENTATION. Consumed actual OWNER's narrow asset instruction after delivery 1e5f5edfee8127a4726a9b05ca4fbf7e13af9a81. **Implementation/evidence SHA: dc045748180897c20efa418ac739b4135bf5e517.** Use this report's Git history for its own coordination revision. The first supplied image is now selected in the existing homepage hero; no further implementation is active.
