@@ -1,0 +1,74 @@
+{
+  "handoff": "OWNER R-03 REVISE / Invite DNA",
+  "contentSourceCommit": "55c31b523a50e3e6112fcb5f324adbfa663e21eb",
+  "implementationBaseline": "4c577f9a11c9e212689771a0261154846b6e2f77",
+  "results": [
+    {
+      "width": 1440,
+      "typography": {
+        "display": "\"Instrument Sans Variable\", sans-serif",
+        "heading": "\"Instrument Sans Variable\", sans-serif",
+        "formHeading": "\"Instrument Sans Variable\", sans-serif",
+        "metric": "\"Instrument Sans Variable\", sans-serif",
+        "body": "\"Figtree Variable\", sans-serif",
+        "navigation": "\"Figtree Variable\", sans-serif",
+        "form": "\"Figtree Variable\", sans-serif",
+        "metadata": "\"Figtree Variable\", sans-serif"
+      },
+      "scrollWidth": 1440,
+      "clipped": [],
+      "teachingHeadingSize": "54.72px",
+      "obscuredDiagramLabels": [],
+      "exactLockedCopy": true,
+      "primaryCtaInInitialViewport": true,
+      "formVisible": true,
+      "illustrativeMath": true
+    },
+    {
+      "width": 390,
+      "typography": {
+        "display": "\"Instrument Sans Variable\", sans-serif",
+        "heading": "\"Instrument Sans Variable\", sans-serif",
+        "formHeading": "\"Instrument Sans Variable\", sans-serif",
+        "metric": "\"Instrument Sans Variable\", sans-serif",
+        "body": "\"Figtree Variable\", sans-serif",
+        "navigation": "\"Figtree Variable\", sans-serif",
+        "form": "\"Figtree Variable\", sans-serif",
+        "metadata": "\"Figtree Variable\", sans-serif"
+      },
+      "scrollWidth": 390,
+      "clipped": [],
+      "teachingHeadingSize": "38px",
+      "obscuredDiagramLabels": [],
+      "exactLockedCopy": true,
+      "primaryCtaInInitialViewport": true,
+      "formVisible": true,
+      "illustrativeMath": true
+    },
+    {
+      "width": 320,
+      "typography": {
+        "display": "\"Instrument Sans Variable\", sans-serif",
+        "heading": "\"Instrument Sans Variable\", sans-serif",
+        "formHeading": "\"Instrument Sans Variable\", sans-serif",
+        "metric": "\"Instrument Sans Variable\", sans-serif",
+        "body": "\"Figtree Variable\", sans-serif",
+        "navigation": "\"Figtree Variable\", sans-serif",
+        "form": "\"Figtree Variable\", sans-serif",
+        "metadata": "\"Figtree Variable\", sans-serif"
+      },
+      "scrollWidth": 320,
+      "clipped": [],
+      "teachingHeadingSize": "34px",
+      "obscuredDiagramLabels": [],
+      "exactLockedCopy": true,
+      "primaryCtaInInitialViewport": true,
+      "formVisible": true,
+      "illustrativeMath": true
+    }
+  ],
+  "errors": [],
+  "menuAt320px": true,
+  "leadsEnabled": false,
+  "liveEmailsSent": 0
+}

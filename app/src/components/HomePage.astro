@@ -1,18 +1,20 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import Arrow from './Arrow.astro';
-import Journey from './Journey.astro';
-import Leverage from './Leverage.astro';
-import ContentSection from './ContentSection.astro';
+import Journey from './HomeJourney.astro';
+import Leverage from './HomeLeverage.astro';
+import ContentSection from './HomeSection.astro';
 import AssessmentSection from './AssessmentSection.astro';
 import Faq from './Faq.astro';
 interface Props { page: CollectionEntry<'pages'>['data']; }
 const { page } = Astro.props;
 ---
+<div class="invite-home">
 <section class="home-hero shell">
-  <div class="hero-copy"><p class="eyebrow"><span class="small-dot"></span>{page.eyebrow}</p><h1>{page.title}</h1><p class="hero-intro">{page.intro}</p><div class="hero-actions"><a class="button" href={page.cta.href}>{page.cta.label}<Arrow diagonal /></a><a class="text-link" href="#tjenester">Se tjenestene <Arrow /></a></div><p class="hero-note">En avgrenset, manuell vurdering fra Medon AS.</p></div>
+  <div class="hero-copy"><p class="eyebrow"><span class="small-dot"></span>{page.eyebrow}</p><h1>{page.title.split(/(Så må de velge deg\.)/).map((part, index) => index === 1 ? <span class="hero-emphasis">{part}</span> : part)}</h1><p class="hero-intro">{page.intro}</p><div class="hero-actions"><a class="button" href={page.cta.href}>{page.cta.label}<Arrow diagonal /></a><a class="text-link" href="#tjenester">Se tjenestene <Arrow /></a></div><p class="hero-note">En avgrenset, manuell vurdering fra Medon AS.</p></div>
   <Journey />
 </section>
 <div class="hero-strip shell"><span>For nettsider og nettbutikker</span><span>Synlighet + konvertering</span><span>En tjeneste fra Medon AS</span></div>
 {page.sections.map((section, index) => section.id === 'regneeksempel' ? <Leverage section={section} /> : section.id === 'sjekk' ? <AssessmentSection section={section} /> : <ContentSection section={section} index={index} />)}
 <Faq items={page.faq} />
+</div>

@@ -6,8 +6,8 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Attribution from '../components/Attribution.astro';
 import { site } from '../config/site';
-interface Props { title: string; description: string; noindex?: boolean; }
-const { title, description, noindex = false } = Astro.props;
+interface Props { title: string; description: string; noindex?: boolean; homeVisual?: boolean; }
+const { title, description, noindex = false, homeVisual = false } = Astro.props;
 const canonical = new URL(Astro.url.pathname, site.url).href;
 const organization = { '@context': 'https://schema.org', '@type': 'Organization', name: 'Medon AS', url: 'https://medon.no' };
 ---
@@ -28,9 +28,10 @@ const organization = { '@context': 'https://schema.org', '@type': 'Organization'
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    {homeVisual && <link rel="stylesheet" href="/styles/home-invite.css" />}
     <script type="application/ld+json" set:html={JSON.stringify(organization).replace(/</g, '\\u003c')} />
   </head>
-  <body>
+  <body class={homeVisual ? 'invite-homepage' : undefined}>
     <a href="#main" class="skip-link">Hopp til innhold</a>
     <Header />
     <main id="main"><slot /></main>
