@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-10-08T21:55:05.385Z",
+  "sectionApprovalTemporarilyEnabled": true,
+  "attemptedEnvironmentOverride": "PUBLISH_PROOF=true",
+  "importedCaseStatuses": "EVIDENCE_ONLY / NEEDS_PERMISSION / publicationApproved=false",
+  "syntheticCasesWritten": 0,
+  "proofSectionRendered": false,
+  "privateCaseNamesRendered": false,
+  "originalHomeBytesRestored": true,
+  "finalBuild": "Run npm run verify after this check",
+  "result": "PASS"
+}

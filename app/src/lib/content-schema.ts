@@ -10,10 +10,15 @@ const homepage = z.object({
     labels: z.object({ visits: z.string(), conversion: z.string(), trafficIncrease: z.string(), newConversion: z.string(), current: z.string(), scenario: z.string(), difference: z.string(), outcome: z.string(), increase: z.string(), undefinedIncrease: z.string(), invalid: z.string() }),
     defaults: z.object({ visits: z.number().int().min(0).max(10000000), conversion: z.number().min(0).max(100), trafficIncrease: z.number().min(0).max(1000), newConversion: z.number().min(0).max(100) }),
   }),
-  packages: z.object({ eyebrow: z.string(), heading: z.string(), intro: z.string(), fitLabel: z.string(), scopeLabel: z.string(), items: z.array(z.object({ title: z.string(), fit: z.string(), scope: z.string(), priceState: z.string(), externalCosts: z.string(), cta: link })).length(3) }),
-  // Reserved before/change/after slot. This handoff grants no proof-publication authority.
-  proof: z.object({ publicationApproved: z.literal(false), case: z.object({ heading: z.string(), before: z.string(), change: z.string(), after: z.string(), evidence: z.string() }).nullable() }),
-  form: z.object({ heading: z.string(), websiteLabel: z.string(), websitePlaceholder: z.string(), emailLabel: z.string(), emailPlaceholder: z.string(), messageLabel: z.string(), optional: z.string(), messagePlaceholder: z.string(), sensitiveNotice: z.string(), previewNotice: z.string(), submitLabel: z.string(), privacyText: z.string(), privacyLink: link, disabledStatus: z.string() }),
+  packages: z.object({
+    eyebrow: z.string(), heading: z.string(), intro: z.string(), fitLabel: z.string(), scopeLabel: z.string(),
+    areasLabel: z.string(), areas: z.array(z.string()).length(4), foundationNote: z.string(),
+    adBudgetNote: z.string(), externalCostsNote: z.string(), separateWorkNote: z.string(), capacityNote: z.string(),
+    items: z.array(z.object({ title: z.string(), descriptor: z.string(), fit: z.string(), scope: z.string(), price: z.number().int().positive().max(100000000), priceSuffix: z.string(), vatSuffix: z.string(), recommended: z.boolean(), badge: z.string(), cta: link })).length(3),
+  }),
+  // Section approval never substitutes for a case's independent publication guard.
+  proof: z.object({ publicationApproved: z.boolean(), caseIds: z.array(z.string()), eyebrow: z.string(), heading: z.string(), beforeLabel: z.string(), afterLabel: z.string(), changeLabel: z.string() }),
+  form: z.object({ promise: z.string(), heading: z.string(), websiteLabel: z.string(), websitePlaceholder: z.string(), emailLabel: z.string(), emailPlaceholder: z.string(), messageLabel: z.string(), optional: z.string(), messagePlaceholder: z.string(), sensitiveNotice: z.string(), previewNotice: z.string(), submitLabel: z.string(), privacyText: z.string(), privacyLink: link, disabledStatus: z.string() }),
   faqHeading: z.string(), faqEyebrow: z.string(),
   chrome: z.object({ brand: z.string(), brandLocation: z.string(), homeLabel: z.string(), skipLabel: z.string(), navigationLabel: z.string(), mobileNavigationLabel: z.string(), openMenu: z.string(), closeMenu: z.string(), assessmentLink: link, navigation: z.array(link), providerText: z.string(), previewLabel: z.string(), serviceNavigationLabel: z.string(), informationNavigationLabel: z.string(), storeLink: link, informationLinks: z.array(link), copyrightProvider: z.string(), footerNote: z.string() }),
 });

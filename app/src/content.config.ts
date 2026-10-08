@@ -1,10 +1,16 @@
 import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { pageSchema } from './lib/content-schema';
+import { proofCaseSchema } from './lib/proof';
 
 const pages = defineCollection({
   loader: glob({ pattern: '**/*.json', base: './src/content/pages' }),
   schema: pageSchema,
 });
 
-export const collections = { pages };
+const proofCases = defineCollection({
+  loader: glob({ pattern: '*.json', base: './src/content/proof' }),
+  schema: proofCaseSchema,
+});
+
+export const collections = { pages, proofCases };

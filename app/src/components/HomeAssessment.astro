@@ -8,7 +8,7 @@ interface Props {
 const { section, content } = Astro.props;
 ---
 <section id={section.id} class="assessment-section section-space"><div class="shell assessment-grid">
-  <div class="assessment-copy"><p class="eyebrow">{section.eyebrow}</p><h2>{section.heading}</h2>{section.body.map(text => <p>{text}</p>)}</div>
+  <div class="assessment-copy"><p class="eyebrow">{section.eyebrow}</p><h2>{section.heading}</h2><p class="assessment-promise">{content.promise}</p>{section.body.map(text => <p>{text}</p>)}</div>
   <form id="skjema" class="assessment-form" method="post" action="/api/leads" data-home-assessment data-disabled-status={content.disabledStatus}>
     <div class="form-heading"><h3>{content.heading}</h3></div>
     <label for="website">{content.websiteLabel} <span aria-hidden="true">*</span></label>

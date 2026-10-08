@@ -1,16 +1,19 @@
 ---
-import type { CollectionEntry } from 'astro:content';
+import { getCollection, type CollectionEntry } from 'astro:content';
 import Arrow from './Arrow.astro';
 import HeroPhoto from './HomeHeroPhoto.astro';
 import Leverage from './HomeLeverage.astro';
 import ContentSection from './HomeSection.astro';
 import Assessment from './HomeAssessment.astro';
 import HomeSymbol from './HomeSymbol.astro';
+import Proof from './HomeProof.astro';
 interface Props { page: CollectionEntry<'pages'>['data']; }
 const { page } = Astro.props;
 const home = page.homepage!;
 const assessment = page.sections.find(section => section.id === 'sjekk')!;
 const headlineBreak = page.title.indexOf('.') + 1;
+const proofRecords = (await getCollection('proofCases')).map(record => record.data);
+const formatPrice = (value: number) => new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 0 }).format(value);
 ---
 <div class="invite-home">
 <section class="home-hero shell">
@@ -35,15 +38,17 @@ const headlineBreak = page.title.indexOf('.') + 1;
 <section id="priser" class="package-section section-space">
   <div class="shell">
     <div class="section-heading"><p class="eyebrow">{home.packages.eyebrow}</p><h2>{home.packages.heading}</h2><p class="body-copy">{home.packages.intro}</p></div>
-    <div class="package-grid">{home.packages.items.map((item, index) => <article class={`package-card package-card-${index}`}>
-      <h3>{item.title}</h3>
+    <div class="package-grid">{home.packages.items.map((item, index) => <article class={`package-card package-card-${index}${item.recommended ? ' is-recommended' : ''}`}>
+      <div class="package-heading"><h3>{item.title}</h3>{item.recommended && item.badge && <span class="package-badge">{item.badge}</span>}</div>
+      <p class="package-descriptor">{item.descriptor}</p>
       <dl><dt>{home.packages.fitLabel}</dt><dd>{item.fit}</dd><dt>{home.packages.scopeLabel}</dt><dd>{item.scope}</dd></dl>
-      <div class="package-price"><p>{item.priceState}</p><p class="small-copy">{item.externalCosts}</p></div>
+      <div class="package-price"><p><span class="package-price-amount">{formatPrice(item.price)}</span> <span class="package-price-unit">{item.priceSuffix}</span></p><p class="small-copy">{item.vatSuffix}</p></div>
       <a class="button" href={item.cta.href}>{item.cta.label}<Arrow diagonal /></a>
     </article>)}</div>
+    <div class="package-notes body-copy"><p>{home.packages.areasLabel}: {home.packages.areas.join(' · ')}.</p><p>{home.packages.foundationNote}</p><p class="package-budget-note">{home.packages.adBudgetNote}</p><p>{home.packages.externalCostsNote}</p><p>{home.packages.separateWorkNote}</p><p>{home.packages.capacityNote}</p></div>
   </div>
 </section>
-<!-- Proof slot is reserved in content/schema; no proof publication is authorized. -->
+<Proof content={home.proof} records={proofRecords} />
 {page.sections.filter(section => ['mekanisme', 'passer'].includes(section.id)).map(section => <ContentSection section={section} />)}
 <Assessment section={assessment} content={home.form} />
 {page.sections.filter(section => section.id === 'medon').map(section => <ContentSection section={section} />)}

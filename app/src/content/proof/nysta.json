@@ -1,0 +1,28 @@
+{
+  "id": "nysta",
+  "clientName": "Nysta",
+  "anonymizedLabel": null,
+  "relationship": "Former Medon customer. Medon never owned Nysta and does not operate it now.",
+  "dominantMetric": "checkout completion",
+  "before": "7.1%",
+  "after": "58.1%",
+  "delta": null,
+  "period": { "before": null, "after": null, "comparable": false },
+  "intervention": null,
+  "source": "coordination/H007-COMMERCIAL-INPUT.md; prior separate registry NYSTA-PROOF-REGISTRY-v2.md; documented Shopify data and Vipps/CRO periods.",
+  "limitations": null,
+  "namingPermission": "NEEDS_PERMISSION",
+  "permissionEvidence": null,
+  "artifactStatus": "NOT_IMPORTED",
+  "artifactReferences": [],
+  "evidenceMetrics": [
+    { "metric": "checkout completion", "before": "7.1%", "after": "43.6%", "delta": null, "nextPeriod": "58.1%", "timeframe": null },
+    { "metric": "Shopify conversion", "before": "0.058%", "after": "1.403%", "delta": null, "nextPeriod": "1.874%", "timeframe": null },
+    { "metric": "orders / visits", "before": null, "after": null, "delta": "10x orders with 65% fewer visits", "nextPeriod": null, "timeframe": null },
+    { "metric": "Google traffic conversion", "before": "0.10%", "after": "1.93%", "delta": null, "nextPeriod": "2.91%", "timeframe": null },
+    { "metric": "product_sync", "before": null, "after": "31/50 orders and 16 265 / 25 511 kr sales", "delta": null, "nextPeriod": null, "timeframe": null },
+    { "metric": "Vipps/MobilePay", "before": null, "after": "15/26 paid orders used Vipps/MobilePay", "delta": null, "nextPeriod": null, "timeframe": null }
+  ],
+  "publicationStatus": "EVIDENCE_ONLY",
+  "publicationApproved": false
+}

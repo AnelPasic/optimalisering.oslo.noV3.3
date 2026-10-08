@@ -1,0 +1,27 @@
+{
+  "id": "oslo-privatklinikk",
+  "clientName": "Oslo Privatklinikk",
+  "anonymizedLabel": null,
+  "relationship": null,
+  "dominantMetric": "actual CPL",
+  "before": "694 kr",
+  "after": "448 kr",
+  "delta": "-35%",
+  "period": { "before": "2025", "after": "2026", "comparable": false },
+  "intervention": null,
+  "source": "coordination/H007-COMMERCIAL-INPUT.md; verified from Ads/Gmail in the separate case/proof work; prior registry/master noted as v3/master v6.",
+  "limitations": null,
+  "namingPermission": "NEEDS_PERMISSION",
+  "permissionEvidence": null,
+  "artifactStatus": "NOT_IMPORTED",
+  "artifactReferences": [],
+  "evidenceMetrics": [
+    { "metric": "actual CPL", "before": "694 kr", "after": "448 kr", "delta": "-35%", "nextPeriod": null, "timeframe": "2025 → 2026" },
+    { "metric": "leads", "before": "89", "after": "128", "delta": "+44%", "nextPeriod": null, "timeframe": "2025 → 2026" },
+    { "metric": "spend", "before": null, "after": null, "delta": "-7%", "nextPeriod": null, "timeframe": "2025 → 2026" },
+    { "metric": "May CPL", "before": "931 kr", "after": "328 kr", "delta": "-65%", "nextPeriod": null, "timeframe": "May comparison" },
+    { "metric": "May leads", "before": "16", "after": "35", "delta": "+119%", "nextPeriod": null, "timeframe": "May comparison" }
+  ],
+  "publicationStatus": "EVIDENCE_ONLY",
+  "publicationApproved": false
+}

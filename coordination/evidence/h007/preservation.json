@@ -1,0 +1,9 @@
+{
+  "checkedDate": "2026-10-09",
+  "baseline": "coordination/evidence/h006/files-baseline.json",
+  "protectedFrozenFilesChecked": 174,
+  "result": "PASS",
+  "scope": "144 system/project files; 14 non-home page JSON records; 15 non-home HTML outputs including 404; shared generated CSS",
+  "backendIntakeChanged": false,
+  "remainingPagePropagation": false
+}

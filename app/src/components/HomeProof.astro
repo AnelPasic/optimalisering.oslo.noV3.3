@@ -1,0 +1,18 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { getPublishableCases } from '../lib/proof';
+interface Props {
+  content: NonNullable<CollectionEntry<'pages'>['data']['homepage']>['proof'];
+  records: unknown[];
+}
+const { content, records } = Astro.props;
+const cases = getPublishableCases(content, records);
+---
+{cases.length > 0 && <section id="resultater" class="proof-section section-space"><div class="shell">
+  <div class="section-heading"><p class="eyebrow">{content.eyebrow}</p><h2>{content.heading}</h2></div>
+  <div class="section-items">{cases.map(proof => <article class="info-item">
+    <h3>{proof.displayName}</h3><p>{proof.dominantMetric}</p>
+    <dl><dt>{content.beforeLabel}</dt><dd>{proof.before} ({proof.period.before})</dd><dt>{content.afterLabel}</dt><dd>{proof.after} ({proof.period.after})</dd><dt>{content.changeLabel}</dt><dd>{proof.intervention}</dd></dl>
+    {proof.delta && <p>{proof.delta}</p>}<p>{proof.limitations}</p>
+  </article>)}</div>
+</div></section>}

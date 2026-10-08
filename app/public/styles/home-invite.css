@@ -65,13 +65,21 @@
 .invite-home .section-heading .body-copy { margin-top: 28px; }
 .invite-home .package-card { background: none; border: 0; border-top: 2px solid #e0dbe6; border-radius: 0; padding: 32px 28px 0; display: flex; flex-direction: column; min-width: 0; }
 .invite-home .package-card h3 { font-size: 32px; }
-.invite-home .package-card-2 { border-top-color: #087b73; }
+.invite-home .package-card.is-recommended { border-top-color: #087b73; }
+.invite-home .package-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.invite-home .package-badge { font-size: 12px; font-weight: 600; background: #e0f1e9; color: #06675f; border-radius: 4px; padding: 5px 8px; }
+.invite-home .package-descriptor { font-size: 15px; margin-top: 14px; }
 .invite-home .package-card dl { margin: 32px 0; }
 .invite-home .package-card dt { font-size: 12px; font-weight: 600; }
 .invite-home .package-card dd { margin: 6px 0 18px; font-size: 15px; color: var(--muted); line-height: 1.6; }
 .invite-home .package-price { margin-top: auto; padding-top: 20px; border-top: 1px solid var(--line); }
 .invite-home .package-price > p:first-child { font-family: var(--heading); font-size: 24px; line-height: 1.2; font-weight: 550; letter-spacing: -.03em; }
+.invite-home .package-price-amount { font-size: 36px; }
+.invite-home .package-price-unit { font-family: var(--body); font-size: 15px; letter-spacing: 0; white-space: nowrap; }
 .invite-home .package-price .small-copy { font-size: 12px; margin-top: 14px; }
+.invite-home .package-notes { margin-top: 40px; font-size: 14px; line-height: 1.6; color: var(--muted); }
+.invite-home .package-notes p + p { margin-top: 10px; }
+.invite-home .package-budget-note { font-weight: 600; color: var(--ink); }
 .invite-home .package-card .button { font-size: 14px; padding-inline: 16px; margin-top: 24px; gap: 12px; }
 .invite-home .home-section-mekanisme { background: white; }
 .invite-home .section-heading-split { grid-template-columns: 1fr 1fr; gap: 96px; max-width: none; }
@@ -89,6 +97,7 @@
 .invite-home .assessment-section { background: #e5f2ed; }
 .invite-home .assessment-grid { gap: 96px; max-width: 1280px; }
 .invite-home .assessment-copy > p:not(.eyebrow) { font-size: 16px; color: var(--muted); line-height: 1.65; margin-top: 22px; max-width: 520px; }
+.invite-home .assessment-copy > .assessment-promise { color: var(--ink); font-weight: 600; }
 .invite-home .assessment-form { background: white; border: 1px solid #d6e5de; border-radius: 12px; padding: 40px; max-width: 640px; }
 .invite-home .form-heading h3 { font-size: 28px; }
 .invite-home .assessment-form input, .invite-home .assessment-form textarea { font-family: var(--body); background: #faf9fc; border-color: #dddce5; border-radius: 5px; }

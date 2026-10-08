@@ -45,18 +45,26 @@
     },
     "packages": {
       "eyebrow": "Avtalt arbeid, tydelig start",
-      "heading": "Synlighet, Konvertering eller Begge",
-      "intro": "Velg det som passer behovet. Omfang og pris må avklares før betalt arbeid starter.",
+      "heading": "Optimalisering, Vekst eller Partner",
+      "intro": "Månedlig arbeid innen avtalt omfang.",
       "fitLabel": "Passer for",
       "scopeLabel": "Hva vi jobber med",
+      "areasLabel": "Arbeidet kan kombinere",
+      "areas": ["Konvertering", "Synlighet: SEO + Lokal SEO + AI-søk / AI-synlighet", "Google Ads", "Meta Ads"],
+      "foundationNote": "Måling & sporing er et felles grunnlag.",
+      "adBudgetNote": "Annonsebudsjett kommer i tillegg.",
+      "externalCostsNote": "Aktuelle eksterne plattformkostnader kommer i tillegg hvis ikke annet er uttrykkelig avtalt.",
+      "separateWorkNote": "Større eller nye landingssider, nettsider, omfattende teknisk arbeid og redesign prises separat.",
+      "capacityNote": "Ubrukt kapasitet overføres ikke til neste måned.",
       "items": [
-        { "title": "Synlighet", "fit": "Bedrifter som trenger flere relevante besøk.", "scope": "Avtalt arbeid med hvordan kundene finner bedriften i søk, AI-tjenester eller lokalt. Kampanjeoptimalisering kan støtte betalt synlighet når det er relevant.", "priceState": "Pris avklares før publisering", "externalCosts": "Annonsebudsjett og aktuelle eksterne plattformkostnader kommer i tillegg hvis ikke annet er avtalt.", "cta": { "label": "Sjekk synligheten", "href": "/#sjekk" } },
-        { "title": "Konvertering", "fit": "Bedrifter som har besøk, men for få henvendelser eller kjøp.", "scope": "Avtalt konverteringsoptimalisering av budskap, landingssider, skjema eller kjøpsvei – på nettsiden eller i nettbutikken.", "priceState": "Pris avklares før publisering", "externalCosts": "Aktuelle eksterne plattformkostnader kommer i tillegg hvis ikke annet er avtalt.", "cta": { "label": "Sjekk veien til kontakt og kjøp", "href": "/#sjekk" } },
-        { "title": "Begge", "fit": "Bedrifter der både synlighet og kjøpsvei kan forbedres.", "scope": "Avtalt arbeid med begge områdene. Vi starter med flaskehalsen og prioriterer i riktig rekkefølge.", "priceState": "Pris avklares før publisering", "externalCosts": "Annonsebudsjett og aktuelle eksterne plattformkostnader kommer i tillegg hvis ikke annet er avtalt.", "cta": { "label": "Finn hvor vi bør starte", "href": "/#sjekk" } }
+        { "title": "Optimalisering", "descriptor": "Ett prioritert hovedområde", "fit": "Ett hovedområde og én prioritet om gangen.", "scope": "Avtalt arbeid med begrenset kapasitet innen ett prioritert hovedområde.", "price": 4500, "priceSuffix": "kr/mnd", "vatSuffix": "eks. mva.", "recommended": false, "badge": "", "cta": { "label": "Ta en gratis sjekk", "href": "/#sjekk" } },
+        { "title": "Vekst", "descriptor": "To områder som jobber sammen", "fit": "To områder som henger sammen.", "scope": "Avtalt arbeid med to sammenhengende områder.", "price": 6900, "priceSuffix": "kr/mnd", "vatSuffix": "eks. mva.", "recommended": true, "badge": "Anbefalt", "cta": { "label": "Ta en gratis sjekk", "href": "/#sjekk" } },
+        { "title": "Partner", "descriptor": "Helheten + større kapasitet", "fit": "Behov for større kapasitet på tvers av relevante områder.", "scope": "Avtalt arbeid med helheten og større kapasitet innen relevante områder.", "price": 14900, "priceSuffix": "kr/mnd", "vatSuffix": "eks. mva.", "recommended": false, "badge": "", "cta": { "label": "Ta en gratis sjekk", "href": "/#sjekk" } }
       ]
     },
-    "proof": { "publicationApproved": false, "case": null },
+    "proof": { "publicationApproved": false, "caseIds": ["nysta", "oslo-privatklinikk"], "eyebrow": "Dokumenterte resultater", "heading": "Før, endring og etter", "beforeLabel": "Før", "afterLabel": "Etter", "changeLabel": "Endring" },
     "form": {
+      "promise": "Få våre 3 viktigste funn innen 2 virkedager.",
       "heading": "Send nettsiden",
       "websiteLabel": "Nettside eller nettbutikk",
       "websitePlaceholder": "dinbedrift.no",
@@ -145,8 +153,8 @@
   ],
   "faq": [
     { "question": "Hva skjer etter den gratis sjekken?", "answer": "Vi gjør en kort, manuell vurdering og begrunner hvor vi ville startet. Hvis det er noe vi kan hjelpe med, avtaler vi omfang og pris før betalt arbeid. Sjekken er ikke en full revisjon eller gratis gjennomføring." },
-    { "question": "Hva koster videre arbeid?", "answer": "Endelige offentlige priser og tjenesteomfang er ikke avklart for denne forhåndsvisningen. Prisen avhenger av behov og avtalt arbeid, og avklares før vi starter." },
-    { "question": "Er annonsebudsjett og eksterne kostnader inkludert?", "answer": "Annonsebudsjett og aktuelle eksterne plattformkostnader kommer i tillegg hvis vi ikke avtaler noe annet. Vi avklarer relevante kostnader før arbeidet starter." },
+    { "question": "Hva koster videre arbeid?", "answer": "Optimalisering koster 4 500 kr/mnd, Vekst 6 900 kr/mnd og Partner 14 900 kr/mnd. Alle priser er eks. mva. Arbeidet skjer innen avtalt omfang." },
+    { "question": "Er annonsebudsjett og eksterne kostnader inkludert?", "answer": "Annonsebudsjett kommer i tillegg. Aktuelle eksterne plattformkostnader kommer i tillegg hvis ikke annet er uttrykkelig avtalt." },
     { "question": "Hva hvis både synlighet og konvertering begrenser resultatet?", "answer": "Da ser vi på sammenhengen. Vi finner flaskehalsen og prioriterer tiltakene i riktig rekkefølge, fremfor å starte med en fast kanal." },
     { "question": "Jobber dere bare med bedrifter i Oslo?", "answer": "Nei. Medon AS jobber først og fremst med bedrifter i Norge, og kan også hjelpe bedrifter i andre nordiske land. Navnet innebærer ikke at vi har et Oslo-kontor." }
   ]

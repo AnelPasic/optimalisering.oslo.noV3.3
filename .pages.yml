@@ -1,4 +1,4 @@
-# Pages CMS: separate homepage review editor; all other content remains frozen.
+# Pages CMS: homepage commercial editor and evidence-only proof registry; other pages remain frozen.
 media:
   - name: assets
     label: Eksisterende media
@@ -138,8 +138,122 @@ content:
       - name: cta
         label: Neste steg
         component: link
+  - name: proofCases
+    label: Case- og evidensregister – ingen automatisk publisering
+    type: collection
+    path: app/src/content/proof
+    format: json
+    filename: "{fields.id}.json"
+    view:
+      primary: clientName
+      fields: [clientName, publicationStatus, namingPermission, artifactStatus]
+    fields:
+      - name: id
+        label: Stabil case-ID
+        description: Referanser fra forsiden bruker denne ID-en. Endring krever at referansene oppdateres.
+        type: string
+        pattern: ^[a-z0-9][a-z0-9-]*$
+        required: true
+      - name: clientName
+        label: Kunde- eller visningsnavn
+        type: string
+      - name: anonymizedLabel
+        label: Godkjent anonymisert navn
+        type: string
+      - name: relationship
+        label: Relasjon og bakgrunn – intern evidens
+        type: text
+      - name: dominantMetric
+        label: Hovedresultat og måledefinisjon
+        type: text
+      - name: before
+        label: Før-verdi
+        type: string
+      - name: after
+        label: Etter-verdi
+        type: string
+      - name: delta
+        label: Dokumentert endring
+        type: string
+      - name: period
+        label: Sammenligningsperioder
+        type: object
+        fields:
+          - name: before
+            label: Før-periode
+            type: string
+          - name: after
+            label: Etter-periode
+            type: string
+          - name: comparable
+            label: Sammenlignbarhet dokumentert
+            type: boolean
+            default: false
+      - name: intervention
+        label: Dokumentert tiltak eller endring
+        type: text
+      - name: source
+        label: Kilde og proveniens – intern evidens
+        type: text
+      - name: limitations
+        label: Begrensninger og attribusjonsforbehold
+        type: text
+      - name: namingPermission
+        label: Navne- eller anonymiseringstillatelse
+        type: select
+        default: NEEDS_PERMISSION
+        options:
+          values: [NEEDS_PERMISSION, NAME_APPROVED, ANONYMIZED_APPROVED]
+      - name: permissionEvidence
+        label: Dokumentasjon på faktisk publiseringstillatelse
+        type: text
+      - name: artifactStatus
+        label: Skjermbilde- og kildeartefaktstatus
+        type: select
+        default: NOT_IMPORTED
+        options:
+          values: [NOT_IMPORTED, IMPORTED, VERIFIED]
+      - name: artifactReferences
+        label: Kildeartefaktreferanser – ikke legg persondata i Git
+        type: string
+        list: true
+      - name: evidenceMetrics
+        label: Supplerte målinger – intern evidens, ikke offentlig renderer
+        type: object
+        list: true
+        fields:
+          - name: metric
+            label: Måling og definisjon
+            type: text
+          - name: before
+            label: Før-verdi
+            type: string
+          - name: after
+            label: Etter-verdi
+            type: string
+          - name: delta
+            label: Dokumentert endring
+            type: string
+          - name: nextPeriod
+            label: Neste periodes verdi
+            type: string
+          - name: timeframe
+            label: Periode
+            type: string
+      - name: publicationStatus
+        label: Publiseringsstatus
+        description: EVIDENCE_ONLY er intern forberedelse. PUBLISHABLE krever dokumenterte målinger, sammenlignbare perioder, tiltak, kilde, forbehold og tillatelse.
+        type: select
+        default: EVIDENCE_ONLY
+        options:
+          values: [EVIDENCE_ONLY, REVIEW_REQUIRED, PUBLISHABLE, WITHDRAWN]
+      - name: publicationApproved
+        label: Publisering uttrykkelig godkjent
+        description: Må være aktivert sammen med PUBLISHABLE og alle nødvendige evidens- og tillatelsesfelt. Godkjenning dokumenteres i coordination/DECISIONS.md.
+        type: boolean
+        default: false
   - name: homepage
-    label: Forside – H-006 til vurdering
+    label: Forside – H-007 kommersielt innhold til vurdering
     type: file
     path: app/src/content/pages/home.json
     format: json
@@ -334,7 +448,7 @@ content:
                 label: Forbehold
                 type: text
           - name: packages
-            label: Tjenestekort og prisstatus
+            label: Pakker, priser og omfang
             type: object
             fields:
               - name: eyebrow
@@ -352,6 +466,28 @@ content:
               - name: scopeLabel
                 label: Etikett for arbeidsidé
                 type: string
+              - name: areasLabel
+                label: Etikett for arbeidsområder
+                type: string
+              - name: areas
+                label: Fire arbeidsområder
+                type: string
+                list: true
+              - name: foundationNote
+                label: Måling og sporing – felles grunnlag
+                type: text
+              - name: adBudgetNote
+                label: Annonsebudsjett kommer i tillegg
+                type: string
+              - name: externalCostsNote
+                label: Eksterne plattformkostnader
+                type: text
+              - name: separateWorkNote
+                label: Arbeid som prises separat
+                type: text
+              - name: capacityNote
+                label: Ubrukt kapasitet
+                type: text
               - name: items
                 label: Alternativer
                 type: object
@@ -360,17 +496,30 @@ content:
                   - name: title
                     label: Tittel
                     type: string
+                  - name: descriptor
+                    label: Pakkeoppsummering
+                    type: string
                   - name: fit
                     label: Passer for
                     type: text
                   - name: scope
                     label: Arbeidsidé
                     type: text
-                  - name: priceState
-                    label: Prisstatus
+                  - name: price
+                    label: Månedspris i kroner
+                    type: number
+                  - name: priceSuffix
+                    label: Prisenhet
                     type: string
-                  - name: externalCosts
-                    label: Eksterne kostnader
+                  - name: vatSuffix
+                    label: MVA-tekst
+                    type: string
+                  - name: recommended
+                    label: Anbefalt pakke
+                    type: boolean
+                    default: false
+                  - name: badge
+                    label: Anbefalt-merke
                     type: string
                   - name: cta
                     label: Primær handling
@@ -384,43 +533,45 @@ content:
                         type: string
                         pattern: ^/
           - name: proof
-            label: Bevis – venter på publiseringstillatelse
+            label: Dokumenterte resultater – separat publiseringsvern
             type: object
-            readonly: true
             fields:
               - name: publicationApproved
-                label: Publisering godkjent
+                label: Godkjenn visning av allerede publiserbare case
+                description: Slå bare på etter dokumentert godkjenning. Dette overstyrer aldri case-status, tillatelse eller manglende evidens.
                 type: boolean
-                readonly: true
-              - name: case
-                label: Før → endring → etter (reservert)
-                type: object
-                readonly: true
-                fields:
-                  - name: heading
-                    label: Overskrift
-                    type: string
-                    readonly: true
-                  - name: before
-                    label: before
-                    type: string
-                    readonly: true
-                  - name: change
-                    label: change
-                    type: string
-                    readonly: true
-                  - name: after
-                    label: after
-                    type: string
-                    readonly: true
-                  - name: evidence
-                    label: evidence
-                    type: string
-                    readonly: true
+                default: false
+              - name: caseIds
+                label: Velg case fra evidensregisteret
+                type: reference
+                options:
+                  collection: proofCases
+                  multiple: true
+                  value: "{fields.id}"
+                  label: "{fields.clientName} ({fields.publicationStatus})"
+                  search: "id,clientName,anonymizedLabel"
+              - name: eyebrow
+                label: Overtekst
+                type: string
+              - name: heading
+                label: Overskrift
+                type: string
+              - name: beforeLabel
+                label: Før-etikett
+                type: string
+              - name: afterLabel
+                label: Etter-etikett
+                type: string
+              - name: changeLabel
+                label: Endring-etikett
+                type: string
           - name: form
             label: Skjema
             type: object
             fields:
+              - name: promise
+                label: Gratis sjekk – leveranseløfte
+                type: string
               - name: heading
                 label: Overskrift
                 type: string
