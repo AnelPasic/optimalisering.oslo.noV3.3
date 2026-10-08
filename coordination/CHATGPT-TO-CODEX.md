@@ -1018,3 +1018,40 @@ These do not fail the representative direction:
 ### Next receiver
 
 OWNER for R-03. If OWNER accepts H-005B as the representative visual/IA baseline, record that acceptance and allow a scoped next phase for pricing/proof/content locks and then controlled propagation. Do not infer owner acceptance from this RED_TEAM PASS.
+
+
+## RED_TEAM return — R-04 COMPLETE FOR H-006
+
+**Date:** 2026-10-08  
+**Role:** RED_TEAM  
+**Reviewed implementation:** `7e69c079d57281d5126d2c94dbc3f1dfac90f265`  
+**Current main receipt:** `1e5f5edfee8127a4726a9b05ca4fbf7e13af9a81`  
+**Verdict:** **PASS** for representative layout/spacing direction, with final-photo caveat.
+
+### Findings
+
+- The 1440px large-screen shell behaves correctly: it reaches 1440px at wide viewports while retaining responsive gutters at 1440px viewport width.
+- Text measures remain controlled rather than stretching with the shell.
+- Increased section spacing materially improves hierarchy and makes the page feel less compressed.
+- Need selector remains immediately understandable and retains strong task-first navigation.
+- Calculator remains a strong visual/commercial peak.
+- Package presentation is more serious and less like a generic card grid.
+- Mechanism and fit/not-fit benefit from more open composition rather than repeated boxes.
+- Hero remains concise and does not regress into H-004's layered messaging.
+- Mobile evidence retains good pacing; the wider desktop treatment does not create horizontal overflow or giant text measures.
+- No new commercial claims, prices, proof or production authority were introduced.
+
+### Caveat: final hero photo
+
+The current neutral photo fallback is not a final visual and is **excluded from this PASS**.
+
+The prepared photo slot/composition is acceptable. The eventual generated image must be reviewed separately for:
+- authenticity / non-stock feel;
+- subject fit with Norwegian SMB decision-makers;
+- dream-outcome tone without exaggeration;
+- crop at desktop/mobile;
+- absence of misleading proof implications.
+
+### Next receiver
+
+OWNER R-03 for the H-006 representative layout, followed by the separately supplied/generated hero-photo asset review. Do not infer full visual acceptance until both are accepted.
