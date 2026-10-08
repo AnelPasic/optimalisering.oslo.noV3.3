@@ -2,7 +2,7 @@
 
 Updated: 2026-10-08. Owner: Medon AS. Implementation repository: AnelPasic/optimalisering.oslo.noV3.3.
 
-**State: H-004 IMPLEMENTATION COMPLETE AT `caa88817152b23f5c67fabe8a328ed868ea7c9cb`; STOPPED FOR OWNER R-03 / RED_TEAM R-04; ALL OTHER PAGES FROZEN.** D-014 task-first homepage IA is implemented with D-012 Invite palette/font roles. The current generated content is draft pending review; no numerical prices, proof or terms were invented. The delivery is to the connected review Worker through main, with preview/noindex and disabled intake. This is not representative acceptance, propagation or production authorization.
+**State: H-005 HERO SIMPLIFICATION AUTHORIZED UNDER D-015; R-03 REMAINS REVISE; ALL OTHER PAGES FROZEN.** H-004 established the correct task-first page architecture, but OWNER judged the hero too dense. H-005 is a narrow subtraction pass only: one eyebrow, one semantic H1, one short support paragraph, two CTAs, no hero note, no hero illustration, and shorter need-selector descriptions. Everything below the selector remains unchanged unless strictly required for fit.
 
 Original exploratory implementation: `a98dbaefbb10a9039c9b025e5c3907e83f24de8b`, pushed to `origin/main` on 2026-10-08. The coordination/draft-label revision follows that commit; use this file's Git history for its exact SHA. A push permits repository inspection; it does not authorize publication or live processing.
 
@@ -105,3 +105,19 @@ Customer language is **Bli funnet** and **Gjør flere besøk til henvendelser og
 ## H-004 current technical delivery
 
 Implementation/evidence `caa88817152b23f5c67fabe8a328ed868ea7c9cb` consumes `d0e5a30`. Astro check: 53 files, zero diagnostics; 24 tests; build; 449-link static audit; 40 browser regression checks; focused 1440/390/320px QA and production guard pass. CMS section/default constraints and rate-precision/overflow fixes have failing-before/passing-after regressions and a separate technical re-review. All 174 protected/frozen output inputs match the fresh baseline (144 reference files, 14 other JSON, 15 non-home HTML including 404, one shared CSS). Nine screenshots and receipts are in `evidence/h004/`. Authenticated CMS save and real intake/delivery remain unverified and unauthorized; the static review form is disabled. See the outbound report for final repository/Worker verification. Stop for R-03/R-04.
+
+
+## Current owner direction — D-015
+
+H-004 is not being redesigned. The next pass tests whether commercial clarity improves by removing redundant hero layers.
+
+Target hero:
+- eyebrow: **For bedrifter som konkurrerer om kundene**
+- semantic H1 and main display: **Bli funnet. Gjør flere besøk til henvendelser og salg.**
+- short support mentioning **SEO, AI-synlighet og konverteringsoptimalisering for bedrifter i Oslo og resten av Norge**, plus that Medon starts where the customer journey stops
+- CTAs: **Ta en gratis sjekk** and **Se priser**
+- no separate small keyword H1
+- no hero note
+- no hero illustration
+
+Need-selector copy should be shortened so each card reads as a clear task choice, not a mini landing page. Calculator, packages, mechanism, fit/not-fit, assessment, provider, FAQ and footer remain structurally unchanged.
