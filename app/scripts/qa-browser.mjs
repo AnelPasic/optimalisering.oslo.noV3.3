@@ -54,7 +54,7 @@ try {
   await page.goto(base);
   await page.locator('[name=conversion]').fill('2');
   assert.equal(await page.locator('.leverage-result output').textContent(), '20');
-  assert.equal(await page.locator('[data-double]').textContent(), '40');
+  assert.equal(await page.locator('[data-scenario]').textContent(), '30');
   checks++;
   console.log('Menu, calculator and preview form checks passed.');
   await page.getByRole('link', { name: 'Hopp til innhold' }).focus();

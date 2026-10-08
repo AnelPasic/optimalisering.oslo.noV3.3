@@ -1,44 +1,68 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import Arrow from './Arrow.astro';
-interface Props { section: CollectionEntry<'pages'>['data']['sections'][number]; }
-const { section } = Astro.props;
+import { calculateScenario } from '../lib/leverage';
+interface Props { content: NonNullable<CollectionEntry<'pages'>['data']['homepage']>['calculator']; }
+const { content } = Astro.props;
+const { labels, defaults } = content;
+const result = calculateScenario(defaults.visits, defaults.conversion, defaults.trafficIncrease, defaults.newConversion);
+const format = new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 1 });
+const signed = new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 1, signDisplay: 'exceptZero' });
 ---
-<section id={section.id} class="leverage-section section-space">
+<section id="regneeksempel" class="leverage-section section-space">
   <div class="shell leverage-grid">
-    <div class="leverage-copy"><p class="eyebrow">{section.eyebrow}</p><h2>{section.heading}</h2><div class="body-copy">{section.body.map(text => <p>{text.split(/(\d{1,3}(?: \d{3})+)/).map((part, index) => index % 2 === 1 ? <span style="white-space: nowrap">{part}</span> : part)}</p>)}</div>{section.links?.map(link => <a class="text-link" href={link.href}>{link.label}<Arrow /></a>)}</div>
-    <div class="leverage-tool" data-leverage>
-      <div class="leverage-label">Illustrerende regneeksempel</div>
-      <div class="leverage-inputs"><label>Relevante besøk<input name="visits" type="number" min="0" max="10000000" step="100" value="1000" inputmode="numeric" /></label><span aria-hidden="true">×</span><label>Tar kontakt<input name="conversion" type="number" min="0" max="100" step="0.5" value="1" inputmode="decimal" /><span class="input-unit">%</span></label></div>
-      <div class="math-results">
-        <div class="leverage-result"><span class="math-rate" data-current-rate>1 %</span><output aria-live="polite">10</output><span>henvendelser</span></div>
-        <span class="math-result-arrow" aria-hidden="true"><Arrow /></span>
-        <div class="leverage-comparison"><span class="math-rate" data-double-rate>2 %</span><strong><output data-double>20</output> <span>henvendelser</span></strong><span class="math-comparison-label">Hvis andelen dobles</span></div>
+    <div class="leverage-copy"><p class="eyebrow">{content.eyebrow}</p><h2>{content.heading}</h2><p class="body-copy">{content.intro}</p><p class="calculator-formula">{content.formula}</p></div>
+    <div class="leverage-tool" data-leverage data-undefined-increase={labels.undefinedIncrease} data-increase-label={labels.increase}>
+      <div class="calculator-inputs">
+        <label for="calc-visits">{labels.visits}<input id="calc-visits" name="visits" type="number" min="0" max="10000000" step="1" value={defaults.visits} inputmode="numeric" aria-describedby="calculator-error" /></label>
+        <label for="calc-conversion">{labels.conversion}<input id="calc-conversion" name="conversion" type="number" min="0" max="100" step="any" value={defaults.conversion} inputmode="decimal" aria-describedby="calculator-error" /></label>
+        <label for="calc-traffic">{labels.trafficIncrease}<input id="calc-traffic" name="trafficIncrease" type="number" min="0" max="1000" step="any" value={defaults.trafficIncrease} inputmode="decimal" aria-describedby="calculator-error" /></label>
+        <label for="calc-new-conversion">{labels.newConversion}<input id="calc-new-conversion" name="newConversion" type="number" min="0" max="100" step="any" value={defaults.newConversion} inputmode="decimal" aria-describedby="calculator-error" /></label>
       </div>
-      <p class="small-copy">Samme antall besøk. Endret andel. Et regnestykke, ingen resultatgaranti.</p>
+      <p id="calculator-error" class="calculator-error" role="status" hidden>{labels.invalid}</p>
+      <div class="calculator-results" role="status" aria-live="polite" aria-atomic="true">
+        <div class="math-results">
+          <div class="leverage-result"><span>{labels.current}</span><output data-current>{format.format(result.current)}</output><span class="outcome-label">{labels.outcome}</span><span class="math-equation" data-current-equation>{format.format(defaults.visits)} × {String(defaults.conversion).replace('.', ',')} %</span></div>
+          <div class="leverage-comparison"><span>{labels.scenario}</span><output data-scenario>{format.format(result.scenario)}</output><span class="outcome-label">{labels.outcome}</span><span class="math-equation" data-scenario-equation>{format.format(result.scenarioVisits)} × {String(defaults.newConversion).replace('.', ',')} %</span></div>
+        </div>
+        <p class="calculator-difference">{labels.difference}: <output data-difference>{signed.format(result.difference)}</output><span data-percentage>{result.increase === null ? labels.undefinedIncrease : `${signed.format(result.increase)} % ${labels.increase}`}</span></p>
+      </div>
+      <p class="calculator-caveat">{content.caveat}</p>
     </div>
   </div>
 </section>
 <script>
-  import { calculateLeverage } from '../lib/leverage';
+  import { calculateScenario } from '../lib/leverage';
   const tool = document.querySelector<HTMLElement>('[data-leverage]');
   if (tool) {
-    const visits = tool.querySelector<HTMLInputElement>('[name="visits"]')!;
-    const conversion = tool.querySelector<HTMLInputElement>('[name="conversion"]')!;
-    const output = tool.querySelector<HTMLOutputElement>('.leverage-result output')!;
-    const doubled = tool.querySelector<HTMLOutputElement>('[data-double]')!;
-    const currentRate = tool.querySelector<HTMLElement>('[data-current-rate]')!;
-    const doubleRate = tool.querySelector<HTMLElement>('[data-double-rate]')!;
-    const formatter = new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 1 });
-    const update = () => {
-      if (visits.value === '' || conversion.value === '' || !visits.checkValidity() || !conversion.checkValidity()) { output.value = '–'; doubled.value = '–'; currentRate.textContent = '–'; doubleRate.textContent = '–'; return; }
-      const rate = Number(conversion.value);
-      output.value = formatter.format(calculateLeverage(Number(visits.value), rate));
-      doubled.value = rate <= 50 ? formatter.format(calculateLeverage(Number(visits.value), rate * 2)) : '–';
-      currentRate.textContent = `${formatter.format(rate)} %`;
-      doubleRate.textContent = rate <= 50 ? `${formatter.format(rate * 2)} %` : '–';
-    };
-    visits.addEventListener('input', update);
-    conversion.addEventListener('input', update);
+    const inputs = ['visits', 'conversion', 'trafficIncrease', 'newConversion'].map(name => tool.querySelector<HTMLInputElement>(`[name="${name}"]`)!);
+    const current = tool.querySelector<HTMLOutputElement>('[data-current]')!;
+    const scenario = tool.querySelector<HTMLOutputElement>('[data-scenario]')!;
+    const difference = tool.querySelector<HTMLOutputElement>('[data-difference]')!;
+    const percentage = tool.querySelector<HTMLElement>('[data-percentage]')!;
+    const currentEquation = tool.querySelector<HTMLElement>('[data-current-equation]')!;
+    const scenarioEquation = tool.querySelector<HTMLElement>('[data-scenario-equation]')!;
+    const error = tool.querySelector<HTMLElement>('#calculator-error')!;
+    const format = new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 1 });
+    const signed = new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 1, signDisplay: 'exceptZero' });
+    function update() {
+      const valid = inputs.every(input => input.value !== '' && input.checkValidity());
+      inputs.forEach(input => input.setAttribute('aria-invalid', String(input.value === '' || !input.checkValidity())));
+      error.hidden = valid;
+      if (!valid) {
+        [current, scenario, difference, percentage, currentEquation, scenarioEquation].forEach(output => output.textContent = '–');
+        return;
+      }
+      const [visits, conversion, traffic, newConversion] = inputs.map(input => Number(input.value));
+      const result = calculateScenario(visits, conversion, traffic, newConversion);
+      current.value = format.format(result.current);
+      scenario.value = format.format(result.scenario);
+      [current, scenario].forEach(output => output.style.setProperty('--result-size', `${Math.max(16, Math.min(64, 145 / output.value.length))}px`));
+      difference.value = signed.format(result.difference);
+      percentage.textContent = result.increase === null ? tool!.dataset.undefinedIncrease! : `${signed.format(result.increase)} % ${tool!.dataset.increaseLabel}`;
+      currentEquation.textContent = `${format.format(visits)} × ${inputs[1].value.replace('.', ',')} %`;
+      scenarioEquation.textContent = `${format.format(result.scenarioVisits)} × ${inputs[3].value.replace('.', ',')} %`;
+    }
+    inputs.forEach(input => input.addEventListener('input', update));
+    update();
   }
 </script>

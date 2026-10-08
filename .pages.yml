@@ -1,4 +1,4 @@
-# Pages CMS requires this file at the repository root. Website files live in app/.
+# Pages CMS: separate homepage review editor; all other content remains frozen.
 media:
   input: app/src/assets
   output: /assets
@@ -13,18 +13,24 @@ components:
       - name: href
         label: Intern lenke
         type: string
-        pattern: '^/'
+        pattern: ^/
         required: true
 content:
   - name: pages
     label: Nettsider
     type: collection
     path: app/src/content/pages
+    exclude:
+      - home.json
     format: json
-    filename: '{primary}.json'
+    filename: "{primary}.json"
     view:
       primary: title
-      fields: [title, authority, status, kind]
+      fields:
+        - title
+        - authority
+        - status
+        - kind
     fields:
       - name: slug
         label: Nettadresse
@@ -36,12 +42,14 @@ content:
         readonly: true
       - name: status
         label: Godkjenningsstatus
-        description: Endres i Git etter innholds- og eiergjennomgang. Kladd er ikke publiseringstillatelse.
+        description: Endres i Git etter innholds- og eiergjennomgang. Kladd er ikke
+          publiseringstillatelse.
         type: string
         readonly: true
       - name: authority
         label: Innholdsautoritet
-        description: DRAFT / NON-AUTHORITATIVE gjelder til en uttrykkelig innholdslås er dokumentert i coordination/DECISIONS.md.
+        description: DRAFT / NON-AUTHORITATIVE gjelder til en uttrykkelig innholdslås er
+          dokumentert i coordination/DECISIONS.md.
         type: string
         readonly: true
       - name: seo
@@ -100,7 +108,7 @@ content:
               - name: href
                 label: Intern lenke
                 type: string
-                pattern: '^/'
+                pattern: ^/
               - name: label
                 label: Lenketekst
                 type: string
@@ -122,3 +130,488 @@ content:
       - name: cta
         label: Neste steg
         component: link
+  - name: homepage
+    label: Forside – H-004 til vurdering
+    type: file
+    path: app/src/content/pages/home.json
+    format: json
+    fields:
+      - name: slug
+        label: Nettadresse
+        type: string
+        readonly: true
+      - name: kind
+        label: Sidetype
+        type: string
+        readonly: true
+      - name: status
+        label: Godkjenningsstatus
+        type: string
+        readonly: true
+      - name: authority
+        label: Innholdsautoritet
+        type: string
+        readonly: true
+        description: H-004 er en representativ revisjon til vurdering. Faktisk
+          innholdslås må registreres i coordination/DECISIONS.md.
+      - name: seo
+        label: Søkeresultat
+        type: object
+        fields:
+          - name: title
+            label: Tittel
+            type: string
+          - name: description
+            label: Beskrivelse
+            type: text
+      - name: eyebrow
+        label: Overtekst
+        type: string
+      - name: title
+        label: Tittel
+        type: string
+      - name: intro
+        label: Innledning
+        type: text
+      - name: cta
+        label: Primær handling
+        type: object
+        fields:
+          - name: label
+            label: Tekst
+            type: string
+          - name: href
+            label: Intern lenke
+            type: string
+            pattern: ^/
+      - name: homepage
+        label: Forsidens innhold
+        type: object
+        fields:
+          - name: displayHook
+            label: Stor visningstekst (ikke overskrift)
+            type: string
+            list: true
+          - name: secondaryCta
+            label: Sekundær handling
+            type: object
+            fields:
+              - name: label
+                label: Tekst
+                type: string
+              - name: href
+                label: Intern lenke
+                type: string
+                pattern: ^/
+          - name: heroNote
+            label: Kort merknad
+            type: string
+          - name: illustration
+            label: Illustrasjon
+            type: object
+            fields:
+              - name: label
+                label: Tekst
+                type: string
+              - name: ariaLabel
+                label: Tilgjengelig beskrivelse
+                type: string
+              - name: steps
+                label: Steg
+                type: object
+                list: true
+                fields:
+                  - name: title
+                    label: Tittel
+                    type: string
+                  - name: caption
+                    label: Bildetekst
+                    type: string
+              - name: footer
+                label: Avsluttende tekst
+                type: string
+          - name: selector
+            label: Behovsvelger
+            type: object
+            fields:
+              - name: heading
+                label: Overskrift
+                type: string
+              - name: items
+                label: Alternativer
+                type: object
+                list: true
+                fields:
+                  - name: title
+                    label: Tittel
+                    type: string
+                  - name: discipline
+                    label: Fagområde
+                    type: string
+                  - name: description
+                    label: Beskrivelse
+                    type: text
+                  - name: link
+                    label: link
+                    type: object
+                    fields:
+                      - name: label
+                        label: Tekst
+                        type: string
+                      - name: href
+                        label: Intern lenke
+                        type: string
+                        pattern: ^/
+          - name: calculator
+            label: Regneeksempel
+            type: object
+            fields:
+              - name: eyebrow
+                label: Overtekst
+                type: string
+              - name: heading
+                label: Overskrift
+                type: string
+              - name: intro
+                label: Innledning
+                type: text
+              - name: formula
+                label: Enkel formel
+                type: string
+              - name: labels
+                label: Etiketter
+                type: object
+                fields:
+                  - name: visits
+                    label: Relevante besøk per måned
+                    type: string
+                  - name: conversion
+                    label: Konverteringsrate i dag
+                    type: string
+                  - name: trafficIncrease
+                    label: Mer relevant trafikk
+                    type: string
+                  - name: newConversion
+                    label: Ny konverteringsrate
+                    type: string
+                  - name: current
+                    label: I dag
+                    type: string
+                  - name: scenario
+                    label: Scenario
+                    type: string
+                  - name: difference
+                    label: Forskjell
+                    type: string
+                  - name: outcome
+                    label: Resultatenhet
+                    type: string
+                  - name: increase
+                    label: Prosentvis endring
+                    type: string
+                  - name: undefinedIncrease
+                    label: Merknad ved null utgangspunkt
+                    type: string
+                  - name: invalid
+                    label: Veiledning ved ugyldige verdier
+                    type: string
+              - name: defaults
+                label: Startverdier
+                type: object
+                fields:
+                  - name: visits
+                    label: Relevante besøk per måned
+                    type: number
+                  - name: conversion
+                    label: Konverteringsrate i dag
+                    type: number
+                  - name: trafficIncrease
+                    label: Mer relevant trafikk
+                    type: number
+                  - name: newConversion
+                    label: Ny konverteringsrate
+                    type: number
+              - name: caveat
+                label: Forbehold
+                type: text
+          - name: packages
+            label: Tjenestekort og prisstatus
+            type: object
+            fields:
+              - name: eyebrow
+                label: Overtekst
+                type: string
+              - name: heading
+                label: Overskrift
+                type: string
+              - name: intro
+                label: Innledning
+                type: text
+              - name: fitLabel
+                label: Etikett for hvem tjenesten passer
+                type: string
+              - name: scopeLabel
+                label: Etikett for arbeidsidé
+                type: string
+              - name: items
+                label: Alternativer
+                type: object
+                list: true
+                fields:
+                  - name: title
+                    label: Tittel
+                    type: string
+                  - name: fit
+                    label: Passer for
+                    type: text
+                  - name: scope
+                    label: Arbeidsidé
+                    type: text
+                  - name: priceState
+                    label: Prisstatus
+                    type: string
+                  - name: externalCosts
+                    label: Eksterne kostnader
+                    type: string
+                  - name: cta
+                    label: Primær handling
+                    type: object
+                    fields:
+                      - name: label
+                        label: Tekst
+                        type: string
+                      - name: href
+                        label: Intern lenke
+                        type: string
+                        pattern: ^/
+          - name: proof
+            label: Bevis – venter på publiseringstillatelse
+            type: object
+            readonly: true
+            fields:
+              - name: publicationApproved
+                label: Publisering godkjent
+                type: boolean
+                readonly: true
+              - name: case
+                label: Før → endring → etter (reservert)
+                type: object
+                readonly: true
+                fields:
+                  - name: heading
+                    label: Overskrift
+                    type: string
+                    readonly: true
+                  - name: before
+                    label: before
+                    type: string
+                    readonly: true
+                  - name: change
+                    label: change
+                    type: string
+                    readonly: true
+                  - name: after
+                    label: after
+                    type: string
+                    readonly: true
+                  - name: evidence
+                    label: evidence
+                    type: string
+                    readonly: true
+          - name: form
+            label: Skjema
+            type: object
+            fields:
+              - name: heading
+                label: Overskrift
+                type: string
+              - name: websiteLabel
+                label: Etikett for nettside
+                type: string
+              - name: websitePlaceholder
+                label: Eksempel på nettside
+                type: string
+              - name: emailLabel
+                label: Etikett for e-post
+                type: string
+              - name: emailPlaceholder
+                label: Eksempel på e-post
+                type: string
+              - name: messageLabel
+                label: Etikett for kommentar
+                type: string
+              - name: optional
+                label: Valgfritt-merknad
+                type: string
+              - name: messagePlaceholder
+                label: Eksempel på kommentar
+                type: string
+              - name: sensitiveNotice
+                label: Merknad om sensitive opplysninger
+                type: string
+              - name: previewNotice
+                label: Forhåndsvisningsmerknad
+                type: string
+              - name: submitLabel
+                label: Knappetekst
+                type: string
+              - name: privacyText
+                label: Personvernmerknad
+                type: string
+              - name: privacyLink
+                label: Personvernlenke
+                type: object
+                fields:
+                  - name: label
+                    label: Tekst
+                    type: string
+                  - name: href
+                    label: Intern lenke
+                    type: string
+                    pattern: ^/
+              - name: disabledStatus
+                label: Status ved stengt innsending
+                type: string
+          - name: faqHeading
+            label: FAQ-overskrift
+            type: string
+          - name: faqEyebrow
+            label: FAQ-overtekst
+            type: string
+          - name: chrome
+            label: Toppmeny og bunntekst
+            type: object
+            fields:
+              - name: brand
+                label: Merkenavn
+                type: string
+              - name: brandLocation
+                label: Stedsnavn i ordmerket
+                type: string
+              - name: homeLabel
+                label: Tilgjengelig forsidenavn
+                type: string
+              - name: skipLabel
+                label: Hopp til innhold
+                type: string
+              - name: navigationLabel
+                label: Hovedmenynavn
+                type: string
+              - name: mobileNavigationLabel
+                label: Mobilmenynavn
+                type: string
+              - name: openMenu
+                label: Åpne meny
+                type: string
+              - name: closeMenu
+                label: Lukk meny
+                type: string
+              - name: assessmentLink
+                label: Lenke til gratis sjekk
+                type: object
+                fields:
+                  - name: label
+                    label: Tekst
+                    type: string
+                  - name: href
+                    label: Intern lenke
+                    type: string
+                    pattern: ^/
+              - name: navigation
+                label: Navigasjon
+                type: object
+                list: true
+                fields:
+                  - name: label
+                    label: Tekst
+                    type: string
+                  - name: href
+                    label: Intern lenke
+                    type: string
+                    pattern: ^/
+              - name: providerText
+                label: Leverandørtekst
+                type: string
+              - name: previewLabel
+                label: Forhåndsvisningsetikett
+                type: string
+              - name: serviceNavigationLabel
+                label: Tjenestemenynavn
+                type: string
+              - name: informationNavigationLabel
+                label: Informasjonsmenynavn
+                type: string
+              - name: storeLink
+                label: Nettbutikklenke
+                type: object
+                fields:
+                  - name: label
+                    label: Tekst
+                    type: string
+                  - name: href
+                    label: Intern lenke
+                    type: string
+                    pattern: ^/
+              - name: informationLinks
+                label: Informasjonslenker
+                type: object
+                list: true
+                fields:
+                  - name: label
+                    label: Tekst
+                    type: string
+                  - name: href
+                    label: Intern lenke
+                    type: string
+                    pattern: ^/
+              - name: copyrightProvider
+                label: Leverandør i opphavsrett
+                type: string
+              - name: footerNote
+                label: Bunntekstmerknad
+                type: string
+      - name: sections
+        label: Mekanisme, kvalifisering, sjekk og leverandør
+        type: object
+        list: true
+        fields:
+          - name: id
+            label: Seksjonens lenkeanker
+            type: string
+            readonly: true
+          - name: eyebrow
+            label: Overtekst
+            type: string
+          - name: heading
+            label: Overskrift
+            type: string
+          - name: body
+            label: Avsnitt
+            type: text
+            list: true
+          - name: items
+            label: Alternativer
+            type: object
+            list: true
+            fields:
+              - name: title
+                label: Tittel
+                type: string
+              - name: text
+                label: Beskrivelse
+                type: string
+          - name: links
+            label: Relaterte lenker
+            component: link
+            list: true
+      - name: faq
+        label: Spørsmål og svar
+        type: object
+        list: true
+        fields:
+          - name: question
+            label: Spørsmål
+            type: string
+          - name: answer
+            label: Svar
+            type: text

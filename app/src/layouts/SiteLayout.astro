@@ -4,10 +4,13 @@ import '@fontsource-variable/figtree';
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import HomeHeader from '../components/HomeHeader.astro';
+import HomeFooter from '../components/HomeFooter.astro';
+import type { CollectionEntry } from 'astro:content';
 import Attribution from '../components/Attribution.astro';
 import { site } from '../config/site';
-interface Props { title: string; description: string; noindex?: boolean; homeVisual?: boolean; }
-const { title, description, noindex = false, homeVisual = false } = Astro.props;
+interface Props { title: string; description: string; noindex?: boolean; homeVisual?: boolean; homeChrome?: NonNullable<CollectionEntry<'pages'>['data']['homepage']>['chrome']; }
+const { title, description, noindex = false, homeVisual = false, homeChrome } = Astro.props;
 const canonical = new URL(Astro.url.pathname, site.url).href;
 const organization = { '@context': 'https://schema.org', '@type': 'Organization', name: 'Medon AS', url: 'https://medon.no' };
 ---
@@ -32,10 +35,10 @@ const organization = { '@context': 'https://schema.org', '@type': 'Organization'
     <script type="application/ld+json" set:html={JSON.stringify(organization).replace(/</g, '\\u003c')} />
   </head>
   <body class={homeVisual ? 'invite-homepage' : undefined}>
-    <a href="#main" class="skip-link">Hopp til innhold</a>
-    <Header />
+    <a href="#main" class="skip-link">{homeChrome?.skipLabel ?? 'Hopp til innhold'}</a>
+    {homeChrome ? <HomeHeader content={homeChrome} /> : <Header />}
     <main id="main"><slot /></main>
-    <Footer />
+    {homeChrome ? <HomeFooter content={homeChrome} /> : <Footer />}
     <Attribution />
   </body>
 </html>

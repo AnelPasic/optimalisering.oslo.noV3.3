@@ -1,0 +1,14 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { site } from '../config/site';
+interface Props { content: NonNullable<CollectionEntry<'pages'>['data']['homepage']>['chrome']; }
+const { content } = Astro.props;
+---
+<footer class="site-footer">
+  <div class="shell footer-grid">
+    <div><a class="footer-brand" href="/">{content.brand} {content.brandLocation}<span>.</span></a><p>{content.providerText}</p>{site.preview && <span class="preview-tag">{content.previewLabel}</span>}</div>
+    <nav aria-label={content.serviceNavigationLabel}>{content.navigation.map(link => <a href={link.href}>{link.label}</a>)}<a href={content.storeLink.href}>{content.storeLink.label}</a></nav>
+    <nav aria-label={content.informationNavigationLabel}>{content.informationLinks.map(link => <a href={link.href}>{link.label}</a>)}</nav>
+  </div>
+  <div class="shell footer-bottom"><span>© {new Date().getFullYear()} {content.copyrightProvider}</span><span>{content.footerNote}</span></div>
+</footer>

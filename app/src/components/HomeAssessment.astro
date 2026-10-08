@@ -1,0 +1,36 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Arrow from './Arrow.astro';
+interface Props {
+  section: CollectionEntry<'pages'>['data']['sections'][number];
+  content: NonNullable<CollectionEntry<'pages'>['data']['homepage']>['form'];
+}
+const { section, content } = Astro.props;
+---
+<section id={section.id} class="assessment-section section-space"><div class="shell assessment-grid">
+  <div class="assessment-copy"><p class="eyebrow">{section.eyebrow}</p><h2>{section.heading}</h2>{section.body.map(text => <p>{text}</p>)}</div>
+  <form id="skjema" class="assessment-form" method="post" action="/api/leads" data-home-assessment data-disabled-status={content.disabledStatus}>
+    <div class="form-heading"><h3>{content.heading}</h3></div>
+    <label for="website">{content.websiteLabel} <span aria-hidden="true">*</span></label>
+    <input id="website" name="website" type="text" inputmode="url" placeholder={content.websitePlaceholder} required maxlength="2048" autocomplete="url" />
+    <label for="email">{content.emailLabel} <span aria-hidden="true">*</span></label>
+    <input id="email" name="email" type="email" placeholder={content.emailPlaceholder} required maxlength="254" autocomplete="email" />
+    <label for="message">{content.messageLabel} <span class="optional">{content.optional}</span></label>
+    <textarea id="message" name="message" rows="3" maxlength="2000" placeholder={content.messagePlaceholder}></textarea>
+    <p class="form-privacy">{content.sensitiveNotice}</p>
+    <p class="form-notice">{content.previewNotice}</p>
+    <button type="submit" class="button form-submit" disabled>{content.submitLabel}<Arrow diagonal /></button>
+    <p class="form-privacy">{content.privacyText} <a href={content.privacyLink.href}>{content.privacyLink.label}</a>.</p>
+    <p class="form-status" role="status" tabindex="-1" hidden></p>
+  </form>
+</div></section>
+<script>
+  const form = document.querySelector<HTMLFormElement>('[data-home-assessment]');
+  form?.addEventListener('submit', event => {
+    event.preventDefault();
+    const status = form.querySelector<HTMLElement>('.form-status')!;
+    status.textContent = form.dataset.disabledStatus!;
+    status.hidden = false;
+    status.focus();
+  });
+</script>

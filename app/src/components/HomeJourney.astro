@@ -1,18 +1,14 @@
 ---
 import HomeSymbol from './HomeSymbol.astro';
+import type { CollectionEntry } from 'astro:content';
+interface Props { content: NonNullable<CollectionEntry<'pages'>['data']['homepage']>['illustration']; }
+const { content } = Astro.props;
 ---
-<div class="journey-art" role="img" aria-label="To steg: bli funnet av de rette kundene, og gjør det enklere å velge deg.">
-  <div class="journey-top"><span>Fra besøk til verdi</span><span aria-hidden="true">↗</span></div>
-  <svg class="journey-flow" viewBox="0 0 480 490" fill="none" aria-hidden="true"><path d="M200 88c148-36 250 46 171 159-35 50-91 44-91 114" stroke="currentColor" stroke-width="2" stroke-dasharray="5 7"/><path d="m269 347 11 16 13-15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  <div class="journey-card journey-find">
-    <span class="journey-number">01</span>
-    <div class="find-interface" aria-hidden="true"><HomeSymbol /><div class="interface-lines"><i></i><i></i><i></i></div></div>
-    <span class="journey-label">Bli funnet.</span><span class="journey-caption">Av de rette kundene</span>
-  </div>
-  <div class="journey-card journey-choose">
-    <span class="journey-number">02</span>
-    <div class="choose-interface" aria-hidden="true"><span></span><HomeSymbol kind="choose" /></div>
-    <span class="journey-label">Bli valgt.</span><span class="journey-caption">En enklere vei videre</span>
-  </div>
-  <div class="journey-bottom"><span class="small-dot"></span><span>Synlighet + konvertering</span></div>
+<div class="journey-art" role="img" aria-label={content.ariaLabel}>
+  <div class="journey-top"><span>{content.label}</span><span aria-hidden="true">↗</span></div>
+  <div class="journey-steps">{content.steps.map((step, index) => <div class={`journey-card journey-step-${index}`}>
+    <div class="journey-card-top"><span class="journey-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><HomeSymbol kind={index === 0 ? 'search' : 'choose'} /></div>
+    <span class="journey-label">{step.title}</span><span class="journey-caption">{step.caption}</span>
+  </div>)}</div>
+  <div class="journey-bottom"><span class="small-dot"></span><span>{content.footer}</span></div>
 </div>

@@ -11,6 +11,6 @@ export async function getStaticPaths() {
 interface Props { page: CollectionEntry<'pages'>['data']; }
 const { page } = Astro.props;
 ---
-<SiteLayout title={page.seo.title} description={page.seo.description} homeVisual={page.kind === 'home'}>
+<SiteLayout title={page.seo.title} description={page.seo.description} homeVisual={page.kind === 'home'} homeChrome={page.kind === 'home' ? page.homepage?.chrome : undefined}>
   {page.kind === 'home' ? <HomePage page={page} /> : <InnerPage page={page} />}
 </SiteLayout>

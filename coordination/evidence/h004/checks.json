@@ -1,0 +1,91 @@
+{
+  "base": "http://127.0.0.1:4321",
+  "checkedAt": "2026-10-08T09:49:42.043Z",
+  "checks": [
+    {
+      "width": 1440,
+      "sequence": [
+        "hero",
+        "behov",
+        "regneeksempel",
+        "priser",
+        "mekanisme",
+        "passer",
+        "sjekk",
+        "medon",
+        "sporsmal"
+      ],
+      "fonts": {
+        "h1": "\"Instrument Sans Variable\", sans-serif",
+        "display": "\"Instrument Sans Variable\", sans-serif",
+        "metric": "\"Instrument Sans Variable\", sans-serif",
+        "body": "\"Figtree Variable\", sans-serif",
+        "label": "\"Figtree Variable\", sans-serif",
+        "nav": "\"Figtree Variable\", sans-serif",
+        "footer": "rgb(50, 12, 67)"
+      },
+      "overflow": false,
+      "calculator": "traffic / conversion / combined / zero / invalid / maximum / decrease PASS",
+      "form": "disabled, three fields, no POST",
+      "cmsFieldCoverage": 211
+    },
+    {
+      "width": 390,
+      "sequence": [
+        "hero",
+        "behov",
+        "regneeksempel",
+        "priser",
+        "mekanisme",
+        "passer",
+        "sjekk",
+        "medon",
+        "sporsmal"
+      ],
+      "fonts": {
+        "h1": "\"Instrument Sans Variable\", sans-serif",
+        "display": "\"Instrument Sans Variable\", sans-serif",
+        "metric": "\"Instrument Sans Variable\", sans-serif",
+        "body": "\"Figtree Variable\", sans-serif",
+        "label": "\"Figtree Variable\", sans-serif",
+        "nav": "\"Figtree Variable\", sans-serif",
+        "footer": "rgb(50, 12, 67)"
+      },
+      "overflow": false,
+      "calculator": "traffic / conversion / combined / zero / invalid / maximum / decrease PASS",
+      "form": "disabled, three fields, no POST",
+      "cmsFieldCoverage": 211
+    },
+    {
+      "width": 320,
+      "sequence": [
+        "hero",
+        "behov",
+        "regneeksempel",
+        "priser",
+        "mekanisme",
+        "passer",
+        "sjekk",
+        "medon",
+        "sporsmal"
+      ],
+      "fonts": {
+        "h1": "\"Instrument Sans Variable\", sans-serif",
+        "display": "\"Instrument Sans Variable\", sans-serif",
+        "metric": "\"Instrument Sans Variable\", sans-serif",
+        "body": "\"Figtree Variable\", sans-serif",
+        "label": "\"Figtree Variable\", sans-serif",
+        "nav": "\"Figtree Variable\", sans-serif",
+        "footer": "rgb(50, 12, 67)"
+      },
+      "overflow": false,
+      "calculator": "traffic / conversion / combined / zero / invalid / maximum / decrease PASS",
+      "form": "disabled, three fields, no POST",
+      "cmsFieldCoverage": 211
+    }
+  ],
+  "errors": [],
+  "noScript": "static outputs visible, intake disabled",
+  "proofPublished": false,
+  "liveEmailsSent": 0
+}
