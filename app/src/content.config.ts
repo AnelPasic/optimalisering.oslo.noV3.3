@@ -9,6 +9,7 @@ const pages = defineCollection({
     slug: z.string(),
     kind: z.enum(['home', 'service', 'article', 'index', 'utility', 'assessment', 'pricing']),
     status: z.enum(['REVIEW_REQUIRED', 'CONTENT_LOCKED', 'PUBLISHED']),
+    authority: z.enum(['DRAFT / NON-AUTHORITATIVE', 'CONTENT_LOCKED / AUTHORITATIVE']),
     seo: z.object({ title: z.string(), description: z.string() }),
     eyebrow: z.string(), title: z.string(), intro: z.string(),
     sections: z.array(z.object({

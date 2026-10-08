@@ -24,7 +24,7 @@ content:
     filename: '{primary}.json'
     view:
       primary: title
-      fields: [title, status, kind]
+      fields: [title, authority, status, kind]
     fields:
       - name: slug
         label: Nettadresse
@@ -37,6 +37,11 @@ content:
       - name: status
         label: Godkjenningsstatus
         description: Endres i Git etter innholds- og eiergjennomgang. Kladd er ikke publiseringstillatelse.
+        type: string
+        readonly: true
+      - name: authority
+        label: Innholdsautoritet
+        description: DRAFT / NON-AUTHORITATIVE gjelder til en uttrykkelig innholdslås er dokumentert i coordination/DECISIONS.md.
         type: string
         readonly: true
       - name: seo

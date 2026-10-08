@@ -2,6 +2,7 @@
   "slug": "priser",
   "kind": "pricing",
   "status": "REVIEW_REQUIRED",
+  "authority": "DRAFT / NON-AUTHORITATIVE",
   "seo": { "title": "Pris og omfang – Synlighet og Konvertering | Medon", "description": "Velg ut fra behovet: Synlighet, Konvertering, begge eller et større omfang. Pris og innhold avtales. En gratis manuell sjekk kan gi en startretning." },
   "eyebrow": "Velg etter behovet",
   "title": "Riktig hjelp begynner med riktig omfang.",

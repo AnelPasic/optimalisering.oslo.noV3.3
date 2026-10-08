@@ -1,5 +1,7 @@
 # Optimalisering Oslo v3.3
 
+**Exploratory baseline; expansion paused.** All generated customer-facing copy is **DRAFT / NON-AUTHORITATIVE**, including page metadata and shared/source-embedded UI wording. No complete content, representative-page or visual-system approval has been received. Read `../coordination/PROJECT-STATE.md`, `CHATGPT-TO-CODEX.md` and `DECISIONS.md` before substantial work. The proposed representative page is the complete homepage `/`; preserve the remaining pages until the recorded review gates pass. See root `../AGENTS.md` for durable coordination rules.
+
 The actual website is in this directory. `../system/` and `../project/` are read-only reference inputs. There are 15 Norwegian content routes, a responsive homepage, two service pillars, SEO and AI pages, store optimization, two distinct guides, a pricing decision page, and assessment/contact/provider/legal pages.
 
 ## Run locally
@@ -14,7 +16,7 @@ This checkout defaults to a noindex review preview. All commercial content is `R
 
 Source: `src/content/pages/*.json`, validated by `src/content.config.ts`. `slug` controls static URLs; `kind` chooses the template. Content owns commercial wording. Normal CMS edits change this semantic layer, rather than a separate hard-coded copy fallback.
 
-Repository-root `../.pages.yml` points into these JSON files. Pages CMS requires its configuration at the repository root. Connect the repository to Pages CMS when repository/app permissions are available; this build creates the schema, not an authenticated CMS account. Slugs, page types and approval states are read-only in the CMS. Material changes to approved commercial meaning must return to content/owner review.
+Repository-root `../.pages.yml` points into these JSON files. Pages CMS requires its configuration at the repository root. Connect the repository to Pages CMS when repository/app permissions are available; this build creates the schema, not an authenticated CMS account. Slugs, page types, approval states and copy authority are read-only in the CMS. Each page has explicit authority metadata; `src/config/copy-authority.json` covers shared wording. Changing a field alone is not approval: actual review/lock scope and evidence belong in `../coordination/DECISIONS.md`. Material changes to approved commercial meaning must return to content/owner review.
 
 The site uses self-hosted Instrument Sans/Figtree fonts and local explanatory SVGs. No external font requests, client proof/logos, analytics cookies, localStorage tracking, pixels or persistent anonymous visitor identifiers are included.
 

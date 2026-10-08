@@ -2,6 +2,7 @@
   "slug": "konvertering",
   "kind": "service",
   "status": "REVIEW_REQUIRED",
+  "authority": "DRAFT / NON-AUTHORITATIVE",
   "seo": { "title": "Konvertering – fra besøk til kontakt og kjøp | Medon", "description": "Har nettsiden besøk, men få relevante henvendelser eller kjøp? Se hvordan Medon vurderer budskap, skjema og kjøpsvei. Start med en gratis sjekk." },
   "eyebrow": "Fra besøk til henvendelser og kjøp",
   "title": "Gjør det enklere å velge deg.",

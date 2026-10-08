@@ -2,6 +2,7 @@
   "slug": "vurdering",
   "kind": "assessment",
   "status": "REVIEW_REQUIRED",
+  "authority": "DRAFT / NON-AUTHORITATIVE",
   "seo": { "title": "Gratis manuell sjekk av nettsiden | Medon", "description": "Send nettsiden for en gratis, avgrenset manuell sjekk. Medon gir kort veiledning om hva vi ville startet med, hvorfor og hvilken retning som passer." },
   "eyebrow": "En gratis sjekk. En tydelig start.",
   "title": "Send en lenke. Finn et sted å begynne.",

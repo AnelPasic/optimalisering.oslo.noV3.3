@@ -2,6 +2,7 @@
   "slug": "seo",
   "kind": "service",
   "status": "REVIEW_REQUIRED",
+  "authority": "DRAFT / NON-AUTHORITATIVE",
   "seo": { "title": "SEO for relevante søk og nyttige besøk | Medon", "description": "SEO begynner med søk som passer tilbudet ditt. Medon vurderer hvilke sider som bør finnes, forstås og lede kunden videre. Ta en gratis sjekk." },
   "eyebrow": "Søkemotoroptimalisering",
   "title": "Bli funnet når kunden leter etter det du tilbyr.",

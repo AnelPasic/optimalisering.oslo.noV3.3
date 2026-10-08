@@ -5,9 +5,14 @@ import { loadEnv } from 'vite';
 export function assertProductionReady(env) {
   if (env.SITE_STAGE !== 'production') return;
   const directory = resolve('src/content/pages');
-  const drafts = readdirSync(directory).filter(file => file.endsWith('.json')).filter(file => !['CONTENT_LOCKED', 'PUBLISHED'].includes(JSON.parse(readFileSync(resolve(directory, file), 'utf8')).status));
+  const drafts = readdirSync(directory).filter(file => file.endsWith('.json')).filter(file => {
+    const page = JSON.parse(readFileSync(resolve(directory, file), 'utf8'));
+    return !['CONTENT_LOCKED', 'PUBLISHED'].includes(page.status) || page.authority !== 'CONTENT_LOCKED / AUTHORITATIVE';
+  });
+  const sharedCopy = JSON.parse(readFileSync(resolve('src/config/copy-authority.json'), 'utf8'));
   const missing = [];
   if (drafts.length) missing.push(`${drafts.length} content drafts need owner review`);
+  if (sharedCopy.authority !== 'CONTENT_LOCKED / AUTHORITATIVE') missing.push('shared customer-facing copy needs review');
   for (const key of ['PUBLIC_LEADS_ENABLED', 'PRIVACY_APPROVED', 'LAUNCH_APPROVED']) if (env[key] !== 'true') missing.push(key);
   for (const key of ['RESEND_API_KEY', 'RESEND_FROM', 'LEAD_TO_EMAIL']) if (!env[key]) missing.push(key);
   if (missing.length) throw new Error(`Production blocked: ${missing.join('; ')}. Local review preview remains available.`);

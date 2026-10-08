@@ -2,6 +2,7 @@
   "slug": "ai-synlighet",
   "kind": "service",
   "status": "REVIEW_REQUIRED",
+  "authority": "DRAFT / NON-AUTHORITATIVE",
   "seo": { "title": "AI-synlighet – bli forstått med riktig informasjon | Medon", "description": "Undersøk hvordan bedriften kan bli funnet og forstått i AI-baserte svar. Medon skiller mellom omtale, kilder, besøk og kunder. Ta en gratis sjekk." },
   "eyebrow": "Synlighet i AI-baserte søk og svar",
   "title": "Gjør det tydelig hvem du er og hva du tilbyr.",

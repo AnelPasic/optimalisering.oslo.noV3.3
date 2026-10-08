@@ -1,0 +1,6 @@
+{
+  "authority": "DRAFT / NON-AUTHORITATIVE",
+  "scope": "All shared and source-embedded customer-facing copy outside the page JSON records: navigation, provider/brand phrasing, accessibility and preview labels, illustrations, calculator explanations, template text and CTAs, form labels/options/helpers, validation/errors/success, public API responses/notifications and 404 wording. Supplied facts do not lock generated phrasing.",
+  "review_record": "coordination/DECISIONS.md",
+  "approval_evidence": null
+}

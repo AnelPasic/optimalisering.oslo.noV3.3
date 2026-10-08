@@ -1,3 +1,5 @@
+// Shared customer-facing wording is DRAFT / NON-AUTHORITATIVE.
+// Scope and review record: ./copy-authority.json and /coordination/DECISIONS.md.
 export const site = {
   name: 'Optimalisering Oslo',
   provider: 'Medon AS',
