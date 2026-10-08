@@ -1,6 +1,6 @@
 # Optimalisering Oslo v3.3
 
-**Exploratory baseline; expansion paused.** All generated customer-facing copy is **DRAFT / NON-AUTHORITATIVE**, including page metadata and shared/source-embedded UI wording. No complete content, representative-page or visual-system approval has been received. Read `../coordination/PROJECT-STATE.md`, `CHATGPT-TO-CODEX.md` and `DECISIONS.md` before substantial work. The proposed representative page is the complete homepage `/`; preserve the remaining pages until the recorded review gates pass. See root `../AGENTS.md` for durable coordination rules.
+**Exploratory baseline; expansion paused.** H-001 / D-010 locks the homepage JSON content/CRO revision for the representative-page test. The other 14 pages and shared/source-embedded UI wording remain **DRAFT / NON-AUTHORITATIVE**. OWNER representative-page/visual acceptance and independent RED_TEAM review remain pending. Read `../coordination/PROJECT-STATE.md`, `CHATGPT-TO-CODEX.md` and `DECISIONS.md` before substantial work. The proposed representative page is the complete homepage `/`; preserve the remaining pages until the recorded review gates pass. See root `../AGENTS.md` for durable coordination rules.
 
 The actual website is in this directory. `../system/` and `../project/` are read-only reference inputs. There are 15 Norwegian content routes, a responsive homepage, two service pillars, SEO and AI pages, store optimization, two distinct guides, a pricing decision page, and assessment/contact/provider/legal pages.
 
@@ -10,7 +10,7 @@ Requires Node 24.12 or newer. Install with `npm ci`, build with `npm run build`,
 
 Open http://127.0.0.1:4321. Preview serves static `dist/` and the local lead API. For active development run `npm run dev` and, in a second terminal, `npm run dev:api`. The Astro dev server proxies `/api` to port 4322.
 
-This checkout defaults to a noindex review preview. All commercial content is `REVIEW_REQUIRED`. Forms demonstrate validation but do not transmit enquiries until explicitly configured. The legal drafts and price-by-agreement presentation reflect missing approved business inputs; historic price candidates and unapproved proof are excluded.
+This checkout defaults to a noindex review preview. Homepage JSON is `CONTENT_LOCKED` for H-001's representative test; the remaining pages are `REVIEW_REQUIRED`. Forms demonstrate validation but do not transmit enquiries until explicitly configured. The legal drafts and price-by-agreement presentation reflect missing approved business inputs; historic price candidates and unapproved proof are excluded.
 
 ## Content and CMS
 

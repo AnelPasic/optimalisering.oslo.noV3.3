@@ -2,7 +2,7 @@
 
 Updated: 2026-10-08. Owner: Medon AS. Implementation repository: AnelPasic/optimalisering.oslo.noV3.3.
 
-**State: EXPLORATORY BASELINE / REVIEW PENDING.** Page/content expansion is paused. The current build is preserved for inspection, not approved production. No representative-page, complete-content or visual-system approval has been received. Technical QA does not supply those approvals.
+**State: HOMEPAGE CONTENT/CRO LOCKED FOR REPRESENTATIVE TEST / VISUAL REVIEW PENDING.** H-001 / D-010 at `55c31b523a50e3e6112fcb5f324adbfa663e21eb` completed R-01/R-02 for the homepage JSON scope. IMPLEMENTATION rendered it and supplied evidence at `e6261de18ed4a7b1877dbf06a450d1b23a980e6e`. The 15-page build remains exploratory, not approved production. No OWNER representative-page/visual acceptance or final independent RED_TEAM PASS has been received. The other 14 pages remain frozen; technical QA does not supply those approvals.
 
 Original exploratory implementation: `a98dbaefbb10a9039c9b025e5c3907e83f24de8b`, pushed to `origin/main` on 2026-10-08. The coordination/draft-label revision follows that commit; use this file's Git history for its exact SHA. A push permits repository inspection; it does not authorize publication or live processing.
 
@@ -19,13 +19,13 @@ Original exploratory implementation: `a98dbaefbb10a9039c9b025e5c3907e83f24de8b`,
 
 ## Copy authority: DRAFT / NON-AUTHORITATIVE
 
-There are **zero complete production page-copy locks** in this build. All 15 page records remain `REVIEW_REQUIRED` and explicitly carry `authority: DRAFT / NON-AUTHORITATIVE`. This applies to every generated title, SEO description, heading, paragraph, example, FAQ, item and CTA in those records. Reused seed wording has not become locked by reuse.
+There is **one scoped complete homepage content/CRO lock for the representative-page test**, received through H-001 / D-010. `app/src/content/pages/home.json` is `CONTENT_LOCKED` / `CONTENT_LOCKED / AUTHORITATIVE` at source commit `55c31b5`; IMPLEMENTATION preserved its exact content. This is not visual or launch approval. The other 14 page records remain `REVIEW_REQUIRED` / `DRAFT / NON-AUTHORITATIVE`, covering all their generated titles, SEO text, headings, paragraphs, examples, FAQs, items and CTAs. Reused seed wording is not locked by reuse.
 
 `app/src/config/copy-authority.json` explicitly marks all shared/source-embedded customer-facing wording **DRAFT / NON-AUTHORITATIVE**, including the following inventory. Existing displayed wording is preserved; this is an authority correction, not a visual revision.
 
 | Source | Covered draft wording |
 | --- | --- |
-| `app/src/content/pages/*.json` | All page content, SEO text, FAQs, pricing/scope explanations, privacy/terms drafts, insight articles and CTAs |
+| `app/src/content/pages/*.json` except `home.json` | All remaining page content, SEO text, FAQs, pricing/scope explanations, privacy/terms drafts, insight articles and CTAs. Homepage JSON alone is authoritative for H-001's representative test under D-010. |
 | `app/src/config/site.ts`, `app/src/components/Header.astro`, `Footer.astro`, `app/src/layouts/SiteLayout.astro` | Navigation, provider sentence, wordmark arrangement, preview labels, accessibility/link labels and shared footer text |
 | `HomePage.astro`, `InnerPage.astro`, `AssessmentSection.astro`, `ContentSection.astro`, `Faq.astro` under `app/src/components/` | Template-written hero/support/breadcrumb/section/closing CTA text and all fallback/shared wording |
 | `Journey.astro`, `Leverage.astro` under `app/src/components/` | Illustration labels, teaching/tool labels, illustrative values and explanatory caveats |
@@ -34,11 +34,11 @@ There are **zero complete production page-copy locks** in this build. All 15 pag
 
 Supplied factual inputs are distinct from approved phrasing. The seed identifies Medon AS as provider; Synlighet and Konvertering as the two primary needs; a combination path; recurring agreed work; a bounded manual free check; main website/store as standard starting scope; and separately charged applicable external costs. These facts constrain drafts. They do not approve the resulting public argument or every sentence. `project/.../COPY-SEEDS.md` expressly says its lines are not production locks. Historical price candidates and unapproved proof were excluded.
 
-The previous STRATEGY_CONTENT subtask produced the 15 complete draft records and `app/docs/content-handoff.md`. That handoff was draft authorship and reasoning, not final content QA/lock from the connected ChatGPT workspace or owner approval. Implementation also generated shared UI text. Both remain non-authoritative. The older handoff's “LOCKED / DO NOT CHANGE” section describes source-fact constraints; it does not lock its generated page copy.
+The previous STRATEGY_CONTENT subtask produced the 15 complete draft records and `app/docs/content-handoff.md`; that initial authorship/reasoning was not a final content lock or owner approval. ChatGPT subsequently revised and locked the homepage JSON through H-001. The remaining page drafts and implementation-generated shared UI text remain non-authoritative. The older handoff's “LOCKED / DO NOT CHANGE” section describes source-fact constraints, not an additional copy lock.
 
 ## Inferred visual and content decisions
 
-The implementation selected a new homepage hook (“De rette må finne deg. Så må de velge deg.”), complete-page arguments, section sequences, FAQ answers, educational examples, article explanations, price-by-agreement presentation and shared form/CTA phrasing. These are generated interpretations, including where informed by the seed.
+The initial implementation selected a new homepage hook (“De rette må finne deg. Så må de velge deg.”), complete-page arguments, section sequences, FAQ answers, educational examples, article explanations, price-by-agreement presentation and shared form/CTA phrasing. These were generated interpretations informed by the seed. H-001 subsequently reviewed/revised the complete homepage JSON and retained its hook; the remainder has not been promoted.
 
 Design priors suggested Instrument Sans/Figtree, comfortable Nordic presentation, controlled rounded shapes and prominent useful teaching. Implementation inferred their execution: warm cream `#f5f3ec`, forest green `#214f3e`, paper `#fffef9`, sage `#dce6d8`, apricot `#efc4a2`, ink `#223a30`; 1200px shell; headline weight/scale/spacing; lowercase wordmark with a custom arch/arrow symbol; rotated find/choose illustration cards; section/card/form treatments and responsive composition. These are exploratory visual choices, not an approved identity/system.
 
@@ -50,11 +50,13 @@ Proposed representative page: **the complete homepage `/`**, using `app/src/cont
 
 `/vurdering/` supports review of the form flow; it is not a second design-direction candidate. All other pages remain frozen. Homepage approval is scoped to the reviewed content/visual revision; each remaining page still needs appropriate content review before publication. Implementation revisions require a concrete inbound handoff.
 
+H-001 authorized exact homepage rendering and minimal necessary fit changes only. The single implementation adjustment at `e6261de` keeps existing space-grouped numbers together in `Leverage.astro` paragraph markup; no copy or visual-system changes were made. Fresh full-page 1440/390/320px and teaching captures are in `coordination/evidence/h001/`; see `REVIEW-QUEUE.md` for links and the pending R-03/R-04 requests.
+
 ## Unresolved dependencies
 
 | Dependency | Required role | Effect |
 | --- | --- | --- |
-| Complete homepage argument, offer/CTA boundaries, metadata, proof/certainty and shared wording review/lock | STRATEGY_CONTENT; OWNER for consequential offer choices | BLOCKS_CURRENT_GATE: content/direction review |
+| Shared/source-embedded wording and remaining page-specific content locks; consequential commercial choices outside reviewed homepage facts | STRATEGY_CONTENT; OWNER for material commercial decisions | Homepage JSON argument/CRO is COMPLETE under H-001/D-010. Other copy/decisions still block their affected publication scope; no expansion is authorized. |
 | Representative full-page desktop/mobile and material visible-brand acceptance | OWNER, informed by design/content and RED_TEAM | BLOCKS_CURRENT_GATE: visual direction and expansion |
 | Independent review of the exact representative revision and recorded verdict | RED_TEAM | BLOCKS_CURRENT_GATE: reviewed direction before scale |
 | Standard service inclusions/exclusions, public prices, onboarding economics, combination comparison, billing/commitment/cancellation and final terms | OWNER + STRATEGY_CONTENT | Blocks affected commercial locks and production; no invented prices/terms |
@@ -68,4 +70,4 @@ Proposed representative page: **the complete homepage `/`**, using `app/src/cont
 
 Before the original baseline push on 2026-10-08, `npm run verify` passed: Astro check (40 files, zero errors/warnings/hints), 16 tests, static build (15 content routes + 404), and audit of 454 internal links/anchors. Earlier browser QA recorded 40 checks; it was synthetic technical evidence, not business/content/visual acceptance. An earlier independent implementation red-team pass reported issues; fixes were regression-checked, but no final independent production/content/visual PASS has been received.
 
-Fresh coordination-revision validation is reported in `CODEX-TO-CHATGPT.md`. No real customer submission, live email/inbox test, production deployment, external analytics activation, content lock or owner visual approval is claimed. The protected `system/` and `project/` inputs remain unchanged.
+Fresh H-001 validation is reported in `CODEX-TO-CHATGPT.md`: Astro check/build, 17 tests, static audit of 454 links/anchors, 40 existing browser checks, focused 1440/390/320px exact-copy/fit/math/form checks and production guard passed. All 26 built files outside the homepage and all 144 protected reference files are byte-for-byte unchanged. No real customer submission, live email/inbox test, production deployment, external analytics activation or OWNER visual approval is claimed. Only the actual H-001 homepage JSON content/CRO lock is recorded; protected `system/` and `project/` inputs remain unchanged.
