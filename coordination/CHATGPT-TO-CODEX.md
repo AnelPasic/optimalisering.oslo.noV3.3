@@ -101,10 +101,11 @@ Import the exact evidence records from `coordination/H007-COMMERCIAL-INPUT.md`:
 - Nysta
 - Oslo Privatklinikk
 
-Both must remain:
+Both must remain during H-007:
 - `EVIDENCE_ONLY`
-- `NEEDS_PERMISSION`
-- non-rendering on public pages
+- `READY_FOR_STRATEGY_REVIEW`
+- `naming/publication permission = GRANTED`
+- non-rendering on public pages until ChatGPT/STRATEGY_CONTENT locks the exact public presentation
 
 Required model fields should support at minimum:
 - id
@@ -133,12 +134,12 @@ Do not create fake testimonials, fake logos or public anonymized claims in H-007
 
 Keep the homepage proof position in the established sequence.
 
-For now, because there is no PUBLISHABLE case:
+For now, although publication permission is confirmed, no exact public case presentation has yet been STRATEGY_CONTENT-locked:
 - do not render a fake proof card;
 - do not fill the space with generic praise;
 - it is acceptable for the public proof slot to remain omitted.
 
-The purpose of H-007 is to make the real proof data ready for later permission, not to manufacture visible proof.
+The purpose of H-007 is to make the real proof data ready for immediate STRATEGY_CONTENT selection after implementation, not to manufacture or prematurely publish raw registry claims.
 
 ### 6. Pages CMS
 
@@ -210,7 +211,7 @@ A later controlled propagation/content phase will decide:
 5. Ad-budget-extra rule is visible.
 6. No invented contract/term language appears.
 7. Free check states 3 key findings within 2 business days while retaining bounded/manual safeguards.
-8. Nysta and Oslo Privatklinikk exist as structured evidence-only records and render nowhere publicly.
+8. Nysta and Oslo Privatklinikk exist as structured evidence-only records with publication/name permission = GRANTED and render nowhere publicly until STRATEGY_CONTENT locks the exact public presentation.
 9. Automated tests prove proof cannot render without explicit publishability.
 10. Pages CMS exposes the intended homepage commercial fields and proof registry safely.
 11. Other 14 pages, `system/`, `project/` and backend/intake behavior remain unchanged.
