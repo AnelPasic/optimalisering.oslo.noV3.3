@@ -2,7 +2,7 @@
 
 Updated: 2026-10-08. Owner: Medon AS. Implementation repository: AnelPasic/optimalisering.oslo.noV3.3.
 
-**State: H-005B IMPLEMENTED; FORMAL RED_TEAM R-04 PASS UNDER D-017; OWNER R-03 PENDING; ALL OTHER PAGES FROZEN.** The simplified hero/outcome visual/selector direction is independently accepted as a representative baseline, but no scale-out or production approval follows until OWNER explicitly accepts R-03.
+**State: H-006 HOMEPAGE SPACING / COMPETENCE POLISH AUTHORIZED UNDER D-018; OWNER R-03 REMAINS REVISE; FORMAL R-04 MUST BE RE-RUN ON H-006; ALL OTHER PAGES FROZEN.** H-005B remains the strongest validated baseline, but OWNER wants more Storebrand-like airiness, more Mementor-like competence and a real-photo hero composition before representative acceptance.
 
 Original exploratory implementation: `a98dbaefbb10a9039c9b025e5c3907e83f24de8b`, pushed to `origin/main` on 2026-10-08. The coordination/draft-label revision follows that commit; use this file's Git history for its exact SHA. A push permits repository inspection; it does not authorize publication or live processing.
 
@@ -140,3 +140,26 @@ It should feel real-ish/productized, not like a stock photo, fake case, dense da
 ## H-005B current technical delivery
 
 Implementation/evidence 1d4bdf77bd234783b68a7f581bdb88ab6ef2af38 consumes b6d035a under D-015/D-016. Only hero/selector copy, hero markup/visual/styles and corresponding CMS/schema/QA changed. Final verify: 55 files without diagnostics, 24 tests, 449 links; 40 existing browser checks; focused 1440/390/320px and production guard pass. Hero heights fall from 607.64/799.42/824.34px to 476.03/665.59/677.80px. All lower DOM/computed styles and relative geometry are preserved across 207 elements per width; all 174 protected/frozen files match the fresh baseline. Six captures, reproducible baselines and a clean technical review are in evidence/h005b/. Generated support/visual wording remains draft. Main/Worker delivery is recorded in CODEX-TO-CHATGPT and its Git history. OWNER R-03 remains REVISE / awaiting this iteration’s verdict; formal RED_TEAM R-04 is ready and pending. No scale-out, real intake, launch or new content lock.
+
+
+## Current owner direction — D-018 / H-006
+
+This is a **visual polish pass, not a new redesign**.
+
+Keep:
+- H-005B page order and IA;
+- current hero H1/support/CTAs;
+- need selector structure;
+- calculator logic/layout intent;
+- package/mechanism/fit/check/provider/FAQ order;
+- Invite-derived palette and Instrument Sans/Figtree role split.
+
+Change:
+- homepage shell max width to 1440px on large screens;
+- increase whitespace and section breathing room materially;
+- keep text columns narrower than the shell;
+- reduce crowded/card-heavy feel;
+- strengthen typographic and compositional authority;
+- prepare a real-photo hero slot for a generated happy-customer image, replacing the current UI illustration.
+
+The final hero image is not yet supplied. H-006 should create the composition and asset slot cleanly without inventing or fetching a stock image.
