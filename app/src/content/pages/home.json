@@ -1,92 +1,162 @@
 {
   "slug": "home",
   "kind": "home",
-  "status": "REVIEW_REQUIRED",
-  "authority": "DRAFT / NON-AUTHORITATIVE",
+  "status": "CONTENT_LOCKED",
+  "authority": "CONTENT_LOCKED / AUTHORITATIVE",
   "seo": {
     "title": "Optimalisering Oslo – bli funnet og valgt | Medon",
-    "description": "Synlighet og konvertering for nettsider og nettbutikker. Få en gratis, manuell sjekk av hva Medon ville startet med, og hvorfor."
+    "description": "Vi hjelper bedrifter å bli funnet av relevante kunder og gjøre det enklere å ta kontakt eller kjøpe. Start med en gratis, manuell sjekk."
   },
   "eyebrow": "Optimalisering av nettsider og digital synlighet",
   "title": "De rette må finne deg. Så må de velge deg.",
-  "intro": "Vi hjelper bedrifter å bli funnet på nett og gjør veien til å ta kontakt eller kjøpe enklere. Først finner vi ut hvor det stopper: før besøket, på nettsiden – eller begge steder.",
+  "intro": "Vi hjelper bedrifter med to ting: bli funnet når kundene leter, og gjøre det enklere å ta kontakt eller kjøpe. Først finner vi hvor det stopper. Så jobber vi der det kan gi mest effekt.",
   "sections": [
     {
       "id": "flaskehals",
-      "eyebrow": "Hvor stopper det?",
-      "heading": "En god nettside trenger de rette besøkene. Besøkene trenger en god vei videre.",
+      "eyebrow": "Først: finn flaskehalsen",
+      "heading": "Flere besøk hjelper lite hvis feil ting stopper kunden.",
       "body": [
-        "Kundene kan søke etter det du tilbyr uten å finne deg. Eller de kan komme inn, lese litt og forlate siden uten å forstå hva de skal gjøre videre. Det er to ulike problemer.",
-        "Vi starter med begrensningen som ser mest relevant ut for bedriften. Flere besøk er lite verdt hvis de ikke passer. Flere henvendelser er lite verdt hvis de ikke kan bli kunder."
+        "Det kan stoppe før besøket: Kunden søker, men finner ikke siden din. Eller etter besøket: Kunden kommer inn, men forstår ikke tilbudet, finner ikke neste steg eller gir opp.",
+        "Vi starter ikke med en fast kanal eller en lang oppgaveliste. Vi starter med det som ser ut til å begrense veien til en relevant henvendelse eller et kjøp."
       ],
       "items": [
-        { "title": "De finner deg ikke", "text": "Undersøk om viktige søk og spørsmål leder til en tydelig side om det du tilbyr.", "href": "/synlighet/", "label": "Se Synlighet" },
-        { "title": "De går uten å velge", "text": "Undersøk om tilbudet er forståelig, og om kontakt, skjema eller kjøp skaper unødvendig friksjon.", "href": "/konvertering/", "label": "Se Konvertering" }
+        {
+          "title": "De finner deg ikke",
+          "text": "Da ser vi på hvordan de rette kundene søker, hvilke sider de møter, og om du er tydelig nok på det du faktisk tilbyr.",
+          "href": "/synlighet/",
+          "label": "Se Synlighet"
+        },
+        {
+          "title": "De finner deg, men går videre",
+          "text": "Da ser vi på tilbudet, budskapet og veien til kontakt eller kjøp. Målet er å fjerne unødvendig friksjon.",
+          "href": "/konvertering/",
+          "label": "Se Konvertering"
+        }
       ]
     },
     {
       "id": "regneeksempel",
-      "eyebrow": "Et enkelt regneeksempel",
-      "heading": "Samme trafikk kan gi et annet utgangspunkt.",
+      "eyebrow": "Hvorfor konvertering betyr så mye",
+      "heading": "1 % til 2 % gir dobbelt så mange henvendelser. Med samme trafikk.",
       "body": [
-        "1 000 relevante besøk × 1 % som tar kontakt = 10 henvendelser. Med de samme 1 000 besøkene og 2 % som tar kontakt blir regnestykket 20 henvendelser.",
-        "Dette er et illustrerende regneeksempel, ikke et kunderesultat eller et løfte om forbedring. Det viser hvorfor både trafikk og konvertering må undersøkes. Om henvendelsene er relevante, og hva de er verdt, avgjør om endringen er nyttig for bedriften."
+        "1 000 relevante besøk × 1 % = 10 henvendelser. 1 000 relevante besøk × 2 % = 20.",
+        "Det betyr ikke at vi kan love en dobling. Det viser hvorfor mer trafikk ikke alltid er første eller billigste grep. Kvaliteten på trafikken og verdien av henvendelsene avgjør hva som faktisk lønner seg."
       ],
-      "links": [ { "label": "Hva bør du optimalisere først?", "href": "/innsikt/hva-bor-optimaliseres-forst/" } ]
+      "links": [
+        {
+          "label": "Hva bør du optimalisere først?",
+          "href": "/innsikt/hva-bor-optimaliseres-forst/"
+        }
+      ]
     },
     {
       "id": "tjenester",
-      "eyebrow": "To tjenester. En tydelig prioritering.",
-      "heading": "Start med Synlighet, Konvertering eller begge.",
+      "eyebrow": "To hovedområder",
+      "heading": "Synlighet, Konvertering eller begge.",
       "body": [
-        "Arbeidet skal svare på behovet i bedriften. Du trenger ikke velge kanal eller lage en lang oppgaveliste før du tar kontakt."
+        "Du trenger ikke vite hvilken tjeneste du skal velge før du tar kontakt. Vi kan starte med å finne hvor veien til kunde stopper."
       ],
       "items": [
-        { "title": "Synlighet", "text": "For bedrifter som trenger å bli funnet av flere relevante kunder. SEO og AI-synlighet inngår i vurderingen av hvor det er nyttig å starte.", "href": "/synlighet/", "label": "Utforsk Synlighet" },
-        { "title": "Konvertering", "text": "For bedrifter som har besøk, men møter friksjon mellom interesse og henvendelse eller kjøp. Vi ser på budskap, sider og veien videre.", "href": "/konvertering/", "label": "Utforsk Konvertering" },
-        { "title": "Begge", "text": "Når både oppdagelse og veien til kunde trenger arbeid. Vi ser på sammenhengen og avtaler en samlet prioritering.", "href": "/priser/#begge", "label": "Se alternativene" }
+        {
+          "title": "Synlighet",
+          "text": "Når de rette kundene ikke finner deg. Vi ser blant annet på SEO og AI-synlighet, og prioriterer det som er mest relevant å starte med.",
+          "href": "/synlighet/",
+          "label": "Utforsk Synlighet"
+        },
+        {
+          "title": "Konvertering",
+          "text": "Når du har relevante besøk, men for få tar neste steg. Vi ser på budskap, sider, skjema og kjøpsvei der det er relevant.",
+          "href": "/konvertering/",
+          "label": "Utforsk Konvertering"
+        },
+        {
+          "title": "Begge",
+          "text": "Når både synlighet og nettsiden begrenser resultatet. Da ser vi på sammenhengen og prioriterer i riktig rekkefølge.",
+          "href": "/priser/#begge",
+          "label": "Se alternativene"
+        }
       ]
     },
     {
       "id": "sjekk",
-      "eyebrow": "En gratis sjekk. En tydelig start.",
-      "heading": "Send en lenke. Få en begrunnet retning.",
+      "eyebrow": "Gratis sjekk",
+      "heading": "Send oss nettsiden. Vi sier hvor vi ville startet.",
       "body": [
-        "Medon gjør en avgrenset, manuell vurdering av nettsiden eller nettbutikken. Vi gir kort veiledning om hva vi ville startet med, hvorfor, og om synlighet, konvertering eller begge bør komme først.",
-        "Sjekken er ikke en automatisk poengsum, full revisjon, komplett feilliste eller prognose. Du trenger bare en nettadresse og en e-postadresse for bedriften. Fortell gjerne hva du ønsker flere av: relevante henvendelser eller kjøp."
+        "Vi gjør en kort, manuell vurdering av nettsiden eller nettbutikken. Du får en begrunnelse for hva vi ville undersøkt eller forbedret først – synlighet, konvertering eller begge.",
+        "Ingen automatisk poengsum. Ingen rapport på 40 sider. Ingen lovnad om resultater vi ikke kan vite på forhånd. Du sender en lenke og e-postadressen din. Resten tar vi derfra."
       ],
       "items": [
-        { "title": "1. Del nettsiden", "text": "Send nettadressen og e-postadressen din. En kort forklaring av behovet er valgfri." },
-        { "title": "2. Vi ser på starten", "text": "Vi vurderer den offentlige nettsiden manuelt og peker på en mulig prioritering." },
-        { "title": "3. Velg veien videre", "text": "Eventuelt videre arbeid får avtalt omfang og pris. Den gratis sjekken inkluderer ikke gjennomføring." }
+        {
+          "title": "1. Send lenken",
+          "text": "Vi trenger nettsiden eller nettbutikken og en e-postadresse. En kort forklaring av behovet er valgfri."
+        },
+        {
+          "title": "2. Vi ser hvor det stopper",
+          "text": "Vi går gjennom den offentlige siden manuelt og peker ut en fornuftig start."
+        },
+        {
+          "title": "3. Du velger veien videre",
+          "text": "Hvis det er noe vi kan hjelpe med, avtaler vi omfang og pris før videre arbeid."
+        }
       ],
-      "links": [ { "label": "Ta en gratis sjekk", "href": "/vurdering/" } ]
+      "links": [
+        {
+          "label": "Ta en gratis sjekk",
+          "href": "/vurdering/"
+        }
+      ]
     },
     {
       "id": "arbeid",
-      "heading": "Vi undersøker, gjør avtalt arbeid og følger effekten.",
+      "heading": "Vi gjør avtalt arbeid. Så følger vi med på om det virker.",
       "body": [
-        "Optimalisering er et løpende arbeid. Medon prioriterer tiltak ut fra erfaring, behov og forventet kommersiell nytte innenfor det vi har avtalt.",
-        "For en tjenestebedrift er relevante henvendelser og kundene de blir til viktigere enn en pen trafikkteller. For en nettbutikk må kjøp ses sammen med ordreverdi, margin og kostnader. Målingen må passe bedriften.",
-        "Betalt synlighet kan være et nyttig tillegg når behov og økonomi tilsier det. Annonsebudsjett og aktuelle eksterne plattformkostnader kommer utenom tjenesteprisen hvis vi ikke uttrykkelig avtaler noe annet."
+        "Vi prioriterer tiltak etter forventet kommersiell effekt, ikke etter hvor lang oppgavelisten ser ut. Hva vi gjør, avhenger av hvor problemet ligger og hva vi har avtalt.",
+        "For en tjenestebedrift er relevante henvendelser og kundene de blir til viktigere enn en pen trafikkteller. For en nettbutikk må kjøp ses sammen med ordreverdi, margin og kostnader.",
+        "Betalt synlighet kan brukes når det gir mening. Annonsebudsjett og aktuelle eksterne plattformkostnader kommer i tillegg hvis vi ikke avtaler noe annet."
       ],
-      "links": [ { "label": "Slik kan du vurdere effekten", "href": "/innsikt/male-effekt-av-optimalisering/" }, { "label": "Har du nettbutikk?", "href": "/nettbutikkoptimalisering/" } ]
+      "links": [
+        {
+          "label": "Slik kan du vurdere effekten",
+          "href": "/innsikt/male-effekt-av-optimalisering/"
+        },
+        {
+          "label": "Har du nettbutikk?",
+          "href": "/nettbutikkoptimalisering/"
+        }
+      ]
     },
     {
       "id": "medon",
       "eyebrow": "Medon AS står bak",
       "heading": "Optimalisering Oslo er en tjeneste fra Medon.",
       "body": [
-        "Medon AS er eier og leverandør av Optimalisering Oslo. Tjenesten retter seg først mot norske bedrifter. Bedrifter i andre nordiske land kan også være aktuelle.",
-        "Du skal kunne forstå hva vi foreslår, hvorfor vi foreslår det, og hvilket arbeid som er avtalt. Vi lover verken en bestemt plassering, en AI-anbefaling eller et bestemt antall nye kunder."
+        "Medon AS leverer tjenesten. Vi jobber først og fremst med norske bedrifter, men kan også hjelpe bedrifter i andre nordiske land.",
+        "Du skal forstå hva vi foreslår, hvorfor vi foreslår det og hva som faktisk er avtalt. Vi lover ikke en bestemt Google-plassering, en AI-anbefaling eller et bestemt antall nye kunder."
       ],
-      "links": [ { "label": "Om leverandøren", "href": "/om/" } ]
+      "links": [
+        {
+          "label": "Om leverandøren",
+          "href": "/om/"
+        }
+      ]
     }
   ],
   "faq": [
-    { "question": "Må jeg vite hvilken tjeneste jeg trenger?", "answer": "Nei. Den gratis sjekken er ment å gi en begrunnet startretning. Du kan også lese om Synlighet og Konvertering før du sender nettsiden." },
-    { "question": "Er dette aktuelt for både nettsider og nettbutikker?", "answer": "Ja. Vi skiller mellom relevante henvendelser for tjenestebedrifter og kjøp som er nyttige for nettbutikken. Hva vi gjør, avhenger av behovet og avtalt omfang." },
-    { "question": "Hva koster videre arbeid?", "answer": "Omfang og pris må avtales. Du kan starte med Synlighet, Konvertering eller begge. Større eller andre behov vurderes særskilt." }
+    {
+      "question": "Må jeg vite hvilken tjeneste jeg trenger?",
+      "answer": "Nei. Den gratis sjekken er laget nettopp for å finne en fornuftig start. Det kan være Synlighet, Konvertering eller begge."
+    },
+    {
+      "question": "Er dette aktuelt for både nettsider og nettbutikker?",
+      "answer": "Ja. For tjenestebedrifter ser vi typisk på relevante henvendelser. For nettbutikker ser vi på veien til kjøp og hva kjøpene faktisk er verdt."
+    },
+    {
+      "question": "Hva koster videre arbeid?",
+      "answer": "Det avhenger av hva som skal gjøres og hvor stort omfanget er. Pris avtales før vi starter betalt arbeid."
+    }
   ],
-  "cta": { "label": "Ta en gratis sjekk", "href": "/vurdering/" }
+  "cta": {
+    "label": "Ta en gratis sjekk",
+    "href": "/vurdering/"
+  }
 }
