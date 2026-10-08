@@ -1,6 +1,6 @@
 # ChatGPT to Codex
 
-## Active handoff — H-008
+## Completed handoff — H-008
 
 **Date:** 2026-10-09  
 **Authority:** STRATEGY_CONTENT D-024 + OWNER/STRATEGY_CONTENT D-026  
@@ -173,6 +173,10 @@ Do not redesign or rewrite:
 - Stop for STRATEGY_CONTENT review of `/priser/`.
 
 Do not continue to service-page propagation without the next handoff.
+
+### Implementation receipt — no new approval
+
+2026-10-09, IMPLEMENTATION: incoming main **73ce60d8789ba0b44661ce5222adff53a4831127** consumed; implementation/local evidence **87a839216db412305337daae24c01858176db15e**. Both D-024 JSON records and authority/status fields are unchanged. Shared CMS homepage packages render both pages and bind repeated FAQ/metadata facts; only `/priser/` receives visual propagation. Exact homepage DOM/styles/geometry and all 182 frozen files match the pre-implementation baseline. Full verify (69 files, zero diagnostics; 34 tests; 445 links), 40 browser checks, real-Astro source regression and both routes at 1440/390/320 pass. Six required captures, CMS guide and technical review are in evidence/h008 and app/docs/h008-pricing-cms.md. Main/Worker receipt follows in CODEX-TO-CHATGPT.md. **Stop for STRATEGY_CONTENT R-06; no further implementation handoff is active.** D-025 proof stays non-public, other 13 pages and backend/reference inputs stay frozen, no production intake/launch or new role approval is inferred.
 
 
 ---

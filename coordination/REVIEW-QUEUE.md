@@ -1,6 +1,6 @@
 # Review queue
 
-State: H-007 STRATEGY_CONTENT COMMERCIAL PASS / H-008 /PRISER/ CONTROLLED PROPAGATION AUTHORIZED / PROOF PUBLICATION STILL BLOCKED BY MISSING CASE FACTS.
+State: H-008 IMPLEMENTED / STOP FOR STRATEGY_CONTENT R-06 / D-024 LOCK PRESERVED / PROOF PUBLICATION STILL BLOCKED BY MISSING CASE FACTS.
 
 | Order / ID | Scope | Responsible role | State / completion evidence |
 | --- | --- | --- | --- |
@@ -9,10 +9,18 @@ State: H-007 STRATEGY_CONTENT COMMERCIAL PASS / H-008 /PRISER/ CONTROLLED PROPAG
 | 3 / R-03 | Complete representative homepage `/`, spacing/composition, photo-led hero direction and desktop/mobile usability | OWNER, informed by DESIGN/STRATEGY_CONTENT | **PASS / COMPLETE under D-021.** Current H-006-derived visual/IA baseline, including owner color/selector tweaks, is accepted for continued commercial/content work. Cosmetic refinements may happen later without reopening the representative gate. |
 | 4 / R-04 | Independent commercial/content/visual review of the exact representative revision | RED_TEAM | **PASS / COMPLETE for H-006 under D-019 + selected-photo review under D-020.** Layout/spacing/IA pass; selected hero photo also passes authenticity/tone/crop/proof-implication review. Positioning caveat: boutique/e-commerce setting slightly narrows cross-industry perception. |
 | 5 / R-05 | H-007 commercial/content review | STRATEGY_CONTENT | **PASS / COMPLETE under D-024 after direct copy refinements.** Exact homepage commercial fields and pricing-page support copy are locked at the commits named in D-024. Proof publication is explicitly excluded. |
-| 6 / R-06 | First controlled propagation: `/priser/` visual + commercial consistency | STRATEGY_CONTENT + OWNER; IMPLEMENTATION receives | **OPEN / H-008 AUTHORIZED under D-026.** Reuse the accepted homepage visual system and a single package data source. Other 13 non-home pages remain frozen. |
+| 6 / R-06 | First controlled propagation: `/priser/` visual + commercial consistency | STRATEGY_CONTENT + OWNER; IMPLEMENTATION receives | **REVIEW REQUIRED / H-008 IMPLEMENTATION COMPLETE at 87a839216db412305337daae24c01858176db15e.** D-024 copy preserved; accepted homepage visual system and one CMS package source reused under D-026. Other 13 non-home pages remain frozen; no further implementation active. |
 | Later / R-07 | Privacy/processing operations, Resend delivery, persistent backend, CMS/Cloudflare/DNS/redirects, measurement/Search Console, final launch QA/authorization | OWNER / operations + IMPLEMENTATION + RED_TEAM | DEFERRED / BLOCKS LIVE USE (C-05, C-06). H-003 authorizes static web review only; no real intake or production launch is authorized. |
 
-## Current review packet — H-007 / STRATEGY_CONTENT
+## Current review packet — H-008 / STRATEGY_CONTENT R-06
+
+Implementation/evidence **87a839216db412305337daae24c01858176db15e**, consuming incoming main **73ce60d8789ba0b44661ce5222adff53a4831127**. D-024 home/priser JSON remains unchanged at its current authoritative revisions. [Pricing review URL](https://optimalisering-oslo-v33.anel.workers.dev/priser/); exact main/Worker verification receipt follows in CODEX-TO-CHATGPT.md. [Pricing 1440](evidence/h008/pricing-1440.png), [390](evidence/h008/pricing-390.png), [packages 1440](evidence/h008/packages-1440.png), [390](evidence/h008/packages-390.png), [unchanged home 1440](evidence/h008/home-1440.png), [390](evidence/h008/home-390.png), [checks](evidence/h008/checks.json), [source regression](evidence/h008/package-source-regression.json), [verification](evidence/h008/verification.txt), [technical review](evidence/h008/implementation-review.md), [notes](evidence/h008/README.md). CMS guide: app/docs/h008-pricing-cms.md.
+
+**STRATEGY_CONTENT R-06:** does the complete `/priser/` page express the locked package ladder, work scope, additional costs and bounded free-check promise clearly, in the accepted visual system? Review desktop/mobile as a whole and consistency with the preserved homepage. Record the exact reviewed revision/verdict and any scoped follow-up in DECISIONS and CHATGPT-TO-CODEX. Full verify, 40 browser checks, real-Astro source regression, both routes at 1440/390/320 and 182-file/homepage preservation pass; these technical results supply no role approval. D-025 proof remains hidden, authenticated CMS save stays a manual editor action, other 13 pages and production intake/launch remain frozen. **Stop after /priser/; do not continue to services without the next handoff.**
+
+## Historical review packet — H-007 / STRATEGY_CONTENT
+
+D-024 subsequently resolves this commercial review after direct content refinements. H-008 / R-06 above is the current review gate; the original request and evidence below are preserved history.
 
 Implementation/evidence: **fdcdaf84020ae4ecf8446806329b74cb3e4320d2**, consuming incoming main 7b98ff8184e7a8063682877b1edfcff3d4941f20. [Review URL](https://optimalisering-oslo-v33.anel.workers.dev); exact source/Worker receipt belongs in CODEX-TO-CHATGPT.md. [Packages 1440](evidence/h007/packages-1440.png), [390](evidence/h007/packages-390.png), [free check 1440](evidence/h007/free-check-1440.png), [390](evidence/h007/free-check-390.png), [responsive checks](evidence/h007/checks.json), [verification](evidence/h007/verification.txt), [renderer guard](evidence/h007/proof-renderer-guard.json), [technical review](evidence/h007/implementation-review.md), [notes](evidence/h007/README.md).
 
