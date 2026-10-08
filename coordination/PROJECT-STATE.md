@@ -2,7 +2,7 @@
 
 Updated: 2026-10-08. Owner: Medon AS. Implementation repository: AnelPasic/optimalisering.oslo.noV3.3.
 
-**State: H-006 SCOPED OWNER SELECTOR FOLLOW-UP IMPLEMENTED AT 7b7a970f301a1cb47dff7307a61f97175c5589d1; PRIOR FORMAL RED_TEAM LAYOUT/PHOTO PASSES UNDER D-019/D-020 PRESERVED; OWNER R-03 PENDING; ALL OTHER PAGES FROZEN.** Only 17px labels, supplied CMS-driven Synlighet X Konvertering text, progress icon and third-card colors change. D-019 reviews layout at 7e69c07; D-020 reviews the unchanged selected photo at dc04574 with a retail-positioning caveat. Neither verdict is fabricated for the selector delta. Fresh verification and responsive selector evidence pass. No further implementation is active; return to OWNER R-03.
+**State: OWNER R-03 REPRESENTATIVE BASELINE PASS UNDER D-021; H-007 COMMERCIAL / PROOF / CMS IMPLEMENTATION AUTHORIZED; REMAINING PAGE COPY/DESIGN STILL FROZEN.** Current homepage layout/IA/visual direction is accepted as the working representative baseline. Next work is to implement the reconfirmed V3 pricing ladder, proof registry safety model and CMS-editable commercial fields without reopening the visual system or inventing proof/terms.
 
 Original exploratory implementation: `a98dbaefbb10a9039c9b025e5c3907e83f24de8b`, pushed to `origin/main` on 2026-10-08. The coordination/draft-label revision follows that commit; use this file's Git history for its exact SHA. A push permits repository inspection; it does not authorize publication or live processing.
 
@@ -181,3 +181,15 @@ Final verify: 56 files with zero diagnostics, 24 tests, build and 449-link audit
 ## Current H-006 selected-photo follow-up
 
 dc045748180897c20efa418ac739b4135bf5e517 integrates OWNER-selected happycustomer.png as hero-customer.webp (81,652 bytes). Other originals/optimized options are preserved; only image 1 is rendered. homepage.heroPhoto.src remains /images/home/hero-customer.webp; CMS now provides a single-image picker using named media heroImages. Crop settings/defaults and all components/CSS/home JSON remain unchanged. All four H-006 geometry comparisons are exact. Fresh verify (56 diagnostics-free files, 24 tests, 449 links), 40 browser checks, responsive photo-fit checks/eight captures and 174-file preservation pass. Evidence is in evidence/h006-photo/. Actual desktop/mobile crops were visually inspected; concurrent genuine layout R-04 PASS under D-019 is preserved, with whole-page OWNER R-03 and its excluded-photo review pending. Authenticated CMS upload/save remains unverified. Generated imagery is illustrative, not proof of actual customers. No other-page, reference or backend work is authorized.
+
+
+## H-007 next phase
+
+R-03 is no longer the blocker. The next controlled phase is commercial implementation on the accepted homepage baseline.
+
+Authoritative inputs:
+- D-022 package/pricing lock
+- D-023 proof import safety
+- coordination/H007-COMMERCIAL-INPUT.md
+
+Do not use this phase to redesign the homepage or scale the draft content/design of the other 14 pages. Pages CMS/schema may be extended where necessary so ChatGPT/OWNER can refine commercial content directly after implementation.
