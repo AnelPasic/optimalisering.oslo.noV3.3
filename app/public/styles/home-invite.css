@@ -15,28 +15,22 @@
 .invite-home .section-space { padding-block: 72px; }
 .invite-home h2 { font-size: clamp(32px, 3.2vw, 46px); }
 .invite-home .eyebrow { font-size: 11px; letter-spacing: .055em; margin-bottom: 18px; }
-.invite-home .home-hero { grid-template-columns: 1.16fr 1fr; gap: 64px; padding-block: 54px; align-items: center; }
+.invite-home .home-hero { grid-template-columns: 1.45fr 1fr; gap: 64px; padding-block: 42px; align-items: center; }
 .invite-home .hero-copy .eyebrow { text-transform: none; letter-spacing: 0; font-size: 13px; display: flex; align-items: center; gap: 9px; margin-bottom: 18px; }
-.invite-home .home-hero h1 { font-size: 19px; line-height: 1.35; letter-spacing: -.02em; max-width: 540px; }
-.invite-home .hero-display { font-family: var(--heading); font-size: clamp(44px, 4.2vw, 60px); font-weight: 570; line-height: 1.05; letter-spacing: -.055em; margin-top: 20px; text-wrap: balance; }
-.invite-home .hero-display > span { display: block; }
-.invite-home .hero-emphasis { color: var(--green); }
-.invite-home .hero-intro { color: var(--muted); font-size: 17px; line-height: 1.6; margin-top: 24px; max-width: 530px; }
-.invite-home .hero-actions { margin-top: 26px; gap: 24px; }
-.invite-home .hero-note { font-size: 12px; color: var(--muted); margin-top: 14px; }
-.invite-home .journey-art { position: relative; padding: 26px; border-radius: 28px; background: #dceee7; min-height: 450px; overflow: visible; display: flex; flex-direction: column; }
-.invite-home .journey-top { position: static; font-size: 12px; color: #345c51; display: flex; justify-content: space-between; }
-.invite-home .journey-steps { display: grid; gap: 18px; padding-block: 26px; }
-.invite-home .journey-card { position: static; width: 80%; padding: 20px; border-radius: 20px; box-shadow: 0 18px 42px -24px #30223855; }
-.invite-home .journey-step-0 { background: white; transform: rotate(-3deg); }
-.invite-home .journey-step-1 { background: #087b73; color: white; transform: rotate(3deg); margin-left: auto; }
-.invite-home .journey-card-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
-.invite-home .journey-number { font-size: 11px; font-family: var(--body); border: 1px solid #30223833; width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; }
-.invite-home .journey-step-1 .journey-number { border-color: #ffffff66; }
-.invite-home .journey-card .home-symbol { width: 36px; height: 36px; }
-.invite-home .journey-label { display: block; font-family: var(--heading); font-size: 28px; font-weight: 550; line-height: 1.12; letter-spacing: -.035em; }
-.invite-home .journey-caption { display: block; margin-top: 10px; font-size: 12px; }
-.invite-home .journey-bottom { position: static; margin-top: auto; color: #345c51; font-size: 12px; display: flex; align-items: center; gap: 9px; }
+.invite-home .home-hero h1 { font-size: clamp(44px, 4vw, 56px); font-weight: 570; line-height: 1.06; letter-spacing: -.055em; max-width: 660px; }
+.invite-home .hero-emphasis { display: block; color: var(--green); }
+.invite-home .hero-intro { color: var(--muted); font-size: 17px; line-height: 1.6; margin-top: 22px; max-width: 620px; }
+.invite-home .hero-actions { margin-top: 24px; gap: 24px; }
+.invite-home .outcome-art { padding: 24px; border-radius: 24px; background: #e0f1e9; max-width: 460px; width: 100%; justify-self: end; font-family: var(--body); }
+.invite-home .outcome-search { display: flex; align-items: center; gap: 12px; background: white; border: 1px solid #c9ded4; border-radius: 24px; padding: 12px 16px; font-size: 13px; }
+.invite-home .outcome-art svg { width: 20px; height: 20px; flex-shrink: 0; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.invite-home .outcome-page { margin-top: 14px; padding: 22px; border: 1px solid #c9ded4; border-radius: 12px; background: white; }
+.invite-home .outcome-business { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--muted); }
+.invite-home .outcome-heading { display: block; font-family: var(--heading); font-size: 25px; font-weight: 550; line-height: 1.15; letter-spacing: -.03em; margin-top: 18px; }
+.invite-home .outcome-description { display: block; margin-top: 10px; max-width: 260px; font-size: 13px; line-height: 1.5; color: var(--muted); }
+.invite-home .outcome-action { display: inline-flex; align-items: center; gap: 22px; margin-top: 18px; border-radius: 5px; padding: 10px 14px; background: var(--green); color: white; font-size: 12px; }
+.invite-home .outcome-receipt { display: flex; align-items: center; gap: 10px; padding-top: 16px; margin-top: 20px; border-top: 1px solid var(--line); font-size: 13px; color: var(--green); }
+.invite-home .outcome-caption { display: block; margin-top: 10px; font-size: 10px; color: var(--muted); text-align: right; }
 .invite-home .need-section { background: white; padding-top: 52px; }
 .invite-home .need-grid, .invite-home .package-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 32px; }
 .invite-home .need-card { display: flex; flex-direction: column; padding: 28px; border-radius: 22px; background: #e0f1e9; text-decoration: none; border: 1px solid transparent; transition: border-color .15s; }
@@ -126,10 +120,7 @@
 @media (max-width: 900px) {
   .invite-home .home-hero, .invite-home .leverage-grid { grid-template-columns: 1fr; }
   .invite-home .hero-copy { max-width: 650px; }
-  .invite-home .journey-art { min-height: 0; }
-  .invite-home .journey-steps { grid-template-columns: 1fr 1fr; align-items: center; gap: 24px; }
-  .invite-home .journey-card { width: 100%; }
-  .invite-home .journey-step-1 { margin-left: 0; }
+  .invite-home .outcome-art { justify-self: start; }
   .invite-home .mechanism-steps { grid-template-columns: 1fr 1fr; }
   .invite-home .need-grid, .invite-home .package-grid { grid-template-columns: 1fr; }
   .invite-home .home-card-top { margin-bottom: 18px; }
@@ -140,24 +131,23 @@
   .invite-homepage .shell { width: calc(100% - 40px); }
   .invite-homepage .header-inner { min-height: 78px; }
   .invite-home .section-space { padding-block: 48px; }
-  .invite-home .home-hero { padding-block: 32px; gap: 28px; }
+  .invite-home .home-hero { padding-block: 28px; gap: 22px; }
   .invite-home .hero-copy .eyebrow { font-size: 12px; align-items: start; }
   .invite-home .hero-copy .small-dot { margin-top: 6px; }
-  .invite-home .home-hero h1 { font-size: 16px; line-height: 1.35; }
-  .invite-home .hero-display { font-size: clamp(34px, 9.5vw, 48px); line-height: 1.06; margin-top: 16px; }
+  .invite-home .home-hero h1 { font-size: clamp(34px, 9.5vw, 40px); line-height: 1.06; }
   .invite-home .hero-intro { font-size: 16px; margin-top: 18px; }
   .invite-home .hero-actions { margin-top: 22px; gap: 18px; }
+  .invite-home .outcome-art { padding: 12px; border-radius: 18px; }
+  .invite-home .outcome-search { padding: 6px 12px; font-size: 11px; }
+  .invite-home .outcome-page { padding: 14px; margin-top: 10px; }
+  .invite-home .outcome-heading { font-size: 21px; margin-top: 8px; }
+  .invite-home .outcome-description { font-size: 11px; margin-top: 6px; max-width: none; }
+  .invite-home .outcome-next { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 12px; }
+  .invite-home .outcome-next svg { width: 16px; height: 16px; }
+  .invite-home .outcome-action { margin-top: 0; padding: 8px; gap: 8px; font-size: 11px; }
+  .invite-home .outcome-receipt { margin-top: 0; padding-top: 0; border-top: 0; gap: 6px; font-size: 11px; }
+  .invite-home .outcome-caption { margin-top: 6px; }
   .invite-home .hero-actions .button { font-size: 14px; min-height: 52px; padding-inline: 18px; gap: 15px; }
-  .invite-home .hero-note { font-size: 11px; }
-  .invite-home .journey-art { border-radius: 20px; padding: 18px; }
-  .invite-home .journey-top, .invite-home .journey-bottom { font-size: 10px; }
-  .invite-home .journey-steps { gap: 12px; padding-block: 18px; }
-  .invite-home .journey-card { padding: 14px; border-radius: 14px; }
-  .invite-home .journey-card-top { margin-bottom: 10px; }
-  .invite-home .journey-number { width: 22px; height: 22px; font-size: 10px; }
-  .invite-home .journey-card .home-symbol { width: 24px; height: 24px; }
-  .invite-home .journey-label { font-size: 19px; }
-  .invite-home .journey-caption { font-size: 10px; margin-top: 9px; line-height: 1.4; }
   .invite-home h2 { font-size: 34px; }
   .invite-home .need-grid, .invite-home .package-grid { gap: 16px; margin-top: 26px; }
   .invite-home .need-card, .invite-home .package-card { padding: 25px; border-radius: 20px; }
@@ -186,15 +176,11 @@
   .invite-homepage .header-inner { min-height: 74px; }
   .invite-home .home-hero { padding-top: 26px; }
   .invite-home .hero-copy .eyebrow { font-size: 11px; }
-  .invite-home .home-hero h1 { font-size: 15px; }
-  .invite-home .hero-display { font-size: 33px; }
+  .invite-home .home-hero h1 { font-size: 33px; }
   .invite-home .hero-intro { font-size: 15px; }
   .invite-home .hero-actions { gap: 14px; }
   .invite-home .hero-actions .button { padding-inline: 14px; gap: 10px; }
   .invite-home .hero-actions .text-link { font-size: 14px; gap: 6px; }
-  .invite-home .journey-art { padding: 16px; }
-  .invite-home .journey-card { padding: 11px; }
-  .invite-home .journey-label { font-size: 17px; }
   .invite-home h2 { font-size: 31px; }
   .invite-home .need-card, .invite-home .package-card { padding: 22px; }
   .invite-home .leverage-tool { padding: 16px; }

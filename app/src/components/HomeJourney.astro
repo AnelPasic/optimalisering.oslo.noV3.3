@@ -1,14 +1,25 @@
 ---
-import HomeSymbol from './HomeSymbol.astro';
+import Arrow from './Arrow.astro';
 import type { CollectionEntry } from 'astro:content';
 interface Props { content: NonNullable<CollectionEntry<'pages'>['data']['homepage']>['illustration']; }
 const { content } = Astro.props;
 ---
-<div class="journey-art" role="img" aria-label={content.ariaLabel}>
-  <div class="journey-top"><span>{content.label}</span><span aria-hidden="true">↗</span></div>
-  <div class="journey-steps">{content.steps.map((step, index) => <div class={`journey-card journey-step-${index}`}>
-    <div class="journey-card-top"><span class="journey-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><HomeSymbol kind={index === 0 ? 'search' : 'choose'} /></div>
-    <span class="journey-label">{step.title}</span><span class="journey-caption">{step.caption}</span>
-  </div>)}</div>
-  <div class="journey-bottom"><span class="small-dot"></span><span>{content.footer}</span></div>
+<div class="outcome-art" role="img" aria-label={content.ariaLabel}>
+  <div class="outcome-search" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none"><circle cx="10.5" cy="10.5" r="6.5" /><path d="m15.5 15.5 5 5" /></svg>
+    <span>{content.search}</span>
+  </div>
+  <div class="outcome-page" aria-hidden="true">
+    <div class="outcome-business"><span class="small-dot"></span>{content.business}</div>
+    <span class="outcome-heading">{content.heading}</span>
+    <span class="outcome-description">{content.description}</span>
+    <div class="outcome-next">
+      <span class="outcome-action">{content.action}<Arrow diagonal /></span>
+      <div class="outcome-receipt">
+        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" /><path d="m7.5 12 3 3 6-6" /></svg>
+        <span>{content.outcome}</span>
+      </div>
+    </div>
+  </div>
+  <span class="outcome-caption" aria-hidden="true">{content.label}</span>
 </div>

@@ -4,7 +4,7 @@ import { resolve, relative } from 'node:path';
 import assert from 'node:assert/strict';
 
 const root = resolve('..');
-const output = resolve('qa-output/h004-baseline.json');
+const output = resolve(process.env.QA_BASELINE_FILE || 'qa-output/h004-baseline.json');
 const files = [];
 function collect(directory, include = () => true) {
   for (const entry of readdirSync(directory, { withFileTypes: true })) {
@@ -25,5 +25,5 @@ if (process.argv[2] === 'snapshot') {
   console.log(`Baseline: ${files.length} protected input, other-page content/HTML and shared CSS files.`);
 } else {
   assert.deepEqual(hashes, JSON.parse(readFileSync(output, 'utf8')), 'Frozen pages/reference inputs/shared CSS must stay byte-for-byte unchanged');
-  console.log(`Preservation PASS: ${files.length} files match the fresh pre-H-004 build.`);
+  console.log(`Preservation PASS: ${files.length} files match the fresh baseline build.`);
 }

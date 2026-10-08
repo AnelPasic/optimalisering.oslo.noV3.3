@@ -1,0 +1,6534 @@
+{
+  "320": {
+    "heroHeight": 824.34375,
+    "selectorY": 899.34375,
+    "lower": [
+      {
+        "id": "regneeksempel",
+        "elements": [
+          {
+            "geometry": [
+              0,
+              0,
+              320,
+              1067.578125
+            ],
+            "styleHash": "f2f6884713434e10a995773c484c234f1c7f9053cc737c9e636b3f9e20bef0a7"
+          },
+          {
+            "geometry": [
+              16,
+              48,
+              288,
+              971.578125
+            ],
+            "styleHash": "dcf63882dc1a677ac65e04c0f20e702a2d622db81201285fffeab2635c5ea67e"
+          },
+          {
+            "geometry": [
+              16,
+              48,
+              288,
+              343.84375
+            ],
+            "styleHash": "09264558cd96d7293963ec12205005be9df6a72ca83c1368668ce815614852e6"
+          },
+          {
+            "geometry": [
+              16,
+              48,
+              288,
+              16.5
+            ],
+            "styleHash": "b7994aa413498ff94feb40c6dd0e92d1c8d37368c899784bfd882388ca6854a6"
+          },
+          {
+            "geometry": [
+              16,
+              82.5,
+              288,
+              140.0625
+            ],
+            "styleHash": "06759c9d28a091210397ff1d7b5b8ef40ef482bb716dea5c74b74f61e8a9d6fd"
+          },
+          {
+            "geometry": [
+              16,
+              246.5625,
+              288,
+              76.5
+            ],
+            "styleHash": "bc941b9ee672e32b27e6b96e5ac1317d197f84f5c43247829c927b3f1214142f"
+          },
+          {
+            "geometry": [
+              16,
+              347.0625,
+              288,
+              44.78125
+            ],
+            "styleHash": "be61352efa52b4a86c004ab9a4af63116f81e4d10ee180c022775a626e43d863"
+          },
+          {
+            "geometry": [
+              16,
+              421.84375,
+              288,
+              597.734375
+            ],
+            "styleHash": "130536561cdd00d146a804b8d4a7640fce07930d3b6c5ceebc9213766f75535f"
+          },
+          {
+            "geometry": [
+              33,
+              438.84375,
+              254,
+              202.375
+            ],
+            "styleHash": "88e338e9520f2fcdb6ca3aa4d99a00ff28f738bd566f50c4180cdaa8f6676e9c"
+          },
+          {
+            "geometry": [
+              33,
+              438.84375,
+              121,
+              93.1875
+            ],
+            "styleHash": "b19c5014ae319359e6b168ffa7d68d5f63042e26906f79a3e141fcd392460ee3"
+          },
+          {
+            "geometry": [
+              33,
+              482.03125,
+              121,
+              50
+            ],
+            "styleHash": "2f142e875ccce3c1d93b6e7e740dcb4a88c3594577a2640c9d295bbc05656fe7"
+          },
+          {
+            "geometry": [
+              166,
+              438.84375,
+              121,
+              93.1875
+            ],
+            "styleHash": "b19c5014ae319359e6b168ffa7d68d5f63042e26906f79a3e141fcd392460ee3"
+          },
+          {
+            "geometry": [
+              166,
+              482.03125,
+              121,
+              50
+            ],
+            "styleHash": "2f142e875ccce3c1d93b6e7e740dcb4a88c3594577a2640c9d295bbc05656fe7"
+          },
+          {
+            "geometry": [
+              33,
+              548.03125,
+              121,
+              93.1875
+            ],
+            "styleHash": "b19c5014ae319359e6b168ffa7d68d5f63042e26906f79a3e141fcd392460ee3"
+          },
+          {
+            "geometry": [
+              33,
+              591.21875,
+              121,
+              50
+            ],
+            "styleHash": "2f142e875ccce3c1d93b6e7e740dcb4a88c3594577a2640c9d295bbc05656fe7"
+          },
+          {
+            "geometry": [
+              166,
+              548.03125,
+              121,
+              93.1875
+            ],
+            "styleHash": "b19c5014ae319359e6b168ffa7d68d5f63042e26906f79a3e141fcd392460ee3"
+          },
+          {
+            "geometry": [
+              166,
+              591.21875,
+              121,
+              50
+            ],
+            "styleHash": "2f142e875ccce3c1d93b6e7e740dcb4a88c3594577a2640c9d295bbc05656fe7"
+          },
+          {
+            "geometry": [
+              0,
+              -2172.03125,
+              0,
+              0
+            ],
+            "styleHash": "c2927d4b510c4df889c73c754cf32c42a746fb6e6e33ce1b215160e823ae7094"
+          },
+          {
+            "geometry": [
+              33,
+              665.21875,
+              254,
+              282.171875
+            ],
+            "styleHash": "a9d9fcfc0c7974020672832d25d0bc4ea1fc3fa5aa800fa8d562853ad4487a71"
+          },
+          {
+            "geometry": [
+              33,
+              665.21875,
+              254,
+              201.375
+            ],
+            "styleHash": "e2a2236aa8a21439d39ee821cce30c4ceb7a4b3e6e545d6b2e44e4db295074e5"
+          },
+          {
+            "geometry": [
+              33,
+              665.21875,
+              121,
+              201.375
+            ],
+            "styleHash": "05c69b153c16d844cd4d2b0c79bec65e356e17b431cdcb27907ca07453fba882"
+          },
+          {
+            "geometry": [
+              44,
+              681.21875,
+              29.046875,
+              20.796875
+            ],
+            "styleHash": "144288c4f343e3b7ea1dd0aa3970a09b3d956db309e1b1d91ed3bcb43b46d696"
+          },
+          {
+            "geometry": [
+              44,
+              716.015625,
+              52.5,
+              54
+            ],
+            "styleHash": "620d513f744df634e9c40d3dfda4d78dfa0e9a2dcbd5924ca47e6d2a23f8ceb1"
+          },
+          {
+            "geometry": [
+              44,
+              780.015625,
+              99,
+              35.1875
+            ],
+            "styleHash": "3d35fe851f3ccfc7fdc013e291f228b64bb7e102522d6e8d2e3160851c92b8e1"
+          },
+          {
+            "geometry": [
+              44,
+              828.203125,
+              72.046875,
+              22.390625
+            ],
+            "styleHash": "bd5627f0cbc9e33c9371e95e19c8453c7f623f9b30ee6c350e14c5f89003eb6d"
+          },
+          {
+            "geometry": [
+              166,
+              665.21875,
+              121,
+              201.375
+            ],
+            "styleHash": "acc1138efc56c3c707da42dfbeb30947c97e99480bd1d081a6bc39efcc51b2b9"
+          },
+          {
+            "geometry": [
+              177,
+              681.21875,
+              51.84375,
+              20.796875
+            ],
+            "styleHash": "d153d0614bf2bd4928870839333ddd1c724520a280c8defbf5f333c71afb7286"
+          },
+          {
+            "geometry": [
+              177,
+              717.609375,
+              63.234375,
+              54
+            ],
+            "styleHash": "d4ad9fa2b53d4433ef3db1355d2a73f6122dad69444e8271540158f02b439833"
+          },
+          {
+            "geometry": [
+              177,
+              783.21875,
+              99,
+              35.1875
+            ],
+            "styleHash": "3d35fe851f3ccfc7fdc013e291f228b64bb7e102522d6e8d2e3160851c92b8e1"
+          },
+          {
+            "geometry": [
+              177,
+              833,
+              57.5,
+              17.59375
+            ],
+            "styleHash": "03da5394c1fe82f1186d42f30726d4ee2da0333ea1632c58eafb101921237779"
+          },
+          {
+            "geometry": [
+              33,
+              886.59375,
+              254,
+              60.796875
+            ],
+            "styleHash": "8bc7d7c98a5df8567a6a73a7595e0b5af2ae87e0408f99caf10a6f05989f3a33"
+          },
+          {
+            "geometry": [
+              103.421875,
+              891.59375,
+              42.40625,
+              30
+            ],
+            "styleHash": "18f56006a00295fc1c37aecc1c33a60f9addd2551431d1e87a182ffd8c9044f4"
+          },
+          {
+            "geometry": [
+              33,
+              926.59375,
+              254,
+              20.796875
+            ],
+            "styleHash": "cf2b51122b6f225b23bd52733a6140f0a77bf7c68ac1c00e3d6421a76392b476"
+          },
+          {
+            "geometry": [
+              33,
+              965.390625,
+              254,
+              37.1875
+            ],
+            "styleHash": "2545edff96be38c077df4f56d86187310c9576b5994f81a1d91e61fbd5769469"
+          }
+        ],
+        "htmlHash": "81e927b2adc5e4896db49d236017afc5fd9044eb89461929476d62c831bd666d"
+      },
+      {
+        "id": "priser",
+        "elements": [
+          {
+            "geometry": [
+              0,
+              0,
+              320,
+              2169.875
+            ],
+            "styleHash": "39d868ea477660314bb82a9fbb7978b016e76a2998cd179f22ff0591ef9694b3"
+          },
+          {
+            "geometry": [
+              16,
+              48,
+              288,
+              2073.875
+            ],
+            "styleHash": "ec03644f3d9e5c6ef12637e574d73339563dbb51c26bd0a3723676f92efb2a6b"
+          },
+          {
+            "geometry": [
+              16,
+              48,
+              288,
+              241.109375
+            ],
+            "styleHash": "19245d7495d9fc52ab677222526d35946512ef6475f43861ad691baeec179648"
+          },
+          {
+            "geometry": [
+              16,
+              48,
+              288,
+              16.5
+            ],
+            "styleHash": "bde9555bcb8511fd2358cca8cfbec71be2f46ef1dbd1072f22ad02529aabd76b"
+          },
+          {
+            "geometry": [
+              16,
+              82.5,
+              288,
+              105.046875
+            ],
+            "styleHash": "4f974e44393785666043dbdd2ff78254e86f1d1c9cc37023eaa6f5fdd09f0113"
+          },
+          {
+            "geometry": [
+              16,
+              207.546875,
+              288,
+              81.5625
+            ],
+            "styleHash": "dc0ef70617738735a279b7b49d527fbd4d36b2886fc4c0224fcb612d748c5276"
+          },
+          {
+            "geometry": [
+              16,
+              315.109375,
+              288,
+              1806.765625
+            ],
+            "styleHash": "c7999a49c8b6e7e3b4c5a35802aeb240d58ee501efb0f8a3f9aed3428fc40b45"
+          },
+          {
+            "geometry": [
+              16,
+              315.109375,
+              288,
+              616.921875
+            ],
+            "styleHash": "c8cee0ecb901285fe86e3f2aa153fab9cc2c52fea98eae1ab1a336bb4a8ca559"
+          },
+          {
+            "geometry": [
+              39,
+              338.109375,
+              242,
+              38.390625
+            ],
+            "styleHash": "d7c0c9b822ca00ad01ef27ec2b1cd87e1529ef2ae216762bf43d2e44959d9751"
+          },
+          {
+            "geometry": [
+              39,
+              400.5,
+              242,
+              254.375
+            ],
+            "styleHash": "340fc9982e94970b55b6b8d898c1a3f24e189f8d19771d7a735c16ad0f8ecb46"
+          },
+          {
+            "geometry": [
+              39,
+              400.5,
+              242,
+              19.1875
+            ],
+            "styleHash": "66b6d840240c993f084cd4703038dbdf6ea2e471b12840a661d9334e0d825821"
+          },
+          {
+            "geometry": [
+              39,
+              425.6875,
+              242,
+              48
+            ],
+            "styleHash": "e525e3df61e97960437e2b979b0ef1b9d03015af73fd030a06a998e02f9e4ecc"
+          },
+          {
+            "geometry": [
+              39,
+              491.6875,
+              242,
+              19.1875
+            ],
+            "styleHash": "66b6d840240c993f084cd4703038dbdf6ea2e471b12840a661d9334e0d825821"
+          },
+          {
+            "geometry": [
+              39,
+              516.875,
+              242,
+              120
+            ],
+            "styleHash": "464f31386420721364859e75ec6fa1fc39a699342097467c2ae388f540151df1"
+          },
+          {
+            "geometry": [
+              39,
+              678.875,
+              242,
+              150.15625
+            ],
+            "styleHash": "1249d38af32d237f772e2b5a99fcd00bdbb4e0ad1ee79af5295b80c56dec3350"
+          },
+          {
+            "geometry": [
+              39,
+              699.875,
+              242,
+              57.59375
+            ],
+            "styleHash": "cc847af7ae0050f9c66aa0d84612fb7a577511e2efb25551e147c33b8fbc6ca4"
+          },
+          {
+            "geometry": [
+              39,
+              771.46875,
+              242,
+              57.5625
+            ],
+            "styleHash": "efcfbb10502eb2395bb1dd4c2df6c97b6a01cfbb392c30fc59e1eff050a2d0b6"
+          },
+          {
+            "geometry": [
+              39,
+              853.03125,
+              177.359375,
+              56
+            ],
+            "styleHash": "0c1b195482bd0d611cd621a8bccf6d46a7b24121b9da4a19492352c873dc336e"
+          },
+          {
+            "geometry": [
+              179.359375,
+              871.03125,
+              20,
+              20
+            ],
+            "styleHash": "7066c802f409d25643fe76c01d3daf8c1f7d37baa560df4ece714cd504276bdd"
+          },
+          {
+            "geometry": [
+              184.359375,
+              876.03125,
+              10,
+              10
+            ],
+            "styleHash": "3721c9cc7441ab47babc1e5c884a3468dfe34cbe5692a833ff58febbc107a8c5"
+          },
+          {
+            "geometry": [
+              16,
+              948.03125,
+              288,
+              588.921875
+            ],
+            "styleHash": "4ecfe74da0777d30360aa00f19cb5059224761d3a88a616f3334a84c7c5fc7e9"
+          },
+          {
+            "geometry": [
+              39,
+              971.03125,
+              242,
+              38.390625
+            ],
+            "styleHash": "d7c0c9b822ca00ad01ef27ec2b1cd87e1529ef2ae216762bf43d2e44959d9751"
+          },
+          {
+            "geometry": [
+              39,
+              1033.421875,
+              242,
+              230.375
+            ],
+            "styleHash": "1c01afc6dc19875df3e5ee55ed28c94c36ed8ef7afa0f6892dd9a0d7e124c645"
+          },
+          {
+            "geometry": [
+              39,
+              1033.421875,
+              242,
+              19.1875
+            ],
+            "styleHash": "66b6d840240c993f084cd4703038dbdf6ea2e471b12840a661d9334e0d825821"
+          },
+          {
+            "geometry": [
+              39,
+              1058.609375,
+              242,
+              48
+            ],
+            "styleHash": "e525e3df61e97960437e2b979b0ef1b9d03015af73fd030a06a998e02f9e4ecc"
+          },
+          {
+            "geometry": [
+              39,
+              1124.609375,
+              242,
+              19.1875
+            ],
+            "styleHash": "66b6d840240c993f084cd4703038dbdf6ea2e471b12840a661d9334e0d825821"
+          },
+          {
+            "geometry": [
+              39,
+              1149.796875,
+              242,
+              96
+            ],
+            "styleHash": "f54af4789bb907b9886b4ce1cda5a8933b790532ca2afcc66a0fdc1b48db95a3"
+          },
+          {
+            "geometry": [
+              39,
+              1287.796875,
+              242,
+              130.96875
+            ],
+            "styleHash": "77c5b36f215ef5f73487811244e88cfef516038818e073c61ca4d6cf6998b139"
+          },
+          {
+            "geometry": [
+              39,
+              1308.796875,
+              242,
+              57.59375
+            ],
+            "styleHash": "cc847af7ae0050f9c66aa0d84612fb7a577511e2efb25551e147c33b8fbc6ca4"
+          },
+          {
+            "geometry": [
+              39,
+              1380.390625,
+              242,
+              38.375
+            ],
+            "styleHash": "c500ecd70ee8b104d4020da9497ce935da57da4b44c227e4c0fa3d106973681c"
+          },
+          {
+            "geometry": [
+              39,
+              1442.765625,
+              242,
+              71.1875
+            ],
+            "styleHash": "7f0ea41f63d20be070b0674a704ce1502b908f071c174fb282c5966204af9747"
+          },
+          {
+            "geometry": [
+              244,
+              1468.359375,
+              20,
+              20
+            ],
+            "styleHash": "7066c802f409d25643fe76c01d3daf8c1f7d37baa560df4ece714cd504276bdd"
+          },
+          {
+            "geometry": [
+              249,
+              1473.359375,
+              10,
+              10
+            ],
+            "styleHash": "3721c9cc7441ab47babc1e5c884a3468dfe34cbe5692a833ff58febbc107a8c5"
+          },
+          {
+            "geometry": [
+              16,
+              1552.953125,
+              288,
+              568.921875
+            ],
+            "styleHash": "36496fdad682c9eb839ecedd3ba9c7f1fb3ea6f870e8a0e6743c465a1956416a"
+          },
+          {
+            "geometry": [
+              39,
+              1575.953125,
+              242,
+              38.390625
+            ],
+            "styleHash": "d7c0c9b822ca00ad01ef27ec2b1cd87e1529ef2ae216762bf43d2e44959d9751"
+          },
+          {
+            "geometry": [
+              39,
+              1638.34375,
+              242,
+              206.375
+            ],
+            "styleHash": "cfc631b55508c9d277d9afd55a55bc22f6f0d547a6bdadb5d820ee2a737f2b0d"
+          },
+          {
+            "geometry": [
+              39,
+              1638.34375,
+              242,
+              19.1875
+            ],
+            "styleHash": "66b6d840240c993f084cd4703038dbdf6ea2e471b12840a661d9334e0d825821"
+          },
+          {
+            "geometry": [
+              39,
+              1663.53125,
+              242,
+              48
+            ],
+            "styleHash": "e525e3df61e97960437e2b979b0ef1b9d03015af73fd030a06a998e02f9e4ecc"
+          },
+          {
+            "geometry": [
+              39,
+              1729.53125,
+              242,
+              19.1875
+            ],
+            "styleHash": "66b6d840240c993f084cd4703038dbdf6ea2e471b12840a661d9334e0d825821"
+          },
+          {
+            "geometry": [
+              39,
+              1754.71875,
+              242,
+              72
+            ],
+            "styleHash": "83f34f297fbf282987e50df2eb425ef030f2fd8becfd226502df803e1598ba6f"
+          },
+          {
+            "geometry": [
+              39,
+              1868.71875,
+              242,
+              150.15625
+            ],
+            "styleHash": "1249d38af32d237f772e2b5a99fcd00bdbb4e0ad1ee79af5295b80c56dec3350"
+          },
+          {
+            "geometry": [
+              39,
+              1889.71875,
+              242,
+              57.59375
+            ],
+            "styleHash": "cc847af7ae0050f9c66aa0d84612fb7a577511e2efb25551e147c33b8fbc6ca4"
+          },
+          {
+            "geometry": [
+              39,
+              1961.3125,
+              242,
+              57.5625
+            ],
+            "styleHash": "efcfbb10502eb2395bb1dd4c2df6c97b6a01cfbb392c30fc59e1eff050a2d0b6"
+          },
+          {
+            "geometry": [
+              39,
+              2042.875,
+              204.125,
+              56
+            ],
+            "styleHash": "4aaf37bd199bf1a4d32f17d75fe29e1ade53ccf854492d4dfc305d4468b6b853"
+          },
+          {
+            "geometry": [
+              206.125,
+              2060.875,
+              20,
+              20
+            ],
+            "styleHash": "7066c802f409d25643fe76c01d3daf8c1f7d37baa560df4ece714cd504276bdd"
+          },
+          {
+            "geometry": [
+              211.125,
+              2065.875,
+              10,
+              10
+            ],
+            "styleHash": "3721c9cc7441ab47babc1e5c884a3468dfe34cbe5692a833ff58febbc107a8c5"
+          }
+        ],
+        "htmlHash": "fb1e60f50f5539282e1274af612ca28a790acd84e1e8240e9f8519a1243ed130"
+      },
+      {
+        "id": "mekanisme",
+        "elements": [
+          {
+            "geometry": [
+              0,
+              0,
+              320,
+              1167.5
+            ],
+            "styleHash": "1d2253d14ffe9264af59f6caba5809fe967c2fee44e34e3b9576be9e71abeafd"
+          },
+          {
+            "geometry": [
+              16,
+              48,
+              288,
+              1071.5
+            ],
+            "styleHash": "8765122fe22d20be0e435da161ba984694052c6d508afab494bee3f4532a72d3"
+          },
+          {
+            "geometry": [
+              16,
+              48,
+              288,
+              210.09375
+            ],
+            "styleHash": "50d1d0044cbfbe56b4ce518bf8967e96cff6c69452538555049b48e97ec7017e"
+          },
+          {
+            "geometry": [
+              16,
+              48,
+              288,
+              104.53125
+            ],
+            "styleHash": "2a5d7946c8054982d3d9d9af5ba5aac515621417eec8eb18f56bf0a6f852e70c"
+          },
+          {
+            "geometry": [
+              16,
+              48,
+              288,
+              16.5
+            ],
+            "styleHash": "bde9555bcb8511fd2358cca8cfbec71be2f46ef1dbd1072f22ad02529aabd76b"
+          },
+          {
+            "geometry": [
+              16,
+              82.5,
+              288,
+              70.03125
+            ],
+            "styleHash": "66046bf6cbe480a2b28b5842bb86d36b9a72106474a47b657ff21cac602e0314"
+          },
+          {
+            "geometry": [
+              16,
+              176.53125,
+              288,
+              81.5625
+            ],
+            "styleHash": "38eae1808a9807d5aa47922b2b3805c68c7e6bc2687d054838a4d3cbb98de9bb"
+          },
+          {
+            "geometry": [
+              16,
+              176.53125,
+              288,
+              81.5625
+            ],
+            "styleHash": "5a0c15cf48c5ea49c477330485bc6d1ced706d0f86794329b6917d9627258e07"
+          },
+          {
+            "geometry": [
+              16,
+              290.09375,
+              288,
+              829.40625
+            ],
+            "styleHash": "991e78e91ca1ec0139503f1b86156d774557482395493e324a6e8c51a45c7aa5"
+          },
+          {
+            "geometry": [
+              16,
+              290.09375,
+              288,
+              180.578125
+            ],
+            "styleHash": "10936e7419855d573de3b2f664e4a7fb6bef889ffb333ea359a493bd10e4885a"
+          },
+          {
+            "geometry": [
+              16,
+              290.09375,
+              42,
+              42
+            ],
+            "styleHash": "d64ccf2cbd3042daf21c74a15bc0a00debc1b55156dc030f24f8355f5e8d9f70"
+          },
+          {
+            "geometry": [
+              16,
+              352.09375,
+              164.796875,
+              26.390625
+            ],
+            "styleHash": "90516b345458903a40d540364cd92bca1f80a8ecbd6b222c1e7a831715d950c6"
+          },
+          {
+            "geometry": [
+              16,
+              408.484375,
+              288,
+              46.1875
+            ],
+            "styleHash": "446e1d286d25f76ad3849ce635b2676d49af298fe0816e8fa22c843373281125"
+          },
+          {
+            "geometry": [
+              16,
+              498.671875,
+              288,
+              180.578125
+            ],
+            "styleHash": "10936e7419855d573de3b2f664e4a7fb6bef889ffb333ea359a493bd10e4885a"
+          },
+          {
+            "geometry": [
+              16,
+              498.671875,
+              42,
+              42
+            ],
+            "styleHash": "d64ccf2cbd3042daf21c74a15bc0a00debc1b55156dc030f24f8355f5e8d9f70"
+          },
+          {
+            "geometry": [
+              16,
+              560.671875,
+              129.765625,
+              26.390625
+            ],
+            "styleHash": "194398de5e15acf20c0f43209ce399c18f0637a67491240d043631fd38fe326a"
+          },
+          {
+            "geometry": [
+              16,
+              617.0625,
+              288,
+              46.1875
+            ],
+            "styleHash": "446e1d286d25f76ad3849ce635b2676d49af298fe0816e8fa22c843373281125"
+          },
+          {
+            "geometry": [
+              16,
+              707.25,
+              288,
+              180.578125
+            ],
+            "styleHash": "10936e7419855d573de3b2f664e4a7fb6bef889ffb333ea359a493bd10e4885a"
+          },
+          {
+            "geometry": [
+              16,
+              707.25,
+              42,
+              42
+            ],
+            "styleHash": "d64ccf2cbd3042daf21c74a15bc0a00debc1b55156dc030f24f8355f5e8d9f70"
+          },
+          {
+            "geometry": [
+              16,
+              769.25,
+              116.328125,
+              26.390625
+            ],
+            "styleHash": "36525019940ab7740766f5db236db06060461f5ea08cfebc81600dd55f8d4f28"
+          },
+          {
+            "geometry": [
+              16,
+              825.640625,
+              288,
+              46.1875
+            ],
+            "styleHash": "446e1d286d25f76ad3849ce635b2676d49af298fe0816e8fa22c843373281125"
+          },
+          {
+            "geometry": [
+              16,
+              915.828125,
+              288,
+              203.671875
+            ],
+            "styleHash": "5b69bbf777c13a49e2bb68724e60c5bb88253a995a75be2dc615ca87d835c023"
+          },
+          {
+            "geometry": [
+              16,
+              915.828125,
+              42,
+              42
+            ],
+            "styleHash": "d64ccf2cbd3042daf21c74a15bc0a00debc1b55156dc030f24f8355f5e8d9f70"
+          },
+          {
+            "geometry": [
+              16,
+              977.828125,
+              95.796875,
+              26.390625
+            ],
+            "styleHash": "bff75183fc01fd05b94cf25fa475ae05dea08c37f17d2ced8352ab3c0c9b8bd1"
+          },
+          {
+            "geometry": [
+              16,
+              1034.21875,
+              288,
+              69.28125
+            ],
+            "styleHash": "53405217d38633df9a76f1f5e932f65978136321088fb076d4d09614b00a0970"
+          }
+        ],
+        "htmlHash": "04d7dbb5641e95f763fc8aea753724948ff004ba27968631177a6a315dfc94a2"
+      },
+      {
+        "id": "passer",
+        "elements": [
+          {
+            "geometry": [
+              0,
+              0,
+              320,
+              748.296875
+            ],
+            "styleHash": "7f0b8515ca0437fc4e0aeeec636a86d17dd6d48d2e8411c0fb49fb0b359d81a7"
+          },
+          {
+            "geometry": [
+              16,
+              48,
+              288,
+              652.296875
+            ],
+            "styleHash": "965dc3da25d25487c4e48fd562cf82c842a48abe91b4de658a853a36b113c5cc"
+          },
+          {
+            "geometry": [
+              16,
+              48,
+              288,
+              139.546875
+            ],
+            "styleHash": "b7aa4bca453f38d239c904fe8079552169742ef450263b9284cba5a4f2d04b24"
+          },
+          {
+            "geometry": [
+              16,
+              48,
+              288,
+              139.546875
+            ],
+            "styleHash": "0e33fb18ed76126954a3116f13742c0606cfe88c380379db9ff01addfb300392"
+          },
+          {
+            "geometry": [
+              16,
+              48,
+              288,
+              16.5
+            ],
+            "styleHash": "bde9555bcb8511fd2358cca8cfbec71be2f46ef1dbd1072f22ad02529aabd76b"
+          },
+          {
+            "geometry": [
+              16,
+              82.5,
+              288,
+              105.046875
+            ],
+            "styleHash": "4f974e44393785666043dbdd2ff78254e86f1d1c9cc37023eaa6f5fdd09f0113"
+          },
+          {
+            "geometry": [
+              16,
+              187.546875,
+              288,
+              0
+            ],
+            "styleHash": "c86f20ab9b93c26933d40667fb4e506069d3210f918361fe313de28ac7eac85c"
+          },
+          {
+            "geometry": [
+              16,
+              215.546875,
+              288,
+              484.75
+            ],
+            "styleHash": "f817e13d1439e8efef120065a60866ea0216727deef79edf9afc7b6653c758d7"
+          },
+          {
+            "geometry": [
+              16,
+              215.546875,
+              288,
+              247.75
+            ],
+            "styleHash": "80aea631b6b0a4167b8480ae104ef62de02c8a3002294dc7d3d241d5a8962c85"
+          },
+          {
+            "geometry": [
+              40,
+              239.546875,
+              193.28125,
+              30
+            ],
+            "styleHash": "96943c8fed521039f82470cfc20e0ca3e8a90d3638ba47d3dbf8e353589ed7e3"
+          },
+          {
+            "geometry": [
+              40,
+              299.546875,
+              240,
+              123.75
+            ],
+            "styleHash": "1bc195e8465fabb2818d20fb0bc5c1d65688f5b134f689899a3d0de41d184de2"
+          },
+          {
+            "geometry": [
+              16,
+              477.296875,
+              288,
+              223
+            ],
+            "styleHash": "a9a92a8f9e6896e18f61f8bbe1df39113c3cb345cb4dcfddbb79d6a9d2aabd41"
+          },
+          {
+            "geometry": [
+              40,
+              501.296875,
+              202.71875,
+              30
+            ],
+            "styleHash": "cc88799f91cd38d4f0e70bd8e15fd93d7571ff7c51c63a492781e4aefa32641d"
+          },
+          {
+            "geometry": [
+              40,
+              561.296875,
+              240,
+              99
+            ],
+            "styleHash": "af1107a59a16fe47bdc79b59d454631025bb6bfccb71d0d2521c64f05a49709c"
+          }
+        ],
+        "htmlHash": "39a1c6ccdeb128c227dd08b9570e8d03b5d146a590f51e6d73132139261872e7"
+      },
+      {
+        "id": "sjekk",
+        "elements": [
+          {
+            "geometry": [
+              0,
+              0,
+              320,
+              1276.671875
+            ],
+            "styleHash": "43023e706ea48336e543734d7a0d3c490f0c2866fef42fa2160aad77d63b909c"
+          },
+          {
+            "geometry": [
+              16,
+              48,
+              288,
+              1180.671875
+            ],
+            "styleHash": "9b94284d599af49c0e384e12a5e567597e54896da5fcc46001a962738cef13cd"
+          },
+          {
+            "geometry": [
+              16,
+              48,
+              288,
+              470.375
+            ],
+            "styleHash": "e6af01086c29ad53b670f474508f276631a23731176f42be2f3bbcc4721eec1a"
+          },
+          {
+            "geometry": [
+              16,
+              48,
+              288,
+              16.5
+            ],
+            "styleHash": "bde9555bcb8511fd2358cca8cfbec71be2f46ef1dbd1072f22ad02529aabd76b"
+          },
+          {
+            "geometry": [
+              16,
+              82.5,
+              288,
+              180.75
+            ],
+            "styleHash": "9ec605fc209ce262ed54772b9e06a7a2e8fb0dbeaddd8b3edf29a3837f6abbeb"
+          },
+          {
+            "geometry": [
+              16,
+              285.25,
+              288,
+              79.171875
+            ],
+            "styleHash": "d916eaedb1ca8a82de4bed5037fbe0cce5199eb60733d251d35c70cda9dfb945"
+          },
+          {
+            "geometry": [
+              16,
+              386.421875,
+              288,
+              131.953125
+            ],
+            "styleHash": "378110883d071bc8e13477b07f9e43511652003a61d9c58a283334a0b1661cdb"
+          },
+          {
+            "geometry": [
+              16,
+              542.375,
+              288,
+              686.296875
+            ],
+            "styleHash": "9b503d9ae8ae8bf57cc1da0d909e478659c24fca570da35a30ccd375e2fd27a1"
+          },
+          {
+            "geometry": [
+              39,
+              565.375,
+              242,
+              33.59375
+            ],
+            "styleHash": "d96c9c3a56be03e532e9ae3bd0190c9f0419b21eebdc02f86c5027c0d7be317e"
+          },
+          {
+            "geometry": [
+              39,
+              565.375,
+              242,
+              33.59375
+            ],
+            "styleHash": "11245bcd1baeafce7457c51cd977a41e3dfcc482ab16002d96f27b21827472df"
+          },
+          {
+            "geometry": [
+              39,
+              625.96875,
+              242,
+              20.796875
+            ],
+            "styleHash": "c361b29b35915d6d861f350c489b72a8113fdd6acb1a08c61e34c70f33abe7ae"
+          },
+          {
+            "geometry": [
+              185.796875,
+              627.96875,
+              6.296875,
+              15
+            ],
+            "styleHash": "e3670e5e364e6aa6509b99e9a9bf4127a34b52a746e450b3b9670ead32044547"
+          },
+          {
+            "geometry": [
+              39,
+              653.765625,
+              242,
+              51.59375
+            ],
+            "styleHash": "363e5b3fa01a47ceb025709d7e636e7f05e8010ea5655da70c3f04269984c522"
+          },
+          {
+            "geometry": [
+              39,
+              721.359375,
+              242,
+              20.796875
+            ],
+            "styleHash": "c361b29b35915d6d861f350c489b72a8113fdd6acb1a08c61e34c70f33abe7ae"
+          },
+          {
+            "geometry": [
+              81.578125,
+              723.359375,
+              6.296875,
+              15
+            ],
+            "styleHash": "e3670e5e364e6aa6509b99e9a9bf4127a34b52a746e450b3b9670ead32044547"
+          },
+          {
+            "geometry": [
+              39,
+              749.15625,
+              242,
+              51.59375
+            ],
+            "styleHash": "363e5b3fa01a47ceb025709d7e636e7f05e8010ea5655da70c3f04269984c522"
+          },
+          {
+            "geometry": [
+              39,
+              816.75,
+              242,
+              20.796875
+            ],
+            "styleHash": "c361b29b35915d6d861f350c489b72a8113fdd6acb1a08c61e34c70f33abe7ae"
+          },
+          {
+            "geometry": [
+              240.671875,
+              816.75,
+              40.328125,
+              17.59375
+            ],
+            "styleHash": "3c68808b7c75097c306d5956be9b0efa3ec2241104dc50c7f5fc7f297a9f4dcd"
+          },
+          {
+            "geometry": [
+              39,
+              844.546875,
+              242,
+              102.78125
+            ],
+            "styleHash": "9c79c18608c82d4e10326484fd962a721fb2c523083f2bf69717f93fc962578a"
+          },
+          {
+            "geometry": [
+              39,
+              967.921875,
+              242,
+              35.1875
+            ],
+            "styleHash": "b7a0eccbe5946ad8ca1f8343c336b51ead688ab4c21ba6a8cfe459f62fb409d9"
+          },
+          {
+            "geometry": [
+              39,
+              1021.109375,
+              242,
+              58.375
+            ],
+            "styleHash": "1007d8cf06ad293df58ef0b068a06ebdad15ba0ef6d9073cdbe3705ba682e8ba"
+          },
+          {
+            "geometry": [
+              39,
+              1101.484375,
+              242,
+              56
+            ],
+            "styleHash": "1ded2fd6b0b514b72e3a56248f7aac20258808fead01fb14a72bf1205aeab4a1"
+          },
+          {
+            "geometry": [
+              235,
+              1119.484375,
+              20,
+              20
+            ],
+            "styleHash": "c79b2e5c58f797148c903322a54e82cffdcb288bfa38b49b2d388ad7f1a8993e"
+          },
+          {
+            "geometry": [
+              240,
+              1124.484375,
+              10,
+              10
+            ],
+            "styleHash": "8d96d4bdef8c5069d39b20a07af3ea1798997d662fff43865d77994f53e11664"
+          },
+          {
+            "geometry": [
+              39,
+              1170.484375,
+              242,
+              35.1875
+            ],
+            "styleHash": "b7a0eccbe5946ad8ca1f8343c336b51ead688ab4c21ba6a8cfe459f62fb409d9"
+          },
+          {
+            "geometry": [
+              111.546875,
+              1190.078125,
+              93.28125,
+              13
+            ],
+            "styleHash": "6a6a3541abe1e8284e18bd7ed4faff9e230798e695736ea12d8af7848b608a25"
+          },
+          {
+            "geometry": [
+              0,
+              -7325.28125,
+              0,
+              0
+            ],
+            "styleHash": "d7f1d55ded6096da28fa406bde7b81ce518572cf9fc7b53511c6af59ea0e72fd"
+          }
+        ],
+        "htmlHash": "e417c46e5acc5e7f4e84478586e0f3205ba7bf0c47d55e992f724cad9b42b9a7"
+      },
+      {
+        "id": "medon",
+        "elements": [
+          {
+            "geometry": [
+              0,
+              0,
+              320,
+              586.234375
+            ],
+            "styleHash": "fce791d9b075cc9c9c0e2d466035e7afd7df61d852da132a281e9b14b8c34110"
+          },
+          {
+            "geometry": [
+              16,
+              48,
+              288,
+              490.234375
+            ],
+            "styleHash": "cec863824eddab6ffc5c168b3cd8786d4362ff7d4462f6f9d1cd4cf84f0b131a"
+          },
+          {
+            "geometry": [
+              16,
+              48,
+              288,
+              426.234375
+            ],
+            "styleHash": "12f6bd4285a7e9128d165a80f283e155d270d64c5d617fc7dd1632080919ab28"
+          },
+          {
+            "geometry": [
+              16,
+              48,
+              288,
+              139.546875
+            ],
+            "styleHash": "0e33fb18ed76126954a3116f13742c0606cfe88c380379db9ff01addfb300392"
+          },
+          {
+            "geometry": [
+              16,
+              48,
+              288,
+              16.5
+            ],
+            "styleHash": "bde9555bcb8511fd2358cca8cfbec71be2f46ef1dbd1072f22ad02529aabd76b"
+          },
+          {
+            "geometry": [
+              16,
+              82.5,
+              288,
+              105.046875
+            ],
+            "styleHash": "4f974e44393785666043dbdd2ff78254e86f1d1c9cc37023eaa6f5fdd09f0113"
+          },
+          {
+            "geometry": [
+              16,
+              211.546875,
+              288,
+              262.6875
+            ],
+            "styleHash": "60f3fa915448e99793d8d755db7f9df9d99cdfa9f5badcee9158e88ffa50611a"
+          },
+          {
+            "geometry": [
+              16,
+              211.546875,
+              288,
+              108.75
+            ],
+            "styleHash": "b619af797e8a5472d770be65ec73a244b77519cf60aa9ec6e9f22ae35b8566ec"
+          },
+          {
+            "geometry": [
+              16,
+              338.296875,
+              288,
+              135.9375
+            ],
+            "styleHash": "4c0d35ef29d2b24c3362c8f46b6f37a84f347cbbf61addeb1d732c8fd8cd8e08"
+          },
+          {
+            "geometry": [
+              16,
+              498.234375,
+              288,
+              40
+            ],
+            "styleHash": "b36e5835035114eb7eb9a1eff56995fc7f36d888f08930a221d2e2dbe37c1134"
+          },
+          {
+            "geometry": [
+              16,
+              498.234375,
+              141.6875,
+              40
+            ],
+            "styleHash": "060d372c41a9bcc888c5f84c0f21fba41dd304395eeeebafd0d95622678f5b45"
+          },
+          {
+            "geometry": [
+              137.6875,
+              508.234375,
+              20,
+              20
+            ],
+            "styleHash": "8129f5f68307dff48983e8de421469eda1d57da8fa0469b888a625552c4b9a75"
+          },
+          {
+            "geometry": [
+              141.0208282470703,
+              513.234375,
+              12.5,
+              10
+            ],
+            "styleHash": "65440c08e75c54493c6200e5a47104d24353ce9075090e89526895ea57b9c676"
+          }
+        ],
+        "htmlHash": "0be83645349175ecad8a7324f5a3112ac875faef8595e65bf64b93d46f21e1a3"
+      },
+      {
+        "id": "sporsmal",
+        "elements": [
+          {
+            "geometry": [
+              0,
+              0,
+              320,
+              679.515625
+            ],
+            "styleHash": "83c6d10650d848fda180327c50503126e6b9a20141e9e7c7dfde314bc4a75924"
+          },
+          {
+            "geometry": [
+              16,
+              48,
+              288,
+              583.515625
+            ],
+            "styleHash": "9391bf09ae93229a321342963ca17c5a60d2c44a22a19b5b5337d622d027301c"
+          },
+          {
+            "geometry": [
+              16,
+              48,
+              288,
+              69.515625
+            ],
+            "styleHash": "d300f1880323d9f6d9126f78c2b7b9374107814dac56eee33c8e6441b79b3e0f"
+          },
+          {
+            "geometry": [
+              16,
+              48,
+              288,
+              16.5
+            ],
+            "styleHash": "bde9555bcb8511fd2358cca8cfbec71be2f46ef1dbd1072f22ad02529aabd76b"
+          },
+          {
+            "geometry": [
+              16,
+              82.5,
+              288,
+              35.015625
+            ],
+            "styleHash": "3a6d237ccc8c4c85a865d38846e3d306490870969196991576dca8f19dbf666a"
+          },
+          {
+            "geometry": [
+              16,
+              141.515625,
+              288,
+              490
+            ],
+            "styleHash": "23ce82634968c336b90e2cb40d8a51ec2956e4c6d65611e3a6457b851afce276"
+          },
+          {
+            "geometry": [
+              16,
+              141.515625,
+              288,
+              97
+            ],
+            "styleHash": "a6b68cd5c52c923284b149a2d8b30d626a469c204da9adeeb87bc01af51de740"
+          },
+          {
+            "geometry": [
+              16,
+              142.515625,
+              288,
+              95
+            ],
+            "styleHash": "a67a9cc152d428cd26b8199a58f798c2a05b2ca7317fe2f372a6e8a5cd3011ad"
+          },
+          {
+            "geometry": [
+              289.65625,
+              172.765625,
+              14.34375,
+              34.5
+            ],
+            "styleHash": "2ceedcf921ef9bd9e85f1062e8626f5d28af50999500e9418e83e355d062a263"
+          },
+          {
+            "geometry": [
+              16,
+              237.515625,
+              288,
+              187.125
+            ],
+            "styleHash": "942a8dddd740ffdd99f503e39302f55f8bd979c1dc1e2e8b26fdbaa2b69350c2"
+          },
+          {
+            "geometry": [
+              16,
+              238.515625,
+              288,
+              79.5
+            ],
+            "styleHash": "34dbbfc827405c20c4f23edff7baf339a1aa4074156fd2875ad317151edd4fcd"
+          },
+          {
+            "geometry": [
+              16,
+              238.515625,
+              288,
+              78.5
+            ],
+            "styleHash": "6cbe311a8ef73eaa43ca8c5077041b7d3b62a48ff07fb0b82d0fe0104af391b7"
+          },
+          {
+            "geometry": [
+              289.65625,
+              260.515625,
+              14.34375,
+              34.5
+            ],
+            "styleHash": "2ceedcf921ef9bd9e85f1062e8626f5d28af50999500e9418e83e355d062a263"
+          },
+          {
+            "geometry": [
+              16,
+              317.015625,
+              288,
+              159.9375
+            ],
+            "styleHash": "1b3b8c23468bc1aa9f833aa49849bb1b33d67e77aa9ef9c15f7d1b1f22e18b57"
+          },
+          {
+            "geometry": [
+              16,
+              318.015625,
+              288,
+              96
+            ],
+            "styleHash": "4baf4922ac960441f4875eada2b7ccee58a9fd5da3355f0ff3b0e7147d3de557"
+          },
+          {
+            "geometry": [
+              16,
+              318.015625,
+              288,
+              95
+            ],
+            "styleHash": "a67a9cc152d428cd26b8199a58f798c2a05b2ca7317fe2f372a6e8a5cd3011ad"
+          },
+          {
+            "geometry": [
+              289.65625,
+              348.265625,
+              14.34375,
+              34.5
+            ],
+            "styleHash": "2ceedcf921ef9bd9e85f1062e8626f5d28af50999500e9418e83e355d062a263"
+          },
+          {
+            "geometry": [
+              16,
+              413.015625,
+              288,
+              132.75
+            ],
+            "styleHash": "8d1a8aa7c819de0085e1d6c19fd06042dca25fd531a64439fba44f4f6283f8a0"
+          },
+          {
+            "geometry": [
+              16,
+              414.015625,
+              288,
+              121.5
+            ],
+            "styleHash": "b8e82f67a1cef6741ed947c588b70436be7736961fad092759d75784b05768cc"
+          },
+          {
+            "geometry": [
+              16,
+              414.015625,
+              288,
+              120.5
+            ],
+            "styleHash": "3ec7a3c1bd9b81439ba84a1fa2fe0bca643bd37ee5d7bdf0f1fa82b142e9c8bb"
+          },
+          {
+            "geometry": [
+              289.65625,
+              457.015625,
+              14.34375,
+              34.5
+            ],
+            "styleHash": "2ceedcf921ef9bd9e85f1062e8626f5d28af50999500e9418e83e355d062a263"
+          },
+          {
+            "geometry": [
+              16,
+              534.515625,
+              288,
+              132.75
+            ],
+            "styleHash": "8d1a8aa7c819de0085e1d6c19fd06042dca25fd531a64439fba44f4f6283f8a0"
+          },
+          {
+            "geometry": [
+              16,
+              535.515625,
+              288,
+              96
+            ],
+            "styleHash": "4baf4922ac960441f4875eada2b7ccee58a9fd5da3355f0ff3b0e7147d3de557"
+          },
+          {
+            "geometry": [
+              16,
+              535.515625,
+              288,
+              95
+            ],
+            "styleHash": "a67a9cc152d428cd26b8199a58f798c2a05b2ca7317fe2f372a6e8a5cd3011ad"
+          },
+          {
+            "geometry": [
+              289.65625,
+              565.765625,
+              14.34375,
+              34.5
+            ],
+            "styleHash": "2ceedcf921ef9bd9e85f1062e8626f5d28af50999500e9418e83e355d062a263"
+          },
+          {
+            "geometry": [
+              16,
+              630.515625,
+              288,
+              159.9375
+            ],
+            "styleHash": "1b3b8c23468bc1aa9f833aa49849bb1b33d67e77aa9ef9c15f7d1b1f22e18b57"
+          }
+        ],
+        "htmlHash": "2af354e3ef3612800a3b5b483a16fc81dc6d9744c7814b8d16415ac130b61c08"
+      },
+      {
+        "id": "footer",
+        "elements": [
+          {
+            "geometry": [
+              0,
+              0,
+              320,
+              482.953125
+            ],
+            "styleHash": "5bd98cf42dda610310929ba1c4eb8db755f0b7ba94975eaa2638fa4b5ef22a3b"
+          },
+          {
+            "geometry": [
+              16,
+              60,
+              288,
+              365.953125
+            ],
+            "styleHash": "119747e545cd9eeeefd02957ae0f25b3e4d84b82ada80642639c013924cf68d7"
+          },
+          {
+            "geometry": [
+              16,
+              60,
+              288,
+              145.96875
+            ],
+            "styleHash": "7694dd9c451d905e10b25d7c6998afca56a14cbb9a8efc79117769dbdb017709"
+          },
+          {
+            "geometry": [
+              16,
+              64,
+              183.375,
+              27
+            ],
+            "styleHash": "9e66a1c0650ad5d67ffa6bc91ac5bd2c8e7be04c6cf6339ce28859d806f147de"
+          },
+          {
+            "geometry": [
+              194.3125,
+              64,
+              5.0625,
+              27
+            ],
+            "styleHash": "79c611c5c57705c6bea1850a89685b7dafeaa12ec50acff2904aef3f52d6b139"
+          },
+          {
+            "geometry": [
+              16,
+              115.1875,
+              288,
+              46.78125
+            ],
+            "styleHash": "e390af935946c049e482403f390e075d0cad09ce0d969ebbd4c39956192b3086"
+          },
+          {
+            "geometry": [
+              16,
+              179.96875,
+              151.75,
+              26
+            ],
+            "styleHash": "e5892694be38b80c48a688df081ab1711c36555953d7891ad04a4fa28b96d4a5"
+          },
+          {
+            "geometry": [
+              16,
+              237.96875,
+              134,
+              151.984375
+            ],
+            "styleHash": "b3e2626ac8c07ef01089ceb20c73150c1497e5cfb6ec169dd69efb0690d05710"
+          },
+          {
+            "geometry": [
+              16,
+              237.96875,
+              54.859375,
+              20.796875
+            ],
+            "styleHash": "cbd0db3a9347fc6df272db7352ed39611b8707f40c5b7228857f75f6a24c5c81"
+          },
+          {
+            "geometry": [
+              16,
+              270.765625,
+              74.90625,
+              20.796875
+            ],
+            "styleHash": "2819793ffa652f9f9dd212d379aad9e33dc12fbc976595dac6016b7c3bcb753d"
+          },
+          {
+            "geometry": [
+              16,
+              303.5625,
+              32.4375,
+              20.796875
+            ],
+            "styleHash": "e32318c25852f669cacdb09a9d1f1547aaeef92f8e9a5d5443f79c1f099092b2"
+          },
+          {
+            "geometry": [
+              16,
+              336.359375,
+              38.328125,
+              20.796875
+            ],
+            "styleHash": "568b232933f93c24f42bec012b87d9a9b9cf7730c9a472e256f3c38f0d6c199e"
+          },
+          {
+            "geometry": [
+              16,
+              369.15625,
+              93.078125,
+              20.796875
+            ],
+            "styleHash": "d6c0ea44dde1d22c77671b7e4f038d3924f079b94543695acb55f02d4f6569d6"
+          },
+          {
+            "geometry": [
+              170,
+              237.96875,
+              134,
+              151.984375
+            ],
+            "styleHash": "b3e2626ac8c07ef01089ceb20c73150c1497e5cfb6ec169dd69efb0690d05710"
+          },
+          {
+            "geometry": [
+              170,
+              237.96875,
+              67.375,
+              20.796875
+            ],
+            "styleHash": "0ed4a8b91d2a17867028a8ee49979d03df5ca35e13625257690b5ceec17732e8"
+          },
+          {
+            "geometry": [
+              170,
+              270.765625,
+              64.875,
+              20.796875
+            ],
+            "styleHash": "93d02c34c1c8940e9c5f9e7c856264453ce7a7f3928c524866ced3ae5c7f000d"
+          },
+          {
+            "geometry": [
+              170,
+              303.5625,
+              45.359375,
+              20.796875
+            ],
+            "styleHash": "c60ff8d66c3f8f753355d88582e26465a83046dbb940a9178208bd7aa42e3c93"
+          },
+          {
+            "geometry": [
+              170,
+              336.359375,
+              65,
+              20.796875
+            ],
+            "styleHash": "a3e680e4f9a4d0e0cd6cf484fb2f02824bf21da5c672066e9d70caabcb80ab85"
+          },
+          {
+            "geometry": [
+              170,
+              369.15625,
+              32.078125,
+              20.796875
+            ],
+            "styleHash": "9786e8bd407e20e63f1526d559d622270fd2a735e6d424b0743796fac585fffc"
+          },
+          {
+            "geometry": [
+              16,
+              425.953125,
+              288,
+              57
+            ],
+            "styleHash": "16c56857d2d7307f516097edb310c28b3601ac3f99e20a1827f793805ac093e9"
+          },
+          {
+            "geometry": [
+              16,
+              446.953125,
+              82.890625,
+              16
+            ],
+            "styleHash": "310e610ddff2bbd2e834eed09ba2cd30e16ddf3aede05e94643ac3c49b850c7d"
+          },
+          {
+            "geometry": [
+              197.125,
+              446.953125,
+              106.875,
+              16
+            ],
+            "styleHash": "3fbaeec247b05acc98a36737aadd89d49d4a50062b696d81d94d229934e25d53"
+          }
+        ],
+        "htmlHash": "e40ca7fa74c338a9a43720e233f29aa3ace580af6cf6edfcd8978eb569b30b1d"
+      }
+    ],
+    "content": {
+      "seo": {
+        "title": "SEO, AI-synlighet og konverteringsoptimalisering | Medon",
+        "description": "Bli funnet og gjør flere besøk til henvendelser og salg. Medon hjelper bedrifter i Norge med synlighet, konvertering eller begge. Ta en gratis, manuell sjekk."
+      },
+      "cta": {
+        "label": "Ta en gratis sjekk",
+        "href": "/#sjekk"
+      },
+      "sections": [
+        {
+          "id": "mekanisme",
+          "eyebrow": "Start med det som begrenser resultatet",
+          "heading": "Slik finner vi hva som bør gjøres først",
+          "body": [
+            "Behovet avgjør tiltakene. Vi starter ikke med SEO eller en annen kanal bare fordi du kom inn på en bestemt side."
+          ],
+          "items": [
+            {
+              "title": "Finn flaskehalsen",
+              "text": "Se hvor kundereisen stopper: før besøket, på siden eller i veien til kontakt og kjøp."
+            },
+            {
+              "title": "Prioriter tiltak",
+              "text": "Velg en fornuftig start ut fra behov, kommersiell verdi og det vi faktisk vet."
+            },
+            {
+              "title": "Gjennomfør",
+              "text": "Gjør arbeidet som er avtalt. Omfang og ansvar skal være tydelig."
+            },
+            {
+              "title": "Mål effekt",
+              "text": "Følg med på relevante henvendelser og kjøp. Se resultatene sammen med verdi og kostnader."
+            }
+          ]
+        },
+        {
+          "id": "passer",
+          "eyebrow": "Er dette aktuelt for bedriften?",
+          "heading": "For deg som vil forbedre veien til kunder",
+          "body": [],
+          "items": [
+            {
+              "title": "Passer godt hvis…",
+              "text": "Bedriften konkurrerer om kundene, og en henvendelse eller ordre har økonomisk verdi. Du har en nettside eller nettbutikk som kan forbedres og vil måle kommersiell effekt."
+            },
+            {
+              "title": "Passer dårlig hvis…",
+              "text": "Du ønsker en garantert rangering eller et bestemt antall kunder, en full gratis revisjon eller aktivitet uten et tydelig mål."
+            }
+          ]
+        },
+        {
+          "id": "sjekk",
+          "eyebrow": "Gratis, manuell sjekk",
+          "heading": "Send nettsiden. Vi sier hvor vi ville startet – og hvorfor.",
+          "body": [
+            "Vi ser kort på den offentlige nettsiden eller nettbutikken og begrunner hva vi ville undersøkt eller forbedret først.",
+            "Dette er en avgrenset, manuell vurdering. Ingen automatisk poengsum, full revisjon, prognose eller gratis gjennomføring. Videre arbeid avtales separat."
+          ]
+        },
+        {
+          "id": "medon",
+          "eyebrow": "Medon AS står bak",
+          "heading": "Én ansvarlig leverandør, tydelig avtalt arbeid",
+          "body": [
+            "Optimalisering Oslo er en tjeneste fra Medon AS. Vi jobber først og fremst med norske bedrifter, og kan også hjelpe bedrifter i andre nordiske land.",
+            "Du skal forstå hva vi foreslår, hvorfor vi foreslår det og hva som faktisk er avtalt. Vi lover ikke en bestemt Google-plassering, en AI-anbefaling eller et bestemt antall nye kunder."
+          ],
+          "links": [
+            {
+              "label": "Om leverandøren",
+              "href": "/om/"
+            }
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Hva skjer etter den gratis sjekken?",
+          "answer": "Vi gjør en kort, manuell vurdering og begrunner hvor vi ville startet. Hvis det er noe vi kan hjelpe med, avtaler vi omfang og pris før betalt arbeid. Sjekken er ikke en full revisjon eller gratis gjennomføring."
+        },
+        {
+          "question": "Hva koster videre arbeid?",
+          "answer": "Endelige offentlige priser og tjenesteomfang er ikke avklart for denne forhåndsvisningen. Prisen avhenger av behov og avtalt arbeid, og avklares før vi starter."
+        },
+        {
+          "question": "Er annonsebudsjett og eksterne kostnader inkludert?",
+          "answer": "Annonsebudsjett og aktuelle eksterne plattformkostnader kommer i tillegg hvis vi ikke avtaler noe annet. Vi avklarer relevante kostnader før arbeidet starter."
+        },
+        {
+          "question": "Hva hvis både synlighet og konvertering begrenser resultatet?",
+          "answer": "Da ser vi på sammenhengen. Vi finner flaskehalsen og prioriterer tiltakene i riktig rekkefølge, fremfor å starte med en fast kanal."
+        },
+        {
+          "question": "Jobber dere bare med bedrifter i Oslo?",
+          "answer": "Nei. Medon AS jobber først og fremst med bedrifter i Norge, og kan også hjelpe bedrifter i andre nordiske land. Navnet innebærer ikke at vi har et Oslo-kontor."
+        }
+      ],
+      "calculator": {
+        "eyebrow": "To grep som virker sammen",
+        "heading": "Hva kan flere relevante besøk og en bedre kjøpsvei bety?",
+        "intro": "Endre trafikken, andelen som tar kontakt eller kjøper – eller begge. Se hvordan de to grepene virker sammen.",
+        "formula": "Relevante besøk × konverteringsrate = henvendelser / kjøp",
+        "labels": {
+          "visits": "Relevante besøk per måned",
+          "conversion": "Konverteringsrate i dag (%)",
+          "trafficIncrease": "Mer relevant trafikk (%)",
+          "newConversion": "Ny konverteringsrate (%)",
+          "current": "I dag",
+          "scenario": "Scenario",
+          "difference": "Forskjell",
+          "outcome": "henvendelser / kjøp per måned",
+          "increase": "endring",
+          "undefinedIncrease": "Prosentvis endring kan ikke beregnes for dette utgangspunktet",
+          "invalid": "Bruk besøk fra 0 til 10 000 000, trafikkøkning fra 0 til 1 000 % og konverteringsrater fra 0 til 100 %."
+        },
+        "defaults": {
+          "visits": 1000,
+          "conversion": 1,
+          "trafficIncrease": 50,
+          "newConversion": 2
+        },
+        "caveat": "Hypotetisk regneeksempel – ikke et kundecase eller en resultatgaranti."
+      },
+      "packages": {
+        "eyebrow": "Avtalt arbeid, tydelig start",
+        "heading": "Synlighet, Konvertering eller Begge",
+        "intro": "Velg det som passer behovet. Omfang og pris må avklares før betalt arbeid starter.",
+        "fitLabel": "Passer for",
+        "scopeLabel": "Hva vi jobber med",
+        "items": [
+          {
+            "title": "Synlighet",
+            "fit": "Bedrifter som trenger flere relevante besøk.",
+            "scope": "Avtalt arbeid med hvordan kundene finner bedriften i søk, AI-tjenester eller lokalt. Kampanjeoptimalisering kan støtte betalt synlighet når det er relevant.",
+            "priceState": "Pris avklares før publisering",
+            "externalCosts": "Annonsebudsjett og aktuelle eksterne plattformkostnader kommer i tillegg hvis ikke annet er avtalt.",
+            "cta": {
+              "label": "Sjekk synligheten",
+              "href": "/#sjekk"
+            }
+          },
+          {
+            "title": "Konvertering",
+            "fit": "Bedrifter som har besøk, men for få henvendelser eller kjøp.",
+            "scope": "Avtalt konverteringsoptimalisering av budskap, landingssider, skjema eller kjøpsvei – på nettsiden eller i nettbutikken.",
+            "priceState": "Pris avklares før publisering",
+            "externalCosts": "Aktuelle eksterne plattformkostnader kommer i tillegg hvis ikke annet er avtalt.",
+            "cta": {
+              "label": "Sjekk veien til kontakt og kjøp",
+              "href": "/#sjekk"
+            }
+          },
+          {
+            "title": "Begge",
+            "fit": "Bedrifter der både synlighet og kjøpsvei kan forbedres.",
+            "scope": "Avtalt arbeid med begge områdene. Vi starter med flaskehalsen og prioriterer i riktig rekkefølge.",
+            "priceState": "Pris avklares før publisering",
+            "externalCosts": "Annonsebudsjett og aktuelle eksterne plattformkostnader kommer i tillegg hvis ikke annet er avtalt.",
+            "cta": {
+              "label": "Finn hvor vi bør starte",
+              "href": "/#sjekk"
+            }
+          }
+        ]
+      },
+      "proof": {
+        "publicationApproved": false,
+        "case": null
+      },
+      "form": {
+        "heading": "Send nettsiden",
+        "websiteLabel": "Nettside eller nettbutikk",
+        "websitePlaceholder": "dinbedrift.no",
+        "emailLabel": "E-post",
+        "emailPlaceholder": "deg@dinbedrift.no",
+        "messageLabel": "Kort kommentar",
+        "optional": "Valgfritt",
+        "messagePlaceholder": "Noe vi bør vite?",
+        "sensitiveNotice": "Ikke send innlogging, sensitive opplysninger eller personopplysninger om andre.",
+        "previewNotice": "Dette er en forhåndsvisning. Innsending er ikke åpnet ennå.",
+        "submitLabel": "Ta en gratis sjekk",
+        "privacyText": "Vi bruker opplysningene for å følge opp forespørselen.",
+        "privacyLink": {
+          "label": "Les om personvern",
+          "href": "/personvern/"
+        },
+        "disabledStatus": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt."
+      },
+      "faqHeading": "Før du tar neste steg",
+      "faqEyebrow": "Greit å vite",
+      "chrome": {
+        "brand": "optimalisering",
+        "brandLocation": "oslo",
+        "homeLabel": "Optimalisering Oslo – forsiden",
+        "skipLabel": "Hopp til innhold",
+        "navigationLabel": "Hovedmeny",
+        "mobileNavigationLabel": "Mobilmeny",
+        "openMenu": "Åpne meny",
+        "closeMenu": "Lukk meny",
+        "assessmentLink": {
+          "label": "Gratis sjekk",
+          "href": "/#sjekk"
+        },
+        "navigation": [
+          {
+            "label": "Synlighet",
+            "href": "/synlighet/"
+          },
+          {
+            "label": "Konvertering",
+            "href": "/konvertering/"
+          },
+          {
+            "label": "Priser",
+            "href": "/#priser"
+          },
+          {
+            "label": "Innsikt",
+            "href": "/innsikt/"
+          }
+        ],
+        "providerText": "En tjeneste fra Medon AS. Synlighet og konvertering for bedrifter.",
+        "previewLabel": "Forhåndsvisning · til vurdering",
+        "serviceNavigationLabel": "Tjenester og veiledning",
+        "informationNavigationLabel": "Kontakt og informasjon",
+        "storeLink": {
+          "label": "For nettbutikker",
+          "href": "/nettbutikkoptimalisering/"
+        },
+        "informationLinks": [
+          {
+            "label": "Gratis sjekk",
+            "href": "/#sjekk"
+          },
+          {
+            "label": "Om Medon",
+            "href": "/om/"
+          },
+          {
+            "label": "Kontakt",
+            "href": "/kontakt/"
+          },
+          {
+            "label": "Personvern",
+            "href": "/personvern/"
+          },
+          {
+            "label": "Vilkår",
+            "href": "/vilkar/"
+          }
+        ],
+        "copyrightProvider": "Medon AS",
+        "footerNote": "Et godt sted å begynne."
+      }
+    }
+  },
+  "390": {
+    "heroHeight": 799.421875,
+    "selectorY": 878.421875,
+    "lower": [
+      {
+        "id": "regneeksempel",
+        "elements": [
+          {
+            "geometry": [
+              0,
+              0,
+              390,
+              1039.515625
+            ],
+            "styleHash": "8a0bd6cd49db736058228fc524740249261c4f245ce2789c1abf5ba95e656ea9"
+          },
+          {
+            "geometry": [
+              20,
+              48,
+              350,
+              943.515625
+            ],
+            "styleHash": "45e15ef48609f75a031f805ce0090c5d4626128b726ccc19202731fe7b0c3f08"
+          },
+          {
+            "geometry": [
+              20,
+              48,
+              350,
+              319
+            ],
+            "styleHash": "c675eb9e8dbed112c7f6c00cc1cb1fe8a65cfe1aa1eb379f5862b0b206de4044"
+          },
+          {
+            "geometry": [
+              20,
+              48,
+              350,
+              16.5
+            ],
+            "styleHash": "380c701d9b45868f4fb6cc45d31ce70841fd02193e7c6e042c6da39c02dee458"
+          },
+          {
+            "geometry": [
+              20,
+              82.5,
+              350,
+              115.21875
+            ],
+            "styleHash": "5b5fef73616c072bc637c8452492d049a676b91d4d18a11b00be42e94162c125"
+          },
+          {
+            "geometry": [
+              20,
+              221.71875,
+              350,
+              76.5
+            ],
+            "styleHash": "3239faa26031702822416e2edaa953cca7b5bc0316f966ed6c5f59b3b4a66e78"
+          },
+          {
+            "geometry": [
+              20,
+              322.21875,
+              350,
+              44.78125
+            ],
+            "styleHash": "9f4a01f83c15cef8d1f299d34235ea820c29f799b0b0b7fc9b51e091e439b695"
+          },
+          {
+            "geometry": [
+              20,
+              397,
+              350,
+              594.515625
+            ],
+            "styleHash": "9b8d983ff4ad17aaf55f8843b39acc9687ab40490eff669556cb5c9e502c9baf"
+          },
+          {
+            "geometry": [
+              41,
+              418,
+              308,
+              191.15625
+            ],
+            "styleHash": "534485189482d62cc067553a45189d2aa99fe78483843f38a4f35f3c0d9bf249"
+          },
+          {
+            "geometry": [
+              41,
+              418,
+              148,
+              97.171875
+            ],
+            "styleHash": "844a7e2e9b6986facd5acdc40a5a430a8633d4c015b0afaa453b5976c166a214"
+          },
+          {
+            "geometry": [
+              41,
+              464.375,
+              148,
+              50.796875
+            ],
+            "styleHash": "6a3f160bc8f1d81862be34af867a7c4a09f2011e4d27578ab21583952d6fea9a"
+          },
+          {
+            "geometry": [
+              201,
+              418,
+              148,
+              97.171875
+            ],
+            "styleHash": "844a7e2e9b6986facd5acdc40a5a430a8633d4c015b0afaa453b5976c166a214"
+          },
+          {
+            "geometry": [
+              201,
+              464.375,
+              148,
+              50.796875
+            ],
+            "styleHash": "6a3f160bc8f1d81862be34af867a7c4a09f2011e4d27578ab21583952d6fea9a"
+          },
+          {
+            "geometry": [
+              41,
+              531.171875,
+              148,
+              77.984375
+            ],
+            "styleHash": "4a065a5fe91bbc55c4b4e33f3cc0d6c8b939587a13887295630fac48256c5f49"
+          },
+          {
+            "geometry": [
+              41,
+              558.359375,
+              148,
+              50.796875
+            ],
+            "styleHash": "6a3f160bc8f1d81862be34af867a7c4a09f2011e4d27578ab21583952d6fea9a"
+          },
+          {
+            "geometry": [
+              201,
+              531.171875,
+              148,
+              77.984375
+            ],
+            "styleHash": "4a065a5fe91bbc55c4b4e33f3cc0d6c8b939587a13887295630fac48256c5f49"
+          },
+          {
+            "geometry": [
+              201,
+              558.359375,
+              148,
+              50.796875
+            ],
+            "styleHash": "6a3f160bc8f1d81862be34af867a7c4a09f2011e4d27578ab21583952d6fea9a"
+          },
+          {
+            "geometry": [
+              0,
+              -2092.234375,
+              0,
+              0
+            ],
+            "styleHash": "c2927d4b510c4df889c73c754cf32c42a746fb6e6e33ce1b215160e823ae7094"
+          },
+          {
+            "geometry": [
+              41,
+              633.15625,
+              308,
+              282.171875
+            ],
+            "styleHash": "966a948e3837cfdcea7389c8bc0f0d8adf366f0e3c098c7effc96dca33eef337"
+          },
+          {
+            "geometry": [
+              41,
+              633.15625,
+              308,
+              201.375
+            ],
+            "styleHash": "f75e2a9429ae7d533cb078cc5d36a76ded61d5b0f3716ff66a2f993579846e0b"
+          },
+          {
+            "geometry": [
+              41,
+              633.15625,
+              148,
+              201.375
+            ],
+            "styleHash": "41d25c870b5935a0650afe2fa44f874de2b663646389a40d3a90a588218ee718"
+          },
+          {
+            "geometry": [
+              54,
+              649.15625,
+              29.046875,
+              20.796875
+            ],
+            "styleHash": "144288c4f343e3b7ea1dd0aa3970a09b3d956db309e1b1d91ed3bcb43b46d696"
+          },
+          {
+            "geometry": [
+              54,
+              683.953125,
+              52.5,
+              54
+            ],
+            "styleHash": "620d513f744df634e9c40d3dfda4d78dfa0e9a2dcbd5924ca47e6d2a23f8ceb1"
+          },
+          {
+            "geometry": [
+              54,
+              747.953125,
+              122,
+              35.1875
+            ],
+            "styleHash": "e97fc81001fd4f705a032a22380c2dfef7db79f1233247a8430fb26d8fb492f8"
+          },
+          {
+            "geometry": [
+              54,
+              796.140625,
+              72.046875,
+              22.390625
+            ],
+            "styleHash": "bd5627f0cbc9e33c9371e95e19c8453c7f623f9b30ee6c350e14c5f89003eb6d"
+          },
+          {
+            "geometry": [
+              201,
+              633.15625,
+              148,
+              201.375
+            ],
+            "styleHash": "7deb549fe5c6526a9668069b033d446245d74136e8b7fea768da6f64665732df"
+          },
+          {
+            "geometry": [
+              214,
+              649.15625,
+              51.84375,
+              20.796875
+            ],
+            "styleHash": "d153d0614bf2bd4928870839333ddd1c724520a280c8defbf5f333c71afb7286"
+          },
+          {
+            "geometry": [
+              214,
+              685.546875,
+              63.234375,
+              54
+            ],
+            "styleHash": "d4ad9fa2b53d4433ef3db1355d2a73f6122dad69444e8271540158f02b439833"
+          },
+          {
+            "geometry": [
+              214,
+              751.15625,
+              122,
+              35.1875
+            ],
+            "styleHash": "e97fc81001fd4f705a032a22380c2dfef7db79f1233247a8430fb26d8fb492f8"
+          },
+          {
+            "geometry": [
+              214,
+              800.9375,
+              57.5,
+              17.59375
+            ],
+            "styleHash": "03da5394c1fe82f1186d42f30726d4ee2da0333ea1632c58eafb101921237779"
+          },
+          {
+            "geometry": [
+              41,
+              854.53125,
+              308,
+              60.796875
+            ],
+            "styleHash": "4297204f1ea382b7c1793e55c0b948731eb5cb9de3b55a80a1bdd15dbe173fab"
+          },
+          {
+            "geometry": [
+              111.421875,
+              859.53125,
+              42.40625,
+              30
+            ],
+            "styleHash": "18f56006a00295fc1c37aecc1c33a60f9addd2551431d1e87a182ffd8c9044f4"
+          },
+          {
+            "geometry": [
+              41,
+              894.53125,
+              308,
+              20.796875
+            ],
+            "styleHash": "9ef7fe78f97bd24da25ed20a2bd1890b6f8dfa4b4b45a9622aa0ada9600519ae"
+          },
+          {
+            "geometry": [
+              41,
+              933.328125,
+              308,
+              37.1875
+            ],
+            "styleHash": "4d09a724a0d6094bfcb86cc98ce31a5deb0bbbabcc5d78b51b581fef45cf7cfa"
+          }
+        ],
+        "htmlHash": "81e927b2adc5e4896db49d236017afc5fd9044eb89461929476d62c831bd666d"
+      },
+      {
+        "id": "priser",
+        "elements": [
+          {
+            "geometry": [
+              0,
+              0,
+              390,
+              1958.875
+            ],
+            "styleHash": "068c17c33009053ecd1ba4239cc9d4ff21563a306fe9a50050f02eb8d464b6d7"
+          },
+          {
+            "geometry": [
+              20,
+              48,
+              350,
+              1862.875
+            ],
+            "styleHash": "8b6f65c6b79228f42be44c1ab20ac605e9b88cf7b7e40764107a273900049cb6"
+          },
+          {
+            "geometry": [
+              20,
+              48,
+              350,
+              185.6875
+            ],
+            "styleHash": "054defd65a19f362b639c2ef3acf91db177678a5071c2ce6203010082d47db1d"
+          },
+          {
+            "geometry": [
+              20,
+              48,
+              350,
+              16.5
+            ],
+            "styleHash": "9b24eb74ee82d273bfa15f828a0f7ae082861eb5871bc5238bd02adca5600ac0"
+          },
+          {
+            "geometry": [
+              20,
+              82.5,
+              350,
+              76.8125
+            ],
+            "styleHash": "46f9f659e8f24f4d7dbe0008e6c882ec9e50592ebc01e3b4dfe067a438396a8f"
+          },
+          {
+            "geometry": [
+              20,
+              179.3125,
+              350,
+              54.375
+            ],
+            "styleHash": "6059c7b4e547583dbf191808a8658ed7d766017129c7b52e175541819fb73cc2"
+          },
+          {
+            "geometry": [
+              20,
+              259.6875,
+              350,
+              1651.1875
+            ],
+            "styleHash": "b2cd8d692136f19e76dbcad75cc8f9797aaa38807a7a63f0944b6fe7941206f6"
+          },
+          {
+            "geometry": [
+              20,
+              259.6875,
+              350,
+              546.125
+            ],
+            "styleHash": "82435b38793ff90fcd6f1375a86b4b8a1c8b14fe940a0c41096fea427dfcaaec"
+          },
+          {
+            "geometry": [
+              46,
+              285.6875,
+              298,
+              38.390625
+            ],
+            "styleHash": "b215d381412129b0d291e6852880ed6b00f6563dda1ce91d1ab37433d7c04975"
+          },
+          {
+            "geometry": [
+              46,
+              348.078125,
+              298,
+              206.375
+            ],
+            "styleHash": "a458ecd00dcc473badd05529172283d9e05075d2c9e2928b199cc5574ed09de6"
+          },
+          {
+            "geometry": [
+              46,
+              348.078125,
+              298,
+              19.1875
+            ],
+            "styleHash": "112f1a981af04c7ecbecc8a52454c1c7dbf65bdd2847766fcc71b92f5de64bcd"
+          },
+          {
+            "geometry": [
+              46,
+              373.265625,
+              298,
+              24
+            ],
+            "styleHash": "3aacf0368877a2d5e2c49bc73f3f2226efa7152814ddc853bdcd23977f6b20d4"
+          },
+          {
+            "geometry": [
+              46,
+              415.265625,
+              298,
+              19.1875
+            ],
+            "styleHash": "112f1a981af04c7ecbecc8a52454c1c7dbf65bdd2847766fcc71b92f5de64bcd"
+          },
+          {
+            "geometry": [
+              46,
+              440.453125,
+              298,
+              96
+            ],
+            "styleHash": "dcc0810f6564484277b2406566bbb0cc99dd2b33cfbce9012e15c497acd05b07"
+          },
+          {
+            "geometry": [
+              46,
+              578.453125,
+              298,
+              121.359375
+            ],
+            "styleHash": "5919039f851f74ee230d1705a0be4e37544ba70d541e7e1f0de55c3dd9c30850"
+          },
+          {
+            "geometry": [
+              46,
+              599.453125,
+              298,
+              28.796875
+            ],
+            "styleHash": "8a3737e0a12dc7ce38ffdc73f7fe3ccc8fb3b25d17beae615e9588f219ad03e1"
+          },
+          {
+            "geometry": [
+              46,
+              642.25,
+              298,
+              57.5625
+            ],
+            "styleHash": "5a1f75aca2ba448feabc04cc97ea5d9fa651571c2881e3f6a677985f5817f153"
+          },
+          {
+            "geometry": [
+              46,
+              723.8125,
+              177.359375,
+              56
+            ],
+            "styleHash": "0c1b195482bd0d611cd621a8bccf6d46a7b24121b9da4a19492352c873dc336e"
+          },
+          {
+            "geometry": [
+              186.359375,
+              741.8125,
+              20,
+              20
+            ],
+            "styleHash": "7066c802f409d25643fe76c01d3daf8c1f7d37baa560df4ece714cd504276bdd"
+          },
+          {
+            "geometry": [
+              191.359375,
+              746.8125,
+              10,
+              10
+            ],
+            "styleHash": "3721c9cc7441ab47babc1e5c884a3468dfe34cbe5692a833ff58febbc107a8c5"
+          },
+          {
+            "geometry": [
+              20,
+              821.8125,
+              350,
+              526.9375
+            ],
+            "styleHash": "b66bed15461697d3ad0290d8f9b494e2b1864ae231d5df9e51155bc21b3a0a45"
+          },
+          {
+            "geometry": [
+              46,
+              847.8125,
+              298,
+              38.390625
+            ],
+            "styleHash": "b215d381412129b0d291e6852880ed6b00f6563dda1ce91d1ab37433d7c04975"
+          },
+          {
+            "geometry": [
+              46,
+              910.203125,
+              298,
+              206.375
+            ],
+            "styleHash": "a458ecd00dcc473badd05529172283d9e05075d2c9e2928b199cc5574ed09de6"
+          },
+          {
+            "geometry": [
+              46,
+              910.203125,
+              298,
+              19.1875
+            ],
+            "styleHash": "112f1a981af04c7ecbecc8a52454c1c7dbf65bdd2847766fcc71b92f5de64bcd"
+          },
+          {
+            "geometry": [
+              46,
+              935.390625,
+              298,
+              48
+            ],
+            "styleHash": "4835f01d5515ef7192381ff6b5a7e067d4e291a376bbf765785e87f3e2703f97"
+          },
+          {
+            "geometry": [
+              46,
+              1001.390625,
+              298,
+              19.1875
+            ],
+            "styleHash": "112f1a981af04c7ecbecc8a52454c1c7dbf65bdd2847766fcc71b92f5de64bcd"
+          },
+          {
+            "geometry": [
+              46,
+              1026.578125,
+              298,
+              72
+            ],
+            "styleHash": "7d8a098495bbc99c53e1016dde32fe14cab46b32f43e0b5e3b69895a69619014"
+          },
+          {
+            "geometry": [
+              46,
+              1140.578125,
+              298,
+              102.171875
+            ],
+            "styleHash": "8d499ab6f073986f1e2adfcd9e408efdfab75f41e6d99a179b00adb120c5f11a"
+          },
+          {
+            "geometry": [
+              46,
+              1161.578125,
+              298,
+              28.796875
+            ],
+            "styleHash": "8a3737e0a12dc7ce38ffdc73f7fe3ccc8fb3b25d17beae615e9588f219ad03e1"
+          },
+          {
+            "geometry": [
+              46,
+              1204.375,
+              298,
+              38.375
+            ],
+            "styleHash": "a1700c8d91926bd02739b6d220e0ffddbee7ee8e049082d0fce6dc08a69e64c8"
+          },
+          {
+            "geometry": [
+              46,
+              1266.75,
+              255.4375,
+              56
+            ],
+            "styleHash": "2c2fc479addb15a358d1126b13f5a97f49a9c7bbc862f62e50c9d0e77ada1b38"
+          },
+          {
+            "geometry": [
+              264.4375,
+              1284.75,
+              20,
+              20
+            ],
+            "styleHash": "7066c802f409d25643fe76c01d3daf8c1f7d37baa560df4ece714cd504276bdd"
+          },
+          {
+            "geometry": [
+              269.4375,
+              1289.75,
+              10,
+              10
+            ],
+            "styleHash": "3721c9cc7441ab47babc1e5c884a3468dfe34cbe5692a833ff58febbc107a8c5"
+          },
+          {
+            "geometry": [
+              20,
+              1364.75,
+              350,
+              546.125
+            ],
+            "styleHash": "024eb6697a3da18dc4de8580790e095d4c6ac0198c2fc5995dd51aa3b07cdbde"
+          },
+          {
+            "geometry": [
+              46,
+              1390.75,
+              298,
+              38.390625
+            ],
+            "styleHash": "b215d381412129b0d291e6852880ed6b00f6563dda1ce91d1ab37433d7c04975"
+          },
+          {
+            "geometry": [
+              46,
+              1453.140625,
+              298,
+              206.375
+            ],
+            "styleHash": "a458ecd00dcc473badd05529172283d9e05075d2c9e2928b199cc5574ed09de6"
+          },
+          {
+            "geometry": [
+              46,
+              1453.140625,
+              298,
+              19.1875
+            ],
+            "styleHash": "112f1a981af04c7ecbecc8a52454c1c7dbf65bdd2847766fcc71b92f5de64bcd"
+          },
+          {
+            "geometry": [
+              46,
+              1478.328125,
+              298,
+              48
+            ],
+            "styleHash": "4835f01d5515ef7192381ff6b5a7e067d4e291a376bbf765785e87f3e2703f97"
+          },
+          {
+            "geometry": [
+              46,
+              1544.328125,
+              298,
+              19.1875
+            ],
+            "styleHash": "112f1a981af04c7ecbecc8a52454c1c7dbf65bdd2847766fcc71b92f5de64bcd"
+          },
+          {
+            "geometry": [
+              46,
+              1569.515625,
+              298,
+              72
+            ],
+            "styleHash": "7d8a098495bbc99c53e1016dde32fe14cab46b32f43e0b5e3b69895a69619014"
+          },
+          {
+            "geometry": [
+              46,
+              1683.515625,
+              298,
+              121.359375
+            ],
+            "styleHash": "5919039f851f74ee230d1705a0be4e37544ba70d541e7e1f0de55c3dd9c30850"
+          },
+          {
+            "geometry": [
+              46,
+              1704.515625,
+              298,
+              28.796875
+            ],
+            "styleHash": "8a3737e0a12dc7ce38ffdc73f7fe3ccc8fb3b25d17beae615e9588f219ad03e1"
+          },
+          {
+            "geometry": [
+              46,
+              1747.3125,
+              298,
+              57.5625
+            ],
+            "styleHash": "5a1f75aca2ba448feabc04cc97ea5d9fa651571c2881e3f6a677985f5817f153"
+          },
+          {
+            "geometry": [
+              46,
+              1828.875,
+              204.125,
+              56
+            ],
+            "styleHash": "4aaf37bd199bf1a4d32f17d75fe29e1ade53ccf854492d4dfc305d4468b6b853"
+          },
+          {
+            "geometry": [
+              213.125,
+              1846.875,
+              20,
+              20
+            ],
+            "styleHash": "7066c802f409d25643fe76c01d3daf8c1f7d37baa560df4ece714cd504276bdd"
+          },
+          {
+            "geometry": [
+              218.125,
+              1851.875,
+              10,
+              10
+            ],
+            "styleHash": "3721c9cc7441ab47babc1e5c884a3468dfe34cbe5692a833ff58febbc107a8c5"
+          }
+        ],
+        "htmlHash": "fb1e60f50f5539282e1274af612ca28a790acd84e1e8240e9f8519a1243ed130"
+      },
+      {
+        "id": "mekanisme",
+        "elements": [
+          {
+            "geometry": [
+              0,
+              0,
+              390,
+              826.40625
+            ],
+            "styleHash": "f462344c8f9cf1d5245b59bcb5b2ac49b21becbec57d41e5606716ea6724e2f6"
+          },
+          {
+            "geometry": [
+              20,
+              48,
+              350,
+              730.40625
+            ],
+            "styleHash": "2305c22eb1e514f191727e79c845ceb77787aaa399a1eadef364a39bfd69ea39"
+          },
+          {
+            "geometry": [
+              20,
+              48,
+              350,
+              216.875
+            ],
+            "styleHash": "4f7299a4ce91e58437d6357aabed16f14213e527c5864246d49b34465c38bf3d"
+          },
+          {
+            "geometry": [
+              20,
+              48,
+              350,
+              111.3125
+            ],
+            "styleHash": "b42ca6e5918608a2312aa87a725312a2d30181902978429887d98375cce9826b"
+          },
+          {
+            "geometry": [
+              20,
+              48,
+              350,
+              16.5
+            ],
+            "styleHash": "9b24eb74ee82d273bfa15f828a0f7ae082861eb5871bc5238bd02adca5600ac0"
+          },
+          {
+            "geometry": [
+              20,
+              82.5,
+              350,
+              76.8125
+            ],
+            "styleHash": "46f9f659e8f24f4d7dbe0008e6c882ec9e50592ebc01e3b4dfe067a438396a8f"
+          },
+          {
+            "geometry": [
+              20,
+              183.3125,
+              350,
+              81.5625
+            ],
+            "styleHash": "747575e52ed642a6f417dd286d86cd86be1f8557bf2e6a2dc41aed114d140b89"
+          },
+          {
+            "geometry": [
+              20,
+              183.3125,
+              350,
+              81.5625
+            ],
+            "styleHash": "899fe5c63fa8369405cc422f528d14a628b690f9bd316101de3e2467e6d12921"
+          },
+          {
+            "geometry": [
+              20,
+              296.875,
+              350,
+              481.53125
+            ],
+            "styleHash": "7967f83054d283fd91b80a69291a7ca8ed0e8e979f0458a78d2c677c29464363"
+          },
+          {
+            "geometry": [
+              20,
+              296.875,
+              165,
+              226.765625
+            ],
+            "styleHash": "cc36fa77eb7fcece13f41c222778104ff2cbd81379e2b2eb03a209bfb0914eff"
+          },
+          {
+            "geometry": [
+              20,
+              296.875,
+              42,
+              42
+            ],
+            "styleHash": "d64ccf2cbd3042daf21c74a15bc0a00debc1b55156dc030f24f8355f5e8d9f70"
+          },
+          {
+            "geometry": [
+              20,
+              358.875,
+              164.796875,
+              26.390625
+            ],
+            "styleHash": "90516b345458903a40d540364cd92bca1f80a8ecbd6b222c1e7a831715d950c6"
+          },
+          {
+            "geometry": [
+              20,
+              415.265625,
+              165,
+              92.375
+            ],
+            "styleHash": "11af6efa3e3a4b49c8d6b09ebee63206129fec7528e27829daa2564d801285bc"
+          },
+          {
+            "geometry": [
+              205,
+              296.875,
+              165,
+              226.765625
+            ],
+            "styleHash": "cc36fa77eb7fcece13f41c222778104ff2cbd81379e2b2eb03a209bfb0914eff"
+          },
+          {
+            "geometry": [
+              205,
+              296.875,
+              42,
+              42
+            ],
+            "styleHash": "d64ccf2cbd3042daf21c74a15bc0a00debc1b55156dc030f24f8355f5e8d9f70"
+          },
+          {
+            "geometry": [
+              205,
+              358.875,
+              129.765625,
+              26.390625
+            ],
+            "styleHash": "194398de5e15acf20c0f43209ce399c18f0637a67491240d043631fd38fe326a"
+          },
+          {
+            "geometry": [
+              205,
+              415.265625,
+              165,
+              69.28125
+            ],
+            "styleHash": "69100b60b1f6e1e2d35bfce0bd555aaed033ddfdc8d81aa6bc481786bed01e98"
+          },
+          {
+            "geometry": [
+              20,
+              551.640625,
+              165,
+              226.765625
+            ],
+            "styleHash": "cc36fa77eb7fcece13f41c222778104ff2cbd81379e2b2eb03a209bfb0914eff"
+          },
+          {
+            "geometry": [
+              20,
+              551.640625,
+              42,
+              42
+            ],
+            "styleHash": "d64ccf2cbd3042daf21c74a15bc0a00debc1b55156dc030f24f8355f5e8d9f70"
+          },
+          {
+            "geometry": [
+              20,
+              613.640625,
+              116.328125,
+              26.390625
+            ],
+            "styleHash": "36525019940ab7740766f5db236db06060461f5ea08cfebc81600dd55f8d4f28"
+          },
+          {
+            "geometry": [
+              20,
+              670.03125,
+              165,
+              69.28125
+            ],
+            "styleHash": "69100b60b1f6e1e2d35bfce0bd555aaed033ddfdc8d81aa6bc481786bed01e98"
+          },
+          {
+            "geometry": [
+              205,
+              551.640625,
+              165,
+              226.765625
+            ],
+            "styleHash": "cc36fa77eb7fcece13f41c222778104ff2cbd81379e2b2eb03a209bfb0914eff"
+          },
+          {
+            "geometry": [
+              205,
+              551.640625,
+              42,
+              42
+            ],
+            "styleHash": "d64ccf2cbd3042daf21c74a15bc0a00debc1b55156dc030f24f8355f5e8d9f70"
+          },
+          {
+            "geometry": [
+              205,
+              613.640625,
+              95.796875,
+              26.390625
+            ],
+            "styleHash": "bff75183fc01fd05b94cf25fa475ae05dea08c37f17d2ced8352ab3c0c9b8bd1"
+          },
+          {
+            "geometry": [
+              205,
+              670.03125,
+              165,
+              92.375
+            ],
+            "styleHash": "11af6efa3e3a4b49c8d6b09ebee63206129fec7528e27829daa2564d801285bc"
+          }
+        ],
+        "htmlHash": "04d7dbb5641e95f763fc8aea753724948ff004ba27968631177a6a315dfc94a2"
+      },
+      {
+        "id": "passer",
+        "elements": [
+          {
+            "geometry": [
+              0,
+              0,
+              390,
+              708.96875
+            ],
+            "styleHash": "48f2e32cd94a2cbce5048a746e797bdd121440326656190d7ce09f807d7d9d9b"
+          },
+          {
+            "geometry": [
+              20,
+              48,
+              350,
+              612.96875
+            ],
+            "styleHash": "a522c555112589c3d3cdf9939340691958669b1698b87ce54a306672c104aa73"
+          },
+          {
+            "geometry": [
+              20,
+              48,
+              350,
+              149.71875
+            ],
+            "styleHash": "f680f7a45f44be0c4b7dd319d7157be3335d251f772254fa0c8940d7e1efcfec"
+          },
+          {
+            "geometry": [
+              20,
+              48,
+              350,
+              149.71875
+            ],
+            "styleHash": "ed0ed71da863c65c8b724536f0a8965a4475f10980fe31310bd37f57e4d3c153"
+          },
+          {
+            "geometry": [
+              20,
+              48,
+              350,
+              16.5
+            ],
+            "styleHash": "9b24eb74ee82d273bfa15f828a0f7ae082861eb5871bc5238bd02adca5600ac0"
+          },
+          {
+            "geometry": [
+              20,
+              82.5,
+              350,
+              115.21875
+            ],
+            "styleHash": "dab94177b299ebaf20b04cbca95de8f2cb1f811dffbae8a6a9014321e3b0c2fe"
+          },
+          {
+            "geometry": [
+              20,
+              197.71875,
+              350,
+              0
+            ],
+            "styleHash": "48c8808106b14f217c88766eee06c1f362402ce0b2124bc6056e5b9697ce7e1b"
+          },
+          {
+            "geometry": [
+              20,
+              225.71875,
+              350,
+              435.25
+            ],
+            "styleHash": "d490676be328adcc88059958a249c0f24f9bf23ca000ebf336f78f4573e5f142"
+          },
+          {
+            "geometry": [
+              20,
+              225.71875,
+              350,
+              223
+            ],
+            "styleHash": "bcdc470ad5586514140f7f47be4c50c28b594236f2e5a4450b23ae52f3b4eb21"
+          },
+          {
+            "geometry": [
+              44,
+              249.71875,
+              193.28125,
+              30
+            ],
+            "styleHash": "96943c8fed521039f82470cfc20e0ca3e8a90d3638ba47d3dbf8e353589ed7e3"
+          },
+          {
+            "geometry": [
+              44,
+              309.71875,
+              302,
+              99
+            ],
+            "styleHash": "e7353947ac6b8fd34f6c20dd37d1f526f50b532fd77941b5aacb797c9efa5b17"
+          },
+          {
+            "geometry": [
+              20,
+              462.71875,
+              350,
+              198.25
+            ],
+            "styleHash": "d48a3bbd17fa1a7e9468355dbacc0a9fa86b35c81b2348585f7a9221a05ee49f"
+          },
+          {
+            "geometry": [
+              44,
+              486.71875,
+              202.71875,
+              30
+            ],
+            "styleHash": "cc88799f91cd38d4f0e70bd8e15fd93d7571ff7c51c63a492781e4aefa32641d"
+          },
+          {
+            "geometry": [
+              44,
+              546.71875,
+              302,
+              74.25
+            ],
+            "styleHash": "75630328e3f436d2eb88444b7d0dae50a57f3527829905fff12ea9c70f34f314"
+          }
+        ],
+        "htmlHash": "39a1c6ccdeb128c227dd08b9570e8d03b5d146a590f51e6d73132139261872e7"
+      },
+      {
+        "id": "sjekk",
+        "elements": [
+          {
+            "geometry": [
+              0,
+              0,
+              390,
+              1213.09375
+            ],
+            "styleHash": "d972e7893a087a335d56d3f870447ef81c26100b84ff03c3868ce0780d00644b"
+          },
+          {
+            "geometry": [
+              20,
+              48,
+              350,
+              1117.09375
+            ],
+            "styleHash": "ff0c775658e9942306fed7957edc662f48797a6408230511963bbe5d3ecbfc07"
+          },
+          {
+            "geometry": [
+              20,
+              48,
+              350,
+              398.796875
+            ],
+            "styleHash": "741456d0976721460701c40298f175a8103167d1d22abc0645ce817b7ac18234"
+          },
+          {
+            "geometry": [
+              20,
+              48,
+              350,
+              16.5
+            ],
+            "styleHash": "9b24eb74ee82d273bfa15f828a0f7ae082861eb5871bc5238bd02adca5600ac0"
+          },
+          {
+            "geometry": [
+              20,
+              82.5,
+              350,
+              135.5625
+            ],
+            "styleHash": "9bcdaf7e11ef8fe63dd398307b057ee043c7d47edb27105270a8af52f4cda4be"
+          },
+          {
+            "geometry": [
+              20,
+              240.0625,
+              350,
+              79.171875
+            ],
+            "styleHash": "59267c5df8eabfb790c0c0ecf1382192f1cc29100d480d0fd401eff69e136cd9"
+          },
+          {
+            "geometry": [
+              20,
+              341.234375,
+              350,
+              105.5625
+            ],
+            "styleHash": "98313b030b6e3d48b6415c4733a559853bb7e7d8975fdbd4c4d89f6c3ced2ea7"
+          },
+          {
+            "geometry": [
+              20,
+              470.796875,
+              350,
+              694.296875
+            ],
+            "styleHash": "bba75be1a93eda72ec72431ae27e5c5f194c67e4b6bc054ac3c9929ca681b149"
+          },
+          {
+            "geometry": [
+              47,
+              497.796875,
+              296,
+              33.59375
+            ],
+            "styleHash": "de8727e44be168bec9180d3403e27ac5aaacbf1fd6e84844dfcd36444e5fedde"
+          },
+          {
+            "geometry": [
+              47,
+              497.796875,
+              296,
+              33.59375
+            ],
+            "styleHash": "796bfb4c1995e0997d85ecd5b668ed53afced1f559f55f56c2e8d02e5eecdc91"
+          },
+          {
+            "geometry": [
+              47,
+              558.390625,
+              296,
+              20.796875
+            ],
+            "styleHash": "a6795f30f1adc5eaf57f345385119321461cfd9ee1cb333854ee46f73e4bbaf9"
+          },
+          {
+            "geometry": [
+              193.796875,
+              560.390625,
+              6.296875,
+              15
+            ],
+            "styleHash": "e3670e5e364e6aa6509b99e9a9bf4127a34b52a746e450b3b9670ead32044547"
+          },
+          {
+            "geometry": [
+              47,
+              586.1875,
+              296,
+              51.59375
+            ],
+            "styleHash": "3bb99b28564e43ebf34dd658bb026a107bc40f2847e51f39abf1e3a6fbceb2e4"
+          },
+          {
+            "geometry": [
+              47,
+              653.78125,
+              296,
+              20.796875
+            ],
+            "styleHash": "a6795f30f1adc5eaf57f345385119321461cfd9ee1cb333854ee46f73e4bbaf9"
+          },
+          {
+            "geometry": [
+              89.578125,
+              655.78125,
+              6.296875,
+              15
+            ],
+            "styleHash": "e3670e5e364e6aa6509b99e9a9bf4127a34b52a746e450b3b9670ead32044547"
+          },
+          {
+            "geometry": [
+              47,
+              681.578125,
+              296,
+              51.59375
+            ],
+            "styleHash": "3bb99b28564e43ebf34dd658bb026a107bc40f2847e51f39abf1e3a6fbceb2e4"
+          },
+          {
+            "geometry": [
+              47,
+              749.171875,
+              296,
+              20.796875
+            ],
+            "styleHash": "a6795f30f1adc5eaf57f345385119321461cfd9ee1cb333854ee46f73e4bbaf9"
+          },
+          {
+            "geometry": [
+              302.671875,
+              749.171875,
+              40.328125,
+              17.59375
+            ],
+            "styleHash": "3c68808b7c75097c306d5956be9b0efa3ec2241104dc50c7f5fc7f297a9f4dcd"
+          },
+          {
+            "geometry": [
+              47,
+              776.96875,
+              296,
+              102.78125
+            ],
+            "styleHash": "aa58006a673278898142b3b669af1782d345dddab74d0687d60a0ea758aaee1f"
+          },
+          {
+            "geometry": [
+              47,
+              900.34375,
+              296,
+              35.1875
+            ],
+            "styleHash": "1a3bd16ecc743d9c60e5324cbb464298e4f931bf0c78941c8d8d2a8751386d6b"
+          },
+          {
+            "geometry": [
+              47,
+              953.53125,
+              296,
+              58.375
+            ],
+            "styleHash": "b9f5741240548b15ea89180b16d3500ecbf0893494a49f7f09753995f44cf52e"
+          },
+          {
+            "geometry": [
+              47,
+              1033.90625,
+              296,
+              56
+            ],
+            "styleHash": "4fdea33d92868eb7c04714d73bdae889e0bc27e9ccfdf6816be6c23384310a2f"
+          },
+          {
+            "geometry": [
+              297,
+              1051.90625,
+              20,
+              20
+            ],
+            "styleHash": "c79b2e5c58f797148c903322a54e82cffdcb288bfa38b49b2d388ad7f1a8993e"
+          },
+          {
+            "geometry": [
+              302,
+              1056.90625,
+              10,
+              10
+            ],
+            "styleHash": "8d96d4bdef8c5069d39b20a07af3ea1798997d662fff43865d77994f53e11664"
+          },
+          {
+            "geometry": [
+              47,
+              1102.90625,
+              296,
+              35.1875
+            ],
+            "styleHash": "1a3bd16ecc743d9c60e5324cbb464298e4f931bf0c78941c8d8d2a8751386d6b"
+          },
+          {
+            "geometry": [
+              47,
+              1104.90625,
+              286.375,
+              30.59375
+            ],
+            "styleHash": "6a6a3541abe1e8284e18bd7ed4faff9e230798e695736ea12d8af7848b608a25"
+          },
+          {
+            "geometry": [
+              0,
+              -6626,
+              0,
+              0
+            ],
+            "styleHash": "d7f1d55ded6096da28fa406bde7b81ce518572cf9fc7b53511c6af59ea0e72fd"
+          }
+        ],
+        "htmlHash": "e417c46e5acc5e7f4e84478586e0f3205ba7bf0c47d55e992f724cad9b42b9a7"
+      },
+      {
+        "id": "medon",
+        "elements": [
+          {
+            "geometry": [
+              0,
+              0,
+              390,
+              530.8125
+            ],
+            "styleHash": "ad6fcf0795753fee91c3bfd17dd575b4ca8b2b2ee5d742302c4a3135da37531c"
+          },
+          {
+            "geometry": [
+              20,
+              48,
+              350,
+              434.8125
+            ],
+            "styleHash": "5d82db8d92fef16638135f4848b20d92710e9954bf951739f40db226ad80812c"
+          },
+          {
+            "geometry": [
+              20,
+              48,
+              350,
+              370.8125
+            ],
+            "styleHash": "fa97862571573a011835b595f90804744ce7e22a1153712c799ed9d4edfb3af9"
+          },
+          {
+            "geometry": [
+              20,
+              48,
+              350,
+              111.3125
+            ],
+            "styleHash": "b42ca6e5918608a2312aa87a725312a2d30181902978429887d98375cce9826b"
+          },
+          {
+            "geometry": [
+              20,
+              48,
+              350,
+              16.5
+            ],
+            "styleHash": "9b24eb74ee82d273bfa15f828a0f7ae082861eb5871bc5238bd02adca5600ac0"
+          },
+          {
+            "geometry": [
+              20,
+              82.5,
+              350,
+              76.8125
+            ],
+            "styleHash": "46f9f659e8f24f4d7dbe0008e6c882ec9e50592ebc01e3b4dfe067a438396a8f"
+          },
+          {
+            "geometry": [
+              20,
+              183.3125,
+              350,
+              235.5
+            ],
+            "styleHash": "baa11f82354914a4223d7a3b73d9a6c8bd8d1c22cb4719d4d99875d8fc77fe4a"
+          },
+          {
+            "geometry": [
+              20,
+              183.3125,
+              350,
+              108.75
+            ],
+            "styleHash": "5f2f8802c37d9edb805daee5d7038effe0e69c112ec93e6508218b5848b248c7"
+          },
+          {
+            "geometry": [
+              20,
+              310.0625,
+              350,
+              108.75
+            ],
+            "styleHash": "37217ebc3678987e3e293b7e4ce3bdc0663dc7d0e381b60aa2dcf14ccc5348cd"
+          },
+          {
+            "geometry": [
+              20,
+              442.8125,
+              350,
+              40
+            ],
+            "styleHash": "66405e281efa1a2a459ae6f75716fbe4396188b19a16002d47ab8157c8c332b5"
+          },
+          {
+            "geometry": [
+              20,
+              442.8125,
+              141.6875,
+              40
+            ],
+            "styleHash": "060d372c41a9bcc888c5f84c0f21fba41dd304395eeeebafd0d95622678f5b45"
+          },
+          {
+            "geometry": [
+              141.6875,
+              452.8125,
+              20,
+              20
+            ],
+            "styleHash": "8129f5f68307dff48983e8de421469eda1d57da8fa0469b888a625552c4b9a75"
+          },
+          {
+            "geometry": [
+              145.0208282470703,
+              457.8125,
+              12.5,
+              10
+            ],
+            "styleHash": "65440c08e75c54493c6200e5a47104d24353ce9075090e89526895ea57b9c676"
+          }
+        ],
+        "htmlHash": "0be83645349175ecad8a7324f5a3112ac875faef8595e65bf64b93d46f21e1a3"
+      },
+      {
+        "id": "sporsmal",
+        "elements": [
+          {
+            "geometry": [
+              0,
+              0,
+              390,
+              624.40625
+            ],
+            "styleHash": "8f0a619813a5d20ea0ded5b279b03122b940b375eab7fde96251ca1a12f12373"
+          },
+          {
+            "geometry": [
+              20,
+              48,
+              350,
+              528.40625
+            ],
+            "styleHash": "aa3076190b1b875a46fc7bb8f4a27c0968f10d8a9a46c4a5104b9e174031617f"
+          },
+          {
+            "geometry": [
+              20,
+              48,
+              350,
+              72.90625
+            ],
+            "styleHash": "355a075801d3d1cb3a41a589b36a0694df29c0ab85bdc7565f91725fb3659914"
+          },
+          {
+            "geometry": [
+              20,
+              48,
+              350,
+              16.5
+            ],
+            "styleHash": "9b24eb74ee82d273bfa15f828a0f7ae082861eb5871bc5238bd02adca5600ac0"
+          },
+          {
+            "geometry": [
+              20,
+              82.5,
+              350,
+              38.40625
+            ],
+            "styleHash": "b759b4aaabd2920d1ba8893a3311db9e3d0e3f3c0e7beb9ce6d809924475e52d"
+          },
+          {
+            "geometry": [
+              20,
+              144.90625,
+              350,
+              431.5
+            ],
+            "styleHash": "d647e7410d50abd6a4074893acb8ab323e705e19e120b96fa4b47327edfb4f79"
+          },
+          {
+            "geometry": [
+              20,
+              144.90625,
+              350,
+              80.5
+            ],
+            "styleHash": "6b851a5cc276a99a283bff8c45b64fdbabf6e5ea78d4979c02cef5f9c317d2e5"
+          },
+          {
+            "geometry": [
+              20,
+              145.90625,
+              350,
+              78.5
+            ],
+            "styleHash": "2c4ba9b561f9c83037d1e007bf456683ce514328ab155cc3628081ae8fb918a1"
+          },
+          {
+            "geometry": [
+              355.65625,
+              167.90625,
+              14.34375,
+              34.5
+            ],
+            "styleHash": "2ceedcf921ef9bd9e85f1062e8626f5d28af50999500e9418e83e355d062a263"
+          },
+          {
+            "geometry": [
+              20,
+              224.40625,
+              350,
+              159.9375
+            ],
+            "styleHash": "f1a44dd9db4929c17937ae744244310382e427d429f50ac156742c5515a31b4a"
+          },
+          {
+            "geometry": [
+              20,
+              225.40625,
+              350,
+              79.5
+            ],
+            "styleHash": "6ed7533ea0775c8ad97695c254abadc302024cd30ecf0d614006e4aa3bf5bb84"
+          },
+          {
+            "geometry": [
+              20,
+              225.40625,
+              350,
+              78.5
+            ],
+            "styleHash": "2c4ba9b561f9c83037d1e007bf456683ce514328ab155cc3628081ae8fb918a1"
+          },
+          {
+            "geometry": [
+              355.65625,
+              247.40625,
+              14.34375,
+              34.5
+            ],
+            "styleHash": "2ceedcf921ef9bd9e85f1062e8626f5d28af50999500e9418e83e355d062a263"
+          },
+          {
+            "geometry": [
+              20,
+              303.90625,
+              350,
+              132.75
+            ],
+            "styleHash": "018e2a2c4cf7e86be523dfd3dff064f62dd0d68017ee962e15ad722bad14abe5"
+          },
+          {
+            "geometry": [
+              20,
+              304.90625,
+              350,
+              96
+            ],
+            "styleHash": "8cd7fb529e2cffe7f8ef4bce2d5bad664b4d49b0634f7e378e5e547e3f19be03"
+          },
+          {
+            "geometry": [
+              20,
+              304.90625,
+              350,
+              95
+            ],
+            "styleHash": "0912ee3d76536a508bcc2314f9382d291038dd36c91b88d859ab164a133b922d"
+          },
+          {
+            "geometry": [
+              355.65625,
+              335.15625,
+              14.34375,
+              34.5
+            ],
+            "styleHash": "2ceedcf921ef9bd9e85f1062e8626f5d28af50999500e9418e83e355d062a263"
+          },
+          {
+            "geometry": [
+              20,
+              399.90625,
+              350,
+              132.75
+            ],
+            "styleHash": "018e2a2c4cf7e86be523dfd3dff064f62dd0d68017ee962e15ad722bad14abe5"
+          },
+          {
+            "geometry": [
+              20,
+              400.90625,
+              350,
+              96
+            ],
+            "styleHash": "8cd7fb529e2cffe7f8ef4bce2d5bad664b4d49b0634f7e378e5e547e3f19be03"
+          },
+          {
+            "geometry": [
+              20,
+              400.90625,
+              350,
+              95
+            ],
+            "styleHash": "0912ee3d76536a508bcc2314f9382d291038dd36c91b88d859ab164a133b922d"
+          },
+          {
+            "geometry": [
+              355.65625,
+              431.15625,
+              14.34375,
+              34.5
+            ],
+            "styleHash": "2ceedcf921ef9bd9e85f1062e8626f5d28af50999500e9418e83e355d062a263"
+          },
+          {
+            "geometry": [
+              20,
+              495.90625,
+              350,
+              105.5625
+            ],
+            "styleHash": "8b281883844401e4076633e250d7b46744c7850f9c23b4766b02efa212d0c51d"
+          },
+          {
+            "geometry": [
+              20,
+              496.90625,
+              350,
+              79.5
+            ],
+            "styleHash": "6ed7533ea0775c8ad97695c254abadc302024cd30ecf0d614006e4aa3bf5bb84"
+          },
+          {
+            "geometry": [
+              20,
+              496.90625,
+              350,
+              78.5
+            ],
+            "styleHash": "2c4ba9b561f9c83037d1e007bf456683ce514328ab155cc3628081ae8fb918a1"
+          },
+          {
+            "geometry": [
+              355.65625,
+              518.90625,
+              14.34375,
+              34.5
+            ],
+            "styleHash": "2ceedcf921ef9bd9e85f1062e8626f5d28af50999500e9418e83e355d062a263"
+          },
+          {
+            "geometry": [
+              20,
+              575.40625,
+              350,
+              132.75
+            ],
+            "styleHash": "018e2a2c4cf7e86be523dfd3dff064f62dd0d68017ee962e15ad722bad14abe5"
+          }
+        ],
+        "htmlHash": "2af354e3ef3612800a3b5b483a16fc81dc6d9744c7814b8d16415ac130b61c08"
+      },
+      {
+        "id": "footer",
+        "elements": [
+          {
+            "geometry": [
+              0,
+              0,
+              390,
+              482.953125
+            ],
+            "styleHash": "7e227bd29edd80403af90db4bd85ed3d51e968080cd2ce3cf343eeb5e33a0ab4"
+          },
+          {
+            "geometry": [
+              20,
+              60,
+              350,
+              365.953125
+            ],
+            "styleHash": "f026a1f044a5f20284802ba966f5a0341f7bf1af82a4f2edc56115238aec61da"
+          },
+          {
+            "geometry": [
+              20,
+              60,
+              350,
+              145.96875
+            ],
+            "styleHash": "3817a045df8c298ad0fd4b4d5474a8ba9999eb4032f1b63f50327d6a41512124"
+          },
+          {
+            "geometry": [
+              20,
+              64,
+              183.375,
+              27
+            ],
+            "styleHash": "9e66a1c0650ad5d67ffa6bc91ac5bd2c8e7be04c6cf6339ce28859d806f147de"
+          },
+          {
+            "geometry": [
+              198.3125,
+              64,
+              5.0625,
+              27
+            ],
+            "styleHash": "79c611c5c57705c6bea1850a89685b7dafeaa12ec50acff2904aef3f52d6b139"
+          },
+          {
+            "geometry": [
+              20,
+              115.1875,
+              350,
+              46.78125
+            ],
+            "styleHash": "e34c37c3cc0b063673a3426c6a4ee7ecefe8e139088a094fb9ca72794cb1a26b"
+          },
+          {
+            "geometry": [
+              20,
+              179.96875,
+              151.75,
+              26
+            ],
+            "styleHash": "e5892694be38b80c48a688df081ab1711c36555953d7891ad04a4fa28b96d4a5"
+          },
+          {
+            "geometry": [
+              20,
+              237.96875,
+              165,
+              151.984375
+            ],
+            "styleHash": "55dcdbf9e8419491f7d99472ef677b0e0f9b8fa9fdd780f29dd822d52be0539b"
+          },
+          {
+            "geometry": [
+              20,
+              237.96875,
+              54.859375,
+              20.796875
+            ],
+            "styleHash": "cbd0db3a9347fc6df272db7352ed39611b8707f40c5b7228857f75f6a24c5c81"
+          },
+          {
+            "geometry": [
+              20,
+              270.765625,
+              74.90625,
+              20.796875
+            ],
+            "styleHash": "2819793ffa652f9f9dd212d379aad9e33dc12fbc976595dac6016b7c3bcb753d"
+          },
+          {
+            "geometry": [
+              20,
+              303.5625,
+              32.4375,
+              20.796875
+            ],
+            "styleHash": "e32318c25852f669cacdb09a9d1f1547aaeef92f8e9a5d5443f79c1f099092b2"
+          },
+          {
+            "geometry": [
+              20,
+              336.359375,
+              38.328125,
+              20.796875
+            ],
+            "styleHash": "568b232933f93c24f42bec012b87d9a9b9cf7730c9a472e256f3c38f0d6c199e"
+          },
+          {
+            "geometry": [
+              20,
+              369.15625,
+              93.078125,
+              20.796875
+            ],
+            "styleHash": "d6c0ea44dde1d22c77671b7e4f038d3924f079b94543695acb55f02d4f6569d6"
+          },
+          {
+            "geometry": [
+              205,
+              237.96875,
+              165,
+              151.984375
+            ],
+            "styleHash": "55dcdbf9e8419491f7d99472ef677b0e0f9b8fa9fdd780f29dd822d52be0539b"
+          },
+          {
+            "geometry": [
+              205,
+              237.96875,
+              67.375,
+              20.796875
+            ],
+            "styleHash": "0ed4a8b91d2a17867028a8ee49979d03df5ca35e13625257690b5ceec17732e8"
+          },
+          {
+            "geometry": [
+              205,
+              270.765625,
+              64.875,
+              20.796875
+            ],
+            "styleHash": "93d02c34c1c8940e9c5f9e7c856264453ce7a7f3928c524866ced3ae5c7f000d"
+          },
+          {
+            "geometry": [
+              205,
+              303.5625,
+              45.359375,
+              20.796875
+            ],
+            "styleHash": "c60ff8d66c3f8f753355d88582e26465a83046dbb940a9178208bd7aa42e3c93"
+          },
+          {
+            "geometry": [
+              205,
+              336.359375,
+              65,
+              20.796875
+            ],
+            "styleHash": "a3e680e4f9a4d0e0cd6cf484fb2f02824bf21da5c672066e9d70caabcb80ab85"
+          },
+          {
+            "geometry": [
+              205,
+              369.15625,
+              32.078125,
+              20.796875
+            ],
+            "styleHash": "9786e8bd407e20e63f1526d559d622270fd2a735e6d424b0743796fac585fffc"
+          },
+          {
+            "geometry": [
+              20,
+              425.953125,
+              350,
+              57
+            ],
+            "styleHash": "1967900172d50dea16183072b4ec499a74822b961ded6e5047912cf0a047451d"
+          },
+          {
+            "geometry": [
+              20,
+              446.953125,
+              82.890625,
+              16
+            ],
+            "styleHash": "310e610ddff2bbd2e834eed09ba2cd30e16ddf3aede05e94643ac3c49b850c7d"
+          },
+          {
+            "geometry": [
+              263.125,
+              446.953125,
+              106.875,
+              16
+            ],
+            "styleHash": "3fbaeec247b05acc98a36737aadd89d49d4a50062b696d81d94d229934e25d53"
+          }
+        ],
+        "htmlHash": "e40ca7fa74c338a9a43720e233f29aa3ace580af6cf6edfcd8978eb569b30b1d"
+      }
+    ],
+    "content": {
+      "seo": {
+        "title": "SEO, AI-synlighet og konverteringsoptimalisering | Medon",
+        "description": "Bli funnet og gjør flere besøk til henvendelser og salg. Medon hjelper bedrifter i Norge med synlighet, konvertering eller begge. Ta en gratis, manuell sjekk."
+      },
+      "cta": {
+        "label": "Ta en gratis sjekk",
+        "href": "/#sjekk"
+      },
+      "sections": [
+        {
+          "id": "mekanisme",
+          "eyebrow": "Start med det som begrenser resultatet",
+          "heading": "Slik finner vi hva som bør gjøres først",
+          "body": [
+            "Behovet avgjør tiltakene. Vi starter ikke med SEO eller en annen kanal bare fordi du kom inn på en bestemt side."
+          ],
+          "items": [
+            {
+              "title": "Finn flaskehalsen",
+              "text": "Se hvor kundereisen stopper: før besøket, på siden eller i veien til kontakt og kjøp."
+            },
+            {
+              "title": "Prioriter tiltak",
+              "text": "Velg en fornuftig start ut fra behov, kommersiell verdi og det vi faktisk vet."
+            },
+            {
+              "title": "Gjennomfør",
+              "text": "Gjør arbeidet som er avtalt. Omfang og ansvar skal være tydelig."
+            },
+            {
+              "title": "Mål effekt",
+              "text": "Følg med på relevante henvendelser og kjøp. Se resultatene sammen med verdi og kostnader."
+            }
+          ]
+        },
+        {
+          "id": "passer",
+          "eyebrow": "Er dette aktuelt for bedriften?",
+          "heading": "For deg som vil forbedre veien til kunder",
+          "body": [],
+          "items": [
+            {
+              "title": "Passer godt hvis…",
+              "text": "Bedriften konkurrerer om kundene, og en henvendelse eller ordre har økonomisk verdi. Du har en nettside eller nettbutikk som kan forbedres og vil måle kommersiell effekt."
+            },
+            {
+              "title": "Passer dårlig hvis…",
+              "text": "Du ønsker en garantert rangering eller et bestemt antall kunder, en full gratis revisjon eller aktivitet uten et tydelig mål."
+            }
+          ]
+        },
+        {
+          "id": "sjekk",
+          "eyebrow": "Gratis, manuell sjekk",
+          "heading": "Send nettsiden. Vi sier hvor vi ville startet – og hvorfor.",
+          "body": [
+            "Vi ser kort på den offentlige nettsiden eller nettbutikken og begrunner hva vi ville undersøkt eller forbedret først.",
+            "Dette er en avgrenset, manuell vurdering. Ingen automatisk poengsum, full revisjon, prognose eller gratis gjennomføring. Videre arbeid avtales separat."
+          ]
+        },
+        {
+          "id": "medon",
+          "eyebrow": "Medon AS står bak",
+          "heading": "Én ansvarlig leverandør, tydelig avtalt arbeid",
+          "body": [
+            "Optimalisering Oslo er en tjeneste fra Medon AS. Vi jobber først og fremst med norske bedrifter, og kan også hjelpe bedrifter i andre nordiske land.",
+            "Du skal forstå hva vi foreslår, hvorfor vi foreslår det og hva som faktisk er avtalt. Vi lover ikke en bestemt Google-plassering, en AI-anbefaling eller et bestemt antall nye kunder."
+          ],
+          "links": [
+            {
+              "label": "Om leverandøren",
+              "href": "/om/"
+            }
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Hva skjer etter den gratis sjekken?",
+          "answer": "Vi gjør en kort, manuell vurdering og begrunner hvor vi ville startet. Hvis det er noe vi kan hjelpe med, avtaler vi omfang og pris før betalt arbeid. Sjekken er ikke en full revisjon eller gratis gjennomføring."
+        },
+        {
+          "question": "Hva koster videre arbeid?",
+          "answer": "Endelige offentlige priser og tjenesteomfang er ikke avklart for denne forhåndsvisningen. Prisen avhenger av behov og avtalt arbeid, og avklares før vi starter."
+        },
+        {
+          "question": "Er annonsebudsjett og eksterne kostnader inkludert?",
+          "answer": "Annonsebudsjett og aktuelle eksterne plattformkostnader kommer i tillegg hvis vi ikke avtaler noe annet. Vi avklarer relevante kostnader før arbeidet starter."
+        },
+        {
+          "question": "Hva hvis både synlighet og konvertering begrenser resultatet?",
+          "answer": "Da ser vi på sammenhengen. Vi finner flaskehalsen og prioriterer tiltakene i riktig rekkefølge, fremfor å starte med en fast kanal."
+        },
+        {
+          "question": "Jobber dere bare med bedrifter i Oslo?",
+          "answer": "Nei. Medon AS jobber først og fremst med bedrifter i Norge, og kan også hjelpe bedrifter i andre nordiske land. Navnet innebærer ikke at vi har et Oslo-kontor."
+        }
+      ],
+      "calculator": {
+        "eyebrow": "To grep som virker sammen",
+        "heading": "Hva kan flere relevante besøk og en bedre kjøpsvei bety?",
+        "intro": "Endre trafikken, andelen som tar kontakt eller kjøper – eller begge. Se hvordan de to grepene virker sammen.",
+        "formula": "Relevante besøk × konverteringsrate = henvendelser / kjøp",
+        "labels": {
+          "visits": "Relevante besøk per måned",
+          "conversion": "Konverteringsrate i dag (%)",
+          "trafficIncrease": "Mer relevant trafikk (%)",
+          "newConversion": "Ny konverteringsrate (%)",
+          "current": "I dag",
+          "scenario": "Scenario",
+          "difference": "Forskjell",
+          "outcome": "henvendelser / kjøp per måned",
+          "increase": "endring",
+          "undefinedIncrease": "Prosentvis endring kan ikke beregnes for dette utgangspunktet",
+          "invalid": "Bruk besøk fra 0 til 10 000 000, trafikkøkning fra 0 til 1 000 % og konverteringsrater fra 0 til 100 %."
+        },
+        "defaults": {
+          "visits": 1000,
+          "conversion": 1,
+          "trafficIncrease": 50,
+          "newConversion": 2
+        },
+        "caveat": "Hypotetisk regneeksempel – ikke et kundecase eller en resultatgaranti."
+      },
+      "packages": {
+        "eyebrow": "Avtalt arbeid, tydelig start",
+        "heading": "Synlighet, Konvertering eller Begge",
+        "intro": "Velg det som passer behovet. Omfang og pris må avklares før betalt arbeid starter.",
+        "fitLabel": "Passer for",
+        "scopeLabel": "Hva vi jobber med",
+        "items": [
+          {
+            "title": "Synlighet",
+            "fit": "Bedrifter som trenger flere relevante besøk.",
+            "scope": "Avtalt arbeid med hvordan kundene finner bedriften i søk, AI-tjenester eller lokalt. Kampanjeoptimalisering kan støtte betalt synlighet når det er relevant.",
+            "priceState": "Pris avklares før publisering",
+            "externalCosts": "Annonsebudsjett og aktuelle eksterne plattformkostnader kommer i tillegg hvis ikke annet er avtalt.",
+            "cta": {
+              "label": "Sjekk synligheten",
+              "href": "/#sjekk"
+            }
+          },
+          {
+            "title": "Konvertering",
+            "fit": "Bedrifter som har besøk, men for få henvendelser eller kjøp.",
+            "scope": "Avtalt konverteringsoptimalisering av budskap, landingssider, skjema eller kjøpsvei – på nettsiden eller i nettbutikken.",
+            "priceState": "Pris avklares før publisering",
+            "externalCosts": "Aktuelle eksterne plattformkostnader kommer i tillegg hvis ikke annet er avtalt.",
+            "cta": {
+              "label": "Sjekk veien til kontakt og kjøp",
+              "href": "/#sjekk"
+            }
+          },
+          {
+            "title": "Begge",
+            "fit": "Bedrifter der både synlighet og kjøpsvei kan forbedres.",
+            "scope": "Avtalt arbeid med begge områdene. Vi starter med flaskehalsen og prioriterer i riktig rekkefølge.",
+            "priceState": "Pris avklares før publisering",
+            "externalCosts": "Annonsebudsjett og aktuelle eksterne plattformkostnader kommer i tillegg hvis ikke annet er avtalt.",
+            "cta": {
+              "label": "Finn hvor vi bør starte",
+              "href": "/#sjekk"
+            }
+          }
+        ]
+      },
+      "proof": {
+        "publicationApproved": false,
+        "case": null
+      },
+      "form": {
+        "heading": "Send nettsiden",
+        "websiteLabel": "Nettside eller nettbutikk",
+        "websitePlaceholder": "dinbedrift.no",
+        "emailLabel": "E-post",
+        "emailPlaceholder": "deg@dinbedrift.no",
+        "messageLabel": "Kort kommentar",
+        "optional": "Valgfritt",
+        "messagePlaceholder": "Noe vi bør vite?",
+        "sensitiveNotice": "Ikke send innlogging, sensitive opplysninger eller personopplysninger om andre.",
+        "previewNotice": "Dette er en forhåndsvisning. Innsending er ikke åpnet ennå.",
+        "submitLabel": "Ta en gratis sjekk",
+        "privacyText": "Vi bruker opplysningene for å følge opp forespørselen.",
+        "privacyLink": {
+          "label": "Les om personvern",
+          "href": "/personvern/"
+        },
+        "disabledStatus": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt."
+      },
+      "faqHeading": "Før du tar neste steg",
+      "faqEyebrow": "Greit å vite",
+      "chrome": {
+        "brand": "optimalisering",
+        "brandLocation": "oslo",
+        "homeLabel": "Optimalisering Oslo – forsiden",
+        "skipLabel": "Hopp til innhold",
+        "navigationLabel": "Hovedmeny",
+        "mobileNavigationLabel": "Mobilmeny",
+        "openMenu": "Åpne meny",
+        "closeMenu": "Lukk meny",
+        "assessmentLink": {
+          "label": "Gratis sjekk",
+          "href": "/#sjekk"
+        },
+        "navigation": [
+          {
+            "label": "Synlighet",
+            "href": "/synlighet/"
+          },
+          {
+            "label": "Konvertering",
+            "href": "/konvertering/"
+          },
+          {
+            "label": "Priser",
+            "href": "/#priser"
+          },
+          {
+            "label": "Innsikt",
+            "href": "/innsikt/"
+          }
+        ],
+        "providerText": "En tjeneste fra Medon AS. Synlighet og konvertering for bedrifter.",
+        "previewLabel": "Forhåndsvisning · til vurdering",
+        "serviceNavigationLabel": "Tjenester og veiledning",
+        "informationNavigationLabel": "Kontakt og informasjon",
+        "storeLink": {
+          "label": "For nettbutikker",
+          "href": "/nettbutikkoptimalisering/"
+        },
+        "informationLinks": [
+          {
+            "label": "Gratis sjekk",
+            "href": "/#sjekk"
+          },
+          {
+            "label": "Om Medon",
+            "href": "/om/"
+          },
+          {
+            "label": "Kontakt",
+            "href": "/kontakt/"
+          },
+          {
+            "label": "Personvern",
+            "href": "/personvern/"
+          },
+          {
+            "label": "Vilkår",
+            "href": "/vilkar/"
+          }
+        ],
+        "copyrightProvider": "Medon AS",
+        "footerNote": "Et godt sted å begynne."
+      }
+    }
+  },
+  "1440": {
+    "heroHeight": 607.640625,
+    "selectorY": 709.640625,
+    "lower": [
+      {
+        "id": "regneeksempel",
+        "elements": [
+          {
+            "geometry": [
+              0,
+              0,
+              1440,
+              726.359375
+            ],
+            "styleHash": "80266620089270394419d30f1202bf7e7899d58f4249afad9fff513bf29da44b"
+          },
+          {
+            "geometry": [
+              120,
+              72,
+              1200,
+              582.359375
+            ],
+            "styleHash": "7917e0b655d08e78866d0e261e4a92bc8164296bcd328d0b0d3692ad062b7cff"
+          },
+          {
+            "geometry": [
+              120,
+              206.46875,
+              511.1875,
+              313.40625
+            ],
+            "styleHash": "d083f3c7a244c0a2577bfe2fd217c78d0e40370e934c9ce5d40a640a13766c0f"
+          },
+          {
+            "geometry": [
+              120,
+              206.46875,
+              511.1875,
+              16.5
+            ],
+            "styleHash": "e49ba318d68fa14581a9bf5b310acfa0c367d202107f1d72db0215088607e5a8"
+          },
+          {
+            "geometry": [
+              120,
+              240.96875,
+              511.1875,
+              155.90625
+            ],
+            "styleHash": "44d81309b83fba60e03fb04b81804b98721609f6c0b8e5f69e24d21f77a89464"
+          },
+          {
+            "geometry": [
+              120,
+              420.875,
+              511.1875,
+              51
+            ],
+            "styleHash": "2ac1266df529a6a445e26c1c32ea6c1db96b12cac910b30d728eed798007a0e0"
+          },
+          {
+            "geometry": [
+              120,
+              495.875,
+              511.1875,
+              24
+            ],
+            "styleHash": "0a9fa65dac4e78bc9537dfcdb1c01b868634e3808c591166f21cd9a5f8cdd803"
+          },
+          {
+            "geometry": [
+              695.1875,
+              72,
+              624.8125,
+              582.359375
+            ],
+            "styleHash": "bc59f06d36509327ffead2fc8f6758482d5a9e43740f2bc90d837b00158c8260"
+          },
+          {
+            "geometry": [
+              722.1875,
+              99,
+              570.8125,
+              183.59375
+            ],
+            "styleHash": "01fc0b3224ee171185bee2404c52ff4a07da664423efa204528f08b480169557"
+          },
+          {
+            "geometry": [
+              722.1875,
+              99,
+              276.40625,
+              82.796875
+            ],
+            "styleHash": "4fbd1eb82060992dbef13ccec786f5eb9035bcf9bec6dcc29b355bef53fee21b"
+          },
+          {
+            "geometry": [
+              722.1875,
+              127.796875,
+              276.40625,
+              54
+            ],
+            "styleHash": "adda6c32865a509a45cb628514403e587afc733324afbd4562925a8502e41108"
+          },
+          {
+            "geometry": [
+              1016.59375,
+              99,
+              276.40625,
+              82.796875
+            ],
+            "styleHash": "4fbd1eb82060992dbef13ccec786f5eb9035bcf9bec6dcc29b355bef53fee21b"
+          },
+          {
+            "geometry": [
+              1016.59375,
+              127.796875,
+              276.40625,
+              54
+            ],
+            "styleHash": "adda6c32865a509a45cb628514403e587afc733324afbd4562925a8502e41108"
+          },
+          {
+            "geometry": [
+              722.1875,
+              199.796875,
+              276.40625,
+              82.796875
+            ],
+            "styleHash": "4fbd1eb82060992dbef13ccec786f5eb9035bcf9bec6dcc29b355bef53fee21b"
+          },
+          {
+            "geometry": [
+              722.1875,
+              228.59375,
+              276.40625,
+              54
+            ],
+            "styleHash": "adda6c32865a509a45cb628514403e587afc733324afbd4562925a8502e41108"
+          },
+          {
+            "geometry": [
+              1016.59375,
+              199.796875,
+              276.40625,
+              82.796875
+            ],
+            "styleHash": "4fbd1eb82060992dbef13ccec786f5eb9035bcf9bec6dcc29b355bef53fee21b"
+          },
+          {
+            "geometry": [
+              1016.59375,
+              228.59375,
+              276.40625,
+              54
+            ],
+            "styleHash": "adda6c32865a509a45cb628514403e587afc733324afbd4562925a8502e41108"
+          },
+          {
+            "geometry": [
+              0,
+              -1281.921875,
+              0,
+              0
+            ],
+            "styleHash": "c2927d4b510c4df889c73c754cf32c42a746fb6e6e33ce1b215160e823ae7094"
+          },
+          {
+            "geometry": [
+              722.1875,
+              306.59375,
+              570.8125,
+              284.171875
+            ],
+            "styleHash": "e9dec8252d2bb5f939a3398f9a505eb735c2735fda175d7d683316ddf1f06de2"
+          },
+          {
+            "geometry": [
+              722.1875,
+              306.59375,
+              570.8125,
+              203.375
+            ],
+            "styleHash": "5227219f0754bf6acd5d7df7e15ddf36529ee23c40cf9b373bae3370447bc6e8"
+          },
+          {
+            "geometry": [
+              722.1875,
+              306.59375,
+              277.40625,
+              203.375
+            ],
+            "styleHash": "84d821eb6a74eba94fbc56c817f3acf03f4ff586fa3db2b09dad6b500c63265d"
+          },
+          {
+            "geometry": [
+              742.1875,
+              326.59375,
+              29.046875,
+              20.796875
+            ],
+            "styleHash": "144288c4f343e3b7ea1dd0aa3970a09b3d956db309e1b1d91ed3bcb43b46d696"
+          },
+          {
+            "geometry": [
+              742.1875,
+              361.390625,
+              62.21875,
+              64
+            ],
+            "styleHash": "c45928c5f6ec1aab2d12af8a2e7a72b10d652b44c532444e4e543bf27a535718"
+          },
+          {
+            "geometry": [
+              742.1875,
+              435.390625,
+              165.5625,
+              19.1875
+            ],
+            "styleHash": "91cb2e51c3d6bef0655b0af2c0df0ec378bf69aa30b6474759efbc5dbd8f5b26"
+          },
+          {
+            "geometry": [
+              742.1875,
+              467.578125,
+              72.046875,
+              22.390625
+            ],
+            "styleHash": "bd5627f0cbc9e33c9371e95e19c8453c7f623f9b30ee6c350e14c5f89003eb6d"
+          },
+          {
+            "geometry": [
+              1015.59375,
+              306.59375,
+              277.40625,
+              203.375
+            ],
+            "styleHash": "12145dcde8679b8fee26d1d6b0beeb8307f5dd28b29352fc544393639d27e07c"
+          },
+          {
+            "geometry": [
+              1035.59375,
+              326.59375,
+              51.84375,
+              20.796875
+            ],
+            "styleHash": "d153d0614bf2bd4928870839333ddd1c724520a280c8defbf5f333c71afb7286"
+          },
+          {
+            "geometry": [
+              1035.59375,
+              362.453125,
+              74.953125,
+              64
+            ],
+            "styleHash": "056d7c0d1a58d9f33547b028604cb419bea051d247c638b32f4b18e4ecb1de02"
+          },
+          {
+            "geometry": [
+              1035.59375,
+              437.53125,
+              165.5625,
+              19.1875
+            ],
+            "styleHash": "91cb2e51c3d6bef0655b0af2c0df0ec378bf69aa30b6474759efbc5dbd8f5b26"
+          },
+          {
+            "geometry": [
+              1035.59375,
+              470.78125,
+              62.71875,
+              19.1875
+            ],
+            "styleHash": "82e3450d07d8250f0ba7f33594656ca54f7cb1cc06cf498d1bdebf3dd8682220"
+          },
+          {
+            "geometry": [
+              722.1875,
+              529.96875,
+              570.8125,
+              60.796875
+            ],
+            "styleHash": "a38acac50b276ce200a16fdf215a392ef460eaa82c1a9f5215b25c38a9580a7b"
+          },
+          {
+            "geometry": [
+              792.609375,
+              534.96875,
+              42.40625,
+              30
+            ],
+            "styleHash": "18f56006a00295fc1c37aecc1c33a60f9addd2551431d1e87a182ffd8c9044f4"
+          },
+          {
+            "geometry": [
+              722.1875,
+              569.96875,
+              570.8125,
+              20.796875
+            ],
+            "styleHash": "8de61e93af7021078352ac16e9cc7ee57aab41489e0ea7629ea47654db879ad7"
+          },
+          {
+            "geometry": [
+              722.1875,
+              608.765625,
+              570.8125,
+              18.59375
+            ],
+            "styleHash": "4e642c20b2ba5634b4dc86619e0dce2f108ada5826bf7c83f0085f86fa6db1bc"
+          }
+        ],
+        "htmlHash": "81e927b2adc5e4896db49d236017afc5fd9044eb89461929476d62c831bd666d"
+      },
+      {
+        "id": "priser",
+        "elements": [
+          {
+            "geometry": [
+              0,
+              0,
+              1440,
+              844.296875
+            ],
+            "styleHash": "0d416c42ddc17c5a16a45c7d1f31e6f3153f3f6bfb70bab729ad4fcbc3bd3a16"
+          },
+          {
+            "geometry": [
+              120,
+              72,
+              1200,
+              700.296875
+            ],
+            "styleHash": "6fd78a8b9a02abdcb441174dfa644983f3ff40dde3ffa5ed05a8f3c006c708db"
+          },
+          {
+            "geometry": [
+              120,
+              72,
+              780,
+              135.359375
+            ],
+            "styleHash": "749660777091eeb194d196ef40711e3287fb1e9e99f9166b85b96c4003352ac2"
+          },
+          {
+            "geometry": [
+              120,
+              72,
+              780,
+              16.5
+            ],
+            "styleHash": "3ee1b738dadcd80ec90cb6c691d786f066812e5a0c12b065e99820add87f6843"
+          },
+          {
+            "geometry": [
+              120,
+              106.5,
+              780,
+              51.96875
+            ],
+            "styleHash": "ae9aba8ddad1bbfe2b0bcfb8bfc520afeddc9deb6910e8e4196fdf25388e8de9"
+          },
+          {
+            "geometry": [
+              120,
+              178.46875,
+              780,
+              28.890625
+            ],
+            "styleHash": "5c54e71c103f9e7e33e9cf1d87b58ae6a3bd0781d11cae58cc1ce3680e4f19f3"
+          },
+          {
+            "geometry": [
+              120,
+              239.359375,
+              1200,
+              532.9375
+            ],
+            "styleHash": "a032c70bc28f032b7d9927d5d78ec6dffecacd2479df287e797a1b09e5216a74"
+          },
+          {
+            "geometry": [
+              120,
+              239.359375,
+              386.65625,
+              532.9375
+            ],
+            "styleHash": "b043217115db442be78999a9cf547f1c2b49ede016342009d9a2ab2c4f7f2cd9"
+          },
+          {
+            "geometry": [
+              149,
+              268.359375,
+              328.65625,
+              38.390625
+            ],
+            "styleHash": "16f7f23304837931beb391284ded557d0cf20b88e59ee8ddedf089adda418a62"
+          },
+          {
+            "geometry": [
+              149,
+              330.75,
+              328.65625,
+              206.375
+            ],
+            "styleHash": "de940d2ebcc872914877726b90d141ae05622540aa3dc2adb05780f5a68c063b"
+          },
+          {
+            "geometry": [
+              149,
+              330.75,
+              328.65625,
+              19.1875
+            ],
+            "styleHash": "e2b9680f2892a749f60dffd033eb91c1865bb52fef9fb6339bb88374c0a1d63a"
+          },
+          {
+            "geometry": [
+              149,
+              355.9375,
+              328.65625,
+              24
+            ],
+            "styleHash": "f69acd949b321bfb3cc4c177c7613fb1b2144b9a9973a2d84f3af12880bb3fc8"
+          },
+          {
+            "geometry": [
+              149,
+              397.9375,
+              328.65625,
+              19.1875
+            ],
+            "styleHash": "e2b9680f2892a749f60dffd033eb91c1865bb52fef9fb6339bb88374c0a1d63a"
+          },
+          {
+            "geometry": [
+              149,
+              423.125,
+              328.65625,
+              96
+            ],
+            "styleHash": "d443fed093eaca7f602415f80f67c7471a7a552ee17ca2a5558e6a1bb332388b"
+          },
+          {
+            "geometry": [
+              149,
+              561.125,
+              328.65625,
+              102.171875
+            ],
+            "styleHash": "84dad19aa09c22b1df9d719e6b05d255333c4b54c05ce26e6bcecdb65357f958"
+          },
+          {
+            "geometry": [
+              149,
+              582.125,
+              328.65625,
+              28.796875
+            ],
+            "styleHash": "4ab2f3071c561e887897f9c6a24ffd4ffb0d66aa6447dc2e29eeb24117e62639"
+          },
+          {
+            "geometry": [
+              149,
+              624.921875,
+              328.65625,
+              38.375
+            ],
+            "styleHash": "84ed6c60667785045088e39d3d0efddaf568e78c204fa0dea7a10e1ca677cac7"
+          },
+          {
+            "geometry": [
+              149,
+              687.296875,
+              328.65625,
+              56
+            ],
+            "styleHash": "b9877e11751b6980dd5ed7b7b0c8232858f1edc58bbd3f51ec82ee8971cd4f67"
+          },
+          {
+            "geometry": [
+              365,
+              705.296875,
+              20,
+              20
+            ],
+            "styleHash": "7066c802f409d25643fe76c01d3daf8c1f7d37baa560df4ece714cd504276bdd"
+          },
+          {
+            "geometry": [
+              370,
+              710.296875,
+              10,
+              10
+            ],
+            "styleHash": "3721c9cc7441ab47babc1e5c884a3468dfe34cbe5692a833ff58febbc107a8c5"
+          },
+          {
+            "geometry": [
+              526.65625,
+              239.359375,
+              386.671875,
+              532.9375
+            ],
+            "styleHash": "b39e6c580fd655d39af75794f228b2bdd1568dcde3c456edb3c8d12fb67d74d4"
+          },
+          {
+            "geometry": [
+              555.65625,
+              268.359375,
+              328.671875,
+              38.390625
+            ],
+            "styleHash": "eb64f041bfd4d715c38d126db1c7535ee55a715f09c31d4ae4b590196ad0b6f1"
+          },
+          {
+            "geometry": [
+              555.65625,
+              330.75,
+              328.671875,
+              206.375
+            ],
+            "styleHash": "cd0b4d7156426de9fcd58b31223542cce03d5da8f92704b1b00c1e081610d7c1"
+          },
+          {
+            "geometry": [
+              555.65625,
+              330.75,
+              328.671875,
+              19.1875
+            ],
+            "styleHash": "2dc7839aa0d373a32983f791a84c118ffcc153b71932e2f1b6b69bcd91c0de1b"
+          },
+          {
+            "geometry": [
+              555.65625,
+              355.9375,
+              328.671875,
+              48
+            ],
+            "styleHash": "e6308c68057227a0a247daa60dc8792dc496a0e38a485c5882af00b6e39d7651"
+          },
+          {
+            "geometry": [
+              555.65625,
+              421.9375,
+              328.671875,
+              19.1875
+            ],
+            "styleHash": "2dc7839aa0d373a32983f791a84c118ffcc153b71932e2f1b6b69bcd91c0de1b"
+          },
+          {
+            "geometry": [
+              555.65625,
+              447.125,
+              328.671875,
+              72
+            ],
+            "styleHash": "a6a509b70126853c86219ee09012a12119ba30a892c225f42b46fb0185a35eb8"
+          },
+          {
+            "geometry": [
+              555.65625,
+              561.125,
+              328.671875,
+              102.171875
+            ],
+            "styleHash": "b292bea5afc9f7d348eaae9a9f79d77bed1cb7d5a2a3a81c4a23774e7b8c65e5"
+          },
+          {
+            "geometry": [
+              555.65625,
+              582.125,
+              328.671875,
+              28.796875
+            ],
+            "styleHash": "fb2193bbf819fa670165a97bc168b69274fc98286c161d499ed94181fe9fb65a"
+          },
+          {
+            "geometry": [
+              555.65625,
+              624.921875,
+              328.671875,
+              38.375
+            ],
+            "styleHash": "eaa0ad25626e303f5ac2b11f36c6eb4c136951f24ad543c24479abbbeffc2d63"
+          },
+          {
+            "geometry": [
+              555.65625,
+              687.296875,
+              328.671875,
+              56
+            ],
+            "styleHash": "6d7f9129055b33f92c81ad5d7180c1a3a96f56781d2d77737c40200226d91e3a"
+          },
+          {
+            "geometry": [
+              810.703125,
+              705.296875,
+              20,
+              20
+            ],
+            "styleHash": "7066c802f409d25643fe76c01d3daf8c1f7d37baa560df4ece714cd504276bdd"
+          },
+          {
+            "geometry": [
+              815.703125,
+              710.296875,
+              10,
+              10
+            ],
+            "styleHash": "3721c9cc7441ab47babc1e5c884a3468dfe34cbe5692a833ff58febbc107a8c5"
+          },
+          {
+            "geometry": [
+              933.328125,
+              239.359375,
+              386.65625,
+              532.9375
+            ],
+            "styleHash": "8cd9aa31623261aa8044ae091df71168c4812be5456c8c22e2a7e3e151f12967"
+          },
+          {
+            "geometry": [
+              962.328125,
+              268.359375,
+              328.65625,
+              38.390625
+            ],
+            "styleHash": "16f7f23304837931beb391284ded557d0cf20b88e59ee8ddedf089adda418a62"
+          },
+          {
+            "geometry": [
+              962.328125,
+              330.75,
+              328.65625,
+              182.375
+            ],
+            "styleHash": "41fd5ab41c4a7bc7403fe04f00cc0cf7abb54bc491557e2e7aeb38844afa1314"
+          },
+          {
+            "geometry": [
+              962.328125,
+              330.75,
+              328.65625,
+              19.1875
+            ],
+            "styleHash": "e2b9680f2892a749f60dffd033eb91c1865bb52fef9fb6339bb88374c0a1d63a"
+          },
+          {
+            "geometry": [
+              962.328125,
+              355.9375,
+              328.65625,
+              48
+            ],
+            "styleHash": "3015942a8cb097a9bb0273fa1cb326b5a764a8946a4bd2ea5787db0ed3fe168d"
+          },
+          {
+            "geometry": [
+              962.328125,
+              421.9375,
+              328.65625,
+              19.1875
+            ],
+            "styleHash": "e2b9680f2892a749f60dffd033eb91c1865bb52fef9fb6339bb88374c0a1d63a"
+          },
+          {
+            "geometry": [
+              962.328125,
+              447.125,
+              328.65625,
+              48
+            ],
+            "styleHash": "3015942a8cb097a9bb0273fa1cb326b5a764a8946a4bd2ea5787db0ed3fe168d"
+          },
+          {
+            "geometry": [
+              962.328125,
+              561.125,
+              328.65625,
+              102.171875
+            ],
+            "styleHash": "208bd06f8330cd87abe08b1acc6cbda5bc3455e8efe8251f05cf218323747839"
+          },
+          {
+            "geometry": [
+              962.328125,
+              582.125,
+              328.65625,
+              28.796875
+            ],
+            "styleHash": "4ab2f3071c561e887897f9c6a24ffd4ffb0d66aa6447dc2e29eeb24117e62639"
+          },
+          {
+            "geometry": [
+              962.328125,
+              624.921875,
+              328.65625,
+              38.375
+            ],
+            "styleHash": "84ed6c60667785045088e39d3d0efddaf568e78c204fa0dea7a10e1ca677cac7"
+          },
+          {
+            "geometry": [
+              962.328125,
+              687.296875,
+              328.65625,
+              56
+            ],
+            "styleHash": "b9877e11751b6980dd5ed7b7b0c8232858f1edc58bbd3f51ec82ee8971cd4f67"
+          },
+          {
+            "geometry": [
+              1191.71875,
+              705.296875,
+              20,
+              20
+            ],
+            "styleHash": "7066c802f409d25643fe76c01d3daf8c1f7d37baa560df4ece714cd504276bdd"
+          },
+          {
+            "geometry": [
+              1196.71875,
+              710.296875,
+              10,
+              10
+            ],
+            "styleHash": "3721c9cc7441ab47babc1e5c884a3468dfe34cbe5692a833ff58febbc107a8c5"
+          }
+        ],
+        "htmlHash": "fb1e60f50f5539282e1274af612ca28a790acd84e1e8240e9f8519a1243ed130"
+      },
+      {
+        "id": "mekanisme",
+        "elements": [
+          {
+            "geometry": [
+              0,
+              0,
+              1440,
+              534.6875
+            ],
+            "styleHash": "a2b580d9a3e2f99a3349fa73452ffaaa92b0b2e8d9a586b5b9a221b46bf8dcdc"
+          },
+          {
+            "geometry": [
+              120,
+              72,
+              1200,
+              390.6875
+            ],
+            "styleHash": "acfa1940b6ef6a2a1e2ff7841dd59315ad8e71ec2245edb4b9d8114a64c7eb2f"
+          },
+          {
+            "geometry": [
+              120,
+              72,
+              1200,
+              138.4375
+            ],
+            "styleHash": "6f7c03d1649d0717a7be26e5160f630f45261b1865f22eaacc99baced08d7473"
+          },
+          {
+            "geometry": [
+              120,
+              72,
+              568,
+              138.4375
+            ],
+            "styleHash": "1c0ce3db623d1f5d2ac27d2929d562c92ab5cc6903cd1ad6cd1344802b62a762"
+          },
+          {
+            "geometry": [
+              120,
+              72,
+              568,
+              16.5
+            ],
+            "styleHash": "bf9f5842e7de07eadec4ec85802c381646ea15d6c4335977f3175796e02addc8"
+          },
+          {
+            "geometry": [
+              120,
+              106.5,
+              568,
+              103.9375
+            ],
+            "styleHash": "12e4aea2b7c2335679b2648f619b8388ffa9893a0a31170786c225eee2818418"
+          },
+          {
+            "geometry": [
+              752,
+              72,
+              568,
+              63.78125
+            ],
+            "styleHash": "92028053cf066e8acbe9bf9eb63625d141533a67dcd503a89c08b699836d9afb"
+          },
+          {
+            "geometry": [
+              752,
+              78,
+              568,
+              57.78125
+            ],
+            "styleHash": "94caa91a1b11b4e0d58af172c414e1d0faac9a6488bfc015da315e90ee42a7e0"
+          },
+          {
+            "geometry": [
+              120,
+              242.4375,
+              1200,
+              220.25
+            ],
+            "styleHash": "7c072e83ab6f8841ce5f9b363b3108fb07686b56da1a95f217d0c51e0403d195"
+          },
+          {
+            "geometry": [
+              120,
+              242.4375,
+              282,
+              220.25
+            ],
+            "styleHash": "68fccb3e6f08e4a7470e8337a2bea53864878f38dcfe9f193a866f0415308f14"
+          },
+          {
+            "geometry": [
+              120,
+              242.4375,
+              42,
+              42
+            ],
+            "styleHash": "9d6261177a4c8fcd5a802e494688552a3883b6862969cb8261ea85d686a79a12"
+          },
+          {
+            "geometry": [
+              120,
+              304.4375,
+              187.265625,
+              30
+            ],
+            "styleHash": "5e4c4a0b464c28e27a6ee4bf18e0bf9c82719cf9e81fa3d5819df943cc21a2ce"
+          },
+          {
+            "geometry": [
+              120,
+              364.4375,
+              282,
+              49.5
+            ],
+            "styleHash": "9a6e46c801b1433892917041b510a856a4f4c2aa4cb3e17b2c2e80cb8f1f74f7"
+          },
+          {
+            "geometry": [
+              426,
+              242.4375,
+              282,
+              220.25
+            ],
+            "styleHash": "68fccb3e6f08e4a7470e8337a2bea53864878f38dcfe9f193a866f0415308f14"
+          },
+          {
+            "geometry": [
+              426,
+              242.4375,
+              42,
+              42
+            ],
+            "styleHash": "9d6261177a4c8fcd5a802e494688552a3883b6862969cb8261ea85d686a79a12"
+          },
+          {
+            "geometry": [
+              426,
+              304.4375,
+              147.453125,
+              30
+            ],
+            "styleHash": "20322abe58c833f43c730ea127959fc62e5b353aabc80f6672fc7d7f9633c6bd"
+          },
+          {
+            "geometry": [
+              426,
+              364.4375,
+              282,
+              49.5
+            ],
+            "styleHash": "9a6e46c801b1433892917041b510a856a4f4c2aa4cb3e17b2c2e80cb8f1f74f7"
+          },
+          {
+            "geometry": [
+              732,
+              242.4375,
+              282,
+              220.25
+            ],
+            "styleHash": "68fccb3e6f08e4a7470e8337a2bea53864878f38dcfe9f193a866f0415308f14"
+          },
+          {
+            "geometry": [
+              732,
+              242.4375,
+              42,
+              42
+            ],
+            "styleHash": "9d6261177a4c8fcd5a802e494688552a3883b6862969cb8261ea85d686a79a12"
+          },
+          {
+            "geometry": [
+              732,
+              304.4375,
+              132.1875,
+              30
+            ],
+            "styleHash": "4677c12269b2d16f12206eafba845398b2b2014e4541afb64db1008631f372a2"
+          },
+          {
+            "geometry": [
+              732,
+              364.4375,
+              282,
+              49.5
+            ],
+            "styleHash": "9a6e46c801b1433892917041b510a856a4f4c2aa4cb3e17b2c2e80cb8f1f74f7"
+          },
+          {
+            "geometry": [
+              1038,
+              242.4375,
+              282,
+              220.25
+            ],
+            "styleHash": "68fccb3e6f08e4a7470e8337a2bea53864878f38dcfe9f193a866f0415308f14"
+          },
+          {
+            "geometry": [
+              1038,
+              242.4375,
+              42,
+              42
+            ],
+            "styleHash": "9d6261177a4c8fcd5a802e494688552a3883b6862969cb8261ea85d686a79a12"
+          },
+          {
+            "geometry": [
+              1038,
+              304.4375,
+              108.859375,
+              30
+            ],
+            "styleHash": "cf47582a18bcd8a76976777c151332fe31f4680fa46807dbd9201392bef1006d"
+          },
+          {
+            "geometry": [
+              1038,
+              364.4375,
+              282,
+              74.25
+            ],
+            "styleHash": "aee7f39d778a6e6546a6d822f346bc75c8fdf71ee527c19cc885688b694d6d7c"
+          }
+        ],
+        "htmlHash": "04d7dbb5641e95f763fc8aea753724948ff004ba27968631177a6a315dfc94a2"
+      },
+      {
+        "id": "passer",
+        "elements": [
+          {
+            "geometry": [
+              0,
+              0,
+              1440,
+              474.71875
+            ],
+            "styleHash": "8b09d818e1528752c3d398fd383f632c9b2dc431052da8e037e2dc65df3db773"
+          },
+          {
+            "geometry": [
+              120,
+              72,
+              1200,
+              330.71875
+            ],
+            "styleHash": "6314cc5043ca286248839a022a5b066ba0260c9e3bf5ea41c2ea97b75ce2df93"
+          },
+          {
+            "geometry": [
+              120,
+              72,
+              1200,
+              92.46875
+            ],
+            "styleHash": "2d2befeac288fd8b58d39c2ab35715e0fa2523644213cea0cd8fd532ed50cebf"
+          },
+          {
+            "geometry": [
+              120,
+              72,
+              1200,
+              86.46875
+            ],
+            "styleHash": "7a8a04f98b0990e6264eb566e0ccef3ceec3f2dd49a92c8fee447933c1e2dd3a"
+          },
+          {
+            "geometry": [
+              120,
+              72,
+              1200,
+              16.5
+            ],
+            "styleHash": "9c8f3176d94fc3ecf312285c668bfcaa762b1ea5e3a48d2e96565e492816c0b2"
+          },
+          {
+            "geometry": [
+              120,
+              106.5,
+              1200,
+              51.96875
+            ],
+            "styleHash": "48597fe77f404051512ba8236ec9ce082fd618090d57e1c4ea07a29afe8cbd7b"
+          },
+          {
+            "geometry": [
+              120,
+              158.46875,
+              1200,
+              6
+            ],
+            "styleHash": "69254c1307de8bb169fd19d097f8bf894e6c8083ec3f5c1b45fbc1085b0699d5"
+          },
+          {
+            "geometry": [
+              120,
+              196.46875,
+              1200,
+              206.25
+            ],
+            "styleHash": "2e3acf875ec0d29231becd6cc74fedb617c4bed061d6c0a9ab1d9ebc8415c0ac"
+          },
+          {
+            "geometry": [
+              120,
+              196.46875,
+              588,
+              206.25
+            ],
+            "styleHash": "4730a4868046e125db5f496ef247336b9df8c57f3a5d3ab81f87e87e4d8b237e"
+          },
+          {
+            "geometry": [
+              144,
+              220.46875,
+              193.28125,
+              30
+            ],
+            "styleHash": "96943c8fed521039f82470cfc20e0ca3e8a90d3638ba47d3dbf8e353589ed7e3"
+          },
+          {
+            "geometry": [
+              144,
+              280.46875,
+              540,
+              74.25
+            ],
+            "styleHash": "ecf12fdebcd0d3112d8b588326ab3cf1401ca19af66b9c4f33bfa794263d2747"
+          },
+          {
+            "geometry": [
+              732,
+              196.46875,
+              588,
+              206.25
+            ],
+            "styleHash": "2ff6a8bcd39b152ca7e7454f733285fdf3597f6de7b39bc96b342d358acf1250"
+          },
+          {
+            "geometry": [
+              756,
+              220.46875,
+              202.71875,
+              30
+            ],
+            "styleHash": "cc88799f91cd38d4f0e70bd8e15fd93d7571ff7c51c63a492781e4aefa32641d"
+          },
+          {
+            "geometry": [
+              756,
+              280.46875,
+              540,
+              49.5
+            ],
+            "styleHash": "ecfe7e5ca47e476a0348940684cdd786eeac7ff87ecb08a16e33e154a258c386"
+          }
+        ],
+        "htmlHash": "39a1c6ccdeb128c227dd08b9570e8d03b5d146a590f51e6d73132139261872e7"
+      },
+      {
+        "id": "sjekk",
+        "elements": [
+          {
+            "geometry": [
+              0,
+              0,
+              1440,
+              780.5
+            ],
+            "styleHash": "c39a36f963b29276d510d7e22b3b86d3254205991995f236f67195110d1b7d7c"
+          },
+          {
+            "geometry": [
+              120,
+              72,
+              1200,
+              636.5
+            ],
+            "styleHash": "83043a44ff12c5c1dd8f049da78a15504f7726411d29f6f2d0f12fe6445302e4"
+          },
+          {
+            "geometry": [
+              120,
+              72,
+              568,
+              436.25
+            ],
+            "styleHash": "98ab3a39bcfee3c41e28a46b530dfc790d7a517b75ab30f9910ecb30ae981f56"
+          },
+          {
+            "geometry": [
+              120,
+              108,
+              568,
+              16.5
+            ],
+            "styleHash": "bf9f5842e7de07eadec4ec85802c381646ea15d6c4335977f3175796e02addc8"
+          },
+          {
+            "geometry": [
+              120,
+              142.5,
+              568,
+              189.796875
+            ],
+            "styleHash": "28c2084ae30e67fa908137f8dce43c70f372ae7947edfd8dfe82708862a3580f"
+          },
+          {
+            "geometry": [
+              120,
+              354.296875,
+              520,
+              52.78125
+            ],
+            "styleHash": "691ad3a32b93160337155e391cfbf2b221cf98b1374f21478559e74c97d8a85a"
+          },
+          {
+            "geometry": [
+              120,
+              429.078125,
+              520,
+              79.171875
+            ],
+            "styleHash": "ae9b5aaf3da14bb6207b3483d83645ea6e801a5ed2b8478c17e067c1a29a2d50"
+          },
+          {
+            "geometry": [
+              752,
+              72,
+              568,
+              636.5
+            ],
+            "styleHash": "0e2b36dd1088b263f2f5330eb7d4c0ac0a458c65e602e0ac07512afdcbe5dbc4"
+          },
+          {
+            "geometry": [
+              785,
+              105,
+              502,
+              33.59375
+            ],
+            "styleHash": "6fe32c2c09e5c149dac083d4a97a1d0bd86afdeab16029577d2bc2e80658a23d"
+          },
+          {
+            "geometry": [
+              785,
+              105,
+              502,
+              33.59375
+            ],
+            "styleHash": "f98a4d039cefc3a118e105f722d5ac8c045a0fd4299044a29fccb4bed3d665f1"
+          },
+          {
+            "geometry": [
+              785,
+              165.59375,
+              502,
+              20.796875
+            ],
+            "styleHash": "505ecadcee01b1f600fac0cca83d305441c3c97989231923050494ec3f20f04e"
+          },
+          {
+            "geometry": [
+              931.796875,
+              167.59375,
+              6.296875,
+              15
+            ],
+            "styleHash": "e3670e5e364e6aa6509b99e9a9bf4127a34b52a746e450b3b9670ead32044547"
+          },
+          {
+            "geometry": [
+              785,
+              193.390625,
+              502,
+              48.390625
+            ],
+            "styleHash": "50d5f0a2eb7649b277e01f01964734d13d493bc3007027631c8455b90f98b55f"
+          },
+          {
+            "geometry": [
+              785,
+              257.78125,
+              502,
+              20.796875
+            ],
+            "styleHash": "505ecadcee01b1f600fac0cca83d305441c3c97989231923050494ec3f20f04e"
+          },
+          {
+            "geometry": [
+              827.578125,
+              259.78125,
+              6.296875,
+              15
+            ],
+            "styleHash": "e3670e5e364e6aa6509b99e9a9bf4127a34b52a746e450b3b9670ead32044547"
+          },
+          {
+            "geometry": [
+              785,
+              285.578125,
+              502,
+              48.390625
+            ],
+            "styleHash": "50d5f0a2eb7649b277e01f01964734d13d493bc3007027631c8455b90f98b55f"
+          },
+          {
+            "geometry": [
+              785,
+              349.96875,
+              502,
+              20.796875
+            ],
+            "styleHash": "505ecadcee01b1f600fac0cca83d305441c3c97989231923050494ec3f20f04e"
+          },
+          {
+            "geometry": [
+              1246.671875,
+              349.96875,
+              40.328125,
+              17.59375
+            ],
+            "styleHash": "3c68808b7c75097c306d5956be9b0efa3ec2241104dc50c7f5fc7f297a9f4dcd"
+          },
+          {
+            "geometry": [
+              785,
+              377.765625,
+              502,
+              93.171875
+            ],
+            "styleHash": "130e624af5210b97043f821ef3796b7c01da23792d732fa5013aa9bed13c102a"
+          },
+          {
+            "geometry": [
+              785,
+              492.125,
+              502,
+              17.59375
+            ],
+            "styleHash": "6e9b121921ec1090fefcebf92163e526cd6e58db176a4e8c8b5e4b51c30edca9"
+          },
+          {
+            "geometry": [
+              785,
+              527.71875,
+              502,
+              39.1875
+            ],
+            "styleHash": "3c042e6efad46df28522200669584fc5a49a9b08e10fa4d75b82f6ca78529fce"
+          },
+          {
+            "geometry": [
+              785,
+              588.90625,
+              502,
+              56
+            ],
+            "styleHash": "8f41c7497471f6d626081b64f315c891b78fc3d4c670463b9bb1e349a8a7afc0"
+          },
+          {
+            "geometry": [
+              1241,
+              606.90625,
+              20,
+              20
+            ],
+            "styleHash": "c79b2e5c58f797148c903322a54e82cffdcb288bfa38b49b2d388ad7f1a8993e"
+          },
+          {
+            "geometry": [
+              1246,
+              611.90625,
+              10,
+              10
+            ],
+            "styleHash": "8d96d4bdef8c5069d39b20a07af3ea1798997d662fff43865d77994f53e11664"
+          },
+          {
+            "geometry": [
+              785,
+              657.90625,
+              502,
+              17.59375
+            ],
+            "styleHash": "6e9b121921ec1090fefcebf92163e526cd6e58db176a4e8c8b5e4b51c30edca9"
+          },
+          {
+            "geometry": [
+              1054.515625,
+              659.90625,
+              93.28125,
+              13
+            ],
+            "styleHash": "6a6a3541abe1e8284e18bd7ed4faff9e230798e695736ea12d8af7848b608a25"
+          },
+          {
+            "geometry": [
+              0,
+              -3861.984375,
+              0,
+              0
+            ],
+            "styleHash": "d7f1d55ded6096da28fa406bde7b81ce518572cf9fc7b53511c6af59ea0e72fd"
+          }
+        ],
+        "htmlHash": "e417c46e5acc5e7f4e84478586e0f3205ba7bf0c47d55e992f724cad9b42b9a7"
+      },
+      {
+        "id": "medon",
+        "elements": [
+          {
+            "geometry": [
+              0,
+              0,
+              1440,
+              377.453125
+            ],
+            "styleHash": "d3f13af4df95ab7ee3d2a4c9a3499345d79be2ae415f2babdaf97654a87a8b90"
+          },
+          {
+            "geometry": [
+              120,
+              72,
+              1200,
+              233.453125
+            ],
+            "styleHash": "10aae47ab2b6424ebad28b6b2a59fa9fda5d67e08a37a4fee5ba1b4cee99ce2f"
+          },
+          {
+            "geometry": [
+              120,
+              72,
+              1200,
+              168.453125
+            ],
+            "styleHash": "44ad403a9d5154f71b2e87151df513bc5188a21495c01ab9b2eb32cb0ff28242"
+          },
+          {
+            "geometry": [
+              120,
+              72,
+              568,
+              138.4375
+            ],
+            "styleHash": "1c0ce3db623d1f5d2ac27d2929d562c92ab5cc6903cd1ad6cd1344802b62a762"
+          },
+          {
+            "geometry": [
+              120,
+              72,
+              568,
+              16.5
+            ],
+            "styleHash": "bf9f5842e7de07eadec4ec85802c381646ea15d6c4335977f3175796e02addc8"
+          },
+          {
+            "geometry": [
+              120,
+              106.5,
+              568,
+              103.9375
+            ],
+            "styleHash": "12e4aea2b7c2335679b2648f619b8388ffa9893a0a31170786c225eee2818418"
+          },
+          {
+            "geometry": [
+              752,
+              72,
+              568,
+              168.453125
+            ],
+            "styleHash": "aa00ba627b403a24489b711c9bcbf080ab682d403564ce66916486aea394ac2e"
+          },
+          {
+            "geometry": [
+              752,
+              78,
+              568,
+              57.78125
+            ],
+            "styleHash": "94caa91a1b11b4e0d58af172c414e1d0faac9a6488bfc015da315e90ee42a7e0"
+          },
+          {
+            "geometry": [
+              752,
+              153.78125,
+              568,
+              86.671875
+            ],
+            "styleHash": "98c3babd66a3c3766cf9aeb6428a1598f7c4c8a9d1478f2dec57fcc6c3f62e77"
+          },
+          {
+            "geometry": [
+              120,
+              264.453125,
+              1200,
+              41
+            ],
+            "styleHash": "1399991cda834907c0235c498f0e616ccf8902e52fff8797e830765dd41e9e69"
+          },
+          {
+            "geometry": [
+              120,
+              264.453125,
+              149.515625,
+              41
+            ],
+            "styleHash": "f13eb9e02537534ace4aca7d6337a68f00a9788cf14b63944345bfa770c9dbdd"
+          },
+          {
+            "geometry": [
+              249.515625,
+              274.953125,
+              20,
+              20
+            ],
+            "styleHash": "7cea70006655ee1b3c277400920d006f8bff3b61094d710be811a44cf5759cb4"
+          },
+          {
+            "geometry": [
+              252.8489532470703,
+              279.953125,
+              12.500015258789062,
+              10
+            ],
+            "styleHash": "7e9209833687102e4b7de8221016e98053e572f242078523c037d2d84eaed320"
+          }
+        ],
+        "htmlHash": "0be83645349175ecad8a7324f5a3112ac875faef8595e65bf64b93d46f21e1a3"
+      },
+      {
+        "id": "sporsmal",
+        "elements": [
+          {
+            "geometry": [
+              0,
+              0,
+              1440,
+              542.5
+            ],
+            "styleHash": "6b94616f70045f515ab87a4a0ce4d6f5c61bf50c086351fbbf8eb78e252159c0"
+          },
+          {
+            "geometry": [
+              120,
+              72,
+              1200,
+              398.5
+            ],
+            "styleHash": "997a1e9b676acf6d4d79046599c8aeba682f31dabb2cd0a516770c4982e330f0"
+          },
+          {
+            "geometry": [
+              120,
+              72,
+              448,
+              398.5
+            ],
+            "styleHash": "fcdb3fbf39c0f06c814375afea0a7ef46a9e8605a0b5d12bb7fb013b7bf3edc8"
+          },
+          {
+            "geometry": [
+              120,
+              72,
+              448,
+              16.5
+            ],
+            "styleHash": "cfca5979abe681ef531d179eda0a84d162eb7f2a82604027f661fc3c9bdc8d3d"
+          },
+          {
+            "geometry": [
+              120,
+              106.5,
+              448,
+              51.96875
+            ],
+            "styleHash": "c4b8f4acb0ad1e98099239d29b9ad815926ec1662ea47742eb53c74638d49d1a"
+          },
+          {
+            "geometry": [
+              648,
+              72,
+              672,
+              398.5
+            ],
+            "styleHash": "6a53d344d6fa2c41cd68e7048dfdaa71e924f06e6c9d70ff41e9d4e9fa1160cb"
+          },
+          {
+            "geometry": [
+              648,
+              72,
+              672,
+              80.5
+            ],
+            "styleHash": "8c40cd3d23c3c5c8abed8645cf8d0d2532bbc135a21d53cecb1ca08ce2a5585b"
+          },
+          {
+            "geometry": [
+              648,
+              73,
+              672,
+              78.5
+            ],
+            "styleHash": "9353bfef73827c6d3c8aba4df119ebd1c36e08eca6d20d7c31dab2fd90997327"
+          },
+          {
+            "geometry": [
+              1305.65625,
+              95,
+              14.34375,
+              34.5
+            ],
+            "styleHash": "2ceedcf921ef9bd9e85f1062e8626f5d28af50999500e9418e83e355d062a263"
+          },
+          {
+            "geometry": [
+              648,
+              151.5,
+              672,
+              105.5625
+            ],
+            "styleHash": "fb4537d14f55dffdb8951984430ed93d431b2b50450858aca8de730457dddfb7"
+          },
+          {
+            "geometry": [
+              648,
+              152.5,
+              672,
+              79.5
+            ],
+            "styleHash": "c34cdb4de28a890649cf0e6e9c2ad5dee83a1303d02a1387422cf8944c6f0fb0"
+          },
+          {
+            "geometry": [
+              648,
+              152.5,
+              672,
+              78.5
+            ],
+            "styleHash": "9353bfef73827c6d3c8aba4df119ebd1c36e08eca6d20d7c31dab2fd90997327"
+          },
+          {
+            "geometry": [
+              1305.65625,
+              174.5,
+              14.34375,
+              34.5
+            ],
+            "styleHash": "2ceedcf921ef9bd9e85f1062e8626f5d28af50999500e9418e83e355d062a263"
+          },
+          {
+            "geometry": [
+              648,
+              231,
+              672,
+              78.375
+            ],
+            "styleHash": "c41d3f13b8435fc8503e001be98786bce9527c9753c36a302738776d63c959f8"
+          },
+          {
+            "geometry": [
+              648,
+              232,
+              672,
+              79.5
+            ],
+            "styleHash": "c34cdb4de28a890649cf0e6e9c2ad5dee83a1303d02a1387422cf8944c6f0fb0"
+          },
+          {
+            "geometry": [
+              648,
+              232,
+              672,
+              78.5
+            ],
+            "styleHash": "9353bfef73827c6d3c8aba4df119ebd1c36e08eca6d20d7c31dab2fd90997327"
+          },
+          {
+            "geometry": [
+              1305.65625,
+              254,
+              14.34375,
+              34.5
+            ],
+            "styleHash": "2ceedcf921ef9bd9e85f1062e8626f5d28af50999500e9418e83e355d062a263"
+          },
+          {
+            "geometry": [
+              648,
+              310.5,
+              672,
+              78.375
+            ],
+            "styleHash": "c41d3f13b8435fc8503e001be98786bce9527c9753c36a302738776d63c959f8"
+          },
+          {
+            "geometry": [
+              648,
+              311.5,
+              672,
+              79.5
+            ],
+            "styleHash": "c34cdb4de28a890649cf0e6e9c2ad5dee83a1303d02a1387422cf8944c6f0fb0"
+          },
+          {
+            "geometry": [
+              648,
+              311.5,
+              672,
+              78.5
+            ],
+            "styleHash": "9353bfef73827c6d3c8aba4df119ebd1c36e08eca6d20d7c31dab2fd90997327"
+          },
+          {
+            "geometry": [
+              1305.65625,
+              333.5,
+              14.34375,
+              34.5
+            ],
+            "styleHash": "2ceedcf921ef9bd9e85f1062e8626f5d28af50999500e9418e83e355d062a263"
+          },
+          {
+            "geometry": [
+              648,
+              390,
+              672,
+              78.375
+            ],
+            "styleHash": "c41d3f13b8435fc8503e001be98786bce9527c9753c36a302738776d63c959f8"
+          },
+          {
+            "geometry": [
+              648,
+              391,
+              672,
+              79.5
+            ],
+            "styleHash": "c34cdb4de28a890649cf0e6e9c2ad5dee83a1303d02a1387422cf8944c6f0fb0"
+          },
+          {
+            "geometry": [
+              648,
+              391,
+              672,
+              78.5
+            ],
+            "styleHash": "9353bfef73827c6d3c8aba4df119ebd1c36e08eca6d20d7c31dab2fd90997327"
+          },
+          {
+            "geometry": [
+              1305.65625,
+              413,
+              14.34375,
+              34.5
+            ],
+            "styleHash": "2ceedcf921ef9bd9e85f1062e8626f5d28af50999500e9418e83e355d062a263"
+          },
+          {
+            "geometry": [
+              648,
+              469.5,
+              672,
+              78.375
+            ],
+            "styleHash": "c41d3f13b8435fc8503e001be98786bce9527c9753c36a302738776d63c959f8"
+          }
+        ],
+        "htmlHash": "2af354e3ef3612800a3b5b483a16fc81dc6d9744c7814b8d16415ac130b61c08"
+      },
+      {
+        "id": "footer",
+        "elements": [
+          {
+            "geometry": [
+              0,
+              0,
+              1440,
+              325.578125
+            ],
+            "styleHash": "823d737b9e802b7535d347296fd6aa136c619e7d094f4966c6844b1505f47b06"
+          },
+          {
+            "geometry": [
+              120,
+              60,
+              1200,
+              206.984375
+            ],
+            "styleHash": "2de187c8d33b8280efa925d6fb55a63ccdb78ed0a98d121ef7cf852ee0488606"
+          },
+          {
+            "geometry": [
+              120,
+              60,
+              428.234375,
+              151.984375
+            ],
+            "styleHash": "67a5899e98cfaed9322c19f3c27cf82cb3cab6de11734afcd2eb7693d1fa5705"
+          },
+          {
+            "geometry": [
+              120,
+              64,
+              183.375,
+              27
+            ],
+            "styleHash": "9e66a1c0650ad5d67ffa6bc91ac5bd2c8e7be04c6cf6339ce28859d806f147de"
+          },
+          {
+            "geometry": [
+              298.3125,
+              64,
+              5.0625,
+              27
+            ],
+            "styleHash": "79c611c5c57705c6bea1850a89685b7dafeaa12ec50acff2904aef3f52d6b139"
+          },
+          {
+            "geometry": [
+              120,
+              115.1875,
+              428.234375,
+              23.390625
+            ],
+            "styleHash": "a01d4c60b7b5ac6111284c0bea9360d8ecef72de1b76415cbb22f754fe800196"
+          },
+          {
+            "geometry": [
+              120,
+              156.578125,
+              151.75,
+              26
+            ],
+            "styleHash": "e5892694be38b80c48a688df081ab1711c36555953d7891ad04a4fa28b96d4a5"
+          },
+          {
+            "geometry": [
+              628.234375,
+              60,
+              305.875,
+              151.984375
+            ],
+            "styleHash": "f7662736e829a078cd2850a0742ce5a9c7e9adad1bae15e27bc5f05817055ecc"
+          },
+          {
+            "geometry": [
+              628.234375,
+              60,
+              54.859375,
+              20.796875
+            ],
+            "styleHash": "cbd0db3a9347fc6df272db7352ed39611b8707f40c5b7228857f75f6a24c5c81"
+          },
+          {
+            "geometry": [
+              628.234375,
+              92.796875,
+              74.90625,
+              20.796875
+            ],
+            "styleHash": "2819793ffa652f9f9dd212d379aad9e33dc12fbc976595dac6016b7c3bcb753d"
+          },
+          {
+            "geometry": [
+              628.234375,
+              125.59375,
+              32.4375,
+              20.796875
+            ],
+            "styleHash": "e32318c25852f669cacdb09a9d1f1547aaeef92f8e9a5d5443f79c1f099092b2"
+          },
+          {
+            "geometry": [
+              628.234375,
+              158.390625,
+              38.328125,
+              20.796875
+            ],
+            "styleHash": "568b232933f93c24f42bec012b87d9a9b9cf7730c9a472e256f3c38f0d6c199e"
+          },
+          {
+            "geometry": [
+              628.234375,
+              191.1875,
+              93.078125,
+              20.796875
+            ],
+            "styleHash": "d6c0ea44dde1d22c77671b7e4f038d3924f079b94543695acb55f02d4f6569d6"
+          },
+          {
+            "geometry": [
+              1014.109375,
+              60,
+              305.890625,
+              151.984375
+            ],
+            "styleHash": "b2122101140d557a7e028e9ab01b865eea192707c2332c061f5afd780ac0775a"
+          },
+          {
+            "geometry": [
+              1014.109375,
+              60,
+              67.375,
+              20.796875
+            ],
+            "styleHash": "0ed4a8b91d2a17867028a8ee49979d03df5ca35e13625257690b5ceec17732e8"
+          },
+          {
+            "geometry": [
+              1014.109375,
+              92.796875,
+              64.875,
+              20.796875
+            ],
+            "styleHash": "93d02c34c1c8940e9c5f9e7c856264453ce7a7f3928c524866ced3ae5c7f000d"
+          },
+          {
+            "geometry": [
+              1014.109375,
+              125.59375,
+              45.359375,
+              20.796875
+            ],
+            "styleHash": "c60ff8d66c3f8f753355d88582e26465a83046dbb940a9178208bd7aa42e3c93"
+          },
+          {
+            "geometry": [
+              1014.109375,
+              158.390625,
+              65,
+              20.796875
+            ],
+            "styleHash": "a3e680e4f9a4d0e0cd6cf484fb2f02824bf21da5c672066e9d70caabcb80ab85"
+          },
+          {
+            "geometry": [
+              1014.109375,
+              191.1875,
+              32.078125,
+              20.796875
+            ],
+            "styleHash": "9786e8bd407e20e63f1526d559d622270fd2a735e6d424b0743796fac585fffc"
+          },
+          {
+            "geometry": [
+              120,
+              266.984375,
+              1200,
+              58.59375
+            ],
+            "styleHash": "61253376d2d5ba83119e03f664c12545157738d755b4a660195ba7f8578dba8e"
+          },
+          {
+            "geometry": [
+              120,
+              287.984375,
+              91.171875,
+              17.59375
+            ],
+            "styleHash": "1ff2de39cdfc68ee841292186af676e0575c00463dbf326c772843fc0ada1330"
+          },
+          {
+            "geometry": [
+              1202.4375,
+              287.984375,
+              117.5625,
+              17.59375
+            ],
+            "styleHash": "ac59cc36c02ee6ae482aa9aa9fc5c10d85c58656faeb015709fa89acda25ad1f"
+          }
+        ],
+        "htmlHash": "e40ca7fa74c338a9a43720e233f29aa3ace580af6cf6edfcd8978eb569b30b1d"
+      }
+    ],
+    "content": {
+      "seo": {
+        "title": "SEO, AI-synlighet og konverteringsoptimalisering | Medon",
+        "description": "Bli funnet og gjør flere besøk til henvendelser og salg. Medon hjelper bedrifter i Norge med synlighet, konvertering eller begge. Ta en gratis, manuell sjekk."
+      },
+      "cta": {
+        "label": "Ta en gratis sjekk",
+        "href": "/#sjekk"
+      },
+      "sections": [
+        {
+          "id": "mekanisme",
+          "eyebrow": "Start med det som begrenser resultatet",
+          "heading": "Slik finner vi hva som bør gjøres først",
+          "body": [
+            "Behovet avgjør tiltakene. Vi starter ikke med SEO eller en annen kanal bare fordi du kom inn på en bestemt side."
+          ],
+          "items": [
+            {
+              "title": "Finn flaskehalsen",
+              "text": "Se hvor kundereisen stopper: før besøket, på siden eller i veien til kontakt og kjøp."
+            },
+            {
+              "title": "Prioriter tiltak",
+              "text": "Velg en fornuftig start ut fra behov, kommersiell verdi og det vi faktisk vet."
+            },
+            {
+              "title": "Gjennomfør",
+              "text": "Gjør arbeidet som er avtalt. Omfang og ansvar skal være tydelig."
+            },
+            {
+              "title": "Mål effekt",
+              "text": "Følg med på relevante henvendelser og kjøp. Se resultatene sammen med verdi og kostnader."
+            }
+          ]
+        },
+        {
+          "id": "passer",
+          "eyebrow": "Er dette aktuelt for bedriften?",
+          "heading": "For deg som vil forbedre veien til kunder",
+          "body": [],
+          "items": [
+            {
+              "title": "Passer godt hvis…",
+              "text": "Bedriften konkurrerer om kundene, og en henvendelse eller ordre har økonomisk verdi. Du har en nettside eller nettbutikk som kan forbedres og vil måle kommersiell effekt."
+            },
+            {
+              "title": "Passer dårlig hvis…",
+              "text": "Du ønsker en garantert rangering eller et bestemt antall kunder, en full gratis revisjon eller aktivitet uten et tydelig mål."
+            }
+          ]
+        },
+        {
+          "id": "sjekk",
+          "eyebrow": "Gratis, manuell sjekk",
+          "heading": "Send nettsiden. Vi sier hvor vi ville startet – og hvorfor.",
+          "body": [
+            "Vi ser kort på den offentlige nettsiden eller nettbutikken og begrunner hva vi ville undersøkt eller forbedret først.",
+            "Dette er en avgrenset, manuell vurdering. Ingen automatisk poengsum, full revisjon, prognose eller gratis gjennomføring. Videre arbeid avtales separat."
+          ]
+        },
+        {
+          "id": "medon",
+          "eyebrow": "Medon AS står bak",
+          "heading": "Én ansvarlig leverandør, tydelig avtalt arbeid",
+          "body": [
+            "Optimalisering Oslo er en tjeneste fra Medon AS. Vi jobber først og fremst med norske bedrifter, og kan også hjelpe bedrifter i andre nordiske land.",
+            "Du skal forstå hva vi foreslår, hvorfor vi foreslår det og hva som faktisk er avtalt. Vi lover ikke en bestemt Google-plassering, en AI-anbefaling eller et bestemt antall nye kunder."
+          ],
+          "links": [
+            {
+              "label": "Om leverandøren",
+              "href": "/om/"
+            }
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Hva skjer etter den gratis sjekken?",
+          "answer": "Vi gjør en kort, manuell vurdering og begrunner hvor vi ville startet. Hvis det er noe vi kan hjelpe med, avtaler vi omfang og pris før betalt arbeid. Sjekken er ikke en full revisjon eller gratis gjennomføring."
+        },
+        {
+          "question": "Hva koster videre arbeid?",
+          "answer": "Endelige offentlige priser og tjenesteomfang er ikke avklart for denne forhåndsvisningen. Prisen avhenger av behov og avtalt arbeid, og avklares før vi starter."
+        },
+        {
+          "question": "Er annonsebudsjett og eksterne kostnader inkludert?",
+          "answer": "Annonsebudsjett og aktuelle eksterne plattformkostnader kommer i tillegg hvis vi ikke avtaler noe annet. Vi avklarer relevante kostnader før arbeidet starter."
+        },
+        {
+          "question": "Hva hvis både synlighet og konvertering begrenser resultatet?",
+          "answer": "Da ser vi på sammenhengen. Vi finner flaskehalsen og prioriterer tiltakene i riktig rekkefølge, fremfor å starte med en fast kanal."
+        },
+        {
+          "question": "Jobber dere bare med bedrifter i Oslo?",
+          "answer": "Nei. Medon AS jobber først og fremst med bedrifter i Norge, og kan også hjelpe bedrifter i andre nordiske land. Navnet innebærer ikke at vi har et Oslo-kontor."
+        }
+      ],
+      "calculator": {
+        "eyebrow": "To grep som virker sammen",
+        "heading": "Hva kan flere relevante besøk og en bedre kjøpsvei bety?",
+        "intro": "Endre trafikken, andelen som tar kontakt eller kjøper – eller begge. Se hvordan de to grepene virker sammen.",
+        "formula": "Relevante besøk × konverteringsrate = henvendelser / kjøp",
+        "labels": {
+          "visits": "Relevante besøk per måned",
+          "conversion": "Konverteringsrate i dag (%)",
+          "trafficIncrease": "Mer relevant trafikk (%)",
+          "newConversion": "Ny konverteringsrate (%)",
+          "current": "I dag",
+          "scenario": "Scenario",
+          "difference": "Forskjell",
+          "outcome": "henvendelser / kjøp per måned",
+          "increase": "endring",
+          "undefinedIncrease": "Prosentvis endring kan ikke beregnes for dette utgangspunktet",
+          "invalid": "Bruk besøk fra 0 til 10 000 000, trafikkøkning fra 0 til 1 000 % og konverteringsrater fra 0 til 100 %."
+        },
+        "defaults": {
+          "visits": 1000,
+          "conversion": 1,
+          "trafficIncrease": 50,
+          "newConversion": 2
+        },
+        "caveat": "Hypotetisk regneeksempel – ikke et kundecase eller en resultatgaranti."
+      },
+      "packages": {
+        "eyebrow": "Avtalt arbeid, tydelig start",
+        "heading": "Synlighet, Konvertering eller Begge",
+        "intro": "Velg det som passer behovet. Omfang og pris må avklares før betalt arbeid starter.",
+        "fitLabel": "Passer for",
+        "scopeLabel": "Hva vi jobber med",
+        "items": [
+          {
+            "title": "Synlighet",
+            "fit": "Bedrifter som trenger flere relevante besøk.",
+            "scope": "Avtalt arbeid med hvordan kundene finner bedriften i søk, AI-tjenester eller lokalt. Kampanjeoptimalisering kan støtte betalt synlighet når det er relevant.",
+            "priceState": "Pris avklares før publisering",
+            "externalCosts": "Annonsebudsjett og aktuelle eksterne plattformkostnader kommer i tillegg hvis ikke annet er avtalt.",
+            "cta": {
+              "label": "Sjekk synligheten",
+              "href": "/#sjekk"
+            }
+          },
+          {
+            "title": "Konvertering",
+            "fit": "Bedrifter som har besøk, men for få henvendelser eller kjøp.",
+            "scope": "Avtalt konverteringsoptimalisering av budskap, landingssider, skjema eller kjøpsvei – på nettsiden eller i nettbutikken.",
+            "priceState": "Pris avklares før publisering",
+            "externalCosts": "Aktuelle eksterne plattformkostnader kommer i tillegg hvis ikke annet er avtalt.",
+            "cta": {
+              "label": "Sjekk veien til kontakt og kjøp",
+              "href": "/#sjekk"
+            }
+          },
+          {
+            "title": "Begge",
+            "fit": "Bedrifter der både synlighet og kjøpsvei kan forbedres.",
+            "scope": "Avtalt arbeid med begge områdene. Vi starter med flaskehalsen og prioriterer i riktig rekkefølge.",
+            "priceState": "Pris avklares før publisering",
+            "externalCosts": "Annonsebudsjett og aktuelle eksterne plattformkostnader kommer i tillegg hvis ikke annet er avtalt.",
+            "cta": {
+              "label": "Finn hvor vi bør starte",
+              "href": "/#sjekk"
+            }
+          }
+        ]
+      },
+      "proof": {
+        "publicationApproved": false,
+        "case": null
+      },
+      "form": {
+        "heading": "Send nettsiden",
+        "websiteLabel": "Nettside eller nettbutikk",
+        "websitePlaceholder": "dinbedrift.no",
+        "emailLabel": "E-post",
+        "emailPlaceholder": "deg@dinbedrift.no",
+        "messageLabel": "Kort kommentar",
+        "optional": "Valgfritt",
+        "messagePlaceholder": "Noe vi bør vite?",
+        "sensitiveNotice": "Ikke send innlogging, sensitive opplysninger eller personopplysninger om andre.",
+        "previewNotice": "Dette er en forhåndsvisning. Innsending er ikke åpnet ennå.",
+        "submitLabel": "Ta en gratis sjekk",
+        "privacyText": "Vi bruker opplysningene for å følge opp forespørselen.",
+        "privacyLink": {
+          "label": "Les om personvern",
+          "href": "/personvern/"
+        },
+        "disabledStatus": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt."
+      },
+      "faqHeading": "Før du tar neste steg",
+      "faqEyebrow": "Greit å vite",
+      "chrome": {
+        "brand": "optimalisering",
+        "brandLocation": "oslo",
+        "homeLabel": "Optimalisering Oslo – forsiden",
+        "skipLabel": "Hopp til innhold",
+        "navigationLabel": "Hovedmeny",
+        "mobileNavigationLabel": "Mobilmeny",
+        "openMenu": "Åpne meny",
+        "closeMenu": "Lukk meny",
+        "assessmentLink": {
+          "label": "Gratis sjekk",
+          "href": "/#sjekk"
+        },
+        "navigation": [
+          {
+            "label": "Synlighet",
+            "href": "/synlighet/"
+          },
+          {
+            "label": "Konvertering",
+            "href": "/konvertering/"
+          },
+          {
+            "label": "Priser",
+            "href": "/#priser"
+          },
+          {
+            "label": "Innsikt",
+            "href": "/innsikt/"
+          }
+        ],
+        "providerText": "En tjeneste fra Medon AS. Synlighet og konvertering for bedrifter.",
+        "previewLabel": "Forhåndsvisning · til vurdering",
+        "serviceNavigationLabel": "Tjenester og veiledning",
+        "informationNavigationLabel": "Kontakt og informasjon",
+        "storeLink": {
+          "label": "For nettbutikker",
+          "href": "/nettbutikkoptimalisering/"
+        },
+        "informationLinks": [
+          {
+            "label": "Gratis sjekk",
+            "href": "/#sjekk"
+          },
+          {
+            "label": "Om Medon",
+            "href": "/om/"
+          },
+          {
+            "label": "Kontakt",
+            "href": "/kontakt/"
+          },
+          {
+            "label": "Personvern",
+            "href": "/personvern/"
+          },
+          {
+            "label": "Vilkår",
+            "href": "/vilkar/"
+          }
+        ],
+        "copyrightProvider": "Medon AS",
+        "footerNote": "Et godt sted å begynne."
+      }
+    }
+  },
+  "source": {
+    "commit": "b6d035a99513d007a905cbc64c2f0e10c1f5421b",
+    "stage": "Fresh pre-H-005B H-004 build",
+    "widths": [
+      1440,
+      390,
+      320
+    ],
+    "browser": "154.0.8037.98"
+  }
+}

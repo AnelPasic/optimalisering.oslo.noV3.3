@@ -2,8 +2,8 @@ import { z } from 'astro/zod';
 
 const link = z.object({ label: z.string(), href: z.string().startsWith('/') });
 const homepage = z.object({
-  displayHook: z.array(z.string()).length(2), secondaryCta: link, heroNote: z.string(),
-  illustration: z.object({ label: z.string(), ariaLabel: z.string(), steps: z.array(z.object({ title: z.string(), caption: z.string() })).length(2), footer: z.string() }),
+  secondaryCta: link,
+  illustration: z.object({ label: z.string(), ariaLabel: z.string(), search: z.string(), business: z.string(), heading: z.string(), description: z.string(), action: z.string(), outcome: z.string() }),
   selector: z.object({ heading: z.string(), items: z.array(z.object({ title: z.string(), discipline: z.string(), description: z.string(), link })).length(3) }),
   calculator: z.object({
     eyebrow: z.string(), heading: z.string(), intro: z.string(), formula: z.string(), caveat: z.string(),

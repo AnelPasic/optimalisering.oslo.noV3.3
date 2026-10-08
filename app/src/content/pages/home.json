@@ -7,29 +7,28 @@
     "title": "SEO, AI-synlighet og konverteringsoptimalisering | Medon",
     "description": "Bli funnet og gjør flere besøk til henvendelser og salg. Medon hjelper bedrifter i Norge med synlighet, konvertering eller begge. Ta en gratis, manuell sjekk."
   },
-  "eyebrow": "Optimalisering for bedrifter som konkurrerer om kundene",
-  "title": "SEO, AI-synlighet og konverteringsoptimalisering for bedrifter i Norge",
-  "intro": "Medon finner hvor kundereisen stopper og forbedrer synligheten, veien til kontakt eller kjøp – eller begge deler.",
+  "eyebrow": "For bedrifter som konkurrerer om kundene",
+  "title": "Bli funnet. Gjør flere besøk til henvendelser og salg.",
+  "intro": "SEO, AI-synlighet og konverteringsoptimalisering for bedrifter i Oslo og resten av Norge. Medon starter der kundereisen stopper.",
   "cta": { "label": "Ta en gratis sjekk", "href": "/#sjekk" },
   "homepage": {
-    "displayHook": ["Bli funnet.", "Gjør flere besøk til henvendelser og salg."],
     "secondaryCta": { "label": "Se priser", "href": "/#priser" },
-    "heroNote": "En avgrenset, manuell vurdering fra Medon AS.",
     "illustration": {
-      "label": "Fra søk til henvendelser og salg",
-      "ariaLabel": "Bli funnet av relevante kunder. Gjør flere besøk til henvendelser og salg. Synlighet og konvertering henger sammen.",
-      "steps": [
-        { "title": "Bli funnet", "caption": "Når relevante kunder leter" },
-        { "title": "Gjør flere besøk til henvendelser og salg", "caption": "En enklere vei til kontakt og kjøp" }
-      ],
-      "footer": "Synlighet + konvertering"
+      "label": "Illustrasjon",
+      "ariaLabel": "Illustrert kundereise: et relevant søk leder til en tydelig nettside og en ny henvendelse.",
+      "search": "Det kunden leter etter",
+      "business": "Din bedrift",
+      "heading": "Et tilbud som treffer",
+      "description": "Tydelig hva du får. Enkelt å ta neste steg.",
+      "action": "Ta kontakt",
+      "outcome": "En ny henvendelse"
     },
     "selector": {
       "heading": "Hva trenger du hjelp med?",
       "items": [
-        { "title": "Bli funnet", "discipline": "Synlighet", "description": "For deg som vil bli synlig når kundene leter etter det du tilbyr. SEO, AI-synlighet og lokal synlighet gjør det lettere å finne bedriften.", "link": { "label": "Se Synlighet", "href": "/synlighet/" } },
-        { "title": "Gjør flere besøk til henvendelser og salg", "discipline": "Konvertering", "description": "For deg som har relevante besøk, men mister for mange før kontakt eller kjøp. Vi ser på budskap, landingssider, skjema og kjøpsveien i nettbutikken.", "link": { "label": "Se Konvertering", "href": "/konvertering/" } },
-        { "title": "Begge deler", "discipline": "Synlighet + konvertering", "description": "Når både trafikken og nettsiden begrenser resultatet. Vi finner flaskehalsen og prioriterer tiltakene i riktig rekkefølge.", "link": { "label": "Se alternativene", "href": "/#priser" } }
+        { "title": "Bli funnet", "discipline": "Synlighet", "description": "SEO, AI-synlighet og lokal synlighet når kundene leter etter det du tilbyr.", "link": { "label": "Se Synlighet", "href": "/synlighet/" } },
+        { "title": "Gjør flere besøk til henvendelser og salg", "discipline": "Konvertering", "description": "Konverteringsoptimalisering for nettsider, landingssider og nettbutikker.", "link": { "label": "Se Konvertering", "href": "/konvertering/" } },
+        { "title": "Begge deler", "discipline": "Synlighet + konvertering", "description": "Vi finner flaskehalsen og starter der det kan gi mest effekt.", "link": { "label": "Se alternativene", "href": "/#priser" } }
       ]
     },
     "calculator": {

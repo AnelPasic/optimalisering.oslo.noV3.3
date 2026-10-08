@@ -1,0 +1,47 @@
+{
+  "source": {
+    "commit": "b6d035a99513d007a905cbc64c2f0e10c1f5421b",
+    "stage": "Fresh pre-H-005B H-004 build",
+    "widths": [
+      1440,
+      390,
+      320
+    ],
+    "browser": "154.0.8037.98"
+  },
+  "comparedFiles": 174,
+  "groups": {
+    "readOnlyReferenceFiles": 144,
+    "otherPageContentRecords": 14,
+    "nonHomeHtmlIncluding404": 15,
+    "sharedStylesheet": 1
+  },
+  "result": "all file SHA-256 hashes identical",
+  "lowerHomepage": [
+    {
+      "width": 1440,
+      "sections": 8,
+      "elements": 207,
+      "dom": "identical",
+      "computedStyles": "identical",
+      "relativeGeometry": "within 0.1px"
+    },
+    {
+      "width": 390,
+      "sections": 8,
+      "elements": 207,
+      "dom": "identical",
+      "computedStyles": "identical",
+      "relativeGeometry": "within 0.1px"
+    },
+    {
+      "width": 320,
+      "sections": 8,
+      "elements": 207,
+      "dom": "identical",
+      "computedStyles": "identical",
+      "relativeGeometry": "within 0.1px"
+    }
+  ],
+  "outsideScopeChanges": []
+}

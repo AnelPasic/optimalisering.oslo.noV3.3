@@ -131,7 +131,7 @@ content:
         label: Neste steg
         component: link
   - name: homepage
-    label: Forside – H-004 til vurdering
+    label: Forside – H-005B til vurdering
     type: file
     path: app/src/content/pages/home.json
     format: json
@@ -152,7 +152,7 @@ content:
         label: Innholdsautoritet
         type: string
         readonly: true
-        description: H-004 er en representativ revisjon til vurdering. Faktisk
+        description: H-005B er en representativ revisjon til vurdering. Faktisk
           innholdslås må registreres i coordination/DECISIONS.md.
       - name: seo
         label: Søkeresultat
@@ -188,10 +188,6 @@ content:
         label: Forsidens innhold
         type: object
         fields:
-          - name: displayHook
-            label: Stor visningstekst (ikke overskrift)
-            type: string
-            list: true
           - name: secondaryCta
             label: Sekundær handling
             type: object
@@ -203,9 +199,6 @@ content:
                 label: Intern lenke
                 type: string
                 pattern: ^/
-          - name: heroNote
-            label: Kort merknad
-            type: string
           - name: illustration
             label: Illustrasjon
             type: object
@@ -216,19 +209,23 @@ content:
               - name: ariaLabel
                 label: Tilgjengelig beskrivelse
                 type: string
-              - name: steps
-                label: Steg
-                type: object
-                list: true
-                fields:
-                  - name: title
-                    label: Tittel
-                    type: string
-                  - name: caption
-                    label: Bildetekst
-                    type: string
-              - name: footer
-                label: Avsluttende tekst
+              - name: search
+                label: Søketekst
+                type: string
+              - name: business
+                label: Illustrert bedrift
+                type: string
+              - name: heading
+                label: Nettsidens budskap
+                type: string
+              - name: description
+                label: Nettsidens beskrivelse
+                type: string
+              - name: action
+                label: Illustrert handling
+                type: string
+              - name: outcome
+                label: Illustrert utfall
                 type: string
           - name: selector
             label: Behovsvelger

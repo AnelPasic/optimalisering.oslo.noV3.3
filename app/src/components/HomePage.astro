@@ -10,16 +10,15 @@ interface Props { page: CollectionEntry<'pages'>['data']; }
 const { page } = Astro.props;
 const home = page.homepage!;
 const assessment = page.sections.find(section => section.id === 'sjekk')!;
+const headlineBreak = page.title.indexOf('.') + 1;
 ---
 <div class="invite-home">
 <section class="home-hero shell">
   <div class="hero-copy">
     <p class="eyebrow"><span class="small-dot"></span>{page.eyebrow}</p>
-    <h1>{page.title}</h1>
-    <p class="hero-display">{home.displayHook.map((line, index) => <span class={index === 0 ? 'hero-emphasis' : undefined}>{line}</span>)}</p>
+    <h1><span class="hero-emphasis">{page.title.slice(0, headlineBreak)}</span>{page.title.slice(headlineBreak)}</h1>
     <p class="hero-intro">{page.intro}</p>
     <div class="hero-actions"><a class="button" href={page.cta.href}>{page.cta.label}<Arrow diagonal /></a><a class="text-link" href={home.secondaryCta.href}>{home.secondaryCta.label}<Arrow /></a></div>
-    <p class="hero-note">{home.heroNote}</p>
   </div>
   <Journey content={home.illustration} />
 </section>
