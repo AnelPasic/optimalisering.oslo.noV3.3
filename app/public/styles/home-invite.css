@@ -31,13 +31,13 @@
 .invite-home .need-card { display: flex; flex-direction: column; padding: 36px; border-radius: 14px; background: #e0f1e9; text-decoration: none; border: 1px solid transparent; transition: border-color .15s; }
 .invite-home .need-card:hover { border-color: var(--green); }
 .invite-home .need-card-1 { background: #eae4f4; }
-.invite-home .need-card-2 { background: #087b73; color: white; }
+.invite-home .need-card-2 { background: #320c43; color: #e0f0ef; }
 .invite-home .home-card-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 26px; }
 .invite-home .home-card-top .home-symbol { width: 34px; height: 34px; flex-shrink: 0; }
-.invite-home .discipline { font-size: 12px; font-weight: 600; }
+.invite-home .discipline { font-size: 17px; font-weight: 600; }
 .invite-home .need-card h3 { font-size: 29px; line-height: 1.12; max-width: 390px; }
 .invite-home .need-card p { margin-top: 18px; margin-bottom: 20px; font-size: 16px; line-height: 1.6; color: var(--muted); overflow-wrap: break-word; }
-.invite-home .need-card-2 p { color: white; }
+.invite-home .need-card-2 p { color: inherit; }
 .invite-home .need-card .text-link { margin-top: auto; }
 .invite-home .leverage-section { background: #320c43; color: white; }
 .invite-home .leverage-grid { grid-template-columns: .9fr 1.1fr; gap: 96px; align-items: center; }

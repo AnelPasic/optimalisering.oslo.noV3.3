@@ -78,7 +78,7 @@ async function capture(page) {
 
 async function fit(width) {
   const layout = await page.evaluate(() => {
-    const overflow = [...document.querySelectorAll('main a, main h1, main h2, main h3, main p, main label, main input, main textarea, main output')].filter(element => {
+    const overflow = [...document.querySelectorAll('main a, main h1, main h2, main h3, main p, main label, main input, main textarea, main output, main .discipline')].filter(element => {
       const rect = element.getBoundingClientRect();
       return rect.width && (rect.left < -1 || rect.right > innerWidth + 1 || element.scrollWidth > element.clientWidth + 2);
     }).map(element => ({ tag: element.tagName, text: element.textContent.slice(0, 80), width: element.clientWidth, scroll: element.scrollWidth }));
@@ -96,7 +96,10 @@ try {
     await page.evaluate(() => document.fonts.ready);
     const current = await capture(page);
     if (snapshot) { baselineChecks[width] = current; continue; }
-    assert.deepEqual(current.content, baseline[width].content, 'All retained homepage copy/config stays unchanged');
+    const expectedContent = structuredClone(baseline[width].content);
+    assert.equal(expectedContent.homepage.selector.items[2].discipline, 'Synlighet + konvertering', 'Historical H-005B baseline is preserved');
+    expectedContent.homepage.selector.items[2].discipline = 'Synlighet X Konvertering'; // Explicit OWNER selector follow-up.
+    assert.deepEqual(current.content, expectedContent, 'Homepage copy/config stays unchanged except the OWNER-supplied combined label');
     assert.deepEqual(current.lower, baseline[width].lower, 'Lower-page and chrome DOM stays unchanged');
     assert.equal(await page.locator('.hero-copy > p').count(), 2);
     assert.equal(await page.locator('.hero-actions a').count(), 2);
@@ -247,7 +250,7 @@ try {
       assert.ok(page.url().endsWith('#priser'));
       assert.ok(await page.locator('#mobile-menu').isHidden());
     }
-    checks.push({ width, shell: current.shell, previousShell: baseline[width].shell, heroHeight: current.heroHeight, previousHeroHeight: baseline[width].heroHeight, selectorY: current.selectorY, spacingBefore: baseline[width].spacing, spacingAfter: current.spacing, containersBefore: baseline[width].containers, containersAfter: current.containers, readable: current.readable, photo, retainedContent: "identical", lowerAndChromeDom: "identical", sequence, fonts, overflow: false, calculator: 'traffic / conversion / combined / zero / invalid / maximum / decrease PASS', form: 'disabled, three fields, no POST', cmsFieldCoverage: cmsFields });
+    checks.push({ width, shell: current.shell, previousShell: baseline[width].shell, heroHeight: current.heroHeight, previousHeroHeight: baseline[width].heroHeight, selectorY: current.selectorY, spacingBefore: baseline[width].spacing, spacingAfter: current.spacing, containersBefore: baseline[width].containers, containersAfter: current.containers, readable: current.readable, photo, retainedContent: "identical except OWNER-supplied Synlighet X Konvertering label", lowerAndChromeDom: "identical", sequence, fonts, overflow: false, calculator: 'traffic / conversion / combined / zero / invalid / maximum / decrease PASS', form: 'disabled, three fields, no POST', cmsFieldCoverage: cmsFields });
   }
   if (snapshot) { writeFileSync(baselineFile, JSON.stringify({ ...baselineChecks, source: { commit: '99734a73a3f3cd0ba93a1155cfbdd95395a91245', browser: browser.version(), stage: 'Fresh pre-H-006 H-005B build' } }, null, 2)); console.log('H-005B baseline captured at 1440/390/320/1920px.'); process.exitCode = 0; } else {
   await page.setViewportSize({ width: 901, height: 1000 });

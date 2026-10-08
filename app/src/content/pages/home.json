@@ -19,7 +19,7 @@
       "items": [
         { "title": "Bli funnet", "discipline": "Synlighet", "description": "SEO, AI-synlighet og lokal synlighet når kundene leter etter det du tilbyr.", "link": { "label": "Se Synlighet", "href": "/synlighet/" } },
         { "title": "Gjør flere besøk til henvendelser og salg", "discipline": "Konvertering", "description": "Konverteringsoptimalisering for nettsider, landingssider og nettbutikker.", "link": { "label": "Se Konvertering", "href": "/konvertering/" } },
-        { "title": "Begge deler", "discipline": "Synlighet + konvertering", "description": "Vi finner flaskehalsen og starter der det kan gi mest effekt.", "link": { "label": "Se alternativene", "href": "/#priser" } }
+        { "title": "Begge deler", "discipline": "Synlighet X Konvertering", "description": "Vi finner flaskehalsen og starter der det kan gi mest effekt.", "link": { "label": "Se alternativene", "href": "/#priser" } }
       ]
     },
     "calculator": {

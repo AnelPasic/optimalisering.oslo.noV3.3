@@ -4,6 +4,7 @@ Official regular-weight SVGs from [phosphor-icons/core](https://github.com/phosp
 
 - `magnifying-glass.svg`: find / visibility
 - `cursor-click.svg`: choose / conversion
-- `arrows-left-right.svg`: combined service
+- `trend-up.svg`: combined service / progress
+- `arrows-left-right.svg`: retained previous combined-service icon; inactive
 
 Used only by `HomeSymbol.astro`. SVGs are rendered inline with inherited color, hidden from assistive technology alongside their existing text labels. No icon font, runtime CDN or package dependency is required. The original MIT notice is shipped at `app/public/licenses/phosphor-icons.txt`.

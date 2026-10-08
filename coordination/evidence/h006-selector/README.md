@@ -1,0 +1,11 @@
+# H-006 scoped OWNER selector follow-up
+
+2026-10-08. Incoming main: df6d5237ac3e7bc0f59864da211e09bb518c0309, including the genuine D-020 photo PASS. See Git history / CODEX-TO-CHATGPT for this implementation's SHA and review publication receipt.
+
+Only requested selector details change: 17px discipline labels; exact CMS-driven **Synlighet X Konvertering**; local regular Phosphor trend-up icon; third-card background #320c43 and all text/icon color #e0f0ef. The paragraph override inherits the supplied card color. Symbol remains decorative, non-focusable. Existing icon license/pinned provenance remain; no dependency added.
+
+Fresh npm run verify passes: 56 Astro files with zero diagnostics, 24 tests, static build of 15 content routes + 404 and 449 internal links. Existing browser QA passes 40 checks. Focused homepage QA passes 1440/390/320/1920 plus stable-scrollbar 901px, CMS coverage, calculator, menu/FAQ and disabled/no-POST/no-JavaScript intake. Historical H-005B baseline is unchanged; comparison explicitly permits only the supplied combined label. Lower-page/chrome DOM and 174 protected/frozen file hashes remain identical. Hero image, inactive alternatives and single-image CMS field are unchanged.
+
+[Desktop](selector-1440.png), [390px](selector-390.png), [320px](selector-320.png), [901px with stable scrollbar](selector-901.png). Computed colors/font/icon accessibility and label/icon fit are recorded in [selector checks](selector-checks.json); broader [homepage checks](homepage-checks.json) and [40-check browser result](browser-checks.json). Desktop and narrow-mobile captures visually inspected. Labels wrap naturally where needed, without clipping or moving outside their cards.
+
+Commands from app/: npm run verify; QA_EVIDENCE_DIR=qa-output/h006-selector node scripts/qa-home-h006.mjs; node scripts/qa-browser.mjs; QA_BASELINE_FILE=../coordination/evidence/h006/files-baseline.json node scripts/qa-preservation.mjs. The initial focused run preceded the local preview server and returned connection refused; rerun after npm run preview passed. No real lead or email was sent. This is technical verification, not OWNER acceptance or a new formal RED_TEAM verdict. Stop for OWNER R-03.

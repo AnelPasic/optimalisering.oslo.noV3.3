@@ -1,9 +1,9 @@
 ---
 import MagnifyingGlass from '../assets/phosphor/magnifying-glass.svg';
 import CursorClick from '../assets/phosphor/cursor-click.svg';
-import ArrowsLeftRight from '../assets/phosphor/arrows-left-right.svg';
+import TrendUp from '../assets/phosphor/trend-up.svg';
 interface Props { kind?: 'search' | 'choose' | 'both'; }
 const { kind = 'search' } = Astro.props;
-const Icon = kind === 'search' ? MagnifyingGlass : kind === 'choose' ? CursorClick : ArrowsLeftRight;
+const Icon = kind === 'search' ? MagnifyingGlass : kind === 'choose' ? CursorClick : TrendUp;
 ---
 <Icon class="home-symbol" aria-hidden="true" focusable="false" width="64" height="64" />

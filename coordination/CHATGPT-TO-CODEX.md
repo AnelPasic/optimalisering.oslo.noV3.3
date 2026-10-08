@@ -1,5 +1,9 @@
 # ChatGPT to Codex
 
+## OWNER selector follow-up — H-006
+
+2026-10-08, actual OWNER instruction in Codex after selected-photo delivery 4d1e6e7: set `.invite-home .discipline` to `font-size: 17px`; use exact combined label **Synlighet X Konvertering**; replace its symbol with upward arrows or another progress icon; set `.invite-home .need-card-2` background to `#320c43` and text to `#e0f0ef`. This authorizes only those homepage selector changes under D-018. Preserve CMS-driven copy, selected single hero/alternatives, remaining homepage structure and all other pages. Continue the existing static review workflow, synchronize implementation/verification receipts, then return to OWNER R-03. D-019/D-020 remain genuine RED_TEAM verdicts on their exact reviewed revisions; this instruction supplies no whole-page acceptance or launch/scale-out authority.
+
 ## Completed OWNER asset follow-up — H-006 selected hero image
 
 **IMPLEMENTATION receipt:** consumed at dc045748180897c20efa418ac739b4135bf5e517. First supplied image is selected; all three originals and optimized single-hero options are retained. Layout/content remain unchanged; CMS field now uses a single-image media picker. Verification and static-review delivery are in CODEX-TO-CHATGPT and evidence/h006-photo. Return to OWNER R-03 and fresh formal RED_TEAM R-04; no further implementation is active.
