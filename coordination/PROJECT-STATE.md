@@ -2,7 +2,7 @@
 
 Updated: 2026-10-09. Owner: Medon AS. Implementation repository: AnelPasic/optimalisering.oslo.noV3.3.
 
-**State: H-007 IMPLEMENTATION COMPLETE / STOP FOR STRATEGY_CONTENT; OWNER R-03 BASELINE PASS UNDER D-021; REMAINING PAGE COPY/DESIGN FROZEN.** Incoming main 7b98ff8184e7a8063682877b1edfcff3d4941f20 authorizes D-022/D-023; implementation/evidence fdcdaf84020ae4ecf8446806329b74cb3e4320d2 delivers the exact price ladder, free-check promise, evidence-only guarded proof registry and Pages CMS fields. Generated connective wording and full-home authority remain REVIEW_REQUIRED / DRAFT / NON-AUTHORITATIVE. Main/review Worker receipt is in CODEX-TO-CHATGPT.md. No further implementation is active.
+**State: H-007 COMMERCIAL CONTENT REVIEW PASSED UNDER D-024; H-008 CONTROLLED /PRISER/ PROPAGATION AUTHORIZED UNDER D-026; PROOF PRIORITY SET UNDER D-025; OTHER 13 NON-HOME PAGES FROZEN.** Homepage commercial wording is partially locked. Oslo Privatklinikk is the first homepage proof candidate and Nysta the secondary ecommerce/conversion candidate, but both remain non-public until missing proof fields are supplied and exact case copy is locked.
 
 H-007 local evidence: coordination/evidence/h007/. Final verify passes 63 files with zero diagnostics, 34 tests, 15 content routes + 404 and 449 links; static leak scan checks 19 outputs and finds 0 public cases. Existing browser QA passes 40 checks. Focused 1440/390/320 and four package/free-check captures preserve unchanged accepted blocks. All 174 protected/frozen files match. Source artifacts and authenticated CMS operation remain unverified; the exact manual GitHub App/repository/editor-save step is in app/docs/h007-content-cms.md.
 
@@ -200,3 +200,14 @@ Authoritative inputs:
 - coordination/H007-COMMERCIAL-INPUT.md
 
 Pages CMS/schema now exposes the authorized commercial/proof fields. STRATEGY_CONTENT can review/refine that content layer; no new implementation or remaining-page propagation is active. /priser/, case URLs, service roles and legal/shared copy await later scoped handoffs.
+
+
+## STRATEGY_CONTENT review — H-007
+
+H-007 implementation is accepted for the commercial layer after direct content refinement.
+
+Locked commercial sources:
+- homepage commercial fields: `app/src/content/pages/home.json` at `10c5890b2e4d678340384dd399a1785e3e01ba36`
+- pricing-page supporting copy: `app/src/content/pages/priser.json` at `a37bf7a9067f18f4eafd59e2efd753240aecc96c`
+
+Next implementation is H-008: make /priser/ the first controlled propagation page and share the package source of truth with the homepage. Do not publish proof or redesign other pages.
