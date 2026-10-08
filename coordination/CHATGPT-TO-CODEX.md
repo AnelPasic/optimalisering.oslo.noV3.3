@@ -1,39 +1,82 @@
 # ChatGPT to Codex
 
-## Active inbound instruction
+## Active handoff — H-001
 
-Source: OWNER's explicit instruction in the Codex chat, 2026-10-08. Recorded here by IMPLEMENTATION; this entry is not a fabricated ChatGPT review.
+**Date:** 2026-10-08  
+**Author role:** STRATEGY_CONTENT / CRO  
+**Source commit reviewed:** `9143d24bb9caa064dbbb56fed9339284055e63d3`  
+**Reviewed files:** `app/src/content/pages/home.json`, `app/docs/content-handoff.md`, `coordination/PROJECT-STATE.md`, `coordination/DECISIONS.md`, `coordination/REVIEW-QUEUE.md`, curated commercial/design seed.
 
-**OUTCOME:** Publish the preserved exploratory baseline to the repository for inspection, restore repository coordination, label unapproved generated copy, and stop expansion.
+### OUTCOME
 
-**AUTHORITATIVE INPUTS:** Latest OWNER instruction; `coordination/DECISIONS.md`; unchanged v3.3 operating model and curated seed under `system/` and `project/`.
+R-01 and R-02 are complete for the representative homepage content/CRO layer.
 
-**LOCKED / DO NOT CHANGE:** Preserve the current 15-page exploratory build. Do not redesign/delete it. Do not modify `system/` or `project/`. No production content/visual acceptance is implied by the current build or its tests.
+The complete homepage copy in `app/src/content/pages/home.json` at the commit containing this handoff is the authoritative STRATEGY_CONTENT revision for the representative-page test. It was reviewed as one whole argument rather than as H1/eyebrow/CTA micro-gates.
 
-**FREEDOM / MAY CHANGE:** Coordination files, root agent instructions, draft-authority metadata/CMS/guard, and necessary validation. The owner explicitly authorizes pushing this task's baseline and coordination revision to `origin/main`.
+The visual direction is not owner-approved final. Treat the current design as a promising exploratory baseline and preserve it for this pass.
 
-**ACCEPTANCE CRITERIA:** Five coordination documents exist; facts, draft authorship, inferred visuals and dependencies are honest; all unapproved generated public wording is marked `DRAFT / NON-AUTHORITATIVE`; durable agent rules require these handoffs; validation passes; pushed SHA is reported. Remaining pages stay frozen until representative-page and direction review pass.
+### AUTHORITATIVE INPUTS
 
-**EVIDENCE / TESTS REQUIRED:** Build/check/test/static QA; unchanged content/rendering and protected-input verification; normal Git push and confirmation that remote main matches local HEAD. These checks cannot approve production content or design.
+- `app/src/content/pages/home.json` with:
+  - `status: CONTENT_LOCKED`
+  - `authority: CONTENT_LOCKED / AUTHORITATIVE`
+- `coordination/DECISIONS.md`, including D-010.
+- Existing D-001 through D-009 remain applicable.
+- `system/` and `project/` remain read-only.
 
-**OUTPUT / HANDOFF NOTE:** See `CODEX-TO-CHATGPT.md` for delivery and routed review requests. No site revision has been authorized by a review response yet.
+### LOCKED / DO NOT CHANGE
 
-## Next handoff: PENDING
+- Do not rewrite, paraphrase, shorten or "improve" the locked homepage copy.
+- Do not change offer/pricing/proof/legal claims.
+- Do not redesign the visual system.
+- Do not expand or polish the other 14 pages.
+- Do not modify `system/` or `project/`.
+- Preserve the current palette, typography, general geometry, service-hub concept, teaching/calculator concept, assessment section and footer direction unless a minimal implementation adjustment is needed to fit the locked content.
 
-There is no incoming STRATEGY_CONTENT content lock, OWNER representative-page/visual acceptance, or RED_TEAM final PASS recorded. Do not infer one from this placeholder. ChatGPT/assigned roles should write the next actual handoff here after inspecting `PROJECT-STATE.md`, `CODEX-TO-CHATGPT.md`, `DECISIONS.md` and `REVIEW-QUEUE.md`.
+### FREEDOM / MAY CHANGE
 
-Use one coherent handoff for the reviewed page/direction rather than line-by-line owner approvals:
+IMPLEMENTATION may make the smallest necessary homepage-only layout adjustments if the locked copy causes overflow, hierarchy problems, broken spacing or poor responsive fit.
 
-```text
-HANDOFF ID / DATE / AUTHOR ROLE
-SOURCE COMMIT AND REVIEWED FILES
-OUTCOME
-AUTHORITATIVE INPUTS
-LOCKED / DO NOT CHANGE (decision IDs and exact content revision)
-FREEDOM / MAY CHANGE (scoped implementation request)
-ACCEPTANCE CRITERIA
-EVIDENCE / TESTS REQUIRED
-OUTPUT / HANDOFF NOTE (remaining blockers, receiving role)
-```
+Permitted examples: local spacing, text width, line wrapping constraints, card height/alignment, responsive breakpoint treatment, or small component sizing required by the locked copy.
 
-A request for review is not a lock. Record actual decisions/verdicts with scope and evidence in `DECISIONS.md`; update `REVIEW-QUEUE.md`. A homepage-only acceptance cannot promote the other page drafts, shared wording outside its scope, privacy/terms or launch state.
+Do not use this freedom to create a new design direction.
+
+### ACCEPTANCE CRITERIA
+
+1. Pull and render the exact locked homepage content.
+2. Homepage remains coherent at desktop 1440px and mobile 390px; also verify 320px for overflow.
+3. Mathematical teaching is visually prominent enough that the visitor can immediately understand:
+   - 1,000 relevant visits × 1% = 10;
+   - 1,000 relevant visits × 2% = 20;
+   - this is illustrative, not promised uplift.
+4. The primary free-check path remains obvious and the form/CTA is not hidden.
+5. Existing technical checks pass.
+6. No other page receives content/design polish in this task.
+7. No deployment or production lead processing.
+
+### EVIDENCE / TESTS REQUIRED
+
+- Astro check/build/tests.
+- Desktop full-page screenshot at 1440px.
+- Mobile full-page screenshot at 390px.
+- 320px overflow/usability check.
+- Record any implementation-only homepage adjustments exactly.
+- Push the result to GitHub.
+
+### OUTPUT / HANDOFF NOTE
+
+Update `coordination/CODEX-TO-CHATGPT.md` with:
+- resulting commit SHA;
+- exact files changed;
+- tests;
+- paths to new desktop/mobile evidence;
+- remaining visual concerns;
+- a request for R-03 OWNER representative-page review and R-04 RED_TEAM review.
+
+Do not infer visual approval from this handoff.
+
+---
+
+## Previous handoff history
+
+The previous coordination-recovery handoff is complete and represented by commit `9143d24bb9caa064dbbb56fed9339284055e63d3`. Git history remains the authoritative record for that delivery.
