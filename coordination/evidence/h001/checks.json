@@ -1,0 +1,40 @@
+{
+  "handoff": "H-001",
+  "contentSourceCommit": "55c31b523a50e3e6112fcb5f324adbfa663e21eb",
+  "results": [
+    {
+      "width": 1440,
+      "scrollWidth": 1440,
+      "clipped": [],
+      "teachingHeadingSize": "47px",
+      "exactLockedCopy": true,
+      "primaryCtaInInitialViewport": true,
+      "formVisible": true,
+      "illustrativeMath": true
+    },
+    {
+      "width": 390,
+      "scrollWidth": 390,
+      "clipped": [],
+      "teachingHeadingSize": "34px",
+      "exactLockedCopy": true,
+      "primaryCtaInInitialViewport": true,
+      "formVisible": true,
+      "illustrativeMath": true
+    },
+    {
+      "width": 320,
+      "scrollWidth": 320,
+      "clipped": [],
+      "teachingHeadingSize": "31px",
+      "exactLockedCopy": true,
+      "primaryCtaInInitialViewport": true,
+      "formVisible": true,
+      "illustrativeMath": true
+    }
+  ],
+  "errors": [],
+  "menuAt320px": true,
+  "leadsEnabled": false,
+  "liveEmailsSent": 0
+}
