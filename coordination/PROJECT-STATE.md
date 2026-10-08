@@ -2,7 +2,7 @@
 
 Updated: 2026-10-08. Owner: Medon AS. Implementation repository: AnelPasic/optimalisering.oslo.noV3.3.
 
-**State: H-005 HERO SIMPLIFICATION AUTHORIZED UNDER D-015; R-03 REMAINS REVISE; ALL OTHER PAGES FROZEN.** H-004 established the correct task-first page architecture, but OWNER judged the hero too dense. H-005 is a narrow subtraction pass only: one eyebrow, one semantic H1, one short support paragraph, two CTAs, no hero note, no hero illustration, and shorter need-selector descriptions. Everything below the selector remains unchanged unless strictly required for fit.
+**State: H-005B HERO SIMPLIFICATION + DREAM-OUTCOME VISUAL AUTHORIZED UNDER D-015/D-016; R-03 REMAINS REVISE; ALL OTHER PAGES FROZEN.** H-005's simplification stays active, except the hero should retain one restrained, realistic-ish outcome visual. The visual must support the promise without repeating the H1 or adding visual clutter.
 
 Original exploratory implementation: `a98dbaefbb10a9039c9b025e5c3907e83f24de8b`, pushed to `origin/main` on 2026-10-08. The coordination/draft-label revision follows that commit; use this file's Git history for its exact SHA. A push permits repository inspection; it does not authorize publication or live processing.
 
@@ -121,3 +121,15 @@ Target hero:
 - no hero illustration
 
 Need-selector copy should be shortened so each card reads as a clear task choice, not a mini landing page. Calculator, packages, mechanism, fit/not-fit, assessment, provider, FAQ and footer remain structurally unchanged.
+
+
+## H-005B visual clarification — D-016
+
+Retain the simplified hero structure from H-005, but include one restrained outcome-oriented visual.
+
+The visual should plausibly suggest:
+- being found by relevant customers;
+- a clearer path from visit to enquiry/purchase;
+- improved commercial outcome.
+
+It should feel real-ish/productized, not like a stock photo, fake case, dense dashboard or abstract decoration. The need selector must still arrive quickly below the hero, especially on mobile.
