@@ -2,7 +2,7 @@
 
 Updated: 2026-10-08. Owner: Medon AS. Implementation repository: AnelPasic/optimalisering.oslo.noV3.3.
 
-**State: H-006 SELECTED-PHOTO FOLLOW-UP IMPLEMENTED AT dc045748180897c20efa418ac739b4135bf5e517; FORMAL LAYOUT R-04 PASS UNDER D-019; OWNER R-03 + FINAL PHOTO REVIEW PENDING; ALL OTHER PAGES FROZEN.** Concurrent upstream review at 33ad5bd records the genuine RED_TEAM PASS for layout/spacing/IA at 7e69c07, explicitly excluding the photo. OWNER supplied three generated images and selected the first; its WebP occupies the existing content-driven hero slot, with options 2/3 inactive CMS alternatives. Layout/copy are unchanged. The selected photo still needs the separate subject/crop/proof-implication review specified in D-019. No further implementation is active.
+**State: H-006 PHOTO-INTEGRATED REPRESENTATIVE HAS FORMAL RED_TEAM PASS FOR LAYOUT + SELECTED PHOTO UNDER D-019/D-020; OWNER R-03 PENDING; ALL OTHER PAGES FROZEN.** The current representative is technically and independently accepted as a baseline. The only representative-direction gate remaining is explicit OWNER acceptance.
 
 Original exploratory implementation: `a98dbaefbb10a9039c9b025e5c3907e83f24de8b`, pushed to `origin/main` on 2026-10-08. The coordination/draft-label revision follows that commit; use this file's Git history for its exact SHA. A push permits repository inspection; it does not authorize publication or live processing.
 
