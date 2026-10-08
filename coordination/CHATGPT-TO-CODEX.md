@@ -4,6 +4,8 @@
 
 **IMPLEMENTATION receipt:** consumed at dc045748180897c20efa418ac739b4135bf5e517. First supplied image is selected; all three originals and optimized single-hero options are retained. Layout/content remain unchanged; CMS field now uses a single-image media picker. Verification and static-review delivery are in CODEX-TO-CHATGPT and evidence/h006-photo. Return to OWNER R-03 and fresh formal RED_TEAM R-04; no further implementation is active.
 
+**Concurrent review reconciliation:** upstream main 33ad5bd returns the genuine D-019 H-006 layout R-04 PASS, with final-photo exclusion, preserved below. The remaining review on the photo-integrated revision is OWNER R-03 plus that separate photo review; implementation does not reset the layout PASS or approve the asset's authenticity/crop/proof implications.
+
 2026-10-08, actual OWNER instruction in Codex after H-006 delivery 1e5f5edfee8127a4726a9b05ca4fbf7e13af9a81: use the first generated image as the homepage hero; retain a clean CMS-editable/content-driven asset field for later swaps without layout changes; do not introduce a slider/gallery; keep the other two generated images available as later review alternatives. Supplied repository assets: app/public/images/home/happycustomer.png, happycustomer2.png, happycustomer3.png. This explicitly authorizes the narrow asset integration following D-018; it does not approve the complete homepage, other pages, content/terms/proof or production launch. Deliver within the existing static review workflow, synchronize evidence, then return to OWNER R-03 and fresh formal RED_TEAM R-04. Use this entry's Git history and outbound receipt for the implementation/delivery revision.
 
 ## Completed handoff — H-006
@@ -1024,3 +1026,40 @@ These do not fail the representative direction:
 ### Next receiver
 
 OWNER for R-03. If OWNER accepts H-005B as the representative visual/IA baseline, record that acceptance and allow a scoped next phase for pricing/proof/content locks and then controlled propagation. Do not infer owner acceptance from this RED_TEAM PASS.
+
+
+## RED_TEAM return — R-04 COMPLETE FOR H-006
+
+**Date:** 2026-10-08  
+**Role:** RED_TEAM  
+**Reviewed implementation:** `7e69c079d57281d5126d2c94dbc3f1dfac90f265`  
+**Current main receipt:** `1e5f5edfee8127a4726a9b05ca4fbf7e13af9a81`  
+**Verdict:** **PASS** for representative layout/spacing direction, with final-photo caveat.
+
+### Findings
+
+- The 1440px large-screen shell behaves correctly: it reaches 1440px at wide viewports while retaining responsive gutters at 1440px viewport width.
+- Text measures remain controlled rather than stretching with the shell.
+- Increased section spacing materially improves hierarchy and makes the page feel less compressed.
+- Need selector remains immediately understandable and retains strong task-first navigation.
+- Calculator remains a strong visual/commercial peak.
+- Package presentation is more serious and less like a generic card grid.
+- Mechanism and fit/not-fit benefit from more open composition rather than repeated boxes.
+- Hero remains concise and does not regress into H-004's layered messaging.
+- Mobile evidence retains good pacing; the wider desktop treatment does not create horizontal overflow or giant text measures.
+- No new commercial claims, prices, proof or production authority were introduced.
+
+### Caveat: final hero photo
+
+The current neutral photo fallback is not a final visual and is **excluded from this PASS**.
+
+The prepared photo slot/composition is acceptable. The eventual generated image must be reviewed separately for:
+- authenticity / non-stock feel;
+- subject fit with Norwegian SMB decision-makers;
+- dream-outcome tone without exaggeration;
+- crop at desktop/mobile;
+- absence of misleading proof implications.
+
+### Next receiver
+
+OWNER R-03 for the H-006 representative layout, followed by the separately supplied/generated hero-photo asset review. Do not infer full visual acceptance until both are accepted.
