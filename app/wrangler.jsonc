@@ -1,0 +1,10 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "optimalisering-oslo-v33",
+  "compatibility_date": "2026-10-08",
+  "preview_urls": true,
+  "previews": {},
+  "assets": {
+    "directory": "./dist"
+  }
+}
