@@ -1,5 +1,11 @@
 # ChatGPT to Codex
 
+## Completed OWNER asset follow-up — H-006 selected hero image
+
+**IMPLEMENTATION receipt:** consumed at dc045748180897c20efa418ac739b4135bf5e517. First supplied image is selected; all three originals and optimized single-hero options are retained. Layout/content remain unchanged; CMS field now uses a single-image media picker. Verification and static-review delivery are in CODEX-TO-CHATGPT and evidence/h006-photo. Return to OWNER R-03 and fresh formal RED_TEAM R-04; no further implementation is active.
+
+2026-10-08, actual OWNER instruction in Codex after H-006 delivery 1e5f5edfee8127a4726a9b05ca4fbf7e13af9a81: use the first generated image as the homepage hero; retain a clean CMS-editable/content-driven asset field for later swaps without layout changes; do not introduce a slider/gallery; keep the other two generated images available as later review alternatives. Supplied repository assets: app/public/images/home/happycustomer.png, happycustomer2.png, happycustomer3.png. This explicitly authorizes the narrow asset integration following D-018; it does not approve the complete homepage, other pages, content/terms/proof or production launch. Deliver within the existing static review workflow, synchronize evidence, then return to OWNER R-03 and fresh formal RED_TEAM R-04. Use this entry's Git history and outbound receipt for the implementation/delivery revision.
+
 ## Completed handoff — H-006
 
 **IMPLEMENTATION receipt (2026-10-08):** incoming main 99734a73a3f3cd0ba93a1155cfbdd95395a91245 consumed at implementation/evidence 7e69c079d57281d5126d2c94dbc3f1dfac90f265. Delivery and live verification are recorded in CODEX-TO-CHATGPT.md and its Git history. H-006 is complete; no further implementation handoff is active. Stop for OWNER R-03 and fresh formal RED_TEAM R-04. Final generated photo remains a separately supplied asset; no acceptance, content lock or launch approval is inferred.

@@ -2,11 +2,11 @@
 
 Updated: 2026-10-08. Owner: Medon AS. Implementation repository: AnelPasic/optimalisering.oslo.noV3.3.
 
-**State: H-006 IMPLEMENTED AT 7e69c079d57281d5126d2c94dbc3f1dfac90f265; STOP FOR OWNER R-03 AND FRESH FORMAL RED_TEAM R-04; ALL OTHER PAGES FROZEN.** D-018 visual polish preserves H-005B copy/IA, widens the shell, adds air and calmer hierarchy, and prepares a customer-photo composition. Final generated asset is not yet supplied. D-017 remains the genuine historical H-005B PASS, not approval of H-006. No further implementation handoff is active.
+**State: H-006 SELECTED-PHOTO FOLLOW-UP IMPLEMENTED AT dc045748180897c20efa418ac739b4135bf5e517; STOP FOR OWNER R-03 AND FRESH FORMAL RED_TEAM R-04; ALL OTHER PAGES FROZEN.** D-018 visual polish at 7e69c07 preserves H-005B copy/IA. OWNER subsequently supplied three generated images and selected the first; its optimized WebP occupies the existing content-driven hero slot. Options 2/3 remain inactive CMS-selectable alternatives. Layout and copy are unchanged. D-017 remains the historical H-005B PASS only. No further implementation handoff is active.
 
 Original exploratory implementation: `a98dbaefbb10a9039c9b025e5c3907e83f24de8b`, pushed to `origin/main` on 2026-10-08. The coordination/draft-label revision follows that commit; use this file's Git history for its exact SHA. A push permits repository inspection; it does not authorize publication or live processing.
 
-H-006 current web review: [V3.3 preview](https://optimalisering-oslo-v33.anel.workers.dev), source delivery **df27146cd8a0d42d33bc71cdb8f4487164b9145a**, implementation **7e69c079d57281d5126d2c94dbc3f1dfac90f265**, verified Worker version **5add393e-ceb4-4a05-b03c-0c1879b27216**. Native build succeeded. Live focused 1440/390/320/1920px plus 901px wrapping, eight screenshots, all 15 HTML/build comparisons, CSS/fallback equivalence and preview/disabled-intake checks pass. Separate live evidence is in coordination/evidence/h006-live/. Final generated photo is pending; preview fallback is published. This following receipt-only revision changes no website assets; use Git history for its own SHA. IMPLEMENTATION is stopped for OWNER R-03 and fresh formal RED_TEAM R-04.
+Historical H-006 placeholder web review: [V3.3 preview](https://optimalisering-oslo-v33.anel.workers.dev), source delivery **df27146cd8a0d42d33bc71cdb8f4487164b9145a**, implementation **7e69c079d57281d5126d2c94dbc3f1dfac90f265**, verified Worker version **5add393e-ceb4-4a05-b03c-0c1879b27216**. Native build succeeded. Live focused 1440/390/320/1920px plus 901px wrapping, eight screenshots, all 15 HTML/build comparisons, CSS/fallback equivalence and preview/disabled-intake checks pass. Separate historical live evidence is in coordination/evidence/h006-live/. The subsequent selected-photo follow-up replaces that fallback; current receipt belongs in CODEX-TO-CHATGPT.
 
 Historical publication H-003 / D-013: [V3.3 review target](https://optimalisering-oslo-v33.anel.workers.dev), Worker version `9c4f4691-8ac7-4515-be65-d9e99e04f2ba`. Live 1440/390/320px and all 15 routes are verified in `coordination/evidence/h003-publication/`. Static frontend only; noindex and intake-disabled state remain. See the latest outbound report for the exact delivery Git revision. This OWNER-requested web review is distinct from production launch or representative acceptance.
 
@@ -60,7 +60,7 @@ Templates were applied across the portfolio before a representative full-page re
 
 ## Representative page and review boundary
 
-Representative page: **the complete homepage `/`** at `7e69c079d57281d5126d2c94dbc3f1dfac90f265`, using revised `home.json`, `HomePage`, `HomeHeroPhoto`, `HomeLeverage`, `HomeSection`, and homepage-only `HomeAssessment`, `HomeHeader`, `HomeFooter` plus `home-invite.css`. Shared SiteLayout/routing passes homepage data only; content.config imports the testable schema. Existing global CSS, inner templates and shared form/header/footer stay intact. Current full-page/hero-selector/calculator-packages/wide evidence is in `coordination/evidence/h006/`; historical evidence remains preserved. Review the whole running page where interaction matters.
+Representative page: **the complete homepage `/`** at `dc045748180897c20efa418ac739b4135bf5e517`, with OWNER-selected generated photo in the existing `HomeHeroPhoto` slot. H-006 components, CSS, JSON content and layout remain unchanged from `7e69c07`. Current full-page/hero-selector/calculator-packages/wide evidence is in `coordination/evidence/h006-photo/`; historical placeholder evidence remains in `coordination/evidence/h006/`. Shared/global/inner templates and all other pages stay intact. Review the whole running page where interaction matters.
 
 `/vurdering/` supports review of the form flow; it is not a second design-direction candidate. All other pages remain frozen. Homepage approval is scoped to the reviewed content/visual revision; each remaining page still needs appropriate content review before publication. Implementation revisions require a concrete inbound handoff.
 
@@ -164,7 +164,7 @@ Change:
 - strengthen typographic and compositional authority;
 - prepare a real-photo hero slot for a generated happy-customer image, replacing the current UI illustration.
 
-The final hero image is not yet supplied. H-006 should create the composition and asset slot cleanly without inventing or fetching a stock image.
+The original H-006 created the photo composition before the asset was supplied. OWNER's subsequent asset instruction selects the first of three supplied generated images, preserving this composition.
 
 ## H-006 technical delivery
 
@@ -173,3 +173,7 @@ Implementation/evidence 7e69c079d57281d5126d2c94dbc3f1dfac90f265 consumes incomi
 The reserved asset is app/public/images/home/hero-customer.webp, with CMS/schema local-path and bounded crop config. Missing asset builds a valid neutral wordless SVG; no stock/generated customer photo is introduced. Both missing and temporary synthetic supplied branches passed responsive checks; fixture removed and fallback build restored. Real customer-photo composition/framing/brand acceptance remains a ChatGPT asset dependency.
 
 Final verify: 56 files with zero diagnostics, 24 tests, build and 449-link audit. Existing browser: 40 checks. Focused H-006: 1440/390/320/1920, eight captures, interactions/noindex/intake-disabled/copy/fit checks and a reproduced-then-fixed 901px selector wrap regression. Production-mode guard and preservation pass. Fresh technical review found no blocking issues; it is not formal R-04. Evidence/commands are in evidence/h006/; final main/Worker receipt is in CODEX-TO-CHATGPT. Stop for OWNER R-03 and fresh formal RED_TEAM R-04; R-05 remains blocked. No new content lock, commercial/proof authority, launch or real lead/email processing.
+
+## Current H-006 selected-photo follow-up
+
+dc045748180897c20efa418ac739b4135bf5e517 integrates OWNER-selected happycustomer.png as hero-customer.webp (81,652 bytes). Other originals/optimized options are preserved; only image 1 is rendered. homepage.heroPhoto.src remains /images/home/hero-customer.webp; CMS now provides a single-image picker using named media heroImages. Crop settings/defaults and all components/CSS/home JSON remain unchanged. All four H-006 geometry comparisons are exact. Fresh verify (56 diagnostics-free files, 24 tests, 449 links), 40 browser checks, responsive photo-fit checks/eight captures and 174-file preservation pass. Evidence is in evidence/h006-photo/. Actual desktop/mobile crops were visually inspected; whole-page OWNER R-03 and fresh formal RED_TEAM R-04 remain pending. Authenticated CMS upload/save remains unverified. Generated imagery is illustrative, not proof of actual customers. No other-page, reference or backend work is authorized.
