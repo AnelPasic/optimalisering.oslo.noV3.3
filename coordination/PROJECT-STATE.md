@@ -2,7 +2,7 @@
 
 Updated: 2026-10-08. Owner: Medon AS. Implementation repository: AnelPasic/optimalisering.oslo.noV3.3.
 
-**State: HOMEPAGE CONTENT/CRO LOCKED FOR REPRESENTATIVE TEST / VISUAL REVIEW PENDING.** H-001 / D-010 at `55c31b523a50e3e6112fcb5f324adbfa663e21eb` completed R-01/R-02 for the homepage JSON scope. IMPLEMENTATION rendered it and supplied evidence at `e6261de18ed4a7b1877dbf06a450d1b23a980e6e`. The 15-page build remains exploratory, not approved production. No OWNER representative-page/visual acceptance or final independent RED_TEAM PASS has been received. The other 14 pages remain frozen; technical QA does not supply those approvals.
+**State: HOMEPAGE CONTENT/CRO LOCKED / R-03 REVISE / NEW VISUAL ITERATION READY FOR OWNER REVIEW.** H-001 / D-010 at `55c31b523a50e3e6112fcb5f324adbfa663e21eb` completed R-01/R-02 for the homepage JSON scope. OWNER subsequently returned R-03 REVISE and authorized H-002 / D-011's Invite DNA translation on the homepage only. The new local iteration and 1440/390/320px evidence are ready; see `CODEX-TO-CHATGPT.md` for the exact implementation commit. The 15-page build remains exploratory, not approved production. No OWNER acceptance of this new revision or final independent RED_TEAM PASS has been received. The other 14 pages remain frozen; technical QA does not supply those approvals.
 
 Original exploratory implementation: `a98dbaefbb10a9039c9b025e5c3907e83f24de8b`, pushed to `origin/main` on 2026-10-08. The coordination/draft-label revision follows that commit; use this file's Git history for its exact SHA. A push permits repository inspection; it does not authorize publication or live processing.
 
@@ -27,8 +27,8 @@ There is **one scoped complete homepage content/CRO lock for the representative-
 | --- | --- |
 | `app/src/content/pages/*.json` except `home.json` | All remaining page content, SEO text, FAQs, pricing/scope explanations, privacy/terms drafts, insight articles and CTAs. Homepage JSON alone is authoritative for H-001's representative test under D-010. |
 | `app/src/config/site.ts`, `app/src/components/Header.astro`, `Footer.astro`, `app/src/layouts/SiteLayout.astro` | Navigation, provider sentence, wordmark arrangement, preview labels, accessibility/link labels and shared footer text |
-| `HomePage.astro`, `InnerPage.astro`, `AssessmentSection.astro`, `ContentSection.astro`, `Faq.astro` under `app/src/components/` | Template-written hero/support/breadcrumb/section/closing CTA text and all fallback/shared wording |
-| `Journey.astro`, `Leverage.astro` under `app/src/components/` | Illustration labels, teaching/tool labels, illustrative values and explanatory caveats |
+| `HomePage.astro`, `HomeSection.astro`, `InnerPage.astro`, `AssessmentSection.astro`, `ContentSection.astro`, `Faq.astro` under `app/src/components/` | Template-written hero/support/breadcrumb/section/closing CTA text and all fallback/shared wording |
+| `Journey.astro`, `Leverage.astro`, `HomeJourney.astro`, `HomeLeverage.astro` under `app/src/components/` | Illustration labels, teaching/tool labels, illustrative values and explanatory caveats; H-002 preserves the existing wording and adds derived percentage displays only |
 | `app/src/components/AssessmentForm.astro`, `app/src/lib/*.ts`, `app/server/*.mjs` | Form labels/options/helpers, validation/error/success text and generated customer-facing response/notification wording |
 | `app/src/pages/404.astro`, any other source-embedded public text | Error-page wording and all public text not otherwise listed |
 
@@ -42,15 +42,19 @@ The initial implementation selected a new homepage hook (“De rette må finne d
 
 Design priors suggested Instrument Sans/Figtree, comfortable Nordic presentation, controlled rounded shapes and prominent useful teaching. Implementation inferred their execution: warm cream `#f5f3ec`, forest green `#214f3e`, paper `#fffef9`, sage `#dce6d8`, apricot `#efc4a2`, ink `#223a30`; 1200px shell; headline weight/scale/spacing; lowercase wordmark with a custom arch/arrow symbol; rotated find/choose illustration cards; section/card/form treatments and responsive composition. These are exploratory visual choices, not an approved identity/system.
 
+H-002 / D-011 now explicitly selects Invite as the primary homepage visual DNA and defines the font roles. IMPLEMENTATION translated its airy rhythm, teal action, deep plum contrast, soft tinted surfaces and rounded visual panels into an original find/choose illustration, service components, stronger section changes and equally prominent illustrative 10/20 panels. The exact palette, proportions, card treatment and responsive execution remain reviewable implementation decisions, not OWNER acceptance. No reference branding, hospitality imagery, customer logos, proof, prices or copy was imported. Mementor was inspected only as a visual-energy/rhythm benchmark. The supplied local reference was read/rendered without modification and is not published as an app asset.
+
 Templates were applied across the portfolio before a representative full-page review was passed. This missed the intended sequence. The correction preserves the work as a review baseline and freezes further expansion; it does not retroactively approve that scaling. `app/docs/build-spec.md` and `implementation-plan.md` are implementation-authored interpretations, not approved production specifications. Completed checkboxes mean implementation work was done.
 
 ## Representative page and review boundary
 
-Proposed representative page: **the complete homepage `/`**, using `app/src/content/pages/home.json`, `app/src/components/HomePage.astro`, its child components and `app/src/styles/global.css`. Review the entire page at desktop and mobile widths, including service hub, teaching/calculator, manual-check section, provider and footer. Existing baseline captures are linked from `REVIEW-QUEUE.md`.
+Representative page: **the complete homepage `/`**, using locked `app/src/content/pages/home.json`, `app/src/components/HomePage.astro`, homepage-only `HomeJourney.astro`, `HomeLeverage.astro`, `HomeSection.astro`, `HomeSymbol.astro` and `app/public/styles/home-invite.css`. `SiteLayout.astro` loads this stylesheet/body class only for the homepage. Shared `app/src/styles/global.css`, form and FAQ implementations remain intact. Review the entire page at desktop and mobile widths, including service hub, teaching/calculator, manual-check section, provider and footer. Fresh captures and historical comparisons are linked from `REVIEW-QUEUE.md`.
 
 `/vurdering/` supports review of the form flow; it is not a second design-direction candidate. All other pages remain frozen. Homepage approval is scoped to the reviewed content/visual revision; each remaining page still needs appropriate content review before publication. Implementation revisions require a concrete inbound handoff.
 
 H-001 authorized exact homepage rendering and minimal necessary fit changes only. The single implementation adjustment at `e6261de` keeps existing space-grouped numbers together in `Leverage.astro` paragraph markup; no copy or visual-system changes were made. Fresh full-page 1440/390/320px and teaching captures are in `coordination/evidence/h001/`; see `REVIEW-QUEUE.md` for links and the pending R-03/R-04 requests.
+
+OWNER's later R-03 REVISE replaces that limited visual scope for the homepage through H-002 / D-011. New evidence is in `coordination/evidence/r03-invite/`. Locked homepage JSON and all other page JSON remain unchanged. The other 14 built pages and their shared stylesheet remain byte-for-byte unchanged. This local representative iteration stops for OWNER review; no propagation or renewed push/deployment instruction is inferred.
 
 ## Unresolved dependencies
 

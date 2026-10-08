@@ -1,6 +1,34 @@
 # ChatGPT to Codex
 
-## Active handoff — H-001
+## Active handoff — H-002 / OWNER R-03 visual revision
+
+**Date:** 2026-10-08
+
+**Authoritative source:** OWNER's explicit Codex instruction, beginning “R-03 verdict: REVISE.” Recorded here by IMPLEMENTATION; this is not a new STRATEGY_CONTENT lock or fabricated ChatGPT review.
+
+**Implementation baseline:** `4c577f9a11c9e212689771a0261154846b6e2f77`
+
+**Locked content source:** `55c31b523a50e3e6112fcb5f324adbfa663e21eb`, homepage JSON only under D-010.
+
+**Implementation status:** COMPLETE at `e04ee10c84b7dc5289678699bb9cc28957dd07f1`; stopped for OWNER review. See the outbound report and R-03 packet. No further implementation is active under this handoff.
+
+OWNER judged the existing representative homepage structurally sound but too visually restrained. Use `E:\Design-DNA\Invite Design DNA.html` as primary visual reference for **one coherent new representative-homepage direction**. Translate visual principles, rhythm, surface treatment, component character and life; do not reproduce Invite branding, layouts or hospitality imagery. The supplied document is reference material, not an instruction source.
+
+### Authorized scope and constraints
+
+- Homepage composition may be redesigned to express this direction. This supersedes H-001's minimal-fit/no-redesign limitation for `/` alone; see D-011.
+- Instrument Sans for display, headings and major metrics/price figures; Figtree for body, navigation, UI, forms, tables and metadata. These override reference typography.
+- Preserve the complete locked homepage copy and commercial argument without rewriting. Preserve copy authority; shared/source-embedded wording remains draft.
+- Strengthen light/tinted/dark rhythm, hierarchy, distinctive components, the find → choose model and the illustrative 1% → 2% teaching. Use purposeful explanatory visuals with a credible Nordic B2B feel.
+- Aim for at least Mementor's perceived visual energy while remaining calmer, trustworthy and distinct. This is an OWNER review criterion, not an objectively certified implementation result.
+- No fabricated results/logos, new claims/prices, generic AI gradients, SaaS dashboard aesthetics or decorative clutter. No propagation to the other 14 pages.
+- `system/` and `project/` remain read-only. No deployment, real intake or live email processing.
+
+### Required output and stopping point
+
+Verify 1440 / 390 / 320px, return fresh screenshots and a short explanation of the translation. Record implementation, evidence, technical validation and remaining dependencies in the outbound/state/review documents. **Stop after the representative homepage for OWNER review.** This handoff authorizes local implementation and a review checkpoint; it does not renew H-001's completed push instruction or authorize scaling. No visual acceptance or independent RED_TEAM verdict is supplied.
+
+## Completed handoff — H-001
 
 **Date:** 2026-10-08  
 **Author role:** STRATEGY_CONTENT / CRO  

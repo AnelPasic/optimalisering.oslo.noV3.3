@@ -8,11 +8,11 @@ The repository is the durable coordination layer between ChatGPT / STRATEGY_CONT
 
 ## Current scope: preserve the exploratory baseline
 
-The existing 15-page website in `app/` is an exploratory baseline, not approved production. Pause page/content expansion. Do not redesign, delete or polish the existing pages. The proposed representative design page is the complete homepage `/`, assessed on desktop and mobile.
+The existing 15-page website in `app/` is an exploratory baseline, not approved production. Pause page/content expansion. The representative design page is the complete homepage `/`, assessed on desktop and mobile. OWNER's R-03 REVISE instruction, recorded as H-002 / D-011, authorizes one homepage-only Invite DNA visual revision while preserving D-010's locked content. Stop after that iteration for OWNER review. Do not redesign, delete or polish the other 14 pages.
 
 Do not expand, redesign or polish the remaining pages until the representative page and content/visual direction have passed the reviews recorded in `coordination/REVIEW-QUEUE.md` and the resulting approvals are recorded in `coordination/DECISIONS.md`. A review request alone does not authorize a representative-page revision; wait for an explicit, scoped handoff in `coordination/CHATGPT-TO-CODEX.md`.
 
-The latest owner instruction authorizes coordination documentation, explicit draft-authority metadata, validation, and pushing this preserved baseline to `origin/main`. It does not authorize deployment or real lead processing. Future repository writes/pushes must follow the scope of their actual handoff.
+The baseline and H-001 push instructions are completed history. H-002 authorizes local representative-homepage implementation, validation, screenshots and the coordination review checkpoint. It does not renew push authorization or authorize deployment, real lead processing or propagation. Future repository writes/pushes must follow the scope of their actual handoff.
 
 ## Missing decisions are dependencies
 
