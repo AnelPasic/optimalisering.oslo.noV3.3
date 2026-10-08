@@ -2,7 +2,7 @@
 
 Updated: 2026-10-09. Owner: Medon AS. Implementation repository: AnelPasic/optimalisering.oslo.noV3.3.
 
-**State: H-008 /PRISER/ IMPLEMENTATION COMPLETE; STOP FOR STRATEGY_CONTENT R-06. D-024 CONTENT LOCK PRESERVED; D-025 PROOF NON-PUBLIC; OTHER 13 NON-HOME PAGES FROZEN.** Homepage commercial wording is partially locked. Oslo Privatklinikk is the first homepage proof candidate and Nysta the secondary ecommerce/conversion candidate, but both remain non-public until missing proof fields are supplied and exact case copy is locked.
+**State: H-008 /PRISER/ PASSED STRATEGY_CONTENT R-06 UNDER D-027; H-009 /SYNLIGHET/ CONTROLLED PROPAGATION AUTHORIZED UNDER D-028/D-029; PROOF REMAINS NON-PUBLIC; ALL OTHER SERVICE/CONTENT PAGES FROZEN.** Pricing is now the validated second-page pattern. The next system test is one service page only: /synlighet/.
 
 H-008: incoming main **73ce60d8789ba0b44661ce5222adff53a4831127**, implementation **87a839216db412305337daae24c01858176db15e**. `/priser/` reuses the accepted homepage fonts/palette/shell/header/footer and ordered open sections. One CMS homepage package object supplies both routes and repeated FAQ/metadata facts. Both D-024 JSON files/statuses are unchanged; homepage DOM/styles/geometry and all 182 protected/frozen files match the incoming baseline. Full verify passes 69 files with zero diagnostics, 34 tests, 15 content routes + 404 and 445 links; 19-output scan finds no public cases. Existing browser QA passes 40 checks; real-Astro shared-source regression and both pages at 1440/390/320 pass. Six captures and technical review are in coordination/evidence/h008/. Editing location/inheritance and manual CMS connection limits are in app/docs/h008-pricing-cms.md. No next implementation handoff is active.
 
@@ -219,3 +219,10 @@ Locked commercial sources:
 - pricing-page supporting copy: `app/src/content/pages/priser.json` at `a37bf7a9067f18f4eafd59e2efd753240aecc96c`
 
 Next implementation is H-008: make /priser/ the first controlled propagation page and share the package source of truth with the homepage. Do not publish proof or redesign other pages.
+
+
+## R-06 outcome / next controlled page
+
+H-008 pricing propagation is accepted. One ambiguous heading was corrected to **“Fire områder. Prioritert etter behov.”** and the corrected pricing revision is locked under D-027.
+
+The exact /synlighet/ content at `cc02995a5b43d3d0ee28df23a4588ff09a16cd21` is locked under D-028. H-009 may implement that page using the accepted visual system and shared package source, but no other service page may be propagated yet.
