@@ -1,0 +1,132 @@
+{
+  "base": "https://optimalisering-oslo-v33.anel.workers.dev",
+  "browser": "154.0.8037.98",
+  "checkedAt": "2026-10-08T10:35:24.674Z",
+  "baselineSource": {
+    "commit": "b6d035a99513d007a905cbc64c2f0e10c1f5421b",
+    "stage": "Fresh pre-H-005B H-004 build",
+    "widths": [
+      1440,
+      390,
+      320
+    ],
+    "browser": "154.0.8037.98"
+  },
+  "checks": [
+    {
+      "width": 1440,
+      "heroHeight": 476.03125,
+      "previousHeroHeight": 607.640625,
+      "selectorY": 578.03125,
+      "previousSelectorY": 709.640625,
+      "preservation": {
+        "sections": 8,
+        "elements": 207,
+        "dom": "identical",
+        "computedStyles": "identical",
+        "relativeGeometry": "within 0.1px"
+      },
+      "sequence": [
+        "hero",
+        "behov",
+        "regneeksempel",
+        "priser",
+        "mekanisme",
+        "passer",
+        "sjekk",
+        "medon",
+        "sporsmal"
+      ],
+      "fonts": {
+        "h1": "\"Instrument Sans Variable\", sans-serif",
+        "metric": "\"Instrument Sans Variable\", sans-serif",
+        "body": "\"Figtree Variable\", sans-serif",
+        "label": "\"Figtree Variable\", sans-serif",
+        "nav": "\"Figtree Variable\", sans-serif",
+        "footer": "rgb(50, 12, 67)"
+      },
+      "overflow": false,
+      "calculator": "traffic / conversion / combined / zero / invalid / maximum / decrease PASS",
+      "form": "disabled, three fields, no POST",
+      "cmsFieldCoverage": 209
+    },
+    {
+      "width": 390,
+      "heroHeight": 665.59375,
+      "previousHeroHeight": 799.421875,
+      "selectorY": 744.59375,
+      "previousSelectorY": 878.421875,
+      "preservation": {
+        "sections": 8,
+        "elements": 207,
+        "dom": "identical",
+        "computedStyles": "identical",
+        "relativeGeometry": "within 0.1px"
+      },
+      "sequence": [
+        "hero",
+        "behov",
+        "regneeksempel",
+        "priser",
+        "mekanisme",
+        "passer",
+        "sjekk",
+        "medon",
+        "sporsmal"
+      ],
+      "fonts": {
+        "h1": "\"Instrument Sans Variable\", sans-serif",
+        "metric": "\"Instrument Sans Variable\", sans-serif",
+        "body": "\"Figtree Variable\", sans-serif",
+        "label": "\"Figtree Variable\", sans-serif",
+        "nav": "\"Figtree Variable\", sans-serif",
+        "footer": "rgb(50, 12, 67)"
+      },
+      "overflow": false,
+      "calculator": "traffic / conversion / combined / zero / invalid / maximum / decrease PASS",
+      "form": "disabled, three fields, no POST",
+      "cmsFieldCoverage": 209
+    },
+    {
+      "width": 320,
+      "heroHeight": 677.796875,
+      "previousHeroHeight": 824.34375,
+      "selectorY": 752.796875,
+      "previousSelectorY": 899.34375,
+      "preservation": {
+        "sections": 8,
+        "elements": 207,
+        "dom": "identical",
+        "computedStyles": "identical",
+        "relativeGeometry": "within 0.1px"
+      },
+      "sequence": [
+        "hero",
+        "behov",
+        "regneeksempel",
+        "priser",
+        "mekanisme",
+        "passer",
+        "sjekk",
+        "medon",
+        "sporsmal"
+      ],
+      "fonts": {
+        "h1": "\"Instrument Sans Variable\", sans-serif",
+        "metric": "\"Instrument Sans Variable\", sans-serif",
+        "body": "\"Figtree Variable\", sans-serif",
+        "label": "\"Figtree Variable\", sans-serif",
+        "nav": "\"Figtree Variable\", sans-serif",
+        "footer": "rgb(50, 12, 67)"
+      },
+      "overflow": false,
+      "calculator": "traffic / conversion / combined / zero / invalid / maximum / decrease PASS",
+      "form": "disabled, three fields, no POST",
+      "cmsFieldCoverage": 209
+    }
+  ],
+  "errors": [],
+  "noScript": "static outputs visible, intake disabled",
+  "proofPublished": false,
+  "liveEmailsSent": 0
+}

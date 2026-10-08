@@ -8,6 +8,8 @@ Original exploratory implementation: `a98dbaefbb10a9039c9b025e5c3907e83f24de8b`,
 
 Historical publication H-003 / D-013: [V3.3 review target](https://optimalisering-oslo-v33.anel.workers.dev), Worker version `9c4f4691-8ac7-4515-be65-d9e99e04f2ba`. Live 1440/390/320px and all 15 routes are verified in `coordination/evidence/h003-publication/`. Static frontend only; noindex and intake-disabled state remain. See the latest outbound report for the exact delivery Git revision. This OWNER-requested web review is distinct from production launch or representative acceptance.
 
+H-005B current web review: [V3.3 preview](https://optimalisering-oslo-v33.anel.workers.dev), source delivery 7b800ceb5ae787638ce113ab1a885a600c13dbaa, verified Worker version **f62c33fe-6391-4fae-a96b-d26922ae1c91**. Native build succeeded; live 1440/390/320px checks, six captures, lower-page preservation, 15 HTML/build comparisons and preview/disabled-intake checks pass. Separate live evidence is in coordination/evidence/h005b-live/. The following receipt-only revision changes no website assets; use Git history for its own SHA. Stop for OWNER R-03 and formal independent RED_TEAM R-04.
+
 Historical H-004 web review: [V3.3 preview](https://optimalisering-oslo-v33.anel.workers.dev), source delivery `87daa54`, verified Worker version `b2c527a3-e60e-458c-b7f9-c257afda6c21`. Native build succeeded. Live 1440/390/320px focused QA, all 15 HTML byte comparisons, stylesheet equivalence, noindex/robots/sitemap and static-intake GET 404 pass. Separate live evidence is in `coordination/evidence/h004-live/`. The following receipt-only revision changes no website assets; use Git history for its own SHA.
 
 ## Implemented baseline
