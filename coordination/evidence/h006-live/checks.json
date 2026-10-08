@@ -1,0 +1,1014 @@
+{
+  "base": "https://optimalisering-oslo-v33.anel.workers.dev",
+  "browser": "154.0.8037.98",
+  "checkedAt": "2026-10-08T14:55:42.297Z",
+  "baselineSource": {
+    "commit": "99734a73a3f3cd0ba93a1155cfbdd95395a91245",
+    "browser": "154.0.8037.98",
+    "stage": "Fresh pre-H-006 H-005B build"
+  },
+  "checks": [
+    {
+      "width": 1440,
+      "shell": 1360,
+      "previousShell": 1200,
+      "heroHeight": 459.953125,
+      "previousHeroHeight": 476.03125,
+      "selectorY": 561.953125,
+      "spacingBefore": {
+        "behov": {
+          "top": 52,
+          "bottom": 72,
+          "height": 521.09375
+        },
+        "regneeksempel": {
+          "top": 72,
+          "bottom": 72,
+          "height": 726.359375
+        },
+        "priser": {
+          "top": 72,
+          "bottom": 72,
+          "height": 844.296875
+        },
+        "mekanisme": {
+          "top": 72,
+          "bottom": 72,
+          "height": 534.6875
+        },
+        "passer": {
+          "top": 72,
+          "bottom": 72,
+          "height": 474.71875
+        },
+        "sjekk": {
+          "top": 72,
+          "bottom": 72,
+          "height": 780.5
+        },
+        "medon": {
+          "top": 72,
+          "bottom": 72,
+          "height": 377.453125
+        },
+        "sporsmal": {
+          "top": 72,
+          "bottom": 72,
+          "height": 542.5
+        }
+      },
+      "spacingAfter": {
+        "behov": {
+          "top": 64,
+          "bottom": 88,
+          "height": 577.09375
+        },
+        "regneeksempel": {
+          "top": 104,
+          "bottom": 104,
+          "height": 758.359375
+        },
+        "priser": {
+          "top": 104,
+          "bottom": 104,
+          "height": 926.296875
+        },
+        "mekanisme": {
+          "top": 104,
+          "bottom": 104,
+          "height": 646.078125
+        },
+        "passer": {
+          "top": 104,
+          "bottom": 104,
+          "height": 625.6875
+        },
+        "sjekk": {
+          "top": 104,
+          "bottom": 104,
+          "height": 860.5
+        },
+        "medon": {
+          "top": 104,
+          "bottom": 104,
+          "height": 441.453125
+        },
+        "sporsmal": {
+          "top": 104,
+          "bottom": 104,
+          "height": 606.5
+        }
+      },
+      "containersBefore": {
+        ".need-card": {
+          "padding": "28px",
+          "radius": "22px",
+          "background": "rgb(224, 241, 233)",
+          "border": "1px"
+        },
+        ".package-card": {
+          "padding": "28px",
+          "radius": "22px",
+          "background": "rgb(255, 255, 255)",
+          "border": "1px"
+        },
+        ".leverage-tool": {
+          "padding": "26px",
+          "radius": "24px",
+          "background": "rgb(73, 57, 79)",
+          "border": "1px"
+        },
+        ".info-item": {
+          "padding": "0px",
+          "radius": "20px",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "0px"
+        },
+        ".item-number": {
+          "padding": "0px 0px 15px",
+          "radius": "50%",
+          "background": "rgb(224, 241, 233)",
+          "border": "0px"
+        },
+        ".assessment-form": {
+          "padding": "32px",
+          "radius": "24px",
+          "background": "rgb(255, 255, 255)",
+          "border": "1px"
+        }
+      },
+      "containersAfter": {
+        ".need-card": {
+          "padding": "36px",
+          "radius": "14px",
+          "background": "rgb(224, 241, 233)",
+          "border": "1px"
+        },
+        ".package-card": {
+          "padding": "32px 28px 0px",
+          "radius": "0px",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "2px"
+        },
+        ".leverage-tool": {
+          "padding": "0px",
+          "radius": "10px",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "0px"
+        },
+        ".info-item": {
+          "padding": "24px 0px 0px",
+          "radius": "0px",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "1px"
+        },
+        ".item-number": {
+          "padding": "0px 0px 15px",
+          "radius": "0px",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "0px"
+        },
+        ".assessment-form": {
+          "padding": "40px",
+          "radius": "12px",
+          "background": "rgb(255, 255, 255)",
+          "border": "1px"
+        }
+      },
+      "readable": [
+        {
+          "selector": "hero-intro",
+          "width": 620
+        },
+        {
+          "selector": "body-copy",
+          "width": 560
+        },
+        {
+          "selector": "body-copy",
+          "width": 720
+        },
+        {
+          "selector": "body-copy",
+          "width": 632
+        },
+        {
+          "selector": "body-copy",
+          "width": 650
+        },
+        {
+          "selector": "eyebrow",
+          "width": 592
+        },
+        {
+          "selector": "",
+          "width": 520
+        },
+        {
+          "selector": "",
+          "width": 520
+        },
+        {
+          "selector": "body-copy",
+          "width": 632
+        },
+        {
+          "selector": "faq-list",
+          "width": 662.40625
+        }
+      ],
+      "photo": {
+        "src": "/images/home/hero-customer-preview.svg",
+        "alt": "",
+        "width": 1200,
+        "fit": "cover",
+        "position": "50% 45%",
+        "reserved": "/images/home/hero-customer.webp",
+        "state": "preview-placeholder",
+        "text": "",
+        "height": 369.765625
+      },
+      "retainedContent": "identical",
+      "lowerAndChromeDom": "identical",
+      "sequence": [
+        "hero",
+        "behov",
+        "regneeksempel",
+        "priser",
+        "mekanisme",
+        "passer",
+        "sjekk",
+        "medon",
+        "sporsmal"
+      ],
+      "fonts": {
+        "h1": "\"Instrument Sans Variable\", sans-serif",
+        "metric": "\"Instrument Sans Variable\", sans-serif",
+        "body": "\"Figtree Variable\", sans-serif",
+        "label": "\"Figtree Variable\", sans-serif",
+        "nav": "\"Figtree Variable\", sans-serif",
+        "footer": "rgb(50, 12, 67)"
+      },
+      "overflow": false,
+      "calculator": "traffic / conversion / combined / zero / invalid / maximum / decrease PASS",
+      "form": "disabled, three fields, no POST",
+      "cmsFieldCoverage": 204
+    },
+    {
+      "width": 390,
+      "shell": 350,
+      "previousShell": 350,
+      "heroHeight": 629.046875,
+      "previousHeroHeight": 665.59375,
+      "selectorY": 708.046875,
+      "spacingBefore": {
+        "behov": {
+          "top": 48,
+          "bottom": 48,
+          "height": 1060.25
+        },
+        "regneeksempel": {
+          "top": 48,
+          "bottom": 48,
+          "height": 1039.515625
+        },
+        "priser": {
+          "top": 48,
+          "bottom": 48,
+          "height": 1958.875
+        },
+        "mekanisme": {
+          "top": 48,
+          "bottom": 48,
+          "height": 826.40625
+        },
+        "passer": {
+          "top": 48,
+          "bottom": 48,
+          "height": 708.96875
+        },
+        "sjekk": {
+          "top": 48,
+          "bottom": 48,
+          "height": 1213.09375
+        },
+        "medon": {
+          "top": 48,
+          "bottom": 48,
+          "height": 530.8125
+        },
+        "sporsmal": {
+          "top": 48,
+          "bottom": 48,
+          "height": 624.40625
+        }
+      },
+      "spacingAfter": {
+        "behov": {
+          "top": 40,
+          "bottom": 56,
+          "height": 1100.25
+        },
+        "regneeksempel": {
+          "top": 56,
+          "bottom": 56,
+          "height": 1022.328125
+        },
+        "priser": {
+          "top": 56,
+          "bottom": 56,
+          "height": 1930.5
+        },
+        "mekanisme": {
+          "top": 56,
+          "bottom": 56,
+          "height": 919.1875
+        },
+        "passer": {
+          "top": 56,
+          "bottom": 56,
+          "height": 728.96875
+        },
+        "sjekk": {
+          "top": 56,
+          "bottom": 56,
+          "height": 1247.09375
+        },
+        "medon": {
+          "top": 56,
+          "bottom": 56,
+          "height": 560.8125
+        },
+        "sporsmal": {
+          "top": 56,
+          "bottom": 56,
+          "height": 654.40625
+        }
+      },
+      "containersBefore": {
+        ".need-card": {
+          "padding": "25px",
+          "radius": "20px",
+          "background": "rgb(224, 241, 233)",
+          "border": "1px"
+        },
+        ".package-card": {
+          "padding": "25px",
+          "radius": "20px",
+          "background": "rgb(255, 255, 255)",
+          "border": "1px"
+        },
+        ".leverage-tool": {
+          "padding": "20px",
+          "radius": "20px",
+          "background": "rgb(73, 57, 79)",
+          "border": "1px"
+        },
+        ".info-item": {
+          "padding": "0px",
+          "radius": "20px",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "0px"
+        },
+        ".item-number": {
+          "padding": "0px 0px 13px",
+          "radius": "50%",
+          "background": "rgb(224, 241, 233)",
+          "border": "0px"
+        },
+        ".assessment-form": {
+          "padding": "26px",
+          "radius": "20px",
+          "background": "rgb(255, 255, 255)",
+          "border": "1px"
+        }
+      },
+      "containersAfter": {
+        ".need-card": {
+          "padding": "28px",
+          "radius": "12px",
+          "background": "rgb(224, 241, 233)",
+          "border": "1px"
+        },
+        ".package-card": {
+          "padding": "28px 0px 0px",
+          "radius": "0px",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "2px"
+        },
+        ".leverage-tool": {
+          "padding": "0px",
+          "radius": "10px",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "0px"
+        },
+        ".info-item": {
+          "padding": "24px 0px 0px",
+          "radius": "0px",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "1px"
+        },
+        ".item-number": {
+          "padding": "0px 0px 13px",
+          "radius": "0px",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "0px"
+        },
+        ".assessment-form": {
+          "padding": "28px",
+          "radius": "12px",
+          "background": "rgb(255, 255, 255)",
+          "border": "1px"
+        }
+      },
+      "readable": [
+        {
+          "selector": "hero-intro",
+          "width": 350
+        },
+        {
+          "selector": "body-copy",
+          "width": 350
+        },
+        {
+          "selector": "body-copy",
+          "width": 350
+        },
+        {
+          "selector": "body-copy",
+          "width": 350
+        },
+        {
+          "selector": "body-copy",
+          "width": 350
+        },
+        {
+          "selector": "eyebrow",
+          "width": 350
+        },
+        {
+          "selector": "",
+          "width": 350
+        },
+        {
+          "selector": "",
+          "width": 350
+        },
+        {
+          "selector": "body-copy",
+          "width": 350
+        },
+        {
+          "selector": "faq-list",
+          "width": 350
+        }
+      ],
+      "photo": {
+        "src": "/images/home/hero-customer-preview.svg",
+        "alt": "",
+        "width": 1200,
+        "fit": "cover",
+        "position": "50% 45%",
+        "reserved": "/images/home/hero-customer.webp",
+        "state": "preview-placeholder",
+        "text": "",
+        "height": 196.875
+      },
+      "retainedContent": "identical",
+      "lowerAndChromeDom": "identical",
+      "sequence": [
+        "hero",
+        "behov",
+        "regneeksempel",
+        "priser",
+        "mekanisme",
+        "passer",
+        "sjekk",
+        "medon",
+        "sporsmal"
+      ],
+      "fonts": {
+        "h1": "\"Instrument Sans Variable\", sans-serif",
+        "metric": "\"Instrument Sans Variable\", sans-serif",
+        "body": "\"Figtree Variable\", sans-serif",
+        "label": "\"Figtree Variable\", sans-serif",
+        "nav": "\"Figtree Variable\", sans-serif",
+        "footer": "rgb(50, 12, 67)"
+      },
+      "overflow": false,
+      "calculator": "traffic / conversion / combined / zero / invalid / maximum / decrease PASS",
+      "form": "disabled, three fields, no POST",
+      "cmsFieldCoverage": 204
+    },
+    {
+      "width": 320,
+      "shell": 288,
+      "previousShell": 288,
+      "heroHeight": 606.375,
+      "previousHeroHeight": 677.796875,
+      "selectorY": 681.375,
+      "spacingBefore": {
+        "behov": {
+          "top": 48,
+          "bottom": 48,
+          "height": 1119.125
+        },
+        "regneeksempel": {
+          "top": 48,
+          "bottom": 48,
+          "height": 1067.578125
+        },
+        "priser": {
+          "top": 48,
+          "bottom": 48,
+          "height": 2169.875
+        },
+        "mekanisme": {
+          "top": 48,
+          "bottom": 48,
+          "height": 1167.5
+        },
+        "passer": {
+          "top": 48,
+          "bottom": 48,
+          "height": 748.296875
+        },
+        "sjekk": {
+          "top": 48,
+          "bottom": 48,
+          "height": 1276.671875
+        },
+        "medon": {
+          "top": 48,
+          "bottom": 48,
+          "height": 586.234375
+        },
+        "sporsmal": {
+          "top": 48,
+          "bottom": 48,
+          "height": 679.515625
+        }
+      },
+      "spacingAfter": {
+        "behov": {
+          "top": 40,
+          "bottom": 56,
+          "height": 1153.125
+        },
+        "regneeksempel": {
+          "top": 56,
+          "bottom": 56,
+          "height": 1042.390625
+        },
+        "priser": {
+          "top": 56,
+          "bottom": 56,
+          "height": 2072.296875
+        },
+        "mekanisme": {
+          "top": 56,
+          "bottom": 56,
+          "height": 1307.0625
+        },
+        "passer": {
+          "top": 56,
+          "bottom": 56,
+          "height": 743.546875
+        },
+        "sjekk": {
+          "top": 56,
+          "bottom": 56,
+          "height": 1310.671875
+        },
+        "medon": {
+          "top": 56,
+          "bottom": 56,
+          "height": 616.234375
+        },
+        "sporsmal": {
+          "top": 56,
+          "bottom": 56,
+          "height": 709.515625
+        }
+      },
+      "containersBefore": {
+        ".need-card": {
+          "padding": "22px",
+          "radius": "20px",
+          "background": "rgb(224, 241, 233)",
+          "border": "1px"
+        },
+        ".package-card": {
+          "padding": "22px",
+          "radius": "20px",
+          "background": "rgb(255, 255, 255)",
+          "border": "1px"
+        },
+        ".leverage-tool": {
+          "padding": "16px",
+          "radius": "20px",
+          "background": "rgb(73, 57, 79)",
+          "border": "1px"
+        },
+        ".info-item": {
+          "padding": "0px",
+          "radius": "20px",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "0px"
+        },
+        ".item-number": {
+          "padding": "0px 0px 13px",
+          "radius": "50%",
+          "background": "rgb(224, 241, 233)",
+          "border": "0px"
+        },
+        ".assessment-form": {
+          "padding": "22px",
+          "radius": "20px",
+          "background": "rgb(255, 255, 255)",
+          "border": "1px"
+        }
+      },
+      "containersAfter": {
+        ".need-card": {
+          "padding": "24px",
+          "radius": "12px",
+          "background": "rgb(224, 241, 233)",
+          "border": "1px"
+        },
+        ".package-card": {
+          "padding": "28px 0px 0px",
+          "radius": "0px",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "2px"
+        },
+        ".leverage-tool": {
+          "padding": "0px",
+          "radius": "10px",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "0px"
+        },
+        ".info-item": {
+          "padding": "24px 0px 0px",
+          "radius": "0px",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "1px"
+        },
+        ".item-number": {
+          "padding": "0px 0px 13px",
+          "radius": "0px",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "0px"
+        },
+        ".assessment-form": {
+          "padding": "24px",
+          "radius": "12px",
+          "background": "rgb(255, 255, 255)",
+          "border": "1px"
+        }
+      },
+      "readable": [
+        {
+          "selector": "hero-intro",
+          "width": 288
+        },
+        {
+          "selector": "body-copy",
+          "width": 288
+        },
+        {
+          "selector": "body-copy",
+          "width": 288
+        },
+        {
+          "selector": "body-copy",
+          "width": 288
+        },
+        {
+          "selector": "body-copy",
+          "width": 288
+        },
+        {
+          "selector": "eyebrow",
+          "width": 288
+        },
+        {
+          "selector": "",
+          "width": 288
+        },
+        {
+          "selector": "",
+          "width": 288
+        },
+        {
+          "selector": "body-copy",
+          "width": 288
+        },
+        {
+          "selector": "faq-list",
+          "width": 288
+        }
+      ],
+      "photo": {
+        "src": "/images/home/hero-customer-preview.svg",
+        "alt": "",
+        "width": 1200,
+        "fit": "cover",
+        "position": "50% 45%",
+        "reserved": "/images/home/hero-customer.webp",
+        "state": "preview-placeholder",
+        "text": "",
+        "height": 162
+      },
+      "retainedContent": "identical",
+      "lowerAndChromeDom": "identical",
+      "sequence": [
+        "hero",
+        "behov",
+        "regneeksempel",
+        "priser",
+        "mekanisme",
+        "passer",
+        "sjekk",
+        "medon",
+        "sporsmal"
+      ],
+      "fonts": {
+        "h1": "\"Instrument Sans Variable\", sans-serif",
+        "metric": "\"Instrument Sans Variable\", sans-serif",
+        "body": "\"Figtree Variable\", sans-serif",
+        "label": "\"Figtree Variable\", sans-serif",
+        "nav": "\"Figtree Variable\", sans-serif",
+        "footer": "rgb(50, 12, 67)"
+      },
+      "overflow": false,
+      "calculator": "traffic / conversion / combined / zero / invalid / maximum / decrease PASS",
+      "form": "disabled, three fields, no POST",
+      "cmsFieldCoverage": 204
+    },
+    {
+      "width": 1920,
+      "shell": 1440,
+      "previousShell": 1200,
+      "heroHeight": 463,
+      "previousHeroHeight": 476.03125,
+      "selectorY": 565,
+      "spacingBefore": {
+        "behov": {
+          "top": 52,
+          "bottom": 72,
+          "height": 521.09375
+        },
+        "regneeksempel": {
+          "top": 72,
+          "bottom": 72,
+          "height": 726.359375
+        },
+        "priser": {
+          "top": 72,
+          "bottom": 72,
+          "height": 844.296875
+        },
+        "mekanisme": {
+          "top": 72,
+          "bottom": 72,
+          "height": 534.6875
+        },
+        "passer": {
+          "top": 72,
+          "bottom": 72,
+          "height": 474.71875
+        },
+        "sjekk": {
+          "top": 72,
+          "bottom": 72,
+          "height": 780.5
+        },
+        "medon": {
+          "top": 72,
+          "bottom": 72,
+          "height": 377.453125
+        },
+        "sporsmal": {
+          "top": 72,
+          "bottom": 72,
+          "height": 542.5
+        }
+      },
+      "spacingAfter": {
+        "behov": {
+          "top": 64,
+          "bottom": 88,
+          "height": 577.09375
+        },
+        "regneeksempel": {
+          "top": 104,
+          "bottom": 104,
+          "height": 758.359375
+        },
+        "priser": {
+          "top": 104,
+          "bottom": 104,
+          "height": 902.296875
+        },
+        "mekanisme": {
+          "top": 104,
+          "bottom": 104,
+          "height": 621.328125
+        },
+        "passer": {
+          "top": 104,
+          "bottom": 104,
+          "height": 625.6875
+        },
+        "sjekk": {
+          "top": 104,
+          "bottom": 104,
+          "height": 860.5
+        },
+        "medon": {
+          "top": 104,
+          "bottom": 104,
+          "height": 441.453125
+        },
+        "sporsmal": {
+          "top": 104,
+          "bottom": 104,
+          "height": 606.5
+        }
+      },
+      "containersBefore": {
+        ".need-card": {
+          "padding": "28px",
+          "radius": "22px",
+          "background": "rgb(224, 241, 233)",
+          "border": "1px"
+        },
+        ".package-card": {
+          "padding": "28px",
+          "radius": "22px",
+          "background": "rgb(255, 255, 255)",
+          "border": "1px"
+        },
+        ".leverage-tool": {
+          "padding": "26px",
+          "radius": "24px",
+          "background": "rgb(73, 57, 79)",
+          "border": "1px"
+        },
+        ".info-item": {
+          "padding": "0px",
+          "radius": "20px",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "0px"
+        },
+        ".item-number": {
+          "padding": "0px 0px 15px",
+          "radius": "50%",
+          "background": "rgb(224, 241, 233)",
+          "border": "0px"
+        },
+        ".assessment-form": {
+          "padding": "32px",
+          "radius": "24px",
+          "background": "rgb(255, 255, 255)",
+          "border": "1px"
+        }
+      },
+      "containersAfter": {
+        ".need-card": {
+          "padding": "36px",
+          "radius": "14px",
+          "background": "rgb(224, 241, 233)",
+          "border": "1px"
+        },
+        ".package-card": {
+          "padding": "32px 28px 0px",
+          "radius": "0px",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "2px"
+        },
+        ".leverage-tool": {
+          "padding": "0px",
+          "radius": "10px",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "0px"
+        },
+        ".info-item": {
+          "padding": "24px 0px 0px",
+          "radius": "0px",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "1px"
+        },
+        ".item-number": {
+          "padding": "0px 0px 15px",
+          "radius": "0px",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "0px"
+        },
+        ".assessment-form": {
+          "padding": "40px",
+          "radius": "12px",
+          "background": "rgb(255, 255, 255)",
+          "border": "1px"
+        }
+      },
+      "readable": [
+        {
+          "selector": "hero-intro",
+          "width": 620
+        },
+        {
+          "selector": "body-copy",
+          "width": 560
+        },
+        {
+          "selector": "body-copy",
+          "width": 720
+        },
+        {
+          "selector": "body-copy",
+          "width": 650
+        },
+        {
+          "selector": "body-copy",
+          "width": 650
+        },
+        {
+          "selector": "eyebrow",
+          "width": 592
+        },
+        {
+          "selector": "",
+          "width": 520
+        },
+        {
+          "selector": "",
+          "width": 520
+        },
+        {
+          "selector": "body-copy",
+          "width": 650
+        },
+        {
+          "selector": "faq-list",
+          "width": 662.40625
+        }
+      ],
+      "photo": {
+        "src": "/images/home/hero-customer-preview.svg",
+        "alt": "",
+        "width": 1200,
+        "fit": "cover",
+        "position": "50% 45%",
+        "reserved": "/images/home/hero-customer.webp",
+        "state": "preview-placeholder",
+        "text": "",
+        "height": 375
+      },
+      "retainedContent": "identical",
+      "lowerAndChromeDom": "identical",
+      "sequence": [
+        "hero",
+        "behov",
+        "regneeksempel",
+        "priser",
+        "mekanisme",
+        "passer",
+        "sjekk",
+        "medon",
+        "sporsmal"
+      ],
+      "fonts": {
+        "h1": "\"Instrument Sans Variable\", sans-serif",
+        "metric": "\"Instrument Sans Variable\", sans-serif",
+        "body": "\"Figtree Variable\", sans-serif",
+        "label": "\"Figtree Variable\", sans-serif",
+        "nav": "\"Figtree Variable\", sans-serif",
+        "footer": "rgb(50, 12, 67)"
+      },
+      "overflow": false,
+      "calculator": "traffic / conversion / combined / zero / invalid / maximum / decrease PASS",
+      "form": "disabled, three fields, no POST",
+      "cmsFieldCoverage": 204
+    }
+  ],
+  "boundary901": [
+    {
+      "width": 195,
+      "scroll": 195
+    },
+    {
+      "width": 195,
+      "scroll": 195
+    },
+    {
+      "width": 195,
+      "scroll": 195
+    }
+  ],
+  "errors": [],
+  "noScript": "static outputs visible, intake disabled",
+  "proofPublished": false,
+  "liveEmailsSent": 0
+}

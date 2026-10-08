@@ -1,0 +1,9 @@
+# H-006 live review verification
+
+2026-10-08. Review URL: https://optimalisering-oslo-v33.anel.workers.dev. Implementation: 7e69c079d57281d5126d2c94dbc3f1dfac90f265. Source delivery: df27146cd8a0d42d33bc71cdb8f4487164b9145a. GitHub check-run “Workers Builds: optimalisering-oslo-v33” completed successfully with Worker version 5add393e-ceb4-4a05-b03c-0c1879b27216. Exact build URL and comparison receipts are in deployment.json.
+
+All 15 live page HTML outputs match the tested local dist byte-for-byte. Homepage CSS and fallback SVG match with Windows/Linux line-ending normalization. Live response/meta noindex, disallowed robots, empty preview sitemap and static intake GET 404 are verified. No POST to real intake or live email occurred. The final generated WebP is absent; the neutral wordless preview fallback is published.
+
+From app/, set QA_BASE_URL=https://optimalisering-oslo-v33.anel.workers.dev and QA_EVIDENCE_DIR=../coordination/evidence/h006-live, then run node scripts/qa-home-h006.mjs. Focused checks passed at 1440/390/320/1920px, plus the 901px stable-scrollbar selector wrapping regression. Eight captures cover full page and hero+selector at 1440/390/320, calculator+packages at 1440 and the wider 1920px viewport. checks.json records the results against the saved pre-H-006 H-005B baseline. Live hero-selector390 and wide1920 captures were also visually inspected after publication; all required local captures were reviewed before delivery.
+
+This receipt/evidence revision changes no website assets; use its Git history for its own SHA. Publication and technical QA are not content locks, OWNER acceptance, formal RED_TEAM review or production launch approval. Stop for OWNER R-03 and fresh formal RED_TEAM R-04 on the named implementation. Final customer-photo subject/framing/crop review awaits the separately supplied asset.
