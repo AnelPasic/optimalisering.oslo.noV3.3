@@ -1,0 +1,120 @@
+{
+  "base": "https://optimalisering-oslo-v33.anel.workers.dev",
+  "sourceBaseline": "7b98ff8184e7a8063682877b1edfcff3d4941f20",
+  "checkedAt": "2026-10-08T22:16:07.210Z",
+  "browser": "154.0.8037.98",
+  "cmsFieldCount": 229,
+  "checks": [
+    {
+      "width": 1440,
+      "prices": [
+        {
+          "text": "4 500 kr/mnd eks. mva.",
+          "font": "\"Instrument Sans Variable\", sans-serif",
+          "recommended": false
+        },
+        {
+          "text": "6 900 kr/mnd eks. mva.",
+          "font": "\"Instrument Sans Variable\", sans-serif",
+          "recommended": true
+        },
+        {
+          "text": "14 900 kr/mnd eks. mva.",
+          "font": "\"Instrument Sans Variable\", sans-serif",
+          "recommended": false
+        }
+      ],
+      "noOverflow": true,
+      "acceptedBlocks": "exact DOM/styles/relative geometry preserved",
+      "proofRendered": false,
+      "formFields": 3,
+      "intake": "disabled",
+      "sectionSequence": [
+        "hero",
+        "behov",
+        "regneeksempel",
+        "priser",
+        "mekanisme",
+        "passer",
+        "sjekk",
+        "medon",
+        "sporsmal"
+      ]
+    },
+    {
+      "width": 390,
+      "prices": [
+        {
+          "text": "4 500 kr/mnd eks. mva.",
+          "font": "\"Instrument Sans Variable\", sans-serif",
+          "recommended": false
+        },
+        {
+          "text": "6 900 kr/mnd eks. mva.",
+          "font": "\"Instrument Sans Variable\", sans-serif",
+          "recommended": true
+        },
+        {
+          "text": "14 900 kr/mnd eks. mva.",
+          "font": "\"Instrument Sans Variable\", sans-serif",
+          "recommended": false
+        }
+      ],
+      "noOverflow": true,
+      "acceptedBlocks": "exact DOM/styles/relative geometry preserved",
+      "proofRendered": false,
+      "formFields": 3,
+      "intake": "disabled",
+      "sectionSequence": [
+        "hero",
+        "behov",
+        "regneeksempel",
+        "priser",
+        "mekanisme",
+        "passer",
+        "sjekk",
+        "medon",
+        "sporsmal"
+      ]
+    },
+    {
+      "width": 320,
+      "prices": [
+        {
+          "text": "4 500 kr/mnd eks. mva.",
+          "font": "\"Instrument Sans Variable\", sans-serif",
+          "recommended": false
+        },
+        {
+          "text": "6 900 kr/mnd eks. mva.",
+          "font": "\"Instrument Sans Variable\", sans-serif",
+          "recommended": true
+        },
+        {
+          "text": "14 900 kr/mnd eks. mva.",
+          "font": "\"Instrument Sans Variable\", sans-serif",
+          "recommended": false
+        }
+      ],
+      "noOverflow": true,
+      "acceptedBlocks": "exact DOM/styles/relative geometry preserved",
+      "proofRendered": false,
+      "formFields": 3,
+      "intake": "disabled",
+      "sectionSequence": [
+        "hero",
+        "behov",
+        "regneeksempel",
+        "priser",
+        "mekanisme",
+        "passer",
+        "sjekk",
+        "medon",
+        "sporsmal"
+      ]
+    }
+  ],
+  "errors": [],
+  "posts": 0,
+  "liveEmailsSent": 0
+}

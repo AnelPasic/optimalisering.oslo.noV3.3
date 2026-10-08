@@ -20,6 +20,8 @@ STRATEGY_CONTENT: review the complete homepage commercial layer, especially pack
 
 D-023 remains a separate future-publication gate: OWNER/STRATEGY_CONTENT must supply comparable periods, intervention, limitations, verified provenance and the exact STRATEGY_CONTENT public-presentation lock for any chosen case; OWNER naming/case permission is already GRANTED under updated D-023. No proof publication is requested or authorized now. Case records remain EVIDENCE_ONLY / READY_FOR_STRATEGY_REVIEW / namingPermission=GRANTED / publicationApproved=false. Authenticated Pages CMS connection/save is a disclosed manual OWNER/editor step in app/docs/h007-content-cms.md; file-based content review can continue independently. R-03/D-019/D-020 retain genuine recorded passes. All 14 other pages and launch/intake remain frozen.
 
+Live H-007: source main **5d6d6df86db754a197cf4a3b7dabe02be30403ab**, verified connected Worker **3cdcd896-4c0f-4f50-a48b-846db77935ca**. [Packages 1440](evidence/h007-live/packages-1440.png), [390](evidence/h007-live/packages-390.png), [free check 1440](evidence/h007-live/free-check-1440.png), [390](evidence/h007-live/free-check-390.png), [checks](evidence/h007-live/checks.json), [deployment receipt](evidence/h007-live/deployment.json), [notes](evidence/h007-live/README.md). All responsive, asset/noindex/disabled-intake checks pass; both cases remain hidden despite GRANTED permission. Receipt/evidence-only revision changes no website assets. Next receiver is STRATEGY_CONTENT R-05.
+
 ## Historical review packet — H-006 OWNER selector follow-up
 
 The requests below are preserved history; D-021 subsequently resolves OWNER R-03. H-007's current STRATEGY_CONTENT packet above governs the next review.

@@ -1,0 +1,245 @@
+{
+  "base": "https://optimalisering-oslo-v33.anel.workers.dev",
+  "checkedAt": "2026-10-08T22:15:58.907Z",
+  "sourceRevision": "5d6d6df86db754a197cf4a3b7dabe02be30403ab",
+  "implementationRevision": "fdcdaf84020ae4ecf8446806329b74cb3e4320d2",
+  "receivedReviewRevision": "209063989df3911acde3c4d95c06a2ea76457216",
+  "workerDeployment": {
+    "method": "Connected Workers Build",
+    "status": "success",
+    "version": "3cdcd896-4c0f-4f50-a48b-846db77935ca"
+  },
+  "nativeBuild": {
+    "checkRunPresent": true,
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://dash.cloudflare.com/f772a1f16c82756f67e76357c4e5adaf/workers/services/view/optimalisering-oslo-v33/production/builds/3af007ec-8773-4884-9475-653dd7ebc3ba",
+    "summary": "\nBuild ID: [3af007ec-8773-4884-9475-653dd7ebc3ba](https://dash.cloudflare.com/f772a1f16c82756f67e76357c4e5adaf/workers/services/view/optimalisering-oslo-v33/production/builds/3af007ec-8773-4884-9475-653dd7ebc3ba)\nScript: [optimalisering-oslo-v33](https://dash.cloudflare.com/f772a1f16c82756f67e76357c4e5adaf/workers/services/view/optimalisering-oslo-v33/production)\nVersion ID: 3cdcd896-4c0f-4f50-a48b-846db77935ca\n"
+  },
+  "assets": [
+    {
+      "path": "/om/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 11430,
+      "sha256": "327b9a91f3e49d5147e21ae1b1f3af13bdc47830e6a6fde6ebb0875ff5b72e57"
+    },
+    {
+      "path": "/personvern/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 10374,
+      "sha256": "e032313a33d8e875e253c5a6b15747c367289f177793750cc07240ea90c5980d"
+    },
+    {
+      "path": "/seo/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 14644,
+      "sha256": "6c259b820b48c6f004f179107ba8ccddffa4cfb59fc98332419d87b7630fd3e8"
+    },
+    {
+      "path": "/innsikt/male-effekt-av-optimalisering/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 16909,
+      "sha256": "5143ef75bf3dbfecac48149f8caddef77c7f9e2e5f4e8406dc18a457c9239071"
+    },
+    {
+      "path": "/ai-synlighet/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 15233,
+      "sha256": "b65cd96312040bb9893436000fb7b314660ae877920b85872ea43a0d10723a96"
+    },
+    {
+      "path": "/innsikt/hva-bor-optimaliseres-forst/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 15876,
+      "sha256": "33b11276000a6560d612e76cc17b6d4965bc5c2203ad0c98292cd63125b82f13"
+    },
+    {
+      "path": "/vilkar/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 10293,
+      "sha256": "8b3aa8f5e1a1c242d770211f82b1137d105b3c3429ceec4cf11f7b2c7e62f678"
+    },
+    {
+      "path": "/konvertering/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 14187,
+      "sha256": "300fb0fc1eafb693758b6615eaf5e354d533e2fe9cb191f8473b1735037e0077"
+    },
+    {
+      "path": "/priser/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 13655,
+      "sha256": "6677ee212949c6808f78129ffce97786b2160f31997dbc7951d16402e38a02ca"
+    },
+    {
+      "path": "/vurdering/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 13348,
+      "sha256": "1fe19837d515cbceb407530d54d91a0aad34edf04f9b0442d2d2bdde4b056793"
+    },
+    {
+      "path": "/innsikt/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 9926,
+      "sha256": "b3490ade6ab47ada62a8a12e9efe0409676665763ea766b652426bf3719e54f7"
+    },
+    {
+      "path": "/kontakt/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 9374,
+      "sha256": "ca963f33971e1abb1b61709277e7225f6c888208c62310a34d581530defac8dd"
+    },
+    {
+      "path": "/synlighet/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 14734,
+      "sha256": "4ef2ef2751b0c8ddad3678f39839cf39a6565eacf1a90bfd236116f7e5949a9f"
+    },
+    {
+      "path": "/nettbutikkoptimalisering/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 15220,
+      "sha256": "7442d7e3398563a2853d3bf810bbb52bcef4df8b549e469ca349bef17606888e"
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 24949,
+      "sha256": "f01f65d0353dfd90bd7cbe08bfd25d6b61972ca4ca782d3326584695222b93d0"
+    },
+    {
+      "path": "/styles/home-invite.css",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": false,
+      "lineEndingEquivalent": true,
+      "matchesTestedBuild": true,
+      "bytes": 15018,
+      "sha256": "cb01cfd73da92dffa3af48af6347b3cdf2b312ef6ead305831d0283aa6514383"
+    },
+    {
+      "path": "/images/home/hero-customer.webp",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 81652,
+      "sha256": "84756d154b710a75c7bf8a4b8f5c3c36e03ff6fe01c7e7cccf6a8dc5d9ff08c7"
+    },
+    {
+      "path": "/images/home/hero-customer-02.webp",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 68184,
+      "sha256": "20190965a8a08a61d6ae73e6d29e7e05d843186f129f683ec8242bb85aca5c91"
+    },
+    {
+      "path": "/images/home/hero-customer-03.webp",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 70886,
+      "sha256": "f18db9a1421c663ff0b8454fb9ba5e9783af64f2d6a3370370ce3f185792b795"
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 26,
+      "sha256": "331ea9090db0c9f6f597bd9840fd5b171830f6e0b3ba1cb24dfa91f0c95aedc1"
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 107,
+      "sha256": "68ab08991efaca902bcb8a6518106d8b29964c5651f39abbb7eb7c9713ca2770"
+    }
+  ],
+  "heroPhoto": {
+    "selected": "/images/home/hero-customer.webp",
+    "alternateOptions": [
+      "/images/home/hero-customer-02.webp",
+      "/images/home/hero-customer-03.webp"
+    ],
+    "sliderOrGallery": false
+  },
+  "staticIntake": {
+    "method": "GET",
+    "status": 404
+  },
+  "realLeadsSubmitted": 0,
+  "liveEmailsSent": 0
+}
