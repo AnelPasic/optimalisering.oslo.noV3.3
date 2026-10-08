@@ -1,10 +1,10 @@
 # H-007 implementation evidence
 
-Delivered 2026-10-09, consuming incoming main 7b98ff8184e7a8063682877b1edfcff3d4941f20. Authority: active H-007, D-021/D-022/D-023 and coordination/H007-COMMERCIAL-INPUT.md. The exact implementation and later live source revisions are recorded in CODEX-TO-CHATGPT.md; this evidence does not establish a new content lock or role approval.
+Delivered 2026-10-09, initially consuming main 7b98ff8184e7a8063682877b1edfcff3d4941f20 and integrating actual subsequent main 2090639 proof-permission clarification before publication. Authority: H-007, D-021/D-022/D-023 and coordination/H007-COMMERCIAL-INPUT.md. The initial commercial implementation, permission follow-up and later live source revisions are recorded in CODEX-TO-CHATGPT.md; this evidence does not establish a new content lock or role approval.
 
 The accepted homepage visual baseline is retained. Only the package layer, free-check promise, two contradictory commercial FAQ answers and hidden proof content/renderer are changed. Integer prices, VAT/unit, Vekst recommendation, fit/scope, shared costs and scope notes are content/CMS fields. Four areas and measurement foundation stay compact. No internal hours, invented terms, Sprint, fake proof or additional form fields.
 
-Both imported cases preserve every supplied measurement and remain EVIDENCE_ONLY / NEEDS_PERMISSION / publicationApproved=false. Unknown comparison/intervention/limitations/permission data stays null or false. Original source artifacts were not imported or independently re-verified. Private case records are build inputs, never public assets. Publication requires complete approved data, explicit permissions and case/slot approvals; no environment or fixture override.
+Both imported cases preserve every supplied measurement and remain EVIDENCE_ONLY / READY_FOR_STRATEGY_REVIEW / namingPermission=GRANTED / publicationApproved=false. The actual OWNER permission source is recorded; it is not a blocker. Unknown comparison/intervention/limitations data stays null or false. Original source artifacts were not imported or independently re-verified. Private case records are build inputs, never public assets. Publication requires complete approved data, genuine exact-presentation STRATEGY_CONTENT lock/evidence and case/slot approvals; no environment or fixture override. Focused tests were updated and observed failing before implementing the clarified permission/review gates, then passed 10/10; final verify still passes 34/34.
 
 Validation:
 

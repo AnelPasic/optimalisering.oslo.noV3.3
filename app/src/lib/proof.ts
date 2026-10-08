@@ -7,8 +7,10 @@ export const proofCaseSchema = z.object({
   dominantMetric: z.string(), before: nullableText, after: nullableText, delta: nullableText,
   period: z.object({ before: nullableText, after: nullableText, comparable: z.boolean() }).strict(),
   intervention: nullableText, source: z.string(), limitations: nullableText,
-  namingPermission: z.enum(['NEEDS_PERMISSION', 'NAME_APPROVED', 'ANONYMIZED_APPROVED']),
+  namingPermission: z.enum(['NEEDS_PERMISSION', 'GRANTED', 'NAME_APPROVED', 'ANONYMIZED_APPROVED']),
   permissionEvidence: nullableText,
+  strategyReviewStatus: z.enum(['READY_FOR_STRATEGY_REVIEW', 'CONTENT_LOCKED']),
+  strategyReviewEvidence: nullableText,
   artifactStatus: z.enum(['NOT_IMPORTED', 'IMPORTED', 'VERIFIED']), artifactReferences: z.array(z.string()),
   evidenceMetrics: z.array(z.object({ metric: z.string(), before: nullableText, after: nullableText, delta: nullableText, nextPeriod: nullableText, timeframe: nullableText }).strict()),
   publicationStatus: z.enum(['EVIDENCE_ONLY', 'REVIEW_REQUIRED', 'PUBLISHABLE', 'WITHDRAWN']),
@@ -42,9 +44,9 @@ export function getPublishableCases(slot: unknown, records: readonly unknown[]):
     const parsed = proofCaseSchema.safeParse(matches[0]);
     if (!parsed.success) return [];
     const proof = parsed.data;
-    if (proof.publicationStatus !== 'PUBLISHABLE' || proof.publicationApproved !== true || proof.namingPermission === 'NEEDS_PERMISSION' || proof.period.comparable !== true) return [];
-    if (![proof.clientName, proof.dominantMetric, proof.before, proof.after, proof.period.before, proof.period.after, proof.intervention, proof.source, proof.limitations, proof.permissionEvidence].every(nonempty)) return [];
-    const displayName = proof.namingPermission === 'NAME_APPROVED' ? proof.clientName : proof.anonymizedLabel;
+    if (proof.publicationStatus !== 'PUBLISHABLE' || proof.publicationApproved !== true || proof.namingPermission === 'NEEDS_PERMISSION' || proof.period.comparable !== true || proof.strategyReviewStatus !== 'CONTENT_LOCKED') return [];
+    if (![proof.clientName, proof.dominantMetric, proof.before, proof.after, proof.period.before, proof.period.after, proof.intervention, proof.source, proof.limitations, proof.permissionEvidence, proof.strategyReviewEvidence].every(nonempty)) return [];
+    const displayName = proof.namingPermission === 'ANONYMIZED_APPROVED' ? proof.anonymizedLabel : proof.clientName;
     if (!nonempty(displayName)) return [];
     const publicProof: PublicProof = {
       displayName, dominantMetric: proof.dominantMetric, before: proof.before!, after: proof.after!, delta: proof.delta,

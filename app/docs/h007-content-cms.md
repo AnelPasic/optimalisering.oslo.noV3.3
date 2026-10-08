@@ -10,16 +10,17 @@ Internal delivery-hour guardrails are not fields in homepage marketing content o
 
 ## Evidence-only case registry
 
-The `proofCases` collection edits app/src/content/proof/*.json. Nysta and Oslo Privatklinikk retain all supplied measurements, including follow-on periods and partial ratios. Source statements identify the separate registries; original source files/screenshots have not been imported or independently re-verified here. Unknown exact comparison dates, intervention details, attribution caveats, anonymized label and permission evidence remain null. `period.comparable` is false, not an invented comparability verdict. Nysta's former-customer/no-ownership/no-current-operation context is retained.
+The `proofCases` collection edits app/src/content/proof/*.json. Nysta and Oslo Privatklinikk retain all supplied measurements, including follow-on periods and partial ratios. Source statements identify the separate registries; original source files/screenshots have not been imported or independently re-verified here. Unknown exact comparison dates, intervention details, attribution caveats and anonymized label remain null. `period.comparable` is false, not an invented comparability verdict. Nysta's former-customer/no-ownership/no-current-operation context is retained. Latest authoritative main 2090639 confirms OWNER's customer-name/case permission under D-023; that actual decision is recorded in permissionEvidence.
 
-Both records are EVIDENCE_ONLY / NEEDS_PERMISSION, publicationApproved=false, artifactStatus=NOT_IMPORTED, artifactReferences=[]. They produce no public HTML, JS or JSON. Secondary evidence measurements, source registry identity, relationship and artifact references are never part of the renderer's public projection. No case route or public anonymized claim is created by H-007.
+Both records are EVIDENCE_ONLY / READY_FOR_STRATEGY_REVIEW, namingPermission=GRANTED, strategyReviewEvidence=null, publicationApproved=false, artifactStatus=NOT_IMPORTED, artifactReferences=[]. Permission is not a blocker; the exact public presentation still needs STRATEGY_CONTENT selection/lock. They produce no public HTML, JS or JSON. Secondary evidence measurements, source/permission/review registry identity, relationship and artifact references are never part of the renderer's public projection. No case route or public anonymized claim is created by H-007.
 
 The reserved proof position remains directly after packages. A later documented publication requires all of the following, through the existing content/CMS layer:
 
 1. A complete metric definition and before/after values with explicit comparable before/after periods, intervention, source/provenance and limitations/attribution caveat.
-2. NAME_APPROVED or ANONYMIZED_APPROVED, documented permissionEvidence and the corresponding nonempty public name/anonymous label. An anonymous public projection containing the private client name is refused.
-3. Case publicationStatus=PUBLISHABLE and publicationApproved=true.
-4. The homepage proof slot explicitly selecting that unique case ID and publicationApproved=true.
+2. GRANTED or NAME_APPROVED for named publication, or ANONYMIZED_APPROVED for anonymous publication; documented permissionEvidence and the corresponding nonempty public name/anonymous label. An anonymous public projection containing the private client name is refused.
+3. strategyReviewStatus=CONTENT_LOCKED and nonempty strategyReviewEvidence identifying the genuine STRATEGY_CONTENT decision/reviewed revision for that exact public presentation. READY_FOR_STRATEGY_REVIEW or a missing review cannot publish, even with every other approval enabled. Editing the locked presentation requires a corresponding new review.
+4. Case publicationStatus=PUBLISHABLE and publicationApproved=true.
+5. The homepage proof slot explicitly selecting that unique case ID and publicationApproved=true.
 
 Missing/empty required fields, ambiguous IDs, false/string approvals, environment or fixture overrides fail closed. No defaults promote proof. Artifact status/references are editable evidence fields; this handoff does not invent a requirement that a screenshot must exist when the documented source and publication permission otherwise suffice. Imported artifacts must never contain lead personal data or secrets. All actual approvals still belong in coordination/DECISIONS.md.
 

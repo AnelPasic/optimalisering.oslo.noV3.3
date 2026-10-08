@@ -11,6 +11,7 @@ const complete = {
   period: { before: '2025-01', after: '2025-02', comparable: true }, intervention: 'Synthetic comparison change',
   source: 'Memory-only unit test', limitations: 'Comparison does not establish exclusive causation.',
   namingPermission: 'NAME_APPROVED', permissionEvidence: 'Memory-only permission fixture',
+  strategyReviewStatus: 'CONTENT_LOCKED', strategyReviewEvidence: 'Memory-only exact-presentation review fixture',
   artifactStatus: 'NOT_IMPORTED', artifactReferences: [], evidenceMetrics: [],
   publicationStatus: 'PUBLISHABLE', publicationApproved: true,
 };
@@ -38,6 +39,8 @@ test('proof renders only explicitly selected, complete, permitted and approved r
     assert.deepEqual(getPublishableCases(slot, [{ ...complete, publicationApproved }]), []);
   }
   assert.deepEqual(getPublishableCases(slot, [{ ...complete, namingPermission: 'NEEDS_PERMISSION' }]), []);
+  assert.deepEqual(getPublishableCases(slot, [{ ...complete, namingPermission: 'GRANTED' }])[0]?.displayName, complete.clientName, 'OWNER-confirmed named-case permission is recognized');
+  assert.deepEqual(getPublishableCases(slot, [{ ...complete, namingPermission: 'GRANTED', strategyReviewStatus: 'READY_FOR_STRATEGY_REVIEW' }]), [], 'permission alone does not approve exact public presentation');
   assert.deepEqual(getPublishableCases(slot, [{ ...complete, period: { ...complete.period, comparable: false } }]), []);
 });
 
@@ -47,7 +50,7 @@ test('missing fields, empty proof requirements and flags cannot bypass publicati
     delete incomplete[key];
     assert.deepEqual(getPublishableCases(slot, [incomplete]), [], `missing ${key}`);
   }
-  for (const key of ['clientName', 'dominantMetric', 'before', 'after', 'intervention', 'source', 'limitations', 'permissionEvidence']) {
+  for (const key of ['clientName', 'dominantMetric', 'before', 'after', 'intervention', 'source', 'limitations', 'permissionEvidence', 'strategyReviewEvidence']) {
     assert.deepEqual(getPublishableCases(slot, [{ ...complete, [key]: '   ' }]), [], `empty ${key}`);
   }
   for (const key of ['before', 'after']) assert.deepEqual(getPublishableCases(slot, [{ ...complete, period: { ...complete.period, [key]: null } }]), []);
@@ -95,7 +98,10 @@ test('both imported records preserve supplied measurements and remain evidence o
   for (const record of records) {
     assert.equal(proofCaseSchema.safeParse(record).success, true);
     assert.equal(record.publicationStatus, 'EVIDENCE_ONLY');
-    assert.equal(record.namingPermission, 'NEEDS_PERMISSION');
+    assert.equal(record.namingPermission, 'GRANTED');
+    assert.equal(record.strategyReviewStatus, 'READY_FOR_STRATEGY_REVIEW');
+    assert.equal(record.strategyReviewEvidence, null);
+    assert.match(record.permissionEvidence, /2090639.*D-023.*OWNER/);
     assert.equal(record.publicationApproved, false);
     assert.equal(record.artifactStatus, 'NOT_IMPORTED');
     assert.deepEqual(record.artifactReferences, []);

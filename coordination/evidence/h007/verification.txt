@@ -6,11 +6,11 @@
 > optimalisering-oslo-v3-3@0.1.0 check
 > astro check
 
-00:06:26 [content] Syncing content
-00:06:26 [content] Synced content
-00:06:26 [types] Generated 317ms
-00:06:26 [check] Getting diagnostics for Astro files in E:\Codex\optimalisering.oslo.noV3.3\app...
-Result (63 files): 
+00:12:39 [content] Syncing content
+00:12:39 [content] Synced content
+00:12:39 [types] Generated 323ms
+00:12:39 [check] Getting diagnostics for Astro files in E:\Codex\optimalisering.oslo.noV3.3\app...
+Result (63 files):
 - 0 errors
 - 0 warnings
 - 0 hints
@@ -19,44 +19,44 @@ Result (63 files):
 > optimalisering-oslo-v3-3@0.1.0 test
 > node --test tests/*.test.ts tests/*.test.mjs
 
-✔ submission source survives an internal route without cookies or browser storage (1.649ms)
-✔ external links, hash links and invalid campaign values are untouched (0.1766ms)
-✔ H-007 renders the exact reconfirmed ladder, VAT and Vekst recommendation (0.8908ms)
-✔ H-007 keeps four work areas, shared measurement, budget and separate-cost rules (0.1929ms)
-✔ H-007 adds the supplied free-check promise and retains manual bounded safeguards (0.1696ms)
-✔ H-007 commercial CMS edits are typed and retain all intended fields (10.6763ms)
-✔ CMS edits cannot remove or duplicate a required homepage section (13.9259ms)
-✔ CMS calculator defaults must be accepted by the rendered input controls (0.9217ms)
-✔ CMS section order cannot reverse the diagnostic and qualification sequence (0.4395ms)
-(node:5072) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+✔ submission source survives an internal route without cookies or browser storage (1.6096ms)
+✔ external links, hash links and invalid campaign values are untouched (0.1906ms)
+✔ H-007 renders the exact reconfirmed ladder, VAT and Vekst recommendation (0.9841ms)
+✔ H-007 keeps four work areas, shared measurement, budget and separate-cost rules (0.2054ms)
+✔ H-007 adds the supplied free-check promise and retains manual bounded safeguards (0.1494ms)
+✔ H-007 commercial CMS edits are typed and retain all intended fields (9.1743ms)
+✔ CMS edits cannot remove or duplicate a required homepage section (12.6719ms)
+✔ CMS calculator defaults must be accepted by the rendered input controls (1.0757ms)
+✔ CMS section order cannot reverse the diagnostic and qualification sequence (0.4824ms)
+(node:18728) ExperimentalWarning: SQLite is an experimental feature and might change at any time
 (Use `node --trace-warnings ...` to show where the warning was created)
-✔ HTTP accepted enquiry is stored once with source, conversion and pending email (41.2865ms)
-✔ unconfigured server and invalid/origin-mismatched submissions save no data (8.3962ms)
-✔ validation, oversized body, conflict and honeypot fail before creating a new lead (8.3678ms)
-✔ website accepts a bare domain and rejects unsafe schemes and credentials (0.9168ms)
-✔ payload is minimal, validates email and removes personal/URL query data from source (0.9352ms)
-✔ only an explicit persisted acknowledgement is success (19.8377ms)
-✔ empty and insecure endpoints never call the transport (0.3264ms)
-✔ network failure and abort preserve a retryable error (7.9547ms)
-✔ illustrative example keeps percentage units correct (0.7229ms)
-✔ invalid or impossible calculator inputs fail (0.2534ms)
-✔ traffic and conversion compound rather than adding their effects (1.1669ms)
-✔ zero baseline has no defined percentage increase and fractional outcomes stay precise (0.1159ms)
-✔ combined scenario rejects impossible or non-finite inputs (0.3931ms)
-✔ a tiny baseline does not produce an infinite percentage claim (0.1102ms)
-✔ locked status cannot publish draft page or shared copy authority (5.038ms)
-✔ Astro production-mode env files cannot make draft output indexable (10.6332ms)
-✔ CMS preserves the existing page CTA and exposes only declared proof fields (23.0622ms)
-✔ proof renders only explicitly selected, complete, permitted and approved records (2.869ms)
-✔ missing fields, empty proof requirements and flags cannot bypass publication (0.8006ms)
-✔ anonymous proof exposes the approved label and no private registry identity or evidence (0.2036ms)
-✔ anonymous proof refuses wrapped, nonbreaking and Unicode-normalized private names (0.9738ms)
-✔ both imported records preserve supplied measurements and remain evidence only with CMS coverage (13.4303ms)
-(node:38472) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+✔ HTTP accepted enquiry is stored once with source, conversion and pending email (37.9946ms)
+✔ unconfigured server and invalid/origin-mismatched submissions save no data (9.6671ms)
+✔ validation, oversized body, conflict and honeypot fail before creating a new lead (8.5699ms)
+✔ website accepts a bare domain and rejects unsafe schemes and credentials (0.9143ms)
+✔ payload is minimal, validates email and removes personal/URL query data from source (1.1342ms)
+✔ only an explicit persisted acknowledgement is success (21.4943ms)
+✔ empty and insecure endpoints never call the transport (0.3781ms)
+✔ network failure and abort preserve a retryable error (15.144ms)
+✔ illustrative example keeps percentage units correct (0.5875ms)
+✔ invalid or impossible calculator inputs fail (0.2102ms)
+✔ traffic and conversion compound rather than adding their effects (0.492ms)
+✔ zero baseline has no defined percentage increase and fractional outcomes stay precise (0.1088ms)
+✔ combined scenario rejects impossible or non-finite inputs (0.2365ms)
+✔ a tiny baseline does not produce an infinite percentage claim (0.0707ms)
+✔ locked status cannot publish draft page or shared copy authority (9.5735ms)
+✔ Astro production-mode env files cannot make draft output indexable (7.0851ms)
+✔ CMS preserves the existing page CTA and exposes only declared proof fields (20.0599ms)
+✔ proof renders only explicitly selected, complete, permitted and approved records (3.2979ms)
+✔ missing fields, empty proof requirements and flags cannot bypass publication (1.4951ms)
+✔ anonymous proof exposes the approved label and no private registry identity or evidence (0.2845ms)
+✔ anonymous proof refuses wrapped, nonbreaking and Unicode-normalized private names (0.3553ms)
+✔ both imported records preserve supplied measurements and remain evidence only with CMS coverage (13.4066ms)
+(node:25352) ExperimentalWarning: SQLite is an experimental feature and might change at any time
 (Use `node --trace-warnings ...` to show where the warning was created)
-✔ durable enquiry and one conversion are atomic and idempotent (1.8762ms)
-✔ email failure leaves the enquiry and a retryable notification intact (17.754ms)
-✔ ambiguous email response remains pending and sent messages are not resent (1.1301ms)
+✔ durable enquiry and one conversion are atomic and idempotent (2.3574ms)
+✔ email failure leaves the enquiry and a retryable notification intact (17.4505ms)
+✔ ambiguous email response remains pending and sent messages are not resent (1.2636ms)
 ℹ tests 34
 ℹ suites 0
 ℹ pass 34
@@ -64,48 +64,48 @@ Result (63 files):
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 247.1576
+ℹ duration_ms 260.4154
 
 > optimalisering-oslo-v3-3@0.1.0 build
 > astro build
 
-00:06:31 [content] Syncing content
-00:06:31 [content] Synced content
-00:06:31 [types] Generated 313ms
-00:06:31 [build] output: "static"
-00:06:31 [build] mode: "static"
-00:06:31 [build] directory: E:\Codex\optimalisering.oslo.noV3.3\app\dist\
-00:06:31 [build] Collecting build info...
-00:06:31 [build] ✓ Completed in 336ms.
-00:06:31 [build] Building static entrypoints...
-00:06:31 [vite] ✓ built in 152ms
-00:06:31 [vite] ✓ built in 24ms
-00:06:31 [build] Rearranging server assets...
+00:12:44 [content] Syncing content
+00:12:44 [content] Synced content
+00:12:44 [types] Generated 315ms
+00:12:44 [build] output: "static"
+00:12:44 [build] mode: "static"
+00:12:44 [build] directory: E:\Codex\optimalisering.oslo.noV3.3\app\dist\
+00:12:44 [build] Collecting build info...
+00:12:44 [build] ✓ Completed in 339ms.
+00:12:44 [build] Building static entrypoints...
+00:12:44 [vite] ✓ built in 147ms
+00:12:45 [vite] ✓ built in 23ms
+00:12:45 [build] Rearranging server assets...
 
- generating static routes 
-00:06:31   ├─ /404.html (+6ms) 
-00:06:31   ├─ /robots.txt (+1ms) 
-00:06:31   ├─ /sitemap.xml (+1ms) 
-00:06:31   ├─ /ai-synlighet/index.html (+2ms) 
-00:06:31   ├─ /index.html (+6ms) 
-00:06:31   ├─ /innsikt/index.html (+1ms) 
-00:06:31   ├─ /innsikt/hva-bor-optimaliseres-forst/index.html (+1ms) 
-00:06:31   ├─ /innsikt/male-effekt-av-optimalisering/index.html (+1ms) 
-00:06:31   ├─ /kontakt/index.html (+1ms) 
-00:06:31   ├─ /konvertering/index.html (+1ms) 
-00:06:31   ├─ /nettbutikkoptimalisering/index.html (+1ms) 
-00:06:31   ├─ /om/index.html (+1ms) 
-00:06:31   ├─ /personvern/index.html (+1ms) 
-00:06:31   ├─ /priser/index.html (+1ms) 
-00:06:31   ├─ /seo/index.html (+1ms) 
-00:06:31   ├─ /synlighet/index.html (+1ms) 
-00:06:31   ├─ /vilkar/index.html (+1ms) 
-00:06:31   ├─ /vurdering/index.html (+3ms) 
-00:06:31 ✓ Completed in 47ms.
+ generating static routes
+00:12:45   ├─ /404.html (+6ms)
+00:12:45   ├─ /robots.txt (+1ms)
+00:12:45   ├─ /sitemap.xml (+1ms)
+00:12:45   ├─ /ai-synlighet/index.html (+2ms)
+00:12:45   ├─ /index.html (+6ms)
+00:12:45   ├─ /innsikt/index.html (+1ms)
+00:12:45   ├─ /innsikt/hva-bor-optimaliseres-forst/index.html (+1ms)
+00:12:45   ├─ /innsikt/male-effekt-av-optimalisering/index.html (+1ms)
+00:12:45   ├─ /kontakt/index.html (+1ms)
+00:12:45   ├─ /konvertering/index.html (+1ms)
+00:12:45   ├─ /nettbutikkoptimalisering/index.html (+1ms)
+00:12:45   ├─ /om/index.html (+1ms)
+00:12:45   ├─ /personvern/index.html (+1ms)
+00:12:45   ├─ /priser/index.html (+1ms)
+00:12:45   ├─ /seo/index.html (+1ms)
+00:12:45   ├─ /synlighet/index.html (+1ms)
+00:12:45   ├─ /vilkar/index.html (+1ms)
+00:12:45   ├─ /vurdering/index.html (+3ms)
+00:12:45 ✓ Completed in 48ms.
 
-00:06:31 [build] ✓ Completed in 284ms.
-00:06:31 [build] 16 page(s) built in 625ms
-00:06:31 [build] Complete!
+00:12:45 [build] ✓ Completed in 299ms.
+00:12:45 [build] 16 page(s) built in 643ms
+00:12:45 [build] Complete!
 
 > optimalisering-oslo-v3-3@0.1.0 qa:static
 > node scripts/audit-build.mjs && node scripts/audit-h007.mjs

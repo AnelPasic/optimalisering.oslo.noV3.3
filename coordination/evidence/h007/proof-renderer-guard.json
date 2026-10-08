@@ -1,8 +1,8 @@
 {
-  "checkedAt": "2026-10-08T21:55:05.385Z",
+  "checkedAt": "2026-10-08T22:12:38.040Z",
   "sectionApprovalTemporarilyEnabled": true,
   "attemptedEnvironmentOverride": "PUBLISH_PROOF=true",
-  "importedCaseStatuses": "EVIDENCE_ONLY / NEEDS_PERMISSION / publicationApproved=false",
+  "importedCaseStatuses": "EVIDENCE_ONLY / READY_FOR_STRATEGY_REVIEW / namingPermission=GRANTED / publicationApproved=false",
   "syntheticCasesWritten": 0,
   "proofSectionRendered": false,
   "privateCaseNamesRendered": false,

@@ -11,8 +11,10 @@
   "intervention": null,
   "source": "coordination/H007-COMMERCIAL-INPUT.md; prior separate registry NYSTA-PROOF-REGISTRY-v2.md; documented Shopify data and Vipps/CRO periods.",
   "limitations": null,
-  "namingPermission": "NEEDS_PERMISSION",
-  "permissionEvidence": null,
+  "namingPermission": "GRANTED",
+  "permissionEvidence": "main 2090639; coordination/DECISIONS.md D-023; coordination/H007-COMMERCIAL-INPUT.md; OWNER confirmation in ChatGPT, 2026-10-08, grants customer-name/case publication permission.",
+  "strategyReviewStatus": "READY_FOR_STRATEGY_REVIEW",
+  "strategyReviewEvidence": null,
   "artifactStatus": "NOT_IMPORTED",
   "artifactReferences": [],
   "evidenceMetrics": [

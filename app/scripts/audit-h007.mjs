@@ -27,7 +27,7 @@ function scan(directory) {
       const visibleContent = normalizeProofText(raw.replace(/<[^>]+>/g, ' ').replace(/\\(?:n|r|t|u00a0|u0020)/gi, ' '));
       for (const content of [rawContent, visibleContent]) {
         for (const name of hiddenNames) assert.ok(!content.includes(name), `${path}: private case identity not exported`);
-        assert.ok(!/evidence_only|needs_permission|nysta-proof-registry|synthetic fixture/.test(content), `${path}: no evidence registry or test fixture in static output`);
+        assert.ok(!/evidence_only|needs_permission|ready_for_strategy_review|nysta-proof-registry|synthetic fixture/.test(content), `${path}: no evidence registry or test fixture in static output`);
       }
       filesChecked++;
     }

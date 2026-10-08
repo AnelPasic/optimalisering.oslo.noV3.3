@@ -1,7 +1,7 @@
 {
   "base": "http://127.0.0.1:4321",
   "sourceBaseline": "7b98ff8184e7a8063682877b1edfcff3d4941f20",
-  "checkedAt": "2026-10-08T22:06:45.468Z",
+  "checkedAt": "2026-10-08T22:13:50.042Z",
   "browser": "154.0.8037.98",
   "cmsFieldCount": 229,
   "checks": [

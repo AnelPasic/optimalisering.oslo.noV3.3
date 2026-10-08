@@ -203,9 +203,19 @@ content:
         type: select
         default: NEEDS_PERMISSION
         options:
-          values: [NEEDS_PERMISSION, NAME_APPROVED, ANONYMIZED_APPROVED]
+          values: [NEEDS_PERMISSION, GRANTED, NAME_APPROVED, ANONYMIZED_APPROVED]
       - name: permissionEvidence
         label: Dokumentasjon på faktisk publiseringstillatelse
+        type: text
+      - name: strategyReviewStatus
+        label: STRATEGY_CONTENT-review
+        description: GRANTED tillatelse erstatter ikke review av den konkrete offentlige presentasjonen.
+        type: select
+        default: READY_FOR_STRATEGY_REVIEW
+        options:
+          values: [READY_FOR_STRATEGY_REVIEW, CONTENT_LOCKED]
+      - name: strategyReviewEvidence
+        label: Kilde/revisjon for konkret STRATEGY_CONTENT-lock
         type: text
       - name: artifactStatus
         label: Skjermbilde- og kildeartefaktstatus
