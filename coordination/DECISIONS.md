@@ -39,7 +39,7 @@ OWNER subsequently explicitly applies `#320c43` also to the homepage footer. Thi
 
 | ID | State / proposed owner | Choice and limit |
 | --- | --- | --- |
-| P-001 | INFERRED EXCEPT D-010 / STRATEGY_CONTENT + OWNER where material | Remaining 14-page copy, shared CTA/UI wording, article reasoning, price-by-agreement presentation and utility/legal drafts remain `DRAFT / NON-AUTHORITATIVE`. Homepage JSON alone is locked under D-010. Seed copy is expressly not production-locked by reuse. |
+| P-001 | INFERRED EXCEPT D-010 / STRATEGY_CONTENT + OWNER where material | Remaining 14-page copy, shared CTA/UI wording, article reasoning, price-by-agreement presentation and utility/legal drafts remain `DRAFT / NON-AUTHORITATIVE`. D-010 locks its historical homepage revision; H-004-generated replacement wording remains draft pending its own actual lock. Seed copy is expressly not production-locked by reuse. |
 | P-002 | IMPLEMENTATION TRANSLATION UNDER D-012 / OWNER REVIEW PENDING | New homepage teal/plum/mint/lavender surfaces, type execution, geometry, original find/choose illustration and equal 10/20 teaching panels are implementation choices translating the OWNER-selected Invite DNA. Font roles are explicit under D-012; the resulting whole is not accepted. Original cream/forest execution remains on the other 14 frozen pages. |
 | P-003 | PROPOSED / OWNER | Use complete homepage `/` as the representative design page; `/vurdering/` only supports functional form review. No final representative-page acceptance yet. |
 | P-004 | PROVISIONAL TECHNICAL CHOICE / operations + IMPLEMENTATION | Reusable Node API + SQLite satisfies interim local-storage preview. Persistent host/shared-system migration/HTTPS/proxy operations remain unresolved; no approved production hosting commitment. |
@@ -52,3 +52,7 @@ D-010 remains historical evidence of the first complete homepage content/CRO loc
 Use: decision ID; date; actual author/review role; source commit and exact files/revision; decision and scope; evidence/verdict; remaining dependencies; superseded IDs if any. Require genuine role input before changing a draft authority/status. Record corresponding implementation scope in `CHATGPT-TO-CODEX.md` and update `REVIEW-QUEUE.md`.
 
 Content lock, material offer approval, representative visual acceptance, independent RED_TEAM verdict and launch authorization are distinct. A lock covers only its named material. Do not promote the remaining 14 pages or legal/shared wording outside an accepted scope. No new approval is supplied by this recording template.
+
+## D-014 implementation receipt (no new approval)
+
+2026-10-08, IMPLEMENTATION: H-004 at handoff `d0e5a30` is implemented at `caa88817152b23f5c67fabe8a328ed868ea7c9cb`. D-014 supplies the revised direction/exact required phrases, while newly generated homepage content is REVIEW_REQUIRED / DRAFT / NON-AUTHORITATIVE. No new content lock, commercial terms, proof approval, OWNER acceptance, independent RED_TEAM verdict or launch permission is recorded. R-03/R-04 remain pending; future work requires the corresponding genuine review and scoped handoff. See CODEX-TO-CHATGPT and its Git revision for final repository/Worker delivery evidence.

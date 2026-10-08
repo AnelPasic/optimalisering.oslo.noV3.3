@@ -1,12 +1,14 @@
 # ChatGPT to Codex
 
-## Active handoff — H-004
+## Completed handoff — H-004 / awaiting OWNER and RED_TEAM review
 
 **Date:** 2026-10-08  
 **Authority:** OWNER EXPLICIT + STRATEGY_CONTENT / CRO  
 **Decision:** D-014  
 **Scope:** representative homepage only  
 **Deployment context:** current review Worker is connected to `main`; review publication is allowed, but this is still not production launch/intake authorization.
+
+**Implementation status:** COMPLETE at `caa88817152b23f5c67fabe8a328ed868ea7c9cb`, consuming handoff `d0e5a30`. Coordination/repository delivery follows that source/evidence commit; see `CODEX-TO-CHATGPT.md` and its Git history for the final delivery revision and Worker verification. H-004 supplies no OWNER acceptance or independent RED_TEAM verdict. No further implementation handoff is active; stop for R-03/R-04.
 
 ### Objective
 
@@ -284,7 +286,7 @@ H-001 through H-003 remain in Git history. D-014 explicitly supersedes conflicti
 
 ---
 
-## Active handoff — H-003 / OWNER review publication
+## Completed handoff — H-003 / OWNER review publication
 
 2026-10-08. Actual OWNER instruction in Codex: “publiser så vi kan ta noen runder”. IMPLEMENTATION records this request; it authorizes publishing the current review version for iterative OWNER inspection. Consume the existing `app/wrangler.jsonc` target `optimalisering-oslo-v33` from upstream `125d472`, reconcile upstream review records with local homepage work, validate, deploy static review assets and return a verified reachable URL. Keep `SITE_STAGE=preview`, noindex/robots restrictions and intake disabled. No content expansion, visual acceptance, production lead processing or custom-domain/DNS cutover is supplied. Preserve the repository coordination record and current homepage; record deployment revision/results in the outbound report. See D-013.
 

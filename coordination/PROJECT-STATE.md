@@ -2,17 +2,17 @@
 
 Updated: 2026-10-08. Owner: Medon AS. Implementation repository: AnelPasic/optimalisering.oslo.noV3.3.
 
-**State: D-014 / H-004 HOMEPAGE TASK-FIRST REVISION AUTHORIZED; R-03 REVISE; ALL OTHER PAGES FROZEN.** OWNER has explicitly reopened the representative homepage information architecture. The next iteration must simplify the page around clear need selection, a combined visibility/conversion calculator, package/pricing clarity, evidence, diagnosis, fit and a low-friction manual assessment. D-012 Invite-derived visual DNA and Instrument Sans/Figtree roles remain active; D-014 supersedes conflicting D-010 homepage wording/order. No prices, proof or terms may be invented.
+**State: H-004 IMPLEMENTATION COMPLETE AT `caa88817152b23f5c67fabe8a328ed868ea7c9cb`; STOPPED FOR OWNER R-03 / RED_TEAM R-04; ALL OTHER PAGES FROZEN.** D-014 task-first homepage IA is implemented with D-012 Invite palette/font roles. The current generated content is draft pending review; no numerical prices, proof or terms were invented. The delivery is to the connected review Worker through main, with preview/noindex and disabled intake. This is not representative acceptance, propagation or production authorization.
 
 Original exploratory implementation: `a98dbaefbb10a9039c9b025e5c3907e83f24de8b`, pushed to `origin/main` on 2026-10-08. The coordination/draft-label revision follows that commit; use this file's Git history for its exact SHA. A push permits repository inspection; it does not authorize publication or live processing.
 
-Review publication H-003 / D-013: [current V3.3 preview](https://optimalisering-oslo-v33.anel.workers.dev), Worker version `9c4f4691-8ac7-4515-be65-d9e99e04f2ba`. Live 1440/390/320px and all 15 routes are verified in `coordination/evidence/h003-publication/`. Static frontend only; noindex and intake-disabled state remain. See the latest outbound report for the exact delivery Git revision. This OWNER-requested web review is distinct from production launch or representative acceptance.
+Historical publication H-003 / D-013: [V3.3 review target](https://optimalisering-oslo-v33.anel.workers.dev), Worker version `9c4f4691-8ac7-4515-be65-d9e99e04f2ba`. Live 1440/390/320px and all 15 routes are verified in `coordination/evidence/h003-publication/`. Static frontend only; noindex and intake-disabled state remain. See the latest outbound report for the exact delivery Git revision. This OWNER-requested web review is distinct from production launch or representative acceptance.
 
 ## Implemented baseline
 
 - Astro static website under `app/`, with semantic JSON content, responsive shared templates, self-hosted Instrument Sans/Figtree, local SVG illustrations, metadata and internal links.
 - 15 exploratory content routes: `/`, `/synlighet/`, `/konvertering/`, `/priser/`, `/vurdering/`, `/om/`, `/kontakt/`, `/personvern/`, `/vilkar/`, `/seo/`, `/ai-synlighet/`, `/nettbutikkoptimalisering/`, `/innsikt/`, `/innsikt/hva-bor-optimaliseres-forst/`, `/innsikt/male-effekt-av-optimalisering/`. A technical 404 also exists. No later portfolio/case/city-grid expansion was implemented.
-- Homepage service hub, find/choose illustration, illustrative visits × conversion calculator, manual-check explanation/form, provider information and FAQ. These demonstrate an interpretation of the brief.
+- H-004 homepage: category-aware semantic H1 and paragraph display hook; immediate need selector; combined traffic/conversion calculator; explicit non-price package cards; no proof block; diagnosis/fit/manual check/provider/FAQ. Editable homepage-only header/footer/form keep the remaining pages unchanged.
 - Root `.pages.yml` points Pages CMS to `app/src/content/pages/`; it is configuration, not proof of an authenticated editor/account integration.
 - Interim Node HTTP API plus local server-side SQLite storage for enquiries, one `assessment_received` conversion and source tags. Idempotent submissions, separately retryable Resend notifications, input/origin/size checks and basic socket-IP rate limiting. Operational databases/secrets are ignored by Git.
 - Source tags travel through internal URLs and are sanitized at submission; no cookies, localStorage tracking or persistent visitor IDs. This is limited submission attribution, not a verified cross-session journey, lead-quality system or revenue pipeline.
@@ -21,16 +21,16 @@ Review publication H-003 / D-013: [current V3.3 preview](https://optimalisering-
 
 ## Copy authority: DRAFT / NON-AUTHORITATIVE
 
-There is **one scoped complete homepage content/CRO lock for the representative-page test**, received through H-001 / D-010. `app/src/content/pages/home.json` is `CONTENT_LOCKED` / `CONTENT_LOCKED / AUTHORITATIVE` at source commit `55c31b5`; IMPLEMENTATION preserved its exact content. This is not visual or launch approval. The other 14 page records remain `REVIEW_REQUIRED` / `DRAFT / NON-AUTHORITATIVE`, covering all their generated titles, SEO text, headings, paragraphs, examples, FAQs, items and CTAs. Reused seed wording is not locked by reuse.
+Historical H-001 / D-010 locked the reviewed homepage at `55c31b5`. H-004 / D-014 reopens conflicting wording/order and produces the new representative revision at `caa88817152b23f5c67fabe8a328ed868ea7c9cb`. Its generated wording is `REVIEW_REQUIRED` / `DRAFT / NON-AUTHORITATIVE`; the exact H-004 phrases/direction are consumed without claiming a fresh complete content lock. The other 14 records remain draft and frozen. Reused source facts constrain wording but do not approve it.
 
 `app/src/config/copy-authority.json` explicitly marks all shared/source-embedded customer-facing wording **DRAFT / NON-AUTHORITATIVE**, including the following inventory. Existing displayed wording is preserved; this is an authority correction, not a visual revision.
 
 | Source | Covered draft wording |
 | --- | --- |
-| `app/src/content/pages/*.json` except `home.json` | All remaining page content, SEO text, FAQs, pricing/scope explanations, privacy/terms drafts, insight articles and CTAs. Homepage JSON alone is authoritative for H-001's representative test under D-010. |
+| `app/src/content/pages/*.json` | All current records are draft. H-004 home JSON supplies meaningful homepage copy, including navigation/illustration/calculator/form/footer. D-010 is a lock of its historical revision only. |
 | `app/src/config/site.ts`, `app/src/components/Header.astro`, `Footer.astro`, `app/src/layouts/SiteLayout.astro` | Navigation, provider sentence, wordmark arrangement, preview labels, accessibility/link labels and shared footer text |
 | `HomePage.astro`, `HomeSection.astro`, `InnerPage.astro`, `AssessmentSection.astro`, `ContentSection.astro`, `Faq.astro` under `app/src/components/` | Template-written hero/support/breadcrumb/section/closing CTA text and all fallback/shared wording |
-| `Journey.astro`, `Leverage.astro`, `HomeJourney.astro`, `HomeLeverage.astro` under `app/src/components/` | Illustration labels, teaching/tool labels, illustrative values and explanatory caveats; H-002 preserves the existing wording and adds derived percentage displays only |
+| `Journey.astro`, `Leverage.astro`, `HomeJourney.astro`, `HomeLeverage.astro` under `app/src/components/` | Historical source-embedded labels remain draft. Current HomeJourney/HomeLeverage render the H-004 JSON; values are computed hypothetical examples, not proof |
 | `app/src/components/AssessmentForm.astro`, `app/src/lib/*.ts`, `app/server/*.mjs` | Form labels/options/helpers, validation/error/success text and generated customer-facing response/notification wording |
 | `app/src/pages/404.astro`, any other source-embedded public text | Error-page wording and all public text not otherwise listed |
 
@@ -54,7 +54,7 @@ Templates were applied across the portfolio before a representative full-page re
 
 ## Representative page and review boundary
 
-Representative page: **the complete homepage `/`**, using locked `app/src/content/pages/home.json`, `app/src/components/HomePage.astro`, homepage-only `HomeJourney.astro`, `HomeLeverage.astro`, `HomeSection.astro`, `HomeSymbol.astro` and `app/public/styles/home-invite.css`. `SiteLayout.astro` loads this stylesheet/body class only for the homepage. Shared `app/src/styles/global.css`, form and FAQ implementations remain intact. Review the entire page at desktop and mobile widths, including service hub, teaching/calculator, manual-check section, provider and footer. Fresh captures and historical comparisons are linked from `REVIEW-QUEUE.md`.
+Representative page: **the complete homepage `/`** at `caa88817152b23f5c67fabe8a328ed868ea7c9cb`, using revised `home.json`, `HomePage`, `HomeJourney`, `HomeLeverage`, `HomeSection`, and new homepage-only `HomeAssessment`, `HomeHeader`, `HomeFooter` plus `home-invite.css`. Shared SiteLayout/routing passes homepage data only; content.config imports the testable schema. Existing global CSS, inner templates and shared form/header/footer stay intact. Current full-page/hero-selector/calculator evidence is in `coordination/evidence/h004/`; review the whole running page where interaction matters.
 
 `/vurdering/` supports review of the form flow; it is not a second design-direction candidate. All other pages remain frozen. Homepage approval is scoped to the reviewed content/visual revision; each remaining page still needs appropriate content review before publication. Implementation revisions require a concrete inbound handoff.
 
@@ -66,7 +66,7 @@ OWNER's later R-03 REVISE replaces that limited visual scope for the homepage th
 
 | Dependency | Required role | Effect |
 | --- | --- | --- |
-| Shared/source-embedded wording and remaining page-specific content locks; consequential commercial choices outside reviewed homepage facts | STRATEGY_CONTENT; OWNER for material commercial decisions | Homepage JSON argument/CRO is COMPLETE under H-001/D-010. Other copy/decisions still block their affected publication scope; no expansion is authorized. |
+| Shared/source-embedded wording and remaining page-specific content locks; consequential commercial choices outside reviewed homepage facts | STRATEGY_CONTENT; OWNER for material commercial decisions | D-010 records historical completion; H-004-generated copy awaits its reviewed lock. Other copy/decisions still block their affected production scope; no expansion is authorized. |
 | Representative full-page desktop/mobile and material visible-brand acceptance | OWNER, informed by design/content and RED_TEAM | BLOCKS_CURRENT_GATE: visual direction and expansion |
 | Independent review of the exact representative revision and recorded verdict | RED_TEAM | BLOCKS_CURRENT_GATE: reviewed direction before scale |
 | Standard service inclusions/exclusions, public prices, onboarding economics, combination comparison, billing/commitment/cancellation and final terms | OWNER + STRATEGY_CONTENT | Blocks affected commercial locks and production; no invented prices/terms |
@@ -74,7 +74,7 @@ OWNER's later R-03 REVISE replaces that limited visual scope for the homepage th
 | Privacy purpose/lawful basis/controller contact, retention/deletion, access/backup operations, processor arrangements, locations/transfers, rights handling and justified stored fields | OWNER + STRATEGY_CONTENT with appropriate privacy review | Blocks finalized privacy copy and real lead/measurement processing; does not block offline draft inspection |
 | Resend account/key, verified sender/domain, recipient, synthetic live delivery and inbox receipt | OWNER / operations; IMPLEMENTATION verifies configured flow | Blocks live notification proof; no live send performed |
 | Persistent Node/SQLite host or approved shared backend, HTTPS/proxy/IP handling, spam controls, access/deletion/export/backup operations | OWNER / operations + IMPLEMENTATION | Blocks real intake; SQLite choice is provisional, not a hosting commitment |
-| Cloudflare native Git/account integration, protected preview, DNS/old URLs/redirects, rollback, Search Console and measurement operations, explicit launch authorization | OWNER / operations + IMPLEMENTATION | Blocks production cutover/launch; H-003 web review publication is complete |
+| Production Cloudflare/account controls, protected preview, DNS/old URLs/redirects, rollback, Search Console and measurement operations, explicit launch authorization | OWNER / operations + IMPLEMENTATION | Blocks production cutover/launch; H-003 web review publication is complete |
 
 ## Validation and approval limits
 
@@ -99,3 +99,7 @@ The homepage must now optimize for immediate comprehension by a Norwegian busine
 10. FAQ/footer.
 
 Customer language is **Bli funnet** and **Gjør flere besøk til henvendelser og salg**. Do not reuse “Så må de velge deg” as headline, illustration caption, aria label or substitute concept in the new homepage. Authority architecture must support SEO, AI visibility (AIO/GEO/AEO concepts consolidated rather than synonym-spam), Local SEO, CRO and campaign optimization over time, while keeping the homepage commercially simple.
+
+## H-004 current technical delivery
+
+Implementation/evidence `caa88817152b23f5c67fabe8a328ed868ea7c9cb` consumes `d0e5a30`. Astro check: 53 files, zero diagnostics; 24 tests; build; 449-link static audit; 40 browser regression checks; focused 1440/390/320px QA and production guard pass. CMS section/default constraints and rate-precision/overflow fixes have failing-before/passing-after regressions and a separate technical re-review. All 174 protected/frozen output inputs match the fresh baseline (144 reference files, 14 other JSON, 15 non-home HTML including 404, one shared CSS). Nine screenshots and receipts are in `evidence/h004/`. Authenticated CMS save and real intake/delivery remain unverified and unauthorized; the static review form is disabled. See the outbound report for final repository/Worker verification. Stop for R-03/R-04.
