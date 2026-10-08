@@ -2,7 +2,7 @@
 
 Updated: 2026-10-08. Owner: Medon AS. Implementation repository: AnelPasic/optimalisering.oslo.noV3.3.
 
-**State: H-006 IMPLEMENTED AT 7e69c079d57281d5126d2c94dbc3f1dfac90f265; STOP FOR OWNER R-03 AND FRESH FORMAL RED_TEAM R-04; ALL OTHER PAGES FROZEN.** D-018 visual polish preserves H-005B copy/IA, widens the shell, adds air and calmer hierarchy, and prepares a customer-photo composition. Final generated asset is not yet supplied. D-017 remains the genuine historical H-005B PASS, not approval of H-006. No further implementation handoff is active.
+**State: H-006 IMPLEMENTED; FORMAL RED_TEAM R-04 PASS UNDER D-019 WITH FINAL-PHOTO CAVEAT; OWNER R-03 + HERO PHOTO REVIEW PENDING; ALL OTHER PAGES FROZEN.** H-006 is accepted as the preferred representative spacing/layout direction. The neutral hero fallback is not a final visual and is excluded from the pass.
 
 Original exploratory implementation: `a98dbaefbb10a9039c9b025e5c3907e83f24de8b`, pushed to `origin/main` on 2026-10-08. The coordination/draft-label revision follows that commit; use this file's Git history for its exact SHA. A push permits repository inspection; it does not authorize publication or live processing.
 
