@@ -133,7 +133,7 @@ body.invite-homepage {
 .invite-home .faq-list summary { font-family: var(--body); font-size: 18px; padding-block: 24px; line-height: 1.5; }
 .invite-home .faq-list summary span { color: var(--green); }
 .invite-home .faq-list details p { font-family: var(--body); font-size: 16px; }
-.invite-homepage .site-footer { background: #302238; color: white; padding-top: 65px; }
+.invite-homepage .site-footer { background: #320c43; color: white; padding-top: 65px; }
 .invite-homepage .footer-grid { padding-bottom: 48px; }
 .invite-homepage .footer-brand { color: white; font-family: var(--heading); font-size: 26px; }
 .invite-homepage .footer-brand span { color: #a9e2cc; }

@@ -1,6 +1,10 @@
 # Codex to ChatGPT
 
-## Active delivery: H-002 OWNER color/position/Phosphor follow-up / COMPLETE
+## Active delivery: H-002 OWNER footer-color follow-up / COMPLETE
+
+2026-10-08, IMPLEMENTATION. OWNER explicitly requested `#320c43` also for `.invite-homepage .site-footer`. Baseline: `f4d6561`. Changed only that background declaration in `app/public/styles/home-invite.css`; rebuilt and refreshed full-page screenshots at the existing `evidence/r03-invite/home-{1440,390,320}.png` paths. Build and focused homepage QA passed; separate live computed-color checks confirmed `rgb(50, 12, 67)` at all three widths. Content and other-page styling remain intact. Code, evidence and this report are committed together; use this section's Git history for the exact resulting SHA. Local OWNER review checkpoint only; R-03/R-04 remain pending, with no push, propagation or deployment.
+
+## Previous delivery: H-002 OWNER color/position/Phosphor follow-up / COMPLETE
 
 Date: 2026-10-08. Role: IMPLEMENTATION. Explicit OWNER instruction: `.invite-home .leverage-section` background `#320c43`, move it directly below the hero; subsequent permission to use Phosphor icons. Baseline: `c18aa80f2373bf53cd3bda5fb6bc858411c5d684`. Code, refreshed evidence and this report are delivered together; use this section's latest Git commit for the exact resulting SHA, avoiding a self-referential hash.
 

@@ -22,6 +22,8 @@ OWNER's explicit 2026-10-08 follow-up to D-011 sets the teaching-section backgro
 
 The same follow-up includes OWNER permission to use Phosphor icons, applied to the homepage's explanatory/service symbols with regular-weight SVGs. This does not extend visual acceptance or authorize propagation.
 
+OWNER subsequently explicitly applies `#320c43` also to the homepage footer. This scoped color instruction remains under D-011/H-002; it does not approve the whole representative direction.
+
 ## Exploratory choices requiring review
 
 | ID | State / proposed owner | Choice and limit |

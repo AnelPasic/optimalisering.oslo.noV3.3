@@ -30,6 +30,8 @@ For each completed review, append date, actual reviewer/role, inspected SHA, sco
 
 ## Recorded handoff history
 
+- 2026-10-08: OWNER requested `.invite-homepage .site-footer` background `#320c43`. IMPLEMENTATION made this one homepage CSS change, rebuilt, refreshed full-page evidence and passed focused QA plus exact computed-color checks at 1440/390/320px. R-03 remains REVISE / ready for OWNER review. Exact delivery revision is this entry's Git commit.
+
 - 2026-10-08: OWNER explicitly requested teaching background `#320c43`, placement directly below the hero and permitted Phosphor icons. IMPLEMENTATION changed homepage CSS/render order and explanatory/service symbols, refreshed full-page/hero/teaching captures and passed Astro check/build/static audit plus focused 1440/390/320px QA and exact live color/order checks. No content rewrite or whole-page acceptance. Delivered code/evidence/report revision is identified by this entry's Git history.
 
 - 2026-10-08: STRATEGY_CONTENT / CRO completed R-01/R-02 for homepage JSON through H-001 / D-010 at `55c31b5`. Scope excludes visual acceptance, other pages, shared wording and launch.

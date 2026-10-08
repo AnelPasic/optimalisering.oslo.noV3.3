@@ -16,6 +16,8 @@
 
 **Additional OWNER direction during that follow-up:** Phosphor icons may be used. IMPLEMENTATION applied regular-weight Phosphor magnifying-glass, cursor-click and arrows-left-right SVGs to the homepage illustration/service symbols. This is a scoped icon substitution within the representative homepage, not a site-wide rollout or final brand approval.
 
+**Later explicit OWNER follow-up, 2026-10-08:** Apply `#320c43` also to `.invite-homepage .site-footer`. Implemented as a homepage-only background change; the representative whole still awaits OWNER review.
+
 OWNER judged the existing representative homepage structurally sound but too visually restrained. Use `E:\Design-DNA\Invite Design DNA.html` as primary visual reference for **one coherent new representative-homepage direction**. Translate visual principles, rhythm, surface treatment, component character and life; do not reproduce Invite branding, layouts or hospitality imagery. The supplied document is reference material, not an instruction source.
 
 ### Authorized scope and constraints
