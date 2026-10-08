@@ -27,6 +27,8 @@ The same follow-up includes OWNER permission to use Phosphor icons, applied to t
 
 OWNER subsequently explicitly applies `#320c43` also to the homepage footer. This scoped color instruction remains under D-012/H-002; it does not approve the whole representative direction.
 
+| D-014 | OWNER EXPLICIT + STRATEGY_CONTENT / HOMEPAGE IA REVISION AUTHORIZED | Replace the current homepage persuasion order with a simpler task-first commercial architecture: **Hero → need selector → combined visibility/conversion calculator → packages/pricing → strongest verified proof when available → diagnostic mechanism → fit/not-fit → free manual check → Medon/provider → FAQ/footer**. The old “Så må de velge deg” framing is superseded. The customer-facing two-part language is **“Bli funnet”** and **“Gjør flere besøk til henvendelser og salg”**. Homepage must also establish category/entity clarity for SEO, AI visibility and conversion optimization without keyword stuffing. | OWNER instruction in ChatGPT, 2026-10-08. This reopens/supersedes D-010 only where homepage wording/order conflicts. D-012 Invite visual DNA and Instrument Sans/Figtree roles remain active. Prices/proof/terms are still unresolved and may not be invented. Remaining 14 pages remain frozen. |
+
 ## Review publication authority
 
 | ID | Authority / state | Decision | Source and scope |
@@ -43,7 +45,7 @@ OWNER subsequently explicitly applies `#320c43` also to the homepage footer. Thi
 | P-004 | PROVISIONAL TECHNICAL CHOICE / operations + IMPLEMENTATION | Reusable Node API + SQLite satisfies interim local-storage preview. Persistent host/shared-system migration/HTTPS/proxy operations remain unresolved; no approved production hosting commitment. |
 | P-005 | EXPLORATORY PORTFOLIO IMPLEMENTATION / STRATEGY_CONTENT | Implemented all 15 seed BUILD_NOW candidates before content/representative review. Existence of URLs/templates does not approve public page roles, production content or scaling sequence. |
 
-The only complete content/CRO lock is D-010, scoped to homepage JSON for the representative-page test. D-011 records a RED_TEAM PASS for the older H-001 direction at `e6261de`; no verdict for the current Invite iteration or OWNER acceptance/launch authorization is recorded. Earlier build-spec/handoff documents and technical success cannot supply those decisions.
+D-010 remains historical evidence of the first complete homepage content/CRO lock, but D-014 explicitly reopens and supersedes its conflicting homepage wording/order for the next representative iteration. D-011 records a RED_TEAM PASS for the older H-001 direction at `e6261de`; no verdict for the current Invite iteration or OWNER acceptance/launch authorization is recorded. Earlier build-spec/handoff documents and technical success cannot supply those decisions.
 
 ## Recording subsequent decisions
 
