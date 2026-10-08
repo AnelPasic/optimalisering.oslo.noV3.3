@@ -76,7 +76,7 @@ body.invite-homepage {
 .invite-home .info-item .text-link { margin-top: auto; }
 .invite-home .home-item-1 { background: #efebf6; }
 .invite-home .home-section-flaskehals { background: white; }
-.invite-home .leverage-section { background: #302238; color: white; }
+.invite-home .leverage-section { background: #320c43; color: white; }
 .invite-home .leverage-grid { grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
 .invite-home .leverage-section .eyebrow, .invite-home .leverage-section .text-link { color: #a9e2cc; }
 .invite-home .leverage-copy h2 { font-size: clamp(40px, 3.8vw, 55px); }

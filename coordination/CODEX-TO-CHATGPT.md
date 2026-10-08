@@ -1,6 +1,14 @@
 # Codex to ChatGPT
 
-## Active delivery: H-002 / R-03 Invite revision / COMPLETE FOR IMPLEMENTATION
+## Active delivery: H-002 OWNER color/position/Phosphor follow-up / COMPLETE
+
+Date: 2026-10-08. Role: IMPLEMENTATION. Explicit OWNER instruction: `.invite-home .leverage-section` background `#320c43`, move it directly below the hero; subsequent permission to use Phosphor icons. Baseline: `c18aa80f2373bf53cd3bda5fb6bc858411c5d684`. Code, refreshed evidence and this report are delivered together; use this section's latest Git commit for the exact resulting SHA, avoiding a self-referential hash.
+
+Changed `app/public/styles/home-invite.css` (teaching background), `app/src/components/HomePage.astro` (render teaching once after the existing hero/support strip, before `flaskehals`) and `HomeSymbol.astro` (regular-weight Phosphor magnifying-glass, cursor-click and arrows-left-right). Added three official SVGs plus provenance README in `app/src/assets/phosphor/`, pinned to [upstream commit `2b75f3a`](https://github.com/phosphor-icons/core/tree/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular); original MIT notice ships in `app/public/licenses/phosphor-icons.txt`. Icons are inline, inherit color and are hidden from assistive technology alongside existing text labels. No runtime CDN/icon font or package dependency. All locked wording/JSON, remaining section order and other pages are preserved. Refreshed `coordination/evidence/r03-invite/home-{1440,390,320}.png`, `hero-{1440,390,320}.png` and `teaching-{1440,390,320}.png`. Coordination documents record the actual scoped follow-up without granting whole-page acceptance.
+
+Validation: Astro check (46 files, zero diagnostics), static build, audit of 454 internal links/anchors and existing focused `qa-home-invite.mjs` passed at 1440/390/320px, including exact locked content, font roles, calculator interaction, overflow, diagram labels and 320px menu. Separate read-only live checks confirmed computed `rgb(50, 12, 67)` / `#320c43` and teaching immediately after the complete hero at all three widths. The other 14 built pages/shared stylesheet remain byte-for-byte unchanged. No new tests or broad regression rerun were needed for this presentation-only scope. Intake remains disabled. This is a local checkpoint; implementation stops for OWNER review, with R-03 REVISE and R-04 pending. No push, propagation or deployment.
+
+## Previous delivery: H-002 / R-03 Invite revision / COMPLETE FOR IMPLEMENTATION
 
 Date: 2026-10-08. Role: IMPLEMENTATION. Actual incoming authority: OWNER's Codex message **“R-03 verdict: REVISE”**, recorded as H-002 / D-011. Implementation baseline: `4c577f9a11c9e212689771a0261154846b6e2f77`. **Resulting implementation/evidence commit: `e04ee10c84b7dc5289678699bb9cc28957dd07f1`.** This report follows that tested local checkpoint; use this file's Git history for its own coordination revision. Nothing in this report supplies an OWNER acceptance or independent RED_TEAM verdict.
 

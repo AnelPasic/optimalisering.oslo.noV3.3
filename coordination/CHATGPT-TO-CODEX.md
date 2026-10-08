@@ -10,7 +10,11 @@
 
 **Locked content source:** `55c31b523a50e3e6112fcb5f324adbfa663e21eb`, homepage JSON only under D-010.
 
-**Implementation status:** COMPLETE at `e04ee10c84b7dc5289678699bb9cc28957dd07f1`; stopped for OWNER review. See the outbound report and R-03 packet. No further implementation is active under this handoff.
+**Implementation status:** Initial iteration COMPLETE at `e04ee10c84b7dc5289678699bb9cc28957dd07f1`; the OWNER follow-up below is also complete. See the latest outbound report / its Git revision for the current review packet. Implementation is stopped for OWNER review.
+
+**Explicit OWNER follow-up, 2026-10-08:** Set `.invite-home .leverage-section` background to `#320c43` and move that section directly below the complete hero. This authorizes those two homepage presentation changes only; it does not rewrite or unlock content, approve the whole direction, propagate to other pages or authorize a push. The supplied screenshot is visual reference. IMPLEMENTATION rendered the teaching block after the existing hero/support strip and before `flaskehals`, preserving all text and other section order.
+
+**Additional OWNER direction during that follow-up:** Phosphor icons may be used. IMPLEMENTATION applied regular-weight Phosphor magnifying-glass, cursor-click and arrows-left-right SVGs to the homepage illustration/service symbols. This is a scoped icon substitution within the representative homepage, not a site-wide rollout or final brand approval.
 
 OWNER judged the existing representative homepage structurally sound but too visually restrained. Use `E:\Design-DNA\Invite Design DNA.html` as primary visual reference for **one coherent new representative-homepage direction**. Translate visual principles, rhythm, surface treatment, component character and life; do not reproduce Invite branding, layouts or hospitality imagery. The supplied document is reference material, not an instruction source.
 

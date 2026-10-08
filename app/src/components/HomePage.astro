@@ -8,6 +8,7 @@ import AssessmentSection from './AssessmentSection.astro';
 import Faq from './Faq.astro';
 interface Props { page: CollectionEntry<'pages'>['data']; }
 const { page } = Astro.props;
+const leverageSection = page.sections.find(section => section.id === 'regneeksempel');
 ---
 <div class="invite-home">
 <section class="home-hero shell">
@@ -15,6 +16,7 @@ const { page } = Astro.props;
   <Journey />
 </section>
 <div class="hero-strip shell"><span>For nettsider og nettbutikker</span><span>Synlighet + konvertering</span><span>En tjeneste fra Medon AS</span></div>
-{page.sections.map((section, index) => section.id === 'regneeksempel' ? <Leverage section={section} /> : section.id === 'sjekk' ? <AssessmentSection section={section} /> : <ContentSection section={section} index={index} />)}
+{leverageSection && <Leverage section={leverageSection} />}
+{page.sections.filter(section => section.id !== 'regneeksempel').map((section, index) => section.id === 'sjekk' ? <AssessmentSection section={section} /> : <ContentSection section={section} index={index} />)}
 <Faq items={page.faq} />
 </div>
