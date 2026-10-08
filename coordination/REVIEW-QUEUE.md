@@ -1,6 +1,6 @@
 # Review queue
 
-State: H-007 IMPLEMENTATION COMPLETE / STRATEGY_CONTENT REVIEW PENDING; OWNER R-03 PASS UNDER D-021; NO REMAINING-PAGE PROPAGATION.
+State: H-007 STRATEGY_CONTENT COMMERCIAL PASS / H-008 /PRISER/ CONTROLLED PROPAGATION AUTHORIZED / PROOF PUBLICATION STILL BLOCKED BY MISSING CASE FACTS.
 
 | Order / ID | Scope | Responsible role | State / completion evidence |
 | --- | --- | --- | --- |
@@ -8,8 +8,8 @@ State: H-007 IMPLEMENTATION COMPLETE / STRATEGY_CONTENT REVIEW PENDING; OWNER R-
 | 2 / R-02 | Homepage heading-only story, section/persuasion sequence, proof placement, service routing and form role | STRATEGY_CONTENT / CRO review | **PASS / COMPLETE.** Reviewed as one whole argument. Historical locked source is `55c31b5` under D-010; D-014 reopens conflicting copy/order. No new complete content/CRO verdict is inferred. |
 | 3 / R-03 | Complete representative homepage `/`, spacing/composition, photo-led hero direction and desktop/mobile usability | OWNER, informed by DESIGN/STRATEGY_CONTENT | **PASS / COMPLETE under D-021.** Current H-006-derived visual/IA baseline, including owner color/selector tweaks, is accepted for continued commercial/content work. Cosmetic refinements may happen later without reopening the representative gate. |
 | 4 / R-04 | Independent commercial/content/visual review of the exact representative revision | RED_TEAM | **PASS / COMPLETE for H-006 under D-019 + selected-photo review under D-020.** Layout/spacing/IA pass; selected hero photo also passes authenticity/tone/crop/proof-implication review. Positioning caveat: boutique/e-commerce setting slightly narrows cross-industry perception. |
-| 5 / R-05 | H-007 commercial/content layer and proof/CMS handback | STRATEGY_CONTENT; OWNER for any new material decisions | **IMPLEMENTATION COMPLETE / REVIEW PENDING.** Review fdcdaf84020ae4ecf8446806329b74cb3e4320d2 and the live receipt in CODEX-TO-CHATGPT. Exact D-022 facts are implemented; generated connective copy/full-home authority remains draft; D-023 cases remain hidden. Do not scale remaining draft pages. |
-| Later / R-06 | Remaining 14 page-specific content locks, page-role/search evidence, prices/scope/proof/contact/legal terms | STRATEGY_CONTENT + OWNER where material | DEFERRED. Preserve current drafts. Homepage acceptance does not approve these pages. |
+| 5 / R-05 | H-007 commercial/content review | STRATEGY_CONTENT | **PASS / COMPLETE under D-024 after direct copy refinements.** Exact homepage commercial fields and pricing-page support copy are locked at the commits named in D-024. Proof publication is explicitly excluded. |
+| 6 / R-06 | First controlled propagation: `/priser/` visual + commercial consistency | STRATEGY_CONTENT + OWNER; IMPLEMENTATION receives | **OPEN / H-008 AUTHORIZED under D-026.** Reuse the accepted homepage visual system and a single package data source. Other 13 non-home pages remain frozen. |
 | Later / R-07 | Privacy/processing operations, Resend delivery, persistent backend, CMS/Cloudflare/DNS/redirects, measurement/Search Console, final launch QA/authorization | OWNER / operations + IMPLEMENTATION + RED_TEAM | DEFERRED / BLOCKS LIVE USE (C-05, C-06). H-003 authorizes static web review only; no real intake or production launch is authorized. |
 
 ## Current review packet — H-007 / STRATEGY_CONTENT
@@ -133,3 +133,5 @@ For each completed review, append date, actual reviewer/role, inspected SHA, sco
 - 2026-10-08: RED_TEAM completed the separate D-019 hero-photo review on `dc045748`: PASS under D-020. The image is plausible, calm and commercially positive, crops cleanly and does not imply real client proof. Caveat: boutique/e-commerce cues narrow the perceived audience slightly versus a neutral office/service-business image.
 
 - 2026-10-08: OWNER explicitly accepted the representative direction as a working baseline and authorized moving on. Prior V3 pricing is reconfirmed under D-022. Proof data from the separate Medon case work is imported as evidence-only under D-023; no named case is public without permission.
+
+- 2026-10-09: STRATEGY_CONTENT completed H-007 commercial review. Generated H-007 package copy was too implementation-centric, so customer-facing fit/scope, package intro, cost notes, free-check wording and pricing FAQ were refined directly in content. D-024 locks those exact commercial fields. D-025 prioritizes Oslo Privatklinikk for homepage proof and Nysta for ecommerce/conversion, but neither may render until missing proof facts are supplied and exact public wording is locked. H-008 now receives /priser/ only.
