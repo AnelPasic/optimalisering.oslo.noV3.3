@@ -1,5 +1,182 @@
 # ChatGPT to Codex
 
+## Active handoff — H-008
+
+**Date:** 2026-10-09  
+**Authority:** STRATEGY_CONTENT D-024 + OWNER/STRATEGY_CONTENT D-026  
+**Proof direction:** D-025  
+**Scope:** render locked commercial copy + controlled propagation to `/priser/` only
+
+### Objective
+
+H-007 is commercially accepted after STRATEGY_CONTENT refined the content layer directly.
+
+Do not rewrite that copy.
+
+Now make `/priser/` the first controlled propagation page using the accepted H-006 homepage visual system and one package source of truth.
+
+### Authoritative content revisions
+
+Preserve exactly:
+
+- homepage commercial content from commit `10c5890b2e4d678340384dd399a1785e3e01ba36`
+- pricing-page supporting copy from commit `a37bf7a9067f18f4eafd59e2efd753240aecc96c`
+
+If main has advanced, consume the current bytes of those files; do not restore older H-007 generated wording.
+
+### 1. Homepage
+
+Render the current locked commercial wording exactly.
+
+Do not change:
+- hero;
+- selector;
+- calculator;
+- package wording/prices;
+- free-check wording;
+- related FAQ wording;
+- selected hero image;
+- current owner color tweaks;
+- section order.
+
+Component refactoring for shared package rendering is allowed only if rendered homepage output remains materially identical.
+
+### 2. One package source of truth
+
+Homepage and `/priser/` must not contain independently maintained package numbers/rules.
+
+Preferred implementation:
+- factor the package rendering into a reusable component;
+- use one content source for package names, prices, descriptors, fit/scope, recommendation state, work areas and shared cost notes;
+- keep that source editable through Pages CMS.
+
+Do not duplicate 4 500 / 6 900 / 14 900 in a second editable content object if avoidable.
+
+If the least-risk implementation is for `/priser/` to consume the homepage package object, that is acceptable for this phase. Do not perform a broad content migration merely for architectural purity.
+
+### 3. /priser/ visual propagation
+
+Apply the accepted representative visual language to `/priser/`:
+- Instrument Sans headings/major price figures;
+- Figtree body/UI;
+- max 1440px shell with narrower readable measures;
+- current plum/teal/mint/lavender family;
+- Storebrand-like air and clear task hierarchy;
+- current header/footer direction;
+- restrained open sections rather than a wall of cards.
+
+Do not invent a second design direction.
+
+### 4. /priser/ information order
+
+The pricing page should be immediately useful to a buyer:
+
+1. concise pricing hero using the locked `priser.json` title/intro;
+2. the same three packages and prices used on the homepage;
+3. work areas / what can be optimized;
+4. what is additional / separately priced;
+5. free-check section with the 3-findings / 2-business-days promise;
+6. pricing FAQ;
+7. footer.
+
+Do not add filler sections.
+
+### 5. Package rendering
+
+Use the exact locked commercial facts:
+
+- Optimalisering — 4 500 kr/mnd eks. mva.
+- Vekst — 6 900 kr/mnd eks. mva. — Anbefalt
+- Partner — 14 900 kr/mnd eks. mva.
+- no Sprint
+- ad budget additional
+- external tools/platform costs additional when necessary and not agreed included
+- smaller work/adjustments on existing landing pages may fit agreed scope
+- larger new landing pages, websites, substantial technical work and redesign are separately priced
+- monthly capacity does not roll forward
+
+Do not expose internal hour guardrails.
+
+Do not invent binding, cancellation, minimum term, setup fee or invoice terms.
+
+### 6. Proof
+
+Do not publish proof in H-008.
+
+D-025 sets future order only:
+1. Oslo Privatklinikk = preferred homepage proof candidate
+2. Nysta = preferred ecommerce/conversion supporting case
+
+Both remain blocked because current imported records still lack required intervention, attribution/limitations wording and confirmed comparable periods.
+
+Do not set:
+- strategyReviewStatus=CONTENT_LOCKED
+- publicationStatus=PUBLISHABLE
+- publicationApproved=true
+
+Do not weaken renderer guards.
+
+### 7. Pages CMS
+
+Ensure the shared package source remains straightforward to edit.
+
+If fields move as part of the one-source-of-truth refactor:
+- preserve values exactly;
+- update `.pages.yml`;
+- preserve hero/selector/calculator/form/proof editing;
+- document the new location clearly.
+
+Authenticated live CMS testing remains a manual owner/editor action and is not a reason to block implementation.
+
+### 8. Frozen scope
+
+Do not redesign or rewrite:
+- /synlighet/
+- /konvertering/
+- /seo/
+- /ai-synlighet/
+- /nettbutikkoptimalisering/
+- /vurdering/
+- /om/
+- /kontakt/
+- /personvern/
+- /vilkar/
+- /innsikt/ or its articles
+- any other non-home/non-pricing page
+- backend/intake
+- /system/
+- /project/
+
+### Acceptance criteria
+
+1. Homepage still renders the exact D-024 commercial copy.
+2. /priser/ renders the exact package ladder and locked supporting copy.
+3. Homepage and /priser/ use one package content source.
+4. /priser/ visually belongs to the accepted H-006 system.
+5. Vekst is clearly but tastefully recommended.
+6. No Sprint or invented terms appear.
+7. Ad-budget/external-cost/separate-work rules remain visible and understandable.
+8. Free check clearly states 3 findings within 2 business days.
+9. Proof remains completely non-public.
+10. Remaining 13 non-home pages and protected inputs remain unchanged.
+11. 1440 / 390 / 320 responsive QA passes for both homepage and /priser/.
+
+### Evidence / delivery
+
+- Run full verify/tests/browser checks.
+- Add regression test proving homepage/pricing package data cannot drift.
+- Capture /priser/ full page at 1440 and 390.
+- Capture package block at 1440 and 390.
+- Recheck homepage at 1440 and 390 after any component/content refactor.
+- Push to `main` and verify the review Worker.
+- Update coordination state/report/evidence.
+- Stop for STRATEGY_CONTENT review of `/priser/`.
+
+Do not continue to service-page propagation without the next handoff.
+
+
+---
+
 ## Completed handoff — H-007
 
 **IMPLEMENTATION receipt, 2026-10-09:** consumed incoming main 7b98ff8184e7a8063682877b1edfcff3d4941f20; implementation/evidence fdcdaf84020ae4ecf8446806329b74cb3e4320d2. Exact ladder, free-check promise, evidence-only guarded registry and CMS fields delivered. Final verification and responsive/preservation checks pass. Main/review Worker receipt is maintained in CODEX-TO-CHATGPT.md. Stop for STRATEGY_CONTENT review; no further implementation handoff is active. The original authorized scope below is retained.
