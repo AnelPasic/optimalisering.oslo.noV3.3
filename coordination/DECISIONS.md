@@ -31,6 +31,8 @@ OWNER subsequently explicitly applies `#320c43` also to the homepage footer. Thi
 
 | D-015 | OWNER EXPLICIT + STRATEGY_CONTENT / HERO SIMPLIFICATION AUTHORIZED | H-004 is directionally good, but the hero is too dense. Simplify by subtraction: remove the separate small SEO/category H1 layer, make **“Bli funnet. Gjør flere besøk til henvendelser og salg.”** the actual semantic H1, keep one eyebrow, one short support paragraph and the two CTAs **“Ta en gratis sjekk”** / **“Se priser”**. Remove the hero note and remove the large hero illustration. Tighten the three need-selector descriptions. Keep the rest of H-004 unchanged. | OWNER instruction in ChatGPT, 2026-10-08. This supersedes D-014 only for hero hierarchy/illustration and selector copy length. SEO/AIO authority remains supported through title/meta, body copy, internal architecture and dedicated pages; do not keyword-stuff the hero. |
 
+| D-016 | OWNER EXPLICIT / H-005 VISUAL ADJUSTMENT | Keep the H-005 hero simplification, but do **not** leave the hero visually empty. Replace the current explanatory/repetitive hero illustration with one calmer, realistic-ish, outcome-oriented visual that suggests improved visibility, a clearer path to enquiry/purchase, and better commercial outcome. The visual must support rather than repeat the H1. No stock-photo cliché, fake proof, cluttered analytics dashboard or decorative abstraction. | OWNER instruction in ChatGPT, 2026-10-08. Supersedes only H-005's “no hero illustration” clause. All other D-015 simplification constraints remain active. |
+
 ## Review publication authority
 
 | ID | Authority / state | Decision | Source and scope |
