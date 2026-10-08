@@ -1,6 +1,6 @@
 # Decisions and authority
 
-Updated: 2026-10-08. This register separates explicit authority from exploratory implementation choices. Record meaningful decisions with source, reviewed revision and scope; do not make individual copy/spacing choices permanent owner gates.
+Updated: 2026-10-09. This register separates explicit authority from exploratory implementation choices. Record meaningful decisions with source, reviewed revision and scope; do not make individual copy/spacing choices permanent owner gates.
 
 Decision-ID reconciliation on integrating `125d472`: upstream D-011 records RED_TEAM review of H-001. The independently recorded local OWNER Invite direction formerly called D-011 is now D-012. Both actual inputs and their source histories are retained; the older RED_TEAM verdict does not approve the new visual iteration.
 
@@ -61,7 +61,11 @@ OWNER subsequently explicitly applies `#320c43` also to the homepage footer. Thi
 | P-004 | PROVISIONAL TECHNICAL CHOICE / operations + IMPLEMENTATION | Reusable Node API + SQLite satisfies interim local-storage preview. Persistent host/shared-system migration/HTTPS/proxy operations remain unresolved; no approved production hosting commitment. |
 | P-005 | EXPLORATORY PORTFOLIO IMPLEMENTATION / STRATEGY_CONTENT | Implemented all 15 seed BUILD_NOW candidates before content/representative review. Existence of URLs/templates does not approve public page roles, production content or scaling sequence. |
 
-D-010 remains historical evidence of the first complete homepage content/CRO lock, but D-014 reopens conflicting homepage wording/order. D-011 and D-017 record the older H-001/H-005B representative verdicts. D-019 supplies the genuine H-006 layout/spacing/IA PASS at 7e69c07; D-020 supplies the separate selected-photo PASS at dc04574 with a positioning caveat. Incoming main df6d523 contains that genuine photo return. Preserve both exact review scopes. OWNER R-03 remains pending; no whole-page acceptance or launch authorization is recorded. Technical success cannot supply those decisions.
+D-010 remains historical evidence of the first complete homepage content/CRO lock, but D-014 reopens conflicting homepage wording/order. D-011 and D-017 record the older H-001/H-005B representative verdicts. D-019 supplies the genuine H-006 layout/spacing/IA PASS at 7e69c07; D-020 supplies the separate selected-photo PASS at dc04574 with a positioning caveat. D-021 subsequently records OWNER R-03 acceptance of the working visual/IA baseline, including the owner selector changes. D-022 locks only the supplied commercial facts; D-023 authorizes evidence-only import. Full generated homepage content, case publication, remaining pages and launch remain separate gates. Technical success supplies no new role decisions.
+
+## D-021 / D-022 / D-023 implementation receipt (no new approval)
+
+2026-10-09, IMPLEMENTATION: H-007 at incoming main 7b98ff8184e7a8063682877b1edfcff3d4941f20 is implemented at acda06ab880a4dbc43af43bf1903cf674c3446f4. The accepted representative baseline is preserved; supplied Optimalisering/Vekst/Partner names, 4 500/6 900/14 900 kr/mnd eks. mva., Vekst recommendation, descriptors, scope/cost/capacity facts and exact free-check promise are content-driven. Two contradictory FAQ answers are reconciled with those facts. Generated connective wording and full-home authority remain draft/review-required. Nysta and Oslo Privatklinikk preserve the supplied evidence and remain EVIDENCE_ONLY / NEEDS_PERMISSION / unapproved, with a fail-closed renderer and private public-field projection. CMS exposes the commercial and proof controls; authenticated operation remains untested. Final verify (34 tests), 40 browser checks, focused 1440/390/320 and 174-file preservation pass. Exact source/live receipts are in CODEX-TO-CHATGPT and evidence/h007. Stop for STRATEGY_CONTENT. No new content lock, proof publication, formal RED_TEAM verdict, page propagation or launch authorization is inferred.
 
 ## Recording subsequent decisions
 
