@@ -80,3 +80,37 @@ Do not infer visual approval from this handoff.
 ## Previous handoff history
 
 The previous coordination-recovery handoff is complete and represented by commit `9143d24bb9caa064dbbb56fed9339284055e63d3`. Git history remains the authoritative record for that delivery.
+
+
+## RED_TEAM return — R-04 COMPLETE
+
+**Date:** 2026-10-08  
+**Role:** RED_TEAM  
+**Reviewed implementation:** `e6261de18ed4a7b1877dbf06a450d1b23a980e6e`  
+**Locked content:** `55c31b523a50e3e6112fcb5f324adbfa663e21eb`
+
+**Verdict:** PASS for the representative direction; NOT production approval.
+
+### Findings
+
+- The find → choose commercial model is understandable and aligns with the project brief.
+- The 1% → 2% section now teaches the leverage directly instead of hiding it behind abstract wording.
+- The bounded manual assessment remains visible and commercially coherent.
+- No historical prices, fabricated proof, guaranteed uplift, ranking promises or AI-placement promises were introduced.
+- IMPLEMENTATION respected scope: only grouped-number wrapping changed in the rendered homepage; the visual system was not silently redesigned.
+- H-001 evidence reports clean 1440/390/320 responsive checks and no horizontal overflow.
+- The current visual direction is sufficiently coherent to continue testing rather than restart.
+
+### Production caveats — DO NOT silently solve
+
+- No quantitative/client proof is currently publication-ready.
+- Public pricing, standard inclusions/exclusions and contract economics remain unresolved.
+- Shared/source-embedded form/footer/illustration/legal wording remains DRAFT / NON-AUTHORITATIVE unless separately locked.
+- Privacy, retention, Resend/persistent backend and production lead-processing operations remain unresolved.
+- This RED_TEAM PASS does not substitute for OWNER visual acceptance.
+
+### NEXT RECEIVER
+
+OWNER for R-03 only.
+
+If OWNER accepts the representative homepage direction, record that exact scope in `DECISIONS.md` and create a new scoped handoff for controlled scale-out. If OWNER rejects part of the direction, return a bounded diagnosis/change direction rather than a broad redesign.
