@@ -1,6 +1,6 @@
 # ChatGPT to Codex
 
-## Active handoff — H-015
+## Completed handoff — H-015
 
 Date: 2026-10-09
 Authority: OWNER + STRATEGY_CONTENT D-050–D-052
@@ -29,6 +29,17 @@ Preserve:
 - shared CMS source.
 
 Push to main, verify Worker, update coordination/evidence, and STOP for OWNER + STRATEGY_CONTENT visual review.
+
+
+### OWNER visual-reference followup / implementation receipt (no new approval)
+
+2026-10-09, IMPLEMENTATION: Incoming **041be18218543f89c0e69f3031165b31b42ea110**, implementation/local evidence **d2ab35bb4df7385a2ef31cebf99760f72ec8160f**. D-050–D-052 / exact H015-PRICING-VISUAL-POLISH.md authorize visual-strip polish only. OWNER's actual subsequent message “bruk heller dette som grunnlag” supplies the preserved original reference at evidence/h015/owner-reference.png. Local reusable SVG motifs use its fading green/blue/teal curves, filled arrowheads, soft mint wash and compact mint HTML callouts; no whole-card artwork or reference copy/CTA/claims is imported. Optimalisering retains one controlled moderate path and Én spak / Tydelig fremgang; Vekst has two short reinforcing inputs merging into one dominant accelerating path and To grep / Forsterker hverandre; Partner has three coordinated rising tracks and Flere kundereiser / Prioriteres løpende. The exact H-015 optional captions are editable alongside independent visualAsset fields in the existing shared home package source; assets still replace both motif and caption, with alt/crop/contain/cover and missing-file fallback preserved.
+
+All six default heights are exactly H-014: pricing 1440 **770 / 770 / 770px**, 390 **758.89 / 813.39 / 721.89px**, 320 **809.25 / 840.56 / 863.75px**; home 1440 **482 / 488.38 / 482px**, 390 **482 / 516.38 / 482px**, 320 **521.17 / 521.17 / 521.17px**. Every card HTML element/style/geometry outside the visual interiors is unchanged. Existing copy/prices/VAT/Partner fra/Vekst Anbefalt, plum recommendation, icons, short/long details, decision/multiplier, six direct CTAs and one disabled order form remain. H-013 order component/payload/backend are unchanged.
+
+Fresh full verify: **117 files / zero diagnostics, 50 tests, 447 links**; **40** whole-site synthetic browser checks; four accepted routes at 1440/390/320; **187 frozen hashes / 114 retained snapshots / 21 captures**. Home/pricing graphics/captions also fit at 1201/1200/1180/1101/1100/1024/901/900/768/651/650, fourteen widths total; independent review's tablet-caption finding is corrected inside the visual strip and rechecked. Real source/CMS-caption/missing/supplied SVG-PNG fixture, full verification with supplied assets and final restored-source verification pass. All local SVG gradient references resolve uniquely. Native detail/multiplier keyboard/no-JS reading, no default/expanded overflow, all query/home/pricing CTA/manual/history/invalid selection and disabled/programmatic/no-JS submit/no false acknowledgment pass. Fresh independent technical review has no unresolved issue and supplies no formal role verdict. Zero review POST/real orders/live email. Other page JSON/status/authority, home outside packages, service HTML/styles/copy/chrome/fit/proof, all backend and system/project are preserved. CMS authenticated save remains manual/unproven; separate service art, any later external package-art integration and real-order/launch dependencies retain their actual gates. **STOP for OWNER + STRATEGY_CONTENT H-015 visual review.** No next implementation is active.
+
+**Main/connected review Worker:** delivery and verified native-build/version/asset receipt follow after the authorized push. No direct backend/production deployment or enablement is authorized.
 
 
 ---
