@@ -1,6 +1,6 @@
 # Review queue
 
-State: H-011 PASS / SERVICE HERO ASSET GENERATION NEXT / PRICING OFFER WORKING DRAFT RECORDED BUT NOT LOCKED / SEO-AI PROPAGATION PAUSED.
+State: H-011 PASS / H-012 PRICING REVIEW IMPLEMENTATION OPEN / HOME + /PRISER/ ONLY / SEO-AI PROPAGATION PAUSED.
 
 | Order / ID | Scope | Responsible role | State / completion evidence |
 | --- | --- | --- | --- |
@@ -188,3 +188,5 @@ For each completed review, append date, actual reviewer/role, inspected SHA, sco
 - 2026-10-09: STRATEGY_CONTENT reviewed H-010 /konvertering/: PASS under D-033. OWNER then added three project-wide rules: service pages are landing pages with dream-outcome visuals; Medon branding is reduced to provider/legal disclosure; site will be Norwegian + English. D-037 locks the revised homepage qualification/provider copy. H-011 now implements the system support before further service-page propagation.
 
 - 2026-10-09: STRATEGY_CONTENT/OWNER review passes H-011 under D-039. Provider neutrality, homepage qualification, service-visual contract and hidden i18n scaffolding all pass. Final service hero assets remain a separate visual gate. Pricing brainstorming is captured under D-040 as a non-implementation working draft so the agreed logic is not lost while visual work continues.
+
+- 2026-10-09: OWNER/STRATEGY_CONTENT locked H-012 pricing copy and visual semantics. Render compact packages on homepage and the full self-selection experience on /priser/. Vekst remains Anbefalt, not Mest valgt, until real sales data supports that claim.
