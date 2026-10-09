@@ -1,0 +1,18 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Arrow from './Arrow.astro';
+import ContentSection from './HomeSection.astro';
+import Faq from './Faq.astro';
+interface Props { page: CollectionEntry<'pages'>['data']; }
+const { page } = Astro.props;
+---
+<div class="invite-home invite-service">
+  <section class="service-hero shell">
+    <nav class="breadcrumbs" aria-label="Brødsmuler"><a href="/">Forsiden</a><span aria-hidden="true">/</span><span>{page.eyebrow}</span></nav>
+    <p class="eyebrow">{page.eyebrow}</p><h1>{page.title}</h1><p class="hero-intro">{page.intro}</p>
+    <div class="hero-actions"><a class="button" href={page.cta.href}>{page.cta.label}<Arrow diagonal /></a></div>
+  </section>
+  {page.sections.map(section => <ContentSection section={section} />)}
+  <Faq items={page.faq} />
+  <section class="closing-cta"><div class="shell"><div><p class="eyebrow">En gratis sjekk. En tydelig start.</p><h2>Finn ut hvor vi<br />ville startet.</h2></div><a class="button button-light" href={page.cta.href}>{page.cta.label}<Arrow diagonal /></a></div></section>
+</div>

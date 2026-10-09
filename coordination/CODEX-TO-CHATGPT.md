@@ -1,5 +1,13 @@
 # Codex to ChatGPT
 
+## OWNER menu / Innsikt correction - STOP FOR OWNER REVIEW
+
+2026-10-10, IMPLEMENTATION. Refreshed main `2ce3ab2c207387a87444adb341a6f0ee35991b1c`; consumed the actual direct OWNER request recorded in CHATGPT-TO-CODEX / D-067. Shared CMS navigation Priser now goes to `/priser/` on desktop/mobile (the same source supplies the footer). `/innsikt/` alone uses existing accepted chrome, palette, service hero and section components. Existing page JSON, copy, metadata, guide destinations and draft authority are retained. Both articles and the other eight remaining pages have byte-identical built HTML to the incoming review Worker. No pricing, CMS/editor, intake, proof, indexing, reference input or other template change.
+
+Validation: full verify passes with 64 tests, zero Astro diagnostics and existing static/copy/pricing/service guards; 40 existing browser checks across 15 routes; eight focused navigation/content groups at 1440/390/320 px, no overflow or console errors, zero POST/real leads/emails. Evidence: `evidence/menu-insight/` (screenshots, logs, page/content preservation). Exact implementation revision is identified by Git history; review Worker receipt follows after delivery under existing D-013 authority.
+
+OWNER: review the corrected menu destination and Innsikt overview together. This technical receipt records no content/visual acceptance. H-017A technical review, H-017B CMS work and other content/proof/launch gates remain separate; nothing further is executed.
+
 ## H-017A delivery - STOP FOR OWNER + STRATEGY_CONTENT TECHNICAL REVIEW
 
 2026-10-09, IMPLEMENTATION. Pulled incoming main `d74c623c7306c8962bce188b69800ad28cf7c49b`, read AGENTS/current coordination and consumed active H-017A exactly under D-062 / `H017A-INTAKE-READINESS.md`. Initial implementation `86d425e1ecf4a7a6d7d4c937097c697d05de30b5`; initial local evidence `a506bb24b2935427bc4b5aad0726ddf1d5479f32`; **final source/native-submit repair and review evidence `0678ceb21227e07aa0ffe29e4c35fc596d5f2c5c`**. Use Git history for the exact subsequent coordination delivery revision.

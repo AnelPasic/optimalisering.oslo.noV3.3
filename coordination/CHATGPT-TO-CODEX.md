@@ -1,6 +1,16 @@
 # ChatGPT to Codex
 
-## Active handoff - NONE / STOP FOR H-017A TECHNICAL REVIEW
+## Active handoff - NONE / STOP FOR REVIEW
+
+The inline OWNER menu / Innsikt correction is implemented. Stop for OWNER review of this correction; H-017A technical review remains required and H-017B remains queued/unexecuted. No further page propagation or production enablement is authorized.
+
+## Completed handoff - Inline OWNER menu / Innsikt correction
+
+2026-10-10. Actual OWNER request in Codex: "toppmeny Priser må peke til /priser siden - Innsikt fortsatt på gammel mal."
+
+Scoped correction: change the shared CMS navigation price destination to `/priser/`; render the `/innsikt/` overview using the existing accepted chrome/palette/hero/section pattern and its current content. Implementation interprets "Innsikt" as the named overview only. Retain its draft status/authority, copy, metadata and guide destinations. Other page templates/content, guide articles, package prices/art, CMS editor, noindex and intake remain preserved. This is a direct OWNER correction, not STRATEGY_CONTENT content acceptance or H-017B execution. Validate desktop/mobile and use the existing D-013 static review delivery boundary; stop after this correction. No production enablement.
+
+## H-017A remains stopped for technical review
 
 H-017A implementation and local verification are complete. OWNER + STRATEGY_CONTENT technical review is required before another scoped handoff. Review intake remains disabled; no real submissions, email, secrets, indexing or production enablement are authorized. Exact delivery and Worker evidence are in `CODEX-TO-CHATGPT.md` and `evidence/h017a/`.
 

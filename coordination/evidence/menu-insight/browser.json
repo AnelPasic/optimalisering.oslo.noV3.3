@@ -1,0 +1,22 @@
+{
+  "base": "http://127.0.0.1:52329",
+  "checks": [
+    "shared desktop/mobile price destination on /",
+    "shared desktop/mobile price destination on /priser/",
+    "shared desktop/mobile price destination on /synlighet/",
+    "shared desktop/mobile price destination on /konvertering/",
+    "shared desktop/mobile price destination on /innsikt/",
+    "1440px price click -> pricing page; insight click -> accepted template with unchanged content/metadata/guide links/noindex",
+    "390px price click -> pricing page; insight click -> accepted template with unchanged content/metadata/guide links/noindex",
+    "320px price click -> pricing page; insight click -> accepted template with unchanged content/metadata/guide links/noindex"
+  ],
+  "widths": [
+    1440,
+    390,
+    320
+  ],
+  "posts": 0,
+  "errors": [],
+  "realLeads": 0,
+  "realEmails": 0
+}

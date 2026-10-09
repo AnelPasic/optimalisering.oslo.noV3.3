@@ -1,0 +1,55 @@
+{
+  "incomingMain": "2ce3ab2c207387a87444adb341a6f0ee35991b1c",
+  "checks": [
+    {
+      "path": "/ai-synlighet/",
+      "byteEqualToIncomingReviewWorker": true,
+      "sha256": "e9acb4d6473b15d44aaf8a6cfe75e04eb6de62b1c518fc6575730751544af470"
+    },
+    {
+      "path": "/innsikt/hva-bor-optimaliseres-forst/",
+      "byteEqualToIncomingReviewWorker": true,
+      "sha256": "d5ba6a295528dc185a2b646c77db1aab96bb105681c562efe1106168f12e5046"
+    },
+    {
+      "path": "/kontakt/",
+      "byteEqualToIncomingReviewWorker": true,
+      "sha256": "eb6cece47db007e92f168c36b75c6c8d5130eb05c88a8bdf95ff5c4a5a9eec59"
+    },
+    {
+      "path": "/innsikt/male-effekt-av-optimalisering/",
+      "byteEqualToIncomingReviewWorker": true,
+      "sha256": "0457fab988809e3b0309f7f3b09842b1c7db283bed3ed2cd04a0f7863e46fc44"
+    },
+    {
+      "path": "/nettbutikkoptimalisering/",
+      "byteEqualToIncomingReviewWorker": true,
+      "sha256": "2b365a9c0d6a53eb2f304a9cb2ebcd6167a6bc7ce2372305dc5bf46a26eae8bf"
+    },
+    {
+      "path": "/om/",
+      "byteEqualToIncomingReviewWorker": true,
+      "sha256": "0764f419ff59fe22d5d8b64615c2d6313103309646b5a7940514a4255066b54a"
+    },
+    {
+      "path": "/personvern/",
+      "byteEqualToIncomingReviewWorker": true,
+      "sha256": "edd697561d064747f4ff0cf1dc2c93061fd6f2b970304d407632b95075ac0423"
+    },
+    {
+      "path": "/seo/",
+      "byteEqualToIncomingReviewWorker": true,
+      "sha256": "c7e0eadda91e3fbf52e355dd12810fea828debcfd01a3c81e62f289bbb0ff370"
+    },
+    {
+      "path": "/vilkar/",
+      "byteEqualToIncomingReviewWorker": true,
+      "sha256": "6363ec8644e76a3a1fdfaecf5f5f2631e3f52edf4550f59356226ca600ece600"
+    },
+    {
+      "path": "/vurdering/",
+      "byteEqualToIncomingReviewWorker": true,
+      "sha256": "dc808a67d72d16708e4247f70e375fdf40239d6c403ba5371f207301d680b5b7"
+    }
+  ]
+}

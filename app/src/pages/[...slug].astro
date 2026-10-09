@@ -5,6 +5,7 @@ import HomePage from '../components/HomePage.astro';
 import InnerPage from '../components/InnerPage.astro';
 import PricingPage from '../components/PricingPage.astro';
 import ServicePage from '../components/ServicePage.astro';
+import InsightIndexPage from '../components/InsightIndexPage.astro';
 import { createCommercialTextBinding } from '../lib/commercial-text';
 import { defaultLocale } from '../config/locales';
 
@@ -22,14 +23,15 @@ export async function getStaticPaths() {
       ...data, seo: { title: bind(data.seo.title), description: bind(data.seo.description) },
       faq: data.faq.map(item => ({ ...item, answer: bind(item.answer) })),
     } : data;
-    return { params: { slug: data.slug === 'home' ? undefined : data.slug }, props: { page, ...(['priser', 'synlighet', 'konvertering'].includes(data.slug) ? { commercial } : {}) } };
+    return { params: { slug: data.slug === 'home' ? undefined : data.slug }, props: { page, ...(['priser', 'synlighet', 'konvertering', 'innsikt'].includes(data.slug) ? { commercial } : {}) } };
   });
 }
 interface Props { page: CollectionEntry<'pages'>['data']; commercial?: NonNullable<CollectionEntry<'pages'>['data']['homepage']>; }
 const { page, commercial } = Astro.props;
 const pricing = page.slug === 'priser';
 const service = ['synlighet', 'konvertering'].includes(page.slug);
+const insight = page.slug === 'innsikt';
 ---
-<SiteLayout title={page.seo.title} description={page.seo.description} homeVisual={page.kind === 'home' || pricing || service} pricingVisual={pricing} serviceVisual={service} homeChrome={page.kind === 'home' ? page.homepage?.chrome : pricing || service ? commercial!.chrome : undefined}>
-  {page.kind === 'home' ? <HomePage page={page} /> : pricing ? <PricingPage page={page} commercial={commercial!} /> : service ? <ServicePage page={page} commercial={commercial!} /> : <InnerPage page={page} />}
+<SiteLayout title={page.seo.title} description={page.seo.description} homeVisual={page.kind === 'home' || pricing || service || insight} pricingVisual={pricing} serviceVisual={service || insight} homeChrome={page.kind === 'home' ? page.homepage?.chrome : pricing || service || insight ? commercial!.chrome : undefined}>
+  {page.kind === 'home' ? <HomePage page={page} /> : pricing ? <PricingPage page={page} commercial={commercial!} /> : service ? <ServicePage page={page} commercial={commercial!} /> : insight ? <InsightIndexPage page={page} /> : <InnerPage page={page} />}
 </SiteLayout>

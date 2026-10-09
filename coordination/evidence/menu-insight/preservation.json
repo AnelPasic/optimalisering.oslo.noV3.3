@@ -1,0 +1,7 @@
+{
+  "baseline": "2ce3ab2c207387a87444adb341a6f0ee35991b1c",
+  "pageRecords": 15,
+  "onlyContentChange": "home.homepage.chrome.navigation[Priser].href: /#priser -> /priser/",
+  "insightContentUnchanged": true,
+  "otherPageContentUnchanged": true
+}
