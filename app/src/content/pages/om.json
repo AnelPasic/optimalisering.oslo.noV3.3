@@ -3,19 +3,91 @@
   "kind": "utility",
   "status": "REVIEW_REQUIRED",
   "authority": "DRAFT / NON-AUTHORITATIVE",
-  "seo": { "title": "Om Optimalisering Oslo og Medon AS", "description": "Medon AS eier og leverer Optimalisering Oslo. Les om to behovsbaserte tjenester, leverandøransvar og hvordan vi prioriterer arbeid på nettsiden." },
+  "seo": {
+    "title": "Om Optimalisering Oslo og Medon AS",
+    "description": "Medon AS eier og leverer Optimalisering Oslo. Les om to behovsbaserte tjenester, leverandøransvar og hvordan vi prioriterer arbeid på nettsiden."
+  },
   "eyebrow": "Leverandøren bak tjenesten",
   "title": "Optimalisering Oslo er en tjeneste fra Medon AS.",
   "intro": "Optimalisering Oslo er tjenestenavnet. Medon AS er eier og leverandør. Vi skal gjøre det enkelt å forstå hvem du snakker med, og hvem som har ansvar for avtalt arbeid.",
   "sections": [
-    { "id": "oppgave", "heading": "Finn begrensningen. Prioriter arbeidet derfra.", "body": ["Bedriften kan trenge hjelp til å bli funnet, hjelp til å gjøre veien til kontakt eller kjøp enklere, eller begge deler. Det er utgangspunktet for tjenestene Synlighet og Konvertering.", "Medon undersøker behovet, gjennomfører avtalt arbeid og følger effekten. Prioriteringen skal bygge på erfaring og forventet kommersiell nytte innenfor avtalt omfang."], "links": [ { "label": "Se Synlighet", "href": "/synlighet/" }, { "label": "Se Konvertering", "href": "/konvertering/" } ] },
-    { "id": "ansvar", "heading": "Du skal forstå hva vi gjør og hva som er avtalt.", "body": ["Du trenger ikke lage en liste over hver lille oppgave før vi kan begynne. Samtidig må tjeneste, pris, ansvar og grenser for arbeidet være tydelige.", "Vi skiller mellom mulig nytte, observasjoner og dokumenterte resultater. Det skal ikke bli lovet bestemte plasseringer, AI-anbefalinger eller nye kunder uten grunnlag."], "links": [ { "label": "Pris og omfang", "href": "/priser/" }, { "label": "Hvordan vurdere effekt", "href": "/innsikt/male-effekt-av-optimalisering/" } ] },
-    { "id": "marked", "heading": "Norske bedrifter først. Behovet avgjør om tjenesten passer.", "body": ["Tjenesten retter seg først mot norske bedrifter, både tjenestebedrifter og nettbutikker. Bedrifter i andre nordiske land kan også være aktuelle.", "Navnet Optimalisering Oslo innebærer ikke at tjenesten er en egen juridisk virksomhet eller at vi har et separat Oslo-kontor. Det er Medon AS som står bak."], "links": [ { "label": "Har du nettbutikk?", "href": "/nettbutikkoptimalisering/" } ] },
-    { "id": "start", "heading": "Start med nettsiden dere allerede har.", "body": ["Send en nettadresse og en e-postadresse for bedriften. I den gratis, avgrensede manuelle sjekken gir Medon kort veiledning om hva vi ville startet med og hvorfor.", "Den er ikke en full revisjon, komplett feilliste, prognose eller gratis gjennomføring. Videre arbeid må avtales særskilt."], "links": [ { "label": "Ta en gratis sjekk", "href": "/vurdering/" } ] }
+    {
+      "id": "oppgave",
+      "heading": "Finn begrensningen. Prioriter arbeidet derfra.",
+      "body": [
+        "Bedriften kan trenge hjelp til å bli funnet, hjelp til å gjøre veien til kontakt eller kjøp enklere, eller begge deler. Det er utgangspunktet for tjenestene Synlighet og Konvertering.",
+        "Medon undersøker behovet, gjennomfører avtalt arbeid og følger effekten. Prioriteringen skal bygge på erfaring og forventet kommersiell nytte innenfor avtalt omfang."
+      ],
+      "links": [
+        {
+          "label": "Se Synlighet",
+          "href": "/synlighet/"
+        },
+        {
+          "label": "Se Konvertering",
+          "href": "/konvertering/"
+        }
+      ]
+    },
+    {
+      "id": "ansvar",
+      "heading": "Du skal forstå hva vi gjør og hva som er avtalt.",
+      "body": [
+        "Du trenger ikke lage en liste over hver lille oppgave før vi kan begynne. Samtidig må tjeneste, pris, ansvar og grenser for arbeidet være tydelige.",
+        "Vi skiller mellom mulig nytte, observasjoner og dokumenterte resultater. Det skal ikke bli lovet bestemte plasseringer, AI-anbefalinger eller nye kunder uten grunnlag."
+      ],
+      "links": [
+        {
+          "label": "Pris og omfang",
+          "href": "/priser/"
+        },
+        {
+          "label": "Hvordan vurdere effekt",
+          "href": "/innsikt/male-effekt-av-optimalisering/"
+        }
+      ]
+    },
+    {
+      "id": "marked",
+      "heading": "Norske bedrifter først. Behovet avgjør om tjenesten passer.",
+      "body": [
+        "Tjenesten retter seg først mot norske bedrifter, både tjenestebedrifter og nettbutikker. Bedrifter i andre nordiske land kan også være aktuelle.",
+        "Navnet Optimalisering Oslo innebærer ikke at tjenesten er en egen juridisk virksomhet eller at vi har et separat Oslo-kontor. Det er Medon AS som står bak."
+      ],
+      "links": [
+        {
+          "label": "Har du nettbutikk?",
+          "href": "/nettbutikkoptimalisering/"
+        }
+      ]
+    },
+    {
+      "id": "start",
+      "heading": "Start med nettsiden dere allerede har.",
+      "body": [
+        "Send en nettadresse og en e-postadresse for bedriften. I den gratis, avgrensede manuelle sjekken gir Medon kort veiledning om hva vi ville startet med og hvorfor.",
+        "Den er ikke en full revisjon, komplett feilliste, prognose eller gratis gjennomføring. Videre arbeid må avtales særskilt."
+      ],
+      "links": [
+        {
+          "label": "Ta en gratis sjekk",
+          "href": "/vurdering/"
+        }
+      ]
+    }
   ],
   "faq": [
-    { "question": "Hvem leverer tjenesten?", "answer": "Medon AS er eier og leverandør av Optimalisering Oslo. Optimalisering Oslo er et tjenestenavn." },
-    { "question": "Er tjenesten bare for bedrifter i Oslo?", "answer": "Nei. Norge er det primære markedet. Bedrifter i andre nordiske land kan også være aktuelle. Behov og avtalt omfang avgjør om tjenesten passer." }
+    {
+      "question": "Hvem leverer tjenesten?",
+      "answer": "Medon AS er eier og leverandør av Optimalisering Oslo. Optimalisering Oslo er et tjenestenavn."
+    },
+    {
+      "question": "Er tjenesten bare for bedrifter i Oslo?",
+      "answer": "Nei. Norge er det primære markedet. Bedrifter i andre nordiske land kan også være aktuelle. Behov og avtalt omfang avgjør om tjenesten passer."
+    }
   ],
-  "cta": { "label": "Ta en gratis sjekk", "href": "/vurdering/" }
+  "cta": {
+    "label": "Ta en gratis sjekk",
+    "href": "/vurdering/"
+  }
 }
