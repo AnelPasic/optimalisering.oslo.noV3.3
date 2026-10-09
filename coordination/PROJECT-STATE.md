@@ -368,3 +368,8 @@ After H-016, routine package text/image tuning should happen directly in Pages C
 
 ## Customer-facing punctuation
 OWNER house style is recorded in `coordination/COPY-STYLE.md`: use `-` for dashes and `->` for textual arrows in customer-facing copy. SVG/icon arrows are unaffected.
+
+
+## Human copy house style
+
+D-060 expands `coordination/COPY-STYLE.md` into the standing customer-facing writing rule. Existing page copy and visible UI strings have been conservatively normalized. Future content/CMS edits should follow the same rule; do not reintroduce Unicode marketing punctuation or repeated template-copy formulas.
