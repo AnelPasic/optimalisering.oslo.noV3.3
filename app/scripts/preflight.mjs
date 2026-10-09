@@ -1,6 +1,7 @@
 import { readdirSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { loadEnv } from 'vite';
+import { isLeadEndpoint } from '../src/lib/lead.ts';
 
 export function assertProductionReady(env) {
   if (env.SITE_STAGE !== 'production') return;
@@ -15,6 +16,10 @@ export function assertProductionReady(env) {
   if (sharedCopy.authority !== 'CONTENT_LOCKED / AUTHORITATIVE') missing.push('shared customer-facing copy needs review');
   for (const key of ['PUBLIC_LEADS_ENABLED', 'PRIVACY_APPROVED', 'LAUNCH_APPROVED']) if (env[key] !== 'true') missing.push(key);
   for (const key of ['RESEND_API_KEY', 'RESEND_FROM', 'LEAD_TO_EMAIL']) if (!env[key]) missing.push(key);
+  if (!isLeadEndpoint(env.PUBLIC_LEAD_ENDPOINT ?? '')) missing.push('PUBLIC_LEAD_ENDPOINT');
+  if (env.PUBLIC_ORDERS_ENABLED === 'true') {
+    for (const key of ['ORDERS_ENABLED', 'ORDERS_DEPLOYMENT_APPROVED']) if (env[key] !== 'true') missing.push(key);
+  }
   if (missing.length) throw new Error(`Production blocked: ${missing.join('; ')}. Local review preview remains available.`);
 }
 

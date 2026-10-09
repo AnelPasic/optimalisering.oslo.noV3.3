@@ -1,28 +1,34 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import Arrow from './Arrow.astro';
+import { site } from '../config/site';
 interface Props { packages: NonNullable<CollectionEntry<'pages'>['data']['homepage']>['packages']; }
 const { packages } = Astro.props;
-// H-013 authorizes review UX only. A separate scoped enablement handoff must
-// connect this form after privacy, backend, notification and launch approval.
+// H-017A prepares transport only. Review flags remain off; real intake requires
+// separate privacy, backend, notification and launch approval.
 ---
 <section id="bestill" class="package-order section-space" aria-labelledby="order-title"><div class="shell package-order-grid">
   <div class="package-order-intro"><h2 id="order-title">Bestill pakken som passer</h2><p class="body-copy">Velg pakken og send bestillingen. Vi bekrefter oppstart og det avtalte omfanget før arbeidet starter.</p><p id="partner-order-note" class="partner-order-note" hidden>Partner starter {packages.items[2].pricePrefix ? packages.items[2].pricePrefix + ' ' : ''}{new Intl.NumberFormat('nb-NO').format(packages.items[2].price)} {packages.items[2].priceSuffix}. Omfang og fast månedspris bekreftes før oppstart.</p></div>
-  <form class="package-order-form" data-package-order data-enabled="false" method="post" action="/api/leads">
+  <form class="package-order-form" data-package-order data-enabled={String(site.ordersEnabled)} data-endpoint={site.leadEndpoint} method="post" action={site.leadEndpoint}>
     <input type="hidden" name="form" value="pakke-bestilling" />
     <label for="order-package">Pakke</label><select id="order-package" name="package" required aria-describedby="order-selection partner-order-note"><option value="">Velg pakke</option>{packages.items.map(item => <option value={item.key}>{item.title} - {item.pricePrefix ? item.pricePrefix + ' ' : ''}{new Intl.NumberFormat('nb-NO').format(item.price)} {item.priceSuffix} {item.vatSuffix}</option>)}</select>
     <p id="order-selection" class="order-selection" aria-live="polite"></p>
-    <div class="order-fields"><div><label for="order-company">Bedrift</label><input id="order-company" name="company" type="text" autocomplete="organization" maxlength="200" required /></div><div><label for="order-website">Nettside / nettbutikk</label><input id="order-website" name="website" type="text" inputmode="url" autocomplete="url" maxlength="2048" required /></div><div><label for="order-contact">Kontaktperson</label><input id="order-contact" name="contact" type="text" autocomplete="name" maxlength="200" required /></div><div><label for="order-email">E-post</label><input id="order-email" name="email" type="email" autocomplete="email" maxlength="254" required /></div></div>
+    <div class="order-fields"><div><label for="order-company">Bedrift</label><input id="order-company" name="company" type="text" autocomplete="organization" maxlength="200" required /></div><div><label for="order-website">Nettside / nettbutikk</label><input id="order-website" name="website" type="text" inputmode="url" autocomplete="url" maxlength="2048" required aria-describedby="order-website-error" /><p id="order-website-error" class="field-error" hidden>Skriv inn en gyldig nettadresse.</p></div><div><label for="order-contact">Kontaktperson</label><input id="order-contact" name="contact" type="text" autocomplete="name" maxlength="200" required /></div><div><label for="order-email">E-post</label><input id="order-email" name="email" type="email" autocomplete="email" maxlength="254" required /></div></div>
     <label for="order-phone">Telefon <span class="optional">Valgfritt</span></label><input id="order-phone" name="phone" type="tel" autocomplete="tel" maxlength="40" />
     <label for="order-comment">Kort kommentar <span class="optional">Valgfritt</span></label><textarea id="order-comment" name="message" rows="3" maxlength="2000"></textarea>
     <p class="form-privacy">Ikke send innlogging, sensitive opplysninger eller personopplysninger om andre.</p>
-    <p id="order-preview" class="form-notice">Dette er en forhåndsvisning. Bestilling er ikke åpnet ennå. Ingen opplysninger blir sendt.</p>
-    <button type="submit" class="button" disabled aria-describedby="order-preview">Send bestilling<Arrow diagonal /></button>
+    <div hidden aria-hidden="true"><label for="order-website-confirmation">La feltet stå tomt</label><input id="order-website-confirmation" name="website_confirmation" tabindex="-1" autocomplete="off" maxlength="200" /></div>
+    {!site.ordersEnabled && <p id="order-preview" class="form-notice">Dette er en forhåndsvisning. Bestilling er ikke åpnet ennå. Ingen opplysninger blir sendt.</p>}
+    <button type="submit" class="button" disabled aria-describedby={site.ordersEnabled ? 'order-status' : 'order-preview order-status'}>Send bestilling<Arrow diagonal /></button>
+    <p id="order-status" data-order-status class="form-status" role="status" aria-live="polite" tabindex="-1" hidden></p>
     <a class="text-link" href="/#sjekk">Usikker på pakken? Ta en gratis sjekk<Arrow /></a>
-    <noscript><p>Velg pakken i skjemaet. Bestilling er ikke åpnet i denne forhåndsvisningen.</p></noscript>
+    <noscript><p>{site.ordersEnabled ? 'Skjemaet trenger JavaScript for innsending.' : 'Velg pakken i skjemaet. Bestilling er ikke åpnet i denne forhåndsvisningen.'}</p></noscript>
   </form>
 </div></section>
 <script>
+  import { createOrderPayload } from '../lib/order';
+  import { normalizeWebsite, submitLead } from '../lib/lead';
+  import { captureAttribution } from '../lib/attribution';
   const form = document.querySelector<HTMLFormElement>('[data-package-order]');
   if (form) {
     const select = form.querySelector<HTMLSelectElement>('[name="package"]')!;
@@ -52,7 +58,40 @@ const { packages } = Astro.props;
       if (valid(select.value)) url.searchParams.set('pakke', select.value); else url.searchParams.delete('pakke');
       history.replaceState(null, '', url.pathname + url.search + url.hash); display();
     });
-    // Guard programmatic submits as well as the disabled button and no-JS path.
-    form.addEventListener('submit', event => { event.preventDefault(); });
+    const enabled = form.dataset.enabled === 'true';
+    const endpoint = form.dataset.endpoint ?? '';
+    const button = form.querySelector<HTMLButtonElement>('[type="submit"]')!;
+    const status = form.querySelector<HTMLElement>('[data-order-status]')!;
+    const website = form.querySelector<HTMLInputElement>('[name="website"]')!;
+    const websiteError = form.querySelector<HTMLElement>('#order-website-error')!;
+    let busy = false, key = crypto.randomUUID(), previousBody = '';
+    const showStatus = (message: string) => { status.textContent = message; status.hidden = false; status.focus({ preventScroll: true }); };
+    website.addEventListener('input', () => { website.setCustomValidity(''); website.removeAttribute('aria-invalid'); websiteError.hidden = true; });
+    form.addEventListener('submit', async event => {
+      event.preventDefault();
+      if (!enabled) { showStatus('Bestilling er ikke åpnet ennå. Ingen opplysninger blir sendt.'); return; }
+      if (busy) return;
+      const values = new FormData(form);
+      if (values.get('website_confirmation')) return;
+      if (!form.checkValidity()) { showStatus('Sjekk at alle påkrevde felt er fylt ut.'); form.reportValidity(); return; }
+      if (!normalizeWebsite(website.value)) {
+        website.setCustomValidity('Skriv inn en gyldig nettadresse.'); website.setAttribute('aria-invalid', 'true'); websiteError.hidden = false; website.focus(); return;
+      }
+      let payload;
+      try {
+        payload = createOrderPayload(Object.fromEntries(values) as Record<string, string>, { page: location.pathname, ...captureAttribution(location.href, document.referrer) });
+      } catch (error) { showStatus(error instanceof Error ? error.message : 'Sjekk opplysningene i skjemaet.'); return; }
+      const body = JSON.stringify(payload);
+      if (previousBody && previousBody !== body) key = crypto.randomUUID();
+      previousBody = body;
+      busy = true; button.disabled = true; button.setAttribute('aria-busy', 'true'); showStatus('Sender forespørselen.');
+      try {
+        await submitLead(endpoint, payload, { idempotencyKey: key });
+        showStatus('Forespørselen er mottatt. Vi følger opp på e-post.');
+        form.reset(); fromLocation(); key = crypto.randomUUID(); previousBody = '';
+      } catch (error) { showStatus(error instanceof Error ? error.message : 'Vi kunne ikke bekrefte innsendingen. Prøv igjen.'); }
+      finally { busy = false; button.disabled = false; button.removeAttribute('aria-busy'); }
+    });
+    button.disabled = !enabled;
   }
 </script>

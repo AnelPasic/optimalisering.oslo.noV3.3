@@ -15,6 +15,7 @@ test('locked status cannot publish draft page or shared copy authority', () => {
   const sharedFile = join(config, 'copy-authority.json');
   const env = {
     SITE_STAGE: 'production', PUBLIC_LEADS_ENABLED: 'true', PRIVACY_APPROVED: 'true', LAUNCH_APPROVED: 'true',
+    PUBLIC_LEAD_ENDPOINT: '/api/leads',
     RESEND_API_KEY: 'synthetic-not-a-key', RESEND_FROM: 'test@example.invalid', LEAD_TO_EMAIL: 'test@example.invalid',
   };
   try {
@@ -31,6 +32,14 @@ test('locked status cannot publish draft page or shared copy authority', () => {
     assert.throws(() => assertProductionReady(env), /shared customer-facing copy needs review/);
     writeFileSync(sharedFile, JSON.stringify({ authority: 'CONTENT_LOCKED / AUTHORITATIVE' }));
     assert.doesNotThrow(() => assertProductionReady(env));
+    for (const endpoint of ['', 'http://api.example.test/leads', '//api.example.test/leads', 'https://user:pass@api.example.test/leads', 'https://api.example.test/leads?email=x', 'https://api.example.test/leads#x', 'https://']) {
+      assert.throws(() => assertProductionReady({ ...env, PUBLIC_LEAD_ENDPOINT: endpoint }), /PUBLIC_LEAD_ENDPOINT/);
+    }
+    const orders = { ...env, PUBLIC_ORDERS_ENABLED: 'true', ORDERS_ENABLED: 'true', ORDERS_DEPLOYMENT_APPROVED: 'true' };
+    assert.doesNotThrow(() => assertProductionReady(orders));
+    for (const key of ['ORDERS_ENABLED', 'ORDERS_DEPLOYMENT_APPROVED', 'PRIVACY_APPROVED', 'RESEND_API_KEY', 'RESEND_FROM', 'LEAD_TO_EMAIL']) {
+      assert.throws(() => assertProductionReady({ ...orders, [key]: '' }), new RegExp(key));
+    }
   } finally {
     process.chdir(previousDirectory);
     for (const file of [pageFile, sharedFile]) { try { unlinkSync(file); } catch {} }

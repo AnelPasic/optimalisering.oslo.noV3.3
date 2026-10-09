@@ -41,3 +41,12 @@ test('network failure and abort preserve a retryable error', async () => {
   await assert.rejects(submitLead('/api/leads', payload, { transport: async () => { throw new TypeError('network'); } }));
   await assert.rejects(submitLead('/api/leads', payload, { timeoutMs: 5, transport: (_url, options) => new Promise((_resolve, reject) => options?.signal?.addEventListener('abort', () => reject(new Error('aborted')))) }));
 });
+
+test('malformed endpoints, credentials and query data are rejected before any transport', async () => {
+  let calls = 0;
+  const transport = async () => { calls++; return new Response('{"ok":true,"id":"synthetic"}', { status: 201 }); };
+  for (const endpoint of ['https://', 'https://user:pass@api.example.test/leads', 'https://api.example.test/leads?email=x', 'https://api.example.test/leads#x', 'https://api.example.test\\other/leads']) {
+    await assert.rejects(submitLead(endpoint, payload, { transport }));
+  }
+  assert.equal(calls, 0);
+});

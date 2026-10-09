@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {resolvePackageAsset} from '../src/lib/package-visual.ts';
 const packages=JSON.parse(readFileSync('src/content/pages/home.json')).homepage.packages;
-const text=html=>html.replace(/<[^>]*>/g,' ').replace(/&amp;/g,'&').replace(/\s+/g,' ').trim();
+const text=html=>html.replace(/<[^>]*>/g,' ').replace(/&amp;/g,'&').replace(/&gt;/g,'>').replace(/&lt;/g,'<').replace(/\s+/g,' ').trim();
 for(const [file,open] of [['dist/index.html',false],['dist/priser/index.html',true]]) {
   const html=readFileSync(file,'utf8'),section=html.match(/<section id="priser"[^>]*>(.*?)<\/section>/s)[1];
   const cards=[...section.matchAll(/<article\b[^>]*class="package-card[^>]*>(.*?)<\/article>/gs)].map(m=>m[1]);

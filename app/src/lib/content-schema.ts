@@ -20,7 +20,7 @@ const homepage = z.object({
     items: z.array(z.object({
       title: z.string(), descriptor: z.string(), fit: z.string(), scope: z.string().optional(),
       price: z.number().int().positive().max(100000000), pricePrefix: z.literal('fra').optional(), priceSuffix: z.string(), vatSuffix: z.string(),
-      recommended: z.boolean(), badge: z.string(), cta: link.extend({ label: z.string().trim().min(1) }), detailLink: link.extend({ label: z.string().trim().min(1) }),
+      recommended: z.boolean(), badge: z.string().default(''), cta: link.extend({ label: z.string().trim().min(1) }), detailLink: link.extend({ label: z.string().trim().min(1) }),
       key: z.enum(['optimalisering', 'vekst', 'partner']),
       visualAsset: z.object({
         src: z.string().regex(/^\/images\/pricing\/(?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.(?:svg|webp|png)$/),
@@ -55,7 +55,7 @@ export const pageSchema = z.object({
     seo: z.object({ title: z.string(), description: z.string() }),
     eyebrow: z.string(), title: z.string(), intro: z.string(),
     sections: z.array(z.object({
-      id: z.string(), eyebrow: z.string().optional(), heading: z.string(), body: z.array(z.string()),
+      id: z.string(), eyebrow: z.string().optional(), heading: z.string(), body: z.array(z.string()).default([]),
       items: z.array(z.object({ title: z.string(), text: z.string(), href: z.string().startsWith('/').optional(), label: z.string().optional() })).optional(),
       links: z.array(link).optional(),
     })),

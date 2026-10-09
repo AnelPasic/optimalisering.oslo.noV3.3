@@ -29,7 +29,7 @@ for (const [url, page] of paths) {
     const body = page.slug === 'priser' && section.id === 'kostnader' ? [
       `${packages.adBudgetNote} ${packages.externalCostsNote.replace('kommer i tillegg', 'kommer også i tillegg')}`,
       packages.separateWorkNote, packages.capacityNote,
-    ] : section.body;
+    ] : section.body ?? [];
     for (const paragraph of body) assert.ok(text.includes(paragraph.replace(/\s+/g, ' ')), `${url}: semantic paragraph hidden in ${section.id}`);
   }
 }

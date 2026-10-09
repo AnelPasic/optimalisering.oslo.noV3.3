@@ -52,7 +52,14 @@ for (const file of readdirSync(pageDir).filter(name => name.endsWith('.json'))) 
 
 for (const file of readdirSync(componentDir).filter(name => name.endsWith('.astro'))) {
   const source = readFileSync(join(componentDir, file), 'utf8');
-  assert.ok(!forbiddenChars.test(source), `${file}: hard-coded visible copy must use ordinary keyboard punctuation or SVG/icon components`);
+  // D-059/COPY-STYLE explicitly preserves formal mathematics. Keep the
+  // calculator unchanged and exempt only its equations/numeric placeholder.
+  const checked = file === 'HomeLeverage.astro' ? source
+    .replace(/<span\b[^>]*class="math-equation"[^>]*>[\s\S]*?<\/span>/g, equation => equation.replaceAll('×', ''))
+    .replace(/(?:currentEquation|scenarioEquation)\.textContent = `[^`]*`;/g, equation => equation.replaceAll('×', ''))
+    .replace(/\[current, scenario, difference, percentage, currentEquation, scenarioEquation\]\.forEach\(output => output\.textContent = '–'\);/g, placeholder => placeholder.replaceAll('–', ''))
+    : source;
+  assert.ok(!forbiddenChars.test(checked), `${file}: hard-coded visible copy must use ordinary keyboard punctuation or SVG/icon components`);
 }
 
 console.log(`Copy-style QA passed: ${stringsChecked} customer-facing strings plus Astro component punctuation.`);

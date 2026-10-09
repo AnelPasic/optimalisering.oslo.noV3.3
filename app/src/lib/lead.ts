@@ -46,8 +46,17 @@ export function createLeadPayload(fields: Record<string, string>, rawSource: Rec
 
 type SubmitOptions = { transport?: typeof fetch; timeoutMs?: number; idempotencyKey?: string };
 
+export function isLeadEndpoint(endpoint: string): boolean {
+  if (/^\/(?!\/)[\w/-]+$/.test(endpoint)) return true;
+  if (!/^https:\/\//.test(endpoint) || /[\s\\]/.test(endpoint)) return false;
+  try {
+    const url = new URL(endpoint);
+    return url.protocol === 'https:' && Boolean(url.hostname) && !url.username && !url.password && !url.search && !url.hash;
+  } catch { return false; }
+}
+
 export async function submitLead(endpoint: string, payload: LeadPayload, options: SubmitOptions = {}): Promise<void> {
-  if (!/^\/(?!\/)[\w/-]+$/.test(endpoint) && !/^https:\/\/[^\s]+$/.test(endpoint)) throw new Error('Innsending er ikke åpnet ennå.');
+  if (!isLeadEndpoint(endpoint)) throw new Error('Innsending er ikke åpnet ennå.');
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), options.timeoutMs ?? 12000);
   try {
