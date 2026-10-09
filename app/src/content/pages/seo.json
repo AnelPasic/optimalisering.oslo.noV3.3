@@ -3,22 +3,123 @@
   "kind": "service",
   "status": "REVIEW_REQUIRED",
   "authority": "DRAFT / NON-AUTHORITATIVE",
-  "seo": { "title": "SEO for relevante søk og nyttige besøk | Medon", "description": "SEO begynner med søk som passer tilbudet ditt. Medon vurderer hvilke sider som bør finnes, forstås og lede kunden videre. Ta en gratis sjekk." },
+  "seo": {
+    "title": "SEO for relevante søk og nyttige besøk | Medon",
+    "description": "SEO begynner med søk som passer tilbudet ditt. Medon vurderer hvilke sider som bør finnes, forstås og lede kunden videre. Ta en gratis sjekk."
+  },
   "eyebrow": "Søkemotoroptimalisering",
   "title": "Bli funnet når kunden leter etter det du tilbyr.",
   "intro": "Du trenger ikke flere søkeord for enhver pris. Du trenger tydelige sider for de søkene som passer bedriften. Vi ser på sammenhengen mellom kundens spørsmål, nettsidens svar og en relevant vei videre.",
   "sections": [
-    { "id": "sok-side", "heading": "Ett søk trenger et svar. Ett svar trenger riktig side.", "body": ["Et søk etter en leverandør har en annen oppgave enn et søk etter en forklaring. En tjenesteside bør hjelpe kunden å velge. En veiledning bør hjelpe kunden å forstå eller undersøke.", "Vi vurderer hvilke behov nettsiden bør dekke, om en eksisterende side allerede gjør jobben, og hva en ny side faktisk ville tilføre. Flere sider om nesten det samme kan gjøre tilbudet vanskeligere å forstå."], "items": [ { "title": "Behovet", "text": "Hvilken tjeneste, løsning eller produktgruppe søker kunden etter, og passer denne kunden bedriften?" }, { "title": "Siden", "text": "Finnes det en konkret side som svarer på behovet med nyttig og riktig informasjon?" }, { "title": "Neste steg", "text": "Kan kunden vurdere tilbudet og enkelt gå videre til relevant kontakt eller kjøp?" } ] },
-    { "id": "teknisk", "heading": "Godt innhold må også kunne bli funnet.", "body": ["Et teknisk hinder, en uklar sidestruktur eller en viktig side uten interne lenker kan være relevant å undersøke. SEO er derfor både en vurdering av innhold og av hvordan nettstedet er satt sammen.", "Mulig arbeid kan være å avklare sideformål, forbedre innhold eller rette tekniske forhold som påvirker oppdagelse og forståelse. Det konkrete arbeidet avtales etter behov. En teknisk sjekkliste er ikke en garanti for plassering."] },
-    { "id": "prioritering", "eyebrow": "Prioritering før volum", "heading": "Start med søk du faktisk kan hjelpe kunden med.", "body": ["En bedrift som leverer en spesialisert tjeneste trenger ikke nødvendigvis flest mulig besøk. Et tydelig svar på et relevant leverandørsøk kan være mer nyttig enn en generell artikkel som trekker mennesker med andre behov.", "Vi prioriterer ut fra tilbudet, kundene og forventet kommersiell nytte. Hovednettsiden eller nettbutikken er normalt utgangspunktet. Arbeid på flere nettsteder eller ekstra landingssider må vurderes særskilt.", "SEO er en del av Synlighet. Pris, innhold og grenser for det løpende arbeidet må avtales. Ingen bestemt plassering eller trafikkøkning er lovet."], "links": [ { "label": "Se hvordan Synlighet vurderes", "href": "/synlighet/" }, { "label": "Se tjenestealternativene", "href": "/priser/" } ] },
-    { "id": "effekt", "heading": "Synlige sider er et mellomsteg. Relevante kunder er målet.", "body": ["Vi må skille mellom at en side vises, at noen klikker og at besøket fører til en relevant handling. Trafikkvekst alene forteller ikke om arbeidet har verdi for bedriften.", "For tjenester er det nyttig å følge henvendelsenes kvalitet og muligheten for at de blir kunder. For nettbutikker må søk knyttes til kjøp og ordrenes økonomi der data gjør det mulig. Måling har begrensninger, og sammenfall er ikke alltid årsak."], "links": [ { "label": "Les om måling av effekt", "href": "/innsikt/male-effekt-av-optimalisering/" } ] },
-    { "id": "ai", "heading": "AI-synlighet er et eget spørsmål, selv når innholdet overlapper.", "body": ["Konkret informasjon om bedriften og tilbudet er nyttig uavhengig av hvor kunden undersøker. Men plassering i et søk og omtale i et AI-svar er ulike observasjoner.", "Vi behandler ikke SEO-resultater som bevis for AI-anbefalinger. Vil du undersøke hvordan bedriften omtales i AI-baserte svar, bør også kilder, spørsmål og usikkerhet vurderes."], "links": [ { "label": "Les om AI-synlighet", "href": "/ai-synlighet/" } ] },
-    { "id": "sjekk", "heading": "Send nettsiden. Vi vurderer et fornuftig sted å begynne.", "body": ["I den gratis, avgrensede manuelle sjekken gir Medon kort veiledning om hva vi ville startet med og hvorfor. Du trenger en nettadresse og en e-postadresse for bedriften.", "Sjekken er ikke en full SEO-revisjon, komplett feilliste, prognose eller automatisk poengsum. Den hjelper oss å vurdere om Synlighet, Konvertering eller begge bør komme først."], "links": [ { "label": "Ta en gratis sjekk", "href": "/vurdering/" } ] }
+    {
+      "id": "sok-side",
+      "heading": "Ett søk trenger et svar. Ett svar trenger riktig side.",
+      "body": [
+        "Et søk etter en leverandør har en annen oppgave enn et søk etter en forklaring. En tjenesteside bør hjelpe kunden å velge. En veiledning bør hjelpe kunden å forstå eller undersøke.",
+        "Vi vurderer hvilke behov nettsiden bør dekke, om en eksisterende side allerede gjør jobben, og hva en ny side faktisk ville tilføre. Flere sider om nesten det samme kan gjøre tilbudet vanskeligere å forstå."
+      ],
+      "items": [
+        {
+          "title": "Behovet",
+          "text": "Hvilken tjeneste, løsning eller produktgruppe søker kunden etter, og passer denne kunden bedriften?"
+        },
+        {
+          "title": "Siden",
+          "text": "Finnes det en konkret side som svarer på behovet med nyttig og riktig informasjon?"
+        },
+        {
+          "title": "Neste steg",
+          "text": "Kan kunden vurdere tilbudet og enkelt gå videre til relevant kontakt eller kjøp?"
+        }
+      ]
+    },
+    {
+      "id": "teknisk",
+      "heading": "Godt innhold må også kunne bli funnet.",
+      "body": [
+        "Et teknisk hinder, en uklar sidestruktur eller en viktig side uten interne lenker kan være relevant å undersøke. SEO er derfor både en vurdering av innhold og av hvordan nettstedet er satt sammen.",
+        "Mulig arbeid kan være å avklare sideformål, forbedre innhold eller rette tekniske forhold som påvirker oppdagelse og forståelse. Det konkrete arbeidet avtales etter behov. En teknisk sjekkliste er ikke en garanti for plassering."
+      ]
+    },
+    {
+      "id": "prioritering",
+      "eyebrow": "Prioritering før volum",
+      "heading": "Start med søk du faktisk kan hjelpe kunden med.",
+      "body": [
+        "En bedrift som leverer en spesialisert tjeneste trenger ikke flest mulig besøk. Et tydelig svar på et relevant leverandørsøk kan være mer nyttig enn en generell artikkel som trekker mennesker med andre behov.",
+        "Vi prioriterer ut fra tilbudet, kundene og forventet kommersiell nytte. Hovednettsiden eller nettbutikken er normalt utgangspunktet. Arbeid på flere nettsteder eller ekstra landingssider må vurderes særskilt.",
+        "SEO er en del av Synlighet. Pris, innhold og grenser for det løpende arbeidet må avtales. Ingen bestemt plassering eller trafikkøkning er lovet."
+      ],
+      "links": [
+        {
+          "label": "Se hvordan Synlighet vurderes",
+          "href": "/synlighet/"
+        },
+        {
+          "label": "Se tjenestealternativene",
+          "href": "/priser/"
+        }
+      ]
+    },
+    {
+      "id": "effekt",
+      "heading": "Synlige sider er et mellomsteg. Relevante kunder er målet.",
+      "body": [
+        "Vi må skille mellom at en side vises, at noen klikker og at besøket fører til en relevant handling. Trafikkvekst alene forteller ikke om arbeidet har verdi for bedriften.",
+        "For tjenester er det nyttig å følge henvendelsenes kvalitet og muligheten for at de blir kunder. For nettbutikker må søk knyttes til kjøp og ordrenes økonomi der data gjør det mulig. Måling har begrensninger, og sammenfall er ikke alltid årsak."
+      ],
+      "links": [
+        {
+          "label": "Les om måling av effekt",
+          "href": "/innsikt/male-effekt-av-optimalisering/"
+        }
+      ]
+    },
+    {
+      "id": "ai",
+      "heading": "AI-synlighet er et eget spørsmål, selv når innholdet overlapper.",
+      "body": [
+        "Konkret informasjon om bedriften og tilbudet er nyttig uavhengig av hvor kunden undersøker. Men plassering i et søk og omtale i et AI-svar er ulike observasjoner.",
+        "Vi behandler ikke SEO-resultater som bevis for AI-anbefalinger. Vil du undersøke hvordan bedriften omtales i AI-baserte svar, bør også kilder, spørsmål og usikkerhet vurderes."
+      ],
+      "links": [
+        {
+          "label": "Les om AI-synlighet",
+          "href": "/ai-synlighet/"
+        }
+      ]
+    },
+    {
+      "id": "sjekk",
+      "heading": "Send nettsiden. Vi vurderer et fornuftig sted å begynne.",
+      "body": [
+        "I den gratis, avgrensede manuelle sjekken gir Medon kort veiledning om hva vi ville startet med og hvorfor. Du trenger en nettadresse og en e-postadresse for bedriften.",
+        "Sjekken er ikke en full SEO-revisjon, komplett feilliste, prognose eller automatisk poengsum. Den hjelper oss å vurdere om Synlighet, Konvertering eller begge bør komme først."
+      ],
+      "links": [
+        {
+          "label": "Ta en gratis sjekk",
+          "href": "/vurdering/"
+        }
+      ]
+    }
   ],
   "faq": [
-    { "question": "Må vi lage en ny side for hvert søkeord?", "answer": "Nei. Flere ord kan uttrykke det samme behovet. En ny side bør ha en egen jobb og nyttig informasjon, fremfor å gjenta en eksisterende side med en ny overskrift." },
-    { "question": "Hvor raskt virker SEO?", "answer": "Det kan vi ikke gi et generelt løfte om. Utgangspunkt, tiltak og forhold utenfor nettsiden påvirker utviklingen. Vi må se på hva som faktisk er gjort og hvilke data som finnes." },
-    { "question": "Kan SEO erstatte annonser?", "answer": "Det avhenger av behovet og økonomien. SEO og betalt synlighet kan ha ulike roller og kan vurderes sammen. Annonsebudsjett er ikke inkludert med mindre det uttrykkelig avtales." }
+    {
+      "question": "Må vi lage en ny side for hvert søkeord?",
+      "answer": "Nei. Flere ord kan uttrykke det samme behovet. En ny side bør ha en egen jobb og nyttig informasjon, fremfor å gjenta en eksisterende side med en ny overskrift."
+    },
+    {
+      "question": "Hvor raskt virker SEO?",
+      "answer": "Det kan vi ikke gi et generelt løfte om. Utgangspunkt, tiltak og forhold utenfor nettsiden påvirker utviklingen. Vi må se på hva som faktisk er gjort og hvilke data som finnes."
+    },
+    {
+      "question": "Kan SEO erstatte annonser?",
+      "answer": "Det avhenger av behovet og økonomien. SEO og betalt synlighet kan ha ulike roller og kan vurderes sammen. Annonsebudsjett er ikke inkludert med mindre det uttrykkelig avtales."
+    }
   ],
-  "cta": { "label": "Ta en gratis sjekk", "href": "/vurdering/" }
+  "cta": {
+    "label": "Ta en gratis sjekk",
+    "href": "/vurdering/"
+  }
 }
