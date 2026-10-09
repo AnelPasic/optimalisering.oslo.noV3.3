@@ -364,3 +364,7 @@ Authoritative visual polish contract: coordination/H015-PRICING-VISUAL-POLISH.md
 ## H-016 active
 Authoritative contract: coordination/H016-CMS-EDITOR-PRICING.md
 After H-016, routine package text/image tuning should happen directly in Pages CMS rather than via Codex.
+
+
+## Customer-facing punctuation
+OWNER house style is recorded in `coordination/COPY-STYLE.md`: use `-` for dashes and `->` for textual arrows in customer-facing copy. SVG/icon arrows are unaffected.
