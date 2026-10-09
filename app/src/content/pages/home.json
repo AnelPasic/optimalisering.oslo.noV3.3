@@ -57,10 +57,10 @@
       ]
     },
     "calculator": {
-      "eyebrow": "To kanaler som multipliserer effekten sammen",
+      "eyebrow": "Synlighet og konvertering kan forsterke hverandre",
       "heading": "Hva kan flere relevante besøk og en bedre kjøpsvei bety?",
       "intro": "Endre trafikken, andelen som tar kontakt eller kjøper - eller begge. Se hvordan de to grepene virker sammen.",
-      "formula": "Relevante besøk × konverteringsrate = henvendelser / kjøp",
+      "formula": "Relevante besøk x konverteringsrate = henvendelser / kjøp",
       "labels": {
         "visits": "Relevante besøk per måned",
         "conversion": "Konverteringsrate i dag (%)",
@@ -80,7 +80,7 @@
         "trafficIncrease": 50,
         "newConversion": 2
       },
-      "caveat": "Hypotetisk regneeksempel - dog realistisk."
+      "caveat": "Hypotetisk regneeksempel - ikke et kundecase."
     },
     "packages": {
       "eyebrow": "Fast månedlig optimalisering",
@@ -118,7 +118,7 @@
       },
       "multiplier": {
         "eyebrow": "Hvorfor Vekst finnes",
-        "heading": "Flere besøk gir ikke automatisk eksponensiell vekst.",
+        "heading": "Flere besøk gir ikke automatisk flere kunder.",
         "body": "Når relevante kunder finner deg og flere av dem går videre til henvendelse eller kjøp, kan tiltakene forsterke hverandre. Derfor kan det være bedre å forbedre to deler av samme kundereise samtidig enn å veksle mellom dem fra måned til måned.",
         "conceptualRow": "Bli funnet -> bli valgt -> gå videre",
         "support": "SEO, AI-synlighet og annonser kan gi flere relevante besøk. Konverteringsoptimalisering kan øke verdien av trafikken du allerede har. Gode og relevante landingssider kan også støtte organisk synlighet, annonsekvalitet og konvertering."
@@ -379,7 +379,7 @@
         }
       ],
       "providerText": "Tjenesten drives av Medon AS.",
-      "previewLabel": "Forhåndsvisning · til vurdering",
+      "previewLabel": "Forhåndsvisning - til vurdering",
       "serviceNavigationLabel": "Tjenester og veiledning",
       "informationNavigationLabel": "Kontakt og informasjon",
       "storeLink": {
