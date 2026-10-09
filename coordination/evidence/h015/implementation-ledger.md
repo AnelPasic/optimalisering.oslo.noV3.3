@@ -1,0 +1,12 @@
+# H-015 execution ledger
+
+Incoming main: 041be18218543f89c0e69f3031165b31b42ea110.
+Authority: D-050–D-052 / exact H015-PRICING-VISUAL-POLISH.md.
+
+Bounded authorized pass: keep H-014 card geometry/HTML/copy/icons/disclosures/order and use standalone reusable SVG variants with supplied HTML callouts. Preserve optional supplied asset override and single shared CMS source. Capture H-014 baseline before changes, verify full suite/supplied-missing/CMS/browser/no-JS/preservation, obtain fresh read-only whole-change technical review, deliver main/native Worker and STOP for OWNER + STRATEGY_CONTENT visual review.
+
+OWNER supplied the actual pricing illustration during implementation, asking “bruk heller dette som grunnlag”. Original attachment copied to `owner-reference.png` for durable review. Revised SVG motifs use its soft fading curves, filled arrowheads, pale mint wash and rounded semantic callouts. The reference's card copy/CTA/unsupported claims are not imported; H-015's one dominant Vekst path and H-014 compactness/order remain authoritative. Final visual acceptance belongs to OWNER + STRATEGY_CONTENT.
+
+Final local verification: 117 files/zero diagnostics, 50 tests, 447 links and all H-007–H-015 static audits. Existing 40-check/15-page synthetic browser suite passes. Focused four-route QA at 1440/390/320 preserves 187 frozen hashes, 114 geometry/style snapshots, exact card heights and all card HTML outside visual interiors; 21 captures refreshed. Local SVG gradients resolve uniquely and deterministic IDs retain native-build byte reproducibility. Real shared-source/CMS caption/missing/supplied SVG-PNG fixture passes; original source bytes restored and fixture files removed, followed by full final verify. All direct-order/native-detail/no-JS safeguards remain, zero review POST/live email.
+
+Fresh independent technical review caught Partner-caption clipping in the three-column homepage at tablet widths, including just above the first attempted font breakpoint. Corrected only the visual-caption heading to a consistent compact 14px, avoiding a font-size breakpoint. Added focused home/pricing visual-fit checks at 1201/1200/1180/1101/1100/1024/901/900/768/651/650 alongside original 1440/390/320; all fourteen widths pass. Rebuilt/full-verified and refreshed browser/evidence after correction. No baseline, frame height, prior CSS, commercial copy or order behavior changed.

@@ -681,6 +681,16 @@ content:
                         options:
                           min: 0
                           max: 100
+                  - name: visualCaption
+                    label: HTML-bildetekst for SVG-motivet – H-015
+                    type: object
+                    fields:
+                      - name: label
+                        label: Kort semantisk etikett
+                        type: string
+                      - name: support
+                        label: Kort støtte – valgfri
+                        type: string
                   - name: price
                     label: Månedspris i kroner
                     type: number

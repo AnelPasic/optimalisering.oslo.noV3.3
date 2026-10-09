@@ -158,6 +158,10 @@
               "Har trafikk, men får for få henvendelser eller kjøp.",
               "Får for lite ut av Google Ads eller en annen viktig kanal."
             ]
+          },
+          "visualCaption": {
+            "label": "Én spak",
+            "support": "Tydelig fremgang"
           }
         },
         {
@@ -212,6 +216,10 @@
               "Har trafikk, men vil få mer ut av den med bedre konvertering.",
               "Resultatet avhenger av at to områder forbedres samtidig."
             ]
+          },
+          "visualCaption": {
+            "label": "To grep",
+            "support": "Forsterker hverandre"
           }
         },
         {
@@ -277,6 +285,10 @@
               "Ulike kundereiser trenger ulike grep.",
               "Trenger løpende prioritering på tvers."
             ]
+          },
+          "visualCaption": {
+            "label": "Flere kundereiser",
+            "support": "Prioriteres løpende"
           }
         }
       ],

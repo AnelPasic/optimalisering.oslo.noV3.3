@@ -23,7 +23,7 @@ const formatPrice = (value: number) => new Intl.NumberFormat('nb-NO', { maximumF
       <div class="package-top"><div class="package-heading"><Heading>{item.title}</Heading>{item.recommended && item.badge && <span class="package-badge">{item.badge}</span>}</div>
       <div class="package-price"><p>{item.pricePrefix && <span class="package-price-prefix">{item.pricePrefix} </span>}<span class="package-price-amount">{formatPrice(item.price)}</span> <span class="package-price-unit">{item.priceSuffix}</span></p><p class="small-copy">{item.vatSuffix}</p></div></div>
       <p class="package-descriptor">{item.descriptor}</p>
-      <Visual kind={item.visual} asset={item.visualAsset} />
+      <Visual kind={item.visual} motifId={`package-${full ? 'pricing' : 'home'}-${item.key}`} asset={item.visualAsset} caption={item.visualCaption} />
       {full && <h3 class="package-block-heading">{content.fitLabel}</h3>}
       <p class="package-fit">{item.compact.fit}</p>
       {full && <>

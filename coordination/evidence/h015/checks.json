@@ -1,0 +1,201 @@
+{
+  "base": "http://127.0.0.1:4321",
+  "checkedAt": "2026-10-09T16:21:23.000Z",
+  "baselineSource": "041be18218543f89c0e69f3031165b31b42ea110",
+  "layoutSource": "c9dc8dc7ff3b92fc640c3f6850f62f8e13380d4a",
+  "frozenFilesChecked": 187,
+  "checks": [
+    {
+      "route": "/",
+      "width": 1440,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/priser/",
+      "width": 1440,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/synlighet/",
+      "width": 1440,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/konvertering/",
+      "width": 1440,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/priser/",
+      "width": 390,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/synlighet/",
+      "width": 390,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/konvertering/",
+      "width": 390,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/",
+      "width": 320,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/priser/",
+      "width": 320,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/synlighet/",
+      "width": 320,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/konvertering/",
+      "width": 320,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    }
+  ],
+  "responsiveVisualWidths": [
+    1440,
+    1201,
+    1200,
+    1180,
+    1101,
+    1100,
+    1024,
+    901,
+    900,
+    768,
+    651,
+    650,
+    390,
+    320
+  ],
+  "retainedSnapshots": 114,
+  "cardHeights": {
+    "before": {
+      "/:1440": [
+        482,
+        488.38,
+        482
+      ],
+      "/priser/:1440": [
+        770,
+        770,
+        770
+      ],
+      "/:390": [
+        482,
+        516.38,
+        482
+      ],
+      "/priser/:390": [
+        758.89,
+        813.39,
+        721.89
+      ],
+      "/:320": [
+        521.17,
+        521.17,
+        521.17
+      ],
+      "/priser/:320": [
+        809.25,
+        840.56,
+        863.75
+      ]
+    },
+    "after": {
+      "/:1440": [
+        482,
+        488.38,
+        482
+      ],
+      "/priser/:1440": [
+        770,
+        770,
+        770
+      ],
+      "/:390": [
+        482,
+        516.38,
+        482
+      ],
+      "/priser/:390": [
+        758.89,
+        813.39,
+        721.89
+      ],
+      "/:320": [
+        521.17,
+        521.17,
+        521.17
+      ],
+      "/priser/:320": [
+        809.25,
+        840.56,
+        863.75
+      ]
+    }
+  },
+  "visualPolish": {
+    "exactH014CardHeights": true,
+    "cardHtmlOutsideVisualUnchanged": true,
+    "tabletCaptionsUnclipped": true
+  },
+  "compact": {
+    "exactCopy": true,
+    "desktop680to780": true,
+    "nativeCollapsedDetails": true,
+    "fullCopyAccessible": true,
+    "keyboardAndNoJs": true,
+    "horizontalVisuals": true,
+    "noExpandedOverflow": true,
+    "multiplierCollapsed": true
+  },
+  "order": {
+    "allThreeQueryAndHomeCtas": true,
+    "pricingCtas": true,
+    "historyAndInvalidQuery": true,
+    "disabledSubmitIncludingProgrammaticAndNoJs": true,
+    "noFalseSuccess": true
+  },
+  "errors": [],
+  "posts": 0,
+  "liveEmailsSent": 0
+}
