@@ -3,8 +3,8 @@
   "kind": "utility",
   "status": "REVIEW_REQUIRED",
   "authority": "DRAFT / NON-AUTHORITATIVE",
-  "seo": { "title": "Personvern – utkast for Optimalisering Oslo", "description": "Utkast om opplysningene i kontaktskjemaet og planlagt behandling. Mottaker, lagringstid og endelig personverninformasjon må avklares før lansering." },
-  "eyebrow": "Personvernutkast – krever gjennomgang",
+  "seo": { "title": "Personvern - utkast for Optimalisering Oslo", "description": "Utkast om opplysningene i kontaktskjemaet og planlagt behandling. Mottaker, lagringstid og endelig personverninformasjon må avklares før lansering." },
+  "eyebrow": "Personvernutkast - krever gjennomgang",
   "title": "Du skal vite hva som skjer med opplysningene dine.",
   "intro": "Dette er et utkast for en lokal forhåndsvisning. Det beskriver den planlagte løsningen og åpne spørsmål. Det er ikke en ferdig personvernerklæring for en lansert tjeneste.",
   "sections": [
