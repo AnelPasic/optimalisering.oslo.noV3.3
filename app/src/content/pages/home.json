@@ -119,9 +119,9 @@
       "multiplier": {
         "eyebrow": "Hvorfor Vekst finnes",
         "heading": "Flere besøk gir ikke automatisk eksponensiell vekst.",
-        "body": "Når relevante kunder finner deg og flere av dem går videre til henvendelse eller kjøp, kan tiltakene forsterke hverandre. Derfor kan det være mer effektivt å forbedre to deler av samme kundereise samtidig enn å veksle mellom dem fra måned til måned.",
+        "body": "Når relevante kunder finner deg og flere av dem går videre til henvendelse eller kjøp, kan tiltakene forsterke hverandre. Derfor kan det være bedre å forbedre to deler av samme kundereise samtidig enn å veksle mellom dem fra måned til måned.",
         "conceptualRow": "Bli funnet -> bli valgt -> gå videre",
-        "support": "SEO, AI-synlighet og annonser kan gi flere relevante besøk. Konverteringsoptimalisering kan øke verdien av trafikken du allerede har. Gode og relevante landingssider kan samtidig støtte både organisk synlighet, annonsekvalitet og konvertering."
+        "support": "SEO, AI-synlighet og annonser kan gi flere relevante besøk. Konverteringsoptimalisering kan øke verdien av trafikken du allerede har. Gode og relevante landingssider kan også støtte organisk synlighet, annonsekvalitet og konvertering."
       },
       "items": [
         {
@@ -220,7 +220,7 @@
               "icon": "search",
               "label": "Google Ads + SEO / AI-synlighet",
               "compactLabel": "Google Ads + SEO / AI-synlighet",
-              "description": "Få fart med betalt synlighet nå, samtidig som du bygger organisk synlighet som kan redusere avhengigheten av annonsebudsjett over tid."
+              "description": "Bruk betalt synlighet for å få fart nå, og bygg organisk synlighet for å redusere avhengigheten av annonsebudsjett over tid."
             }
           ],
           "selectionRule": "Velg Vekst når to forbedringer kan forsterke hverandre.",
@@ -255,7 +255,7 @@
               "Trenger løpende prioritering på tvers."
             ]
           },
-          "scope": "Vi prioriterer løpende på tvers av kundereisene som har størst kommersiell verdi eller størst forbedringspotensial. Det betyr ikke at alt gjøres samtidig eller at kapasiteten er ubegrenset.",
+          "scope": "Vi prioriterer løpende kundereisene med størst kommersiell verdi eller størst forbedringspotensial. Det betyr ikke at alt gjøres samtidig eller at kapasiteten er ubegrenset.",
           "typicalBusiness": "Typisk en virksomhet med fire-fem forskjellige tjenester - for eksempel kantine, catering, fruktlevering og andre B2B-tjenester - der hver kundereise har egne søk, konkurrenter, sider og prioriteringer.",
           "situations": [
             "Flere tjenester eller produktområder konkurrerer i ulike markeder.",
@@ -445,11 +445,11 @@
       "heading": "Best når kundene faktisk har et valg.",
       "items": [
         {
-          "title": "Passer godt hvis…",
+          "title": "Passer godt hvis",
           "text": "Bedriften konkurrerer om kundene, har kapasitet til flere henvendelser eller salg, og en ny kunde eller ordre har nok verdi til at forbedringer kan lønne seg."
         },
         {
-          "title": "Passer dårlig hvis…",
+          "title": "Passer dårlig hvis",
           "text": "Du er allerede det eneste reelle alternativet og kundene finner deg uten problemer. Tenk en tannklinikk på et lite sted som er eneste klinikk innenfor 100 km, eller en nettbutikk som er eneste norske forhandler av reservedeler til gamle flipperspill og allerede eier de relevante søkene."
         }
       ]
