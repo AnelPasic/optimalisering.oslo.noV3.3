@@ -1,5 +1,41 @@
 # ChatGPT to Codex
 
+## Active handoff — H-014
+
+Date: 2026-10-09
+Authority: OWNER + STRATEGY_CONTENT D-047–D-049
+Exact contract: coordination/H014-COMPACT-PRICING.md
+
+H-013 ordering/data architecture passes. Its visual card density does not.
+
+Execute H-014 exactly.
+
+Core rule:
+**The card helps the customer choose. The disclosure explains the package after they want more detail.**
+
+Do not rewrite package strategy.
+
+Implement:
+- compact three-card comparison;
+- exact short visible copy from H014-COMPACT-PRICING.md;
+- compact horizontal visual area;
+- compact icon row;
+- long existing package copy moved behind native collapsed Se detaljer;
+- homepage cards even shorter;
+- direct ordering preserved;
+- free check remains secondary.
+
+Keep the whole card semantic HTML. Use SVG/image only for conceptual visual/icon artwork.
+
+Measure and report actual before/after default card heights.
+
+Push to main, verify Worker, update evidence/coordination, and STOP for OWNER + STRATEGY_CONTENT H-014 review.
+
+Do not continue to other pages or production ordering.
+
+
+---
+
 ## Completed handoff — H-013
 
 **Date:** 2026-10-09  
