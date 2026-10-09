@@ -1,0 +1,41 @@
+{
+  "base": "https://optimalisering-oslo-v33.anel.workers.dev",
+  "checkedAt": "2026-10-09T00:10:25.039Z",
+  "baselineSource": "fd48a91a4c7353aa37cb55b9abd30efd8e18a9f7",
+  "frozenFilesChecked": 187,
+  "checks": [
+    {
+      "route": "/synlighet/",
+      "width": 1440,
+      "exactCopyAndOrder": true,
+      "sharedPricing": true,
+      "preservedHomeAndPricing": true,
+      "noOverflow": true,
+      "proofRendered": false,
+      "noindex": true
+    },
+    {
+      "route": "/synlighet/",
+      "width": 390,
+      "exactCopyAndOrder": true,
+      "sharedPricing": true,
+      "preservedHomeAndPricing": true,
+      "noOverflow": true,
+      "proofRendered": false,
+      "noindex": true
+    },
+    {
+      "route": "/synlighet/",
+      "width": 320,
+      "exactCopyAndOrder": true,
+      "sharedPricing": true,
+      "preservedHomeAndPricing": true,
+      "noOverflow": true,
+      "proofRendered": false,
+      "noindex": true
+    }
+  ],
+  "errors": [],
+  "posts": 0,
+  "liveEmailsSent": 0
+}
