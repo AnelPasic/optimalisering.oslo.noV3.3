@@ -3,20 +3,89 @@
   "kind": "assessment",
   "status": "REVIEW_REQUIRED",
   "authority": "DRAFT / NON-AUTHORITATIVE",
-  "seo": { "title": "Gratis manuell sjekk av nettsiden | Medon", "description": "Send nettsiden for en gratis, avgrenset manuell sjekk. Medon gir kort veiledning om hva vi ville startet med, hvorfor og hvilken retning som passer." },
+  "seo": {
+    "title": "Gratis manuell sjekk av nettsiden | Medon",
+    "description": "Send nettsiden for en gratis, avgrenset manuell sjekk. Medon gir kort veiledning om hva vi ville startet med, hvorfor og hvilken retning som passer."
+  },
   "eyebrow": "En gratis sjekk. En tydelig start.",
   "title": "Send en lenke. Finn et sted å begynne.",
   "intro": "Du trenger ikke vite om problemet er synlighet eller konvertering. Medon ser manuelt på nettsiden og gir kort veiledning om hva vi ville startet med, og hvorfor.",
   "sections": [
-    { "id": "sjekk", "heading": "En startretning, ikke en perm med feil.", "body": ["Den gratis sjekken er en avgrenset manuell vurdering av den offentlige nettsiden eller nettbutikken. Vi vurderer om Synlighet, Konvertering eller begge ser mest relevant ut å begynne med.", "Du får kort, begrunnet veiledning. Vi lover ikke en bestemt svartid eller et bestemt resultat."], "items": [ { "title": "Hva vi ville startet med", "text": "En mulig prioritering ut fra det vi kan se og informasjonen du deler." }, { "title": "Hvorfor det er relevant", "text": "En kort forklaring som knytter prioriteringen til kundens vei til kontakt eller kjøp." }, { "title": "Hva sjekken ikke er", "text": "Ingen automatisk poengsum, full revisjon, komplett feilliste, prognose eller gjennomføring." } ] },
-    { "id": "sjekken", "heading": "Du sender oss en lenke. Ikke en avhandling.", "body": ["Oppgi nettsiden du vil at vi skal se på, og en e-postadresse for bedriften. Du kan gjerne fortelle hva du ønsker flere av: relevante henvendelser, kjøp eller hjelp til å finne første prioritering.", "En kort melding er valgfri. Du trenger ikke dele innlogging, kundelister, interne rapporter eller personlige opplysninger om andre for denne sjekken."], "links": [ { "label": "Les personvernutkastet", "href": "/personvern/" } ] },
-    { "id": "etterpa", "heading": "Videre arbeid må ha eget omfang og pris.", "body": ["Sjekken er et utgangspunkt for å vurdere behovet. Dersom videre arbeid er aktuelt, må vi avklare tjeneste, prioritering, tekniske muligheter, ansvar og pris.", "Optimalisering Oslo er en tjeneste fra Medon AS. Du velger ikke en ferdig betalt pakke ved å be om den gratis sjekken."], "links": [ { "label": "Se alternativene for videre arbeid", "href": "/priser/" }, { "label": "Om Medon som leverandør", "href": "/om/" } ] }
+    {
+      "id": "sjekk",
+      "heading": "En startretning, ikke en perm med feil.",
+      "body": [
+        "Den gratis sjekken er en avgrenset manuell vurdering av den offentlige nettsiden eller nettbutikken. Vi vurderer om Synlighet, Konvertering eller begge ser mest relevant ut å begynne med.",
+        "Du får kort, begrunnet veiledning. Vi lover ikke en bestemt svartid eller et bestemt resultat."
+      ],
+      "items": [
+        {
+          "title": "Hva vi ville startet med",
+          "text": "En mulig prioritering ut fra det vi kan se og informasjonen du deler."
+        },
+        {
+          "title": "Hvorfor det er relevant",
+          "text": "En kort forklaring som knytter prioriteringen til kundens vei til kontakt eller kjøp."
+        },
+        {
+          "title": "Hva sjekken ikke er",
+          "text": "Ingen automatisk poengsum, full revisjon, komplett feilliste, prognose eller gjennomføring."
+        }
+      ]
+    },
+    {
+      "id": "sjekken",
+      "heading": "Du sender oss en lenke. Ikke en avhandling.",
+      "body": [
+        "Oppgi nettsiden du vil at vi skal se på, og en e-postadresse for bedriften. Du kan gjerne fortelle hva du ønsker flere av: relevante henvendelser, kjøp eller hjelp til å finne første prioritering.",
+        "En kort melding er valgfri. Du trenger ikke dele innlogging, kundelister, interne rapporter eller personlige opplysninger om andre for denne sjekken."
+      ],
+      "links": [
+        {
+          "label": "Les personvernutkastet",
+          "href": "/personvern/"
+        }
+      ]
+    },
+    {
+      "id": "etterpa",
+      "heading": "Videre arbeid må ha eget omfang og pris.",
+      "body": [
+        "Sjekken er et utgangspunkt for å vurdere behovet. Dersom videre arbeid er aktuelt, må vi avklare tjeneste, prioritering, tekniske muligheter, ansvar og pris.",
+        "Optimalisering Oslo er en tjeneste fra Medon AS. Du velger ikke en ferdig betalt pakke ved å be om den gratis sjekken."
+      ],
+      "links": [
+        {
+          "label": "Se alternativene for videre arbeid",
+          "href": "/priser/"
+        },
+        {
+          "label": "Om Medon som leverandør",
+          "href": "/om/"
+        }
+      ]
+    }
   ],
   "faq": [
-    { "question": "Må jeg gi tilgang til nettsiden?", "answer": "Den gratis sjekken tar utgangspunkt i den offentlige nettsiden. Du trenger ikke sende innlogging. Tilgang til data eller systemer for videre arbeid må avklares særskilt." },
-    { "question": "Er sjekken en full SEO- eller konverteringsrevisjon?", "answer": "Nei. Den gir en kort, begrunnet startretning. Den inkluderer ikke en komplett undersøkelse av alle sider, en full feilliste eller en prognose." },
-    { "question": "Når får jeg svar?", "answer": "Det er ikke fastsatt en svartid i dette utkastet. Vi skal ikke love et tidspunkt som ikke er avklart." },
-    { "question": "Kan jeg sende en nettbutikk?", "answer": "Ja. Del nettadressen, og fortell gjerne hvilken del av veien til kjøp du er usikker på. Sjekken har samme avgrensning som for andre nettsider." }
+    {
+      "question": "Må jeg gi tilgang til nettsiden?",
+      "answer": "Den gratis sjekken tar utgangspunkt i den offentlige nettsiden. Du trenger ikke sende innlogging. Tilgang til data eller systemer for videre arbeid må avklares særskilt."
+    },
+    {
+      "question": "Er sjekken en full SEO- eller konverteringsrevisjon?",
+      "answer": "Nei. Den gir en kort, begrunnet startretning. Den inkluderer ikke en komplett undersøkelse av alle sider, en full feilliste eller en prognose."
+    },
+    {
+      "question": "Når får jeg svar?",
+      "answer": "Det er ikke fastsatt en svartid i dette utkastet. Vi skal ikke love et tidspunkt som ikke er avklart."
+    },
+    {
+      "question": "Kan jeg sende en nettbutikk?",
+      "answer": "Ja. Del nettadressen, og fortell gjerne hvilken del av veien til kjøp du er usikker på. Sjekken har samme avgrensning som for andre nettsider."
+    }
   ],
-  "cta": { "label": "Ta en gratis sjekk", "href": "/vurdering/#skjema" }
+  "cta": {
+    "label": "Ta en gratis sjekk",
+    "href": "/vurdering/#skjema"
+  }
 }
