@@ -373,3 +373,8 @@ OWNER house style is recorded in `coordination/COPY-STYLE.md`: use `-` for dashe
 ## Human copy house style
 
 D-060 expands `coordination/COPY-STYLE.md` into the standing customer-facing writing rule. Existing page copy and visible UI strings have been conservatively normalized. Future content/CMS edits should follow the same rule; do not reintroduce Unicode marketing punctuation or repeated template-copy formulas.
+
+
+## Copy-style regression guard
+
+D-061 adds `npm run qa:copy` to the normal static QA chain. This prevents the most obvious ornamental punctuation and template-copy phrases from silently returning in page JSON or hard-coded Astro UI copy.
