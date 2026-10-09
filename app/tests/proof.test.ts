@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 import YAML from 'yaml';
-import { proofCaseSchema, getPublishableCases } from '../src/lib/proof.ts';
+import { proofCaseSchema, proofContentSchema, getPublishableCases } from '../src/lib/proof.ts';
 
 // Memory-only synthetic fixture. It never belongs to an Astro content collection.
 const complete = {
@@ -19,7 +19,7 @@ const slot = { publicationApproved: true, caseIds: ['synthetic-proof'] };
 
 test('CMS preserves the existing page CTA and exposes only declared proof fields', () => {
   const config = YAML.parse(readFileSync('../.pages.yml', 'utf8'));
-  assert.equal(config.content.find((entry: any) => entry.name === 'pages').fields.find((field: any) => field.name === 'cta')?.component, 'link');
+  assert.equal(config.content.find((entry: any) => entry.name === 'services').fields.find((field: any) => field.name === 'cta')?.component, 'link');
   const proofFields = config.content.find((entry: any) => entry.name === 'proofCases').fields;
   assert.deepEqual(proofFields.map((field: any) => field.name).sort(), Object.keys(complete).sort());
 });
@@ -61,6 +61,16 @@ test('missing fields, empty proof requirements and flags cannot bypass publicati
     assert.deepEqual(getPublishableCases(slot, [{ ...complete, forcePublish: true }]), [], 'no fixture/render override');
   } finally {
     if (previous === undefined) delete process.env.PUBLISH_PROOF; else process.env.PUBLISH_PROOF = previous;
+  }
+});
+
+test('CMS normalization preserves rejection of every incomplete publication record', () => {
+  assert.deepEqual(getPublishableCases(slot, [proofContentSchema.parse(complete)]), getPublishableCases(slot, [complete]));
+  for (const key of Object.keys(complete)) {
+    const incomplete: any = structuredClone(complete);
+    delete incomplete[key];
+    const normalized = proofContentSchema.safeParse(incomplete);
+    if (normalized.success) assert.deepEqual(getPublishableCases(slot, [normalized.data]), [], `normalized missing ${key}`);
   }
 });
 

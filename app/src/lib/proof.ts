@@ -17,6 +17,25 @@ export const proofCaseSchema = z.object({
   publicationApproved: z.boolean(),
 }).strict();
 
+// CMS strips empty/null values. Restore their unknown/empty meaning for builds;
+// a structurally incomplete raw record retains the strict publication rejection.
+const unknownText = nullableText.default(null);
+const cmsProofSchema = proofCaseSchema.extend({
+  anonymizedLabel: unknownText, relationship: unknownText,
+  before: unknownText, after: unknownText, delta: unknownText,
+  period: proofCaseSchema.shape.period.extend({ before: unknownText, after: unknownText }),
+  intervention: unknownText, limitations: unknownText,
+  permissionEvidence: unknownText, strategyReviewEvidence: unknownText,
+  artifactReferences: z.array(z.string()).default([]),
+  evidenceMetrics: z.array(z.object({ metric: z.string(), before: unknownText, after: unknownText, delta: unknownText, nextPeriod: unknownText, timeframe: unknownText }).strict()).default([]),
+});
+export const proofContentSchema = z.preprocess(record => {
+  if (record && typeof record === 'object' && 'publicationApproved' in record && record.publicationApproved === true && !proofCaseSchema.safeParse(record).success) {
+    return { ...record, publicationApproved: false };
+  }
+  return record;
+}, cmsProofSchema);
+
 export type ProofCase = z.infer<typeof proofCaseSchema>;
 export interface PublicProof {
   displayName: string;

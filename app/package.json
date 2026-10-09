@@ -17,7 +17,8 @@
     "verify": "npm run check && npm test && npm run build && npm run qa:static",
     "deploy:review": "npm run verify && wrangler deploy",
     "leads:retry": "node --env-file-if-exists=.env server/retry.mjs",
-    "qa:copy": "node scripts/audit-copy-style.mjs"
+    "qa:copy": "node scripts/audit-copy-style.mjs",
+    "qa:cms": "node scripts/audit-cms-roundtrip.ts"
   },
   "dependencies": {
     "@fontsource-variable/figtree": "^5.3.0",

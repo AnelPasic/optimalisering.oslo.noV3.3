@@ -1,0 +1,153 @@
+{
+  "checkedAt": "2026-10-09T23:00:48.829Z",
+  "mode": "read-only Pages-CMS-equivalent JSON fixture; not an authenticated save",
+  "upstreamRevision": "6f4e860a35d934406580287e7042e5e111e207a1",
+  "merge": true,
+  "normalization": "Declared fields; deep object merge; array replacement; null/empty value sanitization; two-space JSON. Empty optional values normalize through actual application schemas. Nonempty unmodeled object/root fields survive merge; array item fields must be modeled.",
+  "checks": [
+    {
+      "file": "app/src/content/pages/ai-synlighet.json",
+      "originalSha256": "2e785441994d366bb36a8da74dbace6ed2390abd5cd341ac4296d46f06f653bb",
+      "serializedFixtureSha256": "8a193d36022cf007d1686d78bba6f92974cbc9120f02e4c350423d82a0da6707",
+      "editor": "services",
+      "editedField": "title",
+      "semanticOnlyExpectedEdit": true
+    },
+    {
+      "file": "app/src/content/pages/home.json",
+      "originalSha256": "198cc94034ff9e276530d697a98f80c444fb37533ce4f26935d1b5625d811ab7",
+      "serializedFixtureSha256": "c246807345a2f94497303fbccb3495fb743eb181dc2eb189d030cda828e5f17e",
+      "editor": "homepage",
+      "editedField": "title",
+      "semanticOnlyExpectedEdit": true
+    },
+    {
+      "file": "app/src/content/pages/hva-bor-optimaliseres-forst.json",
+      "originalSha256": "3fe28418df29ce1ed02f8687ca958c421ed5a50e2540f0a7e01d412e20c1c1af",
+      "serializedFixtureSha256": "407a060eae19ca2bd222fd192166852d2ff78860f9842528cc69a492f7da9c56",
+      "editor": "insight",
+      "editedField": "title",
+      "semanticOnlyExpectedEdit": true
+    },
+    {
+      "file": "app/src/content/pages/innsikt.json",
+      "originalSha256": "2f5021cc01b3377042853be30d4b06783c99e832f4a68e7e0007106c3b11e71d",
+      "serializedFixtureSha256": "2d6099f9d9fa5b071f565cc08e45959298357ce59a4d62e209d86c060faeebe8",
+      "editor": "insight",
+      "editedField": "title",
+      "semanticOnlyExpectedEdit": true
+    },
+    {
+      "file": "app/src/content/pages/kontakt.json",
+      "originalSha256": "fa112b10f9f5ff7c9bbb48ab841c5a313c53e7de24789e5b31bc200e9504063a",
+      "serializedFixtureSha256": "226eb7e87d5e506247b0dab75dbe0bdbc8308c8279ad5c10eb8309dbc9588089",
+      "editor": "kontakt",
+      "editedField": "title",
+      "semanticOnlyExpectedEdit": true
+    },
+    {
+      "file": "app/src/content/pages/konvertering.json",
+      "originalSha256": "09cfe098a2045d8e2fac577715815d63858b577e4de6588f7802c89886fc4b92",
+      "serializedFixtureSha256": "fbcc144f4c67421a95b39c3dd042f25d45e08843d7afc89e14d36f912ac6b42e",
+      "editor": "services",
+      "editedField": "title",
+      "semanticOnlyExpectedEdit": true
+    },
+    {
+      "file": "app/src/content/pages/male-effekt-av-optimalisering.json",
+      "originalSha256": "5f2d5b28d9342b173a766459bc24d5413c68d592f1cc59d5c3b646668b40a396",
+      "serializedFixtureSha256": "9f559e470f456b425742b75641d78d8412fec0cb4f3a8f9b9d72c505fc196dd8",
+      "editor": "insight",
+      "editedField": "title",
+      "semanticOnlyExpectedEdit": true
+    },
+    {
+      "file": "app/src/content/pages/nettbutikkoptimalisering.json",
+      "originalSha256": "10d96feeafb50664f512db7f33c2038747da5d3e7e23c013bc086416bbe4c138",
+      "serializedFixtureSha256": "de3ee236ae0c3cfe1757f9f9ea8dc1d88af42d03bae4de11e52dc8c9b9aa6f49",
+      "editor": "services",
+      "editedField": "title",
+      "semanticOnlyExpectedEdit": true
+    },
+    {
+      "file": "app/src/content/pages/om.json",
+      "originalSha256": "0c2114f5d72e89b04e17a975e80da09bb4bebbfac8d391bdd3d8d736a94ccc92",
+      "serializedFixtureSha256": "1b2a0c87b81308ba89d8fb6a01bc40b00647e259ff59969d5c46e6e458b739c7",
+      "editor": "om",
+      "editedField": "title",
+      "semanticOnlyExpectedEdit": true
+    },
+    {
+      "file": "app/src/content/pages/personvern.json",
+      "originalSha256": "2586ae49f95eb39cc9f092a76e2dcef1cb8c1bcdfb93d6bcd421f5084478ed13",
+      "serializedFixtureSha256": "4a6124fff596706a777ab7a6f6afdce99f85a60ec0a3359b743ef2c0eb0349ae",
+      "editor": "personvern",
+      "editedField": "title",
+      "semanticOnlyExpectedEdit": true
+    },
+    {
+      "file": "app/src/content/pages/priser.json",
+      "originalSha256": "f5a849274ac691740ef5a14e7e81f94da1ef6c531b339255401878684885c778",
+      "serializedFixtureSha256": "b078fcb93ce73b11360fe001b79a9abb7d9b3c09abaa4264f57d75ea3fbdcfd3",
+      "editor": "priser",
+      "editedField": "title",
+      "semanticOnlyExpectedEdit": true
+    },
+    {
+      "file": "app/src/content/pages/seo.json",
+      "originalSha256": "79bb5b873eb3409035dc004db96fecc25afaeefa5f18b3a15db1d3120e38e87f",
+      "serializedFixtureSha256": "3720bb81ef562b33947e882189f44e5cb38831c8a32ecdc4aa482597c251b168",
+      "editor": "services",
+      "editedField": "title",
+      "semanticOnlyExpectedEdit": true
+    },
+    {
+      "file": "app/src/content/pages/synlighet.json",
+      "originalSha256": "b669838ddfca8ac47d5b690f867e86e4dbd8d69d801978d173bf4bd3f82e2a2a",
+      "serializedFixtureSha256": "94c2874237172894edf8a479afafe65126dd65fc0420ffbe93d14ac007035656",
+      "editor": "services",
+      "editedField": "title",
+      "semanticOnlyExpectedEdit": true
+    },
+    {
+      "file": "app/src/content/pages/vilkar.json",
+      "originalSha256": "ab8ffc1ad61b813efb4d2c7cea8d0adf71695c13b7df21b09416a2f5bdaba400",
+      "serializedFixtureSha256": "d90a869e6cb2257c46724c37783887ea112b9b8566cacfb83421d9629c7e41d0",
+      "editor": "vilkar",
+      "editedField": "title",
+      "semanticOnlyExpectedEdit": true
+    },
+    {
+      "file": "app/src/content/pages/vurdering.json",
+      "originalSha256": "0cc6a286d70cc3010ab227a2edd18a49e9f2c2882021e2064d8fe82ed5948d5f",
+      "serializedFixtureSha256": "c1f69157720f724f4750efae1a93f7e0a888f280f882839bb4bc743c48d32810",
+      "editor": "vurdering",
+      "editedField": "title",
+      "semanticOnlyExpectedEdit": true
+    },
+    {
+      "file": "app/src/content/proof/nysta.json",
+      "originalSha256": "e8760b900c78f4a258a0bce1e4973ad6540e953610106323e33b7ba9f682dc9c",
+      "serializedFixtureSha256": "8063f43c6eaa2c734798e22174eacfe91658bd0c2bb0b80db220dd0c1c1ac18f",
+      "editor": "proofCases",
+      "editedField": "source",
+      "semanticOnlyExpectedEdit": true
+    },
+    {
+      "file": "app/src/content/proof/oslo-privatklinikk.json",
+      "originalSha256": "c8865b2b1a1ee055121883f35d01b58733abb4426712fa924cdc1c5a92bbdf43",
+      "serializedFixtureSha256": "0fd1e6031801be3337edeaf73793d4e551f55cee4373d942a937874f57535f35",
+      "editor": "proofCases",
+      "editedField": "source",
+      "semanticOnlyExpectedEdit": true
+    }
+  ],
+  "representative": {
+    "field": "homepage.selector.items[1].title",
+    "before": "Flere besøk til henvendelser og salg",
+    "after": "Flere besøk til henvendelser og salg (CMS-test)",
+    "semanticOnlyExpectedEdit": true,
+    "publishableCases": 0
+  },
+  "allSourceFilesByteUnchanged": true
+}

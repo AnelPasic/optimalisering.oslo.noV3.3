@@ -1,4 +1,4 @@
-# Pages CMS: shared home/pricing/service commercial source; other 11 pages remain frozen.
+# Pages CMS: one shared package source in home.json; review/launch gates remain in coordination.
 media:
   - name: assets
     label: Eksisterende media
@@ -8,19 +8,29 @@ media:
     label: Forsidefoto – valgte bilde og alternativer
     input: app/public/images/home
     output: /images/home
-    extensions: [webp]
+    extensions:
+      - webp
     rename: safe
   - name: serviceHeroImages
     label: Tjenestenes drømmeutfall – leverte bilder og illustrasjoner
     input: app/public/images/services
     output: /images/services
-    extensions: [webp, png, jpg, jpeg, avif, svg]
+    extensions:
+      - webp
+      - png
+      - jpg
+      - jpeg
+      - avif
+      - svg
     rename: safe
   - name: packageVisuals
     label: Pakkeillustrasjoner – SVG, WebP og PNG
     input: app/public/images/pricing
     output: /images/pricing
-    extensions: [svg, webp, png]
+    extensions:
+      - svg
+      - webp
+      - png
     rename: safe
 settings:
   content:
@@ -30,7 +40,6 @@ settings:
       update: "Innholdsoppdatering: {path} (via Pages CMS)"
       create: "Nytt innhold: {path} (via Pages CMS)"
       delete: "Slettet innhold: {path} (via Pages CMS)"
-
 components:
   link:
     type: object
@@ -45,332 +54,30 @@ components:
         pattern: ^/
         required: true
 content:
-  - name: pages
-    label: Nettsider
-    type: collection
-    path: app/src/content/pages
-    exclude:
-      - home.json
+  - name: homepage
+    label: Forside
+    type: file
+    path: app/src/content/pages/home.json
     format: json
-    filename: "{primary}.json"
-    view:
-      primary: title
-      fields:
-        - title
-        - authority
-        - status
-        - kind
     fields:
-      - name: slug
-        label: Nettadresse
-        type: string
-        readonly: true
-      - name: kind
-        label: Sidetype
-        type: string
-        readonly: true
-      - name: status
-        label: Godkjenningsstatus
-        description: Endres i Git etter innholds- og eiergjennomgang. Kladd er ikke
-          publiseringstillatelse.
-        type: string
-        readonly: true
-      - name: authority
-        label: Innholdsautoritet
-        description: DRAFT / NON-AUTHORITATIVE gjelder til en uttrykkelig innholdslås er
-          dokumentert i coordination/DECISIONS.md.
-        type: string
-        readonly: true
       - name: seo
-        label: Søkeresultat
+        label: SEO
         type: object
         fields:
           - name: title
             label: Sidetittel
             type: string
-            required: true
           - name: description
-            label: Beskrivelse
+            label: Metabeskrivelse
             type: text
-            required: true
-      - name: locale
-        label: Språk – fremtidig rutekontrakt
-        description: Fravær betyr nb. Kun teknisk koordinering i H-011; ingen engelske sider opprettes.
-        type: string
-        readonly: true
-      - name: translationKey
-        label: Oversettelsespar – fremtidig kontrakt
-        description: Felles nøkkel for eksplisitt godkjente språkversjoner. Settes i Git ved senere språk-handoff.
-        type: string
-        readonly: true
-      - name: heroVisual
-        label: Tjenestehero – drømmeutfall
-        description: Valgfritt. Brukes nå bare på Synlighet og Konvertering. ChatGPT leverer og OWNER velger kunsten etter H-011-review. Ingen forsidefoto som standard; manglende fil gir teksthero.
-        type: object
-        fields:
-          - name: kind
-            label: Bildetype
-            type: select
-            options:
-              values: [photo, illustration]
-            required: true
-          - name: src
-            label: Levert tjenestebilde
-            type: image
-            options:
-              media: serviceHeroImages
-            required: true
-          - name: alt
-            label: Kort beskrivelse av bildets mening
-            type: string
-            required: true
-          - name: positionX
-            label: Fokus vannrett (0–100)
-            type: number
-            required: true
-            options:
-              min: 0
-              max: 100
-          - name: positionY
-            label: Fokus loddrett (0–100)
-            type: number
-            required: true
-            options:
-              min: 0
-              max: 100
       - name: eyebrow
-        label: Overtekst
+        label: Toppseksjon (Hero) – Overtekst
         type: string
       - name: title
         label: Hovedoverskrift
         type: string
-        required: true
       - name: intro
-        label: Innledning
-        type: text
-        required: true
-      - name: sections
-        label: Innhold
-        type: object
-        list: true
-        fields:
-          - name: id
-            label: Seksjonens lenkeanker
-            type: string
-            readonly: true
-          - name: eyebrow
-            label: Overtekst
-            type: string
-          - name: heading
-            label: Overskrift
-            type: string
-          - name: body
-            label: Avsnitt
-            description: På /priser/ er kostnader.body en godkjent referanse. Synlige kostnadsregler, prisbroene på /synlighet/ og /konvertering/ og gjentatte prisfakta styres av Forside > Forsidens innhold > Felles pakker for forsiden, /priser/, /synlighet/ og /konvertering/. Låst tekst etter D-027/D-028/D-031 endres bare etter et nytt scoped handoff.
-            type: text
-            list: true
-          - name: items
-            label: Alternativer eller steg
-            type: object
-            list: true
-            fields:
-              - name: title
-                label: Tittel
-                type: string
-              - name: text
-                label: Beskrivelse
-                type: text
-              - name: href
-                label: Intern lenke
-                type: string
-                pattern: ^/
-              - name: label
-                label: Lenketekst
-                type: string
-          - name: links
-            label: Relaterte lenker
-            component: link
-            list: true
-      - name: faq
-        label: Spørsmål og svar
-        type: object
-        list: true
-        fields:
-          - name: question
-            label: Spørsmål
-            type: string
-          - name: answer
-            label: Svar
-            type: text
-      - name: cta
-        label: Neste steg
-        component: link
-  - name: proofCases
-    label: Case- og evidensregister – ingen automatisk publisering
-    type: collection
-    path: app/src/content/proof
-    format: json
-    filename: "{fields.id}.json"
-    view:
-      primary: clientName
-      fields: [clientName, publicationStatus, namingPermission, artifactStatus]
-    fields:
-      - name: id
-        label: Stabil case-ID
-        description: Referanser fra forsiden bruker denne ID-en. Endring krever at referansene oppdateres.
-        type: string
-        pattern: ^[a-z0-9][a-z0-9-]*$
-        required: true
-      - name: clientName
-        label: Kunde- eller visningsnavn
-        type: string
-      - name: anonymizedLabel
-        label: Godkjent anonymisert navn
-        type: string
-      - name: relationship
-        label: Relasjon og bakgrunn – intern evidens
-        type: text
-      - name: dominantMetric
-        label: Hovedresultat og måledefinisjon
-        type: text
-      - name: before
-        label: Før-verdi
-        type: string
-      - name: after
-        label: Etter-verdi
-        type: string
-      - name: delta
-        label: Dokumentert endring
-        type: string
-      - name: period
-        label: Sammenligningsperioder
-        type: object
-        fields:
-          - name: before
-            label: Før-periode
-            type: string
-          - name: after
-            label: Etter-periode
-            type: string
-          - name: comparable
-            label: Sammenlignbarhet dokumentert
-            type: boolean
-            default: false
-      - name: intervention
-        label: Dokumentert tiltak eller endring
-        type: text
-      - name: source
-        label: Kilde og proveniens – intern evidens
-        type: text
-      - name: limitations
-        label: Begrensninger og attribusjonsforbehold
-        type: text
-      - name: namingPermission
-        label: Navne- eller anonymiseringstillatelse
-        type: select
-        default: NEEDS_PERMISSION
-        options:
-          values: [NEEDS_PERMISSION, GRANTED, NAME_APPROVED, ANONYMIZED_APPROVED]
-      - name: permissionEvidence
-        label: Dokumentasjon på faktisk publiseringstillatelse
-        type: text
-      - name: strategyReviewStatus
-        label: STRATEGY_CONTENT-review
-        description: GRANTED tillatelse erstatter ikke review av den konkrete offentlige presentasjonen.
-        type: select
-        default: READY_FOR_STRATEGY_REVIEW
-        options:
-          values: [READY_FOR_STRATEGY_REVIEW, CONTENT_LOCKED]
-      - name: strategyReviewEvidence
-        label: Kilde/revisjon for konkret STRATEGY_CONTENT-lock
-        type: text
-      - name: artifactStatus
-        label: Skjermbilde- og kildeartefaktstatus
-        type: select
-        default: NOT_IMPORTED
-        options:
-          values: [NOT_IMPORTED, IMPORTED, VERIFIED]
-      - name: artifactReferences
-        label: Kildeartefaktreferanser – ikke legg persondata i Git
-        type: string
-        list: true
-      - name: evidenceMetrics
-        label: Supplerte målinger – intern evidens, ikke offentlig renderer
-        type: object
-        list: true
-        fields:
-          - name: metric
-            label: Måling og definisjon
-            type: text
-          - name: before
-            label: Før-verdi
-            type: string
-          - name: after
-            label: Etter-verdi
-            type: string
-          - name: delta
-            label: Dokumentert endring
-            type: string
-          - name: nextPeriod
-            label: Neste periodes verdi
-            type: string
-          - name: timeframe
-            label: Periode
-            type: string
-      - name: publicationStatus
-        label: Publiseringsstatus
-        description: EVIDENCE_ONLY er intern forberedelse. PUBLISHABLE krever dokumenterte målinger, sammenlignbare perioder, tiltak, kilde, forbehold og tillatelse.
-        type: select
-        default: EVIDENCE_ONLY
-        options:
-          values: [EVIDENCE_ONLY, REVIEW_REQUIRED, PUBLISHABLE, WITHDRAWN]
-      - name: publicationApproved
-        label: Publisering uttrykkelig godkjent
-        description: Må være aktivert sammen med PUBLISHABLE og alle nødvendige evidens- og tillatelsesfelt. Godkjenning dokumenteres i coordination/DECISIONS.md.
-        type: boolean
-        default: false
-  - name: homepage
-    label: Forside og felles pakker
-    type: file
-    path: app/src/content/pages/home.json
-    format: json
-    fields:
-      - name: slug
-        label: Nettadresse
-        type: string
-        readonly: true
-      - name: kind
-        label: Sidetype
-        type: string
-        readonly: true
-      - name: status
-        label: Godkjenningsstatus
-        type: string
-        readonly: true
-      - name: authority
-        label: Innholdsautoritet
-        type: string
-        readonly: true
-        description: H-006 er en representativ revisjon til vurdering. Faktisk
-          innholdslås må registreres i coordination/DECISIONS.md.
-      - name: seo
-        label: Søkeresultat
-        type: object
-        fields:
-          - name: title
-            label: Tittel
-            type: string
-          - name: description
-            label: Beskrivelse
-            type: text
-      - name: eyebrow
-        label: Overtekst
-        type: string
-      - name: title
-        label: Tittel
-        type: string
-      - name: intro
-        label: Innledning
+        label: Ingress
         type: text
       - name: cta
         label: Primær handling
@@ -407,7 +114,8 @@ content:
                 type: image
                 options:
                   media: heroImages
-                  extensions: [webp]
+                  extensions:
+                    - webp
               - name: positionX
                 label: Horisontalt utsnitt (%)
                 type: number
@@ -430,7 +138,10 @@ content:
               - name: items
                 label: Alternativer
                 type: object
-                list: true
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{title}"
                 fields:
                   - name: title
                     label: Tittel
@@ -442,7 +153,7 @@ content:
                     label: Beskrivelse
                     type: text
                   - name: link
-                    label: link
+                    label: Lenke
                     type: object
                     fields:
                       - name: label
@@ -463,7 +174,7 @@ content:
                 label: Overskrift
                 type: string
               - name: intro
-                label: Innledning
+                label: Ingress
                 type: text
               - name: formula
                 label: Enkel formel
@@ -526,7 +237,9 @@ content:
                 type: text
           - name: packages
             label: Felles pakker for forsiden, /priser/, /synlighet/ og /konvertering/
-            description: Rediger pakketekst, etiketter, ikoner og illustrasjoner her. Forsiden har sammenfoldede detaljer; prissiden har åpne detaljer. Begge og serviceprisene arver denne kilden. Pakkenøkler og lenkemål er beskyttet.
+            description: Rediger pakketekst, etiketter, ikoner og illustrasjoner her. Forsiden har sammenfoldede detaljer;
+              prissiden har åpne detaljer. Begge og serviceprisene arver denne kilden. Pakkenøkler og lenkemål
+              er beskyttet.
             type: object
             fields:
               - name: eyebrow
@@ -536,7 +249,7 @@ content:
                 label: Overskrift
                 type: string
               - name: intro
-                label: Innledning
+                label: Ingress
                 type: text
               - name: labels
                 label: Etiketter i pakkekortene
@@ -621,7 +334,10 @@ content:
               - name: items
                 label: Alternativer
                 type: object
-                list: true
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{title}"
                 fields:
                   - name: title
                     label: Tittel
@@ -660,13 +376,24 @@ content:
                   - name: iconItems
                     label: Fokus og populære kombinasjoner
                     type: object
-                    list: true
+                    list:
+                      collapsible:
+                        collapsed: true
+                        summary: "{label}"
                     fields:
                       - name: icon
                         label: Generisk ikon
                         type: select
                         options:
-                          values: [search, conversion, local, paid-search, social-paid, analytics, page, route]
+                          values:
+                            - search
+                            - conversion
+                            - local
+                            - paid-search
+                            - social-paid
+                            - analytics
+                            - page
+                            - route
                       - name: label
                         label: Fokus eller kombinasjon
                         type: string
@@ -689,7 +416,10 @@ content:
                     label: SVG-motiv – brukes når eget bilde ikke er valgt
                     type: select
                     options:
-                      values: [controlled, accelerating, tracks]
+                      values:
+                        - controlled
+                        - accelerating
+                        - tracks
                   - name: visualAsset
                     label: Eget pakkebilde – velg eller last opp SVG, WebP eller PNG
                     type: object
@@ -699,7 +429,10 @@ content:
                         type: image
                         options:
                           media: packageVisuals
-                          extensions: [svg, webp, png]
+                          extensions:
+                            - svg
+                            - webp
+                            - png
                       - name: alt
                         label: Sannferdig beskrivende alternativ tekst
                         type: string
@@ -717,7 +450,8 @@ content:
                           max: 100
                   - name: visualCaption
                     label: Bildetekst ved SVG-motivet
-                    description: Vises ved SVG-motivet når eget bilde ikke er valgt. Eget bilde bruker sin alternative tekst og sitt utsnitt.
+                    description: Vises ved SVG-motivet når eget bilde ikke er valgt. Eget bilde bruker sin alternative tekst og
+                      sitt utsnitt.
                     type: object
                     fields:
                       - name: label
@@ -731,10 +465,12 @@ content:
                     type: number
                   - name: pricePrefix
                     label: Fra-pris – bare Partner
-                    description: Valgfritt. Kun tredje pakke kan ha fra; de to andre har fast pris. Fjern feltet for pakker uten prefiks.
+                    description: Valgfritt. Kun tredje pakke kan ha fra; de to andre har fast pris. Fjern feltet for pakker uten
+                      prefiks.
                     type: select
                     options:
-                      values: [fra]
+                      values:
+                        - fra
                   - name: detailLink
                     label: Detaljer – rediger teksten, lenkemålet er beskyttet
                     type: object
@@ -752,7 +488,8 @@ content:
                     type: string
                   - name: vatSuffix
                     label: MVA-tekst
-                    description: Bruk samme MVA-tekst for alle tre pakker; felles prisforklaring og gjentatte prisopplysninger arver den.
+                    description: Bruk samme MVA-tekst for alle tre pakker; felles prisforklaring og gjentatte prisopplysninger
+                      arver den.
                     type: string
                   - name: recommended
                     label: Anbefalt pakke
@@ -779,7 +516,8 @@ content:
             fields:
               - name: publicationApproved
                 label: Godkjenn visning av allerede publiserbare case
-                description: Slå bare på etter dokumentert godkjenning. Dette overstyrer aldri case-status, tillatelse eller manglende evidens.
+                description: Slå bare på etter dokumentert godkjenning. Dette overstyrer aldri case-status, tillatelse eller
+                  manglende evidens.
                 type: boolean
                 default: false
               - name: caseIds
@@ -790,7 +528,7 @@ content:
                   multiple: true
                   value: "{fields.id}"
                   label: "{fields.clientName} ({fields.publicationStatus})"
-                  search: "id,clientName,anonymizedLabel"
+                  search: id,clientName,anonymizedLabel
               - name: eyebrow
                 label: Overtekst
                 type: string
@@ -911,7 +649,10 @@ content:
               - name: navigation
                 label: Navigasjon
                 type: object
-                list: true
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{label}"
                 fields:
                   - name: label
                     label: Tekst
@@ -922,7 +663,6 @@ content:
                     pattern: ^/
               - name: providerText
                 label: Påkrevd leverandøropplysning
-                description: Låst D-037. Selskapsopplysningen endres bare gjennom et eksplisitt juridisk/leverandør-handoff.
                 type: string
                 readonly: true
               - name: previewLabel
@@ -948,7 +688,10 @@ content:
               - name: informationLinks
                 label: Informasjonslenker
                 type: object
-                list: true
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{label}"
                 fields:
                   - name: label
                     label: Tekst
@@ -964,9 +707,12 @@ content:
                 label: Bunntekstmerknad
                 type: string
       - name: sections
-        label: Mekanisme, kvalifisering og sjekk
+        label: Innholdsseksjoner
         type: object
-        list: true
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{heading}"
         fields:
           - name: id
             label: Seksjonens lenkeanker
@@ -985,7 +731,10 @@ content:
           - name: items
             label: Alternativer
             type: object
-            list: true
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{title}"
             fields:
               - name: title
                 label: Tittel
@@ -996,11 +745,17 @@ content:
           - name: links
             label: Relaterte lenker
             component: link
-            list: true
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{label}"
       - name: faq
-        label: Spørsmål og svar
+        label: Ofte stilte spørsmål
         type: object
-        list: true
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{question}"
         fields:
           - name: question
             label: Spørsmål
@@ -1008,3 +763,396 @@ content:
           - name: answer
             label: Svar
             type: text
+    operations: &a1
+      create: false
+      rename: false
+      delete: false
+  - name: services
+    label: Tjenester
+    type: collection
+    path: app/src/content/pages
+    exclude:
+      - home.json
+      - innsikt.json
+      - priser.json
+      - om.json
+      - vurdering.json
+      - kontakt.json
+      - personvern.json
+      - vilkar.json
+      - hva-bor-optimaliseres-forst.json
+      - male-effekt-av-optimalisering.json
+    format: json
+    subfolders: false
+    operations: *a1
+    filename: "{primary}.json"
+    view:
+      primary: title
+      fields:
+        - title
+      search:
+        - title
+        - seo.title
+      sort:
+        - title
+    fields:
+      - &a2
+        name: seo
+        label: SEO
+        type: object
+        fields:
+          - name: title
+            label: Sidetittel
+            type: string
+            required: true
+          - name: description
+            label: Metabeskrivelse
+            type: text
+            required: true
+      - name: heroVisual
+        label: Hero-bilde / drømmeutfall
+        type: object
+        fields:
+          - name: kind
+            label: Bildetype
+            type: select
+            options:
+              values:
+                - photo
+                - illustration
+            required: true
+          - name: src
+            label: Levert tjenestebilde
+            type: image
+            options:
+              media: serviceHeroImages
+            required: true
+          - name: alt
+            label: Kort beskrivelse av bildets mening
+            type: string
+            required: true
+          - name: positionX
+            label: Fokus vannrett (0–100)
+            type: number
+            required: true
+            options:
+              min: 0
+              max: 100
+          - name: positionY
+            label: Fokus loddrett (0–100)
+            type: number
+            required: true
+            options:
+              min: 0
+              max: 100
+        description: Valgfritt bilde for Synlighet og Konvertering. Uten et levert bilde vises toppseksjonen med tekst.
+      - &a3
+        name: eyebrow
+        label: Toppseksjon (Hero) – Overtekst
+        type: string
+      - &a4
+        name: title
+        label: Hovedoverskrift
+        type: string
+        required: true
+      - &a5
+        name: intro
+        label: Ingress
+        type: text
+        required: true
+      - &a6
+        name: sections
+        label: Innholdsseksjoner
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{heading}"
+        fields:
+          - name: id
+            label: Seksjonens lenkeanker
+            type: string
+            readonly: true
+          - name: eyebrow
+            label: Overtekst
+            type: string
+          - name: heading
+            label: Overskrift
+            type: string
+          - name: body
+            label: Avsnitt
+            type: text
+            list: true
+            description: Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Forsidens
+              innhold → Felles pakker.
+          - name: items
+            label: Alternativer eller steg
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - name: title
+                label: Tittel
+                type: string
+              - name: text
+                label: Beskrivelse
+                type: text
+              - name: href
+                label: Intern lenke
+                type: string
+                pattern: ^/
+              - name: label
+                label: Lenketekst
+                type: string
+          - name: links
+            label: Relaterte lenker
+            component: link
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{label}"
+      - &a7
+        name: faq
+        label: Ofte stilte spørsmål
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{question}"
+        fields:
+          - name: question
+            label: Spørsmål
+            type: string
+          - name: answer
+            label: Svar
+            type: text
+      - &a8
+        name: cta
+        label: Neste steg
+        component: link
+  - name: priser
+    label: Priser
+    type: file
+    path: app/src/content/pages/priser.json
+    format: json
+    operations: *a1
+    fields: &a9
+      - *a2
+      - *a3
+      - *a4
+      - *a5
+      - *a6
+      - *a7
+      - *a8
+  - name: insight
+    label: Innsikt
+    type: collection
+    path: app/src/content/pages
+    exclude:
+      - home.json
+      - priser.json
+      - om.json
+      - vurdering.json
+      - kontakt.json
+      - personvern.json
+      - vilkar.json
+      - synlighet.json
+      - konvertering.json
+      - seo.json
+      - ai-synlighet.json
+      - nettbutikkoptimalisering.json
+    format: json
+    subfolders: false
+    operations: *a1
+    filename: "{primary}.json"
+    view:
+      primary: title
+      fields:
+        - title
+      search:
+        - title
+        - seo.title
+      sort:
+        - title
+    fields: *a9
+  - name: om
+    label: Om tjenesten
+    type: file
+    path: app/src/content/pages/om.json
+    format: json
+    operations: *a1
+    fields: *a9
+  - name: vurdering
+    label: Optimaliseringssjekk
+    type: file
+    path: app/src/content/pages/vurdering.json
+    format: json
+    operations: *a1
+    fields: *a9
+  - name: kontakt
+    label: Kontakt
+    type: file
+    path: app/src/content/pages/kontakt.json
+    format: json
+    operations: *a1
+    fields: *a9
+  - name: personvern
+    label: Personvern
+    type: file
+    path: app/src/content/pages/personvern.json
+    format: json
+    operations: *a1
+    fields: *a9
+  - name: vilkar
+    label: Vilkår
+    type: file
+    path: app/src/content/pages/vilkar.json
+    format: json
+    operations: *a1
+    fields: *a9
+  - name: proofCases
+    label: Case/evidens (intern)
+    type: collection
+    path: app/src/content/proof
+    format: json
+    filename: "{fields.id}.json"
+    view:
+      primary: clientName
+      fields:
+        - clientName
+        - publicationStatus
+        - namingPermission
+        - artifactStatus
+    fields:
+      - name: id
+        label: Stabil case-ID
+        description: Referanser fra forsiden bruker denne ID-en. Endring krever at referansene oppdateres.
+        type: string
+        pattern: ^[a-z0-9][a-z0-9-]*$
+        required: true
+      - name: clientName
+        label: Kunde- eller visningsnavn
+        type: string
+      - name: anonymizedLabel
+        label: Godkjent anonymisert navn
+        type: string
+      - name: relationship
+        label: Relasjon og bakgrunn – intern evidens
+        type: text
+      - name: dominantMetric
+        label: Hovedresultat og måledefinisjon
+        type: text
+      - name: before
+        label: Før-verdi
+        type: string
+      - name: after
+        label: Etter-verdi
+        type: string
+      - name: delta
+        label: Dokumentert endring
+        type: string
+      - name: period
+        label: Sammenligningsperioder
+        type: object
+        fields:
+          - name: before
+            label: Før-periode
+            type: string
+          - name: after
+            label: Etter-periode
+            type: string
+          - name: comparable
+            label: Sammenlignbarhet dokumentert
+            type: boolean
+            default: false
+      - name: intervention
+        label: Dokumentert tiltak eller endring
+        type: text
+      - name: source
+        label: Kilde og proveniens – intern evidens
+        type: text
+      - name: limitations
+        label: Begrensninger og attribusjonsforbehold
+        type: text
+      - name: namingPermission
+        label: Navne- eller anonymiseringstillatelse
+        type: select
+        default: NEEDS_PERMISSION
+        options:
+          values:
+            - NEEDS_PERMISSION
+            - GRANTED
+            - NAME_APPROVED
+            - ANONYMIZED_APPROVED
+      - name: permissionEvidence
+        label: Dokumentasjon på faktisk publiseringstillatelse
+        type: text
+      - name: strategyReviewStatus
+        label: STRATEGY_CONTENT-review
+        description: GRANTED tillatelse erstatter ikke review av den konkrete offentlige presentasjonen.
+        type: select
+        default: READY_FOR_STRATEGY_REVIEW
+        options:
+          values:
+            - READY_FOR_STRATEGY_REVIEW
+            - CONTENT_LOCKED
+      - name: strategyReviewEvidence
+        label: Kilde/revisjon for konkret STRATEGY_CONTENT-lock
+        type: text
+      - name: artifactStatus
+        label: Skjermbilde- og kildeartefaktstatus
+        type: select
+        default: NOT_IMPORTED
+        options:
+          values:
+            - NOT_IMPORTED
+            - IMPORTED
+            - VERIFIED
+      - name: artifactReferences
+        label: Kildeartefaktreferanser – ikke legg persondata i Git
+        type: string
+        list: true
+      - name: evidenceMetrics
+        label: Supplerte målinger – intern evidens, ikke offentlig renderer
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{metric}"
+        fields:
+          - name: metric
+            label: Måling og definisjon
+            type: text
+          - name: before
+            label: Før-verdi
+            type: string
+          - name: after
+            label: Etter-verdi
+            type: string
+          - name: delta
+            label: Dokumentert endring
+            type: string
+          - name: nextPeriod
+            label: Neste periodes verdi
+            type: string
+          - name: timeframe
+            label: Periode
+            type: string
+      - name: publicationStatus
+        label: Publiseringsstatus
+        description: EVIDENCE_ONLY er intern forberedelse. PUBLISHABLE krever dokumenterte målinger, sammenlignbare
+          perioder, tiltak, kilde, forbehold og tillatelse.
+        type: select
+        default: EVIDENCE_ONLY
+        options:
+          values:
+            - EVIDENCE_ONLY
+            - REVIEW_REQUIRED
+            - PUBLISHABLE
+            - WITHDRAWN
+      - name: publicationApproved
+        label: Publisering uttrykkelig godkjent
+        type: boolean
+        default: false

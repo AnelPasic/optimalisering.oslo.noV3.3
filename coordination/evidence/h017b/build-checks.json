@@ -1,0 +1,67 @@
+{
+  "checkedAt": "2026-10-09T23:03:09.885Z",
+  "checks": [
+    {
+      "source": "21b4e9f3e7127f3cf92b325d269414c19b0d38c7",
+      "id": 113943713118,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://dash.cloudflare.com/f772a1f16c82756f67e76357c4e5adaf/workers/services/view/optimalisering-oslo-v33/production/builds/b384d89d-69dd-4119-9983-876e232fc980",
+      "summary": "\nBuild ID: [b384d89d-69dd-4119-9983-876e232fc980](https://dash.cloudflare.com/f772a1f16c82756f67e76357c4e5adaf/workers/services/view/optimalisering-oslo-v33/production/builds/b384d89d-69dd-4119-9983-876e232fc980)\nScript: [optimalisering-oslo-v33](https://dash.cloudflare.com/f772a1f16c82756f67e76357c4e5adaf/workers/services/view/optimalisering-oslo-v33/production)\nVersion ID: 65b5d964-9295-4594-95cb-214a573ae316\n"
+    },
+    {
+      "source": "7acf47ae002c0471820870fb7db8ad114784e583",
+      "id": 113956137917,
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://dash.cloudflare.com/f772a1f16c82756f67e76357c4e5adaf/workers/services/view/optimalisering-oslo-v33/production/builds/c9835a88-4f25-4e5f-a28d-1fd7116c8c18",
+      "summary": "\nBuild ID: [c9835a88-4f25-4e5f-a28d-1fd7116c8c18](https://dash.cloudflare.com/f772a1f16c82756f67e76357c4e5adaf/workers/services/view/optimalisering-oslo-v33/production/builds/c9835a88-4f25-4e5f-a28d-1fd7116c8c18)\nScript: [optimalisering-oslo-v33](https://dash.cloudflare.com/f772a1f16c82756f67e76357c4e5adaf/workers/services/view/optimalisering-oslo-v33/production)\n"
+    },
+    {
+      "source": "ce1c95155cbfe959428bce58dceca14871785953",
+      "id": 114051233861,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://dash.cloudflare.com/f772a1f16c82756f67e76357c4e5adaf/workers/services/view/optimalisering-oslo-v33/production/builds/c1504cb5-705b-4808-9aa5-79f0876dd8a0",
+      "summary": "\nBuild ID: [c1504cb5-705b-4808-9aa5-79f0876dd8a0](https://dash.cloudflare.com/f772a1f16c82756f67e76357c4e5adaf/workers/services/view/optimalisering-oslo-v33/production/builds/c1504cb5-705b-4808-9aa5-79f0876dd8a0)\nScript: [optimalisering-oslo-v33](https://dash.cloudflare.com/f772a1f16c82756f67e76357c4e5adaf/workers/services/view/optimalisering-oslo-v33/production)\nVersion ID: a0f57583-0ba2-4db7-8527-ea7a75fff500\n"
+    }
+  ],
+  "cloudflare": [
+    {
+      "source": "21b4e9f3e7127f3cf92b325d269414c19b0d38c7",
+      "httpStatus": 401,
+      "success": false,
+      "errors": [
+        {
+          "code": 10000,
+          "message": "Authentication error"
+        }
+      ],
+      "settings": []
+    },
+    {
+      "source": "7acf47ae002c0471820870fb7db8ad114784e583",
+      "httpStatus": 401,
+      "success": false,
+      "errors": [
+        {
+          "code": 10000,
+          "message": "Authentication error"
+        }
+      ],
+      "settings": []
+    },
+    {
+      "source": "ce1c95155cbfe959428bce58dceca14871785953",
+      "httpStatus": 401,
+      "success": false,
+      "errors": [
+        {
+          "code": 10000,
+          "message": "Authentication error"
+        }
+      ],
+      "settings": []
+    }
+  ]
+}

@@ -59,7 +59,7 @@ export const pageSchema = z.object({
       items: z.array(z.object({ title: z.string(), text: z.string(), href: z.string().startsWith('/').optional(), label: z.string().optional() })).optional(),
       links: z.array(link).optional(),
     })),
-    faq: z.array(z.object({ question: z.string(), answer: z.string() })),
+    faq: z.array(z.object({ question: z.string(), answer: z.string() })).default([]),
     cta: link,
     heroVisual: z.object({
       kind: z.enum(['photo', 'illustration']),

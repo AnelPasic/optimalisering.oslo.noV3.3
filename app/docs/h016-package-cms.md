@@ -4,7 +4,7 @@ H-016 / D-053–D-057 gjør Pages CMS til normal redigeringsflate for pakketekst
 
 ## Én innholdskilde
 
-Åpne **Forside og felles pakker → Forsidens innhold → Felles pakker for forsiden, /priser/, /synlighet/ og /konvertering/**. Data lagres i `app/src/content/pages/home.json`, under `homepage.packages`.
+Åpne **Forside → Forsidens innhold → Felles pakker for forsiden, /priser/, /synlighet/ og /konvertering/** etter H-017B. Data lagres i `app/src/content/pages/home.json`, under `homepage.packages`. Se `h017b-cms-workflow.md` for dagens sidebar og lagringsregler.
 
 Forsiden og `/priser/` bruker samme komponent og alle tre pakkeobjektene. Forsidens detaljer er lukket ved innlasting; prissidens detaljer er åpne og kan lukkes. Presentasjonsmodus styres i kode. Serviceprisene og gjentatte pris-/kostnadsopplysninger arver samme kilde; serviceinnholdet har fortsatt sine egne godkjenninger.
 
@@ -20,7 +20,7 @@ Forsiden og `/priser/` bruker samme komponent og alle tre pakkeobjektene. Forsid
 | Ikoner | Velg generisk ikon, kort etikett, full etikett og valgfri forklaring per oppføring. Kort etikett vises i beslutningskortet; full etikett/forklaring vises i detaljene. |
 | Handlinger | Bestillingsknappens tekst og detaljteksten. `detailLink.label` er teksten i det native detaljfeltet på begge sider; standarden er «Se pakken». |
 
-Tre pakker i eksisterende rekkefølge, fire arbeidsområder og tre valgregler beholdes. Korte situasjoner har én til tre oppføringer; full liste og ikonliste har minst én. Nødvendige korte tekster og handlingsetiketter må være utfylt. Pris er et positivt heltall. Fjern et valgfritt objekt helt når det ikke skal brukes. Prisnavn, priser og tilbudslogikk i denne leveransen er bevart; D-054 gir OWNER kontroll over feltene.
+Tre pakker i eksisterende rekkefølge, fire arbeidsområder og tre valgregler beholdes. Korte situasjoner har én til tre oppføringer; full liste og ikonliste har minst én. Nødvendige korte tekster og handlingsetiketter må være utfylt. Pris er et positivt heltall. Flettemodus kan bevare et utelatt objekt; en fjerning som editoren ikke kan gjøre sikkert må få en avgrenset implementering. Prisnavn, priser og tilbudslogikk i denne leveransen er bevart; D-054 gir OWNER kontroll over feltene.
 
 Pakkenøkkel, bestillingslenkens pakkevalg og detaljanker er readonly. Innholdsskjemaet avviser også endringer i disse. Formens intensjon, transport og endepunkt finnes fortsatt bare i kode. Gjeldende detaljankre er `/priser/#optimalisering`, `/priser/#begge` og `/priser/#partner`.
 

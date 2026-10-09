@@ -1,0 +1,9 @@
+
+ ⛅️ wrangler 4.148.0
+────────────────────
+
+Cloudflare collects anonymous telemetry about your usage of Wrangler. Learn more at https://github.com/cloudflare/workers-sdk/tree/main/packages/wrangler/telemetry.md
+✨ Read 69 files from the assets directory E:\Codex\optimalisering.oslo.noV3.3\app\dist
+Total Upload: 0.31 KiB / gzip: 0.22 KiB
+No bindings found.
+--dry-run: exiting now.

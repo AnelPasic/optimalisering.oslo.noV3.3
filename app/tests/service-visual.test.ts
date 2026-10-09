@@ -15,7 +15,7 @@ test('CMS service visual accepts optional content and rejects external paths, mi
 });
 test('CMS exposes the visual contract without moving SEO fields or making company disclosure casual copy', () => {
   const cms = YAML.parse(readFileSync('../.pages.yml', 'utf8'));
-  const fields = cms.content.find((item: any) => item.name === 'pages').fields;
+  const fields = cms.content.find((item: any) => item.name === 'services').fields;
   assert.deepEqual(fields.find((field: any) => field.name === 'seo').fields.map((field: any) => field.name), ['title', 'description']);
   assert.deepEqual(fields.find((field: any) => field.name === 'heroVisual').fields.map((field: any) => field.name), ['kind', 'src', 'alt', 'positionX', 'positionY']);
   assert.equal(cms.media.find((item: any) => item.name === 'serviceHeroImages').input, 'app/public/images/services');
