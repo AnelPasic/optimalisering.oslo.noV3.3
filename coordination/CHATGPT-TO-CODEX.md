@@ -1,5 +1,38 @@
 # ChatGPT to Codex
 
+## Active handoff — H-015
+
+Date: 2026-10-09
+Authority: OWNER + STRATEGY_CONTENT D-050–D-052
+Exact contract: coordination/H015-PRICING-VISUAL-POLISH.md
+
+H-014 compactness passes. Do not reopen density/copy/order logic.
+
+Implement visual polish only:
+- replace bare curve feel with stronger editorial infographic motifs;
+- recreate the useful fragments of the previously approved pricing illustration as clean SVG-style package visuals;
+- Optimalisering = one controlled lever/path;
+- Vekst = one clearly stronger compounding path;
+- Partner = several coordinated growth tracks;
+- optional tiny semantic callouts may sit in HTML beside the SVG if they improve comprehension;
+- no percentages or numerical performance claims;
+- no whole-card image.
+
+Preserve:
+- H-014 card heights/density;
+- all copy;
+- icon rows;
+- Se detaljer;
+- direct-order CTA/preselection;
+- disabled review submit;
+- homepage compactness;
+- shared CMS source.
+
+Push to main, verify Worker, update coordination/evidence, and STOP for OWNER + STRATEGY_CONTENT visual review.
+
+
+---
+
 ## Completed handoff — H-014
 
 Date: 2026-10-09
