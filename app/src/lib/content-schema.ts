@@ -14,7 +14,21 @@ const homepage = z.object({
     eyebrow: z.string(), heading: z.string(), intro: z.string(), fitLabel: z.string(), scopeLabel: z.string(),
     areasLabel: z.string(), areas: z.array(z.string()).length(4), foundationNote: z.string(),
     adBudgetNote: z.string(), externalCostsNote: z.string(), separateWorkNote: z.string(), capacityNote: z.string(),
-    items: z.array(z.object({ title: z.string(), descriptor: z.string(), fit: z.string(), scope: z.string(), price: z.number().int().positive().max(100000000), priceSuffix: z.string(), vatSuffix: z.string(), recommended: z.boolean(), badge: z.string(), cta: link })).length(3),
+    decisionStrip: z.object({ heading: z.string(), items: z.array(z.string()).length(3) }),
+    multiplier: z.object({ eyebrow: z.string(), heading: z.string(), body: z.string(), conceptualRow: z.string(), support: z.string() }),
+    items: z.array(z.object({
+      title: z.string(), descriptor: z.string(), fit: z.string(), scope: z.string().optional(),
+      price: z.number().int().positive().max(100000000), pricePrefix: z.literal('fra').optional(), priceSuffix: z.string(), vatSuffix: z.string(),
+      recommended: z.boolean(), badge: z.string(), cta: link, detailLink: link,
+      visual: z.enum(['controlled', 'accelerating', 'tracks']),
+      typicalBusiness: z.string().optional(), situations: z.array(z.string()).min(1), focusAreas: z.array(z.string()).optional(),
+      combinations: z.array(z.object({ title: z.string(), text: z.string() })).optional(),
+      selectionRule: z.string(), distinction: z.string().optional(), priceNote: z.string().optional(),
+    })).length(3),
+  }).superRefine((packages, context) => {
+    packages.items.forEach((item, index) => {
+      if (index !== 2 && item.pricePrefix) context.addIssue({ code: 'custom', path: ['items', index, 'pricePrefix'], message: 'Only Partner may have a from-price' });
+    });
   }),
   // Section approval never substitutes for a case's independent publication guard.
   proof: z.object({ publicationApproved: z.boolean(), caseIds: z.array(z.string()), eyebrow: z.string(), heading: z.string(), beforeLabel: z.string(), afterLabel: z.string(), changeLabel: z.string() }),

@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import Arrow from './Arrow.astro';
+import Visual from './PackageVisual.astro';
 interface Props {
   content: NonNullable<CollectionEntry<'pages'>['data']['homepage']>['packages'];
   showHeading?: boolean;
@@ -8,20 +9,34 @@ interface Props {
   headingTag?: 'h2' | 'h3';
   labelledBy?: string;
   recommendedAnchor?: string;
+  full?: boolean;
 }
-const { content, showHeading = true, showNotes = true, headingTag: Heading = 'h3', labelledBy, recommendedAnchor } = Astro.props;
+const { content, showHeading = true, showNotes = true, headingTag: Heading = 'h3', labelledBy, recommendedAnchor, full = false } = Astro.props;
 const formatPrice = (value: number) => new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 0 }).format(value);
 ---
-<section id="priser" class="package-section section-space" aria-labelledby={labelledBy}>
+<section id="priser" class:list={['package-section', 'package-offer', 'section-space', { 'package-offer-full': full }]} aria-labelledby={labelledBy}>
   <div class="shell">
     {showHeading && <div class="section-heading"><p class="eyebrow">{content.eyebrow}</p><h2>{content.heading}</h2><p class="body-copy">{content.intro}</p></div>}
-    <div class="package-grid">{content.items.map((item, index) => <article id={index === 1 ? recommendedAnchor : undefined} class={`package-card package-card-${index}${item.recommended ? ' is-recommended' : ''}`}>
+    <div class="package-grid">{content.items.map((item, index) => <article id={full ? item.detailLink.href.split('#')[1] : undefined} class={`package-card package-card-${index}${item.recommended ? ' is-recommended' : ''}`}>
+      {full && index === 1 && recommendedAnchor && item.detailLink.href.split('#')[1] !== recommendedAnchor && <span id={recommendedAnchor} aria-hidden="true"></span>}
       <div class="package-heading"><Heading>{item.title}</Heading>{item.recommended && item.badge && <span class="package-badge">{item.badge}</span>}</div>
       <p class="package-descriptor">{item.descriptor}</p>
-      <dl><dt>{content.fitLabel}</dt><dd>{item.fit}</dd><dt>{content.scopeLabel}</dt><dd>{item.scope}</dd></dl>
-      <div class="package-price"><p><span class="package-price-amount">{formatPrice(item.price)}</span> <span class="package-price-unit">{item.priceSuffix}</span></p><p class="small-copy">{item.vatSuffix}</p></div>
+      <div class="package-price"><p>{item.pricePrefix && <span class="package-price-prefix">{item.pricePrefix} </span>}<span class="package-price-amount">{formatPrice(item.price)}</span> <span class="package-price-unit">{item.priceSuffix}</span></p><p class="small-copy">{item.vatSuffix}</p></div>
+      {full && item.priceNote && <p class="package-price-note">{item.priceNote}</p>}
+      <Visual kind={item.visual} />
+      <p class="package-fit">{item.fit}</p>
+      {full && <div class="package-detail">
+        {item.typicalBusiness && <p>{item.typicalBusiness}</p>}
+        <ul>{item.situations.map(text => <li>{text}</li>)}</ul>
+        {item.scope && <p>{item.scope}</p>}
+        {item.focusAreas && <ul>{item.focusAreas.map(text => <li>{text}</li>)}</ul>}
+        {item.combinations && <dl class="package-combinations">{item.combinations.map(pair => <><dt>{pair.title}</dt><dd>{pair.text}</dd></>)}</dl>}
+        {item.distinction && <p class="package-distinction">{item.distinction}</p>}
+        <p class="package-selection">{item.selectionRule}</p>
+      </div>}
       <a class="button" href={item.cta.href}>{item.cta.label}<Arrow diagonal /></a>
+      {!full && <a class="text-link package-detail-link" href={item.detailLink.href}>{item.detailLink.label}<Arrow /></a>}
     </article>)}</div>
-    {showNotes && <div class="package-notes body-copy"><p>{content.areasLabel}: {content.areas.join(' · ')}.</p><p>{content.foundationNote}</p><p class="package-budget-note">{content.adBudgetNote}</p><p>{content.externalCostsNote}</p><p>{content.separateWorkNote}</p><p>{content.capacityNote}</p></div>}
+    {showNotes && <div class="package-notes body-copy"><p class="package-budget-note">{content.adBudgetNote}</p></div>}
   </div>
 </section>

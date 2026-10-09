@@ -1,0 +1,41 @@
+/* H-012: package decision only; accepted chrome and other sections unchanged. */
+.invite-home .package-offer .package-card { padding-inline: 24px; }
+.invite-home .package-offer .package-descriptor { font-size: 18px; line-height: 1.5; font-weight: 550; min-height: 54px; }
+.invite-home .package-offer .package-price { margin-top: 20px; border: 0; padding: 0; }
+.invite-home .package-offer .package-price .small-copy { margin-top: 8px; }
+.invite-home .package-offer .package-price-prefix { font-size: 20px; margin-right: .25em; }
+.invite-home .package-offer .package-visual { width: 100%; height: 144px; margin-block: 24px; border-radius: 10px; background: #e0f1e9; color: #087b73; }
+.invite-home .package-offer .package-visual-accelerating { background: #eae4f4; color: #320c43; }
+.invite-home .package-offer .package-visual-tracks { background: #f1edf6; color: #5a4070; }
+.invite-home .package-offer .package-fit, .invite-home .package-offer .package-detail { font-size: 15px; line-height: 1.7; color: var(--muted); }
+.invite-home .package-offer .package-card .button { align-self: start; margin-top: auto; }
+.invite-home .package-offer .package-fit { margin-bottom: 24px; }
+.invite-home .package-offer .package-detail-link { margin-top: 20px; font-size: 14px; }
+.invite-home .package-offer .package-detail { margin-bottom: 28px; }
+.invite-home .package-offer .package-detail > * + * { margin-top: 24px; }
+.invite-home .package-offer .package-detail ul { padding-left: 20px; }
+.invite-home .package-offer .package-detail li + li { margin-top: 12px; }
+.invite-home .package-offer .package-combinations { margin: 0; }
+.invite-home .package-offer .package-combinations dt { font-size: 15px; line-height: 1.5; color: var(--ink); margin-top: 24px; }
+.invite-home .package-offer .package-combinations dd { margin-bottom: 0; }
+.invite-home .package-offer .package-distinction { border-left: 3px solid #320c43; padding-left: 16px; color: var(--ink); }
+.invite-home .package-offer .package-selection { font-weight: 600; color: var(--ink); }
+.invite-home .package-offer .package-price-note { font-size: 13px; color: var(--muted); margin-top: 14px; line-height: 1.6; }
+.invite-home .pricing-decision { background: #fff; }
+.invite-home .pricing-decision h2 { max-width: 900px; }
+.invite-home .pricing-decision-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin-top: 36px; }
+.invite-home .pricing-decision-grid p { border-top: 2px solid var(--line); padding-top: 24px; line-height: 1.65; }
+.invite-home .pricing-multiplier { background: #320c43; color: #fff; }
+.invite-home .pricing-multiplier h2 { max-width: 900px; }
+.invite-home .pricing-multiplier .body-copy { max-width: 880px; color: #e0d9e7; margin-top: 28px; }
+.invite-home .pricing-multiplier .eyebrow { color: #b9e8d4; }
+.invite-home .multiplier-row { margin-block: 36px; font-family: var(--heading); font-size: clamp(21px, 3vw, 36px); font-weight: 550; line-height: 1.4; }
+@media (max-width: 1100px) {
+  .invite-home .package-offer .package-card { padding-inline: 12px; }
+}
+@media (max-width: 650px) {
+  .invite-home .package-offer .package-card { padding-inline: 0; }
+  .invite-home .package-offer .package-descriptor { min-height: 0; }
+  .invite-home .package-offer .package-visual { height: 144px; max-width: 400px; }
+  .invite-home .pricing-decision-grid { grid-template-columns: 1fr; gap: 28px; }
+}

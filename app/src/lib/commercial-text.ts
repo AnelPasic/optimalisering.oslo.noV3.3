@@ -23,6 +23,12 @@ export function createCommercialTextBinding(home: Page, pricing: Page) {
     [budgetReference, source.adBudgetNote], [costs[1], source.separateWorkNote], [costs[2], source.capacityNote],
     [externalReference, source.externalCostsNote === externalCanonical ? externalReference : source.externalCostsNote],
   ]);
+  // H-012 supersedes the old capacity-based package comparison. Reuse the
+  // locked selection sentences, including in the repeated home price answer.
+  const selection = source.items.map(item => item.selectionRule).join(' ');
+  rules.set(pricing.faq[1].answer, selection);
+  const previousDifference = home.faq.find(item => item.question === 'Hva koster videre arbeid?')?.answer.match(/Forskjellen er .*$/u)?.[0];
+  if (previousDifference) rules.set(previousDifference, selection);
   for (const item of home.faq) if (item.answer.startsWith(`${budgetReference} `)) {
     const variant = item.answer.slice(budgetReference.length).trim();
     rules.set(variant, source.externalCostsNote === externalCanonical ? variant : source.externalCostsNote);
@@ -31,9 +37,9 @@ export function createCommercialTextBinding(home: Page, pricing: Page) {
   return (text: string): string => text
     .replace(rulesPattern, value => rules.get(value)!)
     .replace(namesPattern, value => names.get(value)!)
-    .replace(/(\d[\d \u00a0]*)\s+kr\/mnd/gu, (value, amount: string) => {
+    .replace(/(fra )?(\d[\d \u00a0]*)\s+kr\/mnd/gu, (value, existingPrefix: string | undefined, amount: string) => {
       const item = prices.get(spaces(amount));
-      return item ? `${new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 0 }).format(item.price).replaceAll('\u00a0', ' ')} ${item.priceSuffix}` : value;
+      return item ? `${existingPrefix || (item.pricePrefix ? item.pricePrefix + ' ' : '')}${new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 0 }).format(item.price).replaceAll('\u00a0', ' ')} ${item.priceSuffix}` : value;
     })
     .replaceAll('eks. mva.', source.items[0].vatSuffix);
 }

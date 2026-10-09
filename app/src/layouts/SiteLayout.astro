@@ -36,6 +36,7 @@ const organization = { '@context': 'https://schema.org', '@type': 'Organization'
     {homeVisual && <link rel="stylesheet" href="/styles/home-invite.css" />}
     {pricingVisual && <link rel="stylesheet" href="/styles/pricing-invite.css" />}
     {serviceVisual && <link rel="stylesheet" href="/styles/service-invite.css" />}
+    {homeVisual && !serviceVisual && <link rel="stylesheet" href="/styles/package-offer.css" />}
     <script type="application/ld+json" set:html={JSON.stringify(organization).replace(/</g, '\\u003c')} />
   </head>
   <body class={homeVisual ? 'invite-homepage' : undefined}>

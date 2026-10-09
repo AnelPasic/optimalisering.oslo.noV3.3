@@ -17,11 +17,13 @@ const sections = page.sections.map(section => section.id === 'kostnader' ? {
 ---
 <div class="invite-home invite-pricing">
   <section id="pricing-hero" class="pricing-hero shell">
-    <p class="eyebrow">{page.eyebrow}</p><h1 id="pricing-title">{page.title}</h1>
-    <p class="hero-intro">{page.intro}</p>
+    <p class="eyebrow">{packages.eyebrow}</p><h1 id="pricing-title">{packages.heading}</h1>
+    <p class="hero-intro">{packages.intro}</p>
     <a class="button" href={page.cta.href}>{page.cta.label}<Arrow diagonal /></a>
   </section>
-  <Packages content={packages} showHeading={false} showNotes={false} headingTag="h2" labelledBy="pricing-title" recommendedAnchor="begge" />
+  <Packages content={packages} full showHeading={false} showNotes={false} headingTag="h2" labelledBy="pricing-title" recommendedAnchor="begge" />
+  <section id="pricing-decision" class="pricing-decision section-space"><div class="shell"><h2>{packages.decisionStrip.heading}</h2><div class="pricing-decision-grid">{packages.decisionStrip.items.map(text => <p>{text}</p>)}</div></div></section>
+  <section id="pricing-multiplier" class="pricing-multiplier section-space"><div class="shell"><p class="eyebrow">{packages.multiplier.eyebrow}</p><h2>{packages.multiplier.heading}</h2><p class="body-copy">{packages.multiplier.body}</p><p class="multiplier-row">{packages.multiplier.conceptualRow}</p><p class="body-copy">{packages.multiplier.support}</p></div></section>
   {sections.map(section => <ContentSection section={section}>
     {section.id === 'arbeidsomrader' && <div class="package-notes body-copy"><p>{packages.areasLabel}: {packages.areas.join(' · ')}.</p><p>{packages.foundationNote}</p></div>}
   </ContentSection>)}

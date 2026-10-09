@@ -84,8 +84,8 @@
     },
     "packages": {
       "eyebrow": "Fast månedlig optimalisering",
-      "heading": "Start med det viktigste. Utvid når behovet er større.",
-      "intro": "Vi prioriterer det som begrenser resultatet mest. Velg ett område, to områder eller større kapasitet på tvers.",
+      "heading": "Tre pakker. Samme mål: flere riktige kunder.",
+      "intro": "Velg pakken som passer hvor komplekst behovet ditt er – fra én tydelig flaskehals til flere kundereiser som må prioriteres løpende.",
       "fitLabel": "Passer for",
       "scopeLabel": "Dette jobber vi med",
       "areasLabel": "Vi kan jobbe med",
@@ -103,50 +103,129 @@
       "items": [
         {
           "title": "Optimalisering",
-          "descriptor": "Ett prioritert hovedområde",
-          "fit": "For deg som vil starte med det viktigste først.",
-          "scope": "Vi jobber med ett prioritert område om gangen – for eksempel synlighet, konvertering eller kampanjeoptimalisering.",
+          "descriptor": "Ett viktig problem om gangen.",
+          "fit": "Passer for små og mellomstore bedrifter med én tydelig kundereise, én hovedtjeneste eller én flaskehals som er viktigst akkurat nå.",
           "price": 4500,
           "priceSuffix": "kr/mnd",
           "vatSuffix": "eks. mva.",
           "recommended": false,
           "badge": "",
           "cta": {
-            "label": "Start med gratis sjekk",
+            "label": "Ta en gratis sjekk",
             "href": "/#sjekk"
-          }
+          },
+          "detailLink": {
+            "label": "Se pakken",
+            "href": "/priser/#optimalisering"
+          },
+          "visual": "controlled",
+          "situations": [
+            "Kundene finner deg ikke når de søker etter det du tilbyr.",
+            "Du får relevant trafikk, men for få henvendelser eller kjøp.",
+            "Du får for lite ut av Google Ads eller en annen viktig kanal."
+          ],
+          "selectionRule": "Velg Optimalisering når én flaskehals er tydelig viktigst akkurat nå.",
+          "typicalBusiness": "Typisk en konkurranseutsatt lokal tjenestebedrift, mindre klinikk, regnskapskontor eller nisje-B2B-bedrift med én tydelig hovedtjeneste.",
+          "scope": "Vi jobber med én hovedflaskehals til neste prioritet er viktigere. Mindre støttearbeid rundt samme mål kan inngå.",
+          "distinction": "Optimalisering er ikke laget for to uavhengige vekstspor samtidig. Hvis resultatet avhenger av at to områder forbedres parallelt, passer Vekst bedre enn å bytte hovedfokus fra måned til måned.",
+          "focusAreas": [
+            "SEO / AI-synlighet",
+            "Konverteringsoptimalisering",
+            "Lokal SEO",
+            "Google Ads – ett tydelig fokusområde"
+          ]
         },
         {
           "title": "Vekst",
-          "descriptor": "To områder som jobber sammen",
-          "fit": "For deg som vil forbedre to deler av kundereisen samtidig.",
-          "scope": "Vi jobber med to områder som henger sammen – for eksempel synlighet + konvertering eller annonser + landingsside.",
+          "descriptor": "To grep som forsterker hverandre.",
+          "fit": "Passer for bedrifter som trenger fremgang på to deler av samme kundereise samtidig.",
           "price": 6900,
           "priceSuffix": "kr/mnd",
           "vatSuffix": "eks. mva.",
           "recommended": true,
           "badge": "Anbefalt",
           "cta": {
-            "label": "Start med gratis sjekk",
+            "label": "Ta en gratis sjekk",
             "href": "/#sjekk"
-          }
+          },
+          "detailLink": {
+            "label": "Se pakken",
+            "href": "/priser/#begge"
+          },
+          "visual": "accelerating",
+          "situations": [
+            "Du trenger betalt synlighet for å få fart nå, men vil bygge organisk synlighet over tid.",
+            "Du får trafikk, men vil få mer ut av den med bedre konvertering.",
+            "Resultatet avhenger av at to områder forbedres samtidig."
+          ],
+          "selectionRule": "Velg Vekst hvis resultatet avhenger av at to ting forbedres samtidig.",
+          "combinations": [
+            {
+              "title": "Google Ads + konverteringsoptimalisering",
+              "text": "Få relevant trafikk nå og få mer ut av hvert besøk du allerede betaler for."
+            },
+            {
+              "title": "SEO / AI-synlighet + konverteringsoptimalisering",
+              "text": "Bygg organisk synlighet og få flere relevante besøk videre til henvendelse eller kjøp."
+            },
+            {
+              "title": "Google Ads + SEO / AI-synlighet",
+              "text": "Få fart med betalt synlighet nå, samtidig som du bygger organisk synlighet som kan redusere avhengigheten av annonsebudsjett over tid."
+            }
+          ]
         },
         {
           "title": "Partner",
-          "descriptor": "Helheten + større kapasitet",
-          "fit": "For deg som har flere løpende behov og trenger større kapasitet.",
-          "scope": "Vi kan jobbe bredere på tvers av synlighet, konvertering, Google Ads og Meta Ads – prioritert etter behov.",
+          "descriptor": "Flere tjenester og kundereiser.",
+          "fit": "Passer for bedrifter med flere tjenester, produktområder, markeder, lokasjoner eller målgrupper som møter forskjellige konkurrenter og trenger løpende prioritering på tvers.",
           "price": 14900,
           "priceSuffix": "kr/mnd",
           "vatSuffix": "eks. mva.",
           "recommended": false,
           "badge": "",
           "cta": {
-            "label": "Start med gratis sjekk",
+            "label": "Ta en gratis sjekk",
             "href": "/#sjekk"
-          }
+          },
+          "detailLink": {
+            "label": "Se pakken",
+            "href": "/priser/#partner"
+          },
+          "visual": "tracks",
+          "situations": [
+            "Flere tjenester eller produktområder konkurrerer i ulike markeder.",
+            "Ulike kundereiser trenger ulike kombinasjoner av synlighet, annonser og konvertering.",
+            "Du trenger en fast partner som prioriterer hva som bør forbedres hvor – og i hvilken rekkefølge."
+          ],
+          "selectionRule": "Velg Partner når flere forskjellige kundereiser må forbedres og prioriteres løpende.",
+          "pricePrefix": "fra",
+          "typicalBusiness": "Typisk en virksomhet med fire–fem forskjellige tjenester – for eksempel kantine, catering, fruktlevering og andre B2B-tjenester – der hver kundereise har egne søk, konkurrenter, sider og prioriteringer.",
+          "scope": "Vi prioriterer løpende på tvers av kundereisene som har størst kommersiell verdi eller størst forbedringspotensial. Det betyr ikke at alt gjøres samtidig eller at kapasiteten er ubegrenset.",
+          "priceNote": "Omfang og fast månedspris avtales før oppstart.",
+          "focusAreas": [
+            "SEO / AI-synlighet",
+            "Google Ads",
+            "Meta Ads",
+            "Konverteringsoptimalisering",
+            "Analyse og sporing"
+          ]
         }
-      ]
+      ],
+      "decisionStrip": {
+        "heading": "Én flaskehals, to grep eller flere kundereiser?",
+        "items": [
+          "Velg Optimalisering når ett problem er tydelig viktigst.",
+          "Velg Vekst når to deler av samme kundereise bør forbedres samtidig og kan forsterke hverandre.",
+          "Velg Partner når virksomheten har flere forskjellige tjenester, markeder eller kjøpsveier som må prioriteres løpende."
+        ]
+      },
+      "multiplier": {
+        "eyebrow": "Hvorfor Vekst finnes",
+        "heading": "Flere besøk er ikke automatisk mer vekst.",
+        "body": "Når relevante kunder finner deg og flere av dem går videre til henvendelse eller kjøp, kan tiltakene forsterke hverandre. Derfor kan det være mer effektivt å forbedre to deler av samme kundereise samtidig enn å veksle mellom dem fra måned til måned.",
+        "conceptualRow": "Bli funnet → bli valgt → gå videre",
+        "support": "SEO, AI-synlighet og annonser kan gi flere relevante besøk. Konverteringsoptimalisering kan øke verdien av trafikken du allerede har. Gode og relevante landingssider kan samtidig støtte både organisk synlighet, annonsekvalitet og konvertering."
+      }
     },
     "proof": {
       "publicationApproved": false,

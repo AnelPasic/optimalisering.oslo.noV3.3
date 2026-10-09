@@ -1,0 +1,29 @@
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { getH012Contract } from './h012-contract.mjs';
+const expected = getH012Contract();
+const source = JSON.parse(readFileSync('src/content/pages/home.json')).homepage.packages;
+for (const key of Object.keys(expected)) assert.deepEqual(source[key], expected[key], `D-041 exact shared ${key}`);
+const normalize = html => html.replace(/<[^>]*>/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
+for (const [path, full] of [['dist/index.html', false], ['dist/priser/index.html', true]]) {
+  const html = readFileSync(path, 'utf8');
+  const section = html.match(/<section id="priser"[^>]*>(.*?)<\/section>/s)[1];
+  const cards = [...section.matchAll(/<article\b[^>]*class="package-card[^>]*>(.*?)<\/article>/gs)].map(match => match[1]);
+  assert.equal(cards.length, 3);
+  for (const [index, card] of cards.entries()) {
+    const item = expected.items[index], text = normalize(card);
+    for (const copy of [item.title, item.descriptor, item.fit, item.cta.label, ...(full ? [item.typicalBusiness, item.scope, item.distinction, item.priceNote, item.selectionRule, ...item.situations, ...(item.focusAreas ?? []), ...(item.combinations ?? []).flatMap(pair => [pair.title, pair.text])] : [item.detailLink.label])].filter(Boolean)) assert.ok(text.includes(copy), `${path}: exact ${copy}`);
+    assert.equal((card.match(/class="package-curve"/g) ?? []).length, index === 2 ? 3 : 1, 'Conceptual single/single/multiple curves');
+    assert.equal((card.match(/class="package-price-prefix"/g) ?? []).length, index === 2 ? 1 : 0);
+    assert.ok(!/\d+(?:[.,]\d+)?\s*%|Mest valgt/i.test(text), 'No unsupported package percentages/popularity');
+    assert.ok(card.includes('href="/#sjekk"'));
+    if (!full) assert.ok(!text.includes(item.selectionRule) && !text.includes(item.situations[0]), 'Compact home does not duplicate full detail');
+  }
+  assert.ok(!/Mest valgt|ekstern markedsavdeling/i.test(normalize(html)));
+  if (full) {
+    for (const copy of [expected.decisionStrip.heading, ...expected.decisionStrip.items, ...Object.values(expected.multiplier)]) assert.ok(normalize(html).includes(copy));
+    assert.ok(normalize(html).includes('Partner fra 14 900 kr/mnd'), 'Repeated Partner fact includes prefix');
+    assert.ok(!/\d+(?:[.,]\d+)?\s*%/.test(normalize(html)), 'Pricing page has no uplift percentages');
+  }
+}
+console.log('H-012 static PASS: exact locked shared copy, compact/full views, selection/distinction/CRO combinations, Partner prefix, conceptual visuals/no unsupported claims.');

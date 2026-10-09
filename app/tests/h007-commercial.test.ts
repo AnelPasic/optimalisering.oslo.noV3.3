@@ -15,9 +15,10 @@ test('H-007 renders the exact reconfirmed ladder, VAT and Vekst recommendation',
     ['Vekst', 6900, 'kr/mnd', 'eks. mva.', true],
     ['Partner', 14900, 'kr/mnd', 'eks. mva.', false],
   ]);
-  assert.deepEqual(packages.items.map((item: any) => item.descriptor), ['Ett prioritert hovedområde', 'To områder som jobber sammen', 'Helheten + større kapasitet']);
+  // D-041 supersedes the old H-007 descriptors, preserving the numeric ladder.
+  assert.deepEqual(packages.items.map((item: any) => item.descriptor), ['Ett viktig problem om gangen.', 'To grep som forsterker hverandre.', 'Flere tjenester og kundereiser.']);
   assert.equal(packages.items[1].badge, 'Anbefalt');
-  assert.ok(!/Sprint|ubegrenset|bindingstid|oppsigelsestid|minimumsperiode|oppstartsgebyr|onboarding|fakturavilkår|\d+\s*(?:timer|h\/mnd)/i.test(JSON.stringify(packages)));
+  assert.ok(!/Sprint|ubegrenset|bindingstid|oppsigelsestid|minimumsperiode|oppstartsgebyr|onboarding|fakturavilkår|\d+\s*(?:timer|h\/mnd)/i.test(JSON.stringify(packages).replace('Det betyr ikke at alt gjøres samtidig eller at kapasiteten er ubegrenset.', '')));
 });
 
 test('D-024 retains four work areas, shared measurement, budget and separate-cost rules', () => {
@@ -43,7 +44,7 @@ test('H-007 commercial CMS edits are typed and retain all intended fields', () =
   const packageFields = homepageFields.find((field: any) => field.name === 'packages').fields;
   for (const key of Object.keys(packages)) assert.ok(packageFields.some((field: any) => field.name === key), `CMS package field ${key}`);
   const itemFields = packageFields.find((field: any) => field.name === 'items').fields;
-  for (const key of Object.keys(packages.items[0])) assert.ok(itemFields.some((field: any) => field.name === key), `CMS package item ${key}`);
+  for (const item of packages.items) for (const key of Object.keys(item)) assert.ok(itemFields.some((field: any) => field.name === key), `CMS package item ${key}`);
   assert.equal(homepageFields.find((field: any) => field.name === 'form').fields.find((field: any) => field.name === 'promise').type, 'string');
   for (const price of [-1, 4500.5, '4500', null]) {
     const edited = structuredClone(page);

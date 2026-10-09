@@ -1,0 +1,12 @@
+---
+interface Props { kind: 'controlled' | 'accelerating' | 'tracks'; }
+const { kind } = Astro.props;
+const curves = {
+  controlled: ['M16 112 C80 112 142 89 226 64'],
+  accelerating: ['M16 128 C112 128 146 124 176 91 S210 43 226 16'],
+  tracks: ['M16 126 C83 126 126 84 226 26', 'M16 144 C96 144 151 119 226 67', 'M16 93 C88 93 132 50 226 10'],
+};
+---
+<svg class={`package-visual package-visual-${kind}`} viewBox="0 0 248 160" fill="none" aria-hidden="true" focusable="false">
+  {curves[kind].map((curve, index) => <g><path class="package-curve" d={curve} stroke="currentColor" stroke-width="4" stroke-linecap="round" /><path d={kind === 'controlled' ? 'm214 61 14 2-6 13' : kind === 'accelerating' ? 'm214 22 12-8 3 15' : ['m213 24 15 1-5 13', 'm212 66 16-1-5 14', 'm214 8 14 1-5 13'][index]} stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /></g>)}
+</svg>

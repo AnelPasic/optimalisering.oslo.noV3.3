@@ -510,7 +510,7 @@ content:
                 type: text
           - name: packages
             label: Felles pakker for forsiden, /priser/, /synlighet/ og /konvertering/
-            description: Eneste kommersielle pakkekilde. Forsiden og /priser/ bruker hele pakkene; Synlighet og Konvertering bruker navn, priser, mva. og merking i prisbroene. Gjentatte prisfakta i FAQ følger samme kilde. D-024-verdiene endres bare etter et nytt uttrykkelig kommersielt/content-handoff.
+            description: Eneste kommersielle pakkekilde etter D-041/H-012. Forsiden viser kompakte kort; /priser/ viser fulle pakkedetaljer, valgstripe og forklaring. Synlighet/Konvertering og gjentatte FAQ-fakta arver samme kilde. Endres bare gjennom et scoped kommersielt/content-handoff.
             type: object
             fields:
               - name: eyebrow
@@ -550,6 +550,36 @@ content:
               - name: capacityNote
                 label: Ubrukt kapasitet
                 type: text
+              - name: decisionStrip
+                label: Valgstripe på prissiden
+                type: object
+                fields:
+                  - name: heading
+                    label: Overskrift
+                    type: string
+                  - name: items
+                    label: Tre låste valgregler i pakkerekkefølge
+                    type: text
+                    list: true
+              - name: multiplier
+                label: Hvorfor Vekst finnes – prissiden
+                type: object
+                fields:
+                  - name: eyebrow
+                    label: Overtekst
+                    type: string
+                  - name: heading
+                    label: Overskrift
+                    type: string
+                  - name: body
+                    label: Forklaring
+                    type: text
+                  - name: conceptualRow
+                    label: Bli funnet → bli valgt → gå videre
+                    type: string
+                  - name: support
+                    label: Støttetekst
+                    type: text
               - name: items
                 label: Alternativer
                 type: object
@@ -565,11 +595,62 @@ content:
                     label: Passer for
                     type: text
                   - name: scope
-                    label: Arbeidsidé
+                    label: Slik jobber vi – valgfritt der låst copy angir dette
                     type: text
+                  - name: typicalBusiness
+                    label: Typisk virksomhet
+                    type: text
+                  - name: situations
+                    label: Typiske situasjoner
+                    type: text
+                    list: true
+                  - name: focusAreas
+                    label: Eksempler på fokus eller arbeidsområder
+                    type: string
+                    list: true
+                  - name: combinations
+                    label: Kombinasjoner for Vekst – låst CRO-rekkefølge
+                    type: object
+                    list: true
+                    fields:
+                      - name: title
+                        label: Kombinasjon
+                        type: string
+                      - name: text
+                        label: Forklaring
+                        type: text
+                  - name: selectionRule
+                    label: Valgregel
+                    type: text
+                  - name: distinction
+                    label: Viktig skille mellom sekvensielt og parallelt arbeid
+                    type: text
+                  - name: priceNote
+                    label: Partner – omfang og prisavtale
+                    type: text
+                  - name: visual
+                    label: Konseptuell kurve – ingen resultatprognose
+                    type: select
+                    options: [controlled, accelerating, tracks]
                   - name: price
                     label: Månedspris i kroner
                     type: number
+                  - name: pricePrefix
+                    label: Fra-pris – bare Partner
+                    description: Valgfritt. Kun tredje pakke kan ha fra; de to andre har fast pris. Fjern feltet for pakker uten prefiks.
+                    type: select
+                    options: [fra]
+                  - name: detailLink
+                    label: Se pakken – fra forside til riktig pakkeanker
+                    type: object
+                    fields:
+                      - name: label
+                        label: Lenketekst
+                        type: string
+                      - name: href
+                        label: Pakkeanker på /priser/
+                        type: string
+                        pattern: ^/priser/#
                   - name: priceSuffix
                     label: Prisenhet
                     type: string

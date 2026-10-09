@@ -1,0 +1,9 @@
+# H-012 fresh technical review
+
+2026-10-09. Fresh read-only reviewer `h012_technical_review`, dispatched through the requesting-code-review skill with task requirements and baseline **2402e886203d1a4946cc505c7787df90b0c472fe**, without conversation history. Reviewed uncommitted product diff/new files, H-012/D-041–D-043 exact-copy authority, CMS contracts and desktop full/mobile compact captures. Independently passed the exact H-012 audit and all 185 frozen hashes plus homepage preservation outside packages. Reviewer performed no edits or mutating builds/fixtures.
+
+One actionable P2: editable Vekst detailLink could change the homepage destination to `/priser/#vekst`, while the full pricing card retained only fixed `#begge`. Schema allowed the edit, leaving a broken destination. Fix: all full cards use their shared editable fragment; Vekst emits a conditional legacy `#begge` alias when the fragment differs. No duplicate alias under default content. Real Astro source fixture changes Vekst link/recommendation and verifies home destination, full-card target and legacy alias, then restores original home bytes.
+
+Fresh follow-up verdict: **P2 resolved; no remaining actionable findings.** Read-only inspection confirms the implementation and real-fixture assertions cover the changed anchor with recommendation disabled. Final full verify (95 files, 41 tests, 445 links), 40 synthetic browser checks and focused 1440/390/320 QA/185 frozen hashes/93 preserved snapshots pass after the fix.
+
+This is implementation correctness review. It supplies no OWNER, STRATEGY_CONTENT or formal RED_TEAM verdict, pricing/content lock, launch authorization or acceptance of visual semantics. OWNER + STRATEGY_CONTENT must review the complete H-012 pricing experience. Authenticated CMS save remains manual/unproven.
