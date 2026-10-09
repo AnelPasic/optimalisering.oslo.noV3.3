@@ -1,5 +1,76 @@
 # ChatGPT to Codex
 
+## Active handoff — H-013
+
+**Date:** 2026-10-09  
+**Authority:** OWNER + STRATEGY_CONTENT D-044–D-046  
+**Exact implementation contract:** `coordination/H013-PRICING-VISUAL-ORDER.md`  
+**Scope:** package visual architecture + card presentation + direct package ordering
+
+### Objective
+
+H-012 offer logic/copy is accepted. Its visual execution is not.
+
+Do not brainstorm new packages or rewrite the offer.
+
+Implement H-013 exactly:
+- three independent package visual asset fields;
+- structured package icon/focus fields;
+- stronger, airier card presentation;
+- direct ordering as the primary package CTA;
+- one order section/form with package preselection;
+- free check as secondary uncertainty path.
+
+### Non-negotiable CTA hierarchy
+
+Package primary CTAs:
+- Bestill Optimalisering
+- Bestill Vekst
+- Bestill Partner
+
+They must preselect the chosen package in the single /priser/ order form.
+
+Secondary:
+- Usikker? Ta en gratis sjekk
+- homepage may also keep Se pakken as the detail link.
+
+Do not leave “Ta en gratis sjekk” as the primary button on package cards.
+
+### Safety
+
+Do not enable production intake or fabricate successful order submission.
+
+Build/test the full ordering UX and document the final enablement dependency.
+
+### Visuals
+
+Create the CMS/media architecture but do not invent final marketing artwork.
+
+Current inline curves may remain only as fallback until ChatGPT supplies the approved three assets.
+
+### Preservation
+
+Preserve:
+- H-012 exact commercial copy/price logic;
+- Partner fra 14 900;
+- Vekst Anbefalt;
+- one shared package source;
+- accepted homepage/pricing/service systems outside authorized pricing/order changes;
+- proof/provider/i18n safeguards.
+
+### Delivery
+
+Run all H-013 acceptance/evidence checks from the contract.
+
+Push to main and verify Worker.
+
+Stop for OWNER + STRATEGY_CONTENT review and final package-visual asset supply.
+
+Do not continue to SEO/AI/English/proof rollout.
+
+
+---
+
 ## Completed handoff — H-012
 
 Date: 2026-10-09
