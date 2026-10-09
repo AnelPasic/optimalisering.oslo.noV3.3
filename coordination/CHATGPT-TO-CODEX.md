@@ -1,5 +1,36 @@
 # ChatGPT to Codex
 
+## Active handoff — H-016
+
+Date: 2026-10-09
+Authority: OWNER + STRATEGY_CONTENT D-053–D-057
+Exact contract: coordination/H016-CMS-EDITOR-PRICING.md
+
+H-015 is usable. Stop polishing package artwork in code.
+
+Implement the CMS/editor-first pricing pass exactly.
+
+Priorities:
+1. expose every safe customer-facing package/caption/icon/image/CTA-label field in Pages CMS;
+2. keep key/href/preselection routing protected;
+3. use the current compact H-015 pricing-card anatomy on the homepage;
+4. on /priser/, render package details open by default but collapsible;
+5. remove the old Optimalisering distinction;
+6. set Vekst selection rule to “Velg Vekst når to forbedringer kan forsterke hverandre.”;
+7. replace “Ett viktig problem om gangen.” with “Ett viktig forbedringsområde om gangen.”;
+8. avoid “problem” in package/pricing customer copy;
+9. preserve prices, direct-order behavior and the single shared package source;
+10. attempt authenticated CMS save/revert verification if access is actually available.
+
+Do not rewrite unrelated content.
+
+Push to main, verify Worker, update coordination/evidence, then STOP for OWNER review.
+
+After this handoff, OWNER intends to do routine package wording/image changes directly in Pages CMS.
+
+
+---
+
 ## Completed handoff — H-015
 
 Date: 2026-10-09
