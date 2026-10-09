@@ -1,6 +1,6 @@
 # Review queue
 
-State: H-014 IMPLEMENTATION COMPLETE / OWNER + STRATEGY_CONTENT REVIEW REQUIRED / H-013 ORDER-DATA PASS PRESERVED / SEO-AI-EN PAUSED.
+State: H-014 COMPACTNESS PASS / H-015 PRICING VISUAL POLISH OPEN / SEO-AI-EN PAUSED.
 
 | Order / ID | Scope | Responsible role | State / completion evidence |
 | --- | --- | --- | --- |
@@ -233,3 +233,5 @@ For each completed review, append date, actual reviewer/role, inspected SHA, sco
 - 2026-10-09: OWNER review of H-012: package strategy/copy passes; graphical execution does not. D-045 also corrects CTA hierarchy: package buyers must be able to order directly; free check is secondary. H-013 adds three package visual slots, structured icon items and a single preselected order form while preserving H-012 offer logic.
 
 - 2026-10-09: OWNER rejects H-013 default card height/density. H-014 keeps the accepted offer/order/data model but turns cards into compact decision summaries; long copy moves behind accessible collapsed details.
+
+- 2026-10-09: OWNER accepts H-014 compactness but wants the package visuals closer to the earlier approved illustration. H-015 recreates only those visual motifs as clean SVG-style assets/components while preserving the semantic HTML cards.
