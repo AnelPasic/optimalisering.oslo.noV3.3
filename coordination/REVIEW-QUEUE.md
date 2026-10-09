@@ -1,6 +1,6 @@
 # Review queue
 
-State: H-012 IMPLEMENTATION COMPLETE / OWNER + STRATEGY_CONTENT PRICING REVIEW REQUIRED / H-011 SYSTEM PASS D-039 / SEO-AI + EN PAUSED.
+State: H-012 COMMERCIAL/COPY PASS + VISUAL REVISE / H-013 PRICING VISUAL + DIRECT ORDER OPEN / SEO-AI-EN PAUSED.
 
 | Order / ID | Scope | Responsible role | State / completion evidence |
 | --- | --- | --- | --- |
@@ -202,3 +202,5 @@ For each completed review, append date, actual reviewer/role, inspected SHA, sco
 - 2026-10-09: STRATEGY_CONTENT/OWNER review passes H-011 under D-039. Provider neutrality, homepage qualification, service-visual contract and hidden i18n scaffolding all pass. Final service hero assets remain a separate visual gate. Pricing brainstorming is captured under D-040 as a non-implementation working draft so the agreed logic is not lost while visual work continues.
 
 - 2026-10-09: OWNER/STRATEGY_CONTENT locked H-012 pricing copy and visual semantics. Render compact packages on homepage and the full self-selection experience on /priser/. Vekst remains Anbefalt, not Mest valgt, until real sales data supports that claim.
+
+- 2026-10-09: OWNER review of H-012: package strategy/copy passes; graphical execution does not. D-045 also corrects CTA hierarchy: package buyers must be able to order directly; free check is secondary. H-013 adds three package visual slots, structured icon items and a single preselected order form while preserving H-012 offer logic.
