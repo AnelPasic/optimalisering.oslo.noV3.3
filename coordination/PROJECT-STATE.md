@@ -2,7 +2,7 @@
 
 Updated: 2026-10-09. Owner: Medon AS. Implementation repository: AnelPasic/optimalisering.oslo.noV3.3.
 
-**State: H-009 /SYNLIGHET/ IMPLEMENTATION COMPLETE; STOP FOR STRATEGY_CONTENT REVIEW. D-027 PRICING PASS AND D-028 COPY PRESERVED; PROOF NON-PUBLIC; OTHER 12 PAGES FROZEN.** Pricing remains the validated second-page pattern; Synlighet is the first service-page pattern awaiting its own review.
+**State: H-009 /SYNLIGHET/ PASSED STRATEGY_CONTENT UNDER D-030; H-010 /KONVERTERING/ PROPAGATION AUTHORIZED UNDER D-031/D-032; HOME, /PRISER/ AND /SYNLIGHET/ BASELINES MUST REMAIN STABLE; OTHER PAGES FROZEN; PROOF NON-PUBLIC.** The service-page pattern is now validated on one page and may be tested on Konvertering only.
 
 Current H-009 web review: [Synlighet](https://optimalisering-oslo-v33.anel.workers.dev/synlighet/), main build source **463c683de92fe34ce66cb0001e722ff146a9ce19**, implementation **36c305f62c82897e54dd99384e2fcc9c1d96e356**, verified connected Worker **2074e8cd-ccc2-44a5-9a13-b31b5c671d9f**. Native build succeeded; live service 1440/390/320 and eight captures pass with preserved home/pricing and all 187 frozen files. All 15 HTML responses, three CSS and three WebPs match tested assets; robots/sitemap/noindex and intake GET 404 pass. Evidence: coordination/evidence/h009-live/. This following receipt revision changes no website assets. Stop for STRATEGY_CONTENT; no further propagation active.
 
@@ -234,3 +234,14 @@ Next implementation is H-008: make /priser/ the first controlled propagation pag
 H-008 pricing propagation is accepted. One ambiguous heading was corrected to **“Fire områder. Prioritert etter behov.”** and the corrected pricing revision is locked under D-027.
 
 The exact /synlighet/ content at `cc02995a5b43d3d0ee28df23a4588ff09a16cd21` is locked under D-028. H-009 may implement that page using the accepted visual system and shared package source, but no other service page may be propagated yet.
+
+
+## STRATEGY_CONTENT review — H-009
+
+/synlighet/ passes as the reusable service-page pattern. No copy or visual correction is required before the next controlled test.
+
+Locked next-page content:
+- `app/src/content/pages/konvertering.json`
+- commit `8b8f4c4eecda1458e45c392dfabe3d4ac4fbc8d5`
+
+H-010 may generalize the existing service renderer/pricing bridge just enough for /konvertering/, but must prove /synlighet/ output remains unchanged.
