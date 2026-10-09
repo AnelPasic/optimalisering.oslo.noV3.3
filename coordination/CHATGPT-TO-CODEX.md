@@ -1,5 +1,319 @@
 # ChatGPT to Codex
 
+## Active handoff — H-011
+
+**Date:** 2026-10-09  
+**Authority:** OWNER + STRATEGY_CONTENT D-033–D-038  
+**Rule file:** `coordination/H011-LANDING-PAGE-RULES.md`  
+**Scope:** system hardening only — accepted pages/chrome + service visual architecture + minimal i18n scaffolding
+
+### Objective
+
+Pause service-page rollout.
+
+Before continuing to SEO/AI-synlighet, harden the accepted system around four new project rules:
+
+1. every commercial service page is a landing page;
+2. every service hero must support a dream-outcome image/illustration;
+3. Optimalisering Oslo is the customer-facing brand; Medon is provider disclosure/legal context, not the service brand;
+4. the site will be Norwegian + English, but English copy is not ready yet.
+
+Do not turn this into a redesign or a full localization project.
+
+---
+
+## 1. Preserve H-010 acceptance
+
+H-010 /konvertering/ passes under D-033.
+
+Preserve:
+- exact D-031 Konvertering copy;
+- D-030 Synlighet service pattern;
+- home/pricing layouts;
+- shared package source;
+- current palette/typography/spacing;
+- current proof guards.
+
+The lack of a hero visual in H-010 is addressed by this new handoff; it does not authorize unrelated changes.
+
+---
+
+## 2. Apply the locked homepage/provider revision
+
+Consume current `app/src/content/pages/home.json` including D-037 revision at:
+
+`89f5918caed62971445fccaba13491ac170d87ea`
+
+Do not restore older Medon-heavy copy.
+
+Required visible outcomes:
+- hero intro no longer says Medon;
+- standalone Medon/provider content section is absent from homepage;
+- fit section uses the locked competitive-fit/poor-fit examples;
+- footer provider disclosure is exactly:
+  **Tjenesten drives av Medon AS.**
+- “Om Medon” in accepted chrome becomes **Om tjenesten**;
+- normal commercial FAQ/copy uses “vi” / Optimalisering Oslo rather than Medon;
+- legal/operational references to Medon may remain where actually required.
+
+Also preserve the current provider-neutral `/priser/` SEO title from:
+`ec538f3edb314152e9c0eb596ffdb2b93063954c`
+
+Do not rewrite the locked homepage fit examples.
+
+---
+
+## 3. Provider-neutral chrome
+
+For the accepted home/pricing/service chrome, Medon must appear only once in normal commercial chrome:
+
+> Tjenesten drives av Medon AS.
+
+Do not show:
+- “En tjeneste fra Medon AS. Synlighet og konvertering for bedrifter.”
+- “Om Medon” as a navigation label
+- repeated Medon copyright/service branding.
+
+Use **Optimalisering Oslo** for the visible service copyright/brand line where appropriate.
+
+Do not remove Medon from privacy/terms/company/legal facts where it is required to identify the responsible company.
+
+Architecture/code should not hard-code Medon as the permanent future service operator beyond provider/legal config.
+
+---
+
+## 4. Service hero visual architecture
+
+Extend the validated `ServicePage` system so each service page can optionally render one dream-outcome visual in the hero.
+
+Add a reusable content/CMS object such as:
+
+- kind: `photo | illustration`
+- src
+- alt
+- positionX
+- positionY
+- optional decorative/background treatment only if genuinely useful
+
+Use a dedicated service media collection/path, for example:
+
+`app/public/images/services/`
+
+Do not reuse the homepage customer photo by default.
+
+The hero component must support:
+- text-only fallback when no asset exists;
+- text + visual split when an asset exists;
+- responsive crop;
+- no broken image;
+- no fake caption/metric.
+
+Prepare **Synlighet** and **Konvertering** to receive assets without another structural redesign.
+
+Do not create final hero artwork in Codex.
+
+ChatGPT will generate/select the actual visual assets after H-011 review.
+
+### Intended briefs
+
+**Synlighet**
+Dream outcome:
+> Relevant customers find the business before they have already chosen a supplier.
+
+Preferred mode:
+- editorial illustration;
+- simple discovery -> relevant business/page -> next-step idea;
+- never fake #1 ranking or guaranteed visibility.
+
+**Konvertering**
+Dream outcome:
+> More of the relevant visitors already arriving continue to enquiry or purchase.
+
+Preferred mode:
+- authentic-ish customer/business photo OR editorial illustration;
+- convey reduced friction / completed action / business relief;
+- never fake conversion uplift.
+
+The structure must also be reusable later for /seo/ and /ai-synlighet/, but do not route those pages through ServicePage yet.
+
+---
+
+## 5. Landing-page contract
+
+Record/test the service-page contract from `H011-LANDING-PAGE-RULES.md`.
+
+A service page is not accepted merely because it contains SEO copy.
+
+At minimum its rendered journey must support:
+- outcome-focused hero;
+- dream-outcome visual capability;
+- problem/mechanism clarity;
+- practical customer meaning;
+- fit/limits where relevant;
+- commercial bridge;
+- bounded next step.
+
+Do not add a generic “features” block just to satisfy the contract.
+
+---
+
+## 6. Homepage fit section
+
+Render D-037 exactly.
+
+The point is commercial qualification, not negativity.
+
+The poor-fit example must communicate:
+- if there is effectively no competitive customer-choice problem;
+- and customers already find/buy from the business;
+- optimization may not be the current bottleneck.
+
+Do not turn this into a long disclaimer or hide it in FAQ.
+
+Preserve it as a visible homepage section.
+
+---
+
+## 7. Minimal i18n scaffolding
+
+Target architecture:
+
+- Norwegian Bokmål = default/root paths:
+  - /
+  - /synlighet/
+  - /konvertering/
+  - /priser/
+- English = future `/en/` equivalents:
+  - /en/
+  - /en/visibility/ or another explicitly mapped English slug
+  - etc.
+
+For H-011, implement **only low-risk infrastructure**, not translations.
+
+Required:
+- central locale config: default `nb`, supported future `en`;
+- route/translation-pair contract or helper;
+- document intended canonical/hreflang behavior for later English rollout;
+- reusable header language-switch slot/component.
+
+Important:
+- **do not show an EN control if there is no English equivalent yet**;
+- do not create empty /en/ pages;
+- do not machine-translate current drafts;
+- do not duplicate all page JSON just to claim i18n readiness.
+
+If the cleanest H-011 implementation is a hidden/non-rendered switch component plus locale config and documentation, that is acceptable.
+
+The visible top-menu switch comes when real English equivalents begin landing.
+
+---
+
+## 8. CMS
+
+Pages CMS should support:
+- service hero visual fields for Synlighet/Konvertering;
+- future page locale/translation relationship if this can be added without duplicating every draft page;
+- current provider-neutral chrome fields.
+
+Do not expose internal provider/legal config as casual marketing fields if that would make it easy to delete required company disclosure.
+
+Authenticated CMS save remains a manual check and is not a blocker.
+
+---
+
+## 9. Current page routing
+
+After H-011:
+- /synlighet/ remains on validated ServicePage;
+- /konvertering/ remains on validated ServicePage;
+- /seo/ and /ai-synlighet/ remain frozen on their current renderer;
+- no additional service-page propagation.
+
+The new hero visual support must not automatically change frozen pages.
+
+---
+
+## 10. No image fabrication in implementation
+
+Do not:
+- fetch stock photography;
+- draw a generic SVG and call it final artwork;
+- copy Mementor illustrations;
+- use their logo/mascot/composition;
+- invent client-result visuals.
+
+A neutral development fallback may be used only if necessary for layout testing, and it must not become visible final copy/claim.
+
+ChatGPT will supply the real assets.
+
+---
+
+## 11. Preservation
+
+Apart from the explicit provider-neutral/home-fit changes:
+- homepage layout remains unchanged;
+- /priser/ layout/content remains unchanged;
+- /synlighet/ copy/layout remains unchanged;
+- /konvertering/ copy/layout remains unchanged;
+- shared commercial package values remain unchanged;
+- proof remains non-public;
+- backend/intake remains unchanged;
+- /system/ and /project/ unchanged.
+
+Other pages should not receive visual propagation in this handoff.
+
+---
+
+## Acceptance criteria
+
+1. H-010 /konvertering/ remains materially identical except optional hero-visual-ready markup that renders no final asset yet.
+2. /synlighet/ remains materially identical except optional hero-visual-ready markup that renders no final asset yet.
+3. Homepage renders D-037 qualification/provider copy exactly.
+4. Standalone homepage Medon section is gone.
+5. Accepted commercial chrome shows only one normal provider disclosure: **Tjenesten drives av Medon AS.**
+6. “Om Medon” is no longer a normal accepted-chrome navigation label.
+7. /priser/ SEO title no longer brands the service as Medon.
+8. ServicePage has a reusable, CMS-editable dream-outcome visual contract.
+9. Missing service visual does not break or awkwardly empty the hero.
+10. No stock/fake/final visual is introduced by Codex.
+11. Minimal nb/en locale architecture exists and is documented.
+12. No visible dead English switch exists.
+13. No /en/ placeholder routes are created.
+14. Home, pricing, Synlighet and Konvertering still pass 1440/390/320 QA.
+15. Proof, backend, protected inputs and frozen pages remain protected.
+
+---
+
+## Evidence / delivery
+
+Run:
+- full verify/tests/browser QA;
+- exact provider-disclosure scan across accepted commercial pages;
+- exact D-037 fit-copy check;
+- service visual missing-asset/fallback test;
+- no-dead-language-switch check;
+- no accidental /en/ route check;
+- preservation regression for home/pricing/Synlighet/Konvertering except authorized deltas.
+
+Capture:
+- homepage fit section 1440 + 390;
+- accepted footer/header 1440 + 390;
+- Synlighet hero 1440 + 390 after visual-slot refactor;
+- Konvertering hero 1440 + 390 after visual-slot refactor.
+
+Push to main and verify Worker.
+
+Update coordination/report/evidence.
+
+Stop for:
+1. STRATEGY_CONTENT/OWNER review of H-011;
+2. ChatGPT-generated Synlighet/Konvertering hero assets.
+
+Do not continue to SEO/AI-synlighet or English page generation without the next handoff.
+
+
+---
+
 ## Completed handoff — H-010
 
 **Date:** 2026-10-09  
