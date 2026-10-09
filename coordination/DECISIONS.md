@@ -89,6 +89,8 @@ OWNER subsequently explicitly applies `#320c43` also to the homepage footer. Thi
 | D-056 | OWNER + STRATEGY_CONTENT / PACKAGE COPY CLEANUP | Remove the long negative Optimalisering distinction. Replace the Vekst selection rule with **“Velg Vekst når to forbedringer kan forsterke hverandre.”** Replace **“Ett viktig problem om gangen.”** with **“Ett viktig forbedringsområde om gangen.”** Avoid “problem” in customer-facing package/pricing copy. | OWNER instruction in ChatGPT, 2026-10-09. Fields remain CMS-editable after H-016. |
 | D-057 | OWNER + STRATEGY_CONTENT / H-016 AUTHORIZED | Implement D-054–D-056 as a bounded CMS/presentation pass. Preserve prices, offer architecture, direct-order routing, shared source, provider/i18n/proof safeguards and all unrelated pages. | OWNER instruction in ChatGPT, 2026-10-09. |
 
+| D-058 | OWNER + STRATEGY_CONTENT / H-016 IMPLEMENTATION PASS, AUTHENTICATED CMS CHECK PENDING | H-016 passes code/content/presentation review: shared package source, homepage/pricing display modes, editable safe package fields, protected routing, copy cleanup and direct ordering behave as intended. Final acceptance of the CMS workflow still requires one authenticated OWNER save/revert in Pages CMS because the editor session was not available to implementation. | OWNER/STRATEGY_CONTENT review, 2026-10-09, based on H-016 live evidence and implementation report. |
+
 ## Review publication authority
 
 | ID | Authority / state | Decision | Source and scope |
