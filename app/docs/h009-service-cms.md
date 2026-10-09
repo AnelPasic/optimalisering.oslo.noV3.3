@@ -1,5 +1,7 @@
 # H-009 Synlighet service page and shared pricing
 
+Historical H-009 implementation scope. D-030 subsequently accepts this service pattern; H-010 extends it only to Konvertering and generalizes the bridge context without changing Synlighet output. The same CMS source label now names all four routes; see [h010-service-cms.md](h010-service-cms.md) for current editing/gating details. The original H-009 boundary below remains its recorded history.
+
 Incoming main **fd48a91a4c7353aa37cb55b9abd30efd8e18a9f7** supplies active H-009. Preserve D-027's corrected pricing support revision **d9f4751b1dfb3886953e9440304549e69f26b1ad** and D-028's exact Synlighet revision **cc02995a5b43d3d0ee28df23a4588ff09a16cd21**. Current JSON bytes/status/authority remain unchanged; the coordination decisions carry the scoped locks.
 
 ## Editing locations

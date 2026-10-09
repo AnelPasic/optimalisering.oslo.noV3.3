@@ -1,4 +1,4 @@
-# Pages CMS: shared home/pricing/service commercial source; other 12 pages remain frozen.
+# Pages CMS: shared home/pricing/service commercial source; other 11 pages remain frozen.
 media:
   - name: assets
     label: Eksisterende media
@@ -100,7 +100,7 @@ content:
             type: string
           - name: body
             label: Avsnitt
-            description: På /priser/ er kostnader.body en godkjent referanse. Synlige kostnadsregler, prisbroen på /synlighet/ og gjentatte prisfakta styres av Forside > Forsidens innhold > Felles pakker for forsiden, /priser/ og /synlighet/. Rediger disse reglene der; låste støtteavsnitt etter D-027/D-028 endres bare etter et nytt scoped handoff.
+            description: På /priser/ er kostnader.body en godkjent referanse. Synlige kostnadsregler, prisbroene på /synlighet/ og /konvertering/ og gjentatte prisfakta styres av Forside > Forsidens innhold > Felles pakker for forsiden, /priser/, /synlighet/ og /konvertering/. Låst tekst etter D-027/D-028/D-031 endres bare etter et nytt scoped handoff.
             type: text
             list: true
           - name: items
@@ -459,8 +459,8 @@ content:
                 label: Forbehold
                 type: text
           - name: packages
-            label: Felles pakker for forsiden, /priser/ og /synlighet/
-            description: Eneste kommersielle pakkekilde. Forsiden og /priser/ bruker hele pakkene; /synlighet/ bruker navn, priser, mva. og merking i prisbroen. Gjentatte prisfakta i FAQ følger samme kilde. D-024-verdiene endres bare etter et nytt uttrykkelig kommersielt/content-handoff.
+            label: Felles pakker for forsiden, /priser/, /synlighet/ og /konvertering/
+            description: Eneste kommersielle pakkekilde. Forsiden og /priser/ bruker hele pakkene; Synlighet og Konvertering bruker navn, priser, mva. og merking i prisbroene. Gjentatte prisfakta i FAQ følger samme kilde. D-024-verdiene endres bare etter et nytt uttrykkelig kommersielt/content-handoff.
             type: object
             fields:
               - name: eyebrow

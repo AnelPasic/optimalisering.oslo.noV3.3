@@ -4,9 +4,10 @@ import Arrow from './Arrow.astro';
 interface Props {
   content: NonNullable<CollectionEntry<'pages'>['data']['homepage']>['packages'];
   link: { label: string; href: string };
+  serviceName: string;
 }
-const { content, link } = Astro.props;
-const contexts = ['Når Synlighet er det ene prioriterte området.', 'Når Synlighet jobber sammen med et annet område.'];
+const { content, link, serviceName } = Astro.props;
+const contexts = [`Når ${serviceName} er det ene prioriterte området.`, `Når ${serviceName} jobber sammen med et annet område.`];
 const formatPrice = (value: number) => new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 0 }).format(value);
 ---
 <section id="service-priser" class="service-pricing section-space">

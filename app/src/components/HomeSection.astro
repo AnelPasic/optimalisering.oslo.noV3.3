@@ -1,10 +1,10 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import Arrow from './Arrow.astro';
-interface Props { section: CollectionEntry<'pages'>['data']['sections'][number]; index?: number; }
-const { section } = Astro.props;
+interface Props { section: CollectionEntry<'pages'>['data']['sections'][number]; index?: number; visualId?: 'behov' | 'kanaler'; }
+const { section, visualId } = Astro.props;
 ---
-<section id={section.id} class={`content-section section-space home-section-${section.id}`}>
+<section id={section.id} class={`content-section section-space home-section-${visualId ?? section.id}`}>
   <div class="shell">
     <div class="section-heading section-heading-split"><div>{section.eyebrow && <p class="eyebrow">{section.eyebrow}</p>}<h2>{section.heading}</h2></div><div class="body-copy">{section.body.map(text => <p>{text}</p>)}</div></div>
     {section.items && <div class:list={['section-items', { 'two-items': section.items.length === 2, 'mechanism-steps': section.id === 'mekanisme' }]}>{section.items.map((item, i) => <article class={`info-item home-item-${i}`}>
