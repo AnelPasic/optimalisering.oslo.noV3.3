@@ -2,7 +2,7 @@
 
 Updated: 2026-10-09. Owner: Medon AS. Implementation repository: AnelPasic/optimalisering.oslo.noV3.3.
 
-**State: H-016 IMPLEMENTATION PASS; AUTHENTICATED CMS SAVE/REVERT STILL PENDING; H-017A PARALLEL INTAKE READINESS AUTHORIZED UNDER D-062; ROUTINE PACKAGE TUNING MOVES TO CMS; SEO/AI/EN PAUSED; PROOF NON-PUBLIC.** H-017A may change technical intake plumbing only and must keep the review site fail-closed.
+**State: H-016 IMPLEMENTATION PASS BUT FULL CMS WORKFLOW ACCEPTANCE FAILED BY OWNER SMOKE TEST; H-017A TECHNICAL INTAKE WORK MAY CONTINUE; H-017B CMS UX + DEPLOY RELIABILITY IS QUEUED NEXT; SEO/AI/EN PAUSED; PROOF NON-PUBLIC.** Pages CMS saves do reach GitHub main, but recent Cloudflare Workers Builds fail and the editor information architecture is not customer-grade yet.
 
 ## Current H-016 delivery
 
@@ -383,3 +383,8 @@ D-061 adds `npm run qa:copy` to the normal static QA chain. This prevents the mo
 ## H-017A parallel work
 Authoritative contract: `coordination/H017A-INTAKE-READINESS.md`
 This work is intentionally independent of ongoing content, visual and proof review.
+
+
+## H-017B queued
+Contract: `coordination/H017B-CMS-UX-DEPLOY.md`
+Immediate safety fix `settings.content.merge: true` is already on main. Do not execute H-017B until H-017A is complete or stopped.
