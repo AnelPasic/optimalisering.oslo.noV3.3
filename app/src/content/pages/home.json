@@ -4,12 +4,12 @@
   "status": "REVIEW_REQUIRED",
   "authority": "DRAFT / NON-AUTHORITATIVE",
   "seo": {
-    "title": "SEO, AI-synlighet og konverteringsoptimalisering | Medon",
-    "description": "Bli funnet og gjør flere besøk til henvendelser og salg. Medon hjelper bedrifter i Norge med synlighet, konvertering eller begge. Ta en gratis, manuell sjekk."
+    "title": "SEO, AI-synlighet og konverteringsoptimalisering | Optimalisering Oslo",
+    "description": "Bli funnet og gjør flere besøk til henvendelser og salg. Optimalisering for konkurranseutsatte bedrifter i Norge. Ta en gratis, manuell sjekk."
   },
   "eyebrow": "For bedrifter som konkurrerer om kundene",
   "title": "Bli funnet. Gjør flere besøk til henvendelser og salg.",
-  "intro": "SEO, AI-synlighet og konverteringsoptimalisering for bedrifter i Oslo og resten av Norge. Medon starter der kundereisen stopper.",
+  "intro": "SEO, AI-synlighet og konverteringsoptimalisering for bedrifter i Oslo og resten av Norge. Vi starter der kundereisen stopper.",
   "cta": {
     "label": "Ta en gratis sjekk",
     "href": "/#sjekk"
@@ -213,7 +213,7 @@
           "href": "/innsikt/"
         }
       ],
-      "providerText": "En tjeneste fra Medon AS. Synlighet og konvertering for bedrifter.",
+      "providerText": "Tjenesten drives av Medon AS.",
       "previewLabel": "Forhåndsvisning · til vurdering",
       "serviceNavigationLabel": "Tjenester og veiledning",
       "informationNavigationLabel": "Kontakt og informasjon",
@@ -227,7 +227,7 @@
           "href": "/#sjekk"
         },
         {
-          "label": "Om Medon",
+          "label": "Om tjenesten",
           "href": "/om/"
         },
         {
@@ -243,7 +243,7 @@
           "href": "/vilkar/"
         }
       ],
-      "copyrightProvider": "Medon AS",
+      "copyrightProvider": "Optimalisering Oslo",
       "footerNote": "Et godt sted å begynne."
     }
   },
@@ -277,16 +277,16 @@
     {
       "id": "passer",
       "eyebrow": "Er dette aktuelt for bedriften?",
-      "heading": "For deg som vil forbedre veien til kunder",
+      "heading": "Best når kundene faktisk har et valg.",
       "body": [],
       "items": [
         {
           "title": "Passer godt hvis…",
-          "text": "Bedriften konkurrerer om kundene, og en henvendelse eller ordre har økonomisk verdi. Du har en nettside eller nettbutikk som kan forbedres og vil måle kommersiell effekt."
+          "text": "Bedriften konkurrerer om kundene, har kapasitet til flere henvendelser eller salg, og en ny kunde eller ordre har nok verdi til at forbedringer kan lønne seg."
         },
         {
           "title": "Passer dårlig hvis…",
-          "text": "Du ønsker en garantert rangering eller et bestemt antall kunder, en full gratis revisjon eller aktivitet uten et tydelig mål."
+          "text": "Du er allerede det eneste reelle alternativet og kundene finner deg uten problemer. Tenk en tannklinikk på et lite sted som er eneste klinikk innenfor 100 km, eller en nettbutikk som er eneste norske forhandler av reservedeler til gamle flipperspill og allerede eier de relevante søkene."
         }
       ]
     },
@@ -297,21 +297,6 @@
       "body": [
         "Vi ser på den offentlige nettsiden eller nettbutikken og sender deg de tre viktigste tingene vi ville undersøkt eller forbedret først.",
         "Dette er en kort, manuell vurdering – ikke en full revisjon, prognose eller gratis gjennomføring. Videre arbeid avtales separat."
-      ]
-    },
-    {
-      "id": "medon",
-      "eyebrow": "Medon AS står bak",
-      "heading": "Én ansvarlig leverandør, tydelig avtalt arbeid",
-      "body": [
-        "Optimalisering Oslo er en tjeneste fra Medon AS. Vi jobber først og fremst med norske bedrifter, og kan også hjelpe bedrifter i andre nordiske land.",
-        "Du skal forstå hva vi foreslår, hvorfor vi foreslår det og hva som faktisk er avtalt. Vi lover ikke en bestemt Google-plassering, en AI-anbefaling eller et bestemt antall nye kunder."
-      ],
-      "links": [
-        {
-          "label": "Om leverandøren",
-          "href": "/om/"
-        }
       ]
     }
   ],
@@ -334,7 +319,7 @@
     },
     {
       "question": "Jobber dere bare med bedrifter i Oslo?",
-      "answer": "Nei. Medon AS jobber først og fremst med bedrifter i Norge, og kan også hjelpe bedrifter i andre nordiske land. Navnet innebærer ikke at vi har et Oslo-kontor."
+      "answer": "Nei. Vi jobber med bedrifter i hele Norge og kan også hjelpe i andre nordiske markeder. Navnet beskriver tjenesten og satsingen – ikke et krav om at kunden holder til i Oslo."
     }
   ]
 }
