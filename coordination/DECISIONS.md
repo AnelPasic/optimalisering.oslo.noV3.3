@@ -93,6 +93,8 @@ OWNER subsequently explicitly applies `#320c43` also to the homepage footer. Thi
 
 | D-059 | OWNER / CUSTOMER-FACING PUNCTUATION STYLE | Customer-facing copy uses ordinary keyboard punctuation: `-` instead of en/em dashes and `->` instead of Unicode text arrows. Actual SVG/icon arrows are unaffected. Apply this to current and future CMS/site copy without blind replacement in code, URLs or identifiers. | OWNER instruction in ChatGPT, 2026-10-09. Rule file: `coordination/COPY-STYLE.md`. Current page content was normalized directly in the shared content files. |
 
+| D-060 | OWNER / HUMAN COPY HOUSE STYLE + EXISTING CONTENT WASH | Expand the project copy rule beyond punctuation: avoid repeated AI-template formulas, generic agency filler, ornamental punctuation and redundant summaries; prefer concrete Norwegian customer language and varied sentence structure. Existing customer-facing page content and visible shared UI strings were conservatively washed without changing prices, service logic, proof claims or order routing. | OWNER instruction in ChatGPT, 2026-10-09. Authority: `coordination/COPY-STYLE.md`. This is a style/readability rule, not a claim that Google penalizes any specific punctuation mark. |
+
 ## Review publication authority
 
 | ID | Authority / state | Decision | Source and scope |
