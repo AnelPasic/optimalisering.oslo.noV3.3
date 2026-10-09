@@ -5,7 +5,7 @@ import { createHash } from 'node:crypto';
 import YAML from 'yaml';
 import { pageSchema } from '../src/lib/content-schema.ts';
 import { proofContentSchema, getPublishableCases } from '../src/lib/proof.ts';
-import { cmsJsonSave, entryForFile, resolveField } from './helpers/pages-cms-json.ts';
+import { cmsJsonSave, entryForFile, resolveField, assertPreservedContent } from './helpers/pages-cms-json.ts';
 
 const cms = YAML.parse(readFileSync('../.pages.yml', 'utf8'));
 const records = ['pages', 'proof'].flatMap(directory => readdirSync(`src/content/${directory}`).filter(file => file.endsWith('.json')).map(file => ({
@@ -57,10 +57,31 @@ test('CMS-equivalent edit preserves every current JSON record semantically and u
     assert.ok(entry, edited.path);
     const after = JSON.parse(cmsJsonSave(original, form, entry, cms));
     const expected = { ...original, [field]: 'H017B harmless memory-only edit' };
+    assertPreservedContent(expected, after);
     const schema = edited.directory === 'pages' ? pageSchema : proofContentSchema;
     assert.deepEqual(schema.parse(after), schema.parse(expected), edited.path + ': only the chosen field changes');
     for (const record of records.filter(record => record !== edited)) assert.equal(hash(readFileSync(record.path.slice(4))), hash(record.bytes), record.path);
   }
+});
+
+test('CMS rejects clearing mandatory text before it can create a broken content commit', () => {
+  for (const [name, path] of [['home', ['seo', 'title']], ['seo', ['eyebrow']], ['seo', ['sections', 0, 'heading']], ['seo', ['faq', 0, 'question']]] as const) {
+    const original = JSON.parse(records.find(record => record.path.endsWith('/' + name + '.json'))!.bytes.toString());
+    const form = structuredClone(original);
+    let object = form;
+    for (const key of path.slice(0, -1)) object = object[key];
+    object[path.at(-1)!] = '';
+    assert.throws(() => cmsJsonSave(original, form, entryForFile(cms, `app/src/content/pages/${name}.json`), cms), /required/);
+  }
+});
+
+test('raw preservation checks expose nonempty unmodeled repeater data loss', () => {
+  const original = JSON.parse(records.find(record => record.path.endsWith('/home.json'))!.bytes.toString());
+  original.homepage.packages.items[0].futureInternalMetadata = { token: 'must-survive' };
+  const form = structuredClone(original);
+  form.title = 'H017B harmless memory-only edit';
+  const after = JSON.parse(cmsJsonSave(original, form, entryForFile(cms, 'app/src/content/pages/home.json'), cms));
+  assert.throws(() => assertPreservedContent(form, after), /futureInternalMetadata.*nonempty content lost/);
 });
 
 test('merge preserves omitted nonempty metadata without promoting authority or proof', () => {

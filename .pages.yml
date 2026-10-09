@@ -67,18 +67,24 @@ content:
           - name: title
             label: Sidetittel
             type: string
+            required: true
           - name: description
             label: Metabeskrivelse
             type: text
+            required: true
+        required: true
       - name: eyebrow
         label: Toppseksjon (Hero) – Overtekst
         type: string
+        required: true
       - name: title
         label: Hovedoverskrift
         type: string
+        required: true
       - name: intro
         label: Ingress
         type: text
+        required: true
       - name: cta
         label: Primær handling
         type: object
@@ -86,10 +92,13 @@ content:
           - name: label
             label: Tekst
             type: string
+            required: true
           - name: href
             label: Intern lenke
             type: string
             pattern: ^/
+            required: true
+        required: true
       - name: homepage
         label: Forsidens innhold
         type: object
@@ -101,10 +110,13 @@ content:
               - name: label
                 label: Tekst
                 type: string
+                required: true
               - name: href
                 label: Intern lenke
                 type: string
                 pattern: ^/
+                required: true
+            required: true
           - name: heroPhoto
             label: Forsidefoto
             type: object
@@ -116,18 +128,22 @@ content:
                   media: heroImages
                   extensions:
                     - webp
+                required: true
               - name: positionX
                 label: Horisontalt utsnitt (%)
                 type: number
                 options:
                   min: 0
                   max: 100
+                required: true
               - name: positionY
                 label: Vertikalt utsnitt (%)
                 type: number
                 options:
                   min: 0
                   max: 100
+                required: true
+            required: true
           - name: selector
             label: Behovsvelger
             type: object
@@ -135,6 +151,7 @@ content:
               - name: heading
                 label: Overskrift
                 type: string
+                required: true
               - name: items
                 label: Alternativer
                 type: object
@@ -142,16 +159,21 @@ content:
                   collapsible:
                     collapsed: true
                     summary: "{title}"
+                  min: 3
+                  max: 3
                 fields:
                   - name: title
                     label: Tittel
                     type: string
+                    required: true
                   - name: discipline
                     label: Fagområde
                     type: string
+                    required: true
                   - name: description
                     label: Beskrivelse
                     type: text
+                    required: true
                   - name: link
                     label: Lenke
                     type: object
@@ -159,10 +181,15 @@ content:
                       - name: label
                         label: Tekst
                         type: string
+                        required: true
                       - name: href
                         label: Intern lenke
                         type: string
                         pattern: ^/
+                        required: true
+                    required: true
+                required: true
+            required: true
           - name: calculator
             label: Regneeksempel
             type: object
@@ -170,15 +197,19 @@ content:
               - name: eyebrow
                 label: Overtekst
                 type: string
+                required: true
               - name: heading
                 label: Overskrift
                 type: string
+                required: true
               - name: intro
                 label: Ingress
                 type: text
+                required: true
               - name: formula
                 label: Enkel formel
                 type: string
+                required: true
               - name: labels
                 label: Etiketter
                 type: object
@@ -186,36 +217,48 @@ content:
                   - name: visits
                     label: Relevante besøk per måned
                     type: string
+                    required: true
                   - name: conversion
                     label: Konverteringsrate i dag
                     type: string
+                    required: true
                   - name: trafficIncrease
                     label: Mer relevant trafikk
                     type: string
+                    required: true
                   - name: newConversion
                     label: Ny konverteringsrate
                     type: string
+                    required: true
                   - name: current
                     label: I dag
                     type: string
+                    required: true
                   - name: scenario
                     label: Scenario
                     type: string
+                    required: true
                   - name: difference
                     label: Forskjell
                     type: string
+                    required: true
                   - name: outcome
                     label: Resultatenhet
                     type: string
+                    required: true
                   - name: increase
                     label: Prosentvis endring
                     type: string
+                    required: true
                   - name: undefinedIncrease
                     label: Merknad ved null utgangspunkt
                     type: string
+                    required: true
                   - name: invalid
                     label: Veiledning ved ugyldige verdier
                     type: string
+                    required: true
+                required: true
               - name: defaults
                 label: Startverdier
                 type: object
@@ -223,34 +266,45 @@ content:
                   - name: visits
                     label: Relevante besøk per måned
                     type: number
+                    required: true
                   - name: conversion
                     label: Konverteringsrate i dag
                     type: number
+                    required: true
                   - name: trafficIncrease
                     label: Mer relevant trafikk
                     type: number
+                    required: true
                   - name: newConversion
                     label: Ny konverteringsrate
                     type: number
+                    required: true
+                required: true
               - name: caveat
                 label: Forbehold
                 type: text
+                required: true
+            required: true
           - name: packages
             label: Felles pakker for forsiden, /priser/, /synlighet/ og /konvertering/
-            description: Rediger pakketekst, etiketter, ikoner og illustrasjoner her. Forsiden har sammenfoldede detaljer;
-              prissiden har åpne detaljer. Begge og serviceprisene arver denne kilden. Pakkenøkler og lenkemål
-              er beskyttet.
+            description: Rediger pakketekst, etiketter, ikoner og illustrasjoner her.
+              Forsiden har sammenfoldede detaljer; prissiden har åpne detaljer.
+              Begge og serviceprisene arver denne kilden. Pakkenøkler og
+              lenkemål er beskyttet.
             type: object
             fields:
               - name: eyebrow
                 label: Overtekst
                 type: string
+                required: true
               - name: heading
                 label: Overskrift
                 type: string
+                required: true
               - name: intro
                 label: Ingress
                 type: text
+                required: true
               - name: labels
                 label: Etiketter i pakkekortene
                 type: object
@@ -258,49 +312,67 @@ content:
                   - name: situations
                     label: Typiske situasjoner
                     type: string
+                    required: true
                   - name: typicalBusiness
                     label: Typisk virksomhet
                     type: string
+                    required: true
                   - name: focus
                     label: Fokus
                     type: string
+                    required: true
                   - name: combinations
                     label: Populære kombinasjoner
                     type: string
+                    required: true
                   - name: workAreas
                     label: Arbeidsområder
                     type: string
+                    required: true
                   - name: uncertain
                     label: Usikker? Ta en gratis sjekk
                     type: string
+                    required: true
+                required: true
               - name: fitLabel
                 label: Etikett for hvem tjenesten passer
                 type: string
+                required: true
               - name: scopeLabel
                 label: Etikett for arbeidsidé
                 type: string
+                required: true
               - name: areasLabel
                 label: Etikett for arbeidsområder
                 type: string
+                required: true
               - name: areas
                 label: Fire arbeidsområder
                 type: string
-                list: true
+                list:
+                  min: 4
+                  max: 4
+                required: true
               - name: foundationNote
                 label: Måling og sporing – felles grunnlag
                 type: text
+                required: true
               - name: adBudgetNote
                 label: Annonsebudsjett kommer i tillegg
                 type: string
+                required: true
               - name: externalCostsNote
                 label: Eksterne plattformkostnader
                 type: text
+                required: true
               - name: separateWorkNote
                 label: Arbeid som prises separat
                 type: text
+                required: true
               - name: capacityNote
                 label: Ubrukt kapasitet
                 type: text
+                required: true
               - name: decisionStrip
                 label: Valgstripe på prissiden
                 type: object
@@ -308,10 +380,15 @@ content:
                   - name: heading
                     label: Overskrift
                     type: string
+                    required: true
                   - name: items
                     label: Tre valgregler i pakkerekkefølge
                     type: text
-                    list: true
+                    list:
+                      min: 3
+                      max: 3
+                    required: true
+                required: true
               - name: multiplier
                 label: Hvorfor Vekst finnes – prissiden
                 type: object
@@ -319,18 +396,24 @@ content:
                   - name: eyebrow
                     label: Overtekst
                     type: string
+                    required: true
                   - name: heading
                     label: Overskrift
                     type: string
+                    required: true
                   - name: body
                     label: Forklaring
                     type: text
+                    required: true
                   - name: conceptualRow
                     label: Bli funnet → bli valgt → gå videre
                     type: string
+                    required: true
                   - name: support
                     label: Støttetekst
                     type: text
+                    required: true
+                required: true
               - name: items
                 label: Alternativer
                 type: object
@@ -338,16 +421,21 @@ content:
                   collapsible:
                     collapsed: true
                     summary: "{title}"
+                  min: 3
+                  max: 3
                 fields:
                   - name: title
                     label: Tittel
                     type: string
+                    required: true
                   - name: descriptor
                     label: Pakkeoppsummering
                     type: string
+                    required: true
                   - name: fit
                     label: Full tekst – hvem pakken passer for
                     type: text
+                    required: true
                   - name: compact
                     label: Kort tekst
                     type: object
@@ -355,10 +443,15 @@ content:
                       - name: fit
                         label: Kort Passer for – forsiden og prissiden
                         type: text
+                        required: true
                       - name: situations
                         label: Maks tre korte situasjoner
                         type: string
-                        list: true
+                        list:
+                          min: 1
+                          max: 3
+                        required: true
+                    required: true
                   - name: scope
                     label: Slik jobber vi – valgfritt
                     type: text
@@ -368,11 +461,14 @@ content:
                   - name: situations
                     label: Typiske situasjoner
                     type: text
-                    list: true
+                    list:
+                      min: 1
+                    required: true
                   - name: key
                     label: Stabil pakkenøkkel for bestilling
                     type: string
                     readonly: true
+                    required: true
                   - name: iconItems
                     label: Fokus og populære kombinasjoner
                     type: object
@@ -380,6 +476,7 @@ content:
                       collapsible:
                         collapsed: true
                         summary: "{label}"
+                      min: 1
                     fields:
                       - name: icon
                         label: Generisk ikon
@@ -394,18 +491,23 @@ content:
                             - analytics
                             - page
                             - route
+                        required: true
                       - name: label
                         label: Fokus eller kombinasjon
                         type: string
+                        required: true
                       - name: compactLabel
                         label: Kort etikett
                         type: string
+                        required: true
                       - name: description
                         label: Forklaring – valgfri
                         type: text
+                    required: true
                   - name: selectionRule
                     label: Valgregel
                     type: text
+                    required: true
                   - name: distinction
                     label: Ekstra forklaring – valgfri
                     type: text
@@ -420,6 +522,7 @@ content:
                         - controlled
                         - accelerating
                         - tracks
+                    required: true
                   - name: visualAsset
                     label: Eget pakkebilde – velg eller last opp SVG, WebP eller PNG
                     type: object
@@ -433,9 +536,11 @@ content:
                             - svg
                             - webp
                             - png
+                        required: true
                       - name: alt
                         label: Sannferdig beskrivende alternativ tekst
                         type: string
+                        required: true
                       - name: positionX
                         label: Horisontalt utsnitt (%) – raster
                         type: number
@@ -450,23 +555,25 @@ content:
                           max: 100
                   - name: visualCaption
                     label: Bildetekst ved SVG-motivet
-                    description: Vises ved SVG-motivet når eget bilde ikke er valgt. Eget bilde bruker sin alternative tekst og
-                      sitt utsnitt.
+                    description: Vises ved SVG-motivet når eget bilde ikke er valgt. Eget bilde
+                      bruker sin alternative tekst og sitt utsnitt.
                     type: object
                     fields:
                       - name: label
                         label: Kort semantisk etikett
                         type: string
+                        required: true
                       - name: support
                         label: Kort støtte – valgfri
                         type: string
                   - name: price
                     label: Månedspris i kroner
                     type: number
+                    required: true
                   - name: pricePrefix
                     label: Fra-pris – bare Partner
-                    description: Valgfritt. Kun tredje pakke kan ha fra; de to andre har fast pris. Fjern feltet for pakker uten
-                      prefiks.
+                    description: Valgfritt. Kun tredje pakke kan ha fra; de to andre har fast pris.
+                      Fjern feltet for pakker uten prefiks.
                     type: select
                     options:
                       values:
@@ -478,23 +585,29 @@ content:
                       - name: label
                         label: Lenketekst
                         type: string
+                        required: true
                       - name: href
                         label: Pakkeanker på /priser/
                         type: string
                         readonly: true
                         pattern: ^/priser/#
+                        required: true
+                    required: true
                   - name: priceSuffix
                     label: Prisenhet
                     type: string
+                    required: true
                   - name: vatSuffix
                     label: MVA-tekst
-                    description: Bruk samme MVA-tekst for alle tre pakker; felles prisforklaring og gjentatte prisopplysninger
-                      arver den.
+                    description: Bruk samme MVA-tekst for alle tre pakker; felles prisforklaring og
+                      gjentatte prisopplysninger arver den.
                     type: string
+                    required: true
                   - name: recommended
                     label: Anbefalt pakke
                     type: boolean
                     default: false
+                    required: true
                   - name: badge
                     label: Anbefalt-merke
                     type: string
@@ -505,21 +618,27 @@ content:
                       - name: label
                         label: Knappetekst
                         type: string
+                        required: true
                       - name: href
                         label: Intern lenke
                         type: string
                         readonly: true
                         pattern: ^/priser/\?pakke=(optimalisering|vekst|partner)#bestill$
+                        required: true
+                    required: true
+                required: true
+            required: true
           - name: proof
             label: Dokumenterte resultater – separat publiseringsvern
             type: object
             fields:
               - name: publicationApproved
                 label: Godkjenn visning av allerede publiserbare case
-                description: Slå bare på etter dokumentert godkjenning. Dette overstyrer aldri case-status, tillatelse eller
-                  manglende evidens.
+                description: Slå bare på etter dokumentert godkjenning. Dette overstyrer aldri
+                  case-status, tillatelse eller manglende evidens.
                 type: boolean
                 default: false
+                required: true
               - name: caseIds
                 label: Velg case fra evidensregisteret
                 type: reference
@@ -529,21 +648,29 @@ content:
                   value: "{fields.id}"
                   label: "{fields.clientName} ({fields.publicationStatus})"
                   search: id,clientName,anonymizedLabel
+                required: true
+                list: {}
               - name: eyebrow
                 label: Overtekst
                 type: string
+                required: true
               - name: heading
                 label: Overskrift
                 type: string
+                required: true
               - name: beforeLabel
                 label: Før-etikett
                 type: string
+                required: true
               - name: afterLabel
                 label: Etter-etikett
                 type: string
+                required: true
               - name: changeLabel
                 label: Endring-etikett
                 type: string
+                required: true
+            required: true
           - name: form
             label: Skjema
             type: object
@@ -551,42 +678,55 @@ content:
               - name: promise
                 label: Gratis sjekk – leveranseløfte
                 type: string
+                required: true
               - name: heading
                 label: Overskrift
                 type: string
+                required: true
               - name: websiteLabel
                 label: Etikett for nettside
                 type: string
+                required: true
               - name: websitePlaceholder
                 label: Eksempel på nettside
                 type: string
+                required: true
               - name: emailLabel
                 label: Etikett for e-post
                 type: string
+                required: true
               - name: emailPlaceholder
                 label: Eksempel på e-post
                 type: string
+                required: true
               - name: messageLabel
                 label: Etikett for kommentar
                 type: string
+                required: true
               - name: optional
                 label: Valgfritt-merknad
                 type: string
+                required: true
               - name: messagePlaceholder
                 label: Eksempel på kommentar
                 type: string
+                required: true
               - name: sensitiveNotice
                 label: Merknad om sensitive opplysninger
                 type: string
+                required: true
               - name: previewNotice
                 label: Forhåndsvisningsmerknad
                 type: string
+                required: true
               - name: submitLabel
                 label: Knappetekst
                 type: string
+                required: true
               - name: privacyText
                 label: Personvernmerknad
                 type: string
+                required: true
               - name: privacyLink
                 label: Personvernlenke
                 type: object
@@ -594,19 +734,26 @@ content:
                   - name: label
                     label: Tekst
                     type: string
+                    required: true
                   - name: href
                     label: Intern lenke
                     type: string
                     pattern: ^/
+                    required: true
+                required: true
               - name: disabledStatus
                 label: Status ved stengt innsending
                 type: string
+                required: true
+            required: true
           - name: faqHeading
             label: FAQ-overskrift
             type: string
+            required: true
           - name: faqEyebrow
             label: FAQ-overtekst
             type: string
+            required: true
           - name: chrome
             label: Toppmeny og bunntekst
             type: object
@@ -614,27 +761,35 @@ content:
               - name: brand
                 label: Merkenavn
                 type: string
+                required: true
               - name: brandLocation
                 label: Stedsnavn i ordmerket
                 type: string
+                required: true
               - name: homeLabel
                 label: Tilgjengelig forsidenavn
                 type: string
+                required: true
               - name: skipLabel
                 label: Hopp til innhold
                 type: string
+                required: true
               - name: navigationLabel
                 label: Hovedmenynavn
                 type: string
+                required: true
               - name: mobileNavigationLabel
                 label: Mobilmenynavn
                 type: string
+                required: true
               - name: openMenu
                 label: Åpne meny
                 type: string
+                required: true
               - name: closeMenu
                 label: Lukk meny
                 type: string
+                required: true
               - name: assessmentLink
                 label: Lenke til gratis sjekk
                 type: object
@@ -642,10 +797,13 @@ content:
                   - name: label
                     label: Tekst
                     type: string
+                    required: true
                   - name: href
                     label: Intern lenke
                     type: string
                     pattern: ^/
+                    required: true
+                required: true
               - name: navigation
                 label: Navigasjon
                 type: object
@@ -657,23 +815,30 @@ content:
                   - name: label
                     label: Tekst
                     type: string
+                    required: true
                   - name: href
                     label: Intern lenke
                     type: string
                     pattern: ^/
+                    required: true
+                required: true
               - name: providerText
                 label: Påkrevd leverandøropplysning
                 type: string
                 readonly: true
+                required: true
               - name: previewLabel
                 label: Forhåndsvisningsetikett
                 type: string
+                required: true
               - name: serviceNavigationLabel
                 label: Tjenestemenynavn
                 type: string
+                required: true
               - name: informationNavigationLabel
                 label: Informasjonsmenynavn
                 type: string
+                required: true
               - name: storeLink
                 label: Nettbutikklenke
                 type: object
@@ -681,10 +846,13 @@ content:
                   - name: label
                     label: Tekst
                     type: string
+                    required: true
                   - name: href
                     label: Intern lenke
                     type: string
                     pattern: ^/
+                    required: true
+                required: true
               - name: informationLinks
                 label: Informasjonslenker
                 type: object
@@ -696,16 +864,23 @@ content:
                   - name: label
                     label: Tekst
                     type: string
+                    required: true
                   - name: href
                     label: Intern lenke
                     type: string
                     pattern: ^/
+                    required: true
+                required: true
               - name: copyrightProvider
                 label: Tjenestemerke i opphavsrett
                 type: string
+                required: true
               - name: footerNote
                 label: Bunntekstmerknad
                 type: string
+                required: true
+            required: true
+        required: true
       - name: sections
         label: Innholdsseksjoner
         type: object
@@ -713,21 +888,25 @@ content:
           collapsible:
             collapsed: true
             summary: "{heading}"
+          min: 3
+          max: 3
         fields:
           - name: id
             label: Seksjonens lenkeanker
             type: string
             readonly: true
+            required: true
           - name: eyebrow
             label: Overtekst
             type: string
           - name: heading
             label: Overskrift
             type: string
+            required: true
           - name: body
             label: Avsnitt
             type: text
-            list: true
+            list: {}
           - name: items
             label: Alternativer
             type: object
@@ -739,9 +918,11 @@ content:
               - name: title
                 label: Tittel
                 type: string
+                required: true
               - name: text
                 label: Beskrivelse
                 type: string
+                required: true
           - name: links
             label: Relaterte lenker
             component: link
@@ -749,6 +930,7 @@ content:
               collapsible:
                 collapsed: true
                 summary: "{label}"
+        required: true
       - name: faq
         label: Ofte stilte spørsmål
         type: object
@@ -760,9 +942,11 @@ content:
           - name: question
             label: Spørsmål
             type: string
+            required: true
           - name: answer
             label: Svar
             type: text
+            required: true
     operations: &a1
       create: false
       rename: false
@@ -809,6 +993,7 @@ content:
             label: Metabeskrivelse
             type: text
             required: true
+        required: true
       - name: heroVisual
         label: Hero-bilde / drømmeutfall
         type: object
@@ -845,11 +1030,13 @@ content:
             options:
               min: 0
               max: 100
-        description: Valgfritt bilde for Synlighet og Konvertering. Uten et levert bilde vises toppseksjonen med tekst.
+        description: Valgfritt bilde for Synlighet og Konvertering. Uten et levert bilde
+          vises toppseksjonen med tekst.
       - &a3
         name: eyebrow
         label: Toppseksjon (Hero) – Overtekst
         type: string
+        required: true
       - &a4
         name: title
         label: Hovedoverskrift
@@ -873,18 +1060,20 @@ content:
             label: Seksjonens lenkeanker
             type: string
             readonly: true
+            required: true
           - name: eyebrow
             label: Overtekst
             type: string
           - name: heading
             label: Overskrift
             type: string
+            required: true
           - name: body
             label: Avsnitt
             type: text
-            list: true
-            description: Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Forsidens
-              innhold → Felles pakker.
+            list: {}
+            description: Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres
+              under Forside → Forsidens innhold → Felles pakker.
           - name: items
             label: Alternativer eller steg
             type: object
@@ -896,9 +1085,11 @@ content:
               - name: title
                 label: Tittel
                 type: string
+                required: true
               - name: text
                 label: Beskrivelse
                 type: text
+                required: true
               - name: href
                 label: Intern lenke
                 type: string
@@ -913,6 +1104,7 @@ content:
               collapsible:
                 collapsed: true
                 summary: "{label}"
+        required: true
       - &a7
         name: faq
         label: Ofte stilte spørsmål
@@ -925,13 +1117,16 @@ content:
           - name: question
             label: Spørsmål
             type: string
+            required: true
           - name: answer
             label: Svar
             type: text
+            required: true
       - &a8
         name: cta
         label: Neste steg
         component: link
+        required: true
   - name: priser
     label: Priser
     type: file
@@ -1028,13 +1223,15 @@ content:
     fields:
       - name: id
         label: Stabil case-ID
-        description: Referanser fra forsiden bruker denne ID-en. Endring krever at referansene oppdateres.
+        description: Referanser fra forsiden bruker denne ID-en. Endring krever at
+          referansene oppdateres.
         type: string
         pattern: ^[a-z0-9][a-z0-9-]*$
         required: true
       - name: clientName
         label: Kunde- eller visningsnavn
         type: string
+        required: true
       - name: anonymizedLabel
         label: Godkjent anonymisert navn
         type: string
@@ -1044,6 +1241,7 @@ content:
       - name: dominantMetric
         label: Hovedresultat og måledefinisjon
         type: text
+        required: true
       - name: before
         label: Før-verdi
         type: string
@@ -1067,12 +1265,15 @@ content:
             label: Sammenlignbarhet dokumentert
             type: boolean
             default: false
+            required: true
+        required: true
       - name: intervention
         label: Dokumentert tiltak eller endring
         type: text
       - name: source
         label: Kilde og proveniens – intern evidens
         type: text
+        required: true
       - name: limitations
         label: Begrensninger og attribusjonsforbehold
         type: text
@@ -1086,18 +1287,21 @@ content:
             - GRANTED
             - NAME_APPROVED
             - ANONYMIZED_APPROVED
+        required: true
       - name: permissionEvidence
         label: Dokumentasjon på faktisk publiseringstillatelse
         type: text
       - name: strategyReviewStatus
         label: STRATEGY_CONTENT-review
-        description: GRANTED tillatelse erstatter ikke review av den konkrete offentlige presentasjonen.
+        description: GRANTED tillatelse erstatter ikke review av den konkrete offentlige
+          presentasjonen.
         type: select
         default: READY_FOR_STRATEGY_REVIEW
         options:
           values:
             - READY_FOR_STRATEGY_REVIEW
             - CONTENT_LOCKED
+        required: true
       - name: strategyReviewEvidence
         label: Kilde/revisjon for konkret STRATEGY_CONTENT-lock
         type: text
@@ -1110,10 +1314,12 @@ content:
             - NOT_IMPORTED
             - IMPORTED
             - VERIFIED
+        required: true
       - name: artifactReferences
         label: Kildeartefaktreferanser – ikke legg persondata i Git
         type: string
-        list: true
+        list: {}
+        required: false
       - name: evidenceMetrics
         label: Supplerte målinger – intern evidens, ikke offentlig renderer
         type: object
@@ -1125,6 +1331,7 @@ content:
           - name: metric
             label: Måling og definisjon
             type: text
+            required: true
           - name: before
             label: Før-verdi
             type: string
@@ -1140,10 +1347,12 @@ content:
           - name: timeframe
             label: Periode
             type: string
+        required: false
       - name: publicationStatus
         label: Publiseringsstatus
-        description: EVIDENCE_ONLY er intern forberedelse. PUBLISHABLE krever dokumenterte målinger, sammenlignbare
-          perioder, tiltak, kilde, forbehold og tillatelse.
+        description: EVIDENCE_ONLY er intern forberedelse. PUBLISHABLE krever
+          dokumenterte målinger, sammenlignbare perioder, tiltak, kilde,
+          forbehold og tillatelse.
         type: select
         default: EVIDENCE_ONLY
         options:
@@ -1152,7 +1361,9 @@ content:
             - REVIEW_REQUIRED
             - PUBLISHABLE
             - WITHDRAWN
+        required: true
       - name: publicationApproved
         label: Publisering uttrykkelig godkjent
         type: boolean
         default: false
+        required: true

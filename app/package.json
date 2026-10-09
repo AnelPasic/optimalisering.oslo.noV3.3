@@ -14,7 +14,7 @@
     "build": "astro build",
     "preview": "node --env-file-if-exists=.env server/index.mjs",
     "qa:static": "npm run qa:copy && node scripts/audit-build.mjs && node scripts/audit-h007.mjs && node scripts/audit-h008.mjs && node scripts/audit-h009.mjs && node scripts/audit-h010.mjs && node scripts/audit-h011.mjs && node scripts/audit-h013.mjs && node scripts/audit-h016.mjs",
-    "verify": "npm run check && npm test && npm run build && npm run qa:static",
+    "verify": "npm run check && npm test && npm run build && npm run qa:static && npm run qa:cms",
     "deploy:review": "npm run verify && wrangler deploy",
     "leads:retry": "node --env-file-if-exists=.env server/retry.mjs",
     "qa:copy": "node scripts/audit-copy-style.mjs",

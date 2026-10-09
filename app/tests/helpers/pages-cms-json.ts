@@ -6,6 +6,39 @@ export function resolveField(field: any, components: any): any {
   return field.component ? { ...components[field.component], ...field } : field;
 }
 
+const empty = (value: any): boolean => value == null || value === '' ||
+  (typeof value === 'object' && Object.values(value).every(empty));
+
+// Independent raw-content oracle: schema parsing must not hide lost unknown keys.
+export function assertPreservedContent(expected: any, actual: any, path = '$'): void {
+  if (actual === undefined && empty(expected)) return; // documented CMS empty cleanup
+  if (expected && typeof expected === 'object') {
+    if (!actual || typeof actual !== 'object' || Array.isArray(actual) !== Array.isArray(expected)) throw new Error(path + ': nonempty content lost');
+    if (Array.isArray(expected) && actual.length !== expected.length) throw new Error(path + ': list length changed');
+    for (const key of Object.keys(expected)) assertPreservedContent(expected[key], actual[key], path + '.' + key);
+    for (const key of Object.keys(actual)) if (!(key in expected)) throw new Error(path + '.' + key + ': unexpected content');
+  } else if (expected !== actual) throw new Error(path + ': content changed');
+}
+
+// Supported JSON field subset: required values, optional empty objects, list bounds.
+// Pages CMS performs its full field-type validation in the authenticated save.
+export function validateCmsForm(value: any, fields: any[], components: any, path = '$'): void {
+  for (const definition of fields) {
+    const field = resolveField(definition, components), input = value[field.name], fieldPath = path + '.' + field.name;
+    if (field.required && (input == null || input === '' || (Array.isArray(input) && input.length === 0))) throw new Error(fieldPath + ': required');
+    if (input == null || (!field.required && field.type === 'object' && empty(input))) continue;
+    if (field.list) {
+      if (!Array.isArray(input)) throw new Error(fieldPath + ': expected list');
+      const min = field.list.min ?? 0, max = field.list.max ?? Infinity;
+      if (input.length < min || input.length > max) throw new Error(fieldPath + ': list bounds');
+      input.forEach((item: any, index: number) => {
+        if (field.required && empty(item)) throw new Error(fieldPath + '.' + index + ': required');
+        if (field.type === 'object' && !empty(item)) validateCmsForm(item, field.fields, components, fieldPath + '.' + index);
+      });
+    } else if (field.type === 'object') validateCmsForm(input, field.fields, components, fieldPath);
+  }
+}
+
 function project(value: any, fields: any[], components: any): any {
   return Object.fromEntries(fields.filter(field => value[field.name] !== undefined).map(definition => {
     const field = resolveField(definition, components), input = value[field.name];
@@ -34,6 +67,7 @@ function sanitize(value: any): any {
 }
 
 export function cmsJsonSave(original: any, form: any, entry: any, cms: any): string {
+  validateCmsForm(form, entry.fields, cms.components);
   const declared = project(form, entry.fields, cms.components);
   const saved = cms.settings.content.merge ? merge(original, declared) : declared;
   return JSON.stringify(sanitize(saved), null, 2);

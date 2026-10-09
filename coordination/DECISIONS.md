@@ -108,6 +108,12 @@ OWNER subsequently explicitly applies `#320c43` also to the homepage footer. Thi
 
 2026-10-10. Actual OWNER request in Codex: "toppmeny Priser må peke til /priser siden - Innsikt fortsatt på gammel mal." Incoming main `2ce3ab2c207387a87444adb341a6f0ee35991b1c`. This authorizes the named menu fix and template correction only. IMPLEMENTATION interprets Innsikt as the overview `/innsikt/`, reusing accepted components while retaining all existing page copy/metadata/draft authority and guide destinations. Guide articles and other frozen pages remain unchanged. The actual request is recorded in CHATGPT-TO-CODEX; static review delivery retains D-013 safeguards. Validation and exact delivered revision are in CODEX-TO-CHATGPT / Git history and `evidence/menu-insight/`. Stop for OWNER review. This is not STRATEGY_CONTENT content acceptance, an H-017A verdict, H-017B execution or launch approval.
 
+## D-068 - H-017B direct OWNER continuation / implementation receipt pending CMS review
+
+2026-10-10. Actual OWNER follow-up after the H-017B gap check: "ok, gjort ferdig?". IMPLEMENTATION interprets this in context as the instruction to finish queued D-065/H-017B exactly, recorded in CHATGPT-TO-CODEX. Existing D-013 authorizes the static review target only. OWNER then actually replied "Jeg logger inn nå" to the authenticated CMS-test question, making the connected editor available. Neither statement supplies content/visual acceptance, an H-017A technical verdict or launch approval.
+
+Local implementation `29d389f` delivers dedicated editors/sidebar, only five services, supported collapsed repeaters, retained merge:true and empty-value content normalization separated from strict proof publication validation. Full verify: 70 tests, 0 Astro errors/warnings and 1 existing QA-script type hint; dedicated 17-JSON/hash/representative-selector round trip passes without changing content bytes. All 29 current static review assets remain identical. `app/docs/h017b-cms-workflow.md`, `evidence/h017b/`. Fresh technical review and authenticated content-only save/build/update/revert precede completion; STOP for OWNER CMS review afterward. Current customer content/authority/prices/art, noindex, disabled intake, proof and read-only references remain protected.
+
 ## Review publication authority
 
 | ID | Authority / state | Decision | Source and scope |
