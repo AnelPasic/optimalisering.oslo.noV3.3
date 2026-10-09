@@ -91,6 +91,8 @@ OWNER subsequently explicitly applies `#320c43` also to the homepage footer. Thi
 
 | D-058 | OWNER + STRATEGY_CONTENT / H-016 IMPLEMENTATION PASS, AUTHENTICATED CMS CHECK PENDING | H-016 passes code/content/presentation review: shared package source, homepage/pricing display modes, editable safe package fields, protected routing, copy cleanup and direct ordering behave as intended. Final acceptance of the CMS workflow still requires one authenticated OWNER save/revert in Pages CMS because the editor session was not available to implementation. | OWNER/STRATEGY_CONTENT review, 2026-10-09, based on H-016 live evidence and implementation report. |
 
+| D-059 | OWNER / CUSTOMER-FACING PUNCTUATION STYLE | Customer-facing copy uses ordinary keyboard punctuation: `-` instead of en/em dashes and `->` instead of Unicode text arrows. Actual SVG/icon arrows are unaffected. Apply this to current and future CMS/site copy without blind replacement in code, URLs or identifiers. | OWNER instruction in ChatGPT, 2026-10-09. Rule file: `coordination/COPY-STYLE.md`. Current page content was normalized directly in the shared content files. |
+
 ## Review publication authority
 
 | ID | Authority / state | Decision | Source and scope |
