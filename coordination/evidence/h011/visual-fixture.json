@@ -1,0 +1,59 @@
+{
+  "checkedAt": "2026-10-09T09:46:10.916Z",
+  "actualAstroRenderer": true,
+  "checks": [
+    {
+      "slug": "synlighet",
+      "width": 1440,
+      "missingAssetExactFallback": true,
+      "suppliedFileLoads": true,
+      "responsiveLayout": true,
+      "correctModeAndCrop": true
+    },
+    {
+      "slug": "synlighet",
+      "width": 390,
+      "missingAssetExactFallback": true,
+      "suppliedFileLoads": true,
+      "responsiveLayout": true,
+      "correctModeAndCrop": true
+    },
+    {
+      "slug": "synlighet",
+      "width": 320,
+      "missingAssetExactFallback": true,
+      "suppliedFileLoads": true,
+      "responsiveLayout": true,
+      "correctModeAndCrop": true
+    },
+    {
+      "slug": "konvertering",
+      "width": 1440,
+      "missingAssetExactFallback": true,
+      "suppliedFileLoads": true,
+      "responsiveLayout": true,
+      "correctModeAndCrop": true
+    },
+    {
+      "slug": "konvertering",
+      "width": 390,
+      "missingAssetExactFallback": true,
+      "suppliedFileLoads": true,
+      "responsiveLayout": true,
+      "correctModeAndCrop": true
+    },
+    {
+      "slug": "konvertering",
+      "width": 320,
+      "missingAssetExactFallback": true,
+      "suppliedFileLoads": true,
+      "responsiveLayout": true,
+      "correctModeAndCrop": true
+    }
+  ],
+  "originalsRestored": true,
+  "assetRemoved": true,
+  "finalArtworkCreated": false,
+  "errors": [],
+  "result": "PASS"
+}

@@ -9,13 +9,15 @@ import HomeFooter from '../components/HomeFooter.astro';
 import type { CollectionEntry } from 'astro:content';
 import Attribution from '../components/Attribution.astro';
 import { site } from '../config/site';
-interface Props { title: string; description: string; noindex?: boolean; homeVisual?: boolean; pricingVisual?: boolean; serviceVisual?: boolean; homeChrome?: NonNullable<CollectionEntry<'pages'>['data']['homepage']>['chrome']; }
-const { title, description, noindex = false, homeVisual = false, pricingVisual = false, serviceVisual = false, homeChrome } = Astro.props;
+import { defaultLocale, type Locale } from '../config/locales';
+import type { LanguageLink } from '../lib/i18n';
+interface Props { title: string; description: string; noindex?: boolean; homeVisual?: boolean; pricingVisual?: boolean; serviceVisual?: boolean; homeChrome?: NonNullable<CollectionEntry<'pages'>['data']['homepage']>['chrome']; locale?: Locale; languageLinks?: LanguageLink[]; }
+const { title, description, noindex = false, homeVisual = false, pricingVisual = false, serviceVisual = false, homeChrome, locale = defaultLocale, languageLinks = [] } = Astro.props;
 const canonical = new URL(Astro.url.pathname, site.url).href;
-const organization = { '@context': 'https://schema.org', '@type': 'Organization', name: 'Medon AS', url: 'https://medon.no' };
+const organization = { '@context': 'https://schema.org', '@type': 'Organization', name: site.provider, url: site.providerUrl };
 ---
 <!doctype html>
-<html lang="nb">
+<html lang={locale}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -25,7 +27,7 @@ const organization = { '@context': 'https://schema.org', '@type': 'Organization'
     <link rel="canonical" href={canonical} />
     {(site.preview || noindex) && <meta name="robots" content="noindex, nofollow" />}
     <meta property="og:type" content="website" />
-    <meta property="og:locale" content="nb_NO" />
+    <meta property="og:locale" content={locale === 'nb' ? 'nb_NO' : 'en_GB'} />
     <meta property="og:site_name" content={site.name} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -38,7 +40,7 @@ const organization = { '@context': 'https://schema.org', '@type': 'Organization'
   </head>
   <body class={homeVisual ? 'invite-homepage' : undefined}>
     <a href="#main" class="skip-link">{homeChrome?.skipLabel ?? 'Hopp til innhold'}</a>
-    {homeChrome ? <HomeHeader content={homeChrome} /> : <Header />}
+    {homeChrome ? <HomeHeader content={homeChrome} languageLinks={languageLinks} /> : <Header />}
     <main id="main"><slot /></main>
     {homeChrome ? <HomeFooter content={homeChrome} /> : <Footer />}
     <Attribution />

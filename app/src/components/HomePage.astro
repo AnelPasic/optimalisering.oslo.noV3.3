@@ -39,6 +39,5 @@ const proofRecords = (await getCollection('proofCases')).map(record => record.da
 <Proof content={home.proof} records={proofRecords} />
 {page.sections.filter(section => ['mekanisme', 'passer'].includes(section.id)).map(section => <ContentSection section={section} />)}
 <Assessment section={assessment} content={home.form} />
-{page.sections.filter(section => section.id === 'medon').map(section => <ContentSection section={section} />)}
 <section id="sporsmal" class="faq-section section-space"><div class="shell faq-grid"><div><p class="eyebrow">{home.faqEyebrow}</p><h2>{home.faqHeading}</h2></div><div class="faq-list">{page.faq.map(item => <details><summary>{item.question}<span aria-hidden="true">+</span></summary><p>{item.answer}</p></details>)}</div></div></section>
 </div>

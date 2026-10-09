@@ -1,6 +1,8 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import Arrow from './Arrow.astro';
+import HeroCopy from './ServiceHeroCopy.astro';
+import HeroVisual from './ServiceHeroVisual.astro';
+import { resolveServiceVisual } from '../lib/service-visual';
 import ContentSection from './HomeSection.astro';
 import PricingBridge from './ServicePricingBridge.astro';
 interface Props {
@@ -12,12 +14,12 @@ const pricingLink = page.sections.find(section => section.id === 'sammenheng')!.
 const breadcrumb = commercial.chrome.navigation.find(link => link.href === `/${page.slug}/`)?.label ?? page.eyebrow;
 const serviceName = page.slug.charAt(0).toLocaleUpperCase('nb-NO') + page.slug.slice(1);
 const sectionVisuals: Record<string, 'behov' | 'kanaler'> = { friksjon: 'behov', kvalitet: 'kanaler' };
+const visual = resolveServiceVisual(page.heroVisual);
 ---
 <div class="invite-home invite-service">
   <section id="service-hero" class="service-hero shell">
     <nav class="breadcrumbs" aria-label="Brødsmuler"><a href="/">Forsiden</a><span aria-hidden="true">/</span><span>{breadcrumb}</span></nav>
-    <p class="eyebrow">{page.eyebrow}</p><h1>{page.title}</h1><p class="hero-intro">{page.intro}</p>
-    <div class="hero-actions"><a class="button" href={page.cta.href}>{page.cta.label}<Arrow diagonal /></a><a class="text-link" href={pricingLink.href}>Se priser<Arrow /></a></div>
+    {visual ? <div class="service-hero-split"><div class="service-hero-copy"><HeroCopy page={page} pricingLink={pricingLink} /></div><HeroVisual visual={visual} /></div> : <HeroCopy page={page} pricingLink={pricingLink} />}
   </section>
   {page.sections.map(section => <>
     <ContentSection section={section} visualId={sectionVisuals[section.id]} />

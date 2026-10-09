@@ -52,3 +52,14 @@
   .invite-service .service-hero h1 { font-size: 33px; }
   .invite-service .hero-actions { gap: 22px; }
 }
+
+/* H-011: these rules apply only when a supplied service asset exists. */
+.invite-service .service-hero-split { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); align-items: center; gap: 64px; }
+.invite-service .service-hero-copy { min-width: 0; }
+.invite-service .service-hero-visual { min-width: 0; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 14px; }
+.invite-service .service-hero-visual img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.invite-service .service-hero-visual[data-kind="illustration"] img { object-fit: contain; }
+@media (max-width: 900px) {
+  .invite-service .service-hero-split { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .invite-service .service-hero-visual { width: 100%; max-width: 600px; }
+}

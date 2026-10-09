@@ -10,6 +10,12 @@ media:
     output: /images/home
     extensions: [webp]
     rename: safe
+  - name: serviceHeroImages
+    label: Tjenestenes drømmeutfall – leverte bilder og illustrasjoner
+    input: app/public/images/services
+    output: /images/services
+    extensions: [webp, png, jpg, jpeg, avif, svg]
+    rename: safe
 components:
   link:
     type: object
@@ -72,6 +78,50 @@ content:
             label: Beskrivelse
             type: text
             required: true
+      - name: locale
+        label: Språk – fremtidig rutekontrakt
+        description: Fravær betyr nb. Kun teknisk koordinering i H-011; ingen engelske sider opprettes.
+        type: string
+        readonly: true
+      - name: translationKey
+        label: Oversettelsespar – fremtidig kontrakt
+        description: Felles nøkkel for eksplisitt godkjente språkversjoner. Settes i Git ved senere språk-handoff.
+        type: string
+        readonly: true
+      - name: heroVisual
+        label: Tjenestehero – drømmeutfall
+        description: Valgfritt. Brukes nå bare på Synlighet og Konvertering. ChatGPT leverer og OWNER velger kunsten etter H-011-review. Ingen forsidefoto som standard; manglende fil gir teksthero.
+        type: object
+        fields:
+          - name: kind
+            label: Bildetype
+            type: select
+            options: [photo, illustration]
+            required: true
+          - name: src
+            label: Levert tjenestebilde
+            type: image
+            options:
+              media: serviceHeroImages
+            required: true
+          - name: alt
+            label: Kort beskrivelse av bildets mening
+            type: string
+            required: true
+          - name: positionX
+            label: Fokus vannrett (0–100)
+            type: number
+            required: true
+            options:
+              min: 0
+              max: 100
+          - name: positionY
+            label: Fokus loddrett (0–100)
+            type: number
+            required: true
+            options:
+              min: 0
+              max: 100
       - name: eyebrow
         label: Overtekst
         type: string
@@ -692,8 +742,10 @@ content:
                     type: string
                     pattern: ^/
               - name: providerText
-                label: Leverandørtekst
+                label: Påkrevd leverandøropplysning
+                description: Låst D-037. Selskapsopplysningen endres bare gjennom et eksplisitt juridisk/leverandør-handoff.
                 type: string
+                readonly: true
               - name: previewLabel
                 label: Forhåndsvisningsetikett
                 type: string
@@ -727,13 +779,13 @@ content:
                     type: string
                     pattern: ^/
               - name: copyrightProvider
-                label: Leverandør i opphavsrett
+                label: Tjenestemerke i opphavsrett
                 type: string
               - name: footerNote
                 label: Bunntekstmerknad
                 type: string
       - name: sections
-        label: Mekanisme, kvalifisering, sjekk og leverandør
+        label: Mekanisme, kvalifisering og sjekk
         type: object
         list: true
         fields:

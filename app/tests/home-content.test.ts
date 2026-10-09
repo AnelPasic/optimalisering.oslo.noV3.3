@@ -7,7 +7,7 @@ const fixture = JSON.parse(readFileSync('src/content/pages/home.json', 'utf8'));
 
 test('CMS edits cannot remove or duplicate a required homepage section', () => {
   assert.equal(pageSchema.safeParse(fixture).success, true);
-  for (const id of ['mekanisme', 'passer', 'sjekk', 'medon']) {
+  for (const id of ['mekanisme', 'passer', 'sjekk']) {
     const removed = structuredClone(fixture);
     removed.sections = removed.sections.filter((section: { id: string }) => section.id !== id);
     assert.equal(pageSchema.safeParse(removed).success, false, `missing ${id} must fail before render`);

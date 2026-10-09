@@ -36,11 +36,19 @@ export const pageSchema = z.object({
     })),
     faq: z.array(z.object({ question: z.string(), answer: z.string() })),
     cta: link,
+    heroVisual: z.object({
+      kind: z.enum(['photo', 'illustration']),
+      src: z.string().regex(/^\/images\/services\/(?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.(?:webp|png|jpe?g|avif|svg)$/),
+      alt: z.string().trim().min(1),
+      positionX: z.number().min(0).max(100), positionY: z.number().min(0).max(100),
+    }).optional(),
+    locale: z.enum(['nb', 'en']).optional(),
+    translationKey: z.string().trim().min(1).optional(),
     homepage: homepage.optional(),
   }).superRefine((page, context) => {
     if (page.kind === 'home' && !page.homepage) context.addIssue({ code: 'custom', path: ['homepage'], message: 'Homepage content model is required' });
-    if (page.kind === 'home') for (const id of ['mekanisme', 'passer', 'sjekk', 'medon']) {
+    if (page.kind === 'home') for (const id of ['mekanisme', 'passer', 'sjekk']) {
       if (page.sections.filter(section => section.id === id).length !== 1) context.addIssue({ code: 'custom', path: ['sections'], message: `Homepage requires exactly one ${id} section` });
     }
-    if (page.kind === 'home' && page.sections.map(section => section.id).join(',') !== 'mekanisme,passer,sjekk,medon') context.addIssue({ code: 'custom', path: ['sections'], message: 'Homepage sections must retain the H-004 render order' });
+    if (page.kind === 'home' && page.sections.map(section => section.id).join(',') !== 'mekanisme,passer,sjekk') context.addIssue({ code: 'custom', path: ['sections'], message: 'Homepage sections must retain the D-037 render order' });
   });

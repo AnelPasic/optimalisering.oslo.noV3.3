@@ -6,9 +6,11 @@ import InnerPage from '../components/InnerPage.astro';
 import PricingPage from '../components/PricingPage.astro';
 import ServicePage from '../components/ServicePage.astro';
 import { createCommercialTextBinding } from '../lib/commercial-text';
+import { defaultLocale } from '../config/locales';
 
 export async function getStaticPaths() {
   const pages = await getCollection('pages');
+  if (pages.some(entry => (entry.data.locale ?? defaultLocale) !== defaultLocale)) throw new Error('English route publication requires a separate approved rollout');
   const home = pages.find(page => page.data.slug === 'home')?.data;
   const pricing = pages.find(page => page.data.slug === 'priser')?.data;
   if (!home?.homepage || !pricing) throw new Error('Homepage commercial source and approved pricing support are required');

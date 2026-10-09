@@ -1,0 +1,6 @@
+---
+import type { LanguageLink } from '../lib/i18n';
+interface Props { links?: LanguageLink[]; }
+const { links = [] } = Astro.props;
+---
+{links.length > 0 && <nav class="language-switch" aria-label="Språk">{links.map(link => <a href={link.href} lang={link.locale} hreflang={link.locale}>{link.label}</a>)}</nav>}

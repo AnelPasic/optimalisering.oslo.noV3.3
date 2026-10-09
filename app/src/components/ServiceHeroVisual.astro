@@ -1,0 +1,8 @@
+---
+import type { ServiceVisual } from '../lib/service-visual';
+interface Props { visual: ServiceVisual; }
+const { visual } = Astro.props;
+---
+<div class="service-hero-visual" data-kind={visual.kind}>
+  <img src={visual.src} alt={visual.alt} width="960" height="720" fetchpriority="high" decoding="async" style={{ objectPosition: `${visual.positionX}% ${visual.positionY}%` }} />
+</div>

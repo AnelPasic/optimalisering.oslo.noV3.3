@@ -3,6 +3,7 @@
 export const site = {
   name: 'Optimalisering Oslo',
   provider: 'Medon AS',
+  providerUrl: 'https://medon.no',
   url: 'https://optimalisering.oslo.no',
   preview: import.meta.env.SITE_STAGE !== 'production',
   leadsEnabled: import.meta.env.PUBLIC_LEADS_ENABLED === 'true',
