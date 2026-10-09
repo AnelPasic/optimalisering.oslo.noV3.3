@@ -95,6 +95,8 @@ OWNER subsequently explicitly applies `#320c43` also to the homepage footer. Thi
 
 | D-060 | OWNER / HUMAN COPY HOUSE STYLE + EXISTING CONTENT WASH | Expand the project copy rule beyond punctuation: avoid repeated AI-template formulas, generic agency filler, ornamental punctuation and redundant summaries; prefer concrete Norwegian customer language and varied sentence structure. Existing customer-facing page content and visible shared UI strings were conservatively washed without changing prices, service logic, proof claims or order routing. | OWNER instruction in ChatGPT, 2026-10-09. Authority: `coordination/COPY-STYLE.md`. This is a style/readability rule, not a claim that Google penalizes any specific punctuation mark. |
 
+| D-061 | OWNER / COPY-STYLE QA GUARD | Add a static QA guard that fails future builds when customer-facing page content reintroduces the banned ornamental punctuation or the most obvious template-copy phrases defined by D-060. The guard also checks hard-coded Astro component punctuation. It is part of `qa:static`. | Implemented 2026-10-09 in `app/scripts/audit-copy-style.mjs` and `app/package.json`. This enforces house style only; it is not an SEO penalty detector. |
+
 ## Review publication authority
 
 | ID | Authority / state | Decision | Source and scope |
