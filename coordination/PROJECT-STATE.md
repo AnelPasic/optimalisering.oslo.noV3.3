@@ -2,7 +2,7 @@
 
 Updated: 2026-10-09. Owner: Medon AS. Implementation repository: AnelPasic/optimalisering.oslo.noV3.3.
 
-**State: H-010 /KONVERTERING/ IMPLEMENTATION COMPLETE; STOP FOR STRATEGY_CONTENT REVIEW. D-030 SYNLIGHET PATTERN PASS AND D-031 KONVERTERING COPY LOCK PRESERVED. HOME, /PRISER/ AND /SYNLIGHET/ STABLE; OTHER 11 PAGES FROZEN; PROOF NON-PUBLIC.** No next implementation handoff is active.
+**State: H-010 /KONVERTERING/ PASSED STRATEGY_CONTENT UNDER D-033; H-011 SERVICE-LANDING/PARTNER-NEUTRAL/I18N SYSTEM PASS AUTHORIZED UNDER D-034–D-038; SEO/AI-SYNLIGHET PROPAGATION PAUSED; PROOF NON-PUBLIC.** The next task is not another service-page rollout. It hardens the system around dream-outcome visuals, provider neutrality, homepage qualification and future bilingual routing.
 
 Current H-010 web review: [Konvertering](https://optimalisering-oslo-v33.anel.workers.dev/konvertering/), main build source **282bc60a69d8a14cd473334b5ea3e8374ad77a31**, implementation **f30eebee2600a5e99c79ce6edc46ff9dac6c8204**, connected Worker **2df7e92e-8c30-43fa-a68c-e30587f4b101**. Native build succeeded; live 1440/390/320 exact-copy/context/pricing and all nine preserved home/pricing/Synlighet geometry/style snapshots pass, with eight captures. All 188 frozen local hashes and actual H-009 Synlighet asset hash match. All 15 content HTML responses, three public CSS and three WebPs match tested assets; robots/sitemap/noindex and intake GET 404 pass; zero real POST/email. Evidence: coordination/evidence/h010-live/. Following receipt revision changes no website assets. **Stop for STRATEGY_CONTENT /konvertering/ review; other 11 pages frozen; no next implementation active.**
 
@@ -249,3 +249,17 @@ Locked next-page content:
 - commit `8b8f4c4eecda1458e45c392dfabe3d4ac4fbc8d5`
 
 H-010 may generalize the existing service renderer/pricing bridge just enough for /konvertering/, but must prove /synlighet/ output remains unchanged.
+
+
+## H-011 system direction
+
+Authoritative rule set:
+- `coordination/H011-LANDING-PAGE-RULES.md`
+
+Locked provider-neutral homepage revision:
+- `89f5918caed62971445fccaba13491ac170d87ea`
+
+Pricing SEO provider-neutral amendment:
+- `ec538f3edb314152e9c0eb596ffdb2b93063954c`
+
+H-011 must preserve the accepted homepage/pricing/Synlighet/Konvertering structure except for the explicit provider/qualification/hero-visual architecture changes. No English copy is authorized yet.
