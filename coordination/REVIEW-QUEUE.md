@@ -1,6 +1,6 @@
 # Review queue
 
-State: H-012 COMMERCIAL/COPY PASS + VISUAL REVISE / H-013 PRICING VISUAL + DIRECT ORDER OPEN / SEO-AI-EN PAUSED.
+State: H-013 IMPLEMENTATION COMPLETE / OWNER + STRATEGY_CONTENT REVIEW + FINAL PACKAGE ASSETS REQUIRED / H-012 OFFER COPY PASS D-044 / SEO-AI-EN PAUSED.
 
 | Order / ID | Scope | Responsible role | State / completion evidence |
 | --- | --- | --- | --- |
@@ -13,11 +13,23 @@ State: H-012 COMMERCIAL/COPY PASS + VISUAL REVISE / H-013 PRICING VISUAL + DIREC
 | Complete / H-009 | First service-page propagation: `/synlighet/` visual/authority/commercial consistency | STRATEGY_CONTENT; IMPLEMENTATION receives | **PASS / COMPLETE under genuine D-030**, reviewing 36c305f62c82897e54dd99384e2fcc9c1d96e356. Reusable service pattern accepted subject to page-specific locked content/review. |
 | Complete / H-010 | Controlled service propagation: `/konvertering/` | STRATEGY_CONTENT; IMPLEMENTATION receives | **PASS / COMPLETE under genuine D-033**, reviewing f30eebee2600a5e99c79ce6edc46ff9dac6c8204. New global hero-visual requirement is a subsequent rule. |
 | Complete / H-011 | Landing/provider/qualification/media/i18n system | STRATEGY_CONTENT + OWNER | **PASS under D-039** at 2faf9dc6632d080e2b594b079b69245c0415475e; final artwork remains separate. |
-| Next / H-012 | Complete home + pricing package decision experience | OWNER + STRATEGY_CONTENT; IMPLEMENTATION receives | **REVIEW REQUIRED / IMPLEMENTATION COMPLETE at 605613755620a3ba767a64e5b157c114a3e6b4dc.** Exact D-041–D-043 package scope; other 11 pages frozen; no next implementation active. |
+| Complete / H-012 | Package offer logic/copy/shared-source; presentation | OWNER + STRATEGY_CONTENT | **PARTIAL PASS D-044:** offer/copy accepted; visual REVISE leads to H-013. |
+| Next / H-013 | Complete home/pricing card + direct-order UX | OWNER + STRATEGY_CONTENT; IMPLEMENTATION receives | **REVIEW REQUIRED / IMPLEMENTATION COMPLETE at 24818ee7997c816c752cc4c334cb65559f69a01c.** Final package artwork absent; order submit disabled; no next implementation active. |
+| Separate package asset supply | Three independent final package visuals | ChatGPT supply; OWNER + STRATEGY_CONTENT approval | Approved local files/alt/crops and scoped integration handoff required; existing curves are fallback only. |
 | Separate asset dependency | Synlighet/Konvertering dream-outcome hero artwork | ChatGPT generation/selection; OWNER + STRATEGY_CONTENT | Approved local asset/alt/mode/crop and scoped integration handoff required; current heroes remain text-only. |
 | Later / R-07 | Privacy/processing operations, Resend delivery, persistent backend, CMS/Cloudflare/DNS/redirects, measurement/Search Console, final launch QA/authorization | OWNER / operations + IMPLEMENTATION + RED_TEAM | DEFERRED / BLOCKS LIVE USE (C-05, C-06). H-003 authorizes static web review only; no real intake or production launch is authorized. |
 
-## Current review packet — H-012 / OWNER + STRATEGY_CONTENT
+## Current review packet — H-013 / OWNER + STRATEGY_CONTENT; FINAL PACKAGE VISUALS PENDING
+
+Implementation/local evidence **24818ee7997c816c752cc4c334cb65559f69a01c**, incoming main **f5edb6ac6b8060e25435ab9d89e31722e2f3a395**. Authority: exact coordination/H013-PRICING-VISUAL-ORDER.md and D-044–D-046. [Review URL](https://optimalisering-oslo-v33.anel.workers.dev/priser/); exact main/Worker receipt in CODEX-TO-CHATGPT.
+
+[Home packages 1440](evidence/h013/home-packages-1440.png), [390](evidence/h013/home-packages-390.png); [full cards 1440](evidence/h013/cards-1440.png), [390](evidence/h013/cards-390.png); visual areas [Optimalisering](evidence/h013/visual-optimalisering.png), [Vekst](evidence/h013/visual-vekst.png), [Partner](evidence/h013/visual-partner.png); icons [Optimalisering](evidence/h013/focus-optimalisering.png), [Vekst](evidence/h013/focus-vekst.png), [Partner](evidence/h013/focus-partner.png); [direct CTA](evidence/h013/direct-order-cta.png); selected order [Optimalisering](evidence/h013/order-optimalisering-1440.png), [Vekst](evidence/h013/order-vekst-1440.png), [Partner](evidence/h013/order-partner-1440.png), [mobile](evidence/h013/order-partner-390.png). [Checks](evidence/h013/checks.json), [source/asset regression](evidence/h013/package-source-regression.json), [verify](evidence/h013/verification.txt), [technical review](evidence/h013/implementation-review.md), [full evidence notes](evidence/h013/README.md). CMS/intake enablement: app/docs/h013-pricing-order-cms.md.
+
+**OWNER + STRATEGY_CONTENT:** review the complete stronger card/direct-order experience, scanability/airiness/Vekst emphasis, retained H-012 commercial meaning and truthful disabled-preview behavior. Record actual reviewed revision/verdict/scope and scoped next handoff; no per-line design gates. Full verify: 106 files/zero diagnostics, 48 tests, 450 links; 40 synthetic browser checks; four commercial pages at 1440/390/320; 181 frozen files and 93 retained geometry/style snapshots; 19 captures; real four-route CMS/visual regression including full verify with supplied SVG/PNG assets and restored fallback. Three-package query/home/pricing CTA preselection/history/invalid-query and disabled-submit/programmatic/no-JS safety checks pass. Zero real leads/review POST/live email. Technical review adds no role verdict.
+
+**ChatGPT final package assets:** supply approved local SVG-preferred or WebP/PNG assets with truthful alt/crops for the three locked visual semantics; return a scoped integration handoff. Current curves remain fallback, not final artwork. This can proceed independently of file-based UI review. Separate service assets, manual authenticated CMS save and proof evidence remain their own dependencies. **STOP after H-013.** No SEO/AI/English/proof rollout or real orders/launch follows.
+
+## Historical review packet — H-012 / offer COPY PASS, visual REVISE D-044
 
 Implementation/local evidence **605613755620a3ba767a64e5b157c114a3e6b4dc**, incoming main **2402e886203d1a4946cc505c7787df90b0c472fe**. Exact authority: coordination/H012-PRICING-OFFER.md, D-041–D-043. [Pricing review URL](https://optimalisering-oslo-v33.anel.workers.dev/priser/); exact main/Worker receipt in CODEX-TO-CHATGPT.
 
