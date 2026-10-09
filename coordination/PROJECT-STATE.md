@@ -2,7 +2,7 @@
 
 Updated: 2026-10-09. Owner: Medon AS. Implementation repository: AnelPasic/optimalisering.oslo.noV3.3.
 
-**State: H-015 IMPLEMENTATION COMPLETE / STOP FOR OWNER + STRATEGY_CONTENT VISUAL REVIEW; D-050 H-014 COMPACTNESS PASS PRESERVED; SEO/AI/EN PAUSED; PROOF NON-PUBLIC.**
+**State: H-015 VISUALS USABLE / H-016 CMS EDITOR-FIRST PRICING PASS AUTHORIZED UNDER D-053–D-057; SEO/AI/EN PAUSED; PROOF NON-PUBLIC.** Next work makes package copy/art safely OWNER-editable, unifies homepage with the compact pricing-card anatomy, and opens details by default on /priser/.
 
 Incoming **041be18218543f89c0e69f3031165b31b42ea110**, implementation/local evidence **d2ab35bb4df7385a2ef31cebf99760f72ec8160f**. D-050–D-052 / exact H015-PRICING-VISUAL-POLISH.md authorize visual-strip polish only. OWNER's actual subsequent message “bruk heller dette som grunnlag” supplies the preserved original reference at evidence/h015/owner-reference.png. Local reusable SVG motifs use its fading green/blue/teal curves, filled arrowheads, soft mint wash and compact mint HTML callouts; no whole-card artwork or reference copy/CTA/claims is imported. Optimalisering retains one controlled moderate path and Én spak / Tydelig fremgang; Vekst has two short reinforcing inputs merging into one dominant accelerating path and To grep / Forsterker hverandre; Partner has three coordinated rising tracks and Flere kundereiser / Prioriteres løpende. The exact H-015 optional captions are editable alongside independent visualAsset fields in the existing shared home package source; assets still replace both motif and caption, with alt/crop/contain/cover and missing-file fallback preserved.
 
@@ -337,3 +337,8 @@ Authoritative compact-card contract: coordination/H014-COMPACT-PRICING.md
 
 ## H-015 delivered / OWNER + STRATEGY_CONTENT visual review required
 Authoritative visual polish contract: coordination/H015-PRICING-VISUAL-POLISH.md
+
+
+## H-016 active
+Authoritative contract: coordination/H016-CMS-EDITOR-PRICING.md
+After H-016, routine package text/image tuning should happen directly in Pages CMS rather than via Codex.
