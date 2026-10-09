@@ -55,7 +55,7 @@ import Arrow from './Arrow.astro';
         previousBody = body;
         button.disabled = true;
         form.setAttribute('aria-busy', 'true');
-        status.textContent = 'Sender forespørselen …';
+        status.textContent = 'Sender forespørselen...';
         await submitLead(form.dataset.endpoint || '', payload, { idempotencyKey: key });
         status.textContent = 'Takk! Forespørselen er mottatt. Vi følger opp på e-post.';
         form.reset();
