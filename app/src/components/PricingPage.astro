@@ -27,7 +27,7 @@ const sections = page.sections.map(section => section.id === 'kostnader' ? {
   <section id="pricing-multiplier" class="pricing-multiplier section-space"><div class="shell"><h2>{packages.multiplier.heading}</h2><p class="multiplier-row">{packages.multiplier.conceptualRow}</p><details class="multiplier-detail"><summary>{packages.multiplier.eyebrow}</summary><p class="body-copy">{packages.multiplier.body}</p><p class="body-copy">{packages.multiplier.support}</p></details></div></section>
   <PackageOrder packages={packages} />
   {sections.map(section => <ContentSection section={section}>
-    {section.id === 'arbeidsomrader' && <div class="package-notes body-copy"><p>{packages.areasLabel}: {packages.areas.join(' · ')}.</p><p>{packages.foundationNote}</p></div>}
+    {section.id === 'arbeidsomrader' && <div class="package-notes body-copy"><p>{packages.areasLabel}: {packages.areas.join(' / ')}.</p><p>{packages.foundationNote}</p></div>}
   </ContentSection>)}
   <section id="sporsmal" class="faq-section section-space"><div class="shell faq-grid"><div><p class="eyebrow">{commercial.faqEyebrow}</p><h2>{commercial.faqHeading}</h2></div><div class="faq-list">{page.faq.map(item => <details><summary>{item.question}<span aria-hidden="true">+</span></summary><p>{item.answer}</p></details>)}</div></div></section>
 </div>
