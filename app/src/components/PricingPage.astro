@@ -3,6 +3,7 @@ import type { CollectionEntry } from 'astro:content';
 import Arrow from './Arrow.astro';
 import Packages from './PackageSection.astro';
 import ContentSection from './HomeSection.astro';
+import PackageOrder from './PackageOrder.astro';
 interface Props {
   page: CollectionEntry<'pages'>['data'];
   commercial: NonNullable<CollectionEntry<'pages'>['data']['homepage']>;
@@ -24,6 +25,7 @@ const sections = page.sections.map(section => section.id === 'kostnader' ? {
   <Packages content={packages} full showHeading={false} showNotes={false} headingTag="h2" labelledBy="pricing-title" recommendedAnchor="begge" />
   <section id="pricing-decision" class="pricing-decision section-space"><div class="shell"><h2>{packages.decisionStrip.heading}</h2><div class="pricing-decision-grid">{packages.decisionStrip.items.map(text => <p>{text}</p>)}</div></div></section>
   <section id="pricing-multiplier" class="pricing-multiplier section-space"><div class="shell"><p class="eyebrow">{packages.multiplier.eyebrow}</p><h2>{packages.multiplier.heading}</h2><p class="body-copy">{packages.multiplier.body}</p><p class="multiplier-row">{packages.multiplier.conceptualRow}</p><p class="body-copy">{packages.multiplier.support}</p></div></section>
+  <PackageOrder packages={packages} />
   {sections.map(section => <ContentSection section={section}>
     {section.id === 'arbeidsomrader' && <div class="package-notes body-copy"><p>{packages.areasLabel}: {packages.areas.join(' · ')}.</p><p>{packages.foundationNote}</p></div>}
   </ContentSection>)}

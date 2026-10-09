@@ -1,9 +1,17 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { getH012Contract } from './h012-contract.mjs';
+import { resolvePackageAsset } from '../src/lib/package-visual.ts';
 const expected = getH012Contract();
 const source = JSON.parse(readFileSync('src/content/pages/home.json')).homepage.packages;
-for (const key of Object.keys(expected)) assert.deepEqual(source[key], expected[key], `D-041 exact shared ${key}`);
+// D-045 supersedes only the primary CTA; D-046 stores the same focus copy as
+// structured icon items. All H-012 offer sentences remain exact.
+for (const [index, item] of expected.items.entries()) item.cta = { label: `Bestill ${item.title}`, href: `/priser/?pakke=${['optimalisering','vekst','partner'][index]}#bestill` };
+const projected = { ...source, items: source.items.map(item => {
+  const { key, iconItems, visualAsset, ...offer } = item;
+  return key === 'vekst' ? { ...offer, combinations: iconItems.map(focus => ({ title: focus.label, text: focus.description })) } : { ...offer, focusAreas: iconItems.map(focus => focus.label) };
+}) };
+for (const key of Object.keys(expected)) assert.deepEqual(projected[key], expected[key], `D-041 exact shared ${key}`);
 const normalize = html => html.replace(/<[^>]*>/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
 for (const [path, full] of [['dist/index.html', false], ['dist/priser/index.html', true]]) {
   const html = readFileSync(path, 'utf8');
@@ -13,10 +21,12 @@ for (const [path, full] of [['dist/index.html', false], ['dist/priser/index.html
   for (const [index, card] of cards.entries()) {
     const item = expected.items[index], text = normalize(card);
     for (const copy of [item.title, item.descriptor, item.fit, item.cta.label, ...(full ? [item.typicalBusiness, item.scope, item.distinction, item.priceNote, item.selectionRule, ...item.situations, ...(item.focusAreas ?? []), ...(item.combinations ?? []).flatMap(pair => [pair.title, pair.text])] : [item.detailLink.label])].filter(Boolean)) assert.ok(text.includes(copy), `${path}: exact ${copy}`);
-    assert.equal((card.match(/class="package-curve"/g) ?? []).length, index === 2 ? 3 : 1, 'Conceptual single/single/multiple curves');
+    const asset = resolvePackageAsset(source.items[index].visualAsset);
+    assert.equal((card.match(/class="package-curve"/g) ?? []).length, asset ? 0 : index === 2 ? 3 : 1, 'Supplied asset replaces conceptual fallback');
+    assert.equal((card.match(/class="package-visual-asset"/g) ?? []).length, asset ? 1 : 0);
     assert.equal((card.match(/class="package-price-prefix"/g) ?? []).length, index === 2 ? 1 : 0);
     assert.ok(!/\d+(?:[.,]\d+)?\s*%|Mest valgt/i.test(text), 'No unsupported package percentages/popularity');
-    assert.ok(card.includes('href="/#sjekk"'));
+    assert.ok(card.includes(`href="${item.cta.href}"`));
     if (!full) assert.ok(!text.includes(item.selectionRule) && !text.includes(item.situations[0]), 'Compact home does not duplicate full detail');
   }
   assert.ok(!/Mest valgt|ekstern markedsavdeling/i.test(normalize(html)));

@@ -29,7 +29,7 @@ export function openLeadStore(filename) {
         const id = randomUUID();
         const created = new Date().toISOString();
         db.prepare('INSERT INTO leads(id, idempotency_key, payload_json, created_at) VALUES (?, ?, ?, ?)').run(id, key, json, created);
-        db.prepare('INSERT INTO conversions(lead_id, event_type, created_at, source_json) VALUES (?, ?, ?, ?)').run(id, 'assessment_received', created, JSON.stringify(payload.source));
+        db.prepare('INSERT INTO conversions(lead_id, event_type, created_at, source_json) VALUES (?, ?, ?, ?)').run(id, payload.form === 'pakke-bestilling' ? 'order_received' : 'assessment_received', created, JSON.stringify(payload.source));
         db.exec('COMMIT');
         return this.get(id);
       } catch (error) { db.exec('ROLLBACK'); throw error; }

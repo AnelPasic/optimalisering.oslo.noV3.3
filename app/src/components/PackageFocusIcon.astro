@@ -1,0 +1,16 @@
+---
+import Search from '../assets/phosphor/magnifying-glass.svg';
+import Conversion from '../assets/phosphor/cursor-click.svg';
+interface Props { kind: string; }
+const { kind } = Astro.props;
+// Generic local line icons, no third-party brand marks.
+const shapes: Record<string, string[]> = {
+  local: ['M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z', 'M15 10a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z'],
+  'paid-search': ['M15 3H4v18h16V10', 'M13 11l8-8m-7 0h7v7', 'M8 15h7m-7 3h4'],
+  'social-paid': ['M3 10l15-5v14L3 14v-4Z', 'M7 15v6h4l-1-5', 'M21 8v8'],
+  analytics: ['M3 3v18h18', 'M7 17v-5m5 5V8m5 9V5'],
+  page: ['M4 3h16v18H4V3Z', 'M4 8h16M8 12h8m-8 4h5'],
+  route: ['M6 4h11a4 4 0 0 1 0 8H8a4 4 0 0 0 0 8h10', 'M16 17l3 3-3 3'],
+};
+---
+{kind === 'search' ? <Search class="package-focus-icon" width="24" height="24" aria-hidden="true" focusable="false" /> : kind === 'conversion' ? <Conversion class="package-focus-icon" width="24" height="24" aria-hidden="true" focusable="false" /> : <svg class="package-focus-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">{(shapes[kind] ?? shapes.route).map(d => <path d={d} />)}</svg>}

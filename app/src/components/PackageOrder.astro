@@ -1,0 +1,58 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Arrow from './Arrow.astro';
+interface Props { packages: NonNullable<CollectionEntry<'pages'>['data']['homepage']>['packages']; }
+const { packages } = Astro.props;
+// H-013 authorizes review UX only. A separate scoped enablement handoff must
+// connect this form after privacy, backend, notification and launch approval.
+---
+<section id="bestill" class="package-order section-space" aria-labelledby="order-title"><div class="shell package-order-grid">
+  <div class="package-order-intro"><h2 id="order-title">Bestill pakken som passer</h2><p class="body-copy">Velg pakken og send bestillingen. Vi bekrefter oppstart og det avtalte omfanget før arbeidet starter.</p><p id="partner-order-note" class="partner-order-note" hidden>Partner starter {packages.items[2].pricePrefix ? packages.items[2].pricePrefix + ' ' : ''}{new Intl.NumberFormat('nb-NO').format(packages.items[2].price)} {packages.items[2].priceSuffix}. Omfang og fast månedspris bekreftes før oppstart.</p></div>
+  <form class="package-order-form" data-package-order data-enabled="false" method="post" action="/api/leads">
+    <input type="hidden" name="form" value="pakke-bestilling" />
+    <label for="order-package">Pakke</label><select id="order-package" name="package" required aria-describedby="order-selection partner-order-note"><option value="">Velg pakke</option>{packages.items.map(item => <option value={item.key}>{item.title} — {item.pricePrefix ? item.pricePrefix + ' ' : ''}{new Intl.NumberFormat('nb-NO').format(item.price)} {item.priceSuffix} {item.vatSuffix}</option>)}</select>
+    <p id="order-selection" class="order-selection" aria-live="polite"></p>
+    <div class="order-fields"><div><label for="order-company">Bedrift</label><input id="order-company" name="company" type="text" autocomplete="organization" maxlength="200" required /></div><div><label for="order-website">Nettside / nettbutikk</label><input id="order-website" name="website" type="text" inputmode="url" autocomplete="url" maxlength="2048" required /></div><div><label for="order-contact">Kontaktperson</label><input id="order-contact" name="contact" type="text" autocomplete="name" maxlength="200" required /></div><div><label for="order-email">E-post</label><input id="order-email" name="email" type="email" autocomplete="email" maxlength="254" required /></div></div>
+    <label for="order-phone">Telefon <span class="optional">Valgfritt</span></label><input id="order-phone" name="phone" type="tel" autocomplete="tel" maxlength="40" />
+    <label for="order-comment">Kort kommentar <span class="optional">Valgfritt</span></label><textarea id="order-comment" name="message" rows="3" maxlength="2000"></textarea>
+    <p class="form-privacy">Ikke send innlogging, sensitive opplysninger eller personopplysninger om andre.</p>
+    <p id="order-preview" class="form-notice">Dette er en forhåndsvisning. Bestilling er ikke åpnet ennå. Ingen opplysninger blir sendt.</p>
+    <button type="submit" class="button" disabled aria-describedby="order-preview">Send bestilling<Arrow diagonal /></button>
+    <a class="text-link" href="/#sjekk">Usikker på pakken? Ta en gratis sjekk<Arrow /></a>
+    <noscript><p>Velg pakken i skjemaet. Bestilling er ikke åpnet i denne forhåndsvisningen.</p></noscript>
+  </form>
+</div></section>
+<script>
+  const form = document.querySelector<HTMLFormElement>('[data-package-order]');
+  if (form) {
+    const select = form.querySelector<HTMLSelectElement>('[name="package"]')!;
+    const note = document.querySelector<HTMLElement>('#partner-order-note')!;
+    const selection = form.querySelector<HTMLElement>('#order-selection')!;
+    const valid = (key: string | null) => key !== null && [...select.options].some(option => option.value === key && key !== '');
+    function display() {
+      note.hidden = select.value !== 'partner';
+      selection.textContent = select.value ? select.selectedOptions[0].textContent : '';
+    }
+    function fromLocation() {
+      const key = new URL(location.href).searchParams.get('pakke');
+      select.value = valid(key) ? key! : '';
+      display();
+    }
+    fromLocation();
+    addEventListener('popstate', fromLocation);
+    document.querySelectorAll<HTMLAnchorElement>('a[href^="/priser/?pakke="]').forEach(link => link.addEventListener('click', event => {
+      if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      const url = new URL(link.href), key = url.searchParams.get('pakke');
+      if (!valid(key)) return;
+      event.preventDefault(); history.pushState(null, '', url.pathname + url.search + url.hash);
+      fromLocation(); form.scrollIntoView({ behavior: 'instant', block: 'start' }); select.focus({ preventScroll: true });
+    }));
+    select.addEventListener('change', () => {
+      const url = new URL(location.href);
+      if (valid(select.value)) url.searchParams.set('pakke', select.value); else url.searchParams.delete('pakke');
+      history.replaceState(null, '', url.pathname + url.search + url.hash); display();
+    });
+    // Guard programmatic submits as well as the disabled button and no-JS path.
+    form.addEventListener('submit', event => { event.preventDefault(); });
+  }
+</script>

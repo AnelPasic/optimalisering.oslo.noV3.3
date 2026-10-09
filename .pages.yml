@@ -16,6 +16,12 @@ media:
     output: /images/services
     extensions: [webp, png, jpg, jpeg, avif, svg]
     rename: safe
+  - name: packageVisuals
+    label: Pakkeillustrasjoner – godkjente leverte assets
+    input: app/public/images/pricing
+    output: /images/pricing
+    extensions: [svg, webp, png]
+    rename: safe
 components:
   link:
     type: object
@@ -604,20 +610,24 @@ content:
                     label: Typiske situasjoner
                     type: text
                     list: true
-                  - name: focusAreas
-                    label: Eksempler på fokus eller arbeidsområder
+                  - name: key
+                    label: Stabil pakkenøkkel for bestilling
                     type: string
-                    list: true
-                  - name: combinations
-                    label: Kombinasjoner for Vekst – låst CRO-rekkefølge
+                    readonly: true
+                  - name: iconItems
+                    label: Fokus og kombinasjoner med ikoner – låst H-012 copy
                     type: object
                     list: true
                     fields:
-                      - name: title
-                        label: Kombinasjon
+                      - name: icon
+                        label: Generisk ikon
+                        type: select
+                        options: [search, conversion, local, paid-search, social-paid, analytics, page, route]
+                      - name: label
+                        label: Fokus eller kombinasjon
                         type: string
-                      - name: text
-                        label: Forklaring
+                      - name: description
+                        label: Kort forklaring – Vekst beholder full låst kombinasjonstekst
                         type: text
                   - name: selectionRule
                     label: Valgregel
@@ -629,9 +639,34 @@ content:
                     label: Partner – omfang og prisavtale
                     type: text
                   - name: visual
-                    label: Konseptuell kurve – ingen resultatprognose
+                    label: Utviklingsfallback – erstattes av levert visual asset
                     type: select
                     options: [controlled, accelerating, tracks]
+                  - name: visualAsset
+                    label: Selvstendig pakkeillustrasjon – valgfri til endelig asset leveres
+                    type: object
+                    fields:
+                      - name: src
+                        label: Godkjent asset
+                        type: image
+                        options:
+                          media: packageVisuals
+                          extensions: [svg, webp, png]
+                      - name: alt
+                        label: Sannferdig beskrivende alternativ tekst
+                        type: string
+                      - name: positionX
+                        label: Horisontalt utsnitt (%) – raster
+                        type: number
+                        options:
+                          min: 0
+                          max: 100
+                      - name: positionY
+                        label: Vertikalt utsnitt (%) – raster
+                        type: number
+                        options:
+                          min: 0
+                          max: 100
                   - name: price
                     label: Månedspris i kroner
                     type: number
@@ -665,16 +700,18 @@ content:
                     label: Anbefalt-merke
                     type: string
                   - name: cta
-                    label: Primær handling
+                    label: Primær bestilling – sikker rute og valgt pakke
                     type: object
                     fields:
                       - name: label
                         label: Tekst
                         type: string
+                        readonly: true
                       - name: href
                         label: Intern lenke
                         type: string
-                        pattern: ^/
+                        readonly: true
+                        pattern: ^/priser/\?pakke=(optimalisering|vekst|partner)#bestill$
           - name: proof
             label: Dokumenterte resultater – separat publiseringsvern
             type: object

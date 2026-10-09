@@ -5,6 +5,7 @@ export function getConfig(env = process.env) {
   return {
     email,
     enabled: env.PRIVACY_APPROVED === 'true' && env.PUBLIC_LEADS_ENABLED === 'true' && Boolean(email.apiKey && email.from && email.to),
+    ordersEnabled: env.ORDERS_ENABLED === 'true',
     site: env.LEAD_SITE || 'optimalisering.oslo.no',
     sourceCapture: env.SOURCE_CAPTURE_ENABLED !== 'false',
     origins: new Set((env.ALLOWED_ORIGINS || 'http://127.0.0.1:4321,http://localhost:4321').split(',').map(s => s.trim()).filter(Boolean)),

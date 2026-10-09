@@ -1,26 +1,46 @@
-/* H-012: package decision only; accepted chrome and other sections unchanged. */
-.invite-home .package-offer .package-card { padding-inline: 24px; }
-.invite-home .package-offer .package-descriptor { font-size: 18px; line-height: 1.5; font-weight: 550; min-height: 54px; }
-.invite-home .package-offer .package-price { margin-top: 20px; border: 0; padding: 0; }
+/* H-013: card/order presentation only; accepted chrome and services unchanged. */
+.invite-home .package-offer .package-grid { align-items: start; gap: 24px; }
+.invite-home .package-offer .package-card { padding: 32px 24px; background: #fff; border: 1px solid #e0dbe6; border-radius: 16px; }
+.invite-home .package-offer .package-card.is-recommended { background: #f1edf8; border: 2px solid #320c43; padding: 31px 23px; }
+.invite-home .package-offer .package-badge { background: #320c43; color: #fff; }
+.invite-home .package-offer .package-price { margin-top: 24px; border: 0; padding: 0; }
 .invite-home .package-offer .package-price .small-copy { margin-top: 8px; }
 .invite-home .package-offer .package-price-prefix { font-size: 20px; margin-right: .25em; }
-.invite-home .package-offer .package-visual { width: 100%; height: 144px; margin-block: 24px; border-radius: 10px; background: #e0f1e9; color: #087b73; }
-.invite-home .package-offer .package-visual-accelerating { background: #eae4f4; color: #320c43; }
-.invite-home .package-offer .package-visual-tracks { background: #f1edf6; color: #5a4070; }
+.invite-home .package-offer .package-descriptor { font-family: var(--heading); font-size: 20px; line-height: 1.4; font-weight: 550; margin-top: 24px; min-height: 56px; }
+.invite-home .package-offer .package-visual-area { aspect-ratio: 4 / 3; width: 100%; margin-block: 32px; border-radius: 12px; overflow: hidden; display: grid; place-items: center; background: #e0f1e9; color: #087b73; }
+.invite-home .package-offer .package-visual-area-accelerating { background: #e4dbf1; color: #320c43; }
+.invite-home .package-offer .package-visual-area-tracks { background: #efe8f1; color: #5a4070; }
+.invite-home .package-offer .package-visual { width: 85%; height: 85%; }
+.invite-home .package-offer .package-visual-area[data-supplied="true"] { background: transparent; }
+.invite-home .package-offer .package-visual-asset { width: 100%; height: 100%; min-height: 0; object-fit: cover; }
+.invite-home .package-offer .package-visual-asset[data-vector="true"] { object-fit: contain; }
+.invite-home .package-offer .package-block-heading { font-family: var(--body); font-size: 14px; font-weight: 650; line-height: 1.5; letter-spacing: 0; margin-bottom: 12px; }
 .invite-home .package-offer .package-fit, .invite-home .package-offer .package-detail { font-size: 15px; line-height: 1.7; color: var(--muted); }
-.invite-home .package-offer .package-card .button { align-self: start; margin-top: auto; }
-.invite-home .package-offer .package-fit { margin-bottom: 24px; }
-.invite-home .package-offer .package-detail-link { margin-top: 20px; font-size: 14px; }
-.invite-home .package-offer .package-detail { margin-bottom: 28px; }
-.invite-home .package-offer .package-detail > * + * { margin-top: 24px; }
-.invite-home .package-offer .package-detail ul { padding-left: 20px; }
-.invite-home .package-offer .package-detail li + li { margin-top: 12px; }
-.invite-home .package-offer .package-combinations { margin: 0; }
-.invite-home .package-offer .package-combinations dt { font-size: 15px; line-height: 1.5; color: var(--ink); margin-top: 24px; }
-.invite-home .package-offer .package-combinations dd { margin-bottom: 0; }
+.invite-home .package-offer .package-fit { margin-bottom: 28px; }
+.invite-home .package-offer .package-detail > * + * { margin-top: 32px; }
+.invite-home .package-offer .package-detail { margin-bottom: 32px; }
+.invite-home .package-offer .package-example { font-size: 14px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding-block: 16px; }
+.invite-home .package-offer .package-example summary { cursor: pointer; color: var(--ink); }
+.invite-home .package-offer .package-example p { margin-top: 16px; }
+.invite-home .package-offer .package-situations { padding: 20px; background: #f8f6fa; border-radius: 10px; }
+.invite-home .package-offer .is-recommended .package-situations { background: #fff; }
+.invite-home .package-offer .package-situations ul { padding-left: 18px; }
+.invite-home .package-offer .package-situations li + li { margin-top: 14px; }
+.invite-home .package-offer .package-icon-items { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr; gap: 18px; }
+.invite-home .package-offer .package-icon-items li { display: flex; gap: 10px; align-items: start; min-width: 0; }
+.invite-home .package-offer .package-icon-items li > div { min-width: 0; overflow-wrap: anywhere; }
+.invite-home .package-offer .package-focus-icon { flex-shrink: 0; color: #087b73; margin-top: 2px; }
+.invite-home .package-offer .is-recommended .package-focus-icon { color: #320c43; }
+.invite-home .package-offer .package-focus-label { font-size: 14px; line-height: 1.5; color: var(--ink); }
+.invite-home .package-offer .package-icon-items.has-descriptions { grid-template-columns: 1fr; gap: 24px; }
+.invite-home .package-offer .package-focus-description { margin-top: 8px; font-size: 14px; line-height: 1.65; }
 .invite-home .package-offer .package-distinction { border-left: 3px solid #320c43; padding-left: 16px; color: var(--ink); }
 .invite-home .package-offer .package-selection { font-weight: 600; color: var(--ink); }
 .invite-home .package-offer .package-price-note { font-size: 13px; color: var(--muted); margin-top: 14px; line-height: 1.6; }
+.invite-home .package-offer .package-card .button { margin-top: 0; align-self: stretch; justify-content: space-between; }
+.invite-home .package-offer .is-recommended .button { background: #320c43; }
+.invite-home .package-offer .is-recommended .button:hover { background: #4d245e; }
+.invite-home .package-offer .package-detail-link, .invite-home .package-offer .package-uncertain { margin-top: 20px; font-size: 14px; }
 .invite-home .pricing-decision { background: #fff; }
 .invite-home .pricing-decision h2 { max-width: 900px; }
 .invite-home .pricing-decision-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin-top: 36px; }
@@ -30,12 +50,42 @@
 .invite-home .pricing-multiplier .body-copy { max-width: 880px; color: #e0d9e7; margin-top: 28px; }
 .invite-home .pricing-multiplier .eyebrow { color: #b9e8d4; }
 .invite-home .multiplier-row { margin-block: 36px; font-family: var(--heading); font-size: clamp(21px, 3vw, 36px); font-weight: 550; line-height: 1.4; }
+.invite-pricing .package-order { background: #fff; scroll-margin-top: 32px; }
+.invite-pricing .package-order-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 80px; }
+.invite-pricing .package-order-intro h2 { font-size: clamp(32px, 3.5vw, 48px); }
+.invite-pricing .package-order-intro .body-copy { margin-top: 24px; max-width: 480px; }
+.invite-pricing .partner-order-note { margin-top: 28px; padding: 24px; background: #f1edf8; border-radius: 10px; line-height: 1.65; }
+.invite-pricing .package-order-form { min-width: 0; }
+.invite-pricing .package-order-form label { display: block; font-size: 14px; margin-bottom: 10px; }
+.invite-pricing .package-order-form input, .invite-pricing .package-order-form select, .invite-pricing .package-order-form textarea { display: block; width: 100%; min-width: 0; max-width: 100%; border: 1px solid #cbc2d4; border-radius: 7px; padding: 14px; background: #fff; color: var(--ink); font: inherit; font-size: 16px; }
+.invite-pricing .package-order-form select { text-overflow: ellipsis; }
+.invite-pricing .order-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-block: 24px; }
+.invite-pricing .package-order-form > input, .invite-pricing .package-order-form textarea { margin-bottom: 24px; }
+.invite-pricing .package-order-form .order-selection { margin-top: 12px; font-size: 14px; line-height: 1.6; }
+.invite-pricing .package-order-form .form-notice { margin-block: 24px; }
+.invite-pricing .package-order-form .form-privacy { font-size: 13px; line-height: 1.6; color: var(--muted); }
+.invite-pricing .package-order-form .button { margin-bottom: 24px; }
+.invite-pricing .package-order-form .button:disabled { opacity: .65; cursor: not-allowed; }
+.invite-pricing .package-order-form .text-link { display: flex; font-size: 14px; }
 @media (max-width: 1100px) {
-  .invite-home .package-offer .package-card { padding-inline: 12px; }
+  .invite-home .package-offer .package-grid { gap: 16px; }
+  .invite-home .package-offer .package-card { padding-inline: 18px; }
+  .invite-home .package-offer .package-card.is-recommended { padding-inline: 17px; }
+  .invite-home .package-offer .package-icon-items { grid-template-columns: 1fr; }
+  .invite-pricing .package-order-grid { gap: 40px; }
 }
+@media (max-width: 800px) { .invite-pricing .package-order-grid { grid-template-columns: 1fr; } }
 @media (max-width: 650px) {
-  .invite-home .package-offer .package-card { padding-inline: 0; }
+  .invite-home .package-offer .package-grid { gap: 32px; }
+  .invite-home .package-offer .package-card { padding: 28px 20px; }
+  .invite-home .package-offer .package-card.is-recommended { padding: 27px 19px; }
   .invite-home .package-offer .package-descriptor { min-height: 0; }
-  .invite-home .package-offer .package-visual { height: 144px; max-width: 400px; }
+  .invite-home .package-offer .package-price-amount { font-size: 32px; }
+  .invite-home .package-offer .package-price-prefix { font-size: 18px; }
+  .invite-home .package-offer .package-price-unit { font-size: 14px; }
+  .invite-home .package-offer .package-icon-items { grid-template-columns: 1fr; }
+  .invite-home .package-offer .package-icon-items.has-descriptions { grid-template-columns: 1fr; }
   .invite-home .pricing-decision-grid { grid-template-columns: 1fr; gap: 28px; }
+  .invite-pricing .order-fields { grid-template-columns: 1fr; }
 }
+@media (max-width: 359px) { .invite-home .package-offer .package-icon-items { grid-template-columns: 1fr; } }

@@ -111,8 +111,8 @@
           "recommended": false,
           "badge": "",
           "cta": {
-            "label": "Ta en gratis sjekk",
-            "href": "/#sjekk"
+            "label": "Bestill Optimalisering",
+            "href": "/priser/?pakke=optimalisering#bestill"
           },
           "detailLink": {
             "label": "Se pakken",
@@ -128,11 +128,24 @@
           "typicalBusiness": "Typisk en konkurranseutsatt lokal tjenestebedrift, mindre klinikk, regnskapskontor eller nisje-B2B-bedrift med én tydelig hovedtjeneste.",
           "scope": "Vi jobber med én hovedflaskehals til neste prioritet er viktigere. Mindre støttearbeid rundt samme mål kan inngå.",
           "distinction": "Optimalisering er ikke laget for to uavhengige vekstspor samtidig. Hvis resultatet avhenger av at to områder forbedres parallelt, passer Vekst bedre enn å bytte hovedfokus fra måned til måned.",
-          "focusAreas": [
-            "SEO / AI-synlighet",
-            "Konverteringsoptimalisering",
-            "Lokal SEO",
-            "Google Ads – ett tydelig fokusområde"
+          "key": "optimalisering",
+          "iconItems": [
+            {
+              "icon": "search",
+              "label": "SEO / AI-synlighet"
+            },
+            {
+              "icon": "conversion",
+              "label": "Konverteringsoptimalisering"
+            },
+            {
+              "icon": "local",
+              "label": "Lokal SEO"
+            },
+            {
+              "icon": "paid-search",
+              "label": "Google Ads – ett tydelig fokusområde"
+            }
           ]
         },
         {
@@ -145,8 +158,8 @@
           "recommended": true,
           "badge": "Anbefalt",
           "cta": {
-            "label": "Ta en gratis sjekk",
-            "href": "/#sjekk"
+            "label": "Bestill Vekst",
+            "href": "/priser/?pakke=vekst#bestill"
           },
           "detailLink": {
             "label": "Se pakken",
@@ -159,18 +172,22 @@
             "Resultatet avhenger av at to områder forbedres samtidig."
           ],
           "selectionRule": "Velg Vekst hvis resultatet avhenger av at to ting forbedres samtidig.",
-          "combinations": [
+          "key": "vekst",
+          "iconItems": [
             {
-              "title": "Google Ads + konverteringsoptimalisering",
-              "text": "Få relevant trafikk nå og få mer ut av hvert besøk du allerede betaler for."
+              "icon": "paid-search",
+              "label": "Google Ads + konverteringsoptimalisering",
+              "description": "Få relevant trafikk nå og få mer ut av hvert besøk du allerede betaler for."
             },
             {
-              "title": "SEO / AI-synlighet + konverteringsoptimalisering",
-              "text": "Bygg organisk synlighet og få flere relevante besøk videre til henvendelse eller kjøp."
+              "icon": "conversion",
+              "label": "SEO / AI-synlighet + konverteringsoptimalisering",
+              "description": "Bygg organisk synlighet og få flere relevante besøk videre til henvendelse eller kjøp."
             },
             {
-              "title": "Google Ads + SEO / AI-synlighet",
-              "text": "Få fart med betalt synlighet nå, samtidig som du bygger organisk synlighet som kan redusere avhengigheten av annonsebudsjett over tid."
+              "icon": "search",
+              "label": "Google Ads + SEO / AI-synlighet",
+              "description": "Få fart med betalt synlighet nå, samtidig som du bygger organisk synlighet som kan redusere avhengigheten av annonsebudsjett over tid."
             }
           ]
         },
@@ -184,8 +201,8 @@
           "recommended": false,
           "badge": "",
           "cta": {
-            "label": "Ta en gratis sjekk",
-            "href": "/#sjekk"
+            "label": "Bestill Partner",
+            "href": "/priser/?pakke=partner#bestill"
           },
           "detailLink": {
             "label": "Se pakken",
@@ -202,12 +219,28 @@
           "typicalBusiness": "Typisk en virksomhet med fire–fem forskjellige tjenester – for eksempel kantine, catering, fruktlevering og andre B2B-tjenester – der hver kundereise har egne søk, konkurrenter, sider og prioriteringer.",
           "scope": "Vi prioriterer løpende på tvers av kundereisene som har størst kommersiell verdi eller størst forbedringspotensial. Det betyr ikke at alt gjøres samtidig eller at kapasiteten er ubegrenset.",
           "priceNote": "Omfang og fast månedspris avtales før oppstart.",
-          "focusAreas": [
-            "SEO / AI-synlighet",
-            "Google Ads",
-            "Meta Ads",
-            "Konverteringsoptimalisering",
-            "Analyse og sporing"
+          "key": "partner",
+          "iconItems": [
+            {
+              "icon": "search",
+              "label": "SEO / AI-synlighet"
+            },
+            {
+              "icon": "paid-search",
+              "label": "Google Ads"
+            },
+            {
+              "icon": "social-paid",
+              "label": "Meta Ads"
+            },
+            {
+              "icon": "conversion",
+              "label": "Konverteringsoptimalisering"
+            },
+            {
+              "icon": "analytics",
+              "label": "Analyse og sporing"
+            }
           ]
         }
       ],

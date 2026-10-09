@@ -3,6 +3,7 @@ import { readFile, stat } from 'node:fs/promises';
 import { resolve, extname, sep } from 'node:path';
 import { randomUUID } from 'node:crypto';
 import { createLeadPayload } from '../src/lib/lead.ts';
+import { createOrderPayload } from '../src/lib/order.ts';
 import { notifyLead } from './resend.mjs';
 
 const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.webp': 'image/webp', '.woff2': 'font/woff2', '.txt': 'text/plain; charset=utf-8', '.xml': 'application/xml; charset=utf-8' };
@@ -42,10 +43,11 @@ export function createAppServer({ store, config, staticRoot }) {
         let input;
         try { input = JSON.parse(raw); } catch { json(400, { ok: false }); return; }
         if (input?.website_confirmation) { json(422, { ok: false }); return; }
+        if (input?.form === 'pakke-bestilling' && config.ordersEnabled !== true) { json(503, { ok: false, error: 'orders-not-enabled' }); return; }
         let payload;
         try {
-          if (input.site !== config.site || input.form !== 'gratis-sjekk') throw new Error('wrong-site');
-          payload = createLeadPayload(input, config.sourceCapture ? input.source ?? {} : {});
+          if (input.site !== config.site || !['gratis-sjekk', 'pakke-bestilling'].includes(input.form)) throw new Error('wrong-site');
+          payload = (input.form === 'pakke-bestilling' ? createOrderPayload : createLeadPayload)(input, config.sourceCapture ? input.source ?? {} : {});
           payload.site = config.site;
         } catch { json(422, { ok: false, error: 'validation' }); return; }
         const key = req.headers['idempotency-key'] ?? randomUUID();

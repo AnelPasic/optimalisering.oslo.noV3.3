@@ -20,6 +20,12 @@ const homepage = z.object({
       title: z.string(), descriptor: z.string(), fit: z.string(), scope: z.string().optional(),
       price: z.number().int().positive().max(100000000), pricePrefix: z.literal('fra').optional(), priceSuffix: z.string(), vatSuffix: z.string(),
       recommended: z.boolean(), badge: z.string(), cta: link, detailLink: link,
+      key: z.enum(['optimalisering', 'vekst', 'partner']),
+      visualAsset: z.object({
+        src: z.string().regex(/^\/images\/pricing\/(?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.(?:svg|webp|png)$/),
+        alt: z.string().trim().min(1), positionX: z.number().min(0).max(100).optional(), positionY: z.number().min(0).max(100).optional(),
+      }).optional(),
+      iconItems: z.array(z.object({ icon: z.enum(['search', 'conversion', 'local', 'paid-search', 'social-paid', 'analytics', 'page', 'route']), label: z.string().trim().min(1), description: z.string().optional() })).min(1),
       visual: z.enum(['controlled', 'accelerating', 'tracks']),
       typicalBusiness: z.string().optional(), situations: z.array(z.string()).min(1), focusAreas: z.array(z.string()).optional(),
       combinations: z.array(z.object({ title: z.string(), text: z.string() })).optional(),
@@ -28,6 +34,7 @@ const homepage = z.object({
   }).superRefine((packages, context) => {
     packages.items.forEach((item, index) => {
       if (index !== 2 && item.pricePrefix) context.addIssue({ code: 'custom', path: ['items', index, 'pricePrefix'], message: 'Only Partner may have a from-price' });
+      if (item.key !== ['optimalisering', 'vekst', 'partner'][index] || item.cta.href !== `/priser/?pakke=${item.key}#bestill`) context.addIssue({ code: 'custom', path: ['items', index, 'cta'], message: 'Order key and route must identify the same package in the approved order' });
     });
   }),
   // Section approval never substitutes for a case's independent publication guard.

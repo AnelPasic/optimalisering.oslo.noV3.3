@@ -1,0 +1,103 @@
+{
+  "base": "http://127.0.0.1:4321",
+  "checkedAt": "2026-10-09T13:44:51.890Z",
+  "baselineSource": "f5edb6ac6b8060e25435ab9d89e31722e2f3a395",
+  "layoutSource": "1ec3c486c0b31fc40a7032b38c54a73b6033bce0",
+  "frozenFilesChecked": 181,
+  "checks": [
+    {
+      "route": "/",
+      "width": 1440,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/priser/",
+      "width": 1440,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/synlighet/",
+      "width": 1440,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/konvertering/",
+      "width": 1440,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/priser/",
+      "width": 390,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/synlighet/",
+      "width": 390,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/konvertering/",
+      "width": 390,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/",
+      "width": 320,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/priser/",
+      "width": 320,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/synlighet/",
+      "width": 320,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/konvertering/",
+      "width": 320,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    }
+  ],
+  "order": {
+    "allThreeQueryAndHomeCtas": true,
+    "pricingCtas": true,
+    "historyAndInvalidQuery": true,
+    "disabledSubmitIncludingProgrammaticAndNoJs": true,
+    "noFalseSuccess": true
+  },
+  "errors": [],
+  "posts": 0,
+  "liveEmailsSent": 0
+}

@@ -17,8 +17,9 @@ export async function notifyLead(store, id, config) {
     try {
       store.attempt(id);
       const p = lead.payload;
+      const order = p.form === 'pakke-bestilling';
       const text = [
-        'Ny forespørsel om gratis sjekk', `Nettside: ${p.website}`, `E-post: ${p.email}`,
+        ...(order ? ['Ny bestilling', `Pakke: ${p.package}`, `Bedrift: ${p.company}`, `Kontaktperson: ${p.contact}`, `Telefon: ${p.phone || 'Ikke oppgitt'}`] : ['Ny forespørsel om gratis sjekk']), `Nettside: ${p.website}`, `E-post: ${p.email}`,
         `Behov: ${p.model || 'Ikke oppgitt'}`, `Melding: ${p.message || 'Ikke oppgitt'}`,
         `Mottatt: ${lead.created_at}`, `Referanse: ${id}`,
         `Kilde: ${JSON.stringify(p.source)}`,
@@ -26,7 +27,7 @@ export async function notifyLead(store, id, config) {
       const response = await (config.transport ?? fetch)('https://api.resend.com/emails', {
         method: 'POST',
         headers: { Authorization: `Bearer ${config.apiKey}`, 'Content-Type': 'application/json', 'Idempotency-Key': `lead/${id}` },
-        body: JSON.stringify({ from: config.from, to: [config.to], reply_to: p.email, subject: 'Gratis sjekk – Optimalisering Oslo', text }),
+        body: JSON.stringify({ from: config.from, to: [config.to], reply_to: p.email, subject: order ? 'Bestilling – Optimalisering Oslo' : 'Gratis sjekk – Optimalisering Oslo', text }),
         signal: controller.signal,
       });
       const result = await response.json();
