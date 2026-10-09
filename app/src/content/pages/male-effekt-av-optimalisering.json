@@ -105,7 +105,7 @@
       "id": "kilder",
       "heading": "En kilde hjelper oss å forstå en inngang, ikke hele beslutningen.",
       "body": [
-        "En henvendelse kan registreres med informasjon om siden eller kampanjen den kom fra. Det kan være nyttig for å vurdere innganger, men viser ikke nødvendigvis alle kontaktpunktene kunden hadde før innsendingen.",
+        "En henvendelse kan registreres med informasjon om siden eller kampanjen den kom fra. Det kan være nyttig for å vurdere innganger, men viser ikke alle kontaktpunktene kunden kan ha hatt før innsendingen.",
         "Manglende eller ufullstendig kildeinformasjon bør ikke fylles med antakelser. Særlig må en AI-omtale, en kilde i et svar, et besøk og en kunde holdes fra hverandre."
       ],
       "links": [
