@@ -2,7 +2,7 @@
 
 Updated: 2026-10-09. Owner: Medon AS. Implementation repository: AnelPasic/optimalisering.oslo.noV3.3.
 
-**State: H-012 IMPLEMENTATION COMPLETE; STOP FOR OWNER + STRATEGY_CONTENT PRICING REVIEW; H-011 PASSED D-039; SEO/AI/EN PAUSED; PROOF NON-PUBLIC.** No next implementation handoff is active.
+**State: H-012 COMMERCIAL/COPY PASS BUT VISUAL REVISE UNDER D-044; H-013 PRICING VISUAL + DIRECT ORDER PASS AUTHORIZED UNDER D-045/D-046; SEO/AI/EN PAUSED; PROOF NON-PUBLIC.** Preserve the offer logic. Next work is stronger package visuals/icon architecture and a real direct-order path that remains non-production until intake is explicitly enabled.
 
 H-012: incoming **2402e886203d1a4946cc505c7787df90b0c472fe**, implementation/local evidence **605613755620a3ba767a64e5b157c114a3e6b4dc**. D-041–D-043 and exact H012-PRICING-OFFER.md supply shared package copy/visual authority. Compact home/full pricing use one CMS object, Partner-only optional fra prefix, exact situations/combinations/selection/distinction/price note, decision strip and multiplier. Both service bridges/financial facts inherit it; pricing hero and financial comparisons derive from shared fields. Cost/free-check support remains. Home outside packages, other source JSON/status/authority, provider/qualification/service text/proof/backend/protected references and 11 pages are unchanged. Full verify: 95 files/zero diagnostics, 41 tests, 445 links; 40 synthetic browser checks; four commercial pages at 1440/390/320; 185 frozen files and 93 retained layout/style snapshots; eight captures; real four-route CMS regression including both optional-prefix states. No real lead/POST/live email. Evidence: coordination/evidence/h012/; CMS: app/docs/h012-pricing-cms.md. Main/Worker receipt is in CODEX-TO-CHATGPT. Technical review adds no role approval. **STOP for OWNER + STRATEGY_CONTENT H-012 review.**
 
@@ -293,3 +293,16 @@ Authoritative public copy and visual semantics: coordination/H012-PRICING-OFFER.
 Homepage uses a compact package presentation; /priser/ is the full decision page.
 
 H-012 delivered at **605613755620a3ba767a64e5b157c114a3e6b4dc**. The D-041 named package scope supersedes prior descriptors/selection comparison and Partner price presentation only; other D-024/D-027 support and D-028/D-031 service copy remain. Full records are not promoted. Review gate and evidence above are current.
+
+
+## H-013 active scope
+
+Authoritative implementation contract:
+- `coordination/H013-PRICING-VISUAL-ORDER.md`
+
+Do not rewrite H-012 offer logic. H-013 changes presentation and buying path:
+- three package visual fields;
+- structured package icon items;
+- improved card composition;
+- direct package ordering;
+- free check becomes secondary for package buyers.
