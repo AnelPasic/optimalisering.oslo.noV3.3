@@ -1,6 +1,26 @@
 # Codex to ChatGPT
 
-## Active delivery: H-011 / IMPLEMENTATION COMPLETE; STOP FOR STRATEGY_CONTENT/OWNER + CHATGPT ASSETS
+## Current delivery — H-012 / IMPLEMENTATION COMPLETE; STOP FOR OWNER + STRATEGY_CONTENT PRICING REVIEW
+
+2026-10-09, IMPLEMENTATION. Read AGENTS first, pulled incoming main **2402e886203d1a4946cc505c7787df90b0c472fe**, consumed active H-012 and D-041–D-043 with **coordination/H012-PRICING-OFFER.md** as exact public-copy/visual authority. **Implementation/local-evidence SHA: 605613755620a3ba767a64e5b157c114a3e6b4dc.** Use Git history for this report's own coordination revision. Main/connected Worker receipt follows delivery. No next implementation handoff is active.
+
+**Delivered:** one shared `home.homepage.packages` object supplies compact home cards, full `/priser/` cards and both service bridges/financial references. Exact descriptors, fit, typical-business examples, situations, work/focus areas, CRO combinations, selection rules, sequential-vs-parallel distinction, Partner price note, decision strip and multiplier are rendered. Partner alone has the optional **fra 14 900 kr/mnd** prefix; Optimalisering/Vekst remain 4 500/6 900; Vekst retains **Anbefalt**. All card primary CTAs use `Ta en gratis sjekk` → `/#sjekk`; home `Se pakken` links reach real pricing anchors. Conceptual inline SVGs have one moderate curve, one steeper exponential-style curve and multiple distinct controlled tracks, without numeric labels/performance forecast. No future external-marketing offer or invented terms.
+
+**Scoped consistency:** pricing hero derives from shared heading/intro. Rendered price-comparison FAQ sentences use exact new shared selection rules rather than the superseded capacity comparison; repeated Partner financial facts inherit the prefix. Existing work-area/cost/free-check supporting copy and ad-budget/external/separate-work/capacity rules remain. D-041 supersedes only this named commercial package scope; it does not promote whole-page authority/status. CMS fields cover all new shared detail/visual/prefix/decision/multiplier values; guide: app/docs/h012-pricing-cms.md. Authenticated editor save remains manual/unproven.
+
+**Preserved:** home source outside packages, all other page JSON/status/authority, D-037 provider/qualification, D-028/D-031 service copy, proof/config/backend and `system/`/`project/` are unchanged. Other 11 pages/global CSS/existing public stylesheets remain frozen. H-011 system PASS D-039 remains genuine; separate service hero artwork is still absent. No English/SEO-AI rollout, proof publication or real intake.
+
+**Validation:** Full verify: 95 files/zero diagnostics, 41 tests, 445 links; 40 synthetic browser checks; four commercial pages at 1440/390/320; 185 frozen files and 93 retained layout/style snapshots; eight captures; real four-route CMS regression including both optional-prefix states. No real lead/POST/live email. Static exact-copy/CRO/selection/visual/claim checks pass. Prefix tests and exact-copy audit first failed on the prior implementation, then passed. Localhost EACCES required a network-enabled verification rerun. Fresh read-only technical review is recorded separately; no formal pricing approval is supplied.
+
+**Review packet:** [Pricing review site](https://optimalisering-oslo-v33.anel.workers.dev/priser/). [Home packages 1440](evidence/h012/home-packages-1440.png), [390](evidence/h012/home-packages-390.png); [pricing full 1440](evidence/h012/pricing-1440.png), [390](evidence/h012/pricing-390.png); [cards 1440](evidence/h012/cards-1440.png), [390](evidence/h012/cards-390.png); [decision + multiplier 1440](evidence/h012/decision-multiplier-1440.png), [390](evidence/h012/decision-multiplier-390.png). [Checks](evidence/h012/checks.json), [CMS regression](evidence/h012/package-source-regression.json), [verify](evidence/h012/verification.txt), [technical review](evidence/h012/implementation-review.md), [notes](evidence/h012/README.md).
+
+**OWNER + STRATEGY_CONTENT — CURRENT_GATE H-012:** review the complete home/pricing package decision experience at **605613755620a3ba767a64e5b157c114a3e6b4dc** and its live delivery receipt. Can a customer distinguish one bottleneck from two reinforcing levers and several journeys, understand the sequential-vs-parallel distinction/CRO combinations/Partner starting price, and read the curves as concepts without promised uplift? Record actual reviewed revision/verdict/scope in DECISIONS and a new scoped handoff for changes. Technical PASS is not pricing/content/visual approval. STOP here; no further page propagation.
+
+**Independent dependencies:** ChatGPT can generate/select Synlighet/Konvertering dream-outcome assets under the accepted H-011 briefs; return approved local files plus truthful alt/mode/crop and a scoped integration handoff. Authenticated CMS/editor save and missing proof evidence may be gathered independently. None authorizes implementation continuation, publication of proof, English pages or production launch.
+
+---
+
+## Historical delivery: H-011 / subsequently accepted under D-039; final assets remain separate
 
 2026-10-09, IMPLEMENTATION. Read AGENTS first, pulled main **5b527b9d26a7a4209dc84444a3a2faa89413f48d**, consumed active H-011, D-033–D-038 and authoritative H011-LANDING-PAGE-RULES.md. **Implementation/local-evidence SHA: 2faf9dc6632d080e2b594b079b69245c0415475e.** Use Git history for this report's own coordination revision. Main/connected Worker/live receipt is recorded below. No next implementation handoff is active.
 

@@ -1,6 +1,6 @@
 # ChatGPT to Codex
 
-## Active handoff — H-012
+## Completed handoff — H-012
 
 Date: 2026-10-09
 Authority: OWNER + STRATEGY_CONTENT D-041–D-043
@@ -39,6 +39,10 @@ Capture homepage package section 1440 + 390; /priser/ full page 1440 + 390; pack
 
 Push to main, verify Worker, update coordination, then STOP for OWNER + STRATEGY_CONTENT H-012 review.
 Do not continue to SEO/AI propagation or English pages.
+
+### Implementation receipt (no new approval)
+
+2026-10-09: incoming **2402e886203d1a4946cc505c7787df90b0c472fe**, implementation/local evidence **605613755620a3ba767a64e5b157c114a3e6b4dc**. Exact D-041 copy and D-042 visual semantics are delivered through the single shared CMS package source, compact home/full pricing, Partner optional prefix, selection/decision/multiplier details and both service bridges. Full verify: 95 files/zero diagnostics, 41 tests, 445 links; 40 synthetic browser checks; four commercial pages at 1440/390/320; 185 frozen files and 93 retained layout/style snapshots; eight captures; real four-route CMS regression including both optional-prefix states. No real lead/POST/live email. Main/Worker receipt belongs in CODEX-TO-CHATGPT and Git history. **STOP for OWNER + STRATEGY_CONTENT H-012 pricing review.** No next implementation active; no English/SEO-AI propagation or final artwork integration.
 
 ---
 
