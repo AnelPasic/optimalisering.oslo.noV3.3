@@ -59,7 +59,7 @@
     "calculator": {
       "eyebrow": "To kanaler som multipliserer effekten sammen",
       "heading": "Hva kan flere relevante besøk og en bedre kjøpsvei bety?",
-      "intro": "Endre trafikken, andelen som tar kontakt eller kjøper – eller begge. Se hvordan de to grepene virker sammen.",
+      "intro": "Endre trafikken, andelen som tar kontakt eller kjøper - eller begge. Se hvordan de to grepene virker sammen.",
       "formula": "Relevante besøk × konverteringsrate = henvendelser / kjøp",
       "labels": {
         "visits": "Relevante besøk per måned",
@@ -85,7 +85,7 @@
     "packages": {
       "eyebrow": "Fast månedlig optimalisering",
       "heading": "Tre pakker. Samme mål: flere riktige kunder.",
-      "intro": "Velg pakken som passer hvor komplekst behovet ditt er – fra én tydelig flaskehals til flere kundereiser som må prioriteres løpende.",
+      "intro": "Velg pakken som passer hvor komplekst behovet ditt er - fra én tydelig flaskehals til flere kundereiser som må prioriteres løpende.",
       "labels": {
         "situations": "Typiske situasjoner",
         "typicalBusiness": "Typisk virksomhet",
@@ -162,7 +162,7 @@
             },
             {
               "icon": "paid-search",
-              "label": "Google Ads – ett tydelig fokusområde",
+              "label": "Google Ads - ett tydelig fokusområde",
               "compactLabel": "Google Ads"
             }
           ],
@@ -174,7 +174,7 @@
           },
           "price": 4500,
           "detailLink": {
-            "label": "Se pakken",
+            "label": "Om pakken",
             "href": "/priser/#optimalisering"
           },
           "priceSuffix": "kr/mnd",
@@ -231,7 +231,7 @@
           },
           "price": 6900,
           "detailLink": {
-            "label": "Se pakken",
+            "label": "Om pakken",
             "href": "/priser/#begge"
           },
           "priceSuffix": "kr/mnd",
@@ -256,11 +256,11 @@
             ]
           },
           "scope": "Vi prioriterer løpende på tvers av kundereisene som har størst kommersiell verdi eller størst forbedringspotensial. Det betyr ikke at alt gjøres samtidig eller at kapasiteten er ubegrenset.",
-          "typicalBusiness": "Typisk en virksomhet med fire–fem forskjellige tjenester – for eksempel kantine, catering, fruktlevering og andre B2B-tjenester – der hver kundereise har egne søk, konkurrenter, sider og prioriteringer.",
+          "typicalBusiness": "Typisk en virksomhet med fire-fem forskjellige tjenester - for eksempel kantine, catering, fruktlevering og andre B2B-tjenester - der hver kundereise har egne søk, konkurrenter, sider og prioriteringer.",
           "situations": [
             "Flere tjenester eller produktområder konkurrerer i ulike markeder.",
             "Ulike kundereiser trenger ulike kombinasjoner av synlighet, annonser og konvertering.",
-            "Du trenger en fast partner som prioriterer hva som bør forbedres hvor – og i hvilken rekkefølge."
+            "Du trenger en fast partner som prioriterer hva som bør forbedres hvor - og i hvilken rekkefølge."
           ],
           "key": "partner",
           "iconItems": [
@@ -300,7 +300,7 @@
           "price": 14900,
           "pricePrefix": "fra",
           "detailLink": {
-            "label": "Se pakken",
+            "label": "Om pakken",
             "href": "/priser/#partner"
           },
           "priceSuffix": "kr/mnd",
@@ -350,7 +350,7 @@
     "chrome": {
       "brand": "optimalisering",
       "brandLocation": "oslo",
-      "homeLabel": "Optimalisering Oslo – forsiden",
+      "homeLabel": "Optimalisering Oslo - forsiden",
       "skipLabel": "Hopp til innhold",
       "navigationLabel": "Hovedmeny",
       "mobileNavigationLabel": "Mobilmeny",
@@ -457,10 +457,10 @@
     {
       "id": "sjekk",
       "eyebrow": "Gratis, manuell sjekk",
-      "heading": "Send nettsiden. Vi sier hvor vi ville startet – og hvorfor.",
+      "heading": "Send nettsiden. Vi sier hvor vi ville startet - og hvorfor.",
       "body": [
         "Vi ser på den offentlige nettsiden eller nettbutikken og sender deg de tre viktigste tingene vi ville undersøkt eller forbedret først.",
-        "Dette er en kort, manuell vurdering – ikke en full revisjon, prognose eller gratis gjennomføring. Videre arbeid avtales separat."
+        "Dette er en kort, manuell vurdering - ikke en full revisjon, prognose eller gratis gjennomføring. Videre arbeid avtales separat."
       ]
     }
   ],
@@ -471,7 +471,7 @@
     },
     {
       "question": "Hva koster videre arbeid?",
-      "answer": "Optimalisering koster 4 500 kr/mnd, Vekst 6 900 kr/mnd og Partner 14 900 kr/mnd. Alle priser er eks. mva. Forskjellen er om vi jobber med ett prioritert område, to sammenhengende områder eller bredere på tvers."
+      "answer": "Optimalisering koster 4 500 kr/mnd, Vekst 6 900 kr/mnd og Partner fra 14 900 kr/mnd. Alle priser er eks. mva. Forskjellen er om vi jobber med ett prioritert område, to sammenhengende områder eller bredere på tvers."
     },
     {
       "question": "Er annonsebudsjett og eksterne kostnader inkludert?",
@@ -483,7 +483,7 @@
     },
     {
       "question": "Jobber dere bare med bedrifter i Oslo?",
-      "answer": "Nei. Vi jobber med bedrifter i hele Norge og kan også hjelpe i andre nordiske markeder. Navnet beskriver tjenesten og satsingen – ikke et krav om at kunden holder til i Oslo."
+      "answer": "Nei. Vi jobber med bedrifter i hele Norge og kan også hjelpe i andre nordiske markeder. Navnet beskriver tjenesten og satsingen - ikke et krav om at kunden holder til i Oslo."
     }
   ]
 }
