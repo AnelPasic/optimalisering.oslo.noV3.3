@@ -118,9 +118,9 @@
       },
       "multiplier": {
         "eyebrow": "Hvorfor Vekst finnes",
-        "heading": "Flere besøk er ikke automatisk mer vekst.",
+        "heading": "Flere besøk gir ikke automatisk eksponensiell vekst.",
         "body": "Når relevante kunder finner deg og flere av dem går videre til henvendelse eller kjøp, kan tiltakene forsterke hverandre. Derfor kan det være mer effektivt å forbedre to deler av samme kundereise samtidig enn å veksle mellom dem fra måned til måned.",
-        "conceptualRow": "Bli funnet → bli valgt → gå videre",
+        "conceptualRow": "Bli funnet -> bli valgt -> gå videre",
         "support": "SEO, AI-synlighet og annonser kan gi flere relevante besøk. Konverteringsoptimalisering kan øke verdien av trafikken du allerede har. Gode og relevante landingssider kan samtidig støtte både organisk synlighet, annonsekvalitet og konvertering."
       },
       "items": [
