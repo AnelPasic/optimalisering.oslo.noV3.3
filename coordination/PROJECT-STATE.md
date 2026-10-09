@@ -2,7 +2,7 @@
 
 Updated: 2026-10-09. Owner: Medon AS. Implementation repository: AnelPasic/optimalisering.oslo.noV3.3.
 
-**State: H-011 SYSTEM PASS UNDER D-039; SERVICE HERO ASSET GENERATION/SELECTION NEXT; PRICING OFFER ARCHITECTURE RECORDED AS WORKING DIRECTION UNDER D-040 BUT NOT YET IMPLEMENTATION-LOCKED; SEO/AI PROPAGATION PAUSED; PROOF NON-PUBLIC.** The technical/content system is ready for supplied service visuals and later bilingual rollout without dead controls.
+**State: H-011 PASSED; H-012 PRICING/OFFER REVIEW IMPLEMENTATION AUTHORIZED UNDER D-041–D-043; SEO/AI PROPAGATION PAUSED; PROOF NON-PUBLIC.** Next review target is the real rendered package architecture on homepage + /priser/ using one commercial source.
 
 Current H-011 web review: [review site](https://optimalisering-oslo-v33.anel.workers.dev), main build source **6bc78ce44efcfe4c807196605c3eef8b23affa5c**, implementation **2faf9dc6632d080e2b594b079b69245c0415475e**, verified connected Worker **82b9acad-0f20-43ba-8d5e-2912872d4e9e**. Native build succeeded. All four accepted pages pass live 1440/390/320, exact provider/fit, no dead English control, ten captures and 42 preserved geometry/style snapshots; all 183 frozen local hashes match. All 15 content HTML, three CSS and three WebPs match tested assets; robots/sitemap/noindex and intake GET 404 pass; zero real POST/email. Evidence: coordination/evidence/h011-live/. Following receipt revision changes no website assets. **STOP for STRATEGY_CONTENT/OWNER review and ChatGPT hero-asset generation/selection; other 11 pages, English and SEO/AI rollout remain frozen.**
 
@@ -281,3 +281,8 @@ Pricing brainstorm is preserved separately at:
 - `coordination/PRICING-OFFER-WORKING-DRAFT.md`
 
 Do not implement that pricing rewrite until the public package copy/visual hierarchy is explicitly locked.
+
+
+## H-012 pricing review target
+Authoritative public copy and visual semantics: coordination/H012-PRICING-OFFER.md
+Homepage uses a compact package presentation; /priser/ is the full decision page.
