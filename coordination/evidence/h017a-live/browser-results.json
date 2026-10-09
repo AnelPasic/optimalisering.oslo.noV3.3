@@ -1,0 +1,431 @@
+{
+  "checks": [
+    "review 1440px optimalisering: disabled, preselected, programmatic submit blocked",
+    "review 1440px vekst: disabled, preselected, programmatic submit blocked",
+    "review 1440px partner: disabled, preselected, programmatic submit blocked",
+    "review 390px optimalisering: disabled, preselected, programmatic submit blocked",
+    "review 390px vekst: disabled, preselected, programmatic submit blocked",
+    "review 390px partner: disabled, preselected, programmatic submit blocked",
+    "review: both assessment locations + order send zero POST, no false success, no-JS disabled"
+  ],
+  "requests": [
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    },
+    {
+      "method": "GET",
+      "origin": "https://optimalisering-oslo-v33.anel.workers.dev"
+    }
+  ],
+  "errors": [],
+  "syntheticEmails": 0,
+  "realEmails": 0,
+  "realLeads": 0,
+  "storage": "in-memory only",
+  "reviewOnly": true
+}

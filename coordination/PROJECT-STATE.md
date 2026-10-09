@@ -14,6 +14,8 @@ Incoming main required small schema/QA compatibility repairs for omitted empty b
 
 Fresh read-only technical review identified one native-submit bypass; the intercepted regression failed before the scoped order-only fix and passes afterward. Ordinary order `form.submit()` now reaches validation/the same gated handler; full verify and both browser suites were rerun successfully. No unresolved technical finding from that pass or invented formal role approval; unchanged assessment/native-prototype limits are documented.
 
+Delivered merged main `2efb777f707d4404625cf962b27c06f269e3f6f4`; connected build `440ae9fc-018a-4be4-bb9d-defbdd1727e3` succeeds, Worker `841284c3-4033-407c-8174-ef15b6e84bcf`. 29 tested asset comparisons, noindex/nofollow on all 15 page responses, intake GET 404 and 7 live fail-closed browser groups pass with zero POST/notifications/real leads/emails. Exact receipts in `evidence/h017a-live/`; final preservation against OWNER main is in `evidence/h017a/preservation-after-owner-merge.json`. The current merged build publishes the retained OWNER CMS values; CMS UX and a new real save/revert acceptance remain H-017B dependencies. Evidence-only delivery revision is recorded by Git history, not self-embedded.
+
 ## Current H-016 delivery
 
 2026-10-09, IMPLEMENTATION. Incoming main **9068011f73ec263a82ab8f19d9bf20bae014398b**; implementation/local evidence **8ff933cd49423dbd661032b9b9556e32a7aff81e**. Consumed active H-016 exactly under D-053–D-057 / `coordination/H016-CMS-EDITOR-PRICING.md`. Genuine D-053 makes H-015 visually usable; no further package-art polish. One existing `home.homepage.packages` object supplies the same complete compact-card anatomy on home and pricing: native details closed on home, open and user-collapsible on `/priser/`. Homepage position/surroundings are preserved.
@@ -390,9 +392,9 @@ D-060 expands `coordination/COPY-STYLE.md` into the standing customer-facing wri
 D-061 adds `npm run qa:copy` to the normal static QA chain. This prevents the most obvious ornamental punctuation and template-copy phrases from silently returning in page JSON or hard-coded Astro UI copy.
 
 
-## H-017A parallel work
+## H-017A completed technical implementation
 Authoritative contract: `coordination/H017A-INTAKE-READINESS.md`
-This work is intentionally independent of ongoing content, visual and proof review.
+This work remains independent of ongoing content, visual and proof review. Implementation is delivered; STOP for OWNER + STRATEGY_CONTENT technical review. H-017B remains queued and is not executed by this pass.
 
 
 ## H-017B queued

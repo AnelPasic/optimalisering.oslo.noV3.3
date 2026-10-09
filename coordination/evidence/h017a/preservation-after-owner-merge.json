@@ -1,0 +1,32 @@
+{
+  "incoming": "4257b9414bd87e46d26c4d489065faef8e06eb1e",
+  "checkedRevision": "2efb777f707d4404625cf962b27c06f269e3f6f4",
+  "scopes": [
+    "system",
+    "project",
+    ".pages.yml",
+    "app/src/content",
+    "app/public",
+    "app/src/config/copy-authority.json",
+    "app/wrangler.jsonc",
+    "app/src/components/HomePage.astro",
+    "app/src/components/HomeAssessment.astro",
+    "app/src/components/HomeLeverage.astro",
+    "app/src/components/HomeHeroPhoto.astro",
+    "app/src/components/PricingPage.astro",
+    "app/src/components/PackageSection.astro",
+    "app/src/components/ServicePage.astro",
+    "app/src/components/AssessmentForm.astro"
+  ],
+  "gitObjectsCompared": 189,
+  "unchanged": true,
+  "pageJsonEdited": false,
+  "protectedReferencesEdited": false,
+  "realFlagsChanged": false,
+  "liveSecretsAccessed": false,
+  "realLeads": 0,
+  "realEmails": 0,
+  "initialIncoming": "d74c623c7306c8962bce188b69800ad28cf7c49b",
+  "concurrentOwnerHomeAndCmsPreserved": true,
+  "h017bExecuted": false
+}

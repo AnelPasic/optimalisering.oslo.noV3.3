@@ -1,0 +1,10 @@
+(node:41272) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS review 1440px optimalisering: disabled, preselected, programmatic submit blocked
+PASS review 1440px vekst: disabled, preselected, programmatic submit blocked
+PASS review 1440px partner: disabled, preselected, programmatic submit blocked
+PASS review 390px optimalisering: disabled, preselected, programmatic submit blocked
+PASS review 390px vekst: disabled, preselected, programmatic submit blocked
+PASS review 390px partner: disabled, preselected, programmatic submit blocked
+PASS review: both assessment locations + order send zero POST, no false success, no-JS disabled
+H-017A browser PASS: 7 checks, 0 synthetic notifications, zero real leads/emails.
