@@ -2,7 +2,7 @@
 
 Updated: 2026-10-09. Owner: Medon AS. Implementation repository: AnelPasic/optimalisering.oslo.noV3.3.
 
-**State: H-013 IMPLEMENTATION COMPLETE; STOP FOR OWNER + STRATEGY_CONTENT REVIEW + FINAL PACKAGE ASSETS; H-012 OFFER COPY PASS D-044; SEO/AI/EN PAUSED; PROOF NON-PUBLIC.** No next implementation handoff is active.
+**State: H-013 ORDER/CMS ARCHITECTURE PASS BUT PRICING VISUAL REVISE; H-014 COMPACT PRICING DECISION SURFACE AUTHORIZED UNDER D-047–D-049; SEO/AI/EN PAUSED; PROOF NON-PUBLIC.** Keep the offer and ordering model; reduce default package cards to concise decision summaries with long content collapsed.
 
 H-013: incoming **f5edb6ac6b8060e25435ab9d89e31722e2f3a395**, implementation/local evidence **24818ee7997c816c752cc4c334cb65559f69a01c**. Exact H013-PRICING-VISUAL-ORDER.md and D-045–D-046 authorize three independent visual slots, structured focus icons, airy cards and direct ordering. Exact H-012 offer/prices/CRO order/Partner fra/Anbefalt are preserved. Structured source replaces flat focus/combinations without duplicating copy. All primary Bestill CTAs preselect one disabled pricing form; free check stays secondary. Supplied SVG/WebP/PNG replaces fallback; final assets absent. New payload/backend intent/storage/notification handling remains independently gated/default off, with no frontend transport or false success. Full verify: 106 files/zero diagnostics, 48 tests, 450 links; 40 synthetic browser checks; four commercial pages at 1440/390/320; 181 frozen files and 93 retained geometry/style snapshots; 19 captures; real four-route CMS/visual regression including full verify with supplied SVG/PNG assets and restored fallback. Three-package query/home/pricing CTA preselection/history/invalid-query and disabled-submit/programmatic/no-JS safety checks pass. Zero real leads/review POST/live email. Evidence: coordination/evidence/h013/; full enablement/CMS contract: app/docs/h013-pricing-order-cms.md. Main/Worker receipt is in CODEX-TO-CHATGPT. Home outside packages, other JSON/status/authority, accepted service/chrome/fit/proof/central config/protected references and other 11 pages remain frozen. Technical review supplies no material approval.
 
@@ -313,3 +313,7 @@ Do not rewrite H-012 offer logic. H-013 changes presentation and buying path:
 - free check becomes secondary for package buyers.
 
 H-013 delivered at **24818ee7997c816c752cc4c334cb65559f69a01c**. Current review/asset dependency is recorded above. Order submission remains disabled; real enablement is separately scoped and documented. D-044 is the actual H-012 partial PASS; this implementation supplies no new pricing/visual/content approval.
+
+
+## H-014 active
+Authoritative compact-card contract: coordination/H014-COMPACT-PRICING.md
