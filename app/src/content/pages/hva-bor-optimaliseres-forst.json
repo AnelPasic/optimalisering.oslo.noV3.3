@@ -3,23 +3,131 @@
   "kind": "article",
   "status": "REVIEW_REQUIRED",
   "authority": "DRAFT / NON-AUTHORITATIVE",
-  "seo": { "title": "Hva bør du optimalisere først? Synlighet eller konvertering", "description": "En enkel beslutningsguide: undersøk relevante besøk, veien til kontakt eller kjøp og verdien av kundene. Se hva dataene kan fortelle og hva de mangler." },
+  "seo": {
+    "title": "Hva bør du optimalisere først? Synlighet eller konvertering",
+    "description": "En enkel beslutningsguide: undersøk relevante besøk, veien til kontakt eller kjøp og verdien av kundene. Se hva dataene kan fortelle og hva de mangler."
+  },
   "eyebrow": "Innsikt · velg første undersøkelse",
   "title": "Hva bør du optimalisere først?",
   "intro": "Start med hvor veien til kunde ser ut til å stoppe. Det er ofte mer nyttig enn å begynne med en bestemt kanal, et verktøy eller en liste med tiltak.",
   "sections": [
-    { "id": "definer", "heading": "Bestem hvilken handling som er nyttig for bedriften.", "body": ["For en tjenestebedrift kan handlingen være en henvendelse som passer tilbudet og kan bli en kunde. For en nettbutikk kan det være et kjøp som er verdifullt når kostnadene er tatt med.", "Hvis målet bare heter «mer trafikk» eller «flere skjema», er det lett å forbedre tallet uten å forbedre bedriften. Skriv heller ned hvem dere vil nå og hvilken nyttig handling dere ønsker flere av."] },
-    { "id": "kart", "heading": "Still tre spørsmål i denne rekkefølgen.", "body": ["Spørsmålene er en start på undersøkelsen, ikke en automatisk fasit. Kilde, side og kundetype kan gjøre at ulike deler av nettstedet har ulike begrensninger."], "items": [ { "title": "Kommer de rette inn?", "text": "Se på hvem tilbudet er for, hvilke behov som leder til nettstedet, og om besøkene er relevante. Få relevante besøk kan gjøre synlighet til en naturlig første undersøkelse." }, { "title": "Kommer de videre?", "text": "Se om kunden forstår tilbudet, får viktige svar og kan gjennomføre neste steg. Relevante besøk som stopper kan gjøre konvertering til en naturlig første undersøkelse." }, { "title": "Er handlingene verdifulle?", "text": "Se på kvaliteten på henvendelser eller økonomien i kjøpene. Hvis handlingene ikke er nyttige, må målgruppe, tilbud eller oppfølging også undersøkes." } ] },
-    { "id": "situasjoner", "eyebrow": "Hypotetiske situasjoner - ingen kundedata", "heading": "Tre utgangspunkt gir tre ulike første spørsmål.", "body": ["Situasjonene under er laget for å vise beslutningslogikken. De er ikke eksempler på resultater Medon har levert."], "items": [ { "title": "Tydelig tilbud, få relevante besøk", "text": "En bedrift har en forståelig tjenesteside, men ser mest besøk fra dem som allerede kjenner navnet. Undersøk først om relevante behovssøk har en tydelig side å møte. Det er en synlighetsundersøkelse; siden kan fortsatt ha konverteringshindringer." }, { "title": "Interesserte besøk, krevende kontakt", "text": "En bedrift får besøk på riktig tjenesteside, men kontakt krever et langt skjema før kunden vet hva som skjer videre. Undersøk om neste steg passer kundens forventning. Det er en konverteringsundersøkelse; besøkenes kvalitet må også sjekkes." }, { "title": "Flere bestillinger, uklar verdi", "text": "En nettbutikk ser flere kjøp samtidig som rabatter og produktmiks endres. Undersøk ordreverdi, margin og relevante kostnader før du konkluderer med at utviklingen er nyttig. Kjøpstall alene svarer ikke på det." } ] },
-    { "id": "matte", "heading": "En brøk forklarer mekanikken. Den velger ikke tiltaket.", "body": ["Konverteringsrate er relevante, definerte handlinger delt på det avtalte besøksgrunnlaget. I et illustrerende regneeksempel gir 500 besøk med 2 % som tar kontakt samme antall henvendelser som 1 000 besøk med 1 %: 10.", "Regnestykket forutsetter samme definisjon av en henvendelse og et sammenlignbart besøksgrunnlag. Det sier ikke at en dobling av konverteringsraten er mulig, lett eller mer lønnsom enn å få flere relevante besøk.", "Handlingenes kvalitet og verdi kommer i tillegg. Forretningsverdi kan forenklet ses som relevant trafikk × konverteringsrate × kundeverdi. Modellen lærer bort sammenhengen; den er ingen prognose."] },
-    { "id": "betalt", "heading": "Betalt synlighet kan gi fart når resten av regnestykket henger sammen.", "body": ["Annonser kan være en måte å nå relevante kunder på. Før mer budsjett vurderes, bør tilbud, kjøpsvei, måling og økonomi gi et fornuftig utgangspunkt.", "Hvis kunden stopper på siden, kan mer trafikk også gi flere besøk som stopper. Hvis siden fungerer og bedriften trenger relevant rekkevidde, kan betalt synlighet være et nyttig tillegg. Det er en vurdering av behov og økonomi, ikke et valg mellom «annonser» og «optimalisering»." ] },
-    { "id": "usikkerhet", "heading": "Mangler du data, begynn med en begrunnet hypotese.", "body": ["En manuell gjennomgang kan finne mulige hindringer og stille bedre spørsmål. Den kan ikke alene fastslå hvor mange kunder en hindring koster, eller hvilket tiltak som vil gi størst effekt.", "Skill mellom det dere ser, det dere antar, og det dere kan følge med data. En første prioritering kan være nyttig selv om den senere må endres når bedre informasjon kommer til."], "links": [ { "label": "Slik vurderer du effekten etterpå", "href": "/innsikt/male-effekt-av-optimalisering/" } ] },
-    { "id": "start", "heading": "Du kan be om en kort vurdering av hvor Medon ville startet.", "body": ["Send nettadressen og en e-postadresse for bedriften. Den gratis sjekken er manuell og avgrenset: kort veiledning om hva vi ville startet med, hvorfor, og om Synlighet, Konvertering eller begge bør komme først.", "Den inkluderer ikke automatisk poengsum, full revisjon, komplett feilliste, prognose eller gjennomføring."], "links": [ { "label": "Ta en gratis sjekk", "href": "/vurdering/" }, { "label": "Se tjenestene og omfanget", "href": "/priser/" } ] }
+    {
+      "id": "definer",
+      "heading": "Bestem hvilken handling som er nyttig for bedriften.",
+      "body": [
+        "For en tjenestebedrift kan handlingen være en henvendelse som passer tilbudet og kan bli en kunde. For en nettbutikk kan det være et kjøp som er verdifullt når kostnadene er tatt med.",
+        "Hvis målet bare heter \"mer trafikk\" eller \"flere skjema\", er det lett å forbedre tallet uten å forbedre bedriften. Skriv heller ned hvem dere vil nå og hvilken nyttig handling dere ønsker flere av."
+      ]
+    },
+    {
+      "id": "kart",
+      "heading": "Still tre spørsmål i denne rekkefølgen.",
+      "body": [
+        "Spørsmålene er en start på undersøkelsen, ikke en automatisk fasit. Kilde, side og kundetype kan gjøre at ulike deler av nettstedet har ulike begrensninger."
+      ],
+      "items": [
+        {
+          "title": "Kommer de rette inn?",
+          "text": "Se på hvem tilbudet er for, hvilke behov som leder til nettstedet, og om besøkene er relevante. Få relevante besøk kan gjøre synlighet til en naturlig første undersøkelse."
+        },
+        {
+          "title": "Kommer de videre?",
+          "text": "Se om kunden forstår tilbudet, får viktige svar og kan gjennomføre neste steg. Relevante besøk som stopper kan gjøre konvertering til en naturlig første undersøkelse."
+        },
+        {
+          "title": "Er handlingene verdifulle?",
+          "text": "Se på kvaliteten på henvendelser eller økonomien i kjøpene. Hvis handlingene ikke er nyttige, må målgruppe, tilbud eller oppfølging også undersøkes."
+        }
+      ]
+    },
+    {
+      "id": "situasjoner",
+      "eyebrow": "Hypotetiske situasjoner - ingen kundedata",
+      "heading": "Tre utgangspunkt gir tre ulike første spørsmål.",
+      "body": [
+        "Situasjonene under er laget for å vise beslutningslogikken. De er ikke eksempler på resultater Medon har levert."
+      ],
+      "items": [
+        {
+          "title": "Tydelig tilbud, få relevante besøk",
+          "text": "En bedrift har en forståelig tjenesteside, men ser mest besøk fra dem som allerede kjenner navnet. Undersøk først om relevante behovssøk har en tydelig side å møte. Det er en synlighetsundersøkelse; siden kan fortsatt ha konverteringshindringer."
+        },
+        {
+          "title": "Interesserte besøk, krevende kontakt",
+          "text": "En bedrift får besøk på riktig tjenesteside, men kontakt krever et langt skjema før kunden vet hva som skjer videre. Undersøk om neste steg passer kundens forventning. Det er en konverteringsundersøkelse; besøkenes kvalitet må også sjekkes."
+        },
+        {
+          "title": "Flere bestillinger, uklar verdi",
+          "text": "En nettbutikk ser flere kjøp samtidig som rabatter og produktmiks endres. Undersøk ordreverdi, margin og relevante kostnader før du konkluderer med at utviklingen er nyttig. Kjøpstall alene svarer ikke på det."
+        }
+      ]
+    },
+    {
+      "id": "matte",
+      "heading": "En brøk forklarer mekanikken. Den velger ikke tiltaket.",
+      "body": [
+        "Konverteringsrate er relevante, definerte handlinger delt på det avtalte besøksgrunnlaget. I et illustrerende regneeksempel gir 500 besøk med 2 % som tar kontakt samme antall henvendelser som 1 000 besøk med 1 %: 10.",
+        "Regnestykket forutsetter samme definisjon av en henvendelse og et sammenlignbart besøksgrunnlag. Det sier ikke at en dobling av konverteringsraten er mulig, lett eller mer lønnsom enn å få flere relevante besøk.",
+        "Handlingenes kvalitet og verdi kommer i tillegg. Forretningsverdi kan forenklet ses som relevant trafikk × konverteringsrate × kundeverdi. Modellen lærer bort sammenhengen; den er ingen prognose."
+      ]
+    },
+    {
+      "id": "betalt",
+      "heading": "Betalt synlighet kan gi fart når resten av regnestykket henger sammen.",
+      "body": [
+        "Annonser kan være en måte å nå relevante kunder på. Før mer budsjett vurderes, bør tilbud, kjøpsvei, måling og økonomi gi et fornuftig utgangspunkt.",
+        "Hvis kunden stopper på siden, kan mer trafikk også gi flere besøk som stopper. Hvis siden fungerer og bedriften trenger relevant rekkevidde, kan betalt synlighet være et nyttig tillegg. Det er en vurdering av behov og økonomi, ikke et valg mellom \"annonser\" og \"optimalisering\"."
+      ]
+    },
+    {
+      "id": "usikkerhet",
+      "heading": "Mangler du data, begynn med en begrunnet hypotese.",
+      "body": [
+        "En manuell gjennomgang kan finne mulige hindringer og stille bedre spørsmål. Den kan ikke alene fastslå hvor mange kunder en hindring koster, eller hvilket tiltak som vil gi størst effekt.",
+        "Skill mellom det dere ser, det dere antar, og det dere kan følge med data. En første prioritering kan være nyttig selv om den senere må endres når bedre informasjon kommer til."
+      ],
+      "links": [
+        {
+          "label": "Slik vurderer du effekten etterpå",
+          "href": "/innsikt/male-effekt-av-optimalisering/"
+        }
+      ]
+    },
+    {
+      "id": "start",
+      "heading": "Du kan be om en kort vurdering av hvor Medon ville startet.",
+      "body": [
+        "Send nettadressen og en e-postadresse for bedriften. Den gratis sjekken er manuell og avgrenset: kort veiledning om hva vi ville startet med, hvorfor, og om Synlighet, Konvertering eller begge bør komme først.",
+        "Den inkluderer ikke automatisk poengsum, full revisjon, komplett feilliste, prognose eller gjennomføring."
+      ],
+      "links": [
+        {
+          "label": "Ta en gratis sjekk",
+          "href": "/vurdering/"
+        },
+        {
+          "label": "Se tjenestene og omfanget",
+          "href": "/priser/"
+        }
+      ]
+    }
   ],
   "faq": [
-    { "question": "Er høy trafikk et tegn på at synligheten er god nok?", "answer": "Ikke alene. Trafikken må passe tilbudet og kundene bedriften ønsker. Det er også relevant hvilke sider de kommer til og hvilken forventning de har." },
-    { "question": "Bør vi alltid løse konvertering før vi får mer trafikk?", "answer": "Nei. Vi må undersøke utgangspunktet. En liten trafikkmengde kan gjøre det vanskelig å vurdere handlinger, mens en tydelig hindring på en mye besøkt side kan være relevant å begynne med." },
-    { "question": "Hva hvis både synlighet og konvertering er begrensningen?", "answer": "Da kan de vurderes sammen, men arbeidet bør fortsatt ha en begrunnet rekkefølge. En kombinasjon betyr ikke at alle mulige tiltak skal gjennomføres samtidig." }
+    {
+      "question": "Er høy trafikk et tegn på at synligheten er god nok?",
+      "answer": "Ikke alene. Trafikken må passe tilbudet og kundene bedriften ønsker. Det er også relevant hvilke sider de kommer til og hvilken forventning de har."
+    },
+    {
+      "question": "Bør vi alltid løse konvertering før vi får mer trafikk?",
+      "answer": "Nei. Vi må undersøke utgangspunktet. En liten trafikkmengde kan gjøre det vanskelig å vurdere handlinger, mens en tydelig hindring på en mye besøkt side kan være relevant å begynne med."
+    },
+    {
+      "question": "Hva hvis både synlighet og konvertering er begrensningen?",
+      "answer": "Da kan de vurderes sammen, men arbeidet bør fortsatt ha en begrunnet rekkefølge. En kombinasjon betyr ikke at alle mulige tiltak skal gjennomføres samtidig."
+    }
   ],
-  "cta": { "label": "Ta en gratis sjekk", "href": "/vurdering/" }
+  "cta": {
+    "label": "Ta en gratis sjekk",
+    "href": "/vurdering/"
+  }
 }
