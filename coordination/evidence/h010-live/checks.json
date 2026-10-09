@@ -1,0 +1,41 @@
+{
+  "base": "https://optimalisering-oslo-v33.anel.workers.dev",
+  "checkedAt": "2026-10-09T09:26:05.338Z",
+  "baselineSource": "cbd7e18ff29c1aff01421df81048eb66c3b3c8ba",
+  "frozenFilesChecked": 188,
+  "checks": [
+    {
+      "route": "/konvertering/",
+      "width": 1440,
+      "exactCopyAndOrder": true,
+      "sharedPricing": true,
+      "preservedHomePricingAndSynlighet": true,
+      "noOverflow": true,
+      "proofRendered": false,
+      "noindex": true
+    },
+    {
+      "route": "/konvertering/",
+      "width": 390,
+      "exactCopyAndOrder": true,
+      "sharedPricing": true,
+      "preservedHomePricingAndSynlighet": true,
+      "noOverflow": true,
+      "proofRendered": false,
+      "noindex": true
+    },
+    {
+      "route": "/konvertering/",
+      "width": 320,
+      "exactCopyAndOrder": true,
+      "sharedPricing": true,
+      "preservedHomePricingAndSynlighet": true,
+      "noOverflow": true,
+      "proofRendered": false,
+      "noindex": true
+    }
+  ],
+  "errors": [],
+  "posts": 0,
+  "liveEmailsSent": 0
+}
