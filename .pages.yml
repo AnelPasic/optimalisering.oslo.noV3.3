@@ -649,7 +649,6 @@ content:
                   label: "{fields.clientName} ({fields.publicationStatus})"
                   search: id,clientName,anonymizedLabel
                 required: true
-                list: {}
               - name: eyebrow
                 label: Overtekst
                 type: string

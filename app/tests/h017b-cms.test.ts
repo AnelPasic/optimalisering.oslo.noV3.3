@@ -47,6 +47,15 @@ test('object repeaters start collapsed with meaningful summaries supported by Pa
   assert.ok(count > 0);
 });
 
+test('the multiple case reference retains a flat array without an outer list wrapper', () => {
+  const home = cms.content.find((entry: any) => entry.name === 'homepage');
+  const proof = home.fields.find((field: any) => field.name === 'homepage').fields.find((field: any) => field.name === 'proof');
+  const reference = proof.fields.find((field: any) => field.name === 'caseIds');
+  assert.equal(reference.type, 'reference');
+  assert.equal(reference.options.multiple, true);
+  assert.equal(reference.list, undefined, 'multiple references already serialize as a flat array');
+});
+
 test('CMS-equivalent edit preserves every current JSON record semantically and untouched file hashes', () => {
   assert.equal(cms.settings.content.merge, true);
   for (const edited of records) {

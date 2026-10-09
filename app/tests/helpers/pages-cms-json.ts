@@ -42,7 +42,8 @@ export function validateCmsForm(value: any, fields: any[], components: any, path
 function project(value: any, fields: any[], components: any): any {
   return Object.fromEntries(fields.filter(field => value[field.name] !== undefined).map(definition => {
     const field = resolveField(definition, components), input = value[field.name];
-    const item = (value: any) => field.type === 'object' && value ? project(value, field.fields, components) : value;
+    const item = (value: any) => field.type === 'object' && value ? project(value, field.fields, components)
+      : field.type === 'reference' && field.options?.multiple ? (Array.isArray(value) ? value : [value]) : value;
     return [field.name, field.list ? input.map(item) : item(input)];
   }));
 }

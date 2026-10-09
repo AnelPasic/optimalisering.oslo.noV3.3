@@ -11,6 +11,8 @@ Important findings, accepted by executor:
 
 Minor finding: representative selector edit targeted the second heading, while the exact smoke value is the third title, homepage.selector.items[2].title. Corrected; optional --expect-smoke-label checks the specified starting value without freezing normal CMS wording.
 
+Second read-only review assessed 29d389f..8243ba8, independently passed 16 focused tests plus qa:cms, and confirmed the initial fixes. It found one Important new regression: caseIds is already a multiple reference, so an added outer list:{} would produce nested arrays in the actual upstream reference transformation. Executor accepts the finding. The reference transformation and dedicated flat-array configuration test both fail before removing that outer list and pass afterward; options.multiple:true and publication gates are preserved. Final exact correction commit is reviewed in the third and final implementation review round. No website content changes.
+
 Reviewer considered/set aside, with executor rulings:
 
 - Authenticated save/build/live-update/revert: required after configuration delivery; stays an outstanding concrete completion step, not dropped.
