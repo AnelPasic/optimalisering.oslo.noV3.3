@@ -1,0 +1,179 @@
+{
+  "base": "https://optimalisering-oslo-v33.anel.workers.dev",
+  "checkedAt": "2026-10-09T15:27:33.671Z",
+  "baselineSource": "ffa87852fd0a69683bd387607a82f9fdae6e4647",
+  "layoutSource": "bd09da8d2b237707d88c9add8bb193f4c43a5f27",
+  "frozenFilesChecked": 187,
+  "checks": [
+    {
+      "route": "/",
+      "width": 1440,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/priser/",
+      "width": 1440,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/synlighet/",
+      "width": 1440,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/konvertering/",
+      "width": 1440,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/priser/",
+      "width": 390,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/synlighet/",
+      "width": 390,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/konvertering/",
+      "width": 390,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/",
+      "width": 320,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/priser/",
+      "width": 320,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/synlighet/",
+      "width": 320,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/konvertering/",
+      "width": 320,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    }
+  ],
+  "cardHeights": {
+    "before": {
+      "/:1440": [
+        853.75,
+        828.25,
+        879.27
+      ],
+      "/priser/:1440": [
+        1862.81,
+        1610.67,
+        1858.63
+      ],
+      "/:390": [
+        753.47,
+        755.97,
+        804.47
+      ],
+      "/priser/:390": [
+        1788.03,
+        1631.08,
+        1860.33
+      ],
+      "/:320": [
+        760.47,
+        734.97,
+        811.47
+      ],
+      "/priser/:320": [
+        1938.53,
+        1753.77,
+        2015.63
+      ]
+    },
+    "after": {
+      "/:1440": [
+        482,
+        488.38,
+        482
+      ],
+      "/priser/:1440": [
+        770,
+        770,
+        770
+      ],
+      "/:390": [
+        482,
+        516.38,
+        482
+      ],
+      "/priser/:390": [
+        758.89,
+        813.39,
+        721.89
+      ],
+      "/:320": [
+        521.17,
+        521.17,
+        521.17
+      ],
+      "/priser/:320": [
+        809.25,
+        840.56,
+        863.75
+      ]
+    }
+  },
+  "compact": {
+    "exactCopy": true,
+    "desktop680to780": true,
+    "nativeCollapsedDetails": true,
+    "fullCopyAccessible": true,
+    "keyboardAndNoJs": true,
+    "horizontalVisuals": true,
+    "noExpandedOverflow": true,
+    "multiplierCollapsed": true
+  },
+  "order": {
+    "allThreeQueryAndHomeCtas": true,
+    "pricingCtas": true,
+    "historyAndInvalidQuery": true,
+    "disabledSubmitIncludingProgrammaticAndNoJs": true,
+    "noFalseSuccess": true
+  },
+  "errors": [],
+  "posts": 0,
+  "liveEmailsSent": 0
+}
