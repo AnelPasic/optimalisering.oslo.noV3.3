@@ -16,7 +16,7 @@ test('compact CMS copy stays editable without losing long copy; invalid decision
   for (const change of ['empty-fit','four-situations','empty-label']) {
     const invalid=structuredClone(fixture), item=invalid.homepage.packages.items[0];
     if(change==='empty-fit')item.compact.fit=' ';
-    if(change==='four-situations')item.compact.situations.push('Unapproved fourth situation');
+    if(change==='four-situations')item.compact.situations=['First','Second','Third','Fourth'];
     if(change==='empty-label')item.iconItems[0].compactLabel='';
     assert.equal(pageSchema.safeParse(invalid).success,false);
   }

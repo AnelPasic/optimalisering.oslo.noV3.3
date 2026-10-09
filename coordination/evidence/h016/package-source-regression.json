@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-10-09T17:25:35.260Z",
+  "result": "PASS",
+  "authenticatedCmsSave": false,
+  "source": "home.homepage.packages",
+  "allSafeFieldsEdited": true,
+  "fullVerifyWithEditedCopy": true,
+  "fullVerifyWithEditedCopyAndSvgWebpPng": true,
+  "independentAssets": true,
+  "missingAssetFallback": true,
+  "cropAndAlt": true,
+  "variantsAndCaptions": true,
+  "widths": [
+    1440,
+    390,
+    320
+  ],
+  "sharedRoutes": [
+    "/",
+    "/priser/",
+    "/synlighet/",
+    "/konvertering/"
+  ],
+  "homeCollapsedPricingOpen": true,
+  "protectedRoutesAndPreselection": true,
+  "optionalPrefixBothStates": true,
+  "secondSourceChanged": false,
+  "originalBytesRestored": true,
+  "finalBuild": "Run npm run verify after restoration"
+}

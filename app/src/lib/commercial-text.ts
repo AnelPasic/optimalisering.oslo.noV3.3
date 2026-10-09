@@ -24,7 +24,7 @@ export function createCommercialTextBinding(home: Page, pricing: Page) {
     [externalReference, source.externalCostsNote === externalCanonical ? externalReference : source.externalCostsNote],
   ]);
   // H-012 supersedes the old capacity-based package comparison. Reuse the
-  // locked selection sentences, including in the repeated home price answer.
+  // shared selection sentences, including in the repeated home price answer.
   const selection = source.items.map(item => item.selectionRule).join(' ');
   rules.set(pricing.faq[1].answer, selection);
   const previousDifference = home.faq.find(item => item.question === 'Hva koster videre arbeid?')?.answer.match(/Forskjellen er .*$/u)?.[0];
@@ -34,12 +34,15 @@ export function createCommercialTextBinding(home: Page, pricing: Page) {
     rules.set(variant, source.externalCostsNote === externalCanonical ? variant : source.externalCostsNote);
   }
   const rulesPattern = new RegExp([...rules.keys()].sort((a, b) => b.length - a.length).map(escape).join('|'), 'gu');
-  return (text: string): string => text
-    .replace(rulesPattern, value => rules.get(value)!)
-    .replace(namesPattern, value => names.get(value)!)
-    .replace(/(fra )?(\d[\d \u00a0]*)\s+kr\/mnd/gu, (value, existingPrefix: string | undefined, amount: string) => {
-      const item = prices.get(spaces(amount));
-      return item ? `${existingPrefix || (item.pricePrefix ? item.pricePrefix + ' ' : '')}${new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 0 }).format(item.price).replaceAll('\u00a0', ' ')} ${item.priceSuffix}` : value;
-    })
-    .replaceAll('eks. mva.', source.items[0].vatSuffix);
+  const pattern = new RegExp(`${rulesPattern.source}|${namesPattern.source}|(?:fra )?\\d[\\d \\u00a0]*\\s+kr\\/mnd|eks\\. mva\\.`, 'gu');
+  // Replace only original reference text in one pass. Inserted CMS strings
+  // must remain verbatim, even when they contain old names or price amounts.
+  return (text: string): string => text.replace(pattern, value => {
+    if (rules.has(value)) return rules.get(value)!;
+    if (names.has(value)) return names.get(value)!;
+    if (value === 'eks. mva.') return source.items[0].vatSuffix;
+    const amount = value.match(/^(fra )?(\d[\d \u00a0]*)\s+kr\/mnd$/u);
+    const item = amount && prices.get(spaces(amount[2]));
+    return item ? `${amount![1] || (item.pricePrefix ? item.pricePrefix + ' ' : '')}${new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 0 }).format(item.price).replaceAll('\u00a0', ' ')} ${item.priceSuffix}` : value;
+  });
 }

@@ -12,6 +12,7 @@ const homepage = z.object({
   }),
   packages: z.object({
     eyebrow: z.string(), heading: z.string(), intro: z.string(), fitLabel: z.string(), scopeLabel: z.string(),
+    labels: z.object({ situations: z.string().trim().min(1), typicalBusiness: z.string().trim().min(1), focus: z.string().trim().min(1), combinations: z.string().trim().min(1), workAreas: z.string().trim().min(1), uncertain: z.string().trim().min(1) }),
     areasLabel: z.string(), areas: z.array(z.string()).length(4), foundationNote: z.string(),
     adBudgetNote: z.string(), externalCostsNote: z.string(), separateWorkNote: z.string(), capacityNote: z.string(),
     decisionStrip: z.object({ heading: z.string(), items: z.array(z.string()).length(3) }),
@@ -19,7 +20,7 @@ const homepage = z.object({
     items: z.array(z.object({
       title: z.string(), descriptor: z.string(), fit: z.string(), scope: z.string().optional(),
       price: z.number().int().positive().max(100000000), pricePrefix: z.literal('fra').optional(), priceSuffix: z.string(), vatSuffix: z.string(),
-      recommended: z.boolean(), badge: z.string(), cta: link, detailLink: link,
+      recommended: z.boolean(), badge: z.string(), cta: link.extend({ label: z.string().trim().min(1) }), detailLink: link.extend({ label: z.string().trim().min(1) }),
       key: z.enum(['optimalisering', 'vekst', 'partner']),
       visualAsset: z.object({
         src: z.string().regex(/^\/images\/pricing\/(?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.(?:svg|webp|png)$/),
@@ -37,6 +38,7 @@ const homepage = z.object({
     packages.items.forEach((item, index) => {
       if (index !== 2 && item.pricePrefix) context.addIssue({ code: 'custom', path: ['items', index, 'pricePrefix'], message: 'Only Partner may have a from-price' });
       if (item.key !== ['optimalisering', 'vekst', 'partner'][index] || item.cta.href !== `/priser/?pakke=${item.key}#bestill`) context.addIssue({ code: 'custom', path: ['items', index, 'cta'], message: 'Order key and route must identify the same package in the approved order' });
+      if (item.detailLink.href !== ['/priser/#optimalisering', '/priser/#begge', '/priser/#partner'][index]) context.addIssue({ code: 'custom', path: ['items', index, 'detailLink', 'href'], message: 'Package detail anchors are protected; edit the label only' });
     });
   }),
   // Section approval never substitutes for a case's independent publication guard.

@@ -17,7 +17,7 @@ media:
     extensions: [webp, png, jpg, jpeg, avif, svg]
     rename: safe
   - name: packageVisuals
-    label: Pakkeillustrasjoner – godkjente leverte assets
+    label: Pakkeillustrasjoner – SVG, WebP og PNG
     input: app/public/images/pricing
     output: /images/pricing
     extensions: [svg, webp, png]
@@ -102,7 +102,8 @@ content:
           - name: kind
             label: Bildetype
             type: select
-            options: [photo, illustration]
+            options:
+              values: [photo, illustration]
             required: true
           - name: src
             label: Levert tjenestebilde
@@ -516,7 +517,7 @@ content:
                 type: text
           - name: packages
             label: Felles pakker for forsiden, /priser/, /synlighet/ og /konvertering/
-            description: Eneste kommersielle pakkekilde etter D-041/H-012. Forsiden viser kompakte kort; /priser/ viser fulle pakkedetaljer, valgstripe og forklaring. Synlighet/Konvertering og gjentatte FAQ-fakta arver samme kilde. Endres bare gjennom et scoped kommersielt/content-handoff.
+            description: Rediger pakketekst, etiketter, ikoner og illustrasjoner her. Forsiden har sammenfoldede detaljer; prissiden har åpne detaljer. Begge og serviceprisene arver denne kilden. Pakkenøkler og lenkemål er beskyttet.
             type: object
             fields:
               - name: eyebrow
@@ -528,6 +529,28 @@ content:
               - name: intro
                 label: Innledning
                 type: text
+              - name: labels
+                label: Etiketter i pakkekortene
+                type: object
+                fields:
+                  - name: situations
+                    label: Typiske situasjoner
+                    type: string
+                  - name: typicalBusiness
+                    label: Typisk virksomhet
+                    type: string
+                  - name: focus
+                    label: Fokus
+                    type: string
+                  - name: combinations
+                    label: Populære kombinasjoner
+                    type: string
+                  - name: workAreas
+                    label: Arbeidsområder
+                    type: string
+                  - name: uncertain
+                    label: Usikker? Ta en gratis sjekk
+                    type: string
               - name: fitLabel
                 label: Etikett for hvem tjenesten passer
                 type: string
@@ -564,7 +587,7 @@ content:
                     label: Overskrift
                     type: string
                   - name: items
-                    label: Tre låste valgregler i pakkerekkefølge
+                    label: Tre valgregler i pakkerekkefølge
                     type: text
                     list: true
               - name: multiplier
@@ -598,21 +621,21 @@ content:
                     label: Pakkeoppsummering
                     type: string
                   - name: fit
-                    label: Full Passer for – under Se detaljer
+                    label: Full tekst – hvem pakken passer for
                     type: text
                   - name: compact
-                    label: Kort beslutningskort – låst H-014 copy
+                    label: Kort tekst
                     type: object
                     fields:
                       - name: fit
                         label: Kort Passer for – forsiden og prissiden
                         type: text
                       - name: situations
-                        label: Maks tre korte situasjoner – bare prissiden
+                        label: Maks tre korte situasjoner
                         type: string
                         list: true
                   - name: scope
-                    label: Slik jobber vi – valgfritt der låst copy angir dette
+                    label: Slik jobber vi – valgfritt
                     type: text
                   - name: typicalBusiness
                     label: Typisk virksomhet
@@ -626,42 +649,44 @@ content:
                     type: string
                     readonly: true
                   - name: iconItems
-                    label: Fokus og kombinasjoner med ikoner – låst H-012 copy
+                    label: Fokus og populære kombinasjoner
                     type: object
                     list: true
                     fields:
                       - name: icon
                         label: Generisk ikon
                         type: select
-                        options: [search, conversion, local, paid-search, social-paid, analytics, page, route]
+                        options:
+                          values: [search, conversion, local, paid-search, social-paid, analytics, page, route]
                       - name: label
                         label: Fokus eller kombinasjon
                         type: string
                       - name: compactLabel
-                        label: Kort synlig etikett – låst H-014 copy
+                        label: Kort etikett
                         type: string
                       - name: description
-                        label: Kort forklaring – Vekst beholder full låst kombinasjonstekst
+                        label: Forklaring – valgfri
                         type: text
                   - name: selectionRule
                     label: Valgregel
                     type: text
                   - name: distinction
-                    label: Viktig skille mellom sekvensielt og parallelt arbeid
+                    label: Ekstra forklaring – valgfri
                     type: text
                   - name: priceNote
                     label: Partner – omfang og prisavtale
                     type: text
                   - name: visual
-                    label: Utviklingsfallback – erstattes av levert visual asset
+                    label: SVG-motiv – brukes når eget bilde ikke er valgt
                     type: select
-                    options: [controlled, accelerating, tracks]
+                    options:
+                      values: [controlled, accelerating, tracks]
                   - name: visualAsset
-                    label: Selvstendig pakkeillustrasjon – valgfri til endelig asset leveres
+                    label: Eget pakkebilde – velg eller last opp SVG, WebP eller PNG
                     type: object
                     fields:
                       - name: src
-                        label: Godkjent asset
+                        label: Bilde
                         type: image
                         options:
                           media: packageVisuals
@@ -682,7 +707,8 @@ content:
                           min: 0
                           max: 100
                   - name: visualCaption
-                    label: HTML-bildetekst for SVG-motivet – H-015
+                    label: Bildetekst ved SVG-motivet
+                    description: Vises ved SVG-motivet når eget bilde ikke er valgt. Eget bilde bruker sin alternative tekst og sitt utsnitt.
                     type: object
                     fields:
                       - name: label
@@ -698,9 +724,10 @@ content:
                     label: Fra-pris – bare Partner
                     description: Valgfritt. Kun tredje pakke kan ha fra; de to andre har fast pris. Fjern feltet for pakker uten prefiks.
                     type: select
-                    options: [fra]
+                    options:
+                      values: [fra]
                   - name: detailLink
-                    label: Se pakken – fra forside til riktig pakkeanker
+                    label: Detaljer – rediger teksten, lenkemålet er beskyttet
                     type: object
                     fields:
                       - name: label
@@ -709,12 +736,14 @@ content:
                       - name: href
                         label: Pakkeanker på /priser/
                         type: string
+                        readonly: true
                         pattern: ^/priser/#
                   - name: priceSuffix
                     label: Prisenhet
                     type: string
                   - name: vatSuffix
                     label: MVA-tekst
+                    description: Bruk samme MVA-tekst for alle tre pakker; felles prisforklaring og gjentatte prisopplysninger arver den.
                     type: string
                   - name: recommended
                     label: Anbefalt pakke
@@ -728,9 +757,8 @@ content:
                     type: object
                     fields:
                       - name: label
-                        label: Tekst
+                        label: Knappetekst
                         type: string
-                        readonly: true
                       - name: href
                         label: Intern lenke
                         type: string

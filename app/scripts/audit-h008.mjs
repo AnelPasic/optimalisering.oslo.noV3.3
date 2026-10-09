@@ -6,6 +6,7 @@ const home = JSON.parse(readFileSync('src/content/pages/home.json', 'utf8'));
 const pricing = JSON.parse(readFileSync('src/content/pages/priser.json', 'utf8'));
 const homepage = readFileSync('dist/index.html', 'utf8');
 const pricepage = readFileSync('dist/priser/index.html', 'utf8');
+const bind = createCommercialTextBinding(home, pricing);
 const text = html => html.replace(/<[^>]*>/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
 const cards = html => [...html.matchAll(/<article\b[^>]*class="package-card[^>]*>(.*?)<\/article>/gs)].map(match => text(match[1]));
 assert.equal(cards(pricepage).length, 3, '/priser/ must render the three shared packages');
@@ -19,9 +20,12 @@ assert.equal((pricepage.match(/id="begge"/g) ?? []).length, 1, 'Keep existing /p
 for (const section of pricing.sections) {
   const rendered = pricepage.match(new RegExp(`<section id="${section.id}"[^>]*>(.*?)</section>`, 's'))?.[1];
   assert.ok(rendered, `Required pricing section ${section.id}`);
-  for (const value of [section.heading, ...section.body, ...(section.items ?? []).flatMap(item => [item.title, item.text])]) assert.ok(text(rendered).includes(value), `${section.id}: D-024 exact supporting copy: ${value}`);
+  const body = section.id === 'kostnader' ? [
+    `${home.homepage.packages.adBudgetNote} ${home.homepage.packages.externalCostsNote.replace('kommer i tillegg', 'kommer også i tillegg')}`,
+    home.homepage.packages.separateWorkNote, home.homepage.packages.capacityNote,
+  ] : section.body;
+  for (const value of [section.heading, ...body, ...(section.items ?? []).flatMap(item => [item.title, item.text])]) assert.ok(text(rendered).includes(value), `${section.id}: exact supporting copy/current CMS costs: ${value}`);
 }
-const bind = createCommercialTextBinding(home, pricing);
 for (const value of [home.homepage.packages.eyebrow, home.homepage.packages.heading, home.homepage.packages.intro, ...pricing.faq.flatMap(item => [item.question, bind(item.answer)])]) {
   assert.ok(text(pricepage).includes(value), `D-024 pricing supporting copy must be rendered: ${value}`);
 }

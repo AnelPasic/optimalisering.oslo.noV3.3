@@ -103,7 +103,7 @@
       "items": [
         {
           "title": "Optimalisering",
-          "descriptor": "Ett viktig problem om gangen.",
+          "descriptor": "Ett viktig forbedringsområde om gangen.",
           "fit": "Passer for små og mellomstore bedrifter med én tydelig kundereise, én hovedtjeneste eller én flaskehals som er viktigst akkurat nå.",
           "price": 4500,
           "priceSuffix": "kr/mnd",
@@ -127,7 +127,7 @@
           "selectionRule": "Velg Optimalisering når én flaskehals er tydelig viktigst akkurat nå.",
           "typicalBusiness": "Typisk en konkurranseutsatt lokal tjenestebedrift, mindre klinikk, regnskapskontor eller nisje-B2B-bedrift med én tydelig hovedtjeneste.",
           "scope": "Vi jobber med én hovedflaskehals til neste prioritet er viktigere. Mindre støttearbeid rundt samme mål kan inngå.",
-          "distinction": "Optimalisering er ikke laget for to uavhengige vekstspor samtidig. Hvis resultatet avhenger av at to områder forbedres parallelt, passer Vekst bedre enn å bytte hovedfokus fra måned til måned.",
+          "distinction": "",
           "key": "optimalisering",
           "iconItems": [
             {
@@ -187,7 +187,7 @@
             "Du får trafikk, men vil få mer ut av den med bedre konvertering.",
             "Resultatet avhenger av at to områder forbedres samtidig."
           ],
-          "selectionRule": "Velg Vekst hvis resultatet avhenger av at to ting forbedres samtidig.",
+          "selectionRule": "Velg Vekst når to forbedringer kan forsterke hverandre.",
           "key": "vekst",
           "iconItems": [
             {
@@ -295,7 +295,7 @@
       "decisionStrip": {
         "heading": "Én flaskehals, to grep eller flere kundereiser?",
         "items": [
-          "Velg Optimalisering når ett problem er tydelig viktigst.",
+          "Velg Optimalisering når ett forbedringsområde er tydelig viktigst.",
           "Velg Vekst når to deler av samme kundereise bør forbedres samtidig og kan forsterke hverandre.",
           "Velg Partner når virksomheten har flere forskjellige tjenester, markeder eller kjøpsveier som må prioriteres løpende."
         ]
@@ -306,6 +306,14 @@
         "body": "Når relevante kunder finner deg og flere av dem går videre til henvendelse eller kjøp, kan tiltakene forsterke hverandre. Derfor kan det være mer effektivt å forbedre to deler av samme kundereise samtidig enn å veksle mellom dem fra måned til måned.",
         "conceptualRow": "Bli funnet → bli valgt → gå videre",
         "support": "SEO, AI-synlighet og annonser kan gi flere relevante besøk. Konverteringsoptimalisering kan øke verdien av trafikken du allerede har. Gode og relevante landingssider kan samtidig støtte både organisk synlighet, annonsekvalitet og konvertering."
+      },
+      "labels": {
+        "situations": "Typiske situasjoner",
+        "typicalBusiness": "Typisk virksomhet",
+        "focus": "Fokus",
+        "combinations": "Populære kombinasjoner",
+        "workAreas": "Arbeidsområder",
+        "uncertain": "Usikker? Ta en gratis sjekk"
       }
     },
     "proof": {

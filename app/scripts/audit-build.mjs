@@ -20,11 +20,17 @@ for (const [url, page] of paths) {
   assert.ok(html.includes(`href="https://optimalisering.oslo.no${url}"`), `${url}: canonical`);
   assert.ok(html.includes('lang="nb"'), `${url}: Norwegian document language`);
   if (process.env.SITE_STAGE !== 'production') assert.ok(html.includes('content="noindex, nofollow"'), `${url}: preview noindex`);
-  assert.ok(!/4[\s,.]?490|6[\s,.]?990|P10[1-5]|Eurotents|Helt Opplagt|Beck Maskin|Gram Car Carriers/.test(html), `${url}: no unapproved prices/proof`);
+  assert.ok(!/P10[1-5]|Eurotents|Helt Opplagt|Beck Maskin|Gram Car Carriers/.test(html), `${url}: no unapproved proof`);
+  if (!['home', 'priser', 'synlighet', 'konvertering'].includes(page.slug)) assert.ok(!/4[\s,.]?490|6[\s,.]?990/.test(html), `${url}: frozen exploratory prices`);
   const entities = { '&amp;': '&', '&lt;': '<', '&gt;': '>', '&quot;': '"', '&apos;': "'" };
   const text = html.replace(/<[^>]*>/g, ' ').replace(/&(amp|lt|gt|quot|apos);/g, match => entities[match]).replace(/&#(\d+);/g, (_match, number) => String.fromCodePoint(Number(number))).replace(/\s+/g, ' ');
   for (const section of page.sections) {
-    for (const paragraph of section.body) assert.ok(text.includes(paragraph.replace(/\s+/g, ' ')), `${url}: semantic paragraph hidden in ${section.id}`);
+    const packages = paths.get('/').homepage.packages;
+    const body = page.slug === 'priser' && section.id === 'kostnader' ? [
+      `${packages.adBudgetNote} ${packages.externalCostsNote.replace('kommer i tillegg', 'kommer også i tillegg')}`,
+      packages.separateWorkNote, packages.capacityNote,
+    ] : section.body;
+    for (const paragraph of body) assert.ok(text.includes(paragraph.replace(/\s+/g, ' ')), `${url}: semantic paragraph hidden in ${section.id}`);
   }
 }
 for (const [url, html] of documents) {

@@ -1,0 +1,12 @@
+{
+  "checks": 40,
+  "widths": [
+    1440,
+    390,
+    320
+  ],
+  "routes": 15,
+  "errors": [],
+  "liveEmailsSent": 0,
+  "syntheticOnly": true
+}

@@ -9,25 +9,17 @@ const packages = page.homepage.packages;
 const cms = YAML.parse(readFileSync('../.pages.yml', 'utf8'));
 const homepageFields = cms.content.find((entry: any) => entry.name === 'homepage').fields.find((field: any) => field.name === 'homepage').fields;
 
-test('H-007 renders the exact reconfirmed ladder, VAT and Vekst recommendation', () => {
-  assert.deepEqual(packages.items.map((item: any) => [item.title, item.price, item.priceSuffix, item.vatSuffix, item.recommended]), [
-    ['Optimalisering', 4500, 'kr/mnd', 'eks. mva.', false],
-    ['Vekst', 6900, 'kr/mnd', 'eks. mva.', true],
-    ['Partner', 14900, 'kr/mnd', 'eks. mva.', false],
-  ]);
-  // D-041 supersedes the old H-007 descriptors, preserving the numeric ladder.
-  assert.deepEqual(packages.items.map((item: any) => item.descriptor), ['Ett viktig problem om gangen.', 'To grep som forsterker hverandre.', 'Flere tjenester og kundereiser.']);
-  assert.equal(packages.items[1].badge, 'Anbefalt');
+test('shared CMS offer retains protected identity and bounded customer claims', () => {
+  assert.deepEqual(packages.items.map((item: any) => item.key), ['optimalisering', 'vekst', 'partner']);
   assert.ok(!/Sprint|ubegrenset|bindingstid|oppsigelsestid|minimumsperiode|oppstartsgebyr|onboarding|fakturavilkår|\d+\s*(?:timer|h\/mnd)/i.test(JSON.stringify(packages).replace('Det betyr ikke at alt gjøres samtidig eller at kapasiteten er ubegrenset.', '')));
 });
 
-test('D-024 retains four work areas, shared measurement, budget and separate-cost rules', () => {
-  assert.deepEqual(packages.areas, ['Konvertering', 'SEO, lokal SEO og AI-synlighet', 'Google Ads', 'Meta Ads']);
-  assert.equal(packages.adBudgetNote, 'Annonsebudsjett kommer i tillegg.');
-  assert.match(packages.foundationNote, /Måling og sporing ligger i bunn/);
-  assert.match(packages.externalCostsNote, /tillegg.*avtalt/);
-  assert.match(packages.separateWorkNote, /landingssider.*nettsider.*teknisk arbeid.*redesign.*prises separat/);
-  assert.match(packages.capacityNote, /kapasitet.*per måned.*ikke/);
+test('D-054 allows owner-edited work areas and shared cost rules through the same schema', () => {
+  const edited = structuredClone(page);
+  edited.homepage.packages.areas = ['Område A', 'Område B', 'Område C', 'Område D'];
+  for (const key of ['foundationNote', 'adBudgetNote', 'externalCostsNote', 'separateWorkNote', 'capacityNote']) edited.homepage.packages[key] = `CMS ${key}`;
+  assert.deepEqual(pageSchema.parse(edited).homepage!.packages.areas, edited.homepage.packages.areas);
+  for (const key of ['foundationNote', 'adBudgetNote', 'externalCostsNote', 'separateWorkNote', 'capacityNote']) assert.equal(pageSchema.parse(edited).homepage!.packages[key as 'foundationNote'], edited.homepage.packages[key]);
 });
 
 test('D-024 keeps the exact free-check promise and approved bounded manual safeguards', () => {
@@ -53,5 +45,5 @@ test('H-007 commercial CMS edits are typed and retain all intended fields', () =
   }
   const edited = structuredClone(page);
   edited.homepage.packages.items[0].price = 5000;
-  assert.equal(pageSchema.safeParse(edited).success, true, 'CMS can change a price without component edits after a scoped commercial instruction');
+  assert.equal(pageSchema.safeParse(edited).success, true, 'D-054 exposes the numeric price field; routing stays protected');
 });
