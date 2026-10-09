@@ -1,0 +1,116 @@
+
+> optimalisering-oslo-v3-3@0.1.0 verify
+> npm run check && npm test && npm run build && npm run qa:static
+
+
+> optimalisering-oslo-v3-3@0.1.0 check
+> astro check
+
+02:05:28 [content] Syncing content
+02:05:28 [content] Synced content
+02:05:28 [types] Generated 319ms
+02:05:28 [check] Getting diagnostics for Astro files in E:\Codex\optimalisering.oslo.noV3.3\app...
+Result (74 files):
+- 0 errors
+- 0 warnings
+- 0 hints
+
+
+> optimalisering-oslo-v3-3@0.1.0 test
+> node --test tests/*.test.ts tests/*.test.mjs
+
+✔ submission source survives an internal route without cookies or browser storage (1.6395ms)
+✔ external links, hash links and invalid campaign values are untouched (0.1808ms)
+✔ H-007 renders the exact reconfirmed ladder, VAT and Vekst recommendation (0.8948ms)
+✔ D-024 retains four work areas, shared measurement, budget and separate-cost rules (0.2185ms)
+✔ D-024 keeps the exact free-check promise and approved bounded manual safeguards (0.153ms)
+✔ H-007 commercial CMS edits are typed and retain all intended fields (9.7205ms)
+✔ CMS edits cannot remove or duplicate a required homepage section (12.6235ms)
+✔ CMS calculator defaults must be accepted by the rendered input controls (1.0079ms)
+✔ CMS section order cannot reverse the diagnostic and qualification sequence (0.4508ms)
+(node:48464) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ HTTP accepted enquiry is stored once with source, conversion and pending email (35.8079ms)
+✔ unconfigured server and invalid/origin-mismatched submissions save no data (8.2728ms)
+✔ validation, oversized body, conflict and honeypot fail before creating a new lead (10.9481ms)
+✔ website accepts a bare domain and rejects unsafe schemes and credentials (1.0844ms)
+✔ payload is minimal, validates email and removes personal/URL query data from source (1.1466ms)
+✔ only an explicit persisted acknowledgement is success (16.9947ms)
+✔ empty and insecure endpoints never call the transport (0.2769ms)
+✔ network failure and abort preserve a retryable error (7.9183ms)
+✔ illustrative example keeps percentage units correct (0.7039ms)
+✔ invalid or impossible calculator inputs fail (0.2607ms)
+✔ traffic and conversion compound rather than adding their effects (0.6955ms)
+✔ zero baseline has no defined percentage increase and fractional outcomes stay precise (0.1557ms)
+✔ combined scenario rejects impossible or non-finite inputs (0.3451ms)
+✔ a tiny baseline does not produce an infinite percentage claim (0.1021ms)
+✔ locked status cannot publish draft page or shared copy authority (5.0187ms)
+✔ Astro production-mode env files cannot make draft output indexable (8.1206ms)
+✔ CMS preserves the existing page CTA and exposes only declared proof fields (21.9001ms)
+✔ proof renders only explicitly selected, complete, permitted and approved records (3.1245ms)
+✔ missing fields, empty proof requirements and flags cannot bypass publication (1.7124ms)
+✔ anonymous proof exposes the approved label and no private registry identity or evidence (0.2056ms)
+✔ anonymous proof refuses wrapped, nonbreaking and Unicode-normalized private names (0.2954ms)
+✔ both imported records preserve supplied measurements and remain evidence only with CMS coverage (13.3201ms)
+(node:20712) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ durable enquiry and one conversion are atomic and idempotent (1.9596ms)
+✔ email failure leaves the enquiry and a retryable notification intact (16.556ms)
+✔ ambiguous email response remains pending and sent messages are not resent (1.5644ms)
+ℹ tests 34
+ℹ suites 0
+ℹ pass 34
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 249.7551
+
+> optimalisering-oslo-v3-3@0.1.0 build
+> astro build
+
+02:05:33 [content] Syncing content
+02:05:33 [content] Synced content
+02:05:33 [types] Generated 316ms
+02:05:33 [build] output: "static"
+02:05:33 [build] mode: "static"
+02:05:33 [build] directory: E:\Codex\optimalisering.oslo.noV3.3\app\dist\
+02:05:33 [build] Collecting build info...
+02:05:33 [build] ✓ Completed in 339ms.
+02:05:33 [build] Building static entrypoints...
+02:05:33 [vite] ✓ built in 140ms
+02:05:33 [vite] ✓ built in 23ms
+02:05:33 [build] Rearranging server assets...
+
+ generating static routes
+02:05:33   ├─ /404.html (+6ms)
+02:05:33   ├─ /robots.txt (+1ms)
+02:05:33   ├─ /sitemap.xml (+2ms)
+02:05:33   ├─ /ai-synlighet/index.html (+2ms)
+02:05:33   ├─ /index.html (+4ms)
+02:05:33   ├─ /innsikt/index.html (+1ms)
+02:05:33   ├─ /innsikt/hva-bor-optimaliseres-forst/index.html (+1ms)
+02:05:33   ├─ /innsikt/male-effekt-av-optimalisering/index.html (+1ms)
+02:05:33   ├─ /kontakt/index.html (+1ms)
+02:05:33   ├─ /konvertering/index.html (+1ms)
+02:05:33   ├─ /nettbutikkoptimalisering/index.html (+1ms)
+02:05:33   ├─ /om/index.html (+1ms)
+02:05:33   ├─ /personvern/index.html (+1ms)
+02:05:33   ├─ /priser/index.html (+3ms)
+02:05:33   ├─ /seo/index.html (+3ms)
+02:05:33   ├─ /synlighet/index.html (+2ms)
+02:05:33   ├─ /vilkar/index.html (+1ms)
+02:05:33   ├─ /vurdering/index.html (+2ms)
+02:05:33 ✓ Completed in 58ms.
+
+02:05:33 [build] ✓ Completed in 307ms.
+02:05:33 [build] 16 page(s) built in 651ms
+02:05:33 [build] Complete!
+
+> optimalisering-oslo-v3-3@0.1.0 qa:static
+> node scripts/audit-build.mjs && node scripts/audit-h007.mjs && node scripts/audit-h008.mjs && node scripts/audit-h009.mjs
+
+Static QA passed: 15 pages, 445 internal links/anchors, titles, canonicals, IDs, preview indexing and proof/price limits.
+H-007 static QA PASS: exact ladder/promise/rules; 0 public cases; 19 HTML/JS/JSON outputs checked for private-proof leakage.
+H-008 static regression PASS: shared package output, exact D-024 supporting copy/rules, no second package object or public proof.
+H-009 static regression PASS: exact D-028 copy/order, shared two-package bridge, bounded check, no proof/form/new local-SEO route.

@@ -1,5 +1,7 @@
 # H-008 shared commercial content and pricing page
 
+H-009 extends the same source to the `/synlighet/` bridge/FAQ and expands the CMS label to name all three routes. The fields/reference-template constraints below are unchanged; current editing location and service gating are documented in [h009-service-cms.md](h009-service-cms.md). D-027 subsequently accepts the pricing page with its corrected work-area heading.
+
 D-024 locks the homepage commercial layer at 10c5890b2e4d678340384dd399a1785e3e01ba36 and pricing support copy at a37bf7a9067f18f4eafd59e2efd753240aecc96c. H-008 consumes their current bytes from incoming main 73ce60d8789ba0b44661ce5222adff53a4831127. Neither JSON file, authority field nor proof record changes. D-026 authorizes visual propagation to `/priser/` only; STRATEGY_CONTENT review of the resulting page remains pending.
 
 ## One editable package source

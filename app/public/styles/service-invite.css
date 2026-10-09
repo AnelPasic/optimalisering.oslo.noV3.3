@@ -1,0 +1,54 @@
+/* H-009: service patterns gated to /synlighet/ until their whole-page review. */
+.invite-service .service-hero { padding-block: 32px 72px; }
+.invite-service .breadcrumbs { margin-bottom: 44px; font-size: 12px; color: var(--muted); }
+.invite-service .breadcrumbs a { color: inherit; }
+.invite-service .service-hero h1 { max-width: 980px; font-size: clamp(40px, 4vw, 56px); line-height: 1.08; letter-spacing: -.045em; }
+.invite-service .service-hero .eyebrow { margin-bottom: 20px; font-size: 13px; text-transform: none; letter-spacing: 0; }
+.invite-service .service-hero .hero-intro { max-width: 740px; margin-top: 24px; font-size: 18px; line-height: 1.65; color: var(--muted); }
+.invite-service .hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 28px; margin-top: 28px; }
+.invite-service .home-section-behov, .invite-service .home-section-prioritering { background: #fff; }
+.invite-service .home-section-behov .info-item { padding: 32px; border-top: 0; border-radius: 14px; background: #e0f1e9; }
+.invite-service .home-section-behov .home-item-1 { background: #eae4f4; }
+.invite-service .home-section-behov .home-item-2 { background: #fbf9fc; }
+.invite-service .home-section-kanaler .section-heading-split { grid-template-columns: 1fr; gap: 24px; }
+.invite-service .home-section-kanaler .section-heading h2 { max-width: 960px; }
+.invite-service .home-section-kanaler .section-items { gap: 56px; }
+.invite-service .info-item { display: flex; flex-direction: column; align-items: start; }
+.invite-service .info-item .text-link { margin-top: auto; padding-top: 24px; }
+.invite-service .home-section-sammenheng { --ink: #fff; --muted: #e0d9e7; --line: #65536e; background: #320c43; color: #fff; }
+.invite-service .home-section-sammenheng .eyebrow { color: #b9e8d4; }
+.invite-service .home-section-sammenheng .section-links { margin-left: calc((100% + 96px) / 2); }
+.invite-service .service-pricing-heading { display: flex; justify-content: space-between; align-items: end; gap: 40px; }
+.invite-service .service-pricing-heading h2 { max-width: 760px; }
+.invite-service .service-pricing-heading > .text-link { flex-shrink: 0; margin-bottom: 8px; }
+.invite-service .service-package-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; max-width: 1080px; margin-top: 48px; }
+.invite-service .service-package { border-top: 2px solid var(--line); padding-top: 28px; min-width: 0; }
+.invite-service .service-package.is-recommended { border-top-color: var(--green); }
+.invite-service .service-package h3 { font-size: 30px; }
+.invite-service .service-package > p { color: var(--muted); line-height: 1.6; margin-top: 16px; }
+.invite-service .service-package .package-price { border: 0; margin-top: 12px; }
+.invite-service .home-section-sjekk { background: #e5f2ed; }
+.invite-service .home-section-sjekk .section-links { margin-left: calc((100% + 96px) / 2); }
+.invite-service .home-section-sjekk .text-link { background: var(--green); color: #fff; padding: 16px 24px; border-radius: 7px; }
+.invite-service .home-section-sjekk .text-link:hover { background: #06675f; }
+@media (max-width: 1100px) {
+  .invite-service .home-section-behov .info-item { padding: 24px; }
+  .invite-service .home-section-sammenheng .section-links, .invite-service .home-section-sjekk .section-links { margin-left: calc((100% + 36px) / 2); }
+  .invite-service .service-pricing-heading { display: block; }
+  .invite-service .service-pricing-heading > .text-link { margin-top: 24px; }
+  .invite-service .service-package-grid { gap: 36px; }
+}
+@media (max-width: 650px) {
+  .invite-service .service-hero { padding-block: 24px 48px; }
+  .invite-service .breadcrumbs { margin-bottom: 32px; }
+  .invite-service .service-hero h1 { font-size: 38px; }
+  .invite-service .service-hero .hero-intro { font-size: 16px; margin-top: 20px; }
+  .invite-service .home-section-sammenheng .section-links, .invite-service .home-section-sjekk .section-links { margin-left: 0; }
+  .invite-service .section-items, .invite-service .service-package-grid { grid-template-columns: 1fr; gap: 32px; }
+  .invite-service .home-section-kanaler .section-items { gap: 32px; }
+  .invite-service .service-package-grid { margin-top: 32px; }
+}
+@media (max-width: 359px) {
+  .invite-service .service-hero h1 { font-size: 33px; }
+  .invite-service .hero-actions { gap: 22px; }
+}

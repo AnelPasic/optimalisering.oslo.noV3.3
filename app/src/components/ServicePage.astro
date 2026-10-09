@@ -1,0 +1,25 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Arrow from './Arrow.astro';
+import ContentSection from './HomeSection.astro';
+import PricingBridge from './ServicePricingBridge.astro';
+interface Props {
+  page: CollectionEntry<'pages'>['data'];
+  commercial: NonNullable<CollectionEntry<'pages'>['data']['homepage']>;
+}
+const { page, commercial } = Astro.props;
+const pricingLink = page.sections.find(section => section.id === 'sammenheng')!.links!.find(link => link.href === '/priser/')!;
+const breadcrumb = commercial.chrome.navigation.find(link => link.href === `/${page.slug}/`)?.label ?? page.eyebrow;
+---
+<div class="invite-home invite-service">
+  <section id="service-hero" class="service-hero shell">
+    <nav class="breadcrumbs" aria-label="Brødsmuler"><a href="/">Forsiden</a><span aria-hidden="true">/</span><span>{breadcrumb}</span></nav>
+    <p class="eyebrow">{page.eyebrow}</p><h1>{page.title}</h1><p class="hero-intro">{page.intro}</p>
+    <div class="hero-actions"><a class="button" href={page.cta.href}>{page.cta.label}<Arrow diagonal /></a><a class="text-link" href={pricingLink.href}>Se priser<Arrow /></a></div>
+  </section>
+  {page.sections.map(section => <>
+    <ContentSection section={section} />
+    {section.id === 'sammenheng' && <PricingBridge content={commercial.packages} link={pricingLink} />}
+  </>)}
+  <section id="sporsmal" class="faq-section section-space"><div class="shell faq-grid"><div><p class="eyebrow">{commercial.faqEyebrow}</p><h2>{commercial.faqHeading}</h2></div><div class="faq-list">{page.faq.map(item => <details><summary>{item.question}<span aria-hidden="true">+</span></summary><p>{item.answer}</p></details>)}</div></div></section>
+</div>

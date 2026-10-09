@@ -1,0 +1,23 @@
+# H-009 local service-page evidence
+
+Incoming main **fd48a91a4c7353aa37cb55b9abd30efd8e18a9f7**. D-027 pricing reference **d9f4751b1dfb3886953e9440304549e69f26b1ad** and D-028 Synlighet reference **cc02995a5b43d3d0ee28df23a4588ff09a16cd21** are consumed as current bytes, without changing any content JSON or authority/status. Exact implementation SHA belongs in the following coordination receipt.
+
+Dedicated service mode is gated only to `/synlighet/`, reusing H-006/H-008 fonts/palette/shell/chrome and HomeSection. Text-led hero with quiet breadcrumb/locked eyebrow/H1/intro, primary homepage-check CTA and restrained pricing path; three need cards; three SEO/local SEO/AI open columns; editorial prioritization/conversion connection; compact shared two-package bridge; locked bounded check; FAQ/footer. No stock/fake visual, new metrics/case proof, local-SEO URL, second form or invented terms/hours. New bridge contextual wording remains draft pending whole-page review; all D-028 copy renders exactly.
+
+## Validation and preservation
+
+- `npm run verify`: Astro check **74 files, zero diagnostics**; **34 tests PASS**; build; **15 content routes + 404, 445 links/anchors**. H-007 scans 19 outputs and finds zero public cases. H-008 still verifies the shared pricing output, including D-027's corrected current support heading. H-009 audit verifies exact H1/eyebrow/section order and every locked paragraph/item/FAQ, shared bridge facts, required links and no form/proof/local route. [verification.txt](verification.txt).
+- `node scripts/qa-browser.mjs`: **40 checks PASS** on the restored final build, 15 routes/desktop/mobile and isolated synthetic API/store/email/no-JS privacy/error recovery. [browser-checks.json](browser-checks.json). No real lead or live email.
+- `node scripts/qa-synlighet-h009.mjs`: service **1440/390/320 PASS**, exact copy/order, bridge facts/Instrument Sans/Figtree, CTA/internal links, no overflow, FAQ/menu, noindex and no public proof. Eight required captures. [checks.json](checks.json).
+- [baseline.json](baseline.json) was captured from the incoming build before renderer changes. All **187 frozen files** match: system/project, all 15 page JSON records, private proof, config/backend, 15 non-Synlighet HTML outputs including home/pricing/404, generated global CSS and both accepted public stylesheets. Home/pricing measured element geometry and computed styles match at all three widths; byte-identical HTML separately preserves their DOM/metadata. No baseline reset.
+- `node scripts/qa-h009-package-source.mjs`: temporarily changes only shared homepage prices, name, VAT and recommendation; all three actual Astro routes update, including the service bridge and price FAQ. It also removes the shared Synlighet menu entry to prove a safe breadcrumb fallback under a valid CMS edit. No stale original prices/VAT, second source edit or proof. Original homepage bytes restored in finally; full verify rebuilt the real locked content afterward. [package-source-regression.json](package-source-regression.json).
+
+The dedicated-renderer exact-copy audit was first run against the incoming generic build and failed because the service mode/bridge did not exist. It passes on the new renderer. Subsequent test harness corrections scoped the two-card count to articles, normalized split price spans and enabled captures beyond the viewport; no acceptance baseline or locked text was relaxed. Hero eyebrow now displays the locked casing. The source fixture is never committed or published. The technical reviewer found one CMS-navigation breadcrumb failure; the actual regression reproduced it before the safe fallback fix and passed afterward. Findings/fix verification are in [implementation-review.md](implementation-review.md).
+
+## Required captures
+
+[Full 1440](synlighet-1440.png), [390](synlighet-390.png); [hero + first section 1440](hero-first-1440.png), [390](hero-first-390.png); [three areas 1440](areas-1440.png), [390](areas-390.png); [bridge + check 1440](bridge-check-1440.png), [390](bridge-check-390.png). Full desktop and mobile hero/areas/bridge/check inspected visually. Live evidence belongs in a separate h009-live folder after main/Worker verification.
+
+## Next review and limits
+
+Stop for STRATEGY_CONTENT review of `/synlighet/` as a complete first service-page pattern. D-027 pricing PASS and D-028 content lock are preserved; technical results do not supply a new role verdict. Other 12 non-home/non-pricing/non-Synlighet pages remain frozen. D-025 proof remains non-public, authenticated CMS connection/save stays manual/unproven and production intake/operations/legal/domain/launch gates remain unchanged. CMS/editing guide: app/docs/h009-service-cms.md.

@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-10-09T00:05:26.584Z",
+  "actualAstroRoutes": [
+    "/",
+    "/priser/",
+    "/synlighet/"
+  ],
+  "sharedFieldsChanged": [
+    "two prices",
+    "name",
+    "recommendation",
+    "VAT suffix"
+  ],
+  "navigationEntryRemoved": true,
+  "safeBreadcrumbFallback": true,
+  "bridgeAndServiceFaqUpdated": true,
+  "secondSourceChanged": false,
+  "proofRendered": false,
+  "originalHomeBytesRestored": true,
+  "result": "PASS",
+  "finalBuild": "Run npm run verify after this check"
+}
