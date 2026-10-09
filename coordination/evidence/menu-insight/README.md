@@ -11,4 +11,6 @@
 - `frozen-pages.json`: ten remaining HTML pages, including both guide articles, byte-equal to the incoming review Worker before delivery.
 - `innsikt-1440.png`, `innsikt-390.png`, `innsikt-320.png`: local full-page captures; desktop/mobile visually inspected.
 
-Delivery uses the existing noindex, fail-closed static review Worker. Native deployment and live browser receipts follow after publishing. Stop for OWNER review of this correction; no formal role PASS or wider rollout is supplied. H-017A review and H-017B queue remain separate.
+Implementation delivered at `0c43c6261f9d67a2032a1c221abf0db1fb612c4d`. `deployment.json` records native review build `a467dcd9-f21c-4ef7-9013-d8c29fa2048e` SUCCESS, Worker `7a60f08e-d1e1-464f-a8db-09936db418d8`, 29 matching asset comparisons, noindex/nofollow on all 15 page responses and intake GET 404. `live-browser.json` records eight focused live browser groups PASS with zero POST/errors/real leads/emails; `live-innsikt-{1440,390,320}.png` captures the published result.
+
+Delivery uses the existing noindex, fail-closed static review Worker. This evidence-only receipt changes no website asset; its own revision is identified in Git history and checked read-only after push. Stop for OWNER review of this correction; no formal role PASS or wider rollout is supplied. H-017A review and H-017B queue remain separate.
