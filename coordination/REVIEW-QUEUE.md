@@ -1,6 +1,6 @@
 # Review queue
 
-State: H-013 IMPLEMENTATION COMPLETE / OWNER + STRATEGY_CONTENT REVIEW + FINAL PACKAGE ASSETS REQUIRED / H-012 OFFER COPY PASS D-044 / SEO-AI-EN PAUSED.
+State: H-013 TECHNICAL/ORDER PASS + VISUAL REVISE / H-014 COMPACT PRICING OPEN / SEO-AI-EN PAUSED.
 
 | Order / ID | Scope | Responsible role | State / completion evidence |
 | --- | --- | --- | --- |
@@ -218,3 +218,5 @@ For each completed review, append date, actual reviewer/role, inspected SHA, sco
 - 2026-10-09: OWNER/STRATEGY_CONTENT locked H-012 pricing copy and visual semantics. Render compact packages on homepage and the full self-selection experience on /priser/. Vekst remains Anbefalt, not Mest valgt, until real sales data supports that claim.
 
 - 2026-10-09: OWNER review of H-012: package strategy/copy passes; graphical execution does not. D-045 also corrects CTA hierarchy: package buyers must be able to order directly; free check is secondary. H-013 adds three package visual slots, structured icon items and a single preselected order form while preserving H-012 offer logic.
+
+- 2026-10-09: OWNER rejects H-013 default card height/density. H-014 keeps the accepted offer/order/data model but turns cards into compact decision summaries; long copy moves behind accessible collapsed details.
