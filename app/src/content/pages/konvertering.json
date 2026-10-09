@@ -17,7 +17,7 @@
       "heading": "Det skal være enklere å kjøpe enn å gi opp.",
       "body": [
         "Kunden må forstå hva du tilbyr, få svar på det viktigste og vite hva som skjer videre. Små uklarheter kan bli store stopp når kunden allerede vurderer flere alternativer.",
-        "Vi ser derfor på hele veien fra interesse til handling - ikke bare på knapper eller farger."
+        "Derfor ser vi på hele veien fra interesse til handling. Knapper og farger er bare en liten del av bildet."
       ],
       "items": [
         {
@@ -36,7 +36,7 @@
     },
     {
       "id": "kvalitet",
-      "eyebrow": "Riktig handling, ikke bare flere",
+      "eyebrow": "Riktig handling teller mer enn antallet",
       "heading": "Flere skjema er lite verdt hvis henvendelsene ikke passer.",
       "body": [
         "For en tjenestebedrift er målet relevante henvendelser som kan bli kunder. For en nettbutikk må flere kjøp også vurderes mot ordreverdi, margin og kostnader.",
@@ -49,7 +49,7 @@
         },
         {
           "title": "Nettbutikk",
-          "text": "Se kjøp sammen med ordreverdi, margin og kostnader - ikke bare antall ordre."
+          "text": "Se kjøp sammen med ordreverdi, margin og kostnader. Antall ordre alene er ikke nok."
         },
         {
           "title": "Måling",
@@ -109,7 +109,7 @@
     },
     {
       "question": "Må nettsiden bygges på nytt?",
-      "answer": "Ikke nødvendigvis. Mange problemer kan forbedres på eksisterende sider. Større nye landingssider, nettsider, omfattende teknisk arbeid og redesign prises separat når det er nødvendig."
+      "answer": "Nei, ikke alltid. Mye kan forbedres på eksisterende sider. Større nye landingssider, nettsider, omfattende teknisk arbeid og redesign prises separat når det er nødvendig."
     },
     {
       "question": "Er CRO bare testing av knapper og farger?",
