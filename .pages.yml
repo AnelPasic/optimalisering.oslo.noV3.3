@@ -22,6 +22,15 @@ media:
     output: /images/pricing
     extensions: [svg, webp, png]
     rename: safe
+settings:
+  content:
+    merge: true
+  commit:
+    templates:
+      update: "Innholdsoppdatering: {path} (via Pages CMS)"
+      create: "Nytt innhold: {path} (via Pages CMS)"
+      delete: "Slettet innhold: {path} (via Pages CMS)"
+
 components:
   link:
     type: object

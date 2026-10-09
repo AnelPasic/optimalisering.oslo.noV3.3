@@ -2,13 +2,13 @@
 
 Updated: 2026-10-09. Owner: Medon AS. Implementation repository: AnelPasic/optimalisering.oslo.noV3.3.
 
-**State: H-017A IMPLEMENTATION COMPLETE / STOP FOR OWNER + STRATEGY_CONTENT TECHNICAL REVIEW; REVIEW INTAKE FAIL-CLOSED; H-016 AUTHENTICATED CMS SAVE/REVERT STILL PENDING; SEO/AI/EN PAUSED; PROOF NON-PUBLIC.** Technical success does not approve processing, content or launch.
+**State: H-017A IMPLEMENTATION COMPLETE / STOP FOR OWNER + STRATEGY_CONTENT TECHNICAL REVIEW; REVIEW INTAKE FAIL-CLOSED; H-016 FULL CMS WORKFLOW NOT ACCEPTED; H-017B CMS UX + DEPLOY RELIABILITY QUEUED; SEO/AI/EN PAUSED; PROOF NON-PUBLIC.** Technical success does not approve processing, content or launch. OWNER smoke test proves CMS saves reach GitHub; editor UX/deployment reliability remain a separate H-017B review scope.
 
 ## Current H-017A delivery
 
 2026-10-09, IMPLEMENTATION. Incoming main `d74c623c7306c8962bce188b69800ad28cf7c49b`; gated order implementation `86d425e1ecf4a7a6d7d4c937097c697d05de30b5`; initial local packet `a506bb24b2935427bc4b5aad0726ddf1d5479f32`; final source/native-submit repair and review evidence `0678ceb21227e07aa0ffe29e4c35fc596d5f2c5c`. Consumes D-062 and `H017A-INTAKE-READINESS.md`. Independent public order gate plus explicitly valid endpoint, shared payload/attribution/transport, honeypot/validation/busy/stable retry and durable-accept status are prepared; backend gates remain independent/default-off. Production guard additionally requires order-backend enablement/deployment attestation. Current Worker verification is recorded in the delivery receipt after publishing.
 
-Full verify: 64 tests, zero Astro diagnostics, COPY-STYLE and all pricing/service/static guards pass. Focused 16 tests, 14 intake browser checks and 40 existing browser checks across 15 pages pass; actual production build is rejected. Enabled test builds, APIs/storage and notification transports are isolated/synthetic only. 189 protected Git objects match incoming main: all page JSON, CMS schema, public artwork/styles, reference inputs, original assessment/home/calculator/pricing/service templates, proof/copy authority and Worker configuration.
+Full verify: 64 tests, zero Astro diagnostics, COPY-STYLE and all pricing/service/static guards pass. Focused 16 tests, 14 intake browser checks and 40 existing browser checks across 15 pages pass; actual production build is rejected. Enabled test builds, APIs/storage and notification transports are isolated/synthetic only. Before concurrent OWNER saves, 189 protected Git objects matched initial incoming main; final delivery preserves those paths against the latest OWNER main `4257b9414bd87e46d26c4d489065faef8e06eb1e`, including its exact home JSON and `.pages.yml`. Full verify/both browser suites pass again on that merged source. H-017B remains queued/unexecuted.
 
 Incoming main required small schema/QA compatibility repairs for omitted empty body/badges, formal calculator notation, escaped ASCII arrows and CMS calculator defaults; customer content and calculator remain untouched. The readiness audit at `app/docs/intake-launch-readiness.md` requires OWNER/OPS decisions on real backend, persistence, backup/recovery, retention/deletion/export, privacy/processor facts, sender/recipient/secrets, proxy/rate/origin policy and synthetic deployed delivery/monitoring/retry. The homepage assessment stays hard-disabled by design, even with the standalone lead flag on; its future connection or explicit use of `/vurdering/` requires a scoped handoff. C-05/C-06 remain blockers. H-016 CMS and separate asset/content/proof reviews may continue independently. Stop here for the requested technical review; no launch approval is inferred.
 
@@ -393,3 +393,8 @@ D-061 adds `npm run qa:copy` to the normal static QA chain. This prevents the mo
 ## H-017A parallel work
 Authoritative contract: `coordination/H017A-INTAKE-READINESS.md`
 This work is intentionally independent of ongoing content, visual and proof review.
+
+
+## H-017B queued
+Contract: `coordination/H017B-CMS-UX-DEPLOY.md`
+Immediate safety fix `settings.content.merge: true` is already on main. Do not execute H-017B until H-017A is complete or stopped.

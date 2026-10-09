@@ -8,7 +8,7 @@
     "description": "Bli funnet og gjør flere besøk til henvendelser og salg. Optimalisering for konkurranseutsatte bedrifter i Norge. Ta en gratis, manuell sjekk."
   },
   "eyebrow": "For bedrifter som konkurrerer om kundene",
-  "title": "Bli funnet. Gjør flere besøk til henvendelser og salg.",
+  "title": "Bli funnet. Gjør større andel av besøk til henvendelser og salg.",
   "intro": "SEO, AI-synlighet og konverteringsoptimalisering for bedrifter i Oslo og resten av Norge. Vi starter der kundereisen stopper.",
   "cta": {
     "label": "Ta en gratis sjekk",
@@ -37,7 +37,7 @@
           }
         },
         {
-          "title": "Gjør flere besøk til henvendelser og salg",
+          "title": "Flere besøk til henvendelser og salg",
           "discipline": "Konvertering",
           "description": "Konverteringsoptimalisering for nettsider, landingssider og nettbutikker.",
           "link": {
@@ -46,9 +46,9 @@
           }
         },
         {
-          "title": "Begge deler",
+          "title": "Ja takk - Begge deler",
           "discipline": "Synlighet X Konvertering",
-          "description": "Vi finner flaskehalsen og starter der det kan gi mest effekt.",
+          "description": "Vi finner flaskehalsen og starter der det gir mest effekt.",
           "link": {
             "label": "Se alternativene",
             "href": "/#priser"
@@ -57,8 +57,8 @@
       ]
     },
     "calculator": {
-      "eyebrow": "Synlighet og konvertering kan forsterke hverandre",
-      "heading": "Hva kan flere relevante besøk og en bedre kjøpsvei bety?",
+      "eyebrow": "Synlighet og konvertering forsterker hverandre",
+      "heading": "Hva betyr flere relevante besøk og en bedre kjøpsvei?",
       "intro": "Endre trafikken, andelen som tar kontakt eller kjøper - eller begge. Se hvordan de to grepene virker sammen.",
       "formula": "Relevante besøk x konverteringsrate = henvendelser / kjøp",
       "labels": {

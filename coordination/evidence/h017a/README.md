@@ -7,7 +7,7 @@ Authority: D-062 / `coordination/H017A-INTAKE-READINESS.md`. Incoming main `d74c
 - `intake-browser.json` / `.log`: desktop/mobile fail-closed review, original assessment behavior, all three package keys, explicit normalized intent/attribution, validation/honeypot, gate mismatch, double submit and uncertain-response stable retry. Four fake notifications; zero real leads/emails; stores are memory-only.
 - `existing-browser.json` / `.log`: 40 checks across 15 routes, desktop/mobile/320px, normal assessment flow and injected notification/error path, no-JS safety.
 - `production-guard.log`: actual Astro production mode refused while content/shared-copy/privacy/email/launch remain unapproved.
-- `preservation.json`: 189 incoming protected Git objects unchanged; all source JSON/CMS/public files/reference/assessment/calculator/representative templates and Worker/proof/copy configuration preserved.
+- `preservation.json`: pre-merge 189 initial incoming protected Git objects unchanged. Final source preservation is additionally checked against latest OWNER main `4257b9414bd87e46d26c4d489065faef8e06eb1e`, retaining its exact CMS/content changes; no H-017B implementation.
 - `implementation-ledger.md`: exact scope, observed incoming verification defects, test-first failures and fixes.
 - `implementation-review.md`: fresh technical review's one Important finding and independently verified resolution; no formal role approval implied.
 

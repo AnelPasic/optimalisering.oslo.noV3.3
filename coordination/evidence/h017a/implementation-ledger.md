@@ -27,3 +27,7 @@ The existing browser suite also assumed old CMS calculator defaults (1000 visits
 - Fresh technical review identified the ordinary native `form.submit()` bypass of submit listeners. `h017a-native-submit-red.log` confirms one intercepted local POST versus expected zero. Routing only the order instance's `submit()` through `requestSubmit()` applies native validation and the same gated handler. Assessment sources remain unchanged; their pre-existing native-submit semantics are explicitly documented. The native regression is exercised with requests intercepted, including on the live review, so a failing check cannot send a body to the Worker.
 
 Final full verification, technical review and live receipts are recorded in the adjacent evidence files and outbound handoff. Synthetic stores are memory-only; isolated builds/logs are ignored in `app/qa-output/`. No real submission or email is authorized or generated.
+
+## Concurrent OWNER main integration
+
+Pre-push fetch found main advanced to `4257b9414bd87e46d26c4d489065faef8e06eb1e`. OWNER's actual CMS saves, `.pages.yml` merge safety/templates and D-063–D-065/H-017B queue are preserved verbatim. Only three coordination conflicts needed resolution; provisional Implementation D-063 is reconciled to D-066. Full verify (64 tests/static/copy) and both browser suites (14/40 checks) pass again on the merged source. No content was reverted or edited by H-017A, no history rewritten, and H-017B remains unexecuted. Protected-path comparison against this latest OWNER main is clean.
