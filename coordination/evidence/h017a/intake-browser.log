@@ -1,0 +1,17 @@
+(node:54228) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS review 1440px optimalisering: disabled, preselected, programmatic submit blocked
+PASS review 1440px vekst: disabled, preselected, programmatic submit blocked
+PASS review 1440px partner: disabled, preselected, programmatic submit blocked
+PASS review 390px optimalisering: disabled, preselected, programmatic submit blocked
+PASS review 390px vekst: disabled, preselected, programmatic submit blocked
+PASS review 390px partner: disabled, preselected, programmatic submit blocked
+PASS review: both assessment locations + order send zero POST, no false success, no-JS disabled
+PASS enabled optimalisering: durable accept, explicit intent, normalized attribution, no PII in URL
+PASS enabled vekst: durable accept, explicit intent, normalized attribution, no PII in URL
+PASS enabled partner: durable accept, explicit intent, normalized attribution, no PII in URL
+PASS invalid package/website/required field and honeypot never reach transport
+PASS backend mismatch, double-submit and lost acknowledgement: stable retry stores once; success waits for durable acknowledgement
+PASS PUBLIC_LEADS_ENABLED alone never enables order
+PASS public order flag with missing endpoint remains disabled and sends zero POST
+H-017A browser PASS: 14 checks, 4 synthetic notifications, zero real leads/emails.

@@ -16,6 +16,8 @@ Incoming full verify failed before implementation: removed empty homepage sectio
 
 After that repair, incoming copy QA incorrectly rejected the homepage calculator's formal multiplication/numeric-unavailable notation, explicitly allowed by COPY-STYLE and protected by H-017A. A failing guard fixture demonstrates the problem. The guard exempts only those functional equation/placeholder contexts and still rejects ornamental prose; the calculator remains untouched. Two raw-JSON/HTML audits also required compatibility: absent section bodies iterate as empty, and H-016 text decoding now recognizes escaped ordinary `->` arrows. No assertion of displayed copy, pricing, proof, noindex or ordering is removed.
 
+The existing browser suite also assumed old CMS calculator defaults (1000 visits), while incoming main supplies 2000 visits. Its observed failure was `40 !== 20`; setting all four synthetic inputs explicitly preserves the actual CMS defaults/calculator and tests the same independently expected 20/30 outputs. The corrected existing browser suite passes 40 checks across all 15 pages.
+
 ## Test-first evidence
 
 - `h017a-red.log`: three expected assertion failures for explicit persisted order intent, unsafe endpoint transport, and production endpoint readiness; remaining synthetic backend tests passed.

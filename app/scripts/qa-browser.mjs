@@ -52,7 +52,11 @@ try {
   assert.equal(await page.locator('[name=website]').getAttribute('aria-invalid'), 'true');
   checks += 2;
   await page.goto(base);
+  // Explicit inputs make this behavior check independent of CMS defaults.
+  await page.locator('[name=visits]').fill('1000');
   await page.locator('[name=conversion]').fill('2');
+  await page.locator('[name=trafficIncrease]').fill('0');
+  await page.locator('[name=newConversion]').fill('3');
   assert.equal(await page.locator('.leverage-result output').textContent(), '20');
   assert.equal(await page.locator('[data-scenario]').textContent(), '30');
   checks++;

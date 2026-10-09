@@ -1,0 +1,26 @@
+✔ copy-style guard permits formal calculator notation but still rejects ornamental customer prose (101.114ms)
+(node:26352) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ backend intake prerequisites cannot be bypassed by the public order flag (0.631ms)
+✔ all package keys persist explicit order intent and normalized attribution exactly once (36.9885ms)
+✔ unknown package, filled honeypot and invalid required or excessive fields create no record (10.858ms)
+✔ order gate mismatch and disabled shared intake both fail without storing or notifying (4.991ms)
+✔ storage failure never acknowledges acceptance or attempts email (2.3218ms)
+✔ order conflict and rate limiting remain authoritative (8.7411ms)
+✔ enabled API still requires an allowed Origin and JSON content type (3.8235ms)
+✔ website accepts a bare domain and rejects unsafe schemes and credentials (0.6778ms)
+✔ payload is minimal, validates email and removes personal/URL query data from source (0.6946ms)
+✔ only an explicit persisted acknowledgement is success (13.5817ms)
+✔ empty and insecure endpoints never call the transport (0.189ms)
+✔ network failure and abort preserve a retryable error (7.7292ms)
+✔ malformed endpoints, credentials and query data are rejected before any transport (0.2616ms)
+✔ locked status cannot publish draft page or shared copy authority (7.0725ms)
+✔ Astro production-mode env files cannot make draft output indexable (5.2651ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 180.65

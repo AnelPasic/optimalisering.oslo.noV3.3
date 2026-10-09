@@ -1,0 +1,706 @@
+{
+  "checks": [
+    "review 1440px optimalisering: disabled, preselected, programmatic submit blocked",
+    "review 1440px vekst: disabled, preselected, programmatic submit blocked",
+    "review 1440px partner: disabled, preselected, programmatic submit blocked",
+    "review 390px optimalisering: disabled, preselected, programmatic submit blocked",
+    "review 390px vekst: disabled, preselected, programmatic submit blocked",
+    "review 390px partner: disabled, preselected, programmatic submit blocked",
+    "review: both assessment locations + order send zero POST, no false success, no-JS disabled",
+    "enabled optimalisering: durable accept, explicit intent, normalized attribution, no PII in URL",
+    "enabled vekst: durable accept, explicit intent, normalized attribution, no PII in URL",
+    "enabled partner: durable accept, explicit intent, normalized attribution, no PII in URL",
+    "invalid package/website/required field and honeypot never reach transport",
+    "backend mismatch, double-submit and lost acknowledgement: stable retry stores once; success waits for durable acknowledgement",
+    "PUBLIC_LEADS_ENABLED alone never enables order",
+    "public order flag with missing endpoint remains disabled and sends zero POST"
+  ],
+  "requests": [
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50062"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "POST",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "POST",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "POST",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "POST",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "POST",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "POST",
+      "origin": "http://127.0.0.1:51891"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:56802"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:56802"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:56802"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:56802"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:56802"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:56802"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:56802"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:56802"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:56802"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:56802"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:56802"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:56802"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50839"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50839"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50839"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50839"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50839"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50839"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50839"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50839"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50839"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50839"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50839"
+    },
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:50839"
+    }
+  ],
+  "errors": [],
+  "syntheticEmails": 4,
+  "realEmails": 0,
+  "realLeads": 0,
+  "storage": "in-memory only",
+  "reviewOnly": false
+}
