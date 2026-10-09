@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { chromium } from '@playwright/test';
+import { chromium, expect } from '@playwright/test';
 import { readFileSync, readdirSync, writeFileSync, mkdirSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { resolve, relative } from 'node:path';
@@ -160,9 +160,9 @@ try {
       await page.locator('#bestill').screenshot({ animations: 'disabled', path: resolve(output, `order-${key}-1440.png`) });
       await page.goto(base + '/');
       await page.locator(`a[href="/priser/?pakke=${key}#bestill"]`).click();
-      assert.equal(await page.locator('#order-package').inputValue(), key, 'Home CTA preselects');
+      await expect(page.locator('#order-package')).toHaveValue(key);
       await page.locator('#priser .package-card').nth(2).locator('.button').click();
-      assert.equal(await page.locator('#order-package').inputValue(), 'partner', 'Pricing CTA preselects without a second form');
+      await expect(page.locator('#order-package')).toHaveValue('partner');
     }
     await page.goto(`${base}/priser/?pakke=invalid#bestill`);
     assert.equal(await page.locator('#order-package').inputValue(), '', 'Unknown query is not accepted or reflected');
@@ -170,7 +170,7 @@ try {
     assert.equal(new URL(page.url()).searchParams.get('pakke'),'optimalisering');
     await page.locator('#priser .package-card').nth(1).locator('.button').click();
     assert.equal(await page.locator('#order-package').inputValue(),'vekst');
-    await page.goBack(); assert.equal(await page.locator('#order-package').inputValue(),'optimalisering','History updates selection');
+    await page.goBack(); await expect(page.locator('#order-package')).toHaveValue('optimalisering');
     for (const [name,value] of Object.entries({company:'Synthetic AS',website:'example.test',contact:'Synthetic Buyer',email:'synthetic@example.test'})) await page.locator(`[name="${name}"]`).fill(value);
     await page.locator('[data-package-order]').evaluate(form => {
       form.querySelector('button').disabled = false;
