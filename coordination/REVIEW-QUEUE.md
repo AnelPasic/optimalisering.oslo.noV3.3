@@ -1,6 +1,6 @@
 # Review queue
 
-State: H-016 IMPLEMENTATION PASS / OWNER CMS SAVE-REVERT PENDING / H-017A PARALLEL INTAKE READINESS OPEN / CONTENT-VISUAL-PROOF REVIEW CONTINUES SEPARATELY.
+State: H-016 CMS WORKFLOW NOT ACCEPTED / H-017A ACTIVE OR IN FLIGHT / H-017B CMS UX + DEPLOY RELIABILITY QUEUED NEXT.
 
 | Order / ID | Scope | Responsible role | State / completion evidence |
 | --- | --- | --- | --- |
@@ -280,3 +280,5 @@ For each completed review, append date, actual reviewer/role, inspected SHA, sco
 - 2026-10-09: STRATEGY_CONTENT review passes H-016 implementation. Package tuning now belongs in Pages CMS. Remaining acceptance step is OWNER-authenticated save/revert of one harmless package caption/image-related field and verification on both home and /priser/.
 
 - 2026-10-09: OWNER asked for useful parallel Codex work. H-017A is authorized as a technical-only intake/order readiness pass. Review Worker must remain unable to submit real data.
+
+- 2026-10-09: OWNER authenticated Pages CMS smoke test: saves create main commits, but editor UX is not deliverable and Workers Builds fail. H-017B is queued. Immediate merge:true preservation fix applied separately.
