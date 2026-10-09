@@ -1,6 +1,6 @@
 # Review queue
 
-State: H-016 IMPLEMENTATION PASS / AUTHENTICATED OWNER CMS SAVE-REVERT PENDING / NO NEW PACKAGE CODE HANDOFF UNLESS CMS DEFECT APPEARS.
+State: H-016 IMPLEMENTATION PASS / OWNER CMS SAVE-REVERT PENDING / H-017A PARALLEL INTAKE READINESS OPEN / CONTENT-VISUAL-PROOF REVIEW CONTINUES SEPARATELY.
 
 | Order / ID | Scope | Responsible role | State / completion evidence |
 | --- | --- | --- | --- |
@@ -278,3 +278,5 @@ For each completed review, append date, actual reviewer/role, inspected SHA, sco
 - 2026-10-09: OWNER accepts H-015 as usable enough and moves package refinement into Pages CMS. H-016 exposes all safe package content/art fields, uses compact pricing cards on home, opens details by default on /priser/, and removes the specified negative/problem wording.
 
 - 2026-10-09: STRATEGY_CONTENT review passes H-016 implementation. Package tuning now belongs in Pages CMS. Remaining acceptance step is OWNER-authenticated save/revert of one harmless package caption/image-related field and verification on both home and /priser/.
+
+- 2026-10-09: OWNER asked for useful parallel Codex work. H-017A is authorized as a technical-only intake/order readiness pass. Review Worker must remain unable to submit real data.
