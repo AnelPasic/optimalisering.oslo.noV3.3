@@ -99,6 +99,8 @@ OWNER subsequently explicitly applies `#320c43` also to the homepage footer. Thi
 
 | D-062 | OWNER + STRATEGY_CONTENT / H-017A PARALLEL INTAKE READINESS | While OWNER reviews CMS/content/visual/proof priorities, Codex may prepare the technical intake and direct-order path behind explicit fail-closed feature gates. This includes frontend order transport readiness, attribution/idempotency parity, spam protection, production guards, tests and a launch-readiness document. No real submissions, secrets, indexing, domain switch or content changes are authorized. | OWNER request in ChatGPT, 2026-10-09. Contract: `coordination/H017A-INTAKE-READINESS.md`. |
 
+| D-063 | IMPLEMENTATION REPORTED / H-017A CONSUMED / NO MATERIAL APPROVAL | Implements D-062's dedicated default-off public order gate, configured-endpoint requirement, existing shared transport/attribution/order intent, bounded validation/honeypot/idempotent retry and durable acceptance. Production guard requires matching backend gate and explicit documented deployment attestation; review remains disabled/noindex. Synthetic technical verification does not approve live processing, privacy, email, production content or launch. | Incoming `d74c623c7306c8962bce188b69800ad28cf7c49b`; implementation `86d425e1ecf4a7a6d7d4c937097c697d05de30b5`, local packet `a506bb24b2935427bc4b5aad0726ddf1d5479f32`; `evidence/h017a/`, `app/docs/intake-launch-readiness.md`. Stop for OWNER + STRATEGY_CONTENT technical review. Small incoming schema/QA compatibility repairs preserve all customer source/art/assessment/calculator. |
+
 ## Review publication authority
 
 | ID | Authority / state | Decision | Source and scope |

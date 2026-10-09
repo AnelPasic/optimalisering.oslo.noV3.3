@@ -1,6 +1,6 @@
 # Review queue
 
-State: H-016 IMPLEMENTATION PASS / OWNER CMS SAVE-REVERT PENDING / H-017A PARALLEL INTAKE READINESS OPEN / CONTENT-VISUAL-PROOF REVIEW CONTINUES SEPARATELY.
+State: H-017A IMPLEMENTATION COMPLETE / STOP FOR OWNER + STRATEGY_CONTENT TECHNICAL REVIEW / REVIEW FAIL-CLOSED / OWNER CMS SAVE-REVERT PENDING / CONTENT-VISUAL-PROOF REVIEW CONTINUES SEPARATELY.
 
 | Order / ID | Scope | Responsible role | State / completion evidence |
 | --- | --- | --- | --- |
@@ -20,6 +20,7 @@ State: H-016 IMPLEMENTATION PASS / OWNER CMS SAVE-REVERT PENDING / H-017A PARALL
 | Routine package editing / D-054 | Independent package copy/icons/captions/SVG-WebP-PNG fields | OWNER in Pages CMS | Safe package tuning is now CMS-owned under D-054. Protected routes/keys and separate proof/service-art/launch gates remain; no whole-card reference is published. |
 | Next / H-016 | Complete shared home/pricing anatomy and editor-first workflow | OWNER | **REVIEW REQUIRED / IMPLEMENTATION COMPLETE at 8ff933cd49423dbd661032b9b9556e32a7aff81e.** Home collapsed, pricing open; see current packet/evidence. No next code/page implementation or real ordering authorized. |
 | H-016 authenticated CMS check | Live package fields/media/save-revert | OWNER | **MANUAL STEP REMAINS:** actual session redirected to sign-in. Verify fields/readonly routes/packageVisuals, save one harmless edit, verify both routes, revert/save, record actual commits/results. Local source/build tests do not prove live editor operation. |
+| Next / H-017A | Dedicated gated order transport, review fail-closed, backend/production guards, synthetic tests and launch-readiness audit | OWNER + STRATEGY_CONTENT | **TECHNICAL REVIEW REQUIRED / IMPLEMENTATION COMPLETE.** Implementation `86d425e1ecf4a7a6d7d4c937097c697d05de30b5`, local packet `a506bb24b2935427bc4b5aad0726ddf1d5479f32`; see current outbound packet and `evidence/h017a/`. No live flags, secrets or real submissions. C-05/C-06 and homepage assessment connection remain launch dependencies; no formal role verdict is fabricated. |
 | Separate asset dependency | Synlighet/Konvertering dream-outcome hero artwork | ChatGPT generation/selection; OWNER + STRATEGY_CONTENT | Approved local asset/alt/mode/crop and scoped integration handoff required; current heroes remain text-only. |
 | Later / R-07 | Privacy/processing operations, Resend delivery, persistent backend, CMS/Cloudflare/DNS/redirects, measurement/Search Console, final launch QA/authorization | OWNER / operations + IMPLEMENTATION + RED_TEAM | DEFERRED / BLOCKS LIVE USE (C-05, C-06). H-003 authorizes static web review only; no real intake or production launch is authorized. |
 

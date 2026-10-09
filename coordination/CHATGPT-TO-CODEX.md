@@ -1,6 +1,10 @@
 # ChatGPT to Codex
 
-## Active handoff - H-017A
+## Active handoff - NONE / STOP FOR H-017A TECHNICAL REVIEW
+
+H-017A implementation and local verification are complete. OWNER + STRATEGY_CONTENT technical review is required before another scoped handoff. Review intake remains disabled; no real submissions, email, secrets, indexing or production enablement are authorized. Exact delivery and Worker evidence are in `CODEX-TO-CHATGPT.md` and `evidence/h017a/`.
+
+## Completed handoff - H-017A
 
 Date: 2026-10-09
 Authority: OWNER + STRATEGY_CONTENT D-062

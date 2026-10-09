@@ -1,6 +1,6 @@
 # H-017A review packet
 
-Authority: D-062 / `coordination/H017A-INTAKE-READINESS.md`. Incoming main `d74c623c7306c8962bce188b69800ad28cf7c49b`; initial source implementation `86d425e1ecf4a7a6d7d4c937097c697d05de30b5`; initial local packet `a506bb24b2935427bc4b5aad0726ddf1d5479f32`. Native-submit repair/final source and delivered coordination revision are identified by the outbound handoff/Git history.
+Authority: D-062 / `coordination/H017A-INTAKE-READINESS.md`. Incoming main `d74c623c7306c8962bce188b69800ad28cf7c49b`; initial source implementation `86d425e1ecf4a7a6d7d4c937097c697d05de30b5`; initial local packet `a506bb24b2935427bc4b5aad0726ddf1d5479f32`; final source/native-submit repair `0678ceb21227e07aa0ffe29e4c35fc596d5f2c5c`. Delivered coordination revision is identified by Git history.
 
 - `verify.log`: full verification, 64 tests, zero Astro errors/warnings/hints, all 15 routes and copy/pricing/service/proof/noindex guards.
 - `focused.log`: 16 intake/endpoint/production/copy-style tests, all synthetic.
