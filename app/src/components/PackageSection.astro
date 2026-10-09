@@ -20,23 +20,27 @@ const formatPrice = (value: number) => new Intl.NumberFormat('nb-NO', { maximumF
     {showHeading && <div class="section-heading"><p class="eyebrow">{content.eyebrow}</p><h2>{content.heading}</h2><p class="body-copy">{content.intro}</p></div>}
     <div class="package-grid">{content.items.map((item, index) => <article id={full ? item.detailLink.href.split('#')[1] : undefined} class={`package-card package-card-${index}${item.recommended ? ' is-recommended' : ''}`}>
       {full && index === 1 && recommendedAnchor && item.detailLink.href.split('#')[1] !== recommendedAnchor && <span id={recommendedAnchor} aria-hidden="true"></span>}
-      <div class="package-heading"><Heading>{item.title}</Heading>{item.recommended && item.badge && <span class="package-badge">{item.badge}</span>}</div>
-      <div class="package-price"><p>{item.pricePrefix && <span class="package-price-prefix">{item.pricePrefix} </span>}<span class="package-price-amount">{formatPrice(item.price)}</span> <span class="package-price-unit">{item.priceSuffix}</span></p><p class="small-copy">{item.vatSuffix}</p></div>
+      <div class="package-top"><div class="package-heading"><Heading>{item.title}</Heading>{item.recommended && item.badge && <span class="package-badge">{item.badge}</span>}</div>
+      <div class="package-price"><p>{item.pricePrefix && <span class="package-price-prefix">{item.pricePrefix} </span>}<span class="package-price-amount">{formatPrice(item.price)}</span> <span class="package-price-unit">{item.priceSuffix}</span></p><p class="small-copy">{item.vatSuffix}</p></div></div>
       <p class="package-descriptor">{item.descriptor}</p>
-      {full && item.priceNote && <p class="package-price-note">{item.priceNote}</p>}
       <Visual kind={item.visual} asset={item.visualAsset} />
       {full && <h3 class="package-block-heading">{content.fitLabel}</h3>}
-      <p class="package-fit">{item.fit}</p>
-      {full && <div class="package-detail">
-        {item.typicalBusiness && <details class="package-example"><summary>Typisk virksomhet</summary><p>{item.typicalBusiness}</p></details>}
-        <div class="package-situations"><h3 class="package-block-heading">Typiske situasjoner</h3><ul>{item.situations.map(text => <li>{text}</li>)}</ul></div>
-        <div class="package-focus"><h3 class="package-block-heading">{index === 1 ? 'Populære kombinasjoner' : index === 2 ? 'Arbeidsområder' : 'Fokus'}</h3><ul class:list={['package-icon-items', { 'has-descriptions': index === 1 }]}>{item.iconItems.map(focus => <li><FocusIcon kind={focus.icon} /><div><p class="package-focus-label">{focus.label}</p>{focus.description && <p class="package-focus-description">{focus.description}</p>}</div></li>)}</ul></div>
+      <p class="package-fit">{item.compact.fit}</p>
+      {full && <>
+        <div class="package-situations"><h3 class="package-block-heading">Typiske situasjoner</h3><ul>{item.compact.situations.map(text => <li>{text}</li>)}</ul></div>
+        <div class="package-focus"><ul class:list={['package-icon-items', { 'package-combos': index === 1 }]}>{item.iconItems.map(focus => <li><FocusIcon kind={focus.icon} /><span>{focus.compactLabel}</span></li>)}</ul></div>
+      </>}
+      <a class="button" href={item.cta.href}>{item.cta.label}<Arrow diagonal /></a>
+      {full && <details class="package-details"><summary>Se detaljer</summary><div class="package-detail">
+        <div><h3 class="package-block-heading">{content.fitLabel}</h3><p>{item.fit}</p></div>
+        {item.typicalBusiness && <div><h3 class="package-block-heading">Typisk virksomhet</h3><p>{item.typicalBusiness}</p></div>}
+        <div><h3 class="package-block-heading">Typiske situasjoner</h3><ul>{item.situations.map(text => <li>{text}</li>)}</ul></div>
+        <div><h3 class="package-block-heading">{index === 1 ? 'Populære kombinasjoner' : index === 2 ? 'Arbeidsområder' : 'Fokus'}</h3><ul class="package-long-icons">{item.iconItems.map(focus => <li><p class="package-focus-label">{focus.label}</p>{focus.description && <p class="package-focus-description">{focus.description}</p>}</li>)}</ul></div>
         {item.scope && <div class="package-work"><h3 class="package-block-heading">{content.scopeLabel}</h3><p>{item.scope}</p></div>}
         {item.distinction && <p class="package-distinction">{item.distinction}</p>}
         <p class="package-selection">{item.selectionRule}</p>
-      </div>}
-      <a class="button" href={item.cta.href}>{item.cta.label}<Arrow diagonal /></a>
-      {full && <a class="text-link package-uncertain" href="/#sjekk">Usikker? Ta en gratis sjekk<Arrow /></a>}
+        {item.priceNote && <p class="package-price-note">{item.priceNote}</p>}
+      </div></details>}
       {!full && <a class="text-link package-detail-link" href={item.detailLink.href}>{item.detailLink.label}<Arrow /></a>}
     </article>)}</div>
     {showNotes && <div class="package-notes body-copy"><p class="package-budget-note">{content.adBudgetNote}</p><a class="text-link package-uncertain" href="/#sjekk">Usikker? Ta en gratis sjekk<Arrow /></a></div>}

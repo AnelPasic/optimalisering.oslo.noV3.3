@@ -598,8 +598,19 @@ content:
                     label: Pakkeoppsummering
                     type: string
                   - name: fit
-                    label: Passer for
+                    label: Full Passer for – under Se detaljer
                     type: text
+                  - name: compact
+                    label: Kort beslutningskort – låst H-014 copy
+                    type: object
+                    fields:
+                      - name: fit
+                        label: Kort Passer for – forsiden og prissiden
+                        type: text
+                      - name: situations
+                        label: Maks tre korte situasjoner – bare prissiden
+                        type: string
+                        list: true
                   - name: scope
                     label: Slik jobber vi – valgfritt der låst copy angir dette
                     type: text
@@ -625,6 +636,9 @@ content:
                         options: [search, conversion, local, paid-search, social-paid, analytics, page, route]
                       - name: label
                         label: Fokus eller kombinasjon
+                        type: string
+                      - name: compactLabel
+                        label: Kort synlig etikett – låst H-014 copy
                         type: string
                       - name: description
                         label: Kort forklaring – Vekst beholder full låst kombinasjonstekst

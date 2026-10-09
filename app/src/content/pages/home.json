@@ -132,21 +132,33 @@
           "iconItems": [
             {
               "icon": "search",
-              "label": "SEO / AI-synlighet"
+              "label": "SEO / AI-synlighet",
+              "compactLabel": "SEO / AI-synlighet"
             },
             {
               "icon": "conversion",
-              "label": "Konverteringsoptimalisering"
+              "label": "Konverteringsoptimalisering",
+              "compactLabel": "Konvertering"
             },
             {
               "icon": "local",
-              "label": "Lokal SEO"
+              "label": "Lokal SEO",
+              "compactLabel": "Lokal SEO"
             },
             {
               "icon": "paid-search",
-              "label": "Google Ads – ett tydelig fokusområde"
+              "label": "Google Ads – ett tydelig fokusområde",
+              "compactLabel": "Google Ads"
             }
-          ]
+          ],
+          "compact": {
+            "fit": "For små og mellomstore bedrifter med én tydelig kundereise eller én flaskehals som er viktigst nå.",
+            "situations": [
+              "Blir ikke funnet når kundene søker.",
+              "Har trafikk, men får for få henvendelser eller kjøp.",
+              "Får for lite ut av Google Ads eller en annen viktig kanal."
+            ]
+          }
         },
         {
           "title": "Vekst",
@@ -177,19 +189,30 @@
             {
               "icon": "paid-search",
               "label": "Google Ads + konverteringsoptimalisering",
-              "description": "Få relevant trafikk nå og få mer ut av hvert besøk du allerede betaler for."
+              "description": "Få relevant trafikk nå og få mer ut av hvert besøk du allerede betaler for.",
+              "compactLabel": "Google Ads + konvertering"
             },
             {
               "icon": "conversion",
               "label": "SEO / AI-synlighet + konverteringsoptimalisering",
-              "description": "Bygg organisk synlighet og få flere relevante besøk videre til henvendelse eller kjøp."
+              "description": "Bygg organisk synlighet og få flere relevante besøk videre til henvendelse eller kjøp.",
+              "compactLabel": "SEO / AI-synlighet + konvertering"
             },
             {
               "icon": "search",
               "label": "Google Ads + SEO / AI-synlighet",
-              "description": "Få fart med betalt synlighet nå, samtidig som du bygger organisk synlighet som kan redusere avhengigheten av annonsebudsjett over tid."
+              "description": "Få fart med betalt synlighet nå, samtidig som du bygger organisk synlighet som kan redusere avhengigheten av annonsebudsjett over tid.",
+              "compactLabel": "Google Ads + SEO / AI-synlighet"
             }
-          ]
+          ],
+          "compact": {
+            "fit": "For bedrifter som trenger fremgang på to deler av samme kundereise samtidig.",
+            "situations": [
+              "Trenger fart nå og vil bygge organisk synlighet over tid.",
+              "Har trafikk, men vil få mer ut av den med bedre konvertering.",
+              "Resultatet avhenger av at to områder forbedres samtidig."
+            ]
+          }
         },
         {
           "title": "Partner",
@@ -223,25 +246,38 @@
           "iconItems": [
             {
               "icon": "search",
-              "label": "SEO / AI-synlighet"
+              "label": "SEO / AI-synlighet",
+              "compactLabel": "SEO / AI-synlighet"
             },
             {
               "icon": "paid-search",
-              "label": "Google Ads"
+              "label": "Google Ads",
+              "compactLabel": "Google Ads"
             },
             {
               "icon": "social-paid",
-              "label": "Meta Ads"
+              "label": "Meta Ads",
+              "compactLabel": "Meta Ads"
             },
             {
               "icon": "conversion",
-              "label": "Konverteringsoptimalisering"
+              "label": "Konverteringsoptimalisering",
+              "compactLabel": "Konvertering"
             },
             {
               "icon": "analytics",
-              "label": "Analyse og sporing"
+              "label": "Analyse og sporing",
+              "compactLabel": "Analyse"
             }
-          ]
+          ],
+          "compact": {
+            "fit": "For bedrifter med flere tjenester, markeder eller kundereiser som må prioriteres løpende.",
+            "situations": [
+              "Flere tjenester konkurrerer i ulike markeder.",
+              "Ulike kundereiser trenger ulike grep.",
+              "Trenger løpende prioritering på tvers."
+            ]
+          }
         }
       ],
       "decisionStrip": {

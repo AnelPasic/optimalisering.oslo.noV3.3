@@ -8,7 +8,7 @@ test('three independent package assets and structured icons survive schema with 
   const fixture = structuredClone(home);
   fixture.homepage.packages.items.forEach((item: any, index: number) => {
     item.visualAsset = { src: `/images/pricing/option-${index}.svg`, alt: 'Conceptual growth', positionX: 50, positionY: 50 };
-    item.iconItems = [{ icon: 'search', label: 'SEO / AI-synlighet' }];
+    item.iconItems = [{ icon: 'search', label: 'SEO / AI-synlighet', compactLabel: 'SEO / AI-synlighet' }];
   });
   const parsed = pageSchema.parse(fixture);
   for (let i=0;i<3;i++) {

@@ -10,7 +10,8 @@ const text = html => html.replace(/<[^>]*>/g, ' ').replace(/&amp;/g, '&').replac
 const cards = html => [...html.matchAll(/<article\b[^>]*class="package-card[^>]*>(.*?)<\/article>/gs)].map(match => text(match[1]));
 assert.equal(cards(pricepage).length, 3, '/priser/ must render the three shared packages');
 // D-041 separates compact/full presentation while keeping shared facts exact.
-for (const [index, item] of home.homepage.packages.items.entries()) for (const copy of [item.title, item.descriptor, item.fit, item.vatSuffix, `${new Intl.NumberFormat('nb-NO').format(item.price)} ${item.priceSuffix}`]) {
+// D-048 supplies the shared short fit; full fit remains in pricing disclosure.
+for (const [index, item] of home.homepage.packages.items.entries()) for (const copy of [item.title, item.descriptor, item.compact.fit, item.vatSuffix, `${new Intl.NumberFormat('nb-NO').format(item.price)} ${item.priceSuffix}`]) {
   for (const view of [homepage, pricepage]) assert.ok(cards(view)[index].includes(text(copy)), 'Compact/full shared facts cannot drift');
 }
 assert.equal(pricing.homepage, undefined, 'No second editable package object');

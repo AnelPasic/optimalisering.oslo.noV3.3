@@ -1,0 +1,41 @@
+{
+  "checkedAt": "2026-10-09T15:17:25.375Z",
+  "actualAstroRoutes": [
+    "/",
+    "/priser/",
+    "/synlighet/",
+    "/konvertering/"
+  ],
+  "sharedFieldsChanged": [
+    "three prices",
+    "name",
+    "recommendation",
+    "VAT suffix",
+    "full fit",
+    "compact fit",
+    "compact situations",
+    "full icon label",
+    "compact icon label",
+    "selection rule",
+    "Partner price note",
+    "decision heading",
+    "multiplier body",
+    "optional prefix",
+    "Vekst detail anchor"
+  ],
+  "navigationEntryRemoved": true,
+  "safeBreadcrumbFallback": true,
+  "bridgeAndServiceFaqUpdated": true,
+  "optionalPrefixBothStates": true,
+  "independentSuppliedAssetBranches": true,
+  "missingVisualFallback": true,
+  "structuredIconSource": true,
+  "compactSourceAndNativeDisclosure": true,
+  "suppliedSvgAndPngAtAllWidths": true,
+  "editableAnchorWithLegacyAlias": true,
+  "secondSourceChanged": false,
+  "proofRendered": false,
+  "originalHomeBytesRestored": true,
+  "result": "PASS",
+  "finalBuild": "Run npm run verify after this check"
+}
