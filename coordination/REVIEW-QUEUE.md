@@ -1,6 +1,6 @@
 # Review queue
 
-State: H-016 IMPLEMENTATION COMPLETE / OWNER REVIEW REQUIRED / AUTHENTICATED CMS CHECK MANUAL / SEO-AI-EN PAUSED.
+State: H-016 IMPLEMENTATION PASS / AUTHENTICATED OWNER CMS SAVE-REVERT PENDING / NO NEW PACKAGE CODE HANDOFF UNLESS CMS DEFECT APPEARS.
 
 | Order / ID | Scope | Responsible role | State / completion evidence |
 | --- | --- | --- | --- |
@@ -276,3 +276,5 @@ For each completed review, append date, actual reviewer/role, inspected SHA, sco
 - 2026-10-09: OWNER accepts H-014 compactness but wants the package visuals closer to the earlier approved illustration. H-015 recreates only those visual motifs as clean SVG-style assets/components while preserving the semantic HTML cards.
 
 - 2026-10-09: OWNER accepts H-015 as usable enough and moves package refinement into Pages CMS. H-016 exposes all safe package content/art fields, uses compact pricing cards on home, opens details by default on /priser/, and removes the specified negative/problem wording.
+
+- 2026-10-09: STRATEGY_CONTENT review passes H-016 implementation. Package tuning now belongs in Pages CMS. Remaining acceptance step is OWNER-authenticated save/revert of one harmless package caption/image-related field and verification on both home and /priser/.
