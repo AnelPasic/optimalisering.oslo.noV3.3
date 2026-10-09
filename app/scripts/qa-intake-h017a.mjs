@@ -58,6 +58,14 @@ async function review(base) {
   await submitProgrammatically('[data-assessment]');
   assert.match(await page.locator('[role=status]').textContent(), /Ingen opplysninger er sendt/);
   assert.equal(requests.filter(r => r.method === 'POST').length, before);
+  // Ordinary form.submit() bypasses submit listeners unless routed through
+  // the validation/event path. Block network defensively while testing it.
+  await page.goto(base + '/priser/?pakke=vekst#bestill'); await fillOrder();
+  await page.route('**/api/leads', route => route.abort());
+  await page.locator('[data-package-order]').evaluate(form => form.submit());
+  await page.waitForTimeout(150);
+  assert.equal(requests.filter(r => r.method === 'POST').length, before, 'Native programmatic order submit must send zero POST');
+  await page.unroute('**/api/leads');
   const noJs = await browser.newPage({ javaScriptEnabled: false });
   try { await noJs.goto(base + '/priser/'); assert.equal(await noJs.locator('[data-package-order] [type=submit]').isDisabled(), true); } finally { await noJs.close(); }
   check('review: both assessment locations + order send zero POST, no false success, no-JS disabled');

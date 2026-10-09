@@ -24,5 +24,6 @@ The existing browser suite also assumed old CMS calculator defaults (1000 visits
 - `h017a-red-browser.log`: dedicated public flag still left the old hard-disabled form disabled. Corrected a test harness syntax error before recording that behavioral failure.
 - `h017a-copy-red.log`: formal calculator notation wrongly failed copy guard.
 - Core fixes subsequently passed 14/14 focused tests; enabled browser transport subsequently passed all three protected keys with synthetic-only persistence/notification and stable lost-response retry.
+- Fresh technical review identified the ordinary native `form.submit()` bypass of submit listeners. `h017a-native-submit-red.log` confirms one intercepted local POST versus expected zero. Routing only the order instance's `submit()` through `requestSubmit()` applies native validation and the same gated handler. Assessment sources remain unchanged; their pre-existing native-submit semantics are explicitly documented. The native regression is exercised with requests intercepted, including on the live review, so a failing check cannot send a body to the Worker.
 
 Final full verification, technical review and live receipts are recorded in the adjacent evidence files and outbound handoff. Synthetic stores are memory-only; isolated builds/logs are ignored in `app/qa-output/`. No real submission or email is authorized or generated.

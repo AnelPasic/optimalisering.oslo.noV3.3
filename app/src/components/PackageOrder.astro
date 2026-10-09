@@ -92,6 +92,9 @@ const { packages } = Astro.props;
       } catch (error) { showStatus(error instanceof Error ? error.message : 'Vi kunne ikke bekrefte innsendingen. Prøv igjen.'); }
       finally { busy = false; button.disabled = false; button.removeAttribute('aria-busy'); }
     });
+    // Native submit() skips listeners. Route ordinary programmatic calls
+    // through validation and the same gated handler, including review mode.
+    form.submit = () => form.requestSubmit();
     button.disabled = !enabled;
   }
 </script>

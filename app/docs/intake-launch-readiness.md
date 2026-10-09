@@ -10,6 +10,8 @@ Technical capability prepared for review on 2026-10-09 under D-062. This is not 
 
 The connected Worker is **static assets only**, with preview/noindex and default-off intake. `/api/leads` has no deployed Node handler there. No current backend, credentials, persistent data, DNS or real flags were changed. Enabled browser fixtures are separate ignored local builds; synthetic API stores are in memory and notification transports are injected fakes.
 
+The order form routes ordinary `form.submit()` through native validation and its gated submit handler; direct calls therefore cannot bypass the disabled review path. UI gates cannot prevent hostile page scripts from invoking native prototypes or creating their own fetch requests; the API is authoritative. Unchanged assessment forms retain their existing native-submit semantics: review zero-POST checks cover their normal/event-driven submit paths, not arbitrary prototype calls or the standalone native `form.submit()` bypass. Their preservation does not authorize real processing.
+
 ## Environment flags
 
 | Setting | Consumer / meaning | Review / launch dependency |

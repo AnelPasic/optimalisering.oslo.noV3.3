@@ -1,0 +1,29 @@
+(node:46284) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS review 1440px optimalisering: disabled, preselected, programmatic submit blocked
+PASS review 1440px vekst: disabled, preselected, programmatic submit blocked
+PASS review 1440px partner: disabled, preselected, programmatic submit blocked
+PASS review 390px optimalisering: disabled, preselected, programmatic submit blocked
+PASS review 390px vekst: disabled, preselected, programmatic submit blocked
+PASS review 390px partner: disabled, preselected, programmatic submit blocked
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Native programmatic order submit must send zero POST
+
+1 !== 0
+
+    at review (file:///E:/Codex/optimalisering.oslo.noV3.3/app/scripts/qa-intake-h017a.mjs:67:10)
+    at async file:///E:/Codex/optimalisering.oslo.noV3.3/app/scripts/qa-intake-h017a.mjs:88:70
+    at async serverFor (file:///E:/Codex/optimalisering.oslo.noV3.3/app/scripts/qa-intake-h017a.mjs:24:9)
+    at async file:///E:/Codex/optimalisering.oslo.noV3.3/app/scripts/qa-intake-h017a.mjs:88:10 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 1,
+  expected: 0,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.12.0
