@@ -1,6 +1,6 @@
 # Review queue
 
-State: H-010 /KONVERTERING/ IMPLEMENTATION COMPLETE / STRATEGY_CONTENT REVIEW REQUIRED / D-030 SYNLIGHET PATTERN PASS / D-031 LOCK PRESERVED / HOME-PRICING-SYNLIGHET PROTECTED / OTHER 11 PAGES FROZEN / PROOF NON-PUBLIC.
+State: H-010 KONVERTERING PASS / H-011 SYSTEM HARDENING OPEN / DREAM-OUTCOME SERVICE VISUALS + PROVIDER NEUTRALITY + I18N SCAFFOLD / SEO-AI PROPAGATION PAUSED.
 
 | Order / ID | Scope | Responsible role | State / completion evidence |
 | --- | --- | --- | --- |
@@ -171,3 +171,5 @@ For each completed review, append date, actual reviewer/role, inspected SHA, sco
 - 2026-10-09: STRATEGY_CONTENT completed R-06 for H-008: PASS. The only material copy issue was the potentially contradictory heading “Fire områder. Én prioritering av gangen.”; it was changed to “Fire områder. Prioritert etter behov.”. D-028 locks the next page's copy and H-009 now receives /synlighet/ only.
 
 - 2026-10-09: STRATEGY_CONTENT reviewed H-009 /synlighet/: PASS under D-030. The page successfully establishes the reusable service-page pattern. D-031 locks the next /konvertering/ copy, including the previously selected H1 and first-section hook. H-010 may propagate the service renderer to /konvertering/ only and must generalize the pricing bridge without changing /synlighet/ output.
+
+- 2026-10-09: STRATEGY_CONTENT reviewed H-010 /konvertering/: PASS under D-033. OWNER then added three project-wide rules: service pages are landing pages with dream-outcome visuals; Medon branding is reduced to provider/legal disclosure; site will be Norwegian + English. D-037 locks the revised homepage qualification/provider copy. H-011 now implements the system support before further service-page propagation.
