@@ -2,7 +2,7 @@
 
 Updated: 2026-10-09. Owner: Medon AS. Implementation repository: AnelPasic/optimalisering.oslo.noV3.3.
 
-**State: H-014 COMPACT PRICING IMPLEMENTATION COMPLETE / STOP FOR OWNER + STRATEGY_CONTENT; H-013 ORDER/DATA PASS PRESERVED; SEO-AI-EN PAUSED; PROOF NON-PUBLIC.**
+**State: H-014 COMPACTNESS PASS; H-015 PRICING VISUAL POLISH AUTHORIZED UNDER D-050–D-052; SEO/AI/EN PAUSED; PROOF NON-PUBLIC.** Preserve the compact decision surface and direct-order behavior; improve only the package visual motifs toward the approved mockup quality.
 
 2026-10-09: Incoming **ffa87852fd0a69683bd387607a82f9fdae6e4647**, implementation/local evidence **dc26e93a25eee77c2485c6e83fe9840de4d36f3b**. D-047–D-049 / exact H014-COMPACT-PRICING.md authorize this compact presentation revision. All three default desktop pricing cards are **770px** (H-013: 1862.81 / 1610.67 / 1858.63px); at 390px **758.89 / 813.39 / 721.89px** (H-013: 1788.03 / 1631.08 / 1860.33px), in Optimalisering/Vekst/Partner order. Home desktop **482 / 488.38 / 482px**; home 390 **482 / 516.38 / 482px**. Exact short fit/situations/icon labels use the existing shared source; every long H-012/H-013 offer sentence remains under native collapsed Se detaljer. Semantic text, horizontal 120/110px pricing visuals, compact icons, favored Anbefalt Vekst, Partner fra and all prices/VAT/order keys remain. Decision strip stays close; multiplier conceptual row leads, full existing explanation is natively disclosed. H-013 order component/payload/backend are unchanged; all six primary CTAs still preselect one safely disabled form. No transport/success state/production enablement. Full verify: 111 files/zero diagnostics, 49 tests, 447 links; 40 synthetic browser checks; four commercial routes at 1440/390/320; 187 frozen file hashes/93 retained geometry/style snapshots; 21 captures; real shared-source/missing/supplied SVG-PNG regression with full supplied-asset verification and restored-source final checks. Keyboard/no-JS detail and multiplier reading, no expanded overflow, order/query/CTA/history/invalid-query/programmatic/no-JS safety pass. Fresh technical review has no unresolved issue and adds no formal role approval. Zero review POST/real orders/live email. Home outside packages, other page JSON/status/authority, service HTML/copy/styles/chrome/fit/proof, all backend and system/project remain preserved. Authenticated CMS save and final package/service artwork remain manual/unsupplied. Evidence: coordination/evidence/h014/; current CMS/docs: app/docs/h014-compact-pricing-cms.md. Main/Worker receipt follows in CODEX-TO-CHATGPT and Git history. **STOP for OWNER + STRATEGY_CONTENT H-014 review.** No further pages/SEO-AI/English/proof/real-order/launch work is authorized.
 
@@ -321,3 +321,7 @@ H-013 delivered at **24818ee7997c816c752cc4c334cb65559f69a01c**. D-047 subsequen
 
 ## H-014 delivered / review required
 Authoritative compact-card contract: coordination/H014-COMPACT-PRICING.md
+
+
+## H-015 active
+Authoritative visual polish contract: coordination/H015-PRICING-VISUAL-POLISH.md
