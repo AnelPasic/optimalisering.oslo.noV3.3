@@ -1,5 +1,47 @@
 # ChatGPT to Codex
 
+## Active handoff — H-012
+
+Date: 2026-10-09
+Authority: OWNER + STRATEGY_CONTENT D-041–D-043
+Exact copy/visual contract: coordination/H012-PRICING-OFFER.md
+Scope: shared package data + homepage compact package presentation + full /priser/ package decision experience
+
+### Objective
+Implement the exact H-012 pricing architecture so OWNER can judge it on the real review site.
+Customer must understand in seconds: 4 500 = one important problem at a time; 6 900 = two reinforcing levers in parallel; from 14 900 = several services/customer journeys requiring ongoing prioritization.
+
+### Requirements
+1. Extend the existing shared home.homepage.packages source; do not create a second price source.
+2. Use coordination/H012-PRICING-OFFER.md as exact public-copy authority.
+3. Homepage stays compact: name, price, descriptor, short fit, visual, CTA/link.
+4. /priser/ renders full fit, typical-business examples, situations, combinations/work areas, selection rule, Partner price note, decision strip and multiplier block.
+5. Add optional pricePrefix so only Partner renders fra 14 900 kr/mnd.
+6. Keep Vekst badge Anbefalt. Do not use Mest valgt.
+7. Package visuals must be inline SVG/CSS explanatory graphics: one controlled curve for Optimalisering; one steeper exponential-style curve for Vekst; multiple controlled upward tracks for Partner. No numeric uplift labels.
+8. Preserve CRO emphasis in Vekst combinations exactly as locked.
+9. Make the 4 500 vs 6 900 distinction explicit: sequential one-bottleneck work versus two parallel reinforcing levers. The user must not reasonably infer that alternating 4 500 focus month-to-month is equivalent to Vekst.
+10. Preserve ad-budget/external-cost/separate-work rules and do not invent contract terms.
+11. Update Pages CMS for all new shared package fields.
+12. Preserve /synlighet/ and /konvertering/ pricing bridges from the same source.
+13. Do not add the future external-marketing-department offer.
+
+### QA
+- full verify/tests/browser checks
+- single-source regression across home /priser/ /synlighet/ /konvertering/
+- exact-copy checks for descriptors, fit and selection rules
+- scan proving Mest valgt is absent
+- scan proving no unsupported uplift percentages are rendered
+- 1440 / 390 / 320 checks on home and /priser/
+
+### Evidence
+Capture homepage package section 1440 + 390; /priser/ full page 1440 + 390; package cards 1440 + 390; decision strip + multiplier block 1440 + 390.
+
+Push to main, verify Worker, update coordination, then STOP for OWNER + STRATEGY_CONTENT H-012 review.
+Do not continue to SEO/AI propagation or English pages.
+
+---
+
 ## Completed handoff — H-011
 
 **Date:** 2026-10-09  
