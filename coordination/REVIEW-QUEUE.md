@@ -1,6 +1,6 @@
 # Review queue
 
-State: R-06 /PRISER/ PASS UNDER D-027 / H-009 /SYNLIGHET/ CONTROLLED PROPAGATION OPEN / OTHER SERVICE PAGES FROZEN / PROOF NON-PUBLIC.
+State: H-009 /SYNLIGHET/ IMPLEMENTED / STOP FOR STRATEGY_CONTENT / D-027 R-06 PASS AND D-028 LOCK PRESERVED / OTHER 12 PAGES FROZEN / PROOF NON-PUBLIC.
 
 | Order / ID | Scope | Responsible role | State / completion evidence |
 | --- | --- | --- | --- |
@@ -10,9 +10,18 @@ State: R-06 /PRISER/ PASS UNDER D-027 / H-009 /SYNLIGHET/ CONTROLLED PROPAGATION
 | 4 / R-04 | Independent commercial/content/visual review of the exact representative revision | RED_TEAM | **PASS / COMPLETE for H-006 under D-019 + selected-photo review under D-020.** Layout/spacing/IA pass; selected hero photo also passes authenticity/tone/crop/proof-implication review. Positioning caveat: boutique/e-commerce setting slightly narrows cross-industry perception. |
 | 5 / R-05 | H-007 commercial/content review | STRATEGY_CONTENT | **PASS / COMPLETE under D-024 after direct copy refinements.** Exact homepage commercial fields and pricing-page support copy are locked at the commits named in D-024. Proof publication is explicitly excluded. |
 | 6 / R-06 | First controlled propagation: `/priser/` visual + commercial consistency | STRATEGY_CONTENT + OWNER; IMPLEMENTATION receives | **PASS / COMPLETE under D-027.** H-008 hierarchy, shared package source and responsive presentation pass. One support heading was clarified post-review; corrected revision is locked. |
+| Next / H-009 | First service-page propagation: `/synlighet/` visual/authority/commercial consistency | STRATEGY_CONTENT; OWNER for consequential direction; IMPLEMENTATION receives | **REVIEW REQUIRED / IMPLEMENTATION COMPLETE at 36c305f62c82897e54dd99384e2fcc9c1d96e356.** Exact D-028 copy, accepted visual system and compact shared pricing bridge. D-027 pricing output preserved. Other 12 pages remain frozen; no further implementation active. |
 | Later / R-07 | Privacy/processing operations, Resend delivery, persistent backend, CMS/Cloudflare/DNS/redirects, measurement/Search Console, final launch QA/authorization | OWNER / operations + IMPLEMENTATION + RED_TEAM | DEFERRED / BLOCKS LIVE USE (C-05, C-06). H-003 authorizes static web review only; no real intake or production launch is authorized. |
 
-## Current review packet — H-008 / STRATEGY_CONTENT R-06
+## Current review packet — H-009 / STRATEGY_CONTENT
+
+Implementation/evidence **36c305f62c82897e54dd99384e2fcc9c1d96e356**, incoming main **fd48a91a4c7353aa37cb55b9abd30efd8e18a9f7**. D-027's corrected pricing support and D-028 Synlighet JSON remain unchanged. [Synlighet review URL](https://optimalisering-oslo-v33.anel.workers.dev/synlighet/); exact main/Worker receipt follows in CODEX-TO-CHATGPT. [Full 1440](evidence/h009/synlighet-1440.png), [390](evidence/h009/synlighet-390.png); [hero + first 1440](evidence/h009/hero-first-1440.png), [390](evidence/h009/hero-first-390.png); [areas 1440](evidence/h009/areas-1440.png), [390](evidence/h009/areas-390.png); [bridge + check 1440](evidence/h009/bridge-check-1440.png), [390](evidence/h009/bridge-check-390.png); [checks](evidence/h009/checks.json), [source regression](evidence/h009/package-source-regression.json), [verify](evidence/h009/verification.txt), [technical review/fix](evidence/h009/implementation-review.md), [notes](evidence/h009/README.md). CMS guide: app/docs/h009-service-cms.md.
+
+**STRATEGY_CONTENT:** does the complete `/synlighet/` page render the D-028 commercial argument clearly in the accepted visual system, distinguish the three visibility areas and route naturally from the compact shared pricing bridge to full pricing or the bounded free check? Assess desktop/mobile as a whole, including the new one-area/combined-area contextual bridge lines (still draft). Record the exact reviewed source/verdict/scope in DECISIONS and any follow-up handoff in CHATGPT-TO-CODEX. Technical verify, 40 synthetic browser checks, actual source regression and 1440/390/320 with all 187 frozen files/home/pricing preservation pass; these supply no formal role approval. **Stop after /synlighet/.** No Konvertering/deeper services or other 12-page propagation without the next handoff. D-025 cases remain hidden; authenticated CMS save and production gates remain separate.
+
+## Historical review packet — H-008 / STRATEGY_CONTENT R-06
+
+D-027 resolves this pricing review and locks its corrected support heading; H-009 above is the current review gate. Original H-008 request and evidence below retain their historical scope.
 
 Implementation/evidence **87a839216db412305337daae24c01858176db15e**, consuming incoming main **73ce60d8789ba0b44661ce5222adff53a4831127**. D-024 home/priser JSON remains unchanged at its current authoritative revisions. [Pricing review URL](https://optimalisering-oslo-v33.anel.workers.dev/priser/); main/Worker verification receipt is in CODEX-TO-CHATGPT.md. [Pricing 1440](evidence/h008/pricing-1440.png), [390](evidence/h008/pricing-390.png), [packages 1440](evidence/h008/packages-1440.png), [390](evidence/h008/packages-390.png), [unchanged home 1440](evidence/h008/home-1440.png), [390](evidence/h008/home-390.png), [checks](evidence/h008/checks.json), [source regression](evidence/h008/package-source-regression.json), [verification](evidence/h008/verification.txt), [technical review](evidence/h008/implementation-review.md), [notes](evidence/h008/README.md). CMS guide: app/docs/h008-pricing-cms.md.
 

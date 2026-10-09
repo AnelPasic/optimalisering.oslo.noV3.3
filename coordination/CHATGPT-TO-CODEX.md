@@ -1,6 +1,6 @@
 # ChatGPT to Codex
 
-## Active handoff — H-009
+## Completed handoff — H-009
 
 **Date:** 2026-10-09  
 **Authority:** STRATEGY_CONTENT D-027/D-028 + OWNER/STRATEGY_CONTENT D-029  
@@ -230,6 +230,10 @@ Homepage and /priser/ must remain materially unchanged apart from any safe share
 - Stop for STRATEGY_CONTENT review of /synlighet/.
 
 Do not continue to /konvertering/ or deeper service pages until the next handoff.
+
+### Implementation receipt — no new approval
+
+2026-10-09, IMPLEMENTATION: incoming main **fd48a91a4c7353aa37cb55b9abd30efd8e18a9f7** consumed; implementation/local evidence **36c305f62c82897e54dd99384e2fcc9c1d96e356**. D-027's corrected pricing revision and D-028's exact Synlighet bytes/status/authority remain untouched. New service renderer/style is gated only to `/synlighet/`; text-led hero, locked sections, compact shared two-package bridge and bounded homepage-check routing. The same source binds its repeated price FAQ. All 187 frozen files and home/pricing HTML/styles/geometry match the incoming baseline. Full verify (74 files, zero diagnostics; 34 tests; 445 links), 40 browser checks, actual shared-source/optional-navigation regression and responsive 1440/390/320 pass. Eight captures, technical review/fix and CMS guide are in evidence/h009 and app/docs/h009-service-cms.md. Main/Worker receipt belongs in CODEX-TO-CHATGPT. **Stop for STRATEGY_CONTENT review of /synlighet/; no further implementation handoff is active.** D-025 proof remains hidden, other 12 pages stay frozen and no full-page visual acceptance, proof/launch or broader propagation approval is inferred.
 
 
 ---
