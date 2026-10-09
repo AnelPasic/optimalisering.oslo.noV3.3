@@ -1,5 +1,33 @@
 # ChatGPT to Codex
 
+## Active handoff - H-017A
+
+Date: 2026-10-09
+Authority: OWNER + STRATEGY_CONTENT D-062
+Exact contract: coordination/H017A-INTAKE-READINESS.md
+
+This is parallel technical work while OWNER/STRATEGY_CONTENT review content, visuals, proof and CMS.
+
+Execute H-017A exactly.
+
+Main goal:
+- make direct package ordering technically ready behind a dedicated fail-closed public feature gate;
+- reuse existing lead transport, attribution and idempotency patterns;
+- keep both review forms unable to send real data;
+- harden tests and production guards;
+- document all remaining OWNER/OPS launch dependencies.
+
+Do not touch package/service copy, prices, visuals, proof, SEO/AI rollout, English, noindex, live secrets or production enablement.
+
+Follow coordination/COPY-STYLE.md for any visible status copy.
+
+Push to main, verify the review Worker remains fail-closed, update coordination/evidence, then STOP for OWNER + STRATEGY_CONTENT technical review.
+
+No real submissions or emails.
+
+
+---
+
 ## Completed handoff — H-016 / STOP FOR OWNER REVIEW
 
 Date: 2026-10-09
