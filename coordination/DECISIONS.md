@@ -97,6 +97,8 @@ OWNER subsequently explicitly applies `#320c43` also to the homepage footer. Thi
 
 | D-061 | OWNER / COPY-STYLE QA GUARD | Add a static QA guard that fails future builds when customer-facing page content reintroduces the banned ornamental punctuation or the most obvious template-copy phrases defined by D-060. The guard also checks hard-coded Astro component punctuation. It is part of `qa:static`. | Implemented 2026-10-09 in `app/scripts/audit-copy-style.mjs` and `app/package.json`. This enforces house style only; it is not an SEO penalty detector. |
 
+| D-062 | OWNER + STRATEGY_CONTENT / H-017A PARALLEL INTAKE READINESS | While OWNER reviews CMS/content/visual/proof priorities, Codex may prepare the technical intake and direct-order path behind explicit fail-closed feature gates. This includes frontend order transport readiness, attribution/idempotency parity, spam protection, production guards, tests and a launch-readiness document. No real submissions, secrets, indexing, domain switch or content changes are authorized. | OWNER request in ChatGPT, 2026-10-09. Contract: `coordination/H017A-INTAKE-READINESS.md`. |
+
 ## Review publication authority
 
 | ID | Authority / state | Decision | Source and scope |
