@@ -3,21 +3,124 @@
   "kind": "service",
   "status": "REVIEW_REQUIRED",
   "authority": "DRAFT / NON-AUTHORITATIVE",
-  "seo": { "title": "Nettbutikkoptimalisering - fra oppdagelse til kjøp | Medon", "description": "Se nettbutikken som en sammenheng: produktoppdagelse, valg, handlekurv og kjøp som er verdifulle for bedriften. Få en gratis, manuell sjekk fra Medon." },
+  "seo": {
+    "title": "Nettbutikkoptimalisering - fra oppdagelse til kjøp | Medon",
+    "description": "Se nettbutikken som en sammenheng: produktoppdagelse, valg, handlekurv og kjøp som er verdifulle for bedriften. Få en gratis, manuell sjekk fra Medon."
+  },
   "eyebrow": "Synlighet og konvertering for nettbutikker",
   "title": "Fra et produkt kunden finner til en bestilling som er verdt noe.",
-  "intro": "En nettbutikk må gjøre mer enn å få besøk og fylle handlekurver. Kunden må finne riktige produkter, kunne velge og fullføre kjøpet. Bedriften må kunne vurdere verdien av bestillingene.",
+  "intro": "Besøk og fulle handlekurver er ikke nok. Kunden må finne riktige produkter, kunne velge og fullføre kjøpet. Bedriften må kunne vurdere verdien av bestillingene.",
   "sections": [
-    { "id": "kjeden", "heading": "Se hele veien fra produktbehov til bestilling.", "body": ["En produktkategori kan være vanskelig å finne selv om enkeltproduktene er gode. En produktside kan få besøk uten å svare på det kunden trenger for å velge. En fylt handlekurv kan stoppe før bestillingen.", "Vi undersøker hvor det ser ut til å stoppe. Siden, forventningene og de tekniske mulighetene må ses sammen før vi foreslår arbeid."], "items": [ { "title": "Finne", "text": "Kan relevante kunder finne riktig kategori eller produkt når de leter etter behovet?" }, { "title": "Velge", "text": "Er produktforskjeller, egenskaper og andre nødvendige opplysninger tydelige nok til at kunden kan ta et valg?" }, { "title": "Kjøpe", "text": "Forstår kunden totalsum, tilgjengelighet og veien gjennom handlekurv og utsjekking?" }, { "title": "Vurdere verdi", "text": "Er bestillingene nyttige når ordreverdi, margin og relevante kostnader tas med?" } ] },
-    { "id": "beslutning", "heading": "«Lagt i handlekurv» er et mellomsteg.", "body": ["Handlekurver, klikk og produktvisninger kan hjelpe oss å finne spørsmål som bør undersøkes. De er ikke det samme som fullførte kjøp.", "Hvis mange ser et produkt uten å gå videre, kan informasjon eller produktvalg være verdt å undersøke. Hvis kunden stopper senere, må vi også se på hva som dukker opp i handlekurven og utsjekkingen. Uten data kan vi beskrive mulige hindringer, men ikke slå fast hvor tapet er størst.", "Produktutvalg, lager, levering og priser kan også påvirke kjøpet. Nettsidearbeid alene løser ikke alle kommersielle eller driftsmessige begrensninger."] },
-    { "id": "okonomi", "heading": "Flere ordre må vurderes sammen med økonomien i dem.", "body": ["En høyere konverteringsrate er ikke automatisk mer lønnsom. Endret produktmiks, lavere ordreverdi, rabatter og kostnader kan påvirke hva som blir igjen.", "Vi bør avklare hvilke kjøp bedriften ønsker flere av, og hvilke data som finnes om ordreverdi, margin og kostnader. Det må være mulig å skille mellom aktivitet i nettbutikken og verdi for bedriften.", "Vi lover ikke at et tiltak gir flere eller mer lønnsomme bestillinger. Forventningene må knyttes til utgangspunktet og det som faktisk kan måles."], "links": [ { "label": "Slik vurderer du effekten", "href": "/innsikt/male-effekt-av-optimalisering/" } ] },
-    { "id": "tjenester", "heading": "De samme tjenestene. Tilpasset veien til kjøp.", "body": ["Nettbutikker velger ikke et eget, ekstra pakkesett her. Synlighet er relevant når produktbehov og oppdagelse begrenser utviklingen. Konvertering er relevant når kunder møter hindringer mellom interesse og kjøp. Begge kan vurderes samlet.", "Hva vi kan endre, avhenger av nettbutikken og avtalt omfang. Hovednettbutikken er utgangspunktet. Ekstra nettsteder, landingssider og arbeid hos andre leverandører må avklares særskilt.", "Pris og konkret innhold avtales. Annonsebudsjett og aktuelle eksterne plattformkostnader er utenom den normale tjenesteprisen hvis ikke annet er uttrykkelig avtalt."], "items": [ { "title": "Synlighet", "text": "Produkt- og kategoribehov må kunne møte relevante sider i nettbutikken.", "href": "/synlighet/", "label": "Se Synlighet" }, { "title": "Konvertering", "text": "Kunden må kunne forstå, velge og komme gjennom en tydelig kjøpsvei.", "href": "/konvertering/", "label": "Se Konvertering" }, { "title": "Begge", "text": "Oppdagelse og kjøpsvei kan trenge en samlet prioritering.", "href": "/priser/#begge", "label": "Se alternativene" } ] },
-    { "id": "sjekk", "heading": "Send nettbutikken og fortell hvor du er usikker.", "body": ["En nettadresse og en e-postadresse for bedriften er nok for å be om den gratis sjekken. Fortell gjerne om du er mest usikker på oppdagelse, produktvalg eller veien til fullført kjøp.", "Medon gjør en avgrenset, manuell vurdering og gir kort veiledning om hva vi ville startet med og hvorfor. Sjekken er ikke en full revisjon av katalogen, komplett feilliste, prognose eller gjennomføring."], "links": [ { "label": "Ta en gratis sjekk", "href": "/vurdering/" } ] }
+    {
+      "id": "kjeden",
+      "heading": "Se hele veien fra produktbehov til bestilling.",
+      "body": [
+        "En produktkategori kan være vanskelig å finne selv om enkeltproduktene er gode. En produktside kan få besøk uten å svare på det kunden trenger for å velge. En fylt handlekurv kan stoppe før bestillingen.",
+        "Vi undersøker hvor det ser ut til å stoppe. Siden, forventningene og de tekniske mulighetene må ses sammen før vi foreslår arbeid."
+      ],
+      "items": [
+        {
+          "title": "Finne",
+          "text": "Kan relevante kunder finne riktig kategori eller produkt når de leter etter behovet?"
+        },
+        {
+          "title": "Velge",
+          "text": "Er produktforskjeller, egenskaper og andre nødvendige opplysninger tydelige nok til at kunden kan ta et valg?"
+        },
+        {
+          "title": "Kjøpe",
+          "text": "Forstår kunden totalsum, tilgjengelighet og veien gjennom handlekurv og utsjekking?"
+        },
+        {
+          "title": "Vurdere verdi",
+          "text": "Er bestillingene nyttige når ordreverdi, margin og relevante kostnader tas med?"
+        }
+      ]
+    },
+    {
+      "id": "beslutning",
+      "heading": "\"Lagt i handlekurv\" er et mellomsteg.",
+      "body": [
+        "Handlekurver, klikk og produktvisninger kan hjelpe oss å finne spørsmål som bør undersøkes. De er ikke det samme som fullførte kjøp.",
+        "Hvis mange ser et produkt uten å gå videre, kan informasjon eller produktvalg være verdt å undersøke. Hvis kunden stopper senere, må vi også se på hva som dukker opp i handlekurven og utsjekkingen. Uten data kan vi beskrive mulige hindringer, men ikke slå fast hvor tapet er størst.",
+        "Produktutvalg, lager, levering og priser kan også påvirke kjøpet. Nettsidearbeid alene løser ikke alle kommersielle eller driftsmessige begrensninger."
+      ]
+    },
+    {
+      "id": "okonomi",
+      "heading": "Flere ordre må vurderes sammen med økonomien i dem.",
+      "body": [
+        "En høyere konverteringsrate er ikke automatisk mer lønnsom. Endret produktmiks, lavere ordreverdi, rabatter og kostnader kan påvirke hva som blir igjen.",
+        "Vi bør avklare hvilke kjøp bedriften ønsker flere av, og hvilke data som finnes om ordreverdi, margin og kostnader. Det må være mulig å skille mellom aktivitet i nettbutikken og verdi for bedriften.",
+        "Vi lover ikke at et tiltak gir flere eller mer lønnsomme bestillinger. Forventningene må knyttes til utgangspunktet og det som faktisk kan måles."
+      ],
+      "links": [
+        {
+          "label": "Slik vurderer du effekten",
+          "href": "/innsikt/male-effekt-av-optimalisering/"
+        }
+      ]
+    },
+    {
+      "id": "tjenester",
+      "heading": "De samme tjenestene. Tilpasset veien til kjøp.",
+      "body": [
+        "Nettbutikker velger ikke et eget, ekstra pakkesett her. Synlighet er relevant når produktbehov og oppdagelse begrenser utviklingen. Konvertering er relevant når kunder møter hindringer mellom interesse og kjøp. Begge kan vurderes samlet.",
+        "Hva vi kan endre, avhenger av nettbutikken og avtalt omfang. Hovednettbutikken er utgangspunktet. Ekstra nettsteder, landingssider og arbeid hos andre leverandører må avklares særskilt.",
+        "Pris og konkret innhold avtales. Annonsebudsjett og aktuelle eksterne plattformkostnader er utenom den normale tjenesteprisen hvis ikke annet er uttrykkelig avtalt."
+      ],
+      "items": [
+        {
+          "title": "Synlighet",
+          "text": "Produkt- og kategoribehov må kunne møte relevante sider i nettbutikken.",
+          "href": "/synlighet/",
+          "label": "Se Synlighet"
+        },
+        {
+          "title": "Konvertering",
+          "text": "Kunden må kunne forstå, velge og komme gjennom en tydelig kjøpsvei.",
+          "href": "/konvertering/",
+          "label": "Se Konvertering"
+        },
+        {
+          "title": "Begge",
+          "text": "Oppdagelse og kjøpsvei kan trenge en samlet prioritering.",
+          "href": "/priser/#begge",
+          "label": "Se alternativene"
+        }
+      ]
+    },
+    {
+      "id": "sjekk",
+      "heading": "Send nettbutikken og fortell hvor du er usikker.",
+      "body": [
+        "En nettadresse og en e-postadresse for bedriften er nok for å be om den gratis sjekken. Fortell gjerne om du er mest usikker på oppdagelse, produktvalg eller veien til fullført kjøp.",
+        "Medon gjør en avgrenset, manuell vurdering og gir kort veiledning om hva vi ville startet med og hvorfor. Sjekken er ikke en full revisjon av katalogen, komplett feilliste, prognose eller gjennomføring."
+      ],
+      "links": [
+        {
+          "label": "Ta en gratis sjekk",
+          "href": "/vurdering/"
+        }
+      ]
+    }
   ],
   "faq": [
-    { "question": "Gjelder dette en bestemt nettbutikkplattform?", "answer": "Det er ikke fastsatt en bestemt plattform for denne tjenesten. Før videre arbeid må vi avklare hvilke tekniske muligheter nettbutikken har og hva som kan gjennomføres innenfor avtalt omfang." },
-    { "question": "Må vi begynne med SEO eller utsjekkingen?", "answer": "Det avhenger av hva som begrenser veien til kjøp. Få relevante besøk peker mot en annen undersøkelse enn besøkende som velger produkter og stopper før bestilling. Den gratis sjekken kan gi en mulig startretning." },
-    { "question": "Hvorfor holder det ikke å måle konverteringsrate?", "answer": "Konverteringsraten sier hvor stor andel av et definert besøksgrunnlag som kjøper. Den sier ikke alene hva som blir igjen etter produktkostnader, rabatter og andre relevante kostnader. Ordrenes verdi må også vurderes." }
+    {
+      "question": "Gjelder dette en bestemt nettbutikkplattform?",
+      "answer": "Det er ikke fastsatt en bestemt plattform for denne tjenesten. Før videre arbeid må vi avklare hvilke tekniske muligheter nettbutikken har og hva som kan gjennomføres innenfor avtalt omfang."
+    },
+    {
+      "question": "Må vi begynne med SEO eller utsjekkingen?",
+      "answer": "Det avhenger av hva som begrenser veien til kjøp. Få relevante besøk peker mot en annen undersøkelse enn besøkende som velger produkter og stopper før bestilling. Den gratis sjekken kan gi en mulig startretning."
+    },
+    {
+      "question": "Hvorfor holder det ikke å måle konverteringsrate?",
+      "answer": "Konverteringsraten sier hvor stor andel av et definert besøksgrunnlag som kjøper. Den sier ikke alene hva som blir igjen etter produktkostnader, rabatter og andre relevante kostnader. Ordrenes verdi må også vurderes."
+    }
   ],
-  "cta": { "label": "Ta en gratis sjekk", "href": "/vurdering/" }
+  "cta": {
+    "label": "Ta en gratis sjekk",
+    "href": "/vurdering/"
+  }
 }
