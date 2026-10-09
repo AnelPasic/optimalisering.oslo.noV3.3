@@ -1,6 +1,6 @@
 # Review queue
 
-State: H-009 /SYNLIGHET/ IMPLEMENTED / STOP FOR STRATEGY_CONTENT / D-027 R-06 PASS AND D-028 LOCK PRESERVED / OTHER 12 PAGES FROZEN / PROOF NON-PUBLIC.
+State: H-009 /SYNLIGHET/ STRATEGY_CONTENT PASS / H-010 /KONVERTERING/ OPEN / HOME-PRICING-SYNLIGHET BASELINES PROTECTED / OTHER PAGES FROZEN / PROOF NON-PUBLIC.
 
 | Order / ID | Scope | Responsible role | State / completion evidence |
 | --- | --- | --- | --- |
@@ -158,3 +158,5 @@ For each completed review, append date, actual reviewer/role, inspected SHA, sco
 - 2026-10-09: STRATEGY_CONTENT completed H-007 commercial review. Generated H-007 package copy was too implementation-centric, so customer-facing fit/scope, package intro, cost notes, free-check wording and pricing FAQ were refined directly in content. D-024 locks those exact commercial fields. D-025 prioritizes Oslo Privatklinikk for homepage proof and Nysta for ecommerce/conversion, but neither may render until missing proof facts are supplied and exact public wording is locked. H-008 now receives /priser/ only.
 
 - 2026-10-09: STRATEGY_CONTENT completed R-06 for H-008: PASS. The only material copy issue was the potentially contradictory heading “Fire områder. Én prioritering av gangen.”; it was changed to “Fire områder. Prioritert etter behov.”. D-028 locks the next page's copy and H-009 now receives /synlighet/ only.
+
+- 2026-10-09: STRATEGY_CONTENT reviewed H-009 /synlighet/: PASS under D-030. The page successfully establishes the reusable service-page pattern. D-031 locks the next /konvertering/ copy, including the previously selected H1 and first-section hook. H-010 may propagate the service renderer to /konvertering/ only and must generalize the pricing bridge without changing /synlighet/ output.
