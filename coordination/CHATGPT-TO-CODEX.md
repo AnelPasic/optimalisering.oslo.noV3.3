@@ -1,5 +1,258 @@
 # ChatGPT to Codex
 
+## Active handoff — H-010
+
+**Date:** 2026-10-09  
+**Authority:** STRATEGY_CONTENT D-030/D-031 + OWNER/STRATEGY_CONTENT D-032  
+**Scope:** controlled propagation of validated service pattern to `/konvertering/` only
+
+### Objective
+
+H-009 validates the service-page system on /synlighet/.
+
+Apply that same system to /konvertering/ using the exact D-031 locked content. Do not redesign the service pattern and do not independently rewrite copy.
+
+### Authoritative content
+
+Use the current exact bytes of:
+
+`app/src/content/pages/konvertering.json`
+
+locked at:
+`8b8f4c4eecda1458e45c392dfabe3d4ac4fbc8d5`
+
+Key locked text:
+
+**Eyebrow**
+> Fra besøk til henvendelser og kjøp
+
+**H1**
+> Det er ikke alltid kunden som må overbevises. Noen ganger må nettsiden slutte å stå i veien.
+
+**First section heading**
+> Det skal være enklere å kjøpe enn å gi opp.
+
+Do not shorten or replace these in implementation.
+
+### 1. Reuse the validated service-page pattern
+
+Use the D-030 /synlighet/ pattern:
+- accepted header/footer;
+- 1440px max shell and controlled text measures;
+- Instrument Sans / Figtree roles;
+- current plum/teal/mint/lavender family;
+- text-led service hero;
+- quiet breadcrumb;
+- open editorial sections;
+- cards only where they improve comprehension;
+- one compact commercial bridge;
+- bounded free-check block;
+- FAQ.
+
+Do not create a new Konvertering design language.
+
+### 2. Hero
+
+Render:
+- breadcrumb;
+- locked eyebrow;
+- locked H1;
+- locked intro;
+- primary CTA: Ta en gratis sjekk;
+- secondary CTA: Se priser.
+
+The H1 is intentionally longer than Synlighet's. Handle line length/responsive wrapping with layout/measure, not copy edits.
+
+Do not add a second headline or fake CRO dashboard.
+
+### 3. Page sequence
+
+Render the locked sections in this order:
+
+1. Hero
+2. “Det skal være enklere å kjøpe enn å gi opp.”
+3. “Flere skjema er lite verdt hvis henvendelsene ikke passer.”
+4. “Vi starter med hindringen som står mest i veien.”
+5. “Hvis de rette besøkene ikke kommer, er ikke konvertering hele svaret.”
+6. Shared-data commercial pricing bridge
+7. “Send siden der du vil at kunden skal handle.”
+8. FAQ
+9. Footer
+
+No filler sections.
+
+### 4. First section
+
+The three items are:
+- Før kunden bestemmer seg
+- Når kunden vil videre
+- Etter handlingen
+
+Use the same clear card language as the first Synlighet section, but preserve the exact copy.
+
+The section should visually communicate a simple path from interest → action → useful outcome. Do not add arrows/steps if they make the page feel like a SaaS funnel diagram.
+
+### 5. Quality section
+
+The three locked items:
+- Tjenestebedrift
+- Nettbutikk
+- Måling
+
+This section explains that more form submissions/orders are not automatically better business outcomes.
+
+Use a calm, competent treatment. It may use open columns rather than cards if that matches the validated service pattern better.
+
+Do not invent benchmarks, conversion rates, margins or client results.
+
+### 6. Prioritization section
+
+Keep this editorial/open.
+
+The message is:
+- find the biggest friction;
+- prioritize it;
+- implement agreed work;
+- measure effect;
+- no promised uplift.
+
+Do not add generic CRO checklists.
+
+### 7. Conversion × visibility section
+
+Use the same strong contrasting section treatment that works for Synlighet × Konvertering on /synlighet/.
+
+Locked heading:
+> Hvis de rette besøkene ikke kommer, er ikke konvertering hele svaret.
+
+Links:
+- Se Synlighet → /synlighet/
+- Se pakker og priser → /priser/
+
+Do not imply that traffic volume alone is the answer. Relevant traffic is the distinction.
+
+### 8. Generalize the service pricing bridge
+
+Current `ServicePricingBridge.astro` hard-codes “Synlighet” in its two context lines.
+
+Refactor it so the active service supplies/derives the service name, producing:
+
+For /synlighet/:
+- Når Synlighet er det ene prioriterte området.
+- Når Synlighet jobber sammen med et annet område.
+
+For /konvertering/:
+- Når Konvertering er det ene prioriterte området.
+- Når Konvertering jobber sammen med et annet område.
+
+Do not duplicate prices or create a second package source.
+
+The package names/prices/recommendation/VAT still come from the existing shared CMS package source.
+
+Prove /synlighet/ rendered output remains unchanged after this refactor.
+
+### 9. Free check
+
+Use locked copy exactly.
+
+It must say:
+- 3 most important findings;
+- within 2 business days;
+- manual/bounded;
+- not a full CRO audit;
+- not a complete error list;
+- not a forecast;
+- not free implementation.
+
+Route CTA to:
+`/#sjekk`
+
+Do not create a second form.
+
+### 10. SEO / authority
+
+Preserve:
+- SEO title includes **Konverteringsoptimalisering (CRO)**;
+- one semantic H1;
+- clean H2/H3 hierarchy;
+- internal links to /synlighet/ and /priser/.
+
+Do not stuff “CRO” repeatedly into headings. The page should read naturally to a Norwegian business owner.
+
+### 11. Renderer architecture
+
+Extend the validated ServicePage route to /konvertering/.
+
+Allowed:
+- reusable service-name/context props;
+- small renderer generalization;
+- shared service visual mode.
+
+Not allowed:
+- automatically converting /seo/, /ai-synlighet/ or other pages to ServicePage;
+- broad schema migrations;
+- visual changes to /synlighet/.
+
+### 12. Proof
+
+No client proof in H-010.
+
+Do not change proof registry or guards.
+
+### 13. Frozen scope
+
+Must remain materially unchanged:
+- homepage
+- /priser/
+- /synlighet/
+- /seo/
+- /ai-synlighet/
+- /nettbutikkoptimalisering/
+- /vurdering/
+- /om/
+- /kontakt/
+- legal pages
+- insight pages/articles
+- backend/intake
+- /system/
+- /project/
+
+### Acceptance criteria
+
+1. /konvertering/ renders exact D-031 locked copy.
+2. Exact H1 and first-section hook are preserved.
+3. Page clearly belongs to the D-030 service-page system.
+4. Lead/order quality distinction is understandable without specialist knowledge.
+5. Conversion × visibility relationship is clear.
+6. Pricing bridge uses the shared package source.
+7. Service pricing bridge is generalized; no hard-coded Synlighet remains in reusable logic.
+8. /synlighet/ output is unchanged after bridge refactor.
+9. Homepage and /priser/ remain unchanged.
+10. No fake metrics/proof/benchmarks or invented terms.
+11. Other pages stay frozen.
+12. 1440 / 390 / 320 QA passes.
+
+### Evidence / delivery
+
+- Run full verify/tests/browser checks.
+- Add exact-copy checks for H1/eyebrow/first-section heading/order.
+- Add renderer regression covering both Synlighet and Konvertering bridge context.
+- Capture /konvertering/:
+  - full 1440 + 390;
+  - hero + first section 1440 + 390;
+  - quality/prioritization 1440 + 390;
+  - conversion×visibility + pricing bridge + free check 1440 + 390.
+- Compare /synlighet/ output against H-009 baseline.
+- Recheck homepage and /priser/.
+- Push to main and verify Worker.
+- Update coordination state/report/evidence.
+- Stop for STRATEGY_CONTENT review of /konvertering/.
+
+Do not continue to /seo/ or /ai-synlighet/ until the next handoff.
+
+
+---
+
 ## Completed handoff — H-009
 
 **Date:** 2026-10-09  
