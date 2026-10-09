@@ -1,6 +1,6 @@
 # ChatGPT to Codex
 
-## Active handoff — H-011
+## Completed handoff — H-011
 
 **Date:** 2026-10-09  
 **Authority:** OWNER + STRATEGY_CONTENT D-033–D-038  
@@ -310,6 +310,8 @@ Stop for:
 2. ChatGPT-generated Synlighet/Konvertering hero assets.
 
 Do not continue to SEO/AI-synlighet or English page generation without the next handoff.
+
+**Implementation receipt, 2026-10-09:** received main **5b527b9d26a7a4209dc84444a3a2faa89413f48d**, implemented at **2faf9dc6632d080e2b594b079b69245c0415475e**. D-033–D-038 and the authoritative landing-page rules are consumed without changing source JSON/status/authority. Exact D-037 fit/provider copy and pricing title render; accepted chrome has one visible provider disclosure. Optional service-media schema/CMS/renderer preserves text-only missing-file fallback and supports supplied photo/illustration without generating final art. Minimal nb/en contracts and empty switch slot emit no English control/routes. Verification passes: 89 files/zero diagnostics, 39 tests, 442 links; 40 synthetic browser checks; four accepted pages at 1440/390/320; all 183 frozen hashes and 42 retained geometry/style snapshots; ten captures; actual both-service missing/supplied asset fixture. Fresh independent technical review reports no actionable finding. Main/Worker receipt belongs in CODEX-TO-CHATGPT and its Git history. **STOP for STRATEGY_CONTENT/OWNER review, then ChatGPT hero-asset generation/selection; no next implementation handoff is active.**
 
 
 ---
