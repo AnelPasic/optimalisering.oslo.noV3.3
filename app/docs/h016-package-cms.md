@@ -4,7 +4,7 @@ H-016 / D-053–D-057 gjør Pages CMS til normal redigeringsflate for pakketekst
 
 ## Én innholdskilde
 
-Åpne **Homepage → homepage → Felles pakker for forsiden, /priser/, /synlighet/ og /konvertering/**. Data lagres i `app/src/content/pages/home.json`, under `homepage.packages`.
+Åpne **Forside og felles pakker → Forsidens innhold → Felles pakker for forsiden, /priser/, /synlighet/ og /konvertering/**. Data lagres i `app/src/content/pages/home.json`, under `homepage.packages`.
 
 Forsiden og `/priser/` bruker samme komponent og alle tre pakkeobjektene. Forsidens detaljer er lukket ved innlasting; prissidens detaljer er åpne og kan lukkes. Presentasjonsmodus styres i kode. Serviceprisene og gjentatte pris-/kostnadsopplysninger arver samme kilde; serviceinnholdet har fortsatt sine egne godkjenninger.
 

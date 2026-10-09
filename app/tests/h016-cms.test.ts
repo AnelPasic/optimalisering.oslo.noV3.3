@@ -17,6 +17,7 @@ test('OWNER can edit package CTA wording while order and detail routes remain re
   for(const {path,field:shared}of leaves(packages.fields.filter((f:any)=>f.name!=='items')))assert.notEqual(shared.readonly,true,`Shared field ${path}`);
   for(const path of ['key','cta.href','detailLink.href']) assert.equal(field(path)?.readonly,true,path);
   assert.ok(!/låst|scoped.*handoff/i.test(JSON.stringify(packages)),'Editor guidance must allow routine safe OWNER editing');
+  assert.ok(!/lås/i.test(cms.content.find((c:any)=>c.name==='homepage').label),'The package editor entry also uses a neutral label');
   assert.equal(field('visualAsset.src').options.media,'packageVisuals');
   assert.deepEqual(field('visualAsset.src').options.extensions,['svg','webp','png']);
 });

@@ -321,7 +321,7 @@ content:
         type: boolean
         default: false
   - name: homepage
-    label: Forside og felles pakker – D-024 kommersiell del-lås
+    label: Forside og felles pakker
     type: file
     path: app/src/content/pages/home.json
     format: json
