@@ -1,0 +1,96 @@
+{
+  "base": "https://optimalisering-oslo-v33.anel.workers.dev",
+  "checkedAt": "2026-10-09T09:54:51.276Z",
+  "baselineSource": "5b527b9d26a7a4209dc84444a3a2faa89413f48d",
+  "layoutSource": "282bc60a69d8a14cd473334b5ea3e8374ad77a31",
+  "frozenFilesChecked": 183,
+  "checks": [
+    {
+      "route": "/",
+      "width": 1440,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/priser/",
+      "width": 1440,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/synlighet/",
+      "width": 1440,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/konvertering/",
+      "width": 1440,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/priser/",
+      "width": 390,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/synlighet/",
+      "width": 390,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/konvertering/",
+      "width": 390,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/",
+      "width": 320,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/priser/",
+      "width": 320,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/synlighet/",
+      "width": 320,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    },
+    {
+      "route": "/konvertering/",
+      "width": 320,
+      "providerAndLocale": true,
+      "preserved": true,
+      "noOverflow": true
+    }
+  ],
+  "errors": [],
+  "posts": 0,
+  "liveEmailsSent": 0
+}
