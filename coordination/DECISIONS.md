@@ -99,6 +99,10 @@ OWNER subsequently explicitly applies `#320c43` also to the homepage footer. Thi
 
 | D-062 | OWNER + STRATEGY_CONTENT / H-017A PARALLEL INTAKE READINESS | While OWNER reviews CMS/content/visual/proof priorities, Codex may prepare the technical intake and direct-order path behind explicit fail-closed feature gates. This includes frontend order transport readiness, attribution/idempotency parity, spam protection, production guards, tests and a launch-readiness document. No real submissions, secrets, indexing, domain switch or content changes are authorized. | OWNER request in ChatGPT, 2026-10-09. Contract: `coordination/H017A-INTAKE-READINESS.md`. |
 
+| D-063 | OWNER / H-016 CMS SMOKE TEST FAILS FULL ACCEPTANCE | Actual OWNER Pages CMS smoke test proves GitHub save works, but the CMS is not yet customer-grade and saved content is not reaching the Worker. The current generic "Nettsider" editor is too technical/large, and recent Pages CMS commits have failing Cloudflare Workers Builds. H-016 remains an implementation pass only, not a completed CMS workflow acceptance. | OWNER smoke test, 2026-10-09. Example saved content is present on main; deployment failure is separate. |
+| D-064 | OWNER / PAGES CMS MERGE SAFETY | Pages CMS must run with `settings.content.merge: true` so editor saves preserve unmodeled/protected JSON fields. This is taken from the proven older live CMS pattern and was applied immediately to V3.3. | Implemented 2026-10-09 in `.pages.yml`. |
+| D-065 | OWNER + STRATEGY_CONTENT / H-017B QUEUED | After H-017A, refactor Pages CMS into a client-grade editor modeled on the stronger old live CMS information architecture and fix/reproduce content-save deployment reliability. | OWNER instruction 2026-10-09. Contract: `coordination/H017B-CMS-UX-DEPLOY.md`. |
+
 ## Review publication authority
 
 | ID | Authority / state | Decision | Source and scope |
