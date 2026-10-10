@@ -1092,7 +1092,7 @@ content:
               - name: href
                 label: Intern lenke
                 type: string
-                pattern: ^/
+                pattern: ^(/.*)?$
               - name: label
                 label: Lenketekst
                 type: string

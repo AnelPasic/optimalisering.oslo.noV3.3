@@ -27,6 +27,7 @@ export function validateCmsForm(value: any, fields: any[], components: any, path
     const field = resolveField(definition, components), input = value[field.name], fieldPath = path + '.' + field.name;
     if (field.required && (input == null || input === '' || (Array.isArray(input) && input.length === 0))) throw new Error(fieldPath + ': required');
     if (input == null || (!field.required && field.type === 'object' && empty(input))) continue;
+    if (field.pattern && typeof input === 'string' && !new RegExp(field.pattern).test(input)) throw new Error(fieldPath + ': pattern');
     if (field.list) {
       if (!Array.isArray(input)) throw new Error(fieldPath + ': expected list');
       const min = field.list.min ?? 0, max = field.list.max ?? Infinity;

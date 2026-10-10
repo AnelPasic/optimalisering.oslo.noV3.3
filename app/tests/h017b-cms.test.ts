@@ -84,6 +84,19 @@ test('CMS rejects clearing mandatory text before it can create a broken content 
   }
 });
 
+test('initialized optional internal links accept blank input while rejecting an external route', () => {
+  const original = JSON.parse(records.find(record => record.path.endsWith('/seo.json'))!.bytes.toString());
+  const form = structuredClone(original);
+  const item = form.sections.flatMap((section: any) => section.items ?? []).find((item: any) => item.href === undefined);
+  assert.ok(item);
+  item.href = ''; // Pages CMS initializeState supplies empty strings for missing scalars
+  const entry = entryForFile(cms, 'app/src/content/pages/seo.json');
+  const after = JSON.parse(cmsJsonSave(original, form, entry, cms));
+  assert.deepEqual(pageSchema.parse(after), pageSchema.parse(original));
+  item.href = 'https://example.invalid/';
+  assert.throws(() => cmsJsonSave(original, form, entry, cms), /pattern/);
+});
+
 test('raw preservation checks expose nonempty unmodeled repeater data loss', () => {
   const original = JSON.parse(records.find(record => record.path.endsWith('/home.json'))!.bytes.toString());
   original.homepage.packages.items[0].futureInternalMetadata = { token: 'must-survive' };

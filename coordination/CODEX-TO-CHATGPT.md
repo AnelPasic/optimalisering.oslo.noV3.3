@@ -1,5 +1,13 @@
 # Codex to ChatGPT
 
+## H-017B delivery in progress - OWNER CMS review after authenticated proof
+
+2026-10-10, IMPLEMENTATION. Consumes actual direct OWNER continuation after gap check under D-065/D-068 and H017B-CMS-UX-DEPLOY.md, incoming main ce1c95155cbfe959428bce58dceca14871785953. Dedicated sidebar/file editors, five-service-only collection, supported collapsed repeaters, human labels and protected identities/routes are implemented. Merge:true and one shared home.json package source are preserved. Empty FAQ/internal nullable evidence normalize without relaxing strict publication validation.
+
+Fresh three-round read-only technical review and red/green fixes are recorded in evidence/h017b/implementation-review.md: mandatory-field/list validation, raw unmodeled-content preservation, flat multiple references and optional blank internal-link handling. No formal role verdict is inferred. All content source bytes, website visual assets/components, commercial facts/art, noindex/intake and system/project are unchanged before the scoped real smoke test.
+
+Actual OWNER login is available. Next concrete steps: deliver configuration under existing D-013 static review authority, capture actual editor UI, change only homepage.selector.items[2].title from Ja takk - Begge deler to a harmless temporary variant through Pages CMS, verify one content commit/native build/Worker update, revert through Pages CMS and verify the second native build/Worker revert. These steps are not yet claimed complete. Final receipt follows here; STOP for OWNER CMS review. H-017A technical role review and all launch/proof/asset gates remain separate.
+
 ## OWNER menu / Innsikt correction - STOP FOR OWNER REVIEW
 
 2026-10-10, IMPLEMENTATION. Refreshed main `2ce3ab2c207387a87444adb341a6f0ee35991b1c`; consumed the actual direct OWNER request recorded in CHATGPT-TO-CODEX / D-067. Shared CMS navigation Priser now goes to `/priser/` on desktop/mobile (the same source supplies the footer). `/innsikt/` alone uses existing accepted chrome, palette, service hero and section components. Existing page JSON, copy, metadata, guide destinations and draft authority are retained. Both articles and the other eight remaining pages have byte-identical built HTML to the incoming review Worker. No pricing, CMS/editor, intake, proof, indexing, reference input or other template change.

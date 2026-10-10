@@ -13,6 +13,8 @@ Minor finding: representative selector edit targeted the second heading, while t
 
 Second read-only review assessed 29d389f..8243ba8, independently passed 16 focused tests plus qa:cms, and confirmed the initial fixes. It found one Important new regression: caseIds is already a multiple reference, so an added outer list:{} would produce nested arrays in the actual upstream reference transformation. Executor accepts the finding. The reference transformation and dedicated flat-array configuration test both fail before removing that outer list and pass afterward; options.multiple:true and publication gates are preserved. Final exact correction commit is reviewed in the third and final implementation review round. No website content changes.
 
+Third/final read-only review assessed 8243ba8..9142006: 17 focused tests plus qa:cms pass; reference correction confirmed. One inherited Important issue remained: optional section-item href uses pattern ^/ while Pages CMS initializes missing strings to empty. Executor accepts it within ordinary-save reliability scope. A regression using initialized href:'' and fixture pattern validation reproduces rejection before the repair; changing only the optional pattern to ^(/.*)?$ allows blank/internal links while rejecting external routes. Required order/detail/other link patterns and the application's startsWith('/') optional route schema remain unchanged. Root independently verifies the repair/full pipeline and actual forms; no fourth review or invented post-fix reviewer verdict is recorded.
+
 Reviewer considered/set aside, with executor rulings:
 
 - Authenticated save/build/live-update/revert: required after configuration delivery; stays an outstanding concrete completion step, not dropped.
