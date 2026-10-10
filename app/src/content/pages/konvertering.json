@@ -123,5 +123,12 @@
   "cta": {
     "label": "Ta en gratis sjekk",
     "href": "/#sjekk"
+  },
+  "heroVisual": {
+    "kind": "photo",
+    "src": "/images/services/happy-shopowner.png",
+    "alt": "Butikk som selger",
+    "positionX": 50,
+    "positionY": 50
   }
 }
