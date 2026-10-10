@@ -11,6 +11,8 @@ Incoming main: `ce1c95155cbfe959428bce58dceca14871785953`. Actual OWNER continua
 
 Constraints: no website design, customer copy/offer/price changes, proof publication, real intake/email, secrets, index/domain change, English or edits to system/project. Existing H-017A role review remains separate.
 
+Concurrent actual OWNER CMS commits found at delivery: 36571a2 uploads app/public/images/services/happy-shopowner.png; 301dfb9 sets shared component link.href required:false. Both are merged without overwriting them. The component's internal-path pattern and application route validation remain; the independently optional section-item link allows blank initialization. Three local app/src/assets/images PNGs are unrelated OWNER work and remain untouched/untracked. Final preservation compares against OWNER main 301dfb9 as well as incoming ce1c951.
+
 Initial authenticated check: actual connected browser redirects app.pagescms.org to `/sign-in?redirect=%2F`. OWNER was asked about signing in while independent technical work continues. No sign-in/send/credential action was taken.
 
 OWNER actually replied "Jeg logger inn nå". Connected Chrome now shows the authenticated correct repository/main. Its original generic editor is captured in cms-before.jpg. New editor screenshots and real save/revert require delivering the configuration first.

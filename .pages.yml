@@ -52,7 +52,7 @@ components:
         label: Intern lenke
         type: string
         pattern: ^/
-        required: true
+        required: false
 content:
   - name: homepage
     label: Forside
