@@ -128,5 +128,12 @@
   "cta": {
     "label": "Ta en gratis sjekk",
     "href": "/#sjekk"
+  },
+  "heroVisual": {
+    "kind": "illustration",
+    "src": "/images/services/discoveringlocalfavorite-1.png",
+    "alt": "Bli funnet",
+    "positionX": 50,
+    "positionY": 50
   }
 }
