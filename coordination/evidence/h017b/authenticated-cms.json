@@ -1,0 +1,132 @@
+{
+  "checkedAt": "2026-10-10T10:41:12.165Z",
+  "repository": "AnelPasic/optimalisering.oslo.noV3.3",
+  "branch": "main",
+  "operator": "IMPLEMENTATION in actual OWNER-authenticated connected Chrome",
+  "before": "d579d79d582237ec0114fc3ff2cd7699a2fdfbf3",
+  "edit": "86211b55f178f482d3b0253bab0a4eab13ed1d2e",
+  "revert": "acded21eca0efaa4338a202e4ba42717277e1d4c",
+  "field": "homepage.selector.items[2].title",
+  "original": "Ja takk - Begge deler",
+  "temporary": "Ja takk - Begge deler (CMS-test)",
+  "eachSaveExactlyOneContentCommit": true,
+  "editedOnlyExpectedField": true,
+  "restoredAll17ContentGitBytes": true,
+  "hashes": [
+    {
+      "file": "app/src/content/pages/ai-synlighet.json",
+      "incomingSha256": "6d3baa9024893f7b4a422d959bb85661f6af0b3d5b5c214fa8c99d8fa9c22ee2",
+      "restoredSha256": "6d3baa9024893f7b4a422d959bb85661f6af0b3d5b5c214fa8c99d8fa9c22ee2",
+      "gitBytesIdentical": true
+    },
+    {
+      "file": "app/src/content/pages/home.json",
+      "incomingSha256": "02d5d9a4b63347b25e743d99a7f876bfc4f245f0c87e2c83525a126c9f0904e3",
+      "restoredSha256": "02d5d9a4b63347b25e743d99a7f876bfc4f245f0c87e2c83525a126c9f0904e3",
+      "gitBytesIdentical": true
+    },
+    {
+      "file": "app/src/content/pages/hva-bor-optimaliseres-forst.json",
+      "incomingSha256": "3b1fcf9e0e104e9a05bff5d819de54e0ce5e86190fb938d6bdbbc94f519c6068",
+      "restoredSha256": "3b1fcf9e0e104e9a05bff5d819de54e0ce5e86190fb938d6bdbbc94f519c6068",
+      "gitBytesIdentical": true
+    },
+    {
+      "file": "app/src/content/pages/innsikt.json",
+      "incomingSha256": "82e512d6c67e9fe1d47ccde6ac4ffc4fd04f0de5f9d5a844dcac0f9c76ccbd6d",
+      "restoredSha256": "82e512d6c67e9fe1d47ccde6ac4ffc4fd04f0de5f9d5a844dcac0f9c76ccbd6d",
+      "gitBytesIdentical": true
+    },
+    {
+      "file": "app/src/content/pages/kontakt.json",
+      "incomingSha256": "a0aec591c7fcd40a399520244c723d3a655ef88fb3c20b8092a86cf7ccc7f769",
+      "restoredSha256": "a0aec591c7fcd40a399520244c723d3a655ef88fb3c20b8092a86cf7ccc7f769",
+      "gitBytesIdentical": true
+    },
+    {
+      "file": "app/src/content/pages/konvertering.json",
+      "incomingSha256": "6aa1810fc356dec3621f96d79a6e52ea87f68857bf33b2874ad0b75c74daf352",
+      "restoredSha256": "6aa1810fc356dec3621f96d79a6e52ea87f68857bf33b2874ad0b75c74daf352",
+      "gitBytesIdentical": true
+    },
+    {
+      "file": "app/src/content/pages/male-effekt-av-optimalisering.json",
+      "incomingSha256": "1aab2c176ee783cdfb145a6341ddf447861f723347e309e717be7055ee96dee9",
+      "restoredSha256": "1aab2c176ee783cdfb145a6341ddf447861f723347e309e717be7055ee96dee9",
+      "gitBytesIdentical": true
+    },
+    {
+      "file": "app/src/content/pages/nettbutikkoptimalisering.json",
+      "incomingSha256": "64854962f6762348f1bf14419b8a95b0add3c568ee94366c24b785f7cdbb24fb",
+      "restoredSha256": "64854962f6762348f1bf14419b8a95b0add3c568ee94366c24b785f7cdbb24fb",
+      "gitBytesIdentical": true
+    },
+    {
+      "file": "app/src/content/pages/om.json",
+      "incomingSha256": "b57f9abe989bd8172eb526bb1ef58068900aa85ede7737aa73ac856178f6bb7f",
+      "restoredSha256": "b57f9abe989bd8172eb526bb1ef58068900aa85ede7737aa73ac856178f6bb7f",
+      "gitBytesIdentical": true
+    },
+    {
+      "file": "app/src/content/pages/personvern.json",
+      "incomingSha256": "885c8135ecda54597acb1469c606dbc2de7942918d83fa2c98c4effdcb658f55",
+      "restoredSha256": "885c8135ecda54597acb1469c606dbc2de7942918d83fa2c98c4effdcb658f55",
+      "gitBytesIdentical": true
+    },
+    {
+      "file": "app/src/content/pages/priser.json",
+      "incomingSha256": "5ba7b98a2cab44bf06f0afde6c1ecf9976c013ce2ac13ffb29d6b613be5c16d3",
+      "restoredSha256": "5ba7b98a2cab44bf06f0afde6c1ecf9976c013ce2ac13ffb29d6b613be5c16d3",
+      "gitBytesIdentical": true
+    },
+    {
+      "file": "app/src/content/pages/seo.json",
+      "incomingSha256": "2247d8822bbb86acf75901cda9de0f8bf25320fc0d7d3dba9206415b91ce288e",
+      "restoredSha256": "2247d8822bbb86acf75901cda9de0f8bf25320fc0d7d3dba9206415b91ce288e",
+      "gitBytesIdentical": true
+    },
+    {
+      "file": "app/src/content/pages/synlighet.json",
+      "incomingSha256": "0dd6879ebbcd4c771388952e3226b75b7cb60f7329409ac09ced47e7b32923af",
+      "restoredSha256": "0dd6879ebbcd4c771388952e3226b75b7cb60f7329409ac09ced47e7b32923af",
+      "gitBytesIdentical": true
+    },
+    {
+      "file": "app/src/content/pages/vilkar.json",
+      "incomingSha256": "1b77046f2701957c93bc1a7e79891d387d623f12a277ae6214a68621f6d3b4e6",
+      "restoredSha256": "1b77046f2701957c93bc1a7e79891d387d623f12a277ae6214a68621f6d3b4e6",
+      "gitBytesIdentical": true
+    },
+    {
+      "file": "app/src/content/pages/vurdering.json",
+      "incomingSha256": "52a609b26c66ef466a144334ff47ccbde824ef690799b7cc84bd6cc78310ec0d",
+      "restoredSha256": "52a609b26c66ef466a144334ff47ccbde824ef690799b7cc84bd6cc78310ec0d",
+      "gitBytesIdentical": true
+    },
+    {
+      "file": "app/src/content/proof/nysta.json",
+      "incomingSha256": "e8760b900c78f4a258a0bce1e4973ad6540e953610106323e33b7ba9f682dc9c",
+      "restoredSha256": "e8760b900c78f4a258a0bce1e4973ad6540e953610106323e33b7ba9f682dc9c",
+      "gitBytesIdentical": true
+    },
+    {
+      "file": "app/src/content/proof/oslo-privatklinikk.json",
+      "incomingSha256": "c8865b2b1a1ee055121883f35d01b58733abb4426712fa924cdc1c5a92bbdf43",
+      "restoredSha256": "c8865b2b1a1ee055121883f35d01b58733abb4426712fa924cdc1c5a92bbdf43",
+      "gitBytesIdentical": true
+    }
+  ],
+  "ownerConcurrentMain": "301dfb964447027d62792a3a5d187c83671e6d6a",
+  "protectedPathsEqualOwnerMain": true,
+  "notes": [
+    "Configuration navigation refreshed the old sidebar cache after code delivery; no configuration UI save.",
+    "After first save, Pages CMS retained its original form baseline: returning to original text disabled Save. Reloaded the entry from GitHub, then restored via enabled Save. The disabled-click attempt created no commit.",
+    "Three unrelated local assets/images PNGs remain untracked and untouched."
+  ],
+  "screenshots": [
+    "cms-sidebar-services.jpg",
+    "cms-service-editor.jpg",
+    "cms-home-packages.jpg",
+    "cms-packages-collapsed.jpg"
+  ]
+}

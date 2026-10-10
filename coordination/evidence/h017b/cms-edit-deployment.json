@@ -1,0 +1,308 @@
+{
+  "incomingMain": "ce1c95155cbfe959428bce58dceca14871785953",
+  "phase": "cms-edit",
+  "source": "86211b55f178f482d3b0253bab0a4eab13ed1d2e",
+  "implementation": "0f9460f7b061dcedeec9018801d1b3207f846d25",
+  "checkedAt": "2026-10-10T10:37:22.332Z",
+  "base": "https://optimalisering-oslo-v33.anel.workers.dev",
+  "build": {
+    "id": 114194041673,
+    "conclusion": "success",
+    "url": "https://dash.cloudflare.com/f772a1f16c82756f67e76357c4e5adaf/workers/services/view/optimalisering-oslo-v33/production/builds/5dbaad20-66c9-4d02-abc2-27176977376e",
+    "summary": "\nBuild ID: [5dbaad20-66c9-4d02-abc2-27176977376e](https://dash.cloudflare.com/f772a1f16c82756f67e76357c4e5adaf/workers/services/view/optimalisering-oslo-v33/production/builds/5dbaad20-66c9-4d02-abc2-27176977376e)\nScript: [optimalisering-oslo-v33](https://dash.cloudflare.com/f772a1f16c82756f67e76357c4e5adaf/workers/services/view/optimalisering-oslo-v33/production)\nVersion ID: f3ad27bd-73be-44de-89bb-4bd636ecc2fe\n"
+  },
+  "version": "f3ad27bd-73be-44de-89bb-4bd636ecc2fe",
+  "assets": [
+    {
+      "path": "/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 41431,
+      "sha256": "72ba81fd5346167d17382a5670164db3e48aefae8403175fdfe4e02aaf84888f"
+    },
+    {
+      "path": "/_astro/AssessmentForm.astro_astro_type_script_index_0_lang.DXxYcZg1.js",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 1503,
+      "sha256": "c4d7c940b839bd98bee27ef5236a3896c2cfa0069f15f013d24d36b031691b52"
+    },
+    {
+      "path": "/_astro/Attribution.astro_astro_type_script_index_0_lang.Un5106dL.js",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 189,
+      "sha256": "463abead88b74f672d0961e40e447d34f97516ca56b83b22c55fa85a26c63bce"
+    },
+    {
+      "path": "/_astro/attribution.BN71fkX8.js",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 906,
+      "sha256": "ab2982e50bcc23c4592f3ccfda077366973a32eaba9f683e245b1b7082990b57"
+    },
+    {
+      "path": "/_astro/lead.C_Cs7EHy.js",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 2160,
+      "sha256": "50fab7f154a411ee9b6066620c62f7702378ed02df2b4efe29714d5a9cf5d0d3"
+    },
+    {
+      "path": "/_astro/PackageOrder.astro_astro_type_script_index_0_lang.D26b2l3v.js",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 3250,
+      "sha256": "beb94d04d76e0e1a67e8d0e61024552f68ae814780ab009c185655d48bfe3999"
+    },
+    {
+      "path": "/ai-synlighet/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 15194,
+      "sha256": "e9acb4d6473b15d44aaf8a6cfe75e04eb6de62b1c518fc6575730751544af470"
+    },
+    {
+      "path": "/images/home/hero-customer-02.webp",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 68184,
+      "sha256": "20190965a8a08a61d6ae73e6d29e7e05d843186f129f683ec8242bb85aca5c91"
+    },
+    {
+      "path": "/images/home/hero-customer-03.webp",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 70886,
+      "sha256": "f18db9a1421c663ff0b8454fb9ba5e9783af64f2d6a3370370ce3f185792b795"
+    },
+    {
+      "path": "/images/home/hero-customer.webp",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 81652,
+      "sha256": "84756d154b710a75c7bf8a4b8f5c3c36e03ff6fe01c7e7cccf6a8dc5d9ff08c7"
+    },
+    {
+      "path": "/innsikt/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 9736,
+      "sha256": "8007914966236c4f4f18f3c8bd9cfedeeef97cc1db7f299d7b32cb6724ab7bd6"
+    },
+    {
+      "path": "/innsikt/hva-bor-optimaliseres-forst/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 15869,
+      "sha256": "d5ba6a295528dc185a2b646c77db1aab96bb105681c562efe1106168f12e5046"
+    },
+    {
+      "path": "/innsikt/male-effekt-av-optimalisering/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 16875,
+      "sha256": "0457fab988809e3b0309f7f3b09842b1c7db283bed3ed2cd04a0f7863e46fc44"
+    },
+    {
+      "path": "/kontakt/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 9331,
+      "sha256": "eb6cece47db007e92f168c36b75c6c8d5130eb05c88a8bdf95ff5c4a5a9eec59"
+    },
+    {
+      "path": "/konvertering/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 14717,
+      "sha256": "d37c2abb766f07414fb42b576f11f98a8f4e9d428f8b9d16b60bc5301acd7a8e"
+    },
+    {
+      "path": "/nettbutikkoptimalisering/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 15153,
+      "sha256": "2b365a9c0d6a53eb2f304a9cb2ebcd6167a6bc7ce2372305dc5bf46a26eae8bf"
+    },
+    {
+      "path": "/om/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 11387,
+      "sha256": "0764f419ff59fe22d5d8b64615c2d6313103309646b5a7940514a4255066b54a"
+    },
+    {
+      "path": "/personvern/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 10323,
+      "sha256": "edd697561d064747f4ff0cf1dc2c93061fd6f2b970304d407632b95075ac0423"
+    },
+    {
+      "path": "/priser/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 35847,
+      "sha256": "97a68ef337adcf0440216175f2fa20903d86022ca27f1c6f8a22d42191db5826"
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 26,
+      "sha256": "331ea9090db0c9f6f597bd9840fd5b171830f6e0b3ba1cb24dfa91f0c95aedc1"
+    },
+    {
+      "path": "/seo/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 14587,
+      "sha256": "c7e0eadda91e3fbf52e355dd12810fea828debcfd01a3c81e62f289bbb0ff370"
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 107,
+      "sha256": "68ab08991efaca902bcb8a6518106d8b29964c5651f39abbb7eb7c9713ca2770"
+    },
+    {
+      "path": "/styles/home-invite.css",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": false,
+      "lineEndingEquivalent": true,
+      "matchesTestedBuild": true,
+      "bytes": 15018,
+      "sha256": "cb01cfd73da92dffa3af48af6347b3cdf2b312ef6ead305831d0283aa6514383"
+    },
+    {
+      "path": "/styles/package-offer.css",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": false,
+      "lineEndingEquivalent": true,
+      "matchesTestedBuild": true,
+      "bytes": 11785,
+      "sha256": "a16804aeba3304b2c89458003f811fa987195e694c44c7b7263905d1d9ae96d7"
+    },
+    {
+      "path": "/styles/pricing-invite.css",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": true,
+      "matchesTestedBuild": true,
+      "bytes": 1812,
+      "sha256": "d71358be11ad062e41eacda0af0ac5bd9ca42ef6cff77b6813ff6025b3eba07b"
+    },
+    {
+      "path": "/styles/service-invite.css",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": true,
+      "matchesTestedBuild": true,
+      "bytes": 5115,
+      "sha256": "ddf0baf2b5b9f7b5653fd8906b1c7e5d85e2092df703688b53503a516c2e8620"
+    },
+    {
+      "path": "/synlighet/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 15577,
+      "sha256": "96a9a12fc5c0323b81ea258cef3881a19a9b0e6add7d32fef6f3ce126bc66dc1"
+    },
+    {
+      "path": "/vilkar/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 10242,
+      "sha256": "6363ec8644e76a3a1fdfaecf5f5f2631e3f52edf4550f59356226ca600ece600"
+    },
+    {
+      "path": "/vurdering/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "matchesTestedBuild": true,
+      "bytes": 13305,
+      "sha256": "dc808a67d72d16708e4247f70e375fdf40239d6c403ba5371f207301d680b5b7"
+    }
+  ],
+  "intakeGetStatus": 404
+}

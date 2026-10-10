@@ -6,6 +6,8 @@ H-017B bruker samme innholdsfiler og samme statiske review-Worker. Nettstedet ha
 
 Velg `AnelPasic/optimalisering.oslo.noV3.3`, gren `main`.
 
+Hvis en gammel nettleserfane fortsatt viser den tidligere menyen, åpne Configuration eller last editoren på nytt for å hente gjeldende oppsett. Etter lagring: last editoren på nytt før tilbakeføring, slik at tilbakeføringen tar utgangspunkt i den lagrede revisjonen.
+
 - **Forside** redigerer `home.json`, inkludert felles navigasjon, hero-bilde og **Forsidens innhold → Felles pakker**. Pakker finnes bare her og brukes også på pris- og tjenestesidene.
 - **Tjenester** inneholder Synlighet, Konvertering, SEO, AI-synlighet og Nettbutikkoptimalisering.
 - **Priser**, **Om tjenesten**, **Optimaliseringssjekk**, **Kontakt**, **Personvern** og **Vilkår** åpner hver sin eksisterende fil.
@@ -45,3 +47,5 @@ Obligatoriske tekstfelt og støttede listegrenser er markert i CMS, slik at tom 
 Aktive auditer bruker gjeldende CMS-pakketekst under D-054, samtidig som innholdslåser for øvrige sider, tilbudsregler, pris-/bestillingsruter, bevisvern og noindex/intake-porter består. Historiske H-012/H-014/H-015-øyeblikksbilder ligger utenfor normalt CMS-byggløp. Den midlertidige selector-knappeteksten skal også passere normal verifikasjon og tilbakeføres.
 
 Konfigurasjonen bygger på den gamle live-referansen `AnelPasic/optimalisering.oslo.no` `.pages.yml`, blob `6d90a6e4402caa78dcabebbac9cf009b4c194477`, tilpasset V3.3 uten datamigrering. Formatet er kontrollert mot [Pages CMS felt](https://pagescms.org/docs/configuration/content/fields/), [sammenleggbare lister](https://pagescms.org/docs/configuration/content/list/), [operasjoner](https://pagescms.org/docs/configuration/content/operations/) og [save-pipelinen](https://github.com/pages-cms/pages-cms/blob/6f4e860a35d934406580287e7042e5e111e207a1/app/api/%5Bowner%5D/%5Brepo%5D/%5Bbranch%5D/files/%5Bpath%5D/route.ts). [Workers Builds-konfigurasjon](https://developers.cloudflare.com/workers/ci-cd/builds/configuration/) beskriver arbeidskatalog og bygg-/deploykommandoer; faktisk tilgjengelig byggstatus og innstillingsinnsyn er dokumentert i leveranseevidensen.
+
+2026-10-10: faktisk innlogget CMS-lagring og tilbakeføring av den avtalte selector-teksten er kontrollert, med én innholdscommit og vellykket review-bygg per lagring. Alle 17 innholdsfiler er gjenopprettet nøyaktig. Skjermbilder og SHA-/byggkvitteringer ligger i `coordination/evidence/h017b/`. Full verifikasjon passerer med 74 tester, ingen Astro-feil/advarsler og én eksisterende typehint i en QA-fil. OWNER-godkjenning av CMS-opplevelsen gjenstår.

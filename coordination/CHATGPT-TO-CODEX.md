@@ -1,6 +1,10 @@
 # ChatGPT to Codex
 
-## Active handoff - H-017B / DIRECT OWNER CONTINUATION
+## Active handoff - NONE / STOP FOR OWNER CMS REVIEW
+
+H-017B is technically complete and delivered to main/the connected static review Worker. Actual authenticated CMS edit `86211b5` and revert `acded21` each create one expected content commit, pass full verify/native builds, and update/revert the Worker. All 17 content Git blobs are restored exactly. OWNER must review the delivered CMS experience; no role acceptance, H-017A verdict, next page implementation or launch is inferred. Exact source/build/screenshots are in CODEX-TO-CHATGPT and evidence/h017b; this receipt's own revision is identified through Git history.
+
+## Completed handoff - H-017B / DIRECT OWNER CONTINUATION
 
 2026-10-10. Following the H-017B gap check, actual OWNER reply in Codex: "ok, gjort ferdig?". IMPLEMENTATION treats this in context as the scoped instruction to finish queued H-017B under D-065 and `H017B-CMS-UX-DEPLOY.md` (spec commit `ba0cb912e3c504020ed22169f8bba99a433d617c`). Complete the CMS editor information architecture, data-preservation round trip and build/deploy verification, using the existing D-013 static review target. Preserve website design/copy/prices/proof, default-off intake, noindex, English and read-only references. Attempt authenticated CMS verification only when access is available; the actual OWNER save/revert remains the final proof if Codex cannot authenticate. Stop for OWNER CMS review. No H-017A verdict or launch approval is inferred.
 
