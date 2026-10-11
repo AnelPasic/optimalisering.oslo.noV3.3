@@ -2,7 +2,7 @@
 
 Updated: 2026-10-10. Owner: Medon AS. Implementation repository: AnelPasic/optimalisering.oslo.noV3.3.
 
-**State: H-017B IMPLEMENTATION + AUTHENTICATED CMS SAVE/REVERT COMPLETE; STOP FOR OWNER CMS REVIEW; H-017A TECHNICAL ROLE REVIEW REMAINS SEPARATE; REVIEW INTAKE FAIL-CLOSED; H-016 FULL CMS WORKFLOW NOT YET OWNER-ACCEPTED; SEO/AI/EN PAUSED; PROOF NON-PUBLIC.** Technical success does not approve processing, content or launch.
+**State: H-017B CMS WORKFLOW TECHNICALLY COMPLETE; H-017C VERIFIED PROOF PUBLICATION AUTHORIZED UNDER D-069-D-071; REVIEW INTAKE REMAINS FAIL-CLOSED; SEO/AI/EN PAUSED.** Two named proof records are now content-locked and publishable: Oslo Privatklinikk for homepage, Nysta for /konvertering/.
 
 2026-10-10 H-017B delivered at d579d79, preserving concurrent OWNER main 301dfb9 image/field-setting changes. Dedicated sidebar/file editors, five services, supported collapsed object repeaters, retained merge:true and protected identities/order routes are integrated. Three technical review/fix rounds complete. Actual authenticated CMS edit 86211b5 and revert acded21 each create exactly one expected content commit and pass full verify (74 tests; 0 Astro errors/warnings; 1 preexisting QA-script hint) plus native Worker builds. All 29 live asset comparisons pass in both phases, noindex/nofollow and intake GET404 remain, and all 17 content Git blobs are restored byte-identically. Actual UI screenshots, source/hashes and build/version receipts are in `evidence/h017b/`; current workflow in `app/docs/h017b-cms-workflow.md`. No formal OWNER/STRATEGY_CONTENT/RED_TEAM acceptance or launch is inferred. STOP for OWNER CMS review; H-017A review stays separate.
 
@@ -406,3 +406,8 @@ This work remains independent of ongoing content, visual and proof review. Imple
 ## H-017B queued
 Contract: `coordination/H017B-CMS-UX-DEPLOY.md`
 Immediate safety fix `settings.content.merge: true` is already on main. Do not execute H-017B until H-017A is complete or stopped.
+
+
+## H-017C active
+Authoritative contract: `coordination/H017C-PROOF-PUBLISH.md`
+Do not broaden proof beyond the two locked placements in this pass.
