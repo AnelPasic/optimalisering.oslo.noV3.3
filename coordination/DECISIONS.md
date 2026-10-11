@@ -124,6 +124,9 @@ Local implementation `29d389f` delivers dedicated editors/sidebar, only five ser
 | D-073 | STRATEGY_CONTENT / HOMEPAGE PROOF CANDIDATE REVIEW | Review of remaining known Medon evidence ranks **Eurotents** as the best homepage candidate if exact ROAS/GSC source periods and publication permission are re-locked; **Nysta** is the strongest already-cleared case and remains the approved /konvertering/ case. Helt Opplagt is better reserved for /synlighet/; Tankeverksted lacks a before/after baseline; Oracles needs source reconciliation. | Evidence audit: `coordination/PROOF-CANDIDATE-AUDIT-2026-10-11.md`. |
 | D-074 | OWNER + STRATEGY_CONTENT / H-017C REVISED | H-017C now publishes **Nysta on /konvertering/ only** and prepares the reusable homepage proof slot without a public homepage case. Oslo Privatklinikk is explicitly blocked; homepage selection waits for Eurotents verification or later OWNER decision. | OWNER instruction in ChatGPT, 2026-10-11. |
 
+| D-075 | OWNER / FIVE CASES APPROVED FOR PUBLIC USE | Eurotents, Nysta, Helt Opplagt, Tankeverksted and Oracles are all approved by OWNER for public use. For these five, permission is not a blocker; placement and visual hierarchy are the remaining decision. Oslo Privatklinikk remains outside this five-case approval and can be handled separately later. | OWNER clarification in ChatGPT, 2026-10-11. |
+| D-076 | STRATEGY_CONTENT / PROOF VISUAL HIERARCHY | Homepage should not show five equal case cards. Use **Eurotents as dominant featured proof**, with **Nysta** and **Helt Opplagt** as supporting homepage proof. Reserve **Tankeverksted** for paid-acquisition context and **Oracles** for ecommerce context. Future /resultater/ may aggregate all five. | STRATEGY_CONTENT placement decision, 2026-10-11, based on approved proof set and homepage task. |
+
 ## Review publication authority
 
 | ID | Authority / state | Decision | Source and scope |
