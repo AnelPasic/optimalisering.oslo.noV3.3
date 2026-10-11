@@ -1,182 +1,231 @@
-# H-017C - Publish verified proof/cases
+# H-017C - Final proof publication
 
 Date: 2026-10-11
 Authority: OWNER + STRATEGY_CONTENT
-Status: AUTHORIZED FOR IMPLEMENTATION REVIEW
+Decision basis: D-075 + D-076
+Status: AUTHORIZED FOR IMPLEMENTATION AND REVIEW
 
 ## Objective
 
-Publish the verified Nysta case on /konvertering/ and prepare the reusable homepage proof slot without publishing a homepage case yet.
+Publish the strongest OWNER-approved proof set without reopening proof selection.
 
-Oslo Privatklinikk is explicitly deferred pending direct client confirmation. Do not render or select it.
+OWNER has explicitly approved these five client references for public use:
+- Eurotents
+- Nysta
+- Helt Opplagt
+- Tankeverksted
+- Oracles
 
-Do not create a logo wall. Do not publish raw evidence dumps. Use one dominant result per placement with visible context and caveat.
+Publication permission is not a blocker for these five.
 
-## 1. Public case locks already written to proof records
+Oslo Privatklinikk remains separate/deferred and must not render.
 
-### Oslo Privatklinikk - DEFERRED
+Do not create five equal homepage cards. The visual/commercial hierarchy is locked below.
 
-Do not publish, select or render this case in H-017C. OWNER will confirm permission directly with the client later.
+## 1. Homepage hierarchy
 
-### Nysta
+Use exactly three cases on the homepage:
 
-Public dominant metric:
-- Fullført checkout
-- 7,1 %
-- 43,6 %
-- +36,5 prosentpoeng
+### Featured / dominant
+**Eurotents**
+- public hero metric: ROAS 4,3x -> 17,2x
+- support: 20 % lower ad spend
+- comparison: April 2025 -> April 2026
+- source family: Google Ads
+- role: strongest broad commercial proof and homepage anchor
+- do not publish the disputed GA4 conversion-rate comparison
 
-Comparable periods:
-- 30 dager før
-- første 30 dager etter
+### Supporting
+**Nysta**
+- public hero metric: fullført checkout 7,1 % -> 43,6 %
+- comparison: 30 days before -> first 30 days after
+- next 30 days: 58,1 %
+- keep the existing locked caveat
 
-Work:
-- Konverteringsoptimalisering av checkout og innføring av Vipps/MobilePay.
+### Supporting
+**Helt Opplagt**
+- public hero metric: +93 % organic clicks
+- support: average position 21,8 -> 12,2
+- comparison: March-September 2025 -> March-September 2026
+- source family: Google Search Console
+- scope the claim to organic visibility
+- do not imply total lead growth; recorded total forms were 79 -> 67
 
-Public limitation:
-- Målt blant brukere som startet checkout, ikke alle besøkende.
-- Flere endringer ble gjort i samme periode, så effekten kan ikke tilskrives ett tiltak alene.
-- Neste 30-dagersperiode var 58,1 %.
+Recommended desktop composition:
+- one wide featured Eurotents card
+- two smaller supporting cards for Nysta and Helt Opplagt
+- natural stacked order on mobile
 
-Do not simplify this into a guaranteed CRO multiplier.
+The first selected homepage case is the featured case. Do not flatten all three into equal cards.
 
-## 2. Homepage placement
+## 2. Service-page placement
 
-Do not publish a homepage case in H-017C.
-
-Keep the existing homepage proof position after packages/pricing and before mechanism/fit, but render nothing while no approved homepage case is selected.
-
-The reusable proof component should be ready for a later approved case without requiring a redesign.
-
-## 3. /konvertering/ placement
-
-Add a reusable proof block using Nysta.
+### /konvertering/
+Use Nysta as the primary proof block.
 
 Placement:
-- after the page has explained the conversion mechanism / customer journey;
-- before the pricing bridge or final conversion CTA;
-- it should function as proof of the page's main promise, not as a footer afterthought.
+- after the conversion mechanism/customer journey is clear
+- before the pricing bridge/final conversion path
 
-Required hierarchy:
-1. eyebrow: Dokumentert resultat
-2. heading: Fra 7,1 % til 43,6 % fullført checkout
-3. client name: Nysta
-4. large before/after comparison
-5. periods
-6. work: Konverteringsoptimalisering av checkout og innføring av Vipps/MobilePay
-7. caveat in readable small text
-8. optional support: "Neste 30-dagersperiode var 58,1 %."
+### /synlighet/
+Use Helt Opplagt as the primary proof block.
 
-Do not mention historical Strikka branding.
+Placement:
+- after the page has explained the visibility mechanism/channels
+- before the pricing bridge/final conversion path
 
-## 4. Reusable proof component
+### /nettbutikkoptimalisering/
+Do not force a new proof block in this task unless the reusable service-proof implementation makes it low-risk.
+If added, prefer Nysta first. Oracles may be used only with a claim shape that does not pretend GA4 revenue and Shopify net sales are the same measurement.
 
-Refactor HomeProof only as much as needed to create one reusable proof presentation.
+### Tankeverksted
+OWNER permission is granted, but this is an efficiency snapshot rather than a clean before/after case:
+- Mar-Sep 2026 Google Ads spend: 28 181 kr
+- 47 actual Gmail bookings/forms
+- approximately 600 kr per actual booking
+- Sep 2026: approximately 381 kr per actual booking
+- do not present Google-reported conversions as actual bookings
+- do not invent a before period to satisfy a renderer
+
+Keep it available for a later paid-acquisition placement unless a truthful snapshot-style proof variant already fits cleanly.
+
+### Oracles
+OWNER permission is granted, but current measurement systems/scopes differ.
+Do not manufacture an apples-to-apples before/after comparison.
+Keep it available for later ecommerce context unless a truthful non-comparable/snapshot proof variant is implemented without weakening proof gates.
+
+## 3. Proof registry
+
+Add the OWNER-approved case records needed by the selected public placements.
+
+At minimum, Eurotents and Helt Opplagt must become selectable/publishable records because homepage and /synlighet/ now depend on them.
+
+Nysta remains the existing locked publishable record.
+
+For Eurotents:
+- use the exact public Ads claim above
+- Ads comparison is April 2025 vs April 2026
+- organic support evidence is March-August 2025 vs March-August 2026, but do not mix it into the dominant Ads before/after fields if the component only supports one comparable period
+- source systems previously verified: Google Ads, GA4 and Google Search Console via Windsor.ai
+- public homepage claim should stay on the clean Google Ads ROAS/spend comparison
+- do not publish the GA4 conversion-rate comparison because migration/tracking comparability is disputed
+
+For Helt Opplagt:
+- dominant public visibility claim: organic clicks 2 162 -> 4 181 (+93 %)
+- average position 21,8 -> 12,2
+- March-September 2025 vs March-September 2026
+- keep limitations explicit: this is search visibility proof, not a claim of more total forms/revenue
+
+For Tankeverksted and Oracles:
+- permission can be recorded as granted
+- do not mark a structurally incomplete/non-comparable claim PUBLISHABLE merely to satisfy the UI
+- never weaken getPublishableCases
+
+## 4. Reusable proof presentation
+
+Refactor the proof UI only as much as needed.
 
 Requirements:
-- one content-safe renderer using getPublishableCases;
-- no bypass of proof publication gates;
-- supports one dominant case per placement;
-- semantic HTML;
-- responsive;
-- editable labels/headline/selected case through the page CMS configuration where practical;
-- client name comes from proof registry;
-- source/provenance details stay in registry, not dumped publicly.
+- continue to use getPublishableCases for normal before/after public proof
+- no bypass of proof publication gates
+- support homepage hierarchy: first case featured, next two supporting
+- support one primary proof placement on /konvertering/ and /synlighet/
+- semantic HTML
+- responsive at 1440 / 390 / 320
+- before/after/result understandable in under 3 seconds
+- caveats remain readable, not hidden
+- no dashboard styling
+- no fake screenshots
+- no trophy/badge graphics
+- no logo wall
+- no raw evidenceMetrics dump
 
-Do not weaken the existing getPublishableCases gate.
+Use current Instrument Sans / Figtree and green/cream/plum site DNA.
 
 ## 5. CMS
 
-Pages CMS should allow OWNER to:
-- choose the published case ID from the proof registry for each supported page placement;
-- edit eyebrow;
-- edit heading;
-- edit before/after/work labels.
+Pages CMS remains the editor over Git.
 
-Do not allow ordinary CMS editing to:
-- change permission state;
-- change publicationStatus;
-- change strategyReviewStatus;
-- bypass comparable-period requirement;
-- bypass proof publicationApproved.
+Keep the proof registry guarded/internal.
 
-The proof registry remains internal/guarded.
+OWNER must be able to edit/select safe presentation fields for supported placements:
+- selected case IDs
+- eyebrow
+- heading
+- before/after/work labels
 
-## 6. Visual direction
+For service pages, add the smallest safe CMS/content-model extension needed to choose the approved case for /konvertering/ and /synlighet/.
 
-Use current site DNA:
-- Instrument Sans for major metric/result;
-- Figtree for explanation;
-- current green/cream/plum palette;
-- generous whitespace;
-- one result large enough to scan;
-- before/after should be obvious in under 3 seconds.
+Ordinary CMS editing must never change:
+- permission state
+- publicationStatus
+- strategyReviewStatus
+- publicationApproved on the underlying proof case
+- comparable-period requirement
+- evidence/source fields
 
-Avoid:
-- dashboard look;
-- trophy/badge graphics;
-- fake screenshots;
-- testimonial quotation marks;
-- decorative logo wall;
-- confetti;
-- huge percentage with no context.
+Do not reopen pricing/package CMS work.
 
-A good pattern:
-- left: client/context + work
-- right: before -> after / result
-or the reverse if it fits the current section rhythm.
+## 6. Copy and claim rules
 
-Use plain text arrow style per COPY-STYLE: "->", not Unicode arrow characters.
+Follow coordination/COPY-STYLE.md.
 
-## 7. No standalone /resultater/ page yet
+Customer-facing copy:
+- Bokmal
+- clear, concrete, short
+- use "-" and "->"
+- no unsupported causal wording
+- no guarantee language
+- do not say Helt Opplagt got more total leads
+- do not publish Eurotents disputed GA4 conversion comparison
+- do not invent a before period for Tankeverksted
+- do not merge Oracles GA4 and Shopify revenue into one metric
 
-Do not create a new results page in H-017C.
+## 7. Preserve
 
-First prove:
-- homepage case;
-- /konvertering/ case;
-- visual hierarchy;
-- caveat readability.
+Do not redesign or materially change:
+- hero
+- selector
+- calculator
+- packages/pricing
+- order flow
+- service hero artwork
+- header/footer
+- intake feature flags
+- noindex
+- English scaffolding
 
-A dedicated case/results page can be added later if the two placements work.
+Do not create /resultater/ in H-017C.
 
-## 8. Preserve
-
-Do not change:
-- package prices/copy;
-- direct order;
-- CMS H-017B architecture;
-- service hero artwork;
-- homepage hero/selector/calculator;
-- /synlighet/ content;
-- intake feature flags;
-- noindex;
-- English scaffolding.
-
-## 9. QA
+## 8. QA
 
 Required:
 - full verify
 - proof publication gate tests
-- one test proving incomplete/non-approved proof cannot render
-- one test proving homepage renders no proof while no approved case is selected
-- one test proving Oslo Privatklinikk cannot render while permission is pending
-- one test proving /konvertering/ selects only Nysta
+- incomplete/non-approved proof cannot render
+- Oslo Privatklinikk cannot render
+- homepage renders Eurotents featured + Nysta + Helt Opplagt in locked order
+- /konvertering/ renders Nysta only
+- /synlighet/ renders Helt Opplagt only
+- no extra evidenceMetrics leakage
 - COPY-STYLE QA
-- 1440 / 390 / 320 screenshots for both placements
+- 1440 / 390 / 320 screenshots for homepage proof and both service proof placements
 - no layout overflow
-- no hidden proof leakage from raw evidenceMetrics
+- CMS config/schema/content round-trip checks
+- preserve all current pricing/order/intake/noindex safeguards
+
+Push to main and verify the connected review Worker.
 
 ## Acceptance
 
-1. Homepage renders no public case while replacement selection is unresolved.
-2. Oslo Privatklinikk cannot render while permission is pending.
-3. Nysta is visible on /konvertering/ with exact locked public claim and caveat.
-4. No other evidence metrics are rendered.
-4. No causal claim exceeds the evidence.
-5. No proof gate is weakened.
-6. Both blocks are visually strong and readable.
-7. CMS can edit placement headings/labels and case selection without changing registry approval state.
-8. All existing commercial/intake safeguards remain.
+1. Homepage shows Eurotents as dominant proof, with Nysta and Helt Opplagt supporting.
+2. /konvertering/ shows Nysta in the page flow before the pricing bridge/final CTA path.
+3. /synlighet/ shows Helt Opplagt in the equivalent contextual position.
+4. Oslo Privatklinikk does not render.
+5. No unsupported Tankeverksted/Oracles comparison is manufactured.
+6. Proof gates remain strict.
+7. Pages CMS can safely select/edit presentation without editing proof authority.
+8. Existing commercial, CMS, intake and preview safeguards remain intact.
+9. Build/tests/live review Worker pass.
 
-Stop for OWNER + STRATEGY_CONTENT proof review.
+Then STOP for OWNER + STRATEGY_CONTENT visual/content review.
