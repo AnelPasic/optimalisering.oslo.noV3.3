@@ -6,35 +6,17 @@ Status: AUTHORIZED FOR IMPLEMENTATION REVIEW
 
 ## Objective
 
-Publish the two verified case records already curated in the proof registry without exaggeration:
+Publish the verified Nysta case on /konvertering/ and prepare the reusable homepage proof slot without publishing a homepage case yet.
 
-1. Oslo Privatklinikk - broad homepage proof
-2. Nysta - conversion/ecommerce proof on /konvertering/
+Oslo Privatklinikk is explicitly deferred pending direct client confirmation. Do not render or select it.
 
 Do not create a logo wall. Do not publish raw evidence dumps. Use one dominant result per placement with visible context and caveat.
 
 ## 1. Public case locks already written to proof records
 
-### Oslo Privatklinikk
+### Oslo Privatklinikk - DEFERRED
 
-Public dominant metric:
-- Kontaktskjemaer
-- 89
-- 128
-- +44 %
-
-Comparable periods:
-- mai-september 2025
-- mai-september 2026
-
-Work:
-- Google Ads + konverteringsoptimalisering.
-
-Public limitation:
-- Skjemaene er totalt antall registrerte henvendelser på nettsiden og kan ikke alle tilskrives Google Ads.
-- Google Ads-forbruket var 7 % lavere i samme periode.
-
-Do not call the 448 kr figure a clean Ads CPL in public copy. It is derived from total forms and Ads spend and has an attribution caveat.
+Do not publish, select or render this case in H-017C. OWNER will confirm permission directly with the client later.
 
 ### Nysta
 
@@ -60,27 +42,11 @@ Do not simplify this into a guaranteed CRO multiplier.
 
 ## 2. Homepage placement
 
-Use only Oslo Privatklinikk on the homepage.
+Do not publish a homepage case in H-017C.
 
-Existing location:
-- after packages/pricing;
-- before mechanism/fit.
+Keep the existing homepage proof position after packages/pricing and before mechanism/fit, but render nothing while no approved homepage case is selected.
 
-The homepage proof section should feel like a strong evidence block, not a generic info card.
-
-Required hierarchy:
-1. eyebrow: Dokumentert resultat
-2. heading: 44 % flere registrerte kontaktskjemaer
-3. client name: Oslo Privatklinikk
-4. large before/after comparison: 89 -> 128
-5. period labels
-6. work: Google Ads + konverteringsoptimalisering
-7. small context/caveat text
-8. optional small support fact: "Google Ads-forbruket var 7 % lavere i samme periode."
-
-No CTA is required inside the proof block.
-
-Do not add logos unless OWNER later supplies/approves them.
+The reusable proof component should be ready for a later approved case without requiring a redesign.
 
 ## 3. /konvertering/ placement
 
@@ -193,7 +159,8 @@ Required:
 - full verify
 - proof publication gate tests
 - one test proving incomplete/non-approved proof cannot render
-- one test proving homepage selects only Oslo Privatklinikk
+- one test proving homepage renders no proof while no approved case is selected
+- one test proving Oslo Privatklinikk cannot render while permission is pending
 - one test proving /konvertering/ selects only Nysta
 - COPY-STYLE QA
 - 1440 / 390 / 320 screenshots for both placements
@@ -202,9 +169,10 @@ Required:
 
 ## Acceptance
 
-1. Oslo Privatklinikk is visible on homepage with exact locked public claim and caveat.
-2. Nysta is visible on /konvertering/ with exact locked public claim and caveat.
-3. No other evidence metrics are rendered.
+1. Homepage renders no public case while replacement selection is unresolved.
+2. Oslo Privatklinikk cannot render while permission is pending.
+3. Nysta is visible on /konvertering/ with exact locked public claim and caveat.
+4. No other evidence metrics are rendered.
 4. No causal claim exceeds the evidence.
 5. No proof gate is weakened.
 6. Both blocks are visually strong and readable.
