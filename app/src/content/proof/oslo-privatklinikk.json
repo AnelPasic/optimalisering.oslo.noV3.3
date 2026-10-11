@@ -15,8 +15,8 @@
   "intervention": "Google Ads + konverteringsoptimalisering.",
   "source": "Dokumentert Oslo Privatklinikk-case. Kontaktskjemaer er verifisert fra Gmail/nettsiden; Google Ads-forbruk er verifisert fra Ads.",
   "limitations": "Skjemaene er totalt antall registrerte henvendelser på nettsiden og kan ikke alle tilskrives Google Ads. Google Ads-forbruket var 7 % lavere i samme periode.",
-  "namingPermission": "GRANTED",
-  "permissionEvidence": "main 2090639; coordination/DECISIONS.md D-023; coordination/H007-COMMERCIAL-INPUT.md; OWNER confirmation in ChatGPT, 2026-10-08, grants client-name/case publication permission.",
+  "namingPermission": "NEEDS_PERMISSION",
+  "permissionEvidence": "OWNER correction 2026-10-11: do not rely on prior permission assumption; client confirmation is required before any public use.",
   "strategyReviewStatus": "CONTENT_LOCKED",
   "strategyReviewEvidence": "OWNER + STRATEGY_CONTENT public-case lock, 2026-10-11. Exact public claim is 89 -> 128 total website forms for May-September 2025 vs 2026, with Ads attribution caveat.",
   "artifactStatus": "NOT_IMPORTED",
@@ -63,6 +63,6 @@
       "timeframe": "May comparison"
     }
   ],
-  "publicationStatus": "PUBLISHABLE",
-  "publicationApproved": true
+  "publicationStatus": "REVIEW_REQUIRED",
+  "publicationApproved": false
 }
