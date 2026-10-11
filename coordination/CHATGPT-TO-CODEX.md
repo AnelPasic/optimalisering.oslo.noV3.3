@@ -1,5 +1,30 @@
 # ChatGPT to Codex
 
+## Active handoff - H-017C FINAL / D-075-D-076
+
+Date: 2026-10-11
+Authority: OWNER + STRATEGY_CONTENT
+Exact contract: coordination/H017C-PROOF-PUBLISH.md
+
+This supersedes the earlier H-017C instructions that left the homepage empty or limited public proof to Nysta.
+
+OWNER has now approved Eurotents, Nysta, Helt Opplagt, Tankeverksted and Oracles for public reference use. Permission is not a blocker for these five.
+
+Implement the final locked placement:
+- homepage: Eurotents featured/dominant + Nysta + Helt Opplagt supporting
+- /konvertering/: Nysta primary
+- /synlighet/: Helt Opplagt primary
+- do not render Oslo Privatklinikk
+- do not manufacture comparable before/after data for Tankeverksted or Oracles
+- do not create /resultater/ yet
+
+Add/import the proof records and the smallest service-page/CMS support needed for these placements. Preserve strict proof gates, pricing/order/CMS architecture, service visuals, noindex and fail-closed intake.
+
+Run full QA, push to main, verify the connected Worker, update CODEX-TO-CHATGPT with exact commits/evidence, then STOP for OWNER + STRATEGY_CONTENT review.
+
+---
+
+
 ## Active handoff - H-017C REVISED
 
 Date: 2026-10-11
