@@ -120,6 +120,10 @@ Local implementation `29d389f` delivers dedicated editors/sidebar, only five ser
 | D-070 | OWNER + STRATEGY_CONTENT / PROOF PLACEMENT | Homepage uses Oslo Privatklinikk as the single dominant broad-service proof after packages. `/konvertering/` uses Nysta as the relevant ecommerce/CRO proof. Do not create a logo wall or standalone results page in this pass. | OWNER request in ChatGPT, 2026-10-11. Contract: `coordination/H017C-PROOF-PUBLISH.md`. |
 | D-071 | OWNER + STRATEGY_CONTENT / H-017C AUTHORIZED | Implement the locked proof records through the existing guarded proof system. Keep source/provenance internal, render only the selected dominant metric/work/caveat, preserve proof gates, and stop for OWNER visual/content review. | OWNER instruction in ChatGPT, 2026-10-11. |
 
+| D-072 | OWNER / OSLO PRIVATKLINIKK PROOF DEFERRED | Do not publish or select Oslo Privatklinikk until OWNER has confirmed case/name permission directly with the client. Prior permission assumption is no longer sufficient. Record stays non-public with namingPermission NEEDS_PERMISSION, publicationStatus REVIEW_REQUIRED and publicationApproved false. | OWNER correction in ChatGPT, 2026-10-11. |
+| D-073 | STRATEGY_CONTENT / HOMEPAGE PROOF CANDIDATE REVIEW | Review of remaining known Medon evidence ranks **Eurotents** as the best homepage candidate if exact ROAS/GSC source periods and publication permission are re-locked; **Nysta** is the strongest already-cleared case and remains the approved /konvertering/ case. Helt Opplagt is better reserved for /synlighet/; Tankeverksted lacks a before/after baseline; Oracles needs source reconciliation. | Evidence audit: `coordination/PROOF-CANDIDATE-AUDIT-2026-10-11.md`. |
+| D-074 | OWNER + STRATEGY_CONTENT / H-017C REVISED | H-017C now publishes **Nysta on /konvertering/ only** and prepares the reusable homepage proof slot without a public homepage case. Oslo Privatklinikk is explicitly blocked; homepage selection waits for Eurotents verification or later OWNER decision. | OWNER instruction in ChatGPT, 2026-10-11. |
+
 ## Review publication authority
 
 | ID | Authority / state | Decision | Source and scope |
