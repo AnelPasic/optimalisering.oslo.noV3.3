@@ -2,7 +2,7 @@
 
 Updated: 2026-10-10. Owner: Medon AS. Implementation repository: AnelPasic/optimalisering.oslo.noV3.3.
 
-**State: H-017C REVISED UNDER D-072-D-074: NYSTA MAY PUBLISH ON /KONVERTERING/; HOMEPAGE PROOF REMAINS EMPTY/PREPARED; OSLO PRIVATKLINIKK DEFERRED PENDING CLIENT CONFIRMATION; EUROTENTS IS THE LEADING HOMEPAGE CANDIDATE PENDING SOURCE/PERMISSION LOCK. REVIEW INTAKE REMAINS FAIL-CLOSED; SEO/AI/EN PAUSED.**
+**State: H-017C PROOF SET CLARIFIED: EUROTENTS, NYSTA, HELT OPPLAGT, TANKEVERKSTED AND ORACLES ARE OWNER-APPROVED FOR PUBLIC USE. HOMEPAGE VISUAL HIERARCHY = EUROTENTS FEATURED + NYSTA + HELT OPPLAGT SUPPORTING. TANKEVERKSTED/ORACLES ARE RESERVED FOR MORE RELEVANT SERVICE-PAGE CONTEXT. OSLO PRIVATKLINIKK REMAINS SEPARATE/DEFERRED.**
 
 2026-10-10 H-017B delivered at d579d79, preserving concurrent OWNER main 301dfb9 image/field-setting changes. Dedicated sidebar/file editors, five services, supported collapsed object repeaters, retained merge:true and protected identities/order routes are integrated. Three technical review/fix rounds complete. Actual authenticated CMS edit 86211b5 and revert acded21 each create exactly one expected content commit and pass full verify (74 tests; 0 Astro errors/warnings; 1 preexisting QA-script hint) plus native Worker builds. All 29 live asset comparisons pass in both phases, noindex/nofollow and intake GET404 remain, and all 17 content Git blobs are restored byte-identically. Actual UI screenshots, source/hashes and build/version receipts are in `evidence/h017b/`; current workflow in `app/docs/h017b-cms-workflow.md`. No formal OWNER/STRATEGY_CONTENT/RED_TEAM acceptance or launch is inferred. STOP for OWNER CMS review; H-017A review stays separate.
 
