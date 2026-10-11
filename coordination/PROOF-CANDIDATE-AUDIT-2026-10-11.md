@@ -1,6 +1,6 @@
 # Proof candidate audit - 2026-10-11
 
-Purpose: replace/defer Oslo Privatklinikk as homepage proof and rank the other known Medon evidence by commercial strength, evidence quality and publication readiness.
+Purpose: choose the strongest visual/commercial placement for the five OWNER-approved cases: Eurotents, Nysta, Helt Opplagt, Tankeverksted and Oracles. Publication permission is not a blocker for these five.
 
 ## Verdict
 
@@ -140,19 +140,61 @@ Current status:
 - namingPermission = NEEDS_PERMISSION
 - do not select/render until OWNER confirms
 
-## Ranking for homepage
+## Visual/commercial placement recommendation
 
-1. Eurotents - best strategic fit and potentially strongest broad proof, but requires source/permission cleanup
-2. Nysta - strongest fully cleared proof today, but narrower ecommerce/CRO fit
-3. Helt Opplagt - excellent Synlighet proof, weaker as broad homepage proof
-4. Tankeverksted - credible actual-booking efficiency, lacks before/after
-5. Oracles - promising but measurement/source mismatch makes it unsafe now
+All five cases are OWNER-approved for use. The remaining question is placement and hierarchy.
 
-## Recommended next action
+### Homepage
 
-Do not block H-017C:
-- implement Nysta on /konvertering/
-- keep homepage proof empty but component-ready
-- separately verify Eurotents source periods + publication permission
-- if Eurotents clears, make it homepage proof
-- if not, use Nysta as fallback or wait for Oslo Privatklinikk confirmation
+Use **three cases only**:
+
+1. **Eurotents - featured/dominant**
+   - hero metric: ROAS 4,3x -> 17,2x
+   - support: 20 % lower ad spend
+   - role: proves broad commercial optimization and is the strongest homepage anchor
+
+2. **Nysta - supporting card**
+   - hero metric: checkout completion 7,1 % -> 43,6 %
+   - role: proves conversion optimization
+
+3. **Helt Opplagt - supporting card**
+   - hero metric: +93 % organic clicks
+   - support: average position 21,8 -> 12,2
+   - role: proves SEO/visibility
+
+This gives the homepage proof across the three core levers without turning it into a case archive.
+
+Recommended desktop composition:
+- one wide featured Eurotents card
+- two smaller Nysta/Helt Opplagt cards beside or below it
+- stack naturally on mobile
+
+### Service pages
+
+- /konvertering/: Nysta as primary case
+- /synlighet/: Helt Opplagt as primary case
+- Google Ads/campaign optimization page when added: Tankeverksted primary, Eurotents secondary
+- /nettbutikkoptimalisering/: Oracles + Nysta
+- future /resultater/: all five
+
+### Keep off the homepage for now
+
+**Tankeverksted**
+- strong efficiency proof
+- better when the visitor is already evaluating paid acquisition
+- no need to compete with the cleaner before/after homepage cases
+
+**Oracles**
+- strong ecommerce story
+- better as richer ecommerce case than as a small homepage metric tile
+
+## Visual rule
+
+Do not make five equal cards. That flattens the hierarchy and looks like a portfolio grid.
+
+Preferred hierarchy:
+- one dominant result
+- two supporting results
+- remaining cases placed where they are contextually strongest
+
+This is both cleaner visually and stronger commercially.
