@@ -314,16 +314,15 @@
       ]
     },
     "proof": {
-      "publicationApproved": false,
+      "publicationApproved": true,
       "caseIds": [
-        "oslo-privatklinikk",
-        "nysta"
+        "oslo-privatklinikk"
       ],
-      "eyebrow": "Dokumenterte resultater",
-      "heading": "Før, endring og etter",
+      "eyebrow": "Dokumentert resultat",
+      "heading": "Flere henvendelser med lavere annonseforbruk",
       "beforeLabel": "Før",
       "afterLabel": "Etter",
-      "changeLabel": "Endring"
+      "changeLabel": "Arbeid"
     },
     "form": {
       "promise": "Få våre 3 viktigste funn innen 2 virkedager.",
