@@ -1,5 +1,31 @@
 # ChatGPT to Codex
 
+## Active handoff - H-017C
+
+Date: 2026-10-11
+Authority: OWNER + STRATEGY_CONTENT D-069-D-071
+Exact contract: coordination/H017C-PROOF-PUBLISH.md
+
+Implement the two locked proof placements exactly.
+
+- Homepage: Oslo Privatklinikk only.
+- /konvertering/: Nysta only.
+- Use the updated publishable proof registry records on main.
+- Build one visually strong reusable proof component.
+- Do not render extra evidenceMetrics.
+- Do not weaken getPublishableCases or any publication gate.
+- Keep source/provenance internal.
+- Preserve current pricing, ordering, CMS, service visuals, noindex and fail-closed intake.
+
+Follow coordination/COPY-STYLE.md.
+
+Run full proof/visual/regression QA, push to main, verify Worker, then STOP for OWNER + STRATEGY_CONTENT proof review.
+
+Do not create /resultater/ yet.
+
+
+---
+
 ## Active handoff - NONE / STOP FOR OWNER CMS REVIEW
 
 H-017B is technically complete and delivered to main/the connected static review Worker. Actual authenticated CMS edit `86211b5` and revert `acded21` each create one expected content commit, pass full verify/native builds, and update/revert the Worker. All 17 content Git blobs are restored exactly. OWNER must review the delivered CMS experience; no role acceptance, H-017A verdict, next page implementation or launch is inferred. Exact source/build/screenshots are in CODEX-TO-CHATGPT and evidence/h017b; this receipt's own revision is identified through Git history.
