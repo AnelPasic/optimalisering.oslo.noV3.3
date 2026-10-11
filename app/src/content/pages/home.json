@@ -314,12 +314,10 @@
       ]
     },
     "proof": {
-      "publicationApproved": true,
-      "caseIds": [
-        "oslo-privatklinikk"
-      ],
+      "publicationApproved": false,
+      "caseIds": [],
       "eyebrow": "Dokumentert resultat",
-      "heading": "44 % flere registrerte kontaktskjemaer",
+      "heading": "Resultatcase kommer her når publisering er avklart.",
       "beforeLabel": "Før",
       "afterLabel": "Etter",
       "changeLabel": "Arbeid"
