@@ -3,28 +3,74 @@
   "clientName": "Nysta",
   "anonymizedLabel": null,
   "relationship": "Former Medon customer. Medon never owned Nysta and does not operate it now.",
-  "dominantMetric": "checkout completion",
-  "before": "7.1%",
-  "after": "58.1%",
-  "delta": null,
-  "period": { "before": null, "after": null, "comparable": false },
-  "intervention": null,
-  "source": "coordination/H007-COMMERCIAL-INPUT.md; prior separate registry NYSTA-PROOF-REGISTRY-v2.md; documented Shopify data and Vipps/CRO periods.",
-  "limitations": null,
+  "dominantMetric": "Fullført checkout",
+  "before": "7,1 %",
+  "after": "43,6 %",
+  "delta": "+36,5 prosentpoeng",
+  "period": {
+    "before": "30 dager før",
+    "after": "første 30 dager etter",
+    "comparable": true
+  },
+  "intervention": "Konverteringsoptimalisering av checkout og innføring av Vipps/MobilePay.",
+  "source": "Shopify-data fra dokumentert Nysta-case. Før/etter er 30 dager før mot første 30 dager etter CRO/Vipps-endringene.",
+  "limitations": "Målt blant brukere som startet checkout, ikke alle besøkende. Flere endringer ble gjort i samme periode, så effekten kan ikke tilskrives ett tiltak alene. Neste 30-dagersperiode var 58,1 %.",
   "namingPermission": "GRANTED",
   "permissionEvidence": "main 2090639; coordination/DECISIONS.md D-023; coordination/H007-COMMERCIAL-INPUT.md; OWNER confirmation in ChatGPT, 2026-10-08, grants customer-name/case publication permission.",
-  "strategyReviewStatus": "READY_FOR_STRATEGY_REVIEW",
-  "strategyReviewEvidence": null,
+  "strategyReviewStatus": "CONTENT_LOCKED",
+  "strategyReviewEvidence": "OWNER + STRATEGY_CONTENT public-case lock, 2026-10-11. Exact public claim limited to checkout completion 7,1 % -> 43,6 % with stated caveat.",
   "artifactStatus": "NOT_IMPORTED",
   "artifactReferences": [],
   "evidenceMetrics": [
-    { "metric": "checkout completion", "before": "7.1%", "after": "43.6%", "delta": null, "nextPeriod": "58.1%", "timeframe": null },
-    { "metric": "Shopify conversion", "before": "0.058%", "after": "1.403%", "delta": null, "nextPeriod": "1.874%", "timeframe": null },
-    { "metric": "orders / visits", "before": null, "after": null, "delta": "10x orders with 65% fewer visits", "nextPeriod": null, "timeframe": null },
-    { "metric": "Google traffic conversion", "before": "0.10%", "after": "1.93%", "delta": null, "nextPeriod": "2.91%", "timeframe": null },
-    { "metric": "product_sync", "before": null, "after": "31/50 orders and 16 265 / 25 511 kr sales", "delta": null, "nextPeriod": null, "timeframe": null },
-    { "metric": "Vipps/MobilePay", "before": null, "after": "15/26 paid orders used Vipps/MobilePay", "delta": null, "nextPeriod": null, "timeframe": null }
+    {
+      "metric": "checkout completion",
+      "before": "7.1%",
+      "after": "43.6%",
+      "delta": null,
+      "nextPeriod": "58.1%",
+      "timeframe": null
+    },
+    {
+      "metric": "Shopify conversion",
+      "before": "0.058%",
+      "after": "1.403%",
+      "delta": null,
+      "nextPeriod": "1.874%",
+      "timeframe": null
+    },
+    {
+      "metric": "orders / visits",
+      "before": null,
+      "after": null,
+      "delta": "10x orders with 65% fewer visits",
+      "nextPeriod": null,
+      "timeframe": null
+    },
+    {
+      "metric": "Google traffic conversion",
+      "before": "0.10%",
+      "after": "1.93%",
+      "delta": null,
+      "nextPeriod": "2.91%",
+      "timeframe": null
+    },
+    {
+      "metric": "product_sync",
+      "before": null,
+      "after": "31/50 orders and 16 265 / 25 511 kr sales",
+      "delta": null,
+      "nextPeriod": null,
+      "timeframe": null
+    },
+    {
+      "metric": "Vipps/MobilePay",
+      "before": null,
+      "after": "15/26 paid orders used Vipps/MobilePay",
+      "delta": null,
+      "nextPeriod": null,
+      "timeframe": null
+    }
   ],
-  "publicationStatus": "EVIDENCE_ONLY",
-  "publicationApproved": false
+  "publicationStatus": "PUBLISHABLE",
+  "publicationApproved": true
 }
