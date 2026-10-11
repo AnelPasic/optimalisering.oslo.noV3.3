@@ -1,6 +1,6 @@
 # Review queue
 
-State: H-017C VERIFIED PROOF PUBLICATION OPEN / HOMEPAGE = OSLO PRIVATKLINIKK / KONVERTERING = NYSTA / INTAKE FAIL-CLOSED.
+State: H-017C REVISED / NYSTA ON KONVERTERING ONLY / HOMEPAGE PROOF CANDIDATE VERIFICATION OPEN / OSLO PRIVATKLINIKK DEFERRED.
 
 | Order / ID | Scope | Responsible role | State / completion evidence |
 | --- | --- | --- | --- |
@@ -287,3 +287,5 @@ For each completed review, append date, actual reviewer/role, inspected SHA, sco
 - 2026-10-09: OWNER authenticated Pages CMS smoke test: saves create main commits, but editor UX is not deliverable and Workers Builds fail. H-017B is queued. Immediate merge:true preservation fix applied separately.
 
 - 2026-10-11: OWNER moved to proof/cases. D-069 locks exact public claims and caveats; D-070 selects homepage Oslo Privatklinikk and /konvertering/ Nysta. H-017C may implement presentation only; proof gates stay strict.
+
+- 2026-10-11: OWNER requires direct confirmation before Oslo Privatklinikk can be used. Homepage proof is therefore empty for H-017C. Eurotents ranks first as replacement candidate but requires exact source/period + publication permission verification. Nysta remains fully cleared for /konvertering/.
