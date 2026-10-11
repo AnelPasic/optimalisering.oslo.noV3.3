@@ -1,5 +1,32 @@
 # ChatGPT to Codex
 
+## Active handoff - H-017C REVISED
+
+Date: 2026-10-11
+Authority: OWNER + STRATEGY_CONTENT D-072-D-074
+Exact contract: coordination/H017C-PROOF-PUBLISH.md
+Candidate audit: coordination/PROOF-CANDIDATE-AUDIT-2026-10-11.md
+
+Implement only:
+- Nysta proof on /konvertering/.
+- Reusable proof component and homepage slot readiness.
+- Homepage must render no proof while no approved homepage case is selected.
+
+Do NOT render or select Oslo Privatklinikk.
+Do NOT independently publish Eurotents, Helt Opplagt, Tankeverksted or Oracles from the candidate audit.
+Do NOT weaken proof gates.
+
+Preserve all current pricing, ordering, CMS, service visuals, noindex and fail-closed intake.
+
+Follow coordination/COPY-STYLE.md.
+
+Run full proof/visual/regression QA, push to main, verify Worker, then STOP for OWNER + STRATEGY_CONTENT proof review.
+
+Do not create /resultater/ yet.
+
+
+---
+
 ## Active handoff - H-017C
 
 Date: 2026-10-11
