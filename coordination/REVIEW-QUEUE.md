@@ -1,6 +1,6 @@
 # Review queue
 
-State: H-017B IMPLEMENTATION + AUTHENTICATED CMS SAVE/REVERT COMPLETE / STOP FOR OWNER CMS REVIEW / H-017A TECHNICAL ROLE REVIEW SEPARATE / REVIEW FAIL-CLOSED / H-016 FULL CMS WORKFLOW NOT YET OWNER-ACCEPTED.
+State: H-017C VERIFIED PROOF PUBLICATION OPEN / HOMEPAGE = OSLO PRIVATKLINIKK / KONVERTERING = NYSTA / INTAKE FAIL-CLOSED.
 
 | Order / ID | Scope | Responsible role | State / completion evidence |
 | --- | --- | --- | --- |
@@ -285,3 +285,5 @@ For each completed review, append date, actual reviewer/role, inspected SHA, sco
 - 2026-10-09: OWNER asked for useful parallel Codex work. H-017A is authorized as a technical-only intake/order readiness pass. Review Worker must remain unable to submit real data.
 
 - 2026-10-09: OWNER authenticated Pages CMS smoke test: saves create main commits, but editor UX is not deliverable and Workers Builds fail. H-017B is queued. Immediate merge:true preservation fix applied separately.
+
+- 2026-10-11: OWNER moved to proof/cases. D-069 locks exact public claims and caveats; D-070 selects homepage Oslo Privatklinikk and /konvertering/ Nysta. H-017C may implement presentation only; proof gates stay strict.
