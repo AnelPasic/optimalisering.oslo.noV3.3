@@ -6,6 +6,8 @@ Decision-ID reconciliation on integrating `125d472`: upstream D-011 records RED_
 
 ## Applicable decisions and source constraints
 
+2026-10-12 direct OWNER monthly-calculator continuation (implementation receipt, no new numbered decision): the actual Codex instruction makes traffic increase a monthly rate with compound growth and moves all four fields left beneath the existing section text. Implementation `78b3dcca8fd81e61feebe89e2c3d98b23098ab5c` uses six deterministic monthly outcomes and clearly marks Scenario as month 6; 10 % is the example default. This scoped instruction supersedes the earlier request to preserve one-time traffic math/linear illustration, without changing unrelated content, commercial facts, accepted proof/hero/CMS, safeguards or launch gates. Original four-argument calculator callers retain one-month behavior. Existing main/Worker/QA authorization persists. Evidence and exact delivery are in CODEX-TO-CHATGPT / `evidence/calculator-monthly/`; full 83/83, focused 10/10 and four-width local/live QA pass. STOP for OWNER section review. Technical success records no content lock, formal acceptance or launch authorization.
+
 | ID | Authority / state | Decision | Source and scope |
 | --- | --- | --- | --- |
 | D-001 | OWNER EXPLICIT / ACTIVE, HOMEPAGE EXCEPTION D-012 | Existing 15-page build is an exploratory baseline. Pause expansion; preserve the remaining pages without redesign/deletion. | OWNER coordination instruction in Codex, 2026-10-08. D-012 subsequently permits one representative-homepage visual revision only. |

@@ -1,6 +1,10 @@
 # ChatGPT to Codex
 
-## Active handoff - NONE / OWNER CALCULATOR CHART DELIVERED / STOP FOR REVIEW
+## Active handoff - NONE / OWNER MONTHLY CALCULATOR CORRECTION DELIVERED / STOP FOR REVIEW
+
+2026-10-12 actual direct OWNER continuation: traffic increase is per month with compound growth, and all four numeric fields move left beneath the existing text. Implemented/pushed at `78b3dcca8fd81e61feebe89e2c3d98b23098ab5c`. Six monthly scenario points compound the chosen traffic rate; Scenario / Måned 6 shows that month's outcome, not a cumulative total. Monthly label and 10 % example default are the only content changes. This supersedes the previous one-time math/linear illustration within the calculator; all unrelated scopes remain preserved. Existing verification/publication authorization continues. Exact full/focused/local/live/native delivery: CODEX-TO-CHATGPT / `evidence/calculator-monthly/`. STOP for OWNER review; no active next implementation, new content lock or inferred verdict.
+
+## Historical delivery - OWNER CALCULATOR CHART
 
 2026-10-12 direct OWNER instruction in Codex authorizes one homepage-calculator enhancement: compact live SVG with Uten optimalisering / Med optimalisering, six illustrative month steps based on existing monthly outputs, explicit Illustrasjon - ikke prognose, and synchronized numeric/range controls for both conversion rates. Preserve existing section copy/math/result cards, all other sections/pages, accepted hero/proof, packages/chrome, CMS, noindex and disabled intake. Full verify, 1440/900/390/320 QA, main/native Worker verification and exact outbound evidence followed by STOP were explicitly requested. This consumes the actual direct instruction; no new numbered decision, content lock or launch authority is inferred.
 
