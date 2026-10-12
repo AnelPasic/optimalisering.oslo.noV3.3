@@ -1,0 +1,9 @@
+{
+  "checkedAt": "2026-10-12T20:41:46.112Z",
+  "base": "627a78af0e4d130d850aea1ea5a56f2d06708084",
+  "frozenBlobs": 250,
+  "allContentCmsMathHeroProofPricingChromeAssetsBackendAndReferencesUnchanged": true,
+  "dependenciesAndNoindexIntakeConfigurationUnchanged": true,
+  "allowedExistingRuntimeFile": "app/src/components/HomeLeverage.astro",
+  "result": "PASS"
+}

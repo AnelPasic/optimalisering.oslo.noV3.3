@@ -13,12 +13,26 @@ const signed = new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 1, signDi
     <div class="leverage-copy"><p class="eyebrow">{content.eyebrow}</p><h2>{content.heading}</h2><p class="body-copy">{content.intro}</p><p class="calculator-formula">{content.formula}</p></div>
     <div class="leverage-tool" data-leverage data-undefined-increase={labels.undefinedIncrease} data-increase-label={labels.increase}>
       <div class="calculator-inputs">
-        <label for="calc-visits">{labels.visits}<input id="calc-visits" name="visits" type="number" min="0" max="10000000" step="1" value={defaults.visits} inputmode="numeric" aria-describedby="calculator-error" /></label>
-        <label for="calc-conversion">{labels.conversion}<input id="calc-conversion" name="conversion" type="number" min="0" max="100" step="any" value={defaults.conversion} inputmode="decimal" aria-describedby="calculator-error" /></label>
-        <label for="calc-traffic">{labels.trafficIncrease}<input id="calc-traffic" name="trafficIncrease" type="number" min="0" max="1000" step="any" value={defaults.trafficIncrease} inputmode="decimal" aria-describedby="calculator-error" /></label>
-        <label for="calc-new-conversion">{labels.newConversion}<input id="calc-new-conversion" name="newConversion" type="number" min="0" max="100" step="any" value={defaults.newConversion} inputmode="decimal" aria-describedby="calculator-error" /></label>
+        <div class="calculator-field"><label for="calc-visits">{labels.visits}<input id="calc-visits" name="visits" type="number" min="0" max="10000000" step="1" value={defaults.visits} inputmode="numeric" aria-describedby="calculator-error" /></label></div>
+        <div class="calculator-field"><label id="calc-conversion-label" for="calc-conversion">{labels.conversion}<input id="calc-conversion" name="conversion" type="number" min="0" max="100" step="any" value={defaults.conversion} inputmode="decimal" aria-describedby="calculator-error" /></label><input type="range" min="0" max="100" step="any" value={defaults.conversion} data-slider="conversion" aria-labelledby="calc-conversion-label" disabled /></div>
+        <div class="calculator-field"><label for="calc-traffic">{labels.trafficIncrease}<input id="calc-traffic" name="trafficIncrease" type="number" min="0" max="1000" step="any" value={defaults.trafficIncrease} inputmode="decimal" aria-describedby="calculator-error" /></label></div>
+        <div class="calculator-field"><label id="calc-new-conversion-label" for="calc-new-conversion">{labels.newConversion}<input id="calc-new-conversion" name="newConversion" type="number" min="0" max="100" step="any" value={defaults.newConversion} inputmode="decimal" aria-describedby="calculator-error" /></label><input type="range" min="0" max="100" step="any" value={defaults.newConversion} data-slider="newConversion" aria-labelledby="calc-new-conversion-label" disabled /></div>
       </div>
       <p id="calculator-error" class="calculator-error" role="status" hidden>{labels.invalid}</p>
+      <figure class="scenario-chart" data-scenario-chart hidden>
+        <figcaption id="scenario-illustration-label">Illustrasjon - ikke prognose <span>6 måneder</span></figcaption>
+        <div class="scenario-legend"><span id="scenario-current-label" class="scenario-current">Uten optimalisering</span><span id="scenario-improved-label" class="scenario-improved">Med optimalisering</span></div>
+        <svg viewBox="0 0 480 128" role="img" aria-labelledby="scenario-illustration-label scenario-current-label scenario-improved-label" aria-describedby="scenario-current-value scenario-improved-value">
+          <path class="scenario-grid" data-chart-grid />
+          <path class="scenario-current-line" data-chart-current />
+          <path class="scenario-improved-line" data-chart-improved />
+          <circle class="scenario-current-dot" data-chart-current-dot r="3" />
+          <circle class="scenario-improved-dot" data-chart-improved-dot r="3" />
+          <text id="scenario-current-value" class="scenario-current-value" data-chart-current-value />
+          <text id="scenario-improved-value" class="scenario-improved-value" data-chart-improved-value />
+          {Array.from({ length: 6 }, (_, index) => <text class="scenario-month" data-chart-month y="122" text-anchor="middle">{index + 1}</text>)}
+        </svg>
+      </figure>
       <div class="calculator-results" role="status" aria-live="polite" aria-atomic="true">
         <div class="math-results">
           <div class="leverage-result"><span>{labels.current}</span><output data-current>{format.format(result.current)}</output><span class="outcome-label">{labels.outcome}</span><span class="math-equation" data-current-equation>{format.format(defaults.visits)} × {String(defaults.conversion).replace('.', ',')} %</span></div>
@@ -32,6 +46,7 @@ const signed = new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 1, signDi
 </section>
 <script>
   import { calculateScenario } from '../lib/leverage';
+  import { createScenarioIllustration } from '../lib/scenario-chart';
   const tool = document.querySelector<HTMLElement>('[data-leverage]');
   if (tool) {
     const inputs = ['visits', 'conversion', 'trafficIncrease', 'newConversion'].map(name => tool.querySelector<HTMLInputElement>(`[name="${name}"]`)!);
@@ -42,12 +57,20 @@ const signed = new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 1, signDi
     const currentEquation = tool.querySelector<HTMLElement>('[data-current-equation]')!;
     const scenarioEquation = tool.querySelector<HTMLElement>('[data-scenario-equation]')!;
     const error = tool.querySelector<HTMLElement>('#calculator-error')!;
+    const chart = tool.querySelector<HTMLElement>('[data-scenario-chart]')!;
+    const svg = chart.querySelector('svg')!;
+    const sliders = [...tool.querySelectorAll<HTMLInputElement>('[data-slider]')];
     const format = new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 1 });
     const signed = new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 1, signDisplay: 'exceptZero' });
     function update() {
       const valid = inputs.every(input => input.value !== '' && input.checkValidity());
       inputs.forEach(input => input.setAttribute('aria-invalid', String(input.value === '' || !input.checkValidity())));
       error.hidden = valid;
+      chart.hidden = !valid;
+      sliders.forEach(slider => {
+        const input = inputs.find(input => input.name === slider.dataset.slider)!;
+        if (input.value !== '' && input.checkValidity()) slider.value = input.value;
+      });
       if (!valid) {
         [current, scenario, difference, percentage, currentEquation, scenarioEquation].forEach(output => output.textContent = '–');
         return;
@@ -61,8 +84,59 @@ const signed = new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 1, signDi
       percentage.textContent = result.increase === null ? tool!.dataset.undefinedIncrease! : `${signed.format(result.increase)} % ${tool!.dataset.increaseLabel}`;
       currentEquation.textContent = `${format.format(visits)} × ${inputs[1].value.replace('.', ',')} %`;
       scenarioEquation.textContent = `${format.format(result.scenarioVisits)} × ${inputs[3].value.replace('.', ',')} %`;
+      const width = svg.getBoundingClientRect().width;
+      const illustration = createScenarioIllustration(result.current, result.scenario, width);
+      svg.setAttribute('viewBox', `0 0 ${width} 128`);
+      chart.querySelector('[data-chart-grid]')!.setAttribute('d', `M 12 88 H ${width - 92}`);
+      chart.querySelector('[data-chart-current]')!.setAttribute('d', illustration.currentPath);
+      chart.querySelector('[data-chart-improved]')!.setAttribute('d', illustration.scenarioPath);
+      for (const [name, series, value, labelY] of [
+        ['current', illustration.current, result.current, illustration.currentLabelY],
+        ['improved', illustration.scenario, result.scenario, illustration.scenarioLabelY],
+      ] as const) {
+        const end = series[5];
+        const dot = chart.querySelector(`[data-chart-${name}-dot]`)!;
+        dot.setAttribute('cx', String(end.x)); dot.setAttribute('cy', String(end.y));
+        const label = chart.querySelector(`[data-chart-${name}-value]`)!;
+        label.setAttribute('x', String(end.x + 10)); label.setAttribute('y', String(labelY));
+        label.textContent = format.format(value);
+      }
+      chart.querySelectorAll('[data-chart-month]').forEach((month, index) => month.setAttribute('x', String(illustration.current[index].x)));
     }
     inputs.forEach(input => input.addEventListener('input', update));
+    sliders.forEach(slider => {
+      slider.disabled = false;
+      slider.addEventListener('input', () => {
+        const value = String(Math.round(Number(slider.value) * 10) / 10);
+        inputs.find(input => input.name === slider.dataset.slider)!.value = value;
+        update();
+      });
+    });
+    new ResizeObserver(update).observe(svg);
     update();
   }
 </script>
+
+<style>
+  .calculator-field { min-width: 0; }
+  :global(.invite-home) .calculator-inputs input[type="range"] { display: block; min-height: 24px; height: 24px; margin: 6px 0 0; padding: 0; border: 0; border-radius: 0; background: transparent; accent-color: #b9e8d4; cursor: pointer; }
+  .scenario-chart { margin: 20px 0 0; padding: 12px; border-radius: 10px; background: #fbf9fc; color: #320c43; }
+  .scenario-chart figcaption { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; font-size: 12px; line-height: 1.4; }
+  .scenario-chart figcaption span { color: #566359; }
+  .scenario-legend { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-top: 8px; font-size: 12px; line-height: 1.4; }
+  .scenario-legend span { display: flex; align-items: center; gap: 6px; }
+  .scenario-legend span::before { content: ''; width: 16px; border-top: 2px dashed #63516b; }
+  .scenario-legend .scenario-improved::before { border-top: 3px solid #087b73; }
+  .scenario-chart svg { display: block; width: 100%; height: 128px; overflow: visible; }
+  .scenario-chart path { fill: none; }
+  .scenario-grid { stroke: #e0dbe6; }
+  .scenario-current-line { stroke: #63516b; stroke-width: 2; stroke-dasharray: 5 4; }
+  .scenario-improved-line { stroke: #087b73; stroke-width: 3; }
+  .scenario-current-dot, .scenario-current-value { fill: #63516b; }
+  .scenario-improved-dot, .scenario-improved-value { fill: #087b73; }
+  .scenario-chart text { font-family: var(--body); font-size: 12px; }
+  .scenario-month { fill: #566359; }
+  .scenario-current-line, .scenario-improved-line { transition: d 160ms ease; }
+  .scenario-chart circle { transition: cy 160ms ease; }
+  @media (prefers-reduced-motion: reduce) { .scenario-chart path, .scenario-chart circle { transition: none; } }
+</style>

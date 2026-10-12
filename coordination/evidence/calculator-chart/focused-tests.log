@@ -1,0 +1,16 @@
+✔ illustrative example keeps percentage units correct (0.4487ms)
+✔ invalid or impossible calculator inputs fail (0.184ms)
+✔ traffic and conversion compound rather than adding their effects (0.4417ms)
+✔ zero baseline has no defined percentage increase and fractional outcomes stay precise (0.095ms)
+✔ combined scenario rejects impossible or non-finite inputs (0.2327ms)
+✔ a tiny baseline does not produce an infinite percentage claim (0.0691ms)
+✔ six illustrative steps keep current flat and reach the scenario exactly (0.8357ms)
+✔ illustration honestly supports lower, equal, zero and maximum outcomes at mobile width (0.3205ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 79.3279
