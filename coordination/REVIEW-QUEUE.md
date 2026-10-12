@@ -1,6 +1,8 @@
 # Review queue
 
-State: H-017C REVISED / NYSTA ON KONVERTERING ONLY / HOMEPAGE PROOF CANDIDATE VERIFICATION OPEN / OSLO PRIVATKLINIKK DEFERRED.
+State: H-017C FINAL / D-075-D-076 IMPLEMENTED / STOP FOR OWNER + STRATEGY_CONTENT VISUAL-CONTENT REVIEW. EUROTENTS FEATURED + NYSTA + HELT OPPLAGT SUPPORTING; OSLO PRIVATKLINIKK DEFERRED.
+
+2026-10-12 IMPLEMENTATION: final H-017C source `317ae431f1947cddc46173af6fbb6d8b724bb49e` is pushed to main. Full verify 76/76, proof renderer/CMS/COPY-STYLE guards and responsive preservation pass. `evidence/h017c/` and current CODEX-TO-CHATGPT record native Worker/live evidence. OWNER + STRATEGY_CONTENT must review the complete homepage hierarchy and both contextual service placements; no verdict or launch acceptance is inferred. Earlier Nysta-only/empty-home queue entries below are historical and superseded. H-017B remains complete; H-017A review stays separate.
 
 | Order / ID | Scope | Responsible role | State / completion evidence |
 | --- | --- | --- | --- |

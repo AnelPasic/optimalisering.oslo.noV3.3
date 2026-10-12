@@ -1,0 +1,255 @@
+{
+  "checkedAt": "2026-10-12T10:49:38.719Z",
+  "base": "https://optimalisering-oslo-v33.anel.workers.dev",
+  "checks": [
+    {
+      "route": "/",
+      "width": 1440,
+      "names": [
+        "Eurotents",
+        "Nysta",
+        "Helt Opplagt"
+      ],
+      "layout": {
+        "width": 1440,
+        "scroll": 1440,
+        "featured": 1360,
+        "cards": [
+          {
+            "width": 1360,
+            "x": 40,
+            "y": 3464.484375
+          },
+          {
+            "width": 668,
+            "x": 40,
+            "y": 3982
+          },
+          {
+            "width": 668,
+            "x": 732,
+            "y": 3982
+          }
+        ],
+        "hidden": false,
+        "overflowing": []
+      },
+      "surroundingSectionsPreserved": true,
+      "screenshot": "home-proof-1440.png"
+    },
+    {
+      "route": "/konvertering/",
+      "width": 1440,
+      "names": [
+        "Nysta"
+      ],
+      "layout": {
+        "width": 1440,
+        "scroll": 1440,
+        "featured": 1360,
+        "cards": [
+          {
+            "width": 1360,
+            "x": 40,
+            "y": 2670.1875
+          }
+        ],
+        "hidden": false,
+        "overflowing": []
+      },
+      "surroundingSectionsPreserved": true,
+      "screenshot": "konvertering-proof-1440.png"
+    },
+    {
+      "route": "/synlighet/",
+      "width": 1440,
+      "names": [
+        "Helt Opplagt"
+      ],
+      "layout": {
+        "width": 1440,
+        "scroll": 1440,
+        "featured": 1360,
+        "cards": [
+          {
+            "width": 1360,
+            "x": 40,
+            "y": 2759.125
+          }
+        ],
+        "hidden": false,
+        "overflowing": []
+      },
+      "surroundingSectionsPreserved": true,
+      "screenshot": "synlighet-proof-1440.png"
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "names": [
+        "Eurotents",
+        "Nysta",
+        "Helt Opplagt"
+      ],
+      "layout": {
+        "width": 390,
+        "scroll": 390,
+        "featured": 350,
+        "cards": [
+          {
+            "width": 350,
+            "x": 20,
+            "y": 5900.046875
+          },
+          {
+            "width": 350,
+            "x": 20,
+            "y": 6381.984375
+          },
+          {
+            "width": 350,
+            "x": 20,
+            "y": 6928.15625
+          }
+        ],
+        "hidden": false,
+        "overflowing": []
+      },
+      "surroundingSectionsPreserved": true,
+      "screenshot": "home-proof-390.png"
+    },
+    {
+      "route": "/konvertering/",
+      "width": 390,
+      "names": [
+        "Nysta"
+      ],
+      "layout": {
+        "width": 390,
+        "scroll": 390,
+        "featured": 350,
+        "cards": [
+          {
+            "width": 350,
+            "x": 20,
+            "y": 3992.625
+          }
+        ],
+        "hidden": false,
+        "overflowing": []
+      },
+      "surroundingSectionsPreserved": true,
+      "screenshot": "konvertering-proof-390.png"
+    },
+    {
+      "route": "/synlighet/",
+      "width": 390,
+      "names": [
+        "Helt Opplagt"
+      ],
+      "layout": {
+        "width": 390,
+        "scroll": 390,
+        "featured": 350,
+        "cards": [
+          {
+            "width": 350,
+            "x": 20,
+            "y": 3998.671875
+          }
+        ],
+        "hidden": false,
+        "overflowing": []
+      },
+      "surroundingSectionsPreserved": true,
+      "screenshot": "synlighet-proof-390.png"
+    },
+    {
+      "route": "/",
+      "width": 320,
+      "names": [
+        "Eurotents",
+        "Nysta",
+        "Helt Opplagt"
+      ],
+      "layout": {
+        "width": 320,
+        "scroll": 320,
+        "featured": 288,
+        "cards": [
+          {
+            "width": 288,
+            "x": 16,
+            "y": 6244.375
+          },
+          {
+            "width": 288,
+            "x": 16,
+            "y": 6744.3125
+          },
+          {
+            "width": 288,
+            "x": 16,
+            "y": 7402.625
+          }
+        ],
+        "hidden": false,
+        "overflowing": []
+      },
+      "surroundingSectionsPreserved": true,
+      "screenshot": "home-proof-320.png"
+    },
+    {
+      "route": "/konvertering/",
+      "width": 320,
+      "names": [
+        "Nysta"
+      ],
+      "layout": {
+        "width": 320,
+        "scroll": 320,
+        "featured": 288,
+        "cards": [
+          {
+            "width": 288,
+            "x": 16,
+            "y": 4128.0625
+          }
+        ],
+        "hidden": false,
+        "overflowing": []
+      },
+      "surroundingSectionsPreserved": true,
+      "screenshot": "konvertering-proof-320.png"
+    },
+    {
+      "route": "/synlighet/",
+      "width": 320,
+      "names": [
+        "Helt Opplagt"
+      ],
+      "layout": {
+        "width": 320,
+        "scroll": 320,
+        "featured": 288,
+        "cards": [
+          {
+            "width": 288,
+            "x": 16,
+            "y": 4113.765625
+          }
+        ],
+        "hidden": false,
+        "overflowing": []
+      },
+      "surroundingSectionsPreserved": true,
+      "screenshot": "synlighet-proof-320.png"
+    }
+  ],
+  "allOtherPagesPreserved": true,
+  "noJavaScriptProofReadable": true,
+  "orderAndAssessmentDisabled": true,
+  "errors": [],
+  "posts": 0,
+  "result": "PASS"
+}

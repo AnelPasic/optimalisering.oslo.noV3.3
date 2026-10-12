@@ -129,6 +129,8 @@ Local implementation `29d389f` delivers dedicated editors/sidebar, only five ser
 
 ## Review publication authority
 
+2026-10-12 IMPLEMENTATION receipt (no new role approval): final H-017C / D-075-D-076 is implemented and pushed at **317ae431f1947cddc46173af6fbb6d8b724bb49e** after pulling incoming **1c34f27**. Exact approved homepage featured/supporting hierarchy and Nysta/Helt Opplagt contextual service placements use the unchanged strict proof gate and existing CMS, with registry/authority read-only. Full verify 76/76, actual renderer publication variants, CMS round-trip and local/live 1440/390/320 QA pass. Native connected Build **fe66802a-ec09-4a6d-8557-87fbf5c9b1a4 SUCCESS**, Worker **b4d7f441-a77f-43de-8be0-18f36ce51beb**, all 50 tested live assets match; noindex/intake and preserved scopes remain. Exact evidence/outbound receipt is in CODEX-TO-CHATGPT and `evidence/h017c/`; receipt's own revision follows Git history. STOP for OWNER + STRATEGY_CONTENT visual/content review. No material acceptance, formal RED_TEAM verdict, H-017B reopening, new comparison/route or launch is inferred.
+
 | ID | Authority / state | Decision | Source and scope |
 | --- | --- | --- | --- |
 | D-013 | OWNER EXPLICIT / REVIEW PUBLICATION AUTHORIZED | Publish the current review website so OWNER can iterate. Use the repository's V3.3 static Worker target; retain preview/noindex and disabled intake. | Actual Codex instruction, 2026-10-08: “publiser så vi kan ta noen runder”; recorded as H-003. Supersedes previous no-deployment boundary for this review publication only. No production-content acceptance, scale-out, live processing or domain cutover. Repository synchronization remains a delivery/coordination step, not content approval. |

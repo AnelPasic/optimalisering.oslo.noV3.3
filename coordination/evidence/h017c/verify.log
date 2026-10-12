@@ -16,7 +16,7 @@
 [7m65[0m   await page.locator('[data-package-order]').evaluate(form => form.submit());
 [7m  [0m [93m                                                                   ~~~~~~[0m
 
-Result (133 files): 
+Result (133 files):
 - 0 errors
 - 0 warnings
 - 1 hint
@@ -134,25 +134,25 @@ Result (133 files):
 12:46:11 [vite] ✓ built in 27ms
 12:46:11 [build] Rearranging server assets...
 
- generating static routes 
-12:46:11   ├─ /404.html (+6ms) 
-12:46:11   ├─ /robots.txt (+1ms) 
-12:46:11   ├─ /sitemap.xml (+1ms) 
-12:46:11   ├─ /ai-synlighet/index.html (+2ms) 
-12:46:11   ├─ /index.html (+7ms) 
-12:46:11   ├─ /innsikt/index.html (+1ms) 
-12:46:11   ├─ /innsikt/hva-bor-optimaliseres-forst/index.html (+2ms) 
-12:46:11   ├─ /innsikt/male-effekt-av-optimalisering/index.html (+1ms) 
-12:46:11   ├─ /kontakt/index.html (+1ms) 
-12:46:11   ├─ /konvertering/index.html (+2ms) 
-12:46:11   ├─ /nettbutikkoptimalisering/index.html (+1ms) 
-12:46:11   ├─ /om/index.html (+1ms) 
-12:46:11   ├─ /personvern/index.html (+1ms) 
-12:46:11   ├─ /priser/index.html (+2ms) 
-12:46:11   ├─ /seo/index.html (+1ms) 
-12:46:11   ├─ /synlighet/index.html (+2ms) 
-12:46:11   ├─ /vilkar/index.html (+1ms) 
-12:46:11   ├─ /vurdering/index.html (+1ms) 
+ generating static routes
+12:46:11   ├─ /404.html (+6ms)
+12:46:11   ├─ /robots.txt (+1ms)
+12:46:11   ├─ /sitemap.xml (+1ms)
+12:46:11   ├─ /ai-synlighet/index.html (+2ms)
+12:46:11   ├─ /index.html (+7ms)
+12:46:11   ├─ /innsikt/index.html (+1ms)
+12:46:11   ├─ /innsikt/hva-bor-optimaliseres-forst/index.html (+2ms)
+12:46:11   ├─ /innsikt/male-effekt-av-optimalisering/index.html (+1ms)
+12:46:11   ├─ /kontakt/index.html (+1ms)
+12:46:11   ├─ /konvertering/index.html (+2ms)
+12:46:11   ├─ /nettbutikkoptimalisering/index.html (+1ms)
+12:46:11   ├─ /om/index.html (+1ms)
+12:46:11   ├─ /personvern/index.html (+1ms)
+12:46:11   ├─ /priser/index.html (+2ms)
+12:46:11   ├─ /seo/index.html (+1ms)
+12:46:11   ├─ /synlighet/index.html (+2ms)
+12:46:11   ├─ /vilkar/index.html (+1ms)
+12:46:11   ├─ /vurdering/index.html (+1ms)
 12:46:11 ✓ Completed in 52ms.
 
 12:46:11 [build] ✓ Completed in 293ms.
