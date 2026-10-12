@@ -1,16 +1,18 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import { calculateScenario } from '../lib/leverage';
+import { formatScenarioRatio } from '../lib/scenario-ratio';
 interface Props { content: NonNullable<CollectionEntry<'pages'>['data']['homepage']>['calculator']; }
 const { content } = Astro.props;
 const { labels, defaults } = content;
 const result = calculateScenario(defaults.visits, defaults.conversion, defaults.trafficIncrease, defaults.newConversion, 6);
 const format = new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 1 });
-const signed = new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 1, signDisplay: 'exceptZero' });
+const ratio = formatScenarioRatio(result.current, result.scenario);
 ---
-<section id="regneeksempel" class="leverage-section section-space" data-leverage data-undefined-increase={labels.undefinedIncrease} data-increase-label={labels.increase}>
+<section id="regneeksempel" class="leverage-section section-space" data-leverage data-undefined-increase={labels.undefinedIncrease}>
+  <div class="shell calculator-introduction"><p class="eyebrow">{content.eyebrow}</p><p class="calculator-formula">{content.formula}</p></div>
   <div class="shell leverage-grid">
-    <div class="leverage-copy"><p class="eyebrow">{content.eyebrow}</p><h2>{content.heading}</h2><p class="body-copy">{content.intro}</p><p class="calculator-formula">{content.formula}</p>
+    <div class="leverage-copy"><h2>{content.heading}</h2><p class="body-copy">{content.intro}</p>
       <div class="calculator-inputs">
         <div class="calculator-field"><label for="calc-visits">{labels.visits}<input id="calc-visits" name="visits" type="number" min="0" max="10000000" step="1" value={defaults.visits} inputmode="numeric" aria-describedby="calculator-error" /></label></div>
         <div class="calculator-field"><label id="calc-conversion-label" for="calc-conversion">{labels.conversion}<input id="calc-conversion" name="conversion" type="number" min="0" max="100" step="any" value={defaults.conversion} inputmode="decimal" aria-describedby="calculator-error" /></label><input type="range" min="0" max="100" step="any" value={defaults.conversion} data-slider="conversion" aria-labelledby="calc-conversion-label" disabled /></div>
@@ -39,21 +41,21 @@ const signed = new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 1, signDi
           <div class="leverage-result"><span>{labels.current}</span><output data-current>{format.format(result.current)}</output><span class="outcome-label">{labels.outcome}</span><span class="math-equation" data-current-equation>{format.format(defaults.visits)} × {String(defaults.conversion).replace('.', ',')} %</span></div>
           <div class="leverage-comparison"><span>{labels.scenario}</span><output data-scenario>{format.format(result.scenario)}</output><span class="scenario-period">Måned 6</span><span class="outcome-label">{labels.outcome}</span><span class="math-equation" data-scenario-equation>{format.format(result.scenarioVisits)} × {String(defaults.newConversion).replace('.', ',')} %</span></div>
         </div>
-        <p class="calculator-difference">{labels.difference}: <output data-difference>{signed.format(result.difference)}</output><span data-percentage>{result.increase === null ? labels.undefinedIncrease : `${signed.format(result.increase)} % ${labels.increase}`}</span></p>
+        <p class="calculator-multiplier">{labels.difference}: <output data-multiplier>{ratio?.multiplier ?? '–'}</output><span data-percentage>{ratio?.percentage ?? labels.undefinedIncrease}</span></p>
       </div>
-      <p class="calculator-caveat">{content.caveat}</p>
     </div>
   </div>
 </section>
 <script>
   import { calculateScenario } from '../lib/leverage';
+  import { formatScenarioRatio } from '../lib/scenario-ratio';
   import { createScenarioIllustration } from '../lib/scenario-chart';
   const tool = document.querySelector<HTMLElement>('[data-leverage]');
   if (tool) {
     const inputs = ['visits', 'conversion', 'trafficIncrease', 'newConversion'].map(name => tool.querySelector<HTMLInputElement>(`[name="${name}"]`)!);
     const current = tool.querySelector<HTMLOutputElement>('[data-current]')!;
     const scenario = tool.querySelector<HTMLOutputElement>('[data-scenario]')!;
-    const difference = tool.querySelector<HTMLOutputElement>('[data-difference]')!;
+    const multiplier = tool.querySelector<HTMLOutputElement>('[data-multiplier]')!;
     const percentage = tool.querySelector<HTMLElement>('[data-percentage]')!;
     const currentEquation = tool.querySelector<HTMLElement>('[data-current-equation]')!;
     const scenarioEquation = tool.querySelector<HTMLElement>('[data-scenario-equation]')!;
@@ -63,7 +65,6 @@ const signed = new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 1, signDi
     const sliders = [...tool.querySelectorAll<HTMLInputElement>('[data-slider]')];
     const format = new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 1 });
     const compact = new Intl.NumberFormat('nb-NO', { notation: 'compact', maximumFractionDigits: 1 });
-    const signed = new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 1, signDisplay: 'exceptZero' });
     function update() {
       const valid = inputs.every(input => input.value !== '' && input.checkValidity());
       inputs.forEach(input => input.setAttribute('aria-invalid', String(input.value === '' || !input.checkValidity())));
@@ -74,7 +75,7 @@ const signed = new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 1, signDi
         if (input.value !== '' && input.checkValidity()) slider.value = input.value;
       });
       if (!valid) {
-        [current, scenario, difference, percentage, currentEquation, scenarioEquation].forEach(output => output.textContent = '–');
+        [current, scenario, multiplier, percentage, currentEquation, scenarioEquation].forEach(output => output.textContent = '–');
         return;
       }
       const [visits, conversion, traffic, newConversion] = inputs.map(input => Number(input.value));
@@ -82,8 +83,9 @@ const signed = new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 1, signDi
       current.value = format.format(result.current);
       scenario.value = format.format(result.scenario);
       [current, scenario].forEach(output => output.style.setProperty('--result-size', `${Math.max(12, Math.min(64, 145 / output.value.length))}px`));
-      difference.value = signed.format(result.difference);
-      percentage.textContent = result.increase === null ? tool!.dataset.undefinedIncrease! : `${signed.format(result.increase)} % ${tool!.dataset.increaseLabel}`;
+      const ratio = formatScenarioRatio(result.current, result.scenario);
+      multiplier.value = ratio?.multiplier ?? '–';
+      percentage.textContent = ratio?.percentage ?? tool!.dataset.undefinedIncrease!;
       currentEquation.textContent = `${format.format(visits)} × ${inputs[1].value.replace('.', ',')} %`;
       scenarioEquation.textContent = `${format.format(result.scenarioVisits)} × ${inputs[3].value.replace('.', ',')} %`;
       const width = svg.getBoundingClientRect().width;
@@ -123,6 +125,11 @@ const signed = new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 1, signDi
 </script>
 
 <style>
+  .calculator-introduction { text-align: center; margin-bottom: 40px; }
+  :global(.invite-home) .calculator-introduction .calculator-formula { border: 0; padding: 0; margin-top: 12px; }
+  .calculator-multiplier { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-top: 20px; font-size: 15px; }
+  .calculator-multiplier output { min-width: 0; overflow-wrap: anywhere; font-family: var(--heading); font-size: 25px; font-weight: 550; }
+  .calculator-multiplier [data-percentage] { font-size: 13px; color: #d7f1e4; overflow-wrap: anywhere; }
   .calculator-field { min-width: 0; }
   .calculator-inputs { margin-top: 28px; }
   .scenario-period { font-size: 12px; margin-bottom: 4px; }

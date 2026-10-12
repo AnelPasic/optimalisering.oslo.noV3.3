@@ -57,7 +57,8 @@ for (const file of readdirSync(componentDir).filter(name => name.endsWith('.astr
   const checked = file === 'HomeLeverage.astro' ? source
     .replace(/<span\b[^>]*class="math-equation"[^>]*>[\s\S]*?<\/span>/g, equation => equation.replaceAll('×', ''))
     .replace(/(?:currentEquation|scenarioEquation)\.textContent = `[^`]*`;/g, equation => equation.replaceAll('×', ''))
-    .replace(/\[current, scenario, difference, percentage, currentEquation, scenarioEquation\]\.forEach\(output => output\.textContent = '–'\);/g, placeholder => placeholder.replaceAll('–', ''))
+    .replace(/\[current, scenario, (?:difference|multiplier), percentage, currentEquation, scenarioEquation\]\.forEach\(output => output\.textContent = '–'\);/g, placeholder => placeholder.replaceAll('–', ''))
+    .replace(/ratio\?\.multiplier \?\? '–'/g, placeholder => placeholder.replaceAll('–', ''))
     : source;
   assert.ok(!forbiddenChars.test(checked), `${file}: hard-coded visible copy must use ordinary keyboard punctuation or SVG/icon components`);
 }

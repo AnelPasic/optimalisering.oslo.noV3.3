@@ -1,0 +1,14 @@
+{
+  "checkedAt": "2026-10-12T21:46:01.155Z",
+  "base": "12f18975df64ad7bf8fd0c06d9af1d4848dcaefe",
+  "frozenBlobs": 250,
+  "homeChangesLimitedToRatioLabelAndUndefinedExplanation": true,
+  "monthlyMathAndChartGeometryUnchanged": true,
+  "cmsHeroProofPricingChromeAssetsBackendAndReferencesUnchanged": true,
+  "dependenciesAndNoindexIntakeConfigurationUnchanged": true,
+  "allowedExistingRuntimeFiles": [
+    "app/src/components/HomeLeverage.astro",
+    "app/src/content/pages/home.json"
+  ],
+  "result": "PASS"
+}
