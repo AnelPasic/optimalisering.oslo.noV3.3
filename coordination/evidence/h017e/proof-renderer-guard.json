@@ -1,0 +1,33 @@
+{
+  "checkedAt": "2026-10-12T14:53:57.086Z",
+  "checks": [
+    {
+      "mode": "unapproved",
+      "allThreePlacementsFailClosed": true,
+      "heroProofFailsClosed": true,
+      "environmentOverrideIgnored": true
+    },
+    {
+      "mode": "incomplete",
+      "allThreePlacementsFailClosed": true,
+      "heroProofFailsClosed": true,
+      "environmentOverrideIgnored": true
+    },
+    {
+      "mode": "noncomparable",
+      "allThreePlacementsFailClosed": true,
+      "heroProofFailsClosed": true,
+      "environmentOverrideIgnored": true
+    },
+    {
+      "mode": "missing",
+      "allThreePlacementsFailClosed": true,
+      "heroProofFailsClosed": true,
+      "environmentOverrideIgnored": true
+    }
+  ],
+  "allSourceBytesRestored": true,
+  "realSourceQueries": 0,
+  "finalBuild": "npm run verify restores approved output",
+  "result": "PASS"
+}

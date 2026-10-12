@@ -1,0 +1,5 @@
+
+> optimalisering-oslo-v3-3@0.1.0 qa:proof
+> node scripts/qa-proof-guard.mjs
+
+Proof renderer PASS: unapproved, incomplete, non-comparable and missing records fail closed on all three lower placements and hero; exact source bytes restored.

@@ -1,0 +1,20 @@
+✔ D-075-D-076 selects the final guarded proof placements in order (7.0645ms)
+✔ safe home/service CMS presentation edits preserve authority and case gates (14.4246ms)
+✔ hero uses only the guarded featured public result and source label (4.0945ms)
+✔ hero disappears for absent, duplicate, unapproved or incomplete proof (0.4579ms)
+✔ hero follows the first publishable selection and respects anonymized public names (0.2235ms)
+✔ CMS preserves the existing page CTA and exposes only declared proof fields (36.7712ms)
+✔ proof renders only explicitly selected, complete, permitted and approved records (2.7956ms)
+✔ missing fields, empty proof requirements and flags cannot bypass publication (0.925ms)
+✔ CMS normalization preserves rejection of every incomplete publication record (2.061ms)
+✔ anonymous proof exposes the approved label and no private registry identity or evidence (0.1996ms)
+✔ anonymous proof refuses wrapped, nonbreaking and Unicode-normalized private names (0.2574ms)
+✔ imported records preserve supplied measurements and reviewed publication states with CMS coverage (24.8339ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 297.281
