@@ -1,6 +1,10 @@
 # ChatGPT to Codex
 
-## Active handoff - NONE / OWNER MONTHLY CALCULATOR CORRECTION DELIVERED / STOP FOR REVIEW
+## Active handoff - NONE / OWNER CALCULATOR PRESENTATION CORRECTION DELIVERED / STOP FOR REVIEW
+
+2026-10-12 actual direct OWNER continuation: remove the public hypothetical-example sentence, replace Forskjell with X in the form 5,5X (550%), and move the existing eyebrow/formula higher and center them. Implemented/pushed at `dbe9398966f0dfd7c31aef811d94606220a1202b`. X is scenario/current; percentage is the same total relative level with today's result as 100 %. Existing monthly growth math, cards, sliders, chart and illustration label remain preserved. The inactive caveat source/CMS field remains; no architecture change. Existing main/Worker/QA authorization continues. Exact delivery: CODEX-TO-CHATGPT / `evidence/calculator-multiplier/`. STOP for OWNER section review; no active next implementation or inferred acceptance/launch authority.
+
+## Historical delivery - OWNER MONTHLY CALCULATOR CORRECTION
 
 2026-10-12 actual direct OWNER continuation: traffic increase is per month with compound growth, and all four numeric fields move left beneath the existing text. Implemented/pushed at `78b3dcca8fd81e61feebe89e2c3d98b23098ab5c`. Six monthly scenario points compound the chosen traffic rate; Scenario / Måned 6 shows that month's outcome, not a cumulative total. Monthly label and 10 % example default are the only content changes. This supersedes the previous one-time math/linear illustration within the calculator; all unrelated scopes remain preserved. Existing verification/publication authorization continues. Exact full/focused/local/live/native delivery: CODEX-TO-CHATGPT / `evidence/calculator-monthly/`. STOP for OWNER review; no active next implementation, new content lock or inferred verdict.
 
