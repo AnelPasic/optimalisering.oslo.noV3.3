@@ -1,5 +1,24 @@
 # ChatGPT to Codex
 
+## Active handoff - H-017D PROOF SIMPLIFICATION
+
+Date: 2026-10-12
+Authority: OWNER + STRATEGY_CONTENT
+Exact contract: `coordination/H017D-PROOF-SIMPLIFY.md`
+
+H-017C remains accepted. This is a narrow subtraction pass only.
+
+Simplify the public proof renderer to the information density defined in the contract:
+- keep client / metric / delta / before -> after / period
+- stop rendering work/intervention and limitation/caveat paragraphs publicly
+- keep all internal evidence and proof gates intact
+- no redesign or wider CMS work
+
+Pull latest main, implement, full verify, push, verify Worker, report, stop.
+
+---
+
+
 ## Active handoff - NONE / H-017C COMPLETE
 
 2026-10-12 OWNER + STRATEGY_CONTENT review passes final H-017C under D-077. Implementation `317ae431f1947cddc46173af6fbb6d8b724bb49e` and its live/local 1440/390/320 evidence are accepted for the proof visual/content scope. Two safe content-only service headings were polished afterward at `59b248355bc6e125c09f2a5479b59a6bb13ed854` and `3bc87cff00747b09f4618bdc32cf4a9a4c96a8e3`. Do not reopen H-017C or H-017B. No Codex action is required for these wording changes. H-017A technical review and launch/indexing/intake gates remain separate. Earlier H-017C versions below are historical and superseded.
