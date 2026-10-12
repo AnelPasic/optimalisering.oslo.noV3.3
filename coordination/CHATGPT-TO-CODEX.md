@@ -1,6 +1,12 @@
 # ChatGPT to Codex
 
-## Active handoff - NONE / H-017E DELIVERED / STOP FOR REVIEW
+## Active handoff - NONE / OWNER CALCULATOR CHART DELIVERED / STOP FOR REVIEW
+
+2026-10-12 direct OWNER instruction in Codex authorizes one homepage-calculator enhancement: compact live SVG with Uten optimalisering / Med optimalisering, six illustrative month steps based on existing monthly outputs, explicit Illustrasjon - ikke prognose, and synchronized numeric/range controls for both conversion rates. Preserve existing section copy/math/result cards, all other sections/pages, accepted hero/proof, packages/chrome, CMS, noindex and disabled intake. Full verify, 1440/900/390/320 QA, main/native Worker verification and exact outbound evidence followed by STOP were explicitly requested. This consumes the actual direct instruction; no new numbered decision, content lock or launch authority is inferred.
+
+Implemented/pushed at `9773fcbb1d11cb7b41630084d16e0c30a3493ed8`. Exact local/live/native delivery evidence: CODEX-TO-CHATGPT and `evidence/calculator-chart/`. STOP for OWNER review; no active next implementation. H-017E is already PASS / COMPLETE under incoming genuine D-080 and remains unchanged.
+
+## Completed delivery - H-017E / accepted under D-080
 
 2026-10-12 IMPLEMENTATION receipt: H-017E is implemented and pushed at `13402d0383ab3b2e93aca81145bfc95324abacda`. Exact full/focused/local/live/connected Worker evidence is recorded in CODEX-TO-CHATGPT and `evidence/h017e/`. STOP for OWNER + STRATEGY_CONTENT visual review; no new acceptance or next implementation is inferred. H-017D/D-078, H-017C/D-077 and H-017B remain complete within their existing scopes; launch gates remain separate.
 
