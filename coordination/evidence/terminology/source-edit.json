@@ -1,0 +1,13 @@
+{
+  "checkedAt": "2026-10-12T22:58:02.199Z",
+  "mode": "Local Pages-CMS-equivalent edit and isolated actual Astro build; not authenticated CMS save",
+  "fields": [
+    "terms[roas].shortDefinition",
+    "terms[roas].fullDefinition"
+  ],
+  "glossaryAndInlineClientConsumeSameSource": true,
+  "restoredSourceSha256": "9806bbdd9562bbcd6c3f953da3372c7cf637535dcc3fd986a68ff81a45e1e4ad",
+  "originalSourceByteRestored": true,
+  "reviewDistUnchanged": true,
+  "result": "PASS"
+}

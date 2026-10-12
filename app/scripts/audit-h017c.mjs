@@ -1,9 +1,10 @@
 import assert from 'node:assert/strict';
+import { stripTerminologyLinks } from './terminology-markup.mjs';
 import { readFileSync, readdirSync } from 'node:fs';
 import { getPublishableCases } from '../src/lib/proof.ts';
 
 const records = readdirSync('src/content/proof').filter(f => f.endsWith('.json')).map(f => JSON.parse(readFileSync(`src/content/proof/${f}`)));
-const text = html => html.replace(/<[^>]*>/g, ' ').replace(/&amp;/g, '&').replace(/&gt;/g, '>').replace(/&lt;/g, '<').replace(/\s+/g, ' ').trim();
+const text = html => stripTerminologyLinks(html).replace(/<[^>]*>/g, ' ').replace(/&amp;/g, '&').replace(/&gt;/g, '>').replace(/&lt;/g, '<').replace(/\s+/g, ' ').trim();
 for (const [slug, names] of [['home', ['Eurotents', 'Nysta', 'Helt Opplagt']], ['konvertering', ['Nysta']], ['synlighet', ['Helt Opplagt']]]) {
   const page = JSON.parse(readFileSync(`src/content/pages/${slug}.json`));
   const html = readFileSync(slug === 'home' ? 'dist/index.html' : `dist/${slug}/index.html`, 'utf8');

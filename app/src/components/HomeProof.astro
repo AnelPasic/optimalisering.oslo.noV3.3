@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import { getPublishableCases } from '../lib/proof';
+import TermText from './TermText.astro';
 interface Props {
   content: NonNullable<CollectionEntry<'pages'>['data']['homepage']>['proof'];
   records: unknown[];
@@ -10,9 +11,9 @@ const { content, records, primary = false } = Astro.props;
 const cases = getPublishableCases(content, records);
 ---
 {cases.length > 0 && <section id="resultater" class="proof-section section-space"><div class="shell">
-  <div class="section-heading"><p class="eyebrow">{content.eyebrow}</p><h2>{content.heading}</h2></div>
+  <div class="section-heading"><p class="eyebrow">{content.eyebrow}</p><h2><TermText text={content.heading} terms={['roas', 'checkout', 'organisk-trafikk']} /></h2></div>
   <div class:list={['proof-grid', { 'proof-primary': primary }]}>{cases.map((proof, index) => <article class:list={['proof-card', { 'proof-featured': index === 0 }]}>
-    <h3>{proof.displayName}</h3><p class="proof-metric">{proof.dominantMetric}</p>
+    <h3>{proof.displayName}</h3><p class="proof-metric"><TermText text={proof.dominantMetric} terms={['roas', 'google-ads', 'checkout', 'organisk-trafikk', 'google-search-console']} /></p>
     {proof.delta && <p class="proof-delta">{proof.delta}</p>}
     <div class="proof-comparison"><dl><dt>{content.beforeLabel}</dt><dd><strong>{proof.before}</strong><span>{proof.period.before}</span></dd></dl><span class="proof-arrow" aria-hidden="true">-&gt;</span><dl><dt>{content.afterLabel}</dt><dd><strong>{proof.after}</strong><span>{proof.period.after}</span></dd></dl></div>
   </article>)}</div>

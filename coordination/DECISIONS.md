@@ -1,5 +1,9 @@
 # Decisions and authority
 
+## Direct OWNER terminology scope receipt - 2026-10-13 (no content lock)
+
+Actual direct OWNER request in Codex authorizes centralized terminology/glossary implementation, 25 initial Bokmål entries, selected first meaningful occurrences, `/begreper/`, safe Pages CMS fields, full QA and main/connected review Worker delivery. Source: actual OWNER request and incoming main `8b90bbfdc70e46fb62276600770fa4a95058098a`. This supersedes the previous no-next-implementation stop only within the named terminology scope. Existing commercial/proof/calculator/pricing/intake/noindex scopes and read-only inputs remain preserved. New definitions are DRAFT / NON-AUTHORITATIVE for OWNER + STRATEGY_CONTENT review. No formal verdict/content lock/launch authority is inferred. Exact resulting revision/evidence: CODEX-TO-CHATGPT / `evidence/terminology/`.
+
 Updated: 2026-10-09. This register separates explicit authority from exploratory implementation choices. Record meaningful decisions with source, reviewed revision and scope; do not make individual copy/spacing choices permanent owner gates.
 
 Decision-ID reconciliation on integrating `125d472`: upstream D-011 records RED_TEAM review of H-001. The independently recorded local OWNER Invite direction formerly called D-011 is now D-012. Both actual inputs and their source histories are retained; the older RED_TEAM verdict does not approve the new visual iteration.

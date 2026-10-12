@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-10-12T22:57:27.157Z",
+  "base": "8b90bbfdc70e46fb62276600770fa4a95058098a",
+  "frozenBlobs": 241,
+  "allExistingContentJSONUnchanged": true,
+  "existingCMSConfigurationUnchanged": true,
+  "mathChartRatioProofGatesPricingBackendReferencesAssetsDependenciesAndNoindexIntakeUnchanged": true,
+  "allowedExistingRuntimeFiles": [
+    ".pages.yml",
+    "app/src/layouts/SiteLayout.astro",
+    "app/src/pages/sitemap.xml.ts",
+    "app/src/components/ContentSection.astro",
+    "app/src/components/Footer.astro",
+    "app/src/components/HomeFooter.astro",
+    "app/src/components/HomeHeroPhoto.astro",
+    "app/src/components/HomeLeverage.astro",
+    "app/src/components/HomePage.astro",
+    "app/src/components/HomeProof.astro",
+    "app/src/components/HomeSection.astro",
+    "app/src/components/PackageSection.astro"
+  ],
+  "result": "PASS"
+}

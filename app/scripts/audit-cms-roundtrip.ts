@@ -5,18 +5,19 @@ import YAML from 'yaml';
 import { pageSchema } from '../src/lib/content-schema.ts';
 import { proofCaseSchema, proofContentSchema, getPublishableCases } from '../src/lib/proof.ts';
 import { cmsJsonSave, entryForFile, assertPreservedContent } from '../tests/helpers/pages-cms-json.ts';
+import { glossarySchema } from '../src/lib/terminology.ts';
 
 // Read-only JSON simulation; authenticated UI saves are recorded separately.
 const cms = YAML.parse(readFileSync('../.pages.yml', 'utf8'));
 assert.equal(cms.settings.content.merge, true);
 const hash = (bytes: Buffer | string) => createHash('sha256').update(bytes).digest('hex');
-const records = ['pages', 'proof'].flatMap(directory => readdirSync(`src/content/${directory}`)
+const records = ['pages', 'proof', 'terminology'].flatMap(directory => readdirSync(`src/content/${directory}`)
   .filter(file => file.endsWith('.json')).map(file => ({ directory, file: `src/content/${directory}/${file}` })));
 const snapshots = records.map(record => ({ ...record, bytes: readFileSync(record.file) }));
 const checks = snapshots.map(record => {
   const original = JSON.parse(record.bytes.toString());
   const form = structuredClone(original);
-  const field = record.directory === 'pages' ? 'title' : null;
+  const field = record.directory === 'proof' ? null : 'title';
   if (field) form[field] = 'H017B harmless in-memory round-trip';
   const entry = entryForFile(cms, `app/${record.file}`);
   assert.ok(entry, record.file);
@@ -24,7 +25,7 @@ const checks = snapshots.map(record => {
   const saved = JSON.parse(serialized);
   const expected = field ? { ...original, [field]: form[field] } : original;
   assertPreservedContent(expected, saved);
-  const schema = record.directory === 'pages' ? pageSchema : proofContentSchema;
+  const schema = record.directory === 'pages' ? pageSchema : record.directory === 'terminology' ? glossarySchema : proofContentSchema;
   const normalizedExpected = record.directory === 'proof' && expected.publicationApproved === true && !proofCaseSchema.safeParse(saved).success ? { ...expected, publicationApproved: false } : expected;
   assert.deepEqual(schema.parse(saved), schema.parse(normalizedExpected), record.file);
   return { file: `app/${record.file}`, originalSha256: hash(record.bytes), serializedFixtureSha256: hash(serialized), editor: entry.name, editedField: field, semanticOnlyExpectedEdit: true };

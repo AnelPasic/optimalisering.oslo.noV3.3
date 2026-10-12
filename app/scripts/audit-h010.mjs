@@ -1,10 +1,11 @@
 import assert from 'node:assert/strict';
+import { stripTerminologyLinks } from './terminology-markup.mjs';
 import { readFileSync } from 'node:fs';
 import { createCommercialTextBinding } from '../src/lib/commercial-text.ts';
 const content = JSON.parse(readFileSync('src/content/pages/konvertering.json', 'utf8'));
 const bind = createCommercialTextBinding(JSON.parse(readFileSync('src/content/pages/home.json', 'utf8')), JSON.parse(readFileSync('src/content/pages/priser.json', 'utf8')));
 const html = readFileSync('dist/konvertering/index.html', 'utf8');
-const text = value => value.replace(/<[^>]*>/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
+const text = value => stripTerminologyLinks(value).replace(/<[^>]*>/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
 assert.ok(html.includes('class="invite-home invite-service"'), 'Konvertering must use the validated service renderer');
 assert.equal((html.match(/<h1(?:\s|>)/g) ?? []).length, 1);
 assert.equal(text(html.match(/<h1[^>]*>(.*?)<\/h1>/s)[1]), 'Det er ikke alltid kunden som må overbevises. Noen ganger må nettsiden slutte å stå i veien.');

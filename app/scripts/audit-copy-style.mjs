@@ -36,8 +36,8 @@ function collectStrings(value, path = '$', out = []) {
 }
 
 let stringsChecked = 0;
-for (const file of readdirSync(pageDir).filter(name => name.endsWith('.json'))) {
-  const json = JSON.parse(readFileSync(join(pageDir, file), 'utf8'));
+for (const file of [...readdirSync(pageDir).filter(name => name.endsWith('.json')).map(name => join(pageDir, name)), 'src/content/terminology/glossary.json']) {
+  const json = JSON.parse(readFileSync(file, 'utf8'));
   for (const entry of collectStrings(json)) {
     stringsChecked++;
     assert.ok(!forbiddenChars.test(entry.value), `${file} ${entry.path}: use ordinary keyboard punctuation`);

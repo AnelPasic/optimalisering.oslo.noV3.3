@@ -1,0 +1,11 @@
+---
+import { glossary } from '../lib/terminology';
+---
+<span id="term-panel" class="term-panel" data-term-panel popover="manual" role="region" aria-label={glossary.panelLabel} hidden>
+  <span id="term-description" data-term-description></span>
+  <a data-term-more>{glossary.moreLabel}</a>
+</span>
+<script>
+  import { initTerminology } from '../lib/terminology-client';
+  initTerminology();
+</script>

@@ -1,0 +1,9 @@
+---
+import { explainTerms } from '../lib/terminology';
+interface Props { text: string; terms: string[]; }
+const { text, terms } = Astro.props;
+const locals = Astro.locals as { terminologySeen?: Set<string> };
+const seen = locals.terminologySeen ??= new Set<string>();
+const parts = explainTerms(text, terms, seen);
+---
+{parts.map(part => part.id ? <a class="term-trigger" data-term={part.id} href={`/begreper/#${part.id}`}>{part.text}</a> : part.text)}

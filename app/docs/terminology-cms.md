@@ -1,0 +1,13 @@
+# Begreper og forklaringer
+
+One source: `app/src/content/terminology/glossary.json`. Pages CMS exposes it as **Begreper og forklaringer**. The glossary and inline explanations derive from this same file. CMS commits trigger the existing connected review Worker build.
+
+The editor can maintain the page heading/intro/description, interface labels, term names, optional full names, aliases, category, short/full definitions and optional examples. Existing term IDs/anchors and draft authority are read-only. IDs are stable lowercase anchors, for example `/begreper/#roas`. Keep a short definition to one sentence (maximum 180 characters). Definitions contain plain text; no HTML, routes or operational configuration can be supplied here. Aliases should describe the same term and cannot belong to two different entries. Categories have four fixed choices.
+
+Use `TermText` only at an explicitly selected reading placement, with the allowed term IDs. Its page-render-local Set wraps each term once and prefers longer phrases, so Lokal SEO is distinct from SEO. Existing navigation, CTA text, forms, page JSON and commercial wording are not automatically scanned or rewritten. Adding more inline placements requires an implementation change; changing an existing explanation requires only a CMS content edit and build.
+
+Inline links work without JavaScript and in browsers without native popover support. In supported browsers, hover/focus and click/tap open one shared, viewport-positioned explanation. Keyboard users can Tab into Les mer; Escape restores trigger focus and closes. Outside pointer activation, leaving hover and moving focus away close it. The panel is a disclosure region because it contains a usable link; it is not an interactive ARIA tooltip. Trigger geometry inherits the surrounding text. No `title`-only explanation, tracking, dependency or tooltip FAQ schema is added.
+
+The editorial glossary is fully visible semantic HTML with four sections and 25 anchored articles. Its route has a canonical and becomes eligible for the normal production sitemap only after the existing site launch gates are satisfied. The current global noindex/nofollow, robots disallow, empty sitemap and disabled intake remain in force.
+
+All new content is **DRAFT / NON-AUTHORITATIVE** for OWNER + STRATEGY_CONTENT review. Existing editorial FAQ explanations and approved proof/commercial text stay intact; no second new definition source is introduced. The local CMS-equivalent save/build/restore test proves both glossary and inline outputs consume the edited source. Authenticated editing of this new CMS entry has not been performed in this task.

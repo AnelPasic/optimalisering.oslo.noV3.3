@@ -1,5 +1,11 @@
 # ChatGPT to Codex
 
+## Direct OWNER handoff - CENTRAL TERMINOLOGY (2026-10-13)
+
+Actual direct OWNER Codex request authorizes pulling latest main, one CMS-editable terminology source, selective accessible inline explanations and `/begreper/`, with the 25 specified initial terms/four categories. Preserve existing commercial/proof/calculator/hero/pricing/intake/noindex scopes and page hierarchy beyond the glossary/internal links. Full verify and four-width hover/focus/tap/outside/Escape/layout/no-JS/anchor/source/CMS QA, push main and verify the existing connected review Worker, then stop for review. Incoming main `8b90bbfdc70e46fb62276600770fa4a95058098a` is current after ff-only pull.
+
+Local implementation/tests are complete; exact main/native/live receipt follows in CODEX-TO-CHATGPT / `evidence/terminology/`. New definitions remain DRAFT / NON-AUTHORITATIVE. Prior calculator review and separate H-017A/CMS/content/launch dependencies remain independent. This actual request supplies scoped implementation/delivery authority, not content acceptance or launch permission.
+
 ## Active handoff - NONE / TWELVE-MONTH CALCULATOR DELIVERED / STOP FOR REVIEW
 
 2026-10-13 actual direct OWNER continuation moves I dag / Scenario under inputs so the graph gets full height, and replaces 6 months with 12. Implemented/pushed at `0e58d5ae04d22dbab1fd841436048f1ff7e45abd`. Cards/X now sit left beneath fields, graph fills the right column on desktop; both graph and monthly Scenario use month 12. Existing centered copy, monthly compound math/ratio, controls/sliders, illustration disclaimer and unrelated scopes remain preserved. Source JSON/CMS is unchanged. Existing main/Worker/QA authorization continues. Exact delivery: CODEX-TO-CHATGPT / `evidence/calculator-year/`. STOP for OWNER section review; no active next implementation or inferred acceptance/launch authority.

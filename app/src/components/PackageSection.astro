@@ -3,6 +3,7 @@ import type { CollectionEntry } from 'astro:content';
 import Arrow from './Arrow.astro';
 import Visual from './PackageVisual.astro';
 import FocusIcon from './PackageFocusIcon.astro';
+import TermText from './TermText.astro';
 interface Props {
   content: NonNullable<CollectionEntry<'pages'>['data']['homepage']>['packages'];
   showHeading?: boolean;
@@ -28,7 +29,7 @@ const formatPrice = (value: number) => new Intl.NumberFormat('nb-NO', { maximumF
       <h3 class="package-block-heading">{content.fitLabel}</h3>
       <p class="package-fit">{item.compact.fit}</p>
         <div class="package-situations"><h3 class="package-block-heading">{content.labels.situations}</h3><ul>{item.compact.situations.map(text => <li>{text}</li>)}</ul></div>
-        <div class="package-focus"><ul class:list={['package-icon-items', { 'package-combos': index === 1 }]}>{item.iconItems.map(focus => <li><FocusIcon kind={focus.icon} /><span>{focus.compactLabel}</span></li>)}</ul></div>
+        <div class="package-focus"><ul class:list={['package-icon-items', { 'package-combos': index === 1 }]}>{item.iconItems.map(focus => <li><FocusIcon kind={focus.icon} /><span><TermText text={focus.compactLabel} terms={['seo', 'lokal-seo', 'ai-synlighet', 'google-ads', 'meta-ads', 'cro']} /></span></li>)}</ul></div>
       <a class="button" href={item.cta.href}>{item.cta.label}<Arrow diagonal /></a>
       <details class="package-details" open={expanded}><summary>{item.detailLink.label}</summary><div class="package-detail">
         <div><h3 class="package-block-heading">{content.fitLabel}</h3><p>{item.fit}</p></div>

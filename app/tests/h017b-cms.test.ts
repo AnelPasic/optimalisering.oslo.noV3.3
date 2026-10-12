@@ -38,7 +38,7 @@ test('object repeaters start collapsed with meaningful summaries supported by Pa
       if (field.list && field.type === 'object') {
         count++;
         assert.equal(field.list.collapsible?.collapsed, true, field.name);
-        assert.match(field.list.collapsible?.summary ?? '', /\{(?:fields\.)?(?:heading|question|title|label|metric|index)\}/, field.name);
+        assert.match(field.list.collapsible?.summary ?? '', /\{(?:fields\.)?(?:heading|question|title|label|metric|index|term)\}/, field.name);
       }
       if (field.fields) check(field.fields);
     }

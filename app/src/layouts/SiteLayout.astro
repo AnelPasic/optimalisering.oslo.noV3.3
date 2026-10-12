@@ -2,6 +2,8 @@
 import '@fontsource-variable/instrument-sans';
 import '@fontsource-variable/figtree';
 import '../styles/global.css';
+import '../styles/terminology.css';
+import TerminologyUI from '../components/TerminologyUI.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import HomeHeader from '../components/HomeHeader.astro';
@@ -45,5 +47,6 @@ const organization = { '@context': 'https://schema.org', '@type': 'Organization'
     <main id="main"><slot /></main>
     {homeChrome ? <HomeFooter content={homeChrome} /> : <Footer />}
     <Attribution />
+    <TerminologyUI />
   </body>
 </html>

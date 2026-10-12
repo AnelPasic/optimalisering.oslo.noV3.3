@@ -3,6 +3,7 @@ import { existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 import type { CollectionEntry } from 'astro:content';
 import type { getHeroProof } from '../lib/hero-proof';
+import TermText from './TermText.astro';
 interface Props {
   content: NonNullable<CollectionEntry<'pages'>['data']['homepage']>['heroPhoto'];
   proof?: ReturnType<typeof getHeroProof>;
@@ -18,8 +19,8 @@ const image = supplied ? content.src : '/images/home/hero-customer-preview.svg';
     <img src={image} width="1200" height="750" alt="" fetchpriority="high" decoding="async" style={{ objectPosition: `${content.positionX}% ${content.positionY}%` }} />
   </div>
   {proof && <div class="hero-proof">
-    <p class="hero-proof-result"><span>{proof.metric}</span>{' '}<span class="hero-proof-comparison">{proof.comparison}</span></p>
-    <p class="hero-proof-support">{proof.support}</p>
+    <p class="hero-proof-result"><span><TermText text={proof.metric} terms={['roas']} /></span>{' '}<span class="hero-proof-comparison">{proof.comparison}</span></p>
+    <p class="hero-proof-support"><TermText text={proof.support} terms={['google-ads']} /></p>
   </div>}
 </div>
 

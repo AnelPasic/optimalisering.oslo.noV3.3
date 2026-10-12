@@ -3,6 +3,7 @@ import type { CollectionEntry } from 'astro:content';
 import { calculateScenario } from '../lib/leverage';
 import { formatScenarioRatio } from '../lib/scenario-ratio';
 import { SCENARIO_MONTHS } from '../lib/scenario-chart';
+import TermText from './TermText.astro';
 interface Props { content: NonNullable<CollectionEntry<'pages'>['data']['homepage']>['calculator']; }
 const { content } = Astro.props;
 const { labels, defaults } = content;
@@ -12,7 +13,7 @@ const ratio = formatScenarioRatio(result.current, result.scenario);
 const resultSize = (value: number) => `--result-size: ${Math.max(12, Math.min(64, 145 / format.format(value).length))}px`;
 ---
 <section id="regneeksempel" class="leverage-section section-space" data-leverage data-undefined-increase={labels.undefinedIncrease}>
-  <div class="shell calculator-introduction"><p class="eyebrow">{content.eyebrow}</p><h2>{content.heading}</h2><p class="body-copy">{content.intro}</p><p class="calculator-formula">{content.formula}</p></div>
+  <div class="shell calculator-introduction"><p class="eyebrow">{content.eyebrow}</p><h2>{content.heading}</h2><p class="body-copy">{content.intro}</p><p class="calculator-formula"><TermText text={content.formula} terms={['konverteringsrate', 'relevant-trafikk']} /></p></div>
   <div class="shell leverage-grid">
     <div class="leverage-copy">
       <div class="calculator-inputs">
