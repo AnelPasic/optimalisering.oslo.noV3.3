@@ -1,5 +1,7 @@
 # Review queue
 
+Current gate: **H-017D implementation delivered at 73a5b91 / STOP for OWNER + STRATEGY_CONTENT review.** Review only the contracted proof subtraction on home/Konvertering/Synlighet; accepted H-017C hierarchy and H-017B completion are preserved. Full verify 76/76, focused proof tests 9/9, unsafe renderer variants and 1440/390/320 preservation pass. Current CODEX-TO-CHATGPT and `evidence/h017d/` contain exact Worker/live evidence. No acceptance or wider implementation is inferred.
+
 State: H-017C FINAL PASSED UNDER D-077. EUROTENTS FEATURED + NYSTA + HELT OPPLAGT SUPPORTING; NYSTA ON /KONVERTERING/; HELT OPPLAGT ON /SYNLIGHET/. OSLO PRIVATKLINIKK DEFERRED. NO FURTHER H-017C CODE WORK.
 
 2026-10-12 IMPLEMENTATION: final H-017C source `317ae431f1947cddc46173af6fbb6d8b724bb49e` is pushed to main. Full verify 76/76, proof renderer/CMS/COPY-STYLE guards and responsive preservation pass. `evidence/h017c/` and current CODEX-TO-CHATGPT record native Worker/live evidence. OWNER + STRATEGY_CONTENT must review the complete homepage hierarchy and both contextual service placements; no verdict or launch acceptance is inferred. Earlier Nysta-only/empty-home queue entries below are historical and superseded. H-017B remains complete; H-017A review stays separate.

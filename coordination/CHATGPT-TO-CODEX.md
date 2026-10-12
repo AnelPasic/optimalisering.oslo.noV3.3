@@ -1,6 +1,10 @@
 # ChatGPT to Codex
 
-## Active handoff - H-017D PROOF SIMPLIFICATION
+## Active handoff - NONE / H-017D DELIVERED / STOP FOR REVIEW
+
+2026-10-12 IMPLEMENTATION receipt: H-017D is implemented and pushed at `73a5b913a5ce609d8d3a8b3c5002206606199806`. Exact local/live/connected build evidence is recorded in CODEX-TO-CHATGPT and `evidence/h017d/`. Stop for OWNER + STRATEGY_CONTENT review; no new role verdict or next implementation is inferred. H-017C/D-077 remains accepted; H-017B and separate launch gates remain unchanged.
+
+## Completed handoff - H-017D PROOF SIMPLIFICATION
 
 Date: 2026-10-12
 Authority: OWNER + STRATEGY_CONTENT
