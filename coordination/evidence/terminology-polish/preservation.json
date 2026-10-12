@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-10-12T23:29:35.689Z",
+  "base": "94be07f041438f210422832f81fd2963fff8f00a",
+  "frozenBlobs": 259,
+  "allExistingContentJSONUnchanged": true,
+  "existingCMSConfigurationUnchanged": true,
+  "mathChartRatioProofGatesPricingBackendReferencesAssetsDependenciesAndNoindexIntakeUnchanged": true,
+  "allowedExistingRuntimeFiles": [
+    "app/src/pages/begreper.astro"
+  ],
+  "result": "PASS"
+}

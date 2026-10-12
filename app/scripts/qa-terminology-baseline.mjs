@@ -2,7 +2,7 @@ import { chromium } from '@playwright/test';
 import { mkdirSync, writeFileSync, readFileSync, readdirSync } from 'node:fs';
 import assert from 'node:assert/strict';
 const base = process.env.QA_BASE_URL || 'http://127.0.0.1:4344';
-const directory = '../coordination/evidence/terminology';
+const directory = `../coordination/evidence/${process.env.QA_HANDOFF || 'terminology'}`;
 mkdirSync(directory, { recursive: true });
 const browser = await chromium.launch({ executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless: true });
 const page = await browser.newPage();
@@ -26,7 +26,7 @@ try {
   }
   if (process.argv.includes('--record')) writeFileSync(`${directory}/baseline.json`, JSON.stringify(snapshots, null, 2) + '\n');
   else {
-    const baseline = JSON.parse(readFileSync(`${directory}/baseline.json`));
+    const baseline = JSON.parse(readFileSync('../coordination/evidence/terminology/baseline.json'));
     assert.deepEqual(snapshots, baseline, 'All 15 existing main texts and measured section/hero/proof/package geometries remain exact at four widths');
     writeFileSync(`${directory}/layout-preservation.json`, JSON.stringify({ base, checkedAt: new Date().toISOString(), snapshots: snapshots.length, exactTextAndGeometry: true, result: 'PASS' }, null, 2) + '\n');
   }

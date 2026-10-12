@@ -1,0 +1,9 @@
+{
+  "base": "http://127.0.0.1:4344",
+  "checkedAt": "2026-10-12T23:30:25.687Z",
+  "fourViewportCorners": true,
+  "hoverLeaveDismissal": true,
+  "secondTapToggle": true,
+  "unsupportedPopoverUsesGlossaryLink": true,
+  "result": "PASS"
+}

@@ -3,11 +3,11 @@ import assert from 'node:assert/strict';
 import { readFileSync, mkdirSync, writeFileSync } from 'node:fs';
 
 const base = process.env.QA_BASE_URL || 'http://127.0.0.1:4344';
-const output = `../coordination/evidence/terminology/${process.env.QA_LIVE ? 'live' : 'local'}`;
+const output = `../coordination/evidence/${process.env.QA_HANDOFF || 'terminology'}/${process.env.QA_LIVE ? 'live' : 'local'}`;
 mkdirSync(output, { recursive: true });
 const source = JSON.parse(readFileSync('src/content/terminology/glossary.json', 'utf8'));
 const browser = await chromium.launch({ executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless: true });
-const report = [], errors = [], posts = [];
+const report = [], glossaryReport = [], errors = [], posts = [];
 const routes = ['/', '/synlighet/', '/konvertering/', '/priser/', '/seo/', '/ai-synlighet/', '/nettbutikkoptimalisering/'];
 const open = page => page.locator('[data-term-panel]:not([hidden])');
 async function panelFits(page) {
@@ -65,7 +65,7 @@ try {
         await open(page).waitFor();
         assert.equal(await link.getAttribute('aria-describedby'), 'term-description');
         await page.keyboard.press('Tab');
-        assert.equal(await page.evaluate(() => document.activeElement?.hasAttribute('data-term-more')), true, 'Keyboard reaches Les mer');
+        assert.equal(await page.evaluate(() => document.activeElement?.hasAttribute('data-term-more')), true, 'Keyboard reaches the full explanation link');
         await page.keyboard.press('Escape');
         assert.equal(await link.evaluate(e => e === document.activeElement), true);
         assert.equal(await open(page).count(), 0);
@@ -87,9 +87,28 @@ try {
     assert.equal(await page.locator('h1').textContent(), source.title);
     assert.equal(await page.locator('.glossary-entry').count(), source.terms.length);
     assert.equal(await page.locator('.glossary-group').count(), 4);
+    assert.equal(await page.locator('.glossary-entry details[open]').count(), 0, 'Glossary starts collapsed');
+    const collapsedHeight = await page.locator('main').evaluate(element => element.scrollHeight);
+    for (const term of source.terms) {
+      const entry = page.locator('#' + term.id);
+      assert.ok((await entry.locator('summary').textContent()).includes(term.shortDefinition));
+      await entry.locator('summary').click();
+      assert.ok(await entry.locator('.glossary-answer').isVisible());
+      assert.ok((await entry.locator('.glossary-answer').textContent()).includes(term.fullDefinition));
+      if (term.simpleExample) assert.ok((await entry.locator('.glossary-example').textContent()).includes(term.simpleExample));
+    }
+    const expandedHeight = await page.locator('main').evaluate(element => element.scrollHeight);
+    assert.ok(expandedHeight > collapsedHeight * 1.5, 'Collapsed glossary is substantially shorter');
+    assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+    await page.goto(base + '/begreper/');
     assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
     await page.screenshot({ path: `${output}/glossary-${width}.png`, fullPage: true });
+    await page.screenshot({ path: `${output}/glossary-top-${width}.png` });
+    await page.locator('#seo summary').click();
+    await page.locator('#seo').scrollIntoViewIfNeeded();
+    await page.screenshot({ path: `${output}/glossary-expanded-${width}.png` });
     for (const term of source.terms) {
+      await page.goto(base + '/begreper/');
       await page.goto(base + '/begreper/#' + term.id);
       await page.waitForFunction(() => {
         const rect = document.querySelector('.glossary-entry:target')?.getBoundingClientRect();
@@ -97,11 +116,29 @@ try {
       });
       const target = page.locator('.glossary-entry:target');
       assert.equal(await target.getAttribute('id'), term.id);
-      assert.equal(await target.locator('h3').textContent(), term.term);
+      assert.equal(await target.locator('.glossary-term-name').textContent(), term.term);
+      assert.equal(await page.locator('.glossary-entry details[open]').count(), 1, 'Direct anchor opens only its term');
+      assert.equal(await target.locator('details').getAttribute('open'), '');
+      assert.ok(await target.locator('.glossary-answer').isVisible());
       assert.ok((await target.textContent()).includes(term.fullDefinition));
       const rect = await target.boundingBox();
       assert.ok(rect.y >= 0 && rect.y < 1000, `${term.id}: direct anchor is visible`);
     }
+    await page.goto(base);
+    await page.locator('a[data-term="roas"]').focus();
+    assert.equal(await page.locator('[data-term-more]').textContent(), source.moreLabel);
+    await page.locator('[data-term-more]').click();
+    await page.waitForURL('**/begreper/#roas');
+    assert.ok(await page.locator('#roas .glossary-answer').isVisible(), 'Full explanation link opens the correct accordion');
+    await page.goto(base + '/begreper/');
+    const summary = page.locator('#seo summary');
+    await summary.focus();
+    await page.keyboard.press('Enter');
+    assert.ok(await page.locator('#seo .glossary-answer').isVisible());
+    await page.keyboard.press('Space');
+    assert.equal(await page.locator('#seo .glossary-answer').isVisible(), false);
+    await page.goto(base + '/begreper/#%E0%A4%A');
+    glossaryReport.push({ width, collapsedHeight, expandedHeight, directAnchors: source.terms.length, nativeKeyboard: true, fullExplanationLink: true, expandedNoOverflow: true });
     await context.close();
     const noJs = await browser.newContext({ javaScriptEnabled: false, viewport: { width, height: 1000 } });
     const fallback = await noJs.newPage();
@@ -111,13 +148,20 @@ try {
     await roasFallback.click();
     await fallback.waitForURL('**/begreper/#roas');
     assert.equal(await fallback.locator('.glossary-entry:target').getAttribute('id'), 'roas');
-    for (const term of source.terms) assert.ok(await fallback.locator('#' + term.id).isVisible());
+    for (const term of source.terms) {
+      const entry = fallback.locator('#' + term.id);
+      assert.ok(await entry.isVisible());
+      await entry.locator('summary').click();
+      assert.ok(await entry.locator('.glossary-answer').isVisible(), 'Native details work without JavaScript');
+      assert.ok((await entry.locator('.glossary-answer').textContent()).includes(term.fullDefinition));
+      await entry.locator('summary').click();
+    }
     assert.equal(await fallback.locator('[data-term-panel]').isVisible(), false);
     await noJs.close();
   }
   for (const required of ['roas', 'seo', 'lokal-seo', 'ai-synlighet', 'cro', 'konverteringsrate', 'relevant-trafikk', 'organisk-trafikk', 'google-ads', 'meta-ads', 'checkout', 'ordreverdi', 'margin']) assert.ok(coverage.has(required), `${required}: priority placement`);
   assert.deepEqual(errors, []);
   assert.deepEqual(posts, []);
-  writeFileSync(`${output}/checks.json`, JSON.stringify({ base, checkedAt: new Date().toISOString(), report, coverage: [...coverage], glossaryTerms: source.terms.length, directAnchorsAtFourWidths: true, noJsAtFourWidths: true, errors, posts, result: 'PASS' }, null, 2) + '\n');
+  writeFileSync(`${output}/checks.json`, JSON.stringify({ base, checkedAt: new Date().toISOString(), report, glossaryReport, coverage: [...coverage], glossaryTerms: source.terms.length, directAnchorsAtFourWidths: true, noJsAtFourWidths: true, errors, posts, result: 'PASS' }, null, 2) + '\n');
   console.log(`Terminology browser PASS: ${report.length} route/width groups; all 25 anchors/no-JS at four widths; ${coverage.size} explained terms; zero errors/POST.`);
 } finally { await browser.close(); }

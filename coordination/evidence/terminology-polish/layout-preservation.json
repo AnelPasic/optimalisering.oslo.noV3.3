@@ -1,0 +1,7 @@
+{
+  "base": "http://127.0.0.1:4344",
+  "checkedAt": "2026-10-12T23:30:28.989Z",
+  "snapshots": 60,
+  "exactTextAndGeometry": true,
+  "result": "PASS"
+}

@@ -1,7 +1,9 @@
 import { chromium } from '@playwright/test';
 import assert from 'node:assert/strict';
-import { writeFileSync } from 'node:fs';
+import { mkdirSync, writeFileSync } from 'node:fs';
 const base = process.env.QA_BASE_URL || 'http://127.0.0.1:4344';
+const output = `../coordination/evidence/${process.env.QA_HANDOFF || 'terminology'}`;
+mkdirSync(output, { recursive: true });
 const browser = await chromium.launch({ executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless: true });
 try {
   const page = await browser.newPage({ viewport: { width: 320, height: 600 } });
@@ -33,6 +35,6 @@ try {
   await fallbackLink.click();
   await fallback.waitForURL('**/begreper/#roas');
   await older.close();
-  writeFileSync('../coordination/evidence/terminology/edge-checks.json', JSON.stringify({ base, checkedAt: new Date().toISOString(), fourViewportCorners: true, hoverLeaveDismissal: true, secondTapToggle: true, unsupportedPopoverUsesGlossaryLink: true, result: 'PASS' }, null, 2) + '\n');
+  writeFileSync(`${output}/edge-checks.json`, JSON.stringify({ base, checkedAt: new Date().toISOString(), fourViewportCorners: true, hoverLeaveDismissal: true, secondTapToggle: true, unsupportedPopoverUsesGlossaryLink: true, result: 'PASS' }, null, 2) + '\n');
   console.log('Terminology edges PASS: four viewport corners, hover dismissal, repeated tap and older-browser direct-link fallback.');
 } finally { await browser.close(); }

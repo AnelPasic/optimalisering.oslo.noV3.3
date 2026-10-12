@@ -19,6 +19,18 @@ test('copy-style guard permits formal calculator notation but still rejects orna
     const math = '<span class="math-equation" data-current-equation>{visits} × {conversion} %</span>\ncurrentEquation.textContent = `${visits} × ${conversion} %`;\n[current, scenario, difference, percentage, currentEquation, scenarioEquation].forEach(output => output.textContent = \'–\');';
     const run = source => { writeFileSync(componentFile, source); return spawnSync(process.execPath, [guard], { cwd: root, encoding: 'utf8' }); };
     assert.equal(run(math).status, 0, 'formal math and numeric unavailable placeholder are functional notation');
+    const glossary = readFileSync(termFile, 'utf8');
+    writeFileSync(termFile, JSON.stringify({ terms: [{ fullDefinition: 'Et søk etter «tannlege Ski».', simpleExample: 'Knappen «Bestill time».' }] }));
+    assert.equal(run(math).status, 0, 'preserved glossary quotes are permitted in explanations and examples');
+    for (const fixture of [
+      { terms: [{ shortDefinition: 'Kort «forklaring».' }] },
+      { terms: [{ fullDefinition: 'Vekst – for deg' }] },
+      { terms: [{ simpleExample: 'En skreddersydd løsning' }] },
+    ]) {
+      writeFileSync(termFile, JSON.stringify(fixture));
+      assert.notEqual(run(math).status, 0, 'the exception does not weaken other fields, punctuation or phrase rules');
+    }
+    writeFileSync(termFile, glossary);
     for (const copy of ['<p>Synlighet × konvertering</p>', '<h2>Vekst – for deg</h2>']) assert.notEqual(run(math + copy).status, 0);
   } finally {
     for (const file of [pageFile, componentFile, termFile]) unlinkSync(file);

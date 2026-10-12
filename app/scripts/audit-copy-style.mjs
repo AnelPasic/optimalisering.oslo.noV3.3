@@ -40,7 +40,13 @@ for (const file of [...readdirSync(pageDir).filter(name => name.endsWith('.json'
   const json = JSON.parse(readFileSync(file, 'utf8'));
   for (const entry of collectStrings(json)) {
     stringsChecked++;
-    assert.ok(!forbiddenChars.test(entry.value), `${file} ${entry.path}: use ordinary keyboard punctuation`);
+    // TERMINOLOGY POLISH QA ONLY (2026-10-13) explicitly preserves the
+    // incoming quoted examples. Permit their Norwegian quotation marks only
+    // in explanations/examples; all other punctuation and phrase rules stand.
+    const punctuation = file === 'src/content/terminology/glossary.json'
+      && /^\$\.terms\[\d+\]\.(?:fullDefinition|simpleExample)$/.test(entry.path)
+      ? entry.value.replace(/[«»]/g, '') : entry.value;
+    assert.ok(!forbiddenChars.test(punctuation), `${file} ${entry.path}: use ordinary keyboard punctuation`);
     for (const pattern of forbiddenPhrases) {
       assert.ok(!pattern.test(entry.value), `${file} ${entry.path}: avoid template-like phrase ${pattern}`);
     }

@@ -47,7 +47,9 @@ const home = (await getCollection('pages')).find(entry => entry.data.slug === 'h
   <script is:inline>
     (() => {
       const openHash = () => {
-        const id = decodeURIComponent(location.hash.slice(1));
+        let id;
+        try { id = decodeURIComponent(location.hash.slice(1)); }
+        catch { return; }
         if (!id) return;
         const target = document.getElementById(id);
         const details = target?.querySelector('details');
