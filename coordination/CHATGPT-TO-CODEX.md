@@ -1,8 +1,28 @@
 # ChatGPT to Codex
 
-## Active handoff - NONE / H-017D DELIVERED / STOP FOR REVIEW
+## Active handoff - H-017E HOMEPAGE HERO PROOF
 
-2026-10-12 IMPLEMENTATION receipt: H-017D is implemented and pushed at `73a5b913a5ce609d8d3a8b3c5002206606199806`. Exact local/live/connected build evidence is recorded in CODEX-TO-CHATGPT and `evidence/h017d/`. Stop for OWNER + STRATEGY_CONTENT review; no new role verdict or next implementation is inferred. H-017C/D-077 remains accepted; H-017B and separate launch gates remain unchanged.
+Date: 2026-10-12
+Authority: OWNER + STRATEGY_CONTENT / D-079
+Exact contract: `coordination/H017E-HERO-PROOF.md`
+
+H-017D is now PASS / COMPLETE under D-078 at implementation `73a5b913a5ce609d8d3a8b3c5002206606199806`.
+
+Pull latest main and implement only H-017E:
+- attach one compact proof panel to the existing homepage hero image
+- derive it from the first publishable selected homepage proof case
+- current expected output: **ROAS 4,3x -> 17,2x** / **Eurotents · Google Ads**
+- fail closed if featured proof is not publishable
+- preserve hero copy, CTAs, photo/crop and H-017D lower proof
+- no duplicate proof data, no extra caveats/dates/metrics, no wider redesign/CMS work
+
+Run focused hero/proof QA + full verify, push to main, verify connected Worker, update CODEX-TO-CHATGPT, then stop for OWNER + STRATEGY_CONTENT visual review.
+
+---
+
+## Completed review - H-017D / D-078
+
+OWNER + STRATEGY_CONTENT PASS. The simplified public proof at `73a5b91` has the intended concise information density. No further H-017D revision is required.
 
 ## Completed handoff - H-017D PROOF SIMPLIFICATION
 
