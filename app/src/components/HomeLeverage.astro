@@ -10,9 +10,9 @@ const format = new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 1 });
 const ratio = formatScenarioRatio(result.current, result.scenario);
 ---
 <section id="regneeksempel" class="leverage-section section-space" data-leverage data-undefined-increase={labels.undefinedIncrease}>
-  <div class="shell calculator-introduction"><p class="eyebrow">{content.eyebrow}</p><p class="calculator-formula">{content.formula}</p></div>
+  <div class="shell calculator-introduction"><p class="eyebrow">{content.eyebrow}</p><h2>{content.heading}</h2><p class="body-copy">{content.intro}</p><p class="calculator-formula">{content.formula}</p></div>
   <div class="shell leverage-grid">
-    <div class="leverage-copy"><h2>{content.heading}</h2><p class="body-copy">{content.intro}</p>
+    <div class="leverage-copy">
       <div class="calculator-inputs">
         <div class="calculator-field"><label for="calc-visits">{labels.visits}<input id="calc-visits" name="visits" type="number" min="0" max="10000000" step="1" value={defaults.visits} inputmode="numeric" aria-describedby="calculator-error" /></label></div>
         <div class="calculator-field"><label id="calc-conversion-label" for="calc-conversion">{labels.conversion}<input id="calc-conversion" name="conversion" type="number" min="0" max="100" step="any" value={defaults.conversion} inputmode="decimal" aria-describedby="calculator-error" /></label><input type="range" min="0" max="100" step="any" value={defaults.conversion} data-slider="conversion" aria-labelledby="calc-conversion-label" disabled /></div>
@@ -126,12 +126,16 @@ const ratio = formatScenarioRatio(result.current, result.scenario);
 
 <style>
   .calculator-introduction { text-align: center; margin-bottom: 40px; }
-  :global(.invite-home) .calculator-introduction .calculator-formula { border: 0; padding: 0; margin-top: 12px; }
+  .calculator-introduction .eyebrow { color: #b9e8d4; }
+  .calculator-introduction h2 { max-width: 850px; margin: 16px auto 0; }
+  .calculator-introduction .body-copy { max-width: 680px; margin: 20px auto 0; color: #e0d9e7; font-size: 15px; }
+  :global(.invite-home) .calculator-introduction .calculator-formula { border: 0; padding: 0; margin-top: 20px; }
+  :global(.invite-home) .leverage-grid { align-items: start; }
   .calculator-multiplier { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-top: 20px; font-size: 15px; }
   .calculator-multiplier output { min-width: 0; overflow-wrap: anywhere; font-family: var(--heading); font-size: 25px; font-weight: 550; }
   .calculator-multiplier [data-percentage] { font-size: 13px; color: #d7f1e4; overflow-wrap: anywhere; }
   .calculator-field { min-width: 0; }
-  .calculator-inputs { margin-top: 28px; }
+  .calculator-inputs { margin-top: 0; }
   .scenario-period { font-size: 12px; margin-bottom: 4px; }
   :global(.invite-home) .calculator-inputs input[type="range"] { display: block; min-height: 24px; height: 24px; margin: 6px 0 0; padding: 0; border: 0; border-radius: 0; background: transparent; accent-color: #b9e8d4; cursor: pointer; }
   .scenario-chart { margin: 0; padding: 12px; border-radius: 10px; background: #fbf9fc; color: #320c43; }

@@ -6,7 +6,7 @@ import { once } from 'node:events';
 import { createAppServer } from '../server/http.mjs';
 
 const phase = process.env.QA_BASE_URL ? 'live' : 'local';
-const handoff = process.env.QA_HANDOFF || 'calculator-multiplier';
+const handoff = process.env.QA_HANDOFF || 'calculator-centered';
 const output = resolve(`../coordination/evidence/${handoff}/${phase}`);
 mkdirSync(output, { recursive: true });
 const servers = [];
@@ -35,7 +35,7 @@ const snapshot = () => page.evaluate(() => {
   return {
     section: describe(document.querySelector('#regneeksempel')),
     outside: [...document.querySelectorAll('header, .invite-home > section:not(#regneeksempel), footer')].map(describe),
-    copy: [...document.querySelectorAll('#regneeksempel .eyebrow, .leverage-copy > h2, .leverage-copy > .body-copy, #regneeksempel .calculator-formula')].map(el => el.outerHTML.replace(/ data-astro-cid-[a-z0-9]+=""/g, '')).sort().join(''),
+    copy: [...document.querySelectorAll('#regneeksempel .eyebrow, #regneeksempel h2, #regneeksempel .body-copy, #regneeksempel .calculator-formula')].map(el => el.outerHTML.replace(/ data-astro-cid-[a-z0-9]+=""/g, '')).sort().join(''),
     resultLabels: [...document.querySelectorAll('.math-results > div > span:first-child, .math-results .outcome-label')].map(el => el.textContent),
     caveat: document.querySelector('.calculator-caveat')?.textContent ?? null,
   };
@@ -87,12 +87,19 @@ try {
     assert.equal(after.copy, before.copy); assert.deepEqual(after.resultLabels, before.resultLabels); assert.equal(after.caveat, null);
     assert.equal(await page.locator('.calculator-caveat, [data-difference]').count(), 0);
     assert.equal((await page.locator('.calculator-multiplier').textContent()).split(':')[0], 'X');
-    const introduction = await page.locator('.calculator-introduction').boundingBox(), heading = await page.locator('.leverage-copy h2').boundingBox();
-    assert.ok(introduction.y + introduction.height < heading.y, 'Eyebrow and formula appear above the calculator columns');
-    assert.equal(await page.locator('.calculator-introduction').evaluate(el => getComputedStyle(el).textAlign), 'center');
+    const introduction = await page.locator('.calculator-introduction').boundingBox(), fields = await page.locator('.calculator-inputs').boundingBox(), chart = await page.locator('.scenario-chart').boundingBox();
+    assert.ok(introduction.y + introduction.height < fields.y && introduction.y + introduction.height < chart.y, 'All introductory text appears above the fields and chart');
+    assert.equal(await page.locator('.leverage-copy h2, .leverage-copy .body-copy').count(), 0);
+    assert.equal(await page.locator('.calculator-introduction h2').textContent(), home.calculator.heading);
+    assert.equal(await page.locator('.calculator-introduction .body-copy').textContent(), home.calculator.intro);
+    for (const selector of ['.eyebrow', 'h2', '.body-copy', '.calculator-formula']) {
+      const text = page.locator(`.calculator-introduction ${selector}`), bounds = await text.boundingBox();
+      assert.equal(await text.evaluate(el => getComputedStyle(el).textAlign), 'center');
+      assert.ok(Math.abs(bounds.x + bounds.width / 2 - width / 2) <= 1, `${selector}: centered across the section`);
+    }
     assert.equal(await page.locator('.calculator-introduction .calculator-formula').evaluate(el => getComputedStyle(el).borderLeftWidth), '0px');
     const addedHeight = after.section.height - before.section.height;
-    assert.ok(addedHeight < 150, `${width}: relocated inputs keep calculator compact (height delta ${addedHeight})`);
+    assert.ok(addedHeight < 200, `${width}: centered introduction keeps calculator compact (height delta ${addedHeight})`);
     after.outside.forEach((item, index) => {
       const original = before.outside[index];
       const expectedY = original.y >= before.section.y + before.section.height ? original.y + addedHeight : original.y;
@@ -171,7 +178,7 @@ try {
   assert.equal(await page.locator('[data-chart-improved]').evaluate(el => getComputedStyle(el).transitionDuration), '0s');
   assert.deepEqual(errors, []); assert.equal(posts, 0);
   writeFileSync(resolve(output, 'checks.json'), JSON.stringify({ checkedAt: new Date().toISOString(), base, checks, otherPages, nativeDefaultResultsPreserved: true, reducedMotionSupported: true, intakeDisabled: true, errors, posts, result: 'PASS' }, null, 2) + '\n');
-  console.log(`Calculator ratio ${phase} PASS: 4 widths, centered top eyebrow/formula, removed public caveat, true ratio/total-level percentage, unchanged monthly points/cards/inputs, numeric/slider/keyboard sync, higher/lower/equal/zero/max/invalid scenarios, 14 pages preserved, reduced motion, no overflow/errors/POST.`);
+  console.log(`Calculator centered copy ${phase} PASS: 4 widths, all introductory text centered above fields/chart, unchanged copy/math/ratio/cards/sliders, 14 pages preserved, reduced motion, no overflow/errors/POST.`);
 } finally {
   await browser.close();
   for (const server of servers) { server.closeAllConnections(); await new Promise(resolve => server.close(resolve)); }
