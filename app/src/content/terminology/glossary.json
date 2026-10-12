@@ -23,7 +23,6 @@
     {
       "id": "lokal-seo",
       "term": "Lokal SEO",
-      "aliases": [],
       "category": "Synlighet og søk",
       "shortDefinition": "Å bli funnet av folk i området du faktisk kan hjelpe.",
       "fullDefinition": "Lokal SEO handler om å gjøre det tydelig hvor bedriften holder til, hvilke områder den dekker og hva den tilbyr. Nettsiden og bedriftsprofilen må fortelle omtrent samme historie. Hvis du reparerer tak i Follo, er masse trafikk fra Alta mest pynt i rapporten.",
@@ -32,7 +31,6 @@
     {
       "id": "ai-synlighet",
       "term": "AI-synlighet",
-      "aliases": [],
       "category": "Synlighet og søk",
       "shortDefinition": "Om og hvordan bedriften dukker opp når folk spør AI-tjenester om det du tilbyr.",
       "fullDefinition": "AI-synlighet handler om hvorvidt bedriften blir nevnt, brukt som kilde eller på annen måte dukker opp i AI-baserte svar. Det er interessant, men ikke magi: en omtale er ikke det samme som en anbefaling, og en anbefaling er fortsatt ikke en kunde.",
@@ -42,7 +40,6 @@
       "id": "aeo",
       "term": "AEO",
       "fullName": "Answer Engine Optimization",
-      "aliases": [],
       "category": "Synlighet og søk",
       "shortDefinition": "Å lage tydelige svar på spørsmål folk faktisk stiller.",
       "fullDefinition": "AEO står for Answer Engine Optimization. I praksis betyr det ofte å svare klart på konkrete spørsmål, slik at innholdet er lett å forstå og bruke i søk og svartjenester. Det høres mer eksotisk ut enn det er. Et godt svar er fortsatt et godt svar, selv med tre bokstaver foran.",
@@ -52,7 +49,6 @@
       "id": "aio",
       "term": "AIO",
       "fullName": "AI Optimization",
-      "aliases": [],
       "category": "Synlighet og søk",
       "shortDefinition": "Et litt ullent navn på arbeid med synlighet i AI-baserte søk og svar.",
       "fullDefinition": "AIO brukes om flere ting, blant annet AI Optimization og noen ganger AI Overviews. Det betyr at du bør spørre hva avsenderen faktisk mener før du kjøper noe. Bransjen er glad i forkortelser; definisjonene kommer av og til ruslende etterpå.",
@@ -62,7 +58,6 @@
       "id": "geo",
       "term": "GEO",
       "fullName": "Generative Engine Optimization",
-      "aliases": [],
       "category": "Synlighet og søk",
       "shortDefinition": "Å gjøre innhold tydelig nok til at generative AI-tjenester kan forstå og bruke det.",
       "fullDefinition": "GEO står for Generative Engine Optimization. Begrepet overlapper mye med AI-synlighet: tydelig informasjon, gode kilder og konkrete fakta. Ingen kan garantere at en AI-tjeneste velger å nevne deg. Hvis noen gjør det, be dem gjerne vise hvor de har gjemt fjernkontrollen til internett.",
@@ -94,7 +89,6 @@
     {
       "id": "google-ads",
       "term": "Google Ads",
-      "aliases": [],
       "category": "Annonsering",
       "shortDefinition": "Betalte annonser i Googles annonseflater, blant annet i søkeresultater.",
       "fullDefinition": "Google Ads lar deg betale for synlighet når folk søker eller bruker andre Google-flater. Du betaler annonsebudsjettet til Google og eventuelt noen for å gjøre jobben med kampanjene. De to kostnadene er ikke samme ting, selv om fakturaen gjerne skulle ønske det.",
@@ -103,7 +97,6 @@
     {
       "id": "meta-ads",
       "term": "Meta Ads",
-      "aliases": [],
       "category": "Annonsering",
       "shortDefinition": "Betalte annonser på blant annet Facebook og Instagram.",
       "fullDefinition": "Meta Ads brukes til å vise annonser på Facebook, Instagram og andre Meta-flater. Forskjellen fra søkeannonser er ofte at folk ikke nødvendigvis leter etter deg akkurat da. Du avbryter dem høflig mens de ser på feriebilder, reels eller naboens nye grill.",
@@ -113,7 +106,6 @@
       "id": "roas",
       "term": "ROAS",
       "fullName": "Return on Ad Spend",
-      "aliases": [],
       "category": "Annonsering",
       "shortDefinition": "Hvor mye registrert omsetning annonsene gir tilbake per krone brukt på annonser.",
       "fullDefinition": "ROAS står for Return on Ad Spend. Tallet sammenligner registrert omsetning med annonsekostnaden. ROAS 4,3x betyr 4,30 kr i registrert omsetning per annonsekrone. Det betyr ikke 4,30 kr i fortjeneste. Varekostnad, lønn, frakt, returer og resten av virkeligheten vil også ha sitt.",
@@ -158,7 +150,6 @@
     {
       "id": "konvertering",
       "term": "Konvertering",
-      "aliases": [],
       "category": "Konvertering",
       "shortDefinition": "Når en besøkende gjør noe vi faktisk ønsker - som å kjøpe eller ta kontakt.",
       "fullDefinition": "En konvertering er en handling bedriften har bestemt at betyr noe. Det kan være et kjøp, en relevant henvendelse eller en annen konkret handling. Ikke alle klikk fortjener konfetti. Først må vi være enige om hva som faktisk teller.",
@@ -167,7 +158,6 @@
     {
       "id": "konverteringsrate",
       "term": "Konverteringsrate",
-      "aliases": [],
       "category": "Konvertering",
       "shortDefinition": "Hvor stor andel av besøkene som ender i den handlingen du vil ha.",
       "fullDefinition": "Konverteringsrate er andelen besøk som fører til en ønsket handling. Har du 100 relevante besøk og 2 kjøp, er raten 2 %. Det er bare nyttig hvis vi er enige om hva som teller som besøk og konvertering. Ellers sammenligner vi epler med skjema-innsendinger.",
@@ -178,7 +168,8 @@
       "term": "CRO",
       "fullName": "Conversion Rate Optimization",
       "aliases": [
-        "konverteringsoptimalisering"
+        "konverteringsoptimalisering",
+        "KRO"
       ],
       "category": "Konvertering",
       "shortDefinition": "Å gjøre det lettere for riktige besøkende å ta neste steg, kontakte deg eller kjøpe.",
@@ -189,7 +180,6 @@
       "id": "cta",
       "term": "CTA",
       "fullName": "Call to Action",
-      "aliases": [],
       "category": "Konvertering",
       "shortDefinition": "En tydelig beskjed om hva kunden kan gjøre videre.",
       "fullDefinition": "CTA står for Call to Action. Det er knappen eller lenken som peker ut neste steg. «Kontakt oss» kan fungere, men «Be om pris» eller «Bestill time» sier ofte mer. En CTA er et veiskilt, ikke en tryllestav.",
@@ -234,7 +224,6 @@
     {
       "id": "attribusjon",
       "term": "Attribusjon",
-      "aliases": [],
       "category": "Måling og økonomi",
       "shortDefinition": "Reglene som bestemmer hvem som får æren for et kjøp eller en henvendelse.",
       "fullDefinition": "Attribusjon er måten en rapport fordeler æren mellom annonser, søk og andre kontaktpunkter. Kunden kan ha sett en annonse mandag, googlet deg torsdag, spurt ektefellen fredag og kjøpt søndag. Rapporten vil likevel gjerne kåre én vinner. Derfor bør attribusjon leses som en modell, ikke som overvåkningskamera fra kundens hode.",
@@ -254,7 +243,6 @@
     {
       "id": "ordreverdi",
       "term": "Ordreverdi",
-      "aliases": [],
       "category": "Måling og økonomi",
       "shortDefinition": "Hvor mye kunden kjøper for i én bestilling.",
       "fullDefinition": "Ordreverdi er beløpet i en enkelt ordre. Gjennomsnittlig ordreverdi viser snittet på tvers av flere ordre. Det sier noe om størrelsen på salget, men ikke hvor mye du tjente på det. Omsetning er hyggelig. Kostnader har dessverre også adgang til regnearket.",
@@ -263,7 +251,6 @@
     {
       "id": "margin",
       "term": "Margin",
-      "aliases": [],
       "category": "Måling og økonomi",
       "shortDefinition": "Hvor mye som er igjen av salget etter kostnadene du faktisk regner med.",
       "fullDefinition": "Margin viser hvor stor del av salget som er igjen etter bestemte kostnader. Derfor må vi alltid spørre hvilke kostnader som er tatt med. Høy omsetning ser flott ut i et skjermbilde. Marginen avgjør om det også var en god idé.",
