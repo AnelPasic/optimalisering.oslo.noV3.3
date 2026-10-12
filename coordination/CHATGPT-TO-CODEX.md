@@ -1,6 +1,10 @@
 # ChatGPT to Codex
 
-## Active handoff - NONE / OWNER CALCULATOR PRESENTATION CORRECTION DELIVERED / STOP FOR REVIEW
+## Active handoff - NONE / ALL CALCULATOR INTRODUCTORY TEXT CENTERED / STOP FOR REVIEW
+
+2026-10-12 actual direct OWNER correction explicitly includes the heading and explanatory paragraph in the text that must move higher and become centered. Implemented/pushed at `c69fb694ab40c303a7085715783ed62e047f2e92`: eyebrow, heading, explanation and formula form one centered introduction above inputs/chart. Text, math, sliders, cards and prior ratio/removal behavior are unchanged. Existing main/Worker/QA authorization continues. Exact delivery: CODEX-TO-CHATGPT / `evidence/calculator-centered/`. STOP for OWNER section review; no active next implementation or inferred acceptance/launch authority.
+
+## Historical delivery - OWNER CALCULATOR PRESENTATION CORRECTION
 
 2026-10-12 actual direct OWNER continuation: remove the public hypothetical-example sentence, replace Forskjell with X in the form 5,5X (550%), and move the existing eyebrow/formula higher and center them. Implemented/pushed at `dbe9398966f0dfd7c31aef811d94606220a1202b`. X is scenario/current; percentage is the same total relative level with today's result as 100 %. Existing monthly growth math, cards, sliders, chart and illustration label remain preserved. The inactive caveat source/CMS field remains; no architecture change. Existing main/Worker/QA authorization continues. Exact delivery: CODEX-TO-CHATGPT / `evidence/calculator-multiplier/`. STOP for OWNER section review; no active next implementation or inferred acceptance/launch authority.
 
