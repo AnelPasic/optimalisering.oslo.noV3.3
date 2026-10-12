@@ -1,0 +1,22 @@
+✔ copy-style guard permits formal calculator notation but still rejects ornamental customer prose (119.3299ms)
+✔ illustrative example keeps percentage units correct (0.4716ms)
+✔ invalid or impossible calculator inputs fail (0.186ms)
+✔ traffic and conversion compound rather than adding their effects (0.4622ms)
+✔ zero baseline has no defined percentage increase and fractional outcomes stay precise (0.0964ms)
+✔ combined scenario rejects impossible or non-finite inputs (0.2358ms)
+✔ a tiny baseline does not produce an infinite percentage claim (0.0703ms)
+✔ monthly traffic growth compounds across the chosen number of months (0.1361ms)
+✔ monthly scenarios reject invalid month counts and preserve one-month compatibility (0.4778ms)
+✔ six monthly points show compound growth rather than linear interpolation (1.036ms)
+✔ twelve monthly outcomes fill a taller chart and finish at month twelve (0.2075ms)
+✔ illustration honestly supports lower, equal, zero and maximum outcomes at mobile width (0.2526ms)
+✔ scenario ratio shows the total relative level, not percentage increase (0.9187ms)
+✔ zero and non-finite baselines do not invent a multiplier (0.1267ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 176.2146

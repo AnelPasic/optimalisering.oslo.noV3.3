@@ -6,7 +6,7 @@ import { once } from 'node:events';
 import { createAppServer } from '../server/http.mjs';
 
 const phase = process.env.QA_BASE_URL ? 'live' : 'local';
-const handoff = process.env.QA_HANDOFF || 'calculator-centered';
+const handoff = process.env.QA_HANDOFF || 'calculator-year';
 const output = resolve(`../coordination/evidence/${handoff}/${phase}`);
 mkdirSync(output, { recursive: true });
 const servers = [];
@@ -49,7 +49,7 @@ async function setNumbers(values) {
   for (const [name, value] of Object.entries(values)) await page.locator(`[data-leverage] input[name=${name}]`).fill(String(value));
 }
 async function assertScenario(visits, conversion, traffic, next) {
-  const current = visits * conversion / 100, scenario = visits * (1 + traffic / 100) ** 6 * next / 100;
+  const current = visits * conversion / 100, scenario = visits * (1 + traffic / 100) ** 12 * next / 100;
   const difference = scenario - current;
   assert.equal(await page.locator('[data-current]').textContent(), format.format(current));
   assert.equal(await page.locator('[data-scenario]').textContent(), format.format(scenario));
@@ -67,13 +67,14 @@ async function assertScenario(visits, conversion, traffic, next) {
   const improvedPath = await page.locator('[data-chart-improved]').getAttribute('d');
   const parse = path => [...path.matchAll(/[ML] ([\d.-]+) ([\d.-]+)/g)].map(match => ({ x: Number(match[1]), y: Number(match[2]) }));
   const a = parse(currentPath), b = parse(improvedPath);
-  assert.equal(a.length, 6); assert.equal(b.length, 6);
+  assert.equal(a.length, 12); assert.equal(b.length, 12);
   assert.ok(a.every(point => point.y === a[0].y));
-  const monthly = Array.from({ length: 6 }, (_, index) => visits * (1 + traffic / 100) ** (index + 1) * next / 100);
+  const monthly = Array.from({ length: 12 }, (_, index) => visits * (1 + traffic / 100) ** (index + 1) * next / 100);
   const peak = Math.max(current, ...monthly, 1);
-  b.forEach((point, index) => assert.ok(Math.abs(point.y - (88 - monthly[index] / peak * 68)) <= .0051, `Month ${index + 1}: matches compound growth`));
-  if (scenario > current) assert.ok(b[5].y < a[5].y);
-  if (scenario < current) assert.ok(b[5].y > a[5].y);
+  const height = await page.locator('.scenario-chart svg').evaluate(svg => svg.getBoundingClientRect().height);
+  b.forEach((point, index) => assert.ok(Math.abs(point.y - (height - 40 - monthly[index] / peak * (height - 60))) <= .0051, `Month ${index + 1}: matches compound growth at actual chart height`));
+  if (scenario > current) assert.ok(b[11].y < a[11].y);
+  if (scenario < current) assert.ok(b[11].y > a[11].y);
   if (scenario === current) assert.deepEqual(a, b);
   const overflow = await page.locator('#regneeksempel').evaluate(section => [...section.querySelectorAll('*')].filter(el => el instanceof HTMLElement && el.clientWidth > 0 && el.scrollWidth > el.clientWidth + 1).map(el => el.className));
   assert.deepEqual(overflow, [], 'No overflow even at maximum compounded outcomes');
@@ -108,14 +109,21 @@ try {
     });
     assert.equal(await page.locator('.leverage-copy .calculator-inputs input[type=number]').count(), 4);
     assert.equal(await page.locator('.leverage-tool input').count(), 0);
+    assert.equal(await page.locator('.leverage-copy .calculator-results .math-results > div').count(), 2);
+    assert.equal(await page.locator('.leverage-tool .calculator-results').count(), 0);
+    const results = await page.locator('.calculator-results').boundingBox();
+    assert.ok(results.y >= fields.y + fields.height, 'Cards stay below the input grid');
     assert.equal((await page.locator('label[for=calc-traffic]').textContent()).trim(), 'Mer relevant trafikk per måned (%)');
-    assert.equal(await page.locator('.scenario-period').textContent(), 'Måned 6');
+    assert.equal(await page.locator('.scenario-period').textContent(), 'Måned 12');
     if (width > 900) {
       const left = await page.locator('.calculator-inputs').boundingBox(), right = await page.locator('.leverage-tool').boundingBox();
       assert.ok(left.x + left.width <= right.x, 'Desktop fields stay in the left column under the text');
+      const column = await page.locator('.leverage-copy').boundingBox();
+      assert.ok(Math.abs(chart.y - column.y) <= 1 && Math.abs(chart.height - column.height) <= 1, 'Desktop chart fills the full height alongside fields and results');
     }
     const initial = await assertScenario(2000, 1, 10, 2);
-    assert.equal(await page.locator('.scenario-chart figcaption').textContent(), 'Illustrasjon - ikke prognose 6 måneder');
+    assert.equal(await page.locator('.scenario-chart figcaption').textContent(), 'Illustrasjon - ikke prognose 12 måneder');
+    assert.deepEqual(await page.locator('[data-chart-month]').allTextContents(), Array.from({ length: 12 }, (_, index) => String(index + 1)));
     assert.deepEqual(await page.locator('.scenario-legend span').allTextContents(), ['Uten optimalisering', 'Med optimalisering']);
     const cases = [];
     for (const [visits, conversion, traffic, next] of [[1000, 1, 0, 2], [1000, 1, 0, 5.5], [1500, 1.25, 20, 2.75], [1000, 2, 0, 1], [1000, 2, 0, 2], [1000, 2, 10, 0], [0, 1, 50, 2], [1000, 0, 50, 2], [10000000, 100, 1000, 100]]) {
@@ -154,6 +162,8 @@ try {
     assert.ok(layout.scroll <= width); assert.deepEqual(layout.overflow, []);
     assert.ok(layout.sliderHeights.every(height => height >= 24 && height <= 30));
     for (const label of layout.labels) { assert.equal(label.size, '12px'); assert.ok(label.x >= layout.chart.x && label.right <= layout.chart.right + 1 && label.bottom <= layout.chart.bottom + 1); }
+    const monthLabels = layout.labels.slice(2);
+    for (let index = 1; index < monthLabels.length; index++) assert.ok(monthLabels[index].x > monthLabels[index - 1].right, 'Month labels remain separate and readable');
     await page.locator('#regneeksempel').screenshot({ path: resolve(output, `calculator-${width}.png`) });
     checks.push({ width, initial, cases, sliderNumericAndKeyboardSync: true, invalidChartHiddenAndSliderRecovery: true, addedHeight, outsideCalculatorPreserved: true, layout });
   }
@@ -168,8 +178,10 @@ try {
   await page.goto(`${base}/priser/?pakke=vekst#bestill`); assert.equal(await page.locator('form[data-package-order]').getAttribute('data-enabled'), 'false');
   const context = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 320, height: 844 } });
   const native = await context.newPage(); await native.goto(base);
-  assert.equal(await native.locator('[data-current]').textContent(), '20'); assert.equal(await native.locator('[data-scenario]').textContent(), format.format(2000 * 1.1 ** 6 * .02));
-  assert.equal(await native.locator('[data-multiplier]').textContent(), '3,5X'); assert.equal(await native.locator('[data-percentage]').textContent(), '(354%)');
+  assert.equal(await native.locator('[data-current]').textContent(), '20'); assert.equal(await native.locator('[data-scenario]').textContent(), format.format(2000 * 1.1 ** 12 * .02));
+  assert.equal(await native.locator('[data-multiplier]').textContent(), '6,3X'); assert.equal(await native.locator('[data-percentage]').textContent(), '(628%)');
+  assert.equal(await native.locator('.scenario-period').textContent(), 'Måned 12');
+  assert.ok(await native.evaluate(() => document.documentElement.scrollWidth <= 320), 'Native result cards fit mobile without JavaScript');
   assert.equal(await native.locator('.calculator-caveat').count(), 0);
   assert.ok(await native.locator('[data-scenario-chart]').isHidden());
   assert.ok(await native.locator('[data-slider=conversion]').isDisabled());
@@ -178,7 +190,7 @@ try {
   assert.equal(await page.locator('[data-chart-improved]').evaluate(el => getComputedStyle(el).transitionDuration), '0s');
   assert.deepEqual(errors, []); assert.equal(posts, 0);
   writeFileSync(resolve(output, 'checks.json'), JSON.stringify({ checkedAt: new Date().toISOString(), base, checks, otherPages, nativeDefaultResultsPreserved: true, reducedMotionSupported: true, intakeDisabled: true, errors, posts, result: 'PASS' }, null, 2) + '\n');
-  console.log(`Calculator centered copy ${phase} PASS: 4 widths, all introductory text centered above fields/chart, unchanged copy/math/ratio/cards/sliders, 14 pages preserved, reduced motion, no overflow/errors/POST.`);
+  console.log(`Calculator twelve-month ${phase} PASS: 4 widths, cards below inputs, full-height desktop chart, 12 legible months, independent month-12 math/ratio, retained centered copy/sliders, 14 pages preserved, reduced motion, no overflow/errors/POST.`);
 } finally {
   await browser.close();
   for (const server of servers) { server.closeAllConnections(); await new Promise(resolve => server.close(resolve)); }

@@ -1,0 +1,14 @@
+{
+  "checkedAt": "2026-10-12T22:02:45.934Z",
+  "base": "7db6780281badd9d90bc742aa39cfab6c683a6a3",
+  "frozenBlobs": 251,
+  "allContentUnchanged": true,
+  "monthlyMathAndRatioUnchanged": true,
+  "cmsHeroProofPricingChromeAssetsBackendAndReferencesUnchanged": true,
+  "dependenciesAndNoindexIntakeConfigurationUnchanged": true,
+  "allowedExistingRuntimeFiles": [
+    "app/src/components/HomeLeverage.astro",
+    "app/src/lib/scenario-chart.ts"
+  ],
+  "result": "PASS"
+}

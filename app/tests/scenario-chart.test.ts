@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { createScenarioIllustration } from '../src/lib/scenario-chart.ts';
+import { createScenarioIllustration, SCENARIO_MONTHS } from '../src/lib/scenario-chart.ts';
 import { calculateScenario } from '../src/lib/leverage.ts';
 
 test('six monthly points show compound growth rather than linear interpolation', () => {
@@ -15,6 +15,21 @@ test('six monthly points show compound growth rather than linear interpolation',
   assert.ok(values[5] - values[4] > values[1] - values[0]);
   assert.ok(chart.scenario[5].y < chart.current[5].y);
   assert.ok(chart.current.every(point => point.y === chart.current[0].y));
+});
+
+test('twelve monthly outcomes fill a taller chart and finish at month twelve', () => {
+  assert.equal(SCENARIO_MONTHS, 12);
+  const values = Array.from({ length: SCENARIO_MONTHS }, (_, index) => calculateScenario(2000, 1, 10, 2, index + 1).scenario);
+  for (const height of [240, 480]) {
+    const chart = createScenarioIllustration(20, values, 256, height);
+    assert.equal(chart.current.length, 12);
+    assert.equal(chart.scenario.length, 12);
+    assert.ok(Math.abs(chart.scenario[11].value - 125.53713506884) < 1e-8);
+    assert.equal(chart.scenario[11].y, 20);
+    assert.equal(chart.scenario[11].x, 164);
+    assert.ok(chart.current.every(point => point.value === 20 && point.y === chart.current[0].y));
+    for (const point of [...chart.current, ...chart.scenario]) assert.ok(point.y >= 20 && point.y <= height - 40);
+  }
 });
 
 test('illustration honestly supports lower, equal, zero and maximum outcomes at mobile width', () => {

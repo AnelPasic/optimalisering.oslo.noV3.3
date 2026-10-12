@@ -2,12 +2,14 @@
 import type { CollectionEntry } from 'astro:content';
 import { calculateScenario } from '../lib/leverage';
 import { formatScenarioRatio } from '../lib/scenario-ratio';
+import { SCENARIO_MONTHS } from '../lib/scenario-chart';
 interface Props { content: NonNullable<CollectionEntry<'pages'>['data']['homepage']>['calculator']; }
 const { content } = Astro.props;
 const { labels, defaults } = content;
-const result = calculateScenario(defaults.visits, defaults.conversion, defaults.trafficIncrease, defaults.newConversion, 6);
+const result = calculateScenario(defaults.visits, defaults.conversion, defaults.trafficIncrease, defaults.newConversion, SCENARIO_MONTHS);
 const format = new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 1 });
 const ratio = formatScenarioRatio(result.current, result.scenario);
+const resultSize = (value: number) => `--result-size: ${Math.max(12, Math.min(64, 145 / format.format(value).length))}px`;
 ---
 <section id="regneeksempel" class="leverage-section section-space" data-leverage data-undefined-increase={labels.undefinedIncrease}>
   <div class="shell calculator-introduction"><p class="eyebrow">{content.eyebrow}</p><h2>{content.heading}</h2><p class="body-copy">{content.intro}</p><p class="calculator-formula">{content.formula}</p></div>
@@ -20,10 +22,17 @@ const ratio = formatScenarioRatio(result.current, result.scenario);
         <div class="calculator-field"><label id="calc-new-conversion-label" for="calc-new-conversion">{labels.newConversion}<input id="calc-new-conversion" name="newConversion" type="number" min="0" max="100" step="any" value={defaults.newConversion} inputmode="decimal" aria-describedby="calculator-error" /></label><input type="range" min="0" max="100" step="any" value={defaults.newConversion} data-slider="newConversion" aria-labelledby="calc-new-conversion-label" disabled /></div>
       </div>
       <p id="calculator-error" class="calculator-error" role="status" hidden>{labels.invalid}</p>
+      <div class="calculator-results" role="status" aria-live="polite" aria-atomic="true">
+        <div class="math-results">
+          <div class="leverage-result"><span>{labels.current}</span><output data-current style={resultSize(result.current)}>{format.format(result.current)}</output><span class="outcome-label">{labels.outcome}</span><span class="math-equation" data-current-equation>{format.format(defaults.visits)} × {String(defaults.conversion).replace('.', ',')} %</span></div>
+          <div class="leverage-comparison"><span>{labels.scenario}</span><output data-scenario style={resultSize(result.scenario)}>{format.format(result.scenario)}</output><span class="scenario-period">Måned {SCENARIO_MONTHS}</span><span class="outcome-label">{labels.outcome}</span><span class="math-equation" data-scenario-equation>{format.format(result.scenarioVisits)} × {String(defaults.newConversion).replace('.', ',')} %</span></div>
+        </div>
+        <p class="calculator-multiplier">{labels.difference}: <output data-multiplier>{ratio?.multiplier ?? '–'}</output><span data-percentage>{ratio?.percentage ?? labels.undefinedIncrease}</span></p>
+      </div>
     </div>
     <div class="leverage-tool">
       <figure class="scenario-chart" data-scenario-chart hidden>
-        <figcaption id="scenario-illustration-label">Illustrasjon - ikke prognose <span>6 måneder</span></figcaption>
+        <figcaption id="scenario-illustration-label">Illustrasjon - ikke prognose <span>{SCENARIO_MONTHS} måneder</span></figcaption>
         <div class="scenario-legend"><span id="scenario-current-label" class="scenario-current">Uten optimalisering</span><span id="scenario-improved-label" class="scenario-improved">Med optimalisering</span></div>
         <svg viewBox="0 0 480 128" role="img" aria-labelledby="scenario-illustration-label scenario-current-label scenario-improved-label" aria-describedby="scenario-current-value scenario-improved-value">
           <path class="scenario-grid" data-chart-grid />
@@ -33,23 +42,16 @@ const ratio = formatScenarioRatio(result.current, result.scenario);
           <circle class="scenario-improved-dot" data-chart-improved-dot r="3" />
           <text id="scenario-current-value" class="scenario-current-value" data-chart-current-value />
           <text id="scenario-improved-value" class="scenario-improved-value" data-chart-improved-value />
-          {Array.from({ length: 6 }, (_, index) => <text class="scenario-month" data-chart-month y="122" text-anchor="middle">{index + 1}</text>)}
+          {Array.from({ length: SCENARIO_MONTHS }, (_, index) => <text class="scenario-month" data-chart-month y="122" text-anchor="middle">{index + 1}</text>)}
         </svg>
       </figure>
-      <div class="calculator-results" role="status" aria-live="polite" aria-atomic="true">
-        <div class="math-results">
-          <div class="leverage-result"><span>{labels.current}</span><output data-current>{format.format(result.current)}</output><span class="outcome-label">{labels.outcome}</span><span class="math-equation" data-current-equation>{format.format(defaults.visits)} × {String(defaults.conversion).replace('.', ',')} %</span></div>
-          <div class="leverage-comparison"><span>{labels.scenario}</span><output data-scenario>{format.format(result.scenario)}</output><span class="scenario-period">Måned 6</span><span class="outcome-label">{labels.outcome}</span><span class="math-equation" data-scenario-equation>{format.format(result.scenarioVisits)} × {String(defaults.newConversion).replace('.', ',')} %</span></div>
-        </div>
-        <p class="calculator-multiplier">{labels.difference}: <output data-multiplier>{ratio?.multiplier ?? '–'}</output><span data-percentage>{ratio?.percentage ?? labels.undefinedIncrease}</span></p>
-      </div>
     </div>
   </div>
 </section>
 <script>
   import { calculateScenario } from '../lib/leverage';
   import { formatScenarioRatio } from '../lib/scenario-ratio';
-  import { createScenarioIllustration } from '../lib/scenario-chart';
+  import { createScenarioIllustration, SCENARIO_MONTHS } from '../lib/scenario-chart';
   const tool = document.querySelector<HTMLElement>('[data-leverage]');
   if (tool) {
     const inputs = ['visits', 'conversion', 'trafficIncrease', 'newConversion'].map(name => tool.querySelector<HTMLInputElement>(`[name="${name}"]`)!);
@@ -79,7 +81,7 @@ const ratio = formatScenarioRatio(result.current, result.scenario);
         return;
       }
       const [visits, conversion, traffic, newConversion] = inputs.map(input => Number(input.value));
-      const result = calculateScenario(visits, conversion, traffic, newConversion, 6);
+      const result = calculateScenario(visits, conversion, traffic, newConversion, SCENARIO_MONTHS);
       current.value = format.format(result.current);
       scenario.value = format.format(result.scenario);
       [current, scenario].forEach(output => output.style.setProperty('--result-size', `${Math.max(12, Math.min(64, 145 / output.value.length))}px`));
@@ -88,18 +90,18 @@ const ratio = formatScenarioRatio(result.current, result.scenario);
       percentage.textContent = ratio?.percentage ?? tool!.dataset.undefinedIncrease!;
       currentEquation.textContent = `${format.format(visits)} × ${inputs[1].value.replace('.', ',')} %`;
       scenarioEquation.textContent = `${format.format(result.scenarioVisits)} × ${inputs[3].value.replace('.', ',')} %`;
-      const width = svg.getBoundingClientRect().width;
-      const monthly = Array.from({ length: 6 }, (_, index) => calculateScenario(visits, conversion, traffic, newConversion, index + 1).scenario);
-      const illustration = createScenarioIllustration(result.current, monthly, width);
-      svg.setAttribute('viewBox', `0 0 ${width} 128`);
-      chart.querySelector('[data-chart-grid]')!.setAttribute('d', `M 12 88 H ${width - 92}`);
+      const { width, height } = svg.getBoundingClientRect();
+      const monthly = Array.from({ length: SCENARIO_MONTHS }, (_, index) => calculateScenario(visits, conversion, traffic, newConversion, index + 1).scenario);
+      const illustration = createScenarioIllustration(result.current, monthly, width, height);
+      svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+      chart.querySelector('[data-chart-grid]')!.setAttribute('d', `M 12 ${height - 40} H ${width - 92}`);
       chart.querySelector('[data-chart-current]')!.setAttribute('d', illustration.currentPath);
       chart.querySelector('[data-chart-improved]')!.setAttribute('d', illustration.scenarioPath);
       for (const [name, series, value, labelY] of [
         ['current', illustration.current, result.current, illustration.currentLabelY],
         ['improved', illustration.scenario, result.scenario, illustration.scenarioLabelY],
       ] as const) {
-        const end = series[5];
+        const end = series[SCENARIO_MONTHS - 1];
         const dot = chart.querySelector(`[data-chart-${name}-dot]`)!;
         dot.setAttribute('cx', String(end.x)); dot.setAttribute('cy', String(end.y));
         const label = chart.querySelector(`[data-chart-${name}-value]`)!;
@@ -108,7 +110,10 @@ const ratio = formatScenarioRatio(result.current, result.scenario);
         label.textContent = fullValue.length > 10 ? compact.format(value) : fullValue;
         label.setAttribute('aria-label', fullValue);
       }
-      chart.querySelectorAll('[data-chart-month]').forEach((month, index) => month.setAttribute('x', String(illustration.current[index].x)));
+      chart.querySelectorAll('[data-chart-month]').forEach((month, index) => {
+        month.setAttribute('x', String(illustration.current[index].x));
+        month.setAttribute('y', String(height - 6));
+      });
     }
     inputs.forEach(input => input.addEventListener('input', update));
     sliders.forEach(slider => {
@@ -130,7 +135,10 @@ const ratio = formatScenarioRatio(result.current, result.scenario);
   .calculator-introduction h2 { max-width: 850px; margin: 16px auto 0; }
   .calculator-introduction .body-copy { max-width: 680px; margin: 20px auto 0; color: #e0d9e7; font-size: 15px; }
   :global(.invite-home) .calculator-introduction .calculator-formula { border: 0; padding: 0; margin-top: 20px; }
-  :global(.invite-home) .leverage-grid { align-items: start; }
+  :global(.invite-home) .leverage-grid { align-items: stretch; }
+  :global(.invite-home) .leverage-tool { display: flex; }
+  :global(.invite-home) .math-results output { max-width: 100%; white-space: normal; overflow-wrap: anywhere; }
+  .math-equation { max-width: 100%; overflow-wrap: anywhere; }
   .calculator-multiplier { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-top: 20px; font-size: 15px; }
   .calculator-multiplier output { min-width: 0; overflow-wrap: anywhere; font-family: var(--heading); font-size: 25px; font-weight: 550; }
   .calculator-multiplier [data-percentage] { font-size: 13px; color: #d7f1e4; overflow-wrap: anywhere; }
@@ -138,14 +146,14 @@ const ratio = formatScenarioRatio(result.current, result.scenario);
   .calculator-inputs { margin-top: 0; }
   .scenario-period { font-size: 12px; margin-bottom: 4px; }
   :global(.invite-home) .calculator-inputs input[type="range"] { display: block; min-height: 24px; height: 24px; margin: 6px 0 0; padding: 0; border: 0; border-radius: 0; background: transparent; accent-color: #b9e8d4; cursor: pointer; }
-  .scenario-chart { margin: 0; padding: 12px; border-radius: 10px; background: #fbf9fc; color: #320c43; }
+  .scenario-chart { display: flex; flex-direction: column; flex: 1; min-width: 0; margin: 0; padding: 12px; border-radius: 10px; background: #fbf9fc; color: #320c43; }
   .scenario-chart figcaption { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; font-size: 12px; line-height: 1.4; }
   .scenario-chart figcaption span { color: #566359; }
   .scenario-legend { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-top: 8px; font-size: 12px; line-height: 1.4; }
   .scenario-legend span { display: flex; align-items: center; gap: 6px; }
   .scenario-legend span::before { content: ''; width: 16px; border-top: 2px dashed #63516b; }
   .scenario-legend .scenario-improved::before { border-top: 3px solid #087b73; }
-  .scenario-chart svg { display: block; width: 100%; height: 128px; overflow: visible; }
+  .scenario-chart svg { display: block; width: 100%; height: 0; min-height: 240px; flex: 1; overflow: visible; }
   .scenario-chart path { fill: none; }
   .scenario-grid { stroke: #e0dbe6; }
   .scenario-current-line { stroke: #63516b; stroke-width: 2; stroke-dasharray: 5 4; }
