@@ -1,0 +1,37 @@
+{
+  "base": "https://optimalisering-oslo-v33.anel.workers.dev",
+  "checkedAt": "2026-10-12T23:50:34.639Z",
+  "report": [
+    {
+      "width": 1440,
+      "terms": 25,
+      "fullWidth": true,
+      "noOverflow": true,
+      "directAnchor": true
+    },
+    {
+      "width": 900,
+      "terms": 25,
+      "fullWidth": true,
+      "noOverflow": true,
+      "directAnchor": true
+    },
+    {
+      "width": 390,
+      "terms": 25,
+      "fullWidth": true,
+      "noOverflow": true,
+      "directAnchor": true
+    },
+    {
+      "width": 320,
+      "terms": 25,
+      "fullWidth": true,
+      "noOverflow": true,
+      "directAnchor": true
+    }
+  ],
+  "noJs": true,
+  "errors": [],
+  "result": "PASS"
+}
