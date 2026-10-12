@@ -25,6 +25,7 @@ try {
   }
 } finally { restore(); }
 for (const [file, bytes] of originals) assert.ok(readFileSync(file).equals(bytes));
-mkdirSync('../coordination/evidence/h017c', { recursive: true });
-writeFileSync('../coordination/evidence/h017c/proof-renderer-guard.json', JSON.stringify({ checkedAt: new Date().toISOString(), checks, allSourceBytesRestored: true, realSourceQueries: 0, finalBuild: 'npm run verify restores approved output', result: 'PASS' }, null, 2) + '\n');
+const handoff = process.env.QA_HANDOFF || 'h017d';
+mkdirSync(`../coordination/evidence/${handoff}`, { recursive: true });
+writeFileSync(`../coordination/evidence/${handoff}/proof-renderer-guard.json`, JSON.stringify({ checkedAt: new Date().toISOString(), checks, allSourceBytesRestored: true, realSourceQueries: 0, finalBuild: 'npm run verify restores approved output', result: 'PASS' }, null, 2) + '\n');
 console.log('Proof renderer PASS: unapproved, incomplete and non-comparable cases fail closed on all three actual Astro placements; exact source bytes restored.');

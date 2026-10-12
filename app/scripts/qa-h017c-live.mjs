@@ -5,6 +5,7 @@ import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 
 const base = 'https://optimalisering-oslo-v33.anel.workers.dev';
+const handoff = process.env.QA_HANDOFF || 'h017d';
 const source = execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim();
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
 function walk(directory) { return readdirSync(directory, { withFileTypes: true }).flatMap(entry => entry.isDirectory() ? walk(resolve(directory, entry.name)) : [resolve(directory, entry.name)]); }
@@ -38,5 +39,5 @@ assert.ok(robots.includes('Disallow: /'));
 const sitemap = await (await fetch(base + '/sitemap.xml')).text();
 assert.ok(!sitemap.includes('<loc>'));
 const result = { checkedAt: new Date().toISOString(), source, base, assets, assetCount: assets.length, allTestedAssetsMatch: true, apiGet: api.status, orderApiGet: orderApi.status, custom404: missing.status, standaloneResultsRoute: resultsRoute.status, robotsDisallow: true, emptySitemap: true, realPosts: 0, result: 'PASS' };
-if (!process.argv.includes('--no-report')) writeFileSync('../coordination/evidence/h017c/live-assets.json', JSON.stringify(result, null, 2) + '\n');
-console.log(`H-017C live PASS: ${assets.length} assets match tested build, HTML noindex, robots disallow, empty sitemap and both intake paths GET404. Zero POST.`);
+if (!process.argv.includes('--no-report')) writeFileSync(`../coordination/evidence/${handoff}/live-assets.json`, JSON.stringify(result, null, 2) + '\n');
+console.log(`Proof live PASS: ${assets.length} assets match tested build, HTML noindex, robots disallow, empty sitemap and both intake paths GET404. Zero POST.`);

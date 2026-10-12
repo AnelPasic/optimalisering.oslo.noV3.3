@@ -1,5 +1,7 @@
 # H-017C proof presentation
 
+H-017D (2026-10-12) supersedes the public density described below: the current renderer shows only client, metric/source label, delta/support, before/after and periods. Work/limitations remain required internally and are omitted from public cards. All registry/CMS/gate rules below remain unchanged; historical H-017C evidence is retained.
+
 The existing Pages CMS editors remain in use. No authenticated CMS save/revert is required for this pass; local schema/content round-trip evidence is in `coordination/evidence/h017c/cms-roundtrip.json` and the H-017C tests. H-017B's authenticated architecture proof remains separate and complete.
 
 - Forside -> Forsidens innhold -> Dokumenterte resultater: select case IDs in order, then edit eyebrow, heading and before/after/work labels. The first publishable selected case is featured; subsequent cases support it. Current approved selection: Eurotents, Nysta, Helt Opplagt.

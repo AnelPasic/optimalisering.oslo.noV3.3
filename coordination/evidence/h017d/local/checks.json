@@ -1,0 +1,321 @@
+{
+  "checkedAt": "2026-10-12T13:26:11.080Z",
+  "base": "http://127.0.0.1:4321",
+  "checks": [
+    {
+      "route": "/",
+      "width": 1440,
+      "names": [
+        "Eurotents",
+        "Nysta",
+        "Helt Opplagt"
+      ],
+      "layout": {
+        "width": 1440,
+        "scroll": 1440,
+        "featured": 1360,
+        "cards": [
+          {
+            "width": 1360,
+            "x": 40,
+            "y": 3464.484375
+          },
+          {
+            "width": 668,
+            "x": 40,
+            "y": 3882.015625
+          },
+          {
+            "width": 668,
+            "x": 732,
+            "y": 3882.015625
+          }
+        ],
+        "internalBlocks": 0,
+        "overflowing": []
+      },
+      "oldCardHeights": [
+        543.109375,
+        538.296875,
+        538.296875
+      ],
+      "currentHeights": [
+        393.53125,
+        364.71875,
+        364.71875
+      ],
+      "surroundingSectionsPreserved": true,
+      "screenshot": "home-proof-1440.png"
+    },
+    {
+      "route": "/konvertering/",
+      "width": 1440,
+      "names": [
+        "Nysta"
+      ],
+      "layout": {
+        "width": 1440,
+        "scroll": 1440,
+        "featured": 1360,
+        "cards": [
+          {
+            "width": 1360,
+            "x": 40,
+            "y": 2670.1875
+          }
+        ],
+        "internalBlocks": 0,
+        "overflowing": []
+      },
+      "oldCardHeights": [
+        543.109375
+      ],
+      "currentHeights": [
+        393.53125
+      ],
+      "surroundingSectionsPreserved": true,
+      "screenshot": "konvertering-proof-1440.png"
+    },
+    {
+      "route": "/synlighet/",
+      "width": 1440,
+      "names": [
+        "Helt Opplagt"
+      ],
+      "layout": {
+        "width": 1440,
+        "scroll": 1440,
+        "featured": 1360,
+        "cards": [
+          {
+            "width": 1360,
+            "x": 40,
+            "y": 2811.09375
+          }
+        ],
+        "internalBlocks": 0,
+        "overflowing": []
+      },
+      "oldCardHeights": [
+        543.109375
+      ],
+      "currentHeights": [
+        393.53125
+      ],
+      "surroundingSectionsPreserved": true,
+      "screenshot": "synlighet-proof-1440.png"
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "names": [
+        "Eurotents",
+        "Nysta",
+        "Helt Opplagt"
+      ],
+      "layout": {
+        "width": 390,
+        "scroll": 390,
+        "featured": 350,
+        "cards": [
+          {
+            "width": 350,
+            "x": 20,
+            "y": 5900.046875
+          },
+          {
+            "width": 350,
+            "x": 20,
+            "y": 6251.59375
+          },
+          {
+            "width": 350,
+            "x": 20,
+            "y": 6552.1875
+          }
+        ],
+        "internalBlocks": 0,
+        "overflowing": []
+      },
+      "oldCardHeights": [
+        553.125,
+        526.171875,
+        522.96875
+      ],
+      "currentHeights": [
+        331.546875,
+        280.59375,
+        302.984375
+      ],
+      "surroundingSectionsPreserved": true,
+      "screenshot": "home-proof-390.png"
+    },
+    {
+      "route": "/konvertering/",
+      "width": 390,
+      "names": [
+        "Nysta"
+      ],
+      "layout": {
+        "width": 390,
+        "scroll": 390,
+        "featured": 350,
+        "cards": [
+          {
+            "width": 350,
+            "x": 20,
+            "y": 3992.625
+          }
+        ],
+        "internalBlocks": 0,
+        "overflowing": []
+      },
+      "oldCardHeights": [
+        535.53125
+      ],
+      "currentHeights": [
+        289.953125
+      ],
+      "surroundingSectionsPreserved": true,
+      "screenshot": "konvertering-proof-390.png"
+    },
+    {
+      "route": "/synlighet/",
+      "width": 390,
+      "names": [
+        "Helt Opplagt"
+      ],
+      "layout": {
+        "width": 390,
+        "scroll": 390,
+        "featured": 350,
+        "cards": [
+          {
+            "width": 350,
+            "x": 20,
+            "y": 3998.671875
+          }
+        ],
+        "internalBlocks": 0,
+        "overflowing": []
+      },
+      "oldCardHeights": [
+        532.328125
+      ],
+      "currentHeights": [
+        312.34375
+      ],
+      "surroundingSectionsPreserved": true,
+      "screenshot": "synlighet-proof-390.png"
+    },
+    {
+      "route": "/",
+      "width": 320,
+      "names": [
+        "Eurotents",
+        "Nysta",
+        "Helt Opplagt"
+      ],
+      "layout": {
+        "width": 320,
+        "scroll": 320,
+        "featured": 288,
+        "cards": [
+          {
+            "width": 288,
+            "x": 16,
+            "y": 6244.375
+          },
+          {
+            "width": 288,
+            "x": 16,
+            "y": 6589.921875
+          },
+          {
+            "width": 288,
+            "x": 16,
+            "y": 6953.0625
+          }
+        ],
+        "internalBlocks": 0,
+        "overflowing": []
+      },
+      "oldCardHeights": [
+        571.125,
+        638.3125,
+        619.109375
+      ],
+      "currentHeights": [
+        325.546875,
+        343.140625,
+        349.53125
+      ],
+      "surroundingSectionsPreserved": true,
+      "screenshot": "home-proof-320.png"
+    },
+    {
+      "route": "/konvertering/",
+      "width": 320,
+      "names": [
+        "Nysta"
+      ],
+      "layout": {
+        "width": 320,
+        "scroll": 320,
+        "featured": 288,
+        "cards": [
+          {
+            "width": 288,
+            "x": 16,
+            "y": 4128.0625
+          }
+        ],
+        "internalBlocks": 0,
+        "overflowing": []
+      },
+      "oldCardHeights": [
+        643.109375
+      ],
+      "currentHeights": [
+        347.9375
+      ],
+      "surroundingSectionsPreserved": true,
+      "screenshot": "konvertering-proof-320.png"
+    },
+    {
+      "route": "/synlighet/",
+      "width": 320,
+      "names": [
+        "Helt Opplagt"
+      ],
+      "layout": {
+        "width": 320,
+        "scroll": 320,
+        "featured": 288,
+        "cards": [
+          {
+            "width": 288,
+            "x": 16,
+            "y": 4148.78125
+          }
+        ],
+        "internalBlocks": 0,
+        "overflowing": []
+      },
+      "oldCardHeights": [
+        623.90625
+      ],
+      "currentHeights": [
+        354.328125
+      ],
+      "surroundingSectionsPreserved": true,
+      "screenshot": "synlighet-proof-320.png"
+    }
+  ],
+  "allOtherPagesPreserved": true,
+  "noJavaScriptProofReadable": true,
+  "orderAndAssessmentDisabled": true,
+  "errors": [],
+  "posts": 0,
+  "result": "PASS"
+}

@@ -1,0 +1,5 @@
+
+> optimalisering-oslo-v3-3@0.1.0 qa:proof
+> node scripts/qa-proof-guard.mjs
+
+Proof renderer PASS: unapproved, incomplete and non-comparable cases fail closed on all three actual Astro placements; exact source bytes restored.
