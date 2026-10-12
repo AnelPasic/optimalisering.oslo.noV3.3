@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-10-12T21:32:07.793Z",
+  "base": "a7fc20d4c6930ad59b3aa7ed6da76c00d8424b2e",
+  "frozenBlobs": 248,
+  "homeChangesLimitedToMonthlyTrafficLabelAndDefault": true,
+  "cmsHeroProofPricingChromeAssetsBackendAndReferencesUnchanged": true,
+  "dependenciesAndNoindexIntakeConfigurationUnchanged": true,
+  "allowedExistingRuntimeFiles": [
+    "app/src/components/HomeLeverage.astro",
+    "app/src/lib/leverage.ts",
+    "app/src/lib/scenario-chart.ts",
+    "app/src/content/pages/home.json"
+  ],
+  "result": "PASS"
+}

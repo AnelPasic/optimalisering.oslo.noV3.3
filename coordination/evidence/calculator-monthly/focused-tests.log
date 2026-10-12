@@ -1,0 +1,18 @@
+✔ illustrative example keeps percentage units correct (0.5147ms)
+✔ invalid or impossible calculator inputs fail (0.178ms)
+✔ traffic and conversion compound rather than adding their effects (0.4941ms)
+✔ zero baseline has no defined percentage increase and fractional outcomes stay precise (0.0933ms)
+✔ combined scenario rejects impossible or non-finite inputs (0.2283ms)
+✔ a tiny baseline does not produce an infinite percentage claim (0.0668ms)
+✔ monthly traffic growth compounds across the chosen number of months (0.1463ms)
+✔ monthly scenarios reject invalid month counts and preserve one-month compatibility (0.1497ms)
+✔ six monthly points show compound growth rather than linear interpolation (1.111ms)
+✔ illustration honestly supports lower, equal, zero and maximum outcomes at mobile width (0.2898ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 83.8428

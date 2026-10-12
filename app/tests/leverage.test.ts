@@ -42,3 +42,19 @@ test('combined scenario rejects impossible or non-finite inputs', () => {
 test('a tiny baseline does not produce an infinite percentage claim', () => {
   assert.equal(leverage.calculateScenario(1000, 1e-308, 50, 2).increase, null);
 });
+
+test('monthly traffic growth compounds across the chosen number of months', () => {
+  const result = leverage.calculateScenario(2000, 1, 10, 2, 6);
+  assert.equal(result.current, 20);
+  assert.ok(Math.abs(result.scenarioVisits - 3543.122) < 1e-8);
+  assert.ok(Math.abs(result.scenario - 70.86244) < 1e-8);
+  assert.ok(Math.abs(result.difference - 50.86244) < 1e-8);
+  assert.ok(Math.abs(result.increase! - 254.3122) < 1e-8);
+  assert.equal(leverage.calculateScenario(2000, 1, 0, 2, 6).scenario, 40);
+  assert.equal(leverage.calculateScenario(0, 1, 10, 2, 6).scenario, 0);
+});
+
+test('monthly scenarios reject invalid month counts and preserve one-month compatibility', () => {
+  assert.deepEqual(leverage.calculateScenario(1000, 1, 10, 2, 1), leverage.calculateScenario(1000, 1, 10, 2));
+  for (const months of [0, -1, 1.5, Infinity, NaN]) assert.throws(() => leverage.calculateScenario(1000, 1, 10, 2, months), RangeError);
+});

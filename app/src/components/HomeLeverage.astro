@@ -4,14 +4,13 @@ import { calculateScenario } from '../lib/leverage';
 interface Props { content: NonNullable<CollectionEntry<'pages'>['data']['homepage']>['calculator']; }
 const { content } = Astro.props;
 const { labels, defaults } = content;
-const result = calculateScenario(defaults.visits, defaults.conversion, defaults.trafficIncrease, defaults.newConversion);
+const result = calculateScenario(defaults.visits, defaults.conversion, defaults.trafficIncrease, defaults.newConversion, 6);
 const format = new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 1 });
 const signed = new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 1, signDisplay: 'exceptZero' });
 ---
-<section id="regneeksempel" class="leverage-section section-space">
+<section id="regneeksempel" class="leverage-section section-space" data-leverage data-undefined-increase={labels.undefinedIncrease} data-increase-label={labels.increase}>
   <div class="shell leverage-grid">
-    <div class="leverage-copy"><p class="eyebrow">{content.eyebrow}</p><h2>{content.heading}</h2><p class="body-copy">{content.intro}</p><p class="calculator-formula">{content.formula}</p></div>
-    <div class="leverage-tool" data-leverage data-undefined-increase={labels.undefinedIncrease} data-increase-label={labels.increase}>
+    <div class="leverage-copy"><p class="eyebrow">{content.eyebrow}</p><h2>{content.heading}</h2><p class="body-copy">{content.intro}</p><p class="calculator-formula">{content.formula}</p>
       <div class="calculator-inputs">
         <div class="calculator-field"><label for="calc-visits">{labels.visits}<input id="calc-visits" name="visits" type="number" min="0" max="10000000" step="1" value={defaults.visits} inputmode="numeric" aria-describedby="calculator-error" /></label></div>
         <div class="calculator-field"><label id="calc-conversion-label" for="calc-conversion">{labels.conversion}<input id="calc-conversion" name="conversion" type="number" min="0" max="100" step="any" value={defaults.conversion} inputmode="decimal" aria-describedby="calculator-error" /></label><input type="range" min="0" max="100" step="any" value={defaults.conversion} data-slider="conversion" aria-labelledby="calc-conversion-label" disabled /></div>
@@ -19,6 +18,8 @@ const signed = new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 1, signDi
         <div class="calculator-field"><label id="calc-new-conversion-label" for="calc-new-conversion">{labels.newConversion}<input id="calc-new-conversion" name="newConversion" type="number" min="0" max="100" step="any" value={defaults.newConversion} inputmode="decimal" aria-describedby="calculator-error" /></label><input type="range" min="0" max="100" step="any" value={defaults.newConversion} data-slider="newConversion" aria-labelledby="calc-new-conversion-label" disabled /></div>
       </div>
       <p id="calculator-error" class="calculator-error" role="status" hidden>{labels.invalid}</p>
+    </div>
+    <div class="leverage-tool">
       <figure class="scenario-chart" data-scenario-chart hidden>
         <figcaption id="scenario-illustration-label">Illustrasjon - ikke prognose <span>6 måneder</span></figcaption>
         <div class="scenario-legend"><span id="scenario-current-label" class="scenario-current">Uten optimalisering</span><span id="scenario-improved-label" class="scenario-improved">Med optimalisering</span></div>
@@ -36,7 +37,7 @@ const signed = new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 1, signDi
       <div class="calculator-results" role="status" aria-live="polite" aria-atomic="true">
         <div class="math-results">
           <div class="leverage-result"><span>{labels.current}</span><output data-current>{format.format(result.current)}</output><span class="outcome-label">{labels.outcome}</span><span class="math-equation" data-current-equation>{format.format(defaults.visits)} × {String(defaults.conversion).replace('.', ',')} %</span></div>
-          <div class="leverage-comparison"><span>{labels.scenario}</span><output data-scenario>{format.format(result.scenario)}</output><span class="outcome-label">{labels.outcome}</span><span class="math-equation" data-scenario-equation>{format.format(result.scenarioVisits)} × {String(defaults.newConversion).replace('.', ',')} %</span></div>
+          <div class="leverage-comparison"><span>{labels.scenario}</span><output data-scenario>{format.format(result.scenario)}</output><span class="scenario-period">Måned 6</span><span class="outcome-label">{labels.outcome}</span><span class="math-equation" data-scenario-equation>{format.format(result.scenarioVisits)} × {String(defaults.newConversion).replace('.', ',')} %</span></div>
         </div>
         <p class="calculator-difference">{labels.difference}: <output data-difference>{signed.format(result.difference)}</output><span data-percentage>{result.increase === null ? labels.undefinedIncrease : `${signed.format(result.increase)} % ${labels.increase}`}</span></p>
       </div>
@@ -61,6 +62,7 @@ const signed = new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 1, signDi
     const svg = chart.querySelector('svg')!;
     const sliders = [...tool.querySelectorAll<HTMLInputElement>('[data-slider]')];
     const format = new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 1 });
+    const compact = new Intl.NumberFormat('nb-NO', { notation: 'compact', maximumFractionDigits: 1 });
     const signed = new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 1, signDisplay: 'exceptZero' });
     function update() {
       const valid = inputs.every(input => input.value !== '' && input.checkValidity());
@@ -76,16 +78,17 @@ const signed = new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 1, signDi
         return;
       }
       const [visits, conversion, traffic, newConversion] = inputs.map(input => Number(input.value));
-      const result = calculateScenario(visits, conversion, traffic, newConversion);
+      const result = calculateScenario(visits, conversion, traffic, newConversion, 6);
       current.value = format.format(result.current);
       scenario.value = format.format(result.scenario);
-      [current, scenario].forEach(output => output.style.setProperty('--result-size', `${Math.max(16, Math.min(64, 145 / output.value.length))}px`));
+      [current, scenario].forEach(output => output.style.setProperty('--result-size', `${Math.max(12, Math.min(64, 145 / output.value.length))}px`));
       difference.value = signed.format(result.difference);
       percentage.textContent = result.increase === null ? tool!.dataset.undefinedIncrease! : `${signed.format(result.increase)} % ${tool!.dataset.increaseLabel}`;
       currentEquation.textContent = `${format.format(visits)} × ${inputs[1].value.replace('.', ',')} %`;
       scenarioEquation.textContent = `${format.format(result.scenarioVisits)} × ${inputs[3].value.replace('.', ',')} %`;
       const width = svg.getBoundingClientRect().width;
-      const illustration = createScenarioIllustration(result.current, result.scenario, width);
+      const monthly = Array.from({ length: 6 }, (_, index) => calculateScenario(visits, conversion, traffic, newConversion, index + 1).scenario);
+      const illustration = createScenarioIllustration(result.current, monthly, width);
       svg.setAttribute('viewBox', `0 0 ${width} 128`);
       chart.querySelector('[data-chart-grid]')!.setAttribute('d', `M 12 88 H ${width - 92}`);
       chart.querySelector('[data-chart-current]')!.setAttribute('d', illustration.currentPath);
@@ -99,7 +102,9 @@ const signed = new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 1, signDi
         dot.setAttribute('cx', String(end.x)); dot.setAttribute('cy', String(end.y));
         const label = chart.querySelector(`[data-chart-${name}-value]`)!;
         label.setAttribute('x', String(end.x + 10)); label.setAttribute('y', String(labelY));
-        label.textContent = format.format(value);
+        const fullValue = format.format(value);
+        label.textContent = fullValue.length > 10 ? compact.format(value) : fullValue;
+        label.setAttribute('aria-label', fullValue);
       }
       chart.querySelectorAll('[data-chart-month]').forEach((month, index) => month.setAttribute('x', String(illustration.current[index].x)));
     }
@@ -119,8 +124,10 @@ const signed = new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 1, signDi
 
 <style>
   .calculator-field { min-width: 0; }
+  .calculator-inputs { margin-top: 28px; }
+  .scenario-period { font-size: 12px; margin-bottom: 4px; }
   :global(.invite-home) .calculator-inputs input[type="range"] { display: block; min-height: 24px; height: 24px; margin: 6px 0 0; padding: 0; border: 0; border-radius: 0; background: transparent; accent-color: #b9e8d4; cursor: pointer; }
-  .scenario-chart { margin: 20px 0 0; padding: 12px; border-radius: 10px; background: #fbf9fc; color: #320c43; }
+  .scenario-chart { margin: 0; padding: 12px; border-radius: 10px; background: #fbf9fc; color: #320c43; }
   .scenario-chart figcaption { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; font-size: 12px; line-height: 1.4; }
   .scenario-chart figcaption span { color: #566359; }
   .scenario-legend { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-top: 8px; font-size: 12px; line-height: 1.4; }

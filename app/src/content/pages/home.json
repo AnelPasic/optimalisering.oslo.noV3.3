@@ -64,7 +64,7 @@
       "labels": {
         "visits": "Relevante besøk per måned",
         "conversion": "Konverteringsrate i dag (%)",
-        "trafficIncrease": "Mer relevant trafikk (%)",
+        "trafficIncrease": "Mer relevant trafikk per måned (%)",
         "newConversion": "Ny konverteringsrate (%)",
         "current": "I dag",
         "scenario": "Scenario",
@@ -77,7 +77,7 @@
       "defaults": {
         "visits": 2000,
         "conversion": 1,
-        "trafficIncrease": 50,
+        "trafficIncrease": 10,
         "newConversion": 2
       },
       "caveat": "Hypotetisk regneeksempel - ikke et kundecase."

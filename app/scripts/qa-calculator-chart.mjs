@@ -6,7 +6,8 @@ import { once } from 'node:events';
 import { createAppServer } from '../server/http.mjs';
 
 const phase = process.env.QA_BASE_URL ? 'live' : 'local';
-const output = resolve(`../coordination/evidence/calculator-chart/${phase}`);
+const handoff = process.env.QA_HANDOFF || 'calculator-monthly';
+const output = resolve(`../coordination/evidence/${handoff}/${phase}`);
 mkdirSync(output, { recursive: true });
 const servers = [];
 async function serve(root) {
@@ -14,7 +15,7 @@ async function serve(root) {
   server.listen(0, '127.0.0.1'); await once(server, 'listening'); servers.push(server);
   return `http://127.0.0.1:${server.address().port}`;
 }
-const baseline = await serve('qa-output/calculator-chart-baseline');
+const baseline = await serve(`qa-output/${handoff}-baseline`);
 const base = process.env.QA_BASE_URL || await serve('dist');
 const browser = await chromium.launch({ executablePath: process.env.CHROME_PATH || 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless: true });
 const page = await browser.newPage();
@@ -24,6 +25,7 @@ page.on('pageerror', error => errors.push(error.message));
 page.on('request', request => { if (request.method() === 'POST') posts++; });
 const home = JSON.parse(readFileSync('src/content/pages/home.json', 'utf8')).homepage;
 const format = new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 1 });
+const compact = new Intl.NumberFormat('nb-NO', { notation: 'compact', maximumFractionDigits: 1 });
 const signed = new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 1, signDisplay: 'exceptZero' });
 const snapshot = () => page.evaluate(() => {
   const describe = element => {
@@ -33,8 +35,8 @@ const snapshot = () => page.evaluate(() => {
   return {
     section: describe(document.querySelector('#regneeksempel')),
     outside: [...document.querySelectorAll('header, .invite-home > section:not(#regneeksempel), footer')].map(describe),
-    copy: document.querySelector('.leverage-copy').innerHTML.replace(/ data-astro-cid-[a-z0-9]+=""/g, ''),
-    resultLabels: [...document.querySelectorAll('.math-results > div > span')].map(el => el.textContent),
+    copy: [...document.querySelectorAll('.leverage-copy > .eyebrow, .leverage-copy > h2, .leverage-copy > .body-copy, .leverage-copy > .calculator-formula')].map(el => el.outerHTML.replace(/ data-astro-cid-[a-z0-9]+=""/g, '')).join(''),
+    resultLabels: [...document.querySelectorAll('.math-results > div > span:first-child, .math-results .outcome-label')].map(el => el.textContent),
     caveat: document.querySelector('.calculator-caveat').textContent,
   };
 });
@@ -47,15 +49,19 @@ async function setNumbers(values) {
   for (const [name, value] of Object.entries(values)) await page.locator(`[data-leverage] input[name=${name}]`).fill(String(value));
 }
 async function assertScenario(visits, conversion, traffic, next) {
-  const current = visits * conversion / 100, scenario = visits * (1 + traffic / 100) * next / 100;
+  const current = visits * conversion / 100, scenario = visits * (1 + traffic / 100) ** 6 * next / 100;
   const difference = scenario - current;
   assert.equal(await page.locator('[data-current]').textContent(), format.format(current));
   assert.equal(await page.locator('[data-scenario]').textContent(), format.format(scenario));
   assert.equal(await page.locator('[data-difference]').textContent(), signed.format(difference));
   const increase = current === 0 ? null : difference / current * 100;
   assert.equal(await page.locator('[data-percentage]').textContent(), increase === null ? home.calculator.labels.undefinedIncrease : `${signed.format(increase)} % ${home.calculator.labels.increase}`);
-  assert.equal(await page.locator('[data-chart-current-value]').textContent(), format.format(current));
-  assert.equal(await page.locator('[data-chart-improved-value]').textContent(), format.format(scenario));
+  for (const [name, value] of [['current', current], ['improved', scenario]]) {
+    const label = page.locator(`[data-chart-${name}-value]`);
+    const full = format.format(value);
+    assert.equal(await label.textContent(), full.length > 10 ? compact.format(value) : full);
+    assert.equal(await label.getAttribute('aria-label'), full);
+  }
   for (const name of ['conversion', 'newConversion']) assert.equal(Number(await page.locator(`[data-slider=${name}]`).inputValue()), Number(await page.locator(`input[name=${name}]`).inputValue()));
   const currentPath = await page.locator('[data-chart-current]').getAttribute('d');
   const improvedPath = await page.locator('[data-chart-improved]').getAttribute('d');
@@ -63,11 +69,15 @@ async function assertScenario(visits, conversion, traffic, next) {
   const a = parse(currentPath), b = parse(improvedPath);
   assert.equal(a.length, 6); assert.equal(b.length, 6);
   assert.ok(a.every(point => point.y === a[0].y));
-  assert.equal(b[0].y, a[0].y);
+  const monthly = Array.from({ length: 6 }, (_, index) => visits * (1 + traffic / 100) ** (index + 1) * next / 100);
+  const peak = Math.max(current, ...monthly, 1);
+  b.forEach((point, index) => assert.ok(Math.abs(point.y - (88 - monthly[index] / peak * 68)) <= .0051, `Month ${index + 1}: matches compound growth`));
   if (scenario > current) assert.ok(b[5].y < a[5].y);
   if (scenario < current) assert.ok(b[5].y > a[5].y);
   if (scenario === current) assert.deepEqual(a, b);
-  return { current, scenario, difference, currentPath, improvedPath };
+  const overflow = await page.locator('#regneeksempel').evaluate(section => [...section.querySelectorAll('*')].filter(el => el instanceof HTMLElement && el.clientWidth > 0 && el.scrollWidth > el.clientWidth + 1).map(el => el.className));
+  assert.deepEqual(overflow, [], 'No overflow even at maximum compounded outcomes');
+  return { current, scenario, difference, monthly, currentPath, improvedPath };
 }
 try {
   for (const width of [1440, 900, 390, 320]) {
@@ -76,14 +86,22 @@ try {
     await open(base); const after = await snapshot();
     assert.equal(after.copy, before.copy); assert.deepEqual(after.resultLabels, before.resultLabels); assert.equal(after.caveat, before.caveat);
     const addedHeight = after.section.height - before.section.height;
-    assert.ok(addedHeight > 0 && addedHeight < 300, `${width}: compact chart/sliders add less than 300px (actual ${addedHeight}, before ${before.section.height}, after ${after.section.height})`);
+    assert.ok(addedHeight < 150, `${width}: relocated inputs keep calculator compact (height delta ${addedHeight})`);
     after.outside.forEach((item, index) => {
       const original = before.outside[index];
       const expectedY = original.y >= before.section.y + before.section.height ? original.y + addedHeight : original.y;
       assert.ok(Math.abs(item.y - expectedY) <= 1, 'Only calculator height shifts later section positions');
       assert.deepEqual({ ...item, y: 0 }, { ...original, y: 0 }, 'All outside calculator content/styles/size remain exact');
     });
-    const initial = await assertScenario(2000, 1, 50, 2);
+    assert.equal(await page.locator('.leverage-copy .calculator-inputs input[type=number]').count(), 4);
+    assert.equal(await page.locator('.leverage-tool input').count(), 0);
+    assert.equal((await page.locator('label[for=calc-traffic]').textContent()).trim(), 'Mer relevant trafikk per måned (%)');
+    assert.equal(await page.locator('.scenario-period').textContent(), 'Måned 6');
+    if (width > 900) {
+      const left = await page.locator('.calculator-inputs').boundingBox(), right = await page.locator('.leverage-tool').boundingBox();
+      assert.ok(left.x + left.width <= right.x, 'Desktop fields stay in the left column under the text');
+    }
+    const initial = await assertScenario(2000, 1, 10, 2);
     assert.equal(await page.locator('.scenario-chart figcaption').textContent(), 'Illustrasjon - ikke prognose 6 måneder');
     assert.deepEqual(await page.locator('.scenario-legend span').allTextContents(), ['Uten optimalisering', 'Med optimalisering']);
     const cases = [];
@@ -110,8 +128,8 @@ try {
     }
     await page.locator('[data-slider=conversion]').evaluate(slider => { slider.value = '2'; slider.dispatchEvent(new Event('input', { bubbles: true })); });
     await assertScenario(1000, 2, 0, keyboardValue);
-    await setNumbers({ visits: 2000, conversion: 1, trafficIncrease: 50, newConversion: 2 });
-    await assertScenario(2000, 1, 50, 2);
+    await setNumbers({ visits: 2000, conversion: 1, trafficIncrease: 10, newConversion: 2 });
+    await assertScenario(2000, 1, 10, 2);
     await page.locator('.scenario-chart figcaption').click();
     await page.waitForTimeout(180);
     const layout = await page.evaluate(() => {
@@ -137,7 +155,7 @@ try {
   await page.goto(`${base}/priser/?pakke=vekst#bestill`); assert.equal(await page.locator('form[data-package-order]').getAttribute('data-enabled'), 'false');
   const context = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 320, height: 844 } });
   const native = await context.newPage(); await native.goto(base);
-  assert.equal(await native.locator('[data-current]').textContent(), '20'); assert.equal(await native.locator('[data-scenario]').textContent(), '60');
+  assert.equal(await native.locator('[data-current]').textContent(), '20'); assert.equal(await native.locator('[data-scenario]').textContent(), format.format(2000 * 1.1 ** 6 * .02));
   assert.ok(await native.locator('[data-scenario-chart]').isHidden());
   assert.ok(await native.locator('[data-slider=conversion]').isDisabled());
   await context.close();
@@ -145,7 +163,7 @@ try {
   assert.equal(await page.locator('[data-chart-improved]').evaluate(el => getComputedStyle(el).transitionDuration), '0s');
   assert.deepEqual(errors, []); assert.equal(posts, 0);
   writeFileSync(resolve(output, 'checks.json'), JSON.stringify({ checkedAt: new Date().toISOString(), base, checks, otherPages, nativeDefaultResultsPreserved: true, reducedMotionSupported: true, intakeDisabled: true, errors, posts, result: 'PASS' }, null, 2) + '\n');
-  console.log(`Calculator chart ${phase} PASS: 4 widths, live math/geometry, numeric/slider/keyboard sync, higher/lower/equal/zero/max/invalid scenarios, preservation of outside calculator and 14 pages, reduced motion, no overflow/errors/POST.`);
+  console.log(`Monthly calculator ${phase} PASS: 4 widths, six compound-growth points/month-6 outputs, left-column inputs, numeric/slider/keyboard sync, higher/lower/equal/zero/max/invalid scenarios, 14 pages preserved, reduced motion, no overflow/errors/POST.`);
 } finally {
   await browser.close();
   for (const server of servers) { server.closeAllConnections(); await new Promise(resolve => server.close(resolve)); }
