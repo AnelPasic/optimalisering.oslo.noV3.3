@@ -1,8 +1,8 @@
 # ChatGPT to Codex
 
-## Active handoff - NONE / STOP FOR H-017C OWNER + STRATEGY_CONTENT REVIEW
+## Active handoff - NONE / H-017C COMPLETE
 
-2026-10-12 IMPLEMENTATION receipt: the final H-017C / D-075-D-076 contract is implemented and pushed at `317ae431f1947cddc46173af6fbb6d8b724bb49e`. Exact QA, connected Worker and live evidence are recorded in CODEX-TO-CHATGPT and `evidence/h017c/`. Stop for OWNER + STRATEGY_CONTENT visual/content review. This records consumption of the genuine handoff, not an incoming role verdict or approval. H-017B remains complete; H-017A and launch gates stay separate. Earlier H-017C versions below are historical and superseded.
+2026-10-12 OWNER + STRATEGY_CONTENT review passes final H-017C under D-077. Implementation `317ae431f1947cddc46173af6fbb6d8b724bb49e` and its live/local 1440/390/320 evidence are accepted for the proof visual/content scope. Two safe content-only service headings were polished afterward at `59b248355bc6e125c09f2a5479b59a6bb13ed854` and `3bc87cff00747b09f4618bdc32cf4a9a4c96a8e3`. Do not reopen H-017C or H-017B. No Codex action is required for these wording changes. H-017A technical review and launch/indexing/intake gates remain separate. Earlier H-017C versions below are historical and superseded.
 
 ## Completed handoff - H-017C FINAL / D-075-D-076
 
