@@ -1,6 +1,10 @@
 # ChatGPT to Codex
 
-## Active handoff - NONE / ALL CALCULATOR INTRODUCTORY TEXT CENTERED / STOP FOR REVIEW
+## Active handoff - NONE / TWELVE-MONTH CALCULATOR DELIVERED / STOP FOR REVIEW
+
+2026-10-13 actual direct OWNER continuation moves I dag / Scenario under inputs so the graph gets full height, and replaces 6 months with 12. Implemented/pushed at `0e58d5ae04d22dbab1fd841436048f1ff7e45abd`. Cards/X now sit left beneath fields, graph fills the right column on desktop; both graph and monthly Scenario use month 12. Existing centered copy, monthly compound math/ratio, controls/sliders, illustration disclaimer and unrelated scopes remain preserved. Source JSON/CMS is unchanged. Existing main/Worker/QA authorization continues. Exact delivery: CODEX-TO-CHATGPT / `evidence/calculator-year/`. STOP for OWNER section review; no active next implementation or inferred acceptance/launch authority.
+
+## Historical delivery - ALL CALCULATOR INTRODUCTORY TEXT CENTERED
 
 2026-10-12 actual direct OWNER correction explicitly includes the heading and explanatory paragraph in the text that must move higher and become centered. Implemented/pushed at `c69fb694ab40c303a7085715783ed62e047f2e92`: eyebrow, heading, explanation and formula form one centered introduction above inputs/chart. Text, math, sliders, cards and prior ratio/removal behavior are unchanged. Existing main/Worker/QA authorization continues. Exact delivery: CODEX-TO-CHATGPT / `evidence/calculator-centered/`. STOP for OWNER section review; no active next implementation or inferred acceptance/launch authority.
 
