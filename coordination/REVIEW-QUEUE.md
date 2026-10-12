@@ -1,6 +1,6 @@
 # Review queue
 
-Current gate: **H-017D implementation delivered at 73a5b91 / STOP for OWNER + STRATEGY_CONTENT review.** Review only the contracted proof subtraction on home/Konvertering/Synlighet; accepted H-017C hierarchy and H-017B completion are preserved. Full verify 76/76, focused proof tests 9/9, unsafe renderer variants and 1440/390/320 preservation pass. Current CODEX-TO-CHATGPT and `evidence/h017d/` contain exact Worker/live evidence. No acceptance or wider implementation is inferred.
+Current gate: **H-017E HOMEPAGE HERO PROOF AUTHORIZED / READY FOR IMPLEMENTATION under D-079.** H-017D is PASS / COMPLETE under D-078. Implement only the compact guarded Eurotents hero proof defined in `coordination/H017E-HERO-PROOF.md`; preserve the accepted H-017D lower proof, hero copy/photo/crop, H-017B architecture, noindex and disabled intake.
 
 State: H-017C FINAL PASSED UNDER D-077. EUROTENTS FEATURED + NYSTA + HELT OPPLAGT SUPPORTING; NYSTA ON /KONVERTERING/; HELT OPPLAGT ON /SYNLIGHET/. OSLO PRIVATKLINIKK DEFERRED. NO FURTHER H-017C CODE WORK.
 
@@ -10,6 +10,8 @@ State: H-017C FINAL PASSED UNDER D-077. EUROTENTS FEATURED + NYSTA + HELT OPPLAG
 
 | Order / ID | Scope | Responsible role | State / completion evidence |
 | --- | --- | --- | --- |
+| Next / H-017E | Compact guarded proof attached to homepage hero image | IMPLEMENTATION; OWNER + STRATEGY_CONTENT review | **AUTHORIZED under D-079.** Exact contract: `coordination/H017E-HERO-PROOF.md`. Current target: ROAS 4,3x -> 17,2x / Eurotents · Google Ads, derived from first publishable selected homepage case. |
+| Complete / H-017D | Public proof subtraction / Mementor-level density | OWNER + STRATEGY_CONTENT | **PASS / COMPLETE under D-078.** Implementation `73a5b91`; internal evidence/gates remain intact, public work/limitations removed, responsive proof passes. |
 | Complete / H-017C | Approved proof hierarchy and contextual service proof | OWNER + STRATEGY_CONTENT | **PASS / COMPLETE under D-077.** Implementation `317ae43`; 76 tests, 40 browser checks and 1440/390/320 evidence pass. Content-only heading polish: `59b2483`, `3bc87cf`. No further H-017C code work. |
 | Next / D-067 OWNER correction | Shared menu Priser destination and `/innsikt/` overview template | OWNER | **REVIEW REQUIRED / DELIVERED at `0c43c6261f9d67a2032a1c221abf0db1fb612c4d`.** Actual 2026-10-10 request recorded in inbound handoff. Existing content/metadata/draft authority and ten remaining pages preserved; full verify, 40 existing browser checks and eight focused local/live groups pass. Native review build succeeds; noindex/intake safeguards retained. `evidence/menu-insight/`. No H-017B execution or wider propagation. |
 | 1 / R-01 | Consequential offer constraints and complete homepage argument, metadata, CTA/manual-check and shared wording; content certainty/proof | STRATEGY_CONTENT; OWNER for material commercial decisions | **PASS / COMPLETE for homepage content scope.** D-010 locks the reviewed homepage revision. This is historical D-010 scope; generated H-004 wording is draft pending its actual reviewed lock. Pricing, terms and proof remain deferred. |
