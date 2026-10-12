@@ -1,6 +1,10 @@
 # ChatGPT to Codex
 
-## Active handoff - H-017E HOMEPAGE HERO PROOF
+## Active handoff - NONE / H-017E DELIVERED / STOP FOR REVIEW
+
+2026-10-12 IMPLEMENTATION receipt: H-017E is implemented and pushed at `13402d0383ab3b2e93aca81145bfc95324abacda`. Exact full/focused/local/live/connected Worker evidence is recorded in CODEX-TO-CHATGPT and `evidence/h017e/`. STOP for OWNER + STRATEGY_CONTENT visual review; no new acceptance or next implementation is inferred. H-017D/D-078, H-017C/D-077 and H-017B remain complete within their existing scopes; launch gates remain separate.
+
+## Completed handoff - H-017E HOMEPAGE HERO PROOF
 
 Date: 2026-10-12
 Authority: OWNER + STRATEGY_CONTENT / D-079

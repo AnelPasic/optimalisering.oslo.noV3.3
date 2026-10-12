@@ -1,0 +1,179 @@
+{
+  "checkedAt": "2026-10-12T14:59:19.729Z",
+  "base": "https://optimalisering-oslo-v33.anel.workers.dev",
+  "checks": [
+    {
+      "width": 1440,
+      "layout": {
+        "panel": {
+          "x": 824.359375,
+          "y": 419.671875,
+          "width": 237.40625,
+          "height": 81.1875,
+          "bottom": 500.859375
+        },
+        "photo": {
+          "x": 808.359375,
+          "y": 147.09375,
+          "width": 591.625,
+          "height": 369.765625,
+          "bottom": 516.859375
+        },
+        "metric": {
+          "x": 842.359375,
+          "y": 433.671875,
+          "width": 201.40625,
+          "height": 30,
+          "bottom": 463.671875
+        },
+        "spans": [
+          433.671875,
+          433.671875
+        ],
+        "overflowing": [],
+        "scroll": 1440,
+        "resultSize": 24,
+        "h1Size": 56,
+        "supportSize": 13
+      },
+      "heroCopyPhotoCropAndHeightPreserved": true,
+      "lowerProofAndSurroundingsExact": true,
+      "screenshot": "hero-1440.png"
+    },
+    {
+      "width": 900,
+      "layout": {
+        "panel": {
+          "x": 48,
+          "y": 763.5625,
+          "width": 237.40625,
+          "height": 81.1875,
+          "bottom": 844.75
+        },
+        "photo": {
+          "x": 32,
+          "y": 500.75,
+          "width": 640,
+          "height": 360,
+          "bottom": 860.75
+        },
+        "metric": {
+          "x": 66,
+          "y": 777.5625,
+          "width": 201.40625,
+          "height": 30,
+          "bottom": 807.5625
+        },
+        "spans": [
+          777.5625,
+          777.5625
+        ],
+        "overflowing": [],
+        "scroll": 900,
+        "resultSize": 24,
+        "h1Size": 44,
+        "supportSize": 13
+      },
+      "heroCopyPhotoCropAndHeightPreserved": true,
+      "lowerProofAndSurroundingsExact": true,
+      "screenshot": "hero-900.png"
+    },
+    {
+      "width": 390,
+      "layout": {
+        "panel": {
+          "x": 32,
+          "y": 660.625,
+          "width": 217.109375,
+          "height": 74.6875,
+          "bottom": 735.3125
+        },
+        "photo": {
+          "x": 20,
+          "y": 522.4375,
+          "width": 350,
+          "height": 196.875,
+          "bottom": 719.3125
+        },
+        "metric": {
+          "x": 48,
+          "y": 672.625,
+          "width": 185.109375,
+          "height": 27.5,
+          "bottom": 700.125
+        },
+        "spans": [
+          672.625,
+          672.625
+        ],
+        "overflowing": [],
+        "scroll": 390,
+        "resultSize": 22,
+        "h1Size": 37.05,
+        "supportSize": 13
+      },
+      "heroCopyPhotoCropAndHeightPreserved": true,
+      "lowerProofAndSurroundingsExact": true,
+      "screenshot": "hero-390.png"
+    },
+    {
+      "width": 320,
+      "layout": {
+        "panel": {
+          "x": 28,
+          "y": 629.65625,
+          "width": 217.109375,
+          "height": 74.6875,
+          "bottom": 704.34375
+        },
+        "photo": {
+          "x": 16,
+          "y": 526.34375,
+          "width": 288,
+          "height": 162,
+          "bottom": 688.34375
+        },
+        "metric": {
+          "x": 44,
+          "y": 641.65625,
+          "width": 185.109375,
+          "height": 27.5,
+          "bottom": 669.15625
+        },
+        "spans": [
+          641.65625,
+          641.65625
+        ],
+        "overflowing": [],
+        "scroll": 320,
+        "resultSize": 22,
+        "h1Size": 33,
+        "supportSize": 13
+      },
+      "heroCopyPhotoCropAndHeightPreserved": true,
+      "lowerProofAndSurroundingsExact": true,
+      "screenshot": "hero-320.png"
+    }
+  ],
+  "otherPages": [
+    "ai-synlighet",
+    "innsikt/hva-bor-optimaliseres-forst",
+    "innsikt",
+    "kontakt",
+    "konvertering",
+    "innsikt/male-effekt-av-optimalisering",
+    "nettbutikkoptimalisering",
+    "om",
+    "personvern",
+    "priser",
+    "seo",
+    "synlighet",
+    "vilkar",
+    "vurdering"
+  ],
+  "noJavaScriptProofReadable": true,
+  "orderAndAssessmentDisabled": true,
+  "errors": [],
+  "posts": 0,
+  "result": "PASS"
+}
