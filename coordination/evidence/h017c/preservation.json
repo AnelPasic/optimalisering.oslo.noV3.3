@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-10-12T10:44:59.651Z",
+  "base": "1c34f27",
+  "checks": [
+    {
+      "path": "app/src/content/pages/home.json",
+      "onlyProofSlotChanged": true
+    },
+    {
+      "path": "app/src/content/pages/konvertering.json",
+      "onlyProofSlotChanged": true
+    },
+    {
+      "path": "app/src/content/pages/synlighet.json",
+      "onlyProofSlotChanged": true
+    }
+  ],
+  "frozenFiles": 182,
+  "frozenOtherPageJson": 12,
+  "proofGateByteUnchanged": true,
+  "untrackedOwnerImagesUntouched": true,
+  "result": "PASS"
+}

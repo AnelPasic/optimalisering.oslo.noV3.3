@@ -1,6 +1,7 @@
 import { z } from 'astro/zod';
 
 const link = z.object({ label: z.string(), href: z.string().startsWith('/') });
+export const proofSlotSchema = z.object({ publicationApproved: z.boolean(), caseIds: z.array(z.string()).default([]), eyebrow: z.string(), heading: z.string(), beforeLabel: z.string(), afterLabel: z.string(), changeLabel: z.string() });
 const homepage = z.object({
   secondaryCta: link,
   heroPhoto: z.object({ src: z.string().regex(/^\/images\/home\/[a-z0-9][a-z0-9-]*\.webp$/), positionX: z.number().min(0).max(100), positionY: z.number().min(0).max(100) }),
@@ -42,7 +43,7 @@ const homepage = z.object({
     });
   }),
   // Section approval never substitutes for a case's independent publication guard.
-  proof: z.object({ publicationApproved: z.boolean(), caseIds: z.array(z.string()), eyebrow: z.string(), heading: z.string(), beforeLabel: z.string(), afterLabel: z.string(), changeLabel: z.string() }),
+  proof: proofSlotSchema,
   form: z.object({ promise: z.string(), heading: z.string(), websiteLabel: z.string(), websitePlaceholder: z.string(), emailLabel: z.string(), emailPlaceholder: z.string(), messageLabel: z.string(), optional: z.string(), messagePlaceholder: z.string(), sensitiveNotice: z.string(), previewNotice: z.string(), submitLabel: z.string(), privacyText: z.string(), privacyLink: link, disabledStatus: z.string() }),
   faqHeading: z.string(), faqEyebrow: z.string(),
   chrome: z.object({ brand: z.string(), brandLocation: z.string(), homeLabel: z.string(), skipLabel: z.string(), navigationLabel: z.string(), mobileNavigationLabel: z.string(), openMenu: z.string(), closeMenu: z.string(), assessmentLink: link, navigation: z.array(link), providerText: z.string(), previewLabel: z.string(), serviceNavigationLabel: z.string(), informationNavigationLabel: z.string(), storeLink: link, informationLinks: z.array(link), copyrightProvider: z.string(), footerNote: z.string() }),
@@ -61,6 +62,7 @@ export const pageSchema = z.object({
     })),
     faq: z.array(z.object({ question: z.string(), answer: z.string() })).default([]),
     cta: link,
+    proof: proofSlotSchema.optional(),
     heroVisual: z.object({
       kind: z.enum(['photo', 'illustration']),
       src: z.string().regex(/^\/images\/services\/(?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.(?:webp|png|jpe?g|avif|svg)$/),

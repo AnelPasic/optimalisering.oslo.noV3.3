@@ -91,9 +91,9 @@ test('anonymous proof refuses wrapped, nonbreaking and Unicode-normalized privat
   }
 });
 
-test('both imported records preserve supplied measurements and remain evidence only with CMS coverage', () => {
+test('imported records preserve supplied measurements and reviewed publication states with CMS coverage', () => {
   const records = readdirSync('src/content/proof').filter(file => file.endsWith('.json')).map(file => JSON.parse(readFileSync(`src/content/proof/${file}`, 'utf8')));
-  assert.deepEqual(records.map(record => record.clientName).sort(), ['Nysta', 'Oslo Privatklinikk']);
+  assert.deepEqual(records.map(record => record.clientName).sort(), ['Eurotents', 'Helt Opplagt', 'Nysta', 'Oslo Privatklinikk']);
   const config = YAML.parse(readFileSync('../.pages.yml', 'utf8'));
   const editor = config.content.find((entry: any) => entry.name === 'proofCases');
   assert.equal(editor.path, 'app/src/content/proof');
@@ -107,15 +107,13 @@ test('both imported records preserve supplied measurements and remain evidence o
   }
   for (const record of records) {
     assert.equal(proofCaseSchema.safeParse(record).success, true);
-    assert.equal(record.publicationStatus, 'EVIDENCE_ONLY');
-    assert.equal(record.namingPermission, 'GRANTED');
-    assert.equal(record.strategyReviewStatus, 'READY_FOR_STRATEGY_REVIEW');
-    assert.equal(record.strategyReviewEvidence, null);
-    assert.match(record.permissionEvidence, /2090639.*D-023.*OWNER/);
-    assert.equal(record.publicationApproved, false);
-    assert.equal(record.artifactStatus, 'NOT_IMPORTED');
-    assert.deepEqual(record.artifactReferences, []);
-    assert.deepEqual(getPublishableCases({ publicationApproved: true, caseIds: [record.id] }, [record]), []);
+    const deferred = record.id === 'oslo-privatklinikk';
+    assert.equal(record.publicationStatus, deferred ? 'REVIEW_REQUIRED' : 'PUBLISHABLE');
+    assert.equal(record.namingPermission, deferred ? 'NEEDS_PERMISSION' : 'GRANTED');
+    assert.equal(record.strategyReviewStatus, 'CONTENT_LOCKED');
+    assert.ok(record.strategyReviewEvidence);
+    assert.equal(record.publicationApproved, !deferred);
+    assert.equal(getPublishableCases({ publicationApproved: true, caseIds: [record.id] }, [record]).length, deferred ? 0 : 1);
     coverage(record, editor.fields);
   }
   const nysta = records.find(record => record.id === 'nysta');

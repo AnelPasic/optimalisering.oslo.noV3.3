@@ -629,7 +629,7 @@ content:
                 required: true
             required: true
           - name: proof
-            label: Dokumenterte resultater – separat publiseringsvern
+            label: Dokumenterte resultater - trygg presentasjon
             type: object
             fields:
               - name: publicationApproved
@@ -639,6 +639,7 @@ content:
                 type: boolean
                 default: false
                 required: true
+                readonly: true
               - name: caseIds
                 label: Velg case fra evidensregisteret
                 type: reference
@@ -648,7 +649,9 @@ content:
                   value: "{fields.id}"
                   label: "{fields.clientName} ({fields.publicationStatus})"
                   search: id,clientName,anonymizedLabel
-                required: true
+                required: false
+                description: Første publiserbare case vises størst på forsiden. Bare
+                  godkjente case med komplett evidens vises.
               - name: eyebrow
                 label: Overtekst
                 type: string
@@ -1126,6 +1129,51 @@ content:
         label: Neste steg
         component: link
         required: true
+      - name: proof
+        label: Dokumenterte resultater - trygg presentasjon
+        type: object
+        fields:
+          - name: publicationApproved
+            label: Godkjenn visning av allerede publiserbare case
+            description: Slå bare på etter dokumentert godkjenning. Dette overstyrer aldri
+              case-status, tillatelse eller manglende evidens.
+            type: boolean
+            default: false
+            required: true
+            readonly: true
+          - name: caseIds
+            label: Velg case fra evidensregisteret
+            type: reference
+            options:
+              collection: proofCases
+              multiple: true
+              value: "{fields.id}"
+              label: "{fields.clientName} ({fields.publicationStatus})"
+              search: id,clientName,anonymizedLabel
+            required: false
+            description: Velg primært case. Visning støttes på Synlighet og
+              Konvertering før prisbroen.
+          - name: eyebrow
+            label: Overtekst
+            type: string
+            required: true
+          - name: heading
+            label: Overskrift
+            type: string
+            required: true
+          - name: beforeLabel
+            label: Før-etikett
+            type: string
+            required: true
+          - name: afterLabel
+            label: Etter-etikett
+            type: string
+            required: true
+          - name: changeLabel
+            label: Endring-etikett
+            type: string
+            required: true
+        required: false
   - name: priser
     label: Priser
     type: file
@@ -1227,29 +1275,37 @@ content:
         type: string
         pattern: ^[a-z0-9][a-z0-9-]*$
         required: true
+        readonly: true
       - name: clientName
         label: Kunde- eller visningsnavn
         type: string
         required: true
+        readonly: true
       - name: anonymizedLabel
         label: Godkjent anonymisert navn
         type: string
+        readonly: true
       - name: relationship
         label: Relasjon og bakgrunn – intern evidens
         type: text
+        readonly: true
       - name: dominantMetric
         label: Hovedresultat og måledefinisjon
         type: text
         required: true
+        readonly: true
       - name: before
         label: Før-verdi
         type: string
+        readonly: true
       - name: after
         label: Etter-verdi
         type: string
+        readonly: true
       - name: delta
         label: Dokumentert endring
         type: string
+        readonly: true
       - name: period
         label: Sammenligningsperioder
         type: object
@@ -1257,25 +1313,32 @@ content:
           - name: before
             label: Før-periode
             type: string
+            readonly: true
           - name: after
             label: Etter-periode
             type: string
+            readonly: true
           - name: comparable
             label: Sammenlignbarhet dokumentert
             type: boolean
             default: false
             required: true
+            readonly: true
         required: true
+        readonly: true
       - name: intervention
         label: Dokumentert tiltak eller endring
         type: text
+        readonly: true
       - name: source
         label: Kilde og proveniens – intern evidens
         type: text
         required: true
+        readonly: true
       - name: limitations
         label: Begrensninger og attribusjonsforbehold
         type: text
+        readonly: true
       - name: namingPermission
         label: Navne- eller anonymiseringstillatelse
         type: select
@@ -1287,9 +1350,11 @@ content:
             - NAME_APPROVED
             - ANONYMIZED_APPROVED
         required: true
+        readonly: true
       - name: permissionEvidence
         label: Dokumentasjon på faktisk publiseringstillatelse
         type: text
+        readonly: true
       - name: strategyReviewStatus
         label: STRATEGY_CONTENT-review
         description: GRANTED tillatelse erstatter ikke review av den konkrete offentlige
@@ -1301,9 +1366,11 @@ content:
             - READY_FOR_STRATEGY_REVIEW
             - CONTENT_LOCKED
         required: true
+        readonly: true
       - name: strategyReviewEvidence
         label: Kilde/revisjon for konkret STRATEGY_CONTENT-lock
         type: text
+        readonly: true
       - name: artifactStatus
         label: Skjermbilde- og kildeartefaktstatus
         type: select
@@ -1314,11 +1381,13 @@ content:
             - IMPORTED
             - VERIFIED
         required: true
+        readonly: true
       - name: artifactReferences
         label: Kildeartefaktreferanser – ikke legg persondata i Git
         type: string
         list: {}
         required: false
+        readonly: true
       - name: evidenceMetrics
         label: Supplerte målinger – intern evidens, ikke offentlig renderer
         type: object
@@ -1331,22 +1400,29 @@ content:
             label: Måling og definisjon
             type: text
             required: true
+            readonly: true
           - name: before
             label: Før-verdi
             type: string
+            readonly: true
           - name: after
             label: Etter-verdi
             type: string
+            readonly: true
           - name: delta
             label: Dokumentert endring
             type: string
+            readonly: true
           - name: nextPeriod
             label: Neste periodes verdi
             type: string
+            readonly: true
           - name: timeframe
             label: Periode
             type: string
+            readonly: true
         required: false
+        readonly: true
       - name: publicationStatus
         label: Publiseringsstatus
         description: EVIDENCE_ONLY er intern forberedelse. PUBLISHABLE krever
@@ -1361,8 +1437,14 @@ content:
             - PUBLISHABLE
             - WITHDRAWN
         required: true
+        readonly: true
       - name: publicationApproved
         label: Publisering uttrykkelig godkjent
         type: boolean
         default: false
         required: true
+        readonly: true
+    operations:
+      create: false
+      delete: false
+      rename: false

@@ -31,6 +31,6 @@ for (const value of [home.homepage.packages.eyebrow, home.homepage.packages.head
 }
 for (const value of [home.homepage.packages.adBudgetNote, home.homepage.packages.externalCostsNote, home.homepage.packages.separateWorkNote, home.homepage.packages.capacityNote, home.homepage.form.promise]) assert.ok(text(pricepage).includes(value) || text(pricepage).includes(value.replace('kommer i tillegg', 'kommer også i tillegg')), `Shared rule/promise: ${value}`);
 assert.ok(!/Sprint|ubegrenset|bindingstid|oppsigelsestid|minimumsperiode|oppstartsgebyr|onboarding|fakturavilkår|\d+\s*timer/i.test(text(pricepage).replace('Det betyr ikke at alt gjøres samtidig eller at kapasiteten er ubegrenset.', '')));
-assert.ok(!/Nysta|Oslo Privatklinikk|id="resultater"|proof-section/.test(pricepage));
+assert.ok(!/Nysta|Oslo Privatklinikk|id="resultater"/.test(pricepage));
 assert.equal((pricepage.match(/<h1(?:\s|>)/g) ?? []).length, 1);
 console.log('H-008 static regression PASS: shared package output, exact D-024 supporting copy/rules, no second package object or public proof.');

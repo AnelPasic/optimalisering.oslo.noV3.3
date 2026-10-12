@@ -314,10 +314,14 @@
       ]
     },
     "proof": {
-      "publicationApproved": false,
-      "caseIds": [],
-      "eyebrow": "Dokumentert resultat",
-      "heading": "Resultatcase kommer her når publisering er avklart.",
+      "publicationApproved": true,
+      "caseIds": [
+        "eurotents",
+        "nysta",
+        "helt-opplagt"
+      ],
+      "eyebrow": "Dokumenterte resultater",
+      "heading": "Resultater fra kundearbeid",
       "beforeLabel": "Før",
       "afterLabel": "Etter",
       "changeLabel": "Arbeid"

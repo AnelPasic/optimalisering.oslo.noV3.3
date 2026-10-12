@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-10-12T10:37:29.866Z",
+  "checks": [
+    {
+      "mode": "unapproved",
+      "allThreePlacementsFailClosed": true,
+      "environmentOverrideIgnored": true
+    },
+    {
+      "mode": "incomplete",
+      "allThreePlacementsFailClosed": true,
+      "environmentOverrideIgnored": true
+    },
+    {
+      "mode": "noncomparable",
+      "allThreePlacementsFailClosed": true,
+      "environmentOverrideIgnored": true
+    }
+  ],
+  "allSourceBytesRestored": true,
+  "realSourceQueries": 0,
+  "finalBuild": "npm run verify restores approved output",
+  "result": "PASS"
+}

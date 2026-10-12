@@ -130,5 +130,16 @@
     "alt": "Butikk som selger",
     "positionX": 50,
     "positionY": 50
+  },
+  "proof": {
+    "publicationApproved": true,
+    "caseIds": [
+      "nysta"
+    ],
+    "eyebrow": "Dokumenterte resultater",
+    "heading": "Flere fullførte checkout hos Nysta",
+    "beforeLabel": "Før",
+    "afterLabel": "Etter",
+    "changeLabel": "Arbeid"
   }
 }

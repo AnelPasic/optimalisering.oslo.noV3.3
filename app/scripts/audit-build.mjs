@@ -20,7 +20,7 @@ for (const [url, page] of paths) {
   assert.ok(html.includes(`href="https://optimalisering.oslo.no${url}"`), `${url}: canonical`);
   assert.ok(html.includes('lang="nb"'), `${url}: Norwegian document language`);
   if (process.env.SITE_STAGE !== 'production') assert.ok(html.includes('content="noindex, nofollow"'), `${url}: preview noindex`);
-  assert.ok(!/P10[1-5]|Eurotents|Helt Opplagt|Beck Maskin|Gram Car Carriers/.test(html), `${url}: no unapproved proof`);
+  assert.ok(!/P10[1-5]|Oslo Privatklinikk|Tankeverksted|Oracles|Beck Maskin|Gram Car Carriers/.test(html), `${url}: no unapproved proof`);
   if (!['home', 'priser', 'synlighet', 'konvertering'].includes(page.slug)) assert.ok(!/4[\s,.]?490|6[\s,.]?990/.test(html), `${url}: frozen exploratory prices`);
   const entities = { '&amp;': '&', '&lt;': '<', '&gt;': '>', '&quot;': '"', '&apos;': "'" };
   const text = html.replace(/<[^>]*>/g, ' ').replace(/&(amp|lt|gt|quot|apos);/g, match => entities[match]).replace(/&#(\d+);/g, (_match, number) => String.fromCodePoint(Number(number))).replace(/\s+/g, ' ');

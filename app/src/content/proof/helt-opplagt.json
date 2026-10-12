@@ -1,0 +1,30 @@
+{
+  "id": "helt-opplagt",
+  "clientName": "Helt Opplagt",
+  "anonymizedLabel": null,
+  "relationship": null,
+  "dominantMetric": "Organiske klikk - Google Search Console",
+  "before": "2 162",
+  "after": "4 181",
+  "delta": "+93 %",
+  "period": {
+    "before": "mars-september 2025",
+    "after": "mars-september 2026",
+    "comparable": true
+  },
+  "intervention": "Arbeid med organisk søkesynlighet.",
+  "source": "Google Search Console via prior Windsor.ai proof work. coordination/H017C-PROOF-PUBLISH.md at 1c34f27; coordination/PROOF-CANDIDATE-AUDIT-2026-10-11.md. Previously verified source values imported from the final OWNER + STRATEGY_CONTENT handoff; no new live source query or raw account export.",
+  "limitations": "Gjennomsnittlig posisjon gikk fra 21,8 -> 12,2. Dette viser organisk søkesynlighet, ikke vekst i totale henvendelser eller omsetning. Registrerte kontaktskjemaer totalt gikk fra 79 -> 67.",
+  "namingPermission": "GRANTED",
+  "permissionEvidence": "OWNER D-075, 2026-10-11; final H-017C explicitly approves this client reference for public use.",
+  "strategyReviewStatus": "CONTENT_LOCKED",
+  "strategyReviewEvidence": "OWNER + STRATEGY_CONTENT final H-017C / D-075-D-076, 2026-10-11. Exact bounded public claim, periods and placement: coordination/H017C-PROOF-PUBLISH.md at 1c34f27.",
+  "artifactStatus": "IMPORTED",
+  "artifactReferences": [
+    "coordination/H017C-PROOF-PUBLISH.md",
+    "coordination/PROOF-CANDIDATE-AUDIT-2026-10-11.md"
+  ],
+  "evidenceMetrics": [],
+  "publicationStatus": "PUBLISHABLE",
+  "publicationApproved": true
+}

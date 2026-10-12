@@ -4,7 +4,7 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import YAML from 'yaml';
 import { pageSchema } from '../src/lib/content-schema.ts';
-import { proofContentSchema, getPublishableCases } from '../src/lib/proof.ts';
+import { proofCaseSchema, proofContentSchema, getPublishableCases } from '../src/lib/proof.ts';
 import { cmsJsonSave, entryForFile, resolveField, assertPreservedContent } from './helpers/pages-cms-json.ts';
 
 const cms = YAML.parse(readFileSync('../.pages.yml', 'utf8'));
@@ -68,7 +68,8 @@ test('CMS-equivalent edit preserves every current JSON record semantically and u
     const expected = { ...original, [field]: 'H017B harmless memory-only edit' };
     assertPreservedContent(expected, after);
     const schema = edited.directory === 'pages' ? pageSchema : proofContentSchema;
-    assert.deepEqual(schema.parse(after), schema.parse(expected), edited.path + ': only the chosen field changes');
+    const normalizedExpected = edited.directory === 'proof' && expected.publicationApproved === true && !proofCaseSchema.safeParse(after).success ? { ...expected, publicationApproved: false } : expected;
+    assert.deepEqual(schema.parse(after), schema.parse(normalizedExpected), edited.path + ': only the chosen field changes; incomplete proof stays fail-closed');
     for (const record of records.filter(record => record !== edited)) assert.equal(hash(readFileSync(record.path.slice(4))), hash(record.bytes), record.path);
   }
 });
@@ -119,7 +120,7 @@ test('merge preserves omitted nonempty metadata without promoting authority or p
   for (const field of ['slug', 'kind', 'status', 'authority', 'unmodeled']) assert.deepEqual(after[field], original[field], field);
   assert.deepEqual(after.homepage.unmodeled, original.homepage.unmodeled);
   const proof = records.filter(record => record.directory === 'proof').map(record => JSON.parse(record.bytes.toString()));
-  assert.deepEqual(getPublishableCases(after.homepage.proof, proof), []);
+  assert.deepEqual(getPublishableCases(after.homepage.proof, proof), getPublishableCases(original.homepage.proof, proof));
 });
 
 test('omitted unknown evidence values stay null and cannot make a case publishable', () => {

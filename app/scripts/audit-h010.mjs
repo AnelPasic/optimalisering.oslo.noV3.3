@@ -10,7 +10,7 @@ assert.equal((html.match(/<h1(?:\s|>)/g) ?? []).length, 1);
 assert.equal(text(html.match(/<h1[^>]*>(.*?)<\/h1>/s)[1]), 'Det er ikke alltid kunden som må overbevises. Noen ganger må nettsiden slutte å stå i veien.');
 assert.equal(content.eyebrow, 'Fra besøk til henvendelser og kjøp');
 assert.equal(content.sections[0].heading, 'Det skal være enklere å kjøpe enn å gi opp.');
-assert.deepEqual([...html.matchAll(/<section id="([^"]+)"/g)].map(match => match[1]), ['service-hero', 'friksjon', 'kvalitet', 'prioritering', 'sammenheng', 'service-priser', 'sjekk', 'sporsmal']);
+assert.deepEqual([...html.matchAll(/<section id="([^"]+)"/g)].map(match => match[1]), ['service-hero', 'friksjon', 'kvalitet', 'prioritering', 'resultater', 'sammenheng', 'service-priser', 'sjekk', 'sporsmal']);
 for (const section of content.sections) {
   const rendered = html.match(new RegExp(`<section id="${section.id}"[^>]*>(.*?)</section>`, 's'))?.[1];
   assert.ok(rendered, section.id);
@@ -27,5 +27,5 @@ for (const name of ['Synlighet', 'Konvertering']) {
   assert.ok(text(bridge).includes(`Når ${name} jobber sammen med et annet område.`));
 }
 for (const href of ['/synlighet/', '/priser/', '/#sjekk']) assert.ok(html.includes(`href="${href}"`));
-assert.ok(!/<form|<img|Nysta|Oslo Privatklinikk|proof-section|id="resultater"|Sprint|\d+\s*timer/.test(html));
-console.log('H-010 static regression PASS: exact D-031 H1/hook/copy/order, two service contexts, bounded check, no proof/form.');
+assert.ok(!/<form|Oslo Privatklinikk|Sprint|\d+\s*timer/.test(html));
+console.log('H-010 static regression PASS: exact D-031 H1/hook/copy/order, two service contexts, bounded check, guarded proof/no form.');

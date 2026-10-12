@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
+import { resolveServiceVisual } from '../src/lib/service-visual.ts';
 const home = JSON.parse(readFileSync('src/content/pages/home.json'));
 const normalize = text => text.replace(/<[^>]*>/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
 for (const slug of ['home', 'priser', 'synlighet', 'konvertering']) {
@@ -20,10 +21,11 @@ for (const slug of ['home', 'priser', 'synlighet', 'konvertering']) {
   }
   if (['synlighet', 'konvertering'].includes(slug)) {
     const content = JSON.parse(readFileSync(`src/content/pages/${slug}.json`));
-    assert.equal(content.heroVisual, undefined, 'No final asset configured by implementation');
-    assert.ok(!html.includes('class="service-hero-visual"'));
+    const visual = resolveServiceVisual(content.heroVisual);
+    assert.equal(html.includes('class="service-hero-visual"'), Boolean(visual));
+    if (visual) assert.ok(html.includes(`src="${visual.src}"`) && html.includes(`alt="${visual.alt}"`));
     assert.ok(html.includes('href="/#sjekk"') && html.includes('href="/priser/"'));
-    assert.ok(!/<form|<img|proof-section/.test(html));
+    assert.ok(!/<form/.test(html));
     // Locked editorial sections supply problem, mechanism, practical meaning,
     // qualification/limits, commercial path and bounded action without filler.
     for (const id of [content.sections[0].id, content.sections[1].id, 'prioritering', 'sammenheng', 'service-priser', 'sjekk', 'sporsmal']) assert.ok(html.includes(`id="${id}"`));
@@ -31,4 +33,4 @@ for (const slug of ['home', 'priser', 'synlighet', 'konvertering']) {
   }
 }
 assert.ok(!readdirSync('dist').includes('en'), 'No accidental /en/ placeholder routes');
-console.log('H-011 static PASS: exact provider/fit, landing journey, no final visual/dead language switch/English route.');
+console.log('H-011 static PASS: exact provider/fit, landing journey, CMS-supplied visual/fallback, no dead language switch/English route.');

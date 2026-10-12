@@ -135,5 +135,16 @@
     "alt": "Bli funnet",
     "positionX": 50,
     "positionY": 50
+  },
+  "proof": {
+    "publicationApproved": true,
+    "caseIds": [
+      "helt-opplagt"
+    ],
+    "eyebrow": "Dokumenterte resultater",
+    "heading": "Flere organiske klikk hos Helt Opplagt",
+    "beforeLabel": "Før",
+    "afterLabel": "Etter",
+    "changeLabel": "Arbeid"
   }
 }

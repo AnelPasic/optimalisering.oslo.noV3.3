@@ -5,6 +5,8 @@ import HeroVisual from './ServiceHeroVisual.astro';
 import { resolveServiceVisual } from '../lib/service-visual';
 import ContentSection from './HomeSection.astro';
 import PricingBridge from './ServicePricingBridge.astro';
+import Proof from './HomeProof.astro';
+import { getCollection } from 'astro:content';
 interface Props {
   page: CollectionEntry<'pages'>['data'];
   commercial: NonNullable<CollectionEntry<'pages'>['data']['homepage']>;
@@ -15,6 +17,7 @@ const breadcrumb = commercial.chrome.navigation.find(link => link.href === `/${p
 const serviceName = page.slug.charAt(0).toLocaleUpperCase('nb-NO') + page.slug.slice(1);
 const sectionVisuals: Record<string, 'behov' | 'kanaler'> = { friksjon: 'behov', kvalitet: 'kanaler' };
 const visual = resolveServiceVisual(page.heroVisual);
+const proofRecords = (await getCollection('proofCases')).map(record => record.data);
 ---
 <div class="invite-home invite-service">
   <section id="service-hero" class="service-hero shell">
@@ -23,6 +26,7 @@ const visual = resolveServiceVisual(page.heroVisual);
   </section>
   {page.sections.map(section => <>
     <ContentSection section={section} visualId={sectionVisuals[section.id]} />
+    {section.id === 'prioritering' && page.proof && <Proof content={page.proof} records={proofRecords} primary />}
     {section.id === 'sammenheng' && <PricingBridge content={commercial.packages} link={pricingLink} serviceName={serviceName} />}
   </>)}
   <section id="sporsmal" class="faq-section section-space"><div class="shell faq-grid"><div><p class="eyebrow">{commercial.faqEyebrow}</p><h2>{commercial.faqHeading}</h2></div><div class="faq-list">{page.faq.map(item => <details><summary>{item.question}<span aria-hidden="true">+</span></summary><p>{item.answer}</p></details>)}</div></div></section>
