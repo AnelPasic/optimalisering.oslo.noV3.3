@@ -1,12 +1,12 @@
 {
   "authority": "DRAFT / NON-AUTHORITATIVE",
-  "title": "Begreper innen synlighet, annonsering og konvertering",
-  "intro": "Forklart uten byråspråk.",
-  "description": "Enkle forklaringer av begreper innen søk, annonsering, konvertering og måling.",
+  "title": "Hva betyr ROAS, CRO, SEO og resten av alfabetssuppen?",
+  "intro": "Kort forklart først. Litt mer under panseret hvis du faktisk vil vite hva tallene betyr.",
+  "description": "Enkle forklaringer på ROAS, SEO, CRO, konverteringsrate og andre begreper innen synlighet, annonsering og måling.",
   "linkLabel": "Begreper",
-  "moreLabel": "Les mer",
-  "exampleLabel": "Eksempel",
-  "panelLabel": "Begrepsforklaring",
+  "moreLabel": "Se hele forklaringen",
+  "exampleLabel": "Helt konkret",
+  "panelLabel": "Kort forklart",
   "terms": [
     {
       "id": "seo",
@@ -16,27 +16,27 @@
         "søkemotoroptimalisering"
       ],
       "category": "Synlighet og søk",
-      "shortDefinition": "Arbeid med nettsiden slik at den kan bli funnet og forstått i søkemotorer.",
-      "fullDefinition": "SEO omfatter innhold, struktur og tekniske forhold som hjelper søkemotorer å finne og forstå nettsiden. Det gir ingen garanti for en bestemt plassering.",
-      "simpleExample": "En rørlegger kan ha en tydelig side om hvilke tjenester og områder bedriften dekker."
+      "shortDefinition": "Å gjøre det enklere for Google å forstå siden - og for riktige kunder å finne den.",
+      "fullDefinition": "SEO er arbeidet med innhold, struktur og tekniske forhold som gjør det lettere for søkemotorer å forstå hva siden handler om og hvem den passer for. Målet er relevante besøk, ikke å vinne en pokal for flest søkeord. Og nei: 47 blogginnlegg om «5 tips til bedre kundereise» er ikke automatisk en strategi.",
+      "simpleExample": "En rørlegger lager én god side om tjenesten og området han faktisk dekker, i stedet for å håpe at Google skjønner alt fra forsiden."
     },
     {
       "id": "lokal-seo",
       "term": "Lokal SEO",
       "aliases": [],
       "category": "Synlighet og søk",
-      "shortDefinition": "Arbeid for å bli funnet av kunder som søker etter tilbud i et bestemt område.",
-      "fullDefinition": "Lokal SEO handler om tydelig og riktig informasjon om bedriften, stedene den dekker og det den tilbyr. Nettsiden og bedriftsoppføringer kan begge være relevante.",
-      "simpleExample": "En kunde søker etter en tannlege i nærheten av der hun bor."
+      "shortDefinition": "Å bli funnet av folk i området du faktisk kan hjelpe.",
+      "fullDefinition": "Lokal SEO handler om å gjøre det tydelig hvor bedriften holder til, hvilke områder den dekker og hva den tilbyr. Nettsiden og bedriftsprofilen må fortelle omtrent samme historie. Hvis du reparerer tak i Follo, er masse trafikk fra Alta mest pynt i rapporten.",
+      "simpleExample": "En tannklinikk i Ski vil heller bli funnet av noen som søker «tannlege Ski» enn av 500 tilfeldige besøkende fra resten av landet."
     },
     {
       "id": "ai-synlighet",
       "term": "AI-synlighet",
       "aliases": [],
       "category": "Synlighet og søk",
-      "shortDefinition": "Hvordan bedriften blir omtalt og vist som kilde i svar fra AI-tjenester.",
-      "fullDefinition": "AI-synlighet beskriver om og hvordan en bedrift eller et tilbud vises i AI-baserte svar. Et enkelt svar dokumenterer bare den observasjonen, og er ingen garanti for omtale eller nye kunder.",
-      "simpleExample": "Et AI-svar nevner bedriften og lenker til en av sidene dens."
+      "shortDefinition": "Om og hvordan bedriften dukker opp når folk spør AI-tjenester om det du tilbyr.",
+      "fullDefinition": "AI-synlighet handler om hvorvidt bedriften blir nevnt, brukt som kilde eller på annen måte dukker opp i AI-baserte svar. Det er interessant, men ikke magi: en omtale er ikke det samme som en anbefaling, og en anbefaling er fortsatt ikke en kunde.",
+      "simpleExample": "Noen spør en AI-tjeneste etter leverandører i Oslo, og bedriften din nevnes med lenke til riktig side."
     },
     {
       "id": "aeo",
@@ -44,9 +44,9 @@
       "fullName": "Answer Engine Optimization",
       "aliases": [],
       "category": "Synlighet og søk",
-      "shortDefinition": "Arbeid med innhold som gir tydelige svar på spørsmål folk stiller i søk og svartjenester.",
-      "fullDefinition": "AEO brukes om å gjøre informasjon egnet som direkte svar på kundespørsmål. Begrepet overlapper med SEO og AI-synlighet og brukes ulikt. Arbeidet garanterer ikke at en tjeneste velger svaret.",
-      "simpleExample": "En side svarer konkret på hva en tjeneste omfatter."
+      "shortDefinition": "Å lage tydelige svar på spørsmål folk faktisk stiller.",
+      "fullDefinition": "AEO står for Answer Engine Optimization. I praksis betyr det ofte å svare klart på konkrete spørsmål, slik at innholdet er lett å forstå og bruke i søk og svartjenester. Det høres mer eksotisk ut enn det er. Et godt svar er fortsatt et godt svar, selv med tre bokstaver foran.",
+      "simpleExample": "En prisside svarer faktisk på hva tjenesten koster, i stedet for å be kunden «ta kontakt for en hyggelig prat»."
     },
     {
       "id": "aio",
@@ -54,9 +54,9 @@
       "fullName": "AI Optimization",
       "aliases": [],
       "category": "Synlighet og søk",
-      "shortDefinition": "Et samlebegrep som ofte brukes om å gjøre informasjon forståelig for AI-tjenester.",
-      "fullDefinition": "AIO brukes ulikt og kan også vise til AI Overviews, Googles AI-baserte svar i søkeresultater. Avklar hva avsenderen mener og hvilket arbeid eller hvilken observasjon det gjelder.",
-      "simpleExample": "Spør om AIO betyr innholdsarbeid eller måling av omtale i et bestemt søkeverktøy."
+      "shortDefinition": "Et litt ullent navn på arbeid med synlighet i AI-baserte søk og svar.",
+      "fullDefinition": "AIO brukes om flere ting, blant annet AI Optimization og noen ganger AI Overviews. Det betyr at du bør spørre hva avsenderen faktisk mener før du kjøper noe. Bransjen er glad i forkortelser; definisjonene kommer av og til ruslende etterpå.",
+      "simpleExample": "Hvis noen lover «AIO», spør hvilke plattformer, spørsmål og resultater de faktisk skal jobbe med."
     },
     {
       "id": "geo",
@@ -64,9 +64,9 @@
       "fullName": "Generative Engine Optimization",
       "aliases": [],
       "category": "Synlighet og søk",
-      "shortDefinition": "Arbeid med informasjon som AI-tjenester kan bruke som grunnlag for svar.",
-      "fullDefinition": "GEO brukes om å gjøre innhold tydelig og anvendelig i tjenester som lager AI-baserte svar. Begrepet overlapper med AI-synlighet. Verken omtale eller kildehenvisning kan garanteres.",
-      "simpleExample": "En tjenesteside beskriver tilbudet presist og oppgir kontrollerbare fakta."
+      "shortDefinition": "Å gjøre innhold tydelig nok til at generative AI-tjenester kan forstå og bruke det.",
+      "fullDefinition": "GEO står for Generative Engine Optimization. Begrepet overlapper mye med AI-synlighet: tydelig informasjon, gode kilder og konkrete fakta. Ingen kan garantere at en AI-tjeneste velger å nevne deg. Hvis noen gjør det, be dem gjerne vise hvor de har gjemt fjernkontrollen til internett.",
+      "simpleExample": "En tjenesteside forklarer presist hva dere gjør, hvem det passer for, hvor dere leverer og hva kunden bør vite før kjøp."
     },
     {
       "id": "organisk-trafikk",
@@ -76,9 +76,9 @@
         "organiske klikk"
       ],
       "category": "Synlighet og søk",
-      "shortDefinition": "Besøk fra ubetalte søkeresultater, mens organiske klikk teller klikk på selve resultatene.",
-      "fullDefinition": "Organisk trafikk er besøk fra ubetalte søkeresultater. Et organisk klikk er et klikk på et slikt resultat. Arbeidet med nettsiden kan fortsatt koste tid og penger.",
-      "simpleExample": "En kunde klikker på nettsiden i Google uten å klikke på en annonse."
+      "shortDefinition": "Besøk fra ubetalte søkeresultater - altså ikke fra en annonse du betalte for per klikk.",
+      "fullDefinition": "Organisk trafikk er besøk som kommer fra ubetalte søkeresultater. «Ubetalt» betyr bare at du ikke betalte for selve klikket. Nettsiden, innholdet og arbeidet rundt den kan selvfølgelig fortsatt koste både tid og penger. Internett har ennå ikke oppfunnet gratis ansatte.",
+      "simpleExample": "En kunde finner tjenestesiden din i Google og klikker uten at klikket trekkes fra annonsebudsjettet."
     },
     {
       "id": "google-search-console",
@@ -87,18 +87,18 @@
         "Search Console"
       ],
       "category": "Synlighet og søk",
-      "shortDefinition": "Googles verktøy for å se hvordan nettsiden blir funnet i Google-søk.",
-      "fullDefinition": "Google Search Console viser blant annet hvilke søk som ga visninger og klikk til nettsiden, og varsler om enkelte problemer med hvordan Google leser sidene.",
-      "simpleExample": "Du ser hvilke sider som fikk klikk fra Google forrige måned."
+      "shortDefinition": "Googles egen rapport om hvordan nettsiden dukker opp i Google-søk.",
+      "fullDefinition": "Google Search Console viser blant annet hvilke søk som ga visninger og klikk, hvilke sider som ble funnet og enkelte tekniske problemer. Det er nyttig fordi dataene kommer fra Google selv. Det forteller fortsatt ikke om kunden kjøpte noe etterpå.",
+      "simpleExample": "Du ser at siden om firmalunsj fikk 420 klikk fra Google, og hvilke søk som sendte folk dit."
     },
     {
       "id": "google-ads",
       "term": "Google Ads",
       "aliases": [],
       "category": "Annonsering",
-      "shortDefinition": "Googles verktøy for å kjøpe annonseplass i blant annet søk og på YouTube.",
-      "fullDefinition": "Google Ads brukes til å lage og administrere betalte annonser på Googles annonseflater. Annonsebudsjettet dekker selve annonseringen og må skilles fra betaling for arbeidet med annonsene.",
-      "simpleExample": "En bedrift betaler for en annonse som vises ved et relevant Google-søk."
+      "shortDefinition": "Betalte annonser i Googles annonseflater, blant annet i søkeresultater.",
+      "fullDefinition": "Google Ads lar deg betale for synlighet når folk søker eller bruker andre Google-flater. Du betaler annonsebudsjettet til Google og eventuelt noen for å gjøre jobben med kampanjene. De to kostnadene er ikke samme ting, selv om fakturaen gjerne skulle ønske det.",
+      "simpleExample": "En kunde søker «regnskapsfører Oslo», ser annonsen din og klikker seg til en relevant side."
     },
     {
       "id": "meta-ads",
@@ -106,8 +106,8 @@
       "aliases": [],
       "category": "Annonsering",
       "shortDefinition": "Betalte annonser på blant annet Facebook og Instagram.",
-      "fullDefinition": "Meta Ads brukes om annonser som administreres gjennom Metas annonseverktøy. Bedriften velger blant annet budsjett, innhold og hvem annonsene skal forsøke å nå.",
-      "simpleExample": "En nettbutikk viser en produktannonse på Instagram."
+      "fullDefinition": "Meta Ads brukes til å vise annonser på Facebook, Instagram og andre Meta-flater. Forskjellen fra søkeannonser er ofte at folk ikke nødvendigvis leter etter deg akkurat da. Du avbryter dem høflig mens de ser på feriebilder, reels eller naboens nye grill.",
+      "simpleExample": "En nettbutikk viser en annonse for et produkt til personer som sannsynligvis er i målgruppen."
     },
     {
       "id": "roas",
@@ -115,9 +115,9 @@
       "fullName": "Return on Ad Spend",
       "aliases": [],
       "category": "Annonsering",
-      "shortDefinition": "Hvor mye registrert omsetning annonsene gir per krone brukt på annonser.",
-      "fullDefinition": "ROAS sammenligner omsetningen som er knyttet til annonseringen, med annonsekostnaden. Tallet avhenger av målingen og viser ikke fortjeneste, siden andre kostnader ikke er trukket fra.",
-      "simpleExample": "ROAS 4,3x betyr 4,30 kr i registrert omsetning per krone brukt på annonser."
+      "shortDefinition": "Hvor mye registrert omsetning annonsene gir tilbake per krone brukt på annonser.",
+      "fullDefinition": "ROAS står for Return on Ad Spend. Tallet sammenligner registrert omsetning med annonsekostnaden. ROAS 4,3x betyr 4,30 kr i registrert omsetning per annonsekrone. Det betyr ikke 4,30 kr i fortjeneste. Varekostnad, lønn, frakt, returer og resten av virkeligheten vil også ha sitt.",
+      "simpleExample": "10 000 kr brukt på annonser og 43 000 kr registrert omsetning gir ROAS 4,3x."
     },
     {
       "id": "cpc",
@@ -127,9 +127,9 @@
         "kostnad per klikk"
       ],
       "category": "Annonsering",
-      "shortDefinition": "Hvor mye et annonseklikk koster.",
-      "fullDefinition": "CPC er annonsekostnaden delt på antall klikk. Gjennomsnittlig CPC viser hva klikkene kostet i snitt i perioden.",
-      "simpleExample": "500 kr fordelt på 100 klikk gir CPC på 5 kr."
+      "shortDefinition": "Hva du i snitt betaler for ett annonseklikk.",
+      "fullDefinition": "CPC står for Cost Per Click. Det er annonsekostnaden delt på antall klikk. CPC bryr seg ikke om klikket endte i et kjøp av en gravemaskin eller i at noen lukket fanen etter tre sekunder. Derfor er billigst klikk sjelden et mål i seg selv.",
+      "simpleExample": "500 kr brukt på 100 klikk gir en gjennomsnittlig CPC på 5 kr."
     },
     {
       "id": "ctr",
@@ -139,9 +139,9 @@
         "klikkrate"
       ],
       "category": "Annonsering",
-      "shortDefinition": "Andelen annonsevisninger eller søkeresultatvisninger som fører til et klikk.",
-      "fullDefinition": "CTR beregnes ved å dele antall klikk på antall visninger. Tallet sier hvor ofte folk klikker, og må vurderes sammen med hva som skjer etter klikket.",
-      "simpleExample": "10 klikk fra 1 000 visninger gir CTR på 1 %."
+      "shortDefinition": "Hvor stor andel av dem som ser annonsen eller søkeresultatet, som faktisk klikker.",
+      "fullDefinition": "CTR står for Click-Through Rate. 100 klikk fra 10 000 visninger gir 1 % CTR. Tallet sier noe om hvor godt du får oppmerksomhet og klikk. Det sier ingenting om klikkene var lønnsomme. En overskrift som lover gratis gullbarrer kan også få god CTR.",
+      "simpleExample": "50 klikk fra 2 000 visninger gir en CTR på 2,5 %."
     },
     {
       "id": "cpa",
@@ -151,27 +151,27 @@
         "kostnad per konvertering"
       ],
       "category": "Annonsering",
-      "shortDefinition": "Hvor mye annonseringen koster per registrert ønsket handling.",
-      "fullDefinition": "CPA er annonsekostnaden delt på antall registrerte handlinger, for eksempel kjøp eller henvendelser. Avklar hvilken handling som telles. En henvendelse er ikke nødvendigvis en ny kunde.",
-      "simpleExample": "1 000 kr i annonsekostnad og 10 registrerte henvendelser gir CPA på 100 kr."
+      "shortDefinition": "Hva du betaler per registrert handling - for eksempel en henvendelse eller et kjøp.",
+      "fullDefinition": "CPA brukes om kostnad per ønsket handling. Før du jubler over lav CPA, bør du vite hva som faktisk telles. Hvis «konverteringen» er et tilfeldig knappetrykk, har du bare kjøpt billige knappetrykk. For tjenester er kostnad per relevant henvendelse ofte mer nyttig enn kostnad per hva-som-helst.",
+      "simpleExample": "5 000 kr i annonser og 10 relevante henvendelser gir 500 kr per relevant henvendelse."
     },
     {
       "id": "konvertering",
       "term": "Konvertering",
       "aliases": [],
       "category": "Konvertering",
-      "shortDefinition": "At en besøkende gjør en handling bedriften ønsker, for eksempel kjøper eller tar kontakt.",
-      "fullDefinition": "En konvertering er en definert ønsket handling. Hva som telles må avklares, slik at et kjøp, en henvendelse og et klikk ikke behandles som samme resultat.",
-      "simpleExample": "En besøkende sender inn en forespørsel om et tilbud."
+      "shortDefinition": "Når en besøkende gjør noe vi faktisk ønsker - som å kjøpe eller ta kontakt.",
+      "fullDefinition": "En konvertering er en handling bedriften har bestemt at betyr noe. Det kan være et kjøp, en relevant henvendelse eller en annen konkret handling. Ikke alle klikk fortjener konfetti. Først må vi være enige om hva som faktisk teller.",
+      "simpleExample": "En besøkende fyller ut skjemaet og ber om tilbud på en tjeneste dere faktisk leverer."
     },
     {
       "id": "konverteringsrate",
       "term": "Konverteringsrate",
       "aliases": [],
       "category": "Konvertering",
-      "shortDefinition": "Andelen besøk som fører til en ønsket handling, som en henvendelse eller et kjøp.",
-      "fullDefinition": "Konverteringsrate sammenligner antall ønskede handlinger med antall besøk. Noen rapporter bruker personer eller klikk som grunnlag, så avklar hvordan tallet er beregnet.",
-      "simpleExample": "20 kjøp fra 1 000 besøk gir en konverteringsrate på 2 %."
+      "shortDefinition": "Hvor stor andel av besøkene som ender i den handlingen du vil ha.",
+      "fullDefinition": "Konverteringsrate er andelen besøk som fører til en ønsket handling. Har du 100 relevante besøk og 2 kjøp, er raten 2 %. Det er bare nyttig hvis vi er enige om hva som teller som besøk og konvertering. Ellers sammenligner vi epler med skjema-innsendinger.",
+      "simpleExample": "20 henvendelser fra 1 000 relevante besøk gir 2 % konverteringsrate."
     },
     {
       "id": "cro",
@@ -181,9 +181,9 @@
         "konverteringsoptimalisering"
       ],
       "category": "Konvertering",
-      "shortDefinition": "Arbeid med å gjøre det enklere for relevante besøkende å ta kontakt eller kjøpe.",
-      "fullDefinition": "CRO, eller konverteringsoptimalisering, handler om å undersøke og forbedre veien fra besøk til ønsket handling. Det kan gjelde informasjon, skjemaer eller kjøpsflyt. Ingen bestemt økning er garantert.",
-      "simpleExample": "Et skjema ber bare om opplysningene som trengs for å behandle forespørselen."
+      "shortDefinition": "Å gjøre det lettere for riktige besøkende å ta neste steg, kontakte deg eller kjøpe.",
+      "fullDefinition": "CRO står for Conversion Rate Optimization, altså konverteringsoptimalisering. Jobben er å finne friksjon og fjerne den: uklart tilbud, svak informasjon, tungvinte skjemaer eller en kjøpsvei som får folk til å gi opp. Noen ganger er knappen problemet. Overraskende ofte er det ikke knappefargen.",
+      "simpleExample": "Et skjema går fra 14 obligatoriske felt til de 5 opplysningene bedriften faktisk trenger."
     },
     {
       "id": "cta",
@@ -191,9 +191,9 @@
       "fullName": "Call to Action",
       "aliases": [],
       "category": "Konvertering",
-      "shortDefinition": "En oppfordring som viser kunden hva hun kan gjøre videre.",
-      "fullDefinition": "En CTA er en tydelig oppfordring til handling, ofte vist som en lenke eller knapp. Den bør si hva kunden kan forvente når hun bruker den.",
-      "simpleExample": "En knapp med teksten Be om tilbud."
+      "shortDefinition": "En tydelig beskjed om hva kunden kan gjøre videre.",
+      "fullDefinition": "CTA står for Call to Action. Det er knappen eller lenken som peker ut neste steg. «Kontakt oss» kan fungere, men «Be om pris» eller «Bestill time» sier ofte mer. En CTA er et veiskilt, ikke en tryllestav.",
+      "simpleExample": "Knappen «Ta en gratis sjekk» forteller både hva kunden får og hva som skjer videre."
     },
     {
       "id": "landingsside",
@@ -202,9 +202,9 @@
         "landingssider"
       ],
       "category": "Konvertering",
-      "shortDefinition": "Siden en besøkende kommer til etter å ha klikket på en lenke eller annonse.",
-      "fullDefinition": "En landingsside er første side i et besøk. Den kan være en vanlig tjenesteside eller en side laget for et bestemt tilbud. Innholdet bør passe med det kunden klikket på.",
-      "simpleExample": "En annonse for teltutleie leder direkte til siden om teltutleie."
+      "shortDefinition": "Siden kunden lander på etter å ha klikket på en annonse, lenke eller søkeresultat.",
+      "fullDefinition": "En landingsside er første side kunden møter etter klikket. Den bør fortsette samtalen som startet før klikket. Sender du alle til forsiden fordi «der står jo alt», ber du i praksis kunden begynne letingen på nytt.",
+      "simpleExample": "En annonse for firmalunsj går til siden om firmalunsj - ikke til en forside med seks forskjellige tjenester."
     },
     {
       "id": "checkout",
@@ -214,9 +214,9 @@
         "utsjekkingen"
       ],
       "category": "Konvertering",
-      "shortDefinition": "Stegene i nettbutikken der kunden oppgir opplysninger og fullfører bestillingen.",
-      "fullDefinition": "Checkout er delen av kjøpsprosessen der kunden blant annet velger levering og betaling og bekrefter bestillingen. En påbegynt utsjekking er ikke det samme som et fullført kjøp.",
-      "simpleExample": "Kunden velger levering, ser totalsummen og betaler."
+      "shortDefinition": "De siste stegene i nettbutikken før kunden faktisk har betalt.",
+      "fullDefinition": "Checkout er delen der kunden oppgir informasjon, velger levering og betaling og fullfører ordren. Det er de siste meterne før pengene skifter eier, og derfor et bemerkelsesverdig populært sted å legge inn unødvendige hindringer.",
+      "simpleExample": "Kunden går fra handlekurv til levering, betaling og bekreftet bestilling uten å bli bedt om å opprette konto, finne postnummeret sitt tre ganger og løse en rebus."
     },
     {
       "id": "ga4",
@@ -227,18 +227,18 @@
         "Google Analytics 4"
       ],
       "category": "Måling og økonomi",
-      "shortDefinition": "Googles verktøy for å måle hvordan folk besøker og bruker nettsider og apper.",
-      "fullDefinition": "GA4 kan vise hvor besøk kommer fra og hvilke registrerte handlinger som skjer. Oppsett, samtykke og tilgjengelige data påvirker hva som kan måles. Rapporten viser derfor ikke nødvendigvis alle besøk og kjøp.",
-      "simpleExample": "En rapport viser besøk på en tjenesteside og registrerte forespørsler."
+      "shortDefinition": "Google Analytics sitt verktøy for å se hvordan folk bruker nettsiden - så langt målingen faktisk får med seg.",
+      "fullDefinition": "GA4 viser besøk, kilder og registrerte handlinger på nettsider og apper. Det er nyttig, men ikke allvitende. Samtykke, blokkering, oppsett og tekniske feil påvirker hva som registreres. En pen graf er fortsatt bare så god som målingen under.",
+      "simpleExample": "GA4 kan vise at 300 personer besøkte en tjenesteside og at 12 registrerte henvendelser kom i samme periode."
     },
     {
       "id": "attribusjon",
       "term": "Attribusjon",
       "aliases": [],
       "category": "Måling og økonomi",
-      "shortDefinition": "Hvordan en rapport fordeler æren for et kjøp eller en henvendelse mellom ulike kilder.",
-      "fullDefinition": "Attribusjon bestemmer hvilke annonser eller andre kilder som får registrert et resultat. Ulike regler kan gi ulike tall for samme kundereise. Rapportert ære beviser ikke alene hva som skapte kjøpet.",
-      "simpleExample": "En kunde klikker på en annonse og kommer senere tilbake fra et søk før kjøpet."
+      "shortDefinition": "Reglene som bestemmer hvem som får æren for et kjøp eller en henvendelse.",
+      "fullDefinition": "Attribusjon er måten en rapport fordeler æren mellom annonser, søk og andre kontaktpunkter. Kunden kan ha sett en annonse mandag, googlet deg torsdag, spurt ektefellen fredag og kjøpt søndag. Rapporten vil likevel gjerne kåre én vinner. Derfor bør attribusjon leses som en modell, ikke som overvåkningskamera fra kundens hode.",
+      "simpleExample": "Google Ads og GA4 kan gi ulikt svar på hvilken kanal som «skapte» samme kjøp."
     },
     {
       "id": "relevant-trafikk",
@@ -247,27 +247,27 @@
         "relevante besøk"
       ],
       "category": "Måling og økonomi",
-      "shortDefinition": "Besøk fra mennesker som kan ha behov for det bedriften tilbyr.",
-      "fullDefinition": "Relevant trafikk er besøk som passer tilbudet, målgruppen og området bedriften dekker. Mange besøk er lite nyttige hvis de kommer fra mennesker som ikke kan bli kunder.",
-      "simpleExample": "En lokal håndverker får besøk fra noen som trenger tjenesten i området han dekker."
+      "shortDefinition": "Besøk fra mennesker som faktisk kan trenge det du selger.",
+      "fullDefinition": "Relevant trafikk er besøk fra personer som passer tilbudet, markedet og området du dekker. 10 000 besøk er imponerende helt til du oppdager at 9 800 lette etter noe du ikke selger. Vi vil heller ha færre riktige besøk enn mange tilfeldige.",
+      "simpleExample": "100 personer som trenger regnskapsfører i Oslo kan være mer verdt enn 5 000 som kom for å lese en gratis mal."
     },
     {
       "id": "ordreverdi",
       "term": "Ordreverdi",
       "aliases": [],
       "category": "Måling og økonomi",
-      "shortDefinition": "Verdien av en bestilling i nettbutikken.",
-      "fullDefinition": "Ordreverdi er beløpet for en bestilling. Gjennomsnittlig ordreverdi er samlet ordrebeløp delt på antall bestillinger. Avklar om tallene inkluderer merverdiavgift, frakt og returer før du sammenligner.",
-      "simpleExample": "Bestillinger på totalt 10 000 kr fordelt på 20 ordre gir 500 kr i gjennomsnitt."
+      "shortDefinition": "Hvor mye kunden kjøper for i én bestilling.",
+      "fullDefinition": "Ordreverdi er beløpet i en enkelt ordre. Gjennomsnittlig ordreverdi viser snittet på tvers av flere ordre. Det sier noe om størrelsen på salget, men ikke hvor mye du tjente på det. Omsetning er hyggelig. Kostnader har dessverre også adgang til regnearket.",
+      "simpleExample": "20 ordre på totalt 10 000 kr gir 500 kr i gjennomsnittlig ordreverdi."
     },
     {
       "id": "margin",
       "term": "Margin",
       "aliases": [],
       "category": "Måling og økonomi",
-      "shortDefinition": "Andelen av salgsbeløpet som er igjen etter kostnadene du regner med.",
-      "fullDefinition": "Margin viser hvor mye av salgsbeløpet som er igjen etter bestemte kostnader. Avklar hvilke kostnader som er trukket fra. Margin etter varekostnad er ikke det samme som bedriftens endelige fortjeneste.",
-      "simpleExample": "Et salg på 1 000 kr uten merverdiavgift og varekostnad på 600 kr gir 40 % margin etter varekostnad."
+      "shortDefinition": "Hvor mye som er igjen av salget etter kostnadene du faktisk regner med.",
+      "fullDefinition": "Margin viser hvor stor del av salget som er igjen etter bestemte kostnader. Derfor må vi alltid spørre hvilke kostnader som er tatt med. Høy omsetning ser flott ut i et skjermbilde. Marginen avgjør om det også var en god idé.",
+      "simpleExample": "Selger du for 1 000 kr og varen kostet 600 kr, er 400 kr igjen før andre kostnader. Det tilsvarer 40 % margin etter varekostnad."
     }
   ]
 }
