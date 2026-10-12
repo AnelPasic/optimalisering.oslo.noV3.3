@@ -1,0 +1,198 @@
+
+> optimalisering-oslo-v3-3@0.1.0 verify
+> npm run check && npm test && npm run build && npm run qa:static && npm run qa:cms
+
+
+> optimalisering-oslo-v3-3@0.1.0 check
+> astro check
+
+01:47:25 [content] Syncing content
+01:47:25 [content] Synced content
+01:47:25 [types] Generated 389ms
+01:47:25 [check] Getting diagnostics for Astro files in E:\Codex\optimalisering.oslo.noV3.3\app...
+[96mscripts/qa-intake-h017a.mjs[0m:[93m65[0m:[93m68[0m - [93mwarning[0m[90m ts(2568): [0mProperty 'submit' may not exist on type 'HTMLElement | SVGElement'. Did you mean 'onsubmit'?
+  Property 'submit' does not exist on type 'HTMLElement'.
+
+[7m65[0m   await page.locator('[data-package-order]').evaluate(form => form.submit());
+[7m  [0m [93m                                                                   ~~~~~~[0m
+
+Result (156 files): 
+- 0 errors
+- 0 warnings
+- 1 hint
+
+
+> optimalisering-oslo-v3-3@0.1.0 test
+> node --test tests/*.test.ts tests/*.test.mjs
+
+✔ submission source survives an internal route without cookies or browser storage (1.6423ms)
+✔ external links, hash links and invalid campaign values are untouched (0.4048ms)
+✔ copy-style guard permits formal calculator notation but still rejects ornamental customer prose (538.3731ms)
+✔ shared CMS offer retains protected identity and bounded customer claims (1.5647ms)
+✔ D-054 allows owner-edited work areas and shared cost rules through the same schema (18.6233ms)
+✔ D-024 keeps the exact free-check promise and approved bounded manual safeguards (0.3324ms)
+✔ H-007 commercial CMS edits are typed and retain all intended fields (3.5144ms)
+✔ Partner prefix survives CMS parsing while other packages cannot become from-prices (27.6726ms)
+✔ repeated Partner facts include the shared prefix exactly once without altering generic from-prices (27.7718ms)
+✔ CMS names ending in digits cannot swallow following FAQ price amounts (0.7642ms)
+✔ inserted CMS selection and cost strings retain edited names verbatim (0.3452ms)
+✔ package assets resolve only existing dedicated files with meaningful alt and missing-file fallback (2.2857ms)
+(node:74888) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ orders stay independently disabled when assessment intake is enabled (49.4703ms)
+✔ isolated enabled order stores intent once and sends distinct synthetic notification (14.8352ms)
+✔ order intent and selected package survive the shared intake payload without arbitrary fields (1.3715ms)
+✔ orders reject unknown intent/package and missing or excessive business-contact fields (0.4582ms)
+✔ three independent package assets and structured icons survive schema with strict local paths (35.931ms)
+✔ CMS exposes dedicated pricing media, structured icons and safe readonly order paths (85.8133ms)
+✔ compact CMS copy stays editable without losing long copy; invalid decision summaries fail validation (97.8684ms)
+✔ optional semantic motif caption survives CMS parsing and preserves independent artwork/crop fields (125.3683ms)
+✔ OWNER can edit package CTA wording while order and detail routes remain readonly (1.9776ms)
+✔ schema accepts independent CTA/detail labels but rejects edited routing and package intent (26.4481ms)
+✔ all CMS select fields provide the documented options.values object (0.4869ms)
+(node:65488) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ backend intake prerequisites cannot be bypassed by the public order flag (0.9702ms)
+✔ all package keys persist explicit order intent and normalized attribution exactly once (98.7803ms)
+✔ unknown package, filled honeypot and invalid required or excessive fields create no record (15.6718ms)
+✔ order gate mismatch and disabled shared intake both fail without storing or notifying (8.6218ms)
+✔ storage failure never acknowledges acceptance or attempts email (3.5821ms)
+✔ order conflict and rate limiting remain authoritative (11.1286ms)
+✔ enabled API still requires an allowed Origin and JSON content type (5.0171ms)
+✔ customer workflow maps each existing page to its dedicated file or correct service/editorial collection (1.8097ms)
+✔ object repeaters start collapsed with meaningful summaries supported by Pages CMS (0.5101ms)
+✔ the multiple case reference retains a flat array without an outer list wrapper (0.1366ms)
+✔ CMS-equivalent edit preserves every current JSON record semantically and untouched file hashes (69.7831ms)
+✔ CMS rejects clearing mandatory text before it can create a broken content commit (0.9309ms)
+✔ initialized optional internal links accept blank input while rejecting an external route (2.2014ms)
+✔ raw preservation checks expose nonempty unmodeled repeater data loss (1.7187ms)
+✔ merge preserves omitted nonempty metadata without promoting authority or proof (2.2565ms)
+✔ omitted unknown evidence values stay null and cannot make a case publishable (0.3674ms)
+✔ D-075-D-076 selects the final guarded proof placements in order (12.1277ms)
+✔ safe home/service CMS presentation edits preserve authority and case gates (30.3054ms)
+✔ hero uses only the guarded featured public result and source label (24.0403ms)
+✔ hero disappears for absent, duplicate, unapproved or incomplete proof (0.7189ms)
+✔ hero follows the first publishable selection and respects anonymized public names (0.3351ms)
+✔ CMS edits cannot remove or duplicate a required homepage section (22.8339ms)
+✔ CMS calculator defaults must be accepted by the rendered input controls (1.0156ms)
+✔ CMS section order cannot reverse the diagnostic and qualification sequence (0.839ms)
+(node:83512) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ HTTP accepted enquiry is stored once with source, conversion and pending email (55.4287ms)
+✔ unconfigured server and invalid/origin-mismatched submissions save no data (13.9634ms)
+✔ validation, oversized body, conflict and honeypot fail before creating a new lead (13.1677ms)
+✔ root Norwegian and explicitly mapped future English paths do not auto-translate slugs (1.057ms)
+✔ language links require real equivalents or a real target-language homepage (0.2924ms)
+✔ website accepts a bare domain and rejects unsafe schemes and credentials (1.0862ms)
+✔ payload is minimal, validates email and removes personal/URL query data from source (1.0973ms)
+✔ only an explicit persisted acknowledgement is success (21.9585ms)
+✔ empty and insecure endpoints never call the transport (0.2991ms)
+✔ network failure and abort preserve a retryable error (18.4533ms)
+✔ malformed endpoints, credentials and query data are rejected before any transport (0.518ms)
+✔ illustrative example keeps percentage units correct (0.7906ms)
+✔ invalid or impossible calculator inputs fail (0.2607ms)
+✔ traffic and conversion compound rather than adding their effects (0.762ms)
+✔ zero baseline has no defined percentage increase and fractional outcomes stay precise (0.1675ms)
+✔ combined scenario rejects impossible or non-finite inputs (0.6504ms)
+✔ a tiny baseline does not produce an infinite percentage claim (0.3424ms)
+✔ monthly traffic growth compounds across the chosen number of months (0.4477ms)
+✔ monthly scenarios reject invalid month counts and preserve one-month compatibility (0.3967ms)
+✔ locked status cannot publish draft page or shared copy authority (16.1455ms)
+✔ Astro production-mode env files cannot make draft output indexable (10.6292ms)
+✔ CMS preserves the existing page CTA and exposes only declared proof fields (45.5662ms)
+✔ proof renders only explicitly selected, complete, permitted and approved records (3.1889ms)
+✔ missing fields, empty proof requirements and flags cannot bypass publication (1.0641ms)
+✔ CMS normalization preserves rejection of every incomplete publication record (2.1438ms)
+✔ anonymous proof exposes the approved label and no private registry identity or evidence (0.1992ms)
+✔ anonymous proof refuses wrapped, nonbreaking and Unicode-normalized private names (0.2708ms)
+✔ imported records preserve supplied measurements and reviewed publication states with CMS coverage (27.0869ms)
+✔ six monthly points show compound growth rather than linear interpolation (1.5455ms)
+✔ twelve monthly outcomes fill a taller chart and finish at month twelve (0.3366ms)
+✔ illustration honestly supports lower, equal, zero and maximum outcomes at mobile width (0.4292ms)
+✔ scenario ratio shows the total relative level, not percentage increase (1.4069ms)
+✔ zero and non-finite baselines do not invent a multiplier (0.2138ms)
+✔ missing service assets fall back and existing service files resolve without homepage-photo reuse (2.2935ms)
+✔ CMS service visual accepts optional content and rejects external paths, missing alt and invalid crops (6.6993ms)
+✔ CMS exposes the visual contract without moving SEO fields or making company disclosure casual copy (43.2137ms)
+(node:62988) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ durable enquiry and one conversion are atomic and idempotent (2.672ms)
+✔ email failure leaves the enquiry and a retryable notification intact (18.6125ms)
+✔ ambiguous email response remains pending and sent messages are not resent (1.1871ms)
+✔ glossary has the requested entries, unique anchors and unambiguous aliases (1.8015ms)
+✔ inline selection preserves every character, chooses longest alias and explains a term once (2.9108ms)
+✔ CMS exposes safe terminology fields, keeps anchors and authority read-only, and round-trips content (43.3383ms)
+ℹ tests 89
+ℹ suites 0
+ℹ pass 89
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 671.3786
+
+> optimalisering-oslo-v3-3@0.1.0 build
+> astro build
+
+01:47:33 [content] Syncing content
+01:47:33 [content] Synced content
+01:47:33 [types] Generated 327ms
+01:47:33 [build] output: "static"
+01:47:33 [build] mode: "static"
+01:47:33 [build] directory: E:\Codex\optimalisering.oslo.noV3.3\app\dist\
+01:47:33 [build] Collecting build info...
+01:47:33 [build] ✓ Completed in 337ms.
+01:47:33 [build] Building static entrypoints...
+01:47:34 [vite] ✓ built in 341ms
+01:47:34 [vite] ✓ built in 34ms
+01:47:34 [build] Rearranging server assets...
+
+ generating static routes 
+01:47:34   ├─ /404.html (+6ms) 
+01:47:34   ├─ /begreper/index.html (+3ms) 
+01:47:34   ├─ /robots.txt (+1ms) 
+01:47:34   ├─ /sitemap.xml (+1ms) 
+01:47:34   ├─ /ai-synlighet/index.html (+3ms) 
+01:47:34   ├─ /index.html (+12ms) 
+01:47:34   ├─ /innsikt/index.html (+1ms) 
+01:47:34   ├─ /innsikt/hva-bor-optimaliseres-forst/index.html (+1ms) 
+01:47:34   ├─ /innsikt/male-effekt-av-optimalisering/index.html (+1ms) 
+01:47:34   ├─ /kontakt/index.html (+1ms) 
+01:47:34   ├─ /konvertering/index.html (+3ms) 
+01:47:34   ├─ /nettbutikkoptimalisering/index.html (+2ms) 
+01:47:34   ├─ /om/index.html (+1ms) 
+01:47:34   ├─ /personvern/index.html (+1ms) 
+01:47:34   ├─ /priser/index.html (+2ms) 
+01:47:34   ├─ /seo/index.html (+2ms) 
+01:47:34   ├─ /synlighet/index.html (+2ms) 
+01:47:34   ├─ /vilkar/index.html (+1ms) 
+01:47:34   ├─ /vurdering/index.html (+1ms) 
+01:47:34 ✓ Completed in 71ms.
+
+01:47:34 [build] ✓ Completed in 553ms.
+01:47:34 [build] 17 page(s) built in 897ms
+01:47:34 [build] Complete!
+
+> optimalisering-oslo-v3-3@0.1.0 qa:static
+> npm run qa:copy && node scripts/audit-build.mjs && node scripts/audit-h007.mjs && node scripts/audit-h008.mjs && node scripts/audit-h009.mjs && node scripts/audit-h010.mjs && node scripts/audit-h011.mjs && node scripts/audit-h013.mjs && node scripts/audit-h016.mjs && node scripts/audit-h017c.mjs && node scripts/audit-h017e.mjs
+
+
+> optimalisering-oslo-v3-3@0.1.0 qa:copy
+> node scripts/audit-copy-style.mjs
+
+Copy-style QA passed: 1197 customer-facing strings plus Astro component punctuation.
+Static QA passed: 16 pages, 544 internal links/anchors, titles, canonicals, IDs, preview indexing and proof/price limits.
+H-007 static QA PASS: shared CMS facts, exact free-check promise, bounded claims; 3 public cases; 23 HTML/JS/JSON outputs checked for private-proof leakage.
+H-008 static regression PASS: shared package output, exact D-024 supporting copy/rules, no second package object or public proof.
+H-009 static regression PASS: exact D-028 copy/order, shared two-package bridge, bounded check, guarded proof/no form/new local-SEO route.
+H-010 static regression PASS: exact D-031 H1/hook/copy/order, two service contexts, bounded check, guarded proof/no form.
+H-011 static PASS: exact provider/fit, landing journey, CMS-supplied visual/fallback, no dead language switch/English route.
+H-013 static PASS: direct ordering, single disabled review form, locked support/Partner note, independent visual slots and structured focus.
+H-016 static PASS: shared standard cards, page-specific native details, editable CMS labels, protected ordering and copy cleanup.
+H-017D static PASS: accepted placements/hierarchy, concise result/source/delta/periods only, no public work/limitations/evidence, COPY-STYLE and no propagation.
+H-017E static PASS: one guarded homepage-only result/source panel, no extra hero evidence.
+
+> optimalisering-oslo-v3-3@0.1.0 qa:cms
+> node scripts/audit-cms-roundtrip.ts
+
+CMS round-trip PASS: 20 content JSON hashes, schema-equivalent edits, representative selector edit, unchanged proof publication; all source bytes unchanged.

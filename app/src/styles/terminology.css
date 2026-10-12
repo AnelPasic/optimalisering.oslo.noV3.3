@@ -166,15 +166,6 @@ a.term-trigger:focus-visible { outline: 2px solid currentColor; outline-offset: 
 .glossary-entry details[open] .glossary-toggle { transform: rotate(45deg); }
 .glossary-entry details[open] summary { padding-bottom: 16px; }
 
-.glossary-answer {
-  max-width: 760px;
-  padding: 0 60px 28px calc(150px + 24px);
-}
-.glossary-answer > p {
-  margin: 0;
-  font-size: 17px;
-  line-height: 1.65;
-}
 .glossary-example {
   margin-top: 18px !important;
   padding: 16px 18px;
@@ -210,9 +201,6 @@ a.term-trigger:focus-visible { outline: 2px solid currentColor; outline-offset: 
     grid-template-columns: minmax(120px, .7fr) minmax(0, 1.3fr) 28px;
     gap: 18px;
   }
-  .glossary-answer {
-    padding-left: calc(120px + 18px);
-  }
 }
 
 @media (max-width: 650px) {
@@ -238,9 +226,5 @@ a.term-trigger:focus-visible { outline: 2px solid currentColor; outline-offset: 
   .glossary-short { grid-column: 1 / -1; font-size: 15px; }
   .glossary-toggle { grid-column: 2; grid-row: 1; }
   .glossary-term-name { font-size: 22px; }
-  .glossary-answer {
-    padding: 0 0 24px;
-  }
-  .glossary-answer > p { font-size: 16px; }
   .glossary-example { padding: 14px 15px; }
 }

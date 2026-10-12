@@ -32,7 +32,7 @@ const home = (await getCollection('pages')).find(entry => entry.data.slug === 'h
                 <span class="glossary-short">{term.shortDefinition}</span>
                 <span class="glossary-toggle" aria-hidden="true">+</span>
               </summary>
-              <div class="glossary-answer">
+              <div>
                 <p>{term.fullDefinition}</p>
                 {term.simpleExample && <p class="glossary-example"><strong>{glossary.exampleLabel}: </strong>{term.simpleExample}</p>}
                 <a class="glossary-anchor" href={`#${term.id}`} aria-label={`Direktelenke til ${term.term}`}>#{term.id}</a>

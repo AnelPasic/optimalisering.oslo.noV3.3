@@ -93,8 +93,8 @@ try {
       const entry = page.locator('#' + term.id);
       assert.ok((await entry.locator('summary').textContent()).includes(term.shortDefinition));
       await entry.locator('summary').click();
-      assert.ok(await entry.locator('.glossary-answer').isVisible());
-      assert.ok((await entry.locator('.glossary-answer').textContent()).includes(term.fullDefinition));
+      assert.ok(await entry.locator('details > div').isVisible());
+      assert.ok((await entry.locator('details > div').textContent()).includes(term.fullDefinition));
       if (term.simpleExample) assert.ok((await entry.locator('.glossary-example').textContent()).includes(term.simpleExample));
     }
     const expandedHeight = await page.locator('main').evaluate(element => element.scrollHeight);
@@ -119,7 +119,7 @@ try {
       assert.equal(await target.locator('.glossary-term-name').textContent(), term.term);
       assert.equal(await page.locator('.glossary-entry details[open]').count(), 1, 'Direct anchor opens only its term');
       assert.equal(await target.locator('details').getAttribute('open'), '');
-      assert.ok(await target.locator('.glossary-answer').isVisible());
+      assert.ok(await target.locator('details > div').isVisible());
       assert.ok((await target.textContent()).includes(term.fullDefinition));
       const rect = await target.boundingBox();
       assert.ok(rect.y >= 0 && rect.y < 1000, `${term.id}: direct anchor is visible`);
@@ -129,14 +129,14 @@ try {
     assert.equal(await page.locator('[data-term-more]').textContent(), source.moreLabel);
     await page.locator('[data-term-more]').click();
     await page.waitForURL('**/begreper/#roas');
-    assert.ok(await page.locator('#roas .glossary-answer').isVisible(), 'Full explanation link opens the correct accordion');
+    assert.ok(await page.locator('#roas details > div').isVisible(), 'Full explanation link opens the correct accordion');
     await page.goto(base + '/begreper/');
     const summary = page.locator('#seo summary');
     await summary.focus();
     await page.keyboard.press('Enter');
-    assert.ok(await page.locator('#seo .glossary-answer').isVisible());
+    assert.ok(await page.locator('#seo details > div').isVisible());
     await page.keyboard.press('Space');
-    assert.equal(await page.locator('#seo .glossary-answer').isVisible(), false);
+    assert.equal(await page.locator('#seo details > div').isVisible(), false);
     await page.goto(base + '/begreper/#%E0%A4%A');
     glossaryReport.push({ width, collapsedHeight, expandedHeight, directAnchors: source.terms.length, nativeKeyboard: true, fullExplanationLink: true, expandedNoOverflow: true });
     await context.close();
@@ -152,8 +152,8 @@ try {
       const entry = fallback.locator('#' + term.id);
       assert.ok(await entry.isVisible());
       await entry.locator('summary').click();
-      assert.ok(await entry.locator('.glossary-answer').isVisible(), 'Native details work without JavaScript');
-      assert.ok((await entry.locator('.glossary-answer').textContent()).includes(term.fullDefinition));
+      assert.ok(await entry.locator('details > div').isVisible(), 'Native details work without JavaScript');
+      assert.ok((await entry.locator('details > div').textContent()).includes(term.fullDefinition));
       await entry.locator('summary').click();
     }
     assert.equal(await fallback.locator('[data-term-panel]').isVisible(), false);
