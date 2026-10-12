@@ -2,6 +2,8 @@
 
 ## Direct OWNER terminology scope receipt - 2026-10-13 (no content lock)
 
+Implementation/live receipt: **556552b7d543a33f379c85bff9ccc614444cde76**, native Build **059ff328-5efd-4387-875f-30a467308da7 SUCCESS**, Worker **31ec541b-2803-44bb-a081-5c96baec7e66**. All 53 deployed assets and four-width glossary/inline/anchor/no-JS checks pass. Technical evidence adds no content lock or formal verdict. STOP for OWNER + STRATEGY_CONTENT review; existing calculator/launch dependencies remain separate.
+
 Actual direct OWNER request in Codex authorizes centralized terminology/glossary implementation, 25 initial Bokmål entries, selected first meaningful occurrences, `/begreper/`, safe Pages CMS fields, full QA and main/connected review Worker delivery. Source: actual OWNER request and incoming main `8b90bbfdc70e46fb62276600770fa4a95058098a`. This supersedes the previous no-next-implementation stop only within the named terminology scope. Existing commercial/proof/calculator/pricing/intake/noindex scopes and read-only inputs remain preserved. New definitions are DRAFT / NON-AUTHORITATIVE for OWNER + STRATEGY_CONTENT review. No formal verdict/content lock/launch authority is inferred. Exact resulting revision/evidence: CODEX-TO-CHATGPT / `evidence/terminology/`.
 
 Updated: 2026-10-09. This register separates explicit authority from exploratory implementation choices. Record meaningful decisions with source, reviewed revision and scope; do not make individual copy/spacing choices permanent owner gates.
