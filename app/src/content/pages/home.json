@@ -415,6 +415,7 @@
   },
   "sections": [
     {
+      "_block": "content",
       "id": "mekanisme",
       "eyebrow": "Start med det som begrenser resultatet",
       "heading": "Slik finner vi hva som bør gjøres først",
@@ -441,6 +442,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "passer",
       "eyebrow": "Er dette aktuelt for bedriften?",
       "heading": "Best når kundene faktisk har et valg.",
@@ -456,6 +458,7 @@
       ]
     },
     {
+      "_block": "protected",
       "id": "sjekk",
       "eyebrow": "Gratis, manuell sjekk",
       "heading": "Send nettsiden. Vi sier hvor vi ville startet - og hvorfor.",

@@ -12,6 +12,7 @@
   "intro": "Måling skal hjelpe bedriften å vurdere om arbeidet gir relevante henvendelser eller nyttige kjøp. Da må det være tydelig hva som telles, hva det betyr, og hva dataene ikke kan fortelle.",
   "sections": [
     {
+      "_block": "content",
       "id": "tre-nivaaer",
       "heading": "Skill mellom synlighet, handling og forretningsverdi.",
       "body": [
@@ -33,6 +34,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "b2b",
       "heading": "For tjenester: følg henvendelsen videre.",
       "body": [
@@ -56,6 +58,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "ecommerce",
       "heading": "For nettbutikk: se på kjøp og hva som blir igjen.",
       "body": [
@@ -71,6 +74,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "definisjoner",
       "heading": "En prosent trenger en tydelig teller og nevner.",
       "body": [
@@ -80,6 +84,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "sammenlign",
       "heading": "Sammenlign perioder med forutsetningene synlige.",
       "body": [
@@ -102,6 +107,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "kilder",
       "heading": "En kilde hjelper oss å forstå en inngang, ikke hele beslutningen.",
       "body": [
@@ -116,6 +122,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "start",
       "heading": "Start med en prioritering dere kan undersøke videre.",
       "body": [

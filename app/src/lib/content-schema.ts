@@ -1,4 +1,5 @@
 import { z } from 'astro/zod';
+import { surfaceSchema, sectionModel } from './surface.ts';
 
 const link = z.object({ label: z.string(), href: z.string().startsWith('/') });
 export const proofSlotSchema = z.object({ publicationApproved: z.boolean(), caseIds: z.array(z.string()).default([]), eyebrow: z.string(), heading: z.string(), beforeLabel: z.string(), afterLabel: z.string(), changeLabel: z.string() });
@@ -56,8 +57,9 @@ export const pageSchema = z.object({
     seo: z.object({ title: z.string(), description: z.string() }),
     eyebrow: z.string(), title: z.string(), intro: z.string(),
     sections: z.array(z.object({
+      _block: z.enum(['content', 'protected']).optional(), surface: surfaceSchema,
       id: z.string(), eyebrow: z.string().optional(), heading: z.string(), body: z.array(z.string()).default([]),
-      items: z.array(z.object({ title: z.string(), text: z.string(), href: z.string().startsWith('/').optional(), label: z.string().optional() })).optional(),
+      items: z.array(z.object({ title: z.string(), text: z.string(), href: z.string().startsWith('/').optional(), label: z.string().optional(), surface: surfaceSchema })).optional(),
       links: z.array(link).optional(),
     })),
     faq: z.array(z.object({ question: z.string(), answer: z.string() })).default([]),
@@ -73,6 +75,12 @@ export const pageSchema = z.object({
     translationKey: z.string().trim().min(1).optional(),
     homepage: homepage.optional(),
   }).superRefine((page, context) => {
+    page.sections.forEach((section, index) => {
+      const model = sectionModel(page.slug, section.id);
+      if (section._block && section._block !== model) context.addIssue({ code: 'custom', path: ['sections', index, '_block'], message: 'Section editor model must match its protected identity' });
+      if (model === 'protected' && (section.surface !== 'default' || section.items?.some(item => item.surface !== 'default'))) context.addIssue({ code: 'custom', path: ['sections', index, 'surface'], message: 'Protected CTA/form surfaces are design-system controlled' });
+    });
+    if (['synlighet', 'konvertering'].includes(page.slug) && page.sections.filter(section => section.id === 'sjekk').length !== 1) context.addIssue({ code: 'custom', path: ['sections'], message: 'Protected service CTA identity must remain present' });
     if (page.kind === 'home' && !page.homepage) context.addIssue({ code: 'custom', path: ['homepage'], message: 'Homepage content model is required' });
     if (page.kind === 'home') for (const id of ['mekanisme', 'passer', 'sjekk']) {
       if (page.sections.filter(section => section.id === id).length !== 1) context.addIssue({ code: 'custom', path: ['sections'], message: `Homepage requires exactly one ${id} section` });

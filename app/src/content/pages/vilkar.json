@@ -12,6 +12,7 @@
   "intro": "Dette er en oversikt over hva som må avklares. Det er ikke et ferdig sett med salgs- eller kontraktsvilkår. Medon AS er leverandør av Optimalisering Oslo.",
   "sections": [
     {
+      "_block": "content",
       "id": "gratis",
       "heading": "Den gratis sjekken er avgrenset.",
       "body": [
@@ -20,6 +21,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "omfang",
       "heading": "Tjeneste, ansvar og leveransegrenser må avtales.",
       "body": [
@@ -35,6 +37,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "pris",
       "heading": "Pris, fakturering og oppsigelse er ikke fastsatt her.",
       "body": [
@@ -44,6 +47,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "resultat",
       "heading": "Arbeid og forventet nytte skal ikke forveksles med garantier.",
       "body": [

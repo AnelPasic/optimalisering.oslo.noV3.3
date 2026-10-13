@@ -12,6 +12,7 @@
   "intro": "Optimalisering Oslo er tjenestenavnet. Medon AS er eier og leverandør. Vi skal gjøre det enkelt å forstå hvem du snakker med, og hvem som har ansvar for avtalt arbeid.",
   "sections": [
     {
+      "_block": "content",
       "id": "oppgave",
       "heading": "Finn begrensningen. Prioriter arbeidet derfra.",
       "body": [
@@ -30,6 +31,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "ansvar",
       "heading": "Du skal forstå hva vi gjør og hva som er avtalt.",
       "body": [
@@ -48,6 +50,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "marked",
       "heading": "Norske bedrifter først. Behovet avgjør om tjenesten passer.",
       "body": [
@@ -62,6 +65,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "start",
       "heading": "Start med nettsiden dere allerede har.",
       "body": [

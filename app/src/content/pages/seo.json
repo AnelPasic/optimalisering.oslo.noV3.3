@@ -12,6 +12,7 @@
   "intro": "Du trenger ikke flere søkeord for enhver pris. Du trenger tydelige sider for de søkene som passer bedriften. Vi ser på sammenhengen mellom kundens spørsmål, nettsidens svar og en relevant vei videre.",
   "sections": [
     {
+      "_block": "content",
       "id": "sok-side",
       "heading": "Ett søk trenger et svar. Ett svar trenger riktig side.",
       "body": [
@@ -34,6 +35,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "teknisk",
       "heading": "Godt innhold må også kunne bli funnet.",
       "body": [
@@ -42,6 +44,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "prioritering",
       "eyebrow": "Prioritering før volum",
       "heading": "Start med søk du faktisk kan hjelpe kunden med.",
@@ -62,6 +65,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "effekt",
       "heading": "Synlige sider er et mellomsteg. Relevante kunder er målet.",
       "body": [
@@ -76,6 +80,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "ai",
       "heading": "AI-synlighet er et eget spørsmål, selv når innholdet overlapper.",
       "body": [
@@ -90,6 +95,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "sjekk",
       "heading": "Send nettsiden. Vi vurderer et fornuftig sted å begynne.",
       "body": [

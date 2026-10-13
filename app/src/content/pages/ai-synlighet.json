@@ -12,6 +12,7 @@
   "intro": "Når kunder undersøker med AI, blir det viktig å være konkret om bedriften, tilbudet og hvem det passer for. Vi vurderer informasjonen og mulige uklarheter. Ingen kan love at en AI-tjeneste vil anbefale deg.",
   "sections": [
     {
+      "_block": "content",
       "id": "informasjon",
       "heading": "Et tydelig tilbud gir noe konkret å forstå.",
       "body": [
@@ -20,6 +21,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "observasjoner",
       "eyebrow": "Fire ulike observasjoner",
       "heading": "En omtale er ikke det samme som en kunde.",
@@ -47,6 +49,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "arbeid",
       "heading": "Vi undersøker uklarheter før vi foreslår mer innhold.",
       "body": [
@@ -66,6 +69,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "begreper",
       "heading": "AEO, AIO og GEO er ikke tre separate behov i bedriften.",
       "body": [
@@ -80,6 +84,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "grenser",
       "heading": "Vi kan forbedre informasjonen. Vi kan ikke styre svaret.",
       "body": [
@@ -94,6 +99,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "sjekk",
       "heading": "Start med informasjonen kunden møter i dag.",
       "body": [

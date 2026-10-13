@@ -12,6 +12,7 @@
   "intro": "Når relevante besøk ikke blir til henvendelser eller kjøp, ser vi etter friksjonen som stopper kunden. Så prioriterer vi det som er mest verdt å forbedre først.",
   "sections": [
     {
+      "_block": "content",
       "id": "friksjon",
       "eyebrow": "Fra interesse til handling",
       "heading": "Det skal være enklere å kjøpe enn å gi opp.",
@@ -35,6 +36,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "kvalitet",
       "eyebrow": "Riktig handling teller mer enn antallet",
       "heading": "Flere skjema er lite verdt hvis henvendelsene ikke passer.",
@@ -58,6 +60,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "prioritering",
       "eyebrow": "Kommersiell prioritering",
       "heading": "Vi starter med hindringen som står mest i veien.",
@@ -68,6 +71,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "sammenheng",
       "eyebrow": "Konvertering x synlighet",
       "heading": "Hvis de rette besøkene ikke kommer, er ikke konvertering hele svaret.",
@@ -87,6 +91,7 @@
       ]
     },
     {
+      "_block": "protected",
       "id": "sjekk",
       "eyebrow": "Gratis, manuell sjekk",
       "heading": "Send siden der du vil at kunden skal handle.",

@@ -12,6 +12,7 @@
   "intro": "Dette er et utkast for en lokal forhåndsvisning. Det beskriver den planlagte løsningen og åpne spørsmål. Det er ikke en ferdig personvernerklæring for en lansert tjeneste.",
   "sections": [
     {
+      "_block": "content",
       "id": "leverandor",
       "heading": "Medon AS står bak tjenesten.",
       "body": [
@@ -20,6 +21,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "opplysninger",
       "heading": "Skjemaet skal be om det som trengs for å forstå henvendelsen.",
       "body": [
@@ -28,6 +30,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "plan",
       "heading": "E-postvarsel og lagring på server er valgt som startpunkt.",
       "body": [
@@ -37,6 +40,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "avklaringer",
       "heading": "Før lansering må lagring og rettigheter være konkret beskrevet.",
       "body": [

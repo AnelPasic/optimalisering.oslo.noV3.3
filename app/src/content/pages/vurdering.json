@@ -12,6 +12,7 @@
   "intro": "Du trenger ikke vite om problemet er synlighet eller konvertering. Medon ser manuelt på nettsiden og gir kort veiledning om hva vi ville startet med, og hvorfor.",
   "sections": [
     {
+      "_block": "content",
       "id": "sjekk",
       "heading": "En startretning, ikke en perm med feil.",
       "body": [
@@ -34,6 +35,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "sjekken",
       "heading": "Du sender oss en lenke. Ikke en avhandling.",
       "body": [
@@ -48,6 +50,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "etterpa",
       "heading": "Videre arbeid må ha eget omfang og pris.",
       "body": [

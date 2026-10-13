@@ -12,6 +12,7 @@
   "intro": "Målet er ikke flest mulig besøk. Du skal bli funnet når relevante kunder leter etter det du tilbyr - før de allerede kjenner navnet ditt.",
   "sections": [
     {
+      "_block": "content",
       "id": "behov",
       "eyebrow": "Bli funnet før kunden har valgt leverandør",
       "heading": "Hvis bare de som kjenner navnet ditt finner deg, kommer du sent inn i valget.",
@@ -37,6 +38,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "kanaler",
       "eyebrow": "Tre deler av synligheten",
       "heading": "SEO, lokal SEO og AI-synlighet løser ulike deler av samme jobb.",
@@ -63,6 +65,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "prioritering",
       "eyebrow": "Kommersiell prioritering",
       "heading": "Vi starter med det som kan gjøre det lettere for en relevant kunde å finne deg.",
@@ -73,6 +76,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "sammenheng",
       "eyebrow": "Synlighet x konvertering",
       "heading": "Mer trafikk er lite verdt hvis de rette besøkende ikke går videre.",
@@ -92,6 +96,7 @@
       ]
     },
     {
+      "_block": "protected",
       "id": "sjekk",
       "eyebrow": "Gratis, manuell sjekk",
       "heading": "Send nettsiden. Vi sier hvor vi ville startet - og hvorfor.",

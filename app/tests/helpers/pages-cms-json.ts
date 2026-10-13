@@ -28,6 +28,7 @@ export function validateCmsForm(value: any, fields: any[], components: any, path
     if (field.required && (input == null || input === '' || (Array.isArray(input) && input.length === 0))) throw new Error(fieldPath + ': required');
     if (input == null || (!field.required && field.type === 'object' && empty(input))) continue;
     if (field.pattern && typeof input === 'string' && !new RegExp(field.pattern).test(input)) throw new Error(fieldPath + ': pattern');
+    if (field.type === 'select' && input !== '' && !field.options.values.some((choice: any) => (typeof choice === 'string' ? choice : choice.name) === input)) throw new Error(fieldPath + ': select choice');
     if (field.list) {
       if (!Array.isArray(input)) throw new Error(fieldPath + ': expected list');
       const min = field.list.min ?? 0, max = field.list.max ?? Infinity;
@@ -35,15 +36,25 @@ export function validateCmsForm(value: any, fields: any[], components: any, path
       input.forEach((item: any, index: number) => {
         if (field.required && empty(item)) throw new Error(fieldPath + '.' + index + ': required');
         if (field.type === 'object' && !empty(item)) validateCmsForm(item, field.fields, components, fieldPath + '.' + index);
+        if (field.type === 'block' && !empty(item)) validateCmsForm(item, blockFields(item, field, components), components, fieldPath + '.' + index);
       });
     } else if (field.type === 'object') validateCmsForm(input, field.fields, components, fieldPath);
+    else if (field.type === 'block') validateCmsForm(input, blockFields(input, field, components), components, fieldPath);
   }
+}
+
+function blockFields(value: any, field: any, components: any): any[] {
+  const key = field.blockKey ?? '_block';
+  const block = field.blocks.find((block: any) => block.name === value[key]);
+  if (!block) throw new Error(field.name + ': unknown block type');
+  return resolveField(block, components).fields;
 }
 
 function project(value: any, fields: any[], components: any): any {
   return Object.fromEntries(fields.filter(field => value[field.name] !== undefined).map(definition => {
     const field = resolveField(definition, components), input = value[field.name];
-    const item = (value: any) => field.type === 'object' && value ? project(value, field.fields, components)
+    const item = (value: any) => field.type === 'block' && value ? { [field.blockKey ?? '_block']: value[field.blockKey ?? '_block'], ...project(value, blockFields(value, field, components), components) }
+      : field.type === 'object' && value ? project(value, field.fields, components)
       : field.type === 'reference' && field.options?.multiple ? (Array.isArray(value) ? value : [value]) : value;
     return [field.name, field.list ? input.map(item) : item(input)];
   }));

@@ -12,6 +12,7 @@
   "intro": "Start med hvor veien til kunde ser ut til å stoppe. Det er ofte mer nyttig enn å begynne med en bestemt kanal, et verktøy eller en liste med tiltak.",
   "sections": [
     {
+      "_block": "content",
       "id": "definer",
       "heading": "Bestem hvilken handling som er nyttig for bedriften.",
       "body": [
@@ -20,6 +21,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "kart",
       "heading": "Still tre spørsmål i denne rekkefølgen.",
       "body": [
@@ -41,6 +43,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "situasjoner",
       "eyebrow": "Hypotetiske situasjoner - ingen kundedata",
       "heading": "Tre utgangspunkt gir tre ulike første spørsmål.",
@@ -63,6 +66,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "matte",
       "heading": "En brøk forklarer mekanikken. Den velger ikke tiltaket.",
       "body": [
@@ -72,6 +76,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "betalt",
       "heading": "Betalt synlighet kan gi fart når resten av regnestykket henger sammen.",
       "body": [
@@ -80,6 +85,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "usikkerhet",
       "heading": "Mangler du data, begynn med en begrunnet hypotese.",
       "body": [
@@ -94,6 +100,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "start",
       "heading": "Du kan be om en kort vurdering av hvor Medon ville startet.",
       "body": [

@@ -12,6 +12,7 @@
   "intro": "Vi prioriterer det som begrenser resultatet mest. Velg ett prioritert område, to områder som jobber sammen eller større kapasitet på tvers.",
   "sections": [
     {
+      "_block": "content",
       "id": "arbeidsomrader",
       "eyebrow": "Hva vi kan jobbe med",
       "heading": "Fire områder. Prioritert etter behov.",
@@ -39,6 +40,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "kostnader",
       "eyebrow": "Greit å vite",
       "heading": "Tjenestepris og annonsebudsjett er to forskjellige ting.",
@@ -49,6 +51,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "gratis",
       "eyebrow": "Usikker på hvor du bør starte?",
       "heading": "Få våre 3 viktigste funn innen 2 virkedager.",

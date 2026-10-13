@@ -12,6 +12,7 @@
   "intro": "Du kan også ta kontakt om et mulig samarbeid eller et behov som ikke passer helt i tjenestebeskrivelsene. Medon AS er leverandøren bak Optimalisering Oslo.",
   "sections": [
     {
+      "_block": "content",
       "id": "sporsmal",
       "heading": "Fortell kort hva det gjelder.",
       "body": [
@@ -26,6 +27,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "retning",
       "heading": "Usikker på hvor du bør starte? Be om en gratis sjekk.",
       "body": [

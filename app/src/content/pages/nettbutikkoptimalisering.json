@@ -12,6 +12,7 @@
   "intro": "Besøk og fulle handlekurver er ikke nok. Kunden må finne riktige produkter, kunne velge og fullføre kjøpet. Bedriften må kunne vurdere verdien av bestillingene.",
   "sections": [
     {
+      "_block": "content",
       "id": "kjeden",
       "heading": "Se hele veien fra produktbehov til bestilling.",
       "body": [
@@ -38,6 +39,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "beslutning",
       "heading": "\"Lagt i handlekurv\" er et mellomsteg.",
       "body": [
@@ -47,6 +49,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "okonomi",
       "heading": "Flere ordre må vurderes sammen med økonomien i dem.",
       "body": [
@@ -62,6 +65,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "tjenester",
       "heading": "De samme tjenestene. Tilpasset veien til kjøp.",
       "body": [
@@ -91,6 +95,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "sjekk",
       "heading": "Send nettbutikken og fortell hvor du er usikker.",
       "body": [

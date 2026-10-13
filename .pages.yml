@@ -53,6 +53,129 @@ components:
         type: string
         pattern: ^/
         required: false
+  surfaceChoice:
+    type: select
+    options:
+      placeholder: Standard
+      values:
+        - name: default
+          label: Standard
+        - name: base
+          label: Hvit
+        - name: soft
+          label: Lys
+        - name: mint
+          label: Mint
+        - name: lavender
+          label: Lavendel
+        - name: dark
+          label: Plomme
+  sectionContent:
+    type: object
+    fields:
+      - name: id
+        label: Seksjonens lenkeanker
+        type: string
+        readonly: true
+        required: true
+      - name: eyebrow
+        label: Overtekst
+        type: string
+      - name: heading
+        label: Overskrift
+        type: string
+        required: true
+      - name: surface
+        label: Seksjonsfarge
+        component: surfaceChoice
+      - name: body
+        label: Avsnitt
+        type: text
+        list: {}
+        description: Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Forsidens innhold → Felles pakker.
+      - name: items
+        label: Alternativer eller steg
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: title
+            label: Tittel
+            type: string
+            required: true
+          - name: text
+            label: Beskrivelse
+            type: text
+            required: true
+          - name: href
+            label: Intern lenke
+            type: string
+            pattern: ^(/.*)?$
+          - name: label
+            label: Lenketekst
+            type: string
+          - name: surface
+            label: Boksfarge
+            component: surfaceChoice
+      - name: links
+        label: Relaterte lenker
+        component: link
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{label}"
+  sectionProtected:
+    type: object
+    fields:
+      - name: id
+        label: Seksjonens lenkeanker
+        type: string
+        readonly: true
+        required: true
+      - name: eyebrow
+        label: Overtekst
+        type: string
+      - name: heading
+        label: Overskrift
+        type: string
+        required: true
+      - name: body
+        label: Avsnitt
+        type: text
+        list: {}
+        description: Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Forsidens innhold → Felles pakker.
+      - name: items
+        label: Alternativer eller steg
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: title
+            label: Tittel
+            type: string
+            required: true
+          - name: text
+            label: Beskrivelse
+            type: text
+            required: true
+          - name: href
+            label: Intern lenke
+            type: string
+            pattern: ^(/.*)?$
+          - name: label
+            label: Lenketekst
+            type: string
+      - name: links
+        label: Relaterte lenker
+        component: link
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{label}"
 content:
   - name: terminology
     label: Begreper og forklaringer
@@ -377,10 +500,7 @@ content:
             required: true
           - name: packages
             label: Felles pakker for forsiden, /priser/, /synlighet/ og /konvertering/
-            description: Rediger pakketekst, etiketter, ikoner og illustrasjoner her.
-              Forsiden har sammenfoldede detaljer; prissiden har åpne detaljer.
-              Begge og serviceprisene arver denne kilden. Pakkenøkler og
-              lenkemål er beskyttet.
+            description: Rediger pakketekst, etiketter, ikoner og illustrasjoner her. Forsiden har sammenfoldede detaljer; prissiden har åpne detaljer. Begge og serviceprisene arver denne kilden. Pakkenøkler og lenkemål er beskyttet.
             type: object
             fields:
               - name: eyebrow
@@ -645,8 +765,7 @@ content:
                           max: 100
                   - name: visualCaption
                     label: Bildetekst ved SVG-motivet
-                    description: Vises ved SVG-motivet når eget bilde ikke er valgt. Eget bilde
-                      bruker sin alternative tekst og sitt utsnitt.
+                    description: Vises ved SVG-motivet når eget bilde ikke er valgt. Eget bilde bruker sin alternative tekst og sitt utsnitt.
                     type: object
                     fields:
                       - name: label
@@ -662,8 +781,7 @@ content:
                     required: true
                   - name: pricePrefix
                     label: Fra-pris – bare Partner
-                    description: Valgfritt. Kun tredje pakke kan ha fra; de to andre har fast pris.
-                      Fjern feltet for pakker uten prefiks.
+                    description: Valgfritt. Kun tredje pakke kan ha fra; de to andre har fast pris. Fjern feltet for pakker uten prefiks.
                     type: select
                     options:
                       values:
@@ -689,8 +807,7 @@ content:
                     required: true
                   - name: vatSuffix
                     label: MVA-tekst
-                    description: Bruk samme MVA-tekst for alle tre pakker; felles prisforklaring og
-                      gjentatte prisopplysninger arver den.
+                    description: Bruk samme MVA-tekst for alle tre pakker; felles prisforklaring og gjentatte prisopplysninger arver den.
                     type: string
                     required: true
                   - name: recommended
@@ -724,8 +841,7 @@ content:
             fields:
               - name: publicationApproved
                 label: Godkjenn visning av allerede publiserbare case
-                description: Slå bare på etter dokumentert godkjenning. Dette overstyrer aldri
-                  case-status, tillatelse eller manglende evidens.
+                description: Slå bare på etter dokumentert godkjenning. Dette overstyrer aldri case-status, tillatelse eller manglende evidens.
                 type: boolean
                 default: false
                 required: true
@@ -740,8 +856,7 @@ content:
                   label: "{fields.clientName} ({fields.publicationStatus})"
                   search: id,clientName,anonymizedLabel
                 required: false
-                description: Første publiserbare case vises størst på forsiden. Bare
-                  godkjente case med komplett evidens vises.
+                description: Første publiserbare case vises størst på forsiden. Bare godkjente case med komplett evidens vises.
               - name: eyebrow
                 label: Overtekst
                 type: string
@@ -975,54 +1090,22 @@ content:
         required: true
       - name: sections
         label: Innholdsseksjoner
-        type: object
+        type: block
         list:
           collapsible:
             collapsed: true
             summary: "{heading}"
           min: 3
           max: 3
-        fields:
-          - name: id
-            label: Seksjonens lenkeanker
-            type: string
-            readonly: true
-            required: true
-          - name: eyebrow
-            label: Overtekst
-            type: string
-          - name: heading
-            label: Overskrift
-            type: string
-            required: true
-          - name: body
-            label: Avsnitt
-            type: text
-            list: {}
-          - name: items
-            label: Alternativer
-            type: object
-            list:
-              collapsible:
-                collapsed: true
-                summary: "{title}"
-            fields:
-              - name: title
-                label: Tittel
-                type: string
-                required: true
-              - name: text
-                label: Beskrivelse
-                type: string
-                required: true
-          - name: links
-            label: Relaterte lenker
-            component: link
-            list:
-              collapsible:
-                collapsed: true
-                summary: "{label}"
         required: true
+        blockKey: _block
+        blocks:
+          - name: content
+            label: Innholdsseksjon
+            component: sectionContent
+          - name: protected
+            label: Beskyttet sjekk / handling
+            component: sectionProtected
       - name: faq
         label: Ofte stilte spørsmål
         type: object
@@ -1122,8 +1205,7 @@ content:
             options:
               min: 0
               max: 100
-        description: Valgfritt bilde for Synlighet og Konvertering. Uten et levert bilde
-          vises toppseksjonen med tekst.
+        description: Valgfritt bilde for Synlighet og Konvertering. Uten et levert bilde vises toppseksjonen med tekst.
       - &a3
         name: eyebrow
         label: Toppseksjon (Hero) – Overtekst
@@ -1142,61 +1224,20 @@ content:
       - &a6
         name: sections
         label: Innholdsseksjoner
-        type: object
+        type: block
         list:
           collapsible:
             collapsed: true
             summary: "{heading}"
-        fields:
-          - name: id
-            label: Seksjonens lenkeanker
-            type: string
-            readonly: true
-            required: true
-          - name: eyebrow
-            label: Overtekst
-            type: string
-          - name: heading
-            label: Overskrift
-            type: string
-            required: true
-          - name: body
-            label: Avsnitt
-            type: text
-            list: {}
-            description: Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres
-              under Forside → Forsidens innhold → Felles pakker.
-          - name: items
-            label: Alternativer eller steg
-            type: object
-            list:
-              collapsible:
-                collapsed: true
-                summary: "{title}"
-            fields:
-              - name: title
-                label: Tittel
-                type: string
-                required: true
-              - name: text
-                label: Beskrivelse
-                type: text
-                required: true
-              - name: href
-                label: Intern lenke
-                type: string
-                pattern: ^(/.*)?$
-              - name: label
-                label: Lenketekst
-                type: string
-          - name: links
-            label: Relaterte lenker
-            component: link
-            list:
-              collapsible:
-                collapsed: true
-                summary: "{label}"
         required: true
+        blockKey: _block
+        blocks:
+          - name: content
+            label: Innholdsseksjon
+            component: sectionContent
+          - name: protected
+            label: Beskyttet sjekk / handling
+            component: sectionProtected
       - &a7
         name: faq
         label: Ofte stilte spørsmål
@@ -1225,8 +1266,7 @@ content:
         fields:
           - name: publicationApproved
             label: Godkjenn visning av allerede publiserbare case
-            description: Slå bare på etter dokumentert godkjenning. Dette overstyrer aldri
-              case-status, tillatelse eller manglende evidens.
+            description: Slå bare på etter dokumentert godkjenning. Dette overstyrer aldri case-status, tillatelse eller manglende evidens.
             type: boolean
             default: false
             required: true
@@ -1241,8 +1281,7 @@ content:
               label: "{fields.clientName} ({fields.publicationStatus})"
               search: id,clientName,anonymizedLabel
             required: false
-            description: Velg primært case. Visning støttes på Synlighet og
-              Konvertering før prisbroen.
+            description: Velg primært case. Visning støttes på Synlighet og Konvertering før prisbroen.
           - name: eyebrow
             label: Overtekst
             type: string
@@ -1360,8 +1399,7 @@ content:
     fields:
       - name: id
         label: Stabil case-ID
-        description: Referanser fra forsiden bruker denne ID-en. Endring krever at
-          referansene oppdateres.
+        description: Referanser fra forsiden bruker denne ID-en. Endring krever at referansene oppdateres.
         type: string
         pattern: ^[a-z0-9][a-z0-9-]*$
         required: true
@@ -1447,8 +1485,7 @@ content:
         readonly: true
       - name: strategyReviewStatus
         label: STRATEGY_CONTENT-review
-        description: GRANTED tillatelse erstatter ikke review av den konkrete offentlige
-          presentasjonen.
+        description: GRANTED tillatelse erstatter ikke review av den konkrete offentlige presentasjonen.
         type: select
         default: READY_FOR_STRATEGY_REVIEW
         options:
@@ -1515,9 +1552,7 @@ content:
         readonly: true
       - name: publicationStatus
         label: Publiseringsstatus
-        description: EVIDENCE_ONLY er intern forberedelse. PUBLISHABLE krever
-          dokumenterte målinger, sammenlignbare perioder, tiltak, kilde,
-          forbehold og tillatelse.
+        description: EVIDENCE_ONLY er intern forberedelse. PUBLISHABLE krever dokumenterte målinger, sammenlignbare perioder, tiltak, kilde, forbehold og tillatelse.
         type: select
         default: EVIDENCE_ONLY
         options:

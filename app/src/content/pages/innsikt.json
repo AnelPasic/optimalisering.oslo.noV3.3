@@ -12,6 +12,7 @@
   "intro": "Du trenger ikke lære alle kanalene for å ta stilling til nettsiden. Begynn med to spørsmål: hvor bør vi undersøke først, og hvordan skal vi vurdere om arbeidet er nyttig?",
   "sections": [
     {
+      "_block": "content",
       "id": "guider",
       "heading": "Velg spørsmålet du trenger svar på.",
       "body": [
@@ -33,6 +34,7 @@
       ]
     },
     {
+      "_block": "content",
       "id": "egen-side",
       "heading": "Vil du vurdere din egen nettside?",
       "body": [
