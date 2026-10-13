@@ -88,6 +88,7 @@ components:
       - name: surface
         label: Seksjonsfarge
         component: surfaceChoice
+        description: Bakgrunn for hele seksjonen. Standard beholder designets opprinnelige farge.
       - name: body
         label: Avsnitt
         type: text
@@ -119,6 +120,7 @@ components:
           - name: surface
             label: Boksfarge
             component: surfaceChoice
+            description: Bakgrunn for denne boksen. Standard beholder designets opprinnelige farge.
       - name: links
         label: Relaterte lenker
         component: link
@@ -1144,17 +1146,26 @@ content:
     format: json
     subfolders: false
     operations: *a1
-    filename: "{primary}.json"
+    filename: "{slug}.json"
     view:
-      primary: title
+      primary: seo.title
       fields:
-        - title
-      search:
-        - title
         - seo.title
-      sort:
+        - slug
+      search:
+        - seo.title
+        - slug
         - title
+      sort:
+        - seo.title
+        - slug
     fields:
+      - name: slug
+        label: URL-slug
+        type: string
+        readonly: true
+        required: true
+        description: Sidens URL-del. Eksempel: seo vises som /seo/.
       - &a2
         name: seo
         label: SEO
@@ -1223,7 +1234,8 @@ content:
         required: true
       - &a6
         name: sections
-        label: Innholdsseksjoner
+        label: Innholdsseksjoner og farger
+        description: Åpne en vanlig Innholdsseksjon for Seksjonsfarge. Åpne en boks under Alternativer eller steg for Boksfarge. Beskyttede sjekk-/handlingsseksjoner har ikke fargevalg.
         type: block
         list:
           collapsible:
