@@ -1,5 +1,15 @@
 # Codex to ChatGPT
 
+## Direct OWNER four-token correction — delivered at 32ab54d / STOP FOR OWNER REVIEW
+
+2026-10-13, IMPLEMENTATION. Latest main `8a8292c` was pulled first. Actual direct OWNER correction applies exactly `--type-display: clamp(1.75rem, 4.5vw, 3.25rem)`, `--type-lead: clamp(1.25rem, 1.8vw, 1.375rem)`, `--type-body: clamp(1rem, 1.35vw, 1.125rem)`, `--type-meta: 0.9375rem`. Implementation **32ab54d82c101b50b2ba125b333417f18c3f5d01** is pushed to main. The supplied roles now resolve to display 28–52px, lead 20–22px, body 16–18px and metadata/captions 15px at the default root. Other tokens/fonts stay exact.
+
+Initial full verify caught the longest maximum-valid calculator endpoint label outside the 320px page/light surface at the new 15px size. One typography-only numeric tracking rule (`-.075em`) retains 15px and places the measured right edge at 303.255 inside the existing surface edge 304. No font shrinking, formatted value/math/chart operation or geometry change. The guard now also fails an endpoint outside its contrasting surface. Only these two runtime style files and the regression guard change; all content/CMS/prices/proof/math/chart helpers/art/box/layout/noindex/intake remain untouched, including untracked OWNER images.
+
+Final full verify: **89/89**, zero Astro errors/warnings, one preexisting hint, all static/COPY-STYLE/proof/commercial/CMS gates and 20 unchanged CMS JSON hashes. **196 local and 196 live groups** at 1440/900/390/320 pass with zero sub-14px/contrast/clipping/button/overflow failures, browser errors or POST; no allowlist. Exact values, failure/fix measurements and screenshots/logs: `coordination/evidence/typography/TOKEN-CORRECTION.md`, `tokens-local/`, `tokens-live/`, `tokens-verify.log`, `tokens-live.log`.
+
+Connected Build **f2c3d287-e146-4d32-8c15-12bcf64f2f14 SUCCESS** for exact implementation **32ab54d82c101b50b2ba125b333417f18c3f5d01**, Worker **19c3ac14-8f5c-46fd-b615-c3f2f9d64376**. All **53 deployed assets** match the tested build; noindex/nofollow, robots disallow, empty sitemap, both intake GET404 and custom404 remain. Native/asset receipts: `tokens-native-build.json`, `tokens-live-assets.json`. The following coordination/evidence receipt changes no website asset; identify its revision through Git history. **STOP for OWNER visual review; no box/card, copy, content lock or launch scope is added.**
+
 ## Direct OWNER typography system pass — delivered at 6dc545a / STOP FOR OWNER VISUAL REVIEW
 
 2026-10-13, IMPLEMENTATION. Pulled latest main **e0adeec4379776bcbe764204da236c1f403bf0da** first. Consumed the actual direct OWNER request for a whole-site **TYPOGRAPHY SYSTEM PASS ONLY**. Implementation **6dc545a1323fe1f885d2350773ba8e0642012582** is pushed to main. The existing approved direction, Instrument Sans + Figtree, copy, proof, calculator/chart logic, pricing, CTA wording, hero imagery/crop, CMS, intake and noindex are preserved. No card/box/layout/surface standardization is performed.

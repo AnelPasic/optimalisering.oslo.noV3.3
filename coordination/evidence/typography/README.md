@@ -1,5 +1,7 @@
 # Typography system pass — OWNER review packet
 
+**Latest direct OWNER token correction:** implementation `32ab54d` applies the four subsequently supplied display/lead/body/meta values exactly. The role table below is the historical first-pass scale. Current values, narrow-label correction and local/native/live verification: [TOKEN-CORRECTION.md](TOKEN-CORRECTION.md). Other typography roles and the protected site scopes remain unchanged.
+
 Incoming main: `e0adeec4379776bcbe764204da236c1f403bf0da` (ff-only pull, 2026-10-13). Scope: actual direct OWNER typography-only request; delivery is technical evidence, not visual/content/launch acceptance.
 
 ## Before / after inventory
