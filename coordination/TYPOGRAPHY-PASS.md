@@ -14,7 +14,7 @@
 - [x] Add semantic roles and migrate shared/public/component typography, including mobile overrides and calculator presentation-only resizing. Preserve all content, CMS, math/chart logic, art, box/layout declarations and safeguards.
 - [x] Add an automated browser regression guard for visible text size, contrast, clipping, overflow and button containment. Inspect headings, glossary open state, menus, tooltips, calculator invalid/extreme state and forms; no sub-14px allowlist.
 - [x] Run full verify, existing whole-site browser checks, focused behavior checks and four-width typography QA. Inspect screenshots and source diff; account for all remaining raw declarations and preservation hashes.
-- [ ] Push main, verify native connected build and exact live assets, repeat typography checks live. Update CODEX-TO-CHATGPT, PROJECT-STATE and REVIEW-QUEUE; stop for OWNER review.
+- [x] Push main, verify native connected build and exact live assets, repeat typography checks live. Update CODEX-TO-CHATGPT, PROJECT-STATE and REVIEW-QUEUE; stop for OWNER review.
 
 ## Review focus
 
@@ -27,3 +27,5 @@
 Ruling: execute the fully specified OWNER request without an additional design approval gate. The requested visual review follows the concrete delivered result. No box pass is authorized.
 
 Verification ledger: final full verify passes 89 tests, zero Astro errors/warnings, one preexisting hint; source guard 175 role consumers/zero raw sizes; rendered guard 196 groups/zero size-contrast-clipping-button-overflow failures. Existing browser 40/40 and terminology 28 groups plus all anchors/no-JS pass. Preservation: 1,206 existing blobs and all non-typographic declarations exact. Fresh read-only technical review found no issues; reviewer browser execution was sandbox-blocked, so its browser assessment used source/captures/logs. Root full browser execution passed. Formal acceptance/launch remain pending; live receipt is checked separately.
+
+Delivery ledger: implementation 6dc545a pushed to main; exact connected Build da7c94fe SUCCESS, Worker b743e56b; all 53 assets match verified output and preview safeguards. Live typography 196/196 groups and terminology 28 groups/all25anchors/no-JS pass, zero failures/errors/POST. CODEX-TO-CHATGPT, PROJECT-STATE and REVIEW-QUEUE now request OWNER visual review. STOP; no box/card pass or next implementation.
