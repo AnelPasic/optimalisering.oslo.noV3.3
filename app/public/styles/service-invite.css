@@ -10,8 +10,6 @@
 .invite-service .home-section-behov .info-item { padding: var(--panel-pad-lg); border-top: 0; border-radius: var(--radius-card); background: var(--surface-mint); }
 .invite-service .home-section-behov .home-item-1 { background: var(--surface-lavender); }
 .invite-service .home-section-behov .home-item-2 { background: var(--surface-soft); }
-.invite-service .home-section-kanaler .section-heading-split { grid-template-columns: 1fr; gap: 24px; }
-.invite-service .home-section-kanaler .section-heading h2 { max-width: 960px; }
 .invite-service .home-section-kanaler .section-items { gap: 56px; }
 .invite-service .info-item { display: flex; flex-direction: column; align-items: start; }
 .invite-service .info-item .text-link { margin-top: auto; padding-top: 24px; }

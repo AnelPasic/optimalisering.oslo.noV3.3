@@ -23,8 +23,6 @@
 .invite-home .hero-actions { margin-top: 24px; gap: 24px; }
 .invite-home .hero-photo { width: 100%; max-width: 600px; aspect-ratio: 8 / 5; border-radius: var(--radius-card-lg); overflow: hidden; justify-self: end; background: #f0ecf5; }
 .invite-home .hero-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
-.invite-home .body-copy { max-width: 720px; }
-.invite-home .section-heading h2 { max-width: 760px; }
 .invite-home .hero-copy .small-dot { display: none; }
 .invite-home .need-section { background: var(--surface-base); padding-block: 64px 88px; }
 .invite-home .need-grid, .invite-home .package-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap-lg); margin-top: 44px; }
@@ -42,7 +40,7 @@
 .invite-home .leverage-section { background: var(--surface-dark); color: white; }
 .invite-home .leverage-grid { grid-template-columns: .9fr 1.1fr; gap: 96px; align-items: center; }
 .invite-home .leverage-copy .eyebrow { color: #b9e8d4; }
-.invite-home .leverage-copy .body-copy { color: #e0d9e7; margin-top: 28px; max-width: 560px; }
+.invite-home .leverage-copy .body-copy { color: #e0d9e7; margin-top: 28px; }
 .invite-home .calculator-formula { border-left: 2px solid var(--surface-mint-strong); padding-left: 18px; font-size: var(--type-meta); margin-top: 24px; line-height: var(--leading-small); }
 .invite-home .leverage-tool { background: none; border: 0; padding: 0; min-width: 0; width: 100%; max-width: 680px; justify-self: end; }
 .invite-home .calculator-inputs { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap); }
@@ -82,8 +80,6 @@
 .invite-home .package-budget-note { font-weight: var(--weight-heading); color: var(--ink); }
 .invite-home .package-card .button { font-size: var(--type-button-sm); padding-inline: var(--panel-pad-sm); margin-top: 24px; gap: var(--gap-sm); line-height: var(--leading-small); }
 .invite-home .home-section-mekanisme { background: var(--surface-base); }
-.invite-home .section-heading-split { grid-template-columns: 1fr 1fr; gap: 96px; max-width: none; }
-.invite-home .section-heading-split .body-copy { margin: 0; max-width: 650px; }
 .invite-home .section-items { gap: 48px; margin-top: 48px; }
 .invite-home .mechanism-steps { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .invite-home .info-item { border: 0; border-top: 1px solid var(--line); border-radius: 0; padding: var(--panel-pad) 0 0; background: none; }
@@ -92,7 +88,6 @@
 .invite-home .info-item h3 { font-size: var(--type-h4); line-height: var(--leading-h4); }
 .invite-home .info-item p { font-size: var(--type-body); line-height: var(--leading-body); color: var(--muted); margin-top: 18px; max-width: 560px; }
 .invite-home .home-section-passer { background: var(--surface-soft); }
-.invite-home .home-section-passer .section-heading-split { grid-template-columns: 1fr; gap: 28px; }
 .invite-home .home-section-passer .home-item-1 { background: none; }
 .invite-home .assessment-section { background: var(--surface-cta); }
 .invite-home .assessment-grid { gap: 96px; max-width: 1280px; }
@@ -119,7 +114,7 @@
   .invite-homepage .shell { width: calc(100% - 64px); }
   .invite-home .section-space { padding-block: 80px; }
   .invite-home .need-section { padding-block: 56px 72px; }
-  .invite-home .home-hero, .invite-home .leverage-grid, .invite-home .section-heading-split, .invite-home .assessment-grid { gap: 36px; }
+  .invite-home .home-hero, .invite-home .leverage-grid, .invite-home .assessment-grid { gap: 36px; }
   .invite-home .need-card { padding: var(--panel-pad); }
   .invite-home .package-card { padding: var(--panel-pad) var(--panel-pad-sm) 0; }
 }
@@ -152,7 +147,7 @@
   .invite-home .math-results { gap: var(--gap-sm); }
   .invite-home .leverage-result, .invite-home .leverage-comparison { padding: var(--panel-pad-sm) var(--panel-pad-xs); }
   .invite-home .math-results .outcome-label, .invite-home .math-equation { font-size: var(--type-label); line-height: var(--leading-small); }
-  .invite-home .section-heading-split, .invite-home .assessment-grid, .invite-home .faq-grid { grid-template-columns: 1fr; gap: 32px; }
+  .invite-home .assessment-grid, .invite-home .faq-grid { grid-template-columns: 1fr; gap: 32px; }
   .invite-home .section-items.two-items { grid-template-columns: 1fr; }
   .invite-home .mechanism-steps { gap: 28px 20px; }
   .invite-home .mechanism-steps h3 { font-size: var(--type-h4); line-height: var(--leading-h4); }

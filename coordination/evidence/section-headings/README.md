@@ -1,0 +1,11 @@
+# Direct OWNER section-heading correction — 2026-10-13
+
+Baseline main `ac9830d`; latest main pulled ff-only before work. Actual OWNER continuation requests uncapped `.invite-home .body-copy` and `.invite-home .section-heading h2`, centered headings above multiple cards, and removal of the split variant in favor of one full-width centered type.
+
+Shared `.section-heading` now has `width: 100%` and `text-align: center`; its stacked body copy has a normal paragraph gap. Both shared section components use only that class. All split-variant markup/styles/responsive overrides are removed. Homepage/Invite body-copy caps, including calculator introduction, multiplier and pricing form overrides, are removed so narrower selectors cannot silently restore a cap. Existing heading copy, semantic sizes/fonts/weights, card/control/surface tokens, hero/photo crop, proof/package data, calculator/chart logic, CMS, noindex and disabled intake are preserved. Natural heading/body reflow is intended; other layout/CTA classes remain intact.
+
+Validation: full `npm run verify` 89/89, zero Astro errors/warnings and one preexisting intake-script hint; static commercial/proof/hero/copy/CMS gates, all 20 CMS JSON hashes, surface/source guards and 196 rendered typography states pass. No sub-14px/contrast/clipping/button/overflow failures, browser errors or public POST. Logs and typography screenshots: `verify.log`, `typography-local/`.
+
+Focused layout inspection checks all 16 routes at 1440/900/390/320: 64 groups, every rendered `.section-heading` centered and spanning its parent's content width, no split variant, homepage/Invite body copy computes `max-width: none`, uncapped homepage section h2, zero overflow/errors/POST. `local/checks.json` and `local.log` record the assertions. `local/home-*`, `synlighet-*`, `priser-*`, `seo-*` and individual `heading-*` captures show all four widths. Desktop and mobile heading captures were visually inspected. The one-off inspection script stays in ignored `app/qa-output/`; no new dependency or test framework.
+
+Delivery receipts are recorded in CODEX-TO-CHATGPT and Git history. Connected Worker/live verification follows the implementation push. STOP for OWNER visual review; no launch or unrelated revision is inferred.

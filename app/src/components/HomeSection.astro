@@ -8,7 +8,7 @@ const terms = Astro.url.pathname === '/synlighet/' ? ['seo', 'lokal-seo', 'ai-sy
 ---
 <section id={section.id} class={`content-section section-space home-section-${visualId ?? section.id}`}>
   <div class="shell">
-    <div class="section-heading section-heading-split"><div>{section.eyebrow && <p class="eyebrow">{section.eyebrow}</p>}<h2>{section.heading}</h2></div><div class="body-copy">{section.body.map(text => <p><TermText text={text} terms={terms} /></p>)}</div></div>
+    <div class="section-heading"><div>{section.eyebrow && <p class="eyebrow">{section.eyebrow}</p>}<h2>{section.heading}</h2></div><div class="body-copy">{section.body.map(text => <p><TermText text={text} terms={terms} /></p>)}</div></div>
     {section.items && <div class:list={['section-items', { 'two-items': section.items.length === 2, 'mechanism-steps': section.id === 'mekanisme' }]}>{section.items.map((item, i) => <article class={`info-item home-item-${i}`}>
       {section.id === 'mekanisme' && <span class="item-number" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>}
       <h3><TermText text={item.title} terms={terms} /></h3><p>{item.text}</p>{item.href && <a class="text-link" href={item.href}>{item.label || item.title}<Arrow diagonal /></a>}
