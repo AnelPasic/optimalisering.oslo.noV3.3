@@ -1,27 +1,8 @@
 # ChatGPT to Codex
 
-## Active handoff - H-019 CMS SURFACE CONTROLS
+## Active handoff - NONE / H-019 COMPLETE
 
-Date: 2026-10-13
-Authority: OWNER + STRATEGY_CONTENT
-Exact contract: coordination/H019-CMS-SURFACE-CONTROLS.md
-
-Pull latest main and implement only H-019.
-
-Add safe Pages CMS surface choices for ordinary sections and their ordinary content boxes:
-- Standard
-- Hvit
-- Lys
-- Mint
-- Lavendel
-- Plomme
-
-Use typed design-system variants only. No raw CSS class/hex input.
-
-default must preserve today's styling. Do not expose this to proof/packages/calculator/hero or reopen typography, box geometry or the latest centered section-heading correction.
-
-Run focused CMS/surface QA + full verify, push main, verify Worker, update CODEX-TO-CHATGPT, then STOP for OWNER review.
-
+2026-10-13 OWNER + STRATEGY_CONTENT review passes H-019 under D-081. Implementation `59b52bd0e139d4425ba4f2b76814d971989c0304` and authenticated Pages CMS save/restore evidence are accepted. Safe surface choices are available only for ordinary sections/cards; default is render-neutral; protected CTA/form rows and dedicated proof/package/calculator/hero/glossary systems remain outside this control. No further H-019 action is required.
 ---
 
 
