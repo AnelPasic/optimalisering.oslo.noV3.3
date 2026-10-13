@@ -1,0 +1,48 @@
+/* H-018: shell primitives beneath existing semantic components.
+   Card: 20px; functional/data inset: 12px; feature: 24px; controls: 8px.
+   Divider rows remain flat. No typography, layout, state logic or utilities. */
+:root {
+  --radius-button: 6px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-card: 20px;
+  --radius-card-lg: 24px;
+  --radius-pill: 999px;
+
+  --surface-mint: #e0f0ef;
+  --surface-lavender: #f1edf8;
+  --surface-dark: #320c43;
+  --surface-mint-strong: #b9e8d4;
+  --surface-cta: #e5f2ed;
+  --surface-notice: #f5eedc;
+  --border-control: 1px solid #cbc2d4;
+  --border-dark: 1px solid #65536e;
+  --border-featured: 2px solid var(--surface-dark);
+  --shadow-soft: 0 8px 24px #320c4314;
+
+  --panel-pad-xs: 12px;
+  --panel-pad-sm: 16px;
+  --panel-pad: 24px;
+  --panel-pad-lg: 32px;
+  --panel-pad-feature: clamp(24px, 3vw, 40px);
+  --gap-xs: 8px;
+  --gap-sm: 12px;
+  --gap-md: 16px;
+  --gap: 24px;
+  --gap-lg: 32px;
+  --control-height: 48px;
+  --control-height-sm: 44px;
+  --control-pad: 10px 16px;
+  --button-pad: 14px 24px;
+  --button-pad-sm: 10px 12px;
+  --focus-gap: 3px;
+}
+
+/* Resolve palette aliases in their own context, rather than inheriting an
+   alias already computed against the root's legacy palette. The existing
+   Invite body and dark service section override --paper/--cream/--line. */
+:root, body, .invite-service .home-section-sammenheng {
+  --surface-base: var(--paper);
+  --surface-soft: var(--cream);
+  --border-subtle: 1px solid var(--line);
+}

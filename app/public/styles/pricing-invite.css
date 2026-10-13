@@ -6,11 +6,11 @@
 .invite-pricing .package-section { padding-top: 44px; }
 .invite-pricing .package-grid { margin-top: 0; }
 .invite-pricing .package-card h2 { font-size: var(--type-h2); line-height: var(--leading-h2); }
-.invite-pricing .home-section-arbeidsomrader { background: #fff; }
+.invite-pricing .home-section-arbeidsomrader { background: var(--surface-base); }
 .invite-pricing .home-section-arbeidsomrader .section-items { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-.invite-pricing .home-section-kostnader { background: #fbf9fc; }
-.invite-pricing .home-section-gratis { background: #e5f2ed; }
-.invite-pricing .home-section-gratis .section-links .text-link { background: var(--green); color: #fff; padding: 16px 24px; border-radius: 7px; }
+.invite-pricing .home-section-kostnader { background: var(--surface-soft); }
+.invite-pricing .home-section-gratis { background: var(--surface-cta); }
+.invite-pricing .home-section-gratis .section-links .text-link { background: var(--green); color: #fff; padding: var(--panel-pad-sm) var(--panel-pad); border-radius: var(--radius-button); }
 .invite-pricing .home-section-gratis .section-links .text-link:hover { background: #06675f; }
 @media (max-width: 1100px) {
   .invite-pricing .pricing-hero { padding-top: 48px; }

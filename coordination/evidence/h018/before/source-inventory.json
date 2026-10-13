@@ -1,0 +1,3905 @@
+{
+  "declarations": [
+    {
+      "path": "src/styles/global.css",
+      "line": 16,
+      "selector": "body",
+      "property": "background",
+      "value": "var(--cream)"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 24,
+      "selector": "::selection",
+      "property": "background",
+      "value": "var(--apricot)"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 25,
+      "selector": ":focus-visible",
+      "property": "outline",
+      "value": "3px solid #936022"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 25,
+      "selector": ":focus-visible",
+      "property": "outline-offset",
+      "value": "5px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 36,
+      "selector": ".small-dot",
+      "property": "background",
+      "value": "var(--green)"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 36,
+      "selector": ".small-dot",
+      "property": "border-radius",
+      "value": "50%"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 39,
+      "selector": ".section-space",
+      "property": "padding-block",
+      "value": "90px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 40,
+      "selector": ".button",
+      "property": "gap",
+      "value": "28px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 40,
+      "selector": ".button",
+      "property": "padding",
+      "value": "15px 25px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 40,
+      "selector": ".button",
+      "property": "border",
+      "value": "1px solid var(--green)"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 40,
+      "selector": ".button",
+      "property": "border-radius",
+      "value": "8px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 40,
+      "selector": ".button",
+      "property": "background",
+      "value": "var(--green)"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 41,
+      "selector": ".button:hover",
+      "property": "background",
+      "value": "#163e2e"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 42,
+      "selector": ".button-small",
+      "property": "padding",
+      "value": "11px 19px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 42,
+      "selector": ".button-small",
+      "property": "gap",
+      "value": "20px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 43,
+      "selector": ".button-light",
+      "property": "background",
+      "value": "var(--cream)"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 43,
+      "selector": ".button-light",
+      "property": "border-color",
+      "value": "var(--cream)"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 44,
+      "selector": ".button-light:hover",
+      "property": "background",
+      "value": "white"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 47,
+      "selector": ".text-link",
+      "property": "gap",
+      "value": "12px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 47,
+      "selector": ".text-link",
+      "property": "padding-block",
+      "value": "10px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 49,
+      "selector": ".skip-link",
+      "property": "background",
+      "value": "var(--green)"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 49,
+      "selector": ".skip-link",
+      "property": "padding",
+      "value": "15px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 52,
+      "selector": ".site-header",
+      "property": "border-bottom",
+      "value": "1px solid var(--line)"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 52,
+      "selector": ".site-header",
+      "property": "background",
+      "value": "var(--cream)"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 53,
+      "selector": ".header-inner",
+      "property": "gap",
+      "value": "30px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 54,
+      "selector": ".wordmark",
+      "property": "gap",
+      "value": "11px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 57,
+      "selector": ".desktop-nav",
+      "property": "gap",
+      "value": "31px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 58,
+      "selector": ".desktop-nav a",
+      "property": "padding-block",
+      "value": "14px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 60,
+      "selector": ".header-actions",
+      "property": "gap",
+      "value": "14px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 61,
+      "selector": ".menu-toggle",
+      "property": "border",
+      "value": "1px solid var(--line)"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 61,
+      "selector": ".menu-toggle",
+      "property": "border-radius",
+      "value": "6px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 61,
+      "selector": ".menu-toggle",
+      "property": "background",
+      "value": "transparent"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 61,
+      "selector": ".menu-toggle",
+      "property": "gap",
+      "value": "6px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 62,
+      "selector": ".menu-toggle span",
+      "property": "background",
+      "value": "var(--ink)"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 65,
+      "selector": ".mobile-menu",
+      "property": "padding-block",
+      "value": "15px 25px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 66,
+      "selector": ".mobile-menu a",
+      "property": "border-top",
+      "value": "1px solid var(--line)"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 66,
+      "selector": ".mobile-menu a",
+      "property": "padding-block",
+      "value": "14px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 68,
+      "selector": ".home-hero",
+      "property": "gap",
+      "value": "70px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 68,
+      "selector": ".home-hero",
+      "property": "padding-block",
+      "value": "83px 74px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 69,
+      "selector": ".hero-copy .eyebrow",
+      "property": "gap",
+      "value": "9px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 72,
+      "selector": ".hero-actions",
+      "property": "gap",
+      "value": "24px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 74,
+      "selector": ".hero-strip",
+      "property": "gap",
+      "value": "20px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 74,
+      "selector": ".hero-strip",
+      "property": "border-top",
+      "value": "1px solid var(--line)"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 74,
+      "selector": ".hero-strip",
+      "property": "padding-block",
+      "value": "20px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 75,
+      "selector": ".hero-strip span",
+      "property": "gap",
+      "value": "9px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 78,
+      "selector": ".journey-art",
+      "property": "background",
+      "value": "#ebece0"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 78,
+      "selector": ".journey-art",
+      "property": "border-radius",
+      "value": "18px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 78,
+      "selector": ".journey-art",
+      "property": "padding",
+      "value": "26px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 81,
+      "selector": ".journey-card",
+      "property": "padding",
+      "value": "17px 22px 21px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 81,
+      "selector": ".journey-card",
+      "property": "border-radius",
+      "value": "12px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 81,
+      "selector": ".journey-card",
+      "property": "box-shadow",
+      "value": "0 9px 16px -13px #233c3240"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 82,
+      "selector": ".journey-find",
+      "property": "background",
+      "value": "var(--apricot)"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 83,
+      "selector": ".journey-choose",
+      "property": "background",
+      "value": "var(--green)"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 89,
+      "selector": ".journey-bottom",
+      "property": "gap",
+      "value": "8px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 91,
+      "selector": ".content-section",
+      "property": "background",
+      "value": "var(--paper)"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 92,
+      "selector": ".section-tint",
+      "property": "background",
+      "value": "var(--cream)"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 94,
+      "selector": ".section-heading-split",
+      "property": "gap",
+      "value": "80px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 95,
+      "selector": ".section-heading-split > .body-copy",
+      "property": "padding-top",
+      "value": "6px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 96,
+      "selector": ".section-items",
+      "property": "gap",
+      "value": "22px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 98,
+      "selector": ".info-item",
+      "property": "padding",
+      "value": "30px 31px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 98,
+      "selector": ".info-item",
+      "property": "border-radius",
+      "value": "10px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 99,
+      "selector": ".item-apricot",
+      "property": "background",
+      "value": "#f2dcc8"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 100,
+      "selector": ".item-sage",
+      "property": "background",
+      "value": "var(--sage)"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 101,
+      "selector": ".item-plain",
+      "property": "background",
+      "value": "transparent"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 101,
+      "selector": ".item-plain",
+      "property": "border",
+      "value": "1px solid var(--line)"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 102,
+      "selector": ".item-number",
+      "property": "border-bottom",
+      "value": "1px solid #223a3040"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 102,
+      "selector": ".item-number",
+      "property": "padding-bottom",
+      "value": "15px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 106,
+      "selector": ".section-links",
+      "property": "gap",
+      "value": "14px 36px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 107,
+      "selector": ".process-items .info-item",
+      "property": "background",
+      "value": "transparent"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 107,
+      "selector": ".process-items .info-item",
+      "property": "border-radius",
+      "value": "0"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 107,
+      "selector": ".process-items .info-item",
+      "property": "padding",
+      "value": "0 28px 0 0"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 107,
+      "selector": ".process-items .info-item",
+      "property": "border",
+      "value": "0"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 107,
+      "selector": ".process-items .info-item",
+      "property": "border-right",
+      "value": "1px solid var(--line)"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 108,
+      "selector": ".process-items .info-item:last-child",
+      "property": "border-right",
+      "value": "0"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 109,
+      "selector": ".process-items .item-number",
+      "property": "border",
+      "value": "0"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 112,
+      "selector": ".leverage-section",
+      "property": "background",
+      "value": "#dfe6d8"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 113,
+      "selector": ".leverage-grid",
+      "property": "gap",
+      "value": "85px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 116,
+      "selector": ".leverage-tool",
+      "property": "padding",
+      "value": "32px 32px 24px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 116,
+      "selector": ".leverage-tool",
+      "property": "border-radius",
+      "value": "10px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 116,
+      "selector": ".leverage-tool",
+      "property": "background",
+      "value": "var(--paper)"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 118,
+      "selector": ".leverage-inputs",
+      "property": "gap",
+      "value": "15px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 120,
+      "selector": ".leverage-inputs input",
+      "property": "background",
+      "value": "var(--cream)"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 120,
+      "selector": ".leverage-inputs input",
+      "property": "border",
+      "value": "1px solid var(--line)"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 120,
+      "selector": ".leverage-inputs input",
+      "property": "border-radius",
+      "value": "6px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 120,
+      "selector": ".leverage-inputs input",
+      "property": "padding",
+      "value": "10px 12px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 121,
+      "selector": ".leverage-inputs > span",
+      "property": "padding-top",
+      "value": "28px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 122,
+      "selector": ".leverage-inputs input[name=conversion]",
+      "property": "padding-right",
+      "value": "37px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 124,
+      "selector": ".leverage-result",
+      "property": "gap",
+      "value": "18px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 124,
+      "selector": ".leverage-result",
+      "property": "padding-block",
+      "value": "18px 22px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 128,
+      "selector": ".leverage-comparison",
+      "property": "gap",
+      "value": "12px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 128,
+      "selector": ".leverage-comparison",
+      "property": "padding-top",
+      "value": "19px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 128,
+      "selector": ".leverage-comparison",
+      "property": "border-top",
+      "value": "1px solid var(--line)"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 132,
+      "selector": ".assessment-section",
+      "property": "background",
+      "value": "#e7e9de"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 133,
+      "selector": ".assessment-grid",
+      "property": "gap",
+      "value": "90px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 134,
+      "selector": ".assessment-copy",
+      "property": "padding-top",
+      "value": "36px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 138,
+      "selector": ".form-process",
+      "property": "border-top",
+      "value": "1px solid #bdc8b7"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 139,
+      "selector": ".form-process > div",
+      "property": "padding-top",
+      "value": "20px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 142,
+      "selector": ".assessment-form",
+      "property": "background",
+      "value": "var(--paper)"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 142,
+      "selector": ".assessment-form",
+      "property": "border-radius",
+      "value": "12px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 142,
+      "selector": ".assessment-form",
+      "property": "padding",
+      "value": "32px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 147,
+      "selector": ".assessment-form > input, .assessment-form > select, .assessment-form > textarea",
+      "property": "background",
+      "value": "var(--cream)"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 147,
+      "selector": ".assessment-form > input, .assessment-form > select, .assessment-form > textarea",
+      "property": "border",
+      "value": "1px solid var(--line)"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 147,
+      "selector": ".assessment-form > input, .assessment-form > select, .assessment-form > textarea",
+      "property": "border-radius",
+      "value": "5px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 147,
+      "selector": ".assessment-form > input, .assessment-form > select, .assessment-form > textarea",
+      "property": "padding",
+      "value": "12px 14px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 153,
+      "selector": ".form-notice",
+      "property": "background",
+      "value": "#f5ebd8"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 153,
+      "selector": ".form-notice",
+      "property": "border-left",
+      "value": "2px solid #ab7748"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 153,
+      "selector": ".form-notice",
+      "property": "padding",
+      "value": "10px 12px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 154,
+      "selector": ".form-status",
+      "property": "border-top",
+      "value": "1px solid var(--line)"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 154,
+      "selector": ".form-status",
+      "property": "padding-top",
+      "value": "16px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 158,
+      "selector": ".faq-section",
+      "property": "background",
+      "value": "var(--paper)"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 159,
+      "selector": ".faq-grid",
+      "property": "gap",
+      "value": "90px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 160,
+      "selector": ".faq-list details",
+      "property": "border-bottom",
+      "value": "1px solid var(--line)"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 161,
+      "selector": ".faq-list details:first-child",
+      "property": "border-top",
+      "value": "1px solid var(--line)"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 162,
+      "selector": ".faq-list summary",
+      "property": "gap",
+      "value": "20px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 162,
+      "selector": ".faq-list summary",
+      "property": "padding-block",
+      "value": "22px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 166,
+      "selector": ".faq-list details p",
+      "property": "padding-bottom",
+      "value": "24px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 168,
+      "selector": ".inner-hero",
+      "property": "padding-block",
+      "value": "28px 85px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 168,
+      "selector": ".inner-hero",
+      "property": "background",
+      "value": "#e9eadd"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 169,
+      "selector": ".breadcrumbs",
+      "property": "gap",
+      "value": "10px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 175,
+      "selector": ".assessment-hero-grid",
+      "property": "gap",
+      "value": "85px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 178,
+      "selector": ".inner-pricing",
+      "property": "background",
+      "value": "#f0ddcb"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 179,
+      "selector": ".inner-article, .inner-index",
+      "property": "background",
+      "value": "#e6e7dc"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 180,
+      "selector": ".inner-utility",
+      "property": "background",
+      "value": "var(--cream)"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 182,
+      "selector": ".article-content .content-section",
+      "property": "padding-block",
+      "value": "65px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 183,
+      "selector": ".closing-cta",
+      "property": "background",
+      "value": "var(--green)"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 183,
+      "selector": ".closing-cta",
+      "property": "padding-block",
+      "value": "70px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 184,
+      "selector": ".closing-cta > .shell",
+      "property": "gap",
+      "value": "35px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 186,
+      "selector": ".error-page",
+      "property": "padding-block",
+      "value": "100px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 189,
+      "selector": ".site-footer",
+      "property": "background",
+      "value": "var(--cream)"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 189,
+      "selector": ".site-footer",
+      "property": "padding-top",
+      "value": "65px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 190,
+      "selector": ".footer-grid",
+      "property": "gap",
+      "value": "80px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 190,
+      "selector": ".footer-grid",
+      "property": "padding-bottom",
+      "value": "55px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 194,
+      "selector": ".footer-grid nav",
+      "property": "gap",
+      "value": "12px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 197,
+      "selector": ".footer-bottom",
+      "property": "gap",
+      "value": "20px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 197,
+      "selector": ".footer-bottom",
+      "property": "border-top",
+      "value": "1px solid var(--line)"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 197,
+      "selector": ".footer-bottom",
+      "property": "padding-block",
+      "value": "20px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 198,
+      "selector": ".preview-tag",
+      "property": "padding",
+      "value": "4px 8px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 198,
+      "selector": ".preview-tag",
+      "property": "border",
+      "value": "1px solid var(--line)"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 198,
+      "selector": ".preview-tag",
+      "property": "border-radius",
+      "value": "4px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 200,
+      "selector": ".home-hero",
+      "property": "gap",
+      "value": "80px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 203,
+      "selector": ".home-hero",
+      "property": "gap",
+      "value": "35px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 208,
+      "selector": ".desktop-nav",
+      "property": "gap",
+      "value": "20px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 209,
+      "selector": ".section-heading-split, .leverage-grid, .assessment-grid, .assessment-hero-grid",
+      "property": "gap",
+      "value": "45px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 216,
+      "selector": ".home-hero",
+      "property": "padding-top",
+      "value": "62px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 219,
+      "selector": ".journey-card",
+      "property": "padding",
+      "value": "14px 17px 18px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 224,
+      "selector": ".section-space",
+      "property": "padding-block",
+      "value": "65px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 225,
+      "selector": ".section-heading-split",
+      "property": "gap",
+      "value": "35px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 226,
+      "selector": ".section-items",
+      "property": "gap",
+      "value": "16px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 227,
+      "selector": ".info-item",
+      "property": "padding",
+      "value": "24px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 229,
+      "selector": ".leverage-tool",
+      "property": "padding",
+      "value": "23px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 230,
+      "selector": ".leverage-inputs",
+      "property": "gap",
+      "value": "8px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 231,
+      "selector": ".leverage-result",
+      "property": "gap",
+      "value": "10px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 232,
+      "selector": ".leverage-comparison",
+      "property": "gap",
+      "value": "4px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 233,
+      "selector": ".faq-grid",
+      "property": "gap",
+      "value": "40px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 234,
+      "selector": ".assessment-form",
+      "property": "padding",
+      "value": "24px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 235,
+      "selector": ".footer-grid",
+      "property": "gap",
+      "value": "45px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 241,
+      "selector": ".header-inner",
+      "property": "gap",
+      "value": "14px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 242,
+      "selector": ".wordmark",
+      "property": "gap",
+      "value": "7px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 244,
+      "selector": ".header-actions",
+      "property": "gap",
+      "value": "8px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 245,
+      "selector": ".button-small",
+      "property": "padding",
+      "value": "10px 12px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 245,
+      "selector": ".button-small",
+      "property": "gap",
+      "value": "8px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 248,
+      "selector": ".home-hero",
+      "property": "gap",
+      "value": "38px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 248,
+      "selector": ".home-hero",
+      "property": "padding-block",
+      "value": "42px 30px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 252,
+      "selector": ".hero-actions",
+      "property": "gap",
+      "value": "12px 22px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 253,
+      "selector": ".hero-actions .button",
+      "property": "gap",
+      "value": "20px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 253,
+      "selector": ".hero-actions .button",
+      "property": "padding-inline",
+      "value": "18px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 256,
+      "selector": ".journey-art",
+      "property": "padding",
+      "value": "21px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 264,
+      "selector": ".hero-strip",
+      "property": "gap",
+      "value": "4px 20px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 264,
+      "selector": ".hero-strip",
+      "property": "padding-block",
+      "value": "15px 23px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 265,
+      "selector": ".section-space",
+      "property": "padding-block",
+      "value": "52px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 267,
+      "selector": ".section-heading-split, .article-content .section-heading-split",
+      "property": "gap",
+      "value": "22px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 268,
+      "selector": ".section-heading-split > .body-copy",
+      "property": "padding-top",
+      "value": "0"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 269,
+      "selector": ".section-items, .section-items.two-items",
+      "property": "gap",
+      "value": "14px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 270,
+      "selector": ".info-item",
+      "property": "padding",
+      "value": "25px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 271,
+      "selector": ".item-number",
+      "property": "padding-bottom",
+      "value": "13px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 273,
+      "selector": ".section-links",
+      "property": "gap",
+      "value": "6px 20px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 274,
+      "selector": ".process-items .info-item",
+      "property": "padding",
+      "value": "0 0 20px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 274,
+      "selector": ".process-items .info-item",
+      "property": "border-right",
+      "value": "0"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 274,
+      "selector": ".process-items .info-item",
+      "property": "border-bottom",
+      "value": "1px solid var(--line)"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 275,
+      "selector": ".process-items .info-item:last-child",
+      "property": "border-bottom",
+      "value": "0"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 275,
+      "selector": ".process-items .info-item:last-child",
+      "property": "padding-bottom",
+      "value": "0"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 277,
+      "selector": ".leverage-grid, .assessment-grid",
+      "property": "gap",
+      "value": "30px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 279,
+      "selector": ".leverage-tool",
+      "property": "padding",
+      "value": "24px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 280,
+      "selector": ".leverage-inputs",
+      "property": "gap",
+      "value": "10px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 282,
+      "selector": ".leverage-result",
+      "property": "gap",
+      "value": "14px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 283,
+      "selector": ".assessment-copy",
+      "property": "padding-top",
+      "value": "0"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 286,
+      "selector": ".assessment-form",
+      "property": "padding",
+      "value": "24px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 287,
+      "selector": ".faq-grid",
+      "property": "gap",
+      "value": "26px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 288,
+      "selector": ".faq-list summary",
+      "property": "padding-block",
+      "value": "20px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 289,
+      "selector": ".inner-hero",
+      "property": "padding-block",
+      "value": "22px 50px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 292,
+      "selector": ".assessment-hero-grid",
+      "property": "gap",
+      "value": "30px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 293,
+      "selector": ".article-content .content-section",
+      "property": "padding-block",
+      "value": "48px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 294,
+      "selector": ".closing-cta",
+      "property": "padding-block",
+      "value": "48px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 295,
+      "selector": ".closing-cta > .shell",
+      "property": "gap",
+      "value": "28px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 296,
+      "selector": ".footer-grid",
+      "property": "gap",
+      "value": "32px 20px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 296,
+      "selector": ".footer-grid",
+      "property": "padding-bottom",
+      "value": "36px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 298,
+      "selector": ".site-footer",
+      "property": "padding-top",
+      "value": "45px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 303,
+      "selector": ".header-inner",
+      "property": "gap",
+      "value": "8px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 304,
+      "selector": ".wordmark",
+      "property": "gap",
+      "value": "6px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 306,
+      "selector": ".header-actions",
+      "property": "gap",
+      "value": "6px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 307,
+      "selector": ".button-small",
+      "property": "padding-inline",
+      "value": "9px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 311,
+      "selector": ".journey-card",
+      "property": "padding-inline",
+      "value": "15px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 316,
+      "selector": ".assessment-form, .leverage-tool",
+      "property": "padding",
+      "value": "20px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 317,
+      "selector": ".leverage-inputs",
+      "property": "gap",
+      "value": "7px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 318,
+      "selector": ".leverage-inputs input",
+      "property": "padding-inline",
+      "value": "9px"
+    },
+    {
+      "path": "src/styles/global.css",
+      "line": 320,
+      "selector": ".leverage-result",
+      "property": "gap",
+      "value": "10px"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 3,
+      "selector": "a.term-trigger, .invite-home a.term-trigger",
+      "property": "padding",
+      "value": "0"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 5,
+      "selector": "a.term-trigger, .invite-home a.term-trigger",
+      "property": "border",
+      "value": "0"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 6,
+      "selector": "a.term-trigger, .invite-home a.term-trigger",
+      "property": "border-radius",
+      "value": "0"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 8,
+      "selector": "a.term-trigger, .invite-home a.term-trigger",
+      "property": "background",
+      "value": "none"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 17,
+      "selector": "a.term-trigger:focus-visible",
+      "property": "outline",
+      "value": "2px solid currentColor"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 17,
+      "selector": "a.term-trigger:focus-visible",
+      "property": "outline-offset",
+      "value": "3px"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 24,
+      "selector": ".term-panel",
+      "property": "padding",
+      "value": "16px 18px"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 25,
+      "selector": ".term-panel",
+      "property": "border",
+      "value": "1px solid #d9d3de"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 26,
+      "selector": ".term-panel",
+      "property": "border-radius",
+      "value": "12px"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 27,
+      "selector": ".term-panel",
+      "property": "background",
+      "value": "#fffdf7"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 30,
+      "selector": ".term-panel",
+      "property": "box-shadow",
+      "value": "0 10px 32px #320c4320"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 41,
+      "selector": ".glossary-hero",
+      "property": "padding-block",
+      "value": "88px 48px"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 65,
+      "selector": ".glossary-navigation",
+      "property": "gap",
+      "value": "10px"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 72,
+      "selector": ".glossary-navigation a",
+      "property": "padding",
+      "value": "8px 14px"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 73,
+      "selector": ".glossary-navigation a",
+      "property": "border",
+      "value": "1px solid #d9d3de"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 74,
+      "selector": ".glossary-navigation a",
+      "property": "border-radius",
+      "value": "999px"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 81,
+      "selector": ".glossary-navigation a:hover,\n.glossary-navigation a:focus-visible",
+      "property": "background",
+      "value": "#e0f0ef"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 82,
+      "selector": ".glossary-navigation a:hover,\n.glossary-navigation a:focus-visible",
+      "property": "border-color",
+      "value": "#b9d8d4"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 88,
+      "selector": ".glossary-group",
+      "property": "gap",
+      "value": "clamp(36px, 7vw, 110px)"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 89,
+      "selector": ".glossary-group",
+      "property": "padding-block",
+      "value": "56px"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 90,
+      "selector": ".glossary-group",
+      "property": "border-top",
+      "value": "1px solid #e2dce5"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 114,
+      "selector": ".glossary-entry details",
+      "property": "border-top",
+      "value": "1px solid #d9d3de"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 117,
+      "selector": ".glossary-entry:last-child details",
+      "property": "border-bottom",
+      "value": "1px solid #d9d3de"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 123,
+      "selector": ".glossary-entry summary",
+      "property": "gap",
+      "value": "24px"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 125,
+      "selector": ".glossary-entry summary",
+      "property": "padding",
+      "value": "24px 4px"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 133,
+      "selector": ".glossary-term-heading",
+      "property": "gap",
+      "value": "5px"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 158,
+      "selector": ".glossary-toggle",
+      "property": "border-radius",
+      "value": "50%"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 159,
+      "selector": ".glossary-toggle",
+      "property": "background",
+      "value": "#e0f0ef"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 167,
+      "selector": ".glossary-entry details[open] summary",
+      "property": "padding-bottom",
+      "value": "16px"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 170,
+      "selector": ".glossary-example",
+      "property": "padding",
+      "value": "16px 18px"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 171,
+      "selector": ".glossary-example",
+      "property": "border",
+      "value": "0"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 172,
+      "selector": ".glossary-example",
+      "property": "border-radius",
+      "value": "12px"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 173,
+      "selector": ".glossary-example",
+      "property": "background",
+      "value": "#f1eee7"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 185,
+      "selector": ".glossary-entry:target details",
+      "property": "background",
+      "value": "linear-gradient(90deg, #e0f0ef80, transparent 80%)"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 190,
+      "selector": ".glossary-hero",
+      "property": "padding-block",
+      "value": "64px 36px"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 192,
+      "selector": ".glossary-group",
+      "property": "gap",
+      "value": "20px"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 193,
+      "selector": ".glossary-group",
+      "property": "padding-block",
+      "value": "44px"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 201,
+      "selector": ".glossary-entry summary",
+      "property": "gap",
+      "value": "18px"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 207,
+      "selector": ".glossary-hero",
+      "property": "padding-block",
+      "value": "44px 28px"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 208,
+      "selector": ".glossary-navigation",
+      "property": "gap",
+      "value": "8px"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 213,
+      "selector": ".glossary-navigation a",
+      "property": "padding",
+      "value": "7px 11px"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 217,
+      "selector": ".glossary-group",
+      "property": "padding-block",
+      "value": "36px"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 219,
+      "selector": ".glossary-entry summary",
+      "property": "gap",
+      "value": "10px 14px"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 220,
+      "selector": ".glossary-entry summary",
+      "property": "padding",
+      "value": "20px 0"
+    },
+    {
+      "path": "src/styles/terminology.css",
+      "line": 226,
+      "selector": ".glossary-example",
+      "property": "padding",
+      "value": "14px 15px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 4,
+      "selector": ".invite-homepage",
+      "property": "background",
+      "value": "var(--cream)"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 8,
+      "selector": ".invite-homepage .site-header",
+      "property": "background",
+      "value": "#fbf9fc"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 10,
+      "selector": ".invite-homepage .button",
+      "property": "border-radius",
+      "value": "7px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 11,
+      "selector": ".invite-homepage .button:hover",
+      "property": "background",
+      "value": "#06675f"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 14,
+      "selector": ".invite-homepage :focus-visible",
+      "property": "outline-color",
+      "value": "#a86613"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 15,
+      "selector": ".invite-home .section-space",
+      "property": "padding-block",
+      "value": "104px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 18,
+      "selector": ".invite-home .home-hero",
+      "property": "gap",
+      "value": "88px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 18,
+      "selector": ".invite-home .home-hero",
+      "property": "padding-block",
+      "value": "44px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 19,
+      "selector": ".invite-home .hero-copy .eyebrow",
+      "property": "gap",
+      "value": "9px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 23,
+      "selector": ".invite-home .hero-actions",
+      "property": "gap",
+      "value": "24px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 24,
+      "selector": ".invite-home .hero-photo",
+      "property": "border-radius",
+      "value": "16px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 24,
+      "selector": ".invite-home .hero-photo",
+      "property": "background",
+      "value": "#f0ecf5"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 29,
+      "selector": ".invite-home .need-section",
+      "property": "background",
+      "value": "white"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 29,
+      "selector": ".invite-home .need-section",
+      "property": "padding-block",
+      "value": "64px 88px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 30,
+      "selector": ".invite-home .need-grid, .invite-home .package-grid",
+      "property": "gap",
+      "value": "32px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 31,
+      "selector": ".invite-home .need-card",
+      "property": "padding",
+      "value": "36px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 31,
+      "selector": ".invite-home .need-card",
+      "property": "border-radius",
+      "value": "14px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 31,
+      "selector": ".invite-home .need-card",
+      "property": "background",
+      "value": "#e0f1e9"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 31,
+      "selector": ".invite-home .need-card",
+      "property": "border",
+      "value": "1px solid transparent"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 32,
+      "selector": ".invite-home .need-card:hover",
+      "property": "border-color",
+      "value": "var(--green)"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 33,
+      "selector": ".invite-home .need-card-1",
+      "property": "background",
+      "value": "#eae4f4"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 34,
+      "selector": ".invite-home .need-card-2",
+      "property": "background",
+      "value": "#320c43"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 35,
+      "selector": ".invite-home .home-card-top",
+      "property": "gap",
+      "value": "12px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 42,
+      "selector": ".invite-home .leverage-section",
+      "property": "background",
+      "value": "#320c43"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 43,
+      "selector": ".invite-home .leverage-grid",
+      "property": "gap",
+      "value": "96px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 46,
+      "selector": ".invite-home .calculator-formula",
+      "property": "border-left",
+      "value": "2px solid #b9e8d4"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 46,
+      "selector": ".invite-home .calculator-formula",
+      "property": "padding-left",
+      "value": "18px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 47,
+      "selector": ".invite-home .leverage-tool",
+      "property": "background",
+      "value": "none"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 47,
+      "selector": ".invite-home .leverage-tool",
+      "property": "border",
+      "value": "0"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 47,
+      "selector": ".invite-home .leverage-tool",
+      "property": "padding",
+      "value": "0"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 48,
+      "selector": ".invite-home .calculator-inputs",
+      "property": "gap",
+      "value": "24px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 49,
+      "selector": ".invite-home .calculator-inputs label",
+      "property": "gap",
+      "value": "8px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 50,
+      "selector": ".invite-home .calculator-inputs input",
+      "property": "border",
+      "value": "1px solid transparent"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 50,
+      "selector": ".invite-home .calculator-inputs input",
+      "property": "border-radius",
+      "value": "6px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 50,
+      "selector": ".invite-home .calculator-inputs input",
+      "property": "padding",
+      "value": "10px 12px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 50,
+      "selector": ".invite-home .calculator-inputs input",
+      "property": "background",
+      "value": "#fbf9fc"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 51,
+      "selector": ".invite-home .calculator-inputs input[aria-invalid=true]",
+      "property": "border-color",
+      "value": "#f9bf9f"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 53,
+      "selector": ".invite-home .math-results",
+      "property": "gap",
+      "value": "24px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 54,
+      "selector": ".invite-home .leverage-result, .invite-home .leverage-comparison",
+      "property": "background",
+      "value": "#fbf9fc"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 54,
+      "selector": ".invite-home .leverage-result, .invite-home .leverage-comparison",
+      "property": "border",
+      "value": "0"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 54,
+      "selector": ".invite-home .leverage-result, .invite-home .leverage-comparison",
+      "property": "border-radius",
+      "value": "12px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 54,
+      "selector": ".invite-home .leverage-result, .invite-home .leverage-comparison",
+      "property": "padding",
+      "value": "24px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 54,
+      "selector": ".invite-home .leverage-result, .invite-home .leverage-comparison",
+      "property": "gap",
+      "value": "0"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 55,
+      "selector": ".invite-home .leverage-comparison",
+      "property": "background",
+      "value": "#b9e8d4"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 64,
+      "selector": ".invite-home .package-section",
+      "property": "background",
+      "value": "#fbf9fc"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 66,
+      "selector": ".invite-home .package-card",
+      "property": "background",
+      "value": "none"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 66,
+      "selector": ".invite-home .package-card",
+      "property": "border",
+      "value": "0"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 66,
+      "selector": ".invite-home .package-card",
+      "property": "border-top",
+      "value": "2px solid #e0dbe6"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 66,
+      "selector": ".invite-home .package-card",
+      "property": "border-radius",
+      "value": "0"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 66,
+      "selector": ".invite-home .package-card",
+      "property": "padding",
+      "value": "32px 28px 0"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 68,
+      "selector": ".invite-home .package-card.is-recommended",
+      "property": "border-top-color",
+      "value": "#087b73"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 69,
+      "selector": ".invite-home .package-heading",
+      "property": "gap",
+      "value": "12px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 70,
+      "selector": ".invite-home .package-badge",
+      "property": "background",
+      "value": "#e0f1e9"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 70,
+      "selector": ".invite-home .package-badge",
+      "property": "border-radius",
+      "value": "4px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 70,
+      "selector": ".invite-home .package-badge",
+      "property": "padding",
+      "value": "5px 8px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 75,
+      "selector": ".invite-home .package-price",
+      "property": "padding-top",
+      "value": "20px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 75,
+      "selector": ".invite-home .package-price",
+      "property": "border-top",
+      "value": "1px solid var(--line)"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 83,
+      "selector": ".invite-home .package-card .button",
+      "property": "padding-inline",
+      "value": "16px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 83,
+      "selector": ".invite-home .package-card .button",
+      "property": "gap",
+      "value": "12px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 84,
+      "selector": ".invite-home .home-section-mekanisme",
+      "property": "background",
+      "value": "white"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 85,
+      "selector": ".invite-home .section-heading-split",
+      "property": "gap",
+      "value": "96px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 87,
+      "selector": ".invite-home .section-items",
+      "property": "gap",
+      "value": "48px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 89,
+      "selector": ".invite-home .info-item",
+      "property": "border",
+      "value": "0"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 89,
+      "selector": ".invite-home .info-item",
+      "property": "border-top",
+      "value": "1px solid var(--line)"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 89,
+      "selector": ".invite-home .info-item",
+      "property": "border-radius",
+      "value": "0"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 89,
+      "selector": ".invite-home .info-item",
+      "property": "padding",
+      "value": "28px 0 0"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 89,
+      "selector": ".invite-home .info-item",
+      "property": "background",
+      "value": "none"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 90,
+      "selector": ".invite-home .mechanism-steps .info-item",
+      "property": "padding-top",
+      "value": "24px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 94,
+      "selector": ".invite-home .home-section-passer",
+      "property": "background",
+      "value": "#fbf9fc"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 95,
+      "selector": ".invite-home .home-section-passer .section-heading-split",
+      "property": "gap",
+      "value": "28px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 96,
+      "selector": ".invite-home .home-section-passer .home-item-1",
+      "property": "background",
+      "value": "none"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 97,
+      "selector": ".invite-home .assessment-section",
+      "property": "background",
+      "value": "#e5f2ed"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 98,
+      "selector": ".invite-home .assessment-grid",
+      "property": "gap",
+      "value": "96px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 101,
+      "selector": ".invite-home .assessment-form",
+      "property": "background",
+      "value": "white"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 101,
+      "selector": ".invite-home .assessment-form",
+      "property": "border",
+      "value": "1px solid #d6e5de"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 101,
+      "selector": ".invite-home .assessment-form",
+      "property": "border-radius",
+      "value": "12px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 101,
+      "selector": ".invite-home .assessment-form",
+      "property": "padding",
+      "value": "40px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 103,
+      "selector": ".invite-home .assessment-form input, .invite-home .assessment-form textarea",
+      "property": "background",
+      "value": "#faf9fc"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 103,
+      "selector": ".invite-home .assessment-form input, .invite-home .assessment-form textarea",
+      "property": "border-color",
+      "value": "#dddce5"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 103,
+      "selector": ".invite-home .assessment-form input, .invite-home .assessment-form textarea",
+      "property": "border-radius",
+      "value": "5px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 104,
+      "selector": ".invite-home .form-notice",
+      "property": "background",
+      "value": "#f5eedc"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 104,
+      "selector": ".invite-home .form-notice",
+      "property": "border-left-color",
+      "value": "#a97932"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 105,
+      "selector": ".invite-home .home-section-medon",
+      "property": "background",
+      "value": "#fbf9fc"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 107,
+      "selector": ".invite-home .faq-section",
+      "property": "background",
+      "value": "white"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 108,
+      "selector": ".invite-home .faq-grid",
+      "property": "gap",
+      "value": "96px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 109,
+      "selector": ".invite-home .faq-list summary",
+      "property": "padding-block",
+      "value": "22px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 111,
+      "selector": ".invite-homepage .site-footer",
+      "property": "background",
+      "value": "#320c43"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 111,
+      "selector": ".invite-homepage .site-footer",
+      "property": "padding-top",
+      "value": "88px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 116,
+      "selector": ".invite-homepage .preview-tag",
+      "property": "border-color",
+      "value": "#726376"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 117,
+      "selector": ".invite-homepage .footer-bottom",
+      "property": "border-color",
+      "value": "#65536e"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 120,
+      "selector": ".invite-home .section-space",
+      "property": "padding-block",
+      "value": "80px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 121,
+      "selector": ".invite-home .need-section",
+      "property": "padding-block",
+      "value": "56px 72px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 122,
+      "selector": ".invite-home .home-hero, .invite-home .leverage-grid, .invite-home .section-heading-split, .invite-home .assessment-grid",
+      "property": "gap",
+      "value": "36px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 123,
+      "selector": ".invite-home .need-card",
+      "property": "padding",
+      "value": "28px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 124,
+      "selector": ".invite-home .package-card",
+      "property": "padding",
+      "value": "28px 20px 0"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 139,
+      "selector": ".invite-home .section-space",
+      "property": "padding-block",
+      "value": "56px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 140,
+      "selector": ".invite-home .home-hero",
+      "property": "padding-block",
+      "value": "28px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 140,
+      "selector": ".invite-home .home-hero",
+      "property": "gap",
+      "value": "28px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 141,
+      "selector": ".invite-home .need-section",
+      "property": "padding-block",
+      "value": "40px 56px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 145,
+      "selector": ".invite-home .hero-actions",
+      "property": "gap",
+      "value": "18px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 146,
+      "selector": ".invite-home .hero-actions .button",
+      "property": "padding-inline",
+      "value": "18px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 146,
+      "selector": ".invite-home .hero-actions .button",
+      "property": "gap",
+      "value": "15px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 147,
+      "selector": ".invite-home .need-grid, .invite-home .package-grid",
+      "property": "gap",
+      "value": "24px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 148,
+      "selector": ".invite-home .need-card",
+      "property": "padding",
+      "value": "28px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 148,
+      "selector": ".invite-home .need-card",
+      "property": "border-radius",
+      "value": "12px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 149,
+      "selector": ".invite-home .package-card",
+      "property": "padding",
+      "value": "28px 0 0"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 150,
+      "selector": ".invite-home .leverage-grid",
+      "property": "gap",
+      "value": "40px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 151,
+      "selector": ".invite-home .leverage-tool",
+      "property": "padding",
+      "value": "0"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 152,
+      "selector": ".invite-home .calculator-inputs",
+      "property": "gap",
+      "value": "16px 12px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 153,
+      "selector": ".invite-home .math-results",
+      "property": "gap",
+      "value": "12px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 154,
+      "selector": ".invite-home .leverage-result, .invite-home .leverage-comparison",
+      "property": "padding",
+      "value": "16px 13px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 156,
+      "selector": ".invite-home .section-heading-split, .invite-home .assessment-grid, .invite-home .faq-grid",
+      "property": "gap",
+      "value": "32px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 158,
+      "selector": ".invite-home .mechanism-steps",
+      "property": "gap",
+      "value": "28px 20px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 161,
+      "selector": ".invite-home .assessment-form",
+      "property": "padding",
+      "value": "28px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 163,
+      "selector": ".invite-homepage .footer-grid",
+      "property": "gap",
+      "value": "32px 20px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 168,
+      "selector": ".invite-home .home-hero",
+      "property": "padding-top",
+      "value": "26px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 169,
+      "selector": ".invite-home .hero-actions",
+      "property": "gap",
+      "value": "14px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 170,
+      "selector": ".invite-home .hero-actions .button",
+      "property": "padding-inline",
+      "value": "14px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 170,
+      "selector": ".invite-home .hero-actions .button",
+      "property": "gap",
+      "value": "10px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 171,
+      "selector": ".invite-home .hero-actions .text-link",
+      "property": "gap",
+      "value": "6px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 172,
+      "selector": ".invite-home .need-card",
+      "property": "padding",
+      "value": "24px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 173,
+      "selector": ".invite-home .leverage-tool",
+      "property": "padding",
+      "value": "0"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 174,
+      "selector": ".invite-home .calculator-inputs input",
+      "property": "padding-inline",
+      "value": "8px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 175,
+      "selector": ".invite-home .leverage-result, .invite-home .leverage-comparison",
+      "property": "padding-inline",
+      "value": "11px"
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "line": 177,
+      "selector": ".invite-home .assessment-form",
+      "property": "padding",
+      "value": "24px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 2,
+      "selector": ".invite-home .package-offer .package-grid",
+      "property": "gap",
+      "value": "24px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 3,
+      "selector": ".invite-home .package-offer .package-card",
+      "property": "padding",
+      "value": "24px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 3,
+      "selector": ".invite-home .package-offer .package-card",
+      "property": "background",
+      "value": "#fff"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 3,
+      "selector": ".invite-home .package-offer .package-card",
+      "property": "border",
+      "value": "1px solid #e0dbe6"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 3,
+      "selector": ".invite-home .package-offer .package-card",
+      "property": "border-radius",
+      "value": "16px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 4,
+      "selector": ".invite-home .package-offer .package-card.is-recommended",
+      "property": "background",
+      "value": "#f1edf8"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 4,
+      "selector": ".invite-home .package-offer .package-card.is-recommended",
+      "property": "border",
+      "value": "2px solid #320c43"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 4,
+      "selector": ".invite-home .package-offer .package-card.is-recommended",
+      "property": "padding",
+      "value": "23px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 5,
+      "selector": ".invite-home .package-offer-full",
+      "property": "padding-block",
+      "value": "24px 36px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 6,
+      "selector": ".invite-home .package-offer .package-card",
+      "property": "padding",
+      "value": "20px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 7,
+      "selector": ".invite-home .package-offer .package-card.is-recommended",
+      "property": "padding",
+      "value": "19px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 8,
+      "selector": ".invite-home .package-offer .package-top",
+      "property": "gap",
+      "value": "12px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 9,
+      "selector": ".invite-home .package-offer .package-heading",
+      "property": "gap",
+      "value": "8px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 11,
+      "selector": ".invite-home .package-offer .package-badge",
+      "property": "background",
+      "value": "#320c43"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 11,
+      "selector": ".invite-home .package-offer .package-badge",
+      "property": "padding",
+      "value": "4px 8px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 12,
+      "selector": ".invite-home .package-offer .package-price",
+      "property": "border",
+      "value": "0"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 12,
+      "selector": ".invite-home .package-offer .package-price",
+      "property": "padding",
+      "value": "0"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 19,
+      "selector": ".invite-home .package-offer .package-visual-area",
+      "property": "border-radius",
+      "value": "10px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 19,
+      "selector": ".invite-home .package-offer .package-visual-area",
+      "property": "background",
+      "value": "#e0f1e9"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 20,
+      "selector": ".invite-home .package-offer .package-visual-area-accelerating",
+      "property": "background",
+      "value": "#e4dbf1"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 21,
+      "selector": ".invite-home .package-offer .package-visual-area-tracks",
+      "property": "background",
+      "value": "#efe8f1"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 23,
+      "selector": ".invite-home .package-offer .package-visual-area[data-supplied=\"true\"]",
+      "property": "background",
+      "value": "transparent"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 31,
+      "selector": ".invite-home .package-offer .package-situations ul",
+      "property": "padding-left",
+      "value": "18px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 34,
+      "selector": ".invite-home .package-offer .package-icon-items",
+      "property": "padding",
+      "value": "0"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 34,
+      "selector": ".invite-home .package-offer .package-icon-items",
+      "property": "gap",
+      "value": "12px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 35,
+      "selector": ".invite-home .package-offer .package-icon-items li",
+      "property": "gap",
+      "value": "7px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 39,
+      "selector": ".invite-home .package-offer .package-icon-items.package-combos",
+      "property": "gap",
+      "value": "10px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 42,
+      "selector": ".invite-home .package-offer .is-recommended .button",
+      "property": "background",
+      "value": "#320c43"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 43,
+      "selector": ".invite-home .package-offer .is-recommended .button:hover",
+      "property": "background",
+      "value": "#4d245e"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 46,
+      "selector": ".invite-home .package-offer .package-details summary",
+      "property": "padding-block",
+      "value": "8px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 47,
+      "selector": ".invite-home .package-offer .package-details summary:focus-visible, .invite-home .multiplier-detail summary:focus-visible",
+      "property": "outline",
+      "value": "2px solid currentColor"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 47,
+      "selector": ".invite-home .package-offer .package-details summary:focus-visible, .invite-home .multiplier-detail summary:focus-visible",
+      "property": "outline-offset",
+      "value": "4px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 48,
+      "selector": ".invite-home .package-offer .package-detail",
+      "property": "border-top",
+      "value": "1px solid var(--line)"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 48,
+      "selector": ".invite-home .package-offer .package-detail",
+      "property": "padding-top",
+      "value": "24px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 50,
+      "selector": ".invite-home .package-offer .package-detail ul",
+      "property": "padding-left",
+      "value": "18px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 54,
+      "selector": ".invite-home .package-offer .package-distinction",
+      "property": "border-left",
+      "value": "3px solid #320c43"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 54,
+      "selector": ".invite-home .package-offer .package-distinction",
+      "property": "padding-left",
+      "value": "16px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 57,
+      "selector": ".invite-home .pricing-decision",
+      "property": "background",
+      "value": "#fff"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 57,
+      "selector": ".invite-home .pricing-decision",
+      "property": "padding-block",
+      "value": "40px 48px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 59,
+      "selector": ".invite-home .pricing-decision-grid",
+      "property": "gap",
+      "value": "32px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 60,
+      "selector": ".invite-home .pricing-decision-grid p",
+      "property": "border-top",
+      "value": "2px solid var(--line)"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 60,
+      "selector": ".invite-home .pricing-decision-grid p",
+      "property": "padding-top",
+      "value": "24px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 61,
+      "selector": ".invite-home .pricing-multiplier",
+      "property": "background",
+      "value": "#320c43"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 61,
+      "selector": ".invite-home .pricing-multiplier",
+      "property": "padding-block",
+      "value": "48px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 68,
+      "selector": ".invite-pricing .package-order",
+      "property": "background",
+      "value": "#fff"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 69,
+      "selector": ".invite-pricing .package-order-grid",
+      "property": "gap",
+      "value": "80px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 72,
+      "selector": ".invite-pricing .partner-order-note",
+      "property": "padding",
+      "value": "24px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 72,
+      "selector": ".invite-pricing .partner-order-note",
+      "property": "background",
+      "value": "#f1edf8"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 72,
+      "selector": ".invite-pricing .partner-order-note",
+      "property": "border-radius",
+      "value": "10px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 75,
+      "selector": ".invite-pricing .package-order-form input, .invite-pricing .package-order-form select, .invite-pricing .package-order-form textarea",
+      "property": "border",
+      "value": "1px solid #cbc2d4"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 75,
+      "selector": ".invite-pricing .package-order-form input, .invite-pricing .package-order-form select, .invite-pricing .package-order-form textarea",
+      "property": "border-radius",
+      "value": "7px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 75,
+      "selector": ".invite-pricing .package-order-form input, .invite-pricing .package-order-form select, .invite-pricing .package-order-form textarea",
+      "property": "padding",
+      "value": "14px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 75,
+      "selector": ".invite-pricing .package-order-form input, .invite-pricing .package-order-form select, .invite-pricing .package-order-form textarea",
+      "property": "background",
+      "value": "#fff"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 77,
+      "selector": ".invite-pricing .order-fields",
+      "property": "gap",
+      "value": "24px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 86,
+      "selector": ".invite-home .package-offer .package-grid",
+      "property": "gap",
+      "value": "16px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 87,
+      "selector": ".invite-home .package-offer .package-card",
+      "property": "padding-inline",
+      "value": "18px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 88,
+      "selector": ".invite-home .package-offer .package-card.is-recommended",
+      "property": "padding-inline",
+      "value": "17px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 89,
+      "selector": ".invite-pricing .package-order-grid",
+      "property": "gap",
+      "value": "40px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 94,
+      "selector": ".invite-home .package-offer .package-grid",
+      "property": "gap",
+      "value": "32px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 95,
+      "selector": ".invite-home .package-offer .package-card",
+      "property": "padding",
+      "value": "24px 20px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 99,
+      "selector": ".invite-home .package-offer .package-card.is-recommended",
+      "property": "padding",
+      "value": "23px 19px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 101,
+      "selector": ".invite-home .pricing-decision-grid",
+      "property": "gap",
+      "value": "28px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 104,
+      "selector": ".invite-home .package-offer .package-top",
+      "property": "gap",
+      "value": "8px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 107,
+      "selector": ".invite-home .package-offer .package-infographic",
+      "property": "padding",
+      "value": "6px 10px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 108,
+      "selector": ".invite-home .package-offer .package-infographic.has-caption",
+      "property": "gap",
+      "value": "10px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 110,
+      "selector": ".invite-home .package-offer .package-visual-caption",
+      "property": "padding",
+      "value": "6px 8px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 110,
+      "selector": ".invite-home .package-offer .package-visual-caption",
+      "property": "background",
+      "value": "#e9fbf5"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 110,
+      "selector": ".invite-home .package-offer .package-visual-caption",
+      "property": "border-radius",
+      "value": "10px"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 113,
+      "selector": ".invite-home .package-offer .package-visual-area[data-editorial=\"true\"]",
+      "property": "background",
+      "value": "linear-gradient(115deg, #fff, #f7fffc)"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 114,
+      "selector": ".invite-home .package-offer .package-visual-area-accelerating[data-editorial=\"true\"]",
+      "property": "background",
+      "value": "linear-gradient(115deg, #f7fffc, #e6faf2)"
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "line": 115,
+      "selector": ".invite-home .package-offer .package-infographic.has-caption",
+      "property": "gap",
+      "value": "6px"
+    },
+    {
+      "path": "public/styles/pricing-invite.css",
+      "line": 2,
+      "selector": ".invite-pricing .pricing-hero",
+      "property": "padding-block",
+      "value": "64px 12px"
+    },
+    {
+      "path": "public/styles/pricing-invite.css",
+      "line": 6,
+      "selector": ".invite-pricing .package-section",
+      "property": "padding-top",
+      "value": "44px"
+    },
+    {
+      "path": "public/styles/pricing-invite.css",
+      "line": 9,
+      "selector": ".invite-pricing .home-section-arbeidsomrader",
+      "property": "background",
+      "value": "#fff"
+    },
+    {
+      "path": "public/styles/pricing-invite.css",
+      "line": 11,
+      "selector": ".invite-pricing .home-section-kostnader",
+      "property": "background",
+      "value": "#fbf9fc"
+    },
+    {
+      "path": "public/styles/pricing-invite.css",
+      "line": 12,
+      "selector": ".invite-pricing .home-section-gratis",
+      "property": "background",
+      "value": "#e5f2ed"
+    },
+    {
+      "path": "public/styles/pricing-invite.css",
+      "line": 13,
+      "selector": ".invite-pricing .home-section-gratis .section-links .text-link",
+      "property": "background",
+      "value": "var(--green)"
+    },
+    {
+      "path": "public/styles/pricing-invite.css",
+      "line": 13,
+      "selector": ".invite-pricing .home-section-gratis .section-links .text-link",
+      "property": "padding",
+      "value": "16px 24px"
+    },
+    {
+      "path": "public/styles/pricing-invite.css",
+      "line": 13,
+      "selector": ".invite-pricing .home-section-gratis .section-links .text-link",
+      "property": "border-radius",
+      "value": "7px"
+    },
+    {
+      "path": "public/styles/pricing-invite.css",
+      "line": 14,
+      "selector": ".invite-pricing .home-section-gratis .section-links .text-link:hover",
+      "property": "background",
+      "value": "#06675f"
+    },
+    {
+      "path": "public/styles/pricing-invite.css",
+      "line": 16,
+      "selector": ".invite-pricing .pricing-hero",
+      "property": "padding-top",
+      "value": "48px"
+    },
+    {
+      "path": "public/styles/pricing-invite.css",
+      "line": 20,
+      "selector": ".invite-pricing .pricing-hero",
+      "property": "padding-top",
+      "value": "32px"
+    },
+    {
+      "path": "public/styles/pricing-invite.css",
+      "line": 22,
+      "selector": ".invite-pricing .package-section",
+      "property": "padding-top",
+      "value": "36px"
+    },
+    {
+      "path": "public/styles/pricing-invite.css",
+      "line": 23,
+      "selector": ".invite-pricing .home-section-arbeidsomrader .section-items",
+      "property": "gap",
+      "value": "28px"
+    },
+    {
+      "path": "public/styles/service-invite.css",
+      "line": 2,
+      "selector": ".invite-service .service-hero",
+      "property": "padding-block",
+      "value": "32px 72px"
+    },
+    {
+      "path": "public/styles/service-invite.css",
+      "line": 8,
+      "selector": ".invite-service .hero-actions",
+      "property": "gap",
+      "value": "28px"
+    },
+    {
+      "path": "public/styles/service-invite.css",
+      "line": 9,
+      "selector": ".invite-service .home-section-behov, .invite-service .home-section-prioritering",
+      "property": "background",
+      "value": "#fff"
+    },
+    {
+      "path": "public/styles/service-invite.css",
+      "line": 10,
+      "selector": ".invite-service .home-section-behov .info-item",
+      "property": "padding",
+      "value": "32px"
+    },
+    {
+      "path": "public/styles/service-invite.css",
+      "line": 10,
+      "selector": ".invite-service .home-section-behov .info-item",
+      "property": "border-top",
+      "value": "0"
+    },
+    {
+      "path": "public/styles/service-invite.css",
+      "line": 10,
+      "selector": ".invite-service .home-section-behov .info-item",
+      "property": "border-radius",
+      "value": "14px"
+    },
+    {
+      "path": "public/styles/service-invite.css",
+      "line": 10,
+      "selector": ".invite-service .home-section-behov .info-item",
+      "property": "background",
+      "value": "#e0f1e9"
+    },
+    {
+      "path": "public/styles/service-invite.css",
+      "line": 11,
+      "selector": ".invite-service .home-section-behov .home-item-1",
+      "property": "background",
+      "value": "#eae4f4"
+    },
+    {
+      "path": "public/styles/service-invite.css",
+      "line": 12,
+      "selector": ".invite-service .home-section-behov .home-item-2",
+      "property": "background",
+      "value": "#fbf9fc"
+    },
+    {
+      "path": "public/styles/service-invite.css",
+      "line": 13,
+      "selector": ".invite-service .home-section-kanaler .section-heading-split",
+      "property": "gap",
+      "value": "24px"
+    },
+    {
+      "path": "public/styles/service-invite.css",
+      "line": 15,
+      "selector": ".invite-service .home-section-kanaler .section-items",
+      "property": "gap",
+      "value": "56px"
+    },
+    {
+      "path": "public/styles/service-invite.css",
+      "line": 17,
+      "selector": ".invite-service .info-item .text-link",
+      "property": "padding-top",
+      "value": "24px"
+    },
+    {
+      "path": "public/styles/service-invite.css",
+      "line": 18,
+      "selector": ".invite-service .home-section-sammenheng",
+      "property": "background",
+      "value": "#320c43"
+    },
+    {
+      "path": "public/styles/service-invite.css",
+      "line": 21,
+      "selector": ".invite-service .service-pricing-heading",
+      "property": "gap",
+      "value": "40px"
+    },
+    {
+      "path": "public/styles/service-invite.css",
+      "line": 24,
+      "selector": ".invite-service .service-package-grid",
+      "property": "gap",
+      "value": "64px"
+    },
+    {
+      "path": "public/styles/service-invite.css",
+      "line": 25,
+      "selector": ".invite-service .service-package",
+      "property": "border-top",
+      "value": "2px solid var(--line)"
+    },
+    {
+      "path": "public/styles/service-invite.css",
+      "line": 25,
+      "selector": ".invite-service .service-package",
+      "property": "padding-top",
+      "value": "28px"
+    },
+    {
+      "path": "public/styles/service-invite.css",
+      "line": 26,
+      "selector": ".invite-service .service-package.is-recommended",
+      "property": "border-top-color",
+      "value": "var(--green)"
+    },
+    {
+      "path": "public/styles/service-invite.css",
+      "line": 29,
+      "selector": ".invite-service .service-package .package-price",
+      "property": "border",
+      "value": "0"
+    },
+    {
+      "path": "public/styles/service-invite.css",
+      "line": 30,
+      "selector": ".invite-service .home-section-sjekk",
+      "property": "background",
+      "value": "#e5f2ed"
+    },
+    {
+      "path": "public/styles/service-invite.css",
+      "line": 32,
+      "selector": ".invite-service .home-section-sjekk .text-link",
+      "property": "background",
+      "value": "var(--green)"
+    },
+    {
+      "path": "public/styles/service-invite.css",
+      "line": 32,
+      "selector": ".invite-service .home-section-sjekk .text-link",
+      "property": "padding",
+      "value": "16px 24px"
+    },
+    {
+      "path": "public/styles/service-invite.css",
+      "line": 32,
+      "selector": ".invite-service .home-section-sjekk .text-link",
+      "property": "border-radius",
+      "value": "7px"
+    },
+    {
+      "path": "public/styles/service-invite.css",
+      "line": 33,
+      "selector": ".invite-service .home-section-sjekk .text-link:hover",
+      "property": "background",
+      "value": "#06675f"
+    },
+    {
+      "path": "public/styles/service-invite.css",
+      "line": 35,
+      "selector": ".invite-service .home-section-behov .info-item",
+      "property": "padding",
+      "value": "24px"
+    },
+    {
+      "path": "public/styles/service-invite.css",
+      "line": 39,
+      "selector": ".invite-service .service-package-grid",
+      "property": "gap",
+      "value": "36px"
+    },
+    {
+      "path": "public/styles/service-invite.css",
+      "line": 42,
+      "selector": ".invite-service .service-hero",
+      "property": "padding-block",
+      "value": "24px 48px"
+    },
+    {
+      "path": "public/styles/service-invite.css",
+      "line": 46,
+      "selector": ".invite-service .section-items, .invite-service .service-package-grid",
+      "property": "gap",
+      "value": "32px"
+    },
+    {
+      "path": "public/styles/service-invite.css",
+      "line": 47,
+      "selector": ".invite-service .home-section-kanaler .section-items",
+      "property": "gap",
+      "value": "32px"
+    },
+    {
+      "path": "public/styles/service-invite.css",
+      "line": 51,
+      "selector": ".invite-service .hero-actions",
+      "property": "gap",
+      "value": "22px"
+    },
+    {
+      "path": "public/styles/service-invite.css",
+      "line": 55,
+      "selector": ".invite-service .service-hero-split",
+      "property": "gap",
+      "value": "64px"
+    },
+    {
+      "path": "public/styles/service-invite.css",
+      "line": 57,
+      "selector": ".invite-service .service-hero-visual",
+      "property": "border-radius",
+      "value": "14px"
+    },
+    {
+      "path": "public/styles/service-invite.css",
+      "line": 61,
+      "selector": ".invite-service .service-hero-split",
+      "property": "gap",
+      "value": "32px"
+    },
+    {
+      "path": "src/components/HomeHeroPhoto.astro",
+      "line": 3,
+      "selector": ".hero-proof",
+      "property": "padding",
+      "value": "14px 18px"
+    },
+    {
+      "path": "src/components/HomeHeroPhoto.astro",
+      "line": 3,
+      "selector": ".hero-proof",
+      "property": "border-radius",
+      "value": "12px"
+    },
+    {
+      "path": "src/components/HomeHeroPhoto.astro",
+      "line": 3,
+      "selector": ".hero-proof",
+      "property": "background",
+      "value": "#f5f3ec"
+    },
+    {
+      "path": "src/components/HomeHeroPhoto.astro",
+      "line": 4,
+      "selector": ".hero-proof-result",
+      "property": "gap",
+      "value": "0 6px"
+    },
+    {
+      "path": "src/components/HomeHeroPhoto.astro",
+      "line": 9,
+      "selector": ".hero-proof",
+      "property": "padding",
+      "value": "12px 16px"
+    },
+    {
+      "path": "src/components/HomeLeverage.astro",
+      "line": 6,
+      "selector": ":global(.invite-home) .calculator-introduction .calculator-formula",
+      "property": "border",
+      "value": "0"
+    },
+    {
+      "path": "src/components/HomeLeverage.astro",
+      "line": 6,
+      "selector": ":global(.invite-home) .calculator-introduction .calculator-formula",
+      "property": "padding",
+      "value": "0"
+    },
+    {
+      "path": "src/components/HomeLeverage.astro",
+      "line": 11,
+      "selector": ".calculator-multiplier",
+      "property": "gap",
+      "value": "8px"
+    },
+    {
+      "path": "src/components/HomeLeverage.astro",
+      "line": 17,
+      "selector": ":global(.invite-home) .calculator-inputs input[type=\"range\"]",
+      "property": "padding",
+      "value": "0"
+    },
+    {
+      "path": "src/components/HomeLeverage.astro",
+      "line": 17,
+      "selector": ":global(.invite-home) .calculator-inputs input[type=\"range\"]",
+      "property": "border",
+      "value": "0"
+    },
+    {
+      "path": "src/components/HomeLeverage.astro",
+      "line": 17,
+      "selector": ":global(.invite-home) .calculator-inputs input[type=\"range\"]",
+      "property": "border-radius",
+      "value": "0"
+    },
+    {
+      "path": "src/components/HomeLeverage.astro",
+      "line": 17,
+      "selector": ":global(.invite-home) .calculator-inputs input[type=\"range\"]",
+      "property": "background",
+      "value": "transparent"
+    },
+    {
+      "path": "src/components/HomeLeverage.astro",
+      "line": 18,
+      "selector": ".scenario-chart",
+      "property": "padding",
+      "value": "12px"
+    },
+    {
+      "path": "src/components/HomeLeverage.astro",
+      "line": 18,
+      "selector": ".scenario-chart",
+      "property": "border-radius",
+      "value": "10px"
+    },
+    {
+      "path": "src/components/HomeLeverage.astro",
+      "line": 18,
+      "selector": ".scenario-chart",
+      "property": "background",
+      "value": "#fbf9fc"
+    },
+    {
+      "path": "src/components/HomeLeverage.astro",
+      "line": 19,
+      "selector": ".scenario-chart figcaption",
+      "property": "gap",
+      "value": "8px"
+    },
+    {
+      "path": "src/components/HomeLeverage.astro",
+      "line": 21,
+      "selector": ".scenario-legend",
+      "property": "gap",
+      "value": "4px 16px"
+    },
+    {
+      "path": "src/components/HomeLeverage.astro",
+      "line": 22,
+      "selector": ".scenario-legend span",
+      "property": "gap",
+      "value": "6px"
+    },
+    {
+      "path": "src/components/HomeLeverage.astro",
+      "line": 23,
+      "selector": ".scenario-legend span::before",
+      "property": "border-top",
+      "value": "2px dashed #63516b"
+    },
+    {
+      "path": "src/components/HomeLeverage.astro",
+      "line": 24,
+      "selector": ".scenario-legend .scenario-improved::before",
+      "property": "border-top",
+      "value": "3px solid #087b73"
+    },
+    {
+      "path": "src/components/HomeProof.astro",
+      "line": 2,
+      "selector": ".proof-section",
+      "property": "background",
+      "value": "#f7f6ef"
+    },
+    {
+      "path": "src/components/HomeProof.astro",
+      "line": 3,
+      "selector": ".proof-grid",
+      "property": "gap",
+      "value": "24px"
+    },
+    {
+      "path": "src/components/HomeProof.astro",
+      "line": 4,
+      "selector": ".proof-card",
+      "property": "padding",
+      "value": "clamp(24px, 3vw, 44px)"
+    },
+    {
+      "path": "src/components/HomeProof.astro",
+      "line": 4,
+      "selector": ".proof-card",
+      "property": "border-radius",
+      "value": "24px"
+    },
+    {
+      "path": "src/components/HomeProof.astro",
+      "line": 4,
+      "selector": ".proof-card",
+      "property": "background",
+      "value": "#e0f0ef"
+    },
+    {
+      "path": "src/components/HomeProof.astro",
+      "line": 5,
+      "selector": ".proof-featured",
+      "property": "background",
+      "value": "#320c43"
+    },
+    {
+      "path": "src/components/HomeProof.astro",
+      "line": 10,
+      "selector": ".proof-comparison",
+      "property": "gap",
+      "value": "16px"
+    },
+    {
+      "path": "src/components/HomeProof.astro",
+      "line": 19,
+      "selector": ".proof-grid",
+      "property": "gap",
+      "value": "20px"
+    },
+    {
+      "path": "src/components/HomeProof.astro",
+      "line": 20,
+      "selector": ".proof-comparison",
+      "property": "gap",
+      "value": "8px"
+    }
+  ],
+  "distinct": {
+    "radius": {
+      "0": 5,
+      "10px": 6,
+      "12px": 8,
+      "14px": 3,
+      "16px": 2,
+      "18px": 1,
+      "24px": 1,
+      "4px": 2,
+      "50%": 2,
+      "5px": 2,
+      "6px": 3,
+      "7px": 4,
+      "8px": 1,
+      "999px": 1
+    },
+    "shadow": {
+      "0 10px 32px #320c4320": 1,
+      "0 9px 16px -13px #233c3240": 1
+    },
+    "border": {
+      "0": 21,
+      "#087b73": 1,
+      "#65536e": 1,
+      "#726376": 1,
+      "#a97932": 1,
+      "#b9d8d4": 1,
+      "#dddce5": 1,
+      "#f9bf9f": 1,
+      "10px": 6,
+      "12px": 8,
+      "14px": 3,
+      "16px": 2,
+      "18px": 1,
+      "1px solid #223a3040": 1,
+      "1px solid #bdc8b7": 1,
+      "1px solid #cbc2d4": 1,
+      "1px solid #d6e5de": 1,
+      "1px solid #d9d3de": 4,
+      "1px solid #e0dbe6": 1,
+      "1px solid #e2dce5": 1,
+      "1px solid transparent": 2,
+      "1px solid var(--green)": 1,
+      "1px solid var(--line)": 18,
+      "24px": 1,
+      "2px dashed #63516b": 1,
+      "2px solid #320c43": 1,
+      "2px solid #ab7748": 1,
+      "2px solid #b9e8d4": 1,
+      "2px solid #e0dbe6": 1,
+      "2px solid var(--line)": 2,
+      "3px solid #087b73": 1,
+      "3px solid #320c43": 1,
+      "4px": 2,
+      "50%": 2,
+      "5px": 2,
+      "6px": 3,
+      "7px": 4,
+      "8px": 1,
+      "999px": 1,
+      "var(--cream)": 1,
+      "var(--green)": 2
+    },
+    "surface": {
+      "#06675f": 3,
+      "#163e2e": 1,
+      "#320c43": 8,
+      "#4d245e": 1,
+      "#b9e8d4": 1,
+      "#dfe6d8": 1,
+      "#e0f0ef": 3,
+      "#e0f1e9": 4,
+      "#e4dbf1": 1,
+      "#e5f2ed": 3,
+      "#e6e7dc": 1,
+      "#e7e9de": 1,
+      "#e9eadd": 1,
+      "#e9fbf5": 1,
+      "#eae4f4": 2,
+      "#ebece0": 1,
+      "#efe8f1": 1,
+      "#f0ddcb": 1,
+      "#f0ecf5": 1,
+      "#f1edf8": 2,
+      "#f1eee7": 1,
+      "#f2dcc8": 1,
+      "#f5ebd8": 1,
+      "#f5eedc": 1,
+      "#f5f3ec": 1,
+      "#f7f6ef": 1,
+      "#faf9fc": 1,
+      "#fbf9fc": 9,
+      "#fff": 6,
+      "#fffdf7": 1,
+      "linear-gradient(115deg, #f7fffc, #e6faf2)": 1,
+      "linear-gradient(115deg, #fff, #f7fffc)": 1,
+      "linear-gradient(90deg, #e0f0ef80, transparent 80%)": 1,
+      "none": 5,
+      "transparent": 5,
+      "var(--apricot)": 2,
+      "var(--cream)": 9,
+      "var(--green)": 7,
+      "var(--ink)": 1,
+      "var(--paper)": 4,
+      "var(--sage)": 1,
+      "white": 5
+    },
+    "padding": {
+      "0": 11,
+      "0 0 20px": 1,
+      "0 28px 0 0": 1,
+      "100px": 1,
+      "104px": 1,
+      "10px": 1,
+      "10px 12px": 4,
+      "11px": 1,
+      "11px 19px": 1,
+      "12px": 1,
+      "12px 14px": 1,
+      "12px 16px": 1,
+      "13px": 1,
+      "14px": 4,
+      "14px 15px": 1,
+      "14px 17px 18px": 1,
+      "14px 18px": 1,
+      "15px": 3,
+      "15px 23px": 1,
+      "15px 25px": 2,
+      "16px": 4,
+      "16px 13px": 1,
+      "16px 18px": 2,
+      "16px 24px": 2,
+      "17px": 1,
+      "17px 22px 21px": 1,
+      "18px": 6,
+      "18px 22px": 1,
+      "19px": 2,
+      "20px": 7,
+      "20px 0": 1,
+      "21px": 1,
+      "22px": 2,
+      "22px 50px": 1,
+      "23px": 2,
+      "23px 19px": 1,
+      "24px": 15,
+      "24px 20px": 1,
+      "24px 36px": 1,
+      "24px 48px": 1,
+      "24px 4px": 1,
+      "25px": 1,
+      "26px": 2,
+      "28px": 6,
+      "28px 0 0": 2,
+      "28px 20px 0": 1,
+      "28px 85px": 1,
+      "30px 31px": 1,
+      "32px": 3,
+      "32px 28px 0": 1,
+      "32px 32px 24px": 1,
+      "32px 72px": 1,
+      "36px": 5,
+      "37px": 1,
+      "40px": 1,
+      "40px 48px": 1,
+      "40px 56px": 1,
+      "42px 30px": 1,
+      "44px": 3,
+      "44px 28px": 1,
+      "45px": 1,
+      "48px": 4,
+      "4px 8px": 2,
+      "52px": 1,
+      "55px": 1,
+      "56px": 2,
+      "56px 72px": 1,
+      "5px 8px": 1,
+      "62px": 1,
+      "64px 12px": 1,
+      "64px 36px": 1,
+      "64px 88px": 1,
+      "65px": 3,
+      "6px": 1,
+      "6px 10px": 1,
+      "6px 8px": 1,
+      "70px": 1,
+      "7px 11px": 1,
+      "80px": 1,
+      "83px 74px": 1,
+      "88px": 1,
+      "88px 48px": 1,
+      "8px": 2,
+      "8px 14px": 1,
+      "90px": 1,
+      "9px": 2,
+      "clamp(24px, 3vw, 44px)": 1
+    },
+    "gap": {
+      "0": 1,
+      "0 6px": 1,
+      "10px": 8,
+      "10px 14px": 1,
+      "11px": 1,
+      "12px": 9,
+      "12px 22px": 1,
+      "14px": 5,
+      "14px 36px": 1,
+      "15px": 2,
+      "16px": 3,
+      "16px 12px": 1,
+      "18px": 3,
+      "20px": 8,
+      "22px": 3,
+      "24px": 10,
+      "26px": 1,
+      "28px": 7,
+      "28px 20px": 1,
+      "30px": 3,
+      "31px": 1,
+      "32px": 7,
+      "32px 20px": 2,
+      "35px": 3,
+      "36px": 2,
+      "38px": 1,
+      "40px": 4,
+      "45px": 2,
+      "48px": 1,
+      "4px": 1,
+      "4px 16px": 1,
+      "4px 20px": 1,
+      "56px": 1,
+      "5px": 1,
+      "64px": 2,
+      "6px": 6,
+      "6px 20px": 1,
+      "70px": 1,
+      "7px": 3,
+      "80px": 4,
+      "85px": 2,
+      "88px": 1,
+      "8px": 12,
+      "90px": 2,
+      "96px": 4,
+      "9px": 3,
+      "clamp(36px, 7vw, 110px)": 1
+    }
+  }
+}

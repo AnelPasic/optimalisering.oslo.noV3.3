@@ -21,14 +21,14 @@ const cases = getPublishableCases(content, records);
 
 <style>
   .proof-section { background: #f7f6ef; }
-  .proof-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
-  .proof-card { min-width: 0; padding: clamp(24px, 3vw, 44px); border-radius: 24px; background: #e0f0ef; color: #173d39; }
-  .proof-featured { grid-column: 1 / -1; background: #320c43; color: #fff9ec; }
+  .proof-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gap); }
+  .proof-card { min-width: 0; padding: var(--panel-pad-feature); border-radius: var(--radius-card-lg); background: var(--surface-mint); color: #173d39; }
+  .proof-featured { grid-column: 1 / -1; background: var(--surface-dark); color: #fff9ec; }
   .proof-primary { grid-template-columns: minmax(0, 1fr); }
   h3 { margin: 0 0 12px; font-size: var(--type-h3); line-height: var(--leading-h3); }
   .proof-metric { margin: 0; font-weight: var(--weight-heading); }
   .proof-delta { margin: 8px 0 0; font-family: 'Instrument Sans Variable', sans-serif; font-size: var(--type-h3); font-weight: var(--weight-heading); line-height: var(--leading-h3); }
-  .proof-comparison { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: start; gap: 16px; margin: 24px 0 0; max-width: 800px; }
+  .proof-comparison { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: start; gap: var(--gap-md); margin: 24px 0 0; max-width: 800px; }
   .proof-comparison dl { margin: 0; }
   dt { font-size: var(--type-label); font-weight: var(--weight-label); line-height: var(--leading-small); }
   dd { margin: 0; }
@@ -37,7 +37,7 @@ const cases = getPublishableCases(content, records);
   .proof-comparison dd span { display: block; margin-top: 8px; font-size: var(--type-meta); line-height: var(--leading-small); }
   .proof-arrow { font-size: var(--type-icon); align-self: center; line-height: var(--leading-small); }
   @media (max-width: 700px) {
-    .proof-grid { grid-template-columns: minmax(0, 1fr); gap: 20px; }
-    .proof-comparison { gap: 8px; }
+    .proof-grid { grid-template-columns: minmax(0, 1fr); }
+    .proof-comparison { gap: var(--gap-xs); }
   }
 </style>

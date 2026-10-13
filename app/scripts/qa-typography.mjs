@@ -10,7 +10,7 @@ if (server) { server.listen(0, '127.0.0.1'); await once(server, 'listening'); }
 const base = process.env.QA_BASE_URL || `http://127.0.0.1:${server.address().port}`;
 const phase = process.env.QA_PHASE || 'after';
 const auditOnly = phase === 'before';
-const output = resolve(`../coordination/evidence/typography/${phase}`);
+const output = resolve(process.env.QA_OUTPUT_DIR || `../coordination/evidence/typography/${phase}`);
 mkdirSync(output, { recursive: true });
 // Deliberately empty. Hidden accessibility text and non-text glyphs are excluded by visibility/semantics.
 const belowMinimumAllowlist = [];

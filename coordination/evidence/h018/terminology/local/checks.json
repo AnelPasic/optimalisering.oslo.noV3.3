@@ -1,0 +1,566 @@
+{
+  "base": "http://127.0.0.1:4356",
+  "checkedAt": "2026-10-13T09:06:07.769Z",
+  "report": [
+    {
+      "width": 1440,
+      "route": "/",
+      "terms": [
+        "seo",
+        "ai-synlighet",
+        "cro",
+        "roas",
+        "google-ads",
+        "relevant-trafikk",
+        "konverteringsrate",
+        "lokal-seo",
+        "meta-ads",
+        "checkout",
+        "organisk-trafikk",
+        "google-search-console"
+      ],
+      "firstOccurrenceOnly": true,
+      "viewportFit": true,
+      "noOpeningShift": true,
+      "hoverOrTap": true,
+      "keyboard": true,
+      "outsideClick": true,
+      "escape": true
+    },
+    {
+      "width": 1440,
+      "route": "/synlighet/",
+      "terms": [
+        "seo",
+        "lokal-seo",
+        "ai-synlighet",
+        "organisk-trafikk",
+        "google-search-console"
+      ],
+      "firstOccurrenceOnly": true,
+      "viewportFit": true,
+      "noOpeningShift": true,
+      "hoverOrTap": true,
+      "keyboard": true,
+      "outsideClick": true,
+      "escape": true
+    },
+    {
+      "width": 1440,
+      "route": "/konvertering/",
+      "terms": [
+        "ordreverdi",
+        "margin",
+        "konverteringsrate",
+        "checkout",
+        "relevant-trafikk",
+        "cro"
+      ],
+      "firstOccurrenceOnly": true,
+      "viewportFit": true,
+      "noOpeningShift": true,
+      "hoverOrTap": true,
+      "keyboard": true,
+      "outsideClick": true,
+      "escape": true
+    },
+    {
+      "width": 1440,
+      "route": "/priser/",
+      "terms": [
+        "seo",
+        "ai-synlighet",
+        "lokal-seo",
+        "google-ads",
+        "meta-ads"
+      ],
+      "firstOccurrenceOnly": true,
+      "viewportFit": true,
+      "noOpeningShift": true,
+      "hoverOrTap": true,
+      "keyboard": true,
+      "outsideClick": true,
+      "escape": true
+    },
+    {
+      "width": 1440,
+      "route": "/seo/",
+      "terms": [
+        "seo"
+      ],
+      "firstOccurrenceOnly": true,
+      "viewportFit": true,
+      "noOpeningShift": true,
+      "hoverOrTap": true,
+      "keyboard": true,
+      "outsideClick": true,
+      "escape": true
+    },
+    {
+      "width": 1440,
+      "route": "/ai-synlighet/",
+      "terms": [
+        "ai-synlighet"
+      ],
+      "firstOccurrenceOnly": true,
+      "viewportFit": true,
+      "noOpeningShift": true,
+      "hoverOrTap": true,
+      "keyboard": true,
+      "outsideClick": true,
+      "escape": true
+    },
+    {
+      "width": 1440,
+      "route": "/nettbutikkoptimalisering/",
+      "terms": [
+        "checkout",
+        "ordreverdi",
+        "margin",
+        "konverteringsrate"
+      ],
+      "firstOccurrenceOnly": true,
+      "viewportFit": true,
+      "noOpeningShift": true,
+      "hoverOrTap": true,
+      "keyboard": true,
+      "outsideClick": true,
+      "escape": true
+    },
+    {
+      "width": 900,
+      "route": "/",
+      "terms": [
+        "seo",
+        "ai-synlighet",
+        "cro",
+        "roas",
+        "google-ads",
+        "relevant-trafikk",
+        "konverteringsrate",
+        "lokal-seo",
+        "meta-ads",
+        "checkout",
+        "organisk-trafikk",
+        "google-search-console"
+      ],
+      "firstOccurrenceOnly": true,
+      "viewportFit": true,
+      "noOpeningShift": true,
+      "hoverOrTap": true,
+      "keyboard": true,
+      "outsideClick": true,
+      "escape": true
+    },
+    {
+      "width": 900,
+      "route": "/synlighet/",
+      "terms": [
+        "seo",
+        "lokal-seo",
+        "ai-synlighet",
+        "organisk-trafikk",
+        "google-search-console"
+      ],
+      "firstOccurrenceOnly": true,
+      "viewportFit": true,
+      "noOpeningShift": true,
+      "hoverOrTap": true,
+      "keyboard": true,
+      "outsideClick": true,
+      "escape": true
+    },
+    {
+      "width": 900,
+      "route": "/konvertering/",
+      "terms": [
+        "ordreverdi",
+        "margin",
+        "konverteringsrate",
+        "checkout",
+        "relevant-trafikk",
+        "cro"
+      ],
+      "firstOccurrenceOnly": true,
+      "viewportFit": true,
+      "noOpeningShift": true,
+      "hoverOrTap": true,
+      "keyboard": true,
+      "outsideClick": true,
+      "escape": true
+    },
+    {
+      "width": 900,
+      "route": "/priser/",
+      "terms": [
+        "seo",
+        "ai-synlighet",
+        "lokal-seo",
+        "google-ads",
+        "meta-ads"
+      ],
+      "firstOccurrenceOnly": true,
+      "viewportFit": true,
+      "noOpeningShift": true,
+      "hoverOrTap": true,
+      "keyboard": true,
+      "outsideClick": true,
+      "escape": true
+    },
+    {
+      "width": 900,
+      "route": "/seo/",
+      "terms": [
+        "seo"
+      ],
+      "firstOccurrenceOnly": true,
+      "viewportFit": true,
+      "noOpeningShift": true,
+      "hoverOrTap": true,
+      "keyboard": true,
+      "outsideClick": true,
+      "escape": true
+    },
+    {
+      "width": 900,
+      "route": "/ai-synlighet/",
+      "terms": [
+        "ai-synlighet"
+      ],
+      "firstOccurrenceOnly": true,
+      "viewportFit": true,
+      "noOpeningShift": true,
+      "hoverOrTap": true,
+      "keyboard": true,
+      "outsideClick": true,
+      "escape": true
+    },
+    {
+      "width": 900,
+      "route": "/nettbutikkoptimalisering/",
+      "terms": [
+        "checkout",
+        "ordreverdi",
+        "margin",
+        "konverteringsrate"
+      ],
+      "firstOccurrenceOnly": true,
+      "viewportFit": true,
+      "noOpeningShift": true,
+      "hoverOrTap": true,
+      "keyboard": true,
+      "outsideClick": true,
+      "escape": true
+    },
+    {
+      "width": 390,
+      "route": "/",
+      "terms": [
+        "seo",
+        "ai-synlighet",
+        "cro",
+        "roas",
+        "google-ads",
+        "relevant-trafikk",
+        "konverteringsrate",
+        "lokal-seo",
+        "meta-ads",
+        "checkout",
+        "organisk-trafikk",
+        "google-search-console"
+      ],
+      "firstOccurrenceOnly": true,
+      "viewportFit": true,
+      "noOpeningShift": true,
+      "hoverOrTap": true,
+      "keyboard": true,
+      "outsideClick": true,
+      "escape": true
+    },
+    {
+      "width": 390,
+      "route": "/synlighet/",
+      "terms": [
+        "seo",
+        "lokal-seo",
+        "ai-synlighet",
+        "organisk-trafikk",
+        "google-search-console"
+      ],
+      "firstOccurrenceOnly": true,
+      "viewportFit": true,
+      "noOpeningShift": true,
+      "hoverOrTap": true,
+      "keyboard": true,
+      "outsideClick": true,
+      "escape": true
+    },
+    {
+      "width": 390,
+      "route": "/konvertering/",
+      "terms": [
+        "ordreverdi",
+        "margin",
+        "konverteringsrate",
+        "checkout",
+        "relevant-trafikk",
+        "cro"
+      ],
+      "firstOccurrenceOnly": true,
+      "viewportFit": true,
+      "noOpeningShift": true,
+      "hoverOrTap": true,
+      "keyboard": true,
+      "outsideClick": true,
+      "escape": true
+    },
+    {
+      "width": 390,
+      "route": "/priser/",
+      "terms": [
+        "seo",
+        "ai-synlighet",
+        "lokal-seo",
+        "google-ads",
+        "meta-ads"
+      ],
+      "firstOccurrenceOnly": true,
+      "viewportFit": true,
+      "noOpeningShift": true,
+      "hoverOrTap": true,
+      "keyboard": true,
+      "outsideClick": true,
+      "escape": true
+    },
+    {
+      "width": 390,
+      "route": "/seo/",
+      "terms": [
+        "seo"
+      ],
+      "firstOccurrenceOnly": true,
+      "viewportFit": true,
+      "noOpeningShift": true,
+      "hoverOrTap": true,
+      "keyboard": true,
+      "outsideClick": true,
+      "escape": true
+    },
+    {
+      "width": 390,
+      "route": "/ai-synlighet/",
+      "terms": [
+        "ai-synlighet"
+      ],
+      "firstOccurrenceOnly": true,
+      "viewportFit": true,
+      "noOpeningShift": true,
+      "hoverOrTap": true,
+      "keyboard": true,
+      "outsideClick": true,
+      "escape": true
+    },
+    {
+      "width": 390,
+      "route": "/nettbutikkoptimalisering/",
+      "terms": [
+        "checkout",
+        "ordreverdi",
+        "margin",
+        "konverteringsrate"
+      ],
+      "firstOccurrenceOnly": true,
+      "viewportFit": true,
+      "noOpeningShift": true,
+      "hoverOrTap": true,
+      "keyboard": true,
+      "outsideClick": true,
+      "escape": true
+    },
+    {
+      "width": 320,
+      "route": "/",
+      "terms": [
+        "seo",
+        "ai-synlighet",
+        "cro",
+        "roas",
+        "google-ads",
+        "relevant-trafikk",
+        "konverteringsrate",
+        "lokal-seo",
+        "meta-ads",
+        "checkout",
+        "organisk-trafikk",
+        "google-search-console"
+      ],
+      "firstOccurrenceOnly": true,
+      "viewportFit": true,
+      "noOpeningShift": true,
+      "hoverOrTap": true,
+      "keyboard": true,
+      "outsideClick": true,
+      "escape": true
+    },
+    {
+      "width": 320,
+      "route": "/synlighet/",
+      "terms": [
+        "seo",
+        "lokal-seo",
+        "ai-synlighet",
+        "organisk-trafikk",
+        "google-search-console"
+      ],
+      "firstOccurrenceOnly": true,
+      "viewportFit": true,
+      "noOpeningShift": true,
+      "hoverOrTap": true,
+      "keyboard": true,
+      "outsideClick": true,
+      "escape": true
+    },
+    {
+      "width": 320,
+      "route": "/konvertering/",
+      "terms": [
+        "ordreverdi",
+        "margin",
+        "konverteringsrate",
+        "checkout",
+        "relevant-trafikk",
+        "cro"
+      ],
+      "firstOccurrenceOnly": true,
+      "viewportFit": true,
+      "noOpeningShift": true,
+      "hoverOrTap": true,
+      "keyboard": true,
+      "outsideClick": true,
+      "escape": true
+    },
+    {
+      "width": 320,
+      "route": "/priser/",
+      "terms": [
+        "seo",
+        "ai-synlighet",
+        "lokal-seo",
+        "google-ads",
+        "meta-ads"
+      ],
+      "firstOccurrenceOnly": true,
+      "viewportFit": true,
+      "noOpeningShift": true,
+      "hoverOrTap": true,
+      "keyboard": true,
+      "outsideClick": true,
+      "escape": true
+    },
+    {
+      "width": 320,
+      "route": "/seo/",
+      "terms": [
+        "seo"
+      ],
+      "firstOccurrenceOnly": true,
+      "viewportFit": true,
+      "noOpeningShift": true,
+      "hoverOrTap": true,
+      "keyboard": true,
+      "outsideClick": true,
+      "escape": true
+    },
+    {
+      "width": 320,
+      "route": "/ai-synlighet/",
+      "terms": [
+        "ai-synlighet"
+      ],
+      "firstOccurrenceOnly": true,
+      "viewportFit": true,
+      "noOpeningShift": true,
+      "hoverOrTap": true,
+      "keyboard": true,
+      "outsideClick": true,
+      "escape": true
+    },
+    {
+      "width": 320,
+      "route": "/nettbutikkoptimalisering/",
+      "terms": [
+        "checkout",
+        "ordreverdi",
+        "margin",
+        "konverteringsrate"
+      ],
+      "firstOccurrenceOnly": true,
+      "viewportFit": true,
+      "noOpeningShift": true,
+      "hoverOrTap": true,
+      "keyboard": true,
+      "outsideClick": true,
+      "escape": true
+    }
+  ],
+  "glossaryReport": [
+    {
+      "width": 1440,
+      "collapsedHeight": 3334,
+      "expandedHeight": 8522,
+      "directAnchors": 25,
+      "nativeKeyboard": true,
+      "fullExplanationLink": true,
+      "expandedNoOverflow": true
+    },
+    {
+      "width": 900,
+      "collapsedHeight": 3474,
+      "expandedHeight": 8126,
+      "directAnchors": 25,
+      "nativeKeyboard": true,
+      "fullExplanationLink": true,
+      "expandedNoOverflow": true
+    },
+    {
+      "width": 390,
+      "collapsedHeight": 4570,
+      "expandedHeight": 12521,
+      "directAnchors": 25,
+      "nativeKeyboard": true,
+      "fullExplanationLink": true,
+      "expandedNoOverflow": true
+    },
+    {
+      "width": 320,
+      "collapsedHeight": 4882,
+      "expandedHeight": 13985,
+      "directAnchors": 25,
+      "nativeKeyboard": true,
+      "fullExplanationLink": true,
+      "expandedNoOverflow": true
+    }
+  ],
+  "coverage": [
+    "seo",
+    "ai-synlighet",
+    "cro",
+    "roas",
+    "google-ads",
+    "relevant-trafikk",
+    "konverteringsrate",
+    "lokal-seo",
+    "meta-ads",
+    "checkout",
+    "organisk-trafikk",
+    "google-search-console",
+    "ordreverdi",
+    "margin"
+  ],
+  "glossaryTerms": 25,
+  "directAnchorsAtFourWidths": true,
+  "noJsAtFourWidths": true,
+  "errors": [],
+  "posts": [],
+  "result": "PASS"
+}

@@ -1,0 +1,53 @@
+{
+  "baseline": "9354087",
+  "protectedFiles": 1532,
+  "typographyTokensExact": true,
+  "contentCmsMathProofPricesMediaBackendReferencesExact": true,
+  "checks": [
+    {
+      "path": "app/src/styles/global.css",
+      "frozenDeclarations": 533,
+      "exact": true
+    },
+    {
+      "path": "app/src/styles/terminology.css",
+      "frozenDeclarations": 115,
+      "exact": true
+    },
+    {
+      "path": "app/public/styles/home-invite.css",
+      "frozenDeclarations": 285,
+      "exact": true
+    },
+    {
+      "path": "app/public/styles/service-invite.css",
+      "frozenDeclarations": 77,
+      "exact": true
+    },
+    {
+      "path": "app/public/styles/pricing-invite.css",
+      "frozenDeclarations": 18,
+      "exact": true
+    },
+    {
+      "path": "app/public/styles/package-offer.css",
+      "frozenDeclarations": 187,
+      "exact": true
+    },
+    {
+      "path": "app/src/components/HomeProof.astro",
+      "frozenDeclarations": 43,
+      "exact": true
+    },
+    {
+      "path": "app/src/components/HomeHeroPhoto.astro",
+      "frozenDeclarations": 25,
+      "exact": true
+    },
+    {
+      "path": "app/src/components/HomeLeverage.astro",
+      "frozenDeclarations": 88,
+      "exact": true
+    }
+  ]
+}
