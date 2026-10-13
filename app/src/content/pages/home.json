@@ -76,7 +76,7 @@
       },
       "defaults": {
         "visits": 2000,
-        "conversion": 1,
+        "conversion": 0.5,
         "trafficIncrease": 10,
         "newConversion": 2
       },
