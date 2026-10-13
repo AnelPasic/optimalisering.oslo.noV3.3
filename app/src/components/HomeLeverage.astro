@@ -160,6 +160,8 @@ const ratio = formatScenarioRatio(result.current, result.scenario);
   .scenario-current-dot, .scenario-current-value { fill: #63516b; }
   .scenario-improved-dot, .scenario-improved-value { fill: #087b73; }
   .scenario-chart text { font-family: var(--body); font-size: var(--type-meta); line-height: var(--leading-small); }
+  /* Keep the longest valid compact value on its light surface at 320px. */
+  .scenario-current-value, .scenario-improved-value { letter-spacing: -.075em; }
   .scenario-month { fill: #566359; letter-spacing: -.025em; }
   .scenario-current-line, .scenario-improved-line { transition: d 160ms ease; }
   .scenario-chart circle { transition: cy 160ms ease; }

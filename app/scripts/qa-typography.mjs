@@ -104,6 +104,10 @@ function inspectText() {
   }
   if (document.documentElement.scrollWidth > innerWidth) failures.overflow.push({ scrollWidth: document.documentElement.scrollWidth, viewport: innerWidth });
   const ticks = [...document.querySelectorAll('[data-chart-month]')];
+  for (const e of document.querySelectorAll('[data-chart-current-value], [data-chart-improved-value]')) {
+    const rect = e.getBoundingClientRect(), surface = e.closest('figure').getBoundingClientRect();
+    if (visible(e, [rect]) && (rect.left < surface.left - 1 || rect.right > surface.right + 1)) failures.clipping.push({ selector: describe(e), text: e.textContent, reason: 'graph value outside its contrasting surface' });
+  }
   for (let i = 1; i < ticks.length; i++) {
     const previous = ticks[i - 1].getBoundingClientRect(), current = ticks[i].getBoundingClientRect();
     if (previous.right > current.left) failures.clipping.push({ selector: '[data-chart-month]', reason: 'overlapping ticks', month: i + 1 });
