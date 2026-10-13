@@ -92,3 +92,14 @@
 :root .content-section .info-item[data-surface] p { color: var(--muted); }
 :root .content-section[data-surface] .item-number,
 :root .content-section .info-item[data-surface] .item-number { color: var(--ink); border-color: var(--line); }
+
+
+/* H-019 follow-up: keep explicitly same-colored child cards visually distinct
+   from their parent section without changing the selected surface. */
+:root .content-section[data-surface="base"] .info-item[data-surface="base"],
+:root .content-section[data-surface="soft"] .info-item[data-surface="soft"],
+:root .content-section[data-surface="mint"] .info-item[data-surface="mint"],
+:root .content-section[data-surface="lavender"] .info-item[data-surface="lavender"],
+:root .content-section[data-surface="dark"] .info-item[data-surface="dark"] {
+  border: var(--border-subtle);
+}
