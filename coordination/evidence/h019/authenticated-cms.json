@@ -1,0 +1,14 @@
+{
+  "baseline": "59b52bd0e139d4425ba4f2b76814d971989c0304",
+  "originalHomeBlob": "644429eb021f5297807b3b636bd47ab0550d0995",
+  "edit": "b9dd79631f0e276b1b4120e23bc069beaac102e8",
+  "field": "sections[0].surface",
+  "value": "mint",
+  "onlyExpectedPresentationFieldChanged": true,
+  "protectedCmsModelHasNoSurfaceField": true,
+  "cmsStandardRestore": "a9b07953b91f8c435cb7ea75f0121c29ce8b8d48",
+  "cmsStandardRestoreOnlyExpectedFieldChanged": true,
+  "exactRestoredHomeBlob": "644429eb021f5297807b3b636bd47ab0550d0995",
+  "restoreMethod": "Authenticated Standard save, then remove the test-only explicit default and restore the CMS-stripped final newline to the exact original Git blob",
+  "finalExactRestorationInDeliveryReceiptCommit": true
+}

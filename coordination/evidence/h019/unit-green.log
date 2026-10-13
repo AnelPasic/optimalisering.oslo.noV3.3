@@ -1,10 +1,10 @@
-✔ renderer mapping validates the shared enum and suppresses default/protected/invalid values (1.0226ms)
-✔ ordinary section and item surfaces accept only the six approved values (13.7431ms)
-✔ missing, cleared and explicit default choices preserve automatic styling (0.7223ms)
-✔ all page editors have separate ordinary/protected models and one reusable select (0.5727ms)
-✔ protected CTA/form rows cannot acquire a surface or be retyped as content (2.5126ms)
-✔ CMS surface save and restore preserve every unrelated field, ID, order and link (37.5234ms)
-✔ section model migration adds only editor metadata; all existing content remains exact (455.8795ms)
+✔ renderer mapping validates the shared enum and suppresses default/protected/invalid values (1.0461ms)
+✔ ordinary section and item surfaces accept only the six approved values (15.0852ms)
+✔ missing, cleared and explicit default choices preserve automatic styling (0.7066ms)
+✔ all page editors have separate ordinary/protected models and one reusable select (0.5918ms)
+✔ protected CTA/form rows cannot acquire a surface or be retyped as content (2.4537ms)
+✔ CMS surface save and restore preserve every unrelated field, ID, order and link (40.5095ms)
+✔ section model migration adds only editor metadata; all existing content remains exact (448.99ms)
 ℹ tests 7
 ℹ suites 0
 ℹ pass 7
@@ -12,4 +12,4 @@
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 763.6835
+ℹ duration_ms 769.5353

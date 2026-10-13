@@ -1,0 +1,26 @@
+## Latest page snapshot
+uid=2_0 RootWebArea "Forside | anelpasic/optimalisering.oslo.nov3.3@main | Pages CMS" url="https://app.pagescms.org/AnelPasic/optimalisering.oslo.noV3.3/main/file/homepage"
+  uid=2_43 main
+    uid=2_49 main
+      uid=2_50 form
+        uid=2_116 status atomic live="assertive" relevant="additions text"
+        uid=2_237 status atomic live="assertive" relevant="additions text"
+        uid=2_269 status atomic live="assertive" relevant="additions text"
+        uid=2_299 status atomic live="assertive" relevant="additions text"
+        uid=2_442 status atomic live="assertive" relevant="additions text"
+        uid=2_483 status atomic live="assertive" relevant="additions text"
+        uid=8_0 button "Dismiss"
+        uid=5_10 combobox "Standard" autocomplete="list" expandable expanded focusable focused haspopup="listbox"
+        uid=5_17 status atomic live="assertive" relevant="additions text"
+        uid=5_33 status atomic live="assertive" relevant="additions text"
+        uid=5_36 status atomic live="assertive" relevant="additions text"
+        uid=6_18 status atomic live="assertive" relevant="additions text"
+        uid=6_21 status atomic live="assertive" relevant="additions text"
+        uid=6_24 status atomic live="assertive" relevant="additions text"
+        uid=2_509 status atomic live="assertive" relevant="additions text"
+        uid=2_527 status atomic live="assertive" relevant="additions text"
+  uid=2_529 region "Notifications alt+T" live="polite" relevant="additions text"
+  uid=8_1 generic
+    uid=8_2 listbox orientation="vertical"
+  uid=8_3 button "Dismiss"
+
