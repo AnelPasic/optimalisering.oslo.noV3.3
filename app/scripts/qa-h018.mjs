@@ -86,7 +86,7 @@ try {
           assert.ok((await page.locator('#order-selection').textContent()).includes(item.title));
           assert.equal(await page.locator('#partner-order-note').isVisible(), item.key === 'partner');
         }
-        await form.evaluate(e => e.submit());
+        await form.evaluate(e => { if (!(e instanceof HTMLFormElement)) throw new Error('Order form missing'); e.submit(); });
         assert.equal(await form.locator('[type=submit]').isDisabled(), true);
         behavior.packagePreselectionAndDisabledNativeSubmit = true;
       }
