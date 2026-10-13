@@ -51,17 +51,20 @@
           "title": "SEO",
           "text": "Søk, sider og tekniske forhold som påvirker om relevante kunder finner og forstår tilbudet.",
           "href": "/seo/",
-          "label": "Les om SEO"
+          "label": "Les om SEO",
+          "surface": "mint"
         },
         {
           "title": "Lokal SEO",
-          "text": "Bedriftsinformasjon, lokale søk og sider som gjør det tydelig hvor og hvem du hjelper."
+          "text": "Bedriftsinformasjon, lokale søk og sider som gjør det tydelig hvor og hvem du hjelper.",
+          "surface": "lavender"
         },
         {
           "title": "AI-synlighet",
           "text": "Hvordan bedriften og tilbudet blir forstått og omtalt i AI-baserte søk og svar.",
           "href": "/ai-synlighet/",
-          "label": "Les om AI-synlighet"
+          "label": "Les om AI-synlighet",
+          "surface": "dark"
         }
       ]
     },
