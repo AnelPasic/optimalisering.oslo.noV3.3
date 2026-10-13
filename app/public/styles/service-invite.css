@@ -11,6 +11,10 @@
 .invite-service .home-section-behov .home-item-1 { background: var(--surface-lavender); }
 .invite-service .home-section-behov .home-item-2 { background: var(--surface-soft); }
 .invite-service .home-section-kanaler .section-items { gap: 56px; }
+.invite-service .home-section-kanaler .info-item {
+  padding: var(--panel-pad-lg);
+  border-radius: var(--radius-card);
+}
 .invite-service .info-item { display: flex; flex-direction: column; align-items: start; }
 .invite-service .info-item .text-link { margin-top: auto; padding-top: 24px; }
 .invite-service .home-section-sammenheng { --ink: #fff; --muted: #e0d9e7; --line: #65536e; background: var(--surface-dark); color: #fff; }
@@ -30,7 +34,8 @@
 .invite-service .home-section-sjekk .text-link { background: var(--green); color: #fff; padding: var(--panel-pad-sm) var(--panel-pad); border-radius: var(--radius-button); }
 .invite-service .home-section-sjekk .text-link:hover { background: #06675f; }
 @media (max-width: 1100px) {
-  .invite-service .home-section-behov .info-item { padding: var(--panel-pad); }
+  .invite-service .home-section-behov .info-item,
+  .invite-service .home-section-kanaler .info-item { padding: var(--panel-pad); }
   .invite-service .home-section-sammenheng .section-links, .invite-service .home-section-sjekk .section-links { margin-left: calc((100% + 36px) / 2); }
   .invite-service .service-pricing-heading { display: block; }
   .invite-service .service-pricing-heading > .text-link { margin-top: 24px; }
