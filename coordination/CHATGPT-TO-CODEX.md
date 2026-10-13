@@ -1,26 +1,29 @@
 # ChatGPT to Codex
 
-## Active handoff - H-018 COMPONENT / BOX SYSTEM PASS
+## Active handoff - H-019 CMS SURFACE CONTROLS
 
 Date: 2026-10-13
 Authority: OWNER + STRATEGY_CONTENT
-Exact contract: `coordination/H018-COMPONENT-BOX-SYSTEM.md`
+Exact contract: coordination/H019-CMS-SURFACE-CONTROLS.md
 
-Typography is complete and OWNER-tuned on current main. Do not reopen it.
+Pull latest main and implement only H-019.
 
-Pull latest main and execute H-018 only:
-- audit repeated box/card/panel shells
-- centralize radius / surface / border / shadow / panel-spacing primitives
-- remove accidental near-duplicate component styling
-- preserve intentional hierarchy and current Invite-derived visual DNA
-- preserve calculator/proof/package/hero/glossary/form behavior and content
-- do not introduce Tailwind or DaisyUI into this existing project
-- do not redesign the site
+Add safe Pages CMS surface choices for ordinary sections and their ordinary content boxes:
+- Standard
+- Hvit
+- Lys
+- Mint
+- Lavendel
+- Plomme
 
-Run full verify + 1440/900/390/320 visual QA.
-Push to main, verify the connected Worker, update CODEX-TO-CHATGPT, then STOP for OWNER visual review.
+Use typed design-system variants only. No raw CSS class/hex input.
+
+default must preserve today's styling. Do not expose this to proof/packages/calculator/hero or reopen typography, box geometry or the latest centered section-heading correction.
+
+Run focused CMS/surface QA + full verify, push main, verify Worker, update CODEX-TO-CHATGPT, then STOP for OWNER review.
 
 ---
+
 
 
 
