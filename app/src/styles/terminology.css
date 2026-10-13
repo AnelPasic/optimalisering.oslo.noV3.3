@@ -27,14 +27,14 @@ a.term-trigger:focus-visible { outline: 2px solid currentColor; outline-offset: 
   border-radius: 12px;
   background: #fffdf7;
   color: #320c43;
-  font: 400 15px/1.5 'Figtree Variable', sans-serif;
+  font-family: var(--body); font-size: var(--type-body-sm); font-weight: var(--weight-body); line-height: var(--leading-small);
   box-shadow: 0 10px 32px #320c4320;
   overflow: auto;
   z-index: 1000;
 }
 .term-panel[hidden] { display: none; }
 .term-panel [data-term-description] { display: block; margin: 0 0 8px; }
-.term-panel a { color: #320c43; font-weight: 600; text-decoration: underline; }
+.term-panel a { color: #320c43; font-weight: var(--weight-heading); text-decoration: underline; }
 
 /* Glossary */
 .glossary-hero {
@@ -43,21 +43,21 @@ a.term-trigger:focus-visible { outline: 2px solid currentColor; outline-offset: 
 }
 .glossary-hero .eyebrow {
   margin: 0 0 16px;
-  font-size: 12px;
-  letter-spacing: .055em;
+  font-size: var(--type-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
   text-transform: uppercase;
-}
+ line-height: var(--leading-small); }
 .glossary-hero h1 {
   max-width: 980px;
-  font-size: clamp(42px, 5.6vw, 76px);
-  line-height: 1.02;
+  font-size: var(--type-display);
+  line-height: var(--leading-display);
   letter-spacing: -.055em;
 }
 .glossary-hero > p:not(.eyebrow) {
   margin-top: 24px;
   max-width: 700px;
-  font-size: clamp(18px, 2vw, 22px);
-  line-height: 1.55;
+  font-size: var(--type-lead);
+  line-height: var(--leading-lead);
   color: #5f5069;
 }
 .glossary-navigation {
@@ -75,7 +75,7 @@ a.term-trigger:focus-visible { outline: 2px solid currentColor; outline-offset: 
   border-radius: 999px;
   color: #320c43;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: var(--weight-heading);
 }
 .glossary-navigation a:hover,
 .glossary-navigation a:focus-visible {
@@ -97,13 +97,13 @@ a.term-trigger:focus-visible { outline: 2px solid currentColor; outline-offset: 
 }
 .glossary-group-heading .eyebrow {
   margin: 0 0 10px;
-  font-size: 12px;
-  color: #0b877b;
-}
+  font-size: var(--type-eyebrow);
+  color: #087b73;
+ line-height: var(--leading-small); }
 .glossary-group h2 {
   max-width: 320px;
-  font-size: clamp(30px, 3vw, 44px);
-  line-height: 1.05;
+  font-size: var(--type-h2);
+  line-height: var(--leading-h2);
 }
 .glossary-list {
   min-width: 0;
@@ -135,20 +135,20 @@ a.term-trigger:focus-visible { outline: 2px solid currentColor; outline-offset: 
 }
 .glossary-term-name {
   font-family: 'Instrument Sans Variable', sans-serif;
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 1.1;
+  font-size: var(--type-h4);
+  font-weight: var(--weight-heading);
+  line-height: var(--leading-h4);
   color: #320c43;
 }
 .glossary-full-name {
-  font-size: 13px;
-  line-height: 1.35;
+  font-size: var(--type-meta);
+  line-height: var(--leading-small);
   color: #796b82;
 }
 .glossary-short {
   max-width: 62ch;
-  font-size: 16px;
-  line-height: 1.55;
+  font-size: var(--type-body-sm);
+  line-height: var(--leading-body);
   color: #4d4055;
 }
 .glossary-toggle {
@@ -159,8 +159,8 @@ a.term-trigger:focus-visible { outline: 2px solid currentColor; outline-offset: 
   border-radius: 50%;
   background: #e0f0ef;
   color: #173d39;
-  font-size: 20px;
-  line-height: 1;
+  font-size: var(--type-icon);
+  line-height: var(--leading-small);
   transition: transform .15s ease;
 }
 .glossary-entry details[open] .glossary-toggle { transform: rotate(45deg); }
@@ -178,9 +178,9 @@ a.term-trigger:focus-visible { outline: 2px solid currentColor; outline-offset: 
   display: inline-block;
   margin-top: 14px;
   color: #796b82;
-  font-size: 13px;
+  font-size: var(--type-meta);
   text-decoration: none;
-}
+ line-height: var(--leading-small); }
 .glossary-anchor:hover { text-decoration: underline; }
 .glossary-entry:target details {
   background: linear-gradient(90deg, #e0f0ef80, transparent 80%);
@@ -205,8 +205,6 @@ a.term-trigger:focus-visible { outline: 2px solid currentColor; outline-offset: 
 
 @media (max-width: 650px) {
   .glossary-hero { padding-block: 44px 28px; }
-  .glossary-hero h1 { font-size: clamp(38px, 11vw, 52px); }
-  .glossary-hero > p:not(.eyebrow) { font-size: 17px; }
   .glossary-navigation {
     gap: 8px;
     margin-top: 24px;
@@ -214,8 +212,8 @@ a.term-trigger:focus-visible { outline: 2px solid currentColor; outline-offset: 
   .glossary-navigation a {
     min-height: 38px;
     padding: 7px 11px;
-    font-size: 13px;
-  }
+    font-size: var(--type-body-sm);
+   line-height: var(--leading-body); }
   .glossary-group { padding-block: 36px; }
   .glossary-entry summary {
     grid-template-columns: 1fr 28px;
@@ -223,8 +221,7 @@ a.term-trigger:focus-visible { outline: 2px solid currentColor; outline-offset: 
     padding: 20px 0;
   }
   .glossary-term-heading { grid-column: 1; }
-  .glossary-short { grid-column: 1 / -1; font-size: 15px; }
+  .glossary-short { grid-column: 1 / -1; }
   .glossary-toggle { grid-column: 2; grid-row: 1; }
-  .glossary-term-name { font-size: 22px; }
   .glossary-example { padding: 14px 15px; }
 }

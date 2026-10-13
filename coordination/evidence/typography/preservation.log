@@ -1,0 +1,53 @@
+{
+  "baseline": "e0adeec",
+  "protectedFiles": 1206,
+  "styleChecks": [
+    {
+      "path": "app/src/styles/global.css",
+      "nonTypographicDeclarations": 547,
+      "exact": true
+    },
+    {
+      "path": "app/src/styles/terminology.css",
+      "nonTypographicDeclarations": 116,
+      "exact": true
+    },
+    {
+      "path": "app/public/styles/home-invite.css",
+      "nonTypographicDeclarations": 267,
+      "exact": true
+    },
+    {
+      "path": "app/public/styles/service-invite.css",
+      "nonTypographicDeclarations": 90,
+      "exact": true
+    },
+    {
+      "path": "app/public/styles/pricing-invite.css",
+      "nonTypographicDeclarations": 22,
+      "exact": true
+    },
+    {
+      "path": "app/public/styles/package-offer.css",
+      "nonTypographicDeclarations": 184,
+      "exact": true
+    },
+    {
+      "path": "app/src/components/HomeProof.astro",
+      "nonTypographicDeclarations": 29,
+      "exact": true
+    },
+    {
+      "path": "app/src/components/HomeHeroPhoto.astro",
+      "nonTypographicDeclarations": 22,
+      "exact": true
+    },
+    {
+      "path": "app/src/components/HomeLeverage.astro",
+      "nonTypographicDeclarations": 70,
+      "exact": true
+    }
+  ],
+  "copyCmsPricesProofMathChartArtIntakeNoindexExact": true,
+  "surfaceLayoutDeclarationsExact": true
+}

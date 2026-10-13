@@ -1,10 +1,10 @@
 /* H-009: service patterns gated to /synlighet/ until their whole-page review. */
 .invite-service .service-hero { padding-block: 32px 72px; }
-.invite-service .breadcrumbs { margin-bottom: 44px; font-size: 12px; color: var(--muted); }
+.invite-service .breadcrumbs { margin-bottom: 44px; font-size: var(--type-meta); color: var(--muted); line-height: var(--leading-small); }
 .invite-service .breadcrumbs a { color: inherit; }
-.invite-service .service-hero h1 { max-width: 980px; font-size: clamp(40px, 4vw, 56px); line-height: 1.08; letter-spacing: -.045em; }
-.invite-service .service-hero .eyebrow { margin-bottom: 20px; font-size: 13px; text-transform: none; letter-spacing: 0; }
-.invite-service .service-hero .hero-intro { max-width: 740px; margin-top: 24px; font-size: 18px; line-height: 1.65; color: var(--muted); }
+.invite-service .service-hero h1 { max-width: 980px; font-size: var(--type-display); line-height: var(--leading-display); letter-spacing: -.045em; }
+.invite-service .service-hero .eyebrow { margin-bottom: 20px; font-size: var(--type-eyebrow); text-transform: none; letter-spacing: var(--tracking-eyebrow); line-height: var(--leading-small); }
+.invite-service .service-hero .hero-intro { max-width: 740px; margin-top: 24px; font-size: var(--type-lead); line-height: var(--leading-lead); color: var(--muted); }
 .invite-service .hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 28px; margin-top: 28px; }
 .invite-service .home-section-behov, .invite-service .home-section-prioritering { background: #fff; }
 .invite-service .home-section-behov .info-item { padding: 32px; border-top: 0; border-radius: 14px; background: #e0f1e9; }
@@ -24,8 +24,8 @@
 .invite-service .service-package-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; max-width: 1080px; margin-top: 48px; }
 .invite-service .service-package { border-top: 2px solid var(--line); padding-top: 28px; min-width: 0; }
 .invite-service .service-package.is-recommended { border-top-color: var(--green); }
-.invite-service .service-package h3 { font-size: 30px; }
-.invite-service .service-package > p { color: var(--muted); line-height: 1.6; margin-top: 16px; }
+.invite-service .service-package h3 { font-size: var(--type-h3); line-height: var(--leading-h3); }
+.invite-service .service-package > p { color: var(--muted); line-height: var(--leading-body); margin-top: 16px; }
 .invite-service .service-package .package-price { border: 0; margin-top: 12px; }
 .invite-service .home-section-sjekk { background: #e5f2ed; }
 .invite-service .home-section-sjekk .section-links { margin-left: calc((100% + 96px) / 2); }
@@ -41,15 +41,13 @@
 @media (max-width: 650px) {
   .invite-service .service-hero { padding-block: 24px 48px; }
   .invite-service .breadcrumbs { margin-bottom: 32px; }
-  .invite-service .service-hero h1 { font-size: 38px; }
-  .invite-service .service-hero .hero-intro { font-size: 16px; margin-top: 20px; }
+  .invite-service .service-hero .hero-intro { margin-top: 20px; }
   .invite-service .home-section-sammenheng .section-links, .invite-service .home-section-sjekk .section-links { margin-left: 0; }
   .invite-service .section-items, .invite-service .service-package-grid { grid-template-columns: 1fr; gap: 32px; }
   .invite-service .home-section-kanaler .section-items { gap: 32px; }
   .invite-service .service-package-grid { margin-top: 32px; }
 }
 @media (max-width: 359px) {
-  .invite-service .service-hero h1 { font-size: 33px; }
   .invite-service .hero-actions { gap: 22px; }
 }
 

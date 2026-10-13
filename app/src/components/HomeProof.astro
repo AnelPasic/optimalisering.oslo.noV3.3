@@ -25,22 +25,19 @@ const cases = getPublishableCases(content, records);
   .proof-card { min-width: 0; padding: clamp(24px, 3vw, 44px); border-radius: 24px; background: #e0f0ef; color: #173d39; }
   .proof-featured { grid-column: 1 / -1; background: #320c43; color: #fff9ec; }
   .proof-primary { grid-template-columns: minmax(0, 1fr); }
-  h3 { margin: 0 0 12px; font-size: clamp(26px, 3vw, 38px); }
-  .proof-metric { margin: 0; font-weight: 600; }
-  .proof-delta { margin: 8px 0 0; font-family: 'Instrument Sans Variable', sans-serif; font-size: 26px; font-weight: 600; }
+  h3 { margin: 0 0 12px; font-size: var(--type-h3); line-height: var(--leading-h3); }
+  .proof-metric { margin: 0; font-weight: var(--weight-heading); }
+  .proof-delta { margin: 8px 0 0; font-family: 'Instrument Sans Variable', sans-serif; font-size: var(--type-h3); font-weight: var(--weight-heading); line-height: var(--leading-h3); }
   .proof-comparison { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: start; gap: 16px; margin: 24px 0 0; max-width: 800px; }
   .proof-comparison dl { margin: 0; }
-  dt { font-size: 14px; font-weight: 600; }
+  dt { font-size: var(--type-label); font-weight: var(--weight-label); line-height: var(--leading-small); }
   dd { margin: 0; }
-  .proof-comparison strong { display: block; font-family: 'Instrument Sans Variable', sans-serif; font-size: clamp(32px, 4vw, 56px); line-height: 1.2; font-weight: 600; white-space: nowrap; }
-  .proof-featured .proof-comparison strong { font-size: clamp(40px, 6vw, 80px); }
-  .proof-comparison dd span { display: block; margin-top: 8px; font-size: 14px; }
-  .proof-arrow { font-size: 24px; align-self: center; }
+  .proof-comparison strong { display: block; font-family: 'Instrument Sans Variable', sans-serif; font-size: var(--type-stat); line-height: var(--leading-stat); font-weight: var(--weight-heading); overflow-wrap: anywhere; }
+  .proof-featured .proof-comparison strong { font-size: var(--type-display); line-height: var(--leading-stat); }
+  .proof-comparison dd span { display: block; margin-top: 8px; font-size: var(--type-meta); line-height: var(--leading-small); }
+  .proof-arrow { font-size: var(--type-icon); align-self: center; line-height: var(--leading-small); }
   @media (max-width: 700px) {
     .proof-grid { grid-template-columns: minmax(0, 1fr); gap: 20px; }
     .proof-comparison { gap: 8px; }
-    .proof-comparison strong { font-size: clamp(30px, 8vw, 48px); }
-    .proof-featured .proof-comparison strong { font-size: clamp(34px, 10vw, 56px); }
-    .proof-arrow { font-size: 20px; }
   }
 </style>

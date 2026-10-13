@@ -1,0 +1,877 @@
+[
+  {
+    "file": "src/styles/global.css",
+    "selector": "body",
+    "size": "var(--type-body)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": "h1",
+    "size": "var(--type-display)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": "h2",
+    "size": "var(--type-h2)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": "h3",
+    "size": "var(--type-h3)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": "h4",
+    "size": "var(--type-h4)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".eyebrow",
+    "size": "var(--type-eyebrow)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".small-copy",
+    "size": "var(--type-meta)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".body-copy",
+    "size": "var(--type-body)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".button",
+    "size": "var(--type-button)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".button-small",
+    "size": "var(--type-button-sm)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".text-link",
+    "size": "var(--type-label)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".wordmark",
+    "size": "var(--type-label)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".wordmark-second",
+    "size": "var(--type-body-lg)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".desktop-nav a",
+    "size": "var(--type-label)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".hero-copy .eyebrow",
+    "size": "var(--type-eyebrow)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".hero-intro",
+    "size": "var(--type-lead)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".hero-note",
+    "size": "var(--type-meta)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".hero-strip",
+    "size": "var(--type-meta)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".hero-strip span::before",
+    "size": "var(--type-icon)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".journey-top",
+    "size": "var(--type-body-sm)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".journey-top > span:last-child",
+    "size": "var(--type-icon)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".journey-number",
+    "size": "var(--type-label)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".journey-label",
+    "size": "var(--type-h4)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".journey-caption",
+    "size": "var(--type-meta)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".journey-bottom",
+    "size": "var(--type-meta)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".item-number",
+    "size": "var(--type-label)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".info-item p",
+    "size": "var(--type-body)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".process-items .item-number",
+    "size": "var(--type-label)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".process-items h3",
+    "size": "var(--type-h4)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".leverage-grid .body-copy",
+    "size": "var(--type-body)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".leverage-label",
+    "size": "var(--type-eyebrow)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".leverage-inputs label",
+    "size": "var(--type-form-label)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".leverage-inputs input",
+    "size": "var(--type-body-lg)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".leverage-inputs > span",
+    "size": "var(--type-icon)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".input-unit",
+    "size": "var(--type-body-lg)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".leverage-result > span:first-child",
+    "size": "var(--type-h3)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".leverage-result output",
+    "size": "var(--type-stat)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".leverage-result > span:last-child",
+    "size": "var(--type-body-sm)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".leverage-comparison",
+    "size": "var(--type-body-sm)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".leverage-tool .small-copy",
+    "size": "var(--type-meta)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".assessment-copy h2",
+    "size": "var(--type-h2)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".form-process h3",
+    "size": "var(--type-h4)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".form-process p",
+    "size": "var(--type-body-sm)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".form-heading .eyebrow",
+    "size": "var(--type-eyebrow)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".form-heading h3",
+    "size": "var(--type-h3)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".assessment-form > label",
+    "size": "var(--type-form-label)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".optional",
+    "size": "var(--type-helper)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".assessment-form > input, .assessment-form > select, .assessment-form > textarea",
+    "size": "var(--type-body-sm)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".form-privacy",
+    "size": "var(--type-helper)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".form-notice",
+    "size": "var(--type-helper)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".form-status",
+    "size": "var(--type-helper)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".field-error",
+    "size": "var(--type-helper)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".faq-list summary",
+    "size": "var(--type-body)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".faq-list summary span",
+    "size": "var(--type-body)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".faq-list details p",
+    "size": "var(--type-body)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".breadcrumbs",
+    "size": "var(--type-meta)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".inner-hero-grid h1",
+    "size": "var(--type-display)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".inner-hero-grid .hero-intro",
+    "size": "var(--type-lead)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".assessment-hero-grid h1",
+    "size": "var(--type-display)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".footer-brand",
+    "size": "var(--type-h4)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".footer-grid p",
+    "size": "var(--type-meta)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".footer-grid nav a",
+    "size": "var(--type-meta)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".footer-bottom",
+    "size": "var(--type-meta)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".preview-tag",
+    "size": "var(--type-meta)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".hero-copy h1",
+    "size": "var(--type-display)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".info-item h3",
+    "size": "var(--type-h4)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".hero-copy h1",
+    "size": "var(--type-display)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".hero-actions .button",
+    "size": "var(--type-button-sm)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".hero-actions .text-link",
+    "size": "var(--type-label)"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".hero-copy h1",
+    "size": "var(--type-display)"
+  },
+  {
+    "file": "src/styles/terminology.css",
+    "selector": ".term-panel",
+    "size": "var(--type-body-sm)"
+  },
+  {
+    "file": "src/styles/terminology.css",
+    "selector": ".glossary-hero .eyebrow",
+    "size": "var(--type-eyebrow)"
+  },
+  {
+    "file": "src/styles/terminology.css",
+    "selector": ".glossary-hero h1",
+    "size": "var(--type-display)"
+  },
+  {
+    "file": "src/styles/terminology.css",
+    "selector": ".glossary-hero > p:not(.eyebrow)",
+    "size": "var(--type-lead)"
+  },
+  {
+    "file": "src/styles/terminology.css",
+    "selector": ".glossary-group-heading .eyebrow",
+    "size": "var(--type-eyebrow)"
+  },
+  {
+    "file": "src/styles/terminology.css",
+    "selector": ".glossary-group h2",
+    "size": "var(--type-h2)"
+  },
+  {
+    "file": "src/styles/terminology.css",
+    "selector": ".glossary-term-name",
+    "size": "var(--type-h4)"
+  },
+  {
+    "file": "src/styles/terminology.css",
+    "selector": ".glossary-full-name",
+    "size": "var(--type-meta)"
+  },
+  {
+    "file": "src/styles/terminology.css",
+    "selector": ".glossary-short",
+    "size": "var(--type-body-sm)"
+  },
+  {
+    "file": "src/styles/terminology.css",
+    "selector": ".glossary-toggle",
+    "size": "var(--type-icon)"
+  },
+  {
+    "file": "src/styles/terminology.css",
+    "selector": ".glossary-anchor",
+    "size": "var(--type-meta)"
+  },
+  {
+    "file": "src/styles/terminology.css",
+    "selector": ".glossary-navigation a",
+    "size": "var(--type-body-sm)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home h2",
+    "size": "var(--type-h2)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .eyebrow",
+    "size": "var(--type-eyebrow)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .hero-copy .eyebrow",
+    "size": "var(--type-eyebrow)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .home-hero h1",
+    "size": "var(--type-display)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .hero-intro",
+    "size": "var(--type-lead)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .discipline",
+    "size": "var(--type-body)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .need-card h3",
+    "size": "var(--type-h3)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .need-card p",
+    "size": "var(--type-body)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .calculator-formula",
+    "size": "var(--type-meta)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .calculator-inputs label",
+    "size": "var(--type-form-label)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .calculator-inputs input",
+    "size": "var(--type-body-lg)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .calculator-error",
+    "size": "var(--type-helper)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .leverage-result > span:first-child, .invite-home .leverage-comparison > span:first-child",
+    "size": "var(--type-body-sm)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .math-results output",
+    "size": "var(--type-stat)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .math-results .outcome-label",
+    "size": "var(--type-label)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .math-equation",
+    "size": "var(--type-meta)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .calculator-difference",
+    "size": "var(--type-body-sm)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .calculator-difference output",
+    "size": "var(--type-h3)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .calculator-difference [data-percentage]",
+    "size": "var(--type-meta)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .calculator-caveat",
+    "size": "var(--type-helper)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .package-card h3",
+    "size": "var(--type-h3)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .package-badge",
+    "size": "var(--type-label)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .package-descriptor",
+    "size": "var(--type-body-lg)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .package-card dt",
+    "size": "var(--type-label)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .package-card dd",
+    "size": "var(--type-body-sm)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .package-price > p:first-child",
+    "size": "var(--type-body-lg)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .package-price-amount",
+    "size": "var(--type-h3)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .package-price-unit",
+    "size": "var(--type-meta)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .package-price .small-copy",
+    "size": "var(--type-meta)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .package-notes",
+    "size": "var(--type-meta)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .package-card .button",
+    "size": "var(--type-button-sm)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .item-number",
+    "size": "var(--type-label)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .info-item h3",
+    "size": "var(--type-h4)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .info-item p",
+    "size": "var(--type-body)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .assessment-copy > p:not(.eyebrow)",
+    "size": "var(--type-body)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .form-heading h3",
+    "size": "var(--type-h3)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .faq-list summary",
+    "size": "var(--type-body)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .faq-list details p",
+    "size": "var(--type-body)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .hero-actions .button",
+    "size": "var(--type-button-sm)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .math-results .outcome-label, .invite-home .math-equation",
+    "size": "var(--type-label)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .mechanism-steps h3",
+    "size": "var(--type-h4)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .mechanism-steps p",
+    "size": "var(--type-body-sm)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .assessment-form input, .invite-home .assessment-form textarea",
+    "size": "var(--type-body-sm)"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .hero-actions .text-link",
+    "size": "var(--type-label)"
+  },
+  {
+    "file": "public/styles/service-invite.css",
+    "selector": ".invite-service .breadcrumbs",
+    "size": "var(--type-meta)"
+  },
+  {
+    "file": "public/styles/service-invite.css",
+    "selector": ".invite-service .service-hero h1",
+    "size": "var(--type-display)"
+  },
+  {
+    "file": "public/styles/service-invite.css",
+    "selector": ".invite-service .service-hero .eyebrow",
+    "size": "var(--type-eyebrow)"
+  },
+  {
+    "file": "public/styles/service-invite.css",
+    "selector": ".invite-service .service-hero .hero-intro",
+    "size": "var(--type-lead)"
+  },
+  {
+    "file": "public/styles/service-invite.css",
+    "selector": ".invite-service .service-package h3",
+    "size": "var(--type-h3)"
+  },
+  {
+    "file": "public/styles/pricing-invite.css",
+    "selector": ".invite-pricing .pricing-hero h1",
+    "size": "var(--type-display)"
+  },
+  {
+    "file": "public/styles/pricing-invite.css",
+    "selector": ".invite-pricing .hero-intro",
+    "size": "var(--type-lead)"
+  },
+  {
+    "file": "public/styles/pricing-invite.css",
+    "selector": ".invite-pricing .package-card h2",
+    "size": "var(--type-h2)"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-heading h2, .invite-home .package-offer .package-heading h3",
+    "size": "var(--type-h4)"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-badge",
+    "size": "var(--type-label)"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-price > p:first-child",
+    "size": "var(--type-body-lg)"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-price-amount",
+    "size": "var(--type-h3)"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-price-unit",
+    "size": "var(--type-meta)"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-price-prefix",
+    "size": "var(--type-meta)"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-descriptor",
+    "size": "var(--type-body-lg)"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-block-heading",
+    "size": "var(--type-label)"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-fit, .invite-home .package-offer .package-detail",
+    "size": "var(--type-body-sm)"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-situations ul",
+    "size": "var(--type-body-sm)"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-icon-items li",
+    "size": "var(--type-body-sm)"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-detail-link, .invite-home .package-offer .package-uncertain",
+    "size": "var(--type-body-sm)"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-details",
+    "size": "var(--type-body-sm)"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-price-note",
+    "size": "var(--type-meta)"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-home .multiplier-row",
+    "size": "var(--type-body-lg)"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-home .multiplier-detail summary",
+    "size": "var(--type-body-sm)"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-pricing .package-order-intro h2",
+    "size": "var(--type-h2)"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-pricing .package-order-form label",
+    "size": "var(--type-form-label)"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-pricing .package-order-form input, .invite-pricing .package-order-form select, .invite-pricing .package-order-form textarea",
+    "size": "var(--type-body-sm)"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-pricing .package-order-form .order-selection",
+    "size": "var(--type-body-sm)"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-pricing .package-order-form .form-privacy",
+    "size": "var(--type-helper)"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-pricing .package-order-form .text-link",
+    "size": "var(--type-label)"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-visual-caption p:first-child",
+    "size": "var(--type-meta)"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-visual-caption p + p",
+    "size": "var(--type-meta)"
+  },
+  {
+    "file": "src/components/HomeProof.astro",
+    "selector": "h3",
+    "size": "var(--type-h3)"
+  },
+  {
+    "file": "src/components/HomeProof.astro",
+    "selector": ".proof-delta",
+    "size": "var(--type-h3)"
+  },
+  {
+    "file": "src/components/HomeProof.astro",
+    "selector": "dt",
+    "size": "var(--type-label)"
+  },
+  {
+    "file": "src/components/HomeProof.astro",
+    "selector": ".proof-comparison strong",
+    "size": "var(--type-stat)"
+  },
+  {
+    "file": "src/components/HomeProof.astro",
+    "selector": ".proof-featured .proof-comparison strong",
+    "size": "var(--type-display)"
+  },
+  {
+    "file": "src/components/HomeProof.astro",
+    "selector": ".proof-comparison dd span",
+    "size": "var(--type-meta)"
+  },
+  {
+    "file": "src/components/HomeProof.astro",
+    "selector": ".proof-arrow",
+    "size": "var(--type-icon)"
+  },
+  {
+    "file": "src/components/HomeHeroPhoto.astro",
+    "selector": ".hero-proof-result",
+    "size": "var(--type-h4)"
+  },
+  {
+    "file": "src/components/HomeHeroPhoto.astro",
+    "selector": ".hero-proof-support",
+    "size": "var(--type-body-sm)"
+  },
+  {
+    "file": "src/components/HomeLeverage.astro",
+    "selector": ".calculator-introduction .body-copy",
+    "size": "var(--type-body)"
+  },
+  {
+    "file": "src/components/HomeLeverage.astro",
+    "selector": ".calculator-multiplier",
+    "size": "var(--type-body-sm)"
+  },
+  {
+    "file": "src/components/HomeLeverage.astro",
+    "selector": ".calculator-multiplier output",
+    "size": "var(--type-h3)"
+  },
+  {
+    "file": "src/components/HomeLeverage.astro",
+    "selector": ".calculator-multiplier [data-percentage]",
+    "size": "var(--type-meta)"
+  },
+  {
+    "file": "src/components/HomeLeverage.astro",
+    "selector": ".scenario-period",
+    "size": "var(--type-meta)"
+  },
+  {
+    "file": "src/components/HomeLeverage.astro",
+    "selector": ".scenario-chart figcaption",
+    "size": "var(--type-meta)"
+  },
+  {
+    "file": "src/components/HomeLeverage.astro",
+    "selector": ".scenario-legend",
+    "size": "var(--type-meta)"
+  },
+  {
+    "file": "src/components/HomeLeverage.astro",
+    "selector": ".scenario-chart text",
+    "size": "var(--type-meta)"
+  }
+]

@@ -1,0 +1,1502 @@
+[
+  {
+    "file": "src/styles/global.css",
+    "selector": "body",
+    "before": "17px",
+    "role": "body"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": "h1",
+    "before": "clamp(48px, 5.4vw, 76px)",
+    "role": "display"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": "h2",
+    "before": "clamp(34px, 3.3vw, 47px)",
+    "role": "h2"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": "h3",
+    "before": "29px",
+    "role": "h3"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".eyebrow",
+    "before": "12px",
+    "role": "eyebrow"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".small-copy",
+    "before": "14px",
+    "role": "meta"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".body-copy",
+    "before": "17px",
+    "role": "body"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".button",
+    "before": "16px",
+    "role": "button"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".button-small",
+    "before": "14px",
+    "role": "button-sm"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".text-link",
+    "before": "15px",
+    "role": "label"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".wordmark",
+    "before": "18px",
+    "role": "label"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".wordmark-second",
+    "before": "22px",
+    "role": "h4"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".desktop-nav a",
+    "before": "14px",
+    "role": "label"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".hero-copy .eyebrow",
+    "before": "10px",
+    "role": "eyebrow"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".hero-intro",
+    "before": "18px",
+    "role": "lead"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".hero-note",
+    "before": "12px",
+    "role": "meta"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".hero-strip",
+    "before": "12px",
+    "role": "meta"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".hero-strip span::before",
+    "before": "18px",
+    "role": "icon"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".journey-top",
+    "before": "12px",
+    "role": "body-sm"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".journey-top > span:last-child",
+    "before": "22px",
+    "role": "icon"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".journey-number",
+    "before": "12px",
+    "role": "label"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".journey-label",
+    "before": "35px",
+    "role": "h4"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".journey-caption",
+    "before": "12px",
+    "role": "meta"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".journey-bottom",
+    "before": "11px",
+    "role": "meta"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".item-number",
+    "before": "11px",
+    "role": "label"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".info-item p",
+    "before": "16px",
+    "role": "body"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".process-items .item-number",
+    "before": "23px",
+    "role": "label"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".process-items h3",
+    "before": "24px",
+    "role": "h4"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".leverage-grid .body-copy",
+    "before": "15px",
+    "role": "body"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".leverage-label",
+    "before": "11px",
+    "role": "eyebrow"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".leverage-inputs label",
+    "before": "12px",
+    "role": "form-label"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".leverage-inputs input",
+    "before": "32px",
+    "role": "body-lg"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".leverage-inputs > span",
+    "before": "25px",
+    "role": "icon"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".input-unit",
+    "before": "18px",
+    "role": "body-lg"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".leverage-result > span:first-child",
+    "before": "25px",
+    "role": "h3"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".leverage-result output",
+    "before": "65px",
+    "role": "stat"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".leverage-result > span:last-child",
+    "before": "14px",
+    "role": "body-sm"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".leverage-comparison",
+    "before": "13px",
+    "role": "body-sm"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".leverage-tool .small-copy",
+    "before": "11px",
+    "role": "meta"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".assessment-copy h2",
+    "before": "clamp(40px, 4vw, 56px)",
+    "role": "h2"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".form-process h3",
+    "before": "19px",
+    "role": "h4"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".form-process p",
+    "before": "14px",
+    "role": "body-sm"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".form-heading .eyebrow",
+    "before": "10px",
+    "role": "eyebrow"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".form-heading h3",
+    "before": "26px",
+    "role": "h3"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".assessment-form > label",
+    "before": "13px",
+    "role": "form-label"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".optional",
+    "before": "11px",
+    "role": "helper"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".assessment-form > input, .assessment-form > select, .assessment-form > textarea",
+    "before": "14px",
+    "role": "body-sm"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".form-privacy",
+    "before": "11px",
+    "role": "helper"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".form-notice",
+    "before": "12px",
+    "role": "helper"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".form-status",
+    "before": "14px",
+    "role": "helper"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".field-error",
+    "before": "12px",
+    "role": "helper"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".faq-list summary",
+    "before": "17px",
+    "role": "body"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".faq-list summary span",
+    "before": "23px",
+    "role": "body"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".faq-list details p",
+    "before": "15px",
+    "role": "body"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".breadcrumbs",
+    "before": "11px",
+    "role": "meta"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".inner-hero-grid h1",
+    "before": "clamp(42px, 5vw, 68px)",
+    "role": "display"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".inner-hero-grid .hero-intro",
+    "before": "19px",
+    "role": "lead"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".assessment-hero-grid h1",
+    "before": "clamp(40px, 4.4vw, 61px)",
+    "role": "display"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".footer-brand",
+    "before": "22px",
+    "role": "h4"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".footer-grid p",
+    "before": "13px",
+    "role": "meta"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".footer-grid nav a",
+    "before": "13px",
+    "role": "meta"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".footer-bottom",
+    "before": "11px",
+    "role": "meta"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".preview-tag",
+    "before": "10px",
+    "role": "meta"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".hero-copy h1",
+    "before": "clamp(43px, 6vw, 61px)",
+    "role": "display"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".hero-copy .eyebrow",
+    "before": "9px",
+    "role": "eyebrow"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".hero-intro",
+    "before": "16px",
+    "role": "lead"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".journey-label",
+    "before": "30px",
+    "role": "h4"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".info-item h3",
+    "before": "26px",
+    "role": "h4"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".info-item p",
+    "before": "14px",
+    "role": "body"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".leverage-inputs input",
+    "before": "26px",
+    "role": "body-lg"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".leverage-result output",
+    "before": "53px",
+    "role": "stat"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": "body",
+    "before": "16px",
+    "role": "body"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".wordmark",
+    "before": "14px",
+    "role": "label"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".wordmark-second",
+    "before": "18px",
+    "role": "h4"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".button-small",
+    "before": "12px",
+    "role": "button-sm"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".hero-copy h1",
+    "before": "clamp(44px, 11.8vw, 66px)",
+    "role": "display"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".hero-copy .eyebrow",
+    "before": "9px",
+    "role": "eyebrow"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".hero-intro",
+    "before": "16px",
+    "role": "lead"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".hero-actions .button",
+    "before": "14px",
+    "role": "button-sm"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".hero-actions .text-link",
+    "before": "13px",
+    "role": "label"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".hero-note",
+    "before": "11px",
+    "role": "meta"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".journey-label",
+    "before": "31px",
+    "role": "h4"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".hero-strip",
+    "before": "10px",
+    "role": "meta"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".hero-strip span::before",
+    "before": "14px",
+    "role": "icon"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": "h2",
+    "before": "34px",
+    "role": "h2"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": "h3",
+    "before": "26px",
+    "role": "h3"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".eyebrow",
+    "before": "10px",
+    "role": "eyebrow"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".body-copy",
+    "before": "16px",
+    "role": "body"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".info-item p",
+    "before": "15px",
+    "role": "body"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".text-link",
+    "before": "14px",
+    "role": "label"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".process-items h3",
+    "before": "23px",
+    "role": "h4"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".leverage-result output",
+    "before": "60px",
+    "role": "stat"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".assessment-copy h2",
+    "before": "40px",
+    "role": "h2"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".form-heading h3",
+    "before": "24px",
+    "role": "h3"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".assessment-form > input, .assessment-form > select, .assessment-form > textarea",
+    "before": "16px",
+    "role": "body-sm"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".faq-list summary",
+    "before": "16px",
+    "role": "body"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".breadcrumbs",
+    "before": "10px",
+    "role": "meta"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".inner-hero-grid h1",
+    "before": "clamp(40px, 10.5vw, 59px)",
+    "role": "display"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".inner-hero-grid .hero-intro",
+    "before": "16px",
+    "role": "lead"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".footer-bottom",
+    "before": "10px",
+    "role": "meta"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".wordmark",
+    "before": "12px",
+    "role": "label"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".wordmark-second",
+    "before": "16px",
+    "role": "h4"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".button-small",
+    "before": "11px",
+    "role": "button-sm"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".hero-copy h1",
+    "before": "42px",
+    "role": "display"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".hero-copy .eyebrow",
+    "before": "8px",
+    "role": "eyebrow"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".journey-label",
+    "before": "25px",
+    "role": "h4"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".journey-caption",
+    "before": "10px",
+    "role": "meta"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".leverage-inputs input",
+    "before": "25px",
+    "role": "body-lg"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".leverage-result output",
+    "before": "52px",
+    "role": "stat"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": ".leverage-comparison",
+    "before": "11px",
+    "role": "body-sm"
+  },
+  {
+    "file": "src/styles/global.css",
+    "selector": "h2",
+    "before": "31px",
+    "role": "h2"
+  },
+  {
+    "file": "src/styles/terminology.css",
+    "selector": ".glossary-hero .eyebrow",
+    "before": "12px",
+    "role": "eyebrow"
+  },
+  {
+    "file": "src/styles/terminology.css",
+    "selector": ".glossary-hero h1",
+    "before": "clamp(42px, 5.6vw, 76px)",
+    "role": "display"
+  },
+  {
+    "file": "src/styles/terminology.css",
+    "selector": ".glossary-hero > p:not(.eyebrow)",
+    "before": "clamp(18px, 2vw, 22px)",
+    "role": "eyebrow"
+  },
+  {
+    "file": "src/styles/terminology.css",
+    "selector": ".glossary-group-heading .eyebrow",
+    "before": "12px",
+    "role": "eyebrow"
+  },
+  {
+    "file": "src/styles/terminology.css",
+    "selector": ".glossary-group h2",
+    "before": "clamp(30px, 3vw, 44px)",
+    "role": "h2"
+  },
+  {
+    "file": "src/styles/terminology.css",
+    "selector": ".glossary-term-name",
+    "before": "24px",
+    "role": "h4"
+  },
+  {
+    "file": "src/styles/terminology.css",
+    "selector": ".glossary-full-name",
+    "before": "13px",
+    "role": "meta"
+  },
+  {
+    "file": "src/styles/terminology.css",
+    "selector": ".glossary-short",
+    "before": "16px",
+    "role": "body-sm"
+  },
+  {
+    "file": "src/styles/terminology.css",
+    "selector": ".glossary-toggle",
+    "before": "20px",
+    "role": "icon"
+  },
+  {
+    "file": "src/styles/terminology.css",
+    "selector": ".glossary-anchor",
+    "before": "13px",
+    "role": "meta"
+  },
+  {
+    "file": "src/styles/terminology.css",
+    "selector": ".glossary-hero h1",
+    "before": "clamp(38px, 11vw, 52px)",
+    "role": "display"
+  },
+  {
+    "file": "src/styles/terminology.css",
+    "selector": ".glossary-hero > p:not(.eyebrow)",
+    "before": "17px",
+    "role": "eyebrow"
+  },
+  {
+    "file": "src/styles/terminology.css",
+    "selector": ".glossary-navigation a",
+    "before": "13px",
+    "role": "body-sm"
+  },
+  {
+    "file": "src/styles/terminology.css",
+    "selector": ".glossary-short",
+    "before": "15px",
+    "role": "body-sm"
+  },
+  {
+    "file": "src/styles/terminology.css",
+    "selector": ".glossary-term-name",
+    "before": "22px",
+    "role": "h4"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home h2",
+    "before": "clamp(32px, 3.2vw, 46px)",
+    "role": "h2"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .eyebrow",
+    "before": "11px",
+    "role": "eyebrow"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .hero-copy .eyebrow",
+    "before": "13px",
+    "role": "eyebrow"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .home-hero h1",
+    "before": "clamp(44px, 4vw, 56px)",
+    "role": "display"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .hero-intro",
+    "before": "17px",
+    "role": "lead"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .discipline",
+    "before": "17px",
+    "role": "body"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .need-card h3",
+    "before": "29px",
+    "role": "h3"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .need-card p",
+    "before": "16px",
+    "role": "body"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .calculator-formula",
+    "before": "15px",
+    "role": "meta"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .calculator-inputs label",
+    "before": "13px",
+    "role": "form-label"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .calculator-inputs input",
+    "before": "20px",
+    "role": "body-lg"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .calculator-error",
+    "before": "13px",
+    "role": "helper"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .leverage-result > span:first-child, .invite-home .leverage-comparison > span:first-child",
+    "before": "13px",
+    "role": "body-sm"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .math-results output",
+    "before": "var(--result-size, 64px)",
+    "role": "stat"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .math-results .outcome-label",
+    "before": "12px",
+    "role": "label"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .math-equation",
+    "before": "12px",
+    "role": "meta"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .calculator-difference",
+    "before": "15px",
+    "role": "body-sm"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .calculator-difference output",
+    "before": "25px",
+    "role": "h3"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .calculator-difference [data-percentage]",
+    "before": "13px",
+    "role": "meta"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .calculator-caveat",
+    "before": "12px",
+    "role": "helper"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .package-card h3",
+    "before": "32px",
+    "role": "h3"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .package-badge",
+    "before": "12px",
+    "role": "label"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .package-descriptor",
+    "before": "15px",
+    "role": "body-lg"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .package-card dt",
+    "before": "12px",
+    "role": "label"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .package-card dd",
+    "before": "15px",
+    "role": "body-sm"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .package-price > p:first-child",
+    "before": "24px",
+    "role": "body-lg"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .package-price-amount",
+    "before": "36px",
+    "role": "h3"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .package-price-unit",
+    "before": "15px",
+    "role": "meta"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .package-price .small-copy",
+    "before": "12px",
+    "role": "meta"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .package-notes",
+    "before": "14px",
+    "role": "meta"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .package-card .button",
+    "before": "14px",
+    "role": "button-sm"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .item-number",
+    "before": "14px",
+    "role": "label"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .info-item h3",
+    "before": "25px",
+    "role": "h4"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .info-item p",
+    "before": "15px",
+    "role": "body"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .assessment-copy > p:not(.eyebrow)",
+    "before": "16px",
+    "role": "eyebrow"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .form-heading h3",
+    "before": "28px",
+    "role": "h3"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .faq-list summary",
+    "before": "17px",
+    "role": "body"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .faq-list details p",
+    "before": "16px",
+    "role": "body"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .need-card h3",
+    "before": "26px",
+    "role": "h3"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .hero-copy .eyebrow",
+    "before": "12px",
+    "role": "eyebrow"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .home-hero h1",
+    "before": "clamp(34px, 9.5vw, 40px)",
+    "role": "display"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .hero-intro",
+    "before": "16px",
+    "role": "lead"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .hero-actions .button",
+    "before": "14px",
+    "role": "button-sm"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home h2",
+    "before": "34px",
+    "role": "h2"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .need-card h3",
+    "before": "29px",
+    "role": "h3"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .calculator-inputs label",
+    "before": "12px",
+    "role": "form-label"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .calculator-inputs input",
+    "before": "18px",
+    "role": "body-lg"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .math-results output",
+    "before": "min(var(--result-size, 54px), 54px)",
+    "role": "stat"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .math-results .outcome-label, .invite-home .math-equation",
+    "before": "11px",
+    "role": "label"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .calculator-formula",
+    "before": "14px",
+    "role": "meta"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .mechanism-steps h3",
+    "before": "22px",
+    "role": "h4"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .mechanism-steps p",
+    "before": "14px",
+    "role": "body-sm"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .assessment-form input, .invite-home .assessment-form textarea",
+    "before": "16px",
+    "role": "body-sm"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .hero-copy .eyebrow",
+    "before": "11px",
+    "role": "eyebrow"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .home-hero h1",
+    "before": "33px",
+    "role": "display"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .hero-intro",
+    "before": "15px",
+    "role": "lead"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .hero-actions .text-link",
+    "before": "14px",
+    "role": "label"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home h2",
+    "before": "31px",
+    "role": "h2"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .calculator-inputs label",
+    "before": "11px",
+    "role": "form-label"
+  },
+  {
+    "file": "public/styles/home-invite.css",
+    "selector": ".invite-home .calculator-inputs input",
+    "before": "16px",
+    "role": "body-lg"
+  },
+  {
+    "file": "public/styles/service-invite.css",
+    "selector": ".invite-service .breadcrumbs",
+    "before": "12px",
+    "role": "meta"
+  },
+  {
+    "file": "public/styles/service-invite.css",
+    "selector": ".invite-service .service-hero h1",
+    "before": "clamp(40px, 4vw, 56px)",
+    "role": "display"
+  },
+  {
+    "file": "public/styles/service-invite.css",
+    "selector": ".invite-service .service-hero .eyebrow",
+    "before": "13px",
+    "role": "eyebrow"
+  },
+  {
+    "file": "public/styles/service-invite.css",
+    "selector": ".invite-service .service-hero .hero-intro",
+    "before": "18px",
+    "role": "lead"
+  },
+  {
+    "file": "public/styles/service-invite.css",
+    "selector": ".invite-service .service-package h3",
+    "before": "30px",
+    "role": "h3"
+  },
+  {
+    "file": "public/styles/service-invite.css",
+    "selector": ".invite-service .service-hero h1",
+    "before": "38px",
+    "role": "display"
+  },
+  {
+    "file": "public/styles/service-invite.css",
+    "selector": ".invite-service .service-hero .hero-intro",
+    "before": "16px",
+    "role": "lead"
+  },
+  {
+    "file": "public/styles/service-invite.css",
+    "selector": ".invite-service .service-hero h1",
+    "before": "33px",
+    "role": "display"
+  },
+  {
+    "file": "public/styles/pricing-invite.css",
+    "selector": ".invite-pricing .pricing-hero h1",
+    "before": "clamp(40px, 4vw, 56px)",
+    "role": "display"
+  },
+  {
+    "file": "public/styles/pricing-invite.css",
+    "selector": ".invite-pricing .hero-intro",
+    "before": "18px",
+    "role": "lead"
+  },
+  {
+    "file": "public/styles/pricing-invite.css",
+    "selector": ".invite-pricing .package-card h2",
+    "before": "32px",
+    "role": "h2"
+  },
+  {
+    "file": "public/styles/pricing-invite.css",
+    "selector": ".invite-pricing .pricing-hero h1",
+    "before": "38px",
+    "role": "display"
+  },
+  {
+    "file": "public/styles/pricing-invite.css",
+    "selector": ".invite-pricing .hero-intro",
+    "before": "16px",
+    "role": "lead"
+  },
+  {
+    "file": "public/styles/pricing-invite.css",
+    "selector": ".invite-pricing .pricing-hero h1",
+    "before": "33px",
+    "role": "display"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-heading h2, .invite-home .package-offer .package-heading h3",
+    "before": "26px",
+    "role": "h4"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-badge",
+    "before": "12px",
+    "role": "label"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-price > p:first-child",
+    "before": "24px",
+    "role": "body-lg"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-price-amount",
+    "before": "28px",
+    "role": "h3"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-price-unit",
+    "before": "14px",
+    "role": "meta"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-price-prefix",
+    "before": "15px",
+    "role": "meta"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-descriptor",
+    "before": "20px",
+    "role": "body-lg"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-block-heading",
+    "before": "14px",
+    "role": "label"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-fit, .invite-home .package-offer .package-detail",
+    "before": "15px",
+    "role": "body-sm"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-situations ul",
+    "before": "15px",
+    "role": "body-sm"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-icon-items li",
+    "before": "14px",
+    "role": "body-sm"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-detail-link, .invite-home .package-offer .package-uncertain",
+    "before": "14px",
+    "role": "body-sm"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-details",
+    "before": "14px",
+    "role": "body-sm"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-price-note",
+    "before": "14px",
+    "role": "meta"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-home .multiplier-row",
+    "before": "clamp(21px, 3vw, 36px)",
+    "role": "body-lg"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-home .multiplier-detail summary",
+    "before": "15px",
+    "role": "body-sm"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-pricing .package-order-intro h2",
+    "before": "clamp(32px, 3.5vw, 48px)",
+    "role": "h2"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-pricing .package-order-form label",
+    "before": "14px",
+    "role": "form-label"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-pricing .package-order-form input, .invite-pricing .package-order-form select, .invite-pricing .package-order-form textarea",
+    "before": "16px",
+    "role": "body-sm"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-pricing .package-order-form .order-selection",
+    "before": "14px",
+    "role": "body-sm"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-pricing .package-order-form .form-privacy",
+    "before": "13px",
+    "role": "helper"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-pricing .package-order-form .text-link",
+    "before": "14px",
+    "role": "label"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-price-amount",
+    "before": "28px",
+    "role": "h3"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-price-prefix",
+    "before": "15px",
+    "role": "meta"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-price-unit",
+    "before": "14px",
+    "role": "meta"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-heading h2, .invite-home .package-offer .package-heading h3",
+    "before": "22px",
+    "role": "h4"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-price-amount",
+    "before": "26px",
+    "role": "h3"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-visual-caption p:first-child",
+    "before": "14px",
+    "role": "meta"
+  },
+  {
+    "file": "public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-visual-caption p + p",
+    "before": "12px",
+    "role": "meta"
+  },
+  {
+    "file": "src/components/HomeProof.astro",
+    "selector": "h3",
+    "before": "clamp(26px, 3vw, 38px)",
+    "role": "h3"
+  },
+  {
+    "file": "src/components/HomeProof.astro",
+    "selector": ".proof-delta",
+    "before": "26px",
+    "role": "h3"
+  },
+  {
+    "file": "src/components/HomeProof.astro",
+    "selector": "dt",
+    "before": "14px",
+    "role": "label"
+  },
+  {
+    "file": "src/components/HomeProof.astro",
+    "selector": ".proof-comparison strong",
+    "before": "clamp(32px, 4vw, 56px)",
+    "role": "stat"
+  },
+  {
+    "file": "src/components/HomeProof.astro",
+    "selector": ".proof-featured .proof-comparison strong",
+    "before": "clamp(40px, 6vw, 80px)",
+    "role": "stat"
+  },
+  {
+    "file": "src/components/HomeProof.astro",
+    "selector": ".proof-comparison dd span",
+    "before": "14px",
+    "role": "body-sm"
+  },
+  {
+    "file": "src/components/HomeProof.astro",
+    "selector": ".proof-arrow",
+    "before": "24px",
+    "role": "icon"
+  },
+  {
+    "file": "src/components/HomeProof.astro",
+    "selector": ".proof-comparison strong",
+    "before": "clamp(30px, 8vw, 48px)",
+    "role": "stat"
+  },
+  {
+    "file": "src/components/HomeProof.astro",
+    "selector": ".proof-featured .proof-comparison strong",
+    "before": "clamp(34px, 10vw, 56px)",
+    "role": "stat"
+  },
+  {
+    "file": "src/components/HomeProof.astro",
+    "selector": ".proof-arrow",
+    "before": "20px",
+    "role": "icon"
+  },
+  {
+    "file": "src/components/HomeHeroPhoto.astro",
+    "selector": ".hero-proof-result",
+    "before": "24px",
+    "role": "h4"
+  },
+  {
+    "file": "src/components/HomeHeroPhoto.astro",
+    "selector": ".hero-proof-support",
+    "before": "13px",
+    "role": "body-sm"
+  },
+  {
+    "file": "src/components/HomeHeroPhoto.astro",
+    "selector": ".hero-proof-result",
+    "before": "22px",
+    "role": "h4"
+  },
+  {
+    "file": "src/components/HomeLeverage.astro",
+    "selector": ".calculator-introduction .body-copy",
+    "before": "15px",
+    "role": "body"
+  },
+  {
+    "file": "src/components/HomeLeverage.astro",
+    "selector": ".calculator-multiplier",
+    "before": "15px",
+    "role": "body-sm"
+  },
+  {
+    "file": "src/components/HomeLeverage.astro",
+    "selector": ".calculator-multiplier output",
+    "before": "25px",
+    "role": "h3"
+  },
+  {
+    "file": "src/components/HomeLeverage.astro",
+    "selector": ".calculator-multiplier [data-percentage]",
+    "before": "13px",
+    "role": "meta"
+  },
+  {
+    "file": "src/components/HomeLeverage.astro",
+    "selector": ".scenario-period",
+    "before": "12px",
+    "role": "meta"
+  },
+  {
+    "file": "src/components/HomeLeverage.astro",
+    "selector": ".scenario-chart figcaption",
+    "before": "12px",
+    "role": "meta"
+  },
+  {
+    "file": "src/components/HomeLeverage.astro",
+    "selector": ".scenario-legend",
+    "before": "12px",
+    "role": "meta"
+  },
+  {
+    "file": "src/components/HomeLeverage.astro",
+    "selector": ".scenario-chart text",
+    "before": "12px",
+    "role": "meta"
+  }
+]
