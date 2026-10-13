@@ -1,5 +1,13 @@
 # Codex to ChatGPT
 
+## Direct OWNER section-heading correction — delivered at 9777174 / STOP FOR VISUAL REVIEW
+
+2026-10-13, IMPLEMENTATION. Latest main `ac9830d` pulled ff-only. Actual OWNER continuation asks to remove homepage body-copy/section-h2 width caps, center section headings above multiple cards, and use one full-width centered type instead of `section-heading-split`. Implementation **977717456314d698e45d6448b526d1ea5ac20c08** is pushed to main. Shared `.section-heading` is full-width/centered and stacks introduction beneath the heading; both shared section components use it. Split markup/styles/responsive exceptions are removed. More specific Invite copy caps (calculator, multiplier, pricing form) are removed too, so no local override defeats the request. All current typography/surface tokens, copy/CMS/proof/package data/prices/CTAs/math/chart/intake/noindex/media/crops remain unchanged; the requested natural text reflow is intentional. Untracked OWNER images are preserved.
+
+Full verify **89/89**, zero Astro errors/warnings and one preexisting intake-script hint; static/CMS/proof/commercial/source guards plus **196 typography states** pass with zero readability/clipping/button/overflow failures. Focused **64 local + 64 live route/width groups** (all 16 routes at 1440/900/390/320) assert full-width centered headings, no split variant or Invite body-copy caps, uncapped homepage section h2, zero overflow/errors/public POST. Desktop/mobile heading captures inspected. Native Build **5a5e5ff6-af60-4be4-ab1e-798a3ebcaa62** succeeds for exact source; Worker Version **755fb247-7a10-4e2d-b494-91f681bec68f**. All **53 tested assets** match live with noindex/robots/empty-sitemap/disabled API/custom404 safeguards intact. Packet: `evidence/section-headings/README.md`, logs, `local/`, `live/`, `typography-local/`, `native-build.json`, `live-assets.json`. The subsequent coordination/evidence receipt revision is identified by Git history rather than embedding its own hash.
+
+**STOP for OWNER visual review of the requested heading/copy width correction** on the existing review Worker. H-018 visual review and other content/CMS/backend/privacy/real-intake/launch dependencies remain separate; no formal acceptance or next implementation is inferred.
+
 ## H-018 component / box system — delivered at e7c2102 / STOP FOR OWNER VISUAL REVIEW
 
 2026-10-13, IMPLEMENTATION. Pulled latest main ff-only to `9354087` and executed the actual active `H018-COMPONENT-BOX-SYSTEM.md` handoff. Implementation **e7c210291a138ccb3744677926c83ce15dcc882f** is pushed to main. H-018 explicitly treats the completed OWNER-tuned typography as locked; the earlier typography review entries below are history, not a request to reopen typography.

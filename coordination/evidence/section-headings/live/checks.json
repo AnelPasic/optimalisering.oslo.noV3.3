@@ -1,0 +1,2915 @@
+{
+  "base": "https://optimalisering-oslo-v33.anel.workers.dev",
+  "report": [
+    {
+      "route": "/",
+      "width": 1440,
+      "headings": [
+        {
+          "text": "Tre pakker. Samme mål: flere riktige kunder.",
+          "align": "center",
+          "width": 1360,
+          "expectedWidth": 1360,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Resultater fra kundearbeid",
+          "align": "center",
+          "width": 1360,
+          "expectedWidth": 1360,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Slik finner vi hva som bør gjøres først",
+          "align": "center",
+          "width": 1360,
+          "expectedWidth": 1360,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Best når kundene faktisk har et valg.",
+          "align": "center",
+          "width": 1360,
+          "expectedWidth": 1360,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [
+        {
+          "text": "Endre trafikken, andelen som tar kontakt eller kjøper - eller begge. Se hvordan de to grepene virker sammen.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Velg pakken som passer hvor komplekst behovet ditt er - fra én tydelig flaskehals til flere kundereiser som må prioriteres løpende.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Annonsebudsjett kommer i tillegg.Usikker? Ta en gratis sjekk",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Behovet avgjør tiltakene. Vi starter ikke med SEO eller en annen kanal bare fordi du kom inn på en bestemt side.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "",
+          "maxWidth": "none"
+        }
+      ],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/ai-synlighet/",
+      "width": 1440,
+      "headings": [
+        {
+          "text": "Et tydelig tilbud gir noe konkret å forstå.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "En omtale er ikke det samme som en kunde.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Vi undersøker uklarheter før vi foreslår mer innhold.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "AEO, AIO og GEO er ikke tre separate behov i bedriften.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Vi kan forbedre informasjonen. Vi kan ikke styre svaret.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Start med informasjonen kunden møter i dag.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "width": 1440,
+      "headings": [
+        {
+          "text": "Bestem hvilken handling som er nyttig for bedriften.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Still tre spørsmål i denne rekkefølgen.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Tre utgangspunkt gir tre ulike første spørsmål.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "En brøk forklarer mekanikken. Den velger ikke tiltaket.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Betalt synlighet kan gi fart når resten av regnestykket henger sammen.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Mangler du data, begynn med en begrunnet hypotese.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Du kan be om en kort vurdering av hvor Medon ville startet.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/innsikt/",
+      "width": 1440,
+      "headings": [
+        {
+          "text": "Velg spørsmålet du trenger svar på.",
+          "align": "center",
+          "width": 1360,
+          "expectedWidth": 1360,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Vil du vurdere din egen nettside?",
+          "align": "center",
+          "width": 1360,
+          "expectedWidth": 1360,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [
+        {
+          "text": "Guidene forklarer beslutninger og måling i enkelt språk. Eksemplene er illustrative og gir ingen løfter om resultat.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Send nettadressen og en e-postadresse for bedriften. Medon gjør en gratis, avgrenset manuell sjekk og gir kort veiledning om hva vi ville startet med og hvorfor.Sjekken er ikke en automatisk poengsum, full revisjon, komplett feilliste, prognose eller gjennomføring. Videre arbeid må ha eget avtalt omfang og pris.",
+          "maxWidth": "none"
+        }
+      ],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/kontakt/",
+      "width": 1440,
+      "headings": [
+        {
+          "text": "Fortell kort hva det gjelder.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Usikker på hvor du bør starte? Be om en gratis sjekk.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/konvertering/",
+      "width": 1440,
+      "headings": [
+        {
+          "text": "Det skal være enklere å kjøpe enn å gi opp.",
+          "align": "center",
+          "width": 1360,
+          "expectedWidth": 1360,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Flere skjema er lite verdt hvis henvendelsene ikke passer.",
+          "align": "center",
+          "width": 1360,
+          "expectedWidth": 1360,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Vi starter med hindringen som står mest i veien.",
+          "align": "center",
+          "width": 1360,
+          "expectedWidth": 1360,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Fullført checkout økte fra 7,1 % til 43,6 %",
+          "align": "center",
+          "width": 1360,
+          "expectedWidth": 1360,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Hvis de rette besøkene ikke kommer, er ikke konvertering hele svaret.",
+          "align": "center",
+          "width": 1360,
+          "expectedWidth": 1360,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Send siden der du vil at kunden skal handle.",
+          "align": "center",
+          "width": 1360,
+          "expectedWidth": 1360,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [
+        {
+          "text": "Kunden må forstå hva du tilbyr, få svar på det viktigste og vite hva som skjer videre. Små uklarheter kan bli store stopp når kunden allerede vurderer flere alternativer.Derfor ser vi på hele veien fra interesse til handling. Knapper og farger er bare en liten del av bildet.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "For en tjenestebedrift er målet relevante henvendelser som kan bli kunder. For en nettbutikk må flere kjøp også vurderes mot ordreverdi, margin og kostnader.Derfor definerer vi hva en nyttig handling faktisk er før vi vurderer om konverteringen har blitt bedre.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Det kan være et uklart tilbud, feil rekkefølge på informasjonen, et tungvint skjema, en svak landingsside eller en kjøpsvei som skaper unødvendig friksjon.Vi analyserer, gjennomfører avtalt arbeid og følger effekten. Du skal forstå hvorfor et tiltak kommer før et annet.Vi kan forbedre det vi kontrollerer. Vi kan ikke love en bestemt økning i konverteringsrate, omsetning eller antall kunder.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "En god side kan ikke skape kunder fra relevant trafikk som aldri kommer. Derfor må vi skille mellom for få relevante besøk og for mange besøk som stopper før handling.Hvis begge deler begrenser resultatet, kan vi jobbe med synlighet og konvertering sammen.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Få våre 3 viktigste funn innen 2 virkedager. Vi ser kort på siden og peker ut hva vi ville undersøkt eller forbedret først.Sjekken er ikke en full CRO-revisjon, komplett feilliste, prognose eller gratis gjennomføring.",
+          "maxWidth": "none"
+        }
+      ],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/innsikt/male-effekt-av-optimalisering/",
+      "width": 1440,
+      "headings": [
+        {
+          "text": "Skill mellom synlighet, handling og forretningsverdi.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "For tjenester: følg henvendelsen videre.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "For nettbutikk: se på kjøp og hva som blir igjen.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "En prosent trenger en tydelig teller og nevner.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Sammenlign perioder med forutsetningene synlige.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "En kilde hjelper oss å forstå en inngang, ikke hele beslutningen.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Start med en prioritering dere kan undersøke videre.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/nettbutikkoptimalisering/",
+      "width": 1440,
+      "headings": [
+        {
+          "text": "Se hele veien fra produktbehov til bestilling.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "\"Lagt i handlekurv\" er et mellomsteg.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Flere ordre må vurderes sammen med økonomien i dem.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "De samme tjenestene. Tilpasset veien til kjøp.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Send nettbutikken og fortell hvor du er usikker.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/om/",
+      "width": 1440,
+      "headings": [
+        {
+          "text": "Finn begrensningen. Prioriter arbeidet derfra.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Du skal forstå hva vi gjør og hva som er avtalt.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Norske bedrifter først. Behovet avgjør om tjenesten passer.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Start med nettsiden dere allerede har.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/personvern/",
+      "width": 1440,
+      "headings": [
+        {
+          "text": "Medon AS står bak tjenesten.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Skjemaet skal be om det som trengs for å forstå henvendelsen.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "E-postvarsel og lagring på server er valgt som startpunkt.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Før lansering må lagring og rettigheter være konkret beskrevet.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/priser/",
+      "width": 1440,
+      "headings": [
+        {
+          "text": "Fire områder. Prioritert etter behov.",
+          "align": "center",
+          "width": 1360,
+          "expectedWidth": 1360,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Tjenestepris og annonsebudsjett er to forskjellige ting.",
+          "align": "center",
+          "width": 1360,
+          "expectedWidth": 1360,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Få våre 3 viktigste funn innen 2 virkedager.",
+          "align": "center",
+          "width": 1360,
+          "expectedWidth": 1360,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [
+        {
+          "text": "Når relevante kunder finner deg og flere av dem går videre til henvendelse eller kjøp, kan tiltakene forsterke hverandre. Derfor kan det være bedre å forbedre to deler av samme kundereise samtidig enn å veksle mellom dem fra måned til måned.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "SEO, AI-synlighet og annonser kan gi flere relevante besøk. Konverteringsoptimalisering kan øke verdien av trafikken du allerede har. Gode og relevante landingssider kan også støtte organisk synlighet, annonsekvalitet og konvertering.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Velg pakken og send bestillingen. Vi bekrefter oppstart og det avtalte omfanget før arbeidet starter.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Arbeidet kan omfatte konvertering, SEO og AI-synlighet, Google Ads og Meta Ads. Måling og sporing ligger i bunn, så vi kan følge med på hva som faktisk skjer.Hva vi starter med avgjøres av behovet og hva som mest sannsynlig begrenser resultatet akkurat nå.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Vi kan jobbe med: Konvertering / SEO, lokal SEO og AI-synlighet / Google Ads / Meta Ads.Måling og sporing ligger i bunn, så vi kan følge med på hva som faktisk skjer.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Annonsebudsjett kommer i tillegg. Eksterne verktøy og plattformkostnader kommer også i tillegg når de er nødvendige og ikke er avtalt inkludert.Mindre justeringer og arbeid på eksisterende landingssider kan inngå i avtalt omfang. Større nye landingssider, nettsider, omfattende teknisk arbeid og redesign prises separat.Avtalt kapasitet gjelder per måned og overføres ikke til senere måneder.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Send nettsiden eller nettbutikken. Vi gjør en kort, manuell vurdering og sier hva vi ville undersøkt eller forbedret først - og hvorfor.Sjekken er ikke en full revisjon, prognose eller gratis gjennomføring. Videre arbeid avtales separat.",
+          "maxWidth": "none"
+        }
+      ],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/seo/",
+      "width": 1440,
+      "headings": [
+        {
+          "text": "Ett søk trenger et svar. Ett svar trenger riktig side.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Godt innhold må også kunne bli funnet.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Start med søk du faktisk kan hjelpe kunden med.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Synlige sider er et mellomsteg. Relevante kunder er målet.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "AI-synlighet er et eget spørsmål, selv når innholdet overlapper.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Send nettsiden. Vi vurderer et fornuftig sted å begynne.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/synlighet/",
+      "width": 1440,
+      "headings": [
+        {
+          "text": "Hvis bare de som kjenner navnet ditt finner deg, kommer du sent inn i valget.",
+          "align": "center",
+          "width": 1360,
+          "expectedWidth": 1360,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "SEO, lokal SEO og AI-synlighet løser ulike deler av samme jobb.",
+          "align": "center",
+          "width": 1360,
+          "expectedWidth": 1360,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Vi starter med det som kan gjøre det lettere for en relevant kunde å finne deg.",
+          "align": "center",
+          "width": 1360,
+          "expectedWidth": 1360,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Organiske klikk økte 93 % hos Helt Opplagt",
+          "align": "center",
+          "width": 1360,
+          "expectedWidth": 1360,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Mer trafikk er lite verdt hvis de rette besøkende ikke går videre.",
+          "align": "center",
+          "width": 1360,
+          "expectedWidth": 1360,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Send nettsiden. Vi sier hvor vi ville startet - og hvorfor.",
+          "align": "center",
+          "width": 1360,
+          "expectedWidth": 1360,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [
+        {
+          "text": "Kunden kan søke etter en tjeneste, et produkt, et problem eller en leverandør i nærheten. Da må nettsiden gi et tydelig svar på det kunden faktisk prøver å finne.Vi starter med tilbudet, kundens spørsmål og sidene som skal gjøre jobben. Flere søkeord og mer innhold er ikke et mål i seg selv.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "De overlapper, men de er ikke det samme. Derfor må vi se på hvor kundene faktisk leter og hva som mangler i dag.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Det kan være en viktig tjenesteside som mangler, en side som svarer uklart, intern struktur som skjuler viktig innhold eller bedriftsinformasjon som ikke henger godt nok sammen.Vi prioriterer ut fra tilbudet, kundene og hva vi faktisk kan måle. Du skal forstå hvorfor et tiltak kommer før et annet.Vi kan forbedre grunnlaget for synlighet. Vi kan ikke love en bestemt Google-plassering, AI-anbefaling eller et bestemt antall nye kunder.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Når relevante kunder finner siden, må de også forstå tilbudet og komme enkelt videre til kontakt eller kjøp.Hvis både oppdagelse og handling begrenser resultatet, kan vi jobbe med begge. Betalt synlighet kan også brukes når det er en fornuftig snarvei til markedet.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Få våre 3 viktigste funn innen 2 virkedager. Vi ser kort på den offentlige nettsiden eller nettbutikken og peker ut hva vi ville undersøkt eller forbedret først.Sjekken er ikke en full SEO-revisjon, komplett feilliste, prognose eller gratis gjennomføring.",
+          "maxWidth": "none"
+        }
+      ],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/vilkar/",
+      "width": 1440,
+      "headings": [
+        {
+          "text": "Den gratis sjekken er avgrenset.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Tjeneste, ansvar og leveransegrenser må avtales.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Pris, fakturering og oppsigelse er ikke fastsatt her.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Arbeid og forventet nytte skal ikke forveksles med garantier.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/vurdering/",
+      "width": 1440,
+      "headings": [
+        {
+          "text": "En startretning, ikke en perm med feil.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Du sender oss en lenke. Ikke en avhandling.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Videre arbeid må ha eget omfang og pris.",
+          "align": "center",
+          "width": 1200,
+          "expectedWidth": 1200,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/begreper/",
+      "width": 1440,
+      "headings": [],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/",
+      "width": 900,
+      "headings": [
+        {
+          "text": "Tre pakker. Samme mål: flere riktige kunder.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Resultater fra kundearbeid",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Slik finner vi hva som bør gjøres først",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Best når kundene faktisk har et valg.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [
+        {
+          "text": "Endre trafikken, andelen som tar kontakt eller kjøper - eller begge. Se hvordan de to grepene virker sammen.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Velg pakken som passer hvor komplekst behovet ditt er - fra én tydelig flaskehals til flere kundereiser som må prioriteres løpende.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Annonsebudsjett kommer i tillegg.Usikker? Ta en gratis sjekk",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Behovet avgjør tiltakene. Vi starter ikke med SEO eller en annen kanal bare fordi du kom inn på en bestemt side.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "",
+          "maxWidth": "none"
+        }
+      ],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/ai-synlighet/",
+      "width": 900,
+      "headings": [
+        {
+          "text": "Et tydelig tilbud gir noe konkret å forstå.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "En omtale er ikke det samme som en kunde.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Vi undersøker uklarheter før vi foreslår mer innhold.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "AEO, AIO og GEO er ikke tre separate behov i bedriften.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Vi kan forbedre informasjonen. Vi kan ikke styre svaret.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Start med informasjonen kunden møter i dag.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "width": 900,
+      "headings": [
+        {
+          "text": "Bestem hvilken handling som er nyttig for bedriften.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Still tre spørsmål i denne rekkefølgen.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Tre utgangspunkt gir tre ulike første spørsmål.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "En brøk forklarer mekanikken. Den velger ikke tiltaket.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Betalt synlighet kan gi fart når resten av regnestykket henger sammen.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Mangler du data, begynn med en begrunnet hypotese.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Du kan be om en kort vurdering av hvor Medon ville startet.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/innsikt/",
+      "width": 900,
+      "headings": [
+        {
+          "text": "Velg spørsmålet du trenger svar på.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Vil du vurdere din egen nettside?",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [
+        {
+          "text": "Guidene forklarer beslutninger og måling i enkelt språk. Eksemplene er illustrative og gir ingen løfter om resultat.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Send nettadressen og en e-postadresse for bedriften. Medon gjør en gratis, avgrenset manuell sjekk og gir kort veiledning om hva vi ville startet med og hvorfor.Sjekken er ikke en automatisk poengsum, full revisjon, komplett feilliste, prognose eller gjennomføring. Videre arbeid må ha eget avtalt omfang og pris.",
+          "maxWidth": "none"
+        }
+      ],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/kontakt/",
+      "width": 900,
+      "headings": [
+        {
+          "text": "Fortell kort hva det gjelder.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Usikker på hvor du bør starte? Be om en gratis sjekk.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/konvertering/",
+      "width": 900,
+      "headings": [
+        {
+          "text": "Det skal være enklere å kjøpe enn å gi opp.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Flere skjema er lite verdt hvis henvendelsene ikke passer.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Vi starter med hindringen som står mest i veien.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Fullført checkout økte fra 7,1 % til 43,6 %",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Hvis de rette besøkene ikke kommer, er ikke konvertering hele svaret.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Send siden der du vil at kunden skal handle.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [
+        {
+          "text": "Kunden må forstå hva du tilbyr, få svar på det viktigste og vite hva som skjer videre. Små uklarheter kan bli store stopp når kunden allerede vurderer flere alternativer.Derfor ser vi på hele veien fra interesse til handling. Knapper og farger er bare en liten del av bildet.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "For en tjenestebedrift er målet relevante henvendelser som kan bli kunder. For en nettbutikk må flere kjøp også vurderes mot ordreverdi, margin og kostnader.Derfor definerer vi hva en nyttig handling faktisk er før vi vurderer om konverteringen har blitt bedre.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Det kan være et uklart tilbud, feil rekkefølge på informasjonen, et tungvint skjema, en svak landingsside eller en kjøpsvei som skaper unødvendig friksjon.Vi analyserer, gjennomfører avtalt arbeid og følger effekten. Du skal forstå hvorfor et tiltak kommer før et annet.Vi kan forbedre det vi kontrollerer. Vi kan ikke love en bestemt økning i konverteringsrate, omsetning eller antall kunder.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "En god side kan ikke skape kunder fra relevant trafikk som aldri kommer. Derfor må vi skille mellom for få relevante besøk og for mange besøk som stopper før handling.Hvis begge deler begrenser resultatet, kan vi jobbe med synlighet og konvertering sammen.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Få våre 3 viktigste funn innen 2 virkedager. Vi ser kort på siden og peker ut hva vi ville undersøkt eller forbedret først.Sjekken er ikke en full CRO-revisjon, komplett feilliste, prognose eller gratis gjennomføring.",
+          "maxWidth": "none"
+        }
+      ],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/innsikt/male-effekt-av-optimalisering/",
+      "width": 900,
+      "headings": [
+        {
+          "text": "Skill mellom synlighet, handling og forretningsverdi.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "For tjenester: følg henvendelsen videre.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "For nettbutikk: se på kjøp og hva som blir igjen.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "En prosent trenger en tydelig teller og nevner.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Sammenlign perioder med forutsetningene synlige.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "En kilde hjelper oss å forstå en inngang, ikke hele beslutningen.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Start med en prioritering dere kan undersøke videre.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/nettbutikkoptimalisering/",
+      "width": 900,
+      "headings": [
+        {
+          "text": "Se hele veien fra produktbehov til bestilling.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "\"Lagt i handlekurv\" er et mellomsteg.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Flere ordre må vurderes sammen med økonomien i dem.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "De samme tjenestene. Tilpasset veien til kjøp.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Send nettbutikken og fortell hvor du er usikker.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/om/",
+      "width": 900,
+      "headings": [
+        {
+          "text": "Finn begrensningen. Prioriter arbeidet derfra.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Du skal forstå hva vi gjør og hva som er avtalt.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Norske bedrifter først. Behovet avgjør om tjenesten passer.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Start med nettsiden dere allerede har.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/personvern/",
+      "width": 900,
+      "headings": [
+        {
+          "text": "Medon AS står bak tjenesten.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Skjemaet skal be om det som trengs for å forstå henvendelsen.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "E-postvarsel og lagring på server er valgt som startpunkt.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Før lansering må lagring og rettigheter være konkret beskrevet.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/priser/",
+      "width": 900,
+      "headings": [
+        {
+          "text": "Fire områder. Prioritert etter behov.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Tjenestepris og annonsebudsjett er to forskjellige ting.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Få våre 3 viktigste funn innen 2 virkedager.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [
+        {
+          "text": "Når relevante kunder finner deg og flere av dem går videre til henvendelse eller kjøp, kan tiltakene forsterke hverandre. Derfor kan det være bedre å forbedre to deler av samme kundereise samtidig enn å veksle mellom dem fra måned til måned.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "SEO, AI-synlighet og annonser kan gi flere relevante besøk. Konverteringsoptimalisering kan øke verdien av trafikken du allerede har. Gode og relevante landingssider kan også støtte organisk synlighet, annonsekvalitet og konvertering.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Velg pakken og send bestillingen. Vi bekrefter oppstart og det avtalte omfanget før arbeidet starter.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Arbeidet kan omfatte konvertering, SEO og AI-synlighet, Google Ads og Meta Ads. Måling og sporing ligger i bunn, så vi kan følge med på hva som faktisk skjer.Hva vi starter med avgjøres av behovet og hva som mest sannsynlig begrenser resultatet akkurat nå.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Vi kan jobbe med: Konvertering / SEO, lokal SEO og AI-synlighet / Google Ads / Meta Ads.Måling og sporing ligger i bunn, så vi kan følge med på hva som faktisk skjer.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Annonsebudsjett kommer i tillegg. Eksterne verktøy og plattformkostnader kommer også i tillegg når de er nødvendige og ikke er avtalt inkludert.Mindre justeringer og arbeid på eksisterende landingssider kan inngå i avtalt omfang. Større nye landingssider, nettsider, omfattende teknisk arbeid og redesign prises separat.Avtalt kapasitet gjelder per måned og overføres ikke til senere måneder.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Send nettsiden eller nettbutikken. Vi gjør en kort, manuell vurdering og sier hva vi ville undersøkt eller forbedret først - og hvorfor.Sjekken er ikke en full revisjon, prognose eller gratis gjennomføring. Videre arbeid avtales separat.",
+          "maxWidth": "none"
+        }
+      ],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/seo/",
+      "width": 900,
+      "headings": [
+        {
+          "text": "Ett søk trenger et svar. Ett svar trenger riktig side.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Godt innhold må også kunne bli funnet.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Start med søk du faktisk kan hjelpe kunden med.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Synlige sider er et mellomsteg. Relevante kunder er målet.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "AI-synlighet er et eget spørsmål, selv når innholdet overlapper.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Send nettsiden. Vi vurderer et fornuftig sted å begynne.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/synlighet/",
+      "width": 900,
+      "headings": [
+        {
+          "text": "Hvis bare de som kjenner navnet ditt finner deg, kommer du sent inn i valget.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "SEO, lokal SEO og AI-synlighet løser ulike deler av samme jobb.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Vi starter med det som kan gjøre det lettere for en relevant kunde å finne deg.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Organiske klikk økte 93 % hos Helt Opplagt",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Mer trafikk er lite verdt hvis de rette besøkende ikke går videre.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Send nettsiden. Vi sier hvor vi ville startet - og hvorfor.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [
+        {
+          "text": "Kunden kan søke etter en tjeneste, et produkt, et problem eller en leverandør i nærheten. Da må nettsiden gi et tydelig svar på det kunden faktisk prøver å finne.Vi starter med tilbudet, kundens spørsmål og sidene som skal gjøre jobben. Flere søkeord og mer innhold er ikke et mål i seg selv.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "De overlapper, men de er ikke det samme. Derfor må vi se på hvor kundene faktisk leter og hva som mangler i dag.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Det kan være en viktig tjenesteside som mangler, en side som svarer uklart, intern struktur som skjuler viktig innhold eller bedriftsinformasjon som ikke henger godt nok sammen.Vi prioriterer ut fra tilbudet, kundene og hva vi faktisk kan måle. Du skal forstå hvorfor et tiltak kommer før et annet.Vi kan forbedre grunnlaget for synlighet. Vi kan ikke love en bestemt Google-plassering, AI-anbefaling eller et bestemt antall nye kunder.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Når relevante kunder finner siden, må de også forstå tilbudet og komme enkelt videre til kontakt eller kjøp.Hvis både oppdagelse og handling begrenser resultatet, kan vi jobbe med begge. Betalt synlighet kan også brukes når det er en fornuftig snarvei til markedet.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Få våre 3 viktigste funn innen 2 virkedager. Vi ser kort på den offentlige nettsiden eller nettbutikken og peker ut hva vi ville undersøkt eller forbedret først.Sjekken er ikke en full SEO-revisjon, komplett feilliste, prognose eller gratis gjennomføring.",
+          "maxWidth": "none"
+        }
+      ],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/vilkar/",
+      "width": 900,
+      "headings": [
+        {
+          "text": "Den gratis sjekken er avgrenset.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Tjeneste, ansvar og leveransegrenser må avtales.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Pris, fakturering og oppsigelse er ikke fastsatt her.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Arbeid og forventet nytte skal ikke forveksles med garantier.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/vurdering/",
+      "width": 900,
+      "headings": [
+        {
+          "text": "En startretning, ikke en perm med feil.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Du sender oss en lenke. Ikke en avhandling.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Videre arbeid må ha eget omfang og pris.",
+          "align": "center",
+          "width": 836,
+          "expectedWidth": 836,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/begreper/",
+      "width": 900,
+      "headings": [],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "headings": [
+        {
+          "text": "Tre pakker. Samme mål: flere riktige kunder.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Resultater fra kundearbeid",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Slik finner vi hva som bør gjøres først",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Best når kundene faktisk har et valg.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [
+        {
+          "text": "Endre trafikken, andelen som tar kontakt eller kjøper - eller begge. Se hvordan de to grepene virker sammen.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Velg pakken som passer hvor komplekst behovet ditt er - fra én tydelig flaskehals til flere kundereiser som må prioriteres løpende.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Annonsebudsjett kommer i tillegg.Usikker? Ta en gratis sjekk",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Behovet avgjør tiltakene. Vi starter ikke med SEO eller en annen kanal bare fordi du kom inn på en bestemt side.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "",
+          "maxWidth": "none"
+        }
+      ],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/ai-synlighet/",
+      "width": 390,
+      "headings": [
+        {
+          "text": "Et tydelig tilbud gir noe konkret å forstå.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "En omtale er ikke det samme som en kunde.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Vi undersøker uklarheter før vi foreslår mer innhold.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "AEO, AIO og GEO er ikke tre separate behov i bedriften.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Vi kan forbedre informasjonen. Vi kan ikke styre svaret.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Start med informasjonen kunden møter i dag.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "width": 390,
+      "headings": [
+        {
+          "text": "Bestem hvilken handling som er nyttig for bedriften.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Still tre spørsmål i denne rekkefølgen.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Tre utgangspunkt gir tre ulike første spørsmål.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "En brøk forklarer mekanikken. Den velger ikke tiltaket.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Betalt synlighet kan gi fart når resten av regnestykket henger sammen.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Mangler du data, begynn med en begrunnet hypotese.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Du kan be om en kort vurdering av hvor Medon ville startet.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/innsikt/",
+      "width": 390,
+      "headings": [
+        {
+          "text": "Velg spørsmålet du trenger svar på.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Vil du vurdere din egen nettside?",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [
+        {
+          "text": "Guidene forklarer beslutninger og måling i enkelt språk. Eksemplene er illustrative og gir ingen løfter om resultat.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Send nettadressen og en e-postadresse for bedriften. Medon gjør en gratis, avgrenset manuell sjekk og gir kort veiledning om hva vi ville startet med og hvorfor.Sjekken er ikke en automatisk poengsum, full revisjon, komplett feilliste, prognose eller gjennomføring. Videre arbeid må ha eget avtalt omfang og pris.",
+          "maxWidth": "none"
+        }
+      ],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/kontakt/",
+      "width": 390,
+      "headings": [
+        {
+          "text": "Fortell kort hva det gjelder.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Usikker på hvor du bør starte? Be om en gratis sjekk.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/konvertering/",
+      "width": 390,
+      "headings": [
+        {
+          "text": "Det skal være enklere å kjøpe enn å gi opp.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Flere skjema er lite verdt hvis henvendelsene ikke passer.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Vi starter med hindringen som står mest i veien.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Fullført checkout økte fra 7,1 % til 43,6 %",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Hvis de rette besøkene ikke kommer, er ikke konvertering hele svaret.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Send siden der du vil at kunden skal handle.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [
+        {
+          "text": "Kunden må forstå hva du tilbyr, få svar på det viktigste og vite hva som skjer videre. Små uklarheter kan bli store stopp når kunden allerede vurderer flere alternativer.Derfor ser vi på hele veien fra interesse til handling. Knapper og farger er bare en liten del av bildet.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "For en tjenestebedrift er målet relevante henvendelser som kan bli kunder. For en nettbutikk må flere kjøp også vurderes mot ordreverdi, margin og kostnader.Derfor definerer vi hva en nyttig handling faktisk er før vi vurderer om konverteringen har blitt bedre.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Det kan være et uklart tilbud, feil rekkefølge på informasjonen, et tungvint skjema, en svak landingsside eller en kjøpsvei som skaper unødvendig friksjon.Vi analyserer, gjennomfører avtalt arbeid og følger effekten. Du skal forstå hvorfor et tiltak kommer før et annet.Vi kan forbedre det vi kontrollerer. Vi kan ikke love en bestemt økning i konverteringsrate, omsetning eller antall kunder.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "En god side kan ikke skape kunder fra relevant trafikk som aldri kommer. Derfor må vi skille mellom for få relevante besøk og for mange besøk som stopper før handling.Hvis begge deler begrenser resultatet, kan vi jobbe med synlighet og konvertering sammen.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Få våre 3 viktigste funn innen 2 virkedager. Vi ser kort på siden og peker ut hva vi ville undersøkt eller forbedret først.Sjekken er ikke en full CRO-revisjon, komplett feilliste, prognose eller gratis gjennomføring.",
+          "maxWidth": "none"
+        }
+      ],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/innsikt/male-effekt-av-optimalisering/",
+      "width": 390,
+      "headings": [
+        {
+          "text": "Skill mellom synlighet, handling og forretningsverdi.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "For tjenester: følg henvendelsen videre.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "For nettbutikk: se på kjøp og hva som blir igjen.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "En prosent trenger en tydelig teller og nevner.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Sammenlign perioder med forutsetningene synlige.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "En kilde hjelper oss å forstå en inngang, ikke hele beslutningen.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Start med en prioritering dere kan undersøke videre.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/nettbutikkoptimalisering/",
+      "width": 390,
+      "headings": [
+        {
+          "text": "Se hele veien fra produktbehov til bestilling.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "\"Lagt i handlekurv\" er et mellomsteg.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Flere ordre må vurderes sammen med økonomien i dem.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "De samme tjenestene. Tilpasset veien til kjøp.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Send nettbutikken og fortell hvor du er usikker.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/om/",
+      "width": 390,
+      "headings": [
+        {
+          "text": "Finn begrensningen. Prioriter arbeidet derfra.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Du skal forstå hva vi gjør og hva som er avtalt.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Norske bedrifter først. Behovet avgjør om tjenesten passer.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Start med nettsiden dere allerede har.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/personvern/",
+      "width": 390,
+      "headings": [
+        {
+          "text": "Medon AS står bak tjenesten.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Skjemaet skal be om det som trengs for å forstå henvendelsen.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "E-postvarsel og lagring på server er valgt som startpunkt.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Før lansering må lagring og rettigheter være konkret beskrevet.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/priser/",
+      "width": 390,
+      "headings": [
+        {
+          "text": "Fire områder. Prioritert etter behov.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Tjenestepris og annonsebudsjett er to forskjellige ting.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Få våre 3 viktigste funn innen 2 virkedager.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [
+        {
+          "text": "Når relevante kunder finner deg og flere av dem går videre til henvendelse eller kjøp, kan tiltakene forsterke hverandre. Derfor kan det være bedre å forbedre to deler av samme kundereise samtidig enn å veksle mellom dem fra måned til måned.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "SEO, AI-synlighet og annonser kan gi flere relevante besøk. Konverteringsoptimalisering kan øke verdien av trafikken du allerede har. Gode og relevante landingssider kan også støtte organisk synlighet, annonsekvalitet og konvertering.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Velg pakken og send bestillingen. Vi bekrefter oppstart og det avtalte omfanget før arbeidet starter.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Arbeidet kan omfatte konvertering, SEO og AI-synlighet, Google Ads og Meta Ads. Måling og sporing ligger i bunn, så vi kan følge med på hva som faktisk skjer.Hva vi starter med avgjøres av behovet og hva som mest sannsynlig begrenser resultatet akkurat nå.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Vi kan jobbe med: Konvertering / SEO, lokal SEO og AI-synlighet / Google Ads / Meta Ads.Måling og sporing ligger i bunn, så vi kan følge med på hva som faktisk skjer.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Annonsebudsjett kommer i tillegg. Eksterne verktøy og plattformkostnader kommer også i tillegg når de er nødvendige og ikke er avtalt inkludert.Mindre justeringer og arbeid på eksisterende landingssider kan inngå i avtalt omfang. Større nye landingssider, nettsider, omfattende teknisk arbeid og redesign prises separat.Avtalt kapasitet gjelder per måned og overføres ikke til senere måneder.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Send nettsiden eller nettbutikken. Vi gjør en kort, manuell vurdering og sier hva vi ville undersøkt eller forbedret først - og hvorfor.Sjekken er ikke en full revisjon, prognose eller gratis gjennomføring. Videre arbeid avtales separat.",
+          "maxWidth": "none"
+        }
+      ],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/seo/",
+      "width": 390,
+      "headings": [
+        {
+          "text": "Ett søk trenger et svar. Ett svar trenger riktig side.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Godt innhold må også kunne bli funnet.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Start med søk du faktisk kan hjelpe kunden med.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Synlige sider er et mellomsteg. Relevante kunder er målet.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "AI-synlighet er et eget spørsmål, selv når innholdet overlapper.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Send nettsiden. Vi vurderer et fornuftig sted å begynne.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/synlighet/",
+      "width": 390,
+      "headings": [
+        {
+          "text": "Hvis bare de som kjenner navnet ditt finner deg, kommer du sent inn i valget.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "SEO, lokal SEO og AI-synlighet løser ulike deler av samme jobb.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Vi starter med det som kan gjøre det lettere for en relevant kunde å finne deg.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Organiske klikk økte 93 % hos Helt Opplagt",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Mer trafikk er lite verdt hvis de rette besøkende ikke går videre.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Send nettsiden. Vi sier hvor vi ville startet - og hvorfor.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [
+        {
+          "text": "Kunden kan søke etter en tjeneste, et produkt, et problem eller en leverandør i nærheten. Da må nettsiden gi et tydelig svar på det kunden faktisk prøver å finne.Vi starter med tilbudet, kundens spørsmål og sidene som skal gjøre jobben. Flere søkeord og mer innhold er ikke et mål i seg selv.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "De overlapper, men de er ikke det samme. Derfor må vi se på hvor kundene faktisk leter og hva som mangler i dag.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Det kan være en viktig tjenesteside som mangler, en side som svarer uklart, intern struktur som skjuler viktig innhold eller bedriftsinformasjon som ikke henger godt nok sammen.Vi prioriterer ut fra tilbudet, kundene og hva vi faktisk kan måle. Du skal forstå hvorfor et tiltak kommer før et annet.Vi kan forbedre grunnlaget for synlighet. Vi kan ikke love en bestemt Google-plassering, AI-anbefaling eller et bestemt antall nye kunder.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Når relevante kunder finner siden, må de også forstå tilbudet og komme enkelt videre til kontakt eller kjøp.Hvis både oppdagelse og handling begrenser resultatet, kan vi jobbe med begge. Betalt synlighet kan også brukes når det er en fornuftig snarvei til markedet.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Få våre 3 viktigste funn innen 2 virkedager. Vi ser kort på den offentlige nettsiden eller nettbutikken og peker ut hva vi ville undersøkt eller forbedret først.Sjekken er ikke en full SEO-revisjon, komplett feilliste, prognose eller gratis gjennomføring.",
+          "maxWidth": "none"
+        }
+      ],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/vilkar/",
+      "width": 390,
+      "headings": [
+        {
+          "text": "Den gratis sjekken er avgrenset.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Tjeneste, ansvar og leveransegrenser må avtales.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Pris, fakturering og oppsigelse er ikke fastsatt her.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Arbeid og forventet nytte skal ikke forveksles med garantier.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/vurdering/",
+      "width": 390,
+      "headings": [
+        {
+          "text": "En startretning, ikke en perm med feil.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Du sender oss en lenke. Ikke en avhandling.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Videre arbeid må ha eget omfang og pris.",
+          "align": "center",
+          "width": 350,
+          "expectedWidth": 350,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/begreper/",
+      "width": 390,
+      "headings": [],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/",
+      "width": 320,
+      "headings": [
+        {
+          "text": "Tre pakker. Samme mål: flere riktige kunder.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Resultater fra kundearbeid",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Slik finner vi hva som bør gjøres først",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Best når kundene faktisk har et valg.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [
+        {
+          "text": "Endre trafikken, andelen som tar kontakt eller kjøper - eller begge. Se hvordan de to grepene virker sammen.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Velg pakken som passer hvor komplekst behovet ditt er - fra én tydelig flaskehals til flere kundereiser som må prioriteres løpende.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Annonsebudsjett kommer i tillegg.Usikker? Ta en gratis sjekk",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Behovet avgjør tiltakene. Vi starter ikke med SEO eller en annen kanal bare fordi du kom inn på en bestemt side.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "",
+          "maxWidth": "none"
+        }
+      ],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/ai-synlighet/",
+      "width": 320,
+      "headings": [
+        {
+          "text": "Et tydelig tilbud gir noe konkret å forstå.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "En omtale er ikke det samme som en kunde.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Vi undersøker uklarheter før vi foreslår mer innhold.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "AEO, AIO og GEO er ikke tre separate behov i bedriften.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Vi kan forbedre informasjonen. Vi kan ikke styre svaret.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Start med informasjonen kunden møter i dag.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "width": 320,
+      "headings": [
+        {
+          "text": "Bestem hvilken handling som er nyttig for bedriften.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Still tre spørsmål i denne rekkefølgen.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Tre utgangspunkt gir tre ulike første spørsmål.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "En brøk forklarer mekanikken. Den velger ikke tiltaket.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Betalt synlighet kan gi fart når resten av regnestykket henger sammen.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Mangler du data, begynn med en begrunnet hypotese.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Du kan be om en kort vurdering av hvor Medon ville startet.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/innsikt/",
+      "width": 320,
+      "headings": [
+        {
+          "text": "Velg spørsmålet du trenger svar på.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Vil du vurdere din egen nettside?",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [
+        {
+          "text": "Guidene forklarer beslutninger og måling i enkelt språk. Eksemplene er illustrative og gir ingen løfter om resultat.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Send nettadressen og en e-postadresse for bedriften. Medon gjør en gratis, avgrenset manuell sjekk og gir kort veiledning om hva vi ville startet med og hvorfor.Sjekken er ikke en automatisk poengsum, full revisjon, komplett feilliste, prognose eller gjennomføring. Videre arbeid må ha eget avtalt omfang og pris.",
+          "maxWidth": "none"
+        }
+      ],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/kontakt/",
+      "width": 320,
+      "headings": [
+        {
+          "text": "Fortell kort hva det gjelder.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Usikker på hvor du bør starte? Be om en gratis sjekk.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/konvertering/",
+      "width": 320,
+      "headings": [
+        {
+          "text": "Det skal være enklere å kjøpe enn å gi opp.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Flere skjema er lite verdt hvis henvendelsene ikke passer.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Vi starter med hindringen som står mest i veien.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Fullført checkout økte fra 7,1 % til 43,6 %",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Hvis de rette besøkene ikke kommer, er ikke konvertering hele svaret.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Send siden der du vil at kunden skal handle.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [
+        {
+          "text": "Kunden må forstå hva du tilbyr, få svar på det viktigste og vite hva som skjer videre. Små uklarheter kan bli store stopp når kunden allerede vurderer flere alternativer.Derfor ser vi på hele veien fra interesse til handling. Knapper og farger er bare en liten del av bildet.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "For en tjenestebedrift er målet relevante henvendelser som kan bli kunder. For en nettbutikk må flere kjøp også vurderes mot ordreverdi, margin og kostnader.Derfor definerer vi hva en nyttig handling faktisk er før vi vurderer om konverteringen har blitt bedre.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Det kan være et uklart tilbud, feil rekkefølge på informasjonen, et tungvint skjema, en svak landingsside eller en kjøpsvei som skaper unødvendig friksjon.Vi analyserer, gjennomfører avtalt arbeid og følger effekten. Du skal forstå hvorfor et tiltak kommer før et annet.Vi kan forbedre det vi kontrollerer. Vi kan ikke love en bestemt økning i konverteringsrate, omsetning eller antall kunder.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "En god side kan ikke skape kunder fra relevant trafikk som aldri kommer. Derfor må vi skille mellom for få relevante besøk og for mange besøk som stopper før handling.Hvis begge deler begrenser resultatet, kan vi jobbe med synlighet og konvertering sammen.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Få våre 3 viktigste funn innen 2 virkedager. Vi ser kort på siden og peker ut hva vi ville undersøkt eller forbedret først.Sjekken er ikke en full CRO-revisjon, komplett feilliste, prognose eller gratis gjennomføring.",
+          "maxWidth": "none"
+        }
+      ],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/innsikt/male-effekt-av-optimalisering/",
+      "width": 320,
+      "headings": [
+        {
+          "text": "Skill mellom synlighet, handling og forretningsverdi.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "For tjenester: følg henvendelsen videre.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "For nettbutikk: se på kjøp og hva som blir igjen.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "En prosent trenger en tydelig teller og nevner.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Sammenlign perioder med forutsetningene synlige.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "En kilde hjelper oss å forstå en inngang, ikke hele beslutningen.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Start med en prioritering dere kan undersøke videre.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/nettbutikkoptimalisering/",
+      "width": 320,
+      "headings": [
+        {
+          "text": "Se hele veien fra produktbehov til bestilling.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "\"Lagt i handlekurv\" er et mellomsteg.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Flere ordre må vurderes sammen med økonomien i dem.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "De samme tjenestene. Tilpasset veien til kjøp.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Send nettbutikken og fortell hvor du er usikker.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/om/",
+      "width": 320,
+      "headings": [
+        {
+          "text": "Finn begrensningen. Prioriter arbeidet derfra.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Du skal forstå hva vi gjør og hva som er avtalt.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Norske bedrifter først. Behovet avgjør om tjenesten passer.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Start med nettsiden dere allerede har.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/personvern/",
+      "width": 320,
+      "headings": [
+        {
+          "text": "Medon AS står bak tjenesten.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Skjemaet skal be om det som trengs for å forstå henvendelsen.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "E-postvarsel og lagring på server er valgt som startpunkt.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Før lansering må lagring og rettigheter være konkret beskrevet.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/priser/",
+      "width": 320,
+      "headings": [
+        {
+          "text": "Fire områder. Prioritert etter behov.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Tjenestepris og annonsebudsjett er to forskjellige ting.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Få våre 3 viktigste funn innen 2 virkedager.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [
+        {
+          "text": "Når relevante kunder finner deg og flere av dem går videre til henvendelse eller kjøp, kan tiltakene forsterke hverandre. Derfor kan det være bedre å forbedre to deler av samme kundereise samtidig enn å veksle mellom dem fra måned til måned.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "SEO, AI-synlighet og annonser kan gi flere relevante besøk. Konverteringsoptimalisering kan øke verdien av trafikken du allerede har. Gode og relevante landingssider kan også støtte organisk synlighet, annonsekvalitet og konvertering.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Velg pakken og send bestillingen. Vi bekrefter oppstart og det avtalte omfanget før arbeidet starter.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Arbeidet kan omfatte konvertering, SEO og AI-synlighet, Google Ads og Meta Ads. Måling og sporing ligger i bunn, så vi kan følge med på hva som faktisk skjer.Hva vi starter med avgjøres av behovet og hva som mest sannsynlig begrenser resultatet akkurat nå.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Vi kan jobbe med: Konvertering / SEO, lokal SEO og AI-synlighet / Google Ads / Meta Ads.Måling og sporing ligger i bunn, så vi kan følge med på hva som faktisk skjer.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Annonsebudsjett kommer i tillegg. Eksterne verktøy og plattformkostnader kommer også i tillegg når de er nødvendige og ikke er avtalt inkludert.Mindre justeringer og arbeid på eksisterende landingssider kan inngå i avtalt omfang. Større nye landingssider, nettsider, omfattende teknisk arbeid og redesign prises separat.Avtalt kapasitet gjelder per måned og overføres ikke til senere måneder.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Send nettsiden eller nettbutikken. Vi gjør en kort, manuell vurdering og sier hva vi ville undersøkt eller forbedret først - og hvorfor.Sjekken er ikke en full revisjon, prognose eller gratis gjennomføring. Videre arbeid avtales separat.",
+          "maxWidth": "none"
+        }
+      ],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/seo/",
+      "width": 320,
+      "headings": [
+        {
+          "text": "Ett søk trenger et svar. Ett svar trenger riktig side.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Godt innhold må også kunne bli funnet.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Start med søk du faktisk kan hjelpe kunden med.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Synlige sider er et mellomsteg. Relevante kunder er målet.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "AI-synlighet er et eget spørsmål, selv når innholdet overlapper.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Send nettsiden. Vi vurderer et fornuftig sted å begynne.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/synlighet/",
+      "width": 320,
+      "headings": [
+        {
+          "text": "Hvis bare de som kjenner navnet ditt finner deg, kommer du sent inn i valget.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "SEO, lokal SEO og AI-synlighet løser ulike deler av samme jobb.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Vi starter med det som kan gjøre det lettere for en relevant kunde å finne deg.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Organiske klikk økte 93 % hos Helt Opplagt",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Mer trafikk er lite verdt hvis de rette besøkende ikke går videre.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Send nettsiden. Vi sier hvor vi ville startet - og hvorfor.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [
+        {
+          "text": "Kunden kan søke etter en tjeneste, et produkt, et problem eller en leverandør i nærheten. Da må nettsiden gi et tydelig svar på det kunden faktisk prøver å finne.Vi starter med tilbudet, kundens spørsmål og sidene som skal gjøre jobben. Flere søkeord og mer innhold er ikke et mål i seg selv.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "De overlapper, men de er ikke det samme. Derfor må vi se på hvor kundene faktisk leter og hva som mangler i dag.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Det kan være en viktig tjenesteside som mangler, en side som svarer uklart, intern struktur som skjuler viktig innhold eller bedriftsinformasjon som ikke henger godt nok sammen.Vi prioriterer ut fra tilbudet, kundene og hva vi faktisk kan måle. Du skal forstå hvorfor et tiltak kommer før et annet.Vi kan forbedre grunnlaget for synlighet. Vi kan ikke love en bestemt Google-plassering, AI-anbefaling eller et bestemt antall nye kunder.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Når relevante kunder finner siden, må de også forstå tilbudet og komme enkelt videre til kontakt eller kjøp.Hvis både oppdagelse og handling begrenser resultatet, kan vi jobbe med begge. Betalt synlighet kan også brukes når det er en fornuftig snarvei til markedet.",
+          "maxWidth": "none"
+        },
+        {
+          "text": "Få våre 3 viktigste funn innen 2 virkedager. Vi ser kort på den offentlige nettsiden eller nettbutikken og peker ut hva vi ville undersøkt eller forbedret først.Sjekken er ikke en full SEO-revisjon, komplett feilliste, prognose eller gratis gjennomføring.",
+          "maxWidth": "none"
+        }
+      ],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/vilkar/",
+      "width": 320,
+      "headings": [
+        {
+          "text": "Den gratis sjekken er avgrenset.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Tjeneste, ansvar og leveransegrenser må avtales.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Pris, fakturering og oppsigelse er ikke fastsatt her.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Arbeid og forventet nytte skal ikke forveksles med garantier.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/vurdering/",
+      "width": 320,
+      "headings": [
+        {
+          "text": "En startretning, ikke en perm med feil.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Du sender oss en lenke. Ikke en avhandling.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        },
+        {
+          "text": "Videre arbeid må ha eget omfang og pris.",
+          "align": "center",
+          "width": 288,
+          "expectedWidth": 288,
+          "h2MaxWidth": "none"
+        }
+      ],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    },
+    {
+      "route": "/begreper/",
+      "width": 320,
+      "headings": [],
+      "copy": [],
+      "split": 0,
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "posts": []
+}
