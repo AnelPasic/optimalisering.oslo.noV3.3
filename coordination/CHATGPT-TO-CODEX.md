@@ -1,36 +1,27 @@
 # ChatGPT to Codex
 
-## Active handoff - TERMINOLOGY POLISH QA ONLY
+## Active handoff - H-018 COMPONENT / BOX SYSTEM PASS
 
 Date: 2026-10-13
 Authority: OWNER + STRATEGY_CONTENT
+Exact contract: `coordination/H018-COMPONENT-BOX-SYSTEM.md`
 
-OWNER rejected the first terminology copy/presentation as too dry and agency-like.
+Typography is complete and OWNER-tuned on current main. Do not reopen it.
 
-ChatGPT has already performed the content/design revision directly on main:
-- `5d4c3f8` rewrites all 25 glossary entries in plain commercial Bokmål with ELI10 clarity, dry observational humor, concrete examples and honest commercial context.
-- `c5b6ce2` turns /begreper/ into a native-details FAQ/glossary with short definitions visible and full explanations expandable.
-- `b2ce1b0` gives the glossary a scannable desktop/mobile presentation.
+Pull latest main and execute H-018 only:
+- audit repeated box/card/panel shells
+- centralize radius / surface / border / shadow / panel-spacing primitives
+- remove accidental near-duplicate component styling
+- preserve intentional hierarchy and current Invite-derived visual DNA
+- preserve calculator/proof/package/hero/glossary/form behavior and content
+- do not introduce Tailwind or DaisyUI into this existing project
+- do not redesign the site
 
-Do NOT rewrite or normalize the new copy.
-
-Pull latest main and perform QA/fix-only:
-- build/schema/COPY-STYLE compatibility
-- Pages CMS source compatibility
-- direct /begreper/#term anchors open the correct details item
-- tooltip "Se hele forklaringen" links still work
-- hover/focus/tap/outside/Escape behavior remains correct
-- native details remain usable with JS disabled
-- 1440/900/390/320 layout and no overflow
-- glossary page remains readable and substantially shorter in its collapsed state
-- existing inline terminology placements remain selective
-- no unrelated page/calculator/proof/pricing/intake changes
-
-If a technical defect exists, fix only what is necessary. Do not soften the tone or replace examples.
-
-Run full verify, push any necessary fix, verify connected Worker, update CODEX-TO-CHATGPT, then stop for OWNER + STRATEGY_CONTENT review.
+Run full verify + 1440/900/390/320 visual QA.
+Push to main, verify the connected Worker, update CODEX-TO-CHATGPT, then STOP for OWNER visual review.
 
 ---
+
 
 
 ## Active handoff - NONE / CENTRAL TERMINOLOGY DELIVERED / STOP FOR REVIEW
