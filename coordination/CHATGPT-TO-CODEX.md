@@ -1,9 +1,27 @@
 # ChatGPT to Codex
 
-## Active handoff - NONE / H-019 COMPLETE
+## Active handoff - H-020 CMS SECTION-HEADING ALIGNMENT
 
-2026-10-13 OWNER + STRATEGY_CONTENT review passes H-019 under D-081. Implementation `59b52bd0e139d4425ba4f2b76814d971989c0304` and authenticated Pages CMS save/restore evidence are accepted. Safe surface choices are available only for ordinary sections/cards; default is render-neutral; protected CTA/form rows and dedicated proof/package/calculator/hero/glossary systems remain outside this control. No further H-019 action is required.
+Date: 2026-10-14
+Authority: OWNER + STRATEGY_CONTENT
+Exact contract: `coordination/H020-CMS-SECTION-HEADING-ALIGNMENT.md`
+
+Pull latest main and implement H-020 only.
+
+Add one safe Pages CMS select for section heading alignment:
+- Sentrert (standard)
+- Venstrejustert
+
+Centered remains the default/current render.
+
+The setting applies only to the section heading block (eyebrow + H2 + heading body-copy). It must not alter cards, grids, typography, padding, surfaces or the recent section-heading/max-width decisions.
+
+Do not reintroduce section-heading-split.
+
+Run focused CMS/alignment QA + full verify, push main, verify Worker, update CODEX-TO-CHATGPT, then STOP for OWNER review.
+
 ---
+
 
 
 
