@@ -1,0 +1,455 @@
+{
+  "base": "http://127.0.0.1:65117",
+  "records": [
+    {
+      "route": "/",
+      "width": 1440,
+      "fingerprint": "0cda17ed14558560dd89a882ca17d130845555141ccce961d32990050f113852",
+      "elements": 643,
+      "noJS": true
+    },
+    {
+      "route": "/ai-synlighet/",
+      "width": 1440,
+      "fingerprint": "109a3316211d7c84849c2ed51b8020630e0ec43e1319f4d4d6c1e6653701d4e1",
+      "elements": 191,
+      "noJS": true
+    },
+    {
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "width": 1440,
+      "fingerprint": "3c185becea43e1f378909eb4ee1658d85777ff5e94d7aa7537be06657b900ed6",
+      "elements": 199,
+      "noJS": true
+    },
+    {
+      "route": "/innsikt/",
+      "width": 1440,
+      "fingerprint": "cfaa7857ac6c15b08082b07607efd58ba7c6cbdd42e8187872873273e84d5a3e",
+      "elements": 93,
+      "noJS": true
+    },
+    {
+      "route": "/kontakt/",
+      "width": 1440,
+      "fingerprint": "03383772068f3e2af3fbef12aa06ea0ab3ff1dad2ca1a28dc16b5b209ccf37b0",
+      "elements": 118,
+      "noJS": true
+    },
+    {
+      "route": "/konvertering/",
+      "width": 1440,
+      "fingerprint": "da141213b698d092af66d315836e8901dc4c78869d80b34eb6223e1553227abc",
+      "elements": 234,
+      "noJS": true
+    },
+    {
+      "route": "/innsikt/male-effekt-av-optimalisering/",
+      "width": 1440,
+      "fingerprint": "7794074bac7bd9d8bc50682e3a96321d8f35299b7ca894aa6b0dacabf879fc12",
+      "elements": 218,
+      "noJS": true
+    },
+    {
+      "route": "/nettbutikkoptimalisering/",
+      "width": 1440,
+      "fingerprint": "dcc72a1f2624b1064d7cc00faee6a3401beb6722ec7813111d129be2a319da8f",
+      "elements": 198,
+      "noJS": true
+    },
+    {
+      "route": "/om/",
+      "width": 1440,
+      "fingerprint": "993d0c4f006166ba6241a3162b75c21c1613a39279ac5bbfe4f4ccd89c708cf3",
+      "elements": 145,
+      "noJS": true
+    },
+    {
+      "route": "/personvern/",
+      "width": 1440,
+      "fingerprint": "4e882290227f0f2faed87f9d7cd10529a6ce71a663ae9723f6c1a46d8a105998",
+      "elements": 125,
+      "noJS": true
+    },
+    {
+      "route": "/priser/",
+      "width": 1440,
+      "fingerprint": "fa07b474b11d0cf3ab31ce195a6e3a0d505f3860ef0c0d4572bf154338f099d7",
+      "elements": 502,
+      "noJS": true
+    },
+    {
+      "route": "/seo/",
+      "width": 1440,
+      "fingerprint": "513c7eb9a4541037da03a4e73e208759d38de91ebd8b52d577137997cdf2d883",
+      "elements": 187,
+      "noJS": true
+    },
+    {
+      "route": "/synlighet/",
+      "width": 1440,
+      "fingerprint": "a23bc54438e93364515c2b51054f9582b8537227d98917f5726d40a0261abfe3",
+      "elements": 241,
+      "noJS": true
+    },
+    {
+      "route": "/vilkar/",
+      "width": 1440,
+      "fingerprint": "3642b11f82c262b6a72a8e85cb760c5ccd40ac1099e4ebe496f82a231aabcf93",
+      "elements": 129,
+      "noJS": true
+    },
+    {
+      "route": "/vurdering/",
+      "width": 1440,
+      "fingerprint": "ea85e89c25661478d37b1cdab56f4f05e0d9dfe1daab011f0e493761cbe33289",
+      "elements": 180,
+      "noJS": true
+    },
+    {
+      "route": "/begreper/",
+      "width": 1440,
+      "fingerprint": "706b3551ce42e88cee3826d4ab2698c327f06e53a14d3b4f3567c3caad5676ef",
+      "elements": 399,
+      "noJS": true
+    },
+    {
+      "route": "/",
+      "width": 900,
+      "fingerprint": "597d96c51e17f9d3c7eb24037bce369645ccca3cf9a1be6f1416b4774631fe51",
+      "elements": 643,
+      "noJS": true
+    },
+    {
+      "route": "/ai-synlighet/",
+      "width": 900,
+      "fingerprint": "fbf4acc2f8f01abd3d2288dd033613270564ad62c28865040f490fd6acce9703",
+      "elements": 191,
+      "noJS": true
+    },
+    {
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "width": 900,
+      "fingerprint": "03839bb5b1c5775f316500177e1a6665bab6073f6163486a4af8ed2fe9e5f687",
+      "elements": 199,
+      "noJS": true
+    },
+    {
+      "route": "/innsikt/",
+      "width": 900,
+      "fingerprint": "c3694477dbf9dd4d3897b7ceeb30ba73235ec2bb5a5e9f2eb5579f626ecf68bc",
+      "elements": 93,
+      "noJS": true
+    },
+    {
+      "route": "/kontakt/",
+      "width": 900,
+      "fingerprint": "b50664b85e7ca7b59adc1fe850ad467a979374dfe76536cc573c1f81127295ed",
+      "elements": 118,
+      "noJS": true
+    },
+    {
+      "route": "/konvertering/",
+      "width": 900,
+      "fingerprint": "d6b100ee06495f450a8e23a7bcbe9cd72e4865c7900099f56e88103a328d2687",
+      "elements": 234,
+      "noJS": true
+    },
+    {
+      "route": "/innsikt/male-effekt-av-optimalisering/",
+      "width": 900,
+      "fingerprint": "1c92787c575187315298ada443e2ed036e52b93dbd6b99dd49b97ad889fd81da",
+      "elements": 218,
+      "noJS": true
+    },
+    {
+      "route": "/nettbutikkoptimalisering/",
+      "width": 900,
+      "fingerprint": "4d1632dc9c21602c4bcf818d57f8d2273d979e591b20d52b03601ffb30b29129",
+      "elements": 198,
+      "noJS": true
+    },
+    {
+      "route": "/om/",
+      "width": 900,
+      "fingerprint": "5cf0b323b3d171c5b3a93cdbe5b005edb6a7b7c00981511631afa71bccd86d40",
+      "elements": 145,
+      "noJS": true
+    },
+    {
+      "route": "/personvern/",
+      "width": 900,
+      "fingerprint": "08dfec801b6d03ab36c92d4bc50a031049ce48c21ee088b7de73dd86daab9778",
+      "elements": 125,
+      "noJS": true
+    },
+    {
+      "route": "/priser/",
+      "width": 900,
+      "fingerprint": "1079024bb97d1b4f2a6b51b0f7b79198049cfb9dd3e3ff1c34b433eccf08a918",
+      "elements": 502,
+      "noJS": true
+    },
+    {
+      "route": "/seo/",
+      "width": 900,
+      "fingerprint": "a636aad50469b98742cbeb4a1e356e7714d51437ff881f5a3682e0c53ede3cec",
+      "elements": 187,
+      "noJS": true
+    },
+    {
+      "route": "/synlighet/",
+      "width": 900,
+      "fingerprint": "8f0ba8a37372a472f22e82bbf781e9544e4c4c03a61616017c3108ffef3b4f3a",
+      "elements": 241,
+      "noJS": true
+    },
+    {
+      "route": "/vilkar/",
+      "width": 900,
+      "fingerprint": "80fb7dec08ca0124bd40b2dbd1c95183935d619c5b1a1352d1b147c8db71ec26",
+      "elements": 129,
+      "noJS": true
+    },
+    {
+      "route": "/vurdering/",
+      "width": 900,
+      "fingerprint": "7b69640f670885ff26c7dfedefdd9b405b492ab0435ae8efc920701de515bd79",
+      "elements": 180,
+      "noJS": true
+    },
+    {
+      "route": "/begreper/",
+      "width": 900,
+      "fingerprint": "f25f1902dd00fa631b61d795ed655b4ab5214eb17bdadecd536f78856dac1e6a",
+      "elements": 399,
+      "noJS": true
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "fingerprint": "416bbe7180c7811df848cecb737b8daa2e94009aa9f7512f247bfa648744d3a5",
+      "elements": 643,
+      "noJS": true
+    },
+    {
+      "route": "/ai-synlighet/",
+      "width": 390,
+      "fingerprint": "70784790bac8ae4d8deb27a6bf26b1c7530f5c70d0da8cd42a58a4edc10ad9cd",
+      "elements": 191,
+      "noJS": true
+    },
+    {
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "width": 390,
+      "fingerprint": "9397aeeaeecb09d683da0f7b47e2335f73a8f86f25a8996b3bd7f00172c0df19",
+      "elements": 199,
+      "noJS": true
+    },
+    {
+      "route": "/innsikt/",
+      "width": 390,
+      "fingerprint": "831d71f9727c0a5657710250293a93f33fbb951b5b7c7306727e6793151da5a6",
+      "elements": 93,
+      "noJS": true
+    },
+    {
+      "route": "/kontakt/",
+      "width": 390,
+      "fingerprint": "f2775de4615a076752bb2e5ea88ab43e77402b92fed277f95061fc02bb0f91cd",
+      "elements": 118,
+      "noJS": true
+    },
+    {
+      "route": "/konvertering/",
+      "width": 390,
+      "fingerprint": "9356e291a691232f9250fd50f2dc3d4f73ecd11cf6595bd51fd09df05a7aa615",
+      "elements": 234,
+      "noJS": true
+    },
+    {
+      "route": "/innsikt/male-effekt-av-optimalisering/",
+      "width": 390,
+      "fingerprint": "c1da3c6dab2843dbec8fe7ccee931e12f7ec49c44ef38fcec96552cb6e2e3a48",
+      "elements": 218,
+      "noJS": true
+    },
+    {
+      "route": "/nettbutikkoptimalisering/",
+      "width": 390,
+      "fingerprint": "7c9381d32771cdc3df4849915477f1a663a44443f22afb52fa4144d779facada",
+      "elements": 198,
+      "noJS": true
+    },
+    {
+      "route": "/om/",
+      "width": 390,
+      "fingerprint": "603b9631bdb45955c3b7526e0863be75530dc42fcdfa1a8812b2f8394be7ae53",
+      "elements": 145,
+      "noJS": true
+    },
+    {
+      "route": "/personvern/",
+      "width": 390,
+      "fingerprint": "885ae8f647ce18ed6aee95f7e63dc2336d2e2ea53384ad79c35c4e8468bb5526",
+      "elements": 125,
+      "noJS": true
+    },
+    {
+      "route": "/priser/",
+      "width": 390,
+      "fingerprint": "056ec76aab3bf4cf1155d7cbc7b1cf384609370a2c7789167f3d1640f087343f",
+      "elements": 502,
+      "noJS": true
+    },
+    {
+      "route": "/seo/",
+      "width": 390,
+      "fingerprint": "62c2feef0e6eee235189a9783b303917df5db6f136ccc782b9761e3dc2f43121",
+      "elements": 187,
+      "noJS": true
+    },
+    {
+      "route": "/synlighet/",
+      "width": 390,
+      "fingerprint": "14ef2d10afb346f90da7b1113dfc26cdb12675697dc71e1e7dc9c6f4217d8e63",
+      "elements": 241,
+      "noJS": true
+    },
+    {
+      "route": "/vilkar/",
+      "width": 390,
+      "fingerprint": "7678bf3bcb27ea6c88b51c92b1b72e06941d792ec0971e88056663832606679d",
+      "elements": 129,
+      "noJS": true
+    },
+    {
+      "route": "/vurdering/",
+      "width": 390,
+      "fingerprint": "f506a9e5e0eea0ec5ed75b046c570112fbff3cf3bcd1d993336b22f2b884c8ae",
+      "elements": 180,
+      "noJS": true
+    },
+    {
+      "route": "/begreper/",
+      "width": 390,
+      "fingerprint": "90d78d4b0e5d192a2b8e939bd95d31d7bd104efc9f004bc598f9e6d231b6ec27",
+      "elements": 399,
+      "noJS": true
+    },
+    {
+      "route": "/",
+      "width": 320,
+      "fingerprint": "ca93e2db613cf851611476550425d3f4b3683103935d2b0e06f328aa95185e77",
+      "elements": 643,
+      "noJS": true
+    },
+    {
+      "route": "/ai-synlighet/",
+      "width": 320,
+      "fingerprint": "d9eee9f661192b0bb5ab4875955f938fef151feb49433345a45e0a042f3034c1",
+      "elements": 191,
+      "noJS": true
+    },
+    {
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "width": 320,
+      "fingerprint": "573794b35349c9cb0c00fa0ae4af6b47e2947545cade65cfade1a05277d4cd4c",
+      "elements": 199,
+      "noJS": true
+    },
+    {
+      "route": "/innsikt/",
+      "width": 320,
+      "fingerprint": "9efe0f68d0563731f8b57794117ab881524e24b0c38c005d20c154259ab9045e",
+      "elements": 93,
+      "noJS": true
+    },
+    {
+      "route": "/kontakt/",
+      "width": 320,
+      "fingerprint": "ab9850e3a7fa9e4376b1573fd515e8a1caf61fc2bade4ef850ac1322eb707ec1",
+      "elements": 118,
+      "noJS": true
+    },
+    {
+      "route": "/konvertering/",
+      "width": 320,
+      "fingerprint": "14ad72173820c872a75d1af5b293035094a57873d442f4a81ae3e7c581762d65",
+      "elements": 234,
+      "noJS": true
+    },
+    {
+      "route": "/innsikt/male-effekt-av-optimalisering/",
+      "width": 320,
+      "fingerprint": "c944026b304ea861d19e8d6df2d918949980d854240a930a4dd886e9d0386c1d",
+      "elements": 218,
+      "noJS": true
+    },
+    {
+      "route": "/nettbutikkoptimalisering/",
+      "width": 320,
+      "fingerprint": "7d5d665bcfb821e9493e588e77ffd703c926587b4a29256202829cea51283747",
+      "elements": 198,
+      "noJS": true
+    },
+    {
+      "route": "/om/",
+      "width": 320,
+      "fingerprint": "4fd9a8d6031ece653284e362348eee724205fa132b01f1800cc9de337ea615b9",
+      "elements": 145,
+      "noJS": true
+    },
+    {
+      "route": "/personvern/",
+      "width": 320,
+      "fingerprint": "4caf3e0ec40caef68b2de74fe50bb63f59598483c86853910e11b43a1f292706",
+      "elements": 125,
+      "noJS": true
+    },
+    {
+      "route": "/priser/",
+      "width": 320,
+      "fingerprint": "9eaed2854733bbf0eb98ca345e0cd1f75486afca9189e204973c0c69fc8bc87b",
+      "elements": 502,
+      "noJS": true
+    },
+    {
+      "route": "/seo/",
+      "width": 320,
+      "fingerprint": "2d66bcffc76e2db4081ec591aa1a695ac19e433dc3702cb37219e9c348803bce",
+      "elements": 187,
+      "noJS": true
+    },
+    {
+      "route": "/synlighet/",
+      "width": 320,
+      "fingerprint": "c700a1f5f849d6da1474e40ee67990c590c8bf753187f717b826881a94c0a989",
+      "elements": 241,
+      "noJS": true
+    },
+    {
+      "route": "/vilkar/",
+      "width": 320,
+      "fingerprint": "2fea90dcfa2d34b83636fd60371660d68f06ff981e738f7abcf97ae16bd71d89",
+      "elements": 129,
+      "noJS": true
+    },
+    {
+      "route": "/vurdering/",
+      "width": 320,
+      "fingerprint": "3e4e6674a2b6d9ecf8c5ed83eb57791a24a5a576cc18a85729dc8fd1aeddc3c4",
+      "elements": 180,
+      "noJS": true
+    },
+    {
+      "route": "/begreper/",
+      "width": 320,
+      "fingerprint": "cf43dc44963fa8606762478e28812bf343eef9f5c9c941d56c35e852a8428ace",
+      "elements": 399,
+      "noJS": true
+    }
+  ],
+  "errors": [],
+  "posts": []
+}

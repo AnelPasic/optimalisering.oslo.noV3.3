@@ -22,7 +22,7 @@
         "mode": "automatic",
         "sort": "title",
         "limit": 6,
-        "layout": "cards"
+        "layout": "alternating"
       }
     },
     {

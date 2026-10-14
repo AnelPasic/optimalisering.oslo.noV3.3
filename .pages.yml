@@ -32,6 +32,12 @@ media:
       - webp
       - png
     rename: safe
+  - name: listingImages
+    label: Bilder til innholdslister
+    input: app/public/images/listing
+    output: /images/listing
+    extensions: [webp, png, jpg, jpeg, avif]
+    rename: safe
 settings:
   content:
     merge: true
@@ -132,6 +138,66 @@ components:
           collapsible:
             collapsed: true
             summary: "{label}"
+  listingVisual:
+    type: block
+    blockKey: kind
+    list:
+      min: 0
+      max: 1
+    description: Velg én listevisual med Ingen, Bilde eller Ikon. Bytt type på samme rad. Bildet eller ikonet eies av artikkelen og brukes i Bildekort og Bilde og tekst annenhver side.
+    blocks:
+      - name: none
+        label: Ingen
+        fields: []
+      - name: image
+        label: Bilde
+        fields:
+          - name: src
+            label: Bilde
+            type: image
+            required: true
+            options:
+              media: listingImages
+          - name: alt
+            label: Alternativ tekst
+            type: string
+            required: true
+            description: Beskriv det faktiske bildet kort og konkret.
+          - name: positionX
+            label: Horisontalt utsnitt
+            type: number
+            default: 50
+            options:
+              min: 0
+              max: 100
+          - name: positionY
+            label: Vertikalt utsnitt
+            type: number
+            default: 50
+            options:
+              min: 0
+              max: 100
+      - name: icon
+        label: Ikon
+        fields:
+          - name: icon
+            label: Ikon
+            type: select
+            required: true
+            options:
+              values:
+                - name: search
+                  label: Søk
+                - name: conversion
+                  label: Konvertering
+                - name: analytics
+                  label: Måling
+                - name: trend
+                  label: Utvikling
+                - name: page
+                  label: Side
+                - name: route
+                  label: Veivalg
   insightArticleReference:
     type: reference
     options:
@@ -209,6 +275,10 @@ components:
               values:
                 - name: cards
                   label: Kort
+                - name: mediaCards
+                  label: Bildekort
+                - name: alternating
+                  label: Bilde og tekst annenhver side
                 - name: compact
                   label: Kompakt
                 - name: links
@@ -1609,6 +1679,9 @@ content:
                 type: boolean
                 default: true
                 description: Av skjuler artikkelen i både automatiske og manuelle lister. URL og indeksering endres ikke.
+              - name: visual
+                label: Listevisual
+                component: listingVisual
           - *a6
           - *a7
           - *a8

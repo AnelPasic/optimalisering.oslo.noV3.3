@@ -164,6 +164,12 @@
     "summary": "Skill mellom visninger, handlinger og forretningsverdi. Definer relevante henvendelser eller nyttige kjøp, og gjør forutsetningene synlige.",
     "label": "Les måleguiden",
     "order": 20,
-    "visible": true
+    "visible": true,
+    "visual": [
+      {
+        "kind": "icon",
+        "icon": "analytics"
+      }
+    ]
   }
 }

@@ -1,0 +1,22 @@
+✔ listing supports discriminated image/icon/none and safe crop defaults (3.5678ms)
+✔ visual schema rejects arbitrary icons, remote/path traversal/SVG imagery, blank alt, unsafe crop and irrelevant fields (1.0265ms)
+✔ both visual layouts are explicit; config rejects duplicated page-owned media (0.5726ms)
+✔ resolver carries only validated page-owned visuals and omits absent/missing/invalid assets safely (9.6535ms)
+✔ final result index remains the alternation authority after filtering, exclusion, sorting and limit (0.4597ms)
+✔ CMS visual blocks expose only kind-specific fields and dedicated safe raster media (52.2745ms)
+✔ automatic collection discovery preserves exact migrated titles, summaries, labels, URLs and order (5.9743ms)
+✔ synthetic article is discovered without overview edits; hidden/index/service/utility records are omitted (9.9052ms)
+✔ editorial sort puts unordered last and breaks ties by Norwegian title then slug; title sort is deterministic (0.8356ms)
+✔ exclusion precedes automatic limit; manual row order and count are authoritative (6.9307ms)
+✔ blank optional metadata defaults safely and href normalizes slashes (2.6484ms)
+✔ schema rejects unknown queries/enums/limits/outside or duplicate references and source duplication (7.5477ms)
+✔ missing or non-article manual references fail build explicitly; invalid configs never produce fake cards (5.8043ms)
+✔ CMS editor has unique file ownership and article-only reference rows; save/reorder/restore preserves content (49.7279ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 341.3137

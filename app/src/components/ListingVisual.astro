@@ -1,0 +1,17 @@
+---
+import type { ListingVisual } from '../lib/listing-visual';
+import PackageFocusIcon from './PackageFocusIcon.astro';
+import TrendUp from '../assets/phosphor/trend-up.svg';
+interface Props { visual: ListingVisual; }
+const { visual } = Astro.props;
+---
+<div class="listing-visual" data-kind={visual.kind} aria-hidden={visual.kind === 'icon' ? 'true' : undefined}>
+  {visual.kind === 'image' ? <img src={visual.src} alt={visual.alt} width="1200" height="800" loading="lazy" decoding="async" style={{ objectPosition: `${visual.positionX}% ${visual.positionY}%` }} /> :
+    visual.icon === 'trend' ? <TrendUp aria-hidden="true" focusable="false" width="96" height="96" /> : <PackageFocusIcon kind={visual.icon} />}
+</div>
+<style>
+  .listing-visual { width: 100%; min-width: 0; aspect-ratio: 3 / 2; overflow: hidden; border-radius: var(--radius-card-lg); }
+  .listing-visual img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .listing-visual[data-kind="icon"] { aspect-ratio: 16 / 9; display: grid; place-items: center; background: var(--surface-lavender); color: var(--surface-light-ink); padding: var(--panel-pad-lg); }
+  .listing-visual :global(svg) { width: clamp(64px, 8vw, 112px); height: auto; }
+</style>
