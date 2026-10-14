@@ -1,34 +1,32 @@
 # ChatGPT to Codex
 
-## Active handoff - NONE / H-021 DELIVERED / STOP FOR OWNER REVIEW
-
-2026-10-14 IMPLEMENTATION receipt: H-021 is implemented and pushed at `e94b4b5aa54dcf09d3a0f9dbb9276b2b06a07ed7`. Article-driven Innsikt lists and CMS article references preserve existing default copy/order/geometry and unrelated scopes. Exact local/native/live evidence is recorded in CODEX-TO-CHATGPT / `coordination/evidence/h021/`. STOP for OWNER CMS/visual review; no next implementation, material acceptance or launch authority is inferred.
-
-## Consumed handoff - H-021 CMS PAGELIST PILOT
+## Active handoff - H-021B PAGELIST VISUALS
 
 Date: 2026-10-14
 Authority: OWNER + STRATEGY_CONTENT
-Exact contract: `coordination/H021-CMS-PAGELIST-PILOT.md`
+Exact contract: `coordination/H021B-PAGELIST-VISUALS.md`
 
-Pull latest main and implement H-021 only.
+H-021 data/query architecture is retained, but OWNER visual review does not accept text-only PageList presentation as complete.
 
-Pilot a reusable Concrete-PageList-style collection renderer on /innsikt/:
-- source cards from actual article records, not duplicated index copy
-- add article listing metadata
-- automatic + manual modes
-- editorial/title sorting
-- limit
-- cards / compact / links layouts
-- Pages CMS article reference picker
-- preserve today's /innsikt/ visible card copy/order by migrating it into the article records
+Pull latest main and implement H-021B only:
+- page-owned listing image or controlled icon
+- safe Pages CMS visual fields
+- add Bildekort layout
+- add Bilde og tekst annenhver side layout
+- alternation determined from final rendered result order
+- use current shared design-system primitives
+- do not duplicate media/copy in the PageList config
+- do not invent production photography
+- use controlled icons for the two current Innsikt articles so the visual system can be reviewed now
 
-Build the resolver/component so it can later generalize, but do not expose universal all-page querying or update MedonWebSystem yet.
+Set /innsikt/ review default to alternating.
 
-Preserve H-019 surfaces, H-020 heading alignment, current OWNER CMS edits and all unrelated commercial/content/safeguard scopes.
+Preserve H-021 automatic/manual query behavior, article content/SEO, H-019 surfaces, H-020 heading alignment and all unrelated scopes.
 
-Run focused PageList/CMS QA + full verify, push main, verify Worker, update CODEX-TO-CHATGPT, then STOP for OWNER review.
+Run focused visual/PageList/CMS QA + full verify, push main, verify Worker, update CODEX-TO-CHATGPT, then STOP for OWNER review.
 
 ---
+
 
 
 
