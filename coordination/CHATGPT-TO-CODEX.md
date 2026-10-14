@@ -1,35 +1,28 @@
 # ChatGPT to Codex
 
-## Active handoff - NONE / H-021B DELIVERED / STOP FOR OWNER REVIEW
-
-2026-10-14 IMPLEMENTATION receipt: H-021B is implemented and pushed at `58f75acc029c9db80f7699980d211cc450ca4ac7`. Article-owned image/icon/none support, safe CMS visual blocks/media, Bildekort and alternating layouts are delivered. Current articles use controlled route/analytics icons; Innsikt defaults to alternating while preserving OWNER title sorting and H-021 data/query behavior. Exact local/native/live evidence is recorded in CODEX-TO-CHATGPT / `coordination/evidence/h021b/`. STOP for OWNER visual/CMS review; the PageList system is not accepted by technical delivery and no next implementation or launch authority is inferred.
-
-## Consumed handoff - H-021B PAGELIST VISUALS
+## Active handoff - H-021C PAGELIST ICON FALLBACK
 
 Date: 2026-10-14
 Authority: OWNER + STRATEGY_CONTENT
-Exact contract: `coordination/H021B-PAGELIST-VISUALS.md`
+Exact contract: `coordination/H021C-PAGELIST-ICON-FALLBACK.md`
 
-H-021 data/query architecture is retained, but OWNER visual review does not accept text-only PageList presentation as complete.
+H-021/H-021B source architecture is retained.
 
-Pull latest main and implement H-021B only:
-- page-owned listing image or controlled icon
-- safe Pages CMS visual fields
-- add Bildekort layout
-- add Bilde og tekst annenhver side layout
-- alternation determined from final rendered result order
-- use current shared design-system primitives
-- do not duplicate media/copy in the PageList config
-- do not invent production photography
-- use controlled icons for the two current Innsikt articles so the visual system can be reviewed now
+OWNER review finds only the current alternating ICON presentation too visually empty: icons consume photo-sized 16:9 panels.
 
-Set /innsikt/ review default to alternating.
+Pull latest main and implement H-021C only:
+- images keep large alternating media treatment
+- icons get a smaller, denser visual block
+- desktop text should dominate icon rows
+- mobile icon panels must be shallow, not billboard-like
+- preserve actual alternation and all CMS/query behavior
 
-Preserve H-021 automatic/manual query behavior, article content/SEO, H-019 surfaces, H-020 heading alignment and all unrelated scopes.
+This is a narrow visual correction. Run focused PageList QA + one full verify; do not generate excessive regression evidence.
 
-Run focused visual/PageList/CMS QA + full verify, push main, verify Worker, update CODEX-TO-CHATGPT, then STOP for OWNER review.
+Push main, verify Worker, update CODEX-TO-CHATGPT, then STOP for OWNER visual review.
 
 ---
+
 
 
 
