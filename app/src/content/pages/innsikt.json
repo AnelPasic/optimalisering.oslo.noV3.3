@@ -20,11 +20,9 @@
       ],
       "pageList": {
         "mode": "automatic",
-        "sort": "editorial",
+        "sort": "title",
         "limit": 6,
-        "layout": "cards",
-        "selected": [],
-        "excluded": []
+        "layout": "compact"
       }
     },
     {
@@ -47,7 +45,6 @@
       ]
     }
   ],
-  "faq": [],
   "cta": {
     "label": "Ta en gratis sjekk",
     "href": "/vurdering/"
