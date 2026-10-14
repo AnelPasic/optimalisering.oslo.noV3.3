@@ -1,0 +1,13 @@
+{
+  "source": "Authenticated Cloudflare build detail and latest deployment",
+  "implementation": "e5965c601d6a09d1cd6672ef14ed025b68aed818",
+  "worker": "optimalisering-oslo-v33",
+  "buildId": "e5a1701b-89f5-4e81-9dc8-a3fdff86444f",
+  "status": "stopped",
+  "buildOutcome": "success",
+  "stoppedOn": "2026-10-14T21:53:49.762Z",
+  "deploymentId": "02b550b6-b92a-4345-ad9a-3eaacba11355",
+  "versionId": "f9e9fa27-11de-4fa0-82d6-749465eef52d",
+  "percentage": 100,
+  "directDeployment": false
+}
