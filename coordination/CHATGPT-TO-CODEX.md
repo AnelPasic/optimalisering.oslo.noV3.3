@@ -1,25 +1,8 @@
 # ChatGPT to Codex
 
-## Active handoff - H-020 CMS SECTION-HEADING ALIGNMENT
+## Active handoff - NONE / H-020 COMPLETE
 
-Date: 2026-10-14
-Authority: OWNER + STRATEGY_CONTENT
-Exact contract: `coordination/H020-CMS-SECTION-HEADING-ALIGNMENT.md`
-
-Pull latest main and implement H-020 only.
-
-Add one safe Pages CMS select for section heading alignment:
-- Sentrert (standard)
-- Venstrejustert
-
-Centered remains the default/current render.
-
-The setting applies only to the section heading block (eyebrow + H2 + heading body-copy). It must not alter cards, grids, typography, padding, surfaces or the recent section-heading/max-width decisions.
-
-Do not reintroduce section-heading-split.
-
-Run focused CMS/alignment QA + full verify, push main, verify Worker, update CODEX-TO-CHATGPT, then STOP for OWNER review.
-
+2026-10-14 OWNER + STRATEGY_CONTENT review passes H-020 under D-082. Implementation `ec7dd1983d95a2ff3526d160bf11d111ce253ec8` with integration receipt `2b366b67fbe38f302818b26190935b88f26098da` is accepted. Center remains the render-neutral default; Left affects only eyebrow/H2/heading body-copy and preserves cards/grids/type/spacing/surfaces. Authenticated save of this exact field was not exercised because the browser profile was busy, but prior H-019 authenticated Pages CMS save/build/revert plus H-020 config/schema/render evidence is sufficient. No further H-020 action is required.
 ---
 
 
