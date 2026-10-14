@@ -1,5 +1,7 @@
 # Review queue
 
+H-020 receipt also preserves concurrent OWNER CMS `f14a738` exactly (Synlighet section order/Standard surface). Combined verification again passes101/101, typography196 and focused21/21;2,375 protected blobs and current local/live evidence: `evidence/h020/owner-integration/`. No application-rendering change beyond `ec7dd19`. Authenticated H-020 alignment-save review remains outstanding; the unrelated OWNER CMS content save is not that proof.
+
 Current H-020 gate: **OWNER / CMS HEADING ALIGNMENT delivered at ec7dd19 / STOP FOR VISUAL-CMS REVIEW.** Review Overskriftsjustering → Sentrert (standard) / Venstrejustert directly after Heading on ordinary/protected service sections; heading eyebrow/H2/body only. Homepage form intro stays unchanged per actual OWNER answer. Full101/101, focused14/14, fresh review21/21, typography196, local64 default/16 scoped and32 source-render checks, all four widths and2,217 protected blobs pass. Native Build ff4aadc0/Version835a3efc succeeds;53 live assets match with safeguards intact. Authenticated save is unverified because browser profile is busy; OWNER should exercise the CMS field. Evidence: `evidence/h020/README.md` and CODEX-TO-CHATGPT. Record actual reviewed revision/verdict/scope in DECISIONS. H-019 is already accepted under D-081; other content/backend/privacy/launch gates remain separate. No next implementation or acceptance is inferred.
 
 Historical H-019 delivery request below is superseded by genuine D-081 PASS / COMPLETE; no further H-019 work is required.

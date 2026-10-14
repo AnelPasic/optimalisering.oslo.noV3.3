@@ -66,8 +66,7 @@ test('CMS surface save and restore preserve every unrelated field, ID, order and
       const form=structuredClone(page),section=form.sections.find((s:any)=>s._block==='content');
       if(!section)continue;section.surface=value;if(section.items?.length)section.items[0].surface=value;
       const saved=JSON.parse(cmsJsonSave(page,form,entry,cms));assertPreservedContent(form,saved);assert.deepEqual(pageSchema.parse(saved),pageSchema.parse(form));
-      delete section.surface;if(section.items?.length)delete section.items[0].surface;
-      const restored=JSON.parse(cmsJsonSave(saved,form,entry,cms));assertPreservedContent(page,restored);assert.deepEqual(pageSchema.parse(restored),pageSchema.parse(page));
+      const restored=JSON.parse(cmsJsonSave(saved,structuredClone(page),entry,cms));assertPreservedContent(page,restored);assert.deepEqual(pageSchema.parse(restored),pageSchema.parse(page));
     }
     const form=structuredClone(page),section=form.sections.find((s:any)=>s._block==='content');if(section){section.surface='#fff';assert.throws(()=>cmsJsonSave(page,form,entry,cms));}
   }

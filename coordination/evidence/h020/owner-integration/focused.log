@@ -1,0 +1,29 @@
+✔ customer workflow maps each existing page to its dedicated file or correct service/editorial collection (1.2112ms)
+✔ object repeaters start collapsed with meaningful summaries supported by Pages CMS (0.3315ms)
+✔ the multiple case reference retains a flat array without an outer list wrapper (0.1074ms)
+✔ CMS-equivalent edit preserves every current JSON record semantically and untouched file hashes (58.1449ms)
+✔ CMS rejects clearing mandatory text before it can create a broken content commit (0.7152ms)
+✔ initialized optional internal links accept blank input while rejecting an external route (0.5233ms)
+✔ raw preservation checks expose nonempty unmodeled repeater data loss (1.0552ms)
+✔ merge preserves omitted nonempty metadata without promoting authority or proof (2.4869ms)
+✔ omitted unknown evidence values stay null and cannot make a case publishable (0.2956ms)
+✔ renderer mapping validates the shared enum and suppresses default/protected/invalid values (1.2391ms)
+✔ ordinary section and item surfaces accept only the six approved values (17.1085ms)
+✔ missing, cleared and explicit default choices preserve automatic styling (0.7342ms)
+✔ all page editors have separate ordinary/protected models and one reusable select (0.6697ms)
+✔ protected CTA/form rows cannot acquire a surface or be retyped as content (2.8368ms)
+✔ CMS surface save and restore preserve every unrelated field, ID, order and link (51.0578ms)
+✔ historical H-019 migration adds only editor metadata; subsequent OWNER content edits remain allowed (1395.2905ms)
+✔ safe mapping emits only a validated left override and leaves the homepage form model unchanged (1.1879ms)
+✔ section heading alignment accepts center/left; missing and cleared values default to center (16.4146ms)
+✔ ordinary and protected CMS heading models use the same select directly after the heading (0.1835ms)
+✔ CMS Center/Left save and restore preserve unrelated section, card, surface and commercial fields (9.8927ms)
+✔ protected heading alignment does not grant surface overrides (0.453ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 21
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1817.3447

@@ -23,4 +23,6 @@ Browser harness correction: element screenshots scroll the page. Reset scroll to
 
 CMS test ruling: authenticated browser attachment reports its profile already in use. Preserve the active browser. Conditional authenticated smoke test remains unavailable; use the real CMS configuration plus CMS-equivalent round-trip fixture and actual reversible source/build/render checks instead, explicitly retaining the authenticated-testing limitation.
 
+Concurrent integration ruling: OWNER CMS commit f14a738 changes Synlighet section order/surface during receipt push. Replay only the unpublished receipt on top and preserve exact OWNER bytes. Update historical H-009 order expectation to that exact order; restore actual original choices in CMS test fixtures rather than assuming no existing field. Repeat verification/current local-live checks separately, keeping original implementation baseline evidence intact.
+
 Main delivery is explicitly authorized by the active handoff; no acceptance/launch or further implementation follows technical completion.

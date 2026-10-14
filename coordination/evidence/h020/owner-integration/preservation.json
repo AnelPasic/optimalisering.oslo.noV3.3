@@ -1,0 +1,21 @@
+{
+  "base": "f14a738",
+  "protectedBlobs": 2375,
+  "changed": [],
+  "allowed": [
+    ".pages.yml",
+    "app/src/components/ContentSection.astro",
+    "app/src/components/HomeSection.astro",
+    "app/src/lib/content-schema.ts",
+    "app/src/styles/global.css",
+    "app/tests/h017b-cms.test.ts",
+    "app/tests/h019-surfaces.test.ts",
+    "app/tests/h020-heading-alignment.test.ts",
+    "app/scripts/audit-h009.mjs",
+    "coordination/CODEX-TO-CHATGPT.md",
+    "coordination/PROJECT-STATE.md",
+    "coordination/REVIEW-QUEUE.md",
+    "coordination/H020-IMPLEMENTATION-PLAN.md",
+    "coordination/evidence/h020/README.md"
+  ]
+}

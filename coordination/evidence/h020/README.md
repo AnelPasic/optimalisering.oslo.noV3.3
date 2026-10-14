@@ -34,4 +34,12 @@ Implementation **ec7dd1983d95a2ff3526d160bf11d111ce253ec8** is pushed to main. [
 
 [Live responsive checks](live/checks.json) and [log](live.log): **64 default groups + 16 Center/Left/restore groups** pass at all four widths, with exact incoming default fingerprints, unchanged unrelated geometry/type/surfaces/cards/links, no overflow/errors/public POST. Live screenshots use the same names as the local matrix under `live/`. [Fresh review](technical-review.md) has no implementation findings.
 
-The final documentation/evidence receipt is identified through Git history rather than embedding its own hash. It changes no application source. Authenticated CMS save remains explicitly unverified. **STOP for OWNER visual/CMS review**; no acceptance, launch, indexing, intake or subsequent implementation authority follows.
+## Concurrent OWNER integration
+
+While pushing the receipt, genuine OWNER Pages CMS commit **f14a73845a645ba30db09d44c2bcdf7201c6f740** arrived. It moves Synlighet's `kanaler` before `behov` and selects its Standard surface. The receipt is replayed on top; the exact OWNER JSON blob is preserved. No authenticated H-020 alignment save is inferred from this unrelated CMS edit.
+
+Two stale test assumptions were corrected: round-trip fixtures now restore the actual original saved fields rather than assuming no previous selection; the historical H-009 order guard follows OWNER's exact new order. See `owner-integration/verify-red.log` and `order-guard-red.log` for observed failures before these guard-only repairs. No renderer, typography, layout or content correction is made for these failures.
+
+Combined-revision evidence is under `owner-integration/`: full verification **101/101**, typography **196**, focused **21/21**, **64 current local/live default groups each +16 live alignment groups**, all **53 assets**, exact Worker receipt and **2,375 protected blobs** against `f14a738`, including OWNER's Synlighet JSON. No overflow/errors/public POST or readability failures. Its QA uses an ignored copy of the tracked H-020 script with only evidence-directory paths changed, avoiding replacement of the original implementation baseline. The original 64 default-preservation results above remain tied to `ec7dd19`; the later baseline includes OWNER's authorized differences.
+
+The final receipt revision is identified through Git history rather than embedding its own hash. It adds guard compatibility and delivery evidence; application rendering source remains identical to `ec7dd19`. Authenticated CMS save remains explicitly unverified. **STOP for OWNER visual/CMS review**; no acceptance, launch, indexing, intake or subsequent implementation authority follows.

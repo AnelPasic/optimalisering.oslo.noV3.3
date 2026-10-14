@@ -48,7 +48,7 @@ test('CMS Center/Left save and restore preserve unrelated section, card, surface
       const saved=JSON.parse(cmsJsonSave(original,form,entry,cms));assertPreservedContent(form,saved);assert.deepEqual(pageSchema.parse(saved),pageSchema.parse(form));
       form.sections[index].headingAlign='center';const restored=JSON.parse(cmsJsonSave(saved,form,entry,cms));assertPreservedContent(form,restored);
       assert.equal(pageSchema.parse(restored).sections[index].headingAlign,'center');
-      delete restored.sections[index].headingAlign;assertPreservedContent(original,restored);
+      const exact=JSON.parse(cmsJsonSave(restored,structuredClone(original),entry,cms));assertPreservedContent(original,exact);
       const invalid=structuredClone(original);invalid.sections[index].headingAlign='justify';assert.throws(()=>cmsJsonSave(original,invalid,entry,cms));
     }
   }

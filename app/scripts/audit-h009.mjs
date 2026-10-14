@@ -12,7 +12,8 @@ assert.equal((html.match(/<h1(?:\s|>)/g) ?? []).length, 1);
 assert.equal(text(html.match(/<h1[^>]*>(.*?)<\/h1>/s)[1]), 'De søker etter løsningen. Så etter deg.');
 assert.equal(content.eyebrow, 'SEO, lokal SEO og AI-synlighet');
 const ids = [...html.matchAll(/<section id="([^"]+)"/g)].map(match => match[1]);
-assert.deepEqual(ids, ['service-hero', 'behov', 'kanaler', 'prioritering', 'resultater', 'sammenheng', 'service-priser', 'sjekk', 'sporsmal']);
+// OWNER's Pages CMS reorder at f14a738 supersedes the original first two positions.
+assert.deepEqual(ids, ['service-hero', 'kanaler', 'behov', 'prioritering', 'resultater', 'sammenheng', 'service-priser', 'sjekk', 'sporsmal']);
 for (const section of content.sections) {
   const rendered = html.match(new RegExp(`<section id="${section.id}"[^>]*>(.*?)</section>`, 's'))?.[1];
   for (const value of [section.eyebrow, section.heading, ...section.body, ...(section.items ?? []).flatMap(item => [item.title, item.text, item.label].filter(Boolean)), ...(section.links ?? []).map(link => link.label)].filter(Boolean)) assert.ok(text(rendered).includes(value), `${section.id}: exact D-028 copy: ${value}`);
