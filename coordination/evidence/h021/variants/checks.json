@@ -1,0 +1,290 @@
+{
+  "records": [
+    {
+      "variant": "automatic-third",
+      "width": 1440,
+      "noJS": true,
+      "slugs": [
+        "innsikt/hva-bor-optimaliseres-forst",
+        "innsikt/male-effekt-av-optimalisering",
+        "innsikt/h021-fixture"
+      ],
+      "keyboard": true,
+      "noOverflow": true
+    },
+    {
+      "variant": "automatic-third",
+      "width": 900,
+      "noJS": true,
+      "slugs": [
+        "innsikt/hva-bor-optimaliseres-forst",
+        "innsikt/male-effekt-av-optimalisering",
+        "innsikt/h021-fixture"
+      ],
+      "keyboard": true,
+      "noOverflow": true
+    },
+    {
+      "variant": "automatic-third",
+      "width": 390,
+      "noJS": true,
+      "slugs": [
+        "innsikt/hva-bor-optimaliseres-forst",
+        "innsikt/male-effekt-av-optimalisering",
+        "innsikt/h021-fixture"
+      ],
+      "keyboard": true,
+      "noOverflow": true
+    },
+    {
+      "variant": "automatic-third",
+      "width": 320,
+      "noJS": true,
+      "slugs": [
+        "innsikt/hva-bor-optimaliseres-forst",
+        "innsikt/male-effekt-av-optimalisering",
+        "innsikt/h021-fixture"
+      ],
+      "keyboard": true,
+      "noOverflow": true
+    },
+    {
+      "variant": "manual",
+      "width": 1440,
+      "noJS": true,
+      "slugs": [
+        "innsikt/male-effekt-av-optimalisering",
+        "innsikt/hva-bor-optimaliseres-forst"
+      ],
+      "keyboard": true,
+      "noOverflow": true
+    },
+    {
+      "variant": "manual",
+      "width": 900,
+      "noJS": true,
+      "slugs": [
+        "innsikt/male-effekt-av-optimalisering",
+        "innsikt/hva-bor-optimaliseres-forst"
+      ],
+      "keyboard": true,
+      "noOverflow": true
+    },
+    {
+      "variant": "manual",
+      "width": 390,
+      "noJS": true,
+      "slugs": [
+        "innsikt/male-effekt-av-optimalisering",
+        "innsikt/hva-bor-optimaliseres-forst"
+      ],
+      "keyboard": true,
+      "noOverflow": true
+    },
+    {
+      "variant": "manual",
+      "width": 320,
+      "noJS": true,
+      "slugs": [
+        "innsikt/male-effekt-av-optimalisering",
+        "innsikt/hva-bor-optimaliseres-forst"
+      ],
+      "keyboard": true,
+      "noOverflow": true
+    },
+    {
+      "variant": "compact",
+      "width": 1440,
+      "noJS": true,
+      "slugs": [
+        "innsikt/hva-bor-optimaliseres-forst",
+        "innsikt/male-effekt-av-optimalisering",
+        "innsikt/h021-fixture"
+      ],
+      "keyboard": true,
+      "noOverflow": true
+    },
+    {
+      "variant": "compact",
+      "width": 900,
+      "noJS": true,
+      "slugs": [
+        "innsikt/hva-bor-optimaliseres-forst",
+        "innsikt/male-effekt-av-optimalisering",
+        "innsikt/h021-fixture"
+      ],
+      "keyboard": true,
+      "noOverflow": true
+    },
+    {
+      "variant": "compact",
+      "width": 390,
+      "noJS": true,
+      "slugs": [
+        "innsikt/hva-bor-optimaliseres-forst",
+        "innsikt/male-effekt-av-optimalisering",
+        "innsikt/h021-fixture"
+      ],
+      "keyboard": true,
+      "noOverflow": true
+    },
+    {
+      "variant": "compact",
+      "width": 320,
+      "noJS": true,
+      "slugs": [
+        "innsikt/hva-bor-optimaliseres-forst",
+        "innsikt/male-effekt-av-optimalisering",
+        "innsikt/h021-fixture"
+      ],
+      "keyboard": true,
+      "noOverflow": true
+    },
+    {
+      "variant": "links",
+      "width": 1440,
+      "noJS": true,
+      "slugs": [
+        "innsikt/hva-bor-optimaliseres-forst",
+        "innsikt/male-effekt-av-optimalisering",
+        "innsikt/h021-fixture"
+      ],
+      "keyboard": true,
+      "noOverflow": true
+    },
+    {
+      "variant": "links",
+      "width": 900,
+      "noJS": true,
+      "slugs": [
+        "innsikt/hva-bor-optimaliseres-forst",
+        "innsikt/male-effekt-av-optimalisering",
+        "innsikt/h021-fixture"
+      ],
+      "keyboard": true,
+      "noOverflow": true
+    },
+    {
+      "variant": "links",
+      "width": 390,
+      "noJS": true,
+      "slugs": [
+        "innsikt/hva-bor-optimaliseres-forst",
+        "innsikt/male-effekt-av-optimalisering",
+        "innsikt/h021-fixture"
+      ],
+      "keyboard": true,
+      "noOverflow": true
+    },
+    {
+      "variant": "links",
+      "width": 320,
+      "noJS": true,
+      "slugs": [
+        "innsikt/hva-bor-optimaliseres-forst",
+        "innsikt/male-effekt-av-optimalisering",
+        "innsikt/h021-fixture"
+      ],
+      "keyboard": true,
+      "noOverflow": true
+    },
+    {
+      "variant": "hidden",
+      "width": 1440,
+      "noJS": true,
+      "slugs": [
+        "innsikt/hva-bor-optimaliseres-forst",
+        "innsikt/male-effekt-av-optimalisering"
+      ],
+      "keyboard": true,
+      "noOverflow": true
+    },
+    {
+      "variant": "hidden",
+      "width": 900,
+      "noJS": true,
+      "slugs": [
+        "innsikt/hva-bor-optimaliseres-forst",
+        "innsikt/male-effekt-av-optimalisering"
+      ],
+      "keyboard": true,
+      "noOverflow": true
+    },
+    {
+      "variant": "hidden",
+      "width": 390,
+      "noJS": true,
+      "slugs": [
+        "innsikt/hva-bor-optimaliseres-forst",
+        "innsikt/male-effekt-av-optimalisering"
+      ],
+      "keyboard": true,
+      "noOverflow": true
+    },
+    {
+      "variant": "hidden",
+      "width": 320,
+      "noJS": true,
+      "slugs": [
+        "innsikt/hva-bor-optimaliseres-forst",
+        "innsikt/male-effekt-av-optimalisering"
+      ],
+      "keyboard": true,
+      "noOverflow": true
+    },
+    {
+      "variant": "styled",
+      "width": 1440,
+      "noJS": true,
+      "slugs": [
+        "innsikt/hva-bor-optimaliseres-forst",
+        "innsikt/male-effekt-av-optimalisering",
+        "innsikt/h021-fixture"
+      ],
+      "keyboard": true,
+      "noOverflow": true
+    },
+    {
+      "variant": "styled",
+      "width": 900,
+      "noJS": true,
+      "slugs": [
+        "innsikt/hva-bor-optimaliseres-forst",
+        "innsikt/male-effekt-av-optimalisering",
+        "innsikt/h021-fixture"
+      ],
+      "keyboard": true,
+      "noOverflow": true
+    },
+    {
+      "variant": "styled",
+      "width": 390,
+      "noJS": true,
+      "slugs": [
+        "innsikt/hva-bor-optimaliseres-forst",
+        "innsikt/male-effekt-av-optimalisering",
+        "innsikt/h021-fixture"
+      ],
+      "keyboard": true,
+      "noOverflow": true
+    },
+    {
+      "variant": "styled",
+      "width": 320,
+      "noJS": true,
+      "slugs": [
+        "innsikt/hva-bor-optimaliseres-forst",
+        "innsikt/male-effekt-av-optimalisering",
+        "innsikt/h021-fixture"
+      ],
+      "keyboard": true,
+      "noOverflow": true
+    }
+  ],
+  "errors": [],
+  "posts": [],
+  "sourceRestored": true,
+  "fixtureRemoved": true,
+  "restoredSHA256": "b59c2350219959ec50bc5b7912174f4ab10e940a4ea48b4dbc5414027a533d74",
+  "authenticatedCMS": false
+}

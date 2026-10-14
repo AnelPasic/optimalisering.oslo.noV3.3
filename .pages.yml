@@ -132,6 +132,113 @@ components:
           collapsible:
             collapsed: true
             summary: "{label}"
+  insightArticleReference:
+    type: reference
+    options:
+      collection: insightArticles
+      value: "{fields.slug}"
+      label: "{primary} ({fields.slug})"
+      search: listing.title,title,slug
+  sectionPageList:
+    type: object
+    fields:
+      - name: id
+        label: Seksjonens lenkeanker
+        type: string
+        readonly: true
+        required: true
+      - name: eyebrow
+        label: Overtekst
+        type: string
+      - name: heading
+        label: Overskrift
+        type: string
+        required: true
+      - name: headingAlign
+        label: Overskriftsjustering
+        component: headingAlignment
+        description: Sentrert er standard. Velg Venstrejustert når seksjonen leses bedre som en vanlig tekstseksjon.
+      - name: surface
+        label: Seksjonsfarge
+        component: surfaceChoice
+      - name: body
+        label: Avsnitt
+        type: text
+        list: {}
+      - name: pageList
+        label: Innholdsliste
+        type: object
+        required: true
+        fields:
+          - name: mode
+            label: Utvalg
+            type: select
+            default: automatic
+            required: true
+            options:
+              values:
+                - name: automatic
+                  label: Automatisk
+                - name: manual
+                  label: Manuelt valgt
+          - name: sort
+            label: Sortering
+            type: select
+            default: editorial
+            description: Gjelder automatisk utvalg. Manuelt utvalg følger rekkefølgen under Velg artikler.
+            options:
+              values:
+                - name: editorial
+                  label: Redaksjonell
+                - name: title
+                  label: Tittel
+          - name: limit
+            label: Maks antall
+            type: number
+            default: 6
+            description: Bare automatisk utvalg, 1–12. Manuelt utvalg viser alle valgte, synlige artikler.
+            options:
+              min: 1
+              max: 12
+              step: 1
+          - name: layout
+            label: Visning
+            type: select
+            default: cards
+            options:
+              values:
+                - name: cards
+                  label: Kort
+                - name: compact
+                  label: Kompakt
+                - name: links
+                  label: Lenker
+          - name: selected
+            label: Velg artikler
+            description: Bare manuelt utvalg. Flytt radene for å endre rekkefølgen. Velg hver artikkel én gang.
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{slug}"
+            fields:
+              - name: slug
+                label: Artikkel
+                component: insightArticleReference
+                required: true
+          - name: excluded
+            label: Ekskluder artikler
+            description: Bare automatisk utvalg. Disse artiklene tas ut før Maks antall brukes.
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{slug}"
+            fields:
+              - name: slug
+                label: Artikkel
+                component: insightArticleReference
+                required: true
   sectionProtected:
     type: object
     fields:
@@ -1398,35 +1505,113 @@ content:
       - *a8
   - name: insight
     label: Innsikt
-    type: collection
-    path: app/src/content/pages
-    exclude:
-      - home.json
-      - priser.json
-      - om.json
-      - vurdering.json
-      - kontakt.json
-      - personvern.json
-      - vilkar.json
-      - synlighet.json
-      - konvertering.json
-      - seo.json
-      - ai-synlighet.json
-      - nettbutikkoptimalisering.json
-    format: json
-    subfolders: false
-    operations: *a1
-    filename: "{primary}.json"
-    view:
-      primary: title
-      fields:
-        - title
-      search:
-        - title
-        - seo.title
-      sort:
-        - title
-    fields: *a9
+    type: group
+    items:
+      - name: insightOverview
+        label: Oversiktsside
+        type: file
+        path: app/src/content/pages/innsikt.json
+        format: json
+        operations: *a1
+        fields:
+          - *a2
+          - *a3
+          - *a4
+          - *a5
+          - name: sections
+            label: Innholdsseksjoner
+            type: block
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{heading}"
+            required: true
+            blockKey: _block
+            blocks:
+              - name: content
+                label: Innholdsseksjon
+                component: sectionContent
+              - name: pageList
+                label: Innholdsliste
+                component: sectionPageList
+          - *a7
+          - *a8
+      - name: insightArticles
+        label: Artikler
+        type: collection
+        path: app/src/content/pages
+        exclude:
+          - home.json
+          - innsikt.json
+          - priser.json
+          - om.json
+          - vurdering.json
+          - kontakt.json
+          - personvern.json
+          - vilkar.json
+          - synlighet.json
+          - konvertering.json
+          - seo.json
+          - ai-synlighet.json
+          - nettbutikkoptimalisering.json
+        format: json
+        subfolders: false
+        operations: *a1
+        filename: "{primary}.json"
+        view:
+          primary: listing.title
+          fields:
+            - listing.title
+            - slug
+            - seo.title
+          search:
+            - listing.title
+            - title
+            - slug
+            - seo.title
+          sort:
+            - listing.order
+            - listing.title
+        fields:
+          - name: slug
+            label: URL-slug
+            type: string
+            readonly: true
+            required: true
+          - *a2
+          - *a3
+          - *a4
+          - *a5
+          - name: listing
+            label: Visning i innholdslister
+            type: object
+            fields:
+              - name: title
+                label: Kort listetittel
+                type: string
+                description: Tomt felt bruker hovedoverskriften.
+              - name: summary
+                label: Sammendrag
+                type: text
+                description: Tomt felt bruker ingressen.
+              - name: label
+                label: Lenketekst
+                type: string
+                description: Tomt felt bruker Les mer.
+              - name: order
+                label: Redaksjonell rekkefølge
+                type: number
+                options:
+                  step: 1
+                description: Laveste heltall først. Uten tall kommer artikkelen etter de nummererte. Dette er ikke en dato.
+              - name: visible
+                label: Vis i innholdslister
+                type: boolean
+                default: true
+                description: Av skjuler artikkelen i både automatiske og manuelle lister. URL og indeksering endres ikke.
+          - *a6
+          - *a7
+          - *a8
   - name: om
     label: Om tjenesten
     type: file

@@ -87,6 +87,7 @@ export function cmsJsonSave(original: any, form: any, entry: any, cms: any): str
 }
 
 export function entryForFile(cms: any, path: string): any {
-  return cms.content.find((entry: any) => entry.type === 'file' ? entry.path === path
+  const entries = (items: any[]): any[] => items.flatMap(entry => entry.type === 'group' ? entries(entry.items) : [entry]);
+  return entries(cms.content).find((entry: any) => entry.type === 'file' ? entry.path === path
     : entry.type === 'collection' && path.startsWith(entry.path + '/') && !(entry.exclude ?? []).includes(path.slice(entry.path.length + 1)));
 }

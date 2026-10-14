@@ -158,5 +158,12 @@
   "cta": {
     "label": "Ta en gratis sjekk",
     "href": "/vurdering/"
+  },
+  "listing": {
+    "title": "Hvordan måle effekten?",
+    "summary": "Skill mellom visninger, handlinger og forretningsverdi. Definer relevante henvendelser eller nyttige kjøp, og gjør forutsetningene synlige.",
+    "label": "Les måleguiden",
+    "order": 20,
+    "visible": true
   }
 }

@@ -1,0 +1,8 @@
+{
+  "authenticatedCMS": false,
+  "attempt": "mcp__chrome_devtools__list_pages",
+  "result": "The browser is already running for C:\\Users\\anelm\\.cache\\chrome-devtools-mcp\\chrome-profile. Use --isolated to run multiple browser instances.",
+  "limitation": "No authenticated H-021 screenshots or save/build/revert. Other browser not stopped; no session/profile copied.",
+  "completedIndependently": ["article-only reference configuration", "schema guards", "CMS-equivalent save/reorder/restore", "source-backed browser variants"],
+  "priorPipelineEvidence": "coordination/evidence/h019/authenticated-cms.json"
+}

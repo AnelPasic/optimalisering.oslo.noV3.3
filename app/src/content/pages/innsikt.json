@@ -12,26 +12,20 @@
   "intro": "Du trenger ikke lære alle kanalene for å ta stilling til nettsiden. Begynn med to spørsmål: hvor bør vi undersøke først, og hvordan skal vi vurdere om arbeidet er nyttig?",
   "sections": [
     {
-      "_block": "content",
+      "_block": "pageList",
       "id": "guider",
       "heading": "Velg spørsmålet du trenger svar på.",
       "body": [
         "Guidene forklarer beslutninger og måling i enkelt språk. Eksemplene er illustrative og gir ingen løfter om resultat."
       ],
-      "items": [
-        {
-          "title": "Hva bør optimaliseres først?",
-          "text": "Undersøk om de rette finner deg, om de kommer videre, og om handlingene har verdi. Se hypotetiske situasjoner og en enkel beslutningsrekkefølge.",
-          "href": "/innsikt/hva-bor-optimaliseres-forst/",
-          "label": "Les startguiden"
-        },
-        {
-          "title": "Hvordan måle effekten?",
-          "text": "Skill mellom visninger, handlinger og forretningsverdi. Definer relevante henvendelser eller nyttige kjøp, og gjør forutsetningene synlige.",
-          "href": "/innsikt/male-effekt-av-optimalisering/",
-          "label": "Les måleguiden"
-        }
-      ]
+      "pageList": {
+        "mode": "automatic",
+        "sort": "editorial",
+        "limit": 6,
+        "layout": "cards",
+        "selected": [],
+        "excluded": []
+      }
     },
     {
       "_block": "content",

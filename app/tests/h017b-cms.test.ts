@@ -38,12 +38,15 @@ test('object repeaters start collapsed with meaningful summaries supported by Pa
       if (field.list && field.type === 'object') {
         count++;
         assert.equal(field.list.collapsible?.collapsed, true, field.name);
-        assert.match(field.list.collapsible?.summary ?? '', /\{(?:fields\.)?(?:heading|question|title|label|metric|index|term)\}/, field.name);
+        assert.match(field.list.collapsible?.summary ?? '', /\{(?:fields\.)?(?:heading|question|title|label|metric|index|term|slug)\}/, field.name);
       }
       if (field.fields) check(field.fields);
     }
   }
-  for (const entry of cms.content) check(entry.fields);
+  function checkEntries(entries: any[]) {
+    for (const entry of entries) entry.type === 'group' ? checkEntries(entry.items) : check(entry.fields);
+  }
+  checkEntries(cms.content);
   assert.ok(count > 0);
 });
 

@@ -1,0 +1,157 @@
+✖ automatic collection discovery preserves exact migrated titles, summaries, labels, URLs and order (5.25ms)
+✖ synthetic article is discovered without overview edits; hidden/index/service/utility records are omitted (4.8566ms)
+✔ editorial sort puts unordered last and breaks ties by Norwegian title then slug; title sort is deterministic (0.7356ms)
+✖ exclusion precedes automatic limit; manual row order and count are authoritative (1.8088ms)
+✔ blank optional metadata defaults safely and href normalizes slashes (2.5057ms)
+✔ schema rejects unknown queries/enums/limits/outside or duplicate references and source duplication (7.2975ms)
+✔ missing or non-article manual references fail build explicitly; invalid configs never produce fake cards (5.0868ms)
+✖ CMS editor has unique file ownership and article-only reference rows; save/reorder/restore preserves content (37.8566ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 4
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 319.7803
+
+✖ failing tests:
+
+test at tests\page-list.test.ts:19:1
+✖ automatic collection discovery preserves exact migrated titles, summaries, labels, URLs and order (5.25ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+
+    [
+      {
+  +     href: '/innsikt/male-effekt-av-optimalisering/',
+  +     label: 'Les mer',
+  +     slug: 'innsikt/male-effekt-av-optimalisering',
+  +     summary: 'Måling skal hjelpe bedriften å vurdere om arbeidet gir relevante henvendelser eller nyttige kjøp. Da må det være tydelig hva som telles, hva det betyr, og hva dataene ikke kan fortelle.',
+  +     title: 'En bedre graf er ikke hele svaret.'
+  +   },
+  +   {
+        href: '/innsikt/hva-bor-optimaliseres-forst/',
+  +     label: 'Les mer',
+  -     label: 'Les startguiden',
+        slug: 'innsikt/hva-bor-optimaliseres-forst',
+  +     summary: 'Start med hvor veien til kunde ser ut til å stoppe. Det er ofte mer nyttig enn å begynne med en bestemt kanal, et verktøy eller en liste med tiltak.',
+  +     title: 'Hva bør du optimalisere først?'
+  -     summary: 'Undersøk om de rette finner deg, om de kommer videre, og om handlingene har verdi. Se hypotetiske situasjoner og en enkel beslutningsrekkefølge.',
+  -     title: 'Hva bør optimaliseres først?'
+      },
+  -   {
+  -     href: '/innsikt/male-effekt-av-optimalisering/',
+  -     label: 'Les måleguiden',
+  -     slug: 'innsikt/male-effekt-av-optimalisering',
+  -     summary: 'Skill mellom visninger, handlinger og forretningsverdi. Definer relevante henvendelser eller nyttige kjøp, og gjør forutsetningene synlige.',
+  -     title: 'Hvordan måle effekten?'
+  -   }
+    ]
+
+      at TestContext.<anonymous> (file:///E:/Codex/optimalisering.oslo.noV3.3/app/tests/page-list.test.ts:20:10)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.start (node:internal/test_runner/test:1003:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:358:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ { slug: 'innsikt/male-effekt-av-optimalisering', title: 'En bedre graf er ikke hele svaret.', summary: 'Måling skal hjelpe bedriften å vurdere om arbeidet gir relevante henvendelser eller nyttige kjøp. Da må det være tydelig hva som telles, hva det betyr, og hva dataene ikke kan fortelle.', label: 'Les mer', href: '/innsikt/male-effekt-av-optimalisering/' }, { slug: 'innsikt/hva-bor-optimaliseres-forst', title: 'Hva bør du optimalisere først?', summary: 'Start med hvor veien til kunde ser ut til å stoppe. Det er ofte mer nyttig enn å begynne med en bestemt kanal, et verktøy eller en liste med tiltak.', label: 'Les mer', href: '/innsikt/hva-bor-optimaliseres-forst/' } ],
+    expected: [ { slug: 'innsikt/hva-bor-optimaliseres-forst', title: 'Hva bør optimaliseres først?', summary: 'Undersøk om de rette finner deg, om de kommer videre, og om handlingene har verdi. Se hypotetiske situasjoner og en enkel beslutningsrekkefølge.', label: 'Les startguiden', href: '/innsikt/hva-bor-optimaliseres-forst/' }, { slug: 'innsikt/male-effekt-av-optimalisering', title: 'Hvordan måle effekten?', summary: 'Skill mellom visninger, handlinger og forretningsverdi. Definer relevante henvendelser eller nyttige kjøp, og gjør forutsetningene synlige.', label: 'Les måleguiden', href: '/innsikt/male-effekt-av-optimalisering/' } ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at tests\page-list.test.ts:25:1
+✖ synthetic article is discovered without overview edits; hidden/index/service/utility records are omitted (4.8566ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+
+    [
+      {
+  +     href: '/innsikt/male-effekt-av-optimalisering/',
+  +     label: 'Les mer',
+  +     slug: 'innsikt/male-effekt-av-optimalisering',
+  +     summary: 'Måling skal hjelpe bedriften å vurdere om arbeidet gir relevante henvendelser eller nyttige kjøp. Da må det være tydelig hva som telles, hva det betyr, og hva dataene ikke kan fortelle.',
+  +     title: 'En bedre graf er ikke hele svaret.'
+  +   },
+  +   {
+        href: '/innsikt/hva-bor-optimaliseres-forst/',
+  +     label: 'Les mer',
+  -     label: 'Les startguiden',
+        slug: 'innsikt/hva-bor-optimaliseres-forst',
+  +     summary: 'Start med hvor veien til kunde ser ut til å stoppe. Det er ofte mer nyttig enn å begynne med en bestemt kanal, et verktøy eller en liste med tiltak.',
+  +     title: 'Hva bør du optimalisere først?'
+  -     summary: 'Undersøk om de rette finner deg, om de kommer videre, og om handlingene har verdi. Se hypotetiske situasjoner og en enkel beslutningsrekkefølge.',
+  -     title: 'Hva bør optimaliseres først?'
+      },
+  -   {
+  -     href: '/innsikt/male-effekt-av-optimalisering/',
+  -     label: 'Les måleguiden',
+  -     slug: 'innsikt/male-effekt-av-optimalisering',
+  -     summary: 'Skill mellom visninger, handlinger og forretningsverdi. Definer relevante henvendelser eller nyttige kjøp, og gjør forutsetningene synlige.',
+  -     title: 'Hvordan måle effekten?'
+  -   }
+    ]
+
+      at TestContext.<anonymous> (file:///E:/Codex/optimalisering.oslo.noV3.3/app/tests/page-list.test.ts:28:12)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ { slug: 'innsikt/male-effekt-av-optimalisering', title: 'En bedre graf er ikke hele svaret.', summary: 'Måling skal hjelpe bedriften å vurdere om arbeidet gir relevante henvendelser eller nyttige kjøp. Da må det være tydelig hva som telles, hva det betyr, og hva dataene ikke kan fortelle.', label: 'Les mer', href: '/innsikt/male-effekt-av-optimalisering/' }, { slug: 'innsikt/hva-bor-optimaliseres-forst', title: 'Hva bør du optimalisere først?', summary: 'Start med hvor veien til kunde ser ut til å stoppe. Det er ofte mer nyttig enn å begynne med en bestemt kanal, et verktøy eller en liste med tiltak.', label: 'Les mer', href: '/innsikt/hva-bor-optimaliseres-forst/' } ],
+    expected: [ { slug: 'innsikt/hva-bor-optimaliseres-forst', title: 'Hva bør optimaliseres først?', summary: 'Undersøk om de rette finner deg, om de kommer videre, og om handlingene har verdi. Se hypotetiske situasjoner og en enkel beslutningsrekkefølge.', label: 'Les startguiden', href: '/innsikt/hva-bor-optimaliseres-forst/' }, { slug: 'innsikt/male-effekt-av-optimalisering', title: 'Hvordan måle effekten?', summary: 'Skill mellom visninger, handlinger og forretningsverdi. Definer relevante henvendelser eller nyttige kjøp, og gjør forutsetningene synlige.', label: 'Les måleguiden', href: '/innsikt/male-effekt-av-optimalisering/' } ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at tests\page-list.test.ts:37:1
+✖ exclusion precedes automatic limit; manual row order and count are authoritative (1.8088ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+
+  + 'innsikt/tredje'
+  - 'innsikt/male-effekt-av-optimalisering'
+             ^
+
+      at TestContext.<anonymous> (file:///E:/Codex/optimalisering.oslo.noV3.3/app/tests/page-list.test.ts:38:10)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'innsikt/tredje',
+    expected: 'innsikt/male-effekt-av-optimalisering',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\page-list.test.ts:63:1
+✖ CMS editor has unique file ownership and article-only reference rows; save/reorder/restore preserves content (37.8566ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+
+  + 'collection'
+  - 'file'
+
+      at TestContext.<anonymous> (file:///E:/Codex/optimalisering.oslo.noV3.3/app/tests/page-list.test.ts:66:10)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'collection',
+    expected: 'file',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

@@ -37,14 +37,19 @@ test('all page editors have separate ordinary/protected models and one reusable 
   assert.equal(select.type,'select');assert.deepEqual(select.options.values.map((v:any)=>v.name),values);assert.deepEqual(select.options.values.map((v:any)=>v.label),labels);
   for(const {file,page} of pages){
     const entry=entryForFile(cms,`app/src/content/pages/${file}`),field=model(entry,'sections');
-    assert.equal(field.type,'block');assert.equal(field.blockKey,'_block');assert.deepEqual(field.blocks.map((b:any)=>b.name),['content','protected']);
+    assert.equal(field.type,'block');assert.equal(field.blockKey,'_block');assert.deepEqual(field.blocks.map((b:any)=>b.name),page.slug==='innsikt'?['content','pageList']:['content','protected']);
     const normal=resolveField(field.blocks[0],cms.components),protectedModel=resolveField(field.blocks[1],cms.components);
     assert.equal(model(normal,'surface').label,'Seksjonsfarge');assert.equal(model(normal,'surface').type,'select');
     assert.equal(model(model(normal,'items'),'surface').label,'Boksfarge');
-    assert.ok(!protectedModel.fields.some((f:any)=>f.name==='surface'));
-    assert.ok(!model(protectedModel,'items').fields.some((f:any)=>f.name==='surface'));
+    if(page.slug==='innsikt') {
+      assert.equal(model(protectedModel,'surface').label,'Seksjonsfarge');
+      assert.ok(!protectedModel.fields.some((f:any)=>f.name==='items'));
+    } else {
+      assert.ok(!protectedModel.fields.some((f:any)=>f.name==='surface'));
+      assert.ok(!model(protectedModel,'items').fields.some((f:any)=>f.name==='surface'));
+    }
     assert.equal(model(normal,'id').readonly,true);assert.equal(model(protectedModel,'id').readonly,true);
-    for(const section of page.sections) assert.equal(section._block, ['home','synlighet','konvertering'].includes(page.slug)&&section.id==='sjekk'?'protected':'content');
+    for(const section of page.sections) assert.equal(section._block, page.slug==='innsikt'&&section.id==='guider'?'pageList':['home','synlighet','konvertering'].includes(page.slug)&&section.id==='sjekk'?'protected':'content');
   }
   for(const entry of cms.content.filter((e:any)=>['proofCases','terminology'].includes(e.name))) assert.ok(!JSON.stringify(entry).includes('surfaceChoice'));
   assert.ok(!JSON.stringify(cms.content.find((e:any)=>e.name==='homepage').fields.find((f:any)=>f.name==='homepage')).includes('surfaceChoice'));

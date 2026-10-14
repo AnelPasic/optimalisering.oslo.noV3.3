@@ -1,6 +1,7 @@
 import { z } from 'astro/zod';
 import { surfaceSchema, sectionModel } from './surface.ts';
 import { headingAlignSchema } from './heading-alignment.ts';
+import { listingSchema, pageListSchema } from './page-list.ts';
 
 const link = z.object({ label: z.string(), href: z.string().startsWith('/') });
 export const proofSlotSchema = z.object({ publicationApproved: z.boolean(), caseIds: z.array(z.string()).default([]), eyebrow: z.string(), heading: z.string(), beforeLabel: z.string(), afterLabel: z.string(), changeLabel: z.string() });
@@ -57,8 +58,10 @@ export const pageSchema = z.object({
     authority: z.enum(['DRAFT / NON-AUTHORITATIVE', 'CONTENT_LOCKED / AUTHORITATIVE']),
     seo: z.object({ title: z.string(), description: z.string() }),
     eyebrow: z.string(), title: z.string(), intro: z.string(),
+    listing: listingSchema.optional(),
     sections: z.array(z.object({
-      _block: z.enum(['content', 'protected']).optional(), surface: surfaceSchema,
+      _block: z.enum(['content', 'protected', 'pageList']).optional(), surface: surfaceSchema,
+      pageList: pageListSchema.optional(),
       headingAlign: headingAlignSchema,
       id: z.string(), eyebrow: z.string().optional(), heading: z.string(), body: z.array(z.string()).default([]),
       items: z.array(z.object({ title: z.string(), text: z.string(), href: z.string().startsWith('/').optional(), label: z.string().optional(), surface: surfaceSchema })).optional(),
@@ -79,7 +82,10 @@ export const pageSchema = z.object({
   }).superRefine((page, context) => {
     page.sections.forEach((section, index) => {
       const model = sectionModel(page.slug, section.id);
-      if (section._block && section._block !== model) context.addIssue({ code: 'custom', path: ['sections', index, '_block'], message: 'Section editor model must match its protected identity' });
+      const isPageList = section._block === 'pageList';
+      if (isPageList && (page.slug !== 'innsikt' || page.kind !== 'index' || model === 'protected' || !section.pageList || section.items || section.links)) context.addIssue({ code: 'custom', path: ['sections', index], message: 'PageList requires Innsikt index configuration without duplicated items/links' });
+      if (!isPageList && section.pageList) context.addIssue({ code: 'custom', path: ['sections', index, 'pageList'], message: 'PageList configuration requires its dedicated editor block' });
+      if (!isPageList && section._block && section._block !== model) context.addIssue({ code: 'custom', path: ['sections', index, '_block'], message: 'Section editor model must match its protected identity' });
       if (model === 'protected' && (section.surface !== 'default' || section.items?.some(item => item.surface !== 'default'))) context.addIssue({ code: 'custom', path: ['sections', index, 'surface'], message: 'Protected CTA/form surfaces are design-system controlled' });
     });
     if (['synlighet', 'konvertering'].includes(page.slug) && page.sections.filter(section => section.id === 'sjekk').length !== 1) context.addIssue({ code: 'custom', path: ['sections'], message: 'Protected service CTA identity must remain present' });

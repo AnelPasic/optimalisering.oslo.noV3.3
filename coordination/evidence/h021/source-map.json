@@ -1,0 +1,28 @@
+[
+  {
+    "old": "innsikt.sections[0].items[0]",
+    "source": "app/src/content/pages/hva-bor-optimaliseres-forst.json",
+    "slug": "innsikt/hva-bor-optimaliseres-forst",
+    "listing": {
+      "title": "Hva bør optimaliseres først?",
+      "summary": "Undersøk om de rette finner deg, om de kommer videre, og om handlingene har verdi. Se hypotetiske situasjoner og en enkel beslutningsrekkefølge.",
+      "label": "Les startguiden",
+      "order": 10,
+      "visible": true
+    },
+    "href": "/innsikt/hva-bor-optimaliseres-forst/"
+  },
+  {
+    "old": "innsikt.sections[0].items[1]",
+    "source": "app/src/content/pages/male-effekt-av-optimalisering.json",
+    "slug": "innsikt/male-effekt-av-optimalisering",
+    "listing": {
+      "title": "Hvordan måle effekten?",
+      "summary": "Skill mellom visninger, handlinger og forretningsverdi. Definer relevante henvendelser eller nyttige kjøp, og gjør forutsetningene synlige.",
+      "label": "Les måleguiden",
+      "order": 20,
+      "visible": true
+    },
+    "href": "/innsikt/male-effekt-av-optimalisering/"
+  }
+]
