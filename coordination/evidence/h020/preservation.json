@@ -1,0 +1,17 @@
+{
+  "base": "844b034",
+  "protectedBlobs": 2217,
+  "changed": [],
+  "allow": [
+    ".pages.yml",
+    "app/src/components/ContentSection.astro",
+    "app/src/components/HomeSection.astro",
+    "app/src/lib/content-schema.ts",
+    "app/src/styles/global.css",
+    "app/tests/h017b-cms.test.ts",
+    "app/tests/h019-surfaces.test.ts",
+    "coordination/CODEX-TO-CHATGPT.md",
+    "coordination/PROJECT-STATE.md",
+    "coordination/REVIEW-QUEUE.md"
+  ]
+}

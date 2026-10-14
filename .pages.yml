@@ -85,6 +85,10 @@ components:
         label: Overskrift
         type: string
         required: true
+      - name: headingAlign
+        label: Overskriftsjustering
+        component: headingAlignment
+        description: Sentrert er standard. Velg Venstrejustert når seksjonen leses bedre som en vanlig tekstseksjon.
       - name: surface
         label: Seksjonsfarge
         component: surfaceChoice
@@ -143,6 +147,10 @@ components:
         label: Overskrift
         type: string
         required: true
+      - name: headingAlign
+        label: Overskriftsjustering
+        component: headingAlignment
+        description: Sentrert er standard. Velg Venstrejustert når seksjonen leses bedre som en vanlig tekstseksjon.
       - name: body
         label: Avsnitt
         type: text
@@ -178,6 +186,65 @@ components:
           collapsible:
             collapsed: true
             summary: "{label}"
+  sectionForm:
+    type: object
+    fields:
+      - name: id
+        label: Seksjonens lenkeanker
+        type: string
+        readonly: true
+        required: true
+      - name: eyebrow
+        label: Overtekst
+        type: string
+      - name: heading
+        label: Overskrift
+        type: string
+        required: true
+      - name: body
+        label: Avsnitt
+        type: text
+        list: {}
+        description: Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Forsidens innhold → Felles pakker.
+      - name: items
+        label: Alternativer eller steg
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: title
+            label: Tittel
+            type: string
+            required: true
+          - name: text
+            label: Beskrivelse
+            type: text
+            required: true
+          - name: href
+            label: Intern lenke
+            type: string
+            pattern: ^(/.*)?$
+          - name: label
+            label: Lenketekst
+            type: string
+      - name: links
+        label: Relaterte lenker
+        component: link
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{label}"
+  headingAlignment:
+    type: select
+    options:
+      placeholder: Sentrert (standard)
+      values:
+        - name: center
+          label: Sentrert (standard)
+        - name: left
+          label: Venstrejustert
 content:
   - name: terminology
     label: Begreper og forklaringer
@@ -1107,7 +1174,7 @@ content:
             component: sectionContent
           - name: protected
             label: Beskyttet sjekk / handling
-            component: sectionProtected
+            component: sectionForm
       - name: faq
         label: Ofte stilte spørsmål
         type: object
@@ -1165,7 +1232,7 @@ content:
         type: string
         readonly: true
         required: true
-        description: Sidens URL-del. Eksempel: seo vises som /seo/.
+        description: "Sidens URL-del. Eksempel: seo vises som /seo/."
       - &a2
         name: seo
         label: SEO

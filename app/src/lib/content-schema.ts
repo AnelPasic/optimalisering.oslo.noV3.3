@@ -1,5 +1,6 @@
 import { z } from 'astro/zod';
 import { surfaceSchema, sectionModel } from './surface.ts';
+import { headingAlignSchema } from './heading-alignment.ts';
 
 const link = z.object({ label: z.string(), href: z.string().startsWith('/') });
 export const proofSlotSchema = z.object({ publicationApproved: z.boolean(), caseIds: z.array(z.string()).default([]), eyebrow: z.string(), heading: z.string(), beforeLabel: z.string(), afterLabel: z.string(), changeLabel: z.string() });
@@ -58,6 +59,7 @@ export const pageSchema = z.object({
     eyebrow: z.string(), title: z.string(), intro: z.string(),
     sections: z.array(z.object({
       _block: z.enum(['content', 'protected']).optional(), surface: surfaceSchema,
+      headingAlign: headingAlignSchema,
       id: z.string(), eyebrow: z.string().optional(), heading: z.string(), body: z.array(z.string()).default([]),
       items: z.array(z.object({ title: z.string(), text: z.string(), href: z.string().startsWith('/').optional(), label: z.string().optional(), surface: surfaceSchema })).optional(),
       links: z.array(link).optional(),

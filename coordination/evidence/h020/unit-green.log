@@ -1,0 +1,12 @@
+✔ section heading alignment accepts center/left; missing and cleared values default to center (16.1272ms)
+✔ ordinary and protected CMS heading models use the same select directly after the heading (0.4973ms)
+✔ CMS Center/Left save and restore preserve unrelated section, card, surface and commercial fields (6.1679ms)
+✔ protected heading alignment does not grant surface overrides (0.5144ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 287.1416

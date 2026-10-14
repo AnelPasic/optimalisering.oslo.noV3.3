@@ -1,0 +1,51 @@
+✔ section heading alignment accepts center/left; missing and cleared values default to center (15.9349ms)
+✖ ordinary and protected CMS heading models use the same select directly after the heading (0.5947ms)
+✖ CMS Center/Left save and restore preserve unrelated section, card, surface and commercial fields (1.9569ms)
+✔ protected heading alignment does not grant surface overrides (0.8362ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 2
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 289.9698
+
+✖ failing tests:
+
+test at tests\h020-heading-alignment.test.ts:22:1
+✖ ordinary and protected CMS heading models use the same select directly after the heading (0.5947ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'surface'
+  - 'headingAlign'
+  
+      at TestContext.<anonymous> (file:///E:/Codex/optimalisering.oslo.noV3.3/app/tests/h020-heading-alignment.test.ts:26:12)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'surface',
+    expected: 'headingAlign',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\h020-heading-alignment.test.ts:34:1
+✖ CMS Center/Left save and restore preserve unrelated section, card, surface and commercial fields (1.9569ms)
+  Error: $.sections.0.headingAlign: content changed
+      at assertPreservedContent (file:///E:/Codex/optimalisering.oslo.noV3.3/app/tests/helpers/pages-cms-json.ts:20:41)
+      at assertPreservedContent (file:///E:/Codex/optimalisering.oslo.noV3.3/app/tests/helpers/pages-cms-json.ts:18:46)
+      at assertPreservedContent (file:///E:/Codex/optimalisering.oslo.noV3.3/app/tests/helpers/pages-cms-json.ts:18:46)
+      at assertPreservedContent (file:///E:/Codex/optimalisering.oslo.noV3.3/app/tests/helpers/pages-cms-json.ts:18:46)
+      at TestContext.<anonymous> (file:///E:/Codex/optimalisering.oslo.noV3.3/app/tests/h020-heading-alignment.test.ts:39:68)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)

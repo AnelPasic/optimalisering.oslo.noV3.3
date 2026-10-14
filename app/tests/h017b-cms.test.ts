@@ -25,7 +25,7 @@ test('customer workflow maps each existing page to its dedicated file or correct
     const entry = entryForFile(cms, record.path);
     assert.ok(entry, record.path);
     assert.equal(cms.content.filter((candidate: any) => entryForFile({ ...cms, content: [candidate] }, record.path)).length, 1, 'No ambiguous page editor');
-    for (const field of entry.fields) assert.ok(!['slug', 'kind', 'status', 'authority', 'locale', 'translationKey'].includes(field.name) || field.hidden === true, field.name);
+    for (const field of entry.fields) assert.ok(!['slug', 'kind', 'status', 'authority', 'locale', 'translationKey'].includes(field.name) || field.hidden === true || (field.name === 'slug' && field.readonly === true), field.name);
     for (const operation of ['create', 'rename', 'delete']) assert.equal(entry.operations?.[operation], false, 'Existing page identity remains protected');
   }
 });

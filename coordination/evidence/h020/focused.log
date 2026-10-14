@@ -1,0 +1,22 @@
+✔ customer workflow maps each existing page to its dedicated file or correct service/editorial collection (1.1746ms)
+✔ object repeaters start collapsed with meaningful summaries supported by Pages CMS (0.3304ms)
+✔ the multiple case reference retains a flat array without an outer list wrapper (0.0994ms)
+✔ CMS-equivalent edit preserves every current JSON record semantically and untouched file hashes (57.6154ms)
+✔ CMS rejects clearing mandatory text before it can create a broken content commit (0.7535ms)
+✔ initialized optional internal links accept blank input while rejecting an external route (0.5136ms)
+✔ raw preservation checks expose nonempty unmodeled repeater data loss (1.0175ms)
+✔ merge preserves omitted nonempty metadata without promoting authority or proof (1.7445ms)
+✔ omitted unknown evidence values stay null and cannot make a case publishable (0.2889ms)
+✔ safe mapping emits only a validated left override and leaves the homepage form model unchanged (1.0829ms)
+✔ section heading alignment accepts center/left; missing and cleared values default to center (15.9517ms)
+✔ ordinary and protected CMS heading models use the same select directly after the heading (0.1887ms)
+✔ CMS Center/Left save and restore preserve unrelated section, card, surface and commercial fields (7.1503ms)
+✔ protected heading alignment does not grant surface overrides (0.4982ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 368.7391

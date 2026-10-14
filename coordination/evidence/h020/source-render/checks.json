@@ -1,0 +1,246 @@
+{
+  "records": [
+    {
+      "route": "/",
+      "id": "mekanisme",
+      "align": "left",
+      "width": 1440,
+      "renderedFromSource": true
+    },
+    {
+      "route": "/synlighet/",
+      "id": "behov",
+      "align": "left",
+      "width": 1440,
+      "renderedFromSource": true
+    },
+    {
+      "route": "/synlighet/",
+      "id": "sjekk",
+      "align": "left",
+      "width": 1440,
+      "renderedFromSource": true
+    },
+    {
+      "route": "/seo/",
+      "id": "sok-side",
+      "align": "left",
+      "width": 1440,
+      "renderedFromSource": true
+    },
+    {
+      "route": "/",
+      "id": "mekanisme",
+      "align": "left",
+      "width": 900,
+      "renderedFromSource": true
+    },
+    {
+      "route": "/synlighet/",
+      "id": "behov",
+      "align": "left",
+      "width": 900,
+      "renderedFromSource": true
+    },
+    {
+      "route": "/synlighet/",
+      "id": "sjekk",
+      "align": "left",
+      "width": 900,
+      "renderedFromSource": true
+    },
+    {
+      "route": "/seo/",
+      "id": "sok-side",
+      "align": "left",
+      "width": 900,
+      "renderedFromSource": true
+    },
+    {
+      "route": "/",
+      "id": "mekanisme",
+      "align": "left",
+      "width": 390,
+      "renderedFromSource": true
+    },
+    {
+      "route": "/synlighet/",
+      "id": "behov",
+      "align": "left",
+      "width": 390,
+      "renderedFromSource": true
+    },
+    {
+      "route": "/synlighet/",
+      "id": "sjekk",
+      "align": "left",
+      "width": 390,
+      "renderedFromSource": true
+    },
+    {
+      "route": "/seo/",
+      "id": "sok-side",
+      "align": "left",
+      "width": 390,
+      "renderedFromSource": true
+    },
+    {
+      "route": "/",
+      "id": "mekanisme",
+      "align": "left",
+      "width": 320,
+      "renderedFromSource": true
+    },
+    {
+      "route": "/synlighet/",
+      "id": "behov",
+      "align": "left",
+      "width": 320,
+      "renderedFromSource": true
+    },
+    {
+      "route": "/synlighet/",
+      "id": "sjekk",
+      "align": "left",
+      "width": 320,
+      "renderedFromSource": true
+    },
+    {
+      "route": "/seo/",
+      "id": "sok-side",
+      "align": "left",
+      "width": 320,
+      "renderedFromSource": true
+    },
+    {
+      "route": "/",
+      "id": "mekanisme",
+      "align": "center",
+      "width": 1440,
+      "renderedFromSource": true
+    },
+    {
+      "route": "/synlighet/",
+      "id": "behov",
+      "align": "center",
+      "width": 1440,
+      "renderedFromSource": true
+    },
+    {
+      "route": "/synlighet/",
+      "id": "sjekk",
+      "align": "center",
+      "width": 1440,
+      "renderedFromSource": true
+    },
+    {
+      "route": "/seo/",
+      "id": "sok-side",
+      "align": "center",
+      "width": 1440,
+      "renderedFromSource": true
+    },
+    {
+      "route": "/",
+      "id": "mekanisme",
+      "align": "center",
+      "width": 900,
+      "renderedFromSource": true
+    },
+    {
+      "route": "/synlighet/",
+      "id": "behov",
+      "align": "center",
+      "width": 900,
+      "renderedFromSource": true
+    },
+    {
+      "route": "/synlighet/",
+      "id": "sjekk",
+      "align": "center",
+      "width": 900,
+      "renderedFromSource": true
+    },
+    {
+      "route": "/seo/",
+      "id": "sok-side",
+      "align": "center",
+      "width": 900,
+      "renderedFromSource": true
+    },
+    {
+      "route": "/",
+      "id": "mekanisme",
+      "align": "center",
+      "width": 390,
+      "renderedFromSource": true
+    },
+    {
+      "route": "/synlighet/",
+      "id": "behov",
+      "align": "center",
+      "width": 390,
+      "renderedFromSource": true
+    },
+    {
+      "route": "/synlighet/",
+      "id": "sjekk",
+      "align": "center",
+      "width": 390,
+      "renderedFromSource": true
+    },
+    {
+      "route": "/seo/",
+      "id": "sok-side",
+      "align": "center",
+      "width": 390,
+      "renderedFromSource": true
+    },
+    {
+      "route": "/",
+      "id": "mekanisme",
+      "align": "center",
+      "width": 320,
+      "renderedFromSource": true
+    },
+    {
+      "route": "/synlighet/",
+      "id": "behov",
+      "align": "center",
+      "width": 320,
+      "renderedFromSource": true
+    },
+    {
+      "route": "/synlighet/",
+      "id": "sjekk",
+      "align": "center",
+      "width": 320,
+      "renderedFromSource": true
+    },
+    {
+      "route": "/seo/",
+      "id": "sok-side",
+      "align": "center",
+      "width": 320,
+      "renderedFromSource": true
+    }
+  ],
+  "restored": [
+    {
+      "path": "src/content/pages/home.json",
+      "sha256": "66ec7d72ded67f9dccaad791f1945bb25a63f3f582e315267eda344246e4d70d",
+      "exact": true
+    },
+    {
+      "path": "src/content/pages/synlighet.json",
+      "sha256": "e0b4d8d96f0aa27b1c161c5a9c2c791003d02d245e8e9279a11c32b30a1d2f62",
+      "exact": true
+    },
+    {
+      "path": "src/content/pages/seo.json",
+      "sha256": "1d69233b485eae505700d5fd97e82eb8d0431f2b06f4ee7adcfbcc877b49b5a6",
+      "exact": true
+    }
+  ],
+  "authenticatedCMS": false
+}

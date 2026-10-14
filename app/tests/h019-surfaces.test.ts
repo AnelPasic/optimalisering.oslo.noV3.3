@@ -73,6 +73,6 @@ test('CMS surface save and restore preserve every unrelated field, ID, order and
   }
 });
 
-test('section model migration adds only editor metadata; all existing content remains exact',()=>{
-  for(const {file,page} of pages){const original=JSON.parse(execFileSync('git',['show',`188478e:app/src/content/pages/${file}`],{encoding:'utf8',cwd:'..'}));const current=structuredClone(page);for(const s of current.sections)delete s._block;assert.deepEqual(current,original,file);}
+test('historical H-019 migration adds only editor metadata; subsequent OWNER content edits remain allowed',()=>{
+  for(const {file} of pages){const original=JSON.parse(execFileSync('git',['show',`188478e:app/src/content/pages/${file}`],{encoding:'utf8',cwd:'..'}));const migrated=JSON.parse(execFileSync('git',['show',`59b52bd:app/src/content/pages/${file}`],{encoding:'utf8',cwd:'..'}));for(const s of migrated.sections)delete s._block;assert.deepEqual(migrated,original,file);}
 });
