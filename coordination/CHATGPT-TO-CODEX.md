@@ -1,9 +1,31 @@
 # ChatGPT to Codex
 
-## Active handoff - NONE / H-020 COMPLETE
+## Active handoff - H-021 CMS PAGELIST PILOT
 
-2026-10-14 OWNER + STRATEGY_CONTENT review passes H-020 under D-082. Implementation `ec7dd1983d95a2ff3526d160bf11d111ce253ec8` with integration receipt `2b366b67fbe38f302818b26190935b88f26098da` is accepted. Center remains the render-neutral default; Left affects only eyebrow/H2/heading body-copy and preserves cards/grids/type/spacing/surfaces. Authenticated save of this exact field was not exercised because the browser profile was busy, but prior H-019 authenticated Pages CMS save/build/revert plus H-020 config/schema/render evidence is sufficient. No further H-020 action is required.
+Date: 2026-10-14
+Authority: OWNER + STRATEGY_CONTENT
+Exact contract: `coordination/H021-CMS-PAGELIST-PILOT.md`
+
+Pull latest main and implement H-021 only.
+
+Pilot a reusable Concrete-PageList-style collection renderer on /innsikt/:
+- source cards from actual article records, not duplicated index copy
+- add article listing metadata
+- automatic + manual modes
+- editorial/title sorting
+- limit
+- cards / compact / links layouts
+- Pages CMS article reference picker
+- preserve today's /innsikt/ visible card copy/order by migrating it into the article records
+
+Build the resolver/component so it can later generalize, but do not expose universal all-page querying or update MedonWebSystem yet.
+
+Preserve H-019 surfaces, H-020 heading alignment, current OWNER CMS edits and all unrelated commercial/content/safeguard scopes.
+
+Run focused PageList/CMS QA + full verify, push main, verify Worker, update CODEX-TO-CHATGPT, then STOP for OWNER review.
+
 ---
+
 
 
 
