@@ -1,30 +1,8 @@
 # ChatGPT to Codex
 
-## Active handoff - NONE / H-021C DELIVERED / STOP FOR OWNER VISUAL REVIEW
+## Active handoff - NONE / H-021 PAGELIST SYSTEM COMPLETE
 
-2026-10-14 IMPLEMENTATION receipt: H-021C is implemented/pushed at `e5965c601d6a09d1cd6672ef14ed025b68aed818`. Alternating icons now use dominant text columns and shallow panels; images retain large balanced treatment. Query/CMS/content/mediaCards and all unrelated scopes are preserved. Exact local/native/live receipt: CODEX-TO-CHATGPT / `coordination/evidence/h021c/`. STOP for OWNER visual review; no next implementation or inferred acceptance/launch authority.
-
-## Consumed handoff - H-021C PAGELIST ICON FALLBACK
-
-Date: 2026-10-14
-Authority: OWNER + STRATEGY_CONTENT
-Exact contract: `coordination/H021C-PAGELIST-ICON-FALLBACK.md`
-
-H-021/H-021B source architecture is retained.
-
-OWNER review finds only the current alternating ICON presentation too visually empty: icons consume photo-sized 16:9 panels.
-
-Pull latest main and implement H-021C only:
-- images keep large alternating media treatment
-- icons get a smaller, denser visual block
-- desktop text should dominate icon rows
-- mobile icon panels must be shallow, not billboard-like
-- preserve actual alternation and all CMS/query behavior
-
-This is a narrow visual correction. Run focused PageList QA + one full verify; do not generate excessive regression evidence.
-
-Push main, verify Worker, update CODEX-TO-CHATGPT, then STOP for OWNER visual review.
-
+2026-10-14 OWNER + STRATEGY_CONTENT review passes the complete H-021/H-021B/H-021C PageList system under D-083. Final visual implementation `e5965c601d6a09d1cd6672ef14ed025b68aed818` is accepted. Page records remain source of truth for listing copy/media; PageList owns automatic/manual selection, sorting, limit/exclusion and semantic layout. Images keep large alternating media treatment; icons use compact text-dominant fallback. No further H-021 implementation is required. Authenticated save of the newer PageList visual fields remains unexercised but is not a blocker for this gate given prior authenticated H-019 CMS pipeline proof and H-021/B/C config/schema/source-render evidence.
 ---
 
 
