@@ -11,7 +11,7 @@ Architecture: small shared `heading-alignment.ts` enum/schema/safe attribute hel
 - [x] Build incoming baseline and capture compact four-width rendering fingerprints/screenshots. Focused CMS tests observed RED for missing alignment controls/round-trip, then GREEN.
 - [x] Add typed mapping/schema/CMS fields and the one narrow CSS override. Actual OWNER answer excludes the homepage form intro; its separate `sectionForm` model preserves existing fields and omits alignment. Focused tests 14/14 GREEN.
 - [x] Check center/left and restoration on representative home/service/protected headings at1440/900/390/320; 64 exact default groups, 16 scoped variants and 32 source-backed checks pass. Full verify101/101, typography196, CMS20 hashes and2,217 protected blobs pass. Fresh technical review21/21; no implementation findings, one evidence wording correction applied.
-- [ ] Push main, native Worker/live assets and checks, reversible authenticated CMS Center→Left→Center proof if available, exact content restoration, update outbound/state/review queue and STOP for OWNER visual/CMS review.
+- [x] Push implementation ec7dd19 to main. Native Build ff4aadc0 succeeds / Version835a3efc; all53 assets and64 default +16 scoped live groups pass. Authenticated CMS is unavailable as recorded;32 actual source-render checks pass with exact restoration. Outbound/state/review queue updated. STOP for OWNER visual/CMS review.
 
 Review focus: cleared optional selects must behave as center; protected heading alignment must not unlock surfaces; styles must affect only heading descendants; current OWNER surface/card corrections must survive; no inert control on the homepage form intro.
 

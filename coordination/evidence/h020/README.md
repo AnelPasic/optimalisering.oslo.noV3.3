@@ -28,4 +28,10 @@ The authenticated Chrome MCP browser could not attach: its profile was already i
 
 `app/scripts/qa-h020-source.mjs` temporarily writes only alignment values in three existing JSON files, builds Astro for Left and Center, checks actual rendered attributes/alignment at all four widths, and restores the exact original bytes plus a clean default build in `finally`. See [source-backed results](source-render/checks.json) and [log](source-render.log). This is explicitly distinct from an authenticated CMS round trip.
 
-Native Worker/live receipts and the final implementation revision are recorded in CODEX-TO-CHATGPT and adjacent receipt files after delivery. STOP for OWNER visual/CMS review; no acceptance, launch, indexing, intake or subsequent implementation authority follows.
+## Delivery and live verification
+
+Implementation **ec7dd1983d95a2ff3526d160bf11d111ce253ec8** is pushed to main. [Exact native build receipt](implementation-native-build.json): connected Worker Build **ff4aadc0-53f3-470d-b819-30a84390b6e6** succeeds, Version **835a3efc-3cb7-4c82-86b3-81cee98575f1**. [Live assets](live-assets.json): all **53** match the tested clean build, with noindex header/meta, blocked robots, empty sitemap, disabled intake/order APIs and custom404 intact.
+
+[Live responsive checks](live/checks.json) and [log](live.log): **64 default groups + 16 Center/Left/restore groups** pass at all four widths, with exact incoming default fingerprints, unchanged unrelated geometry/type/surfaces/cards/links, no overflow/errors/public POST. Live screenshots use the same names as the local matrix under `live/`. [Fresh review](technical-review.md) has no implementation findings.
+
+The final documentation/evidence receipt is identified through Git history rather than embedding its own hash. It changes no application source. Authenticated CMS save remains explicitly unverified. **STOP for OWNER visual/CMS review**; no acceptance, launch, indexing, intake or subsequent implementation authority follows.
