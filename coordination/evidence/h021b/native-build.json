@@ -1,0 +1,15 @@
+{
+  "source": "Authenticated Cloudflare connector: exact build detail, deploy log and latest deployment",
+  "implementation": "58f75acc029c9db80f7699980d211cc450ca4ac7",
+  "worker": "optimalisering-oslo-v33",
+  "buildId": "21d1c6e3-5fa2-48d4-90ae-1a7f1340ebe4",
+  "status": "stopped",
+  "buildOutcome": "success",
+  "stoppedOn": "2026-10-14T14:52:13.793Z",
+  "versionId": "2615710c-5833-4088-acd7-7e5bad8c8eb3",
+  "deploymentId": "44bed7d3-7abc-4bf1-86f2-921a7259fa10",
+  "deploymentCreatedOn": "2026-10-14T14:52:09.449595Z",
+  "percentage": 100,
+  "deployLog": ["Current Version ID: 2615710c-5833-4088-acd7-7e5bad8c8eb3", "Success: Deploy command completed", "Success! Build completed."],
+  "directDeployment": false
+}
