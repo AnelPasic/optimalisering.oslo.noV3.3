@@ -62,6 +62,16 @@ Reproduce from `app/`: `node --test tests/page-list.test.ts`, `npm run qa:cms`,
 Set `QA_PHASE=before` only against the baseline build. Use `QA_OUTPUT_DIR` to keep
 typography output in this packet. Reversible source fixtures must run alone.
 
-Native Worker and live comparisons are recorded separately after push. No direct
-deployment, secrets, domains, real submission, indexing or launch is authorized.
+Implementation is `e94b4b5aa54dcf09d3a0f9dbb9276b2b06a07ed7`. Native Build
+`3b86e357-979c-4c46-ad10-d9e45b982d99` succeeds; Worker Version
+`73bf41fc-0f0f-40f1-825c-9e387e732ed3`, deployment
+`1013f1fe-328b-4ff5-b6a5-9c6e5564dcbb`, serves the connected target.
+Exact receipt: `native-build.json`. The first new stylesheet response briefly
+returned404 after deployment; the identical URL then returned200 and full checks
+were repeated. No code/infrastructure change was made for propagation.
+`live-assets.json`:53 matching assets,50 byte-exact and3 public CSS files equivalent
+after CRLF normalization. Noindex header/meta, robots, empty sitemap, disabled
+APIs and custom404 pass. `live/`:64 route/width/no-JS groups match baseline content,
+computed styles and geometry; four live Innsikt screenshots. Zero errors/POST/overflow.
+No direct deployment, secrets, domains, real submission, indexing or launch is authorized.
 STOP after delivery for OWNER CMS/visual review; technical success adds no verdict.

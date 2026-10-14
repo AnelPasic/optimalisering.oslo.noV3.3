@@ -1,0 +1,17 @@
+{
+  "source": "Cloudflare authenticated connector: build detail, build logs and latest deployment",
+  "implementation": "e94b4b5aa54dcf09d3a0f9dbb9276b2b06a07ed7",
+  "worker": "optimalisering-oslo-v33",
+  "buildId": "3b86e357-979c-4c46-ad10-d9e45b982d99",
+  "status": "stopped",
+  "buildOutcome": "success",
+  "stoppedOn": "2026-10-14T12:39:21.552Z",
+  "versionId": "73bf41fc-0f0f-40f1-825c-9e387e732ed3",
+  "deploymentId": "1013f1fe-328b-4ff5-b6a5-9c6e5564dcbb",
+  "deploymentCreatedOn": "2026-10-14T12:39:18.190793Z",
+  "percentage": 100,
+  "buildCommand": "npm run build",
+  "deployCommand": "npx wrangler deploy",
+  "directDeployment": false,
+  "firstAssetCheck": "New stylesheet initially returned 404 immediately after deployment. Same exact URL subsequently returned 200; complete asset/browser checks repeated after propagation. No code or infrastructure change was made."
+}
