@@ -13,36 +13,10 @@
   "sections": [
     {
       "_block": "content",
-      "id": "behov",
-      "eyebrow": "Bli funnet før kunden har valgt leverandør",
-      "heading": "Hvis bare de som kjenner navnet ditt finner deg, kommer du sent inn i valget.",
-      "body": [
-        "Kunden kan søke etter en tjeneste, et produkt, et problem eller en leverandør i nærheten. Da må nettsiden gi et tydelig svar på det kunden faktisk prøver å finne.",
-        "Vi starter med tilbudet, kundens spørsmål og sidene som skal gjøre jobben. Flere søkeord og mer innhold er ikke et mål i seg selv."
-      ],
-      "items": [
-        {
-          "title": "Riktig søk",
-          "text": "Bli synlig på søk og spørsmål som passer det bedriften faktisk tilbyr."
-        },
-        {
-          "title": "Riktig side",
-          "text": "Send kunden til en side som svarer på behovet og gjør tilbudet lett å forstå."
-        },
-        {
-          "title": "Riktig neste steg",
-          "text": "Gjør veien videre tydelig når kunden er klar for kontakt eller kjøp.",
-          "href": "/konvertering/",
-          "label": "Se Konvertering"
-        }
-      ]
-    },
-    {
-      "_block": "content",
       "id": "kanaler",
       "eyebrow": "Tre deler av synligheten",
       "heading": "SEO, lokal SEO og AI-synlighet løser ulike deler av samme jobb.",
-      "surface": "mint",
+      "surface": "default",
       "body": [
         "De overlapper, men de er ikke det samme. Derfor må vi se på hvor kundene faktisk leter og hva som mangler i dag."
       ],
@@ -65,6 +39,32 @@
           "href": "/ai-synlighet/",
           "label": "Les om AI-synlighet",
           "surface": "dark"
+        }
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "behov",
+      "eyebrow": "Bli funnet før kunden har valgt leverandør",
+      "heading": "Hvis bare de som kjenner navnet ditt finner deg, kommer du sent inn i valget.",
+      "body": [
+        "Kunden kan søke etter en tjeneste, et produkt, et problem eller en leverandør i nærheten. Da må nettsiden gi et tydelig svar på det kunden faktisk prøver å finne.",
+        "Vi starter med tilbudet, kundens spørsmål og sidene som skal gjøre jobben. Flere søkeord og mer innhold er ikke et mål i seg selv."
+      ],
+      "items": [
+        {
+          "title": "Riktig søk",
+          "text": "Bli synlig på søk og spørsmål som passer det bedriften faktisk tilbyr."
+        },
+        {
+          "title": "Riktig side",
+          "text": "Send kunden til en side som svarer på behovet og gjør tilbudet lett å forstå."
+        },
+        {
+          "title": "Riktig neste steg",
+          "text": "Gjør veien videre tydelig når kunden er klar for kontakt eller kjøp.",
+          "href": "/konvertering/",
+          "label": "Se Konvertering"
         }
       ]
     },
