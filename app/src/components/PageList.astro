@@ -15,7 +15,7 @@ const cards = items.map(item => ({ title: item.title, text: item.summary, href: 
     <ul class:list={['page-list', `page-list-${config.layout}`]} data-count={items.length}>
       {items.map(item => <li>
         {config.layout === 'mediaCards' || config.layout === 'alternating' ?
-          <article class="info-item listing-item" data-has-visual={!!item.visual} data-surface={config.layout === 'mediaCards' ? 'base' : undefined}>
+          <article class="info-item listing-item" data-has-visual={!!item.visual} data-visual-kind={item.visual?.kind ?? 'none'} data-surface={config.layout === 'mediaCards' ? 'base' : undefined}>
             {config.layout === 'mediaCards' && item.visual && <ListingVisual visual={item.visual} />}
             <div class="listing-copy"><h3>{item.title}</h3><p>{item.summary}</p><a class="text-link" href={item.href}>{item.label}<Arrow diagonal /></a></div>
             {config.layout === 'alternating' && item.visual && <ListingVisual visual={item.visual} />}
@@ -33,6 +33,11 @@ const cards = items.map(item => ({ title: item.title, text: item.summary, href: 
   .listing-copy .text-link { margin-top: var(--gap); }
   .page-list-alternating { gap: clamp(48px, 5vw, 80px); margin-top: var(--gap-lg); }
   .page-list-alternating .listing-item { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(24px, 4vw, 64px); align-items: center; }
+  .page-list-alternating .listing-item[data-visual-kind="icon"] :global(.listing-visual) { aspect-ratio: auto; height: clamp(180px, 18vw, 240px); }
+  @media (min-width: 701px) {
+    .page-list-alternating .listing-item[data-visual-kind="icon"] { grid-template-columns: minmax(0, 7fr) minmax(0, 3fr); }
+    .page-list-alternating > li:nth-child(even) .listing-item[data-visual-kind="icon"] { grid-template-columns: minmax(0, 3fr) minmax(0, 7fr); }
+  }
   .page-list-alternating > li:nth-child(even) .listing-copy { grid-column: 2; grid-row: 1; }
   .page-list-alternating > li:nth-child(even) :global(.listing-visual) { grid-column: 1; grid-row: 1; }
   .page-list-alternating > li:nth-child(even) :global(.listing-visual[data-kind="icon"]) { background: var(--surface-mint); }
@@ -49,6 +54,7 @@ const cards = items.map(item => ({ title: item.title, text: item.summary, href: 
   @media (max-width: 700px) {
     .page-list-mediaCards, .page-list-mediaCards[data-count="2"] { grid-template-columns: minmax(0, 1fr); }
     .page-list-alternating .listing-item { grid-template-columns: minmax(0, 1fr); gap: var(--gap); }
+    .page-list-alternating .listing-item[data-visual-kind="icon"] :global(.listing-visual) { height: clamp(140px, 40vw, 180px); }
     .page-list-alternating > li:nth-child(even) .listing-copy, .page-list-alternating > li:nth-child(even) :global(.listing-visual) { grid-column: auto; grid-row: auto; }
   }
 </style>

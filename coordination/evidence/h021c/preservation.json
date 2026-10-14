@@ -1,0 +1,6 @@
+{
+  "baseline": "b7c3a0a7bbae4bab99136c04def4a0d997cec868",
+  "protectedBlobs": 403,
+  "onlyProductionFile": "app/src/components/PageList.astro",
+  "contentCMSResolverImageRendererTokensReadOnlyInputsExact": true
+}

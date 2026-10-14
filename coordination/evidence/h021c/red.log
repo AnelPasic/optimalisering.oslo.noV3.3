@@ -1,0 +1,22 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert.ok(share>=.28&&share<=.36)
+
+    at file:///E:/Codex/optimalisering.oslo.noV3.3/app/scripts/qa-h021c.mjs:35:46
+    at Array.forEach (<anonymous>)
+    at check (file:///E:/Codex/optimalisering.oslo.noV3.3/app/scripts/qa-h021c.mjs:31:11)
+    at inspect (file:///E:/Codex/optimalisering.oslo.noV3.3/app/scripts/qa-h021c.mjs:41:2)
+    at async file:///E:/Codex/optimalisering.oslo.noV3.3/app/scripts/qa-h021c.mjs:65:40 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.12.0

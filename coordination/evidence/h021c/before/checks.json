@@ -1,0 +1,545 @@
+{
+  "phase": "before",
+  "records": [
+    {
+      "name": "default",
+      "width": 1440,
+      "noJS": true,
+      "rows": [
+        {
+          "kind": "icon",
+          "text": "Hva bør optimaliseres først?\n\nUndersøk om de rette finner deg, om de kommer videre, og om handlingene har verdi. Se hypotetiske situasjoner og en enkel beslutningsrekkefølge.\n\nLes startguiden",
+          "href": "/innsikt/hva-bor-optimaliseres-forst/",
+          "font": "25.92px",
+          "c": {
+            "x": 40,
+            "y": 880.96875,
+            "width": 651.203125,
+            "height": 239.78125
+          },
+          "v": {
+            "x": 748.796875,
+            "y": 817.71875,
+            "width": 651.203125,
+            "height": 366.296875
+          }
+        },
+        {
+          "kind": "icon",
+          "text": "Hvordan måle effekten?\n\nSkill mellom visninger, handlinger og forretningsverdi. Definer relevante henvendelser eller nyttige kjøp, og gjør forutsetningene synlige.\n\nLes måleguiden",
+          "href": "/innsikt/male-effekt-av-optimalisering/",
+          "font": "25.92px",
+          "c": {
+            "x": 748.796875,
+            "y": 1319.265625,
+            "width": 651.203125,
+            "height": 239.78125
+          },
+          "v": {
+            "x": 40,
+            "y": 1256.015625,
+            "width": 651.203125,
+            "height": 366.296875
+          }
+        }
+      ]
+    },
+    {
+      "name": "default",
+      "width": 900,
+      "noJS": true,
+      "rows": [
+        {
+          "kind": "icon",
+          "text": "Hva bør optimaliseres først?\n\nUndersøk om de rette finner deg, om de kommer videre, og om handlingene har verdi. Se hypotetiske situasjoner og en enkel beslutningsrekkefølge.\n\nLes startguiden",
+          "href": "/innsikt/hva-bor-optimaliseres-forst/",
+          "font": "22px",
+          "c": {
+            "x": 32,
+            "y": 738.65625,
+            "width": 400,
+            "height": 225.28125
+          },
+          "v": {
+            "x": 468,
+            "y": 738.796875,
+            "width": 400,
+            "height": 225
+          }
+        },
+        {
+          "kind": "icon",
+          "text": "Hvordan måle effekten?\n\nSkill mellom visninger, handlinger og forretningsverdi. Definer relevante henvendelser eller nyttige kjøp, og gjør forutsetningene synlige.\n\nLes måleguiden",
+          "href": "/innsikt/male-effekt-av-optimalisering/",
+          "font": "22px",
+          "c": {
+            "x": 468,
+            "y": 1011.9375,
+            "width": 400,
+            "height": 225.28125
+          },
+          "v": {
+            "x": 32,
+            "y": 1012.078125,
+            "width": 400,
+            "height": 225
+          }
+        }
+      ]
+    },
+    {
+      "name": "default",
+      "width": 390,
+      "noJS": true,
+      "rows": [
+        {
+          "kind": "icon",
+          "text": "Hva bør optimaliseres først?\n\nUndersøk om de rette finner deg, om de kommer videre, og om handlingene har verdi. Se hypotetiske situasjoner og en enkel beslutningsrekkefølge.\n\nLes startguiden",
+          "href": "/innsikt/hva-bor-optimaliseres-forst/",
+          "font": "22px",
+          "c": {
+            "x": 20,
+            "y": 816.40625,
+            "width": 350,
+            "height": 242.875
+          },
+          "v": {
+            "x": 20,
+            "y": 1083.28125,
+            "width": 350,
+            "height": 196.875
+          }
+        },
+        {
+          "kind": "icon",
+          "text": "Hvordan måle effekten?\n\nSkill mellom visninger, handlinger og forretningsverdi. Definer relevante henvendelser eller nyttige kjøp, og gjør forutsetningene synlige.\n\nLes måleguiden",
+          "href": "/innsikt/male-effekt-av-optimalisering/",
+          "font": "22px",
+          "c": {
+            "x": 20,
+            "y": 1328.15625,
+            "width": 350,
+            "height": 242.875
+          },
+          "v": {
+            "x": 20,
+            "y": 1595.03125,
+            "width": 350,
+            "height": 196.875
+          }
+        }
+      ]
+    },
+    {
+      "name": "default",
+      "width": 320,
+      "noJS": true,
+      "rows": [
+        {
+          "kind": "icon",
+          "text": "Hva bør optimaliseres først?\n\nUndersøk om de rette finner deg, om de kommer videre, og om handlingene har verdi. Se hypotetiske situasjoner og en enkel beslutningsrekkefølge.\n\nLes startguiden",
+          "href": "/innsikt/hva-bor-optimaliseres-forst/",
+          "font": "22px",
+          "c": {
+            "x": 16,
+            "y": 899.5,
+            "width": 288,
+            "height": 242.875
+          },
+          "v": {
+            "x": 16,
+            "y": 1166.375,
+            "width": 288,
+            "height": 162
+          }
+        },
+        {
+          "kind": "icon",
+          "text": "Hvordan måle effekten?\n\nSkill mellom visninger, handlinger og forretningsverdi. Definer relevante henvendelser eller nyttige kjøp, og gjør forutsetningene synlige.\n\nLes måleguiden",
+          "href": "/innsikt/male-effekt-av-optimalisering/",
+          "font": "22px",
+          "c": {
+            "x": 16,
+            "y": 1376.375,
+            "width": 288,
+            "height": 242.875
+          },
+          "v": {
+            "x": 16,
+            "y": 1643.25,
+            "width": 288,
+            "height": 162
+          }
+        }
+      ]
+    },
+    {
+      "name": "mixed",
+      "width": 1440,
+      "noJS": true,
+      "rows": [
+        {
+          "kind": "image",
+          "text": "H-021C local image fixture\n\nSyntetisk lokal test. Ikke publiserbart innhold.\n\nÅpne test",
+          "href": "/innsikt/h021c-fixture/",
+          "font": "25.92px",
+          "c": {
+            "x": 40,
+            "y": 943.6875,
+            "width": 651.203125,
+            "height": 182.1875
+          },
+          "v": {
+            "x": 748.796875,
+            "y": 817.71875,
+            "width": 651.203125,
+            "height": 434.125
+          }
+        },
+        {
+          "kind": "icon",
+          "text": "Hva bør optimaliseres først?\n\nUndersøk om de rette finner deg, om de kommer videre, og om handlingene har verdi. Se hypotetiske situasjoner og en enkel beslutningsrekkefølge.\n\nLes startguiden",
+          "href": "/innsikt/hva-bor-optimaliseres-forst/",
+          "font": "25.92px",
+          "c": {
+            "x": 748.796875,
+            "y": 1387.09375,
+            "width": 651.203125,
+            "height": 239.78125
+          },
+          "v": {
+            "x": 40,
+            "y": 1323.84375,
+            "width": 651.203125,
+            "height": 366.296875
+          }
+        },
+        {
+          "kind": "image",
+          "text": "Hvordan måle effekten?\n\nSkill mellom visninger, handlinger og forretningsverdi. Definer relevante henvendelser eller nyttige kjøp, og gjør forutsetningene synlige.\n\nLes måleguiden",
+          "href": "/innsikt/male-effekt-av-optimalisering/",
+          "font": "25.92px",
+          "c": {
+            "x": 40,
+            "y": 1859.3125,
+            "width": 651.203125,
+            "height": 239.78125
+          },
+          "v": {
+            "x": 748.796875,
+            "y": 1762.140625,
+            "width": 651.203125,
+            "height": 434.125
+          }
+        }
+      ]
+    },
+    {
+      "name": "mixed",
+      "width": 900,
+      "noJS": true,
+      "rows": [
+        {
+          "kind": "image",
+          "text": "H-021C local image fixture\n\nSyntetisk lokal test. Ikke publiserbart innhold.\n\nÅpne test",
+          "href": "/innsikt/h021c-fixture/",
+          "font": "22px",
+          "c": {
+            "x": 32,
+            "y": 784.9375,
+            "width": 400,
+            "height": 174.09375
+          },
+          "v": {
+            "x": 468,
+            "y": 738.65625,
+            "width": 400,
+            "height": 266.65625
+          }
+        },
+        {
+          "kind": "icon",
+          "text": "Hva bør optimaliseres først?\n\nUndersøk om de rette finner deg, om de kommer videre, og om handlingene har verdi. Se hypotetiske situasjoner og en enkel beslutningsrekkefølge.\n\nLes startguiden",
+          "href": "/innsikt/hva-bor-optimaliseres-forst/",
+          "font": "22px",
+          "c": {
+            "x": 468,
+            "y": 1053.3125,
+            "width": 400,
+            "height": 225.28125
+          },
+          "v": {
+            "x": 32,
+            "y": 1053.453125,
+            "width": 400,
+            "height": 225
+          }
+        },
+        {
+          "kind": "image",
+          "text": "Hvordan måle effekten?\n\nSkill mellom visninger, handlinger og forretningsverdi. Definer relevante henvendelser eller nyttige kjøp, og gjør forutsetningene synlige.\n\nLes måleguiden",
+          "href": "/innsikt/male-effekt-av-optimalisering/",
+          "font": "22px",
+          "c": {
+            "x": 32,
+            "y": 1347.28125,
+            "width": 400,
+            "height": 225.28125
+          },
+          "v": {
+            "x": 468,
+            "y": 1326.59375,
+            "width": 400,
+            "height": 266.65625
+          }
+        }
+      ]
+    },
+    {
+      "name": "mixed",
+      "width": 390,
+      "noJS": true,
+      "rows": [
+        {
+          "kind": "image",
+          "text": "H-021C local image fixture\n\nSyntetisk lokal test. Ikke publiserbart innhold.\n\nÅpne test",
+          "href": "/innsikt/h021c-fixture/",
+          "font": "22px",
+          "c": {
+            "x": 20,
+            "y": 816.40625,
+            "width": 350,
+            "height": 166.09375
+          },
+          "v": {
+            "x": 20,
+            "y": 1006.5,
+            "width": 350,
+            "height": 233.328125
+          }
+        },
+        {
+          "kind": "icon",
+          "text": "Hva bør optimaliseres først?\n\nUndersøk om de rette finner deg, om de kommer videre, og om handlingene har verdi. Se hypotetiske situasjoner og en enkel beslutningsrekkefølge.\n\nLes startguiden",
+          "href": "/innsikt/hva-bor-optimaliseres-forst/",
+          "font": "22px",
+          "c": {
+            "x": 20,
+            "y": 1287.828125,
+            "width": 350,
+            "height": 242.875
+          },
+          "v": {
+            "x": 20,
+            "y": 1554.703125,
+            "width": 350,
+            "height": 196.875
+          }
+        },
+        {
+          "kind": "image",
+          "text": "Hvordan måle effekten?\n\nSkill mellom visninger, handlinger og forretningsverdi. Definer relevante henvendelser eller nyttige kjøp, og gjør forutsetningene synlige.\n\nLes måleguiden",
+          "href": "/innsikt/male-effekt-av-optimalisering/",
+          "font": "22px",
+          "c": {
+            "x": 20,
+            "y": 1799.578125,
+            "width": 350,
+            "height": 242.875
+          },
+          "v": {
+            "x": 20,
+            "y": 2066.453125,
+            "width": 350,
+            "height": 233.328125
+          }
+        }
+      ]
+    },
+    {
+      "name": "mixed",
+      "width": 320,
+      "noJS": true,
+      "rows": [
+        {
+          "kind": "image",
+          "text": "H-021C local image fixture\n\nSyntetisk lokal test. Ikke publiserbart innhold.\n\nÅpne test",
+          "href": "/innsikt/h021c-fixture/",
+          "font": "22px",
+          "c": {
+            "x": 16,
+            "y": 899.5,
+            "width": 288,
+            "height": 191.6875
+          },
+          "v": {
+            "x": 16,
+            "y": 1115.1875,
+            "width": 288,
+            "height": 192
+          }
+        },
+        {
+          "kind": "icon",
+          "text": "Hva bør optimaliseres først?\n\nUndersøk om de rette finner deg, om de kommer videre, og om handlingene har verdi. Se hypotetiske situasjoner og en enkel beslutningsrekkefølge.\n\nLes startguiden",
+          "href": "/innsikt/hva-bor-optimaliseres-forst/",
+          "font": "22px",
+          "c": {
+            "x": 16,
+            "y": 1355.1875,
+            "width": 288,
+            "height": 242.875
+          },
+          "v": {
+            "x": 16,
+            "y": 1622.0625,
+            "width": 288,
+            "height": 162
+          }
+        },
+        {
+          "kind": "image",
+          "text": "Hvordan måle effekten?\n\nSkill mellom visninger, handlinger og forretningsverdi. Definer relevante henvendelser eller nyttige kjøp, og gjør forutsetningene synlige.\n\nLes måleguiden",
+          "href": "/innsikt/male-effekt-av-optimalisering/",
+          "font": "22px",
+          "c": {
+            "x": 16,
+            "y": 1832.0625,
+            "width": 288,
+            "height": 242.875
+          },
+          "v": {
+            "x": 16,
+            "y": 2098.9375,
+            "width": 288,
+            "height": 192
+          }
+        }
+      ]
+    },
+    {
+      "name": "mediaCards",
+      "width": 1440,
+      "noJS": true,
+      "rows": [
+        {
+          "kind": "image",
+          "text": "H-021C local image fixture\n\nSyntetisk lokal test. Ikke publiserbart innhold.\n\nÅpne test",
+          "href": "/innsikt/h021c-fixture/",
+          "font": "25.92px",
+          "c": {
+            "x": 41,
+            "y": 1108.9375,
+            "width": 408.34375,
+            "height": 308.578125
+          },
+          "v": {
+            "x": 41,
+            "y": 818.71875,
+            "width": 435.328125,
+            "height": 290.21875
+          }
+        },
+        {
+          "kind": "icon",
+          "text": "Hva bør optimaliseres først?\n\nUndersøk om de rette finner deg, om de kommer videre, og om handlingene har verdi. Se hypotetiske situasjoner og en enkel beslutningsrekkefølge.\n\nLes startguiden",
+          "href": "/innsikt/hva-bor-optimaliseres-forst/",
+          "font": "25.92px",
+          "c": {
+            "x": 502.328125,
+            "y": 1108.9375,
+            "width": 435.328125,
+            "height": 308.578125
+          },
+          "v": {
+            "x": 502.328125,
+            "y": 818.71875,
+            "width": 435.328125,
+            "height": 290.21875
+          }
+        },
+        {
+          "kind": "image",
+          "text": "Hvordan måle effekten?\n\nSkill mellom visninger, handlinger og forretningsverdi. Definer relevante henvendelser eller nyttige kjøp, og gjør forutsetningene synlige.\n\nLes måleguiden",
+          "href": "/innsikt/male-effekt-av-optimalisering/",
+          "font": "25.92px",
+          "c": {
+            "x": 963.65625,
+            "y": 1108.9375,
+            "width": 435.34375,
+            "height": 308.578125
+          },
+          "v": {
+            "x": 963.65625,
+            "y": 818.71875,
+            "width": 435.34375,
+            "height": 290.21875
+          }
+        }
+      ]
+    },
+    {
+      "name": "mediaCards",
+      "width": 390,
+      "noJS": true,
+      "rows": [
+        {
+          "kind": "image",
+          "text": "H-021C local image fixture\n\nSyntetisk lokal test. Ikke publiserbart innhold.\n\nÅpne test",
+          "href": "/innsikt/h021c-fixture/",
+          "font": "22px",
+          "c": {
+            "x": 21,
+            "y": 1049.40625,
+            "width": 348,
+            "height": 231.6875
+          },
+          "v": {
+            "x": 21,
+            "y": 817.40625,
+            "width": 348,
+            "height": 232
+          }
+        },
+        {
+          "kind": "icon",
+          "text": "Hva bør optimaliseres først?\n\nUndersøk om de rette finner deg, om de kommer videre, og om handlingene har verdi. Se hypotetiske situasjoner og en enkel beslutningsrekkefølge.\n\nLes startguiden",
+          "href": "/innsikt/hva-bor-optimaliseres-forst/",
+          "font": "22px",
+          "c": {
+            "x": 21,
+            "y": 1539.09375,
+            "width": 348,
+            "height": 282.875
+          },
+          "v": {
+            "x": 21,
+            "y": 1307.09375,
+            "width": 348,
+            "height": 232
+          }
+        },
+        {
+          "kind": "image",
+          "text": "Hvordan måle effekten?\n\nSkill mellom visninger, handlinger og forretningsverdi. Definer relevante henvendelser eller nyttige kjøp, og gjør forutsetningene synlige.\n\nLes måleguiden",
+          "href": "/innsikt/male-effekt-av-optimalisering/",
+          "font": "22px",
+          "c": {
+            "x": 21,
+            "y": 2079.96875,
+            "width": 348,
+            "height": 282.875
+          },
+          "v": {
+            "x": 21,
+            "y": 1847.96875,
+            "width": 348,
+            "height": 232
+          }
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "posts": []
+}
