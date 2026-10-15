@@ -1,39 +1,38 @@
 # ChatGPT to Codex
 
-## Active handoff - NONE / REVISED H-022 DELIVERED / STOP FOR OWNER VISUAL REVIEW
-
-Revised H-022 is implemented/pushed at **6cd89f1beed0734294fdb7c8530c8f2c08eff10d**: factual Eurotents review image/context plus separate dominant ROAS and secondary spend tiles; balanced compact supporting modules. Small safe homepage presentation media config/CMS fields remain independent from proof authority. Exact public proof and service appearance are preserved. One full verify117/117, focused8/8 and guard/CMS7/7 pass. Source/native/live evidence: CODEX-TO-CHATGPT / `evidence/h022-revised/`. **STOP for OWNER visual review, including whether the review-only image stays for production; no active next implementation or launch/content acceptance.**
-
-## Consumed handoff - H-022 PROOF SHOWCASE REDESIGN
+## Active handoff - H-023A DAISYUI FOUNDATION
 
 Date: 2026-10-15
-Authority: OWNER + STRATEGY_CONTENT
-Exact contract: `coordination/H022-PROOF-PRESENTATION.md`
+Authority: OWNER + STRATEGY_CONTENT / D-084
+Exact contract: `coordination/H023A-DAISYUI-FOUNDATION.md`
 
-Pull latest main and implement the revised H-022 only.
+Pull latest main and implement H-023A only.
 
-Important correction:
-Do NOT merely polish the existing proof cards.
+Priority change:
+- H-022 proof showcase is delivered but PARKED for later visual review.
+- Do not keep polishing proof now.
 
-Rebuild homepage proof as a real case showcase:
-- large Eurotents visual/context area
-- separate result area with dominant 4,3x -> 17,2x ROAS story
-- 20 % lower ad spend as secondary support
-- two balanced supporting cases below
-- use a factual Eurotents review visual from the current public site or a defensible non-photographic fallback
-- no fabricated customer imagery
-- no new metrics/copy/caveats
-- no fake "Les hele caset" route
-- keep service-page proof compact
+Establish the UI foundation:
+- Astro stays
+- Tailwind CSS 4 via the current Vite plugin path
+- daisyUI 5 semantic UI layer
+- custom `optimalisering` theme via `@plugin "daisyui/theme"`
+- translate the current approved palette/geometry into semantic OKLCH theme tokens
+- use daisyUI components first, Tailwind utilities second, scoped custom CSS only for special compositions
+- verify/use free `daisyui-gitmcp`; Context7 fallback
+- create review-only `/design-system/`
+- use daisyUI Theme Controller there for `optimalisering` vs built-in `light` QA comparison
+- migrate homepage/routine primitives as the representative real shell
+- inventory legacy Invite CSS and produce the H-023B semantic route/template migration plan
+- do NOT broadly migrate all routes yet
 
-Presentation media is presentation metadata only and must not change evidence/publication authority.
+Preserve content, CMS, proof authority/data, calculator logic, pricing logic, PageList, noindex and disabled intake.
 
-Use current shared design-system primitives underneath the special showcase composition.
-
-Focused responsive QA + one full verify.
-Push main, verify Worker, update CODEX-TO-CHATGPT, then STOP for OWNER visual review.
+Run the scoped foundation QA + current full verify.
+Push main, verify Worker, update coordination, then STOP for OWNER Visual Shell/design-system review.
 
 ---
+
 
 
 
