@@ -52,6 +52,7 @@ try {
     }
     if([1440,390].includes(width)) {
       await page.screenshot({path:`${root}/${phase}/home-${width}.png`,fullPage:true});
+      await page.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));
       await page.screenshot({path:`${root}/${phase}/home-fold-${width}.png`});
     }
     records.push({width,text}); await page.close();

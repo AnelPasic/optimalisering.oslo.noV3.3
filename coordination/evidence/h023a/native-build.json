@@ -1,0 +1,35 @@
+{
+  "source": "4fc5dc877fd12996d14488c27030b778066bfe08",
+  "worker": "optimalisering-oslo-v33",
+  "base": "https://optimalisering-oslo-v33.anel.workers.dev",
+  "build": {
+    "id": "3437809b-5fd6-4710-978a-ba66dc518eff",
+    "branch": "main",
+    "status": "stopped",
+    "outcome": "success",
+    "stopped_on": "2026-10-15T09:29:25.742Z",
+    "deployLogVersion": "c23cac38-9c8a-49e2-be4b-3b05a249603b"
+  },
+  "deployment": {
+    "id": "8df9f5e7-7aa2-4f95-82c5-613229c54cfd",
+    "version": "c23cac38-9c8a-49e2-be4b-3b05a249603b",
+    "percentage": 100,
+    "created_on": "2026-10-15T09:29:15.905482Z"
+  },
+  "liveAssets": 57,
+  "byteEqualAssets": 53,
+  "textOnlyLineEndingEquivalents": 4,
+  "liveHomepageWidths": [
+    1440,
+    900,
+    390,
+    320
+  ],
+  "liveDesignSystemWidths": [
+    1440,
+    390
+  ],
+  "nativeThemeControllerWorksWithoutJavaScript": true,
+  "safeguardsPreserved": true,
+  "directDeployOrInfrastructureChanges": false
+}
