@@ -75,38 +75,6 @@
   },
   "sections": [
     {
-      "_block": "calculator",
-      "uid": "dc92cca5-b95c-487c-b2a2-08e296972a65",
-      "id": "regneeksempel",
-      "name": "Regneeksempel",
-      "content": {
-        "eyebrow": "Synlighet og konvertering forsterker hverandre",
-        "heading": "Hva betyr flere relevante besøk og en bedre kjøpsvei?",
-        "intro": "Endre trafikken, andelen som tar kontakt eller kjøper - eller begge. Se hvordan de to grepene virker sammen.",
-        "formula": "Relevante besøk x konverteringsrate = henvendelser / kjøp",
-        "labels": {
-          "visits": "Relevante besøk per måned",
-          "conversion": "Konverteringsrate i dag (%)",
-          "trafficIncrease": "Mer relevant trafikk per måned (%)",
-          "newConversion": "Ny konverteringsrate (%)",
-          "current": "I dag",
-          "scenario": "Scenario",
-          "difference": "X",
-          "outcome": "henvendelser / kjøp per måned",
-          "increase": "endring",
-          "undefinedIncrease": "Forholdstall kan ikke beregnes for dette utgangspunktet",
-          "invalid": "Bruk besøk fra 0 til 10 000 000, trafikkøkning fra 0 til 1 000 % og konverteringsrater fra 0 til 100 %."
-        },
-        "defaults": {
-          "visits": 2000,
-          "conversion": 0.5,
-          "trafficIncrease": 10,
-          "newConversion": 2
-        },
-        "caveat": "Hypotetisk regneeksempel - ikke et kundecase."
-      }
-    },
-    {
       "_block": "selector",
       "uid": "31bd8ddb-5a47-4bc4-99b5-a5461e6103f6",
       "id": "behov",
@@ -142,6 +110,38 @@
             }
           }
         ]
+      }
+    },
+    {
+      "_block": "calculator",
+      "uid": "dc92cca5-b95c-487c-b2a2-08e296972a65",
+      "id": "regneeksempel",
+      "name": "Regneeksempel",
+      "content": {
+        "eyebrow": "Synlighet og konvertering forsterker hverandre",
+        "heading": "Hva betyr flere relevante besøk og en bedre kjøpsvei?",
+        "intro": "Endre trafikken, andelen som tar kontakt eller kjøper - eller begge. Se hvordan de to grepene virker sammen.",
+        "formula": "Relevante besøk x konverteringsrate = henvendelser / kjøp",
+        "labels": {
+          "visits": "Relevante besøk per måned",
+          "conversion": "Konverteringsrate i dag (%)",
+          "trafficIncrease": "Mer relevant trafikk per måned (%)",
+          "newConversion": "Ny konverteringsrate (%)",
+          "current": "I dag",
+          "scenario": "Scenario",
+          "difference": "X",
+          "outcome": "henvendelser / kjøp per måned",
+          "increase": "endring",
+          "undefinedIncrease": "Forholdstall kan ikke beregnes for dette utgangspunktet",
+          "invalid": "Bruk besøk fra 0 til 10 000 000, trafikkøkning fra 0 til 1 000 % og konverteringsrater fra 0 til 100 %."
+        },
+        "defaults": {
+          "visits": 2000,
+          "conversion": 0.5,
+          "trafficIncrease": 10,
+          "newConversion": 2
+        },
+        "caveat": "Hypotetisk regneeksempel - ikke et kundecase."
       }
     },
     {
