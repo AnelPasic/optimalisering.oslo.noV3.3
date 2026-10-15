@@ -31,7 +31,10 @@
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
     "@playwright/test": "^1.64.0",
+    "@tailwindcss/vite": "4.3.3",
     "@types/node": "^24.19.1",
+    "daisyui": "5.7.50",
+    "tailwindcss": "4.3.3",
     "typescript": "^5.9.3",
     "wrangler": "^4.148.0"
   }

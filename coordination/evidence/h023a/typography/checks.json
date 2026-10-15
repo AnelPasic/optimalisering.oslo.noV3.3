@@ -1,0 +1,2362 @@
+{
+  "base": "http://127.0.0.1:64974",
+  "phase": "after",
+  "belowMinimumAllowlist": [],
+  "report": [
+    {
+      "route": "/",
+      "width": 1440,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "state": "large-calculator-values",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "state": "calculator-error",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "state": "tooltip",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/ai-synlighet/",
+      "width": 1440,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/ai-synlighet/",
+      "width": 1440,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "width": 1440,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "width": 1440,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/innsikt/",
+      "width": 1440,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/innsikt/",
+      "width": 1440,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/kontakt/",
+      "width": 1440,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/kontakt/",
+      "width": 1440,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/konvertering/",
+      "width": 1440,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/konvertering/",
+      "width": 1440,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/innsikt/male-effekt-av-optimalisering/",
+      "width": 1440,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/innsikt/male-effekt-av-optimalisering/",
+      "width": 1440,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/nettbutikkoptimalisering/",
+      "width": 1440,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/nettbutikkoptimalisering/",
+      "width": 1440,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/om/",
+      "width": 1440,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/om/",
+      "width": 1440,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/personvern/",
+      "width": 1440,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/personvern/",
+      "width": 1440,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/priser/",
+      "width": 1440,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/priser/",
+      "width": 1440,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/seo/",
+      "width": 1440,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/seo/",
+      "width": 1440,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/synlighet/",
+      "width": 1440,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/synlighet/",
+      "width": 1440,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/vilkar/",
+      "width": 1440,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/vilkar/",
+      "width": 1440,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/vurdering/",
+      "width": 1440,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/vurdering/",
+      "width": 1440,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/vurdering/",
+      "width": 1440,
+      "state": "form-validation-error",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/vurdering/",
+      "width": 1440,
+      "state": "disabled-intake-status",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/begreper/",
+      "width": 1440,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/begreper/",
+      "width": 1440,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/",
+      "width": 900,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/",
+      "width": 900,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/",
+      "width": 900,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/",
+      "width": 900,
+      "state": "large-calculator-values",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/",
+      "width": 900,
+      "state": "calculator-error",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/",
+      "width": 900,
+      "state": "tooltip",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/ai-synlighet/",
+      "width": 900,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/ai-synlighet/",
+      "width": 900,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/ai-synlighet/",
+      "width": 900,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "width": 900,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "width": 900,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "width": 900,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/innsikt/",
+      "width": 900,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/innsikt/",
+      "width": 900,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/innsikt/",
+      "width": 900,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/kontakt/",
+      "width": 900,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/kontakt/",
+      "width": 900,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/kontakt/",
+      "width": 900,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/konvertering/",
+      "width": 900,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/konvertering/",
+      "width": 900,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/konvertering/",
+      "width": 900,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/innsikt/male-effekt-av-optimalisering/",
+      "width": 900,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/innsikt/male-effekt-av-optimalisering/",
+      "width": 900,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/innsikt/male-effekt-av-optimalisering/",
+      "width": 900,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/nettbutikkoptimalisering/",
+      "width": 900,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/nettbutikkoptimalisering/",
+      "width": 900,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/nettbutikkoptimalisering/",
+      "width": 900,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/om/",
+      "width": 900,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/om/",
+      "width": 900,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/om/",
+      "width": 900,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/personvern/",
+      "width": 900,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/personvern/",
+      "width": 900,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/personvern/",
+      "width": 900,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/priser/",
+      "width": 900,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/priser/",
+      "width": 900,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/priser/",
+      "width": 900,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/seo/",
+      "width": 900,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/seo/",
+      "width": 900,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/seo/",
+      "width": 900,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/synlighet/",
+      "width": 900,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/synlighet/",
+      "width": 900,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/synlighet/",
+      "width": 900,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/vilkar/",
+      "width": 900,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/vilkar/",
+      "width": 900,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/vilkar/",
+      "width": 900,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/vurdering/",
+      "width": 900,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/vurdering/",
+      "width": 900,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/vurdering/",
+      "width": 900,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/vurdering/",
+      "width": 900,
+      "state": "form-validation-error",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/vurdering/",
+      "width": 900,
+      "state": "disabled-intake-status",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/begreper/",
+      "width": 900,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/begreper/",
+      "width": 900,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/begreper/",
+      "width": 900,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "state": "large-calculator-values",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "state": "calculator-error",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "state": "tooltip",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/ai-synlighet/",
+      "width": 390,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/ai-synlighet/",
+      "width": 390,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/ai-synlighet/",
+      "width": 390,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "width": 390,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "width": 390,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "width": 390,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/innsikt/",
+      "width": 390,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/innsikt/",
+      "width": 390,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/innsikt/",
+      "width": 390,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/kontakt/",
+      "width": 390,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/kontakt/",
+      "width": 390,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/kontakt/",
+      "width": 390,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/konvertering/",
+      "width": 390,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/konvertering/",
+      "width": 390,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/konvertering/",
+      "width": 390,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/innsikt/male-effekt-av-optimalisering/",
+      "width": 390,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/innsikt/male-effekt-av-optimalisering/",
+      "width": 390,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/innsikt/male-effekt-av-optimalisering/",
+      "width": 390,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/nettbutikkoptimalisering/",
+      "width": 390,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/nettbutikkoptimalisering/",
+      "width": 390,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/nettbutikkoptimalisering/",
+      "width": 390,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/om/",
+      "width": 390,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/om/",
+      "width": 390,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/om/",
+      "width": 390,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/personvern/",
+      "width": 390,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/personvern/",
+      "width": 390,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/personvern/",
+      "width": 390,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/priser/",
+      "width": 390,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/priser/",
+      "width": 390,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/priser/",
+      "width": 390,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/seo/",
+      "width": 390,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/seo/",
+      "width": 390,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/seo/",
+      "width": 390,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/synlighet/",
+      "width": 390,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/synlighet/",
+      "width": 390,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/synlighet/",
+      "width": 390,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/vilkar/",
+      "width": 390,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/vilkar/",
+      "width": 390,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/vilkar/",
+      "width": 390,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/vurdering/",
+      "width": 390,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/vurdering/",
+      "width": 390,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/vurdering/",
+      "width": 390,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/vurdering/",
+      "width": 390,
+      "state": "form-validation-error",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/vurdering/",
+      "width": 390,
+      "state": "disabled-intake-status",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/begreper/",
+      "width": 390,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/begreper/",
+      "width": 390,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/begreper/",
+      "width": 390,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/",
+      "width": 320,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/",
+      "width": 320,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/",
+      "width": 320,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/",
+      "width": 320,
+      "state": "large-calculator-values",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/",
+      "width": 320,
+      "state": "calculator-error",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/",
+      "width": 320,
+      "state": "tooltip",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/ai-synlighet/",
+      "width": 320,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/ai-synlighet/",
+      "width": 320,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/ai-synlighet/",
+      "width": 320,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "width": 320,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "width": 320,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "width": 320,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/innsikt/",
+      "width": 320,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/innsikt/",
+      "width": 320,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/innsikt/",
+      "width": 320,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/kontakt/",
+      "width": 320,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/kontakt/",
+      "width": 320,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/kontakt/",
+      "width": 320,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/konvertering/",
+      "width": 320,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/konvertering/",
+      "width": 320,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/konvertering/",
+      "width": 320,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/innsikt/male-effekt-av-optimalisering/",
+      "width": 320,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/innsikt/male-effekt-av-optimalisering/",
+      "width": 320,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/innsikt/male-effekt-av-optimalisering/",
+      "width": 320,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/nettbutikkoptimalisering/",
+      "width": 320,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/nettbutikkoptimalisering/",
+      "width": 320,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/nettbutikkoptimalisering/",
+      "width": 320,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/om/",
+      "width": 320,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/om/",
+      "width": 320,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/om/",
+      "width": 320,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/personvern/",
+      "width": 320,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/personvern/",
+      "width": 320,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/personvern/",
+      "width": 320,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/priser/",
+      "width": 320,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/priser/",
+      "width": 320,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/priser/",
+      "width": 320,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/seo/",
+      "width": 320,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/seo/",
+      "width": 320,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/seo/",
+      "width": 320,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/synlighet/",
+      "width": 320,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/synlighet/",
+      "width": 320,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/synlighet/",
+      "width": 320,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/vilkar/",
+      "width": 320,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/vilkar/",
+      "width": 320,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/vilkar/",
+      "width": 320,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/vurdering/",
+      "width": 320,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/vurdering/",
+      "width": 320,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/vurdering/",
+      "width": 320,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/vurdering/",
+      "width": 320,
+      "state": "form-validation-error",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/vurdering/",
+      "width": 320,
+      "state": "disabled-intake-status",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/begreper/",
+      "width": 320,
+      "state": "default",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/begreper/",
+      "width": 320,
+      "state": "expanded-details",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    },
+    {
+      "route": "/begreper/",
+      "width": 320,
+      "state": "open-menu",
+      "failures": {
+        "small": [],
+        "contrast": [],
+        "clipping": [],
+        "buttons": [],
+        "overflow": []
+      }
+    }
+  ],
+  "errors": [],
+  "posts": [],
+  "evidenceNote": "Routine per-node font inventories and heading measurements omitted; all 196 group outcomes retained."
+}

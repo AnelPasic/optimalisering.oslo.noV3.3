@@ -1,3 +1,5 @@
+/* Retained route/commercial compositions; H-023B inventories remaining migration. */
+@layer legacy {
 /* H-014: compact package decisions; H-013 ordering remains unchanged. */
 .invite-home .package-offer .package-grid { align-items: start; gap: var(--gap); }
 .invite-home .package-offer .package-card { background: var(--surface-base); border: var(--border-subtle); border-radius: var(--radius-card); }
@@ -111,3 +113,5 @@
 .invite-home .package-offer .package-visual-area[data-editorial="true"] { background: linear-gradient(115deg, #fff, #f7fffc); color: var(--ink); }
 .invite-home .package-offer .package-visual-area-accelerating[data-editorial="true"] { background: linear-gradient(115deg, #f7fffc, #e6faf2); }
 @media (max-width: 359px) { .invite-home .package-offer .package-infographic.has-caption { gap: 6px; } }
+
+}

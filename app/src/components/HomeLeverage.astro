@@ -16,10 +16,10 @@ const ratio = formatScenarioRatio(result.current, result.scenario);
   <div class="shell leverage-grid">
     <div class="leverage-copy">
       <div class="calculator-inputs">
-        <div class="calculator-field"><label for="calc-visits">{labels.visits}<input id="calc-visits" name="visits" type="number" min="0" max="10000000" step="1" value={defaults.visits} inputmode="numeric" aria-describedby="calculator-error" /></label></div>
-        <div class="calculator-field"><label id="calc-conversion-label" for="calc-conversion">{labels.conversion}<input id="calc-conversion" name="conversion" type="number" min="0" max="100" step="any" value={defaults.conversion} inputmode="decimal" aria-describedby="calculator-error" /></label><input type="range" min="0" max="100" step="any" value={defaults.conversion} data-slider="conversion" aria-labelledby="calc-conversion-label" disabled /></div>
-        <div class="calculator-field"><label for="calc-traffic">{labels.trafficIncrease}<input id="calc-traffic" name="trafficIncrease" type="number" min="0" max="1000" step="any" value={defaults.trafficIncrease} inputmode="decimal" aria-describedby="calculator-error" /></label></div>
-        <div class="calculator-field"><label id="calc-new-conversion-label" for="calc-new-conversion">{labels.newConversion}<input id="calc-new-conversion" name="newConversion" type="number" min="0" max="100" step="any" value={defaults.newConversion} inputmode="decimal" aria-describedby="calculator-error" /></label><input type="range" min="0" max="100" step="any" value={defaults.newConversion} data-slider="newConversion" aria-labelledby="calc-new-conversion-label" disabled /></div>
+        <div class="calculator-field"><label for="calc-visits">{labels.visits}<input class="input w-full" id="calc-visits" name="visits" type="number" min="0" max="10000000" step="1" value={defaults.visits} inputmode="numeric" aria-describedby="calculator-error" /></label></div>
+        <div class="calculator-field"><label id="calc-conversion-label" for="calc-conversion">{labels.conversion}<input class="input w-full" id="calc-conversion" name="conversion" type="number" min="0" max="100" step="any" value={defaults.conversion} inputmode="decimal" aria-describedby="calculator-error" /></label><input class="range range-accent" type="range" min="0" max="100" step="any" value={defaults.conversion} data-slider="conversion" aria-labelledby="calc-conversion-label" disabled /></div>
+        <div class="calculator-field"><label for="calc-traffic">{labels.trafficIncrease}<input class="input w-full" id="calc-traffic" name="trafficIncrease" type="number" min="0" max="1000" step="any" value={defaults.trafficIncrease} inputmode="decimal" aria-describedby="calculator-error" /></label></div>
+        <div class="calculator-field"><label id="calc-new-conversion-label" for="calc-new-conversion">{labels.newConversion}<input class="input w-full" id="calc-new-conversion" name="newConversion" type="number" min="0" max="100" step="any" value={defaults.newConversion} inputmode="decimal" aria-describedby="calculator-error" /></label><input class="range range-accent" type="range" min="0" max="100" step="any" value={defaults.newConversion} data-slider="newConversion" aria-labelledby="calc-new-conversion-label" disabled /></div>
       </div>
       <p id="calculator-error" class="calculator-error" role="status" hidden>{labels.invalid}</p>
       <div class="calculator-results" role="status" aria-live="polite" aria-atomic="true">
@@ -144,7 +144,6 @@ const ratio = formatScenarioRatio(result.current, result.scenario);
   .calculator-field { min-width: 0; }
   .calculator-inputs { margin-top: 0; }
   .scenario-period { font-size: var(--type-meta); margin-bottom: 4px; line-height: var(--leading-small); }
-  :global(.invite-home) .calculator-inputs input[type="range"] { display: block; min-height: 24px; height: 24px; margin: 6px 0 0; padding: 0; border: 0; border-radius: 0; background: transparent; accent-color: #b9e8d4; cursor: pointer; }
   .scenario-chart { display: flex; flex-direction: column; flex: 1; min-width: 0; margin: 0; padding: var(--panel-pad-xs); border-radius: var(--radius-md); background: var(--surface-soft); color: #320c43; }
   .scenario-chart figcaption { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; font-size: var(--type-meta); line-height: var(--leading-small); }
   .scenario-chart figcaption span { color: #566359; }

@@ -24,5 +24,6 @@ function scan(directory) {
 }
 scan('src'); scan('public/styles');
 assert.ok(!readFileSync('src/components/HomeLeverage.astro', 'utf8').includes('--result-size'), 'No length-based result shrinking');
-assert.ok(readFileSync('src/layouts/SiteLayout.astro', 'utf8').includes("import '../styles/typography.css'"));
+assert.ok(readFileSync('src/layouts/SiteLayout.astro', 'utf8').includes("import '../styles/app.css'"));
+assert.ok(readFileSync('src/styles/app.css', 'utf8').includes('@import "./typography.css";'));
 console.log(`Typography source PASS: ${roles.length} semantic roles, ${declarations} role consumers, zero raw local size declarations.`);

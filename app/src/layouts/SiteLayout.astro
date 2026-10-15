@@ -1,10 +1,7 @@
 ---
 import '@fontsource-variable/instrument-sans';
 import '@fontsource-variable/figtree';
-import '../styles/typography.css';
-import '../styles/surfaces.css';
-import '../styles/global.css';
-import '../styles/terminology.css';
+import '../styles/app.css';
 import TerminologyUI from '../components/TerminologyUI.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -21,7 +18,7 @@ const canonical = new URL(Astro.url.pathname, site.url).href;
 const organization = { '@context': 'https://schema.org', '@type': 'Organization', name: site.provider, url: site.providerUrl };
 ---
 <!doctype html>
-<html lang={locale}>
+<html lang={locale} data-theme="optimalisering">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -37,13 +34,15 @@ const organization = { '@context': 'https://schema.org', '@type': 'Organization'
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Establish order before external legacy sheets; Astro hoists bundled CSS after them. -->
+    <style is:inline>@layer theme, base, legacy, components, utilities, project;</style>
     {homeVisual && <link rel="stylesheet" href="/styles/home-invite.css" />}
     {pricingVisual && <link rel="stylesheet" href="/styles/pricing-invite.css" />}
     {serviceVisual && <link rel="stylesheet" href="/styles/service-invite.css" />}
     {homeVisual && !serviceVisual && <link rel="stylesheet" href="/styles/package-offer.css" />}
     <script type="application/ld+json" set:html={JSON.stringify(organization).replace(/</g, '\\u003c')} />
   </head>
-  <body class={homeVisual ? 'invite-homepage' : undefined}>
+  <body data-ui-shell={homeVisual ? true : undefined} class={homeVisual ? 'invite-homepage' : undefined}>
     <a href="#main" class="skip-link">{homeChrome?.skipLabel ?? 'Hopp til innhold'}</a>
     {homeChrome ? <HomeHeader content={homeChrome} languageLinks={languageLinks} /> : <Header />}
     <main id="main"><slot /></main>

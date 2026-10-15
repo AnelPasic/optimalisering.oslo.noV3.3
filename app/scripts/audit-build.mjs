@@ -7,6 +7,7 @@ const pages = readdirSync('src/content/pages').filter(f => f.endsWith('.json')).
 const paths = new Map(pages.map(page => [page.slug === 'home' ? '/' : `/${page.slug}/`, page]));
 // The editorial glossary has its own structured source, rather than page JSON.
 paths.set('/begreper/', { slug: 'begreper', sections: [] });
+paths.set('/design-system/', { slug: 'design-system', sections: [] });
 const documents = new Map();
 const titles = new Set();
 let linksChecked = 0;
@@ -23,6 +24,7 @@ for (const [url, page] of paths) {
   assert.ok(html.includes(`href="https://optimalisering.oslo.no${url}"`), `${url}: canonical`);
   assert.ok(html.includes('lang="nb"'), `${url}: Norwegian document language`);
   if (process.env.SITE_STAGE !== 'production') assert.ok(html.includes('content="noindex, nofollow"'), `${url}: preview noindex`);
+  if (page.slug === 'design-system') assert.ok(html.includes('content="noindex, nofollow"'), 'Internal design-system always stays noindex');
   assert.ok(!/P10[1-5]|Oslo Privatklinikk|Tankeverksted|Oracles|Beck Maskin|Gram Car Carriers/.test(html), `${url}: no unapproved proof`);
   if (!['home', 'priser', 'synlighet', 'konvertering'].includes(page.slug)) assert.ok(!/4[\s,.]?490|6[\s,.]?990/.test(html), `${url}: frozen exploratory prices`);
   const entities = { '&amp;': '&', '&lt;': '<', '&gt;': '>', '&quot;': '"', '&apos;': "'" };

@@ -25,8 +25,16 @@ const report = [], errors = [], posts = [];
 function inspectText() {
   const failures = { small: [], contrast: [], clipping: [], buttons: [], overflow: [] };
   const inventory = {}, headings = [], longLines = [], gradients = [];
+  const colorCanvas = document.createElement('canvas'); colorCanvas.width = colorCanvas.height = 1;
+  const colorContext = colorCanvas.getContext('2d', { willReadFrequently: true });
   const describe = e => `${e.tagName.toLowerCase()}${e.id ? '#' + e.id : ''}${typeof e.className === 'string' ? '.' + e.className.trim().replaceAll(' ', '.') : ''}`;
   const rgba = c => {
+    // The browser computes theme colors as OKLCH/OKLab; measure them in sRGB for WCAG.
+    if (!/^rgba?\(/.test(c)) {
+      colorContext.clearRect(0, 0, 1, 1); colorContext.fillStyle = c; colorContext.fillRect(0, 0, 1, 1);
+      const [r,g,b,a] = colorContext.getImageData(0,0,1,1).data;
+      return [r,g,b,a/255];
+    }
     const n = c.match(/[\d.]+/g)?.map(Number);
     return n?.length >= 3 ? [n[0], n[1], n[2], n[3] ?? 1] : [0, 0, 0, 0];
   };

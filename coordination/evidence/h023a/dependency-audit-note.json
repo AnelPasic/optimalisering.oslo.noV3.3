@@ -1,0 +1,21 @@
+{
+  "findings": "Three high entries form the existing wrangler -> miniflare -> sharp dependency chain. No foundation package is implicated. Out of H-023A scope; no automatic dependency fix.",
+  "versions": {
+    "node_modules/miniflare": {
+      "before": "5.20261006.0-alpha",
+      "after": "5.20261006.0-alpha"
+    },
+    "node_modules/miniflare/node_modules/sharp": {
+      "before": "0.35.4",
+      "after": "0.35.4"
+    },
+    "node_modules/sharp": {
+      "before": "0.35.5",
+      "after": "0.35.5"
+    },
+    "node_modules/wrangler": {
+      "before": "4.148.0",
+      "after": "4.148.0"
+    }
+  }
+}

@@ -1,0 +1,3728 @@
+[
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ":root",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": "*",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": "html",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": "body",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": "button, input, textarea, select",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": "button, a, input, select, textarea",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": "a",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": "a, button",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": "img, svg",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": "button",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": "[hidden]",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": "::selection",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ":focus-visible",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".shell",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": "h1, h2, h3, h4, p",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": "h1, h2, h3, h4",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": "h1",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": "h2",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": "h3",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": "h4",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": "p",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".eyebrow",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".small-copy",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".small-dot",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".body-copy",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".body-copy p + p",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".section-space",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".button",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".button:hover",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".button-small",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".button-light",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".button-light:hover",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".button:disabled",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".arrow-icon",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".text-link",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".text-link:hover",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".skip-link",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".skip-link:focus",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".site-header",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".header-inner",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".wordmark",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".wordmark-second",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".wordmark-dot",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".desktop-nav",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".desktop-nav a",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".desktop-nav a:hover, .desktop-nav a[aria-current]",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".header-actions",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".menu-toggle",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".menu-toggle span",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".menu-toggle[aria-expanded=true] span:first-child",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".menu-toggle[aria-expanded=true] span:last-child",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".mobile-menu",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".mobile-menu a",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".home-hero",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".hero-copy .eyebrow",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".hero-copy h1",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".hero-intro",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".hero-actions",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".hero-note",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".hero-strip",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".hero-strip span",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".hero-strip span::before",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".journey-art",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".journey-top",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".journey-top > span:last-child",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".journey-card",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".journey-find",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".journey-choose",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".journey-number",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".journey-symbol",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".journey-label",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".journey-caption",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".journey-connector",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".journey-bottom",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".content-section",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".section-tint",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".section-heading",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".section-heading[data-heading-align=\"left\"]",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".section-heading > .body-copy",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".section-items",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".section-items.two-items",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".info-item",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".item-apricot",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".item-sage",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".item-plain",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".item-number",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".info-item h3",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".info-item p",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".info-item .text-link",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".section-links",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".process-items .info-item",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".process-items .info-item:last-child",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".process-items .item-number",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".process-items h3",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".leverage-section",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".leverage-grid",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".leverage-grid .body-copy",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".leverage-grid .text-link",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".leverage-tool",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".leverage-label",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".leverage-inputs",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".leverage-inputs label",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".leverage-inputs input",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".leverage-inputs > span",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".leverage-inputs input[name=conversion]",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".input-unit",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".leverage-result",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".leverage-result > span:first-child",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".leverage-result output",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".leverage-result > span:last-child",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".leverage-comparison",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".leverage-comparison strong",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".leverage-tool .small-copy",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".assessment-section",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".assessment-grid",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".assessment-copy",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".assessment-copy h2",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".assessment-copy > p:not(.eyebrow)",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".assessment-copy .text-link",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".form-process",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".form-process > div",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".form-process h3",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".form-process p",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".assessment-form",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".form-heading .eyebrow",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".form-heading h3",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".assessment-form > label",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".optional",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".assessment-form > input, .assessment-form > select, .assessment-form > textarea",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".assessment-form > textarea",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".assessment-form input::placeholder, .assessment-form textarea::placeholder",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".form-submit",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".form-privacy",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".form-privacy a",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".form-notice",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".form-status",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".field-error",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".honeypot",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".faq-section",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".faq-grid",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".faq-list details",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".faq-list details:first-child",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".faq-list summary",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".faq-list summary::-webkit-details-marker",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".faq-list summary span",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".faq-list details[open] summary span",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".faq-list details p",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".inner-hero",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".breadcrumbs",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".breadcrumbs a",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".inner-hero-grid",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".inner-hero-grid h1",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".inner-hero-grid .hero-intro",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".inner-hero-grid .button",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".assessment-hero-grid",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".assessment-hero-grid h1",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".assessment-hero-grid .assessment-form .button",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".inner-pricing",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".inner-article, .inner-index",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".inner-utility",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".article-content .content-section",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".closing-cta",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".closing-cta > .shell",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".closing-cta .eyebrow",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".error-page",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".error-page p:not(.eyebrow)",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".site-footer",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".footer-grid",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".footer-brand",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".footer-brand span",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".footer-grid p",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".footer-grid nav",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".footer-grid nav a",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".footer-grid nav a:hover",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".footer-bottom",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".preview-tag",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".home-hero",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".shell",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".home-hero",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".journey-art",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".journey-card",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".journey-find",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".journey-choose",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".desktop-nav",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".leverage-grid, .assessment-grid, .assessment-hero-grid",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".desktop-nav",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".menu-toggle",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".header-inner",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".home-hero",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".hero-copy h1",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".journey-art",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".journey-card",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".journey-symbol",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".journey-find",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".journey-choose",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".journey-connector",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".section-space",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".section-items",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".info-item",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".info-item h3",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".leverage-inputs",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".leverage-result",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".leverage-comparison",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".faq-grid",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".assessment-form",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".footer-grid",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": "html",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".shell",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".header-inner",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".wordmark",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".wordmark svg",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".header-actions",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".button-small",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".button-small .arrow-icon",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".menu-toggle",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".home-hero",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".hero-copy h1",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".hero-copy .eyebrow",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".hero-intro",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".hero-actions",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".hero-actions .button",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".hero-actions .text-link",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".hero-note",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".journey-art",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".journey-card",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".journey-find",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".journey-choose",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".journey-symbol",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".journey-symbol svg",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".journey-connector",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".journey-bottom",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".hero-strip",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".section-space",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".eyebrow",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".section-items, .section-items.two-items",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".info-item",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".item-number",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".info-item p",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".section-links",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".process-items .info-item",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".process-items .info-item:last-child",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".process-items .item-number",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".leverage-grid, .assessment-grid",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".leverage-grid .body-copy",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".leverage-inputs",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".leverage-comparison",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".leverage-result",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".assessment-copy",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".assessment-copy > p:not(.eyebrow)",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".assessment-copy .text-link",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".assessment-form",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".faq-grid",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".faq-list summary",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".inner-hero",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".breadcrumbs",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".inner-hero-grid .button",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".assessment-hero-grid",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".article-content .content-section",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".closing-cta",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".closing-cta > .shell",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".footer-grid",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".footer-grid > div",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".site-footer",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".shell",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".header-inner",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".wordmark",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".wordmark svg",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".header-actions",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".button-small",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".button-small .arrow-icon",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".hero-copy h1",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".journey-art",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".journey-card",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".journey-symbol",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".journey-find",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".journey-choose",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".journey-connector",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".assessment-form, .leverage-tool",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".leverage-inputs",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".leverage-inputs input",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".input-unit",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": ".leverage-result",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": "html",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/src/styles/global.css",
+    "selector": "*, *::before, *::after",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-homepage",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-homepage .shell",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-homepage .site-header",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-homepage .wordmark-dot",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-homepage .button",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-homepage .button:hover",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-homepage .button:disabled",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-homepage .desktop-nav a, .invite-homepage .header-actions",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-homepage :focus-visible",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .section-space",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home h2",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .eyebrow",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .home-hero",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .hero-copy .eyebrow",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .home-hero h1",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .hero-emphasis",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .hero-intro",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .hero-actions",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .hero-photo",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .hero-photo img",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .hero-copy .small-dot",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .need-section",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .need-grid, .invite-home .package-grid",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .need-card",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .need-card:hover",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .need-card-1",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .need-card-2",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .home-card-top",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .home-card-top .home-symbol",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .discipline",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .need-card h3",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .need-card p",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .need-card-2 p",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .need-card .text-link",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .leverage-section",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .leverage-grid",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .leverage-copy .eyebrow",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .leverage-copy .body-copy",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .calculator-formula",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .leverage-tool",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .calculator-inputs",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .calculator-inputs label",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .calculator-inputs input",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .calculator-inputs input[aria-invalid=true]",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .calculator-error",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .math-results",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .leverage-result, .invite-home .leverage-comparison",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .leverage-comparison",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .leverage-result > span:first-child, .invite-home .leverage-comparison > span:first-child",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .math-results output",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .math-results .outcome-label",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .math-equation",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .calculator-difference",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .calculator-difference output",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .calculator-difference [data-percentage]",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .calculator-caveat",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .package-section",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .section-heading .body-copy",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .package-card",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .package-card h3",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .package-card.is-recommended",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .package-heading",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .package-badge",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .package-descriptor",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .package-card dl",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .package-card dt",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .package-card dd",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .package-price",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .package-price > p:first-child",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .package-price-amount",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .package-price-unit",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .package-price .small-copy",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .package-notes",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .package-notes p + p",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .package-budget-note",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .package-card .button",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .home-section-mekanisme",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .section-items",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .mechanism-steps",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .info-item",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .mechanism-steps .info-item",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .item-number",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .info-item h3",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .info-item p",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .home-section-passer",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .home-section-passer .home-item-1",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .assessment-section",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .assessment-grid",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .assessment-copy > p:not(.eyebrow)",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .assessment-copy > .assessment-promise",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .assessment-form",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .form-heading h3",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .assessment-form input, .invite-home .assessment-form textarea",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .form-notice",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .home-section-medon",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .section-links",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .faq-section",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .faq-grid",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .faq-list summary",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .faq-list details p",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-homepage .site-footer",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-homepage .footer-brand",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-homepage .footer-brand span",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-homepage .footer-grid p, .invite-homepage .footer-bottom",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-homepage .footer-grid nav a:hover",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-homepage .preview-tag",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-homepage .footer-bottom",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-homepage .shell",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .section-space",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .need-section",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .home-hero, .invite-home .leverage-grid, .invite-home .assessment-grid",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .need-card",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .package-card",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .home-hero, .invite-home .leverage-grid",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .hero-copy",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .hero-photo",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .mechanism-steps",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .need-grid, .invite-home .package-grid",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .home-card-top",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .need-card h3",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .package-card .button",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-homepage .shell",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-homepage .header-inner",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .section-space",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .home-hero",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .need-section",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .hero-copy .eyebrow",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .hero-copy .small-dot",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .hero-intro",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .hero-actions",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .hero-actions .button",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .need-grid, .invite-home .package-grid",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .need-card",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .package-card",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .leverage-grid",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .calculator-inputs",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .math-results",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .leverage-result, .invite-home .leverage-comparison",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .math-results .outcome-label, .invite-home .math-equation",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .assessment-grid, .invite-home .faq-grid",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .section-items.two-items",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .mechanism-steps",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .mechanism-steps h3",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .mechanism-steps p",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .assessment-form",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .assessment-form input, .invite-home .assessment-form textarea",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-homepage .footer-grid",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-homepage .shell",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-homepage .header-inner",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .home-hero",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .hero-actions",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .hero-actions .button",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .hero-actions .text-link",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .need-card",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .calculator-inputs input",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .leverage-result, .invite-home .leverage-comparison",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .mechanism-steps",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-home .assessment-form",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/home-invite.css",
+    "selector": ".invite-homepage .button, .invite-home .need-card",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-grid",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-card",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-card.is-recommended",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer-full",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-card",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-card.is-recommended",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-top",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-heading",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-heading h2, .invite-home .package-offer .package-heading h3",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-badge",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-price",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-price > p:first-child",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-price-amount",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-price-unit",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-price .small-copy",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-price-prefix",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-descriptor",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-visual-area",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-visual-area-accelerating",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-visual-area-tracks",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-visual",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-visual-area[data-supplied=\"true\"]",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-visual-asset",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-visual-asset[data-vector=\"true\"]",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-block-heading",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-fit, .invite-home .package-offer .package-detail",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-fit",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-situations",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-situations ul, .invite-home .package-offer .package-icon-items",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-situations ul",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-situations li + li",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-focus",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-icon-items",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-icon-items li",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-icon-items span",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-focus-icon",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .is-recommended .package-focus-icon",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-icon-items.package-combos",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-combos li",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-card .button",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .is-recommended .button",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .is-recommended .button:hover",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-detail-link, .invite-home .package-offer .package-uncertain",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-details",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-details summary",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-details summary:focus-visible, .invite-home .multiplier-detail summary:focus-visible",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-detail",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-detail > * + *",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-detail ul",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-detail li + li",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-focus-label",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-focus-description",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-distinction",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-selection",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-price-note",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .pricing-decision",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .pricing-decision h2",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .pricing-decision-grid",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .pricing-decision-grid p",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .pricing-multiplier",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .pricing-multiplier h2",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .pricing-multiplier .body-copy",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .pricing-multiplier .eyebrow",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .multiplier-row",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .multiplier-detail",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .multiplier-detail summary",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-pricing .package-order",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-pricing .package-order-grid",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-pricing .package-order-intro h2",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-pricing .package-order-intro .body-copy",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-pricing .partner-order-note",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-pricing .package-order-form",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-pricing .package-order-form label",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-pricing .package-order-form input, .invite-pricing .package-order-form select, .invite-pricing .package-order-form textarea",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-pricing .package-order-form select",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-pricing .order-fields",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-pricing .package-order-form > input, .invite-pricing .package-order-form textarea",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-pricing .package-order-form .order-selection",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-pricing .package-order-form .form-notice",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-pricing .package-order-form .form-privacy",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-pricing .package-order-form .button",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-pricing .package-order-form .button:disabled",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-pricing .package-order-form .text-link",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-grid",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-card",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-card.is-recommended",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-pricing .package-order-grid",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-pricing .package-order-grid",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-icon-items.package-combos",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-combos li",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-grid",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-card",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-visual-area",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-card .button",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-descriptor",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .pricing-decision-grid",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-pricing .order-fields",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-top",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-price-unit",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-infographic",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-infographic.has-caption",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-infographic .package-visual",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-visual-caption",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-visual-caption p:first-child",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-visual-caption p + p",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-visual-area[data-editorial=\"true\"]",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-visual-area-accelerating[data-editorial=\"true\"]",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/package-offer.css",
+    "selector": ".invite-home .package-offer .package-infographic.has-caption",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/pricing-invite.css",
+    "selector": ".invite-pricing .pricing-hero",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/pricing-invite.css",
+    "selector": ".invite-pricing .pricing-hero h1",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/pricing-invite.css",
+    "selector": ".invite-pricing .hero-intro",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/pricing-invite.css",
+    "selector": ".invite-pricing .pricing-hero .button",
+    "category": "replaced by daisyUI/Tailwind",
+    "note": "Migrated homepage instance superseded; retain for deferred instances/composition properties."
+  },
+  {
+    "file": "app/public/styles/pricing-invite.css",
+    "selector": ".invite-pricing .package-section",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/pricing-invite.css",
+    "selector": ".invite-pricing .package-grid",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/pricing-invite.css",
+    "selector": ".invite-pricing .package-card h2",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/pricing-invite.css",
+    "selector": ".invite-pricing .home-section-arbeidsomrader",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/pricing-invite.css",
+    "selector": ".invite-pricing .home-section-arbeidsomrader .section-items",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/pricing-invite.css",
+    "selector": ".invite-pricing .home-section-kostnader",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/pricing-invite.css",
+    "selector": ".invite-pricing .home-section-gratis",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/pricing-invite.css",
+    "selector": ".invite-pricing .home-section-gratis .section-links .text-link",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/pricing-invite.css",
+    "selector": ".invite-pricing .home-section-gratis .section-links .text-link:hover",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/pricing-invite.css",
+    "selector": ".invite-pricing .pricing-hero",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/pricing-invite.css",
+    "selector": ".invite-pricing .home-section-arbeidsomrader .section-items",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/pricing-invite.css",
+    "selector": ".invite-pricing .pricing-hero",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/pricing-invite.css",
+    "selector": ".invite-pricing .hero-intro",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/pricing-invite.css",
+    "selector": ".invite-pricing .package-section",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/pricing-invite.css",
+    "selector": ".invite-pricing .home-section-arbeidsomrader .section-items",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .service-hero",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .breadcrumbs",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .breadcrumbs a",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .service-hero h1",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .service-hero .eyebrow",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .service-hero .hero-intro",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .hero-actions",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .home-section-behov, .invite-service .home-section-prioritering",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .home-section-behov .info-item",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .home-section-behov .home-item-1",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .home-section-behov .home-item-2",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .home-section-kanaler .section-items",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .home-section-kanaler .info-item",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .info-item",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .info-item .text-link",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .home-section-sammenheng",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .home-section-sammenheng .eyebrow",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .home-section-sammenheng .section-links",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .service-pricing-heading",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .service-pricing-heading h2",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .service-pricing-heading > .text-link",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .service-package-grid",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .service-package",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .service-package.is-recommended",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .service-package h3",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .service-package > p",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .service-package .package-price",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .home-section-sjekk",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .home-section-sjekk .section-links",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .home-section-sjekk .text-link",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .home-section-sjekk .text-link:hover",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .home-section-behov .info-item,\n  .invite-service .home-section-kanaler .info-item",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .home-section-sammenheng .section-links, .invite-service .home-section-sjekk .section-links",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .service-pricing-heading",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .service-pricing-heading > .text-link",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .service-package-grid",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .service-hero",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .breadcrumbs",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .service-hero .hero-intro",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .home-section-sammenheng .section-links, .invite-service .home-section-sjekk .section-links",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .section-items, .invite-service .service-package-grid",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .home-section-kanaler .section-items",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .service-package-grid",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .hero-actions",
+    "category": "genuinely unique component",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .service-hero-split",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .service-hero-copy",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .service-hero-visual",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .service-hero-visual img",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .service-hero-visual[data-kind=\"illustration\"] img",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .service-hero-split",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  },
+  {
+    "file": "app/public/styles/service-invite.css",
+    "selector": ".invite-service .service-hero-visual",
+    "category": "temporary route-composition dependency",
+    "note": "Retained in H-023A; no new primitives here."
+  }
+]

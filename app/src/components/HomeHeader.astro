@@ -7,16 +7,16 @@ interface Props { content: NonNullable<CollectionEntry<'pages'>['data']['homepag
 const { content, languageLinks = [] } = Astro.props;
 ---
 <header class="site-header">
-  <div class="shell header-inner">
+  <div class="shell header-inner navbar">
     <a href="/" class="wordmark" aria-label={content.homeLabel}>
       <svg viewBox="0 0 42 42" width="40" height="40" fill="none" aria-hidden="true"><path d="M5 31V19a14 14 0 0 1 28 0v12" stroke="currentColor" stroke-width="8"/><path d="m15 27 9-9m-9 0h9v9" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
       <span>{content.brand}<span class="wordmark-second">{content.brandLocation}<span class="wordmark-dot">.</span></span></span>
     </a>
-    <nav class="desktop-nav" aria-label={content.navigationLabel}>{content.navigation.map(link => <a href={link.href}>{link.label}</a>)}</nav>
+    <nav class="desktop-nav" aria-label={content.navigationLabel}><ul class="menu menu-horizontal">{content.navigation.map(link => <li><a href={link.href}>{link.label}</a></li>)}</ul></nav>
     <LanguageSwitch links={languageLinks} />
-    <div class="header-actions"><a href={content.assessmentLink.href} class="button button-small">{content.assessmentLink.label}<Arrow diagonal /></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label={content.openMenu} data-home-menu data-open-label={content.openMenu} data-close-label={content.closeMenu}><span></span><span></span></button></div>
+    <div class="header-actions"><a href={content.assessmentLink.href} class="button button-small btn btn-primary btn-sm">{content.assessmentLink.label}<Arrow diagonal /></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label={content.openMenu} data-home-menu data-open-label={content.openMenu} data-close-label={content.closeMenu}><span></span><span></span></button></div>
   </div>
-  <nav id="mobile-menu" class="mobile-menu shell" aria-label={content.mobileNavigationLabel} hidden>{content.navigation.map(link => <a href={link.href}>{link.label}<Arrow /></a>)}</nav>
+  <nav id="mobile-menu" class="mobile-menu shell" aria-label={content.mobileNavigationLabel} hidden><ul class="menu w-full">{content.navigation.map(link => <li><a href={link.href}>{link.label}<Arrow /></a></li>)}</ul></nav>
 </header>
 <script>
   const toggle = document.querySelector<HTMLButtonElement>('[data-home-menu]');

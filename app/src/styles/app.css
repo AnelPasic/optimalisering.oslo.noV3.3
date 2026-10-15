@@ -1,0 +1,57 @@
+/* One global UI entry. Legacy compositions stay below migrated components. */
+@layer theme, base, legacy, components, utilities, project;
+@import "tailwindcss";
+@import "./typography.css";
+@import "./surfaces.css" layer(legacy);
+@import "./global.css" layer(legacy);
+@import "./terminology.css" layer(legacy);
+@import "./project.css" layer(project);
+
+@plugin "daisyui" { themes: light; }
+@plugin "daisyui/theme" {
+  name: "optimalisering";
+  default: true;
+  prefersdark: false;
+  color-scheme: "light";
+  --color-base-100: oklch(0.99999999 0.00000004 89.875563);
+  --color-base-200: oklch(0.98448538 0.00447018 314.805168);
+  --color-base-300: oklch(0.89858076 0.01576479 306.393763);
+  --color-base-content: oklch(0.27871246 0.04378087 312.743227);
+  --color-primary: oklch(0.52558456 0.09022346 186.796455);
+  --color-primary-content: oklch(0.99999999 0.00000004 89.875563);
+  --color-secondary: oklch(0.25075315 0.10077263 313.031100);
+  --color-secondary-content: oklch(0.94297432 0.01697831 192.350958);
+  --color-accent: oklch(0.89248500 0.05576943 167.275491);
+  --color-accent-content: oklch(0.27871246 0.04378087 312.743227);
+  --color-neutral: oklch(0.27871246 0.04378087 312.743227);
+  --color-neutral-content: oklch(0.99999999 0.00000004 89.875563);
+  --color-info: oklch(0.94297432 0.01697831 192.350958);
+  --color-info-content: oklch(0.27871246 0.04378087 312.743227);
+  --color-success: oklch(0.89248500 0.05576943 167.275491);
+  --color-success-content: oklch(0.27871246 0.04378087 312.743227);
+  --color-warning: oklch(0.94976849 0.02496090 89.213447);
+  --color-warning-content: oklch(0.43944197 0.06880803 69.030808);
+  --color-error: oklch(0.48326547 0.13904820 28.765185);
+  --color-error-content: oklch(0.99999999 0.00000004 89.875563);
+  --color-mint: oklch(0.94297432 0.01697831 192.350958);
+  --color-lavender: oklch(0.95236592 0.01522005 302.554194);
+  --color-muted: oklch(0.49158061 0.02696654 307.853282);
+  --color-cta: oklch(0.95004242 0.01526395 171.047231);
+  --color-dark-muted: oklch(0.89496413 0.02032388 308.208563);
+  --color-dark-line: oklch(0.47041354 0.04809311 314.327700);
+  --color-control-line: oklch(0.82684622 0.02665445 308.103296);
+  --color-focus: oklch(0.57093736 0.12197198 64.769138);
+  --radius-selector: 0.375rem;
+  --radius-field: 0.5rem;
+  --radius-box: 1.25rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+@theme static {
+  --font-heading: 'Instrument Sans Variable', sans-serif;
+  --font-body: 'Figtree Variable', sans-serif;
+  --radius-feature: 1.5rem;
+}

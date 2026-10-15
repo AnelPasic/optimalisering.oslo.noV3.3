@@ -22,7 +22,7 @@ const formatPrice = (value: number) => new Intl.NumberFormat('nb-NO', { maximumF
     {showHeading && <div class="section-heading"><p class="eyebrow">{content.eyebrow}</p><h2>{content.heading}</h2><p class="body-copy">{content.intro}</p></div>}
     <div class="package-grid">{content.items.map((item, index) => <article id={expanded ? item.detailLink.href.split('#')[1] : undefined} class={`package-card package-card-${index}${item.recommended ? ' is-recommended' : ''}`}>
       {expanded && index === 1 && recommendedAnchor && item.detailLink.href.split('#')[1] !== recommendedAnchor && <span id={recommendedAnchor} aria-hidden="true"></span>}
-      <div class="package-top"><div class="package-heading"><Heading>{item.title}</Heading>{item.recommended && item.badge && <span class="package-badge">{item.badge}</span>}</div>
+      <div class="package-top"><div class="package-heading"><Heading>{item.title}</Heading>{item.recommended && item.badge && <span class="package-badge badge badge-success">{item.badge}</span>}</div>
       <div class="package-price"><p>{item.pricePrefix && <span class="package-price-prefix">{item.pricePrefix} </span>}<span class="package-price-amount">{formatPrice(item.price)}</span> <span class="package-price-unit">{item.priceSuffix}</span></p><p class="small-copy">{item.vatSuffix}</p></div></div>
       <p class="package-descriptor">{item.descriptor}</p>
       <Visual kind={item.visual} motifId={`package-${expanded ? 'pricing' : 'home'}-${item.key}`} asset={item.visualAsset} caption={item.visualCaption} />
@@ -30,7 +30,7 @@ const formatPrice = (value: number) => new Intl.NumberFormat('nb-NO', { maximumF
       <p class="package-fit">{item.compact.fit}</p>
         <div class="package-situations"><h3 class="package-block-heading">{content.labels.situations}</h3><ul>{item.compact.situations.map(text => <li>{text}</li>)}</ul></div>
         <div class="package-focus"><ul class:list={['package-icon-items', { 'package-combos': index === 1 }]}>{item.iconItems.map(focus => <li><FocusIcon kind={focus.icon} /><span><TermText text={focus.compactLabel} terms={['seo', 'lokal-seo', 'ai-synlighet', 'google-ads', 'meta-ads', 'cro']} /></span></li>)}</ul></div>
-      <a class="button" href={item.cta.href}>{item.cta.label}<Arrow diagonal /></a>
+      <a class:list={['button', 'btn', item.recommended ? 'btn-secondary' : 'btn-primary']} href={item.cta.href}>{item.cta.label}<Arrow diagonal /></a>
       <details class="package-details" open={expanded}><summary>{item.detailLink.label}</summary><div class="package-detail">
         <div><h3 class="package-block-heading">{content.fitLabel}</h3><p>{item.fit}</p></div>
         {item.typicalBusiness && <div><h3 class="package-block-heading">{content.labels.typicalBusiness}</h3><p>{item.typicalBusiness}</p></div>}

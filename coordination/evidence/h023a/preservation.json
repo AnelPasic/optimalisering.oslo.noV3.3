@@ -1,0 +1,20 @@
+{
+  "source": "2ee159c23e62b6e7217812cd8a35be3cc69b2b04",
+  "protectedFiles": 195,
+  "mismatches": [],
+  "criticalGitBlobs": {
+    "app/src/content.config.ts": "f12e317a2008a6829800bf3b82e4044b6b013d09",
+    "app/src/components/HomeProof.astro": "bdef82ec1195ad85364be0012e2074448fb851f5",
+    "app/src/components/HomeHeroPhoto.astro": "633bc9413b35658af87cfc4bedfb619b378a6cd6",
+    "app/src/components/PageList.astro": "27af550222d48f26b1658efd77ad0d16afca6cd7",
+    "app/src/components/ListingVisual.astro": "bb2bd47213ce682a5935cfed0d7cddd5c3658b04",
+    "app/src/pages/[...slug].astro": "ebe723944ff4fc4d1a70a3644f5c68e2d5104c67",
+    "app/wrangler.jsonc": "e4e798db679fe821bbb536f5d3771b25f63aa4e9"
+  },
+  "lineEndingNote": "Critical source Git blobs independently match HEAD; worktree SHA256 accommodates existing CRLF checkout.",
+  "ownerUntrackedImages": 5,
+  "contentAndCmsExact": true,
+  "readOnlyInputsExact": true,
+  "calculatorLogicExact": true,
+  "proofAndPageListExact": true
+}

@@ -2,11 +2,11 @@
    Card: 20px; functional/data inset: 12px; feature: 24px; controls: 8px.
    Divider rows remain flat. No typography, layout, state logic or utilities. */
 :root {
-  --radius-button: 6px;
-  --radius-sm: 8px;
+  --radius-button: var(--radius-selector);
+  --radius-sm: var(--radius-field);
   --radius-md: 12px;
-  --radius-card: 20px;
-  --radius-card-lg: 24px;
+  --radius-card: var(--radius-box);
+  --radius-card-lg: var(--radius-feature);
   --radius-pill: 999px;
 
   --surface-mint: #e0f0ef;
@@ -17,7 +17,7 @@
   --surface-notice: #f5eedc;
   --surface-dark-muted: #e0d9e7;
   --surface-dark-line: #65536e;
-  --border-control: 1px solid #cbc2d4;
+  --border-control: 1px solid var(--color-control-line);
   --border-dark: 1px solid var(--surface-dark-line);
   --border-featured: 2px solid var(--surface-dark);
   --shadow-soft: 0 8px 24px #320c4314;

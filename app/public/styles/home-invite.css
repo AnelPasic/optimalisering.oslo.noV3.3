@@ -1,3 +1,5 @@
+/* Retained route/commercial compositions; H-023B inventories remaining migration. */
+@layer legacy {
 /* H-006 representative homepage only. Invite palette and prescribed font roles. */
 .invite-homepage {
   --ink: #302238; --muted: #655d6d; --green: #087b73; --cream: #fbf9fc;
@@ -171,4 +173,6 @@
 }
 @media (prefers-reduced-motion: reduce) {
   .invite-homepage .button, .invite-home .need-card { transition: none; }
+}
+
 }

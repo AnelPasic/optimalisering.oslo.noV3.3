@@ -1,3 +1,5 @@
+/* Retained route/commercial compositions; H-023B inventories remaining migration. */
+@layer legacy {
 /* H-008: only /priser/, using the accepted homepage palette, type and spacing. */
 .invite-pricing .pricing-hero { padding-block: 64px 12px; }
 .invite-pricing .pricing-hero h1 { max-width: 940px; font-size: var(--type-display); line-height: var(--leading-display); letter-spacing: -.045em; }
@@ -21,4 +23,6 @@
   .invite-pricing .hero-intro { margin-top: 20px; }
   .invite-pricing .package-section { padding-top: 36px; }
   .invite-pricing .home-section-arbeidsomrader .section-items { grid-template-columns: 1fr; gap: 28px; }
+}
+
 }
