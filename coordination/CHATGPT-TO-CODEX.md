@@ -1,43 +1,39 @@
 # ChatGPT to Codex
 
-## Active handoff - NONE / H-024A DELIVERED / STOP FOR OWNER REVIEW
-
-2026-10-15 IMPLEMENTATION receipt: H-024A delivered at `d4bc857`, final native CMS label refinement `3fcc2db`. Typed ordered blocks, structured reusable Hero, unchanged default appearance/order, source-backed fixtures, one full verify and independent review fixes are complete. Actual authenticated CMS reorder `c7a5bf5` and restore `6f9c871` each produce successful connected native builds and verified changed/restored previews;53 assets match in both states. Final maintained125/125, typography196 and focused/local/live proof are in CODEX-TO-CHATGPT / `evidence/h024a/`. STOP for OWNER whole pilot visual/editor review. This records technical delivery and authenticated workflow evidence, not role acceptance. H-024B remains unexecuted; H-022 parked; no launch/indexing/intake authority.
-
-## Consumed handoff - H-024A HOMEPAGE PAGE BUILDER + HERO
+## Active handoff - H-024A2 CMS CO-LOCATED SECTIONS CORRECTION
 
 Date: 2026-10-15
-Authority: OWNER + STRATEGY_CONTENT / D-086
-Exact contract: `coordination/H024A-HOMEPAGE-PAGEBUILDER-HERO.md`
+Authority: OWNER / D-087
+Exact contract: `coordination/H024A2-CMS-COLOCATED-SECTIONS.md`
 
-H-023B is PASS.
+OWNER tested H-024A in real Pages CMS and REJECTS the editor UX as currently structured.
 
-Pull latest main and implement H-024A only.
+Pull latest main including OWNER test commits and execute H-024A2 only.
 
-Pilot on the homepage:
-- Hero becomes a standalone structured reusable primitive
-- base Hero layouts: split-right (default), split-left, centered
-- preserve current copy/image/crop/hero proof and default appearance
-- all non-Hero homepage sections become one ordered Pages CMS block list
-- CMS array order is render order
-- use stable UUID + existing anchors
-- preserve special singleton data sources for selector/calculator/packages/proof/form/FAQ rather than duplicating them
-- allow content blocks to remain real editable blocks
-- duplicate singleton blocks fail closed
-- current public section order stays unchanged after migration
-- update /design-system/ with all Hero variants
+Key correction:
+- the draggable section row must also contain the actual editable content for that section
+- remove the separate order-only registry model
+- put Sections directly after Hero in the editor
+- for this homepage pilot, use exactly eight draggable/editable rows and no Add/Delete
+- restore the known original order and remove OWNER's test duplicate calculator
+- fix primary schema validation so duplicate singleton/UID/anchor states fail before render
+- keep one source of truth: move Selector/Calculator/Packages/Proof/Assessment/FAQ editable data into their own ordered block
+- /priser/ resolves package data from the homepage Packages block
+- hero proof resolves homepage Proof block
+- do not duplicate special data elsewhere
 
-This is specifically a CMS UX pilot.
-If authenticated Pages CMS access is available, prove actual reorder -> Git commit -> Worker preview -> reorder back/revert.
-If authenticated CMS is unavailable, deliver technical/schema/render proof but report CMS reorder acceptance as PENDING OWNER; do not fake it.
+Authenticated acceptance must visibly prove:
+CMS move Packages to first after Hero -> save -> Git diff -> successful Cloudflare build -> live Worker actually shows Packages after Hero -> screenshot -> restore to original order -> successful build -> live restore.
 
-Preserve H-023B route architecture, all content/commercial/proof/calculator/PageList authority, noindex and disabled intake.
-H-022 stays parked.
+Do not claim success from JSON order alone.
 
-Run focused page-builder/Hero QA + one full verify, push main, verify Worker, update coordination, then STOP for OWNER review.
-Do not continue into H-024B.
+Preserve all public copy/business logic/proof authority/noindex/intake and H-023B architecture.
+H-024B remains untouched. H-022 stays parked.
+
+Push clean final main, verify Worker, update coordination, then STOP for OWNER editor review.
 
 ---
+
 
 
 
