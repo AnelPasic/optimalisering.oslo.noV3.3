@@ -1,0 +1,21 @@
+{
+  "base": "https://optimalisering-oslo-v33.anel.workers.dev",
+  "state": "restore",
+  "commit": "00ea4a41a0917be61c4c71c52b4cdc831a300a08",
+  "order": [
+    "behov",
+    "regneeksempel",
+    "priser",
+    "resultater",
+    "mekanisme",
+    "passer",
+    "sjekk",
+    "sporsmal"
+  ],
+  "positions": {
+    "first": 523,
+    "second": 1165
+  },
+  "noindex": true,
+  "intakeDisabled": true
+}

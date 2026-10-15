@@ -1,0 +1,17 @@
+{
+  "commit": "00ea4a41a0917be61c4c71c52b4cdc831a300a08",
+  "changedPaths": [
+    "app/src/content/pages/home.json"
+  ],
+  "allHomepageDataSemanticallyRestored": true,
+  "order": [
+    "behov",
+    "regneeksempel",
+    "priser",
+    "resultater",
+    "mekanisme",
+    "passer",
+    "sjekk",
+    "sporsmal"
+  ]
+}

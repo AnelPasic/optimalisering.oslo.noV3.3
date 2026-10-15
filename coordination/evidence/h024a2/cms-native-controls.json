@@ -1,0 +1,23 @@
+{
+  "url": "https://app.pagescms.org/anelpasic/optimalisering.oslo.nov3.3/main/file/homepage",
+  "implementationCommit": "a5b1bdca9efe25ce94d58d3982409fc19802f4c8",
+  "authenticated": true,
+  "requiredRows": 8,
+  "configuredMin": 8,
+  "configuredMax": 8,
+  "sectionsAddAbsent": true,
+  "outerDeleteStillEnabled": true,
+  "deleteConfirmationOpened": true,
+  "deleteConfirmationCanceled": true,
+  "deletionSaved": false,
+  "clearBlockStillEnabled": true,
+  "duplicateSingletonTypeBadgesStillVisible": true,
+  "actualPackageFieldsInsideDraggableRow": true,
+  "invalidSourceRejectedBeforeRender": true,
+  "invalidCmsSavePrevented": false,
+  "strictEditorRequirementPassed": false,
+  "ownerDecision": "Accept the native controls with strict schema guards",
+  "ownerDecisionSource": "Direct OWNER reply in H-024A2 execution chat, 2026-10-15",
+  "scopedNativeControlsExceptionAccepted": true,
+  "wholeEditorAcceptanceInferred": false
+}

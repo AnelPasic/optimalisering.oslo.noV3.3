@@ -1,5 +1,9 @@
 # Decisions and authority
 
+## Direct OWNER H-024A2 native CMS exception - 2026-10-15
+
+Source: actual OWNER reply in the H-024A2 Codex execution chat: **"Accept the native controls with strict schema guards"**, after disclosure that hosted Pages CMS still exposes Delete/Clear and duplicate type badges with list min/max8, while readonly also disables editing/reordering. This explicitly accepts those native control/badge limitations for this fixed eight-section pilot. Add remains hidden at max8; strict primary schema rejection of missing/duplicate/unknown blocks, duplicate UUIDs and anchors remains mandatory. Invalid CMS source can still be saved and fail the build; it cannot publish a new invalid page. No custom CMS platform change is authorized or required by this exception. This is a scoped contract exception, not whole-editor/content/launch acceptance. Implementation a5b1bdc and authenticated evidence: `evidence/h024a2/`. Remaining OWNER whole-editor review and H-024B/H-022/launch gates stay separate.
+
 ## Direct OWNER terminology scope receipt - 2026-10-13 (no content lock)
 
 Implementation/live receipt: **556552b7d543a33f379c85bff9ccc614444cde76**, native Build **059ff328-5efd-4387-875f-30a467308da7 SUCCESS**, Worker **31ec541b-2803-44bb-a081-5c96baec7e66**. All 53 deployed assets and four-width glossary/inline/anchor/no-JS checks pass. Technical evidence adds no content lock or formal verdict. STOP for OWNER + STRATEGY_CONTENT review; existing calculator/launch dependencies remain separate.

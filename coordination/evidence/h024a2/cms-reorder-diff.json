@@ -1,0 +1,17 @@
+{
+  "commit": "25e4db82b6709db6b4f4718c48003fe42ff4140e",
+  "changedPaths": [
+    "app/src/content/pages/home.json"
+  ],
+  "onlySectionOrderChanged": true,
+  "order": [
+    "priser",
+    "behov",
+    "regneeksempel",
+    "resultater",
+    "mekanisme",
+    "passer",
+    "sjekk",
+    "sporsmal"
+  ]
+}
