@@ -1,0 +1,6 @@
+{
+  "baseline": "51c02c3e7d33fcd5da7d523fa7990dee4aaaef1a",
+  "protectedBlobs": 404,
+  "onlyProductionFile": "app/src/components/HomeProof.astro",
+  "allContentCMSProofRegistryGatesTypeSurfaceTokensOtherComponentsAndReadOnlyInputsExact": true
+}

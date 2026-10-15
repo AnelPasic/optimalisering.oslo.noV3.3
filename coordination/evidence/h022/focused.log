@@ -1,0 +1,13 @@
+✔ D-075-D-076 selects the final guarded proof placements in order (6.9543ms)
+✔ safe home/service CMS presentation edits preserve authority and case gates (14.1544ms)
+✔ hero uses only the guarded featured public result and source label (3.6564ms)
+✔ hero disappears for absent, duplicate, unapproved or incomplete proof (0.4599ms)
+✔ hero follows the first publishable selection and respects anonymized public names (0.2326ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 213.468

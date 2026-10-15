@@ -12,9 +12,10 @@ const cases = getPublishableCases(content, records);
 ---
 {cases.length > 0 && <section id="resultater" class="proof-section section-space"><div class="shell">
   <div class="section-heading"><p class="eyebrow">{content.eyebrow}</p><h2><TermText text={content.heading} terms={['roas', 'checkout', 'organisk-trafikk']} /></h2></div>
-  <div class:list={['proof-grid', { 'proof-primary': primary }]}>{cases.map((proof, index) => <article class:list={['proof-card', { 'proof-featured': index === 0 }]}>
-    <h3>{proof.displayName}</h3><p class="proof-metric"><TermText text={proof.dominantMetric} terms={['roas', 'google-ads', 'checkout', 'organisk-trafikk', 'google-search-console']} /></p>
+  <div class:list={['proof-grid', { 'proof-primary': primary, 'proof-home': !primary }]}>{cases.map((proof, index) => <article class:list={['proof-card', { 'proof-featured': index === 0 }]}>
+    <div class="proof-context"><h3>{proof.displayName}</h3><p class="proof-metric"><TermText text={proof.dominantMetric} terms={['roas', 'google-ads', 'checkout', 'organisk-trafikk', 'google-search-console']} /></p>
     {proof.delta && <p class="proof-delta">{proof.delta}</p>}
+    </div>
     <div class="proof-comparison"><dl><dt>{content.beforeLabel}</dt><dd><strong>{proof.before}</strong><span>{proof.period.before}</span></dd></dl><span class="proof-arrow" aria-hidden="true">-&gt;</span><dl><dt>{content.afterLabel}</dt><dd><strong>{proof.after}</strong><span>{proof.period.after}</span></dd></dl></div>
   </article>)}</div>
 </div></section>}
@@ -36,8 +37,23 @@ const cases = getPublishableCases(content, records);
   .proof-featured .proof-comparison strong { font-size: var(--type-display); line-height: var(--leading-stat); }
   .proof-comparison dd span { display: block; margin-top: 8px; font-size: var(--type-meta); line-height: var(--leading-small); }
   .proof-arrow { font-size: var(--type-icon); align-self: center; line-height: var(--leading-small); }
+  .proof-primary .proof-context { display: contents; }
+  .proof-home .proof-featured { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: var(--gap-lg); align-items: center; }
+  .proof-home .proof-featured .proof-comparison { margin: 0; max-width: none; }
+  .proof-home .proof-featured .proof-comparison strong { font-size: var(--type-stat); }
+  .proof-home .proof-metric { font-size: var(--type-label); line-height: var(--leading-small); font-weight: var(--weight-label); }
+  .proof-home .proof-delta { font-family: inherit; font-size: var(--type-body); line-height: var(--leading-body); font-weight: var(--weight-label); margin-top: var(--gap-sm); }
+  .proof-home .proof-comparison strong { white-space: nowrap; overflow-wrap: normal; }
+  .proof-home .proof-card:not(.proof-featured) { padding: var(--panel-pad); display: flex; flex-direction: column; }
+  .proof-home .proof-card:not(.proof-featured) .proof-context { flex: 1; }
+  .proof-home .proof-card:not(.proof-featured) h3 { font-size: var(--type-h4); line-height: var(--leading-h4); margin-bottom: var(--gap-xs); }
+  .proof-home .proof-card:not(.proof-featured) .proof-comparison strong { font-size: var(--type-h2); }
+  .proof-home .proof-comparison dl:first-child { text-align: right; }
+  .proof-home .proof-arrow { align-self: start; margin-top: calc(var(--type-label) * var(--leading-small) + (var(--type-h2) * var(--leading-stat) - var(--type-icon) * var(--leading-small)) / 2); }
+  .proof-home .proof-featured .proof-arrow { margin-top: calc(var(--type-label) * var(--leading-small) + (var(--type-stat) * var(--leading-stat) - var(--type-icon) * var(--leading-small)) / 2); }
   @media (max-width: 700px) {
     .proof-grid { grid-template-columns: minmax(0, 1fr); }
     .proof-comparison { gap: var(--gap-xs); }
+    .proof-home .proof-featured { grid-template-columns: minmax(0, 1fr); gap: var(--gap); }
   }
 </style>

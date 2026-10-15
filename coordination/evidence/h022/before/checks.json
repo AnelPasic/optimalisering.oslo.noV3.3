@@ -1,0 +1,1055 @@
+{
+  "phase": "before",
+  "records": [
+    {
+      "route": "/",
+      "width": 1440,
+      "text": "DOKUMENTERTE RESULTATER Resultater fra kundearbeid Eurotents ROAS - Google Ads 20 % lavere annonseforbruk Før 4,3x april 2025 -> Etter 17,2x april 2026 Nysta Fullført checkout - Shopify +36,5 prosentpoeng Før 7,1 % 30 dager før -> Etter 43,6 % første 30 dager etter Helt Opplagt Organiske klikk - Google Search Console +93 % Før 2 162 mars-september 2025 -> Etter 4 181 mars-september 2026",
+      "geometry": [
+        {
+          "box": {
+            "x": 40,
+            "y": 200.59375,
+            "width": 1360,
+            "height": 340.125,
+            "right": 1400
+          },
+          "name": "Eurotents",
+          "context": null,
+          "comparison": {
+            "x": 80,
+            "y": 389.421875,
+            "width": 800,
+            "height": 111.296875,
+            "right": 880
+          },
+          "deltaSize": 31.68,
+          "numbers": [
+            {
+              "text": "4,3x",
+              "size": 52,
+              "lineHeight": 59.8,
+              "rect": {
+                "x": 80,
+                "y": 410.421875,
+                "width": 371.515625,
+                "height": 59.796875,
+                "right": 451.515625
+              },
+              "textRects": [
+                {
+                  "width": 101.9375,
+                  "height": 63
+                }
+              ],
+              "scroll": 372,
+              "client": 372
+            },
+            {
+              "text": "17,2x",
+              "size": 52,
+              "lineHeight": 59.8,
+              "rect": {
+                "x": 508.484375,
+                "y": 410.421875,
+                "width": 371.515625,
+                "height": 59.796875,
+                "right": 880
+              },
+              "textRects": [
+                {
+                  "width": 114.796875,
+                  "height": 63
+                }
+              ],
+              "scroll": 372,
+              "client": 372
+            }
+          ]
+        },
+        {
+          "box": {
+            "x": 40,
+            "y": 564.71875,
+            "width": 668,
+            "height": 338.28125,
+            "right": 708
+          },
+          "name": "Nysta",
+          "context": null,
+          "comparison": {
+            "x": 80,
+            "y": 753.546875,
+            "width": 588,
+            "height": 109.453125,
+            "right": 668
+          },
+          "deltaSize": 31.68,
+          "numbers": [
+            {
+              "text": "7,1 %",
+              "size": 50.4,
+              "lineHeight": 57.96,
+              "rect": {
+                "x": 80,
+                "y": 774.546875,
+                "width": 265.515625,
+                "height": 57.953125,
+                "right": 345.515625
+              },
+              "textRects": [
+                {
+                  "width": 98.765625,
+                  "height": 62
+                }
+              ],
+              "scroll": 266,
+              "client": 266
+            },
+            {
+              "text": "43,6 %",
+              "size": 50.4,
+              "lineHeight": 57.96,
+              "rect": {
+                "x": 402.484375,
+                "y": 774.546875,
+                "width": 265.515625,
+                "height": 57.953125,
+                "right": 668
+              },
+              "textRects": [
+                {
+                  "width": 150.03125,
+                  "height": 62
+                }
+              ],
+              "scroll": 266,
+              "client": 266
+            }
+          ]
+        },
+        {
+          "box": {
+            "x": 732,
+            "y": 564.71875,
+            "width": 668,
+            "height": 338.28125,
+            "right": 1400
+          },
+          "name": "Helt Opplagt",
+          "context": null,
+          "comparison": {
+            "x": 772,
+            "y": 753.546875,
+            "width": 588,
+            "height": 109.453125,
+            "right": 1360
+          },
+          "deltaSize": 31.68,
+          "numbers": [
+            {
+              "text": "2 162",
+              "size": 50.4,
+              "lineHeight": 57.96,
+              "rect": {
+                "x": 772,
+                "y": 774.546875,
+                "width": 265.515625,
+                "height": 57.953125,
+                "right": 1037.515625
+              },
+              "textRects": [
+                {
+                  "width": 116.546875,
+                  "height": 62
+                }
+              ],
+              "scroll": 266,
+              "client": 266
+            },
+            {
+              "text": "4 181",
+              "size": 50.4,
+              "lineHeight": 57.96,
+              "rect": {
+                "x": 1094.484375,
+                "y": 774.546875,
+                "width": 265.515625,
+                "height": 57.953125,
+                "right": 1360
+              },
+              "textRects": [
+                {
+                  "width": 109.71875,
+                  "height": 62
+                }
+              ],
+              "scroll": 266,
+              "client": 266
+            }
+          ]
+        }
+      ],
+      "fingerprint": "1ef475f20185ea53da627b68b37cda2b3327326ee58a26bfb20a46ab0504a38e",
+      "noJS": true
+    },
+    {
+      "route": "/",
+      "width": 900,
+      "text": "DOKUMENTERTE RESULTATER Resultater fra kundearbeid Eurotents ROAS - Google Ads 20 % lavere annonseforbruk Før 4,3x april 2025 -> Etter 17,2x april 2026 Nysta Fullført checkout - Shopify +36,5 prosentpoeng Før 7,1 % 30 dager før -> Etter 43,6 % første 30 dager etter Helt Opplagt Organiske klikk - Google Search Console +93 % Før 2 162 mars-september 2025 -> Etter 4 181 mars-september 2026",
+      "geometry": [
+        {
+          "box": {
+            "x": 32,
+            "y": 160.828125,
+            "width": 836,
+            "height": 279.25,
+            "right": 868
+          },
+          "name": "Eurotents",
+          "context": null,
+          "comparison": {
+            "x": 59,
+            "y": 315.015625,
+            "width": 782,
+            "height": 98.0625,
+            "right": 841
+          },
+          "deltaSize": 24,
+          "numbers": [
+            {
+              "text": "4,3x",
+              "size": 40.5,
+              "lineHeight": 46.575,
+              "rect": {
+                "x": 59,
+                "y": 336.015625,
+                "width": 362.515625,
+                "height": 46.5625,
+                "right": 421.515625
+              },
+              "textRects": [
+                {
+                  "width": 79.40625,
+                  "height": 49
+                }
+              ],
+              "scroll": 363,
+              "client": 363
+            },
+            {
+              "text": "17,2x",
+              "size": 40.5,
+              "lineHeight": 46.575,
+              "rect": {
+                "x": 478.484375,
+                "y": 336.015625,
+                "width": 362.515625,
+                "height": 46.5625,
+                "right": 841
+              },
+              "textRects": [
+                {
+                  "width": 89.40625,
+                  "height": 49
+                }
+              ],
+              "scroll": 363,
+              "client": 363
+            }
+          ]
+        },
+        {
+          "box": {
+            "x": 32,
+            "y": 464.078125,
+            "width": 406,
+            "height": 291.984375,
+            "right": 438
+          },
+          "name": "Nysta",
+          "context": null,
+          "comparison": {
+            "x": 59,
+            "y": 618.265625,
+            "width": 352,
+            "height": 88.296875,
+            "right": 411
+          },
+          "deltaSize": 24,
+          "numbers": [
+            {
+              "text": "7,1 %",
+              "size": 32,
+              "lineHeight": 36.8,
+              "rect": {
+                "x": 59,
+                "y": 639.265625,
+                "width": 147.515625,
+                "height": 36.796875,
+                "right": 206.515625
+              },
+              "textRects": [
+                {
+                  "width": 62.703125,
+                  "height": 39
+                }
+              ],
+              "scroll": 148,
+              "client": 148
+            },
+            {
+              "text": "43,6 %",
+              "size": 32,
+              "lineHeight": 36.8,
+              "rect": {
+                "x": 263.484375,
+                "y": 639.265625,
+                "width": 147.515625,
+                "height": 36.796875,
+                "right": 411
+              },
+              "textRects": [
+                {
+                  "width": 95.265625,
+                  "height": 39
+                }
+              ],
+              "scroll": 148,
+              "client": 148
+            }
+          ]
+        },
+        {
+          "box": {
+            "x": 462,
+            "y": 464.078125,
+            "width": 406,
+            "height": 291.984375,
+            "right": 868
+          },
+          "name": "Helt Opplagt",
+          "context": null,
+          "comparison": {
+            "x": 489,
+            "y": 618.265625,
+            "width": 352,
+            "height": 110.796875,
+            "right": 841
+          },
+          "deltaSize": 24,
+          "numbers": [
+            {
+              "text": "2 162",
+              "size": 32,
+              "lineHeight": 36.8,
+              "rect": {
+                "x": 489,
+                "y": 639.265625,
+                "width": 147.515625,
+                "height": 36.796875,
+                "right": 636.515625
+              },
+              "textRects": [
+                {
+                  "width": 74,
+                  "height": 39
+                }
+              ],
+              "scroll": 148,
+              "client": 148
+            },
+            {
+              "text": "4 181",
+              "size": 32,
+              "lineHeight": 36.8,
+              "rect": {
+                "x": 693.484375,
+                "y": 639.265625,
+                "width": 147.515625,
+                "height": 36.796875,
+                "right": 841
+              },
+              "textRects": [
+                {
+                  "width": 69.65625,
+                  "height": 39
+                }
+              ],
+              "scroll": 148,
+              "client": 148
+            }
+          ]
+        }
+      ],
+      "fingerprint": "c25553f6532b4189cf9c9afdc2bbb33419133aa1214083a80eebb94473f13e88",
+      "noJS": true
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "text": "DOKUMENTERTE RESULTATER Resultater fra kundearbeid Eurotents ROAS - Google Ads 20 % lavere annonseforbruk Før 4,3x april 2025 -> Etter 17,2x april 2026 Nysta Fullført checkout - Shopify +36,5 prosentpoeng Før 7,1 % 30 dager før -> Etter 43,6 % første 30 dager etter Helt Opplagt Organiske klikk - Google Search Console +93 % Før 2 162 mars-september 2025 -> Etter 4 181 mars-september 2026",
+      "geometry": [
+        {
+          "box": {
+            "x": 20,
+            "y": 172.65625,
+            "width": 350,
+            "height": 287.671875,
+            "right": 370
+          },
+          "name": "Eurotents",
+          "context": null,
+          "comparison": {
+            "x": 44,
+            "y": 352.640625,
+            "width": 302,
+            "height": 83.6875,
+            "right": 346
+          },
+          "deltaSize": 24,
+          "numbers": [
+            {
+              "text": "4,3x",
+              "size": 28,
+              "lineHeight": 32.2,
+              "rect": {
+                "x": 44,
+                "y": 373.640625,
+                "width": 130.515625,
+                "height": 32.1875,
+                "right": 174.515625
+              },
+              "textRects": [
+                {
+                  "width": 54.890625,
+                  "height": 34
+                }
+              ],
+              "scroll": 131,
+              "client": 131
+            },
+            {
+              "text": "17,2x",
+              "size": 28,
+              "lineHeight": 32.2,
+              "rect": {
+                "x": 215.484375,
+                "y": 373.640625,
+                "width": 130.515625,
+                "height": 32.1875,
+                "right": 346
+              },
+              "textRects": [
+                {
+                  "width": 61.8125,
+                  "height": 34
+                }
+              ],
+              "scroll": 131,
+              "client": 131
+            }
+          ]
+        },
+        {
+          "box": {
+            "x": 20,
+            "y": 484.328125,
+            "width": 350,
+            "height": 285.984375,
+            "right": 370
+          },
+          "name": "Nysta",
+          "context": null,
+          "comparison": {
+            "x": 44,
+            "y": 635.515625,
+            "width": 302,
+            "height": 110.796875,
+            "right": 346
+          },
+          "deltaSize": 24,
+          "numbers": [
+            {
+              "text": "7,1 %",
+              "size": 32,
+              "lineHeight": 36.8,
+              "rect": {
+                "x": 44,
+                "y": 656.515625,
+                "width": 130.515625,
+                "height": 36.796875,
+                "right": 174.515625
+              },
+              "textRects": [
+                {
+                  "width": 62.703125,
+                  "height": 39
+                }
+              ],
+              "scroll": 131,
+              "client": 131
+            },
+            {
+              "text": "43,6 %",
+              "size": 32,
+              "lineHeight": 36.8,
+              "rect": {
+                "x": 215.484375,
+                "y": 656.515625,
+                "width": 130.515625,
+                "height": 36.796875,
+                "right": 346
+              },
+              "textRects": [
+                {
+                  "width": 95.265625,
+                  "height": 39
+                }
+              ],
+              "scroll": 131,
+              "client": 131
+            }
+          ]
+        },
+        {
+          "box": {
+            "x": 20,
+            "y": 794.3125,
+            "width": 350,
+            "height": 285.984375,
+            "right": 370
+          },
+          "name": "Helt Opplagt",
+          "context": null,
+          "comparison": {
+            "x": 44,
+            "y": 945.5,
+            "width": 302,
+            "height": 110.796875,
+            "right": 346
+          },
+          "deltaSize": 24,
+          "numbers": [
+            {
+              "text": "2 162",
+              "size": 32,
+              "lineHeight": 36.8,
+              "rect": {
+                "x": 44,
+                "y": 966.5,
+                "width": 130.515625,
+                "height": 36.796875,
+                "right": 174.515625
+              },
+              "textRects": [
+                {
+                  "width": 74,
+                  "height": 39
+                }
+              ],
+              "scroll": 131,
+              "client": 131
+            },
+            {
+              "text": "4 181",
+              "size": 32,
+              "lineHeight": 36.8,
+              "rect": {
+                "x": 215.484375,
+                "y": 966.5,
+                "width": 130.515625,
+                "height": 36.796875,
+                "right": 346
+              },
+              "textRects": [
+                {
+                  "width": 69.65625,
+                  "height": 39
+                }
+              ],
+              "scroll": 131,
+              "client": 131
+            }
+          ]
+        }
+      ],
+      "fingerprint": "432ef19582157ca3401160e9f86105eadc83366d8a4bf43b213cf4c7c264445d",
+      "noJS": true
+    },
+    {
+      "route": "/",
+      "width": 320,
+      "text": "DOKUMENTERTE RESULTATER Resultater fra kundearbeid Eurotents ROAS - Google Ads 20 % lavere annonseforbruk Før 4,3x april 2025 -> Etter 17,2x april 2026 Nysta Fullført checkout - Shopify +36,5 prosentpoeng Før 7,1 % 30 dager før -> Etter 43,6 % første 30 dager etter Helt Opplagt Organiske klikk - Google Search Console +93 % Før 2 162 mars-september 2025 -> Etter 4 181 mars-september 2026",
+      "geometry": [
+        {
+          "box": {
+            "x": 16,
+            "y": 172.65625,
+            "width": 288,
+            "height": 287.671875,
+            "right": 304
+          },
+          "name": "Eurotents",
+          "context": null,
+          "comparison": {
+            "x": 40,
+            "y": 352.640625,
+            "width": 240,
+            "height": 83.6875,
+            "right": 280
+          },
+          "deltaSize": 24,
+          "numbers": [
+            {
+              "text": "4,3x",
+              "size": 28,
+              "lineHeight": 32.2,
+              "rect": {
+                "x": 40,
+                "y": 373.640625,
+                "width": 99.515625,
+                "height": 32.1875,
+                "right": 139.515625
+              },
+              "textRects": [
+                {
+                  "width": 54.890625,
+                  "height": 34
+                }
+              ],
+              "scroll": 100,
+              "client": 100
+            },
+            {
+              "text": "17,2x",
+              "size": 28,
+              "lineHeight": 32.2,
+              "rect": {
+                "x": 180.484375,
+                "y": 373.640625,
+                "width": 99.515625,
+                "height": 32.1875,
+                "right": 280
+              },
+              "textRects": [
+                {
+                  "width": 61.8125,
+                  "height": 34
+                }
+              ],
+              "scroll": 100,
+              "client": 100
+            }
+          ]
+        },
+        {
+          "box": {
+            "x": 16,
+            "y": 484.328125,
+            "width": 288,
+            "height": 285.984375,
+            "right": 304
+          },
+          "name": "Nysta",
+          "context": null,
+          "comparison": {
+            "x": 40,
+            "y": 635.515625,
+            "width": 240,
+            "height": 110.796875,
+            "right": 280
+          },
+          "deltaSize": 24,
+          "numbers": [
+            {
+              "text": "7,1 %",
+              "size": 32,
+              "lineHeight": 36.8,
+              "rect": {
+                "x": 40,
+                "y": 656.515625,
+                "width": 99.515625,
+                "height": 36.796875,
+                "right": 139.515625
+              },
+              "textRects": [
+                {
+                  "width": 62.703125,
+                  "height": 39
+                }
+              ],
+              "scroll": 100,
+              "client": 100
+            },
+            {
+              "text": "43,6 %",
+              "size": 32,
+              "lineHeight": 36.8,
+              "rect": {
+                "x": 180.484375,
+                "y": 656.515625,
+                "width": 99.515625,
+                "height": 36.796875,
+                "right": 280
+              },
+              "textRects": [
+                {
+                  "width": 95.265625,
+                  "height": 39
+                }
+              ],
+              "scroll": 100,
+              "client": 100
+            }
+          ]
+        },
+        {
+          "box": {
+            "x": 16,
+            "y": 794.3125,
+            "width": 288,
+            "height": 334.078125,
+            "right": 304
+          },
+          "name": "Helt Opplagt",
+          "context": null,
+          "comparison": {
+            "x": 40,
+            "y": 971.09375,
+            "width": 240,
+            "height": 133.296875,
+            "right": 280
+          },
+          "deltaSize": 24,
+          "numbers": [
+            {
+              "text": "2 162",
+              "size": 32,
+              "lineHeight": 36.8,
+              "rect": {
+                "x": 40,
+                "y": 992.09375,
+                "width": 99.515625,
+                "height": 36.796875,
+                "right": 139.515625
+              },
+              "textRects": [
+                {
+                  "width": 74,
+                  "height": 39
+                }
+              ],
+              "scroll": 100,
+              "client": 100
+            },
+            {
+              "text": "4 181",
+              "size": 32,
+              "lineHeight": 36.8,
+              "rect": {
+                "x": 180.484375,
+                "y": 992.09375,
+                "width": 99.515625,
+                "height": 36.796875,
+                "right": 280
+              },
+              "textRects": [
+                {
+                  "width": 69.65625,
+                  "height": 39
+                }
+              ],
+              "scroll": 100,
+              "client": 100
+            }
+          ]
+        }
+      ],
+      "fingerprint": "117e0a2b1b00a992cda1f70b7ffa46a97cfbdd8709cef9e1524f14c583998fa4",
+      "noJS": true
+    },
+    {
+      "route": "/synlighet/",
+      "width": 1440,
+      "text": "DOKUMENTERTE RESULTATER Organiske klikk økte 93 % hos Helt Opplagt Helt Opplagt Organiske klikk - Google Search Console +93 % Før 2 162 mars-september 2025 -> Etter 4 181 mars-september 2026",
+      "geometry": [
+        {
+          "box": {
+            "x": 40,
+            "y": 200.59375,
+            "width": 1360,
+            "height": 340.125,
+            "right": 1400
+          },
+          "name": "Helt Opplagt",
+          "context": null,
+          "comparison": {
+            "x": 80,
+            "y": 389.421875,
+            "width": 800,
+            "height": 111.296875,
+            "right": 880
+          },
+          "deltaSize": 31.68,
+          "numbers": [
+            {
+              "text": "2 162",
+              "size": 52,
+              "lineHeight": 59.8,
+              "rect": {
+                "x": 80,
+                "y": 410.421875,
+                "width": 371.515625,
+                "height": 59.796875,
+                "right": 451.515625
+              },
+              "textRects": [
+                {
+                  "width": 120.25,
+                  "height": 63
+                }
+              ],
+              "scroll": 372,
+              "client": 372
+            },
+            {
+              "text": "4 181",
+              "size": 52,
+              "lineHeight": 59.8,
+              "rect": {
+                "x": 508.484375,
+                "y": 410.421875,
+                "width": 371.515625,
+                "height": 59.796875,
+                "right": 880
+              },
+              "textRects": [
+                {
+                  "width": 113.1875,
+                  "height": 63
+                }
+              ],
+              "scroll": 372,
+              "client": 372
+            }
+          ]
+        }
+      ],
+      "fingerprint": "3f81f533ba95d9493cc626496e02cc327b99b41a9b7a9ee7205be1630950c768",
+      "noJS": true
+    },
+    {
+      "route": "/synlighet/",
+      "width": 390,
+      "text": "DOKUMENTERTE RESULTATER Organiske klikk økte 93 % hos Helt Opplagt Helt Opplagt Organiske klikk - Google Search Console +93 % Før 2 162 mars-september 2025 -> Etter 4 181 mars-september 2026",
+      "geometry": [
+        {
+          "box": {
+            "x": 20,
+            "y": 172.65625,
+            "width": 350,
+            "height": 281.375,
+            "right": 370
+          },
+          "name": "Helt Opplagt",
+          "context": null,
+          "comparison": {
+            "x": 44,
+            "y": 323.84375,
+            "width": 302,
+            "height": 106.1875,
+            "right": 346
+          },
+          "deltaSize": 24,
+          "numbers": [
+            {
+              "text": "2 162",
+              "size": 28,
+              "lineHeight": 32.2,
+              "rect": {
+                "x": 44,
+                "y": 344.84375,
+                "width": 130.515625,
+                "height": 32.1875,
+                "right": 174.515625
+              },
+              "textRects": [
+                {
+                  "width": 64.75,
+                  "height": 34
+                }
+              ],
+              "scroll": 131,
+              "client": 131
+            },
+            {
+              "text": "4 181",
+              "size": 28,
+              "lineHeight": 32.2,
+              "rect": {
+                "x": 215.484375,
+                "y": 344.84375,
+                "width": 130.515625,
+                "height": 32.1875,
+                "right": 346
+              },
+              "textRects": [
+                {
+                  "width": 60.953125,
+                  "height": 34
+                }
+              ],
+              "scroll": 131,
+              "client": 131
+            }
+          ]
+        }
+      ],
+      "fingerprint": "ce326695f2f5a2ce5559d3d92dd41661049e886c4375b63d0d60d72cd72999a4",
+      "noJS": true
+    },
+    {
+      "route": "/konvertering/",
+      "width": 1440,
+      "text": "DOKUMENTERTE RESULTATER Fullført checkout økte fra 7,1 % til 43,6 % Nysta Fullført checkout - Shopify +36,5 prosentpoeng Før 7,1 % 30 dager før -> Etter 43,6 % første 30 dager etter",
+      "geometry": [
+        {
+          "box": {
+            "x": 40,
+            "y": 200.59375,
+            "width": 1360,
+            "height": 340.125,
+            "right": 1400
+          },
+          "name": "Nysta",
+          "context": null,
+          "comparison": {
+            "x": 80,
+            "y": 389.421875,
+            "width": 800,
+            "height": 111.296875,
+            "right": 880
+          },
+          "deltaSize": 31.68,
+          "numbers": [
+            {
+              "text": "7,1 %",
+              "size": 52,
+              "lineHeight": 59.8,
+              "rect": {
+                "x": 80,
+                "y": 410.421875,
+                "width": 371.515625,
+                "height": 59.796875,
+                "right": 451.515625
+              },
+              "textRects": [
+                {
+                  "width": 101.890625,
+                  "height": 63
+                }
+              ],
+              "scroll": 372,
+              "client": 372
+            },
+            {
+              "text": "43,6 %",
+              "size": 52,
+              "lineHeight": 59.8,
+              "rect": {
+                "x": 508.484375,
+                "y": 410.421875,
+                "width": 371.515625,
+                "height": 59.796875,
+                "right": 880
+              },
+              "textRects": [
+                {
+                  "width": 154.796875,
+                  "height": 63
+                }
+              ],
+              "scroll": 372,
+              "client": 372
+            }
+          ]
+        }
+      ],
+      "fingerprint": "0faeb88d3bb72e4d7dc33475485eb4b5e578c3790fcf73a5190e48883f40ee16",
+      "noJS": true
+    },
+    {
+      "route": "/konvertering/",
+      "width": 390,
+      "text": "DOKUMENTERTE RESULTATER Fullført checkout økte fra 7,1 % til 43,6 % Nysta Fullført checkout - Shopify +36,5 prosentpoeng Før 7,1 % 30 dager før -> Etter 43,6 % første 30 dager etter",
+      "geometry": [
+        {
+          "box": {
+            "x": 20,
+            "y": 172.65625,
+            "width": 350,
+            "height": 281.375,
+            "right": 370
+          },
+          "name": "Nysta",
+          "context": null,
+          "comparison": {
+            "x": 44,
+            "y": 323.84375,
+            "width": 302,
+            "height": 106.1875,
+            "right": 346
+          },
+          "deltaSize": 24,
+          "numbers": [
+            {
+              "text": "7,1 %",
+              "size": 28,
+              "lineHeight": 32.2,
+              "rect": {
+                "x": 44,
+                "y": 344.84375,
+                "width": 130.515625,
+                "height": 32.1875,
+                "right": 174.515625
+              },
+              "textRects": [
+                {
+                  "width": 54.875,
+                  "height": 34
+                }
+              ],
+              "scroll": 131,
+              "client": 131
+            },
+            {
+              "text": "43,6 %",
+              "size": 28,
+              "lineHeight": 32.2,
+              "rect": {
+                "x": 215.484375,
+                "y": 344.84375,
+                "width": 130.515625,
+                "height": 32.1875,
+                "right": 346
+              },
+              "textRects": [
+                {
+                  "width": 83.359375,
+                  "height": 34
+                }
+              ],
+              "scroll": 131,
+              "client": 131
+            }
+          ]
+        }
+      ],
+      "fingerprint": "7ce6c08dab73db26791f4ed003cc4da8518aa29910d4e517d3c1abfdaf787a0d",
+      "noJS": true
+    }
+  ],
+  "errors": [],
+  "posts": []
+}
