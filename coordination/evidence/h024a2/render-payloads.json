@@ -1,0 +1,10 @@
+{
+  "selector": true,
+  "calculator": true,
+  "sharedHomePricingPackage": true,
+  "proofAndHeroGate": true,
+  "assessment": true,
+  "faq": true,
+  "intakeDisabled": true,
+  "sourceBytesRestored": true
+}

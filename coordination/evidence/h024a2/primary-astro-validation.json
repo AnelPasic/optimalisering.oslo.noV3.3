@@ -1,0 +1,66 @@
+{
+  "cases": [
+    {
+      "case": "duplicate-selector",
+      "rejectedBeforeRender": true,
+      "exit": 1,
+      "message": "Duplicate homepage singleton"
+    },
+    {
+      "case": "duplicate-calculator",
+      "rejectedBeforeRender": true,
+      "exit": 1,
+      "message": "Duplicate homepage singleton"
+    },
+    {
+      "case": "duplicate-packages",
+      "rejectedBeforeRender": true,
+      "exit": 1,
+      "message": "Duplicate homepage singleton"
+    },
+    {
+      "case": "duplicate-proof",
+      "rejectedBeforeRender": true,
+      "exit": 1,
+      "message": "Duplicate homepage singleton"
+    },
+    {
+      "case": "duplicate-assessment",
+      "rejectedBeforeRender": true,
+      "exit": 1,
+      "message": "Duplicate homepage singleton"
+    },
+    {
+      "case": "duplicate-faq",
+      "rejectedBeforeRender": true,
+      "exit": 1,
+      "message": "Duplicate homepage singleton"
+    },
+    {
+      "case": "duplicate-uid",
+      "rejectedBeforeRender": true,
+      "exit": 1,
+      "message": "Block UUID and anchor must be unique"
+    },
+    {
+      "case": "duplicate-anchor",
+      "rejectedBeforeRender": true,
+      "exit": 1,
+      "message": "Block UUID and anchor must be unique"
+    },
+    {
+      "case": "missing-required",
+      "rejectedBeforeRender": true,
+      "exit": 1,
+      "message": "Missing required homepage block"
+    },
+    {
+      "case": "unknown-type",
+      "rejectedBeforeRender": true,
+      "exit": 1,
+      "message": "InvalidContentEntryDataError"
+    }
+  ],
+  "sourceBytesRestored": true,
+  "normalBuildRestored": true
+}

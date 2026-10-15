@@ -6,6 +6,12 @@ export function resolveField(field: any, components: any): any {
   return field.component ? { ...components[field.component], ...field } : field;
 }
 
+export function homepageBlockEditor(cms: any, type: string): any {
+  const home = entryForFile(cms, 'app/src/content/pages/home.json');
+  const block = home.fields.find((f: any) => f.name === 'sections').blocks.find((b: any) => b.name === type);
+  return resolveField(block.fields.find((f: any) => f.name === 'content'), cms.components);
+}
+
 const empty = (value: any): boolean => value == null || value === '' ||
   (typeof value === 'object' && Object.values(value).every(empty));
 

@@ -1,3 +1,4 @@
+import { resolveHomepageContent } from './home-builder.ts';
 import type { CollectionEntry } from 'astro:content';
 type Page = CollectionEntry<'pages'>['data'];
 const spaces = (value: string) => value.replace(/\s+/gu, ' ').trim();
@@ -6,7 +7,8 @@ const escape = (value: string) => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 // D-024's supporting prose stays in JSON. Repeated facts in that approved prose
 // are bound to the same CMS fields as the cards, without a second price object.
 export function createCommercialTextBinding(home: Page, pricing: Page) {
-  const source = home.homepage!.packages;
+  const shared=resolveHomepageContent(home);
+  const source = shared.packages;
   const reference = [...pricing.faq[0].answer.matchAll(/(^|, | og )(.+?)( koster)? (\d[\d \u00a0]*) kr\/mnd/gu)];
   if (reference.length !== source.items.length) throw new Error('Pricing FAQ must identify the three packages in their approved order');
   if (new Set(source.items.map(item => item.vatSuffix)).size !== 1) throw new Error('The approved all-prices VAT statement requires one shared VAT suffix');
@@ -27,9 +29,9 @@ export function createCommercialTextBinding(home: Page, pricing: Page) {
   // shared selection sentences, including in the repeated home price answer.
   const selection = source.items.map(item => item.selectionRule).join(' ');
   rules.set(pricing.faq[1].answer, selection);
-  const previousDifference = home.faq.find(item => item.question === 'Hva koster videre arbeid?')?.answer.match(/Forskjellen er .*$/u)?.[0];
+  const previousDifference = shared.faq.find(item => item.question === 'Hva koster videre arbeid?')?.answer.match(/Forskjellen er .*$/u)?.[0];
   if (previousDifference) rules.set(previousDifference, selection);
-  for (const item of home.faq) if (item.answer.startsWith(`${budgetReference} `)) {
+  for (const item of shared.faq) if (item.answer.startsWith(`${budgetReference} `)) {
     const variant = item.answer.slice(budgetReference.length).trim();
     rules.set(variant, source.externalCostsNote === externalCanonical ? variant : source.externalCostsNote);
   }

@@ -1,9 +1,9 @@
 ---
-import type { CollectionEntry } from 'astro:content';
+import type { HomepageContent } from '../lib/home-section-data';
 import Arrow from './Arrow.astro';
 import LanguageSwitch from './LanguageSwitch.astro';
 import type { LanguageLink } from '../lib/i18n';
-interface Props { content: NonNullable<CollectionEntry<'pages'>['data']['homepage']>['chrome']; languageLinks?: LanguageLink[]; }
+interface Props { content: HomepageContent['chrome']; languageLinks?: LanguageLink[]; }
 const { content, languageLinks = [] } = Astro.props;
 ---
 <header class="site-header">

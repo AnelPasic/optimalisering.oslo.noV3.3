@@ -1,4 +1,5 @@
 ---
+import type { HomepageContent } from '../lib/home-section-data';
 import type { CollectionEntry } from 'astro:content';
 import Arrow from './Arrow.astro';
 import Faq from './Faq.astro';
@@ -8,7 +9,7 @@ import ContentSection from './HomeSection.astro';
 import PackageOrder from './PackageOrder.astro';
 interface Props {
   page: CollectionEntry<'pages'>['data'];
-  commercial: NonNullable<CollectionEntry<'pages'>['data']['homepage']>;
+  commercial: HomepageContent;
 }
 const { page, commercial } = Astro.props;
 const packages = commercial.packages;

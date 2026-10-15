@@ -1,3 +1,4 @@
+import {getHomepageBlock} from '../src/lib/home-builder.ts';
 import assert from 'node:assert/strict';
 import { stripTerminologyLinks } from './terminology-markup.mjs';
 import { readFileSync, readdirSync } from 'node:fs';
@@ -8,7 +9,7 @@ const text = html => stripTerminologyLinks(html).replace(/<[^>]*>/g, ' ').replac
 for (const [slug, names] of [['home', ['Eurotents', 'Nysta', 'Helt Opplagt']], ['konvertering', ['Nysta']], ['synlighet', ['Helt Opplagt']]]) {
   const page = JSON.parse(readFileSync(`src/content/pages/${slug}.json`));
   const html = readFileSync(slug === 'home' ? 'dist/index.html' : `dist/${slug}/index.html`, 'utf8');
-  const slot = slug === 'home' ? page.homepage.proof : page.proof;
+  const slot = slug === 'home' ? getHomepageBlock(page,'proof').content : page.proof;
   const cases = getPublishableCases(slot, records);
   assert.deepEqual(cases.map(p => p.displayName), names);
   const section = html.match(/<section id="resultater"[^>]*>(.*?)<\/section>/s)?.[1];

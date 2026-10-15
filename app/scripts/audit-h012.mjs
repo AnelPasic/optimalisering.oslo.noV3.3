@@ -1,9 +1,10 @@
+import {getHomepageBlock} from '../src/lib/home-builder.ts';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { getH012Contract } from './h012-contract.mjs';
 import { resolvePackageAsset } from '../src/lib/package-visual.ts';
 const expected = getH012Contract();
-const source = JSON.parse(readFileSync('src/content/pages/home.json')).homepage.packages;
+const source = getHomepageBlock(JSON.parse(readFileSync('src/content/pages/home.json')),'packages').content;
 // D-045 supersedes only the primary CTA; D-046 stores the same focus copy as
 // structured icon items. All H-012 offer sentences remain exact.
 for (const [index, item] of expected.items.entries()) item.cta = { label: `Bestill ${item.title}`, href: `/priser/?pakke=${['optimalisering','vekst','partner'][index]}#bestill` };

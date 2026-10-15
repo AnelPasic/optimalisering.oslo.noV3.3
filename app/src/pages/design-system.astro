@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import SiteLayout from '../layouts/SiteLayout.astro';
 import PackageSection from '../components/PackageSection.astro';
 import PageList from '../components/PageList.astro';
+import { getHomepageBlock } from '../lib/home-builder';
 import CommercialHero from '../components/CommercialHero.astro';
 import HomeSection from '../components/HomeSection.astro';
 const pages=(await getCollection('pages')).map(p=>p.data);
@@ -77,7 +78,7 @@ const ds={
     </div></form>
    </section>
    <section class={ds.section}><div class={ds.group}><h2>Seksjonsflater og justering</h2><p>Lik ytre avstand og indre polstring i alle flateeksempler.</p></div><div class="grid gap-6 md:gap-8">{['base','soft','mint','lavender','dark'].map((surface,index)=><section class:list={['ds-surface rounded-box p-6 md:p-10 space-y-5',index%2===0?'text-center':'text-left']} style={`background:var(--color-${surface==='base'?'base-100':surface==='soft'?'base-200':surface==='dark'?'secondary':surface});color:var(--color-${surface==='dark'?'secondary-content':'base-content'})`}><p class="eyebrow">{surface}</p><h3>{index%2===0?'Sentrert overskrift':'Venstrejustert overskrift'}</h3><p>Felles farger og lesbar tekst i samme designsystem.</p></section>)}</div></section>
-   <section class={ds.section}><div class={ds.group}><h2>Eksisterende kommersielle komponenter</h2><p>Hentet fra samme kilde som forsiden. Priser, ordvalg og valglogikk er uendret.</p></div><div class="ds-real-example invite-home"><PackageSection content={home.homepage!.packages} /></div></section>
+   <section class={ds.section}><div class={ds.group}><h2>Eksisterende kommersielle komponenter</h2><p>Hentet fra samme kilde som forsiden. Priser, ordvalg og valglogikk er uendret.</p></div><div class="ds-real-example invite-home"><PackageSection content={getHomepageBlock(home,'packages').content} /></div></section>
    <section class={ds.section}><div class={ds.group}><h2>PageList og CMS-styrte seksjoner</h2><p>Eksisterende primitiveksempler i egne presentasjonsgrupper.</p></div>
     <div class="ds-real-example space-y-12 md:space-y-16"><div class={ds.group}><h3>Vekslende liste</h3><PageList section={{...pageList,id:'ds-alternating',pageList:{...pageList.pageList!,layout:'alternating'}}} pages={pages} /></div><div class={ds.group}><h3>Bildekort</h3><PageList section={{...pageList,id:'ds-media',pageList:{...pageList.pageList!,layout:'mediaCards'}}} pages={pages} /></div>{examples.map(section=><div class={ds.group}><HomeSection section={section} /></div>)}</div>
    </section>

@@ -1,7 +1,8 @@
+import {getHomepageBlock} from '../src/lib/home-builder.ts';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { getH014Compact } from './h014-contract.mjs';
-const packages = JSON.parse(readFileSync('src/content/pages/home.json')).homepage.packages;
+const packages = getHomepageBlock(JSON.parse(readFileSync('src/content/pages/home.json')),'packages').content;
 const expected = getH014Compact();
 for (const [index, item] of packages.items.entries()) {
   assert.deepEqual(item.compact, { fit: expected[index].fit, situations: expected[index].situations }, 'D-048 exact compact fit/situations');

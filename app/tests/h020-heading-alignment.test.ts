@@ -1,3 +1,4 @@
+import {homepageBlockEditor} from './helpers/pages-cms-json.ts';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
@@ -12,9 +13,7 @@ const load=(name:string)=>JSON.parse(readFileSync(`src/content/pages/${name}.jso
 test('safe mapping emits only a validated left override and leaves the homepage form model unchanged',()=>{
   assert.deepEqual(headingAlignValues,['center','left']);assert.equal(headingAlignAttribute('left'),'left');
   for(const value of ['center',undefined,null,'','right','left extra',{},0])assert.equal(headingAlignAttribute(value),undefined);
-  const entry=entryForFile(cms,'app/src/content/pages/home.json');
-  const special=entry.fields.find((f:any)=>f.name==='homepage');
-  const model=resolveField(special.fields.find((f:any)=>f.name==='assessmentSection'),cms.components);
+  const model=homepageBlockEditor(cms,'assessment').fields.find((f:any)=>f.name==='section');
   assert.ok(!model.fields.some((f:any)=>['headingAlign','surface'].includes(f.name)));
 });
 

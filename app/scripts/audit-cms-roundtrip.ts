@@ -1,3 +1,4 @@
+import {getHomepageBlock} from '../src/lib/home-builder.ts';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readFileSync, readdirSync, writeFileSync } from 'node:fs';
@@ -32,21 +33,21 @@ const checks = snapshots.map(record => {
 });
 const home = JSON.parse(readFileSync('src/content/pages/home.json', 'utf8'));
 const form = structuredClone(home);
-const originalLabel = home.homepage.selector.items[2].title;
+const originalLabel = getHomepageBlock(home,'selector').content.items[2].title;
 if (process.argv.includes('--expect-smoke-label')) assert.equal(originalLabel, 'Ja takk - Begge deler');
-form.homepage.selector.items[2].title = originalLabel + ' (CMS-test)';
+getHomepageBlock(form,'selector').content.items[2].title = originalLabel + ' (CMS-test)';
 const saved = JSON.parse(cmsJsonSave(home, form, entryForFile(cms, 'app/src/content/pages/home.json'), cms));
 assert.deepEqual(pageSchema.parse(saved), pageSchema.parse(form));
 assertPreservedContent(form, saved);
 const proofRecords = snapshots.filter(record => record.directory === 'proof').map(record => proofContentSchema.parse(JSON.parse(record.bytes.toString())));
-const publicCases = getPublishableCases(home.homepage.proof, proofRecords);
-assert.deepEqual(getPublishableCases(saved.homepage.proof, proofRecords), publicCases);
+const publicCases = getPublishableCases(getHomepageBlock(home,'proof').content, proofRecords);
+assert.deepEqual(getPublishableCases(getHomepageBlock(saved,'proof').content, proofRecords), publicCases);
 for (const snapshot of snapshots) assert.equal(hash(readFileSync(snapshot.file)), hash(snapshot.bytes), snapshot.file + ' remains byte-identical');
 const report = {
   checkedAt: new Date().toISOString(), mode: 'read-only Pages-CMS-equivalent JSON fixture; not an authenticated save',
   upstreamRevision: '6f4e860a35d934406580287e7042e5e111e207a1', merge: true,
   normalization: 'Declared fields; deep object merge; array replacement; null/empty value sanitization; two-space JSON. Empty optional values normalize through actual application schemas. Nonempty unmodeled object/root fields survive merge; array item fields must be modeled.',
-  checks, representative: { field: 'homepage.selector.items[2].title', before: originalLabel, after: form.homepage.selector.items[2].title, semanticOnlyExpectedEdit: true, publishableCases: publicCases.length },
+  checks, representative: { field: 'homepage.selector.items[2].title', before: originalLabel, after: getHomepageBlock(form,'selector').content.items[2].title, semanticOnlyExpectedEdit: true, publishableCases: publicCases.length },
   allSourceFilesByteUnchanged: true,
 };
 const reportArg = process.argv.indexOf('--report');

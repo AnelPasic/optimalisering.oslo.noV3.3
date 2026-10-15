@@ -1,10 +1,10 @@
 ---
-import type { CollectionEntry } from 'astro:content';
+import type { HomepageContent } from '../lib/home-section-data';
 import { getPublishableCases } from '../lib/proof';
 import { resolveFeaturedProofVisual } from '../lib/proof-presentation';
 import TermText from './TermText.astro';
 interface Props {
-  content: NonNullable<CollectionEntry<'pages'>['data']['homepage']>['proof'];
+  content: HomepageContent['proof'];
   records: unknown[];
   primary?: boolean;
 }

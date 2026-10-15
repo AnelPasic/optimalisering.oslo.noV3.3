@@ -1,11 +1,11 @@
 ---
+import type { HomepageContent } from '../lib/home-section-data';
 import '../styles/compositions/calculator.css';
-import type { CollectionEntry } from 'astro:content';
 import { calculateScenario } from '../lib/leverage';
 import { formatScenarioRatio } from '../lib/scenario-ratio';
 import { SCENARIO_MONTHS } from '../lib/scenario-chart';
 import TermText from './TermText.astro';
-interface Props { content: NonNullable<CollectionEntry<'pages'>['data']['homepage']>['calculator']; }
+interface Props { content: HomepageContent['calculator']; }
 const { content } = Astro.props;
 const { labels, defaults } = content;
 const result = calculateScenario(defaults.visits, defaults.conversion, defaults.trafficIncrease, defaults.newConversion, SCENARIO_MONTHS);

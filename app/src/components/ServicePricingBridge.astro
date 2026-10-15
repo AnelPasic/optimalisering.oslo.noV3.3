@@ -1,8 +1,8 @@
 ---
-import type { CollectionEntry } from 'astro:content';
+import type { HomepageContent } from '../lib/home-section-data';
 import Arrow from './Arrow.astro';
 interface Props {
-  content: NonNullable<CollectionEntry<'pages'>['data']['homepage']>['packages'];
+  content: HomepageContent['packages'];
   link: { label: string; href: string };
   serviceName: string;
 }

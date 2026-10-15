@@ -1,3 +1,5 @@
+import {homepageBlockEditor} from './helpers/pages-cms-json.ts';
+import {getHomepageBlock} from '../src/lib/home-builder.ts';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
@@ -5,7 +7,7 @@ import YAML from 'yaml';
 import {pageSchema} from '../src/lib/content-schema.ts';
 const home=JSON.parse(readFileSync('src/content/pages/home.json','utf8'));
 const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
-const packages=cms.content.find((c:any)=>c.name==='homepage').fields.find((f:any)=>f.name==='homepage').fields.find((f:any)=>f.name==='packages');
+const packages=homepageBlockEditor(cms,'packages');
 function leaves(fields:any[],prefix=''):any[] {return fields.flatMap(f=>f.fields?leaves(f.fields,`${prefix}${f.name}.`):[{path:`${prefix}${f.name}`,field:f}]);}
 
 test('OWNER can edit package CTA wording while order and detail routes remain readonly',()=>{
@@ -24,11 +26,11 @@ test('OWNER can edit package CTA wording while order and detail routes remain re
 
 test('schema accepts independent CTA/detail labels but rejects edited routing and package intent',()=>{
   const edited=structuredClone(home);
-  edited.homepage.packages.items[0].cta.label='Bestill denne pakken';
-  edited.homepage.packages.items[0].detailLink.label='Les detaljene';
-  assert.equal(pageSchema.parse(edited).homepage!.packages.items[0].cta.label,'Bestill denne pakken');
+  getHomepageBlock(edited,'packages').content.items[0].cta.label='Bestill denne pakken';
+  getHomepageBlock(edited,'packages').content.items[0].detailLink.label='Les detaljene';
+  assert.equal(getHomepageBlock(pageSchema.parse(edited),'packages').content.items[0].cta.label,'Bestill denne pakken');
   for(const [field,value] of [['key','partner'],['cta.href','/priser/?pakke=partner#bestill'],['detailLink.href','/priser/#feil']]) {
-    const invalid=structuredClone(edited),item=invalid.homepage.packages.items[0];
+    const invalid=structuredClone(edited),item:any=getHomepageBlock(invalid,'packages').content.items[0];
     if(field==='key')item.key=value;else {const [parent,key]=field.split('.');item[parent][key]=value;}
     assert.equal(pageSchema.safeParse(invalid).success,false,field);
   }

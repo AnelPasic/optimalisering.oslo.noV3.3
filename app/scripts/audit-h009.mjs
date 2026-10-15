@@ -1,9 +1,10 @@
+import {getHomepageBlock} from '../src/lib/home-builder.ts';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { createCommercialTextBinding } from '../src/lib/commercial-text.ts';
 const content = JSON.parse(readFileSync('src/content/pages/synlighet.json', 'utf8'));
 const home = JSON.parse(readFileSync('src/content/pages/home.json', 'utf8'));
-const packages = home.homepage.packages;
+const packages = getHomepageBlock(home,'packages').content;
 const bind = createCommercialTextBinding(home, JSON.parse(readFileSync('src/content/pages/priser.json', 'utf8')));
 const html = readFileSync('dist/synlighet/index.html', 'utf8');
 const text = value => value.replace(/<[^>]*>/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();

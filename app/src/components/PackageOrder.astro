@@ -1,8 +1,8 @@
 ---
-import type { CollectionEntry } from 'astro:content';
+import type { HomepageContent } from '../lib/home-section-data';
 import Arrow from './Arrow.astro';
 import { site } from '../config/site';
-interface Props { packages: NonNullable<CollectionEntry<'pages'>['data']['homepage']>['packages']; }
+interface Props { packages: HomepageContent['packages']; }
 const { packages } = Astro.props;
 // H-017A prepares transport only. Review flags remain off; real intake requires
 // separate privacy, backend, notification and launch approval.

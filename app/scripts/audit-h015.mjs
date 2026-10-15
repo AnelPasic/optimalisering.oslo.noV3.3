@@ -1,3 +1,4 @@
+import {getHomepageBlock} from '../src/lib/home-builder.ts';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {getH015Captions} from './h015-contract.mjs';
@@ -5,21 +6,21 @@ import {resolvePackageAsset} from '../src/lib/package-visual.ts';
 const home=JSON.parse(readFileSync('src/content/pages/home.json')), expected=getH015Captions();
 const baseline=JSON.parse(readFileSync('../coordination/evidence/h015/baseline.json'));
 const originalCopy=structuredClone(home);
-for(const [index,item] of originalCopy.homepage.packages.items.entries()) {
+for(const [index,item] of getHomepageBlock(originalCopy,'packages').content.items.entries()) {
   assert.deepEqual(item.visualCaption,expected[index],'Exact optional H-015 semantic callouts');
   delete item.visualCaption;
 }
 // Asset source is intentionally editable; ordinary verify checks every supplied
 // field via schema/resolver. Baseline invariance of actual source belongs to QA.
 const originalWithoutAssets=structuredClone(baseline.homeSource);
-for(const item of originalCopy.homepage.packages.items) delete item.visualAsset;
-for(const item of originalWithoutAssets.homepage.packages.items) delete item.visualAsset;
+for(const item of getHomepageBlock(originalCopy,'packages').content.items) delete item.visualAsset;
+for(const item of getHomepageBlock(originalWithoutAssets,'packages').content.items) delete item.visualAsset;
 assert.deepEqual(originalCopy,originalWithoutAssets,'All prior H-014 copy/data/status/authority is preserved');
 for(const file of ['dist/index.html','dist/priser/index.html']) {
   const html=readFileSync(file,'utf8');
   const cards=[...html.matchAll(/<article\b[^>]*class="package-card[^>]*>(.*?)<\/article>/gs)].map(m=>m[1]);
   for(const [index,card] of cards.entries()) {
-    const supplied=resolvePackageAsset(home.homepage.packages.items[index].visualAsset);
+    const supplied=resolvePackageAsset(getHomepageBlock(home,'packages').content.items[index].visualAsset);
     if(supplied) {assert.ok(card.includes('class="package-visual-asset"'));assert.ok(!card.includes('package-visual-caption'));}
     else {
       assert.ok(card.includes('data-editorial="true"'));

@@ -1,3 +1,4 @@
+import {getHomepageBlock} from '../src/lib/home-builder.ts';
 import assert from 'node:assert/strict';
 import { readdirSync, readFileSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
@@ -30,7 +31,7 @@ for (const [url, page] of paths) {
   const entities = { '&amp;': '&', '&lt;': '<', '&gt;': '>', '&quot;': '"', '&apos;': "'" };
   const text = stripTerminologyLinks(html).replace(/<[^>]*>/g, ' ').replace(/&(amp|lt|gt|quot|apos);/g, match => entities[match]).replace(/&#(\d+);/g, (_match, number) => String.fromCodePoint(Number(number))).replace(/\s+/g, ' ');
   for (const section of page.sections) {
-    const packages = paths.get('/').homepage.packages;
+    const packages = getHomepageBlock(paths.get('/'),'packages').content;
     const body = page.slug === 'priser' && section.id === 'kostnader' ? [
       `${packages.adBudgetNote} ${packages.externalCostsNote.replace('kommer i tillegg', 'kommer også i tillegg')}`,
       packages.separateWorkNote, packages.capacityNote,

@@ -1,3 +1,5 @@
+import {homepageBlockEditor} from './helpers/pages-cms-json.ts';
+import {getHomepageBlock} from '../src/lib/home-builder.ts';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
@@ -51,8 +53,7 @@ test('object repeaters start collapsed with meaningful summaries supported by Pa
 });
 
 test('the multiple case reference retains a flat array without an outer list wrapper', () => {
-  const home = cms.content.find((entry: any) => entry.name === 'homepage');
-  const proof = home.fields.find((field: any) => field.name === 'homepage').fields.find((field: any) => field.name === 'proof');
+  const proof=homepageBlockEditor(cms,'proof');
   const reference = proof.fields.find((field: any) => field.name === 'caseIds');
   assert.equal(reference.type, 'reference');
   assert.equal(reference.options.multiple, true);
@@ -103,7 +104,7 @@ test('initialized optional internal links accept blank input while rejecting an 
 
 test('raw preservation checks expose nonempty unmodeled repeater data loss', () => {
   const original = JSON.parse(records.find(record => record.path.endsWith('/home.json'))!.bytes.toString());
-  original.homepage.packages.items[0].futureInternalMetadata = { token: 'must-survive' };
+  (getHomepageBlock(original,'packages').content.items[0] as any).futureInternalMetadata = { token: 'must-survive' };
   const form = structuredClone(original);
   form.title = 'H017B harmless memory-only edit';
   const after = JSON.parse(cmsJsonSave(original, form, entryForFile(cms, 'app/src/content/pages/home.json'), cms));
@@ -123,7 +124,7 @@ test('merge preserves omitted nonempty metadata without promoting authority or p
   for (const field of ['slug', 'kind', 'status', 'authority', 'unmodeled']) assert.deepEqual(after[field], original[field], field);
   assert.deepEqual(after.homepage.unmodeled, original.homepage.unmodeled);
   const proof = records.filter(record => record.directory === 'proof').map(record => JSON.parse(record.bytes.toString()));
-  assert.deepEqual(getPublishableCases(after.homepage.proof, proof), getPublishableCases(original.homepage.proof, proof));
+  assert.deepEqual(getPublishableCases(getHomepageBlock(after,'proof').content, proof), getPublishableCases(getHomepageBlock(original,'proof').content, proof));
 });
 
 test('omitted unknown evidence values stay null and cannot make a case publishable', () => {

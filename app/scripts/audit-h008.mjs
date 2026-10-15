@@ -1,3 +1,4 @@
+import {getHomepageBlock} from '../src/lib/home-builder.ts';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { createCommercialTextBinding } from '../src/lib/commercial-text.ts';
@@ -12,7 +13,7 @@ const cards = html => [...html.matchAll(/<article\b[^>]*class="package-card[^>]*
 assert.equal(cards(pricepage).length, 3, '/priser/ must render the three shared packages');
 // D-041 separates compact/full presentation while keeping shared facts exact.
 // D-048 supplies the shared short fit; full fit remains in pricing disclosure.
-for (const [index, item] of home.homepage.packages.items.entries()) for (const copy of [item.title, item.descriptor, item.compact.fit, item.vatSuffix, `${new Intl.NumberFormat('nb-NO').format(item.price)} ${item.priceSuffix}`]) {
+for (const [index, item] of getHomepageBlock(home,'packages').content.items.entries()) for (const copy of [item.title, item.descriptor, item.compact.fit, item.vatSuffix, `${new Intl.NumberFormat('nb-NO').format(item.price)} ${item.priceSuffix}`]) {
   for (const view of [homepage, pricepage]) assert.ok(cards(view)[index].includes(text(copy)), 'Compact/full shared facts cannot drift');
 }
 assert.equal(pricing.homepage, undefined, 'No second editable package object');
@@ -21,15 +22,15 @@ for (const section of pricing.sections) {
   const rendered = pricepage.match(new RegExp(`<section id="${section.id}"[^>]*>(.*?)</section>`, 's'))?.[1];
   assert.ok(rendered, `Required pricing section ${section.id}`);
   const body = section.id === 'kostnader' ? [
-    `${home.homepage.packages.adBudgetNote} ${home.homepage.packages.externalCostsNote.replace('kommer i tillegg', 'kommer også i tillegg')}`,
-    home.homepage.packages.separateWorkNote, home.homepage.packages.capacityNote,
+    `${getHomepageBlock(home,'packages').content.adBudgetNote} ${getHomepageBlock(home,'packages').content.externalCostsNote.replace('kommer i tillegg', 'kommer også i tillegg')}`,
+    getHomepageBlock(home,'packages').content.separateWorkNote, getHomepageBlock(home,'packages').content.capacityNote,
   ] : section.body;
   for (const value of [section.heading, ...body, ...(section.items ?? []).flatMap(item => [item.title, item.text])]) assert.ok(text(rendered).includes(value), `${section.id}: exact supporting copy/current CMS costs: ${value}`);
 }
-for (const value of [home.homepage.packages.eyebrow, home.homepage.packages.heading, home.homepage.packages.intro, ...pricing.faq.flatMap(item => [item.question, bind(item.answer)])]) {
+for (const value of [getHomepageBlock(home,'packages').content.eyebrow, getHomepageBlock(home,'packages').content.heading, getHomepageBlock(home,'packages').content.intro, ...pricing.faq.flatMap(item => [item.question, bind(item.answer)])]) {
   assert.ok(text(pricepage).includes(value), `D-024 pricing supporting copy must be rendered: ${value}`);
 }
-for (const value of [home.homepage.packages.adBudgetNote, home.homepage.packages.externalCostsNote, home.homepage.packages.separateWorkNote, home.homepage.packages.capacityNote, home.homepage.form.promise]) assert.ok(text(pricepage).includes(value) || text(pricepage).includes(value.replace('kommer i tillegg', 'kommer også i tillegg')), `Shared rule/promise: ${value}`);
+for (const value of [getHomepageBlock(home,'packages').content.adBudgetNote, getHomepageBlock(home,'packages').content.externalCostsNote, getHomepageBlock(home,'packages').content.separateWorkNote, getHomepageBlock(home,'packages').content.capacityNote, getHomepageBlock(home,'assessment').content.form.promise]) assert.ok(text(pricepage).includes(value) || text(pricepage).includes(value.replace('kommer i tillegg', 'kommer også i tillegg')), `Shared rule/promise: ${value}`);
 assert.ok(!/Sprint|ubegrenset|bindingstid|oppsigelsestid|minimumsperiode|oppstartsgebyr|onboarding|fakturavilkår|\d+\s*timer/i.test(text(pricepage).replace('Det betyr ikke at alt gjøres samtidig eller at kapasiteten er ubegrenset.', '')));
 assert.ok(!/Nysta|Oslo Privatklinikk|id="resultater"/.test(pricepage));
 assert.equal((pricepage.match(/<h1(?:\s|>)/g) ?? []).length, 1);

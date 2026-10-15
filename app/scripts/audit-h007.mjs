@@ -1,3 +1,4 @@
+import {getHomepageBlock} from '../src/lib/home-builder.ts';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 import { resolve } from 'node:path';
@@ -5,17 +6,17 @@ import { getPublishableCases, normalizeProofText } from '../src/lib/proof.ts';
 
 const home = JSON.parse(readFileSync('src/content/pages/home.json', 'utf8'));
 const records = readdirSync('src/content/proof').filter(file => file.endsWith('.json')).map(file => JSON.parse(readFileSync(`src/content/proof/${file}`, 'utf8')));
-const publicCases = getPublishableCases(home.homepage.proof, records);
+const publicCases = getPublishableCases(getHomepageBlock(home,'proof').content, records);
 const html = readFileSync('dist/index.html', 'utf8');
 const text = html.replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ');
 // D-054 makes package fields owner-editable. Check rendering from that source;
 // historical offer snapshots remain in their handoff evidence.
-for (const item of home.homepage.packages.items) {
+for (const item of getHomepageBlock(home,'packages').content.items) {
   assert.ok(text.includes(`${new Intl.NumberFormat('nb-NO').format(item.price).replaceAll('\u00a0', ' ')} ${item.priceSuffix}`));
   assert.ok(text.includes(item.vatSuffix));
   if (item.recommended && item.badge) assert.ok(text.includes(item.badge));
 }
-assert.ok(text.includes(home.homepage.packages.adBudgetNote));
+assert.ok(text.includes(getHomepageBlock(home,'packages').content.adBudgetNote));
 assert.ok(text.includes('Få våre 3 viktigste funn innen 2 virkedager.'));
 assert.ok(!/Sprint|ubegrenset|bindingstid|oppsigelsestid|minimumsperiode|oppstartsgebyr|onboarding|fakturavilkår|\d+\s*timer/i.test(text.replaceAll('Det betyr ikke at alt gjøres samtidig eller at kapasiteten er ubegrenset.', '')));
 assert.equal(html.includes('id="resultater"'), publicCases.length > 0, 'Renderer uses the explicit case publication guard');

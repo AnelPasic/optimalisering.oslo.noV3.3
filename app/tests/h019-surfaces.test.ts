@@ -1,3 +1,4 @@
+import {homepageBlockEditor} from './helpers/pages-cms-json.ts';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
@@ -40,8 +41,7 @@ test('all page editors have separate ordinary/protected models and one reusable 
     if(page.kind==='home'){
       const normal=resolveField(field.blocks.find((b:any)=>b.name==='content'),cms.components);
       assert.equal(model(normal,'surface').type,'select');assert.equal(model(model(normal,'items'),'surface').label,'Boksfarge');
-      const special=resolveField(entry.fields.find((f:any)=>f.name==='homepage'),cms.components);
-      const form=resolveField(special.fields.find((f:any)=>f.name==='assessmentSection'),cms.components);
+      const form=homepageBlockEditor(cms,'assessment').fields.find((f:any)=>f.name==='section');
       assert.ok(!form.fields.some((f:any)=>['surface','headingAlign'].includes(f.name)));
       continue;
     }

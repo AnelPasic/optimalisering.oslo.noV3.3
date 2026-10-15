@@ -1,7 +1,8 @@
+import {getHomepageBlock} from '../src/lib/home-builder.ts';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {resolvePackageAsset} from '../src/lib/package-visual.ts';
-const packages=JSON.parse(readFileSync('src/content/pages/home.json')).homepage.packages;
+const packages=getHomepageBlock(JSON.parse(readFileSync('src/content/pages/home.json')),'packages').content;
 const text=html=>html.replace(/<[^>]*>/g,' ').replace(/&amp;/g,'&').replace(/&gt;/g,'>').replace(/&lt;/g,'<').replace(/\s+/g,' ').trim();
 for(const [file,open] of [['dist/index.html',false],['dist/priser/index.html',true]]) {
   const html=readFileSync(file,'utf8'),section=html.match(/<section id="priser"[^>]*>(.*?)<\/section>/s)[1];

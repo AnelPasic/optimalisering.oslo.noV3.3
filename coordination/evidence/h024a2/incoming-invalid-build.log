@@ -1,0 +1,19 @@
+
+> optimalisering-oslo-v3-3@0.1.0 build
+> astro build
+
+19:15:14 [content] Syncing content
+[InvalidContentEntryDataError] pages → home data does not match collection schema.
+
+  sections.7: Block UUID and anchor must be unique
+  sections.7._block: Duplicate homepage singleton
+
+  Hint:
+    See https://docs.astro.build/en/guides/content-collections/ for more information on content schemas.
+  Error reference:
+    https://docs.astro.build/en/reference/errors/invalid-content-entry-data-error/
+  Location:
+    E:\Codex\optimalisering.oslo.noV3.3\app\src\content\pages\home.json:0:0
+  Stack trace:
+    at getEntryData (E:\Codex\optimalisering.oslo.noV3.3\app\node_modules\astro\dist\content\utils.js:126:9)
+    at async eval (E:\Codex\optimalisering.oslo.noV3.3\app\node_modules\astro\dist\content\loaders\glob.js:227:13)

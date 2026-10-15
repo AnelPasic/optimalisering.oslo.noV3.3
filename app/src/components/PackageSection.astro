@@ -1,12 +1,12 @@
 ---
+import type { HomepageContent } from '../lib/home-section-data';
 import '../styles/compositions/package.css';
-import type { CollectionEntry } from 'astro:content';
 import Arrow from './Arrow.astro';
 import Visual from './PackageVisual.astro';
 import FocusIcon from './PackageFocusIcon.astro';
 import TermText from './TermText.astro';
 interface Props {
-  content: NonNullable<CollectionEntry<'pages'>['data']['homepage']>['packages'];
+  content: HomepageContent['packages'];
   showHeading?: boolean;
   showNotes?: boolean;
   headingTag?: 'h2' | 'h3';

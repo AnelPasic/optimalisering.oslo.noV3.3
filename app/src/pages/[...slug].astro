@@ -1,4 +1,5 @@
 ---
+import type { HomepageContent } from '../lib/home-section-data';
 import { getCollection, type CollectionEntry } from 'astro:content';
 import SiteLayout from '../layouts/SiteLayout.astro';
 import HomePage from '../components/HomePage.astro';
@@ -7,6 +8,7 @@ import PricingPage from '../components/PricingPage.astro';
 import ServicePage from '../components/ServiceFamilyPage.astro';
 import { resolveRouteFamily } from '../lib/route-family';
 import InsightIndexPage from '../components/InsightIndexPage.astro';
+import { resolveHomepageContent } from '../lib/home-builder';
 import { createCommercialTextBinding } from '../lib/commercial-text';
 import { defaultLocale } from '../config/locales';
 
@@ -16,7 +18,7 @@ export async function getStaticPaths() {
   const home = pages.find(page => page.data.kind === 'home')?.data;
   const pricing = pages.find(page => page.data.kind === 'pricing')?.data;
   if (!home?.homepage || !pricing) throw new Error('Homepage commercial source and approved pricing support are required');
-  const commercial = home.homepage;
+  const commercial = resolveHomepageContent(home);
   const bind = createCommercialTextBinding(home, pricing);
   return pages.map(entry => {
     const data = entry.data;
@@ -24,11 +26,12 @@ export async function getStaticPaths() {
     const page = route.bindCommercialText ? {
       ...data, seo: { title: bind(data.seo.title), description: bind(data.seo.description) },
       faq: data.faq.map(item => ({ ...item, answer: bind(item.answer) })),
+      sections: route.family==='home'?data.sections.map(section=>section._block==='faq'?{...section,content:{eyebrow:commercial.faqEyebrow,heading:commercial.faqHeading,items:commercial.faq.map(item=>({...item,answer:bind(item.answer)}))}}:section):data.sections,
     } : data;
     return { params: { slug: route.family === 'home' ? undefined : data.slug }, props: { page, route, commercial, pages: pages.map(entry => entry.data) } };
   });
 }
-interface Props { page: CollectionEntry<'pages'>['data']; commercial: NonNullable<CollectionEntry<'pages'>['data']['homepage']>; pages: CollectionEntry<'pages'>['data'][]; route: ReturnType<typeof resolveRouteFamily>; }
+interface Props { page: CollectionEntry<'pages'>['data']; commercial: HomepageContent; pages: CollectionEntry<'pages'>['data'][]; route: ReturnType<typeof resolveRouteFamily>; }
 const { page, commercial, pages, route } = Astro.props;
 ---
 <SiteLayout title={page.seo.title} description={page.seo.description}>

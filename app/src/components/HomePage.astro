@@ -3,15 +3,14 @@ import '../styles/compositions/home.css';
 import { getCollection,type CollectionEntry } from 'astro:content';
 import CommercialHero from './CommercialHero.astro';
 import HomepageBlock from './HomepageBlock.astro';
-import { homepageBlocksSchema } from '../lib/home-builder';
+import { getHomepageBlocks, getHomepageBlock } from '../lib/home-builder';
 import { getHeroProof } from '../lib/hero-proof';
 interface Props { page: CollectionEntry<'pages'>['data']; }
 const {page}=Astro.props;
 const records=(await getCollection('proofCases')).map(record=>record.data);
-// Raw blocks are validated before shared page normalization supplies defaults.
-const blocks=homepageBlocksSchema.parse(page.sections.map(section=>section._block==='content'?section:{_block:section._block,uid:section.uid,id:section.id,name:section.name}));
+const blocks=getHomepageBlocks(page);
 ---
 <div class="invite-home">
- <CommercialHero content={page.hero!} proof={getHeroProof(page.homepage!.proof,records)} />
- {blocks.map(block=><HomepageBlock block={block} page={page} records={records} />)}
+ <CommercialHero content={page.hero!} proof={getHeroProof(getHomepageBlock(page,'proof').content,records)} />
+ {blocks.map(block=><HomepageBlock block={block} records={records} />)}
 </div>

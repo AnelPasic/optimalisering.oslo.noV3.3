@@ -1,4 +1,5 @@
 ---
+import type { HomepageContent } from '../lib/home-section-data';
 import type { CollectionEntry } from 'astro:content';
 import { getCollection } from 'astro:content';
 import type { RouteFamily } from '../lib/route-family';
@@ -11,7 +12,7 @@ import PricingBridge from './ServicePricingBridge.astro';
 import Faq from './Faq.astro';
 import ClosingCta from './ClosingCta.astro';
 import '../styles/compositions/service.css';
-interface Props {page:CollectionEntry<'pages'>['data'];commercial:NonNullable<CollectionEntry<'pages'>['data']['homepage']>;route:RouteFamily;}
+interface Props {page:CollectionEntry<'pages'>['data'];commercial:HomepageContent;route:RouteFamily;}
 const {page,commercial,route}=Astro.props;
 const capability=route.service,bridge=capability.pricingBridge;
 const visual=resolveServiceVisual(page.heroVisual);

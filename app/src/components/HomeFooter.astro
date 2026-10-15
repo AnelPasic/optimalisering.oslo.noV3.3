@@ -1,8 +1,8 @@
 ---
-import type { CollectionEntry } from 'astro:content';
+import type { HomepageContent } from '../lib/home-section-data';
 import { site } from '../config/site';
 import { glossary } from '../lib/terminology';
-interface Props { content: NonNullable<CollectionEntry<'pages'>['data']['homepage']>['chrome']; }
+interface Props { content: HomepageContent['chrome']; }
 const { content } = Astro.props;
 ---
 <footer class="site-footer">

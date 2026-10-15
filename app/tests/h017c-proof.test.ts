@@ -1,3 +1,5 @@
+import {homepageBlockEditor} from './helpers/pages-cms-json.ts';
+import {getHomepageBlock} from '../src/lib/home-builder.ts';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
@@ -12,7 +14,7 @@ const home = read('src/content/pages/home.json');
 const cms = YAML.parse(readFileSync('../.pages.yml', 'utf8'));
 
 test('D-075-D-076 selects the final guarded proof placements in order', () => {
-  assert.deepEqual(getPublishableCases(home.homepage.proof, records).map(p => p.displayName), ['Eurotents', 'Nysta', 'Helt Opplagt']);
+  assert.deepEqual(getPublishableCases(getHomepageBlock(home,'proof').content, records).map(p => p.displayName), ['Eurotents', 'Nysta', 'Helt Opplagt']);
   for (const [slug, name] of [['konvertering', 'Nysta'], ['synlighet', 'Helt Opplagt']]) {
     const page = read(`src/content/pages/${slug}.json`);
     assert.deepEqual(getPublishableCases(page.proof, records).map(p => p.displayName), [name]);
@@ -31,7 +33,7 @@ test('safe home/service CMS presentation edits preserve authority and case gates
   for (const slug of ['home', 'konvertering', 'synlighet']) {
     const original = read(`src/content/pages/${slug}.json`);
     const form = structuredClone(original);
-    const slot = slug === 'home' ? form.homepage.proof : form.proof;
+    const slot = slug === 'home' ? getHomepageBlock(form,'proof').content : form.proof;
     assert.ok(slot);
     slot.heading = 'Resultater fra kundearbeid';
     slot.eyebrow = 'Dokumenterte resultater';
@@ -41,16 +43,15 @@ test('safe home/service CMS presentation edits preserve authority and case gates
     const saved = readFromSave(cmsJsonSave(original, form, entry, cms));
     assertPreservedContent(form, saved);
     assert.deepEqual(pageSchema.parse(saved), pageSchema.parse(form));
-    const savedSlot = slug === 'home' ? saved.homepage.proof : saved.proof;
+    const savedSlot = slug === 'home' ? getHomepageBlock(saved,'proof').content : saved.proof;
     assert.equal(savedSlot.heading, slot.heading);
     assert.deepEqual(getPublishableCases(savedSlot, records).map(p => p.displayName), ['Nysta']);
     assert.equal(saved.authority, original.authority);
-    const definitions = slug === 'home' ? entry.fields.find((f: any) => f.name === 'homepage').fields : entry.fields;
-    const proof = resolveField(definitions.find((f: any) => f.name === 'proof'), cms.components);
+    const proof=slug==='home'?homepageBlockEditor(cms,'proof'):resolveField(entry.fields.find((f:any)=>f.name==='proof'),cms.components);
     assert.equal(proof.fields.find((f: any) => f.name === 'publicationApproved').readonly, true);
     slot.caseIds = [];
     const cleared = pageSchema.parse(readFromSave(cmsJsonSave(original, form, entry, cms)));
-    const clearedSlot = slug === 'home' ? cleared.homepage!.proof : cleared.proof;
+    const clearedSlot = slug === 'home' ? getHomepageBlock(cleared,'proof').content : cleared.proof;
     assert.deepEqual(getPublishableCases(clearedSlot, records), [], 'Empty CMS reference selection removes proof');
   }
   const registry = cms.content.find((e: any) => e.name === 'proofCases');

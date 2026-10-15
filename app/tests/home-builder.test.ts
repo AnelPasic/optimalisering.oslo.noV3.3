@@ -16,23 +16,15 @@ test('Hero allows only the three safe layouts and optional image',()=>{
  assert.equal(heroSchema.safeParse({...hero,layout:'custom'}).success,false);
  assert.equal(heroSchema.safeParse({...hero,visual:{kind:'video'}}).success,false);
 });
-test('ordered blocks preserve identity, support content add/remove, reject duplicates and unknowns',()=>{
- const a={...block('content','first'),heading:'Først',body:['Innhold']},b={...block('content','second'),heading:'Så',body:[]};
- assert.deepEqual(homepageBlocksSchema.parse([b,a]).map(s=>s.id),['second','first']);
- assert.equal(homepageBlocksSchema.parse([a])[0].uid,a.uid);
- assert.equal(homepageBlocksSchema.parse([]).length,0);
- for(const [type,id] of Object.entries({selector:'behov',calculator:'regneeksempel',packages:'priser',proof:'resultater',assessment:'sjekk',faq:'sporsmal'})){
-  const singleton=block(type,id);
-  assert.equal(homepageBlocksSchema.safeParse([singleton]).success,true,type);
-  assert.equal(homepageBlocksSchema.safeParse([singleton,{...singleton,uid:randomUUID()}]).success,false,type);
- }
- for(const bad of [[block('unknown')],[{...a,uid:'index-0'}],[a,{...b,uid:a.uid}],[a,{...b,id:a.id}],[{...block('packages','priser'),items:[]}]] )assert.equal(homepageBlocksSchema.safeParse(bad).success,false);
+test('fixed pilot accepts reordering and rejects add/remove and unknown block types',()=>{
+ const p=structuredClone(source);p.sections.reverse();assert.deepEqual(homepageBlocksSchema.parse(p.sections).map(b=>b.uid),p.sections.map((b:any)=>b.uid));
+ for(const blocks of [[],p.sections.slice(1),[...p.sections,p.sections[0]],p.sections.map((b:any,i:number)=>i===0?{...b,_block:'unknown'}:b)])assert.equal(homepageBlocksSchema.safeParse(blocks).success,false);
 });
 test('migrated pilot stores one structured Hero and the expected block identities without locking editor order',()=>{
  assert.equal(heroSchema.safeParse(source.hero).success,true);
  assert.equal(homepageBlocksSchema.safeParse(source.sections).success,true);
  assert.equal(source.title,undefined);assert.equal(source.homepage.heroPhoto,undefined);
- for(const s of source.sections.filter((s:any)=>s._block!=='content'))assert.deepEqual(Object.keys(s).sort(),['_block','id','name','uid']);
+ for(const s of source.sections.filter((s:any)=>s._block!=='content'))assert.deepEqual(Object.keys(s).sort(),['_block','content','id','name','uid']);
 });
 test('new content anchors cannot take fixed form, chart, ARIA or chrome identities',()=>{
  for(const id of ['email','website','message','calc-visits','calc-conversion-label','calculator-error','scenario-illustration-label','scenario-current-value','site-menu']){
@@ -50,5 +42,5 @@ test('actual CMS model replaces ordered arrays without losing UUIDs, content, or
  for(const edit of [(p:any)=>p.sections.push({...p.sections[0],uid:randomUUID()}),(p:any)=>p.sections[0].heading='Duplicated payload',(p:any)=>p.sections[0]._block='unknown']){
   const p=structuredClone(source);edit(p);assert.equal(pageSchema.safeParse(p).success,false);
  }
- const removed=structuredClone(source);removed.sections=removed.sections.filter((b:any)=>b._block==='content');assert.equal(pageSchema.safeParse(removed).success,true);
+ const removed=structuredClone(source);removed.sections=removed.sections.filter((b:any)=>b._block==='content');assert.equal(pageSchema.safeParse(removed).success,false);
 });
