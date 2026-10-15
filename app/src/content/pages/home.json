@@ -441,9 +441,27 @@
     },
     {
       "_block": "content",
+      "uid": "e46130c0-de3c-40ef-815d-c16039346d6f",
+      "name": "Hvem passer det for",
+      "id": "passer",
+      "eyebrow": "Er dette aktuelt for bedriften?",
+      "heading": "Best når kundene faktisk har et valg.",
+      "items": [
+        {
+          "title": "Passer godt hvis",
+          "text": "Bedriften konkurrerer om kundene, har kapasitet til flere henvendelser eller salg, og en ny kunde eller ordre har nok verdi til at forbedringer kan lønne seg."
+        },
+        {
+          "title": "Passer dårlig hvis",
+          "text": "Du er allerede det eneste reelle alternativet og kundene finner deg uten problemer. Tenk en tannklinikk på et lite sted som er eneste klinikk innenfor 100 km, eller en nettbutikk som er eneste norske forhandler av reservedeler til gamle flipperspill og allerede eier de relevante søkene."
+        }
+      ]
+    },
+    {
+      "_block": "content",
       "uid": "42fceeca-61eb-49cd-b250-95060a060aa9",
-      "id": "mekanisme",
       "name": "Slik virker optimalisering",
+      "id": "mekanisme",
       "eyebrow": "Start med det som begrenser resultatet",
       "heading": "Slik finner vi hva som bør gjøres først",
       "body": [
@@ -465,24 +483,6 @@
         {
           "title": "Mål effekt",
           "text": "Følg med på relevante henvendelser og kjøp. Se resultatene sammen med verdi og kostnader."
-        }
-      ]
-    },
-    {
-      "_block": "content",
-      "uid": "e46130c0-de3c-40ef-815d-c16039346d6f",
-      "id": "passer",
-      "name": "Hvem passer det for",
-      "eyebrow": "Er dette aktuelt for bedriften?",
-      "heading": "Best når kundene faktisk har et valg.",
-      "items": [
-        {
-          "title": "Passer godt hvis",
-          "text": "Bedriften konkurrerer om kundene, har kapasitet til flere henvendelser eller salg, og en ny kunde eller ordre har nok verdi til at forbedringer kan lønne seg."
-        },
-        {
-          "title": "Passer dårlig hvis",
-          "text": "Du er allerede det eneste reelle alternativet og kundene finner deg uten problemer. Tenk en tannklinikk på et lite sted som er eneste klinikk innenfor 100 km, eller en nettbutikk som er eneste norske forhandler av reservedeler til gamle flipperspill og allerede eier de relevante søkene."
         }
       ]
     },
