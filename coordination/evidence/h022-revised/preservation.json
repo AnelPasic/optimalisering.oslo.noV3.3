@@ -1,0 +1,14 @@
+{
+  "baseline": "ec4bd06d7dbfd0e812cb8607184a57117afdabf9",
+  "protectedGitBlobs": 401,
+  "changedExistingProductionFiles": [
+    ".pages.yml",
+    "app/src/components/HomeProof.astro",
+    "app/src/content/pages/home.json",
+    "app/src/lib/content-schema.ts"
+  ],
+  "homeJSONOnlyFeaturedVisualAdded": true,
+  "proofRegistryProjectionGatesAuthorityPeriodsClaimsAndCaseSelectionExact": true,
+  "serviceProofBaseline": "../h022/after/checks.json",
+  "untrackedOwnerImagesUntouched": true
+}

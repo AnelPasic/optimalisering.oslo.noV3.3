@@ -324,7 +324,14 @@
       "heading": "Resultater fra kundearbeid",
       "beforeLabel": "Før",
       "afterLabel": "Etter",
-      "changeLabel": "Arbeid"
+      "changeLabel": "Arbeid",
+      "featuredVisual": {
+        "caseId": "eurotents",
+        "src": "/images/proof/eurotents-ask-review.webp",
+        "alt": "Ask-helårstelt fra Eurotents ved en innsjø.",
+        "positionX": 50,
+        "positionY": 50
+      }
     },
     "form": {
       "promise": "Få våre 3 viktigste funn innen 2 virkedager.",

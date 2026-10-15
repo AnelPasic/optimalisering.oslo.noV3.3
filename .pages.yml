@@ -38,6 +38,12 @@ media:
     output: /images/listing
     extensions: [webp, png, jpg, jpeg, avif]
     rename: safe
+  - name: proofImages
+    label: Casebilder til forhåndsvisning
+    input: app/public/images/proof
+    output: /images/proof
+    extensions: [webp, png, jpg, jpeg, avif]
+    rename: safe
 settings:
   content:
     merge: true
@@ -1085,6 +1091,37 @@ content:
             label: Dokumenterte resultater - trygg presentasjon
             type: object
             fields:
+              - name: featuredVisual
+                label: Bilde til fremhevet case
+                description: Kun presentasjon i forhåndsvisningen. Endrer ikke evidens eller publiseringsgodkjenning. Tøm bildet for å bruke presentasjonen uten foto.
+                type: object
+                fields:
+                  - name: caseId
+                    label: Tilknyttet case
+                    type: string
+                    readonly: true
+                  - name: src
+                    label: Bilde
+                    type: image
+                    options:
+                      media: proofImages
+                  - name: alt
+                    label: Alternativ tekst
+                    type: string
+                  - name: positionX
+                    label: Horisontalt utsnitt (%)
+                    type: number
+                    default: 50
+                    options:
+                      min: 0
+                      max: 100
+                  - name: positionY
+                    label: Vertikalt utsnitt (%)
+                    type: number
+                    default: 50
+                    options:
+                      min: 0
+                      max: 100
               - name: publicationApproved
                 label: Godkjenn visning av allerede publiserbare case
                 description: Slå bare på etter dokumentert godkjenning. Dette overstyrer aldri case-status, tillatelse eller manglende evidens.
