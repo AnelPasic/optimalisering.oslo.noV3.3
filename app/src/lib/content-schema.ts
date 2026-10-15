@@ -1,6 +1,7 @@
 import { z } from 'astro/zod';
 import { surfaceSchema, sectionModel } from './surface.ts';
 import { headingAlignSchema } from './heading-alignment.ts';
+import {contentLayoutSchema,boxVariantSchema} from './content-presentation.ts';
 import { listingSchema, pageListSchema } from './page-list.ts';
 import { homeSectionDataSchema, proofSlotSchema } from './home-section-data.ts';
 import { compositionSchema, resolveRouteFamily, routeKindSchema } from './route-family.ts';
@@ -34,8 +35,9 @@ export const pageSchema = z.preprocess((input,context)=>{
       _block: z.enum(['content', 'protected', 'pageList', 'selector', 'calculator', 'packages', 'proof', 'assessment', 'faq']).optional(), surface: surfaceSchema,
       pageList: pageListSchema.optional(),
       headingAlign: headingAlignSchema,
+      layout: contentLayoutSchema,
       id: z.string(), eyebrow: z.string().optional(), heading: z.string(), body: z.array(z.string()).default([]),
-      items: z.array(z.object({ title: z.string(), text: z.string(), href: z.string().startsWith('/').optional(), label: z.string().optional(), surface: surfaceSchema })).optional(),
+      items: z.array(z.object({ title: z.string(), text: z.string(), href: z.string().startsWith('/').optional(), label: z.string().optional(), surface: surfaceSchema, boxVariant: boxVariantSchema })).optional(),
       links: z.array(link).optional(),
     })),
     faq: z.array(z.object({ question: z.string(), answer: z.string() })).default([]),
@@ -59,6 +61,7 @@ export const pageSchema = z.preprocess((input,context)=>{
       if (!isPageList && section.pageList) context.addIssue({ code: 'custom', path: ['sections', index, 'pageList'], message: 'PageList configuration requires its dedicated editor block' });
       if (!isPageList && section._block && section._block !== model) context.addIssue({ code: 'custom', path: ['sections', index, '_block'], message: 'Section editor model must match its protected identity' });
       if (model === 'protected' && (section.surface !== 'default' || section.items?.some(item => item.surface !== 'default'))) context.addIssue({ code: 'custom', path: ['sections', index, 'surface'], message: 'Protected CTA/form surfaces are design-system controlled' });
+      if (model === 'protected' && (section.layout !== 'default' || section.items?.some(item => item.boxVariant !== 'default'))) context.addIssue({code:'custom',path:['sections',index,'layout'],message:'Protected CTA/form layout and boxes are design-system controlled'});
     });
     if (['synlighet', 'konvertering'].includes(page.slug) && page.sections.filter(section => section.id === 'sjekk').length !== 1) context.addIssue({ code: 'custom', path: ['sections'], message: 'Protected service CTA identity must remain present' });
     if (page.kind === 'home' && !page.homepage) context.addIssue({ code: 'custom', path: ['homepage'], message: 'Homepage content model is required' });

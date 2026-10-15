@@ -455,3 +455,10 @@ p { text-wrap: pretty; }
   .site-shell .header-inner { min-height: 74px; }
 }
 }
+
+/* Explicit ordinary-content choices; absent attributes keep automatic compositions. */
+.content-section .section-items[data-content-layout] { grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 651px) {
+  .content-section .section-items[data-content-layout="two-columns"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .content-section .section-items[data-content-layout="three-columns"] { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}

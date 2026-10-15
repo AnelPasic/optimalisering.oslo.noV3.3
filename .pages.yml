@@ -82,6 +82,30 @@ components:
           label: Lavendel
         - name: dark
           label: Plomme
+  contentLayoutChoice:
+    type: select
+    options:
+      placeholder: Standard (automatisk)
+      values:
+        - name: default
+          label: Standard (automatisk)
+        - name: two-columns
+          label: To kolonner
+        - name: three-columns
+          label: Tre kolonner
+        - name: stacked
+          label: Liste (én kolonne)
+  boxVariantChoice:
+    type: select
+    options:
+      placeholder: Standard (automatisk)
+      values:
+        - name: default
+          label: Standard (automatisk)
+        - name: plain
+          label: Åpen boks
+        - name: card
+          label: Kort
   sectionContent:
     type: object
     fields:
@@ -101,6 +125,10 @@ components:
         label: Overskriftsjustering
         component: headingAlignment
         description: Sentrert er standard. Velg Venstrejustert når seksjonen leses bedre som en vanlig tekstseksjon.
+      - name: layout
+        label: Seksjonsoppsett
+        component: contentLayoutChoice
+        description: Fordeling av vanlige bokser. Standard beholder dagens oppsett. Flere kolonner blir én på mobil. Seksjonstype og farger endres ikke.
       - name: surface
         label: Seksjonsfarge
         component: surfaceChoice
@@ -133,6 +161,10 @@ components:
           - name: label
             label: Lenketekst
             type: string
+          - name: boxVariant
+            label: Boksvariant
+            component: boxVariantChoice
+            description: Standard beholder dagens boks. Åpen boks og Kort bruker felles designprimitiver; Boksfarge velges separat.
           - name: surface
             label: Boksfarge
             component: surfaceChoice
@@ -1507,6 +1539,10 @@ content:
                 label: Overskriftsjustering
                 component: headingAlignment
                 description: Sentrert er standard. Velg Venstrejustert når seksjonen leses bedre som en vanlig tekstseksjon.
+              - name: layout
+                label: Seksjonsoppsett
+                component: contentLayoutChoice
+                description: Fordeling av vanlige bokser. Standard beholder dagens oppsett. Flere kolonner blir én på mobil. Seksjonstype og farger endres ikke.
               - name: surface
                 label: Seksjonsfarge
                 component: surfaceChoice
@@ -1539,6 +1575,10 @@ content:
                   - name: label
                     label: Lenketekst
                     type: string
+                  - name: boxVariant
+                    label: Boksvariant
+                    component: boxVariantChoice
+                    description: Standard beholder dagens boks. Åpen boks og Kort bruker felles designprimitiver; Boksfarge velges separat.
                   - name: surface
                     label: Boksfarge
                     component: surfaceChoice

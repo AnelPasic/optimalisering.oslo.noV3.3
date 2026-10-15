@@ -8,7 +8,7 @@ interface Props { section: CollectionEntry<'pages'>['data']['sections'][number];
 const { section, pages } = Astro.props;
 const config = section.pageList!;
 const items = resolvePageList(config, pages);
-const cards = items.map(item => ({ title: item.title, text: item.summary, href: item.href, label: item.label, surface: 'default' as const }));
+const cards = items.map(item => ({ title: item.title, text: item.summary, href: item.href, label: item.label, surface: 'default' as const, boxVariant: 'default' as const }));
 ---
 {config.layout === 'cards' ? <HomeSection section={{ ...section, items: cards }} /> :
   <HomeSection section={section}>

@@ -2,6 +2,7 @@ import { z } from 'astro/zod';
 import { surfaceSchema } from './surface.ts';
 import { homeSectionDataSchema } from './home-section-data.ts';
 import { headingAlignSchema } from './heading-alignment.ts';
+import {contentLayoutSchema,boxVariantSchema} from './content-presentation.ts';
 
 const link=z.object({label:z.string().trim().min(1),href:z.string().startsWith('/')});
 export const heroPhotoSchema=z.object({src:z.string().regex(/^\/images\/home\/[a-z0-9][a-z0-9-]*\.webp$/),positionX:z.number().min(0).max(100),positionY:z.number().min(0).max(100)});
@@ -22,8 +23,8 @@ export const homepageBlockSchema=z.discriminatedUnion('_block',[
  singleton('proof','resultater',homeSectionDataSchema.shape.proof),
  singleton('assessment','sjekk',z.object({section:homeSectionDataSchema.shape.assessmentSection,form:homeSectionDataSchema.shape.form}).strict()),
  singleton('faq','sporsmal',z.object({eyebrow:z.string(),heading:z.string(),items:z.array(z.object({question:z.string(),answer:z.string()}))}).strict()),
- z.object({...identity,_block:z.literal('content'),eyebrow:z.string().optional(),heading:z.string().trim().min(1),body:z.array(z.string()).default([]),surface:surfaceSchema,headingAlign:headingAlignSchema,
- items:z.array(z.object({title:z.string(),text:z.string(),href:z.string().startsWith('/').optional(),label:z.string().optional(),surface:surfaceSchema})).optional(),links:z.array(link).optional()}).strict(),
+ z.object({...identity,_block:z.literal('content'),eyebrow:z.string().optional(),heading:z.string().trim().min(1),body:z.array(z.string()).default([]),surface:surfaceSchema,headingAlign:headingAlignSchema,layout:contentLayoutSchema,
+ items:z.array(z.object({title:z.string(),text:z.string(),href:z.string().startsWith('/').optional(),label:z.string().optional(),surface:surfaceSchema,boxVariant:boxVariantSchema})).optional(),links:z.array(link).optional()}).strict(),
 ]);
 export const homepageBlocksSchema=z.array(homepageBlockSchema).superRefine((blocks,ctx)=>{
  if(blocks.length!==8)ctx.addIssue({code:'custom',message:'Homepage pilot requires exactly eight sections'});
@@ -47,7 +48,7 @@ export function getHomepageBlocks(page:{sections:unknown[]}){
   const s=value as Record<string,unknown>;
   if(s._block==='content')return s;
   const {_block,uid,id,name,content,...rest}=s;
-  for(const key of ['heading','body','surface','headingAlign'])delete rest[key];
+  for(const key of ['heading','body','surface','headingAlign','layout'])delete rest[key];
   return {...rest,_block,uid,id,name,content};
  }));
 }

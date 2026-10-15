@@ -5,16 +5,17 @@ import Arrow from './Arrow.astro';
 import TermText from './TermText.astro';
 import { surfaceAttribute } from '../lib/surface';
 import { headingAlignAttribute } from '../lib/heading-alignment';
-interface Props { section: CollectionEntry<'pages'>['data']['sections'][number]; index?: number; visualId?: 'behov' | 'kanaler'; linkVariant?:'button'; defaultSurface?:'dark'; }
-const { section, visualId, linkVariant, defaultSurface } = Astro.props;
+import {contentLayoutAttribute,boxVariantAttribute} from '../lib/content-presentation';
+interface Props { section: CollectionEntry<'pages'>['data']['sections'][number]; index?: number; visualId?: 'behov' | 'kanaler'; linkVariant?:'button'; defaultSurface?:'dark'; anchor?:string; }
+const { section, visualId, linkVariant, defaultSurface, anchor } = Astro.props;
 const protectedRow = section._block === 'protected';
 const cards=!!visualId;
 const terms = Astro.url.pathname === '/synlighet/' ? ['seo', 'lokal-seo', 'ai-synlighet'] : Astro.url.pathname === '/konvertering/' ? ['cro', 'konverteringsrate', 'ordreverdi', 'margin', 'relevant-trafikk'] : Astro.url.pathname === '/seo/' ? ['seo'] : Astro.url.pathname === '/ai-synlighet/' ? ['ai-synlighet', 'aeo', 'aio', 'geo', 'seo'] : Astro.url.pathname === '/nettbutikkoptimalisering/' ? ['checkout', 'ordreverdi', 'margin', 'konverteringsrate'] : [];
 ---
-<section id={section.id} class={`content-section section-space home-section-${visualId ?? section.id}`} data-surface={surfaceAttribute(section.surface, protectedRow)??(protectedRow?undefined:defaultSurface)}>
+<section id={anchor??section.id} class={`content-section section-space home-section-${visualId ?? section.id}`} data-surface={surfaceAttribute(section.surface, protectedRow)??(protectedRow?undefined:defaultSurface)}>
   <div class="shell">
     <div class="section-heading" data-heading-align={headingAlignAttribute(section.headingAlign)}><div>{section.eyebrow && <p class="eyebrow">{section.eyebrow}</p>}<h2>{section.heading}</h2></div><div class="body-copy">{section.body.map(text => <p><TermText text={text} terms={terms} /></p>)}</div></div>
-    {section.items && <div class:list={['section-items', { 'two-items': section.items.length === 2, 'mechanism-steps': section.id === 'mekanisme' }]}>{section.items.map((item, i) => <article class:list={['info-item', `home-item-${i}`, {card:cards}]} data-surface={surfaceAttribute(item.surface, protectedRow)??(visualId==='behov'?(['mint','lavender','soft'] as const)[i%3]:undefined)}>
+    {section.items && <div class:list={['section-items', { 'two-items': section.items.length === 2, 'mechanism-steps': section.id === 'mekanisme' }]} data-content-layout={contentLayoutAttribute(section.layout,protectedRow)}>{section.items.map((item, i) => <article class:list={['info-item', `home-item-${i}`, {card:boxVariantAttribute(item.boxVariant,protectedRow)==='card'||(cards&&boxVariantAttribute(item.boxVariant,protectedRow)!=='plain'), 'border border-base-300':boxVariantAttribute(item.boxVariant,protectedRow)==='card'}]} data-box-variant={boxVariantAttribute(item.boxVariant,protectedRow)} data-surface={surfaceAttribute(item.surface, protectedRow)??(visualId==='behov'?(['mint','lavender','soft'] as const)[i%3]:undefined)}>
       {section.id === 'mekanisme' && <span class="item-number" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>}
       <h3><TermText text={item.title} terms={terms} /></h3><p>{item.text}</p>{item.href && <a class="text-link" href={item.href}>{item.label || item.title}<Arrow diagonal /></a>}
     </article>)}</div>}
