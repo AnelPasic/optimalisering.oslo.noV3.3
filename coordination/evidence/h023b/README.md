@@ -15,4 +15,4 @@ Focused checks cover exact main copy/order/SEO for every current route; shared c
 
 MCP: the configured daisyui-gitmcp is now available directly. `fetch_daisyui_documentation` and current official collapse documentation retrieval succeed; current installed daisyUI5 source supplies exact component selectors. No new dependencies, MCP configuration changes or infrastructure changes.
 
-Native Worker and live readback are recorded after implementation push. STOP for OWNER whole-site visual review; H-022 remains parked and launch/intake/indexing remain separate.
+Implementation `a2b4e610353345102f57e9373a643a4c9c0ff46f` is pushed to main. [Native receipt](native-build.json): builda8cbeb71 succeeds; Worker88113ac8 serves100%. [Live assets](live-assets.json): all53 are byte-exact; all four removed legacy CSS URLs return404. [Live family/amendment checks](live/):60 route-width groups and interaction/no-JS checks pass. STOP for OWNER whole-site visual review; H-022 remains parked and launch/intake/indexing remain separate.

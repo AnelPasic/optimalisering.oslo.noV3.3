@@ -12,7 +12,7 @@
 [7m65[0m   await page.locator('[data-package-order]').evaluate(form => form.submit());
 [7m  [0m [93m                                                                   ~~~~~~[0m
 
-Result (194 files): 
+Result (194 files):
 - 0 errors
 - 0 warnings
 - 1 hint

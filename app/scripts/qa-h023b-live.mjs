@@ -30,6 +30,7 @@ for(let i=0;i<files.length;i+=6) await Promise.all(files.slice(i,i+6).map(async 
 const robots=await (await fetch(base+'/robots.txt')).text(); assert.match(robots,/Disallow: \//);
 const sitemap=await (await fetch(base+'/sitemap.xml')).text(); assert.ok(!sitemap.includes('<loc>'));
 for(const path of ['/api/leads','/api/orders','/not-a-real-h023b-page/']) assert.equal((await fetch(base+path)).status,404);
+for(const name of ['home-invite','service-invite','pricing-invite','package-offer']) assert.equal((await fetch(`${base}/styles/${name}.css`)).status,404,'Removed legacy stylesheet stays unavailable');
 const home=await (await fetch(base+'/')).text();assert.match(home,/<button[^>]+type="submit"[^>]*disabled/);
 records.sort((a,b)=>a.path.localeCompare(b.path));
 writeFileSync('../coordination/evidence/h023b/live-assets.json',JSON.stringify({base,matchedAssets:records.length,noindex:true,intakeDisabled:true,robotsBlocked:true,sitemapEmpty:true,custom404:true,records},null,2)+'\n');

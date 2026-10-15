@@ -16,27 +16,27 @@
 14:27:18 [vite] ✓ built in 38ms
 14:27:18 [build] Rearranging server assets...
 
- generating static routes 
-14:27:18   ├─ /404.html (+8ms) 
-14:27:18   ├─ /begreper/index.html (+3ms) 
-14:27:18   ├─ /design-system/index.html (+8ms) 
-14:27:18   ├─ /robots.txt (+2ms) 
-14:27:18   ├─ /sitemap.xml (+2ms) 
-14:27:18   ├─ /ai-synlighet/index.html (+3ms) 
-14:27:18   ├─ /index.html (+13ms) 
-14:27:18   ├─ /innsikt/index.html (+2ms) 
-14:27:18   ├─ /innsikt/hva-bor-optimaliseres-forst/index.html (+2ms) 
-14:27:18   ├─ /innsikt/male-effekt-av-optimalisering/index.html (+1ms) 
-14:27:18   ├─ /kontakt/index.html (+1ms) 
-14:27:18   ├─ /konvertering/index.html (+5ms) 
-14:27:18   ├─ /nettbutikkoptimalisering/index.html (+2ms) 
-14:27:18   ├─ /om/index.html (+1ms) 
-14:27:18   ├─ /personvern/index.html (+1ms) 
-14:27:18   ├─ /priser/index.html (+2ms) 
-14:27:18   ├─ /seo/index.html (+3ms) 
-14:27:18   ├─ /synlighet/index.html (+4ms) 
-14:27:18   ├─ /vilkar/index.html (+1ms) 
-14:27:18   ├─ /vurdering/index.html (+1ms) 
+ generating static routes
+14:27:18   ├─ /404.html (+8ms)
+14:27:18   ├─ /begreper/index.html (+3ms)
+14:27:18   ├─ /design-system/index.html (+8ms)
+14:27:18   ├─ /robots.txt (+2ms)
+14:27:18   ├─ /sitemap.xml (+2ms)
+14:27:18   ├─ /ai-synlighet/index.html (+3ms)
+14:27:18   ├─ /index.html (+13ms)
+14:27:18   ├─ /innsikt/index.html (+2ms)
+14:27:18   ├─ /innsikt/hva-bor-optimaliseres-forst/index.html (+2ms)
+14:27:18   ├─ /innsikt/male-effekt-av-optimalisering/index.html (+1ms)
+14:27:18   ├─ /kontakt/index.html (+1ms)
+14:27:18   ├─ /konvertering/index.html (+5ms)
+14:27:18   ├─ /nettbutikkoptimalisering/index.html (+2ms)
+14:27:18   ├─ /om/index.html (+1ms)
+14:27:18   ├─ /personvern/index.html (+1ms)
+14:27:18   ├─ /priser/index.html (+2ms)
+14:27:18   ├─ /seo/index.html (+3ms)
+14:27:18   ├─ /synlighet/index.html (+4ms)
+14:27:18   ├─ /vilkar/index.html (+1ms)
+14:27:18   ├─ /vurdering/index.html (+1ms)
 14:27:18 ✓ Completed in 100ms.
 
 14:27:18 [build] ✓ Completed in 795ms.
