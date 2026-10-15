@@ -1,48 +1,40 @@
 # ChatGPT to Codex
 
-## Active handoff - NONE / H-023B DELIVERED / STOP FOR OWNER WHOLE-SITE VISUAL REVIEW
-
-2026-10-15 IMPLEMENTATION receipt: **a2b4e610353345102f57e9373a643a4c9c0ff46f** is pushed to main, including OWNER's amendment pulled at **d81a413** before delivery. Seven semantic families/shared chrome replace slug-based UI selection; legacy styles are removed after migration. Internal design-system spacing/specimens/groups are amended without global heading/type changes. Final120/120, CMS20/static17, typography196 and local/live60 groups pass;53 byte-exact live assets, native Builda8cbeb71 / Worker88113ac8 succeeds with safeguards intact.193 protected records remain exact except two enumerated composition-only additions; existing content fields unchanged. Exact evidence: CODEX-TO-CHATGPT / `evidence/h023b/`. **STOP for OWNER whole-site visual review.** H-022 stays PARKED; no acceptance, next implementation or launch authority is inferred.
-
-## Consumed handoff - H-023B GLOBAL ROUTE + DESIGN-SYSTEM MIGRATION
+## Active handoff - H-024A HOMEPAGE PAGE BUILDER + HERO
 
 Date: 2026-10-15
-Authority: OWNER + STRATEGY_CONTENT / D-085
-Exact contract: `coordination/H023B-GLOBAL-ROUTE-MIGRATION.md`
+Authority: OWNER + STRATEGY_CONTENT / D-086
+Exact contract: `coordination/H024A-HOMEPAGE-PAGEBUILDER-HERO.md`
 
-H-023A foundation is PASS.
+H-023B is PASS.
 
-Pull latest main and implement H-023B fully.
+Pull latest main and implement H-024A only.
 
-Core goal:
-- every route inherits the same Tailwind/daisyUI theme + shared primitives
-- remove slug-whitelist renderer/style selection
-- introduce semantic typed route families/capabilities
-- /seo/ is the primary old/new split canary
-- migrate all current service/index/article/pricing/assessment/utility families
-- remove legacy CSS only after its last consumer is migrated
-- preserve all copy, proof authority, pricing/order logic, calculator math, PageList, CMS controls, noindex and disabled intake
+Pilot on the homepage:
+- Hero becomes a standalone structured reusable primitive
+- base Hero layouts: split-right (default), split-left, centered
+- preserve current copy/image/crop/hero proof and default appearance
+- all non-Hero homepage sections become one ordered Pages CMS block list
+- CMS array order is render order
+- use stable UUID + existing anchors
+- preserve special singleton data sources for selector/calculator/packages/proof/form/FAQ rather than duplicating them
+- allow content blocks to remain real editable blocks
+- duplicate singleton blocks fail closed
+- current public section order stays unchanged after migration
+- update /design-system/ with all Hero variants
 
-Use:
-- `coordination/evidence/h023a/H023B-MIGRATION-PLAN.md`
-- `coordination/evidence/h023a/legacy-css-inventory.md`
-- exact contract above
+This is specifically a CMS UX pilot.
+If authenticated Pages CMS access is available, prove actual reorder -> Git commit -> Worker preview -> reorder back/revert.
+If authenticated CMS is unavailable, deliver technical/schema/render proof but report CMS reorder acceptance as PENDING OWNER; do not fake it.
 
-H-022 remains parked. Do not polish proof.
+Preserve H-023B route architecture, all content/commercial/proof/calculator/PageList authority, noindex and disabled intake.
+H-022 stays parked.
 
-OWNER AMENDMENT - DESIGN-SYSTEM POLISH (2026-10-15)
-
-Before delivery, pull latest main and apply the updated H-023B design-system requirements:
-- /design-system/ is currently too dense and reads like a component dump
-- add deliberate page-local spacing/composition primitives
-- separate typography roles into clear specimens; do not stack H1/H2/H3/H4 tightly
-- give 2/3/4-card demos, controls, surfaces, pricing and PageList examples distinct breathing room
-- do not fix this with global h1-h4 margins or type-scale changes
-- use Tailwind spacing + approved daisyUI/theme primitives
-
-Run focused architecture/route-family QA + one final full verify, push main, verify Worker, update coordination, then STOP for OWNER whole-site visual review.
+Run focused page-builder/Hero QA + one full verify, push main, verify Worker, update coordination, then STOP for OWNER review.
+Do not continue into H-024B.
 
 ---
+
 
 
 
