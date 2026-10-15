@@ -26,6 +26,16 @@ Use:
 
 H-022 remains parked. Do not polish proof.
 
+OWNER AMENDMENT - DESIGN-SYSTEM POLISH (2026-10-15)
+
+Before delivery, pull latest main and apply the updated H-023B design-system requirements:
+- /design-system/ is currently too dense and reads like a component dump
+- add deliberate page-local spacing/composition primitives
+- separate typography roles into clear specimens; do not stack H1/H2/H3/H4 tightly
+- give 2/3/4-card demos, controls, surfaces, pricing and PageList examples distinct breathing room
+- do not fix this with global h1-h4 margins or type-scale changes
+- use Tailwind spacing + approved daisyUI/theme primitives
+
 Run focused architecture/route-family QA + one final full verify, push main, verify Worker, update coordination, then STOP for OWNER whole-site visual review.
 
 ---
