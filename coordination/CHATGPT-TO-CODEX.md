@@ -1,6 +1,10 @@
 # ChatGPT to Codex
 
-## Active handoff - H-022 PROOF SHOWCASE REDESIGN
+## Active handoff - NONE / REVISED H-022 DELIVERED / STOP FOR OWNER VISUAL REVIEW
+
+Revised H-022 is implemented/pushed at **6cd89f1beed0734294fdb7c8530c8f2c08eff10d**: factual Eurotents review image/context plus separate dominant ROAS and secondary spend tiles; balanced compact supporting modules. Small safe homepage presentation media config/CMS fields remain independent from proof authority. Exact public proof and service appearance are preserved. One full verify117/117, focused8/8 and guard/CMS7/7 pass. Source/native/live evidence: CODEX-TO-CHATGPT / `evidence/h022-revised/`. **STOP for OWNER visual review, including whether the review-only image stays for production; no active next implementation or launch/content acceptance.**
+
+## Consumed handoff - H-022 PROOF SHOWCASE REDESIGN
 
 Date: 2026-10-15
 Authority: OWNER + STRATEGY_CONTENT

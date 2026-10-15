@@ -15,4 +15,8 @@ Focused verification:
 - Exactly one final `npm run verify`, after focused checks and brief independent read-only review: **117/117 tests**, Astro zero errors/warnings and one existing intake-script hint, CMS20/static/surface/source guards pass;196 typography groups have zero failures/errors/POST. `verify.log` and concise `typography-summary.json`; no second typography screenshot campaign retained.
 - Review found no actionable correctness/privacy/authority/CMS-clear findings and inspected1440/320 captures; no repeated builds/tests. `preservation.json`:401 protected source Git blobs exact, home JSON changes only by adding featuredVisual. Existing untracked OWNER images remain untouched.
 
-Primary captures: `after/home-1440.png`, `after/home-390.png`, `after/home-320.png`. Native build/live evidence is added in the delivery receipt. STOP for OWNER visual review; no content acceptance, launch or next implementation is inferred.
+Primary captures: `after/home-1440.png`, `after/home-390.png`, `after/home-320.png`.
+
+Implementation `6cd89f1beed0734294fdb7c8530c8f2c08eff10d`: native connected Build `15f9d249-35a2-4b33-903e-d1ccab9ede7d` succeeds; logs confirm Worker Version `99ab32c5-a2c7-4cfd-9f93-1c62b5ff9433`. `native-build.json`, `live-assets.json` and `live/`:55 assets match the tested build (three existing public CSS files are line-ending equivalent), and eight live focused groups pass with the local image, exact proof words/service fingerprints, no errors/POST/overflow and intact noindex/disabled APIs/robots/empty sitemap/custom404. No direct deployment or infrastructure changes.
+
+STOP for OWNER visual review; no content acceptance, launch or next implementation is inferred. This following coordination/evidence receipt changes no website asset; identify its own revision through Git history.

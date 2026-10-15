@@ -1,0 +1,24 @@
+{
+  "source": "6cd89f1beed0734294fdb7c8530c8f2c08eff10d",
+  "worker": "optimalisering-oslo-v33",
+  "base": "https://optimalisering-oslo-v33.anel.workers.dev",
+  "build": {
+    "id": "15f9d249-35a2-4b33-903e-d1ccab9ede7d",
+    "branch": "main",
+    "status": "stopped",
+    "outcome": "success",
+    "stopped_on": "2026-10-15T08:08:16.828Z",
+    "deployLogVersion": "99ab32c5-a2c7-4cfd-9f93-1c62b5ff9433"
+  },
+  "deployment": {
+    "id": "bfe349d7-779f-4649-bb46-4d35de1cd5c7",
+    "version": "99ab32c5-a2c7-4cfd-9f93-1c62b5ff9433",
+    "percentage": 100,
+    "created_on": "2026-10-15T08:08:13.728351Z"
+  },
+  "liveAssets": 55,
+  "liveFocusedProofGroups": 8,
+  "safeguardsPreserved": true,
+  "imageScope": "Review presentation only; OWNER decides production retention",
+  "directDeployOrInfrastructureChanges": false
+}
