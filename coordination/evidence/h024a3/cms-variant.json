@@ -1,0 +1,25 @@
+{
+  "base": "https://optimalisering-oslo-v33.anel.workers.dev",
+  "state": "variant",
+  "commit": "0cee5ad3facc18f8ff5f002ad3d9af2540b22916",
+  "order": [
+    "mekanisme",
+    "behov",
+    "regneeksempel",
+    "priser",
+    "resultater",
+    "passer",
+    "sjekk",
+    "sporsmal"
+  ],
+  "geometry": {
+    "columns": 1,
+    "layout": "stacked",
+    "box": "card",
+    "radius": "20px",
+    "heading": "Slik finner vi hva som bør gjøres først"
+  },
+  "heroFirst": true,
+  "noindex": true,
+  "intakeDisabled": true
+}

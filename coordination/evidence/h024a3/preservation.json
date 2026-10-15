@@ -692,5 +692,12 @@
       "sha256": "cd6621fd9ded91f59bc44ba74844585479d8507f2960d8b2a095c344e97267cf"
     }
   ],
-  "all167RecordsAnd5OwnerImagesExactBeforeCmsExercise": true
+  "all167RecordsAnd5OwnerImagesExactBeforeCmsExercise": true,
+  "finalOtherProtectedFilesExact": 166,
+  "finalOwnerImagesExact": 5,
+  "finalHomepagePriorFieldsAndOrderExact": true,
+  "finalHomepageNewDefaultsOnly": [
+    "mekanisme.layout=default",
+    "mekanisme.items[0].boxVariant=default"
+  ]
 }

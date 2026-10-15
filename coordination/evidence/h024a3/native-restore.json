@@ -1,0 +1,26 @@
+{
+  "build": {
+    "id": "2189d29d-3dd8-435c-b24f-bf3295209086",
+    "status": "stopped",
+    "outcome": "success",
+    "commit": "bb56fc61aca08273c131295c5ac6f049c9d671bf",
+    "started": "2026-10-15T19:23:01.145Z",
+    "stopped": "2026-10-15T19:23:53.543Z"
+  },
+  "deployment": {
+    "id": "2386811b-a6bf-4c39-a323-01ef09d3f997",
+    "source": "wrangler",
+    "strategy": "percentage",
+    "author_email": "anel@medon.no",
+    "annotations": {
+      "workers/triggered_by": "deployment"
+    },
+    "versions": [
+      {
+        "version_id": "24eace41-e933-41a3-8fcf-f0b9059de13d",
+        "percentage": 100
+      }
+    ],
+    "created_on": "2026-10-15T19:23:49.095895Z"
+  }
+}

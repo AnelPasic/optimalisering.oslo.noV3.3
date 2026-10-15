@@ -1,0 +1,28 @@
+{
+  "build": {
+    "id": "2e679576-3d75-428e-ba79-d3497af3bcc2",
+    "status": "stopped",
+    "outcome": "success",
+    "commit": "fbcf0de9848c27646c8d95bfdcf9935f4b3eec87",
+    "started": "2026-10-15T19:16:47.771Z",
+    "stopped": "2026-10-15T19:17:53.958Z",
+    "build": "npm run build",
+    "deploy": "npx wrangler deploy"
+  },
+  "initialDeployment": {
+    "id": "abf86968-670a-4850-8bff-9b5ecb106251",
+    "source": "wrangler",
+    "strategy": "percentage",
+    "author_email": "anel@medon.no",
+    "annotations": {
+      "workers/triggered_by": "deployment"
+    },
+    "versions": [
+      {
+        "version_id": "b43427ff-95eb-40a8-96b1-8baa1d040509",
+        "percentage": 100
+      }
+    ],
+    "created_on": "2026-10-15T19:17:47.990848Z"
+  }
+}

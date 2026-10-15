@@ -1,0 +1,202 @@
+{
+  "base": "https://optimalisering-oslo-v33.anel.workers.dev",
+  "records": [
+    {
+      "width": 1440,
+      "layouts": {
+        "default": 4,
+        "two-columns": 2,
+        "three-columns": 3,
+        "stacked": 1
+      },
+      "boxes": [
+        {
+          "variant": "default",
+          "card": false,
+          "radius": "0px",
+          "padding": "0px"
+        },
+        {
+          "variant": "plain",
+          "card": false,
+          "radius": "0px",
+          "padding": "0px"
+        },
+        {
+          "variant": "card",
+          "card": true,
+          "radius": "20px",
+          "padding": "32px"
+        }
+      ],
+      "colors": [
+        {
+          "surface": "mint",
+          "background": "oklch(0.942974 0.0169783 192.351)",
+          "foreground": "oklch(0.278712 0.0437809 312.743)",
+          "radius": "20px"
+        },
+        {
+          "surface": "lavender",
+          "background": "oklch(0.952366 0.0152201 302.554)",
+          "foreground": "oklch(0.278712 0.0437809 312.743)",
+          "radius": "20px"
+        },
+        {
+          "surface": "dark",
+          "background": "oklch(0.250753 0.100773 313.031)",
+          "foreground": "oklch(1 4.00000e-8 89.8756)",
+          "radius": "20px"
+        }
+      ]
+    },
+    {
+      "width": 900,
+      "layouts": {
+        "default": 2,
+        "two-columns": 2,
+        "three-columns": 3,
+        "stacked": 1
+      },
+      "boxes": [
+        {
+          "variant": "default",
+          "card": false,
+          "radius": "0px",
+          "padding": "0px"
+        },
+        {
+          "variant": "plain",
+          "card": false,
+          "radius": "0px",
+          "padding": "0px"
+        },
+        {
+          "variant": "card",
+          "card": true,
+          "radius": "20px",
+          "padding": "32px"
+        }
+      ],
+      "colors": [
+        {
+          "surface": "mint",
+          "background": "oklch(0.942974 0.0169783 192.351)",
+          "foreground": "oklch(0.278712 0.0437809 312.743)",
+          "radius": "20px"
+        },
+        {
+          "surface": "lavender",
+          "background": "oklch(0.952366 0.0152201 302.554)",
+          "foreground": "oklch(0.278712 0.0437809 312.743)",
+          "radius": "20px"
+        },
+        {
+          "surface": "dark",
+          "background": "oklch(0.250753 0.100773 313.031)",
+          "foreground": "oklch(1 4.00000e-8 89.8756)",
+          "radius": "20px"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "layouts": {
+        "default": 2,
+        "two-columns": 1,
+        "three-columns": 1,
+        "stacked": 1
+      },
+      "boxes": [
+        {
+          "variant": "default",
+          "card": false,
+          "radius": "0px",
+          "padding": "0px"
+        },
+        {
+          "variant": "plain",
+          "card": false,
+          "radius": "0px",
+          "padding": "0px"
+        },
+        {
+          "variant": "card",
+          "card": true,
+          "radius": "20px",
+          "padding": "32px"
+        }
+      ],
+      "colors": [
+        {
+          "surface": "mint",
+          "background": "oklch(0.942974 0.0169783 192.351)",
+          "foreground": "oklch(0.278712 0.0437809 312.743)",
+          "radius": "20px"
+        },
+        {
+          "surface": "lavender",
+          "background": "oklch(0.952366 0.0152201 302.554)",
+          "foreground": "oklch(0.278712 0.0437809 312.743)",
+          "radius": "20px"
+        },
+        {
+          "surface": "dark",
+          "background": "oklch(0.250753 0.100773 313.031)",
+          "foreground": "oklch(1 4.00000e-8 89.8756)",
+          "radius": "20px"
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "layouts": {
+        "default": 1,
+        "two-columns": 1,
+        "three-columns": 1,
+        "stacked": 1
+      },
+      "boxes": [
+        {
+          "variant": "default",
+          "card": false,
+          "radius": "0px",
+          "padding": "0px"
+        },
+        {
+          "variant": "plain",
+          "card": false,
+          "radius": "0px",
+          "padding": "0px"
+        },
+        {
+          "variant": "card",
+          "card": true,
+          "radius": "20px",
+          "padding": "32px"
+        }
+      ],
+      "colors": [
+        {
+          "surface": "mint",
+          "background": "oklch(0.942974 0.0169783 192.351)",
+          "foreground": "oklch(0.278712 0.0437809 312.743)",
+          "radius": "20px"
+        },
+        {
+          "surface": "lavender",
+          "background": "oklch(0.952366 0.0152201 302.554)",
+          "foreground": "oklch(0.278712 0.0437809 312.743)",
+          "radius": "20px"
+        },
+        {
+          "surface": "dark",
+          "background": "oklch(0.250753 0.100773 313.031)",
+          "foreground": "oklch(1 4.00000e-8 89.8756)",
+          "radius": "20px"
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

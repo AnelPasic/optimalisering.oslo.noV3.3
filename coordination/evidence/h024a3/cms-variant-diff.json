@@ -1,0 +1,20 @@
+{
+  "commit": "0cee5ad3facc18f8ff5f002ad3d9af2540b22916",
+  "changesOnly": [
+    "mekanisme.layout=stacked",
+    "mekanisme.items[0].boxVariant=card",
+    "mekanisme moved first after Hero"
+  ],
+  "allOtherFieldsPreserved": true,
+  "allIdentifiersPreserved": true,
+  "order": [
+    "mekanisme",
+    "behov",
+    "regneeksempel",
+    "priser",
+    "resultater",
+    "passer",
+    "sjekk",
+    "sporsmal"
+  ]
+}
