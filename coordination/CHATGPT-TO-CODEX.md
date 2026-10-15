@@ -1,41 +1,35 @@
 # ChatGPT to Codex
 
-## Active handoff - NONE / H-023A DELIVERED / STOP FOR OWNER VISUAL SHELL REVIEW
-
-2026-10-15 IMPLEMENTATION receipt: **4fc5dc877fd12996d14488c27030b778066bfe08** is pushed to main; native connected Build **3437809b-5fd6-4710-978a-ba66dc518eff** succeeds. Tailwind4/Vite + daisyUI5/custom optimalisering theme, representative homepage primitives and internal `/design-system/` are delivered. Final full verify117/117, CMS20, typography196 and required local/live width/theme checks pass;57 live assets match with safeguards intact. Exact mapping/MCP search limitation/legacy inventory/H-023B plan/review/native receipt: CODEX-TO-CHATGPT / `evidence/h023a/`. **STOP for OWNER Visual Shell/design-system review.** H-022 stays PARKED; H-023B is unexecuted. No acceptance, content lock or launch authority is recorded.
-
-## Consumed handoff - H-023A DAISYUI FOUNDATION
+## Active handoff - H-023B GLOBAL ROUTE + DESIGN-SYSTEM MIGRATION
 
 Date: 2026-10-15
-Authority: OWNER + STRATEGY_CONTENT / D-084
-Exact contract: `coordination/H023A-DAISYUI-FOUNDATION.md`
+Authority: OWNER + STRATEGY_CONTENT / D-085
+Exact contract: `coordination/H023B-GLOBAL-ROUTE-MIGRATION.md`
 
-Pull latest main and implement H-023A only.
+H-023A foundation is PASS.
 
-Priority change:
-- H-022 proof showcase is delivered but PARKED for later visual review.
-- Do not keep polishing proof now.
+Pull latest main and implement H-023B fully.
 
-Establish the UI foundation:
-- Astro stays
-- Tailwind CSS 4 via the current Vite plugin path
-- daisyUI 5 semantic UI layer
-- custom `optimalisering` theme via `@plugin "daisyui/theme"`
-- translate the current approved palette/geometry into semantic OKLCH theme tokens
-- use daisyUI components first, Tailwind utilities second, scoped custom CSS only for special compositions
-- verify/use free `daisyui-gitmcp`; Context7 fallback
-- create review-only `/design-system/`
-- use daisyUI Theme Controller there for `optimalisering` vs built-in `light` QA comparison
-- migrate homepage/routine primitives as the representative real shell
-- inventory legacy Invite CSS and produce the H-023B semantic route/template migration plan
-- do NOT broadly migrate all routes yet
+Core goal:
+- every route inherits the same Tailwind/daisyUI theme + shared primitives
+- remove slug-whitelist renderer/style selection
+- introduce semantic typed route families/capabilities
+- /seo/ is the primary old/new split canary
+- migrate all current service/index/article/pricing/assessment/utility families
+- remove legacy CSS only after its last consumer is migrated
+- preserve all copy, proof authority, pricing/order logic, calculator math, PageList, CMS controls, noindex and disabled intake
 
-Preserve content, CMS, proof authority/data, calculator logic, pricing logic, PageList, noindex and disabled intake.
+Use:
+- `coordination/evidence/h023a/H023B-MIGRATION-PLAN.md`
+- `coordination/evidence/h023a/legacy-css-inventory.md`
+- exact contract above
 
-Run the scoped foundation QA + current full verify.
-Push main, verify Worker, update coordination, then STOP for OWNER Visual Shell/design-system review.
+H-022 remains parked. Do not polish proof.
+
+Run focused architecture/route-family QA + one final full verify, push main, verify Worker, update coordination, then STOP for OWNER whole-site visual review.
 
 ---
+
 
 
 
