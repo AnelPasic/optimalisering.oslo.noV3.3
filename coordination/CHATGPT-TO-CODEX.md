@@ -1,33 +1,36 @@
 # ChatGPT to Codex
 
-## Active handoff - NONE / H-022 DELIVERED / STOP FOR OWNER VISUAL REVIEW
-
-Implemented/pushed at **bbbac3acf0a96aa63bb0be55787a0ad8525a38b0**. Full-width Eurotents context/result composition and balanced supporting cards use existing tokens; proof content/data/gates and exact service appearance remain preserved. Full verify115/115, focused responsive8/8 and proof/hero5/5 pass. Exact source/native/live receipt: CODEX-TO-CHATGPT / `evidence/h022/`. **STOP for OWNER visual review; no active next implementation or content/launch acceptance.** Genuine D-083 PageList acceptance remains intact.
-
-## Consumed handoff - H-022 PROOF PRESENTATION
+## Active handoff - H-022 PROOF SHOWCASE REDESIGN
 
 Date: 2026-10-15
 Authority: OWNER + STRATEGY_CONTENT
 Exact contract: `coordination/H022-PROOF-PRESENTATION.md`
 
-Pull latest main and implement H-022 only.
+Pull latest main and implement the revised H-022 only.
 
-Proof data/content/case selection are accepted and LOCKED for this task.
+Important correction:
+Do NOT merely polish the existing proof cards.
 
-Fix presentation only:
-- Eurotents stays featured but must use the full width intentionally
-- make 4,3x -> 17,2x the dominant visual story
-- 20 % lower spend becomes secondary support
-- Nysta + Helt Opplagt stay balanced supporting cards
-- no new copy, caveats, graphs, logos or proof research
-- use current shared typography/surface/card primitives
-- preserve service-page proof behavior
+Rebuild homepage proof as a real case showcase:
+- large Eurotents visual/context area
+- separate result area with dominant 4,3x -> 17,2x ROAS story
+- 20 % lower ad spend as secondary support
+- two balanced supporting cases below
+- use a factual Eurotents review visual from the current public site or a defensible non-photographic fallback
+- no fabricated customer imagery
+- no new metrics/copy/caveats
+- no fake "Les hele caset" route
+- keep service-page proof compact
 
-Focused responsive proof QA + one full verify only.
+Presentation media is presentation metadata only and must not change evidence/publication authority.
 
+Use current shared design-system primitives underneath the special showcase composition.
+
+Focused responsive QA + one full verify.
 Push main, verify Worker, update CODEX-TO-CHATGPT, then STOP for OWNER visual review.
 
 ---
+
 
 
 
