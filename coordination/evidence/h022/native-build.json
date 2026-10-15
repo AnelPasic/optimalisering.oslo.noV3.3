@@ -1,0 +1,27 @@
+{
+  "source": "bbbac3acf0a96aa63bb0be55787a0ad8525a38b0",
+  "worker": "optimalisering-oslo-v33",
+  "base": "https://optimalisering-oslo-v33.anel.workers.dev",
+  "build": {
+    "id": "dd4c59f1-3f1d-4b69-bbf1-0711c8f45eb1",
+    "trigger": "push_event",
+    "branch": "main",
+    "status": "stopped",
+    "outcome": "success",
+    "stopped_on": "2026-10-15T07:13:04.839Z",
+    "build_command": "npm run build",
+    "deploy_command": "npx wrangler deploy",
+    "root_directory": "/app",
+    "deployLogVersion": "3fdd3ea5-3d6b-4b6a-b319-624cbb2a0fa9"
+  },
+  "deployment": {
+    "id": "9d23611a-8750-475c-b7b5-e3b6901c6e89",
+    "version": "3fdd3ea5-3d6b-4b6a-b319-624cbb2a0fa9",
+    "percentage": 100,
+    "created_on": "2026-10-15T07:13:00.995469Z"
+  },
+  "liveAssets": 54,
+  "liveFocusedProofGroups": 8,
+  "safeguardsPreserved": true,
+  "directDeployOrInfrastructureChanges": false
+}
