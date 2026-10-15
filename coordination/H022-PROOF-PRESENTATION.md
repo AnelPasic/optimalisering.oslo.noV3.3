@@ -1,218 +1,315 @@
-# H-022 - Proof presentation redesign
+# H-022 - Proof showcase redesign
 
 Date: 2026-10-15
 Authority: OWNER + STRATEGY_CONTENT
-Status: AUTHORIZED
+Status: AUTHORIZED / SUPERSEDES EARLIER H-022 PRESENTATION DIRECTION
 
 ## Scope
 
 Presentation only.
 
+Proof data, case selection and public claims are accepted and LOCKED for this task.
+
 Do NOT reopen:
-- proof data
-- proof case selection
-- proof wording/claims
+- proof research
+- proof values
 - periods
 - permissions
 - provenance
 - limitations
 - publication gates
-- source registry
-- proof hierarchy
-- CMS authority
+- case selection
+- service-page case assignment
 
-Current public proof content is accepted.
+The current problem is not proof quality.
+The current presentation is materially behind the visual/commercial benchmark.
 
-The problem is visual composition only.
+## Benchmark lesson
+
+The Mementor result section is useful as a composition benchmark because it does NOT render proof as three generic metric cards.
+
+It uses:
+- one large visual case anchor
+- customer/project context
+- separate high-impact result tiles
+- asymmetrical editorial composition
+- strong whitespace
+- clear metric hierarchy
+
+Do NOT clone Mementor's exact styling, colors, typography or content.
+
+Generalize the composition principle into the approved Optimalisering Oslo design language.
 
 ## Objective
 
-Turn the homepage proof section from three oversized metric boxes into a strong commercial proof composition.
+Turn homepage proof into a **case showcase**, not a dashboard.
 
-The section should feel like:
-- one dominant result
-- two supporting results
-- clear before -> after storytelling
-- efficient use of space
-- strong visual hierarchy
-- credible, calm presentation
+The first impression should be:
 
-Do not add more public text.
+> real customer -> real work -> obvious measurable movement
 
-Do not add caveats or footnotes to the public cards.
+A visitor should understand the strongest result in 1-2 seconds.
 
-Do not add graphs.
-
-Do not add logos unless already explicitly approved.
-
-## Featured Eurotents
-
-Eurotents remains the dominant proof.
-
-Current problem:
-- full-width card
-- content occupies only the left portion
-- large dead area on the right
-- support metric competes with the actual before/after result
-
-Redesign the featured card as a real two-part composition.
+## Homepage composition
 
 Desktop direction:
 
-LEFT:
-- client name
-- metric/source label
-- support result: 20 % lavere annonseforbruk
+### Main featured case shell
 
-RIGHT:
-- dominant before -> after story
-- 4,3x -> 17,2x
-- period labels directly under values
+Use one large two-column showcase.
 
-The ROAS movement must be the strongest visual element in the card.
+LEFT / VISUAL AREA:
+- real Eurotents visual
+- customer name
+- discipline/source label may overlay or sit directly adjacent
+- the visual should make the proof feel connected to a real business, not an abstract metric
 
-"20 % lavere annonseforbruk" is secondary support, not the headline.
+RIGHT / RESULT AREA:
+- result tiles / editorial metric composition
+- dominant ROAS movement: 4,3x -> 17,2x
+- secondary support: 20 % lavere annonseforbruk
+- periods remain visible but subordinate
 
-Use the width of the card intentionally.
+Do not leave a giant empty dark rectangle.
+Do not place all information in one corner.
 
-Do not make the right side look like a separate unrelated card.
+### Supporting cases
 
-Do not add decorative charts or fake dashboards.
-
-## Supporting cards
-
-Nysta and Helt Opplagt remain two equal supporting cards beneath the featured card.
-
-They should share one visual structure:
-- client
-- metric/source
-- optional delta/support
-- before -> after
-- periods
-
-Their layout should be compact enough that the numbers dominate.
-
-Avoid:
-- large empty vertical space
-- giant headings
-- inconsistent spacing
-- unnecessary nested boxes
-
-## Section composition
-
-Keep:
-- eyebrow
-- heading
-- featured Eurotents
-- two supporting cards
-
-Do not add additional intro text.
-
-Desktop:
-- featured card full width
-- two supporting cards in a balanced two-column row
-
-Mobile:
-- all cards stack
-- before/after remains immediately understandable
-- no cramped arrows or wrapped number pairs
-- featured card should collapse naturally to one column
-
-## Visual hierarchy
-
-Priority order:
-
-1. before/after metric movement
-2. client
-3. metric/source label
-4. delta/support
-5. period labels
-
-The metric change should be understandable in under two seconds.
-
-Do not let delta text overpower the before/after figures.
-
-## Typography
-
-Use the current global type system.
-
-Do not introduce new type tokens.
-
-Avoid tiny labels.
-
-Do not change the global typography scale.
-
-## Surfaces / geometry
-
-Use existing global tokens/primitives.
-
-Preserve:
-- current deep-plum featured surface
-- current mint supporting surface
-- current radii
-- current spacing system
-
-Do not invent another card system.
-
-This task may restructure the proof component markup/layout, but it must consume the current global design primitives.
-
-## Interaction / accessibility
-
-No JS needed.
-
-Keep semantic article/dl structure or equivalent accessible structure.
-
-Arrow is decorative.
-
-Reading order must remain logical without CSS.
-
-## Preserve exact content
-
-Public visible strings and values must remain unchanged unless layout requires punctuation-only normalization.
-
-Exact cases:
-- Eurotents
+Below the featured showcase:
 - Nysta
 - Helt Opplagt
 
-Do not alter source JSON.
+Two balanced supporting result modules.
 
-Do not change service-page proof content.
+They may remain more compact than Eurotents, but should still feel like proof modules rather than generic content cards.
 
-If shared component changes affect service pages, preserve their current single-proof behavior and verify it visually.
+Do not make all three cases equal.
+
+## Eurotents media
+
+There is currently no approved case image in the repo.
+
+For the noindex review site, create a factual review visual based on the current public Eurotents website, preferably a clean website/product/camping screenshot or other non-personal public Eurotents imagery that clearly identifies the real business.
+
+Current public site:
+https://eurotents.com/
+
+Requirements:
+- do NOT fabricate customer photography
+- do NOT use unrelated stock imagery
+- do NOT imply a person is the client unless source material actually establishes that
+- avoid personal/customer information
+- optimize and commit as a local static web asset
+- use an honest alt text
+- treat this as presentation media, NOT metric evidence
+- record source URL/date in the implementation evidence
+
+This visual is approved for **review presentation only** by this handoff.
+OWNER visual review decides whether it remains for production.
+
+If a clean defensible Eurotents visual cannot be sourced, STOP and use a deliberately designed non-photographic branded/site-preview treatment rather than fake imagery.
+
+## Presentation media architecture
+
+Do not put presentation media into the evidence/provenance authority fields.
+
+Add a small controlled presentation-media field to the homepage proof presentation config, conceptually:
+
+featuredVisual:
+- caseId
+- src
+- alt
+- positionX
+- positionY
+
+This is presentation metadata only.
+
+It must not influence:
+- publicationApproved
+- naming permission
+- evidence validation
+- source/provenance
+- numerical claims
+
+Pages CMS may expose:
+- image
+- alt
+- crop X/Y
+
+Do not expose arbitrary CSS/classes.
+
+If this can be implemented more cleanly as another existing safe media primitive, reuse it.
+
+## Featured result hierarchy
+
+Eurotents:
+
+PRIMARY:
+- 4,3x -> 17,2x
+
+SECONDARY:
+- 20 % lavere annonseforbruk
+
+TERTIARY:
+- Google Ads / ROAS label
+- April 2025 / April 2026
+
+The before/after ROAS movement must be visually dominant.
+
+Do not let "20 % lavere annonseforbruk" become a bigger headline than 4,3x -> 17,2x.
+
+## Result tiles
+
+Use 2 result tiles for Eurotents because we have 2 approved public result stories.
+
+Do NOT invent a third metric just to imitate Mementor.
+
+Suggested composition:
+
+Tile 1:
+- ROAS
+- 4,3x -> 17,2x
+- periods
+
+Tile 2:
+- Annonseforbruk
+- 20 % lavere
+- supporting context already present in approved public text
+
+Exact wording must remain within the existing approved public projection.
+
+No new derived percentages.
+
+## Supporting proof
+
+Nysta and Helt Opplagt remain current approved public strings/values.
+
+Improve hierarchy:
+- client name
+- metric/source
+- before -> after OR dominant delta
+- periods
+
+Use space efficiently.
+
+They may use:
+- one result surface each
+- compact split metric treatment
+- subtle visual distinction
+
+Do NOT add fake images merely to make them match Eurotents.
+
+If future real case media is available, the architecture may support it later.
+
+## Section heading
+
+Keep current:
+- eyebrow
+- heading
+
+Do not add a long intro paragraph.
+
+The proof itself should carry the section.
+
+## Full-case link
+
+Do NOT fabricate a "Les hele caset" link because no approved public case route currently exists.
+
+A proof module without a case-detail route is acceptable.
+
+Do not link to a nonexistent /resultater/ route.
+
+## Styling
+
+Use current shared/global design system.
+
+Consume:
+- current typography
+- current surfaces
+- current radius
+- current spacing
+- current buttons/links where used
+
+Do not create a second proof-only design system.
+
+However, a **featured proof showcase is a legitimate semantic composition**, so it does not need to look like an ordinary generic card.
+
+This is the exact distinction learned in the pilot:
+shared primitives underneath; special composition above.
+
+## Desktop target
+
+At 1440px:
+- section should feel editorial and premium
+- featured module should use the available width
+- visual and result area should feel intentionally balanced
+- no large dead areas
+- no dashboard feel
+- no collection of three nearly identical boxes
+
+## Mobile target
+
+At 390/320:
+- visual can stack above result tiles
+- ROAS before/after remains readable at a glance
+- result tiles stack cleanly
+- supporting proof remains compact
+- no horizontal metric squeeze
+
+## Service pages
+
+Preserve current single-proof service-page behavior unless shared component refactor requires markup changes.
+
+Do not force the large homepage showcase onto /synlighet/ or /konvertering/.
+
+Those pages can keep a compact primary-proof variant.
+
+## CMS
+
+If featuredVisual is added:
+- safe image selector/upload
+- alt
+- crop X/Y
+- no raw class
+- no arbitrary styling
+- default/no visual must fail gracefully
+
+Do not unlock proof authority records.
 
 ## QA
 
-Focused QA only.
+Focused presentation QA.
 
-Required visual checks:
+Review:
 - homepage proof 1440
 - homepage proof 900
 - homepage proof 390
 - homepage proof 320
-- /synlighet/ proof
-- /konvertering/ proof
+- /synlighet/ single proof
+- /konvertering/ single proof
 
-Check:
+Assert:
+- exact public proof strings/values unchanged
+- no proof authority/gate drift
+- no clipped metrics
+- no dead featured region
+- image crop works
+- no broken media
 - no overflow
-- no clipped numbers
-- no awkward wrapping
-- good use of featured-card width
-- support cards remain balanced
-- service-page single-proof rendering remains correct
+- service proof unchanged semantically
 
-Run one full verify after focused visual checks.
+Run one full verify after focused checks.
 
-Do not create an excessive evidence campaign.
+Do NOT produce another oversized QA ceremony for a presentation task.
 
 ## Delivery
 
 Pull latest main.
 
-Implement H-022 only.
+Implement this revised H-022 only.
 
 Push main.
 Verify connected Worker.
-Update CODEX-TO-CHATGPT with concise evidence.
+Update CODEX-TO-CHATGPT concisely.
 
 Then STOP for OWNER visual review.
