@@ -1,0 +1,37 @@
+✔ customer workflow maps each existing page to its dedicated file or correct service/editorial collection (1.694ms)
+✔ object repeaters start collapsed with meaningful summaries supported by Pages CMS (0.3964ms)
+✔ the multiple case reference retains a flat array without an outer list wrapper (0.1078ms)
+✔ CMS-equivalent edit preserves every current JSON record semantically and untouched file hashes (64.2545ms)
+✔ CMS rejects clearing mandatory text before it can create a broken content commit (0.9541ms)
+✔ initialized optional internal links accept blank input while rejecting an external route (0.6015ms)
+✔ raw preservation checks expose nonempty unmodeled repeater data loss (1.2422ms)
+✔ merge preserves omitted nonempty metadata without promoting authority or proof (1.7477ms)
+✔ omitted unknown evidence values stay null and cannot make a case publishable (0.2974ms)
+✔ renderer mapping validates the shared enum and suppresses default/protected/invalid values (1.1059ms)
+✔ ordinary section and item surfaces accept only the six approved values (19.8699ms)
+✔ missing, cleared and explicit default choices preserve automatic styling (2.8519ms)
+✔ all page editors have separate ordinary/protected models and one reusable select (0.7591ms)
+✔ protected CTA/form rows cannot acquire a surface or be retyped as content (4.9002ms)
+✔ CMS surface save and restore preserve every unrelated field, ID, order and link (53.364ms)
+✔ historical H-019 migration adds only editor metadata; subsequent OWNER content edits remain allowed (896.1369ms)
+✔ safe mapping emits only a validated left override and leaves the homepage form model unchanged (1.8726ms)
+✔ section heading alignment accepts center/left; missing and cleared values default to center (21.0318ms)
+✔ ordinary and protected CMS heading models use the same select directly after the heading (0.2405ms)
+✔ CMS Center/Left save and restore preserve unrelated section, card, surface and commercial fields (10.4295ms)
+✔ protected heading alignment does not grant surface overrides (0.6117ms)
+✔ Hero allows only the three safe layouts and optional image (2.3866ms)
+✔ ordered blocks preserve identity, support content add/remove, reject duplicates and unknowns (3.7028ms)
+✔ migrated pilot stores one structured Hero and the expected block identities without locking editor order (1.3631ms)
+✔ new content anchors cannot take fixed form, chart, ARIA or chrome identities (2.7385ms)
+✔ actual CMS model replaces ordered arrays without losing UUIDs, content, or singleton authority (70.1873ms)
+✔ CMS edits can remove optional sections while duplicated identities fail closed (17.2034ms)
+✔ CMS calculator defaults must be accepted by the rendered input controls (0.9083ms)
+✔ CMS section array accepts reordered composition (0.7825ms)
+ℹ tests 29
+ℹ suites 0
+ℹ pass 29
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1330.9378

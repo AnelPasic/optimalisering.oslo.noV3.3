@@ -1,0 +1,16 @@
+{
+  "baseline": "8100c53",
+  "allPreexistingHomeFieldsPreservedSemantically": true,
+  "productionLayout": "split-right",
+  "productionOrder": [
+    "behov",
+    "regneeksempel",
+    "priser",
+    "resultater",
+    "mekanisme",
+    "passer",
+    "sjekk",
+    "sporsmal"
+  ],
+  "reconstructedSourceSha256": "c6721c6f1194b4bf98d33dfeb482ac952f0e26915eb65cf12b7a89f58cda71ba"
+}

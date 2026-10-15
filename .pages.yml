@@ -538,77 +538,84 @@ content:
             type: text
             required: true
         required: true
-      - name: eyebrow
-        label: Toppseksjon (Hero) – Overtekst
-        type: string
-        required: true
-      - name: title
-        label: Hovedoverskrift
-        type: string
-        required: true
-      - name: intro
-        label: Ingress
-        type: text
-        required: true
-      - name: cta
-        label: Primær handling
+      - name: hero
+        label: Hero
         type: object
+        required: true
         fields:
-          - name: label
-            label: Tekst
+          - name: layout
+            label: Oppsett
+            type: select
+            default: split-right
+            options:
+              values:
+                - name: split-right
+                  label: Tekst venstre / bilde høyre
+                - name: split-left
+                  label: Bilde venstre / tekst høyre
+                - name: centered
+                  label: Sentrert
+          - name: eyebrow
+            label: Overtekst
             type: string
             required: true
-          - name: href
-            label: Intern lenke
+          - name: title
+            label: Hovedoverskrift
             type: string
-            pattern: ^/
             required: true
-        required: true
-      - name: homepage
-        label: Forsidens innhold
-        type: object
-        fields:
+          - name: support
+            label: Ingress
+            type: text
+            required: true
+          - name: primaryCta
+            label: Primær handling
+            component: link
+            required: true
           - name: secondaryCta
             label: Sekundær handling
+            component: link
+          - name: visual
+            label: Bilde
             type: object
             fields:
-              - name: label
-                label: Tekst
-                type: string
-                required: true
-              - name: href
-                label: Intern lenke
-                type: string
-                pattern: ^/
-                required: true
-            required: true
-          - name: heroPhoto
-            label: Forsidefoto
-            type: object
-            fields:
-              - name: src
-                label: Valgt bilde
-                type: image
+              - name: kind
+                label: Visuelt innhold
+                type: select
                 options:
-                  media: heroImages
-                  extensions:
-                    - webp
-                required: true
-              - name: positionX
-                label: Horisontalt utsnitt (%)
-                type: number
-                options:
-                  min: 0
-                  max: 100
-                required: true
-              - name: positionY
-                label: Vertikalt utsnitt (%)
-                type: number
-                options:
-                  min: 0
-                  max: 100
-                required: true
-            required: true
+                  values:
+                    - name: image
+                      label: Bilde
+                    - name: none
+                      label: Ingen
+              - name: image
+                label: Valgt bilde og utsnitt
+                type: object
+                fields:
+                  - name: src
+                    label: Valgt bilde
+                    type: image
+                    options:
+                      media: heroImages
+                    required: true
+                  - name: positionX
+                    label: Horisontalt utsnitt (%)
+                    type: number
+                    default: 50
+                    options: {min: 0, max: 100}
+                    required: true
+                  - name: positionY
+                    label: Vertikalt utsnitt (%)
+                    type: number
+                    default: 50
+                    options: {min: 0, max: 100}
+                    required: true
+      - name: homepage
+        label: Felles og spesielt innhold
+        type: object
+        fields:
+          - name: assessmentSection
+            label: Introduksjon til gratis sjekk
+            component: sectionForm
           - name: selector
             label: Behovsvelger
             type: object
@@ -1371,24 +1378,6 @@ content:
                 required: true
             required: true
         required: true
-      - name: sections
-        label: Innholdsseksjoner
-        type: block
-        list:
-          collapsible:
-            collapsed: true
-            summary: "{heading}"
-          min: 3
-          max: 3
-        required: true
-        blockKey: _block
-        blocks:
-          - name: content
-            label: Innholdsseksjon
-            component: sectionContent
-          - name: protected
-            label: Beskyttet sjekk / handling
-            component: sectionForm
       - name: faq
         label: Ofte stilte spørsmål
         type: object
@@ -1405,6 +1394,206 @@ content:
             label: Svar
             type: text
             required: true
+      - name: sections
+        label: Seksjoner og rekkefølge
+        description: Hero ligger alltid øverst. Flytt seksjonene her for å endre rekkefølgen på siden.
+        type: block
+        blockKey: _block
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{_block} - {name}"
+        blocks:
+          - name: selector
+            label: Behovsvelger
+            fields:
+              - name: uid
+                type: uuid
+                hidden: true
+                options: {editable: false, generate: false}
+                required: true
+              - name: id
+                type: string
+                hidden: true
+                default: behov
+                readonly: true
+                required: true
+              - name: name
+                label: Seksjon
+                type: string
+                default: Behovsvelger
+                readonly: true
+                required: true
+          - name: calculator
+            label: Regneeksempel
+            fields:
+              - name: uid
+                type: uuid
+                hidden: true
+                options: {editable: false, generate: false}
+                required: true
+              - name: id
+                type: string
+                hidden: true
+                default: regneeksempel
+                readonly: true
+                required: true
+              - name: name
+                label: Seksjon
+                type: string
+                default: Regneeksempel
+                readonly: true
+                required: true
+          - name: packages
+            label: Pakker og priser
+            fields:
+              - name: uid
+                type: uuid
+                hidden: true
+                options: {editable: false, generate: false}
+                required: true
+              - name: id
+                type: string
+                hidden: true
+                default: priser
+                readonly: true
+                required: true
+              - name: name
+                label: Seksjon
+                type: string
+                default: Pakker og priser
+                readonly: true
+                required: true
+          - name: proof
+            label: Kunderesultater
+            fields:
+              - name: uid
+                type: uuid
+                hidden: true
+                options: {editable: false, generate: false}
+                required: true
+              - name: id
+                type: string
+                hidden: true
+                default: resultater
+                readonly: true
+                required: true
+              - name: name
+                label: Seksjon
+                type: string
+                default: Kunderesultater
+                readonly: true
+                required: true
+          - name: assessment
+            label: Gratis sjekk
+            fields:
+              - name: uid
+                type: uuid
+                hidden: true
+                options: {editable: false, generate: false}
+                required: true
+              - name: id
+                type: string
+                hidden: true
+                default: sjekk
+                readonly: true
+                required: true
+              - name: name
+                label: Seksjon
+                type: string
+                default: Gratis sjekk
+                readonly: true
+                required: true
+          - name: faq
+            label: Ofte stilte spørsmål
+            fields:
+              - name: uid
+                type: uuid
+                hidden: true
+                options: {editable: false, generate: false}
+                required: true
+              - name: id
+                type: string
+                hidden: true
+                default: sporsmal
+                readonly: true
+                required: true
+              - name: name
+                label: Seksjon
+                type: string
+                default: Ofte stilte spørsmål
+                readonly: true
+                required: true
+          - name: content
+            label: Innholdsseksjon
+            fields:
+              - name: uid
+                type: uuid
+                hidden: true
+                options: {editable: false, generate: false}
+                required: true
+              - name: name
+                label: Navn i seksjonslisten
+                type: string
+                required: true
+              - name: id
+                label: Seksjonens lenkeanker
+                type: string
+                required: true
+              - name: eyebrow
+                label: Overtekst
+                type: string
+              - name: heading
+                label: Overskrift
+                type: string
+                required: true
+              - name: headingAlign
+                label: Overskriftsjustering
+                component: headingAlignment
+                description: Sentrert er standard. Velg Venstrejustert når seksjonen leses bedre som en vanlig tekstseksjon.
+              - name: surface
+                label: Seksjonsfarge
+                component: surfaceChoice
+                description: Bakgrunn for hele seksjonen. Standard beholder designets opprinnelige farge.
+              - name: body
+                label: Avsnitt
+                type: text
+                list: {}
+                description: Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Forsidens innhold → Felles pakker.
+              - name: items
+                label: Alternativer eller steg
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{title}"
+                fields:
+                  - name: title
+                    label: Tittel
+                    type: string
+                    required: true
+                  - name: text
+                    label: Beskrivelse
+                    type: text
+                    required: true
+                  - name: href
+                    label: Intern lenke
+                    type: string
+                    pattern: ^(/.*)?$
+                  - name: label
+                    label: Lenketekst
+                    type: string
+                  - name: surface
+                    label: Boksfarge
+                    component: surfaceChoice
+                    description: Bakgrunn for denne boksen. Standard beholder designets opprinnelige farge.
+              - name: links
+                label: Relaterte lenker
+                component: link
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{label}"
     operations: &a1
       create: false
       rename: false

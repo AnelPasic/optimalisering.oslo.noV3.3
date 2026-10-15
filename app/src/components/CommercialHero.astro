@@ -1,0 +1,23 @@
+---
+import '../styles/compositions/hero.css';
+import type { CommercialHero } from '../lib/home-builder';
+import { heroSchema } from '../lib/home-builder';
+import type { getHeroProof } from '../lib/hero-proof';
+import Arrow from './Arrow.astro';
+import TermText from './TermText.astro';
+import HeroPhoto from './HomeHeroPhoto.astro';
+interface Props { content: CommercialHero; proof?: ReturnType<typeof getHeroProof>; demo?: boolean; }
+const {content:input,proof,demo=false}=Astro.props;
+const content=heroSchema.parse(input);
+const Heading=demo?'h2':'h1';
+const split=content.titleEmphasis==='first-sentence'&&content.title.includes('.')?content.title.indexOf('.')+1:0;
+---
+<section class="commercial-hero home-hero shell" data-hero-layout={content.layout} data-hero-visual={content.visual.kind}>
+ <div class="hero-copy">
+  <p class="eyebrow"><span class="small-dot"></span>{content.eyebrow}</p>
+  <Heading class="hero-title">{split?<><span class="hero-emphasis">{content.title.slice(0,split)}</span>{content.title.slice(split)}</>:content.title}</Heading>
+  <p class="hero-intro"><TermText text={content.support} terms={['seo','ai-synlighet','cro']} /></p>
+  <div class="hero-actions"><a class="button btn btn-primary" href={content.primaryCta.href}>{content.primaryCta.label}<Arrow diagonal /></a>{content.secondaryCta&&<a class="text-link" href={content.secondaryCta.href}>{content.secondaryCta.label}<Arrow /></a>}</div>
+ </div>
+ {content.visual.kind==='image'&&<HeroPhoto content={content.visual.image} proof={proof} />}
+</section>

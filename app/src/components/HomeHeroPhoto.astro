@@ -1,11 +1,11 @@
 ---
 import { existsSync } from 'node:fs';
 import { resolve } from 'node:path';
-import type { CollectionEntry } from 'astro:content';
+import type { CommercialHero } from '../lib/home-builder';
 import type { getHeroProof } from '../lib/hero-proof';
 import TermText from './TermText.astro';
 interface Props {
-  content: NonNullable<CollectionEntry<'pages'>['data']['homepage']>['heroPhoto'];
+  content: Extract<CommercialHero['visual'],{kind:'image'}>['image'];
   proof?: ReturnType<typeof getHeroProof>;
 }
 const { content, proof } = Astro.props;

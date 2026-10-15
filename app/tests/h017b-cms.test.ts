@@ -64,11 +64,11 @@ test('CMS-equivalent edit preserves every current JSON record semantically and u
   for (const edited of records) {
     const original = JSON.parse(edited.bytes.toString()), form = structuredClone(original);
     const field = edited.directory === 'pages' ? 'title' : 'source';
-    form[field] = 'H017B harmless memory-only edit';
+    (form.hero ?? form)[field] = 'H017B harmless memory-only edit';
     const entry = entryForFile(cms, edited.path);
     assert.ok(entry, edited.path);
     const after = JSON.parse(cmsJsonSave(original, form, entry, cms));
-    const expected = { ...original, [field]: 'H017B harmless memory-only edit' };
+    const expected = structuredClone(form);
     assertPreservedContent(expected, after);
     const schema = edited.directory === 'pages' ? pageSchema : proofContentSchema;
     const normalizedExpected = edited.directory === 'proof' && expected.publicationApproved === true && !proofCaseSchema.safeParse(after).success ? { ...expected, publicationApproved: false } : expected;

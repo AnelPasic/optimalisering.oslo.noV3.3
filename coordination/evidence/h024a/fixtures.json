@@ -1,0 +1,12 @@
+{
+  "cases": [
+    "reorder",
+    "remove",
+    "add",
+    "no-singletons",
+    "proof-off",
+    "left-none"
+  ],
+  "exactUnrelatedSectionText": true,
+  "temporaryRouteRemoved": true
+}

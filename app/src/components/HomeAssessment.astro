@@ -3,7 +3,7 @@ import '../styles/compositions/assessment.css';
 import type { CollectionEntry } from 'astro:content';
 import Arrow from './Arrow.astro';
 interface Props {
-  section: CollectionEntry<'pages'>['data']['sections'][number];
+  section: Pick<CollectionEntry<'pages'>['data']['sections'][number], 'id' | 'eyebrow' | 'heading' | 'body'>;
   content: NonNullable<CollectionEntry<'pages'>['data']['homepage']>['form'];
 }
 const { section, content } = Astro.props;

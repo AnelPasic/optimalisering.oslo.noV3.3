@@ -4,7 +4,6 @@
 .invite-home .section-space { padding-block: 104px; }
 .invite-home h2 { font-size: var(--type-h2); line-height: var(--leading-h2); }
 .invite-home .eyebrow { font-size: var(--type-eyebrow); letter-spacing: var(--tracking-eyebrow); margin-bottom: 24px; line-height: var(--leading-small); }
-.invite-home .hero-copy .eyebrow { text-transform: none; letter-spacing: var(--tracking-eyebrow); font-size: var(--type-eyebrow); display: flex; align-items: center; gap: 9px; margin-bottom: 18px; line-height: var(--leading-small); }
 .invite-home .section-heading .body-copy { margin-top: 28px; }
 .invite-home .home-section-mekanisme { background: var(--surface-base); }
 .invite-home .section-items { gap: 48px; margin-top: 48px; }
@@ -23,9 +22,7 @@
 @media (max-width: 650px) {
   .invite-home .section-space { padding-block: 56px; }
 }
-@media (max-width: 650px) {
-  .invite-home .hero-copy .eyebrow { align-items: start; }
-}
+
 @media (max-width: 650px) {
   .invite-home .section-items.two-items { grid-template-columns: 1fr; }
 }

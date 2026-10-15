@@ -1,47 +1,17 @@
 ---
 import '../styles/compositions/home.css';
-import { getCollection, type CollectionEntry } from 'astro:content';
-import Arrow from './Arrow.astro';
-import TermText from './TermText.astro';
-import HeroPhoto from './HomeHeroPhoto.astro';
-import Leverage from './HomeLeverage.astro';
-import ContentSection from './HomeSection.astro';
-import Assessment from './HomeAssessment.astro';
-import HomeSymbol from './HomeSymbol.astro';
-import Proof from './HomeProof.astro';
-import Packages from './PackageSection.astro';
+import { getCollection,type CollectionEntry } from 'astro:content';
+import CommercialHero from './CommercialHero.astro';
+import HomepageBlock from './HomepageBlock.astro';
+import { homepageBlocksSchema } from '../lib/home-builder';
 import { getHeroProof } from '../lib/hero-proof';
 interface Props { page: CollectionEntry<'pages'>['data']; }
-const { page } = Astro.props;
-const home = page.homepage!;
-const assessment = page.sections.find(section => section.id === 'sjekk')!;
-const headlineBreak = page.title.indexOf('.') + 1;
-const proofRecords = (await getCollection('proofCases')).map(record => record.data);
-const heroProof = getHeroProof(home.proof, proofRecords);
+const {page}=Astro.props;
+const records=(await getCollection('proofCases')).map(record=>record.data);
+// Raw blocks are validated before shared page normalization supplies defaults.
+const blocks=homepageBlocksSchema.parse(page.sections.map(section=>section._block==='content'?section:{_block:section._block,uid:section.uid,id:section.id,name:section.name}));
 ---
 <div class="invite-home">
-<section class="home-hero shell">
-  <div class="hero-copy">
-    <p class="eyebrow"><span class="small-dot"></span>{page.eyebrow}</p>
-    <h1><span class="hero-emphasis">{page.title.slice(0, headlineBreak)}</span>{page.title.slice(headlineBreak)}</h1>
-    <p class="hero-intro"><TermText text={page.intro} terms={['seo', 'ai-synlighet', 'cro']} /></p>
-    <div class="hero-actions"><a class="button btn btn-primary" href={page.cta.href}>{page.cta.label}<Arrow diagonal /></a><a class="text-link" href={home.secondaryCta.href}>{home.secondaryCta.label}<Arrow /></a></div>
-  </div>
-  <HeroPhoto content={home.heroPhoto} proof={heroProof} />
-</section>
-<section id="behov" class="need-section section-space">
-  <div class="shell">
-    <h2>{home.selector.heading}</h2>
-    <div class="need-grid">{home.selector.items.map((item, index) => <a class={`card need-card need-card-${index}`} href={item.link.href}>
-      <div class="home-card-top"><span class="discipline">{item.discipline}</span><HomeSymbol kind={index === 0 ? 'search' : index === 1 ? 'choose' : 'both'} /></div>
-      <h3>{item.title}</h3><p>{item.description}</p><span class="text-link">{item.link.label}<Arrow diagonal /></span>
-    </a>)}</div>
-  </div>
-</section>
-<Leverage content={home.calculator} />
-<Packages content={home.packages} />
-<Proof content={home.proof} records={proofRecords} />
-{page.sections.filter(section => ['mekanisme', 'passer'].includes(section.id)).map(section => <ContentSection section={section} />)}
-<Assessment section={assessment} content={home.form} />
-<section id="sporsmal" class="faq-section section-space"><div class="shell faq-grid"><div><p class="eyebrow">{home.faqEyebrow}</p><h2>{home.faqHeading}</h2></div><div class="faq-list">{page.faq.map(item => <details class="collapse collapse-plus"><summary class="collapse-title">{item.question}</summary><p class="collapse-content">{item.answer}</p></details>)}</div></div></section>
+ <CommercialHero content={page.hero!} proof={getHeroProof(page.homepage!.proof,records)} />
+ {blocks.map(block=><HomepageBlock block={block} page={page} records={records} />)}
 </div>

@@ -12,18 +12,19 @@ const load=(name:string)=>JSON.parse(readFileSync(`src/content/pages/${name}.jso
 test('safe mapping emits only a validated left override and leaves the homepage form model unchanged',()=>{
   assert.deepEqual(headingAlignValues,['center','left']);assert.equal(headingAlignAttribute('left'),'left');
   for(const value of ['center',undefined,null,'','right','left extra',{},0])assert.equal(headingAlignAttribute(value),undefined);
-  const entry=entryForFile(cms,'app/src/content/pages/home.json'),sections=entry.fields.find((f:any)=>f.name==='sections');
-  const model=resolveField(sections.blocks.find((b:any)=>b.name==='protected'),cms.components);
+  const entry=entryForFile(cms,'app/src/content/pages/home.json');
+  const special=entry.fields.find((f:any)=>f.name==='homepage');
+  const model=resolveField(special.fields.find((f:any)=>f.name==='assessmentSection'),cms.components);
   assert.ok(!model.fields.some((f:any)=>['headingAlign','surface'].includes(f.name)));
 });
 
 test('section heading alignment accepts center/left; missing and cleared values default to center',()=>{
   for(const value of ['center','left',undefined,'',null]){
-    const home=load('home');home.sections[0].headingAlign=value;
-    assert.equal(pageSchema.parse(home).sections[0].headingAlign,value==='left'?'left':'center');
+    const home=load('home');home.sections.find((s:any)=>s._block==='content').headingAlign=value;
+    assert.equal(pageSchema.parse(home).sections.find(s=>s._block==='content')!.headingAlign,value==='left'?'left':'center');
   }
   for(const value of ['right','justify','left extra','text-left','#fff',0,{},[]]){
-    const home=load('home');home.sections[0].headingAlign=value;
+    const home=load('home');home.sections.find((s:any)=>s._block==='content').headingAlign=value;
     assert.equal(pageSchema.safeParse(home).success,false,JSON.stringify(value));
   }
 });
@@ -43,7 +44,7 @@ test('ordinary and protected CMS heading models use the same select directly aft
 test('CMS Center/Left save and restore preserve unrelated section, card, surface and commercial fields',()=>{
   for(const name of ['home','synlighet','seo']){
     const original=load(name),entry=entryForFile(cms,`app/src/content/pages/${name}.json`);
-    for(const index of name==='synlighet'?[0,original.sections.length-1]:[0]){
+    for(const index of name==='synlighet'?[0,original.sections.length-1]:[original.sections.findIndex((s:any)=>s._block==='content')]){
       const form=structuredClone(original);form.sections[index].headingAlign='left';
       const saved=JSON.parse(cmsJsonSave(original,form,entry,cms));assertPreservedContent(form,saved);assert.deepEqual(pageSchema.parse(saved),pageSchema.parse(form));
       form.sections[index].headingAlign='center';const restored=JSON.parse(cmsJsonSave(saved,form,entry,cms));assertPreservedContent(form,restored);

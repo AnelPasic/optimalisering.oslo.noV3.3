@@ -24,7 +24,7 @@ test('D-054 allows owner-edited work areas and shared cost rules through the sam
 
 test('D-024 keeps the exact free-check promise and approved bounded manual safeguards', () => {
   assert.equal(page.homepage.form.promise, 'Få våre 3 viktigste funn innen 2 virkedager.');
-  const assessment = page.sections.find((section: any) => section.id === 'sjekk');
+  const assessment = page.homepage.assessmentSection;
   assert.match(assessment.body.join(' '), /kort, manuell vurdering.*ikke en full revisjon, prognose eller gratis gjennomføring/);
   assert.equal(page.status, 'REVIEW_REQUIRED');
   assert.equal(page.authority, 'DRAFT / NON-AUTHORITATIVE');

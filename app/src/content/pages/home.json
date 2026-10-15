@@ -7,23 +7,7 @@
     "title": "SEO, AI-synlighet og konverteringsoptimalisering | Optimalisering Oslo",
     "description": "Bli funnet og gjør flere besøk til henvendelser og salg. Optimalisering for konkurranseutsatte bedrifter i Norge. Ta en gratis, manuell sjekk."
   },
-  "eyebrow": "For bedrifter som konkurrerer om kundene",
-  "title": "Bli funnet. Gjør større andel av besøk til henvendelser og salg.",
-  "intro": "SEO, AI-synlighet og konverteringsoptimalisering for bedrifter i Oslo og resten av Norge. Vi starter der kundereisen stopper.",
-  "cta": {
-    "label": "Ta en gratis sjekk",
-    "href": "/#sjekk"
-  },
   "homepage": {
-    "secondaryCta": {
-      "label": "Se priser",
-      "href": "/#priser"
-    },
-    "heroPhoto": {
-      "src": "/images/home/hero-customer.webp",
-      "positionX": 50,
-      "positionY": 45
-    },
     "selector": {
       "heading": "Hva trenger du hjelp med?",
       "items": [
@@ -418,12 +402,48 @@
       ],
       "copyrightProvider": "Optimalisering Oslo",
       "footerNote": "Et godt sted å begynne."
+    },
+    "assessmentSection": {
+      "_block": "protected",
+      "id": "sjekk",
+      "eyebrow": "Gratis, manuell sjekk",
+      "heading": "Send nettsiden. Vi sier hvor vi ville startet - og hvorfor.",
+      "body": [
+        "Vi ser på den offentlige nettsiden eller nettbutikken og sender deg de tre viktigste tingene vi ville undersøkt eller forbedret først.",
+        "Dette er en kort, manuell vurdering - ikke en full revisjon, prognose eller gratis gjennomføring. Videre arbeid avtales separat."
+      ]
     }
   },
   "sections": [
     {
+      "_block": "selector",
+      "uid": "31bd8ddb-5a47-4bc4-99b5-a5461e6103f6",
+      "id": "behov",
+      "name": "Behovsvelger"
+    },
+    {
+      "_block": "calculator",
+      "uid": "dc92cca5-b95c-487c-b2a2-08e296972a65",
+      "id": "regneeksempel",
+      "name": "Regneeksempel"
+    },
+    {
+      "_block": "packages",
+      "uid": "7b687594-17f4-4266-adf5-12b710f563af",
+      "id": "priser",
+      "name": "Pakker og priser"
+    },
+    {
+      "_block": "proof",
+      "uid": "ac0c6119-b0b8-4739-abd0-7ad7833e5556",
+      "id": "resultater",
+      "name": "Kunderesultater"
+    },
+    {
       "_block": "content",
+      "uid": "42fceeca-61eb-49cd-b250-95060a060aa9",
       "id": "mekanisme",
+      "name": "Slik virker optimalisering",
       "eyebrow": "Start med det som begrenser resultatet",
       "heading": "Slik finner vi hva som bør gjøres først",
       "body": [
@@ -450,7 +470,9 @@
     },
     {
       "_block": "content",
+      "uid": "e46130c0-de3c-40ef-815d-c16039346d6f",
       "id": "passer",
+      "name": "Hvem passer det for",
       "eyebrow": "Er dette aktuelt for bedriften?",
       "heading": "Best når kundene faktisk har et valg.",
       "items": [
@@ -465,14 +487,16 @@
       ]
     },
     {
-      "_block": "protected",
+      "_block": "assessment",
+      "uid": "d6ff367f-a926-4ee2-bdcb-7731ce43c183",
       "id": "sjekk",
-      "eyebrow": "Gratis, manuell sjekk",
-      "heading": "Send nettsiden. Vi sier hvor vi ville startet - og hvorfor.",
-      "body": [
-        "Vi ser på den offentlige nettsiden eller nettbutikken og sender deg de tre viktigste tingene vi ville undersøkt eller forbedret først.",
-        "Dette er en kort, manuell vurdering - ikke en full revisjon, prognose eller gratis gjennomføring. Videre arbeid avtales separat."
-      ]
+      "name": "Gratis sjekk"
+    },
+    {
+      "_block": "faq",
+      "uid": "75bcd975-20e4-433d-809e-b43d2b104f47",
+      "id": "sporsmal",
+      "name": "Ofte stilte spørsmål"
     }
   ],
   "faq": [
@@ -496,5 +520,28 @@
       "question": "Jobber dere bare med bedrifter i Oslo?",
       "answer": "Nei. Vi jobber med bedrifter i hele Norge og kan også hjelpe i andre nordiske markeder. Navnet beskriver tjenesten og satsingen - ikke et krav om at kunden holder til i Oslo."
     }
-  ]
+  ],
+  "hero": {
+    "layout": "split-right",
+    "eyebrow": "For bedrifter som konkurrerer om kundene",
+    "title": "Bli funnet. Gjør større andel av besøk til henvendelser og salg.",
+    "support": "SEO, AI-synlighet og konverteringsoptimalisering for bedrifter i Oslo og resten av Norge. Vi starter der kundereisen stopper.",
+    "primaryCta": {
+      "label": "Ta en gratis sjekk",
+      "href": "/#sjekk"
+    },
+    "secondaryCta": {
+      "label": "Se priser",
+      "href": "/#priser"
+    },
+    "visual": {
+      "kind": "image",
+      "image": {
+        "src": "/images/home/hero-customer.webp",
+        "positionX": 50,
+        "positionY": 45
+      }
+    },
+    "titleEmphasis": "first-sentence"
+  }
 }

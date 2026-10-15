@@ -1,0 +1,24 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import type { HomepageBlock } from '../lib/home-builder';
+import { assertNever } from '../lib/home-builder';
+import Arrow from './Arrow.astro';
+import HomeSymbol from './HomeSymbol.astro';
+import Leverage from './HomeLeverage.astro';
+import ContentSection from './HomeSection.astro';
+import Assessment from './HomeAssessment.astro';
+import Proof from './HomeProof.astro';
+import Packages from './PackageSection.astro';
+interface Props { block: HomepageBlock; page: CollectionEntry<'pages'>['data']; records: CollectionEntry<'proofCases'>['data'][]; }
+const {block,page,records}=Astro.props;
+const home=page.homepage!;
+const render=(value:HomepageBlock)=>{switch(value._block){case 'selector':case 'calculator':case 'packages':case 'proof':case 'content':case 'assessment':case 'faq':return value._block;default:return assertNever(value);}};
+const kind=render(block);
+---
+{kind==='selector'&&<section id={block.id} class="need-section section-space"><div class="shell"><h2>{home.selector.heading}</h2><div class="need-grid">{home.selector.items.map((item,index)=><a class={`card need-card need-card-${index}`} href={item.link.href}><div class="home-card-top"><span class="discipline">{item.discipline}</span><HomeSymbol kind={index===0?'search':index===1?'choose':'both'} /></div><h3>{item.title}</h3><p>{item.description}</p><span class="text-link">{item.link.label}<Arrow diagonal /></span></a>)}</div></div></section>}
+{kind==='calculator'&&<Leverage content={home.calculator} />}
+{kind==='packages'&&<Packages content={home.packages} />}
+{kind==='proof'&&<Proof content={home.proof} records={records} />}
+{block._block==='content'&&<ContentSection section={block} />}
+{kind==='assessment'&&<Assessment section={home.assessmentSection} content={home.form} />}
+{kind==='faq'&&<section id={block.id} class="faq-section section-space"><div class="shell faq-grid"><div><p class="eyebrow">{home.faqEyebrow}</p><h2>{home.faqHeading}</h2></div><div class="faq-list">{page.faq.map(item=><details class="collapse collapse-plus"><summary class="collapse-title">{item.question}</summary><p class="collapse-content">{item.answer}</p></details>)}</div></div></section>}

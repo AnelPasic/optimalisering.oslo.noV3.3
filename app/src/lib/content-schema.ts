@@ -5,11 +5,12 @@ import { listingSchema, pageListSchema } from './page-list.ts';
 import { featuredProofVisualFieldSchema } from './proof-presentation.ts';
 import { compositionSchema, resolveRouteFamily, routeKindSchema } from './route-family.ts';
 
+import { heroSchema, homepageBlocksSchema } from './home-builder.ts';
+
 const link = z.object({ label: z.string(), href: z.string().startsWith('/') });
 export const proofSlotSchema = z.object({ publicationApproved: z.boolean(), caseIds: z.array(z.string()).default([]), eyebrow: z.string(), heading: z.string(), beforeLabel: z.string(), afterLabel: z.string(), changeLabel: z.string() });
 const homepage = z.object({
-  secondaryCta: link,
-  heroPhoto: z.object({ src: z.string().regex(/^\/images\/home\/[a-z0-9][a-z0-9-]*\.webp$/), positionX: z.number().min(0).max(100), positionY: z.number().min(0).max(100) }),
+  assessmentSection: z.object({ _block: z.literal('protected'), id: z.literal('sjekk'), eyebrow: z.string().optional(), heading: z.string(), body: z.array(z.string()).default([]) }),
   selector: z.object({ heading: z.string(), items: z.array(z.object({ title: z.string(), discipline: z.string(), description: z.string(), link })).length(3) }),
   calculator: z.object({
     eyebrow: z.string(), heading: z.string(), intro: z.string(), formula: z.string(), caveat: z.string(),
@@ -53,17 +54,28 @@ const homepage = z.object({
   faqHeading: z.string(), faqEyebrow: z.string(),
   chrome: z.object({ brand: z.string(), brandLocation: z.string(), homeLabel: z.string(), skipLabel: z.string(), navigationLabel: z.string(), mobileNavigationLabel: z.string(), openMenu: z.string(), closeMenu: z.string(), assessmentLink: link, navigation: z.array(link), providerText: z.string(), previewLabel: z.string(), serviceNavigationLabel: z.string(), informationNavigationLabel: z.string(), storeLink: link, informationLinks: z.array(link), copyrightProvider: z.string(), footerNote: z.string() }),
 });
-export const pageSchema = z.object({
+export const pageSchema = z.preprocess((input,context)=>{
+  const raw=input as {kind?:string;sections?:unknown;hero?:unknown};
+  if(raw?.kind==='home'){
+    const result=homepageBlocksSchema.safeParse(raw.sections);
+    if(!result.success)for(const issue of result.error.issues)context.addIssue({...issue,path:['sections',...issue.path]});
+    const hero=heroSchema.safeParse(raw.hero);
+    if(hero.success)return {...raw,eyebrow:hero.data.eyebrow,title:hero.data.title,intro:hero.data.support,cta:hero.data.primaryCta,sections:result.success?result.data.map(b=>({...b,heading:'heading' in b?b.heading:'',body:'body' in b?b.body:[]})):raw.sections};
+  }
+  return input;
+}, z.object({
     slug: z.string(),
     kind: routeKindSchema,
     composition: compositionSchema.optional(),
     status: z.enum(['REVIEW_REQUIRED', 'CONTENT_LOCKED', 'PUBLISHED']),
     authority: z.enum(['DRAFT / NON-AUTHORITATIVE', 'CONTENT_LOCKED / AUTHORITATIVE']),
     seo: z.object({ title: z.string(), description: z.string() }),
+    hero: heroSchema.optional(),
     eyebrow: z.string(), title: z.string(), intro: z.string(),
     listing: listingSchema.optional(),
     sections: z.array(z.object({
-      _block: z.enum(['content', 'protected', 'pageList']).optional(), surface: surfaceSchema,
+      uid: z.string().optional(), name: z.string().optional(),
+      _block: z.enum(['content', 'protected', 'pageList', 'selector', 'calculator', 'packages', 'proof', 'assessment', 'faq']).optional(), surface: surfaceSchema,
       pageList: pageListSchema.optional(),
       headingAlign: headingAlignSchema,
       id: z.string(), eyebrow: z.string().optional(), heading: z.string(), body: z.array(z.string()).default([]),
@@ -84,7 +96,7 @@ export const pageSchema = z.object({
     homepage: homepage.optional(),
   }).superRefine((page, context) => {
     try { resolveRouteFamily(page); } catch (error) { context.addIssue({code:'custom',path:['composition'],message:error instanceof Error?error.message:'Invalid composition'}); }
-    page.sections.forEach((section, index) => {
+    if (page.kind !== 'home') page.sections.forEach((section, index) => {
       const model = sectionModel(page.slug, section.id);
       const isPageList = section._block === 'pageList';
       if (isPageList && (page.slug !== 'innsikt' || page.kind !== 'index' || model === 'protected' || !section.pageList || section.items || section.links)) context.addIssue({ code: 'custom', path: ['sections', index], message: 'PageList requires Innsikt index configuration without duplicated items/links' });
@@ -94,8 +106,8 @@ export const pageSchema = z.object({
     });
     if (['synlighet', 'konvertering'].includes(page.slug) && page.sections.filter(section => section.id === 'sjekk').length !== 1) context.addIssue({ code: 'custom', path: ['sections'], message: 'Protected service CTA identity must remain present' });
     if (page.kind === 'home' && !page.homepage) context.addIssue({ code: 'custom', path: ['homepage'], message: 'Homepage content model is required' });
-    if (page.kind === 'home') for (const id of ['mekanisme', 'passer', 'sjekk']) {
-      if (page.sections.filter(section => section.id === id).length !== 1) context.addIssue({ code: 'custom', path: ['sections'], message: `Homepage requires exactly one ${id} section` });
+    if (page.kind === 'home') {
+      if (!page.hero) context.addIssue({code:'custom',path:['hero'],message:'Structured homepage Hero is required'});
+
     }
-    if (page.kind === 'home' && page.sections.map(section => section.id).join(',') !== 'mekanisme,passer,sjekk') context.addIssue({ code: 'custom', path: ['sections'], message: 'Homepage sections must retain the D-037 render order' });
-  });
+  }));

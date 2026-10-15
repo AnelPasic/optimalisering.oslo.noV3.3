@@ -3,11 +3,19 @@ import { getCollection } from 'astro:content';
 import SiteLayout from '../layouts/SiteLayout.astro';
 import PackageSection from '../components/PackageSection.astro';
 import PageList from '../components/PageList.astro';
+import CommercialHero from '../components/CommercialHero.astro';
 import HomeSection from '../components/HomeSection.astro';
 const pages=(await getCollection('pages')).map(p=>p.data);
 const home=pages.find(p=>p.kind==='home')!;
 const pageList=pages.find(p=>p.kind==='index')!.sections.find(s=>s.pageList)!;
 const examples=home.sections.filter(s=>['mekanisme','passer'].includes(s.id));
+const heroExamples=[
+ {key:'split-right',label:'Tekst venstre / bilde høyre',hero:{...home.hero!,layout:'split-right' as const}},
+ {key:'split-left',label:'Bilde venstre / tekst høyre',hero:{...home.hero!,layout:'split-left' as const}},
+ {key:'centered',label:'Sentrert med bilde',hero:{...home.hero!,layout:'centered' as const}},
+ {key:'centered-none',label:'Sentrert uten bilde',hero:{...home.hero!,layout:'centered' as const,visual:{kind:'none' as const}}},
+ {key:'long',label:'Lang overskrift',hero:{...home.hero!,layout:'centered' as const,title:'Gjør veien fra det første relevante søket til en tydelig henvendelse enklere for kundene som vurderer bedriften din.',titleEmphasis:'none' as const}},
+];
 const colors=['base-100','base-200','base-300','base-content','primary','primary-content','secondary','secondary-content','accent','accent-content','neutral','neutral-content','info','info-content','success','success-content','warning','warning-content','error','error-content'];
 const ds={
  section:'ds-section border-t border-base-300 pt-12 md:pt-16 space-y-8 md:space-y-10',
@@ -44,6 +52,9 @@ const ds={
      <article class={ds.type}><p class="eyebrow">Meta / Eyebrow</p><div class="space-y-5"><p class="eyebrow">Liten overskrift / eyebrow</p><p class="small-copy">Metadata · Oppdatert 15. oktober 2026</p></div></article>
     </div>
     <div class={ds.group}><h3>Lang overskrift</h3><div class={ds.specimen}><h2>En svært lang norsk overskrift om hvordan synlighet og konvertering kan gjøre det enklere å finne et tydelig sted å starte</h2></div></div>
+   </section>
+   <section class={ds.section}><div class={ds.group}><h2>Hero-varianter</h2><p>Samme strukturerte Hero med tre trygge oppsett. Interne eksempler til gjennomgang.</p></div>
+    <div class="space-y-16 md:space-y-24">{heroExamples.map(example=><div class={ds.group} data-hero-demo={example.key}><h3>{example.label}</h3><div class="rounded-box border border-base-300 bg-base-100"><CommercialHero content={example.hero} demo /></div></div>)}</div>
    </section>
    <section class={ds.section}><div class={ds.group}><h2>Knapper og status</h2><p>Varianter og tilstander vurderes i egne grupper.</p></div>
     <div class={ds.group}><h3>Knapper</h3><div class="flex flex-wrap items-center gap-4"><button class="btn btn-primary" data-theme-sample>Se hvor vi ville startet</button><button class="btn btn-secondary">Les om arbeidsmåten</button><button class="btn btn-ghost">Tilbake</button><a class="btn btn-link" href="#eksempelskjema">Gå til eksempelskjemaet</a><button class="btn btn-primary" disabled>Innsending er stengt</button></div></div>

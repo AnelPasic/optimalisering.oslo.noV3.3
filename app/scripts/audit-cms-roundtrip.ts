@@ -18,12 +18,12 @@ const checks = snapshots.map(record => {
   const original = JSON.parse(record.bytes.toString());
   const form = structuredClone(original);
   const field = record.directory === 'proof' ? null : 'title';
-  if (field) form[field] = 'H017B harmless in-memory round-trip';
+  if (field) (form.hero ?? form)[field] = 'H017B harmless in-memory round-trip';
   const entry = entryForFile(cms, `app/${record.file}`);
   assert.ok(entry, record.file);
   const serialized = cmsJsonSave(original, form, entry, cms);
   const saved = JSON.parse(serialized);
-  const expected = field ? { ...original, [field]: form[field] } : original;
+  const expected = form;
   assertPreservedContent(expected, saved);
   const schema = record.directory === 'pages' ? pageSchema : record.directory === 'terminology' ? glossarySchema : proofContentSchema;
   const normalizedExpected = record.directory === 'proof' && expected.publicationApproved === true && !proofCaseSchema.safeParse(saved).success ? { ...expected, publicationApproved: false } : expected;
