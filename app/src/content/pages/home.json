@@ -75,37 +75,6 @@
   },
   "sections": [
     {
-      "_block": "content",
-      "uid": "42fceeca-61eb-49cd-b250-95060a060aa9",
-      "name": "Slik virker optimalisering",
-      "id": "mekanisme",
-      "eyebrow": "Start med det som begrenser resultatet",
-      "heading": "Slik finner vi hva som bør gjøres først",
-      "layout": "stacked",
-      "body": [
-        "Behovet avgjør tiltakene. Vi starter ikke med SEO eller en annen kanal bare fordi du kom inn på en bestemt side."
-      ],
-      "items": [
-        {
-          "title": "Finn flaskehalsen",
-          "text": "Se hvor kundereisen stopper: før besøket, på siden eller i veien til kontakt og kjøp.",
-          "boxVariant": "card"
-        },
-        {
-          "title": "Prioriter tiltak",
-          "text": "Velg en fornuftig start ut fra behov, kommersiell verdi og det vi faktisk vet."
-        },
-        {
-          "title": "Gjennomfør",
-          "text": "Gjør arbeidet som er avtalt. Omfang og ansvar skal være tydelig."
-        },
-        {
-          "title": "Mål effekt",
-          "text": "Følg med på relevante henvendelser og kjøp. Se resultatene sammen med verdi og kostnader."
-        }
-      ]
-    },
-    {
       "_block": "selector",
       "uid": "31bd8ddb-5a47-4bc4-99b5-a5461e6103f6",
       "id": "behov",
@@ -437,6 +406,37 @@
         "afterLabel": "Etter",
         "changeLabel": "Arbeid"
       }
+    },
+    {
+      "_block": "content",
+      "uid": "42fceeca-61eb-49cd-b250-95060a060aa9",
+      "name": "Slik virker optimalisering",
+      "id": "mekanisme",
+      "eyebrow": "Start med det som begrenser resultatet",
+      "heading": "Slik finner vi hva som bør gjøres først",
+      "layout": "default",
+      "body": [
+        "Behovet avgjør tiltakene. Vi starter ikke med SEO eller en annen kanal bare fordi du kom inn på en bestemt side."
+      ],
+      "items": [
+        {
+          "title": "Finn flaskehalsen",
+          "text": "Se hvor kundereisen stopper: før besøket, på siden eller i veien til kontakt og kjøp.",
+          "boxVariant": "default"
+        },
+        {
+          "title": "Prioriter tiltak",
+          "text": "Velg en fornuftig start ut fra behov, kommersiell verdi og det vi faktisk vet."
+        },
+        {
+          "title": "Gjennomfør",
+          "text": "Gjør arbeidet som er avtalt. Omfang og ansvar skal være tydelig."
+        },
+        {
+          "title": "Mål effekt",
+          "text": "Følg med på relevante henvendelser og kjøp. Se resultatene sammen med verdi og kostnader."
+        }
+      ]
     },
     {
       "_block": "content",
