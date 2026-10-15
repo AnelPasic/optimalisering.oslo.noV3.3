@@ -205,6 +205,41 @@ If utility/legal pages deliberately use reduced chrome, make that a semantic fam
 
 Update /design-system/ as migration discovers/locks any missing shared primitive.
 
+OWNER visual feedback after H-023A: the page is technically useful but visually too dense and reads like a component dump. In particular, typography specimens and adjacent section headings are visually glued together.
+
+Treat /design-system/ as a real Visual Shell review artifact.
+
+### Required polish
+
+Create page-local review composition primitives, for example:
+- `ds-section`
+- `ds-group`
+- `ds-specimen`
+- `ds-type-specimen`
+- `ds-grid-demo`
+
+Names may differ, but the intent must be explicit.
+
+Required outcomes:
+- clear vertical separation between major demo sections
+- consistent spacing between section heading, explanation and examples
+- typography specimens separated into deliberate rows/cards/groups instead of H1/H2/H3/H4 stacked tightly together
+- each typography role clearly identifiable (Display, H1, H2, H3, H4, Lead, Body, Meta/Eyebrow)
+- long-heading stress test visually separated from the normal type scale
+- 2/3/4-card demos each get their own labelled block and breathing room
+- button/status examples grouped instead of running into the next block
+- form controls have consistent field-group spacing
+- surface examples have equal outer gaps and internal padding
+- pricing/PageList examples are separated from surrounding explanatory text
+- mobile spacing remains generous enough to inspect components without becoming a giant wall of tiny samples
+
+Use Tailwind spacing utilities and the approved theme/components first.
+
+Do NOT solve this by adding generic global margins to all `h1/h2/h3/h4`.
+Global heading elements are intentionally composition-neutral; spacing belongs to the section/content-stack primitive.
+
+Do NOT change the approved type scale merely to make the demo page look less dense.
+
 It remains:
 - internal
 - noindex
