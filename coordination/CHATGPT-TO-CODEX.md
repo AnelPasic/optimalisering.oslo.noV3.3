@@ -1,9 +1,30 @@
 # ChatGPT to Codex
 
-## Active handoff - NONE / H-021 PAGELIST SYSTEM COMPLETE
+## Active handoff - H-022 PROOF PRESENTATION
 
-2026-10-14 OWNER + STRATEGY_CONTENT review passes the complete H-021/H-021B/H-021C PageList system under D-083. Final visual implementation `e5965c601d6a09d1cd6672ef14ed025b68aed818` is accepted. Page records remain source of truth for listing copy/media; PageList owns automatic/manual selection, sorting, limit/exclusion and semantic layout. Images keep large alternating media treatment; icons use compact text-dominant fallback. No further H-021 implementation is required. Authenticated save of the newer PageList visual fields remains unexercised but is not a blocker for this gate given prior authenticated H-019 CMS pipeline proof and H-021/B/C config/schema/source-render evidence.
+Date: 2026-10-15
+Authority: OWNER + STRATEGY_CONTENT
+Exact contract: `coordination/H022-PROOF-PRESENTATION.md`
+
+Pull latest main and implement H-022 only.
+
+Proof data/content/case selection are accepted and LOCKED for this task.
+
+Fix presentation only:
+- Eurotents stays featured but must use the full width intentionally
+- make 4,3x -> 17,2x the dominant visual story
+- 20 % lower spend becomes secondary support
+- Nysta + Helt Opplagt stay balanced supporting cards
+- no new copy, caveats, graphs, logos or proof research
+- use current shared typography/surface/card primitives
+- preserve service-page proof behavior
+
+Focused responsive proof QA + one full verify only.
+
+Push main, verify Worker, update CODEX-TO-CHATGPT, then STOP for OWNER visual review.
+
 ---
+
 
 
 
