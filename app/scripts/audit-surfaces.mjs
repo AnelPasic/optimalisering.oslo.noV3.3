@@ -9,9 +9,6 @@ const sources = cssSources();
 const defined = new Set(sources.flatMap(s => [...s.css.matchAll(/(--[\w-]+)\s*:/g)].map(m => m[1])));
 const central = new Set([...(tokens + theme).matchAll(/(--[\w-]+)\s*:/g)].map(m => m[1]));
 const exceptions = [
-  { path: 'src/styles/global.css', property: 'border-left', value: '2px solid #ab7748', reason: 'Existing warm preview-notice state on legacy pages.' },
-  { path: 'public/styles/home-invite.css', property: 'border-color', value: '#f9bf9f', reason: 'Calculator invalid-input state on plum; preserve the signal.' },
-  { path: 'public/styles/home-invite.css', property: 'border-left-color', value: '#a97932', reason: 'Invite preview-notice state; preserve its amber signal.' },
   { path: 'src/components/HomeLeverage.astro', property: 'border-top', value: '2px dashed #63516b', reason: 'Legend matches the unchanged current-series stroke.' },
   { path: 'src/components/HomeLeverage.astro', property: 'border-top', value: '3px solid #087b73', reason: 'Legend matches the unchanged scenario-series stroke.' },
 ];
@@ -39,4 +36,4 @@ const failures = inventory.declarations.filter(d => d.path !== 'src/styles/surfa
 assert.deepEqual(failures, [], JSON.stringify(failures, null, 2));
 for (const e of exceptions) assert.ok(inventory.declarations.filter(d => d.path === e.path && d.property === e.property && d.value === e.value).length <= 1, `Duplicated exception: ${e.reason}`);
 for (const name of ['radius-button','radius-sm','radius-md','radius-card','radius-card-lg','radius-pill','surface-base','surface-soft','surface-mint','surface-dark','border-subtle','border-dark','shadow-soft','panel-pad-sm','panel-pad','panel-pad-lg']) assert.ok(tokens.includes(`--${name}:`));
-console.log(`H-018 source guard PASS: shared radii/shadow/borders, ${exceptions.length} explicit state/series exceptions; new one-offs fail.`);
+console.log(`H-018 source guard PASS: shared radii/shadow/borders, ${exceptions.length} explicit series exceptions; new one-offs fail.`);

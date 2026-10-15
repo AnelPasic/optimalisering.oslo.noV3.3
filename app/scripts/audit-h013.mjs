@@ -5,7 +5,7 @@ const html=readFileSync('dist/priser/index.html','utf8');
 const text=value=>value.replace(/<[^>]*>/g,' ').replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/\s+/g,' ').trim();
 for(const file of ['dist/index.html','dist/priser/index.html']) {
   const content=readFileSync(file,'utf8');
-  const cards=[...content.matchAll(/<article\b[^>]*class="package-card[^>]*>(.*?)<\/article>/gs)].map(m=>m[1]);
+  const cards=[...content.matchAll(/<article\b[^>]*class="[^"]*\bpackage-card\b[^>]*>(.*?)<\/article>/gs)].map(m=>m[1]);
   assert.equal(cards.length,3);
   for(const [index,item] of home.homepage.packages.items.entries()) {
     assert.ok(cards[index].includes(`href="${item.cta.href}"`) && text(cards[index]).includes(item.cta.label));

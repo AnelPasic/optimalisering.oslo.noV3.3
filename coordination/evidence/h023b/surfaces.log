@@ -1,0 +1,5 @@
+
+> optimalisering-oslo-v3-3@0.1.0 qa:surfaces
+> node scripts/audit-surfaces.mjs
+
+H-018 source guard PASS: shared radii/shadow/borders, 2 explicit series exceptions; new one-offs fail.

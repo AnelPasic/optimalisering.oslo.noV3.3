@@ -24,6 +24,13 @@
 .input, .textarea, .select { font-family: var(--body); font-size: var(--type-body-sm); line-height: var(--leading-body); color: var(--color-base-content); background-color: var(--color-base-200); }
 .input, .select { min-height: var(--control-height); }
 .textarea { min-height: 100px; }
+.input::placeholder, .textarea::placeholder { color: var(--color-muted); opacity: 1; }
+.assessment-form .btn { transition: none; }
+.assessment-form.card { background: var(--color-base-100); padding: var(--panel-pad-lg); }
+.info-item.card { padding: var(--panel-pad-lg); }
+.info-item:not(.card) { border-radius: 0; padding: var(--panel-pad) 0 0; }
+.info-item:not(.card):not([data-surface]) { border: 0; border-top: var(--border-subtle); background: none; }
+.package-order-form label { font-size: var(--type-form-label); font-weight: var(--weight-label); line-height: var(--leading-small); }
 .input[aria-invalid="true"] { border-color: var(--color-error); }
 .badge { font-size: var(--type-label); line-height: var(--leading-small); height: auto; white-space: normal; padding-block: 4px; }
 .card-title { font-size: var(--type-h4); line-height: var(--leading-h4); }

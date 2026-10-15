@@ -1,0 +1,526 @@
+{
+  "baselineClasses": 340,
+  "removed": [
+    {
+      "path": "src/styles/global.css",
+      "selector": ":root",
+      "reason": "Legacy palette removed; shared theme is sole authority."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".button",
+      "reason": "All button instances migrate to daisyUI."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".button:hover",
+      "reason": "All button instances migrate to daisyUI."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".button-small",
+      "reason": "All button instances migrate to daisyUI."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".button-light",
+      "reason": "All button instances migrate to daisyUI."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".button-light:hover",
+      "reason": "All button instances migrate to daisyUI."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".button:disabled",
+      "reason": "All button instances migrate to daisyUI."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".hero-note",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".hero-strip",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".hero-strip span",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".hero-strip span::before",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".journey-art",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".journey-top",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".journey-top > span:last-child",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".journey-card",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".journey-find",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".journey-choose",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".journey-number",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".journey-symbol",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".journey-label",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".journey-caption",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".journey-connector",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".journey-bottom",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".leverage-label",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".leverage-inputs",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".leverage-inputs label",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".leverage-inputs input",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".leverage-inputs > span",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".leverage-inputs input[name=conversion]",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".input-unit",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".form-process",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".form-process > div",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".form-process h3",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".form-process p",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".assessment-form > input, .assessment-form > select, .assessment-form > textarea",
+      "reason": "Routine fields now use shared daisyUI input/select/textarea."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".assessment-form > textarea",
+      "reason": "Routine fields now use shared daisyUI input/select/textarea."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".assessment-form input::placeholder, .assessment-form textarea::placeholder",
+      "reason": "Routine fields now use shared daisyUI input/select/textarea."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".faq-list details",
+      "reason": "Native details uses shared daisyUI collapse; layout owned by project adapter."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".faq-list details:first-child",
+      "reason": "Native details uses shared daisyUI collapse; layout owned by project adapter."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".faq-list summary",
+      "reason": "Native details uses shared daisyUI collapse; layout owned by project adapter."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".faq-list summary::-webkit-details-marker",
+      "reason": "Native details uses shared daisyUI collapse; layout owned by project adapter."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".faq-list summary span",
+      "reason": "Native details uses shared daisyUI collapse; layout owned by project adapter."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".faq-list details[open] summary span",
+      "reason": "Native details uses shared daisyUI collapse; layout owned by project adapter."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".faq-list details p",
+      "reason": "Native details uses shared daisyUI collapse; layout owned by project adapter."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".inner-pricing",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".journey-art",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".journey-card",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".journey-find",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".journey-choose",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".journey-art",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".journey-card",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".journey-symbol",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".journey-find",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".journey-choose",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".journey-connector",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".leverage-inputs",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".button-small",
+      "reason": "All button instances migrate to daisyUI."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".button-small .arrow-icon",
+      "reason": "All button instances migrate to daisyUI."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".hero-note",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".journey-art",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".journey-card",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".journey-find",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".journey-choose",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".journey-symbol",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".journey-symbol svg",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".journey-connector",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".journey-bottom",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".hero-strip",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".leverage-inputs",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".faq-list summary",
+      "reason": "Native details uses shared daisyUI collapse; layout owned by project adapter."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".button-small",
+      "reason": "All button instances migrate to daisyUI."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".button-small .arrow-icon",
+      "reason": "All button instances migrate to daisyUI."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".journey-art",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".journey-card",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".journey-symbol",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".journey-find",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".journey-choose",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".journey-connector",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".leverage-inputs",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".leverage-inputs input",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "src/styles/global.css",
+      "selector": ".input-unit",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "selector": ".invite-home .calculator-inputs input",
+      "reason": "Routine fields now use shared daisyUI input/select/textarea."
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "selector": ".invite-home .calculator-inputs input[aria-invalid=true]",
+      "reason": "Routine fields now use shared daisyUI input/select/textarea."
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "selector": ".invite-home .calculator-difference",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "selector": ".invite-home .calculator-difference output",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "selector": ".invite-home .calculator-difference [data-percentage]",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "selector": ".invite-home .calculator-caveat",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "selector": ".invite-home .package-badge",
+      "reason": "Shared daisyUI badge."
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "selector": ".invite-home .assessment-form input, .invite-home .assessment-form textarea",
+      "reason": "Routine fields now use shared daisyUI input/select/textarea."
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "selector": ".invite-home .home-section-medon",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "selector": ".invite-home .faq-list summary",
+      "reason": "Native details uses shared daisyUI collapse; layout owned by project adapter."
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "selector": ".invite-home .faq-list details p",
+      "reason": "Native details uses shared daisyUI collapse; layout owned by project adapter."
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "selector": ".invite-home .assessment-form input, .invite-home .assessment-form textarea",
+      "reason": "Routine fields now use shared daisyUI input/select/textarea."
+    },
+    {
+      "path": "public/styles/home-invite.css",
+      "selector": ".invite-home .calculator-inputs input",
+      "reason": "Routine fields now use shared daisyUI input/select/textarea."
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "selector": ".invite-home .package-offer .package-badge",
+      "reason": "Shared daisyUI badge."
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "selector": ".invite-home .package-offer .package-visual-asset",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "selector": ".invite-home .package-offer .package-visual-asset[data-vector=\"true\"]",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "public/styles/package-offer.css",
+      "selector": ".invite-home .package-offer .package-distinction",
+      "reason": "No selector consumer in any baseline rendered route."
+    },
+    {
+      "path": "public/styles/service-invite.css",
+      "selector": ".invite-service .home-section-sjekk .text-link",
+      "reason": "CTA links use the shared daisyUI button."
+    },
+    {
+      "path": "public/styles/service-invite.css",
+      "selector": ".invite-service .home-section-sjekk .text-link:hover",
+      "reason": "CTA links use the shared daisyUI button."
+    }
+  ],
+  "retained": {
+    "shared": 225,
+    "home": 38,
+    "sections": 23,
+    "calculator": 24,
+    "assessment": 9,
+    "package": 126,
+    "service": 49,
+    "pricing": 19
+  },
+  "removedFiles": [
+    "app/src/styles/global.css",
+    "app/public/styles/home-invite.css",
+    "app/public/styles/pricing-invite.css",
+    "app/public/styles/service-invite.css",
+    "app/public/styles/package-offer.css",
+    "app/src/components/ServicePage.astro",
+    "app/src/components/Header.astro",
+    "app/src/components/Footer.astro"
+  ],
+  "proof": "After import migration, all 60 route/width copy/metadata/order/chrome/FAQ/overflow checks passed without loading any old stylesheet. Source imports confirm zero callers of removed files. Historical task-specific snapshot scripts are retained as historical evidence, not current route consumers."
+}

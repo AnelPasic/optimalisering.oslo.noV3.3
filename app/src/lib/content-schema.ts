@@ -3,6 +3,7 @@ import { surfaceSchema, sectionModel } from './surface.ts';
 import { headingAlignSchema } from './heading-alignment.ts';
 import { listingSchema, pageListSchema } from './page-list.ts';
 import { featuredProofVisualFieldSchema } from './proof-presentation.ts';
+import { compositionSchema, resolveRouteFamily, routeKindSchema } from './route-family.ts';
 
 const link = z.object({ label: z.string(), href: z.string().startsWith('/') });
 export const proofSlotSchema = z.object({ publicationApproved: z.boolean(), caseIds: z.array(z.string()).default([]), eyebrow: z.string(), heading: z.string(), beforeLabel: z.string(), afterLabel: z.string(), changeLabel: z.string() });
@@ -54,7 +55,8 @@ const homepage = z.object({
 });
 export const pageSchema = z.object({
     slug: z.string(),
-    kind: z.enum(['home', 'service', 'article', 'index', 'utility', 'assessment', 'pricing']),
+    kind: routeKindSchema,
+    composition: compositionSchema.optional(),
     status: z.enum(['REVIEW_REQUIRED', 'CONTENT_LOCKED', 'PUBLISHED']),
     authority: z.enum(['DRAFT / NON-AUTHORITATIVE', 'CONTENT_LOCKED / AUTHORITATIVE']),
     seo: z.object({ title: z.string(), description: z.string() }),
@@ -81,6 +83,7 @@ export const pageSchema = z.object({
     translationKey: z.string().trim().min(1).optional(),
     homepage: homepage.optional(),
   }).superRefine((page, context) => {
+    try { resolveRouteFamily(page); } catch (error) { context.addIssue({code:'custom',path:['composition'],message:error instanceof Error?error.message:'Invalid composition'}); }
     page.sections.forEach((section, index) => {
       const model = sectionModel(page.slug, section.id);
       const isPageList = section._block === 'pageList';

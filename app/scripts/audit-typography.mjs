@@ -1,11 +1,12 @@
 import assert from 'node:assert/strict';
-import { readFileSync, readdirSync } from 'node:fs';
+import { readFileSync, readdirSync, existsSync } from 'node:fs';
 
 const tokens = readFileSync('src/styles/typography.css', 'utf8');
 const roles = ['display', 'h1', 'h2', 'h3', 'h4', 'lead', 'body-lg', 'body', 'body-sm', 'label', 'eyebrow', 'meta', 'caption', 'button', 'form-label', 'helper', 'caveat'];
 for (const role of roles) assert.ok(tokens.includes(`--type-${role}:`), `Missing role ${role}`);
 let declarations = 0;
 function scan(directory) {
+  if(!existsSync(directory))return;
   for (const entry of readdirSync(directory, { withFileTypes: true })) {
     const path = `${directory}/${entry.name}`;
     if (entry.isDirectory()) scan(path);

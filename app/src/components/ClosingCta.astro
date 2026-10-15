@@ -1,0 +1,6 @@
+---
+import Arrow from './Arrow.astro';
+interface Props { link:{href:string;label:string}; }
+const {link}=Astro.props;
+---
+<section class="closing-cta"><div class="shell"><div><p class="eyebrow">En gratis sjekk. En tydelig start.</p><h2>Finn ut hvor vi<br />ville startet.</h2></div><a class="button btn bg-base-100 text-primary" href={link.href}>{link.label}<Arrow diagonal /></a></div></section>

@@ -2,21 +2,21 @@
 import { site } from '../config/site';
 import Arrow from './Arrow.astro';
 ---
-<form id="skjema" class="assessment-form" method="post" action="/api/leads" data-assessment data-endpoint={site.leadEndpoint} data-enabled={String(site.leadsEnabled)}>
+<form id="skjema" class="assessment-form card" method="post" action="/api/leads" data-assessment data-endpoint={site.leadEndpoint} data-enabled={String(site.leadsEnabled)}>
   <div class="form-heading"><span class="eyebrow">Gratis, manuell sjekk</span><h3>Du sender en lenke.<br />Vi ser hvor vi ville startet.</h3></div>
   <label for="website">Nettside eller nettbutikk <span aria-hidden="true">*</span></label>
-  <input id="website" name="website" type="text" inputmode="url" placeholder="dinbedrift.no" required maxlength="2048" autocomplete="url" aria-describedby="website-error" />
+  <input class="input w-full" id="website" name="website" type="text" inputmode="url" placeholder="dinbedrift.no" required maxlength="2048" autocomplete="url" aria-describedby="website-error" />
   <p id="website-error" class="field-error" hidden></p>
   <label for="email">E-post for bedriften <span aria-hidden="true">*</span></label>
-  <input id="email" name="email" type="email" placeholder="deg@dinbedrift.no" required maxlength="254" autocomplete="email" />
+  <input class="input w-full" id="email" name="email" type="email" placeholder="deg@dinbedrift.no" required maxlength="254" autocomplete="email" />
   <label for="model">Hva ønsker du flere av? <span class="optional">Valgfritt</span></label>
-  <select id="model" name="model"><option value="">Velg hvis du vil</option><option value="henvendelser">Relevante henvendelser</option><option value="nettbutikk">Kjøp i nettbutikken</option><option value="annet">Annet / usikker</option></select>
+  <select class="select w-full" id="model" name="model"><option value="">Velg hvis du vil</option><option value="henvendelser">Relevante henvendelser</option><option value="nettbutikk">Kjøp i nettbutikken</option><option value="annet">Annet / usikker</option></select>
   <label for="message">Noe vi bør vite? <span class="optional">Valgfritt</span></label>
-  <textarea id="message" name="message" rows="3" maxlength="2000" placeholder="Fortell kort om behovet ditt"></textarea>
+  <textarea class="textarea w-full" id="message" name="message" rows="3" maxlength="2000" placeholder="Fortell kort om behovet ditt"></textarea>
   <p class="form-privacy">Ikke send innlogging, sensitive opplysninger eller personopplysninger om andre.</p>
-  <div class="honeypot" aria-hidden="true"><label for="website-confirmation">La feltet stå tomt</label><input id="website-confirmation" name="website_confirmation" tabindex="-1" autocomplete="off" /></div>
-  {!site.leadsEnabled && <p class="form-notice">Dette er en forhåndsvisning. Innsending er ikke åpnet ennå.</p>}
-  <button type="submit" class="button form-submit" disabled>Ta en gratis sjekk <Arrow diagonal /></button>
+  <div class="honeypot" aria-hidden="true"><label for="website-confirmation">La feltet stå tomt</label><input class="input w-full" id="website-confirmation" name="website_confirmation" tabindex="-1" autocomplete="off" /></div>
+  {!site.leadsEnabled && <p class="form-notice alert alert-warning">Dette er en forhåndsvisning. Innsending er ikke åpnet ennå.</p>}
+  <button type="submit" class="button form-submit btn btn-primary" disabled>Ta en gratis sjekk <Arrow diagonal /></button>
   <p class="form-privacy">Vi bruker opplysningene for å følge opp forespørselen. <a href="/personvern/">Les om personvern</a>.</p>
   <p class="form-status" role="status" aria-live="polite" tabindex="-1" hidden></p>
   <noscript><p>Skjemaet trenger JavaScript for innsending. <a href="/kontakt/">Se kontaktinformasjon</a>.</p></noscript>

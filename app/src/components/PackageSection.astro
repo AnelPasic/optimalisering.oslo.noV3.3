@@ -1,4 +1,5 @@
 ---
+import '../styles/compositions/package.css';
 import type { CollectionEntry } from 'astro:content';
 import Arrow from './Arrow.astro';
 import Visual from './PackageVisual.astro';
@@ -20,7 +21,7 @@ const formatPrice = (value: number) => new Intl.NumberFormat('nb-NO', { maximumF
 <section id="priser" class:list={['package-section', 'package-offer', 'section-space', { 'package-offer-full': expanded }]} aria-labelledby={labelledBy}>
   <div class="shell">
     {showHeading && <div class="section-heading"><p class="eyebrow">{content.eyebrow}</p><h2>{content.heading}</h2><p class="body-copy">{content.intro}</p></div>}
-    <div class="package-grid">{content.items.map((item, index) => <article id={expanded ? item.detailLink.href.split('#')[1] : undefined} class={`package-card package-card-${index}${item.recommended ? ' is-recommended' : ''}`}>
+    <div class="package-grid">{content.items.map((item, index) => <article id={expanded ? item.detailLink.href.split('#')[1] : undefined} class={`package-card package-card-${index} card${item.recommended ? ' is-recommended' : ''}`}>
       {expanded && index === 1 && recommendedAnchor && item.detailLink.href.split('#')[1] !== recommendedAnchor && <span id={recommendedAnchor} aria-hidden="true"></span>}
       <div class="package-top"><div class="package-heading"><Heading>{item.title}</Heading>{item.recommended && item.badge && <span class="package-badge badge badge-success">{item.badge}</span>}</div>
       <div class="package-price"><p>{item.pricePrefix && <span class="package-price-prefix">{item.pricePrefix} </span>}<span class="package-price-amount">{formatPrice(item.price)}</span> <span class="package-price-unit">{item.priceSuffix}</span></p><p class="small-copy">{item.vatSuffix}</p></div></div>

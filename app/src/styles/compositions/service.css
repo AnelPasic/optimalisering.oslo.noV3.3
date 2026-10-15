@@ -1,6 +1,6 @@
-/* Retained route/commercial compositions; H-023B inventories remaining migration. */
-@layer legacy {
-/* H-009: service patterns gated to /synlighet/ until their whole-page review. */
+/* H-023B: component-owned service composition; palette and primitives belong to app.css/daisyUI. */
+@layer composition {
+
 .invite-service .service-hero { padding-block: 32px 72px; }
 .invite-service .breadcrumbs { margin-bottom: 44px; font-size: var(--type-meta); color: var(--muted); line-height: var(--leading-small); }
 .invite-service .breadcrumbs a { color: inherit; }
@@ -9,18 +9,9 @@
 .invite-service .service-hero .hero-intro { max-width: 740px; margin-top: 24px; font-size: var(--type-lead); line-height: var(--leading-lead); color: var(--muted); }
 .invite-service .hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 28px; margin-top: 28px; }
 .invite-service .home-section-behov, .invite-service .home-section-prioritering { background: var(--surface-base); }
-.invite-service .home-section-behov .info-item { padding: var(--panel-pad-lg); border-top: 0; border-radius: var(--radius-card); background: var(--surface-mint); }
-.invite-service .home-section-behov .home-item-1 { background: var(--surface-lavender); }
-.invite-service .home-section-behov .home-item-2 { background: var(--surface-soft); }
 .invite-service .home-section-kanaler .section-items { gap: 56px; }
-.invite-service .home-section-kanaler .info-item {
-  padding: var(--panel-pad-lg);
-  border-radius: var(--radius-card);
-}
 .invite-service .info-item { display: flex; flex-direction: column; align-items: start; }
 .invite-service .info-item .text-link { margin-top: auto; padding-top: 24px; }
-.invite-service .home-section-sammenheng { --ink: #fff; --muted: #e0d9e7; --line: #65536e; background: var(--surface-dark); color: #fff; }
-.invite-service .home-section-sammenheng .eyebrow { color: #b9e8d4; }
 .invite-service .home-section-sammenheng .section-links { margin-left: calc((100% + 96px) / 2); }
 .invite-service .service-pricing-heading { display: flex; justify-content: space-between; align-items: end; gap: 40px; }
 .invite-service .service-pricing-heading h2 { max-width: 760px; }
@@ -33,30 +24,42 @@
 .invite-service .service-package .package-price { border: 0; margin-top: 12px; }
 .invite-service .home-section-sjekk { background: var(--surface-cta); }
 .invite-service .home-section-sjekk .section-links { margin-left: calc((100% + 96px) / 2); }
-.invite-service .home-section-sjekk .text-link { background: var(--green); color: #fff; padding: var(--panel-pad-sm) var(--panel-pad); border-radius: var(--radius-button); }
-.invite-service .home-section-sjekk .text-link:hover { background: #06675f; }
 @media (max-width: 1100px) {
-  .invite-service .home-section-behov .info-item,
-  .invite-service .home-section-kanaler .info-item { padding: var(--panel-pad); }
   .invite-service .home-section-sammenheng .section-links, .invite-service .home-section-sjekk .section-links { margin-left: calc((100% + 36px) / 2); }
+}
+@media (max-width: 1100px) {
   .invite-service .service-pricing-heading { display: block; }
+}
+@media (max-width: 1100px) {
   .invite-service .service-pricing-heading > .text-link { margin-top: 24px; }
+}
+@media (max-width: 1100px) {
   .invite-service .service-package-grid { gap: 36px; }
 }
 @media (max-width: 650px) {
   .invite-service .service-hero { padding-block: 24px 48px; }
+}
+@media (max-width: 650px) {
   .invite-service .breadcrumbs { margin-bottom: 32px; }
+}
+@media (max-width: 650px) {
   .invite-service .service-hero .hero-intro { margin-top: 20px; }
+}
+@media (max-width: 650px) {
   .invite-service .home-section-sammenheng .section-links, .invite-service .home-section-sjekk .section-links { margin-left: 0; }
+}
+@media (max-width: 650px) {
   .invite-service .section-items, .invite-service .service-package-grid { grid-template-columns: 1fr; gap: var(--gap-lg); }
+}
+@media (max-width: 650px) {
   .invite-service .home-section-kanaler .section-items { gap: 32px; }
+}
+@media (max-width: 650px) {
   .invite-service .service-package-grid { margin-top: 32px; }
 }
 @media (max-width: 359px) {
   .invite-service .hero-actions { gap: 22px; }
 }
-
-/* H-011: these rules apply only when a supplied service asset exists. */
 .invite-service .service-hero-split { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); align-items: center; gap: 64px; }
 .invite-service .service-hero-copy { min-width: 0; }
 .invite-service .service-hero-visual { min-width: 0; aspect-ratio: 4 / 3; overflow: hidden; border-radius: var(--radius-card-lg); }
@@ -64,7 +67,8 @@
 .invite-service .service-hero-visual[data-kind="illustration"] img { object-fit: contain; }
 @media (max-width: 900px) {
   .invite-service .service-hero-split { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+}
+@media (max-width: 900px) {
   .invite-service .service-hero-visual { width: 100%; max-width: 600px; }
 }
-
 }

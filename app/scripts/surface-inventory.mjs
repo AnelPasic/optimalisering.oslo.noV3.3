@@ -1,10 +1,12 @@
-import { readFileSync, readdirSync } from 'node:fs';
+import { readFileSync, readdirSync, existsSync } from 'node:fs';
 
 export function cssSources() {
   const files = [];
-  for (const directory of ['src/styles', 'public/styles', 'src/components']) {
-    for (const name of readdirSync(directory)) {
-      const path = `${directory}/${name}`;
+  function scan(directory) {
+    if(!existsSync(directory))return;
+    for (const entry of readdirSync(directory,{withFileTypes:true})) {
+      const path = `${directory}/${entry.name}`;
+      if(entry.isDirectory()){scan(path);continue;}
       if (/\.(css|astro)$/.test(path)) {
         const source = readFileSync(path, 'utf8');
         const css = path.endsWith('.astro') ? [...source.matchAll(/<style[^>]*>([\s\S]*?)<\/style>/g)].map(m => m[1]).join('\n') : source;
@@ -12,6 +14,7 @@ export function cssSources() {
       }
     }
   }
+  for (const directory of ['src/styles','public/styles','src/components'])scan(directory);
   return files;
 }
 

@@ -1,0 +1,16 @@
+{
+  "sourceBaseline": "8eb97ae",
+  "amendmentMain": "d81a4133dcd7eeb7cf7558f6796d4554cb60ce83",
+  "protectedFiles": 193,
+  "exactFiles": 191,
+  "mismatches": [],
+  "metadataOnlyFiles": [
+    "app/src/content/pages/synlighet.json",
+    "app/src/content/pages/konvertering.json"
+  ],
+  "allExistingContentFieldsExact": true,
+  "cmsYmlExact": true,
+  "proofCalculatorPageListAndReadOnlyInputsExact": true,
+  "ownerUntrackedImages": 5,
+  "temporaryFixtureAbsent": true
+}

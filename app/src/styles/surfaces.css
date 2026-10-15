@@ -9,14 +9,14 @@
   --radius-card-lg: var(--radius-feature);
   --radius-pill: 999px;
 
-  --surface-mint: #e0f0ef;
-  --surface-lavender: #f1edf8;
-  --surface-dark: #320c43;
-  --surface-mint-strong: #b9e8d4;
-  --surface-cta: #e5f2ed;
-  --surface-notice: #f5eedc;
-  --surface-dark-muted: #e0d9e7;
-  --surface-dark-line: #65536e;
+  --surface-mint: var(--color-mint);
+  --surface-lavender: var(--color-lavender);
+  --surface-dark: var(--color-secondary);
+  --surface-mint-strong: var(--color-accent);
+  --surface-cta: var(--color-cta);
+  --surface-notice: var(--color-warning);
+  --surface-dark-muted: var(--color-dark-muted);
+  --surface-dark-line: var(--color-dark-line);
   --border-control: 1px solid var(--color-control-line);
   --border-dark: 1px solid var(--surface-dark-line);
   --border-featured: 2px solid var(--surface-dark);

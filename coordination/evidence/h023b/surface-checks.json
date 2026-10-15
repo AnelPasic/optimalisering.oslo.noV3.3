@@ -1,0 +1,185 @@
+{
+  "records": [
+    {
+      "width": 1440,
+      "i": 0,
+      "values": {
+        "section": [
+          50,
+          12,
+          67
+        ],
+        "cards": [
+          {
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "border": 0
+          },
+          {
+            "background": [
+              50,
+              12,
+              67
+            ],
+            "border": 1
+          }
+        ],
+        "align": "left"
+      }
+    },
+    {
+      "width": 1440,
+      "i": 1,
+      "values": {
+        "section": [
+          50,
+          12,
+          67
+        ],
+        "cards": [
+          {
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "border": 0
+          },
+          {
+            "background": [
+              50,
+              12,
+              67
+            ],
+            "border": 1
+          }
+        ],
+        "align": "left"
+      }
+    },
+    {
+      "width": 1440,
+      "i": 2,
+      "values": {
+        "section": [
+          50,
+          12,
+          67
+        ],
+        "cards": [
+          {
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "border": 0
+          },
+          {
+            "background": [
+              50,
+              12,
+              67
+            ],
+            "border": 1
+          }
+        ],
+        "align": "left"
+      }
+    },
+    {
+      "width": 390,
+      "i": 0,
+      "values": {
+        "section": [
+          50,
+          12,
+          67
+        ],
+        "cards": [
+          {
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "border": 0
+          },
+          {
+            "background": [
+              50,
+              12,
+              67
+            ],
+            "border": 1
+          }
+        ],
+        "align": "left"
+      }
+    },
+    {
+      "width": 390,
+      "i": 1,
+      "values": {
+        "section": [
+          50,
+          12,
+          67
+        ],
+        "cards": [
+          {
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "border": 0
+          },
+          {
+            "background": [
+              50,
+              12,
+              67
+            ],
+            "border": 1
+          }
+        ],
+        "align": "left"
+      }
+    },
+    {
+      "width": 390,
+      "i": 2,
+      "values": {
+        "section": [
+          50,
+          12,
+          67
+        ],
+        "cards": [
+          {
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "border": 0
+          },
+          {
+            "background": [
+              50,
+              12,
+              67
+            ],
+            "border": 1
+          }
+        ],
+        "align": "left"
+      }
+    }
+  ],
+  "protectedModel": true
+}

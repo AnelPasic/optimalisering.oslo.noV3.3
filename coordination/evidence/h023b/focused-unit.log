@@ -1,0 +1,40 @@
+✔ customer workflow maps each existing page to its dedicated file or correct service/editorial collection (1.3684ms)
+✔ object repeaters start collapsed with meaningful summaries supported by Pages CMS (0.3671ms)
+✔ the multiple case reference retains a flat array without an outer list wrapper (0.1296ms)
+✔ CMS-equivalent edit preserves every current JSON record semantically and untouched file hashes (62.0814ms)
+✔ CMS rejects clearing mandatory text before it can create a broken content commit (0.7282ms)
+✔ initialized optional internal links accept blank input while rejecting an external route (0.5493ms)
+✔ raw preservation checks expose nonempty unmodeled repeater data loss (1.1347ms)
+✔ merge preserves omitted nonempty metadata without promoting authority or proof (1.6837ms)
+✔ omitted unknown evidence values stay null and cannot make a case publishable (0.2784ms)
+✔ renderer mapping validates the shared enum and suppresses default/protected/invalid values (1.0661ms)
+✔ ordinary section and item surfaces accept only the six approved values (15.5265ms)
+✔ missing, cleared and explicit default choices preserve automatic styling (0.7807ms)
+✔ all page editors have separate ordinary/protected models and one reusable select (0.9678ms)
+✔ protected CTA/form rows cannot acquire a surface or be retyped as content (4.475ms)
+✔ CMS surface save and restore preserve every unrelated field, ID, order and link (49.0329ms)
+✔ historical H-019 migration adds only editor metadata; subsequent OWNER content edits remain allowed (882.7853ms)
+✔ safe mapping emits only a validated left override and leaves the homepage form model unchanged (1.1122ms)
+✔ section heading alignment accepts center/left; missing and cleared values default to center (17.3247ms)
+✔ ordinary and protected CMS heading models use the same select directly after the heading (0.1956ms)
+✔ CMS Center/Left save and restore preserve unrelated section, card, surface and commercial fields (10.9812ms)
+✔ protected heading alignment does not grant surface overrides (0.566ms)
+✔ automatic collection discovery preserves exact migrated titles, summaries, labels, URLs and order (5.5958ms)
+✔ synthetic article is discovered without overview edits; hidden/index/service/utility records are omitted (11.8948ms)
+✔ editorial sort puts unordered last and breaks ties by Norwegian title then slug; title sort is deterministic (0.8124ms)
+✔ exclusion precedes automatic limit; manual row order and count are authoritative (6.9732ms)
+✔ blank optional metadata defaults safely and href normalizes slashes (3.0241ms)
+✔ schema rejects unknown queries/enums/limits/outside or duplicate references and source duplication (10.7332ms)
+✔ missing or non-article manual references fail build explicitly; invalid configs never produce fake cards (7.107ms)
+✔ CMS editor has unique file ownership and article-only reference rows; save/reorder/restore preserves content (47.2099ms)
+✔ semantic families cover every supported kind and all current pages (5.1552ms)
+✔ optional service composition validates actual anchors and source links (0.7236ms)
+✔ renderer/style selection has no slug whitelist or visual-system flags (0.4937ms)
+ℹ tests 32
+ℹ suites 0
+ℹ pass 32
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1290.3146

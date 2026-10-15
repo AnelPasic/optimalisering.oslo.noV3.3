@@ -1,0 +1,17 @@
+/* H-023B: component-owned assessment composition; palette and primitives belong to app.css/daisyUI. */
+@layer composition {
+
+.invite-home .assessment-section { background: var(--surface-cta); }
+.invite-home .assessment-grid { gap: 96px; max-width: 1280px; }
+.invite-home .assessment-copy > p:not(.eyebrow) { font-size: var(--type-body); color: var(--muted); line-height: var(--leading-body); margin-top: 22px; max-width: 520px; }
+.invite-home .assessment-copy > .assessment-promise { color: var(--ink); font-weight: var(--weight-heading); }
+.invite-home .assessment-form { border: var(--border-subtle); padding: var(--panel-pad-lg); max-width: 640px; }
+.invite-home .form-heading h3 { font-size: var(--type-h3); line-height: var(--leading-h3); }
+.invite-home .form-notice { background: var(--surface-notice); color: var(--color-warning-content); border-left-color: var(--color-warning-content); }
+@media (max-width: 650px) {
+  .invite-home .assessment-form { padding: var(--panel-pad); }
+}
+@media (max-width: 359px) {
+  .invite-home .assessment-form { padding: var(--panel-pad); }
+}
+}

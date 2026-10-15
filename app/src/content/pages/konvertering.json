@@ -1,6 +1,29 @@
 {
   "slug": "konvertering",
   "kind": "service",
+  "composition": {
+    "commercialText": true,
+    "service": {
+      "closingCta": false,
+      "sectionSurfaces": [{ "section": "sammenheng", "surface": "dark" }],
+      "proofAfter": "prioritering",
+      "pricingBridge": {
+        "after": "sammenheng",
+        "href": "/priser/",
+        "serviceName": "Konvertering"
+      },
+      "sectionVisuals": [
+        {
+          "section": "friksjon",
+          "visual": "behov"
+        },
+        {
+          "section": "kvalitet",
+          "visual": "kanaler"
+        }
+      ]
+    }
+  },
   "status": "REVIEW_REQUIRED",
   "authority": "DRAFT / NON-AUTHORITATIVE",
   "seo": {

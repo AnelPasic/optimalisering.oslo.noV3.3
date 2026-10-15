@@ -1,10 +1,8 @@
 ---
-import { getCollection } from 'astro:content';
 import SiteLayout from '../layouts/SiteLayout.astro';
 import { categories, glossary } from '../lib/terminology';
-const home = (await getCollection('pages')).find(entry => entry.data.slug === 'home')!.data.homepage!;
 ---
-<SiteLayout title={`${glossary.title} | Optimalisering Oslo`} description={glossary.description} homeVisual homeChrome={home.chrome}>
+<SiteLayout title={`${glossary.title} | Optimalisering Oslo`} description={glossary.description}>
   <div class="shell">
     <header class="glossary-hero">
       <p class="eyebrow">Ordbok for normale mennesker</p>

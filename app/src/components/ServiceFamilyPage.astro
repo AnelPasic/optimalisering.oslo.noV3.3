@@ -1,0 +1,32 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
+import type { RouteFamily } from '../lib/route-family';
+import { resolveServiceVisual } from '../lib/service-visual';
+import HeroCopy from './ServiceHeroCopy.astro';
+import HeroVisual from './ServiceHeroVisual.astro';
+import ContentSection from './HomeSection.astro';
+import Proof from './HomeProof.astro';
+import PricingBridge from './ServicePricingBridge.astro';
+import Faq from './Faq.astro';
+import ClosingCta from './ClosingCta.astro';
+import '../styles/compositions/service.css';
+interface Props {page:CollectionEntry<'pages'>['data'];commercial:NonNullable<CollectionEntry<'pages'>['data']['homepage']>;route:RouteFamily;}
+const {page,commercial,route}=Astro.props;
+const capability=route.service,bridge=capability.pricingBridge;
+const visual=resolveServiceVisual(page.heroVisual);
+const records=capability.proofAfter?(await getCollection('proofCases')).map(p=>p.data):[];
+---
+<div class="invite-home invite-service">
+  <section id="service-hero" class="service-hero shell">
+    <nav class="breadcrumbs" aria-label="Brødsmuler"><a href="/">Forsiden</a><span aria-hidden="true">/</span><span>{bridge?.serviceName??page.eyebrow}</span></nav>
+    {visual?<div class="service-hero-split"><div class="service-hero-copy"><HeroCopy page={page} pricingLink={bridge?.link} /></div><HeroVisual visual={visual} /></div>:<HeroCopy page={page} pricingLink={bridge?.link} />}
+  </section>
+  {page.sections.map(section=><>
+    <ContentSection section={section} visualId={capability.sectionVisuals.find(v=>v.section===section.id)?.visual} defaultSurface={capability.sectionSurfaces.find(v=>v.section===section.id)?.surface} />
+    {capability.proofAfter===section.id&&page.proof&&<Proof content={page.proof} records={records} primary />}
+    {bridge?.after===section.id&&<PricingBridge content={commercial.packages} link={bridge.link} serviceName={bridge.serviceName} />}
+  </>)}
+  <Faq items={page.faq} id="sporsmal" heading={capability.closingCta?undefined:commercial.faqHeading} eyebrow={capability.closingCta?undefined:commercial.faqEyebrow} />
+  {capability.closingCta&&<ClosingCta link={page.cta} />}
+</div>

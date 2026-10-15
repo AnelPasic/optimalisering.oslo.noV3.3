@@ -1,0 +1,18 @@
+
+> optimalisering-oslo-v3-3@0.1.0 check
+> astro check
+
+14:26:12 [content] Syncing content
+14:26:12 [content] Synced content
+14:26:12 [types] Generated 407ms
+14:26:12 [check] Getting diagnostics for Astro files in E:\Codex\optimalisering.oslo.noV3.3\app...
+[96mscripts/qa-intake-h017a.mjs[0m:[93m65[0m:[93m68[0m - [93mwarning[0m[90m ts(2568): [0mProperty 'submit' may not exist on type 'HTMLElement | SVGElement'. Did you mean 'onsubmit'?
+  Property 'submit' does not exist on type 'HTMLElement'.
+
+[7m65[0m   await page.locator('[data-package-order]').evaluate(form => form.submit());
+[7m  [0m [93m                                                                   ~~~~~~[0m
+
+Result (194 files): 
+- 0 errors
+- 0 warnings
+- 1 hint
