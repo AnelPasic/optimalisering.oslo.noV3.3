@@ -416,10 +416,10 @@
   },
   "sections": [
     {
-      "_block": "selector",
-      "uid": "31bd8ddb-5a47-4bc4-99b5-a5461e6103f6",
-      "id": "behov",
-      "name": "Behovsvelger"
+      "_block": "packages",
+      "uid": "7b687594-17f4-4266-adf5-12b710f563af",
+      "id": "priser",
+      "name": "Pakker og priser"
     },
     {
       "_block": "calculator",
@@ -428,10 +428,10 @@
       "name": "Regneeksempel"
     },
     {
-      "_block": "packages",
-      "uid": "7b687594-17f4-4266-adf5-12b710f563af",
-      "id": "priser",
-      "name": "Pakker og priser"
+      "_block": "selector",
+      "uid": "31bd8ddb-5a47-4bc4-99b5-a5461e6103f6",
+      "id": "behov",
+      "name": "Behovsvelger"
     },
     {
       "_block": "proof",
