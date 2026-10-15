@@ -493,6 +493,12 @@
       "name": "Gratis sjekk"
     },
     {
+      "_block": "calculator",
+      "uid": "86b94ffd-6822-4b59-9291-77e6cecf1223",
+      "id": "regneeksempel",
+      "name": "Regneeksempel"
+    },
+    {
       "_block": "faq",
       "uid": "75bcd975-20e4-433d-809e-b43d2b104f47",
       "id": "sporsmal",
