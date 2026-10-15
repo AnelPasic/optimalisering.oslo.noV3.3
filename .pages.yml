@@ -109,7 +109,7 @@ components:
         label: Avsnitt
         type: text
         list: {}
-        description: Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Forsidens innhold → Felles pakker.
+        description: Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Felles og spesielt innhold → Felles pakker.
       - name: items
         label: Alternativer eller steg
         type: object
@@ -338,7 +338,7 @@ components:
         label: Avsnitt
         type: text
         list: {}
-        description: Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Forsidens innhold → Felles pakker.
+        description: Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Felles og spesielt innhold → Felles pakker.
       - name: items
         label: Alternativer eller steg
         type: object
@@ -388,7 +388,7 @@ components:
         label: Avsnitt
         type: text
         list: {}
-        description: Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Forsidens innhold → Felles pakker.
+        description: Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Felles og spesielt innhold → Felles pakker.
       - name: items
         label: Alternativer eller steg
         type: object
@@ -1395,14 +1395,13 @@ content:
             type: text
             required: true
       - name: sections
-        label: Seksjoner og rekkefølge
-        description: Hero ligger alltid øverst. Flytt seksjonene her for å endre rekkefølgen på siden.
+        label: Seksjoner og rekkefølge - Hero ligger alltid øverst. Dra seksjonene for å flytte dem.
         type: block
         blockKey: _block
         list:
           collapsible:
             collapsed: true
-            summary: "{_block} - {name}"
+            summary: "{name}"
         blocks:
           - name: selector
             label: Behovsvelger
@@ -1559,7 +1558,7 @@ content:
                 label: Avsnitt
                 type: text
                 list: {}
-                description: Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Forsidens innhold → Felles pakker.
+                description: Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Felles og spesielt innhold → Felles pakker.
               - name: items
                 label: Alternativer eller steg
                 type: object
