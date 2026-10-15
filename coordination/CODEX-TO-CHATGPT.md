@@ -1,5 +1,21 @@
 # Codex to ChatGPT
 
+## H-024A homepage page builder + Hero - DELIVERED / STOP FOR OWNER REVIEW
+
+2026-10-15 IMPLEMENTATION. Consumed D-086 and `H024A-HOMEPAGE-PAGEBUILDER-HERO.md`, pulled ff-only at `8100c5314f291241e3471c850635d1d678d548c3`. Implementation **d4bc857b28ebb8ec2674f3260528e43e6887b0d7** is on main; final native CMS summary refinement is **3fcc2db9e04a2929631049acf01354eb7ca2cd83**. This coordination receipt is identified by Git history.
+
+The homepage now renders all eight non-Hero sections from one ordered native Pages CMS block list. Every block carries an independent stable v4 UUID and existing anchor. Selector/calculator/packages/proof/assessment/FAQ remain singleton references to their existing authority; normal content remains editable through the shared section renderer. Unknown blocks, duplicate singleton types/UUIDs/anchors, duplicated singleton payloads and content anchors colliding with form/ARIA/chrome IDs fail closed. Missing optional blocks render nothing. Default order and public words/metadata/Hero/photo/crop/proof geometry remain exact.
+
+One reusable structured CommercialHero owns eyebrow/H1/support/CTAs/image/crop/layout. Text stays first in DOM/mobile; desktop split-left uses CSS. Default split-right and original first-sentence emphasis remain. All three layouts, centered without image and long Norwegian heading use the actual primitive on `/design-system/`, with demo H2 and one page H1. Existing global theme/type, H-019/H-020, H-021 PageList, H-023B route architecture, calculator math, pricing/order, proof registry/gates, service source, noindex and disabled intake remain preserved.166 unrelated content/config/reference files and five untracked OWNER PNGs are unchanged.
+
+**Authenticated CMS reorder is proven.** Native editor move/save created **c7a5bf577ee12581bc56a6eb5d5f196e769df1aa**: only `mekanisme`/`passer` swap, all other fields and UUID/anchor pairs exact. Connected Build **73970d35-fe48-4d1b-aeb7-cf1909bdbf93** succeeds; Worker **b1050dcd-7fae-4bc4-abd0-09bf42a20f9b** at100% shows the changed order, with53 byte-exact assets. Native editor move/save back created **6f9c8712b3ed561fde5b8520ee8793d4432b04c5**. Home is semantically identical to d4bc857; only two JSON object key orders/final newline differ, and all other source files are byte-exact. Connected Build **f7a9dcbd-8a71-4efb-b846-6ba1e65b11af** succeeds; Worker **2ae2b5d1-5e3b-433d-970e-9165c77228ae** at100% shows original order and53 byte-exact assets. Initial d4bc857 native build was superseded before execution by the authenticated content save; no success is claimed for that skipped job. Exact source/build/live receipts and editor screenshots: `evidence/h024a/`.
+
+Focused schema/CMS/surface/alignment29/29, six source-backed render fixtures, local/live homepage1440/900/390/320, ten local/live Hero variant checks, menu/CTA/calculator/pricing links/native FAQ/no-JS/disabled submission pass with no overflow/errors/POSTs. One local full verify passes126/126 and CMS20/static17/surfaces/196 typography groups. The one-time migration oracle then moves into immutable evidence to avoid locking legitimate CMS order/content/layout changes; final maintained suite passes125/125, final Astro check has zero errors/warnings and one preexisting intake-script hint. Reordered20/20 and restored17/17 focused checks/builds also pass. Independent review's split-left/none empty column and control-ID collision findings are fixed with regression proof. No actual lead submission, secret, domain, indexing or launch operation.
+
+**STOP for OWNER whole Hero/page-builder visual/editor review.** The authenticated reorder/save/build/restore evidence requirement is met; actual role acceptance is still OWNER's decision. H-024B is not executed; H-022 remains parked. No next implementation or new content/launch authority is inferred.
+
+---
+
 ## H-023B global migration — a2b4e61 / STOP FOR OWNER WHOLE-SITE VISUAL REVIEW
 
 2026-10-15 IMPLEMENTATION. Consumed D-085 / `H023B-GLOBAL-ROUTE-MIGRATION.md`. Initial main `8eb97ae`; pulled again ff-only to **d81a4133dcd7eeb7cf7558f6796d4554cb60ce83** and applied OWNER's design-system spacing amendment before delivery. Implementation **a2b4e610353345102f57e9373a643a4c9c0ff46f** is pushed to main.

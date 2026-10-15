@@ -1,0 +1,28 @@
+✔ renderer mapping validates the shared enum and suppresses default/protected/invalid values (1.0797ms)
+✔ ordinary section and item surfaces accept only the six approved values (20.0042ms)
+✔ missing, cleared and explicit default choices preserve automatic styling (1.5372ms)
+✔ all page editors have separate ordinary/protected models and one reusable select (0.9458ms)
+✔ protected CTA/form rows cannot acquire a surface or be retyped as content (4.732ms)
+✔ CMS surface save and restore preserve every unrelated field, ID, order and link (53.4211ms)
+✔ historical H-019 migration adds only editor metadata; subsequent OWNER content edits remain allowed (903.9961ms)
+✔ safe mapping emits only a validated left override and leaves the homepage form model unchanged (1.2111ms)
+✔ section heading alignment accepts center/left; missing and cleared values default to center (20.3322ms)
+✔ ordinary and protected CMS heading models use the same select directly after the heading (0.1749ms)
+✔ CMS Center/Left save and restore preserve unrelated section, card, surface and commercial fields (9.9172ms)
+✔ protected heading alignment does not grant surface overrides (0.6405ms)
+✔ Hero allows only the three safe layouts and optional image (3.696ms)
+✔ ordered blocks preserve identity, support content add/remove, reject duplicates and unknowns (2.8973ms)
+✔ migrated pilot stores one structured Hero and the expected block identities without locking editor order (0.8818ms)
+✔ new content anchors cannot take fixed form, chart, ARIA or chrome identities (2.505ms)
+✔ actual CMS model replaces ordered arrays without losing UUIDs, content, or singleton authority (72.5318ms)
+✔ CMS edits can remove optional sections while duplicated identities fail closed (16.2001ms)
+✔ CMS calculator defaults must be accepted by the rendered input controls (0.928ms)
+✔ CMS section array accepts reordered composition (0.6155ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1296.0705

@@ -1,0 +1,17 @@
+{
+  "commit": "c7a5bf577ee12581bc56a6eb5d5f196e769df1aa",
+  "authenticatedSave": true,
+  "onlyChange": "mekanisme and passer swapped",
+  "unrelatedFieldsExact": true,
+  "uuidAnchorPairsPreserved": true,
+  "order": [
+    "behov",
+    "regneeksempel",
+    "priser",
+    "resultater",
+    "passer",
+    "mekanisme",
+    "sjekk",
+    "sporsmal"
+  ]
+}

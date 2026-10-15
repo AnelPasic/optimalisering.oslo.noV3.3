@@ -1,0 +1,20 @@
+{
+  "commit": "6f9c8712b3ed561fde5b8520ee8793d4432b04c5",
+  "authenticatedSave": true,
+  "homepageSemanticallyExactToImplementation": true,
+  "unrelatedSourceFilesByteExact": true,
+  "formatOnlyDifferences": [
+    "two content-block object key orders",
+    "final newline"
+  ],
+  "order": [
+    "behov",
+    "regneeksempel",
+    "priser",
+    "resultater",
+    "mekanisme",
+    "passer",
+    "sjekk",
+    "sporsmal"
+  ]
+}

@@ -1,0 +1,435 @@
+{
+  "base": "https://optimalisering-oslo-v33.anel.workers.dev",
+  "matchedAssets": 53,
+  "noindex": true,
+  "intakeDisabled": true,
+  "robotsBlocked": true,
+  "sitemapEmpty": true,
+  "custom404": true,
+  "records": [
+    {
+      "path": "/",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "2886bf50f3e5e6082f10963718ec6a780a49dcde11aa1d34f7629d4759d62334",
+      "bytes": 54115
+    },
+    {
+      "path": "/_astro/_..Do8ZxJ5k.css",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "a8ea1188368969b59ffc850274dffbcaaf63f3676b150ee19cdc6cea67331116",
+      "bytes": 21983
+    },
+    {
+      "path": "/_astro/AssessmentForm.astro_astro_type_script_index_0_lang.DXxYcZg1.js",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "c4d7c940b839bd98bee27ef5236a3896c2cfa0069f15f013d24d36b031691b52",
+      "bytes": 1503
+    },
+    {
+      "path": "/_astro/Attribution.astro_astro_type_script_index_0_lang.Un5106dL.js",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "463abead88b74f672d0961e40e447d34f97516ca56b83b22c55fa85a26c63bce",
+      "bytes": 189
+    },
+    {
+      "path": "/_astro/attribution.BN71fkX8.js",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "ab2982e50bcc23c4592f3ccfda077366973a32eaba9f683e245b1b7082990b57",
+      "bytes": 906
+    },
+    {
+      "path": "/_astro/cursor-click.BNiCtsYB.svg",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "ab146e15194ce11c438aac2f6e45d7a0082bbab5f2cc8d9816140eab848246f4",
+      "bytes": 782
+    },
+    {
+      "path": "/_astro/figtree-latin-ext-wght-normal.DCwSJGxG.woff2",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "bf7828e2c258cffcfa50a048ee388a36b95bc16b452e8d36fa797635dbe15965",
+      "bytes": 10280
+    },
+    {
+      "path": "/_astro/figtree-latin-wght-normal.D_ZTVpCC.woff2",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "4ba7d3d096695818fe0686be4f1e82c6b05134e18a22260336130335027462dd",
+      "bytes": 20156
+    },
+    {
+      "path": "/_astro/instrument-sans-latin-ext-wght-normal.B5bTHO_g.woff2",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "c4fcfea41f2c1cfeea9211fa43679845454a1d0e0d7e95e069c7e73c4ae302d2",
+      "bytes": 11144
+    },
+    {
+      "path": "/_astro/instrument-sans-latin-wght-normal.BbzFLZTg.woff2",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "2ee17598a98d8a59e4df8152d015bec9ab8e4d5672cc0ab42bef806b568e3971",
+      "bytes": 30092
+    },
+    {
+      "path": "/_astro/lead.C_Cs7EHy.js",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "50fab7f154a411ee9b6066620c62f7702378ed02df2b4efe29714d5a9cf5d0d3",
+      "bytes": 2160
+    },
+    {
+      "path": "/_astro/magnifying-glass.hfmbFh4V.svg",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "f9fa2561978a9a3291e8ae0ebfcb651104f5069fade8f84871627bca68889cde",
+      "bytes": 243
+    },
+    {
+      "path": "/_astro/PackageOrder.astro_astro_type_script_index_0_lang.D26b2l3v.js",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "beb94d04d76e0e1a67e8d0e61024552f68ae814780ab009c185655d48bfe3999",
+      "bytes": 3250
+    },
+    {
+      "path": "/_astro/PageList.xUd4SALI.css",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "3353a197af9b6695bd575f47cd66d48d5b6cb755d0e396accf25b0c6c01a0934",
+      "bytes": 22137
+    },
+    {
+      "path": "/_astro/SiteLayout.Bcdnp61-.css",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "e0a1fe1a5718d65b8541ba310a8d127be480d52aea962f87b60557ceb1c2638f",
+      "bytes": 137848
+    },
+    {
+      "path": "/_astro/TerminologyUI.astro_astro_type_script_index_0_lang.BBkGcnad.js",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "5e2f38ade2243ab65b5fe5474ac9308b6ef117ec6b42c2ed38d369287a12a0be",
+      "bytes": 17436
+    },
+    {
+      "path": "/_astro/trend-up.DXQpIGKy.svg",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "d99a74c39fecc099ed7e774f6306fc8137ff63011edea27e06e17c9582454ffb",
+      "bytes": 292
+    },
+    {
+      "path": "/404.html",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "f540fc62b21b20decbb90ee44eb65436be56f784dd07fcd1ceff2b1a51f68c83",
+      "bytes": 6156
+    },
+    {
+      "path": "/ai-synlighet/",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "301a4ec84ea99328d47df3d7f73f0655589b987a44bc30b1620fce4c9120367a",
+      "bytes": 15800
+    },
+    {
+      "path": "/begreper/",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "ec106d85e7b2fef875eeba4e68e9a0694a700ae2ba95dcd1c3e6bb10ce08c380",
+      "bytes": 32022
+    },
+    {
+      "path": "/design-system/",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "9a08e9af0140e386a30267dd43c5f186362977d3f86767fbafe046dd97cabfcb",
+      "bytes": 69645
+    },
+    {
+      "path": "/favicon.svg",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "ddecf51188957cc6aa747b6564b33cfa23a1c36fd732a5959c3efc7fc081b9b5",
+      "bytes": 336
+    },
+    {
+      "path": "/images/home/happycustomer.png",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "f94c83621f12f3c0828f0cc910947c22bb2f4a44114c5cf2a4583422a9c94ff7",
+      "bytes": 1944318
+    },
+    {
+      "path": "/images/home/happycustomer2.png",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "4bf02ff0d92bf943c061f0b4c1f76ceefcc6737a45db0e3691cc744a5a9349a8",
+      "bytes": 1774806
+    },
+    {
+      "path": "/images/home/happycustomer3.png",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "72d91b2e1d911830c5583033b4b22b30764b7ada9bc8bf09e92522b27e00a355",
+      "bytes": 1870848
+    },
+    {
+      "path": "/images/home/hero-customer-02.webp",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "20190965a8a08a61d6ae73e6d29e7e05d843186f129f683ec8242bb85aca5c91",
+      "bytes": 68184
+    },
+    {
+      "path": "/images/home/hero-customer-03.webp",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "f18db9a1421c663ff0b8454fb9ba5e9783af64f2d6a3370370ce3f185792b795",
+      "bytes": 70886
+    },
+    {
+      "path": "/images/home/hero-customer-preview.svg",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "50d6c84dbbca87cef8d515f923118e82a4ac559f9df5de3f763e81adebfbb72e",
+      "bytes": 525
+    },
+    {
+      "path": "/images/home/hero-customer.webp",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "84756d154b710a75c7bf8a4b8f5c3c36e03ff6fe01c7e7cccf6a8dc5d9ff08c7",
+      "bytes": 81652
+    },
+    {
+      "path": "/images/home/README.md",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "3b71e385fcad78b73ba60e65988bec071a344a4aff59ab880e252a06080a9b74",
+      "bytes": 1695
+    },
+    {
+      "path": "/images/listing/.gitkeep",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/images/pricing/README.md",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "ef38d04dd27bc332a82bb971fe580a7cf530fec6d561fe9debde5bd4601e4536",
+      "bytes": 329
+    },
+    {
+      "path": "/images/proof/eurotents-ask-review.webp",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "3ae490f5e9ef23e0c8cf93bc50b1084d3f625908d0b5af2477c30813dd434592",
+      "bytes": 141812
+    },
+    {
+      "path": "/images/services/.gitkeep",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/images/services/discoveringlocalfavorite-1.png",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "78a7f6932e5b743b54aace0e602b56908916d59931e4dcf61c6acf3a3503f27c",
+      "bytes": 1290313
+    },
+    {
+      "path": "/images/services/discoveringlocalfavorite.png",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "6f9b71291019bef4aac87bf1e53426efcb843c63bbb17ab7b7a2ff7829a92c06",
+      "bytes": 1243291
+    },
+    {
+      "path": "/images/services/happy-shopowner.png",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "6cb0884c034e16b09590ddbee7040d2c68075233a77ad176a9d3ec4b60b2d51b",
+      "bytes": 2001579
+    },
+    {
+      "path": "/innsikt/",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "85b0cfb1a5f435af99ec35e9623a2ea9f45ffef8d5e275acb2a122392cd5f631",
+      "bytes": 11600
+    },
+    {
+      "path": "/innsikt/hva-bor-optimaliseres-forst/",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "ede6f798d6eacf52ccb1a935d0e116ce58ca762f611317d27e279c820ed92912",
+      "bytes": 16482
+    },
+    {
+      "path": "/innsikt/male-effekt-av-optimalisering/",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "4813dbe6260cb867f06decb7665b44118c9577b3fd9bfbf42d81ab5ab50ac662",
+      "bytes": 17503
+    },
+    {
+      "path": "/kontakt/",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "675c6ead5ad2324aac6df97a8ff12b32d251af5415fdeb3235b8f580805d0fbd",
+      "bytes": 9962
+    },
+    {
+      "path": "/konvertering/",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "5dc5a3059999d83b8913153e9a692b1f5d2a6a38423c9b9610f8805541bff1ae",
+      "bytes": 17791
+    },
+    {
+      "path": "/licenses/phosphor-icons.txt",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "b5b1f1da112d18ea2147decfd48ddc1bf2b5aeb6c265381579340e95b15a2bb2",
+      "bytes": 1071
+    },
+    {
+      "path": "/nettbutikkoptimalisering/",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "56dba1e170bf6a01bbbc8dd45020e12479a6a009f76e64da09434491b34cbc91",
+      "bytes": 15832
+    },
+    {
+      "path": "/om/",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "7f83fd4d9d5d7f822136ba5bb9dde96e75c93ad40b3c46fb72549020820ed158",
+      "bytes": 11974
+    },
+    {
+      "path": "/personvern/",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "0eabf0b874c7cf82c46ba4208d1d83d67acbd079aaf0c8900e2fde7e5fced8f6",
+      "bytes": 10910
+    },
+    {
+      "path": "/priser/",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "18f00340588f9276539055f31d8904fea1e908880697d87f5e1209415b9bef1c",
+      "bytes": 37249
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "331ea9090db0c9f6f597bd9840fd5b171830f6e0b3ba1cb24dfa91f0c95aedc1",
+      "bytes": 26
+    },
+    {
+      "path": "/seo/",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "83112dbc2f7f00d324a56461591d6d4989f9f7668cf560ba0d7091a04e810814",
+      "bytes": 15526
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "68ab08991efaca902bcb8a6518106d8b29964c5651f39abbb7eb7c9713ca2770",
+      "bytes": 107
+    },
+    {
+      "path": "/synlighet/",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "18bfbdddcdaf4db941cad3f88767d46c0ffdf92c5daefa43505a5c736013eb6d",
+      "bytes": 18693
+    },
+    {
+      "path": "/vilkar/",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "834cefcddab7313f6721f5e2549f8a53eda35fc5999dda95ce2e232c96da703c",
+      "bytes": 10829
+    },
+    {
+      "path": "/vurdering/",
+      "status": 200,
+      "byteEqual": true,
+      "lineEndingEquivalent": false,
+      "sha256": "a15d7d57bc9a326f1c3672241d8c34f2faa3a4993d6fbe863ac608f376484ca3",
+      "bytes": 14155
+    }
+  ]
+}
