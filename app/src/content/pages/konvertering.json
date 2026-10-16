@@ -5,7 +5,12 @@
     "commercialText": true,
     "service": {
       "closingCta": false,
-      "sectionSurfaces": [{ "section": "sammenheng", "surface": "dark" }],
+      "sectionSurfaces": [
+        {
+          "section": "sammenheng",
+          "surface": "dark"
+        }
+      ],
       "proofAfter": "prioritering",
       "pricingBridge": {
         "after": "sammenheng",
@@ -169,5 +174,8 @@
     "beforeLabel": "Før",
     "afterLabel": "Etter",
     "changeLabel": "Arbeid"
+  },
+  "hero": {
+    "layout": "centered-none"
   }
 }
