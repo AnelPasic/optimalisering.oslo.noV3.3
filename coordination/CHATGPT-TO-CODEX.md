@@ -1,6 +1,26 @@
 # ChatGPT to Codex
 
-## Active handoff - H-024A2 CMS CO-LOCATED SECTIONS CORRECTION
+## Active handoff — H-025 SHARED HERO / PER-PAGE CMS VARIANT
+
+Date: 2026-10-16. Authority: direct OWNER instruction in ChatGPT.
+Exact scoped contract: `coordination/H025-GLOBAL-PAGE-HERO-VARIANTS.md`.
+
+OWNER decides: **service pages AND every other relevant page family must use predefined, globally reusable Heroes, with a page-specific variant choice in Pages CMS**. Current H-024A3 has been delivered at fbcf0de; preserve its box/layout correction and any later OWNER content edits.
+
+Execute H-025 as an independent **Hero-only** scope:
+- one actual shared typed Hero renderer/variants for home, service, pricing, index, article, assessment and utility; explicitly audit dedicated glossary and 404
+- CMS per-page Hero layout select: text-left/image-right, image-left/text-right, centered with/without image
+- display a consistent component family in `/design-system/`; no meaningless demo-only selector
+- preserve exact page-owned H1/support/CTA/photo/crop, pricing source, proof permission/gates, semantics/SEO, global daisyUI theme, content and all defaults
+- no duplicated editable Hero or commercial source, no image requirement, no invented CTA/proof; existing mobile text-first reading order
+- test real authenticated CMS save/build/visible Worker/restore for service + non-service + home and focused multi-route/multi-width QA
+- leave H-024B blocked, H-022 parked, noindex and intake disabled; STOP for OWNER whole-site Hero/editor review
+
+Do not start full page-builder rollout or unrelated redesign. If a special page conflicts with normal Hero semantics, preserve content, document proposed safe adaptation/explicit exception, and request OWNER decision instead of forcing misleading structure.
+
+---
+
+## Historical handoff - H-024A2 CMS CO-LOCATED SECTIONS CORRECTION (DELIVERED)
 
 Date: 2026-10-15
 Authority: OWNER / D-087
