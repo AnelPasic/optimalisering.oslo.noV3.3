@@ -1,0 +1,10 @@
+commit 3987e85de748fe170d41c8e12f7d1917b53e0748
+Author:     Anel Pasic <anelmedon@gmail.com>
+AuthorDate: Fri Oct 16 23:32:11 2026 +0200
+Commit:     Anel Pasic <anelmedon@gmail.com>
+CommitDate: Fri Oct 16 23:32:11 2026 +0200
+
+    Innholdsoppdatering: app/src/content/pages/konvertering.json (via Pages CMS)
+
+ app/src/content/pages/konvertering.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)

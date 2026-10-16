@@ -1,0 +1,99 @@
+{
+  "phase": "live",
+  "records": [
+    {
+      "kind": "demo-parity",
+      "width": 1440,
+      "choices": [
+        {
+          "name": "split-right",
+          "label": "Tekst venstre / bilde høyre"
+        },
+        {
+          "name": "split-left",
+          "label": "Bilde venstre / tekst høyre"
+        },
+        {
+          "name": "centered",
+          "label": "Sentrert med bilde"
+        },
+        {
+          "name": "centered-none",
+          "label": "Sentrert uten bilde"
+        }
+      ],
+      "lowerSectionsExact": 7
+    },
+    {
+      "kind": "demo-parity",
+      "width": 900,
+      "choices": [
+        {
+          "name": "split-right",
+          "label": "Tekst venstre / bilde høyre"
+        },
+        {
+          "name": "split-left",
+          "label": "Bilde venstre / tekst høyre"
+        },
+        {
+          "name": "centered",
+          "label": "Sentrert med bilde"
+        },
+        {
+          "name": "centered-none",
+          "label": "Sentrert uten bilde"
+        }
+      ],
+      "lowerSectionsExact": 7
+    },
+    {
+      "kind": "demo-parity",
+      "width": 390,
+      "choices": [
+        {
+          "name": "split-right",
+          "label": "Tekst venstre / bilde høyre"
+        },
+        {
+          "name": "split-left",
+          "label": "Bilde venstre / tekst høyre"
+        },
+        {
+          "name": "centered",
+          "label": "Sentrert med bilde"
+        },
+        {
+          "name": "centered-none",
+          "label": "Sentrert uten bilde"
+        }
+      ],
+      "lowerSectionsExact": 7
+    },
+    {
+      "kind": "demo-parity",
+      "width": 320,
+      "choices": [
+        {
+          "name": "split-right",
+          "label": "Tekst venstre / bilde høyre"
+        },
+        {
+          "name": "split-left",
+          "label": "Bilde venstre / tekst høyre"
+        },
+        {
+          "name": "centered",
+          "label": "Sentrert med bilde"
+        },
+        {
+          "name": "centered-none",
+          "label": "Sentrert uten bilde"
+        }
+      ],
+      "lowerSectionsExact": 7
+    }
+  ],
+  "errors": [],
+  "posts": []
+}

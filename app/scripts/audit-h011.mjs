@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
-import { resolveServiceVisual } from '../src/lib/service-visual.ts';
+import { resolvePageHero } from '../src/lib/page-hero.ts';
 const home = JSON.parse(readFileSync('src/content/pages/home.json'));
 const normalize = text => text.replace(/<[^>]*>/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
 for (const slug of ['home', 'priser', 'synlighet', 'konvertering']) {
@@ -21,7 +21,8 @@ for (const slug of ['home', 'priser', 'synlighet', 'konvertering']) {
   }
   if (['synlighet', 'konvertering'].includes(slug)) {
     const content = JSON.parse(readFileSync(`src/content/pages/${slug}.json`));
-    const visual = resolveServiceVisual(content.heroVisual);
+    const hero = resolvePageHero(content);
+    const visual = hero.visual.kind === 'image' ? hero.visual.image : undefined;
     assert.equal(/class="[^"]*\bservice-hero-visual\b/.test(html), Boolean(visual));
     if (visual) assert.ok(html.includes(`src="${visual.src}"`) && html.includes(`alt="${visual.alt}"`));
     assert.ok(html.includes('href="/#sjekk"') && html.includes('href="/priser/"'));

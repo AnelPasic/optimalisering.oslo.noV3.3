@@ -1,0 +1,79 @@
+{
+  "build": {
+    "build_uuid": "369ec0cd-76af-428f-9cbb-194985224eb1",
+    "status": "stopped",
+    "build_outcome": "success",
+    "initializing_on": "2026-10-16T21:32:14.202Z",
+    "running_on": "2026-10-16T21:32:16.272Z",
+    "stopped_on": "2026-10-16T21:33:10.696Z",
+    "created_on": "2026-10-16T21:32:13.452Z",
+    "modified_on": "2026-10-16T21:33:10.696Z",
+    "trigger": {
+      "trigger_uuid": "35b862e6-87d3-4126-bd92-d4f2c87c8547",
+      "external_script_id": "cd204e1933404500a83e5afb42f2f32f",
+      "build_token_name": "optimalisering-oslo-v33 build token",
+      "trigger_name": "cd204e1933404500a83e5afb42f2f32f",
+      "build_command": "npm run build",
+      "deploy_command": "npx wrangler deploy",
+      "root_directory": "/app",
+      "branch_includes": [
+        "main"
+      ],
+      "branch_excludes": [],
+      "path_includes": [
+        "*"
+      ],
+      "path_excludes": [],
+      "build_caching_enabled": true,
+      "created_on": "2026-10-08T02:13:40.804Z",
+      "modified_on": "2026-10-08T02:13:40.804Z",
+      "deleted_on": null,
+      "repo_connection": {
+        "repo_connection_uuid": "c7c8d1c6-d3f5-4636-9ef8-06a2c940de3a",
+        "repo_id": "1409470367",
+        "repo_name": "optimalisering.oslo.noV3.3",
+        "provider_type": "github",
+        "provider_account_id": "7911624",
+        "provider_account_name": "AnelPasic",
+        "grant_id": null,
+        "created_on": "2026-10-08T02:13:40.804Z",
+        "modified_on": "2026-10-08T02:13:40.804Z",
+        "deleted_on": null
+      }
+    },
+    "build_trigger_metadata": {
+      "build_trigger_source": "push_event",
+      "branch": "main",
+      "commit_hash": "3987e85de748fe170d41c8e12f7d1917b53e0748",
+      "commit_message": "Innholdsoppdatering: app/src/content/pages/konvertering.json (via Pages CMS)",
+      "author": "Anel Pasic",
+      "build_command": "npm run build",
+      "deploy_command": "npx wrangler deploy",
+      "root_directory": "/app",
+      "build_token_uuid": "e504b908-37e9-4d9a-82de-0e4cab167eea",
+      "build_token_name": "optimalisering-oslo-v33 build token",
+      "environment_variables": {},
+      "repo_name": "optimalisering.oslo.noV3.3",
+      "provider_account_name": "AnelPasic",
+      "provider_type": "github"
+    },
+    "pull_request": null,
+    "deploy_hook": null
+  },
+  "deployment": {
+    "id": "d9626c0a-8d55-4c99-9393-2acf4398dea5",
+    "source": "wrangler",
+    "strategy": "percentage",
+    "author_email": "anel@medon.no",
+    "annotations": {
+      "workers/triggered_by": "deployment"
+    },
+    "versions": [
+      {
+        "version_id": "419221cf-be29-4230-ba8e-e879572ae198",
+        "percentage": 100
+      }
+    ],
+    "created_on": "2026-10-16T21:33:06.794988Z"
+  }
+}

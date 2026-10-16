@@ -2,11 +2,12 @@ import {getHomepageBlock} from '../src/lib/home-builder.ts';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 import { getHeroProof } from '../src/lib/hero-proof.ts';
+import { resolvePageHero } from '../src/lib/page-hero.ts';
 
 const root = process.env.QA_DIST_ROOT || 'dist';
 const home = JSON.parse(readFileSync('src/content/pages/home.json', 'utf8'));
 const records = readdirSync('src/content/proof').filter(file => file.endsWith('.json')).map(file => JSON.parse(readFileSync(`src/content/proof/${file}`, 'utf8')));
-const expected = getHeroProof(getHomepageBlock(home,'proof').content, records);
+const expected = resolvePageHero(home).visual.kind === 'image' ? getHeroProof(getHomepageBlock(home,'proof').content, records) : undefined;
 const html = readFileSync(`${root}/index.html`, 'utf8');
 const panel = html.match(/<div class="hero-proof"[^>]*>(.*?)<\/div>/s)?.[1];
 assert.equal(Boolean(panel), Boolean(expected), 'Hero panel follows the guarded featured selection');

@@ -1,6 +1,6 @@
 {
   "incoming": "ea71423518e098c42f83a717be880e01c65b282f",
-  "commit": "ea71423518e098c42f83a717be880e01c65b282f",
+  "commit": "3987e85de748fe170d41c8e12f7d1917b53e0748",
   "records": [
     {
       "file": "app/src/config/copy-authority.json",
@@ -61,9 +61,9 @@
     {
       "file": "app/src/content/pages/konvertering.json",
       "sha256": "6ef45a5a2b5f4702d4571d99144b37bc5c93e7fb0c07802d7c13dae30c9bf75e",
-      "currentSha256": "6ef45a5a2b5f4702d4571d99144b37bc5c93e7fb0c07802d7c13dae30c9bf75e",
-      "byteExact": true,
-      "onlyNewExplicitDefaultAndSerialization": false
+      "currentSha256": "709e33579e2fd8cc57f948e943847f06bde0db92abd20cd4a4d70d2428480729",
+      "byteExact": false,
+      "onlyNewExplicitDefaultAndSerialization": true
     },
     {
       "file": "app/src/content/pages/male-effekt-av-optimalisering.json",

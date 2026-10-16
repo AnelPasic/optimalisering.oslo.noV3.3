@@ -1,0 +1,232 @@
+{
+  "phase": "restored",
+  "commit": "3987e85de748fe170d41c8e12f7d1917b53e0748",
+  "retainedMedia": {
+    "kind": "photo",
+    "src": "/images/services/happy-shopowner.png",
+    "alt": "Butikk som selger",
+    "positionX": 50,
+    "positionY": 50
+  },
+  "originalDataExact": true,
+  "records": [
+    {
+      "width": 1440,
+      "text": "ForsidenKonverteringFra besøk til henvendelser og kjøpDet er ikke alltid kunden som må overbevises. Noen ganger må nettsiden slutte å stå i veien.Når relevante besøk ikke blir til henvendelser eller kjøp, ser vi etter friksjonen som stopper kunden. Så prioriterer vi det som er mest verdt å forbedre først.Ta en gratis sjekkSe priserFra interesse til handlingDet skal være enklere å kjøpe enn å gi opp.Kunden må forstå hva du tilbyr, få svar på det viktigste og vite hva som skjer videre. Små uklarheter kan bli store stopp når kunden allerede vurderer flere alternativer.Derfor ser vi på hele veien fra interesse til handling. Knapper og farger er bare en liten del av bildet.Før kunden bestemmer segGjør det tydelig hva kunden får, hvem tilbudet passer for og hvorfor det er relevant.Når kunden vil videreGjør kontakt, skjema, produktvalg eller kjøpsvei enkel nok til at kunden ikke stopper unødvendig.Etter handlingenMål om henvendelsen eller kjøpet faktisk har verdi for bedriften.Riktig handling teller mer enn antalletFlere skjema er lite verdt hvis henvendelsene ikke passer.For en tjenestebedrift er målet relevante henvendelser som kan bli kunder. For en nettbutikk må flere kjøp også vurderes mot ordreverdi, margin og kostnader.Derfor definerer vi hva en nyttig handling faktisk er før vi vurderer om konverteringen har blitt bedre.TjenestebedriftFølg relevante henvendelser og om de faktisk kan bli gode kunder.NettbutikkSe kjøp sammen med ordreverdi, margin og kostnader. Antall ordre alene er ikke nok.MålingBruk dataene som finnes, og vær tydelig på hva de kan og ikke kan bevise.Kommersiell prioriteringVi starter med hindringen som står mest i veien.Det kan være et uklart tilbud, feil rekkefølge på informasjonen, et tungvint skjema, en svak landingsside eller en kjøpsvei som skaper unødvendig friksjon.Vi analyserer, gjennomfører avtalt arbeid og følger effekten. Du skal forstå hvorfor et tiltak kommer før et annet.Vi kan forbedre det vi kontrollerer. Vi kan ikke love en bestemt økning i konverteringsrate, omsetning eller antall kunder.Dokumenterte resultaterFullført checkout økte fra 7,1 % til 43,6 %NystaFullført checkout - Shopify+36,5 prosentpoengFør7,1 %30 dager førEtter43,6 %første 30 dager etterKonvertering x synlighetHvis de rette besøkene ikke kommer, er ikke konvertering hele svaret.En god side kan ikke skape kunder fra relevant trafikk som aldri kommer. Derfor må vi skille mellom for få relevante besøk og for mange besøk som stopper før handling.Hvis begge deler begrenser resultatet, kan vi jobbe med synlighet og konvertering sammen.Se SynlighetSe pakker og priserFast månedlig optimaliseringTre pakker. Samme mål: flere riktige kunder.Se pakker og priserOptimaliseringNår Konvertering er det ene prioriterte området.4 500 kr/mndeks. mva.VekstAnbefaltNår Konvertering jobber sammen med et annet område.6 900 kr/mndeks. mva.Gratis, manuell sjekkSend siden der du vil at kunden skal handle.Få våre 3 viktigste funn innen 2 virkedager. Vi ser kort på siden og peker ut hva vi ville undersøkt eller forbedret først.Sjekken er ikke en full CRO-revisjon, komplett feilliste, prognose eller gratis gjennomføring.Ta en gratis sjekkGreit å viteFør du tar neste stegHva er konverteringsoptimalisering?Konverteringsoptimalisering, ofte kalt CRO, handler om å gjøre det enklere for relevante besøkende å ta en nyttig handling - for eksempel å sende en henvendelse eller fullføre et kjøp.Må nettsiden bygges på nytt?Nei, ikke alltid. Mye kan forbedres på eksisterende sider. Større nye landingssider, nettsider, omfattende teknisk arbeid og redesign prises separat når det er nødvendig.Er CRO bare testing av knapper og farger?Nei. Tilbud, budskap, informasjon, landingssider, skjema og kjøpsvei kan alle påvirke om kunden kommer videre. En test er nyttig først når vi har et tydelig spørsmål og et grunnlag for å vurdere svaret.Hva koster arbeid med konvertering?Konvertering kan være det prioriterte området i Optimalisering til 4 500 kr/mnd eks. mva. Hvis konvertering skal jobbe sammen med et annet område, kan Vekst eller Partner være mer relevant. Se pakkene for full oversikt.",
+      "title": "Konverteringsoptimalisering (CRO) | Optimalisering Oslo",
+      "description": "Gjør flere relevante besøk til henvendelser og salg. Vi jobber med budskap, landingssider, skjema og kjøpsvei - og starter der kundene stopper.",
+      "sections": [
+        "service-hero",
+        "friksjon",
+        "kvalitet",
+        "prioritering",
+        "resultater",
+        "sammenheng",
+        "service-priser",
+        "sjekk",
+        "sporsmal"
+      ],
+      "canonical": "/konvertering/",
+      "copy": {
+        "x": 40,
+        "y": 187.234375,
+        "width": 732.515625,
+        "height": 407.140625,
+        "top": 187.234375,
+        "right": 772.515625,
+        "bottom": 594.375,
+        "left": 40
+      },
+      "image": {
+        "src": "/images/services/happy-shopowner.png",
+        "alt": "Butikk som selger",
+        "position": "50% 50%",
+        "fit": "cover"
+      },
+      "heading": {
+        "x": 40,
+        "y": 228.234375,
+        "width": 732.515625,
+        "height": 168.46875,
+        "top": 228.234375,
+        "right": 772.515625,
+        "bottom": 396.703125,
+        "left": 40
+      },
+      "visual": {
+        "x": 836.515625,
+        "y": 179.5,
+        "width": 563.484375,
+        "height": 422.609375,
+        "top": 179.5,
+        "right": 1400,
+        "bottom": 602.109375,
+        "left": 836.515625
+      }
+    },
+    {
+      "width": 900,
+      "text": "ForsidenKonverteringFra besøk til henvendelser og kjøpDet er ikke alltid kunden som må overbevises. Noen ganger må nettsiden slutte å stå i veien.Når relevante besøk ikke blir til henvendelser eller kjøp, ser vi etter friksjonen som stopper kunden. Så prioriterer vi det som er mest verdt å forbedre først.Ta en gratis sjekkSe priserFra interesse til handlingDet skal være enklere å kjøpe enn å gi opp.Kunden må forstå hva du tilbyr, få svar på det viktigste og vite hva som skjer videre. Små uklarheter kan bli store stopp når kunden allerede vurderer flere alternativer.Derfor ser vi på hele veien fra interesse til handling. Knapper og farger er bare en liten del av bildet.Før kunden bestemmer segGjør det tydelig hva kunden får, hvem tilbudet passer for og hvorfor det er relevant.Når kunden vil videreGjør kontakt, skjema, produktvalg eller kjøpsvei enkel nok til at kunden ikke stopper unødvendig.Etter handlingenMål om henvendelsen eller kjøpet faktisk har verdi for bedriften.Riktig handling teller mer enn antalletFlere skjema er lite verdt hvis henvendelsene ikke passer.For en tjenestebedrift er målet relevante henvendelser som kan bli kunder. For en nettbutikk må flere kjøp også vurderes mot ordreverdi, margin og kostnader.Derfor definerer vi hva en nyttig handling faktisk er før vi vurderer om konverteringen har blitt bedre.TjenestebedriftFølg relevante henvendelser og om de faktisk kan bli gode kunder.NettbutikkSe kjøp sammen med ordreverdi, margin og kostnader. Antall ordre alene er ikke nok.MålingBruk dataene som finnes, og vær tydelig på hva de kan og ikke kan bevise.Kommersiell prioriteringVi starter med hindringen som står mest i veien.Det kan være et uklart tilbud, feil rekkefølge på informasjonen, et tungvint skjema, en svak landingsside eller en kjøpsvei som skaper unødvendig friksjon.Vi analyserer, gjennomfører avtalt arbeid og følger effekten. Du skal forstå hvorfor et tiltak kommer før et annet.Vi kan forbedre det vi kontrollerer. Vi kan ikke love en bestemt økning i konverteringsrate, omsetning eller antall kunder.Dokumenterte resultaterFullført checkout økte fra 7,1 % til 43,6 %NystaFullført checkout - Shopify+36,5 prosentpoengFør7,1 %30 dager førEtter43,6 %første 30 dager etterKonvertering x synlighetHvis de rette besøkene ikke kommer, er ikke konvertering hele svaret.En god side kan ikke skape kunder fra relevant trafikk som aldri kommer. Derfor må vi skille mellom for få relevante besøk og for mange besøk som stopper før handling.Hvis begge deler begrenser resultatet, kan vi jobbe med synlighet og konvertering sammen.Se SynlighetSe pakker og priserFast månedlig optimaliseringTre pakker. Samme mål: flere riktige kunder.Se pakker og priserOptimaliseringNår Konvertering er det ene prioriterte området.4 500 kr/mndeks. mva.VekstAnbefaltNår Konvertering jobber sammen med et annet område.6 900 kr/mndeks. mva.Gratis, manuell sjekkSend siden der du vil at kunden skal handle.Få våre 3 viktigste funn innen 2 virkedager. Vi ser kort på siden og peker ut hva vi ville undersøkt eller forbedret først.Sjekken er ikke en full CRO-revisjon, komplett feilliste, prognose eller gratis gjennomføring.Ta en gratis sjekkGreit å viteFør du tar neste stegHva er konverteringsoptimalisering?Konverteringsoptimalisering, ofte kalt CRO, handler om å gjøre det enklere for relevante besøkende å ta en nyttig handling - for eksempel å sende en henvendelse eller fullføre et kjøp.Må nettsiden bygges på nytt?Nei, ikke alltid. Mye kan forbedres på eksisterende sider. Større nye landingssider, nettsider, omfattende teknisk arbeid og redesign prises separat når det er nødvendig.Er CRO bare testing av knapper og farger?Nei. Tilbud, budskap, informasjon, landingssider, skjema og kjøpsvei kan alle påvirke om kunden kommer videre. En test er nyttig først når vi har et tydelig spørsmål og et grunnlag for å vurdere svaret.Hva koster arbeid med konvertering?Konvertering kan være det prioriterte området i Optimalisering til 4 500 kr/mnd eks. mva. Hvis konvertering skal jobbe sammen med et annet område, kan Vekst eller Partner være mer relevant. Se pakkene for full oversikt.",
+      "title": "Konverteringsoptimalisering (CRO) | Optimalisering Oslo",
+      "description": "Gjør flere relevante besøk til henvendelser og salg. Vi jobber med budskap, landingssider, skjema og kjøpsvei - og starter der kundene stopper.",
+      "sections": [
+        "service-hero",
+        "friksjon",
+        "kvalitet",
+        "prioritering",
+        "resultater",
+        "sammenheng",
+        "service-priser",
+        "sjekk",
+        "sporsmal"
+      ],
+      "canonical": "/konvertering/",
+      "copy": {
+        "x": 32,
+        "y": 179.5,
+        "width": 836,
+        "height": 288.46875,
+        "top": 179.5,
+        "right": 868,
+        "bottom": 467.96875,
+        "left": 32
+      },
+      "image": {
+        "src": "/images/services/happy-shopowner.png",
+        "alt": "Butikk som selger",
+        "position": "50% 50%",
+        "fit": "cover"
+      },
+      "heading": {
+        "x": 32,
+        "y": 220.5,
+        "width": 836,
+        "height": 87.46875,
+        "top": 220.5,
+        "right": 868,
+        "bottom": 307.96875,
+        "left": 32
+      },
+      "visual": {
+        "x": 32,
+        "y": 499.96875,
+        "width": 600,
+        "height": 450,
+        "top": 499.96875,
+        "right": 632,
+        "bottom": 949.96875,
+        "left": 32
+      }
+    },
+    {
+      "width": 390,
+      "text": "ForsidenKonverteringFra besøk til henvendelser og kjøpDet er ikke alltid kunden som må overbevises. Noen ganger må nettsiden slutte å stå i veien.Når relevante besøk ikke blir til henvendelser eller kjøp, ser vi etter friksjonen som stopper kunden. Så prioriterer vi det som er mest verdt å forbedre først.Ta en gratis sjekkSe priserFra interesse til handlingDet skal være enklere å kjøpe enn å gi opp.Kunden må forstå hva du tilbyr, få svar på det viktigste og vite hva som skjer videre. Små uklarheter kan bli store stopp når kunden allerede vurderer flere alternativer.Derfor ser vi på hele veien fra interesse til handling. Knapper og farger er bare en liten del av bildet.Før kunden bestemmer segGjør det tydelig hva kunden får, hvem tilbudet passer for og hvorfor det er relevant.Når kunden vil videreGjør kontakt, skjema, produktvalg eller kjøpsvei enkel nok til at kunden ikke stopper unødvendig.Etter handlingenMål om henvendelsen eller kjøpet faktisk har verdi for bedriften.Riktig handling teller mer enn antalletFlere skjema er lite verdt hvis henvendelsene ikke passer.For en tjenestebedrift er målet relevante henvendelser som kan bli kunder. For en nettbutikk må flere kjøp også vurderes mot ordreverdi, margin og kostnader.Derfor definerer vi hva en nyttig handling faktisk er før vi vurderer om konverteringen har blitt bedre.TjenestebedriftFølg relevante henvendelser og om de faktisk kan bli gode kunder.NettbutikkSe kjøp sammen med ordreverdi, margin og kostnader. Antall ordre alene er ikke nok.MålingBruk dataene som finnes, og vær tydelig på hva de kan og ikke kan bevise.Kommersiell prioriteringVi starter med hindringen som står mest i veien.Det kan være et uklart tilbud, feil rekkefølge på informasjonen, et tungvint skjema, en svak landingsside eller en kjøpsvei som skaper unødvendig friksjon.Vi analyserer, gjennomfører avtalt arbeid og følger effekten. Du skal forstå hvorfor et tiltak kommer før et annet.Vi kan forbedre det vi kontrollerer. Vi kan ikke love en bestemt økning i konverteringsrate, omsetning eller antall kunder.Dokumenterte resultaterFullført checkout økte fra 7,1 % til 43,6 %NystaFullført checkout - Shopify+36,5 prosentpoengFør7,1 %30 dager førEtter43,6 %første 30 dager etterKonvertering x synlighetHvis de rette besøkene ikke kommer, er ikke konvertering hele svaret.En god side kan ikke skape kunder fra relevant trafikk som aldri kommer. Derfor må vi skille mellom for få relevante besøk og for mange besøk som stopper før handling.Hvis begge deler begrenser resultatet, kan vi jobbe med synlighet og konvertering sammen.Se SynlighetSe pakker og priserFast månedlig optimaliseringTre pakker. Samme mål: flere riktige kunder.Se pakker og priserOptimaliseringNår Konvertering er det ene prioriterte området.4 500 kr/mndeks. mva.VekstAnbefaltNår Konvertering jobber sammen med et annet område.6 900 kr/mndeks. mva.Gratis, manuell sjekkSend siden der du vil at kunden skal handle.Få våre 3 viktigste funn innen 2 virkedager. Vi ser kort på siden og peker ut hva vi ville undersøkt eller forbedret først.Sjekken er ikke en full CRO-revisjon, komplett feilliste, prognose eller gratis gjennomføring.Ta en gratis sjekkGreit å viteFør du tar neste stegHva er konverteringsoptimalisering?Konverteringsoptimalisering, ofte kalt CRO, handler om å gjøre det enklere for relevante besøkende å ta en nyttig handling - for eksempel å sende en henvendelse eller fullføre et kjøp.Må nettsiden bygges på nytt?Nei, ikke alltid. Mye kan forbedres på eksisterende sider. Større nye landingssider, nettsider, omfattende teknisk arbeid og redesign prises separat når det er nødvendig.Er CRO bare testing av knapper og farger?Nei. Tilbud, budskap, informasjon, landingssider, skjema og kjøpsvei kan alle påvirke om kunden kommer videre. En test er nyttig først når vi har et tydelig spørsmål og et grunnlag for å vurdere svaret.Hva koster arbeid med konvertering?Konvertering kan være det prioriterte området i Optimalisering til 4 500 kr/mnd eks. mva. Hvis konvertering skal jobbe sammen med et annet område, kan Vekst eller Partner være mer relevant. Se pakkene for full oversikt.",
+      "title": "Konverteringsoptimalisering (CRO) | Optimalisering Oslo",
+      "description": "Gjør flere relevante besøk til henvendelser og salg. Vi jobber med budskap, landingssider, skjema og kjøpsvei - og starter der kundene stopper.",
+      "sections": [
+        "service-hero",
+        "friksjon",
+        "kvalitet",
+        "prioritering",
+        "resultater",
+        "sammenheng",
+        "service-priser",
+        "sjekk",
+        "sporsmal"
+      ],
+      "canonical": "/konvertering/",
+      "copy": {
+        "x": 20,
+        "y": 159.5,
+        "width": 350,
+        "height": 404.9375,
+        "top": 159.5,
+        "right": 370,
+        "bottom": 564.4375,
+        "left": 20
+      },
+      "image": {
+        "src": "/images/services/happy-shopowner.png",
+        "alt": "Butikk som selger",
+        "position": "50% 50%",
+        "fit": "cover"
+      },
+      "heading": {
+        "x": 20,
+        "y": 200.5,
+        "width": 350,
+        "height": 120.9375,
+        "top": 200.5,
+        "right": 370,
+        "bottom": 321.4375,
+        "left": 20
+      },
+      "visual": {
+        "x": 20,
+        "y": 596.4375,
+        "width": 350,
+        "height": 262.5,
+        "top": 596.4375,
+        "right": 370,
+        "bottom": 858.9375,
+        "left": 20
+      }
+    },
+    {
+      "width": 320,
+      "text": "ForsidenKonverteringFra besøk til henvendelser og kjøpDet er ikke alltid kunden som må overbevises. Noen ganger må nettsiden slutte å stå i veien.Når relevante besøk ikke blir til henvendelser eller kjøp, ser vi etter friksjonen som stopper kunden. Så prioriterer vi det som er mest verdt å forbedre først.Ta en gratis sjekkSe priserFra interesse til handlingDet skal være enklere å kjøpe enn å gi opp.Kunden må forstå hva du tilbyr, få svar på det viktigste og vite hva som skjer videre. Små uklarheter kan bli store stopp når kunden allerede vurderer flere alternativer.Derfor ser vi på hele veien fra interesse til handling. Knapper og farger er bare en liten del av bildet.Før kunden bestemmer segGjør det tydelig hva kunden får, hvem tilbudet passer for og hvorfor det er relevant.Når kunden vil videreGjør kontakt, skjema, produktvalg eller kjøpsvei enkel nok til at kunden ikke stopper unødvendig.Etter handlingenMål om henvendelsen eller kjøpet faktisk har verdi for bedriften.Riktig handling teller mer enn antalletFlere skjema er lite verdt hvis henvendelsene ikke passer.For en tjenestebedrift er målet relevante henvendelser som kan bli kunder. For en nettbutikk må flere kjøp også vurderes mot ordreverdi, margin og kostnader.Derfor definerer vi hva en nyttig handling faktisk er før vi vurderer om konverteringen har blitt bedre.TjenestebedriftFølg relevante henvendelser og om de faktisk kan bli gode kunder.NettbutikkSe kjøp sammen med ordreverdi, margin og kostnader. Antall ordre alene er ikke nok.MålingBruk dataene som finnes, og vær tydelig på hva de kan og ikke kan bevise.Kommersiell prioriteringVi starter med hindringen som står mest i veien.Det kan være et uklart tilbud, feil rekkefølge på informasjonen, et tungvint skjema, en svak landingsside eller en kjøpsvei som skaper unødvendig friksjon.Vi analyserer, gjennomfører avtalt arbeid og følger effekten. Du skal forstå hvorfor et tiltak kommer før et annet.Vi kan forbedre det vi kontrollerer. Vi kan ikke love en bestemt økning i konverteringsrate, omsetning eller antall kunder.Dokumenterte resultaterFullført checkout økte fra 7,1 % til 43,6 %NystaFullført checkout - Shopify+36,5 prosentpoengFør7,1 %30 dager førEtter43,6 %første 30 dager etterKonvertering x synlighetHvis de rette besøkene ikke kommer, er ikke konvertering hele svaret.En god side kan ikke skape kunder fra relevant trafikk som aldri kommer. Derfor må vi skille mellom for få relevante besøk og for mange besøk som stopper før handling.Hvis begge deler begrenser resultatet, kan vi jobbe med synlighet og konvertering sammen.Se SynlighetSe pakker og priserFast månedlig optimaliseringTre pakker. Samme mål: flere riktige kunder.Se pakker og priserOptimaliseringNår Konvertering er det ene prioriterte området.4 500 kr/mndeks. mva.VekstAnbefaltNår Konvertering jobber sammen med et annet område.6 900 kr/mndeks. mva.Gratis, manuell sjekkSend siden der du vil at kunden skal handle.Få våre 3 viktigste funn innen 2 virkedager. Vi ser kort på siden og peker ut hva vi ville undersøkt eller forbedret først.Sjekken er ikke en full CRO-revisjon, komplett feilliste, prognose eller gratis gjennomføring.Ta en gratis sjekkGreit å viteFør du tar neste stegHva er konverteringsoptimalisering?Konverteringsoptimalisering, ofte kalt CRO, handler om å gjøre det enklere for relevante besøkende å ta en nyttig handling - for eksempel å sende en henvendelse eller fullføre et kjøp.Må nettsiden bygges på nytt?Nei, ikke alltid. Mye kan forbedres på eksisterende sider. Større nye landingssider, nettsider, omfattende teknisk arbeid og redesign prises separat når det er nødvendig.Er CRO bare testing av knapper og farger?Nei. Tilbud, budskap, informasjon, landingssider, skjema og kjøpsvei kan alle påvirke om kunden kommer videre. En test er nyttig først når vi har et tydelig spørsmål og et grunnlag for å vurdere svaret.Hva koster arbeid med konvertering?Konvertering kan være det prioriterte området i Optimalisering til 4 500 kr/mnd eks. mva. Hvis konvertering skal jobbe sammen med et annet område, kan Vekst eller Partner være mer relevant. Se pakkene for full oversikt.",
+      "title": "Konverteringsoptimalisering (CRO) | Optimalisering Oslo",
+      "description": "Gjør flere relevante besøk til henvendelser og salg. Vi jobber med budskap, landingssider, skjema og kjøpsvei - og starter der kundene stopper.",
+      "sections": [
+        "service-hero",
+        "friksjon",
+        "kvalitet",
+        "prioritering",
+        "resultater",
+        "sammenheng",
+        "service-priser",
+        "sjekk",
+        "sporsmal"
+      ],
+      "canonical": "/konvertering/",
+      "copy": {
+        "x": 16,
+        "y": 159.5,
+        "width": 288,
+        "height": 527.171875,
+        "top": 159.5,
+        "right": 304,
+        "bottom": 686.671875,
+        "left": 16
+      },
+      "image": {
+        "src": "/images/services/happy-shopowner.png",
+        "alt": "Butikk som selger",
+        "position": "50% 50%",
+        "fit": "cover"
+      },
+      "heading": {
+        "x": 16,
+        "y": 200.5,
+        "width": 288,
+        "height": 151.171875,
+        "top": 200.5,
+        "right": 304,
+        "bottom": 351.671875,
+        "left": 16
+      },
+      "visual": {
+        "x": 16,
+        "y": 718.671875,
+        "width": 288,
+        "height": 216,
+        "top": 718.671875,
+        "right": 304,
+        "bottom": 934.671875,
+        "left": 16
+      }
+    }
+  ],
+  "errors": [],
+  "posts": []
+}

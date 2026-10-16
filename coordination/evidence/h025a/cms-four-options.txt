@@ -1,0 +1,14 @@
+## Latest page snapshot
+uid=23_0 RootWebArea "Edit konvertering.json | Tjenester | anelpasic/optimalisering.oslo.nov3.3@main | Pages CMS" url="https://app.pagescms.org/anelpasic/optimalisering.oslo.nov3.3/main/collection/services/edit/app%2Fsrc%2Fcontent%2Fpages%2Fkonvertering.json"
+  uid=23_48 main
+    uid=23_56 main
+      uid=23_57 form
+        uid=26_0 button "Dismiss"
+        uid=23_73 combobox "Tekst venstre / bilde høyre" autocomplete="list" expandable expanded focusable focused haspopup="listbox" value="Sentrert uten bilde"
+        uid=23_138 status atomic live="assertive" relevant="additions text"
+        uid=23_154 status atomic live="assertive" relevant="additions text"
+  uid=23_190 region "Notifications alt+T" live="polite" relevant="additions text"
+  uid=26_1 generic
+    uid=26_2 listbox orientation="vertical"
+  uid=26_3 button "Dismiss"
+

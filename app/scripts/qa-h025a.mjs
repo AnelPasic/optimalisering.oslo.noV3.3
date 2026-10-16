@@ -29,8 +29,11 @@ try{
   records.push({kind:'demo-parity',width,choices,lowerSectionsExact:same.after.length});await p.close();
  }
  if(!process.env.QA_BASE_URL){for(const preset of options.map(o=>o.name))for(const withImage of [true,false]){
+  if(process.env.QA_CASE&&process.env.QA_CASE!==`${preset}-${withImage?'image':'none'}`)continue;
   for(const {path,page:initial} of basePages){const source=structuredClone(initial);source.hero={...source.hero,layout:preset};if(source.kind==='home')source.hero.visual.kind=withImage?'image':'none';else if(withImage)source.heroVisual=structuredClone(sampleMedia);else delete source.heroVisual;writeFileSync(path,JSON.stringify(source,null,2)+'\n');}
   writeFileSync(`${out}/${phase}/${preset}-${withImage?'image':'none'}-build.log`,build());
+  execFileSync(process.execPath,['scripts/audit-h017e.mjs'],{encoding:'utf8'});
+  execFileSync(process.execPath,['scripts/audit-h011.mjs'],{encoding:'utf8'});
   for(const {page:source} of basePages)for(const width of [1440,900,390,320]){const route=source.kind==='home'?'/':`/${source.slug}/`,p=await browser.newPage({viewport:{width,height:1000}});p.on('pageerror',e=>errors.push(e.message));await p.route('**/*',r=>r.request().method()==='POST'?(posts.push(r.request().url()),r.abort()):r.continue());await p.goto(base+route);await p.evaluate(()=>document.fonts.ready);
    const hero=p.locator('main .commercial-hero'),hidden=preset==='centered-none'||!withImage;assert.equal(await hero.getAttribute('data-hero-layout'),preset==='centered-none'?'centered':preset);assert.equal(await hero.locator('img').count(),hidden?0:1);assert.equal(await hero.locator('.hero-proof').count(),source.kind==='home'&&!hidden?1:0);
    assert.equal(await p.locator('h1').count(),1);assert.equal(await hero.locator('h1').innerText(),source.kind==='home'?source.hero.title.replace('. ','.\n'):source.kind==='pricing'?JSON.parse(readFileSync('src/content/pages/home.json')).sections.find(s=>s._block==='packages').content.heading:source.title);assert.equal(await hero.locator('a.button').getAttribute('href'),source.kind==='home'?source.hero.primaryCta.href:source.cta.href);
