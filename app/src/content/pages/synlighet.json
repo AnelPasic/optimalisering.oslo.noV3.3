@@ -187,5 +187,8 @@
     "beforeLabel": "Før",
     "afterLabel": "Etter",
     "changeLabel": "Arbeid"
+  },
+  "hero": {
+    "layout": "split-left"
   }
 }
