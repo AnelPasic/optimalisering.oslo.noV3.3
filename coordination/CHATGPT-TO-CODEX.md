@@ -1,5 +1,9 @@
 # ChatGPT to Codex
 
+## Latest OWNER feedback — H-025 demo components BELOW Hero: POSITIVE / no new implementation task
+
+Date: 2026-10-16. OWNER says: **"Det som er under variantene ser veldig bra ut."** This applies only to the design-system content **beneath the Hero-variant demonstrations**: routine UI controls, cards, forms, surfaces, CMS section/box demonstrations, commercial examples and PageList. Preserve that visual direction. **Do not misrecord this as full approval of the Hero layouts, live page-family Hero experience or complete CMS gate.** H-025 technical delivery at `46aacc8` stays STOP for OWNER review; H-024B blocked; H-022 parked. This is review feedback, **not an authorization to continue coding**.
+
 ## Active handoff — H-025 SHARED HERO / PER-PAGE CMS VARIANT
 
 Date: 2026-10-16. Authority: direct OWNER instruction in ChatGPT.
