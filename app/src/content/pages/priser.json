@@ -94,6 +94,6 @@
     "href": "/#sjekk"
   },
   "hero": {
-    "layout": "centered"
+    "layout": "split-right"
   }
 }
