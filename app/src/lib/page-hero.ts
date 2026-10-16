@@ -12,7 +12,11 @@ export const heroViewSchema=z.object({
  visual:z.discriminatedUnion('kind',[z.object({kind:z.literal('none')}).strict(),z.object({kind:z.literal('image'),image}).strict()]),
  titleEmphasis:z.enum(['none','first-sentence']).default('none'),
  breadcrumbs:z.array(z.object({label:z.string(),href:z.string().startsWith('/').optional()}).strict()).default([]),
-}).strict();
+}).strict().transform(({layout,...view})=>({
+ ...view,layout:layout==='centered-none'?'centered' as const:layout,
+ // Presentation only: saved image/crop/alt and proof authority remain untouched.
+ visual:layout==='centered-none'?{kind:'none' as const}:view.visual,
+}));
 export type HeroView=z.infer<typeof heroViewSchema>;
 type Source={kind:string;hero?:unknown;eyebrow:string;title:string;intro:string;cta:{label:string;href:string};heroVisual?:ServiceVisual;composition?:unknown;proof?:unknown;sections:{id:string;links?:{label:string;href:string}[]}[]};
 type Commercial={packages:{eyebrow:string;heading:string;intro:string}};

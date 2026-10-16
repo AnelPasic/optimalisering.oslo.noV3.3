@@ -9,6 +9,7 @@ import {resolvePageHero} from '../lib/page-hero';
 import {resolveHomepageContent} from '../lib/home-builder';
 import HomeSection from '../components/HomeSection.astro';
 import {contentLayoutValues,boxVariantValues} from '../lib/content-presentation';
+import {heroLayoutValues,heroPresetLabels} from '../lib/hero-presentation';
 const pages=(await getCollection('pages')).map(p=>p.data);
 const home=pages.find(p=>p.kind==='home')!;
 const pageList=pages.find(p=>p.kind==='index')!.sections.find(s=>s.pageList)!;
@@ -18,14 +19,11 @@ const layoutLabels={'default':'Standard (automatisk)','two-columns':'To kolonner
 const boxLabels={'default':'Standard (automatisk)','plain':'Åpen boks','card':'Kort'};
 const homeHero=resolvePageHero(home);
 const heroExamples=[
- {key:'split-right',label:'Tekst venstre / bilde høyre',hero:{...homeHero,layout:'split-right' as const}},
- {key:'split-left',label:'Bilde venstre / tekst høyre',hero:{...homeHero,layout:'split-left' as const}},
- {key:'centered',label:'Sentrert med bilde',hero:{...homeHero,layout:'centered' as const}},
- {key:'centered-none',label:'Sentrert uten bilde',hero:{...homeHero,layout:'centered' as const,visual:{kind:'none' as const}}},
- {key:'short',label:'Kort overskrift (kun demo)',hero:{...homeHero,title:'Bli funnet.',titleEmphasis:'none' as const}},
- {key:'service',label:'Tjeneste – samme CMS-valg og bevart bilde',hero:resolvePageHero(pages.find(p=>p.slug==='synlighet')!)},
- {key:'pricing',label:'Priser – teksten hentes fra Pakker, oppsett velges på Priser',hero:resolvePageHero(pages.find(p=>p.kind==='pricing')!,resolveHomepageContent(home))},
- {key:'long',label:'Lang overskrift',hero:{...homeHero,layout:'centered' as const,title:'Gjør veien fra det første relevante søket til en tydelig henvendelse enklere for kundene som vurderer bedriften din.',titleEmphasis:'none' as const}},
+ ...heroLayoutValues.map(layout=>({key:layout,label:heroPresetLabels[layout],purpose:'CMS-valg',preset:layout,hero:resolvePageHero({...home,hero:{...home.hero!,layout}})})),
+ {key:'short',label:'Kort overskrift',purpose:'Stresstest, ikke eget CMS-valg',preset:undefined,hero:{...homeHero,title:'Bli funnet.',titleEmphasis:'none' as const}},
+ {key:'service',label:'Tjeneste – samme CMS-valg og bevart bilde',purpose:'Sidekilde / kontekst, ikke eget CMS-valg',preset:undefined,hero:resolvePageHero(pages.find(p=>p.slug==='synlighet')!)},
+ {key:'pricing',label:'Priser – teksten hentes fra Pakker, oppsett velges på Priser',purpose:'Sidekilde / kontekst, ikke eget CMS-valg',preset:undefined,hero:resolvePageHero(pages.find(p=>p.kind==='pricing')!,resolveHomepageContent(home))},
+ {key:'long',label:'Lang overskrift',purpose:'Stresstest, ikke eget CMS-valg',preset:undefined,hero:{...homeHero,layout:'centered' as const,title:'Gjør veien fra det første relevante søket til en tydelig henvendelse enklere for kundene som vurderer bedriften din.',titleEmphasis:'none' as const}},
 ];
 const colors=['base-100','base-200','base-300','base-content','primary','primary-content','secondary','secondary-content','accent','accent-content','neutral','neutral-content','info','info-content','success','success-content','warning','warning-content','error','error-content'];
 const ds={
@@ -64,8 +62,8 @@ const ds={
     </div>
     <div class={ds.group}><h3>Lang overskrift</h3><div class={ds.specimen}><h2>En svært lang norsk overskrift om hvordan synlighet og konvertering kan gjøre det enklere å finne et tydelig sted å starte</h2></div></div>
    </section>
-   <section class={ds.section}><div class={ds.group}><h2>Hero-varianter</h2><p>Samme Hero brukes på alle sider. Hero → Oppsett i Pages CMS velger Tekst venstre / bilde høyre, Bilde venstre / tekst høyre eller Sentrert. Uten bilde vises full tekstbredde. Kort/lang tekst er kun stresstester her; ordvalg, bilde og tillatelse eies fortsatt av sidens faktiske kilde.</p></div>
-    <div class="space-y-16 md:space-y-24">{heroExamples.map(example=><div class={ds.group} data-hero-demo={example.key}><h3>{example.label}</h3><div class="rounded-box border border-base-300 bg-base-100"><CommercialHero content={example.hero} demo /></div></div>)}</div>
+   <section class={ds.section}><div class={ds.group}><h2>Hero-varianter</h2><p>De fire første eksemplene er valgene i Hero → Oppsett i Pages CMS, med samme navn og samme Hero. Sentrert uten bilde skjuler bildet uten å slette det, beskrivelsen eller utsnittet. Sentrert med bilde viser bare tekst når siden ikke har et lagret bilde. Kort/lang overskrift er stresstester; Tjeneste/Priser viser ulike sidekilder og er ikke ekstra oppsett.</p></div>
+    <div class="space-y-16 md:space-y-24">{heroExamples.map(example=><div class={ds.group} data-hero-demo={example.key} data-cms-hero-preset={example.preset}><p class="eyebrow">{example.purpose}</p><h3>{example.label}</h3><div class="rounded-box border border-base-300 bg-base-100"><CommercialHero content={example.hero} demo /></div></div>)}</div>
    </section>
    <section class={ds.section}><div class={ds.group}><h2>Knapper og status</h2><p>Varianter og tilstander vurderes i egne grupper.</p></div>
     <div class={ds.group}><h3>Knapper</h3><div class="flex flex-wrap items-center gap-4"><button class="btn btn-primary" data-theme-sample>Se hvor vi ville startet</button><button class="btn btn-secondary">Les om arbeidsmåten</button><button class="btn btn-ghost">Tilbake</button><a class="btn btn-link" href="#eksempelskjema">Gå til eksempelskjemaet</a><button class="btn btn-primary" disabled>Innsending er stengt</button></div></div>

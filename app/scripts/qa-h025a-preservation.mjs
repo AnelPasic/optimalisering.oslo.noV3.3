@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import {readFileSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {execFileSync} from 'node:child_process';
+const baseline=JSON.parse(readFileSync('../coordination/evidence/h025a/preservation.json','utf8'));
+const hash=bytes=>createHash('sha256').update(bytes).digest('hex');
+const records=baseline.records.map(record=>{const sha256=hash(readFileSync('../'+record.file)),byteExact=sha256===record.sha256;if(!byteExact){assert.equal(record.file,'app/src/content/pages/konvertering.json');const original=JSON.parse(execFileSync('git',['show',`${baseline.incoming}:${record.file}`],{encoding:'utf8'})),restored=JSON.parse(readFileSync('../'+record.file));assert.deepEqual(restored.hero,{layout:'split-right'});delete restored.hero;assert.deepEqual(restored,original);}return {...record,currentSha256:sha256,byteExact,onlyNewExplicitDefaultAndSerialization:!byteExact};});
+const ownerImages=baseline.ownerImages.map(record=>{assert.equal(hash(readFileSync('../'+record.file)),record.sha256);return {...record,byteExact:true};});
+const source=readFileSync('src/pages/design-system.astro','utf8'),marker='   <section class={ds.section}><div class={ds.group}><h2>Knapper og status</h2>';assert.equal(source.slice(source.indexOf(marker)),readFileSync('../coordination/evidence/h025a/design-system-lower-before.txt','utf8'));
+writeFileSync('../coordination/evidence/h025a/final-preservation.json',JSON.stringify({incoming:baseline.incoming,commit:execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),records,ownerImages,lowerDesignSystemSourceExact:true},null,2)+'\n');console.log(`H-025A preservation PASS: ${records.filter(r=>r.byteExact).length}/${records.length} protected files byte-exact, all original data exact; ${ownerImages.length} OWNER PNGs and lower design-system source exact.`);

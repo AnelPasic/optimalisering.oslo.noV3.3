@@ -26,7 +26,7 @@ test('every actual page editor exposes the same real typed layout choices beside
  for(const {file,page} of pages){
   const entry=entryForFile(cms,`app/src/content/pages/${file}`),definition=entry.fields.find((f:any)=>f.name==='hero');assert.ok(definition,file);
   const hero=resolveField(definition,cms.components),layout=resolveField(hero.fields.find((f:any)=>f.name==='layout'),cms.components);
-  assert.equal(hero.label,'Hero');assert.equal(layout.label,'Oppsett');assert.equal(layout.type,'select');assert.deepEqual(layout.options.values.map((v:any)=>v.name),['split-right','split-left','centered']);
+  assert.equal(hero.label,'Hero');assert.equal(layout.label,'Oppsett');assert.equal(layout.type,'select');assert.deepEqual(layout.options.values.map((v:any)=>v.name),['split-right','split-left','centered','centered-none']);
   if(page.kind!=='home')assert.deepEqual(hero.fields.map((f:any)=>f.name),['layout']);
   if(page.kind==='pricing')for(const key of ['eyebrow','title','intro'])assert.ok(!entry.fields.some((f:any)=>f.name===key&&!f.hidden&&!f.readonly),'Inactive pricing Hero copy is not an editable competing source');
  }
@@ -43,7 +43,7 @@ test('glossary exposes presentation only beside its existing owned text and anch
 });
 test('one-way family adapters preserve owned media/copy, shared pricing and missing CTA semantics',()=>{
  const commercial=resolveHomepageContent(home);
- for(const {page} of pages){const view=resolvePageHero(page,commercial);assert.equal(view.family,page.kind);assert.equal(view.layout,page.hero?.layout??'split-right');
+ for(const {page} of pages){const view=resolvePageHero(page,commercial);assert.equal(view.family,page.kind);assert.equal(view.layout,page.hero?.layout==='centered-none'?'centered':page.hero?.layout??'split-right');
   if(page.kind==='pricing'){assert.equal(view.title,commercial.packages.heading);assert.equal(resolvePageHero({...page,title:'Unused legacy title'},commercial).title,commercial.packages.heading);assert.throws(()=>resolvePageHero(page),/shared Packages/);}
   else if(page.kind==='home'){assert.equal(view.title,page.hero.title);assert.equal(view.primaryCta?.href,page.hero.primaryCta.href);}
   else{assert.equal(view.title,page.title);assert.equal(view.support,page.intro);assert.equal(view.primaryCta?.href,page.kind==='assessment'?undefined:page.cta.href);}

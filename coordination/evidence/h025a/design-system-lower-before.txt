@@ -1,0 +1,46 @@
+   <section class={ds.section}><div class={ds.group}><h2>Knapper og status</h2><p>Varianter og tilstander vurderes i egne grupper.</p></div>
+    <div class={ds.group}><h3>Knapper</h3><div class="flex flex-wrap items-center gap-4"><button class="btn btn-primary" data-theme-sample>Se hvor vi ville startet</button><button class="btn btn-secondary">Les om arbeidsmåten</button><button class="btn btn-ghost">Tilbake</button><a class="btn btn-link" href="#eksempelskjema">Gå til eksempelskjemaet</a><button class="btn btn-primary" disabled>Innsending er stengt</button></div></div>
+    <div class={ds.group}><h3>Merker</h3><div class="flex flex-wrap gap-4"><span class="badge badge-primary">Synlighet</span><span class="badge badge-secondary">Konvertering</span><span class="badge badge-success">Eksempelstatus</span></div></div>
+    <div class={ds.group}><h3>Meldinger</h3><div class="space-y-5"><p class="alert alert-info">Informasjon: Dette er en intern gjennomgang.</p><p class="alert alert-success">Bekreftelse: Eksempelet er klart for vurdering.</p><p class="alert alert-warning">Forhåndsvisning: Innsending er ikke åpnet.</p><p class="alert alert-error">Eksempelfeil: Fyll ut en gyldig nettadresse.</p></div></div>
+   </section>
+   <section class={ds.section}><div class={ds.group}><h2>Kort og varierende antall</h2><p>Hver rad viser et eget antall kort med samme indre avstand.</p></div>
+    <div class="space-y-12 md:space-y-16">{[2,3,4].map(count=><div class={ds.grid}><h3>{count} kort</h3><div class:list={['grid gap-6',count===2?'md:grid-cols-2':count===3?'md:grid-cols-3':'md:grid-cols-2 xl:grid-cols-4']}>{Array.from({length:count},(_,index)=><article class:list={['card',index===1?'bg-base-200 border border-base-300':index===2?'bg-secondary text-secondary-content':'bg-base-100']}><div class="card-body gap-5"><h3 class="card-title">{index===0?'Et tydelig utgangspunkt':'Et neste steg med en bevisst lang norsk overskrift'}</h3><p>Vurder innhold, struktur og veien videre i sammenheng.</p><div class="card-actions mt-3"><button class="btn btn-primary">Se eksempelet</button></div></div></article>)}</div></div>)}</div>
+    <div class={ds.group}><h3>Kort med bilde</h3><article class="card md:card-side bg-base-100"><figure class="md:w-1/2"><img src="/images/home/hero-customer.webp" alt="Eksisterende illustrasjonsfoto fra forsiden" loading="lazy" /></figure><div class="card-body gap-5"><p>Medieeksempel med eksisterende bilde. Ingen ny kundehistorie.</p></div></article></div>
+    <div class={ds.group}><h3>Resultatprimitiv</h3><div class="stats stats-vertical md:stats-horizontal bg-base-100 w-full"><div class="stat"><div class="stat-title">Resultatprimitiv</div><div class="stat-value">–</div><div class="stat-desc">Ingen nye resultatpåstander. Faktiske bevisdata er uendret.</div></div><div class="stat"><div class="stat-title">Datagrunnlag</div><div class="stat-value">–</div><div class="stat-desc">Kun demonstrasjon av komponenten.</div></div></div></div>
+   </section>
+   <section class={ds.section}><div class={ds.group}><h2>Spørsmål og skjema</h2><p>Skjemaet er et internt eksempel med deaktivert innsending.</p></div>
+    <div class={ds.group}><h3>Spørsmål</h3><details class="collapse collapse-plus bg-base-100"><summary class="collapse-title">Kan jeg bruke skjemaet i denne gjennomgangen?</summary><div class="collapse-content"><p>Dette er et internt eksempel. Innsending er deaktivert.</p></div></details></div>
+    <form id="eksempelskjema" class="ds-form card bg-base-100" onsubmit="return false"><div class="card-body gap-7 md:gap-8"><h3>Et uforpliktende eksempel</h3>
+     <label>Nettside eller nettbutikk<input class="input w-full" type="url" placeholder="https://eksempel.no" /></label>
+     <label>Hva vil du se nærmere på?<select class="select w-full"><option>Velg et område</option><option>Synlighet og konvertering</option></select></label>
+     <label>En bevisst lang norsk feltetikett som skal kunne brytes over flere linjer på en smal skjerm<textarea class="textarea w-full" rows="3" placeholder="Beskriv kort hva du vil vurdere"></textarea></label>
+     <label>Illustrativt nivå<input class="range range-primary w-full" type="range" min="0" max="100" value="40" /></label>
+     <button class="btn btn-primary self-start" type="submit" disabled>Innsending er ikke åpnet</button>
+    </div></form>
+   </section>
+   <section class={ds.section}><div class={ds.group}><h2>Seksjonsflater og justering</h2><p>Lik ytre avstand og indre polstring i alle flateeksempler.</p></div><div class="grid gap-6 md:gap-8">{['base','soft','mint','lavender','dark'].map((surface,index)=><section class:list={['ds-surface rounded-box p-6 md:p-10 space-y-5',index%2===0?'text-center':'text-left']} style={`background:var(--color-${surface==='base'?'base-100':surface==='soft'?'base-200':surface==='dark'?'secondary':surface});color:var(--color-${surface==='dark'?'secondary-content':'base-content'})`}><p class="eyebrow">{surface}</p><h3>{index%2===0?'Sentrert overskrift':'Venstrejustert overskrift'}</h3><p>Felles farger og lesbar tekst i samme designsystem.</p></section>)}</div></section>
+   <section class={ds.section} id="cms-content-variants"><div class={ds.group}><h2>CMS: seksjonstype, oppsett og boksvariant</h2>
+    <p>Seksjonstype bestemmer innholdsmodellen: Innholdsseksjon, Regneeksempel, Pakker og priser og de øvrige beskyttede seksjonene har ulike oppgaver. Seksjonstype er ikke et fargevalg eller en boksvariant.</p>
+    <p>Forside → Seksjoner → åpne en Innholdsseksjon. Seksjonsfarge gjelder hele flaten; Boksfarge gjelder én boks. Seksjonsoppsett fordeler de eksisterende boksene. Boksvariant under Alternativer eller steg velger Åpen boks eller Kort. Standard og et tomt valg beholder dagens automatiske design. Ingen felt tar CSS-klasser eller frie mål.</p>
+    <p>Hero ligger fast først. Pris, bevis, regneeksempel og skjema har egne redaktører og får ikke disse vanlige innholdsvariantene. Piloten beholder åtte flyttbare seksjoner; flere seksjoner krever en egen trygg opprettingsflyt.</p>
+   </div>
+    <div class="space-y-12 md:space-y-16">{contentLayoutValues.map(layout=><div class={ds.group} data-content-layout-demo={layout}><h3>Seksjonsoppsett: {layoutLabels[layout]}</h3><p>CMS: Seksjonsoppsett. Samme innhold og samme bokser. Valgte kolonneoppsett blir én kolonne på mobil; Standard beholder seksjonens automatiske fordeling.</p><div class="ds-real-example invite-home"><HomeSection section={{...ordinary,layout}} anchor={`ds-layout-${layout}`} /></div></div>)}</div>
+    <div class={ds.group}><h3>Boksvariant</h3><p>CMS: Alternativer eller steg → Boksvariant. Her holdes oppsett og farge like, slik at selve boksen kan sammenlignes.</p><div class="ds-real-example invite-home"><HomeSection section={{...ordinary,id:'ds-box-variants',heading:'Samme innhold, tre boksvalg',body:[],layout:'three-columns',items:boxVariantValues.map(boxVariant=>({...ordinary.items![0],title:boxLabels[boxVariant],boxVariant}))}} /></div></div>
+    <div class={ds.group}><h3>Farge velges separat</h3><p>Kort med tre av de eksisterende H-019-fargene. Oppsett og boksvariant er like.</p><div class="ds-real-example invite-home"><HomeSection section={{...ordinary,id:'ds-box-colors',heading:'Samme kort, ulike flater',body:[],layout:'three-columns',items:(['mint','lavender','dark'] as const).map(surface=>({...ordinary.items![0],title:surface,boxVariant:'card',surface}))}} /></div></div>
+   </section>
+   <section class={ds.section}><div class={ds.group}><h2>Eksisterende kommersielle komponenter</h2><p>Hentet fra samme kilde som forsiden. Priser, ordvalg og valglogikk er uendret.</p></div><div class="ds-real-example invite-home"><PackageSection content={getHomepageBlock(home,'packages').content} /></div></section>
+   <section class={ds.section}><div class={ds.group}><h2>PageList og CMS-styrte seksjoner</h2><p>Eksisterende primitiveksempler i egne presentasjonsgrupper.</p></div>
+    <div class="ds-real-example space-y-12 md:space-y-16"><div class={ds.group}><h3>Vekslende liste</h3><PageList section={{...pageList,id:'ds-alternating',pageList:{...pageList.pageList!,layout:'alternating'}}} pages={pages} /></div><div class={ds.group}><h3>Bildekort</h3><PageList section={{...pageList,id:'ds-media',pageList:{...pageList.pageList!,layout:'mediaCards'}}} pages={pages} /></div>{examples.map(section=><div class={ds.group}><HomeSection section={section} /></div>)}</div>
+   </section>
+  </div>
+ </div>
+</SiteLayout>
+<style>
+ .design-system { overflow-wrap: anywhere; }
+ .design-system section, .ds-type-specimen > * { min-width: 0; }
+ .ds-form label { display: block; font-size: var(--type-form-label); line-height: var(--leading-small); }
+ .ds-form label input, .ds-form label select, .ds-form label textarea { display: block; margin-top: 12px; }
+ .ds-real-example :global(.section-space) { padding-block: 24px; }
+ .type-display, .type-h1 { font-family: var(--heading); font-size: var(--type-display); font-weight: var(--weight-heading); line-height: var(--leading-display); }
+ .type-lead { font-size: var(--type-lead); line-height: var(--leading-lead); }
+</style>

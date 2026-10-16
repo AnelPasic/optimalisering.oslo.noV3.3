@@ -1,0 +1,147 @@
+✖ all 17 editors show the four exact Hero presets with a media-preserving fallback description (2.0614ms)
+✖ no-image CMS preset round-trips without clearing any home/service/pricing source data (0.3923ms)
+✖ fourth preset hides supplied images for every normal family while preserving sources and CTA semantics (1.5096ms)
+✖ legacy presets/defaults and centered missing-image fallback retain their exact meaning (2.5254ms)
+✔ all normal page families accept presentation-only Hero variants without copied content (11.625ms)
+✔ primary schema rejects invalid layouts and duplicated editable Hero copy outside home (10.982ms)
+✖ every actual page editor exposes the same real typed layout choices beside existing copy (0.8145ms)
+✔ layout CMS saves preserve every source field and never clear the image or crop (7.2762ms)
+✔ glossary exposes presentation only beside its existing owned text and anchors (0.5594ms)
+✔ one-way family adapters preserve owned media/copy, shared pricing and missing CTA semantics (3.7918ms)
+✔ dedicated glossary/error presentation uses the same contract and no invented CTA or source (0.6332ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 6
+ℹ fail 5
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2113.6732
+
+✖ failing tests:
+
+test at tests\hero-presets.test.ts:15:1
+✖ all 17 editors show the four exact Hero presets with a media-preserving fallback description (2.0614ms)
+  AssertionError [ERR_ASSERTION]: app/src/content/pages/ai-synlighet.json
+  + actual - expected
+  ... Skipped lines
+  
+    [
+      {
+        label: 'Tekst venstre / bilde høyre',
+        name: 'split-right'
+      },
+  ...
+      {
+  +     label: 'Sentrert (med eller uten bilde)',
+  -     label: 'Sentrert med bilde',
+        name: 'centered'
+      },
+  -   {
+  -     label: 'Sentrert uten bilde',
+  -     name: 'centered-none'
+  -   }
+    ]
+  
+      at TestContext.<anonymous> (file:///E:/Codex/optimalisering.oslo.noV3.3/app/tests/hero-presets.test.ts:18:284)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.start (node:internal/test_runner/test:1003:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:358:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: [ { name: 'split-right', label: 'Tekst venstre / bilde høyre' }, { name: 'split-left', label: 'Bilde venstre / tekst høyre' }, { name: 'centered', label: 'Sentrert (med eller uten bilde)' } ],
+    expected: [ { name: 'split-right', label: 'Tekst venstre / bilde høyre' }, { name: 'split-left', label: 'Bilde venstre / tekst høyre' }, { name: 'centered', label: 'Sentrert med bilde' }, { name: 'centered-none', label: 'Sentrert uten bilde' } ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at tests\hero-presets.test.ts:21:1
+✖ no-image CMS preset round-trips without clearing any home/service/pricing source data (0.3923ms)
+  Error: $.hero.layout: select choice
+      at validateCmsForm (file:///E:/Codex/optimalisering.oslo.noV3.3/app/tests/helpers/pages-cms-json.ts:37:166)
+      at validateCmsForm (file:///E:/Codex/optimalisering.oslo.noV3.3/app/tests/helpers/pages-cms-json.ts:47:41)
+      at cmsJsonSave (file:///E:/Codex/optimalisering.oslo.noV3.3/app/tests/helpers/pages-cms-json.ts:89:3)
+      at TestContext.<anonymous> (file:///E:/Codex/optimalisering.oslo.noV3.3/app/tests/hero-presets.test.ts:23:26)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3)
+
+test at tests\hero-presets.test.ts:28:1
+✖ fourth preset hides supplied images for every normal family while preserving sources and CTA semantics (1.5096ms)
+  ZodError: [
+    {
+      "code": "invalid_value",
+      "values": [
+        "split-right",
+        "split-left",
+        "centered"
+      ],
+      "path": [
+        "layout"
+      ],
+      "message": "Invalid option: expected one of \"split-right\"|\"split-left\"|\"centered\""
+    }
+  ]
+      at resolvePageHero (file:///E:/Codex/optimalisering.oslo.noV3.3/app/src/lib/page-hero.ts:26:38)
+      at TestContext.<anonymous> (file:///E:/Codex/optimalisering.oslo.noV3.3/app/tests/hero-presets.test.ts:30:44)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7)
+
+test at tests\hero-presets.test.ts:34:1
+✖ legacy presets/defaults and centered missing-image fallback retain their exact meaning (2.5254ms)
+  ZodError: [
+    {
+      "code": "invalid_value",
+      "values": [
+        "split-right",
+        "split-left",
+        "centered"
+      ],
+      "path": [
+        "layout"
+      ],
+      "message": "Invalid option: expected one of \"split-right\"|\"split-left\"|\"centered\""
+    }
+  ]
+      at TestContext.<anonymous> (file:///E:/Codex/optimalisering.oslo.noV3.3/app/tests/hero-presets.test.ts:38:64)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7)
+
+test at tests\page-hero.test.ts:25:1
+✖ every actual page editor exposes the same real typed layout choices beside existing copy (0.8145ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+      'split-right',
+      'split-left',
+      'centered',
+  -   'centered-none'
+    ]
+  
+      at TestContext.<anonymous> (file:///E:/Codex/optimalisering.oslo.noV3.3/app/tests/page-hero.test.ts:29:114)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ 'split-right', 'split-left', 'centered' ],
+    expected: [ 'split-right', 'split-left', 'centered', 'centered-none' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
