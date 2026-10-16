@@ -1,6 +1,14 @@
 # ChatGPT to Codex
 
-## Active handoff — H-025A HERO PRESET / CMS PARITY CORRECTION
+## Latest OWNER verdict — D-088 H-025/H-025A HERO PASS / NO ACTIVE IMPLEMENTATION HANDOFF
+
+Date: 2026-10-17. OWNER directly confirms: **"ja, testet og ser bra ut på Heros."** The four predefined page-specific Hero presets and corrected nondestructive `Sentrert uten bilde` behavior are **OWNER ACCEPTED** under D-088. Do not reopen Hero layouts or the OWNER-liked lower design-system component treatments.
+
+Current separate gate: H-024A3 full ordinary section editor/layout/box UX remains awaiting its own OWNER approval. **Do not start H-024B yet**; it would require that gate and a separately authorized scoped implementation (recommended first on one service page). H-022 remains parked; no public launch, intake/indexing, proof-authority or unrelated content changes authorized. This is a decision receipt, not a new code task.
+
+---
+
+## Historical handoff — H-025A HERO PRESET / CMS PARITY CORRECTION (DELIVERED; D-088 PASS)
 
 Date: 2026-10-16. Direct OWNER screenshot of Konvertering editor + feedback: **"saken er bare at hero valg ikke tillater alle definerte varianter."** H-025 is **REVISE for editor option parity**, not fully approved.
 Detailed authorized correction: `coordination/H025A-HERO-PRESETS-CMS-PARITY.md`.
