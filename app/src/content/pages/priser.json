@@ -92,5 +92,8 @@
   "cta": {
     "label": "Ta en gratis sjekk",
     "href": "/#sjekk"
+  },
+  "hero": {
+    "layout": "centered"
   }
 }
