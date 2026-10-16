@@ -176,6 +176,6 @@
     "changeLabel": "Arbeid"
   },
   "hero": {
-    "layout": "centered-none"
+    "layout": "split-right"
   }
 }
