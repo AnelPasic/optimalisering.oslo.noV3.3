@@ -1,10 +1,25 @@
 # ChatGPT to Codex
 
+## Active handoff — H-025A HERO PRESET / CMS PARITY CORRECTION
+
+Date: 2026-10-16. Direct OWNER screenshot of Konvertering editor + feedback: **"saken er bare at hero valg ikke tillater alle definerte varianter."** H-025 is **REVISE for editor option parity**, not fully approved.
+Detailed authorized correction: `coordination/H025A-HERO-PRESETS-CMS-PARITY.md`.
+
+- Current CMS exposes 3 layout values, but the design-system also demonstrates **Sentrert uten bilde**. On a page with uploaded Hero image there is no independent, obvious way to choose this preset without removing media.
+- Present **four meaningful explicit presets**: Tekst venstre/bilde høyre, Bilde venstre/tekst høyre, Sentrert med bilde, **Sentrert uten bilde**. Selecting no-image must never delete/clear saved image, crop, alt or related proof data.
+- Keep one typed reusable Hero and current sources; preserve all existing page defaults and backwards compatibility.
+- **Kort/Lang overskrift** are stress tests, **Tjeneste/Priser** are examples, **not** additional distinct layout presets. Relabel demo versus CMS choices precisely.
+- OWNER likes the elements *below Hero demos*; they must remain unchanged.
+- Authenticated `konvertering` CMS selection → Git → native Build → live media-free Hero → restore image-visible → verified Worker; source/CTA/SEO/proof/default checks for home, service, non-service; focused responsive/browser/schema QA. Then STOP for OWNER review.
+- H-024B stays blocked; H-022 parked, noindex and intake unchanged. No other redesign authorized.
+
+---
+
 ## Latest OWNER feedback — H-025 demo components BELOW Hero: POSITIVE / no new implementation task
 
 Date: 2026-10-16. OWNER says: **"Det som er under variantene ser veldig bra ut."** This applies only to the design-system content **beneath the Hero-variant demonstrations**: routine UI controls, cards, forms, surfaces, CMS section/box demonstrations, commercial examples and PageList. Preserve that visual direction. **Do not misrecord this as full approval of the Hero layouts, live page-family Hero experience or complete CMS gate.** H-025 technical delivery at `46aacc8` stays STOP for OWNER review; H-024B blocked; H-022 parked. This is review feedback, **not an authorization to continue coding**.
 
-## Active handoff — H-025 SHARED HERO / PER-PAGE CMS VARIANT
+## Historical H-025 handoff — DELIVERED / OWNER REVISE for CMS preset parity
 
 Date: 2026-10-16. Authority: direct OWNER instruction in ChatGPT.
 Exact scoped contract: `coordination/H025-GLOBAL-PAGE-HERO-VARIANTS.md`.
