@@ -1,0 +1,350 @@
+{
+  "records": [
+    {
+      "path": "app/src/content/pages/ai-synlighet.json",
+      "family": "service",
+      "editor": "services",
+      "layoutField": "hero.layout",
+      "layoutChoices": [
+        {
+          "name": "split-right",
+          "label": "Tekst venstre / bilde høyre"
+        },
+        {
+          "name": "split-left",
+          "label": "Bilde venstre / tekst høyre"
+        },
+        {
+          "name": "centered",
+          "label": "Sentrert (med eller uten bilde)"
+        }
+      ],
+      "copySource": "page eyebrow/title/intro/cta",
+      "mediaSource": "page.heroVisual"
+    },
+    {
+      "path": "app/src/content/pages/home.json",
+      "family": "home",
+      "editor": "homepage",
+      "layoutField": "hero.layout",
+      "layoutChoices": [
+        {
+          "name": "split-right",
+          "label": "Tekst venstre / bilde høyre"
+        },
+        {
+          "name": "split-left",
+          "label": "Bilde venstre / tekst høyre"
+        },
+        {
+          "name": "centered",
+          "label": "Sentrert (med eller uten bilde)"
+        }
+      ],
+      "copySource": "home.hero",
+      "mediaSource": "home.hero.visual"
+    },
+    {
+      "path": "app/src/content/pages/hva-bor-optimaliseres-forst.json",
+      "family": "article",
+      "editor": "insightArticles",
+      "layoutField": "hero.layout",
+      "layoutChoices": [
+        {
+          "name": "split-right",
+          "label": "Tekst venstre / bilde høyre"
+        },
+        {
+          "name": "split-left",
+          "label": "Bilde venstre / tekst høyre"
+        },
+        {
+          "name": "centered",
+          "label": "Sentrert (med eller uten bilde)"
+        }
+      ],
+      "copySource": "page eyebrow/title/intro/cta",
+      "mediaSource": "page.heroVisual"
+    },
+    {
+      "path": "app/src/content/pages/innsikt.json",
+      "family": "index",
+      "editor": "insightOverview",
+      "layoutField": "hero.layout",
+      "layoutChoices": [
+        {
+          "name": "split-right",
+          "label": "Tekst venstre / bilde høyre"
+        },
+        {
+          "name": "split-left",
+          "label": "Bilde venstre / tekst høyre"
+        },
+        {
+          "name": "centered",
+          "label": "Sentrert (med eller uten bilde)"
+        }
+      ],
+      "copySource": "page eyebrow/title/intro/cta",
+      "mediaSource": "page.heroVisual"
+    },
+    {
+      "path": "app/src/content/pages/kontakt.json",
+      "family": "utility",
+      "editor": "kontakt",
+      "layoutField": "hero.layout",
+      "layoutChoices": [
+        {
+          "name": "split-right",
+          "label": "Tekst venstre / bilde høyre"
+        },
+        {
+          "name": "split-left",
+          "label": "Bilde venstre / tekst høyre"
+        },
+        {
+          "name": "centered",
+          "label": "Sentrert (med eller uten bilde)"
+        }
+      ],
+      "copySource": "page eyebrow/title/intro/cta",
+      "mediaSource": "page.heroVisual"
+    },
+    {
+      "path": "app/src/content/pages/konvertering.json",
+      "family": "service",
+      "editor": "services",
+      "layoutField": "hero.layout",
+      "layoutChoices": [
+        {
+          "name": "split-right",
+          "label": "Tekst venstre / bilde høyre"
+        },
+        {
+          "name": "split-left",
+          "label": "Bilde venstre / tekst høyre"
+        },
+        {
+          "name": "centered",
+          "label": "Sentrert (med eller uten bilde)"
+        }
+      ],
+      "copySource": "page eyebrow/title/intro/cta",
+      "mediaSource": "page.heroVisual"
+    },
+    {
+      "path": "app/src/content/pages/male-effekt-av-optimalisering.json",
+      "family": "article",
+      "editor": "insightArticles",
+      "layoutField": "hero.layout",
+      "layoutChoices": [
+        {
+          "name": "split-right",
+          "label": "Tekst venstre / bilde høyre"
+        },
+        {
+          "name": "split-left",
+          "label": "Bilde venstre / tekst høyre"
+        },
+        {
+          "name": "centered",
+          "label": "Sentrert (med eller uten bilde)"
+        }
+      ],
+      "copySource": "page eyebrow/title/intro/cta",
+      "mediaSource": "page.heroVisual"
+    },
+    {
+      "path": "app/src/content/pages/nettbutikkoptimalisering.json",
+      "family": "service",
+      "editor": "services",
+      "layoutField": "hero.layout",
+      "layoutChoices": [
+        {
+          "name": "split-right",
+          "label": "Tekst venstre / bilde høyre"
+        },
+        {
+          "name": "split-left",
+          "label": "Bilde venstre / tekst høyre"
+        },
+        {
+          "name": "centered",
+          "label": "Sentrert (med eller uten bilde)"
+        }
+      ],
+      "copySource": "page eyebrow/title/intro/cta",
+      "mediaSource": "page.heroVisual"
+    },
+    {
+      "path": "app/src/content/pages/om.json",
+      "family": "utility",
+      "editor": "om",
+      "layoutField": "hero.layout",
+      "layoutChoices": [
+        {
+          "name": "split-right",
+          "label": "Tekst venstre / bilde høyre"
+        },
+        {
+          "name": "split-left",
+          "label": "Bilde venstre / tekst høyre"
+        },
+        {
+          "name": "centered",
+          "label": "Sentrert (med eller uten bilde)"
+        }
+      ],
+      "copySource": "page eyebrow/title/intro/cta",
+      "mediaSource": "page.heroVisual"
+    },
+    {
+      "path": "app/src/content/pages/personvern.json",
+      "family": "utility",
+      "editor": "personvern",
+      "layoutField": "hero.layout",
+      "layoutChoices": [
+        {
+          "name": "split-right",
+          "label": "Tekst venstre / bilde høyre"
+        },
+        {
+          "name": "split-left",
+          "label": "Bilde venstre / tekst høyre"
+        },
+        {
+          "name": "centered",
+          "label": "Sentrert (med eller uten bilde)"
+        }
+      ],
+      "copySource": "page eyebrow/title/intro/cta",
+      "mediaSource": "page.heroVisual"
+    },
+    {
+      "path": "app/src/content/pages/priser.json",
+      "family": "pricing",
+      "editor": "priser",
+      "layoutField": "hero.layout",
+      "layoutChoices": [
+        {
+          "name": "split-right",
+          "label": "Tekst venstre / bilde høyre"
+        },
+        {
+          "name": "split-left",
+          "label": "Bilde venstre / tekst høyre"
+        },
+        {
+          "name": "centered",
+          "label": "Sentrert (med eller uten bilde)"
+        }
+      ],
+      "copySource": "home.sections[packages].content",
+      "mediaSource": "page.heroVisual"
+    },
+    {
+      "path": "app/src/content/pages/seo.json",
+      "family": "service",
+      "editor": "services",
+      "layoutField": "hero.layout",
+      "layoutChoices": [
+        {
+          "name": "split-right",
+          "label": "Tekst venstre / bilde høyre"
+        },
+        {
+          "name": "split-left",
+          "label": "Bilde venstre / tekst høyre"
+        },
+        {
+          "name": "centered",
+          "label": "Sentrert (med eller uten bilde)"
+        }
+      ],
+      "copySource": "page eyebrow/title/intro/cta",
+      "mediaSource": "page.heroVisual"
+    },
+    {
+      "path": "app/src/content/pages/synlighet.json",
+      "family": "service",
+      "editor": "services",
+      "layoutField": "hero.layout",
+      "layoutChoices": [
+        {
+          "name": "split-right",
+          "label": "Tekst venstre / bilde høyre"
+        },
+        {
+          "name": "split-left",
+          "label": "Bilde venstre / tekst høyre"
+        },
+        {
+          "name": "centered",
+          "label": "Sentrert (med eller uten bilde)"
+        }
+      ],
+      "copySource": "page eyebrow/title/intro/cta",
+      "mediaSource": "page.heroVisual"
+    },
+    {
+      "path": "app/src/content/pages/vilkar.json",
+      "family": "utility",
+      "editor": "vilkar",
+      "layoutField": "hero.layout",
+      "layoutChoices": [
+        {
+          "name": "split-right",
+          "label": "Tekst venstre / bilde høyre"
+        },
+        {
+          "name": "split-left",
+          "label": "Bilde venstre / tekst høyre"
+        },
+        {
+          "name": "centered",
+          "label": "Sentrert (med eller uten bilde)"
+        }
+      ],
+      "copySource": "page eyebrow/title/intro/cta",
+      "mediaSource": "page.heroVisual"
+    },
+    {
+      "path": "app/src/content/pages/vurdering.json",
+      "family": "assessment",
+      "editor": "vurdering",
+      "layoutField": "hero.layout",
+      "layoutChoices": [
+        {
+          "name": "split-right",
+          "label": "Tekst venstre / bilde høyre"
+        },
+        {
+          "name": "split-left",
+          "label": "Bilde venstre / tekst høyre"
+        },
+        {
+          "name": "centered",
+          "label": "Sentrert (med eller uten bilde)"
+        }
+      ],
+      "copySource": "page eyebrow/title/intro/cta",
+      "mediaSource": "page.heroVisual"
+    },
+    {
+      "path": "app/src/content/terminology/glossary.json",
+      "family": "glossary",
+      "editor": "terminology",
+      "layoutField": "hero.layout",
+      "copySource": "glossary title/intro + existing source eyebrow",
+      "mediaSource": "none"
+    },
+    {
+      "path": "app/src/content/presentation/hero-layouts.json",
+      "family": "error",
+      "editor": "errorHero",
+      "layoutField": "notFound.layout",
+      "copySource": "page-hero.ts existing error wording/navigation",
+      "mediaSource": "none"
+    }
+  ]
+}

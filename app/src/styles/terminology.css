@@ -35,31 +35,6 @@ a.term-trigger:focus-visible { outline: 2px solid currentColor; outline-offset: 
 .term-panel[hidden] { display: none; }
 .term-panel [data-term-description] { display: block; margin: 0 0 8px; }
 .term-panel a { color: #320c43; font-weight: var(--weight-heading); text-decoration: underline; }
-
-/* Glossary */
-.glossary-hero {
-  max-width: 980px;
-  padding-block: 88px 48px;
-}
-.glossary-hero .eyebrow {
-  margin: 0 0 16px;
-  font-size: var(--type-eyebrow);
-  letter-spacing: var(--tracking-eyebrow);
-  text-transform: uppercase;
- line-height: var(--leading-small); }
-.glossary-hero h1 {
-  max-width: 980px;
-  font-size: var(--type-display);
-  line-height: var(--leading-display);
-  letter-spacing: -.055em;
-}
-.glossary-hero > p:not(.eyebrow) {
-  margin-top: 24px;
-  max-width: 700px;
-  font-size: var(--type-lead);
-  line-height: var(--leading-lead);
-  color: #5f5069;
-}
 .glossary-navigation {
   display: flex;
   flex-wrap: wrap;
@@ -187,7 +162,6 @@ a.term-trigger:focus-visible { outline: 2px solid currentColor; outline-offset: 
 }
 
 @media (max-width: 900px) {
-  .glossary-hero { padding-block: 64px 36px; }
   .glossary-group {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -204,7 +178,6 @@ a.term-trigger:focus-visible { outline: 2px solid currentColor; outline-offset: 
 }
 
 @media (max-width: 650px) {
-  .glossary-hero { padding-block: 44px 28px; }
   .glossary-navigation {
     gap: var(--gap-xs);
     margin-top: 24px;

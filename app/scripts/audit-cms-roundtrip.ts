@@ -19,7 +19,7 @@ const checks = snapshots.map(record => {
   const original = JSON.parse(record.bytes.toString());
   const form = structuredClone(original);
   const field = record.directory === 'proof' ? null : 'title';
-  if (field) (form.hero ?? form)[field] = 'H017B harmless in-memory round-trip';
+  if(field){if(form.kind==='pricing')form.seo.description='H017B harmless in-memory round-trip';else (form.kind==='home'?form.hero:form)[field]='H017B harmless in-memory round-trip';}
   const entry = entryForFile(cms, `app/${record.file}`);
   assert.ok(entry, record.file);
   const serialized = cmsJsonSave(original, form, entry, cms);
@@ -29,7 +29,7 @@ const checks = snapshots.map(record => {
   const schema = record.directory === 'pages' ? pageSchema : record.directory === 'terminology' ? glossarySchema : proofContentSchema;
   const normalizedExpected = record.directory === 'proof' && expected.publicationApproved === true && !proofCaseSchema.safeParse(saved).success ? { ...expected, publicationApproved: false } : expected;
   assert.deepEqual(schema.parse(saved), schema.parse(normalizedExpected), record.file);
-  return { file: `app/${record.file}`, originalSha256: hash(record.bytes), serializedFixtureSha256: hash(serialized), editor: entry.name, editedField: field, semanticOnlyExpectedEdit: true };
+    return { file: `app/${record.file}`, originalSha256: hash(record.bytes), serializedFixtureSha256: hash(serialized), editor: entry.name, editedField: form.kind === 'pricing' ? 'seo.description' : form.kind === 'home' ? 'hero.title' : field, semanticOnlyExpectedEdit: true };
 });
 const home = JSON.parse(readFileSync('src/content/pages/home.json', 'utf8'));
 const form = structuredClone(home);

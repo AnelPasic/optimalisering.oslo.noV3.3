@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import Arrow from './Arrow.astro';
+import CommercialHero from './CommercialHero.astro';
+import {resolvePageHero} from '../lib/page-hero';
 import ClosingCta from './ClosingCta.astro';
 import ContentSection from './ContentSection.astro';
 import AssessmentForm from './AssessmentForm.astro';
@@ -10,12 +11,7 @@ const { page } = Astro.props;
 const isAssessment = page.kind === 'assessment';
 const isArticle = page.kind === 'article';
 ---
-<section class:list={['inner-hero', `inner-${page.kind}`]}>
-  <div class="shell">
-    <nav class="breadcrumbs" aria-label="Brødsmuler"><a href="/">Forsiden</a><span aria-hidden="true">/</span>{isArticle && <><a href="/innsikt/">Innsikt</a><span aria-hidden="true">/</span></>}<span>{page.eyebrow}</span></nav>
-    <div class:list={['inner-hero-grid', { 'assessment-hero-grid': isAssessment }]}><div><p class="eyebrow">{page.eyebrow}</p><h1>{page.title}</h1><p class="hero-intro">{page.intro}</p>{!isAssessment && <a class="button btn btn-primary" href={page.cta.href}>{page.cta.label}<Arrow diagonal /></a>}</div>{isAssessment && <AssessmentForm />}</div>
-  </div>
-</section>
+<CommercialHero content={resolvePageHero(page)}>{isAssessment&&<AssessmentForm slot="auxiliary"/>}</CommercialHero>
 <div class:list={{ 'article-content': isArticle }}>{page.sections.map((section, index) => <ContentSection section={section} index={index} />)}</div>
 <Faq items={page.faq} />
 {!isAssessment && page.kind !== 'utility' && <ClosingCta link={page.cta} />}

@@ -1,0 +1,37 @@
+[
+  {
+    "route": "/konvertering/",
+    "width": 900,
+    "message": "/konvertering/ 900 image.x: 268 vs 32"
+  },
+  {
+    "route": "/seo/",
+    "width": 900,
+    "message": "/seo/ 900 image.x: 268 vs 32"
+  },
+  {
+    "route": "/synlighet/",
+    "width": 900,
+    "message": "/synlighet/ 900 image.x: 268 vs 32"
+  },
+  {
+    "route": "/404.html",
+    "width": 1440,
+    "message": "/404.html 1440 cta\n+ actual - expected\n\n  {\n    href: '/',\n+   text: 'Til forsiden↗'\n-   text: 'Til forsiden ↗'\n  }\n"
+  },
+  {
+    "route": "/404.html",
+    "width": 900,
+    "message": "/404.html 900 cta\n+ actual - expected\n\n  {\n    href: '/',\n+   text: 'Til forsiden↗'\n-   text: 'Til forsiden ↗'\n  }\n"
+  },
+  {
+    "route": "/404.html",
+    "width": 390,
+    "message": "/404.html 390 cta\n+ actual - expected\n\n  {\n    href: '/',\n+   text: 'Til forsiden↗'\n-   text: 'Til forsiden ↗'\n  }\n"
+  },
+  {
+    "route": "/404.html",
+    "width": 320,
+    "message": "/404.html 320 cta\n+ actual - expected\n\n  {\n    href: '/',\n+   text: 'Til forsiden↗'\n-   text: 'Til forsiden ↗'\n  }\n"
+  }
+]

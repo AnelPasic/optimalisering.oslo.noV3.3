@@ -1,27 +1,30 @@
 ---
 import { existsSync } from 'node:fs';
 import { resolve } from 'node:path';
-import type { CommercialHero } from '../lib/home-builder';
+import type { HeroView } from '../lib/page-hero';
 import type { getHeroProof } from '../lib/hero-proof';
 import TermText from './TermText.astro';
 interface Props {
-  content: Extract<CommercialHero['visual'],{kind:'image'}>['image'];
+  content: Extract<HeroView['visual'],{kind:'image'}>['image'];
   proof?: ReturnType<typeof getHeroProof>;
 }
 const { content, proof } = Astro.props;
 // The generated customer photo is supplied separately. Build a valid preview
 // without requesting a missing asset or turning a placeholder into public copy.
+const home=content.origin==='home';
 const supplied = existsSync(resolve('public', content.src.slice(1)));
 const image = supplied ? content.src : '/images/home/hero-customer-preview.svg';
 ---
-<div class="hero-visual">
+<div class:list={['hero-visual',{'service-hero-visual':!home}]} data-kind={!home?content.kind:undefined}>
+ {home?<>
   <div class="hero-photo" data-photo-src={content.src} data-photo-state={supplied ? 'supplied' : 'preview-placeholder'}>
     <img src={image} width="1200" height="750" alt="" fetchpriority="high" decoding="async" style={{ objectPosition: `${content.positionX}% ${content.positionY}%` }} />
   </div>
-  {proof && <div class="hero-proof">
+  {home&&proof && <div class="hero-proof">
     <p class="hero-proof-result"><span><TermText text={proof.metric} terms={['roas']} /></span>{' '}<span class="hero-proof-comparison">{proof.comparison}</span></p>
     <p class="hero-proof-support"><TermText text={proof.support} terms={['google-ads']} /></p>
   </div>}
+ </>:<img src={content.src} alt={content.alt} width="960" height="720" fetchpriority="high" decoding="async" style={{objectPosition:`${content.positionX}% ${content.positionY}%`}}/>}
 </div>
 
 <style>
@@ -30,7 +33,8 @@ const image = supplied ? content.src : '/images/home/hero-customer-preview.svg';
   .hero-proof-result { display: flex; flex-wrap: wrap; gap: 0 6px; font-family: var(--heading); font-size: var(--type-h4); font-weight: var(--weight-heading); line-height: var(--leading-h4); }
   .hero-proof-comparison { white-space: nowrap; }
   .hero-proof-support { margin-top: 5px; font-size: var(--type-body-sm); line-height: var(--leading-body); }
-  @media (max-width: 900px) { .hero-visual { max-width: 640px; justify-self: start; } }
+  @media (max-width: 900px) { .hero-visual:not([data-kind]) { max-width: 640px; justify-self: start; } }
+  @media (max-width: 900px) { .hero-visual[data-kind] { justify-self: start; } }
   @media (max-width: 650px) {
     .hero-proof { left: 12px; bottom: -16px; max-width: calc(100% - 24px); }
   }

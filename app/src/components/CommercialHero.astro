@@ -1,23 +1,36 @@
 ---
 import '../styles/compositions/hero.css';
-import type { CommercialHero } from '../lib/home-builder';
-import { heroSchema } from '../lib/home-builder';
-import type { getHeroProof } from '../lib/hero-proof';
+import {heroViewSchema,type HeroView} from '../lib/page-hero';
+import type {getHeroProof} from '../lib/hero-proof';
 import Arrow from './Arrow.astro';
 import TermText from './TermText.astro';
-import HeroPhoto from './HomeHeroPhoto.astro';
-interface Props { content: CommercialHero; proof?: ReturnType<typeof getHeroProof>; demo?: boolean; }
+import HeroPhoto from './HeroMedia.astro';
+interface Props {content:HeroView;proof?:ReturnType<typeof getHeroProof>;demo?:boolean;}
 const {content:input,proof,demo=false}=Astro.props;
-const content=heroSchema.parse(input);
-const Heading=demo?'h2':'h1';
+const content=heroViewSchema.parse(input),family=content.family;
+const Heading=demo?'h2':'h1',Section=family==='glossary'?'header':'section';
+const inner=['article','assessment','utility'].includes(family),service=family==='service'||family==='index';
+const media=content.visual.kind==='image',auxiliary=family==='assessment'&&Astro.slots.has('auxiliary');
 const split=content.titleEmphasis==='first-sentence'&&content.title.includes('.')?content.title.indexOf('.')+1:0;
+const shellInside=inner;
+const classes=['commercial-hero',family==='home'?'home-hero shell':service?'service-hero shell':family==='pricing'?'pricing-hero shell':inner?`inner-hero inner-${family}`:family==='error'?'error-page shell':'glossary-hero'];
+const anchor=family==='service'?'service-hero':family==='pricing'?'pricing-hero':undefined;
 ---
-<section class="commercial-hero home-hero shell" data-hero-layout={content.layout} data-hero-visual={content.visual.kind}>
- <div class="hero-copy">
-  <p class="eyebrow"><span class="small-dot"></span>{content.eyebrow}</p>
-  <Heading class="hero-title">{split?<><span class="hero-emphasis">{content.title.slice(0,split)}</span>{content.title.slice(split)}</>:content.title}</Heading>
-  <p class="hero-intro"><TermText text={content.support} terms={['seo','ai-synlighet','cro']} /></p>
-  <div class="hero-actions"><a class="button btn btn-primary" href={content.primaryCta.href}>{content.primaryCta.label}<Arrow diagonal /></a>{content.secondaryCta&&<a class="text-link" href={content.secondaryCta.href}>{content.secondaryCta.label}<Arrow /></a>}</div>
+<Section id={demo?undefined:anchor} class:list={classes} data-hero-family={family} data-hero-layout={content.layout} data-hero-visual={media?'image':auxiliary?'auxiliary':'none'}>
+ <div class:list={['hero-container',{shell:shellInside}]}>
+  {content.breadcrumbs.length>0&&<nav class="breadcrumbs" aria-label="Brødsmuler">{content.breadcrumbs.map((crumb,index)=><>{index>0&&<span aria-hidden="true">/</span>}{crumb.href?<a href={crumb.href}>{crumb.label}</a>:<span>{crumb.label}</span>}</>)}</nav>}
+  <div class:list={['hero-frame',{'inner-hero-grid':inner,'assessment-hero-grid':family==='assessment','service-hero-split':service&&media}]}>
+   <div class:list={['page-hero-copy',{'hero-copy':family==='home','service-hero-copy':service&&media}]}>
+    <p class="eyebrow">{family==='home'&&<span class="small-dot"></span>}{content.eyebrow}</p>
+    <Heading id={!demo&&family==='pricing'?'pricing-title':undefined} class={family==='home'?'hero-title':undefined}>{split?<><span class="hero-emphasis">{content.title.slice(0,split)}</span>{content.title.slice(split)}</>:content.title.split('\n').map((line,index)=><>{index>0&&<br/>}{line}</>)}</Heading>
+    <p class={['glossary','error'].includes(family)?'hero-support':'hero-intro'}>{family==='home'?<TermText text={content.support} terms={['seo','ai-synlighet','cro']}/>:content.support}</p>
+    {(content.primaryCta||content.secondaryCta)&&<div class={family==='home'||service?'hero-actions':'hero-links'}>{content.primaryCta&&<a class="button btn btn-primary" href={content.primaryCta.href}>{content.primaryCta.label}{family==='error'?<>{' '}<span aria-hidden="true">&#8599;</span></>:<Arrow diagonal/>}</a>}{content.secondaryCta&&<a class="text-link" href={content.secondaryCta.href}>{content.secondaryCta.label}<Arrow/></a>}</div>}
+    <slot name="copy-end"/>
+   </div>
+   {content.visual.kind==='image'&&auxiliary?<div class="hero-aside"><HeroPhoto content={content.visual.image}/><div class="hero-auxiliary"><slot name="auxiliary"/></div></div>:<>
+    {content.visual.kind==='image'&&<HeroPhoto content={content.visual.image} proof={family==='home'?proof:undefined}/>}
+    {auxiliary&&<div class="hero-auxiliary"><slot name="auxiliary"/></div>}
+   </>}
+  </div>
  </div>
- {content.visual.kind==='image'&&<HeroPhoto content={content.visual.image} proof={proof} />}
-</section>
+</Section>

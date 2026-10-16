@@ -5,6 +5,8 @@ import PackageSection from '../components/PackageSection.astro';
 import PageList from '../components/PageList.astro';
 import { getHomepageBlock } from '../lib/home-builder';
 import CommercialHero from '../components/CommercialHero.astro';
+import {resolvePageHero} from '../lib/page-hero';
+import {resolveHomepageContent} from '../lib/home-builder';
 import HomeSection from '../components/HomeSection.astro';
 import {contentLayoutValues,boxVariantValues} from '../lib/content-presentation';
 const pages=(await getCollection('pages')).map(p=>p.data);
@@ -14,12 +16,16 @@ const examples=home.sections.filter(s=>['mekanisme','passer'].includes(s.id));
 const ordinary=home.sections.find(s=>s.id==='mekanisme')!;
 const layoutLabels={'default':'Standard (automatisk)','two-columns':'To kolonner','three-columns':'Tre kolonner','stacked':'Liste (én kolonne)'};
 const boxLabels={'default':'Standard (automatisk)','plain':'Åpen boks','card':'Kort'};
+const homeHero=resolvePageHero(home);
 const heroExamples=[
- {key:'split-right',label:'Tekst venstre / bilde høyre',hero:{...home.hero!,layout:'split-right' as const}},
- {key:'split-left',label:'Bilde venstre / tekst høyre',hero:{...home.hero!,layout:'split-left' as const}},
- {key:'centered',label:'Sentrert med bilde',hero:{...home.hero!,layout:'centered' as const}},
- {key:'centered-none',label:'Sentrert uten bilde',hero:{...home.hero!,layout:'centered' as const,visual:{kind:'none' as const}}},
- {key:'long',label:'Lang overskrift',hero:{...home.hero!,layout:'centered' as const,title:'Gjør veien fra det første relevante søket til en tydelig henvendelse enklere for kundene som vurderer bedriften din.',titleEmphasis:'none' as const}},
+ {key:'split-right',label:'Tekst venstre / bilde høyre',hero:{...homeHero,layout:'split-right' as const}},
+ {key:'split-left',label:'Bilde venstre / tekst høyre',hero:{...homeHero,layout:'split-left' as const}},
+ {key:'centered',label:'Sentrert med bilde',hero:{...homeHero,layout:'centered' as const}},
+ {key:'centered-none',label:'Sentrert uten bilde',hero:{...homeHero,layout:'centered' as const,visual:{kind:'none' as const}}},
+ {key:'short',label:'Kort overskrift (kun demo)',hero:{...homeHero,title:'Bli funnet.',titleEmphasis:'none' as const}},
+ {key:'service',label:'Tjeneste – samme CMS-valg og bevart bilde',hero:resolvePageHero(pages.find(p=>p.slug==='synlighet')!)},
+ {key:'pricing',label:'Priser – teksten hentes fra Pakker, oppsett velges på Priser',hero:resolvePageHero(pages.find(p=>p.kind==='pricing')!,resolveHomepageContent(home))},
+ {key:'long',label:'Lang overskrift',hero:{...homeHero,layout:'centered' as const,title:'Gjør veien fra det første relevante søket til en tydelig henvendelse enklere for kundene som vurderer bedriften din.',titleEmphasis:'none' as const}},
 ];
 const colors=['base-100','base-200','base-300','base-content','primary','primary-content','secondary','secondary-content','accent','accent-content','neutral','neutral-content','info','info-content','success','success-content','warning','warning-content','error','error-content'];
 const ds={
@@ -58,7 +64,7 @@ const ds={
     </div>
     <div class={ds.group}><h3>Lang overskrift</h3><div class={ds.specimen}><h2>En svært lang norsk overskrift om hvordan synlighet og konvertering kan gjøre det enklere å finne et tydelig sted å starte</h2></div></div>
    </section>
-   <section class={ds.section}><div class={ds.group}><h2>Hero-varianter</h2><p>Samme strukturerte Hero med tre trygge oppsett. Interne eksempler til gjennomgang.</p></div>
+   <section class={ds.section}><div class={ds.group}><h2>Hero-varianter</h2><p>Samme Hero brukes på alle sider. Hero → Oppsett i Pages CMS velger Tekst venstre / bilde høyre, Bilde venstre / tekst høyre eller Sentrert. Uten bilde vises full tekstbredde. Kort/lang tekst er kun stresstester her; ordvalg, bilde og tillatelse eies fortsatt av sidens faktiske kilde.</p></div>
     <div class="space-y-16 md:space-y-24">{heroExamples.map(example=><div class={ds.group} data-hero-demo={example.key}><h3>{example.label}</h3><div class="rounded-box border border-base-300 bg-base-100"><CommercialHero content={example.hero} demo /></div></div>)}</div>
    </section>
    <section class={ds.section}><div class={ds.group}><h2>Knapper og status</h2><p>Varianter og tilstander vurderes i egne grupper.</p></div>

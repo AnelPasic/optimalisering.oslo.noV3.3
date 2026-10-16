@@ -22,7 +22,7 @@ for (const slug of ['home', 'priser', 'synlighet', 'konvertering']) {
   if (['synlighet', 'konvertering'].includes(slug)) {
     const content = JSON.parse(readFileSync(`src/content/pages/${slug}.json`));
     const visual = resolveServiceVisual(content.heroVisual);
-    assert.equal(html.includes('class="service-hero-visual"'), Boolean(visual));
+    assert.equal(/class="[^"]*\bservice-hero-visual\b/.test(html), Boolean(visual));
     if (visual) assert.ok(html.includes(`src="${visual.src}"`) && html.includes(`alt="${visual.alt}"`));
     assert.ok(html.includes('href="/#sjekk"') && html.includes('href="/priser/"'));
     assert.ok(!/<form/.test(html));

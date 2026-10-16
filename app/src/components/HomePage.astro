@@ -2,6 +2,7 @@
 import '../styles/compositions/home.css';
 import { getCollection,type CollectionEntry } from 'astro:content';
 import CommercialHero from './CommercialHero.astro';
+import {resolvePageHero} from '../lib/page-hero';
 import HomepageBlock from './HomepageBlock.astro';
 import { getHomepageBlocks, getHomepageBlock } from '../lib/home-builder';
 import { getHeroProof } from '../lib/hero-proof';
@@ -11,6 +12,6 @@ const records=(await getCollection('proofCases')).map(record=>record.data);
 const blocks=getHomepageBlocks(page);
 ---
 <div class="invite-home">
- <CommercialHero content={page.hero!} proof={getHeroProof(getHomepageBlock(page,'proof').content,records)} />
+ <CommercialHero content={resolvePageHero(page)} proof={getHeroProof(getHomepageBlock(page,'proof').content,records)} />
  {blocks.map(block=><HomepageBlock block={block} records={records} />)}
 </div>

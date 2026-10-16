@@ -1,0 +1,17 @@
+{
+  "records": [
+    {
+      "name": "service-invalid-layout",
+      "rejectedBeforeRender": true
+    },
+    {
+      "name": "service-duplicated-copy",
+      "rejectedBeforeRender": true
+    },
+    {
+      "name": "home-invalid-layout",
+      "rejectedBeforeRender": true
+    }
+  ],
+  "exactSourceRestored": true
+}

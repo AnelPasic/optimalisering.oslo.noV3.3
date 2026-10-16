@@ -7,16 +7,19 @@ import { homeSectionDataSchema, proofSlotSchema } from './home-section-data.ts';
 import { compositionSchema, resolveRouteFamily, routeKindSchema } from './route-family.ts';
 
 import { heroSchema, homepageBlocksSchema } from './home-builder.ts';
+import {heroPresentationSchema} from './hero-presentation.ts';
 
 const link = z.object({label:z.string(),href:z.string().startsWith('/')});
 export { proofSlotSchema } from './home-section-data.ts';
 const homepage = z.object({chrome:homeSectionDataSchema.shape.chrome}).strict();
 export const pageSchema = z.preprocess((input,context)=>{
   const raw=input as {kind?:string;sections?:unknown;hero?:unknown};
+  if(raw?.kind!=='home'&&raw?.hero!==undefined){const hero=heroPresentationSchema.safeParse(raw.hero);if(!hero.success)for(const issue of hero.error.issues)context.addIssue({...issue,path:['hero',...issue.path]});}
   if(raw?.kind==='home'){
     const result=homepageBlocksSchema.safeParse(raw.sections);
     if(!result.success)for(const issue of result.error.issues)context.addIssue({...issue,path:['sections',...issue.path]});
     const hero=heroSchema.safeParse(raw.hero);
+    if(!hero.success)for(const issue of hero.error.issues)context.addIssue({...issue,path:['hero',...issue.path]});
     if(hero.success)return {...raw,eyebrow:hero.data.eyebrow,title:hero.data.title,intro:hero.data.support,cta:hero.data.primaryCta,sections:result.success?result.data.map(b=>({...b,heading:'heading' in b?b.heading:'',body:'body' in b?b.body:[]})):raw.sections};
   }
   return input;
@@ -27,7 +30,7 @@ export const pageSchema = z.preprocess((input,context)=>{
     status: z.enum(['REVIEW_REQUIRED', 'CONTENT_LOCKED', 'PUBLISHED']),
     authority: z.enum(['DRAFT / NON-AUTHORITATIVE', 'CONTENT_LOCKED / AUTHORITATIVE']),
     seo: z.object({ title: z.string(), description: z.string() }),
-    hero: heroSchema.optional(),
+    hero: z.union([heroSchema,heroPresentationSchema]).optional(),
     eyebrow: z.string(), title: z.string(), intro: z.string(),
     listing: listingSchema.optional(),
     sections: z.array(z.object({

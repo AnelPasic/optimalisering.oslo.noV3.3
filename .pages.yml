@@ -65,6 +65,25 @@ components:
         type: string
         pattern: ^/
         required: false
+  heroLayoutChoice:
+    type: select
+    options:
+      placeholder: Tekst venstre / bilde høyre
+      values:
+        - name: split-right
+          label: Tekst venstre / bilde høyre
+        - name: split-left
+          label: Bilde venstre / tekst høyre
+        - name: centered
+          label: Sentrert (med eller uten bilde)
+  pageHero:
+    type: object
+    label: Hero
+    fields:
+      - name: layout
+        label: Oppsett
+        component: heroLayoutChoice
+        description: Oppsettet endrer ikke tekst eller bilde. Uten bilde beholdes full tekstbredde. Sentrert samler teksten i midten. Teksten kommer først på mobil.
   surfaceChoice:
     type: select
     options:
@@ -472,6 +491,8 @@ content:
         type: string
         required: true
         readonly: true
+      - name: hero
+        component: pageHero
       - name: title
         label: Overskrift
         type: string
@@ -577,16 +598,7 @@ content:
         fields:
           - name: layout
             label: Oppsett
-            type: select
-            default: split-right
-            options:
-              values:
-                - name: split-right
-                  label: Tekst venstre / bilde høyre
-                - name: split-left
-                  label: Bilde venstre / tekst høyre
-                - name: centered
-                  label: Sentrert
+            component: heroLayoutChoice
           - name: eyebrow
             label: Overtekst
             type: string
@@ -1778,7 +1790,11 @@ content:
             type: text
             required: true
         required: true
-      - name: heroVisual
+      - &pageHeroField
+        name: hero
+        component: pageHero
+      - &heroMedia
+        name: heroVisual
         label: Hero-bilde / drømmeutfall
         type: object
         fields:
@@ -1814,7 +1830,7 @@ content:
             options:
               min: 0
               max: 100
-        description: Valgfritt bilde for Synlighet og Konvertering. Uten et levert bilde vises toppseksjonen med tekst.
+        description: Valgfritt eksisterende Hero-bilde. Bilde og utsnitt bevares når Oppsett endres. Uten et levert bilde vises toppseksjonen med tekst.
       - &a3
         name: eyebrow
         label: Toppseksjon (Hero) – Overtekst
@@ -1919,11 +1935,27 @@ content:
     path: app/src/content/pages/priser.json
     format: json
     operations: *a1
-    fields: &a9
+    fields:
       - *a2
-      - *a3
-      - *a4
-      - *a5
+      - name: hero
+        component: pageHero
+        description: Hero-teksten hentes fra Forside → Seksjoner → Pakker og priser. Velg bare oppsett her. Ingen ekstra tekstkilde opprettes.
+      - *heroMedia
+      - name: eyebrow
+        label: Overtekst (inaktiv kilde)
+        type: string
+        hidden: true
+        readonly: true
+      - name: title
+        label: Overskrift (inaktiv kilde)
+        type: string
+        hidden: true
+        readonly: true
+      - name: intro
+        label: Ingress (inaktiv kilde)
+        type: text
+        hidden: true
+        readonly: true
       - *a6
       - *a7
       - *a8
@@ -1939,6 +1971,8 @@ content:
         operations: *a1
         fields:
           - *a2
+          - *pageHeroField
+          - *heroMedia
           - *a3
           - *a4
           - *a5
@@ -2003,6 +2037,8 @@ content:
             readonly: true
             required: true
           - *a2
+          - *pageHeroField
+          - *heroMedia
           - *a3
           - *a4
           - *a5
@@ -2045,7 +2081,16 @@ content:
     path: app/src/content/pages/om.json
     format: json
     operations: *a1
-    fields: *a9
+    fields: &a9
+      - *a2
+      - *pageHeroField
+      - *heroMedia
+      - *a3
+      - *a4
+      - *a5
+      - *a6
+      - *a7
+      - *a8
   - name: vurdering
     label: Optimaliseringssjekk
     type: file
@@ -2074,6 +2119,17 @@ content:
     format: json
     operations: *a1
     fields: *a9
+  - name: errorHero
+    label: 404 – Hero-oppsett
+    type: file
+    path: app/src/content/presentation/hero-layouts.json
+    format: json
+    operations: *a1
+    fields:
+      - name: notFound
+        label: Hero
+        component: pageHero
+        description: Oppsett for feilsiden. Feilmelding og navigasjon beholdes; ingen markedsføringshandling legges til.
   - name: proofCases
     label: Case/evidens (intern)
     type: collection

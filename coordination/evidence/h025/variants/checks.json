@@ -1,0 +1,5286 @@
+{
+  "records": [
+    {
+      "family": "home",
+      "route": "/",
+      "layout": "centered",
+      "withImage": true,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 390,
+          "y": 109,
+          "width": 660,
+          "height": 367.25,
+          "top": 109,
+          "right": 1050,
+          "bottom": 476.25,
+          "left": 390
+        },
+        "visual": {
+          "x": 800,
+          "y": 564.25,
+          "width": 600,
+          "height": 375,
+          "top": 564.25,
+          "right": 1400,
+          "bottom": 939.25,
+          "left": 800
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "home",
+      "route": "/",
+      "layout": "centered",
+      "withImage": true,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 125,
+          "y": 109,
+          "width": 650,
+          "height": 324.203125,
+          "top": 109,
+          "right": 775,
+          "bottom": 433.203125,
+          "left": 125
+        },
+        "visual": {
+          "x": 32,
+          "y": 469.203125,
+          "width": 640,
+          "height": 360,
+          "top": 469.203125,
+          "right": 672,
+          "bottom": 829.203125,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "home",
+      "route": "/",
+      "layout": "centered",
+      "withImage": true,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 93,
+          "width": 350,
+          "height": 335.703125,
+          "top": 93,
+          "right": 370,
+          "bottom": 428.703125,
+          "left": 20
+        },
+        "visual": {
+          "x": 20,
+          "y": 464.703125,
+          "width": 350,
+          "height": 196.875,
+          "top": 464.703125,
+          "right": 370,
+          "bottom": 661.578125,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "home",
+      "route": "/",
+      "layout": "centered",
+      "withImage": true,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 91,
+          "width": 288,
+          "height": 415.9375,
+          "top": 91,
+          "right": 304,
+          "bottom": 506.9375,
+          "left": 16
+        },
+        "visual": {
+          "x": 16,
+          "y": 542.9375,
+          "width": 288,
+          "height": 162,
+          "top": 542.9375,
+          "right": 304,
+          "bottom": 704.9375,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "article",
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "layout": "centered",
+      "withImage": true,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 360,
+          "y": 187.5,
+          "width": 720,
+          "height": 271.9375,
+          "top": 187.5,
+          "right": 1080,
+          "bottom": 459.4375,
+          "left": 360
+        },
+        "visual": {
+          "x": 610,
+          "y": 523.4375,
+          "width": 600,
+          "height": 450,
+          "top": 523.4375,
+          "right": 1210,
+          "bottom": 973.4375,
+          "left": 610
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "article",
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "layout": "centered",
+      "withImage": true,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 90,
+          "y": 187.5,
+          "width": 720,
+          "height": 253.734375,
+          "top": 187.5,
+          "right": 810,
+          "bottom": 441.234375,
+          "left": 90
+        },
+        "visual": {
+          "x": 32,
+          "y": 473.234375,
+          "width": 600,
+          "height": 450,
+          "top": 473.234375,
+          "right": 632,
+          "bottom": 923.234375,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "article",
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "layout": "centered",
+      "withImage": true,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 193,
+          "width": 350,
+          "height": 311.46875,
+          "top": 193,
+          "right": 370,
+          "bottom": 504.46875,
+          "left": 20
+        },
+        "visual": {
+          "x": 20,
+          "y": 536.46875,
+          "width": 350,
+          "height": 262.5,
+          "top": 536.46875,
+          "right": 370,
+          "bottom": 798.96875,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "article",
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "layout": "centered",
+      "withImage": true,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 193,
+          "width": 288,
+          "height": 361.46875,
+          "top": 193,
+          "right": 304,
+          "bottom": 554.46875,
+          "left": 16
+        },
+        "visual": {
+          "x": 16,
+          "y": 586.46875,
+          "width": 288,
+          "height": 216,
+          "top": 586.46875,
+          "right": 304,
+          "bottom": 802.46875,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "index",
+      "route": "/innsikt/",
+      "layout": "centered",
+      "withImage": true,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 289.5,
+          "y": 179.5,
+          "width": 860.984375,
+          "height": 294.828125,
+          "top": 179.5,
+          "right": 1150.484375,
+          "bottom": 474.328125,
+          "left": 289.5
+        },
+        "visual": {
+          "x": 800,
+          "y": 538.328125,
+          "width": 600,
+          "height": 450,
+          "top": 538.328125,
+          "right": 1400,
+          "bottom": 988.328125,
+          "left": 800
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "index",
+      "route": "/innsikt/",
+      "layout": "centered",
+      "withImage": true,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 80,
+          "y": 179.5,
+          "width": 740,
+          "height": 273.734375,
+          "top": 179.5,
+          "right": 820,
+          "bottom": 453.234375,
+          "left": 80
+        },
+        "visual": {
+          "x": 32,
+          "y": 485.234375,
+          "width": 600,
+          "height": 450,
+          "top": 485.234375,
+          "right": 632,
+          "bottom": 935.234375,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "index",
+      "route": "/innsikt/",
+      "layout": "centered",
+      "withImage": true,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 159.5,
+          "width": 350,
+          "height": 344.46875,
+          "top": 159.5,
+          "right": 370,
+          "bottom": 503.96875,
+          "left": 20
+        },
+        "visual": {
+          "x": 20,
+          "y": 535.96875,
+          "width": 350,
+          "height": 262.5,
+          "top": 535.96875,
+          "right": 370,
+          "bottom": 798.46875,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "index",
+      "route": "/innsikt/",
+      "layout": "centered",
+      "withImage": true,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 192,
+          "width": 288,
+          "height": 373.46875,
+          "top": 192,
+          "right": 304,
+          "bottom": 565.46875,
+          "left": 16
+        },
+        "visual": {
+          "x": 16,
+          "y": 597.46875,
+          "width": 288,
+          "height": 216,
+          "top": 597.46875,
+          "right": 304,
+          "bottom": 813.46875,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "utility",
+      "route": "/kontakt/",
+      "layout": "centered",
+      "withImage": true,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 230,
+          "y": 187.5,
+          "width": 980,
+          "height": 359.984375,
+          "top": 187.5,
+          "right": 1210,
+          "bottom": 547.484375,
+          "left": 230
+        },
+        "visual": {
+          "x": 610,
+          "y": 611.484375,
+          "width": 600,
+          "height": 450,
+          "top": 611.484375,
+          "right": 1210,
+          "bottom": 1061.484375,
+          "left": 610
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "utility",
+      "route": "/kontakt/",
+      "layout": "centered",
+      "withImage": true,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 32,
+          "y": 187.5,
+          "width": 836,
+          "height": 297.46875,
+          "top": 187.5,
+          "right": 868,
+          "bottom": 484.96875,
+          "left": 32
+        },
+        "visual": {
+          "x": 32,
+          "y": 516.96875,
+          "width": 600,
+          "height": 450,
+          "top": 516.96875,
+          "right": 632,
+          "bottom": 966.96875,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "utility",
+      "route": "/kontakt/",
+      "layout": "centered",
+      "withImage": true,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 160.5,
+          "width": 350,
+          "height": 340.46875,
+          "top": 160.5,
+          "right": 370,
+          "bottom": 500.96875,
+          "left": 20
+        },
+        "visual": {
+          "x": 20,
+          "y": 532.96875,
+          "width": 350,
+          "height": 262.5,
+          "top": 532.96875,
+          "right": 370,
+          "bottom": 795.46875,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "utility",
+      "route": "/kontakt/",
+      "layout": "centered",
+      "withImage": true,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 160.5,
+          "width": 288,
+          "height": 399.703125,
+          "top": 160.5,
+          "right": 304,
+          "bottom": 560.203125,
+          "left": 16
+        },
+        "visual": {
+          "x": 16,
+          "y": 592.203125,
+          "width": 288,
+          "height": 216,
+          "top": 592.203125,
+          "right": 304,
+          "bottom": 808.203125,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "pricing",
+      "route": "/priser/",
+      "layout": "centered",
+      "withImage": true,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 250,
+          "y": 129,
+          "width": 940,
+          "height": 323.09375,
+          "top": 129,
+          "right": 1190,
+          "bottom": 452.09375,
+          "left": 250
+        },
+        "visual": {
+          "x": 800,
+          "y": 516.09375,
+          "width": 600,
+          "height": 450,
+          "top": 516.09375,
+          "right": 1400,
+          "bottom": 966.09375,
+          "left": 800
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "pricing",
+      "route": "/priser/",
+      "layout": "centered",
+      "withImage": true,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 76.21875,
+          "y": 113,
+          "width": 747.5625,
+          "height": 248.734375,
+          "top": 113,
+          "right": 823.78125,
+          "bottom": 361.734375,
+          "left": 76.21875
+        },
+        "visual": {
+          "x": 32,
+          "y": 393.734375,
+          "width": 600,
+          "height": 450,
+          "top": 393.734375,
+          "right": 632,
+          "bottom": 843.734375,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "pricing",
+      "route": "/priser/",
+      "layout": "centered",
+      "withImage": true,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 97,
+          "width": 350,
+          "height": 319.46875,
+          "top": 97,
+          "right": 370,
+          "bottom": 416.46875,
+          "left": 20
+        },
+        "visual": {
+          "x": 20,
+          "y": 448.46875,
+          "width": 350,
+          "height": 262.5,
+          "top": 448.46875,
+          "right": 370,
+          "bottom": 710.96875,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "pricing",
+      "route": "/priser/",
+      "layout": "centered",
+      "withImage": true,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 97,
+          "width": 288,
+          "height": 348.46875,
+          "top": 97,
+          "right": 304,
+          "bottom": 445.46875,
+          "left": 16
+        },
+        "visual": {
+          "x": 16,
+          "y": 477.46875,
+          "width": 288,
+          "height": 216,
+          "top": 477.46875,
+          "right": 304,
+          "bottom": 693.46875,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "service",
+      "route": "/synlighet/",
+      "layout": "centered",
+      "withImage": true,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 300.625,
+          "y": 179.5,
+          "width": 838.734375,
+          "height": 262.9375,
+          "top": 179.5,
+          "right": 1139.359375,
+          "bottom": 442.4375,
+          "left": 300.625
+        },
+        "visual": {
+          "x": 800,
+          "y": 506.4375,
+          "width": 600,
+          "height": 450,
+          "top": 506.4375,
+          "right": 1400,
+          "bottom": 956.4375,
+          "left": 800
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "service",
+      "route": "/synlighet/",
+      "layout": "centered",
+      "withImage": true,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 80,
+          "y": 179.5,
+          "width": 740,
+          "height": 244.734375,
+          "top": 179.5,
+          "right": 820,
+          "bottom": 424.234375,
+          "left": 80
+        },
+        "visual": {
+          "x": 32,
+          "y": 456.234375,
+          "width": 600,
+          "height": 450,
+          "top": 456.234375,
+          "right": 632,
+          "bottom": 906.234375,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "service",
+      "route": "/synlighet/",
+      "layout": "centered",
+      "withImage": true,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 159.5,
+          "width": 350,
+          "height": 315.46875,
+          "top": 159.5,
+          "right": 370,
+          "bottom": 474.96875,
+          "left": 20
+        },
+        "visual": {
+          "x": 20,
+          "y": 506.96875,
+          "width": 350,
+          "height": 262.5,
+          "top": 506.96875,
+          "right": 370,
+          "bottom": 769.46875,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "service",
+      "route": "/synlighet/",
+      "layout": "centered",
+      "withImage": true,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 159.5,
+          "width": 288,
+          "height": 407.46875,
+          "top": 159.5,
+          "right": 304,
+          "bottom": 566.96875,
+          "left": 16
+        },
+        "visual": {
+          "x": 16,
+          "y": 598.96875,
+          "width": 288,
+          "height": 216,
+          "top": 598.96875,
+          "right": 304,
+          "bottom": 814.96875,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "assessment",
+      "route": "/vurdering/",
+      "layout": "centered",
+      "withImage": true,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 308.265625,
+          "y": 187.5,
+          "width": 823.46875,
+          "height": 221.828125,
+          "top": 187.5,
+          "right": 1131.734375,
+          "bottom": 409.328125,
+          "left": 308.265625
+        },
+        "visual": {
+          "x": 40,
+          "y": 473.328125,
+          "width": 1360,
+          "height": 1302.828125,
+          "top": 473.328125,
+          "right": 1400,
+          "bottom": 1776.15625,
+          "left": 40
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "assessment",
+      "route": "/vurdering/",
+      "layout": "centered",
+      "withImage": true,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 90,
+          "y": 187.5,
+          "width": 720,
+          "height": 200.734375,
+          "top": 187.5,
+          "right": 810,
+          "bottom": 388.234375,
+          "left": 90
+        },
+        "visual": {
+          "x": 32,
+          "y": 420.234375,
+          "width": 836,
+          "height": 1281.1875,
+          "top": 420.234375,
+          "right": 868,
+          "bottom": 1701.421875,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "assessment",
+      "route": "/vurdering/",
+      "layout": "centered",
+      "withImage": true,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 160.5,
+          "width": 350,
+          "height": 265.46875,
+          "top": 160.5,
+          "right": 370,
+          "bottom": 425.96875,
+          "left": 20
+        },
+        "visual": {
+          "x": 20,
+          "y": 457.96875,
+          "width": 350,
+          "height": 1156.6875,
+          "top": 457.96875,
+          "right": 370,
+          "bottom": 1614.65625,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "assessment",
+      "route": "/vurdering/",
+      "layout": "centered",
+      "withImage": true,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 193,
+          "width": 288,
+          "height": 294.46875,
+          "top": 193,
+          "right": 304,
+          "bottom": 487.46875,
+          "left": 16
+        },
+        "visual": {
+          "x": 16,
+          "y": 519.46875,
+          "width": 288,
+          "height": 1180.984375,
+          "top": 519.46875,
+          "right": 304,
+          "bottom": 1700.453125,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "glossary",
+      "route": "/begreper/",
+      "layout": "centered",
+      "withImage": true,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 230,
+          "y": 153,
+          "width": 980,
+          "height": 315.890625,
+          "top": 153,
+          "right": 1210,
+          "bottom": 468.890625,
+          "left": 230
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "glossary",
+      "route": "/begreper/",
+      "layout": "centered",
+      "withImage": true,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 32,
+          "y": 129,
+          "width": 836,
+          "height": 282.46875,
+          "top": 129,
+          "right": 868,
+          "bottom": 411.46875,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "glossary",
+      "route": "/begreper/",
+      "layout": "centered",
+      "withImage": true,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 109,
+          "width": 350,
+          "height": 328.46875,
+          "top": 109,
+          "right": 370,
+          "bottom": 437.46875,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "glossary",
+      "route": "/begreper/",
+      "layout": "centered",
+      "withImage": true,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 109,
+          "width": 288,
+          "height": 410.703125,
+          "top": 109,
+          "right": 304,
+          "bottom": 519.703125,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "error",
+      "route": "/404.html",
+      "layout": "centered",
+      "withImage": true,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 538.203125,
+          "y": 165,
+          "width": 363.59375,
+          "height": 284.109375,
+          "top": 165,
+          "right": 901.796875,
+          "bottom": 449.109375,
+          "left": 538.203125
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "error",
+      "route": "/404.html",
+      "layout": "centered",
+      "withImage": true,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 288.40625,
+          "y": 165,
+          "width": 323.1875,
+          "height": 256.0625,
+          "top": 165,
+          "right": 611.59375,
+          "bottom": 421.0625,
+          "left": 288.40625
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "error",
+      "route": "/404.html",
+      "layout": "centered",
+      "withImage": true,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 33.40625,
+          "y": 165,
+          "width": 323.1875,
+          "height": 224.0625,
+          "top": 165,
+          "right": 356.59375,
+          "bottom": 389.0625,
+          "left": 33.40625
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "error",
+      "route": "/404.html",
+      "layout": "centered",
+      "withImage": true,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 165,
+          "width": 288,
+          "height": 249.65625,
+          "top": 165,
+          "right": 304,
+          "bottom": 414.65625,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "home",
+      "route": "/",
+      "layout": "centered",
+      "withImage": false,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 390,
+          "y": 109,
+          "width": 660,
+          "height": 367.25,
+          "top": 109,
+          "right": 1050,
+          "bottom": 476.25,
+          "left": 390
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "home",
+      "route": "/",
+      "layout": "centered",
+      "withImage": false,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 125,
+          "y": 109,
+          "width": 650,
+          "height": 324.203125,
+          "top": 109,
+          "right": 775,
+          "bottom": 433.203125,
+          "left": 125
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "home",
+      "route": "/",
+      "layout": "centered",
+      "withImage": false,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 93,
+          "width": 350,
+          "height": 335.703125,
+          "top": 93,
+          "right": 370,
+          "bottom": 428.703125,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "home",
+      "route": "/",
+      "layout": "centered",
+      "withImage": false,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 91,
+          "width": 288,
+          "height": 415.9375,
+          "top": 91,
+          "right": 304,
+          "bottom": 506.9375,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "article",
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "layout": "centered",
+      "withImage": false,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 360,
+          "y": 187.5,
+          "width": 720,
+          "height": 271.9375,
+          "top": 187.5,
+          "right": 1080,
+          "bottom": 459.4375,
+          "left": 360
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "article",
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "layout": "centered",
+      "withImage": false,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 90,
+          "y": 187.5,
+          "width": 720,
+          "height": 253.734375,
+          "top": 187.5,
+          "right": 810,
+          "bottom": 441.234375,
+          "left": 90
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "article",
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "layout": "centered",
+      "withImage": false,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 193,
+          "width": 350,
+          "height": 311.46875,
+          "top": 193,
+          "right": 370,
+          "bottom": 504.46875,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "article",
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "layout": "centered",
+      "withImage": false,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 193,
+          "width": 288,
+          "height": 361.46875,
+          "top": 193,
+          "right": 304,
+          "bottom": 554.46875,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "index",
+      "route": "/innsikt/",
+      "layout": "centered",
+      "withImage": false,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 289.5,
+          "y": 179.5,
+          "width": 860.984375,
+          "height": 294.828125,
+          "top": 179.5,
+          "right": 1150.484375,
+          "bottom": 474.328125,
+          "left": 289.5
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "index",
+      "route": "/innsikt/",
+      "layout": "centered",
+      "withImage": false,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 80,
+          "y": 179.5,
+          "width": 740,
+          "height": 273.734375,
+          "top": 179.5,
+          "right": 820,
+          "bottom": 453.234375,
+          "left": 80
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "index",
+      "route": "/innsikt/",
+      "layout": "centered",
+      "withImage": false,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 159.5,
+          "width": 350,
+          "height": 344.46875,
+          "top": 159.5,
+          "right": 370,
+          "bottom": 503.96875,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "index",
+      "route": "/innsikt/",
+      "layout": "centered",
+      "withImage": false,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 192,
+          "width": 288,
+          "height": 373.46875,
+          "top": 192,
+          "right": 304,
+          "bottom": 565.46875,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "utility",
+      "route": "/kontakt/",
+      "layout": "centered",
+      "withImage": false,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 230,
+          "y": 187.5,
+          "width": 980,
+          "height": 359.984375,
+          "top": 187.5,
+          "right": 1210,
+          "bottom": 547.484375,
+          "left": 230
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "utility",
+      "route": "/kontakt/",
+      "layout": "centered",
+      "withImage": false,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 32,
+          "y": 187.5,
+          "width": 836,
+          "height": 297.46875,
+          "top": 187.5,
+          "right": 868,
+          "bottom": 484.96875,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "utility",
+      "route": "/kontakt/",
+      "layout": "centered",
+      "withImage": false,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 160.5,
+          "width": 350,
+          "height": 340.46875,
+          "top": 160.5,
+          "right": 370,
+          "bottom": 500.96875,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "utility",
+      "route": "/kontakt/",
+      "layout": "centered",
+      "withImage": false,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 160.5,
+          "width": 288,
+          "height": 399.703125,
+          "top": 160.5,
+          "right": 304,
+          "bottom": 560.203125,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "pricing",
+      "route": "/priser/",
+      "layout": "centered",
+      "withImage": false,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 250,
+          "y": 129,
+          "width": 940,
+          "height": 323.09375,
+          "top": 129,
+          "right": 1190,
+          "bottom": 452.09375,
+          "left": 250
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "pricing",
+      "route": "/priser/",
+      "layout": "centered",
+      "withImage": false,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 76.21875,
+          "y": 113,
+          "width": 747.5625,
+          "height": 248.734375,
+          "top": 113,
+          "right": 823.78125,
+          "bottom": 361.734375,
+          "left": 76.21875
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "pricing",
+      "route": "/priser/",
+      "layout": "centered",
+      "withImage": false,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 97,
+          "width": 350,
+          "height": 319.46875,
+          "top": 97,
+          "right": 370,
+          "bottom": 416.46875,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "pricing",
+      "route": "/priser/",
+      "layout": "centered",
+      "withImage": false,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 97,
+          "width": 288,
+          "height": 348.46875,
+          "top": 97,
+          "right": 304,
+          "bottom": 445.46875,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "service",
+      "route": "/synlighet/",
+      "layout": "centered",
+      "withImage": false,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 300.625,
+          "y": 179.5,
+          "width": 838.734375,
+          "height": 262.9375,
+          "top": 179.5,
+          "right": 1139.359375,
+          "bottom": 442.4375,
+          "left": 300.625
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "service",
+      "route": "/synlighet/",
+      "layout": "centered",
+      "withImage": false,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 80,
+          "y": 179.5,
+          "width": 740,
+          "height": 244.734375,
+          "top": 179.5,
+          "right": 820,
+          "bottom": 424.234375,
+          "left": 80
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "service",
+      "route": "/synlighet/",
+      "layout": "centered",
+      "withImage": false,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 159.5,
+          "width": 350,
+          "height": 315.46875,
+          "top": 159.5,
+          "right": 370,
+          "bottom": 474.96875,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "service",
+      "route": "/synlighet/",
+      "layout": "centered",
+      "withImage": false,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 159.5,
+          "width": 288,
+          "height": 407.46875,
+          "top": 159.5,
+          "right": 304,
+          "bottom": 566.96875,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "assessment",
+      "route": "/vurdering/",
+      "layout": "centered",
+      "withImage": false,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 308.265625,
+          "y": 187.5,
+          "width": 823.46875,
+          "height": 221.828125,
+          "top": 187.5,
+          "right": 1131.734375,
+          "bottom": 409.328125,
+          "left": 308.265625
+        },
+        "visual": {
+          "x": 40,
+          "y": 494.328125,
+          "width": 1360,
+          "height": 820.828125,
+          "top": 494.328125,
+          "right": 1400,
+          "bottom": 1315.15625,
+          "left": 40
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "assessment",
+      "route": "/vurdering/",
+      "layout": "centered",
+      "withImage": false,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 90,
+          "y": 187.5,
+          "width": 720,
+          "height": 200.734375,
+          "top": 187.5,
+          "right": 810,
+          "bottom": 388.234375,
+          "left": 90
+        },
+        "visual": {
+          "x": 32,
+          "y": 433.234375,
+          "width": 836,
+          "height": 799.1875,
+          "top": 433.234375,
+          "right": 868,
+          "bottom": 1232.421875,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "assessment",
+      "route": "/vurdering/",
+      "layout": "centered",
+      "withImage": false,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 160.5,
+          "width": 350,
+          "height": 265.46875,
+          "top": 160.5,
+          "right": 370,
+          "bottom": 425.96875,
+          "left": 20
+        },
+        "visual": {
+          "x": 20,
+          "y": 455.96875,
+          "width": 350,
+          "height": 862.1875,
+          "top": 455.96875,
+          "right": 370,
+          "bottom": 1318.15625,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "assessment",
+      "route": "/vurdering/",
+      "layout": "centered",
+      "withImage": false,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 193,
+          "width": 288,
+          "height": 294.46875,
+          "top": 193,
+          "right": 304,
+          "bottom": 487.46875,
+          "left": 16
+        },
+        "visual": {
+          "x": 16,
+          "y": 517.46875,
+          "width": 288,
+          "height": 932.984375,
+          "top": 517.46875,
+          "right": 304,
+          "bottom": 1450.453125,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "glossary",
+      "route": "/begreper/",
+      "layout": "centered",
+      "withImage": false,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 230,
+          "y": 153,
+          "width": 980,
+          "height": 315.890625,
+          "top": 153,
+          "right": 1210,
+          "bottom": 468.890625,
+          "left": 230
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "glossary",
+      "route": "/begreper/",
+      "layout": "centered",
+      "withImage": false,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 32,
+          "y": 129,
+          "width": 836,
+          "height": 282.46875,
+          "top": 129,
+          "right": 868,
+          "bottom": 411.46875,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "glossary",
+      "route": "/begreper/",
+      "layout": "centered",
+      "withImage": false,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 109,
+          "width": 350,
+          "height": 328.46875,
+          "top": 109,
+          "right": 370,
+          "bottom": 437.46875,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "glossary",
+      "route": "/begreper/",
+      "layout": "centered",
+      "withImage": false,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 109,
+          "width": 288,
+          "height": 410.703125,
+          "top": 109,
+          "right": 304,
+          "bottom": 519.703125,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "error",
+      "route": "/404.html",
+      "layout": "centered",
+      "withImage": false,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 538.203125,
+          "y": 165,
+          "width": 363.59375,
+          "height": 284.109375,
+          "top": 165,
+          "right": 901.796875,
+          "bottom": 449.109375,
+          "left": 538.203125
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "error",
+      "route": "/404.html",
+      "layout": "centered",
+      "withImage": false,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 288.40625,
+          "y": 165,
+          "width": 323.1875,
+          "height": 256.0625,
+          "top": 165,
+          "right": 611.59375,
+          "bottom": 421.0625,
+          "left": 288.40625
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "error",
+      "route": "/404.html",
+      "layout": "centered",
+      "withImage": false,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 33.40625,
+          "y": 165,
+          "width": 323.1875,
+          "height": 224.0625,
+          "top": 165,
+          "right": 356.59375,
+          "bottom": 389.0625,
+          "left": 33.40625
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "error",
+      "route": "/404.html",
+      "layout": "centered",
+      "withImage": false,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 165,
+          "width": 288,
+          "height": 249.65625,
+          "top": 165,
+          "right": 304,
+          "bottom": 414.65625,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "home",
+      "route": "/",
+      "layout": "split-right",
+      "withImage": true,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 40,
+          "y": 110.25,
+          "width": 680.359375,
+          "height": 367.25,
+          "top": 110.25,
+          "right": 720.359375,
+          "bottom": 477.5,
+          "left": 40
+        },
+        "visual": {
+          "x": 808.359375,
+          "y": 109,
+          "width": 591.625,
+          "height": 369.765625,
+          "top": 109,
+          "right": 1399.984375,
+          "bottom": 478.765625,
+          "left": 808.359375
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "home",
+      "route": "/",
+      "layout": "split-right",
+      "withImage": true,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 32,
+          "y": 109,
+          "width": 650,
+          "height": 324.203125,
+          "top": 109,
+          "right": 682,
+          "bottom": 433.203125,
+          "left": 32
+        },
+        "visual": {
+          "x": 32,
+          "y": 469.203125,
+          "width": 640,
+          "height": 360,
+          "top": 469.203125,
+          "right": 672,
+          "bottom": 829.203125,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "home",
+      "route": "/",
+      "layout": "split-right",
+      "withImage": true,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 93,
+          "width": 350,
+          "height": 335.703125,
+          "top": 93,
+          "right": 370,
+          "bottom": 428.703125,
+          "left": 20
+        },
+        "visual": {
+          "x": 20,
+          "y": 464.703125,
+          "width": 350,
+          "height": 196.875,
+          "top": 464.703125,
+          "right": 370,
+          "bottom": 661.578125,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "home",
+      "route": "/",
+      "layout": "split-right",
+      "withImage": true,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 91,
+          "width": 288,
+          "height": 415.9375,
+          "top": 91,
+          "right": 304,
+          "bottom": 506.9375,
+          "left": 16
+        },
+        "visual": {
+          "x": 16,
+          "y": 542.9375,
+          "width": 288,
+          "height": 162,
+          "top": 542.9375,
+          "right": 304,
+          "bottom": 704.9375,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "article",
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "layout": "split-right",
+      "withImage": true,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 40,
+          "y": 187.5,
+          "width": 517.734375,
+          "height": 359.984375,
+          "top": 187.5,
+          "right": 557.734375,
+          "bottom": 547.484375,
+          "left": 40
+        },
+        "visual": {
+          "x": 621.734375,
+          "y": 218.140625,
+          "width": 398.25,
+          "height": 298.6875,
+          "top": 218.140625,
+          "right": 1019.984375,
+          "bottom": 516.828125,
+          "left": 621.734375
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "article",
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "layout": "split-right",
+      "withImage": true,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 32,
+          "y": 187.5,
+          "width": 836,
+          "height": 253.734375,
+          "top": 187.5,
+          "right": 868,
+          "bottom": 441.234375,
+          "left": 32
+        },
+        "visual": {
+          "x": 32,
+          "y": 473.234375,
+          "width": 600,
+          "height": 450,
+          "top": 473.234375,
+          "right": 632,
+          "bottom": 923.234375,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "article",
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "layout": "split-right",
+      "withImage": true,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 193,
+          "width": 350,
+          "height": 311.46875,
+          "top": 193,
+          "right": 370,
+          "bottom": 504.46875,
+          "left": 20
+        },
+        "visual": {
+          "x": 20,
+          "y": 536.46875,
+          "width": 350,
+          "height": 262.5,
+          "top": 536.46875,
+          "right": 370,
+          "bottom": 798.96875,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "article",
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "layout": "split-right",
+      "withImage": true,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 193,
+          "width": 288,
+          "height": 361.46875,
+          "top": 193,
+          "right": 304,
+          "bottom": 554.46875,
+          "left": 16
+        },
+        "visual": {
+          "x": 16,
+          "y": 586.46875,
+          "width": 288,
+          "height": 216,
+          "top": 586.46875,
+          "right": 304,
+          "bottom": 802.46875,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "index",
+      "route": "/innsikt/",
+      "layout": "split-right",
+      "withImage": true,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 40,
+          "y": 215.3125,
+          "width": 732.515625,
+          "height": 350.984375,
+          "top": 215.3125,
+          "right": 772.515625,
+          "bottom": 566.296875,
+          "left": 40
+        },
+        "visual": {
+          "x": 836.515625,
+          "y": 179.5,
+          "width": 563.484375,
+          "height": 422.609375,
+          "top": 179.5,
+          "right": 1400,
+          "bottom": 602.109375,
+          "left": 836.515625
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "index",
+      "route": "/innsikt/",
+      "layout": "split-right",
+      "withImage": true,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 32,
+          "y": 179.5,
+          "width": 836,
+          "height": 273.734375,
+          "top": 179.5,
+          "right": 868,
+          "bottom": 453.234375,
+          "left": 32
+        },
+        "visual": {
+          "x": 32,
+          "y": 485.234375,
+          "width": 600,
+          "height": 450,
+          "top": 485.234375,
+          "right": 632,
+          "bottom": 935.234375,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "index",
+      "route": "/innsikt/",
+      "layout": "split-right",
+      "withImage": true,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 159.5,
+          "width": 350,
+          "height": 344.46875,
+          "top": 159.5,
+          "right": 370,
+          "bottom": 503.96875,
+          "left": 20
+        },
+        "visual": {
+          "x": 20,
+          "y": 535.96875,
+          "width": 350,
+          "height": 262.5,
+          "top": 535.96875,
+          "right": 370,
+          "bottom": 798.46875,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "index",
+      "route": "/innsikt/",
+      "layout": "split-right",
+      "withImage": true,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 192,
+          "width": 288,
+          "height": 373.46875,
+          "top": 192,
+          "right": 304,
+          "bottom": 565.46875,
+          "left": 16
+        },
+        "visual": {
+          "x": 16,
+          "y": 597.46875,
+          "width": 288,
+          "height": 216,
+          "top": 597.46875,
+          "right": 304,
+          "bottom": 813.46875,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "utility",
+      "route": "/kontakt/",
+      "layout": "split-right",
+      "withImage": true,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 40,
+          "y": 187.5,
+          "width": 517.734375,
+          "height": 448.03125,
+          "top": 187.5,
+          "right": 557.734375,
+          "bottom": 635.53125,
+          "left": 40
+        },
+        "visual": {
+          "x": 621.734375,
+          "y": 262.171875,
+          "width": 398.25,
+          "height": 298.6875,
+          "top": 262.171875,
+          "right": 1019.984375,
+          "bottom": 560.859375,
+          "left": 621.734375
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "utility",
+      "route": "/kontakt/",
+      "layout": "split-right",
+      "withImage": true,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 32,
+          "y": 187.5,
+          "width": 836,
+          "height": 297.46875,
+          "top": 187.5,
+          "right": 868,
+          "bottom": 484.96875,
+          "left": 32
+        },
+        "visual": {
+          "x": 32,
+          "y": 516.96875,
+          "width": 600,
+          "height": 450,
+          "top": 516.96875,
+          "right": 632,
+          "bottom": 966.96875,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "utility",
+      "route": "/kontakt/",
+      "layout": "split-right",
+      "withImage": true,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 160.5,
+          "width": 350,
+          "height": 340.46875,
+          "top": 160.5,
+          "right": 370,
+          "bottom": 500.96875,
+          "left": 20
+        },
+        "visual": {
+          "x": 20,
+          "y": 532.96875,
+          "width": 350,
+          "height": 262.5,
+          "top": 532.96875,
+          "right": 370,
+          "bottom": 795.46875,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "utility",
+      "route": "/kontakt/",
+      "layout": "split-right",
+      "withImage": true,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 160.5,
+          "width": 288,
+          "height": 399.703125,
+          "top": 160.5,
+          "right": 304,
+          "bottom": 560.203125,
+          "left": 16
+        },
+        "visual": {
+          "x": 16,
+          "y": 592.203125,
+          "width": 288,
+          "height": 216,
+          "top": 592.203125,
+          "right": 304,
+          "bottom": 808.203125,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "pricing",
+      "route": "/priser/",
+      "layout": "split-right",
+      "withImage": true,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 40,
+          "y": 178.75,
+          "width": 732.515625,
+          "height": 323.09375,
+          "top": 178.75,
+          "right": 772.515625,
+          "bottom": 501.84375,
+          "left": 40
+        },
+        "visual": {
+          "x": 836.515625,
+          "y": 129,
+          "width": 563.484375,
+          "height": 422.609375,
+          "top": 129,
+          "right": 1400,
+          "bottom": 551.609375,
+          "left": 836.515625
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "pricing",
+      "route": "/priser/",
+      "layout": "split-right",
+      "withImage": true,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 32,
+          "y": 113,
+          "width": 836,
+          "height": 248.734375,
+          "top": 113,
+          "right": 868,
+          "bottom": 361.734375,
+          "left": 32
+        },
+        "visual": {
+          "x": 32,
+          "y": 393.734375,
+          "width": 600,
+          "height": 450,
+          "top": 393.734375,
+          "right": 632,
+          "bottom": 843.734375,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "pricing",
+      "route": "/priser/",
+      "layout": "split-right",
+      "withImage": true,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 97,
+          "width": 350,
+          "height": 319.46875,
+          "top": 97,
+          "right": 370,
+          "bottom": 416.46875,
+          "left": 20
+        },
+        "visual": {
+          "x": 20,
+          "y": 448.46875,
+          "width": 350,
+          "height": 262.5,
+          "top": 448.46875,
+          "right": 370,
+          "bottom": 710.96875,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "pricing",
+      "route": "/priser/",
+      "layout": "split-right",
+      "withImage": true,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 97,
+          "width": 288,
+          "height": 348.46875,
+          "top": 97,
+          "right": 304,
+          "bottom": 445.46875,
+          "left": 16
+        },
+        "visual": {
+          "x": 16,
+          "y": 477.46875,
+          "width": 288,
+          "height": 216,
+          "top": 477.46875,
+          "right": 304,
+          "bottom": 693.46875,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "service",
+      "route": "/synlighet/",
+      "layout": "split-right",
+      "withImage": true,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 40,
+          "y": 231.25,
+          "width": 732.515625,
+          "height": 319.09375,
+          "top": 231.25,
+          "right": 772.515625,
+          "bottom": 550.34375,
+          "left": 40
+        },
+        "visual": {
+          "x": 836.515625,
+          "y": 179.5,
+          "width": 563.484375,
+          "height": 422.609375,
+          "top": 179.5,
+          "right": 1400,
+          "bottom": 602.109375,
+          "left": 836.515625
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "service",
+      "route": "/synlighet/",
+      "layout": "split-right",
+      "withImage": true,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 32,
+          "y": 179.5,
+          "width": 836,
+          "height": 244.734375,
+          "top": 179.5,
+          "right": 868,
+          "bottom": 424.234375,
+          "left": 32
+        },
+        "visual": {
+          "x": 32,
+          "y": 456.234375,
+          "width": 600,
+          "height": 450,
+          "top": 456.234375,
+          "right": 632,
+          "bottom": 906.234375,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "service",
+      "route": "/synlighet/",
+      "layout": "split-right",
+      "withImage": true,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 159.5,
+          "width": 350,
+          "height": 315.46875,
+          "top": 159.5,
+          "right": 370,
+          "bottom": 474.96875,
+          "left": 20
+        },
+        "visual": {
+          "x": 20,
+          "y": 506.96875,
+          "width": 350,
+          "height": 262.5,
+          "top": 506.96875,
+          "right": 370,
+          "bottom": 769.46875,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "service",
+      "route": "/synlighet/",
+      "layout": "split-right",
+      "withImage": true,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 159.5,
+          "width": 288,
+          "height": 407.46875,
+          "top": 159.5,
+          "right": 304,
+          "bottom": 566.96875,
+          "left": 16
+        },
+        "visual": {
+          "x": 16,
+          "y": 598.96875,
+          "width": 288,
+          "height": 216,
+          "top": 598.96875,
+          "right": 304,
+          "bottom": 814.96875,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "assessment",
+      "route": "/vurdering/",
+      "layout": "split-right",
+      "withImage": true,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 40,
+          "y": 686.21875,
+          "width": 732.515625,
+          "height": 277.984375,
+          "top": 686.21875,
+          "right": 772.515625,
+          "bottom": 964.203125,
+          "left": 40
+        },
+        "visual": {
+          "x": 836.515625,
+          "y": 187.5,
+          "width": 563.484375,
+          "height": 1275.4375,
+          "top": 187.5,
+          "right": 1400,
+          "bottom": 1462.9375,
+          "left": 836.515625
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "assessment",
+      "route": "/vurdering/",
+      "layout": "split-right",
+      "withImage": true,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 32,
+          "y": 187.5,
+          "width": 836,
+          "height": 200.734375,
+          "top": 187.5,
+          "right": 868,
+          "bottom": 388.234375,
+          "left": 32
+        },
+        "visual": {
+          "x": 32,
+          "y": 420.234375,
+          "width": 836,
+          "height": 1281.1875,
+          "top": 420.234375,
+          "right": 868,
+          "bottom": 1701.421875,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "assessment",
+      "route": "/vurdering/",
+      "layout": "split-right",
+      "withImage": true,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 160.5,
+          "width": 350,
+          "height": 265.46875,
+          "top": 160.5,
+          "right": 370,
+          "bottom": 425.96875,
+          "left": 20
+        },
+        "visual": {
+          "x": 20,
+          "y": 457.96875,
+          "width": 350,
+          "height": 1156.6875,
+          "top": 457.96875,
+          "right": 370,
+          "bottom": 1614.65625,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "assessment",
+      "route": "/vurdering/",
+      "layout": "split-right",
+      "withImage": true,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 193,
+          "width": 288,
+          "height": 294.46875,
+          "top": 193,
+          "right": 304,
+          "bottom": 487.46875,
+          "left": 16
+        },
+        "visual": {
+          "x": 16,
+          "y": 519.46875,
+          "width": 288,
+          "height": 1180.984375,
+          "top": 519.46875,
+          "right": 304,
+          "bottom": 1700.453125,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "glossary",
+      "route": "/begreper/",
+      "layout": "split-right",
+      "withImage": true,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 40,
+          "y": 153,
+          "width": 980,
+          "height": 315.890625,
+          "top": 153,
+          "right": 1020,
+          "bottom": 468.890625,
+          "left": 40
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "glossary",
+      "route": "/begreper/",
+      "layout": "split-right",
+      "withImage": true,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 32,
+          "y": 129,
+          "width": 836,
+          "height": 282.46875,
+          "top": 129,
+          "right": 868,
+          "bottom": 411.46875,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "glossary",
+      "route": "/begreper/",
+      "layout": "split-right",
+      "withImage": true,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 109,
+          "width": 350,
+          "height": 328.46875,
+          "top": 109,
+          "right": 370,
+          "bottom": 437.46875,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "glossary",
+      "route": "/begreper/",
+      "layout": "split-right",
+      "withImage": true,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 109,
+          "width": 288,
+          "height": 410.703125,
+          "top": 109,
+          "right": 304,
+          "bottom": 519.703125,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "error",
+      "route": "/404.html",
+      "layout": "split-right",
+      "withImage": true,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 40,
+          "y": 165,
+          "width": 1360,
+          "height": 284.109375,
+          "top": 165,
+          "right": 1400,
+          "bottom": 449.109375,
+          "left": 40
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "error",
+      "route": "/404.html",
+      "layout": "split-right",
+      "withImage": true,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 32,
+          "y": 165,
+          "width": 836,
+          "height": 256.0625,
+          "top": 165,
+          "right": 868,
+          "bottom": 421.0625,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "error",
+      "route": "/404.html",
+      "layout": "split-right",
+      "withImage": true,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 165,
+          "width": 350,
+          "height": 224.0625,
+          "top": 165,
+          "right": 370,
+          "bottom": 389.0625,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "error",
+      "route": "/404.html",
+      "layout": "split-right",
+      "withImage": true,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 165,
+          "width": 288,
+          "height": 249.65625,
+          "top": 165,
+          "right": 304,
+          "bottom": 414.65625,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "home",
+      "route": "/",
+      "layout": "split-right",
+      "withImage": false,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 40,
+          "y": 109,
+          "width": 1360,
+          "height": 367.25,
+          "top": 109,
+          "right": 1400,
+          "bottom": 476.25,
+          "left": 40
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "home",
+      "route": "/",
+      "layout": "split-right",
+      "withImage": false,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 32,
+          "y": 109,
+          "width": 650,
+          "height": 324.203125,
+          "top": 109,
+          "right": 682,
+          "bottom": 433.203125,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "home",
+      "route": "/",
+      "layout": "split-right",
+      "withImage": false,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 93,
+          "width": 350,
+          "height": 335.703125,
+          "top": 93,
+          "right": 370,
+          "bottom": 428.703125,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "home",
+      "route": "/",
+      "layout": "split-right",
+      "withImage": false,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 91,
+          "width": 288,
+          "height": 415.9375,
+          "top": 91,
+          "right": 304,
+          "bottom": 506.9375,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "article",
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "layout": "split-right",
+      "withImage": false,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 40,
+          "y": 187.5,
+          "width": 980,
+          "height": 271.9375,
+          "top": 187.5,
+          "right": 1020,
+          "bottom": 459.4375,
+          "left": 40
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "article",
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "layout": "split-right",
+      "withImage": false,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 32,
+          "y": 187.5,
+          "width": 836,
+          "height": 253.734375,
+          "top": 187.5,
+          "right": 868,
+          "bottom": 441.234375,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "article",
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "layout": "split-right",
+      "withImage": false,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 193,
+          "width": 350,
+          "height": 311.46875,
+          "top": 193,
+          "right": 370,
+          "bottom": 504.46875,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "article",
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "layout": "split-right",
+      "withImage": false,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 193,
+          "width": 288,
+          "height": 361.46875,
+          "top": 193,
+          "right": 304,
+          "bottom": 554.46875,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "index",
+      "route": "/innsikt/",
+      "layout": "split-right",
+      "withImage": false,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 40,
+          "y": 179.5,
+          "width": 1360,
+          "height": 294.828125,
+          "top": 179.5,
+          "right": 1400,
+          "bottom": 474.328125,
+          "left": 40
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "index",
+      "route": "/innsikt/",
+      "layout": "split-right",
+      "withImage": false,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 32,
+          "y": 179.5,
+          "width": 836,
+          "height": 273.734375,
+          "top": 179.5,
+          "right": 868,
+          "bottom": 453.234375,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "index",
+      "route": "/innsikt/",
+      "layout": "split-right",
+      "withImage": false,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 159.5,
+          "width": 350,
+          "height": 344.46875,
+          "top": 159.5,
+          "right": 370,
+          "bottom": 503.96875,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "index",
+      "route": "/innsikt/",
+      "layout": "split-right",
+      "withImage": false,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 192,
+          "width": 288,
+          "height": 373.46875,
+          "top": 192,
+          "right": 304,
+          "bottom": 565.46875,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "utility",
+      "route": "/kontakt/",
+      "layout": "split-right",
+      "withImage": false,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 40,
+          "y": 187.5,
+          "width": 980,
+          "height": 359.984375,
+          "top": 187.5,
+          "right": 1020,
+          "bottom": 547.484375,
+          "left": 40
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "utility",
+      "route": "/kontakt/",
+      "layout": "split-right",
+      "withImage": false,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 32,
+          "y": 187.5,
+          "width": 836,
+          "height": 297.46875,
+          "top": 187.5,
+          "right": 868,
+          "bottom": 484.96875,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "utility",
+      "route": "/kontakt/",
+      "layout": "split-right",
+      "withImage": false,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 160.5,
+          "width": 350,
+          "height": 340.46875,
+          "top": 160.5,
+          "right": 370,
+          "bottom": 500.96875,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "utility",
+      "route": "/kontakt/",
+      "layout": "split-right",
+      "withImage": false,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 160.5,
+          "width": 288,
+          "height": 399.703125,
+          "top": 160.5,
+          "right": 304,
+          "bottom": 560.203125,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "pricing",
+      "route": "/priser/",
+      "layout": "split-right",
+      "withImage": false,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 40,
+          "y": 129,
+          "width": 1360,
+          "height": 323.09375,
+          "top": 129,
+          "right": 1400,
+          "bottom": 452.09375,
+          "left": 40
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "pricing",
+      "route": "/priser/",
+      "layout": "split-right",
+      "withImage": false,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 32,
+          "y": 113,
+          "width": 836,
+          "height": 248.734375,
+          "top": 113,
+          "right": 868,
+          "bottom": 361.734375,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "pricing",
+      "route": "/priser/",
+      "layout": "split-right",
+      "withImage": false,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 97,
+          "width": 350,
+          "height": 319.46875,
+          "top": 97,
+          "right": 370,
+          "bottom": 416.46875,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "pricing",
+      "route": "/priser/",
+      "layout": "split-right",
+      "withImage": false,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 97,
+          "width": 288,
+          "height": 348.46875,
+          "top": 97,
+          "right": 304,
+          "bottom": 445.46875,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "service",
+      "route": "/synlighet/",
+      "layout": "split-right",
+      "withImage": false,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 40,
+          "y": 179.5,
+          "width": 1360,
+          "height": 262.9375,
+          "top": 179.5,
+          "right": 1400,
+          "bottom": 442.4375,
+          "left": 40
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "service",
+      "route": "/synlighet/",
+      "layout": "split-right",
+      "withImage": false,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 32,
+          "y": 179.5,
+          "width": 836,
+          "height": 244.734375,
+          "top": 179.5,
+          "right": 868,
+          "bottom": 424.234375,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "service",
+      "route": "/synlighet/",
+      "layout": "split-right",
+      "withImage": false,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 159.5,
+          "width": 350,
+          "height": 315.46875,
+          "top": 159.5,
+          "right": 370,
+          "bottom": 474.96875,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "service",
+      "route": "/synlighet/",
+      "layout": "split-right",
+      "withImage": false,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 159.5,
+          "width": 288,
+          "height": 407.46875,
+          "top": 159.5,
+          "right": 304,
+          "bottom": 566.96875,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "assessment",
+      "route": "/vurdering/",
+      "layout": "split-right",
+      "withImage": false,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 40,
+          "y": 187.5,
+          "width": 637.5,
+          "height": 277.984375,
+          "top": 187.5,
+          "right": 677.5,
+          "bottom": 465.484375,
+          "left": 40
+        },
+        "visual": {
+          "x": 762.5,
+          "y": 187.5,
+          "width": 637.5,
+          "height": 820.828125,
+          "top": 187.5,
+          "right": 1400,
+          "bottom": 1008.328125,
+          "left": 762.5
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "assessment",
+      "route": "/vurdering/",
+      "layout": "split-right",
+      "withImage": false,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 32,
+          "y": 187.5,
+          "width": 395.5,
+          "height": 273.46875,
+          "top": 187.5,
+          "right": 427.5,
+          "bottom": 460.96875,
+          "left": 32
+        },
+        "visual": {
+          "x": 472.5,
+          "y": 187.5,
+          "width": 395.5,
+          "height": 862.1875,
+          "top": 187.5,
+          "right": 868,
+          "bottom": 1049.6875,
+          "left": 472.5
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "assessment",
+      "route": "/vurdering/",
+      "layout": "split-right",
+      "withImage": false,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 160.5,
+          "width": 350,
+          "height": 265.46875,
+          "top": 160.5,
+          "right": 370,
+          "bottom": 425.96875,
+          "left": 20
+        },
+        "visual": {
+          "x": 20,
+          "y": 455.96875,
+          "width": 350,
+          "height": 862.1875,
+          "top": 455.96875,
+          "right": 370,
+          "bottom": 1318.15625,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "assessment",
+      "route": "/vurdering/",
+      "layout": "split-right",
+      "withImage": false,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 193,
+          "width": 288,
+          "height": 294.46875,
+          "top": 193,
+          "right": 304,
+          "bottom": 487.46875,
+          "left": 16
+        },
+        "visual": {
+          "x": 16,
+          "y": 517.46875,
+          "width": 288,
+          "height": 932.984375,
+          "top": 517.46875,
+          "right": 304,
+          "bottom": 1450.453125,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "glossary",
+      "route": "/begreper/",
+      "layout": "split-right",
+      "withImage": false,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 40,
+          "y": 153,
+          "width": 980,
+          "height": 315.890625,
+          "top": 153,
+          "right": 1020,
+          "bottom": 468.890625,
+          "left": 40
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "glossary",
+      "route": "/begreper/",
+      "layout": "split-right",
+      "withImage": false,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 32,
+          "y": 129,
+          "width": 836,
+          "height": 282.46875,
+          "top": 129,
+          "right": 868,
+          "bottom": 411.46875,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "glossary",
+      "route": "/begreper/",
+      "layout": "split-right",
+      "withImage": false,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 109,
+          "width": 350,
+          "height": 328.46875,
+          "top": 109,
+          "right": 370,
+          "bottom": 437.46875,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "glossary",
+      "route": "/begreper/",
+      "layout": "split-right",
+      "withImage": false,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 109,
+          "width": 288,
+          "height": 410.703125,
+          "top": 109,
+          "right": 304,
+          "bottom": 519.703125,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "error",
+      "route": "/404.html",
+      "layout": "split-right",
+      "withImage": false,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 40,
+          "y": 165,
+          "width": 1360,
+          "height": 284.109375,
+          "top": 165,
+          "right": 1400,
+          "bottom": 449.109375,
+          "left": 40
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "error",
+      "route": "/404.html",
+      "layout": "split-right",
+      "withImage": false,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 32,
+          "y": 165,
+          "width": 836,
+          "height": 256.0625,
+          "top": 165,
+          "right": 868,
+          "bottom": 421.0625,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "error",
+      "route": "/404.html",
+      "layout": "split-right",
+      "withImage": false,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 165,
+          "width": 350,
+          "height": 224.0625,
+          "top": 165,
+          "right": 370,
+          "bottom": 389.0625,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "error",
+      "route": "/404.html",
+      "layout": "split-right",
+      "withImage": false,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 165,
+          "width": 288,
+          "height": 249.65625,
+          "top": 165,
+          "right": 304,
+          "bottom": 414.65625,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "home",
+      "route": "/",
+      "layout": "split-left",
+      "withImage": true,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 719.625,
+          "y": 110.25,
+          "width": 680.359375,
+          "height": 367.25,
+          "top": 110.25,
+          "right": 1399.984375,
+          "bottom": 477.5,
+          "left": 719.625
+        },
+        "visual": {
+          "x": 40,
+          "y": 109,
+          "width": 591.625,
+          "height": 369.765625,
+          "top": 109,
+          "right": 631.625,
+          "bottom": 478.765625,
+          "left": 40
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "home",
+      "route": "/",
+      "layout": "split-left",
+      "withImage": true,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 32,
+          "y": 109,
+          "width": 650,
+          "height": 324.203125,
+          "top": 109,
+          "right": 682,
+          "bottom": 433.203125,
+          "left": 32
+        },
+        "visual": {
+          "x": 32,
+          "y": 469.203125,
+          "width": 640,
+          "height": 360,
+          "top": 469.203125,
+          "right": 672,
+          "bottom": 829.203125,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "home",
+      "route": "/",
+      "layout": "split-left",
+      "withImage": true,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 93,
+          "width": 350,
+          "height": 335.703125,
+          "top": 93,
+          "right": 370,
+          "bottom": 428.703125,
+          "left": 20
+        },
+        "visual": {
+          "x": 20,
+          "y": 464.703125,
+          "width": 350,
+          "height": 196.875,
+          "top": 464.703125,
+          "right": 370,
+          "bottom": 661.578125,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "home",
+      "route": "/",
+      "layout": "split-left",
+      "withImage": true,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 91,
+          "width": 288,
+          "height": 415.9375,
+          "top": 91,
+          "right": 304,
+          "bottom": 506.9375,
+          "left": 16
+        },
+        "visual": {
+          "x": 16,
+          "y": 542.9375,
+          "width": 288,
+          "height": 162,
+          "top": 542.9375,
+          "right": 304,
+          "bottom": 704.9375,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "article",
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "layout": "split-left",
+      "withImage": true,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 502.25,
+          "y": 187.5,
+          "width": 517.734375,
+          "height": 359.984375,
+          "top": 187.5,
+          "right": 1019.984375,
+          "bottom": 547.484375,
+          "left": 502.25
+        },
+        "visual": {
+          "x": 40,
+          "y": 218.140625,
+          "width": 398.25,
+          "height": 298.6875,
+          "top": 218.140625,
+          "right": 438.25,
+          "bottom": 516.828125,
+          "left": 40
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "article",
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "layout": "split-left",
+      "withImage": true,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 32,
+          "y": 187.5,
+          "width": 836,
+          "height": 253.734375,
+          "top": 187.5,
+          "right": 868,
+          "bottom": 441.234375,
+          "left": 32
+        },
+        "visual": {
+          "x": 32,
+          "y": 473.234375,
+          "width": 600,
+          "height": 450,
+          "top": 473.234375,
+          "right": 632,
+          "bottom": 923.234375,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "article",
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "layout": "split-left",
+      "withImage": true,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 193,
+          "width": 350,
+          "height": 311.46875,
+          "top": 193,
+          "right": 370,
+          "bottom": 504.46875,
+          "left": 20
+        },
+        "visual": {
+          "x": 20,
+          "y": 536.46875,
+          "width": 350,
+          "height": 262.5,
+          "top": 536.46875,
+          "right": 370,
+          "bottom": 798.96875,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "article",
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "layout": "split-left",
+      "withImage": true,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 193,
+          "width": 288,
+          "height": 361.46875,
+          "top": 193,
+          "right": 304,
+          "bottom": 554.46875,
+          "left": 16
+        },
+        "visual": {
+          "x": 16,
+          "y": 586.46875,
+          "width": 288,
+          "height": 216,
+          "top": 586.46875,
+          "right": 304,
+          "bottom": 802.46875,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "index",
+      "route": "/innsikt/",
+      "layout": "split-left",
+      "withImage": true,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 667.46875,
+          "y": 215.296875,
+          "width": 732.53125,
+          "height": 350.984375,
+          "top": 215.296875,
+          "right": 1400,
+          "bottom": 566.28125,
+          "left": 667.46875
+        },
+        "visual": {
+          "x": 40,
+          "y": 179.5,
+          "width": 563.46875,
+          "height": 422.59375,
+          "top": 179.5,
+          "right": 603.46875,
+          "bottom": 602.09375,
+          "left": 40
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "index",
+      "route": "/innsikt/",
+      "layout": "split-left",
+      "withImage": true,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 32,
+          "y": 179.5,
+          "width": 836,
+          "height": 273.734375,
+          "top": 179.5,
+          "right": 868,
+          "bottom": 453.234375,
+          "left": 32
+        },
+        "visual": {
+          "x": 32,
+          "y": 485.234375,
+          "width": 600,
+          "height": 450,
+          "top": 485.234375,
+          "right": 632,
+          "bottom": 935.234375,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "index",
+      "route": "/innsikt/",
+      "layout": "split-left",
+      "withImage": true,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 159.5,
+          "width": 350,
+          "height": 344.46875,
+          "top": 159.5,
+          "right": 370,
+          "bottom": 503.96875,
+          "left": 20
+        },
+        "visual": {
+          "x": 20,
+          "y": 535.96875,
+          "width": 350,
+          "height": 262.5,
+          "top": 535.96875,
+          "right": 370,
+          "bottom": 798.46875,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "index",
+      "route": "/innsikt/",
+      "layout": "split-left",
+      "withImage": true,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 192,
+          "width": 288,
+          "height": 373.46875,
+          "top": 192,
+          "right": 304,
+          "bottom": 565.46875,
+          "left": 16
+        },
+        "visual": {
+          "x": 16,
+          "y": 597.46875,
+          "width": 288,
+          "height": 216,
+          "top": 597.46875,
+          "right": 304,
+          "bottom": 813.46875,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "utility",
+      "route": "/kontakt/",
+      "layout": "split-left",
+      "withImage": true,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 502.25,
+          "y": 187.5,
+          "width": 517.734375,
+          "height": 448.03125,
+          "top": 187.5,
+          "right": 1019.984375,
+          "bottom": 635.53125,
+          "left": 502.25
+        },
+        "visual": {
+          "x": 40,
+          "y": 262.171875,
+          "width": 398.25,
+          "height": 298.6875,
+          "top": 262.171875,
+          "right": 438.25,
+          "bottom": 560.859375,
+          "left": 40
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "utility",
+      "route": "/kontakt/",
+      "layout": "split-left",
+      "withImage": true,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 32,
+          "y": 187.5,
+          "width": 836,
+          "height": 297.46875,
+          "top": 187.5,
+          "right": 868,
+          "bottom": 484.96875,
+          "left": 32
+        },
+        "visual": {
+          "x": 32,
+          "y": 516.96875,
+          "width": 600,
+          "height": 450,
+          "top": 516.96875,
+          "right": 632,
+          "bottom": 966.96875,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "utility",
+      "route": "/kontakt/",
+      "layout": "split-left",
+      "withImage": true,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 160.5,
+          "width": 350,
+          "height": 340.46875,
+          "top": 160.5,
+          "right": 370,
+          "bottom": 500.96875,
+          "left": 20
+        },
+        "visual": {
+          "x": 20,
+          "y": 532.96875,
+          "width": 350,
+          "height": 262.5,
+          "top": 532.96875,
+          "right": 370,
+          "bottom": 795.46875,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "utility",
+      "route": "/kontakt/",
+      "layout": "split-left",
+      "withImage": true,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 160.5,
+          "width": 288,
+          "height": 399.703125,
+          "top": 160.5,
+          "right": 304,
+          "bottom": 560.203125,
+          "left": 16
+        },
+        "visual": {
+          "x": 16,
+          "y": 592.203125,
+          "width": 288,
+          "height": 216,
+          "top": 592.203125,
+          "right": 304,
+          "bottom": 808.203125,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "pricing",
+      "route": "/priser/",
+      "layout": "split-left",
+      "withImage": true,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 667.46875,
+          "y": 178.75,
+          "width": 732.53125,
+          "height": 323.09375,
+          "top": 178.75,
+          "right": 1400,
+          "bottom": 501.84375,
+          "left": 667.46875
+        },
+        "visual": {
+          "x": 40,
+          "y": 129,
+          "width": 563.46875,
+          "height": 422.59375,
+          "top": 129,
+          "right": 603.46875,
+          "bottom": 551.59375,
+          "left": 40
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "pricing",
+      "route": "/priser/",
+      "layout": "split-left",
+      "withImage": true,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 32,
+          "y": 113,
+          "width": 836,
+          "height": 248.734375,
+          "top": 113,
+          "right": 868,
+          "bottom": 361.734375,
+          "left": 32
+        },
+        "visual": {
+          "x": 32,
+          "y": 393.734375,
+          "width": 600,
+          "height": 450,
+          "top": 393.734375,
+          "right": 632,
+          "bottom": 843.734375,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "pricing",
+      "route": "/priser/",
+      "layout": "split-left",
+      "withImage": true,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 97,
+          "width": 350,
+          "height": 319.46875,
+          "top": 97,
+          "right": 370,
+          "bottom": 416.46875,
+          "left": 20
+        },
+        "visual": {
+          "x": 20,
+          "y": 448.46875,
+          "width": 350,
+          "height": 262.5,
+          "top": 448.46875,
+          "right": 370,
+          "bottom": 710.96875,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "pricing",
+      "route": "/priser/",
+      "layout": "split-left",
+      "withImage": true,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 97,
+          "width": 288,
+          "height": 348.46875,
+          "top": 97,
+          "right": 304,
+          "bottom": 445.46875,
+          "left": 16
+        },
+        "visual": {
+          "x": 16,
+          "y": 477.46875,
+          "width": 288,
+          "height": 216,
+          "top": 477.46875,
+          "right": 304,
+          "bottom": 693.46875,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "service",
+      "route": "/synlighet/",
+      "layout": "split-left",
+      "withImage": true,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 667.46875,
+          "y": 231.25,
+          "width": 732.53125,
+          "height": 319.09375,
+          "top": 231.25,
+          "right": 1400,
+          "bottom": 550.34375,
+          "left": 667.46875
+        },
+        "visual": {
+          "x": 40,
+          "y": 179.5,
+          "width": 563.46875,
+          "height": 422.59375,
+          "top": 179.5,
+          "right": 603.46875,
+          "bottom": 602.09375,
+          "left": 40
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "service",
+      "route": "/synlighet/",
+      "layout": "split-left",
+      "withImage": true,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 32,
+          "y": 179.5,
+          "width": 836,
+          "height": 244.734375,
+          "top": 179.5,
+          "right": 868,
+          "bottom": 424.234375,
+          "left": 32
+        },
+        "visual": {
+          "x": 32,
+          "y": 456.234375,
+          "width": 600,
+          "height": 450,
+          "top": 456.234375,
+          "right": 632,
+          "bottom": 906.234375,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "service",
+      "route": "/synlighet/",
+      "layout": "split-left",
+      "withImage": true,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 159.5,
+          "width": 350,
+          "height": 315.46875,
+          "top": 159.5,
+          "right": 370,
+          "bottom": 474.96875,
+          "left": 20
+        },
+        "visual": {
+          "x": 20,
+          "y": 506.96875,
+          "width": 350,
+          "height": 262.5,
+          "top": 506.96875,
+          "right": 370,
+          "bottom": 769.46875,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "service",
+      "route": "/synlighet/",
+      "layout": "split-left",
+      "withImage": true,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 159.5,
+          "width": 288,
+          "height": 407.46875,
+          "top": 159.5,
+          "right": 304,
+          "bottom": 566.96875,
+          "left": 16
+        },
+        "visual": {
+          "x": 16,
+          "y": 598.96875,
+          "width": 288,
+          "height": 216,
+          "top": 598.96875,
+          "right": 304,
+          "bottom": 814.96875,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "assessment",
+      "route": "/vurdering/",
+      "layout": "split-left",
+      "withImage": true,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 667.46875,
+          "y": 686.21875,
+          "width": 732.53125,
+          "height": 277.984375,
+          "top": 686.21875,
+          "right": 1400,
+          "bottom": 964.203125,
+          "left": 667.46875
+        },
+        "visual": {
+          "x": 40,
+          "y": 187.5,
+          "width": 563.46875,
+          "height": 1275.421875,
+          "top": 187.5,
+          "right": 603.46875,
+          "bottom": 1462.921875,
+          "left": 40
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "assessment",
+      "route": "/vurdering/",
+      "layout": "split-left",
+      "withImage": true,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 32,
+          "y": 187.5,
+          "width": 836,
+          "height": 200.734375,
+          "top": 187.5,
+          "right": 868,
+          "bottom": 388.234375,
+          "left": 32
+        },
+        "visual": {
+          "x": 32,
+          "y": 420.234375,
+          "width": 836,
+          "height": 1281.1875,
+          "top": 420.234375,
+          "right": 868,
+          "bottom": 1701.421875,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "assessment",
+      "route": "/vurdering/",
+      "layout": "split-left",
+      "withImage": true,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 160.5,
+          "width": 350,
+          "height": 265.46875,
+          "top": 160.5,
+          "right": 370,
+          "bottom": 425.96875,
+          "left": 20
+        },
+        "visual": {
+          "x": 20,
+          "y": 457.96875,
+          "width": 350,
+          "height": 1156.6875,
+          "top": 457.96875,
+          "right": 370,
+          "bottom": 1614.65625,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "assessment",
+      "route": "/vurdering/",
+      "layout": "split-left",
+      "withImage": true,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 193,
+          "width": 288,
+          "height": 294.46875,
+          "top": 193,
+          "right": 304,
+          "bottom": 487.46875,
+          "left": 16
+        },
+        "visual": {
+          "x": 16,
+          "y": 519.46875,
+          "width": 288,
+          "height": 1180.984375,
+          "top": 519.46875,
+          "right": 304,
+          "bottom": 1700.453125,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "glossary",
+      "route": "/begreper/",
+      "layout": "split-left",
+      "withImage": true,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 40,
+          "y": 153,
+          "width": 980,
+          "height": 315.890625,
+          "top": 153,
+          "right": 1020,
+          "bottom": 468.890625,
+          "left": 40
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "glossary",
+      "route": "/begreper/",
+      "layout": "split-left",
+      "withImage": true,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 32,
+          "y": 129,
+          "width": 836,
+          "height": 282.46875,
+          "top": 129,
+          "right": 868,
+          "bottom": 411.46875,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "glossary",
+      "route": "/begreper/",
+      "layout": "split-left",
+      "withImage": true,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 109,
+          "width": 350,
+          "height": 328.46875,
+          "top": 109,
+          "right": 370,
+          "bottom": 437.46875,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "glossary",
+      "route": "/begreper/",
+      "layout": "split-left",
+      "withImage": true,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 109,
+          "width": 288,
+          "height": 410.703125,
+          "top": 109,
+          "right": 304,
+          "bottom": 519.703125,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "error",
+      "route": "/404.html",
+      "layout": "split-left",
+      "withImage": true,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 40,
+          "y": 165,
+          "width": 1360,
+          "height": 284.109375,
+          "top": 165,
+          "right": 1400,
+          "bottom": 449.109375,
+          "left": 40
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "error",
+      "route": "/404.html",
+      "layout": "split-left",
+      "withImage": true,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 32,
+          "y": 165,
+          "width": 836,
+          "height": 256.0625,
+          "top": 165,
+          "right": 868,
+          "bottom": 421.0625,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "error",
+      "route": "/404.html",
+      "layout": "split-left",
+      "withImage": true,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 165,
+          "width": 350,
+          "height": 224.0625,
+          "top": 165,
+          "right": 370,
+          "bottom": 389.0625,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "error",
+      "route": "/404.html",
+      "layout": "split-left",
+      "withImage": true,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 165,
+          "width": 288,
+          "height": 249.65625,
+          "top": 165,
+          "right": 304,
+          "bottom": 414.65625,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "home",
+      "route": "/",
+      "layout": "split-left",
+      "withImage": false,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 40,
+          "y": 109,
+          "width": 1360,
+          "height": 367.25,
+          "top": 109,
+          "right": 1400,
+          "bottom": 476.25,
+          "left": 40
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "home",
+      "route": "/",
+      "layout": "split-left",
+      "withImage": false,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 32,
+          "y": 109,
+          "width": 650,
+          "height": 324.203125,
+          "top": 109,
+          "right": 682,
+          "bottom": 433.203125,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "home",
+      "route": "/",
+      "layout": "split-left",
+      "withImage": false,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 93,
+          "width": 350,
+          "height": 335.703125,
+          "top": 93,
+          "right": 370,
+          "bottom": 428.703125,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "home",
+      "route": "/",
+      "layout": "split-left",
+      "withImage": false,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 91,
+          "width": 288,
+          "height": 415.9375,
+          "top": 91,
+          "right": 304,
+          "bottom": 506.9375,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "article",
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "layout": "split-left",
+      "withImage": false,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 40,
+          "y": 187.5,
+          "width": 980,
+          "height": 271.9375,
+          "top": 187.5,
+          "right": 1020,
+          "bottom": 459.4375,
+          "left": 40
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "article",
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "layout": "split-left",
+      "withImage": false,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 32,
+          "y": 187.5,
+          "width": 836,
+          "height": 253.734375,
+          "top": 187.5,
+          "right": 868,
+          "bottom": 441.234375,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "article",
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "layout": "split-left",
+      "withImage": false,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 193,
+          "width": 350,
+          "height": 311.46875,
+          "top": 193,
+          "right": 370,
+          "bottom": 504.46875,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "article",
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "layout": "split-left",
+      "withImage": false,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 193,
+          "width": 288,
+          "height": 361.46875,
+          "top": 193,
+          "right": 304,
+          "bottom": 554.46875,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "index",
+      "route": "/innsikt/",
+      "layout": "split-left",
+      "withImage": false,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 40,
+          "y": 179.5,
+          "width": 1360,
+          "height": 294.828125,
+          "top": 179.5,
+          "right": 1400,
+          "bottom": 474.328125,
+          "left": 40
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "index",
+      "route": "/innsikt/",
+      "layout": "split-left",
+      "withImage": false,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 32,
+          "y": 179.5,
+          "width": 836,
+          "height": 273.734375,
+          "top": 179.5,
+          "right": 868,
+          "bottom": 453.234375,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "index",
+      "route": "/innsikt/",
+      "layout": "split-left",
+      "withImage": false,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 159.5,
+          "width": 350,
+          "height": 344.46875,
+          "top": 159.5,
+          "right": 370,
+          "bottom": 503.96875,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "index",
+      "route": "/innsikt/",
+      "layout": "split-left",
+      "withImage": false,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 192,
+          "width": 288,
+          "height": 373.46875,
+          "top": 192,
+          "right": 304,
+          "bottom": 565.46875,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "utility",
+      "route": "/kontakt/",
+      "layout": "split-left",
+      "withImage": false,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 40,
+          "y": 187.5,
+          "width": 980,
+          "height": 359.984375,
+          "top": 187.5,
+          "right": 1020,
+          "bottom": 547.484375,
+          "left": 40
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "utility",
+      "route": "/kontakt/",
+      "layout": "split-left",
+      "withImage": false,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 32,
+          "y": 187.5,
+          "width": 836,
+          "height": 297.46875,
+          "top": 187.5,
+          "right": 868,
+          "bottom": 484.96875,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "utility",
+      "route": "/kontakt/",
+      "layout": "split-left",
+      "withImage": false,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 160.5,
+          "width": 350,
+          "height": 340.46875,
+          "top": 160.5,
+          "right": 370,
+          "bottom": 500.96875,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "utility",
+      "route": "/kontakt/",
+      "layout": "split-left",
+      "withImage": false,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 160.5,
+          "width": 288,
+          "height": 399.703125,
+          "top": 160.5,
+          "right": 304,
+          "bottom": 560.203125,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "pricing",
+      "route": "/priser/",
+      "layout": "split-left",
+      "withImage": false,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 40,
+          "y": 129,
+          "width": 1360,
+          "height": 323.09375,
+          "top": 129,
+          "right": 1400,
+          "bottom": 452.09375,
+          "left": 40
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "pricing",
+      "route": "/priser/",
+      "layout": "split-left",
+      "withImage": false,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 32,
+          "y": 113,
+          "width": 836,
+          "height": 248.734375,
+          "top": 113,
+          "right": 868,
+          "bottom": 361.734375,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "pricing",
+      "route": "/priser/",
+      "layout": "split-left",
+      "withImage": false,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 97,
+          "width": 350,
+          "height": 319.46875,
+          "top": 97,
+          "right": 370,
+          "bottom": 416.46875,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "pricing",
+      "route": "/priser/",
+      "layout": "split-left",
+      "withImage": false,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 97,
+          "width": 288,
+          "height": 348.46875,
+          "top": 97,
+          "right": 304,
+          "bottom": 445.46875,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "service",
+      "route": "/synlighet/",
+      "layout": "split-left",
+      "withImage": false,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 40,
+          "y": 179.5,
+          "width": 1360,
+          "height": 262.9375,
+          "top": 179.5,
+          "right": 1400,
+          "bottom": 442.4375,
+          "left": 40
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "service",
+      "route": "/synlighet/",
+      "layout": "split-left",
+      "withImage": false,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 32,
+          "y": 179.5,
+          "width": 836,
+          "height": 244.734375,
+          "top": 179.5,
+          "right": 868,
+          "bottom": 424.234375,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "service",
+      "route": "/synlighet/",
+      "layout": "split-left",
+      "withImage": false,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 159.5,
+          "width": 350,
+          "height": 315.46875,
+          "top": 159.5,
+          "right": 370,
+          "bottom": 474.96875,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "service",
+      "route": "/synlighet/",
+      "layout": "split-left",
+      "withImage": false,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 159.5,
+          "width": 288,
+          "height": 407.46875,
+          "top": 159.5,
+          "right": 304,
+          "bottom": 566.96875,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "assessment",
+      "route": "/vurdering/",
+      "layout": "split-left",
+      "withImage": false,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 762.5,
+          "y": 187.5,
+          "width": 637.5,
+          "height": 277.984375,
+          "top": 187.5,
+          "right": 1400,
+          "bottom": 465.484375,
+          "left": 762.5
+        },
+        "visual": {
+          "x": 40,
+          "y": 187.5,
+          "width": 560.6875,
+          "height": 820.828125,
+          "top": 187.5,
+          "right": 600.6875,
+          "bottom": 1008.328125,
+          "left": 40
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "assessment",
+      "route": "/vurdering/",
+      "layout": "split-left",
+      "withImage": false,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 32,
+          "y": 187.5,
+          "width": 395.5,
+          "height": 273.46875,
+          "top": 187.5,
+          "right": 427.5,
+          "bottom": 460.96875,
+          "left": 32
+        },
+        "visual": {
+          "x": 472.5,
+          "y": 187.5,
+          "width": 395.5,
+          "height": 862.1875,
+          "top": 187.5,
+          "right": 868,
+          "bottom": 1049.6875,
+          "left": 472.5
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "assessment",
+      "route": "/vurdering/",
+      "layout": "split-left",
+      "withImage": false,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 160.5,
+          "width": 350,
+          "height": 265.46875,
+          "top": 160.5,
+          "right": 370,
+          "bottom": 425.96875,
+          "left": 20
+        },
+        "visual": {
+          "x": 20,
+          "y": 455.96875,
+          "width": 350,
+          "height": 862.1875,
+          "top": 455.96875,
+          "right": 370,
+          "bottom": 1318.15625,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "assessment",
+      "route": "/vurdering/",
+      "layout": "split-left",
+      "withImage": false,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 193,
+          "width": 288,
+          "height": 294.46875,
+          "top": 193,
+          "right": 304,
+          "bottom": 487.46875,
+          "left": 16
+        },
+        "visual": {
+          "x": 16,
+          "y": 517.46875,
+          "width": 288,
+          "height": 932.984375,
+          "top": 517.46875,
+          "right": 304,
+          "bottom": 1450.453125,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "glossary",
+      "route": "/begreper/",
+      "layout": "split-left",
+      "withImage": false,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 40,
+          "y": 153,
+          "width": 980,
+          "height": 315.890625,
+          "top": 153,
+          "right": 1020,
+          "bottom": 468.890625,
+          "left": 40
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "glossary",
+      "route": "/begreper/",
+      "layout": "split-left",
+      "withImage": false,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 32,
+          "y": 129,
+          "width": 836,
+          "height": 282.46875,
+          "top": 129,
+          "right": 868,
+          "bottom": 411.46875,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "glossary",
+      "route": "/begreper/",
+      "layout": "split-left",
+      "withImage": false,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 109,
+          "width": 350,
+          "height": 328.46875,
+          "top": 109,
+          "right": 370,
+          "bottom": 437.46875,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "glossary",
+      "route": "/begreper/",
+      "layout": "split-left",
+      "withImage": false,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 109,
+          "width": 288,
+          "height": 410.703125,
+          "top": 109,
+          "right": 304,
+          "bottom": 519.703125,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "error",
+      "route": "/404.html",
+      "layout": "split-left",
+      "withImage": false,
+      "width": 1440,
+      "geometry": {
+        "copy": {
+          "x": 40,
+          "y": 165,
+          "width": 1360,
+          "height": 284.109375,
+          "top": 165,
+          "right": 1400,
+          "bottom": 449.109375,
+          "left": 40
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "error",
+      "route": "/404.html",
+      "layout": "split-left",
+      "withImage": false,
+      "width": 900,
+      "geometry": {
+        "copy": {
+          "x": 32,
+          "y": 165,
+          "width": 836,
+          "height": 256.0625,
+          "top": 165,
+          "right": 868,
+          "bottom": 421.0625,
+          "left": 32
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "error",
+      "route": "/404.html",
+      "layout": "split-left",
+      "withImage": false,
+      "width": 390,
+      "geometry": {
+        "copy": {
+          "x": 20,
+          "y": 165,
+          "width": 350,
+          "height": 224.0625,
+          "top": 165,
+          "right": 370,
+          "bottom": 389.0625,
+          "left": 20
+        },
+        "textFirst": true
+      }
+    },
+    {
+      "family": "error",
+      "route": "/404.html",
+      "layout": "split-left",
+      "withImage": false,
+      "width": 320,
+      "geometry": {
+        "copy": {
+          "x": 16,
+          "y": 165,
+          "width": 288,
+          "height": 249.65625,
+          "top": 165,
+          "right": 304,
+          "bottom": 414.65625,
+          "left": 16
+        },
+        "textFirst": true
+      }
+    }
+  ],
+  "errors": [],
+  "posts": []
+}

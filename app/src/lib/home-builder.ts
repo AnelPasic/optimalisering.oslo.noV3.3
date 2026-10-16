@@ -3,11 +3,12 @@ import { surfaceSchema } from './surface.ts';
 import { homeSectionDataSchema } from './home-section-data.ts';
 import { headingAlignSchema } from './heading-alignment.ts';
 import {contentLayoutSchema,boxVariantSchema} from './content-presentation.ts';
+import {heroLayoutSchema} from './hero-presentation.ts';
 
 const link=z.object({label:z.string().trim().min(1),href:z.string().startsWith('/')});
 export const heroPhotoSchema=z.object({src:z.string().regex(/^\/images\/home\/[a-z0-9][a-z0-9-]*\.webp$/),positionX:z.number().min(0).max(100),positionY:z.number().min(0).max(100)});
 export const heroSchema=z.object({
- layout:z.enum(['split-right','split-left','centered']).default('split-right'),
+ layout:heroLayoutSchema,
  eyebrow:z.string(),title:z.string().trim().min(1),support:z.string(),primaryCta:link,secondaryCta:link.optional(),
  visual:z.discriminatedUnion('kind',[z.object({kind:z.literal('none'),image:heroPhotoSchema.optional()}).strict(),z.object({kind:z.literal('image'),image:heroPhotoSchema}).strict()]),
  // A single typed project treatment, never arbitrary inline rich styling.
