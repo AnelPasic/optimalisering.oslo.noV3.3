@@ -1,0 +1,246 @@
+{
+  "build": {
+    "result": {
+      "build_uuid": "9db464c3-db2a-4acc-88f3-0def43bf66a8",
+      "status": "stopped",
+      "build_outcome": "success",
+      "initializing_on": "2026-10-16T08:54:57.981Z",
+      "running_on": "2026-10-16T08:55:01.732Z",
+      "stopped_on": "2026-10-16T08:55:52.632Z",
+      "created_on": "2026-10-16T08:54:57.796Z",
+      "modified_on": "2026-10-16T08:55:52.632Z",
+      "trigger": {
+        "trigger_uuid": "35b862e6-87d3-4126-bd92-d4f2c87c8547",
+        "external_script_id": "cd204e1933404500a83e5afb42f2f32f",
+        "build_token_name": "optimalisering-oslo-v33 build token",
+        "trigger_name": "cd204e1933404500a83e5afb42f2f32f",
+        "build_command": "npm run build",
+        "deploy_command": "npx wrangler deploy",
+        "root_directory": "/app",
+        "branch_includes": [
+          "main"
+        ],
+        "branch_excludes": [],
+        "path_includes": [
+          "*"
+        ],
+        "path_excludes": [],
+        "build_caching_enabled": true,
+        "created_on": "2026-10-08T02:13:40.804Z",
+        "modified_on": "2026-10-08T02:13:40.804Z",
+        "deleted_on": null,
+        "repo_connection": {
+          "repo_connection_uuid": "c7c8d1c6-d3f5-4636-9ef8-06a2c940de3a",
+          "repo_id": "1409470367",
+          "repo_name": "optimalisering.oslo.noV3.3",
+          "provider_type": "github",
+          "provider_account_id": "7911624",
+          "provider_account_name": "AnelPasic",
+          "grant_id": null,
+          "created_on": "2026-10-08T02:13:40.804Z",
+          "modified_on": "2026-10-08T02:13:40.804Z",
+          "deleted_on": null
+        }
+      },
+      "build_trigger_metadata": {
+        "build_trigger_source": "push_event",
+        "branch": "main",
+        "commit_hash": "50107aa5f278a07cc41c663d1b852d8abffc73c4",
+        "commit_message": "feat: unify page Heroes and expose safe per-page CMS layouts (H-025)",
+        "author": "Anel Pasic",
+        "build_command": "npm run build",
+        "deploy_command": "npx wrangler deploy",
+        "root_directory": "/app",
+        "build_token_uuid": "e504b908-37e9-4d9a-82de-0e4cab167eea",
+        "build_token_name": "optimalisering-oslo-v33 build token",
+        "environment_variables": {},
+        "repo_name": "optimalisering.oslo.noV3.3",
+        "provider_account_name": "AnelPasic",
+        "provider_type": "github"
+      },
+      "pull_request": null,
+      "deploy_hook": null
+    },
+    "success": true,
+    "errors": [],
+    "messages": [],
+    "status": 200
+  },
+  "deployments": {
+    "result": {
+      "deployments": [
+        {
+          "id": "f1b6c910-4207-48d6-ba35-2daeb7ff1204",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "anel@medon.no",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "d90da56c-448e-46f7-8c0e-abe7bcbef2c6",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-16T08:55:49.337778Z"
+        },
+        {
+          "id": "a8fd4401-0deb-43a3-a934-e636e9990d0d",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "anel@medon.no",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "ab35210b-a42b-4d2d-9b48-b4b9f7441b9f",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-16T07:34:04.588025Z"
+        },
+        {
+          "id": "1a41b78b-9b00-4ad2-8ac4-43ffecd039c2",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "anel@medon.no",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "5f4dd4e3-e69f-4f90-a7ed-fb24341a7bf6",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-16T07:32:32.402745Z"
+        },
+        {
+          "id": "4d64eced-4960-406f-bb06-516f5de40205",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "anel@medon.no",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "d126f39b-98a0-4ec1-a479-37966e976713",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-16T07:31:41.625426Z"
+        },
+        {
+          "id": "7ae5e856-559a-4e7a-b41c-044609c139c2",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "anel@medon.no",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "59c2f4d2-0d44-4e14-a7bf-669df5005b93",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-16T07:30:55.627414Z"
+        },
+        {
+          "id": "2c12ee24-d3de-48ed-96f4-e98910ac2e3c",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "anel@medon.no",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "d9c04cff-15f2-4ea6-9444-d0e09987d5d4",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-16T07:21:37.655037Z"
+        },
+        {
+          "id": "44359929-93cf-4e66-83ff-3a788ad546af",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "anel@medon.no",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "56e3232e-ece0-411f-bacd-cfb110d3d52b",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-15T19:26:46.726748Z"
+        },
+        {
+          "id": "2386811b-a6bf-4c39-a323-01ef09d3f997",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "anel@medon.no",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "24eace41-e933-41a3-8fcf-f0b9059de13d",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-15T19:23:49.095895Z"
+        },
+        {
+          "id": "6dd3fe55-8610-4800-a5f7-6072fdee5a75",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "anel@medon.no",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "94723cc2-e703-490d-9ffb-02b3d593a4e2",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-15T19:20:40.134494Z"
+        },
+        {
+          "id": "abf86968-670a-4850-8bff-9b5ecb106251",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "anel@medon.no",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "b43427ff-95eb-40a8-96b1-8baa1d040509",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-15T19:17:47.990848Z"
+        }
+      ]
+    },
+    "success": true,
+    "errors": [],
+    "messages": [],
+    "result_info": {
+      "page": 1,
+      "per_page": 10,
+      "count": 10,
+      "total_count": 250,
+      "total_pages": 25
+    },
+    "status": 200
+  }
+}

@@ -1,0 +1,15 @@
+# Actual authenticated CMS workflow
+
+The logged-in OWNER Pages CMS session was used through native form controls and Save. No React/form-state mutation, direct content API write, local-fixture commit or simulated save is counted here. `cms-*-controls.png/.txt` show the actual Norwegian controls and preserved copy/media editing surfaces. `cms-*-*-commit.txt` records the CMS-authored Git revisions; `native-*.json` records the exact commit's successful connected native build and active Worker version; `cms-*-changed/` and `cms-*-restored/` contain four-width actual Worker assertions and desktop/mobile screenshots.
+
+| Page | Actual choice | CMS save | Native build | 100% Worker version | CMS restore | Restore native build | Restore Worker |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Synlighet | split-left | ad6a65df698c6868c74a8beed7b00ea36d8aac53 | 095ffb95-ac04-4c86-bcd4-163eacca6f8f | 163e4141-2e8a-40f9-91de-070a1d829086 | 2ff43921504992f1fd32b7d27f539c9c3cb9cb79 | a636e967-81ec-43a2-94a4-eca99b2b9682 | cc2ae64c-1a05-4ea7-a486-a264e003ae31 |
+| Priser | centered, no image | ec48a3c06d8defc2f09f486dff91bdf9e612dd73 | 1da63fc2-4671-46e8-9c12-d0a1229529a9 | 563dc3e6-6d67-4ded-89a5-68497f209685 | 3c3ed037321c4c2dfb0599515536f1ec60fc98e1 | a00684fc-9293-4d18-b583-ccc2d2b72be4 | b1a0ab05-0d18-49b2-9188-5c18e0176a18 |
+| Forside, after media fix | centered, existing image + guarded proof | f560f8d6b4c51ac14c1ac00f0b3853a2a2c006bd | 6053f06d-5c92-4f24-a0e6-fd9923c8413c | c04558ff-b897-456e-b3af-5700c57b86e2 | 123f707f039bb3c78fde25d5743cc52057d86592 | 9f421e69-5fdf-4778-9531-0e9a1d0fff38 | 0af4f474-c2b9-497f-adf3-1bc0b5428801 |
+
+All three completed cycles preserve all pre-existing source data, actual public text, image/crop/alt, IDs/order and proof limits. The two originally absent layout fields remain explicitly set to Standard/split-right on native CMS restore; Pages CMS also removes the pricing file's terminal newline. This is disclosed rather than claiming byte-exact source restoration. All original JSON values remain exact. The homepage's existing layout field restores directly, without adding presentation data.
+
+The first home-centered cycle at f8f76a7 built successfully but manual screenshot review caught right-aligned media caused by unlayered local CSS. That state is diagnostic evidence only (`diagnostic-home-centered-before-media-fix.png`, matching named native/commit records). d411d7d fixes layout-layer ownership, with a failing-then-passing media-center assertion and a green complete matrix/full verify. Final home proof above uses the fresh f560f8d →123f707 native CMS cycle after that fix; all four widths explicitly assert both copy and media are centered. Final screenshots were manually inspected.
+
+Save/build is asynchronous. The very early service browser attempt correctly still saw split-right while its native build was running; it was not accepted as a pass. Subsequent final checks wait for the exact native build to succeed, then refresh the actual Worker. No build cancellation/manual deployment/infra change was used. Native build/deploy does not itself execute the local full verification suite.

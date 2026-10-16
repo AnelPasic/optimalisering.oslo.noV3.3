@@ -1,0 +1,10 @@
+commit f8f76a7e54de32885e024a5c3994c7170198c3fb
+Author:     Anel Pasic <anelmedon@gmail.com>
+AuthorDate: Fri Oct 16 11:04:16 2026 +0200
+Commit:     Anel Pasic <anelmedon@gmail.com>
+CommitDate: Fri Oct 16 11:04:16 2026 +0200
+
+    Innholdsoppdatering: app/src/content/pages/home.json (via Pages CMS)
+
+ app/src/content/pages/home.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)

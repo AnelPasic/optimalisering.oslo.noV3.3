@@ -1,0 +1,1202 @@
+{
+  "incoming": "7973ccd2842633951e516d6dfe3c08b048ebd2ac",
+  "commit": "123f707f039bb3c78fde25d5743cc52057d86592",
+  "records": [
+    {
+      "file": "app/src/config/copy-authority.json",
+      "sha256": "525dc6257ed179e01e0f702720e26a01b2746965f6264317975317b569ba01ee",
+      "currentSha256": "525dc6257ed179e01e0f702720e26a01b2746965f6264317975317b569ba01ee",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "app/src/config/locales.ts",
+      "sha256": "bc09ddc7dd7d6c75433e610a714c19eba86ab6cf4c589c44c3da5f16d31fc1e2",
+      "currentSha256": "bc09ddc7dd7d6c75433e610a714c19eba86ab6cf4c589c44c3da5f16d31fc1e2",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "app/src/config/site.ts",
+      "sha256": "a79066c21be5da45ac370877bfe0852fcbc9845f746bb90e440da38abc442233",
+      "currentSha256": "a79066c21be5da45ac370877bfe0852fcbc9845f746bb90e440da38abc442233",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "app/src/content/pages/ai-synlighet.json",
+      "sha256": "6f408416bedf356760febd1ced355584dc2455735ae34dc79a498f74dcaf6f9f",
+      "currentSha256": "6f408416bedf356760febd1ced355584dc2455735ae34dc79a498f74dcaf6f9f",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "app/src/content/pages/home.json",
+      "sha256": "89a4295ee51b1e9134cc9bf7e7df8888325113672365eb312ffc4a74f448452a",
+      "currentSha256": "89a4295ee51b1e9134cc9bf7e7df8888325113672365eb312ffc4a74f448452a",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "app/src/content/pages/hva-bor-optimaliseres-forst.json",
+      "sha256": "593fbcd10786003d9b702019990e50ee4b5192887ee2b90245f1ed2a1f1e27ed",
+      "currentSha256": "593fbcd10786003d9b702019990e50ee4b5192887ee2b90245f1ed2a1f1e27ed",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "app/src/content/pages/innsikt.json",
+      "sha256": "7209be69a041978a5b87ad9dae130c77e2a3dd5b0485330fe4b17e4a1c46dcf3",
+      "currentSha256": "7209be69a041978a5b87ad9dae130c77e2a3dd5b0485330fe4b17e4a1c46dcf3",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "app/src/content/pages/kontakt.json",
+      "sha256": "a01ffbc8152c56aac0ba1ae64b4ca28b132f6869ca8a6e76dbef9c7340d29dd4",
+      "currentSha256": "a01ffbc8152c56aac0ba1ae64b4ca28b132f6869ca8a6e76dbef9c7340d29dd4",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "app/src/content/pages/konvertering.json",
+      "sha256": "6ef45a5a2b5f4702d4571d99144b37bc5c93e7fb0c07802d7c13dae30c9bf75e",
+      "currentSha256": "6ef45a5a2b5f4702d4571d99144b37bc5c93e7fb0c07802d7c13dae30c9bf75e",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "app/src/content/pages/male-effekt-av-optimalisering.json",
+      "sha256": "c66cc377093894d3de48e6a8d8d6dc3a0c90ba0864000d7ffd2a0b4ee1843f57",
+      "currentSha256": "c66cc377093894d3de48e6a8d8d6dc3a0c90ba0864000d7ffd2a0b4ee1843f57",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "app/src/content/pages/nettbutikkoptimalisering.json",
+      "sha256": "cac970ab444d4ef152d6277c6264f33772431fa3a654b054c913d4a7507e0a25",
+      "currentSha256": "cac970ab444d4ef152d6277c6264f33772431fa3a654b054c913d4a7507e0a25",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "app/src/content/pages/om.json",
+      "sha256": "0c9d088a3d565da68ba3a818b820a59ea0bd44fb15413f241722d8abb914da63",
+      "currentSha256": "0c9d088a3d565da68ba3a818b820a59ea0bd44fb15413f241722d8abb914da63",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "app/src/content/pages/personvern.json",
+      "sha256": "82e301e9088c42a131fd3e0d0a9096a79d65af08b44c4d1fa8f1184001bfc0c2",
+      "currentSha256": "82e301e9088c42a131fd3e0d0a9096a79d65af08b44c4d1fa8f1184001bfc0c2",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "app/src/content/pages/priser.json",
+      "sha256": "c5ac01cd1748609d38704c019bf8597241c220739733f0a09b82140a09088b02",
+      "currentSha256": "75e2118378dfaa31c572ff1dcb7682e5c30a3f030c0c08b3de83305b50e7dc2a",
+      "byteExact": false,
+      "onlyNewExplicitDefault": true
+    },
+    {
+      "file": "app/src/content/pages/seo.json",
+      "sha256": "1d69233b485eae505700d5fd97e82eb8d0431f2b06f4ee7adcfbcc877b49b5a6",
+      "currentSha256": "1d69233b485eae505700d5fd97e82eb8d0431f2b06f4ee7adcfbcc877b49b5a6",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "app/src/content/pages/synlighet.json",
+      "sha256": "de0dcc3e99c971e620376c470f555b6d620ecd072d3558cc2a5322a31f393dd3",
+      "currentSha256": "e5e5b708378ff422544eddc6a3cf34b7a093a76ad4d4499722eb76dc2e685a4d",
+      "byteExact": false,
+      "onlyNewExplicitDefault": true
+    },
+    {
+      "file": "app/src/content/pages/vilkar.json",
+      "sha256": "d86bcfc4e2e59565b7173dc15690b9f11528b8010d8d86521b6b9068e3718416",
+      "currentSha256": "d86bcfc4e2e59565b7173dc15690b9f11528b8010d8d86521b6b9068e3718416",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "app/src/content/pages/vurdering.json",
+      "sha256": "7a2878c3baaa1f1374fcbaba9b3e7c1f757de603d143460398e01e16a5cb06c6",
+      "currentSha256": "7a2878c3baaa1f1374fcbaba9b3e7c1f757de603d143460398e01e16a5cb06c6",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "app/src/content/proof/eurotents.json",
+      "sha256": "03c76432036d7aa650fac91567f2437e4c632a15064c48cd881fc514eefe56c9",
+      "currentSha256": "03c76432036d7aa650fac91567f2437e4c632a15064c48cd881fc514eefe56c9",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "app/src/content/proof/helt-opplagt.json",
+      "sha256": "b07be0cd8e218032c1e0e0ab190cbeb1fd78977db8f46caae6f3e39e9cc44136",
+      "currentSha256": "b07be0cd8e218032c1e0e0ab190cbeb1fd78977db8f46caae6f3e39e9cc44136",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "app/src/content/proof/nysta.json",
+      "sha256": "7ad60f2d12834dd5fbf556cbcc49154519d2b611dafff49d7a003f85201b9cc3",
+      "currentSha256": "7ad60f2d12834dd5fbf556cbcc49154519d2b611dafff49d7a003f85201b9cc3",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "app/src/content/proof/oslo-privatklinikk.json",
+      "sha256": "f742976278801cc8100e4ec4c68a8c2efd93e885926e3ac5b0f0b7069a3e8b10",
+      "currentSha256": "f742976278801cc8100e4ec4c68a8c2efd93e885926e3ac5b0f0b7069a3e8b10",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "app/src/content/terminology/glossary.json",
+      "sha256": "a4f1b600b08c13b9d69fd74493d86d0e34d98409e81c8bc893a6b90ec126d307",
+      "currentSha256": "a4f1b600b08c13b9d69fd74493d86d0e34d98409e81c8bc893a6b90ec126d307",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "project/optimalisering-oslo-v3.3-pilot-seed/COMMERCIAL-TRUTH.md",
+      "sha256": "0966f7ee93881163a7e1d7d5fe964db0897b68b322528756b0b767e3993dbd27",
+      "currentSha256": "0966f7ee93881163a7e1d7d5fe964db0897b68b322528756b0b767e3993dbd27",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "project/optimalisering-oslo-v3.3-pilot-seed/COPY-SEEDS.md",
+      "sha256": "75d453fa619dde77667c58ba4d364a4a2f3da0420f339102ab2ca090260faa07",
+      "currentSha256": "75d453fa619dde77667c58ba4d364a4a2f3da0420f339102ab2ca090260faa07",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "project/optimalisering-oslo-v3.3-pilot-seed/DESIGN-PRIORS.md",
+      "sha256": "aca802ddb55040a38446e466368f2d1b9431a12ca41382a489d47b9d69458a10",
+      "currentSha256": "aca802ddb55040a38446e466368f2d1b9431a12ca41382a489d47b9d69458a10",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "project/optimalisering-oslo-v3.3-pilot-seed/FRESH-CODEX-TEST-PROMPT.md",
+      "sha256": "72b186f1fb129e689aafe898fb81167bfb8e6b44a719932b311b6d0e51c45618",
+      "currentSha256": "72b186f1fb129e689aafe898fb81167bfb8e6b44a719932b311b6d0e51c45618",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "project/optimalisering-oslo-v3.3-pilot-seed/MIGRATION-AUDIT.md",
+      "sha256": "9a27a218a39e63acaf4a7a508812470a5c3d30ffe197a199ddae0c794743f40f",
+      "currentSha256": "9a27a218a39e63acaf4a7a508812470a5c3d30ffe197a199ddae0c794743f40f",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "project/optimalisering-oslo-v3.3-pilot-seed/PAGE-PORTFOLIO.csv",
+      "sha256": "dbd9a6e8638695cf355b063c822d0c3ae196cf77290970ba5bf14697bcb31288",
+      "currentSha256": "dbd9a6e8638695cf355b063c822d0c3ae196cf77290970ba5bf14697bcb31288",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "project/optimalisering-oslo-v3.3-pilot-seed/PROJECT-BRIEF.md",
+      "sha256": "976f708f0ec86d4bda7a20f1220257eb20026e667867b38b664b5a446b5afb36",
+      "currentSha256": "976f708f0ec86d4bda7a20f1220257eb20026e667867b38b664b5a446b5afb36",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "project/optimalisering-oslo-v3.3-pilot-seed/PROOF-REGISTRY.csv",
+      "sha256": "892d4770a8b2e1f8b43f8ef13ce4088a2b0fd017fc54f8de83441536614beffa",
+      "currentSha256": "892d4770a8b2e1f8b43f8ef13ce4088a2b0fd017fc54f8de83441536614beffa",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "project/optimalisering-oslo-v3.3-pilot-seed/PROOF-STATUS.md",
+      "sha256": "149d1c79ff1d98518038f81ae3e354550bca1c6bccb2898dd8efef05f037d495",
+      "currentSha256": "149d1c79ff1d98518038f81ae3e354550bca1c6bccb2898dd8efef05f037d495",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "project/optimalisering-oslo-v3.3-pilot-seed/README-FIRST.md",
+      "sha256": "f2b899caa6692e28f03a43152874feeab97ef43642be944a063c1cb851849d1d",
+      "currentSha256": "f2b899caa6692e28f03a43152874feeab97ef43642be944a063c1cb851849d1d",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "project/optimalisering-oslo-v3.3-pilot-seed/TECHNICAL-BASELINE.md",
+      "sha256": "55113228125eb3e9ada408854e102b7df83a36e866d6e09789de73f299aef13a",
+      "currentSha256": "55113228125eb3e9ada408854e102b7df83a36e866d6e09789de73f299aef13a",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "project/optimalisering-oslo-v3.3-pilot-seed/manifest.json",
+      "sha256": "afb7c805a97c93949728b2270b459baa651479dce90b0894188319edc6e999ef",
+      "currentSha256": "afb7c805a97c93949728b2270b459baa651479dce90b0894188319edc6e999ef",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/AGENTS.md",
+      "sha256": "8f5901ba52f11e6ddbe2b5328658318e1f2a971b698cbe4fd844e38bc79b5214",
+      "currentSha256": "8f5901ba52f11e6ddbe2b5328658318e1f2a971b698cbe4fd844e38bc79b5214",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/BLUEPRINT-INTEGRATION.md",
+      "sha256": "135fe3e2ed1bfe68ef76ba365c39c13922daf308da1d2db83a2e66f611d73e6a",
+      "currentSha256": "135fe3e2ed1bfe68ef76ba365c39c13922daf308da1d2db83a2e66f611d73e6a",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/BLUEPRINT.md",
+      "sha256": "1d17707316481e57b5105a4ab0c7761021dfb926a9f2ce30f890d1d045921405",
+      "currentSha256": "1d17707316481e57b5105a4ab0c7761021dfb926a9f2ce30f890d1d045921405",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/BOOTSTRAP.md",
+      "sha256": "b1efde3790e1a65894af1231c6097a4ab7ace00bd5cc7ecb66e3e1fdcc32b123",
+      "currentSha256": "b1efde3790e1a65894af1231c6097a4ab7ace00bd5cc7ecb66e3e1fdcc32b123",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/CHANGELOG.md",
+      "sha256": "809b6a673acbc4c8aadc654df7562113c7fc1d1b3953ccc77c729e7bf3be1e43",
+      "currentSha256": "809b6a673acbc4c8aadc654df7562113c7fc1d1b3953ccc77c729e7bf3be1e43",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/CHECKLIST.md",
+      "sha256": "e449e56bfea68bff9c5b545d16e601ad6a7d9fede41ad4ec25d6c61ef871978e",
+      "currentSha256": "e449e56bfea68bff9c5b545d16e601ad6a7d9fede41ad4ec25d6c61ef871978e",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/DESIGN-WORKFLOW.md",
+      "sha256": "1732b4d23b7e8db71cc748cd70380814d00a15cd580b27258b478e853f0a41f7",
+      "currentSha256": "1732b4d23b7e8db71cc748cd70380814d00a15cd580b27258b478e853f0a41f7",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/FILE-INVENTORY.md",
+      "sha256": "625b70476768805302bf2f950b1bb1a4831649694e4af53ce5981c721112206c",
+      "currentSha256": "625b70476768805302bf2f950b1bb1a4831649694e4af53ce5981c721112206c",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/PILOT-TEST.md",
+      "sha256": "b58c6242f24092d8bb1e9b38efcc99e9186f618b062127985efdc8affccd25db",
+      "currentSha256": "b58c6242f24092d8bb1e9b38efcc99e9186f618b062127985efdc8affccd25db",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/README.md",
+      "sha256": "2d8daa24ac197d77455fc63fac38f28d4499d2e530ee101c76dc280989792497",
+      "currentSha256": "2d8daa24ac197d77455fc63fac38f28d4499d2e530ee101c76dc280989792497",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/SKILL-seo-aio-hormozi.md",
+      "sha256": "3da102fe5c90cddaa13dd51180e223203f4aa56554adc2cff6a3d5894345ad52",
+      "currentSha256": "3da102fe5c90cddaa13dd51180e223203f4aa56554adc2cff6a3d5894345ad52",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/START-EXISTING-PROJECT.md",
+      "sha256": "b204b989ddd0b94e1de21fb8353796b51e4d4569313c7223c66c89db321504f0",
+      "currentSha256": "b204b989ddd0b94e1de21fb8353796b51e4d4569313c7223c66c89db321504f0",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/START-HERE.md",
+      "sha256": "86b89fd3c36fc244a74fb9bd4096bf63a65296eeca445fe0c1975233284d3656",
+      "currentSha256": "86b89fd3c36fc244a74fb9bd4096bf63a65296eeca445fe0c1975233284d3656",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/START-NEW-PROJECT.md",
+      "sha256": "f9c744b4639e89454ec0198672ffe185e4df5ebaf32cdd4af15e77fff3f9ad46",
+      "currentSha256": "f9c744b4639e89454ec0198672ffe185e4df5ebaf32cdd4af15e77fff3f9ad46",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/SYSTEM-MANIFEST.md",
+      "sha256": "e514595c2903b6592a7d208713e1146d6e25a1b9d4b95cec4c41af8ca85dd314",
+      "currentSha256": "e514595c2903b6592a7d208713e1146d6e25a1b9d4b95cec4c41af8ca85dd314",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/SiteGrowthSKILL.md",
+      "sha256": "792bc4189dd3db66e64fb9fb4e54e4c0436e63cf1f6ba110a50ebc8605417cc4",
+      "currentSha256": "792bc4189dd3db66e64fb9fb4e54e4c0436e63cf1f6ba110a50ebc8605417cc4",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/UPLOAD-INSTRUCTIONS.md",
+      "sha256": "8efe4671869d041758936fdb6c5ebda7b26e45723b019f531966d61fd05f8a58",
+      "currentSha256": "8efe4671869d041758936fdb6c5ebda7b26e45723b019f531966d61fd05f8a58",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/WORKFLOW-v3.3.md",
+      "sha256": "b16367f6f88acd9114fa634b231314c6bff94af322e789e70ba989e01998a80d",
+      "currentSha256": "b16367f6f88acd9114fa634b231314c6bff94af322e789e70ba989e01998a80d",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/architecture-decision.md",
+      "sha256": "775df2869f7544a1a0822da8c02a8e96e60df8409fd023406bd00a4aa7bd314f",
+      "currentSha256": "775df2869f7544a1a0822da8c02a8e96e60df8409fd023406bd00a4aa7bd314f",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/content-model.md",
+      "sha256": "b69381097455706b5ff227882039453d292eebf031c269cb2960ff8d0faea217",
+      "currentSha256": "b69381097455706b5ff227882039453d292eebf031c269cb2960ff8d0faea217",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/content/CERTAINTY-GAP.md",
+      "sha256": "339d73d61b5b40fe712d4c11d7931e94a30a9334f27c3646a8c69bada025afaa",
+      "currentSha256": "339d73d61b5b40fe712d4c11d7931e94a30a9334f27c3646a8c69bada025afaa",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/content/CONTENT-OPERATING-MODEL.md",
+      "sha256": "4ff28819dcd61b4395df6761d54fda88b575e54576eeb313e943e2f041d195de",
+      "currentSha256": "4ff28819dcd61b4395df6761d54fda88b575e54576eeb313e943e2f041d195de",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/content/HEADING-ONLY-STORY.md",
+      "sha256": "09f2f7117e567a88dd38d8f9ffc801eb6be193a4be9e3b73c81e6e956f11a989",
+      "currentSha256": "09f2f7117e567a88dd38d8f9ffc801eb6be193a4be9e3b73c81e6e956f11a989",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/content/HEADLINE-LAB.md",
+      "sha256": "292bf57f73d4cad1517841b568969cbabdcfc65c69581fa740ad11c11f060d66",
+      "currentSha256": "292bf57f73d4cad1517841b568969cbabdcfc65c69581fa740ad11c11f060d66",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/content/PAGE-CONTRACT.md",
+      "sha256": "62934daded32f3fe86470d39b7994481bfc6016c4477dd54651ab67dfd1a6672",
+      "currentSha256": "62934daded32f3fe86470d39b7994481bfc6016c4477dd54651ab67dfd1a6672",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/content/PERSUASION-SEQUENCE.md",
+      "sha256": "7175bee5cd3769a891e6efc51cbc28011ca3345e3366e31f8f4b119f941c2944",
+      "currentSha256": "7175bee5cd3769a891e6efc51cbc28011ca3345e3366e31f8f4b119f941c2944",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/content/SECTION-CONTRACT.md",
+      "sha256": "2bf35be71a4266f7dee7c3d51e157c1e54b1b6e45735e4367c2c6ab7a580c526",
+      "currentSha256": "2bf35be71a4266f7dee7c3d51e157c1e54b1b6e45735e4367c2c6ab7a580c526",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/content/VALUE-EQUATION-MAP.md",
+      "sha256": "0f0c17f31521c7d0a49977ea7a871246d8e6329021ea8a7f18fcb803e87ccfa4",
+      "currentSha256": "0f0c17f31521c7d0a49977ea7a871246d8e6329021ea8a7f18fcb803e87ccfa4",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/content/content-copy-standard.md",
+      "sha256": "be3db7db77abcf20841d4ac1f42f8c14b85df4954b99b40a25056f61e81dde0c",
+      "currentSha256": "be3db7db77abcf20841d4ac1f42f8c14b85df4954b99b40a25056f61e81dde0c",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/content/content-performance.md",
+      "sha256": "992c0a092e9b809727df341d80357f3e88038c20876e62be89b221a71d1dc392",
+      "currentSha256": "992c0a092e9b809727df341d80357f3e88038c20876e62be89b221a71d1dc392",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/content/distribution.md",
+      "sha256": "7871de56671dc5b85e572c1b51252e4187393210ed90d7d4067b7dc9fa1379ba",
+      "currentSha256": "7871de56671dc5b85e572c1b51252e4187393210ed90d7d4067b7dc9fa1379ba",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/content/fun-facts.md",
+      "sha256": "50fadc2dcf4d1eb2df4eb458f36264ff80264b92cad66047bff0372dda4e5a69",
+      "currentSha256": "50fadc2dcf4d1eb2df4eb458f36264ff80264b92cad66047bff0372dda4e5a69",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/content/message-architecture.md",
+      "sha256": "e2b3ed9527eaf745d67736a4c11a3fa7087cf2c3e7f518f337ce79cffefbfd6e",
+      "currentSha256": "e2b3ed9527eaf745d67736a4c11a3fa7087cf2c3e7f518f337ce79cffefbfd6e",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/content/page-brief.md",
+      "sha256": "8cf571196c6bc3787c9198331e32876b1050c9f5cc5c0bd38a96166276e2ab26",
+      "currentSha256": "8cf571196c6bc3787c9198331e32876b1050c9f5cc5c0bd38a96166276e2ab26",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/content/proof-registry.md",
+      "sha256": "e39129f30fd582ac0dc2149ceea390ce95ea8505864b3efd2ec51fbaf2467a0c",
+      "currentSha256": "e39129f30fd582ac0dc2149ceea390ce95ea8505864b3efd2ec51fbaf2467a0c",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/design.md",
+      "sha256": "6c811b75d6518173927fa8f110c31d3493f670b3c2f88f8d9d13f34c313149bb",
+      "currentSha256": "6c811b75d6518173927fa8f110c31d3493f670b3c2f88f8d9d13f34c313149bb",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/design/DESIGN-DECISION-WORKFLOW.md",
+      "sha256": "66f702c24f19374bbaa4d1e49eed2d885a86b4a14c45a021634e88b9979f3acf",
+      "currentSha256": "66f702c24f19374bbaa4d1e49eed2d885a86b4a14c45a021634e88b9979f3acf",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/design/REFERENCE-LAB.md",
+      "sha256": "29030e8e25bec37a42d595af410e5c6dd0a6227d5fd5cb8ff521e760b6b0fa39",
+      "currentSha256": "29030e8e25bec37a42d595af410e5c6dd0a6227d5fd5cb8ff521e760b6b0fa39",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/design/REVIEW-PROTOCOL.md",
+      "sha256": "1cd0e5e941ecbd4acded556ff24f3e7c9da9b25e7919f87aab8ead4d43752f71",
+      "currentSha256": "1cd0e5e941ecbd4acded556ff24f3e7c9da9b25e7919f87aab8ead4d43752f71",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/design/TOKEN-TRANSFER.md",
+      "sha256": "73541f8b0ad8cae81d0828818aca90daeb9e2997ea77af2fd2b087d26db7961d",
+      "currentSha256": "73541f8b0ad8cae81d0828818aca90daeb9e2997ea77af2fd2b087d26db7961d",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/design/VARIANT-MATRIX.md",
+      "sha256": "1f5dbfd386407e14a4a8878a908faee1c5af1fc7c7f7be1c54788716a6b54516",
+      "currentSha256": "1f5dbfd386407e14a4a8878a908faee1c5af1fc7c7f7be1c54788716a6b54516",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/design/VISUAL-PRODUCTION-MODEL.md",
+      "sha256": "ae306732df221a7b244cbcebb43657b71fb6b326f38dcfd6148f8a780b02611b",
+      "currentSha256": "ae306732df221a7b244cbcebb43657b71fb6b326f38dcfd6148f8a780b02611b",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/design/design-direction.md",
+      "sha256": "7ca5e2857e111c9114e4366e20e4972f1657bcbcc26dfe3fa99cccc680a32c52",
+      "currentSha256": "7ca5e2857e111c9114e4366e20e4972f1657bcbcc26dfe3fa99cccc680a32c52",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/design/design-gate.md",
+      "sha256": "3596caecd2346cc06d22633240a702376259a14ce4590b0831e1b92713249361",
+      "currentSha256": "3596caecd2346cc06d22633240a702376259a14ce4590b0831e1b92713249361",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/existing-site-modernization.md",
+      "sha256": "6ddd214e33ded3194f087a6cc371e1581d795138a5b76063435802e630267ac5",
+      "currentSha256": "6ddd214e33ded3194f087a6cc371e1581d795138a5b76063435802e630267ac5",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/governance/CONFLICT-HIERARCHY.md",
+      "sha256": "ed94f96116133413ea0e560e7e0b7f7d8173d0c6a5699681d6ff01c06d0028c8",
+      "currentSha256": "ed94f96116133413ea0e560e7e0b7f7d8173d0c6a5699681d6ff01c06d0028c8",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/governance/DECISION-LOCKS.md",
+      "sha256": "df06823da0182e9d7914debbfb63531753c74a3150e051b02f517ae30f4c0c07",
+      "currentSha256": "df06823da0182e9d7914debbfb63531753c74a3150e051b02f517ae30f4c0c07",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/governance/EVIDENCE-CONFIDENCE.md",
+      "sha256": "04cee16e7d9d35c14714efa6879fc3dbc3757929dc7e00020779c82413852a2b",
+      "currentSha256": "04cee16e7d9d35c14714efa6879fc3dbc3757929dc7e00020779c82413852a2b",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/governance/OWNER-APPROVAL-MATRIX.md",
+      "sha256": "06d81ac08f4727c8d50b020661d5b30032ea22c85e1e458936e4a6addc85893e",
+      "currentSha256": "06d81ac08f4727c8d50b020661d5b30032ea22c85e1e458936e4a6addc85893e",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/governance/PAGE-PORTFOLIO-GATE.md",
+      "sha256": "a28c43d2e6610b33b9d86c4c586ec3378c409b6c1365229d2622f724e194e875",
+      "currentSha256": "a28c43d2e6610b33b9d86c4c586ec3378c409b6c1365229d2622f724e194e875",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/governance/PROJECT-PROFILES.md",
+      "sha256": "04523f38e314232c18cf19264e3a08e58a5ee2931a63117d981379bed2e95a94",
+      "currentSha256": "04523f38e314232c18cf19264e3a08e58a5ee2931a63117d981379bed2e95a94",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/governance/ROLE-OWNERSHIP.md",
+      "sha256": "de60f0fea79e96855e0f942bf68ea6237f26fed03e1e1a5b3610d590c5199658",
+      "currentSha256": "de60f0fea79e96855e0f942bf68ea6237f26fed03e1e1a5b3610d590c5199658",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/governance/RULE-CLASSES.md",
+      "sha256": "d44382e87e154b4d8d99466e815802c23f1aedc0599e5ac36f5665e22e6b1db5",
+      "currentSha256": "d44382e87e154b4d8d99466e815802c23f1aedc0599e5ac36f5665e22e6b1db5",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/governance/SCORING-GATES.md",
+      "sha256": "0de20ac50319b395028b5b128e3c9926a457724093f017939fbd1eeebd5be9b2",
+      "currentSha256": "0de20ac50319b395028b5b128e3c9926a457724093f017939fbd1eeebd5be9b2",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/implementation/CODEX-EXECUTION-CONTRACT.md",
+      "sha256": "1085b1bd517f3e40056e35793a6c87d0aa609d176c65db9820d0c4d8cc012af5",
+      "currentSha256": "1085b1bd517f3e40056e35793a6c87d0aa609d176c65db9820d0c4d8cc012af5",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/implementation/astro-pages-cms.md",
+      "sha256": "0dd295f70f57f07f24147002d34a69a10ae41f1aeded0688ac3e8f47108610fe",
+      "currentSha256": "0dd295f70f57f07f24147002d34a69a10ae41f1aeded0688ac3e8f47108610fe",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/implementation/astro-sanity.md",
+      "sha256": "ad60e8f8fa65bf0d070858c526c37c615aa38e269a97fb54bfcd5c6d18ad56f6",
+      "currentSha256": "ad60e8f8fa65bf0d070858c526c37c615aa38e269a97fb54bfcd5c6d18ad56f6",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/implementation/astro-static.md",
+      "sha256": "c188a02a2a78ba81f7efcf8cf36d00de2e80a381746a56efdddb57060745a8d8",
+      "currentSha256": "c188a02a2a78ba81f7efcf8cf36d00de2e80a381746a56efdddb57060745a8d8",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/implementation/nuxt4.md",
+      "sha256": "1b58e20b06355eab4832d3fd2a7d8069aaeb1c01a88c06535deee1d0076d5f02",
+      "currentSha256": "1b58e20b06355eab4832d3fd2a7d8069aaeb1c01a88c06535deee1d0076d5f02",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/integrations/analytics-attribution.md",
+      "sha256": "d44f909980b128ab7f95f590e09d5f37be17225902c7ce74d0f5825fd9a73402",
+      "currentSha256": "d44f909980b128ab7f95f590e09d5f37be17225902c7ce74d0f5825fd9a73402",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/integrations/assessment-funnel.md",
+      "sha256": "967b1d7b1ab2790c49053867fa6701ccc6c911a6b48b2971e615ac724a83be96",
+      "currentSha256": "967b1d7b1ab2790c49053867fa6701ccc6c911a6b48b2971e615ac724a83be96",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/integrations/consent-privacy.md",
+      "sha256": "abd709c314f2a9db4c6cae9412313af4fddc41705112b247721ffe173d26b363",
+      "currentSha256": "abd709c314f2a9db4c6cae9412313af4fddc41705112b247721ffe173d26b363",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/integrations/deployment.md",
+      "sha256": "a0b637666d46cc05405993d535fd04493e86c633005bec80ac1f464646ecc7bb",
+      "currentSha256": "a0b637666d46cc05405993d535fd04493e86c633005bec80ac1f464646ecc7bb",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/integrations/lead-engine.md",
+      "sha256": "d2bbe3e52f169ccd668b0055fd80a17b4af5581ac6e6f84647790aafd78c1bb6",
+      "currentSha256": "d2bbe3e52f169ccd668b0055fd80a17b4af5581ac6e6f84647790aafd78c1bb6",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/manifest.json",
+      "sha256": "153b89df8f0a0c01d428480acb42326b7892cc4205c535c2a9618cc6411f1a57",
+      "currentSha256": "153b89df8f0a0c01d428480acb42326b7892cc4205c535c2a9618cc6411f1a57",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/medon.config.example.ts",
+      "sha256": "27f4ec9411b23c93c41ef3bf4bfc2c4c67f7d3a703224a457d8f3791402830ab",
+      "currentSha256": "27f4ec9411b23c93c41ef3bf4bfc2c4c67f7d3a703224a457d8f3791402830ab",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/operations/EXPERIMENT-LEDGER.md",
+      "sha256": "ba511cde7b1ad2ac454d0a36a33268a19befbcb23b6d3fdc86c88b17e4820af3",
+      "currentSha256": "ba511cde7b1ad2ac454d0a36a33268a19befbcb23b6d3fdc86c88b17e4820af3",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/operations/GIT-CONTENT-FLOW.md",
+      "sha256": "c0bc03c85a397f96fadbf882c803d3aa51f72210202cab38ea3e5bb08809e1c5",
+      "currentSha256": "c0bc03c85a397f96fadbf882c803d3aa51f72210202cab38ea3e5bb08809e1c5",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/operations/TEMPLATE-CANARY.md",
+      "sha256": "4f15bacc169ccbb610e44c531f486c80b2e9dbfe7c042d69bded19b1674d58e5",
+      "currentSha256": "4f15bacc169ccbb610e44c531f486c80b2e9dbfe7c042d69bded19b1674d58e5",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/operations/website-operations.md",
+      "sha256": "6d62046cf33726680bf8098fc851b22f176ea0199ec93e41b1e63726f08d03e0",
+      "currentSha256": "6d62046cf33726680bf8098fc851b22f176ea0199ec93e41b1e63726f08d03e0",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/project-discovery.md",
+      "sha256": "5fb7393b220a501eeb650d2b3ae45231aa5f0f18b43525df84269237c011c046",
+      "currentSha256": "5fb7393b220a501eeb650d2b3ae45231aa5f0f18b43525df84269237c011c046",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/proof/MEDON-FACT-LIBRARY.md",
+      "sha256": "a9a42caeda1a57a7d1a8c32396ec04bee907990b77d6002bad0c5a5ca3856d7b",
+      "currentSha256": "a9a42caeda1a57a7d1a8c32396ec04bee907990b77d6002bad0c5a5ca3856d7b",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/proof/MEDON-PROOF-LIBRARY.md",
+      "sha256": "432d7d2a0cc53c28804a4667f1a5d80972ea4502e516e2830bf948d0101fe971",
+      "currentSha256": "432d7d2a0cc53c28804a4667f1a5d80972ea4502e516e2830bf948d0101fe971",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/proof/PROOF-ROUTER.md",
+      "sha256": "692cab6cb6c2405f28f75287bb921e2bfb96a15355d1ddae2925e16d251a3564",
+      "currentSha256": "692cab6cb6c2405f28f75287bb921e2bfb96a15355d1ddae2925e16d251a3564",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/qa/FIVE-SECOND-SCAN.md",
+      "sha256": "a3445fea662ecfdc2894dab6066fa04c84adb2b6f49bae3cd5eacdd8a5212dfd",
+      "currentSha256": "a3445fea662ecfdc2894dab6066fa04c84adb2b6f49bae3cd5eacdd8a5212dfd",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/qa/RED-TEAM.md",
+      "sha256": "eb5bf1a204a156d3f0dc094639b165fd8ed479cd8ed33fdd3fa0f1e23ee8a52c",
+      "currentSha256": "eb5bf1a204a156d3f0dc094639b165fd8ed479cd8ed33fdd3fa0f1e23ee8a52c",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/qa/SEO-CRO-DUAL-GATE.md",
+      "sha256": "d85985b4fdf125990471f53ae62f102e97509d16fb5ec33a7bb29214563c7293",
+      "currentSha256": "d85985b4fdf125990471f53ae62f102e97509d16fb5ec33a7bb29214563c7293",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/qa/content.md",
+      "sha256": "6f73ef7752159f3d23c8118647ae8c6a47974a2df78946ced380aade39343db0",
+      "currentSha256": "6f73ef7752159f3d23c8118647ae8c6a47974a2df78946ced380aade39343db0",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/qa/functional.md",
+      "sha256": "a405a79ff38e3165ec6e389fcf94af76d3f62367b40a8a2713da216557e06fdd",
+      "currentSha256": "a405a79ff38e3165ec6e389fcf94af76d3f62367b40a8a2713da216557e06fdd",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/qa/launch.md",
+      "sha256": "f08aaa74dd73ede56169a15bb725b9fc18814be122e7149e7355addfe3d2fb77",
+      "currentSha256": "f08aaa74dd73ede56169a15bb725b9fc18814be122e7149e7355addfe3d2fb77",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/qa/seo-aio.md",
+      "sha256": "4843bed34b11b3fd2e1c525a1575a6de03eadd5593576662fd1c03b158d4d185",
+      "currentSha256": "4843bed34b11b3fd2e1c525a1575a6de03eadd5593576662fd1c03b158d4d185",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/qa/technical.md",
+      "sha256": "8a560acdc868343c5f4641d8cf3fc7deb312e338f333b6f6e100ec1867f6fa07",
+      "currentSha256": "8a560acdc868343c5f4641d8cf3fc7deb312e338f333b6f6e100ec1867f6fa07",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/references/BACKLOG-INTEGRATION-v3.3.md",
+      "sha256": "709f162545a14d08463b9c510b925d7963738f36af28b4f6da42bb591bac9e0a",
+      "currentSha256": "709f162545a14d08463b9c510b925d7963738f36af28b4f6da42bb591bac9e0a",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/references/PRODUCTION-MODEL-LESSONS.md",
+      "sha256": "584a6fb01e78f38a379da9871beb29c2156249772d164c8419fae112d4029d24",
+      "currentSha256": "584a6fb01e78f38a379da9871beb29c2156249772d164c8419fae112d4029d24",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/references/attribution.md",
+      "sha256": "16be7c80e749e0a471012971ec2225c5d1d2099e312f0d0cccf511a72ec73a70",
+      "currentSha256": "16be7c80e749e0a471012971ec2225c5d1d2099e312f0d0cccf511a72ec73a70",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/references/commercial-strategy.md",
+      "sha256": "331dd79663e807d82ca036910587928f2524a1aabf54bfdc14b5bb2a0844d5f4",
+      "currentSha256": "331dd79663e807d82ca036910587928f2524a1aabf54bfdc14b5bb2a0844d5f4",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/references/compat/README.md",
+      "sha256": "00dbecfe1534d7147a7e17919a69b4301a35d8f3d93fdbe9fa7d008d45128556",
+      "currentSha256": "00dbecfe1534d7147a7e17919a69b4301a35d8f3d93fdbe9fa7d008d45128556",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/references/compat/layout-daisy.md",
+      "sha256": "4bdc40535bd0f65210a22782928991c07421d24136f65b10b7359cfffa1956f2",
+      "currentSha256": "4bdc40535bd0f65210a22782928991c07421d24136f65b10b7359cfffa1956f2",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/references/cro-nordic-ux.md",
+      "sha256": "7a1fd8bef5c85ded55854dbcea7d658a7ee1f337f71028b789bca2b2d2cc1969",
+      "currentSha256": "7a1fd8bef5c85ded55854dbcea7d658a7ee1f337f71028b789bca2b2d2cc1969",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/references/customer-research.md",
+      "sha256": "70afc79219f39ab27775787ce45a31edfc748f3cbe184aac22609c6d97be1f19",
+      "currentSha256": "70afc79219f39ab27775787ce45a31edfc748f3cbe184aac22609c6d97be1f19",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/references/design-current.md",
+      "sha256": "6c811b75d6518173927fa8f110c31d3493f670b3c2f88f8d9d13f34c313149bb",
+      "currentSha256": "6c811b75d6518173927fa8f110c31d3493f670b3c2f88f8d9d13f34c313149bb",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/references/free-tools.md",
+      "sha256": "b99070c7fbaedd9c5e4b8098e6d28fb58e2a2ef0ecc7ef3173c0b35734552846",
+      "currentSha256": "b99070c7fbaedd9c5e4b8098e6d28fb58e2a2ef0ecc7ef3173c0b35734552846",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/references/hooks-copy.md",
+      "sha256": "cd52c45f915d68e8843ead004c97546d456c83c3e1424a65ad4de17f976ca053",
+      "currentSha256": "cd52c45f915d68e8843ead004c97546d456c83c3e1424a65ad4de17f976ca053",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/references/lead-magnets.md",
+      "sha256": "ab776c6d9d313e58521a4e3b3713c52ab024de5e546917dd05726606b1976b5a",
+      "currentSha256": "ab776c6d9d313e58521a4e3b3713c52ab024de5e546917dd05726606b1976b5a",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/references/marketing-loops.md",
+      "sha256": "b22181084678af96163a03fca5f2374e613f2e55496025ce6e3d6ff3fd9df07f",
+      "currentSha256": "b22181084678af96163a03fca5f2374e613f2e55496025ce6e3d6ff3fd9df07f",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/references/method-notes.md",
+      "sha256": "12c018493ec35741b1fff3377498a10d667cd9d155c3504cd6f766f05ac6923c",
+      "currentSha256": "12c018493ec35741b1fff3377498a10d667cd9d155c3504cd6f766f05ac6923c",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/references/offer-leads.md",
+      "sha256": "c255858530270ebd3ea40b7dc3f46d986159888b4df4446a82c4ef15ff6afd24",
+      "currentSha256": "c255858530270ebd3ea40b7dc3f46d986159888b4df4446a82c4ef15ff6afd24",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/references/pricing.md",
+      "sha256": "7c3006a9a692918c1a20d9aa454a7603a34c562c57e8ead522097dd497fe822d",
+      "currentSha256": "7c3006a9a692918c1a20d9aa454a7603a34c562c57e8ead522097dd497fe822d",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/references/qa-launch.md",
+      "sha256": "3559e0f619d275cb8a49e72a3cd3478bb4cce030d40c6b31f2e6300a8778cba6",
+      "currentSha256": "3559e0f619d275cb8a49e72a3cd3478bb4cce030d40c6b31f2e6300a8778cba6",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/references/research-intake.md",
+      "sha256": "7d01a5537d79e4e3a4e4cdea569dc594081382f07c26555d2d9f65b583bfcc3e",
+      "currentSha256": "7d01a5537d79e4e3a4e4cdea569dc594081382f07c26555d2d9f65b583bfcc3e",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/references/seo-local-aio.md",
+      "sha256": "00e535142d64e818ab0c2704997059784359b6c14d360c943c5bc544f8d7e031",
+      "currentSha256": "00e535142d64e818ab0c2704997059784359b6c14d360c943c5bc544f8d7e031",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/research/SEARCH-AIO-OPPORTUNITY-CONTRACT.md",
+      "sha256": "71ee5369457aa67b5c1cb0aa936e58f4e73327effc28fe13d31d5b17ec9dddf6",
+      "currentSha256": "71ee5369457aa67b5c1cb0aa936e58f4e73327effc28fe13d31d5b17ec9dddf6",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/research/cro-diagnosis.md",
+      "sha256": "29f93b50001047c73703f7845d36e48a9d90b49a2b19ed2f6a9e870008841017",
+      "currentSha256": "29f93b50001047c73703f7845d36e48a9d90b49a2b19ed2f6a9e870008841017",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/source-material/README.md",
+      "sha256": "b7a24d5cc559cf0f084e59c155810ec8e488f519ec4e069dc8f8cf5d26c79a41",
+      "currentSha256": "b7a24d5cc559cf0f084e59c155810ec8e488f519ec4e069dc8f8cf5d26c79a41",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/source-material/raw/1000s-of-Leads-In-Any-Niche.txt",
+      "sha256": "3a9d5091d1a55a54e1b418b34f84f823f7c283d18cdbc4e51ab3d73f5c25340d",
+      "currentSha256": "3a9d5091d1a55a54e1b418b34f84f823f7c283d18cdbc4e51ab3d73f5c25340d",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/source-material/raw/14-YearsOfMarketingAdvice.txt",
+      "sha256": "a26d42913a542ac97767e7b148fad043e3f35384311e09ccfc34de9ab8950b4c",
+      "currentSha256": "a26d42913a542ac97767e7b148fad043e3f35384311e09ccfc34de9ab8950b4c",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/source-material/raw/KillerHooks.txt",
+      "sha256": "9fcc886a444a8a9eed7fd099f50ef26388f7fc15f1ee83a7ef9906e907ae0ce0",
+      "currentSha256": "9fcc886a444a8a9eed7fd099f50ef26388f7fc15f1ee83a7ef9906e907ae0ce0",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/source-material/raw/Local-SEO-Expert.txt",
+      "sha256": "54cd8cc5b34021904b2a881fbee0ab8228b95be032e133b8324b2078c65b5efc",
+      "currentSha256": "54cd8cc5b34021904b2a881fbee0ab8228b95be032e133b8324b2078c65b5efc",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/source-material/raw/MakeMoreMoney.txt",
+      "sha256": "e6453b044cd10f475e83e27a8c948b5a33befef77b630e2f6ac600347473218b",
+      "currentSha256": "e6453b044cd10f475e83e27a8c948b5a33befef77b630e2f6ac600347473218b",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/source-material/raw/SEO-expert.txt",
+      "sha256": "3cd4e39f95d3d7d0d2e88cee3209c782d66b596685b72db973c0befe2eae241f",
+      "currentSha256": "3cd4e39f95d3d7d0d2e88cee3209c782d66b596685b72db973c0befe2eae241f",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/source-of-truth.md",
+      "sha256": "7a164f00f4dbf9b3f3047361f18e0af7afc0b50b3607aabd8f218e54f4606b37",
+      "currentSha256": "7a164f00f4dbf9b3f3047361f18e0af7afc0b50b3607aabd8f218e54f4606b37",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/starter-manifest.yaml",
+      "sha256": "28b13eeaf048a3477968f1367b4bf2dbb6a5f659092a300824c1682e2c6c8b34",
+      "currentSha256": "28b13eeaf048a3477968f1367b4bf2dbb6a5f659092a300824c1682e2c6c8b34",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/technical/TECHNICAL-PREFLIGHT.md",
+      "sha256": "e71c0e357234615dc5eda30c465c70d76bf7ca442a0f029fa2876778a8e32058",
+      "currentSha256": "e71c0e357234615dc5eda30c465c70d76bf7ca442a0f029fa2876778a8e32058",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/templates/CHANGE-REQUEST.md",
+      "sha256": "4f450ddc8fceb9f32b069faf3080cf3cbacbcd3dbce5f2b2a1176930679f8175",
+      "currentSha256": "4f450ddc8fceb9f32b069faf3080cf3cbacbcd3dbce5f2b2a1176930679f8175",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/templates/CONTENT-INVENTORY.csv",
+      "sha256": "8d27f3b0e15cb076e678a0f480c2362d8552ddef2b11f6065b1ae4e36377e99b",
+      "currentSha256": "8d27f3b0e15cb076e678a0f480c2362d8552ddef2b11f6065b1ae4e36377e99b",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/templates/CONTENT-LOCK.md",
+      "sha256": "aaa8e56b2346da7a2cd711d6c0982df3cf8d4a27b48cd355c585c02cf612dc32",
+      "currentSha256": "aaa8e56b2346da7a2cd711d6c0982df3cf8d4a27b48cd355c585c02cf612dc32",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/templates/DECISION-LOG.md",
+      "sha256": "954b4c222de5016fed8bbd40d6293bb889bfbe5f8309fd48ebdf7c5db20533ef",
+      "currentSha256": "954b4c222de5016fed8bbd40d6293bb889bfbe5f8309fd48ebdf7c5db20533ef",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/templates/DESIGN-DECISIONS.md",
+      "sha256": "c4b94fde26e9a546434f13baf014b73a92abc70c4b06dfb32847f82fcd933006",
+      "currentSha256": "c4b94fde26e9a546434f13baf014b73a92abc70c4b06dfb32847f82fcd933006",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/templates/EXPERIMENT-LEDGER.csv",
+      "sha256": "ef2f12f3f14ae8fa18efa4dadcaeed352f953ec2bda753dc6a575cf64a83a775",
+      "currentSha256": "ef2f12f3f14ae8fa18efa4dadcaeed352f953ec2bda753dc6a575cf64a83a775",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/templates/FACT-REGISTRY.csv",
+      "sha256": "1756aeea5e15a886f8924c8ad315c888afe2f187d721a9cbedca4003b003c5be",
+      "currentSha256": "1756aeea5e15a886f8924c8ad315c888afe2f187d721a9cbedca4003b003c5be",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/templates/HEADLINE-SCORE.md",
+      "sha256": "07c4d75439676e346b8c17b898aec7724353a85bce048576beb21963f93d15b3",
+      "currentSha256": "07c4d75439676e346b8c17b898aec7724353a85bce048576beb21963f93d15b3",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/templates/OWNER-GATE-STATUS.md",
+      "sha256": "83c8abb63b14052a9006f91f934624c202abbcc906f9f0292c13fcc04c803a39",
+      "currentSha256": "83c8abb63b14052a9006f91f934624c202abbcc906f9f0292c13fcc04c803a39",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/templates/PAGE-CONTRACT.md",
+      "sha256": "9d21da0e0a8e7aa7c693841eb99338b2c395da15b86ddec7590d9cb904b0e1e3",
+      "currentSha256": "9d21da0e0a8e7aa7c693841eb99338b2c395da15b86ddec7590d9cb904b0e1e3",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/templates/PAGE-PORTFOLIO.csv",
+      "sha256": "5f3f6a7ca2b281d183bc0c95a852960bd5eec2cd8b7a13669c26f5be52c692f1",
+      "currentSha256": "5f3f6a7ca2b281d183bc0c95a852960bd5eec2cd8b7a13669c26f5be52c692f1",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/templates/PRODUCT-MARKETING.md",
+      "sha256": "f42c346a4e88f9ea7e0b2b695fdc0de06efa92b3bef94fa86a05080ed6b615d0",
+      "currentSha256": "f42c346a4e88f9ea7e0b2b695fdc0de06efa92b3bef94fa86a05080ed6b615d0",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/templates/PROJECT-BRIEF.md",
+      "sha256": "6ef8e8122a6e7499f410c96b7a755816d6af39ea1221b6f561bc0961eef3190b",
+      "currentSha256": "6ef8e8122a6e7499f410c96b7a755816d6af39ea1221b6f561bc0961eef3190b",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/templates/PROJECT-MIGRATION-AUDIT.md",
+      "sha256": "8dbcd9812c766a13c382eaae0a938d87943ba57e93cecc0b3b364935e2bdf6dc",
+      "currentSha256": "8dbcd9812c766a13c382eaae0a938d87943ba57e93cecc0b3b364935e2bdf6dc",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/templates/PROJECT-STATE.md",
+      "sha256": "08f21b8cde8a78a021959b60b75394c142be054ecd3b168fb2edc87b672600b1",
+      "currentSha256": "08f21b8cde8a78a021959b60b75394c142be054ecd3b168fb2edc87b672600b1",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/templates/PROOF-REGISTRY.csv",
+      "sha256": "ab5c8b85753db1e34cc47a8839ee61420224eb428d38de0a24237f909fa8fc30",
+      "currentSha256": "ab5c8b85753db1e34cc47a8839ee61420224eb428d38de0a24237f909fa8fc30",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/templates/SECTION-CONTRACT.md",
+      "sha256": "5e4f28ea5aea8fdb7fd4f208b23389087832ac8bed0bae3d6cc7135bda7c64be",
+      "currentSha256": "5e4f28ea5aea8fdb7fd4f208b23389087832ac8bed0bae3d6cc7135bda7c64be",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/templates/TECHNICAL-PREFLIGHT.md",
+      "sha256": "97dd69fe269ba34f80babc038a9e2f2c61bc7e88b353f526c10e007b344dbf66",
+      "currentSha256": "97dd69fe269ba34f80babc038a9e2f2c61bc7e88b353f526c10e007b344dbf66",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    },
+    {
+      "file": "system/medon-web-system-v3.3/tools/validate_package.py",
+      "sha256": "17339393460d67ca79f554bf028b58a231e3313ea3c409ecbdb32f45a916fb90",
+      "currentSha256": "17339393460d67ca79f554bf028b58a231e3313ea3c409ecbdb32f45a916fb90",
+      "byteExact": true,
+      "onlyNewExplicitDefault": false
+    }
+  ],
+  "ownerImages": [
+    {
+      "file": "app/src/assets/images/DiscoveringLocalFavorite.png",
+      "sha256": "78a7f6932e5b743b54aace0e602b56908916d59931e4dcf61c6acf3a3503f27c",
+      "byteExact": true
+    },
+    {
+      "file": "app/src/assets/images/happy-business.png",
+      "sha256": "bc1a5459746ef8c2fd6f0897bb3bb60f715d18e3097fbbfb95caee7992db539e",
+      "byteExact": true
+    },
+    {
+      "file": "app/src/assets/images/happy-shopowner.png",
+      "sha256": "6cb0884c034e16b09590ddbee7040d2c68075233a77ad176a9d3ec4b60b2d51b",
+      "byteExact": true
+    },
+    {
+      "file": "app/src/assets/images/happy-shopowner2.png",
+      "sha256": "97dcad2e71134f07efd85c4b4ebea62a287c8f579a71a36896b812104c96847d",
+      "byteExact": true
+    },
+    {
+      "file": "app/src/assets/images/ShoppingConversion.png",
+      "sha256": "cd6621fd9ded91f59bc44ba74844585479d8507f2960d8b2a095c344e97267cf",
+      "byteExact": true
+    }
+  ]
+}
