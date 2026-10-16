@@ -28,13 +28,12 @@ const image = supplied ? content.src : '/images/home/hero-customer-preview.svg';
 </div>
 
 <style>
-  .hero-visual { position: relative; width: 100%; max-width: 600px; justify-self: end; }
+  .hero-visual { position: relative; width: 100%; max-width: 600px; }
   .hero-proof { position: absolute; left: 16px; bottom: 16px; width: max-content; max-width: calc(100% - 32px); padding: var(--panel-pad-xs) var(--panel-pad-sm); border-radius: var(--radius-md); background: #f5f3ec; color: #320c43; }
   .hero-proof-result { display: flex; flex-wrap: wrap; gap: 0 6px; font-family: var(--heading); font-size: var(--type-h4); font-weight: var(--weight-heading); line-height: var(--leading-h4); }
   .hero-proof-comparison { white-space: nowrap; }
   .hero-proof-support { margin-top: 5px; font-size: var(--type-body-sm); line-height: var(--leading-body); }
-  @media (max-width: 900px) { .hero-visual:not([data-kind]) { max-width: 640px; justify-self: start; } }
-  @media (max-width: 900px) { .hero-visual[data-kind] { justify-self: start; } }
+  @media (max-width: 900px) { .hero-visual:not([data-kind]) { max-width: 640px; } }
   @media (max-width: 650px) {
     .hero-proof { left: 12px; bottom: -16px; max-width: calc(100% - 24px); }
   }

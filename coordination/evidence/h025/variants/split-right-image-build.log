@@ -1,40 +1,40 @@
-10:48:12 [content] Syncing content
-10:48:12 [content] Synced content
-10:48:12 [types] Generated 363ms
-10:48:12 [build] output: "static"
-10:48:12 [build] mode: "static"
-10:48:12 [build] directory: E:\Codex\optimalisering.oslo.noV3.3\app\dist\
-10:48:12 [build] Collecting build info...
-10:48:12 [build] ✓ Completed in 392ms.
-10:48:12 [build] Building static entrypoints...
+11:07:33 [content] Syncing content
+11:07:33 [content] Synced content
+11:07:33 [types] Generated 360ms
+11:07:33 [build] output: "static"
+11:07:33 [build] mode: "static"
+11:07:33 [build] directory: E:\Codex\optimalisering.oslo.noV3.3\app\dist\
+11:07:33 [build] Collecting build info...
+11:07:33 [build] ✓ Completed in 384ms.
+11:07:33 [build] Building static entrypoints...
 /*! 🌼 daisyUI 5.7.50 */
-10:48:13 [vite] ✓ built in 415ms
-10:48:13 [vite] ✓ built in 32ms
-10:48:13 [build] Rearranging server assets...
+11:07:33 [vite] ✓ built in 457ms
+11:07:33 [vite] ✓ built in 35ms
+11:07:33 [build] Rearranging server assets...
 
  generating static routes 
-10:48:13   ├─ /404.html (+14ms) 
-10:48:13   ├─ /begreper/index.html (+3ms) 
-10:48:13   ├─ /design-system/index.html (+12ms) 
-10:48:13   ├─ /robots.txt (+1ms) 
-10:48:13   ├─ /sitemap.xml (+1ms) 
-10:48:13   ├─ /ai-synlighet/index.html (+3ms) 
-10:48:13   ├─ /index.html (+9ms) 
-10:48:13   ├─ /innsikt/index.html (+2ms) 
-10:48:13   ├─ /innsikt/hva-bor-optimaliseres-forst/index.html (+2ms) 
-10:48:13   ├─ /innsikt/male-effekt-av-optimalisering/index.html (+2ms) 
-10:48:13   ├─ /kontakt/index.html (+1ms) 
-10:48:13   ├─ /konvertering/index.html (+3ms) 
-10:48:13   ├─ /nettbutikkoptimalisering/index.html (+2ms) 
-10:48:13   ├─ /om/index.html (+2ms) 
-10:48:13   ├─ /personvern/index.html (+1ms) 
-10:48:13   ├─ /priser/index.html (+2ms) 
-10:48:13   ├─ /seo/index.html (+3ms) 
-10:48:13   ├─ /synlighet/index.html (+3ms) 
-10:48:13   ├─ /vilkar/index.html (+1ms) 
-10:48:13   ├─ /vurdering/index.html (+2ms) 
-10:48:13 ✓ Completed in 102ms.
+11:07:34   ├─ /404.html (+15ms) 
+11:07:34   ├─ /begreper/index.html (+3ms) 
+11:07:34   ├─ /design-system/index.html (+13ms) 
+11:07:34   ├─ /robots.txt (+1ms) 
+11:07:34   ├─ /sitemap.xml (+1ms) 
+11:07:34   ├─ /ai-synlighet/index.html (+3ms) 
+11:07:34   ├─ /index.html (+9ms) 
+11:07:34   ├─ /innsikt/index.html (+2ms) 
+11:07:34   ├─ /innsikt/hva-bor-optimaliseres-forst/index.html (+2ms) 
+11:07:34   ├─ /innsikt/male-effekt-av-optimalisering/index.html (+2ms) 
+11:07:34   ├─ /kontakt/index.html (+1ms) 
+11:07:34   ├─ /konvertering/index.html (+4ms) 
+11:07:34   ├─ /nettbutikkoptimalisering/index.html (+2ms) 
+11:07:34   ├─ /om/index.html (+1ms) 
+11:07:34   ├─ /personvern/index.html (+1ms) 
+11:07:34   ├─ /priser/index.html (+3ms) 
+11:07:34   ├─ /seo/index.html (+2ms) 
+11:07:34   ├─ /synlighet/index.html (+3ms) 
+11:07:34   ├─ /vilkar/index.html (+1ms) 
+11:07:34   ├─ /vurdering/index.html (+2ms) 
+11:07:34 ✓ Completed in 104ms.
 
-10:48:13 [build] ✓ Completed in 644ms.
-10:48:13 [build] 18 page(s) built in 1.04s
-10:48:13 [build] Complete!
+11:07:34 [build] ✓ Completed in 703ms.
+11:07:34 [build] 18 page(s) built in 1.09s
+11:07:34 [build] Complete!

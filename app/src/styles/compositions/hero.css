@@ -112,6 +112,8 @@
 /* All families use this frame/copy/media composition. Existing semantic profiles
    retain their accepted default spacing and page-owned text treatment. */
 .commercial-hero .page-hero-copy { min-width:0; }
+.commercial-hero .hero-visual { justify-self:end; }
+@media(max-width:900px){.commercial-hero .hero-visual { justify-self:start; }}
 .commercial-hero .hero-aside { display:grid;gap:var(--gap-lg);min-width:0; }
 .commercial-hero:not([data-hero-family="home"])[data-hero-visual="image"] .hero-frame { display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); gap:64px; align-items:center; }
 .commercial-hero[data-hero-layout="centered"] { text-align:center; }

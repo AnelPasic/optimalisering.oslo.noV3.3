@@ -18,14 +18,14 @@
           "left": 390
         },
         "visual": {
-          "x": 800,
+          "x": 420,
           "y": 564.25,
           "width": 600,
           "height": 375,
           "top": 564.25,
-          "right": 1400,
+          "right": 1020,
           "bottom": 939.25,
-          "left": 800
+          "left": 420
         },
         "textFirst": true
       }
@@ -48,14 +48,14 @@
           "left": 125
         },
         "visual": {
-          "x": 32,
+          "x": 130,
           "y": 469.203125,
           "width": 640,
           "height": 360,
           "top": 469.203125,
-          "right": 672,
+          "right": 770,
           "bottom": 829.203125,
-          "left": 32
+          "left": 130
         },
         "textFirst": true
       }
@@ -138,14 +138,14 @@
           "left": 360
         },
         "visual": {
-          "x": 610,
+          "x": 420,
           "y": 523.4375,
           "width": 600,
           "height": 450,
           "top": 523.4375,
-          "right": 1210,
+          "right": 1020,
           "bottom": 973.4375,
-          "left": 610
+          "left": 420
         },
         "textFirst": true
       }
@@ -168,14 +168,14 @@
           "left": 90
         },
         "visual": {
-          "x": 32,
+          "x": 150,
           "y": 473.234375,
           "width": 600,
           "height": 450,
           "top": 473.234375,
-          "right": 632,
+          "right": 750,
           "bottom": 923.234375,
-          "left": 32
+          "left": 150
         },
         "textFirst": true
       }
@@ -258,14 +258,14 @@
           "left": 289.5
         },
         "visual": {
-          "x": 800,
+          "x": 420,
           "y": 538.328125,
           "width": 600,
           "height": 450,
           "top": 538.328125,
-          "right": 1400,
+          "right": 1020,
           "bottom": 988.328125,
-          "left": 800
+          "left": 420
         },
         "textFirst": true
       }
@@ -288,14 +288,14 @@
           "left": 80
         },
         "visual": {
-          "x": 32,
+          "x": 150,
           "y": 485.234375,
           "width": 600,
           "height": 450,
           "top": 485.234375,
-          "right": 632,
+          "right": 750,
           "bottom": 935.234375,
-          "left": 32
+          "left": 150
         },
         "textFirst": true
       }
@@ -378,14 +378,14 @@
           "left": 230
         },
         "visual": {
-          "x": 610,
+          "x": 420,
           "y": 611.484375,
           "width": 600,
           "height": 450,
           "top": 611.484375,
-          "right": 1210,
+          "right": 1020,
           "bottom": 1061.484375,
-          "left": 610
+          "left": 420
         },
         "textFirst": true
       }
@@ -408,14 +408,14 @@
           "left": 32
         },
         "visual": {
-          "x": 32,
+          "x": 150,
           "y": 516.96875,
           "width": 600,
           "height": 450,
           "top": 516.96875,
-          "right": 632,
+          "right": 750,
           "bottom": 966.96875,
-          "left": 32
+          "left": 150
         },
         "textFirst": true
       }
@@ -498,14 +498,14 @@
           "left": 250
         },
         "visual": {
-          "x": 800,
+          "x": 420,
           "y": 516.09375,
           "width": 600,
           "height": 450,
           "top": 516.09375,
-          "right": 1400,
+          "right": 1020,
           "bottom": 966.09375,
-          "left": 800
+          "left": 420
         },
         "textFirst": true
       }
@@ -528,14 +528,14 @@
           "left": 76.21875
         },
         "visual": {
-          "x": 32,
+          "x": 150,
           "y": 393.734375,
           "width": 600,
           "height": 450,
           "top": 393.734375,
-          "right": 632,
+          "right": 750,
           "bottom": 843.734375,
-          "left": 32
+          "left": 150
         },
         "textFirst": true
       }
@@ -618,14 +618,14 @@
           "left": 300.625
         },
         "visual": {
-          "x": 800,
+          "x": 420,
           "y": 506.4375,
           "width": 600,
           "height": 450,
           "top": 506.4375,
-          "right": 1400,
+          "right": 1020,
           "bottom": 956.4375,
-          "left": 800
+          "left": 420
         },
         "textFirst": true
       }
@@ -648,14 +648,14 @@
           "left": 80
         },
         "visual": {
-          "x": 32,
+          "x": 150,
           "y": 456.234375,
           "width": 600,
           "height": 450,
           "top": 456.234375,
-          "right": 632,
+          "right": 750,
           "bottom": 906.234375,
-          "left": 32
+          "left": 150
         },
         "textFirst": true
       }
