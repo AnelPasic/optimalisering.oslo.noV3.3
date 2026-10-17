@@ -1,5 +1,9 @@
 # Decisions and authority
 
+## D-089 — OWNER REVISE H-024A3 card visual parity — 2026-10-17
+
+Direct OWNER screenshot review: Homepage CMS shows `passer` set to two columns, lavender parent, and two `Kort` boxes (dark/soft). OWNER reports **"Denne komboen ble ikke bra. kort blir ikke som på [design-system]"**. Source inspection confirms design-system 2/3/4-card examples use `card/card-body/card-title`, whereas ordinary `HomeSection`/`ContentSection` CMS items use `info-item.card` + legacy section rules; selection does not consistently promise the same approved visual component family. The shown four-step website screenshot is actually another section (`mekanisme`) with Standard/default box variants, not the edited `passer` section; retain that distinction during validation. **H-024A3 ordinary CMS card presentation = OWNER REVISE**, not whole-editor PASS. Authorize narrow H-024A4 correction under `coordination/H024A4-CMS-CARD-DESIGN-PARITY.md`. Keep lower design-system examples visually intact, preserve OWNER data, global theme, protected commercial data and D-088 Hero PASS. H-024B remains blocked until an actual editor visual verdict. H-022 stays parked; no content/launch authorization is implied.
+
 ## D-088 — OWNER PASS H-025/H-025A Hero variants and CMS choice — 2026-10-17
 
 **Authority: direct OWNER visual/editor test.** After the H-025A technical delivery (`e565809` and `coordination/evidence/h025a/`), OWNER explicitly confirms: **"ja, testet og ser bra ut på Heros."** The four actual CMS-selectable Hero presets, including reversible `Sentrert uten bilde`, and their reviewed visual behavior are **PASS / COMPLETE within Hero scope**. This closes H-025/H-025A OWNER Hero/editor review; no further Hero correction is requested. Shared source, image/alt/crop, pricing/proof authority and current design-system visual primitives remain preserved.
