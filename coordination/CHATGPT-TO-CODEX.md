@@ -1,6 +1,16 @@
 # ChatGPT to Codex
 
-## Active handoff — H-024A5 CARD BODY TYPOGRAPHY (OWNER REVISE)
+## ACTIVE HANDOFF — H-026 DAISYUI HERO + FOOTER REUSE (D-092 OWNER AUTHORIZED)
+
+Date: 2026-10-17. OWNER confirms H-024A5 live card font sizes are good: **"ja størrelsen er bra nå."** Earlier H-024A4 appearance is positively reviewed apart from that corrected typography. **D-092 closes both narrow Card component/readability gates.**
+
+**Proceed with H-026**, exact scope `coordination/H026-DAISYUI-HERO-FOOTER-REUSE.md`. Inspect actual Hero/Footer markup + official daisyUI guidance, adopt real `hero/hero-content` and `footer/footer-title` components where they fit; use Tailwind composition and minimal justified custom CSS. Preserve D-088's four OWNER-approved CMS Hero variants, all existing page copy/CTA/media/crop/proof/pricing authority, glossary/404, footer links/legal/preview labels, mobile order, aesthetics and design-system demo. Compare before/after screenshots and computed geometry across route families/widths on actual deployed Worker, report justified exceptions rather than forcing generic components at the cost of visual regression. Then STOP for OWNER Hero/Footer review.
+
+No new Card changes requested; keep `card-copy` 16px mobile / 18px wide desktop and shared H-024A4 Card geometry. H-024A3 whole-editor acceptance remains separate, H-024B BLOCKED, H-022 PARKED, no launch/indexing/intake.
+
+---
+
+## Historical handoff — H-024A5 CARD BODY TYPOGRAPHY (DELIVERED; D-092 PASS)
 
 Date: 2026-10-17. OWNER says: **"ja men merket at alle kort har litt for liten font, ser det er på [design-system] også, så det er vel globalt. tenker 1rem burde være passe eller det minste."**
 
