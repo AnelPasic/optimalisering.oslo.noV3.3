@@ -15,7 +15,7 @@ test('assessment legacy/empty choice keeps split; horizontal is bounded and leav
  const page=structuredClone(source);page.sections.find((s:any)=>s._block==='assessment').content.layout='custom-css';assert.equal(pageSchema.safeParse(page).success,false);
 });
 test('native CMS assessment choice saves horizontal and clear restores the original source object',()=>{
- const cms=YAML.parse(readFileSync('../.pages.yml','utf8')),editor=homepageBlockEditor(cms,'assessment'),choice=editor.fields.find((f:any)=>f.name==='layout');assert.ok(choice);assert.deepEqual(choice.options.values.map((v:any)=>v.name),['split','horizontal']);assert.equal(choice.default,undefined);
+ const cms=YAML.parse(readFileSync('../.pages.yml','utf8')),editor=homepageBlockEditor(cms,'assessment'),choice=editor.fields.find((f:any)=>f.name==='layout');assert.ok(choice);assert.deepEqual(choice.options.values.map((v:any)=>v.name),['','horizontal']);assert.equal(choice.default,undefined);
  const entry=entryForFile(cms,'app/src/content/pages/home.json'),form=structuredClone(source);form.sections.find((s:any)=>s._block==='assessment').content.layout='horizontal';
  const saved=JSON.parse(cmsJsonSave(source,form,entry,cms));assert.deepEqual(saved,form);form.sections.find((s:any)=>s._block==='assessment').content.layout='';
  const restored=JSON.parse(cmsJsonSave(saved,form,entry,cms));assert.deepEqual(restored,source);

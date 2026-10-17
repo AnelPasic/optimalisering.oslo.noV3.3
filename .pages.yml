@@ -1347,7 +1347,7 @@ content:
                     options:
                       placeholder: To kolonner (dagens)
                       values:
-                        - name: split
+                        - name: ""
                           label: To kolonner (dagens)
                         - name: horizontal
                           label: Vannrett (kompakt skjema)
