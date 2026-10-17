@@ -1,6 +1,18 @@
 # ChatGPT to Codex
 
-## ACTIVE HANDOFF — H-024A6 ASSESSMENT / BOX PADDING / REAL FAQ PARITY (D-094)
+## ACTIVE HANDOFF — D-095 H-024A7 FAQ SHARED WIDTH + OPTIONAL HORIZONTAL CONTACT
+
+Date: 2026-10-18. OWNER directly says: **"Kontaktseksjonen på forsiden er ok as is, men vi vil trenge en vannrett variant. Boksvariant: ok. FAQ-seksjoner: ingen grunn til at den skal ha max bredde lavere enn resten."**
+
+This is **OWNER PASS of existing contact variant and box variants**, not of FAQ's narrow width and not a full H-024A3 editor acceptance. Implement the scoped contract at coordination/H024A7-FAQ-WIDTH-HORIZONTAL-ASSESSMENT.md. Verified FAQ culprit: shared.css sets .faq-grid max-width:1200px although site-shell .shell max-width1440px; remove the extra cap and keep FAQ content, grid semantics and real same-source design-system demo.
+
+The contact is **already two columns**, so new "vannrett" needs to be an actually different, compact full-width alternative with website/email/button inline desktop, stack mobile; keep optional comment, legal/privacy/preview/status and existing transport-disabled behavior. Use same HomeAssessment component, daisyUI + Tailwind, two typed Pages CMS presets, existing default remains unchanged and approved. Present both source-backed options in /design-system/; verify authenticated native CMS choice→Git→Cloudflare→Worker→restore without leaving the live homepage in alternate state. This layout interpretation is provisional until OWNER visual review, not permission to invent or delete form content.
+
+Keep Card/Hero/Footer/PageList approvals and all current OWNER edits untouched; no H-024B, H-022 or launch actions. Deliver native proof and STOP for OWNER review.
+
+---
+
+## HISTORICAL HANDOFF — H-024A6 ASSESSMENT / BOX PADDING / REAL FAQ PARITY (DELIVERED; D-095 partial PASS)
 
 Date: 2026-10-17. OWNER directly points out that other homepage components still "lever sitt eget liv": screenshot of homepage contact, source `.invite-home .assessment-grid {gap:96px;max-width:1280px}`; CMS **Boksvariant** example missing padding; production FAQ at bottom **not actually demonstrated in /design-system/**. Source confirms duplicate assessment sizing authorities, non-card `info-item:not(.card)` zero left/right padding, homepage FAQ inlined in HomepageBlock separate from Faq.astro, and generic design-system collapse rather than actual homepage FAQ.
 
