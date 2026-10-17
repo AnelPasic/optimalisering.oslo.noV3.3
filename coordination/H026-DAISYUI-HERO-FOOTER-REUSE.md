@@ -3,7 +3,12 @@
 Date: 2026-10-17
 Authority: direct OWNER request: "ønsker også at om noe kan løses med DaisyUI components så skal de brukes. Den har f.eks egen for Footer, Hero" with official daisyUI links.
 Governance: MWS-020 strengthened by MWS-029 in `AnelPasic/MedonWebSystem`. OWNER-approved existing Hero design is D-088.
-Status: QUEUED SCOPED PILOT / **DO NOT START until H-024A4 Card parity is delivered and OWNER has reviewed it**. Does not unblock H-024B or parked H-022. No public release.
+Status: **OWNER-AUTHORIZED SCOPED IMPLEMENTATION / ACTIVE HANDOFF (D-092, 2026-10-17)**. H-024A4 shared Card appearance and H-024A5 typography are now accepted by OWNER after live visual checks. H-026 may proceed; STOP for separate OWNER Hero/Footer visual review. This does not unblock H-024B or parked H-022. No public release.
+
+
+## Activation / strict acceptance boundary (D-092)
+
+OWNER first said the corrected Card structure looks good, then requested larger explanatory type and explicitly confirmed on 2026-10-17: **"ja størrelsen er bra nå."** This closes the ordinary Card component and card-copy visual gates, not the whole H-024A3 editor. Codex must now implement/audit only Hero/Footer daisyUI reuse under this existing scoped contract. **Do not force a generic Hero markup if it breaks the D-088 approved four CMS variants or adds complexity**; a documented technically justified exception is better than visual regression. Footer should use genuine daisyUI semantic parts when safe, preserving current link lists and geometry. First save before-screenshots of actual Worker Hero/Footer for comparison; then verify native cloud deploy/visual parity and STOP for OWNER review.
 
 ## Official documentation verified 2026-10-17
 - https://daisyui.com/components/hero/ — `hero`, `hero-content`, optional `hero-overlay`.
@@ -16,7 +21,7 @@ Codex should consult current daisyUI GitMCP or official docs at execution time.
 - Current `CommercialHero.astro` is genuinely shared and accepted, but uses `commercial-hero > hero-container > hero-frame` and bespoke responsive composition, not daisyUI `hero > hero-content`.
 - These facts are not an authorization to replace approved looks with generic daisyUI demo designs or to force every UI layer into a component that is wrong for its behavior. The principle is to **reuse genuine daisyUI primitives where they can preserve the approved site and simplify code**, not to chase markup scores.
 
-## Scoped work after H-024A4 review
+## Scoped work — OWNER authorized after H-024A4/H-024A5 review
 1. Inventory current Hero/Footer markup and styles, compare with exact daisyUI component capabilities, and identify which CSS rules are essential project-specific compositions versus duplicate routine layout. Record a before/after component map.
 2. Prefer genuine `footer` + `footer-title` + responsive daisyUI direction parts for `HomeFooter.astro`, preserving **exact site brand, service/other links, glossary link, legal/privacy links, copyright, preview-only notice**, semantic nav labels and current appearance. Do not invent social links/newsletters.
 3. For `CommercialHero.astro`, use **actual** `hero` and `hero-content` where compatible. Retain all four CMS presets (split-right, split-left, centered with image, centered without), text-first mobile DOM, H1 uniqueness, media/alt/crop, approved proof, pricing source, CTA anchors, typography/spacing/theme and all family-specific semantics (including assessment form, glossary and 404). `hero-overlay` is optional only where a true background overlay exists; do not add a decorative overlay.
