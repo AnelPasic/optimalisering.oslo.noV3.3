@@ -1,0 +1,122 @@
+{
+  "exactRecords": 72,
+  "exactProductionDemoComparisons": 8,
+  "screenshots": [
+    {
+      "file": "assessment-1440.png",
+      "byteEqual": true
+    },
+    {
+      "file": "assessment-320.png",
+      "byteEqual": true
+    },
+    {
+      "file": "assessment-390.png",
+      "byteEqual": true
+    },
+    {
+      "file": "assessment-900.png",
+      "byteEqual": true
+    },
+    {
+      "file": "box-variants-1440.png",
+      "byteEqual": true
+    },
+    {
+      "file": "box-variants-320.png",
+      "byteEqual": true
+    },
+    {
+      "file": "box-variants-390.png",
+      "byteEqual": true
+    },
+    {
+      "file": "box-variants-900.png",
+      "byteEqual": true
+    },
+    {
+      "file": "ds-assessment-1440.png",
+      "byteEqual": true
+    },
+    {
+      "file": "ds-assessment-320.png",
+      "byteEqual": true
+    },
+    {
+      "file": "ds-assessment-390.png",
+      "byteEqual": true
+    },
+    {
+      "file": "ds-assessment-900.png",
+      "byteEqual": true
+    },
+    {
+      "file": "ds-faq-1440.png",
+      "byteEqual": true
+    },
+    {
+      "file": "ds-faq-320.png",
+      "byteEqual": true
+    },
+    {
+      "file": "ds-faq-390.png",
+      "byteEqual": true
+    },
+    {
+      "file": "ds-faq-900.png",
+      "byteEqual": true
+    },
+    {
+      "file": "ds-faq-open-js-1440.png",
+      "byteEqual": true
+    },
+    {
+      "file": "ds-faq-open-js-390.png",
+      "byteEqual": true
+    },
+    {
+      "file": "ds-faq-open-nojs-1440.png",
+      "byteEqual": true
+    },
+    {
+      "file": "ds-faq-open-nojs-390.png",
+      "byteEqual": true
+    },
+    {
+      "file": "faq-closed-1440.png",
+      "byteEqual": true
+    },
+    {
+      "file": "faq-closed-320.png",
+      "byteEqual": true
+    },
+    {
+      "file": "faq-closed-390.png",
+      "byteEqual": true
+    },
+    {
+      "file": "faq-closed-900.png",
+      "byteEqual": true
+    },
+    {
+      "file": "faq-open-1440.png",
+      "byteEqual": true
+    },
+    {
+      "file": "faq-open-320.png",
+      "byteEqual": true
+    },
+    {
+      "file": "faq-open-390.png",
+      "byteEqual": true
+    },
+    {
+      "file": "faq-open-900.png",
+      "byteEqual": true
+    }
+  ],
+  "byteIdenticalScreenshots": 28,
+  "totalScreenshots": 28,
+  "errors": [],
+  "posts": []
+}

@@ -1,5 +1,9 @@
 # Decisions and authority
 
+## H-024A6 technical receipt — 2026-10-17 (OWNER section review pending)
+
+Implementation3905d0d consumes D-094 only: shared-grid HomeAssessment/genuine card-body, safe explicit Open/colored automatic padding with inherited editorial states retained, canonical Faq and actual same-source full-width assessment/FAQ specimens using existing commercial pricing projection. Approved Hero/Footer/Card/PageList and207 protected files/OWNER assets exact.72 responsive snapshots/eight exact production-demo pairs,96 restored source fixtures,20 keyboard/touch/JS/no-JS guards, full142/142/196 type groups and independent read-only review pass. Exact native30caade8 SUCCESS / Worker8e8e5749 at100%:72 live records equal local,28/28 PNGs byte-identical,20 live interactions and53 byte-exact assets/safeguards pass. Evidence/audit/remaining specimen gaps: `evidence/h024a6/README.md`. Technical delivery is not OWNER H-024A6 acceptance or H-024A3 whole-editor PASS. STOP for OWNER whole-section review; H-024B blocked, H-022 parked, no launch. Actual D-094/D-093 below remain unchanged incoming decisions.
+
 ## D-094 — OWNER REVISE H-024A3 section/component consistency; H-024A6 authorized — 2026-10-17
 
 Direct OWNER provides four screenshots and points to independently styled elements: homepage assessment/contact (`.invite-home .assessment-grid {gap:96px;max-width:1280px}`), CMS `Boksvariant` examples **missing horizontal padding**, and production FAQ at the bottom that OWNER cannot find as the same component in `/design-system/`. Source diagnosis confirms `assessment-grid` also has older shared sizing, non-card `info-item` has `padding:var(--panel-pad) 0 0`, homepage FAQ is inlined in `HomepageBlock.astro` while other routes use `Faq.astro`, and the design-system shows a **different standalone collapse example**, not the actual homepage FAQ. These issues are **outside the D-093 H-026 Hero/Footer PASS** and block final H-024A3 editor acceptance.

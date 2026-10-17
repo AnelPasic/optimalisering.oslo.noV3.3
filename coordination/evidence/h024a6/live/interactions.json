@@ -1,0 +1,290 @@
+{
+  "records": [
+    {
+      "route": "/",
+      "width": 1440,
+      "javaScriptEnabled": true,
+      "open": {
+        "answer": "Vi gjør en kort, manuell vurdering og begrunner hvor vi ville startet. Hvis det er noe vi kan hjelpe med, avtaler vi omfang og pris før betalt arbeid. Sjekken er ikke en full revisjon eller gratis gjennomføring.",
+        "answerHeight": 102.390625,
+        "summaryHeight": 60.796875,
+        "clipped": false,
+        "focus": true
+      },
+      "guard": {
+        "cancelled": true,
+        "status": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt.",
+        "expected": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt.",
+        "shown": true,
+        "focused": true
+      }
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "javaScriptEnabled": true,
+      "open": {
+        "answer": "Vi gjør en kort, manuell vurdering og begrunner hvor vi ville startet. Hvis det er noe vi kan hjelpe med, avtaler vi omfang og pris før betalt arbeid. Sjekken er ikke en full revisjon eller gratis gjennomføring.",
+        "answerHeight": 143.96875,
+        "summaryHeight": 57.59375,
+        "clipped": false,
+        "focus": true
+      },
+      "guard": {
+        "cancelled": true,
+        "status": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt.",
+        "expected": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt.",
+        "shown": true,
+        "focused": true
+      }
+    },
+    {
+      "route": "/design-system/",
+      "width": 1440,
+      "javaScriptEnabled": true,
+      "open": {
+        "answer": "Vi gjør en kort, manuell vurdering og begrunner hvor vi ville startet. Hvis det er noe vi kan hjelpe med, avtaler vi omfang og pris før betalt arbeid. Sjekken er ikke en full revisjon eller gratis gjennomføring.",
+        "answerHeight": 102.390625,
+        "summaryHeight": 60.796875,
+        "clipped": false,
+        "focus": true
+      },
+      "guard": {
+        "cancelled": true,
+        "status": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt.",
+        "expected": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt.",
+        "shown": true,
+        "focused": true
+      }
+    },
+    {
+      "route": "/design-system/",
+      "width": 390,
+      "javaScriptEnabled": true,
+      "open": {
+        "answer": "Vi gjør en kort, manuell vurdering og begrunner hvor vi ville startet. Hvis det er noe vi kan hjelpe med, avtaler vi omfang og pris før betalt arbeid. Sjekken er ikke en full revisjon eller gratis gjennomføring.",
+        "answerHeight": 143.96875,
+        "summaryHeight": 57.59375,
+        "clipped": false,
+        "focus": true
+      },
+      "guard": {
+        "cancelled": true,
+        "status": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt.",
+        "expected": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt.",
+        "shown": true,
+        "focused": true
+      }
+    },
+    {
+      "route": "/konvertering/",
+      "width": 1440,
+      "javaScriptEnabled": true,
+      "open": {
+        "answer": "Konverteringsoptimalisering, ofte kalt CRO, handler om å gjøre det enklere for relevante besøkende å ta en nyttig handling - for eksempel å sende en henvendelse eller fullføre et kjøp.",
+        "answerHeight": 102.390625,
+        "summaryHeight": 60.796875,
+        "clipped": false,
+        "focus": true
+      },
+      "guard": null
+    },
+    {
+      "route": "/konvertering/",
+      "width": 390,
+      "javaScriptEnabled": true,
+      "open": {
+        "answer": "Konverteringsoptimalisering, ofte kalt CRO, handler om å gjøre det enklere for relevante besøkende å ta en nyttig handling - for eksempel å sende en henvendelse eller fullføre et kjøp.",
+        "answerHeight": 143.96875,
+        "summaryHeight": 57.59375,
+        "clipped": false,
+        "focus": true
+      },
+      "guard": null
+    },
+    {
+      "route": "/priser/",
+      "width": 1440,
+      "javaScriptEnabled": true,
+      "open": {
+        "answer": "Optimalisering koster 4 500 kr/mnd, Vekst 6 900 kr/mnd og Partner fra 14 900 kr/mnd. Alle priser er eks. mva.",
+        "answerHeight": 73.59375,
+        "summaryHeight": 60.796875,
+        "clipped": false,
+        "focus": true
+      },
+      "guard": null
+    },
+    {
+      "route": "/priser/",
+      "width": 390,
+      "javaScriptEnabled": true,
+      "open": {
+        "answer": "Optimalisering koster 4 500 kr/mnd, Vekst 6 900 kr/mnd og Partner fra 14 900 kr/mnd. Alle priser er eks. mva.",
+        "answerHeight": 92.78125,
+        "summaryHeight": 57.59375,
+        "clipped": false,
+        "focus": true
+      },
+      "guard": null
+    },
+    {
+      "route": "/om/",
+      "width": 1440,
+      "javaScriptEnabled": true,
+      "open": {
+        "answer": "Medon AS er eier og leverandør av Optimalisering Oslo. Optimalisering Oslo er et tjenestenavn.",
+        "answerHeight": 73.59375,
+        "summaryHeight": 60.796875,
+        "clipped": false,
+        "focus": true
+      },
+      "guard": null
+    },
+    {
+      "route": "/om/",
+      "width": 390,
+      "javaScriptEnabled": true,
+      "open": {
+        "answer": "Medon AS er eier og leverandør av Optimalisering Oslo. Optimalisering Oslo er et tjenestenavn.",
+        "answerHeight": 92.78125,
+        "summaryHeight": 57.59375,
+        "clipped": false,
+        "focus": true
+      },
+      "guard": null
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "javaScriptEnabled": false,
+      "open": {
+        "answer": "Vi gjør en kort, manuell vurdering og begrunner hvor vi ville startet. Hvis det er noe vi kan hjelpe med, avtaler vi omfang og pris før betalt arbeid. Sjekken er ikke en full revisjon eller gratis gjennomføring.",
+        "answerHeight": 102.390625,
+        "summaryHeight": 60.796875,
+        "clipped": false,
+        "focus": true
+      },
+      "guard": null
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "javaScriptEnabled": false,
+      "open": {
+        "answer": "Vi gjør en kort, manuell vurdering og begrunner hvor vi ville startet. Hvis det er noe vi kan hjelpe med, avtaler vi omfang og pris før betalt arbeid. Sjekken er ikke en full revisjon eller gratis gjennomføring.",
+        "answerHeight": 143.96875,
+        "summaryHeight": 57.59375,
+        "clipped": false,
+        "focus": true
+      },
+      "guard": null
+    },
+    {
+      "route": "/design-system/",
+      "width": 1440,
+      "javaScriptEnabled": false,
+      "open": {
+        "answer": "Vi gjør en kort, manuell vurdering og begrunner hvor vi ville startet. Hvis det er noe vi kan hjelpe med, avtaler vi omfang og pris før betalt arbeid. Sjekken er ikke en full revisjon eller gratis gjennomføring.",
+        "answerHeight": 102.390625,
+        "summaryHeight": 60.796875,
+        "clipped": false,
+        "focus": true
+      },
+      "guard": null
+    },
+    {
+      "route": "/design-system/",
+      "width": 390,
+      "javaScriptEnabled": false,
+      "open": {
+        "answer": "Vi gjør en kort, manuell vurdering og begrunner hvor vi ville startet. Hvis det er noe vi kan hjelpe med, avtaler vi omfang og pris før betalt arbeid. Sjekken er ikke en full revisjon eller gratis gjennomføring.",
+        "answerHeight": 143.96875,
+        "summaryHeight": 57.59375,
+        "clipped": false,
+        "focus": true
+      },
+      "guard": null
+    },
+    {
+      "route": "/konvertering/",
+      "width": 1440,
+      "javaScriptEnabled": false,
+      "open": {
+        "answer": "Konverteringsoptimalisering, ofte kalt CRO, handler om å gjøre det enklere for relevante besøkende å ta en nyttig handling - for eksempel å sende en henvendelse eller fullføre et kjøp.",
+        "answerHeight": 102.390625,
+        "summaryHeight": 60.796875,
+        "clipped": false,
+        "focus": true
+      },
+      "guard": null
+    },
+    {
+      "route": "/konvertering/",
+      "width": 390,
+      "javaScriptEnabled": false,
+      "open": {
+        "answer": "Konverteringsoptimalisering, ofte kalt CRO, handler om å gjøre det enklere for relevante besøkende å ta en nyttig handling - for eksempel å sende en henvendelse eller fullføre et kjøp.",
+        "answerHeight": 143.96875,
+        "summaryHeight": 57.59375,
+        "clipped": false,
+        "focus": true
+      },
+      "guard": null
+    },
+    {
+      "route": "/priser/",
+      "width": 1440,
+      "javaScriptEnabled": false,
+      "open": {
+        "answer": "Optimalisering koster 4 500 kr/mnd, Vekst 6 900 kr/mnd og Partner fra 14 900 kr/mnd. Alle priser er eks. mva.",
+        "answerHeight": 73.59375,
+        "summaryHeight": 60.796875,
+        "clipped": false,
+        "focus": true
+      },
+      "guard": null
+    },
+    {
+      "route": "/priser/",
+      "width": 390,
+      "javaScriptEnabled": false,
+      "open": {
+        "answer": "Optimalisering koster 4 500 kr/mnd, Vekst 6 900 kr/mnd og Partner fra 14 900 kr/mnd. Alle priser er eks. mva.",
+        "answerHeight": 92.78125,
+        "summaryHeight": 57.59375,
+        "clipped": false,
+        "focus": true
+      },
+      "guard": null
+    },
+    {
+      "route": "/om/",
+      "width": 1440,
+      "javaScriptEnabled": false,
+      "open": {
+        "answer": "Medon AS er eier og leverandør av Optimalisering Oslo. Optimalisering Oslo er et tjenestenavn.",
+        "answerHeight": 73.59375,
+        "summaryHeight": 60.796875,
+        "clipped": false,
+        "focus": true
+      },
+      "guard": null
+    },
+    {
+      "route": "/om/",
+      "width": 390,
+      "javaScriptEnabled": false,
+      "open": {
+        "answer": "Medon AS er eier og leverandør av Optimalisering Oslo. Optimalisering Oslo er et tjenestenavn.",
+        "answerHeight": 92.78125,
+        "summaryHeight": 57.59375,
+        "clipped": false,
+        "focus": true
+      },
+      "guard": null
+    }
+  ],
+  "errors": [],
+  "posts": []
+}
