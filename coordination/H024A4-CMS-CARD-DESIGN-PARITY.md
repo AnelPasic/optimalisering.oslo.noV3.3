@@ -23,6 +23,12 @@ Do not mistake D-088 H-025/H-025A Hero PASS for any acceptance of H-024A3 whole-
 8. Preserve the current `home.json` (including the OWNER's `passer` content and test presentation values), all section ordering/identities, pricing/calc/proof source authority, H-025 Heroes, typography/theme, launch gates. No H-024B work, arbitrary mixed singleton creation, H-022 design/approval, SEO copy change, site redesign or form activation.
 9. Optionally note current two-col `passer` visual composition if it is too dense for very long second-card copy; fix responsive legibility and normal height alignment, **do not rewrite/trim the text** without OWNER authorization.
 
+## Binding daisyUI component reuse refinement — MWS-029 / OWNER 2026-10-17
+
+OWNER explicitly requires daisyUI components whenever suitable, citing official [Hero](https://daisyui.com/components/hero/) and [Footer](https://daisyui.com/components/footer/) in addition to [Card](https://daisyui.com/components/card/). System decision MWS-029 strengthens MWS-020: real component structure and parts, not class-name-only imitations. **Within H-024A4 scope**, the actual Card correction must use `card > card-body > card-title`, optional `card-actions` and the approved daisyUI theme/geometry, with shared CMS/demo rendering and browser-computed parity. Tailwind may manage the 2/3/4-column grid; scoped CSS only for justified numbering and unique editorial treatments. The OWNER-approved lower demo appearance stays visually exact; there must be no duplicate Card implementation.
+
+**Hero/Footer are a separate task** (`coordination/H026-DAISYUI-HERO-FOOTER-REUSE.md`) queued **after H-024A4 owner review**. Do not broaden H-024A4 to change the recently approved H-025 Hero or live Footer just to satisfy this component rule.
+
 ## Evidence / acceptance
 - Start on current main, preserve OWNER CMS edits. Inspect actual `passer` saved state, `mekanisme`, old and current design-system markup; capture baseline screenshots of **the same `passer` section** in live page and the CMS "2 kort" benchmark at desktop/mobile. Do not compare `passer` controls against the different `mekanisme` live screenshot as if they matched.
 - Test source-driven explicit `card`, `plain`, `default` for both ordinary renderers. Include two-col lavender+dark/soft, 3-col light/dark/mint, four numbered `mekanisme` cards, with/without links; desktop/mobile.
