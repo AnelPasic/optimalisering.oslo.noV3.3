@@ -1,5 +1,15 @@
 # ChatGPT to Codex
 
+## ACTIVE HANDOFF — H-024A6 ASSESSMENT / BOX PADDING / REAL FAQ PARITY (D-094)
+
+Date: 2026-10-17. OWNER directly points out that other homepage components still "lever sitt eget liv": screenshot of homepage contact, source `.invite-home .assessment-grid {gap:96px;max-width:1280px}`; CMS **Boksvariant** example missing padding; production FAQ at bottom **not actually demonstrated in /design-system/**. Source confirms duplicate assessment sizing authorities, non-card `info-item:not(.card)` zero left/right padding, homepage FAQ inlined in HomepageBlock separate from Faq.astro, and generic design-system collapse rather than actual homepage FAQ.
+
+**Execute narrow correction contract**: `coordination/H024A6-SECTION-COMPONENT-PARITY.md`. Pull fresh main and preserve OWNER's latest CMS changes (including potential modified mekanisme Cards/section colors). Fix actual contact alignment/appropriate daisyUI Card body, keep form disabled and data/JS/IDs/CTA/transport exact; make CMS non-card variants genuinely usable with proper inner breathing room (without regressing accepted D-092 cards or intended legacy editorial states); use one actual homepage/other-route FAQ renderer and demonstrate real homepage FAQ and assessment using production components/source in design-system (avoid duplicate IDs and POSTs). Compare computed responsive geometry, content, accordion keyboard/open/closed, colors and 1440/900/390/320 screenshots on true Worker. Audit remaining homepage components vs design-system as inventory only, no broad makeover. Record exact native/test evidence; push main then **STOP for OWNER review**.
+
+Keep H-026 Hero/Footer **D-093 PASS and unchanged**, accepted Card/typography and PageList, protected CMS/commercial source, noindex/intake disabled. **H-024A3 whole editor still REVISE; H-024B BLOCKED, H-022 PARKED**; no launch, proof or new page expansion.
+
+---
+
 ## Latest OWNER verdict — D-093 H-026 HERO + FOOTER PASS / CLOSED
 
 Date: 2026-10-17. OWNER directly confirms about published H-026: **"ser riktig ut."** This is explicit scoped **OWNER acceptance of the Hero/Footer appearance** following genuine daisyUI reuse delivered at `5d4f7d6`. H-026 is COMPLETE; preserve the shared `hero/hero-content`, `footer/footer-title`, the four D-088 Hero CMS presets, original visual geometry and content, and accepted D-092 Card/readability. **Do not reopen Hero/Footer implementation** without a new actual issue.
