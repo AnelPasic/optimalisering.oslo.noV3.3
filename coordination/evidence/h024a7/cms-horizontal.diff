@@ -1,0 +1,12 @@
+diff --git a/app/src/content/pages/home.json b/app/src/content/pages/home.json
+index 3886c2c..c7c504c 100644
+--- a/app/src/content/pages/home.json
++++ b/app/src/content/pages/home.json
+@@ -477,6 +477,7 @@
+       "id": "sjekk",
+       "name": "Gratis sjekk",
+       "content": {
++        "layout": "horizontal",
+         "section": {
+           "_block": "protected",
+           "id": "sjekk",

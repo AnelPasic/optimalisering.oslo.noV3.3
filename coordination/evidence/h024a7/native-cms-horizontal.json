@@ -1,0 +1,456 @@
+{
+  "build": {
+    "result": {
+      "build_uuid": "d348fec7-2f62-437c-a96d-30b15dd5ce77",
+      "status": "stopped",
+      "build_outcome": "success",
+      "initializing_on": "2026-10-17T22:31:05.387Z",
+      "running_on": "2026-10-17T22:31:07.649Z",
+      "stopped_on": "2026-10-17T22:32:22.051Z",
+      "created_on": "2026-10-17T22:31:01.848Z",
+      "modified_on": "2026-10-17T22:32:22.051Z",
+      "trigger": {
+        "trigger_uuid": "35b862e6-87d3-4126-bd92-d4f2c87c8547",
+        "external_script_id": "cd204e1933404500a83e5afb42f2f32f",
+        "build_token_name": "optimalisering-oslo-v33 build token",
+        "trigger_name": "cd204e1933404500a83e5afb42f2f32f",
+        "build_command": "npm run build",
+        "deploy_command": "npx wrangler deploy",
+        "root_directory": "/app",
+        "branch_includes": [
+          "main"
+        ],
+        "branch_excludes": [],
+        "path_includes": [
+          "*"
+        ],
+        "path_excludes": [],
+        "build_caching_enabled": true,
+        "created_on": "2026-10-08T02:13:40.804Z",
+        "modified_on": "2026-10-08T02:13:40.804Z",
+        "deleted_on": null,
+        "repo_connection": {
+          "repo_connection_uuid": "c7c8d1c6-d3f5-4636-9ef8-06a2c940de3a",
+          "repo_id": "1409470367",
+          "repo_name": "optimalisering.oslo.noV3.3",
+          "provider_type": "github",
+          "provider_account_id": "7911624",
+          "provider_account_name": "AnelPasic",
+          "grant_id": null,
+          "created_on": "2026-10-08T02:13:40.804Z",
+          "modified_on": "2026-10-08T02:13:40.804Z",
+          "deleted_on": null
+        }
+      },
+      "build_trigger_metadata": {
+        "build_trigger_source": "push_event",
+        "branch": "main",
+        "commit_hash": "1148c303776b96a71dd5ee3c0683b452f92349f5",
+        "commit_message": "Innholdsoppdatering: app/src/content/pages/home.json (via Pages CMS)",
+        "author": "Anel Pasic",
+        "build_command": "npm run build",
+        "deploy_command": "npx wrangler deploy",
+        "root_directory": "/app",
+        "build_token_uuid": "e504b908-37e9-4d9a-82de-0e4cab167eea",
+        "build_token_name": "optimalisering-oslo-v33 build token",
+        "environment_variables": {},
+        "repo_name": "optimalisering.oslo.noV3.3",
+        "provider_account_name": "AnelPasic",
+        "provider_type": "github"
+      },
+      "pull_request": null,
+      "deploy_hook": null
+    },
+    "success": true,
+    "errors": [],
+    "messages": [],
+    "status": 200
+  },
+  "logs": {
+    "result": {
+      "cursor": "WzAsNDYwXQ",
+      "truncated": false,
+      "lines": [
+        [
+          1792276262893,
+          "Initializing build environment..."
+        ],
+        [
+          1792276267731,
+          "Success: Finished initializing build environment"
+        ],
+        [
+          1792276269130,
+          "Cloning repository..."
+        ],
+        [
+          1792276291813,
+          "Restoring from dependencies cache"
+        ],
+        [
+          1792276291815,
+          "Restoring from build output cache"
+        ],
+        [
+          1792276291821,
+          "Detected the following tools from environment: npm@10.9.2, nodejs@24.21.0"
+        ],
+        [
+          1792276292353,
+          "Success: Build output restored from build cache."
+        ],
+        [
+          1792276294995,
+          "Success: Dependencies restored from build cache."
+        ],
+        [
+          1792276295002,
+          "Installing project dependencies: npm clean-install --progress=false"
+        ],
+        [
+          1792276308016,
+          ""
+        ],
+        [
+          1792276308016,
+          "added 334 packages in 12s"
+        ],
+        [
+          1792276308017,
+          ""
+        ],
+        [
+          1792276308017,
+          "104 packages are looking for funding"
+        ],
+        [
+          1792276308018,
+          "  run `npm fund` for details"
+        ],
+        [
+          1792276319019,
+          "Executing user build command: npm run build"
+        ],
+        [
+          1792276320230,
+          ""
+        ],
+        [
+          1792276320232,
+          "> optimalisering-oslo-v3-3@0.1.0 build"
+        ],
+        [
+          1792276320233,
+          "> astro build"
+        ],
+        [
+          1792276320233,
+          ""
+        ],
+        [
+          1792276323409,
+          "22:32:03 [content] Syncing content"
+        ],
+        [
+          1792276323465,
+          "22:32:03 [content] Synced content"
+        ],
+        [
+          1792276323469,
+          "22:32:03 [types] Generated 1.40s"
+        ],
+        [
+          1792276323471,
+          "22:32:03 [build] output: \"static\""
+        ],
+        [
+          1792276323471,
+          "22:32:03 [build] mode: \"static\""
+        ],
+        [
+          1792276323471,
+          "22:32:03 [build] directory: /opt/buildhome/repo/app/dist/"
+        ],
+        [
+          1792276323471,
+          "22:32:03 [build] Collecting build info..."
+        ],
+        [
+          1792276323472,
+          "22:32:03 [build] ✓ Completed in 1.53s."
+        ],
+        [
+          1792276323473,
+          "22:32:03 [build] Building static entrypoints..."
+        ],
+        [
+          1792276324076,
+          "/*! 🌼 daisyUI 5.7.50 */"
+        ],
+        [
+          1792276324815,
+          "22:32:04 [vite] ✓ built in 1.29s"
+        ],
+        [
+          1792276324878,
+          "22:32:04 [vite] ✓ built in 57ms"
+        ],
+        [
+          1792276324885,
+          "22:32:04 [build] Rearranging server assets..."
+        ],
+        [
+          1792276324908,
+          ""
+        ],
+        [
+          1792276324909,
+          " generating static routes "
+        ],
+        [
+          1792276325014,
+          "22:32:04   ├─ /404.html (+24ms) "
+        ],
+        [
+          1792276325023,
+          "22:32:05   ├─ /begreper/index.html (+9ms) "
+        ],
+        [
+          1792276325069,
+          "22:32:05   ├─ /design-system/index.html (+46ms) "
+        ],
+        [
+          1792276325072,
+          "22:32:05   ├─ /robots.txt (+3ms) "
+        ],
+        [
+          1792276325074,
+          "22:32:05   ├─ /sitemap.xml (+2ms) "
+        ],
+        [
+          1792276325081,
+          "22:32:05   ├─ /ai-synlighet/index.html (+7ms) "
+        ],
+        [
+          1792276325106,
+          "22:32:05   ├─ /index.html (+25ms) "
+        ],
+        [
+          1792276325110,
+          "22:32:05   ├─ /innsikt/index.html (+4ms) "
+        ],
+        [
+          1792276325117,
+          "22:32:05   ├─ /innsikt/hva-bor-optimaliseres-forst/index.html (+7ms) "
+        ],
+        [
+          1792276325123,
+          "22:32:05   ├─ /innsikt/male-effekt-av-optimalisering/index.html (+6ms) "
+        ],
+        [
+          1792276325127,
+          "22:32:05   ├─ /kontakt/index.html (+4ms) "
+        ],
+        [
+          1792276325140,
+          "22:32:05   ├─ /konvertering/index.html (+12ms) "
+        ],
+        [
+          1792276325146,
+          "22:32:05   ├─ /nettbutikkoptimalisering/index.html (+6ms) "
+        ],
+        [
+          1792276325150,
+          "22:32:05   ├─ /om/index.html (+4ms) "
+        ],
+        [
+          1792276325154,
+          "22:32:05   ├─ /personvern/index.html (+4ms) "
+        ],
+        [
+          1792276325164,
+          "22:32:05   ├─ /priser/index.html (+6ms) "
+        ],
+        [
+          1792276325168,
+          "22:32:05   ├─ /seo/index.html (+7ms) "
+        ],
+        [
+          1792276325178,
+          "22:32:05   ├─ /synlighet/index.html (+8ms) "
+        ],
+        [
+          1792276325181,
+          "22:32:05   ├─ /vilkar/index.html (+3ms) "
+        ],
+        [
+          1792276325184,
+          "22:32:05   ├─ /vurdering/index.html (+3ms) "
+        ],
+        [
+          1792276325184,
+          "22:32:05 ✓ Completed in 296ms."
+        ],
+        [
+          1792276325188,
+          ""
+        ],
+        [
+          1792276325204,
+          "22:32:05 [build] ✓ Completed in 1.73s."
+        ],
+        [
+          1792276325206,
+          "22:32:05 [build] 18 page(s) built in 3.27s"
+        ],
+        [
+          1792276325206,
+          "22:32:05 [build] Complete!"
+        ],
+        [
+          1792276325282,
+          "Success: Build command completed"
+        ],
+        [
+          1792276325836,
+          "Executing user deploy command: npx wrangler deploy"
+        ],
+        [
+          1792276329572,
+          ""
+        ],
+        [
+          1792276329572,
+          " ⛅️ wrangler 4.148.0"
+        ],
+        [
+          1792276329572,
+          "────────────────────"
+        ],
+        [
+          1792276332019,
+          "🌀 Building list of assets..."
+        ],
+        [
+          1792276332024,
+          "✨ Read 78 files from the assets directory /opt/buildhome/repo/app/dist"
+        ],
+        [
+          1792276332124,
+          "🌀 Starting asset upload..."
+        ],
+        [
+          1792276333670,
+          "🌀 Found 1 new or modified static asset to upload. Proceeding with upload..."
+        ],
+        [
+          1792276333671,
+          "+ /index.html"
+        ],
+        [
+          1792276335144,
+          "Uploaded 1 of 1 asset"
+        ],
+        [
+          1792276335144,
+          "✨ Success! Uploaded 1 file (52 already uploaded) (1.47 sec)"
+        ],
+        [
+          1792276335144,
+          ""
+        ],
+        [
+          1792276335161,
+          "Total Upload: 0.31 KiB / gzip: 0.22 KiB"
+        ],
+        [
+          1792276337895,
+          "Uploaded optimalisering-oslo-v33 (6.59 sec)"
+        ],
+        [
+          1792276339418,
+          "Deployed optimalisering-oslo-v33 triggers (1.52 sec)"
+        ],
+        [
+          1792276339419,
+          "  https://optimalisering-oslo-v33.anel.workers.dev"
+        ],
+        [
+          1792276339419,
+          "Current Version ID: caabd8d4-3acc-445f-9e7e-b2a51f7a6873"
+        ],
+        [
+          1792276339424,
+          ""
+        ],
+        [
+          1792276339424,
+          "Cloudflare collects anonymous telemetry about your usage of Wrangler. Learn more at https://github.com/cloudflare/workers-sdk/tree/main/packages/wrangler/telemetry.md"
+        ],
+        [
+          1792276339534,
+          "Success: Deploy command completed"
+        ],
+        [
+          1792276339539,
+          "Uploading to build output cache"
+        ],
+        [
+          1792276340106,
+          "Success: Build output uploaded to build cache."
+        ],
+        [
+          1792276340371,
+          "✨ Success! Build completed."
+        ]
+      ],
+      "events": [
+        {
+          "type": "initializing",
+          "started_on": "2026-10-17T22:31:02.893Z",
+          "ended_on": "2026-10-17T22:31:08.775Z"
+        },
+        {
+          "type": "cloning",
+          "started_on": "2026-10-17T22:31:08.775Z",
+          "ended_on": "2026-10-17T22:31:31.506Z"
+        },
+        {
+          "type": "installing_tools_and_deps",
+          "started_on": "2026-10-17T22:31:31.506Z",
+          "ended_on": "2026-10-17T22:31:58.731Z"
+        },
+        {
+          "type": "building",
+          "started_on": "2026-10-17T22:31:58.731Z",
+          "ended_on": "2026-10-17T22:32:05.283Z"
+        },
+        {
+          "type": "deploying",
+          "started_on": "2026-10-17T22:32:05.283Z",
+          "ended_on": "2026-10-17T22:32:22.051Z"
+        }
+      ]
+    },
+    "success": true,
+    "errors": [],
+    "messages": [],
+    "status": 200
+  },
+  "deployment": {
+    "id": "a415951e-8e80-4a57-9740-32f9f428f837",
+    "source": "wrangler",
+    "strategy": "percentage",
+    "author_email": "anel@medon.no",
+    "annotations": {
+      "workers/triggered_by": "deployment"
+    },
+    "versions": [
+      {
+        "version_id": "caabd8d4-3acc-445f-9e7e-b2a51f7a6873",
+        "percentage": 100
+      }
+    ],
+    "created_on": "2026-10-17T22:32:16.662951Z"
+  }
+}

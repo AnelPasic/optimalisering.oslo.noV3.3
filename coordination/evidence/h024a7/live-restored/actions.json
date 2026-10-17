@@ -1,0 +1,246 @@
+{
+  "records": [
+    {
+      "route": "/",
+      "width": 1440,
+      "javaScriptEnabled": true,
+      "forms": 1,
+      "guards": [
+        {
+          "cancelled": true,
+          "status": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt.",
+          "expected": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt.",
+          "focused": true
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "width": 1100,
+      "javaScriptEnabled": true,
+      "forms": 1,
+      "guards": [
+        {
+          "cancelled": true,
+          "status": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt.",
+          "expected": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt.",
+          "focused": true
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "width": 900,
+      "javaScriptEnabled": true,
+      "forms": 1,
+      "guards": [
+        {
+          "cancelled": true,
+          "status": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt.",
+          "expected": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt.",
+          "focused": true
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "javaScriptEnabled": true,
+      "forms": 1,
+      "guards": [
+        {
+          "cancelled": true,
+          "status": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt.",
+          "expected": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt.",
+          "focused": true
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "width": 320,
+      "javaScriptEnabled": true,
+      "forms": 1,
+      "guards": [
+        {
+          "cancelled": true,
+          "status": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt.",
+          "expected": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt.",
+          "focused": true
+        }
+      ]
+    },
+    {
+      "route": "/design-system/",
+      "width": 1440,
+      "javaScriptEnabled": true,
+      "forms": 2,
+      "guards": [
+        {
+          "cancelled": true,
+          "status": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt.",
+          "expected": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt.",
+          "focused": true
+        },
+        {
+          "cancelled": true,
+          "status": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt.",
+          "expected": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt.",
+          "focused": true
+        }
+      ]
+    },
+    {
+      "route": "/design-system/",
+      "width": 1100,
+      "javaScriptEnabled": true,
+      "forms": 2,
+      "guards": [
+        {
+          "cancelled": true,
+          "status": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt.",
+          "expected": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt.",
+          "focused": true
+        },
+        {
+          "cancelled": true,
+          "status": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt.",
+          "expected": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt.",
+          "focused": true
+        }
+      ]
+    },
+    {
+      "route": "/design-system/",
+      "width": 900,
+      "javaScriptEnabled": true,
+      "forms": 2,
+      "guards": [
+        {
+          "cancelled": true,
+          "status": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt.",
+          "expected": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt.",
+          "focused": true
+        },
+        {
+          "cancelled": true,
+          "status": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt.",
+          "expected": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt.",
+          "focused": true
+        }
+      ]
+    },
+    {
+      "route": "/design-system/",
+      "width": 390,
+      "javaScriptEnabled": true,
+      "forms": 2,
+      "guards": [
+        {
+          "cancelled": true,
+          "status": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt.",
+          "expected": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt.",
+          "focused": true
+        },
+        {
+          "cancelled": true,
+          "status": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt.",
+          "expected": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt.",
+          "focused": true
+        }
+      ]
+    },
+    {
+      "route": "/design-system/",
+      "width": 320,
+      "javaScriptEnabled": true,
+      "forms": 2,
+      "guards": [
+        {
+          "cancelled": true,
+          "status": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt.",
+          "expected": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt.",
+          "focused": true
+        },
+        {
+          "cancelled": true,
+          "status": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt.",
+          "expected": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt.",
+          "focused": true
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "javaScriptEnabled": false,
+      "forms": 1,
+      "guards": []
+    },
+    {
+      "route": "/",
+      "width": 1100,
+      "javaScriptEnabled": false,
+      "forms": 1,
+      "guards": []
+    },
+    {
+      "route": "/",
+      "width": 900,
+      "javaScriptEnabled": false,
+      "forms": 1,
+      "guards": []
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "javaScriptEnabled": false,
+      "forms": 1,
+      "guards": []
+    },
+    {
+      "route": "/",
+      "width": 320,
+      "javaScriptEnabled": false,
+      "forms": 1,
+      "guards": []
+    },
+    {
+      "route": "/design-system/",
+      "width": 1440,
+      "javaScriptEnabled": false,
+      "forms": 2,
+      "guards": []
+    },
+    {
+      "route": "/design-system/",
+      "width": 1100,
+      "javaScriptEnabled": false,
+      "forms": 2,
+      "guards": []
+    },
+    {
+      "route": "/design-system/",
+      "width": 900,
+      "javaScriptEnabled": false,
+      "forms": 2,
+      "guards": []
+    },
+    {
+      "route": "/design-system/",
+      "width": 390,
+      "javaScriptEnabled": false,
+      "forms": 2,
+      "guards": []
+    },
+    {
+      "route": "/design-system/",
+      "width": 320,
+      "javaScriptEnabled": false,
+      "forms": 2,
+      "guards": []
+    }
+  ],
+  "errors": [],
+  "posts": []
+}

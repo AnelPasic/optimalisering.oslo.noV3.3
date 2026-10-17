@@ -1,0 +1,9 @@
+{
+  "sha": "1148c303776b96a71dd5ee3c0683b452f92349f5",
+  "authenticatedUi": true,
+  "onlyChangedFile": "app/src/content/pages/home.json",
+  "onlySemanticEdit": "assessment.content.layout = horizontal",
+  "originalSha256": "1369eb92bcc436ff6db1ed4da4af6e964db2f8cf4e75c7e4f727023a916de4b2",
+  "savedSha256": "16a180ab292b5d69fb6c91be05197496041a9a05b3a4529ad5a3537ce9dc13f8",
+  "allOtherSourceExact": true
+}

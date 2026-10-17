@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-18",
+  "method": "OWNER-authenticated native Pages CMS browser UI, actual selector keyboard choices and Save; no substitute API or fixture save",
+  "url": "https://app.pagescms.org/anelpasic/optimalisering.oslo.nov3.3/main/file/homepage",
+  "initial": {"choice": "To kolonner (dagens)", "layoutPropertyAbsent": true},
+  "save": {
+    "choice": "Vannrett (kompakt skjema)",
+    "commit": "1148c303776b96a71dd5ee3c0683b452f92349f5",
+    "onlySemanticEdit": "assessment.content.layout = horizontal",
+    "build": "d348fec7-2f62-437c-a96d-30b15dd5ce77",
+    "buildOutcome": "success",
+    "workerVersion": "caabd8d4-3acc-445f-9e7e-b2a51f7a6873",
+    "workerPercentage": 100,
+    "actualNativeResponsiveRecords": 10,
+    "actualNativeInteractionStates": 20,
+    "reloadedEditorConfirmedPersistedChoice": true
+  },
+  "nativeControlFinding": "CMS single-select has no Clear button; deleting search text does not change stored selection. First To kolonner choice now stores empty string, removed by native save sanitizer; typed renderer maps empty/missing to split. No product rendering changes after full144-test verification; focused2 schema tests and CMS20 audit rechecked after alias correction.",
+  "controlCorrectionCommits": ["d5669c277729914f1a8610e8e8c4ec90f8ec0d79", "60020bb75afc6fae8ee0ccfae0f98e8b3acff462"],
+  "restore": {
+    "choice": "To kolonner (dagens)",
+    "commit": "51ca558b41051023721b20700f7e16e09964b56a",
+    "onlySemanticEdit": "remove assessment.content.layout; original property absence restored",
+    "build": "cc2becc8-7277-408f-99a7-1e271a1799f2",
+    "buildOutcome": "success",
+    "workerVersion": "acec1be5-0981-4a7b-9779-094679688e53",
+    "workerPercentage": 100,
+    "gitBlob": "3886c2cda6da88ab599bf34c7c957e543535b8c9",
+    "originalGitBlobExact": true,
+    "originalWorkingBytesExact": true,
+    "allProtectedFilesExact": 180,
+    "actualNativeResponsiveRecords": 90,
+    "actualNativeInteractionStates": 20,
+    "reloadedEditor": {"choiceInputValue": "", "placeholder": "To kolonner (dagens)", "saveDisabled": true},
+    "defaultScreenshotsByteIdenticalToOriginalWorker": "5/5"
+  },
+  "realSubmissions": 0,
+  "posts": 0,
+  "nativeAssetBytesExact": "53/53",
+  "state": "Original default restored; separate OWNER visual/CMS review pending, no whole-editor PASS or launch authority"
+}

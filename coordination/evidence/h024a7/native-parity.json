@@ -1,0 +1,130 @@
+{
+  "exactRestoredRecords": 90,
+  "exactAuthenticatedHorizontalRecords": 10,
+  "restoredDefault": [
+    {
+      "width": 1440,
+      "byteEqual": true
+    },
+    {
+      "width": 1100,
+      "byteEqual": true
+    },
+    {
+      "width": 900,
+      "byteEqual": true
+    },
+    {
+      "width": 390,
+      "byteEqual": true
+    },
+    {
+      "width": 320,
+      "byteEqual": true
+    }
+  ],
+  "images": [
+    {
+      "file": "assessment-1100.png",
+      "byteEqual": true
+    },
+    {
+      "file": "assessment-1440.png",
+      "byteEqual": true
+    },
+    {
+      "file": "assessment-320.png",
+      "byteEqual": true
+    },
+    {
+      "file": "assessment-390.png",
+      "byteEqual": true
+    },
+    {
+      "file": "assessment-900.png",
+      "byteEqual": true
+    },
+    {
+      "file": "demo-horizontal-1100.png",
+      "byteEqual": true
+    },
+    {
+      "file": "demo-horizontal-1440.png",
+      "byteEqual": true
+    },
+    {
+      "file": "demo-horizontal-320.png",
+      "byteEqual": true
+    },
+    {
+      "file": "demo-horizontal-390.png",
+      "byteEqual": true
+    },
+    {
+      "file": "demo-horizontal-900.png",
+      "byteEqual": true
+    },
+    {
+      "file": "demo-split-1100.png",
+      "byteEqual": true
+    },
+    {
+      "file": "demo-split-1440.png",
+      "byteEqual": true
+    },
+    {
+      "file": "demo-split-320.png",
+      "byteEqual": true
+    },
+    {
+      "file": "demo-split-390.png",
+      "byteEqual": true
+    },
+    {
+      "file": "demo-split-900.png",
+      "byteEqual": true
+    },
+    {
+      "file": "faq-closed-1100.png",
+      "byteEqual": true
+    },
+    {
+      "file": "faq-closed-1440.png",
+      "byteEqual": true
+    },
+    {
+      "file": "faq-closed-320.png",
+      "byteEqual": true
+    },
+    {
+      "file": "faq-closed-390.png",
+      "byteEqual": true
+    },
+    {
+      "file": "faq-closed-900.png",
+      "byteEqual": true
+    },
+    {
+      "file": "faq-open-1100.png",
+      "byteEqual": true
+    },
+    {
+      "file": "faq-open-1440.png",
+      "byteEqual": true
+    },
+    {
+      "file": "faq-open-320.png",
+      "byteEqual": true
+    },
+    {
+      "file": "faq-open-390.png",
+      "byteEqual": true
+    },
+    {
+      "file": "faq-open-900.png",
+      "byteEqual": true
+    }
+  ],
+  "byteIdentical": 25,
+  "total": 25
+}

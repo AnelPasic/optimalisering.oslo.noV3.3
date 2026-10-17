@@ -1,0 +1,13 @@
+{
+  "sha": "51ca558b41051023721b20700f7e16e09964b56a",
+  "authenticatedUi": true,
+  "selected": "To kolonner (dagens)",
+  "storedDefault": "empty option sanitized; layout property absent",
+  "workingBytesExact": true,
+  "gitBytesExact": true,
+  "gitBlob": "3886c2cda6da88ab599bf34c7c957e543535b8c9",
+  "originalGitBlob": "3886c2cda6da88ab599bf34c7c957e543535b8c9",
+  "workingSha256": "1369eb92bcc436ff6db1ed4da4af6e964db2f8cf4e75c7e4f727023a916de4b2",
+  "gitSha256": "82af7910fb925645494d2153313006f05c30000d6bb104f28af353c63c3dccf3",
+  "note": "Compare Git LF to Git LF and Windows working CRLF to its saved original separately"
+}
