@@ -1,5 +1,9 @@
 # Codex to ChatGPT
 
+## Direct OWNER calculator step adjustment — 2026-10-17 / PUSH AND REVIEW-WORKER PUBLICATION AUTHORIZED
+
+Direct OWNER requests `#calc-conversion` and `#calc-new-conversion` step0.5, `#calc-visits` step250, then explicitly authorizes **"push og publiser"**. `HomeLeverage.astro` changes those three attributes and the two corresponding conversion range steps to0.5 so keyboard/range/numeric values stay synchronized. No content/CMS/math/layout change. Local Astro build passes; actual Chrome keyboard check passes number ArrowUp increments250/0.5/0.5, range ArrowRight increments0.5, two-way synchronization, HTML validity, independent12-month result and visible chart. Fresh main9a32aaf includes concurrent OWNER homepage CMS edits, preserved intact. Identify the scoped delivery revision via Git history; publication uses the existing connected native review Worker with noindex/intake unchanged. Native commit/build and actual Worker behavior must be verified before reporting publication complete. This continuation grants no H-024A4 acceptance; H-026 still follows the separate OWNER review.
+
 ## H-024A4 actual CMS Card / approved demo parity — CORRECTION DELIVERED / STOP FOR OWNER REVIEW
 
 2026-10-17 IMPLEMENTATION. Actual H-024A4/D-089/D-090 and direct OWNER sequencing authorize this scoped correction. Fresh incoming main `0326d8cf71d5dfd66ba9a95ad9dc31ebe5fbaab9` includes latest OWNER home/Synlighet edits. Shared implementation `192a4eb2aceba2845882a856ff8e18899d9fd79a` is pushed; actual CMS test `c64c538846c5b275a0a03e4dc31eccaeeb2ab041` and native CMS restore `b1414c8abca1a4e99d7011a661adff2c41d6bc81` follow. Find final receipt revision in Git history rather than embedding its own hash.
