@@ -1,0 +1,568 @@
+{
+  "slug": "home",
+  "kind": "home",
+  "status": "REVIEW_REQUIRED",
+  "authority": "DRAFT / NON-AUTHORITATIVE",
+  "seo": {
+    "title": "SEO, AI-synlighet og konverteringsoptimalisering | Optimalisering Oslo",
+    "description": "Bli funnet og gjør flere besøk til henvendelser og salg. Optimalisering for konkurranseutsatte bedrifter i Norge. Ta en gratis, manuell sjekk."
+  },
+  "homepage": {
+    "chrome": {
+      "brand": "optimalisering",
+      "brandLocation": "oslo",
+      "homeLabel": "Optimalisering Oslo - forsiden",
+      "skipLabel": "Hopp til innhold",
+      "navigationLabel": "Hovedmeny",
+      "mobileNavigationLabel": "Mobilmeny",
+      "openMenu": "Åpne meny",
+      "closeMenu": "Lukk meny",
+      "assessmentLink": {
+        "label": "Gratis sjekk",
+        "href": "/#sjekk"
+      },
+      "navigation": [
+        {
+          "label": "Synlighet",
+          "href": "/synlighet/"
+        },
+        {
+          "label": "Konvertering",
+          "href": "/konvertering/"
+        },
+        {
+          "label": "Priser",
+          "href": "/priser/"
+        },
+        {
+          "label": "Innsikt",
+          "href": "/innsikt/"
+        }
+      ],
+      "providerText": "Tjenesten drives av Medon AS.",
+      "previewLabel": "Forhåndsvisning - til vurdering",
+      "serviceNavigationLabel": "Tjenester og veiledning",
+      "informationNavigationLabel": "Kontakt og informasjon",
+      "storeLink": {
+        "label": "For nettbutikker",
+        "href": "/nettbutikkoptimalisering/"
+      },
+      "informationLinks": [
+        {
+          "label": "Gratis sjekk",
+          "href": "/#sjekk"
+        },
+        {
+          "label": "Om tjenesten",
+          "href": "/om/"
+        },
+        {
+          "label": "Kontakt",
+          "href": "/kontakt/"
+        },
+        {
+          "label": "Personvern",
+          "href": "/personvern/"
+        },
+        {
+          "label": "Vilkår",
+          "href": "/vilkar/"
+        }
+      ],
+      "copyrightProvider": "Optimalisering Oslo",
+      "footerNote": "Et godt sted å begynne."
+    }
+  },
+  "sections": [
+    {
+      "_block": "selector",
+      "uid": "31bd8ddb-5a47-4bc4-99b5-a5461e6103f6",
+      "id": "behov",
+      "name": "Behovsvelger",
+      "content": {
+        "heading": "Hva trenger du hjelp med?",
+        "items": [
+          {
+            "title": "Bli funnet",
+            "discipline": "Synlighet",
+            "description": "SEO, AI-synlighet og lokal synlighet når kundene leter etter det du tilbyr.",
+            "link": {
+              "label": "Se Synlighet",
+              "href": "/synlighet/"
+            }
+          },
+          {
+            "title": "Flere besøk til henvendelser og salg",
+            "discipline": "Konvertering",
+            "description": "Konverteringsoptimalisering for nettsider, landingssider og nettbutikker.",
+            "link": {
+              "label": "Se Konvertering",
+              "href": "/konvertering/"
+            }
+          },
+          {
+            "title": "Ja takk - Begge deler",
+            "discipline": "Synlighet X Konvertering",
+            "description": "Vi finner flaskehalsen og starter der det gir mest effekt.",
+            "link": {
+              "label": "Se alternativene",
+              "href": "/#priser"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "_block": "calculator",
+      "uid": "dc92cca5-b95c-487c-b2a2-08e296972a65",
+      "id": "regneeksempel",
+      "name": "Regneeksempel",
+      "content": {
+        "eyebrow": "Synlighet og konvertering forsterker hverandre",
+        "heading": "Hva betyr flere relevante besøk og en bedre kjøpsvei?",
+        "intro": "Endre trafikken, andelen som tar kontakt eller kjøper - eller begge. Se hvordan de to grepene virker sammen.",
+        "formula": "Relevante besøk x konverteringsrate = henvendelser / kjøp",
+        "labels": {
+          "visits": "Relevante besøk per måned",
+          "conversion": "Konverteringsrate i dag (%)",
+          "trafficIncrease": "Mer relevant trafikk per måned (%)",
+          "newConversion": "Ny konverteringsrate (%)",
+          "current": "I dag",
+          "scenario": "Scenario",
+          "difference": "X",
+          "outcome": "henvendelser / kjøp per måned",
+          "increase": "endring",
+          "undefinedIncrease": "Forholdstall kan ikke beregnes for dette utgangspunktet",
+          "invalid": "Bruk besøk fra 0 til 10 000 000, trafikkøkning fra 0 til 1 000 % og konverteringsrater fra 0 til 100 %."
+        },
+        "defaults": {
+          "visits": 2000,
+          "conversion": 0.5,
+          "trafficIncrease": 10,
+          "newConversion": 2
+        },
+        "caveat": "Hypotetisk regneeksempel - ikke et kundecase."
+      }
+    },
+    {
+      "_block": "packages",
+      "uid": "7b687594-17f4-4266-adf5-12b710f563af",
+      "id": "priser",
+      "name": "Pakker og priser",
+      "content": {
+        "eyebrow": "Fast månedlig optimalisering",
+        "heading": "Tre pakker. Samme mål: flere riktige kunder.",
+        "intro": "Velg pakken som passer hvor komplekst behovet ditt er - fra én tydelig flaskehals til flere kundereiser som må prioriteres løpende.",
+        "labels": {
+          "situations": "Typiske situasjoner",
+          "typicalBusiness": "Typisk virksomhet",
+          "focus": "Fokus",
+          "combinations": "Populære kombinasjoner",
+          "workAreas": "Arbeidsområder",
+          "uncertain": "Usikker? Ta en gratis sjekk"
+        },
+        "fitLabel": "Passer for",
+        "scopeLabel": "Dette jobber vi med",
+        "areasLabel": "Vi kan jobbe med",
+        "areas": [
+          "Konvertering",
+          "SEO, lokal SEO og AI-synlighet",
+          "Google Ads",
+          "Meta Ads"
+        ],
+        "foundationNote": "Måling og sporing ligger i bunn, så vi kan følge med på hva som faktisk skjer.",
+        "adBudgetNote": "Annonsebudsjett kommer i tillegg.",
+        "externalCostsNote": "Eksterne verktøy og plattformkostnader kommer i tillegg når de er nødvendige og ikke er avtalt inkludert.",
+        "separateWorkNote": "Mindre justeringer og arbeid på eksisterende landingssider kan inngå i avtalt omfang. Større nye landingssider, nettsider, omfattende teknisk arbeid og redesign prises separat.",
+        "capacityNote": "Avtalt kapasitet gjelder per måned og overføres ikke til senere måneder.",
+        "decisionStrip": {
+          "heading": "Én flaskehals, to grep eller flere kundereiser?",
+          "items": [
+            "Velg Optimalisering når ett forbedringsområde er tydelig viktigst.",
+            "Velg Vekst når to deler av samme kundereise bør forbedres samtidig og kan forsterke hverandre.",
+            "Velg Partner når virksomheten har flere forskjellige tjenester, markeder eller kjøpsveier som må prioriteres løpende."
+          ]
+        },
+        "multiplier": {
+          "eyebrow": "Hvorfor Vekst finnes",
+          "heading": "Flere besøk gir ikke automatisk flere kunder.",
+          "body": "Når relevante kunder finner deg og flere av dem går videre til henvendelse eller kjøp, kan tiltakene forsterke hverandre. Derfor kan det være bedre å forbedre to deler av samme kundereise samtidig enn å veksle mellom dem fra måned til måned.",
+          "conceptualRow": "Bli funnet -> bli valgt -> gå videre",
+          "support": "SEO, AI-synlighet og annonser kan gi flere relevante besøk. Konverteringsoptimalisering kan øke verdien av trafikken du allerede har. Gode og relevante landingssider kan også støtte organisk synlighet, annonsekvalitet og konvertering."
+        },
+        "items": [
+          {
+            "title": "Optimalisering",
+            "descriptor": "Ett viktig forbedringsområde om gangen.",
+            "fit": "Passer for små og mellomstore bedrifter med én tydelig kundereise, én hovedtjeneste eller én flaskehals som er viktigst akkurat nå.",
+            "compact": {
+              "fit": "For små og mellomstore bedrifter med én tydelig kundereise eller én flaskehals som er viktigst nå.",
+              "situations": [
+                "Blir ikke funnet når kundene søker.",
+                "Har trafikk, men får for få henvendelser eller kjøp.",
+                "Får for lite ut av Google Ads eller en annen viktig kanal."
+              ]
+            },
+            "scope": "Vi jobber med én hovedflaskehals til neste prioritet er viktigere. Mindre støttearbeid rundt samme mål kan inngå.",
+            "typicalBusiness": "Typisk en konkurranseutsatt lokal tjenestebedrift, mindre klinikk, regnskapskontor eller nisje-B2B-bedrift med én tydelig hovedtjeneste.",
+            "situations": [
+              "Kundene finner deg ikke når de søker etter det du tilbyr.",
+              "Du får relevant trafikk, men for få henvendelser eller kjøp.",
+              "Du får for lite ut av Google Ads eller en annen viktig kanal."
+            ],
+            "key": "optimalisering",
+            "iconItems": [
+              {
+                "icon": "search",
+                "label": "SEO / AI-synlighet",
+                "compactLabel": "SEO / AI-synlighet"
+              },
+              {
+                "icon": "conversion",
+                "label": "Konverteringsoptimalisering",
+                "compactLabel": "Konvertering"
+              },
+              {
+                "icon": "local",
+                "label": "Lokal SEO",
+                "compactLabel": "Lokal SEO"
+              },
+              {
+                "icon": "paid-search",
+                "label": "Google Ads - ett tydelig fokusområde",
+                "compactLabel": "Google Ads"
+              }
+            ],
+            "selectionRule": "Velg Optimalisering når én flaskehals er tydelig viktigst akkurat nå.",
+            "visual": "controlled",
+            "visualCaption": {
+              "label": "Én spak",
+              "support": "Tydelig fremgang"
+            },
+            "price": 4500,
+            "detailLink": {
+              "label": "Om pakken",
+              "href": "/priser/#optimalisering"
+            },
+            "priceSuffix": "kr/mnd",
+            "vatSuffix": "eks. mva.",
+            "recommended": false,
+            "cta": {
+              "label": "Bestill Optimalisering",
+              "href": "/priser/?pakke=optimalisering#bestill"
+            }
+          },
+          {
+            "title": "Vekst",
+            "descriptor": "To grep som forsterker hverandre.",
+            "fit": "Passer for bedrifter som trenger fremgang på to deler av samme kundereise samtidig.",
+            "compact": {
+              "fit": "For bedrifter som trenger fremgang på to deler av samme kundereise samtidig.",
+              "situations": [
+                "Trenger fart nå og vil bygge organisk synlighet over tid.",
+                "Har trafikk, men vil få mer ut av den med bedre konvertering.",
+                "Resultatet avhenger av at to områder forbedres samtidig."
+              ]
+            },
+            "situations": [
+              "Du trenger betalt synlighet for å få fart nå, men vil bygge organisk synlighet over tid.",
+              "Du får trafikk, men vil få mer ut av den med bedre konvertering.",
+              "Resultatet avhenger av at to områder forbedres samtidig."
+            ],
+            "key": "vekst",
+            "iconItems": [
+              {
+                "icon": "paid-search",
+                "label": "Google Ads + konverteringsoptimalisering",
+                "compactLabel": "Google Ads + konvertering",
+                "description": "Få relevant trafikk nå og få mer ut av hvert besøk du allerede betaler for."
+              },
+              {
+                "icon": "conversion",
+                "label": "SEO / AI-synlighet + konverteringsoptimalisering",
+                "compactLabel": "SEO / AI-synlighet + konvertering",
+                "description": "Bygg organisk synlighet og få flere relevante besøk videre til henvendelse eller kjøp."
+              },
+              {
+                "icon": "search",
+                "label": "Google Ads + SEO / AI-synlighet",
+                "compactLabel": "Google Ads + SEO / AI-synlighet",
+                "description": "Bruk betalt synlighet for å få fart nå, og bygg organisk synlighet for å redusere avhengigheten av annonsebudsjett over tid."
+              }
+            ],
+            "selectionRule": "Velg Vekst når to forbedringer kan forsterke hverandre.",
+            "visual": "accelerating",
+            "visualCaption": {
+              "label": "To grep",
+              "support": "Forsterker hverandre"
+            },
+            "price": 6900,
+            "detailLink": {
+              "label": "Om pakken",
+              "href": "/priser/#begge"
+            },
+            "priceSuffix": "kr/mnd",
+            "vatSuffix": "eks. mva.",
+            "recommended": true,
+            "badge": "Anbefalt",
+            "cta": {
+              "label": "Bestill Vekst",
+              "href": "/priser/?pakke=vekst#bestill"
+            }
+          },
+          {
+            "title": "Partner",
+            "descriptor": "Flere tjenester og kundereiser.",
+            "fit": "Passer for bedrifter med flere tjenester, produktområder, markeder, lokasjoner eller målgrupper som møter forskjellige konkurrenter og trenger løpende prioritering på tvers.",
+            "compact": {
+              "fit": "For bedrifter med flere tjenester, markeder eller kundereiser som må prioriteres løpende.",
+              "situations": [
+                "Flere tjenester konkurrerer i ulike markeder.",
+                "Ulike kundereiser trenger ulike grep.",
+                "Trenger løpende prioritering på tvers."
+              ]
+            },
+            "scope": "Vi prioriterer løpende kundereisene med størst kommersiell verdi eller størst forbedringspotensial. Det betyr ikke at alt gjøres samtidig eller at kapasiteten er ubegrenset.",
+            "typicalBusiness": "Typisk en virksomhet med fire-fem forskjellige tjenester - for eksempel kantine, catering, fruktlevering og andre B2B-tjenester - der hver kundereise har egne søk, konkurrenter, sider og prioriteringer.",
+            "situations": [
+              "Flere tjenester eller produktområder konkurrerer i ulike markeder.",
+              "Ulike kundereiser trenger ulike kombinasjoner av synlighet, annonser og konvertering.",
+              "Du trenger en fast partner som prioriterer hva som bør forbedres hvor - og i hvilken rekkefølge."
+            ],
+            "key": "partner",
+            "iconItems": [
+              {
+                "icon": "search",
+                "label": "SEO / AI-synlighet",
+                "compactLabel": "SEO / AI-synlighet"
+              },
+              {
+                "icon": "paid-search",
+                "label": "Google Ads",
+                "compactLabel": "Google Ads"
+              },
+              {
+                "icon": "social-paid",
+                "label": "Meta Ads",
+                "compactLabel": "Meta Ads"
+              },
+              {
+                "icon": "conversion",
+                "label": "Konverteringsoptimalisering",
+                "compactLabel": "Konvertering"
+              },
+              {
+                "icon": "analytics",
+                "label": "Analyse og sporing",
+                "compactLabel": "Analyse"
+              }
+            ],
+            "selectionRule": "Velg Partner når flere forskjellige kundereiser må forbedres og prioriteres løpende.",
+            "priceNote": "Omfang og fast månedspris avtales før oppstart.",
+            "visual": "tracks",
+            "visualCaption": {
+              "label": "Flere kundereiser",
+              "support": "Prioriteres løpende"
+            },
+            "price": 14900,
+            "pricePrefix": "fra",
+            "detailLink": {
+              "label": "Om pakken",
+              "href": "/priser/#partner"
+            },
+            "priceSuffix": "kr/mnd",
+            "vatSuffix": "eks. mva.",
+            "recommended": false,
+            "cta": {
+              "label": "Bestill Partner",
+              "href": "/priser/?pakke=partner#bestill"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "_block": "proof",
+      "uid": "ac0c6119-b0b8-4739-abd0-7ad7833e5556",
+      "id": "resultater",
+      "name": "Kunderesultater",
+      "content": {
+        "featuredVisual": {
+          "caseId": "eurotents",
+          "src": "/images/proof/eurotents-ask-review.webp",
+          "alt": "Ask-helårstelt fra Eurotents ved en innsjø.",
+          "positionX": 50,
+          "positionY": 50
+        },
+        "publicationApproved": true,
+        "caseIds": [
+          "eurotents",
+          "nysta",
+          "helt-opplagt"
+        ],
+        "eyebrow": "Dokumenterte resultater",
+        "heading": "Resultater fra kundearbeid",
+        "beforeLabel": "Før",
+        "afterLabel": "Etter",
+        "changeLabel": "Arbeid"
+      }
+    },
+    {
+      "_block": "content",
+      "uid": "42fceeca-61eb-49cd-b250-95060a060aa9",
+      "name": "Slik virker optimalisering",
+      "id": "mekanisme",
+      "eyebrow": "Start med det som begrenser resultatet",
+      "heading": "Slik finner vi hva som bør gjøres først",
+      "layout": "default",
+      "surface": "default",
+      "body": [
+        "Behovet avgjør tiltakene. Vi starter ikke med SEO eller en annen kanal bare fordi du kom inn på en bestemt side."
+      ],
+      "items": [
+        {
+          "title": "Finn flaskehalsen",
+          "text": "Se hvor kundereisen stopper: før besøket, på siden eller i veien til kontakt og kjøp.",
+          "boxVariant": "card",
+          "surface": "soft"
+        },
+        {
+          "title": "Prioriter tiltak",
+          "text": "Velg en fornuftig start ut fra behov, kommersiell verdi og det vi faktisk vet.",
+          "boxVariant": "card",
+          "surface": "soft"
+        },
+        {
+          "title": "Gjennomfør",
+          "text": "Gjør arbeidet som er avtalt. Omfang og ansvar skal være tydelig.",
+          "boxVariant": "card",
+          "surface": "soft"
+        },
+        {
+          "title": "Mål effekt",
+          "text": "Følg med på relevante henvendelser og kjøp. Se resultatene sammen med verdi og kostnader.",
+          "boxVariant": "card",
+          "surface": "soft"
+        }
+      ]
+    },
+    {
+      "_block": "content",
+      "uid": "e46130c0-de3c-40ef-815d-c16039346d6f",
+      "name": "Hvem passer det for",
+      "id": "passer",
+      "eyebrow": "Er dette aktuelt for bedriften?",
+      "heading": "Best når kundene faktisk har et valg.",
+      "headingAlign": "center",
+      "layout": "default",
+      "surface": "lavender",
+      "items": [
+        {
+          "title": "Passer godt hvis",
+          "text": "Bedriften konkurrerer om kundene, har kapasitet til flere henvendelser eller salg, og en ny kunde eller ordre har nok verdi til at forbedringer kan lønne seg.",
+          "boxVariant": "card",
+          "surface": "dark"
+        },
+        {
+          "title": "Passer dårlig hvis",
+          "text": "Du er allerede det eneste reelle alternativet og kundene finner deg uten problemer. Tenk en tannklinikk på et lite sted som er eneste klinikk innenfor 100 km, eller en nettbutikk som er eneste norske forhandler av reservedeler til gamle flipperspill og allerede eier de relevante søkene.",
+          "boxVariant": "card",
+          "surface": "soft"
+        }
+      ]
+    },
+    {
+      "_block": "assessment",
+      "uid": "d6ff367f-a926-4ee2-bdcb-7731ce43c183",
+      "id": "sjekk",
+      "name": "Gratis sjekk",
+      "content": {
+        "section": {
+          "_block": "protected",
+          "id": "sjekk",
+          "eyebrow": "Gratis, manuell sjekk",
+          "heading": "Send nettsiden. Vi sier hvor vi ville startet - og hvorfor.",
+          "body": [
+            "Vi ser på den offentlige nettsiden eller nettbutikken og sender deg de tre viktigste tingene vi ville undersøkt eller forbedret først.",
+            "Dette er en kort, manuell vurdering - ikke en full revisjon, prognose eller gratis gjennomføring. Videre arbeid avtales separat."
+          ]
+        },
+        "form": {
+          "promise": "Få våre 3 viktigste funn innen 2 virkedager.",
+          "heading": "Send nettsiden",
+          "websiteLabel": "Nettside eller nettbutikk",
+          "websitePlaceholder": "dinbedrift.no",
+          "emailLabel": "E-post",
+          "emailPlaceholder": "deg@dinbedrift.no",
+          "messageLabel": "Kort kommentar",
+          "optional": "Valgfritt",
+          "messagePlaceholder": "Noe vi bør vite?",
+          "sensitiveNotice": "Ikke send innlogging, sensitive opplysninger eller personopplysninger om andre.",
+          "previewNotice": "Dette er en forhåndsvisning. Innsending er ikke åpnet ennå.",
+          "submitLabel": "Ta en gratis sjekk",
+          "privacyText": "Vi bruker opplysningene for å følge opp forespørselen.",
+          "privacyLink": {
+            "label": "Les om personvern",
+            "href": "/personvern/"
+          },
+          "disabledStatus": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt."
+        }
+      }
+    },
+    {
+      "_block": "faq",
+      "uid": "75bcd975-20e4-433d-809e-b43d2b104f47",
+      "id": "sporsmal",
+      "name": "Ofte stilte spørsmål",
+      "content": {
+        "eyebrow": "Greit å vite",
+        "heading": "Før du tar neste steg",
+        "items": [
+          {
+            "question": "Hva skjer etter den gratis sjekken?",
+            "answer": "Vi gjør en kort, manuell vurdering og begrunner hvor vi ville startet. Hvis det er noe vi kan hjelpe med, avtaler vi omfang og pris før betalt arbeid. Sjekken er ikke en full revisjon eller gratis gjennomføring."
+          },
+          {
+            "question": "Hva koster videre arbeid?",
+            "answer": "Optimalisering koster 4 500 kr/mnd, Vekst 6 900 kr/mnd og Partner fra 14 900 kr/mnd. Alle priser er eks. mva. Forskjellen er om vi jobber med ett prioritert område, to sammenhengende områder eller bredere på tvers."
+          },
+          {
+            "question": "Er annonsebudsjett og eksterne kostnader inkludert?",
+            "answer": "Annonsebudsjett kommer i tillegg. Aktuelle eksterne plattformkostnader kommer i tillegg hvis ikke annet er uttrykkelig avtalt."
+          },
+          {
+            "question": "Hva hvis både synlighet og konvertering begrenser resultatet?",
+            "answer": "Da ser vi på sammenhengen. Vi finner flaskehalsen og prioriterer tiltakene i riktig rekkefølge, fremfor å starte med en fast kanal."
+          },
+          {
+            "question": "Jobber dere bare med bedrifter i Oslo?",
+            "answer": "Nei. Vi jobber med bedrifter i hele Norge og kan også hjelpe i andre nordiske markeder. Navnet beskriver tjenesten og satsingen - ikke et krav om at kunden holder til i Oslo."
+          }
+        ]
+      }
+    }
+  ],
+  "hero": {
+    "layout": "split-right",
+    "eyebrow": "For bedrifter som konkurrerer om kundene",
+    "title": "Bli funnet. Gjør større andel av besøk til henvendelser og salg.",
+    "support": "SEO, AI-synlighet og konverteringsoptimalisering for bedrifter i Oslo og resten av Norge. Vi starter der kundereisen stopper.",
+    "primaryCta": {
+      "label": "Ta en gratis sjekk",
+      "href": "/#sjekk"
+    },
+    "secondaryCta": {
+      "label": "Se priser",
+      "href": "/#priser"
+    },
+    "visual": {
+      "kind": "image",
+      "image": {
+        "src": "/images/home/hero-customer.webp",
+        "positionX": 50,
+        "positionY": 45
+      }
+    },
+    "titleEmphasis": "first-sentence"
+  }
+}

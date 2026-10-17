@@ -1,0 +1,342 @@
+[
+  {
+    "route": "/",
+    "width": 1440,
+    "type": [
+      {
+        "text": "Gratis, manuell sjekk",
+        "font": "14px",
+        "line": "21px",
+        "color": "oklch(0.278712 0.0437809 312.743)",
+        "weight": "600"
+      },
+      {
+        "text": "Få våre 3 viktigste funn innen 2 virkedager.",
+        "font": "18px",
+        "line": "28.8px",
+        "color": "oklch(0.491581 0.0269665 307.853)",
+        "weight": "600"
+      },
+      {
+        "text": "Vi ser på den offentlige nettsiden eller nettbutikken og sender deg de tre viktigste tingene vi ville undersøkt eller forbedret først.",
+        "font": "18px",
+        "line": "28.8px",
+        "color": "oklch(0.491581 0.0269665 307.853)",
+        "weight": "400"
+      },
+      {
+        "text": "Dette er en kort, manuell vurdering - ikke en full revisjon, prognose eller gratis gjennomføring. Videre arbeid avtales separat.",
+        "font": "18px",
+        "line": "28.8px",
+        "color": "oklch(0.491581 0.0269665 307.853)",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "route": "/",
+    "width": 1100,
+    "type": [
+      {
+        "text": "Gratis, manuell sjekk",
+        "font": "14px",
+        "line": "21px",
+        "color": "oklch(0.278712 0.0437809 312.743)",
+        "weight": "600"
+      },
+      {
+        "text": "Få våre 3 viktigste funn innen 2 virkedager.",
+        "font": "16px",
+        "line": "25.6px",
+        "color": "oklch(0.491581 0.0269665 307.853)",
+        "weight": "600"
+      },
+      {
+        "text": "Vi ser på den offentlige nettsiden eller nettbutikken og sender deg de tre viktigste tingene vi ville undersøkt eller forbedret først.",
+        "font": "16px",
+        "line": "25.6px",
+        "color": "oklch(0.491581 0.0269665 307.853)",
+        "weight": "400"
+      },
+      {
+        "text": "Dette er en kort, manuell vurdering - ikke en full revisjon, prognose eller gratis gjennomføring. Videre arbeid avtales separat.",
+        "font": "16px",
+        "line": "25.6px",
+        "color": "oklch(0.491581 0.0269665 307.853)",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "route": "/",
+    "width": 900,
+    "type": [
+      {
+        "text": "Gratis, manuell sjekk",
+        "font": "14px",
+        "line": "21px",
+        "color": "oklch(0.278712 0.0437809 312.743)",
+        "weight": "600"
+      },
+      {
+        "text": "Få våre 3 viktigste funn innen 2 virkedager.",
+        "font": "16px",
+        "line": "25.6px",
+        "color": "oklch(0.491581 0.0269665 307.853)",
+        "weight": "600"
+      },
+      {
+        "text": "Vi ser på den offentlige nettsiden eller nettbutikken og sender deg de tre viktigste tingene vi ville undersøkt eller forbedret først.",
+        "font": "16px",
+        "line": "25.6px",
+        "color": "oklch(0.491581 0.0269665 307.853)",
+        "weight": "400"
+      },
+      {
+        "text": "Dette er en kort, manuell vurdering - ikke en full revisjon, prognose eller gratis gjennomføring. Videre arbeid avtales separat.",
+        "font": "16px",
+        "line": "25.6px",
+        "color": "oklch(0.491581 0.0269665 307.853)",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "route": "/",
+    "width": 390,
+    "type": [
+      {
+        "text": "Gratis, manuell sjekk",
+        "font": "14px",
+        "line": "21px",
+        "color": "oklch(0.278712 0.0437809 312.743)",
+        "weight": "600"
+      },
+      {
+        "text": "Få våre 3 viktigste funn innen 2 virkedager.",
+        "font": "16px",
+        "line": "25.6px",
+        "color": "oklch(0.491581 0.0269665 307.853)",
+        "weight": "600"
+      },
+      {
+        "text": "Vi ser på den offentlige nettsiden eller nettbutikken og sender deg de tre viktigste tingene vi ville undersøkt eller forbedret først.",
+        "font": "16px",
+        "line": "25.6px",
+        "color": "oklch(0.491581 0.0269665 307.853)",
+        "weight": "400"
+      },
+      {
+        "text": "Dette er en kort, manuell vurdering - ikke en full revisjon, prognose eller gratis gjennomføring. Videre arbeid avtales separat.",
+        "font": "16px",
+        "line": "25.6px",
+        "color": "oklch(0.491581 0.0269665 307.853)",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "route": "/",
+    "width": 320,
+    "type": [
+      {
+        "text": "Gratis, manuell sjekk",
+        "font": "14px",
+        "line": "21px",
+        "color": "oklch(0.278712 0.0437809 312.743)",
+        "weight": "600"
+      },
+      {
+        "text": "Få våre 3 viktigste funn innen 2 virkedager.",
+        "font": "16px",
+        "line": "25.6px",
+        "color": "oklch(0.491581 0.0269665 307.853)",
+        "weight": "600"
+      },
+      {
+        "text": "Vi ser på den offentlige nettsiden eller nettbutikken og sender deg de tre viktigste tingene vi ville undersøkt eller forbedret først.",
+        "font": "16px",
+        "line": "25.6px",
+        "color": "oklch(0.491581 0.0269665 307.853)",
+        "weight": "400"
+      },
+      {
+        "text": "Dette er en kort, manuell vurdering - ikke en full revisjon, prognose eller gratis gjennomføring. Videre arbeid avtales separat.",
+        "font": "16px",
+        "line": "25.6px",
+        "color": "oklch(0.491581 0.0269665 307.853)",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "route": "/design-system/",
+    "width": 1440,
+    "type": [
+      {
+        "text": "Gratis, manuell sjekk",
+        "font": "14px",
+        "line": "21px",
+        "color": "oklch(0.278712 0.0437809 312.743)",
+        "weight": "600"
+      },
+      {
+        "text": "Få våre 3 viktigste funn innen 2 virkedager.",
+        "font": "18px",
+        "line": "28.8px",
+        "color": "oklch(0.491581 0.0269665 307.853)",
+        "weight": "600"
+      },
+      {
+        "text": "Vi ser på den offentlige nettsiden eller nettbutikken og sender deg de tre viktigste tingene vi ville undersøkt eller forbedret først.",
+        "font": "18px",
+        "line": "28.8px",
+        "color": "oklch(0.491581 0.0269665 307.853)",
+        "weight": "400"
+      },
+      {
+        "text": "Dette er en kort, manuell vurdering - ikke en full revisjon, prognose eller gratis gjennomføring. Videre arbeid avtales separat.",
+        "font": "18px",
+        "line": "28.8px",
+        "color": "oklch(0.491581 0.0269665 307.853)",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "route": "/design-system/",
+    "width": 1100,
+    "type": [
+      {
+        "text": "Gratis, manuell sjekk",
+        "font": "14px",
+        "line": "21px",
+        "color": "oklch(0.278712 0.0437809 312.743)",
+        "weight": "600"
+      },
+      {
+        "text": "Få våre 3 viktigste funn innen 2 virkedager.",
+        "font": "16px",
+        "line": "25.6px",
+        "color": "oklch(0.491581 0.0269665 307.853)",
+        "weight": "600"
+      },
+      {
+        "text": "Vi ser på den offentlige nettsiden eller nettbutikken og sender deg de tre viktigste tingene vi ville undersøkt eller forbedret først.",
+        "font": "16px",
+        "line": "25.6px",
+        "color": "oklch(0.491581 0.0269665 307.853)",
+        "weight": "400"
+      },
+      {
+        "text": "Dette er en kort, manuell vurdering - ikke en full revisjon, prognose eller gratis gjennomføring. Videre arbeid avtales separat.",
+        "font": "16px",
+        "line": "25.6px",
+        "color": "oklch(0.491581 0.0269665 307.853)",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "route": "/design-system/",
+    "width": 900,
+    "type": [
+      {
+        "text": "Gratis, manuell sjekk",
+        "font": "14px",
+        "line": "21px",
+        "color": "oklch(0.278712 0.0437809 312.743)",
+        "weight": "600"
+      },
+      {
+        "text": "Få våre 3 viktigste funn innen 2 virkedager.",
+        "font": "16px",
+        "line": "25.6px",
+        "color": "oklch(0.491581 0.0269665 307.853)",
+        "weight": "600"
+      },
+      {
+        "text": "Vi ser på den offentlige nettsiden eller nettbutikken og sender deg de tre viktigste tingene vi ville undersøkt eller forbedret først.",
+        "font": "16px",
+        "line": "25.6px",
+        "color": "oklch(0.491581 0.0269665 307.853)",
+        "weight": "400"
+      },
+      {
+        "text": "Dette er en kort, manuell vurdering - ikke en full revisjon, prognose eller gratis gjennomføring. Videre arbeid avtales separat.",
+        "font": "16px",
+        "line": "25.6px",
+        "color": "oklch(0.491581 0.0269665 307.853)",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "route": "/design-system/",
+    "width": 390,
+    "type": [
+      {
+        "text": "Gratis, manuell sjekk",
+        "font": "14px",
+        "line": "21px",
+        "color": "oklch(0.278712 0.0437809 312.743)",
+        "weight": "600"
+      },
+      {
+        "text": "Få våre 3 viktigste funn innen 2 virkedager.",
+        "font": "16px",
+        "line": "25.6px",
+        "color": "oklch(0.491581 0.0269665 307.853)",
+        "weight": "600"
+      },
+      {
+        "text": "Vi ser på den offentlige nettsiden eller nettbutikken og sender deg de tre viktigste tingene vi ville undersøkt eller forbedret først.",
+        "font": "16px",
+        "line": "25.6px",
+        "color": "oklch(0.491581 0.0269665 307.853)",
+        "weight": "400"
+      },
+      {
+        "text": "Dette er en kort, manuell vurdering - ikke en full revisjon, prognose eller gratis gjennomføring. Videre arbeid avtales separat.",
+        "font": "16px",
+        "line": "25.6px",
+        "color": "oklch(0.491581 0.0269665 307.853)",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "route": "/design-system/",
+    "width": 320,
+    "type": [
+      {
+        "text": "Gratis, manuell sjekk",
+        "font": "14px",
+        "line": "21px",
+        "color": "oklch(0.278712 0.0437809 312.743)",
+        "weight": "600"
+      },
+      {
+        "text": "Få våre 3 viktigste funn innen 2 virkedager.",
+        "font": "16px",
+        "line": "25.6px",
+        "color": "oklch(0.491581 0.0269665 307.853)",
+        "weight": "600"
+      },
+      {
+        "text": "Vi ser på den offentlige nettsiden eller nettbutikken og sender deg de tre viktigste tingene vi ville undersøkt eller forbedret først.",
+        "font": "16px",
+        "line": "25.6px",
+        "color": "oklch(0.491581 0.0269665 307.853)",
+        "weight": "400"
+      },
+      {
+        "text": "Dette er en kort, manuell vurdering - ikke en full revisjon, prognose eller gratis gjennomføring. Videre arbeid avtales separat.",
+        "font": "16px",
+        "line": "25.6px",
+        "color": "oklch(0.491581 0.0269665 307.853)",
+        "weight": "400"
+      }
+    ]
+  }
+]

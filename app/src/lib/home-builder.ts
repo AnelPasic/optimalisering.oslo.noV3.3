@@ -4,6 +4,7 @@ import { homeSectionDataSchema } from './home-section-data.ts';
 import { headingAlignSchema } from './heading-alignment.ts';
 import {contentLayoutSchema,boxVariantSchema} from './content-presentation.ts';
 import {heroLayoutSchema} from './hero-presentation.ts';
+import {assessmentLayoutSchema} from './assessment-layout.ts';
 
 const link=z.object({label:z.string().trim().min(1),href:z.string().startsWith('/')});
 export const heroPhotoSchema=z.object({src:z.string().regex(/^\/images\/home\/[a-z0-9][a-z0-9-]*\.webp$/),positionX:z.number().min(0).max(100),positionY:z.number().min(0).max(100)});
@@ -22,7 +23,7 @@ export const homepageBlockSchema=z.discriminatedUnion('_block',[
  singleton('calculator','regneeksempel',homeSectionDataSchema.shape.calculator),
  singleton('packages','priser',homeSectionDataSchema.shape.packages),
  singleton('proof','resultater',homeSectionDataSchema.shape.proof),
- singleton('assessment','sjekk',z.object({section:homeSectionDataSchema.shape.assessmentSection,form:homeSectionDataSchema.shape.form}).strict()),
+ singleton('assessment','sjekk',z.object({layout:assessmentLayoutSchema,section:homeSectionDataSchema.shape.assessmentSection,form:homeSectionDataSchema.shape.form}).strict()),
  singleton('faq','sporsmal',z.object({eyebrow:z.string(),heading:z.string(),items:z.array(z.object({question:z.string(),answer:z.string()}))}).strict()),
  z.object({...identity,_block:z.literal('content'),eyebrow:z.string().optional(),heading:z.string().trim().min(1),body:z.array(z.string()).default([]),surface:surfaceSchema,headingAlign:headingAlignSchema,layout:contentLayoutSchema,
  items:z.array(z.object({title:z.string(),text:z.string(),href:z.string().startsWith('/').optional(),label:z.string().optional(),surface:surfaceSchema,boxVariant:boxVariantSchema})).optional(),links:z.array(link).optional()}).strict(),

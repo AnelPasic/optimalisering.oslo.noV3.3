@@ -1,0 +1,35 @@
+
+> optimalisering-oslo-v3-3@0.1.0 verify
+> npm run check && npm test && npm run build && npm run qa:static && npm run qa:cms && npm run qa:surfaces && npm run qa:typography
+
+
+> optimalisering-oslo-v3-3@0.1.0 check
+> astro check
+
+00:24:37 [content] Syncing content
+00:24:37 [content] Synced content
+00:24:37 [types] Generated 397ms
+00:24:37 [check] Getting diagnostics for Astro files in E:\Codex\optimalisering.oslo.noV3.3\app...
+[96mscripts/qa-intake-h017a.mjs[0m:[93m65[0m:[93m68[0m - [93mwarning[0m[90m ts(2568): [0mProperty 'submit' may not exist on type 'HTMLElement | SVGElement'. Did you mean 'onsubmit'?
+  Property 'submit' does not exist on type 'HTMLElement'.
+
+[7m65[0m   await page.locator('[data-package-order]').evaluate(form => form.submit());
+[7m  [0m [93m                                                                   ~~~~~~[0m
+
+[96mtests/assessment-layout.test.ts[0m:[93m12[0m:[93m229[0m - [91merror[0m[90m ts(18046): [0m'parsed.content' is of type 'unknown'.
+
+[7m12[0m   assert.equal(parsed._block,'assessment');if(parsed._block==='assessment'){assert.equal(parsed.content.layout,value==='horizontal'?'horizontal':'split');assert.deepEqual(parsed.content.form,block.content.form);assert.deepEqual(parsed.content.section,block.content.section);}
+[7m  [0m [91m                                                                                                                                                                                                                                    ~~~~~~~~~~~~~~[0m
+[96mtests/assessment-layout.test.ts[0m:[93m12[0m:[93m172[0m - [91merror[0m[90m ts(18046): [0m'parsed.content' is of type 'unknown'.
+
+[7m12[0m   assert.equal(parsed._block,'assessment');if(parsed._block==='assessment'){assert.equal(parsed.content.layout,value==='horizontal'?'horizontal':'split');assert.deepEqual(parsed.content.form,block.content.form);assert.deepEqual(parsed.content.section,block.content.section);}
+[7m  [0m [91m                                                                                                                                                                           ~~~~~~~~~~~~~~[0m
+[96mtests/assessment-layout.test.ts[0m:[93m12[0m:[93m90[0m - [91merror[0m[90m ts(18046): [0m'parsed.content' is of type 'unknown'.
+
+[7m12[0m   assert.equal(parsed._block,'assessment');if(parsed._block==='assessment'){assert.equal(parsed.content.layout,value==='horizontal'?'horizontal':'split');assert.deepEqual(parsed.content.form,block.content.form);assert.deepEqual(parsed.content.section,block.content.section);}
+[7m  [0m [91m                                                                                         ~~~~~~~~~~~~~~[0m
+
+Result (246 files):
+- 3 errors
+- 0 warnings
+- 1 hint

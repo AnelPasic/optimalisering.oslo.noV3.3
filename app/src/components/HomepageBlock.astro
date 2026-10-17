@@ -20,5 +20,5 @@ render(block);
 {block._block==='packages'&&<Packages content={block.content} />}
 {block._block==='proof'&&<Proof content={block.content} records={records} />}
 {block._block==='content'&&<ContentSection section={block} />}
-{block._block==='assessment'&&<Assessment section={block.content.section} content={block.content.form} />}
+{block._block==='assessment'&&<Assessment section={block.content.section} content={block.content.form} layout={block.content.layout} />}
 {block._block==='faq'&&<Faq id={block.id} {...block.content} />}
