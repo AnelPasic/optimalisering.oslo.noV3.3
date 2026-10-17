@@ -6,7 +6,7 @@ import {once} from 'node:events';
 import {createAppServer} from '../server/http.mjs';
 const phase=process.env.QA_PHASE||'after',out=process.env.QA_OUTPUT_DIR||`../coordination/evidence/h025/${phase}`;mkdirSync(out,{recursive:true});
 const routes=readdirSync('src/content/pages').filter(f=>f.endsWith('.json')).map(f=>{const p=JSON.parse(readFileSync(`src/content/pages/${f}`));return p.kind==='home'?'/':`/${p.slug}/`;}).concat('/begreper/','/404.html');
-const baseline=phase==='before'?null:JSON.parse(readFileSync('../coordination/evidence/h025/before/checks.json'));
+const baseline=phase==='before'?null:JSON.parse(readFileSync(process.env.QA_BASELINE_PATH||'../coordination/evidence/h025/before/checks.json'));
 const server=process.env.QA_BASE_URL?null:createAppServer({config:{enabled:false},staticRoot:resolve('dist')});if(server){server.listen(0,'127.0.0.1');await once(server,'listening');}
 const base=process.env.QA_BASE_URL||`http://127.0.0.1:${server.address().port}`,browser=await chromium.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true});
 const records=[],errors=[],posts=[],differences=[];

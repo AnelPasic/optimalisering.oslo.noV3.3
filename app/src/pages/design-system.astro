@@ -8,6 +8,7 @@ import CommercialHero from '../components/CommercialHero.astro';
 import {resolvePageHero} from '../lib/page-hero';
 import {resolveHomepageContent} from '../lib/home-builder';
 import HomeSection from '../components/HomeSection.astro';
+import ContentCard from '../components/ContentCard.astro';
 import {contentLayoutValues,boxVariantValues} from '../lib/content-presentation';
 import {heroLayoutValues,heroPresetLabels} from '../lib/hero-presentation';
 const pages=(await getCollection('pages')).map(p=>p.data);
@@ -71,7 +72,7 @@ const ds={
     <div class={ds.group}><h3>Meldinger</h3><div class="space-y-5"><p class="alert alert-info">Informasjon: Dette er en intern gjennomgang.</p><p class="alert alert-success">Bekreftelse: Eksempelet er klart for vurdering.</p><p class="alert alert-warning">Forhåndsvisning: Innsending er ikke åpnet.</p><p class="alert alert-error">Eksempelfeil: Fyll ut en gyldig nettadresse.</p></div></div>
    </section>
    <section class={ds.section}><div class={ds.group}><h2>Kort og varierende antall</h2><p>Hver rad viser et eget antall kort med samme indre avstand.</p></div>
-    <div class="space-y-12 md:space-y-16">{[2,3,4].map(count=><div class={ds.grid}><h3>{count} kort</h3><div class:list={['grid gap-6',count===2?'md:grid-cols-2':count===3?'md:grid-cols-3':'md:grid-cols-2 xl:grid-cols-4']}>{Array.from({length:count},(_,index)=><article class:list={['card',index===1?'bg-base-200 border border-base-300':index===2?'bg-secondary text-secondary-content':'bg-base-100']}><div class="card-body gap-5"><h3 class="card-title">{index===0?'Et tydelig utgangspunkt':'Et neste steg med en bevisst lang norsk overskrift'}</h3><p>Vurder innhold, struktur og veien videre i sammenheng.</p><div class="card-actions mt-3"><button class="btn btn-primary">Se eksempelet</button></div></div></article>)}</div></div>)}</div>
+    <div class="space-y-12 md:space-y-16">{[2,3,4].map(count=><div class={ds.grid}><h3>{count} kort</h3><div class:list={['grid gap-6',count===2?'md:grid-cols-2':count===3?'md:grid-cols-3':'md:grid-cols-2 xl:grid-cols-4']}>{Array.from({length:count},(_,index)=><ContentCard title={index===0?'Et tydelig utgangspunkt':'Et neste steg med en bevisst lang norsk overskrift'} text="Vurder innhold, struktur og veien videre i sammenheng." surface={index===1?'soft':index===2?'dark':'base'}><button slot="actions" class="btn btn-primary">Se eksempelet</button></ContentCard>)}</div></div>)}</div>
     <div class={ds.group}><h3>Kort med bilde</h3><article class="card md:card-side bg-base-100"><figure class="md:w-1/2"><img src="/images/home/hero-customer.webp" alt="Eksisterende illustrasjonsfoto fra forsiden" loading="lazy" /></figure><div class="card-body gap-5"><p>Medieeksempel med eksisterende bilde. Ingen ny kundehistorie.</p></div></article></div>
     <div class={ds.group}><h3>Resultatprimitiv</h3><div class="stats stats-vertical md:stats-horizontal bg-base-100 w-full"><div class="stat"><div class="stat-title">Resultatprimitiv</div><div class="stat-value">–</div><div class="stat-desc">Ingen nye resultatpåstander. Faktiske bevisdata er uendret.</div></div><div class="stat"><div class="stat-title">Datagrunnlag</div><div class="stat-value">–</div><div class="stat-desc">Kun demonstrasjon av komponenten.</div></div></div></div>
    </section>

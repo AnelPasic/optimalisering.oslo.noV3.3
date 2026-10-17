@@ -1,0 +1,17 @@
+---
+import Arrow from './Arrow.astro';
+import TermText from './TermText.astro';
+import {surfaceAttribute,type Surface} from '../lib/surface';
+interface Props {title:string;text:string;surface?:Surface;number?:string;href?:string;label?:string;titleTerms?:string[];textTerms?:string[];}
+const {title,text,surface,number,href,label,titleTerms=[],textTerms=[]}=Astro.props;
+const selected=surfaceAttribute(surface)??'base';
+const surfaces={base:'bg-base-100 text-base-content',soft:'bg-base-200 text-base-content border border-base-300',mint:'bg-(--color-mint) text-base-content',lavender:'bg-(--color-lavender) text-base-content',dark:'bg-secondary text-secondary-content'};
+---
+<article class:list={['card min-w-0 wrap-anywhere',surfaces[selected]]} data-content-card data-box-variant="card" data-surface={selected}>
+ <div class="card-body min-w-0 gap-5">
+  {number&&<span class="font-semibold" aria-hidden="true" data-card-number>{number}</span>}
+  <h3 class="card-title"><TermText text={title} terms={titleTerms}/></h3>
+  <p><TermText text={text} terms={textTerms}/></p>
+  {(href||Astro.slots.has('actions'))&&<div class="card-actions mt-3"><slot name="actions">{href&&<a class="btn btn-primary" href={href}>{label||title}<Arrow diagonal/></a>}</slot></div>}
+ </div>
+</article>

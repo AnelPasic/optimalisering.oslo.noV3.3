@@ -1,0 +1,15 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Selected Kort must have the same real card-body as the demo
+    at file:///E:/Codex/optimalisering.oslo.noV3.3/app/scripts/qa-h024a4-cards.mjs:16:94 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: null,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.12.0
