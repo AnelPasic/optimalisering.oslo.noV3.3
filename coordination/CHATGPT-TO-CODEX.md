@@ -1,5 +1,17 @@
 # ChatGPT to Codex
 
+## OWNER daisyUI reuse rule — MWS-029 / H-024A4 now; H-026 after review
+
+Date: 2026-10-17. OWNER requires use of **real daisyUI components wherever suitable**, explicitly naming [Footer](https://daisyui.com/components/footer/) and [Hero](https://daisyui.com/components/hero/). This strengthens MWS-020 with canonical MWS-029 in `AnelPasic/MedonWebSystem`.
+
+**Current H-024A4 implementation must use genuine daisyUI Card structure** (`card`, `card-body`, `card-title`, optional `card-actions`), shared between the production CMS renderer and actual demos. A standalone `card` class on custom `info-item` markup is insufficient. Preserve the existing CMS fields, automatic open/numbered default, actual 2/3/4-column behavior, child surfaces and approved demo appearance.
+
+**Footer and Hero:** inspect existing custom `HomeFooter.astro` and `CommercialHero.astro` against official daisyUI structures; next queued narrow `H-026` spec: `coordination/H026-DAISYUI-HERO-FOOTER-REUSE.md`. Do NOT mix Hero/Footer changes into H-024A4 or reopen OWNER-approved four Hero variants (D-088); H-026 may run after H-024A4 OWNER review, with actual visual parity evidence. No cosmetic generic daisyUI swap just for classes; preserve copy, SEO, CTA, proof, CMS/UX, theme.
+
+H-024B stays blocked; H-022 parked; no launch.
+
+---
+
 ## Active handoff — H-024A4 CARD PARITY / H-024A3 OWNER REVISE
 
 Date: 2026-10-17. Direct OWNER CMS and visual screenshot feedback: homepage `Boksvariant: Kort` does **not** look like approved card demonstrations on `/design-system/`. Full diagnosis and scoped correction: `coordination/H024A4-CMS-CARD-DESIGN-PARITY.md`.
