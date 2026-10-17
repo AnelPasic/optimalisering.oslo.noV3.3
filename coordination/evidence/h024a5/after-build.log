@@ -1,0 +1,44 @@
+
+> optimalisering-oslo-v3-3@0.1.0 build
+> astro build
+
+03:48:19 [content] Syncing content
+03:48:19 [content] Synced content
+03:48:19 [types] Generated 387ms
+03:48:19 [build] output: "static"
+03:48:19 [build] mode: "static"
+03:48:19 [build] directory: E:\Codex\optimalisering.oslo.noV3.3\app\dist\
+03:48:19 [build] Collecting build info...
+03:48:19 [build] ✓ Completed in 421ms.
+03:48:19 [build] Building static entrypoints...
+/*! 🌼 daisyUI 5.7.50 */
+03:48:20 [vite] ✓ built in 587ms
+03:48:20 [vite] ✓ built in 37ms
+03:48:20 [build] Rearranging server assets...
+
+ generating static routes
+03:48:20   ├─ /404.html (+16ms)
+03:48:20   ├─ /begreper/index.html (+4ms)
+03:48:20   ├─ /design-system/index.html (+16ms)
+03:48:20   ├─ /robots.txt (+2ms)
+03:48:20   ├─ /sitemap.xml (+2ms)
+03:48:20   ├─ /ai-synlighet/index.html (+3ms)
+03:48:20   ├─ /index.html (+10ms)
+03:48:20   ├─ /innsikt/index.html (+2ms)
+03:48:20   ├─ /innsikt/hva-bor-optimaliseres-forst/index.html (+2ms)
+03:48:20   ├─ /innsikt/male-effekt-av-optimalisering/index.html (+1ms)
+03:48:20   ├─ /kontakt/index.html (+1ms)
+03:48:20   ├─ /konvertering/index.html (+4ms)
+03:48:20   ├─ /nettbutikkoptimalisering/index.html (+3ms)
+03:48:20   ├─ /om/index.html (+1ms)
+03:48:20   ├─ /personvern/index.html (+1ms)
+03:48:20   ├─ /priser/index.html (+3ms)
+03:48:20   ├─ /seo/index.html (+4ms)
+03:48:20   ├─ /synlighet/index.html (+5ms)
+03:48:20   ├─ /vilkar/index.html (+1ms)
+03:48:20   ├─ /vurdering/index.html (+2ms)
+03:48:20 ✓ Completed in 125ms.
+
+03:48:20 [build] ✓ Completed in 815ms.
+03:48:20 [build] 18 page(s) built in 1.25s
+03:48:20 [build] Complete!

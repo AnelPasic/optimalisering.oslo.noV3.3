@@ -34,6 +34,7 @@
 .input[aria-invalid="true"] { border-color: var(--color-error); }
 .badge { font-size: var(--type-label); line-height: var(--leading-small); height: auto; white-space: normal; padding-block: 4px; }
 .card-title { font-size: var(--type-h4); line-height: var(--leading-h4); }
+.card-copy { font-size: var(--type-body); line-height: var(--leading-body); }
 .alert { font-size: var(--type-helper); line-height: var(--leading-small); }
 .collapse-title { font-size: var(--type-body); line-height: var(--leading-body); font-weight: var(--weight-label); }
 .collapse-content { font-size: var(--type-body); line-height: var(--leading-body); }

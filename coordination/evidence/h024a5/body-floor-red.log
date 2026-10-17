@@ -1,0 +1,17 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: / 1440 substantive description below1rem: Se hvor kundereisen stopper: før besøket, på siden eller i veien til kontakt og kjøp.
+    at file:///E:/Codex/optimalisering.oslo.noV3.3/app/scripts/qa-h024a5.mjs:27:139
+    at Array.forEach (<anonymous>)
+    at file:///E:/Codex/optimalisering.oslo.noV3.3/app/scripts/qa-h024a5.mjs:27:18 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.12.0

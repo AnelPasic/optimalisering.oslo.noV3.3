@@ -11,7 +11,7 @@ const surfaces={base:'bg-base-100 text-base-content',soft:'bg-base-200 text-base
  <div class="card-body min-w-0 gap-5">
   {number&&<span class="font-semibold" aria-hidden="true" data-card-number>{number}</span>}
   <h3 class="card-title"><TermText text={title} terms={titleTerms}/></h3>
-  <p><TermText text={text} terms={textTerms}/></p>
+  <p class="card-copy"><TermText text={text} terms={textTerms}/></p>
   {(href||Astro.slots.has('actions'))&&<div class="card-actions mt-3"><slot name="actions">{href&&<a class="btn btn-primary" href={href}>{label||title}<Arrow diagonal/></a>}</slot></div>}
  </div>
 </article>
