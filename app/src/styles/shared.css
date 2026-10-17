@@ -110,11 +110,11 @@ p { text-wrap: pretty; }
 .closing-cta .eyebrow { margin-bottom: 18px; }
 
 .site-footer { background: var(--cream); padding-top: 65px; }
-.footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 80px; padding-bottom: 55px; }
-.footer-brand { font-family: var(--heading); text-decoration: none; font-size: var(--type-h4); font-weight: var(--weight-heading); letter-spacing: -.04em; line-height: var(--leading-h4); }
+
+.footer-brand { font-family: var(--heading); text-decoration: none; font-size: var(--type-h4); letter-spacing: -.04em; line-height: var(--leading-h4); }
 .footer-brand span { color: var(--color-primary); }
 .footer-grid p { font-size: var(--type-meta); color: var(--muted); line-height: var(--leading-small); margin-top: 20px; }
-.footer-grid nav { display: flex; flex-direction: column; align-items: start; gap: var(--gap-sm); }
+
 .footer-grid nav a { font-size: var(--type-meta); text-decoration: none; line-height: var(--leading-small); }
 .footer-grid nav a:hover { text-decoration: underline; text-underline-offset: 4px; }
 .footer-bottom { display: flex; justify-content: space-between; gap: 20px; border-top: 1px solid var(--line); padding-block: 20px; font-size: var(--type-meta); color: var(--muted); line-height: var(--leading-small); }
@@ -171,10 +171,6 @@ p { text-wrap: pretty; }
 
 @media (max-width: 900px) {
   .assessment-form { padding: var(--panel-pad); }
-}
-
-@media (max-width: 900px) {
-  .footer-grid { gap: 45px; }
 }
 
 @media (max-width: 650px) {
@@ -294,14 +290,6 @@ p { text-wrap: pretty; }
 }
 
 @media (max-width: 650px) {
-  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px 20px; padding-bottom: 36px; }
-}
-
-@media (max-width: 650px) {
-  .footer-grid > div { grid-column: 1 / -1; }
-}
-
-@media (max-width: 650px) {
   .site-footer { padding-top: 45px; }
 }
 
@@ -367,9 +355,7 @@ p { text-wrap: pretty; }
 @media (max-width: 650px) {
   .invite-home .assessment-grid, .faq-grid { grid-template-columns: 1fr; gap: 32px; }
 }
-@media (max-width: 650px) {
-  .site-shell .footer-grid { gap: 32px 20px; }
-}
+
 @media (max-width: 359px) {
   .site-shell .shell { width: calc(100% - 32px); }
 }

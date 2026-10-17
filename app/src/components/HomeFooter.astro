@@ -6,10 +6,12 @@ interface Props { content: HomepageContent['chrome']; }
 const { content } = Astro.props;
 ---
 <footer class="site-footer">
-  <div class="shell footer-grid">
-    <div><a class="footer-brand" href="/">{content.brand} {content.brandLocation}<span>.</span></a><p>{content.providerText}</p>{site.preview && <span class="preview-tag">{content.previewLabel}</span>}</div>
-    <nav aria-label={content.serviceNavigationLabel}>{content.navigation.map(link => <a href={link.href}>{link.label}</a>)}<a href={content.storeLink.href}>{content.storeLink.label}</a></nav>
-    <nav aria-label={content.informationNavigationLabel}>{content.informationLinks.map(link => <a href={link.href}>{link.label}</a>)}<a href="/begreper/">{glossary.linkLabel}</a></nav>
+  <div class="shell">
+   <div class="footer footer-grid footer-vertical min-[651px]:footer-horizontal grid-cols-2 min-[651px]:grid-cols-[1.4fr_1fr_1fr] gap-x-5 gap-y-8 min-[651px]:gap-[45px] min-[901px]:gap-20 pb-9 min-[651px]:pb-[55px] text-(length:--type-body) leading-(--leading-body) *:w-full">
+    <div class="block justify-items-normal max-[650px]:col-span-full"><a class="footer-title footer-brand normal-case opacity-100 mb-0" href="/">{content.brand} {content.brandLocation}<span>.</span></a><p>{content.providerText}</p>{site.preview && <span class="preview-tag">{content.previewLabel}</span>}</div>
+    <nav class="gap-(--gap-sm)" aria-label={content.serviceNavigationLabel}>{content.navigation.map(link => <a href={link.href}>{link.label}</a>)}<a href={content.storeLink.href}>{content.storeLink.label}</a></nav>
+    <nav class="gap-(--gap-sm)" aria-label={content.informationNavigationLabel}>{content.informationLinks.map(link => <a href={link.href}>{link.label}</a>)}<a href="/begreper/">{glossary.linkLabel}</a></nav>
+   </div>
   </div>
   <div class="shell footer-bottom"><span>© {new Date().getFullYear()} {content.copyrightProvider}</span><span>{content.footerNote}</span></div>
 </footer>

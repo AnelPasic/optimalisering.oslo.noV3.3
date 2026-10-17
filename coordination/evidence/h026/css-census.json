@@ -1,0 +1,14 @@
+[
+  {
+    "file": "app/src/styles/compositions/hero.css",
+    "beforeDeclarations": 247,
+    "afterDeclarations": 201,
+    "netRemoved": 46
+  },
+  {
+    "file": "app/src/styles/shared.css",
+    "beforeDeclarations": 437,
+    "afterDeclarations": 422,
+    "netRemoved": 15
+  }
+]

@@ -1,0 +1,134 @@
+{
+  "same": 29,
+  "total": 32,
+  "records": [
+    {
+      "name": "404html-hero-1440.png",
+      "byteEqual": true
+    },
+    {
+      "name": "404html-hero-390.png",
+      "byteEqual": true
+    },
+    {
+      "name": "begreper-hero-1440.png",
+      "byteEqual": true
+    },
+    {
+      "name": "begreper-hero-390.png",
+      "byteEqual": true
+    },
+    {
+      "name": "demo-centered-1440.png",
+      "byteEqual": false
+    },
+    {
+      "name": "demo-centered-390.png",
+      "byteEqual": true
+    },
+    {
+      "name": "demo-centered-none-1440.png",
+      "byteEqual": true
+    },
+    {
+      "name": "demo-centered-none-390.png",
+      "byteEqual": true
+    },
+    {
+      "name": "demo-split-left-1440.png",
+      "byteEqual": false
+    },
+    {
+      "name": "demo-split-left-390.png",
+      "byteEqual": true
+    },
+    {
+      "name": "demo-split-right-1440.png",
+      "byteEqual": false
+    },
+    {
+      "name": "demo-split-right-390.png",
+      "byteEqual": true
+    },
+    {
+      "name": "footer-1440.png",
+      "byteEqual": true
+    },
+    {
+      "name": "footer-320.png",
+      "byteEqual": true
+    },
+    {
+      "name": "footer-390.png",
+      "byteEqual": true
+    },
+    {
+      "name": "footer-900.png",
+      "byteEqual": true
+    },
+    {
+      "name": "home-hero-1440.png",
+      "byteEqual": true
+    },
+    {
+      "name": "home-hero-320.png",
+      "byteEqual": true
+    },
+    {
+      "name": "home-hero-390.png",
+      "byteEqual": true
+    },
+    {
+      "name": "home-hero-900.png",
+      "byteEqual": true
+    },
+    {
+      "name": "innsikt-hero-1440.png",
+      "byteEqual": true
+    },
+    {
+      "name": "innsikt-hero-390.png",
+      "byteEqual": true
+    },
+    {
+      "name": "innsikt-hva-bor-optimaliseres-forst-hero-1440.png",
+      "byteEqual": true
+    },
+    {
+      "name": "innsikt-hva-bor-optimaliseres-forst-hero-390.png",
+      "byteEqual": true
+    },
+    {
+      "name": "konvertering-hero-1440.png",
+      "byteEqual": true
+    },
+    {
+      "name": "konvertering-hero-390.png",
+      "byteEqual": true
+    },
+    {
+      "name": "om-hero-1440.png",
+      "byteEqual": true
+    },
+    {
+      "name": "om-hero-390.png",
+      "byteEqual": true
+    },
+    {
+      "name": "priser-hero-1440.png",
+      "byteEqual": true
+    },
+    {
+      "name": "priser-hero-390.png",
+      "byteEqual": true
+    },
+    {
+      "name": "vurdering-hero-1440.png",
+      "byteEqual": true
+    },
+    {
+      "name": "vurdering-hero-390.png",
+      "byteEqual": true
+    }
+  ]
+}

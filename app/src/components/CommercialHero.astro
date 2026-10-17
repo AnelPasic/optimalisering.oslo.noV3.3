@@ -15,12 +15,19 @@ const split=content.titleEmphasis==='first-sentence'&&content.title.includes('.'
 const shellInside=inner;
 const classes=['commercial-hero',family==='home'?'home-hero shell':service?'service-hero shell':family==='pricing'?'pricing-hero shell':inner?`inner-hero inner-${family}`:family==='error'?'error-page shell':'glossary-hero'];
 const anchor=family==='service'?'service-hero':family==='pricing'?'pricing-hero':undefined;
+const centered=content.layout==='centered',left=content.layout==='split-left';
+const frameLayout=family==='home'
+ ? ['gap-9 min-[1101px]:gap-[88px]',media&&!centered&&(left?'min-[901px]:grid-cols-[1fr_1.15fr]':'min-[901px]:grid-cols-[1.15fr_1fr]')]
+ : media
+ ? ['gap-8 min-[901px]:gap-16',!centered&&(left?'min-[901px]:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)]':'min-[901px]:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)]')]
+ : auxiliary?['items-start gap-[30px] min-[651px]:gap-[45px] min-[1101px]:gap-[85px]',!centered&&'min-[651px]:grid-cols-2']:[];
 ---
 <Section id={demo?undefined:anchor} class:list={classes} data-hero-family={family} data-hero-layout={content.layout} data-hero-visual={media?'image':auxiliary?'auxiliary':'none'}>
  <div class:list={['hero-container',{shell:shellInside}]}>
   {content.breadcrumbs.length>0&&<nav class="breadcrumbs" aria-label="Brødsmuler">{content.breadcrumbs.map((crumb,index)=><>{index>0&&<span aria-hidden="true">/</span>}{crumb.href?<a href={crumb.href}>{crumb.label}</a>:<span>{crumb.label}</span>}</>)}</nav>}
-  <div class:list={['hero-frame',{'inner-hero-grid':inner,'assessment-hero-grid':family==='assessment','service-hero-split':service&&media}]}>
-   <div class:list={['page-hero-copy',{'hero-copy':family==='home','service-hero-copy':service&&media}]}>
+  <div class="hero place-items-start">
+  <div class:list={['hero-content hero-frame w-full p-0 grid-cols-1',inner&&family!=='assessment'?'max-w-[980px]':'max-w-none',centered?'justify-center':'justify-start',frameLayout,{'grid':media||auxiliary,'inner-hero-grid':inner,'assessment-hero-grid':family==='assessment'}]}>
+   <div class:list={['page-hero-copy',{'w-full':!centered,'hero-copy':family==='home','service-hero-copy':service&&media}]}>
     <p class="eyebrow">{family==='home'&&<span class="small-dot"></span>}{content.eyebrow}</p>
     <Heading id={!demo&&family==='pricing'?'pricing-title':undefined} class={family==='home'?'hero-title':undefined}>{split?<><span class="hero-emphasis">{content.title.slice(0,split)}</span>{content.title.slice(split)}</>:content.title.split('\n').map((line,index)=><>{index>0&&<br/>}{line}</>)}</Heading>
     <p class={['glossary','error'].includes(family)?'hero-support':'hero-intro'}>{family==='home'?<TermText text={content.support} terms={['seo','ai-synlighet','cro']}/>:content.support}</p>
@@ -31,6 +38,7 @@ const anchor=family==='service'?'service-hero':family==='pricing'?'pricing-hero'
     {content.visual.kind==='image'&&<HeroPhoto content={content.visual.image} proof={family==='home'?proof:undefined}/>}
     {auxiliary&&<div class="hero-auxiliary"><slot name="auxiliary"/></div>}
    </>}
+  </div>
   </div>
  </div>
 </Section>

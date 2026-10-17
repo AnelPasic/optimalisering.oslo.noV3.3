@@ -1,0 +1,26 @@
+[
+  {
+    "name": "demo-centered-1440.png",
+    "width": 1240,
+    "height": 1028,
+    "changedPixels": 93854,
+    "changedPercent": 7.362714949165307,
+    "meanAbsoluteChannelDelta": 0.03362411614576796
+  },
+  {
+    "name": "demo-split-left-1440.png",
+    "width": 1240,
+    "height": 598,
+    "changedPixels": 64397,
+    "changedPercent": 8.684458949185457,
+    "meanAbsoluteChannelDelta": 0.03948151544575107
+  },
+  {
+    "name": "demo-split-right-1440.png",
+    "width": 1240,
+    "height": 597,
+    "changedPixels": 71051,
+    "changedPercent": 9.597854865726482,
+    "meanAbsoluteChannelDelta": 0.046526089227499505
+  }
+]

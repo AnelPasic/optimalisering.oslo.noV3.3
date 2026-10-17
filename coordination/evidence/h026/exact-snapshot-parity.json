@@ -1,0 +1,1830 @@
+{
+  "defaults": {
+    "groups": 72,
+    "exact": 72,
+    "records": [
+      {
+        "route": "/ai-synlighet/",
+        "width": 1440,
+        "exact": true
+      },
+      {
+        "route": "/ai-synlighet/",
+        "width": 900,
+        "exact": true
+      },
+      {
+        "route": "/ai-synlighet/",
+        "width": 390,
+        "exact": true
+      },
+      {
+        "route": "/ai-synlighet/",
+        "width": 320,
+        "exact": true
+      },
+      {
+        "route": "/",
+        "width": 1440,
+        "exact": true
+      },
+      {
+        "route": "/",
+        "width": 900,
+        "exact": true
+      },
+      {
+        "route": "/",
+        "width": 390,
+        "exact": true
+      },
+      {
+        "route": "/",
+        "width": 320,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/hva-bor-optimaliseres-forst/",
+        "width": 1440,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/hva-bor-optimaliseres-forst/",
+        "width": 900,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/hva-bor-optimaliseres-forst/",
+        "width": 390,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/hva-bor-optimaliseres-forst/",
+        "width": 320,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/",
+        "width": 1440,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/",
+        "width": 900,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/",
+        "width": 390,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/",
+        "width": 320,
+        "exact": true
+      },
+      {
+        "route": "/kontakt/",
+        "width": 1440,
+        "exact": true
+      },
+      {
+        "route": "/kontakt/",
+        "width": 900,
+        "exact": true
+      },
+      {
+        "route": "/kontakt/",
+        "width": 390,
+        "exact": true
+      },
+      {
+        "route": "/kontakt/",
+        "width": 320,
+        "exact": true
+      },
+      {
+        "route": "/konvertering/",
+        "width": 1440,
+        "exact": true
+      },
+      {
+        "route": "/konvertering/",
+        "width": 900,
+        "exact": true
+      },
+      {
+        "route": "/konvertering/",
+        "width": 390,
+        "exact": true
+      },
+      {
+        "route": "/konvertering/",
+        "width": 320,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/male-effekt-av-optimalisering/",
+        "width": 1440,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/male-effekt-av-optimalisering/",
+        "width": 900,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/male-effekt-av-optimalisering/",
+        "width": 390,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/male-effekt-av-optimalisering/",
+        "width": 320,
+        "exact": true
+      },
+      {
+        "route": "/nettbutikkoptimalisering/",
+        "width": 1440,
+        "exact": true
+      },
+      {
+        "route": "/nettbutikkoptimalisering/",
+        "width": 900,
+        "exact": true
+      },
+      {
+        "route": "/nettbutikkoptimalisering/",
+        "width": 390,
+        "exact": true
+      },
+      {
+        "route": "/nettbutikkoptimalisering/",
+        "width": 320,
+        "exact": true
+      },
+      {
+        "route": "/om/",
+        "width": 1440,
+        "exact": true
+      },
+      {
+        "route": "/om/",
+        "width": 900,
+        "exact": true
+      },
+      {
+        "route": "/om/",
+        "width": 390,
+        "exact": true
+      },
+      {
+        "route": "/om/",
+        "width": 320,
+        "exact": true
+      },
+      {
+        "route": "/personvern/",
+        "width": 1440,
+        "exact": true
+      },
+      {
+        "route": "/personvern/",
+        "width": 900,
+        "exact": true
+      },
+      {
+        "route": "/personvern/",
+        "width": 390,
+        "exact": true
+      },
+      {
+        "route": "/personvern/",
+        "width": 320,
+        "exact": true
+      },
+      {
+        "route": "/priser/",
+        "width": 1440,
+        "exact": true
+      },
+      {
+        "route": "/priser/",
+        "width": 900,
+        "exact": true
+      },
+      {
+        "route": "/priser/",
+        "width": 390,
+        "exact": true
+      },
+      {
+        "route": "/priser/",
+        "width": 320,
+        "exact": true
+      },
+      {
+        "route": "/seo/",
+        "width": 1440,
+        "exact": true
+      },
+      {
+        "route": "/seo/",
+        "width": 900,
+        "exact": true
+      },
+      {
+        "route": "/seo/",
+        "width": 390,
+        "exact": true
+      },
+      {
+        "route": "/seo/",
+        "width": 320,
+        "exact": true
+      },
+      {
+        "route": "/synlighet/",
+        "width": 1440,
+        "exact": true
+      },
+      {
+        "route": "/synlighet/",
+        "width": 900,
+        "exact": true
+      },
+      {
+        "route": "/synlighet/",
+        "width": 390,
+        "exact": true
+      },
+      {
+        "route": "/synlighet/",
+        "width": 320,
+        "exact": true
+      },
+      {
+        "route": "/vilkar/",
+        "width": 1440,
+        "exact": true
+      },
+      {
+        "route": "/vilkar/",
+        "width": 900,
+        "exact": true
+      },
+      {
+        "route": "/vilkar/",
+        "width": 390,
+        "exact": true
+      },
+      {
+        "route": "/vilkar/",
+        "width": 320,
+        "exact": true
+      },
+      {
+        "route": "/vurdering/",
+        "width": 1440,
+        "exact": true
+      },
+      {
+        "route": "/vurdering/",
+        "width": 900,
+        "exact": true
+      },
+      {
+        "route": "/vurdering/",
+        "width": 390,
+        "exact": true
+      },
+      {
+        "route": "/vurdering/",
+        "width": 320,
+        "exact": true
+      },
+      {
+        "route": "/begreper/",
+        "width": 1440,
+        "exact": true
+      },
+      {
+        "route": "/begreper/",
+        "width": 900,
+        "exact": true
+      },
+      {
+        "route": "/begreper/",
+        "width": 390,
+        "exact": true
+      },
+      {
+        "route": "/begreper/",
+        "width": 320,
+        "exact": true
+      },
+      {
+        "route": "/404.html",
+        "width": 1440,
+        "exact": true
+      },
+      {
+        "route": "/404.html",
+        "width": 900,
+        "exact": true
+      },
+      {
+        "route": "/404.html",
+        "width": 390,
+        "exact": true
+      },
+      {
+        "route": "/404.html",
+        "width": 320,
+        "exact": true
+      },
+      {
+        "route": "/design-system/",
+        "width": 1440,
+        "exact": true
+      },
+      {
+        "route": "/design-system/",
+        "width": 900,
+        "exact": true
+      },
+      {
+        "route": "/design-system/",
+        "width": 390,
+        "exact": true
+      },
+      {
+        "route": "/design-system/",
+        "width": 320,
+        "exact": true
+      }
+    ]
+  },
+  "-variants": {
+    "groups": 208,
+    "exact": 208,
+    "records": [
+      {
+        "route": "/",
+        "width": 1440,
+        "preset": "split-right",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/",
+        "width": 900,
+        "preset": "split-right",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/",
+        "width": 390,
+        "preset": "split-right",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/",
+        "width": 320,
+        "preset": "split-right",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/konvertering/",
+        "width": 1440,
+        "preset": "split-right",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/konvertering/",
+        "width": 900,
+        "preset": "split-right",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/konvertering/",
+        "width": 390,
+        "preset": "split-right",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/konvertering/",
+        "width": 320,
+        "preset": "split-right",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/priser/",
+        "width": 1440,
+        "preset": "split-right",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/priser/",
+        "width": 900,
+        "preset": "split-right",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/priser/",
+        "width": 390,
+        "preset": "split-right",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/priser/",
+        "width": 320,
+        "preset": "split-right",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/vurdering/",
+        "width": 1440,
+        "preset": "split-right",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/vurdering/",
+        "width": 900,
+        "preset": "split-right",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/vurdering/",
+        "width": 390,
+        "preset": "split-right",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/vurdering/",
+        "width": 320,
+        "preset": "split-right",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/om/",
+        "width": 1440,
+        "preset": "split-right",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/om/",
+        "width": 900,
+        "preset": "split-right",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/om/",
+        "width": 390,
+        "preset": "split-right",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/om/",
+        "width": 320,
+        "preset": "split-right",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/hva-bor-optimaliseres-forst/",
+        "width": 1440,
+        "preset": "split-right",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/hva-bor-optimaliseres-forst/",
+        "width": 900,
+        "preset": "split-right",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/hva-bor-optimaliseres-forst/",
+        "width": 390,
+        "preset": "split-right",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/hva-bor-optimaliseres-forst/",
+        "width": 320,
+        "preset": "split-right",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/",
+        "width": 1440,
+        "preset": "split-right",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/",
+        "width": 900,
+        "preset": "split-right",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/",
+        "width": 390,
+        "preset": "split-right",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/",
+        "width": 320,
+        "preset": "split-right",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/begreper/",
+        "width": 1440,
+        "preset": "split-right",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/begreper/",
+        "width": 900,
+        "preset": "split-right",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/begreper/",
+        "width": 390,
+        "preset": "split-right",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/begreper/",
+        "width": 320,
+        "preset": "split-right",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/404.html",
+        "width": 1440,
+        "preset": "split-right",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/404.html",
+        "width": 900,
+        "preset": "split-right",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/404.html",
+        "width": 390,
+        "preset": "split-right",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/404.html",
+        "width": 320,
+        "preset": "split-right",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/",
+        "width": 1440,
+        "preset": "split-right",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/",
+        "width": 900,
+        "preset": "split-right",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/",
+        "width": 390,
+        "preset": "split-right",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/",
+        "width": 320,
+        "preset": "split-right",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/konvertering/",
+        "width": 1440,
+        "preset": "split-right",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/konvertering/",
+        "width": 900,
+        "preset": "split-right",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/konvertering/",
+        "width": 390,
+        "preset": "split-right",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/konvertering/",
+        "width": 320,
+        "preset": "split-right",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/priser/",
+        "width": 1440,
+        "preset": "split-right",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/priser/",
+        "width": 900,
+        "preset": "split-right",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/priser/",
+        "width": 390,
+        "preset": "split-right",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/priser/",
+        "width": 320,
+        "preset": "split-right",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/vurdering/",
+        "width": 1440,
+        "preset": "split-right",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/vurdering/",
+        "width": 900,
+        "preset": "split-right",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/vurdering/",
+        "width": 390,
+        "preset": "split-right",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/vurdering/",
+        "width": 320,
+        "preset": "split-right",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/",
+        "width": 1440,
+        "preset": "split-left",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/",
+        "width": 900,
+        "preset": "split-left",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/",
+        "width": 390,
+        "preset": "split-left",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/",
+        "width": 320,
+        "preset": "split-left",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/konvertering/",
+        "width": 1440,
+        "preset": "split-left",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/konvertering/",
+        "width": 900,
+        "preset": "split-left",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/konvertering/",
+        "width": 390,
+        "preset": "split-left",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/konvertering/",
+        "width": 320,
+        "preset": "split-left",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/priser/",
+        "width": 1440,
+        "preset": "split-left",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/priser/",
+        "width": 900,
+        "preset": "split-left",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/priser/",
+        "width": 390,
+        "preset": "split-left",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/priser/",
+        "width": 320,
+        "preset": "split-left",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/vurdering/",
+        "width": 1440,
+        "preset": "split-left",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/vurdering/",
+        "width": 900,
+        "preset": "split-left",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/vurdering/",
+        "width": 390,
+        "preset": "split-left",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/vurdering/",
+        "width": 320,
+        "preset": "split-left",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/om/",
+        "width": 1440,
+        "preset": "split-left",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/om/",
+        "width": 900,
+        "preset": "split-left",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/om/",
+        "width": 390,
+        "preset": "split-left",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/om/",
+        "width": 320,
+        "preset": "split-left",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/hva-bor-optimaliseres-forst/",
+        "width": 1440,
+        "preset": "split-left",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/hva-bor-optimaliseres-forst/",
+        "width": 900,
+        "preset": "split-left",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/hva-bor-optimaliseres-forst/",
+        "width": 390,
+        "preset": "split-left",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/hva-bor-optimaliseres-forst/",
+        "width": 320,
+        "preset": "split-left",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/",
+        "width": 1440,
+        "preset": "split-left",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/",
+        "width": 900,
+        "preset": "split-left",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/",
+        "width": 390,
+        "preset": "split-left",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/",
+        "width": 320,
+        "preset": "split-left",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/begreper/",
+        "width": 1440,
+        "preset": "split-left",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/begreper/",
+        "width": 900,
+        "preset": "split-left",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/begreper/",
+        "width": 390,
+        "preset": "split-left",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/begreper/",
+        "width": 320,
+        "preset": "split-left",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/404.html",
+        "width": 1440,
+        "preset": "split-left",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/404.html",
+        "width": 900,
+        "preset": "split-left",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/404.html",
+        "width": 390,
+        "preset": "split-left",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/404.html",
+        "width": 320,
+        "preset": "split-left",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/",
+        "width": 1440,
+        "preset": "split-left",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/",
+        "width": 900,
+        "preset": "split-left",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/",
+        "width": 390,
+        "preset": "split-left",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/",
+        "width": 320,
+        "preset": "split-left",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/konvertering/",
+        "width": 1440,
+        "preset": "split-left",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/konvertering/",
+        "width": 900,
+        "preset": "split-left",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/konvertering/",
+        "width": 390,
+        "preset": "split-left",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/konvertering/",
+        "width": 320,
+        "preset": "split-left",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/priser/",
+        "width": 1440,
+        "preset": "split-left",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/priser/",
+        "width": 900,
+        "preset": "split-left",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/priser/",
+        "width": 390,
+        "preset": "split-left",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/priser/",
+        "width": 320,
+        "preset": "split-left",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/vurdering/",
+        "width": 1440,
+        "preset": "split-left",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/vurdering/",
+        "width": 900,
+        "preset": "split-left",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/vurdering/",
+        "width": 390,
+        "preset": "split-left",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/vurdering/",
+        "width": 320,
+        "preset": "split-left",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/",
+        "width": 1440,
+        "preset": "centered",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/",
+        "width": 900,
+        "preset": "centered",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/",
+        "width": 390,
+        "preset": "centered",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/",
+        "width": 320,
+        "preset": "centered",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/konvertering/",
+        "width": 1440,
+        "preset": "centered",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/konvertering/",
+        "width": 900,
+        "preset": "centered",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/konvertering/",
+        "width": 390,
+        "preset": "centered",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/konvertering/",
+        "width": 320,
+        "preset": "centered",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/priser/",
+        "width": 1440,
+        "preset": "centered",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/priser/",
+        "width": 900,
+        "preset": "centered",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/priser/",
+        "width": 390,
+        "preset": "centered",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/priser/",
+        "width": 320,
+        "preset": "centered",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/vurdering/",
+        "width": 1440,
+        "preset": "centered",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/vurdering/",
+        "width": 900,
+        "preset": "centered",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/vurdering/",
+        "width": 390,
+        "preset": "centered",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/vurdering/",
+        "width": 320,
+        "preset": "centered",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/om/",
+        "width": 1440,
+        "preset": "centered",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/om/",
+        "width": 900,
+        "preset": "centered",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/om/",
+        "width": 390,
+        "preset": "centered",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/om/",
+        "width": 320,
+        "preset": "centered",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/hva-bor-optimaliseres-forst/",
+        "width": 1440,
+        "preset": "centered",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/hva-bor-optimaliseres-forst/",
+        "width": 900,
+        "preset": "centered",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/hva-bor-optimaliseres-forst/",
+        "width": 390,
+        "preset": "centered",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/hva-bor-optimaliseres-forst/",
+        "width": 320,
+        "preset": "centered",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/",
+        "width": 1440,
+        "preset": "centered",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/",
+        "width": 900,
+        "preset": "centered",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/",
+        "width": 390,
+        "preset": "centered",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/",
+        "width": 320,
+        "preset": "centered",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/begreper/",
+        "width": 1440,
+        "preset": "centered",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/begreper/",
+        "width": 900,
+        "preset": "centered",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/begreper/",
+        "width": 390,
+        "preset": "centered",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/begreper/",
+        "width": 320,
+        "preset": "centered",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/404.html",
+        "width": 1440,
+        "preset": "centered",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/404.html",
+        "width": 900,
+        "preset": "centered",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/404.html",
+        "width": 390,
+        "preset": "centered",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/404.html",
+        "width": 320,
+        "preset": "centered",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/",
+        "width": 1440,
+        "preset": "centered",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/",
+        "width": 900,
+        "preset": "centered",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/",
+        "width": 390,
+        "preset": "centered",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/",
+        "width": 320,
+        "preset": "centered",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/konvertering/",
+        "width": 1440,
+        "preset": "centered",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/konvertering/",
+        "width": 900,
+        "preset": "centered",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/konvertering/",
+        "width": 390,
+        "preset": "centered",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/konvertering/",
+        "width": 320,
+        "preset": "centered",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/priser/",
+        "width": 1440,
+        "preset": "centered",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/priser/",
+        "width": 900,
+        "preset": "centered",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/priser/",
+        "width": 390,
+        "preset": "centered",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/priser/",
+        "width": 320,
+        "preset": "centered",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/vurdering/",
+        "width": 1440,
+        "preset": "centered",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/vurdering/",
+        "width": 900,
+        "preset": "centered",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/vurdering/",
+        "width": 390,
+        "preset": "centered",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/vurdering/",
+        "width": 320,
+        "preset": "centered",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/",
+        "width": 1440,
+        "preset": "centered-none",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/",
+        "width": 900,
+        "preset": "centered-none",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/",
+        "width": 390,
+        "preset": "centered-none",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/",
+        "width": 320,
+        "preset": "centered-none",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/konvertering/",
+        "width": 1440,
+        "preset": "centered-none",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/konvertering/",
+        "width": 900,
+        "preset": "centered-none",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/konvertering/",
+        "width": 390,
+        "preset": "centered-none",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/konvertering/",
+        "width": 320,
+        "preset": "centered-none",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/priser/",
+        "width": 1440,
+        "preset": "centered-none",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/priser/",
+        "width": 900,
+        "preset": "centered-none",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/priser/",
+        "width": 390,
+        "preset": "centered-none",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/priser/",
+        "width": 320,
+        "preset": "centered-none",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/vurdering/",
+        "width": 1440,
+        "preset": "centered-none",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/vurdering/",
+        "width": 900,
+        "preset": "centered-none",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/vurdering/",
+        "width": 390,
+        "preset": "centered-none",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/vurdering/",
+        "width": 320,
+        "preset": "centered-none",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/om/",
+        "width": 1440,
+        "preset": "centered-none",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/om/",
+        "width": 900,
+        "preset": "centered-none",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/om/",
+        "width": 390,
+        "preset": "centered-none",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/om/",
+        "width": 320,
+        "preset": "centered-none",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/hva-bor-optimaliseres-forst/",
+        "width": 1440,
+        "preset": "centered-none",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/hva-bor-optimaliseres-forst/",
+        "width": 900,
+        "preset": "centered-none",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/hva-bor-optimaliseres-forst/",
+        "width": 390,
+        "preset": "centered-none",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/hva-bor-optimaliseres-forst/",
+        "width": 320,
+        "preset": "centered-none",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/",
+        "width": 1440,
+        "preset": "centered-none",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/",
+        "width": 900,
+        "preset": "centered-none",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/",
+        "width": 390,
+        "preset": "centered-none",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/innsikt/",
+        "width": 320,
+        "preset": "centered-none",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/begreper/",
+        "width": 1440,
+        "preset": "centered-none",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/begreper/",
+        "width": 900,
+        "preset": "centered-none",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/begreper/",
+        "width": 390,
+        "preset": "centered-none",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/begreper/",
+        "width": 320,
+        "preset": "centered-none",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/404.html",
+        "width": 1440,
+        "preset": "centered-none",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/404.html",
+        "width": 900,
+        "preset": "centered-none",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/404.html",
+        "width": 390,
+        "preset": "centered-none",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/404.html",
+        "width": 320,
+        "preset": "centered-none",
+        "withImage": false,
+        "exact": true
+      },
+      {
+        "route": "/",
+        "width": 1440,
+        "preset": "centered-none",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/",
+        "width": 900,
+        "preset": "centered-none",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/",
+        "width": 390,
+        "preset": "centered-none",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/",
+        "width": 320,
+        "preset": "centered-none",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/konvertering/",
+        "width": 1440,
+        "preset": "centered-none",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/konvertering/",
+        "width": 900,
+        "preset": "centered-none",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/konvertering/",
+        "width": 390,
+        "preset": "centered-none",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/konvertering/",
+        "width": 320,
+        "preset": "centered-none",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/priser/",
+        "width": 1440,
+        "preset": "centered-none",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/priser/",
+        "width": 900,
+        "preset": "centered-none",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/priser/",
+        "width": 390,
+        "preset": "centered-none",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/priser/",
+        "width": 320,
+        "preset": "centered-none",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/vurdering/",
+        "width": 1440,
+        "preset": "centered-none",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/vurdering/",
+        "width": 900,
+        "preset": "centered-none",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/vurdering/",
+        "width": 390,
+        "preset": "centered-none",
+        "withImage": true,
+        "exact": true
+      },
+      {
+        "route": "/vurdering/",
+        "width": 320,
+        "preset": "centered-none",
+        "withImage": true,
+        "exact": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+H-026 after split-right/none captured; 36 groups.
+H-026 after split-right/image captured; 52 groups.
+H-026 after split-left/none captured; 88 groups.
+H-026 after split-left/image captured; 104 groups.
+H-026 after centered/none captured; 140 groups.
+H-026 after centered/image captured; 156 groups.
+H-026 after centered-none/none captured; 192 groups.
+H-026 after centered-none/image captured; 208 groups.
+H-026 actual source after: 208 preset/image/family/width groups computed/visual geometry parity PASS.
