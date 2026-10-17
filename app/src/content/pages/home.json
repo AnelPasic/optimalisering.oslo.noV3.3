@@ -462,7 +462,7 @@
         {
           "title": "Passer dårlig hvis",
           "text": "Du er allerede det eneste reelle alternativet og kundene finner deg uten problemer. Tenk en tannklinikk på et lite sted som er eneste klinikk innenfor 100 km, eller en nettbutikk som er eneste norske forhandler av reservedeler til gamle flipperspill og allerede eier de relevante søkene.",
-          "boxVariant": "card",
+          "boxVariant": "plain",
           "surface": "soft"
         }
       ]
