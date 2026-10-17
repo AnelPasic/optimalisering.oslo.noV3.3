@@ -1,6 +1,16 @@
 # ChatGPT to Codex
 
-## ACTIVE HANDOFF — D-095 H-024A7 FAQ SHARED WIDTH + OPTIONAL HORIZONTAL CONTACT
+## Latest OWNER decision — D-096 H-024A7 / scoped H-024A6 PASS (NO ACTIVE CODE TASK)
+
+Date: 2026-10-18. OWNER reviewed actual FAQ shared width and both contact variants and says: **"sett på begge ser bra ut, regner med at vi kan justere dem sentralt fra nå av."** Record **H-024A7 OWNER PASS / CLOSED**, and H-024A6 component-section parity correction PASS within its scoped visual gate (existing split contact/ordinary boxes already passed). Keep approved existing split default, new horizontal CMS option, current FAQ width, Card/Hero/Footer and exact OWNER copy intact.
+
+**Important technical distinction for future work:** shared component source edits to `Faq.astro` and `HomeAssessment.astro` propagate to instances *within this repo after build*; Pages CMS controls content and the homepage layout selector, not an overall global component-style panel. Standalone `AssessmentForm.astro` has separate behavior, and MedonWebSystem/other websites do not live-sync updates from this repo. Do not imply a global UI editor/automatic cross-project propagation has been built.
+
+This is a **decision receipt; do not initiate a new implementation**. H-024A3 whole Pages CMS editor gate remains pending distinct OWNER acceptance; H-024B BLOCKED, H-022 PARKED. No public form intake, indexing, publish/domain launch or other change authorized.
+
+---
+
+## Historical handoff — D-095 H-024A7 FAQ SHARED WIDTH + OPTIONAL HORIZONTAL CONTACT (DELIVERED; D-096 PASS)
 
 Date: 2026-10-18. OWNER directly says: **"Kontaktseksjonen på forsiden er ok as is, men vi vil trenge en vannrett variant. Boksvariant: ok. FAQ-seksjoner: ingen grunn til at den skal ha max bredde lavere enn resten."**
 
