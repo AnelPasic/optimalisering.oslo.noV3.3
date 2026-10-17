@@ -450,7 +450,8 @@
       "id": "passer",
       "eyebrow": "Er dette aktuelt for bedriften?",
       "heading": "Best når kundene faktisk har et valg.",
-      "layout": "two-columns",
+      "headingAlign": "center",
+      "layout": "default",
       "surface": "lavender",
       "items": [
         {
