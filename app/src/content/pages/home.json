@@ -415,6 +415,7 @@
       "eyebrow": "Start med det som begrenser resultatet",
       "heading": "Slik finner vi hva som bør gjøres først",
       "layout": "default",
+      "surface": "soft",
       "body": [
         "Behovet avgjør tiltakene. Vi starter ikke med SEO eller en annen kanal bare fordi du kom inn på en bestemt side."
       ],
@@ -422,19 +423,23 @@
         {
           "title": "Finn flaskehalsen",
           "text": "Se hvor kundereisen stopper: før besøket, på siden eller i veien til kontakt og kjøp.",
-          "boxVariant": "default"
+          "boxVariant": "default",
+          "surface": "base"
         },
         {
           "title": "Prioriter tiltak",
-          "text": "Velg en fornuftig start ut fra behov, kommersiell verdi og det vi faktisk vet."
+          "text": "Velg en fornuftig start ut fra behov, kommersiell verdi og det vi faktisk vet.",
+          "surface": "soft"
         },
         {
           "title": "Gjennomfør",
-          "text": "Gjør arbeidet som er avtalt. Omfang og ansvar skal være tydelig."
+          "text": "Gjør arbeidet som er avtalt. Omfang og ansvar skal være tydelig.",
+          "surface": "mint"
         },
         {
           "title": "Mål effekt",
-          "text": "Følg med på relevante henvendelser og kjøp. Se resultatene sammen med verdi og kostnader."
+          "text": "Følg med på relevante henvendelser og kjøp. Se resultatene sammen med verdi og kostnader.",
+          "surface": "lavender"
         }
       ]
     },
