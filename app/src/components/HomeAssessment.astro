@@ -6,33 +6,36 @@ import Arrow from './Arrow.astro';
 interface Props {
   section: Pick<CollectionEntry<'pages'>['data']['sections'][number], 'id' | 'eyebrow' | 'heading' | 'body'>;
   content: HomepageContent['form'];
+  specimen?: boolean;
 }
-const { section, content } = Astro.props;
+const { section, content, specimen = false } = Astro.props;
+const fieldId = (name: string) => specimen ? `ds-home-${name}` : name;
 ---
-<section id={section.id} class="assessment-section section-space"><div class="shell assessment-grid">
+<section id={specimen ? 'ds-home-assessment' : section.id} class="assessment-section section-space"><div class="shell assessment-grid grid grid-cols-1 min-[901px]:grid-cols-2 items-start gap-(--gap-lg) min-[1101px]:gap-16">
   <div class="assessment-copy"><p class="eyebrow">{section.eyebrow}</p><h2>{section.heading}</h2><p class="assessment-promise">{content.promise}</p>{section.body.map(text => <p>{text}</p>)}</div>
-  <form id="skjema" class="assessment-form card" method="post" action="/api/leads" data-home-assessment data-disabled-status={content.disabledStatus}>
+  <form id={fieldId('skjema')} class="assessment-form card min-w-0 p-0" method="post" action={specimen ? undefined : '/api/leads'} onsubmit={specimen ? 'return false' : undefined} data-home-assessment data-specimen={specimen || undefined} data-disabled-status={content.disabledStatus}>
+   <div class="card-body min-w-0 gap-0 p-(--panel-pad) min-[651px]:p-(--panel-pad-lg) text-(length:--type-body) leading-(--leading-body)">
     <div class="form-heading"><h3>{content.heading}</h3></div>
-    <label for="website">{content.websiteLabel} <span aria-hidden="true">*</span></label>
-    <input class="input w-full" id="website" name="website" type="text" inputmode="url" placeholder={content.websitePlaceholder} required maxlength="2048" autocomplete="url" />
-    <label for="email">{content.emailLabel} <span aria-hidden="true">*</span></label>
-    <input class="input w-full" id="email" name="email" type="email" placeholder={content.emailPlaceholder} required maxlength="254" autocomplete="email" />
-    <label for="message">{content.messageLabel} <span class="optional">{content.optional}</span></label>
-    <textarea class="textarea w-full" id="message" name="message" rows="3" maxlength="2000" placeholder={content.messagePlaceholder}></textarea>
+    <label for={fieldId('website')}>{content.websiteLabel} <span aria-hidden="true">*</span></label>
+    <input class="input w-full" id={fieldId('website')} name="website" type="text" inputmode="url" placeholder={content.websitePlaceholder} required maxlength="2048" autocomplete="url" />
+    <label for={fieldId('email')}>{content.emailLabel} <span aria-hidden="true">*</span></label>
+    <input class="input w-full" id={fieldId('email')} name="email" type="email" placeholder={content.emailPlaceholder} required maxlength="254" autocomplete="email" />
+    <label for={fieldId('message')}>{content.messageLabel} <span class="optional">{content.optional}</span></label>
+    <textarea class="textarea w-full" id={fieldId('message')} name="message" rows="3" maxlength="2000" placeholder={content.messagePlaceholder}></textarea>
     <p class="form-privacy">{content.sensitiveNotice}</p>
     <p class="form-notice alert alert-warning">{content.previewNotice}</p>
     <button type="submit" class="button form-submit btn btn-primary" disabled>{content.submitLabel}<Arrow diagonal /></button>
     <p class="form-privacy">{content.privacyText} <a href={content.privacyLink.href}>{content.privacyLink.label}</a>.</p>
     <p class="form-status" role="status" tabindex="-1" hidden></p>
+   </div>
   </form>
 </div></section>
 <script>
-  const form = document.querySelector<HTMLFormElement>('[data-home-assessment]');
-  form?.addEventListener('submit', event => {
+  document.querySelectorAll<HTMLFormElement>('[data-home-assessment]').forEach(form => form.addEventListener('submit', event => {
     event.preventDefault();
     const status = form.querySelector<HTMLElement>('.form-status')!;
     status.textContent = form.dataset.disabledStatus!;
     status.hidden = false;
     status.focus();
-  });
+  }));
 </script>

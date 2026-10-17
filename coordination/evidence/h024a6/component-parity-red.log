@@ -1,0 +1,32 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Actual component parity defects
++ actual - expected
+
++ [
++   '1440: assessment alignment',
++   '1440: missing form card-body',
++   '1440: missing real demo assessment',
++   '1440: missing real demo faq',
++   '1440: open box missing horizontal padding'
++ ]
+- []
+
+    at file:///E:/Codex/optimalisering.oslo.noV3.3/app/scripts/qa-h024a6.mjs:46:170 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: [
+    '1440: assessment alignment',
+    '1440: missing form card-body',
+    '1440: missing real demo assessment',
+    '1440: missing real demo faq',
+    '1440: open box missing horizontal padding'
+  ],
+  expected: [],
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.12.0

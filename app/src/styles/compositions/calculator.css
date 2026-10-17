@@ -18,7 +18,7 @@
 .invite-home .math-results .outcome-label { font-size: var(--type-label); font-family: var(--body); line-height: var(--leading-small); }
 .invite-home .math-equation { font-size: var(--type-meta); margin-top: 13px; line-height: var(--leading-small); }
 @media (max-width: 1100px) {
-  .invite-home .leverage-grid, .invite-home .assessment-grid { gap: 36px; }
+  .invite-home .leverage-grid { gap: 36px; }
 }
 @media (max-width: 900px) {
   .invite-home .leverage-grid { grid-template-columns: 1fr; }

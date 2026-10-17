@@ -2,4 +2,4 @@
 interface Props { items: { question: string; answer: string }[]; heading?:string;eyebrow?:string;id?:string; }
 const { items,heading,eyebrow='Greit å vite',id } = Astro.props;
 ---
-{items.length > 0 && <section id={id} class="faq-section section-space"><div class="shell faq-grid"><div><p class="eyebrow">{eyebrow}</p><h2>{heading??<>Før du tar<br />neste steg.</>}</h2></div><div class="faq-list">{items.map(item => <details class="collapse collapse-plus"><summary class="collapse-title">{item.question}</summary><p class="collapse-content">{item.answer}</p></details>)}</div></div></section>}
+{items.length > 0 && <section id={id} class="faq-section section-space"><div class="shell faq-grid"><div><p class="eyebrow">{eyebrow}</p><h2>{heading??<>Før du tar<br />neste steg.</>}</h2></div><div class="faq-list">{items.map(item => <details class="collapse collapse-plus"><summary class="collapse-title">{item.question}</summary><div class="collapse-content"><p>{item.answer}</p></div></details>)}</div></div></section>}

@@ -9,6 +9,9 @@ import {resolvePageHero} from '../lib/page-hero';
 import {resolveHomepageContent} from '../lib/home-builder';
 import HomeSection from '../components/HomeSection.astro';
 import ContentCard from '../components/ContentCard.astro';
+import HomeAssessment from '../components/HomeAssessment.astro';
+import Faq from '../components/Faq.astro';
+import {createCommercialTextBinding} from '../lib/commercial-text';
 import {contentLayoutValues,boxVariantValues} from '../lib/content-presentation';
 import {heroLayoutValues,heroPresetLabels} from '../lib/hero-presentation';
 const pages=(await getCollection('pages')).map(p=>p.data);
@@ -16,6 +19,10 @@ const home=pages.find(p=>p.kind==='home')!;
 const pageList=pages.find(p=>p.kind==='index')!.sections.find(s=>s.pageList)!;
 const examples=home.sections.filter(s=>['mekanisme','passer'].includes(s.id));
 const ordinary=home.sections.find(s=>s.id==='mekanisme')!;
+const assessment=getHomepageBlock(home,'assessment').content;
+const faqSource=getHomepageBlock(home,'faq').content;
+const bindCommercialText=createCommercialTextBinding(home,pages.find(p=>p.kind==='pricing')!);
+const faq={...faqSource,items:faqSource.items.map(item=>({...item,answer:bindCommercialText(item.answer)}))};
 const layoutLabels={'default':'Standard (automatisk)','two-columns':'To kolonner','three-columns':'Tre kolonner','stacked':'Liste (én kolonne)'};
 const boxLabels={'default':'Standard (automatisk)','plain':'Åpen boks','card':'Kort'};
 const homeHero=resolvePageHero(home);
@@ -77,7 +84,8 @@ const ds={
     <div class={ds.group}><h3>Resultatprimitiv</h3><div class="stats stats-vertical md:stats-horizontal bg-base-100 w-full"><div class="stat"><div class="stat-title">Resultatprimitiv</div><div class="stat-value">–</div><div class="stat-desc">Ingen nye resultatpåstander. Faktiske bevisdata er uendret.</div></div><div class="stat"><div class="stat-title">Datagrunnlag</div><div class="stat-value">–</div><div class="stat-desc">Kun demonstrasjon av komponenten.</div></div></div></div>
    </section>
    <section class={ds.section}><div class={ds.group}><h2>Spørsmål og skjema</h2><p>Skjemaet er et internt eksempel med deaktivert innsending.</p></div>
-    <div class={ds.group}><h3>Spørsmål</h3><details class="collapse collapse-plus bg-base-100"><summary class="collapse-title">Kan jeg bruke skjemaet i denne gjennomgangen?</summary><div class="collapse-content"><p>Dette er et internt eksempel. Innsending er deaktivert.</p></div></details></div>
+    <div class={ds.group}><h3>Generisk daisyUI collapse</h3><p>Én frittstående accordion. Forsidens faktiske FAQ-seksjon vises separat nedenfor.</p><details class="collapse collapse-plus bg-base-100"><summary class="collapse-title">Kan jeg bruke skjemaet i denne gjennomgangen?</summary><div class="collapse-content"><p>Dette er et internt eksempel. Innsending er deaktivert.</p></div></details></div>
+    <p>Skjemaet nedenfor viser generiske felt og tilstander. Det er en annen komponent enn forsideskjemaet.</p>
     <form id="eksempelskjema" class="ds-form card bg-base-100" onsubmit="return false"><div class="card-body gap-7 md:gap-8"><h3>Et uforpliktende eksempel</h3>
      <label>Nettside eller nettbutikk<input class="input w-full" type="url" placeholder="https://eksempel.no" /></label>
      <label>Hva vil du se nærmere på?<select class="select w-full"><option>Velg et område</option><option>Synlighet og konvertering</option></select></label>
@@ -93,7 +101,8 @@ const ds={
     <p>Hero ligger fast først. Pris, bevis, regneeksempel og skjema har egne redaktører og får ikke disse vanlige innholdsvariantene. Piloten beholder åtte flyttbare seksjoner; flere seksjoner krever en egen trygg opprettingsflyt.</p>
    </div>
     <div class="space-y-12 md:space-y-16">{contentLayoutValues.map(layout=><div class={ds.group} data-content-layout-demo={layout}><h3>Seksjonsoppsett: {layoutLabels[layout]}</h3><p>CMS: Seksjonsoppsett. Samme innhold og samme bokser. Valgte kolonneoppsett blir én kolonne på mobil; Standard beholder seksjonens automatiske fordeling.</p><div class="ds-real-example invite-home"><HomeSection section={{...ordinary,layout}} anchor={`ds-layout-${layout}`} /></div></div>)}</div>
-    <div class={ds.group}><h3>Boksvariant</h3><p>CMS: Alternativer eller steg → Boksvariant. Her holdes oppsett og farge like, slik at selve boksen kan sammenlignes.</p><div class="ds-real-example invite-home"><HomeSection section={{...ordinary,id:'ds-box-variants',heading:'Samme innhold, tre boksvalg',body:[],layout:'three-columns',items:boxVariantValues.map(boxVariant=>({...ordinary.items![0],title:boxLabels[boxVariant],boxVariant}))}} /></div></div>
+    <div class={ds.group}><h3>Boksvariant</h3><p>CMS: Alternativer eller steg → Boksvariant. Her holdes innhold, kolonneoppsett og boksfarge like. Åpen boks gir 24 px indre luft uten avrundet kortflate. Kort bruker det godkjente Card-designet med 24 px polstring og 20 px radius. Standard arver seksjonens automatiske design. Med valgt boksfarge kan Standard og Åpen boks se like ut; Standard er ikke et tredje fast kortdesign.</p><div class="ds-real-example invite-home"><HomeSection section={{...ordinary,id:'ds-box-variants',heading:'Samme innhold, tre boksvalg',body:[],layout:'three-columns',items:boxVariantValues.map(boxVariant=>({...ordinary.items![0],title:boxLabels[boxVariant],boxVariant}))}} /></div></div>
+    <div class={ds.group}><h3>Standard følger seksjonen</h3><p>Samme kildeinnhold som Mekanisme, vist med Standard og uten valgt boksfarge. Da beholdes seksjonens opprinnelige nummererte, redaksjonelle oppsett. Dette er en sammenligningstilstand; forsidens lagrede kortvalg er uendret.</p><div class="ds-real-example invite-home"><HomeSection section={{...ordinary,items:ordinary.items!.map(item=>({...item,boxVariant:'default',surface:'default'}))}} anchor="ds-auto-editorial" /></div></div>
     <div class={ds.group}><h3>Farge velges separat</h3><p>Kort med tre av de eksisterende H-019-fargene. Oppsett og boksvariant er like.</p><div class="ds-real-example invite-home"><HomeSection section={{...ordinary,id:'ds-box-colors',heading:'Samme kort, ulike flater',body:[],layout:'three-columns',items:(['mint','lavender','dark'] as const).map(surface=>({...ordinary.items![0],title:surface,boxVariant:'card',surface}))}} /></div></div>
    </section>
    <section class={ds.section}><div class={ds.group}><h2>Eksisterende kommersielle komponenter</h2><p>Hentet fra samme kilde som forsiden. Priser, ordvalg og valglogikk er uendret.</p></div><div class="ds-real-example invite-home"><PackageSection content={getHomepageBlock(home,'packages').content} /></div></section>
@@ -101,6 +110,7 @@ const ds={
     <div class="ds-real-example space-y-12 md:space-y-16"><div class={ds.group}><h3>Vekslende liste</h3><PageList section={{...pageList,id:'ds-alternating',pageList:{...pageList.pageList!,layout:'alternating'}}} pages={pages} /></div><div class={ds.group}><h3>Bildekort</h3><PageList section={{...pageList,id:'ds-media',pageList:{...pageList.pageList!,layout:'mediaCards'}}} pages={pages} /></div>{examples.map(section=><div class={ds.group}><HomeSection section={section} /></div>)}</div>
    </section>
   </div>
+  <section class="space-y-8" id="production-home-sections"><div class="shell space-y-5"><h2>Faktiske seksjoner fra forsiden</h2><p>Samme produksjonskomponenter og gjeldende CMS-innhold som på forsiden, vist i hele sidebredden. Eksempel-ID-er er egne; skjemaet har deaktivert innsending og ingen endepunktadresse.</p><h3>Kontakt / gratis sjekk</h3></div><div class="invite-home"><HomeAssessment section={assessment.section} content={assessment.form} specimen /></div><div class="shell"><h3>Forsidens FAQ</h3></div><div class="invite-home"><Faq id="ds-home-faq" {...faq} /></div></section>
  </div>
 </SiteLayout>
 <style>

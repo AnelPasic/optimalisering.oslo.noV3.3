@@ -9,6 +9,7 @@ import ContentSection from './HomeSection.astro';
 import Assessment from './HomeAssessment.astro';
 import Proof from './HomeProof.astro';
 import Packages from './PackageSection.astro';
+import Faq from './Faq.astro';
 interface Props { block: HomepageBlock; records: CollectionEntry<'proofCases'>['data'][]; }
 const {block,records}=Astro.props;
 const render=(value:HomepageBlock)=>{switch(value._block){case 'selector':case 'calculator':case 'packages':case 'proof':case 'content':case 'assessment':case 'faq':return value._block;default:return assertNever(value);}};
@@ -20,4 +21,4 @@ render(block);
 {block._block==='proof'&&<Proof content={block.content} records={records} />}
 {block._block==='content'&&<ContentSection section={block} />}
 {block._block==='assessment'&&<Assessment section={block.content.section} content={block.content.form} />}
-{block._block==='faq'&&<section id={block.id} class="faq-section section-space"><div class="shell faq-grid"><div><p class="eyebrow">{block.content.eyebrow}</p><h2>{block.content.heading}</h2></div><div class="faq-list">{block.content.items.map(item=><details class="collapse collapse-plus"><summary class="collapse-title">{item.question}</summary><p class="collapse-content">{item.answer}</p></details>)}</div></div></section>}
+{block._block==='faq'&&<Faq id={block.id} {...block.content} />}

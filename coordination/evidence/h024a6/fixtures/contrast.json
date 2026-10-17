@@ -1,0 +1,1602 @@
+{
+  "checked": 228,
+  "minimum": 5.353412081334252,
+  "ratios": [
+    {
+      "key": "two",
+      "renderer": "home",
+      "width": 1440,
+      "item": 0,
+      "ratio": 14.086861404026838
+    },
+    {
+      "key": "two",
+      "renderer": "home",
+      "width": 1440,
+      "item": 1,
+      "ratio": 14.209333925518806
+    },
+    {
+      "key": "two",
+      "renderer": "home",
+      "width": 900,
+      "item": 0,
+      "ratio": 14.086861404026838
+    },
+    {
+      "key": "two",
+      "renderer": "home",
+      "width": 900,
+      "item": 1,
+      "ratio": 14.209333925518806
+    },
+    {
+      "key": "two",
+      "renderer": "home",
+      "width": 390,
+      "item": 0,
+      "ratio": 14.086861404026838
+    },
+    {
+      "key": "two",
+      "renderer": "home",
+      "width": 390,
+      "item": 1,
+      "ratio": 14.209333925518806
+    },
+    {
+      "key": "two",
+      "renderer": "home",
+      "width": 320,
+      "item": 0,
+      "ratio": 14.086861404026838
+    },
+    {
+      "key": "two",
+      "renderer": "home",
+      "width": 320,
+      "item": 1,
+      "ratio": 14.209333925518806
+    },
+    {
+      "key": "two",
+      "renderer": "inner",
+      "width": 1440,
+      "item": 0,
+      "ratio": 14.086861404026838
+    },
+    {
+      "key": "two",
+      "renderer": "inner",
+      "width": 1440,
+      "item": 1,
+      "ratio": 14.209333925518806
+    },
+    {
+      "key": "two",
+      "renderer": "inner",
+      "width": 900,
+      "item": 0,
+      "ratio": 14.086861404026838
+    },
+    {
+      "key": "two",
+      "renderer": "inner",
+      "width": 900,
+      "item": 1,
+      "ratio": 14.209333925518806
+    },
+    {
+      "key": "two",
+      "renderer": "inner",
+      "width": 390,
+      "item": 0,
+      "ratio": 14.086861404026838
+    },
+    {
+      "key": "two",
+      "renderer": "inner",
+      "width": 390,
+      "item": 1,
+      "ratio": 14.209333925518806
+    },
+    {
+      "key": "two",
+      "renderer": "inner",
+      "width": 320,
+      "item": 0,
+      "ratio": 14.086861404026838
+    },
+    {
+      "key": "two",
+      "renderer": "inner",
+      "width": 320,
+      "item": 1,
+      "ratio": 14.209333925518806
+    },
+    {
+      "key": "two",
+      "renderer": "service",
+      "width": 1440,
+      "item": 0,
+      "ratio": 14.086861404026838
+    },
+    {
+      "key": "two",
+      "renderer": "service",
+      "width": 1440,
+      "item": 1,
+      "ratio": 14.209333925518806
+    },
+    {
+      "key": "two",
+      "renderer": "service",
+      "width": 900,
+      "item": 0,
+      "ratio": 14.086861404026838
+    },
+    {
+      "key": "two",
+      "renderer": "service",
+      "width": 900,
+      "item": 1,
+      "ratio": 14.209333925518806
+    },
+    {
+      "key": "two",
+      "renderer": "service",
+      "width": 390,
+      "item": 0,
+      "ratio": 14.086861404026838
+    },
+    {
+      "key": "two",
+      "renderer": "service",
+      "width": 390,
+      "item": 1,
+      "ratio": 14.209333925518806
+    },
+    {
+      "key": "two",
+      "renderer": "service",
+      "width": 320,
+      "item": 0,
+      "ratio": 14.086861404026838
+    },
+    {
+      "key": "two",
+      "renderer": "service",
+      "width": 320,
+      "item": 1,
+      "ratio": 14.209333925518806
+    },
+    {
+      "key": "three",
+      "renderer": "home",
+      "width": 1440,
+      "item": 0,
+      "ratio": 14.87682621150853
+    },
+    {
+      "key": "three",
+      "renderer": "home",
+      "width": 1440,
+      "item": 1,
+      "ratio": 14.086861404026838
+    },
+    {
+      "key": "three",
+      "renderer": "home",
+      "width": 1440,
+      "item": 2,
+      "ratio": 12.666479079334067
+    },
+    {
+      "key": "three",
+      "renderer": "home",
+      "width": 900,
+      "item": 0,
+      "ratio": 14.87682621150853
+    },
+    {
+      "key": "three",
+      "renderer": "home",
+      "width": 900,
+      "item": 1,
+      "ratio": 14.086861404026838
+    },
+    {
+      "key": "three",
+      "renderer": "home",
+      "width": 900,
+      "item": 2,
+      "ratio": 12.666479079334067
+    },
+    {
+      "key": "three",
+      "renderer": "home",
+      "width": 390,
+      "item": 0,
+      "ratio": 14.87682621150853
+    },
+    {
+      "key": "three",
+      "renderer": "home",
+      "width": 390,
+      "item": 1,
+      "ratio": 14.086861404026838
+    },
+    {
+      "key": "three",
+      "renderer": "home",
+      "width": 390,
+      "item": 2,
+      "ratio": 12.666479079334067
+    },
+    {
+      "key": "three",
+      "renderer": "home",
+      "width": 320,
+      "item": 0,
+      "ratio": 14.87682621150853
+    },
+    {
+      "key": "three",
+      "renderer": "home",
+      "width": 320,
+      "item": 1,
+      "ratio": 14.086861404026838
+    },
+    {
+      "key": "three",
+      "renderer": "home",
+      "width": 320,
+      "item": 2,
+      "ratio": 12.666479079334067
+    },
+    {
+      "key": "three",
+      "renderer": "inner",
+      "width": 1440,
+      "item": 0,
+      "ratio": 14.87682621150853
+    },
+    {
+      "key": "three",
+      "renderer": "inner",
+      "width": 1440,
+      "item": 1,
+      "ratio": 14.086861404026838
+    },
+    {
+      "key": "three",
+      "renderer": "inner",
+      "width": 1440,
+      "item": 2,
+      "ratio": 12.666479079334067
+    },
+    {
+      "key": "three",
+      "renderer": "inner",
+      "width": 900,
+      "item": 0,
+      "ratio": 14.87682621150853
+    },
+    {
+      "key": "three",
+      "renderer": "inner",
+      "width": 900,
+      "item": 1,
+      "ratio": 14.086861404026838
+    },
+    {
+      "key": "three",
+      "renderer": "inner",
+      "width": 900,
+      "item": 2,
+      "ratio": 12.666479079334067
+    },
+    {
+      "key": "three",
+      "renderer": "inner",
+      "width": 390,
+      "item": 0,
+      "ratio": 14.87682621150853
+    },
+    {
+      "key": "three",
+      "renderer": "inner",
+      "width": 390,
+      "item": 1,
+      "ratio": 14.086861404026838
+    },
+    {
+      "key": "three",
+      "renderer": "inner",
+      "width": 390,
+      "item": 2,
+      "ratio": 12.666479079334067
+    },
+    {
+      "key": "three",
+      "renderer": "inner",
+      "width": 320,
+      "item": 0,
+      "ratio": 14.87682621150853
+    },
+    {
+      "key": "three",
+      "renderer": "inner",
+      "width": 320,
+      "item": 1,
+      "ratio": 14.086861404026838
+    },
+    {
+      "key": "three",
+      "renderer": "inner",
+      "width": 320,
+      "item": 2,
+      "ratio": 12.666479079334067
+    },
+    {
+      "key": "three",
+      "renderer": "service",
+      "width": 1440,
+      "item": 0,
+      "ratio": 14.87682621150853
+    },
+    {
+      "key": "three",
+      "renderer": "service",
+      "width": 1440,
+      "item": 1,
+      "ratio": 14.086861404026838
+    },
+    {
+      "key": "three",
+      "renderer": "service",
+      "width": 1440,
+      "item": 2,
+      "ratio": 12.666479079334067
+    },
+    {
+      "key": "three",
+      "renderer": "service",
+      "width": 900,
+      "item": 0,
+      "ratio": 14.87682621150853
+    },
+    {
+      "key": "three",
+      "renderer": "service",
+      "width": 900,
+      "item": 1,
+      "ratio": 14.086861404026838
+    },
+    {
+      "key": "three",
+      "renderer": "service",
+      "width": 900,
+      "item": 2,
+      "ratio": 12.666479079334067
+    },
+    {
+      "key": "three",
+      "renderer": "service",
+      "width": 390,
+      "item": 0,
+      "ratio": 14.87682621150853
+    },
+    {
+      "key": "three",
+      "renderer": "service",
+      "width": 390,
+      "item": 1,
+      "ratio": 14.086861404026838
+    },
+    {
+      "key": "three",
+      "renderer": "service",
+      "width": 390,
+      "item": 2,
+      "ratio": 12.666479079334067
+    },
+    {
+      "key": "three",
+      "renderer": "service",
+      "width": 320,
+      "item": 0,
+      "ratio": 14.87682621150853
+    },
+    {
+      "key": "three",
+      "renderer": "service",
+      "width": 320,
+      "item": 1,
+      "ratio": 14.086861404026838
+    },
+    {
+      "key": "three",
+      "renderer": "service",
+      "width": 320,
+      "item": 2,
+      "ratio": 12.666479079334067
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "home",
+      "width": 1440,
+      "item": 0,
+      "ratio": 14.87682621150853
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "home",
+      "width": 1440,
+      "item": 1,
+      "ratio": 14.209333925518806
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "home",
+      "width": 1440,
+      "item": 2,
+      "ratio": 12.666479079334067
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "home",
+      "width": 1440,
+      "item": 3,
+      "ratio": 12.899831547912868
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "home",
+      "width": 900,
+      "item": 0,
+      "ratio": 14.87682621150853
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "home",
+      "width": 900,
+      "item": 1,
+      "ratio": 14.209333925518806
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "home",
+      "width": 900,
+      "item": 2,
+      "ratio": 12.666479079334067
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "home",
+      "width": 900,
+      "item": 3,
+      "ratio": 12.899831547912868
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "home",
+      "width": 390,
+      "item": 0,
+      "ratio": 14.87682621150853
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "home",
+      "width": 390,
+      "item": 1,
+      "ratio": 14.209333925518806
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "home",
+      "width": 390,
+      "item": 2,
+      "ratio": 12.666479079334067
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "home",
+      "width": 390,
+      "item": 3,
+      "ratio": 12.899831547912868
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "home",
+      "width": 320,
+      "item": 0,
+      "ratio": 14.87682621150853
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "home",
+      "width": 320,
+      "item": 1,
+      "ratio": 14.209333925518806
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "home",
+      "width": 320,
+      "item": 2,
+      "ratio": 12.666479079334067
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "home",
+      "width": 320,
+      "item": 3,
+      "ratio": 12.899831547912868
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "inner",
+      "width": 1440,
+      "item": 0,
+      "ratio": 14.87682621150853
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "inner",
+      "width": 1440,
+      "item": 1,
+      "ratio": 14.209333925518806
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "inner",
+      "width": 1440,
+      "item": 2,
+      "ratio": 12.666479079334067
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "inner",
+      "width": 1440,
+      "item": 3,
+      "ratio": 12.899831547912868
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "inner",
+      "width": 900,
+      "item": 0,
+      "ratio": 14.87682621150853
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "inner",
+      "width": 900,
+      "item": 1,
+      "ratio": 14.209333925518806
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "inner",
+      "width": 900,
+      "item": 2,
+      "ratio": 12.666479079334067
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "inner",
+      "width": 900,
+      "item": 3,
+      "ratio": 12.899831547912868
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "inner",
+      "width": 390,
+      "item": 0,
+      "ratio": 14.87682621150853
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "inner",
+      "width": 390,
+      "item": 1,
+      "ratio": 14.209333925518806
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "inner",
+      "width": 390,
+      "item": 2,
+      "ratio": 12.666479079334067
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "inner",
+      "width": 390,
+      "item": 3,
+      "ratio": 12.899831547912868
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "inner",
+      "width": 320,
+      "item": 0,
+      "ratio": 14.87682621150853
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "inner",
+      "width": 320,
+      "item": 1,
+      "ratio": 14.209333925518806
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "inner",
+      "width": 320,
+      "item": 2,
+      "ratio": 12.666479079334067
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "inner",
+      "width": 320,
+      "item": 3,
+      "ratio": 12.899831547912868
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "service",
+      "width": 1440,
+      "item": 0,
+      "ratio": 14.87682621150853
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "service",
+      "width": 1440,
+      "item": 1,
+      "ratio": 14.209333925518806
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "service",
+      "width": 1440,
+      "item": 2,
+      "ratio": 12.666479079334067
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "service",
+      "width": 1440,
+      "item": 3,
+      "ratio": 12.899831547912868
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "service",
+      "width": 900,
+      "item": 0,
+      "ratio": 14.87682621150853
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "service",
+      "width": 900,
+      "item": 1,
+      "ratio": 14.209333925518806
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "service",
+      "width": 900,
+      "item": 2,
+      "ratio": 12.666479079334067
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "service",
+      "width": 900,
+      "item": 3,
+      "ratio": 12.899831547912868
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "service",
+      "width": 390,
+      "item": 0,
+      "ratio": 14.87682621150853
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "service",
+      "width": 390,
+      "item": 1,
+      "ratio": 14.209333925518806
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "service",
+      "width": 390,
+      "item": 2,
+      "ratio": 12.666479079334067
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "service",
+      "width": 390,
+      "item": 3,
+      "ratio": 12.899831547912868
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "service",
+      "width": 320,
+      "item": 0,
+      "ratio": 14.87682621150853
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "service",
+      "width": 320,
+      "item": 1,
+      "ratio": 14.209333925518806
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "service",
+      "width": 320,
+      "item": 2,
+      "ratio": 12.666479079334067
+    },
+    {
+      "key": "four-numbered",
+      "renderer": "service",
+      "width": 320,
+      "item": 3,
+      "ratio": 12.899831547912868
+    },
+    {
+      "key": "plain",
+      "renderer": "home",
+      "width": 1440,
+      "item": 0,
+      "ratio": 12.013694535976187
+    },
+    {
+      "key": "plain",
+      "renderer": "home",
+      "width": 1440,
+      "item": 1,
+      "ratio": 6.005490509884004
+    },
+    {
+      "key": "plain",
+      "renderer": "home",
+      "width": 900,
+      "item": 0,
+      "ratio": 12.013694535976187
+    },
+    {
+      "key": "plain",
+      "renderer": "home",
+      "width": 900,
+      "item": 1,
+      "ratio": 6.005490509884004
+    },
+    {
+      "key": "plain",
+      "renderer": "home",
+      "width": 390,
+      "item": 0,
+      "ratio": 12.013694535976187
+    },
+    {
+      "key": "plain",
+      "renderer": "home",
+      "width": 390,
+      "item": 1,
+      "ratio": 6.005490509884004
+    },
+    {
+      "key": "plain",
+      "renderer": "home",
+      "width": 320,
+      "item": 0,
+      "ratio": 12.013694535976187
+    },
+    {
+      "key": "plain",
+      "renderer": "home",
+      "width": 320,
+      "item": 1,
+      "ratio": 6.005490509884004
+    },
+    {
+      "key": "plain",
+      "renderer": "inner",
+      "width": 1440,
+      "item": 0,
+      "ratio": 12.013694535976187
+    },
+    {
+      "key": "plain",
+      "renderer": "inner",
+      "width": 1440,
+      "item": 1,
+      "ratio": 6.005490509884004
+    },
+    {
+      "key": "plain",
+      "renderer": "inner",
+      "width": 900,
+      "item": 0,
+      "ratio": 12.013694535976187
+    },
+    {
+      "key": "plain",
+      "renderer": "inner",
+      "width": 900,
+      "item": 1,
+      "ratio": 6.005490509884004
+    },
+    {
+      "key": "plain",
+      "renderer": "inner",
+      "width": 390,
+      "item": 0,
+      "ratio": 12.013694535976187
+    },
+    {
+      "key": "plain",
+      "renderer": "inner",
+      "width": 390,
+      "item": 1,
+      "ratio": 6.005490509884004
+    },
+    {
+      "key": "plain",
+      "renderer": "inner",
+      "width": 320,
+      "item": 0,
+      "ratio": 12.013694535976187
+    },
+    {
+      "key": "plain",
+      "renderer": "inner",
+      "width": 320,
+      "item": 1,
+      "ratio": 6.005490509884004
+    },
+    {
+      "key": "plain",
+      "renderer": "service",
+      "width": 1440,
+      "item": 0,
+      "ratio": 12.013694535976187
+    },
+    {
+      "key": "plain",
+      "renderer": "service",
+      "width": 1440,
+      "item": 1,
+      "ratio": 6.005490509884004
+    },
+    {
+      "key": "plain",
+      "renderer": "service",
+      "width": 900,
+      "item": 0,
+      "ratio": 12.013694535976187
+    },
+    {
+      "key": "plain",
+      "renderer": "service",
+      "width": 900,
+      "item": 1,
+      "ratio": 6.005490509884004
+    },
+    {
+      "key": "plain",
+      "renderer": "service",
+      "width": 390,
+      "item": 0,
+      "ratio": 12.013694535976187
+    },
+    {
+      "key": "plain",
+      "renderer": "service",
+      "width": 390,
+      "item": 1,
+      "ratio": 6.005490509884004
+    },
+    {
+      "key": "plain",
+      "renderer": "service",
+      "width": 320,
+      "item": 0,
+      "ratio": 12.013694535976187
+    },
+    {
+      "key": "plain",
+      "renderer": "service",
+      "width": 320,
+      "item": 1,
+      "ratio": 6.005490509884004
+    },
+    {
+      "key": "automatic",
+      "renderer": "home",
+      "width": 1440,
+      "item": 0,
+      "ratio": 12.013694535976187
+    },
+    {
+      "key": "automatic",
+      "renderer": "home",
+      "width": 1440,
+      "item": 1,
+      "ratio": 6.005490509884004
+    },
+    {
+      "key": "automatic",
+      "renderer": "home",
+      "width": 900,
+      "item": 0,
+      "ratio": 12.013694535976187
+    },
+    {
+      "key": "automatic",
+      "renderer": "home",
+      "width": 900,
+      "item": 1,
+      "ratio": 6.005490509884004
+    },
+    {
+      "key": "automatic",
+      "renderer": "home",
+      "width": 390,
+      "item": 0,
+      "ratio": 12.013694535976187
+    },
+    {
+      "key": "automatic",
+      "renderer": "home",
+      "width": 390,
+      "item": 1,
+      "ratio": 6.005490509884004
+    },
+    {
+      "key": "automatic",
+      "renderer": "home",
+      "width": 320,
+      "item": 0,
+      "ratio": 12.013694535976187
+    },
+    {
+      "key": "automatic",
+      "renderer": "home",
+      "width": 320,
+      "item": 1,
+      "ratio": 6.005490509884004
+    },
+    {
+      "key": "automatic",
+      "renderer": "inner",
+      "width": 1440,
+      "item": 0,
+      "ratio": 12.013694535976187
+    },
+    {
+      "key": "automatic",
+      "renderer": "inner",
+      "width": 1440,
+      "item": 1,
+      "ratio": 6.005490509884004
+    },
+    {
+      "key": "automatic",
+      "renderer": "inner",
+      "width": 900,
+      "item": 0,
+      "ratio": 12.013694535976187
+    },
+    {
+      "key": "automatic",
+      "renderer": "inner",
+      "width": 900,
+      "item": 1,
+      "ratio": 6.005490509884004
+    },
+    {
+      "key": "automatic",
+      "renderer": "inner",
+      "width": 390,
+      "item": 0,
+      "ratio": 12.013694535976187
+    },
+    {
+      "key": "automatic",
+      "renderer": "inner",
+      "width": 390,
+      "item": 1,
+      "ratio": 6.005490509884004
+    },
+    {
+      "key": "automatic",
+      "renderer": "inner",
+      "width": 320,
+      "item": 0,
+      "ratio": 12.013694535976187
+    },
+    {
+      "key": "automatic",
+      "renderer": "inner",
+      "width": 320,
+      "item": 1,
+      "ratio": 6.005490509884004
+    },
+    {
+      "key": "automatic",
+      "renderer": "service",
+      "width": 1440,
+      "item": 0,
+      "ratio": 12.013694535976187
+    },
+    {
+      "key": "automatic",
+      "renderer": "service",
+      "width": 1440,
+      "item": 1,
+      "ratio": 6.005490509884004
+    },
+    {
+      "key": "automatic",
+      "renderer": "service",
+      "width": 900,
+      "item": 0,
+      "ratio": 12.013694535976187
+    },
+    {
+      "key": "automatic",
+      "renderer": "service",
+      "width": 900,
+      "item": 1,
+      "ratio": 6.005490509884004
+    },
+    {
+      "key": "automatic",
+      "renderer": "service",
+      "width": 390,
+      "item": 0,
+      "ratio": 12.013694535976187
+    },
+    {
+      "key": "automatic",
+      "renderer": "service",
+      "width": 390,
+      "item": 1,
+      "ratio": 6.005490509884004
+    },
+    {
+      "key": "automatic",
+      "renderer": "service",
+      "width": 320,
+      "item": 0,
+      "ratio": 12.013694535976187
+    },
+    {
+      "key": "automatic",
+      "renderer": "service",
+      "width": 320,
+      "item": 1,
+      "ratio": 6.005490509884004
+    },
+    {
+      "key": "plain-four",
+      "renderer": "home",
+      "width": 1440,
+      "item": 0,
+      "ratio": 6.2876021563513245
+    },
+    {
+      "key": "plain-four",
+      "renderer": "home",
+      "width": 1440,
+      "item": 1,
+      "ratio": 6.005490509884004
+    },
+    {
+      "key": "plain-four",
+      "renderer": "home",
+      "width": 1440,
+      "item": 2,
+      "ratio": 5.353412081334252
+    },
+    {
+      "key": "plain-four",
+      "renderer": "home",
+      "width": 1440,
+      "item": 3,
+      "ratio": 5.4520371149110325
+    },
+    {
+      "key": "plain-four",
+      "renderer": "home",
+      "width": 900,
+      "item": 0,
+      "ratio": 6.2876021563513245
+    },
+    {
+      "key": "plain-four",
+      "renderer": "home",
+      "width": 900,
+      "item": 1,
+      "ratio": 6.005490509884004
+    },
+    {
+      "key": "plain-four",
+      "renderer": "home",
+      "width": 900,
+      "item": 2,
+      "ratio": 5.353412081334252
+    },
+    {
+      "key": "plain-four",
+      "renderer": "home",
+      "width": 900,
+      "item": 3,
+      "ratio": 5.4520371149110325
+    },
+    {
+      "key": "plain-four",
+      "renderer": "home",
+      "width": 390,
+      "item": 0,
+      "ratio": 6.2876021563513245
+    },
+    {
+      "key": "plain-four",
+      "renderer": "home",
+      "width": 390,
+      "item": 1,
+      "ratio": 6.005490509884004
+    },
+    {
+      "key": "plain-four",
+      "renderer": "home",
+      "width": 390,
+      "item": 2,
+      "ratio": 5.353412081334252
+    },
+    {
+      "key": "plain-four",
+      "renderer": "home",
+      "width": 390,
+      "item": 3,
+      "ratio": 5.4520371149110325
+    },
+    {
+      "key": "plain-four",
+      "renderer": "home",
+      "width": 320,
+      "item": 0,
+      "ratio": 6.2876021563513245
+    },
+    {
+      "key": "plain-four",
+      "renderer": "home",
+      "width": 320,
+      "item": 1,
+      "ratio": 6.005490509884004
+    },
+    {
+      "key": "plain-four",
+      "renderer": "home",
+      "width": 320,
+      "item": 2,
+      "ratio": 5.353412081334252
+    },
+    {
+      "key": "plain-four",
+      "renderer": "home",
+      "width": 320,
+      "item": 3,
+      "ratio": 5.4520371149110325
+    },
+    {
+      "key": "plain-four",
+      "renderer": "inner",
+      "width": 1440,
+      "item": 0,
+      "ratio": 6.2876021563513245
+    },
+    {
+      "key": "plain-four",
+      "renderer": "inner",
+      "width": 1440,
+      "item": 1,
+      "ratio": 6.005490509884004
+    },
+    {
+      "key": "plain-four",
+      "renderer": "inner",
+      "width": 1440,
+      "item": 2,
+      "ratio": 5.353412081334252
+    },
+    {
+      "key": "plain-four",
+      "renderer": "inner",
+      "width": 1440,
+      "item": 3,
+      "ratio": 5.4520371149110325
+    },
+    {
+      "key": "plain-four",
+      "renderer": "inner",
+      "width": 900,
+      "item": 0,
+      "ratio": 6.2876021563513245
+    },
+    {
+      "key": "plain-four",
+      "renderer": "inner",
+      "width": 900,
+      "item": 1,
+      "ratio": 6.005490509884004
+    },
+    {
+      "key": "plain-four",
+      "renderer": "inner",
+      "width": 900,
+      "item": 2,
+      "ratio": 5.353412081334252
+    },
+    {
+      "key": "plain-four",
+      "renderer": "inner",
+      "width": 900,
+      "item": 3,
+      "ratio": 5.4520371149110325
+    },
+    {
+      "key": "plain-four",
+      "renderer": "inner",
+      "width": 390,
+      "item": 0,
+      "ratio": 6.2876021563513245
+    },
+    {
+      "key": "plain-four",
+      "renderer": "inner",
+      "width": 390,
+      "item": 1,
+      "ratio": 6.005490509884004
+    },
+    {
+      "key": "plain-four",
+      "renderer": "inner",
+      "width": 390,
+      "item": 2,
+      "ratio": 5.353412081334252
+    },
+    {
+      "key": "plain-four",
+      "renderer": "inner",
+      "width": 390,
+      "item": 3,
+      "ratio": 5.4520371149110325
+    },
+    {
+      "key": "plain-four",
+      "renderer": "inner",
+      "width": 320,
+      "item": 0,
+      "ratio": 6.2876021563513245
+    },
+    {
+      "key": "plain-four",
+      "renderer": "inner",
+      "width": 320,
+      "item": 1,
+      "ratio": 6.005490509884004
+    },
+    {
+      "key": "plain-four",
+      "renderer": "inner",
+      "width": 320,
+      "item": 2,
+      "ratio": 5.353412081334252
+    },
+    {
+      "key": "plain-four",
+      "renderer": "inner",
+      "width": 320,
+      "item": 3,
+      "ratio": 5.4520371149110325
+    },
+    {
+      "key": "plain-four",
+      "renderer": "service",
+      "width": 1440,
+      "item": 0,
+      "ratio": 6.2876021563513245
+    },
+    {
+      "key": "plain-four",
+      "renderer": "service",
+      "width": 1440,
+      "item": 1,
+      "ratio": 6.005490509884004
+    },
+    {
+      "key": "plain-four",
+      "renderer": "service",
+      "width": 1440,
+      "item": 2,
+      "ratio": 5.353412081334252
+    },
+    {
+      "key": "plain-four",
+      "renderer": "service",
+      "width": 1440,
+      "item": 3,
+      "ratio": 5.4520371149110325
+    },
+    {
+      "key": "plain-four",
+      "renderer": "service",
+      "width": 900,
+      "item": 0,
+      "ratio": 6.2876021563513245
+    },
+    {
+      "key": "plain-four",
+      "renderer": "service",
+      "width": 900,
+      "item": 1,
+      "ratio": 6.005490509884004
+    },
+    {
+      "key": "plain-four",
+      "renderer": "service",
+      "width": 900,
+      "item": 2,
+      "ratio": 5.353412081334252
+    },
+    {
+      "key": "plain-four",
+      "renderer": "service",
+      "width": 900,
+      "item": 3,
+      "ratio": 5.4520371149110325
+    },
+    {
+      "key": "plain-four",
+      "renderer": "service",
+      "width": 390,
+      "item": 0,
+      "ratio": 6.2876021563513245
+    },
+    {
+      "key": "plain-four",
+      "renderer": "service",
+      "width": 390,
+      "item": 1,
+      "ratio": 6.005490509884004
+    },
+    {
+      "key": "plain-four",
+      "renderer": "service",
+      "width": 390,
+      "item": 2,
+      "ratio": 5.353412081334252
+    },
+    {
+      "key": "plain-four",
+      "renderer": "service",
+      "width": 390,
+      "item": 3,
+      "ratio": 5.4520371149110325
+    },
+    {
+      "key": "plain-four",
+      "renderer": "service",
+      "width": 320,
+      "item": 0,
+      "ratio": 6.2876021563513245
+    },
+    {
+      "key": "plain-four",
+      "renderer": "service",
+      "width": 320,
+      "item": 1,
+      "ratio": 6.005490509884004
+    },
+    {
+      "key": "plain-four",
+      "renderer": "service",
+      "width": 320,
+      "item": 2,
+      "ratio": 5.353412081334252
+    },
+    {
+      "key": "plain-four",
+      "renderer": "service",
+      "width": 320,
+      "item": 3,
+      "ratio": 5.4520371149110325
+    },
+    {
+      "key": "plain-default",
+      "renderer": "service",
+      "width": 1440,
+      "item": 0,
+      "ratio": 5.353412081334252
+    },
+    {
+      "key": "plain-default",
+      "renderer": "service",
+      "width": 1440,
+      "item": 1,
+      "ratio": 5.4520371149110325
+    },
+    {
+      "key": "plain-default",
+      "renderer": "service",
+      "width": 900,
+      "item": 0,
+      "ratio": 5.353412081334252
+    },
+    {
+      "key": "plain-default",
+      "renderer": "service",
+      "width": 900,
+      "item": 1,
+      "ratio": 5.4520371149110325
+    },
+    {
+      "key": "plain-default",
+      "renderer": "service",
+      "width": 390,
+      "item": 0,
+      "ratio": 5.353412081334252
+    },
+    {
+      "key": "plain-default",
+      "renderer": "service",
+      "width": 390,
+      "item": 1,
+      "ratio": 5.4520371149110325
+    },
+    {
+      "key": "plain-default",
+      "renderer": "service",
+      "width": 320,
+      "item": 0,
+      "ratio": 5.353412081334252
+    },
+    {
+      "key": "plain-default",
+      "renderer": "service",
+      "width": 320,
+      "item": 1,
+      "ratio": 5.4520371149110325
+    },
+    {
+      "key": "automatic-editorial",
+      "renderer": "inner",
+      "width": 1440,
+      "item": 0,
+      "ratio": 5.4520371149110325
+    },
+    {
+      "key": "automatic-editorial",
+      "renderer": "inner",
+      "width": 1440,
+      "item": 1,
+      "ratio": 5.353412081334252
+    },
+    {
+      "key": "automatic-editorial",
+      "renderer": "inner",
+      "width": 900,
+      "item": 0,
+      "ratio": 5.4520371149110325
+    },
+    {
+      "key": "automatic-editorial",
+      "renderer": "inner",
+      "width": 900,
+      "item": 1,
+      "ratio": 5.353412081334252
+    },
+    {
+      "key": "automatic-editorial",
+      "renderer": "inner",
+      "width": 390,
+      "item": 0,
+      "ratio": 5.4520371149110325
+    },
+    {
+      "key": "automatic-editorial",
+      "renderer": "inner",
+      "width": 390,
+      "item": 1,
+      "ratio": 5.353412081334252
+    },
+    {
+      "key": "automatic-editorial",
+      "renderer": "inner",
+      "width": 320,
+      "item": 0,
+      "ratio": 5.4520371149110325
+    },
+    {
+      "key": "automatic-editorial",
+      "renderer": "inner",
+      "width": 320,
+      "item": 1,
+      "ratio": 5.353412081334252
+    },
+    {
+      "key": "automatic-editorial",
+      "renderer": "service",
+      "width": 1440,
+      "item": 0,
+      "ratio": 5.353412081334252
+    },
+    {
+      "key": "automatic-editorial",
+      "renderer": "service",
+      "width": 1440,
+      "item": 1,
+      "ratio": 5.4520371149110325
+    },
+    {
+      "key": "automatic-editorial",
+      "renderer": "service",
+      "width": 900,
+      "item": 0,
+      "ratio": 5.353412081334252
+    },
+    {
+      "key": "automatic-editorial",
+      "renderer": "service",
+      "width": 900,
+      "item": 1,
+      "ratio": 5.4520371149110325
+    },
+    {
+      "key": "automatic-editorial",
+      "renderer": "service",
+      "width": 390,
+      "item": 0,
+      "ratio": 5.353412081334252
+    },
+    {
+      "key": "automatic-editorial",
+      "renderer": "service",
+      "width": 390,
+      "item": 1,
+      "ratio": 5.4520371149110325
+    },
+    {
+      "key": "automatic-editorial",
+      "renderer": "service",
+      "width": 320,
+      "item": 0,
+      "ratio": 5.353412081334252
+    },
+    {
+      "key": "automatic-editorial",
+      "renderer": "service",
+      "width": 320,
+      "item": 1,
+      "ratio": 5.4520371149110325
+    }
+  ]
+}
