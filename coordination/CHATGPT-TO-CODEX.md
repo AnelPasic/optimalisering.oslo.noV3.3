@@ -1,6 +1,14 @@
 # ChatGPT to Codex
 
-## ACTIVE HANDOFF — H-026 DAISYUI HERO + FOOTER REUSE (D-092 OWNER AUTHORIZED)
+## Latest OWNER verdict — D-093 H-026 HERO + FOOTER PASS / CLOSED
+
+Date: 2026-10-17. OWNER directly confirms about published H-026: **"ser riktig ut."** This is explicit scoped **OWNER acceptance of the Hero/Footer appearance** following genuine daisyUI reuse delivered at `5d4f7d6`. H-026 is COMPLETE; preserve the shared `hero/hero-content`, `footer/footer-title`, the four D-088 Hero CMS presets, original visual geometry and content, and accepted D-092 Card/readability. **Do not reopen Hero/Footer implementation** without a new actual issue.
+
+This is a **decision receipt only; do not initiate code**. The next independent OWNER gate is H-024A3 whole-editor review. H-024B remains BLOCKED and is not implicitly authorized, H-022 is PARKED. No indexing, public intake, domain or launch authority.
+
+---
+
+## Historical handoff — H-026 DAISYUI HERO + FOOTER REUSE (DELIVERED; D-093 PASS)
 
 Date: 2026-10-17. OWNER confirms H-024A5 live card font sizes are good: **"ja størrelsen er bra nå."** Earlier H-024A4 appearance is positively reviewed apart from that corrected typography. **D-092 closes both narrow Card component/readability gates.**
 
