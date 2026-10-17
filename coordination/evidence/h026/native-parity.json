@@ -1,0 +1,498 @@
+{
+  "groups": 72,
+  "exact": 72,
+  "screenshots": 32,
+  "byteExactScreenshots": 29,
+  "records": [
+    {
+      "route": "/ai-synlighet/",
+      "width": 1440,
+      "exact": true
+    },
+    {
+      "route": "/ai-synlighet/",
+      "width": 900,
+      "exact": true
+    },
+    {
+      "route": "/ai-synlighet/",
+      "width": 390,
+      "exact": true
+    },
+    {
+      "route": "/ai-synlighet/",
+      "width": 320,
+      "exact": true
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "exact": true
+    },
+    {
+      "route": "/",
+      "width": 900,
+      "exact": true
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "exact": true
+    },
+    {
+      "route": "/",
+      "width": 320,
+      "exact": true
+    },
+    {
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "width": 1440,
+      "exact": true
+    },
+    {
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "width": 900,
+      "exact": true
+    },
+    {
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "width": 390,
+      "exact": true
+    },
+    {
+      "route": "/innsikt/hva-bor-optimaliseres-forst/",
+      "width": 320,
+      "exact": true
+    },
+    {
+      "route": "/innsikt/",
+      "width": 1440,
+      "exact": true
+    },
+    {
+      "route": "/innsikt/",
+      "width": 900,
+      "exact": true
+    },
+    {
+      "route": "/innsikt/",
+      "width": 390,
+      "exact": true
+    },
+    {
+      "route": "/innsikt/",
+      "width": 320,
+      "exact": true
+    },
+    {
+      "route": "/kontakt/",
+      "width": 1440,
+      "exact": true
+    },
+    {
+      "route": "/kontakt/",
+      "width": 900,
+      "exact": true
+    },
+    {
+      "route": "/kontakt/",
+      "width": 390,
+      "exact": true
+    },
+    {
+      "route": "/kontakt/",
+      "width": 320,
+      "exact": true
+    },
+    {
+      "route": "/konvertering/",
+      "width": 1440,
+      "exact": true
+    },
+    {
+      "route": "/konvertering/",
+      "width": 900,
+      "exact": true
+    },
+    {
+      "route": "/konvertering/",
+      "width": 390,
+      "exact": true
+    },
+    {
+      "route": "/konvertering/",
+      "width": 320,
+      "exact": true
+    },
+    {
+      "route": "/innsikt/male-effekt-av-optimalisering/",
+      "width": 1440,
+      "exact": true
+    },
+    {
+      "route": "/innsikt/male-effekt-av-optimalisering/",
+      "width": 900,
+      "exact": true
+    },
+    {
+      "route": "/innsikt/male-effekt-av-optimalisering/",
+      "width": 390,
+      "exact": true
+    },
+    {
+      "route": "/innsikt/male-effekt-av-optimalisering/",
+      "width": 320,
+      "exact": true
+    },
+    {
+      "route": "/nettbutikkoptimalisering/",
+      "width": 1440,
+      "exact": true
+    },
+    {
+      "route": "/nettbutikkoptimalisering/",
+      "width": 900,
+      "exact": true
+    },
+    {
+      "route": "/nettbutikkoptimalisering/",
+      "width": 390,
+      "exact": true
+    },
+    {
+      "route": "/nettbutikkoptimalisering/",
+      "width": 320,
+      "exact": true
+    },
+    {
+      "route": "/om/",
+      "width": 1440,
+      "exact": true
+    },
+    {
+      "route": "/om/",
+      "width": 900,
+      "exact": true
+    },
+    {
+      "route": "/om/",
+      "width": 390,
+      "exact": true
+    },
+    {
+      "route": "/om/",
+      "width": 320,
+      "exact": true
+    },
+    {
+      "route": "/personvern/",
+      "width": 1440,
+      "exact": true
+    },
+    {
+      "route": "/personvern/",
+      "width": 900,
+      "exact": true
+    },
+    {
+      "route": "/personvern/",
+      "width": 390,
+      "exact": true
+    },
+    {
+      "route": "/personvern/",
+      "width": 320,
+      "exact": true
+    },
+    {
+      "route": "/priser/",
+      "width": 1440,
+      "exact": true
+    },
+    {
+      "route": "/priser/",
+      "width": 900,
+      "exact": true
+    },
+    {
+      "route": "/priser/",
+      "width": 390,
+      "exact": true
+    },
+    {
+      "route": "/priser/",
+      "width": 320,
+      "exact": true
+    },
+    {
+      "route": "/seo/",
+      "width": 1440,
+      "exact": true
+    },
+    {
+      "route": "/seo/",
+      "width": 900,
+      "exact": true
+    },
+    {
+      "route": "/seo/",
+      "width": 390,
+      "exact": true
+    },
+    {
+      "route": "/seo/",
+      "width": 320,
+      "exact": true
+    },
+    {
+      "route": "/synlighet/",
+      "width": 1440,
+      "exact": true
+    },
+    {
+      "route": "/synlighet/",
+      "width": 900,
+      "exact": true
+    },
+    {
+      "route": "/synlighet/",
+      "width": 390,
+      "exact": true
+    },
+    {
+      "route": "/synlighet/",
+      "width": 320,
+      "exact": true
+    },
+    {
+      "route": "/vilkar/",
+      "width": 1440,
+      "exact": true
+    },
+    {
+      "route": "/vilkar/",
+      "width": 900,
+      "exact": true
+    },
+    {
+      "route": "/vilkar/",
+      "width": 390,
+      "exact": true
+    },
+    {
+      "route": "/vilkar/",
+      "width": 320,
+      "exact": true
+    },
+    {
+      "route": "/vurdering/",
+      "width": 1440,
+      "exact": true
+    },
+    {
+      "route": "/vurdering/",
+      "width": 900,
+      "exact": true
+    },
+    {
+      "route": "/vurdering/",
+      "width": 390,
+      "exact": true
+    },
+    {
+      "route": "/vurdering/",
+      "width": 320,
+      "exact": true
+    },
+    {
+      "route": "/begreper/",
+      "width": 1440,
+      "exact": true
+    },
+    {
+      "route": "/begreper/",
+      "width": 900,
+      "exact": true
+    },
+    {
+      "route": "/begreper/",
+      "width": 390,
+      "exact": true
+    },
+    {
+      "route": "/begreper/",
+      "width": 320,
+      "exact": true
+    },
+    {
+      "route": "/404.html",
+      "width": 1440,
+      "exact": true
+    },
+    {
+      "route": "/404.html",
+      "width": 900,
+      "exact": true
+    },
+    {
+      "route": "/404.html",
+      "width": 390,
+      "exact": true
+    },
+    {
+      "route": "/404.html",
+      "width": 320,
+      "exact": true
+    },
+    {
+      "route": "/design-system/",
+      "width": 1440,
+      "exact": true
+    },
+    {
+      "route": "/design-system/",
+      "width": 900,
+      "exact": true
+    },
+    {
+      "route": "/design-system/",
+      "width": 390,
+      "exact": true
+    },
+    {
+      "route": "/design-system/",
+      "width": 320,
+      "exact": true
+    }
+  ],
+  "images": [
+    {
+      "name": "404html-hero-1440.png",
+      "exact": true
+    },
+    {
+      "name": "404html-hero-390.png",
+      "exact": true
+    },
+    {
+      "name": "begreper-hero-1440.png",
+      "exact": true
+    },
+    {
+      "name": "begreper-hero-390.png",
+      "exact": true
+    },
+    {
+      "name": "demo-centered-1440.png",
+      "exact": false
+    },
+    {
+      "name": "demo-centered-390.png",
+      "exact": true
+    },
+    {
+      "name": "demo-centered-none-1440.png",
+      "exact": true
+    },
+    {
+      "name": "demo-centered-none-390.png",
+      "exact": true
+    },
+    {
+      "name": "demo-split-left-1440.png",
+      "exact": false
+    },
+    {
+      "name": "demo-split-left-390.png",
+      "exact": true
+    },
+    {
+      "name": "demo-split-right-1440.png",
+      "exact": false
+    },
+    {
+      "name": "demo-split-right-390.png",
+      "exact": true
+    },
+    {
+      "name": "footer-1440.png",
+      "exact": true
+    },
+    {
+      "name": "footer-320.png",
+      "exact": true
+    },
+    {
+      "name": "footer-390.png",
+      "exact": true
+    },
+    {
+      "name": "footer-900.png",
+      "exact": true
+    },
+    {
+      "name": "home-hero-1440.png",
+      "exact": true
+    },
+    {
+      "name": "home-hero-320.png",
+      "exact": true
+    },
+    {
+      "name": "home-hero-390.png",
+      "exact": true
+    },
+    {
+      "name": "home-hero-900.png",
+      "exact": true
+    },
+    {
+      "name": "innsikt-hero-1440.png",
+      "exact": true
+    },
+    {
+      "name": "innsikt-hero-390.png",
+      "exact": true
+    },
+    {
+      "name": "innsikt-hva-bor-optimaliseres-forst-hero-1440.png",
+      "exact": true
+    },
+    {
+      "name": "innsikt-hva-bor-optimaliseres-forst-hero-390.png",
+      "exact": true
+    },
+    {
+      "name": "konvertering-hero-1440.png",
+      "exact": true
+    },
+    {
+      "name": "konvertering-hero-390.png",
+      "exact": true
+    },
+    {
+      "name": "om-hero-1440.png",
+      "exact": true
+    },
+    {
+      "name": "om-hero-390.png",
+      "exact": true
+    },
+    {
+      "name": "priser-hero-1440.png",
+      "exact": true
+    },
+    {
+      "name": "priser-hero-390.png",
+      "exact": true
+    },
+    {
+      "name": "vurdering-hero-1440.png",
+      "exact": true
+    },
+    {
+      "name": "vurdering-hero-390.png",
+      "exact": true
+    }
+  ]
+}

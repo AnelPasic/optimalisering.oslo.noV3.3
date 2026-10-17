@@ -1,0 +1,24 @@
+{
+  "base": "https://optimalisering-oslo-v33.anel.workers.dev",
+  "phase": "live",
+  "records": [
+    {
+      "width": 1440,
+      "heroPrimary": "/#sjekk",
+      "heroKeyboardOrTap": true,
+      "footerGlossaryKeyboardOrTap": true,
+      "glossaryNavigation": true,
+      "assessmentTransportDisabled": true
+    },
+    {
+      "width": 390,
+      "heroPrimary": "/#sjekk",
+      "heroKeyboardOrTap": true,
+      "footerGlossaryKeyboardOrTap": true,
+      "glossaryNavigation": true,
+      "assessmentTransportDisabled": true
+    }
+  ],
+  "errors": [],
+  "posts": []
+}

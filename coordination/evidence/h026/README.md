@@ -1,6 +1,6 @@
 # H-026 — genuine daisyUI Hero / Footer reuse
 
-2026-10-17. Actual D-092 and `H026-DAISYUI-HERO-FOOTER-REUSE.md` authorize this scoped implementation after OWNER accepts H-024A4/H-024A5 Card appearance/readability. Incoming main173f6c3 includes that approval. No further Card changes; no full H-024A3 editor acceptance, H-024B, H-022 or launch authority.
+2026-10-17. Actual D-092 and `H026-DAISYUI-HERO-FOOTER-REUSE.md` authorize this scoped implementation after OWNER accepts H-024A4/H-024A5 Card appearance/readability. Incoming main173f6c3 includes that approval; implementation `2727fca05fe867f6e43621ca480f6c46ceded1c9` is published. No further Card changes; no full H-024A3 editor acceptance, H-024B, H-022 or launch authority.
 
 ## Actual reuse and scope
 
@@ -21,6 +21,14 @@ PostCSS census: **61 custom CSS declarations removed (Hero46, shared Footer15), 
 - **Review/protection:** independent-review.md records one independent read-only code/visual/UX review with no blocker. preservation.json protects174 content/config/reference/accepted media/theme/Card/type/calculator files plus five untracked OWNER PNGs; all hashes match independently. Only four product files change: CommercialHero, HomeFooter, hero.css, shared.css.
 
 Browser screenshots/computed records distinguish unchanged approved appearance from real component structure. No acceptance is inferred from tests, classes or technical delivery alone.
+
+## Exact native Worker result
+
+Implementation2727fca → native Build `8a466d5d-9d0f-4a0e-9252-4de1df03c707 SUCCESS` → Worker `e3fa5e9f-366d-4cff-a7ea-0455cd903f17 at100%`. Full non-truncated logs/commit/deployment metadata: native-implementation.json. Native jobs run build/deploy, not local full verify.
+
+Actual [Worker homepage](https://optimalisering-oslo-v33.anel.workers.dev/) and [same production Hero demos](https://optimalisering-oslo-v33.anel.workers.dev/design-system/) are captured in live/. All72 actual route/width snapshots are strictly identical to before-Worker (native-parity.json);29/32 native screenshots byte-identical with the same three photo-only desktop demo differences. live-actions.json verifies actual keyboard/touch CTA/Footer navigation and unchanged form gates with no submit/errors/POSTs. live-assets.json verifies all53 clean assets byte-identical, noindex header/meta, disabled intake/blocked robots/empty sitemap and correct404 behavior.174 protected files/five untracked OWNER PNGs remain byte-exact in preservation-final.json.
+
+The final coordination-only receipt push changes no runtime asset; its exact native success and53-file Worker readback are verified separately without an endless self-referential commit loop. Find that receipt revision via Git history. Current OWNER gate remains separate from technical delivery.
 
 ## Reproduction and next gate
 

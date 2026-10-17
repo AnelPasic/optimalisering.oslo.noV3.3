@@ -1,5 +1,9 @@
 # Decisions and authority
 
+## H-026 technical receipt — 2026-10-17 (OWNER Hero/Footer review pending)
+
+Implementation2727fca consumes actual D-092/H-026: genuine shared hero/hero-content in all9 families and native Footer grid/title/directions, existing four CMS presets and source/shell/typography/media/proof/form/footer semantics preserved.61 custom CSS declarations removed, zero added; Tailwind composes accepted responsive layout without a second component system. Exact72 default/DS and208 source-preset snapshots,142 tests/196 typography groups, actual keyboard/touch and independent code/visual review pass.174 protected files/five OWNER PNGs exact. Exact native8a466d5d SUCCESS / Workere3fa5e9f at100% reproduces72 identical before-Worker snapshots and53 byte-identical build assets with safeguards intact.29/32 screenshots exact; three desktop demo photo-only raster differences max6/255, no layout/crop change. Evidence/map/justified exceptions: `evidence/h026/README.md`. This is technical delivery, NOT an incoming OWNER H-026 PASS. STOP for separate Hero/Footer visual review; D-088/D-092 accepted scopes stand, H-024A3 whole-editor separate, H-024B blocked, H-022 parked, no launch.
+
 ## D-092 — OWNER PASS Card appearance/typography; H-026 authorized — 2026-10-17
 
 OWNER accepted H-024A4's visual Card component design with earlier feedback **"ja men ..."** limited to excessive small text. After delivered H-024A5 (actual daisyUI card description 14px → 16px mobile/18px desktop), OWNER explicitly confirms **"ja størrelsen er bra nå."** Together, these constitute a **scoped OWNER PASS / CLOSED for H-024A4 Card design and H-024A5 Card readability**. The same actual ContentCard is shared with CMS and /design-system/. Preserved content, selected surface/column variants, and H-025 four Hero presets remain accepted within their respective gates.
