@@ -414,8 +414,8 @@
       "id": "mekanisme",
       "eyebrow": "Start med det som begrenser resultatet",
       "heading": "Slik finner vi hva som bør gjøres først",
-      "layout": "two-columns",
-      "surface": "soft",
+      "layout": "default",
+      "surface": "default",
       "body": [
         "Behovet avgjør tiltakene. Vi starter ikke med SEO eller en annen kanal bare fordi du kom inn på en bestemt side."
       ],
