@@ -1,5 +1,15 @@
 # ChatGPT to Codex
 
+## Active handoff — H-024A4 CARD PARITY / H-024A3 OWNER REVISE
+
+Date: 2026-10-17. Direct OWNER CMS and visual screenshot feedback: homepage `Boksvariant: Kort` does **not** look like approved card demonstrations on `/design-system/`. Full diagnosis and scoped correction: `coordination/H024A4-CMS-CARD-DESIGN-PARITY.md`.
+
+Inspect current main and preserve OWNER's real `home.json` saves. The demos render `card > card-body > card-title`, while real ordinary CMS items render `info-item.card` with separate inherited composition CSS. Make them share the same approved visual card primitive. Keep Standard as editorial when no explicit card selected; do not convert all section steps to cards without selection. The pictured `mekanisme` 4-step frontend is **not** the CMS-edited `passer` 2-card section; capture and compare the same section and test separate four-card step fixture. Preserve section/child backgrounds, dark contrast, title/text, optional links and original numbers. Do not alter approved design-system look.
+
+Prove browser computed geometry + actual CMS card change → Git → native build → live `passer` view → restore; compare across routes/widths and 2/3/4 card states. H-025 Heroes remain OWNER PASS under D-088; this finding means H-024A3 is **REVISE**, not PASS. H-024B stays blocked, H-022 parked, launch gates unchanged. Push complete scoped fix and STOP for OWNER same-section visual review.
+
+---
+
 ## Latest OWNER verdict — D-088 H-025/H-025A HERO PASS / NO ACTIVE IMPLEMENTATION HANDOFF
 
 Date: 2026-10-17. OWNER directly confirms: **"ja, testet og ser bra ut på Heros."** The four predefined page-specific Hero presets and corrected nondestructive `Sentrert uten bilde` behavior are **OWNER ACCEPTED** under D-088. Do not reopen Hero layouts or the OWNER-liked lower design-system component treatments.
