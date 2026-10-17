@@ -477,6 +477,7 @@
       "id": "sjekk",
       "name": "Gratis sjekk",
       "content": {
+        "layout": "horizontal",
         "section": {
           "_block": "protected",
           "id": "sjekk",
