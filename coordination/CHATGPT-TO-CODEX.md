@@ -1,5 +1,19 @@
 # ChatGPT to Codex
 
+## Active handoff — H-024A5 CARD BODY TYPOGRAPHY (OWNER REVISE)
+
+Date: 2026-10-17. OWNER says: **"ja men merket at alle kort har litt for liten font, ser det er på [design-system] også, så det er vel globalt. tenker 1rem burde være passe eller det minste."**
+
+The H-024A4 true daisyUI Card structure/visual composition is positively received **except for small card text**; do not record an unconditional whole-editor PASS. New scoped correction: `coordination/H024A5-CARD-BODY-TYPE-FLOOR.md`.
+
+- **Substantive card body/description at least 1rem** (16px normal root) in live `/#passer`, the actual shared 2/3/4 demos, and other real card families where applicable. Distinguish from badges, meta, numbering, CTA, stat labels.
+- `--type-body` already has min1rem; check **computed** typography and cascade first. If text already computes >=1rem, do not fake a fix; try a restrained 1.0625rem–1.125rem for substantive descriptions with visual evidence.
+- One global semantic card-body approach, not a broad site-wide font change; preserve existing daisyUI card structure, rounded geometry, colors, CMS fields and OWNER copy. Avoid CSS specificity wars.
+- Actual computed before/after table + 1440/900/390/320 screenshot comparisons `/#passer` vs `/design-system/` and long/dark cards, focused QA and one bounded verify. No CMS saves needed if source/editor untouched.
+- H-026 Hero/Footer reuse remains **QUEUED** until this readability review is resolved; H-024B BLOCKED, H-022 PARKED; no launch.
+
+---
+
 ## OWNER daisyUI reuse rule — MWS-029 / H-024A4 now; H-026 after review
 
 Date: 2026-10-17. OWNER requires use of **real daisyUI components wherever suitable**, explicitly naming [Footer](https://daisyui.com/components/footer/) and [Hero](https://daisyui.com/components/hero/). This strengthens MWS-020 with canonical MWS-029 in `AnelPasic/MedonWebSystem`.
@@ -12,7 +26,7 @@ H-024B stays blocked; H-022 parked; no launch.
 
 ---
 
-## Active handoff — H-024A4 CARD PARITY / H-024A3 OWNER REVISE
+## Historical handoff — H-024A4 CARD PARITY (DELIVERED; D-091 type readability follow-up)
 
 Date: 2026-10-17. Direct OWNER CMS and visual screenshot feedback: homepage `Boksvariant: Kort` does **not** look like approved card demonstrations on `/design-system/`. Full diagnosis and scoped correction: `coordination/H024A4-CMS-CARD-DESIGN-PARITY.md`.
 
