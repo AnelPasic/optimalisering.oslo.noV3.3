@@ -1,5 +1,11 @@
 # Decisions and authority
 
+## D-094 — OWNER REVISE H-024A3 section/component consistency; H-024A6 authorized — 2026-10-17
+
+Direct OWNER provides four screenshots and points to independently styled elements: homepage assessment/contact (`.invite-home .assessment-grid {gap:96px;max-width:1280px}`), CMS `Boksvariant` examples **missing horizontal padding**, and production FAQ at the bottom that OWNER cannot find as the same component in `/design-system/`. Source diagnosis confirms `assessment-grid` also has older shared sizing, non-card `info-item` has `padding:var(--panel-pad) 0 0`, homepage FAQ is inlined in `HomepageBlock.astro` while other routes use `Faq.astro`, and the design-system shows a **different standalone collapse example**, not the actual homepage FAQ. These issues are **outside the D-093 H-026 Hero/Footer PASS** and block final H-024A3 editor acceptance.
+
+OWNER feedback authorizes a **scoped H-024A6 correction**: `coordination/H024A6-SECTION-COMPONENT-PARITY.md`. Normalize production assessment alignment and genuine form-card shell without altering field/transport truth; fix safe meaningful Standard/Open item padding without regressing D-092 Cards or page-specific editorial layouts; unify real FAQ renderer across homepage/other pages and show real homepage FAQ + real assessment in `/design-system/`. Audit other homepage component/demo parity but do not automatically expand implementation to unreviewed families. Preserve all accepted Hero/Footer/Card/PageList, existing OWNER CMS data/order, content/pricing/proof/CTA and launch guards. **H-024A3 whole-editor remains OWNER REVISE; H-024B BLOCKED; H-022 PARKED.** H-024A6 must STOP for OWNER review. No launch.
+
 ## D-093 — OWNER PASS H-026 daisyUI Hero/Footer visual review — 2026-10-17
 
 **Authority: direct OWNER review** of published H-026 Worker after technical delivery `5d4f7d6`. OWNER confirms: **"ser riktig ut"**, answering the explicit question whether **Hero and Footer** look correct. Therefore **H-026 is OWNER PASS / COMPLETE for its scoped Hero/Footer component reuse and visual appearance**. Existing four Hero choices, page media/copy, navigation/Footer content, responsiveness and Card typography stay accepted within their prior scoped gates. Technical receipt: `coordination/evidence/h026/README.md`.
