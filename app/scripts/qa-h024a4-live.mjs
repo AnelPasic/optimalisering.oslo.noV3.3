@@ -33,5 +33,5 @@ for(const path of ['/api/leads','/api/orders','/not-a-real-h024a4-page/']) asser
 for(const name of ['home-invite','service-invite','pricing-invite','package-offer']) assert.equal((await fetch(`${base}/styles/${name}.css`)).status,404,'Removed legacy stylesheet stays unavailable');
 const home=await (await fetch(base+'/')).text();assert.match(home,/<button[^>]+type="submit"[^>]*disabled/);
 records.sort((a,b)=>a.path.localeCompare(b.path));
-writeFileSync('../coordination/evidence/h024a4/live-assets.json',JSON.stringify({base,matchedAssets:records.length,noindex:true,intakeDisabled:true,robotsBlocked:true,sitemapEmpty:true,custom404:true,records},null,2)+'\n');
+writeFileSync(process.env.QA_OUTPUT_PATH||'../coordination/evidence/h024a4/live-assets.json',JSON.stringify({base,matchedAssets:records.length,noindex:true,intakeDisabled:true,robotsBlocked:true,sitemapEmpty:true,custom404:true,records},null,2)+'\n');
 console.log(`H-024A4 live: ${records.length} matching assets (${records.filter(r=>r.lineEndingEquivalent).length} text-only line-ending equivalents); noindex, disabled intake, blocked robots, empty sitemap and 404 PASS.`);

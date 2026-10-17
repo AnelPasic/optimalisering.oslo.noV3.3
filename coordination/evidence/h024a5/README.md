@@ -1,6 +1,6 @@
 # H-024A5 — Card Typography
 
-2026-10-17, actual OWNER D-091 / `H024A5-CARD-BODY-TYPE-FLOOR.md`. Incoming main `a4ebf46`. Narrow presentation correction; STOP for OWNER readability comparison. H-026 queued until review, H-024B blocked, H-022 parked. No launch/intake/indexing change.
+2026-10-17, actual OWNER D-091 / `H024A5-CARD-BODY-TYPE-FLOOR.md`. Incoming main `a4ebf46`; published implementation `f267eebd7ce8ebdecbcab8ff9bdb3e32da407d00`. Narrow presentation correction; STOP for OWNER readability comparison. H-026 queued until review, H-024B blocked, H-022 parked. No launch/intake/indexing change.
 
 ## Measured cause and minimal change
 
@@ -24,6 +24,14 @@ Official component reference consulted2026-10-17: [daisyUI Card](https://daisyui
 
 Reproduce from app/: QA_PHASE=before or after `node scripts/qa-h024a5.mjs`; optional QA_BASE_URL for the actual Worker. Do not overwrite before evidence. Default comparison uses existing qa-h025.mjs with this task's QA_OUTPUT_DIR and QA_BASELINE_PATH. `npm run verify` is the one full gate; typography screenshots use this task's QA_OUTPUT_DIR.
 
-## Review boundary
+## Exact native Worker confirmation
+
+Implementation f267eeb reaches exact native Build `33df8b1d-9241-4c51-8add-68316833387f SUCCESS`, Worker `5f319fbf-2439-46ee-a646-dc49b937f121 at100%`. Complete non-truncated logs and commit/deployment metadata: native-implementation.json. Native jobs run build/deploy, not the local full verify.
+
+Actual [homepage passer](https://optimalisering-oslo-v33.anel.workers.dev/#passer) and [design-system](https://optimalisering-oslo-v33.anel.workers.dev/design-system/) are checked in live/:32 real route/width inventories and four-width screenshots show the same measured body improvement and unchanged compact roles/geometry. defaults-live/checks.json passes68 original content/SEO/IDs/order/media/crop/CTA/Hero comparisons, zero errors/POSTs. live-assets.json confirms all53 clean assets byte-identical, noindex meta/header, disabled intake, blocked robots, empty sitemap, correct404. The existing qa-h024a4-live.mjs asset checker gained only optional QA_OUTPUT_PATH so this task reuses it without overwriting historical evidence. No duplicate checker implementation.
+
+preservation-final.json recomputes173 protected files and five untracked OWNER PNGs: all byte-exact. Receipt-only final push changes no runtime/build asset; its native success/current Worker asset readback is checked separately and identified through Git history, avoiding self-referential hashes.
+
+## OWNER review boundary
 
 OWNER compares actual `/#passer` and `/design-system/` Card text at desktop/mobile. This is a measured readability correction, not an unconditional H-024A3 editor PASS. Existing H-025/H-025A Hero acceptance stands. Native review Worker delivery does not authorize launch. H-026 remains queued for after OWNER Card readability review.
