@@ -1,0 +1,421 @@
+{
+  "phase": "changed",
+  "base": "https://optimalisering-oslo-v33.anel.workers.dev",
+  "sourceOnlyVariant": true,
+  "records": [
+    {
+      "width": 1440,
+      "sections": [
+        "behov",
+        "regneeksempel",
+        "priser",
+        "resultater",
+        "mekanisme",
+        "passer",
+        "sjekk",
+        "sporsmal"
+      ],
+      "text": "For bedrifter som konkurrerer om kundeneBli funnet. Gjør større andel av besøk til henvendelser og salg.SEO, AI-synlighet og konverteringsoptimalisering for bedrifter i Oslo og resten av Norge. Vi starter der kundereisen stopper.Ta en gratis sjekkSe priserROAS 4,3x -> 17,2xEurotents · Google AdsHva trenger du hjelp med?SynlighetBli funnetSEO, AI-synlighet og lokal synlighet når kundene leter etter det du tilbyr.Se SynlighetKonverteringFlere besøk til henvendelser og salgKonverteringsoptimalisering for nettsider, landingssider og nettbutikker.Se KonverteringSynlighet X KonverteringJa takk - Begge delerVi finner flaskehalsen og starter der det gir mest effekt.Se alternativeneSynlighet og konvertering forsterker hverandreHva betyr flere relevante besøk og en bedre kjøpsvei?Endre trafikken, andelen som tar kontakt eller kjøper - eller begge. Se hvordan de to grepene virker sammen.Relevante besøk x konverteringsrate = henvendelser / kjøpRelevante besøk per månedKonverteringsrate i dag (%)Mer relevant trafikk per måned (%)Ny konverteringsrate (%)Bruk besøk fra 0 til 10 000 000, trafikkøkning fra 0 til 1 000 % og konverteringsrater fra 0 til 100 %.I dag10henvendelser / kjøp per måned2 000 × 0,5 %Scenario125,5Måned 12henvendelser / kjøp per måned6 276,9 × 2 %X: 12,6X(1 255%)Illustrasjon - ikke prognose 12 månederUten optimaliseringMed optimalisering10125,5123456789101112function e(e,t){if(!Number.isFinite(e)||!Number.isFinite(t)||e<0||t<0||t>100)throw RangeError(`Invalid illustrative input`);return e*t/100}function t(t,n,r,i,a=1){if(!Number.isFinite(r)||r<0)throw RangeError(`Invalid illustrative traffic increase`);if(!Number.isSafeInteger(a)||a<1)throw RangeError(`Invalid illustrative month count`);let o=e(t,n),s=t*(1+r/100)**a,c=e(s,i),l=c-o,u=o===0?NaN:l/o*100;return{current:o,scenarioVisits:s,scenario:c,difference:l,increase:Number.isFinite(u)?u:null}}var n=new Intl.NumberFormat(`nb-NO`,{maximumFractionDigits:1}),r=new Intl.NumberFormat(`nb-NO`,{maximumFractionDigits:0});function i(e,t){let i=t/e;return!Number.isFinite(e)||!Number.isFinite(t)||e<=0||t<0||!Number.isFinite(i)||!Number.isFinite(i*100)?null:{multiplier:`${n.format(i)}X`,percentage:`(${r.format(i*100)}%)`}}function a(e,t,n,r=128){let i=t.length-1,a=t[i],o=r-40,s=Math.max(e,...t,1),c=e=>e.map((e,t)=>({x:12+(n-104)*t/i,y:o-e/s*(o-20),value:e})),l=c(Array(t.length).fill(e)),u=c(t),d=e=>e.map((e,t)=>`${t?`L`:`M`} ${e.x.toFixed(2)} ${e.y.toFixed(2)}`).join(` `);return{current:l,scenario:u,currentPath:d(l),scenarioPath:d(u),currentLabelY:l[i].y+(a>e?16:-10),scenarioLabelY:u[i].y+(a>e?-10:16)}}var o=document.querySelector(`[data-leverage]`);if(o){let e=[`visits`,`conversion`,`trafficIncrease`,`newConversion`].map(e=>o.querySelector(`[name=\"${e}\"]`)),n=o.querySelector(`[data-current]`),r=o.querySelector(`[data-scenario]`),s=o.querySelector(`[data-multiplier]`),c=o.querySelector(`[data-percentage]`),l=o.querySelector(`[data-current-equation]`),u=o.querySelector(`[data-scenario-equation]`),d=o.querySelector(`#calculator-error`),f=o.querySelector(`[data-scenario-chart]`),p=f.querySelector(`svg`),m=[...o.querySelectorAll(`[data-slider]`)],h=new Intl.NumberFormat(`nb-NO`,{maximumFractionDigits:1}),g=new Intl.NumberFormat(`nb-NO`,{notation:`compact`,maximumFractionDigits:1});function _(){let _=e.every(e=>e.value!==``&&e.checkValidity());if(e.forEach(e=>e.setAttribute(`aria-invalid`,String(e.value===``||!e.checkValidity()))),d.hidden=_,f.hidden=!_,m.forEach(t=>{let n=e.find(e=>e.name===t.dataset.slider);n.value!==``&&n.checkValidity()&&(t.value=n.value)}),!_){[n,r,s,c,l,u].forEach(e=>e.textContent=`–`);return}let[v,y,b,x]=e.map(e=>Number(e.value)),S=t(v,y,b,x,12);n.value=h.format(S.current),r.value=h.format(S.scenario);let C=i(S.current,S.scenario);s.value=C?.multiplier??`–`,c.textContent=C?.percentage??o.dataset.undefinedIncrease,l.textContent=`${h.format(v)} × ${e[1].value.replace(`.`,`,`)} %`,u.textContent=`${h.format(S.scenarioVisits)} × ${e[3].value.replace(`.`,`,`)} %`;let{width:w,height:T}=p.getBoundingClientRect(),E=Array.from({length:12},(e,n)=>t(v,y,b,x,n+1).scenario),D=a(S.current,E,w,T);p.setAttribute(`viewBox`,`0 0 ${w} ${T}`),f.querySelector(`[data-chart-grid]`).setAttribute(`d`,`M 12 ${T-40} H ${w-92}`),f.querySelector(`[data-chart-current]`).setAttribute(`d`,D.currentPath),f.querySelector(`[data-chart-improved]`).setAttribute(`d`,D.scenarioPath);for(let[e,t,n,r]of[[`current`,D.current,S.current,D.currentLabelY],[`improved`,D.scenario,S.scenario,D.scenarioLabelY]]){let i=t[11],a=f.querySelector(`[data-chart-${e}-dot]`);a.setAttribute(`cx`,String(i.x)),a.setAttribute(`cy`,String(i.y));let o=f.querySelector(`[data-chart-${e}-value]`);o.setAttribute(`x`,String(i.x+10)),o.setAttribute(`y`,String(r));let s=h.format(n);o.textContent=s.length>10?g.format(n):s,o.setAttribute(`aria-label`,s)}f.querySelectorAll(`[data-chart-month]`).forEach((e,t)=>{e.setAttribute(`x`,String(D.current[t].x)),e.setAttribute(`y`,String(T-6))})}e.forEach(e=>e.addEventListener(`input`,_)),m.forEach(t=>{t.disabled=!1,t.addEventListener(`input`,()=>{let n=String(Math.round(Number(t.value)*10)/10);e.find(e=>e.name===t.dataset.slider).value=n,_()})}),new ResizeObserver(_).observe(p),_()}Fast månedlig optimaliseringTre pakker. Samme mål: flere riktige kunder.Velg pakken som passer hvor komplekst behovet ditt er - fra én tydelig flaskehals til flere kundereiser som må prioriteres løpende.Optimalisering4 500 kr/mndeks. mva.Ett viktig forbedringsområde om gangen.Én spakTydelig fremgangPasser forFor små og mellomstore bedrifter med én tydelig kundereise eller én flaskehals som er viktigst nå.Typiske situasjonerBlir ikke funnet når kundene søker.Har trafikk, men får for få henvendelser eller kjøp.Får for lite ut av Google Ads eller en annen viktig kanal.SEO / AI-synlighetKonverteringLokal SEOGoogle AdsBestill OptimaliseringOm pakkenPasser forPasser for små og mellomstore bedrifter med én tydelig kundereise, én hovedtjeneste eller én flaskehals som er viktigst akkurat nå.Typisk virksomhetTypisk en konkurranseutsatt lokal tjenestebedrift, mindre klinikk, regnskapskontor eller nisje-B2B-bedrift med én tydelig hovedtjeneste.Typiske situasjonerKundene finner deg ikke når de søker etter det du tilbyr.Du får relevant trafikk, men for få henvendelser eller kjøp.Du får for lite ut av Google Ads eller en annen viktig kanal.FokusSEO / AI-synlighetKonverteringsoptimaliseringLokal SEOGoogle Ads - ett tydelig fokusområdeDette jobber vi medVi jobber med én hovedflaskehals til neste prioritet er viktigere. Mindre støttearbeid rundt samme mål kan inngå.Velg Optimalisering når én flaskehals er tydelig viktigst akkurat nå.VekstAnbefalt6 900 kr/mndeks. mva.To grep som forsterker hverandre.To grepForsterker hverandrePasser forFor bedrifter som trenger fremgang på to deler av samme kundereise samtidig.Typiske situasjonerTrenger fart nå og vil bygge organisk synlighet over tid.Har trafikk, men vil få mer ut av den med bedre konvertering.Resultatet avhenger av at to områder forbedres samtidig.Google Ads + konverteringSEO / AI-synlighet + konverteringGoogle Ads + SEO / AI-synlighetBestill VekstOm pakkenPasser forPasser for bedrifter som trenger fremgang på to deler av samme kundereise samtidig.Typiske situasjonerDu trenger betalt synlighet for å få fart nå, men vil bygge organisk synlighet over tid.Du får trafikk, men vil få mer ut av den med bedre konvertering.Resultatet avhenger av at to områder forbedres samtidig.Populære kombinasjonerGoogle Ads + konverteringsoptimaliseringFå relevant trafikk nå og få mer ut av hvert besøk du allerede betaler for.SEO / AI-synlighet + konverteringsoptimaliseringBygg organisk synlighet og få flere relevante besøk videre til henvendelse eller kjøp.Google Ads + SEO / AI-synlighetBruk betalt synlighet for å få fart nå, og bygg organisk synlighet for å redusere avhengigheten av annonsebudsjett over tid.Velg Vekst når to forbedringer kan forsterke hverandre.Partnerfra 14 900 kr/mndeks. mva.Flere tjenester og kundereiser.Flere kundereiserPrioriteres løpendePasser forFor bedrifter med flere tjenester, markeder eller kundereiser som må prioriteres løpende.Typiske situasjonerFlere tjenester konkurrerer i ulike markeder.Ulike kundereiser trenger ulike grep.Trenger løpende prioritering på tvers.SEO / AI-synlighetGoogle AdsMeta AdsKonverteringAnalyseBestill PartnerOm pakkenPasser forPasser for bedrifter med flere tjenester, produktområder, markeder, lokasjoner eller målgrupper som møter forskjellige konkurrenter og trenger løpende prioritering på tvers.Typisk virksomhetTypisk en virksomhet med fire-fem forskjellige tjenester - for eksempel kantine, catering, fruktlevering og andre B2B-tjenester - der hver kundereise har egne søk, konkurrenter, sider og prioriteringer.Typiske situasjonerFlere tjenester eller produktområder konkurrerer i ulike markeder.Ulike kundereiser trenger ulike kombinasjoner av synlighet, annonser og konvertering.Du trenger en fast partner som prioriterer hva som bør forbedres hvor - og i hvilken rekkefølge.ArbeidsområderSEO / AI-synlighetGoogle AdsMeta AdsKonverteringsoptimaliseringAnalyse og sporingDette jobber vi medVi prioriterer løpende kundereisene med størst kommersiell verdi eller størst forbedringspotensial. Det betyr ikke at alt gjøres samtidig eller at kapasiteten er ubegrenset.Velg Partner når flere forskjellige kundereiser må forbedres og prioriteres løpende.Omfang og fast månedspris avtales før oppstart.Annonsebudsjett kommer i tillegg.Usikker? Ta en gratis sjekkDokumenterte resultaterResultater fra kundearbeidEurotentsROAS - Google AdsFør4,3xapril 2025->Etter17,2xapril 202620 % lavere annonseforbrukNystaFullført checkout - Shopify+36,5 prosentpoengFør7,1 %30 dager før->Etter43,6 %første 30 dager etterHelt OpplagtOrganiske klikk - Google Search Console+93 %Før2 162mars-september 2025->Etter4 181mars-september 2026Start med det som begrenser resultatetSlik finner vi hva som bør gjøres førstBehovet avgjør tiltakene. Vi starter ikke med SEO eller en annen kanal bare fordi du kom inn på en bestemt side.01Finn flaskehalsenSe hvor kundereisen stopper: før besøket, på siden eller i veien til kontakt og kjøp.02Prioriter tiltakVelg en fornuftig start ut fra behov, kommersiell verdi og det vi faktisk vet.03GjennomførGjør arbeidet som er avtalt. Omfang og ansvar skal være tydelig.04Mål effektFølg med på relevante henvendelser og kjøp. Se resultatene sammen med verdi og kostnader.Er dette aktuelt for bedriften?Best når kundene faktisk har et valg.Passer godt hvisBedriften konkurrerer om kundene, har kapasitet til flere henvendelser eller salg, og en ny kunde eller ordre har nok verdi til at forbedringer kan lønne seg.Passer dårlig hvisDu er allerede det eneste reelle alternativet og kundene finner deg uten problemer. Tenk en tannklinikk på et lite sted som er eneste klinikk innenfor 100 km, eller en nettbutikk som er eneste norske forhandler av reservedeler til gamle flipperspill og allerede eier de relevante søkene.Gratis, manuell sjekkSend nettsiden. Vi sier hvor vi ville startet - og hvorfor.Få våre 3 viktigste funn innen 2 virkedager.Vi ser på den offentlige nettsiden eller nettbutikken og sender deg de tre viktigste tingene vi ville undersøkt eller forbedret først.Dette er en kort, manuell vurdering - ikke en full revisjon, prognose eller gratis gjennomføring. Videre arbeid avtales separat.Send nettsidenNettside eller nettbutikk *E-post *Kort kommentar ValgfrittIkke send innlogging, sensitive opplysninger eller personopplysninger om andre.Dette er en forhåndsvisning. Innsending er ikke åpnet ennå.Ta en gratis sjekkVi bruker opplysningene for å følge opp forespørselen. Les om personvern.var e=document.querySelector(`[data-home-assessment]`);e?.addEventListener(`submit`,t=>{t.preventDefault();let n=e.querySelector(`.form-status`);n.textContent=e.dataset.disabledStatus,n.hidden=!1,n.focus()});Greit å viteFør du tar neste stegHva skjer etter den gratis sjekken?Vi gjør en kort, manuell vurdering og begrunner hvor vi ville startet. Hvis det er noe vi kan hjelpe med, avtaler vi omfang og pris før betalt arbeid. Sjekken er ikke en full revisjon eller gratis gjennomføring.Hva koster videre arbeid?Optimalisering koster 4 500 kr/mnd, Vekst 6 900 kr/mnd og Partner fra 14 900 kr/mnd. Alle priser er eks. mva. Velg Optimalisering når én flaskehals er tydelig viktigst akkurat nå. Velg Vekst når to forbedringer kan forsterke hverandre. Velg Partner når flere forskjellige kundereiser må forbedres og prioriteres løpende.Er annonsebudsjett og eksterne kostnader inkludert?Annonsebudsjett kommer i tillegg. Aktuelle eksterne plattformkostnader kommer i tillegg hvis ikke annet er uttrykkelig avtalt.Hva hvis både synlighet og konvertering begrenser resultatet?Da ser vi på sammenhengen. Vi finner flaskehalsen og prioriterer tiltakene i riktig rekkefølge, fremfor å starte med en fast kanal.Jobber dere bare med bedrifter i Oslo?Nei. Vi jobber med bedrifter i hele Norge og kan også hjelpe i andre nordiske markeder. Navnet beskriver tjenesten og satsingen - ikke et krav om at kunden holder til i Oslo.",
+      "cards": [
+        {
+          "variant": "card",
+          "radius": "20px",
+          "surface": "dark",
+          "background": "oklch(0.250753 0.100773 313.031)",
+          "color": "oklch(0.942974 0.0169783 192.351)",
+          "body": true,
+          "padding": "24px",
+          "gap": "20px",
+          "links": []
+        },
+        {
+          "variant": "plain",
+          "radius": "0px",
+          "surface": "soft",
+          "background": "oklch(0.984485 0.00447018 314.805)",
+          "color": "oklch(0.278712 0.0437809 312.743)",
+          "body": false,
+          "links": []
+        }
+      ],
+      "mechanism": {
+        "html": "<section id=\"mekanisme\" class=\"content-section section-space home-section-mekanisme\" data-surface=\"soft\"><div class=\"shell\"><div class=\"section-heading\"><div><p class=\"eyebrow\">Start med det som begrenser resultatet</p><h2>Slik finner vi hva som bør gjøres først</h2></div><div class=\"body-copy\"><p>Behovet avgjør tiltakene. Vi starter ikke med SEO eller en annen kanal bare fordi du kom inn på en bestemt side.</p></div></div><div class=\"section-items mechanism-steps\"><article class=\"info-item home-item-0\" data-surface=\"base\"><span class=\"item-number\" aria-hidden=\"true\">01</span><h3>Finn flaskehalsen</h3><p>Se hvor kundereisen stopper: før besøket, på siden eller i veien til kontakt og kjøp.</p></article><article class=\"info-item home-item-1\" data-surface=\"soft\"><span class=\"item-number\" aria-hidden=\"true\">02</span><h3>Prioriter tiltak</h3><p>Velg en fornuftig start ut fra behov, kommersiell verdi og det vi faktisk vet.</p></article><article class=\"info-item home-item-2\" data-surface=\"mint\"><span class=\"item-number\" aria-hidden=\"true\">03</span><h3>Gjennomfør</h3><p>Gjør arbeidet som er avtalt. Omfang og ansvar skal være tydelig.</p></article><article class=\"info-item home-item-3\" data-surface=\"lavender\"><span class=\"item-number\" aria-hidden=\"true\">04</span><h3>Mål effekt</h3><p>Følg med på relevante henvendelser og kjøp. Se resultatene sammen med verdi og kostnader.</p></article></div></div></section>",
+        "rect": {
+          "x": 0,
+          "y": 4739.296875,
+          "width": 1440,
+          "height": 669.171875,
+          "top": 4739.296875,
+          "right": 1440,
+          "bottom": 5408.46875,
+          "left": 0
+        },
+        "items": [
+          {
+            "html": "<article class=\"info-item home-item-0\" data-surface=\"base\"><span class=\"item-number\" aria-hidden=\"true\">01</span><h3>Finn flaskehalsen</h3><p>Se hvor kundereisen stopper: før besøket, på siden eller i veien til kontakt og kjøp.</p></article>",
+            "rect": {
+              "x": 40,
+              "y": 5044.6875,
+              "width": 304,
+              "height": 259.78125,
+              "top": 5044.6875,
+              "right": 344,
+              "bottom": 5304.46875,
+              "left": 40
+            }
+          },
+          {
+            "html": "<article class=\"info-item home-item-1\" data-surface=\"soft\"><span class=\"item-number\" aria-hidden=\"true\">02</span><h3>Prioriter tiltak</h3><p>Velg en fornuftig start ut fra behov, kommersiell verdi og det vi faktisk vet.</p></article>",
+            "rect": {
+              "x": 392,
+              "y": 5044.6875,
+              "width": 304,
+              "height": 259.78125,
+              "top": 5044.6875,
+              "right": 696,
+              "bottom": 5304.46875,
+              "left": 392
+            }
+          },
+          {
+            "html": "<article class=\"info-item home-item-2\" data-surface=\"mint\"><span class=\"item-number\" aria-hidden=\"true\">03</span><h3>Gjennomfør</h3><p>Gjør arbeidet som er avtalt. Omfang og ansvar skal være tydelig.</p></article>",
+            "rect": {
+              "x": 744,
+              "y": 5044.6875,
+              "width": 304,
+              "height": 259.78125,
+              "top": 5044.6875,
+              "right": 1048,
+              "bottom": 5304.46875,
+              "left": 744
+            }
+          },
+          {
+            "html": "<article class=\"info-item home-item-3\" data-surface=\"lavender\"><span class=\"item-number\" aria-hidden=\"true\">04</span><h3>Mål effekt</h3><p>Følg med på relevante henvendelser og kjøp. Se resultatene sammen med verdi og kostnader.</p></article>",
+            "rect": {
+              "x": 1096,
+              "y": 5044.6875,
+              "width": 304,
+              "height": 259.78125,
+              "top": 5044.6875,
+              "right": 1400,
+              "bottom": 5304.46875,
+              "left": 1096
+            }
+          }
+        ]
+      }
+    },
+    {
+      "width": 900,
+      "sections": [
+        "behov",
+        "regneeksempel",
+        "priser",
+        "resultater",
+        "mekanisme",
+        "passer",
+        "sjekk",
+        "sporsmal"
+      ],
+      "text": "For bedrifter som konkurrerer om kundeneBli funnet. Gjør større andel av besøk til henvendelser og salg.SEO, AI-synlighet og konverteringsoptimalisering for bedrifter i Oslo og resten av Norge. Vi starter der kundereisen stopper.Ta en gratis sjekkSe priserROAS 4,3x -> 17,2xEurotents · Google AdsHva trenger du hjelp med?SynlighetBli funnetSEO, AI-synlighet og lokal synlighet når kundene leter etter det du tilbyr.Se SynlighetKonverteringFlere besøk til henvendelser og salgKonverteringsoptimalisering for nettsider, landingssider og nettbutikker.Se KonverteringSynlighet X KonverteringJa takk - Begge delerVi finner flaskehalsen og starter der det gir mest effekt.Se alternativeneSynlighet og konvertering forsterker hverandreHva betyr flere relevante besøk og en bedre kjøpsvei?Endre trafikken, andelen som tar kontakt eller kjøper - eller begge. Se hvordan de to grepene virker sammen.Relevante besøk x konverteringsrate = henvendelser / kjøpRelevante besøk per månedKonverteringsrate i dag (%)Mer relevant trafikk per måned (%)Ny konverteringsrate (%)Bruk besøk fra 0 til 10 000 000, trafikkøkning fra 0 til 1 000 % og konverteringsrater fra 0 til 100 %.I dag10henvendelser / kjøp per måned2 000 × 0,5 %Scenario125,5Måned 12henvendelser / kjøp per måned6 276,9 × 2 %X: 12,6X(1 255%)Illustrasjon - ikke prognose 12 månederUten optimaliseringMed optimalisering10125,5123456789101112function e(e,t){if(!Number.isFinite(e)||!Number.isFinite(t)||e<0||t<0||t>100)throw RangeError(`Invalid illustrative input`);return e*t/100}function t(t,n,r,i,a=1){if(!Number.isFinite(r)||r<0)throw RangeError(`Invalid illustrative traffic increase`);if(!Number.isSafeInteger(a)||a<1)throw RangeError(`Invalid illustrative month count`);let o=e(t,n),s=t*(1+r/100)**a,c=e(s,i),l=c-o,u=o===0?NaN:l/o*100;return{current:o,scenarioVisits:s,scenario:c,difference:l,increase:Number.isFinite(u)?u:null}}var n=new Intl.NumberFormat(`nb-NO`,{maximumFractionDigits:1}),r=new Intl.NumberFormat(`nb-NO`,{maximumFractionDigits:0});function i(e,t){let i=t/e;return!Number.isFinite(e)||!Number.isFinite(t)||e<=0||t<0||!Number.isFinite(i)||!Number.isFinite(i*100)?null:{multiplier:`${n.format(i)}X`,percentage:`(${r.format(i*100)}%)`}}function a(e,t,n,r=128){let i=t.length-1,a=t[i],o=r-40,s=Math.max(e,...t,1),c=e=>e.map((e,t)=>({x:12+(n-104)*t/i,y:o-e/s*(o-20),value:e})),l=c(Array(t.length).fill(e)),u=c(t),d=e=>e.map((e,t)=>`${t?`L`:`M`} ${e.x.toFixed(2)} ${e.y.toFixed(2)}`).join(` `);return{current:l,scenario:u,currentPath:d(l),scenarioPath:d(u),currentLabelY:l[i].y+(a>e?16:-10),scenarioLabelY:u[i].y+(a>e?-10:16)}}var o=document.querySelector(`[data-leverage]`);if(o){let e=[`visits`,`conversion`,`trafficIncrease`,`newConversion`].map(e=>o.querySelector(`[name=\"${e}\"]`)),n=o.querySelector(`[data-current]`),r=o.querySelector(`[data-scenario]`),s=o.querySelector(`[data-multiplier]`),c=o.querySelector(`[data-percentage]`),l=o.querySelector(`[data-current-equation]`),u=o.querySelector(`[data-scenario-equation]`),d=o.querySelector(`#calculator-error`),f=o.querySelector(`[data-scenario-chart]`),p=f.querySelector(`svg`),m=[...o.querySelectorAll(`[data-slider]`)],h=new Intl.NumberFormat(`nb-NO`,{maximumFractionDigits:1}),g=new Intl.NumberFormat(`nb-NO`,{notation:`compact`,maximumFractionDigits:1});function _(){let _=e.every(e=>e.value!==``&&e.checkValidity());if(e.forEach(e=>e.setAttribute(`aria-invalid`,String(e.value===``||!e.checkValidity()))),d.hidden=_,f.hidden=!_,m.forEach(t=>{let n=e.find(e=>e.name===t.dataset.slider);n.value!==``&&n.checkValidity()&&(t.value=n.value)}),!_){[n,r,s,c,l,u].forEach(e=>e.textContent=`–`);return}let[v,y,b,x]=e.map(e=>Number(e.value)),S=t(v,y,b,x,12);n.value=h.format(S.current),r.value=h.format(S.scenario);let C=i(S.current,S.scenario);s.value=C?.multiplier??`–`,c.textContent=C?.percentage??o.dataset.undefinedIncrease,l.textContent=`${h.format(v)} × ${e[1].value.replace(`.`,`,`)} %`,u.textContent=`${h.format(S.scenarioVisits)} × ${e[3].value.replace(`.`,`,`)} %`;let{width:w,height:T}=p.getBoundingClientRect(),E=Array.from({length:12},(e,n)=>t(v,y,b,x,n+1).scenario),D=a(S.current,E,w,T);p.setAttribute(`viewBox`,`0 0 ${w} ${T}`),f.querySelector(`[data-chart-grid]`).setAttribute(`d`,`M 12 ${T-40} H ${w-92}`),f.querySelector(`[data-chart-current]`).setAttribute(`d`,D.currentPath),f.querySelector(`[data-chart-improved]`).setAttribute(`d`,D.scenarioPath);for(let[e,t,n,r]of[[`current`,D.current,S.current,D.currentLabelY],[`improved`,D.scenario,S.scenario,D.scenarioLabelY]]){let i=t[11],a=f.querySelector(`[data-chart-${e}-dot]`);a.setAttribute(`cx`,String(i.x)),a.setAttribute(`cy`,String(i.y));let o=f.querySelector(`[data-chart-${e}-value]`);o.setAttribute(`x`,String(i.x+10)),o.setAttribute(`y`,String(r));let s=h.format(n);o.textContent=s.length>10?g.format(n):s,o.setAttribute(`aria-label`,s)}f.querySelectorAll(`[data-chart-month]`).forEach((e,t)=>{e.setAttribute(`x`,String(D.current[t].x)),e.setAttribute(`y`,String(T-6))})}e.forEach(e=>e.addEventListener(`input`,_)),m.forEach(t=>{t.disabled=!1,t.addEventListener(`input`,()=>{let n=String(Math.round(Number(t.value)*10)/10);e.find(e=>e.name===t.dataset.slider).value=n,_()})}),new ResizeObserver(_).observe(p),_()}Fast månedlig optimaliseringTre pakker. Samme mål: flere riktige kunder.Velg pakken som passer hvor komplekst behovet ditt er - fra én tydelig flaskehals til flere kundereiser som må prioriteres løpende.Optimalisering4 500 kr/mndeks. mva.Ett viktig forbedringsområde om gangen.Én spakTydelig fremgangPasser forFor små og mellomstore bedrifter med én tydelig kundereise eller én flaskehals som er viktigst nå.Typiske situasjonerBlir ikke funnet når kundene søker.Har trafikk, men får for få henvendelser eller kjøp.Får for lite ut av Google Ads eller en annen viktig kanal.SEO / AI-synlighetKonverteringLokal SEOGoogle AdsBestill OptimaliseringOm pakkenPasser forPasser for små og mellomstore bedrifter med én tydelig kundereise, én hovedtjeneste eller én flaskehals som er viktigst akkurat nå.Typisk virksomhetTypisk en konkurranseutsatt lokal tjenestebedrift, mindre klinikk, regnskapskontor eller nisje-B2B-bedrift med én tydelig hovedtjeneste.Typiske situasjonerKundene finner deg ikke når de søker etter det du tilbyr.Du får relevant trafikk, men for få henvendelser eller kjøp.Du får for lite ut av Google Ads eller en annen viktig kanal.FokusSEO / AI-synlighetKonverteringsoptimaliseringLokal SEOGoogle Ads - ett tydelig fokusområdeDette jobber vi medVi jobber med én hovedflaskehals til neste prioritet er viktigere. Mindre støttearbeid rundt samme mål kan inngå.Velg Optimalisering når én flaskehals er tydelig viktigst akkurat nå.VekstAnbefalt6 900 kr/mndeks. mva.To grep som forsterker hverandre.To grepForsterker hverandrePasser forFor bedrifter som trenger fremgang på to deler av samme kundereise samtidig.Typiske situasjonerTrenger fart nå og vil bygge organisk synlighet over tid.Har trafikk, men vil få mer ut av den med bedre konvertering.Resultatet avhenger av at to områder forbedres samtidig.Google Ads + konverteringSEO / AI-synlighet + konverteringGoogle Ads + SEO / AI-synlighetBestill VekstOm pakkenPasser forPasser for bedrifter som trenger fremgang på to deler av samme kundereise samtidig.Typiske situasjonerDu trenger betalt synlighet for å få fart nå, men vil bygge organisk synlighet over tid.Du får trafikk, men vil få mer ut av den med bedre konvertering.Resultatet avhenger av at to områder forbedres samtidig.Populære kombinasjonerGoogle Ads + konverteringsoptimaliseringFå relevant trafikk nå og få mer ut av hvert besøk du allerede betaler for.SEO / AI-synlighet + konverteringsoptimaliseringBygg organisk synlighet og få flere relevante besøk videre til henvendelse eller kjøp.Google Ads + SEO / AI-synlighetBruk betalt synlighet for å få fart nå, og bygg organisk synlighet for å redusere avhengigheten av annonsebudsjett over tid.Velg Vekst når to forbedringer kan forsterke hverandre.Partnerfra 14 900 kr/mndeks. mva.Flere tjenester og kundereiser.Flere kundereiserPrioriteres løpendePasser forFor bedrifter med flere tjenester, markeder eller kundereiser som må prioriteres løpende.Typiske situasjonerFlere tjenester konkurrerer i ulike markeder.Ulike kundereiser trenger ulike grep.Trenger løpende prioritering på tvers.SEO / AI-synlighetGoogle AdsMeta AdsKonverteringAnalyseBestill PartnerOm pakkenPasser forPasser for bedrifter med flere tjenester, produktområder, markeder, lokasjoner eller målgrupper som møter forskjellige konkurrenter og trenger løpende prioritering på tvers.Typisk virksomhetTypisk en virksomhet med fire-fem forskjellige tjenester - for eksempel kantine, catering, fruktlevering og andre B2B-tjenester - der hver kundereise har egne søk, konkurrenter, sider og prioriteringer.Typiske situasjonerFlere tjenester eller produktområder konkurrerer i ulike markeder.Ulike kundereiser trenger ulike kombinasjoner av synlighet, annonser og konvertering.Du trenger en fast partner som prioriterer hva som bør forbedres hvor - og i hvilken rekkefølge.ArbeidsområderSEO / AI-synlighetGoogle AdsMeta AdsKonverteringsoptimaliseringAnalyse og sporingDette jobber vi medVi prioriterer løpende kundereisene med størst kommersiell verdi eller størst forbedringspotensial. Det betyr ikke at alt gjøres samtidig eller at kapasiteten er ubegrenset.Velg Partner når flere forskjellige kundereiser må forbedres og prioriteres løpende.Omfang og fast månedspris avtales før oppstart.Annonsebudsjett kommer i tillegg.Usikker? Ta en gratis sjekkDokumenterte resultaterResultater fra kundearbeidEurotentsROAS - Google AdsFør4,3xapril 2025->Etter17,2xapril 202620 % lavere annonseforbrukNystaFullført checkout - Shopify+36,5 prosentpoengFør7,1 %30 dager før->Etter43,6 %første 30 dager etterHelt OpplagtOrganiske klikk - Google Search Console+93 %Før2 162mars-september 2025->Etter4 181mars-september 2026Start med det som begrenser resultatetSlik finner vi hva som bør gjøres førstBehovet avgjør tiltakene. Vi starter ikke med SEO eller en annen kanal bare fordi du kom inn på en bestemt side.01Finn flaskehalsenSe hvor kundereisen stopper: før besøket, på siden eller i veien til kontakt og kjøp.02Prioriter tiltakVelg en fornuftig start ut fra behov, kommersiell verdi og det vi faktisk vet.03GjennomførGjør arbeidet som er avtalt. Omfang og ansvar skal være tydelig.04Mål effektFølg med på relevante henvendelser og kjøp. Se resultatene sammen med verdi og kostnader.Er dette aktuelt for bedriften?Best når kundene faktisk har et valg.Passer godt hvisBedriften konkurrerer om kundene, har kapasitet til flere henvendelser eller salg, og en ny kunde eller ordre har nok verdi til at forbedringer kan lønne seg.Passer dårlig hvisDu er allerede det eneste reelle alternativet og kundene finner deg uten problemer. Tenk en tannklinikk på et lite sted som er eneste klinikk innenfor 100 km, eller en nettbutikk som er eneste norske forhandler av reservedeler til gamle flipperspill og allerede eier de relevante søkene.Gratis, manuell sjekkSend nettsiden. Vi sier hvor vi ville startet - og hvorfor.Få våre 3 viktigste funn innen 2 virkedager.Vi ser på den offentlige nettsiden eller nettbutikken og sender deg de tre viktigste tingene vi ville undersøkt eller forbedret først.Dette er en kort, manuell vurdering - ikke en full revisjon, prognose eller gratis gjennomføring. Videre arbeid avtales separat.Send nettsidenNettside eller nettbutikk *E-post *Kort kommentar ValgfrittIkke send innlogging, sensitive opplysninger eller personopplysninger om andre.Dette er en forhåndsvisning. Innsending er ikke åpnet ennå.Ta en gratis sjekkVi bruker opplysningene for å følge opp forespørselen. Les om personvern.var e=document.querySelector(`[data-home-assessment]`);e?.addEventListener(`submit`,t=>{t.preventDefault();let n=e.querySelector(`.form-status`);n.textContent=e.dataset.disabledStatus,n.hidden=!1,n.focus()});Greit å viteFør du tar neste stegHva skjer etter den gratis sjekken?Vi gjør en kort, manuell vurdering og begrunner hvor vi ville startet. Hvis det er noe vi kan hjelpe med, avtaler vi omfang og pris før betalt arbeid. Sjekken er ikke en full revisjon eller gratis gjennomføring.Hva koster videre arbeid?Optimalisering koster 4 500 kr/mnd, Vekst 6 900 kr/mnd og Partner fra 14 900 kr/mnd. Alle priser er eks. mva. Velg Optimalisering når én flaskehals er tydelig viktigst akkurat nå. Velg Vekst når to forbedringer kan forsterke hverandre. Velg Partner når flere forskjellige kundereiser må forbedres og prioriteres løpende.Er annonsebudsjett og eksterne kostnader inkludert?Annonsebudsjett kommer i tillegg. Aktuelle eksterne plattformkostnader kommer i tillegg hvis ikke annet er uttrykkelig avtalt.Hva hvis både synlighet og konvertering begrenser resultatet?Da ser vi på sammenhengen. Vi finner flaskehalsen og prioriterer tiltakene i riktig rekkefølge, fremfor å starte med en fast kanal.Jobber dere bare med bedrifter i Oslo?Nei. Vi jobber med bedrifter i hele Norge og kan også hjelpe i andre nordiske markeder. Navnet beskriver tjenesten og satsingen - ikke et krav om at kunden holder til i Oslo.",
+      "cards": [
+        {
+          "variant": "card",
+          "radius": "20px",
+          "surface": "dark",
+          "background": "oklch(0.250753 0.100773 313.031)",
+          "color": "oklch(0.942974 0.0169783 192.351)",
+          "body": true,
+          "padding": "24px",
+          "gap": "20px",
+          "links": []
+        },
+        {
+          "variant": "plain",
+          "radius": "0px",
+          "surface": "soft",
+          "background": "oklch(0.984485 0.00447018 314.805)",
+          "color": "oklch(0.278712 0.0437809 312.743)",
+          "body": false,
+          "links": []
+        }
+      ],
+      "mechanism": {
+        "html": "<section id=\"mekanisme\" class=\"content-section section-space home-section-mekanisme\" data-surface=\"soft\"><div class=\"shell\"><div class=\"section-heading\"><div><p class=\"eyebrow\">Start med det som begrenser resultatet</p><h2>Slik finner vi hva som bør gjøres først</h2></div><div class=\"body-copy\"><p>Behovet avgjør tiltakene. Vi starter ikke med SEO eller en annen kanal bare fordi du kom inn på en bestemt side.</p></div></div><div class=\"section-items mechanism-steps\"><article class=\"info-item home-item-0\" data-surface=\"base\"><span class=\"item-number\" aria-hidden=\"true\">01</span><h3>Finn flaskehalsen</h3><p>Se hvor kundereisen stopper: før besøket, på siden eller i veien til kontakt og kjøp.</p></article><article class=\"info-item home-item-1\" data-surface=\"soft\"><span class=\"item-number\" aria-hidden=\"true\">02</span><h3>Prioriter tiltak</h3><p>Velg en fornuftig start ut fra behov, kommersiell verdi og det vi faktisk vet.</p></article><article class=\"info-item home-item-2\" data-surface=\"mint\"><span class=\"item-number\" aria-hidden=\"true\">03</span><h3>Gjennomfør</h3><p>Gjør arbeidet som er avtalt. Omfang og ansvar skal være tydelig.</p></article><article class=\"info-item home-item-3\" data-surface=\"lavender\"><span class=\"item-number\" aria-hidden=\"true\">04</span><h3>Mål effekt</h3><p>Følg med på relevante henvendelser og kjøp. Se resultatene sammen med verdi og kostnader.</p></article></div></div></section>",
+        "rect": {
+          "x": 0,
+          "y": 6842.578125,
+          "width": 900,
+          "height": 827.796875,
+          "top": 6842.578125,
+          "right": 900,
+          "bottom": 7670.375,
+          "left": 0
+        },
+        "items": [
+          {
+            "html": "<article class=\"info-item home-item-0\" data-surface=\"base\"><span class=\"item-number\" aria-hidden=\"true\">01</span><h3>Finn flaskehalsen</h3><p>Se hvor kundereisen stopper: før besøket, på siden eller i veien til kontakt og kjøp.</p></article>",
+            "rect": {
+              "x": 32,
+              "y": 7105,
+              "width": 394,
+              "height": 219.6875,
+              "top": 7105,
+              "right": 426,
+              "bottom": 7324.6875,
+              "left": 32
+            }
+          },
+          {
+            "html": "<article class=\"info-item home-item-1\" data-surface=\"soft\"><span class=\"item-number\" aria-hidden=\"true\">02</span><h3>Prioriter tiltak</h3><p>Velg en fornuftig start ut fra behov, kommersiell verdi og det vi faktisk vet.</p></article>",
+            "rect": {
+              "x": 474,
+              "y": 7105,
+              "width": 394,
+              "height": 219.6875,
+              "top": 7105,
+              "right": 868,
+              "bottom": 7324.6875,
+              "left": 474
+            }
+          },
+          {
+            "html": "<article class=\"info-item home-item-2\" data-surface=\"mint\"><span class=\"item-number\" aria-hidden=\"true\">03</span><h3>Gjennomfør</h3><p>Gjør arbeidet som er avtalt. Omfang og ansvar skal være tydelig.</p></article>",
+            "rect": {
+              "x": 32,
+              "y": 7372.6875,
+              "width": 394,
+              "height": 217.6875,
+              "top": 7372.6875,
+              "right": 426,
+              "bottom": 7590.375,
+              "left": 32
+            }
+          },
+          {
+            "html": "<article class=\"info-item home-item-3\" data-surface=\"lavender\"><span class=\"item-number\" aria-hidden=\"true\">04</span><h3>Mål effekt</h3><p>Følg med på relevante henvendelser og kjøp. Se resultatene sammen med verdi og kostnader.</p></article>",
+            "rect": {
+              "x": 474,
+              "y": 7372.6875,
+              "width": 394,
+              "height": 217.6875,
+              "top": 7372.6875,
+              "right": 868,
+              "bottom": 7590.375,
+              "left": 474
+            }
+          }
+        ]
+      }
+    },
+    {
+      "width": 390,
+      "sections": [
+        "behov",
+        "regneeksempel",
+        "priser",
+        "resultater",
+        "mekanisme",
+        "passer",
+        "sjekk",
+        "sporsmal"
+      ],
+      "text": "For bedrifter som konkurrerer om kundeneBli funnet. Gjør større andel av besøk til henvendelser og salg.SEO, AI-synlighet og konverteringsoptimalisering for bedrifter i Oslo og resten av Norge. Vi starter der kundereisen stopper.Ta en gratis sjekkSe priserROAS 4,3x -> 17,2xEurotents · Google AdsHva trenger du hjelp med?SynlighetBli funnetSEO, AI-synlighet og lokal synlighet når kundene leter etter det du tilbyr.Se SynlighetKonverteringFlere besøk til henvendelser og salgKonverteringsoptimalisering for nettsider, landingssider og nettbutikker.Se KonverteringSynlighet X KonverteringJa takk - Begge delerVi finner flaskehalsen og starter der det gir mest effekt.Se alternativeneSynlighet og konvertering forsterker hverandreHva betyr flere relevante besøk og en bedre kjøpsvei?Endre trafikken, andelen som tar kontakt eller kjøper - eller begge. Se hvordan de to grepene virker sammen.Relevante besøk x konverteringsrate = henvendelser / kjøpRelevante besøk per månedKonverteringsrate i dag (%)Mer relevant trafikk per måned (%)Ny konverteringsrate (%)Bruk besøk fra 0 til 10 000 000, trafikkøkning fra 0 til 1 000 % og konverteringsrater fra 0 til 100 %.I dag10henvendelser / kjøp per måned2 000 × 0,5 %Scenario125,5Måned 12henvendelser / kjøp per måned6 276,9 × 2 %X: 12,6X(1 255%)Illustrasjon - ikke prognose 12 månederUten optimaliseringMed optimalisering10125,5123456789101112function e(e,t){if(!Number.isFinite(e)||!Number.isFinite(t)||e<0||t<0||t>100)throw RangeError(`Invalid illustrative input`);return e*t/100}function t(t,n,r,i,a=1){if(!Number.isFinite(r)||r<0)throw RangeError(`Invalid illustrative traffic increase`);if(!Number.isSafeInteger(a)||a<1)throw RangeError(`Invalid illustrative month count`);let o=e(t,n),s=t*(1+r/100)**a,c=e(s,i),l=c-o,u=o===0?NaN:l/o*100;return{current:o,scenarioVisits:s,scenario:c,difference:l,increase:Number.isFinite(u)?u:null}}var n=new Intl.NumberFormat(`nb-NO`,{maximumFractionDigits:1}),r=new Intl.NumberFormat(`nb-NO`,{maximumFractionDigits:0});function i(e,t){let i=t/e;return!Number.isFinite(e)||!Number.isFinite(t)||e<=0||t<0||!Number.isFinite(i)||!Number.isFinite(i*100)?null:{multiplier:`${n.format(i)}X`,percentage:`(${r.format(i*100)}%)`}}function a(e,t,n,r=128){let i=t.length-1,a=t[i],o=r-40,s=Math.max(e,...t,1),c=e=>e.map((e,t)=>({x:12+(n-104)*t/i,y:o-e/s*(o-20),value:e})),l=c(Array(t.length).fill(e)),u=c(t),d=e=>e.map((e,t)=>`${t?`L`:`M`} ${e.x.toFixed(2)} ${e.y.toFixed(2)}`).join(` `);return{current:l,scenario:u,currentPath:d(l),scenarioPath:d(u),currentLabelY:l[i].y+(a>e?16:-10),scenarioLabelY:u[i].y+(a>e?-10:16)}}var o=document.querySelector(`[data-leverage]`);if(o){let e=[`visits`,`conversion`,`trafficIncrease`,`newConversion`].map(e=>o.querySelector(`[name=\"${e}\"]`)),n=o.querySelector(`[data-current]`),r=o.querySelector(`[data-scenario]`),s=o.querySelector(`[data-multiplier]`),c=o.querySelector(`[data-percentage]`),l=o.querySelector(`[data-current-equation]`),u=o.querySelector(`[data-scenario-equation]`),d=o.querySelector(`#calculator-error`),f=o.querySelector(`[data-scenario-chart]`),p=f.querySelector(`svg`),m=[...o.querySelectorAll(`[data-slider]`)],h=new Intl.NumberFormat(`nb-NO`,{maximumFractionDigits:1}),g=new Intl.NumberFormat(`nb-NO`,{notation:`compact`,maximumFractionDigits:1});function _(){let _=e.every(e=>e.value!==``&&e.checkValidity());if(e.forEach(e=>e.setAttribute(`aria-invalid`,String(e.value===``||!e.checkValidity()))),d.hidden=_,f.hidden=!_,m.forEach(t=>{let n=e.find(e=>e.name===t.dataset.slider);n.value!==``&&n.checkValidity()&&(t.value=n.value)}),!_){[n,r,s,c,l,u].forEach(e=>e.textContent=`–`);return}let[v,y,b,x]=e.map(e=>Number(e.value)),S=t(v,y,b,x,12);n.value=h.format(S.current),r.value=h.format(S.scenario);let C=i(S.current,S.scenario);s.value=C?.multiplier??`–`,c.textContent=C?.percentage??o.dataset.undefinedIncrease,l.textContent=`${h.format(v)} × ${e[1].value.replace(`.`,`,`)} %`,u.textContent=`${h.format(S.scenarioVisits)} × ${e[3].value.replace(`.`,`,`)} %`;let{width:w,height:T}=p.getBoundingClientRect(),E=Array.from({length:12},(e,n)=>t(v,y,b,x,n+1).scenario),D=a(S.current,E,w,T);p.setAttribute(`viewBox`,`0 0 ${w} ${T}`),f.querySelector(`[data-chart-grid]`).setAttribute(`d`,`M 12 ${T-40} H ${w-92}`),f.querySelector(`[data-chart-current]`).setAttribute(`d`,D.currentPath),f.querySelector(`[data-chart-improved]`).setAttribute(`d`,D.scenarioPath);for(let[e,t,n,r]of[[`current`,D.current,S.current,D.currentLabelY],[`improved`,D.scenario,S.scenario,D.scenarioLabelY]]){let i=t[11],a=f.querySelector(`[data-chart-${e}-dot]`);a.setAttribute(`cx`,String(i.x)),a.setAttribute(`cy`,String(i.y));let o=f.querySelector(`[data-chart-${e}-value]`);o.setAttribute(`x`,String(i.x+10)),o.setAttribute(`y`,String(r));let s=h.format(n);o.textContent=s.length>10?g.format(n):s,o.setAttribute(`aria-label`,s)}f.querySelectorAll(`[data-chart-month]`).forEach((e,t)=>{e.setAttribute(`x`,String(D.current[t].x)),e.setAttribute(`y`,String(T-6))})}e.forEach(e=>e.addEventListener(`input`,_)),m.forEach(t=>{t.disabled=!1,t.addEventListener(`input`,()=>{let n=String(Math.round(Number(t.value)*10)/10);e.find(e=>e.name===t.dataset.slider).value=n,_()})}),new ResizeObserver(_).observe(p),_()}Fast månedlig optimaliseringTre pakker. Samme mål: flere riktige kunder.Velg pakken som passer hvor komplekst behovet ditt er - fra én tydelig flaskehals til flere kundereiser som må prioriteres løpende.Optimalisering4 500 kr/mndeks. mva.Ett viktig forbedringsområde om gangen.Én spakTydelig fremgangPasser forFor små og mellomstore bedrifter med én tydelig kundereise eller én flaskehals som er viktigst nå.Typiske situasjonerBlir ikke funnet når kundene søker.Har trafikk, men får for få henvendelser eller kjøp.Får for lite ut av Google Ads eller en annen viktig kanal.SEO / AI-synlighetKonverteringLokal SEOGoogle AdsBestill OptimaliseringOm pakkenPasser forPasser for små og mellomstore bedrifter med én tydelig kundereise, én hovedtjeneste eller én flaskehals som er viktigst akkurat nå.Typisk virksomhetTypisk en konkurranseutsatt lokal tjenestebedrift, mindre klinikk, regnskapskontor eller nisje-B2B-bedrift med én tydelig hovedtjeneste.Typiske situasjonerKundene finner deg ikke når de søker etter det du tilbyr.Du får relevant trafikk, men for få henvendelser eller kjøp.Du får for lite ut av Google Ads eller en annen viktig kanal.FokusSEO / AI-synlighetKonverteringsoptimaliseringLokal SEOGoogle Ads - ett tydelig fokusområdeDette jobber vi medVi jobber med én hovedflaskehals til neste prioritet er viktigere. Mindre støttearbeid rundt samme mål kan inngå.Velg Optimalisering når én flaskehals er tydelig viktigst akkurat nå.VekstAnbefalt6 900 kr/mndeks. mva.To grep som forsterker hverandre.To grepForsterker hverandrePasser forFor bedrifter som trenger fremgang på to deler av samme kundereise samtidig.Typiske situasjonerTrenger fart nå og vil bygge organisk synlighet over tid.Har trafikk, men vil få mer ut av den med bedre konvertering.Resultatet avhenger av at to områder forbedres samtidig.Google Ads + konverteringSEO / AI-synlighet + konverteringGoogle Ads + SEO / AI-synlighetBestill VekstOm pakkenPasser forPasser for bedrifter som trenger fremgang på to deler av samme kundereise samtidig.Typiske situasjonerDu trenger betalt synlighet for å få fart nå, men vil bygge organisk synlighet over tid.Du får trafikk, men vil få mer ut av den med bedre konvertering.Resultatet avhenger av at to områder forbedres samtidig.Populære kombinasjonerGoogle Ads + konverteringsoptimaliseringFå relevant trafikk nå og få mer ut av hvert besøk du allerede betaler for.SEO / AI-synlighet + konverteringsoptimaliseringBygg organisk synlighet og få flere relevante besøk videre til henvendelse eller kjøp.Google Ads + SEO / AI-synlighetBruk betalt synlighet for å få fart nå, og bygg organisk synlighet for å redusere avhengigheten av annonsebudsjett over tid.Velg Vekst når to forbedringer kan forsterke hverandre.Partnerfra 14 900 kr/mndeks. mva.Flere tjenester og kundereiser.Flere kundereiserPrioriteres løpendePasser forFor bedrifter med flere tjenester, markeder eller kundereiser som må prioriteres løpende.Typiske situasjonerFlere tjenester konkurrerer i ulike markeder.Ulike kundereiser trenger ulike grep.Trenger løpende prioritering på tvers.SEO / AI-synlighetGoogle AdsMeta AdsKonverteringAnalyseBestill PartnerOm pakkenPasser forPasser for bedrifter med flere tjenester, produktområder, markeder, lokasjoner eller målgrupper som møter forskjellige konkurrenter og trenger løpende prioritering på tvers.Typisk virksomhetTypisk en virksomhet med fire-fem forskjellige tjenester - for eksempel kantine, catering, fruktlevering og andre B2B-tjenester - der hver kundereise har egne søk, konkurrenter, sider og prioriteringer.Typiske situasjonerFlere tjenester eller produktområder konkurrerer i ulike markeder.Ulike kundereiser trenger ulike kombinasjoner av synlighet, annonser og konvertering.Du trenger en fast partner som prioriterer hva som bør forbedres hvor - og i hvilken rekkefølge.ArbeidsområderSEO / AI-synlighetGoogle AdsMeta AdsKonverteringsoptimaliseringAnalyse og sporingDette jobber vi medVi prioriterer løpende kundereisene med størst kommersiell verdi eller størst forbedringspotensial. Det betyr ikke at alt gjøres samtidig eller at kapasiteten er ubegrenset.Velg Partner når flere forskjellige kundereiser må forbedres og prioriteres løpende.Omfang og fast månedspris avtales før oppstart.Annonsebudsjett kommer i tillegg.Usikker? Ta en gratis sjekkDokumenterte resultaterResultater fra kundearbeidEurotentsROAS - Google AdsFør4,3xapril 2025->Etter17,2xapril 202620 % lavere annonseforbrukNystaFullført checkout - Shopify+36,5 prosentpoengFør7,1 %30 dager før->Etter43,6 %første 30 dager etterHelt OpplagtOrganiske klikk - Google Search Console+93 %Før2 162mars-september 2025->Etter4 181mars-september 2026Start med det som begrenser resultatetSlik finner vi hva som bør gjøres førstBehovet avgjør tiltakene. Vi starter ikke med SEO eller en annen kanal bare fordi du kom inn på en bestemt side.01Finn flaskehalsenSe hvor kundereisen stopper: før besøket, på siden eller i veien til kontakt og kjøp.02Prioriter tiltakVelg en fornuftig start ut fra behov, kommersiell verdi og det vi faktisk vet.03GjennomførGjør arbeidet som er avtalt. Omfang og ansvar skal være tydelig.04Mål effektFølg med på relevante henvendelser og kjøp. Se resultatene sammen med verdi og kostnader.Er dette aktuelt for bedriften?Best når kundene faktisk har et valg.Passer godt hvisBedriften konkurrerer om kundene, har kapasitet til flere henvendelser eller salg, og en ny kunde eller ordre har nok verdi til at forbedringer kan lønne seg.Passer dårlig hvisDu er allerede det eneste reelle alternativet og kundene finner deg uten problemer. Tenk en tannklinikk på et lite sted som er eneste klinikk innenfor 100 km, eller en nettbutikk som er eneste norske forhandler av reservedeler til gamle flipperspill og allerede eier de relevante søkene.Gratis, manuell sjekkSend nettsiden. Vi sier hvor vi ville startet - og hvorfor.Få våre 3 viktigste funn innen 2 virkedager.Vi ser på den offentlige nettsiden eller nettbutikken og sender deg de tre viktigste tingene vi ville undersøkt eller forbedret først.Dette er en kort, manuell vurdering - ikke en full revisjon, prognose eller gratis gjennomføring. Videre arbeid avtales separat.Send nettsidenNettside eller nettbutikk *E-post *Kort kommentar ValgfrittIkke send innlogging, sensitive opplysninger eller personopplysninger om andre.Dette er en forhåndsvisning. Innsending er ikke åpnet ennå.Ta en gratis sjekkVi bruker opplysningene for å følge opp forespørselen. Les om personvern.var e=document.querySelector(`[data-home-assessment]`);e?.addEventListener(`submit`,t=>{t.preventDefault();let n=e.querySelector(`.form-status`);n.textContent=e.dataset.disabledStatus,n.hidden=!1,n.focus()});Greit å viteFør du tar neste stegHva skjer etter den gratis sjekken?Vi gjør en kort, manuell vurdering og begrunner hvor vi ville startet. Hvis det er noe vi kan hjelpe med, avtaler vi omfang og pris før betalt arbeid. Sjekken er ikke en full revisjon eller gratis gjennomføring.Hva koster videre arbeid?Optimalisering koster 4 500 kr/mnd, Vekst 6 900 kr/mnd og Partner fra 14 900 kr/mnd. Alle priser er eks. mva. Velg Optimalisering når én flaskehals er tydelig viktigst akkurat nå. Velg Vekst når to forbedringer kan forsterke hverandre. Velg Partner når flere forskjellige kundereiser må forbedres og prioriteres løpende.Er annonsebudsjett og eksterne kostnader inkludert?Annonsebudsjett kommer i tillegg. Aktuelle eksterne plattformkostnader kommer i tillegg hvis ikke annet er uttrykkelig avtalt.Hva hvis både synlighet og konvertering begrenser resultatet?Da ser vi på sammenhengen. Vi finner flaskehalsen og prioriterer tiltakene i riktig rekkefølge, fremfor å starte med en fast kanal.Jobber dere bare med bedrifter i Oslo?Nei. Vi jobber med bedrifter i hele Norge og kan også hjelpe i andre nordiske markeder. Navnet beskriver tjenesten og satsingen - ikke et krav om at kunden holder til i Oslo.",
+      "cards": [
+        {
+          "variant": "card",
+          "radius": "20px",
+          "surface": "dark",
+          "background": "oklch(0.250753 0.100773 313.031)",
+          "color": "oklch(0.942974 0.0169783 192.351)",
+          "body": true,
+          "padding": "24px",
+          "gap": "20px",
+          "links": []
+        },
+        {
+          "variant": "plain",
+          "radius": "0px",
+          "surface": "soft",
+          "background": "oklch(0.984485 0.00447018 314.805)",
+          "color": "oklch(0.278712 0.0437809 312.743)",
+          "body": false,
+          "links": []
+        }
+      ],
+      "mechanism": {
+        "html": "<section id=\"mekanisme\" class=\"content-section section-space home-section-mekanisme\" data-surface=\"soft\"><div class=\"shell\"><div class=\"section-heading\"><div><p class=\"eyebrow\">Start med det som begrenser resultatet</p><h2>Slik finner vi hva som bør gjøres først</h2></div><div class=\"body-copy\"><p>Behovet avgjør tiltakene. Vi starter ikke med SEO eller en annen kanal bare fordi du kom inn på en bestemt side.</p></div></div><div class=\"section-items mechanism-steps\"><article class=\"info-item home-item-0\" data-surface=\"base\"><span class=\"item-number\" aria-hidden=\"true\">01</span><h3>Finn flaskehalsen</h3><p>Se hvor kundereisen stopper: før besøket, på siden eller i veien til kontakt og kjøp.</p></article><article class=\"info-item home-item-1\" data-surface=\"soft\"><span class=\"item-number\" aria-hidden=\"true\">02</span><h3>Prioriter tiltak</h3><p>Velg en fornuftig start ut fra behov, kommersiell verdi og det vi faktisk vet.</p></article><article class=\"info-item home-item-2\" data-surface=\"mint\"><span class=\"item-number\" aria-hidden=\"true\">03</span><h3>Gjennomfør</h3><p>Gjør arbeidet som er avtalt. Omfang og ansvar skal være tydelig.</p></article><article class=\"info-item home-item-3\" data-surface=\"lavender\"><span class=\"item-number\" aria-hidden=\"true\">04</span><h3>Mål effekt</h3><p>Følg med på relevante henvendelser og kjøp. Se resultatene sammen med verdi og kostnader.</p></article></div></div></section>",
+        "rect": {
+          "x": 0,
+          "y": 7667.875,
+          "width": 390,
+          "height": 980.28125,
+          "top": 7667.875,
+          "right": 390,
+          "bottom": 8648.15625,
+          "left": 0
+        },
+        "items": [
+          {
+            "html": "<article class=\"info-item home-item-0\" data-surface=\"base\"><span class=\"item-number\" aria-hidden=\"true\">01</span><h3>Finn flaskehalsen</h3><p>Se hvor kundereisen stopper: før besøket, på siden eller i veien til kontakt og kjøp.</p></article>",
+            "rect": {
+              "x": 20,
+              "y": 7993.3125,
+              "width": 165,
+              "height": 286.375,
+              "top": 7993.3125,
+              "right": 185,
+              "bottom": 8279.6875,
+              "left": 20
+            }
+          },
+          {
+            "html": "<article class=\"info-item home-item-1\" data-surface=\"soft\"><span class=\"item-number\" aria-hidden=\"true\">02</span><h3>Prioriter tiltak</h3><p>Velg en fornuftig start ut fra behov, kommersiell verdi og det vi faktisk vet.</p></article>",
+            "rect": {
+              "x": 205,
+              "y": 7993.3125,
+              "width": 165,
+              "height": 286.375,
+              "top": 7993.3125,
+              "right": 370,
+              "bottom": 8279.6875,
+              "left": 205
+            }
+          },
+          {
+            "html": "<article class=\"info-item home-item-2\" data-surface=\"mint\"><span class=\"item-number\" aria-hidden=\"true\">03</span><h3>Gjennomfør</h3><p>Gjør arbeidet som er avtalt. Omfang og ansvar skal være tydelig.</p></article>",
+            "rect": {
+              "x": 20,
+              "y": 8307.6875,
+              "width": 165,
+              "height": 284.46875,
+              "top": 8307.6875,
+              "right": 185,
+              "bottom": 8592.15625,
+              "left": 20
+            }
+          },
+          {
+            "html": "<article class=\"info-item home-item-3\" data-surface=\"lavender\"><span class=\"item-number\" aria-hidden=\"true\">04</span><h3>Mål effekt</h3><p>Følg med på relevante henvendelser og kjøp. Se resultatene sammen med verdi og kostnader.</p></article>",
+            "rect": {
+              "x": 205,
+              "y": 8307.6875,
+              "width": 165,
+              "height": 284.46875,
+              "top": 8307.6875,
+              "right": 370,
+              "bottom": 8592.15625,
+              "left": 205
+            }
+          }
+        ]
+      }
+    },
+    {
+      "width": 320,
+      "sections": [
+        "behov",
+        "regneeksempel",
+        "priser",
+        "resultater",
+        "mekanisme",
+        "passer",
+        "sjekk",
+        "sporsmal"
+      ],
+      "text": "For bedrifter som konkurrerer om kundeneBli funnet. Gjør større andel av besøk til henvendelser og salg.SEO, AI-synlighet og konverteringsoptimalisering for bedrifter i Oslo og resten av Norge. Vi starter der kundereisen stopper.Ta en gratis sjekkSe priserROAS 4,3x -> 17,2xEurotents · Google AdsHva trenger du hjelp med?SynlighetBli funnetSEO, AI-synlighet og lokal synlighet når kundene leter etter det du tilbyr.Se SynlighetKonverteringFlere besøk til henvendelser og salgKonverteringsoptimalisering for nettsider, landingssider og nettbutikker.Se KonverteringSynlighet X KonverteringJa takk - Begge delerVi finner flaskehalsen og starter der det gir mest effekt.Se alternativeneSynlighet og konvertering forsterker hverandreHva betyr flere relevante besøk og en bedre kjøpsvei?Endre trafikken, andelen som tar kontakt eller kjøper - eller begge. Se hvordan de to grepene virker sammen.Relevante besøk x konverteringsrate = henvendelser / kjøpRelevante besøk per månedKonverteringsrate i dag (%)Mer relevant trafikk per måned (%)Ny konverteringsrate (%)Bruk besøk fra 0 til 10 000 000, trafikkøkning fra 0 til 1 000 % og konverteringsrater fra 0 til 100 %.I dag10henvendelser / kjøp per måned2 000 × 0,5 %Scenario125,5Måned 12henvendelser / kjøp per måned6 276,9 × 2 %X: 12,6X(1 255%)Illustrasjon - ikke prognose 12 månederUten optimaliseringMed optimalisering10125,5123456789101112function e(e,t){if(!Number.isFinite(e)||!Number.isFinite(t)||e<0||t<0||t>100)throw RangeError(`Invalid illustrative input`);return e*t/100}function t(t,n,r,i,a=1){if(!Number.isFinite(r)||r<0)throw RangeError(`Invalid illustrative traffic increase`);if(!Number.isSafeInteger(a)||a<1)throw RangeError(`Invalid illustrative month count`);let o=e(t,n),s=t*(1+r/100)**a,c=e(s,i),l=c-o,u=o===0?NaN:l/o*100;return{current:o,scenarioVisits:s,scenario:c,difference:l,increase:Number.isFinite(u)?u:null}}var n=new Intl.NumberFormat(`nb-NO`,{maximumFractionDigits:1}),r=new Intl.NumberFormat(`nb-NO`,{maximumFractionDigits:0});function i(e,t){let i=t/e;return!Number.isFinite(e)||!Number.isFinite(t)||e<=0||t<0||!Number.isFinite(i)||!Number.isFinite(i*100)?null:{multiplier:`${n.format(i)}X`,percentage:`(${r.format(i*100)}%)`}}function a(e,t,n,r=128){let i=t.length-1,a=t[i],o=r-40,s=Math.max(e,...t,1),c=e=>e.map((e,t)=>({x:12+(n-104)*t/i,y:o-e/s*(o-20),value:e})),l=c(Array(t.length).fill(e)),u=c(t),d=e=>e.map((e,t)=>`${t?`L`:`M`} ${e.x.toFixed(2)} ${e.y.toFixed(2)}`).join(` `);return{current:l,scenario:u,currentPath:d(l),scenarioPath:d(u),currentLabelY:l[i].y+(a>e?16:-10),scenarioLabelY:u[i].y+(a>e?-10:16)}}var o=document.querySelector(`[data-leverage]`);if(o){let e=[`visits`,`conversion`,`trafficIncrease`,`newConversion`].map(e=>o.querySelector(`[name=\"${e}\"]`)),n=o.querySelector(`[data-current]`),r=o.querySelector(`[data-scenario]`),s=o.querySelector(`[data-multiplier]`),c=o.querySelector(`[data-percentage]`),l=o.querySelector(`[data-current-equation]`),u=o.querySelector(`[data-scenario-equation]`),d=o.querySelector(`#calculator-error`),f=o.querySelector(`[data-scenario-chart]`),p=f.querySelector(`svg`),m=[...o.querySelectorAll(`[data-slider]`)],h=new Intl.NumberFormat(`nb-NO`,{maximumFractionDigits:1}),g=new Intl.NumberFormat(`nb-NO`,{notation:`compact`,maximumFractionDigits:1});function _(){let _=e.every(e=>e.value!==``&&e.checkValidity());if(e.forEach(e=>e.setAttribute(`aria-invalid`,String(e.value===``||!e.checkValidity()))),d.hidden=_,f.hidden=!_,m.forEach(t=>{let n=e.find(e=>e.name===t.dataset.slider);n.value!==``&&n.checkValidity()&&(t.value=n.value)}),!_){[n,r,s,c,l,u].forEach(e=>e.textContent=`–`);return}let[v,y,b,x]=e.map(e=>Number(e.value)),S=t(v,y,b,x,12);n.value=h.format(S.current),r.value=h.format(S.scenario);let C=i(S.current,S.scenario);s.value=C?.multiplier??`–`,c.textContent=C?.percentage??o.dataset.undefinedIncrease,l.textContent=`${h.format(v)} × ${e[1].value.replace(`.`,`,`)} %`,u.textContent=`${h.format(S.scenarioVisits)} × ${e[3].value.replace(`.`,`,`)} %`;let{width:w,height:T}=p.getBoundingClientRect(),E=Array.from({length:12},(e,n)=>t(v,y,b,x,n+1).scenario),D=a(S.current,E,w,T);p.setAttribute(`viewBox`,`0 0 ${w} ${T}`),f.querySelector(`[data-chart-grid]`).setAttribute(`d`,`M 12 ${T-40} H ${w-92}`),f.querySelector(`[data-chart-current]`).setAttribute(`d`,D.currentPath),f.querySelector(`[data-chart-improved]`).setAttribute(`d`,D.scenarioPath);for(let[e,t,n,r]of[[`current`,D.current,S.current,D.currentLabelY],[`improved`,D.scenario,S.scenario,D.scenarioLabelY]]){let i=t[11],a=f.querySelector(`[data-chart-${e}-dot]`);a.setAttribute(`cx`,String(i.x)),a.setAttribute(`cy`,String(i.y));let o=f.querySelector(`[data-chart-${e}-value]`);o.setAttribute(`x`,String(i.x+10)),o.setAttribute(`y`,String(r));let s=h.format(n);o.textContent=s.length>10?g.format(n):s,o.setAttribute(`aria-label`,s)}f.querySelectorAll(`[data-chart-month]`).forEach((e,t)=>{e.setAttribute(`x`,String(D.current[t].x)),e.setAttribute(`y`,String(T-6))})}e.forEach(e=>e.addEventListener(`input`,_)),m.forEach(t=>{t.disabled=!1,t.addEventListener(`input`,()=>{let n=String(Math.round(Number(t.value)*10)/10);e.find(e=>e.name===t.dataset.slider).value=n,_()})}),new ResizeObserver(_).observe(p),_()}Fast månedlig optimaliseringTre pakker. Samme mål: flere riktige kunder.Velg pakken som passer hvor komplekst behovet ditt er - fra én tydelig flaskehals til flere kundereiser som må prioriteres løpende.Optimalisering4 500 kr/mndeks. mva.Ett viktig forbedringsområde om gangen.Én spakTydelig fremgangPasser forFor små og mellomstore bedrifter med én tydelig kundereise eller én flaskehals som er viktigst nå.Typiske situasjonerBlir ikke funnet når kundene søker.Har trafikk, men får for få henvendelser eller kjøp.Får for lite ut av Google Ads eller en annen viktig kanal.SEO / AI-synlighetKonverteringLokal SEOGoogle AdsBestill OptimaliseringOm pakkenPasser forPasser for små og mellomstore bedrifter med én tydelig kundereise, én hovedtjeneste eller én flaskehals som er viktigst akkurat nå.Typisk virksomhetTypisk en konkurranseutsatt lokal tjenestebedrift, mindre klinikk, regnskapskontor eller nisje-B2B-bedrift med én tydelig hovedtjeneste.Typiske situasjonerKundene finner deg ikke når de søker etter det du tilbyr.Du får relevant trafikk, men for få henvendelser eller kjøp.Du får for lite ut av Google Ads eller en annen viktig kanal.FokusSEO / AI-synlighetKonverteringsoptimaliseringLokal SEOGoogle Ads - ett tydelig fokusområdeDette jobber vi medVi jobber med én hovedflaskehals til neste prioritet er viktigere. Mindre støttearbeid rundt samme mål kan inngå.Velg Optimalisering når én flaskehals er tydelig viktigst akkurat nå.VekstAnbefalt6 900 kr/mndeks. mva.To grep som forsterker hverandre.To grepForsterker hverandrePasser forFor bedrifter som trenger fremgang på to deler av samme kundereise samtidig.Typiske situasjonerTrenger fart nå og vil bygge organisk synlighet over tid.Har trafikk, men vil få mer ut av den med bedre konvertering.Resultatet avhenger av at to områder forbedres samtidig.Google Ads + konverteringSEO / AI-synlighet + konverteringGoogle Ads + SEO / AI-synlighetBestill VekstOm pakkenPasser forPasser for bedrifter som trenger fremgang på to deler av samme kundereise samtidig.Typiske situasjonerDu trenger betalt synlighet for å få fart nå, men vil bygge organisk synlighet over tid.Du får trafikk, men vil få mer ut av den med bedre konvertering.Resultatet avhenger av at to områder forbedres samtidig.Populære kombinasjonerGoogle Ads + konverteringsoptimaliseringFå relevant trafikk nå og få mer ut av hvert besøk du allerede betaler for.SEO / AI-synlighet + konverteringsoptimaliseringBygg organisk synlighet og få flere relevante besøk videre til henvendelse eller kjøp.Google Ads + SEO / AI-synlighetBruk betalt synlighet for å få fart nå, og bygg organisk synlighet for å redusere avhengigheten av annonsebudsjett over tid.Velg Vekst når to forbedringer kan forsterke hverandre.Partnerfra 14 900 kr/mndeks. mva.Flere tjenester og kundereiser.Flere kundereiserPrioriteres løpendePasser forFor bedrifter med flere tjenester, markeder eller kundereiser som må prioriteres løpende.Typiske situasjonerFlere tjenester konkurrerer i ulike markeder.Ulike kundereiser trenger ulike grep.Trenger løpende prioritering på tvers.SEO / AI-synlighetGoogle AdsMeta AdsKonverteringAnalyseBestill PartnerOm pakkenPasser forPasser for bedrifter med flere tjenester, produktområder, markeder, lokasjoner eller målgrupper som møter forskjellige konkurrenter og trenger løpende prioritering på tvers.Typisk virksomhetTypisk en virksomhet med fire-fem forskjellige tjenester - for eksempel kantine, catering, fruktlevering og andre B2B-tjenester - der hver kundereise har egne søk, konkurrenter, sider og prioriteringer.Typiske situasjonerFlere tjenester eller produktområder konkurrerer i ulike markeder.Ulike kundereiser trenger ulike kombinasjoner av synlighet, annonser og konvertering.Du trenger en fast partner som prioriterer hva som bør forbedres hvor - og i hvilken rekkefølge.ArbeidsområderSEO / AI-synlighetGoogle AdsMeta AdsKonverteringsoptimaliseringAnalyse og sporingDette jobber vi medVi prioriterer løpende kundereisene med størst kommersiell verdi eller størst forbedringspotensial. Det betyr ikke at alt gjøres samtidig eller at kapasiteten er ubegrenset.Velg Partner når flere forskjellige kundereiser må forbedres og prioriteres løpende.Omfang og fast månedspris avtales før oppstart.Annonsebudsjett kommer i tillegg.Usikker? Ta en gratis sjekkDokumenterte resultaterResultater fra kundearbeidEurotentsROAS - Google AdsFør4,3xapril 2025->Etter17,2xapril 202620 % lavere annonseforbrukNystaFullført checkout - Shopify+36,5 prosentpoengFør7,1 %30 dager før->Etter43,6 %første 30 dager etterHelt OpplagtOrganiske klikk - Google Search Console+93 %Før2 162mars-september 2025->Etter4 181mars-september 2026Start med det som begrenser resultatetSlik finner vi hva som bør gjøres førstBehovet avgjør tiltakene. Vi starter ikke med SEO eller en annen kanal bare fordi du kom inn på en bestemt side.01Finn flaskehalsenSe hvor kundereisen stopper: før besøket, på siden eller i veien til kontakt og kjøp.02Prioriter tiltakVelg en fornuftig start ut fra behov, kommersiell verdi og det vi faktisk vet.03GjennomførGjør arbeidet som er avtalt. Omfang og ansvar skal være tydelig.04Mål effektFølg med på relevante henvendelser og kjøp. Se resultatene sammen med verdi og kostnader.Er dette aktuelt for bedriften?Best når kundene faktisk har et valg.Passer godt hvisBedriften konkurrerer om kundene, har kapasitet til flere henvendelser eller salg, og en ny kunde eller ordre har nok verdi til at forbedringer kan lønne seg.Passer dårlig hvisDu er allerede det eneste reelle alternativet og kundene finner deg uten problemer. Tenk en tannklinikk på et lite sted som er eneste klinikk innenfor 100 km, eller en nettbutikk som er eneste norske forhandler av reservedeler til gamle flipperspill og allerede eier de relevante søkene.Gratis, manuell sjekkSend nettsiden. Vi sier hvor vi ville startet - og hvorfor.Få våre 3 viktigste funn innen 2 virkedager.Vi ser på den offentlige nettsiden eller nettbutikken og sender deg de tre viktigste tingene vi ville undersøkt eller forbedret først.Dette er en kort, manuell vurdering - ikke en full revisjon, prognose eller gratis gjennomføring. Videre arbeid avtales separat.Send nettsidenNettside eller nettbutikk *E-post *Kort kommentar ValgfrittIkke send innlogging, sensitive opplysninger eller personopplysninger om andre.Dette er en forhåndsvisning. Innsending er ikke åpnet ennå.Ta en gratis sjekkVi bruker opplysningene for å følge opp forespørselen. Les om personvern.var e=document.querySelector(`[data-home-assessment]`);e?.addEventListener(`submit`,t=>{t.preventDefault();let n=e.querySelector(`.form-status`);n.textContent=e.dataset.disabledStatus,n.hidden=!1,n.focus()});Greit å viteFør du tar neste stegHva skjer etter den gratis sjekken?Vi gjør en kort, manuell vurdering og begrunner hvor vi ville startet. Hvis det er noe vi kan hjelpe med, avtaler vi omfang og pris før betalt arbeid. Sjekken er ikke en full revisjon eller gratis gjennomføring.Hva koster videre arbeid?Optimalisering koster 4 500 kr/mnd, Vekst 6 900 kr/mnd og Partner fra 14 900 kr/mnd. Alle priser er eks. mva. Velg Optimalisering når én flaskehals er tydelig viktigst akkurat nå. Velg Vekst når to forbedringer kan forsterke hverandre. Velg Partner når flere forskjellige kundereiser må forbedres og prioriteres løpende.Er annonsebudsjett og eksterne kostnader inkludert?Annonsebudsjett kommer i tillegg. Aktuelle eksterne plattformkostnader kommer i tillegg hvis ikke annet er uttrykkelig avtalt.Hva hvis både synlighet og konvertering begrenser resultatet?Da ser vi på sammenhengen. Vi finner flaskehalsen og prioriterer tiltakene i riktig rekkefølge, fremfor å starte med en fast kanal.Jobber dere bare med bedrifter i Oslo?Nei. Vi jobber med bedrifter i hele Norge og kan også hjelpe i andre nordiske markeder. Navnet beskriver tjenesten og satsingen - ikke et krav om at kunden holder til i Oslo.",
+      "cards": [
+        {
+          "variant": "card",
+          "radius": "20px",
+          "surface": "dark",
+          "background": "oklch(0.250753 0.100773 313.031)",
+          "color": "oklch(0.942974 0.0169783 192.351)",
+          "body": true,
+          "padding": "24px",
+          "gap": "20px",
+          "links": []
+        },
+        {
+          "variant": "plain",
+          "radius": "0px",
+          "surface": "soft",
+          "background": "oklch(0.984485 0.00447018 314.805)",
+          "color": "oklch(0.278712 0.0437809 312.743)",
+          "body": false,
+          "links": []
+        }
+      ],
+      "mechanism": {
+        "html": "<section id=\"mekanisme\" class=\"content-section section-space home-section-mekanisme\" data-surface=\"soft\"><div class=\"shell\"><div class=\"section-heading\"><div><p class=\"eyebrow\">Start med det som begrenser resultatet</p><h2>Slik finner vi hva som bør gjøres først</h2></div><div class=\"body-copy\"><p>Behovet avgjør tiltakene. Vi starter ikke med SEO eller en annen kanal bare fordi du kom inn på en bestemt side.</p></div></div><div class=\"section-items mechanism-steps\"><article class=\"info-item home-item-0\" data-surface=\"base\"><span class=\"item-number\" aria-hidden=\"true\">01</span><h3>Finn flaskehalsen</h3><p>Se hvor kundereisen stopper: før besøket, på siden eller i veien til kontakt og kjøp.</p></article><article class=\"info-item home-item-1\" data-surface=\"soft\"><span class=\"item-number\" aria-hidden=\"true\">02</span><h3>Prioriter tiltak</h3><p>Velg en fornuftig start ut fra behov, kommersiell verdi og det vi faktisk vet.</p></article><article class=\"info-item home-item-2\" data-surface=\"mint\"><span class=\"item-number\" aria-hidden=\"true\">03</span><h3>Gjennomfør</h3><p>Gjør arbeidet som er avtalt. Omfang og ansvar skal være tydelig.</p></article><article class=\"info-item home-item-3\" data-surface=\"lavender\"><span class=\"item-number\" aria-hidden=\"true\">04</span><h3>Mål effekt</h3><p>Følg med på relevante henvendelser og kjøp. Se resultatene sammen med verdi og kostnader.</p></article></div></div></section>",
+        "rect": {
+          "x": 0,
+          "y": 8256.140625,
+          "width": 320,
+          "height": 1370.375,
+          "top": 8256.140625,
+          "right": 320,
+          "bottom": 9626.515625,
+          "left": 0
+        },
+        "items": [
+          {
+            "html": "<article class=\"info-item home-item-0\" data-surface=\"base\"><span class=\"item-number\" aria-hidden=\"true\">01</span><h3>Finn flaskehalsen</h3><p>Se hvor kundereisen stopper: før besøket, på siden eller i veien til kontakt og kjøp.</p></article>",
+            "rect": {
+              "x": 16,
+              "y": 8602.578125,
+              "width": 288,
+              "height": 233.28125,
+              "top": 8602.578125,
+              "right": 304,
+              "bottom": 8835.859375,
+              "left": 16
+            }
+          },
+          {
+            "html": "<article class=\"info-item home-item-1\" data-surface=\"soft\"><span class=\"item-number\" aria-hidden=\"true\">02</span><h3>Prioriter tiltak</h3><p>Velg en fornuftig start ut fra behov, kommersiell verdi og det vi faktisk vet.</p></article>",
+            "rect": {
+              "x": 16,
+              "y": 8863.859375,
+              "width": 288,
+              "height": 209.6875,
+              "top": 8863.859375,
+              "right": 304,
+              "bottom": 9073.546875,
+              "left": 16
+            }
+          },
+          {
+            "html": "<article class=\"info-item home-item-2\" data-surface=\"mint\"><span class=\"item-number\" aria-hidden=\"true\">03</span><h3>Gjennomfør</h3><p>Gjør arbeidet som er avtalt. Omfang og ansvar skal være tydelig.</p></article>",
+            "rect": {
+              "x": 16,
+              "y": 9101.546875,
+              "width": 288,
+              "height": 207.6875,
+              "top": 9101.546875,
+              "right": 304,
+              "bottom": 9309.234375,
+              "left": 16
+            }
+          },
+          {
+            "html": "<article class=\"info-item home-item-3\" data-surface=\"lavender\"><span class=\"item-number\" aria-hidden=\"true\">04</span><h3>Mål effekt</h3><p>Følg med på relevante henvendelser og kjøp. Se resultatene sammen med verdi og kostnader.</p></article>",
+            "rect": {
+              "x": 16,
+              "y": 9337.234375,
+              "width": 288,
+              "height": 233.28125,
+              "top": 9337.234375,
+              "right": 304,
+              "bottom": 9570.515625,
+              "left": 16
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "errors": [],
+  "posts": []
+}
