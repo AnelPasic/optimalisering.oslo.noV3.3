@@ -1,5 +1,11 @@
 # Decisions and authority
 
+## D-093 — OWNER PASS H-026 daisyUI Hero/Footer visual review — 2026-10-17
+
+**Authority: direct OWNER review** of published H-026 Worker after technical delivery `5d4f7d6`. OWNER confirms: **"ser riktig ut"**, answering the explicit question whether **Hero and Footer** look correct. Therefore **H-026 is OWNER PASS / COMPLETE for its scoped Hero/Footer component reuse and visual appearance**. Existing four Hero choices, page media/copy, navigation/Footer content, responsiveness and Card typography stay accepted within their prior scoped gates. Technical receipt: `coordination/evidence/h026/README.md`.
+
+**Strict boundary:** This is NOT approval of the entire H-024A3 CMS/Page Builder editor, creation/deletion of sections, H-024B rollout, parked H-022 proof showcase, final customer content/claims, contact intake, indexing, domain publication or launch. H-024A3 remains a separate owner checkpoint; H-024B stays BLOCKED until that editor gate and a separate scoped authorization. No further H-026 code or visual iteration is requested.
+
 ## H-026 technical receipt — 2026-10-17 (OWNER Hero/Footer review pending)
 
 Implementation2727fca consumes actual D-092/H-026: genuine shared hero/hero-content in all9 families and native Footer grid/title/directions, existing four CMS presets and source/shell/typography/media/proof/form/footer semantics preserved.61 custom CSS declarations removed, zero added; Tailwind composes accepted responsive layout without a second component system. Exact72 default/DS and208 source-preset snapshots,142 tests/196 typography groups, actual keyboard/touch and independent code/visual review pass.174 protected files/five OWNER PNGs exact. Exact native8a466d5d SUCCESS / Workere3fa5e9f at100% reproduces72 identical before-Worker snapshots and53 byte-identical build assets with safeguards intact.29/32 screenshots exact; three desktop demo photo-only raster differences max6/255, no layout/crop change. Evidence/map/justified exceptions: `evidence/h026/README.md`. This is technical delivery, NOT an incoming OWNER H-026 PASS. STOP for separate Hero/Footer visual review; D-088/D-092 accepted scopes stand, H-024A3 whole-editor separate, H-024B blocked, H-022 parked, no launch.
