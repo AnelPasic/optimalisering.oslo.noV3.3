@@ -1,0 +1,35 @@
+{
+  "commit": "aeb71526ec0e8860b08d1b3eb5d30b7dc802d786",
+  "nativeBuild": "da320878-14f3-4162-a156-cb3f1ee46770",
+  "nativeOutcome": "success",
+  "workerVersion": "7646f1a6-4d53-41d1-bc09-1964b4013f60",
+  "base": "https://optimalisering-oslo-v33.anel.workers.dev",
+  "htmlByteExact": true,
+  "checks": [
+    {
+      "id": "calc-visits",
+      "step": "250",
+      "keyboardValue": "1250"
+    },
+    {
+      "id": "calc-conversion",
+      "step": "0.5",
+      "numberArrowUp": 1.5,
+      "rangeArrowRight": 2,
+      "twoWaySync": true
+    },
+    {
+      "id": "calc-new-conversion",
+      "step": "0.5",
+      "numberArrowUp": 2.5,
+      "rangeArrowRight": 3,
+      "twoWaySync": true
+    }
+  ],
+  "independentMonthlyResult": true,
+  "chartVisible": true,
+  "noindex": true,
+  "intakeDisabled": true,
+  "errors": [],
+  "posts": []
+}

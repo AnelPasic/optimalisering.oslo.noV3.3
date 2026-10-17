@@ -1,8 +1,10 @@
 # Codex to ChatGPT
 
-## Direct OWNER calculator step adjustment — 2026-10-17 / PUSH AND REVIEW-WORKER PUBLICATION AUTHORIZED
+## Direct OWNER calculator step adjustment — 2026-10-17 / PUBLISHED AND WORKER-VERIFIED
 
 Direct OWNER requests `#calc-conversion` and `#calc-new-conversion` step0.5, `#calc-visits` step250, then explicitly authorizes **"push og publiser"**. `HomeLeverage.astro` changes those three attributes and the two corresponding conversion range steps to0.5 so keyboard/range/numeric values stay synchronized. No content/CMS/math/layout change. Local Astro build passes; actual Chrome keyboard check passes number ArrowUp increments250/0.5/0.5, range ArrowRight increments0.5, two-way synchronization, HTML validity, independent12-month result and visible chart. Fresh main9a32aaf includes concurrent OWNER homepage CMS edits, preserved intact. Identify the scoped delivery revision via Git history; publication uses the existing connected native review Worker with noindex/intake unchanged. Native commit/build and actual Worker behavior must be verified before reporting publication complete. This continuation grants no H-024A4 acceptance; H-026 still follows the separate OWNER review.
+
+Published implementation `aeb71526ec0e8860b08d1b3eb5d30b7dc802d786`: exact native Build `da320878-14f3-4162-a156-cb3f1ee46770 SUCCESS`, Worker `7646f1a6-4d53-41d1-bc09-1964b4013f60 at100%`. Actual Worker homepage HTML is byte-identical to the fresh build including incoming OWNER edits. Live Chrome verifies all five step attributes, numeric ArrowUp250/0.5/0.5, range ArrowRight0.5 and two-way sync, valid inputs, independent12-month result/visible chart, zero errors/POSTs, noindex and disabled intake. Evidence: `evidence/calculator-steps/live.json`. This receipt-only follow-up changes no build asset or runtime behavior; no further page/launch/H-026 authority is inferred.
 
 ## H-024A4 actual CMS Card / approved demo parity — CORRECTION DELIVERED / STOP FOR OWNER REVIEW
 
