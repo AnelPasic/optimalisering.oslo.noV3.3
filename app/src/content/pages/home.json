@@ -424,7 +424,7 @@
           "title": "Finn flaskehalsen",
           "text": "Se hvor kundereisen stopper: før besøket, på siden eller i veien til kontakt og kjøp.",
           "boxVariant": "card",
-          "surface": "base"
+          "surface": "soft"
         },
         {
           "title": "Prioriter tiltak",
@@ -436,13 +436,13 @@
           "title": "Gjennomfør",
           "text": "Gjør arbeidet som er avtalt. Omfang og ansvar skal være tydelig.",
           "boxVariant": "card",
-          "surface": "mint"
+          "surface": "soft"
         },
         {
           "title": "Mål effekt",
           "text": "Følg med på relevante henvendelser og kjøp. Se resultatene sammen med verdi og kostnader.",
           "boxVariant": "card",
-          "surface": "lavender"
+          "surface": "soft"
         }
       ]
     },
