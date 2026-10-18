@@ -1,5 +1,11 @@
 # Decisions and authority
 
+## D-100 — OWNER proposes three-zone Page Builder, core drag/protection tradeoff unresolved — 2026-10-18
+
+Direct OWNER UX specification: Hero locked first; independent **Valgfrie seksjoner Topp** native Add/Hide/Drag list; **Låste seksjoner** with Hide/Publish and desired internal drag; independent **Valgfrie seksjoner Bunn** native Add/Hide/Drag list. This supersedes optional Before/After-each-core placement as the *preferred future UX*, but is **NOT authorization to implement** before choosing a viable stock Pages CMS model. Contract/analysis: `coordination/H024A8D-THREE-ZONE-PAGEBUILDER-OWNER-INTENT.md`.
+
+H-024A8C local discovery report (OWNER shared; commit `1680608` local, not pushed) proves that the old editable/sortable mixed core block list allows Clear/Replace to pass CMS client validation; invalid commits can break build, despite site schema checks. Stock Pages CMS does not deliver true inline core drag+hard deletion protection together. OWNER must explicitly choose between **direct dragging with documented bad-save risk** and **fixed protected core source plus a separate draggable order/reference list** (indirect UX); numeric ordering was proposed earlier but latest OWNER layout prioritizes drag. OWNER listed six original examples whereas current source has eight (also `mekanisme`, `passer`); preserve all eight pending explicit disposition. `sjekk`/`priser` hiding remains link-protected. H-024A8B OWNER REVISE, H-024A3 OPEN, H-024B BLOCKED, H-022 PARKED, preview safety unchanged.
+
 ## D-099 — OWNER REVISE H-024A8B core reorder UX; assess safe stock-CMS recovery — 2026-10-18
 
 OWNER inspected the real Pages CMS and directly reports **"Etter hero, så kan ikke de faste seksjoner flyttes opp ned som tidligere."** This is an explicit OWNER UX objection to H-024A8B's formerly draggable original eight being made fixed non-sortable objects. Do **not** treat its technical PASS as whole-editor OWNER PASS. OWNER still wants native Pages CMS, retained Skjult/Publisert + optional Before/After sections, and **ability to reorder the eight original sections**. Existing content/visual components remain accepted in their earlier scopes.
