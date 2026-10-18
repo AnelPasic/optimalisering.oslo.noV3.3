@@ -1,5 +1,11 @@
 # Decisions and authority
 
+## D-099 — OWNER REVISE H-024A8B core reorder UX; assess safe stock-CMS recovery — 2026-10-18
+
+OWNER inspected the real Pages CMS and directly reports **"Etter hero, så kan ikke de faste seksjoner flyttes opp ned som tidligere."** This is an explicit OWNER UX objection to H-024A8B's formerly draggable original eight being made fixed non-sortable objects. Do **not** treat its technical PASS as whole-editor OWNER PASS. OWNER still wants native Pages CMS, retained Skjult/Publisert + optional Before/After sections, and **ability to reorder the eight original sections**. Existing content/visual components remain accepted in their earlier scopes.
+
+**Decision:** H-024A8B = OWNER REVISE for lost core sorting. Request limited **H-024A8C stock-CMS feasibility/discovery** under `coordination/H024A8C-RESTORE-CORE-REORDERING-ASSESSMENT.md`. First examine restoring the former ordered/co-located eight-row mixed list **alongside** current `optionalSections` Before/After slots that anchor to the actual changed core order; retain visibility and no custom CMS. Must frankly investigate native Remove/Clear button & Save behavior, because min/max8 can still expose deletion confirmations and build guards alone do not prevent an invalid CMS commit. Discovery only, do not redesign/redeploy/migrate data without follow-up OWNER authorization. H-024A3 OPEN, H-024B BLOCKED, H-022 PARKED, no launch/index/intake authority.
+
 ## D-098 — OWNER selects stock Pages CMS; protect records, not their visibility — 2026-10-18
 
 OWNER rejects the custom-CMS direction after H-024A8's discovery STOP: **"vi kan holde oss til det Pages CMS tillatter"** and clarifies new sections may be inserted **before/after protected existing sections**, while **some protected sections may toggle Skjult/Publisert**. "Protected" therefore means preventing accidental deletion/duplication of eight original section *records/identities/authoritative data*, **not forcing their public display**. Retain ordinary edits and a simple visibility control. Do not maintain a Pages CMS fork/custom deployment.
