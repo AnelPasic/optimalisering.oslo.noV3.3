@@ -1,6 +1,18 @@
 # ChatGPT to Codex
 
-## ACTIVE HANDOFF — D-101 / H-024A8E NATIVE THREE-ZONE PAGE BUILDER (IMPLEMENT)
+## ACTIVE HANDOFF — D-102 / H-024A8E GLOBAL ELEMENTS LIBRARY + OPTIONAL PAGE PLACEMENTS (IMPLEMENT)
+
+Date: 2026-10-18. OWNER explicitly changed the model **before you start**: **"ja god plan, endre H-024A8E til denne modellen. Også trenger vi ikke alle de blokkene som er på forsiden."** Implement **REVISED** `coordination/H024A8E-NATIVE-THREE-ZONE-PAGEBUILDER.md` at latest main. This supersedes D-101's direct editable eight-row source list; DO NOT implement obsolete eight-required `min=max8` architecture.
+
+**What the OWNER wants:** a native Pages CMS **Globale elementer** library analogous to Concrete CMS Stacks. Existing calculator, assessment/contact, proof, pricing, FAQ, selector master content/config remain editable in one authoritative place, protected against ordinary CMS UI deletion. Homepage merely chooses placement/reference, toggles Publisert/Skjult, reorders or removes the page instance; never loses masters. Hero stays pinned. Three simple native sortable groups: **Valgfrie seksjoner Topp**, **Hovedseksjoner** (no longer eight-required/authoritative), **Valgfrie seksjoner Bunn**. Local normal content remains directly editable; no per-core Before/After dropdown, numeric reordering, external CMS, page-wide duplicated master data.
+
+**Mandatory:** inspect Pages CMS stock capability (reference supports collections, select can refer to fixed typed files; operations.delete:false on file/collection), choose one simplest native library mechanism. FIRST prove one genuine library master + page reference CMS save→Git→native Worker→restore; if UX/schema proves infeasible STOP rather than migrate everything. Then migrate safe global modules, retain all eight records including content-only `mekanisme`/`passer` and **OWNER-added `forbehovsvelger`** (present in current home source, `before:behov`) with full data/UIDs. Do not reset to historical H-024A8B receipts. Keep one authoritative commercial/proof/form data source, approved components, stable IDs/anchors and no source leakage. Guard existing `/#sjekk`/`/#priser` links; allow removing modules from a page only after anchors have correct legitimate destinations. Prevent duplicate interactive instances per route unless properly tested. Preserve current preview composition initially: "not all sections needed" removes structural **requirement**, but is NOT an OWNER selection of which current visible ones to remove. Report the actual options and request that decision at final STOP.
+
+**Scope**: existing preview only, authentic CMS→Git→Worker tests and selective exact restoration; no page launch/index/intake, H-024B service pages or H-022 proof changes. On technical PASS, STOP for OWNER library/editor/shorter-homepage approval. D-101 text below is historical.
+
+---
+
+## HISTORICAL HANDOFF — D-101 / H-024A8E THREE-ZONE SOURCE LIST (SUPERSEDED BY D-102)
 
 Date: 2026-10-18. Direct OWNER: **"ja men vi kan leve med at vi ikke er beskyttet mot å tømme en rad og duplisering."** This explicitly resolves D-100's outstanding original-core sorting tradeoff. Keep **stock Pages CMS native draggable co-located mixed original 8-block list** despite known original Clear/Replace/duplicate Save risk; protect with **website build/schema checks and narrow Git recovery**, not falsely claimed native CMS blocking. **No numeric ordering, separate order-only list or CMS fork.**
 
