@@ -145,6 +145,44 @@
       }
     },
     {
+      "_block": "assessment",
+      "uid": "d6ff367f-a926-4ee2-bdcb-7731ce43c183",
+      "id": "sjekk",
+      "name": "Gratis sjekk",
+      "content": {
+        "section": {
+          "_block": "protected",
+          "id": "sjekk",
+          "eyebrow": "Gratis, manuell sjekk",
+          "heading": "Send nettsiden. Vi sier hvor vi ville startet - og hvorfor.",
+          "body": [
+            "Vi ser på den offentlige nettsiden eller nettbutikken og sender deg de tre viktigste tingene vi ville undersøkt eller forbedret først.",
+            "Dette er en kort, manuell vurdering - ikke en full revisjon, prognose eller gratis gjennomføring. Videre arbeid avtales separat."
+          ]
+        },
+        "form": {
+          "promise": "Få våre 3 viktigste funn innen 2 virkedager.",
+          "heading": "Send nettsiden",
+          "websiteLabel": "Nettside eller nettbutikk",
+          "websitePlaceholder": "dinbedrift.no",
+          "emailLabel": "E-post",
+          "emailPlaceholder": "deg@dinbedrift.no",
+          "messageLabel": "Kort kommentar",
+          "optional": "Valgfritt",
+          "messagePlaceholder": "Noe vi bør vite?",
+          "sensitiveNotice": "Ikke send innlogging, sensitive opplysninger eller personopplysninger om andre.",
+          "previewNotice": "Dette er en forhåndsvisning. Innsending er ikke åpnet ennå.",
+          "submitLabel": "Ta en gratis sjekk",
+          "privacyText": "Vi bruker opplysningene for å følge opp forespørselen.",
+          "privacyLink": {
+            "label": "Les om personvern",
+            "href": "/personvern/"
+          },
+          "disabledStatus": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt."
+        }
+      }
+    },
+    {
       "_block": "packages",
       "uid": "7b687594-17f4-4266-adf5-12b710f563af",
       "id": "priser",
@@ -470,44 +508,6 @@
           "surface": "soft"
         }
       ]
-    },
-    {
-      "_block": "assessment",
-      "uid": "d6ff367f-a926-4ee2-bdcb-7731ce43c183",
-      "id": "sjekk",
-      "name": "Gratis sjekk",
-      "content": {
-        "section": {
-          "_block": "protected",
-          "id": "sjekk",
-          "eyebrow": "Gratis, manuell sjekk",
-          "heading": "Send nettsiden. Vi sier hvor vi ville startet - og hvorfor.",
-          "body": [
-            "Vi ser på den offentlige nettsiden eller nettbutikken og sender deg de tre viktigste tingene vi ville undersøkt eller forbedret først.",
-            "Dette er en kort, manuell vurdering - ikke en full revisjon, prognose eller gratis gjennomføring. Videre arbeid avtales separat."
-          ]
-        },
-        "form": {
-          "promise": "Få våre 3 viktigste funn innen 2 virkedager.",
-          "heading": "Send nettsiden",
-          "websiteLabel": "Nettside eller nettbutikk",
-          "websitePlaceholder": "dinbedrift.no",
-          "emailLabel": "E-post",
-          "emailPlaceholder": "deg@dinbedrift.no",
-          "messageLabel": "Kort kommentar",
-          "optional": "Valgfritt",
-          "messagePlaceholder": "Noe vi bør vite?",
-          "sensitiveNotice": "Ikke send innlogging, sensitive opplysninger eller personopplysninger om andre.",
-          "previewNotice": "Dette er en forhåndsvisning. Innsending er ikke åpnet ennå.",
-          "submitLabel": "Ta en gratis sjekk",
-          "privacyText": "Vi bruker opplysningene for å følge opp forespørselen.",
-          "privacyLink": {
-            "label": "Les om personvern",
-            "href": "/personvern/"
-          },
-          "disabledStatus": "Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt."
-        }
-      }
     },
     {
       "_block": "faq",
