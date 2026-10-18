@@ -508,7 +508,14 @@
           }
         ]
       }
-    }
+    },
+    "regneeksempel": [
+      {
+        "_block": "global",
+        "uid": "1e20e5b5-a9fc-4460-81f3-fc7a72053a0c",
+        "element": "regneeksempel"
+      }
+    ]
   },
   "hero": {
     "layout": "split-right",
