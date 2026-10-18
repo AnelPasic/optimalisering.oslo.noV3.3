@@ -1,7 +1,7 @@
 # H-024A8E — Native Pages CMS three-zone homepage Page Builder
 
 Date: 2026-10-18
-Authority: direct OWNER acceptance of the explicit tradeoff, following D-100: **"ja men vi kan leve med at vi ikke er beskyttet mot å tømme en rad og duplisering"**. This authorizes proceeding with native draggable core blocks despite client-side Clear/Replace/duplicate weaknesses documented in H-024A8C, instead of numeric order or a separate reference registry.
+Authority: D-101 — direct OWNER acceptance of the explicit tradeoff, following D-100: **"ja men vi kan leve med at vi ikke er beskyttet mot å tømme en rad og duplisering"**. This authorizes proceeding with native draggable core blocks despite client-side Clear/Replace/duplicate weaknesses documented in H-024A8C, instead of numeric order or a separate reference registry.
 Status: **SCOPED IMPLEMENTATION AUTHORIZED, NOT DELIVERED.** Preserve all prior scoped visual PASS and protected commercial authority. H-024A3 whole editor still pending OWNER review; H-024B BLOCKED, H-022 PARKED; no production domain, indexing or form intake authorization.
 
 ## Accepted editor UX: three ordered zones, no custom Pages CMS
