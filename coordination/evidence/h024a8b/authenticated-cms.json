@@ -1,0 +1,44 @@
+{
+  "testedUrl": "https://app.pagescms.org/anelpasic/optimalisering.oslo.nov3.3/main/file/homepage",
+  "coreObjectProbe": "Script ran on page and returned:\n```json\n[{\"name\":\"Behovsvelger\",\"found\":true,\"rootButtons\":0,\"directList\":false,\"label\":\"Behovsvelger\"},{\"name\":\"Regneeksempel\",\"found\":true,\"rootButtons\":0,\"directList\":false,\"label\":\"Regneeksempel\"},{\"name\":\"Gratis sjekk\",\"found\":true,\"rootButtons\":0,\"directList\":false,\"label\":\"Gratis sjekk\"},{\"name\":\"Pakker og priser\",\"found\":true,\"rootButtons\":0,\"directList\":false,\"label\":\"Pakker og priser\"},{\"name\":\"Kunderesultater\",\"found\":true,\"rootButtons\":0,\"directList\":false,\"label\":\"Kunderesultater\"},{\"name\":\"Slik virker optimalisering\",\"found\":true,\"rootButtons\":0,\"directList\":false,\"label\":\"Slik virker optimalisering\"},{\"name\":\"Hvem passer det for\",\"found\":true,\"rootButtons\":0,\"directList\":false,\"label\":\"Hvem passer det for\"},{\"name\":\"Ofte stilte spørsmål\",\"found\":true,\"rootButtons\":0,\"directList\":false,\"label\":\"Ofte stilte spørsmål\"}]\n```",
+  "optionalUids": {
+    "a": "73e4c362-2ac0-4077-8d1f-f7e635cb0f5d",
+    "b": "a7030dd8-3386-4dfa-87f0-9813f0148d52"
+  },
+  "create": "Two native Add rows; hidden readonly UUIDs generated automatically. A uses approved Card and existing mechanism copy. Fixed FAQ heading edited.",
+  "reorder": "Space / ArrowUp / Space moved A,B to B,A. Native CMS commit159fc758 has only row movement.",
+  "pointerLimit": "DevTools pointer drag reported a drop over the same item without moving a row. Pointer gesture not established by automation; native keyboard reorder proved through Git/build/Worker. OWNER mouse usability review remains.",
+  "placement": "B changes before:regneeksempel to after:sporsmal; CMS7d03753 changes exactly one field.",
+  "invalidSave": [
+    "        uid=38_13 textbox \"Navn i seksjonslisten\" description=\"This field is required\" focusable focused invalid=\"true\"",
+    "        uid=38_14 \"This field is required\"",
+    "        uid=38_17 textbox \"Seksjonens lenkeanker\" description=\"Unikt lenkeanker med små bokstaver og bindestrek, for eksempel nyttig-informasjon. Behold ankeret ved flytting. This field is required\" invalid=\"true\"",
+    "        uid=38_19 \"This field is required\"",
+    "        uid=38_24 textbox \"Overskrift\" description=\"This field is required\" invalid=\"true\"",
+    "        uid=38_25 \"This field is required\"",
+    "        uid=38_51 \"Please fix the errors before saving.\""
+  ],
+  "invalidSaveNoCommit": "Remote remained7d03753. Reload discarded incomplete unsaved third row and Save became disabled.",
+  "hiddenReload": [
+    "    uid=42_52 button \"Save\" disableable disabled",
+    "        uid=42_112 combobox \"Publisert\" autocomplete=\"list\" expandable haspopup=\"listbox\" value=\"Skjult – behold i CMS\"",
+    "        uid=42_135 combobox \"Publisert\" autocomplete=\"list\" expandable haspopup=\"listbox\" value=\"Skjult – behold i CMS\"",
+    "        uid=42_414 combobox \"Publisert\" autocomplete=\"list\" expandable haspopup=\"listbox\" value=\"Skjult – behold i CMS\"",
+    "        uid=42_468 combobox \"Publisert\" autocomplete=\"list\" expandable haspopup=\"listbox\" value=\"Skjult – behold i CMS\"",
+    "        uid=42_524 combobox \"Publisert\" autocomplete=\"list\" expandable haspopup=\"listbox\" value=\"Skjult – behold i CMS\"",
+    "        uid=42_570 combobox \"Publisert\" autocomplete=\"list\" expandable haspopup=\"listbox\" value=\"Skjult – behold i CMS\"",
+    "        uid=42_606 \"H024A8B test A · before:regneeksempel hidden\""
+  ],
+  "unhiddenReload": [
+    "    uid=44_52 button \"Save\" disableable disabled",
+    "        uid=44_112 combobox \"Publisert\" autocomplete=\"list\" expandable haspopup=\"listbox\"",
+    "        uid=44_135 combobox \"Publisert\" autocomplete=\"list\" expandable haspopup=\"listbox\"",
+    "        uid=44_414 combobox \"Publisert\" autocomplete=\"list\" expandable haspopup=\"listbox\"",
+    "        uid=44_468 combobox \"Publisert\" autocomplete=\"list\" expandable haspopup=\"listbox\"",
+    "        uid=44_524 combobox \"Publisert\" autocomplete=\"list\" expandable haspopup=\"listbox\"",
+    "        uid=44_570 combobox \"Publisert\" autocomplete=\"list\" expandable haspopup=\"listbox\"",
+    "        uid=44_578 textbox \"FAQ-overskrift\" value=\"Før du tar neste steg\""
+  ],
+  "deleted": "Two optional rows removed via native confirmation. Fixed objects have no root clear/delete/sortable controls.",
+  "canonicalSerialization": "CMS emits no final LF; migration serializer corrected. Final exact Git/working restore compares each to canonical baselinefc732c9."
+}

@@ -8,7 +8,7 @@ import * as builder from '../src/lib/home-builder.ts';
 import {cmsJsonSave,entryForFile,resolveField,assertPreservedContent} from './helpers/pages-cms-json.ts';
 const input=JSON.parse(readFileSync('src/content/pages/home.json','utf8'));
 const order=['behov','regneeksempel','sjekk','priser','resultater','mekanisme','passer','sporsmal'];
-const source=()=>({...structuredClone(input),sections:Object.fromEntries((Array.isArray(input.sections)?input.sections:Object.values(input.sections)).map((b:any)=>[b.id,structuredClone(b)]))});
+const source=()=>{const {optionalSections,...core}=structuredClone(input);return {...core,sections:Object.fromEntries(Object.values<any>(input.sections).map(b=>[b.id,structuredClone(b)]))};};
 const optional=(id='ekstra',placement='before:regneeksempel')=>({...structuredClone(source().sections.mekanisme),id,uid:randomUUID(),name:id,heading:'Valgfritt innhold',body:['Kun valgfri seksjon'],items:[],placement});
 test('fixed stock source is accepted without display changes and optional slots resolve stably',()=>{
  const p=source();assert.equal(pageSchema.safeParse(p).success,true);

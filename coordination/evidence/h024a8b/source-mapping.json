@@ -391,5 +391,12 @@
     "coreOrderEqual": true,
     "postMigrationWorkingSha256": "f3f35e17ca23b8f4f23d1b48ad3bbfb1ebf012230af2809d831f0e1ed175e8fb",
     "postMigrationGitBlob": "2b0b4e80fd6f17a4808157575949295aa951a3a8"
+  },
+  "nativeSerializationBaseline": {
+    "reason": "Native Pages CMS emits two-space JSON without final newline. One-time migration serializer corrected to this format; semantic data unchanged. Final native restoration must equal these precomputed canonical bytes.",
+    "initialMigrationGitBlob": "2b0b4e80fd6f17a4808157575949295aa951a3a8",
+    "workingSha256": "8a322ac0c9ee767f844c34c663d06d8feb9d87d982aa9d5126c048164430bad3",
+    "gitBlob": "42dbaa6d3e9c1ad7fce739e3198ce2c50ffa7e57",
+    "onlyInitialFormatDifference": "one final LF removed"
   }
 }

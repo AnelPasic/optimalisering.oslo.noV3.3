@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="nb"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>H-024A8B – OWNER-review</title>
+<style>body{margin:24px;font:16px/1.5 system-ui;color:#25202b;background:#faf9fc}h1{font-size:24px}label{margin-right:24px}select{font:inherit;padding:8px}main{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}img{max-width:100%;height:auto;border:1px solid #ddd}figure{margin:0}figcaption{font-weight:600;margin:16px 0}aside{padding:16px;background:#eee8f2;margin:20px 0}a{color:#422663}@media(max-width:700px){main{grid-template-columns:1fr}}</style>
+<h1>H-024A8B – faktisk CMS og Worker</h1>
+<p>Alle testendringer er gjenopprettet. Visningene under er lagrede skjermbilder fra de faktiske kontrollene.</p>
+<label>Bredde <select id="width"><option>1440</option><option>900</option><option>390</option><option>320</option></select></label>
+<label>Sammenligning <select id="phase"><option value="default">Før → endelig gjenopprettet</option><option value="create">Nye seksjoner → skjult</option><option value="placement">Før/etter-plassering → aktivert igjen</option><option value="cms">CMS-redigering</option></select></label>
+<aside>De åtte originalene har fast rekkefølge i denne piloten. Bare ekstraseksjoner sorteres i listen. Publiseringskontrollen er låst for de aktive lenkemålene sjekk/priser. Native tastatursortering er bevist; musebruk må OWNER prøve. <a href="README.md">Detaljer og kvitteringer</a>.</aside>
+<main><figure><figcaption id="left-label"></figcaption><img id="left" alt="Førtilstand"></figure><figure><figcaption id="right-label"></figcaption><img id="right" alt="Ettertilstand"></figure></main>
+<script>
+const width=document.querySelector('#width'),phase=document.querySelector('#phase');
+function show(){const w=width.value,p=phase.value;let a,b,al,bl;
+ if(p==='default'){a=`before/home-${w}.png`;b=`final-restored/home-${w}.png`;al='Før migrering, lokal';bl='Endelig faktisk Worker, originalt innhold';}
+ if(p==='create'){a=`create/worker-${w}.png`;b=`hidden/worker-${w}.png`;al='To native CMS-innlegg før kalkulator';bl='Seks originaler og innlegg A skjult';}
+ if(p==='placement'){a=`placement/worker-${w}.png`;b=`unhidden/worker-${w}.png`;al='Innlegg B etter FAQ';bl='Alle originaler og innlegg aktivert igjen';}
+ if(p==='cms'){a=`cms-list-${w}.${w==='1440'?'png':'jpg'}`;b='cms-hidden-1440.jpg';al=`Faktisk CMS-liste, ${w} px`;bl='Lagret skjult rad, fortsatt i CMS';}
+ document.querySelector('#left').src=a;document.querySelector('#right').src=b;document.querySelector('#left-label').textContent=al;document.querySelector('#right-label').textContent=bl;
+}width.onchange=phase.onchange=show;show();
+</script></html>

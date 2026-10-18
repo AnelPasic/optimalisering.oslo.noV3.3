@@ -1,0 +1,29 @@
+✔ assessment legacy/empty choice keeps split; horizontal is bounded and leaves all form source intact (27.4134ms)
+✔ native CMS assessment choice saves horizontal and clear restores the original source object (73.9224ms)
+✔ ordinary layout and box choices survive primary ingestion independently of surfaces (28.1637ms)
+✔ new presentation fields preserve automatic rendering defaults and reject protected use (7.1083ms)
+✔ co-located CMS choices expose semantics and round-trip variant/reorder without authority changes (5.3939ms)
+✔ Hero allows only the three safe layouts and optional image (2.9085ms)
+✔ derived block arrays reject missing and duplicated protected records (14.4152ms)
+✔ fixed source stores one structured Hero and complete co-located records (5.8755ms)
+✔ new content anchors cannot take fixed form, chart, ARIA or chrome identities (6.319ms)
+✔ actual CMS fixed-object merge preserves UUIDs and singleton authority (62.4209ms)
+✔ fixed homepage has eight co-located object editors after Hero and no duplicated sources (1.0555ms)
+✔ primary schema rejects every cloned singleton, mutated UID and missing core record (27.793ms)
+✔ fixed co-located content edits preserve every unrelated payload and protected field (6.1005ms)
+✔ fixed homepage sections cannot be removed or duplicated (20.4705ms)
+✔ CMS calculator defaults must be accepted by the rendered input controls (2.0404ms)
+✔ fixed source property order cannot silently change rendered original order (1.7214ms)
+✔ fixed stock source is accepted without display changes and optional slots resolve stably (38.2275ms)
+✔ core identity and optional collision safeguards include hidden records (8.8934ms)
+✔ visibility is typed, default published; linked sjekk/priser cannot be hidden (7.2199ms)
+✔ hidden section inbound anchors fail the publication check across routes; hidden outbound links do not (3.1429ms)
+✔ stock fixed editors have no row removal or type chooser; only ordinary optional rows can add/delete (62.5383ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 21
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 427.91

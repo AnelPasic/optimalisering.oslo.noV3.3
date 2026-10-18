@@ -23,5 +23,5 @@ const component=YAML.stringify({sectionVisibility:cms.components.sectionVisibili
 writeFileSync('../.pages.yml',(text.slice(0,start)+segment+text.slice(end)).replace('components:\n','components:\n'+component));
 home.sections=Object.fromEntries(blocks.map(b=>[b.id,b]));
 assert.deepEqual(Object.values(home.sections),blocks);
-writeFileSync(file,JSON.stringify(home,null,2)+'\n');
+writeFileSync(file,JSON.stringify(home,null,2));
 console.log('H024A8B explicit migration: eight records/values/order retained; fixed objects + one optional content list; no visibility materialized.');
