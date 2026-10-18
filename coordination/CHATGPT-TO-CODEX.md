@@ -1,6 +1,16 @@
 # ChatGPT to Codex
 
-## ACTIVE HANDOFF — H-024A8 OPTIONAL ORDINARY SECTIONS + REVERSIBLE UNPUBLISH (D-097)
+## ACTIVE HANDOFF — D-098 / H-024A8B STOCK PAGES CMS, NO CUSTOM CMS
+
+Date: 2026-10-18. OWNER explicitly chooses **Pages CMS as-is** rather than custom hosting/fork. Clarification: "Beskytte de åtte opprinnelige" must mean protect their identity/content against accidental deletion/duplication, **NOT** require public visibility. OWNER allows **new sections before and after the protected originals** and wants some original sections **Skjult/Publisert**. Implement stock-CMS choice B, modified for easy before/after placement, under `coordination/H024A8B-STOCK-PAGES-CMS-CONTINUATION.md`. The prior A-customization recommendation is superseded.
+
+Use non-removable fixed objects for existing eight, one optional content-only list and typed before/after existing-ID position selector; keep source-backed Card/HomeSection/daisyUI, all current values/UUIDs/SEO/CTA/approval untouched. Published/hidden must be reversible, content retained in CMS and **omitted** from HTML/serialized/public design-system. Keep linked #sjekk/#priser and shared commercial projection safe; hide homepage Hero proof derivative if proof is hidden and confirm actual behavior. Show honest stock-CMS tradeoff: original core relative order not native mixed-draggable in this simpler model. Do not imply original eight must be visible. Live homepage default output must remain unchanged after migration; original JSON shape migration may change bytes but all identities/values must be lossless.
+
+**Authorize implementation/test only within the written contract**. Require logged-in Pages CMS add/delete/placement/hide/save→Git→Cloudflare Worker→restore, exact source mapping/responsive checks, STOP for OWNER editor UX and visual approval. If stock CMS cannot meet the requirement safely, STOP for revised direction; do NOT return to CMS fork without OWNER authorization. H-024A3 not yet PASS, H-024B BLOCKED, H-022 PARKED, no launch.
+
+---
+
+## HISTORICAL HANDOFF — H-024A8 DISCOVERY STOP (D-097; SUPERSEDED BY D-098)
 
 Date: 2026-10-18. Direct OWNER: **"ja, enig, men vi bør også kunne sette seksjoner til å ikke være publiserte eller inaktive, så de kan utnyttes senere om det er noe å spare på."** Applies to the agreed next H-024A3 homepage section creation/deletion gate **before** H-024B service rollout.
 
