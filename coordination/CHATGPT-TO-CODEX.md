@@ -1,6 +1,16 @@
 # ChatGPT to Codex
 
-## ACTIVE HANDOFF — D-098 / H-024A8B STOCK PAGES CMS, NO CUSTOM CMS
+## ACTIVE HANDOFF — D-099 H-024A8C STOCK-CMS REORDER RECOVERY, DISCOVERY ONLY
+
+Date: 2026-10-18. OWNER has now reviewed H-024A8B CMS UI and reports: **"Etter hero, så kan ikke de faste seksjoner flyttes opp ned som tidligere."** This is **OWNER REVISE** of original-eight editor reordering, not general rejection of H-024A8B's tested Hide/Publish and optional inserts. The original editor allowed native drag; making core fields fixed was an acknowledged but now OWNER-rejected UX tradeoff. Keep Pages CMS stock, not custom.
+
+**Study only** `coordination/H024A8C-RESTORE-CORE-REORDERING-ASSESSMENT.md`. Primary candidate: reinstate native co-located draggable original eight mixed list at min=max8, **retain separate current optionalSections before/after keyed by original IDs** and visible/hidden toggle, order resolver uses the new actual original ordering. Do not claim min=max8 protects rows from native Remove/Clear (authenticated discovery found enabled confirmations). Determine safely whether native client-side Save validation prevents committing invalid originals, whether schema-only rejection can lead to failed Cloudflare builds, and how protected content would be recovered. Investigate without any production source/runtime mutation, report one practical safe alternative if needed, compare editor usability to prior OWNER rejection of order-only registries. STOP for OWNER decision; no H-024A8C implementation yet.
+
+Status: H-024A8B technical implementation remains, but OWNER REVISE; H-024A3 OPEN, H-024B BLOCKED, H-022 PARKED. No launch/index/intake, no visual/commercial/proof changes.
+
+---
+
+## HISTORICAL HANDOFF — D-098 / H-024A8B STOCK PAGES CMS (DELIVERED; D-099 OWNER REVISE CORE ORDER)
 
 Date: 2026-10-18. OWNER explicitly chooses **Pages CMS as-is** rather than custom hosting/fork. Clarification: "Beskytte de åtte opprinnelige" must mean protect their identity/content against accidental deletion/duplication, **NOT** require public visibility. OWNER allows **new sections before and after the protected originals** and wants some original sections **Skjult/Publisert**. Implement stock-CMS choice B, modified for easy before/after placement, under `coordination/H024A8B-STOCK-PAGES-CMS-CONTINUATION.md`. The prior A-customization recommendation is superseded.
 
