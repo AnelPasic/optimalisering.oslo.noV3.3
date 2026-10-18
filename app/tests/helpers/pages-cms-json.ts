@@ -8,9 +8,12 @@ export function resolveField(field: any, components: any): any {
 
 export function homepageBlockEditor(cms: any, type: string): any {
   const home = entryForFile(cms, 'app/src/content/pages/home.json');
-  const block = home.fields.find((f: any) => f.name === 'sections').blocks.find((b: any) => b.name === type);
+  const block = home.fields.find((f: any) => f.name === 'sections').fields.find((b: any) => b.fields.find((f:any)=>f.name==='_block')?.default === type);
   return resolveField(block.fields.find((f: any) => f.name === 'content'), cms.components);
 }
+
+// Raw homepage source is fixed objects; all other pages and parsed views use arrays.
+export function sectionRecords(page:any):any[]{return Object.values(page.sections);}
 
 const empty = (value: any): boolean => value == null || value === '' ||
   (typeof value === 'object' && Object.values(value).every(empty));

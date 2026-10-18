@@ -23,6 +23,6 @@ const records=capability.proofAfter?(await getCollection('proofCases')).map(p=>p
     {capability.proofAfter===section.id&&page.proof&&<Proof content={page.proof} records={records} primary />}
     {bridge?.after===section.id&&<PricingBridge content={commercial.packages} link={bridge.link} serviceName={bridge.serviceName} />}
   </>)}
-  <Faq items={page.faq} id="sporsmal" heading={capability.closingCta?undefined:commercial.faqHeading} eyebrow={capability.closingCta?undefined:commercial.faqEyebrow} />
+  <Faq items={page.faq} id="sporsmal" heading={capability.closingCta||commercial.faqVisible===false?undefined:commercial.faqHeading} eyebrow={capability.closingCta||commercial.faqVisible===false?undefined:commercial.faqEyebrow} />
   {capability.closingCta&&<ClosingCta link={page.cta} />}
 </div>

@@ -4,7 +4,7 @@ import { getCollection,type CollectionEntry } from 'astro:content';
 import CommercialHero from './CommercialHero.astro';
 import {resolvePageHero} from '../lib/page-hero';
 import HomepageBlock from './HomepageBlock.astro';
-import { getHomepageBlocks, getHomepageBlock } from '../lib/home-builder';
+import { getHomepageBlocks, getHomepageBlock, isHomepageSectionVisible } from '../lib/home-builder';
 import { getHeroProof } from '../lib/hero-proof';
 interface Props { page: CollectionEntry<'pages'>['data']; }
 const {page}=Astro.props;
@@ -12,6 +12,6 @@ const records=(await getCollection('proofCases')).map(record=>record.data);
 const blocks=getHomepageBlocks(page);
 ---
 <div class="invite-home">
- <CommercialHero content={resolvePageHero(page)} proof={getHeroProof(getHomepageBlock(page,'proof').content,records)} />
- {blocks.map(block=><HomepageBlock block={block} records={records} />)}
+ <CommercialHero content={resolvePageHero(page)} proof={isHomepageSectionVisible(getHomepageBlock(page,'proof'))?getHeroProof(getHomepageBlock(page,'proof').content,records):undefined} />
+ {blocks.filter(isHomepageSectionVisible).map(block=><HomepageBlock block={block} records={records} />)}
 </div>

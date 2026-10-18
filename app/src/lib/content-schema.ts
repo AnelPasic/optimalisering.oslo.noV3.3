@@ -6,21 +6,21 @@ import { listingSchema, pageListSchema } from './page-list.ts';
 import { homeSectionDataSchema, proofSlotSchema } from './home-section-data.ts';
 import { compositionSchema, resolveRouteFamily, routeKindSchema } from './route-family.ts';
 
-import { heroSchema, homepageBlocksSchema } from './home-builder.ts';
+import { heroSchema, resolveHomepageSections, sectionVisibilitySchema } from './home-builder.ts';
 import {heroPresentationSchema} from './hero-presentation.ts';
 
 const link = z.object({label:z.string(),href:z.string().startsWith('/')});
 export { proofSlotSchema } from './home-section-data.ts';
 const homepage = z.object({chrome:homeSectionDataSchema.shape.chrome}).strict();
 export const pageSchema = z.preprocess((input,context)=>{
-  const raw=input as {kind?:string;sections?:unknown;hero?:unknown};
+  const raw=input as {kind?:string;sections:unknown;optionalSections?:unknown;hero?:unknown};
   if(raw?.kind!=='home'&&raw?.hero!==undefined){const hero=heroPresentationSchema.safeParse(raw.hero);if(!hero.success)for(const issue of hero.error.issues)context.addIssue({...issue,path:['hero',...issue.path]});}
   if(raw?.kind==='home'){
-    const result=homepageBlocksSchema.safeParse(raw.sections);
-    if(!result.success)for(const issue of result.error.issues)context.addIssue({...issue,path:['sections',...issue.path]});
+    let blocks:ReturnType<typeof resolveHomepageSections>|undefined;
+    try{blocks=resolveHomepageSections(raw);}catch(error){if(error instanceof z.ZodError)for(const issue of error.issues)context.addIssue({...issue});else throw error;}
     const hero=heroSchema.safeParse(raw.hero);
     if(!hero.success)for(const issue of hero.error.issues)context.addIssue({...issue,path:['hero',...issue.path]});
-    if(hero.success)return {...raw,eyebrow:hero.data.eyebrow,title:hero.data.title,intro:hero.data.support,cta:hero.data.primaryCta,sections:result.success?result.data.map(b=>({...b,heading:'heading' in b?b.heading:'',body:'body' in b?b.body:[]})):raw.sections};
+    if(hero.success)return {...raw,eyebrow:hero.data.eyebrow,title:hero.data.title,intro:hero.data.support,cta:hero.data.primaryCta,sections:blocks?blocks.map(b=>({...b,heading:'heading' in b?b.heading:'',body:'body' in b?b.body:[]})):raw.sections};
   }
   return input;
 }, z.object({
@@ -34,7 +34,7 @@ export const pageSchema = z.preprocess((input,context)=>{
     eyebrow: z.string(), title: z.string(), intro: z.string(),
     listing: listingSchema.optional(),
     sections: z.array(z.object({
-      uid: z.string().optional(), name: z.string().optional(), content: z.unknown().optional(),
+      uid: z.string().optional(), name: z.string().optional(), content: z.unknown().optional(), visibility: sectionVisibilitySchema,
       _block: z.enum(['content', 'protected', 'pageList', 'selector', 'calculator', 'packages', 'proof', 'assessment', 'faq']).optional(), surface: surfaceSchema,
       pageList: pageListSchema.optional(),
       headingAlign: headingAlignSchema,

@@ -10,10 +10,10 @@ test('fixed homepage sections cannot be removed or duplicated', () => {
   assert.equal(pageSchema.safeParse(fixture).success, true);
   for (const id of ['mekanisme', 'passer', 'sjekk']) {
     const removed = structuredClone(fixture);
-    removed.sections = removed.sections.filter((section: { id: string }) => section.id !== id);
+    delete removed.sections[id];
     assert.equal(pageSchema.safeParse(removed).success, false, `required ${id} cannot be omitted`);
     const duplicated = structuredClone(fixture);
-    duplicated.sections.push(duplicated.sections.find((section: { id: string }) => section.id === id));
+    duplicated.sections.clone=duplicated.sections[id];
     assert.equal(pageSchema.safeParse(duplicated).success, false, `duplicate ${id} would create duplicate anchors`);
   }
 });
@@ -27,8 +27,8 @@ test('CMS calculator defaults must be accepted by the rendered input controls', 
   assert.equal(pageSchema.safeParse(edited).success, true, 'fractional percentage is valid');
 });
 
-test('CMS section array accepts reordered composition', () => {
+test('fixed source property order cannot silently change rendered original order', () => {
   const edited = structuredClone(fixture);
-  [edited.sections[0], edited.sections[1]] = [edited.sections[1], edited.sections[0]];
-  assert.equal(pageSchema.safeParse(edited).success, true);
+  edited.sections=Object.fromEntries(Object.entries(edited.sections).reverse());
+  assert.deepEqual(pageSchema.parse(edited).sections.map(s=>s.id),Object.keys(fixture.sections));
 });

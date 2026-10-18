@@ -1,3 +1,4 @@
+import {sectionRecords} from './helpers/pages-cms-json.ts';
 import {homepageBlockEditor} from './helpers/pages-cms-json.ts';
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -23,14 +24,14 @@ test('renderer mapping validates the shared enum and suppresses default/protecte
 });
 
 test('ordinary section and item surfaces accept only the six approved values',()=>{
-  for(const value of values){const p=structuredClone(home);p.sections.find((s:any)=>s._block==='content').surface=value;p.sections.find((s:any)=>s._block==='content').items[0].surface=value;const parsed=pageSchema.parse(p);assert.equal(parsed.sections.find(s=>s._block==='content')!.surface,value);assert.equal(parsed.sections.find(s=>s._block==='content')!.items![0].surface,value);}
+  for(const value of values){const p=structuredClone(home);sectionRecords(p).find((s:any)=>s._block==='content').surface=value;sectionRecords(p).find((s:any)=>s._block==='content').items[0].surface=value;const parsed=pageSchema.parse(p);assert.equal(sectionRecords(parsed).find(s=>s._block==='content')!.surface,value);assert.equal(sectionRecords(parsed).find(s=>s._block==='content')!.items![0].surface,value);}
   for(const value of ['#ffffff','surface-dark','dark extra','mint; color:red',42,{},[]]){
-    for(const level of ['section','item']){const p=structuredClone(home);(level==='section'?p.sections.find((s:any)=>s._block==='content'):p.sections.find((s:any)=>s._block==='content').items[0]).surface=value;assert.equal(pageSchema.safeParse(p).success,false,`${level}: ${JSON.stringify(value)}`);}
+    for(const level of ['section','item']){const p=structuredClone(home);(level==='section'?sectionRecords(p).find((s:any)=>s._block==='content'):sectionRecords(p).find((s:any)=>s._block==='content').items[0]).surface=value;assert.equal(pageSchema.safeParse(p).success,false,`${level}: ${JSON.stringify(value)}`);}
   }
 });
 
 test('missing, cleared and explicit default choices preserve automatic styling',()=>{
-  for(const value of [undefined,null,'','default']){const p=structuredClone(home);p.sections.find((s:any)=>s._block==='content').surface=value;p.sections.find((s:any)=>s._block==='content').items[0].surface=value;const parsed=pageSchema.parse(p);assert.equal(parsed.sections.find(s=>s._block==='content')!.surface,'default');assert.equal(parsed.sections.find(s=>s._block==='content')!.items![0].surface,'default');}
+  for(const value of [undefined,null,'','default']){const p=structuredClone(home);sectionRecords(p).find((s:any)=>s._block==='content').surface=value;sectionRecords(p).find((s:any)=>s._block==='content').items[0].surface=value;const parsed=pageSchema.parse(p);assert.equal(sectionRecords(parsed).find(s=>s._block==='content')!.surface,'default');assert.equal(sectionRecords(parsed).find(s=>s._block==='content')!.items![0].surface,'default');}
 });
 
 test('all page editors have separate ordinary/protected models and one reusable select',()=>{
@@ -39,7 +40,7 @@ test('all page editors have separate ordinary/protected models and one reusable 
   for(const {file,page} of pages){
     const entry=entryForFile(cms,`app/src/content/pages/${file}`),field=model(entry,'sections');
     if(page.kind==='home'){
-      const normal=resolveField(field.blocks.find((b:any)=>b.name==='content'),cms.components);
+      const normal=resolveField(field.fields.find((b:any)=>b.name==='mekanisme'),cms.components);
       assert.equal(model(normal,'surface').type,'select');assert.equal(model(model(normal,'items'),'surface').label,'Boksfarge');
       const form=homepageBlockEditor(cms,'assessment').fields.find((f:any)=>f.name==='section');
       assert.ok(!form.fields.some((f:any)=>['surface','headingAlign'].includes(f.name)));
@@ -57,7 +58,7 @@ test('all page editors have separate ordinary/protected models and one reusable 
       assert.ok(!model(protectedModel,'items').fields.some((f:any)=>f.name==='surface'));
     }
     assert.equal(model(normal,'id').readonly,true);assert.equal(model(protectedModel,'id').readonly,true);
-    for(const section of page.sections) assert.equal(section._block, page.slug==='innsikt'&&section.id==='guider'?'pageList':['home','synlighet','konvertering'].includes(page.slug)&&section.id==='sjekk'?'protected':'content');
+    for(const section of sectionRecords(page)) assert.equal(section._block, page.slug==='innsikt'&&section.id==='guider'?'pageList':['home','synlighet','konvertering'].includes(page.slug)&&section.id==='sjekk'?'protected':'content');
   }
   for(const entry of cms.content.filter((e:any)=>['proofCases','terminology'].includes(e.name))) assert.ok(!JSON.stringify(entry).includes('surfaceChoice'));
   assert.ok(!JSON.stringify(cms.content.find((e:any)=>e.name==='homepage').fields.find((f:any)=>f.name==='homepage')).includes('surfaceChoice'));
@@ -66,22 +67,22 @@ test('all page editors have separate ordinary/protected models and one reusable 
 test('protected CTA/form rows cannot acquire a surface or be retyped as content',()=>{
   for(const slug of ['home','synlighet','konvertering']){
     const original=pages.find(p=>p.page.slug===slug)!.page;
-    for(const value of ['base','soft','mint','lavender','dark']){const p=structuredClone(original);p.sections.find((s:any)=>s.id==='sjekk').surface=value;assert.equal(pageSchema.safeParse(p).success,false);}
-    const p=structuredClone(original);p.sections.find((s:any)=>s.id==='sjekk')._block='content';assert.equal(pageSchema.safeParse(p).success,false);
+    for(const value of ['base','soft','mint','lavender','dark']){const p=structuredClone(original);sectionRecords(p).find((s:any)=>s.id==='sjekk').surface=value;assert.equal(pageSchema.safeParse(p).success,false);}
+    const p=structuredClone(original);sectionRecords(p).find((s:any)=>s.id==='sjekk')._block='content';assert.equal(pageSchema.safeParse(p).success,false);
   }
-  const p=structuredClone(home);p.sections.find((s:any)=>s._block==='content')._block='protected';assert.equal(pageSchema.safeParse(p).success,false);
+  const p=structuredClone(home);sectionRecords(p).find((s:any)=>s._block==='content')._block='protected';assert.equal(pageSchema.safeParse(p).success,false);
 });
 
 test('CMS surface save and restore preserve every unrelated field, ID, order and link',()=>{
   for(const {file,page} of pages){
     const entry=entryForFile(cms,`app/src/content/pages/${file}`);
     for(const value of values){
-      const form=structuredClone(page),section=form.sections.find((s:any)=>s._block==='content');
+      const form=structuredClone(page),section=sectionRecords(form).find((s:any)=>s._block==='content');
       if(!section)continue;section.surface=value;if(section.items?.length)section.items[0].surface=value;
       const saved=JSON.parse(cmsJsonSave(page,form,entry,cms));assertPreservedContent(form,saved);assert.deepEqual(pageSchema.parse(saved),pageSchema.parse(form));
       const restored=JSON.parse(cmsJsonSave(saved,structuredClone(page),entry,cms));assertPreservedContent(page,restored);assert.deepEqual(pageSchema.parse(restored),pageSchema.parse(page));
     }
-    const form=structuredClone(page),section=form.sections.find((s:any)=>s._block==='content');if(section){section.surface='#fff';assert.throws(()=>cmsJsonSave(page,form,entry,cms));}
+    const form=structuredClone(page),section=sectionRecords(form).find((s:any)=>s._block==='content');if(section){section.surface='#fff';assert.throws(()=>cmsJsonSave(page,form,entry,cms));}
   }
 });
 

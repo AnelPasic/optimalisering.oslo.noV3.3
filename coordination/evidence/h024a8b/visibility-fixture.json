@@ -1,0 +1,20 @@
+{
+  "hiddenCore": [
+    "behov",
+    "regneeksempel",
+    "resultater",
+    "mekanisme",
+    "passer",
+    "sporsmal"
+  ],
+  "hiddenOptional": "h024a8b-private-insert",
+  "publicFilesSearched": 35,
+  "sentinelAbsent": true,
+  "hiddenAnchorsAbsent": true,
+  "heroProofAbsent": true,
+  "commercialRoutesRetained": true,
+  "designSystemSpecimensOmitted": true,
+  "staticQaOnHiddenState": true,
+  "restoredSourceSha256": "f3f35e17ca23b8f4f23d1b48ad3bbfb1ebf012230af2809d831f0e1ed175e8fb",
+  "exactSourceRestore": true
+}

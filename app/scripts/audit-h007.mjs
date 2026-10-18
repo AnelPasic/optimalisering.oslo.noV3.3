@@ -1,4 +1,4 @@
-import {getHomepageBlock} from '../src/lib/home-builder.ts';
+import {getHomepageBlock,isHomepageSectionVisible} from '../src/lib/home-builder.ts';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 import { resolve } from 'node:path';
@@ -19,7 +19,7 @@ for (const item of getHomepageBlock(home,'packages').content.items) {
 assert.ok(text.includes(getHomepageBlock(home,'packages').content.adBudgetNote));
 assert.ok(text.includes('Få våre 3 viktigste funn innen 2 virkedager.'));
 assert.ok(!/Sprint|ubegrenset|bindingstid|oppsigelsestid|minimumsperiode|oppstartsgebyr|onboarding|fakturavilkår|\d+\s*timer/i.test(text.replaceAll('Det betyr ikke at alt gjøres samtidig eller at kapasiteten er ubegrenset.', '')));
-assert.equal(html.includes('id="resultater"'), publicCases.length > 0, 'Renderer uses the explicit case publication guard');
+assert.equal(html.includes('id="resultater"'), publicCases.length > 0 && isHomepageSectionVisible(getHomepageBlock(home,'proof')), 'Renderer uses publication and section visibility guards');
 const hiddenNames = records.filter(record => !publicCases.some(proof => proof.displayName === record.clientName)).map(record => normalizeProofText(record.clientName));
 let filesChecked = 0;
 function scan(directory) {

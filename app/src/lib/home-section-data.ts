@@ -48,4 +48,5 @@ export const homeSectionDataSchema = z.object({
   chrome: z.object({ brand: z.string(), brandLocation: z.string(), homeLabel: z.string(), skipLabel: z.string(), navigationLabel: z.string(), mobileNavigationLabel: z.string(), openMenu: z.string(), closeMenu: z.string(), assessmentLink: link, navigation: z.array(link), providerText: z.string(), previewLabel: z.string(), serviceNavigationLabel: z.string(), informationNavigationLabel: z.string(), storeLink: link, informationLinks: z.array(link), copyrightProvider: z.string(), footerNote: z.string() }),
 });
 
-export type HomepageContent = z.infer<typeof homeSectionDataSchema> & {faq:{question:string;answer:string}[]};
+// faqVisible is derived presentation state, never another commercial source.
+export type HomepageContent = z.infer<typeof homeSectionDataSchema> & {faq:{question:string;answer:string}[];faqVisible?:boolean};

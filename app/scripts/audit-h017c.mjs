@@ -1,4 +1,4 @@
-import {getHomepageBlock} from '../src/lib/home-builder.ts';
+import {getHomepageBlock,getHomepageBlocks,isHomepageSectionVisible} from '../src/lib/home-builder.ts';
 import assert from 'node:assert/strict';
 import { stripTerminologyLinks } from './terminology-markup.mjs';
 import { readFileSync, readdirSync } from 'node:fs';
@@ -13,6 +13,7 @@ for (const [slug, names] of [['home', ['Eurotents', 'Nysta', 'Helt Opplagt']], [
   const cases = getPublishableCases(slot, records);
   assert.deepEqual(cases.map(p => p.displayName), names);
   const section = html.match(/<section id="resultater"[^>]*>(.*?)<\/section>/s)?.[1];
+  if(slug==='home'&&!isHomepageSectionVisible(getHomepageBlock(page,'proof'))){assert.equal(section,undefined,'Hidden proof absent');continue;}
   assert.ok(section);
   assert.deepEqual([...section.matchAll(/<h3[^>]*>(.*?)<\/h3>/gs)].map(m => text(m[1])), names);
   assert.equal((section.match(/proof-featured/g) ?? []).length, 1);
@@ -25,7 +26,7 @@ for (const [slug, names] of [['home', ['Eurotents', 'Nysta', 'Helt Opplagt']], [
   for (const label of ['eyebrow', 'heading', 'beforeLabel', 'afterLabel']) assert.ok(text(section).includes(slot[label]));
   const ids = [...html.matchAll(/<section id="([^"]+)"/g)].map(m => m[1]);
   assert.ok(ids.indexOf('resultater') > ids.indexOf(slug === 'home' ? 'priser' : 'prioritering'));
-  assert.ok(ids.indexOf('resultater') < ids.indexOf(slug === 'home' ? 'mekanisme' : 'service-priser'));
+  if(slug==='home'){const blocks=getHomepageBlocks(page),next=blocks.slice(blocks.findIndex(b=>b.id==='resultater')+1).find(isHomepageSectionVisible);if(next)assert.ok(ids.indexOf('resultater')<ids.indexOf(next.id));}else assert.ok(ids.indexOf('resultater')<ids.indexOf('service-priser'));
   assert.ok(!/Oslo Privatklinikk|Tankeverksted|Oracles|evidenceMetrics|publicationApproved|strategyReviewEvidence|Windsor|coordination\/|1\.403|0\.058|31\/50|16 265/.test(html), 'No private evidence or additional measurements');
   const publicStrings = cases.flatMap(p => [p.displayName, p.dominantMetric, p.before, p.after, p.delta, p.period.before, p.period.after]).filter(Boolean);
   for (const value of publicStrings) assert.ok(!/[–—→“”×]/u.test(value), 'COPY-STYLE');

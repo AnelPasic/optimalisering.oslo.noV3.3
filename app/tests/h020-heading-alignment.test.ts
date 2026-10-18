@@ -1,3 +1,4 @@
+import {sectionRecords} from './helpers/pages-cms-json.ts';
 import {homepageBlockEditor} from './helpers/pages-cms-json.ts';
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -19,11 +20,11 @@ test('safe mapping emits only a validated left override and leaves the homepage 
 
 test('section heading alignment accepts center/left; missing and cleared values default to center',()=>{
   for(const value of ['center','left',undefined,'',null]){
-    const home=load('home');home.sections.find((s:any)=>s._block==='content').headingAlign=value;
+    const home=load('home');sectionRecords(home).find((s:any)=>s._block==='content').headingAlign=value;
     assert.equal(pageSchema.parse(home).sections.find(s=>s._block==='content')!.headingAlign,value==='left'?'left':'center');
   }
   for(const value of ['right','justify','left extra','text-left','#fff',0,{},[]]){
-    const home=load('home');home.sections.find((s:any)=>s._block==='content').headingAlign=value;
+    const home=load('home');sectionRecords(home).find((s:any)=>s._block==='content').headingAlign=value;
     assert.equal(pageSchema.safeParse(home).success,false,JSON.stringify(value));
   }
 });
@@ -43,19 +44,19 @@ test('ordinary and protected CMS heading models use the same select directly aft
 test('CMS Center/Left save and restore preserve unrelated section, card, surface and commercial fields',()=>{
   for(const name of ['home','synlighet','seo']){
     const original=load(name),entry=entryForFile(cms,`app/src/content/pages/${name}.json`);
-    for(const index of name==='synlighet'?[0,original.sections.length-1]:[original.sections.findIndex((s:any)=>s._block==='content')]){
+    for(const index of name==='synlighet'?[0,original.sections.length-1]:[Object.keys(original.sections).find((key:any)=>original.sections[key]._block==='content')!]){
       const form=structuredClone(original);form.sections[index].headingAlign='left';
       const saved=JSON.parse(cmsJsonSave(original,form,entry,cms));assertPreservedContent(form,saved);assert.deepEqual(pageSchema.parse(saved),pageSchema.parse(form));
       form.sections[index].headingAlign='center';const restored=JSON.parse(cmsJsonSave(saved,form,entry,cms));assertPreservedContent(form,restored);
-      assert.equal(pageSchema.parse(restored).sections[index].headingAlign,'center');
-      const exact=JSON.parse(cmsJsonSave(restored,structuredClone(original),entry,cms));assertPreservedContent(original,exact);
+      assert.equal(pageSchema.parse(restored).sections.find(s=>s.id===form.sections[index].id)!.headingAlign,'center');
+      const originalForm=structuredClone(original);originalForm.sections[index].headingAlign??='';const exact=JSON.parse(cmsJsonSave(restored,originalForm,entry,cms));assertPreservedContent(original,exact);
       const invalid=structuredClone(original);invalid.sections[index].headingAlign='justify';assert.throws(()=>cmsJsonSave(original,invalid,entry,cms));
     }
   }
 });
 
 test('protected heading alignment does not grant surface overrides',()=>{
-  const service=load('synlighet'),section=service.sections.find((s:any)=>s._block==='protected');section.headingAlign='left';
+  const service=load('synlighet'),section=sectionRecords(service).find((s:any)=>s._block==='protected');section.headingAlign='left';
   assert.equal(pageSchema.safeParse(service).success,true);
   section.surface='mint';assert.equal(pageSchema.safeParse(service).success,false);
 });

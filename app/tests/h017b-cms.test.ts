@@ -1,3 +1,4 @@
+import {sectionRecords} from './helpers/pages-cms-json.ts';
 import {homepageBlockEditor} from './helpers/pages-cms-json.ts';
 import {getHomepageBlock} from '../src/lib/home-builder.ts';
 import test from 'node:test';
@@ -40,7 +41,7 @@ test('object repeaters start collapsed with meaningful summaries supported by Pa
       if (field.list && field.type === 'object') {
         count++;
         assert.equal(field.list.collapsible?.collapsed, true, field.name);
-        assert.match(field.list.collapsible?.summary ?? '', /\{(?:fields\.)?(?:heading|question|title|label|metric|index|term|slug)\}/, field.name);
+        assert.match(field.list.collapsible?.summary ?? '', /\{(?:fields\.)?(?:name|heading|question|title|label|metric|index|term|slug)\}/, field.name);
       }
       if (field.fields) check(field.fields);
     }
@@ -93,7 +94,7 @@ test('CMS rejects clearing mandatory text before it can create a broken content 
 test('initialized optional internal links accept blank input while rejecting an external route', () => {
   const original = JSON.parse(records.find(record => record.path.endsWith('/seo.json'))!.bytes.toString());
   const form = structuredClone(original);
-  const item = form.sections.flatMap((section: any) => section.items ?? []).find((item: any) => item.href === undefined);
+  const item = sectionRecords(form).flatMap((section: any) => section.items ?? []).find((item: any) => item.href === undefined);
   assert.ok(item);
   item.href = ''; // Pages CMS initializeState supplies empty strings for missing scalars
   const entry = entryForFile(cms, 'app/src/content/pages/seo.json');
