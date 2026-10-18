@@ -1,5 +1,13 @@
 # Decisions and authority
 
+## D-101 — OWNER accepts core Clear/Replace risk in return for native drag, authorizes H-024A8E — 2026-10-18
+
+Direct OWNER response to explicit H-024A8C risk choice: **"ja men vi kan leve med at vi ikke er beskyttet mot å tømme en rad og duplisering"**. Therefore original-eight **direct Pages CMS draggable co-located section rows are chosen over** numeric ordering, separate order-only registry and custom CMS. OWNER accepts **native Pages CMS may permit Clear/Replace/duplicate to Save and create an invalid Git commit**, which can fail build and need selective Git correction. This does **not** waive rigorous website schema/anchor/visibility/commercial authority guards or authorize testing invalid writes on production main.
+
+**H-024A8E implementation authorized** under `coordination/H024A8E-NATIVE-THREE-ZONE-PAGEBUILDER.md`: Hero locked first; native content-only **Valgfrie seksjoner Topp** Add/Delete/Hide/Drag; mixed **Faste seksjoner** exactly eight drag/edit/hide where allowed (retain `mekanisme` and `passer`, omitted only from OWNER illustrative six); native content-only **Valgfrie seksjoner Bunn** Add/Delete/Hide/Drag. No per-optional Before/After selectors, no CMS fork, no separate numeric/order registry. Published `sjekk`/`priser` anchors remain protected due inbound links. The actual current OWNER-created `forbehovsvelger` extra, currently `before:behov`, must be preserved as an optional Top item along with any more recent edits, never overwritten by prior test receipt. STOP on ambiguous latest optional placement mapping rather than losing source.
+
+This supersedes D-100's pending CMS risk decision; its three-zone UX intent now has direct implementation authority. H-024A3 whole-editor still OPEN and H-024B BLOCKED until delivered and OWNER-approved; H-022 PARKED; no launch/index/intake.
+
 ## D-100 — OWNER proposes three-zone Page Builder, core drag/protection tradeoff unresolved — 2026-10-18
 
 Direct OWNER UX specification: Hero locked first; independent **Valgfrie seksjoner Topp** native Add/Hide/Drag list; **Låste seksjoner** with Hide/Publish and desired internal drag; independent **Valgfrie seksjoner Bunn** native Add/Hide/Drag list. This supersedes optional Before/After-each-core placement as the *preferred future UX*, but is **NOT authorization to implement** before choosing a viable stock Pages CMS model. Contract/analysis: `coordination/H024A8D-THREE-ZONE-PAGEBUILDER-OWNER-INTENT.md`.
