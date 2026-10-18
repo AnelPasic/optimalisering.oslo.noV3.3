@@ -1,6 +1,16 @@
 # ChatGPT to Codex
 
-## OWNER INTENT — D-100 THREE-ZONE PAGE BUILDER, STOP FOR CORE UX CHOICE (NO ACTIVE CODE TASK)
+## ACTIVE HANDOFF — D-101 / H-024A8E NATIVE THREE-ZONE PAGE BUILDER (IMPLEMENT)
+
+Date: 2026-10-18. Direct OWNER: **"ja men vi kan leve med at vi ikke er beskyttet mot å tømme en rad og duplisering."** This explicitly resolves D-100's outstanding original-core sorting tradeoff. Keep **stock Pages CMS native draggable co-located mixed original 8-block list** despite known original Clear/Replace/duplicate Save risk; protect with **website build/schema checks and narrow Git recovery**, not falsely claimed native CMS blocking. **No numeric ordering, separate order-only list or CMS fork.**
+
+Execute exactly `coordination/H024A8E-NATIVE-THREE-ZONE-PAGEBUILDER.md`: Hero fixed, **Valgfrie seksjoner Topp** native list Add/Hide/Drag, **Faste seksjoner** original eight native drag/edit/hide where safe, **Valgfrie seksjoner Bunn** native list Add/Hide/Drag. Fixed group order, no per-extras Before/After placement. Full original eight `behov, regneeksempel, sjekk, priser, resultater, mekanisme, passer, sporsmal` remain unchanged in content/IDs/UUIDs; `sjekk`/`priser` remain visible due linked CTAs. **RE-PULL current main and preserve actual OWNER-created `forbehovsvelger` optional item** and any other new content; map `before:behov` to Top and remove obsolete placement without changing values. Never overwrite with older canonical test copies or local research branch.
+
+Real Pages CMS save→Git→native Cloudflare Worker→restore for core reorder and both optional top/bottom Hide/Drag/Add/Delete; responsive/public hidden leak/CTA/site schema checks, proven default output parity vs latest OWNER main, historical risk honestly disclosed and recovery guide. Preview only. Deliver evidence `evidence/h024a8e/README.md` and STOP for OWNER whole editor/visual acceptance; no H-024B, H-022, launch/intake/indexing authority. Existing H-024A8C local discovery (`1680608`) is not required to have been pushed; OWNER supplied its full report in ChatGPT.
+
+---
+
+## HISTORICAL OWNER INTENT — D-100 THREE-ZONE PAGE BUILDER (RESOLVED BY D-101)
 
 Date 2026-10-18. OWNER specifies an explicit editing screen model:
 - Hero (locked first);
