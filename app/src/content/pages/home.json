@@ -569,6 +569,14 @@
     {
       "_block": "content",
       "placement": "before:regneeksempel",
+      "uid": "a7030dd8-3386-4dfa-87f0-9813f0148d52",
+      "name": "H024A8B test B",
+      "id": "h024a8b-test-b",
+      "heading": "H024A8B CMS-test B"
+    },
+    {
+      "_block": "content",
+      "placement": "before:regneeksempel",
       "uid": "73e4c362-2ac0-4077-8d1f-f7e635cb0f5d",
       "name": "H024A8B test A",
       "id": "h024a8b-test-a",
@@ -580,14 +588,6 @@
           "boxVariant": "card"
         }
       ]
-    },
-    {
-      "_block": "content",
-      "placement": "before:regneeksempel",
-      "uid": "a7030dd8-3386-4dfa-87f0-9813f0148d52",
-      "name": "H024A8B test B",
-      "id": "h024a8b-test-b",
-      "heading": "H024A8B CMS-test B"
     }
   ]
 }
