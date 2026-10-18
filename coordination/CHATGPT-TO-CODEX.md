@@ -1,5 +1,17 @@
 # ChatGPT to Codex
 
+## ACTIVE HANDOFF — H-024A8 OPTIONAL ORDINARY SECTIONS + REVERSIBLE UNPUBLISH (D-097)
+
+Date: 2026-10-18. Direct OWNER: **"ja, enig, men vi bør også kunne sette seksjoner til å ikke være publiserte eller inaktive, så de kan utnyttes senere om det er noe å spare på."** Applies to the agreed next H-024A3 homepage section creation/deletion gate **before** H-024B service rollout.
+
+**Execute `coordination/H024A8-OPTIONAL-SECTIONS-VISIBILITY.md`**, starting with real Pages CMS feasibility. Current list is mixed singleton + content, Pages CMS min/max8, Zod exactly8. Never just raise max to allow protected singleton duplicates/deletes; if native editor cannot safely permit **only additional ordinary content** Add/Delete and native mixed drag/reorder, STOP with practical bounded alternatives and await OWNER decision rather than inventing broken UX.
+
+Add a clear per-homepage-section **visible/hidden (non-published)** CMS setting, missing/legacy→visible. Hiding retains full section record/layout/media in CMS for future reuse and omits it entirely from rendered public HTML/client/SEO/navigation (not CSS display:none). Protect link destinations like `/#sjekk`, `/#priser` and shared package/proof/form authority; protected singleton records cannot be deleted. Use existing shared approved Card/layout/theme components, one central render predicate and no redundant parallel editor. Prove authentic CMS → Git → native Worker hide/re-enable + optional Add/Delete if feasible → exact source/data/Worker restore and no hidden content leaks. Preserve ALL approved Hero/Footer/Card/FAQ/assessment visual work and OWNER edits, noindex/intake off.
+
+Status: **AUTHORIZED scoped implementation with feasibility gate**, not acceptance of H-024A3 whole editor, not H-024B authority. Stop for OWNER review, or stop earlier with a choice if CMS restrictions prevent safe Add/Delete.
+
+---
+
 ## Latest OWNER decision — D-096 H-024A7 / scoped H-024A6 PASS (NO ACTIVE CODE TASK)
 
 Date: 2026-10-18. OWNER reviewed actual FAQ shared width and both contact variants and says: **"sett på begge ser bra ut, regner med at vi kan justere dem sentralt fra nå av."** Record **H-024A7 OWNER PASS / CLOSED**, and H-024A6 component-section parity correction PASS within its scoped visual gate (existing split contact/ordinary boxes already passed). Keep approved existing split default, new horizontal CMS option, current FAQ width, Card/Hero/Footer and exact OWNER copy intact.
