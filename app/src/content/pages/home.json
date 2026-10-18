@@ -110,7 +110,8 @@
             }
           }
         ]
-      }
+      },
+      "visibility": "hidden"
     },
     "regneeksempel": {
       "_block": "calculator",
@@ -142,7 +143,8 @@
           "newConversion": 2
         },
         "caveat": "Hypotetisk regneeksempel - ikke et kundecase."
-      }
+      },
+      "visibility": "hidden"
     },
     "sjekk": {
       "_block": "assessment",
@@ -443,7 +445,8 @@
         "beforeLabel": "Før",
         "afterLabel": "Etter",
         "changeLabel": "Arbeid"
-      }
+      },
+      "visibility": "hidden"
     },
     "mekanisme": {
       "_block": "content",
@@ -482,7 +485,8 @@
           "boxVariant": "card",
           "surface": "soft"
         }
-      ]
+      ],
+      "visibility": "hidden"
     },
     "passer": {
       "_block": "content",
@@ -507,7 +511,8 @@
           "boxVariant": "card",
           "surface": "soft"
         }
-      ]
+      ],
+      "visibility": "hidden"
     },
     "sporsmal": {
       "_block": "faq",
@@ -539,7 +544,8 @@
             "answer": "Nei. Vi jobber med bedrifter i hele Norge og kan også hjelpe i andre nordiske markeder. Navnet beskriver tjenesten og satsingen - ikke et krav om at kunden holder til i Oslo."
           }
         ]
-      }
+      },
+      "visibility": "hidden"
     }
   },
   "hero": {
@@ -576,6 +582,7 @@
     },
     {
       "_block": "content",
+      "visibility": "hidden",
       "placement": "before:regneeksempel",
       "uid": "73e4c362-2ac0-4077-8d1f-f7e635cb0f5d",
       "name": "H024A8B test A",
