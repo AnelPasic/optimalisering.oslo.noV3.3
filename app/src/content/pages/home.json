@@ -568,7 +568,7 @@
   "optionalSections": [
     {
       "_block": "content",
-      "placement": "before:regneeksempel",
+      "placement": "after:sporsmal",
       "uid": "a7030dd8-3386-4dfa-87f0-9813f0148d52",
       "name": "H024A8B test B",
       "id": "h024a8b-test-b",
