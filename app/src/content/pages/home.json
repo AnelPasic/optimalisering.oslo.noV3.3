@@ -482,8 +482,7 @@
           "boxVariant": "card",
           "surface": "soft"
         }
-      ],
-      "visibility": "hidden"
+      ]
     },
     "passer": {
       "_block": "content",
