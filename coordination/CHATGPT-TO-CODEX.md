@@ -1,6 +1,21 @@
 # ChatGPT to Codex
 
-## ACTIVE HANDOFF — D-099 H-024A8C STOCK-CMS REORDER RECOVERY, DISCOVERY ONLY
+## OWNER INTENT — D-100 THREE-ZONE PAGE BUILDER, STOP FOR CORE UX CHOICE (NO ACTIVE CODE TASK)
+
+Date 2026-10-18. OWNER specifies an explicit editing screen model:
+- Hero (locked first);
+- "Valgfrie seksjoner Topp": independent optional content list, Add, Skjult/Publisert, native drag within top;
+- "Låste seksjoner": original business sections with Skjult/Publisert where safe, **desired native drag within this group**, no accidental deletion;
+- "Valgfrie seksjoner Bunn": independent optional list, Add, Skjult/Publisert, native drag within bottom.
+Group order is fixed. The per-section Before/After dropdown from H-024A8B is no longer the preferred UX if a safe three-zone model can be implemented.
+
+**Do not begin implementation.** H-024A8C local report from OWNER (`1680608`, not pushed) shows mixed core list Clear/Replace can pass client Save validation and cause broken build; stock Pages CMS does not permit both co-located direct core drag and hard protected-row semantics. OWNER must choose direct sortable mixed row with explicit invalid-save/Git recovery risk versus protected fixed core objects plus separate sortable reference/order list (indirect two-step editing). A numeric field is a third UX compromise OWNER has not accepted. Current core is eight entries; OWNER's diagram named only six and omitted `mekanisme` and `passer`, so preserve both. Current `#sjekk`/`#priser` stay required-visible until links safely resolved.
+
+See `coordination/H024A8D-THREE-ZONE-PAGEBUILDER-OWNER-INTENT.md`. Await owner's selection, then write a distinct implementation contract; no product source/code, no deployment, H-024B BLOCKED.
+
+---
+
+## HISTORICAL HANDOFF — D-099 H-024A8C DISCOVERY (OWNER REPORT LOCAL ONLY)
 
 Date: 2026-10-18. OWNER has now reviewed H-024A8B CMS UI and reports: **"Etter hero, så kan ikke de faste seksjoner flyttes opp ned som tidligere."** This is **OWNER REVISE** of original-eight editor reordering, not general rejection of H-024A8B's tested Hide/Publish and optional inserts. The original editor allowed native drag; making core fields fixed was an acknowledged but now OWNER-rejected UX tradeoff. Keep Pages CMS stock, not custom.
 
