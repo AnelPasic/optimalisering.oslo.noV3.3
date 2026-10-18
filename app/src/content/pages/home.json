@@ -115,8 +115,9 @@
     "regneeksempel": [
       {
         "_block": "global",
+        "uid": "dc92cca5-b95c-487c-b2a2-08e296972a65",
         "element": "regneeksempel",
-        "uid": "dc92cca5-b95c-487c-b2a2-08e296972a65"
+        "visibility": "hidden"
       }
     ],
     "sjekk": {
