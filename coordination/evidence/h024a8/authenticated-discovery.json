@@ -1,0 +1,206 @@
+{
+  "date": "2026-10-18",
+  "sourceCommit": "0006134b4b0a51b0c96b78711725b3395cdd8553",
+  "cmsUrl": "https://app.pagescms.org/anelpasic/optimalisering.oslo.nov3.3/main/file/homepage",
+  "upstreamRevision": "6f4e860a35d934406580287e7042e5e111e207a1",
+  "actions": [
+    "Inspect authenticated current list without changing fields",
+    "Open protected selector block clear confirmation; cancel",
+    "Open protected selector row delete confirmation; inspect enabled Remove; cancel",
+    "Recheck original eight rows and disabled Save"
+  ],
+  "confirmedRemoval": false,
+  "saved": false,
+  "reordered": false,
+  "created": false,
+  "hidden": false,
+  "gitCmsCommit": null,
+  "nativeBuild": null,
+  "workerVariantProof": null,
+  "observations": {
+    "url": "https://app.pagescms.org/anelpasic/optimalisering.oslo.nov3.3/main/file/homepage",
+    "rows": [
+      {
+        "label": "Behovsvelger\nBehovsvelger",
+        "drag": true,
+        "buttons": [
+          {
+            "text": "",
+            "disabled": false
+          },
+          {
+            "text": "",
+            "disabled": false
+          }
+        ]
+      },
+      {
+        "label": "Regneeksempel\nRegneeksempel",
+        "drag": true,
+        "buttons": [
+          {
+            "text": "",
+            "disabled": false
+          },
+          {
+            "text": "",
+            "disabled": false
+          }
+        ]
+      },
+      {
+        "label": "Pakker og priser\nPakker og priser",
+        "drag": true,
+        "buttons": [
+          {
+            "text": "",
+            "disabled": false
+          },
+          {
+            "text": "",
+            "disabled": false
+          }
+        ]
+      },
+      {
+        "label": "Kunderesultater\nKunderesultater",
+        "drag": true,
+        "buttons": [
+          {
+            "text": "",
+            "disabled": false
+          },
+          {
+            "text": "",
+            "disabled": false
+          }
+        ]
+      },
+      {
+        "label": "Slik virker optimalisering\nInnholdsseksjon",
+        "drag": true,
+        "buttons": [
+          {
+            "text": "",
+            "disabled": false
+          },
+          {
+            "text": "",
+            "disabled": false
+          }
+        ]
+      },
+      {
+        "label": "Hvem passer det for\nInnholdsseksjon",
+        "drag": true,
+        "buttons": [
+          {
+            "text": "",
+            "disabled": false
+          },
+          {
+            "text": "",
+            "disabled": false
+          }
+        ]
+      },
+      {
+        "label": "Gratis sjekk\nGratis sjekk",
+        "drag": true,
+        "buttons": [
+          {
+            "text": "",
+            "disabled": false
+          },
+          {
+            "text": "",
+            "disabled": false
+          }
+        ]
+      },
+      {
+        "label": "Ofte stilte spørsmål\nOfte stilte spørsmål",
+        "drag": true,
+        "buttons": [
+          {
+            "text": "",
+            "disabled": false
+          },
+          {
+            "text": "",
+            "disabled": false
+          }
+        ]
+      }
+    ],
+    "areaDirectChildren": [
+      {
+        "tag": "DIV",
+        "cls": "flex items-center gap-x-1 z-10",
+        "text": "Behovsvelger\nBehovsvelger\n\nDra seksjonene for å endre rekkefølgen. Hero ligger alltid øverst. Åpne en seksjon for å redi"
+      },
+      {
+        "tag": "DIV",
+        "cls": "flex items-center gap-x-1 z-10",
+        "text": "Regneeksempel\nRegneeksempel\n\nDra seksjonene for å endre rekkefølgen. Hero ligger alltid øverst. Åpne en seksjon for å re"
+      },
+      {
+        "tag": "DIV",
+        "cls": "flex items-center gap-x-1 z-10",
+        "text": "Pakker og priser\nPakker og priser\n\nDra seksjonene for å endre rekkefølgen. Hero ligger alltid øverst. Åpne en seksjon fo"
+      },
+      {
+        "tag": "DIV",
+        "cls": "flex items-center gap-x-1 z-10",
+        "text": "Kunderesultater\nKunderesultater\n\nDra seksjonene for å endre rekkefølgen. Hero ligger alltid øverst. Åpne en seksjon for "
+      },
+      {
+        "tag": "DIV",
+        "cls": "flex items-center gap-x-1 z-10",
+        "text": "Slik virker optimalisering\nInnholdsseksjon\n\nDra seksjonene for å endre rekkefølgen. Hero ligger alltid øverst. Åpne en s"
+      },
+      {
+        "tag": "DIV",
+        "cls": "flex items-center gap-x-1 z-10",
+        "text": "Hvem passer det for\nInnholdsseksjon\n\nDra seksjonene for å endre rekkefølgen. Hero ligger alltid øverst. Åpne en seksjon "
+      },
+      {
+        "tag": "DIV",
+        "cls": "flex items-center gap-x-1 z-10",
+        "text": "Gratis sjekk\nGratis sjekk\nKontaktoppsett\n\nTomt valg beholder dagens to kolonner. Vannrett samler nettside, e-post og kna"
+      },
+      {
+        "tag": "DIV",
+        "cls": "flex items-center gap-x-1 z-10",
+        "text": "Ofte stilte spørsmål\nOfte stilte spørsmål\n\nDra seksjonene for å endre rekkefølgen. Hero ligger alltid øverst. Åpne en se"
+      },
+      {
+        "tag": "DIV",
+        "cls": "",
+        "text": "\n    To pick up a draggable item, press the space bar.\n    While dragging, use the arrow keys to move the item.\n    Pres"
+      },
+      {
+        "tag": "DIV",
+        "cls": "",
+        "text": ""
+      },
+      {
+        "tag": "DIV",
+        "cls": "flex items-center gap-2 flex-wrap",
+        "text": ""
+      }
+    ],
+    "saveDisabled": true
+  },
+  "initialSave": [
+    "    uid=18_52 button \"Save\" disableable disabled"
+  ],
+  "clearConfirmation": "Successfully clicked on the element\n## Latest page snapshot\nuid=18_0 RootWebArea \"Forside | anelpasic/optimalisering.oslo.nov3.3@main | Pages CMS\" url=\"https://app.pagescms.org/anelpasic/optimalisering.oslo.nov3.3/main/file/homepage\"\n  uid=18_48 main\n    uid=18_54 main\n      uid=18_55 form\n        uid=19_19 status atomic live=\"assertive\" relevant=\"additions text\"\n        uid=19_22 status atomic live=\"assertive\" relevant=\"additions text\"\n        uid=19_25 status atomic live=\"assertive\" relevant=\"additions text\"\n        uid=18_158 status atomic live=\"assertive\" relevant=\"additions text\"\n        uid=18_210 status atomic live=\"assertive\" relevant=\"additions text\"\n        uid=18_251 status atomic live=\"assertive\" relevant=\"additions text\"\n  uid=18_259 region \"Notifications alt+T\" live=\"polite\" relevant=\"additions text\"\n  uid=21_0 alertdialog \"Remove this block?\" description=\"This action cannot be undone.\"\n    uid=21_1 heading \"Remove this block?\" level=\"2\"\n    uid=21_2 \"This action cannot be undone.\"\n    uid=21_3 button \"Cancel\" focusable focused\n    uid=21_4 button \"Remove\"\n",
+  "deleteConfirmation": "Successfully clicked on the element\n## Latest page snapshot\nuid=18_0 RootWebArea \"Forside | anelpasic/optimalisering.oslo.nov3.3@main | Pages CMS\" url=\"https://app.pagescms.org/anelpasic/optimalisering.oslo.nov3.3/main/file/homepage\"\n  uid=18_48 main\n    uid=18_54 main\n      uid=18_55 form\n        uid=19_19 status atomic live=\"assertive\" relevant=\"additions text\"\n        uid=19_22 status atomic live=\"assertive\" relevant=\"additions text\"\n        uid=19_25 status atomic live=\"assertive\" relevant=\"additions text\"\n        uid=18_158 status atomic live=\"assertive\" relevant=\"additions text\"\n        uid=18_210 status atomic live=\"assertive\" relevant=\"additions text\"\n        uid=18_251 status atomic live=\"assertive\" relevant=\"additions text\"\n  uid=18_259 region \"Notifications alt+T\" live=\"polite\" relevant=\"additions text\"\n  uid=23_0 alertdialog \"Remove this item?\" description=\"This action cannot be undone.\"\n    uid=23_1 heading \"Remove this item?\" level=\"2\"\n    uid=23_2 \"This action cannot be undone.\"\n    uid=23_3 button \"Cancel\" focusable focused\n    uid=23_4 button \"Remove\"\n",
+  "limitations": [
+    "Upstream revision is public source inspected, not an identified deployed hosted-CMS commit",
+    "No Add attempted: current maximum hides it; unrestricted type choice follows inspected source",
+    "No protected removal confirmed; enabled control plus unguarded source establishes unsafe capability",
+    "No implementation/native roundtrip claimed"
+  ]
+}

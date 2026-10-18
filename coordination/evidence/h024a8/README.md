@@ -1,0 +1,44 @@
+# H-024A8 — discovery gate: STOP for OWNER choice
+
+2026-10-18. Consumes D-097 / `coordination/H024A8-OPTIONAL-SECTIONS-VISIBILITY.md`, incoming main `0006134b4b0a51b0c96b78711725b3395cdd8553`. **Discovery completed; optional creation/deletion and visibility NOT IMPLEMENTED.** This is not H-024A3 acceptance. H-024B BLOCKED; H-022 PARKED.
+
+## Observed editor and source
+
+Authenticated hosted Pages CMS homepage was inspected directly, without saving or confirming any removal. Eight original co-located rows retain drag handles and their original order. Root Add is absent at maximum eight. Both the selector's **Remove block** (clear selected object) and **Remove item** (delete list row) open confirmations with enabled Remove buttons, even at minimum eight. Both were cancelled; Save remains disabled. Screenshots: [clear block](protected-clear-block.png), [delete row](protected-remove-item.png). Action record and final DOM observations: [authenticated-discovery.json](authenticated-discovery.json). We did not confirm deletion, add a row, or perform a save/build/Worker roundtrip.
+
+Public upstream inspected at immutable revision `6f4e860a35d934406580287e7042e5e111e207a1`; the hosted app's deployed revision was not exposed/identified. Relevant source is retained as [numbered excerpts](upstream-excerpts.md), not vendored CMS code:
+
+- `components/entry/entry-form.tsx:245–297,399–408`: list deletion depends on list-field readonly, not row identity/type or minimum. Confirm directly removes the indexed item.
+- `:594–643,679–731`: a new/unselected block offers every configured block definition; clear-block sets the object to null. No per-type creation or per-record clearing policy exists in these paths.
+- `:514–551`: each row receives the same list-field definition; max hides the Add button globally. No protected/optional row distinction.
+- `:167–207,372–408`: list readonly removes drag control and prevents move/add/delete. Readonly descendants protect field values, not parent deletion. Definition-level readonly cannot protect a row from the outer list's remove action.
+- `lib/config-schema.ts:241–275,391–449`: supported list settings are min/max/collapsible; readonly is boolean. `operations` is on content entries/files, not a section-row policy. Official documentation agrees: [list](https://pagescms.org/docs/configuration/content/list/), [block](https://pagescms.org/docs/configuration/fields/block/), [fields](https://pagescms.org/docs/configuration/content/fields/), [entry operations](https://pagescms.org/docs/configuration/content/operations/).
+
+**Conclusion:** stock `.pages.yml` cannot simultaneously provide mixed drag/co-located editing, content-only Add, and non-deletable original eight. Raising max or relying on Zod rejects invalid builds after the unsafe edit; it does not implement the required editor safety. Removing singleton definitions would also remove their editors. No hooks, CMS fork, DOM patch, server changes or partial visibility implementation were introduced.
+
+## Two bounded alternatives for OWNER
+
+| Choice | Concrete design | UX and preservation | Cost / approval boundary |
+| --- | --- | --- | --- |
+| A — localized CMS customization, recommended if one mixed draggable list is required | Extend the CMS list/block editor with explicit create-type and immutable protected-UID policies. Add only content; disable BOTH row deletion and block clearing for all original eight; retain drag and child edits. Enforce the same invariants at CMS write validation as well as site schema/build. Keep homepage records and current production components. | Meets the requested mixed list and preserves existing source model, UUIDs/order and co-located edits. Optional rows use the current HomeSection/ContentCard presets. | Medium/high: upstream-supported release or separately hosted maintained CMS customization, authentication/deploy/update ownership and dedicated editor tests. Current hosted app cannot load this from this repository's YAML. No such extension has been built or approved. Obtain explicit OWNER authority for hosting/customization scope before implementation. |
+| B — stock CMS with protected named sections and a separate optional list | Remodel the eight original records as fixed named object fields with immutable IDs/UUIDs; separate explicit protected ordering control. Use a content-only object list for optional sections with a typed insertion anchor (before/after a protected section), native optional-row drag, and strict global collision checks. | Original content/layout values can be carried over, but the source structure changes. There is no single mixed drag list: optional rows drag within their list; base order uses a separate fixed-identity control. A bare extra list alongside the present eight-item mixed list is insufficient because its original Delete/Clear controls remain. | Medium: source/schema/editor migration and cross-page projection updates; less CMS infrastructure. Requires explicit OWNER acceptance of changed source structure and ordering/editor UX. Migration must preserve all values/identities and current rendered order, and prove restoration. Not authorized by current byte-preservation/mixed-list requirements. |
+
+Recommendation: **A if preserving the requested editor is essential.** B is the infrastructure-light fallback only if OWNER accepts its material source/UX tradeoffs. Neither alternative has implementation authorization beyond the present discovery. No effortless configuration-only fix was found.
+
+## Visibility dependencies identified for either choice
+
+One optional typed `hidden` state, absent→visible, remains the intended mechanism. Retain complete records; central public filtering must be separate from shared commercial authority resolution. This is a design recommendation, not delivered behavior.
+
+- `home.json` Hero and chrome contain `/#sjekk`, Hero also `/#priser`; selector and ordinary content contain further conversion links. Hiding a target must fail publication while inbound links remain, unless OWNER supplies an explicit approved fallback. A UI warning alone must not permit a broken public result. Validation must scan cross-page references too. CMS save validation and site build validation are separate requirements.
+- `Homepage.astro:15` independently derives a Hero proof panel from the proof record. Filtering only `blocks.map` would still expose its projection. Proposed policy: omit that derived panel when the homepage proof section is hidden, retain Hero copy/photo/CTA unchanged; OWNER should confirm this consequence.
+- `resolveHomepageContent` supplies pricing/service pages and `commercial-text.ts`; filtering this authority projection would incorrectly remove shared commercial data. Homepage hiding must not change it. Shared data intentionally published on other authorized commercial routes is distinct from unpublished ordinary section copy.
+- `design-system.astro:20–25` directly renders homepage mechanism/assessment/FAQ data and separately resolves Hero data. It is public despite noindex, so hidden source content could leak through the specimen route. Future implementation must omit hidden-derived specimens or use approved independent fixtures; no hidden sentinel may survive any generated route/client/JSON/structured output. This requires a focused cross-route leak test.
+- `sitemap.xml.ts` currently enumerates page URLs, not section anchors; preview output is empty. Do not change launch/indexing gates or treat noindex as content suppression.
+
+## Preservation and verification limits
+
+Working homepage's Git-normalized blob and incoming Git blob both equal `3886c2cda6da88ab599bf34c7c957e543535b8c9`. No tracked product, `.pages.yml`, content, reference or asset changes. Five pre-existing untracked OWNER images remain untouched. Only coordination/evidence files change in this discovery receipt; final checks are recorded in [verification.json](verification.json).
+
+No product implementation means no feature test pass, authenticated create/hide/delete/reorder cycle, deployment of new behavior, responsive screenshots, hidden-content leak pass or Worker variant proof is claimed. Full app verification was not rerun for a documentation-only stop. The screenshots demonstrate native confirmation availability, not a successfully deleted protected record. Existing preview behavior is preserved; live runtime was not revalidated here.
+
+**Responsible role: OWNER. Required next decision:** choose A with explicit CMS customization/hosting authority, or accept B's source migration and separate ordering UX. Then issue the scoped continuation, including visibility link/proof/specimen policy. H-024A8 remains unfinished at its explicit discovery gate; H-024A3 not PASS, H-024B BLOCKED, H-022 PARKED, no launch/intake/indexing change.

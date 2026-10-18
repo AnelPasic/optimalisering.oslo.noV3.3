@@ -1,5 +1,19 @@
 # Codex to ChatGPT
 
+## H-024A8 — DISCOVERY GATE STOP / OWNER CMS APPROACH REQUIRED
+
+2026-10-18 IMPLEMENTATION consumes D-097 / `H024A8-OPTIONAL-SECTIONS-VISIBILITY.md`, incoming main `0006134b4b0a51b0c96b78711725b3395cdd8553`. **Not implemented or delivered.** Authenticated hosted editor offers enabled Remove block and Remove item confirmations for a protected original row at min/max8; both cancelled, Save disabled. Immutable public CMS source6f4e860 confirms shared list readonly/max, unrestricted block chooser, and no per-row protected deletion/type creation policy. Hosted deployed source revision is not independently identified. Root Add cannot be safely enabled with YAML alone; Zod/build guards are not editor protection. Contract explicitly requires STOP here, before optional sections or partial visibility implementation.
+
+Evidence, screenshots, immutable numbered sources, concrete choices and limitations: `coordination/evidence/h024a8/README.md`; final source checks: `verification.json`. Homepage Git blob remains3886c2c; product/content/CMS/references/assets untouched, five pre-existing untracked OWNER images preserved. No CMS save/commit, create/hide/delete/reorder roundtrip, feature QA or Worker variant proof claimed. Documentation-only discovery receipt is identified through Git history.
+
+**Gate / responsible role OWNER:** choose **A**, explicit localized CMS customization/release or self-hosting authority to restrict content-only creation and BOTH clear/delete by protected original UID, preserving the exact mixed-list source/editor (recommended if that UX is required); or **B**, explicit source migration to fixed named protected section objects plus separate typed optional list/insertion anchors and separate base-order control, accepting loss of one mixed drag list. Simply adding a second list leaves original deletion controls exposed and does not satisfy this contract. No source/hosting migration has been started.
+
+**Visibility continuation dependencies:** prevent publication with dangling #sjekk/#priser and cross-page links; keep shared package/proof/form authority available to other authorized routes. Decide whether hiding homepage proof also suppresses its derived Hero panel. Public `/design-system/` currently renders source-backed section specimens and must not expose hidden data; future filtering cannot stop at homepage blocks. These policies/tests remain unimplemented. Independent app work cannot safely proceed past D-097's explicit discovery gate; approved existing runtime continues unchanged.
+
+**STOP for OWNER choice**, as required by contract Part1: "STOP and document 1–2 concrete safe alternatives with their UX/cost/tradeoffs". H-024A8 unfinished, H-024A3 whole-editor not PASS, H-024B BLOCKED, H-022 PARKED; D-096 accepted components preserved and no intake/indexing/launch change.
+
+---
+
 ## H-024A7 FAQ width + optional horizontal contact — DELIVERED / STOP FOR OWNER VISUAL-CMS REVIEW
 
 2026-10-18 IMPLEMENTATION consumes actual D-095/H024A7 contract from incoming1cadd55. Runtime implementation `ec267fc9c49ac55f50169199cafb465dc8089306`; native CMS-control correction d5669c2 +60020bb. Final actual CMS restore `51ca558b41051023721b20700f7e16e09964b56a` restores original source; identify report-only receipt through Git history. No new OWNER verdict is fabricated.

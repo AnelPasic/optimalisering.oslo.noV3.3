@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-18",
+  "baselineCommit": "0006134b4b0a51b0c96b78711725b3395cdd8553",
+  "trackedProductReferenceCmsFiles": 475,
+  "trackedProductReferenceCmsDiffEmpty": true,
+  "homeGitBlob": "3886c2cda6da88ab599bf34c7c957e543535b8c9",
+  "homeWorkingGitNormalizedBlob": "3886c2cda6da88ab599bf34c7c957e543535b8c9",
+  "homeWorkingSha256": "1369eb92bcc436ff6db1ed4da4af6e964db2f8cf4e75c7e4f727023a916de4b2",
+  "preExistingUntrackedOwnerImages": [
+    "app/src/assets/images/DiscoveringLocalFavorite.png",
+    "app/src/assets/images/ShoppingConversion.png",
+    "app/src/assets/images/happy-business.png",
+    "app/src/assets/images/happy-shopowner.png",
+    "app/src/assets/images/happy-shopowner2.png"
+  ],
+  "ownerImagesTouched": false,
+  "cmsSaved": false,
+  "protectedRemovalsConfirmed": false,
+  "featureImplemented": false,
+  "fullAppVerificationRun": false,
+  "nativeFeatureBuild": null,
+  "workerFeatureEvidence": null,
+  "verificationScope": "Documentation-only feasibility stop; no live-runtime or feature-delivery claim"
+}
