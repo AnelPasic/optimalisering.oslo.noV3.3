@@ -21,6 +21,9 @@ try{for(const route of routes)for(const width of [1440,900,390,320]){
  if(route==='/'){
   const blocks=getHomepageBlocks(JSON.parse(readFileSync('src/content/pages/home.json'))).filter(isHomepageSectionVisible);
   const actual=await page.locator('.invite-home > section[id]').evaluateAll(es=>es.map(e=>e.id));assert.deepEqual(actual,blocks.map(b=>b.id),'Actual Worker/local source order');
+  const calculator=blocks.find(b=>b._block==='calculator');
+  if(calculator)assert.equal(await page.locator('#regneeksempel h2').innerText(),calculator.content.heading,'Actual visible master heading');
+  else assert.equal(await page.locator('#regneeksempel').count(),0,'No hidden/removed calculator instance');
   assert.equal(await page.locator('[data-home-assessment] button[type=submit]:not(:disabled)').count(),0);
   if(phase==='baseline'||process.env.QA_SCREENSHOT)await page.screenshot({path:`${out}/home-${width}.png`,fullPage:true});
  }
