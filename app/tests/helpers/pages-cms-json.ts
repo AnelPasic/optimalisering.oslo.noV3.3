@@ -8,7 +8,7 @@ export function resolveField(field: any, components: any): any {
 
 export function homepageBlockEditor(cms: any, type: string): any {
   const home = entryForFile(cms, 'app/src/content/pages/home.json');
-  const block = home.fields.find((f: any) => f.name === 'sections').fields.find((b: any) => b.fields.find((f:any)=>f.name==='_block')?.default === type);
+  const block = home.fields.find((f: any) => f.name === 'sections').fields.find((b: any) => b.fields?.find((f:any)=>f.name==='_block')?.default === type);
   return resolveField(block.fields.find((f: any) => f.name === 'content'), cms.components);
 }
 

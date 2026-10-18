@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { readdirSync, readFileSync } from 'node:fs';
+import { readdirSync, readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 
 const pageDir = 'src/content/pages';
@@ -36,16 +36,21 @@ function collectStrings(value, path = '$', out = []) {
 }
 
 let stringsChecked = 0;
-for (const file of [...readdirSync(pageDir).filter(name => name.endsWith('.json')).map(name => join(pageDir, name)), 'src/content/terminology/glossary.json']) {
+const masterDir='src/content/global-elements';
+const masters=existsSync(masterDir)?readdirSync(masterDir).filter(name=>name.endsWith('.json')).map(name=>join(masterDir,name)):[];
+for (const file of [...readdirSync(pageDir).filter(name => name.endsWith('.json')).map(name => join(pageDir, name)), ...masters, 'src/content/terminology/glossary.json']) {
   const json = JSON.parse(readFileSync(file, 'utf8'));
   for (const entry of collectStrings(json)) {
     stringsChecked++;
     // TERMINOLOGY POLISH QA ONLY (2026-10-13) explicitly preserves the
     // incoming quoted examples. Permit their Norwegian quotation marks only
     // in explanations/examples; all other punctuation and phrase rules stand.
-    const punctuation = file === 'src/content/terminology/glossary.json'
+    let punctuation = file === 'src/content/terminology/glossary.json'
       && /^\$\.terms\[\d+\]\.(?:fullDefinition|simpleExample)$/.test(entry.path)
       ? entry.value.replace(/[«»]/g, '') : entry.value;
+    // D-102 requires exact retention of OWNER's existing CMS-created section.
+    // Grandfather only this incoming sentence, not new arrow punctuation/copy.
+    if(file===join(pageDir,'home.json')&&JSON.stringify(json).includes('8ac621d2-d9aa-40ae-9875-ea9c7a2c2462')&&/\.body\[\d+\]$/.test(entry.path)&&entry.value==='Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Seksjoner → Pakker og priser.')punctuation=punctuation.replaceAll('→','');
     assert.ok(!forbiddenChars.test(punctuation), `${file} ${entry.path}: use ordinary keyboard punctuation`);
     for (const pattern of forbiddenPhrases) {
       assert.ok(!pattern.test(entry.value), `${file} ${entry.path}: avoid template-like phrase ${pattern}`);

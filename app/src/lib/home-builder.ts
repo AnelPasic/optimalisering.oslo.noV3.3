@@ -5,6 +5,7 @@ import { headingAlignSchema } from './heading-alignment.ts';
 import {contentLayoutSchema,boxVariantSchema} from './content-presentation.ts';
 import {heroLayoutSchema} from './hero-presentation.ts';
 import {assessmentLayoutSchema} from './assessment-layout.ts';
+import calculatorMaster from '../content/global-elements/regneeksempel.json' with {type:'json'};
 
 const link=z.object({label:z.string().trim().min(1),href:z.string().startsWith('/')});
 export const heroPhotoSchema=z.object({src:z.string().regex(/^\/images\/home\/[a-z0-9][a-z0-9-]*\.webp$/),positionX:z.number().min(0).max(100),positionY:z.number().min(0).max(100)});
@@ -33,7 +34,7 @@ export const homepageBlockSchema=z.discriminatedUnion('_block',[
  items:z.array(z.object({title:z.string(),text:z.string(),href:z.string().startsWith('/').optional(),label:z.string().optional(),surface:surfaceSchema,boxVariant:boxVariantSchema})).optional(),links:z.array(link).optional()}).strict(),
 ]);
 export const homepageBlocksSchema=z.array(homepageBlockSchema).max(24).superRefine((blocks,ctx)=>{
- for(const id of homepageCoreIds){const core=blocks.find(b=>b.id===id);if(!core)ctx.addIssue({code:'custom',message:`Missing required homepage block: ${id}`});else if(core.uid!==coreUids[id])ctx.addIssue({code:'custom',message:`Protected homepage UUID: ${id}`});}
+ for(const id of homepageCoreIds){const core=blocks.find(b=>b.id===id);if(!core&&id!=='regneeksempel')ctx.addIssue({code:'custom',message:`Missing required homepage block: ${id}`});else if(core&&core.uid!==coreUids[id])ctx.addIssue({code:'custom',message:`Protected homepage UUID: ${id}`});}
  const ids=new Set<string>(),uids=new Set<string>(),types=new Set<string>();
  // A content anchor also shares the DOM namespace with controls and ARIA targets.
  const reserved=new Set(['behov','regneeksempel','priser','resultater','sjekk','sporsmal','skjema','main','mobile-menu','site-menu','order-package','website','email','message','calc-visits','calc-conversion-label','calc-conversion','calc-traffic','calc-new-conversion-label','calc-new-conversion','calculator-error','scenario-illustration-label','scenario-current-label','scenario-improved-label','scenario-current-value','scenario-improved-value']);
@@ -46,9 +47,21 @@ export const homepageBlocksSchema=z.array(homepageBlockSchema).max(24).superRefi
  });
 });
 export type HomepageBlock=z.infer<typeof homepageBlockSchema>;
+export const globalPlacementSchema=z.object({_block:z.literal('global'),element:z.literal('regneeksempel'),uid:identity.uid,visibility:sectionVisibilitySchema}).strict();
+export function getGlobalElement(id:string){
+ if(id!=='regneeksempel')throw new Error(`Unknown global element: ${id}`);
+ const master=homepageBlockSchema.parse(calculatorMaster);
+ if(master._block!=='calculator'||master.id!==id||master.uid!==coreUids[id]||master.visibility!==undefined)throw new Error(`Invalid global master identity: ${id}`);
+ return master as Extract<HomepageBlock,{_block:'calculator'}>;
+}
+export function resolveGlobalPlacement(value:unknown):HomepageBlock{
+ const placement=globalPlacementSchema.parse(value);
+ return {...getGlobalElement(placement.element),...(placement.visibility?{visibility:placement.visibility}:{})};
+}
 const ordinarySchema=homepageBlockSchema.options.find(s=>s.shape._block.value==='content')!;
 export const optionalHomepageSectionSchema=ordinarySchema.extend({placement:homepagePlacementSchema});
 const fixedShape=Object.fromEntries(homepageCoreIds.map(id=>[id,homepageBlockSchema.refine(b=>b.id===id&&b.uid===coreUids[id],'Protected section identity must match its fixed object')]));
+fixedShape.regneeksempel=z.array(globalPlacementSchema).max(1).optional() as any;
 export const homepageSourceSchema=z.object({sections:z.object(fixedShape).strict(),optionalSections:z.array(optionalHomepageSectionSchema).max(16).optional()}).strict();
 export function isHomepageSectionVisible(section:{visibility?:unknown}){return section.visibility!=='hidden';}
 type Source={sections:unknown;optionalSections?:unknown};
@@ -57,7 +70,7 @@ export function resolveHomepageSections(page:Source){
  const source=homepageSourceSchema.parse({sections:page.sections,optionalSections:page.optionalSections});
  const optional=source.optionalSections??[];
  const at=(placement:string)=>optional.filter(s=>s.placement===placement).map(({placement,...section})=>section);
- return homepageBlocksSchema.parse(homepageCoreIds.flatMap(id=>[...at(`before:${id}`),source.sections[id],...at(`after:${id}`)]));
+ return homepageBlocksSchema.parse(homepageCoreIds.flatMap(id=>[...at(`before:${id}`),...(id==='regneeksempel'?((source.sections[id]??[]) as unknown as unknown[]).map(resolveGlobalPlacement):[source.sections[id]]),...at(`after:${id}`)]));
 }
 export function assertNever(value:never):never{throw new Error(`Unknown homepage block: ${JSON.stringify(value)}`);}
 
@@ -73,6 +86,10 @@ export function getHomepageBlocks(page:Source){
  }));
 }
 export function getHomepageBlock<T extends HomepageBlock['_block']>(page:Source,type:T):Extract<HomepageBlock,{_block:T}>{
+ if(type==='calculator'){
+  const placement=getHomepageBlocks(page).find(b=>b._block===type);
+  return (placement??{...getGlobalElement('regneeksempel'),visibility:'hidden'}) as Extract<HomepageBlock,{_block:T}>;
+ }
  const sections=Array.isArray(page.sections)?page.sections:Object.values(page.sections as Record<string,unknown>);
  const matches=sections.filter(value=>(value as {_block?:string})._block===type);
  if(matches.length!==1)throw new Error(`Homepage requires exactly one ${type} block`);
@@ -99,5 +116,5 @@ export function resolveHomepageContent(page:Source&{homepage?:{chrome:unknown}})
  const blocks=getHomepageBlocks(page);
  const get=<T extends HomepageBlock['_block']>(type:T)=>(blocks.find(b=>b._block===type) as Extract<HomepageBlock,{_block:T}>);
  const assessment=get('assessment').content,faq=get('faq').content;
- return {selector:get('selector').content,calculator:get('calculator').content,packages:get('packages').content,proof:get('proof').content,assessmentSection:assessment.section,form:assessment.form,faqHeading:faq.heading,faqEyebrow:faq.eyebrow,faq:faq.items,faqVisible:isHomepageSectionVisible(get('faq')),chrome:homeSectionDataSchema.shape.chrome.parse(page.homepage?.chrome)};
+ return {selector:get('selector').content,calculator:getGlobalElement('regneeksempel').content,packages:get('packages').content,proof:get('proof').content,assessmentSection:assessment.section,form:assessment.form,faqHeading:faq.heading,faqEyebrow:faq.eyebrow,faq:faq.items,faqVisible:isHomepageSectionVisible(get('faq')),chrome:homeSectionDataSchema.shape.chrome.parse(page.homepage?.chrome)};
 }

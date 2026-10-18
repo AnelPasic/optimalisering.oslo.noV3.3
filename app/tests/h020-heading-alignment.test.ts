@@ -20,11 +20,11 @@ test('safe mapping emits only a validated left override and leaves the homepage 
 
 test('section heading alignment accepts center/left; missing and cleared values default to center',()=>{
   for(const value of ['center','left',undefined,'',null]){
-    const home=load('home');sectionRecords(home).find((s:any)=>s._block==='content').headingAlign=value;
-    assert.equal(pageSchema.parse(home).sections.find(s=>s._block==='content')!.headingAlign,value==='left'?'left':'center');
+    const home=load('home');sectionRecords(home).find((s:any)=>s.id==='mekanisme').headingAlign=value;
+    assert.equal(pageSchema.parse(home).sections.find(s=>s.id==='mekanisme')!.headingAlign,value==='left'?'left':'center');
   }
   for(const value of ['right','justify','left extra','text-left','#fff',0,{},[]]){
-    const home=load('home');sectionRecords(home).find((s:any)=>s._block==='content').headingAlign=value;
+    const home=load('home');sectionRecords(home).find((s:any)=>s.id==='mekanisme').headingAlign=value;
     assert.equal(pageSchema.safeParse(home).success,false,JSON.stringify(value));
   }
 });

@@ -2,13 +2,16 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { mkdtempSync, mkdirSync, writeFileSync, readFileSync, unlinkSync, rmdirSync } from 'node:fs';
 import { tmpdir } from 'node:os';
-import { join, resolve } from 'node:path';
+import { join, resolve, sep } from 'node:path';
 import { spawnSync } from 'node:child_process';
 
 test('copy-style guard permits formal calculator notation but still rejects ornamental customer prose', () => {
   const root = mkdtempSync(join(tmpdir(), 'h017a-copy-'));
   const pageDir = join(root, 'src/content/pages'), componentDir = join(root, 'src/components');
-  const pageFile = join(pageDir, 'fixture.json'), componentFile = join(componentDir, 'HomeLeverage.astro');
+  const pageFile = join(pageDir, 'home.json'), componentFile = join(componentDir, 'HomeLeverage.astro');
+  // Every write below is confined to this mkdtemp fixture, never repository content.
+  assert.notEqual(resolve(pageFile),resolve('src/content/pages/home.json'));
+  assert.ok(resolve(pageFile).startsWith(resolve(root)+sep));
   const termDir = join(root, 'src/content/terminology'), termFile = join(termDir, 'glossary.json');
   const guard = resolve('scripts/audit-copy-style.mjs');
   try {
@@ -19,6 +22,12 @@ test('copy-style guard permits formal calculator notation but still rejects orna
     const math = '<span class="math-equation" data-current-equation>{visits} × {conversion} %</span>\ncurrentEquation.textContent = `${visits} × ${conversion} %`;\n[current, scenario, difference, percentage, currentEquation, scenarioEquation].forEach(output => output.textContent = \'–\');';
     const run = source => { writeFileSync(componentFile, source); return spawnSync(process.execPath, [guard], { cwd: root, encoding: 'utf8' }); };
     assert.equal(run(math).status, 0, 'formal math and numeric unavailable placeholder are functional notation');
+    const owner={uid:'8ac621d2-d9aa-40ae-9875-ea9c7a2c2462',body:['Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Seksjoner → Pakker og priser.']};
+    writeFileSync(pageFile,JSON.stringify({optionalSections:[owner]}));
+    assert.equal(run(math).status,0,'exact incoming OWNER sentence survives required preservation');
+    writeFileSync(pageFile,JSON.stringify({optionalSections:[{...owner,body:[owner.body[0]+' → nytt']}]}));
+    assert.notEqual(run(math).status,0,'exception does not permit new arrow prose');
+    writeFileSync(pageFile,'{}');
     const glossary = readFileSync(termFile, 'utf8');
     writeFileSync(termFile, JSON.stringify({ terms: [{ fullDefinition: 'Et søk etter «tannlege Ski».', simpleExample: 'Knappen «Bestill time».' }] }));
     assert.equal(run(math).status, 0, 'preserved glossary quotes are permitted in explanations and examples');

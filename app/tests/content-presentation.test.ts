@@ -7,7 +7,7 @@ import {pageSchema} from '../src/lib/content-schema.ts';
 import {cmsJsonSave,entryForFile,resolveField,assertPreservedContent} from './helpers/pages-cms-json.ts';
 const home=JSON.parse(readFileSync('src/content/pages/home.json','utf8'));
 const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
-const normal=(p:any)=>sectionRecords(p).find((s:any)=>s._block==='content');
+const normal=(p:any)=>sectionRecords(p).find((s:any)=>s.id==='mekanisme');
 
 test('ordinary layout and box choices survive primary ingestion independently of surfaces',()=>{
  for(const layout of ['default','two-columns','three-columns','stacked'])for(const boxVariant of ['default','plain','card']){
@@ -21,7 +21,8 @@ test('ordinary layout and box choices survive primary ingestion independently of
 
 test('new presentation fields preserve automatic rendering defaults and reject protected use',()=>{
  for(const empty of [undefined,null,'','default']){const p=structuredClone(home),s=normal(p);s.layout=empty;s.items[0].boxVariant=empty;const parsed=normal(pageSchema.parse(p));assert.equal(parsed.layout,'default');assert.equal(parsed.items[0].boxVariant,'default');}
- for(const type of ['selector','calculator','packages','proof','assessment','faq']){const p=structuredClone(home);sectionRecords(p).find((s:any)=>s._block===type).layout='stacked';assert.equal(pageSchema.safeParse(p).success,false,type);}
+ for(const type of ['selector','packages','proof','assessment','faq']){const p=structuredClone(home);sectionRecords(p).find((s:any)=>s._block===type).layout='stacked';assert.equal(pageSchema.safeParse(p).success,false,type);}
+ const calculator=structuredClone(home);calculator.sections.regneeksempel[0].layout='stacked';assert.equal(pageSchema.safeParse(calculator).success,false,'placement cannot accept arbitrary layout');
  const service=JSON.parse(readFileSync('src/content/pages/synlighet.json','utf8'));
  for(const field of ['layout','boxVariant']){const p=structuredClone(service),s=sectionRecords(p).find((s:any)=>s._block==='protected');if(field==='layout')s.layout='stacked';else{s.items=[{title:'Test',text:'Test',boxVariant:'card'}];}assert.equal(pageSchema.safeParse(p).success,false,field);}
 });
@@ -32,7 +33,7 @@ test('co-located CMS choices expose semantics and round-trip variant/reorder wit
  assert.equal(layout.type,'select');assert.deepEqual(layout.options.values.map((v:any)=>v.name),['default','two-columns','three-columns','stacked']);
  assert.equal(box.type,'select');assert.deepEqual(box.options.values.map((v:any)=>v.name),['default','plain','card']);
  assert.equal(sections.list,undefined);
- for(const b of sections.fields.filter((b:any)=>!['mekanisme','passer'].includes(b.name)))assert.ok(!JSON.stringify(b.fields).includes('contentLayoutChoice')&&!JSON.stringify(b.fields).includes('boxVariantChoice'));
+ for(const b of sections.fields.filter((b:any)=>!['mekanisme','passer'].includes(b.name)))assert.ok(!JSON.stringify(b.fields??b.blocks).includes('contentLayoutChoice')&&!JSON.stringify(b.fields??b.blocks).includes('boxVariantChoice'));
  const p=structuredClone(home),s=normal(p);s.layout='stacked';s.items[0].boxVariant='card';
  const saved=JSON.parse(cmsJsonSave(home,p,entry,cms));assertPreservedContent(p,saved);assert.equal(pageSchema.safeParse(saved).success,true);
  const restored=JSON.parse(cmsJsonSave(saved,home,entry,cms));assertPreservedContent(home,restored);

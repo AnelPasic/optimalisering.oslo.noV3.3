@@ -24,14 +24,14 @@ test('renderer mapping validates the shared enum and suppresses default/protecte
 });
 
 test('ordinary section and item surfaces accept only the six approved values',()=>{
-  for(const value of values){const p=structuredClone(home);sectionRecords(p).find((s:any)=>s._block==='content').surface=value;sectionRecords(p).find((s:any)=>s._block==='content').items[0].surface=value;const parsed=pageSchema.parse(p);assert.equal(sectionRecords(parsed).find(s=>s._block==='content')!.surface,value);assert.equal(sectionRecords(parsed).find(s=>s._block==='content')!.items![0].surface,value);}
+  for(const value of values){const p=structuredClone(home);sectionRecords(p).find((s:any)=>s.id==='mekanisme').surface=value;sectionRecords(p).find((s:any)=>s.id==='mekanisme').items[0].surface=value;const parsed=pageSchema.parse(p);assert.equal(sectionRecords(parsed).find(s=>s.id==='mekanisme')!.surface,value);assert.equal(sectionRecords(parsed).find(s=>s.id==='mekanisme')!.items![0].surface,value);}
   for(const value of ['#ffffff','surface-dark','dark extra','mint; color:red',42,{},[]]){
-    for(const level of ['section','item']){const p=structuredClone(home);(level==='section'?sectionRecords(p).find((s:any)=>s._block==='content'):sectionRecords(p).find((s:any)=>s._block==='content').items[0]).surface=value;assert.equal(pageSchema.safeParse(p).success,false,`${level}: ${JSON.stringify(value)}`);}
+    for(const level of ['section','item']){const p=structuredClone(home);(level==='section'?sectionRecords(p).find((s:any)=>s.id==='mekanisme'):sectionRecords(p).find((s:any)=>s.id==='mekanisme').items[0]).surface=value;assert.equal(pageSchema.safeParse(p).success,false,`${level}: ${JSON.stringify(value)}`);}
   }
 });
 
 test('missing, cleared and explicit default choices preserve automatic styling',()=>{
-  for(const value of [undefined,null,'','default']){const p=structuredClone(home);sectionRecords(p).find((s:any)=>s._block==='content').surface=value;sectionRecords(p).find((s:any)=>s._block==='content').items[0].surface=value;const parsed=pageSchema.parse(p);assert.equal(sectionRecords(parsed).find(s=>s._block==='content')!.surface,'default');assert.equal(sectionRecords(parsed).find(s=>s._block==='content')!.items![0].surface,'default');}
+  for(const value of [undefined,null,'','default']){const p=structuredClone(home);sectionRecords(p).find((s:any)=>s.id==='mekanisme').surface=value;sectionRecords(p).find((s:any)=>s.id==='mekanisme').items[0].surface=value;const parsed=pageSchema.parse(p);assert.equal(sectionRecords(parsed).find(s=>s.id==='mekanisme')!.surface,'default');assert.equal(sectionRecords(parsed).find(s=>s.id==='mekanisme')!.items![0].surface,'default');}
 });
 
 test('all page editors have separate ordinary/protected models and one reusable select',()=>{
@@ -70,19 +70,19 @@ test('protected CTA/form rows cannot acquire a surface or be retyped as content'
     for(const value of ['base','soft','mint','lavender','dark']){const p=structuredClone(original);sectionRecords(p).find((s:any)=>s.id==='sjekk').surface=value;assert.equal(pageSchema.safeParse(p).success,false);}
     const p=structuredClone(original);sectionRecords(p).find((s:any)=>s.id==='sjekk')._block='content';assert.equal(pageSchema.safeParse(p).success,false);
   }
-  const p=structuredClone(home);sectionRecords(p).find((s:any)=>s._block==='content')._block='protected';assert.equal(pageSchema.safeParse(p).success,false);
+  const p=structuredClone(home);sectionRecords(p).find((s:any)=>s.id==='mekanisme')._block='protected';assert.equal(pageSchema.safeParse(p).success,false);
 });
 
 test('CMS surface save and restore preserve every unrelated field, ID, order and link',()=>{
   for(const {file,page} of pages){
     const entry=entryForFile(cms,`app/src/content/pages/${file}`);
     for(const value of values){
-      const form=structuredClone(page),section=sectionRecords(form).find((s:any)=>s._block==='content');
+      const form=structuredClone(page),section=sectionRecords(form).find((s:any)=>s.id==='mekanisme');
       if(!section)continue;section.surface=value;if(section.items?.length)section.items[0].surface=value;
       const saved=JSON.parse(cmsJsonSave(page,form,entry,cms));assertPreservedContent(form,saved);assert.deepEqual(pageSchema.parse(saved),pageSchema.parse(form));
       const restored=JSON.parse(cmsJsonSave(saved,structuredClone(page),entry,cms));assertPreservedContent(page,restored);assert.deepEqual(pageSchema.parse(restored),pageSchema.parse(page));
     }
-    const form=structuredClone(page),section=sectionRecords(form).find((s:any)=>s._block==='content');if(section){section.surface='#fff';assert.throws(()=>cmsJsonSave(page,form,entry,cms));}
+    const form=structuredClone(page),section=sectionRecords(form).find((s:any)=>s.id==='mekanisme');if(section){section.surface='#fff';assert.throws(()=>cmsJsonSave(page,form,entry,cms));}
   }
 });
 

@@ -1,0 +1,25 @@
+
+> optimalisering-oslo-v3-3@0.1.0 check
+> astro check
+
+22:56:10 [content] Syncing content
+22:56:10 [content] Synced content
+22:56:10 [types] Generated 376ms
+22:56:10 [check] Getting diagnostics for Astro files in E:\Codex\optimalisering.oslo.noV3.3\app...
+[96mscripts/qa-intake-h017a.mjs[0m:[93m65[0m:[93m68[0m - [93mwarning[0m[90m ts(2568): [0mProperty 'submit' may not exist on type 'HTMLElement | SVGElement'. Did you mean 'onsubmit'?
+  Property 'submit' does not exist on type 'HTMLElement'.
+
+[7m65[0m   await page.locator('[data-package-order]').evaluate(form => form.submit());
+[7m  [0m [93m                                                                   ~~~~~~[0m
+
+[96msrc/lib/home-builder.ts[0m:[93m73[0m:[93m113[0m - [91merror[0m[90m ts(2352): [0mConversion of type '{ _block: "selector"; id: "behov"; content: { heading: string; items: { title: string; discipline: string; description: string; link: { label: string; href: string; }; }[]; }; uid: string; name: string; visibility?: "hidden" | undefined; } | ... 5 more ... | { ...; }' to type 'any[]' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Type '{ _block: "content"; heading: string; body: string[]; surface: "default" | "base" | "soft" | "mint" | "lavender" | "dark"; headingAlign: "center" | "left"; layout: "default" | "two-columns" | "three-columns" | "stacked"; ... 6 more ...; visibility?: "hidden" | undefined; }' is missing the following properties from type 'any[]': length, pop, push, concat, and 35 more.
+
+[7m73[0m  return homepageBlocksSchema.parse(homepageCoreIds.flatMap(id=>[...at(`before:${id}`),...(id==='regneeksempel'?((source.sections[id]??[]) as any[]).map(resolveGlobalPlacement):[source.sections[id]]),...at(`after:${id}`)]));
+[7m  [0m [91m                                                                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+Result (254 files): 
+- 1 error
+- 0 warnings
+- 1 hint
+

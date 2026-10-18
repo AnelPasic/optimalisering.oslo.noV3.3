@@ -17,7 +17,7 @@ test('Hero allows only the three safe layouts and optional image',()=>{
  assert.equal(heroSchema.safeParse({...hero,visual:{kind:'video'}}).success,false);
 });
 test('derived block arrays reject missing and duplicated protected records',()=>{
- const blocks=Object.values<any>(source.sections);
+ const blocks=pageSchema.parse(source).sections.map(({heading,body,surface,headingAlign,layout,...b})=>b._block==='content'?{...b,heading,body,surface,headingAlign,layout}:b).filter(b=>b.id!=='forbehovsvelger');
  assert.equal(homepageBlocksSchema.safeParse(blocks).success,true);
  for(const value of [[],blocks.slice(1),[...blocks,blocks[0]],blocks.map((b:any,i:number)=>i===0?{...b,_block:'unknown'}:b)])assert.equal(homepageBlocksSchema.safeParse(value).success,false);
 });
@@ -25,7 +25,7 @@ test('derived block arrays reject missing and duplicated protected records',()=>
 test('fixed source stores one structured Hero and complete co-located records',()=>{
  assert.equal(heroSchema.safeParse(source.hero).success,true);assert.equal(pageSchema.safeParse(source).success,true);
  assert.equal(source.title,undefined);assert.equal(source.homepage.heroPhoto,undefined);
- for(const s of Object.values<any>(source.sections).filter(s=>s._block!=='content'))assert.deepEqual(Object.keys(s).sort(),['_block','content','id','name','uid']);
+ for(const s of Object.values<any>(source.sections).filter(s=>s._block&&s._block!=='content'))assert.deepEqual(Object.keys(s).sort(),['_block','content','id','name','uid']);
 });
 
 test('new content anchors cannot take fixed form, chart, ARIA or chrome identities',()=>{

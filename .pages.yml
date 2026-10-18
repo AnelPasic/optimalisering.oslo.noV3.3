@@ -756,136 +756,36 @@ content:
                     required: true
                 required: true
           - name: regneeksempel
-            label: Regneeksempel
-            type: object
-            required: true
-            fields:
-              - name: _block
-                type: string
-                hidden: true
-                readonly: true
-                default: calculator
-                required: true
-              - name: visibility
-                label: Visning på nettsiden
-                component: sectionVisibility
-                description: Publisert er standard. Skjult beholder hele seksjonen i CMS, men fjerner den fra alle offentlige seksjonseksempler og forsiden.
-              - name: uid
-                type: uuid
-                hidden: true
-                options:
-                  editable: false
-                  generate: false
-                required: true
-                readonly: true
-              - name: id
-                type: string
-                hidden: true
-                default: regneeksempel
-                readonly: true
-                required: true
-              - name: name
-                label: Seksjon
-                type: string
-                default: Regneeksempel
-                readonly: true
-                required: true
-                hidden: true
-              - name: content
-                label: false
-                type: object
+            label: Konverteringskalkulator – plassering
+            type: block
+            description: Innhold redigeres under Globale elementer → Konverteringskalkulator. Endring der gjelder alle bruk på dette nettstedet. Fjerning her sletter bare plasseringen, aldri originalinnholdet.
+            list:
+              max: 1
+              collapsible:
+                collapsed: true
+                summary: "{element}"
+            blocks:
+              - name: global
+                label: Globalt element
                 fields:
-                  - name: eyebrow
-                    label: Overtekst
-                    type: string
+                  - name: uid
+                    type: uuid
+                    hidden: true
                     required: true
-                  - name: heading
-                    label: Overskrift
-                    type: string
+                    options:
+                      editable: false
+                      generate: false
+                  - name: element
+                    label: Globalt element
+                    type: select
                     required: true
-                  - name: intro
-                    label: Ingress
-                    type: text
-                    required: true
-                  - name: formula
-                    label: Enkel formel
-                    type: string
-                    required: true
-                  - name: labels
-                    label: Etiketter
-                    type: object
-                    fields:
-                      - name: visits
-                        label: Relevante besøk per måned
-                        type: string
-                        required: true
-                      - name: conversion
-                        label: Konverteringsrate i dag
-                        type: string
-                        required: true
-                      - name: trafficIncrease
-                        label: Mer relevant trafikk
-                        type: string
-                        required: true
-                      - name: newConversion
-                        label: Ny konverteringsrate
-                        type: string
-                        required: true
-                      - name: current
-                        label: I dag
-                        type: string
-                        required: true
-                      - name: scenario
-                        label: Scenario
-                        type: string
-                        required: true
-                      - name: difference
-                        label: Forskjell
-                        type: string
-                        required: true
-                      - name: outcome
-                        label: Resultatenhet
-                        type: string
-                        required: true
-                      - name: increase
-                        label: Prosentvis endring
-                        type: string
-                        required: true
-                      - name: undefinedIncrease
-                        label: Merknad ved null utgangspunkt
-                        type: string
-                        required: true
-                      - name: invalid
-                        label: Veiledning ved ugyldige verdier
-                        type: string
-                        required: true
-                    required: true
-                  - name: defaults
-                    label: Startverdier
-                    type: object
-                    fields:
-                      - name: visits
-                        label: Relevante besøk per måned
-                        type: number
-                        required: true
-                      - name: conversion
-                        label: Konverteringsrate i dag
-                        type: number
-                        required: true
-                      - name: trafficIncrease
-                        label: Mer relevant trafikk
-                        type: number
-                        required: true
-                      - name: newConversion
-                        label: Ny konverteringsrate
-                        type: number
-                        required: true
-                    required: true
-                  - name: caveat
-                    label: Forbehold
-                    type: text
-                    required: true
-                required: true
+                    options:
+                      values:
+                        - name: regneeksempel
+                          label: Konverteringskalkulator
+                  - name: visibility
+                    label: Visning på denne siden
+                    component: sectionVisibility
           - name: sjekk
             label: Gratis sjekk
             type: object
@@ -2662,3 +2562,139 @@ content:
       create: false
       delete: false
       rename: false
+  - name: globalElements
+    label: Globale elementer
+    type: group
+    items:
+      - name: globalCalculator
+        label: Konverteringskalkulator
+        type: file
+        path: app/src/content/global-elements/regneeksempel.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: _block
+            type: string
+            hidden: true
+            readonly: true
+            default: calculator
+            required: true
+          - name: uid
+            type: uuid
+            hidden: true
+            options:
+              editable: false
+              generate: false
+            required: true
+            readonly: true
+          - name: id
+            type: string
+            hidden: true
+            default: regneeksempel
+            readonly: true
+            required: true
+          - name: name
+            label: Seksjon
+            type: string
+            default: Regneeksempel
+            readonly: true
+            required: true
+            hidden: true
+          - name: content
+            label: false
+            type: object
+            fields:
+              - name: eyebrow
+                label: Overtekst
+                type: string
+                required: true
+              - name: heading
+                label: Overskrift
+                type: string
+                required: true
+              - name: intro
+                label: Ingress
+                type: text
+                required: true
+              - name: formula
+                label: Enkel formel
+                type: string
+                required: true
+              - name: labels
+                label: Etiketter
+                type: object
+                fields:
+                  - name: visits
+                    label: Relevante besøk per måned
+                    type: string
+                    required: true
+                  - name: conversion
+                    label: Konverteringsrate i dag
+                    type: string
+                    required: true
+                  - name: trafficIncrease
+                    label: Mer relevant trafikk
+                    type: string
+                    required: true
+                  - name: newConversion
+                    label: Ny konverteringsrate
+                    type: string
+                    required: true
+                  - name: current
+                    label: I dag
+                    type: string
+                    required: true
+                  - name: scenario
+                    label: Scenario
+                    type: string
+                    required: true
+                  - name: difference
+                    label: Forskjell
+                    type: string
+                    required: true
+                  - name: outcome
+                    label: Resultatenhet
+                    type: string
+                    required: true
+                  - name: increase
+                    label: Prosentvis endring
+                    type: string
+                    required: true
+                  - name: undefinedIncrease
+                    label: Merknad ved null utgangspunkt
+                    type: string
+                    required: true
+                  - name: invalid
+                    label: Veiledning ved ugyldige verdier
+                    type: string
+                    required: true
+                required: true
+              - name: defaults
+                label: Startverdier
+                type: object
+                fields:
+                  - name: visits
+                    label: Relevante besøk per måned
+                    type: number
+                    required: true
+                  - name: conversion
+                    label: Konverteringsrate i dag
+                    type: number
+                    required: true
+                  - name: trafficIncrease
+                    label: Mer relevant trafikk
+                    type: number
+                    required: true
+                  - name: newConversion
+                    label: Ny konverteringsrate
+                    type: number
+                    required: true
+                required: true
+              - name: caveat
+                label: Forbehold
+                type: text
+                required: true
+            required: true
