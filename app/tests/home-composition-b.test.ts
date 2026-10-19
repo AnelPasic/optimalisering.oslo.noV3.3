@@ -19,7 +19,7 @@ test('D-105 composition B preserves all source fields except approved placements
   if(id==='resultater'){
    // D-107/H-022C permits presentation media changes, never proof authority/copy.
    const {content,...identity}=JSON.parse(readFileSync('../'+path,'utf8'));
-   const {featuredVisual,...locked}=content;
+   const {featuredVisual,layout,caseVisuals,...locked}=content;
    assert.deepEqual(identity,{_block:'proof',uid:'ac0c6119-b0b8-4739-abd0-7ad7833e5556',id:'resultater',name:'Kunderesultater'});
    assert.deepEqual(locked,{publicationApproved:true,caseIds:['eurotents','nysta','helt-opplagt'],eyebrow:'Dokumenterte resultater',heading:'Resultater fra kundearbeid',beforeLabel:'Før',afterLabel:'Etter',changeLabel:'Arbeid'});
    continue;

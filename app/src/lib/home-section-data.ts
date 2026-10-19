@@ -1,5 +1,5 @@
 import { z } from 'astro/zod';
-import { featuredProofVisualFieldSchema } from './proof-presentation.ts';
+import { featuredProofVisualFieldSchema,proofLayoutSchema,proofCaseVisualsSchema } from './proof-presentation.ts';
 const link = z.object({ label: z.string(), href: z.string().startsWith('/') });
 export const proofSlotSchema = z.object({ publicationApproved: z.boolean(), caseIds: z.array(z.string()).default([]), eyebrow: z.string(), heading: z.string(), beforeLabel: z.string(), afterLabel: z.string(), changeLabel: z.string() });
 export const homeSectionDataSchema = z.object({
@@ -42,7 +42,7 @@ export const homeSectionDataSchema = z.object({
     });
   }),
   // Section approval never substitutes for a case's independent publication guard.
-  proof: proofSlotSchema.extend({ featuredVisual: featuredProofVisualFieldSchema.optional() }),
+  proof: proofSlotSchema.extend({ featuredVisual: featuredProofVisualFieldSchema.optional(),layout:proofLayoutSchema,caseVisuals:proofCaseVisualsSchema.optional() }),
   form: z.object({ promise: z.string(), heading: z.string(), websiteLabel: z.string(), websitePlaceholder: z.string(), emailLabel: z.string(), emailPlaceholder: z.string(), messageLabel: z.string(), optional: z.string(), messagePlaceholder: z.string(), sensitiveNotice: z.string(), previewNotice: z.string(), submitLabel: z.string(), privacyText: z.string(), privacyLink: link, disabledStatus: z.string() }),
   faqHeading: z.string(), faqEyebrow: z.string(),
   chrome: z.object({ brand: z.string(), brandLocation: z.string(), homeLabel: z.string(), skipLabel: z.string(), navigationLabel: z.string(), mobileNavigationLabel: z.string(), openMenu: z.string(), closeMenu: z.string(), assessmentLink: link, navigation: z.array(link), providerText: z.string(), previewLabel: z.string(), serviceNavigationLabel: z.string(), informationNavigationLabel: z.string(), storeLink: link, informationLinks: z.array(link), copyrightProvider: z.string(), footerNote: z.string() }),

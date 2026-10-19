@@ -2372,6 +2372,16 @@ content:
             label: false
             type: object
             fields:
+              - name: layout
+                label: Visningsmal
+                type: select
+                default: alternating
+                options:
+                  values:
+                    - name: alternating
+                      label: Vekslende liste
+                    - name: mediaCards
+                      label: Bildekort
               - name: featuredVisual
                 label: Bilde til fremhevet case
                 description: Kun presentasjon i forhåndsvisningen. Endrer ikke evidens eller publiseringsgodkjenning. Tøm bildet for å bruke presentasjonen uten foto.
@@ -2403,6 +2413,58 @@ content:
                     options:
                       min: 0
                       max: 100
+              - name: caseVisuals
+                label: Bilder til øvrige caser
+                type: object
+                fields:
+                  - name: nysta
+                    label: Nysta
+                    type: object
+                    fields:
+                      - name: src
+                        label: Bilde
+                        type: image
+                        options:
+                          media: proofImages
+                      - name: alt
+                        label: Alternativ tekst
+                        type: string
+                      - name: positionX
+                        label: Horisontalt utsnitt (%)
+                        type: number
+                        options:
+                          min: 0
+                          max: 100
+                      - name: positionY
+                        label: Vertikalt utsnitt (%)
+                        type: number
+                        options:
+                          min: 0
+                          max: 100
+                  - name: helt-opplagt
+                    label: Helt Opplagt
+                    type: object
+                    fields:
+                      - name: src
+                        label: Bilde
+                        type: image
+                        options:
+                          media: proofImages
+                      - name: alt
+                        label: Alternativ tekst
+                        type: string
+                      - name: positionX
+                        label: Horisontalt utsnitt (%)
+                        type: number
+                        options:
+                          min: 0
+                          max: 100
+                      - name: positionY
+                        label: Vertikalt utsnitt (%)
+                        type: number
+                        options:
+                          min: 0
+                          max: 100
               - name: publicationApproved
                 label: Godkjenn visning av allerede publiserbare case
                 description: Slå bare på etter dokumentert godkjenning. Dette overstyrer aldri case-status, tillatelse eller manglende evidens.

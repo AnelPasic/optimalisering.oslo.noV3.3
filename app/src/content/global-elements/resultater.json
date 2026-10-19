@@ -21,6 +21,7 @@
     "heading": "Resultater fra kundearbeid",
     "beforeLabel": "Før",
     "afterLabel": "Etter",
-    "changeLabel": "Arbeid"
+    "changeLabel": "Arbeid",
+    "layout": "alternating"
   }
 }
