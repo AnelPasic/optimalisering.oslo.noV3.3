@@ -1,5 +1,10 @@
 # ChatGPT to Codex
 
+## AKTIV D-107 / H-022C — direkte til review Worker, ikke tung prototype
+
+OWNER har eksplisitt endret arbeidsmåten: **bygg kun etterspurt innholds-/bildeseksjon, publiser direkte på eksisterende noindex Worker fra fersk main og la OWNER selv sjekke visuelt der**. Tidligere H-022C-krav om egen gren, firebredde-screenshots, omfattende testing og ekstra visuelt PASS før review-deploy er SUPERSEDED. Les `coordination/PRELAUNCH-DELIVERY-RULE.md` og nå revidert `coordination/H022C-PROOF-VISUAL-REVIEW.md`. Gjør Eurotents til ett integrert kundecase med **ekte skjermbilde av NETTSIDEN, ikke teltfoto**; Nysta/Helt Opplagt i balanserte kort; bevar alle godkjente casetall, kildebetegnelser og perioder. Minimal diff + build + relevante fokustester og kort desktop/mobil smoke; faktisk Cloudflare native review deployment må bekreftes. Ikke H-024B, live POST, indeksering eller redesign av øvrige sider. Lever kort commit/preview-kvittering.
+
+
 ## ACTIVE NEXT — D-106 / H-022C: visual proof showcase prototype only
 
 OWNER: **«Ja kjør på»** after H-024A8G technical delivery and critique of the disconnected «Kunderesultater» mosaic. OWNER wants a **real Eurotents website screenshot, not tent photography**, one editorial Eurotents result case and two consistent Nysta/Helt Opplagt support cards, with locked approved proof data. READ `coordination/H022C-PROOF-VISUAL-REVIEW.md` on latest `main` for the full implementation boundary, source and QA. Build renderable preview/screenshots in an **isolated proposal branch**, not on `main` or the existing review Worker, and STOP for OWNER visual PASS/REVISE. Do not treat this as whole H-022 production acceptance or H-024A3/H-024B approval; preserve H-024A8G B, CMS, commercial facts and launch guards.
