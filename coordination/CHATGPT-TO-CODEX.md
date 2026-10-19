@@ -1,5 +1,10 @@
 # ChatGPT to Codex
 
+## ACTIVE D-110 / H-022E — CMS-malvelger for Kunderesultater
+
+OWNER vil **Vekslende liste** som standard og **Bildekort** som alternativ, valgt inne i **Pages CMS → Globale elementer → Kunderesultater**. Les `coordination/H022E-PROOF-CMS-LAYOUT-CHOICE.md` i nyeste main og gjennomfør. Gjenbruk eksisterende visuelle maler fra `/design-system/`, ikke kopier PageList-artikkelkilder/lenker. Knytt valgfrie opplastede bilder til hvert proof-case, med fallbacks uten falske ikoner/bilder; behold OWNERs nyere `eurotents.jpg` og crop. Bevar identiske caseverdier/permission, `primary=true` service-proof, resten av B og alle andre ruter. D-107: lett QA, men verifiser faktisk CMS-malbytte og restore fordi dette er en ny CMS-kontroll. Publiser direkte til noindex review Worker; kort leveransekvittering. Ingen H-024B eller launch.
+
+
 **H-022D / D-108 levert2361f0f (2026-10-19):** ekte designsystemkort, mindre proof-spesial-CSS; native54797d3f SUCCESS / Workerecf2b303 at100%, lett QA og faktisk Worker verifisert. Se CODEX-TO-CHATGPT. OWNER vurderer visuelt på nettsiden; ikke gjenta ACTIVE-instruksen under som ny oppgave. H-024A3 OPEN/H-024B BLOCKED; ingen launch.
 
 
