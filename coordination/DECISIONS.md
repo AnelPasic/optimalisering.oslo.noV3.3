@@ -1,5 +1,10 @@
 # Decisions and authority
 
+## D-108 — OWNER REVISE: Kunderesultater skal bruke eksisterende designsystem — 2026-10-19
+
+OWNER avviser visuelt H-022C («Det ble like triste saker») og ber om å bruke **allerede eksisterende** elementer fra `/design-system/`, særlig «Kort med bilde» for første case, alternativt «Vekslende liste» eller «Bildekort» med reelle opplastede bilder. **AUTORISERT under D-107:** Implementer den nøkterne standard-retningen «Kort med bilde» for Eurotents og to konsistente daisyUI Cards for Nysta/Helt Opplagt, uten nytt proof-dashboard/CSS-familie. Behold eksisterende Eurotents-nettstedsscreenshot, låste caseverdier, CMS, øvrig forside og tjenestesider. Kontrakt `coordination/H022D-PROOF-DESIGN-SYSTEM-REUSE.md`. Publiser direkte på noindex review Worker etter lett risikobasert QA; OWNER sjekker der. Dette er OWNER REVISE for H-022C utseende, ikke en tillatelse til å endre proof-autoritet eller launch-gater. H-024A3 OPEN, H-024B BLOCKED.
+
+
 ## D-107 — OWNER godkjenner direkte review-publisering og lett QA frem til lansering — 2026-10-19
 
 OWNER: «Vi jobber på en ikke publisert løsning, det bør ikke brukes masse tokens på tester og screens, det kan jeg ordne visuelt når den publiserer, er jo bare en innholdsseksjon med bilder. Den kan frem til lansering publisere alt med en gang så lenge den endrer kun det vi ber om. Så kan du justere instruksjoner.»
