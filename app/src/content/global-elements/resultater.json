@@ -22,6 +22,12 @@
     "beforeLabel": "Før",
     "afterLabel": "Etter",
     "changeLabel": "Arbeid",
-    "layout": "mediaCards"
+    "layout": "mediaCards",
+    "caseVisuals": {
+      "nysta": {
+        "src": "/images/proof/nysta.jpg",
+        "alt": "nysta.no"
+      }
+    }
   }
 }
