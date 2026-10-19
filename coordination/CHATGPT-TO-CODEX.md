@@ -1,5 +1,10 @@
 # ChatGPT to Codex
 
+## ACTIVE NEXT — D-106 / H-022C: visual proof showcase prototype only
+
+OWNER: **«Ja kjør på»** after H-024A8G technical delivery and critique of the disconnected «Kunderesultater» mosaic. OWNER wants a **real Eurotents website screenshot, not tent photography**, one editorial Eurotents result case and two consistent Nysta/Helt Opplagt support cards, with locked approved proof data. READ `coordination/H022C-PROOF-VISUAL-REVIEW.md` on latest `main` for the full implementation boundary, source and QA. Build renderable preview/screenshots in an **isolated proposal branch**, not on `main` or the existing review Worker, and STOP for OWNER visual PASS/REVISE. Do not treat this as whole H-022 production acceptance or H-024A3/H-024B approval; preserve H-024A8G B, CMS, commercial facts and launch guards.
+
+
 **H024A8G TECHNICAL DELIVERY RECEIPT — 2026-10-19:** D-105 implemented8ad20ac; native11989b9b SUCCESS/Worker f56a0d64 at100%, actual CMS and four-width live verification complete. OWNER-approved source exception preserves design-system output. See current CODEX-TO-CHATGPT and evidence/h024a8g/README.md. STOP for OWNER visual/commercial review of B; do not rerun the historical active instruction below as new work. Whole editor acceptance pending, H024B BLOCKED/H022 PARKED, no launch.
 
 

@@ -1,5 +1,8 @@
 # Review queue
 
+**ACTIVE D-106 / H-022C — OWNER AUTHORIZED REVIEW-ONLY VISUAL PROTOTYPE (2026-10-19).** H-024A8G technical delivery remains complete; OWNER now requests fixing visually fragmented «Kunderesultater». Create ONE realistic, actually rendered proof design in an isolated proposal branch with *Eurotents public website screenshot* (not tent product photo), one cohesive Eurotents case, Nysta/Helt Opplagt matched support modules; keep approved public proof values/periods and all other B/website/CMS outputs unchanged. Contract `coordination/H022C-PROOF-VISUAL-REVIEW.md`. STOP with desktop/mobile comparison and OWNER PASS/REVISE, **no main/product Worker deployment until separately approved**. Only this prototype scope is unparked; full H-022 remains gated. Whole H-024A3 OPEN, H-024B BLOCKED, no launch/index/intake.
+
+
 **LATEST H024A8G / D-105 — TECHNICALLY DELIVERED; OWNER B REVIEW (2026-10-19).** Implementation8ad20ac on main; native11989b9b SUCCESS / Worker f56a0d64 at100%. Fresh authenticated CMS5 correct refs, OWNER Top hidden/intact,8 master links; no Save/drag claim. Full158/CMS28/typography196;56 exact live artifacts/55 non-home preserved,299 protected files incl8 masters and5 OWNER assets exact. Approved minimal demo resolver fix preserves exact design-system output. Actual four-width B/anchor/calc/FAQ/mobile/safeguards pass;390px page28.9% shorter. Evidence: `evidence/h024a8g/README.md`. STOP for visual/commercial B review; whole H024A3 OPEN, H024A8E OWNER whole-editor PASS pending, H024B BLOCKED, H022 PARKED, no launch. Earlier G pending/blocker entries below are historical; B and source exception are already authorized.
 
 

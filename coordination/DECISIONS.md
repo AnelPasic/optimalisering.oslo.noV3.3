@@ -1,5 +1,10 @@
 # Decisions and authority
 
+## D-106 — OWNER authorizes H-022C visual proof review prototype; no production replacement — 2026-10-19
+
+OWNER responds **«Ja kjør på»** to proposal to take **Kunderesultater** next: first create a concrete visual solution, then a separately scoped Codex implementation after visual approval. OWNER earlier preferred **a real screenshot of Eurotents' website, not a photograph of the tent**, and accepted the direction of one coherent Eurotents case plus two balanced Nysta/Helt Opplagt result modules. **AUTHORIZED NOW:** prepare actual renderable visual prototype/screenshots in a separate Git branch, preserve all current approved cases/values/periods/proof gates, and STOP for OWNER visual review. **NOT APPROVED YET:** replacing current preview Worker/main proof rendering, publishing new site media into production, modifying other pages, H-024B or launch. Full bounded contract: `coordination/H022C-PROOF-VISUAL-REVIEW.md`. This narrowly **unparks H-022 only for the prototype stage**; production H-022 remains parked pending visual PASS. H-024A8G remains technically delivered, whole B commercial/visual OWNER review not silently converted to PASS; H-024A3 OPEN, H-024B BLOCKED, noindex/intake off.
+
+
 ## D-105 — OWNER approves homepage composition B and accepts native Pages CMS collapsed-label limit — 2026-10-19
 
 **Direct OWNER continuation — 2026-10-19:** after IMPLEMENTATION documented the exact minimal `design-system.astro` master-lookup patch needed to preserve demo output when B removes homepage references, OWNER says **«Bare å publisere»**. This authorizes that described source exception and publication to the existing noindex review Worker. Use existing global master resolver for the same specimens; no design/CMS/launch expansion. Final technical evidence and OWNER visual/commercial review remain separate.
