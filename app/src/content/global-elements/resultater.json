@@ -19,9 +19,9 @@
     ],
     "eyebrow": "Dokumenterte resultater",
     "heading": "Resultater fra kundearbeid",
-    "beforeLabel": "Før",
-    "afterLabel": "Etter",
-    "changeLabel": "Arbeid",
+    "beforeLabel": "Før optimalisering",
+    "afterLabel": "Etter optimalisering",
+    "changeLabel": "Optimalisering",
     "layout": "mediaCards",
     "caseVisuals": {
       "nysta": {
