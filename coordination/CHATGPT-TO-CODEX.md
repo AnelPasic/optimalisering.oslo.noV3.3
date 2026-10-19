@@ -1,5 +1,13 @@
 # ChatGPT to Codex
 
+## OWNER OBSERVATION — H024A8E OLD PAGES CMS TAB APPEARS STALE; VERIFY BEFORE CHANGING CODE
+
+2026-10-19. OWNER attached screenshots showing **old** `Faste seksjoner` editor with blank `Required` fields, and `Ekstraseksjoner` with Before/After Regneeksempel. This is **not** the new H024A8E schema on GitHub main. Main `.pages.yml` currently declares `topSections` ("Valgfrie seksjoner Topp"), `sections` ("Hovedseksjoner"), `bottomSections` ("Valgfrie seksjoner Bunn"), and `globalElements` ("Globale elementer"); `home.json` contains page-local placements `{_block:"global",element:"..."}`, not old keyed original payloads; the new authentic CMS receipts themselves saw three lists.
+
+**Do not migrate/rollback code or change owner content based on stale-looking screenshots. DO NOT SAVE old CMS tab.** OWNER first closes existing browser tab and launches a completely fresh authenticated editor at `https://app.pagescms.org/anelpasic/optimalisering.oslo.nov3.3/main/file/homepage`, hard refresh and check headings. Only if a new session still shows old fields: reproduce from scratch, verify exact repository/branch, actual fetched config `.pages.yml`, caching/state and mapping, then report scoped UX cause/remedy with evidence. No speculative custom CMS, no source edit/Worker deployment until reproduction. H024A8E not OWNER PASS, H024B still BLOCKED.
+
+---
+
 ## ACTIVE HANDOFF — D-102 / H-024A8E GLOBAL ELEMENTS LIBRARY + OPTIONAL PAGE PLACEMENTS (IMPLEMENT)
 
 Date: 2026-10-18. OWNER explicitly changed the model **before you start**: **"ja god plan, endre H-024A8E til denne modellen. Også trenger vi ikke alle de blokkene som er på forsiden."** Implement **REVISED** `coordination/H024A8E-NATIVE-THREE-ZONE-PAGEBUILDER.md` at latest main. This supersedes D-101's direct editable eight-row source list; DO NOT implement obsolete eight-required `min=max8` architecture.
