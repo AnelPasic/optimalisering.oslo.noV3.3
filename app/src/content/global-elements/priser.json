@@ -57,7 +57,7 @@
             "Får for lite ut av Google Ads eller en annen viktig kanal."
           ]
         },
-        "scope": "Vi jobber med én hovedflaskehals til neste prioritet er viktigere. Mindre støttearbeid rundt samme mål kan inngå.",
+        "scope": "Vi jobber med én hovedflaskehals til neste prioritet er viktigere. Støttearbeid rundt samme mål kan inngå.",
         "typicalBusiness": "Typisk en konkurranseutsatt lokal tjenestebedrift, mindre klinikk, regnskapskontor eller nisje-B2B-bedrift med én tydelig hovedtjeneste.",
         "situations": [
           "Kundene finner deg ikke når de søker etter det du tilbyr.",
@@ -69,7 +69,8 @@
           {
             "icon": "search",
             "label": "SEO / AI-synlighet",
-            "compactLabel": "SEO / AI-synlighet"
+            "compactLabel": "SEO / AI-synlighet",
+            "description": "Bli funnet på Google, Google Maps eller AI Søk"
           },
           {
             "icon": "conversion",
