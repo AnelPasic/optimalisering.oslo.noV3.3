@@ -110,10 +110,6 @@
         "Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Seksjoner → Pakker og priser.",
         "Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Seksjoner → Pakker og priser."
       ]
-    },
-    {
-      "_block": "global",
-      "element": "regneeksempel"
     }
   ],
   "sections": [
@@ -140,9 +136,11 @@
     {
       "_block": "global",
       "element": "mekanisme"
-    }
-  ],
-  "bottomSections": [
+    },
+    {
+      "_block": "global",
+      "element": "regneeksempel"
+    },
     {
       "_block": "global",
       "element": "sporsmal"
