@@ -113,14 +113,16 @@
     },
     {
       "_block": "content",
+      "visibility": "hidden",
       "uid": "49376d88-4867-40d1-82df-0c6ee0f2a26a",
       "name": "CMS-prøve Topp",
       "id": "cms-prove-topp",
-      "heading": "CMS-prøve Topp"
+      "heading": "CMS-prøve Topp redigert"
     },
     {
       "_block": "global",
-      "element": "regneeksempel"
+      "element": "regneeksempel",
+      "visibility": "hidden"
     }
   ],
   "sections": [
@@ -146,20 +148,23 @@
     },
     {
       "_block": "global",
-      "element": "mekanisme"
+      "element": "mekanisme",
+      "visibility": "hidden"
     }
   ],
   "bottomSections": [
     {
       "_block": "content",
+      "visibility": "hidden",
       "uid": "49c542a8-a5ad-49e6-a0bd-29ac90b1c0ca",
       "name": "CMS-prøve Bunn",
       "id": "cms-prove-bunn",
-      "heading": "CMS-prøve Bunn"
+      "heading": "CMS-prøve Bunn redigert"
     },
     {
       "_block": "global",
-      "element": "sporsmal"
+      "element": "sporsmal",
+      "visibility": "hidden"
     }
   ]
 }
