@@ -1,5 +1,8 @@
 # Review queue
 
+**AKTIV D-107 / H-022C — IMPLEMENTER OG PUBLISER PÅ NOINDEX REVIEW WORKER.** Kun forespurt «Kunderesultater»-forbedring: ekte bilde av Eurotents-NETTSIDEN (ikke produktfoto), sammenhengende Eurotents-kundecase, to koordinerte Nysta/Helt Opplagt-moduler, godkjente casetall/perioder/autoritet intakt. OWNER ønsker rask publisering og vil selv vurdere visuelt på review-siden. D-106s separat prototypgren, omfattende screenshots/testkampanjer og forhåndsgodkjenning er erstattet med risikobasert diff/build/fokustest/kort desktop/mobil + faktisk Cloudflare-deploy. Les `coordination/PRELAUNCH-DELIVERY-RULE.md` og revidert H-022C. H-024A3 OPEN, H-024B BLOCKED, ingen offentlig launch/POST/indeksering.
+
+
 **ACTIVE D-106 / H-022C — OWNER AUTHORIZED REVIEW-ONLY VISUAL PROTOTYPE (2026-10-19).** H-024A8G technical delivery remains complete; OWNER now requests fixing visually fragmented «Kunderesultater». Create ONE realistic, actually rendered proof design in an isolated proposal branch with *Eurotents public website screenshot* (not tent product photo), one cohesive Eurotents case, Nysta/Helt Opplagt matched support modules; keep approved public proof values/periods and all other B/website/CMS outputs unchanged. Contract `coordination/H022C-PROOF-VISUAL-REVIEW.md`. STOP with desktop/mobile comparison and OWNER PASS/REVISE, **no main/product Worker deployment until separately approved**. Only this prototype scope is unparked; full H-022 remains gated. Whole H-024A3 OPEN, H-024B BLOCKED, no launch/index/intake.
 
 
