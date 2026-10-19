@@ -1,5 +1,8 @@
 # Review queue
 
+**LATEST OWNER D-109 — H-022D KUNDERESULTATER FORELØPIG BRUKBAR, SETT VISUELL POLERING PÅ VENT (2026-10-20).** OWNER says «ok, brukbart foreløpig». H-022D at 2361f0f/ce09695 has shipped; do not start another proof design iteration without new request. Subsequent real Pages CMS OWNER changes df8303d (upload `eurotents.jpg`) and adab003 (featuredVisual src/crop) are authoritative and must be preserved. H-024A3 whole-editor remains OPEN, H-024B BLOCKED; noindex/intake/public launch unchanged.
+
+
 **H-022D / D-108 TEKNISK LEVERT — 2026-10-19.** Implementasjon2361f0f: faktisk designsystem «Kort med bilde» for Eurotents (`card md:card-side bg-base-100`, figure/Body), to ordinære koordinerte Cards under; overflødig proof-farge/spacing/høyde-CSS fjernet. Kun HomeProof.astro produktendret; eksisterende bilde,8 mastere/CMS, caseverdier og B bevart, tjeneste-primary kontrollert eksakt. Build19 sider/16 fokustester og kort1440/390 local/live PASS. Native54797d3f SUCCESS, Workerecf2b303 at100%; HTML matcher testet bygg. OWNER vurderer direkte på https://optimalisering-oslo-v33.anel.workers.dev/#resultater . H-024A3 OPEN, H-024B BLOCKED; noindex/intake av, ingen launch. Tidligere ACTIVE D-108 nedenfor er nå levert historikk; detaljert kort kvittering i CODEX-TO-CHATGPT.
 
 
