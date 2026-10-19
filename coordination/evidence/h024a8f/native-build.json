@@ -1,0 +1,15 @@
+{
+  "commit": "75a953c3b9119f0eb5512b112da6c126e8f712f9",
+  "build": "f67b4674-7c1b-48aa-a06a-9260735036d5",
+  "outcome": "success",
+  "worker": "optimalisering-oslo-v33",
+  "url": "https://optimalisering-oslo-v33.anel.workers.dev/",
+  "version": "e7e02489-0154-47c9-9f7f-b064ccad5fb5",
+  "deployment": "9b87ae6a-a0df-4fc7-846c-f937b0d7b690",
+  "percentage": 100,
+  "workerProof": "after/checks.json: all56 public artifact hashes and4 responsive snapshots exactly equal incoming current OWNER baseline",
+  "cmsProof": "native-after.json and cms-after.jpg: fresh authenticated editor with9 repeated instructions reduced to0, saved source/order intact, Save disabled",
+  "dataSave": "None. Configuration-only change; no fabricated CMS data roundtrip or temporary content restoration.",
+  "labelStatus": "Native limitation documented; no label field, ID migration or custom CMS introduced.",
+  "ownerBoundary": "Homepage proposal only. STOP OWNER editor review and explicit composition choice; H024B BLOCKED."
+}

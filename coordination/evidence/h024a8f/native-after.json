@@ -1,0 +1,47 @@
+{
+  "change": "Three descriptions removed; config-only; no CMS data save or temporary content mutation",
+  "nativeFreshPages": {
+    "before": 5,
+    "after": 6,
+    "masterHelp": 7
+  },
+  "beforeInstructionCount": 9,
+  "afterInstructionCount": 0,
+  "saveDisabled": "    uid=203_53 button \"Save\" disableable disabled",
+  "currentOwnerOrder": [
+    "        uid=203_121 \"regneeksempel\"",
+    "        uid=203_126 \"behov\"",
+    "        uid=203_131 \"sjekk\"",
+    "        uid=203_136 \"priser\"",
+    "        uid=203_141 \"resultater\"",
+    "        uid=203_146 \"mekanisme\"",
+    "        uid=203_151 \"passer\"",
+    "        uid=203_156 \"sporsmal\""
+  ],
+  "expandedReference": [
+    "    uid=203_53 button \"Save\" disableable disabled",
+    "        uid=203_68 combobox \"Tekst venstre / bilde høyre\" autocomplete=\"list\" expandable haspopup=\"listbox\" value=\"Tekst venstre / bilde høyre\"",
+    "        uid=203_95 combobox \"Select...\" autocomplete=\"list\" expandable haspopup=\"listbox\" value=\"Bilde\"",
+    "        uid=203_121 \"regneeksempel\"",
+    "        uid=204_2 combobox \"Select...\" autocomplete=\"list\" expandable haspopup=\"listbox\" value=\"Konverteringskalkulator\"",
+    "        uid=204_7 \"Fjerning sletter bare plasseringen. Eksisterende lenker til #sjekk og #priser må få et gyldig mål før disse skjules eller fjernes.\""
+  ],
+  "masterExplanation": [
+    "uid=205_0 RootWebArea \"Konverteringskalkulator | anelpasic/optimalisering.oslo.nov3.3@main | Pages CMS\" url=\"https://app.pagescms.org/anelpasic/optimalisering.oslo.nov3.3/main/file/globalCalculator\"",
+    "  uid=205_26 button \"Globale elementer\"",
+    "  uid=205_29 link \"Konverteringskalkulator\" url=\"https://app.pagescms.org/anelpasic/optimalisering.oslo.nov3.3/main/file/globalCalculator\"",
+    "      uid=205_67 \"Globale elementer\"",
+    "      uid=205_68 \"Konverteringskalkulator\"",
+    "    uid=205_70 button \"Save\" disableable disabled",
+    "        uid=205_139 \"Endringer her gjelder alle plasseringer på dette nettstedet. Fjern eller skjul en plassering på siden for å beholde originalinnholdet her.\""
+  ],
+  "pickerReadback": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Script ran on page and returned:\n```json\n[\"Behovsvelger\",\"Konverteringskalkulator\",\"Gratis sjekk / kontaktskjema\",\"Pakker og priser\",\"Kunderesultater\",\"Slik jobber vi\",\"Hvem det passer for\",\"Ofte stilte spørsmål\"]\n```"
+      }
+    ]
+  },
+  "labelStatus": "BLOCKED: raw key remains; actual picker labels are Norwegian. No duplicate label field or source migration."
+}

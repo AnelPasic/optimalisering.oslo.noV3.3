@@ -1,0 +1,186 @@
+{
+  "status": "PROPOSAL ONLY. No page/source/DOM composition change performed.",
+  "method": "Current live native section-height sums; estimated reflow for a future approved composition, not a verified after-render. Hero/chrome unchanged; both CTA anchors retained.",
+  "lengths": [
+    {
+      "width": 1440,
+      "currentPageHeight": 8224,
+      "currentNonHeroSections": 9,
+      "A": {
+        "keep": [
+          "resultater",
+          "priser",
+          "sjekk",
+          "sporsmal"
+        ],
+        "omitted": [
+          "forbehovsvelger",
+          "regneeksempel",
+          "behov",
+          "mekanisme",
+          "passer"
+        ],
+        "removedSectionPixels": 3391.78125,
+        "estimatedPageHeight": 4832.21875,
+        "reductionPercent": 41.2424762889105,
+        "priceTargetOffsetChange": -1881,
+        "checkTargetOffsetChange": 367.015625
+      },
+      "B": {
+        "keep": [
+          "regneeksempel",
+          "resultater",
+          "priser",
+          "sjekk",
+          "sporsmal"
+        ],
+        "omitted": [
+          "forbehovsvelger",
+          "behov",
+          "mekanisme",
+          "passer"
+        ],
+        "removedSectionPixels": 2336.734375,
+        "estimatedPageHeight": 5887.265625,
+        "reductionPercent": 28.413598917801558,
+        "priceTargetOffsetChange": -825.953125,
+        "checkTargetOffsetChange": 1422.0625
+      }
+    },
+    {
+      "width": 900,
+      "currentPageHeight": 10600,
+      "currentNonHeroSections": 9,
+      "A": {
+        "keep": [
+          "resultater",
+          "priser",
+          "sjekk",
+          "sporsmal"
+        ],
+        "omitted": [
+          "forbehovsvelger",
+          "regneeksempel",
+          "behov",
+          "mekanisme",
+          "passer"
+        ],
+        "removedSectionPixels": 3988.578125,
+        "estimatedPageHeight": 6611.421875,
+        "reductionPercent": 37.62809551886792,
+        "priceTargetOffsetChange": -2937.75,
+        "checkTargetOffsetChange": 1049.953125
+      },
+      "B": {
+        "keep": [
+          "regneeksempel",
+          "resultater",
+          "priser",
+          "sjekk",
+          "sporsmal"
+        ],
+        "omitted": [
+          "forbehovsvelger",
+          "behov",
+          "mekanisme",
+          "passer"
+        ],
+        "removedSectionPixels": 2729.671875,
+        "estimatedPageHeight": 7870.328125,
+        "reductionPercent": 25.75162146226415,
+        "priceTargetOffsetChange": -1678.84375,
+        "checkTargetOffsetChange": 2308.859375
+      }
+    },
+    {
+      "width": 390,
+      "currentPageHeight": 12606,
+      "currentNonHeroSections": 9,
+      "A": {
+        "keep": [
+          "resultater",
+          "priser",
+          "sjekk",
+          "sporsmal"
+        ],
+        "omitted": [
+          "forbehovsvelger",
+          "regneeksempel",
+          "behov",
+          "mekanisme",
+          "passer"
+        ],
+        "removedSectionPixels": 5040.453125,
+        "estimatedPageHeight": 7565.546875,
+        "reductionPercent": 39.98455596541329,
+        "priceTargetOffsetChange": -2746.71875,
+        "checkTargetOffsetChange": 1544.8125
+      },
+      "B": {
+        "keep": [
+          "regneeksempel",
+          "resultater",
+          "priser",
+          "sjekk",
+          "sporsmal"
+        ],
+        "omitted": [
+          "forbehovsvelger",
+          "behov",
+          "mekanisme",
+          "passer"
+        ],
+        "removedSectionPixels": 3642.703125,
+        "estimatedPageHeight": 8963.296875,
+        "reductionPercent": 28.896581984769156,
+        "priceTargetOffsetChange": -1348.96875,
+        "checkTargetOffsetChange": 2942.5625
+      }
+    },
+    {
+      "width": 320,
+      "currentPageHeight": 13565,
+      "currentNonHeroSections": 9,
+      "A": {
+        "keep": [
+          "resultater",
+          "priser",
+          "sjekk",
+          "sporsmal"
+        ],
+        "omitted": [
+          "forbehovsvelger",
+          "regneeksempel",
+          "behov",
+          "mekanisme",
+          "passer"
+        ],
+        "removedSectionPixels": 5344.203125,
+        "estimatedPageHeight": 8220.796875,
+        "reductionPercent": 39.39700055289347,
+        "priceTargetOffsetChange": -2992.515625,
+        "checkTargetOffsetChange": 1831.34375
+      },
+      "B": {
+        "keep": [
+          "regneeksempel",
+          "resultater",
+          "priser",
+          "sjekk",
+          "sporsmal"
+        ],
+        "omitted": [
+          "forbehovsvelger",
+          "behov",
+          "mekanisme",
+          "passer"
+        ],
+        "removedSectionPixels": 3868.453125,
+        "estimatedPageHeight": 9696.546875,
+        "reductionPercent": 28.51789992628087,
+        "priceTargetOffsetChange": -1516.765625,
+        "checkTargetOffsetChange": 3307.09375
+      }
+    }
+  ]
+}

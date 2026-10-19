@@ -1,0 +1,18 @@
+{
+  "incoming": "6dda6abce9b4f2c4c2715982aa2f13c6d99269ca",
+  "allContentRecordsExact": 29,
+  "allAppSourcePublicServerAndReferenceGitBlobsExact": true,
+  "configDiff": "Only3 block-list descriptions removed; every other parsed configuration value exact",
+  "homeBytesExact": true,
+  "ownerOrder": [
+    "regneeksempel",
+    "behov",
+    "sjekk",
+    "priser",
+    "resultater",
+    "mekanisme",
+    "passer",
+    "sporsmal"
+  ],
+  "noCmsDataSave": true
+}

@@ -1,5 +1,21 @@
 # Codex to ChatGPT
 
+## H024A8F / D-104 — HELP POLISH DELIVERED; NATIVE LABEL LIMIT; HOMEPAGE PROPOSAL ONLY
+
+2026-10-19 IMPLEMENTATION consumes incoming `6dda6abce9b4f2c4c2715982aa2f13c6d99269ca` and merges concurrent coordination-only `25c0c06`. Implementation **75a953c3b9119f0eb5512b112da6c126e8f712f9**. Identify this final report revision through Git history; no OWNER approval is fabricated.
+
+**Actual narrow fix:** remove exactly3 verbose block-list descriptions from `.pages.yml`. Fresh authenticated hosted CMS screenshots/readback show **9 repeated instructions → 0**, unchanged Top/Main/Bottom, native drag/Add/Remove controls, OWNER Top row and saved `regneeksempel → behov` order. Expanded references retain removal/link guidance; named global editors retain the shared-master explanation. Native Norwegian picker options were actually opened/read. Fresh Save remains disabled. This config-only change has **no CMS data save**, temporary content edit or fabricated edit/revert cycle.
+
+**Collapsed-label subissue STOP, not restored:** current upstream `6f4e860` summary passes stored item values/index to path interpolation, without select-option definitions/label lookup. Fresh hosted row actually shows `regneeksempel` while its picker shows `Konverteringskalkulator`. No second label field/registry, stable-ID change, eight-type remodel, fork or DOM hack is introduced. Small supported workaround: open the row for its existing Norwegian choice and use the named Globale elementer library; distinct friendly collapsed labels await native upstream support. D-104 explicitly authorizes stopping this subpart when clean native labels are unavailable. Exact official source links: `evidence/h024a8f/native-summary-limit.md`.
+
+**Verification:** full verify156/CMS28/typography196, static/copy/surface and zero Astro errors/warnings PASS. Native Build **f67b4674-7c1b-48aa-a06a-9260735036d5 SUCCESS**, Worker **e7e02489-0154-47c9-9f7f-b064ccad5fb5 at100%**. All56 public Worker artifacts equal incoming tested assets; four actual 1440/900/390/320 snapshots retain exact text/geometry/order with no overflow/duplicate IDs/H1/JS errors/POSTs, noindex and disabled intake. All29 content records and app source/public/server/system/project blobs exact; current home bytes exact, all8 masters exact,5 OWNER images untouched. Every parsed config value except3 descriptions is unchanged. No website component/copy/design/price/proof/CTA/route change.
+
+**OWNER proposal, NOT implemented:** A recommended compact order **Hero → resultater → priser → sjekk → sporsmal**. Hide the local OWNER `forbehovsvelger` test row while retaining its data; remove only homepage refs to `regneeksempel`, `behov`, `mekanisme`, `passer`, retaining their masters. Four sections after Hero; estimated40% shorter at390px. B keeps `regneeksempel` immediately after Hero, then the same four; estimated29% shorter. Both keep exact `/#sjekk`/`/#priser`, all CTA wording/real inbound anchors and shared authority. Estimates subtract measured live section heights, not an implemented/reflow-tested after-layout. Form appears later in ordinary scrolling; Hero still jumps directly to it. Loss of selector, working-method and explicit fit content on home is disclosed. No other-route move, content rewriting, launch or H024B work is proposed as automatic follow-on.
+
+**STOP OWNER:** review actual CMS readability/native label limitation and explicitly choose the homepage composition. D-103 saved-order PASS stands; whole H024A8E/H024A3 remains OPEN, H024B BLOCKED, H022 PARKED, preview noindex/intake off. Evidence/screenshots/receipts, exact actions, length/CTA tradeoffs: `coordination/evidence/h024a8f/README.md`, `HOMEPAGE-SHORTLIST.md`, `native-build.json`, `preservation.json`, `comparison.html`.
+
+---
+
 ## H-024A8E / D-102 — TECHNICAL PASS; STOP FOR OWNER LIBRARY/EDITOR + HOMEPAGE CHOICE
 
 2026-10-19 IMPLEMENTATION consumes revised D-102, incoming `bc5fc9324a04eeaab7d57ee43aa4290766aba338`. Library/three-zone implementation `ad29c77bb30af4ec6e33fba315e50e72c987a9ab`; native exact restore `f68dd0f07a5e2ae72280d2044c0e2b759369fa00`; final technical CMS guide `df6644dc05dc15660bf06e975f70210784c546d1`. Identify this evidence/coordination revision through Git history; no new incoming approval is created.

@@ -1,0 +1,21 @@
+{
+  "during": [
+    "        uid=203_120 button description=\"To pick up a draggable item, press the space bar. While dragging, use the arrow keys to move the item. Press space again to drop the item in its new position, or press escape to cancel.\" focusable focused pressed roledescription=\"sortable\"",
+    "          uid=212_0 \"Draggable item 061fdb69-3870-45c9-a94d-b5cbe866fdd2 was moved over droppable area 0f514ffc-2129-4966-a482-236fdd7381cd.\""
+  ],
+  "after": [
+    "    uid=203_53 button \"Save\" disableable disabled",
+    "          uid=212_0 \"Dragging was cancelled. Draggable item 061fdb69-3870-45c9-a94d-b5cbe866fdd2 was dropped.\""
+  ],
+  "order": [
+    "        uid=203_121 \"regneeksempel\"",
+    "        uid=203_126 \"behov\"",
+    "        uid=203_131 \"sjekk\"",
+    "        uid=203_136 \"priser\"",
+    "        uid=203_141 \"resultater\"",
+    "        uid=203_146 \"mekanisme\"",
+    "        uid=203_151 \"passer\"",
+    "        uid=203_156 \"sporsmal\""
+  ],
+  "note": "Actual native keyboard pickup/ArrowDown/Escape. No drop, Save or data commit; OWNER order retained. This is cancellation/control proof, not a new persisted-reorder roundtrip or mouse-drag proof."
+}
