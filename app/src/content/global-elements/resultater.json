@@ -27,6 +27,9 @@
       "nysta": {
         "src": "/images/proof/nysta.jpg",
         "alt": "nysta.no"
+      },
+      "helt-opplagt": {
+        "src": "/images/proof/heltopplagt.jpg"
       }
     }
   }
