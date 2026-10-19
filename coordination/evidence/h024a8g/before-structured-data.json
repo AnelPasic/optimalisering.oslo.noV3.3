@@ -1,0 +1,8 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Medon AS",
+    "url": "https://medon.no"
+  }
+]

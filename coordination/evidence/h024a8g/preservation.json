@@ -1,0 +1,20 @@
+{
+  "incomingHead": "caea40a878fe0a1c1c008ce600bb7fa23d9de060",
+  "protectedFiles": 301,
+  "unchangedProtectedFiles": 299,
+  "changedProtectedFiles": [
+    "app/src/content/pages/home.json",
+    "app/src/pages/design-system.astro"
+  ],
+  "allEightMastersByteExact": true,
+  "cmsConfigByteExact": true,
+  "ownerImagesByteExact": true,
+  "exactApprovedHomeSemanticDiff": true,
+  "designSystemException": "OWNER Bare å publisere approves proposed existing-master lookup patch; byte-identical output",
+  "artifactChanges": [
+    "index.html"
+  ],
+  "unchangedOtherArtifacts": 55,
+  "workerAfterVerified": false,
+  "state": "LOCAL VERIFIED; native publication/readback pending"
+}

@@ -17,7 +17,7 @@ test('all zones share UUID/anchor and interactive reference collision guards, in
 });
 test('visibility is reversible and typed; linked price/contact placements need their actual targets',()=>{
  for(const id of ['behov','regneeksempel','resultater','mekanisme','passer','sporsmal']){
-  const p=structuredClone(input);p.sections.find((r:any)=>r.element===id).visibility='hidden';const block=getHomepageBlocks(pageSchema.parse(p)).find(b=>b.id===id);assert.equal(isHomepageSectionVisible(block),false);
+  const p=structuredClone(input);if(!p.sections.some((r:any)=>r.element===id))p.sections.push({_block:'global',element:id});p.sections.find((r:any)=>r.element===id).visibility='hidden';const block=getHomepageBlocks(pageSchema.parse(p)).find(b=>b.id===id);assert.equal(isHomepageSectionVisible(block),false);
  }
  for(const id of ['sjekk','priser']){const p=structuredClone(input);p.sections.find((r:any)=>r.element===id).visibility='hidden';assert.equal(pageSchema.safeParse(p).success,false);}
  for(const value of ['published','draft',false,{}]){const p=structuredClone(input);p.sections[0].visibility=value;assert.equal(pageSchema.safeParse(p).success,false);}

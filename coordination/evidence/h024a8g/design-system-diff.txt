@@ -1,0 +1,537 @@
+---
+
++++
+
+@@ -1054,432 +1054,4 @@
+
+
+
+-CMS: seksjonstype, oppsett og boksvariant
+-
+-Seksjonstype bestemmer innholdsmodellen: Innholdsseksjon, Regneeksempel, Pakker og priser og de øvrige beskyttede seksjonene har ulike oppgaver. Seksjonstype er ikke et fargevalg eller en boksvariant.
+-
+-Forside → Topp, Hovedseksjoner eller Bunn → åpne en Innholdsseksjon. Globale innholdsoriginaler redigeres under Globale elementer. Seksjonsfarge gjelder hele flaten; Boksfarge gjelder én boks. Seksjonsoppsett fordeler boksene. Boksvariant velger Åpen boks eller Kort. Standard og tomt valg beholder automatisk design. Ingen felt tar CSS-klasser eller frie mål.
+-
+-Hero ligger fast først. Pris, bevis, regneeksempel og skjema redigeres under Globale elementer og har egne innholdsmodeller. Forsiden velger plasseringer i tre flyttbare grupper. Skjul eller fjern en plassering for å beholde originalen i biblioteket. Åtte originaler er bevart; åtte synlige plasseringer er ikke påkrevd.
+-
+-
+-
+-
+-Seksjonsoppsett: Standard (automatisk)
+-
+-CMS: Seksjonsoppsett. Samme innhold og samme bokser. Valgte kolonneoppsett blir én kolonne på mobil; Standard beholder seksjonens automatiske fordeling.
+-
+-
+-
+-
+-
+-
+-Start med det som begrenser resultatet
+-
+-Slik finner vi hva som bør gjøres først
+-
+-
+-
+-Behovet avgjør tiltakene. Vi starter ikke med SEO eller en annen kanal bare fordi du kom inn på en bestemt side.
+-
+-
+-
+-
+-
+-
+-01
+-
+-Finn flaskehalsen
+-
+-Se hvor kundereisen stopper: før besøket, på siden eller i veien til kontakt og kjøp.
+-
+-
+-
+-
+-
+-02
+-
+-Prioriter tiltak
+-
+-Velg en fornuftig start ut fra behov, kommersiell verdi og det vi faktisk vet.
+-
+-
+-
+-
+-
+-03
+-
+-Gjennomfør
+-
+-Gjør arbeidet som er avtalt. Omfang og ansvar skal være tydelig.
+-
+-
+-
+-
+-
+-04
+-
+-Mål effekt
+-
+-Følg med på relevante henvendelser og kjøp. Se resultatene sammen med verdi og kostnader.
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-Seksjonsoppsett: To kolonner
+-
+-CMS: Seksjonsoppsett. Samme innhold og samme bokser. Valgte kolonneoppsett blir én kolonne på mobil; Standard beholder seksjonens automatiske fordeling.
+-
+-
+-
+-
+-
+-
+-Start med det som begrenser resultatet
+-
+-Slik finner vi hva som bør gjøres først
+-
+-
+-
+-Behovet avgjør tiltakene. Vi starter ikke med SEO eller en annen kanal bare fordi du kom inn på en bestemt side.
+-
+-
+-
+-
+-
+-
+-01
+-
+-Finn flaskehalsen
+-
+-Se hvor kundereisen stopper: før besøket, på siden eller i veien til kontakt og kjøp.
+-
+-
+-
+-
+-
+-02
+-
+-Prioriter tiltak
+-
+-Velg en fornuftig start ut fra behov, kommersiell verdi og det vi faktisk vet.
+-
+-
+-
+-
+-
+-03
+-
+-Gjennomfør
+-
+-Gjør arbeidet som er avtalt. Omfang og ansvar skal være tydelig.
+-
+-
+-
+-
+-
+-04
+-
+-Mål effekt
+-
+-Følg med på relevante henvendelser og kjøp. Se resultatene sammen med verdi og kostnader.
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-Seksjonsoppsett: Tre kolonner
+-
+-CMS: Seksjonsoppsett. Samme innhold og samme bokser. Valgte kolonneoppsett blir én kolonne på mobil; Standard beholder seksjonens automatiske fordeling.
+-
+-
+-
+-
+-
+-
+-Start med det som begrenser resultatet
+-
+-Slik finner vi hva som bør gjøres først
+-
+-
+-
+-Behovet avgjør tiltakene. Vi starter ikke med SEO eller en annen kanal bare fordi du kom inn på en bestemt side.
+-
+-
+-
+-
+-
+-
+-01
+-
+-Finn flaskehalsen
+-
+-Se hvor kundereisen stopper: før besøket, på siden eller i veien til kontakt og kjøp.
+-
+-
+-
+-
+-
+-02
+-
+-Prioriter tiltak
+-
+-Velg en fornuftig start ut fra behov, kommersiell verdi og det vi faktisk vet.
+-
+-
+-
+-
+-
+-03
+-
+-Gjennomfør
+-
+-Gjør arbeidet som er avtalt. Omfang og ansvar skal være tydelig.
+-
+-
+-
+-
+-
+-04
+-
+-Mål effekt
+-
+-Følg med på relevante henvendelser og kjøp. Se resultatene sammen med verdi og kostnader.
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-Seksjonsoppsett: Liste (én kolonne)
+-
+-CMS: Seksjonsoppsett. Samme innhold og samme bokser. Valgte kolonneoppsett blir én kolonne på mobil; Standard beholder seksjonens automatiske fordeling.
+-
+-
+-
+-
+-
+-
+-Start med det som begrenser resultatet
+-
+-Slik finner vi hva som bør gjøres først
+-
+-
+-
+-Behovet avgjør tiltakene. Vi starter ikke med SEO eller en annen kanal bare fordi du kom inn på en bestemt side.
+-
+-
+-
+-
+-
+-
+-01
+-
+-Finn flaskehalsen
+-
+-Se hvor kundereisen stopper: før besøket, på siden eller i veien til kontakt og kjøp.
+-
+-
+-
+-
+-
+-02
+-
+-Prioriter tiltak
+-
+-Velg en fornuftig start ut fra behov, kommersiell verdi og det vi faktisk vet.
+-
+-
+-
+-
+-
+-03
+-
+-Gjennomfør
+-
+-Gjør arbeidet som er avtalt. Omfang og ansvar skal være tydelig.
+-
+-
+-
+-
+-
+-04
+-
+-Mål effekt
+-
+-Følg med på relevante henvendelser og kjøp. Se resultatene sammen med verdi og kostnader.
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-Boksvariant
+-
+-CMS: Alternativer eller steg → Boksvariant. Her holdes innhold, kolonneoppsett og boksfarge like. Åpen boks gir 24 px indre luft uten avrundet kortflate. Kort bruker det godkjente Card-designet med 24 px polstring og 20 px radius. Standard arver seksjonens automatiske design. Med valgt boksfarge kan Standard og Åpen boks se like ut; Standard er ikke et tredje fast kortdesign.
+-
+-
+-
+-
+-
+-
+-Start med det som begrenser resultatet
+-
+-Samme innhold, tre boksvalg
+-
+-
+-
+-
+-
+-
+-
+-Standard (automatisk)
+-
+-Se hvor kundereisen stopper: før besøket, på siden eller i veien til kontakt og kjøp.
+-
+-
+-
+-Åpen boks
+-
+-Se hvor kundereisen stopper: før besøket, på siden eller i veien til kontakt og kjøp.
+-
+-
+-
+-
+-Kort
+-
+-Se hvor kundereisen stopper: før besøket, på siden eller i veien til kontakt og kjøp.
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-Standard følger seksjonen
+-
+-Samme kildeinnhold som Mekanisme, vist med Standard og uten valgt boksfarge. Da beholdes seksjonens opprinnelige nummererte, redaksjonelle oppsett. Dette er en sammenligningstilstand; forsidens lagrede kortvalg er uendret.
+-
+-
+-
+-
+-
+-
+-Start med det som begrenser resultatet
+-
+-Slik finner vi hva som bør gjøres først
+-
+-
+-
+-Behovet avgjør tiltakene. Vi starter ikke med SEO eller en annen kanal bare fordi du kom inn på en bestemt side.
+-
+-
+-
+-
+-
+-01
+-
+-Finn flaskehalsen
+-
+-Se hvor kundereisen stopper: før besøket, på siden eller i veien til kontakt og kjøp.
+-
+-
+-
+-02
+-
+-Prioriter tiltak
+-
+-Velg en fornuftig start ut fra behov, kommersiell verdi og det vi faktisk vet.
+-
+-
+-
+-03
+-
+-Gjennomfør
+-
+-Gjør arbeidet som er avtalt. Omfang og ansvar skal være tydelig.
+-
+-
+-
+-04
+-
+-Mål effekt
+-
+-Følg med på relevante henvendelser og kjøp. Se resultatene sammen med verdi og kostnader.
+-
+-
+-
+-
+-
+-
+-
+-
+-Farge velges separat
+-
+-Kort med tre av de eksisterende H-019-fargene. Oppsett og boksvariant er like.
+-
+-
+-
+-
+-
+-
+-Start med det som begrenser resultatet
+-
+-Samme kort, ulike flater
+-
+-
+-
+-
+-
+-
+-
+-
+-mint
+-
+-Se hvor kundereisen stopper: før besøket, på siden eller i veien til kontakt og kjøp.
+-
+-
+-
+-
+-
+-lavender
+-
+-Se hvor kundereisen stopper: før besøket, på siden eller i veien til kontakt og kjøp.
+-
+-
+-
+-
+-
+-dark
+-
+-Se hvor kundereisen stopper: før besøket, på siden eller i veien til kontakt og kjøp.
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+ Eksisterende kommersielle komponenter
+
+@@ -2243,98 +1815,4 @@
+
+
+
+-Start med det som begrenser resultatet
+-
+-Slik finner vi hva som bør gjøres først
+-
+-
+-
+-Behovet avgjør tiltakene. Vi starter ikke med SEO eller en annen kanal bare fordi du kom inn på en bestemt side.
+-
+-
+-
+-
+-
+-
+-01
+-
+-Finn flaskehalsen
+-
+-Se hvor kundereisen stopper: før besøket, på siden eller i veien til kontakt og kjøp.
+-
+-
+-
+-
+-
+-02
+-
+-Prioriter tiltak
+-
+-Velg en fornuftig start ut fra behov, kommersiell verdi og det vi faktisk vet.
+-
+-
+-
+-
+-
+-03
+-
+-Gjennomfør
+-
+-Gjør arbeidet som er avtalt. Omfang og ansvar skal være tydelig.
+-
+-
+-
+-
+-
+-04
+-
+-Mål effekt
+-
+-Følg med på relevante henvendelser og kjøp. Se resultatene sammen med verdi og kostnader.
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-Er dette aktuelt for bedriften?
+-
+-Best når kundene faktisk har et valg.
+-
+-
+-
+-
+-
+-
+-
+-
+-Passer godt hvis
+-
+-Bedriften konkurrerer om kundene, har kapasitet til flere henvendelser eller salg, og en ny kunde eller ordre har nok verdi til at forbedringer kan lønne seg.
+-
+-
+-
+-
+-
+-Passer dårlig hvis
+-
+-Du er allerede det eneste reelle alternativet og kundene finner deg uten problemer. Tenk en tannklinikk på et lite sted som er eneste klinikk innenfor 100 km, eller en nettbutikk som er eneste norske forhandler av reservedeler til gamle flipperspill og allerede eier de relevante søkene.
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+ Faktiske seksjoner fra forsiden

@@ -1,0 +1,22 @@
+--- a/app/src/pages/design-system.astro
++++ b/app/src/pages/design-system.astro
+@@ -3,7 +3,7 @@
+ import SiteLayout from '../layouts/SiteLayout.astro';
+ import PackageSection from '../components/PackageSection.astro';
+ import PageList from '../components/PageList.astro';
+-import { getHomepageBlock, isHomepageSectionVisible } from '../lib/home-builder';
++import { getGlobalElement, getHomepageBlock, isHomepageSectionVisible } from '../lib/home-builder';
+ import CommercialHero from '../components/CommercialHero.astro';
+ import {resolvePageHero} from '../lib/page-hero';
+ import {resolveHomepageContent} from '../lib/home-builder';
+@@ -17,8 +17,8 @@
+ const pages=(await getCollection('pages')).map(p=>p.data);
+ const home=pages.find(p=>p.kind==='home')!;
+ const pageList=pages.find(p=>p.kind==='index')!.sections.find(s=>s.pageList)!;
+-const examples=home.sections.filter(s=>['mekanisme','passer'].includes(s.id)&&isHomepageSectionVisible(s));
+-const ordinary=home.sections.find(s=>s.id==='mekanisme')!;
++const examples=[getGlobalElement('mekanisme'),getGlobalElement('passer')];
++const ordinary=getGlobalElement('mekanisme');
+ const assessment=getHomepageBlock(home,'assessment').content;
+ const faqSource=getHomepageBlock(home,'faq').content;
+ const bindCommercialText=createCommercialTextBinding(home,pages.find(p=>p.kind==='pricing')!);

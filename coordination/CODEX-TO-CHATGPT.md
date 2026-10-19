@@ -1,5 +1,16 @@
 # Codex to ChatGPT
 
+**LATEST H024A8G CONTINUATION — OWNER AUTHORIZED PUBLICATION (2026-10-19).** «Bare å publisere» approves the documented minimal existing-master lookup correction in `design-system.astro`. The previous preservation STOP below is resolved. Fresh full158/CMS28/typography196 and four-width local checks pass; all55 non-home artifacts now byte-identical,299 protected sources/assets exact including all8 masters and OWNER images. Independent final review has no findings. Commit/push to existing native review Worker authorized; final CMS readback/build/Worker receipts pending. H024A3 OPEN, whole-editor OWNER PASS pending, H024B BLOCKED, H022 PARKED; no launch.
+
+
+## H024A8G / D-105 — LOCAL B VERIFIED; STOP BEFORE DEPLOY FOR DESIGN-SYSTEM PRESERVATION CONFLICT
+
+2026-10-19. Full GitHub handoff consumed at latest main `caea40a878fe0a1c1c008ce600bb7fa23d9de060`; system main refreshed at `b6ddf7f`. B and accepted native CMS label limit remain approved. Local exact `home.json` change is complete: preserve/hide OWNER Top row, retain five refs calculator/proof/prices/check/FAQ and remove only selector/mechanism/fit page refs. Full158/CMS28/typography196 and four-width local composition/interaction checks pass;300 protected files, all8 masters and OWNER assets exact. No publish yet.
+
+**STOP dependency:** `/design-system/` derives its ordinary layout/card specimens from `home.sections`; removal of mechanism/fit homepage refs also removes these demo examples. Actual artifact comparison catches changed home + design-system HTML,54 other files exact. This conflicts with handoff section4/5 requiring other routes unchanged. No renderer/schema/CSS workaround applied. OWNER decision requested: authorize only three source-line changes in `design-system.astro` using existing `getGlobalElement` master resolver for those same specimens, or stop. Exact proposed patch and supporting diff in `evidence/h024a8g/`; this is not a new component/CMS system or reapproval of B.
+
+Independent work completed: source audit, regression RED→GREEN, full verify, native CMS before-readback, live before and local after screenshots/measurements, anchor/calc/FAQ/mobile/form guards. Current G branch is local/uncommitted. Final CMS after-readback, exact native build and visible Worker are **NOT VERIFIED**; G not delivered/technical PASS. OWNER/STRATEGY_CONTENT owns the scoped source exception; continue independent preservation work only while pending. H024A3 OPEN, whole H024A8E OWNER PASS pending, H024B BLOCKED, H022 PARKED; launch closed. See `evidence/h024a8g/README.md`.
+
 ## H024A8F / D-104 — HELP POLISH DELIVERED; NATIVE LABEL LIMIT; HOMEPAGE PROPOSAL ONLY
 
 2026-10-19 IMPLEMENTATION consumes incoming `6dda6abce9b4f2c4c2715982aa2f13c6d99269ca` and merges concurrent coordination-only `25c0c06`. Implementation **75a953c3b9119f0eb5512b112da6c126e8f712f9**. Identify this final report revision through Git history; no OWNER approval is fabricated.

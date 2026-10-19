@@ -2,6 +2,8 @@
 
 ## D-105 — OWNER approves homepage composition B and accepts native Pages CMS collapsed-label limit — 2026-10-19
 
+**Direct OWNER continuation — 2026-10-19:** after IMPLEMENTATION documented the exact minimal `design-system.astro` master-lookup patch needed to preserve demo output when B removes homepage references, OWNER says **«Bare å publisere»**. This authorizes that described source exception and publication to the existing noindex review Worker. Use existing global master resolver for the same specimens; no design/CMS/launch expansion. Final technical evidence and OWNER visual/commercial review remain separate.
+
 OWNER explicitly confirms: «Jeg godkjenner alternativ B for forsiden og aksepterer den dokumenterte native Pages CMS-begrensningen. Lag neste avgrensede Codex-handoff med alle bevaringskrav og tester.»
 
 **AUTHORIZED, NOT YET IMPLEMENTED:** H-024A8G, scope-only source-driven homepage B after D-104 delivery: Hero → regneeksempel → resultater → priser → sjekk → sporsmal. Hide but keep complete OWNER-created local Top `forbehovsvelger`; remove only homepage placement references `behov`, `mekanisme`, `passer`; keep eight global masters, exact price/proof/form/CTA/visual authority, `/#sjekk`/`/#priser`, noindex and disabled intake. Native collapsed IDs accepted; do not implement duplicate label registry, CMS fork or unrelated visual redesign. Full executable instruction: `coordination/H024A8G-Codex-Handoff-Forside-B.md` (GitHub commit `4d4167b`). H-024A3 OPEN, H-024A8E whole editor OWNER PASS pending, H-024B BLOCKED, H-022 PARKED. Technical PASS and preview still require actual evidence and separate OWNER review. This new approval supersedes D-104's pending homepage-choice gate, NOT prior delivery/preservation restrictions.

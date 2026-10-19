@@ -1,0 +1,149 @@
+{
+  "slug": "home",
+  "kind": "home",
+  "status": "REVIEW_REQUIRED",
+  "authority": "DRAFT / NON-AUTHORITATIVE",
+  "seo": {
+    "title": "SEO, AI-synlighet og konverteringsoptimalisering | Optimalisering Oslo",
+    "description": "Bli funnet og gjør flere besøk til henvendelser og salg. Optimalisering for konkurranseutsatte bedrifter i Norge. Ta en gratis, manuell sjekk."
+  },
+  "homepage": {
+    "chrome": {
+      "brand": "optimalisering",
+      "brandLocation": "oslo",
+      "homeLabel": "Optimalisering Oslo - forsiden",
+      "skipLabel": "Hopp til innhold",
+      "navigationLabel": "Hovedmeny",
+      "mobileNavigationLabel": "Mobilmeny",
+      "openMenu": "Åpne meny",
+      "closeMenu": "Lukk meny",
+      "assessmentLink": {
+        "label": "Gratis sjekk",
+        "href": "/#sjekk"
+      },
+      "navigation": [
+        {
+          "label": "Synlighet",
+          "href": "/synlighet/"
+        },
+        {
+          "label": "Konvertering",
+          "href": "/konvertering/"
+        },
+        {
+          "label": "Priser",
+          "href": "/priser/"
+        },
+        {
+          "label": "Innsikt",
+          "href": "/innsikt/"
+        }
+      ],
+      "providerText": "Tjenesten drives av Medon AS.",
+      "previewLabel": "Forhåndsvisning - til vurdering",
+      "serviceNavigationLabel": "Tjenester og veiledning",
+      "informationNavigationLabel": "Kontakt og informasjon",
+      "storeLink": {
+        "label": "For nettbutikker",
+        "href": "/nettbutikkoptimalisering/"
+      },
+      "informationLinks": [
+        {
+          "label": "Gratis sjekk",
+          "href": "/#sjekk"
+        },
+        {
+          "label": "Om tjenesten",
+          "href": "/om/"
+        },
+        {
+          "label": "Kontakt",
+          "href": "/kontakt/"
+        },
+        {
+          "label": "Personvern",
+          "href": "/personvern/"
+        },
+        {
+          "label": "Vilkår",
+          "href": "/vilkar/"
+        }
+      ],
+      "copyrightProvider": "Optimalisering Oslo",
+      "footerNote": "Et godt sted å begynne."
+    }
+  },
+  "hero": {
+    "layout": "split-right",
+    "eyebrow": "For bedrifter som konkurrerer om kundene",
+    "title": "Bli funnet. Gjør større andel av besøk til henvendelser og salg.",
+    "support": "SEO, AI-synlighet og konverteringsoptimalisering for bedrifter i Oslo og resten av Norge. Vi starter der kundereisen stopper.",
+    "primaryCta": {
+      "label": "Ta en gratis sjekk",
+      "href": "/#sjekk"
+    },
+    "secondaryCta": {
+      "label": "Se priser",
+      "href": "/#priser"
+    },
+    "visual": {
+      "kind": "image",
+      "image": {
+        "src": "/images/home/hero-customer.webp",
+        "positionX": 50,
+        "positionY": 45
+      }
+    },
+    "titleEmphasis": "first-sentence"
+  },
+  "topSections": [
+    {
+      "_block": "content",
+      "uid": "8ac621d2-d9aa-40ae-9875-ea9c7a2c2462",
+      "name": "Test før behovsregler",
+      "id": "forbehovsvelger",
+      "eyebrow": "Overtekst",
+      "heading": "OVerskrift",
+      "surface": "lavender",
+      "body": [
+        "Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Seksjoner → Pakker og priser.",
+        "Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Seksjoner → Pakker og priser.",
+        "Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Seksjoner → Pakker og priser."
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "_block": "global",
+      "element": "regneeksempel"
+    },
+    {
+      "_block": "global",
+      "element": "behov"
+    },
+    {
+      "_block": "global",
+      "element": "sjekk"
+    },
+    {
+      "_block": "global",
+      "element": "priser"
+    },
+    {
+      "_block": "global",
+      "element": "resultater"
+    },
+    {
+      "_block": "global",
+      "element": "mekanisme"
+    },
+    {
+      "_block": "global",
+      "element": "passer"
+    },
+    {
+      "_block": "global",
+      "element": "sporsmal"
+    }
+  ]
+}

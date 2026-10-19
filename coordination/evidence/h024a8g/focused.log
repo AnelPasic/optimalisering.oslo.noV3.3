@@ -1,0 +1,14 @@
+✔ isolated missing, invalid and identity-corrupt masters fail even with zero page placements (521.0727ms)
+✔ three native zones compose in group/list order without requiring eight original placements (13.5196ms)
+✔ global references cannot duplicate interactive modules across zones or take copied content (2.4742ms)
+✔ absent/hidden page placements retain shared commercial authority but fail real incoming-anchor dependencies (3.8727ms)
+✔ D-105 composition B preserves all source fields except approved placements and local visibility (14.753ms)
+✔ B retains actual price/check anchors and rejects missing, hidden and incoming removed-anchor targets (4.9423ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 580.6574

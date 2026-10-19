@@ -1,0 +1,61 @@
+{
+  "base": "http://127.0.0.1:4337",
+  "records": [
+    {
+      "width": 1440,
+      "anchors": true,
+      "packageTargets": true,
+      "chart12Months": true,
+      "hypothetical": true,
+      "faqStructuredRecords": 0,
+      "mobileMenu": false,
+      "nativeNumericSteps": true,
+      "synchronizedKeyboardSlider": true,
+      "keyboardFaq": true,
+      "intakeDisabled": true
+    },
+    {
+      "width": 900,
+      "anchors": true,
+      "packageTargets": true,
+      "chart12Months": true,
+      "hypothetical": true,
+      "faqStructuredRecords": 0,
+      "mobileMenu": true,
+      "nativeNumericSteps": true,
+      "synchronizedKeyboardSlider": true,
+      "keyboardFaq": true,
+      "intakeDisabled": true
+    },
+    {
+      "width": 390,
+      "anchors": true,
+      "packageTargets": true,
+      "chart12Months": true,
+      "hypothetical": true,
+      "faqStructuredRecords": 0,
+      "mobileMenu": true,
+      "nativeNumericSteps": true,
+      "synchronizedKeyboardSlider": true,
+      "keyboardFaq": true,
+      "intakeDisabled": true
+    },
+    {
+      "width": 320,
+      "anchors": true,
+      "packageTargets": true,
+      "chart12Months": true,
+      "hypothetical": true,
+      "faqStructuredRecords": 0,
+      "mobileMenu": true,
+      "nativeNumericSteps": true,
+      "synchronizedKeyboardSlider": true,
+      "keyboardFaq": true,
+      "intakeDisabled": true
+    }
+  ],
+  "posts": [],
+  "robotsDisallowed": true,
+  "sitemapEmpty": true,
+  "intakeGetStatus": 403
+}

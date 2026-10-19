@@ -25,7 +25,11 @@ for (const [slug, names] of [['home', ['Eurotents', 'Nysta', 'Helt Opplagt']], [
   assert.ok(!/class="proof-work|class="proof-caveat/.test(html), 'Work and limitations are removed from HTML, not hidden');
   for (const label of ['eyebrow', 'heading', 'beforeLabel', 'afterLabel']) assert.ok(text(section).includes(slot[label]));
   const ids = [...html.matchAll(/<section id="([^"]+)"/g)].map(m => m[1]);
-  assert.ok(ids.indexOf('resultater') > ids.indexOf(slug === 'home' ? 'priser' : 'prioritering'));
+  if(slug==='home'){
+    // D-105 moves homepage proof before pricing; CMS placements own its order.
+    const expected=getHomepageBlocks(page).filter(isHomepageSectionVisible).map(b=>b.id);
+    assert.deepEqual(ids.filter(id=>expected.includes(id)),expected);
+  }else assert.ok(ids.indexOf('resultater') > ids.indexOf('prioritering'));
   if(slug==='home'){const blocks=getHomepageBlocks(page),next=blocks.slice(blocks.findIndex(b=>b.id==='resultater')+1).find(isHomepageSectionVisible);if(next)assert.ok(ids.indexOf('resultater')<ids.indexOf(next.id));}else assert.ok(ids.indexOf('resultater')<ids.indexOf('service-priser'));
   assert.ok(!/Oslo Privatklinikk|Tankeverksted|Oracles|evidenceMetrics|publicationApproved|strategyReviewEvidence|Windsor|coordination\/|1\.403|0\.058|31\/50|16 265/.test(html), 'No private evidence or additional measurements');
   const publicStrings = cases.flatMap(p => [p.displayName, p.dominantMetric, p.before, p.after, p.delta, p.period.before, p.period.after]).filter(Boolean);

@@ -1,0 +1,109 @@
+✖ D-105 composition B preserves all source fields except approved placements and local visibility (1.9912ms)
+✖ B retains actual price/check anchors and rejects missing, hidden and incoming removed-anchor targets (16.5499ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 0
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1194.3548
+
+✖ failing tests:
+
+test at tests\home-composition-b.test.ts:11:1
+✖ D-105 composition B preserves all source fields except approved placements and local visibility (1.9912ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  ... Skipped lines
+
+    {
+      authority: 'DRAFT / NON-AUTHORITATIVE',
+      hero: {
+        eyebrow: 'For bedrifter som konkurrerer om kundene',
+        layout: 'split-right',
+  ...
+          _block: 'global',
+  +       element: 'behov'
+  -       element: 'resultater'
+        },
+        {
+          _block: 'global',
+  +       element: 'sjekk'
+  +     },
+  +     {
+  +       _block: 'global',
+          element: 'priser'
+        },
+        {
+          _block: 'global',
+  +       element: 'resultater'
+  -       element: 'sjekk'
+        },
+        {
+          _block: 'global',
+  +       element: 'mekanisme'
+  +     },
+  +     {
+  +       _block: 'global',
+  +       element: 'passer'
+  +     },
+  +     {
+  +       _block: 'global',
+          element: 'sporsmal'
+        }
+      ],
+      seo: {
+        description: 'Bli funnet og gjør flere besøk til henvendelser og salg. Optimalisering for konkurranseutsatte bedrifter i Norge. Ta en gratis, manuell sjekk.',
+  ...
+          uid: '8ac621d2-d9aa-40ae-9875-ea9c7a2c2462',
+  -       visibility: 'hidden'
+        }
+      ]
+    }
+
+      at TestContext.<anonymous> (file:///E:/Codex/optimalisering.oslo.noV3.3/app/tests/home-composition-b.test.ts:15:9)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.start (node:internal/test_runner/test:1003:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:358:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: {
+      slug: 'home',
+      kind: 'home',
+      status: 'REVIEW_REQUIRED',
+      authority: 'DRAFT / NON-AUTHORITATIVE',
+      seo: { title: 'SEO, AI-synlighet og konverteringsoptimalisering | Optimalisering Oslo', description: 'Bli funnet og gjør flere besøk til henvendelser og salg. Optimalisering for konkurranseutsatte bedrifter i Norge. Ta en gratis, manuell sjekk.' },
+      homepage: { chrome: [Object] },
+      hero: { layout: 'split-right', eyebrow: 'For bedrifter som konkurrerer om kundene', title: 'Bli funnet. Gjør større andel av besøk til henvendelser og salg.', support: 'SEO, AI-synlighet og konverteringsoptimalisering for bedrifter i Oslo og resten av Norge. Vi starter der kundereisen stopper.', primaryCta: [Object], secondaryCta: [Object], visual: [Object], titleEmphasis: 'first-sentence' },
+      topSections: [ [Object] ],
+      sections: [
+        [Object], [Object],
+        [Object], [Object],
+        [Object], [Object],
+        [Object], [Object]
+      ]
+    },
+    expected: { slug: 'home', kind: 'home', status: 'REVIEW_REQUIRED', authority: 'DRAFT / NON-AUTHORITATIVE', seo: { title: 'SEO, AI-synlighet og konverteringsoptimalisering | Optimalisering Oslo', description: 'Bli funnet og gjør flere besøk til henvendelser og salg. Optimalisering for konkurranseutsatte bedrifter i Norge. Ta en gratis, manuell sjekk.' }, homepage: { chrome: [Object] }, hero: { layout: 'split-right', eyebrow: 'For bedrifter som konkurrerer om kundene', title: 'Bli funnet. Gjør større andel av besøk til henvendelser og salg.', support: 'SEO, AI-synlighet og konverteringsoptimalisering for bedrifter i Oslo og resten av Norge. Vi starter der kundereisen stopper.', primaryCta: [Object], secondaryCta: [Object], visual: [Object], titleEmphasis: 'first-sentence' }, topSections: [ [Object] ], sections: [ [Object], [Object], [Object], [Object], [Object] ] },
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at tests\home-composition-b.test.ts:22:1
+✖ B retains actual price/check anchors and rejects missing, hidden and incoming removed-anchor targets (16.5499ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///E:/Codex/optimalisering.oslo.noV3.3/app/tests/home-composition-b.test.ts:28:56)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'throws',
+    diff: 'simple'
+  }
