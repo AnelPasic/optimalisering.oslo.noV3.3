@@ -1,5 +1,12 @@
 # Decisions and authority
 
+## D-110 — OWNER godkjenner CMS-valg Vekslende liste / Bildekort for Kunderesultater — 2026-10-20
+
+OWNER: **«tenker vi bør kjøre Vekslende liste mal på disse med mulighet til å velge bildekort mal, altså vi skal velge selve malen inn under redigeringen av Globale elementer.»**
+
+**AUTHORIZED:** Implementer malvelger under `Globale elementer → Kunderesultater`: `alternating` = «Vekslende liste» som standard, `mediaCards` = «Bildekort», gjenbruk reelle designsystemmønstre og behold samme caseinnhold ved bytte. Tillat valgfrie, reelle bildeopplastinger per case i samme master, uten fiktive placeholders. OWNER Pages CMS-endring `eurotents.jpg` og X/Y 50/50 (df8303d/adab003) er nyere autoritet, må beholdes. Ingen endring i casetall, bevis/permission, tjenester, andre sider eller resten av B. Bindende kontrakt: `coordination/H022E-PROOF-CMS-LAYOUT-CHOICE.md`. Følg D-107: direkte review Worker etter fokuserte tester; for nytt CMS-felt kontroller reelt lagre/bytt/restore uten tap. Tidligere H-022D «brukbart foreløpig» står som historisk aksept, ikke låsing mot denne nye OWNER-beslutningen. Whole H-024A3 OPEN, H-024B BLOCKED, ingen offentlig lansering/indeksering/innsending.
+
+
 ## D-109 — OWNER foreløpig aksept av H-022D Kunderesultater — 2026-10-20
 
 OWNER: **«ok, brukbart foreløpig»** etter at Codex leverte H-022D på review Worker (implementasjon `2361f0f`, kvittering `ce09695`). Dette er **FORELØPIG BRUKBAR / PARKER VISUELL POLERING**, ikke endelig design-PASS eller tillatelse til å endre proof-fakta. Ikke bruk flere runder/tokens på denne seksjonen uten nytt OWNER-ønske. Behold designsystemets `Kort med bilde` for Eurotents og vanlige Cards for Nysta/Helt Opplagt.
