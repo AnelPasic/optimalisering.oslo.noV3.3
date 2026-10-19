@@ -39,7 +39,7 @@ const visual = primary ? undefined : resolveFeaturedProofVisual(content.featured
     {cases.map((proof,index)=>{
       const image=visuals[index];
       const editorial=layout==='alternating'&&!!image;
-      return <li class="min-w-0"><article class:list={[editorial?'grid grid-cols-1 min-[701px]:grid-cols-2 gap-(--gap) min-[701px]:gap-[clamp(24px,4vw,64px)] items-center':'card bg-base-100 h-full overflow-hidden',layout==='mediaCards'&&'[border:var(--border-subtle)] rounded-(--radius-card)',{'proof-featured':index===0}]} data-case-id={publishedIds[index]} data-has-visual={!!image}>
+      return <li class="min-w-0"><article class:list={[editorial?'grid grid-cols-1 min-[701px]:grid-cols-2 gap-(--gap) min-[701px]:gap-[clamp(24px,4vw,64px)] items-center':'card bg-base-100 h-full overflow-hidden',layout==='mediaCards'&&'[border:var(--border-subtle)] rounded-(--radius-card)',{'proof-featured':index===0}]} data-proof-index={index} data-has-visual={!!image}>
         {layout==='mediaCards'&&image&&<div class="[&_.listing-visual]:rounded-none"><ListingVisual visual={{kind:'image',...image}} /></div>}
         <div class:list={[editorial?'min-w-0 space-y-5':'card-body min-w-0 gap-5 p-(--panel-pad)',editorial&&index%2===1&&'min-[701px]:col-start-2 min-[701px]:row-start-1']}>
           <h3 class:list={{'card-title':!editorial}}>{proof.displayName}</h3>
