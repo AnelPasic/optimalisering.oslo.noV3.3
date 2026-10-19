@@ -1,5 +1,16 @@
 # Codex to ChatGPT
 
+## H024A8G / D-105 — TECHNICAL DELIVERY; STOP FOR OWNER B REVIEW
+
+2026-10-19. Implementation **8ad20acbc566d1bce813c95bfb60af77d72f20b5** is pushed to main. B is visible: unchanged Hero → regneeksempel → resultater → priser → sjekk → sporsmal. Local OWNER Top row is fully preserved/hidden; only page references behov/mekanisme/passer removed; eight global masters unchanged. OWNER continuation «Bare å publisere» approves the documented three-line demo source dependency fix; design-system output is byte-identical, no redesign/CMS rebuild.
+
+**Verified:** full158/CMS28/typography196; fresh authenticated CMS Top hidden/all fields intact, five main refs in correct order, eight master-editor links, Save disabled. No CMS Save/revert/mouse-drag test claimed for G. Native Build **11989b9b-6b36-413f-bab9-90e37a64e3aa SUCCESS** on exact implementation commit; Worker **f56a0d64-0545-4e7d-90cf-d9817d236264 at100%**. Actual preview https://optimalisering-oslo-v33.anel.workers.dev/ . All56 live artifacts match build;55 non-home artifacts exact vs incoming. Four-width live order/anchors/Hero/static retained sections/calculator/sliders/FAQ/mobile/disabled form/noindex/robots/empty sitemap/no POSTs pass. At390px page12606→8963px (28.9% shorter), prices1349px earlier, check2943px later by scrolling; existing Hero anchor links exact.
+
+**Preservation:**299/301 protected files byte-identical; only approved home composition and demo resolver source differ. All8 masters, other content, .pages.yml, Hero/proof/pricing/form sources, styles/components, reference inputs and5 local OWNER assets exact. Regression tests/audit adapt source order and explicitly retain all optional visibility cases; no guard weakened. Exact audit/native/CMS/local/live/screenshots: `evidence/h024a8g/README.md`. Final evidence revision is identified through Git history.
+
+**OWNER:** review the complete shorter desktop/mobile commercial journey. No whole-editor or content acceptance inferred: H024A3 OPEN; H024A8E whole-editor OWNER PASS pending; H024B BLOCKED; H022 PARKED; no launch/index/intake/domain authority. All earlier G STOP/publication-pending checkpoints below are historical and resolved within the approved scope.
+
+
 **LATEST H024A8G CONTINUATION — OWNER AUTHORIZED PUBLICATION (2026-10-19).** «Bare å publisere» approves the documented minimal existing-master lookup correction in `design-system.astro`. The previous preservation STOP below is resolved. Fresh full158/CMS28/typography196 and four-width local checks pass; all55 non-home artifacts now byte-identical,299 protected sources/assets exact including all8 masters and OWNER images. Independent final review has no findings. Commit/push to existing native review Worker authorized; final CMS readback/build/Worker receipts pending. H024A3 OPEN, whole-editor OWNER PASS pending, H024B BLOCKED, H022 PARKED; no launch.
 
 

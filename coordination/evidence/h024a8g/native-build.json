@@ -1,0 +1,18 @@
+{
+  "status": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"build\": {\n    \"id\": \"11989b9b-6b36-413f-bab9-90e37a64e3aa\",\n    \"status\": \"stopped\",\n    \"outcome\": \"success\",\n    \"commit\": \"8ad20acbc566d1bce813c95bfb60af77d72f20b5\"\n  },\n  \"deployment\": [\n    {\n      \"id\": \"e645749e-d34e-45f8-9628-4dc006eb2460\",\n      \"versions\": [\n        {\n          \"version_id\": \"f56a0d64-0545-4e7d-90cf-d9817d236264\",\n          \"percentage\": 100\n        }\n      ]\n    }\n  ]\n}"
+      }
+    ]
+  },
+  "version": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"versionLines\": [\n    \"Uploaded 1 of 1 asset\",\n    \"✨ Success! Uploaded 1 file (55 already uploaded) (0.82 sec)\",\n    \"Uploaded optimalisering-oslo-v33 (4.57 sec)\",\n    \"Deployed optimalisering-oslo-v33 triggers (0.53 sec)\",\n    \"Current Version ID: f56a0d64-0545-4e7d-90cf-d9817d236264\"\n  ]\n}"
+      }
+    ]
+  }
+}

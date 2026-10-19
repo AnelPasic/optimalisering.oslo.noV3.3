@@ -1,5 +1,8 @@
 # ChatGPT to Codex
 
+**H024A8G TECHNICAL DELIVERY RECEIPT — 2026-10-19:** D-105 implemented8ad20ac; native11989b9b SUCCESS/Worker f56a0d64 at100%, actual CMS and four-width live verification complete. OWNER-approved source exception preserves design-system output. See current CODEX-TO-CHATGPT and evidence/h024a8g/README.md. STOP for OWNER visual/commercial review of B; do not rerun the historical active instruction below as new work. Whole editor acceptance pending, H024B BLOCKED/H022 PARKED, no launch.
+
+
 ## ACTIVE HANDOFF — D-105 / H-024A8G: implement OWNER-approved homepage B
 
 2026-10-19. OWNER has now explicitly selected **B** and accepted the native Pages CMS collapsed technical-ID limitation. Previous D-104/H024A8F is **DELIVERED**, not an unstarted task. The complete authorized implementation contract is now **in this GitHub repository**: `coordination/H024A8G-Codex-Handoff-Forside-B.md`. READ IT on latest `main` and execute its complete minimal-change/preservation/QA/deploy/STOP workflow. Expected visible sections: Hero → regneeksempel → resultater → priser → sjekk → sporsmal. Hide but preserve OWNER Top `forbehovsvelger`; remove only homepage references `behov`, `mekanisme`, `passer` (all eight library masters unchanged). Preserve approved designs, claims, prices, forms, anchors, indexes and CMS configuration. Do not ask again for the missing chat-local attachment: **the GitHub file is authoritative**. STOP after actual technical delivery and OWNER review; H024A3 OPEN, H024B BLOCKED, H022 PARKED.

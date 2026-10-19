@@ -1,0 +1,8 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "Script ran on page and returned:\n```json\n{\"url\":\"https://app.pagescms.org/anelpasic/optimalisering.oslo.nov3.3/main/file/homepage\",\"library\":[{\"text\":\"Behovsvelger\",\"url\":\"/anelpasic/optimalisering.oslo.nov3.3/main/file/globalSelector\"},{\"text\":\"Konverteringskalkulator\",\"url\":\"/anelpasic/optimalisering.oslo.nov3.3/main/file/globalCalculator\"},{\"text\":\"Gratis sjekk / kontaktskjema\",\"url\":\"/anelpasic/optimalisering.oslo.nov3.3/main/file/globalAssessment\"},{\"text\":\"Pakker og priser\",\"url\":\"/anelpasic/optimalisering.oslo.nov3.3/main/file/globalPackages\"},{\"text\":\"Kunderesultater\",\"url\":\"/anelpasic/optimalisering.oslo.nov3.3/main/file/globalProof\"},{\"text\":\"Slik jobber vi\",\"url\":\"/anelpasic/optimalisering.oslo.nov3.3/main/file/globalMechanism\"},{\"text\":\"Hvem det passer for\",\"url\":\"/anelpasic/optimalisering.oslo.nov3.3/main/file/globalFit\"},{\"text\":\"Ofte stilte spørsmål\",\"url\":\"/anelpasic/optimalisering.oslo.nov3.3/main/file/globalFaq\"}],\"saveDisabled\":true,\"fields\":[{\"value\":\"Skjult – behold i CMS\"},{\"value\":\"forbehovsvelger\"},{\"value\":\"OVerskrift\"},{\"value\":\"Lavendel\"}]}\n```"
+    }
+  ]
+}

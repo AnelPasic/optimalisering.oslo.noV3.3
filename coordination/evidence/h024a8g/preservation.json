@@ -10,11 +10,16 @@
   "cmsConfigByteExact": true,
   "ownerImagesByteExact": true,
   "exactApprovedHomeSemanticDiff": true,
-  "designSystemException": "OWNER Bare å publisere approves proposed existing-master lookup patch; byte-identical output",
+  "designSystemException": "OWNER Bare Ã¥ publisere approves proposed existing-master lookup patch; byte-identical output",
   "artifactChanges": [
     "index.html"
   ],
   "unchangedOtherArtifacts": 55,
-  "workerAfterVerified": false,
-  "state": "LOCAL VERIFIED; native publication/readback pending"
+  "workerAfterVerified": true,
+  "state": "TECHNICAL DELIVERY VERIFIED; STOP FOR OWNER REVIEW",
+  "implementationCommit": "8ad20acbc566d1bce813c95bfb60af77d72f20b5",
+  "nativeBuild": "11989b9b-6b36-413f-bab9-90e37a64e3aa",
+  "workerVersion": "f56a0d64-0545-4e7d-90cf-d9817d236264",
+  "workerPercent": 100,
+  "workerArtifactsExact": 56
 }
