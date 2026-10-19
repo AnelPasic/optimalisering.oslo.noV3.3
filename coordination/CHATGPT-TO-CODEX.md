@@ -1,5 +1,15 @@
 # ChatGPT to Codex
 
+## ACTIVE HANDOFF — D-104 H-024A8F NARROW CMS LABEL/HELP POLISH + SHORTER HOMEPAGE PROPOSAL
+
+2026-10-19. OWNER says **"ok, god plan da gjør vi det slikt"**, authorizing prior offer: polish technical global row names in collapsed Pages CMS list and prevent repetitive explanatory text under every placement; then propose, but **do not implement**, a shorter commercial homepage composition. Read `coordination/H024A8F-CMS-EDITOR-POLISH-AND-HOMEPAGE-SHORTLIST.md` before touching code.
+
+Current `.pages.yml` list `summary: "{element}{name}"` exposes raw `regneeksempel/behov/sjekk` keys. Select options already have Norwegian labels; test whether native hosted Pages CMS can show those labels in collapsed summaries without duplicating master copy/introducing a second label registry. Its repeated list `description` renders under each row; eliminate clutter while keeping concise, understandable instructions accessible. No custom Pages CMS/DOM hacks or broad rebuild: if native limitation, report it and STOP subpart. Demonstrate actual editor UX with authenticated fresh screenshots and retain save/build/preview integrity.
+
+**Keep all current OWNER source intact:** Pages CMS saved `regneeksempel` before `behov` (`f562b7e`), existing Top `forbehovsvelger`, all eight protected global masters, unchanged H024A8E three groups, pricing/proof/CTA/form/data constraints, noindex & disabled intake. No speculative homepage section removal, moving or hiding; present exactly which section placements could be omitted for OWNER choice, and guard real `/#sjekk` / `/#priser` links. Stop with evidence and recommendations for OWNER. Whole H024A3 still OPEN; H024B BLOCKED; H022 PARKED.
+
+---
+
 ## OWNER FEEDBACK D-103 — H024A8E SAVED ORDER MATCHES CMS AND PREVIEW (SCOPED PASS)
 
 2026-10-19 OWNER confirms **"ja ser riktig ut på siden og Pages"** after `f562b7e` reorder of `regneeksempel` / `behov`. Mark section order display + authenticated CMS save propagation OWNER PASS. Previous old fixed editor was cached UI; not a code regression. Preserve the current OWNER-saved order and all global masters. This is **not** whole H024A8E OWNER acceptance or explicit proof of mouse pointer drag. The only suggested pending UX polish is human-readable collapsed labels instead of raw IDs and collapsing/removing repeated per-row instructional text; await scoped go-ahead rather than broad rebuild. OWNER still needs to select exactly which sections to keep on a shorter homepage. H024A3 OPEN, H024B BLOCKED, H022 PARKED.
