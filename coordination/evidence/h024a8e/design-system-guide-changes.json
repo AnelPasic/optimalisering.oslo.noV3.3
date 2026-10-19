@@ -1,0 +1,10 @@
+[
+  [
+    "Forside → Seksjoner → åpne en Innholdsseksjon. Seksjonsfarge gjelder hele flaten; Boksfarge gjelder én boks. Seksjonsoppsett fordeler de eksisterende boksene. Boksvariant under Alternativer eller steg velger Åpen boks eller Kort. Standard og et tomt valg beholder dagens automatiske design. Ingen felt tar CSS-klasser eller frie mål.",
+    "Forside → Topp, Hovedseksjoner eller Bunn → åpne en Innholdsseksjon. Globale innholdsoriginaler redigeres under Globale elementer. Seksjonsfarge gjelder hele flaten; Boksfarge gjelder én boks. Seksjonsoppsett fordeler boksene. Boksvariant velger Åpen boks eller Kort. Standard og tomt valg beholder automatisk design. Ingen felt tar CSS-klasser eller frie mål."
+  ],
+  [
+    "Hero ligger fast først. Pris, bevis, regneeksempel og skjema har egne redaktører og får ikke disse vanlige innholdsvariantene. Piloten beholder åtte flyttbare seksjoner; flere seksjoner krever en egen trygg opprettingsflyt.",
+    "Hero ligger fast først. Pris, bevis, regneeksempel og skjema redigeres under Globale elementer og har egne innholdsmodeller. Forsiden velger plasseringer i tre flyttbare grupper. Skjul eller fjern en plassering for å beholde originalen i biblioteket. Åtte originaler er bevart; åtte synlige plasseringer er ikke påkrevd."
+  ]
+]
