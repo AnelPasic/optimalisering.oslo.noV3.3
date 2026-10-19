@@ -14,7 +14,8 @@ const visual = primary ? undefined : resolveFeaturedProofVisual(content.featured
 ---
 {cases.length > 0 && <section id="resultater" class="proof-section section-space"><div class="shell">
   <div class="section-heading"><p class="eyebrow">{content.eyebrow}</p><h2><TermText text={content.heading} terms={['roas', 'checkout', 'organisk-trafikk']} /></h2></div>
-  <div class:list={['proof-grid', { 'proof-primary': primary, 'proof-home': !primary }]}>{cases.map((proof, index) => <article class:list={['proof-card', { 'proof-featured': index === 0 }]}>
+  <div class:list={['proof-grid', { 'proof-primary': primary, 'proof-home': !primary }]}>{cases.map((proof, index) => <article class:list={['proof-card', { 'proof-featured': index === 0, 'card': !primary }]}>
+    {primary ? <>
     <div class="proof-context">
       {!primary && index === 0 && visual && <div class="proof-media"><img src={visual.src} alt={visual.alt} width="1011" height="674" loading="lazy" decoding="async" style={{ objectPosition: `${visual.positionX}% ${visual.positionY}%` }} /></div>}
       <div class="proof-identity"><h3>{proof.displayName}</h3>
@@ -28,6 +29,16 @@ const visual = primary ? undefined : resolveFeaturedProofVisual(content.featured
       </div>
       {!primary && index === 0 && proof.delta && <p class="proof-delta proof-result-support">{proof.delta}</p>}
     </div>
+    </> : <>
+      {index === 0 && visual && <figure class="proof-media"><img src={visual.src} alt={visual.alt} width="1440" height="1000" loading="lazy" decoding="async" style={{ objectPosition: `${visual.positionX}% ${visual.positionY}%` }} /></figure>}
+      <div class="card-body proof-case-body">
+        <h3 class="card-title">{proof.displayName}</h3>
+        <p class="proof-metric"><TermText text={proof.dominantMetric} terms={['roas', 'google-ads', 'checkout', 'organisk-trafikk', 'google-search-console']} /></p>
+        <div class="proof-comparison"><dl><dt>{content.beforeLabel}</dt><dd><strong>{proof.before}</strong><span>{proof.period.before}</span></dd></dl><span class="proof-arrow" aria-hidden="true">-&gt;</span><dl><dt>{content.afterLabel}</dt><dd><strong>{proof.after}</strong><span>{proof.period.after}</span></dd></dl></div>
+        {proof.delta && <p class="proof-delta">{proof.delta}</p>}
+      </div>
+    </>}
+
   </article>)}</div>
 </div></section>}
 
@@ -50,34 +61,31 @@ const visual = primary ? undefined : resolveFeaturedProofVisual(content.featured
   .proof-arrow { font-size: var(--type-icon); align-self: center; line-height: var(--leading-small); }
   .proof-primary .proof-context { display: contents; }
   .proof-identity, .proof-result-area, .proof-result-main { display: contents; }
-  .proof-home .proof-featured { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: var(--gap); padding: 0; background: none; color: inherit; }
-  .proof-home .proof-featured .proof-context { display: flex; flex-direction: column; border-radius: var(--radius-card-lg); overflow: hidden; background: var(--surface-dark); color: var(--surface-base); }
-  .proof-home .proof-featured .proof-identity { display: block; padding: var(--panel-pad); }
-  .proof-home .proof-featured h3 { margin: 0; }
-  .proof-home .proof-featured:not(:has(.proof-media)) { grid-template-columns: minmax(0, 1fr); }
-  .proof-home .proof-featured:not(:has(.proof-media)) .proof-result-featured { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); grid-template-rows: auto; }
-  .proof-media { flex: 1; aspect-ratio: 3 / 2; min-height: 0; }
-  .proof-media img { display: block; width: 100%; height: 100%; object-fit: cover; }
-  .proof-home .proof-result-featured { display: grid; grid-template-rows: 1fr auto; gap: var(--gap); min-width: 0; }
-  .proof-home .proof-result-featured .proof-result-main { display: flex; flex-direction: column; justify-content: center; gap: var(--gap); min-width: 0; padding: var(--panel-pad); border-radius: var(--radius-card-lg); background: var(--surface-mint); color: var(--surface-light-ink); }
-  .proof-home .proof-result-featured .proof-metric { text-align: center; }
-  .proof-home .proof-result-featured .proof-result-support { margin: 0; padding: var(--panel-pad); border-radius: var(--radius-card-lg); background: var(--surface-lavender); color: var(--surface-light-ink); font-size: var(--type-h3); line-height: var(--leading-h3); font-weight: var(--weight-heading); }
-  .proof-home .proof-featured .proof-comparison { margin: 0; max-width: none; }
+  /* Homepage composition only; the existing primary service variant stays intact. */
+  .proof-section:has(.proof-home) .section-heading { margin-bottom: var(--gap-lg); }
+  .proof-home .proof-card { padding: 0; overflow: hidden; background: var(--surface-mint); color: var(--surface-light-ink); border-radius: var(--radius-card-lg); }
+  .proof-home .proof-featured { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); }
+  .proof-home .proof-case-body { display: flex; min-width: 0; padding: var(--panel-pad-lg); gap: var(--gap-sm); justify-content: center; }
+  .proof-home .proof-case-body p { flex-grow: 0; }
+  .proof-home h3 { margin: 0; font-size: var(--type-h3); line-height: var(--leading-h3); }
+  .proof-home .proof-metric { font-size: var(--type-label); line-height: var(--leading-small); }
+  .proof-home .proof-comparison { margin: var(--gap-sm) 0 0; max-width: none; gap: var(--gap-sm); }
+  .proof-home .proof-comparison strong { font-size: var(--type-h3); line-height: var(--leading-stat); white-space: nowrap; overflow-wrap: normal; }
   .proof-home .proof-featured .proof-comparison strong { font-size: var(--type-stat); }
-  .proof-home .proof-metric { font-size: var(--type-label); line-height: var(--leading-small); font-weight: var(--weight-label); }
-  .proof-home .proof-delta { font-family: inherit; font-size: var(--type-body); line-height: var(--leading-body); font-weight: var(--weight-label); margin-top: var(--gap-sm); }
-  .proof-home .proof-comparison strong { white-space: nowrap; overflow-wrap: normal; }
-  .proof-home .proof-card:not(.proof-featured) { padding: var(--panel-pad); display: flex; flex-direction: column; }
-  .proof-home .proof-card:not(.proof-featured) .proof-context { flex: 1; }
-  .proof-home .proof-card:not(.proof-featured) h3 { font-size: var(--type-h4); line-height: var(--leading-h4); margin-bottom: var(--gap-xs); }
-  .proof-home .proof-card:not(.proof-featured) .proof-comparison strong { font-size: var(--type-h3); }
-  .proof-home .proof-comparison dl:first-child { text-align: right; }
-  .proof-home .proof-arrow { align-self: start; margin-top: calc(var(--type-label) * var(--leading-small) + (var(--type-h3) * var(--leading-stat) - var(--type-icon) * var(--leading-small)) / 2); }
-  .proof-home .proof-featured .proof-arrow { margin-top: calc(var(--type-label) * var(--leading-small) + (var(--type-stat) * var(--leading-stat) - var(--type-icon) * var(--leading-small)) / 2); }
+  .proof-home .proof-comparison dl:first-child { text-align: left; }
+  .proof-home .proof-delta { margin: var(--gap-sm) 0 0; padding-top: var(--gap-sm); border-top: var(--border-subtle); font-family: inherit; font-size: var(--type-body); line-height: var(--leading-body); font-weight: var(--weight-label); }
+  .proof-home .proof-arrow { align-self: center; }
+  .proof-media { margin: 0; min-width: 0; background: var(--surface-base); }
+  .proof-media img { display: block; width: 100%; height: 100%; max-height: 420px; object-fit: cover; }
+  .proof-home .proof-featured:not(:has(.proof-media)) { grid-template-columns: minmax(0, 1fr); }
+  @media (max-width: 900px) {
+    .proof-home .proof-featured { grid-template-columns: minmax(0, 1fr); }
+    .proof-home .proof-media { aspect-ratio: 2 / 1; }
+    .proof-home .proof-media img { height: 100%; object-fit: cover; }
+  }
   @media (max-width: 700px) {
     .proof-grid { grid-template-columns: minmax(0, 1fr); }
     .proof-comparison { gap: var(--gap-xs); }
-    .proof-home .proof-featured { grid-template-columns: minmax(0, 1fr); }
-    .proof-home .proof-featured:not(:has(.proof-media)) .proof-result-featured { grid-template-columns: minmax(0, 1fr); }
+    .proof-home .proof-case-body { padding: var(--panel-pad); }
   }
 </style>

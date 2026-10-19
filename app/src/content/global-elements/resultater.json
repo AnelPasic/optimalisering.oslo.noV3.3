@@ -6,10 +6,10 @@
   "content": {
     "featuredVisual": {
       "caseId": "eurotents",
-      "src": "/images/proof/eurotents-ask-review.webp",
-      "alt": "Ask-helårstelt fra Eurotents ved en innsjø.",
+      "src": "/images/proof/eurotents-website-review.webp",
+      "alt": "Skjermbilde av Eurotents sin forside med logo, meny og nettbutikkens introduksjon.",
       "positionX": 50,
-      "positionY": 50
+      "positionY": 0
     },
     "publicationApproved": true,
     "caseIds": [
