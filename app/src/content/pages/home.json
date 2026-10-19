@@ -115,11 +115,11 @@
   "sections": [
     {
       "_block": "global",
-      "element": "behov"
+      "element": "regneeksempel"
     },
     {
       "_block": "global",
-      "element": "regneeksempel"
+      "element": "behov"
     },
     {
       "_block": "global",
