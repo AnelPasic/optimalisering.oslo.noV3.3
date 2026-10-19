@@ -1,5 +1,16 @@
 # Codex to ChatGPT
 
+## H-022C / D-107 — PUBLISERT TIL REVIEW, OWNER VISUELL VURDERING
+
+2026-10-19. Implementasjon **0504207201df1a7ec0c965450be2e6b06ea4c401**, fra fersk main6dc04d1. Eurotents er ett integrert case: ekte screenshot av kundens offentlige nettside, ROAS som hovedresultat og annonseforbruk inne i samme kort. Nysta/Helt Opplagt har samordnede kort med uendrede kunde-/måle-/kilde-/periodebetegnelser og tall. Ekte daisyUI Card/Body/Title; eksisterende type/farge/radius-tokens. Bildet er lokal WebP161800bytes; kilde/dato/alt/hash i `H022C-MEDIA-SOURCE.json`, kun review-presentasjon.
+
+**Lett QA:** app-build19 sider og16 fokustester PASS (proof, presentation, H017C, Hero og B-preservation). B-testen ble målrettet tilpasset autorisert mediaendring: alle øvrige proof-masterfelt/autoritet fortsatt eksakt, øvrige7 masterhashes intakt. Kort lokal og Worker1440/390 smoke: tall, bilde, ingen overflow, noindex og deaktivert skjema. Begge tjenestesiders primary proof har eksakt samme tekst/størrelse/typografi som før. Kun proof-komponent, featuredVisual og ny lokal bildefil er produktendringer; home B, CMS-modell, proof-registre, andre mastere/innhold og OWNER-assets urørt.
+
+**Ekte native deploy:** Build **252e2ff8-547c-4d91-b69a-863a58a62623 SUCCESS** på implementasjons-SHA; Worker **bbc92c41-b312-4064-9ee5-a0d5ebbdea54 at100%**, deployment348550c5-24d3-4972-9fb6-6672497c8501. Worker HTML og screenshotbytes matcher testet bygg. Se direkte på https://optimalisering-oslo-v33.anel.workers.dev/#resultater . Kvitteringens egen revisjon finnes i Git-historikken.
+
+OWNER vurderer utseendet direkte på nettsiden etter publisering. H-024A3 OPEN; H-024B BLOCKED. Ingen ny proof-/produksjonsaksept, indeksering eller aktiv innsending følger leveransen. D-106s gamle prototype-/forhåndsgodkjenning er erstattet av D-107.
+
+
 ## H024A8G / D-105 — TECHNICAL DELIVERY; STOP FOR OWNER B REVIEW
 
 2026-10-19. Implementation **8ad20acbc566d1bce813c95bfb60af77d72f20b5** is pushed to main. B is visible: unchanged Hero → regneeksempel → resultater → priser → sjekk → sporsmal. Local OWNER Top row is fully preserved/hidden; only page references behov/mekanisme/passer removed; eight global masters unchanged. OWNER continuation «Bare å publisere» approves the documented three-line demo source dependency fix; design-system output is byte-identical, no redesign/CMS rebuild.

@@ -1,5 +1,8 @@
 # Project state
 
+**H-022C / D-107 LEVERT TIL REVIEW — 2026-10-19.** Implementasjon0504207: faktisk Eurotents-nettsidescreenshot, samlet Eurotents-case med integrert sekundærinfo og koordinerte Nysta/Helt Opplagt-kort. Låste proof-tall/perioder/kilder/autoritet og andre seksjoner/CMS/OWNER-data bevart. Build19 sider +16 fokustester, kort1440/390 local/live smoke og uendret primary proof på begge tjenester PASS. Native252e2ff8 SUCCESS / Worker bbc92c41 at100%; Worker HTML/bilde matcher bygg. Kort kvittering i CODEX-TO-CHATGPT, bildekilde i H022C-MEDIA-SOURCE.json. OWNER gjør visuell vurdering direkte på Worker; ingen ekstra forhåndsgate. H-024A3 OPEN, H-024B BLOCKED, noindex/intake av; ingen lansering. Tidligere aktive D-106/D-107 implementeringsavsnitt er nå historikk.
+
+
 **LATEST OWNER DIRECTIVE — 2026-10-19 D-107 PRELAUNCH DIRECT REVIEW WORKFLOW.** OWNER ønsker ikke omfattende tester/skjermbilder for en isolert innholds-/bildeseksjon. Frem til lansering: implementer nøyaktig forespurte små endringer direkte på fersk main, verifiser kort etter risiko og publiser på eksisterende noindex review Worker; OWNER gjør visuell kontroll der. Ny bindende regel: `coordination/PRELAUNCH-DELIVERY-RULE.md`. H-022C er nå autorisert til direkte implementering/review-publisering av Eurotents-nettsidescreenshot + samlet Eurotents-case + balansert Nysta/Helt Opplagt, med låst proof. D-106s gren-/screenshot-/forhånds-PASS er superseded. H-024A8G teknisk levert, H-024A3 hele CMS OPEN, H-024B BLOCKED; ingen indeksering/innsending/produksjonslansering.
 
 

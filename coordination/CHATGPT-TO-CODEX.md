@@ -1,5 +1,8 @@
 # ChatGPT to Codex
 
+**D-107 / H-022C teknisk levert0504207, native252e2ff8 SUCCESS / Worker bbc92c41 at100% (2026-10-19).** Se kort CODEX-TO-CHATGPT-kvittering. OWNER vurderer visuelt direkte på review Worker; ikke utfør den gamle prototypeinstruksen eller gjenta leveransen som ny oppgave. H-024A3 OPEN/H-024B BLOCKED; ingen launch/index/intake.
+
+
 ## AKTIV D-107 / H-022C — direkte til review Worker, ikke tung prototype
 
 OWNER har eksplisitt endret arbeidsmåten: **bygg kun etterspurt innholds-/bildeseksjon, publiser direkte på eksisterende noindex Worker fra fersk main og la OWNER selv sjekke visuelt der**. Tidligere H-022C-krav om egen gren, firebredde-screenshots, omfattende testing og ekstra visuelt PASS før review-deploy er SUPERSEDED. Les `coordination/PRELAUNCH-DELIVERY-RULE.md` og nå revidert `coordination/H022C-PROOF-VISUAL-REVIEW.md`. Gjør Eurotents til ett integrert kundecase med **ekte skjermbilde av NETTSIDEN, ikke teltfoto**; Nysta/Helt Opplagt i balanserte kort; bevar alle godkjente casetall, kildebetegnelser og perioder. Minimal diff + build + relevante fokustester og kort desktop/mobil smoke; faktisk Cloudflare native review deployment må bekreftes. Ikke H-024B, live POST, indeksering eller redesign av øvrige sider. Lever kort commit/preview-kvittering.
