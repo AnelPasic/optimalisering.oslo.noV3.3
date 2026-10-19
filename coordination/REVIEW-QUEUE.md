@@ -1,5 +1,8 @@
 # Review queue
 
+**ACTIVE D-110 / H-022E (2026-10-20) — MALVALG FOR KUNDERESULTATER I GLOBALE ELEMENTER.** OWNER velger designsystemets «Vekslende liste» som standard, med valgfritt «Bildekort» i Pages CMS global resultater-masteren. Bilder kan velges per case; behold senere OWNER Eurotents-upload `eurotents.jpg`, ingen oppdiktede bilder/lenker og ingen endring av proof-tall. Implementer nå under `coordination/H022E-PROOF-CMS-LAYOUT-CHOICE.md`, fokuserte tester og en faktisk CMS-mallagring/-restore, direkte review Worker etter D-107. H-022D foreløpig brukbar var historisk mellomstatus, ikke slutt-PASS. H-024A3 OPEN, H-024B BLOCKED, ingen offentlig launch/index/intake.
+
+
 **LATEST OWNER D-109 — H-022D KUNDERESULTATER FORELØPIG BRUKBAR, SETT VISUELL POLERING PÅ VENT (2026-10-20).** OWNER says «ok, brukbart foreløpig». H-022D at 2361f0f/ce09695 has shipped; do not start another proof design iteration without new request. Subsequent real Pages CMS OWNER changes df8303d (upload `eurotents.jpg`) and adab003 (featuredVisual src/crop) are authoritative and must be preserved. H-024A3 whole-editor remains OPEN, H-024B BLOCKED; noindex/intake/public launch unchanged.
 
 
