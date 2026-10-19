@@ -7,9 +7,9 @@
     "featuredVisual": {
       "caseId": "eurotents",
       "src": "/images/proof/eurotents.jpg",
-      "alt": "Skjermbilde av Eurotents sin forside med logo, meny og nettbutikkens introduksjon.",
-      "positionX": 50,
-      "positionY": 50
+      "alt": "Eurotents sin forside med logo, meny og nettbutikkens introduksjon.",
+      "positionX": 0,
+      "positionY": 0
     },
     "publicationApproved": true,
     "caseIds": [
