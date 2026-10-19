@@ -1,5 +1,11 @@
 # ChatGPT to Codex
 
+## OWNER FEEDBACK D-103 — H024A8E SAVED ORDER MATCHES CMS AND PREVIEW (SCOPED PASS)
+
+2026-10-19 OWNER confirms **"ja ser riktig ut på siden og Pages"** after `f562b7e` reorder of `regneeksempel` / `behov`. Mark section order display + authenticated CMS save propagation OWNER PASS. Previous old fixed editor was cached UI; not a code regression. Preserve the current OWNER-saved order and all global masters. This is **not** whole H024A8E OWNER acceptance or explicit proof of mouse pointer drag. The only suggested pending UX polish is human-readable collapsed labels instead of raw IDs and collapsing/removing repeated per-row instructional text; await scoped go-ahead rather than broad rebuild. OWNER still needs to select exactly which sections to keep on a shorter homepage. H024A3 OPEN, H024B BLOCKED, H022 PARKED.
+
+---
+
 ## OWNER CMS VERIFICATION — OLD TAB WAS STALE, SAVE WAS VALID REORDER (2026-10-19)
 
 OWNER reopened Pages CMS; new screenshot shows native H024A8E `Valgfrie seksjoner Topp`, `Hovedseksjoner`, draggable global rows (not the old Before/After UI). Git `f562b7eb87ba6b2f83300535087425bfa0e5f58c` is a real CMS save changing ONLY the first two homepage placements from `behov,regneeksempel` to `regneeksempel,behov`. Current `home.json` is otherwise baseline-equivalent, library masters and new `.pages.yml` intact. No evidence of an old-schema corrupting save. Preserve OWNER's new order and other current content; never blindly restore the pre-save `2b2f1db` receipt. Prior stale-editor/cached-tab issue is RESOLVED unless freshly reproduced.
