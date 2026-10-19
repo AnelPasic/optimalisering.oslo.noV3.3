@@ -1,5 +1,8 @@
 # Review queue
 
+**ACTIVE D-108 / H-022D — OWNER VISUAL REVISE OF H-022C (2026-10-19).** H-022C was technically deployed but OWNER says still visually weak. Current scoped job `coordination/H022D-PROOF-DESIGN-SYSTEM-REUSE.md`: use **actual** /design-system/ «Kort med bilde» for one Eurotents website+results card, plus two real daisyUI Cards with aligned Nysta/Helt Opplagt metrics. No custom disconnected mint/lavender proof tile system. Preserve all current approved claims/periods/permissions, media asset, H-024A8G B and service primary proof. D-107 fast lane: direct main→noindex review Worker, focused QA, OWNER visual inspection after. H-024A3 OPEN, H-024B BLOCKED, no launch/index/intake.
+
+
 **H-022C / D-107 LEVERT TIL REVIEW — 2026-10-19.** Implementasjon0504207: faktisk Eurotents-nettsidescreenshot, samlet Eurotents-case med integrert sekundærinfo og koordinerte Nysta/Helt Opplagt-kort. Låste proof-tall/perioder/kilder/autoritet og andre seksjoner/CMS/OWNER-data bevart. Build19 sider +16 fokustester, kort1440/390 local/live smoke og uendret primary proof på begge tjenester PASS. Native252e2ff8 SUCCESS / Worker bbc92c41 at100%; Worker HTML/bilde matcher bygg. Kort kvittering i CODEX-TO-CHATGPT, bildekilde i H022C-MEDIA-SOURCE.json. OWNER gjør visuell vurdering direkte på Worker; ingen ekstra forhåndsgate. H-024A3 OPEN, H-024B BLOCKED, noindex/intake av; ingen lansering. Tidligere aktive D-106/D-107 implementeringsavsnitt er nå historikk.
 
 
