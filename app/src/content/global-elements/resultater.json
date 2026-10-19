@@ -26,10 +26,15 @@
     "caseVisuals": {
       "nysta": {
         "src": "/images/proof/nysta.jpg",
-        "alt": "nysta.no"
+        "alt": "nysta.no",
+        "positionX": 0,
+        "positionY": 0
       },
       "helt-opplagt": {
-        "src": "/images/proof/heltopplagt.jpg"
+        "src": "/images/proof/heltopplagt.jpg",
+        "alt": "heltopplagt.no",
+        "positionX": 0,
+        "positionY": 0
       }
     }
   }
