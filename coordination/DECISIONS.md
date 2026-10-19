@@ -1,5 +1,10 @@
 # Decisions and authority
 
+## D-111 — OWNER ber om CMS closeout, ikke ny Page Builder — 2026-10-20
+
+OWNER: «gå videre med de gjenstående CMS-punktene». Gjeldende evidens viser at bibliotek, lokale seksjoner, tre flyttbare grupper, skjuling, global master-redigering og CMS→Git→Worker→restore allerede er teknisk demonstrert, kortere B er valgt, og native ID-summary-begrensning er OWNER-akseptert. **AUTHORIZED NOW:** H-024A9 — kort evidensbasert kontroll av de faktiske resterende CMS-punktene, dokumenter kjent begrensning og legg frem én samlet OWNER UX-godkjenning. Ikke gjenta tunge gamle tester eller bygg om CMS uten en reprodusert ny feil. Det er **IKKE** automatisk OWNER PASS av H-024A3, H-024B-oppstart eller offentlig lansering. Se `coordination/H024A9-CMS-CLOSEOUT.md`. Nyeste faktiske Pages CMS-redigering av priser/resultater/bilder skal bevares og ikke gjenopprettes til historisk testtilstand.
+
+
 ## D-110 — OWNER godkjenner CMS-valg Vekslende liste / Bildekort for Kunderesultater — 2026-10-20
 
 OWNER: **«tenker vi bør kjøre Vekslende liste mal på disse med mulighet til å velge bildekort mal, altså vi skal velge selve malen inn under redigeringen av Globale elementer.»**
