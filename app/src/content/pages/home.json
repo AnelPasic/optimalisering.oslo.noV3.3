@@ -119,6 +119,10 @@
     },
     {
       "_block": "global",
+      "element": "regneeksempel"
+    },
+    {
+      "_block": "global",
       "element": "sjekk"
     },
     {
@@ -131,15 +135,11 @@
     },
     {
       "_block": "global",
-      "element": "passer"
-    },
-    {
-      "_block": "global",
       "element": "mekanisme"
     },
     {
       "_block": "global",
-      "element": "regneeksempel"
+      "element": "passer"
     },
     {
       "_block": "global",
