@@ -1,5 +1,10 @@
 # ChatGPT to Codex
 
+## ACTIVE — D-108 / H-022D: stop custom proof showcase, reuse actual design-system Card
+
+OWNER visually **REVISES** H-022C as still too dull/unrelated. Read `coordination/H022D-PROOF-DESIGN-SYSTEM-REUSE.md` from latest main. Use existing /design-system/ «Kort med bilde» markup (real daisyUI `card md:card-side`, `figure`, `card-body`) for Eurotents with its already captured WEBSITE screenshot and approved ROAS/period/spend narrative inside ONE card. Below use two matched ordinary `card/card-body/card-title` for Nysta/Helt Opplagt; no fabricated graphics or case links. Remove/reduce previous excessive homepage-proof styling, use existing design tokens/components. Preserve primary proof on service pages, B homepage, data/permissions and existing CMS models. Under D-107 publish directly to existing noindex preview after diff/build/focused checks and one desktop/mobile smoke, then short receipt. No new screenshot/evidence marathon and no public launch.
+
+
 **D-107 / H-022C teknisk levert0504207, native252e2ff8 SUCCESS / Worker bbc92c41 at100% (2026-10-19).** Se kort CODEX-TO-CHATGPT-kvittering. OWNER vurderer visuelt direkte på review Worker; ikke utfør den gamle prototypeinstruksen eller gjenta leveransen som ny oppgave. H-024A3 OPEN/H-024B BLOCKED; ingen launch/index/intake.
 
 
