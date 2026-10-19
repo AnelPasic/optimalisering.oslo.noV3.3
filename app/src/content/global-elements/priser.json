@@ -30,11 +30,11 @@
     "separateWorkNote": "Justeringer og arbeid på eksisterende landingssider inngår i avtalt omfang ved alle optimaliseringspakker.\nStørre nye landingssider, nettsider, omfattende teknisk arbeid og redesign prises separat men er som regel inkludert i partner pakka.",
     "capacityNote": "Avtalt optimalisering gjelder per måned.",
     "decisionStrip": {
-      "heading": "Én flaskehals, to grep eller flere kundereiser?",
+      "heading": "Et forbedringsområde, to områder eller flere kundereiser?",
       "items": [
         "Velg Optimalisering når ett forbedringsområde er tydelig viktigst.",
-        "Velg Vekst når to deler av samme kundereise bør forbedres samtidig og kan forsterke hverandre.",
-        "Velg Partner når virksomheten har flere forskjellige tjenester, markeder eller kjøpsveier som må prioriteres løpende."
+        "Velg Vekst når to deler av samme kundereise bør forbedres samtidig f.eks mer relevant trafikk og større andel som skal fullføre bestilling.",
+        "Velg Partner når virksomheten har flere forskjellige typer tjenester, markeder eller kjøpsveier som må prioriteres og koordineres løpende."
       ]
     },
     "multiplier": {
