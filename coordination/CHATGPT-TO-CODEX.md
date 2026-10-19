@@ -1,5 +1,10 @@
 # ChatGPT to Codex
 
+## ACTIVE D-111 / H-024A9 — sluttkontroll av uavklarte Pages CMS-punkter
+
+OWNER sier gå videre med gjenstående CMS-punkter. **Les `coordination/H024A9-CMS-CLOSEOUT.md` på nyeste main.** Utfør en kort, read-only evidensaudit, ikke en ny CMS-implementering eller gjentatte testkampanjer. Native add/edit/move/hide/remove/master-save/restore er allerede teknisk dokumentert, collapsed IDs er akseptert, B-forside er implementert og H-022E-malbytte er verifisert. Samlet H-024A3 editor-UX krever fremdeles faktisk OWNER vurdering; untestet mouse-pointer drag må ikke oppgis som bestått. **VIKTIG:** nyere Pages CMS commits i `priser.json`, `resultater.json` og tilhørende media er OWNER-arbeid og må ikke overskrives. Kvitter kort hva som er bevist, kjent begrensning, og ett konkret OWNER-spørsmål. Ingen H-024B eller offentlig lansering.
+
+
 **H-022E / D-110 levert (2026-10-20):** CMS-malvalg, begge maler og faktisk CMS952daec→native→Worker→CMS-restoreff52bdd er verifisert. Standard Vekslende liste er live; nativefd675e5c SUCCESS/Workera53c2108 at100%. Se CODEX-TO-CHATGPT for korte tester/bevaring/commits. OWNER vurderer visuelt etter publisering; ikke gjenta ACTIVE-oppgaven under. Whole H-024A3 OPEN/H-024B BLOCKED, ingen launch/index/intake.
 
 
