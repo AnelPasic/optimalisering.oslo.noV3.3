@@ -146,7 +146,7 @@
             "description": "Bruk betalt synlighet for å få fart nå, og bygg organisk synlighet for å redusere avhengigheten av annonsebudsjett over tid."
           }
         ],
-        "selectionRule": "Velg Vekst når to forbedringer kan forsterke hverandre.",
+        "selectionRule": "Velg Vekst for to forbedringer som forsterker hverandre.",
         "visual": "accelerating",
         "visualCaption": {
           "label": "To grep",
