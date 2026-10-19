@@ -1,5 +1,8 @@
 # Project state
 
+**LATEST OWNER DIRECTIVE — 2026-10-19 D-107 PRELAUNCH DIRECT REVIEW WORKFLOW.** OWNER ønsker ikke omfattende tester/skjermbilder for en isolert innholds-/bildeseksjon. Frem til lansering: implementer nøyaktig forespurte små endringer direkte på fersk main, verifiser kort etter risiko og publiser på eksisterende noindex review Worker; OWNER gjør visuell kontroll der. Ny bindende regel: `coordination/PRELAUNCH-DELIVERY-RULE.md`. H-022C er nå autorisert til direkte implementering/review-publisering av Eurotents-nettsidescreenshot + samlet Eurotents-case + balansert Nysta/Helt Opplagt, med låst proof. D-106s gren-/screenshot-/forhånds-PASS er superseded. H-024A8G teknisk levert, H-024A3 hele CMS OPEN, H-024B BLOCKED; ingen indeksering/innsending/produksjonslansering.
+
+
 **LATEST OWNER DIRECTION — 2026-10-19 D-106 / H-022C VISUAL PROTOTYPE AUTHORIZED, NOT DELIVERED.** H-024A8G homepage B remains technically delivered to review Worker (implementation `8ad20ac`, report `102bc7e`); no broad OWNER visual/commercial PASS is inferred. After reviewing the unsatisfactory «Kunderesultater» design, OWNER authorizes a concrete new visual treatment: use actual Eurotents website screenshot instead of tent product photography, unite ROAS 4,3x→17,2x and 20% lower spend within one coherent case, two matched Nysta/Helt Opplagt modules, existing proof/brand authority untouched. GitHub contract `coordination/H022C-PROOF-VISUAL-REVIEW.md` mandates isolated branch screenshot prototype and STOP for explicit visual review; no direct replacement of current Worker/home. H-022 prototype only unparked; full production H-022 not passed; H-024A3 OPEN/whole-editor pending, H-024B BLOCKED; no indexing, intake or launch.
 
 
