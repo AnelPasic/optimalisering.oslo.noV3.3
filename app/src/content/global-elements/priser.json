@@ -92,8 +92,7 @@
         "selectionRule": "Velg Optimalisering når én flaskehals er tydelig viktigst akkurat nå.",
         "visual": "controlled",
         "visualCaption": {
-          "label": "Én spak",
-          "support": "Tydelig fremgang"
+          "label": "Tydelig fremgang"
         },
         "price": 4500,
         "detailLink": {
