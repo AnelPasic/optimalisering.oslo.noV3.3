@@ -1,5 +1,8 @@
 # Project state
 
+**LATEST OWNER CHANGE — 2026-10-20 D-110 / H-022E.** OWNER ønsker at «Kunderesultater» skal kunne bytte mellom eksisterende designsystemmaler via **Globale elementer i Pages CMS**: Vekslende liste default, Bildekort alternativ. Autorisert CMS-avgrenset implementering i `coordination/H022E-PROOF-CMS-LAYOUT-CHOICE.md`; per-case bilder kan lastes opp, uten å miste godkjente caser/OWNER Eurotents-bildet `eurotents.jpg` og 50/50 crop. H-022D var foreløpig visuelt akseptabel, dette er neste direkte OWNER-ønske. Følg D-107 risikobasert QA + nødvendig ekte CMS Save/bytt/restore for ny presentasjonskontroll, deploy kun noindex review Worker. H-024A3 whole-editor OPEN, H-024B BLOCKED, ingen produksjonslansering/indeksering/POST.
+
+
 **LATEST OWNER FEEDBACK — 2026-10-20 D-109.** Kunderesultater after H-022D is «brukbart foreløpig»: preserve deployed daisyUI media-card/card treatment; no further visual polish now and no blanket final design acceptance. Newer OWNER Pages CMS saved custom `app/public/images/proof/eurotents.jpg` (`df8303d`) and updated `featuredVisual.src` and crop (`adab003`) after Codex; treat these latest edits as authoritative. H-024A3 whole editor still OPEN, H-024B BLOCKED; no launch/index/intake. See D-109 in decisions.
 
 
