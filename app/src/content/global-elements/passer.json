@@ -1,0 +1,25 @@
+{
+  "_block": "content",
+  "uid": "e46130c0-de3c-40ef-815d-c16039346d6f",
+  "name": "Hvem passer det for",
+  "id": "passer",
+  "eyebrow": "Er dette aktuelt for bedriften?",
+  "heading": "Best når kundene faktisk har et valg.",
+  "headingAlign": "center",
+  "layout": "default",
+  "surface": "lavender",
+  "items": [
+    {
+      "title": "Passer godt hvis",
+      "text": "Bedriften konkurrerer om kundene, har kapasitet til flere henvendelser eller salg, og en ny kunde eller ordre har nok verdi til at forbedringer kan lønne seg.",
+      "boxVariant": "card",
+      "surface": "dark"
+    },
+    {
+      "title": "Passer dårlig hvis",
+      "text": "Du er allerede det eneste reelle alternativet og kundene finner deg uten problemer. Tenk en tannklinikk på et lite sted som er eneste klinikk innenfor 100 km, eller en nettbutikk som er eneste norske forhandler av reservedeler til gamle flipperspill og allerede eier de relevante søkene.",
+      "boxVariant": "card",
+      "surface": "soft"
+    }
+  ]
+}

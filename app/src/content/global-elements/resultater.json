@@ -1,0 +1,26 @@
+{
+  "_block": "proof",
+  "uid": "ac0c6119-b0b8-4739-abd0-7ad7833e5556",
+  "id": "resultater",
+  "name": "Kunderesultater",
+  "content": {
+    "featuredVisual": {
+      "caseId": "eurotents",
+      "src": "/images/proof/eurotents-ask-review.webp",
+      "alt": "Ask-helårstelt fra Eurotents ved en innsjø.",
+      "positionX": 50,
+      "positionY": 50
+    },
+    "publicationApproved": true,
+    "caseIds": [
+      "eurotents",
+      "nysta",
+      "helt-opplagt"
+    ],
+    "eyebrow": "Dokumenterte resultater",
+    "heading": "Resultater fra kundearbeid",
+    "beforeLabel": "Før",
+    "afterLabel": "Etter",
+    "changeLabel": "Arbeid"
+  }
+}

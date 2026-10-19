@@ -56,7 +56,7 @@ test('schema rejects unknown queries/enums/limits/outside or duplicate reference
   }
   for(const edit of [{order:1.5},{visible:'false'}])assert.equal(pageSchema.safeParse(third(edit)).success,false);
   const overview=load('innsikt');overview.sections[0].pageList=config({query:'*'});assert.equal(pageSchema.safeParse(overview).success,false);
-  const home=load('home');home.sections.behov={...home.sections.behov,_block:'pageList',pageList:config()};assert.equal(pageSchema.safeParse(home).success,false);
+  const home=load('home');home.sections[0]={...home.sections[0],_block:'pageList',pageList:config()};assert.equal(pageSchema.safeParse(home).success,false);
 });
 test('missing or non-article manual references fail build explicitly; invalid configs never produce fake cards',()=>{
   assert.throws(()=>resolveTextList(config({mode:'manual',selected:[{slug:'innsikt/missing'}]}),pages()),/missing|missing.*article/i);

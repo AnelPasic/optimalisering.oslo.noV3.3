@@ -6,8 +6,7 @@ const escape = (value: string) => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
 // D-024's supporting prose stays in JSON. Repeated facts in that approved prose
 // are bound to the same CMS fields as the cards, without a second price object.
-export function createCommercialTextBinding(home: Page, pricing: Page) {
-  const shared=resolveHomepageContent(home);
+export function createCommercialTextBinding(home: Page, pricing: Page, shared=resolveHomepageContent(home)) {
   const source = shared.packages;
   const reference = [...pricing.faq[0].answer.matchAll(/(^|, | og )(.+?)( koster)? (\d[\d \u00a0]*) kr\/mnd/gu)];
   if (reference.length !== source.items.length) throw new Error('Pricing FAQ must identify the three packages in their approved order');

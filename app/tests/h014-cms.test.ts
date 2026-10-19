@@ -1,22 +1,22 @@
 import {homepageBlockEditor} from './helpers/pages-cms-json.ts';
-import {getHomepageBlock} from '../src/lib/home-builder.ts';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import YAML from 'yaml';
-import { pageSchema } from '../src/lib/content-schema.ts';
-const home = JSON.parse(readFileSync('src/content/pages/home.json','utf8'));
+import {homepageBlockSchema} from '../src/lib/home-builder.ts';
+const pageSchema=homepageBlockSchema.options[2];
+const home = JSON.parse(readFileSync('src/content/global-elements/priser.json','utf8'));
 test('compact CMS copy stays editable without losing long copy; invalid decision summaries fail validation', () => {
   const fixture = structuredClone(home);
-  getHomepageBlock(fixture,'packages').content.items[0].compact.fit = 'CMS short fit';
-  getHomepageBlock(fixture,'packages').content.items[0].iconItems[0].compactLabel = 'CMS short icon';
-  const parsed = getHomepageBlock(pageSchema.parse(fixture),'packages').content.items[0];
+  fixture.content.items[0].compact.fit = 'CMS short fit';
+  fixture.content.items[0].iconItems[0].compactLabel = 'CMS short icon';
+  const parsed = pageSchema.parse(fixture).content.items[0];
   assert.equal(parsed.compact.fit,'CMS short fit');
   assert.equal(parsed.iconItems[0].compactLabel,'CMS short icon');
-  assert.equal(parsed.fit,getHomepageBlock(home,'packages').content.items[0].fit);
-  assert.equal(parsed.iconItems[0].label,getHomepageBlock(home,'packages').content.items[0].iconItems[0].label);
+  assert.equal(parsed.fit,home.content.items[0].fit);
+  assert.equal(parsed.iconItems[0].label,home.content.items[0].iconItems[0].label);
   for (const change of ['empty-fit','four-situations','empty-label']) {
-    const invalid=structuredClone(fixture), item=getHomepageBlock(invalid,'packages').content.items[0];
+    const invalid=structuredClone(fixture), item=invalid.content.items[0];
     if(change==='empty-fit')item.compact.fit=' ';
     if(change==='four-situations')item.compact.situations=['First','Second','Third','Fourth'];
     if(change==='empty-label')item.iconItems[0].compactLabel='';

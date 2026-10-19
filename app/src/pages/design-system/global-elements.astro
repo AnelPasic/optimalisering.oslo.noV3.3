@@ -1,0 +1,12 @@
+---
+import {getCollection} from 'astro:content';
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import HomeLeverage from '../../components/HomeLeverage.astro';
+import '../../styles/compositions/home.css';
+import {getHomepageBlocks,isHomepageSectionVisible} from '../../lib/home-builder';
+const home=(await getCollection('pages')).find(p=>p.data.kind==='home')!.data;
+const calculator=getHomepageBlocks(home).find(b=>b._block==='calculator'&&isHomepageSectionVisible(b));
+---
+<SiteLayout title="Globale elementer - intern gjennomgang" description="Intern kontroll av en delt kalkulatorkilde." noindex>
+ <div class="shell section-space"><h1>Globale elementer</h1><p>Kontrolleksempel fra samme kalkulatorkilde som forsiden. Rediger originalen under Globale elementer i CMS. Eksemplet følger forsidens visning og viser ikke skjult kalkulatorinnhold.</p></div><div class="invite-home">{calculator?._block==='calculator'&&<HomeLeverage content={calculator.content} />}</div>
+</SiteLayout>

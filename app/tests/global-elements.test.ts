@@ -9,7 +9,7 @@ test('calculator placement resolves one protected library master without copying
  const api=builder as any;
  assert.equal(typeof api.getGlobalElement,'function');
  const master=api.getGlobalElement('regneeksempel');
- const placement={_block:'global',element:'regneeksempel',uid:master.uid};
+ const placement={_block:'global',element:'regneeksempel'};
  assert.deepEqual(api.resolveGlobalPlacement(placement),master);
  assert.equal(api.resolveGlobalPlacement({...placement,visibility:'hidden'}).visibility,'hidden');
  assert.throws(()=>api.resolveGlobalPlacement({...placement,element:'unknown'}));

@@ -1,0 +1,32 @@
+{
+  "_block": "faq",
+  "uid": "75bcd975-20e4-433d-809e-b43d2b104f47",
+  "id": "sporsmal",
+  "name": "Ofte stilte spørsmål",
+  "content": {
+    "eyebrow": "Greit å vite",
+    "heading": "Før du tar neste steg",
+    "items": [
+      {
+        "question": "Hva skjer etter den gratis sjekken?",
+        "answer": "Vi gjør en kort, manuell vurdering og begrunner hvor vi ville startet. Hvis det er noe vi kan hjelpe med, avtaler vi omfang og pris før betalt arbeid. Sjekken er ikke en full revisjon eller gratis gjennomføring."
+      },
+      {
+        "question": "Hva koster videre arbeid?",
+        "answer": "Optimalisering koster 4 500 kr/mnd, Vekst 6 900 kr/mnd og Partner fra 14 900 kr/mnd. Alle priser er eks. mva. Forskjellen er om vi jobber med ett prioritert område, to sammenhengende områder eller bredere på tvers."
+      },
+      {
+        "question": "Er annonsebudsjett og eksterne kostnader inkludert?",
+        "answer": "Annonsebudsjett kommer i tillegg. Aktuelle eksterne plattformkostnader kommer i tillegg hvis ikke annet er uttrykkelig avtalt."
+      },
+      {
+        "question": "Hva hvis både synlighet og konvertering begrenser resultatet?",
+        "answer": "Da ser vi på sammenhengen. Vi finner flaskehalsen og prioriterer tiltakene i riktig rekkefølge, fremfor å starte med en fast kanal."
+      },
+      {
+        "question": "Jobber dere bare med bedrifter i Oslo?",
+        "answer": "Nei. Vi jobber med bedrifter i hele Norge og kan også hjelpe i andre nordiske markeder. Navnet beskriver tjenesten og satsingen - ikke et krav om at kunden holder til i Oslo."
+      }
+    ]
+  }
+}

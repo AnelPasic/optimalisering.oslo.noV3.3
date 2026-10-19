@@ -1,20 +1,20 @@
 import {homepageBlockEditor} from './helpers/pages-cms-json.ts';
-import {getHomepageBlock} from '../src/lib/home-builder.ts';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import YAML from 'yaml';
-import {pageSchema} from '../src/lib/content-schema.ts';
-const home=JSON.parse(readFileSync('src/content/pages/home.json','utf8'));
+import {homepageBlockSchema} from '../src/lib/home-builder.ts';
+const pageSchema=homepageBlockSchema.options[2];
+const home=JSON.parse(readFileSync('src/content/global-elements/priser.json','utf8'));
 test('optional semantic motif caption survives CMS parsing and preserves independent artwork/crop fields',()=>{
-  const fixture=structuredClone(home), item=getHomepageBlock(fixture,'packages').content.items[0];
+  const fixture=structuredClone(home), item=fixture.content.items[0];
   item.visualCaption={label:'CMS label',support:'CMS support'};
   item.visualAsset={src:'/images/pricing/alternative.svg',alt:'Conceptual option',positionX:20,positionY:80};
-  const parsed=getHomepageBlock(pageSchema.parse(fixture),'packages').content.items[0];
+  const parsed=pageSchema.parse(fixture).content.items[0];
   assert.deepEqual(parsed.visualCaption,item.visualCaption);
   assert.deepEqual(parsed.visualAsset,item.visualAsset);
   item.visualCaption={label:'CMS label'};
-  assert.equal(getHomepageBlock(pageSchema.parse(fixture),'packages').content.items[0].visualCaption?.support,undefined);
+  assert.equal(pageSchema.parse(fixture).content.items[0].visualCaption?.support,undefined);
   item.visualCaption={label:' '};assert.equal(pageSchema.safeParse(fixture).success,false);
   delete item.visualCaption;assert.equal(pageSchema.safeParse(fixture).success,true);
   const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));

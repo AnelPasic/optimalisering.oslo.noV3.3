@@ -1,0 +1,237 @@
+{
+  "_block": "packages",
+  "uid": "7b687594-17f4-4266-adf5-12b710f563af",
+  "id": "priser",
+  "name": "Pakker og priser",
+  "content": {
+    "eyebrow": "Fast månedlig optimalisering",
+    "heading": "Tre pakker. Samme mål: flere riktige kunder.",
+    "intro": "Velg pakken som passer hvor komplekst behovet ditt er - fra én tydelig flaskehals til flere kundereiser som må prioriteres løpende.",
+    "labels": {
+      "situations": "Typiske situasjoner",
+      "typicalBusiness": "Typisk virksomhet",
+      "focus": "Fokus",
+      "combinations": "Populære kombinasjoner",
+      "workAreas": "Arbeidsområder",
+      "uncertain": "Usikker? Ta en gratis sjekk"
+    },
+    "fitLabel": "Passer for",
+    "scopeLabel": "Dette jobber vi med",
+    "areasLabel": "Vi kan jobbe med",
+    "areas": [
+      "Konvertering",
+      "SEO, lokal SEO og AI-synlighet",
+      "Google Ads",
+      "Meta Ads"
+    ],
+    "foundationNote": "Måling og sporing ligger i bunn, så vi kan følge med på hva som faktisk skjer.",
+    "adBudgetNote": "Annonsebudsjett kommer i tillegg.",
+    "externalCostsNote": "Eksterne verktøy og plattformkostnader kommer i tillegg når de er nødvendige og ikke er avtalt inkludert.",
+    "separateWorkNote": "Mindre justeringer og arbeid på eksisterende landingssider kan inngå i avtalt omfang. Større nye landingssider, nettsider, omfattende teknisk arbeid og redesign prises separat.",
+    "capacityNote": "Avtalt kapasitet gjelder per måned og overføres ikke til senere måneder.",
+    "decisionStrip": {
+      "heading": "Én flaskehals, to grep eller flere kundereiser?",
+      "items": [
+        "Velg Optimalisering når ett forbedringsområde er tydelig viktigst.",
+        "Velg Vekst når to deler av samme kundereise bør forbedres samtidig og kan forsterke hverandre.",
+        "Velg Partner når virksomheten har flere forskjellige tjenester, markeder eller kjøpsveier som må prioriteres løpende."
+      ]
+    },
+    "multiplier": {
+      "eyebrow": "Hvorfor Vekst finnes",
+      "heading": "Flere besøk gir ikke automatisk flere kunder.",
+      "body": "Når relevante kunder finner deg og flere av dem går videre til henvendelse eller kjøp, kan tiltakene forsterke hverandre. Derfor kan det være bedre å forbedre to deler av samme kundereise samtidig enn å veksle mellom dem fra måned til måned.",
+      "conceptualRow": "Bli funnet -> bli valgt -> gå videre",
+      "support": "SEO, AI-synlighet og annonser kan gi flere relevante besøk. Konverteringsoptimalisering kan øke verdien av trafikken du allerede har. Gode og relevante landingssider kan også støtte organisk synlighet, annonsekvalitet og konvertering."
+    },
+    "items": [
+      {
+        "title": "Optimalisering",
+        "descriptor": "Ett viktig forbedringsområde om gangen.",
+        "fit": "Passer for små og mellomstore bedrifter med én tydelig kundereise, én hovedtjeneste eller én flaskehals som er viktigst akkurat nå.",
+        "compact": {
+          "fit": "For små og mellomstore bedrifter med én tydelig kundereise eller én flaskehals som er viktigst nå.",
+          "situations": [
+            "Blir ikke funnet når kundene søker.",
+            "Har trafikk, men får for få henvendelser eller kjøp.",
+            "Får for lite ut av Google Ads eller en annen viktig kanal."
+          ]
+        },
+        "scope": "Vi jobber med én hovedflaskehals til neste prioritet er viktigere. Mindre støttearbeid rundt samme mål kan inngå.",
+        "typicalBusiness": "Typisk en konkurranseutsatt lokal tjenestebedrift, mindre klinikk, regnskapskontor eller nisje-B2B-bedrift med én tydelig hovedtjeneste.",
+        "situations": [
+          "Kundene finner deg ikke når de søker etter det du tilbyr.",
+          "Du får relevant trafikk, men for få henvendelser eller kjøp.",
+          "Du får for lite ut av Google Ads eller en annen viktig kanal."
+        ],
+        "key": "optimalisering",
+        "iconItems": [
+          {
+            "icon": "search",
+            "label": "SEO / AI-synlighet",
+            "compactLabel": "SEO / AI-synlighet"
+          },
+          {
+            "icon": "conversion",
+            "label": "Konverteringsoptimalisering",
+            "compactLabel": "Konvertering"
+          },
+          {
+            "icon": "local",
+            "label": "Lokal SEO",
+            "compactLabel": "Lokal SEO"
+          },
+          {
+            "icon": "paid-search",
+            "label": "Google Ads - ett tydelig fokusområde",
+            "compactLabel": "Google Ads"
+          }
+        ],
+        "selectionRule": "Velg Optimalisering når én flaskehals er tydelig viktigst akkurat nå.",
+        "visual": "controlled",
+        "visualCaption": {
+          "label": "Én spak",
+          "support": "Tydelig fremgang"
+        },
+        "price": 4500,
+        "detailLink": {
+          "label": "Om pakken",
+          "href": "/priser/#optimalisering"
+        },
+        "priceSuffix": "kr/mnd",
+        "vatSuffix": "eks. mva.",
+        "recommended": false,
+        "cta": {
+          "label": "Bestill Optimalisering",
+          "href": "/priser/?pakke=optimalisering#bestill"
+        }
+      },
+      {
+        "title": "Vekst",
+        "descriptor": "To grep som forsterker hverandre.",
+        "fit": "Passer for bedrifter som trenger fremgang på to deler av samme kundereise samtidig.",
+        "compact": {
+          "fit": "For bedrifter som trenger fremgang på to deler av samme kundereise samtidig.",
+          "situations": [
+            "Trenger fart nå og vil bygge organisk synlighet over tid.",
+            "Har trafikk, men vil få mer ut av den med bedre konvertering.",
+            "Resultatet avhenger av at to områder forbedres samtidig."
+          ]
+        },
+        "situations": [
+          "Du trenger betalt synlighet for å få fart nå, men vil bygge organisk synlighet over tid.",
+          "Du får trafikk, men vil få mer ut av den med bedre konvertering.",
+          "Resultatet avhenger av at to områder forbedres samtidig."
+        ],
+        "key": "vekst",
+        "iconItems": [
+          {
+            "icon": "paid-search",
+            "label": "Google Ads + konverteringsoptimalisering",
+            "compactLabel": "Google Ads + konvertering",
+            "description": "Få relevant trafikk nå og få mer ut av hvert besøk du allerede betaler for."
+          },
+          {
+            "icon": "conversion",
+            "label": "SEO / AI-synlighet + konverteringsoptimalisering",
+            "compactLabel": "SEO / AI-synlighet + konvertering",
+            "description": "Bygg organisk synlighet og få flere relevante besøk videre til henvendelse eller kjøp."
+          },
+          {
+            "icon": "search",
+            "label": "Google Ads + SEO / AI-synlighet",
+            "compactLabel": "Google Ads + SEO / AI-synlighet",
+            "description": "Bruk betalt synlighet for å få fart nå, og bygg organisk synlighet for å redusere avhengigheten av annonsebudsjett over tid."
+          }
+        ],
+        "selectionRule": "Velg Vekst når to forbedringer kan forsterke hverandre.",
+        "visual": "accelerating",
+        "visualCaption": {
+          "label": "To grep",
+          "support": "Forsterker hverandre"
+        },
+        "price": 6900,
+        "detailLink": {
+          "label": "Om pakken",
+          "href": "/priser/#begge"
+        },
+        "priceSuffix": "kr/mnd",
+        "vatSuffix": "eks. mva.",
+        "recommended": true,
+        "badge": "Anbefalt",
+        "cta": {
+          "label": "Bestill Vekst",
+          "href": "/priser/?pakke=vekst#bestill"
+        }
+      },
+      {
+        "title": "Partner",
+        "descriptor": "Flere tjenester og kundereiser.",
+        "fit": "Passer for bedrifter med flere tjenester, produktområder, markeder, lokasjoner eller målgrupper som møter forskjellige konkurrenter og trenger løpende prioritering på tvers.",
+        "compact": {
+          "fit": "For bedrifter med flere tjenester, markeder eller kundereiser som må prioriteres løpende.",
+          "situations": [
+            "Flere tjenester konkurrerer i ulike markeder.",
+            "Ulike kundereiser trenger ulike grep.",
+            "Trenger løpende prioritering på tvers."
+          ]
+        },
+        "scope": "Vi prioriterer løpende kundereisene med størst kommersiell verdi eller størst forbedringspotensial. Det betyr ikke at alt gjøres samtidig eller at kapasiteten er ubegrenset.",
+        "typicalBusiness": "Typisk en virksomhet med fire-fem forskjellige tjenester - for eksempel kantine, catering, fruktlevering og andre B2B-tjenester - der hver kundereise har egne søk, konkurrenter, sider og prioriteringer.",
+        "situations": [
+          "Flere tjenester eller produktområder konkurrerer i ulike markeder.",
+          "Ulike kundereiser trenger ulike kombinasjoner av synlighet, annonser og konvertering.",
+          "Du trenger en fast partner som prioriterer hva som bør forbedres hvor - og i hvilken rekkefølge."
+        ],
+        "key": "partner",
+        "iconItems": [
+          {
+            "icon": "search",
+            "label": "SEO / AI-synlighet",
+            "compactLabel": "SEO / AI-synlighet"
+          },
+          {
+            "icon": "paid-search",
+            "label": "Google Ads",
+            "compactLabel": "Google Ads"
+          },
+          {
+            "icon": "social-paid",
+            "label": "Meta Ads",
+            "compactLabel": "Meta Ads"
+          },
+          {
+            "icon": "conversion",
+            "label": "Konverteringsoptimalisering",
+            "compactLabel": "Konvertering"
+          },
+          {
+            "icon": "analytics",
+            "label": "Analyse og sporing",
+            "compactLabel": "Analyse"
+          }
+        ],
+        "selectionRule": "Velg Partner når flere forskjellige kundereiser må forbedres og prioriteres løpende.",
+        "priceNote": "Omfang og fast månedspris avtales før oppstart.",
+        "visual": "tracks",
+        "visualCaption": {
+          "label": "Flere kundereiser",
+          "support": "Prioriteres løpende"
+        },
+        "price": 14900,
+        "pricePrefix": "fra",
+        "detailLink": {
+          "label": "Om pakken",
+          "href": "/priser/#partner"
+        },
+        "priceSuffix": "kr/mnd",
+        "vatSuffix": "eks. mva.",
+        "recommended": false,
+        "cta": {
+          "label": "Bestill Partner",
+          "href": "/priser/?pakke=partner#bestill"
+        }
+      }
+    ]
+  }
+}

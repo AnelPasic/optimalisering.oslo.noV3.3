@@ -1,3 +1,5 @@
+import {readFileSync} from 'node:fs';
+import {randomUUID} from 'node:crypto';
 // JSON-only Pages-CMS-equivalent fixture, not an authenticated save.
 // Verified against pages-cms/pages-cms 6f4e860a35d934406580287e7042e5e111e207a1:
 // files/[path]/route.ts validates declared fields, merges objects, replaces arrays,
@@ -7,13 +9,19 @@ export function resolveField(field: any, components: any): any {
 }
 
 export function homepageBlockEditor(cms: any, type: string): any {
-  const home = entryForFile(cms, 'app/src/content/pages/home.json');
-  const block = home.fields.find((f: any) => f.name === 'sections').fields.find((b: any) => b.fields?.find((f:any)=>f.name==='_block')?.default === type);
+  const block = cms.content.find((e:any)=>e.name==='globalElements').items.find((b: any) => b.fields?.find((f:any)=>f.name==='_block')?.default === type);
   return resolveField(block.fields.find((f: any) => f.name === 'content'), cms.components);
 }
 
-// Raw homepage source is fixed objects; all other pages and parsed views use arrays.
-export function sectionRecords(page:any):any[]{return Object.values(page.sections);}
+// Only real page-local data: a global placement is deliberately not an editable master.
+export function sectionRecords(page:any):any[]{return [...(page.topSections??[]),...Object.values<any>(page.sections??[]),...(page.bottomSections??[])];}
+export function localHomeFixture(){
+ const page=JSON.parse(readFileSync('src/content/pages/home.json','utf8'));
+ const content=JSON.parse(readFileSync('src/content/global-elements/mekanisme.json','utf8'));
+ Object.assign(content,{id:'cms-local-fixture',uid:randomUUID()});
+ page.topSections=[content,...(page.topSections??[])];
+ return page;
+}
 
 const empty = (value: any): boolean => value == null || value === '' ||
   (typeof value === 'object' && Object.values(value).every(empty));

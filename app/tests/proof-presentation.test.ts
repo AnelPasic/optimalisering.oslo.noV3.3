@@ -1,20 +1,20 @@
 import {homepageBlockEditor} from './helpers/pages-cms-json.ts';
-import {getHomepageBlock} from '../src/lib/home-builder.ts';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 import YAML from 'yaml';
 import { resolveFeaturedProofVisual } from '../src/lib/proof-presentation.ts';
 import { getPublishableCases } from '../src/lib/proof.ts';
-import { pageSchema } from '../src/lib/content-schema.ts';
+import {homepageBlockSchema} from '../src/lib/home-builder.ts';
+const pageSchema=homepageBlockSchema.options[3];
 import { cmsJsonSave, entryForFile, assertPreservedContent, resolveField } from './helpers/pages-cms-json.ts';
 
-const home = JSON.parse(readFileSync('src/content/pages/home.json', 'utf8'));
+const home = JSON.parse(readFileSync('src/content/global-elements/resultater.json', 'utf8'));
 const records = readdirSync('src/content/proof').filter(f => f.endsWith('.json')).map(f => JSON.parse(readFileSync(`src/content/proof/${f}`, 'utf8')));
 const visual = { caseId: 'eurotents', src: '/images/proof/eurotents-ask-review.webp', alt: 'Ask-helårstelt fra Eurotents ved en innsjø.', positionX: 50, positionY: 50 };
 
 test('presentation media binds only to its first publishable named case and cannot grant publication', () => {
-  const slot = getHomepageBlock(home,'proof').content;
+  const slot = home.content;
   const original = getPublishableCases(slot, records);
   assert.deepEqual(resolveFeaturedProofVisual(visual, slot, records), visual);
   for (const input of [undefined, {}, { ...visual, src: '' }, { ...visual, alt: '' }, { ...visual, src: '/images/proof/missing.webp' }, { ...visual, src: 'https://example.com/image.webp' }, { ...visual, src: '/images/proof/../home/hero-customer.webp' }]) assert.equal(resolveFeaturedProofVisual(input, slot, records), undefined);
@@ -28,22 +28,22 @@ test('presentation media binds only to its first publishable named case and cann
 
 test('safe homepage CMS image/crop edits and clearing preserve public projection and all authority', () => {
   const cms = YAML.parse(readFileSync('../.pages.yml', 'utf8'));
-  const entry = entryForFile(cms, 'app/src/content/pages/home.json');
+  const entry = entryForFile(cms, 'app/src/content/global-elements/resultater.json');
   const proof = homepageBlockEditor(cms,'proof');
   const field = resolveField(proof.fields.find((f: any) => f.name === 'featuredVisual'), cms.components);
   assert.equal(field.fields.find((f: any) => f.name === 'caseId').readonly, true);
   assert.equal(field.fields.find((f: any) => f.name === 'src').options.media, 'proofImages');
   assert.deepEqual(field.fields.map((f: any) => f.name), ['caseId', 'src', 'alt', 'positionX', 'positionY']);
-  const original=structuredClone(home);getHomepageBlock(original,'proof').content.featuredVisual=visual;
+  const original=structuredClone(home);original.content.featuredVisual=visual;
   for (const edit of [{ ...visual, positionX: 25, positionY: 75, alt: 'Ask-telt fra Eurotents.' }, { ...visual, src: '' }, { ...visual, alt: '' }]) {
-    const form = structuredClone(original); getHomepageBlock(form,'proof').content.featuredVisual = edit;
+    const form = structuredClone(original); form.content.featuredVisual = edit;
     const saved = JSON.parse(cmsJsonSave(original, form, entry, cms));
     assertPreservedContent(form, saved);
     const parsed = pageSchema.parse(saved);
-    assert.deepEqual(getPublishableCases(getHomepageBlock(parsed,'proof').content, records), getPublishableCases(getHomepageBlock(home,'proof').content, records));
-    assert.equal(saved.authority, home.authority);
-    assert.deepEqual(getHomepageBlock(saved,'proof').content.caseIds, getHomepageBlock(home,'proof').content.caseIds);
-    if (!edit.src || !edit.alt) assert.equal(resolveFeaturedProofVisual(getHomepageBlock(parsed,'proof').content.featuredVisual, getHomepageBlock(parsed,'proof').content, records), undefined);
-    else assert.deepEqual(resolveFeaturedProofVisual(getHomepageBlock(parsed,'proof').content.featuredVisual, getHomepageBlock(parsed,'proof').content, records), edit);
+    assert.deepEqual(getPublishableCases(parsed.content, records), getPublishableCases(home.content, records));
+    assert.equal(saved.content.publicationApproved, home.content.publicationApproved);
+    assert.deepEqual(saved.content.caseIds, home.content.caseIds);
+    if (!edit.src || !edit.alt) assert.equal(resolveFeaturedProofVisual(parsed.content.featuredVisual, parsed.content, records), undefined);
+    else assert.deepEqual(resolveFeaturedProofVisual(parsed.content.featuredVisual, parsed.content, records), edit);
   }
 });

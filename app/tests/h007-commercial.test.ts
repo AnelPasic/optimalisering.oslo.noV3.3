@@ -1,5 +1,5 @@
 import {homepageBlockEditor} from './helpers/pages-cms-json.ts';
-import {getHomepageBlock} from '../src/lib/home-builder.ts';
+import {getHomepageBlock, getGlobalElement, homepageBlockSchema} from '../src/lib/home-builder.ts';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
@@ -17,11 +17,11 @@ test('shared CMS offer retains protected identity and bounded customer claims', 
 });
 
 test('D-054 allows owner-edited work areas and shared cost rules through the same schema', () => {
-  const edited = structuredClone(page);
-  getHomepageBlock(edited,'packages').content.areas = ['Område A', 'Område B', 'Område C', 'Område D'];
-  for (const key of ['foundationNote', 'adBudgetNote', 'externalCostsNote', 'separateWorkNote', 'capacityNote'] as const) getHomepageBlock(edited,'packages').content[key] = `CMS ${key}`;
-  assert.deepEqual(getHomepageBlock(pageSchema.parse(edited),'packages').content.areas, getHomepageBlock(edited,'packages').content.areas);
-  for (const key of ['foundationNote', 'adBudgetNote', 'externalCostsNote', 'separateWorkNote', 'capacityNote'] as const) assert.equal(getHomepageBlock(pageSchema.parse(edited),'packages').content[key as 'foundationNote'], getHomepageBlock(edited,'packages').content[key]);
+  const edited = getGlobalElement('priser');
+  edited.content.areas = ['Område A', 'Område B', 'Område C', 'Område D'];
+  for (const key of ['foundationNote', 'adBudgetNote', 'externalCostsNote', 'separateWorkNote', 'capacityNote'] as const) edited.content[key] = `CMS ${key}`;
+  const parsed = homepageBlockSchema.parse(edited); assert.equal(parsed._block,'packages');
+  if(parsed._block==='packages') assert.deepEqual(parsed.content,edited.content);
 });
 
 test('D-024 keeps the exact free-check promise and approved bounded manual safeguards', () => {
@@ -41,11 +41,11 @@ test('H-007 commercial CMS edits are typed and retain all intended fields', () =
   for (const item of packages.items) for (const key of Object.keys(item)) assert.ok(itemFields.some((field: any) => field.name === key), `CMS package item ${key}`);
   assert.equal(homepageBlockEditor(cms,'assessment').fields.find((field:any)=>field.name==='form').fields.find((field: any) => field.name === 'promise').type, 'string');
   for (const price of [-1, 4500.5, '4500', null]) {
-    const edited = structuredClone(page);
-    (getHomepageBlock(edited,'packages').content.items[0] as any).price = price;
-    assert.equal(pageSchema.safeParse(edited).success, false, `invalid price ${price}`);
+    const edited = getGlobalElement('priser');
+    (edited.content.items[0] as any).price = price;
+    assert.equal(homepageBlockSchema.safeParse(edited).success, false, `invalid price ${price}`);
   }
-  const edited = structuredClone(page);
-  getHomepageBlock(edited,'packages').content.items[0].price = 5000;
-  assert.equal(pageSchema.safeParse(edited).success, true, 'D-054 exposes the numeric price field; routing stays protected');
+  const edited = getGlobalElement('priser');
+  edited.content.items[0].price = 5000;
+  assert.equal(homepageBlockSchema.safeParse(edited).success, true, 'D-054 exposes the numeric price field; routing stays protected');
 });

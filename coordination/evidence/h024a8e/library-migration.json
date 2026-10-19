@@ -1,0 +1,54 @@
+{
+  "masters": [
+    {
+      "id": "behov",
+      "uid": "31bd8ddb-5a47-4bc4-99b5-a5461e6103f6"
+    },
+    {
+      "id": "regneeksempel",
+      "uid": "dc92cca5-b95c-487c-b2a2-08e296972a65"
+    },
+    {
+      "id": "sjekk",
+      "uid": "d6ff367f-a926-4ee2-bdcb-7731ce43c183"
+    },
+    {
+      "id": "priser",
+      "uid": "7b687594-17f4-4266-adf5-12b710f563af"
+    },
+    {
+      "id": "resultater",
+      "uid": "ac0c6119-b0b8-4739-abd0-7ad7833e5556"
+    },
+    {
+      "id": "mekanisme",
+      "uid": "42fceeca-61eb-49cd-b250-95060a060aa9"
+    },
+    {
+      "id": "passer",
+      "uid": "e46130c0-de3c-40ef-815d-c16039346d6f"
+    },
+    {
+      "id": "sporsmal",
+      "uid": "75bcd975-20e4-433d-809e-b43d2b104f47"
+    }
+  ],
+  "allOriginalValuesAndUidsPreserved": true,
+  "ownerInsertPreserved": true,
+  "mainOrder": [
+    "behov",
+    "regneeksempel",
+    "sjekk",
+    "priser",
+    "resultater",
+    "mekanisme",
+    "passer",
+    "sporsmal"
+  ],
+  "top": [
+    "forbehovsvelger"
+  ],
+  "bottom": [],
+  "referenceIdentity": "Stable element ID. Master UUID retained only in master, not duplicated in page references.",
+  "dataModel": "Eight preserved masters, zero required page instances."
+}

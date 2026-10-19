@@ -1,29 +1,33 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {randomUUID} from 'node:crypto';
 import YAML from 'yaml';
 import {pageSchema} from '../src/lib/content-schema.ts';
-import {cmsJsonSave,entryForFile,assertPreservedContent} from './helpers/pages-cms-json.ts';
+import {globalElementIds} from '../src/lib/home-builder.ts';
+import {cmsJsonSave,entryForFile,assertPreservedContent,localHomeFixture} from './helpers/pages-cms-json.ts';
 const source=JSON.parse(readFileSync('src/content/pages/home.json','utf8'));
 const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
-test('fixed homepage has eight co-located object editors after Hero and no duplicated sources',()=>{
- assert.equal(Object.keys(source.sections).length,8);assert.deepEqual(Object.keys(source.homepage),['chrome']);assert.equal(source.faq,undefined);
- for(const block of Object.values<any>(source.sections))if(block._block&&block._block!=='content')assert.ok(block.content,block._block);
- const entry=entryForFile(cms,'app/src/content/pages/home.json');assert.deepEqual(entry.fields.map((f:any)=>f.name),['seo','hero','sections','optionalSections','homepage']);
- const sections=entry.fields[2];assert.equal(sections.type,'object');assert.equal(sections.list,undefined);
- for(const b of sections.fields)if(!['mekanisme','passer','regneeksempel'].includes(b.name))assert.ok(b.fields.find((f:any)=>f.name==='content')?.fields?.length,b.name);
-});
-
-test('primary schema rejects every cloned singleton, mutated UID and missing core record',()=>{
- for(const id of Object.keys(source.sections).filter(id=>id!=='regneeksempel')){
-  for(const change of [(p:any)=>delete p.sections[id],(p:any)=>p.sections[id].uid=randomUUID(),(p:any)=>p.sections[id]._block='unknown',(p:any)=>p.sections.clone=p.sections[id]]){const p=structuredClone(source);change(p);assert.equal(pageSchema.safeParse(p).success,false,id);}
+test('stock CMS has Hero then three native draggable groups and one protected typed library',()=>{
+ const entry=entryForFile(cms,'app/src/content/pages/home.json');
+ assert.deepEqual(entry.fields.map((f:any)=>f.name),['seo','hero','topSections','sections','bottomSections','homepage']);
+ for(const name of ['topSections','sections','bottomSections']){
+  const zone=entry.fields.find((f:any)=>f.name===name);assert.equal(zone.type,'block');assert.ok(zone.list);assert.equal(zone.list.min,undefined);
+  const ref=zone.blocks.find((b:any)=>b.name==='global');assert.deepEqual(ref.fields.find((f:any)=>f.name==='element').options.values.map((v:any)=>v.name),globalElementIds);
+  assert.ok(!ref.fields.some((f:any)=>['content','uid','id'].includes(f.name)));
  }
+ for(const file of cms.content.find((e:any)=>e.name==='globalElements').items){assert.deepEqual(file.operations,{create:false,rename:false,delete:false});for(const id of ['uid','id','_block'])assert.equal(file.fields.find((f:any)=>f.name===id).readonly,true);}
 });
-
-test('fixed co-located content edits preserve every unrelated payload and protected field',()=>{
- const entry=entryForFile(cms,'app/src/content/pages/home.json'),p=structuredClone(source);p.sections.mekanisme.heading+=' CMS';
- const saved=JSON.parse(cmsJsonSave(source,p,entry,cms));assertPreservedContent(p,saved);assert.equal(pageSchema.safeParse(saved).success,true);
- const restored=JSON.parse(cmsJsonSave(saved,source,entry,cms));assertPreservedContent(source,restored);
- const invalid=structuredClone(source);delete invalid.sections.sjekk;assert.throws(()=>cmsJsonSave(source,invalid,entry,cms),/required/);
+test('raw page schema rejects duplicate, unknown and copied modules while allowing removal of unlinked instances',()=>{
+ for(const edit of [(p:any)=>p.sections.push(p.sections[0]),(p:any)=>p.sections[0].element='unknown',(p:any)=>p.sections[0].content={heading:'copy'}]){
+  const p=structuredClone(source);edit(p);assert.equal(pageSchema.safeParse(p).success,false);
+ }
+ const p=structuredClone(source);p.sections=p.sections.filter((s:any)=>s.element!=='regneeksempel');assert.ok(pageSchema.safeParse(p).success);
+});
+test('local co-located content edits and native row order survive CMS save/restore without changing any master',()=>{
+ const original=localHomeFixture(),form=structuredClone(original),entry=entryForFile(cms,'app/src/content/pages/home.json');
+ const snapshots=globalElementIds.map(id=>readFileSync('src/content/global-elements/'+id+'.json'));
+ form.topSections[0].heading+=' CMS';form.sections.reverse();
+ const saved=JSON.parse(cmsJsonSave(original,form,entry,cms));assertPreservedContent(form,saved);assert.ok(pageSchema.safeParse(saved).success);
+ const restored=JSON.parse(cmsJsonSave(saved,original,entry,cms));assertPreservedContent(original,restored);
+ globalElementIds.forEach((id,i)=>assert.ok(readFileSync('src/content/global-elements/'+id+'.json').equals(snapshots[i])));
 });

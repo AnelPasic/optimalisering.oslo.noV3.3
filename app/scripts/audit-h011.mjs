@@ -1,4 +1,4 @@
-import {isHomepageSectionVisible} from '../src/lib/home-builder.ts';
+import {getHomepageBlocks,isHomepageSectionVisible} from '../src/lib/home-builder.ts';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 import { resolvePageHero } from '../src/lib/page-hero.ts';
@@ -16,7 +16,7 @@ for (const slug of ['home', 'priser', 'synlighet', 'konvertering']) {
   if (slug === 'home') {
     assert.ok(!html.includes('id="medon"'));
     const fit = html.match(/<section id="passer"[^>]*>(.*?)<\/section>/s)?.[1];
-    const locked = Object.values(home.sections).find(section => section.id === 'passer');
+    const locked = getHomepageBlocks(home).find(section => section.id === 'passer');
     assert.equal(Boolean(fit),isHomepageSectionVisible(locked));
     if(fit)for (const copy of [locked.eyebrow, locked.heading, ...locked.items.flatMap(item => [item.title, item.text])]) assert.ok(normalize(fit).includes(copy));
   }

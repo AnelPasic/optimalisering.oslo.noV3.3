@@ -1,0 +1,39 @@
+{
+  "_block": "content",
+  "uid": "42fceeca-61eb-49cd-b250-95060a060aa9",
+  "name": "Slik virker optimalisering",
+  "id": "mekanisme",
+  "eyebrow": "Start med det som begrenser resultatet",
+  "heading": "Slik finner vi hva som bør gjøres først",
+  "layout": "default",
+  "surface": "default",
+  "body": [
+    "Behovet avgjør tiltakene. Vi starter ikke med SEO eller en annen kanal bare fordi du kom inn på en bestemt side."
+  ],
+  "items": [
+    {
+      "title": "Finn flaskehalsen",
+      "text": "Se hvor kundereisen stopper: før besøket, på siden eller i veien til kontakt og kjøp.",
+      "boxVariant": "card",
+      "surface": "soft"
+    },
+    {
+      "title": "Prioriter tiltak",
+      "text": "Velg en fornuftig start ut fra behov, kommersiell verdi og det vi faktisk vet.",
+      "boxVariant": "card",
+      "surface": "soft"
+    },
+    {
+      "title": "Gjennomfør",
+      "text": "Gjør arbeidet som er avtalt. Omfang og ansvar skal være tydelig.",
+      "boxVariant": "card",
+      "surface": "soft"
+    },
+    {
+      "title": "Mål effekt",
+      "text": "Følg med på relevante henvendelser og kjøp. Se resultatene sammen med verdi og kostnader.",
+      "boxVariant": "card",
+      "surface": "soft"
+    }
+  ]
+}

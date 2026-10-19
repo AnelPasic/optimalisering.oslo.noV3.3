@@ -105,11 +105,11 @@ test('initialized optional internal links accept blank input while rejecting an 
 });
 
 test('raw preservation checks expose nonempty unmodeled repeater data loss', () => {
-  const original = JSON.parse(records.find(record => record.path.endsWith('/home.json'))!.bytes.toString());
-  (getHomepageBlock(original,'packages').content.items[0] as any).futureInternalMetadata = { token: 'must-survive' };
+  const original = JSON.parse(readFileSync('src/content/global-elements/priser.json','utf8'));
+  original.content.items[0].futureInternalMetadata = { token: 'must-survive' };
   const form = structuredClone(original);
-  form.title = 'H017B harmless memory-only edit';
-  const after = JSON.parse(cmsJsonSave(original, form, entryForFile(cms, 'app/src/content/pages/home.json'), cms));
+  form.content.heading = 'H017B harmless memory-only edit';
+  const after = JSON.parse(cmsJsonSave(original, form, entryForFile(cms, 'app/src/content/global-elements/priser.json'), cms));
   assert.throws(() => assertPreservedContent(form, after), /futureInternalMetadata.*nonempty content lost/);
 });
 

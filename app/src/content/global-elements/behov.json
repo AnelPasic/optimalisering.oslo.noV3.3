@@ -1,0 +1,38 @@
+{
+  "_block": "selector",
+  "uid": "31bd8ddb-5a47-4bc4-99b5-a5461e6103f6",
+  "id": "behov",
+  "name": "Behovsvelger",
+  "content": {
+    "heading": "Hva trenger du hjelp med?",
+    "items": [
+      {
+        "title": "Bli funnet",
+        "discipline": "Synlighet",
+        "description": "SEO, AI-synlighet og lokal synlighet når kundene leter etter det du tilbyr.",
+        "link": {
+          "label": "Se Synlighet",
+          "href": "/synlighet/"
+        }
+      },
+      {
+        "title": "Flere besøk til henvendelser og salg",
+        "discipline": "Konvertering",
+        "description": "Konverteringsoptimalisering for nettsider, landingssider og nettbutikker.",
+        "link": {
+          "label": "Se Konvertering",
+          "href": "/konvertering/"
+        }
+      },
+      {
+        "title": "Ja takk - Begge deler",
+        "discipline": "Synlighet X Konvertering",
+        "description": "Vi finner flaskehalsen og starter der det gir mest effekt.",
+        "link": {
+          "label": "Se alternativene",
+          "href": "/#priser"
+        }
+      }
+    ]
+  }
+}

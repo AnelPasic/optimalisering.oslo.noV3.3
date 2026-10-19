@@ -6,10 +6,10 @@ import { readFileSync } from 'node:fs';
 import YAML from 'yaml';
 import { pageSchema } from '../src/lib/content-schema.ts';
 import { headingAlignAttribute, headingAlignValues } from '../src/lib/heading-alignment.ts';
-import { cmsJsonSave, entryForFile, resolveField, assertPreservedContent } from './helpers/pages-cms-json.ts';
+import { cmsJsonSave, entryForFile, resolveField, assertPreservedContent, localHomeFixture } from './helpers/pages-cms-json.ts';
 
 const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
-const load=(name:string)=>JSON.parse(readFileSync(`src/content/pages/${name}.json`,'utf8'));
+const load=(name:string)=>name==='home'?localHomeFixture():JSON.parse(readFileSync(`src/content/pages/${name}.json`,'utf8'));
 
 test('safe mapping emits only a validated left override and leaves the homepage form model unchanged',()=>{
   assert.deepEqual(headingAlignValues,['center','left']);assert.equal(headingAlignAttribute('left'),'left');
@@ -20,11 +20,11 @@ test('safe mapping emits only a validated left override and leaves the homepage 
 
 test('section heading alignment accepts center/left; missing and cleared values default to center',()=>{
   for(const value of ['center','left',undefined,'',null]){
-    const home=load('home');sectionRecords(home).find((s:any)=>s.id==='mekanisme').headingAlign=value;
-    assert.equal(pageSchema.parse(home).sections.find(s=>s.id==='mekanisme')!.headingAlign,value==='left'?'left':'center');
+    const home=load('home');sectionRecords(home).find((s:any)=>s.id==='cms-local-fixture').headingAlign=value;
+    assert.equal(pageSchema.parse(home).sections.find(s=>s.id==='cms-local-fixture')!.headingAlign,value==='left'?'left':'center');
   }
   for(const value of ['right','justify','left extra','text-left','#fff',0,{},[]]){
-    const home=load('home');sectionRecords(home).find((s:any)=>s.id==='mekanisme').headingAlign=value;
+    const home=load('home');sectionRecords(home).find((s:any)=>s.id==='cms-local-fixture').headingAlign=value;
     assert.equal(pageSchema.safeParse(home).success,false,JSON.stringify(value));
   }
 });
@@ -44,13 +44,14 @@ test('ordinary and protected CMS heading models use the same select directly aft
 test('CMS Center/Left save and restore preserve unrelated section, card, surface and commercial fields',()=>{
   for(const name of ['home','synlighet','seo']){
     const original=load(name),entry=entryForFile(cms,`app/src/content/pages/${name}.json`);
-    for(const index of name==='synlighet'?[0,original.sections.length-1]:[Object.keys(original.sections).find((key:any)=>original.sections[key]._block==='content')!]){
-      const form=structuredClone(original);form.sections[index].headingAlign='left';
+    const target=(p:any,index:any)=>name==='home'?sectionRecords(p).find((s:any)=>s.id==='cms-local-fixture'):p.sections[index];
+    for(const index of name==='home'?['local']:name==='synlighet'?[0,original.sections.length-1]:[Object.keys(original.sections).find((key:any)=>original.sections[key]._block==='content')!]){
+      const form=structuredClone(original);target(form,index).headingAlign='left';
       const saved=JSON.parse(cmsJsonSave(original,form,entry,cms));assertPreservedContent(form,saved);assert.deepEqual(pageSchema.parse(saved),pageSchema.parse(form));
-      form.sections[index].headingAlign='center';const restored=JSON.parse(cmsJsonSave(saved,form,entry,cms));assertPreservedContent(form,restored);
-      assert.equal(pageSchema.parse(restored).sections.find(s=>s.id===form.sections[index].id)!.headingAlign,'center');
-      const originalForm=structuredClone(original);originalForm.sections[index].headingAlign??='';const exact=JSON.parse(cmsJsonSave(restored,originalForm,entry,cms));assertPreservedContent(original,exact);
-      const invalid=structuredClone(original);invalid.sections[index].headingAlign='justify';assert.throws(()=>cmsJsonSave(original,invalid,entry,cms));
+      target(form,index).headingAlign='center';const restored=JSON.parse(cmsJsonSave(saved,form,entry,cms));assertPreservedContent(form,restored);
+      assert.equal(pageSchema.parse(restored).sections.find(s=>s.id===target(form,index).id)!.headingAlign,'center');
+      const originalForm=structuredClone(original);target(originalForm,index).headingAlign??='';const exact=JSON.parse(cmsJsonSave(restored,originalForm,entry,cms));assertPreservedContent(original,exact);
+      const invalid=structuredClone(original);target(invalid,index).headingAlign='justify';assert.throws(()=>cmsJsonSave(original,invalid,entry,cms));
     }
   }
 });
