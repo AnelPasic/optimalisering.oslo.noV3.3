@@ -1,5 +1,8 @@
 # Review queue
 
+**H-022D / D-108 TEKNISK LEVERT — 2026-10-19.** Implementasjon2361f0f: faktisk designsystem «Kort med bilde» for Eurotents (`card md:card-side bg-base-100`, figure/Body), to ordinære koordinerte Cards under; overflødig proof-farge/spacing/høyde-CSS fjernet. Kun HomeProof.astro produktendret; eksisterende bilde,8 mastere/CMS, caseverdier og B bevart, tjeneste-primary kontrollert eksakt. Build19 sider/16 fokustester og kort1440/390 local/live PASS. Native54797d3f SUCCESS, Workerecf2b303 at100%; HTML matcher testet bygg. OWNER vurderer direkte på https://optimalisering-oslo-v33.anel.workers.dev/#resultater . H-024A3 OPEN, H-024B BLOCKED; noindex/intake av, ingen launch. Tidligere ACTIVE D-108 nedenfor er nå levert historikk; detaljert kort kvittering i CODEX-TO-CHATGPT.
+
+
 **ACTIVE D-108 / H-022D — OWNER VISUAL REVISE OF H-022C (2026-10-19).** H-022C was technically deployed but OWNER says still visually weak. Current scoped job `coordination/H022D-PROOF-DESIGN-SYSTEM-REUSE.md`: use **actual** /design-system/ «Kort med bilde» for one Eurotents website+results card, plus two real daisyUI Cards with aligned Nysta/Helt Opplagt metrics. No custom disconnected mint/lavender proof tile system. Preserve all current approved claims/periods/permissions, media asset, H-024A8G B and service primary proof. D-107 fast lane: direct main→noindex review Worker, focused QA, OWNER visual inspection after. H-024A3 OPEN, H-024B BLOCKED, no launch/index/intake.
 
 

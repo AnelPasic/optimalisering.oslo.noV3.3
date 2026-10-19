@@ -1,5 +1,16 @@
 # Codex to ChatGPT
 
+## H-022D / D-108 — PUBLISERT, OWNER VISUELL REVIEW
+
+2026-10-19. Implementasjon **2361f0f28449b646f80b60a3b3505add9e46a006**, fra fersk main4c4efa9. Kun `app/src/components/HomeProof.astro` er produktendret: Eurotents bruker designsystemdemoens faktiske `card md:card-side bg-base-100`, `figure.md:w-1/2`, `card-body gap-5`; øvrige case bruker samme vanlige Card/Body/Title. Egen mintflate, bildehøyder, padding/radius-overstyringer og proof-showcase-grid fjernet; bare nødvendig tall-/periodetypografi beholdes lokalt. Ingen ny komponentfamilie eller PageList/lenker. Eksisterende screenshot/featuredVisual, alle8 mastere, CMS-data, proofverdier/autoritet, B-rekkefølge og OWNER-assets urørt.
+
+**Lett QA:** build19 sider og16 fokustester PASS. Kort lokal + live1440/390 smoke: riktige Card-deler, bilde/tall/perioder, ingen overflow; noindex og deaktivert skjema. Begge tjenestesiders primary proof ble sammenlignet med før-Worker: tekst, størrelse og typografi eksakt uendret. Worker HTML matcher testet bygg. Ingen full testsuite, CMS-lagringsrunde eller nytt skjermbildearkiv.
+
+**Native:** Build **54797d3f-7ede-41a6-8329-f669749c74a5 SUCCESS** på implementasjons-SHA; aktiv Worker **ecf2b303-0717-4809-b9f6-6a0332ce2e14 at100%**, deployment309a9e76-1da6-4ab6-9424-f6a683acb161. Faktisk preview: https://optimalisering-oslo-v33.anel.workers.dev/#resultater . Kvitteringens SHA finnes i Git-historikken.
+
+OWNER vurderer visuelt etter publisering. H-024A3 OPEN, H-024B BLOCKED; ingen produksjonslansering, indeksering eller aktiv innsending. H-022C er visuelt REVISE under D-108; ny OWNER-aksept er ikke utledet av teknisk levering.
+
+
 ## H-022C / D-107 — PUBLISERT TIL REVIEW, OWNER VISUELL VURDERING
 
 2026-10-19. Implementasjon **0504207201df1a7ec0c965450be2e6b06ea4c401**, fra fersk main6dc04d1. Eurotents er ett integrert case: ekte screenshot av kundens offentlige nettside, ROAS som hovedresultat og annonseforbruk inne i samme kort. Nysta/Helt Opplagt har samordnede kort med uendrede kunde-/måle-/kilde-/periodebetegnelser og tall. Ekte daisyUI Card/Body/Title; eksisterende type/farge/radius-tokens. Bildet er lokal WebP161800bytes; kilde/dato/alt/hash i `H022C-MEDIA-SOURCE.json`, kun review-presentasjon.
