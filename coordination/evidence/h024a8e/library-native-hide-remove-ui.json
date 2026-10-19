@@ -1,0 +1,30 @@
+{
+  "h8e-hidden-final-ui": [
+    "    uid=139_53 button \"Save\"",
+    "        uid=139_109 \"Valgfrie seksjoner Topp\"",
+    "        uid=139_118 \"CMS-prøve Topp\"",
+    "        uid=147_1 combobox \"Publisert\" autocomplete=\"list\" expandable haspopup=\"listbox\" value=\"Skjult – behold i CMS\"",
+    "        uid=147_6 textbox \"Navn i seksjonslisten\" value=\"CMS-prøve Topp\"",
+    "        uid=147_15 textbox \"Overskrift\" value=\"CMS-prøve Topp redigert\"",
+    "        uid=139_124 \"regneeksempel\"",
+    "        uid=140_6 combobox \"Publisert\" autocomplete=\"list\" expandable haspopup=\"listbox\" value=\"Skjult – behold i CMS\"",
+    "        uid=139_131 \"Hovedseksjoner\"",
+    "        uid=139_158 \"passer\"",
+    "        uid=139_164 \"mekanisme\"",
+    "        uid=142_5 combobox \"Publisert\" autocomplete=\"list\" expandable haspopup=\"listbox\" value=\"Skjult – behold i CMS\"",
+    "        uid=139_171 \"Valgfrie seksjoner Bunn\"",
+    "        uid=139_174 \"CMS-prøve Bunn\"",
+    "        uid=149_1 combobox \"Publisert\" autocomplete=\"list\" expandable focusable focused haspopup=\"listbox\" value=\"Skjult – behold i CMS\"",
+    "        uid=149_6 textbox \"Navn i seksjonslisten\" value=\"CMS-prøve Bunn\"",
+    "        uid=149_15 textbox \"Overskrift\" value=\"CMS-prøve Bunn redigert\"",
+    "        uid=139_180 \"sporsmal\"",
+    "        uid=144_5 combobox \"Publisert\" autocomplete=\"list\" expandable haspopup=\"listbox\" value=\"Skjult – behold i CMS\""
+  ],
+  "h8e-removed-ui": [
+    "    uid=163_51 button \"Save\"",
+    "        uid=163_105 \"Valgfrie seksjoner Topp\"",
+    "        uid=163_114 \"Hovedseksjoner\"",
+    "        uid=163_141 \"passer\"",
+    "        uid=163_147 \"Valgfrie seksjoner Bunn\""
+  ]
+}

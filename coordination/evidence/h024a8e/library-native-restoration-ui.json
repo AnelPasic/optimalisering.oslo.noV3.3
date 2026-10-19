@@ -1,0 +1,47 @@
+{
+  "h8e-native-main-readd": [
+    "    uid=181_51 button \"Save\"",
+    "        uid=181_64 combobox \"Tekst venstre / bilde høyre\" autocomplete=\"list\" expandable haspopup=\"listbox\" value=\"Tekst venstre / bilde høyre\"",
+    "        uid=181_91 combobox \"Select...\" autocomplete=\"list\" expandable haspopup=\"listbox\" value=\"Bilde\"",
+    "        uid=181_105 \"Valgfrie seksjoner Topp\"",
+    "        uid=181_108 \"Test før behovsregler\"",
+    "        uid=181_114 \"Hovedseksjoner\"",
+    "        uid=181_117 \"behov\"",
+    "        uid=181_141 \"passer\"",
+    "        uid=181_147 \"mekanisme\"",
+    "        uid=185_0 \"regneeksempel\"",
+    "        uid=184_4 combobox \"Select...\" autocomplete=\"list\" expandable haspopup=\"listbox\" value=\"Konverteringskalkulator\"",
+    "        uid=188_0 \"sporsmal\"",
+    "        uid=187_4 combobox \"Select...\" autocomplete=\"list\" expandable focusable focused haspopup=\"listbox\" value=\"Ofte stilte spørsmål\"",
+    "        uid=181_153 \"Valgfrie seksjoner Bunn\""
+  ],
+  "h8e-native-restored-ui": [
+    "    uid=190_53 button \"Save\"",
+    "        uid=190_68 combobox \"Tekst venstre / bilde høyre\" autocomplete=\"list\" expandable haspopup=\"listbox\" value=\"Tekst venstre / bilde høyre\"",
+    "        uid=190_95 combobox \"Select...\" autocomplete=\"list\" expandable haspopup=\"listbox\" value=\"Bilde\"",
+    "        uid=190_109 \"Valgfrie seksjoner Topp\"",
+    "        uid=190_112 \"Test før behovsregler\"",
+    "        uid=190_119 \"Hovedseksjoner\"",
+    "        uid=190_122 \"behov\"",
+    "        uid=197_0 \"regneeksempel\"",
+    "        uid=192_0 \"mekanisme\"",
+    "        uid=192_4 \"passer\"",
+    "        uid=190_164 \"sporsmal\"",
+    "          uid=191_18 \"Draggable item 88dd313e-df5f-4dfe-bd3b-f0362a82f151 was dropped over droppable area 96d5885e-a8cb-4ced-82c3-c892fca8f53d\"",
+    "        uid=190_171 \"Valgfrie seksjoner Bunn\""
+  ],
+  "h8e-final-cms": [
+    "    uid=198_53 button \"Save\" disableable disabled",
+    "        uid=198_68 combobox \"Tekst venstre / bilde høyre\" autocomplete=\"list\" expandable haspopup=\"listbox\" value=\"Tekst venstre / bilde høyre\"",
+    "        uid=198_95 combobox \"Select...\" autocomplete=\"list\" expandable haspopup=\"listbox\" value=\"Bilde\"",
+    "        uid=198_109 \"Valgfrie seksjoner Topp\"",
+    "        uid=198_112 \"Test før behovsregler\"",
+    "        uid=198_119 \"Hovedseksjoner\"",
+    "        uid=198_122 \"behov\"",
+    "        uid=198_128 \"regneeksempel\"",
+    "        uid=198_152 \"mekanisme\"",
+    "        uid=198_158 \"passer\"",
+    "        uid=198_164 \"sporsmal\"",
+    "        uid=198_171 \"Valgfrie seksjoner Bunn\""
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "masterEdit": [
+    "uid=98_0 RootWebArea \"Konverteringskalkulator | anelpasic/optimalisering.oslo.nov3.3@main | Pages CMS\" url=\"https://app.pagescms.org/anelpasic/optimalisering.oslo.nov3.3/main/file/globalCalculator\"",
+    "  uid=98_26 button \"Globale elementer\"",
+    "  uid=98_27 link \"Behovsvelger\" url=\"https://app.pagescms.org/anelpasic/optimalisering.oslo.nov3.3/main/file/globalSelector\"",
+    "  uid=98_29 link \"Konverteringskalkulator\" url=\"https://app.pagescms.org/anelpasic/optimalisering.oslo.nov3.3/main/file/globalCalculator\"",
+    "  uid=98_31 link \"Gratis sjekk / kontaktskjema\" url=\"https://app.pagescms.org/anelpasic/optimalisering.oslo.nov3.3/main/file/globalAssessment\"",
+    "  uid=98_33 link \"Pakker og priser\" url=\"https://app.pagescms.org/anelpasic/optimalisering.oslo.nov3.3/main/file/globalPackages\"",
+    "  uid=98_35 link \"Kunderesultater\" url=\"https://app.pagescms.org/anelpasic/optimalisering.oslo.nov3.3/main/file/globalProof\"",
+    "  uid=98_39 link \"Hvem det passer for\" url=\"https://app.pagescms.org/anelpasic/optimalisering.oslo.nov3.3/main/file/globalFit\"",
+    "  uid=98_41 link \"Ofte stilte spørsmål\" url=\"https://app.pagescms.org/anelpasic/optimalisering.oslo.nov3.3/main/file/globalFaq\"",
+    "      uid=98_67 \"Globale elementer\"",
+    "    uid=98_70 button \"Save\"",
+    "        uid=98_80 textbox \"Overskrift\" value=\"Hva betyr flere relevante besøk og en bedre kjøpsvei? (CMS-prøve)\"",
+    "        uid=98_138 textbox \"Forbehold\" multiline value=\"Hypotetisk regneeksempel - ikke et kundecase.\""
+  ],
+  "nativeSort": [
+    "  uid=136_26 button \"Globale elementer\"",
+    "    uid=136_53 button \"Save\"",
+    "        uid=136_109 \"Valgfrie seksjoner Topp\"",
+    "        uid=136_115 \"Dra for å sortere innenfor gruppen. Globalt innhold redigeres under Globale elementer og brukes på tvers av dette nettstedet. Fjern her betyr fjern fra denne siden, ikke slett originalen. Vanlig innhold redigeres i raden.\"",
+    "        uid=137_1 \"CMS-prøve Topp\"",
+    "        uid=137_4 \"Dra for å sortere innenfor gruppen. Globalt innhold redigeres under Globale elementer og brukes på tvers av dette nettstedet. Fjern her betyr fjern fra denne siden, ikke slett originalen. Vanlig innhold redigeres i raden.\"",
+    "        uid=137_5 \"regneeksempel\"",
+    "        uid=137_8 \"Dra for å sortere innenfor gruppen. Globalt innhold redigeres under Globale elementer og brukes på tvers av dette nettstedet. Fjern her betyr fjern fra denne siden, ikke slett originalen. Vanlig innhold redigeres i raden.\"",
+    "          uid=137_9 \"Draggable item a5ff4cd9-f518-4e88-9fb1-f251af6c0e54 was dropped over droppable area 6d77adfe-c540-48b1-9feb-e8384b68f016\"",
+    "        uid=136_131 \"Hovedseksjoner\"",
+    "        uid=136_137 \"Dra for å sortere innenfor gruppen. Globalt innhold redigeres under Globale elementer og brukes på tvers av dette nettstedet. Fjern her betyr fjern fra denne siden, ikke slett originalen. Vanlig innhold redigeres i raden.\"",
+    "        uid=136_143 \"Dra for å sortere innenfor gruppen. Globalt innhold redigeres under Globale elementer og brukes på tvers av dette nettstedet. Fjern her betyr fjern fra denne siden, ikke slett originalen. Vanlig innhold redigeres i raden.\"",
+    "        uid=136_149 \"Dra for å sortere innenfor gruppen. Globalt innhold redigeres under Globale elementer og brukes på tvers av dette nettstedet. Fjern her betyr fjern fra denne siden, ikke slett originalen. Vanlig innhold redigeres i raden.\"",
+    "        uid=136_155 \"Dra for å sortere innenfor gruppen. Globalt innhold redigeres under Globale elementer og brukes på tvers av dette nettstedet. Fjern her betyr fjern fra denne siden, ikke slett originalen. Vanlig innhold redigeres i raden.\"",
+    "        uid=136_158 \"passer\"",
+    "        uid=136_161 \"Dra for å sortere innenfor gruppen. Globalt innhold redigeres under Globale elementer og brukes på tvers av dette nettstedet. Fjern her betyr fjern fra denne siden, ikke slett originalen. Vanlig innhold redigeres i raden.\"",
+    "        uid=136_164 \"mekanisme\"",
+    "        uid=136_167 \"Dra for å sortere innenfor gruppen. Globalt innhold redigeres under Globale elementer og brukes på tvers av dette nettstedet. Fjern her betyr fjern fra denne siden, ikke slett originalen. Vanlig innhold redigeres i raden.\"",
+    "        uid=136_171 \"Valgfrie seksjoner Bunn\"",
+    "        uid=136_174 \"CMS-prøve Bunn\"",
+    "        uid=136_177 \"Dra for å sortere innenfor gruppen. Globalt innhold redigeres under Globale elementer og brukes på tvers av dette nettstedet. Fjern her betyr fjern fra denne siden, ikke slett originalen. Vanlig innhold redigeres i raden.\"",
+    "        uid=136_180 \"sporsmal\"",
+    "        uid=136_183 \"Dra for å sortere innenfor gruppen. Globalt innhold redigeres under Globale elementer og brukes på tvers av dette nettstedet. Fjern her betyr fjern fra denne siden, ikke slett originalen. Vanlig innhold redigeres i raden.\""
+  ]
+}

@@ -1,0 +1,271 @@
+{
+  "phase": "pilot-hidden",
+  "rows": [
+    {
+      "path": "_astro/_..CnAgUTIZ.css",
+      "hash": "af150656d079ebe936d72b69dc796dd7e70841658078aa6f7fabd3352d388176",
+      "baselineEqual": true
+    },
+    {
+      "path": "_astro/AssessmentForm.astro_astro_type_script_index_0_lang.DXxYcZg1.js",
+      "hash": "c4d7c940b839bd98bee27ef5236a3896c2cfa0069f15f013d24d36b031691b52",
+      "baselineEqual": true
+    },
+    {
+      "path": "_astro/Attribution.astro_astro_type_script_index_0_lang.Un5106dL.js",
+      "hash": "463abead88b74f672d0961e40e447d34f97516ca56b83b22c55fa85a26c63bce",
+      "baselineEqual": true
+    },
+    {
+      "path": "_astro/attribution.BN71fkX8.js",
+      "hash": "ab2982e50bcc23c4592f3ccfda077366973a32eaba9f683e245b1b7082990b57",
+      "baselineEqual": true
+    },
+    {
+      "path": "_astro/commercial-text.BgMS7NB9.css",
+      "hash": "c4f5ae916b9ed4909ed17d64b159c87ff4e546c077e4f4026d43c0eb0bc4d887",
+      "baselineEqual": true
+    },
+    {
+      "path": "_astro/CommercialHero.B_KAAJT3.css",
+      "hash": "3a7d05cca6605a492254cd43981a4739d975035b733cff0e59bf08b82440fc86",
+      "baselineEqual": true
+    },
+    {
+      "path": "_astro/cursor-click.BNiCtsYB.svg",
+      "hash": "ab146e15194ce11c438aac2f6e45d7a0082bbab5f2cc8d9816140eab848246f4",
+      "baselineEqual": true
+    },
+    {
+      "path": "_astro/figtree-latin-ext-wght-normal.DCwSJGxG.woff2",
+      "hash": "bf7828e2c258cffcfa50a048ee388a36b95bc16b452e8d36fa797635dbe15965",
+      "baselineEqual": true
+    },
+    {
+      "path": "_astro/figtree-latin-wght-normal.D_ZTVpCC.woff2",
+      "hash": "4ba7d3d096695818fe0686be4f1e82c6b05134e18a22260336130335027462dd",
+      "baselineEqual": true
+    },
+    {
+      "path": "_astro/instrument-sans-latin-ext-wght-normal.B5bTHO_g.woff2",
+      "hash": "c4fcfea41f2c1cfeea9211fa43679845454a1d0e0d7e95e069c7e73c4ae302d2",
+      "baselineEqual": true
+    },
+    {
+      "path": "_astro/instrument-sans-latin-wght-normal.BbzFLZTg.woff2",
+      "hash": "2ee17598a98d8a59e4df8152d015bec9ab8e4d5672cc0ab42bef806b568e3971",
+      "baselineEqual": true
+    },
+    {
+      "path": "_astro/lead.C_Cs7EHy.js",
+      "hash": "50fab7f154a411ee9b6066620c62f7702378ed02df2b4efe29714d5a9cf5d0d3",
+      "baselineEqual": true
+    },
+    {
+      "path": "_astro/magnifying-glass.hfmbFh4V.svg",
+      "hash": "f9fa2561978a9a3291e8ae0ebfcb651104f5069fade8f84871627bca68889cde",
+      "baselineEqual": true
+    },
+    {
+      "path": "_astro/PackageOrder.astro_astro_type_script_index_0_lang.D26b2l3v.js",
+      "hash": "beb94d04d76e0e1a67e8d0e61024552f68ae814780ab009c185655d48bfe3999",
+      "baselineEqual": true
+    },
+    {
+      "path": "_astro/TerminologyUI.astro_astro_type_script_index_0_lang.BBkGcnad.js",
+      "hash": "5e2f38ade2243ab65b5fe5474ac9308b6ef117ec6b42c2ed38d369287a12a0be",
+      "baselineEqual": true
+    },
+    {
+      "path": "_astro/trend-up.DXQpIGKy.svg",
+      "hash": "d99a74c39fecc099ed7e774f6306fc8137ff63011edea27e06e17c9582454ffb",
+      "baselineEqual": true
+    },
+    {
+      "path": "404.html",
+      "hash": "110c13d3548d5d6077fb601337dfcc3990a329d5276519e08fe554c5dc65a252",
+      "baselineEqual": true
+    },
+    {
+      "path": "ai-synlighet/index.html",
+      "hash": "5870e479bf3b28cd3b0ff3e85884101531f9defb8e0f5d9364dd3caed4c86097",
+      "baselineEqual": true
+    },
+    {
+      "path": "begreper/index.html",
+      "hash": "801fa54a74a14a97635df78fd12a85ece2c7dbac687cf739ed8aefd743b3a167",
+      "baselineEqual": true
+    },
+    {
+      "path": "design-system/index.html",
+      "hash": "57cad9e2bfd37dba3b5bf9a14f775d2732a57602c45fe9bb0b3b26447d9ea76c",
+      "baselineEqual": true
+    },
+    {
+      "path": "favicon.svg",
+      "hash": "ddecf51188957cc6aa747b6564b33cfa23a1c36fd732a5959c3efc7fc081b9b5",
+      "baselineEqual": true
+    },
+    {
+      "path": "images/home/happycustomer.png",
+      "hash": "f94c83621f12f3c0828f0cc910947c22bb2f4a44114c5cf2a4583422a9c94ff7",
+      "baselineEqual": true
+    },
+    {
+      "path": "images/home/happycustomer2.png",
+      "hash": "4bf02ff0d92bf943c061f0b4c1f76ceefcc6737a45db0e3691cc744a5a9349a8",
+      "baselineEqual": true
+    },
+    {
+      "path": "images/home/happycustomer3.png",
+      "hash": "72d91b2e1d911830c5583033b4b22b30764b7ada9bc8bf09e92522b27e00a355",
+      "baselineEqual": true
+    },
+    {
+      "path": "images/home/hero-customer-02.webp",
+      "hash": "20190965a8a08a61d6ae73e6d29e7e05d843186f129f683ec8242bb85aca5c91",
+      "baselineEqual": true
+    },
+    {
+      "path": "images/home/hero-customer-03.webp",
+      "hash": "f18db9a1421c663ff0b8454fb9ba5e9783af64f2d6a3370370ce3f185792b795",
+      "baselineEqual": true
+    },
+    {
+      "path": "images/home/hero-customer-preview.svg",
+      "hash": "50d6c84dbbca87cef8d515f923118e82a4ac559f9df5de3f763e81adebfbb72e",
+      "baselineEqual": true
+    },
+    {
+      "path": "images/home/hero-customer.webp",
+      "hash": "84756d154b710a75c7bf8a4b8f5c3c36e03ff6fe01c7e7cccf6a8dc5d9ff08c7",
+      "baselineEqual": true
+    },
+    {
+      "path": "images/home/README.md",
+      "hash": "3b71e385fcad78b73ba60e65988bec071a344a4aff59ab880e252a06080a9b74",
+      "baselineEqual": true
+    },
+    {
+      "path": "images/listing/.gitkeep",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "baselineEqual": true
+    },
+    {
+      "path": "images/pricing/README.md",
+      "hash": "ef38d04dd27bc332a82bb971fe580a7cf530fec6d561fe9debde5bd4601e4536",
+      "baselineEqual": true
+    },
+    {
+      "path": "images/proof/eurotents-ask-review.webp",
+      "hash": "3ae490f5e9ef23e0c8cf93bc50b1084d3f625908d0b5af2477c30813dd434592",
+      "baselineEqual": true
+    },
+    {
+      "path": "images/services/.gitkeep",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "baselineEqual": true
+    },
+    {
+      "path": "images/services/discoveringlocalfavorite-1.png",
+      "hash": "78a7f6932e5b743b54aace0e602b56908916d59931e4dcf61c6acf3a3503f27c",
+      "baselineEqual": true
+    },
+    {
+      "path": "images/services/discoveringlocalfavorite.png",
+      "hash": "6f9b71291019bef4aac87bf1e53426efcb843c63bbb17ab7b7a2ff7829a92c06",
+      "baselineEqual": true
+    },
+    {
+      "path": "images/services/happy-shopowner.png",
+      "hash": "6cb0884c034e16b09590ddbee7040d2c68075233a77ad176a9d3ec4b60b2d51b",
+      "baselineEqual": true
+    },
+    {
+      "path": "index.html",
+      "hash": "27bbace77ab8a36ac42d8eac70ee897418b6b16564d42ebc1b287557473c30c7",
+      "baselineEqual": false
+    },
+    {
+      "path": "innsikt/hva-bor-optimaliseres-forst/index.html",
+      "hash": "567550b01f3f70535628816d397f6f55ed4c49e658bb96705099dd070e3cf495",
+      "baselineEqual": true
+    },
+    {
+      "path": "innsikt/index.html",
+      "hash": "79391889e9dace5d66ff3c65a42ddf2fac1029ccbadcf2cbffffb90c3e4e1d9f",
+      "baselineEqual": true
+    },
+    {
+      "path": "innsikt/male-effekt-av-optimalisering/index.html",
+      "hash": "8c43fbdabc008b31af5abc5a1096cf2385a25eba996039d497dce51e9a3eeb4e",
+      "baselineEqual": true
+    },
+    {
+      "path": "kontakt/index.html",
+      "hash": "3a11f61c87c08e5eb0b71cc12f2b19ce5d6badf63e7e25f33d2a9e283f18fcf1",
+      "baselineEqual": true
+    },
+    {
+      "path": "konvertering/index.html",
+      "hash": "027927b53f4a874428674d418e992ae5475878336bfaa0c68aeae91e04c1bd8e",
+      "baselineEqual": true
+    },
+    {
+      "path": "licenses/phosphor-icons.txt",
+      "hash": "b5b1f1da112d18ea2147decfd48ddc1bf2b5aeb6c265381579340e95b15a2bb2",
+      "baselineEqual": true
+    },
+    {
+      "path": "nettbutikkoptimalisering/index.html",
+      "hash": "493bd2a4889304d46583bfa3c19e8d079c3aa663e70ea2bba08ac75cf7e721a4",
+      "baselineEqual": true
+    },
+    {
+      "path": "om/index.html",
+      "hash": "de74d152b897d604e1293c3384757c7c5ed6ba5bcf62e7b6214a686108900cb4",
+      "baselineEqual": true
+    },
+    {
+      "path": "personvern/index.html",
+      "hash": "650512bdeb8548fa38730bcb01595bbdf5e539fc526b72581d6b1b187bcbacf0",
+      "baselineEqual": true
+    },
+    {
+      "path": "priser/index.html",
+      "hash": "e9ff16a32b37a622f8c48239183917664a313f06da41a258bd9c9cee29642374",
+      "baselineEqual": true
+    },
+    {
+      "path": "robots.txt",
+      "hash": "331ea9090db0c9f6f597bd9840fd5b171830f6e0b3ba1cb24dfa91f0c95aedc1",
+      "baselineEqual": true
+    },
+    {
+      "path": "seo/index.html",
+      "hash": "2e3775ecc6d28070bcda845898fbf166bcea399f98e0eddcd028cd0e0b2c44e0",
+      "baselineEqual": true
+    },
+    {
+      "path": "sitemap.xml",
+      "hash": "68ab08991efaca902bcb8a6518106d8b29964c5651f39abbb7eb7c9713ca2770",
+      "baselineEqual": true
+    },
+    {
+      "path": "synlighet/index.html",
+      "hash": "7b5d4e223b601ee60bce13acf24837709e211c2ce4c7b04e7d08ef1039fb0415",
+      "baselineEqual": true
+    },
+    {
+      "path": "vilkar/index.html",
+      "hash": "21dbdc2446ca1560c236ab8c10eed46aaa6bb14f6f6067b88a76d8321ccb571f",
+      "baselineEqual": true
+    },
+    {
+      "path": "vurdering/index.html",
+      "hash": "81a2fe5b2a6703170b6c28543f36255db8f9aea516cc53791e72637223023199",
+      "baselineEqual": true
+    }
+  ],
+  "hiddenCalculatorScan": true
+}

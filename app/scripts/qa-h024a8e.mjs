@@ -29,7 +29,7 @@ try{for(const route of routes)for(const width of [1440,900,390,320]){
    for(const block of all.filter(b=>!isHomepageSectionVisible(b)))assert.equal(await page.locator(`#${block.id}`).count(),0,'Hidden placement omitted from DOM');
   }
   assert.equal(await page.locator('[data-home-assessment] button[type=submit]:not(:disabled)').count(),0);
-  if(phase==='baseline'||process.env.QA_SCREENSHOT)await page.screenshot({path:`${out}/home-${width}.png`,fullPage:true});
+  if(phase==='baseline'||process.env.QA_SCREENSHOT)await page.screenshot({path:`${out}/${route==='/'?'home':'global-elements'}-${width}.png`,fullPage:true});
  }
  assert.ok(/noindex/.test((await page.locator('meta[name=robots]').getAttribute('content'))||''));
  if(reference&&!process.env.QA_VARIANT&&route!=='/design-system/global-elements/'){

@@ -1,0 +1,89 @@
+
+> optimalisering-oslo-v3-3@0.1.0 check
+> astro check
+
+01:56:27 [content] Syncing content
+01:56:27 [content] Synced content
+01:56:27 [types] Generated 592ms
+01:56:27 [check] Getting diagnostics for Astro files in E:\Codex\optimalisering.oslo.noV3.3\app...
+[96mscripts/qa-intake-h017a.mjs[0m:[93m65[0m:[93m68[0m - [93mwarning[0m[90m ts(2568): [0mProperty 'submit' may not exist on type 'HTMLElement | SVGElement'. Did you mean 'onsubmit'?
+  Property 'submit' does not exist on type 'HTMLElement'.
+
+[7m65[0m   await page.locator('[data-package-order]').evaluate(form => form.submit());
+[7m  [0m [93m                                                                   ~~~~~~[0m
+
+[96mtests/h012-pricing.test.ts[0m:[93m12[0m:[93m99[0m - [91merror[0m[90m ts(2339): [0mProperty 'content' does not exist on type '{ _block: "content"; heading: string; body: string[]; surface: "default" | "base" | "soft" | "mint" | "lavender" | "dark"; headingAlign: "center" | "left"; layout: "default" | "two-columns" | "three-columns" | "stacked"; ... 6 more ...; visibility?: "hidden" | undefined; } | ... 5 more ... | { ...; }'.
+  Property 'content' does not exist on type '{ _block: "content"; heading: string; body: string[]; surface: "default" | "base" | "soft" | "mint" | "lavender" | "dark"; headingAlign: "center" | "left"; layout: "default" | "two-columns" | "three-columns" | "stacked"; ... 6 more ...; visibility?: "hidden" | undefined; }'.
+
+[7m12[0m   assert.equal(homepageBlockSchema.parse({...getGlobalElement('priser'),content:edited.packages}).content.items[2].pricePrefix, 'fra');
+[7m  [0m [91m                                                                                                  ~~~~~~~[0m
+[96mtests/h012-pricing.test.ts[0m:[93m5[0m:[93m1[0m - [93mwarning[0m[90m ts(6133): [0m'pageSchema' is declared but its value is never read.
+
+[7m5[0m import { pageSchema } from '../src/lib/content-schema.ts';
+[7m [0m [93m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[96mtests/h013-visual.test.ts[0m:[93m17[0m:[93m29[0m - [91merror[0m[90m ts(2339): [0mProperty 'content' does not exist on type '{ _block: "content"; heading: string; body: string[]; surface: "default" | "base" | "soft" | "mint" | "lavender" | "dark"; headingAlign: "center" | "left"; layout: "default" | "two-columns" | "three-columns" | "stacked"; ... 6 more ...; visibility?: "hidden" | undefined; } | ... 5 more ... | { ...; }'.
+  Property 'content' does not exist on type '{ _block: "content"; heading: string; body: string[]; surface: "default" | "base" | "soft" | "mint" | "lavender" | "dark"; headingAlign: "center" | "left"; layout: "default" | "two-columns" | "three-columns" | "stacked"; ... 6 more ...; visibility?: "hidden" | undefined; }'.
+
+[7m17[0m     assert.deepEqual(parsed.content.items[i].iconItems, fixture.content.items[i].iconItems);
+[7m  [0m [91m                            ~~~~~~~[0m
+[96mtests/h013-visual.test.ts[0m:[93m16[0m:[93m29[0m - [91merror[0m[90m ts(2339): [0mProperty 'content' does not exist on type '{ _block: "content"; heading: string; body: string[]; surface: "default" | "base" | "soft" | "mint" | "lavender" | "dark"; headingAlign: "center" | "left"; layout: "default" | "two-columns" | "three-columns" | "stacked"; ... 6 more ...; visibility?: "hidden" | undefined; } | ... 5 more ... | { ...; }'.
+  Property 'content' does not exist on type '{ _block: "content"; heading: string; body: string[]; surface: "default" | "base" | "soft" | "mint" | "lavender" | "dark"; headingAlign: "center" | "left"; layout: "default" | "two-columns" | "three-columns" | "stacked"; ... 6 more ...; visibility?: "hidden" | undefined; }'.
+
+[7m16[0m     assert.deepEqual(parsed.content.items[i].visualAsset, fixture.content.items[i].visualAsset);
+[7m  [0m [91m                            ~~~~~~~[0m
+
+[96mtests/h014-cms.test.ts[0m:[93m12[0m:[93m44[0m - [91merror[0m[90m ts(2339): [0mProperty 'content' does not exist on type '{ _block: "content"; heading: string; body: string[]; surface: "default" | "base" | "soft" | "mint" | "lavender" | "dark"; headingAlign: "center" | "left"; layout: "default" | "two-columns" | "three-columns" | "stacked"; ... 6 more ...; visibility?: "hidden" | undefined; } | ... 5 more ... | { ...; }'.
+  Property 'content' does not exist on type '{ _block: "content"; heading: string; body: string[]; surface: "default" | "base" | "soft" | "mint" | "lavender" | "dark"; headingAlign: "center" | "left"; layout: "default" | "two-columns" | "three-columns" | "stacked"; ... 6 more ...; visibility?: "hidden" | undefined; }'.
+
+[7m12[0m   const parsed = pageSchema.parse(fixture).content.items[0];
+[7m  [0m [91m                                           ~~~~~~~[0m
+
+[96mtests/h015-cms.test.ts[0m:[93m16[0m:[93m42[0m - [91merror[0m[90m ts(2339): [0mProperty 'content' does not exist on type '{ _block: "content"; heading: string; body: string[]; surface: "default" | "base" | "soft" | "mint" | "lavender" | "dark"; headingAlign: "center" | "left"; layout: "default" | "two-columns" | "three-columns" | "stacked"; ... 6 more ...; visibility?: "hidden" | undefined; } | ... 5 more ... | { ...; }'.
+  Property 'content' does not exist on type '{ _block: "content"; heading: string; body: string[]; surface: "default" | "base" | "soft" | "mint" | "lavender" | "dark"; headingAlign: "center" | "left"; layout: "default" | "two-columns" | "three-columns" | "stacked"; ... 6 more ...; visibility?: "hidden" | undefined; }'.
+
+[7m16[0m   assert.equal(pageSchema.parse(fixture).content.items[0].visualCaption?.support,undefined);
+[7m  [0m [91m                                         ~~~~~~~[0m
+[96mtests/h015-cms.test.ts[0m:[93m12[0m:[93m42[0m - [91merror[0m[90m ts(2339): [0mProperty 'content' does not exist on type '{ _block: "content"; heading: string; body: string[]; surface: "default" | "base" | "soft" | "mint" | "lavender" | "dark"; headingAlign: "center" | "left"; layout: "default" | "two-columns" | "three-columns" | "stacked"; ... 6 more ...; visibility?: "hidden" | undefined; } | ... 5 more ... | { ...; }'.
+  Property 'content' does not exist on type '{ _block: "content"; heading: string; body: string[]; surface: "default" | "base" | "soft" | "mint" | "lavender" | "dark"; headingAlign: "center" | "left"; layout: "default" | "two-columns" | "three-columns" | "stacked"; ... 6 more ...; visibility?: "hidden" | undefined; }'.
+
+[7m12[0m   const parsed=pageSchema.parse(fixture).content.items[0];
+[7m  [0m [91m                                         ~~~~~~~[0m
+
+[96mtests/h016-cms.test.ts[0m:[93m30[0m:[93m41[0m - [91merror[0m[90m ts(2339): [0mProperty 'content' does not exist on type '{ _block: "content"; heading: string; body: string[]; surface: "default" | "base" | "soft" | "mint" | "lavender" | "dark"; headingAlign: "center" | "left"; layout: "default" | "two-columns" | "three-columns" | "stacked"; ... 6 more ...; visibility?: "hidden" | undefined; } | ... 5 more ... | { ...; }'.
+  Property 'content' does not exist on type '{ _block: "content"; heading: string; body: string[]; surface: "default" | "base" | "soft" | "mint" | "lavender" | "dark"; headingAlign: "center" | "left"; layout: "default" | "two-columns" | "three-columns" | "stacked"; ... 6 more ...; visibility?: "hidden" | undefined; }'.
+
+[7m30[0m   assert.equal(pageSchema.parse(edited).content.items[0].cta.label,'Bestill denne pakken');
+[7m  [0m [91m                                        ~~~~~~~[0m
+
+[96mtests/proof-presentation.test.ts[0m:[93m46[0m:[93m92[0m - [91merror[0m[90m ts(2339): [0mProperty 'content' does not exist on type '{ _block: "content"; heading: string; body: string[]; surface: "default" | "base" | "soft" | "mint" | "lavender" | "dark"; headingAlign: "center" | "left"; layout: "default" | "two-columns" | "three-columns" | "stacked"; ... 6 more ...; visibility?: "hidden" | undefined; } | ... 5 more ... | { ...; }'.
+  Property 'content' does not exist on type '{ _block: "content"; heading: string; body: string[]; surface: "default" | "base" | "soft" | "mint" | "lavender" | "dark"; headingAlign: "center" | "left"; layout: "default" | "two-columns" | "three-columns" | "stacked"; ... 6 more ...; visibility?: "hidden" | undefined; }'.
+
+[7m46[0m     else assert.deepEqual(resolveFeaturedProofVisual(parsed.content.featuredVisual, parsed.content, records), edit);
+[7m  [0m [91m                                                                                           ~~~~~~~[0m
+[96mtests/proof-presentation.test.ts[0m:[93m46[0m:[93m61[0m - [91merror[0m[90m ts(2339): [0mProperty 'content' does not exist on type '{ _block: "content"; heading: string; body: string[]; surface: "default" | "base" | "soft" | "mint" | "lavender" | "dark"; headingAlign: "center" | "left"; layout: "default" | "two-columns" | "three-columns" | "stacked"; ... 6 more ...; visibility?: "hidden" | undefined; } | ... 5 more ... | { ...; }'.
+  Property 'content' does not exist on type '{ _block: "content"; heading: string; body: string[]; surface: "default" | "base" | "soft" | "mint" | "lavender" | "dark"; headingAlign: "center" | "left"; layout: "default" | "two-columns" | "three-columns" | "stacked"; ... 6 more ...; visibility?: "hidden" | undefined; }'.
+
+[7m46[0m     else assert.deepEqual(resolveFeaturedProofVisual(parsed.content.featuredVisual, parsed.content, records), edit);
+[7m  [0m [91m                                                            ~~~~~~~[0m
+[96mtests/proof-presentation.test.ts[0m:[93m45[0m:[93m111[0m - [91merror[0m[90m ts(2339): [0mProperty 'content' does not exist on type '{ _block: "content"; heading: string; body: string[]; surface: "default" | "base" | "soft" | "mint" | "lavender" | "dark"; headingAlign: "center" | "left"; layout: "default" | "two-columns" | "three-columns" | "stacked"; ... 6 more ...; visibility?: "hidden" | undefined; } | ... 5 more ... | { ...; }'.
+  Property 'content' does not exist on type '{ _block: "content"; heading: string; body: string[]; surface: "default" | "base" | "soft" | "mint" | "lavender" | "dark"; headingAlign: "center" | "left"; layout: "default" | "two-columns" | "three-columns" | "stacked"; ... 6 more ...; visibility?: "hidden" | undefined; }'.
+
+[7m45[0m     if (!edit.src || !edit.alt) assert.equal(resolveFeaturedProofVisual(parsed.content.featuredVisual, parsed.content, records), undefined);
+[7m  [0m [91m                                                                                                              ~~~~~~~[0m
+[96mtests/proof-presentation.test.ts[0m:[93m45[0m:[93m80[0m - [91merror[0m[90m ts(2339): [0mProperty 'content' does not exist on type '{ _block: "content"; heading: string; body: string[]; surface: "default" | "base" | "soft" | "mint" | "lavender" | "dark"; headingAlign: "center" | "left"; layout: "default" | "two-columns" | "three-columns" | "stacked"; ... 6 more ...; visibility?: "hidden" | undefined; } | ... 5 more ... | { ...; }'.
+  Property 'content' does not exist on type '{ _block: "content"; heading: string; body: string[]; surface: "default" | "base" | "soft" | "mint" | "lavender" | "dark"; headingAlign: "center" | "left"; layout: "default" | "two-columns" | "three-columns" | "stacked"; ... 6 more ...; visibility?: "hidden" | undefined; }'.
+
+[7m45[0m     if (!edit.src || !edit.alt) assert.equal(resolveFeaturedProofVisual(parsed.content.featuredVisual, parsed.content, records), undefined);
+[7m  [0m [91m                                                                               ~~~~~~~[0m
+[96mtests/proof-presentation.test.ts[0m:[93m42[0m:[93m49[0m - [91merror[0m[90m ts(2339): [0mProperty 'content' does not exist on type '{ _block: "content"; heading: string; body: string[]; surface: "default" | "base" | "soft" | "mint" | "lavender" | "dark"; headingAlign: "center" | "left"; layout: "default" | "two-columns" | "three-columns" | "stacked"; ... 6 more ...; visibility?: "hidden" | undefined; } | ... 5 more ... | { ...; }'.
+  Property 'content' does not exist on type '{ _block: "content"; heading: string; body: string[]; surface: "default" | "base" | "soft" | "mint" | "lavender" | "dark"; headingAlign: "center" | "left"; layout: "default" | "two-columns" | "three-columns" | "stacked"; ... 6 more ...; visibility?: "hidden" | undefined; }'.
+
+[7m42[0m     assert.deepEqual(getPublishableCases(parsed.content, records), getPublishableCases(home.content, records));
+[7m  [0m [91m                                                ~~~~~~~[0m
+
+Result (261 files): 
+- 12 errors
+- 0 warnings
+- 2 hints
+

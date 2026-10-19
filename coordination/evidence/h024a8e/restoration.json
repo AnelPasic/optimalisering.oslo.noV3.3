@@ -1,0 +1,1011 @@
+{
+  "masters": [
+    {
+      "id": "behov",
+      "uid": "31bd8ddb-5a47-4bc4-99b5-a5461e6103f6",
+      "originalValuesExact": true
+    },
+    {
+      "id": "regneeksempel",
+      "uid": "dc92cca5-b95c-487c-b2a2-08e296972a65",
+      "originalValuesExact": true
+    },
+    {
+      "id": "sjekk",
+      "uid": "d6ff367f-a926-4ee2-bdcb-7731ce43c183",
+      "originalValuesExact": true
+    },
+    {
+      "id": "priser",
+      "uid": "7b687594-17f4-4266-adf5-12b710f563af",
+      "originalValuesExact": true
+    },
+    {
+      "id": "resultater",
+      "uid": "ac0c6119-b0b8-4739-abd0-7ad7833e5556",
+      "originalValuesExact": true
+    },
+    {
+      "id": "mekanisme",
+      "uid": "42fceeca-61eb-49cd-b250-95060a060aa9",
+      "originalValuesExact": true
+    },
+    {
+      "id": "passer",
+      "uid": "e46130c0-de3c-40ef-815d-c16039346d6f",
+      "originalValuesExact": true
+    },
+    {
+      "id": "sporsmal",
+      "uid": "75bcd975-20e4-433d-809e-b43d2b104f47",
+      "originalValuesExact": true
+    }
+  ],
+  "canonicalHomeRestoredExactly": true,
+  "ownerInsertExact": true,
+  "allOtherHomeFieldsExact": true,
+  "protectedFiles": [
+    {
+      "path": "app/public/_headers",
+      "blob": "c01bc2027c44f794acf5eb99d6295f2539a63289"
+    },
+    {
+      "path": "app/public/favicon.svg",
+      "blob": "c4db7ea10c09f7ffc4ee490dcb4f2f2231dcea14"
+    },
+    {
+      "path": "app/public/images/home/README.md",
+      "blob": "994698e824c2ce92e78c201b8e41dbada86c7f31"
+    },
+    {
+      "path": "app/public/images/home/happycustomer.png",
+      "blob": "75ddc254da1e1576bd58ec59d4afc9bb483bd9e3"
+    },
+    {
+      "path": "app/public/images/home/happycustomer2.png",
+      "blob": "33db5be653174da3f2824a881d6b4de54f3e7b50"
+    },
+    {
+      "path": "app/public/images/home/happycustomer3.png",
+      "blob": "9dd58e03f983ed3ba8c68140a01a3208a4130c72"
+    },
+    {
+      "path": "app/public/images/home/hero-customer-02.webp",
+      "blob": "6321ee0335f1ce8f43a50541fb84b219d86b5deb"
+    },
+    {
+      "path": "app/public/images/home/hero-customer-03.webp",
+      "blob": "b15bb91cf845d4e20cdb6e35c78bf77c0197d62b"
+    },
+    {
+      "path": "app/public/images/home/hero-customer-preview.svg",
+      "blob": "b13a5a96adf6c661feb0f0fcf5118debcfbd419c"
+    },
+    {
+      "path": "app/public/images/home/hero-customer.webp",
+      "blob": "5327812b805f52aa2e50332b791185a18aa6e4d2"
+    },
+    {
+      "path": "app/public/images/listing/.gitkeep",
+      "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "app/public/images/pricing/README.md",
+      "blob": "7c12844afb879a17615a1256da04883aa592a2be"
+    },
+    {
+      "path": "app/public/images/proof/eurotents-ask-review.webp",
+      "blob": "cb07fd1943c31ee643b08621b31354f8444733a4"
+    },
+    {
+      "path": "app/public/images/services/.gitkeep",
+      "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "app/public/images/services/discoveringlocalfavorite-1.png",
+      "blob": "a083392cb23859b3147bc0ba9c4ff035fa8d2b2a"
+    },
+    {
+      "path": "app/public/images/services/discoveringlocalfavorite.png",
+      "blob": "b2ed40b626c047b79b586d6059729bac6ec48b0e"
+    },
+    {
+      "path": "app/public/images/services/happy-shopowner.png",
+      "blob": "0c3fbd2e46c3fb8ed70bb71680361f4c0d758d5f"
+    },
+    {
+      "path": "app/public/licenses/phosphor-icons.txt",
+      "blob": "78c9810819776e135d314adc0ff26eda7bec8b38"
+    },
+    {
+      "path": "app/server/config.mjs",
+      "blob": "c60c04d6250d6c138f9a7ee975c271f4768fb700"
+    },
+    {
+      "path": "app/server/http.mjs",
+      "blob": "d7df2e666c2cfd3a3aab402e75d57818b35691a5"
+    },
+    {
+      "path": "app/server/index.mjs",
+      "blob": "2e64ee8d01c04307da56d5ccafb335eb5af86723"
+    },
+    {
+      "path": "app/server/resend.mjs",
+      "blob": "b747f872ab3634aaec34c241934db2e390c54591"
+    },
+    {
+      "path": "app/server/retry.mjs",
+      "blob": "01bf7393e66d8b102bc23e43dfccb8f1dfdf8aa6"
+    },
+    {
+      "path": "app/server/store.mjs",
+      "blob": "70ed83f21f32ddcc542ec6058c25ddca1667f14b"
+    },
+    {
+      "path": "app/src/components/Arrow.astro",
+      "blob": "5e4e1baf6669c65f2966d33db398a7662beb7bf5"
+    },
+    {
+      "path": "app/src/components/AssessmentForm.astro",
+      "blob": "badf54ae96de670a58c92ab8beedf68eda469bf2"
+    },
+    {
+      "path": "app/src/components/AssessmentSection.astro",
+      "blob": "7915d69aa7d9d04c207e63a12dfeb7157b11e667"
+    },
+    {
+      "path": "app/src/components/Attribution.astro",
+      "blob": "22a7325c33a87176d65a15f98f2e1425aaa36f18"
+    },
+    {
+      "path": "app/src/components/ClosingCta.astro",
+      "blob": "0c1bd35f8e4910441327e17b5e6f20f19424720b"
+    },
+    {
+      "path": "app/src/components/CommercialHero.astro",
+      "blob": "ea9e79d7e728b06f9a366b65081fe39ff1700adb"
+    },
+    {
+      "path": "app/src/components/ContentCard.astro",
+      "blob": "eae5342924f724a4afded56e80f35e7fb4785166"
+    },
+    {
+      "path": "app/src/components/ContentSection.astro",
+      "blob": "dd49a45105bac249999ff4babdff12971a0378a4"
+    },
+    {
+      "path": "app/src/components/Faq.astro",
+      "blob": "bb238a1c70c87d1dcd73999910961ce15bd0a7ac"
+    },
+    {
+      "path": "app/src/components/HeroMedia.astro",
+      "blob": "dc57f106d732b4dcc0d3741819fd52286760a1a6"
+    },
+    {
+      "path": "app/src/components/HomeAssessment.astro",
+      "blob": "cb3cbb215b740283274c514a76a388d901332714"
+    },
+    {
+      "path": "app/src/components/HomeFooter.astro",
+      "blob": "5e5d8afcd651825728106bca49ffea850f79a98e"
+    },
+    {
+      "path": "app/src/components/HomeHeader.astro",
+      "blob": "ab8b70622c658d9044af74bc7daa446a6fa38a8d"
+    },
+    {
+      "path": "app/src/components/HomeLeverage.astro",
+      "blob": "fa0c7a5797984166a2c0a45ae8aa0e604a2a3950"
+    },
+    {
+      "path": "app/src/components/HomePage.astro",
+      "blob": "734ec35825809a576d752beb6ce6af0dfcc70304"
+    },
+    {
+      "path": "app/src/components/HomeProof.astro",
+      "blob": "b9230fdca3419792fea7400cc4f42f22cd5e0283"
+    },
+    {
+      "path": "app/src/components/HomeSection.astro",
+      "blob": "9e3d0bb8eb79b443e48e93e13033b181f571d286"
+    },
+    {
+      "path": "app/src/components/HomeSymbol.astro",
+      "blob": "a1595fbef44966419e64d27ee96d5d9dec97c065"
+    },
+    {
+      "path": "app/src/components/HomepageBlock.astro",
+      "blob": "614d84db74cd74f16e264567d25fb1035aa97f71"
+    },
+    {
+      "path": "app/src/components/InnerPage.astro",
+      "blob": "3d3b2e9f306806e817f2a1b7d7c20097b4f26cb3"
+    },
+    {
+      "path": "app/src/components/InsightIndexPage.astro",
+      "blob": "09be127ae3105d77c9f0ec39d5ed6db8c7ca44e4"
+    },
+    {
+      "path": "app/src/components/Journey.astro",
+      "blob": "0fe8fc1f76c7a373ae03299e03c1bceaac56c30b"
+    },
+    {
+      "path": "app/src/components/LanguageSwitch.astro",
+      "blob": "3da1a1ec8a405187d95e031386f4cf679a5c44e3"
+    },
+    {
+      "path": "app/src/components/Leverage.astro",
+      "blob": "e2ba30d8e74a36424938662b0330230fe9c30292"
+    },
+    {
+      "path": "app/src/components/ListingVisual.astro",
+      "blob": "bb2bd47213ce682a5935cfed0d7cddd5c3658b04"
+    },
+    {
+      "path": "app/src/components/PackageFocusIcon.astro",
+      "blob": "938e8044f2af478e21405d7475c3e1f5d9eb5071"
+    },
+    {
+      "path": "app/src/components/PackageMotif.astro",
+      "blob": "a810da3cee69891b15cc8901d0e5ff127d6f0909"
+    },
+    {
+      "path": "app/src/components/PackageOrder.astro",
+      "blob": "0d4fa4fc942e3f22f705c0d36ff9c639ca588ccf"
+    },
+    {
+      "path": "app/src/components/PackageSection.astro",
+      "blob": "807da1990579f3cdfa35b72755189f768b76d1e9"
+    },
+    {
+      "path": "app/src/components/PackageVisual.astro",
+      "blob": "72226e343e8e37f5d3e8500c2b54e3799a3752a9"
+    },
+    {
+      "path": "app/src/components/PageList.astro",
+      "blob": "51f580038a2122aa1ee4fc29256f194d40c89ec3"
+    },
+    {
+      "path": "app/src/components/PricingPage.astro",
+      "blob": "4a77fee092e4716c11b6949c62fda95971cb598d"
+    },
+    {
+      "path": "app/src/components/ServiceFamilyPage.astro",
+      "blob": "2096e9ab4e95f8ec9b72079a432dd4fed247f0da"
+    },
+    {
+      "path": "app/src/components/ServicePricingBridge.astro",
+      "blob": "8cb06f944e1fc4ce6dd904374cf9171a25be38fb"
+    },
+    {
+      "path": "app/src/components/TermText.astro",
+      "blob": "34c1e915b69a45abf1034889834574c7034fe204"
+    },
+    {
+      "path": "app/src/components/TerminologyUI.astro",
+      "blob": "534443d743ff9da5db10c73a02659018b81b4fe4"
+    },
+    {
+      "path": "app/src/config/copy-authority.json",
+      "blob": "110857203aa8ddfa89103f103033b5aa39c76ee5"
+    },
+    {
+      "path": "app/src/config/locales.ts",
+      "blob": "20eab6f638347fc79a38aa816ecb7de1bb2352f3"
+    },
+    {
+      "path": "app/src/config/site.ts",
+      "blob": "022d5954fc8847811d95041d1b742c0b6b2d6f40"
+    },
+    {
+      "path": "app/src/content/pages/ai-synlighet.json",
+      "blob": "ad0330794beb93091a41de7dde6d8612a874276e"
+    },
+    {
+      "path": "app/src/content/pages/hva-bor-optimaliseres-forst.json",
+      "blob": "02fec0fd7f047fed0caafa26ad906b49b8e0f696"
+    },
+    {
+      "path": "app/src/content/pages/innsikt.json",
+      "blob": "1022427841a03e8e5c7d3f8a3c6bd4cd7a56e447"
+    },
+    {
+      "path": "app/src/content/pages/kontakt.json",
+      "blob": "14a8597dcb164a9cf596d4c9a5706da32f03f74f"
+    },
+    {
+      "path": "app/src/content/pages/konvertering.json",
+      "blob": "380cc7082320f0c9a9acb2ed2e48218994f1d754"
+    },
+    {
+      "path": "app/src/content/pages/male-effekt-av-optimalisering.json",
+      "blob": "6d74aa7bb460b7162922fdc9a8699447c511ab4a"
+    },
+    {
+      "path": "app/src/content/pages/nettbutikkoptimalisering.json",
+      "blob": "ff629e708b36b1cd5b7f9c2c0e02727d6b6ec5b7"
+    },
+    {
+      "path": "app/src/content/pages/om.json",
+      "blob": "8cd02b7c719161fa6311eba7c17ee2ad3e25fa1e"
+    },
+    {
+      "path": "app/src/content/pages/personvern.json",
+      "blob": "16c7223d37a32fac413d2e80c850dbf9b6cf7c74"
+    },
+    {
+      "path": "app/src/content/pages/priser.json",
+      "blob": "eaffbc26ff9b5773e8ce33fc5ea26656bf569f59"
+    },
+    {
+      "path": "app/src/content/pages/seo.json",
+      "blob": "461bed8c750116579ae2d38cd83dbd68412a18d4"
+    },
+    {
+      "path": "app/src/content/pages/synlighet.json",
+      "blob": "9037220d7bafa909c74945d4aaece2c0c5f8e043"
+    },
+    {
+      "path": "app/src/content/pages/vilkar.json",
+      "blob": "9bf0c876513a470fea37e9064a1d15322f6e9e69"
+    },
+    {
+      "path": "app/src/content/pages/vurdering.json",
+      "blob": "8583363a4afaa3d299606d7aadcec1374bfb3cd0"
+    },
+    {
+      "path": "app/src/content/proof/eurotents.json",
+      "blob": "99c6d07f6f33d9feb09056fff3206527c1475090"
+    },
+    {
+      "path": "app/src/content/proof/helt-opplagt.json",
+      "blob": "97f5d64594e93d9d21c3ddad4b838d36c937f628"
+    },
+    {
+      "path": "app/src/content/proof/nysta.json",
+      "blob": "9dd98d91a6e91b2d7f7e2a212423c33a8705e2af"
+    },
+    {
+      "path": "app/src/content/proof/oslo-privatklinikk.json",
+      "blob": "9990b9188553671b602599443524a757f112aea1"
+    },
+    {
+      "path": "app/src/content/terminology/glossary.json",
+      "blob": "336e5f7f1a1a69beafe2648ab6aa3d5200a963b8"
+    },
+    {
+      "path": "app/src/styles/app.css",
+      "blob": "3af700f0dfe4dfdf6a4f5b7974c6615b854f2629"
+    },
+    {
+      "path": "app/src/styles/compositions/assessment.css",
+      "blob": "6a9484e243ad4d4aad57feaf50a4c90428663a59"
+    },
+    {
+      "path": "app/src/styles/compositions/calculator.css",
+      "blob": "7e822dc30d18585eafcdbef31ce35ccacf079ce3"
+    },
+    {
+      "path": "app/src/styles/compositions/hero.css",
+      "blob": "e08d73be19bd29be3c74b8858607c91dd0298a35"
+    },
+    {
+      "path": "app/src/styles/compositions/home.css",
+      "blob": "1f1b5d276ef689e3f55e3039da1d8197cb2ffaa1"
+    },
+    {
+      "path": "app/src/styles/compositions/package.css",
+      "blob": "4b71ccc0e37f440e4d6574e072ac3f2a2d40e757"
+    },
+    {
+      "path": "app/src/styles/compositions/pricing.css",
+      "blob": "9ab58cac78646fd87e1ee231fd9e8c805367d943"
+    },
+    {
+      "path": "app/src/styles/compositions/sections.css",
+      "blob": "fe0cf41bf6ecdc354556e30c5f8712d84ef028f0"
+    },
+    {
+      "path": "app/src/styles/compositions/service.css",
+      "blob": "2a494acebc7619381ade16c72cd3a87790525fb5"
+    },
+    {
+      "path": "app/src/styles/project.css",
+      "blob": "1475edbace2ed3a0bd081cec40e012e59cecc515"
+    },
+    {
+      "path": "app/src/styles/shared.css",
+      "blob": "078c6189173b7e290160876bf604da0a01b7e74f"
+    },
+    {
+      "path": "app/src/styles/surfaces.css",
+      "blob": "fe1e4c98e402f62eae8d7971dc2b0b6e54f5e5a5"
+    },
+    {
+      "path": "app/src/styles/terminology.css",
+      "blob": "224481dd4971959133eb81a7d1c4197255b96859"
+    },
+    {
+      "path": "app/src/styles/typography.css",
+      "blob": "32022f7b6be2faab12540069baac7ba2ee79f712"
+    },
+    {
+      "path": "project/optimalisering-oslo-v3.3-pilot-seed/COMMERCIAL-TRUTH.md",
+      "blob": "6e532aa33cbdcf1af1c86bcad90cfaabf95a1f2a"
+    },
+    {
+      "path": "project/optimalisering-oslo-v3.3-pilot-seed/COPY-SEEDS.md",
+      "blob": "d7360f16bb90cdf78be427d516ea43a72e4ff838"
+    },
+    {
+      "path": "project/optimalisering-oslo-v3.3-pilot-seed/DESIGN-PRIORS.md",
+      "blob": "0ff4e2d575e1eb31f669205d5387839f9e608e03"
+    },
+    {
+      "path": "project/optimalisering-oslo-v3.3-pilot-seed/FRESH-CODEX-TEST-PROMPT.md",
+      "blob": "8d51eeba377669b1a2e4c211063275b1d8ff10b2"
+    },
+    {
+      "path": "project/optimalisering-oslo-v3.3-pilot-seed/MIGRATION-AUDIT.md",
+      "blob": "af5f3f6ccabf55e96820adf7477f4cec3688e60f"
+    },
+    {
+      "path": "project/optimalisering-oslo-v3.3-pilot-seed/PAGE-PORTFOLIO.csv",
+      "blob": "ccc2a122200ee8c4475b99f89a4a7e2cf50de6e5"
+    },
+    {
+      "path": "project/optimalisering-oslo-v3.3-pilot-seed/PROJECT-BRIEF.md",
+      "blob": "fd7c81f3e6615c6f7e64edc9f3bbbd11770067b4"
+    },
+    {
+      "path": "project/optimalisering-oslo-v3.3-pilot-seed/PROOF-REGISTRY.csv",
+      "blob": "ab696bb22f7beb9e19b45d1a2a065aa9a0b38a04"
+    },
+    {
+      "path": "project/optimalisering-oslo-v3.3-pilot-seed/PROOF-STATUS.md",
+      "blob": "f8a139d56f79ca2add3be1886c8a700d8df971fb"
+    },
+    {
+      "path": "project/optimalisering-oslo-v3.3-pilot-seed/README-FIRST.md",
+      "blob": "0f811416493ef39824ceb1676fa78cfdab04d48c"
+    },
+    {
+      "path": "project/optimalisering-oslo-v3.3-pilot-seed/TECHNICAL-BASELINE.md",
+      "blob": "7f87cd3bd44f20d9bbaa88ed24f0a5373d604df0"
+    },
+    {
+      "path": "project/optimalisering-oslo-v3.3-pilot-seed/manifest.json",
+      "blob": "afaf5a7968b3b12914dbbbcbbf9c00612ff23817"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/AGENTS.md",
+      "blob": "6740cd1239df25aa1ee6f4e19ff3a208bcf5dcbb"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/BLUEPRINT-INTEGRATION.md",
+      "blob": "f69995d776a9ddf75a56f5167c6929960dcffa4f"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/BLUEPRINT.md",
+      "blob": "12a74c2df6e8cb83ea1878b2474bfcc2c07e6f3b"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/BOOTSTRAP.md",
+      "blob": "1ab68883674c851c4160c50a60088843a56875c5"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/CHANGELOG.md",
+      "blob": "e839030df3810c745a571a4a4e20590680846cde"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/CHECKLIST.md",
+      "blob": "c86fcd98045491947db6181fa9b308f0773a3471"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/DESIGN-WORKFLOW.md",
+      "blob": "460f053d9bbecdd822d2e1cecf3f094c82064b5d"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/FILE-INVENTORY.md",
+      "blob": "ceec6f4b45ffb8894838d71fbd19160534993082"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/PILOT-TEST.md",
+      "blob": "7b1a181c78b2f34bd195446e8901996a736f6ecf"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/README.md",
+      "blob": "29e3db2da8997452b3207e47619e3072144c82e8"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/SKILL-seo-aio-hormozi.md",
+      "blob": "91bfb78c8f3168d415cb7d5aec227ddcb4291a4b"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/START-EXISTING-PROJECT.md",
+      "blob": "05dd3a7efff6c6b63093602227d1d9a9cad6b83b"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/START-HERE.md",
+      "blob": "d0c5bd781482c6e85337d30f306ccf0c92ad8497"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/START-NEW-PROJECT.md",
+      "blob": "09dd6d56403b6415c8cfae090c294a2ae9e4b5b7"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/SYSTEM-MANIFEST.md",
+      "blob": "7d46ccd0e1b829ad83e9fac75939e1abeb646544"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/SiteGrowthSKILL.md",
+      "blob": "3d6973e4975274131205d460b9356a7fe09c09b8"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/UPLOAD-INSTRUCTIONS.md",
+      "blob": "43020ef3c3d2d899394f50e389910a351bacf293"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/WORKFLOW-v3.3.md",
+      "blob": "d65e24c32b77002be62447e7db8465b6650a56e7"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/architecture-decision.md",
+      "blob": "3e98caf10a59e93678efffdbe86b4df6144d2166"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/content-model.md",
+      "blob": "84278d3130081abfb710c9e55d8af8921b063c98"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/content/CERTAINTY-GAP.md",
+      "blob": "2a90b93754c64f0296afb7ed1b0785e746010d4c"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/content/CONTENT-OPERATING-MODEL.md",
+      "blob": "f844a0b160defac353b7c19c9883bbf13e8fcdc1"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/content/HEADING-ONLY-STORY.md",
+      "blob": "58337053c7426af2a93d0adc68ffce7709da8925"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/content/HEADLINE-LAB.md",
+      "blob": "adc07b56cb65228ea1a117fc13d676c8bc6c2176"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/content/PAGE-CONTRACT.md",
+      "blob": "66e363161e3358ec738e96ada9710a4a05bd2aa7"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/content/PERSUASION-SEQUENCE.md",
+      "blob": "354064c4df854cf53efc139ffab5a76a26825ee1"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/content/SECTION-CONTRACT.md",
+      "blob": "ec6e70dec2a6a522f7f905bcb256b713e2c8872c"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/content/VALUE-EQUATION-MAP.md",
+      "blob": "d89a38b21a790a39bc84cbcc306e61a0ec29b853"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/content/content-copy-standard.md",
+      "blob": "be07f568c1f254c001d6f51f754a298ffd323c5f"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/content/content-performance.md",
+      "blob": "650470f0139ad4fb2433c25916449487925da945"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/content/distribution.md",
+      "blob": "2fa286885bdc2f624fdc3fbccbb0521588324d4d"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/content/fun-facts.md",
+      "blob": "18c65b532dfcc2d35dc8a36b68da09376860ae40"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/content/message-architecture.md",
+      "blob": "92e1f574a61bc16e23b96e67b1a13fc2ce94bd3f"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/content/page-brief.md",
+      "blob": "657199b23c1d9879f4a7f64d88faf90f56260cf6"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/content/proof-registry.md",
+      "blob": "f352dca2ad8493245c001e1ad21425164a562d9d"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/design.md",
+      "blob": "73ff8eed747c32cbda7b3b5bd69642898f575a27"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/design/DESIGN-DECISION-WORKFLOW.md",
+      "blob": "776ac6753001c92bf5337a6a00e1a6d6a6431833"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/design/REFERENCE-LAB.md",
+      "blob": "b45a846adb82848a5acd99931aea2212a337a0a9"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/design/REVIEW-PROTOCOL.md",
+      "blob": "23e2cc3e4ed8d60855e62764838a8457f07c94e4"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/design/TOKEN-TRANSFER.md",
+      "blob": "9f6d0e15b4fe40ad74096ba7e59e95ce52af861e"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/design/VARIANT-MATRIX.md",
+      "blob": "1a31209467b4b19e62f278c71fb1cfc4863d3312"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/design/VISUAL-PRODUCTION-MODEL.md",
+      "blob": "dd8b18692766a2174aaeb970609403bf42bb83f9"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/design/design-direction.md",
+      "blob": "83c15c94c9fb3d5114a4d90e37007b337e7306c4"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/design/design-gate.md",
+      "blob": "a9e1db97b1c5c5aaf399125e5d448d70e4a323a4"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/existing-site-modernization.md",
+      "blob": "ba72c71310e67652d70e77fb70b1665ec54e10e0"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/governance/CONFLICT-HIERARCHY.md",
+      "blob": "db51ca64975def46da67d35af34ccfaaa950e75c"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/governance/DECISION-LOCKS.md",
+      "blob": "5611a3ca9ad83c56aa5231d6fcebef6675842dab"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/governance/EVIDENCE-CONFIDENCE.md",
+      "blob": "533adc6d2354bde5db126e394c065b80bc7087aa"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/governance/OWNER-APPROVAL-MATRIX.md",
+      "blob": "63b12f106d6fccbbda250db2d43efa2023fd2bfd"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/governance/PAGE-PORTFOLIO-GATE.md",
+      "blob": "4c554b8ccd14a323f198644b2152979e3f22aaf3"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/governance/PROJECT-PROFILES.md",
+      "blob": "aa777dcfd14339fdb474501a45b01347bdbeb422"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/governance/ROLE-OWNERSHIP.md",
+      "blob": "1d232f23f326e3c7f9389286070eb07a1765ffa8"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/governance/RULE-CLASSES.md",
+      "blob": "ee541dc1803f9cad7e66099856fc0a82c68fa623"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/governance/SCORING-GATES.md",
+      "blob": "2d175e05a1a194965cbce00e8394cd633e63ce4c"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/implementation/CODEX-EXECUTION-CONTRACT.md",
+      "blob": "994f68ffd586995f59f22039cfd7fd38c229e0bf"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/implementation/astro-pages-cms.md",
+      "blob": "20ebbfc0efe22a1e8821b9cb5fc178acb03b1386"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/implementation/astro-sanity.md",
+      "blob": "8bdc10eba643e8013a22401e6b877eaae111182e"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/implementation/astro-static.md",
+      "blob": "5f97a0d641c13c9929bde1549e6e02df5e583b0b"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/implementation/nuxt4.md",
+      "blob": "ca27c33fed14cbd489caf8b2eba11e3ef50d45ef"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/integrations/analytics-attribution.md",
+      "blob": "560aec179feccbc8041325d0182c92cd842405a7"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/integrations/assessment-funnel.md",
+      "blob": "48792f6c92aab86d9fd749df3ba923928ff53644"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/integrations/consent-privacy.md",
+      "blob": "751ab7bb100df5d125957470838092f2de5c18b8"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/integrations/deployment.md",
+      "blob": "5690c9131fbb2eb7e3a8a22ae1d18036a5c68528"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/integrations/lead-engine.md",
+      "blob": "9b0e102401e1bf2f625045b609c2dd51e0462594"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/manifest.json",
+      "blob": "3bc7b15f7cda909ca33973239f8853d1e31e96c4"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/medon.config.example.ts",
+      "blob": "46a52cba2802ce813faab89371cb0354ff0fa5bc"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/operations/EXPERIMENT-LEDGER.md",
+      "blob": "f8db633ff7796e8a82c9ef588b62863a66270a6f"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/operations/GIT-CONTENT-FLOW.md",
+      "blob": "92b236c030abc76563292c9456222424cc1c39da"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/operations/TEMPLATE-CANARY.md",
+      "blob": "5545aa5d8d1191df290f72ee5622c35d4979e5df"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/operations/website-operations.md",
+      "blob": "af812b4a6c369fdae5557dc56badfcd5aab4224d"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/project-discovery.md",
+      "blob": "e55710938487f12a56d2e94307e337966cf8cbf1"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/proof/MEDON-FACT-LIBRARY.md",
+      "blob": "201a6a626599f98a4710fb4a89f6180c864ed0ab"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/proof/MEDON-PROOF-LIBRARY.md",
+      "blob": "3029928ca4f28b04fd988a739ddabbb091c3b74f"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/proof/PROOF-ROUTER.md",
+      "blob": "4be134d23bcf56ec9d13fb2ab90902cf811ca21b"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/qa/FIVE-SECOND-SCAN.md",
+      "blob": "7a17ff4f518bf4d3acb39d5c9e286dab5ee004fa"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/qa/RED-TEAM.md",
+      "blob": "535961033d1d5cf88907af921c5553856dadeedd"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/qa/SEO-CRO-DUAL-GATE.md",
+      "blob": "79f33792f15f147005af634d9a456f548f9be22e"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/qa/content.md",
+      "blob": "de80dd70e3f35b67c5cd119876ef812a72688019"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/qa/functional.md",
+      "blob": "bc280b89c1ed3fb42ddccb1ab8ed74e6a4133b9d"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/qa/launch.md",
+      "blob": "b9dc0ef8c17cdb670f5461eb6c36b3425f5d671e"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/qa/seo-aio.md",
+      "blob": "bc3dbe0b8f93beda18b76c176ab908f2b91a00d0"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/qa/technical.md",
+      "blob": "923b3530b78e334dd57757e9e3a75e601978b0db"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/references/BACKLOG-INTEGRATION-v3.3.md",
+      "blob": "723b6822a3c70c0750b09076519c81dbfbfca45a"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/references/PRODUCTION-MODEL-LESSONS.md",
+      "blob": "6567ad1cf260a0562678a23c5b36bdce0097aac2"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/references/attribution.md",
+      "blob": "68b465668eb751e9e4e9a70a4da96e7bf2c69929"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/references/commercial-strategy.md",
+      "blob": "aed1b02a20388d1e772b30471016b984fb15b11a"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/references/compat/README.md",
+      "blob": "77e5154a7d7c202a460323780a5b8c22258ba527"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/references/compat/layout-daisy.md",
+      "blob": "19f0265a40fe3b6e06f17e2a6f4273f6160e0ea1"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/references/cro-nordic-ux.md",
+      "blob": "43f4b455b41dccf280d0a8292c29848a2efc896b"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/references/customer-research.md",
+      "blob": "ff1a7392f676bfdca9f7e2699c6aed1d723121c0"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/references/design-current.md",
+      "blob": "73ff8eed747c32cbda7b3b5bd69642898f575a27"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/references/free-tools.md",
+      "blob": "666041d16439dffad10a977a7073145a7cfd5b86"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/references/hooks-copy.md",
+      "blob": "70dded1085a68fc0af2130bbc0b38e625e92840a"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/references/lead-magnets.md",
+      "blob": "b153be6367f0fede80ebf1c480a9839ba7cdb8e4"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/references/marketing-loops.md",
+      "blob": "2cc184c1976558ae5bf0f3e784f1414fd78e8123"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/references/method-notes.md",
+      "blob": "5f19ee255a747aaecf05fa9df2c9dbc53677d058"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/references/offer-leads.md",
+      "blob": "a004031fb1d97de3e11b911893c88671c5becdbe"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/references/pricing.md",
+      "blob": "fa19f2aca230c279683ea7069d16076843d17133"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/references/qa-launch.md",
+      "blob": "33a5182939c4c1b42fe65cc0d03938235fc3a162"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/references/research-intake.md",
+      "blob": "2174213a4419b3ee01aaaf66b67f923ef2f4ae39"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/references/seo-local-aio.md",
+      "blob": "abd62962f6c21c5495de105f630a05ed29072862"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/research/SEARCH-AIO-OPPORTUNITY-CONTRACT.md",
+      "blob": "f4bd511d7d7b79ce97c00480438403a816f1ef95"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/research/cro-diagnosis.md",
+      "blob": "49e80543dbcfe86babc1941b3e8737d2d4460c54"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/source-material/README.md",
+      "blob": "c2c9abfff48d84163494f5dfaee3cab1b9e67e21"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/source-material/raw/1000s-of-Leads-In-Any-Niche.txt",
+      "blob": "7f2634edc725d99a62ab02f81ffb6feb1fc1981d"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/source-material/raw/14-YearsOfMarketingAdvice.txt",
+      "blob": "e52868952a1c1df5100d666b080fcbcb45bf072a"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/source-material/raw/KillerHooks.txt",
+      "blob": "e4f2bcfa899380865f956cb3dbb66cf25c416c1f"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/source-material/raw/Local-SEO-Expert.txt",
+      "blob": "4c2f4db163e3f919636aec96aa2c679e293d0adf"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/source-material/raw/MakeMoreMoney.txt",
+      "blob": "511a180051b2c40bbd6b6e96b06e27d5401ba560"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/source-material/raw/SEO-expert.txt",
+      "blob": "917b8f72314475d813d03dd9e7c7d2502d7bfa46"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/source-of-truth.md",
+      "blob": "4cf0a1789f134f0cab91ff6334dbf9f8844f438d"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/starter-manifest.yaml",
+      "blob": "3200f65690e95fd1d15228feb2a2d56620499085"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/technical/TECHNICAL-PREFLIGHT.md",
+      "blob": "b4d7849782dafbe7b691d78f069362a5848cac4c"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/templates/CHANGE-REQUEST.md",
+      "blob": "937a49b93b3999df6892facc394f27ac297d61c6"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/templates/CONTENT-INVENTORY.csv",
+      "blob": "e5103f820c503d6883317d488e2628d619283bec"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/templates/CONTENT-LOCK.md",
+      "blob": "11916fe841afcb0fe5735a89e793be73949601fa"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/templates/DECISION-LOG.md",
+      "blob": "79151761ca09188da75cf5fe7ade11c9228e6fba"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/templates/DESIGN-DECISIONS.md",
+      "blob": "508d9fe8364e428e80014cbe2e03b7958eff08b1"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/templates/EXPERIMENT-LEDGER.csv",
+      "blob": "9aef9c741bae8bcb0fd931cc9bdaced358ec6e82"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/templates/FACT-REGISTRY.csv",
+      "blob": "bf0da12f469480b3a22dbfe7267da2c700fc0c36"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/templates/HEADLINE-SCORE.md",
+      "blob": "2a104c584be36ff3321d2876da1dbc432b27dd09"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/templates/OWNER-GATE-STATUS.md",
+      "blob": "f98e5fb112c2b41cb0e0523b15632ec6ac4b18f0"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/templates/PAGE-CONTRACT.md",
+      "blob": "13f24d6946618c19fb29935e21e49aa333253a48"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/templates/PAGE-PORTFOLIO.csv",
+      "blob": "21db45b22d216b5ebc00ffbc4c8637b4f2085592"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/templates/PRODUCT-MARKETING.md",
+      "blob": "7ec876603260ea433f2a7901d552a9b739d9ef44"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/templates/PROJECT-BRIEF.md",
+      "blob": "1c92f93b9decb02a96e8c5735864771d7558a404"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/templates/PROJECT-MIGRATION-AUDIT.md",
+      "blob": "320828084139ee9a9e9921638023dec178c6bd7a"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/templates/PROJECT-STATE.md",
+      "blob": "2cb3a023af196ab9a582357af5a2eec79cb600c8"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/templates/PROOF-REGISTRY.csv",
+      "blob": "f15c0ba59012fdba4cb9f5682312bedfd8b556f5"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/templates/SECTION-CONTRACT.md",
+      "blob": "edadb8abd1d44dbafad483353b940df5a697e51e"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/templates/TECHNICAL-PREFLIGHT.md",
+      "blob": "3df4daaaada1d779e0b60b583443f1a0efe5fe54"
+    },
+    {
+      "path": "system/medon-web-system-v3.3/tools/validate_package.py",
+      "blob": "bca5ddc607c4c7a8bf9c5e94724d3774666b9454"
+    }
+  ],
+  "protectedCount": 240,
+  "homeBlob": "64f06e608ed2f95cebad9ad896a5f2ace4847aaf"
+}

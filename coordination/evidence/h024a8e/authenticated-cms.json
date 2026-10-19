@@ -1,0 +1,113 @@
+{
+  "mode": "Authenticated Pages CMS; actual main saves and native Worker preview",
+  "baselineCommit": "bc5fc9324a04eeaab7d57ee43aa4290766aba338",
+  "pilotCommit": "9d829046c765e1b8f8be82c0da31033f1038eaf1",
+  "masterEditCommit": "24187921d0427495b7120833aea573fb0d5b6e25",
+  "firstAttempt": "Build succeeded but strict live heading failed: Astro cached parsed home when only external master changed. Not accepted as visible-master proof.",
+  "cacheFixCommit": "4b5598c6023f5767e7b4e6f95ba49a4be553bb57",
+  "cacheFixBuild": "b18051fc-f216-4042-8be6-5a5ee3513af7",
+  "cacheFixVersion": "4f836960-c5d3-4ca3-ae73-a22883a852ec",
+  "masterVisibleProof": "pilot-master-visible/checks.json: actual heading equals CMS master at four widths",
+  "masterRestoreCommit": "f1f9b5812a9b147fd485c61478f18cee0a8a2abd",
+  "masterRestoreBlob": "0a287aecadf82370de2209661a106453e919c862",
+  "masterRestoreBuild": "b0355324-8eb5-45ba-bba3-c33b4ba5ca6c",
+  "masterRestoreVersion": "d2dba75b-d3c1-4549-bf04-c62d0391a826",
+  "masterRestoreProof": "pilot-master-restored/checks.json: exact incoming default snapshots at four widths",
+  "nativeLibrary": "Globale elementer sidebar / Konverteringskalkulator typed file. File menu only View on GitHub; delete/create/rename false.",
+  "nativeReference": "Actual select displays Konverteringskalkulator, publication control and remove-page-only help. Keyboard selected Skjult.",
+  "originalOwnerTab": "Page1 left untouched. Own pages3/4 used.",
+  "pilotPlacementCycles": [
+    {
+      "action": "hide",
+      "commit": "0e9df32b5e1caeaa3b7ca8b1b273bd8a7cb65299",
+      "build": "c1652783-56b8-405f-806a-88b9ba9b9796",
+      "version": "621853a5-4567-4e00-9561-2aa456514f69",
+      "evidence": "pilot-hidden/checks.json, pilot-hidden-assets.json"
+    },
+    {
+      "action": "remove reference",
+      "commit": "7eb7fe04c81fd48b0b1a57079d14c8f56a74ff42",
+      "build": "30fe7820-a271-4b77-adc7-96b59e345844",
+      "version": "059f763c-ede7-4341-8436-e76ee158701e",
+      "evidence": "pilot-removed/checks.json, pilot-removed-assets.json"
+    },
+    {
+      "action": "re-add reference",
+      "commit": "5ff7af172745c9dce504fa8cf6d0352d2627218e",
+      "build": "d4ad5403-44fb-4790-a167-db19d1c41160",
+      "version": "9b475cd4-d216-4c84-ba68-1de2d94a3983",
+      "evidence": "pilot-readded/checks.json, pilot-readded-assets.json; all53 original assets byte-exact"
+    }
+  ],
+  "library": {
+    "implementation": "ad29c77bb30af4ec6e33fba315e50e72c987a9ab",
+    "build": "baf01178-e038-4a7c-9d0e-4dec3e6acc0c",
+    "version": "215f111d-7e15-4b97-9157-0ab25c6e1cdb",
+    "masterEdit": {
+      "commit": "db0196a1b852217b11b15f0c4b89153223c2a8e7",
+      "build": "820c9714-78b0-458c-9487-b8221a593b6f",
+      "version": "890b55e7-8711-4a77-b4b9-59ef63a30cb7",
+      "evidence": "library-master-visible/checks.json; actual heading on / and /design-system/global-elements/ at4widths"
+    },
+    "masterRestore": {
+      "commit": "a6a50e7c90299c8ead8ab4f1ab8c3754e4ebc44e",
+      "build": "5c8e8758-7ec1-4660-b253-4200bc46e03c",
+      "version": "d414ec8c-a681-42e7-a7a0-1a61f426c5fa",
+      "blob": "0a287aecadf82370de2209661a106453e919c862",
+      "evidence": "library-master-restored/checks.json; all72 incoming route/width snapshots exact"
+    },
+    "groupsAdded": {
+      "commit": "707851c7fc580ea8106c6d081c9a8dc57ffea800",
+      "build": "a761fb78-53dc-4d39-ae52-2debc3b7b9f1"
+    },
+    "groupsSorted": {
+      "commit": "ba32195107a960ad2f44fd960664fec5b7a7e950",
+      "build": "1f972241-9afb-41f5-8857-a688e778e602",
+      "version": "2f241412-ec37-4595-a56d-70775ddbf356",
+      "evidence": "library-zones-sorted/checks.json; actual native keyboard order across3zones; local Top/Bottom and global Top/Bottom/Main"
+    },
+    "groupsHidden": {
+      "commit": "eda141bdceb1dd71aa74a556438fc83ed218b2f0",
+      "build": "56187817-279e-4471-9b03-a71a04720f50",
+      "status": "PASS",
+      "version": "a2d448ee-433e-451e-9c4f-5523668a2b65",
+      "evidence": "library-hidden/checks.json, library-hidden-assets.json:76 browser records,56 exact local/Worker artifacts; no absent calculator/mechanism heading leakage"
+    },
+    "groupsRemoved": {
+      "commit": "aca1b3f58e8bf5e688369bb85addb9694896e3ba",
+      "build": "23263f6b-085b-490b-a9ed-74ceb1e5c031",
+      "version": "ec6e6a2f-40e9-46f5-99bf-b7ac66c88040",
+      "evidence": "library-removed/checks.json, library-removed-assets.json; all masters unchanged"
+    },
+    "groupsReadded": {
+      "commit": "b40501eb6f896100838456d81e139529a29fcce1",
+      "build": "a79d9364-2245-4eb0-abd9-594b68172287",
+      "version": "7ea754eb-8918-4f1c-9ece-2b0a1ac6c49b",
+      "evidence": "library-readded/checks.json, library-readded-assets.json; actual refs re-added and selected in3groups"
+    },
+    "nativeRestoreIntermediate": "49a22a67056e88fd7815989f87fae13197a58c14",
+    "nativeRestore": {
+      "commit": "f68dd0f07a5e2ae72280d2044c0e2b759369fa00",
+      "build": "ea8cb0bc-929c-4fc9-94cf-2b4d2629778a",
+      "homeBlob": "64f06e608ed2f95cebad9ad896a5f2ace4847aaf",
+      "allMasterBlobsExact": true,
+      "canonicalMigratedHomeBlobExact": true,
+      "cmsReloadSaveDisabled": true
+    }
+  },
+  "final": {
+    "commit": "df6644dc05dc15660bf06e975f70210784c546d1",
+    "build": "054e372a-9ba7-47f4-bb77-61d46870cd76",
+    "outcome": "success",
+    "version": "b79d37d4-36a9-432d-9d7d-b64b251d0db3",
+    "deployment": "0fc8994c-43b8-4282-b67d-9493c6f5ece6",
+    "percentage": 100,
+    "browser": "final-worker/checks.json:76 records",
+    "assets": "final-worker-assets.json:56 byte-exact tested local/Worker assets",
+    "keyboardAndSafeguards": "final-interactions.json",
+    "homepageScreenshots": "final-home-capture/home-{1440,900,390,320}.png",
+    "sharedFixtureScreenshots": "final-worker/global-elements-{1440,900,390,320}.png",
+    "reviewStatus": "STOP OWNER library/editor and homepage composition review; H024B BLOCKED"
+  },
+  "nativeInteractionNotes": "Reload native form after a persisted save before further cycles; native form dirtiness and ephemeral new-row sort identities can otherwise remain stale. Actual keyboard sort verified from persisted/reloaded sources. No pointer-sort automation proof."
+}
