@@ -1,5 +1,12 @@
 # Decisions and authority
 
+## D-105 — OWNER approves homepage composition B and accepts native Pages CMS collapsed-label limit — 2026-10-19
+
+OWNER explicitly confirms: «Jeg godkjenner alternativ B for forsiden og aksepterer den dokumenterte native Pages CMS-begrensningen. Lag neste avgrensede Codex-handoff med alle bevaringskrav og tester.»
+
+**AUTHORIZED, NOT YET IMPLEMENTED:** H-024A8G, scope-only source-driven homepage B after D-104 delivery: Hero → regneeksempel → resultater → priser → sjekk → sporsmal. Hide but keep complete OWNER-created local Top `forbehovsvelger`; remove only homepage placement references `behov`, `mekanisme`, `passer`; keep eight global masters, exact price/proof/form/CTA/visual authority, `/#sjekk`/`/#priser`, noindex and disabled intake. Native collapsed IDs accepted; do not implement duplicate label registry, CMS fork or unrelated visual redesign. Full executable instruction: `coordination/H024A8G-Codex-Handoff-Forside-B.md` (GitHub commit `4d4167b`). H-024A3 OPEN, H-024A8E whole editor OWNER PASS pending, H-024B BLOCKED, H-022 PARKED. Technical PASS and preview still require actual evidence and separate OWNER review. This new approval supersedes D-104's pending homepage-choice gate, NOT prior delivery/preservation restrictions.
+
+
 ## D-104 — OWNER authorizes limited CMS editor polish; homepage reduction proposal only — 2026-10-19
 
 OWNER responds **"ok, god plan da gjør vi det slikt"** to the proposed next action: (1) change raw collapsed global reference names into readable Norwegian titles and remove repeated per-row help in Pages CMS, (2) then evaluate which current homepage sections are actually needed. **Authorized:** narrow H024A8F technical UX work in stock hosted Pages CMS and a recommendation/choice of a smaller homepage. **Not authorized:** auto-removal/hiding/reordering of any existing live section, changing Hero/CTAs/offers, editing global masters/commercial truth or starting service-page H024B. Contract `coordination/H024A8F-CMS-EDITOR-POLISH-AND-HOMEPAGE-SHORTLIST.md`. Preserve current OWNER-saved `regneeksempel`→`behov` order and OWNER `forbehovsvelger` Top item. If hosted native Pages CMS cannot display human labels in collapsed summaries without unsafe duplicate metadata, stop/report with evidence rather than forced workaround. D-103 scoped CMS/order OWNER PASS stands; whole H024A8E/H024A3 not yet OWNER PASS. H024B BLOCKED, H022 PARKED, preview noindex/intake off.
