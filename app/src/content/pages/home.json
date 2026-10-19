@@ -112,15 +112,15 @@
       ]
     },
     {
-      "_block": "global",
-      "element": "regneeksempel"
-    },
-    {
       "_block": "content",
       "uid": "49376d88-4867-40d1-82df-0c6ee0f2a26a",
       "name": "CMS-prøve Topp",
       "id": "cms-prove-topp",
       "heading": "CMS-prøve Topp"
+    },
+    {
+      "_block": "global",
+      "element": "regneeksempel"
     }
   ],
   "sections": [
