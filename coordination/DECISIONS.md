@@ -1,5 +1,12 @@
 # Decisions and authority
 
+## D-109 — OWNER foreløpig aksept av H-022D Kunderesultater — 2026-10-20
+
+OWNER: **«ok, brukbart foreløpig»** etter at Codex leverte H-022D på review Worker (implementasjon `2361f0f`, kvittering `ce09695`). Dette er **FORELØPIG BRUKBAR / PARKER VISUELL POLERING**, ikke endelig design-PASS eller tillatelse til å endre proof-fakta. Ikke bruk flere runder/tokens på denne seksjonen uten nytt OWNER-ønske. Behold designsystemets `Kort med bilde` for Eurotents og vanlige Cards for Nysta/Helt Opplagt.
+
+**Nyere autentiske OWNER CMS-endringer etter H-022D:** `df8303d` laster opp `app/public/images/proof/eurotents.jpg`; `adab003` endrer kun `featuredVisual.src` til dette bildet og `positionY` til 50 i `app/src/content/global-elements/resultater.json`. Bevar begge; ikke gjenopprett det gamle `eurotents-website-review.webp` ved senere Codex-arbeid. Gjeldende `main` etter OWNER CMS-lagringen er `adab003be93a8929551bc25b54ffb9c6f0d020b6`. Fortsett kun med neste separat godkjente arbeid. Whole H-024A3 CMS editor OPEN, H-024B BLOCKED, offentlig launch/index/intake ikke godkjent.
+
+
 ## D-108 — OWNER REVISE: Kunderesultater skal bruke eksisterende designsystem — 2026-10-19
 
 OWNER avviser visuelt H-022C («Det ble like triste saker») og ber om å bruke **allerede eksisterende** elementer fra `/design-system/`, særlig «Kort med bilde» for første case, alternativt «Vekslende liste» eller «Bildekort» med reelle opplastede bilder. **AUTORISERT under D-107:** Implementer den nøkterne standard-retningen «Kort med bilde» for Eurotents og to konsistente daisyUI Cards for Nysta/Helt Opplagt, uten nytt proof-dashboard/CSS-familie. Behold eksisterende Eurotents-nettstedsscreenshot, låste caseverdier, CMS, øvrig forside og tjenestesider. Kontrakt `coordination/H022D-PROOF-DESIGN-SYSTEM-REUSE.md`. Publiser direkte på noindex review Worker etter lett risikobasert QA; OWNER sjekker der. Dette er OWNER REVISE for H-022C utseende, ikke en tillatelse til å endre proof-autoritet eller launch-gater. H-024A3 OPEN, H-024B BLOCKED.
