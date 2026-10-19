@@ -1,5 +1,9 @@
 # Decisions and authority
 
+## D-103 — OWNER PASS: H024A8E CMS-to-site section ordering (scoped) — 2026-10-19
+
+OWNER confirms **"ja ser riktig ut på siden og Pages"** following a Pages CMS save that reordered the first two global homepage references (`regneeksempel` before `behov`). Git commit `f562b7eb87ba6b2f83300535087425bfa0e5f58c` changed only those two placement positions, with no master-content loss; OWNER confirms matching visible order in the editor **and** on the review site. **Scoped OWNER PASS for saved homepage ordering and CMS/site correspondence**. Do not overextend this to a personally witnessed mouse-pointer drag test or final whole-editor/composition approval. Library editing/removal UX and the shorter homepage selection remain separate OWNER gates. Keep H024A3 OPEN, H024B BLOCKED, H022 PARKED. Preserve OWNER-saved order unless separately instructed.
+
 ## D-102 — OWNER approves reusable Global Elements masters; homepage no longer requires all eight — 2026-10-18
 
 OWNER explicitly approves changing H-024A8E **before Codex starts** to a *Concrete CMS Stacks-like* model: **"ja god plan, endre H-024A8E til denne modellen. Også trenger vi ikke alle de blokkene som er på forsiden."**
