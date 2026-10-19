@@ -1,5 +1,8 @@
 # Review queue
 
+**H-022E / D-110 TEKNISK LEVERT — 2026-10-20.** Globale elementer → Kunderesultater → Visningsmal har Vekslende liste default / Bildekort; valgfrie trygge Nysta/Helt Opplagt-bilder, OWNER Eurotents-jpg/50/50 bevart. Implementasjon87f6a2e+2d8ba6b. Ekte CMS-mallagring952daec → native321d9c17 SUCCESS / Worker699b259b → faktisk Bildekort live → native CMS-restoreff52bdd → nativefd675e5c SUCCESS / Workera53c2108 at100%, default live bekreftet. Master Git bytes gjenopprettet eksakt. Build19/19 fokustester, begge maler med/uten bilder, kort1440/390 local/live, uendret service proof og artikkel-PageList PASS. Alle eksisterende fakta/medier/øvrige innhold/OWNER-data bevart. Detaljer i kort CODEX-TO-CHATGPT-kvittering; preview https://optimalisering-oslo-v33.anel.workers.dev/#resultater . OWNER visuell vurdering gjenstår; whole H-024A3 OPEN/H-024B BLOCKED; noindex/intake av, ingen offentlig launch. ACTIVE D-110 nedenfor er levert historikk.
+
+
 **ACTIVE D-110 / H-022E (2026-10-20) — MALVALG FOR KUNDERESULTATER I GLOBALE ELEMENTER.** OWNER velger designsystemets «Vekslende liste» som standard, med valgfritt «Bildekort» i Pages CMS global resultater-masteren. Bilder kan velges per case; behold senere OWNER Eurotents-upload `eurotents.jpg`, ingen oppdiktede bilder/lenker og ingen endring av proof-tall. Implementer nå under `coordination/H022E-PROOF-CMS-LAYOUT-CHOICE.md`, fokuserte tester og en faktisk CMS-mallagring/-restore, direkte review Worker etter D-107. H-022D foreløpig brukbar var historisk mellomstatus, ikke slutt-PASS. H-024A3 OPEN, H-024B BLOCKED, ingen offentlig launch/index/intake.
 
 

@@ -35,9 +35,12 @@ test('CMS select saves both templates and restores without changing OWNER media 
  const select=content.fields.find((f:any)=>f.name==='layout');
  assert.equal(select.label,'Visningsmal');
  assert.deepEqual(select.options.values,[{name:'alternating',label:'Vekslende liste'},{name:'mediaCards',label:'Bildekort'}]);
- for(const layout of ['mediaCards','alternating']){
-  const form=structuredClone(master);form.content.layout=layout;
-  const saved=JSON.parse(cmsJsonSave(master,form,entry,cms));
+ const {caseId,...media}=master.content.featuredVisual;
+ // Populated supporting images are a local fixture, never public case imagery.
+ const withImages={...master,content:{...master.content,caseVisuals:{nysta:media,'helt-opplagt':media}}};
+ for(const original of [master,withImages])for(const layout of ['mediaCards','alternating']){
+  const form=structuredClone(original);form.content.layout=layout;
+  const saved=JSON.parse(cmsJsonSave(original,form,entry,cms));
   assert.deepEqual(saved,form);
   assert.equal(homepageBlockSchema.options[3].parse(saved).content.layout,layout);
   assert.deepEqual(getPublishableCases(saved.content,records),getPublishableCases(master.content,records));

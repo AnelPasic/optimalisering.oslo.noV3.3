@@ -1,5 +1,8 @@
 # Project state
 
+**H-022E / D-110 TEKNISK LEVERT — 2026-10-20.** Globale elementer → Kunderesultater → Visningsmal har Vekslende liste default / Bildekort; valgfrie trygge Nysta/Helt Opplagt-bilder, OWNER Eurotents-jpg/50/50 bevart. Implementasjon87f6a2e+2d8ba6b. Ekte CMS-mallagring952daec → native321d9c17 SUCCESS / Worker699b259b → faktisk Bildekort live → native CMS-restoreff52bdd → nativefd675e5c SUCCESS / Workera53c2108 at100%, default live bekreftet. Master Git bytes gjenopprettet eksakt. Build19/19 fokustester, begge maler med/uten bilder, kort1440/390 local/live, uendret service proof og artikkel-PageList PASS. Alle eksisterende fakta/medier/øvrige innhold/OWNER-data bevart. Detaljer i kort CODEX-TO-CHATGPT-kvittering; preview https://optimalisering-oslo-v33.anel.workers.dev/#resultater . OWNER visuell vurdering gjenstår; whole H-024A3 OPEN/H-024B BLOCKED; noindex/intake av, ingen offentlig launch. ACTIVE D-110 nedenfor er levert historikk.
+
+
 **LATEST OWNER CHANGE — 2026-10-20 D-110 / H-022E.** OWNER ønsker at «Kunderesultater» skal kunne bytte mellom eksisterende designsystemmaler via **Globale elementer i Pages CMS**: Vekslende liste default, Bildekort alternativ. Autorisert CMS-avgrenset implementering i `coordination/H022E-PROOF-CMS-LAYOUT-CHOICE.md`; per-case bilder kan lastes opp, uten å miste godkjente caser/OWNER Eurotents-bildet `eurotents.jpg` og 50/50 crop. H-022D var foreløpig visuelt akseptabel, dette er neste direkte OWNER-ønske. Følg D-107 risikobasert QA + nødvendig ekte CMS Save/bytt/restore for ny presentasjonskontroll, deploy kun noindex review Worker. H-024A3 whole-editor OPEN, H-024B BLOCKED, ingen produksjonslansering/indeksering/POST.
 
 
