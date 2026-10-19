@@ -75,7 +75,8 @@
           {
             "icon": "conversion",
             "label": "Konverteringsoptimalisering",
-            "compactLabel": "Konvertering"
+            "compactLabel": "Konvertering",
+            "description": "Få flere av de som lander på nettsiden til å fullføre bestilling eller kjøp."
           },
           {
             "icon": "local",
