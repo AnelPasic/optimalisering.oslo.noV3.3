@@ -22,6 +22,6 @@
     "beforeLabel": "Før",
     "afterLabel": "Etter",
     "changeLabel": "Arbeid",
-    "layout": "alternating"
+    "layout": "mediaCards"
   }
 }
