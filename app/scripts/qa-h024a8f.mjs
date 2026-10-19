@@ -1,0 +1,30 @@
+import {chromium} from '@playwright/test';
+import assert from 'node:assert/strict';
+import {readFileSync,writeFileSync,readdirSync,mkdirSync} from 'node:fs';
+import {relative,join} from 'node:path';
+import {createHash} from 'node:crypto';
+import {captureH026} from './h026-snapshot.mjs';
+import {getHomepageBlocks,isHomepageSectionVisible} from '../src/lib/home-builder.ts';
+const phase=process.env.QA_PHASE||'before',out='../coordination/evidence/h024a8f',base='https://optimalisering-oslo-v33.anel.workers.dev';
+mkdirSync(`${out}/${phase}`,{recursive:true});
+const hash=value=>createHash('sha256').update(value).digest('hex');
+const files=readdirSync('dist',{recursive:true,withFileTypes:true}).filter(e=>e.isFile()&&e.name!=='_headers').map(e=>relative('dist',join(e.parentPath,e.name)).replaceAll('\\','/'));
+const assets=[];
+for(let i=0;i<files.length;i+=6)await Promise.all(files.slice(i,i+6).map(async path=>{const bytes=readFileSync('dist/'+path),response=await fetch(base+'/'+path);assert.ok(response.ok,path);const worker=Buffer.from(await response.arrayBuffer());assert.equal(hash(worker),hash(bytes),path);assets.push({path,hash:hash(bytes)});}));
+assets.sort((a,b)=>a.path.localeCompare(b.path));
+if(phase==='after')assert.deepEqual(assets,JSON.parse(readFileSync(`${out}/before/checks.json`)).assets,'All current public assets unchanged');
+const home=JSON.parse(readFileSync('src/content/pages/home.json')),expected=getHomepageBlocks(home).filter(isHomepageSectionVisible).map(b=>b.id),records=[],errors=[],posts=[];
+const browser=await chromium.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true});
+try{for(const width of [1440,900,390,320]){
+ const page=await browser.newPage({viewport:{width,height:1000},reducedMotion:'reduce'});page.on('pageerror',e=>errors.push(e.message));await page.route('**/*',r=>r.request().method()==='POST'?(posts.push(r.request().url()),r.abort()):r.continue());
+ await page.goto(base+'/');await page.evaluate(()=>document.fonts.ready);
+ const snapshot=await page.evaluate(captureH026);assert.equal(snapshot.h1,1);assert.equal(snapshot.overflow,false);
+ const sections=await page.locator('.invite-home > section[id]').evaluateAll(es=>es.map(e=>({id:e.id,heading:e.querySelector('h2')?.textContent,height:e.getBoundingClientRect().height})));
+ assert.deepEqual(sections.map(s=>s.id),expected,'OWNER order preserved');
+ const ids=await page.locator('[id]').evaluateAll(es=>es.map(e=>e.id));assert.equal(new Set(ids).size,ids.length);
+ assert.equal(await page.locator('[data-home-assessment] button[type=submit]').isDisabled(),true);assert.match(await page.locator('meta[name=robots]').getAttribute('content'),/noindex/);
+ const record={width,snapshot,sections,pageHeight:await page.evaluate(()=>document.documentElement.scrollHeight)};
+ if(phase==='after')assert.deepEqual(record,JSON.parse(readFileSync(`${out}/before/checks.json`)).records.find(r=>r.width===width),'Public layout/text/order unchanged');
+ records.push(record);await page.screenshot({path:`${out}/${phase}/home-${width}.png`,fullPage:true});await page.close();
+}assert.deepEqual(errors,[]);assert.deepEqual(posts,[]);writeFileSync(`${out}/${phase}/checks.json`,JSON.stringify({phase,base,assets,records,errors,posts},null,2)+'\n');console.log(`${phase}: ${assets.length} exact Worker assets;4 responsive snapshots, OWNER order and safeguards PASS.`);
+}finally{await browser.close();}

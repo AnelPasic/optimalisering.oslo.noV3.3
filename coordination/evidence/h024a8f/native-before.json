@@ -1,0 +1,23 @@
+{
+  "incomingMain": "6dda6abce9b4f2c4c2715982aa2f13c6d99269ca",
+  "nativeUrl": "https://app.pagescms.org/anelpasic/optimalisering.oslo.nov3.3/main/file/homepage",
+  "freshPage": 5,
+  "observation": "Collapsed raw ID regneeksempel and actual select label Konverteringskalkulator coexist. No CMS data save made.",
+  "rows": [
+    "  uid=199_26 button \"Globale elementer\"",
+    "    uid=199_53 button \"Save\" disableable disabled",
+    "        uid=199_115 \"Dra for å sortere innenfor gruppen. Globalt innhold redigeres under Globale elementer og brukes på tvers av dette nettstedet. Fjern her betyr fjern fra denne siden, ikke slett originalen. Vanlig innhold redigeres i raden.\"",
+    "        uid=199_122 \"regneeksempel\"",
+    "        uid=201_2 combobox \"Select...\" autocomplete=\"list\" expandable haspopup=\"listbox\" value=\"Konverteringskalkulator\"",
+    "        uid=201_4 \"Visning på denne siden\"",
+    "        uid=201_7 \"Fjerning sletter bare plasseringen. Eksisterende lenker til #sjekk og #priser må få et gyldig mål før disse skjules eller fjernes.\"",
+    "        uid=199_125 \"Dra for å sortere innenfor gruppen. Globalt innhold redigeres under Globale elementer og brukes på tvers av dette nettstedet. Fjern her betyr fjern fra denne siden, ikke slett originalen. Vanlig innhold redigeres i raden.\"",
+    "        uid=199_131 \"Dra for å sortere innenfor gruppen. Globalt innhold redigeres under Globale elementer og brukes på tvers av dette nettstedet. Fjern her betyr fjern fra denne siden, ikke slett originalen. Vanlig innhold redigeres i raden.\"",
+    "        uid=199_137 \"Dra for å sortere innenfor gruppen. Globalt innhold redigeres under Globale elementer og brukes på tvers av dette nettstedet. Fjern her betyr fjern fra denne siden, ikke slett originalen. Vanlig innhold redigeres i raden.\"",
+    "        uid=199_143 \"Dra for å sortere innenfor gruppen. Globalt innhold redigeres under Globale elementer og brukes på tvers av dette nettstedet. Fjern her betyr fjern fra denne siden, ikke slett originalen. Vanlig innhold redigeres i raden.\"",
+    "        uid=199_149 \"Dra for å sortere innenfor gruppen. Globalt innhold redigeres under Globale elementer og brukes på tvers av dette nettstedet. Fjern her betyr fjern fra denne siden, ikke slett originalen. Vanlig innhold redigeres i raden.\"",
+    "        uid=199_155 \"Dra for å sortere innenfor gruppen. Globalt innhold redigeres under Globale elementer og brukes på tvers av dette nettstedet. Fjern her betyr fjern fra denne siden, ikke slett originalen. Vanlig innhold redigeres i raden.\"",
+    "        uid=199_161 \"Dra for å sortere innenfor gruppen. Globalt innhold redigeres under Globale elementer og brukes på tvers av dette nettstedet. Fjern her betyr fjern fra denne siden, ikke slett originalen. Vanlig innhold redigeres i raden.\"",
+    "        uid=199_167 \"Dra for å sortere innenfor gruppen. Globalt innhold redigeres under Globale elementer og brukes på tvers av dette nettstedet. Fjern her betyr fjern fra denne siden, ikke slett originalen. Vanlig innhold redigeres i raden.\""
+  ]
+}

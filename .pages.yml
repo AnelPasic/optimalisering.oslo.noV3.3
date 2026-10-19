@@ -680,7 +680,6 @@ content:
         label: Valgfrie seksjoner Topp
         type: block
         blockKey: _block
-        description: Dra for å sortere innenfor gruppen. Globalt innhold redigeres under Globale elementer og brukes på tvers av dette nettstedet. Fjern her betyr fjern fra denne siden, ikke slett originalen. Vanlig innhold redigeres i raden.
         list:
           max: 16
           collapsible:
@@ -807,7 +806,6 @@ content:
         label: Hovedseksjoner
         type: block
         blockKey: _block
-        description: Dra for å sortere innenfor gruppen. Globalt innhold redigeres under Globale elementer og brukes på tvers av dette nettstedet. Fjern her betyr fjern fra denne siden, ikke slett originalen. Vanlig innhold redigeres i raden.
         list:
           max: 24
           collapsible:
@@ -824,7 +822,6 @@ content:
         label: Valgfrie seksjoner Bunn
         type: block
         blockKey: _block
-        description: Dra for å sortere innenfor gruppen. Globalt innhold redigeres under Globale elementer og brukes på tvers av dette nettstedet. Fjern her betyr fjern fra denne siden, ikke slett originalen. Vanlig innhold redigeres i raden.
         list:
           max: 16
           collapsible:

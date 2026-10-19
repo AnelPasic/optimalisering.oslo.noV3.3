@@ -1,0 +1,2706 @@
+media:
+  - name: assets
+    label: Eksisterende media
+    input: app/src/assets
+    output: /assets
+  - name: heroImages
+    label: Forsidefoto – valgte bilde og alternativer
+    input: app/public/images/home
+    output: /images/home
+    extensions:
+      - webp
+    rename: safe
+  - name: serviceHeroImages
+    label: Tjenestenes drømmeutfall – leverte bilder og illustrasjoner
+    input: app/public/images/services
+    output: /images/services
+    extensions:
+      - webp
+      - png
+      - jpg
+      - jpeg
+      - avif
+      - svg
+    rename: safe
+  - name: packageVisuals
+    label: Pakkeillustrasjoner – SVG, WebP og PNG
+    input: app/public/images/pricing
+    output: /images/pricing
+    extensions:
+      - svg
+      - webp
+      - png
+    rename: safe
+  - name: listingImages
+    label: Bilder til innholdslister
+    input: app/public/images/listing
+    output: /images/listing
+    extensions:
+      - webp
+      - png
+      - jpg
+      - jpeg
+      - avif
+    rename: safe
+  - name: proofImages
+    label: Casebilder til forhåndsvisning
+    input: app/public/images/proof
+    output: /images/proof
+    extensions:
+      - webp
+      - png
+      - jpg
+      - jpeg
+      - avif
+    rename: safe
+settings:
+  content:
+    merge: true
+  commit:
+    templates:
+      update: "Innholdsoppdatering: {path} (via Pages CMS)"
+      create: "Nytt innhold: {path} (via Pages CMS)"
+      delete: "Slettet innhold: {path} (via Pages CMS)"
+components:
+  sectionVisibility:
+    type: select
+    options:
+      placeholder: Publisert
+      values:
+        - name: ""
+          label: Publisert
+        - name: hidden
+          label: Skjult – behold i CMS
+  link:
+    type: object
+    fields:
+      - name: label
+        label: Lenketekst
+        type: string
+        required: true
+      - name: href
+        label: Intern lenke
+        type: string
+        pattern: ^/
+        required: false
+  heroLayoutChoice:
+    type: select
+    description: Bildet, bildetype, beskrivelse og utsnitt bevares når du velger Sentrert uten bilde. Velg et annet oppsett for å vise det igjen. Sentrert med bilde viser tekst uten bilde hvis siden ikke har et lagret bilde. Teksten kommer først på mobil.
+    options:
+      placeholder: Tekst venstre / bilde høyre
+      values:
+        - name: split-right
+          label: Tekst venstre / bilde høyre
+        - name: split-left
+          label: Bilde venstre / tekst høyre
+        - name: centered
+          label: Sentrert med bilde
+        - name: centered-none
+          label: Sentrert uten bilde
+  pageHero:
+    type: object
+    label: Hero
+    fields:
+      - name: layout
+        label: Oppsett
+        component: heroLayoutChoice
+  surfaceChoice:
+    type: select
+    options:
+      placeholder: Standard
+      values:
+        - name: default
+          label: Standard
+        - name: base
+          label: Hvit
+        - name: soft
+          label: Lys
+        - name: mint
+          label: Mint
+        - name: lavender
+          label: Lavendel
+        - name: dark
+          label: Plomme
+  contentLayoutChoice:
+    type: select
+    options:
+      placeholder: Standard (automatisk)
+      values:
+        - name: default
+          label: Standard (automatisk)
+        - name: two-columns
+          label: To kolonner
+        - name: three-columns
+          label: Tre kolonner
+        - name: stacked
+          label: Liste (én kolonne)
+  boxVariantChoice:
+    type: select
+    options:
+      placeholder: Standard (automatisk)
+      values:
+        - name: default
+          label: Standard (automatisk)
+        - name: plain
+          label: Åpen boks
+        - name: card
+          label: Kort
+  sectionContent:
+    type: object
+    fields:
+      - name: id
+        label: Seksjonens lenkeanker
+        type: string
+        readonly: true
+        required: true
+      - name: eyebrow
+        label: Overtekst
+        type: string
+      - name: heading
+        label: Overskrift
+        type: string
+        required: true
+      - name: headingAlign
+        label: Overskriftsjustering
+        component: headingAlignment
+        description: Sentrert er standard. Velg Venstrejustert når seksjonen leses bedre som en vanlig tekstseksjon.
+      - name: layout
+        label: Seksjonsoppsett
+        component: contentLayoutChoice
+        description: Fordeling av vanlige bokser. Standard beholder dagens oppsett. Flere kolonner blir én på mobil. Seksjonstype og farger endres ikke.
+      - name: surface
+        label: Seksjonsfarge
+        component: surfaceChoice
+        description: Bakgrunn for hele seksjonen. Standard beholder designets opprinnelige farge.
+      - name: body
+        label: Avsnitt
+        type: text
+        list: {}
+        description: Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Globale elementer → Pakker og priser.
+      - name: items
+        label: Alternativer eller steg
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: title
+            label: Tittel
+            type: string
+            required: true
+          - name: text
+            label: Beskrivelse
+            type: text
+            required: true
+          - name: href
+            label: Intern lenke
+            type: string
+            pattern: ^(/.*)?$
+          - name: label
+            label: Lenketekst
+            type: string
+          - name: boxVariant
+            label: Boksvariant
+            component: boxVariantChoice
+            description: Standard beholder dagens boks. Åpen boks og Kort bruker felles designprimitiver; Boksfarge velges separat.
+          - name: surface
+            label: Boksfarge
+            component: surfaceChoice
+            description: Bakgrunn for denne boksen. Standard beholder designets opprinnelige farge.
+      - name: links
+        label: Relaterte lenker
+        component: link
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{label}"
+  listingVisual:
+    type: block
+    blockKey: kind
+    list:
+      min: 0
+      max: 1
+    description: Velg én listevisual med Ingen, Bilde eller Ikon. Bytt type på samme rad. Bildet eller ikonet eies av artikkelen og brukes i Bildekort og Bilde og tekst annenhver side.
+    blocks:
+      - name: none
+        label: Ingen
+        fields: []
+      - name: image
+        label: Bilde
+        fields:
+          - name: src
+            label: Bilde
+            type: image
+            required: true
+            options:
+              media: listingImages
+          - name: alt
+            label: Alternativ tekst
+            type: string
+            required: true
+            description: Beskriv det faktiske bildet kort og konkret.
+          - name: positionX
+            label: Horisontalt utsnitt
+            type: number
+            default: 50
+            options:
+              min: 0
+              max: 100
+          - name: positionY
+            label: Vertikalt utsnitt
+            type: number
+            default: 50
+            options:
+              min: 0
+              max: 100
+      - name: icon
+        label: Ikon
+        fields:
+          - name: icon
+            label: Ikon
+            type: select
+            required: true
+            options:
+              values:
+                - name: search
+                  label: Søk
+                - name: conversion
+                  label: Konvertering
+                - name: analytics
+                  label: Måling
+                - name: trend
+                  label: Utvikling
+                - name: page
+                  label: Side
+                - name: route
+                  label: Veivalg
+  insightArticleReference:
+    type: reference
+    options:
+      collection: insightArticles
+      value: "{fields.slug}"
+      label: "{primary} ({fields.slug})"
+      search: listing.title,title,slug
+  sectionPageList:
+    type: object
+    fields:
+      - name: id
+        label: Seksjonens lenkeanker
+        type: string
+        readonly: true
+        required: true
+      - name: eyebrow
+        label: Overtekst
+        type: string
+      - name: heading
+        label: Overskrift
+        type: string
+        required: true
+      - name: headingAlign
+        label: Overskriftsjustering
+        component: headingAlignment
+        description: Sentrert er standard. Velg Venstrejustert når seksjonen leses bedre som en vanlig tekstseksjon.
+      - name: surface
+        label: Seksjonsfarge
+        component: surfaceChoice
+      - name: body
+        label: Avsnitt
+        type: text
+        list: {}
+      - name: pageList
+        label: Innholdsliste
+        type: object
+        required: true
+        fields:
+          - name: mode
+            label: Utvalg
+            type: select
+            default: automatic
+            required: true
+            options:
+              values:
+                - name: automatic
+                  label: Automatisk
+                - name: manual
+                  label: Manuelt valgt
+          - name: sort
+            label: Sortering
+            type: select
+            default: editorial
+            description: Gjelder automatisk utvalg. Manuelt utvalg følger rekkefølgen under Velg artikler.
+            options:
+              values:
+                - name: editorial
+                  label: Redaksjonell
+                - name: title
+                  label: Tittel
+          - name: limit
+            label: Maks antall
+            type: number
+            default: 6
+            description: Bare automatisk utvalg, 1–12. Manuelt utvalg viser alle valgte, synlige artikler.
+            options:
+              min: 1
+              max: 12
+              step: 1
+          - name: layout
+            label: Visning
+            type: select
+            default: cards
+            options:
+              values:
+                - name: cards
+                  label: Kort
+                - name: mediaCards
+                  label: Bildekort
+                - name: alternating
+                  label: Bilde og tekst annenhver side
+                - name: compact
+                  label: Kompakt
+                - name: links
+                  label: Lenker
+          - name: selected
+            label: Velg artikler
+            description: Bare manuelt utvalg. Flytt radene for å endre rekkefølgen. Velg hver artikkel én gang.
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{slug}"
+            fields:
+              - name: slug
+                label: Artikkel
+                component: insightArticleReference
+                required: true
+          - name: excluded
+            label: Ekskluder artikler
+            description: Bare automatisk utvalg. Disse artiklene tas ut før Maks antall brukes.
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{slug}"
+            fields:
+              - name: slug
+                label: Artikkel
+                component: insightArticleReference
+                required: true
+  sectionProtected:
+    type: object
+    fields:
+      - name: id
+        label: Seksjonens lenkeanker
+        type: string
+        readonly: true
+        required: true
+      - name: eyebrow
+        label: Overtekst
+        type: string
+      - name: heading
+        label: Overskrift
+        type: string
+        required: true
+      - name: headingAlign
+        label: Overskriftsjustering
+        component: headingAlignment
+        description: Sentrert er standard. Velg Venstrejustert når seksjonen leses bedre som en vanlig tekstseksjon.
+      - name: body
+        label: Avsnitt
+        type: text
+        list: {}
+        description: Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Seksjoner → Pakker og priser.
+      - name: items
+        label: Alternativer eller steg
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: title
+            label: Tittel
+            type: string
+            required: true
+          - name: text
+            label: Beskrivelse
+            type: text
+            required: true
+          - name: href
+            label: Intern lenke
+            type: string
+            pattern: ^(/.*)?$
+          - name: label
+            label: Lenketekst
+            type: string
+      - name: links
+        label: Relaterte lenker
+        component: link
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{label}"
+  sectionForm:
+    type: object
+    fields:
+      - name: id
+        label: Seksjonens lenkeanker
+        type: string
+        readonly: true
+        required: true
+      - name: eyebrow
+        label: Overtekst
+        type: string
+      - name: heading
+        label: Overskrift
+        type: string
+        required: true
+      - name: body
+        label: Avsnitt
+        type: text
+        list: {}
+        description: Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Seksjoner → Pakker og priser.
+      - name: items
+        label: Alternativer eller steg
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: title
+            label: Tittel
+            type: string
+            required: true
+          - name: text
+            label: Beskrivelse
+            type: text
+            required: true
+          - name: href
+            label: Intern lenke
+            type: string
+            pattern: ^(/.*)?$
+          - name: label
+            label: Lenketekst
+            type: string
+      - name: links
+        label: Relaterte lenker
+        component: link
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{label}"
+  headingAlignment:
+    type: select
+    options:
+      placeholder: Sentrert (standard)
+      values:
+        - name: center
+          label: Sentrert (standard)
+        - name: left
+          label: Venstrejustert
+content:
+  - name: terminology
+    label: Begreper og forklaringer
+    type: file
+    path: app/src/content/terminology/glossary.json
+    format: json
+    fields:
+      - name: authority
+        label: Innholdsautoritet
+        type: string
+        required: true
+        readonly: true
+      - name: hero
+        component: pageHero
+      - name: title
+        label: Overskrift
+        type: string
+        required: true
+      - name: intro
+        label: Ingress
+        type: text
+        required: true
+      - name: description
+        label: Metabeskrivelse
+        type: text
+        required: true
+      - name: linkLabel
+        label: Lenketekst til begrepssiden
+        type: string
+        required: true
+      - name: moreLabel
+        label: Lenketekst i forklaringen
+        type: string
+        required: true
+      - name: exampleLabel
+        label: Eksempeletikett
+        type: string
+        required: true
+      - name: panelLabel
+        label: Tilgjengelig navn på forklaring
+        type: string
+        required: true
+      - name: terms
+        label: Begreper
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.term}"
+        required: true
+        fields:
+          - name: id
+            label: Stabilt anker (beskyttet)
+            type: string
+            required: true
+            readonly: true
+            pattern: ^[a-z][a-z0-9]*(-[a-z0-9]+)*$
+          - name: term
+            label: Begrep
+            type: string
+            required: true
+          - name: fullName
+            label: Fullt navn
+            type: string
+            required: false
+          - name: aliases
+            label: Alternative navn
+            type: string
+            required: false
+            list: true
+          - name: category
+            label: Kategori
+            type: select
+            required: true
+            options:
+              values:
+                - Synlighet og søk
+                - Annonsering
+                - Konvertering
+                - Måling og økonomi
+          - name: shortDefinition
+            label: Kort forklaring (én setning, maks. 180 tegn)
+            type: text
+            required: true
+          - name: fullDefinition
+            label: Full forklaring
+            type: text
+            required: true
+          - name: simpleExample
+            label: Enkelt eksempel
+            type: text
+            required: false
+  - name: homepage
+    label: Forside
+    type: file
+    path: app/src/content/pages/home.json
+    format: json
+    fields:
+      - name: seo
+        label: SEO
+        type: object
+        fields:
+          - name: title
+            label: Sidetittel
+            type: string
+            required: true
+          - name: description
+            label: Metabeskrivelse
+            type: text
+            required: true
+        required: true
+      - name: hero
+        label: Hero
+        type: object
+        required: true
+        fields:
+          - name: layout
+            label: Oppsett
+            component: heroLayoutChoice
+          - name: eyebrow
+            label: Overtekst
+            type: string
+            required: true
+          - name: title
+            label: Hovedoverskrift
+            type: string
+            required: true
+          - name: support
+            label: Ingress
+            type: text
+            required: true
+          - name: primaryCta
+            label: Primær handling
+            component: link
+            required: true
+          - name: secondaryCta
+            label: Sekundær handling
+            component: link
+          - name: visual
+            label: Bilde
+            type: object
+            fields:
+              - name: kind
+                label: Visuelt innhold
+                type: select
+                options:
+                  values:
+                    - name: image
+                      label: Bilde
+                    - name: none
+                      label: Ingen
+              - name: image
+                label: Valgt bilde og utsnitt
+                type: object
+                fields:
+                  - name: src
+                    label: Valgt bilde
+                    type: image
+                    options:
+                      media: heroImages
+                    required: true
+                  - name: positionX
+                    label: Horisontalt utsnitt (%)
+                    type: number
+                    default: 50
+                    options:
+                      min: 0
+                      max: 100
+                    required: true
+                  - name: positionY
+                    label: Vertikalt utsnitt (%)
+                    type: number
+                    default: 50
+                    options:
+                      min: 0
+                      max: 100
+                    required: true
+      - name: topSections
+        label: Valgfrie seksjoner Topp
+        type: block
+        blockKey: _block
+        description: Dra for å sortere innenfor gruppen. Globalt innhold redigeres under Globale elementer og brukes på tvers av dette nettstedet. Fjern her betyr fjern fra denne siden, ikke slett originalen. Vanlig innhold redigeres i raden.
+        list:
+          max: 16
+          collapsible:
+            collapsed: true
+            summary: "{element}{name}"
+        blocks:
+          - name: global
+            label: Globalt element
+            fields: &a1
+              - name: element
+                label: Globalt element
+                type: select
+                required: true
+                options:
+                  values:
+                    - name: behov
+                      label: Behovsvelger
+                    - name: regneeksempel
+                      label: Konverteringskalkulator
+                    - name: sjekk
+                      label: Gratis sjekk / kontaktskjema
+                    - name: priser
+                      label: Pakker og priser
+                    - name: resultater
+                      label: Kunderesultater
+                    - name: mekanisme
+                      label: Slik jobber vi
+                    - name: passer
+                      label: Hvem det passer for
+                    - name: sporsmal
+                      label: Ofte stilte spørsmål
+              - name: visibility
+                label: Visning på denne siden
+                component: sectionVisibility
+                description: "Fjerning sletter bare plasseringen. Eksisterende lenker til #sjekk og #priser må få et gyldig mål før disse skjules eller fjernes."
+          - name: content
+            label: Innholdsseksjon
+            fields: &a2
+              - name: visibility
+                label: Visning på nettsiden
+                component: sectionVisibility
+                description: Publisert er standard. Skjult beholder hele seksjonen i CMS, men fjerner den fra alle offentlige seksjonseksempler og forsiden.
+              - name: uid
+                type: uuid
+                hidden: true
+                options:
+                  editable: false
+                  generate: true
+                required: true
+                readonly: true
+              - name: name
+                label: Navn i seksjonslisten
+                type: string
+                required: true
+              - name: id
+                label: Seksjonens lenkeanker
+                type: string
+                required: true
+                pattern: ^(?!(?:behov|regneeksempel|sjekk|priser|resultater|mekanisme|passer|sporsmal|skjema|main|mobile-menu|site-menu|order-package|website|email|message)$)(?!(?:calc-|scenario-|package-home-|term-))[a-z0-9]+(?:-[a-z0-9]+)*$
+                description: Unikt lenkeanker med små bokstaver og bindestrek, for eksempel nyttig-informasjon. Behold ankeret ved flytting.
+              - name: eyebrow
+                label: Overtekst
+                type: string
+              - name: heading
+                label: Overskrift
+                type: string
+                required: true
+              - name: headingAlign
+                label: Overskriftsjustering
+                component: headingAlignment
+                description: Sentrert er standard. Velg Venstrejustert når seksjonen leses bedre som en vanlig tekstseksjon.
+              - name: layout
+                label: Seksjonsoppsett
+                component: contentLayoutChoice
+                description: Fordeling av vanlige bokser. Standard beholder dagens oppsett. Flere kolonner blir én på mobil. Seksjonstype og farger endres ikke.
+              - name: surface
+                label: Seksjonsfarge
+                component: surfaceChoice
+                description: Bakgrunn for hele seksjonen. Standard beholder designets opprinnelige farge.
+              - name: body
+                label: Avsnitt
+                type: text
+                list: {}
+                description: Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Seksjoner → Pakker og priser.
+              - name: items
+                label: Alternativer eller steg
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{title}"
+                fields:
+                  - name: title
+                    label: Tittel
+                    type: string
+                    required: true
+                  - name: text
+                    label: Beskrivelse
+                    type: text
+                    required: true
+                  - name: href
+                    label: Intern lenke
+                    type: string
+                    pattern: ^(/.*)?$
+                  - name: label
+                    label: Lenketekst
+                    type: string
+                  - name: boxVariant
+                    label: Boksvariant
+                    component: boxVariantChoice
+                    description: Standard beholder dagens boks. Åpen boks og Kort bruker felles designprimitiver; Boksfarge velges separat.
+                  - name: surface
+                    label: Boksfarge
+                    component: surfaceChoice
+                    description: Bakgrunn for denne boksen. Standard beholder designets opprinnelige farge.
+              - name: links
+                label: Relaterte lenker
+                component: link
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{label}"
+      - name: sections
+        label: Hovedseksjoner
+        type: block
+        blockKey: _block
+        description: Dra for å sortere innenfor gruppen. Globalt innhold redigeres under Globale elementer og brukes på tvers av dette nettstedet. Fjern her betyr fjern fra denne siden, ikke slett originalen. Vanlig innhold redigeres i raden.
+        list:
+          max: 24
+          collapsible:
+            collapsed: true
+            summary: "{element}{name}"
+        blocks:
+          - name: global
+            label: Globalt element
+            fields: *a1
+          - name: content
+            label: Innholdsseksjon
+            fields: *a2
+      - name: bottomSections
+        label: Valgfrie seksjoner Bunn
+        type: block
+        blockKey: _block
+        description: Dra for å sortere innenfor gruppen. Globalt innhold redigeres under Globale elementer og brukes på tvers av dette nettstedet. Fjern her betyr fjern fra denne siden, ikke slett originalen. Vanlig innhold redigeres i raden.
+        list:
+          max: 16
+          collapsible:
+            collapsed: true
+            summary: "{element}{name}"
+        blocks:
+          - name: global
+            label: Globalt element
+            fields: *a1
+          - name: content
+            label: Innholdsseksjon
+            fields: *a2
+      - name: homepage
+        label: Felles toppmeny og bunntekst
+        type: object
+        fields:
+          - name: chrome
+            label: Toppmeny og bunntekst
+            type: object
+            fields:
+              - name: brand
+                label: Merkenavn
+                type: string
+                required: true
+              - name: brandLocation
+                label: Stedsnavn i ordmerket
+                type: string
+                required: true
+              - name: homeLabel
+                label: Tilgjengelig forsidenavn
+                type: string
+                required: true
+              - name: skipLabel
+                label: Hopp til innhold
+                type: string
+                required: true
+              - name: navigationLabel
+                label: Hovedmenynavn
+                type: string
+                required: true
+              - name: mobileNavigationLabel
+                label: Mobilmenynavn
+                type: string
+                required: true
+              - name: openMenu
+                label: Åpne meny
+                type: string
+                required: true
+              - name: closeMenu
+                label: Lukk meny
+                type: string
+                required: true
+              - name: assessmentLink
+                label: Lenke til gratis sjekk
+                type: object
+                fields:
+                  - name: label
+                    label: Tekst
+                    type: string
+                    required: true
+                  - name: href
+                    label: Intern lenke
+                    type: string
+                    pattern: ^/
+                    required: true
+                required: true
+              - name: navigation
+                label: Navigasjon
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{label}"
+                fields:
+                  - name: label
+                    label: Tekst
+                    type: string
+                    required: true
+                  - name: href
+                    label: Intern lenke
+                    type: string
+                    pattern: ^/
+                    required: true
+                required: true
+              - name: providerText
+                label: Påkrevd leverandøropplysning
+                type: string
+                readonly: true
+                required: true
+              - name: previewLabel
+                label: Forhåndsvisningsetikett
+                type: string
+                required: true
+              - name: serviceNavigationLabel
+                label: Tjenestemenynavn
+                type: string
+                required: true
+              - name: informationNavigationLabel
+                label: Informasjonsmenynavn
+                type: string
+                required: true
+              - name: storeLink
+                label: Nettbutikklenke
+                type: object
+                fields:
+                  - name: label
+                    label: Tekst
+                    type: string
+                    required: true
+                  - name: href
+                    label: Intern lenke
+                    type: string
+                    pattern: ^/
+                    required: true
+                required: true
+              - name: informationLinks
+                label: Informasjonslenker
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{label}"
+                fields:
+                  - name: label
+                    label: Tekst
+                    type: string
+                    required: true
+                  - name: href
+                    label: Intern lenke
+                    type: string
+                    pattern: ^/
+                    required: true
+                required: true
+              - name: copyrightProvider
+                label: Tjenestemerke i opphavsrett
+                type: string
+                required: true
+              - name: footerNote
+                label: Bunntekstmerknad
+                type: string
+                required: true
+            required: true
+        required: true
+    operations: &a3
+      create: false
+      rename: false
+      delete: false
+  - name: services
+    label: Tjenester
+    type: collection
+    path: app/src/content/pages
+    exclude:
+      - home.json
+      - innsikt.json
+      - priser.json
+      - om.json
+      - vurdering.json
+      - kontakt.json
+      - personvern.json
+      - vilkar.json
+      - hva-bor-optimaliseres-forst.json
+      - male-effekt-av-optimalisering.json
+    format: json
+    subfolders: false
+    operations: *a3
+    filename: "{slug}.json"
+    view:
+      primary: seo.title
+      fields:
+        - seo.title
+        - slug
+      search:
+        - seo.title
+        - slug
+        - title
+      sort:
+        - seo.title
+        - slug
+    fields:
+      - name: slug
+        label: URL-slug
+        type: string
+        readonly: true
+        required: true
+        description: "Sidens URL-del. Eksempel: seo vises som /seo/."
+      - &a4
+        name: seo
+        label: SEO
+        type: object
+        fields:
+          - name: title
+            label: Sidetittel
+            type: string
+            required: true
+          - name: description
+            label: Metabeskrivelse
+            type: text
+            required: true
+        required: true
+      - &a9
+        name: hero
+        component: pageHero
+      - &a5
+        name: heroVisual
+        label: Hero-bilde / drømmeutfall
+        type: object
+        fields:
+          - name: kind
+            label: Bildetype
+            type: select
+            options:
+              values:
+                - photo
+                - illustration
+            required: true
+          - name: src
+            label: Levert tjenestebilde
+            type: image
+            options:
+              media: serviceHeroImages
+            required: true
+          - name: alt
+            label: Kort beskrivelse av bildets mening
+            type: string
+            required: true
+          - name: positionX
+            label: Fokus vannrett (0–100)
+            type: number
+            required: true
+            options:
+              min: 0
+              max: 100
+          - name: positionY
+            label: Fokus loddrett (0–100)
+            type: number
+            required: true
+            options:
+              min: 0
+              max: 100
+        description: Valgfritt eksisterende Hero-bilde. Bilde og utsnitt bevares når Oppsett endres. Uten et levert bilde vises toppseksjonen med tekst.
+      - &a10
+        name: eyebrow
+        label: Toppseksjon (Hero) – Overtekst
+        type: string
+        required: true
+      - &a11
+        name: title
+        label: Hovedoverskrift
+        type: string
+        required: true
+      - &a12
+        name: intro
+        label: Ingress
+        type: text
+        required: true
+      - &a6
+        name: sections
+        label: Innholdsseksjoner og farger
+        description: Åpne en vanlig Innholdsseksjon for Seksjonsfarge. Åpne en boks under Alternativer eller steg for Boksfarge. Beskyttede sjekk-/handlingsseksjoner har ikke fargevalg.
+        type: block
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{heading}"
+        required: true
+        blockKey: _block
+        blocks:
+          - name: content
+            label: Innholdsseksjon
+            component: sectionContent
+          - name: protected
+            label: Beskyttet sjekk / handling
+            component: sectionProtected
+      - &a7
+        name: faq
+        label: Ofte stilte spørsmål
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{question}"
+        fields:
+          - name: question
+            label: Spørsmål
+            type: string
+            required: true
+          - name: answer
+            label: Svar
+            type: text
+            required: true
+      - &a8
+        name: cta
+        label: Neste steg
+        component: link
+        required: true
+      - name: proof
+        label: Dokumenterte resultater - trygg presentasjon
+        type: object
+        fields:
+          - name: publicationApproved
+            label: Godkjenn visning av allerede publiserbare case
+            description: Slå bare på etter dokumentert godkjenning. Dette overstyrer aldri case-status, tillatelse eller manglende evidens.
+            type: boolean
+            default: false
+            required: true
+            readonly: true
+          - name: caseIds
+            label: Velg case fra evidensregisteret
+            type: reference
+            options:
+              collection: proofCases
+              multiple: true
+              value: "{fields.id}"
+              label: "{fields.clientName} ({fields.publicationStatus})"
+              search: id,clientName,anonymizedLabel
+            required: false
+            description: Velg primært case. Visning støttes på Synlighet og Konvertering før prisbroen.
+          - name: eyebrow
+            label: Overtekst
+            type: string
+            required: true
+          - name: heading
+            label: Overskrift
+            type: string
+            required: true
+          - name: beforeLabel
+            label: Før-etikett
+            type: string
+            required: true
+          - name: afterLabel
+            label: Etter-etikett
+            type: string
+            required: true
+          - name: changeLabel
+            label: Endring-etikett
+            type: string
+            required: true
+        required: false
+  - name: priser
+    label: Priser
+    type: file
+    path: app/src/content/pages/priser.json
+    format: json
+    operations: *a3
+    fields:
+      - *a4
+      - name: hero
+        component: pageHero
+        description: Hero-teksten hentes fra Forside → Seksjoner → Pakker og priser. Velg bare oppsett her. Ingen ekstra tekstkilde opprettes.
+      - *a5
+      - name: eyebrow
+        label: Overtekst (inaktiv kilde)
+        type: string
+        hidden: true
+        readonly: true
+      - name: title
+        label: Overskrift (inaktiv kilde)
+        type: string
+        hidden: true
+        readonly: true
+      - name: intro
+        label: Ingress (inaktiv kilde)
+        type: text
+        hidden: true
+        readonly: true
+      - *a6
+      - *a7
+      - *a8
+  - name: insight
+    label: Innsikt
+    type: group
+    items:
+      - name: insightOverview
+        label: Oversiktsside
+        type: file
+        path: app/src/content/pages/innsikt.json
+        format: json
+        operations: *a3
+        fields:
+          - *a4
+          - *a9
+          - *a5
+          - *a10
+          - *a11
+          - *a12
+          - name: sections
+            label: Innholdsseksjoner
+            type: block
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{heading}"
+            required: true
+            blockKey: _block
+            blocks:
+              - name: content
+                label: Innholdsseksjon
+                component: sectionContent
+              - name: pageList
+                label: Innholdsliste
+                component: sectionPageList
+          - *a7
+          - *a8
+      - name: insightArticles
+        label: Artikler
+        type: collection
+        path: app/src/content/pages
+        exclude:
+          - home.json
+          - innsikt.json
+          - priser.json
+          - om.json
+          - vurdering.json
+          - kontakt.json
+          - personvern.json
+          - vilkar.json
+          - synlighet.json
+          - konvertering.json
+          - seo.json
+          - ai-synlighet.json
+          - nettbutikkoptimalisering.json
+        format: json
+        subfolders: false
+        operations: *a3
+        filename: "{primary}.json"
+        view:
+          primary: listing.title
+          fields:
+            - listing.title
+            - slug
+            - seo.title
+          search:
+            - listing.title
+            - title
+            - slug
+            - seo.title
+          sort:
+            - listing.order
+            - listing.title
+        fields:
+          - name: slug
+            label: URL-slug
+            type: string
+            readonly: true
+            required: true
+          - *a4
+          - *a9
+          - *a5
+          - *a10
+          - *a11
+          - *a12
+          - name: listing
+            label: Visning i innholdslister
+            type: object
+            fields:
+              - name: title
+                label: Kort listetittel
+                type: string
+                description: Tomt felt bruker hovedoverskriften.
+              - name: summary
+                label: Sammendrag
+                type: text
+                description: Tomt felt bruker ingressen.
+              - name: label
+                label: Lenketekst
+                type: string
+                description: Tomt felt bruker Les mer.
+              - name: order
+                label: Redaksjonell rekkefølge
+                type: number
+                options:
+                  step: 1
+                description: Laveste heltall først. Uten tall kommer artikkelen etter de nummererte. Dette er ikke en dato.
+              - name: visible
+                label: Vis i innholdslister
+                type: boolean
+                default: true
+                description: Av skjuler artikkelen i både automatiske og manuelle lister. URL og indeksering endres ikke.
+              - name: visual
+                label: Listevisual
+                component: listingVisual
+          - *a6
+          - *a7
+          - *a8
+  - name: om
+    label: Om tjenesten
+    type: file
+    path: app/src/content/pages/om.json
+    format: json
+    operations: *a3
+    fields: &a13
+      - *a4
+      - *a9
+      - *a5
+      - *a10
+      - *a11
+      - *a12
+      - *a6
+      - *a7
+      - *a8
+  - name: vurdering
+    label: Optimaliseringssjekk
+    type: file
+    path: app/src/content/pages/vurdering.json
+    format: json
+    operations: *a3
+    fields: *a13
+  - name: kontakt
+    label: Kontakt
+    type: file
+    path: app/src/content/pages/kontakt.json
+    format: json
+    operations: *a3
+    fields: *a13
+  - name: personvern
+    label: Personvern
+    type: file
+    path: app/src/content/pages/personvern.json
+    format: json
+    operations: *a3
+    fields: *a13
+  - name: vilkar
+    label: Vilkår
+    type: file
+    path: app/src/content/pages/vilkar.json
+    format: json
+    operations: *a3
+    fields: *a13
+  - name: errorHero
+    label: 404 – Hero-oppsett
+    type: file
+    path: app/src/content/presentation/hero-layouts.json
+    format: json
+    operations: *a3
+    fields:
+      - name: notFound
+        label: Hero
+        component: pageHero
+        description: Oppsett for feilsiden. Feilmelding og navigasjon beholdes; ingen markedsføringshandling legges til.
+  - name: proofCases
+    label: Case/evidens (intern)
+    type: collection
+    path: app/src/content/proof
+    format: json
+    filename: "{fields.id}.json"
+    view:
+      primary: clientName
+      fields:
+        - clientName
+        - publicationStatus
+        - namingPermission
+        - artifactStatus
+    fields:
+      - name: id
+        label: Stabil case-ID
+        description: Referanser fra forsiden bruker denne ID-en. Endring krever at referansene oppdateres.
+        type: string
+        pattern: ^[a-z0-9][a-z0-9-]*$
+        required: true
+        readonly: true
+      - name: clientName
+        label: Kunde- eller visningsnavn
+        type: string
+        required: true
+        readonly: true
+      - name: anonymizedLabel
+        label: Godkjent anonymisert navn
+        type: string
+        readonly: true
+      - name: relationship
+        label: Relasjon og bakgrunn – intern evidens
+        type: text
+        readonly: true
+      - name: dominantMetric
+        label: Hovedresultat og måledefinisjon
+        type: text
+        required: true
+        readonly: true
+      - name: before
+        label: Før-verdi
+        type: string
+        readonly: true
+      - name: after
+        label: Etter-verdi
+        type: string
+        readonly: true
+      - name: delta
+        label: Dokumentert endring
+        type: string
+        readonly: true
+      - name: period
+        label: Sammenligningsperioder
+        type: object
+        fields:
+          - name: before
+            label: Før-periode
+            type: string
+            readonly: true
+          - name: after
+            label: Etter-periode
+            type: string
+            readonly: true
+          - name: comparable
+            label: Sammenlignbarhet dokumentert
+            type: boolean
+            default: false
+            required: true
+            readonly: true
+        required: true
+        readonly: true
+      - name: intervention
+        label: Dokumentert tiltak eller endring
+        type: text
+        readonly: true
+      - name: source
+        label: Kilde og proveniens – intern evidens
+        type: text
+        required: true
+        readonly: true
+      - name: limitations
+        label: Begrensninger og attribusjonsforbehold
+        type: text
+        readonly: true
+      - name: namingPermission
+        label: Navne- eller anonymiseringstillatelse
+        type: select
+        default: NEEDS_PERMISSION
+        options:
+          values:
+            - NEEDS_PERMISSION
+            - GRANTED
+            - NAME_APPROVED
+            - ANONYMIZED_APPROVED
+        required: true
+        readonly: true
+      - name: permissionEvidence
+        label: Dokumentasjon på faktisk publiseringstillatelse
+        type: text
+        readonly: true
+      - name: strategyReviewStatus
+        label: STRATEGY_CONTENT-review
+        description: GRANTED tillatelse erstatter ikke review av den konkrete offentlige presentasjonen.
+        type: select
+        default: READY_FOR_STRATEGY_REVIEW
+        options:
+          values:
+            - READY_FOR_STRATEGY_REVIEW
+            - CONTENT_LOCKED
+        required: true
+        readonly: true
+      - name: strategyReviewEvidence
+        label: Kilde/revisjon for konkret STRATEGY_CONTENT-lock
+        type: text
+        readonly: true
+      - name: artifactStatus
+        label: Skjermbilde- og kildeartefaktstatus
+        type: select
+        default: NOT_IMPORTED
+        options:
+          values:
+            - NOT_IMPORTED
+            - IMPORTED
+            - VERIFIED
+        required: true
+        readonly: true
+      - name: artifactReferences
+        label: Kildeartefaktreferanser – ikke legg persondata i Git
+        type: string
+        list: {}
+        required: false
+        readonly: true
+      - name: evidenceMetrics
+        label: Supplerte målinger – intern evidens, ikke offentlig renderer
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{metric}"
+        fields:
+          - name: metric
+            label: Måling og definisjon
+            type: text
+            required: true
+            readonly: true
+          - name: before
+            label: Før-verdi
+            type: string
+            readonly: true
+          - name: after
+            label: Etter-verdi
+            type: string
+            readonly: true
+          - name: delta
+            label: Dokumentert endring
+            type: string
+            readonly: true
+          - name: nextPeriod
+            label: Neste periodes verdi
+            type: string
+            readonly: true
+          - name: timeframe
+            label: Periode
+            type: string
+            readonly: true
+        required: false
+        readonly: true
+      - name: publicationStatus
+        label: Publiseringsstatus
+        description: EVIDENCE_ONLY er intern forberedelse. PUBLISHABLE krever dokumenterte målinger, sammenlignbare perioder, tiltak, kilde, forbehold og tillatelse.
+        type: select
+        default: EVIDENCE_ONLY
+        options:
+          values:
+            - EVIDENCE_ONLY
+            - REVIEW_REQUIRED
+            - PUBLISHABLE
+            - WITHDRAWN
+        required: true
+        readonly: true
+      - name: publicationApproved
+        label: Publisering uttrykkelig godkjent
+        type: boolean
+        default: false
+        required: true
+        readonly: true
+    operations:
+      create: false
+      delete: false
+      rename: false
+  - name: globalElements
+    label: Globale elementer
+    type: group
+    items:
+      - name: globalSelector
+        label: Behovsvelger
+        type: file
+        path: app/src/content/global-elements/behov.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: _block
+            type: string
+            hidden: true
+            readonly: true
+            default: selector
+            required: true
+          - name: uid
+            type: uuid
+            hidden: true
+            options:
+              editable: false
+              generate: false
+            required: true
+            readonly: true
+          - name: id
+            type: string
+            hidden: true
+            default: behov
+            readonly: true
+            required: true
+          - name: name
+            label: Seksjon
+            type: string
+            default: Behovsvelger
+            readonly: true
+            required: true
+            hidden: true
+          - name: content
+            label: false
+            type: object
+            fields:
+              - name: heading
+                label: Overskrift
+                type: string
+                required: true
+              - name: items
+                label: Alternativer
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{title}"
+                  min: 3
+                  max: 3
+                fields:
+                  - name: title
+                    label: Tittel
+                    type: string
+                    required: true
+                  - name: discipline
+                    label: Fagområde
+                    type: string
+                    required: true
+                  - name: description
+                    label: Beskrivelse
+                    type: text
+                    required: true
+                  - name: link
+                    label: Lenke
+                    type: object
+                    fields:
+                      - name: label
+                        label: Tekst
+                        type: string
+                        required: true
+                      - name: href
+                        label: Intern lenke
+                        type: string
+                        pattern: ^/
+                        required: true
+                    required: true
+                required: true
+            required: true
+            description: Endringer her gjelder alle plasseringer på dette nettstedet. Fjern eller skjul en plassering på siden for å beholde originalinnholdet her.
+      - name: globalCalculator
+        label: Konverteringskalkulator
+        type: file
+        path: app/src/content/global-elements/regneeksempel.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: _block
+            type: string
+            hidden: true
+            readonly: true
+            default: calculator
+            required: true
+          - name: uid
+            type: uuid
+            hidden: true
+            options:
+              editable: false
+              generate: false
+            required: true
+            readonly: true
+          - name: id
+            type: string
+            hidden: true
+            default: regneeksempel
+            readonly: true
+            required: true
+          - name: name
+            label: Seksjon
+            type: string
+            default: Regneeksempel
+            readonly: true
+            required: true
+            hidden: true
+          - name: content
+            label: false
+            type: object
+            fields:
+              - name: eyebrow
+                label: Overtekst
+                type: string
+                required: true
+              - name: heading
+                label: Overskrift
+                type: string
+                required: true
+              - name: intro
+                label: Ingress
+                type: text
+                required: true
+              - name: formula
+                label: Enkel formel
+                type: string
+                required: true
+              - name: labels
+                label: Etiketter
+                type: object
+                fields:
+                  - name: visits
+                    label: Relevante besøk per måned
+                    type: string
+                    required: true
+                  - name: conversion
+                    label: Konverteringsrate i dag
+                    type: string
+                    required: true
+                  - name: trafficIncrease
+                    label: Mer relevant trafikk
+                    type: string
+                    required: true
+                  - name: newConversion
+                    label: Ny konverteringsrate
+                    type: string
+                    required: true
+                  - name: current
+                    label: I dag
+                    type: string
+                    required: true
+                  - name: scenario
+                    label: Scenario
+                    type: string
+                    required: true
+                  - name: difference
+                    label: Forskjell
+                    type: string
+                    required: true
+                  - name: outcome
+                    label: Resultatenhet
+                    type: string
+                    required: true
+                  - name: increase
+                    label: Prosentvis endring
+                    type: string
+                    required: true
+                  - name: undefinedIncrease
+                    label: Merknad ved null utgangspunkt
+                    type: string
+                    required: true
+                  - name: invalid
+                    label: Veiledning ved ugyldige verdier
+                    type: string
+                    required: true
+                required: true
+              - name: defaults
+                label: Startverdier
+                type: object
+                fields:
+                  - name: visits
+                    label: Relevante besøk per måned
+                    type: number
+                    required: true
+                  - name: conversion
+                    label: Konverteringsrate i dag
+                    type: number
+                    required: true
+                  - name: trafficIncrease
+                    label: Mer relevant trafikk
+                    type: number
+                    required: true
+                  - name: newConversion
+                    label: Ny konverteringsrate
+                    type: number
+                    required: true
+                required: true
+              - name: caveat
+                label: Forbehold
+                type: text
+                required: true
+            required: true
+            description: Endringer her gjelder alle plasseringer på dette nettstedet. Fjern eller skjul en plassering på siden for å beholde originalinnholdet her.
+      - name: globalAssessment
+        label: Gratis sjekk / kontaktskjema
+        type: file
+        path: app/src/content/global-elements/sjekk.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: _block
+            type: string
+            hidden: true
+            readonly: true
+            default: assessment
+            required: true
+          - name: uid
+            type: uuid
+            hidden: true
+            options:
+              editable: false
+              generate: false
+            required: true
+            readonly: true
+          - name: id
+            type: string
+            hidden: true
+            default: sjekk
+            readonly: true
+            required: true
+          - name: name
+            label: Seksjon
+            type: string
+            default: Gratis sjekk
+            readonly: true
+            required: true
+            hidden: true
+          - name: content
+            label: false
+            type: object
+            fields:
+              - name: layout
+                label: Kontaktoppsett
+                type: select
+                options:
+                  placeholder: To kolonner (dagens)
+                  values:
+                    - name: ""
+                      label: To kolonner (dagens)
+                    - name: horizontal
+                      label: Vannrett (kompakt skjema)
+                description: Tomt valg beholder dagens to kolonner. Vannrett samler nettside, e-post og knapp på én rad på desktop; feltene stables på mobil. Innhold og stengt innsending bevares.
+              - name: section
+                label: Introduksjon
+                type: object
+                fields:
+                  - name: _block
+                    type: string
+                    hidden: true
+                    readonly: true
+                    default: protected
+                  - name: id
+                    label: Seksjonens lenkeanker
+                    type: string
+                    readonly: true
+                    required: true
+                    hidden: true
+                  - name: eyebrow
+                    label: Overtekst
+                    type: string
+                  - name: heading
+                    label: Overskrift
+                    type: string
+                    required: true
+                  - name: body
+                    label: Avsnitt
+                    type: text
+                    list: {}
+                    description: Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Seksjoner → Pakker og priser.
+                  - name: items
+                    label: Alternativer eller steg
+                    type: object
+                    list:
+                      collapsible:
+                        collapsed: true
+                        summary: "{title}"
+                    fields:
+                      - name: title
+                        label: Tittel
+                        type: string
+                        required: true
+                      - name: text
+                        label: Beskrivelse
+                        type: text
+                        required: true
+                      - name: href
+                        label: Intern lenke
+                        type: string
+                        pattern: ^(/.*)?$
+                      - name: label
+                        label: Lenketekst
+                        type: string
+                  - name: links
+                    label: Relaterte lenker
+                    component: link
+                    list:
+                      collapsible:
+                        collapsed: true
+                        summary: "{label}"
+              - name: form
+                label: Skjema
+                type: object
+                fields:
+                  - name: promise
+                    label: Gratis sjekk – leveranseløfte
+                    type: string
+                    required: true
+                  - name: heading
+                    label: Overskrift
+                    type: string
+                    required: true
+                  - name: websiteLabel
+                    label: Etikett for nettside
+                    type: string
+                    required: true
+                  - name: websitePlaceholder
+                    label: Eksempel på nettside
+                    type: string
+                    required: true
+                  - name: emailLabel
+                    label: Etikett for e-post
+                    type: string
+                    required: true
+                  - name: emailPlaceholder
+                    label: Eksempel på e-post
+                    type: string
+                    required: true
+                  - name: messageLabel
+                    label: Etikett for kommentar
+                    type: string
+                    required: true
+                  - name: optional
+                    label: Valgfritt-merknad
+                    type: string
+                    required: true
+                  - name: messagePlaceholder
+                    label: Eksempel på kommentar
+                    type: string
+                    required: true
+                  - name: sensitiveNotice
+                    label: Merknad om sensitive opplysninger
+                    type: string
+                    required: true
+                  - name: previewNotice
+                    label: Forhåndsvisningsmerknad
+                    type: string
+                    required: true
+                  - name: submitLabel
+                    label: Knappetekst
+                    type: string
+                    required: true
+                  - name: privacyText
+                    label: Personvernmerknad
+                    type: string
+                    required: true
+                  - name: privacyLink
+                    label: Personvernlenke
+                    type: object
+                    fields:
+                      - name: label
+                        label: Tekst
+                        type: string
+                        required: true
+                      - name: href
+                        label: Intern lenke
+                        type: string
+                        pattern: ^/
+                        required: true
+                    required: true
+                  - name: disabledStatus
+                    label: Status ved stengt innsending
+                    type: string
+                    required: true
+                required: true
+            description: Endringer her gjelder alle plasseringer på dette nettstedet. Fjern eller skjul en plassering på siden for å beholde originalinnholdet her.
+      - name: globalPackages
+        label: Pakker og priser
+        type: file
+        path: app/src/content/global-elements/priser.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: _block
+            type: string
+            hidden: true
+            readonly: true
+            default: packages
+            required: true
+          - name: uid
+            type: uuid
+            hidden: true
+            options:
+              editable: false
+              generate: false
+            required: true
+            readonly: true
+          - name: id
+            type: string
+            hidden: true
+            default: priser
+            readonly: true
+            required: true
+          - name: name
+            label: Seksjon
+            type: string
+            default: Pakker og priser
+            readonly: true
+            required: true
+            hidden: true
+          - name: content
+            label: false
+            description: Endringer her gjelder alle plasseringer på dette nettstedet. Fjern eller skjul en plassering på siden for å beholde originalinnholdet her.
+            type: object
+            fields:
+              - name: eyebrow
+                label: Overtekst
+                type: string
+                required: true
+              - name: heading
+                label: Overskrift
+                type: string
+                required: true
+              - name: intro
+                label: Ingress
+                type: text
+                required: true
+              - name: labels
+                label: Etiketter i pakkekortene
+                type: object
+                fields:
+                  - name: situations
+                    label: Typiske situasjoner
+                    type: string
+                    required: true
+                  - name: typicalBusiness
+                    label: Typisk virksomhet
+                    type: string
+                    required: true
+                  - name: focus
+                    label: Fokus
+                    type: string
+                    required: true
+                  - name: combinations
+                    label: Populære kombinasjoner
+                    type: string
+                    required: true
+                  - name: workAreas
+                    label: Arbeidsområder
+                    type: string
+                    required: true
+                  - name: uncertain
+                    label: Usikker? Ta en gratis sjekk
+                    type: string
+                    required: true
+                required: true
+              - name: fitLabel
+                label: Etikett for hvem tjenesten passer
+                type: string
+                required: true
+              - name: scopeLabel
+                label: Etikett for arbeidsidé
+                type: string
+                required: true
+              - name: areasLabel
+                label: Etikett for arbeidsområder
+                type: string
+                required: true
+              - name: areas
+                label: Fire arbeidsområder
+                type: string
+                list:
+                  min: 4
+                  max: 4
+                required: true
+              - name: foundationNote
+                label: Måling og sporing – felles grunnlag
+                type: text
+                required: true
+              - name: adBudgetNote
+                label: Annonsebudsjett kommer i tillegg
+                type: string
+                required: true
+              - name: externalCostsNote
+                label: Eksterne plattformkostnader
+                type: text
+                required: true
+              - name: separateWorkNote
+                label: Arbeid som prises separat
+                type: text
+                required: true
+              - name: capacityNote
+                label: Ubrukt kapasitet
+                type: text
+                required: true
+              - name: decisionStrip
+                label: Valgstripe på prissiden
+                type: object
+                fields:
+                  - name: heading
+                    label: Overskrift
+                    type: string
+                    required: true
+                  - name: items
+                    label: Tre valgregler i pakkerekkefølge
+                    type: text
+                    list:
+                      min: 3
+                      max: 3
+                    required: true
+                required: true
+              - name: multiplier
+                label: Hvorfor Vekst finnes – prissiden
+                type: object
+                fields:
+                  - name: eyebrow
+                    label: Overtekst
+                    type: string
+                    required: true
+                  - name: heading
+                    label: Overskrift
+                    type: string
+                    required: true
+                  - name: body
+                    label: Forklaring
+                    type: text
+                    required: true
+                  - name: conceptualRow
+                    label: Bli funnet → bli valgt → gå videre
+                    type: string
+                    required: true
+                  - name: support
+                    label: Støttetekst
+                    type: text
+                    required: true
+                required: true
+              - name: items
+                label: Alternativer
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{title}"
+                  min: 3
+                  max: 3
+                fields:
+                  - name: title
+                    label: Tittel
+                    type: string
+                    required: true
+                  - name: descriptor
+                    label: Pakkeoppsummering
+                    type: string
+                    required: true
+                  - name: fit
+                    label: Full tekst – hvem pakken passer for
+                    type: text
+                    required: true
+                  - name: compact
+                    label: Kort tekst
+                    type: object
+                    fields:
+                      - name: fit
+                        label: Kort Passer for – forsiden og prissiden
+                        type: text
+                        required: true
+                      - name: situations
+                        label: Maks tre korte situasjoner
+                        type: string
+                        list:
+                          min: 1
+                          max: 3
+                        required: true
+                    required: true
+                  - name: scope
+                    label: Slik jobber vi – valgfritt
+                    type: text
+                  - name: typicalBusiness
+                    label: Typisk virksomhet
+                    type: text
+                  - name: situations
+                    label: Typiske situasjoner
+                    type: text
+                    list:
+                      min: 1
+                    required: true
+                  - name: key
+                    label: Stabil pakkenøkkel for bestilling
+                    type: string
+                    readonly: true
+                    required: true
+                  - name: iconItems
+                    label: Fokus og populære kombinasjoner
+                    type: object
+                    list:
+                      collapsible:
+                        collapsed: true
+                        summary: "{label}"
+                      min: 1
+                    fields:
+                      - name: icon
+                        label: Generisk ikon
+                        type: select
+                        options:
+                          values:
+                            - search
+                            - conversion
+                            - local
+                            - paid-search
+                            - social-paid
+                            - analytics
+                            - page
+                            - route
+                        required: true
+                      - name: label
+                        label: Fokus eller kombinasjon
+                        type: string
+                        required: true
+                      - name: compactLabel
+                        label: Kort etikett
+                        type: string
+                        required: true
+                      - name: description
+                        label: Forklaring – valgfri
+                        type: text
+                    required: true
+                  - name: selectionRule
+                    label: Valgregel
+                    type: text
+                    required: true
+                  - name: distinction
+                    label: Ekstra forklaring – valgfri
+                    type: text
+                  - name: priceNote
+                    label: Partner – omfang og prisavtale
+                    type: text
+                  - name: visual
+                    label: SVG-motiv – brukes når eget bilde ikke er valgt
+                    type: select
+                    options:
+                      values:
+                        - controlled
+                        - accelerating
+                        - tracks
+                    required: true
+                  - name: visualAsset
+                    label: Eget pakkebilde – velg eller last opp SVG, WebP eller PNG
+                    type: object
+                    fields:
+                      - name: src
+                        label: Bilde
+                        type: image
+                        options:
+                          media: packageVisuals
+                          extensions:
+                            - svg
+                            - webp
+                            - png
+                        required: true
+                      - name: alt
+                        label: Sannferdig beskrivende alternativ tekst
+                        type: string
+                        required: true
+                      - name: positionX
+                        label: Horisontalt utsnitt (%) – raster
+                        type: number
+                        options:
+                          min: 0
+                          max: 100
+                      - name: positionY
+                        label: Vertikalt utsnitt (%) – raster
+                        type: number
+                        options:
+                          min: 0
+                          max: 100
+                  - name: visualCaption
+                    label: Bildetekst ved SVG-motivet
+                    description: Vises ved SVG-motivet når eget bilde ikke er valgt. Eget bilde bruker sin alternative tekst og sitt utsnitt.
+                    type: object
+                    fields:
+                      - name: label
+                        label: Kort semantisk etikett
+                        type: string
+                        required: true
+                      - name: support
+                        label: Kort støtte – valgfri
+                        type: string
+                  - name: price
+                    label: Månedspris i kroner
+                    type: number
+                    required: true
+                  - name: pricePrefix
+                    label: Fra-pris – bare Partner
+                    description: Valgfritt. Kun tredje pakke kan ha fra; de to andre har fast pris. Fjern feltet for pakker uten prefiks.
+                    type: select
+                    options:
+                      values:
+                        - fra
+                  - name: detailLink
+                    label: Detaljer – rediger teksten, lenkemålet er beskyttet
+                    type: object
+                    fields:
+                      - name: label
+                        label: Lenketekst
+                        type: string
+                        required: true
+                      - name: href
+                        label: Pakkeanker på /priser/
+                        type: string
+                        readonly: true
+                        pattern: ^/priser/#
+                        required: true
+                    required: true
+                  - name: priceSuffix
+                    label: Prisenhet
+                    type: string
+                    required: true
+                  - name: vatSuffix
+                    label: MVA-tekst
+                    description: Bruk samme MVA-tekst for alle tre pakker; felles prisforklaring og gjentatte prisopplysninger arver den.
+                    type: string
+                    required: true
+                  - name: recommended
+                    label: Anbefalt pakke
+                    type: boolean
+                    default: false
+                    required: true
+                  - name: badge
+                    label: Anbefalt-merke
+                    type: string
+                  - name: cta
+                    label: Primær bestilling – sikker rute og valgt pakke
+                    type: object
+                    fields:
+                      - name: label
+                        label: Knappetekst
+                        type: string
+                        required: true
+                      - name: href
+                        label: Intern lenke
+                        type: string
+                        readonly: true
+                        pattern: ^/priser/\?pakke=(optimalisering|vekst|partner)#bestill$
+                        required: true
+                    required: true
+                required: true
+            required: true
+      - name: globalProof
+        label: Kunderesultater
+        type: file
+        path: app/src/content/global-elements/resultater.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: _block
+            type: string
+            hidden: true
+            readonly: true
+            default: proof
+            required: true
+          - name: uid
+            type: uuid
+            hidden: true
+            options:
+              editable: false
+              generate: false
+            required: true
+            readonly: true
+          - name: id
+            type: string
+            hidden: true
+            default: resultater
+            readonly: true
+            required: true
+          - name: name
+            label: Seksjon
+            type: string
+            default: Kunderesultater
+            readonly: true
+            required: true
+            hidden: true
+          - name: content
+            label: false
+            type: object
+            fields:
+              - name: featuredVisual
+                label: Bilde til fremhevet case
+                description: Kun presentasjon i forhåndsvisningen. Endrer ikke evidens eller publiseringsgodkjenning. Tøm bildet for å bruke presentasjonen uten foto.
+                type: object
+                fields:
+                  - name: caseId
+                    label: Tilknyttet case
+                    type: string
+                    readonly: true
+                  - name: src
+                    label: Bilde
+                    type: image
+                    options:
+                      media: proofImages
+                  - name: alt
+                    label: Alternativ tekst
+                    type: string
+                  - name: positionX
+                    label: Horisontalt utsnitt (%)
+                    type: number
+                    default: 50
+                    options:
+                      min: 0
+                      max: 100
+                  - name: positionY
+                    label: Vertikalt utsnitt (%)
+                    type: number
+                    default: 50
+                    options:
+                      min: 0
+                      max: 100
+              - name: publicationApproved
+                label: Godkjenn visning av allerede publiserbare case
+                description: Slå bare på etter dokumentert godkjenning. Dette overstyrer aldri case-status, tillatelse eller manglende evidens.
+                type: boolean
+                default: false
+                required: true
+                readonly: true
+              - name: caseIds
+                label: Velg case fra evidensregisteret
+                type: reference
+                options:
+                  collection: proofCases
+                  multiple: true
+                  value: "{fields.id}"
+                  label: "{fields.clientName} ({fields.publicationStatus})"
+                  search: id,clientName,anonymizedLabel
+                required: false
+                description: Første publiserbare case vises størst på forsiden. Bare godkjente case med komplett evidens vises.
+              - name: eyebrow
+                label: Overtekst
+                type: string
+                required: true
+              - name: heading
+                label: Overskrift
+                type: string
+                required: true
+              - name: beforeLabel
+                label: Før-etikett
+                type: string
+                required: true
+              - name: afterLabel
+                label: Etter-etikett
+                type: string
+                required: true
+              - name: changeLabel
+                label: Endring-etikett
+                type: string
+                required: true
+            required: true
+            description: Endringer her gjelder alle plasseringer på dette nettstedet. Fjern eller skjul en plassering på siden for å beholde originalinnholdet her.
+      - name: globalMechanism
+        label: Slik jobber vi
+        type: file
+        path: app/src/content/global-elements/mekanisme.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: _block
+            type: string
+            hidden: true
+            readonly: true
+            default: content
+            required: true
+          - name: uid
+            type: uuid
+            hidden: true
+            options:
+              editable: false
+              generate: false
+            required: true
+            readonly: true
+          - name: name
+            label: Navn i seksjonslisten
+            type: string
+            required: true
+            description: Endringer her gjelder alle plasseringer på dette nettstedet. Fjern eller skjul en plassering på siden for å beholde originalinnholdet her.
+          - name: id
+            label: Seksjonens lenkeanker
+            type: string
+            required: true
+            readonly: true
+          - name: eyebrow
+            label: Overtekst
+            type: string
+          - name: heading
+            label: Overskrift
+            type: string
+            required: true
+          - name: headingAlign
+            label: Overskriftsjustering
+            component: headingAlignment
+            description: Sentrert er standard. Velg Venstrejustert når seksjonen leses bedre som en vanlig tekstseksjon.
+          - name: layout
+            label: Seksjonsoppsett
+            component: contentLayoutChoice
+            description: Fordeling av vanlige bokser. Standard beholder dagens oppsett. Flere kolonner blir én på mobil. Seksjonstype og farger endres ikke.
+          - name: surface
+            label: Seksjonsfarge
+            component: surfaceChoice
+            description: Bakgrunn for hele seksjonen. Standard beholder designets opprinnelige farge.
+          - name: body
+            label: Avsnitt
+            type: text
+            list: {}
+            description: Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Seksjoner → Pakker og priser.
+          - name: items
+            label: Alternativer eller steg
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - name: title
+                label: Tittel
+                type: string
+                required: true
+              - name: text
+                label: Beskrivelse
+                type: text
+                required: true
+              - name: href
+                label: Intern lenke
+                type: string
+                pattern: ^(/.*)?$
+              - name: label
+                label: Lenketekst
+                type: string
+              - name: boxVariant
+                label: Boksvariant
+                component: boxVariantChoice
+                description: Standard beholder dagens boks. Åpen boks og Kort bruker felles designprimitiver; Boksfarge velges separat.
+              - name: surface
+                label: Boksfarge
+                component: surfaceChoice
+                description: Bakgrunn for denne boksen. Standard beholder designets opprinnelige farge.
+          - name: links
+            label: Relaterte lenker
+            component: link
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{label}"
+      - name: globalFit
+        label: Hvem det passer for
+        type: file
+        path: app/src/content/global-elements/passer.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: _block
+            type: string
+            hidden: true
+            readonly: true
+            default: content
+            required: true
+          - name: uid
+            type: uuid
+            hidden: true
+            options:
+              editable: false
+              generate: false
+            required: true
+            readonly: true
+          - name: name
+            label: Navn i seksjonslisten
+            type: string
+            required: true
+            description: Endringer her gjelder alle plasseringer på dette nettstedet. Fjern eller skjul en plassering på siden for å beholde originalinnholdet her.
+          - name: id
+            label: Seksjonens lenkeanker
+            type: string
+            required: true
+            readonly: true
+          - name: eyebrow
+            label: Overtekst
+            type: string
+          - name: heading
+            label: Overskrift
+            type: string
+            required: true
+          - name: headingAlign
+            label: Overskriftsjustering
+            component: headingAlignment
+            description: Sentrert er standard. Velg Venstrejustert når seksjonen leses bedre som en vanlig tekstseksjon.
+          - name: layout
+            label: Seksjonsoppsett
+            component: contentLayoutChoice
+            description: Fordeling av vanlige bokser. Standard beholder dagens oppsett. Flere kolonner blir én på mobil. Seksjonstype og farger endres ikke.
+          - name: surface
+            label: Seksjonsfarge
+            component: surfaceChoice
+            description: Bakgrunn for hele seksjonen. Standard beholder designets opprinnelige farge.
+          - name: body
+            label: Avsnitt
+            type: text
+            list: {}
+            description: Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Seksjoner → Pakker og priser.
+          - name: items
+            label: Alternativer eller steg
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - name: title
+                label: Tittel
+                type: string
+                required: true
+              - name: text
+                label: Beskrivelse
+                type: text
+                required: true
+              - name: href
+                label: Intern lenke
+                type: string
+                pattern: ^(/.*)?$
+              - name: label
+                label: Lenketekst
+                type: string
+              - name: boxVariant
+                label: Boksvariant
+                component: boxVariantChoice
+                description: Standard beholder dagens boks. Åpen boks og Kort bruker felles designprimitiver; Boksfarge velges separat.
+              - name: surface
+                label: Boksfarge
+                component: surfaceChoice
+                description: Bakgrunn for denne boksen. Standard beholder designets opprinnelige farge.
+          - name: links
+            label: Relaterte lenker
+            component: link
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{label}"
+      - name: globalFaq
+        label: Ofte stilte spørsmål
+        type: file
+        path: app/src/content/global-elements/sporsmal.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: _block
+            type: string
+            hidden: true
+            readonly: true
+            default: faq
+            required: true
+          - name: uid
+            type: uuid
+            hidden: true
+            options:
+              editable: false
+              generate: false
+            required: true
+            readonly: true
+          - name: id
+            type: string
+            hidden: true
+            default: sporsmal
+            readonly: true
+            required: true
+          - name: name
+            label: Seksjon
+            type: string
+            default: Ofte stilte spørsmål
+            readonly: true
+            required: true
+            hidden: true
+          - name: content
+            label: false
+            type: object
+            fields:
+              - name: eyebrow
+                label: FAQ-overtekst
+                type: string
+                required: true
+              - name: heading
+                label: FAQ-overskrift
+                type: string
+                required: true
+              - name: items
+                label: Spørsmål og svar
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{question}"
+                fields:
+                  - name: question
+                    label: Spørsmål
+                    type: string
+                    required: true
+                  - name: answer
+                    label: Svar
+                    type: text
+                    required: true
+            description: Endringer her gjelder alle plasseringer på dette nettstedet. Fjern eller skjul en plassering på siden for å beholde originalinnholdet her.
