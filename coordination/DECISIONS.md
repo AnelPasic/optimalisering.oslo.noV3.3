@@ -1,5 +1,12 @@
 # Decisions and authority
 
+## D-107 — OWNER godkjenner direkte review-publisering og lett QA frem til lansering — 2026-10-19
+
+OWNER: «Vi jobber på en ikke publisert løsning, det bør ikke brukes masse tokens på tester og screens, det kan jeg ordne visuelt når den publiserer, er jo bare en innholdsseksjon med bilder. Den kan frem til lansering publisere alt med en gang så lenge den endrer kun det vi ber om. Så kan du justere instruksjoner.»
+
+**OWNER_APPROVED:** Små, nøyaktig avgrensede design-/innholdsendringer kan heretter gå direkte til GitHub main og eksisterende noindex review Worker, uten egen prototypgren, forhåndsvurdering, mange skjermbilder eller full testkampanje. Diff + build + relevante fokustester/kort desktop/mobil-sjekk + reelt deploybevis er normalt nok; utvid etter faktisk risiko. OWNER gjør visuell QA på forhåndsvisningen. Dette **overstyrer D-106s branch-/screenshot-/separat godkjenningskrav for H-022C** og autoriserer å gjennomføre og publisere kun den forespurte «Kunderesultater»-oppdateringen nå. Bindende: `coordination/PRELAUNCH-DELIVERY-RULE.md` og revidert `coordination/H022C-PROOF-VISUAL-REVIEW.md`. Det er **ikke** lanserings-, indekserings-, skjemaaktiverings-, H-024B- eller ubegrenset innholdsendringsautorisasjon. Bevar låste bevis/priser og OWNER-data. Historisk D-106 blir stående som historikk.
+
+
 ## D-106 — OWNER authorizes H-022C visual proof review prototype; no production replacement — 2026-10-19
 
 OWNER responds **«Ja kjør på»** to proposal to take **Kunderesultater** next: first create a concrete visual solution, then a separately scoped Codex implementation after visual approval. OWNER earlier preferred **a real screenshot of Eurotents' website, not a photograph of the tent**, and accepted the direction of one coherent Eurotents case plus two balanced Nysta/Helt Opplagt result modules. **AUTHORIZED NOW:** prepare actual renderable visual prototype/screenshots in a separate Git branch, preserve all current approved cases/values/periods/proof gates, and STOP for OWNER visual review. **NOT APPROVED YET:** replacing current preview Worker/main proof rendering, publishing new site media into production, modifying other pages, H-024B or launch. Full bounded contract: `coordination/H022C-PROOF-VISUAL-REVIEW.md`. This narrowly **unparks H-022 only for the prototype stage**; production H-022 remains parked pending visual PASS. H-024A8G remains technically delivered, whole B commercial/visual OWNER review not silently converted to PASS; H-024A3 OPEN, H-024B BLOCKED, noindex/intake off.
