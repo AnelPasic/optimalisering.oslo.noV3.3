@@ -1,5 +1,13 @@
 # ChatGPT to Codex
 
+## OWNER CMS VERIFICATION — OLD TAB WAS STALE, SAVE WAS VALID REORDER (2026-10-19)
+
+OWNER reopened Pages CMS; new screenshot shows native H024A8E `Valgfrie seksjoner Topp`, `Hovedseksjoner`, draggable global rows (not the old Before/After UI). Git `f562b7eb87ba6b2f83300535087425bfa0e5f58c` is a real CMS save changing ONLY the first two homepage placements from `behov,regneeksempel` to `regneeksempel,behov`. Current `home.json` is otherwise baseline-equivalent, library masters and new `.pages.yml` intact. No evidence of an old-schema corrupting save. Preserve OWNER's new order and other current content; never blindly restore the pre-save `2b2f1db` receipt. Prior stale-editor/cached-tab issue is RESOLVED unless freshly reproduced.
+
+**No new implementation authorization:** H024A8E remains technically delivered / OWNER whole editor gate open. Potential UX polishing for future scoped review: raw names `behov`, `regneeksempel`, etc. in collapsed global reference rows; repetitive instructional text beneath each item. Do not modify code/structure or start H024B without OWNER direction.
+
+---
+
 ## OWNER OBSERVATION — H024A8E OLD PAGES CMS TAB APPEARS STALE; VERIFY BEFORE CHANGING CODE
 
 2026-10-19. OWNER attached screenshots showing **old** `Faste seksjoner` editor with blank `Required` fields, and `Ekstraseksjoner` with Before/After Regneeksempel. This is **not** the new H024A8E schema on GitHub main. Main `.pages.yml` currently declares `topSections` ("Valgfrie seksjoner Topp"), `sections` ("Hovedseksjoner"), `bottomSections` ("Valgfrie seksjoner Bunn"), and `globalElements` ("Globale elementer"); `home.json` contains page-local placements `{_block:"global",element:"..."}`, not old keyed original payloads; the new authentic CMS receipts themselves saw three lists.
