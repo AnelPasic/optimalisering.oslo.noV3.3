@@ -1,5 +1,10 @@
 # ChatGPT to Codex
 
+## ACTIVE HANDOFF — D-105 / H-024A8G: implement OWNER-approved homepage B
+
+2026-10-19. OWNER has now explicitly selected **B** and accepted the native Pages CMS collapsed technical-ID limitation. Previous D-104/H024A8F is **DELIVERED**, not an unstarted task. The complete authorized implementation contract is now **in this GitHub repository**: `coordination/H024A8G-Codex-Handoff-Forside-B.md`. READ IT on latest `main` and execute its complete minimal-change/preservation/QA/deploy/STOP workflow. Expected visible sections: Hero → regneeksempel → resultater → priser → sjekk → sporsmal. Hide but preserve OWNER Top `forbehovsvelger`; remove only homepage references `behov`, `mekanisme`, `passer` (all eight library masters unchanged). Preserve approved designs, claims, prices, forms, anchors, indexes and CMS configuration. Do not ask again for the missing chat-local attachment: **the GitHub file is authoritative**. STOP after actual technical delivery and OWNER review; H024A3 OPEN, H024B BLOCKED, H022 PARKED.
+
+
 ## ACTIVE HANDOFF — D-104 H-024A8F NARROW CMS LABEL/HELP POLISH + SHORTER HOMEPAGE PROPOSAL
 
 2026-10-19. OWNER says **"ok, god plan da gjør vi det slikt"**, authorizing prior offer: polish technical global row names in collapsed Pages CMS list and prevent repetitive explanatory text under every placement; then propose, but **do not implement**, a shorter commercial homepage composition. Read `coordination/H024A8F-CMS-EDITOR-POLISH-AND-HOMEPAGE-SHORTLIST.md` before touching code.
