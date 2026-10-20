@@ -96,7 +96,7 @@
     },
     "titleEmphasis": "first-sentence"
   },
-  "topSections": [
+  "sections": [
     {
       "_block": "content",
       "visibility": "hidden",
@@ -115,9 +115,7 @@
     {
       "_block": "global",
       "element": "behov"
-    }
-  ],
-  "sections": [
+    },
     {
       "_block": "global",
       "element": "regneeksempel"

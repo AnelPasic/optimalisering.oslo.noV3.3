@@ -5,7 +5,7 @@ import { resolve } from 'node:path';
 import { stripTerminologyLinks } from './terminology-markup.mjs';
 
 const pages = readdirSync('src/content/pages').filter(f => f.endsWith('.json')).map(f => JSON.parse(readFileSync(resolve('src/content/pages', f), 'utf8')));
-for(const page of pages)if(page.kind==='home'){page.sections=getHomepageBlocks(page).filter(isHomepageSectionVisible);delete page.topSections;delete page.bottomSections;}
+for(const page of pages)if(page.kind==='home'){page.sections=getHomepageBlocks(page).filter(isHomepageSectionVisible);}
 const paths = new Map(pages.map(page => [page.slug === 'home' ? '/' : `/${page.slug}/`, page]));
 // The editorial glossary has its own structured source, rather than page JSON.
 paths.set('/begreper/', { slug: 'begreper', sections: [] });

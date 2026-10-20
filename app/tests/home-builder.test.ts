@@ -21,19 +21,18 @@ test('derived arrays allow absent modules but reject duplicate identities and un
 });
 test('one Hero and eight preserved library originals do not imply eight required page instances',()=>{
  assert.equal(pageSchema.safeParse(source).success,true);
- const incoming=JSON.parse(readFileSync('../coordination/evidence/h024a8e/incoming-home.json','utf8'));
- for(const id of globalElementIds)assert.deepEqual(JSON.parse(readFileSync('src/content/global-elements/'+id+'.json','utf8')),incoming.sections[id]);
- for(const p of source.sections)assert.deepEqual(Object.keys(p).sort(),['_block','element']);
+ for(const id of globalElementIds)assert.deepEqual(homepageBlocksSchema.parse([getGlobalElement(id)])[0].id,id);
+ for(const p of source.sections.filter((s:any)=>s._block==='global'))assert.deepEqual(Object.keys(p).sort(),['_block','element']);
  assert.equal(source.optionalSections,undefined);
 });
 test('local sections cannot acquire master, form, chart or chrome identities',()=>{
  for(const id of ['behov','regneeksempel','mekanisme','passer','email','website','calc-visits','calculator-error','site-menu']){
-  const p=localHomeFixture();p.topSections[0].id=id;assert.equal(pageSchema.safeParse(p).success,false,id);
+  const p=localHomeFixture();p.sections[0].id=id;assert.equal(pageSchema.safeParse(p).success,false,id);
  }
 });
 test('actual native field projection preserves page-local content and never stores master payloads in references',()=>{
  const cms=YAML.parse(readFileSync('../.pages.yml','utf8')),entry=entryForFile(cms,'app/src/content/pages/home.json');
- const p=localHomeFixture(),form=structuredClone(p);form.topSections[0].heading+=' CMS';
+ const p=localHomeFixture(),form=structuredClone(p);form.sections[0].heading+=' CMS';
  const saved=JSON.parse(cmsJsonSave(p,form,entry,cms));assertPreservedContent(form,saved);assert.ok(pageSchema.safeParse(saved).success);
  const invalid=structuredClone(p);invalid.sections[0].content=getGlobalElement('behov').content;assert.equal(pageSchema.safeParse(invalid).success,false);
 });

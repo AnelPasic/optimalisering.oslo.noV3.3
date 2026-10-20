@@ -6,14 +6,14 @@ import {pageSchema} from '../src/lib/content-schema.ts';
 import {getHomepageBlocks,isHomepageSectionVisible,validateHomepagePublicLinks,resolveHomepageSections} from '../src/lib/home-builder.ts';
 import {localHomeFixture} from './helpers/pages-cms-json.ts';
 const input=JSON.parse(readFileSync('src/content/pages/home.json','utf8'));
-test('Top and Bottom accept independent native local/reference lists with no before/after controls',()=>{
- const p=localHomeFixture();p.bottomSections=[{...p.topSections[0],id:'bunn',uid:randomUUID()}];
- assert.deepEqual(getHomepageBlocks(pageSchema.parse(p)).map(b=>b.id),['cms-local-fixture','forbehovsvelger',...input.sections.map((r:any)=>r.element),'bunn']);
+test('one list accepts local/global Add and Move without area or before/after controls',()=>{
+ const p=localHomeFixture();p.sections.push({...p.sections[0],id:'bunn',uid:randomUUID()});
+ assert.deepEqual(getHomepageBlocks(pageSchema.parse(p)).map(b=>b.id),['cms-local-fixture',...input.sections.map((r:any)=>r.element??r.id),'bunn']);
  assert.equal(p.optionalSections,undefined);
 });
-test('all zones share UUID/anchor and interactive reference collision guards, including hidden entries',()=>{
- const p=localHomeFixture();p.bottomSections=[{...p.topSections[0],visibility:'hidden'}];assert.equal(pageSchema.safeParse(p).success,false);
- const q=structuredClone(input);q.bottomSections=[{...q.sections[1],visibility:'hidden'}];assert.equal(pageSchema.safeParse(q).success,false);
+test('all rows share UUID/anchor and interactive reference collision guards, including hidden entries',()=>{
+ const p=localHomeFixture();p.sections.push({...p.sections[0],visibility:'hidden'});assert.equal(pageSchema.safeParse(p).success,false);
+ const q=structuredClone(input);q.sections.push({...q.sections.find((s:any)=>s._block==='global'),visibility:'hidden'});assert.equal(pageSchema.safeParse(q).success,false);
 });
 test('visibility is reversible and typed; linked price/contact placements need their actual targets',()=>{
  for(const id of ['behov','regneeksempel','resultater','mekanisme','passer','sporsmal']){
@@ -23,7 +23,7 @@ test('visibility is reversible and typed; linked price/contact placements need t
  for(const value of ['published','draft',false,{}]){const p=structuredClone(input);p.sections[0].visibility=value;assert.equal(pageSchema.safeParse(p).success,false);}
 });
 test('missing/hidden incoming anchors are rejected across routes; hidden outgoing content is not published',()=>{
- const p=localHomeFixture();p.topSections[0].visibility='hidden';const home=pageSchema.parse(p);
+ const p=localHomeFixture();p.sections[0].visibility='hidden';const home=pageSchema.parse(p);
  assert.doesNotThrow(()=>validateHomepagePublicLinks(home,[]));
  assert.throws(()=>validateHomepagePublicLinks(home,[{cta:{href:'/#cms-local-fixture'}}]),/cms-local-fixture/);
  const q=structuredClone(input);q.sections=q.sections.filter((r:any)=>r.element!=='regneeksempel');

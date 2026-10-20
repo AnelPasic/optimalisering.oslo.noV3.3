@@ -15,7 +15,7 @@ const link = z.object({label:z.string(),href:z.string().startsWith('/')});
 export { proofSlotSchema } from './home-section-data.ts';
 const homepage = z.object({chrome:homeSectionDataSchema.shape.chrome}).strict();
 export const pageSchema = z.preprocess((input,context)=>{
-  const raw=input as {slug?:string;kind?:string;sections:unknown;topSections?:unknown;bottomSections?:unknown;optionalSections?:unknown;hero?:unknown};
+  const raw=input as {slug?:string;kind?:string;sections:unknown;hero?:unknown};
   if(raw?.kind!=='home'&&raw?.slug!=='synlighet'&&raw?.hero!==undefined){const hero=heroPresentationSchema.safeParse(raw.hero);if(!hero.success)for(const issue of hero.error.issues)context.addIssue({...issue,path:['hero',...issue.path]});}
   if(raw?.kind!=='home'&&Array.isArray(raw?.sections)&&raw.sections.some(section=>section&&typeof section==='object'&&'globalElement' in section)) context.addIssue({code:'custom',path:['sections'],message:'Use a global reference, not resolved master fields'});
   if(raw?.slug==='synlighet'&&raw.kind==='service') {
@@ -31,8 +31,8 @@ export const pageSchema = z.preprocess((input,context)=>{
   }
   if(raw?.kind==='home'){
     let blocks:ReturnType<typeof resolveHomepageSections>|undefined;
-    try{blocks=resolveHomepageSections(raw);}catch(error){if(error instanceof z.ZodError)for(const issue of error.issues)context.addIssue({...issue});else throw error;}
-    if(blocks)try{validateHomepagePublicLinks({...raw,sections:blocks,topSections:undefined,bottomSections:undefined,optionalSections:undefined},[]);}catch(error){context.addIssue({code:'custom',path:['sections'],message:error instanceof Error?error.message:'Invalid homepage anchor'});}
+    try{blocks=resolveHomepageSections(raw);}catch(error){if(error instanceof z.ZodError)for(const issue of error.issues)context.addIssue({...issue});else context.addIssue({code:'custom',path:['sections'],message:error instanceof Error?error.message:'Invalid homepage sections'});}
+    if(blocks)try{validateHomepagePublicLinks({...raw,sections:blocks},[]);}catch(error){context.addIssue({code:'custom',path:['sections'],message:error instanceof Error?error.message:'Invalid homepage anchor'});}
     const hero=heroSchema.safeParse(raw.hero);
     if(!hero.success)for(const issue of hero.error.issues)context.addIssue({...issue,path:['hero',...issue.path]});
     if(hero.success)return {...raw,eyebrow:hero.data.eyebrow,title:hero.data.title,intro:hero.data.support,cta:hero.data.primaryCta,sections:blocks?blocks.map(b=>({...b,heading:'heading' in b?b.heading:'',body:'body' in b?b.body:[]})):raw.sections};

@@ -14,12 +14,12 @@ export function homepageBlockEditor(cms: any, type: string): any {
 }
 
 // Only real page-local data: a global placement is deliberately not an editable master.
-export function sectionRecords(page:any):any[]{return [...(page.topSections??[]),...Object.values<any>(page.sections??[]),...(page.bottomSections??[])];}
+export function sectionRecords(page:any):any[]{return Object.values<any>(page.sections??[]);}
 export function localHomeFixture(){
  const page=JSON.parse(readFileSync('src/content/pages/home.json','utf8'));
  const content=JSON.parse(readFileSync('src/content/global-elements/mekanisme.json','utf8'));
  Object.assign(content,{id:'cms-local-fixture',uid:randomUUID()});
- page.topSections=[content,...(page.topSections??[])];
+ page.sections=[content,...page.sections];
  return page;
 }
 

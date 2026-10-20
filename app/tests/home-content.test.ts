@@ -14,7 +14,7 @@ test('calculator master defaults remain compatible with rendered numeric input t
  const edited=getGlobalElement('regneeksempel');edited.content.defaults.visits=1500.5;assert.equal(homepageBlockSchema.safeParse(edited).success,false);
  edited.content.defaults.visits=1500;edited.content.defaults.conversion=1.5;assert.ok(homepageBlockSchema.safeParse(edited).success);
 });
-test('native array ordering changes actual module order while Top stays first',()=>{
+test('native array ordering changes actual module order across all local and global placements',()=>{
  const p=structuredClone(fixture);p.sections.reverse();
- assert.deepEqual(getHomepageBlocks(pageSchema.parse(p)).map(s=>s.id),[...fixture.topSections.map((s:any)=>s.id),...p.sections.map((s:any)=>s.element)]);
+ assert.deepEqual(getHomepageBlocks(pageSchema.parse(p)).map(s=>s.id),p.sections.map((s:any)=>s.element??s.id));
 });

@@ -1,0 +1,42 @@
+{
+  "incomingCommit": "8ea1db332da89b1d190b157aa1a791216290a1ea",
+  "sourceCounts": {
+    "topSections": 2,
+    "sections": 5,
+    "bottomSections": 0
+  },
+  "records": [
+    {
+      "id": "forbehovsvelger",
+      "uid": "8ac621d2-d9aa-40ae-9875-ea9c7a2c2462",
+      "visibility": "hidden",
+      "sha256": "7a595a6f06d63d0708fc0c439fe4780a4dafe3eafd310c32333e8c72def9f169"
+    },
+    {
+      "element": "behov",
+      "sha256": "b1d016179d6162f81e0613afe8e4dc13b9aa4961cff7c512b09c901319bf3ea6"
+    },
+    {
+      "element": "regneeksempel",
+      "sha256": "34dde43ccf1b48f490199e552bb1a32b10ff522236e76e8c3ac7ab10fde0cd7c"
+    },
+    {
+      "element": "resultater",
+      "sha256": "9449b6ab1edcd68fc4c58059344faccb43646037800f38027f83a3708b670ad6"
+    },
+    {
+      "element": "priser",
+      "sha256": "aca62d189093c671caf33c2bc3e29b8f0db3e2d3d0c83d9362737ef308772db2"
+    },
+    {
+      "element": "sjekk",
+      "sha256": "8c218124931f12ce42a22ccc6917db142e8b47dd2c86a4d1b2f3c62aaaa8980e"
+    },
+    {
+      "element": "sporsmal",
+      "sha256": "31b2458bd1aeebe3ec4d06937308de45593f722013a41fbf804126c8bedc7950"
+    }
+  ],
+  "unchangedNonSectionDataSha256": "65a377e20e4445de5adfffc810646246e5159bd3921e7bd1072c23fcc24ddaed",
+  "everyRecordAndOrderPreserved": true
+}

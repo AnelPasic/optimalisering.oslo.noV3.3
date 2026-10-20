@@ -23,9 +23,9 @@ test('copy-style guard permits formal calculator notation but still rejects orna
     const run = source => { writeFileSync(componentFile, source); return spawnSync(process.execPath, [guard], { cwd: root, encoding: 'utf8' }); };
     assert.equal(run(math).status, 0, 'formal math and numeric unavailable placeholder are functional notation');
     const owner={uid:'8ac621d2-d9aa-40ae-9875-ea9c7a2c2462',body:['Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Seksjoner → Pakker og priser.']};
-    writeFileSync(pageFile,JSON.stringify({optionalSections:[owner]}));
+    writeFileSync(pageFile,JSON.stringify({sections:[owner]}));
     assert.equal(run(math).status,0,'exact incoming OWNER sentence survives required preservation');
-    writeFileSync(pageFile,JSON.stringify({optionalSections:[{...owner,body:[owner.body[0]+' → nytt']}]}));
+    writeFileSync(pageFile,JSON.stringify({sections:[{...owner,body:[owner.body[0]+' → nytt']}]}));
     assert.notEqual(run(math).status,0,'exception does not permit new arrow prose');
     writeFileSync(pageFile,'{}');
     const glossary = readFileSync(termFile, 'utf8');

@@ -70,19 +70,20 @@ export function resolveGlobalPlacement(value:unknown):HomepageBlock{
 const ordinarySchema=homepageBlockSchema.options[6];
 export const optionalHomepageSectionSchema=ordinarySchema.refine(b=>!globalElementIds.includes(b.id as GlobalElementId)&&!Object.values(coreUids).includes(b.uid),'Use a global reference for a library master, not a copied local record');
 export const pagePlacementSchema=z.union([globalPlacementSchema,optionalHomepageSectionSchema]);
-export const homepageSourceSchema=z.object({topSections:z.array(pagePlacementSchema).max(16).default([]),sections:z.array(pagePlacementSchema).max(24).default([]),bottomSections:z.array(pagePlacementSchema).max(16).default([])}).strict();
+export const homepageSourceSchema=z.object({sections:z.array(pagePlacementSchema).max(56)}).strict();
 export function isHomepageSectionVisible(section?:{visibility?:unknown}){return !!section&&section.visibility!=='hidden';}
-type Source={sections?:unknown;topSections?:unknown;bottomSections?:unknown;optionalSections?:unknown};
-/** Page-local placement arrays never determine the lifetime of library data. */
+type Source={sections?:unknown};
+/** One page-local list; library data exists independently of its placements. */
 export function resolveHomepageSections(page:Source){
+ if(['topSections','bottomSections','optionalSections'].some(key=>Object.hasOwn(page,key)))throw new Error('Forsiden bruker bare sections. Migrer Topp/Hoved/Bunn til én liste og last CMS på nytt før lagring.');
  for(const id of globalElementIds)getGlobalElement(id);
- const source=homepageSourceSchema.parse({sections:page.sections,topSections:page.topSections,bottomSections:page.bottomSections,...(page.optionalSections!==undefined?{optionalSections:page.optionalSections}:{})});
- return homepageBlocksSchema.parse([...source.topSections,...source.sections,...source.bottomSections].map(p=>p._block==='global'?resolveGlobalPlacement(p):p));
+ const source=homepageSourceSchema.parse({sections:page.sections});
+ return homepageBlocksSchema.parse(source.sections.map(p=>p._block==='global'?resolveGlobalPlacement(p):p));
 }
 export function assertNever(value:never):never{throw new Error(`Unknown homepage block: ${JSON.stringify(value)}`);}
 /** Parsed collection entries already contain the resolved render array. */
 export function getHomepageBlocks(page:Source){
- if(!Array.isArray(page.sections)||page.topSections!==undefined||page.bottomSections!==undefined||page.sections.some(value=>value?._block==='global'))return resolveHomepageSections(page);
+ if(!Array.isArray(page.sections)||['topSections','bottomSections','optionalSections'].some(key=>Object.hasOwn(page,key))||page.sections.some(value=>value?._block==='global'))return resolveHomepageSections(page);
  return homepageBlocksSchema.parse(page.sections.map((value)=>{
   const s=value as Record<string,unknown>;
   if(s._block==='content')return s;
@@ -113,7 +114,7 @@ export function validateHomepagePublicLinks(home:Source,pages:readonly unknown[]
    }else scan(item,`${path}.${key}`);
   }
  };
- scan({...home,sections:blocks.filter(isHomepageSectionVisible),topSections:undefined,bottomSections:undefined,optionalSections:undefined},'home');
+ scan({...home,sections:blocks.filter(isHomepageSectionVisible)},'home');
  for(const [index,page] of pages.entries())if((page as {kind?:string}).kind!=='home')scan(page,`pages.${index}`);
 }
 /** Shared business authority exists independently of homepage placements. */

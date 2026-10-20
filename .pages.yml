@@ -654,19 +654,6 @@ content:
     path: app/src/content/pages/home.json
     format: json
     fields:
-      - name: seo
-        label: SEO
-        type: object
-        fields:
-          - name: title
-            label: Sidetittel
-            type: string
-            required: true
-          - name: description
-            label: Metabeskrivelse
-            type: text
-            required: true
-        required: true
       - name: hero
         label: Hero
         type: object
@@ -742,19 +729,19 @@ content:
                       min: 0
                       max: 100
                     required: true
-      - name: topSections
-        label: Valgfrie seksjoner Topp
+      - name: sections
+        label: Innholdsseksjoner
         type: block
         blockKey: _block
         list:
-          max: 16
+          max: 56
           collapsible:
             collapsed: true
             summary: "{element}{name}"
         blocks:
           - name: global
             label: Globalt element
-            fields: &a1
+            fields:
               - name: element
                 label: Globalt element
                 type: select
@@ -783,7 +770,7 @@ content:
                 description: "Fjerning sletter bare plasseringen. Eksisterende lenker til #sjekk og #priser må få et gyldig mål før disse skjules eller fjernes."
           - name: content
             label: Innholdsseksjon
-            fields: &a2
+            fields:
               - name: visibility
                 label: Visning på nettsiden
                 component: sectionVisibility
@@ -868,38 +855,19 @@ content:
                   collapsible:
                     collapsed: true
                     summary: "{label}"
-      - name: sections
-        label: Hovedseksjoner
-        type: block
-        blockKey: _block
-        list:
-          max: 24
-          collapsible:
-            collapsed: true
-            summary: "{element}{name}"
-        blocks:
-          - name: global
-            label: Globalt element
-            fields: *a1
-          - name: content
-            label: Innholdsseksjon
-            fields: *a2
-      - name: bottomSections
-        label: Valgfrie seksjoner Bunn
-        type: block
-        blockKey: _block
-        list:
-          max: 16
-          collapsible:
-            collapsed: true
-            summary: "{element}{name}"
-        blocks:
-          - name: global
-            label: Globalt element
-            fields: *a1
-          - name: content
-            label: Innholdsseksjon
-            fields: *a2
+      - name: seo
+        label: SEO
+        type: object
+        fields:
+          - name: title
+            label: Sidetittel
+            type: string
+            required: true
+          - name: description
+            label: Metabeskrivelse
+            type: text
+            required: true
+        required: true
       - name: homepage
         label: Felles toppmeny og bunntekst
         type: object
