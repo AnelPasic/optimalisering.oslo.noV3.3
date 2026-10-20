@@ -1,5 +1,8 @@
 # Project state
 
+**LATEST OWNER FEEDBACK 2026-10-20 D-115 / H-024B2 ACTIVE.** Synlighet CMS navigation is confirmed visible (D-114), but OWNER REVISES H-024B1 functional scope: there is **no selectable Globale elementer** in Tjenester → Synlighet, and the visible Helt Opplagt proof is not from the global proof master. Source traced to service `proof` in `app/src/content/pages/synlighet.json`, auto-rendered by `ServiceFamilyPage.astro` after `prioritering`. Global `resultater.json` holds three OWNER-selected cases/media/layout. H-024B2 contract `coordination/H024B2-SERVICE-GLOBAL-PLACEMENTS-SYNLIGHET.md`: introduce native mixed local/global placement selection/reorder/hide in Synlighet only, make local proof source clear, replace duplicate proof/pricing/FAQ when global chosen without loss; preserve existing output until actual CMS selection. H-024B1 technically delivered but no full OWNER PASS; H-024A3 remains OWNER PASS. D-107 lightweight QA, no other services/public launch/index/intake.
+
+
 **LATEST OWNER UI FINDING — 2026-10-20 D-113.** OWNER's screenshot of native Tjenester list shows 4 entries and **Synlighet missing**. H-024B1 had excluded `synlighet.json` from collection and separately defined top-level `serviceSynlighet` editor, but it was not discoverable from OWNER's menu. Scoped `.pages.yml` navigation repair now puts both under `Tjenester` native group: «Øvrige tjenester» collection and «Synlighet» file, reusing `Innsikt` group model, plus matching focused test change. **GitHub config checked; fresh authenticated CMS UX not yet independently verified**. No OWNER data/site component changes. H-024A3 OWNER PASS stands; H-024B1 OWNER visual/UX pass pending, rollout blocked, review noindex/intake disabled.
 
 
