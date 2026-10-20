@@ -130,11 +130,11 @@
     },
     {
       "_block": "global",
-      "element": "sporsmal"
+      "element": "sjekk"
     },
     {
       "_block": "global",
-      "element": "sjekk"
+      "element": "sporsmal"
     }
   ]
 }
