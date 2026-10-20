@@ -1,5 +1,10 @@
 # ChatGPT to Codex
 
+## ACTIVE D-112 / H-024B1 — OWNER approved Pages CMS; start only Synlighet service pilot
+
+OWNER answers **«yep, ser bra ut»** to explicitly closing H-024A3 and advancing to H-024B. **H-024A3 CLOSED as OWNER PASS with accepted native limitations** (technical collapsed IDs, build-guard rather than UI prevention of invalid operations, mouse drag not independently verified). **New bounded implementation task:** read `coordination/H024B1-SERVICE-CMS-PILOT-SYNLIGHET.md` from latest main. Choose existing `/synlighet/` as single service-page CMS pilot: existing native editable/sortable sections must be reused, add only genuinely missing safe optional visibility/add/edit behavior, preserve established Hero, protected CTA, proof-after/pricing-bridge anchors, prices, evidence, all OWNER CMS changes and other pages. Under D-107 use lean focused QA and direct noindex review Worker, then stop for OWNER review before service rollout. No homepage CMS rework or public launch.
+
+
 ## ACTIVE D-111 / H-024A9 — sluttkontroll av uavklarte Pages CMS-punkter
 
 OWNER sier gå videre med gjenstående CMS-punkter. **Les `coordination/H024A9-CMS-CLOSEOUT.md` på nyeste main.** Utfør en kort, read-only evidensaudit, ikke en ny CMS-implementering eller gjentatte testkampanjer. Native add/edit/move/hide/remove/master-save/restore er allerede teknisk dokumentert, collapsed IDs er akseptert, B-forside er implementert og H-022E-malbytte er verifisert. Samlet H-024A3 editor-UX krever fremdeles faktisk OWNER vurdering; untestet mouse-pointer drag må ikke oppgis som bestått. **VIKTIG:** nyere Pages CMS commits i `priser.json`, `resultater.json` og tilhørende media er OWNER-arbeid og må ikke overskrives. Kvitter kort hva som er bevist, kjent begrensning, og ett konkret OWNER-spørsmål. Ingen H-024B eller offentlig lansering.
