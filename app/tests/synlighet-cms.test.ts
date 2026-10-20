@@ -57,7 +57,13 @@ test('ordinary hide/remove is safe while duplicate, reserved and invalid anchors
 
 test('pilot editor reuses all service fields, adds native visibility and writable validated local anchors only here', () => {
   const entry = entryForFile(cms, 'app/src/content/pages/synlighet.json');
-  const services = cms.content.find((e: any) => e.name === 'services');
+  const group = cms.content.find((e: any) => e.name === 'serviceGroup');
+  assert.equal(group?.type, 'group');
+  const services = group.items.find((e: any) => e.name === 'services');
+  const pilot = group.items.find((e: any) => e.name === 'serviceSynlighet');
+  assert.equal(services?.label, 'Øvrige tjenester');
+  assert.equal(pilot?.label, 'Synlighet');
+  assert.equal(pilot?.path, 'app/src/content/pages/synlighet.json');
   assert.equal(entry.type, 'file');
   assert.ok(services.exclude.includes('synlighet.json'));
   for (const field of services.fields.filter((f: any) => f.name !== 'sections')) assert.deepEqual(entry.fields.find((f: any) => f.name === field.name), field);
