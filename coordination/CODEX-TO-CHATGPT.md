@@ -1,5 +1,23 @@
 # Codex to ChatGPT
 
+## H-024C1 / D-118 — ÉN FORSIDELISTE; LEVERT TIL OWNER REVIEW
+
+2026-10-21. Incoming **8ea1db332da89b1d190b157aa1a791216290a1ea**, MWS **b6ddf7f**. Implementasjon **01bc50e97b2cc06dea1b9c152b0c493c7aff0ea8**. Topp **2** + Hoved **5** + Bunn **0** → én `sections`-liste med **7 eksakt bevarte rader**: skjult lokal `forbehovsvelger` (UUID `8ac621d2-d9aa-40ae-9875-ea9c7a2c2462`), synlig global behov, regneeksempel, resultater, priser, sjekk, sporsmal. Hele hver rad, synlighet og rekkefølge er semantisk identisk før/etter. Hero, SEO og homepage.chrome eksakt bevart. Deterministisk telling og SHA-256 per fullstendige rad: `coordination/evidence/h024c1/migration.json`.
+
+**Forenkling:** native Forside har Hero → **Innholdsseksjoner** (max 56) → SEO → felles toppmeny/bunntekst. Samme globale/lokale felter og visibility gjenbrukes; ingen nye rendererkomponenter eller abstraksjoner. Topp/Bunn-nøkler, separate editorer, gammel concatenation og helper/test/audit-antakelser fjernet. Tre ubrukte migrerings-/QA-skript som skrev eldre former slettet; design-systemets CMS-veiledning oppdatert. Gjenstående legacy-felter, også tomme gamle lister, avvises lesbart før de kan bli ignorert. UUID/anker/singleton- og #sjekk/#priser-lenkevern beholdes. Ingen automatisk innsetting eller masterkopiering.
+
+**Fokusert QA:** 24 relevante builder/CMS/visibility/komposisjon-tester PASS; read-only CMS-roundtrip 28 JSON PASS; build 19 sider PASS; Astro check 0 feil / 0 advarsler (én eksisterende intake-hint). Eldre tester som frøs tidligere OWNER-tekst/masterhash eller tredeling, tester nå gjeldende canonical master-/listekontrakt. Lokal og faktisk migrert Worker ved 1440/390 matcher incoming Hero-markup, synlig rekkefølge, tekst, seksjonshøyder, canonical/noindex eksakt; Synlighet og Konvertering samme målrettede paritet. Slutt-Worker: skjult lokal rad ikke i DOM, kalkulator-JS fungerer, unike ID-er, ingen overflow/JS-feil/POST, tomt preview-sitemap.
+
+**Faktisk autentisert CMS → Git → native build → Worker → spesifikk restore:** fersk editor viser én Hero og én Innholdsseksjoner-liste, alle sju rader; ingen Topp/Hoved/Bunn-felt. Native tastaturflytting av FAQ én plass opp ga kun FAQ/sjekk-bytte i Git, og tilsvarende faktisk Worker-rekkefølge ved 1440/390. Fersk remote og reload før kun den motsatte flyttingen; ingen helfil-restore eller samtidige OWNER-endringer overskrevet.
+
+| Etappe | Commit | Native build (SUCCESS) | Worker ved 100 % |
+| --- | --- | --- | --- |
+| Migrering | 01bc50e97b2cc06dea1b9c152b0c493c7aff0ea8 | eef7af44-8fad-42f3-834e-2f2a5d893192 | ea52ae45-6163-42b5-9149-5ea8918e5edb |
+| CMS-flytting | a17aff85a510c640c5fa6b5bedd47ad6c00c7ec7 | 94bcce78-9416-408d-8782-ef565a67b9a3 | 69f4c430-ea79-417a-930e-b18eadfcd9c5 |
+| CMS-restore | ac0c0370781eb6adf30ece6995d607b2c0c9b15f | b132877f-6b1a-4f6f-a390-e1debbb03c2a | 246c4553-30e8-40b8-9446-c4ff76de0c01 |
+
+**Bevaring/STOP:** restore gir eksakt migrert home Git-blob **9c0ca9c58b31ceb36bee798d3fc165bc1cd70a94**; faktisk sluttside bekreftet 1440/390 og fersk CMS Save deaktivert. Alle **194 øvrige content/public/system/project Git-blobs**, åtte globale mastere, proof/evidens/bilder/priser, ferske Synlighet-endringer og fem lokale OWNER-PNG-er er urørt. Parsed CMS-konfigurasjon utenfor Forside identisk; eksisterende radfelter identiske. Ingen redesign, andre sidemigreringer, launch/index/intake. [Review Worker](https://optimalisering-oslo-v33.anel.workers.dev/) · [Forside CMS](https://app.pagescms.org/anelpasic/optimalisering.oslo.nov3.3/main/file/homepage). **STOP for OWNER gjennomgang av ny liste og preview.** Ingen åpne tekniske avvik eller automatisk OWNER visual PASS; kvitteringens SHA identifiseres via Git-historikken.
+
 ## H-024B4 / D-117 — KUN CMS-PLASSERTE SYNLIGHET-SEKSJONER; OWNER REVIEW
 
 2026-10-20. Incoming **eb5162ed675e43c104466d166cdef08a1407b22e**, MWS **b6ddf7f**. Implementasjon **2a75f2cc9e6dea9365741b101800305b4c632989**. Bare `/synlighet/`: fast Hero → kanaler → behov → prioritering → beskyttet sjekk → sammenheng → OWNERs globale regneeksempel. Ingen automatisk proof, prisbro, FAQ eller ClosingCta; ingen erstatningsplasseringer. Døde lokale proof/faq/proofAfter/pricingBridge/closingCta-kilder og separate legacy-editorer fjernet kun her. Breadcrumb beholdt som Synlighet etter fjerning av prisbrodata.
