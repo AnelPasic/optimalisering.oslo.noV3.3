@@ -1,5 +1,10 @@
 # ChatGPT to Codex
 
+## ACTIVE H-024B1 CMS NAV UX FOLLOW-UP — D-113
+
+OWNER screenshot shows **Synlighet is missing under Tjenester** (four others listed), so pilot is not OWNER-accepted despite technical pass. `.pages.yml` was narrowly corrected: Tjenester is now stock CMS `type: group` with `services` collection «Øvrige tjenester» plus `serviceSynlighet` file «Synlighet». `synlighet.json` remains excluded from collection to avoid duplicate editors; relevant focused test now looks inside the group. **Verify in a fresh authenticated native Pages CMS**: Tjenester expands, Synlighet opens the actual editor, Øvrige tjenester lists four unchanged; check no duplicate edit destination. Run just YAML/CMS config and `synlighet-cms.test.ts` (and build only if necessary); avoid any CMS save, screenshots marathon, content resets, other-site changes or redesign. If navigation fails, report concrete native behavior and minimal correction. No claim of verified menu until observed; stop for OWNER pilot review. D-112/H-024A3 remains OWNER PASS.
+
+
 ## ACTIVE D-112 / H-024B1 — OWNER approved Pages CMS; start only Synlighet service pilot
 
 OWNER answers **«yep, ser bra ut»** to explicitly closing H-024A3 and advancing to H-024B. **H-024A3 CLOSED as OWNER PASS with accepted native limitations** (technical collapsed IDs, build-guard rather than UI prevention of invalid operations, mouse drag not independently verified). **New bounded implementation task:** read `coordination/H024B1-SERVICE-CMS-PILOT-SYNLIGHET.md` from latest main. Choose existing `/synlighet/` as single service-page CMS pilot: existing native editable/sortable sections must be reused, add only genuinely missing safe optional visibility/add/edit behavior, preserve established Hero, protected CTA, proof-after/pricing-bridge anchors, prices, evidence, all OWNER CMS changes and other pages. Under D-107 use lean focused QA and direct noindex review Worker, then stop for OWNER review before service rollout. No homepage CMS rework or public launch.
