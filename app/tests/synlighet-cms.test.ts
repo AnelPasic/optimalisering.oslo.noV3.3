@@ -66,7 +66,8 @@ test('pilot editor reuses all service fields, adds native visibility and writabl
   assert.equal(pilot?.path, 'app/src/content/pages/synlighet.json');
   assert.equal(entry.type, 'file');
   assert.ok(services.exclude.includes('synlighet.json'));
-  for (const field of services.fields.filter((f: any) => f.name !== 'sections')) assert.deepEqual(entry.fields.find((f: any) => f.name === field.name), field);
+  for (const field of services.fields.filter((f: any) => !['sections','proof'].includes(f.name))) assert.deepEqual(entry.fields.find((f: any) => f.name === field.name), field);
+  assert.deepEqual(entry.fields.find((f: any) => f.name === 'proof').fields, services.fields.find((f: any) => f.name === 'proof').fields);
   const sections = entry.fields.find((f: any) => f.name === 'sections');
   const content = resolveField(sections.blocks.find((b: any) => b.name === 'content'), cms.components);
   assert.equal(content.fields.find((f: any) => f.name === 'id').readonly, undefined);

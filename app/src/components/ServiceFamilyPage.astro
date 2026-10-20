@@ -10,19 +10,25 @@ import Proof from './HomeProof.astro';
 import PricingBridge from './ServicePricingBridge.astro';
 import Faq from './Faq.astro';
 import ClosingCta from './ClosingCta.astro';
-import { visibleServiceSections } from '../lib/service-sections';
+import { visibleServiceSections, hasGlobalServiceProof, validateServiceGlobalProof } from '../lib/service-sections';
+import { getGlobalElement } from '../lib/home-builder';
+import HomepageBlock from './HomepageBlock.astro';
 import '../styles/compositions/service.css';
 interface Props {page:CollectionEntry<'pages'>['data'];commercial:HomepageContent;route:RouteFamily;}
 const {page,commercial,route}=Astro.props;
 const capability=route.service,bridge=capability.pricingBridge;
-const records=capability.proofAfter?(await getCollection('proofCases')).map(p=>p.data):[];
+const globalProof=hasGlobalServiceProof(page);
+const records=capability.proofAfter||globalProof?(await getCollection('proofCases')).map(p=>p.data):[];
+validateServiceGlobalProof(page,records);
 ---
 <div class="invite-home invite-service">
   <CommercialHero content={resolvePageHero(page)} />
   {visibleServiceSections(page).map(section=><>
+    {section.globalElement ? <HomepageBlock block={getGlobalElement(section.globalElement)} records={records} /> : <>
     <ContentSection section={section} visualId={capability.sectionVisuals.find(v=>v.section===section.id)?.visual} defaultSurface={capability.sectionSurfaces.find(v=>v.section===section.id)?.surface} />
-    {capability.proofAfter===section.id&&page.proof&&<Proof content={page.proof} records={records} primary />}
+    {capability.proofAfter===section.id&&page.proof&&!globalProof&&<Proof content={page.proof} records={records} primary />}
     {bridge?.after===section.id&&<PricingBridge content={commercial.packages} link={bridge.link} serviceName={bridge.serviceName} />}
+    </>}
   </>)}
   <Faq items={page.faq} id="sporsmal" heading={capability.closingCta||commercial.faqVisible===false?undefined:commercial.faqHeading} eyebrow={capability.closingCta||commercial.faqVisible===false?undefined:commercial.faqEyebrow} />
   {capability.closingCta&&<ClosingCta link={page.cta} />}

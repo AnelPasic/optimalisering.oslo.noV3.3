@@ -528,6 +528,30 @@ components:
       - *serviceBody
       - *serviceItems
       - *serviceLinks
+  serviceGlobalPlacement:
+    type: object
+    fields:
+      - name: element
+        label: Globalt element
+        type: select
+        required: true
+        options:
+          values:
+            - name: behov
+              label: Behovsvelger
+            - name: regneeksempel
+              label: Konverteringskalkulator
+            - name: resultater
+              label: Kunderesultater
+            - name: mekanisme
+              label: Slik jobber vi
+            - name: passer
+              label: Hvem det passer for
+        description: Innhold redigeres én gang under Globale elementer. Kunderesultater erstatter lokalt kundebevis når plasseringen er publisert. Behovsvelger erstatter lokal behovseksjon. Skjul/fjern plasseringen for å vise lokalt innhold igjen. Priser, skjema og FAQ bruker fortsatt sidens eksisterende beskyttede oppsett.
+      - name: visibility
+        label: Visning på denne siden
+        component: sectionVisibility
+        description: Flytt, skjul eller fjern bare plasseringen på denne siden. Masterens tekst, bilder og UUID beholdes i Globale elementer.
 content:
   - name: terminology
     label: Begreper og forklaringer
@@ -1156,7 +1180,7 @@ content:
             name: proof
             label: Dokumenterte resultater - trygg presentasjon
             type: object
-            fields:
+            fields: &serviceProofFields
               - name: publicationApproved
                 label: Godkjenn visning av allerede publiserbare case
                 description: Slå bare på etter dokumentert godkjenning. Dette overstyrer aldri case-status, tillatelse eller manglende evidens.
@@ -1211,12 +1235,12 @@ content:
           - *a11
           - *a12
           - name: sections
-            label: Innholdsseksjoner og farger
+            label: Innholdsseksjoner
             type: block
             list:
               collapsible:
                 collapsed: true
-                summary: "{heading}"
+                summary: "{element}{heading}"
             required: true
             blockKey: _block
             blocks:
@@ -1226,9 +1250,17 @@ content:
               - name: protected
                 label: Beskyttet sjekk / handling
                 component: sectionProtected
+              - name: global
+                label: Globalt element
+                component: serviceGlobalPlacement
           - *a7
           - *a8
-          - *serviceproof
+          - name: proof
+            label: Lokalt kundebevis – vises når globale Kunderesultater ikke er valgt
+            type: object
+            fields: *serviceProofFields
+            required: false
+            description: Dagens Helt Opplagt-valg henter tall fra case/evidensregisteret. Overskrift og etiketter lagres i denne tjenestefilen og vises automatisk etter Prioritering. En publisert global Kunderesultater-plassering erstatter visningen, men beholder disse lokale feltene. Skjules/fjernes plasseringen, kommer lokalt kundebevis tilbake. Publiseringsgodkjenning er ikke en visningsbryter.
   - name: priser
     label: Priser
     type: file
