@@ -74,7 +74,6 @@
     },
     {
       "_block": "content",
-      "visibility": "hidden",
       "id": "behov",
       "eyebrow": "Bli funnet før kunden har valgt leverandør",
       "heading": "Hvis bare de som kjenner navnet ditt finner deg, kommer du sent inn i valget.",
