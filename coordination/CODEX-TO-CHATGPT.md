@@ -1,5 +1,21 @@
 # Codex to ChatGPT
 
+## H-024B1 / D-112 — SYNLIGHET-PILOT; OWNER REVIEW FØR UTRULLING
+
+2026-10-20. Fersk main **beea300939404202d705f3c611d7c67707a62540**, MWS **b6ddf7f**. **H-024A3 er CLOSED / OWNER PASS etter D-112**; ingen ny CMS-godkjenning eller gjentatt gammel QA. Implementasjon **58d1a2e2c33df826fb0cc20524814509e4cb093f**.
+
+**Faktisk hull/rettelse:** tjenestelisten hadde Add/Edit/Reorder, men manglet visibility og hadde obligatorisk skrivebeskyttet ID også for nye rader. [Synlighet i CMS](https://app.pagescms.org/anelpasic/optimalisering.oslo.nov3.3/main/file/serviceSynlighet) gjenbruker alle eksisterende tjenestefelt og native block-list, med samme lokale seksjonsfelt pluss Publisert/Skjult og skrivbart, validert anker. Kun Synlighet tas ut av den generelle Tjenester-samlingen; ingen dobbeltredigering eller tre-soners/global tjenestebygger. Øvrige editorer er semantisk uendret. Ingen source-innholdsmigrering. Listehjelp som gjentas per rad er utelatt; nødvendig hjelp ligger i selve feltet.
+
+**Vern:** kun `/synlighet/` filtrerer skjulte seksjoner; manglende visibility beholder dagens visning. Bygget avviser skjult/fjernet/duplisert sjekk, proof- og prisbroankere, ugyldige/dupliserte/reserverte ID-er og foreldreløse sidelenker. Eksisterende visuelle referanser må fortsatt ha kilde. Native CMS kan fremdeles lagre ugyldige operasjoner; vern er i bygget. Hero/FAQ/CommercialHero/HomeSection/HomeProof/ServicePricingBridge/design beholdes.
+
+**Kort QA:** 8/8 fokustester (5 nye pilot + 3 eksisterende route-family), CMS-validitet 28 JSON read-only PASS, build19 sider PASS, Astro check0 feil/0 advarsler (én eksisterende hint i qa-intake-h017a). Ett desktop/mobil-smoke1440/390: lokal Synlighet og incoming Worker har eksakt samme synlige tekst/rekkefølge/seksjonshøyder/Hero, ingen overflow/JS-feil, noindex. Ingen full test-/screenshotkampanje eller ny reorder-test.
+
+**Ekte ny kontroll:** CMS Save **ddafab6cc56a4f943343345b09720996f0734f20** endret KUN `behov.visibility` til hidden; native **6c2723fa-471b-4877-8f01-9438d631ffdc SUCCESS**, Worker **ca416cba-be6e-4930-a125-3ddb44f827aa at100%**. Faktisk Worker viste fravær av behov, mens Hero/proof/sjekk/prisbro/FAQ var intakt. Fersk CMS reload og Publisert tilbake ga **36828ca4a19c76d09b4eb5bc6b5cafe9d2796ed1**; Synlighet Git-blob er eksakt incoming igjen. Native restore-build **69395135-3a9f-4582-b0f1-e581b3c478d9 SUCCESS**, Worker **9b1d15fc-927c-49bb-b7f4-5e75536e6b18 at100%** (deployment4e259bb8). Faktisk restored Worker1440/390 matcher lokal tekst/rekkefølge/høyder/Hero, alle opprinnelige seksjoner tilbake; ingen overflow/JS-feil/POST. Fersk CMS har Save deaktivert..
+
+**Bevaring/skalering:** alle content JSON/public media/system/project Git-blobs er eksakt incoming; siste OWNER-priser/resultater/Bildekort/bilder/utsnitt/home og fem lokale PNG-er urørt. Endrede produktfiler: `.pages.yml`, `ServiceFamilyPage.astro`, `content-schema.ts`, ny `service-sections.ts`; ny test `synlighet-cms.test.ts`. Konvertering/øvrige tjenester kan senere gjenbruke samme native liste/felt/visibility og avhengighetsvern etter separat scope/OWNER pilotreview; ingen utrulling gjort.
+
+**Review:** https://optimalisering-oslo-v33.anel.workers.dev/synlighet/ . STOP for OWNER visuell vurdering av kun H-024B1 før flere tjenester. H-024A3 forblir godkjent; noindex/robots/deaktivert intake/ingen launch uendret. Kvitteringens revisjon finnes i Git-historikken.
+
 ## H-024A9 / D-111 — STATUSAUDIT FERDIG; OWNER UX-PASS PENDING
 
 2026-10-20. Fersk main **84a22318a1af517dfce9753372c23c11224e70fb**; MedonWebSystem main **b6ddf7fca243f8bc78c061a157bda0bdfbe1ee69** lest. Kun dokumentasjon endret; ingen ny produktfeil funnet i denne avgrensede kontrollen.

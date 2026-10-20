@@ -1208,7 +1208,6 @@ content:
       - *a12
       - name: sections
         label: Innholdsseksjoner og farger
-        description: Vanlige lokale seksjoner kan legges til, redigeres, flyttes og skjules. Sjekk, kundebevis og prisbro beholder sine nødvendige ankere. Bygget avviser ugyldige plasseringer.
         type: block
         list:
           collapsible:
