@@ -998,233 +998,237 @@ content:
       create: false
       rename: false
       delete: false
-  - name: services
+  - name: serviceGroup
     label: Tjenester
-    type: collection
-    path: app/src/content/pages
-    exclude:
-      - home.json
-      - innsikt.json
-      - priser.json
-      - om.json
-      - vurdering.json
-      - kontakt.json
-      - personvern.json
-      - vilkar.json
-      - hva-bor-optimaliseres-forst.json
-      - male-effekt-av-optimalisering.json
-      - synlighet.json
-    format: json
-    subfolders: false
-    operations: *a3
-    filename: "{slug}.json"
-    view:
-      primary: seo.title
+    type: group
+    items:
+    - name: services
+      label: Øvrige tjenester
+      type: collection
+      path: app/src/content/pages
+      exclude:
+        - home.json
+        - innsikt.json
+        - priser.json
+        - om.json
+        - vurdering.json
+        - kontakt.json
+        - personvern.json
+        - vilkar.json
+        - hva-bor-optimaliseres-forst.json
+        - male-effekt-av-optimalisering.json
+        - synlighet.json
+      format: json
+      subfolders: false
+      operations: *a3
+      filename: "{slug}.json"
+      view:
+        primary: seo.title
+        fields:
+          - seo.title
+          - slug
+        search:
+          - seo.title
+          - slug
+          - title
+        sort:
+          - seo.title
+          - slug
       fields:
-        - seo.title
-        - slug
-      search:
-        - seo.title
-        - slug
-        - title
-      sort:
-        - seo.title
-        - slug
-    fields:
-      - &serviceslug
-        name: slug
-        label: URL-slug
-        type: string
-        readonly: true
-        required: true
-        description: "Sidens URL-del. Eksempel: seo vises som /seo/."
-      - &a4
-        name: seo
-        label: SEO
-        type: object
-        fields:
-          - name: title
-            label: Sidetittel
-            type: string
-            required: true
-          - name: description
-            label: Metabeskrivelse
-            type: text
-            required: true
-        required: true
-      - &a9
-        name: hero
-        component: pageHero
-      - &a5
-        name: heroVisual
-        label: Hero-bilde / drømmeutfall
-        type: object
-        fields:
-          - name: kind
-            label: Bildetype
-            type: select
-            options:
-              values:
-                - photo
-                - illustration
-            required: true
-          - name: src
-            label: Levert tjenestebilde
-            type: image
-            options:
-              media: serviceHeroImages
-            required: true
-          - name: alt
-            label: Kort beskrivelse av bildets mening
-            type: string
-            required: true
-          - name: positionX
-            label: Fokus vannrett (0–100)
-            type: number
-            required: true
-            options:
-              min: 0
-              max: 100
-          - name: positionY
-            label: Fokus loddrett (0–100)
-            type: number
-            required: true
-            options:
-              min: 0
-              max: 100
-        description: Valgfritt eksisterende Hero-bilde. Bilde og utsnitt bevares når Oppsett endres. Uten et levert bilde vises toppseksjonen med tekst.
-      - &a10
-        name: eyebrow
-        label: Toppseksjon (Hero) – Overtekst
-        type: string
-        required: true
-      - &a11
-        name: title
-        label: Hovedoverskrift
-        type: string
-        required: true
-      - &a12
-        name: intro
-        label: Ingress
-        type: text
-        required: true
-      - &a6
-        name: sections
-        label: Innholdsseksjoner og farger
-        description: Åpne en vanlig Innholdsseksjon for Seksjonsfarge. Åpne en boks under Alternativer eller steg for Boksfarge. Beskyttede sjekk-/handlingsseksjoner har ikke fargevalg.
-        type: block
-        list:
-          collapsible:
-            collapsed: true
-            summary: "{heading}"
-        required: true
-        blockKey: _block
-        blocks:
-          - name: content
-            label: Innholdsseksjon
-            component: sectionContent
-          - name: protected
-            label: Beskyttet sjekk / handling
-            component: sectionProtected
-      - &a7
-        name: faq
-        label: Ofte stilte spørsmål
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: "{question}"
-        fields:
-          - name: question
-            label: Spørsmål
-            type: string
-            required: true
-          - name: answer
-            label: Svar
-            type: text
-            required: true
-      - &a8
-        name: cta
-        label: Neste steg
-        component: link
-        required: true
-      - &serviceproof
-        name: proof
-        label: Dokumenterte resultater - trygg presentasjon
-        type: object
-        fields:
-          - name: publicationApproved
-            label: Godkjenn visning av allerede publiserbare case
-            description: Slå bare på etter dokumentert godkjenning. Dette overstyrer aldri case-status, tillatelse eller manglende evidens.
-            type: boolean
-            default: false
-            required: true
-            readonly: true
-          - name: caseIds
-            label: Velg case fra evidensregisteret
-            type: reference
-            options:
-              collection: proofCases
-              multiple: true
-              value: "{fields.id}"
-              label: "{fields.clientName} ({fields.publicationStatus})"
-              search: id,clientName,anonymizedLabel
-            required: false
-            description: Velg primært case. Visning støttes på Synlighet og Konvertering før prisbroen.
-          - name: eyebrow
-            label: Overtekst
-            type: string
-            required: true
-          - name: heading
-            label: Overskrift
-            type: string
-            required: true
-          - name: beforeLabel
-            label: Før-etikett
-            type: string
-            required: true
-          - name: afterLabel
-            label: Etter-etikett
-            type: string
-            required: true
-          - name: changeLabel
-            label: Endring-etikett
-            type: string
-            required: true
-        required: false
-  - name: serviceSynlighet
-    label: Synlighet – tjenestepilot
-    type: file
-    path: app/src/content/pages/synlighet.json
-    format: json
-    operations: *a3
-    fields:
-      - *serviceslug
-      - *a4
-      - *a9
-      - *a5
-      - *a10
-      - *a11
-      - *a12
-      - name: sections
-        label: Innholdsseksjoner og farger
-        type: block
-        list:
-          collapsible:
-            collapsed: true
-            summary: "{heading}"
-        required: true
-        blockKey: _block
-        blocks:
-          - name: content
-            label: Innholdsseksjon
-            component: synlighetSectionContent
-          - name: protected
-            label: Beskyttet sjekk / handling
-            component: sectionProtected
-      - *a7
-      - *a8
-      - *serviceproof
+        - &serviceslug
+          name: slug
+          label: URL-slug
+          type: string
+          readonly: true
+          required: true
+          description: "Sidens URL-del. Eksempel: seo vises som /seo/."
+        - &a4
+          name: seo
+          label: SEO
+          type: object
+          fields:
+            - name: title
+              label: Sidetittel
+              type: string
+              required: true
+            - name: description
+              label: Metabeskrivelse
+              type: text
+              required: true
+          required: true
+        - &a9
+          name: hero
+          component: pageHero
+        - &a5
+          name: heroVisual
+          label: Hero-bilde / drømmeutfall
+          type: object
+          fields:
+            - name: kind
+              label: Bildetype
+              type: select
+              options:
+                values:
+                  - photo
+                  - illustration
+              required: true
+            - name: src
+              label: Levert tjenestebilde
+              type: image
+              options:
+                media: serviceHeroImages
+              required: true
+            - name: alt
+              label: Kort beskrivelse av bildets mening
+              type: string
+              required: true
+            - name: positionX
+              label: Fokus vannrett (0–100)
+              type: number
+              required: true
+              options:
+                min: 0
+                max: 100
+            - name: positionY
+              label: Fokus loddrett (0–100)
+              type: number
+              required: true
+              options:
+                min: 0
+                max: 100
+          description: Valgfritt eksisterende Hero-bilde. Bilde og utsnitt bevares når Oppsett endres. Uten et levert bilde vises toppseksjonen med tekst.
+        - &a10
+          name: eyebrow
+          label: Toppseksjon (Hero) – Overtekst
+          type: string
+          required: true
+        - &a11
+          name: title
+          label: Hovedoverskrift
+          type: string
+          required: true
+        - &a12
+          name: intro
+          label: Ingress
+          type: text
+          required: true
+        - &a6
+          name: sections
+          label: Innholdsseksjoner og farger
+          description: Åpne en vanlig Innholdsseksjon for Seksjonsfarge. Åpne en boks under Alternativer eller steg for Boksfarge. Beskyttede sjekk-/handlingsseksjoner har ikke fargevalg.
+          type: block
+          list:
+            collapsible:
+              collapsed: true
+              summary: "{heading}"
+          required: true
+          blockKey: _block
+          blocks:
+            - name: content
+              label: Innholdsseksjon
+              component: sectionContent
+            - name: protected
+              label: Beskyttet sjekk / handling
+              component: sectionProtected
+        - &a7
+          name: faq
+          label: Ofte stilte spørsmål
+          type: object
+          list:
+            collapsible:
+              collapsed: true
+              summary: "{question}"
+          fields:
+            - name: question
+              label: Spørsmål
+              type: string
+              required: true
+            - name: answer
+              label: Svar
+              type: text
+              required: true
+        - &a8
+          name: cta
+          label: Neste steg
+          component: link
+          required: true
+        - &serviceproof
+          name: proof
+          label: Dokumenterte resultater - trygg presentasjon
+          type: object
+          fields:
+            - name: publicationApproved
+              label: Godkjenn visning av allerede publiserbare case
+              description: Slå bare på etter dokumentert godkjenning. Dette overstyrer aldri case-status, tillatelse eller manglende evidens.
+              type: boolean
+              default: false
+              required: true
+              readonly: true
+            - name: caseIds
+              label: Velg case fra evidensregisteret
+              type: reference
+              options:
+                collection: proofCases
+                multiple: true
+                value: "{fields.id}"
+                label: "{fields.clientName} ({fields.publicationStatus})"
+                search: id,clientName,anonymizedLabel
+              required: false
+              description: Velg primært case. Visning støttes på Synlighet og Konvertering før prisbroen.
+            - name: eyebrow
+              label: Overtekst
+              type: string
+              required: true
+            - name: heading
+              label: Overskrift
+              type: string
+              required: true
+            - name: beforeLabel
+              label: Før-etikett
+              type: string
+              required: true
+            - name: afterLabel
+              label: Etter-etikett
+              type: string
+              required: true
+            - name: changeLabel
+              label: Endring-etikett
+              type: string
+              required: true
+          required: false
+    - name: serviceSynlighet
+      label: Synlighet
+      type: file
+      path: app/src/content/pages/synlighet.json
+      format: json
+      operations: *a3
+      fields:
+        - *serviceslug
+        - *a4
+        - *a9
+        - *a5
+        - *a10
+        - *a11
+        - *a12
+        - name: sections
+          label: Innholdsseksjoner og farger
+          type: block
+          list:
+            collapsible:
+              collapsed: true
+              summary: "{heading}"
+          required: true
+          blockKey: _block
+          blocks:
+            - name: content
+              label: Innholdsseksjon
+              component: synlighetSectionContent
+            - name: protected
+              label: Beskyttet sjekk / handling
+              component: sectionProtected
+        - *a7
+        - *a8
+        - *serviceproof
   - name: priser
     label: Priser
     type: file
