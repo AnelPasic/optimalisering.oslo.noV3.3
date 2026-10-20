@@ -1,5 +1,12 @@
 # Decisions and authority
 
+## D-112 — OWNER PASS for H-024A3 Pages CMS; H-024B opened for one service pilot — 2026-10-20
+
+OWNER responds **«yep, ser bra ut»** to the explicit question **«Godkjenner du at vi lukker H-024A3 på dette grunnlaget og går videre til H-024B?»** after H-024A9 audit. **H-024A3 = OWNER PASS / COMPLETE for current prelaunch Pages CMS experience**. Scope includes existing Hero, Top/Main/Bottom native section lists, global elements, ordinary local Add/Edit/Reorder/Hide/Remove and proven Pages CMS→Git→native Worker/restore. Known limitations explicitly retained: collapsed reference summaries show technical IDs (previously accepted D-105); native Clear/Replace/duplicate can produce an invalid save stopped by build guards (not claimed safe in CMS itself); mouse-pointer drag is **not independently verified**, whereas keyboard move and OWNER-confirmed saved page order are. No demand to retest or rebuild CMS solely for these exceptions.
+
+**H-024B = OPEN only for scoped H-024B1 pilot on existing `/synlighet/`**, which already has native CMS editable/sortable service sections, a protected assessment anchor, proof and pricing bridge. Implement only an actual gap in safe local sections/visibility with strict preservation and lightweight verification; do not duplicate the homepage three-zone builder or broaden to other services. Binding handoff: `coordination/H024B1-SERVICE-CMS-PILOT-SYNLIGHET.md`. OWNER review after preview before further rollout. No release of public domain, indexability, live lead POST, proof/price reauthorization or launch. Later OWNER Pages CMS edits in pricing, results, images and page content override historic snapshots.
+
+
 ## D-111 — OWNER ber om CMS closeout, ikke ny Page Builder — 2026-10-20
 
 OWNER: «gå videre med de gjenstående CMS-punktene». Gjeldende evidens viser at bibliotek, lokale seksjoner, tre flyttbare grupper, skjuling, global master-redigering og CMS→Git→Worker→restore allerede er teknisk demonstrert, kortere B er valgt, og native ID-summary-begrensning er OWNER-akseptert. **AUTHORIZED NOW:** H-024A9 — kort evidensbasert kontroll av de faktiske resterende CMS-punktene, dokumenter kjent begrensning og legg frem én samlet OWNER UX-godkjenning. Ikke gjenta tunge gamle tester eller bygg om CMS uten en reprodusert ny feil. Det er **IKKE** automatisk OWNER PASS av H-024A3, H-024B-oppstart eller offentlig lansering. Se `coordination/H024A9-CMS-CLOSEOUT.md`. Nyeste faktiske Pages CMS-redigering av priser/resultater/bilder skal bevares og ikke gjenopprettes til historisk testtilstand.
