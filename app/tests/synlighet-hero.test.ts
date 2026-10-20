@@ -11,6 +11,7 @@ const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
 
 test('migration is lossless and idempotent, retaining mixed sections and derived legacy CTA exactly',()=>{
   const legacy={...structuredClone(source),hero:{layout:'split-right'},eyebrow:'Eksisterende overtekst',title:'Eksisterende tittel',intro:'Eksisterende ingress',cta:{label:'Sjekk',href:'/#sjekk'},heroVisual:{kind:'illustration',src:'/images/services/discoveringlocalfavorite-1.png',alt:'Bli funnet',positionX:50,positionY:50}};
+  legacy.composition.service.pricingBridge={after:'sammenheng',href:'/priser/',serviceName:'Synlighet'};
   const before=resolvePageHero(legacy),migrated=migrateSynlighetHero(legacy,before);
   assert.deepEqual(resolvePageHero(migrated),before);
   assert.deepEqual(migrated.sections,legacy.sections);

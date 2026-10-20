@@ -20,6 +20,8 @@ export const pageSchema = z.preprocess((input,context)=>{
   if(raw?.kind!=='home'&&Array.isArray(raw?.sections)&&raw.sections.some(section=>section&&typeof section==='object'&&'globalElement' in section)) context.addIssue({code:'custom',path:['sections'],message:'Use a global reference, not resolved master fields'});
   if(raw?.slug==='synlighet'&&raw.kind==='service') {
     try {
+      const hub=raw as typeof raw&{proof?:unknown;faq?:unknown;composition?:{service?:Record<string,unknown>}};
+      if(Object.hasOwn(hub,'proof')||Object.hasOwn(hub,'faq')||['proofAfter','pricingBridge','closingCta'].some(key=>Object.hasOwn(hub.composition?.service??{},key))) throw new Error('Synlighet viser bare CMS-plasserte seksjoner; fjern lokal proof/faq og automatisk proofAfter/pricingBridge/closingCta');
       if(legacyHeroKeys.some(key=>Object.hasOwn(raw,key))) throw new Error('Synlighet Hero must have one nested source; remove legacy top-level Hero fields');
       const hero=synlighetHeroSchema.parse(raw.hero);
       // Compatibility projections exist only in parsed collection data, never in CMS JSON.

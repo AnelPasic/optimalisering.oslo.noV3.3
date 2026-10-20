@@ -24,8 +24,8 @@ test('Synlighet defaults retain every section and ordinary visibility preserves 
   assert.equal(visibleServiceSections(other), other.sections, 'no rollout to another service');
 });
 
-test('protected CTA, proof and pricing anchors cannot disappear or be hidden', () => {
-  for (const id of ['sjekk', 'prioritering', 'sammenheng']) {
+test('protected local sjekk cannot disappear, be hidden or duplicated', () => {
+  for (const id of ['sjekk']) {
     for (const operation of ['hide', 'remove', 'duplicate']) {
       const page = structuredClone(source), section = page.sections.find((s: any) => s.id === id);
       if (operation === 'hide') section.visibility = 'hidden';
@@ -37,7 +37,7 @@ test('protected CTA, proof and pricing anchors cannot disappear or be hidden', (
 });
 
 test('ordinary hide/remove is safe while duplicate, reserved and invalid anchors and visibility are rejected', () => {
-  for (const id of ['kanaler', 'behov']) {
+  for (const id of ['kanaler', 'behov', 'prioritering', 'sammenheng']) {
     const page = structuredClone(source);
     page.sections.find((s: any) => s.id === id).visibility = 'hidden';
     assert.ok(!visibleServiceSections(pageSchema.parse(page)).some(s => s.id === id));
@@ -67,7 +67,7 @@ test('pilot editor reuses all service fields, adds native visibility and writabl
   assert.equal(entry.type, 'file');
   assert.ok(services.exclude.includes('synlighet.json'));
   for (const field of services.fields.filter((f: any) => !['sections','proof','faq','hero','heroVisual','eyebrow','title','intro','cta'].includes(f.name))) assert.deepEqual(entry.fields.find((f: any) => f.name === field.name), field);
-  assert.deepEqual(entry.fields.find((f: any) => f.name === 'proof').fields, services.fields.find((f: any) => f.name === 'proof').fields);
+  for(const name of ['proof','faq']) {assert.ok(!entry.fields.some((f:any)=>f.name===name));assert.ok(services.fields.some((f:any)=>f.name===name));}
   const sections = entry.fields.find((f: any) => f.name === 'sections');
   const content = resolveField(sections.blocks.find((b: any) => b.name === 'content'), cms.components);
   assert.equal(content.fields.find((f: any) => f.name === 'id').readonly, undefined);

@@ -513,7 +513,7 @@ components:
       - name: visibility
         label: Synlighet
         component: sectionVisibility
-        description: Skjul beholder tekst og anker. Sjekk-, kundebevis- og prisbroseksjoner må være synlige; ugyldige endringer stoppes av bygget.
+        description: Skjul beholder tekst og anker uten å vise seksjonen. Beskyttet sjekk må være synlig. Lenker til skjulte eller fjernede ankere stoppes av bygget.
       - name: id
         label: Seksjonens lenkeanker
         type: string
@@ -547,7 +547,11 @@ components:
               label: Slik jobber vi
             - name: passer
               label: Hvem det passer for
-        description: Innhold redigeres én gang under Globale elementer. Kunderesultater erstatter lokalt kundebevis når plasseringen er publisert. Behovsvelger erstatter lokal behovseksjon. Skjul/fjern plasseringen for å vise lokalt innhold igjen. Priser, skjema og FAQ bruker fortsatt sidens eksisterende beskyttede oppsett.
+            - name: priser
+              label: Pakker og priser
+            - name: sporsmal
+              label: Ofte stilte spørsmål
+        description: Én synlig rad gir én seksjon på samme sted. Innhold redigeres én gang under Globale elementer. Skjul eller fjern bare plasseringen; ingen lokal erstatning settes inn. Skjul eller fjern en lokal rad med samme lenkeanker før du velger det globale elementet. Sjekk beholdes som beskyttet lokal rad.
       - name: visibility
         label: Visning på denne siden
         component: sectionVisibility
@@ -1298,29 +1302,6 @@ content:
               - name: global
                 label: Globalt element
                 component: serviceGlobalPlacement
-          - name: faq
-            label: Ofte stilte spørsmål
-            type: object
-            list:
-              collapsible:
-                collapsed: true
-                summary: "{question}"
-            fields:
-              - name: question
-                label: Spørsmål
-                type: string
-                required: true
-              - name: answer
-                label: Svar
-                type: text
-                required: true
-            description: Lokale spørsmål og svar fra denne tjenestefilen vises nederst, etter den sorterbare seksjonslisten.
-          - name: proof
-            label: Lokalt kundebevis – vises når globale Kunderesultater ikke er valgt
-            type: object
-            fields: *serviceProofFields
-            required: false
-            description: Lokale etiketter og casevalg lagres her; tall hentes fra case/evidensregisteret. Vises etter Prioritering når globale Kunderesultater ikke er valgt. Skjult/Remove på den globale plasseringen gir lokal visning tilbake. Prisbroen etter Sammenheng bruker Globale elementer → Pakker og priser; FAQ nederst bruker denne sidens spørsmål og svar. Publiseringsgodkjenning er ikke en visningsbryter.
   - name: priser
     label: Priser
     type: file

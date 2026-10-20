@@ -30,7 +30,7 @@ export function resolvePageHero(page:Source,commercial?:Commercial):HeroView{
  }
  if(page.slug==='synlighet'&&page.hero&&typeof page.hero==='object'&&'primaryCta' in page.hero){
   const hero=synlighetHeroSchema.parse(page.hero),media=hero.visual.image?resolveServiceVisual(hero.visual.image):undefined;
-  return heroViewSchema.parse({...hero,family:'service',visual:hero.visual.kind==='image'&&media?{kind:'image',image:{...media,origin:'page'}}:{kind:'none'},breadcrumbs:[{label:'Forsiden',href:'/'},{label:route.service.pricingBridge?.serviceName??hero.eyebrow}]});
+  return heroViewSchema.parse({...hero,family:'service',visual:hero.visual.kind==='image'&&media?{kind:'image',image:{...media,origin:'page'}}:{kind:'none'},breadcrumbs:[{label:'Forsiden',href:'/'},{label:'Synlighet'}]});
  }
  const layout=heroPresentationSchema.parse(page.hero??{}).layout;
  const media=resolveServiceVisual(page.heroVisual),family=route.family;
