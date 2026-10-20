@@ -8,6 +8,7 @@ import { compositionSchema, resolveRouteFamily, routeKindSchema } from './route-
 
 import { heroSchema, resolveHomepageSections, sectionVisibilitySchema, validateHomepagePublicLinks } from './home-builder.ts';
 import {heroPresentationSchema} from './hero-presentation.ts';
+import { validateSynlighetSections } from './service-sections.ts';
 
 const link = z.object({label:z.string(),href:z.string().startsWith('/')});
 export { proofSlotSchema } from './home-section-data.ts';
@@ -57,7 +58,7 @@ export const pageSchema = z.preprocess((input,context)=>{
     translationKey: z.string().trim().min(1).optional(),
     homepage: homepage.optional(),
   }).superRefine((page, context) => {
-    try { resolveRouteFamily(page); } catch (error) { context.addIssue({code:'custom',path:['composition'],message:error instanceof Error?error.message:'Invalid composition'}); }
+    try { const route = resolveRouteFamily(page); validateSynlighetSections(page, route); } catch (error) { context.addIssue({code:'custom',path:['composition'],message:error instanceof Error?error.message:'Invalid composition'}); }
     if (page.kind !== 'home') page.sections.forEach((section, index) => {
       const model = sectionModel(page.slug, section.id);
       const isPageList = section._block === 'pageList';

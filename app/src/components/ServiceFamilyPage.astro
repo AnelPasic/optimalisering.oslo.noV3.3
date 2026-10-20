@@ -10,6 +10,7 @@ import Proof from './HomeProof.astro';
 import PricingBridge from './ServicePricingBridge.astro';
 import Faq from './Faq.astro';
 import ClosingCta from './ClosingCta.astro';
+import { visibleServiceSections } from '../lib/service-sections';
 import '../styles/compositions/service.css';
 interface Props {page:CollectionEntry<'pages'>['data'];commercial:HomepageContent;route:RouteFamily;}
 const {page,commercial,route}=Astro.props;
@@ -18,7 +19,7 @@ const records=capability.proofAfter?(await getCollection('proofCases')).map(p=>p
 ---
 <div class="invite-home invite-service">
   <CommercialHero content={resolvePageHero(page)} />
-  {page.sections.map(section=><>
+  {visibleServiceSections(page).map(section=><>
     <ContentSection section={section} visualId={capability.sectionVisuals.find(v=>v.section===section.id)?.visual} defaultSurface={capability.sectionSurfaces.find(v=>v.section===section.id)?.surface} />
     {capability.proofAfter===section.id&&page.proof&&<Proof content={page.proof} records={records} primary />}
     {bridge?.after===section.id&&<PricingBridge content={commercial.packages} link={bridge.link} serviceName={bridge.serviceName} />}
