@@ -1,0 +1,43 @@
+# H-024B2 — Synlighet: bruk Globale elementer direkte i tjenestesidens seksjonsliste
+
+**Dato 2026-10-20 · D-115 · OWNER REVISE på H-024B1, single-service scope.**
+
+OWNER viser at `/synlighet/` har et stort «Dokumenterte resultater»-kort med Helt Opplagt og sier: **«ikke helt, vet ikke hvor denne blir hentet fra. ingen mulighet til å legge til noen av globale elementer.»**
+
+**Root cause bekreftet i current source:** `app/src/content/pages/synlighet.json` har sitt eget **`proof`**-objekt (caseIds `["helt-opplagt"]`, overskrift «Organiske klikk økte 93 % hos Helt Opplagt»). `ServiceFamilyPage.astro` injiserer `HomeProof` automatisk **etter `prioritering`** via `composition.service.proofAfter`. Det er *ikke* masteren `app/src/content/global-elements/resultater.json`, som nå har Eurotents, Nysta og Helt Opplagt, egne valgte bilder og `layout: mediaCards`. Kundetallene kommer fra de samme bevispostene, men lokal presentasjon og global master er forskjellige kilder. `service.pricingBridge` etter `sammenheng` og sidens lokale `faq` injiseres på tilsvarende måte. H-024B1 implementerte kun Add/Edit/Reorder/Hide for **lokale** service-seksjoner og løste ikke det OWNER nå etterspør.
+
+## Resultat OWNER skal oppleve
+
+Under **Pages CMS → Tjenester → Synlighet → Innholdsseksjoner**:
+- Én eksisterende native **sorterbar** liste der **Legg til** gir valg **«Innholdsseksjon»** eller **«Globalt element»**, på samme forståelige måte som Forsidens seksjonsliste.
+- Et nytt **Globalt element** velges via eksisterende, norske navn fra det *ene* globale biblioteket (minimum Kunderesultater, Konverteringskalkulator, Behovsvelger, Mekanisme, Passer; vurder også Pakker og priser, Gratis sjekk og FAQ under duplikat-/ankerbeskyttelsen nedenfor). Felles masteren kan fortsatt redigeres **kun én gang** under Globale elementer. Tjenestesiden lagrer **bare referanse + visning**, aldri en kopi av globale felter eller et nytt proof-register.
+- Samme liste gir naturlig rekkefølge på lokale og globale innholdsseksjoner; et globalt element kan flyttes, skjules eller fjernes fra denne siden **uten å slette masteren**. Ren synlighetsendring skal ikke miste bilder, tall, UUID, lokale tekster eller ankre.
+- Et faktisk satt inn «Kunderesultater» skal bruke **nåværende OWNER-redigerte master** med bilder/malvalg, ikke utdatert Eurotents/50-50 eller et automatisk nytt Helt Opplagt-kort. Overskrift og kortstruktur følger designet som allerede finnes under `/design-system/`. Valg skjer i CMS og rendres først etter Save→build, ikke en hardkodet frontend-kontroll.
+
+## Håndter eksisterende lokale/autoinjiserte moduler — ingen doble eller skjulte datakilder
+
+1. **Før noen velger globale elementer skal /synlighet/ se identisk ut som nå**: Helt Opplagt-boksen etter prioritering, prisbro etter sammenheng, gjeldende FAQ og Hero, lokale seksjoner/CTA uendret. Ikke automatisk migrer eller publiser globale resultater bare fordi malen blir tilgjengelig.
+2. **Gjør opprinnelsen tydelig i CMS.** Merk det eksisterende `proof`-feltet f.eks. **«Lokalt kundebevis – Helt Opplagt (vises dersom globale Kunderesultater ikke er valgt)»**, med kort hjelp: data fra case/evidensregisteret; presentasjonsoverskrift/etiketter i denne servicefilen; automatisk etter Prioritering. Kildebevar eksisterende caseIds/overskrift/permission og allow editing through original safe typed CMS proof fields. En dedikert, tydelig visningskontroll kan vurderes for å skjule lokal proof uten å skru av `publicationApproved` (publiseringsrett er ikke layout-toggle).
+3. **Når en synlig global `resultater`-plassering legges inn**, skal lokal proof **ikke renderes i tillegg**. Lokal proof beholdes tapsfritt i `synlighet.json` og kommer tilbake hvis global plassering fjernes eller skjules (eller tydelig eksplisitt innholdsvalg som gir samme observerbare resultat). Render **én** kundebevisblokk og ett #resultater-anker. Håndter «Skjult»/Remove reversibelt.
+4. Global `priser` vs eksisterende `ServicePricingBridge`: aldri to konkurrerende prisavsnitt. Global `sporsmal` vs eksisterende FAQ: aldri to FAQ-er / #sporsmal. Global `sjekk` vs lokal beskyttet `sjekk`: aldri duplisert ID eller to skjema/CTA-hovedpunkter; behold og beskytt lenkemål, transport deaktivert. Løs med **tydelig dokumentert precedence/substitution og typevalidering**, eller gjør problematiske typer ikke-valgbare foreløpig dersom de ikke kan løses trygt innen én pilot. **Ikke vis inaktive valgalternativer som om de fungerer.**
+5. Merk i CMS når en modul erstatter gammel innsetting, og hvem som er innholdskilden. Ikke la kryssende bevis-/priskonfigurasjon bli en skjult redaktøroverraskelse. Ikon/farge/visuell komposisjon følger eksisterende komponenter; ingen ny layoutfamilie.
+
+## Implementer på eksisterende Astro / Pages CMS; minimal men ekte arkitektur
+
+- Studer og gjenbruk `app/src/lib/home-builder.ts` (`globalPlacementSchema`, `getGlobalElement`, `resolveGlobalPlacement`), `app/src/components/HomepageBlock.astro` og eksisterende CMS global-blokk `.pages.yml` `*a1` / `serviceGroup.serviceSynlighet`. Vurder typed **mixed service sections** med `_block: global` plus existing local/protected kinds in *one* list; del bare den minimalt nødvendige resolver/render-typen. Ikke transformer lokale section-payloads til global master records.
+- Eksisterende `pageSchema` i `app/src/lib/content-schema.ts` og `resolveRouteFamily` i `route-family.ts` forventer i dag `section.id` direkte. Ved mixed-list må avhengigheter/anker/links valideres på **reelle lokale seksjoner og oppløste synlige globale placements** riktig. Ugyldige/dupliserte typer, ankre, manglende master/permission, skjult mål, skjult proof/prisbro/assessment eller orphaned CTA/FAQ links må avvises med forståelig feil. `_block:global` må ikke passere som utestet standard `content`.
+- Del proof/provenance og master-innhold fra den sanne autoriteten; `HomeProof` må fortsatt håndtere `primary=true` service-local legacy korrekt, mens valgt globalt element kan rendres via den eksisterende globale komponenten. Behold forside og alle andre tjenesters rendering bit-for-bit/semantisk identisk.
+- Sjekk global komponents CSS/JS ved service-bruk (f.eks. kalkulator/selector) uten å trekke inn en bred sideombygging. Bruk daisyUI + godkjente tokens og komponentprimitiver.
+- Ingen tvungen ny 3-sone Page Builder på tjenestesidene og ingen ny «globale elementer»-samling. Denne piloten gjelder `synlighet.json` / CMS-entry; **ikke rull ut til Konvertering, SEO, AI-synlighet, Nettbutikkoptimalisering** før ny OWNER vurdering.
+- **Behold nyeste OWNER-innhold i GitHub**. Spesielt `global-elements/resultater.json` med `mediaCards`, alle tre opplastede bilder/utsnitt/overskrifter, nyeste `priser.json`-copy, de 8 originale masterne, `home.json` med B/OWNER skjult Top, Hero, bevis/evidens og service-content. Ikke overskriv med historiske 50/50 / alternating fixtures.
+
+## QA / publisering etter D-107
+
+1. Først ferdig kilde-/modellavklaring. Implementer **én** riktig CMS-kontroll, ikke bygg dashboard, ny generell redigeringsmotor eller designsystem.
+2. Kjør kun relevante CMS/YAML/section-resolution/proof-guards-tester, build, én kort desktop/mobil smoke av `/synlighet/`. Negative fixtures: to proof, duplikat master, ugyldig/manglende global, hidden linked anchor, dubbele FAQ/pris/form IDs og publiserings-/godkjenningsgater. Verifiser øvrige sider bare ved målrettet regresjonskontroll.
+3. **En ekte CMS Save→Git→native Worker→restore**: legg til ett globalt `resultater` på Synlighet, verifiser at valgt global master og kun ett proof vises på Worker og at lokale/øvrige sidekomponenter ikke endres; fjern **bare egen nye plassering** gjennom CMS og bekreft eksakt restaurert servicefil og opprinnelig Helt Opplagt-visning. Bruk fersk remote Git baseline rett før hver write; hvis OWNER lagrer samtidig, STOP heller enn å overskrive.
+4. Sluttkvittering kort i `coordination/CODEX-TO-CHATGPT.md` med faktisk SHA, valgbare globale typer, forklaring på lokal vs global proof, QA som faktisk er kjørt, bekreftet preview `https://optimalisering-oslo-v33.anel.workers.dev/synlighet/`, og kjente begrensninger. Synk `PROJECT-STATE.md` / `REVIEW-QUEUE.md`. **STOP for OWNER funksjonell/visuell vurdering** før andre sider.
+
+## STATUS / BLOKKERING
+
+**H-024A3 = OWNER PASS (D-112)**. **H-024B1 = OWNER REVISE/INCOMPLETE**: teknisk lokal-editor levert, D-114 bekreftet CMS navigasjon, men brukerens Globalt element-behov er ikke møtt. **H-024B2 = ACTIVE, authorized scoped correction**. Ingen auto-PASS på H-024B1/H-024B2 før OWNER faktisk ser den redigerbare globale seksjonslisten. Ingen offentlig produksjonslansering, indeksering, åpning for nye leads/POST eller endring av andre routes.
