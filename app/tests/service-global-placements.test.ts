@@ -10,7 +10,7 @@ import { cmsJsonSave, entryForFile, resolveField } from './helpers/pages-cms-jso
 const source = JSON.parse(readFileSync('src/content/pages/synlighet.json','utf8'));
 const records = readdirSync('src/content/proof').filter(f=>f.endsWith('.json')).map(f=>JSON.parse(readFileSync('src/content/proof/'+f,'utf8')));
 const placement = (element: string, extra = {}) => ({_block:'global',element,...extra});
-const withGlobal = (element: string, extra = {}) => ({...structuredClone(source),sections:[...structuredClone(source.sections),placement(element,extra)]});
+const withGlobal = (element: string, extra = {}) => ({...structuredClone(source),sections:[...structuredClone(source.sections).filter((row:any)=>row._block!=='global'||row.element!==element),placement(element,extra)]});
 
 test('mixed service references resolve current masters and preserve original local proof/config without source copies',()=>{
   for(const id of serviceGlobalIds){
@@ -50,13 +50,13 @@ test('reject duplicate/unknown/unsupported masters, copied payloads and global/l
 });
 
 test('resolved links and protected legacy dependencies fail closed for hidden/removed targets',()=>{
-  const raw=withGlobal('regneeksempel');raw.cta.href='/synlighet/#regneeksempel';assert.ok(pageSchema.safeParse(raw).success);
+  const raw=withGlobal('regneeksempel');raw.hero.primaryCta.href='/synlighet/#regneeksempel';assert.ok(pageSchema.safeParse(raw).success);
   raw.sections.at(-1).visibility='hidden';assert.equal(pageSchema.safeParse(raw).success,false);
   for(const id of ['sjekk','prioritering','sammenheng']){const raw=withGlobal('resultater');raw.sections.find((s:any)=>s.id===id).visibility='hidden';assert.equal(pageSchema.safeParse(raw).success,false,id);}
   assert.throws(()=>resolveSynlighetSections([placement('resultater',{visibility:'unknown'})]));
-  const noFaq={...structuredClone(source),faq:[],cta:{label:'FAQ',href:'/synlighet/#sporsmal'}};
+  const noFaq=structuredClone(source);noFaq.faq=[];noFaq.hero.primaryCta={label:'FAQ',href:'/synlighet/#sporsmal'};
   assert.equal(pageSchema.safeParse(noFaq).success,false);
-  const noProof=pageSchema.parse({...structuredClone(source),cta:{label:'Proof',href:'/synlighet/#resultater'}});
+  const proofLink=structuredClone(source);proofLink.hero.primaryCta={label:'Proof',href:'/synlighet/#resultater'};const noProof=pageSchema.parse(proofLink);
   assert.throws(()=>validateServiceGlobalProof(noProof,[]));
 });
 

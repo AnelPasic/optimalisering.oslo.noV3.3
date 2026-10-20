@@ -26,8 +26,8 @@ test('no-image CMS preset round-trips without clearing any home/service/pricing 
 });
 
 test('fourth preset hides supplied images for every normal family while preserving sources and CTA semantics',()=>{
- for(const {page} of pages)for(const withImage of [true,false]){const source=structuredClone(page);source.hero={...source.hero,layout:'centered-none'};if(source.kind==='home')source.hero.visual.kind=withImage?'image':'none';else if(withImage)source.heroVisual=structuredClone(service.heroVisual);else delete source.heroVisual;
-  const before=JSON.stringify(source),view=resolvePageHero(source,commercial);assert.equal(view.layout,'centered');assert.equal(view.visual.kind,'none');assert.equal(JSON.stringify(source),before);assert.equal(view.primaryCta?.href,page.kind==='home'?page.hero.primaryCta.href:page.kind==='assessment'?undefined:page.cta.href);assert.equal(view.title,page.kind==='home'?page.hero.title:page.kind==='pricing'?commercial.packages.heading:page.title);
+ for(const {page} of pages)for(const withImage of [true,false]){const source=structuredClone(page);source.hero={...source.hero,layout:'centered-none'};if(source.kind==='home'||source.slug==='synlighet')source.hero.visual.kind=withImage?'image':'none';else if(withImage)source.heroVisual=structuredClone(service.heroVisual);else delete source.heroVisual;
+  const before=JSON.stringify(source),view=resolvePageHero(source,commercial);assert.equal(view.layout,'centered');assert.equal(view.visual.kind,'none');assert.equal(JSON.stringify(source),before);assert.equal(view.primaryCta?.href,page.kind==='home'||page.slug==='synlighet'?page.hero.primaryCta.href:page.kind==='assessment'?undefined:page.cta.href);assert.equal(view.title,page.kind==='home'||page.slug==='synlighet'?page.hero.title:page.kind==='pricing'?commercial.packages.heading:page.title);
  }
 });
 

@@ -9,16 +9,22 @@ import { compositionSchema, resolveRouteFamily, routeKindSchema } from './route-
 import { heroSchema, resolveHomepageSections, sectionVisibilitySchema, validateHomepagePublicLinks } from './home-builder.ts';
 import {heroPresentationSchema} from './hero-presentation.ts';
 import { validateSynlighetSections, resolveSynlighetSections, serviceGlobalIds } from './service-sections.ts';
+import {synlighetHeroSchema,legacyHeroKeys} from './synlighet-hero.ts';
 
 const link = z.object({label:z.string(),href:z.string().startsWith('/')});
 export { proofSlotSchema } from './home-section-data.ts';
 const homepage = z.object({chrome:homeSectionDataSchema.shape.chrome}).strict();
 export const pageSchema = z.preprocess((input,context)=>{
   const raw=input as {slug?:string;kind?:string;sections:unknown;topSections?:unknown;bottomSections?:unknown;optionalSections?:unknown;hero?:unknown};
-  if(raw?.kind!=='home'&&raw?.hero!==undefined){const hero=heroPresentationSchema.safeParse(raw.hero);if(!hero.success)for(const issue of hero.error.issues)context.addIssue({...issue,path:['hero',...issue.path]});}
+  if(raw?.kind!=='home'&&raw?.slug!=='synlighet'&&raw?.hero!==undefined){const hero=heroPresentationSchema.safeParse(raw.hero);if(!hero.success)for(const issue of hero.error.issues)context.addIssue({...issue,path:['hero',...issue.path]});}
   if(raw?.kind!=='home'&&Array.isArray(raw?.sections)&&raw.sections.some(section=>section&&typeof section==='object'&&'globalElement' in section)) context.addIssue({code:'custom',path:['sections'],message:'Use a global reference, not resolved master fields'});
   if(raw?.slug==='synlighet'&&raw.kind==='service') {
-    try { return {...raw,sections:resolveSynlighetSections(raw.sections)}; }
+    try {
+      if(legacyHeroKeys.some(key=>Object.hasOwn(raw,key))) throw new Error('Synlighet Hero must have one nested source; remove legacy top-level Hero fields');
+      const hero=synlighetHeroSchema.parse(raw.hero);
+      // Compatibility projections exist only in parsed collection data, never in CMS JSON.
+      return {...raw,hero,eyebrow:hero.eyebrow,title:hero.title,intro:hero.support,cta:hero.primaryCta,heroVisual:hero.visual.image,sections:resolveSynlighetSections(raw.sections)};
+    }
     catch(error) { context.addIssue({code:'custom',path:['sections'],message:error instanceof Error?error.message:'Invalid service placements'}); }
   }
   if(raw?.kind==='home'){
@@ -37,7 +43,7 @@ export const pageSchema = z.preprocess((input,context)=>{
     status: z.enum(['REVIEW_REQUIRED', 'CONTENT_LOCKED', 'PUBLISHED']),
     authority: z.enum(['DRAFT / NON-AUTHORITATIVE', 'CONTENT_LOCKED / AUTHORITATIVE']),
     seo: z.object({ title: z.string(), description: z.string() }),
-    hero: z.union([heroSchema,heroPresentationSchema]).optional(),
+    hero: z.union([heroSchema,synlighetHeroSchema,heroPresentationSchema]).optional(),
     eyebrow: z.string(), title: z.string(), intro: z.string(),
     listing: listingSchema.optional(),
     sections: z.array(z.object({

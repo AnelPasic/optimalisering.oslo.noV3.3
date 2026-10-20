@@ -3,6 +3,7 @@ import {heroSchema} from './home-builder.ts';
 import {heroLayoutSchema,heroPresentationSchema} from './hero-presentation.ts';
 import {resolveRouteFamily} from './route-family.ts';
 import {resolveServiceVisual,type ServiceVisual} from './service-visual.ts';
+import {synlighetHeroSchema} from './synlighet-hero.ts';
 
 const link=z.object({label:z.string().trim().min(1),href:z.string().startsWith('/')}).strict();
 const image=z.object({src:z.string().regex(/^\/images\/(?:home|services)\/(?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.(?:webp|png|jpe?g|avif|svg)$/),alt:z.string(),positionX:z.number().min(0).max(100),positionY:z.number().min(0).max(100),kind:z.enum(['photo','illustration']),origin:z.enum(['home','page'])}).strict();
@@ -18,7 +19,7 @@ export const heroViewSchema=z.object({
  visual:layout==='centered-none'?{kind:'none' as const}:view.visual,
 }));
 export type HeroView=z.infer<typeof heroViewSchema>;
-type Source={kind:string;hero?:unknown;eyebrow:string;title:string;intro:string;cta:{label:string;href:string};heroVisual?:ServiceVisual;composition?:unknown;proof?:unknown;sections:{id:string;links?:{label:string;href:string}[]}[]};
+type Source={slug?:string;kind:string;hero?:unknown;eyebrow?:string;title?:string;intro?:string;cta?:{label:string;href:string};heroVisual?:ServiceVisual;composition?:unknown;proof?:unknown;sections:{id:string;links?:{label:string;href:string}[]}[]};
 type Commercial={packages:{eyebrow:string;heading:string;intro:string}};
 /** One-way adapters project existing owned content; no second editable source. */
 export function resolvePageHero(page:Source,commercial?:Commercial):HeroView{
@@ -26,6 +27,10 @@ export function resolvePageHero(page:Source,commercial?:Commercial):HeroView{
  if(route.family==='home'){
   const hero=heroSchema.parse(page.hero);
   return heroViewSchema.parse({...hero,family:'home',visual:hero.visual.kind==='image'?{kind:'image',image:{...hero.visual.image,alt:'',kind:'photo',origin:'home'}}:{kind:'none'}});
+ }
+ if(page.slug==='synlighet'&&page.hero&&typeof page.hero==='object'&&'primaryCta' in page.hero){
+  const hero=synlighetHeroSchema.parse(page.hero),media=hero.visual.image?resolveServiceVisual(hero.visual.image):undefined;
+  return heroViewSchema.parse({...hero,family:'service',visual:hero.visual.kind==='image'&&media?{kind:'image',image:{...media,origin:'page'}}:{kind:'none'},breadcrumbs:[{label:'Forsiden',href:'/'},{label:route.service.pricingBridge?.serviceName??hero.eyebrow}]});
  }
  const layout=heroPresentationSchema.parse(page.hero??{}).layout;
  const media=resolveServiceVisual(page.heroVisual),family=route.family;

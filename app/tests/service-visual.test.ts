@@ -3,7 +3,8 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { pageSchema } from '../src/lib/content-schema.ts';
 import YAML from 'yaml';
-const fixture = JSON.parse(readFileSync('src/content/pages/synlighet.json', 'utf8'));
+import { entryForFile } from './helpers/pages-cms-json.ts';
+const fixture = JSON.parse(readFileSync('src/content/pages/konvertering.json', 'utf8'));
 test('CMS service visual accepts optional content and rejects external paths, missing alt and invalid crops', () => {
   assert.equal(pageSchema.safeParse(fixture).success, true);
   const valid = { kind: 'illustration', src: '/images/services/visibility.webp', alt: 'Relevant business discovered', positionX: 50, positionY: 50 };
@@ -15,7 +16,7 @@ test('CMS service visual accepts optional content and rejects external paths, mi
 });
 test('CMS exposes the visual contract without moving SEO fields or making company disclosure casual copy', () => {
   const cms = YAML.parse(readFileSync('../.pages.yml', 'utf8'));
-  const fields = cms.content.find((item: any) => item.name === 'services').fields;
+  const fields = entryForFile(cms, 'app/src/content/pages/konvertering.json').fields;
   assert.deepEqual(fields.find((field: any) => field.name === 'seo').fields.map((field: any) => field.name), ['title', 'description']);
   assert.deepEqual(fields.find((field: any) => field.name === 'heroVisual').fields.map((field: any) => field.name), ['kind', 'src', 'alt', 'positionX', 'positionY']);
   assert.equal(cms.media.find((item: any) => item.name === 'serviceHeroImages').input, 'app/public/images/services');

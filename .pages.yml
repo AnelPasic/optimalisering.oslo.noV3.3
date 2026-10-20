@@ -668,33 +668,40 @@ content:
         type: object
         required: true
         fields:
-          - name: layout
+          - &hubHerolayout
+            name: layout
             label: Oppsett
             component: heroLayoutChoice
-          - name: eyebrow
+          - &hubHeroeyebrow
+            name: eyebrow
             label: Overtekst
             type: string
             required: true
-          - name: title
+          - &hubHerotitle
+            name: title
             label: Hovedoverskrift
             type: string
             required: true
-          - name: support
+          - &hubHerosupport
+            name: support
             label: Ingress
             type: text
             required: true
-          - name: primaryCta
+          - &hubHeroprimaryCta
+            name: primaryCta
             label: Primær handling
             component: link
             required: true
-          - name: secondaryCta
+          - &hubHerosecondaryCta
+            name: secondaryCta
             label: Sekundær handling
             component: link
           - name: visual
             label: Bilde
             type: object
             fields:
-              - name: kind
+              - &hubHeroVisualKind
+                name: kind
                 label: Visuelt innhold
                 type: select
                 options:
@@ -713,7 +720,8 @@ content:
                     options:
                       media: heroImages
                     required: true
-                  - name: positionX
+                  - &hubHeropositionX
+                    name: positionX
                     label: Horisontalt utsnitt (%)
                     type: number
                     default: 50
@@ -721,7 +729,8 @@ content:
                       min: 0
                       max: 100
                     required: true
-                  - name: positionY
+                  - &hubHeropositionY
+                    name: positionY
                     label: Vertikalt utsnitt (%)
                     type: number
                     default: 50
@@ -1227,13 +1236,49 @@ content:
         format: json
         operations: *a3
         fields:
-          - *serviceslug
+          - name: hero
+            label: Hero
+            type: object
+            required: true
+            fields:
+              - *hubHerolayout
+              - *hubHeroeyebrow
+              - *hubHerotitle
+              - *hubHerosupport
+              - *hubHeroprimaryCta
+              - *hubHerosecondaryCta
+              - name: visual
+                label: Bilde
+                type: object
+                required: true
+                fields:
+                  - *hubHeroVisualKind
+                  - name: image
+                    label: Valgt bilde og utsnitt
+                    type: object
+                    fields:
+                      - name: kind
+                        label: Bildetype
+                        type: select
+                        options:
+                          values:
+                            - photo
+                            - illustration
+                        required: true
+                      - name: src
+                        label: Valgt bilde
+                        type: image
+                        options:
+                          media: serviceHeroImages
+                        required: true
+                      - name: alt
+                        label: Kort beskrivelse av bildets mening
+                        type: string
+                        required: true
+                      - *hubHeropositionX
+                      - *hubHeropositionY
           - *a4
-          - *a9
-          - *a5
-          - *a10
-          - *a11
-          - *a12
+          - *serviceslug
           - name: sections
             label: Innholdsseksjoner
             type: block
@@ -1253,14 +1298,29 @@ content:
               - name: global
                 label: Globalt element
                 component: serviceGlobalPlacement
-          - *a7
-          - *a8
+          - name: faq
+            label: Ofte stilte spørsmål
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{question}"
+            fields:
+              - name: question
+                label: Spørsmål
+                type: string
+                required: true
+              - name: answer
+                label: Svar
+                type: text
+                required: true
+            description: Lokale spørsmål og svar fra denne tjenestefilen vises nederst, etter den sorterbare seksjonslisten.
           - name: proof
             label: Lokalt kundebevis – vises når globale Kunderesultater ikke er valgt
             type: object
             fields: *serviceProofFields
             required: false
-            description: Dagens Helt Opplagt-valg henter tall fra case/evidensregisteret. Overskrift og etiketter lagres i denne tjenestefilen og vises automatisk etter Prioritering. En publisert global Kunderesultater-plassering erstatter visningen, men beholder disse lokale feltene. Skjules/fjernes plasseringen, kommer lokalt kundebevis tilbake. Publiseringsgodkjenning er ikke en visningsbryter.
+            description: Lokale etiketter og casevalg lagres her; tall hentes fra case/evidensregisteret. Vises etter Prioritering når globale Kunderesultater ikke er valgt. Skjult/Remove på den globale plasseringen gir lokal visning tilbake. Prisbroen etter Sammenheng bruker Globale elementer → Pakker og priser; FAQ nederst bruker denne sidens spørsmål og svar. Publiseringsgodkjenning er ikke en visningsbryter.
   - name: priser
     label: Priser
     type: file

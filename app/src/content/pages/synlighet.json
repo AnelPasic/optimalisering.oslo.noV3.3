@@ -35,9 +35,6 @@
     "title": "SEO, lokal SEO og AI-synlighet | Optimalisering Oslo",
     "description": "Bli funnet når relevante kunder leter etter det du tilbyr. Vi jobber med SEO, lokal SEO og AI-synlighet - og starter der synligheten faktisk stopper."
   },
-  "eyebrow": "SEO, lokal SEO og AI-synlighet",
-  "title": "De søker etter løsningen. Så etter deg.",
-  "intro": "Målet er ikke flest mulig besøk. Du skal bli funnet når relevante kunder leter etter det du tilbyr - før de allerede kjenner navnet ditt.",
   "sections": [
     {
       "_block": "content",
@@ -170,17 +167,6 @@
       "answer": "Synlighet kan være det prioriterte området i Optimalisering til 4 500 kr/mnd eks. mva. Hvis synlighet skal jobbe sammen med et annet område, kan Vekst eller Partner være mer relevant. Se pakkene for full oversikt."
     }
   ],
-  "cta": {
-    "label": "Ta en gratis sjekk",
-    "href": "/#sjekk"
-  },
-  "heroVisual": {
-    "kind": "illustration",
-    "src": "/images/services/discoveringlocalfavorite-1.png",
-    "alt": "Bli funnet",
-    "positionX": 50,
-    "positionY": 50
-  },
   "proof": {
     "publicationApproved": true,
     "caseIds": [
@@ -193,6 +179,27 @@
     "changeLabel": "Arbeid"
   },
   "hero": {
-    "layout": "split-right"
+    "layout": "split-right",
+    "eyebrow": "SEO, lokal SEO og AI-synlighet",
+    "title": "De søker etter løsningen. Så etter deg.",
+    "support": "Målet er ikke flest mulig besøk. Du skal bli funnet når relevante kunder leter etter det du tilbyr - før de allerede kjenner navnet ditt.",
+    "primaryCta": {
+      "label": "Ta en gratis sjekk",
+      "href": "/#sjekk"
+    },
+    "secondaryCta": {
+      "label": "Se priser",
+      "href": "/priser/"
+    },
+    "visual": {
+      "kind": "image",
+      "image": {
+        "kind": "illustration",
+        "src": "/images/services/discoveringlocalfavorite-1.png",
+        "alt": "Bli funnet",
+        "positionX": 50,
+        "positionY": 50
+      }
+    }
   }
 }

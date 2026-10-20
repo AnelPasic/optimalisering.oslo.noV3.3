@@ -14,7 +14,7 @@ test('Synlighet defaults retain every section and ordinary visibility preserves 
   const page = structuredClone(source);
   page.sections.splice(1, 0, { ...local(), visibility: 'hidden' });
   const parsed = pageSchema.parse(page);
-  assert.deepEqual(visibleServiceSections(parsed).map(s => s.id), source.sections.map((s: any) => s.id));
+  assert.deepEqual(visibleServiceSections(parsed).map(s => s.id), pageSchema.parse(source).sections.map(s => s.id));
   assert.deepEqual(parsed.sections[1].body, ['Kun test.']);
   delete page.sections[1].visibility;
   page.sections.push(page.sections.splice(1, 1)[0]);
@@ -66,7 +66,7 @@ test('pilot editor reuses all service fields, adds native visibility and writabl
   assert.equal(pilot?.path, 'app/src/content/pages/synlighet.json');
   assert.equal(entry.type, 'file');
   assert.ok(services.exclude.includes('synlighet.json'));
-  for (const field of services.fields.filter((f: any) => !['sections','proof'].includes(f.name))) assert.deepEqual(entry.fields.find((f: any) => f.name === field.name), field);
+  for (const field of services.fields.filter((f: any) => !['sections','proof','faq','hero','heroVisual','eyebrow','title','intro','cta'].includes(f.name))) assert.deepEqual(entry.fields.find((f: any) => f.name === field.name), field);
   assert.deepEqual(entry.fields.find((f: any) => f.name === 'proof').fields, services.fields.find((f: any) => f.name === 'proof').fields);
   const sections = entry.fields.find((f: any) => f.name === 'sections');
   const content = resolveField(sections.blocks.find((b: any) => b.name === 'content'), cms.components);
@@ -84,7 +84,7 @@ test('pilot editor reuses all service fields, adds native visibility and writabl
 test('page-owned links cannot become orphaned by hiding or removing a local target', () => {
   const page = structuredClone(source);
   page.sections.push(local());
-  page.cta.href = '/synlighet/#cms-pilot-test';
+  page.hero.primaryCta.href = '/synlighet/#cms-pilot-test';
   assert.ok(pageSchema.safeParse(page).success);
   page.sections.at(-1).visibility = 'hidden';
   assert.equal(pageSchema.safeParse(page).success, false);
