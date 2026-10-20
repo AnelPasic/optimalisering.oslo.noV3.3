@@ -1,5 +1,20 @@
 # Codex to ChatGPT
 
+## H-024A9 / D-111 — STATUSAUDIT FERDIG; OWNER UX-PASS PENDING
+
+2026-10-20. Fersk main **84a22318a1af517dfce9753372c23c11224e70fb**; MedonWebSystem main **b6ddf7fca243f8bc78c061a157bda0bdfbe1ee69** lest. Kun dokumentasjon endret; ingen ny produktfeil funnet i denne avgrensede kontrollen.
+
+- **VERIFISERT FERDIG:** `.pages.yml`, home og alle åtte mastere samsvarer: Hero fast først; Topp/Hoved/Bunn med globale referanser og lokale Innholdsseksjoner; masterbibliotek med Create/Rename/Delete av. B-rekkefølgen er regneeksempel → resultater → priser → sjekk → sporsmal; OWNERs lokale Top-rad beholdt skjult, Bunn tom. Eksisterende ekte CMS-save → Git → native build → synlig Worker → restore dekker global redigering, lokal opprettelse/redigering, tastatursortering, skjuling/fjerning/gjeninnsetting ([H024A8E](evidence/h024a8e/README.md)); D-103 bekrefter OWNERs lagrede rekkefølge. Hero D-088, kontakt/FAQ [H024A7](evidence/h024a7/README.md) og H-022E-malskifte i kvitteringen nedenfor gjenbrukes uten ny test.
+- **KJENT/OWNER-AKSEPTERT BEGRENSNING:** sammenfoldede globale rader viser rå ID, mens velger/bibliotek har norske navn (D-105; [H024A8F](evidence/h024a8f/README.md)). Native Clear/Replace/duplikat kan lagres; eksisterende byggevakter avviser ugyldig publisering. Dette er ikke full CMS-validering eller en ny feil.
+- **TRENGER FAKTISK OWNER UX-PASS:** samlet finne/redigere global master og opprette/endre/flytte/skjule/fjerne lokal seksjon. Faktisk musedrag er ikke selvstendig bevist; håndtak/tastatur og korrekt lagret rekkefølge er ikke muse-PASS. Ingen ny automatisering er nødvendig; ta dette med i samme OWNER-kontroll hvis mus er viktig.
+
+**Én fersk autentisert editor-lesning:** ny fane viste riktig Hero, Topp/Hoved/Bunn, fem referanser i gjeldende rekkefølge og åtte navngitte biblioteklenker; ingen gammel «Faste seksjoner», Save deaktivert. Bare bibliotekmenyen ble åpnet; ingen feltendring, Save, drag, opprettelse, restore eller screenshot. Ingen ferdige funksjoner ble testet på nytt; ingen build/testkampanje kjørt. Git diff-kontroll er brukt for dokumentasjonsendringen.
+
+**Bevaring:** siste OWNER-priser/resultater og nye nysta.jpg/heltopplagt.jpg beholdt. Gjeldende resultater er OWNERs `mediaCards`, alle tre bilder og 0/0-utsnitt; historisk H-022E-standard/50/50 er ikke gjenopprettet. Home, alle mastere, øvrig innhold/kode, fem lokale OWNER-PNG-er og read-only referanser er urørt. Ingen endring i noindex, robots eller deaktivert innsending.
+
+**OWNER-kontroll PENDING:** [Åpne Pages CMS](https://app.pagescms.org/anelpasic/optimalisering.oslo.nov3.3/main/file/homepage): Er hele redigeringsflyten over brukbar, eller hvilken konkret handling fungerer ikke? Ett konkret svar er nok. H-024A3 forblir OPEN til uttrykkelig samlet PASS; H-024B BLOCKED og krever separat godkjenning/handoff. Ingen lansering. Kvitteringens commit identifiseres via Git-historikken.
+
+
 ## H-022E / D-110 — CMS-MALVELGER LEVERT OG GJENOPPRETTET TIL STANDARD
 
 2026-10-20. Implementasjon87f6a2e +2d8ba6b fra fersk main9b59449. **Pages CMS → Globale elementer → Kunderesultater → Visningsmal** lagrer `content.layout`: `alternating` = Vekslende liste (standard/også ved manglende felt), `mediaCards` = Bildekort. Eurotents bruker eksisterende featuredVisual, fortsatt OWNERs `/images/proof/eurotents.jpg`,50/50. Valgfrie bilder/alt/crop for Nysta og Helt Opplagt ligger i samme master under `caseVisuals`, med faste case-ID-nøkler som forhindrer duplikatbinding/ekstra Eurotents-kilde. Uautoriserte/anonymiserte case får ikke identifiserende media; ugyldige felt/baner avvises, tomt/manglende bilde gir tekstkort.
