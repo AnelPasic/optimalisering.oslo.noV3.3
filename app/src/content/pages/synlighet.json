@@ -67,6 +67,10 @@
       "element": "regneeksempel"
     },
     {
+      "_block": "global",
+      "element": "priser"
+    },
+    {
       "_block": "content",
       "id": "behov",
       "eyebrow": "Bli funnet før kunden har valgt leverandør",
