@@ -63,6 +63,10 @@
       ]
     },
     {
+      "_block": "global",
+      "element": "regneeksempel"
+    },
+    {
       "_block": "content",
       "id": "behov",
       "eyebrow": "Bli funnet før kunden har valgt leverandør",
@@ -139,7 +143,7 @@
     },
     {
       "_block": "global",
-      "element": "regneeksempel"
+      "element": "sporsmal"
     }
   ],
   "hero": {
