@@ -146,6 +146,10 @@
           "href": "/priser/"
         }
       ]
+    },
+    {
+      "_block": "global",
+      "element": "regneeksempel"
     }
   ],
   "faq": [
