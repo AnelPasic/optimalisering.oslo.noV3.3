@@ -1,5 +1,10 @@
 # Decisions and authority
 
+## D-114 — OWNER bekrefter at Synlighet nå finnes i Pages CMS — 2026-10-20
+
+Etter D-113-navigasjonsrettelsen bekrefter OWNER eksplisitt: **«ja den er der»**. Dette gir **OWNER PASS for navigasjon/oppdagbarhet**: Synlighet er nå tilgjengelig under Tjenester i det faktiske Pages CMS-grensesnittet. Ikke start ny menyendring, gjenta ikke navigasjonstestene. Denne bekreftelsen alene er **ikke** en eksplisitt visuell/funksjonell OWNER PASS for hele H-024B1-tjenestesidepiloten eller godkjenning av utrulling til andre tjenester. H-024A3 forblir CLOSED/OWNER PASS, eksisterende CMS-pris/bilde/content og noindex/intake-grenser beholdes.
+
+
 ## D-113 — OWNER finner ikke Synlighet i CMS-tjenestelisten; navigasjonsrettelse — 2026-10-20
 
 OWNER viser faktisk Pages CMS: Tjenester-listen har fire oppføringer, **Synlighet mangler**. Source-inspeksjon finner `synlighet.json` ekskludert fra `services` collection for å bevare egen H-024B1-editor, mens en separat toppnivåfil `serviceSynlighet` ikke er synlig i OWNER-menyen. Dette er en **reell pilot-UX-feil**; H-024B1 har teknisk PASS, men kan ikke få OWNER UX PASS før tjenesten er tilgjengelig og editoren fungerer fra vanlig meny. **Scoped repair implemented**: `.pages.yml` har nå én ordinær navgruppe **Tjenester** (`serviceGroup`) med undermenyene **Øvrige tjenester** (`services`-samling, fortsatt fire oppføringer) og **Synlighet** (`serviceSynlighet`-fil, eksisterende unike CMS-editor). Gjenbruker samme group/items-mønster som `Innsikt`; ingen dobbeltredigering eller endring i filbane, proof, priser, Hero, innhold, frontend eller CMS-feltskjema. Fokusert `synlighet-cms.test.ts` er oppdatert til den tilsiktede navigasjonen. **Hosted CMS-menysynlighet må fremdeles verifiseres i fersk innlogget Pages CMS-fane; ikke merk dette som native PASS uten observasjon**. Ingen ny offentlig launch/index/intake. D-112 H-024A3 OWNER PASS består; H-024B1 videre utrulling fortsatt venter OWNER-pilotvurdering.
