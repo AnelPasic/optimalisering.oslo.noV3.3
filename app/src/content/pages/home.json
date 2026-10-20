@@ -99,6 +99,7 @@
   "topSections": [
     {
       "_block": "content",
+      "visibility": "hidden",
       "uid": "8ac621d2-d9aa-40ae-9875-ea9c7a2c2462",
       "name": "Test før behovsregler",
       "id": "forbehovsvelger",
@@ -109,8 +110,11 @@
         "Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Seksjoner → Pakker og priser.",
         "Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Seksjoner → Pakker og priser.",
         "Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Seksjoner → Pakker og priser."
-      ],
-      "visibility": "hidden"
+      ]
+    },
+    {
+      "_block": "global",
+      "element": "behov"
     }
   ],
   "sections": [
