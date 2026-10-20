@@ -22,7 +22,7 @@
     "beforeLabel": "Før optimalisering",
     "afterLabel": "Etter optimalisering",
     "changeLabel": "Optimalisering",
-    "layout": "alternating",
+    "layout": "mediaCards",
     "caseVisuals": {
       "nysta": {
         "src": "/images/proof/nysta.jpg",
