@@ -1,5 +1,8 @@
 # Review queue
 
+**LATEST D-114 OWNER NAVIGATION PASS (2026-10-20):** OWNER bekrefter «ja den er der» etter D-113: **Synlighet er synlig i Pages CMS under Tjenester**. Lukk kun meny-/oppdagbarhetsfeilen, ingen ny navigasjonskode eller retest. H-024B1 teknisk levert og navigasjon godkjent; samlet tjenesteside-/editorvurdering før videre utrulling er ikke eksplisitt gitt. H-024A3 OWNER PASS uendret. Ingen launch/index/intake eller andre tjenester autorisert.
+
+
 **CURRENT D-113 — OWNER cannot see Synlighet in Pages CMS Tjenester.** Screenshot shows four others; exclude from original collection and isolated top-level pilot editor made page undiscoverable. Narrow source fix: `Tjenester` is now native group with «Øvrige tjenester» and «Synlighet», as in existing `Innsikt` group; updated test asserts this, no content/frontend/data changed. **Next control:** fresh authenticated CMS tab; click expand Tjenester → Synlighet, ensure editor opens; verify other four via Øvrige tjenester, no duplicate. Only GitHub source verified so far; native visibility NOT independently PASS. H-024B1 still awaits OWNER after the discoverability fix; H-024A3 OWNER PASS unaffected. No other service rollout or release.
 
 
