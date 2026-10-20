@@ -1,5 +1,8 @@
 # Review queue
 
+**CURRENT D-115 OWNER REVISE / H-024B2 ACTIVE (2026-10-20).** Owner screenshot confirms locally injected Helt Opplagt result panel with no Globale elementer picker on Synlighet. Source: separate `synlighet.json.proof` and `ServiceFamilyPage` proofAfter, not global `resultater.json`; only evidence registry common. H-024B1 local section controls technically delivered and D-114 menu discoverability OWNER PASS, **but H-024B1 overall NOT OWNER PASS**. Implement `coordination/H024B2-SERVICE-GLOBAL-PLACEMENTS-SYNLIGHET.md`: make existing mixed CMS section list choose/reorder/hide global master references alongside local, avoid local/global proof and price/FAQ duplication, clear local proof CMS origin, untouched default Synlighet presentation and all OWNER/global data. One native add→Worker→restore smoke if safe, no expensive blanket testing. STOP for OWNER UX/visual review after preview; no other service rollout, release/index/POST.
+
+
 **LATEST D-114 OWNER NAVIGATION PASS (2026-10-20):** OWNER bekrefter «ja den er der» etter D-113: **Synlighet er synlig i Pages CMS under Tjenester**. Lukk kun meny-/oppdagbarhetsfeilen, ingen ny navigasjonskode eller retest. H-024B1 teknisk levert og navigasjon godkjent; samlet tjenesteside-/editorvurdering før videre utrulling er ikke eksplisitt gitt. H-024A3 OWNER PASS uendret. Ingen launch/index/intake eller andre tjenester autorisert.
 
 
