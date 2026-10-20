@@ -1,5 +1,10 @@
 # Decisions and authority
 
+## D-117 — OWNER: kun CMS-styrte synlige seksjoner; fjern automatiske legacy-innsettinger på Synlighet — 2026-10-20
+
+OWNER etter H-024B3: **«ja, men tenker bare at alle elementer som ikke er synlige eller del av det som er i CMS må bare fjernes.»** Verified `ServiceFamilyPage.astro` auto-injiserer local Helt Opplagt proof etter Prioritering, `ServicePricingBridge` etter Sammenheng og lokal FAQ på slutten, selv om disse **ikke ligger som plasseringer i Synlighet → Innholdsseksjoner**. Dette er ikke CMS/preview-paritet. **OWNER AUTHORIZED D-117/H-024B4:** For **/synlighet/** skal kun Hero + eksplisitte **synlige** lokale/globale CMS-plasseringer + separat CMS-styrt site chrome rendres. Fjern off-list proof/price-bridge/FAQ/ClosingCta og deres Synlighet-only foreldede datakilder/redigeringsfelt (bevar globale mastere og evidens). **IKKE legg inn nye globale moduler automatisk** for å kompensere; OWNER velger selv. Utvid Globalt element-velgeren med `priser` og `sporsmal` uten dubletter; lokalt beskyttet `sjekk` forblir en eksplisitt CMS-rad. Ikke gjem lokale synlige rader automatisk pga global `behov`; krev bevisst valg/unngå ankerkollisjon. **Skjult**-rader som er bevisst lagret i CMS skal beholdes men ikke rendres; ikke slett felles master/evidence/priser eller OWNERs kalkulator nederst. Andre sider, hero, noindex/intake og før-lanseringsporter urørt. Bindende scope `coordination/H024B4-CMS-ONLY-SYNLIGHET-SECTIONS.md`. D-116/H-024B3 teknisk levert, denne OWNER-justeringen gjenstår før komplett visuell/UX-PASS; H-024A3 OWNER PASS består.
+
+
 ## D-116 — Synlighet blir overordnet tjenestehub; samme Hero/CMS-prinsipper som Forside — 2026-10-20
 
 OWNER etter H-024B2: **«Synlighet siden bør ha samme struktur som forsiden, da den samler flere tjenester, og kan i grunn være på samme nivå. Så kan vi samle alle synlighets-tjenester under den. Samme med Konvertering etterhvert. Og hero på Synlighet er strukturert annerledes i CMS enn Hero på forsiden, unødvendig. Har nå lagt inn global element nederst, det er faktisk bra. Da kan vi i grunn beholde den valgfriheten hvor vi legger til elementer som ønsket.»**
