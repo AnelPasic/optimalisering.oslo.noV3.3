@@ -1,5 +1,12 @@
 # Decisions and authority
 
+## D-115 — OWNER REVISE H-024B1: Globale elementer mangler på Synlighet, lokal proof er separat — 2026-10-20
+
+OWNER viser «Dokumenterte resultater»/Helt Opplagt på `/synlighet/` og sier: **«ikke helt, vet ikke hvor denne blir hentet fra. ingen mulighet til å legge til noen av globale elementer.»** Verified source: `ServiceFamilyPage.astro` injiserer faktisk **service-local `synlighet.json.proof`** automatisk etter `prioritering` via `composition.service.proofAfter`, med `caseIds:["helt-opplagt"]`; det kommer IKKE fra `Globale elementer → Kunderesultater` master (`resultater.json`, nå mediaCards og tre caser). Case-evidence-registeret deles, men innholds-/presentasjonskildene er forskjellige.
+
+**OWNER REVISE / ACTION:** H-024B1 er teknisk levert og D-114 CMS-navigasjon godkjent, men **ikke OWNER PASS** fordi tjenesteeditor mangler reell mulighet til å legge til globale moduler. **H-024B2** autoriseres som *Synlighet-only* korrigering: behold native sortable lokale seksjoner, legg til `Globalt element` reference i samme liste med eksisterende globale mastere, og håndter legacy local proof / prisbro / FAQ / assessment uten duplisert visning eller innholdsdataloss. Før noen globale elementer legges til må preview forbli identisk. Gjør lokal proof-kilde eksplisitt i CMS-hjelp. Avgrens til eksisterende Pages CMS, delte komponenter og lett D-107 QA; gjennomfør én reell CMS-add/global-prooff/render/restore hvis trygt. Stop for OWNER UX-review. Bindende full instruks: `coordination/H024B2-SERVICE-GLOBAL-PLACEMENTS-SYNLIGHET.md`. Ikke rull ut til andre tjenester, ikke endre masterdata eller produksjonslansering, noindex/intake forblir deaktivert. **H-024A3 OWNER PASS består.**
+
+
 ## D-114 — OWNER bekrefter at Synlighet nå finnes i Pages CMS — 2026-10-20
 
 Etter D-113-navigasjonsrettelsen bekrefter OWNER eksplisitt: **«ja den er der»**. Dette gir **OWNER PASS for navigasjon/oppdagbarhet**: Synlighet er nå tilgjengelig under Tjenester i det faktiske Pages CMS-grensesnittet. Ikke start ny menyendring, gjenta ikke navigasjonstestene. Denne bekreftelsen alene er **ikke** en eksplisitt visuell/funksjonell OWNER PASS for hele H-024B1-tjenestesidepiloten eller godkjenning av utrulling til andre tjenester. H-024A3 forblir CLOSED/OWNER PASS, eksisterende CMS-pris/bilde/content og noindex/intake-grenser beholdes.
