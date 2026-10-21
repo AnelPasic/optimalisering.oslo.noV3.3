@@ -1,5 +1,11 @@
 # Decisions and authority
 
+## D-123 — Før-commit Content Quality Gate + justerbar toneprofil for Optimalisering Oslo — 2026-10-21
+
+OWNER sier at kvalitetsgaten **må inn** og viser til tidligere godkjent sluttretning for dette nettstedets stemme: **NORSK KLARHET + TØRR OBSERVASJONSHUMOR + KOMMERSIELL LOGIKK + ABSURD KONKRETISERING + LITT FREKKHET + SELF-AWARE HONESTY**. Sentral MWS-beslutning **MWS-031** krever risikotilpasset copy-, SEO/AIO-, KRO- og fakta-/presisjonskontroll **før** ChatGPT/Codex lagrer tekst. Dette retter tidligere pilotfeil med meningsløse byråformuleringer. Originalt v3.4-bundle forblir uendret.
+
+Nettsidens egne regler ligger i `coordination/CONTENT-VOICE-PROFILE.md` og kobles inn fra `AGENTS.md` og `coordination/COPY-STYLE.md`. Den seksdelte identiteten er OWNER-valgt, men foreslåtte 0–3-intensiteter og standardpreset er **redaksjonelle forslag**, ikke godkjent eksakt mengde humor per side. Klarhet, kommersiell relevans og faktakorrekthet er faste gulv. De tre eksisterende Synlighet-fagkortene og resten av siden skal **ikke automatisk skrives om**, og en redigerbar tonevelger i Pages CMS er **ikke implementert/autorisert** uten eget teknisk scope. Ingen endringer i design, priser, proof, globalmasters, launch/index/intake; Git-dokumentasjon alene er ikke Worker PASS.
+
 ## D-122 — Pakker og priser: bestilling åpnes i hvert globalt pakkekort — 2026-10-21
 
 OWNER: **«en del ting vi bør polere før det forplanter seg overalt, f.eks den globale pris/pakke seksjonen. Bestillingsskjema bør være en del av den, når de klikker på bestill så utvider den seg med skjemafelt: Nettside, e-post, telefon - Send bestilling, (kort forklaring vi ser på bestillingen og tar kontakt med deg for tilganger osv.)»**
