@@ -1,3 +1,4 @@
+import {readFileSync} from 'node:fs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createLeadPayload } from '../src/lib/lead.ts';
@@ -28,4 +29,16 @@ test('orders reject invalid intent, package, phone and excessive optional legacy
   const assessment=createLeadPayload({website:'example.test',email:fields.email},{});
   assert.equal(assessment.form,'gratis-sjekk');
   assert.equal('package' in assessment,false);
+});
+
+test('global package cards own the order form; there is no second order area on the pricing page',()=>{
+  const cards=readFileSync('src/components/PackageSection.astro','utf8');
+  const inline=readFileSync('src/components/PackageOrder.astro','utf8');
+  const page=readFileSync('src/components/PricingPage.astro','utf8');
+  assert.match(cards,/<PackageOrder item={item}/);
+  assert.doesNotMatch(page,/<PackageOrder/);
+  for(const field of ['website','email','phone']) assert.match(inline,new RegExp('name="'+field+'"'));
+  assert.match(inline,/name="package" value={item.key}/);
+  assert.match(inline,/site.ordersEnabled && !site.preview/);
+  assert.match(inline,/Send bestilling/);
 });
