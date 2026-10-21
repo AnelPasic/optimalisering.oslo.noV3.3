@@ -38,7 +38,7 @@
       "layout": "three-columns",
       "surface": "default",
       "body": [
-        "De overlapper, men de er ikke det samme. Derfor må vi se på hvor kundene faktisk leter og hva som mangler i dag."
+        "Kunder leter etter hjelp på ulike måter: i vanlige søk, etter leverandører i nærheten eller gjennom AI-baserte svar. Vi prioriterer det som passer tilbudet og kundene dine, i stedet for å gjøre litt av alt."
       ],
       "items": [
         {
@@ -50,7 +50,7 @@
         },
         {
           "title": "Lokal SEO",
-          "text": "Bedriftsinformasjon, lokale søk og sider som gjør det tydelig hvor og hvem du hjelper.",
+          "text": "Google-bedriftsprofil, lokale tjenestesider og tydelig informasjon om hvor dere leverer, gjør det enklere å vurdere bedriften når kunden søker i nærheten.",
           "surface": "lavender"
         },
         {
@@ -59,6 +59,32 @@
           "href": "/ai-synlighet/",
           "label": "Les om AI-synlighet",
           "surface": "dark"
+        }
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "lokal-synlighet",
+      "eyebrow": "Lokal SEO i praksis",
+      "heading": "Lokale kunder skal slippe å gjette om dere kan hjelpe.",
+      "headingAlign": "center",
+      "layout": "three-columns",
+      "surface": "soft",
+      "body": [
+        "Når noen søker etter en leverandør i området, må de raskt se hva dere tilbyr, hvor dere leverer og hvordan de tar kontakt. Vi undersøker om bedriftsprofilen og nettsiden gir et tydelig, sammenhengende svar."
+      ],
+      "items": [
+        {
+          "title": "Google-bedriftsprofil",
+          "text": "Sjekk at kategori, tjenester, åpningstider og kontaktinformasjon stemmer med det bedriften faktisk tilbyr."
+        },
+        {
+          "title": "Tjenester og områder",
+          "text": "Vis hvilke tjenester dere tilbyr og hvilke områder dere dekker, med nyttig innhold fremfor mange nesten like lokalsider."
+        },
+        {
+          "title": "Veien til kontakt",
+          "text": "Gjør telefonnummer, bestilling eller kontaktskjema enkelt å finne når kunden er klar for neste steg."
         }
       ]
     },
