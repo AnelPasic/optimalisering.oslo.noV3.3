@@ -11,7 +11,7 @@ export const homeSectionDataSchema = z.object({
     defaults: z.object({ visits: z.number().int().min(0).max(10000000), conversion: z.number().min(0).max(100), trafficIncrease: z.number().min(0).max(1000), newConversion: z.number().min(0).max(100) }),
   }),
   packages: z.object({
-    eyebrow: z.string(), heading: z.string(), intro: z.string(), fitLabel: z.string(), scopeLabel: z.string(),
+    eyebrow: z.string(), heading: z.string(), intro: z.string(), orderIntro: z.string().trim().min(1), orderSubmitLabel: z.string().trim().min(1), fitLabel: z.string(), scopeLabel: z.string(),
     labels: z.object({ situations: z.string().trim().min(1), typicalBusiness: z.string().trim().min(1), focus: z.string().trim().min(1), combinations: z.string().trim().min(1), workAreas: z.string().trim().min(1), uncertain: z.string().trim().min(1) }),
     areasLabel: z.string(), areas: z.array(z.string()).length(4), foundationNote: z.string(),
     adBudgetNote: z.string(), externalCostsNote: z.string(), separateWorkNote: z.string(), capacityNote: z.string(),

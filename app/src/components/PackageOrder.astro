@@ -3,8 +3,8 @@ import type { HomepageContent } from '../lib/home-section-data';
 import Arrow from './Arrow.astro';
 import { site } from '../config/site';
 type Package = HomepageContent['packages']['items'][number];
-interface Props { item: Package; featured?: boolean; }
-const { item, featured = false } = Astro.props;
+interface Props { item: Package; featured?: boolean; orderIntro: string; orderSubmitLabel: string; }
+const { item, featured = false, orderIntro, orderSubmitLabel } = Astro.props;
 const id = (field: string) => `package-${item.key}-${field}`;
 const enabled = site.ordersEnabled && !site.preview;
 // Real intake requires backend, privacy, notification and launch approval.
@@ -13,7 +13,7 @@ const enabled = site.ordersEnabled && !site.preview;
   <summary class:list={['button', 'btn', featured ? 'btn-secondary' : 'btn-primary']}>{item.cta.label}<Arrow diagonal /></summary>
   <div class="package-order-panel">
     <h4>Bestill {item.title}</h4>
-    <p>Vi ser gjennom bestillingen og tar kontakt for å avklare tilganger, oppstart og eventuelle spørsmål. Omfang og pris bekreftes før arbeidet starter.</p>
+    <p>{orderIntro}</p>
     <form data-package-order-form data-enabled={String(enabled)} data-endpoint={site.leadEndpoint} method="post" action={enabled ? site.leadEndpoint : undefined} onsubmit={!enabled ? 'return false' : undefined}>
       <input type="hidden" name="form" value="pakke-bestilling" />
       <input type="hidden" name="package" value={item.key} />
@@ -28,7 +28,7 @@ const enabled = site.ordersEnabled && !site.preview;
       <div hidden aria-hidden="true"><label for={id('website-confirmation')}>La feltet stå tomt</label><input id={id('website-confirmation')} name="website_confirmation" tabindex="-1" autocomplete="off" maxlength="200" /></div>
       <p class="form-privacy">Ikke send innlogging eller sensitive opplysninger. <a href="/personvern/">Les om personvern</a>.</p>
       {!enabled && <p class="form-notice alert alert-warning">Dette er en forhåndsvisning. Bestilling er ikke åpnet ennå. Ingen opplysninger blir sendt.</p>}
-      <button type="submit" class="button btn btn-primary package-order-submit" disabled>Send bestilling<Arrow diagonal /></button>
+      <button type="submit" class="button btn btn-primary package-order-submit" disabled>{orderSubmitLabel}<Arrow diagonal /></button>
       <p class="form-status" data-order-status role="status" aria-live="polite" tabindex="-1" hidden></p>
       <noscript><p>Bestilling er ikke åpnet i denne forhåndsvisningen.</p></noscript>
     </form>

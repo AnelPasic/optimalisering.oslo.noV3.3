@@ -33,7 +33,7 @@ const formatPrice = (value: number) => new Intl.NumberFormat('nb-NO', { maximumF
       <p class="package-fit">{item.compact.fit}</p>
         <div class="package-situations"><h3 class="package-block-heading">{content.labels.situations}</h3><ul>{item.compact.situations.map(text => <li>{text}</li>)}</ul></div>
         <div class="package-focus"><ul class:list={['package-icon-items', { 'package-combos': index === 1 }]}>{item.iconItems.map(focus => <li><FocusIcon kind={focus.icon} /><span><TermText text={focus.compactLabel} terms={['seo', 'lokal-seo', 'ai-synlighet', 'google-ads', 'meta-ads', 'cro']} /></span></li>)}</ul></div>
-      <PackageOrder item={item} featured={item.recommended} />
+      <PackageOrder item={item} featured={item.recommended} orderIntro={content.orderIntro} orderSubmitLabel={content.orderSubmitLabel} />
       <details class="package-details" open={expanded}><summary>{item.detailLink.label}</summary><div class="package-detail">
         <div><h3 class="package-block-heading">{content.fitLabel}</h3><p>{item.fit}</p></div>
         {item.typicalBusiness && <div><h3 class="package-block-heading">{content.labels.typicalBusiness}</h3><p>{item.typicalBusiness}</p></div>}

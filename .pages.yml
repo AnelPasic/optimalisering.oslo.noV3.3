@@ -1808,6 +1808,14 @@ content:
                 label: Enkel formel
                 type: string
                 required: true
+              - name: orderIntro
+                label: Bestilling – kort forklaring
+                type: text
+                required: true
+              - name: orderSubmitLabel
+                label: Bestilling – sendknapp
+                type: string
+                required: true
               - name: labels
                 label: Etiketter
                 type: object
