@@ -47,7 +47,9 @@ test('visible local/global conflict rejects; hidden local stays stored and never
 });
 
 test('reject duplicate/unknown/unsupported masters, copied payloads and global/local anchor collisions, including hidden refs',()=>{
-  for(const id of ['unknown','sjekk']) assert.equal(pageSchema.safeParse(withGlobal(id)).success,false,id);
+  assert.equal(pageSchema.safeParse(withGlobal('unknown')).success,false,'unknown');
+  const conflicting=structuredClone(source);conflicting.sections.push({_block:'protected',id:'sjekk',heading:'Lokalt skjema i tillegg',body:[]});
+  assert.equal(pageSchema.safeParse(conflicting).success,false,'local and global sjekk duplicate');
   for(const id of serviceGlobalIds){const raw=withGlobal(id);raw.sections.push(placement(id,{visibility:'hidden'}));assert.equal(pageSchema.safeParse(raw).success,false,id);}
   const copied=withGlobal('resultater',{content:getGlobalElement('resultater').content}); assert.equal(pageSchema.safeParse(copied).success,false);
   const collision=withGlobal('regneeksempel');collision.sections.push({_block:'content',id:'regneeksempel',heading:'Duplikat',body:[]});assert.equal(pageSchema.safeParse(collision).success,false);
@@ -58,9 +60,9 @@ test('reject duplicate/unknown/unsupported masters, copied payloads and global/l
 test('live fragment links require visible targets; protected local sjekk cannot be hidden',()=>{
   const raw=withGlobal('regneeksempel');raw.hero.primaryCta.href='/synlighet/#regneeksempel';assert.ok(pageSchema.safeParse(raw).success);
   raw.sections.at(-1).visibility='hidden';assert.equal(pageSchema.safeParse(raw).success,false);
-  const hiddenCheck=withGlobal('resultater');hiddenCheck.sections.find((s:any)=>s.id==='sjekk').visibility='hidden';assert.equal(pageSchema.safeParse(hiddenCheck).success,false);
+  const hiddenCheck=withGlobal('resultater');hiddenCheck.sections.find((s:any)=>s.element==='sjekk').visibility='hidden';assert.equal(pageSchema.safeParse(hiddenCheck).success,false);
   assert.throws(()=>resolveSynlighetSections([placement('resultater',{visibility:'unknown'})]));
-  const noFaq=structuredClone(source);noFaq.hero.primaryCta={label:'FAQ',href:'/synlighet/#sporsmal'};
+  const noFaq=structuredClone(source);noFaq.sections=noFaq.sections.filter((s:any)=>s.element!=='sporsmal');noFaq.hero.primaryCta={label:'FAQ',href:'/synlighet/#sporsmal'};
   assert.equal(pageSchema.safeParse(noFaq).success,false);
   const proofLink=structuredClone(source);proofLink.hero.primaryCta={label:'Proof',href:'/synlighet/#resultater'};
   assert.equal(pageSchema.safeParse(proofLink).success,false);
@@ -68,14 +70,15 @@ test('live fragment links require visible targets; protected local sjekk cannot 
 
 test('proof, prices and FAQ follow explicit position/visibility/removal without fallback',()=>{
   for(const id of ['resultater','priser','sporsmal']){
-    const raw=withGlobal(id),own=raw.sections.pop();raw.sections.splice(1,0,own);
+    const base=structuredClone(source);base.sections=base.sections.filter((s:any)=>s.element!==id);
+    const raw=structuredClone(base);raw.sections.splice(1,0,placement(id));
     assert.equal(visibleServiceSections(pageSchema.parse(raw))[1].id,id);
     validateServiceGlobalProof(pageSchema.parse(raw),records);
     raw.hero.primaryCta.href='/synlighet/?test=1#'+id;assert.ok(pageSchema.safeParse(raw).success);
     raw.sections[1].visibility='hidden';assert.equal(pageSchema.safeParse(raw).success,false,'live target hidden');
     raw.hero.primaryCta=source.hero.primaryCta;
-    assert.deepEqual(pageSchema.parse(raw).sections,pageSchema.parse(source).sections);
-    raw.sections.splice(1,1);assert.deepEqual(pageSchema.parse(raw).sections,pageSchema.parse(source).sections);
+    assert.equal(visibleServiceSections(pageSchema.parse(raw)).some((s:any)=>s.id===id),false);
+    raw.sections.splice(1,1);assert.deepEqual(pageSchema.parse(raw).sections,pageSchema.parse(base).sections);
     assert.equal(pageSchema.parse(raw).proof,undefined);
   }
 });
@@ -111,4 +114,22 @@ test('native pilot field reuses existing names/visibility; JSON save stores refe
   assert.equal(global.fields.find((f:any)=>f.name==='visibility').component,'sectionVisibility');
   const raw=withGlobal('resultater'),saved=JSON.parse(cmsJsonSave(source,raw,entry,cms));assert.deepEqual(saved,raw);assert.deepEqual(saved.proof,source.proof);
   assert.ok(pageSchema.safeParse(saved).success);
+});
+
+
+test('global Gratis sjekk replaces the local callout with a single CMS master reference',()=>{
+  const row=source.sections.filter((s:any)=>s._block==='global'&&s.element==='sjekk');
+  assert.deepEqual(row,[placement('sjekk')]);
+  assert.equal(source.sections.some((s:any)=>s.id==='sjekk'),false);
+  const parsed=pageSchema.parse(source),visible=visibleServiceSections(parsed).filter((s:any)=>s.id==='sjekk');
+  assert.equal(visible.length,1);
+  assert.equal(visible[0].globalElement,'sjekk');
+  assert.deepEqual(visible[0].content,getGlobalElement('sjekk').content);
+  assert.equal(visible[0].content.form.disabledStatus.includes('ikke åpnet'),true);
+  const cms=YAML.parse(readFileSync('../.pages.yml','utf8')),entry=entryForFile(cms,'app/src/content/pages/synlighet.json');
+  assert.deepEqual(JSON.parse(cmsJsonSave(source,source,entry,cms)),source);
+  const removed=structuredClone(source);removed.sections=removed.sections.filter((s:any)=>s.element!=='sjekk');
+  assert.equal(pageSchema.safeParse(removed).success,false);
+  const duplicate=structuredClone(source);duplicate.sections.push(placement('sjekk'));
+  assert.equal(pageSchema.safeParse(duplicate).success,false);
 });

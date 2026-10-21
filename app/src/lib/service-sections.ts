@@ -2,7 +2,7 @@ import type { RouteFamily } from './route-family.ts';
 import { globalPlacementSchema, resolveGlobalPlacement, getGlobalElement } from './home-builder.ts';
 import { getPublishableCases } from './proof.ts';
 
-export const serviceGlobalIds = ['resultater', 'regneeksempel', 'behov', 'mekanisme', 'passer', 'priser', 'sporsmal'] as const;
+export const serviceGlobalIds = ['resultater', 'regneeksempel', 'sjekk', 'behov', 'mekanisme', 'passer', 'priser', 'sporsmal'] as const;
 export const serviceGlobalPlacementSchema = globalPlacementSchema.refine(placement => serviceGlobalIds.some(id => id === placement.element), 'Dette globale elementet er ikke tilgjengelig i Synlighet-piloten');
 type Section = { id: string; visibility?: 'hidden'; globalElement?: typeof serviceGlobalIds[number] };
 type ServicePage = { slug: string; sections: Section[] };
@@ -65,8 +65,8 @@ export function validateSynlighetSections(page: ServicePage, _route: RouteFamily
     }
     if (section.visibility !== 'hidden') ids.add(section.id);
   }
-  if (page.sections.filter(section => section.id === 'sjekk' && !section.globalElement && section.visibility !== 'hidden').length !== 1) {
-    throw new Error('Synlighet requires one visible protected local section: sjekk');
+  if (page.sections.filter(section => section.id === 'sjekk' && section.visibility !== 'hidden').length !== 1) {
+    throw new Error('Synlighet krever én synlig sjekk-seksjon, lokal eller global');
   }
   checkServiceLinks(page, liveAnchors(page));
 }

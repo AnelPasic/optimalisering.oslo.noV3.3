@@ -24,16 +24,21 @@ test('Synlighet defaults retain every section and ordinary visibility preserves 
   assert.equal(visibleServiceSections(other), other.sections, 'no rollout to another service');
 });
 
-test('protected local sjekk cannot disappear, be hidden or duplicated', () => {
-  for (const id of ['sjekk']) {
-    for (const operation of ['hide', 'remove', 'duplicate']) {
-      const page = structuredClone(source), section = page.sections.find((s: any) => s.id === id);
-      if (operation === 'hide') section.visibility = 'hidden';
-      if (operation === 'remove') page.sections = page.sections.filter((s: any) => s.id !== id);
-      if (operation === 'duplicate') page.sections.push(structuredClone(section));
-      assert.equal(pageSchema.safeParse(page).success, false, `${id}: ${operation}`);
-    }
+test('one visible sjekk can be a global or protected local row; hiding/removing/duplicating is rejected', () => {
+  const selected = source.sections.find((s: any) => s._block === 'global' && s.element === 'sjekk');
+  assert.deepEqual(selected, { _block: 'global', element: 'sjekk' });
+  for (const operation of ['hide', 'remove', 'duplicate']) {
+    const page = structuredClone(source), index = page.sections.findIndex((s: any) => s.element === 'sjekk');
+    if (operation === 'hide') page.sections[index].visibility = 'hidden';
+    if (operation === 'remove') page.sections.splice(index, 1);
+    if (operation === 'duplicate') page.sections.push(structuredClone(page.sections[index]));
+    assert.equal(pageSchema.safeParse(page).success, false, operation);
   }
+  const local=structuredClone(source);
+  local.sections=local.sections.map((s:any)=>s.element==='sjekk'?{_block:'protected',id:'sjekk',heading:'Gratis sjekk lokalt',body:[]}:s);
+  assert.equal(pageSchema.safeParse(local).success,true,'legacy protected local remains valid when global is removed');
+  local.sections.push({_block:'global',element:'sjekk'});
+  assert.equal(pageSchema.safeParse(local).success,false,'local and global cannot coexist');
 });
 
 test('ordinary hide/remove is safe while duplicate, reserved and invalid anchors and visibility are rejected', () => {

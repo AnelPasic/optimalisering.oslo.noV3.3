@@ -513,7 +513,7 @@ components:
       - name: visibility
         label: Synlighet
         component: sectionVisibility
-        description: Skjul beholder tekst og anker uten å vise seksjonen. Beskyttet sjekk må være synlig. Lenker til skjulte eller fjernede ankere stoppes av bygget.
+        description: Skjul beholder tekst og anker uten å vise seksjonen. Én sjekk-seksjon må være synlig (lokal eller global). Lenker til skjulte eller fjernede ankere stoppes av bygget.
       - name: id
         label: Seksjonens lenkeanker
         type: string
@@ -541,6 +541,8 @@ components:
               label: Behovsvelger
             - name: regneeksempel
               label: Konverteringskalkulator
+            - name: sjekk
+              label: Gratis sjekk / kontaktskjema
             - name: resultater
               label: Kunderesultater
             - name: mekanisme
@@ -551,7 +553,7 @@ components:
               label: Pakker og priser
             - name: sporsmal
               label: Ofte stilte spørsmål
-        description: Én synlig rad gir én seksjon på samme sted. Innhold redigeres én gang under Globale elementer. Skjul eller fjern bare plasseringen; ingen lokal erstatning settes inn. Skjul eller fjern en lokal rad med samme lenkeanker før du velger det globale elementet. Sjekk beholdes som beskyttet lokal rad.
+        description: Én synlig rad gir én seksjon på samme sted. Innhold redigeres én gang under Globale elementer. Skjul eller fjern bare plasseringen; ingen lokal erstatning settes inn. Skjul eller fjern en lokal rad med samme lenkeanker før du velger det globale elementet. Gratis sjekk kan velges når den lokale sjekk-raden er fjernet; aldri begge samtidig.
       - name: visibility
         label: Visning på denne siden
         component: sectionVisibility

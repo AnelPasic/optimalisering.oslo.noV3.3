@@ -135,21 +135,8 @@
       ]
     },
     {
-      "_block": "protected",
-      "id": "sjekk",
-      "eyebrow": "Gratis, manuell sjekk",
-      "heading": "Send nettsiden. Vi sier hvor vi ville startet - og hvorfor.",
-      "headingAlign": "left",
-      "body": [
-        "Få våre 3 viktigste funn innen 2 virkedager. Vi ser kort på den offentlige nettsiden eller nettbutikken og peker ut hva vi ville undersøkt eller forbedret først.",
-        "Sjekken er ikke en full SEO-revisjon, komplett feilliste, prognose eller gratis gjennomføring."
-      ],
-      "links": [
-        {
-          "label": "Ta en gratis sjekk",
-          "href": "/#sjekk"
-        }
-      ]
+      "_block": "global",
+      "element": "sjekk"
     },
     {
       "_block": "content",
