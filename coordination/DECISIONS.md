@@ -1,6 +1,18 @@
 # Decisions and authority
 
-## D-124 — Native Pages CMS tonevelger, avgrenset prosjektpilot — 2026-10-21
+## D-125 — OWNER velger Spiss+ (nivå 4) som referanse for forklaringer og FAQ — 2026-10-22
+
+OWNER: **«Jeg foretrekker tonegrad 4 (Spiss+). Bruk dette som referansenivå for Optimalisering Oslo og vurder hvordan det bør legges inn i Pages CMS.»** Dette følger eksplisitt aksept av original **Spiss (nivå 3)** for vanlig FAQ, og en ny prøverunde med **Spiss+ (nivå 4)** og «Nådeløs (nivå 5)»; **bare nivå 4 er valgt**.
+
+**Løsning på nyeste main:** Behold OWNERs lagrede `defaultPreset: medon`, `heroPreset: inherit`, `servicePreset: inherit` og `editorNotes` eksakt. Utvid *eksisterende native Pages CMS* `Språk og tone` med `spissplus` som fjerde gyldige profil, både i hovedvalg og overstyringsvalg (delt YAML-anchor). Oppdater bare `explanationPreset` og `faqPreset` fra `spiss` til **`spissplus`** i `coordination/CONTENT-TONE.json`. Ingen ekstra strenghetsfelt, parallelle configfiler, ekstern app eller automatisk generering. Dette er **redaksjonell intensitet**, ikke endring av sannhets-/SEO/AIO-/KRO-gater.
+
+`coordination/CONTENT-VOICE-PROFILE.md` definerer nivå 4 med den eksakte OWNER-valgte FAQ-modellen som **toneeksempel, ikke publiseringsgodkjent FAQ-copy**. Nivå 4 betyr klar diagnostikk, gjenkjennelig analogi og kommersiell konsekvens med litt tørr brodd, ikke flere løse vitser. FAQ gir først svar; priser, resultater, bestilling og juridisk forblir presist nøkterne. `app/tests/voice-settings.test.ts` er oppdatert med nytt lovlig CMS-valg, bevaring og ugyldig-verdi-test.
+
+**Status:** GitHub-kildeoppdatering er gjort. Les tilbake CMS-YAML/JSON/test og diff, og kjør/få kvittering for relevant test og ekte Pages CMS Save→Git-flyten før «end-to-end PASS». Eksisterende nettsidetekster, Hero, design, globalmasters, caser, priser, indeksering, disabled intake og lanseringsautoritet er urørt. Ingen automatisk omskriving eller generalisering av denne tonestyrken til andre kunder.
+
+**Neste konkrete pilot:** OWNER åpner Pages CMS → Språk og tone, ser at `Spiss+ (nivå 4)` er valgt for Begrepsforklaringer og FAQ, og kan gjøre en liten Save-test. ChatGPT leser fersk config og foreslår én eksisterende FAQ- eller begrepsforklaring i nivå 4 som separat, godkjenningsstyrt tekstendring. Uavhengig kontrolleres Worker/render dersom tekst faktisk endres.
+
+ — Native Pages CMS tonevelger, avgrenset prosjektpilot — 2026-10-21
 
 OWNER sier «Genialt, ønsket noe slikt i 500 år få det inn. Så prøver vi det ut», som godkjenner konkret native Pages CMS-tonekontroll for Optimalisering Oslo. Gjennomført **kildeimplementasjon**, uten Codex og uten å endre publisert sidecopy:
 
