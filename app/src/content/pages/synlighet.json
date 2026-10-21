@@ -182,12 +182,12 @@
     "title": "De søker etter løsningen. Så etter deg.",
     "support": "Målet er ikke flest mulig besøk. Du skal bli funnet når relevante kunder leter etter det du tilbyr - før de allerede kjenner navnet ditt.",
     "primaryCta": {
-      "label": "Ta en gratis sjekk",
-      "href": "/#sjekk"
+      "label": "Se priser og pakker",
+      "href": "/priser/"
     },
     "secondaryCta": {
-      "label": "Se priser",
-      "href": "/priser/"
+      "label": "Ta en gratis sjekk",
+      "href": "/#sjekk"
     },
     "visual": {
       "kind": "image",
