@@ -582,6 +582,8 @@ content:
               label: Medon - klarhet, kommersiell logikk og tørr humor
             - name: spiss
               label: Spiss - mer observasjonshumor og litt frekkhet
+            - name: spissplus
+              label: Spiss+ (nivå 4) - skarpere observasjoner og kommersiell brodd
       - name: heroPreset
         label: Hero og hovedoverskrifter
         type: select
@@ -597,6 +599,8 @@ content:
               label: Medon
             - name: spiss
               label: Spiss
+            - name: spissplus
+              label: Spiss+ (nivå 4)
       - name: servicePreset
         label: Tjenestekort og salgstekster
         type: select
