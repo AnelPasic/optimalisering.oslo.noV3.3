@@ -57,6 +57,10 @@ If a sentence could be pasted onto almost any agency website unchanged, rewrite 
 
 If removing a sentence loses no useful information, remove it.
 
+## Adjustable tone of voice for this website
+
+The site-specific tone is documented in `coordination/CONTENT-VOICE-PROFILE.md`. OWNER selected: Norsk klarhet + tørr observasjonshumor + kommersiell logikk + absurd konkretisering + litt frekkhet + self-aware honesty. Humor/edge/intensity are adjustable by content role; factual accuracy, ELI10 buyer clarity and the approved commercial model are not adjustable. Before saving new or revised copy, apply the canonical MedonWebSystem `docs/CONTENT-QUALITY-AND-VOICE.md` quality gate. This does not authorize a wholesale rewrite or automated Pages CMS selector.
+
 ## Scope
 
 This applies to:
