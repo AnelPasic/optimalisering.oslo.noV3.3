@@ -3,6 +3,6 @@
   "heroPreset": "inherit",
   "servicePreset": "inherit",
   "explanationPreset": "spiss",
-  "faqPreset": "inherit",
-  "editorNotes": "Bruk humor når den gjør forklaringen bedre. Ikke putt en vits i hvert kort."
+  "faqPreset": "spiss",
+  "editorNotes": "Bruk humor når om den kan gjøre forklaringen bedre eller lettere å huske. Ikke putt en vits i hvert kort."
 }
