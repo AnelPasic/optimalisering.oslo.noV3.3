@@ -2,14 +2,14 @@
 
 2026-10-21. **OWNER-selected direction from the earlier Medon Blueprint pilot:** NORSK KLARHET + TØRR OBSERVASJONSHUMOR + KOMMERSIELL LOGIKK + ABSURD KONKRETISERING + LITT FREKKHET + SELF-AWARE HONESTY.
 
-**Scope:** content for Optimalisering Oslo only. This is a brand-specific authoring profile, **not** a rewrite instruction for existing pages, not a new global policy for customer sites, not permission to change offers/proof/prices/approved layouts, and not a claim of new Pages CMS tone controls. Project punctuation/house style in `coordination/COPY-STYLE.md` is binding. Medon-wide gate: `AnelPasic/MedonWebSystem/docs/CONTENT-QUALITY-AND-VOICE.md`.
+**Scope:** content for Optimalisering Oslo only. This is a brand-specific authoring profile and companion to its native Pages CMS tone editor, **not** a rewrite instruction for existing pages, not a global rule for other customers, and not permission to change offers, proof, prices or approved layouts. Project punctuation/house style in `coordination/COPY-STYLE.md` is binding. Medon-wide gate: `AnelPasic/MedonWebSystem/docs/CONTENT-QUALITY-AND-VOICE.md`.
 
 ## Pages CMS controls - source of current selections
 
 **Pages CMS → Språk og tone** edits `coordination/CONTENT-TONE.json` directly. This structured JSON is the **single source of truth for currently selected intensity presets**; this document explains what those selections mean.
 
-- `defaultPreset`: `noktern`, `medon` or `spiss`. The current default is `medon`.
-- `heroPreset`, `servicePreset`, `explanationPreset`, `faqPreset`: `inherit` means use default; otherwise select the named preset.
+- `defaultPreset`: `noktern`, `medon`, `spiss` or `spissplus`. The current default remains `medon` (OWNER's saved setting).
+- `heroPreset`, `servicePreset`, `explanationPreset`, `faqPreset`: `inherit` means use default; otherwise select the named preset. OWNER selected `spissplus` for **explanations/insight and FAQ**, preserving Hero and service cards as `inherit`.
 - `editorNotes`: additional directions for the next editorial pass; never override factual/SEO/KRO quality rules.
 - Pricing, order forms, proof and legal copy **remain factual and nøkterne**, regardless of a broad `spiss` preference.
 
@@ -36,7 +36,8 @@
 
 - **Nøktern:** humor 0, absurd 0, cheekiness 0, candor 1. For pricing, forms, factual details, legal, warnings.
 - **Medon:** humor 1, absurd 1, cheekiness 1, candor 2. Suggested default for general commercial/service copy.
-- **Spiss:** humor 2, absurd 2, cheekiness 2, candor 2. Occasional sharp hook or educational explanation, only if immediately clear.
+- **Spiss (nivå 3):** humor 2, absurd 2, cheekiness 2, candor 2. A dry, clear commercial observation that sharpens an answer.
+- **Spiss+ (nivå 4, OWNER-selected for FAQ/explanations 2026-10-22):** humor 2, absurd 3, cheekiness 2, candor 3. Stronger contrast with a recognizable and useful analogy, specific business consequences and restrained sting. **Not** extra jokes, longer text or a guaranteed dramatic last line.
 
 Apply a preset per **section/brief**, not by adding CMS runtime classes. OWNER may request "gjør den spissere" or "nøkternt" and the content agent must then rewrite only the requested text, with a before/after diff. No global automatic rewriting. A native Pages CMS profile editor is now configured. Its choices are stored in `coordination/CONTENT-TONE.json`; this Markdown file remains the interpretive guide, not a second editable preset authority.
 
@@ -44,11 +45,23 @@ Apply a preset per **section/brief**, not by adding CMS runtime classes. OWNER m
 
 - Hero/H1/subline: **Medon**, with unambiguous category/outcome first; minimal humor.
 - Three SEO / lokal SEO / AI visibility choice cards: **Medon leaning nøktern** - distinguish Google organic results, Google Maps/local intent, and AI answers using recognizable real customer situations. Do not promise ranking or ChatGPT recommendation.
-- Glossary, CPC/ROAS/attribution and educational explanations: **Spiss** is acceptable when the example clarifies a technical concept.
+- Glossary, CPC/ROAS/attribution and educational explanations: current saved preset is **Spiss+**, but only when the example improves understanding; otherwise write plainly.
 - Packages/pricing and contact/order forms: **Nøktern**; scope/next action, conditions, no winks that hide costs.
 - Proof/testimonials: **Nøktern** and source-accurate.
-- FAQ: plain answer first, optionally one dry line when harmless; no punchline instead of an answer.
+- FAQ: current saved preset is **Spiss+**, with plain answer first, then optionally one sharp observation/analogy that genuinely illuminates the buyer's decision; never a punchline instead of an answer.
 - Legal/accessibility/errors: no humor.
+
+## OWNER-approved Spiss+ calibration (nivå 4, 2026-10-22)
+
+FAQ question: **Hva hvis både synlighet og konvertering begrenser resultatet?**
+
+> Da finner vi ut om kundene ikke finner deg, eller om de finner deg og gir opp. Å skaffe mer trafikk til en nettside uten en tydelig vei til kontakt, er som å annonsere for en butikk som har gjemt inngangen. Flere interesserte. Samme problem.
+
+This **tone reference** was explicitly preferred by OWNER over the preceding `Spiss` example. It is **not** approval to replace or publish the existing global FAQ answer, and it must not be repeated as a template on every card or page.
+
+Why it works: starts with a concrete diagnostic fork, uses a real-world analogy for wasted traffic, then lands the commercial cost in a dry final observation. The factual answer remains understandable without the analogy. For highly sensitive, exact, legal or proof-heavy topics, tone is subdued regardless of the selected preset.
+
+The label `nivå 4` refers to the **overall editorial preset**, not an extra point on the independent 0-3 dimension scales above.
 
 ## Historical style calibration - illustrations, not proof of site results
 
@@ -69,4 +82,4 @@ These are *educational voice samples*, not automatically suitable headlines, ver
 5. Does it match this section's preset and the surrounding page voice?
 6. Did only the explicitly requested CMS fields change? Is latest OWNER copy preserved? Was source verified separately from Worker preview?
 
-**Release status:** Pages CMS now has a configured `Språk og tone` editor. The Git-backed config and focused test are present; authenticated CMS Save, build, and deployed Worker verification must still be observed before end-to-end PASS. These choices govern future authoring; they do not themselves change published copy, design or release permissions.
+**Release status:** Pages CMS now has a configured `Språk og tone` editor including the OWNER-selected Spiss+ option. The Git-backed config and focused test are present; authenticated CMS Save, build, and deployed Worker verification must still be observed before end-to-end PASS. These choices govern future authoring; they do not themselves change published copy, design or release permissions.
