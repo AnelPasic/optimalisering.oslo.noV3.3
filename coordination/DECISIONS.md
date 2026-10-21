@@ -1,5 +1,16 @@
 # Decisions and authority
 
+## D-122 — Pakker og priser: bestilling åpnes i hvert globalt pakkekort — 2026-10-21
+
+OWNER: **«en del ting vi bør polere før det forplanter seg overalt, f.eks den globale pris/pakke seksjonen. Bestillingsskjema bør være en del av den, når de klikker på bestill så utvider den seg med skjemafelt: Nettside, e-post, telefon - Send bestilling, (kort forklaring vi ser på bestillingen og tar kontakt med deg for tilganger osv.)»**
+
+**Implementert direkte av ChatGPT, uten Codex**, i tre GitHub-commits: **`7e78006`**, **`d35303a`**, **`66a1c54`**; feilplasserte CMS-redigeringsfelt korrigert i **`275615f`** etter egen source audit. **Felles `PackageSection` gjenbruker `PackageOrder` som innebygd native `<details>` i hvert pakkekort.** Klikk «Bestill [pakke]» åpner tre påkrevde felt: Nettside, E-post, Telefon, med skjult, validert `package`-nøkkel og knapp «Send bestilling». Bare ett skjema vises åpent om gangen; eksisterende `/priser/?pakke=...#bestill`-lenker åpner tilsvarende pakke på prissiden. Den separate `PackageOrder`-seksjonen på `/priser/` og dens ubrukte CSS er fjernet. Responsivt kortdesign, nettadresse-/e-post-/telefonvalidering, tilbudsidentitet og sporing gjenbruker eksisterende primitiver/payload (`order.ts`), med valgfri legacy-bedrift/kontaktstøtte. Tre felt er tilstrekkelig i ny UI; server-side kontrakt ved aktivering **må sjekkes før launch**.
+
+**Copy single source of truth:** Kort forklaring `orderIntro` og sendknappetikett `orderSubmitLabel` eies og kan endres i **Globale elementer → Pakker og priser**, master `app/src/content/global-elements/priser.json` og typed `home-section-data.ts`/`.pages.yml`. Feltene ble opprinnelig feilaktig plassert i Kalkulatorens CMS-schema og straks flyttet til korrekt Pakker-CMS-schema; siste commit `275615f` og test sikrer riktig plassering. Eksisterende OWNER-priser/pakkebeskrivelser/global-case-evidens urørt.
+
+**Safety/verification:** UI er kun **preview**. `site.ordersEnabled && !site.preview` styrer reell innsending; knappen er deaktivert på review Worker; ingen reell POST, varsler, mottak eller endring av produksjon er autorisert. GitHub HEAD, kildedata, global/master/CMS-kobling, inline-komponent, 3 felter, unik pakke, bortfall av duplisert bestillingsseksjon og focused testkilde **verifisert ved kildeinspeksjon**. Astro-bygg, kjørte tester, nettleserinteraksjon, faktiske Worker-assets og server-endpoint **ikke verifisert** fra denne ChatGPT-økten; må kontrolleres på noindex preview før OWNER PASS. Ikke marker form-transport/produksjonsbestilling som klar før separat sikkerhets-/privacy-/backend-gate. Øvrige tjenester, formål, prisautoritet og indeksering uendret. Dette er målrettet polering før videre utrulling av delt designsystem.
+
+
 ## D-121 — ChatGPT erstatter lokal CTA med globalt CMS-skjema på Synlighet — 2026-10-21
 
 OWNER viser den lokale, mint-fargede «Gratis, manuell sjekk»-seksjonen på /synlighet/ og ber om å **fjerne den og erstatte med ett av de globale skjemaene**. Valgt canonical **`global-elements/sjekk.json`** (Gratis sjekk / kontaktskjema), med den nyeste OWNER-redigerte masteren. Direkte ChatGPT-arbeid på GitHub, **uten Codex**. Atomisk commit: **`8ce0e60240be7f43d7dd02b32e2861334be263ac`**.
