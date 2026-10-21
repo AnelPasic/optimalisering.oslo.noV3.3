@@ -559,6 +559,65 @@ components:
         component: sectionVisibility
         description: Flytt, skjul eller fjern bare plasseringen på denne siden. Masterens tekst, bilder og UUID beholdes i Globale elementer.
 content:
+  - name: contentTone
+    label: Språk og tone
+    type: file
+    path: coordination/CONTENT-TONE.json
+    format: json
+    operations:
+      create: false
+      rename: false
+      delete: false
+    fields:
+      - name: defaultPreset
+        label: Normal tone på nettsiden
+        type: select
+        required: true
+        description: Brukes neste gang ChatGPT skriver eller justerer tekst. Endrer ikke eksisterende nettsidetekst automatisk.
+        options:
+          values:
+            - name: noktern
+              label: Nøktern - presis og rett på sak
+            - name: medon
+              label: Medon - klarhet, kommersiell logikk og tørr humor
+            - name: spiss
+              label: Spiss - mer observasjonshumor og litt frekkhet
+      - name: heroPreset
+        label: Hero og hovedoverskrifter
+        type: select
+        required: true
+        description: Velg Følg normal tone med mindre du vil styre denne teksttypen særskilt.
+        options: &voicePresetOverrides
+          values:
+            - name: inherit
+              label: Følg normal tone
+            - name: noktern
+              label: Nøktern
+            - name: medon
+              label: Medon
+            - name: spiss
+              label: Spiss
+      - name: servicePreset
+        label: Tjenestekort og salgstekster
+        type: select
+        required: true
+        options: *voicePresetOverrides
+      - name: explanationPreset
+        label: Begrepsforklaringer og innsikt
+        type: select
+        required: true
+        description: Her tåler språket ofte mer konkretisering og tørr humor. Faglig presisjon er alltid påkrevd.
+        options: *voicePresetOverrides
+      - name: faqPreset
+        label: Spørsmål og svar
+        type: select
+        required: true
+        options: *voicePresetOverrides
+      - name: editorNotes
+        label: Særlige ønsker for tonen
+        type: text
+        required: false
+        description: Gjelder fremtidige omskrivinger, ikke automatisk omformulering av eksisterende innhold. Priser, bestillingsfelt, resultater og juridisk innhold skal fortsatt være nøkterne.
   - name: terminology
     label: Begreper og forklaringer
     type: file
