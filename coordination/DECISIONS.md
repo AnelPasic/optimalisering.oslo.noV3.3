@@ -1,5 +1,10 @@
 # Decisions and authority
 
+## D-119 — H-024C1 Forside én CMS-liste: OWNER PASS, godt nok for denne nettsiden — 2026-10-21
+
+OWNER svarer på eksplisitt spørsmål om **én samlet seksjonsliste og preview**: **«ja ser bra ut, ikke perfekt men nok til denne nettsiden her, vi kan jo alltid forbedre det»**. Dermed **H-024C1 = CLOSED / OWNER PASS for nåværende pilot**, med bevisst **fit-for-purpose** aksept – ingen påstand om perfekt editor eller endelig design. Den nye Forside-modellen med **én Hero og én sorterbar liste med lokale og globale seksjoner** er godkjent. Tidligere teknisk evidens `01bc50e`/kvittering `77b3723` bevares; **ikke start ny finpuss, rekjøring eller CMS-ombygging for H-024C1 uten konkret nytt behov**. Forbedringer kan gjøres senere basert på faktiske bruker- eller kommersielle funn, prioritert mot lanseringsrelevans. Dette er **ikke** godkjenning av offentlig lansering, indeksering, aktiv POST/intake, nye markedsføringspåstander eller implisitt gjennomføring av Konvertering-hub. D-118 og Synlighet H-024B4 sitt godkjente enkeltlisteprinsipp står ved lag.
+
+
 ## D-118 — OWNER godkjenner én enkelt seksjonsliste på Forside; samme modell som Synlighet — 2026-10-20
 
 OWNER: **«modellen fungerer, jeg ville egentlig kjørt samme modell for forsiden også, ingen grunn til å ha 3 separate områder om man kan legge til både predefinerte(globale) og valgfrie innholdsseksjoner, også blir vel hele oppsettet forenklet og vi skal forenkle alt som forenkles kan.»**
