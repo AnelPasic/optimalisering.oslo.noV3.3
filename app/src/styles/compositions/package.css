@@ -154,4 +154,22 @@
 .invite-home .package-offer .package-visual-area[data-editorial="true"] { background: linear-gradient(115deg, var(--color-base-100), #f7fffc); color: var(--ink); }
 .invite-home .package-offer .package-visual-area-accelerating[data-editorial="true"] { background: linear-gradient(115deg, #f7fffc, #e6faf2); }
 @media (max-width: 359px) { .invite-home .package-offer .package-infographic.has-caption { gap: 6px; } }
+
+/* Global package order: compact in-card reveal using existing daisyUI inputs. */
+.invite-home .package-offer .package-order-inline { margin-top: auto; min-width: 0; }
+.invite-home .package-offer .package-order-inline > summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: var(--gap-xs); width: 100%; }
+.invite-home .package-offer .package-order-inline > summary::-webkit-details-marker { display: none; }
+.invite-home .package-offer .package-order-inline > summary:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+.invite-home .package-offer .package-order-inline[open] > summary { margin-bottom: 16px; }
+.invite-home .package-offer .package-order-panel { border-top: 1px solid var(--line); padding-top: 16px; }
+.invite-home .package-offer .package-order-panel h4 { font-size: var(--type-body-lg); line-height: var(--leading-body); font-weight: var(--weight-heading); }
+.invite-home .package-offer .package-order-panel > p { color: var(--muted); font-size: var(--type-body-sm); line-height: var(--leading-body); margin-top: 8px; }
+.invite-home .package-offer .package-order-panel form { display: grid; gap: 12px; margin-top: 16px; }
+.invite-home .package-offer .package-order-panel label { font-size: var(--type-label); font-weight: var(--weight-label); }
+.invite-home .package-offer .package-order-fields { display: grid; gap: 8px; }
+.invite-home .package-offer .package-order-panel .form-privacy { font-size: var(--type-helper); color: var(--muted); line-height: var(--leading-small); }
+.invite-home .package-offer .package-order-panel .form-notice { font-size: var(--type-helper); line-height: var(--leading-small); }
+.invite-home .package-offer .package-order-panel .package-order-submit { margin: 4px 0 0; width: 100%; }
+.invite-home .package-offer .package-order-panel .package-order-submit:disabled { opacity: .65; cursor: not-allowed; }
+
 }
