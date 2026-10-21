@@ -6,6 +6,10 @@ Read `coordination/CHATGPT-TO-CODEX.md` and `coordination/DECISIONS.md` before s
 
 The repository is the durable coordination layer between ChatGPT / STRATEGY_CONTENT / RED_TEAM / OWNER and Codex / IMPLEMENTATION. A chat suggestion, generated draft, implementation plan, successful test or commit is not a content lock or material approval.
 
+## Content authoring and site voice (2026-10-21)
+
+For ANY future customer-facing CMS/Git copy edit, read `coordination/CONTENT-VOICE-PROFILE.md` and `coordination/COPY-STYLE.md`, plus the canonical MWS `docs/CONTENT-QUALITY-AND-VOICE.md` Content Quality Gate. Use the smallest appropriate lane (minor edit / section / new page). Real customer comprehension, specific business benefit, correct SEO/AIO + CRO purpose and honest evidence outrank jokes. Treat the OWNER-selected six-part voice as the site direction but suggested intensity values as editorial defaults; the profile is not an automatic content rewrite or native CMS toggle. Preserve current OWNER copy, globals, CMS sections, design, approved facts and noindex/intake/launch gates. After content change verify Git diff, and distinguish source from actual Worker deployment.
+
 ## Current scope: preserve the exploratory baseline
 
 Latest direct OWNER calculator continuation, 2026-10-13, is delivered at `0e58d5ae04d22dbab1fd841436048f1ff7e45abd`: I dag/Scenario cards and X output move beneath the inputs on the left; the right graph fills the left column's height on desktop. Illustration and Scenario now use 12 months, with a clear Måned 12 monthly outcome and 12 legible ticks. Existing monthly compound math/ratio helpers, centered copy, sliders, disclaimer and unrelated scopes remain preserved. All content JSON/CMS and 251 protected blobs remain exact. Full verify 86/86, focused 14/14, four-width local/live and exact native Worker evidence: CODEX-TO-CHATGPT / `coordination/evidence/calculator-year/`. STOP for OWNER review; no active next implementation or new acceptance/launch authority. Earlier six-month placements below are historical and superseded only within this calculator scope.
