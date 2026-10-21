@@ -4,6 +4,17 @@
 
 **Scope:** content for Optimalisering Oslo only. This is a brand-specific authoring profile, **not** a rewrite instruction for existing pages, not a new global policy for customer sites, not permission to change offers/proof/prices/approved layouts, and not a claim of new Pages CMS tone controls. Project punctuation/house style in `coordination/COPY-STYLE.md` is binding. Medon-wide gate: `AnelPasic/MedonWebSystem/docs/CONTENT-QUALITY-AND-VOICE.md`.
 
+## Pages CMS controls - source of current selections
+
+**Pages CMS → Språk og tone** edits `coordination/CONTENT-TONE.json` directly. This structured JSON is the **single source of truth for currently selected intensity presets**; this document explains what those selections mean.
+
+- `defaultPreset`: `noktern`, `medon` or `spiss`. The current default is `medon`.
+- `heroPreset`, `servicePreset`, `explanationPreset`, `faqPreset`: `inherit` means use default; otherwise select the named preset.
+- `editorNotes`: additional directions for the next editorial pass; never override factual/SEO/KRO quality rules.
+- Pricing, order forms, proof and legal copy **remain factual and nøkterne**, regardless of a broad `spiss` preference.
+
+**Operational process for ChatGPT/Codex:** before writing, read *fresh* `coordination/CONTENT-TONE.json` alongside this file, resolve effective preset for the target section, and perform the MWS-031 Content Quality Gate. Show the OWNER an example/diff or make the specifically authorized content edit. The setting alone never edits existing content, starts AI generation, alters route rendering or deploys a website. An authenticated CMS save and real preview require their own verification.
+
 ## Fixed priorities (must always pass)
 
 1. Norsk klarhet / ELI10 - a plumber, electrician or shop owner should understand a paragraph on first reading. State service category/outcome before playing with wording.
@@ -27,7 +38,7 @@
 - **Medon:** humor 1, absurd 1, cheekiness 1, candor 2. Suggested default for general commercial/service copy.
 - **Spiss:** humor 2, absurd 2, cheekiness 2, candor 2. Occasional sharp hook or educational explanation, only if immediately clear.
 
-Apply a preset per **section/brief**, not by adding CMS runtime classes. OWNER may request "gjør den spissere" or "nøkternt" and the content agent must then rewrite only the requested text, with a before/after diff. No global automatic rewriting. A future native Pages CMS selector is a separate feature requiring explicit scope/schema/deploy gate.
+Apply a preset per **section/brief**, not by adding CMS runtime classes. OWNER may request "gjør den spissere" or "nøkternt" and the content agent must then rewrite only the requested text, with a before/after diff. No global automatic rewriting. A native Pages CMS profile editor is now configured. Its choices are stored in `coordination/CONTENT-TONE.json`; this Markdown file remains the interpretive guide, not a second editable preset authority.
 
 ## Apply by content role
 
@@ -58,4 +69,4 @@ These are *educational voice samples*, not automatically suitable headlines, ver
 5. Does it match this section's preset and the surrounding page voice?
 6. Did only the explicitly requested CMS fields change? Is latest OWNER copy preserved? Was source verified separately from Worker preview?
 
-**Release status:** This file governs future writing; it is not a live CMS control and does not itself change site content, design or release permissions.
+**Release status:** Pages CMS now has a configured `Språk og tone` editor. The Git-backed config and focused test are present; authenticated CMS Save, build, and deployed Worker verification must still be observed before end-to-end PASS. These choices govern future authoring; they do not themselves change published copy, design or release permissions.
