@@ -43,19 +43,19 @@
       "items": [
         {
           "title": "SEO",
-          "text": "Bli funnet i Googles vanlige søkeresultater - uten å betale for annonseklikk. Vi gjør det lettere for Google å forstå hvilke tjenester du tilbyr.",
+          "text": "Bli funnet i Googles vanlige søkeresultater når noen søker etter det du tilbyr. Du betaler ikke Google for hvert klikk, slik du gjør med søkeannonser.",
           "href": "/seo/",
           "label": "Les om SEO",
           "surface": "mint"
         },
         {
           "title": "Lokal SEO",
-          "text": "Bli funnet på Google Maps og når folk søker etter hjelp i nærheten, for eksempel «rørlegger nær meg». Vi gjør det tydelig hva du tilbyr og hvor du tar oppdrag.",
+          "text": "Når noen søker etter \"rørlegger i Ski\", viser Google ofte et kart med lokale bedrifter. Der vil du at kunden skal finne deg, se anmeldelser og kunne ringe direkte.",
           "surface": "lavender"
         },
         {
           "title": "AI-synlighet",
-          "text": "Gjør det enklere å bli nevnt når folk spør ChatGPT og andre AI-tjenester om hvem som kan hjelpe. Vi tydeliggjør hva bedriften tilbyr og hvor den kan hjelpe.",
+          "text": "Når noen spør ChatGPT eller andre AI-tjenester hvem de bør kontakte, vil du være et aktuelt forslag. Vi kan forbedre grunnlaget for å bli nevnt, men ikke love en anbefaling.",
           "href": "/ai-synlighet/",
           "label": "Les om AI-synlighet",
           "surface": "dark"
