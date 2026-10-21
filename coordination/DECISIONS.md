@@ -1,5 +1,17 @@
 # Decisions and authority
 
+## D-124 — Native Pages CMS tonevelger, avgrenset prosjektpilot — 2026-10-21
+
+OWNER sier «Genialt, ønsket noe slikt i 500 år få det inn. Så prøver vi det ut», som godkjenner konkret native Pages CMS-tonekontroll for Optimalisering Oslo. Gjennomført **kildeimplementasjon**, uten Codex og uten å endre publisert sidecopy:
+
+- **En enkelt kilde:** `coordination/CONTENT-TONE.json`, med `defaultPreset: medon` og valgfrie teksttype-overstyringer `heroPreset`, `servicePreset`, `explanationPreset`, `faqPreset`, samt `editorNotes`. Standard: hero/service/FAQ arver, begrepsforklaringer er spiss. Nøkterne fakta-, pris-, bestillings-, proof- og juridiske krav overstyrer aldri sannhet eller profesjonell kontekst.
+- **Native UI:** .pages.yml tilbyr `Språk og tone` som beskyttet `type: file` med valgene `Nøktern`, `Medon`, `Spiss` og overstyringen `Følg normal tone`. Ingen egen Pages CMS-plugin, ingen duplisert toneautoritet, ingen kodehook i nettstedet.
+- **Operativ kobling:** `AGENTS.md`, `coordination/CONTENT-VOICE-PROFILE.md` og `coordination/COPY-STYLE.md` krever at innholdsagent leser ferskt JSON-valg **før** neste tekstendring, og gjennomfører MWS-031 Quality Gate. Valget skriver **ikke** om eksisterende tekst automatisk.
+- **Risiko/QA:** Fokusert read-only testsuite `app/tests/voice-settings.test.ts` legger opp til simulert CMS Save av én verdi og nekter ugyldige presets; kilde/fil/anker er kontrollert etter commit. **Ikke påstå kjørt test, faktisk autentisert CMS Save, Cloudflare Worker-deploy eller OWNER UX PASS før målt.** Gjeldende `main` kontrolleres ved test.
+- **Videre pilot:** OWNER åpner Pages CMS → Språk og tone og bekrefter at feltene finnes; velger for eksempel `Spiss` for Tjenestekort, lagrer, og ber ChatGPT om å omskrive *én godkjent testseksjon* etter fersk konfigurasjon. Vis diff, bevar øvrige OWNER-data og evaluer kvalitet og live-preview separat.
+
+Noindex, disabled intake, andre tjenester, designsystemets visuelle valg, globalmasters/proof/priser, offentlig lansering og MWS-PR #4 er urørt. Den tekniske løsningen er et **site-only pilotmønster**, ikke automatisk universell MedonWebSystem starterfunksjonalitet.
+
 ## D-123 — Før-commit Content Quality Gate + justerbar toneprofil for Optimalisering Oslo — 2026-10-21
 
 OWNER sier at kvalitetsgaten **må inn** og viser til tidligere godkjent sluttretning for dette nettstedets stemme: **NORSK KLARHET + TØRR OBSERVASJONSHUMOR + KOMMERSIELL LOGIKK + ABSURD KONKRETISERING + LITT FREKKHET + SELF-AWARE HONESTY**. Sentral MWS-beslutning **MWS-031** krever risikotilpasset copy-, SEO/AIO-, KRO- og fakta-/presisjonskontroll **før** ChatGPT/Codex lagrer tekst. Dette retter tidligere pilotfeil med meningsløse byråformuleringer. Originalt v3.4-bundle forblir uendret.
