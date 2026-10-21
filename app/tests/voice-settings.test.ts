@@ -10,7 +10,7 @@ const cms = YAML.parse(read('../.pages.yml'));
 const entry = entryForFile(cms, 'coordination/CONTENT-TONE.json');
 const raw = read('../coordination/CONTENT-TONE.json');
 const settings = JSON.parse(raw);
-const presets = ['noktern', 'medon', 'spiss'];
+const presets = ['noktern', 'medon', 'spiss', 'spissplus'];
 const overrides = ['inherit', ...presets];
 const overridesFields = ['heroPreset', 'servicePreset', 'explanationPreset', 'faqPreset'];
 
@@ -28,18 +28,23 @@ test('one native Pages CMS editor safely owns tone preferences outside rendered 
     assert.deepEqual(field.options.values.map((x: any) => x.name), overrides);
   }
   assert.equal(settings.defaultPreset, 'medon');
-  assert.equal(settings.explanationPreset, 'spiss');
+  assert.equal(settings.explanationPreset, 'spissplus');
+  assert.equal(settings.faqPreset, 'spissplus');
+  assert.equal(settings.servicePreset, 'inherit');
+  assert.equal(settings.heroPreset, 'inherit');
   assert.ok(settings.editorNotes);
 });
 
 test('changing just one tone selector preserves every other preference and existing source content', () => {
   const change = structuredClone(settings);
-  change.servicePreset = 'spiss';
+  change.servicePreset = 'spissplus';
   const saved = JSON.parse(cmsJsonSave(settings, change, entry, cms));
   assert.deepEqual(saved, change);
   assert.equal(saved.heroPreset, settings.heroPreset);
   assert.equal(saved.defaultPreset, settings.defaultPreset);
   assert.equal(saved.explanationPreset, settings.explanationPreset);
+  assert.equal(saved.faqPreset, settings.faqPreset);
+  assert.equal(saved.editorNotes, settings.editorNotes);
   assert.equal(read('../coordination/CONTENT-TONE.json'), raw, 'read-only CMS fixture never writes');
   const invalid = structuredClone(change);
   invalid.defaultPreset = 'unapproved' as never;
