@@ -43,19 +43,19 @@
       "items": [
         {
           "title": "SEO",
-          "text": "Søk, sider og tekniske forhold som påvirker om relevante kunder finner og forstår tilbudet.",
+          "text": "Bli funnet i Googles vanlige søkeresultater - uten å betale for annonseklikk. Vi gjør det lettere for Google å forstå hvilke tjenester du tilbyr.",
           "href": "/seo/",
           "label": "Les om SEO",
           "surface": "mint"
         },
         {
           "title": "Lokal SEO",
-          "text": "Google-bedriftsprofil, lokale tjenestesider og tydelig informasjon om hvor dere leverer, gjør det enklere å vurdere bedriften når kunden søker i nærheten.",
+          "text": "Bli funnet på Google Maps og når folk søker etter hjelp i nærheten, for eksempel «rørlegger nær meg». Vi gjør det tydelig hva du tilbyr og hvor du tar oppdrag.",
           "surface": "lavender"
         },
         {
           "title": "AI-synlighet",
-          "text": "Hvordan bedriften og tilbudet blir forstått og omtalt i AI-baserte søk og svar.",
+          "text": "Gjør det enklere å bli nevnt når folk spør ChatGPT og andre AI-tjenester om hvem som kan hjelpe. Vi tydeliggjør hva bedriften tilbyr og hvor den kan hjelpe.",
           "href": "/ai-synlighet/",
           "label": "Les om AI-synlighet",
           "surface": "dark"
