@@ -1,5 +1,8 @@
 # Project state
 
+**2026-10-22 D-126 – TO SPISS+ FAQ-SVAR OWNER APPROVED OG SOURCE_VERIFIED.** Endret global `app/src/content/global-elements/sporsmal.json` ved `76d2a72`: kun «Hva hvis både synlighet og konvertering begrenser resultatet?» og «Jobber dere bare med bedrifter i Oslo?». Tre andre svar, inkludert priser og budsjett, og all annen kode/CMS/OWNER-data urørt. Kilde og Git-diff kontrollert. Hosted Pages CMS/Worker/build status ikke bekreftet. Global FAQ vises flere steder; faktisk preview må kontrolleres før visuell PASS. Ingen launch/index/intake-tillatelse.
+
+
 **2026-10-22 D-125 — Spiss+ (nivå 4) OWNER valgt, CMS config implementert.** Følger D-124 og ekte OWNER Pages CMS Save `16e21a3`. Native `Språk og tone` inkluderer nå `spissplus` som fjerde preset; `coordination/CONTENT-TONE.json` beholder `medon` globalt og arvede Hero/tjenestekort, men har `spissplus` for begrepsforklaringer og FAQ. OWNERs egne editorNotes står eksakt. Godkjent eksempel/avgrensning dokumentert i `coordination/CONTENT-VOICE-PROFILE.md`, fokustest oppdatert. Ingen sidecopy, CSS, globals, priser, proof eller launch-status endret. Faktisk kjøring av test / ny innlogget CMS Save→Git er ikke kvittert, derfor ikke annonser end-to-end PASS. Neste: OWNER CMS-reload/verifisering og én målrettet innholdstest uten automatisk publisering.
 
 
