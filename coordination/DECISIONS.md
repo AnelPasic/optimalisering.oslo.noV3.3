@@ -1,5 +1,12 @@
 # Decisions and authority
 
+## D-126 — OWNER godkjenner to Spiss+ FAQ-endringer — 2026-10-22
+
+OWNER godkjente eksplisitt den redaksjonelle testen: **to omskrivinger, tre eksisterende svar beholdes**. Direkte ChatGPT-commit `76d2a72ec0f5006ef2ad9692da7680f4b1b1e288` oppdaterte kun `app/src/content/global-elements/sporsmal.json`, feltene `content.items[3].answer` (Synlighet + konvertering) og `content.items[4].answer` (bedrifter utenfor Oslo). Originaltekst, spørsmål, rekkefølge, øvrige tre svar (inkludert pris-/budsjettdetaljer), UUID, globalmaster-identitet og alle andre filer uendret. Eksakt Git-diff med to fjernede og to tillagte linjer verifisert mot main etter commit.
+
+**Omfang:** Felles global FAQ-master brukes på flere sider. Dette er OWNER-godkjent innhold, ikke automatisk omskriving ut fra toneprofil. Kildefil/HEAD **SOURCE_VERIFIED**; build, faktisk Pages CMS readback og Cloudflare Worker-rendering **ikke bekreftet** i denne ChatGPT-økten. Ikke løft release/index/intake-gater.
+
+
 ## D-125 — OWNER velger Spiss+ (nivå 4) som referanse for forklaringer og FAQ — 2026-10-22
 
 OWNER: **«Jeg foretrekker tonegrad 4 (Spiss+). Bruk dette som referansenivå for Optimalisering Oslo og vurder hvordan det bør legges inn i Pages CMS.»** Dette følger eksplisitt aksept av original **Spiss (nivå 3)** for vanlig FAQ, og en ny prøverunde med **Spiss+ (nivå 4)** og «Nådeløs (nivå 5)»; **bare nivå 4 er valgt**.
