@@ -1,5 +1,8 @@
 # Project state
 
+**2026-10-23 COMMERCIAL CLOSEOUT DIRECTION — DOCS ONLY.** OWNER ønsker å gå videre og ferdigstille Optimalisering Oslo, mens gjenbrukbar Astro-starter holdes som separat MWS-035 plan. Ny operativ avgrensning: `coordination/COMMERCIAL-LAUNCH-CLOSEOUT-2026-10-23.md`; start med read-only C0 lanseringshindringer og C1 toppmeny/kjøpsvei designretninger før materiell visuell endring. H-024C1/D-119 forside Page Builder er bevart/godkjent. Nyeste kilde viser EN som klargjort men publiseringsblokkert, og light-only tema; begge er valgfrie etter norsk lansering. Kildesider inkludert /personvern og /vilkar har fortsatt DRAFT/REVIEW_REQUIRED-status, så dette er **ikke lanseringsgodkjenning**. Ingen endring av nettsidekode, Pages CMS-kundedata, formulardrift, noindex, lead intake, priser, publisering eller generisk starter via denne dokumentasjonsoppdateringen.
+
+
 **2026-10-22 D-126 – TO SPISS+ FAQ-SVAR OWNER APPROVED OG SOURCE_VERIFIED.** Endret global `app/src/content/global-elements/sporsmal.json` ved `76d2a72`: kun «Hva hvis både synlighet og konvertering begrenser resultatet?» og «Jobber dere bare med bedrifter i Oslo?». Tre andre svar, inkludert priser og budsjett, og all annen kode/CMS/OWNER-data urørt. Kilde og Git-diff kontrollert. Hosted Pages CMS/Worker/build status ikke bekreftet. Global FAQ vises flere steder; faktisk preview må kontrolleres før visuell PASS. Ingen launch/index/intake-tillatelse.
 
 
