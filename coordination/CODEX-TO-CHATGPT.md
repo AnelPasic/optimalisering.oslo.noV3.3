@@ -1,5 +1,9 @@
 # Codex to ChatGPT
 
+## 2026-10-23 – OWNER autoriserer publisering av ferdig D-127 til main/noindex-review
+
+Direkte OWNER: «bare å publisere det du har så tar vi det derifra». Konsumerer eksisterende implementasjonc0d93f0, CMS-utkast og dokumentasjon; siste remote D-128/D-129 bevares. Publiseringsomfanget er main + eksisterende noindex-review, slik at Pages CMS også kan lese det nye schemaet/utkastet. Ingen endelig visuell/content PASS eller offentlig intake/index/domene-cutover følger dette. D-129 backendarbeid forblir separat og er ikke implementert i denne publiseringen. Eksakt publisert koordinasjonsrevisjon identifiseres fra Git-historikken; Worker-/main-status bekreftes etter push.
+
 ## D-127 – navigasjon levert til noindex-preview; visuell vurdering avventes
 
 2026-10-23. Incoming main718b6e3. Lokal implementasjonscommit **c0d93f02770b25ee840a4206e80148e62fe511fa** på `anel/d127-synlighet-navigation`; ingen push/main-merge. [Preview](https://optimalisering-oslo-v33.anel.workers.dev/) · [eksakt QA/deploy og bilder](evidence/d127/README.md).

@@ -53,4 +53,3 @@ const result={revision:'d0df233',matrix,keyboard:{mobileBefore,opened,tabFocus,e
 await writeFile(out+'observations.json',JSON.stringify(result,null,2));
 console.log(JSON.stringify({screenshots:matrix.length+5,checks:matrix.map(x=>({route:x.route,width:x.width,overflow:x.metrics.scrollWidth>x.width,headerHeight:x.metrics.header.height})),keyboard:{tabFocus,escaped,resized},check,order,deepLink,hosted,posts:result.posts,errors},null,2));
 ws.close();
-

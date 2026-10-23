@@ -1,4 +1,6 @@
 # Project state
+
+**2026-10-23 – OWNER BER OM D-127-PUBLISERING TIL MAIN/NOINDEX.** «bare å publisere det du har så tar vi det derifra» autoriserer publisering av eksisterende navigasjon, CMS-utkast og rapporter. Nyeste D-128/D-129-instrukser er bevart; ingen backendimplementasjon blandes inn. Tidligere «ingen push/main-merge» i leveransehistorikken under beskriver tilstanden før denne anmodningen. Visuell vurdering, eget Lokal SEO-innhold, faktisk e-postmottak og offentlig lansering/indeksering beholder separate gater.
 **2026-10-23 D-129 — SAFE DEVELOPMENT APPROVED, NO DEPLOY.** OWNER «da kjører vi det» authorizes isolated implementation/draft PR of Cloudflare Worker + D1 + Resend and minimal private export per `coordination/D129-WORKER-D1-RESEND-IMPLEMENTATION.md`. D1 durable ACK, notification retry, per-site idempotency and isolation, LeadProof future boundary, synthetic QA. Local unpushed Codex nav branch D-127 must be preserved. No actual production D1/secrets/email/PII, enabled forms, indexed launch, merge or release authorized. D-128 architecture remains valid.
 
 
