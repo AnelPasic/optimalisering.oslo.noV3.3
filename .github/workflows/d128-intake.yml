@@ -1,0 +1,28 @@
+name: D-128 intake candidate tests
+
+on:
+  pull_request:
+    paths:
+      - "intake-worker/**"
+      - ".github/workflows/d128-intake.yml"
+  push:
+    branches:
+      - "feat/d128-worker-d1-resend-intake"
+    paths:
+      - "intake-worker/**"
+      - ".github/workflows/d128-intake.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Test receiver with in-memory SQLite and synthetic Resend responses
+        run: node --test intake-worker/tests/*.test.mjs
