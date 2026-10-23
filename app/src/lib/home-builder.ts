@@ -46,7 +46,7 @@ export const homepageBlocksSchema=z.array(homepageBlockSchema).max(56).superRefi
  const reserved=new Set(['behov','regneeksempel','priser','resultater','sjekk','sporsmal','skjema','main','mobile-menu','site-menu','order-package','website','email','message','calc-visits','calc-conversion-label','calc-conversion','calc-traffic','calc-new-conversion-label','calc-new-conversion','calculator-error','scenario-illustration-label','scenario-current-label','scenario-improved-label','scenario-current-value','scenario-improved-value']);
  blocks.forEach((b,i)=>{
   if(ids.has(b.id)||uids.has(b.uid.toLowerCase()))ctx.addIssue({code:'custom',path:[i],message:'Block UUID and anchor must be unique'});
-  if(b._block==='content'&&(reserved.has(b.id)||/^(?:package-home-|term-)/.test(b.id)))ctx.addIssue({code:'custom',path:[i,'id'],message:'Content cannot take a protected section, control or ARIA identity'});
+  if(b._block==='content'&&(reserved.has(b.id)||/^(?:package-home-|term-|header-(?:desktop|mobile)-submenu-)/.test(b.id)))ctx.addIssue({code:'custom',path:[i,'id'],message:'Content cannot take a protected section, control or ARIA identity'});
   if(b._block!=='content'&&types.has(b._block))ctx.addIssue({code:'custom',path:[i,'_block'],message:'Duplicate homepage singleton'});
   ids.add(b.id);uids.add(b.uid.toLowerCase());types.add(b._block);
  });

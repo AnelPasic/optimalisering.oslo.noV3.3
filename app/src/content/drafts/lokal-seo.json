@@ -1,0 +1,94 @@
+{
+  "slug": "lokal-seo",
+  "kind": "service",
+  "status": "REVIEW_REQUIRED",
+  "authority": "DRAFT / NON-AUTHORITATIVE",
+  "seo": {
+    "title": "Lokal SEO for Google Maps og lokale søk | Medon",
+    "description": "Lokal SEO for bedrifter som møter kunder i et bestemt område. Forstå Google bedriftsprofil, relevante tjenestesider og veien fra lokalt søk til kontakt."
+  },
+  "hero": {"layout": "centered-none"},
+  "eyebrow": "Google Maps, Google bedriftsprofil og lokale søk",
+  "title": "Bli funnet når kunden leter etter en bedrift i nærheten.",
+  "intro": "Når noen søker etter en rørlegger i Ski eller en butikk som er åpen nå, må de kunne se hva bedriften tilbyr, hvor den hjelper kunder og hvordan de tar kontakt. Lokal SEO handler om å gjøre disse svarene riktige og lette å finne i bedriftsprofilen og på nettsiden.",
+  "sections": [
+    {
+      "_block": "content",
+      "id": "lokalt-behov",
+      "heading": "Lokal SEO passer når avstand eller tjenesteområde betyr noe for valget.",
+      "body": [
+        "En kunde som trenger hjelp hjemme, vurderer hvem som faktisk kommer til adressen. En kunde som skal besøke en butikk, trenger riktig sted og åpningstid. Begge har et lokalt behov, selv om bedriftene organiserer seg forskjellig.",
+        "En nettbutikk som leverer i hele landet, har ikke automatisk det samme behovet. Da kan produkt- og kategorisider være viktigere. Vi skiller derfor lokale kjøpssituasjoner fra generell organisk synlighet før vi foreslår tiltak."
+      ],
+      "links": [{"label": "Les om SEO for organiske søkeresultater", "href": "/seo/"}]
+    },
+    {
+      "_block": "content",
+      "id": "bedriftsprofil",
+      "heading": "Begynn med profilen som kunden kan bruke uten å besøke nettsiden.",
+      "body": [
+        "Google bedriftsprofil kan vise bedriften i Google Søk og Maps. Kunden kan ringe eller be om veibeskrivelse derfra. Feil åpningstid eller telefonnummer skaper problemer selv om nettstedet er godt.",
+        "Kontroller hvem som eier og administrerer profilen, om bedriften er bekreftet, og om navn, kategori, tjenester og åpningstider stemmer. Unngå å opprette en ny profil før du vet om bedriften allerede finnes. Be om ærlige anmeldelser fra faktiske kunder; ikke kjøp omtaler eller finn på kundeerfaringer.",
+        "Profilen må følge Googles regler for den faktiske virksomheten. En bedrift som reiser ut til kunder, skal ikke fremstille en privat adresse eller et virtuelt kontor som et bemannet besøkssted. Område og adresse må gjenspeile hvordan kundene faktisk blir betjent."
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "nettsiden",
+      "heading": "Nettsiden må svare på det kartet ikke forklarer.",
+      "body": [
+        "En bedriftsprofil kan vise at dere finnes. Tjenestesiden må forklare hva dere kan hjelpe med, hvem tjenesten passer for, hvilke områder dere dekker og hva kunden bør gjøre videre.",
+        "Skriv om reelle leveringsområder og forskjeller som betyr noe. Lag en egen lokal side når den hjelper kunden med noe en eksisterende side ikke svarer på. Ti nesten like tekster med forskjellige stedsnavn er sjelden ti forskjellige svar.",
+        "Opplysninger om bedriften må stemme på tvers av profil, kontaktside og relevante tjenestesider. Strukturerte bedriftsdata kan beskrive eksisterende fakta for søkemotorer, men erstatter ikke synlig informasjon og gir ingen garanti for en bestemt visning."
+      ],
+      "links": [{"label": "Se hvordan vi vurderer nettsidens vei til kontakt", "href": "/konvertering/"}]
+    },
+    {
+      "_block": "content",
+      "id": "prioritering",
+      "heading": "Finn først ut hvor den lokale kunden mister muligheten til å velge dere.",
+      "body": ["Gjennomgangen bør skille mellom feil informasjon, manglende svar og en vanskelig vei videre. Det avgjør hva som er mest nyttig å rette først."],
+      "items": [
+        {"title": "Bedriften er vanskelig å kjenne igjen", "text": "Undersøk eksisterende profil, eierskap og om navn, kategori og kontaktinformasjon beskriver den faktiske virksomheten."},
+        {"title": "Kunden finner dere, men vet ikke om dere kan hjelpe", "text": "Se etter uklare tjenestebeskrivelser og leveringsområder. Svar på hva kunden kan få hjelp med før du ber om en henvendelse."},
+        {"title": "Kunden vil ta kontakt, men møter friksjon", "text": "Kontroller telefonlenker, skjema og mobilvisning. En synlig profil løser ikke et skjema som aldri kommer frem."}
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "begrensninger",
+      "heading": "Ingen kan selge deg en garantert plass i Google Maps.",
+      "body": [
+        "Google beskriver relevans, avstand og hvor kjent bedriften er som sentrale faktorer i lokale resultater. Korrekt og utfyllende informasjon hjelper Google å forstå tilbudet. Kundens avstand til bedriften er likevel en egen del av vurderingen.",
+        "Et større oppgitt tjenesteområde betyr ikke at bedriften automatisk blir synlig overalt. Betalt annonsering er dessuten noe annet enn organisk lokal rangering. Vi lover ikke en bestemt kartplassering, trafikkmengde eller antall nye kunder."
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "male-effekt",
+      "heading": "Et klikk på telefonnummeret er fortsatt ikke en ny kunde.",
+      "body": [
+        "Følg relevante handlinger som profilinteraksjoner, besøk på tjenestesider og mottatte henvendelser, der måling er tilgjengelig og avklart. Vurder også om henvendelsene gjelder tjenester og områder bedriften faktisk vil levere til.",
+        "Sammenlign perioder med hensyn til sesong og andre tiltak. Profilvisninger, telefonklikk og registrerte kunder er forskjellige målinger. En endring i én graf dokumenterer ikke alene hva som skapte resultatet."
+      ],
+      "links": [{"label": "Les om måling av optimaliseringsarbeid", "href": "/innsikt/male-effekt-av-optimalisering/"}]
+    },
+    {
+      "_block": "content",
+      "id": "neste-steg",
+      "heading": "Send nettsiden hvis du vil vite hva vi ville undersøkt først.",
+      "body": [
+        "Lokal SEO vurderes som en del av Synlighet. Fortell gjerne hvilke tjenester dere tilbyr, hvor dere møter eller hjelper kunder, og hva som er vanskelig i dag. Ikke send passord eller innlogging.",
+        "Aktuelle tiltak og videre oppfølging må avtales etter at behovet er forstått. Den gratis sjekken er en avgrenset manuell vurdering, ikke en full revisjon eller et løfte om kartplassering. Gjeldende pakker og priser ligger i den felles prisoversikten."
+      ],
+      "links": [{"label": "Ta en gratis sjekk", "href": "/#sjekk"}, {"label": "Se pakker og priser", "href": "/priser/"}, {"label": "Se oversikten over Synlighet", "href": "/synlighet/"}]
+    }
+  ],
+  "faq": [
+    {"question": "Hva er forskjellen på lokal SEO og vanlig SEO?", "answer": "Lokal SEO prioriterer kunder som trenger en bedrift på et bestemt sted eller innenfor et faktisk tjenesteområde, blant annet gjennom Google bedriftsprofil og relevante tjenestesider. Vanlig organisk SEO kan også gjelde behov som ikke avhenger av hvor leverandøren holder til."},
+    {"question": "Må jeg ha en butikk eller et kontor kundene kan besøke?", "answer": "Ikke nødvendigvis. Bedrifter som oppsøker kunder kan også være relevante, men profilen må følge Googles regler for tjenesteområder og adresser. Rene nettvirksomheter og virtuelle kontorer skal ikke automatisk behandles som kvalifiserte besøkssteder."},
+    {"question": "Trenger vi en egen side for hvert sted vi leverer til?", "answer": "Bare når den enkelte siden har nyttig og reelt forskjellig informasjon for kunden. Begynn med tydelige tjenester og faktiske leveringsområder. Ikke lag en bunke nesten like sider for å gjenta stedsnavn."},
+    {"question": "Hva koster lokal SEO hos Medon?", "answer": "Behovet vurderes innenfor Synlighet og de eksisterende optimaliseringspakkene. Se den felles prisoversikten. Arbeidsomfang og prioriteringer må avtales; denne siden innfører ingen egen lokal SEO-pakke eller fast leveransekvote."}
+  ],
+  "cta": {"label": "Ta en gratis sjekk", "href": "/#sjekk"}
+}

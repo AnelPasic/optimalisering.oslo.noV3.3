@@ -1,0 +1,142 @@
+{
+  "origin": "https://optimalisering-oslo-v33.anel.workers.dev",
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "sha256": "6a45602f1647e2815eb8a5eca0bb662c62af0596ad84706f330b0f1ff2f8784a",
+      "bytes": 65314,
+      "exactLocalMatch": true
+    },
+    {
+      "path": "/seo/",
+      "status": 200,
+      "sha256": "2531824ebd8571e75b5947946a17b405082e32166d430436755b3492e3c309de",
+      "bytes": 20281,
+      "exactLocalMatch": true
+    },
+    {
+      "path": "/ai-synlighet/",
+      "status": 200,
+      "sha256": "d9dcf5d3aa7547b74321b6c9482953b4f6ef4333f4efa5c741dee387a2de40ca",
+      "bytes": 20551,
+      "exactLocalMatch": true
+    },
+    {
+      "path": "/synlighet/",
+      "status": 200,
+      "sha256": "d5fa21c52d39a56bf74882f23f30ee6f8dd1f9c38fc54a529d10343d7dcb55a8",
+      "bytes": 63781,
+      "exactLocalMatch": true
+    },
+    {
+      "path": "/konvertering/",
+      "status": 200,
+      "sha256": "bebbd2bac3db23f869de4f6764eed3cf67ed7aedb03829eab64e07fccedd008e",
+      "bytes": 22757,
+      "exactLocalMatch": true
+    },
+    {
+      "path": "/priser/",
+      "status": 200,
+      "sha256": "ab38fce8e7460d2dcdef08a5226ab29f8a97eba0e93d27f3493efaa918355921",
+      "bytes": 45633,
+      "exactLocalMatch": true
+    },
+    {
+      "path": "/vurdering/",
+      "status": 200,
+      "sha256": "b7b238a6f9dd8fe8e7c1cb927d7375ec5bf2d16618b129be2872d1d87dacdc92",
+      "bytes": 18833,
+      "exactLocalMatch": true
+    },
+    {
+      "path": "/kontakt/",
+      "status": 200,
+      "sha256": "d882ec169ae3bdc0189306fcee2662780bd48627fad4989558d0a7027b82f206",
+      "bytes": 14258,
+      "exactLocalMatch": true
+    },
+    {
+      "path": "/_astro/TermText.DVYc-dtW.css",
+      "status": 200,
+      "sha256": "2927724ef027620a29e89d04fb7dd5e63aa1cc702f7d685de00a14f545092d30",
+      "bytes": 152144,
+      "exactLocalMatch": true
+    },
+    {
+      "path": "/_astro/HomeLeverage.Co6zXgAr.css",
+      "status": 200,
+      "sha256": "1a8109de920a7400e4ceb4901fbde77fbfc44281eafa03e0bcead7e80785db1b",
+      "bytes": 8902,
+      "exactLocalMatch": true
+    },
+    {
+      "path": "/_astro/CommercialHero.Bc2wok_7.css",
+      "status": 200,
+      "sha256": "f03dace85a3be4e7bdd92a5294d4bb39f45b456ea5255326a7b2c802a2940ca4",
+      "bytes": 9495,
+      "exactLocalMatch": true
+    },
+    {
+      "path": "/_astro/_..C-f8O-cf.css",
+      "status": 200,
+      "sha256": "376df8161b4f4ad9377bb4e9b2707e61c19bdeeaceff07b3f9fd2d42f23b2459",
+      "bytes": 6373,
+      "exactLocalMatch": true
+    },
+    {
+      "path": "/_astro/commercial-text.CrjYmgPd.css",
+      "status": 200,
+      "sha256": "c761ddec1d490bcf08c4f2dcdcd4b69eaf9c3e8ca363fe6f327f113d836d8063",
+      "bytes": 19233,
+      "exactLocalMatch": true
+    },
+    {
+      "path": "/_astro/PackageOrder.astro_astro_type_script_index_0_lang.6hk3evP0.js",
+      "status": 200,
+      "sha256": "d8626f2da46ac640939aa837aa2f71bf981423b20de82d59d03ef025332a8b9e",
+      "bytes": 2638,
+      "exactLocalMatch": true
+    },
+    {
+      "path": "/_astro/Attribution.astro_astro_type_script_index_0_lang.Un5106dL.js",
+      "status": 200,
+      "sha256": "463abead88b74f672d0961e40e447d34f97516ca56b83b22c55fa85a26c63bce",
+      "bytes": 189,
+      "exactLocalMatch": true
+    },
+    {
+      "path": "/_astro/TerminologyUI.astro_astro_type_script_index_0_lang.BBkGcnad.js",
+      "status": 200,
+      "sha256": "5e2f38ade2243ab65b5fe5474ac9308b6ef117ec6b42c2ed38d369287a12a0be",
+      "bytes": 17436,
+      "exactLocalMatch": true
+    }
+  ],
+  "policies": [
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "robots": "noindex, nofollow",
+      "body": "User-agent: *\nDisallow: /\n"
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "robots": "noindex, nofollow",
+      "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\"></urlset>"
+    },
+    {
+      "path": "/lokal-seo/",
+      "status": 404,
+      "robots": "noindex, nofollow"
+    },
+    {
+      "path": "/api/leads",
+      "status": 404,
+      "robots": "noindex, nofollow"
+    }
+  ],
+  "livePostCount": 0
+}

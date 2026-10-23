@@ -1004,6 +1004,32 @@ content:
                     type: string
                     pattern: ^/
                     required: true
+                  - name: submenuLabel
+                    label: Navn på undermenyknappen
+                    type: string
+                    description: Påkrevd når lenken har en undermeny. Hovedlenken forblir klikkbar.
+                  - name: children
+                    label: Undermeny
+                    type: object
+                    list:
+                      max: 6
+                      collapsible:
+                        collapsed: true
+                        summary: "{label}"
+                    fields:
+                      - name: label
+                        label: Lenketekst
+                        type: string
+                        required: true
+                      - name: href
+                        label: Eksisterende side eller seksjon
+                        type: string
+                        pattern: ^/(?![/\\])
+                        required: true
+                      - name: description
+                        label: Kort forklaring
+                        type: text
+                        required: true
                 required: true
               - name: providerText
                 label: Påkrevd leverandøropplysning
@@ -1335,6 +1361,31 @@ content:
               - name: global
                 label: Globalt element
                 component: serviceGlobalPlacement
+      - name: serviceLokalSeoDraft
+        label: Lokal SEO - upublisert utkast
+        type: file
+        path: app/src/content/drafts/lokal-seo.json
+        format: json
+        operations: *a3
+        fields:
+          - *serviceslug
+          - name: status
+            label: Gjennomgangsstatus
+            type: string
+            readonly: true
+            description: Utkastet inngår ikke i nettstedets bygg. Publisering krever egen innholdsgodkjenning og kontrollert flytting til sidekolleksjonen.
+          - name: authority
+            label: Innholdsautoritet
+            type: string
+            readonly: true
+          - *a4
+          - *a9
+          - *a10
+          - *a11
+          - *a12
+          - *a6
+          - *a7
+          - *a8
   - name: priser
     label: Priser
     type: file

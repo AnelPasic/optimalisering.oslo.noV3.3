@@ -60,7 +60,7 @@ export function validateSynlighetSections(page: ServicePage, _route: RouteFamily
   if (page.slug !== 'synlighet') return;
   const ids = new Set<string>();
   for (const section of page.sections) {
-    if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(section.id) || (!section.globalElement && (['hero', ...fixedAnchors].includes(section.id) || /^(?:calc-|scenario-|term-|package-home-)/.test(section.id))) || (section.visibility !== 'hidden' && ids.has(section.id))) {
+    if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(section.id) || (!section.globalElement && (['hero', ...fixedAnchors].includes(section.id) || /^(?:calc-|scenario-|term-|package-home-|header-(?:desktop|mobile)-submenu-)/.test(section.id))) || (section.visibility !== 'hidden' && ids.has(section.id))) {
       throw new Error('Synlighet sections require unique visible valid anchors, excluding reserved module anchors');
     }
     if (section.visibility !== 'hidden') ids.add(section.id);

@@ -3,6 +3,8 @@ import type { HomepageContent } from '../lib/home-section-data';
 import Arrow from './Arrow.astro';
 import LanguageSwitch from './LanguageSwitch.astro';
 import type { LanguageLink } from '../lib/i18n';
+import HeaderNavigation from './HeaderNavigation.astro';
+import '../styles/header-navigation.css';
 interface Props { content: HomepageContent['chrome']; languageLinks?: LanguageLink[]; }
 const { content, languageLinks = [] } = Astro.props;
 ---
@@ -12,29 +14,14 @@ const { content, languageLinks = [] } = Astro.props;
       <svg viewBox="0 0 42 42" width="40" height="40" fill="none" aria-hidden="true"><path d="M5 31V19a14 14 0 0 1 28 0v12" stroke="currentColor" stroke-width="8"/><path d="m15 27 9-9m-9 0h9v9" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
       <span>{content.brand}<span class="wordmark-second">{content.brandLocation}<span class="wordmark-dot">.</span></span></span>
     </a>
-    <nav class="desktop-nav" aria-label={content.navigationLabel}><ul class="menu menu-horizontal">{content.navigation.map(link => <li><a href={link.href}>{link.label}</a></li>)}</ul></nav>
+    <nav class="desktop-nav" aria-label={content.navigationLabel}><HeaderNavigation links={content.navigation} mode="desktop" /></nav>
     <LanguageSwitch links={languageLinks} />
     <div class="header-actions"><a href={content.assessmentLink.href} class="button button-small btn btn-primary btn-sm">{content.assessmentLink.label}<Arrow diagonal /></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label={content.openMenu} data-home-menu data-open-label={content.openMenu} data-close-label={content.closeMenu}><span></span><span></span></button></div>
   </div>
-  <nav id="mobile-menu" class="mobile-menu shell" aria-label={content.mobileNavigationLabel} hidden><ul class="menu w-full">{content.navigation.map(link => <li><a href={link.href}>{link.label}<Arrow /></a></li>)}</ul></nav>
+  <nav id="mobile-menu" class="mobile-menu shell" aria-label={content.mobileNavigationLabel} hidden><HeaderNavigation links={content.navigation} mode="mobile" /></nav>
 </header>
 <script>
-  const toggle = document.querySelector<HTMLButtonElement>('[data-home-menu]');
-  const menu = document.querySelector<HTMLElement>('#mobile-menu');
-  function closeMenu() {
-    if (!toggle || !menu) return;
-    toggle.setAttribute('aria-expanded', 'false');
-    toggle.setAttribute('aria-label', toggle.dataset.openLabel!);
-    menu.hidden = true;
-  }
-  toggle?.addEventListener('click', () => {
-    if (!menu) return;
-    const open = toggle.getAttribute('aria-expanded') !== 'true';
-    toggle.setAttribute('aria-expanded', String(open));
-    toggle.setAttribute('aria-label', open ? toggle.dataset.closeLabel! : toggle.dataset.openLabel!);
-    menu.hidden = !open;
-  });
-  menu?.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
-  document.addEventListener('keydown', event => { if (event.key === 'Escape' && toggle?.getAttribute('aria-expanded') === 'true') { closeMenu(); toggle.focus(); } });
-  matchMedia('(min-width: 901px)').addEventListener('change', event => { if (event.matches) closeMenu(); });
+  import {mountHeaderNavigation} from '../lib/header-navigation';
+  const header=document.querySelector<HTMLElement>('.site-header');
+  if(header)mountHeaderNavigation(header);
 </script>

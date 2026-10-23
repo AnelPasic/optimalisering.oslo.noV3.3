@@ -1,0 +1,468 @@
+{
+  "origin": "https://optimalisering-oslo-v33.anel.workers.dev",
+  "widths": [
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "headerHeight": 65,
+      "current": [
+        "/seo/"
+      ],
+      "parentContext": true,
+      "controls": [
+        {
+          "label": "Vis fagområder under Synlighet",
+          "width": 44,
+          "height": 44,
+          "x": 624.28125,
+          "right": 668.28125
+        }
+      ],
+      "links": [
+        {
+          "text": "SEOBli funnet i Googles organiske søkeresultater",
+          "href": "/seo/",
+          "font": "14px",
+          "width": 332,
+          "height": 73,
+          "x": 566.203125,
+          "right": 898.203125
+        },
+        {
+          "text": "AI-synlighet (AIO)Bli lettere å forstå og finne i AI-søk og svar",
+          "href": "/ai-synlighet/",
+          "font": "14px",
+          "width": 332,
+          "height": 73,
+          "x": 566.203125,
+          "right": 898.203125
+        },
+        {
+          "text": "Lokal SEOGoogle Maps, Google bedriftsprofil og lokale søk",
+          "href": "/synlighet/#lokal-synlighet",
+          "font": "14px",
+          "width": 332,
+          "height": 97,
+          "x": 566.203125,
+          "right": 898.203125
+        }
+      ],
+      "cta": {
+        "width": 126.484375,
+        "height": 47,
+        "x": 1258.515625,
+        "right": 1385
+      },
+      "robots": "noindex, nofollow"
+    },
+    {
+      "width": 1000,
+      "scrollWidth": 985,
+      "headerHeight": 65,
+      "current": [
+        "/seo/"
+      ],
+      "parentContext": true,
+      "controls": [
+        {
+          "label": "Vis fagområder under Synlighet",
+          "width": 44,
+          "height": 44,
+          "x": 404.28125,
+          "right": 448.28125
+        }
+      ],
+      "links": [
+        {
+          "text": "SEOBli funnet i Googles organiske søkeresultater",
+          "href": "/seo/",
+          "font": "14px",
+          "width": 332,
+          "height": 73,
+          "x": 346.203125,
+          "right": 678.203125
+        },
+        {
+          "text": "AI-synlighet (AIO)Bli lettere å forstå og finne i AI-søk og svar",
+          "href": "/ai-synlighet/",
+          "font": "14px",
+          "width": 332,
+          "height": 73,
+          "x": 346.203125,
+          "right": 678.203125
+        },
+        {
+          "text": "Lokal SEOGoogle Maps, Google bedriftsprofil og lokale søk",
+          "href": "/synlighet/#lokal-synlighet",
+          "font": "14px",
+          "width": 332,
+          "height": 97,
+          "x": 346.203125,
+          "right": 678.203125
+        }
+      ],
+      "cta": {
+        "width": 126.484375,
+        "height": 47,
+        "x": 818.515625,
+        "right": 945
+      },
+      "robots": "noindex, nofollow"
+    },
+    {
+      "width": 901,
+      "scrollWidth": 886,
+      "headerHeight": 65,
+      "current": [
+        "/seo/"
+      ],
+      "parentContext": true,
+      "controls": [
+        {
+          "label": "Vis fagområder under Synlighet",
+          "width": 44,
+          "height": 44,
+          "x": 354.78125,
+          "right": 398.78125
+        }
+      ],
+      "links": [
+        {
+          "text": "SEOBli funnet i Googles organiske søkeresultater",
+          "href": "/seo/",
+          "font": "14px",
+          "width": 332,
+          "height": 73,
+          "x": 296.703125,
+          "right": 628.703125
+        },
+        {
+          "text": "AI-synlighet (AIO)Bli lettere å forstå og finne i AI-søk og svar",
+          "href": "/ai-synlighet/",
+          "font": "14px",
+          "width": 332,
+          "height": 73,
+          "x": 296.703125,
+          "right": 628.703125
+        },
+        {
+          "text": "Lokal SEOGoogle Maps, Google bedriftsprofil og lokale søk",
+          "href": "/synlighet/#lokal-synlighet",
+          "font": "14px",
+          "width": 332,
+          "height": 97,
+          "x": 296.703125,
+          "right": 628.703125
+        }
+      ],
+      "cta": {
+        "width": 126.484375,
+        "height": 47,
+        "x": 719.515625,
+        "right": 846
+      },
+      "robots": "noindex, nofollow"
+    },
+    {
+      "width": 900,
+      "scrollWidth": 885,
+      "headerHeight": 534,
+      "current": [
+        "/seo/"
+      ],
+      "parentContext": true,
+      "controls": [
+        {
+          "label": "Lukk meny",
+          "width": 44,
+          "height": 44,
+          "x": 821,
+          "right": 865
+        },
+        {
+          "label": "Vis fagområder under Synlighet",
+          "width": 44,
+          "height": 44,
+          "x": 809,
+          "right": 853
+        }
+      ],
+      "links": [
+        {
+          "text": "SEOBli funnet i Googles organiske søkeresultater",
+          "href": "/seo/",
+          "font": "14px",
+          "width": 803,
+          "height": 73,
+          "x": 41,
+          "right": 844
+        },
+        {
+          "text": "AI-synlighet (AIO)Bli lettere å forstå og finne i AI-søk og svar",
+          "href": "/ai-synlighet/",
+          "font": "14px",
+          "width": 803,
+          "height": 73,
+          "x": 41,
+          "right": 844
+        },
+        {
+          "text": "Lokal SEOGoogle Maps, Google bedriftsprofil og lokale søk",
+          "href": "/synlighet/#lokal-synlighet",
+          "font": "14px",
+          "width": 803,
+          "height": 73,
+          "x": 41,
+          "right": 844
+        }
+      ],
+      "cta": {
+        "width": 126.484375,
+        "height": 47,
+        "x": 680.515625,
+        "right": 807
+      },
+      "robots": "noindex, nofollow"
+    },
+    {
+      "width": 390,
+      "scrollWidth": 375,
+      "headerHeight": 582,
+      "current": [
+        "/seo/"
+      ],
+      "parentContext": true,
+      "controls": [
+        {
+          "label": "Lukk meny",
+          "width": 44,
+          "height": 44,
+          "x": 311,
+          "right": 355
+        },
+        {
+          "label": "Vis fagområder under Synlighet",
+          "width": 44,
+          "height": 44,
+          "x": 311,
+          "right": 355
+        }
+      ],
+      "links": [
+        {
+          "text": "SEOBli funnet i Googles organiske søkeresultater",
+          "href": "/seo/",
+          "font": "14px",
+          "width": 317,
+          "height": 97,
+          "x": 29,
+          "right": 346
+        },
+        {
+          "text": "AI-synlighet (AIO)Bli lettere å forstå og finne i AI-søk og svar",
+          "href": "/ai-synlighet/",
+          "font": "14px",
+          "width": 317,
+          "height": 73,
+          "x": 29,
+          "right": 346
+        },
+        {
+          "text": "Lokal SEOGoogle Maps, Google bedriftsprofil og lokale søk",
+          "href": "/synlighet/#lokal-synlighet",
+          "font": "14px",
+          "width": 317,
+          "height": 97,
+          "x": 29,
+          "right": 346
+        }
+      ],
+      "cta": {
+        "width": 126.484375,
+        "height": 47,
+        "x": 176.515625,
+        "right": 303
+      },
+      "robots": "noindex, nofollow"
+    },
+    {
+      "width": 320,
+      "scrollWidth": 305,
+      "headerHeight": 606,
+      "current": [
+        "/seo/"
+      ],
+      "parentContext": true,
+      "controls": [
+        {
+          "label": "Lukk meny",
+          "width": 44,
+          "height": 44,
+          "x": 246.3125,
+          "right": 290.3125
+        },
+        {
+          "label": "Vis fagområder under Synlighet",
+          "width": 44,
+          "height": 44,
+          "x": 245,
+          "right": 289
+        }
+      ],
+      "links": [
+        {
+          "text": "SEOBli funnet i Googles organiske søkeresultater",
+          "href": "/seo/",
+          "font": "14px",
+          "width": 255,
+          "height": 97,
+          "x": 25,
+          "right": 280
+        },
+        {
+          "text": "AI-synlighet (AIO)Bli lettere å forstå og finne i AI-søk og svar",
+          "href": "/ai-synlighet/",
+          "font": "14px",
+          "width": 255,
+          "height": 97,
+          "x": 25,
+          "right": 280
+        },
+        {
+          "text": "Lokal SEOGoogle Maps, Google bedriftsprofil og lokale søk",
+          "href": "/synlighet/#lokal-synlighet",
+          "font": "14px",
+          "width": 255,
+          "height": 97,
+          "x": 25,
+          "right": 280
+        }
+      ],
+      "cta": {
+        "width": 96.484375,
+        "height": 47,
+        "x": 143.828125,
+        "right": 240.3125
+      },
+      "robots": "noindex, nofollow"
+    }
+  ],
+  "routes": [
+    {
+      "path": "/",
+      "current": [],
+      "forms": [
+        {
+          "enabled": "false",
+          "hardDisabled": true
+        },
+        {
+          "enabled": "false",
+          "hardDisabled": true
+        },
+        {
+          "enabled": "false",
+          "hardDisabled": true
+        },
+        {
+          "hardDisabled": true
+        }
+      ],
+      "noindex": "noindex, nofollow",
+      "duplicates": []
+    },
+    {
+      "path": "/synlighet/",
+      "current": [
+        "/synlighet/"
+      ],
+      "forms": [
+        {
+          "enabled": "false",
+          "hardDisabled": true
+        },
+        {
+          "enabled": "false",
+          "hardDisabled": true
+        },
+        {
+          "enabled": "false",
+          "hardDisabled": true
+        },
+        {
+          "hardDisabled": true
+        }
+      ],
+      "noindex": "noindex, nofollow",
+      "duplicates": []
+    },
+    {
+      "path": "/seo/",
+      "current": [],
+      "forms": [],
+      "noindex": "noindex, nofollow",
+      "duplicates": []
+    },
+    {
+      "path": "/ai-synlighet/",
+      "current": [],
+      "forms": [],
+      "noindex": "noindex, nofollow",
+      "duplicates": []
+    },
+    {
+      "path": "/konvertering/",
+      "current": [
+        "/konvertering/"
+      ],
+      "forms": [],
+      "noindex": "noindex, nofollow",
+      "duplicates": []
+    },
+    {
+      "path": "/priser/",
+      "current": [
+        "/priser/"
+      ],
+      "forms": [
+        {
+          "enabled": "false",
+          "hardDisabled": true
+        },
+        {
+          "enabled": "false",
+          "hardDisabled": true
+        },
+        {
+          "enabled": "false",
+          "hardDisabled": true
+        }
+      ],
+      "noindex": "noindex, nofollow",
+      "duplicates": []
+    },
+    {
+      "path": "/vurdering/",
+      "current": [],
+      "forms": [
+        {
+          "enabled": "false",
+          "hardDisabled": false
+        }
+      ],
+      "noindex": "noindex, nofollow",
+      "duplicates": []
+    },
+    {
+      "path": "/kontakt/",
+      "current": [],
+      "forms": [],
+      "noindex": "noindex, nofollow",
+      "duplicates": []
+    }
+  ],
+  "postCount": 0,
+  "runtimeExceptions": [],
+  "keyboard": "Enter/Space/Tab/Escape, focus return, parent navigation, outside click, breakpoint close passed",
+  "draftRouteStatus": 404
+}

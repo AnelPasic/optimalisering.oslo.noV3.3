@@ -1,0 +1,23 @@
+---
+import type {HomepageContent} from '../lib/home-section-data';
+import {navigationState} from '../lib/navigation';
+import Arrow from './Arrow.astro';
+interface Props {links:HomepageContent['chrome']['navigation'];mode:'desktop'|'mobile';}
+const {links,mode}=Astro.props;
+const pathname=Astro.url.pathname;
+---
+<ul class:list={['menu',{'menu-horizontal':mode==='desktop','w-full':mode==='mobile'}]}>
+ {links.map((link,index)=>{
+  const state=navigationState(link,pathname);
+  const id=`header-${mode}-submenu-${index}`;
+  return <li class="header-nav-item" data-active-parent={state.within||undefined}>
+   <div class="header-nav-parent">
+    <a href={link.href} aria-current={state.current?'page':undefined}>{link.label}{mode==='mobile'&&!link.children?.length&&<Arrow />}</a>
+    {!!link.children?.length&&<button type="button" class="nav-disclosure btn btn-ghost btn-square" aria-expanded="false" aria-controls={id} aria-label={link.submenuLabel} data-nav-disclosure><Arrow /></button>}
+   </div>
+   {!!link.children?.length&&<ul id={id} class="header-submenu menu bg-base-100" hidden>
+    {link.children.map(child=><li><a href={child.href} aria-current={navigationState(child,pathname).current?'page':undefined}><span class="header-submenu-label">{child.label}</span><span class="header-submenu-description">{child.description}</span></a></li>)}
+   </ul>}
+  </li>;
+ })}
+</ul>

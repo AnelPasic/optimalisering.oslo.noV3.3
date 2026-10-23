@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-23",
+  "method": "GET only",
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "url": "https://optimalisering.oslo.no/",
+      "allow": null,
+      "contentType": "text/html; charset=utf-8",
+      "title": "Få mer verdi ut av nettsiden og trafikken du allerede har | Optimalisering Oslo",
+      "referencesLegacyApi": true,
+      "referencesNewApi": false
+    },
+    {
+      "path": "/api/lead",
+      "status": 404,
+      "url": "https://optimalisering.oslo.no/api/lead",
+      "allow": null,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/api/lead/",
+      "status": 404,
+      "url": "https://optimalisering.oslo.no/api/lead/",
+      "allow": null,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/api/leads",
+      "status": 200,
+      "url": "https://optimalisering.oslo.no/api/leads",
+      "allow": null,
+      "contentType": "text/html; charset=utf-8"
+    }
+  ],
+  "cloudflare": {
+    "project": "optimalisering-oslo-no",
+    "domains": [
+      "optimalisering.oslo.no",
+      "optimalisering-oslo-no.pages.dev"
+    ],
+    "deployment": "c696c12c-0d01-4834-9717-f54a2c45a80a",
+    "commit": "50576b5a2027b9a7f1bd70191a9029f3dc46a89d",
+    "repository": "AnelPasic/optimalisering.oslo.no",
+    "status": "success",
+    "productionEnvironmentNames": [
+      "RESEND_API_KEY"
+    ],
+    "kvBindingNames": [],
+    "d1BindingNames": [],
+    "reviewWorkerBindingNames": [],
+    "productionWorkerCandidateAbsent": true
+  },
+  "source": {
+    "path": "src/pages/api/lead.ts",
+    "blob": "2100ad478657def85676ff5325f074cda989700c",
+    "legacyPayload": [
+      "website",
+      "email",
+      "challenge",
+      "phone",
+      "source",
+      "company_website_hp"
+    ],
+    "legacyAcknowledgement": "success:boolean; no persisted receipt ID",
+    "ignoresSendEmailFailure": true,
+    "logsLeadPII": true,
+    "hasDurableStore": false,
+    "hasOrderIntentOrPackage": false
+  },
+  "livePostCount": 0,
+  "secretValuesRead": false,
+  "liveInboxReceiptVerified": false
+}

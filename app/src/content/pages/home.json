@@ -24,7 +24,25 @@
       "navigation": [
         {
           "label": "Synlighet",
-          "href": "/synlighet/"
+          "href": "/synlighet/",
+          "submenuLabel": "Vis fagområder under Synlighet",
+          "children": [
+            {
+              "label": "SEO",
+              "href": "/seo/",
+              "description": "Bli funnet i Googles organiske søkeresultater"
+            },
+            {
+              "label": "AI-synlighet (AIO)",
+              "href": "/ai-synlighet/",
+              "description": "Bli lettere å forstå og finne i AI-søk og svar"
+            },
+            {
+              "label": "Lokal SEO",
+              "href": "/synlighet/#lokal-synlighet",
+              "description": "Google Maps, Google bedriftsprofil og lokale søk"
+            }
+          ]
         },
         {
           "label": "Konvertering",
