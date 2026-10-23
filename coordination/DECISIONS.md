@@ -1,4 +1,8 @@
 # Decisions and authority
+## D-129 — OWNER GO for safe development of Worker + D1 + Resend — 2026-10-23
+
+OWNER: «da kjører vi det». Implementer valgt D-128-arkitektur **i isolert utviklingsgren/draft PR**, ikke produksjon. Fullt, bindende omfang: `coordination/D129-WORKER-D1-RESEND-IMPLEMENTATION.md`. D1 lagrer kvittert lead før suksess; Resend retry/feilstatus og fremtidig LeadProof-handoff er separate; minimale sikre eksport-/lesefunksjoner; ingen ny CRM. Ikke bland inn upushet lokal D-127-navigasjonsgren eller overskriv godkjent CMS, priser og innhold. Fokuserte syntetiske tester og review-safe formkontrakter; stopp før ekte Cloudflare-provisjonering, hemmeligheter, e-post/test med reelle adresser, skjemaktivering, indeksering, merge eller lansering.
+
 
 ## D-128 — OWNER velger Cloudflare Worker + D1 + Resend for henvendelsesmottak — 2026-10-23
 

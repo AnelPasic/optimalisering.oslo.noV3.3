@@ -1,4 +1,8 @@
 # ChatGPT to Codex
+## CURRENT D-129 — implement Worker + D1 + Resend in isolated development branch
+
+OWNER has approved moving from D-128 plan into scoped **development implementation**. Read `coordination/D129-WORKER-D1-RESEND-IMPLEMENTATION.md` FIRST; it supersedes D-128's 'planning only' boundary **only for development code and synthetic testing**. Create a separate `feat/d129-worker-d1-resend` branch from fresh main and a draft PR, preserve existing D-127 unpushed local navigation work, all owner CMS content, pricing and case proof. Deliver D1 receipt+dedupe, Resend-notification status and retry, minimal strongly protected read/export API, safe shared-site architecture and test evidence. No separate CRM and no raw lead PII into current LeadProof browser-event API. Do NOT create production resources, secrets, send real email, activate form flags, publish an indexed page, merge PR or deploy production until separate owner verification. Follow the document's acceptance STOP.
+
 
 ## CURRENT D-128 / 2026-10-23 — Worker + D1 + Resend selected (planning, no activation)
 
