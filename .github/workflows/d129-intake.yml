@@ -1,0 +1,40 @@
+name: D-129 isolated intake
+on:
+  pull_request:
+    paths: ['intake-worker/**', 'app/**', '.github/workflows/d129-intake.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  synthetic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: app
+    env:
+      SITE_STAGE: preview
+      PUBLIC_LEADS_ENABLED: 'false'
+      PUBLIC_ORDERS_ENABLED: 'false'
+      PRIVACY_APPROVED: 'false'
+      SEND_NOTIFICATIONS: 'false'
+      WRANGLER_SEND_METRICS: 'false'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.12.0'
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+      - run: npm ci
+      - run: npm run test:intake
+      - run: node --test tests/h013-intake.test.mjs tests/h017a-intake.test.mjs tests/http.test.mjs tests/lead.test.ts
+      - run: npm run check
+      - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - run: npm run qa:intake:review
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: d129-local-preview-evidence
+          path: app/qa-output/d129/

@@ -1,0 +1,2 @@
+# Local Worker tooling state; never commit databases or operational cache.
+.wrangler/

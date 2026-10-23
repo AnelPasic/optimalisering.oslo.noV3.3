@@ -1,0 +1,32 @@
+{
+  "$schema": "../app/node_modules/wrangler/config-schema.json",
+  "name": "optimalisering-intake-d129-dev",
+  "main": "src/worker.mjs",
+  // Pinned to the workerd version in app/package-lock.json; verify a newer date at release.
+  "compatibility_date": "2026-10-06",
+  "workers_dev": false,
+  "preview_urls": false,
+  "vars": {
+    "SITE_ID": "optimalisering.oslo.no",
+    "INGRESS_ORIGIN": "https://ingress.example.test",
+    "ALLOWED_ORIGINS": "https://site.example.test",
+    "SITE_STAGE": "preview",
+    "PRIVACY_APPROVED": "false",
+    "PUBLIC_LEADS_ENABLED": "false",
+    "PUBLIC_ORDERS_ENABLED": "false",
+    "SEND_NOTIFICATIONS": "false",
+    "ACCESS_ISSUER": "",
+    "ACCESS_AUD": "",
+    "ADMIN_GRANTS_JSON": "{}"
+  },
+  "d1_databases": [{
+    "binding": "DB",
+    "database_name": "d129-local-receipts",
+    "database_id": "00000000-0000-0000-0000-000000000000",
+    "migrations_dir": "migrations",
+    "remote": false
+  }],
+  "ratelimits": [{ "name": "RATE_LIMITER", "namespace_id": "129", "simple": { "limit": 10, "period": 60 } }],
+  "observability": { "enabled": false },
+  "triggers": { "crons": [] }
+}

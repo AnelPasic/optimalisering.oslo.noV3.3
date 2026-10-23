@@ -5,7 +5,7 @@ import { getConfig } from '../server/config.mjs';
 import { createAppServer } from '../server/http.mjs';
 import { openLeadStore } from '../server/store.mjs';
 
-const body = { site: 'optimalisering.oslo.no', form: 'pakke-bestilling', package: 'vekst', company: 'Synthetic AS', contact: 'Synthetic Buyer', website: 'example.test', email: 'synthetic@example.test', phone: '', message: '', source: { page: '/priser/?email=remove', landing_page: '/synlighet/?email=remove', referrer: 'https://search.example.test/private?q=remove', utm_source: 'synthetic', utm_medium: 'test', utm_campaign: 'h017a', utm_content: 'order' } };
+const body = { site: 'optimalisering.oslo.no', form: 'pakke-bestilling', package: 'vekst', website: 'example.test', email: 'synthetic@example.test', phone: '90000000', message: '', source: { page: '/priser/?email=remove', landing_page: '/synlighet/?email=remove', referrer: 'https://search.example.test/private?q=remove', utm_source: 'synthetic', utm_medium: 'test', utm_campaign: 'h017a', utm_content: 'order' } };
 async function withServer(overrides, run) {
   const store = openLeadStore(':memory:');
   const notifications = [];
@@ -42,7 +42,7 @@ test('all package keys persist explicit order intent and normalized attribution 
 }));
 
 test('unknown package, filled honeypot and invalid required or excessive fields create no record', () => withServer({}, async ({ store, send, notifications }) => {
-  const invalid = [{ package: 'unknown' }, { website_confirmation: 'bot' }, { company: '' }, { contact: '' }, { email: 'invalid' }, { website: 'javascript:alert(1)' }, { phone: 'x'.repeat(41) }, { message: 'x'.repeat(2001) }];
+  const invalid = [{ package: 'unknown' }, { website_confirmation: 'bot' }, { phone: '' }, { contact: 'x'.repeat(201) }, { email: 'invalid' }, { website: 'javascript:alert(1)' }, { phone: 'x'.repeat(41) }, { message: 'x'.repeat(2001) }];
   for (const [index, changes] of invalid.entries()) assert.equal((await send({ ...body, ...changes }, `synthetic-invalid-${index}`)).status, 422);
   assert.deepEqual(store.counts(), { leads: 0, conversions: 0 }); assert.equal(notifications.length, 0);
 }));
@@ -63,7 +63,7 @@ test('storage failure never acknowledges acceptance or attempts email', () => wi
 
 test('order conflict and rate limiting remain authoritative', () => withServer({}, async ({ store, send }) => {
   assert.equal((await send(body, 'synthetic-conflict')).status, 201);
-  assert.equal((await send({ ...body, company: 'Changed AS' }, 'synthetic-conflict')).status, 409);
+  assert.equal((await send({ ...body, email: 'changed@example.test' }, 'synthetic-conflict')).status, 409);
   for (let i = 0; i < 8; i++) await send(body, 'synthetic-conflict');
   assert.equal((await send(body, 'synthetic-rate-limit')).status, 429);
   assert.deepEqual(store.counts(), { leads: 1, conversions: 1 });
