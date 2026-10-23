@@ -1,5 +1,37 @@
 # Codex to ChatGPT
 
+## D-127 – navigasjon levert til noindex-preview; visuell vurdering avventes
+
+2026-10-23. Incoming main718b6e3. Lokal implementasjonscommit **c0d93f02770b25ee840a4206e80148e62fe511fa** på `anel/d127-synlighet-navigation`; ingen push/main-merge. [Preview](https://optimalisering-oslo-v33.anel.workers.dev/) · [eksakt QA/deploy og bilder](evidence/d127/README.md).
+
+**Levert N1:** klikkbar Synlighet-hub med separat disclosure, SEO/AIO/Lokal SEO-forklaringer fra én typet CMS-navkilde. Flat Konvertering/Priser/Innsikt og Gratis sjekk beholdt, aktiv side/kategori og44px mobilkontroller. Ingen sticky. Namespace mot CMS-seksjoner beskyttet; Enter/Space/Tab/Escape/fokus/parentklikk/utsideklikk/resize faktisk testet.
+
+**Levert N2:** [research, sidebrief og kildekontroll](D127-LOKAL-SEO-CONTENT-REVIEW.md); komplett kildeutkast `app/src/content/drafts/lokal-seo.json` med egen native CMS-fileeditor og eksisterende service-schema. Filen er utenfor publisert loader. Midlertidig Lokal SEO-lenke går til eksisterende `/synlighet/#lokal-synlighet`; ingen død `/lokal-seo/`-lenke eller publisert ny side. CMS-projeksjon testet i minnet. Endringene er lokale på grenen; ingen hosted native CMS-save eller GitHub-main readback påstås.
+
+**Levert N3:** [faktisk live-ingress og minste videre plan](D127-RESEND-REUSE-ASSESSMENT.md). Domene er Pages-prosjekt optimalisering-oslo-no/Git50576b5; faktisk deployet handler ignorerer sendEmail-feil, bruker legacy success uten lagretID og støtter ikke pakkenøkkel. Lokal nyere production-Worker er ikke livebevis; kandidaten finnes ikke i tilkoblet konto. Resend-oppsett bør gjenbrukes i én liten same-origin Cloudflare-ingress med minimal varig mottaks-/idempotenslogg, ikke egen Node/SQLite-host. Dette er bare plan; ingen backendendring, nøkkelverdi lest, livePOST eller e-postmottakstest.
+
+**Verifisert:**16/16 fokus, build19, check0feil/0advarsler (én gammel hint),727 links/anchors,28 eksisterende CMS-records. Lokal og faktisk Worker ved1440/1000/901/900/390/320 uten overflow/JS-feil/POST.8HTML+8assets matcher lokalt bygg eksakt. To eldre h017b-cms-fixtures fra tidligere CMS-migrering feilet i bredere probe og er dokumentert, ikke rettet i dette scopet; fire gamle tom-telefon-intake-fixtures står separat. Ingen fullverify-PASS hevdes.
+
+**Deploy:** direkte review Worker **73f991d5-3f46-474b-813f-42488c995867**, deployment **c5ddc349-d35d-426e-8197-09091f4ee9d6**,100% lest tilbake. Ingen connected Git/native build-påstand. Noindex/nofollow, robotsDisallow, tomt sitemap, API404 og innsendinger av. Globale mastere, priser/proof/kunst, andre pageJSON, Hero, syv forsideplasseringer, D-126, skjemaer/server/site/Workerconfig/system/project uendret; tidligere C0C1-notater og OWNER-bilder bevart.
+
+**Neste review/gate:** OWNER vurderer dropdown visuelt. STRATEGY_CONTENT+OWNER vurderer hele Lokal SEO-utkast og faktisk leveranse før egen side publiseres. OWNER/OPS avklarer sender/mottaker, ingress/driftsansvar og faktiske privacy/terms; separat syntetisk inquiry+ordre med lagring/retry/feil og faktisk innboks før aktivering. Kan avklares uavhengig av designreview. **STOPP – ingen formell visual/content PASS, ny sidepublisering, live intake, indeksering eller produksjonslansering.** C0C1 flat A-anbefaling nedenfor er overstyrt av D-127.
+
+## 2026-10-23 C0/C1 – rapport levert; headerretning avventer OWNER
+
+Fersk main **d0df233e2eb311c95298e6d140c00bd27f29f198** gjennomgått etter direkte brukeroppdrag. [Rapport med kilder, rutebrett, skjermbilder og tre forslag](C0-C1-LAUNCH-HEADER-REVIEW-2026-10-23.md). **Ingen headerretning er valgt eller godkjent.** IMPLEMENTATION anbefaler A (behold flat meny, prøv vedvarende header, aktiv side og større mobiltreffflater). B samler tjenester; C gir ekstra mobilrad. STOPP før implementasjon, avventer OWNERs vurdering.
+
+Build19 og statisk QA619 lenker/ankere PASS. Seks ruter × fire bredder uten overflow; tastatur og disabled preview kontrollert, zero browser POST. Menyknapp krymper til22,8px ved320; aktiv side mangler; Vekst-dypelenke åpner riktig kort men scroller til første kort. Fokusert intake20:16 PASS/4 FAIL fra gamle tom-telefon-fixtures. Dagens trefeltspayload gir separat syntetisk201/stabil retry for3 pakker, men varselmal skriver gamle company/contact som `undefined`. Ingen reell e-post. D-126s to svar finnes eksakt i faktisk review-HTML; ingen ny CMS-save/native build-ID verifisert. Full evidens og begrensninger i rapporten.
+
+**Åpne avklaringer (ikke godkjenninger):**
+
+- C1 / OWNER: hvilken av A/B/C skal eventuelt prøves visuelt? Kilde HomeHeader/shared styles på d0df233; forretningsavklaringer kan fortsette uavhengig.
+- B1 / OWNER+OPS: koble global `/#sjekk` eller velge `/vurdering/`; faktisk API/mottaker/driftsansvar. Static Worker inneholder ikke Node-handler. B2/B3 kan avklares uavhengig av hosting.
+- B2/B3 / OWNER+STRATEGY_CONTENT: faktiske kontakt-/personvern-/avtaleopplysninger og hvilket svartidsløfte som gjelder. Global master lover2 virkedager, vurdering/vilkår sier ingen frist. Bevar nåværende OWNER-copy/priser inntil eksplisitt håndoff.
+- B4 / OWNER+STRATEGY_CONTENT: avstem15 draft-JSON/shared authority mot reelle godkjenninger før produksjonsguard kan passere. Ikke masseløft statuser; D-119/H-024C1 er allerede OWNER PASS.
+- B5 / OWNER+OPS: separat kandidatens domene-, rollback-, mottaks-, lanserings- og indekseringsaksept etter driftsbevis. EN/dark/starter er valgfritt senere.
+
+Kun lokale koordinasjons-/auditfiler endret; ingen kundekode/CMS/priser/globalmasters, commit, push, deploy eller aktivering. Eksisterende usporede OWNER-bilder urørt. Neste steg avventer OWNER; ingen godkjenning er registrert i DECISIONS.
+
 ## H-024C1 / D-118 — ÉN FORSIDELISTE; LEVERT TIL OWNER REVIEW
 
 2026-10-21. Incoming **8ea1db332da89b1d190b157aa1a791216290a1ea**, MWS **b6ddf7f**. Implementasjon **01bc50e97b2cc06dea1b9c152b0c493c7aff0ea8**. Topp **2** + Hoved **5** + Bunn **0** → én `sections`-liste med **7 eksakt bevarte rader**: skjult lokal `forbehovsvelger` (UUID `8ac621d2-d9aa-40ae-9875-ea9c7a2c2462`), synlig global behov, regneeksempel, resultater, priser, sjekk, sporsmal. Hele hver rad, synlighet og rekkefølge er semantisk identisk før/etter. Hero, SEO og homepage.chrome eksakt bevart. Deterministisk telling og SHA-256 per fullstendige rad: `coordination/evidence/h024c1/migration.json`.

@@ -1,0 +1,44 @@
+{
+  "sourceRevision": "d0df233e2eb311c95298e6d140c00bd27f29f198",
+  "date": "2026-10-23",
+  "build": {"command": "npm run build", "exitCode": 0, "pages": 19},
+  "static": {"command": "node scripts/audit-build.mjs", "exitCode": 0, "pages": 18, "internalLinksAndAnchors": 619},
+  "focusedTests": {
+    "command": "node --test tests/h013-order.test.ts tests/h013-intake.test.mjs tests/h017a-intake.test.mjs tests/lead.test.ts",
+    "exitCode": 1,
+    "passed": 16,
+    "failed": 4,
+    "cause": "Existing positive legacy intake fixtures send phone=''. Current D-122 createOrderPayload requires a phone. Expected 201/500 paths return validation 422 before storage.",
+    "environment": "First sandboxed attempt also had socket EACCES. These counts are from the subsequent permitted run with functioning local sockets.",
+    "failingTests": [
+      "h013-intake: isolated enabled order stores intent once and sends distinct synthetic notification",
+      "h017a-intake: all package keys persist explicit order intent and normalized attribution exactly once",
+      "h017a-intake: storage failure never acknowledges acceptance or attempts email",
+      "h017a-intake: order conflict and rate limiting remain authoritative"
+    ]
+  },
+  "currentThreeFieldSyntheticProbe": {
+    "runtime": "createOrderPayload -> createAppServer -> SQLite :memory: -> injected fake notifyLead transport; no real email",
+    "fields": {"website": "example.test", "email": "synthetic@example.test", "phone": "+47 900 00 000"},
+    "packages": ["optimalisering", "vekst", "partner"],
+    "firstStatuses": [201, 201, 201],
+    "retryStatuses": [201, 201, 201],
+    "sameIdOnEachRetry": true,
+    "storedLeads": 3,
+    "storedConversions": 3,
+    "notificationHasUndefinedLegacyCompanyAndContact": true,
+    "productionPersistenceOrDeliveryProven": false
+  },
+  "browser": {
+    "tool": "isolated headless Chrome via CDP; no in-app browser available; Chrome MCP had profile conflict",
+    "source": "fresh static local build at http://127.0.0.1:4334",
+    "routes": ["/", "/synlighet/", "/konvertering/", "/priser/", "/vurdering/", "/kontakt/"],
+    "widths": [1440, 900, 390, 320],
+    "horizontalOverflowIn24Samples": false,
+    "capturedPostRequests": 0,
+    "runtimeExceptions": 0,
+    "screenshots": 29,
+    "acceptance": "All saved PNGs inspected. Initial unreachable-page shot rejected and overwritten. Initial keyboard probe lacked native key codes; corrected keyboard.mjs supplies authoritative keyboard observations. Deep-link screenshot recaptured after 1800ms stability wait.",
+    "limits": "CSS viewport simulation, no physical mobile, screen reader, zoom/contrast conformance audit, hosted interactions, CMS save, live email, or production acceptance. Not a full verify run."
+  }
+}
