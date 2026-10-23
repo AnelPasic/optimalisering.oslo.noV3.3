@@ -2,12 +2,12 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {DatabaseSync} from 'node:sqlite';
-import worker from '../worker.mjs';
-import {notifyOne} from '../notify.mjs';
-import {verifyAccess} from '../access.mjs';
+import worker from '../src/worker.mjs';
+import {notifyOne} from '../src/notify.mjs';
+import {verifyAccess} from '../src/access.mjs';
 const origin='https://optimalisering.oslo.no';
 function environment(){
- const sqlite=new DatabaseSync(':memory:');sqlite.exec(readFileSync(new URL('../0001_init.sql', import.meta.url),'utf-8'));
+ const sqlite=new DatabaseSync(':memory:');sqlite.exec(readFileSync(new URL('../migrations/0001_init.sql', import.meta.url),'utf-8'));
  const DB={prepare(sql){return {bind(...args){const q=sqlite.prepare(sql);return {async first(){return q.get(...args)??null},async all(){return {results:q.all(...args)}},async run(){const result=q.run(...args);return {meta:{changes:result.changes}}}}}}}};
  const env={DB,SITES_JSON:JSON.stringify({'optimalisering.oslo.no':{origins:[origin]}}),RESEND_API_KEY:'test-placeholder',RESEND_FROM:'no-reply@example.com',LEAD_TO_EMAIL:'medon@example.com'};
  return {env,sqlite};
