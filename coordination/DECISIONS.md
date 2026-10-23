@@ -1,5 +1,16 @@
 # Decisions and authority
 
+## D-127 — OWNER ønsker klikkbar Synlighet-dropdown, større fagstruktur og raskest mulig Resend-basert skjemaaktivering — 2026-10-23
+
+OWNER endrer C0/C1s anbefalte flate navigasjon: **Synlighet** skal fortsatt klikke til `/synlighet/`, og en egen nedtrekkskontroll skal vise **SEO** (forklaring, `/seo/`), **AI-synlighet/AIO** (forklaring, `/ai-synlighet/`) og **Lokal SEO** (forklaring, planlagt `/lokal-seo/`). Ingen død lenke før Lokal SEO-siden finnes. Behold Konvertering, Priser, Innsikt og Gratis sjekk som fungerende primære innganger; fikse 320px touch/aktiv side. Dette er OWNER-valgt arkitekturretning og avgrenset neste implementasjon, ikke godkjent endelig visuell header.
+
+Nettsiden skal vokse i reell SEO/AIO-faglig bredde gjennom en tydelig Synlighet-hub, distinkte tjenestesider og kvalitetsstyrte innsiktsartikler. Ingen kunstig stort nettsted eller masseproduserte søkesider. Følg MWS-031, eksisterende godkjent copy/cases/priser og H-024C1 CMS-arkitektur.
+
+OWNER opplyser at eksisterende live-side **bruker Resend** og ønsker å få skjemaene operative raskt. Eksisterende `app/server/resend.mjs` viser Resend-kode, men ny Worker er statisk og `HomeAssessment` hardt deaktivert. **Først verifiser den virkelige eksisterende Resend-ingressen**, og vurder sikrest mulig gjenbruk; deretter bevis ekte mottak, varsel, lagring/retry og lovlige personvern- og kontaktopplysninger før offentlig aktivering. Ikke anta at endring av et flagg er tilstrekkelig, og ikke eksponer API-nøkler. Fullt scope og Codex-handoff: `coordination/D127-SYNLIGHET-DROPDOWN-AND-RESEND-DELIVERY.md`.
+
+Ingen kundeinnhold, priser, globale mastere, prod-/noindexflagg eller offentlig leadhåndtering endres av denne dokumentasjonsbeslutningen.
+
+
 ## D-126 — OWNER godkjenner to Spiss+ FAQ-endringer — 2026-10-22
 
 OWNER godkjente eksplisitt den redaksjonelle testen: **to omskrivinger, tre eksisterende svar beholdes**. Direkte ChatGPT-commit `76d2a72ec0f5006ef2ad9692da7680f4b1b1e288` oppdaterte kun `app/src/content/global-elements/sporsmal.json`, feltene `content.items[3].answer` (Synlighet + konvertering) og `content.items[4].answer` (bedrifter utenfor Oslo). Originaltekst, spørsmål, rekkefølge, øvrige tre svar (inkludert pris-/budsjettdetaljer), UUID, globalmaster-identitet og alle andre filer uendret. Eksakt Git-diff med to fjernede og to tillagte linjer verifisert mot main etter commit.
