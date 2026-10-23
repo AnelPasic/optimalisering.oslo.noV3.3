@@ -1,0 +1,21 @@
+{
+  "checks": [
+    "home 320px: zero POST, disabled transport, native submit guarded, no overflow, noindex",
+    "assessment 320px: zero POST, disabled transport, native submit guarded, no overflow, noindex",
+    "order 320px: zero POST, disabled transport, native submit guarded, no overflow, noindex",
+    "home 390px: zero POST, disabled transport, native submit guarded, no overflow, noindex",
+    "assessment 390px: zero POST, disabled transport, native submit guarded, no overflow, noindex",
+    "order 390px: zero POST, disabled transport, native submit guarded, no overflow, noindex",
+    "home 1440px: zero POST, disabled transport, native submit guarded, no overflow, noindex",
+    "assessment 1440px: zero POST, disabled transport, native submit guarded, no overflow, noindex",
+    "order 1440px: zero POST, disabled transport, native submit guarded, no overflow, noindex",
+    "all three form paths have disabled no-JS submit buttons"
+  ],
+  "postRequests": [],
+  "pageErrors": [],
+  "counts": {
+    "leads": 0,
+    "conversions": 0
+  },
+  "scope": "local preview only; no remote POST"
+}
