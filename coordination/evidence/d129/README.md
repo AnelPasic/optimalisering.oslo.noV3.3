@@ -4,6 +4,8 @@ Base: freshly fetched GitHub `main` **150f3dc94d19bd8c9e1cdf22155b46d372ed8b81**
 
 Implementation commit: **23c2dc64de3a68b0ed209ae574a768f99ae5a502**. Git history identifies the separate evidence/coordination revision; this document does not embed its own commit ID.
 
+Delivery: [draft PR #2](https://github.com/AnelPasic/optimalisering.oslo.noV3.3/pull/2). Main advanced during implementation to `df4bfdd0506dc25b8db0bb4c1d888e5884386dac`, adding only coordination handoff/status. Those concurrent instructions point to older PR #1; the direct user request in this chat explicitly required the D-129 branch and separate draft, so PR #1 was preserved untouched. Our PROJECT-STATE insertion is placed away from the concurrent top block to preserve both at a future approved merge. No main merge, rebase or rewritten history was performed. Branch consolidation is an OWNER decision before merge, independent of the verified code/tests.
+
 ## Verified
 
 | Command / scope | Result |
