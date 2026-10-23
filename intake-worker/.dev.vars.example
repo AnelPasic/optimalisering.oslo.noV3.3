@@ -1,0 +1,8 @@
+# Never commit real values. Set live secrets through Cloudflare secure configuration.
+SITES_JSON={"optimalisering.oslo.no":{"origins":["http://localhost:4321","https://optimalisering.oslo.no"]}}
+RESEND_API_KEY=REPLACE_WITH_SERVER_ONLY_SECRET
+RESEND_FROM=REPLACE_WITH_VERIFIED_SENDER
+LEAD_TO_EMAIL=REPLACE_WITH_APPROVED_MONITORED_INBOX
+ACCESS_ISSUER=https://YOUR_TEAM.cloudflareaccess.com
+ACCESS_AUD=REPLACE_WITH_ACCESS_AUDIENCE
+ALLOWED_ADMIN_EMAILS=REPLACE_WITH_APPROVED_ADMIN_EMAIL
