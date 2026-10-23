@@ -1,4 +1,21 @@
 # Decisions and authority
+## D-129 — OWNER GO for safe development of Worker + D1 + Resend — 2026-10-23
+
+OWNER: «da kjører vi det». Implementer valgt D-128-arkitektur **i isolert utviklingsgren/draft PR**, ikke produksjon. Fullt, bindende omfang: `coordination/D129-WORKER-D1-RESEND-IMPLEMENTATION.md`. D1 lagrer kvittert lead før suksess; Resend retry/feilstatus og fremtidig LeadProof-handoff er separate; minimale sikre eksport-/lesefunksjoner; ingen ny CRM. Ikke bland inn upushet lokal D-127-navigasjonsgren eller overskriv godkjent CMS, priser og innhold. Fokuserte syntetiske tester og review-safe formkontrakter; stopp før ekte Cloudflare-provisjonering, hemmeligheter, e-post/test med reelle adresser, skjemaktivering, indeksering, merge eller lansering.
+
+
+## D-128 — OWNER velger Cloudflare Worker + D1 + Resend for henvendelsesmottak — 2026-10-23
+
+OWNER har valgt **Cloudflare Worker + D1 + Resend** som neste tekniske retning for Optimalisering Oslo og ønsker at løsningen skal kunne gjenbrukes på opptil 10–15 nettsteder med så lav driftspris som mulig. Dette erstatter R2/JSON-forslaget som primært lagringsvalg, og erstatter ikke LeadProof som fremtidig hovedoversikt.
+
+**Mål og avgrensning:** Worker validerer og kvitterer først etter varig D1-lagring, sender varsling via Resend og kan forsøke mislykket varsling på nytt. Registrer separat status for e-post og fremtidig LeadProof-overføring, med stabil `submission_id`, idempotens og tenant/site-avgrensning. Kun et minimalt, autentisert lese-/eksportgrensesnitt er aktuelt for backup/feilsøking. Ikke bygg et konkurrerende CRM eller kopier personlig kundedata til GitHub/Pages CMS. LeadProof Gate 1 sporer kilde/suksesshendelser uten PII; fremtidig leadbehandling/PII krever separat kontrakt/gate, og skal ikke antas tilgjengelig nå.
+
+**Gratisgrense-kontroll 2026-10-23:** Cloudflare Workers Free tillater inntil **100 scripts per konto** og **100 000 Worker-kall per dag, samlet**, mens statiske asset-kall som ikke kjører Worker er gratis. D1 Free tillater **kun 10 databaser per Cloudflare-konto**, inntil 500 MB hver, 5 GB totalt; 5 mill. leste og 100 000 skrevne rader/dag totalt. Workers Paid har en grunnpris på om lag **$5 per konto per måned** og høyere databasegrense; bruk over inkluderte kvoter kan faktureres. Resend Free: **3 avsenderdomener, 3 000 e-poster/mnd og 100/dag per team**. 10–15 nettsteder kan derfor være gratis med én forsvarlig delt D1 og samme avsenderdomene, men ikke med 15 separate D1-databaser på én Free-konto. Kundevis separat isolasjon, domeneavsendere og databehandleransvar vurderes før valg av konkret utrulling. Gratis betyr ikke ubegrenset eller garantert zero-cost ved vekst.
+
+**Sikkerhet/lanseringsgate:** Bruk server-side hemmelig Resend-nøkkel, validert origin/host + autorisert site-ID, ratevern, D1-unik idempotens, retry med varig status, godkjent varslingsmottaker, kryptert/avgrenset operatørtilgang og tidsstyrt sletting/eksport. Avklar personvern/retensjon og verifiser ekte innboksmottak før produksjonsflagg og live POST aktiveres. Ingen deploy, DB-opprettelse, live e-post, CMS-endring eller lanseringsgodkjenning gis av denne dokumentasjonsbeslutningen.
+
+Kilder kontrollert 2026-10-23: https://developers.cloudflare.com/workers/platform/limits/ ; https://developers.cloudflare.com/d1/platform/limits/ ; https://developers.cloudflare.com/d1/platform/pricing/ ; https://developers.cloudflare.com/workers/static-assets/ ; https://resend.com/pricing .
+
 
 ## D-127 — OWNER ønsker klikkbar Synlighet-dropdown, større fagstruktur og raskest mulig Resend-basert skjemaaktivering — 2026-10-23
 

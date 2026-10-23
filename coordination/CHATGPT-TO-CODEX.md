@@ -1,4 +1,17 @@
 # ChatGPT to Codex
+## CURRENT D-129 — implement Worker + D1 + Resend in isolated development branch
+
+OWNER has approved moving from D-128 plan into scoped **development implementation**. Read `coordination/D129-WORKER-D1-RESEND-IMPLEMENTATION.md` FIRST; it supersedes D-128's 'planning only' boundary **only for development code and synthetic testing**. Create a separate `feat/d129-worker-d1-resend` branch from fresh main and a draft PR, preserve existing D-127 unpushed local navigation work, all owner CMS content, pricing and case proof. Deliver D1 receipt+dedupe, Resend-notification status and retry, minimal strongly protected read/export API, safe shared-site architecture and test evidence. No separate CRM and no raw lead PII into current LeadProof browser-event API. Do NOT create production resources, secrets, send real email, activate form flags, publish an indexed page, merge PR or deploy production until separate owner verification. Follow the document's acceptance STOP.
+
+
+## CURRENT D-128 / 2026-10-23 — Worker + D1 + Resend selected (planning, no activation)
+
+OWNER locks **Cloudflare Worker + D1 + Resend** as preferred small durable form-receipt and Resend notification architecture for Optimalisering Oslo, with future LeadProof forwarding (not a second CRM). This supersedes the prior possible R2 JSON-primary storage option under D-127. D1 receipt **must commit before success ACK**; distinguish receipt from Resend delivery and LeadProof delivery, ensure stable submission ID and idempotent retries. A small read/export endpoint with strong authentication is optional for backup; do not store leads in Git/Pages CMS.
+
+For 10–15 sites, **Cloudflare Free allows at most 10 D1 databases/account**, despite up to 100 Worker scripts/account and 100k Worker requests/day shared. Consider a shared D1 only for approved Medon-owned sites with strictly enforced site separation; isolated customer DBs may justify Workers Paid (~$5/month base per account) subject to billing. Resend Free currently limits one team to three verified sender domains and 3000/month/100/day emails. Clarify per-customer sender/account and privacy before multi-site rollout. LeadProof's current Gate 1 browser ingest does not accept raw lead PII; never send personal data to that event endpoint.
+
+Next Codex task: implement and test the **smallest scoped** Cloudflare form receiver in a review branch only after reading current D-127, C0/C1 intake findings and latest site state; prepare D1 migration, endpoint, Resend retry, export/recovery and privacy guard evidence without provisioning production secrets, enabling real submissions/indexing or deploying a production API until separate OWNER/OPS acceptance. Existing latest local Codex header branch may not be pushed; avoid rewriting its work or assuming it is on main. This entry is a decision/instruction only, NOT authorization to deploy or launch.
+
 
 ## CURRENT D-127 / 2026-10-23 — clickable Synlighet dropdown and Resend-first launch route (OWNER revision)
 
