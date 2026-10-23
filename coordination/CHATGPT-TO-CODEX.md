@@ -1,5 +1,14 @@
 # ChatGPT to Codex
 
+## CURRENT D-128 / 2026-10-23 — Worker + D1 + Resend selected (planning, no activation)
+
+OWNER locks **Cloudflare Worker + D1 + Resend** as preferred small durable form-receipt and Resend notification architecture for Optimalisering Oslo, with future LeadProof forwarding (not a second CRM). This supersedes the prior possible R2 JSON-primary storage option under D-127. D1 receipt **must commit before success ACK**; distinguish receipt from Resend delivery and LeadProof delivery, ensure stable submission ID and idempotent retries. A small read/export endpoint with strong authentication is optional for backup; do not store leads in Git/Pages CMS.
+
+For 10–15 sites, **Cloudflare Free allows at most 10 D1 databases/account**, despite up to 100 Worker scripts/account and 100k Worker requests/day shared. Consider a shared D1 only for approved Medon-owned sites with strictly enforced site separation; isolated customer DBs may justify Workers Paid (~$5/month base per account) subject to billing. Resend Free currently limits one team to three verified sender domains and 3000/month/100/day emails. Clarify per-customer sender/account and privacy before multi-site rollout. LeadProof's current Gate 1 browser ingest does not accept raw lead PII; never send personal data to that event endpoint.
+
+Next Codex task: implement and test the **smallest scoped** Cloudflare form receiver in a review branch only after reading current D-127, C0/C1 intake findings and latest site state; prepare D1 migration, endpoint, Resend retry, export/recovery and privacy guard evidence without provisioning production secrets, enabling real submissions/indexing or deploying a production API until separate OWNER/OPS acceptance. Existing latest local Codex header branch may not be pushed; avoid rewriting its work or assuming it is on main. This entry is a decision/instruction only, NOT authorization to deploy or launch.
+
+
 ## CURRENT D-127 / 2026-10-23 — clickable Synlighet dropdown and Resend-first launch route (OWNER revision)
 
 **READ `coordination/D127-SYNLIGHET-DROPDOWN-AND-RESEND-DELIVERY.md` FIRST on fresh main.** This **supersedes the previous C0/C1 flat header A implementation direction** (old C0/C1 local report remains historical). OWNER specifically wants `Synlighet` **clickable** at `/synlighet/` plus separate accessible submenu control with SEO `/seo/`, AI-synlighet/AIO `/ai-synlighet/` and Lokal SEO `/lokal-seo/`, each with a short explanation. Lokal SEO does NOT exist yet; no dead menu links. Keep Konvertering/Priser/Innsikt/Gratis sjekk, correct 320px hamburger/active page, preserve existing approved visual DNA and H-024C1 mixed Pages CMS list. Implement N1 in noindex review scope and prepare N2 Lokal SEO page research/editor-ready draft; run focused desktop/mobile/keyboard/links/CI tests. OWNER wants a more complete expertise/authority website, but no mass-generated content or service/case price fabrication.
