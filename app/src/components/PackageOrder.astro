@@ -6,7 +6,7 @@ type Package = HomepageContent['packages']['items'][number];
 interface Props { item: Package; featured?: boolean; orderIntro: string; orderSubmitLabel: string; }
 const { item, featured = false, orderIntro, orderSubmitLabel } = Astro.props;
 const id = (field: string) => `package-${item.key}-${field}`;
-const enabled = site.ordersEnabled && !site.preview;
+const enabled = site.ordersEnabled;
 // Real intake requires backend, privacy, notification and launch approval.
 ---
 <details class="package-order-inline" data-package-order data-package-key={item.key}>
@@ -14,7 +14,7 @@ const enabled = site.ordersEnabled && !site.preview;
   <div class="package-order-panel">
     <h4>Bestill {item.title}</h4>
     <p>{orderIntro}</p>
-    <form data-package-order-form data-enabled={String(enabled)} data-endpoint={site.leadEndpoint} method="post" action={enabled ? site.leadEndpoint : undefined} onsubmit={!enabled ? 'return false' : undefined}>
+    <form data-package-order-form data-enabled={String(enabled)} data-endpoint={site.leadEndpoint} method="post" onsubmit="return false">
       <input type="hidden" name="form" value="pakke-bestilling" />
       <input type="hidden" name="package" value={item.key} />
       <div class="package-order-fields">
