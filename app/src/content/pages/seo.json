@@ -4,20 +4,53 @@
   "status": "REVIEW_REQUIRED",
   "authority": "DRAFT / NON-AUTHORITATIVE",
   "seo": {
-    "title": "SEO for relevante søk og nyttige besøk | Medon",
-    "description": "SEO begynner med søk som passer tilbudet ditt. Medon vurderer hvilke sider som bør finnes, forstås og lede kunden videre. Ta en gratis sjekk."
+    "title": "SEO-byrå for bedrifter i Oslo | Optimalisering Oslo",
+    "description": "SEO-tjenester for bedrifter i Oslo og Norge. Vi vurderer søkeord, tjenestesider, tekniske hindringer og veien fra Google-søk til relevante henvendelser."
   },
-  "eyebrow": "Søkemotoroptimalisering",
-  "title": "Bli funnet når kunden leter etter det du tilbyr.",
-  "intro": "Du trenger ikke flere søkeord for enhver pris. Du trenger tydelige sider for de søkene som passer bedriften. Vi ser på sammenhengen mellom kundens spørsmål, nettsidens svar og en relevant vei videre.",
+  "eyebrow": "SEO - søkemotoroptimalisering for bedrifter",
+  "title": "SEO for bedrifter som vil bli funnet av riktige kunder.",
+  "intro": "SEO gjør det lettere for kunder å finne relevante tjenester i Googles organiske søkeresultater. Vi hjelper bedrifter i Oslo og resten av Norge med å vurdere hva de bør bli funnet for, hvilke sider som trenger arbeid, og hvordan besøk kan bli til henvendelser. Først finner vi ut hva som faktisk holder nettsiden tilbake.",
   "sections": [
     {
       "_block": "content",
-      "id": "sok-side",
-      "heading": "Ett søk trenger et svar. Ett svar trenger riktig side.",
+      "id": "seo-tjenester",
+      "heading": "Hva gjør vi når vi jobber med SEO?",
       "body": [
-        "Et søk etter en leverandør har en annen oppgave enn et søk etter en forklaring. En tjenesteside bør hjelpe kunden å velge. En veiledning bør hjelpe kunden å forstå eller undersøke.",
-        "Vi vurderer hvilke behov nettsiden bør dekke, om en eksisterende side allerede gjør jobben, og hva en ny side faktisk ville tilføre. Flere sider om nesten det samme kan gjøre tilbudet vanskeligere å forstå."
+        "Et SEO-byrå eller en SEO-konsulent bør kunne vise deg hvilke problemer som undersøkes, hva som foreslås endret og hvorfor. Oppgavene under er mulige arbeidsområder, ikke en fast leveranseliste som følger med alle avtaler.",
+        "Vi starter med tilbudet og kundene dere vil nå. Deretter prioriterer vi tiltak på eksisterende nettside før vi anbefaler flere sider, mer innhold eller større teknisk arbeid."
+      ],
+      "items": [
+        {
+          "title": "Søkeord og søkeintensjon",
+          "text": "Avklare hva relevante kunder søker etter, om de vil kjøpe eller lære, og hvilke søk dere faktisk ønsker å svare på."
+        },
+        {
+          "title": "Tjenestesider og innhold",
+          "text": "Forbedre overskrifter, beskrivelser, svar, interne lenker og veien videre fra en relevant side til kontakt eller kjøp."
+        },
+        {
+          "title": "Teknisk SEO",
+          "text": "Undersøke blant annet indeksering, brutte lenker, omdirigeringer og sidens tilgjengelighet for søkemotorer, og prioritere reelle hindringer."
+        },
+        {
+          "title": "Måling og prioritering",
+          "text": "Skille synlighet og klikk fra relevante henvendelser. Tilgjengelige tall fra søk, nettside og kundeoppfølging brukes med sine begrensninger."
+        }
+      ],
+      "links": [
+        {
+          "label": "Se hvordan SEO inngår i våre pakker",
+          "href": "/priser/"
+        }
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "sok-side",
+      "heading": "Hvilke søk skal føre kunden til hvilken side?",
+      "body": [
+        "Søker noen etter \"rørlegger døgnvakt\", vil de normalt vite hvem som kan hjelpe. Søker de \"hva gjør jeg ved vannlekkasje\", trenger de først et svar. En tjenesteside og en veiledning løser forskjellige oppgaver.",
+        "Vi kobler viktige søk til sider som allerede finnes, før vi vurderer nye. Søkeord med ulik skrivemåte, men samme hensikt, trenger sjelden hver sin landingsside. Målet er at den relevante kunden finner svaret og kan ta neste steg uten å lete videre."
       ],
       "items": [
         {
@@ -37,21 +70,21 @@
     {
       "_block": "content",
       "id": "teknisk",
-      "heading": "Godt innhold må også kunne bli funnet.",
+      "heading": "Teknisk SEO: Kan Google finne, lese og forstå de viktige sidene?",
       "body": [
-        "Et teknisk hinder, en uklar sidestruktur eller en viktig side uten interne lenker kan være relevant å undersøke. SEO er derfor både en vurdering av innhold og av hvordan nettstedet er satt sammen.",
-        "Mulig arbeid kan være å avklare sideformål, forbedre innhold eller rette tekniske forhold som påvirker oppdagelse og forståelse. Det konkrete arbeidet avtales etter behov. En teknisk sjekkliste er ikke en garanti for plassering."
+        "En god tjenesteside hjelper lite hvis den ved en feil er blokkert for indeksering, peker til feil adresse eller ikke finnes i den interne lenkestrukturen. Vi undersøker hvilke tekniske forhold som faktisk står i veien, fremfor å selge en lang sjekkliste med grønne prikker.",
+        "Aktuelle kontroller kan omfatte indeksering, omdirigeringer, interne lenker, mobilbruk og sideytelse. Større tekniske endringer eller ombygginger avtales separat. SEO er ikke et løfte om en bestemt plassering."
       ]
     },
     {
       "_block": "content",
       "id": "prioritering",
       "eyebrow": "Prioritering før volum",
-      "heading": "Start med søk du faktisk kan hjelpe kunden med.",
+      "heading": "En SEO-plan skal prioritere arbeid, ikke bare produsere rapporter.",
       "body": [
-        "En bedrift som leverer en spesialisert tjeneste trenger ikke flest mulig besøk. Et tydelig svar på et relevant leverandørsøk kan være mer nyttig enn en generell artikkel som trekker mennesker med andre behov.",
-        "Vi prioriterer ut fra tilbudet, kundene og forventet kommersiell nytte. Hovednettsiden eller nettbutikken er normalt utgangspunktet. Arbeid på flere nettsteder eller ekstra landingssider må vurderes særskilt.",
-        "SEO er en del av Synlighet. Pris, innhold og grenser for det løpende arbeidet må avtales. Ingen bestemt plassering eller trafikkøkning er lovet."
+        "En SEO-konsulent bør først finne ut hva bedriften vil selge mer av. Hvis tilbudet er uklart på de viktigste tjenestesidene, kan det være viktigere enn å publisere artikkel nummer 80.",
+        "Vi vurderer først eksisterende sider, relevante søk og tilgjengelige målinger. Deretter foreslår vi konkrete prioriteringer innenfor avtalt kapasitet. SEO kan være ett prioritert arbeidsområde i de eksisterende optimaliseringspakkene; hvilke tiltak som inngår, avtales.",
+        "Ingen kan love førsteplass, et bestemt antall besøk eller nye kunder. En relevant henvendelse er verdt å undersøke; en god plassering på et søk ingen kjøper fra, er mest en pokal."
       ],
       "links": [
         {
@@ -66,11 +99,30 @@
     },
     {
       "_block": "content",
-      "id": "effekt",
-      "heading": "Synlige sider er et mellomsteg. Relevante kunder er målet.",
+      "id": "seo-oslo",
+      "heading": "SEO i Oslo: Hvem søker, og hvor leverer bedriften?",
       "body": [
-        "Vi må skille mellom at en side vises, at noen klikker og at besøket fører til en relevant handling. Trafikkvekst alene forteller ikke om arbeidet har verdi for bedriften.",
-        "For tjenester er det nyttig å følge henvendelsenes kvalitet og muligheten for at de blir kunder. For nettbutikker må søk knyttes til kjøp og ordrenes økonomi der data gjør det mulig. Måling har begrensninger, og sammenfall er ikke alltid årsak."
+        "Bedrifter i Oslo konkurrerer om mange av de samme søkene. Noen trenger hjelp fra en leverandør i et bestemt område, mens andre sammenligner tjenester uansett hvor leverandøren sitter. Den forskjellen avgjør hva slags innhold og søk vi bør prioritere.",
+        "Vi jobber med SEO for bedrifter i Oslo og resten av Norge. Hvis kunder velger deg ut fra avstand, åpningstid eller tjenesteområde, bør Google bedriftsprofil og lokal SEO også vurderes. Det er ikke et argument for å kopiere samme tekst til tjue sider med forskjellige stedsnavn."
+      ],
+      "links": [
+        {
+          "label": "Les om lokal SEO og Google Maps",
+          "href": "/lokal-seo/"
+        },
+        {
+          "label": "Guide til Google bedriftsprofil",
+          "href": "/innsikt/google-bedriftsprofil/"
+        }
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "effekt",
+      "heading": "Hva får bedriften igjen for SEO-arbeidet?",
+      "body": [
+        "Se først om viktige sider blir vist og besøkt fra relevante søk. Undersøk deretter om disse besøkene fører til henvendelser eller kjøp, der sporing og samtykke gir et forsvarlig grunnlag. Plasseringer og trafikk er nyttige signaler, men ikke hele regnestykket.",
+        "En rørlegger har liten nytte av hundre henvendelser om tjenester bedriften ikke tilbyr. For en nettbutikk er omsetning heller ikke det samme som fortjeneste. Vi må skille mellom det som kan observeres, det som kan tilskrives tiltakene, og det bedriften faktisk tjener."
       ],
       "links": [
         {
@@ -97,10 +149,10 @@
     {
       "_block": "content",
       "id": "sjekk",
-      "heading": "Send nettsiden. Vi vurderer et fornuftig sted å begynne.",
+      "heading": "Usikker på om SEO er riktig sted å starte?",
       "body": [
-        "I den gratis, avgrensede manuelle sjekken gir Medon kort veiledning om hva vi ville startet med og hvorfor. Du trenger en nettadresse og en e-postadresse for bedriften.",
-        "Sjekken er ikke en full SEO-revisjon, komplett feilliste, prognose eller automatisk poengsum. Den hjelper oss å vurdere om Synlighet, Konvertering eller begge bør komme først."
+        "Send nettadressen og bedriftens e-postadresse for en gratis, avgrenset manuell sjekk. Vi vurderer hva som ser ut til å hindre relevante kunder i å finne frem eller ta kontakt, og hva vi ville undersøkt først.",
+        "Sjekken er ikke en full SEO-revisjon, en resultatgaranti eller gratis gjennomføring. Vi avklarer om Synlighet, Konvertering eller begge bør komme først, og eventuelt hvilket avtalt arbeid som er fornuftig."
       ],
       "links": [
         {
@@ -122,6 +174,18 @@
     {
       "question": "Kan SEO erstatte annonser?",
       "answer": "Det avhenger av behovet og økonomien. SEO og betalt synlighet kan ha ulike roller og kan vurderes sammen. Annonsebudsjett er ikke inkludert med mindre det uttrykkelig avtales."
+    },
+    {
+      "question": "Hva gjør et SEO-byrå eller en SEO-konsulent?",
+      "answer": "Et SEO-byrå kan undersøke søkeord og kundebehov, gjøre tjenestesider tydeligere, avdekke tekniske hindringer og følge med på relevante resultater. Hvilke tiltak som faktisk utføres, bestemmes av nettsidens behov og avtalt omfang. En rapport alene er ingen forbedring."
+    },
+    {
+      "question": "Hva koster SEO hos Optimalisering Oslo?",
+      "answer": "SEO kan inngå som ett prioritert arbeidsområde i våre eksisterende optimaliseringspakker. Se prisoversikten for gjeldende månedspriser og vilkår. Større utvikling eller nye nettsider kan kreve et separat tilbud; vi lover ikke en fast mengde SEO-arbeid uten avtale."
+    },
+    {
+      "question": "Hjelper dere bedrifter utenfor Oslo?",
+      "answer": "Ja, vi vurderer SEO for bedrifter i Oslo og resten av Norge. Når kundene velger leverandør basert på hvor de befinner seg, vurderer vi også lokal SEO, Google bedriftsprofil og faktiske tjenesteområder."
     }
   ],
   "cta": {
