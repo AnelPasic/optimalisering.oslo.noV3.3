@@ -29,8 +29,12 @@ jobs:
       - run: npm ci
       - run: npm run test:intake
       - run: node --test tests/h013-intake.test.mjs tests/h017a-intake.test.mjs tests/http.test.mjs tests/lead.test.ts
+      - name: Verify current SEO/Lokal SEO/CMS globals and navigation
+        run: node --test tests/lokal-seo-page.test.ts tests/google-bedriftsprofil-page.test.ts tests/header-navigation.test.ts tests/seo-commercial-content.test.ts tests/seo-mixed-composition.test.ts tests/service-global-placements.test.ts
       - run: npm run check
       - run: npm run build
+      - name: Audit generated pages and internal links
+        run: node scripts/audit-build.mjs
       - run: npx playwright install --with-deps chromium
       - run: npm run qa:intake:review
       - uses: actions/upload-artifact@v4
