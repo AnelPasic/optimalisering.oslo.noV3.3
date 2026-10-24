@@ -14,27 +14,34 @@
     {
       "_block": "content",
       "id": "seo-tjenester",
-      "heading": "Hva gjør vi når vi jobber med SEO?",
+      "heading": "Dette kan vi gjøre for å forbedre SEO.",
       "body": [
-        "Et SEO-byrå eller en SEO-konsulent bør kunne vise deg hvilke problemer som undersøkes, hva som foreslås endret og hvorfor. Oppgavene under er mulige arbeidsområder, ikke en fast leveranseliste som følger med alle avtaler.",
-        "Vi starter med tilbudet og kundene dere vil nå. Deretter prioriterer vi tiltak på eksisterende nettside før vi anbefaler flere sider, mer innhold eller større teknisk arbeid."
+        "Vi begynner med søkene som kan gi bedriften riktige kunder, og prioriterer tiltak på nettsiden. Hva som gjennomføres, bestemmes av behov og avtalt kapasitet."
       ],
       "items": [
         {
           "title": "Søkeord og søkeintensjon",
-          "text": "Avklare hva relevante kunder søker etter, om de vil kjøpe eller lære, og hvilke søk dere faktisk ønsker å svare på."
+          "text": "Avklare hva relevante kunder søker etter, om de vil kjøpe eller lære, og hvilke søk dere faktisk ønsker å svare på.",
+          "boxVariant": "card",
+          "surface": "mint"
         },
         {
           "title": "Tjenestesider og innhold",
-          "text": "Forbedre overskrifter, beskrivelser, svar, interne lenker og veien videre fra en relevant side til kontakt eller kjøp."
+          "text": "Forbedre overskrifter, beskrivelser, svar, interne lenker og veien videre fra en relevant side til kontakt eller kjøp.",
+          "boxVariant": "card",
+          "surface": "lavender"
         },
         {
           "title": "Teknisk SEO",
-          "text": "Undersøke blant annet indeksering, brutte lenker, omdirigeringer og sidens tilgjengelighet for søkemotorer, og prioritere reelle hindringer."
+          "text": "Undersøke blant annet indeksering, brutte lenker, omdirigeringer og sidens tilgjengelighet for søkemotorer, og prioritere reelle hindringer.",
+          "boxVariant": "card",
+          "surface": "base"
         },
         {
           "title": "Måling og prioritering",
-          "text": "Skille synlighet og klikk fra relevante henvendelser. Tilgjengelige tall fra søk, nettside og kundeoppfølging brukes med sine begrensninger."
+          "text": "Skille synlighet og klikk fra relevante henvendelser. Tilgjengelige tall fra søk, nettside og kundeoppfølging brukes med sine begrensninger.",
+          "boxVariant": "card",
+          "surface": "soft"
         }
       ],
       "links": [
@@ -42,39 +49,53 @@
           "label": "Se hvordan SEO inngår i våre pakker",
           "href": "/priser/"
         }
-      ]
+      ],
+      "eyebrow": "SEO-tjenester",
+      "headingAlign": "center",
+      "layout": "two-columns",
+      "surface": "soft"
     },
     {
       "_block": "content",
       "id": "sok-side",
       "heading": "Hvilke søk skal føre kunden til hvilken side?",
       "body": [
-        "Søker noen etter \"rørlegger døgnvakt\", vil de normalt vite hvem som kan hjelpe. Søker de \"hva gjør jeg ved vannlekkasje\", trenger de først et svar. En tjenesteside og en veiledning løser forskjellige oppgaver.",
-        "Vi kobler viktige søk til sider som allerede finnes, før vi vurderer nye. Søkeord med ulik skrivemåte, men samme hensikt, trenger sjelden hver sin landingsside. Målet er at den relevante kunden finner svaret og kan ta neste steg uten å lete videre."
+        "Kunden som søker etter \"rørlegger døgnvakt\" er nærmere å velge leverandør enn den som søker \"hva gjør jeg ved vannlekkasje\". Vi sørger for at begge møter en side som svarer på det de faktisk trenger."
       ],
       "items": [
         {
           "title": "Behovet",
-          "text": "Hvilken tjeneste, løsning eller produktgruppe søker kunden etter, og passer denne kunden bedriften?"
+          "text": "Hvilken tjeneste, løsning eller produktgruppe søker kunden etter, og passer denne kunden bedriften?",
+          "boxVariant": "card",
+          "surface": "soft"
         },
         {
           "title": "Siden",
-          "text": "Finnes det en konkret side som svarer på behovet med nyttig og riktig informasjon?"
+          "text": "Finnes det en konkret side som svarer på behovet med nyttig og riktig informasjon?",
+          "boxVariant": "card",
+          "surface": "mint"
         },
         {
           "title": "Neste steg",
-          "text": "Kan kunden vurdere tilbudet og enkelt gå videre til relevant kontakt eller kjøp?"
+          "text": "Kan kunden vurdere tilbudet og enkelt gå videre til relevant kontakt eller kjøp?",
+          "boxVariant": "card",
+          "surface": "lavender"
         }
-      ]
+      ],
+      "layout": "three-columns",
+      "headingAlign": "center",
+      "surface": "base"
     },
     {
       "_block": "content",
       "id": "teknisk",
       "heading": "Teknisk SEO: Kan Google finne, lese og forstå de viktige sidene?",
       "body": [
-        "En god tjenesteside hjelper lite hvis den ved en feil er blokkert for indeksering, peker til feil adresse eller ikke finnes i den interne lenkestrukturen. Vi undersøker hvilke tekniske forhold som faktisk står i veien, fremfor å selge en lang sjekkliste med grønne prikker.",
-        "Aktuelle kontroller kan omfatte indeksering, omdirigeringer, interne lenker, mobilbruk og sideytelse. Større tekniske endringer eller ombygginger avtales separat. SEO er ikke et løfte om en bestemt plassering."
-      ]
+        "Viktige sider må kunne indekseres og finnes gjennom tydelige interne lenker. Vi undersøker konkrete hindringer som feil omdirigeringer, utilgjengelig innhold og dårlig mobilopplevelse. Større tekniske endringer avtales separat."
+      ],
+      "eyebrow": "Teknisk SEO",
+      "surface": "lavender",
+      "headingAlign": "left"
     },
     {
       "_block": "content",
@@ -82,9 +103,8 @@
       "eyebrow": "Prioritering før volum",
       "heading": "En SEO-plan skal prioritere arbeid, ikke bare produsere rapporter.",
       "body": [
-        "En SEO-konsulent bør først finne ut hva bedriften vil selge mer av. Hvis tilbudet er uklart på de viktigste tjenestesidene, kan det være viktigere enn å publisere artikkel nummer 80.",
-        "Vi vurderer først eksisterende sider, relevante søk og tilgjengelige målinger. Deretter foreslår vi konkrete prioriteringer innenfor avtalt kapasitet. SEO kan være ett prioritert arbeidsområde i de eksisterende optimaliseringspakkene; hvilke tiltak som inngår, avtales.",
-        "Ingen kan love førsteplass, et bestemt antall besøk eller nye kunder. En relevant henvendelse er verdt å undersøke; en god plassering på et søk ingen kjøper fra, er mest en pokal."
+        "En side som ikke forklarer tilbudet, blir ikke bedre av at vi publiserer artikkel nummer 80. Vi vurderer søk, tilbud og eksisterende sider før vi foreslår mer arbeid.",
+        "SEO kan være ett prioritert område i optimaliseringspakkene. Vi avtaler oppgavene og følger relevante resultater, men lover ikke en bestemt plassering eller antall kunder."
       ],
       "links": [
         {
@@ -95,15 +115,20 @@
           "label": "Se tjenestealternativene",
           "href": "/priser/"
         }
-      ]
+      ],
+      "surface": "dark",
+      "headingAlign": "left"
+    },
+    {
+      "_block": "global",
+      "element": "priser"
     },
     {
       "_block": "content",
       "id": "seo-oslo",
       "heading": "SEO i Oslo: Hvem søker, og hvor leverer bedriften?",
       "body": [
-        "Bedrifter i Oslo konkurrerer om mange av de samme søkene. Noen trenger hjelp fra en leverandør i et bestemt område, mens andre sammenligner tjenester uansett hvor leverandøren sitter. Den forskjellen avgjør hva slags innhold og søk vi bør prioritere.",
-        "Vi jobber med SEO for bedrifter i Oslo og resten av Norge. Hvis kunder velger deg ut fra avstand, åpningstid eller tjenesteområde, bør Google bedriftsprofil og lokal SEO også vurderes. Det er ikke et argument for å kopiere samme tekst til tjue sider med forskjellige stedsnavn."
+        "Noen kunder søker etter en leverandør i et bestemt område. Andre sammenligner tjenester uten å bry seg om hvor leverandøren sitter. Vi vurderer hva som gjelder for dere, og kobler inn lokal SEO og Google bedriftsprofil når avstand og tjenesteområde betyr noe."
       ],
       "links": [
         {
@@ -114,52 +139,45 @@
           "label": "Guide til Google bedriftsprofil",
           "href": "/innsikt/google-bedriftsprofil/"
         }
-      ]
+      ],
+      "surface": "base",
+      "headingAlign": "left"
     },
     {
       "_block": "content",
       "id": "effekt",
       "heading": "Hva får bedriften igjen for SEO-arbeidet?",
       "body": [
-        "Se først om viktige sider blir vist og besøkt fra relevante søk. Undersøk deretter om disse besøkene fører til henvendelser eller kjøp, der sporing og samtykke gir et forsvarlig grunnlag. Plasseringer og trafikk er nyttige signaler, men ikke hele regnestykket.",
-        "En rørlegger har liten nytte av hundre henvendelser om tjenester bedriften ikke tilbyr. For en nettbutikk er omsetning heller ikke det samme som fortjeneste. Vi må skille mellom det som kan observeres, det som kan tilskrives tiltakene, og det bedriften faktisk tjener."
+        "Vi følger med på synlighet og relevante besøk, men spør også hva som skjer videre: Ble det en kvalifisert henvendelse eller et nytt kjøp? Måling har begrensninger. Flere klikk alene sier lite om hva bedriften faktisk tjener."
       ],
       "links": [
         {
           "label": "Les om måling av effekt",
           "href": "/innsikt/male-effekt-av-optimalisering/"
         }
-      ]
+      ],
+      "surface": "mint",
+      "headingAlign": "left"
     },
     {
       "_block": "content",
       "id": "ai",
-      "heading": "AI-synlighet er et eget spørsmål, selv når innholdet overlapper.",
+      "heading": "Hva med synlighet i ChatGPT og andre AI-svar?",
       "body": [
-        "Konkret informasjon om bedriften og tilbudet er nyttig uavhengig av hvor kunden undersøker. Men plassering i et søk og omtale i et AI-svar er ulike observasjoner.",
-        "Vi behandler ikke SEO-resultater som bevis for AI-anbefalinger. Vil du undersøke hvordan bedriften omtales i AI-baserte svar, bør også kilder, spørsmål og usikkerhet vurderes."
+        "Tydelige tjenestesider er et godt utgangspunkt også for AI-søk. Men en Google-plassering dokumenterer ikke en anbefaling fra en AI-tjeneste. Det vurderer vi separat."
       ],
       "links": [
         {
           "label": "Les om AI-synlighet",
           "href": "/ai-synlighet/"
         }
-      ]
+      ],
+      "surface": "soft",
+      "headingAlign": "left"
     },
     {
-      "_block": "content",
-      "id": "sjekk",
-      "heading": "Usikker på om SEO er riktig sted å starte?",
-      "body": [
-        "Send nettadressen og bedriftens e-postadresse for en gratis, avgrenset manuell sjekk. Vi vurderer hva som ser ut til å hindre relevante kunder i å finne frem eller ta kontakt, og hva vi ville undersøkt først.",
-        "Sjekken er ikke en full SEO-revisjon, en resultatgaranti eller gratis gjennomføring. Vi avklarer om Synlighet, Konvertering eller begge bør komme først, og eventuelt hvilket avtalt arbeid som er fornuftig."
-      ],
-      "links": [
-        {
-          "label": "Ta en gratis sjekk",
-          "href": "/vurdering/"
-        }
-      ]
+      "_block": "global",
+      "element": "sjekk"
     }
   ],
   "faq": [
@@ -190,7 +208,7 @@
   ],
   "cta": {
     "label": "Ta en gratis sjekk",
-    "href": "/vurdering/"
+    "href": "/seo/#sjekk"
   },
   "heroVisual": {
     "kind": "illustration",
