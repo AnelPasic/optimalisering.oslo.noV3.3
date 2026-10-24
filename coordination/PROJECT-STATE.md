@@ -1,5 +1,8 @@
 # Project state
 
+**2026-10-24 D-130 — INNHOLDSPUBLISERING GODKJENT / SOURCE MERGED, CLOUDFLARE DEPLOY IKKE VERIFISERT.** OWNER: «ok bare å gå løs på produksjon og publisering». Innholds-PR #3 `feat/content-lokal-seo-page` ble etter grønn GitHub Actions (run `40056903558`: Node-focused Lokal SEO/Google bedriftsprofil/header, Astro check, build og statisk lenke-/metadata-audit) squash-merget til `main` commit `7f851eabd27b3b053d6ef3365ff8ecfb9d579a1d`. Ny tjenesteside `/lokal-seo/` og guide `/innsikt/google-bedriftsprofil/`, internlenker/meny, dedikert Pages CMS og innholdsredigering for Innsikt er på `main`; begge page records har ennå `REVIEW_REQUIRED` / `DRAFT / NON-AUTHORITATIVE` (ingen fiktiv ytterligere content-lock eller offentlig launch). **GitHub merge og CI er ikke faktisk Cloudflare-build/deploy/live URL-bevis.** Neste separat OPS: bygg og deploy fra fersk `main` til eksisterende noindex Worker `optimalisering-oslo-v33` med fungerende Wrangler-identitet, kontroller de to URL-ene og mobil/lenker/CMS; ikke aktiver skjema/Resend/LeadProof, fjern noindex eller flytt offentlige domener uten egen produksjonsklarhet. Codex D-129 PR #1/#2 er separate og må ikke overskrives. D-130 dokumentasjon i `coordination/D130-LOKAL-SEO-PAGE-REVIEW.md`; oppdater historiske D-127 «unpublished draft» påstander ment som tidspunktshistorikk, ikke dagens sannhet.
+
+
 ## CURRENT CROSS-THREAD HANDOFF — 2026-10-24 (read this first; GitHub-verified)
 
 **Mission:** Finish Optimalisering Oslo's revenue-generating Norwegian website, reliable free-check/package-order intake and SEO/AIO authority. Do **not** delay launch for a reusable starter, NO/EN or dark mode. This paragraph is a continuity checkpoint, not new release approval.
