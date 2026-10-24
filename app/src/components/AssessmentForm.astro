@@ -2,7 +2,7 @@
 import { site } from '../config/site';
 import Arrow from './Arrow.astro';
 ---
-<form id="skjema" class="assessment-form card" method="post" action={site.leadsEnabled && !site.preview ? site.leadEndpoint : undefined} data-assessment data-endpoint={site.leadEndpoint} data-enabled={String(site.leadsEnabled && !site.preview)}>
+<form id="skjema" class="assessment-form card" method="post" onsubmit="return false" data-assessment data-endpoint={site.leadEndpoint} data-enabled={String(site.leadsEnabled)}>
   <div class="form-heading"><span class="eyebrow">Gratis, manuell sjekk</span><h3>Du sender en lenke.<br />Vi ser hvor vi ville startet.</h3></div>
   <label for="website">Nettside eller nettbutikk <span aria-hidden="true">*</span></label>
   <input class="input w-full" id="website" name="website" type="text" inputmode="url" placeholder="dinbedrift.no" required maxlength="2048" autocomplete="url" aria-describedby="website-error" />

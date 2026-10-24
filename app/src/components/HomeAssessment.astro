@@ -15,10 +15,11 @@ const { section, content, specimen = false, layout = 'split' } = Astro.props;
 const horizontal=layout==='horizontal';
 const prefix=horizontal?'ds-home-horizontal':'ds-home';
 const fieldId = (name: string) => specimen ? `${prefix}-${name}` : name;
+const enabled = site.leadsEnabled && !specimen;
 ---
 <section id={specimen ? `${prefix}-assessment` : section.id} class="assessment-section section-space" data-assessment-layout={layout}><div class:list={['shell assessment-grid grid grid-cols-1 items-start gap-(--gap-lg) min-[1101px]:gap-16',{'min-[901px]:grid-cols-2':!horizontal}]}>
   <div class:list={['assessment-copy',{'grid min-[901px]:grid-cols-2 gap-x-(--gap-lg) pt-0':horizontal}]}><div class={horizontal?'min-w-0':'contents'}><p class="eyebrow">{section.eyebrow}</p><h2>{section.heading}</h2></div><div class={horizontal?'min-w-0':'contents'}><p class="assessment-promise">{content.promise}</p>{section.body.map(text => <p>{text}</p>)}</div></div>
-  <form id={fieldId('skjema')} class="assessment-form card min-w-0 p-0" method="post" onsubmit="return false" data-home-assessment data-endpoint={site.leadEndpoint} data-enabled="false" data-specimen={specimen || undefined} data-disabled-status={content.disabledStatus}>
+  <form id={fieldId('skjema')} class="assessment-form card min-w-0 p-0" method="post" onsubmit="return false" data-home-assessment data-endpoint={site.leadEndpoint} data-enabled={String(enabled)} data-specimen={specimen || undefined} data-disabled-status={content.disabledStatus}>
    <div class:list={['card-body min-w-0 gap-0 p-(--panel-pad) min-[651px]:p-(--panel-pad-lg) text-(length:--type-body) leading-(--leading-body)',{'grid min-[901px]:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_auto] gap-x-(--gap)':horizontal}]}>
     <div class:list={['form-heading',{'col-span-full':horizontal}]}><h3>{content.heading}</h3></div>
     <div class={horizontal?'min-w-0':'contents'}>
@@ -31,8 +32,9 @@ const fieldId = (name: string) => specimen ? `${prefix}-${name}` : name;
     <label for={fieldId('message')}>{content.messageLabel} <span class="optional">{content.optional}</span></label>
     <textarea class="textarea w-full" id={fieldId('message')} name="message" rows="3" maxlength="2000" placeholder={content.messagePlaceholder}></textarea>
     </div>
+    <div class="honeypot" hidden aria-hidden="true"><label for={fieldId('website-confirmation')}>La feltet stå tomt</label><input id={fieldId('website-confirmation')} name="website_confirmation" tabindex="-1" autocomplete="off" /></div>
     <p class:list={['form-privacy',{'col-span-full':horizontal}]}>{content.sensitiveNotice}</p>
-    <p class:list={['form-notice alert alert-warning',{'col-span-full':horizontal}]}>{content.previewNotice}</p>
+    {!enabled && <p class:list={['form-notice alert alert-warning',{'col-span-full':horizontal}]}>{content.previewNotice}</p>}
     <button type="submit" class:list={['button form-submit btn btn-primary',{'min-[901px]:row-start-2 min-[901px]:col-start-3 min-[901px]:self-end min-[901px]:mt-0':horizontal}]} disabled>{content.submitLabel}<Arrow diagonal /></button>
     <p class:list={['form-privacy',{'col-span-full':horizontal}]}>{content.privacyText} <a href={content.privacyLink.href}>{content.privacyLink.label}</a>.</p>
     <p class:list={['form-status',{'col-span-full':horizontal}]} role="status" tabindex="-1" hidden></p>
@@ -40,14 +42,62 @@ const fieldId = (name: string) => specimen ? `${prefix}-${name}` : name;
   </form>
 </div></section>
 <script>
+  import { createLeadPayload, normalizeWebsite, submitLead } from '../lib/lead';
+  import { captureAttribution } from '../lib/attribution';
+
   document.querySelectorAll<HTMLFormElement>('[data-home-assessment]').forEach(form => {
-    form.submit = () => form.requestSubmit();
-    form.addEventListener('submit', event => {
-    event.preventDefault();
+    const button = form.querySelector<HTMLButtonElement>('[type="submit"]')!;
     const status = form.querySelector<HTMLElement>('.form-status')!;
-    status.textContent = form.dataset.disabledStatus!;
-    status.hidden = false;
-    status.focus();
+    const website = form.querySelector<HTMLInputElement>('[name="website"]')!;
+    const enabled = form.dataset.enabled === 'true' && form.dataset.specimen !== 'true';
+    let key = crypto.randomUUID(), previousBody = '', busy = false;
+    const show = (message: string) => {
+      status.textContent = message;
+      status.hidden = false;
+      status.focus({ preventScroll: true });
+    };
+    // Even programmatic form.submit() must pass through the same validation/guard.
+    form.submit = () => form.requestSubmit();
+    form.addEventListener('submit', async event => {
+      event.preventDefault();
+      if (!enabled) { show(form.dataset.disabledStatus || 'Innsending er ikke åpnet ennå.'); return; }
+      if (busy) return;
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      if ((form.elements.namedItem('website_confirmation') as HTMLInputElement)?.value) return;
+      if (!normalizeWebsite(website.value)) {
+        website.setCustomValidity('Skriv inn en gyldig nettadresse.');
+        website.reportValidity();
+        website.focus();
+        return;
+      }
+      website.setCustomValidity('');
+      try {
+        const fields = Object.fromEntries(new FormData(form).entries()) as Record<string,string>;
+        const payload = createLeadPayload(fields, {
+          page: location.pathname,
+          ...captureAttribution(location.href, document.referrer),
+        });
+        const body = JSON.stringify(payload);
+        if (previousBody && previousBody !== body) key = crypto.randomUUID();
+        previousBody = body;
+        busy = true;
+        button.disabled = true;
+        form.setAttribute('aria-busy', 'true');
+        show('Sender forespørselen.');
+        await submitLead(form.dataset.endpoint || '', payload, { idempotencyKey: key });
+        show('Takk! Forespørselen er mottatt. Vi følger opp på e-post.');
+        form.reset();
+        key = crypto.randomUUID();
+        previousBody = '';
+      } catch(error) {
+        show(error instanceof Error ? error.message : 'Vi kunne ikke bekrefte innsendingen. Prøv igjen.');
+      } finally {
+        busy = false;
+        button.disabled = !enabled;
+        form.removeAttribute('aria-busy');
+      }
     });
+    button.disabled = !enabled;
+    website.addEventListener('input', () => website.setCustomValidity(''));
   });
 </script>
