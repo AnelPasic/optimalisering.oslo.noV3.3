@@ -1114,6 +1114,8 @@ content:
           - hva-bor-optimaliseres-forst.json
           - male-effekt-av-optimalisering.json
           - synlighet.json
+          - lokal-seo.json
+          - google-bedriftsprofil.json
         format: json
         subfolders: false
         operations: *a3
@@ -1361,10 +1363,10 @@ content:
               - name: global
                 label: Globalt element
                 component: serviceGlobalPlacement
-      - name: serviceLokalSeoDraft
-        label: Lokal SEO - upublisert utkast
+      - name: serviceLokalSeo
+        label: Lokal SEO
         type: file
-        path: app/src/content/drafts/lokal-seo.json
+        path: app/src/content/pages/lokal-seo.json
         format: json
         operations: *a3
         fields:
@@ -1373,7 +1375,7 @@ content:
             label: Gjennomgangsstatus
             type: string
             readonly: true
-            description: Utkastet inngår ikke i nettstedets bygg. Publisering krever egen innholdsgodkjenning og kontrollert flytting til sidekolleksjonen.
+            description: Siden kan vises i noindex-review. Offentlig publisering, innholdsgodkjenning og aktivering av produksjonsbygg krever egen OWNER-beslutning.
           - name: authority
             label: Innholdsautoritet
             type: string
