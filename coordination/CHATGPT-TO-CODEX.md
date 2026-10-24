@@ -1,4 +1,11 @@
 # ChatGPT to Codex
+
+## CURRENT 2026-10-24 — D-130 content merged, noindex Worker deployment pending
+
+OWNER authorized production/content publication. **Source-only result VERIFIED**: PR #3 merged to `main` in `7f851eabd27b3b053d6ef3365ff8ecfb9d579a1d`; GitHub Actions run `40056903558` SUCCESS for focused Lokal SEO/Google bedriftsprofil CMS/navigation tests, Astro check, static build and static link audit. New paths: `/lokal-seo/`, `/innsikt/google-bedriftsprofil/`. The old D-127 Lokal SEO draft is superseded. Read latest `PROJECT-STATE.md`.
+
+**Fast next publishing task when Cloudflare credentials available:** Fetch fresh `main`, `cd app`, `npm ci`, `npm run build`, deploy **existing** named noindex review Worker `optimalisering-oslo-v33` using Wrangler in the already authenticated Cloudflare account; verify both new routes, linked menu/Insights, noindex flags and responsive 320/390/1440. Do **not** infer that merging GitHub deploys Cloudflare. Never touch `optimalisering.oslo.no` DNS, launch flags, Resend/LeadProof public POST, EN routes, content authority or production indexing as part of simple preview deployment. Save exact Worker deployment ID and browser verification to handoff. Existing D-129 intake PR #1 and PR #2 are unmerged independent backend work; do not overwrite either.
+
 ## CURRENT verified D-127/D-129 handoff — 2026-10-24
 
 **Before new work** refresh `main` and read the top section of `coordination/PROJECT-STATE.md`; current inspected main before this handoff was `150f3dc94d19bd8c9e1cdf22155b46d372ed8b81`. D-127 navigational code, CMS Lokal SEO draft and evidence **are on main now**; earlier below text claiming D-127 exists only locally is obsolete. D-127 does not imply public launch or full OWNER visual PASS.
