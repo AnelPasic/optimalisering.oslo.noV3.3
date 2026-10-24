@@ -1,0 +1,117 @@
+{
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "robots": "noindex, nofollow",
+      "forms": [
+        {
+          "type": "order",
+          "enabled": "true",
+          "endpoint": "https://optimalisering-oslo-intake.anel.workers.dev/api/leads",
+          "buttonDisabled": false,
+          "package": "optimalisering"
+        },
+        {
+          "type": "order",
+          "enabled": "true",
+          "endpoint": "https://optimalisering-oslo-intake.anel.workers.dev/api/leads",
+          "buttonDisabled": false,
+          "package": "vekst"
+        },
+        {
+          "type": "order",
+          "enabled": "true",
+          "endpoint": "https://optimalisering-oslo-intake.anel.workers.dev/api/leads",
+          "buttonDisabled": false,
+          "package": "partner"
+        },
+        {
+          "type": "global-assessment",
+          "enabled": "true",
+          "endpoint": "https://optimalisering-oslo-intake.anel.workers.dev/api/leads",
+          "buttonDisabled": false
+        }
+      ]
+    },
+    {
+      "path": "/seo/",
+      "status": 200,
+      "robots": "noindex, nofollow",
+      "forms": [
+        {
+          "type": "order",
+          "enabled": "true",
+          "endpoint": "https://optimalisering-oslo-intake.anel.workers.dev/api/leads",
+          "buttonDisabled": false,
+          "package": "optimalisering"
+        },
+        {
+          "type": "order",
+          "enabled": "true",
+          "endpoint": "https://optimalisering-oslo-intake.anel.workers.dev/api/leads",
+          "buttonDisabled": false,
+          "package": "vekst"
+        },
+        {
+          "type": "order",
+          "enabled": "true",
+          "endpoint": "https://optimalisering-oslo-intake.anel.workers.dev/api/leads",
+          "buttonDisabled": false,
+          "package": "partner"
+        },
+        {
+          "type": "global-assessment",
+          "enabled": "true",
+          "endpoint": "https://optimalisering-oslo-intake.anel.workers.dev/api/leads",
+          "buttonDisabled": false
+        }
+      ]
+    },
+    {
+      "path": "/vurdering/",
+      "status": 200,
+      "robots": "noindex, nofollow",
+      "forms": [
+        {
+          "type": "assessment",
+          "enabled": "true",
+          "endpoint": "https://optimalisering-oslo-intake.anel.workers.dev/api/leads",
+          "buttonDisabled": false
+        }
+      ]
+    },
+    {
+      "path": "/priser/?pakke=vekst#bestill",
+      "status": 200,
+      "robots": "noindex, nofollow",
+      "forms": [
+        {
+          "type": "order",
+          "enabled": "true",
+          "endpoint": "https://optimalisering-oslo-intake.anel.workers.dev/api/leads",
+          "buttonDisabled": false,
+          "package": "optimalisering"
+        },
+        {
+          "type": "order",
+          "enabled": "true",
+          "endpoint": "https://optimalisering-oslo-intake.anel.workers.dev/api/leads",
+          "buttonDisabled": false,
+          "package": "vekst"
+        },
+        {
+          "type": "order",
+          "enabled": "true",
+          "endpoint": "https://optimalisering-oslo-intake.anel.workers.dev/api/leads",
+          "buttonDisabled": false,
+          "package": "partner"
+        }
+      ]
+    }
+  ],
+  "privacyUpdated": true,
+  "postRequests": [],
+  "pageErrors": [],
+  "scope": "GET-only inspection, no form inputs or submissions, no mailbox claim"
+}

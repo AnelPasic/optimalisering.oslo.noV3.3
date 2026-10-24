@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-24",
+  "accountId": "f772a1f16c82756f67e76357c4e5adaf",
+  "database": {
+    "name": "optimalisering-oslo-leads",
+    "id": "495f1fd2-2337-43fc-88d7-38885ba38134",
+    "jurisdiction": "eu",
+    "migration": "0001_receipts.sql",
+    "migrationApplied": true
+  },
+  "intake": {
+    "name": "optimalisering-oslo-intake",
+    "endpoint": "https://optimalisering-oslo-intake.anel.workers.dev/api/leads",
+    "version": "e7387a31-822d-4299-8d5c-bbef022fdabb",
+    "deployment": "bed65de3-5b77-4126-9e3b-97366759df1b",
+    "percentage": 100,
+    "allRequiredSecretsPresent": true,
+    "secretNames": ["ADMIN_GRANTS_JSON", "LEAD_TO_EMAIL", "RESEND_API_KEY", "RESEND_FROM"],
+    "allowedOrigin": "https://optimalisering-oslo-v33.anel.workers.dev",
+    "preflightStatus": 204,
+    "getMethodStatus": 405,
+    "retryCron": "* * * * *",
+    "rateLimit": "10 per 60 seconds per site/IP"
+  },
+  "access": {
+    "applicationId": "85c750fb-f5f1-4e12-a551-cff1b04e926d",
+    "issuer": "https://medon-anel.cloudflareaccess.com",
+    "protectedPath": "optimalisering-oslo-intake.anel.workers.dev/admin",
+    "identityProvider": "onetimepin",
+    "policy": "owner-only",
+    "unauthenticatedStatus": 302,
+    "authenticatedReadVerified": false
+  },
+  "initialSiteActivation": {
+    "url": "https://optimalisering-oslo-v33.anel.workers.dev/",
+    "sourceCommit": "3f2bac4ae2b6842c1ca9763504d0143a1c0f5bec",
+    "build": "4214a739-9e69-4508-a74b-1f429357749b",
+    "outcome": "success",
+    "version": "aa155c19-0bd0-4f94-ab37-2434e38393f3",
+    "noindex": true,
+    "formLocationsEnabled": ["/", "/seo/", "/vurdering/", "all three packages"],
+    "browserPostRequests": 0,
+    "browserErrors": 0
+  },
+  "emailDeliveryVerified": false,
+  "syntheticSubmissionsSent": 0,
+  "publicDnsChanged": false,
+  "secretValuesDisclosed": false
+}

@@ -38,7 +38,7 @@
       "body": [
         "Nettstedet og skjemamottaket kjører på Cloudflare. Henvendelsen lagres i Cloudflare D1 i en database med EU-avgrenset lagring. En bekreftelse i skjemaet betyr at henvendelsen er lagret, ikke at en e-post er levert.",
         "Privat lesing og eksport krever innlogging gjennom Cloudflare Access og er begrenset til autorisert operatør hos Medon AS. Henvendelsene lagres ikke i GitHub eller nettsidens innholdsredigering.",
-        "E-postvarsling gjennom Resend er klargjort med kontakt@medon.no som mottaker, men avsender og API-tilgang er ennå ikke ferdig konfigurert. Inntil dette er på plass, blir henvendelsen liggende i D1 for oppfølging. Når varsling er aktivert, får Resend opplysningene som inngår i varselet til Medon.",
+        "Resend er konfigurert for å varsle Medon AS på kontakt@medon.no. Varselet inneholder henvendelsen og eventuell valgt pakke og kildeinformasjon. Hvis varslingen feiler, beholdes henvendelsen i D1, og systemet kan forsøke varslingen på nytt. En lagret henvendelse er ikke bevis på at e-posten er levert.",
         "Skjemaet setter ikke en vedvarende besøksidentifikator og lagrer ikke kontaktopplysningene i nettleserens lokale lagring. Cloudflare bruker IP-adressen ved sikkerhets- og ratekontroll. Rå skjemainnhold logges ikke av mottaks-Workeren."
       ]
     },
