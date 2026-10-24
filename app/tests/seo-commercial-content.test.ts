@@ -1,0 +1,38 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import YAML from 'yaml';
+import {pageSchema} from '../src/lib/content-schema.ts';
+import {cmsJsonSave,entryForFile,assertPreservedContent} from './helpers/pages-cms-json.ts';
+
+test('SEO page covers consultant, services and Oslo without additional competing slugs',()=>{
+ const page=JSON.parse(readFileSync('src/content/pages/seo.json','utf8'));
+ const home=JSON.parse(readFileSync('src/content/pages/home.json','utf8'));
+ assert.equal(page.slug,'seo');
+ assert.equal(page.kind,'service');
+ assert.equal(page.status,'REVIEW_REQUIRED');
+ assert.equal(page.authority,'DRAFT / NON-AUTHORITATIVE');
+ assert.equal(pageSchema.safeParse(page).success,true);
+ assert.match(page.seo.title,/SEO-byrå.*Oslo/);
+ assert.match(page.title,/SEO/);
+ assert.ok(page.sections.some((s:{id:string})=>s.id==='seo-tjenester'));
+ assert.ok(page.sections.some((s:{id:string})=>s.id==='seo-oslo'));
+ assert.equal(new Set(page.sections.map((s:{id:string})=>s.id)).size,page.sections.length);
+ const links=page.sections.flatMap((s:{links?:Array<{href:string}>})=>s.links??[]);
+ for(const url of ['/lokal-seo/','/innsikt/google-bedriftsprofil/','/priser/']) assert.ok(links.some((l:{href:string})=>l.href===url),url);
+ const menu=home.homepage.chrome.navigation.find((l:{href:string})=>l.href==='/synlighet/');
+ assert.ok(menu.children.some((c:{href:string})=>c.href==='/seo/'));
+ assert.equal(page.faq.length,6);
+});
+
+test('SEO service copy is editable in native Pages CMS without modifying commercial globals',()=>{
+ const page=JSON.parse(readFileSync('src/content/pages/seo.json','utf8'));
+ const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
+ const entry=entryForFile(cms,'app/src/content/pages/seo.json');
+ assert.equal(entry?.type,'collection');
+ const edited=structuredClone(page);
+ edited.sections[0].body.push('Kun syntetisk SEO CMS-fixture.');
+ const serialized=JSON.parse(cmsJsonSave(page,edited,entry,cms));
+ assertPreservedContent(edited,serialized);
+ assert.deepEqual(pageSchema.parse(serialized),pageSchema.parse(edited));
+});
