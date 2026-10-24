@@ -32,5 +32,5 @@ validateServiceGlobalProof(page,records);
     </>}
   </>)}
   {!cmsOnly&&<Faq items={page.faq} id="sporsmal" heading={capability.closingCta||commercial.faqVisible===false?undefined:commercial.faqHeading} eyebrow={capability.closingCta||commercial.faqVisible===false?undefined:commercial.faqEyebrow} />}
-  {!cmsOnly&&capability.closingCta&&<ClosingCta link={page.cta} />}
+  {!cmsOnly&&capability.closingCta&&!visibleServiceSections(page).some(section=>section.globalElement==='sjekk')&&<ClosingCta link={page.cta} />}
 </div>

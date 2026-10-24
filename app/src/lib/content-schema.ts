@@ -29,6 +29,10 @@ export const pageSchema = z.preprocess((input,context)=>{
     }
     catch(error) { context.addIssue({code:'custom',path:['sections'],message:error instanceof Error?error.message:'Invalid service placements'}); }
   }
+  if(raw?.slug==='seo' && raw.kind==='service') {
+    try { return { ...raw, sections: resolveSynlighetSections(raw.sections, 'seo') }; }
+    catch(error) { context.addIssue({code:'custom',path:['sections'],message:error instanceof Error?error.message:'Invalid SEO section placement'}); }
+  }
   if(raw?.kind==='home'){
     let blocks:ReturnType<typeof resolveHomepageSections>|undefined;
     try{blocks=resolveHomepageSections(raw);}catch(error){if(error instanceof z.ZodError)for(const issue of error.issues)context.addIssue({...issue});else context.addIssue({code:'custom',path:['sections'],message:error instanceof Error?error.message:'Invalid homepage sections'});}
@@ -74,7 +78,7 @@ export const pageSchema = z.preprocess((input,context)=>{
   }).superRefine((page, context) => {
     try { const route = resolveRouteFamily(page); validateSynlighetSections(page, route); } catch (error) { context.addIssue({code:'custom',path:['composition'],message:error instanceof Error?error.message:'Invalid composition'}); }
     if (page.kind !== 'home') page.sections.forEach((section, index) => {
-      if (page.slug === 'synlighet' && section.globalElement) return;
+      if ((page.slug === 'synlighet' || page.slug === 'seo') && section.globalElement) return;
       const model = sectionModel(page.slug, section.id);
       const isPageList = section._block === 'pageList';
       if (isPageList && (page.slug !== 'innsikt' || page.kind !== 'index' || model === 'protected' || !section.pageList || section.items || section.links)) context.addIssue({ code: 'custom', path: ['sections', index], message: 'PageList requires Innsikt index configuration without duplicated items/links' });

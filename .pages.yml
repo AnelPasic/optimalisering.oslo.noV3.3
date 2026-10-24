@@ -528,6 +528,24 @@ components:
       - *serviceBody
       - *serviceItems
       - *serviceLinks
+  seoGlobalPlacement:
+    type: object
+    fields:
+      - name: element
+        label: Globalt element
+        type: select
+        required: true
+        options:
+          values:
+            - name: priser
+              label: Pakker og priser (inkludert bestillingspaneler)
+            - name: sjekk
+              label: Gratis sjekk / kontaktskjema
+        description: Felles elementer fra Globale elementer. Endrer ikke pris, pakke eller skjemafelt. Bestilling og innsending forblir deaktivert i noindex-preview.
+      - name: visibility
+        label: Visning på denne siden
+        component: sectionVisibility
+        description: Flytt, skjul eller fjern bare plasseringen. Originalinnholdet lagres ett sted.
   serviceGlobalPlacement:
     type: object
     fields:
@@ -1114,6 +1132,7 @@ content:
           - hva-bor-optimaliseres-forst.json
           - male-effekt-av-optimalisering.json
           - synlighet.json
+          - seo.json
           - lokal-seo.json
           - google-bedriftsprofil.json
         format: json
@@ -1294,6 +1313,47 @@ content:
                 type: string
                 required: true
             required: false
+      - name: serviceSeo
+        label: SEO - seksjonsbygger
+        type: file
+        path: app/src/content/pages/seo.json
+        format: json
+        operations: *a3
+        fields:
+          - *serviceslug
+          - name: status
+            label: Gjennomgangsstatus
+            type: string
+            readonly: true
+          - name: authority
+            label: Innholdsautoritet
+            type: string
+            readonly: true
+          - *a4
+          - *a9
+          - *a5
+          - *a10
+          - *a11
+          - *a12
+          - name: sections
+            label: Sidens seksjoner og globale elementer
+            description: Dra seksjonene i ønsket rekkefølge. Velg to- eller trekolonneoppsett, farger og kort. Globale priser og skjema henter alltid innhold fra felles kilde.
+            type: block
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{element}{heading}"
+            required: true
+            blockKey: _block
+            blocks:
+              - name: content
+                label: Innholdsseksjon
+                component: synlighetSectionContent
+              - name: global
+                label: Globalt element
+                component: seoGlobalPlacement
+          - *a7
+          - *a8
       - name: serviceSynlighet
         label: Synlighet
         type: file

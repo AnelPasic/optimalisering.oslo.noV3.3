@@ -17,7 +17,8 @@ test('SEO page covers consultant, services and Oslo without additional competing
  assert.match(page.title,/SEO/);
  assert.ok(page.sections.some((s:{id:string})=>s.id==='seo-tjenester'));
  assert.ok(page.sections.some((s:{id:string})=>s.id==='seo-oslo'));
- assert.equal(new Set(page.sections.map((s:{id:string})=>s.id)).size,page.sections.length);
+ const visible=pageSchema.parse(page).sections;
+ assert.equal(new Set(visible.map(s=>s.id)).size,visible.length);
  const links=page.sections.flatMap((s:{links?:Array<{href:string}>})=>s.links??[]);
  for(const url of ['/lokal-seo/','/innsikt/google-bedriftsprofil/','/priser/']) assert.ok(links.some((l:{href:string})=>l.href===url),url);
  const menu=home.homepage.chrome.navigation.find((l:{href:string})=>l.href==='/synlighet/');
@@ -29,7 +30,7 @@ test('SEO service copy is editable in native Pages CMS without modifying commerc
  const page=JSON.parse(readFileSync('src/content/pages/seo.json','utf8'));
  const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
  const entry=entryForFile(cms,'app/src/content/pages/seo.json');
- assert.equal(entry?.type,'collection');
+ assert.equal(entry?.type,'file');
  const edited=structuredClone(page);
  edited.sections[0].body.push('Kun syntetisk SEO CMS-fixture.');
  const serialized=JSON.parse(cmsJsonSave(page,edited,entry,cms));
