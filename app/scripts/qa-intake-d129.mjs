@@ -25,7 +25,7 @@ try {
   page.on('pageerror', error => errors.push(error.message));
   for (const width of [320, 390, 1440]) {
     await page.setViewportSize({ width, height: 1000 });
-    for (const [name, path, selector] of [['home', '/', '[data-home-assessment]'], ['assessment', '/vurdering/', '[data-assessment]'], ['order', '/priser/?pakke=vekst#bestill', '[data-package-key="vekst"] [data-package-order-form]']]) {
+    for (const [name, path, selector] of [['home', '/', '[data-home-assessment]'], ['seo', '/seo/', '[data-home-assessment]'], ['assessment', '/vurdering/', '[data-assessment]'], ['order', '/priser/?pakke=vekst#bestill', '[data-package-key="vekst"] [data-package-order-form]']]) {
       await page.goto(base + path);
       const form = page.locator(selector).first();
       assert.equal(await form.getAttribute('data-enabled'), 'false');
@@ -52,11 +52,11 @@ try {
   }
   const noJs = await browser.newPage({ javaScriptEnabled: false });
   try {
-    for (const [path, selector] of [['/', '[data-home-assessment]'], ['/vurdering/', '[data-assessment]'], ['/priser/?pakke=vekst#bestill', '[data-package-order-form]']]) {
+    for (const [path, selector] of [['/', '[data-home-assessment]'], ['/seo/', '[data-home-assessment]'], ['/vurdering/', '[data-assessment]'], ['/priser/?pakke=vekst#bestill', '[data-package-order-form]']]) {
       await noJs.goto(base + path);
       assert.equal(await noJs.locator(selector).first().locator('[type=submit]').isDisabled(), true);
     }
-    checks.push('all three form paths have disabled no-JS submit buttons');
+    checks.push('all four form paths have disabled no-JS submit buttons');
   } finally { await noJs.close(); }
   assert.equal(requests.length, 0); assert.deepEqual(errors, []);
   assert.deepEqual(store.counts(), { leads: 0, conversions: 0 });
