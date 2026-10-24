@@ -1,5 +1,10 @@
 # ChatGPT to Codex
 
+## CURRENT 2026-10-24 — SEO buying-intent upgrade merged and awaits noindex Worker QA
+
+PR #4 `feat/content-seo-commercial-intent` squash-merged in `30476e66c7238a500a02faa3f17c311b559f7718` after full targeted CI GREEN [run 40057824594](https://github.com/AnelPasic/optimalisering.oslo.noV3.3/actions/runs/40057824594). Existing `/seo/` title/meta/H1/sections/FAQ are strengthened for SEO-byrå Oslo/SEO konsulent/services without creating extra city URLs. All original CTA, hero visual, prior FAQ, prices, protected shared content preserved. Publication in actual Cloudflare noindex Worker is **NOT VERIFIED**. Existing PR #3 for Lokal SEO and Google bedriftsprofil also merged prior. Refresh fresh main, deploy same existing authenticated review Worker only, and review `/seo/`, `/lokal-seo/`, `/innsikt/google-bedriftsprofil/` at 320/390/1440 and CMS, link, SEO metadata. No public form activation, noindex removal, production domain change or D-129 merge by inference. Keep two active D-129 draft PRs #1/#2 independent. Earlier timeline below is historical.
+
+
 ## CURRENT 2026-10-24 — D-130 content merged, noindex Worker deployment pending
 
 OWNER authorized production/content publication. **Source-only result VERIFIED**: PR #3 merged to `main` in `7f851eabd27b3b053d6ef3365ff8ecfb9d579a1d`; GitHub Actions run `40056903558` SUCCESS for focused Lokal SEO/Google bedriftsprofil CMS/navigation tests, Astro check, static build and static link audit. New paths: `/lokal-seo/`, `/innsikt/google-bedriftsprofil/`. The old D-127 Lokal SEO draft is superseded. Read latest `PROJECT-STATE.md`.
