@@ -3,20 +3,23 @@ import { globalPlacementSchema, resolveGlobalPlacement, getGlobalElement } from 
 import { getPublishableCases } from './proof.ts';
 
 export const serviceGlobalIds = ['resultater', 'regneeksempel', 'sjekk', 'behov', 'mekanisme', 'passer', 'priser', 'sporsmal'] as const;
-export const serviceGlobalPlacementSchema = globalPlacementSchema.refine(placement => serviceGlobalIds.some(id => id === placement.element), 'Dette globale elementet er ikke tilgjengelig i Synlighet-piloten');
+export const serviceGlobalPlacementSchema = globalPlacementSchema.refine(placement => serviceGlobalIds.some(id => id === placement.element), 'Dette globale elementet er ikke tilgjengelig i tjenestebyggeren');
+export const seoGlobalIds = ['priser', 'sjekk'] as const;
+const mixedServiceSlugs = new Set(['synlighet', 'seo']);
 type Section = { id: string; visibility?: 'hidden'; globalElement?: typeof serviceGlobalIds[number] };
 type ServicePage = { slug: string; sections: Section[] };
 const fixedAnchors = ['service-hero', 'resultater', 'priser', 'service-priser', 'sporsmal', 'main', 'mobile-menu'];
 
 /** Resolve references only in memory; CMS continues to store reference + visibility. */
-export function resolveSynlighetSections(value: unknown) {
-  if (!Array.isArray(value)) throw new Error('Synlighet krever en seksjonsliste');
+export function resolveSynlighetSections(value: unknown, slug: 'synlighet' | 'seo' = 'synlighet') {
+  if (!Array.isArray(value)) throw new Error('Tjenestesiden krever en seksjonsliste');
   const globals = new Map<string, ReturnType<typeof resolveGlobalPlacement>>();
   const localIds = new Set<string>();
   for (const row of value) {
     if (!row || typeof row !== 'object' || 'globalElement' in row) throw new Error('Ugyldig seksjon; bruk Globalt element for bibliotekreferanser');
     if (row._block === 'global') {
       const placement = serviceGlobalPlacementSchema.parse(row);
+      if (slug === 'seo' && !seoGlobalIds.some(id => id === placement.element)) throw new Error('SEO tillater bare globale Pakker og priser og Gratis sjekk');
       if (globals.has(placement.element)) throw new Error(`Globalt element er allerede plassert: ${placement.element}`);
       globals.set(placement.element, resolveGlobalPlacement(placement));
     } else {
@@ -53,20 +56,23 @@ export function validateServiceGlobalProof(page: ServicePage, records: readonly 
 
 /** Pilot only: other service renderers keep their established behavior. */
 export function visibleServiceSections<T extends Section>(page: { slug: string; sections: T[] }): T[] {
-  return page.slug === 'synlighet' ? page.sections.filter(section => section.visibility !== 'hidden') : page.sections;
+  return mixedServiceSlugs.has(page.slug) ? page.sections.filter(section => section.visibility !== 'hidden') : page.sections;
 }
 
 export function validateSynlighetSections(page: ServicePage, _route: RouteFamily): void {
-  if (page.slug !== 'synlighet') return;
+  if (!mixedServiceSlugs.has(page.slug)) return;
   const ids = new Set<string>();
   for (const section of page.sections) {
     if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(section.id) || (!section.globalElement && (['hero', ...fixedAnchors].includes(section.id) || /^(?:calc-|scenario-|term-|package-home-|header-(?:desktop|mobile)-submenu-)/.test(section.id))) || (section.visibility !== 'hidden' && ids.has(section.id))) {
-      throw new Error('Synlighet sections require unique visible valid anchors, excluding reserved module anchors');
+      throw new Error('Tjenestesidens seksjoner krever unike, gyldige ankre, og kan ikke bruke reserverte module-ID-er');
     }
     if (section.visibility !== 'hidden') ids.add(section.id);
   }
-  if (page.sections.filter(section => section.id === 'sjekk' && section.visibility !== 'hidden').length !== 1) {
+  if (page.slug === 'synlighet' && page.sections.filter(section => section.id === 'sjekk' && section.visibility !== 'hidden').length !== 1) {
     throw new Error('Synlighet krever én synlig sjekk-seksjon, lokal eller global');
+  }
+  if (page.slug === 'seo' && page.sections.some(section => section.globalElement && !seoGlobalIds.some(id => id === section.globalElement))) {
+    throw new Error('SEO tillater bare globale Pakker og priser og Gratis sjekk');
   }
   checkServiceLinks(page, liveAnchors(page));
 }
@@ -80,8 +86,8 @@ function checkServiceLinks(page: ServicePage, visibleIds: Set<string>): void {
     if (!value || typeof value !== 'object') return;
     const href = (value as { href?: unknown }).href;
     if (typeof href === 'string') {
-      const url = new URL(href, 'https://synlighet.invalid/synlighet/');
-      if (url.origin === 'https://synlighet.invalid' && /^\/synlighet\/?$/.test(url.pathname) && url.hash) {
+      const url = new URL(href, `https://service.invalid/${page.slug}/`);
+      if (url.origin === 'https://service.invalid' && url.pathname === `/${page.slug}/` && url.hash) {
         const id = decodeURIComponent(url.hash.slice(1));
         if (!visibleIds.has(id)) throw new Error(`Synlighet link requires a visible section: ${href}`);
       }
