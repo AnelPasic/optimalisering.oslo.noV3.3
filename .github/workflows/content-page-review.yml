@@ -1,0 +1,40 @@
+name: Content page review
+
+on:
+  push:
+    branches:
+      - feat/content-lokal-seo-page
+  pull_request:
+    paths:
+      - "app/src/content/pages/**"
+      - "app/tests/*seo*"
+      - "app/tests/google-bedriftsprofil-page.test.ts"
+      - ".pages.yml"
+      - ".github/workflows/content-page-review.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  check-content:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: app
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+      - name: Install dependencies
+        run: npm ci
+      - name: Focused content tests
+        run: node --test tests/lokal-seo-page.test.ts tests/google-bedriftsprofil-page.test.ts tests/header-navigation.test.ts
+      - name: Astro check
+        run: npm run check
+      - name: Build static pages
+        run: npm run build
+      - name: Validate generated links and page metadata
+        run: node scripts/audit-build.mjs
