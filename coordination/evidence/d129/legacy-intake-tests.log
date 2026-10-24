@@ -1,0 +1,33 @@
+(node:42872) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ orders stay independently disabled when assessment intake is enabled (26.4822ms)
+✔ isolated enabled order stores intent once and sends distinct synthetic notification (9.4747ms)
+✔ three-field order notification omits absent legacy company and contact (0.8432ms)
+(node:35552) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ backend intake prerequisites cannot be bypassed by the public order flag (0.559ms)
+✔ all package keys persist explicit order intent and normalized attribution exactly once (39.0081ms)
+✔ unknown package, filled honeypot and invalid required or excessive fields create no record (11.7005ms)
+✔ order gate mismatch and disabled shared intake both fail without storing or notifying (5.2743ms)
+✔ storage failure never acknowledges acceptance or attempts email (2.3687ms)
+✔ order conflict and rate limiting remain authoritative (8.7874ms)
+✔ enabled API still requires an allowed Origin and JSON content type (3.6078ms)
+(node:60748) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ HTTP accepted enquiry is stored once with source, conversion and pending email (30.8341ms)
+✔ unconfigured server and invalid/origin-mismatched submissions save no data (7.2634ms)
+✔ validation, oversized body, conflict and honeypot fail before creating a new lead (7.9424ms)
+✔ website accepts a bare domain and rejects unsafe schemes and credentials (0.6849ms)
+✔ payload is minimal, validates email and removes personal/URL query data from source (0.7497ms)
+✔ only an explicit persisted acknowledgement is success (13.2698ms)
+✔ empty and insecure endpoints never call the transport (0.2882ms)
+✔ network failure and abort preserve a retryable error (9.6561ms)
+✔ malformed endpoints, credentials and query data are rejected before any transport (0.2468ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 169.0691

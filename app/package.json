@@ -11,6 +11,8 @@
     "dev:api": "node --env-file-if-exists=.env server/index.mjs --api-only",
     "check": "astro check",
     "test": "node --test tests/*.test.ts tests/*.test.mjs",
+    "test:intake": "node --test ../intake-worker/tests/*.test.mjs",
+    "qa:intake:review": "node scripts/qa-intake-d129.mjs",
     "build": "astro build",
     "preview": "node --env-file-if-exists=.env server/index.mjs",
     "qa:static": "npm run qa:copy && node scripts/audit-build.mjs && node scripts/audit-h007.mjs && node scripts/audit-h008.mjs && node scripts/audit-h009.mjs && node scripts/audit-h010.mjs && node scripts/audit-h011.mjs && node scripts/audit-h013.mjs && node scripts/audit-h016.mjs && node scripts/audit-h017c.mjs && node scripts/audit-h017e.mjs",

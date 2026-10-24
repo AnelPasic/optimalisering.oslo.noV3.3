@@ -19,7 +19,7 @@ export async function notifyLead(store, id, config) {
       const p = lead.payload;
       const order = p.form === 'pakke-bestilling';
       const text = [
-        ...(order ? ['Ny bestilling', `Pakke: ${p.package}`, `Bedrift: ${p.company}`, `Kontaktperson: ${p.contact}`, `Telefon: ${p.phone || 'Ikke oppgitt'}`] : ['Ny forespørsel om gratis sjekk']), `Nettside: ${p.website}`, `E-post: ${p.email}`,
+        ...(order ? ['Ny bestilling', `Pakke: ${p.package}`, ...(p.company ? [`Bedrift: ${p.company}`] : []), ...(p.contact ? [`Kontaktperson: ${p.contact}`] : []), `Telefon: ${p.phone || 'Ikke oppgitt'}`] : ['Ny forespørsel om gratis sjekk']), `Nettside: ${p.website}`, `E-post: ${p.email}`,
         `Behov: ${p.model || 'Ikke oppgitt'}`, `Melding: ${p.message || 'Ikke oppgitt'}`,
         `Mottatt: ${lead.created_at}`, `Referanse: ${id}`,
         `Kilde: ${JSON.stringify(p.source)}`,

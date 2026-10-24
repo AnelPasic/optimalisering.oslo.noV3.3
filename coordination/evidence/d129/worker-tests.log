@@ -1,0 +1,36 @@
+(node:22396) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ Access verifies real RSA signature, issuer, audience, expiry and explicit per-site/action grants (28.5718ms)
+✔ authenticated JSON/CSV export stays in site, is uncached and never enables CORS for PII (5.453ms)
+✔ bounded keyset exports visit each record once; CSV escapes quotes, newlines and formula prefixes (1.0332ms)
+✔ body deadline, streamed overflow and malformed UTF-8 fail without unbounded reading (13.913ms)
+(node:48628) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ save before ACK: unique receipt, canonical retry, conflict, no PII in acknowledgement (17.1073ms)
+✔ concurrent retries store exactly one receipt and one stable ID (3.8605ms)
+✔ three-field package contract and legacy optional names are supported (1.2027ms)
+✔ disabled/missing prerequisites, storage failure and write uncertainty never ACK (2.8353ms)
+✔ site identity is bound by server configuration and ingress, not caller body or Origin alone (1.277ms)
+✔ strict validation, honeypot, body size, content type and distributed rate limiter (2.4805ms)
+✔ shared D1 isolates idempotency per site and never allows caller-selected tenant (1.1003ms)
+✔ unauthenticated admin/export and unexpected methods never expose records (0.9624ms)
+✔ uncertain write result returns failure but retry recovers the committed receipt ID (0.7946ms)
+(node:30916) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ Resend acknowledgement is accepted, never delivered; duplicate claims send one immutable template (14.7169ms)
+✔ transient error and uncertainty retain receipt and retry exact original body after config changes (4.1169ms)
+✔ slow Resend is aborted and marked uncertain; a 202 or malformed acknowledgement is not accepted (11.4532ms)
+✔ definitive rejection is dead-lettered; retry count and idempotency window are bounded (4.1149ms)
+✔ save interruption and expired claims recover; final interrupted attempt requires manual review (1.7043ms)
+✔ old worker completion cannot overwrite a newer lease (0.9756ms)
+✔ preview gates and unconfigured sender send nothing; sweep and claims cannot cross site (1.9658ms)
+✔ lease lost before body freeze never sends stale recipient or template (1.1748ms)
+✔ workerd + real local D1: migration, racing POSTs, write failure, default gates, and isolated Resend fetch (689.244ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 977.0896

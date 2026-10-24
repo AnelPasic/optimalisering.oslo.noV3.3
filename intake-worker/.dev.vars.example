@@ -1,0 +1,4 @@
+# Server-side placeholders only. Copy to ignored .dev.vars for a separately approved test.
+RESEND_API_KEY=
+RESEND_FROM=
+LEAD_TO_EMAIL=

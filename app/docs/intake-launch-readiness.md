@@ -1,5 +1,7 @@
 # Intake launch readiness - H-017A
 
+**D-129 development update, 2026-10-24:** the selected Cloudflare implementation is now prepared separately in [`intake-worker/README.md`](../../intake-worker/README.md). Its D1 outbox, provider acceptance/retry, Access read/export and per-Worker site binding supersede the Node/SQLite deployment proposal below for future operations. The historical H-017A code remains a local test/preview harness. The current package UI has website/email/required phone, with no company/contact inputs; backend optional legacy fields are preserved. HomeAssessment remains hard-disabled; standalone assessment transport is also explicitly closed in preview. Ordinary native submit is now guarded on all three paths. No live ingress or homepage connection, resource provisioning, real email, intake/production flags, deployment, merge or launch is authorized or proven by D-129.
+
 Technical capability prepared for review on 2026-10-09 under D-062. This is not launch approval, a privacy assessment, proof of a deployed API or proof of mailbox delivery. No real lead or email was generated. See `coordination/H017A-INTAKE-READINESS.md` and the H-017A evidence packet.
 
 ## Implemented paths and current review boundary

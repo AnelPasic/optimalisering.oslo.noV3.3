@@ -5,7 +5,7 @@ import { createAppServer } from '../server/http.mjs';
 import { openLeadStore } from '../server/store.mjs';
 import { notifyLead } from '../server/resend.mjs';
 const origin='http://127.0.0.1:4321';
-const payload={site:'optimalisering.oslo.no',form:'pakke-bestilling',package:'vekst',company:'Synthetic AS',contact:'Synthetic Buyer',phone:'',website:'example.test',email:'synthetic@example.test',message:'Synthetic only',source:{page:'/priser/'}};
+const payload={site:'optimalisering.oslo.no',form:'pakke-bestilling',package:'vekst',company:'Synthetic AS',contact:'Synthetic Buyer',phone:'90000000',website:'example.test',email:'synthetic@example.test',message:'Synthetic only',source:{page:'/priser/'}};
 async function run(ordersEnabled,callback) {
   const store=openLeadStore(':memory:');
   const server=createAppServer({store,config:{enabled:true,ordersEnabled,origins:new Set([origin]),site:payload.site,sourceCapture:false,email:{}}});
@@ -27,3 +27,17 @@ test('isolated enabled order stores intent once and sends distinct synthetic not
   assert.match(email.subject,/Bestilling/); assert.match(email.text,/vekst/); assert.match(email.text,/Synthetic AS/);
   assert.ok(!email.text.includes('gratis sjekk'));
 }));
+
+test('three-field order notification omits absent legacy company and contact', async () => {
+  const store = openLeadStore(':memory:');
+  const { company, contact, ...minimal } = payload;
+  const receipt = store.save(minimal, 'synthetic-minimal-order');
+  let text;
+  try {
+    await notifyLead(store, receipt.id, { apiKey: 'synthetic', from: 'sender@example.test', to: 'recipient@example.test', transport: async (_url, options) => { text = JSON.parse(options.body).text; return Response.json({ id: 'synthetic-minimal' }); } });
+    assert.equal(text.includes('undefined'), false);
+    assert.equal(text.includes('Bedrift:'), false);
+    assert.equal(text.includes('Kontaktperson:'), false);
+    assert.match(text, /Telefon: 90000000/);
+  } finally { store.close(); }
+});
