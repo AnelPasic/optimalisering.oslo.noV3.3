@@ -1,5 +1,21 @@
 # ChatGPT to Codex
 
+## ACTIVE OWNER DECISION 2 — 2026-10-24: OPEN FORMS ON EXISTING NOINDEX URL
+
+Owner explicitly says “det er bare å åpne skjemaer, ingen kommer til å sende en henvendelse mens den er på eksisterende url”. **Do not require a staging environment or prior synthetic submissions to open the forms.** The goal is an actual working request flow now, on the existing review URL, with noindex retained.
+
+**Code already DONE:** [PR #6](https://github.com/AnelPasic/optimalisering.oslo.noV3.3/pull/6) merged as `d6912da51eef9f37d885c0d60ff6389d9ae292e0` after [CI 40092884807](https://github.com/AnelPasic/optimalisering.oslo.noV3.3/actions/runs/40092884807) SUCCESS. It unblocks real submission from global HomeAssessment on homepage and SEO, and from standalone assessment and package orders **while site remains preview/noindex**. It requires an explicitly configured HTTPS `PUBLIC_LEAD_ENDPOINT` ending `/api/leads`; otherwise forms remain disabled instead of silently posting to a nonexistent static-host route. Existing shared canonical prices/forms, CMS and noindex remain unchanged.
+
+**Do next, directly, using authenticated Cloudflare and Resend:**
+1. Fetch fresh GitHub `main` and inspect the existing Cloudflare site Worker (do not overwrite). Provision **one real D1** + the one real separate `intake-worker/`; bind correct actual hostname/origins and DB ID, run schema migration; use production backend stage/flags. No second test database/Worker.
+2. Configure actual verified Resend sender/recipient and secrets, Cloudflare Access/admin grants and reasonable rate limiter and retry. Do not commit provider secrets, credentials or customer PII.
+3. Activate forms when backend endpoint is actually reachable: Build **static site** with `SITE_STAGE=preview` so `noindex,nofollow` is retained, `PUBLIC_LEADS_ENABLED=true`, `PUBLIC_ORDERS_ENABLED=true` and `PUBLIC_LEAD_ENDPOINT=https://<real-ingress-origin>/api/leads`. Make `ALLOWED_ORIGINS` include exact actual website URL (no wildcard). Deploy/review URL and check form buttons enabled (including `/`, `/seo/`, `/vurdering/` and package panels). **No extra smoke-test gate imposed by owner.**
+4. Update existing `/personvern/`, currently a DRAFT that falsely describes the system as only planned; use actual verified provider/contact/retention and deletion procedure and accurate data-flow. No speculative addresses, contacts or numbers. This is normal go-live content hygiene, not an extra test stage.
+5. Report real Worker URL, D1 binding/database, site deployment ID, form-enabled status, any actual blocking error and rollback switches. Don't claim forms live based only on GitHub code merge; Cloudflare deployment proof is required. Indexing/DNS cutover still out of scope.
+
+This supersedes earlier handoff steps below that hold public intake closed until a synthetic E2E. A basic post-deploy observation is sensible but not an activation prerequisite. LeadProof Gate 1 still must not receive raw lead PII.
+
+
 ## ACTIVE OWNER DECISION 2026-10-24 — DIRECT BUILD; SKIP EXTRA STAGING
 
 The owner says: **“tenker det er litt overkill med tester ( isolert D1-testdatabase og en separat test-Worker) siden er ikke live. det er bare å bygge direkte”**. THIS OVERRIDES the below historical test-environment-first staging plan.
