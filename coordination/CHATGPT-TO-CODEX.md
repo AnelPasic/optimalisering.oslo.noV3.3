@@ -1,5 +1,12 @@
 # ChatGPT to Codex
 
+## CURRENT 2026-10-24 — SEO visual modules/global pricing merged, Cloudflare preview QA required
+
+`main` after PR #5 content+code merge includes `1113802b18ac72aa1d1bb9e2c0aa26ed32308990` (refresh actual `main` first; subsequent docs commits follow). CI [run 40058703371](https://github.com/AnelPasic/optimalisering.oslo.noV3.3/actions/runs/40058703371) SUCCESS. `/seo/` now uses native CMS mixed re-orderable sections, card templates/colored surfaces and two permitted canonical global references `priser` and `sjekk`. The global pricing block includes all existing packages and PackageOrder forms (no new price authority); the global assessment is the existing disabled Free Check until separate D-129 intake/go-live. SEO-specific 6 FAQs still render locally. URL remains `/seo/`, hero image retained. SEO body compacted to address text-wall complaint.
+
+**Next practical action:** With authenticated Wrangler, build latest `main` and deploy to existing **noindex** Worker `optimalisering-oslo-v33`; inspect `/seo/` at 320/390/1440, 2-/3-column cards, dark/mint/lavender contrast, location of 3 packages, order-panel behavior/keyboard and free-check CTA scroll. Verify Pages CMS actual edit/save roundtrip separately; source-level CMS fixture tests passed. Avoid public indexing, DNS cutover, activating lead forms or bypassing privacy gates. D-129 PR #1/#2 separate and untouched.
+
+
 ## CURRENT 2026-10-24 — SEO buying-intent upgrade merged and awaits noindex Worker QA
 
 PR #4 `feat/content-seo-commercial-intent` squash-merged in `30476e66c7238a500a02faa3f17c311b559f7718` after full targeted CI GREEN [run 40057824594](https://github.com/AnelPasic/optimalisering.oslo.noV3.3/actions/runs/40057824594). Existing `/seo/` title/meta/H1/sections/FAQ are strengthened for SEO-byrå Oslo/SEO konsulent/services without creating extra city URLs. All original CTA, hero visual, prior FAQ, prices, protected shared content preserved. Publication in actual Cloudflare noindex Worker is **NOT VERIFIED**. Existing PR #3 for Lokal SEO and Google bedriftsprofil also merged prior. Refresh fresh main, deploy same existing authenticated review Worker only, and review `/seo/`, `/lokal-seo/`, `/innsikt/google-bedriftsprofil/` at 320/390/1440 and CMS, link, SEO metadata. No public form activation, noindex removal, production domain change or D-129 merge by inference. Keep two active D-129 draft PRs #1/#2 independent. Earlier timeline below is historical.
