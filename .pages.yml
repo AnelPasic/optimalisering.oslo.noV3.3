@@ -1115,6 +1115,7 @@ content:
           - male-effekt-av-optimalisering.json
           - synlighet.json
           - lokal-seo.json
+          - google-bedriftsprofil.json
         format: json
         subfolders: false
         operations: *a3
