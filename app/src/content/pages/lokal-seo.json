@@ -37,6 +37,12 @@
         "Google bedriftsprofil kan vise bedriften i Google Søk og Maps. Kunden kan ringe eller be om veibeskrivelse derfra. Feil åpningstid eller telefonnummer skaper problemer selv om nettstedet er godt.",
         "Kontroller hvem som eier og administrerer profilen, om bedriften er bekreftet, og om navn, kategori, tjenester og åpningstider stemmer. Unngå å opprette en ny profil før du vet om bedriften allerede finnes. Be om ærlige anmeldelser fra faktiske kunder; ikke kjøp omtaler eller finn på kundeerfaringer.",
         "Profilen må følge Googles regler for den faktiske virksomheten. En bedrift som reiser ut til kunder, skal ikke fremstille en privat adresse eller et virtuelt kontor som et bemannet besøkssted. Område og adresse må gjenspeile hvordan kundene faktisk blir betjent."
+      ],
+      "links": [
+        {
+          "label": "Guide: opprett og forbedre Google bedriftsprofil",
+          "href": "/innsikt/google-bedriftsprofil/"
+        }
       ]
     },
     {
