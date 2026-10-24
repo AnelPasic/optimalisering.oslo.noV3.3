@@ -1,5 +1,21 @@
 # D-129 durable form ingress
 
+## Current operation — 2026-10-24
+
+OWNER now authorizes the real resources and active forms on the existing **noindex** preview; this supersedes the development-only restrictions in the historical runbook below. Exactly one real intake Worker (`optimalisering-oslo-intake`) and one EU-jurisdiction D1 (`optimalisering-oslo-leads`, `495f1fd2-2337-43fc-88d7-38885ba38134`) are provisioned. Migration `0001_receipts.sql` is applied. Endpoint: `https://optimalisering-oslo-intake.anel.workers.dev/api/leads`; exact allowed browser origin: `https://optimalisering-oslo-v33.anel.workers.dev`. The separate static website Worker is preserved.
+
+Backend flags are active with `SITE_STAGE=production`. Cloudflare Rate Limiting is 10 requests/60s per site/IP. One cron (`* * * * *`) runs the existing bounded retry sweep each minute. Receipt ACK and idempotency behavior are unchanged. No test submissions are required or sent in this activation pass.
+
+Private `/admin/*` is protected by the Access application `85c750fb-f5f1-4e12-a551-cff1b04e926d`, issuer `https://medon-anel.cloudflareaccess.com`, audience matching the Worker config, one-time-PIN login and an owner-only allow policy. `ADMIN_GRANTS_JSON` is a Cloudflare Secret granting only this site's read/retry permissions. Unauthenticated reads redirect to Access login. No blanket Access rule protects the public intake path.
+
+`LEAD_TO_EMAIL` is a Cloudflare Secret using the existing site's documented recipient. `RESEND_API_KEY` must be a Cloudflare Secret; `RESEND_FROM` must identify the authorized verified sender. Their presence is checked by name/type without disclosing values; actual mailbox receipt is **not verified** without received-mail evidence. Missing provider credentials leave stored receipts pending; they do not discard submissions. Complete any missing configuration in the existing Worker's Settings → Variables and Secrets, then Deploy. `keep_vars` preserves operator-managed server settings on subsequent CLI deployments.
+
+The existing static site's **build trigger** has persistent, non-secret values `SITE_STAGE=preview`, `PUBLIC_LEADS_ENABLED=true`, `PUBLIC_ORDERS_ENABLED=true`, and the HTTPS endpoint above. They are build inputs, not runtime bindings on the static Worker. This enables the existing shared homepage/SEO form, standalone assessment and three package forms while retaining noindex. Resend credentials must never be added to this static build or Git.
+
+The factual `/personvern/` notice identifies Medon AS and its existing published contact address, the actual EU D1 storage and private access, and manual erasure. No fixed retention interval or automated purge is invented; a concrete retention policy and provider/data-processor review remain operational follow-ups. The notice's public status is published under the current instruction; internal content authority is not silently promoted to an OWNER content lock.
+
+Rollback: set the static build's public form flags false and rebuild; independently set backend `PUBLIC_LEADS_ENABLED=false` to reject new intake, or `SEND_NOTIFICATIONS=false` to pause sending. Preserve D1 receipts and existing idempotency records. No DNS or indexing change is part of this activation.
+
 Development/review implementation under `coordination/D129-WORKER-D1-RESEND-IMPLEMENTATION.md`. No resources, public route, real email, customer data or deployment are created by this directory. `app/wrangler.jsonc` remains the unchanged static review site; this is a separate Worker configuration with a dummy local D1 ID, disabled public routes, no cron and all processing flags off.
 
 ## Local verification

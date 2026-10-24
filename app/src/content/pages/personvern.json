@@ -1,63 +1,66 @@
 {
   "slug": "personvern",
   "kind": "utility",
-  "status": "REVIEW_REQUIRED",
+  "status": "PUBLISHED",
   "authority": "DRAFT / NON-AUTHORITATIVE",
   "seo": {
-    "title": "Personvern - utkast for Optimalisering Oslo",
-    "description": "Utkast om opplysningene i kontaktskjemaet og planlagt behandling. Mottaker, lagringstid og endelig personverninformasjon må avklares før lansering."
+    "title": "Personvern - Optimalisering Oslo",
+    "description": "Slik behandler Medon AS henvendelser og pakkebestillinger: kontaktopplysninger, lagring i Cloudflare D1, tilgang og sletting."
   },
-  "eyebrow": "Personvernutkast - krever gjennomgang",
+  "eyebrow": "Personvern",
   "title": "Du skal vite hva som skjer med opplysningene dine.",
-  "intro": "Dette er et utkast for en lokal forhåndsvisning. Det beskriver den planlagte løsningen og åpne spørsmål. Det er ikke en ferdig personvernerklæring for en lansert tjeneste.",
+  "intro": "Her beskriver vi hvordan opplysningene dine behandles når du ber om en gratis sjekk eller bestiller en pakke på dette nettstedet.",
   "sections": [
     {
       "_block": "content",
       "id": "leverandor",
-      "heading": "Medon AS står bak tjenesten.",
+      "heading": "Medon AS er behandlingsansvarlig.",
       "body": [
-        "Medon AS er eier og leverandør av Optimalisering Oslo. Endelig personverninformasjon må identifisere behandlingsansvarlig og gi verifiserte kontaktopplysninger for spørsmål og rettigheter.",
-        "Disse kontaktopplysningene og det juridiske behandlingsgrunnlaget er ikke ferdigstilt i dette utkastet."
+        "Medon AS, organisasjonsnummer 925 595 624, står bak Optimalisering Oslo og er behandlingsansvarlig for henvendelsene.",
+        "Kontakt oss på kontakt@medon.no hvis du har spørsmål om personvern eller ønsker innsyn, retting eller sletting."
       ]
     },
     {
       "_block": "content",
       "id": "opplysninger",
-      "heading": "Skjemaet skal be om det som trengs for å forstå henvendelsen.",
+      "heading": "Dette sender du inn.",
       "body": [
-        "Planlagte felt er nettadresse og e-postadresse for bedriften. Du kan også oppgi et behov og en valgfri melding. Ikke send innlogging, sensitive opplysninger eller personopplysninger om andre.",
-        "Løsningen er også planlagt å lagre begrenset kildeinformasjon sammen med innsendingen: siden henvendelsen kom fra, henvisende nettsted og eventuelle kampanjemerker i nettadressen. Dette skal brukes til å vurdere hvilke innganger som fører til henvendelser."
+        "Gratis sjekk ber om nettadresse og e-postadresse. Du kan legge ved en melding og, der feltet vises, velge hva du ønsker flere av. Pakkebestillinger inneholder også telefonnummer og valgt pakke.",
+        "Vi bruker opplysningene til å behandle forespørselen din og avklare eventuell oppstart. Behandling av selve forespørselen skjer for å gjennomføre tiltak du ber om før en eventuell avtale, jf. personvernforordningen artikkel 6 nr. 1 bokstav b.",
+        "Innsendingen kan inneholde siden du kom fra, henvisende nettsted og kampanjemerker i lenken. Vi bruker dette til å forstå hvilke innganger henvendelsene kommer fra. Nettadresseparametere og andre tilfeldige felter følger ikke med i den lagrede nettadressen.",
+        "Ikke send passord, innlogging, sensitive opplysninger eller personopplysninger om andre."
       ]
     },
     {
       "_block": "content",
       "id": "plan",
-      "heading": "E-postvarsel og lagring på server er valgt som startpunkt.",
+      "heading": "Henvendelsen lagres før du får bekreftelse.",
       "body": [
-        "Det planlegges e-postvarsler gjennom Resend og lokal lagring på server av henvendelser og tilhørende kildeinformasjon. Personopplysningene skal ikke lagres i nettleseren som del av denne løsningen.",
-        "Kildeinformasjonen skal være knyttet til en konkret innsending. Det er ikke planlagt vedvarende anonyme besøksidentifikatorer i denne løsningen.",
-        "Mottaker og avsender av varslene, databehandlerforhold, lagringssted, tilgang og nødvendige avtaler må gjennomgås før produksjonsbruk. Ingen fungerende live-behandling er dokumentert i dette utkastet."
+        "Nettstedet og skjemamottaket kjører på Cloudflare. Henvendelsen lagres i Cloudflare D1 i en database med EU-avgrenset lagring. En bekreftelse i skjemaet betyr at henvendelsen er lagret, ikke at en e-post er levert.",
+        "Privat lesing og eksport krever innlogging gjennom Cloudflare Access og er begrenset til autorisert operatør hos Medon AS. Henvendelsene lagres ikke i GitHub eller nettsidens innholdsredigering.",
+        "E-postvarsling gjennom Resend er klargjort med kontakt@medon.no som mottaker, men avsender og API-tilgang er ennå ikke ferdig konfigurert. Inntil dette er på plass, blir henvendelsen liggende i D1 for oppfølging. Når varsling er aktivert, får Resend opplysningene som inngår i varselet til Medon.",
+        "Skjemaet setter ikke en vedvarende besøksidentifikator og lagrer ikke kontaktopplysningene i nettleserens lokale lagring. Cloudflare bruker IP-adressen ved sikkerhets- og ratekontroll. Rå skjemainnhold logges ikke av mottaks-Workeren."
       ]
     },
     {
       "_block": "content",
       "id": "avklaringer",
-      "heading": "Før lansering må lagring og rettigheter være konkret beskrevet.",
+      "heading": "Lagring, sletting og rettigheter.",
       "body": [
-        "Endelig tekst må beskrive formål og behandlingsgrunnlag, hvem som mottar opplysningene, hvor lenge de lagres, og hvordan de slettes. Den må også beskrive eventuelle overføringer og avtaler som gjelder for den valgte løsningen.",
-        "Det må finnes en verifisert kontaktvei for innsyn, retting, sletting og andre aktuelle rettigheter, samt nødvendig informasjon om klage. Dette skal tilpasses den faktiske behandlingen.",
-        "Denne siden gir ikke en generell erklæring om at løsningen oppfyller alle personvernkrav. Den må kontrolleres mot den ferdige løsningen før skjemaet brukes med reelle henvendelser."
+        "Det er foreløpig ikke satt en fast automatisk slettedato for henvendelser i denne løsningen. Sletting må håndteres manuelt av Medon AS. Vi oppgir derfor ikke en lagringstid som ikke er fastsatt.",
+        "Du kan kontakte kontakt@medon.no for innsyn, retting, sletting eller spørsmål om behandlingen. Når du ber om sletting, må Medon vurdere både den lagrede henvendelsen og eventuelle e-poster og eksporter som inneholder de samme opplysningene.",
+        "Du kan også be om begrensning av behandlingen, og har rett til å klage til Datatilsynet. Hvilke rettigheter som gjelder i en konkret sak, avhenger av behandlingen og grunnlaget for den."
       ]
     }
   ],
   "faq": [
     {
-      "question": "Er dette endelig personverninformasjon?",
-      "answer": "Nei. Det er et utkast for lokal gjennomgang. Endelig tekst, kontaktopplysninger, behandlingsgrunnlag og lagringstid må avklares før lansering."
+      "question": "Betyr bekreftelsen at en e-post er levert?",
+      "answer": "Nei. Bekreftelsen betyr at henvendelsen er lagret i D1. E-postvarsling er en egen del av oppfølgingen."
     },
     {
-      "question": "Er den planlagte e-postleveringen testet i drift?",
-      "answer": "Det er ikke dokumentert fungerende live-behandling eller mottak av e-post i dette utkastet. Lokal teknisk testing er ikke i seg selv bevis på produksjonsberedskap."
+      "question": "Hvordan ber jeg om sletting?",
+      "answer": "Send en e-post til kontakt@medon.no og oppgi nok informasjon til at Medon kan finne henvendelsen. Ikke send sensitive opplysninger."
     }
   ],
   "cta": {

@@ -1,32 +1,34 @@
 {
   "$schema": "../app/node_modules/wrangler/config-schema.json",
-  "name": "optimalisering-intake-d129-dev",
+  "name": "optimalisering-oslo-intake",
+  "account_id": "f772a1f16c82756f67e76357c4e5adaf",
+  "keep_vars": true,
   "main": "src/worker.mjs",
   // Pinned to the workerd version in app/package-lock.json; verify a newer date at release.
   "compatibility_date": "2026-10-06",
-  "workers_dev": false,
+  "workers_dev": true,
   "preview_urls": false,
   "vars": {
     "SITE_ID": "optimalisering.oslo.no",
-    "INGRESS_ORIGIN": "https://ingress.example.test",
-    "ALLOWED_ORIGINS": "https://site.example.test",
-    "SITE_STAGE": "preview",
-    "PRIVACY_APPROVED": "false",
-    "PUBLIC_LEADS_ENABLED": "false",
-    "PUBLIC_ORDERS_ENABLED": "false",
-    "SEND_NOTIFICATIONS": "false",
-    "ACCESS_ISSUER": "",
-    "ACCESS_AUD": "",
-    "ADMIN_GRANTS_JSON": "{}"
+    "INGRESS_ORIGIN": "https://optimalisering-oslo-intake.anel.workers.dev",
+    "ALLOWED_ORIGINS": "https://optimalisering-oslo-v33.anel.workers.dev",
+    "SITE_STAGE": "production",
+    "PRIVACY_APPROVED": "true",
+    "PUBLIC_LEADS_ENABLED": "true",
+    "PUBLIC_ORDERS_ENABLED": "true",
+    "SEND_NOTIFICATIONS": "true",
+    "ACCESS_ISSUER": "https://medon-anel.cloudflareaccess.com",
+    "ACCESS_AUD": "42e8db3f873c79a348b108e3d5a6c3847711d2d3cf2fb235c8b13508529c65e1"
   },
   "d1_databases": [{
     "binding": "DB",
-    "database_name": "d129-local-receipts",
-    "database_id": "00000000-0000-0000-0000-000000000000",
+    "database_name": "optimalisering-oslo-leads",
+    "database_id": "495f1fd2-2337-43fc-88d7-38885ba38134",
+    // The database was created with EU jurisdiction; binding IDs select that database.
     "migrations_dir": "migrations",
     "remote": false
   }],
   "ratelimits": [{ "name": "RATE_LIMITER", "namespace_id": "129", "simple": { "limit": 10, "period": 60 } }],
   "observability": { "enabled": false },
-  "triggers": { "crons": [] }
+  "triggers": { "crons": ["* * * * *"] }
 }

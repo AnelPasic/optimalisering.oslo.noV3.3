@@ -1,4 +1,10 @@
 # Decisions and authority
+
+## D-129 operations — direct OWNER activation instruction, 2026-10-24
+
+The direct instruction in this Codex chat authorizes **one real D1, the existing intake Worker, Resend/Access setup, active forms and deployment of fresh main to the existing noindex preview**. It explicitly removes synthetic test submissions as an activation prerequisite and prohibits extra staging infrastructure, public DNS changes and removing noindex. Earlier development-only or smoke-test-before-activation entries remain history and do not override this instruction.
+
+OWNER also instructs replacement of the public privacy draft with a simple factual notice. IMPLEMENTATION verified the published existing site's controller (Medon AS, org. 925 595 624) and `kontakt@medon.no`, actual EU-jurisdiction D1, Access protection and pending provider setup. Only `/personvern/` copy/status changes; its internal authority remains draft rather than fabricating a reviewed content lock. No unverified retention period, sender authorization, mailbox delivery or comprehensive legal approval is asserted. Current deployment evidence and remaining manual steps belong in CODEX-TO-CHATGPT.
 ## D-129 — OWNER GO for safe development of Worker + D1 + Resend — 2026-10-23
 
 OWNER: «da kjører vi det». Implementer valgt D-128-arkitektur **i isolert utviklingsgren/draft PR**, ikke produksjon. Fullt, bindende omfang: `coordination/D129-WORKER-D1-RESEND-IMPLEMENTATION.md`. D1 lagrer kvittert lead før suksess; Resend retry/feilstatus og fremtidig LeadProof-handoff er separate; minimale sikre eksport-/lesefunksjoner; ingen ny CRM. Ikke bland inn upushet lokal D-127-navigasjonsgren eller overskriv godkjent CMS, priser og innhold. Fokuserte syntetiske tester og review-safe formkontrakter; stopp før ekte Cloudflare-provisjonering, hemmeligheter, e-post/test med reelle adresser, skjemaktivering, indeksering, merge eller lansering.
