@@ -1,6 +1,6 @@
 {
   "defaultPreset": "medon",
-  "heroPreset": "inherit",
+  "heroPreset": "spiss",
   "servicePreset": "inherit",
   "explanationPreset": "spissplus",
   "faqPreset": "spissplus",
