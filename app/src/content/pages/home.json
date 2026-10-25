@@ -18,9 +18,9 @@
       "openMenu": "Åpne meny",
       "closeMenu": "Lukk meny",
       "assessmentLink": {
-        "label": "Gratis sjekk",
-        "href": "/#sjekk",
-        "variant": "primary"
+        "label": "Se priser og bestill",
+        "href": "/priser",
+        "variant": "secondary"
       },
       "navigation": [
         {
