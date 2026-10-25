@@ -259,6 +259,9 @@
   cursor: pointer;
  }
  .site-shell .site-header .mws-chrome-theme-switch.swap > svg { width: 23px; height: 23px; }
+ @media (prefers-reduced-motion: reduce) {
+  .site-shell .site-header .mws-chrome-theme-switch.swap > svg { transition: none; }
+ }
  .site-shell .site-header .mws-chrome-theme-switch.swap:focus-within {
   outline: 2px solid var(--color-focus); outline-offset: 2px;
  }
