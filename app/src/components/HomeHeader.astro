@@ -20,8 +20,17 @@ const ctaClasses = {
 <header class:list={["site-header", { "site-header--sticky": content.headerOptions.sticky }]}>
   <div class="shell header-inner navbar">
     <a href="/" class="wordmark" aria-label={content.homeLabel}>
-      <svg viewBox="0 0 42 42" width="40" height="40" fill="none" aria-hidden="true"><path d="M5 31V19a14 14 0 0 1 28 0v12" stroke="currentColor" stroke-width="8"/><path d="m15 27 9-9m-9 0h9v9" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <span>{content.brand}<span class="wordmark-second">{content.brandLocation}<span class="wordmark-dot">.</span></span></span>
+      {content.logoLight || content.logoDark
+        ? <span class="site-brand-image-pair site-brand-image-pair--header" aria-hidden="true">
+            <img class="site-brand-image site-brand-image--light"
+              src={content.logoLight ?? content.logoDark} alt="" width="176" height="42" />
+            <img class="site-brand-image site-brand-image--dark"
+              src={content.logoDark ?? content.logoLight} alt="" width="176" height="42" />
+          </span>
+        : <>
+            <svg viewBox="0 0 42 42" width="40" height="40" fill="none" aria-hidden="true"><path d="M5 31V19a14 14 0 0 1 28 0v12" stroke="currentColor" stroke-width="8"/><path d="m15 27 9-9m-9 0h9v9" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>{content.brand}<span class="wordmark-second">{content.brandLocation}<span class="wordmark-dot">.</span></span></span>
+          </>}
     </a>
     <nav class="desktop-nav" aria-label={content.navigationLabel}><HeaderNavigation links={content.navigation} mode="desktop" /></nav>
     <div class="header-actions">
