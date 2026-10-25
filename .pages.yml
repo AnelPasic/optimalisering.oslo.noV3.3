@@ -1,3 +1,5 @@
+# Pages CMS schema refresh 2026-10-26: Toppmeny mobileLogoLight / mobileLogoDark.
+# This comment-only GitHub push refreshes the per-branch config cache via CMS webhook when installed.
 media:
   - name: assets
     label: Eksisterende media
