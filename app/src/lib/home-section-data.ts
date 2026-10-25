@@ -49,6 +49,11 @@ export const homeSectionDataSchema = z.object({
   faqHeading: z.string(), faqEyebrow: z.string(),
   chrome: z.object({
     brand: z.string(), brandLocation: z.string(), homeLabel: z.string(), skipLabel: z.string(),
+    // Uploaded Pages CMS image paths only. Optional: retain each location's approved text/icon fallback.
+    logoLight: z.string().regex(/^\/images\/branding\/[a-zA-Z0-9_-]+\.(?:svg|png|webp|jpe?g|avif)$/).optional(),
+    logoDark: z.string().regex(/^\/images\/branding\/[a-zA-Z0-9_-]+\.(?:svg|png|webp|jpe?g|avif)$/).optional(),
+    footerLogoLight: z.string().regex(/^\/images\/branding\/[a-zA-Z0-9_-]+\.(?:svg|png|webp|jpe?g|avif)$/).optional(),
+    footerLogoDark: z.string().regex(/^\/images\/branding\/[a-zA-Z0-9_-]+\.(?:svg|png|webp|jpe?g|avif)$/).optional(),
     navigationLabel: z.string(), mobileNavigationLabel: z.string(), openMenu: z.string(), closeMenu: z.string(),
     headerOptions: z.object({
       sticky: z.boolean(),
