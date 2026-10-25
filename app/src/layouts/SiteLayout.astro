@@ -9,6 +9,7 @@ import HomeHeader from '../components/HomeHeader.astro';
 import HomeFooter from '../components/HomeFooter.astro';
 import SiteSearch from '../components/SiteSearch.astro';
 import SiteChromeThemeHead from '../components/SiteChromeThemeHead.astro';
+import { siteChrome } from '../lib/site-chrome-data.ts';
 import Attribution from '../components/Attribution.astro';
 import { site } from '../config/site';
 import { defaultLocale, type Locale } from '../config/locales';
@@ -20,7 +21,7 @@ const homepageSource=pages.find(p=>p.kind==='home');
 if(homepageSource)validateHomepagePublicLinks(homepageSource,pages);
 const home=homepageSource?.homepage;
 if(!home)throw new Error('Shared commercial chrome requires the homepage source');
-const homeChrome=home.chrome;
+const homeChrome=siteChrome;
 const canonical = new URL(Astro.url.pathname, site.url).href;
 const organization = { '@context': 'https://schema.org', '@type': 'Organization', name: site.provider, url: site.providerUrl };
 ---
