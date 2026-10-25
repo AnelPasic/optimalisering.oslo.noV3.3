@@ -1026,6 +1026,78 @@ content:
                     label: Navn på undermenyknappen
                     type: string
                     description: Påkrevd når lenken har en undermeny. Hovedlenken forblir klikkbar.
+                  - name: presentation
+                    label: Menytype
+                    type: select
+                    description: Kompakt undermeny er standard. Mega-meny viser kolonner og valgfritt handlingskort.
+                    options:
+                      values:
+                        - name: dropdown
+                          label: Dropdown
+                        - name: mega
+                          label: Mega-meny
+                  - name: mega
+                    label: Innhold i mega-meny (bruk bare med Mega-meny)
+                    type: object
+                    fields:
+                      - name: columns
+                        label: Kolonner (2–4)
+                        type: object
+                        list:
+                          min: 2
+                          max: 4
+                          collapsible:
+                            collapsed: true
+                            summary: "{heading}"
+                        fields:
+                          - name: heading
+                            label: Kolonneoverskrift
+                            type: string
+                            required: true
+                          - name: links
+                            label: Lenker i kolonnen
+                            type: object
+                            list:
+                              min: 1
+                              max: 8
+                              collapsible:
+                                collapsed: true
+                                summary: "{label}"
+                            fields:
+                              - name: label
+                                label: Lenketekst
+                                type: string
+                                required: true
+                              - name: href
+                                label: Intern lenke
+                                type: string
+                                pattern: ^/(?![/\\])
+                                required: true
+                              - name: description
+                                label: Kort forklaring
+                                type: text
+                                required: true
+                      - name: promo
+                        label: Valgfritt handlingskort
+                        type: object
+                        fields:
+                          - name: heading
+                            label: Overskrift
+                            type: string
+                          - name: body
+                            label: Kort tekst
+                            type: text
+                          - name: cta
+                            label: Knapp
+                            type: object
+                            fields:
+                              - name: label
+                                label: Knappetekst
+                                type: string
+                              - name: href
+                                label: Intern lenke
+                                type: string
+                                pattern: ^/(?![/\\])
                   - name: children
                     label: Undermeny
                     type: object
