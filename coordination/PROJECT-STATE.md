@@ -1,5 +1,10 @@
 # Project state
 
+## 2026-10-25 — Desktop nav Figtree 1rem / 600 / 6px gap (OWNER VISUAL)
+
+OWNER approved the Storebrand-inspired lavender hover pill and requested its nav labels be set to 1rem (16px), font-weight 600, with a small gap between top-level items as in the supplied Storebrand reference. Implemented exclusively in desktop (`min-width:901px`) `app/src/styles/header-navigation.css`, reusing the existing `var(--body)` Figtree font; 6px item gap and no other spacing/behavior change. Preserve noindex review, hover/focus/active pill, dropdown/mega, Pages CMS, search, NO|EN, CTA, mobile, footer, forms/Resend/D1, pricing and all content. Deploy only via existing main-connected Cloudflare Build; no extra GitHub Actions. Source commit is not evidence that live Worker publication has succeeded.
+
+
 ## 2026-10-25 — Storebrand-style subtle hover pills on desktop primary navigation (OWNER VISUAL)
 
 OWNER provided a Storebrand navigation screenshot and requested a light rounded background/color shift when hovering the primary menu items. In the existing Optimalisering Oslo `header-navigation.css`, only desktop primary menu parents receive a soft lavender pill drawn from existing theme tokens on fine-pointer hover, keyboard focus, current page and open mega/dropdown state. Keep original menu dimensions, fonts, logo, click-and-hover behavior, NO|EN, Pagefind search, CTA, CMS data, mobile menu, footer, forms, lead infrastructure and preview noindex untouched. No new component/JS, dependency, manual GitHub Actions runs or English rollout. CSS review commit on `fix/header-nav-hover-20261025`; publishing source through established main-connected Cloudflare pipeline is not the same as verifying the Worker is live.
