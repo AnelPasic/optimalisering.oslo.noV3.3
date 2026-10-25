@@ -8,6 +8,29 @@
  .site-header .nav-disclosure { display: inline-flex; flex: 0 0 44px; width: 44px; min-width: 44px; min-height: 44px; height: 44px; padding: 12px; border: 0; }
  .nav-disclosure .arrow-icon { width: 18px; height: 18px; transform: rotate(90deg); }
  .nav-disclosure[aria-expanded="true"] .arrow-icon { transform: rotate(-90deg); }
+ /* Storebrand-style understated pill: existing Oslo lavender, no layout shift. */
+ @media (min-width: 901px) {
+  .site-shell .site-header .desktop-nav .header-nav-parent {
+   border-radius: 999px;
+   transition: background-color 150ms ease;
+  }
+  @media (hover: hover) and (pointer: fine) {
+   .site-shell .site-header .desktop-nav .header-nav-item > .header-nav-parent:hover {
+    background: color-mix(in srgb, var(--surface-lavender) 70%, var(--surface-soft));
+   }
+  }
+  .site-shell .site-header .desktop-nav .header-nav-item > .header-nav-parent:is(:focus-within, :has(> a[aria-current="page"])),
+  .site-shell .site-header .desktop-nav .header-nav-item[data-active-parent] > .header-nav-parent,
+  .site-shell .site-header .desktop-nav .header-nav-item[data-nav-open] > .header-nav-parent {
+   background: var(--surface-lavender);
+  }
+  .site-shell .site-header .desktop-nav .header-nav-parent > a:is(:hover, [aria-current="page"]) {
+   text-decoration: none;
+  }
+ }
+ @media (prefers-reduced-motion: reduce) {
+  .site-shell .site-header .desktop-nav .header-nav-parent { transition: none; }
+ }
  .site-header .header-submenu { position: absolute; z-index: 30; top: calc(100% + 4px); left: 0; width: 350px; max-width: calc(100vw - 40px); padding: 8px; border: var(--border-subtle); border-radius: var(--radius-sm); box-shadow: 0 12px 24px color-mix(in srgb, var(--ink) 10%, transparent); }
  .site-header .header-submenu li > a { display: flex; flex-direction: column; align-items: start; gap: 4px; min-height: 44px; padding: 12px; white-space: normal; border: 0; font-size: var(--type-label); line-height: var(--leading-small); }
  .header-submenu-label { font-weight: var(--weight-label); }
