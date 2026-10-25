@@ -126,3 +126,40 @@ test('DaisyUI sun/moon uses real dark name, OS preference, and persistent manual
   assert.match(runtime,/onSystemChange/);
   assert.match(runtime,/localStorage\.setItem\(preferenceKey, mode\)/);
 });
+
+test('Mobile-specific header Light/Dark logos upload separately and preserve owner desktop assets', () => {
+  const allowed = ['/images/branding/mobile-light.svg', '/images/branding/mobile-dark.webp'];
+  const edited = structuredClone(header);
+  edited.mobileLogoLight = allowed[0];
+  edited.mobileLogoDark = allowed[1];
+  assert.equal(headerEntry.fields.find((field:any)=>field.name==='mobileLogoLight')?.type, 'image');
+  assert.equal(headerEntry.fields.find((field:any)=>field.name==='mobileLogoDark')?.type, 'image');
+  for (const key of ['mobileLogoLight', 'mobileLogoDark']) {
+    assert.equal(headerEntry.fields.find((field:any)=>field.name===key)?.options?.media, 'brandLogos');
+  }
+  const saved = JSON.parse(cmsJsonSave(header,edited,headerEntry,cms));
+  assert.deepEqual([saved.mobileLogoLight, saved.mobileLogoDark],allowed);
+  assert.equal(saved.logoLight, header.logoLight);
+  assert.equal(saved.logoDark, header.logoDark);
+  assert.deepEqual(schema.parse(combined(saved)),schema.parse(combined(edited)));
+  assert.equal(schema.safeParse(combined({...edited,mobileLogoDark:'//example.test/fake.svg'})).success,false);
+  assert.deepEqual(read('src/content/site-chrome/footer.json'), footer);
+  assert.deepEqual(read('src/content/site-chrome/appearance.json'), appearance);
+});
+
+test('Compact mobile logo is independent and theme-aware, with unchanged desktop and no-upload fallbacks', () => {
+  const view = readFileSync('src/components/HomeHeader.astro','utf8');
+  const css = readFileSync('src/styles/shared.css','utf8');
+  assert.match(view,/Boolean\(content\.mobileLogoLight \|\| content\.mobileLogoDark\)/);
+  assert.match(view,/class="site-brand-image-pair site-brand-image-pair--mobile"/);
+  assert.match(view,/content\.mobileLogoLight \?\? content\.mobileLogoDark/);
+  assert.match(view,/content\.mobileLogoDark \?\? content\.mobileLogoLight/);
+  assert.match(view,/content\.logoLight \|\| content\.logoDark/);
+  assert.match(view,/wordmark--has-mobile-logo/);
+  assert.match(css,/\.site-brand-image-pair--mobile \{ display: none; \}/);
+  assert.match(css,/@media \(max-width: 480px\)/);
+  assert.match(css,/\.wordmark--has-mobile-logo > \.site-brand-image-pair--header/);
+  assert.match(css,/\.wordmark--has-mobile-logo > svg/);
+  assert.match(css,/html\[data-mws-theme-mode="dark"\] \.site-brand-image--dark/);
+  assert.match(css,/max-width: 58px;/);
+});

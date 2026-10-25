@@ -480,3 +480,39 @@ html[data-mws-theme-mode="dark"] .site-brand-image--dark { display: block; }
     max-width: 58px; max-height: 42px;
   }
 }
+
+/* Mobile-specific brand art only replaces the desktop logo or original
+   wordmark when its own image has been supplied in the native CMS.
+   Leave every previously accepted desktop/logo fallback untouched. */
+.site-shell .site-header .site-brand-image-pair--mobile { display: none; }
+@media (max-width: 480px) {
+  .site-shell .site-header .wordmark--has-mobile-logo > .site-brand-image-pair--header,
+  .site-shell .site-header .wordmark--has-mobile-logo > svg,
+  .site-shell .site-header .wordmark--has-mobile-logo > span:not(.site-brand-image-pair--mobile) {
+    display: none;
+  }
+  .site-shell .site-header .site-brand-image-pair--mobile {
+    display: inline-flex;
+    flex: 0 1 auto;
+    max-width: 58px;
+    max-height: 42px;
+  }
+  .site-shell .site-header .site-brand-image-pair--mobile .site-brand-image {
+    width: auto;
+    height: auto;
+    max-width: 58px;
+    max-height: 42px;
+    object-fit: contain;
+  }
+}
+
+/* At 320px the currently uploaded desktop logo must also fit beside the
+   existing CTA and hamburger. Do not change any wider phone or desktop. */
+@media (max-width: 359px) {
+  .site-shell .site-header .site-brand-image-pair--header,
+  .site-shell .site-header .site-brand-image-pair--header .site-brand-image,
+  .site-shell .site-header .site-brand-image-pair--mobile,
+  .site-shell .site-header .site-brand-image-pair--mobile .site-brand-image {
+    max-width: 38px;
+  }
+}

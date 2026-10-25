@@ -1728,6 +1728,18 @@ content:
             options:
               media: brandLogos
             description: Variant med kontrast mot mørk bakgrunn. Valgfri — lys logo brukes hvis kun én er valgt.
+          - name: mobileLogoLight
+            label: Liten mobil-logo – Light
+            type: image
+            options:
+              media: brandLogos
+            description: Valgfritt lite/symbolbasert merke for mobil opptil 480 px. Hvis tomt brukes eksisterende toppmenylogo.
+          - name: mobileLogoDark
+            label: Liten mobil-logo – Dark
+            type: image
+            options:
+              media: brandLogos
+            description: Valgfri mørk temavariant for mobil opptil 480 px. Hvis tomt brukes mobil-Light eller eksisterende toppmenylogo.
           - name: homeLabel
             label: Tilgjengelig forsidenavn
             type: string
