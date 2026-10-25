@@ -10,6 +10,15 @@
  .nav-disclosure[aria-expanded="true"] .arrow-icon { transform: rotate(-90deg); }
  /* Storebrand-style understated pill: existing Oslo lavender, no layout shift. */
  @media (min-width: 901px) {
+  /* Match the Storebrand navigation rhythm using Oslo's existing Figtree font. */
+  .site-shell .site-header .desktop-nav > ul.menu {
+   gap: 6px;
+  }
+  .site-shell .site-header .desktop-nav .header-nav-parent > a {
+   font-family: var(--body);
+   font-size: 1rem;
+   font-weight: 600;
+  }
   .site-shell .site-header .desktop-nav .header-nav-parent {
    border-radius: 999px;
    transition: background-color 150ms ease;
