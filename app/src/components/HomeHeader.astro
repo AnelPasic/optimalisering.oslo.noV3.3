@@ -16,8 +16,11 @@ const { content, languageLinks = [], currentLocale = 'nb' } = Astro.props;
       <span>{content.brand}<span class="wordmark-second">{content.brandLocation}<span class="wordmark-dot">.</span></span></span>
     </a>
     <nav class="desktop-nav" aria-label={content.navigationLabel}><HeaderNavigation links={content.navigation} mode="desktop" /></nav>
-    <LanguageSwitch links={languageLinks} currentLocale={currentLocale} />
-    <div class="header-actions"><a href={content.assessmentLink.href} class="button button-small btn btn-primary btn-sm">{content.assessmentLink.label}<Arrow diagonal /></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label={content.openMenu} data-home-menu data-open-label={content.openMenu} data-close-label={content.closeMenu}><span></span><span></span></button></div>
+    <div class="header-actions">
+      <LanguageSwitch links={languageLinks} currentLocale={currentLocale} />
+      <a href={content.assessmentLink.href} class="button button-small btn btn-primary btn-sm">{content.assessmentLink.label}<Arrow diagonal /></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label={content.openMenu} data-home-menu data-open-label={content.openMenu} data-close-label={content.closeMenu}><span></span><span></span></button>
+    </div>
   </div>
   <nav id="mobile-menu" class="mobile-menu shell" aria-label={content.mobileNavigationLabel} hidden>
     <HeaderNavigation links={content.navigation} mode="mobile" />
