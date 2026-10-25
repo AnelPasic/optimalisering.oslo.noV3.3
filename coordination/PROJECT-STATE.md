@@ -1,5 +1,10 @@
 # Project state
 
+## 2026-10-25 — Submenu highlight uses secondary / secondary-content (OWNER VISUAL REVISION)
+
+OWNER wants to replace the immediately preceding green/white submenu highlight with the current brand's `--color-secondary` background and `--color-secondary-content` text. Only the final hover/focus/pressed/current-page mega/dropdown submenu color declarations and their adjacent comment were changed in `app/src/styles/header-navigation.css`, ensuring both label and description have the secondary-content color. This supersedes the preceding **primary/primary-content** submenu highlight color choice without changing layout, mega menu behavior, CMS, search, NO|EN, CTA, footer, forms, noindex or production infrastructure. Release through the existing main-connected Cloudflare build; do not claim live deploy without verification or start optional GitHub Actions.
+
+
 ## 2026-10-25 — Active submenu contrast matches Gratis sjekk CTA (OWNER VISUAL)
 
 OWNER screenshot showed a purple highlighted **Konvertering** mega submenu item with barely visible muted explanatory text; owner asks highlighted submenu background and both text colors to match the green/white **Gratis sjekk** button at right. Scoped CSS only in `app/src/styles/header-navigation.css`: existing daisyUI `--color-primary` and `--color-primary-content` apply to hovered, keyboard-focused, pressed and `aria-current=page` items within **both** mega-menu and standard dropdown; title and description explicitly inherit the light contrasting CTA color. No other layout, header, menu structure/behavior, copy, Pagefind, NO|EN, CMS, footer, forms, noindex or infrastructure touched. Existing Cloudflare build may pick up a fast-forward to main; do not equate source push with observed live deploy. No GitHub Actions requested.
