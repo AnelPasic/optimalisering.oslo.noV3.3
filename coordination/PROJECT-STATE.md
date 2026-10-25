@@ -1,5 +1,10 @@
 # Project state
 
+## 2026-10-25 — Active submenu contrast matches Gratis sjekk CTA (OWNER VISUAL)
+
+OWNER screenshot showed a purple highlighted **Konvertering** mega submenu item with barely visible muted explanatory text; owner asks highlighted submenu background and both text colors to match the green/white **Gratis sjekk** button at right. Scoped CSS only in `app/src/styles/header-navigation.css`: existing daisyUI `--color-primary` and `--color-primary-content` apply to hovered, keyboard-focused, pressed and `aria-current=page` items within **both** mega-menu and standard dropdown; title and description explicitly inherit the light contrasting CTA color. No other layout, header, menu structure/behavior, copy, Pagefind, NO|EN, CMS, footer, forms, noindex or infrastructure touched. Existing Cloudflare build may pick up a fast-forward to main; do not equate source push with observed live deploy. No GitHub Actions requested.
+
+
 ## 2026-10-25 — Desktop nav Figtree 1rem / 600 / 6px gap (OWNER VISUAL)
 
 OWNER approved the Storebrand-inspired lavender hover pill and requested its nav labels be set to 1rem (16px), font-weight 600, with a small gap between top-level items as in the supplied Storebrand reference. Implemented exclusively in desktop (`min-width:901px`) `app/src/styles/header-navigation.css`, reusing the existing `var(--body)` Figtree font; 6px item gap and no other spacing/behavior change. Preserve noindex review, hover/focus/active pill, dropdown/mega, Pages CMS, search, NO|EN, CTA, mobile, footer, forms/Resend/D1, pricing and all content. Deploy only via existing main-connected Cloudflare Build; no extra GitHub Actions. Source commit is not evidence that live Worker publication has succeeded.
