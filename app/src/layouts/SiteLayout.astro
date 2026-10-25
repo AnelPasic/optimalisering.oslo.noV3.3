@@ -40,8 +40,8 @@ const organization = { '@context': 'https://schema.org', '@type': 'Organization'
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="stylesheet" href="/pagefind/pagefind-component-ui.css" />
-    <script is:inline type="module" src="/pagefind/pagefind-component-ui.js"></script>
+    {homeChrome.headerOptions.showSearch && <link rel="stylesheet" href="/pagefind/pagefind-component-ui.css" />}
+    {homeChrome.headerOptions.showSearch && <script is:inline type="module" src="/pagefind/pagefind-component-ui.js"></script>}
     <script type="application/ld+json" set:html={JSON.stringify(organization).replace(/</g, '\\u003c')} />
   </head>
   <body data-ui-shell="true" class="site-shell">
@@ -49,7 +49,7 @@ const organization = { '@context': 'https://schema.org', '@type': 'Organization'
     <HomeHeader content={homeChrome} languageLinks={languageLinks} currentLocale={locale} />
     <main id="main" data-pagefind-body={noindex || Astro.url.pathname.startsWith("/design-system/") ? undefined : ""}><slot /></main>
     <HomeFooter content={homeChrome} />
-    <SiteSearch mode="modal" />
+    {homeChrome.headerOptions.showSearch && <SiteSearch mode="modal" />}
     <Attribution />
     <TerminologyUI />
   </body>
