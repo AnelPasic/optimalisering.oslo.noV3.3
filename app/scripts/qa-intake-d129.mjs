@@ -44,7 +44,15 @@ try {
       });
       assert.match(await form.locator('[role=status]').textContent(), /ikke åpnet|Ingen opplysninger/);
       assert.equal(requests.length, 0);
-      assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `${name} ${width} overflow`);
+      const overflow = await page.evaluate(() => {
+        if (document.documentElement.scrollWidth <= innerWidth) return null;
+        return [...document.querySelectorAll('body *')].map(el => {
+          const r = el.getBoundingClientRect();
+          return { element: el.tagName.toLowerCase(), cls: String(el.className).slice(0, 100),
+            left: Math.round(r.left), right: Math.round(r.right), width: Math.round(r.width) };
+        }).filter(x => x.right > innerWidth + 1 || x.left < -1).slice(0, 14);
+      });
+      assert.equal(overflow, null, `${name} ${width} overflow: ${JSON.stringify(overflow)}`);
       assert.match(await page.locator('meta[name=robots]').getAttribute('content'), /noindex/);
       await page.screenshot({ path: resolve(output, `${name}-${width}.png`), fullPage: true });
       checks.push(`${name} ${width}px: zero POST, disabled transport, native submit guarded, no overflow, noindex`);
