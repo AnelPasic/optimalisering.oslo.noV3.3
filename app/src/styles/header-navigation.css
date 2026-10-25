@@ -67,7 +67,8 @@
 
 /* MWS-038 preview adapter: use the current Optimalisering Oslo theme and fonts. */
 @layer project {
- .site-shell .site-header { position: sticky; top: 0; z-index: 55; }
+ .site-shell .site-header { position: relative; z-index: 55; }
+ .site-shell .site-header.site-header--sticky { position: sticky; top: 0; }
  .site-shell .site-header .header-nav-item--mega { position: static; }
  .site-shell .site-header .desktop-nav > ul.menu { position: static; }
  .site-shell .site-header .header-mega-menu[hidden] { display: none !important; }
