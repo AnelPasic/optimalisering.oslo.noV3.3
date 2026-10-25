@@ -10,7 +10,7 @@
   "assessmentLink": {
     "label": "Se priser og bestill",
     "href": "/priser/",
-    "variant": "accent"
+    "variant": "primary"
   },
   "navigation": [
     {
