@@ -46,7 +46,22 @@ export const homeSectionDataSchema = z.object({
   proof: proofSlotSchema.extend({ featuredVisual: featuredProofVisualFieldSchema.optional(),layout:proofLayoutSchema,caseVisuals:proofCaseVisualsSchema.optional() }),
   form: z.object({ promise: z.string(), heading: z.string(), websiteLabel: z.string(), websitePlaceholder: z.string(), emailLabel: z.string(), emailPlaceholder: z.string(), messageLabel: z.string(), optional: z.string(), messagePlaceholder: z.string(), sensitiveNotice: z.string(), previewNotice: z.string(), submitLabel: z.string(), privacyText: z.string(), privacyLink: link, disabledStatus: z.string() }),
   faqHeading: z.string(), faqEyebrow: z.string(),
-  chrome: z.object({ brand: z.string(), brandLocation: z.string(), homeLabel: z.string(), skipLabel: z.string(), navigationLabel: z.string(), mobileNavigationLabel: z.string(), openMenu: z.string(), closeMenu: z.string(), assessmentLink: link, navigation: z.array(navigationLinkSchema), providerText: z.string(), previewLabel: z.string(), serviceNavigationLabel: z.string(), informationNavigationLabel: z.string(), storeLink: link, informationLinks: z.array(link), copyrightProvider: z.string(), footerNote: z.string() }),
+  chrome: z.object({
+    brand: z.string(), brandLocation: z.string(), homeLabel: z.string(), skipLabel: z.string(),
+    navigationLabel: z.string(), mobileNavigationLabel: z.string(), openMenu: z.string(), closeMenu: z.string(),
+    headerOptions: z.object({
+      sticky: z.boolean(),
+      showLanguageSwitch: z.boolean(),
+      showSearch: z.boolean(),
+      showCta: z.boolean(),
+    }).strict(),
+    assessmentLink: link.extend({
+      variant: z.enum(['primary', 'secondary', 'accent', 'neutral', 'info', 'success', 'warning', 'error']),
+    }),
+    navigation: z.array(navigationLinkSchema), providerText: z.string(), previewLabel: z.string(),
+    serviceNavigationLabel: z.string(), informationNavigationLabel: z.string(), storeLink: link,
+    informationLinks: z.array(link), copyrightProvider: z.string(), footerNote: z.string(),
+  }),
 });
 
 // faqVisible is derived presentation state, never another commercial source.
