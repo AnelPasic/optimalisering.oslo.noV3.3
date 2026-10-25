@@ -19,7 +19,7 @@
       "closeMenu": "Lukk meny",
       "assessmentLink": {
         "label": "Se priser og bestill",
-        "href": "/priser",
+        "href": "/priser/",
         "variant": "secondary"
       },
       "navigation": [
@@ -136,6 +136,85 @@
       ],
       "copyrightProvider": "Optimalisering Oslo",
       "footerNote": "Et godt sted å begynne.",
+      "footerGroups": [
+        {
+          "heading": "Synlighet",
+          "links": [
+            {
+              "label": "SEO",
+              "href": "/seo/"
+            },
+            {
+              "label": "AI-synlighet (AIO/GEO)",
+              "href": "/ai-synlighet/"
+            },
+            {
+              "label": "Lokal SEO",
+              "href": "/lokal-seo/"
+            },
+            {
+              "label": "Synlighet – oversikt",
+              "href": "/synlighet/"
+            }
+          ]
+        },
+        {
+          "heading": "Optimalisering",
+          "links": [
+            {
+              "label": "Nettsideoptimalisering",
+              "href": "/konvertering/"
+            },
+            {
+              "label": "Nettbutikkoptimalisering",
+              "href": "/nettbutikkoptimalisering/"
+            },
+            {
+              "label": "Måling og effekt",
+              "href": "/innsikt/male-effekt-av-optimalisering/"
+            }
+          ]
+        },
+        {
+          "heading": "Kom i gang",
+          "links": [
+            {
+              "label": "Gratis sjekk",
+              "href": "/#sjekk"
+            },
+            {
+              "label": "Priser og pakker",
+              "href": "/priser/"
+            },
+            {
+              "label": "Kontakt",
+              "href": "/kontakt/"
+            },
+            {
+              "label": "Om tjenesten",
+              "href": "/om/"
+            },
+            {
+              "label": "Innsikt",
+              "href": "/innsikt/"
+            }
+          ]
+        }
+      ],
+      "footerLegalLinks": [
+        {
+          "label": "Personvern",
+          "href": "/personvern/"
+        },
+        {
+          "label": "Vilkår",
+          "href": "/vilkar/"
+        },
+        {
+          "label": "Begreper",
+          "href": "/begreper/"
+        }
+      ],
       "headerOptions": {
         "sticky": true,
         "showLanguageSwitch": true,

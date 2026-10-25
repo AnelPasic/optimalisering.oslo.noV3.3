@@ -63,6 +63,13 @@ export const homeSectionDataSchema = z.object({
     navigation: z.array(navigationLinkSchema), providerText: z.string(), previewLabel: z.string(),
     serviceNavigationLabel: z.string(), informationNavigationLabel: z.string(), storeLink: link,
     informationLinks: z.array(link), copyrightProvider: z.string(), footerNote: z.string(),
+    // Footer is CMS-managed independently from mega navigation; the older fields
+    // remain readable for already-authored site data and a safe migration.
+    footerGroups: z.array(z.object({
+      heading: z.string().trim().min(1),
+      links: z.array(link).min(1).max(8),
+    })).length(3).optional(),
+    footerLegalLinks: z.array(link).max(5).optional(),
   }),
 });
 

@@ -1255,6 +1255,58 @@ content:
                 label: Bunntekstmerknad
                 type: string
                 required: true
+              - name: footerGroups
+                label: Footer – tre lenkekolonner
+                description: Synlighet, Optimalisering og Kom i gang. Endre tekst og lenker her, ikke i toppmenyen.
+                type: object
+                list:
+                  min: 3
+                  max: 3
+                  collapsible:
+                    collapsed: true
+                    summary: "{heading}"
+                fields:
+                  - name: heading
+                    label: Kolonneoverskrift
+                    type: string
+                    required: true
+                  - name: links
+                    label: Lenker
+                    type: object
+                    list:
+                      min: 1
+                      max: 8
+                      collapsible:
+                        collapsed: true
+                        summary: "{label}"
+                    fields:
+                      - name: label
+                        label: Lenketekst
+                        type: string
+                        required: true
+                      - name: href
+                        label: Eksisterende intern side
+                        type: string
+                        pattern: ^/
+                        required: true
+              - name: footerLegalLinks
+                label: Footer – juridiske lenker på bunnlinjen
+                type: object
+                list:
+                  max: 5
+                  collapsible:
+                    collapsed: true
+                    summary: "{label}"
+                fields:
+                  - name: label
+                    label: Tekst
+                    type: string
+                    required: true
+                  - name: href
+                    label: Intern lenke
+                    type: string
+                    pattern: ^/
+                    required: true
             required: true
         required: true
     operations: &a3

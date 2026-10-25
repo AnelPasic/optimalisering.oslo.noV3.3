@@ -22,7 +22,10 @@ test('SEO page covers consultant, services and Oslo without additional competing
  const links=page.sections.flatMap((s:{links?:Array<{href:string}>})=>s.links??[]);
  for(const url of ['/lokal-seo/','/innsikt/google-bedriftsprofil/','/priser/']) assert.ok(links.some((l:{href:string})=>l.href===url),url);
  const menu=home.homepage.chrome.navigation.find((l:{href:string})=>l.href==='/synlighet/');
- assert.ok(menu.children.some((c:{href:string})=>c.href==='/seo/'));
+ const childLinks=menu.presentation==='mega'
+  ? menu.mega?.columns.flatMap((column:{links:Array<{href:string}>})=>column.links)??[]
+  : menu.children??[];
+ assert.ok(childLinks.some((c:{href:string})=>c.href==='/seo/'));
  assert.equal(page.faq.length,6);
 });
 

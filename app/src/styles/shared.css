@@ -118,6 +118,77 @@ p { text-wrap: pretty; }
 .footer-grid nav a { font-size: var(--type-meta); text-decoration: none; line-height: var(--leading-small); }
 .footer-grid nav a:hover { text-decoration: underline; text-underline-offset: 4px; }
 .footer-bottom { display: flex; justify-content: space-between; gap: 20px; border-top: 1px solid var(--line); padding-block: 20px; font-size: var(--type-meta); color: var(--muted); line-height: var(--leading-small); }
+/* Approved footer direction: Mementor's clear service groups, Storebrand's restraint.
+   Existing site palette and daisyUI footer primitive remain authoritative. */
+.site-shell .site-footer .footer-grid--columns {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: minmax(235px, 1.45fr) repeat(3, minmax(0, 1fr));
+  column-gap: clamp(26px, 3.2vw, 70px);
+  align-items: start;
+}
+.site-shell .site-footer .footer-about { min-width: 0; }
+.site-shell .site-footer .footer-link-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 11px;
+  min-width: 0;
+}
+.site-shell .site-footer .footer-group-title {
+  color: inherit;
+  font-size: var(--type-label);
+  line-height: var(--leading-small);
+  font-weight: 700;
+  letter-spacing: .045em;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}
+.site-shell .site-footer .footer-link-group a {
+  overflow-wrap: anywhere;
+  line-height: var(--leading-small);
+}
+.site-shell .site-footer .footer-bottom--columns {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.site-shell .site-footer .footer-bottom--columns nav {
+  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
+.site-shell .site-footer .footer-bottom--columns nav a {
+  color: inherit;
+  text-decoration: none;
+}
+.site-shell .site-footer .footer-bottom--columns nav a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+@media (min-width: 651px) and (max-width: 1100px) {
+  .site-shell .site-footer .footer-grid--columns {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: 38px;
+  }
+  .site-shell .site-footer .footer-about { grid-column: 1 / -1; }
+}
+@media (max-width: 650px) {
+  .site-shell .site-footer .footer-grid--columns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 34px 22px;
+  }
+  .site-shell .site-footer .footer-about,
+  .site-shell .site-footer .footer-link-group:last-child { grid-column: 1 / -1; }
+  .site-shell .site-footer .footer-bottom--columns nav { margin-left: 0; width: 100%; }
+}
+@media (max-width: 480px) {
+  .site-shell .site-footer .footer-grid--columns { grid-template-columns: 1fr; }
+  .site-shell .site-footer .footer-about,
+  .site-shell .site-footer .footer-link-group:last-child { grid-column: auto; }
+}
+
 .preview-tag { display: inline-block; font-size: var(--type-meta); margin-top: 18px; padding: 4px 8px; border: 1px solid var(--line); border-radius: var(--radius-sm); line-height: var(--leading-small); }
 @media (max-width: 1100px) {
   .shell { width: calc(100% - 64px); }
@@ -369,4 +440,10 @@ p { text-wrap: pretty; }
 @media (min-width: 651px) {
   .content-section .section-items[data-content-layout="two-columns"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .content-section .section-items[data-content-layout="three-columns"] { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* Compact phones: retain CTA and menu by using the icon-only brand.
+   The home link keeps its complete aria-label. Larger viewports are unchanged. */
+@media (max-width: 480px) {
+  .site-shell .site-header .wordmark > span { display: none; }
 }

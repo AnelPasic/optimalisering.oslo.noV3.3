@@ -4,14 +4,37 @@ import { site } from '../config/site';
 import { glossary } from '../lib/terminology';
 interface Props { content: HomepageContent['chrome']; }
 const { content } = Astro.props;
+// Earlier CMS snapshots remain renderable until the new footer groups are
+// populated. New layouts own their link order separately from the mega menu.
+const footerGroups = content.footerGroups ?? [
+  { heading: content.serviceNavigationLabel,
+    links: [...content.navigation.map(({ label, href }) => ({label,href})), content.storeLink] },
+  { heading: content.informationNavigationLabel, links: content.informationLinks },
+  { heading: 'Veiledning', links: [{ label: glossary.linkLabel, href: '/begreper/' }] },
+];
+const legalLinks = content.footerLegalLinks ?? [];
 ---
 <footer class="site-footer">
   <div class="shell">
-   <div class="footer footer-grid footer-vertical min-[651px]:footer-horizontal grid-cols-2 min-[651px]:grid-cols-[1.4fr_1fr_1fr] gap-x-5 gap-y-8 min-[651px]:gap-[45px] min-[901px]:gap-20 pb-9 min-[651px]:pb-[55px] text-(length:--type-body) leading-(--leading-body) *:w-full">
-    <div class="block justify-items-normal max-[650px]:col-span-full"><a class="footer-title footer-brand normal-case opacity-100 mb-0" href="/">{content.brand} {content.brandLocation}<span>.</span></a><p>{content.providerText}</p>{site.preview && <span class="preview-tag">{content.previewLabel}</span>}</div>
-    <nav class="gap-(--gap-sm)" aria-label={content.serviceNavigationLabel}>{content.navigation.map(link => <a href={link.href}>{link.label}</a>)}<a href={content.storeLink.href}>{content.storeLink.label}</a></nav>
-    <nav class="gap-(--gap-sm)" aria-label={content.informationNavigationLabel}>{content.informationLinks.map(link => <a href={link.href}>{link.label}</a>)}<a href="/begreper/">{glossary.linkLabel}</a></nav>
-   </div>
+    <div class="footer footer-grid footer-grid--columns footer-vertical min-[651px]:footer-horizontal gap-x-5 gap-y-8 pb-9 min-[651px]:pb-[55px] text-(length:--type-body) leading-(--leading-body) *:w-full">
+      <div class="footer-about block justify-items-normal">
+        <a class="footer-title footer-brand normal-case opacity-100 mb-0" href="/">{content.brand} {content.brandLocation}<span>.</span></a>
+        <p>{content.providerText}</p>
+        {site.preview && <span class="preview-tag">{content.previewLabel}</span>}
+      </div>
+      {footerGroups.map(group => (
+        <nav class="footer-link-group" aria-label={group.heading}>
+          <h2 class="footer-title footer-group-title">{group.heading}</h2>
+          {group.links.map(link => <a href={link.href}>{link.label}</a>)}
+        </nav>
+      ))}
+    </div>
   </div>
-  <div class="shell footer-bottom"><span>© {new Date().getFullYear()} {content.copyrightProvider}</span><span>{content.footerNote}</span></div>
+  <div class="shell footer-bottom footer-bottom--columns">
+    <span>© {new Date().getFullYear()} {content.copyrightProvider}</span>
+    <span>{content.footerNote}</span>
+    {legalLinks.length > 0 && <nav aria-label="Personvern og informasjon">
+      {legalLinks.map(link => <a href={link.href}>{link.label}</a>)}
+    </nav>}
+  </div>
 </footer>

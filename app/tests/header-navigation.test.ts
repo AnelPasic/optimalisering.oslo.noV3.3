@@ -11,7 +11,9 @@ const child={label:'SEO',href:'/seo/',description:'Bli funnet i Googles organisk
 const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
 test('typed navigation preserves child destination and explanation instead of dropping it',()=>{
  const chrome=structuredClone(home.homepage.chrome);
- chrome.navigation[0]={...chrome.navigation[0],submenuLabel:'Vis fagområder under Synlighet',children:[child]};
+ // Exercise legacy dropdown editing on a valid dropdown fixture, not the
+ // OWNER-approved mega menu currently stored in homepage.chrome.navigation[0].
+ chrome.navigation[0]={label:'Synlighet',href:'/synlighet/',presentation:'dropdown',submenuLabel:'Vis fagområder under Synlighet',children:[child]};
  assert.deepEqual(homeSectionDataSchema.shape.chrome.parse(chrome).navigation[0],chrome.navigation[0]);
 });
 test('native CMS child edit preserves other navigation and homepage data',()=>{
