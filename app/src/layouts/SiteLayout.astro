@@ -43,7 +43,7 @@ const organization = { '@context': 'https://schema.org', '@type': 'Organization'
   </head>
   <body data-ui-shell="true" class="site-shell">
     <a href="#main" class="skip-link">{homeChrome.skipLabel}</a>
-    <HomeHeader content={homeChrome} languageLinks={languageLinks} />
+    <HomeHeader content={homeChrome} languageLinks={languageLinks} currentLocale={locale} />
     <main id="main"><slot /></main>
     <HomeFooter content={homeChrome} />
     <Attribution />
