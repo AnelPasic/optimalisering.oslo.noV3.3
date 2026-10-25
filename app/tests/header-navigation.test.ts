@@ -8,10 +8,11 @@ import {pageSchema} from '../src/lib/content-schema.ts';
 
 const home=JSON.parse(readFileSync('src/content/pages/home.json','utf8'));
 const header=JSON.parse(readFileSync('src/content/site-chrome/header.json','utf8'));
+const footer=JSON.parse(readFileSync('src/content/site-chrome/footer.json','utf8'));
 const child={label:'SEO',href:'/seo/',description:'Bli funnet i Googles organiske søkeresultater'};
 const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
 test('typed navigation preserves child destination and explanation instead of dropping it',()=>{
- const chrome=structuredClone(header);
+ const chrome=structuredClone({ ...header, ...footer });
  // Exercise legacy dropdown editing on a valid dropdown fixture, not the
  // OWNER-approved mega menu currently stored in homepage.chrome.navigation[0].
  chrome.navigation[0]={label:'Synlighet',href:'/synlighet/',presentation:'dropdown',submenuLabel:'Vis fagområder under Synlighet',children:[child]};
@@ -30,10 +31,10 @@ test('native CMS child edit preserves other navigation and homepage data',()=>{
 test('navigation rejects unsafe paths, empty descriptions, duplicate children and nested dropdowns',()=>{
  const schema=homeSectionDataSchema.shape.chrome;
  for(const invalid of [{...child,href:'//external.test/'},{...child,href:'/\\external.test/'},{...child,description:''},{...child,children:[child]}]){
-  const chrome=structuredClone(header);chrome.navigation[0]={...chrome.navigation[0],submenuLabel:'Vis fagområder',children:[invalid]};
+  const chrome=structuredClone({ ...header, ...footer });chrome.navigation[0]={...chrome.navigation[0],submenuLabel:'Vis fagområder',children:[invalid]};
   assert.equal(schema.safeParse(chrome).success,false);
  }
- const chrome=structuredClone(header);chrome.navigation[0]={...chrome.navigation[0],submenuLabel:'Vis fagområder',children:[child,child]};
+ const chrome=structuredClone({ ...header, ...footer });chrome.navigation[0]={...chrome.navigation[0],submenuLabel:'Vis fagområder',children:[child,child]};
  assert.equal(schema.safeParse(chrome).success,false);
 });
 test('active child marks only the exact page current and parent category in context',async()=>{
