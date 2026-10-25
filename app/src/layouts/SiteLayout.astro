@@ -8,6 +8,7 @@ import {validateHomepagePublicLinks} from '../lib/home-builder';
 import HomeHeader from '../components/HomeHeader.astro';
 import HomeFooter from '../components/HomeFooter.astro';
 import SiteSearch from '../components/SiteSearch.astro';
+import SiteChromeThemeHead from '../components/SiteChromeThemeHead.astro';
 import Attribution from '../components/Attribution.astro';
 import { site } from '../config/site';
 import { defaultLocale, type Locale } from '../config/locales';
@@ -40,6 +41,7 @@ const organization = { '@context': 'https://schema.org', '@type': 'Organization'
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <SiteChromeThemeHead themes={homeChrome.themes} enabled={homeChrome.headerOptions.showThemeSwitch} />
     {homeChrome.headerOptions.showSearch && <link rel="stylesheet" href="/pagefind/pagefind-component-ui.css" />}
     {homeChrome.headerOptions.showSearch && <script is:inline type="module" src="/pagefind/pagefind-component-ui.js"></script>}
     <script type="application/ld+json" set:html={JSON.stringify(organization).replace(/</g, '\\u003c')} />

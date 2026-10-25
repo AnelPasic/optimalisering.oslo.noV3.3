@@ -1,0 +1,15 @@
+---
+import type { ChromeThemes } from '../lib/site-chrome-theme';
+interface Props { themes: ChromeThemes; placement: 'desktop' | 'mobile'; }
+const { themes, placement } = Astro.props;
+---
+<div class:list={['mws-chrome-theme-switch', 'join',
+  placement === 'mobile' ? 'mws-chrome-theme-switch--mobile' : 'mws-chrome-theme-switch--desktop']}
+  role="group" aria-label="Fargetema">
+  <button type="button" class="btn btn-ghost mws-chrome-theme-cycle"
+    data-mws-theme-cycle aria-label="Bytt fargetema" title="Bytt fargetema">◐</button>
+  <button type="button" class="btn btn-sm join-item" data-mws-theme-select="light"
+    aria-pressed={themes.defaultMode === 'light' ? 'true' : 'false'}>{themes.lightLabel}</button>
+  <button type="button" class="btn btn-sm join-item" data-mws-theme-select="dark"
+    aria-pressed={themes.defaultMode === 'dark' ? 'true' : 'false'}>{themes.darkLabel}</button>
+</div>

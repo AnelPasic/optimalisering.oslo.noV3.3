@@ -1,6 +1,7 @@
 import { z } from 'astro/zod';
 import { featuredProofVisualFieldSchema,proofLayoutSchema,proofCaseVisualsSchema } from './proof-presentation.ts';
 import {navigationLinkSchema} from './navigation.ts';
+import {chromeThemeSchema} from './site-chrome-theme.ts';
 const link = z.object({ label: z.string(), href: z.string().startsWith('/') });
 export const proofSlotSchema = z.object({ publicationApproved: z.boolean(), caseIds: z.array(z.string()).default([]), eyebrow: z.string(), heading: z.string(), beforeLabel: z.string(), afterLabel: z.string(), changeLabel: z.string() });
 export const homeSectionDataSchema = z.object({
@@ -53,8 +54,9 @@ export const homeSectionDataSchema = z.object({
       sticky: z.boolean(),
       showLanguageSwitch: z.boolean(),
       showSearch: z.boolean(),
-      showCta: z.boolean(),
+      showCta: z.boolean(), showThemeSwitch: z.boolean(),
     }).strict(),
+    themes: chromeThemeSchema,
     assessmentLink: link.extend({
       variant: z.enum(['primary', 'secondary', 'accent', 'neutral', 'info', 'success', 'warning', 'error']),
     }),

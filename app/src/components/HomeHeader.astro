@@ -3,6 +3,7 @@ import type { HomepageContent } from '../lib/home-section-data';
 import Arrow from './Arrow.astro';
 import LanguageSwitch from './LanguageSwitch.astro';
 import SiteSearch from './SiteSearch.astro';
+import SiteChromeThemeSwitch from './SiteChromeThemeSwitch.astro';
 import type { LanguageLink } from '../lib/i18n';
 import type { Locale } from '../config/locales';
 import HeaderNavigation from './HeaderNavigation.astro';
@@ -26,6 +27,7 @@ const ctaClasses = {
     <div class="header-actions">
       {content.headerOptions.showSearch && <SiteSearch mode="desktop" />}
       {content.headerOptions.showLanguageSwitch && <LanguageSwitch links={languageLinks} currentLocale={currentLocale} />}
+      {content.headerOptions.showThemeSwitch && <SiteChromeThemeSwitch themes={content.themes} placement="desktop" />}
       {content.headerOptions.showCta && <a href={content.assessmentLink.href}
         class:list={["button", "button-small", "btn", "btn-sm", ctaClasses[content.assessmentLink.variant]]}>
         {content.assessmentLink.label}<Arrow diagonal />
@@ -37,10 +39,14 @@ const ctaClasses = {
     <HeaderNavigation links={content.navigation} mode="mobile" />
     {content.headerOptions.showSearch && <SiteSearch mode="mobile" />}
     {content.headerOptions.showLanguageSwitch && <LanguageSwitch links={languageLinks} currentLocale={currentLocale} placement="mobile" />}
+    {content.headerOptions.showThemeSwitch && <SiteChromeThemeSwitch themes={content.themes} placement="mobile" />}
   </nav>
 </header>
 <script>
   import {mountHeaderNavigation} from '../lib/header-navigation';
+  import {mountChromeThemeSwitchers} from '../lib/site-chrome-theme-interactions';
   const header=document.querySelector<HTMLElement>('.site-header');
   if(header)mountHeaderNavigation(header);
+  mountChromeThemeSwitchers();
+  document.addEventListener('astro:page-load', mountChromeThemeSwitchers);
 </script>

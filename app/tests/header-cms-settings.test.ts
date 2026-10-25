@@ -55,3 +55,29 @@ test('Header settings require actual booleans', () => {
   chrome.headerOptions.sticky = 'true';
   assert.equal(schema.safeParse(chrome).success, false);
 });
+
+
+test('MWS-039 shared theme is stored in native home chrome with two complete daisyUI blocks', async () => {
+  const { parseDaisyTheme } = await import('../src/lib/site-chrome-theme.ts');
+  const chrome = original.homepage.chrome;
+  assert.equal(chrome.headerOptions.showThemeSwitch, true);
+  assert.equal(parseDaisyTheme(chrome.themes.lightCss, 'light').name, 'optimalisering');
+  assert.equal(parseDaisyTheme(chrome.themes.darkCss, 'dark').name, 'optimalisering-dark');
+  const c = schema.parse(chrome);
+  assert.equal(c.themes.defaultMode, 'light');
+  const entry = cmsEntry.fields.find((field: any) => field.name === 'homepage').fields.find((field: any) => field.name === 'chrome');
+  const themeFields = entry.fields.find((field: any) => field.name === 'themes').fields;
+  assert.equal(themeFields.find((field: any) => field.name === 'lightCss')?.type, 'text');
+  assert.equal(themeFields.find((field: any) => field.name === 'darkCss')?.type, 'text');
+});
+
+test('Pages CMS preserves theme changes and disabled theme toggle', () => {
+  const edited = structuredClone(original);
+  edited.homepage.chrome.headerOptions.showThemeSwitch = false;
+  edited.homepage.chrome.themes.lightLabel = 'Lys';
+  const saved = JSON.parse(cmsJsonSave(original, edited, cmsEntry, cms));
+  assert.equal(saved.homepage.chrome.headerOptions.showThemeSwitch, false);
+  assert.equal(saved.homepage.chrome.themes.lightLabel, 'Lys');
+  assert.deepEqual(schema.parse(saved.homepage.chrome), schema.parse(edited.homepage.chrome));
+  assert.deepEqual(saved.sections, original.sections);
+});

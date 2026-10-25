@@ -1016,6 +1016,36 @@ content:
                     type: boolean
                     required: true
                     description: Viser eller skjuler handlingsknappen i toppmenyen.
+                  - name: showThemeSwitch
+                    label: Vis Light | Dark
+                    type: boolean
+                    required: true
+                    description: Viser bryteren mellom lys og mørk fargeprofil.
+              - name: themes
+                label: Tema og utseende (daisyUI)
+                type: object
+                required: true
+                fields:
+                  - name: defaultMode
+                    label: Standard ved første besøk
+                    type: select
+                    required: true
+                    options:
+                      values:
+                        - { name: light, label: Light }
+                        - { name: dark, label: Dark }
+                  - { name: lightLabel, label: Tekst på lys knapp, type: string, required: true }
+                  - { name: darkLabel, label: Tekst på mørk knapp, type: string, required: true }
+                  - name: lightCss
+                    label: Light - komplett daisyUI-temakode
+                    type: text
+                    required: true
+                    description: Lim inn hele blokken fra daisyUI Theme Generator, med color-scheme light.
+                  - name: darkCss
+                    label: Dark - komplett daisyUI-temakode
+                    type: text
+                    required: true
+                    description: Lim inn hele blokken fra daisyUI Theme Generator, med color-scheme dark.
               - name: assessmentLink
                 label: CTA-knapp i toppmeny
                 type: object
