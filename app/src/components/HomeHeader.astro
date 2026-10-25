@@ -9,8 +9,14 @@ import HeaderNavigation from './HeaderNavigation.astro';
 import '../styles/header-navigation.css';
 interface Props { content: HomepageContent['chrome']; languageLinks?: LanguageLink[]; currentLocale?: Locale; }
 const { content, languageLinks = [], currentLocale = 'nb' } = Astro.props;
+// Static class map: Tailwind/daisyUI must see every supported variant at build time.
+const ctaClasses = {
+  primary: 'btn-primary', secondary: 'btn-secondary', accent: 'btn-accent',
+  neutral: 'btn-neutral', info: 'btn-info', success: 'btn-success',
+  warning: 'btn-warning', error: 'btn-error',
+} as const;
 ---
-<header class="site-header">
+<header class:list={["site-header", { "site-header--sticky": content.headerOptions.sticky }]}>
   <div class="shell header-inner navbar">
     <a href="/" class="wordmark" aria-label={content.homeLabel}>
       <svg viewBox="0 0 42 42" width="40" height="40" fill="none" aria-hidden="true"><path d="M5 31V19a14 14 0 0 1 28 0v12" stroke="currentColor" stroke-width="8"/><path d="m15 27 9-9m-9 0h9v9" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -18,16 +24,19 @@ const { content, languageLinks = [], currentLocale = 'nb' } = Astro.props;
     </a>
     <nav class="desktop-nav" aria-label={content.navigationLabel}><HeaderNavigation links={content.navigation} mode="desktop" /></nav>
     <div class="header-actions">
-      <SiteSearch mode="desktop" />
-      <LanguageSwitch links={languageLinks} currentLocale={currentLocale} />
-      <a href={content.assessmentLink.href} class="button button-small btn btn-primary btn-sm">{content.assessmentLink.label}<Arrow diagonal /></a>
+      {content.headerOptions.showSearch && <SiteSearch mode="desktop" />}
+      {content.headerOptions.showLanguageSwitch && <LanguageSwitch links={languageLinks} currentLocale={currentLocale} />}
+      {content.headerOptions.showCta && <a href={content.assessmentLink.href}
+        class:list={["button", "button-small", "btn", "btn-sm", ctaClasses[content.assessmentLink.variant]]}>
+        {content.assessmentLink.label}<Arrow diagonal />
+      </a>}
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label={content.openMenu} data-home-menu data-open-label={content.openMenu} data-close-label={content.closeMenu}><span></span><span></span></button>
     </div>
   </div>
   <nav id="mobile-menu" class="mobile-menu shell" aria-label={content.mobileNavigationLabel} hidden>
     <HeaderNavigation links={content.navigation} mode="mobile" />
-    <SiteSearch mode="mobile" />
-    <LanguageSwitch links={languageLinks} currentLocale={currentLocale} placement="mobile" />
+    {content.headerOptions.showSearch && <SiteSearch mode="mobile" />}
+    {content.headerOptions.showLanguageSwitch && <LanguageSwitch links={languageLinks} currentLocale={currentLocale} placement="mobile" />}
   </nav>
 </header>
 <script>
