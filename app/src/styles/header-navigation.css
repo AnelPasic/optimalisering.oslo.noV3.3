@@ -37,6 +37,7 @@
 @layer project {
  .site-shell .site-header { position: relative; z-index: 55; }
  .site-shell .site-header .header-nav-item--mega { position: static; }
+ .site-shell .site-header .desktop-nav > ul.menu { position: static; }
  .site-shell .site-header .header-mega-menu[hidden] { display: none !important; }
  .site-shell .site-header .header-mega-menu {
   position: absolute; top: 100%; left: 0; right: 0; z-index: 60;
