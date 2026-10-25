@@ -235,3 +235,15 @@
   }
  }
 }
+
+/* Accessible submenu highlight: match the existing green "Gratis sjekk" CTA.
+   Both title and description must remain legible on active/focused/hovered items. */
+@layer project {
+ .site-shell .site-header :is(.header-mega-links, .header-submenu).menu > li > a:is(:hover, :focus-visible, :active, [aria-current="page"]) {
+  background: var(--color-primary);
+  color: var(--color-primary-content);
+ }
+ .site-shell .site-header :is(.header-mega-links, .header-submenu).menu > li > a:is(:hover, :focus-visible, :active, [aria-current="page"]) :is(.header-submenu-label, .header-submenu-description) {
+  color: var(--color-primary-content);
+ }
+}
