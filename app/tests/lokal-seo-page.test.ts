@@ -21,8 +21,8 @@ test('Lokal SEO is a real service page with editable CMS fields and a working na
  const saved=JSON.parse(cmsJsonSave(page,edited,entry,cms));
  assertPreservedContent(edited,saved);
  assert.deepEqual(pageSchema.parse(saved),pageSchema.parse(edited));
- const home=JSON.parse(readFileSync('src/content/pages/home.json','utf8'));
- const visibility=home.homepage.chrome.navigation.find((link:{href:string})=>link.href==='/synlighet/');
+ const header=JSON.parse(readFileSync('src/content/site-chrome/header.json','utf8'));
+ const visibility=header.navigation.find((link:{href:string})=>link.href==='/synlighet/');
  const child=visibility?.presentation==='mega'
   ? visibility.mega?.columns.flatMap((column:{links:Array<{label:string;href:string;description:string}>})=>column.links).find((link:{label:string})=>link.label==='Lokal SEO')
   : visibility?.children?.find((link:{label:string})=>link.label==='Lokal SEO');

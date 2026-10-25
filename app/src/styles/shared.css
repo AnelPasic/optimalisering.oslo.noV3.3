@@ -148,6 +148,15 @@ p { text-wrap: pretty; }
   overflow-wrap: anywhere;
   line-height: var(--leading-small);
 }
+.site-shell .site-footer .footer-group-title a {
+  color: inherit;
+  text-decoration: none;
+}
+.site-shell .site-footer .footer-group-title a:is(:hover, :focus-visible) {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
 .site-shell .site-footer .footer-bottom--columns {
   display: flex;
   flex-wrap: wrap;

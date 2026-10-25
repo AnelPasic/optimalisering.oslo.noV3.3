@@ -1,6 +1,7 @@
 import { z } from 'astro/zod';
 import { surfaceSchema } from './surface.ts';
 import { homeSectionDataSchema } from './home-section-data.ts';
+import { siteChrome } from './site-chrome-data.ts';
 import { headingAlignSchema } from './heading-alignment.ts';
 import {contentLayoutSchema,boxVariantSchema} from './content-presentation.ts';
 import {heroLayoutSchema} from './hero-presentation.ts';
@@ -115,11 +116,12 @@ export function validateHomepagePublicLinks(home:Source,pages:readonly unknown[]
   }
  };
  scan({...home,sections:blocks.filter(isHomepageSectionVisible)},'home');
+ scan(siteChrome,'global-site-chrome');
  for(const [index,page] of pages.entries())if((page as {kind?:string}).kind!=='home')scan(page,`pages.${index}`);
 }
 /** Shared business authority exists independently of homepage placements. */
-export function resolveHomepageContent(page:Source&{homepage?:{chrome:unknown}}){
+export function resolveHomepageContent(page:Source){
  const blocks=getHomepageBlocks(page);
  const assessment=getGlobalElement('sjekk').content,faq=getGlobalElement('sporsmal').content;
- return {selector:getGlobalElement('behov').content,calculator:getGlobalElement('regneeksempel').content,packages:getGlobalElement('priser').content,proof:getGlobalElement('resultater').content,assessmentSection:assessment.section,form:assessment.form,faqHeading:faq.heading,faqEyebrow:faq.eyebrow,faq:faq.items,faqVisible:isHomepageSectionVisible(blocks.find(b=>b._block==='faq')),chrome:homeSectionDataSchema.shape.chrome.parse(page.homepage?.chrome)};
+ return {selector:getGlobalElement('behov').content,calculator:getGlobalElement('regneeksempel').content,packages:getGlobalElement('priser').content,proof:getGlobalElement('resultater').content,assessmentSection:assessment.section,form:assessment.form,faqHeading:faq.heading,faqEyebrow:faq.eyebrow,faq:faq.items,faqVisible:isHomepageSectionVisible(blocks.find(b=>b._block==='faq')),chrome:siteChrome};
 }

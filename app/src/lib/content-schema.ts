@@ -13,7 +13,7 @@ import {synlighetHeroSchema,legacyHeroKeys} from './synlighet-hero.ts';
 
 const link = z.object({label:z.string(),href:z.string().startsWith('/')});
 export { proofSlotSchema } from './home-section-data.ts';
-const homepage = z.object({chrome:homeSectionDataSchema.shape.chrome}).strict();
+const homepage = z.object({}).strict(); // Header/footer have independent global CMS sources.
 export const pageSchema = z.preprocess((input,context)=>{
   const raw=input as {slug?:string;kind?:string;sections:unknown;hero?:unknown};
   if(raw?.kind!=='home'&&raw?.slug!=='synlighet'&&raw?.hero!==undefined){const hero=heroPresentationSchema.safeParse(raw.hero);if(!hero.success)for(const issue of hero.error.issues)context.addIssue({...issue,path:['hero',...issue.path]});}

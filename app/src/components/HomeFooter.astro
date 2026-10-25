@@ -1,6 +1,5 @@
 ---
 import type { HomepageContent } from '../lib/home-section-data';
-import { site } from '../config/site';
 import { glossary } from '../lib/terminology';
 interface Props { content: HomepageContent['chrome']; }
 const { content } = Astro.props;
@@ -20,11 +19,12 @@ const legalLinks = content.footerLegalLinks ?? [];
       <div class="footer-about block justify-items-normal">
         <a class="footer-title footer-brand normal-case opacity-100 mb-0" href="/">{content.brand} {content.brandLocation}<span>.</span></a>
         <p>{content.providerText}</p>
-        {site.preview && <span class="preview-tag">{content.previewLabel}</span>}
       </div>
       {footerGroups.map(group => (
         <nav class="footer-link-group" aria-label={group.heading}>
-          <h2 class="footer-title footer-group-title">{group.heading}</h2>
+          <h2 class="footer-title footer-group-title">{group.headingHref
+            ? <a href={group.headingHref}>{group.heading}</a>
+            : group.heading}</h2>
           {group.links.map(link => <a href={link.href}>{link.label}</a>)}
         </nav>
       ))}

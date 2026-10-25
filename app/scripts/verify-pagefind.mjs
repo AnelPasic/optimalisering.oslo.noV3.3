@@ -14,8 +14,8 @@ for (const name of [
 }
 const home = readFileSync(resolve(root, 'index.html'), 'utf8');
 assert.ok(home.includes('data-pagefind-body'), 'Homepage main content must be indexed');
-const source = JSON.parse(readFileSync(resolve('src/content/pages/home.json'), 'utf8'));
-const enabled = source.homepage.chrome.headerOptions.showSearch;
+const header = JSON.parse(readFileSync(resolve('src/content/site-chrome/header.json'), 'utf8'));
+const enabled = header.headerOptions.showSearch;
 if (enabled) {
   assert.ok(home.includes('pagefind-modal-trigger'), 'Enabled search must include the header trigger');
   assert.ok(home.includes('<pagefind-modal'), 'Enabled search must include its modal');

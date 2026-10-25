@@ -951,364 +951,6 @@ content:
             type: text
             required: true
         required: true
-      - name: homepage
-        label: Felles toppmeny og bunntekst
-        type: object
-        fields:
-          - name: chrome
-            label: Toppmeny og bunntekst
-            type: object
-            fields:
-              - name: brand
-                label: Merkenavn
-                type: string
-                required: true
-              - name: brandLocation
-                label: Stedsnavn i ordmerket
-                type: string
-                required: true
-              - name: homeLabel
-                label: Tilgjengelig forsidenavn
-                type: string
-                required: true
-              - name: skipLabel
-                label: Hopp til innhold
-                type: string
-                required: true
-              - name: navigationLabel
-                label: Hovedmenynavn
-                type: string
-                required: true
-              - name: mobileNavigationLabel
-                label: Mobilmenynavn
-                type: string
-                required: true
-              - name: openMenu
-                label: Åpne meny
-                type: string
-                required: true
-              - name: closeMenu
-                label: Lukk meny
-                type: string
-                required: true
-              - name: headerOptions
-                label: Header-innstillinger (av/på)
-                type: object
-                required: true
-                fields:
-                  - name: sticky
-                    label: Sticky ved scrolling
-                    type: boolean
-                    required: true
-                    description: Behold toppmenyen øverst når besøkende scroller.
-                  - name: showLanguageSwitch
-                    label: Vis NO | EN
-                    type: boolean
-                    required: true
-                    description: Viser språkvelgeren. EN er deaktivert til engelske sider er publisert.
-                  - name: showSearch
-                    label: Vis søk
-                    type: boolean
-                    required: true
-                    description: Viser Pagefind-søk i toppmenyen og på mobil.
-                  - name: showCta
-                    label: Vis CTA-knapp
-                    type: boolean
-                    required: true
-                    description: Viser eller skjuler handlingsknappen i toppmenyen.
-                  - name: showThemeSwitch
-                    label: Vis Light | Dark
-                    type: boolean
-                    required: true
-                    description: Viser bryteren mellom lys og mørk fargeprofil.
-              - name: themes
-                label: Tema og utseende (daisyUI)
-                type: object
-                required: true
-                fields:
-                  - name: defaultMode
-                    label: Standard ved første besøk
-                    type: select
-                    required: true
-                    options:
-                      values:
-                        - { name: light, label: Light }
-                        - { name: dark, label: Dark }
-                  - { name: lightLabel, label: Tekst på lys knapp, type: string, required: true }
-                  - { name: darkLabel, label: Tekst på mørk knapp, type: string, required: true }
-                  - name: lightCss
-                    label: Light - komplett daisyUI-temakode
-                    type: text
-                    required: true
-                    description: Lim inn hele blokken fra daisyUI Theme Generator, med color-scheme light.
-                  - name: darkCss
-                    label: Dark - komplett daisyUI-temakode
-                    type: text
-                    required: true
-                    description: Lim inn hele blokken fra daisyUI Theme Generator, med color-scheme dark.
-              - name: assessmentLink
-                label: CTA-knapp i toppmeny
-                type: object
-                fields:
-                  - name: label
-                    label: Knappetekst
-                    type: string
-                    required: true
-                  - name: href
-                    label: Intern lenke (for eksempel /#sjekk eller /kontakt/)
-                    type: string
-                    pattern: ^/
-                    required: true
-                  - name: variant
-                    label: Knappfarge (daisyUI)
-                    type: select
-                    required: true
-                    options:
-                      values:
-                        - name: primary
-                          label: Primary
-                        - name: secondary
-                          label: Secondary
-                        - name: accent
-                          label: Accent
-                        - name: neutral
-                          label: Neutral
-                        - name: info
-                          label: Info
-                        - name: success
-                          label: Success
-                        - name: warning
-                          label: Warning
-                        - name: error
-                          label: Error
-                required: true
-              - name: navigation
-                label: Navigasjon
-                type: object
-                list:
-                  collapsible:
-                    collapsed: true
-                    summary: "{label}"
-                fields:
-                  - name: label
-                    label: Tekst
-                    type: string
-                    required: true
-                  - name: href
-                    label: Intern lenke
-                    type: string
-                    pattern: ^/
-                    required: true
-                  - name: submenuLabel
-                    label: Navn på undermenyknappen
-                    type: string
-                    description: Påkrevd når lenken har en undermeny. Hovedlenken forblir klikkbar.
-                  - name: presentation
-                    label: Menytype
-                    type: select
-                    description: Kompakt undermeny er standard. Mega-meny viser kolonner og valgfritt handlingskort.
-                    options:
-                      values:
-                        - name: dropdown
-                          label: Dropdown
-                        - name: mega
-                          label: Mega-meny
-                  - name: mega
-                    label: Innhold i mega-meny (bruk bare med Mega-meny)
-                    type: object
-                    fields:
-                      - name: columns
-                        label: Kolonner (2–4)
-                        type: object
-                        list:
-                          min: 2
-                          max: 4
-                          collapsible:
-                            collapsed: true
-                            summary: "{heading}"
-                        fields:
-                          - name: heading
-                            label: Kolonneoverskrift
-                            type: string
-                            required: true
-                          - name: links
-                            label: Lenker i kolonnen
-                            type: object
-                            list:
-                              min: 1
-                              max: 8
-                              collapsible:
-                                collapsed: true
-                                summary: "{label}"
-                            fields:
-                              - name: label
-                                label: Lenketekst
-                                type: string
-                                required: true
-                              - name: href
-                                label: Intern lenke
-                                type: string
-                                pattern: ^/(?![/\\])
-                                required: true
-                              - name: description
-                                label: Kort forklaring
-                                type: text
-                                required: true
-                      - name: promo
-                        label: Valgfritt handlingskort
-                        type: object
-                        fields:
-                          - name: heading
-                            label: Overskrift
-                            type: string
-                          - name: body
-                            label: Kort tekst
-                            type: text
-                          - name: cta
-                            label: Knapp
-                            type: object
-                            fields:
-                              - name: label
-                                label: Knappetekst
-                                type: string
-                              - name: href
-                                label: Intern lenke
-                                type: string
-                                pattern: ^/(?![/\\])
-                  - name: children
-                    label: Undermeny
-                    type: object
-                    list:
-                      max: 6
-                      collapsible:
-                        collapsed: true
-                        summary: "{label}"
-                    fields:
-                      - name: label
-                        label: Lenketekst
-                        type: string
-                        required: true
-                      - name: href
-                        label: Eksisterende side eller seksjon
-                        type: string
-                        pattern: ^/(?![/\\])
-                        required: true
-                      - name: description
-                        label: Kort forklaring
-                        type: text
-                        required: true
-                required: true
-              - name: providerText
-                label: Påkrevd leverandøropplysning
-                type: string
-                readonly: true
-                required: true
-              - name: previewLabel
-                label: Forhåndsvisningsetikett
-                type: string
-                required: true
-              - name: serviceNavigationLabel
-                label: Tjenestemenynavn
-                type: string
-                required: true
-              - name: informationNavigationLabel
-                label: Informasjonsmenynavn
-                type: string
-                required: true
-              - name: storeLink
-                label: Nettbutikklenke
-                type: object
-                fields:
-                  - name: label
-                    label: Tekst
-                    type: string
-                    required: true
-                  - name: href
-                    label: Intern lenke
-                    type: string
-                    pattern: ^/
-                    required: true
-                required: true
-              - name: informationLinks
-                label: Informasjonslenker
-                type: object
-                list:
-                  collapsible:
-                    collapsed: true
-                    summary: "{label}"
-                fields:
-                  - name: label
-                    label: Tekst
-                    type: string
-                    required: true
-                  - name: href
-                    label: Intern lenke
-                    type: string
-                    pattern: ^/
-                    required: true
-                required: true
-              - name: copyrightProvider
-                label: Tjenestemerke i opphavsrett
-                type: string
-                required: true
-              - name: footerNote
-                label: Bunntekstmerknad
-                type: string
-                required: true
-              - name: footerGroups
-                label: Footer – tre lenkekolonner
-                description: Synlighet, Optimalisering og Kom i gang. Endre tekst og lenker her, ikke i toppmenyen.
-                type: object
-                list:
-                  min: 3
-                  max: 3
-                  collapsible:
-                    collapsed: true
-                    summary: "{heading}"
-                fields:
-                  - name: heading
-                    label: Kolonneoverskrift
-                    type: string
-                    required: true
-                  - name: links
-                    label: Lenker
-                    type: object
-                    list:
-                      min: 1
-                      max: 8
-                      collapsible:
-                        collapsed: true
-                        summary: "{label}"
-                    fields:
-                      - name: label
-                        label: Lenketekst
-                        type: string
-                        required: true
-                      - name: href
-                        label: Eksisterende intern side
-                        type: string
-                        pattern: ^/
-                        required: true
-              - name: footerLegalLinks
-                label: Footer – juridiske lenker på bunnlinjen
-                type: object
-                list:
-                  max: 5
-                  collapsible:
-                    collapsed: true
-                    summary: "{label}"
-                fields:
-                  - name: label
-                    label: Tekst
-                    type: string
-                    required: true
-                  - name: href
-                    label: Intern lenke
-                    type: string
-                    pattern: ^/
-                    required: true
-            required: true
-        required: true
     operations: &a3
       create: false
       rename: false
@@ -2040,8 +1682,381 @@ content:
       create: false
       delete: false
       rename: false
+  - name: globalUi
+    label: Globale Elementer
+    type: group
+    items:
+      - name: siteHeader
+        label: Toppmeny
+        type: file
+        path: app/src/content/site-chrome/header.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: brand
+            label: Merkenavn
+            type: string
+            required: true
+          - name: brandLocation
+            label: Stedsnavn i ordmerket
+            type: string
+            required: true
+          - name: homeLabel
+            label: Tilgjengelig forsidenavn
+            type: string
+            required: true
+          - name: skipLabel
+            label: Hopp til innhold
+            type: string
+            required: true
+          - name: navigationLabel
+            label: Hovedmenynavn
+            type: string
+            required: true
+          - name: mobileNavigationLabel
+            label: Mobilmenynavn
+            type: string
+            required: true
+          - name: openMenu
+            label: Åpne meny
+            type: string
+            required: true
+          - name: closeMenu
+            label: Lukk meny
+            type: string
+            required: true
+          - name: headerOptions
+            label: Header-innstillinger (av/på)
+            type: object
+            required: true
+            fields:
+              - name: sticky
+                label: Sticky ved scrolling
+                type: boolean
+                required: true
+                description: Behold toppmenyen øverst når besøkende scroller.
+              - name: showLanguageSwitch
+                label: Vis NO | EN
+                type: boolean
+                required: true
+                description: Viser språkvelgeren. EN er deaktivert til engelske sider er publisert.
+              - name: showSearch
+                label: Vis søk
+                type: boolean
+                required: true
+                description: Viser Pagefind-søk i toppmenyen og på mobil.
+              - name: showCta
+                label: Vis CTA-knapp
+                type: boolean
+                required: true
+                description: Viser eller skjuler handlingsknappen i toppmenyen.
+              - name: showThemeSwitch
+                label: Vis Light | Dark
+                type: boolean
+                required: true
+                description: Viser bryteren mellom lys og mørk fargeprofil.
+          - name: themes
+            label: Tema og utseende (daisyUI)
+            type: object
+            required: true
+            fields:
+              - name: defaultMode
+                label: Standard ved første besøk
+                type: select
+                required: true
+                options:
+                  values:
+                    - { name: light, label: Light }
+                    - { name: dark, label: Dark }
+              - { name: lightLabel, label: Tekst på lys knapp, type: string, required: true }
+              - { name: darkLabel, label: Tekst på mørk knapp, type: string, required: true }
+              - name: lightCss
+                label: Light - komplett daisyUI-temakode
+                type: text
+                required: true
+                description: Lim inn hele blokken fra daisyUI Theme Generator, med color-scheme light.
+              - name: darkCss
+                label: Dark - komplett daisyUI-temakode
+                type: text
+                required: true
+                description: Lim inn hele blokken fra daisyUI Theme Generator, med color-scheme dark.
+          - name: assessmentLink
+            label: CTA-knapp i toppmeny
+            type: object
+            fields:
+              - name: label
+                label: Knappetekst
+                type: string
+                required: true
+              - name: href
+                label: Intern lenke (for eksempel /#sjekk eller /kontakt/)
+                type: string
+                pattern: ^/
+                required: true
+              - name: variant
+                label: Knappfarge (daisyUI)
+                type: select
+                required: true
+                options:
+                  values:
+                    - name: primary
+                      label: Primary
+                    - name: secondary
+                      label: Secondary
+                    - name: accent
+                      label: Accent
+                    - name: neutral
+                      label: Neutral
+                    - name: info
+                      label: Info
+                    - name: success
+                      label: Success
+                    - name: warning
+                      label: Warning
+                    - name: error
+                      label: Error
+            required: true
+          - name: navigation
+            label: Navigasjon
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{label}"
+            fields:
+              - name: label
+                label: Tekst
+                type: string
+                required: true
+              - name: href
+                label: Intern lenke
+                type: string
+                pattern: ^/
+                required: true
+              - name: submenuLabel
+                label: Navn på undermenyknappen
+                type: string
+                description: Påkrevd når lenken har en undermeny. Hovedlenken forblir klikkbar.
+              - name: presentation
+                label: Menytype
+                type: select
+                description: Kompakt undermeny er standard. Mega-meny viser kolonner og valgfritt handlingskort.
+                options:
+                  values:
+                    - name: dropdown
+                      label: Dropdown
+                    - name: mega
+                      label: Mega-meny
+              - name: mega
+                label: Innhold i mega-meny (bruk bare med Mega-meny)
+                type: object
+                fields:
+                  - name: columns
+                    label: Kolonner (2–4)
+                    type: object
+                    list:
+                      min: 2
+                      max: 4
+                      collapsible:
+                        collapsed: true
+                        summary: "{heading}"
+                    fields:
+                      - name: heading
+                        label: Kolonneoverskrift
+                        type: string
+                        required: true
+                      - name: links
+                        label: Lenker i kolonnen
+                        type: object
+                        list:
+                          min: 1
+                          max: 8
+                          collapsible:
+                            collapsed: true
+                            summary: "{label}"
+                        fields:
+                          - name: label
+                            label: Lenketekst
+                            type: string
+                            required: true
+                          - name: href
+                            label: Intern lenke
+                            type: string
+                            pattern: ^/(?![/\\])
+                            required: true
+                          - name: description
+                            label: Kort forklaring
+                            type: text
+                            required: true
+                  - name: promo
+                    label: Valgfritt handlingskort
+                    type: object
+                    fields:
+                      - name: heading
+                        label: Overskrift
+                        type: string
+                      - name: body
+                        label: Kort tekst
+                        type: text
+                      - name: cta
+                        label: Knapp
+                        type: object
+                        fields:
+                          - name: label
+                            label: Knappetekst
+                            type: string
+                          - name: href
+                            label: Intern lenke
+                            type: string
+                            pattern: ^/(?![/\\])
+              - name: children
+                label: Undermeny
+                type: object
+                list:
+                  max: 6
+                  collapsible:
+                    collapsed: true
+                    summary: "{label}"
+                fields:
+                  - name: label
+                    label: Lenketekst
+                    type: string
+                    required: true
+                  - name: href
+                    label: Eksisterende side eller seksjon
+                    type: string
+                    pattern: ^/(?![/\\])
+                    required: true
+                  - name: description
+                    label: Kort forklaring
+                    type: text
+                    required: true
+            required: true
+      - name: siteFooter
+        label: Footer
+        type: file
+        path: app/src/content/site-chrome/footer.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: providerText
+            label: Påkrevd leverandøropplysning
+            type: string
+            readonly: true
+            required: true
+          - name: serviceNavigationLabel
+            label: Tjenestemenynavn
+            type: string
+            required: true
+          - name: informationNavigationLabel
+            label: Informasjonsmenynavn
+            type: string
+            required: true
+          - name: storeLink
+            label: Nettbutikklenke
+            type: object
+            fields:
+              - name: label
+                label: Tekst
+                type: string
+                required: true
+              - name: href
+                label: Intern lenke
+                type: string
+                pattern: ^/
+                required: true
+            required: true
+          - name: informationLinks
+            label: Informasjonslenker
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{label}"
+            fields:
+              - name: label
+                label: Tekst
+                type: string
+                required: true
+              - name: href
+                label: Intern lenke
+                type: string
+                pattern: ^/
+                required: true
+            required: true
+          - name: copyrightProvider
+            label: Tjenestemerke i opphavsrett
+            type: string
+            required: true
+          - name: footerNote
+            label: Bunntekstmerknad
+            type: string
+            required: true
+          - name: footerGroups
+            label: Footer – tre lenkekolonner
+            description: Synlighet, Optimalisering og Kom i gang. Endre tekst og lenker her, ikke i toppmenyen.
+            type: object
+            list:
+              min: 3
+              max: 3
+              collapsible:
+                collapsed: true
+                summary: "{heading}"
+            fields:
+              - name: heading
+                label: Kolonneoverskrift
+                type: string
+                required: true
+              - name: headingHref
+                label: Lenke fra kolonneoverskrift (valgfri)
+                description: Bruk bare dersom en relevant side eksisterer. Eksempel /synlighet/
+                type: string
+                pattern: ^/
+              - name: links
+                label: Lenker
+                type: object
+                list:
+                  min: 1
+                  max: 8
+                  collapsible:
+                    collapsed: true
+                    summary: "{label}"
+                fields:
+                  - name: label
+                    label: Lenketekst
+                    type: string
+                    required: true
+                  - name: href
+                    label: Eksisterende intern side
+                    type: string
+                    pattern: ^/
+                    required: true
+          - name: footerLegalLinks
+            label: Footer – juridiske lenker på bunnlinjen
+            type: object
+            list:
+              max: 5
+              collapsible:
+                collapsed: true
+                summary: "{label}"
+            fields:
+              - name: label
+                label: Tekst
+                type: string
+                required: true
+              - name: href
+                label: Intern lenke
+                type: string
+                pattern: ^/
+                required: true
   - name: globalElements
-    label: Globale elementer
+    label: Global Innhold
     type: group
     items:
       - name: globalSelector

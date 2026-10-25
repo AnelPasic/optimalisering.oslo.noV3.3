@@ -7,7 +7,7 @@ import {cmsJsonSave,entryForFile,assertPreservedContent} from './helpers/pages-c
 
 test('SEO page covers consultant, services and Oslo without additional competing slugs',()=>{
  const page=JSON.parse(readFileSync('src/content/pages/seo.json','utf8'));
- const home=JSON.parse(readFileSync('src/content/pages/home.json','utf8'));
+ const header=JSON.parse(readFileSync('src/content/site-chrome/header.json','utf8'));
  assert.equal(page.slug,'seo');
  assert.equal(page.kind,'service');
  assert.equal(page.status,'REVIEW_REQUIRED');
@@ -21,7 +21,7 @@ test('SEO page covers consultant, services and Oslo without additional competing
  assert.equal(new Set(visible.map(s=>s.id)).size,visible.length);
  const links=page.sections.flatMap((s:{links?:Array<{href:string}>})=>s.links??[]);
  for(const url of ['/lokal-seo/','/innsikt/google-bedriftsprofil/','/priser/']) assert.ok(links.some((l:{href:string})=>l.href===url),url);
- const menu=home.homepage.chrome.navigation.find((l:{href:string})=>l.href==='/synlighet/');
+ const menu=header.navigation.find((l:{href:string})=>l.href==='/synlighet/');
  const childLinks=menu.presentation==='mega'
   ? menu.mega?.columns.flatMap((column:{links:Array<{href:string}>})=>column.links)??[]
   : menu.children??[];

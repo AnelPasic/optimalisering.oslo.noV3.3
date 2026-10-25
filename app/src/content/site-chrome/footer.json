@@ -1,0 +1,114 @@
+{
+  "providerText": "Tjenesten drives av Medon AS.",
+  "serviceNavigationLabel": "Tjenester og veiledning",
+  "informationNavigationLabel": "Kontakt og informasjon",
+  "storeLink": {
+    "label": "For nettbutikker",
+    "href": "/nettbutikkoptimalisering/"
+  },
+  "informationLinks": [
+    {
+      "label": "Gratis sjekk",
+      "href": "/#sjekk"
+    },
+    {
+      "label": "Om tjenesten",
+      "href": "/om/"
+    },
+    {
+      "label": "Kontakt",
+      "href": "/kontakt/"
+    },
+    {
+      "label": "Personvern",
+      "href": "/personvern/"
+    },
+    {
+      "label": "Vilkår",
+      "href": "/vilkar/"
+    }
+  ],
+  "copyrightProvider": "Optimalisering Oslo",
+  "footerNote": "Et godt sted å begynne.",
+  "footerGroups": [
+    {
+      "heading": "Synlighet",
+      "headingHref": "/synlighet/",
+      "links": [
+        {
+          "label": "SEO",
+          "href": "/seo/"
+        },
+        {
+          "label": "AI-synlighet (AIO/GEO)",
+          "href": "/ai-synlighet/"
+        },
+        {
+          "label": "Lokal SEO",
+          "href": "/lokal-seo/"
+        },
+        {
+          "label": "Synlighet – oversikt",
+          "href": "/synlighet/"
+        }
+      ]
+    },
+    {
+      "heading": "Optimalisering",
+      "headingHref": "/konvertering/",
+      "links": [
+        {
+          "label": "Nettsideoptimalisering",
+          "href": "/konvertering/"
+        },
+        {
+          "label": "Nettbutikkoptimalisering",
+          "href": "/nettbutikkoptimalisering/"
+        },
+        {
+          "label": "Måling og effekt",
+          "href": "/innsikt/male-effekt-av-optimalisering/"
+        }
+      ]
+    },
+    {
+      "heading": "Kom i gang",
+      "links": [
+        {
+          "label": "Gratis sjekk",
+          "href": "/#sjekk"
+        },
+        {
+          "label": "Priser og pakker",
+          "href": "/priser/"
+        },
+        {
+          "label": "Kontakt",
+          "href": "/kontakt/"
+        },
+        {
+          "label": "Om tjenesten",
+          "href": "/om/"
+        },
+        {
+          "label": "Innsikt",
+          "href": "/innsikt/"
+        }
+      ]
+    }
+  ],
+  "footerLegalLinks": [
+    {
+      "label": "Personvern",
+      "href": "/personvern/"
+    },
+    {
+      "label": "Vilkår",
+      "href": "/vilkar/"
+    },
+    {
+      "label": "Begreper",
+      "href": "/begreper/"
+    }
+  ]
+}

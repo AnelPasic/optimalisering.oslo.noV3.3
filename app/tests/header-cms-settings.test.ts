@@ -5,91 +5,100 @@ import YAML from 'yaml';
 import { homeSectionDataSchema } from '../src/lib/home-section-data.ts';
 import { cmsJsonSave, entryForFile } from './helpers/pages-cms-json.ts';
 
-const original = JSON.parse(readFileSync('src/content/pages/home.json', 'utf8'));
+const read = (path: string) => JSON.parse(readFileSync(path, 'utf8'));
+const header = read('src/content/site-chrome/header.json');
+const footer = read('src/content/site-chrome/footer.json');
+const home = read('src/content/pages/home.json');
 const cms = YAML.parse(readFileSync('../.pages.yml', 'utf8'));
+const headerEntry = entryForFile(cms, 'app/src/content/site-chrome/header.json');
+const footerEntry = entryForFile(cms, 'app/src/content/site-chrome/footer.json');
 const schema = homeSectionDataSchema.shape.chrome;
-const cmsEntry = entryForFile(cms, 'app/src/content/pages/home.json');
 
-test('Header CMS exposes all switches and one CTA label/link/variant selector', () => {
-  const homepage = cmsEntry.fields.find((field: any) => field.name === 'homepage');
-  const chrome = homepage.fields.find((field: any) => field.name === 'chrome');
-  const options = chrome.fields.find((field: any) => field.name === 'headerOptions');
-  assert.ok(options);
-  for (const name of ['sticky', 'showLanguageSwitch', 'showSearch', 'showCta']) {
-    const field = options.fields.find((value: any) => value.name === name);
-    assert.equal(field?.type, 'boolean', name);
-  }
-  const cta = chrome.fields.find((field: any) => field.name === 'assessmentLink');
-  assert.deepEqual(['label', 'href', 'variant'], cta.fields.map((field: any) => field.name));
-  assert.equal(cta.fields.find((field: any) => field.name === 'variant')?.type, 'select');
+test('Global CMS owns two independent editors; homepage no longer exposes Header or Footer', () => {
+  assert.equal(cms.content.find((x: any) => x.name === 'globalUi')?.label, 'Globale Elementer');
+  assert.equal(cms.content.find((x: any) => x.name === 'globalElements')?.label, 'Global Innhold');
+  assert.equal(headerEntry?.type, 'file');
+  assert.equal(footerEntry?.type, 'file');
+  const homepageEntry = entryForFile(cms, 'app/src/content/pages/home.json');
+  assert.equal(homepageEntry.fields.some((x: any) => x.name === 'homepage'), false);
+  assert.deepEqual(home.homepage, {});
+  assert.ok(schema.safeParse({ ...header, ...footer }).success);
 });
 
-test('Native CMS-equivalent save roundtrips false toggles and secondary CTA without touching content', () => {
-  const edited = structuredClone(original);
-  edited.homepage.chrome.headerOptions = {
+test('Header CMS exposes each switch and editable CTA label/link/variant', () => {
+  const options = headerEntry.fields.find((x: any) => x.name === 'headerOptions');
+  for (const key of ['sticky', 'showLanguageSwitch', 'showSearch', 'showCta', 'showThemeSwitch']) {
+    assert.equal(options.fields.find((x: any) => x.name === key)?.type, 'boolean');
+  }
+  const cta = headerEntry.fields.find((x: any) => x.name === 'assessmentLink');
+  assert.deepEqual(cta.fields.map((x: any) => x.name), ['label', 'href', 'variant']);
+  assert.equal(cta.fields.at(-1)?.type, 'select');
+});
+
+test('Independent stock Pages CMS save preserves theme, navigation and other editor', () => {
+  const edited = structuredClone(header);
+  edited.headerOptions = {
     sticky: false, showLanguageSwitch: false, showSearch: false, showCta: false, showThemeSwitch: false,
   };
-  edited.homepage.chrome.assessmentLink = {
-    label: 'Kontakt oss', href: '/kontakt/', variant: 'secondary',
-  };
-  const saved = JSON.parse(cmsJsonSave(original, edited, cmsEntry, cms));
-  assert.deepEqual(saved.homepage.chrome.headerOptions, edited.homepage.chrome.headerOptions);
-  assert.deepEqual(saved.homepage.chrome.assessmentLink, edited.homepage.chrome.assessmentLink);
-  assert.deepEqual(schema.parse(saved.homepage.chrome), schema.parse(edited.homepage.chrome));
-  assert.deepEqual(saved.sections, original.sections);
-  assert.deepEqual(saved.hero, original.hero);
-  assert.deepEqual(saved.homepage.chrome.navigation, original.homepage.chrome.navigation);
+  edited.assessmentLink = { label: 'Kontakt oss', href: '/kontakt/', variant: 'secondary' };
+  const saved = JSON.parse(cmsJsonSave(header, edited, headerEntry, cms));
+  assert.deepEqual(saved.headerOptions, edited.headerOptions);
+  assert.deepEqual(saved.assessmentLink, edited.assessmentLink);
+  assert.deepEqual(saved.navigation, header.navigation);
+  assert.deepEqual(saved.themes, header.themes);
+  assert.deepEqual(schema.parse({ ...saved, ...footer }), schema.parse({ ...edited, ...footer }));
+  assert.deepEqual(read('src/content/site-chrome/footer.json'), footer);
+  assert.deepEqual(read('src/content/pages/home.json'), home);
 });
 
-test('CTA accepts only supported palette variants', () => {
+test('CTA only accepts supported daisyUI palette variants', () => {
   for (const variant of ['primary', 'secondary', 'accent', 'neutral', 'info', 'success', 'warning', 'error']) {
-    assert.equal(schema.safeParse({ ...original.homepage.chrome,
-      assessmentLink: { ...original.homepage.chrome.assessmentLink, variant } }).success, true, variant);
+    assert.ok(schema.safeParse({ ...header, ...footer,
+      assessmentLink: { ...header.assessmentLink, variant } }).success, variant);
   }
-  assert.equal(schema.safeParse({ ...original.homepage.chrome,
-    assessmentLink: { ...original.homepage.chrome.assessmentLink, variant: 'custom-pink' } }).success, false);
+  assert.equal(schema.safeParse({ ...header, ...footer,
+    assessmentLink: { ...header.assessmentLink, variant: 'custom-pink' } }).success, false);
 });
 
-test('Header settings require actual booleans', () => {
-  const chrome = structuredClone(original.homepage.chrome);
-  chrome.headerOptions.sticky = 'true';
-  assert.equal(schema.safeParse(chrome).success, false);
-});
-
-
-test('MWS-039 shared theme is stored in native home chrome with two complete daisyUI blocks', async () => {
+test('Theme keeps complete owner-pasted daisyUI blocks and system preference switch', async () => {
   const { parseDaisyTheme } = await import('../src/lib/site-chrome-theme.ts');
-  const chrome = original.homepage.chrome;
-  assert.equal(chrome.headerOptions.showThemeSwitch, true);
-  assert.equal(parseDaisyTheme(chrome.themes.lightCss, 'light').name, 'optimalisering');
-  assert.notEqual(parseDaisyTheme(chrome.themes.darkCss, 'dark').name, parseDaisyTheme(chrome.themes.lightCss, 'light').name);
-  const c = schema.parse(chrome);
-  assert.equal(c.themes.defaultMode, 'light');
-  const entry = cmsEntry.fields.find((field: any) => field.name === 'homepage').fields.find((field: any) => field.name === 'chrome');
-  const themeFields = entry.fields.find((field: any) => field.name === 'themes').fields;
-  assert.equal(themeFields.find((field: any) => field.name === 'lightCss')?.type, 'text');
-  assert.equal(themeFields.find((field: any) => field.name === 'darkCss')?.type, 'text');
+  assert.equal(header.headerOptions.showThemeSwitch, true);
+  assert.equal(parseDaisyTheme(header.themes.lightCss, 'light').name, 'optimalisering');
+  assert.equal(parseDaisyTheme(header.themes.darkCss, 'dark').name, 'sunset');
+  assert.equal(header.themes.defaultMode, 'light');
+  const fields = headerEntry.fields.find((x: any) => x.name === 'themes').fields;
+  assert.equal(fields.find((x: any) => x.name === 'lightCss')?.type, 'text');
+  assert.equal(fields.find((x: any) => x.name === 'darkCss')?.type, 'text');
+  const edited = structuredClone(header);
+  edited.themes.lightLabel = 'Lys';
+  edited.headerOptions.showThemeSwitch = false;
+  const saved = JSON.parse(cmsJsonSave(header, edited, headerEntry, cms));
+  assert.equal(saved.themes.lightLabel, 'Lys');
+  assert.equal(saved.headerOptions.showThemeSwitch, false);
+  assert.equal(saved.themes.darkCss, header.themes.darkCss);
 });
 
-test('Pages CMS preserves theme changes and disabled theme toggle', () => {
-  const edited = structuredClone(original);
-  edited.homepage.chrome.headerOptions.showThemeSwitch = false;
-  edited.homepage.chrome.themes.lightLabel = 'Lys';
-  const saved = JSON.parse(cmsJsonSave(original, edited, cmsEntry, cms));
-  assert.equal(saved.homepage.chrome.headerOptions.showThemeSwitch, false);
-  assert.equal(saved.homepage.chrome.themes.lightLabel, 'Lys');
-  assert.deepEqual(schema.parse(saved.homepage.chrome), schema.parse(edited.homepage.chrome));
-  assert.deepEqual(saved.sections, original.sections);
+test('Footer has independent editable link groups and conditional heading destination', () => {
+  const columns = footerEntry.fields.find((x: any) => x.name === 'footerGroups');
+  assert.ok(columns.fields.some((x: any) => x.name === 'headingHref'));
+  const edited = structuredClone(footer);
+  edited.footerGroups[0].headingHref = '/synlighet/';
+  edited.footerGroups[0].links[0].label = 'Søkemotoroptimalisering';
+  edited.footerGroups[0].links.push({ label: 'Innsikt', href: '/innsikt/' });
+  const saved = JSON.parse(cmsJsonSave(footer, edited, footerEntry, cms));
+  assert.deepEqual(saved, edited);
+  assert.deepEqual(schema.parse({ ...header, ...saved }), schema.parse({ ...header, ...edited }));
+  assert.deepEqual(read('src/content/site-chrome/header.json'), header);
 });
 
-test('native daisyUI swap uses the CMS dark name and follows system preference', () => {
- const toggle = readFileSync('src/components/SiteChromeThemeSwitch.astro', 'utf8');
- const head = readFileSync('src/components/SiteChromeThemeHead.astro', 'utf8');
- const runtime = readFileSync('src/lib/site-chrome-theme-interactions.ts', 'utf8');
- assert.match(toggle, /swap-rotate/);
- assert.match(toggle, /class="theme-controller"/);
- assert.match(toggle, /value=\{darkName\}/);
- assert.match(head, /prefers-color-scheme: dark/);
- assert.match(runtime, /onSystemChange/);
- assert.match(runtime, /localStorage\.setItem\(preferenceKey, mode\)/);
+test('native sun and moon switch uses real CMS dark name and OS preference', () => {
+  const toggle = readFileSync('src/components/SiteChromeThemeSwitch.astro', 'utf8');
+  const head = readFileSync('src/components/SiteChromeThemeHead.astro', 'utf8');
+  const runtime = readFileSync('src/lib/site-chrome-theme-interactions.ts', 'utf8');
+  assert.match(toggle, /swap-rotate/);
+  assert.match(toggle, /class="theme-controller"/);
+  assert.match(toggle, /value=\{darkName\}/);
+  assert.match(head, /prefers-color-scheme: dark/);
+  assert.match(runtime, /onSystemChange/);
+  assert.match(runtime, /localStorage\.setItem\(preferenceKey, mode\)/);
 });
