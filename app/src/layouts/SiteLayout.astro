@@ -7,6 +7,7 @@ import { getCollection } from 'astro:content';
 import {validateHomepagePublicLinks} from '../lib/home-builder';
 import HomeHeader from '../components/HomeHeader.astro';
 import HomeFooter from '../components/HomeFooter.astro';
+import SiteSearch from '../components/SiteSearch.astro';
 import Attribution from '../components/Attribution.astro';
 import { site } from '../config/site';
 import { defaultLocale, type Locale } from '../config/locales';
@@ -39,13 +40,16 @@ const organization = { '@context': 'https://schema.org', '@type': 'Organization'
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/pagefind/pagefind-component-ui.css" />
+    <script is:inline type="module" src="/pagefind/pagefind-component-ui.js"></script>
     <script type="application/ld+json" set:html={JSON.stringify(organization).replace(/</g, '\\u003c')} />
   </head>
   <body data-ui-shell="true" class="site-shell">
     <a href="#main" class="skip-link">{homeChrome.skipLabel}</a>
     <HomeHeader content={homeChrome} languageLinks={languageLinks} currentLocale={locale} />
-    <main id="main"><slot /></main>
+    <main id="main" data-pagefind-body={!noindex && !Astro.url.pathname.startsWith("/design-system/")}><slot /></main>
     <HomeFooter content={homeChrome} />
+    <SiteSearch mode="modal" />
     <Attribution />
     <TerminologyUI />
   </body>
