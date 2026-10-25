@@ -1,5 +1,10 @@
 # Project state
 
+## 2026-10-25 — Shared MWS-039 Light/Dark CMS paste-in selection (FUTURE KIT ONLY)
+
+OWNER explicitly chooses to paste full daisyUI Theme Generator CSS theme blocks (for example `@plugin "daisyui/theme" { name: "anlast"; ... --color-primary: oklch(...); ... }`) into **two full multiline Pages CMS fields, Light and Dark**, rather than configure individual CSS vars or select only builtin presets. The reusable MedonWebSystem Site Chrome source in [draft PR #8](https://github.com/AnelPasic/MedonWebSystem/pull/8) now supports a light/dark toggle, site-wide safe parsed CSS properties, one CMS source, and sticky/NO|EN/search/CTA toggles with bounded daisyUI CTA palette. This supersedes proposed individual color fields. The existing live Optimalisering Oslo preview and current color theme, Pages CMS content, noindex, Workers, D1, Resend and all customer details MUST remain unchanged; source improvements are only in the shared kit's draft PR. Once accepted, new customers install pinned kit and paste their own theme snippets. Current starter PR #4 is separately draft, not a production-ready starter. Full CMS authenticated second-brand test remains outstanding.
+
+
 ## 2026-10-25 — Pages CMS controls for shared header (OWNER REQUEST / implemented source)
 
 OWNER wants header settings editable in stock Pages CMS, without another admin tool: **Sticky av/på, NO|EN av/på, Søk av/på, plus header CTA destination, label and daisyUI theme color**. Implemented at `app/src/content/pages/home.json` → `homepage.chrome.headerOptions` (four explicit booleans: `sticky`, `showLanguageSwitch`, `showSearch`, `showCta`), and `homepage.chrome.assessmentLink` with `label`, `href` (existing internal path), `variant` (primary, secondary, accent, neutral, info, success, warning, error). All four switches default `true`, CTA stays `Gratis sjekk`, `/#sjekk`, `primary` to preserve the visually approved current site.
