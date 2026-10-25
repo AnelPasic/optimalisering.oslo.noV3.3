@@ -9,14 +9,42 @@ const pathname=Astro.url.pathname;
 <ul class:list={['menu',{'menu-horizontal':mode==='desktop','w-full':mode==='mobile'}]}>
  {links.map((link,index)=>{
   const state=navigationState(link,pathname);
-  const id=`header-${mode}-submenu-${index}`;
-  return <li class="header-nav-item" data-active-parent={state.within||undefined}>
+  const id='header-'+mode+'-submenu-'+index;
+  const mega=link.presentation==='mega'&&!!link.mega;
+  const disclosure=mega||!!link.children?.length;
+  return <li class:list={['header-nav-item',{'header-nav-item--mega':mega}]} data-active-parent={state.within||undefined} data-mega={mega||undefined}>
    <div class="header-nav-parent">
-    <a href={link.href} aria-current={state.current?'page':undefined}>{link.label}{mode==='mobile'&&!link.children?.length&&<Arrow />}</a>
-    {!!link.children?.length&&<button type="button" class="nav-disclosure btn btn-ghost btn-square" aria-expanded="false" aria-controls={id} aria-label={link.submenuLabel} data-nav-disclosure><Arrow /></button>}
+    <a href={link.href} aria-current={state.current?'page':undefined}>{link.label}{mode==='mobile'&&!disclosure&&<Arrow />}</a>
+    {disclosure&&<button type="button" class="nav-disclosure btn btn-ghost btn-square"
+      aria-expanded="false" aria-controls={id} aria-label={link.submenuLabel} data-nav-disclosure><Arrow /></button>}
    </div>
-   {!!link.children?.length&&<ul id={id} class="header-submenu menu bg-base-100" hidden>
-    {link.children.map(child=><li><a href={child.href} aria-current={navigationState(child,pathname).current?'page':undefined}><span class="header-submenu-label">{child.label}</span><span class="header-submenu-description">{child.description}</span></a></li>)}
+   {mega&&link.mega&&<div id={id} class="header-mega-menu bg-base-100" hidden>
+    <div class="header-mega-inner shell">
+     <div class="header-mega-columns">
+      {link.mega.columns.map(column=><section class="header-mega-column" aria-label={column.heading}>
+       <p class="header-mega-heading">{column.heading}</p>
+       <ul class="menu header-mega-links">
+        {column.links.map(child=><li><a href={child.href}
+         aria-current={navigationState(child,pathname).current?'page':undefined}>
+         <span class="header-submenu-label">{child.label}</span>
+         <span class="header-submenu-description">{child.description}</span>
+        </a></li>)}
+       </ul>
+      </section>)}
+     </div>
+     {link.mega.promo&&<aside class="header-mega-promo">
+      <h2>{link.mega.promo.heading}</h2>
+      <p>{link.mega.promo.body}</p>
+      <a class="btn btn-primary" href={link.mega.promo.cta.href}>{link.mega.promo.cta.label}<Arrow diagonal /></a>
+     </aside>}
+    </div>
+   </div>}
+   {!mega&&!!link.children?.length&&<ul id={id} class="header-submenu menu bg-base-100" hidden>
+    {link.children.map(child=><li><a href={child.href}
+      aria-current={navigationState(child,pathname).current?'page':undefined}>
+      <span class="header-submenu-label">{child.label}</span>
+      <span class="header-submenu-description">{child.description}</span>
+    </a></li>)}
    </ul>}
   </li>;
  })}
