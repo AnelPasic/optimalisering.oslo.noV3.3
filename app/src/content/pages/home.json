@@ -26,23 +26,69 @@
           "label": "Synlighet",
           "href": "/synlighet/",
           "submenuLabel": "Vis fagområder under Synlighet",
-          "children": [
-            {
-              "label": "SEO",
-              "href": "/seo/",
-              "description": "Bli funnet i Googles organiske søkeresultater"
-            },
-            {
-              "label": "AI-synlighet (AIO)",
-              "href": "/ai-synlighet/",
-              "description": "Bli lettere å forstå og finne i AI-søk og svar"
-            },
-            {
-              "label": "Lokal SEO",
-              "href": "/lokal-seo/",
-              "description": "Google Maps, Google bedriftsprofil og lokale søk"
+          "presentation": "mega",
+          "mega": {
+            "columns": [
+              {
+                "heading": "Synlighet i søk",
+                "links": [
+                  {
+                    "label": "SEO",
+                    "href": "/seo/",
+                    "description": "Bli funnet i Googles organiske søkeresultater"
+                  },
+                  {
+                    "label": "AI-synlighet (AIO)",
+                    "href": "/ai-synlighet/",
+                    "description": "Bli lettere å forstå og finne i AI-søk og svar"
+                  },
+                  {
+                    "label": "Lokal SEO",
+                    "href": "/lokal-seo/",
+                    "description": "Google Maps, Google bedriftsprofil og lokale søk"
+                  }
+                ]
+              },
+              {
+                "heading": "Bedre konvertering",
+                "links": [
+                  {
+                    "label": "Konvertering",
+                    "href": "/konvertering/",
+                    "description": "Gjør flere relevante besøk til henvendelser og salg"
+                  },
+                  {
+                    "label": "For nettbutikker",
+                    "href": "/nettbutikkoptimalisering/",
+                    "description": "Fra produktoppdagelse til handlekurv og kjøp"
+                  }
+                ]
+              },
+              {
+                "heading": "Neste steg",
+                "links": [
+                  {
+                    "label": "Priser",
+                    "href": "/priser/",
+                    "description": "Velg riktig nivå og se månedlige avtaler"
+                  },
+                  {
+                    "label": "Innsikt",
+                    "href": "/innsikt/",
+                    "description": "Praktiske guider om synlighet, konvertering og måling"
+                  }
+                ]
+              }
+            ],
+            "promo": {
+              "heading": "Gratis sjekk",
+              "body": "Vi starter der kundereisen stopper.",
+              "cta": {
+                "label": "Gratis sjekk",
+                "href": "/#sjekk"
+              }
             }
-          ]
+          }
         },
         {
           "label": "Konvertering",
