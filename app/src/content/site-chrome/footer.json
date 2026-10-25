@@ -33,6 +33,7 @@
   "footerGroups": [
     {
       "heading": "Synlighet",
+      "headingHref": "/synlighet/",
       "links": [
         {
           "label": "SEO",
@@ -54,6 +55,7 @@
     },
     {
       "heading": "Optimalisering",
+      "headingHref": "/konvertering/",
       "links": [
         {
           "label": "Nettsideoptimalisering",
