@@ -1,5 +1,10 @@
 # Project state
 
+## 2026-10-25 — Sticky shared header at scroll (OWNER DIRECT)
+
+OWNER approved making the entire current Optimalisering Oslo header stick at the top while scrolling. Only `app/src/styles/header-navigation.css` changes from `position: relative` to `position: sticky; top: 0`, preserving z-index 55 and the existing mega/dropdown panel absolute positioning, brand, desktop/mobile menu, Pagefind, NO|EN, CTA, CMS/Pages content, D1/Resend, footer and noindex. This is a CSS-only change, with no external libraries or additional GitHub Actions. Existing connected Cloudflare Workers Build can publish a main update; the actual live Worker deployment is not presumed verified. Main had independently changed to `cafdacec604cade2dfd5ea8efadd842fcbfb8150` via Pages CMS SEO-content edit before the branch was created; this content remains untouched.
+
+
 ## 2026-10-25 — Submenu highlight uses secondary / secondary-content (OWNER VISUAL REVISION)
 
 OWNER wants to replace the immediately preceding green/white submenu highlight with the current brand's `--color-secondary` background and `--color-secondary-content` text. Only the final hover/focus/pressed/current-page mega/dropdown submenu color declarations and their adjacent comment were changed in `app/src/styles/header-navigation.css`, ensuring both label and description have the secondary-content color. This supersedes the preceding **primary/primary-content** submenu highlight color choice without changing layout, mega menu behavior, CMS, search, NO|EN, CTA, footer, forms, noindex or production infrastructure. Release through the existing main-connected Cloudflare build; do not claim live deploy without verification or start optional GitHub Actions.
