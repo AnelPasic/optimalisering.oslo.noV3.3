@@ -1,5 +1,10 @@
 # Project state
 
+## 2026-10-25 — Theme swap build verification checkpoint
+
+MWS-040 source is on main with unchanged owner CMS theme 'sunset'. The identical feature branch built successfully in Cloudflare preview for source commits 1122be2 and 3c8f1ce. First production build for main 1e8a1e3 failed in Cloudflare (build febeb19c/e8943fd9), while shared MedonWebSystem kit CI completed successfully after mobile breakpoint fix (6a58031). No authenticated CMS edit, user content or Worker route changed in this small verification follow-up; review Cloudflare build logs if a retry still fails. Do not claim a production deploy success based on preview results.
+
+
 ## 2026-10-25 — MWS-040 native DaisyUI swap and OS auto-theme
 
 OWNER saved a new Dark theme in Pages CMS, name sunset. Preserve complete CMS home content. This source-only change upgrades the same Site Chrome theme modules to daisyUI swap swap-rotate checkbox theme-controller with sun/moon SVG, CMS-derived Dark name, OS prefers-color-scheme auto detection when no stored choice, live OS changes until explicit user override and synchronized mobile/desktop controls. Existing localStorage key remains. Head selects data-theme before paint. Historical Dark-specific auxiliary styling now targets data-mws-theme-mode dark instead of old hardcoded dark name. No changes to CMS data, copy, ads, intake, search, header layout, navigation or preview noindex.
