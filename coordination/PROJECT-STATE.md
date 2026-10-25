@@ -1,5 +1,10 @@
 # Project state
 
+## 2026-10-25 — Storebrand-style subtle hover pills on desktop primary navigation (OWNER VISUAL)
+
+OWNER provided a Storebrand navigation screenshot and requested a light rounded background/color shift when hovering the primary menu items. In the existing Optimalisering Oslo `header-navigation.css`, only desktop primary menu parents receive a soft lavender pill drawn from existing theme tokens on fine-pointer hover, keyboard focus, current page and open mega/dropdown state. Keep original menu dimensions, fonts, logo, click-and-hover behavior, NO|EN, Pagefind search, CTA, CMS data, mobile menu, footer, forms, lead infrastructure and preview noindex untouched. No new component/JS, dependency, manual GitHub Actions runs or English rollout. CSS review commit on `fix/header-nav-hover-20261025`; publishing source through established main-connected Cloudflare pipeline is not the same as verifying the Worker is live.
+
+
 ## 2026-10-25 — OPTIONAL NORWEGIAN PAGEFIND SEARCH (OWNER IMPLEMENTATION REQUEST)
 
 OWNER accepted adding the small free/static Pagefind search facility to the existing Optimalisering Oslo noindex preview, following visually accepted Mega Menu and NO | EN header: a compact search icon is placed in `HomeHeader.astro` immediately before NO | EN, a search trigger is also available inside the expanded mobile menu, and one accessible modal is inserted through `SiteLayout.astro`. Existing colors/fonts are reused; content, CMS, forms, D1/Resend, NO | EN (EN disabled), footer, prices and noindex remain unchanged.
