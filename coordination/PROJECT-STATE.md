@@ -1,5 +1,10 @@
 # Project state
 
+## 2026-10-25 — NO | EN aligned beside the header CTA (OWNER visual tweak)
+
+OWNER approved NO | EN appearance and requested right alignment together with the existing Gratis sjekk CTA. The component has been moved inside `HomeHeader.astro` `.header-actions`, directly before the CTA. Existing right-hand flex layout provides alignment. No change to logo, mega menu, CMS contents, forms, footer, mobile language switch, theme, /en routes or noindex. Publish through the existing main-connected Cloudflare Workers Build only; no additional GitHub Actions. Source change is not evidence of completed Cloudflare deployment.
+
+
 ## 2026-10-25 — NO | EN visual selector for existing noindex preview (OWNER DIRECT)
 
 OWNER approved small header continuation following visually accepted MWS-038 mega-menu (edc7397): add **NO | EN selector** in the current Optimalisering Oslo theme (dark-purple NO active, muted EN disabled) in desktop header and mobile expanded menu. EN is **display-only**, with no href, no English content, no /en/ navigation/redirect and no translation/publication claims. Existing LanguageSwitch.astro is reused; its English item becomes a real link only when a genuinely published matching EN route is supplied by existing getLanguageLinks; no dummy destination or duplication of CMS route authority. Keep all Pages CMS content/sections, logo, CTA, font family, mega nav, prices, forms, D1/Resend, noindex and footer unchanged. Source implementation on feature/no-en-visual-switch-20261025; OWNER requests **direct review publication** using existing main-connected Cloudflare Workers Build with **no extra GitHub Actions run**. Code and actual Cloudflare deployment are separate evidence; do not assert a live Worker build succeeded without checking provider or published page. This is a focused visual feature, not an EN launch or new locale rollout.
