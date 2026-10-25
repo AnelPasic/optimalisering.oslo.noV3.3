@@ -442,8 +442,8 @@ p { text-wrap: pretty; }
   .content-section .section-items[data-content-layout="three-columns"] { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
-/* 320px safeguard: retain action CTA and menu by using the icon-only brand.
-   The link keeps its full accessible home aria-label. No change above 359px. */
-@media (max-width: 359px) {
+/* Compact phones: retain CTA and menu by using the icon-only brand.
+   The home link keeps its complete aria-label. Larger viewports are unchanged. */
+@media (max-width: 480px) {
   .site-shell .site-header .wordmark > span { display: none; }
 }
