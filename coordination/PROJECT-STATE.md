@@ -1,5 +1,10 @@
 # Project state
 
+## 2026-10-25 — NO | EN visual selector for existing noindex preview (OWNER DIRECT)
+
+OWNER approved small header continuation following visually accepted MWS-038 mega-menu (edc7397): add **NO | EN selector** in the current Optimalisering Oslo theme (dark-purple NO active, muted EN disabled) in desktop header and mobile expanded menu. EN is **display-only**, with no href, no English content, no /en/ navigation/redirect and no translation/publication claims. Existing LanguageSwitch.astro is reused; its English item becomes a real link only when a genuinely published matching EN route is supplied by existing getLanguageLinks; no dummy destination or duplication of CMS route authority. Keep all Pages CMS content/sections, logo, CTA, font family, mega nav, prices, forms, D1/Resend, noindex and footer unchanged. Source implementation on feature/no-en-visual-switch-20261025; OWNER requests **direct review publication** using existing main-connected Cloudflare Workers Build with **no extra GitHub Actions run**. Code and actual Cloudflare deployment are separate evidence; do not assert a live Worker build succeeded without checking provider or published page. This is a focused visual feature, not an EN launch or new locale rollout.
+
+
 ## CURRENT CROSS-THREAD HANDOFF — 2026-10-24 (canonical; read first)
 
 **Purpose and verification:** Continue the OWNER-approved commercial Optimalisering Oslo website without restarting design or coding. This checkpoint was verified against GitHub `main` on 2026-10-24, source HEAD **`c4c31fae776092315c084976e97be9e91d5357ca`** before this docs-only handoff commit. Always refresh the live branch SHA, this file, REVIEW-QUEUE, DECISIONS, CHATGPT-TO-CODEX and CODEX-TO-CHATGPT before making any new claim or change; code/Cloudflare status is never inferred from a conversation summary.
