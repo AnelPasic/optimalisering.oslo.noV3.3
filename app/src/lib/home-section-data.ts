@@ -52,6 +52,9 @@ export const homeSectionDataSchema = z.object({
     // Uploaded Pages CMS image paths only. Optional: retain each location's approved text/icon fallback.
     logoLight: z.string().regex(/^\/images\/branding\/[a-zA-Z0-9_-]+\.(?:svg|png|webp|jpe?g|avif)$/).optional(),
     logoDark: z.string().regex(/^\/images\/branding\/[a-zA-Z0-9_-]+\.(?:svg|png|webp|jpe?g|avif)$/).optional(),
+    // Optional compact header marks for phones (theme-specific, with desktop fallback).
+    mobileLogoLight: z.string().regex(/^\/images\/branding\/[a-zA-Z0-9_-]+\.(?:svg|png|webp|jpe?g|avif)$/).optional(),
+    mobileLogoDark: z.string().regex(/^\/images\/branding\/[a-zA-Z0-9_-]+\.(?:svg|png|webp|jpe?g|avif)$/).optional(),
     footerLogoLight: z.string().regex(/^\/images\/branding\/[a-zA-Z0-9_-]+\.(?:svg|png|webp|jpe?g|avif)$/).optional(),
     footerLogoDark: z.string().regex(/^\/images\/branding\/[a-zA-Z0-9_-]+\.(?:svg|png|webp|jpe?g|avif)$/).optional(),
     navigationLabel: z.string(), mobileNavigationLabel: z.string(), openMenu: z.string(), closeMenu: z.string(),
