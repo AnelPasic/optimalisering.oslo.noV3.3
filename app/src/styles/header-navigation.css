@@ -162,3 +162,44 @@
   }
  }
 }
+
+/* Optional static Pagefind search, inheriting the existing Oslo design system.
+   The icon belongs to the right-side action group; mobile gets its own row. */
+@layer project {
+ .site-shell .site-header .site-search-trigger {
+  display: inline-flex; align-items: center; justify-content: center;
+  flex: 0 0 auto; min-width: 42px; min-height: 44px;
+  color: var(--ink);
+  --pf-text: var(--ink);
+  --pf-text-secondary: var(--muted);
+  --pf-background: transparent;
+  --pf-border: transparent;
+  --pf-border-focus: var(--color-focus);
+  --pf-hover: var(--surface-lavender);
+  --pf-outline-focus: var(--color-focus);
+  --pf-font: var(--body);
+ }
+ .site-shell .site-header .site-search-trigger--mobile { display: none; }
+ .site-shell pagefind-modal {
+  --pf-text: var(--ink);
+  --pf-text-secondary: var(--muted);
+  --pf-text-muted: var(--muted);
+  --pf-background: var(--surface-base);
+  --pf-border: var(--color-base-300);
+  --pf-border-focus: var(--color-focus);
+  --pf-hover: var(--surface-lavender);
+  --pf-outline-focus: var(--color-focus);
+  --pf-mark: var(--color-secondary);
+  --pf-font: var(--body);
+  --pf-modal-max-width: 680px;
+  --pf-border-radius: var(--radius-field);
+ }
+ @media (max-width: 900px) {
+  .site-shell .site-header .site-search-trigger--desktop { display: none; }
+  .site-shell .site-header .site-search-trigger--mobile {
+   display: flex; justify-content: flex-start;
+   width: max-content; max-width: 100%;
+   margin: 14px 0 4px;
+  }
+ }
+}
