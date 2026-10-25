@@ -14,7 +14,11 @@
     {
       "_block": "content",
       "id": "seo-tjenester",
+      "eyebrow": "SEO-tjenester",
       "heading": "Dette kan vi gjøre for å forbedre SEO.",
+      "headingAlign": "center",
+      "layout": "two-columns",
+      "surface": "soft",
       "body": [
         "Vi begynner med søkene som kan gi bedriften riktige kunder, og prioriterer tiltak på nettsiden. Hva som gjennomføres, bestemmes av behov og avtalt kapasitet."
       ],
@@ -49,16 +53,19 @@
           "label": "Se hvordan SEO inngår i våre pakker",
           "href": "/priser/"
         }
-      ],
-      "eyebrow": "SEO-tjenester",
-      "headingAlign": "center",
-      "layout": "two-columns",
-      "surface": "soft"
+      ]
+    },
+    {
+      "_block": "global",
+      "element": "priser"
     },
     {
       "_block": "content",
       "id": "sok-side",
       "heading": "Hvilke søk skal føre kunden til hvilken side?",
+      "headingAlign": "center",
+      "layout": "three-columns",
+      "surface": "base",
       "body": [
         "Kunden som søker etter \"rørlegger døgnvakt\" er nærmere å velge leverandør enn den som søker \"hva gjør jeg ved vannlekkasje\". Vi sørger for at begge møter en side som svarer på det de faktisk trenger."
       ],
@@ -81,27 +88,26 @@
           "boxVariant": "card",
           "surface": "lavender"
         }
-      ],
-      "layout": "three-columns",
-      "headingAlign": "center",
-      "surface": "base"
+      ]
     },
     {
       "_block": "content",
       "id": "teknisk",
+      "eyebrow": "Teknisk SEO",
       "heading": "Teknisk SEO: Kan Google finne, lese og forstå de viktige sidene?",
+      "headingAlign": "left",
+      "surface": "lavender",
       "body": [
         "Viktige sider må kunne indekseres og finnes gjennom tydelige interne lenker. Vi undersøker konkrete hindringer som feil omdirigeringer, utilgjengelig innhold og dårlig mobilopplevelse. Større tekniske endringer avtales separat."
-      ],
-      "eyebrow": "Teknisk SEO",
-      "surface": "lavender",
-      "headingAlign": "left"
+      ]
     },
     {
       "_block": "content",
       "id": "prioritering",
       "eyebrow": "Prioritering før volum",
       "heading": "En SEO-plan skal prioritere arbeid, ikke bare produsere rapporter.",
+      "headingAlign": "left",
+      "surface": "dark",
       "body": [
         "En side som ikke forklarer tilbudet, blir ikke bedre av at vi publiserer artikkel nummer 80. Vi vurderer søk, tilbud og eksisterende sider før vi foreslår mer arbeid.",
         "SEO kan være ett prioritert område i optimaliseringspakkene. Vi avtaler oppgavene og følger relevante resultater, men lover ikke en bestemt plassering eller antall kunder."
@@ -115,18 +121,14 @@
           "label": "Se tjenestealternativene",
           "href": "/priser/"
         }
-      ],
-      "surface": "dark",
-      "headingAlign": "left"
-    },
-    {
-      "_block": "global",
-      "element": "priser"
+      ]
     },
     {
       "_block": "content",
       "id": "seo-oslo",
       "heading": "SEO i Oslo: Hvem søker, og hvor leverer bedriften?",
+      "headingAlign": "left",
+      "surface": "base",
       "body": [
         "Noen kunder søker etter en leverandør i et bestemt område. Andre sammenligner tjenester uten å bry seg om hvor leverandøren sitter. Vi vurderer hva som gjelder for dere, og kobler inn lokal SEO og Google bedriftsprofil når avstand og tjenesteområde betyr noe."
       ],
@@ -139,14 +141,14 @@
           "label": "Guide til Google bedriftsprofil",
           "href": "/innsikt/google-bedriftsprofil/"
         }
-      ],
-      "surface": "base",
-      "headingAlign": "left"
+      ]
     },
     {
       "_block": "content",
       "id": "effekt",
       "heading": "Hva får bedriften igjen for SEO-arbeidet?",
+      "headingAlign": "left",
+      "surface": "mint",
       "body": [
         "Vi følger med på synlighet og relevante besøk, men spør også hva som skjer videre: Ble det en kvalifisert henvendelse eller et nytt kjøp? Måling har begrensninger. Flere klikk alene sier lite om hva bedriften faktisk tjener."
       ],
@@ -155,14 +157,14 @@
           "label": "Les om måling av effekt",
           "href": "/innsikt/male-effekt-av-optimalisering/"
         }
-      ],
-      "surface": "mint",
-      "headingAlign": "left"
+      ]
     },
     {
       "_block": "content",
       "id": "ai",
       "heading": "Hva med synlighet i ChatGPT og andre AI-svar?",
+      "headingAlign": "left",
+      "surface": "soft",
       "body": [
         "Tydelige tjenestesider er et godt utgangspunkt også for AI-søk. Men en Google-plassering dokumenterer ikke en anbefaling fra en AI-tjeneste. Det vurderer vi separat."
       ],
@@ -171,9 +173,7 @@
           "label": "Les om AI-synlighet",
           "href": "/ai-synlighet/"
         }
-      ],
-      "surface": "soft",
-      "headingAlign": "left"
+      ]
     },
     {
       "_block": "global",
