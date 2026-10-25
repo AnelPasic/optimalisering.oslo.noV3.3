@@ -19,7 +19,7 @@
       "closeMenu": "Lukk meny",
       "assessmentLink": {
         "label": "Se priser og bestill",
-        "href": "/priser",
+        "href": "/priser/",
         "variant": "secondary"
       },
       "navigation": [
