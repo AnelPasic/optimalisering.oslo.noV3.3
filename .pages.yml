@@ -991,19 +991,66 @@ content:
                 label: Lukk meny
                 type: string
                 required: true
+              - name: headerOptions
+                label: Header-innstillinger (av/på)
+                type: object
+                required: true
+                fields:
+                  - name: sticky
+                    label: Sticky ved scrolling
+                    type: boolean
+                    required: true
+                    description: Behold toppmenyen øverst når besøkende scroller.
+                  - name: showLanguageSwitch
+                    label: Vis NO | EN
+                    type: boolean
+                    required: true
+                    description: Viser språkvelgeren. EN er deaktivert til engelske sider er publisert.
+                  - name: showSearch
+                    label: Vis søk
+                    type: boolean
+                    required: true
+                    description: Viser Pagefind-søk i toppmenyen og på mobil.
+                  - name: showCta
+                    label: Vis CTA-knapp
+                    type: boolean
+                    required: true
+                    description: Viser eller skjuler handlingsknappen i toppmenyen.
               - name: assessmentLink
-                label: Lenke til gratis sjekk
+                label: CTA-knapp i toppmeny
                 type: object
                 fields:
                   - name: label
-                    label: Tekst
+                    label: Knappetekst
                     type: string
                     required: true
                   - name: href
-                    label: Intern lenke
+                    label: Intern lenke (for eksempel /#sjekk eller /kontakt/)
                     type: string
                     pattern: ^/
                     required: true
+                  - name: variant
+                    label: Knappfarge (daisyUI)
+                    type: select
+                    required: true
+                    options:
+                      values:
+                        - name: primary
+                          label: Primary
+                        - name: secondary
+                          label: Secondary
+                        - name: accent
+                          label: Accent
+                        - name: neutral
+                          label: Neutral
+                        - name: info
+                          label: Info
+                        - name: success
+                          label: Success
+                        - name: warning
+                          label: Warning
+                        - name: error
+                          label: Error
                 required: true
               - name: navigation
                 label: Navigasjon
