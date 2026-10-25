@@ -17,7 +17,17 @@ const legalLinks = content.footerLegalLinks ?? [];
   <div class="shell">
     <div class="footer footer-grid footer-grid--columns footer-vertical min-[651px]:footer-horizontal gap-x-5 gap-y-8 pb-9 min-[651px]:pb-[55px] text-(length:--type-body) leading-(--leading-body) *:w-full">
       <div class="footer-about block justify-items-normal">
-        <a class="footer-title footer-brand normal-case opacity-100 mb-0" href="/">{content.brand} {content.brandLocation}<span>.</span></a>
+        <a class="footer-title footer-brand normal-case opacity-100 mb-0" href="/"
+          aria-label={content.homeLabel}>
+          {content.footerLogoLight || content.footerLogoDark
+            ? <span class="site-brand-image-pair site-brand-image-pair--footer" aria-hidden="true">
+                <img class="site-brand-image site-brand-image--light"
+                  src={content.footerLogoLight ?? content.footerLogoDark} alt="" width="220" height="60" />
+                <img class="site-brand-image site-brand-image--dark"
+                  src={content.footerLogoDark ?? content.footerLogoLight} alt="" width="220" height="60" />
+              </span>
+            : <>{content.brand} {content.brandLocation}<span>.</span></>}
+        </a>
         <p>{content.providerText}</p>
       </div>
       {footerGroups.map(group => (
