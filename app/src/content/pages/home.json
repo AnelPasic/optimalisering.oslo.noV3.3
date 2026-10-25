@@ -19,7 +19,8 @@
       "closeMenu": "Lukk meny",
       "assessmentLink": {
         "label": "Gratis sjekk",
-        "href": "/#sjekk"
+        "href": "/#sjekk",
+        "variant": "primary"
       },
       "navigation": [
         {
@@ -134,7 +135,13 @@
         }
       ],
       "copyrightProvider": "Optimalisering Oslo",
-      "footerNote": "Et godt sted å begynne."
+      "footerNote": "Et godt sted å begynne.",
+      "headerOptions": {
+        "sticky": true,
+        "showLanguageSwitch": true,
+        "showSearch": true,
+        "showCta": true
+      }
     }
   },
   "hero": {
