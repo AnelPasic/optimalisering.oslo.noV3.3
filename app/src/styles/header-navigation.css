@@ -120,3 +120,45 @@
   }
  }
 }
+
+/* Visual language selector: use the existing Optimalisering Oslo theme.
+   NO is current; EN is not interactive until there is a published EN route. */
+@layer project {
+ .site-shell .site-header .language-switch {
+  display: inline-flex; align-items: center; flex: 0 0 auto;
+  gap: 2px; padding: 3px;
+  border: 1px solid var(--color-base-300);
+  border-radius: var(--radius-field);
+  background: var(--surface-base);
+  font-family: var(--body);
+  line-height: 1;
+ }
+ .site-shell .site-header .language-switch__choice {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 40px; min-height: 38px; padding: 6px 9px;
+  border-radius: calc(var(--radius-field) - 3px);
+  font-size: var(--type-label); font-weight: var(--weight-label);
+  text-decoration: none; white-space: nowrap;
+  color: var(--ink);
+ }
+ .site-shell .site-header .language-switch__choice.is-active {
+  background: var(--color-secondary);
+  color: var(--color-secondary-content);
+ }
+ .site-shell .site-header .language-switch__choice.is-disabled {
+  opacity: .6; cursor: default; user-select: none;
+ }
+ .site-shell .site-header .language-switch a.language-switch__choice:hover {
+  background: var(--surface-lavender);
+ }
+ .site-shell .site-header .language-switch--mobile { display: none; }
+ @media (max-width: 900px) {
+  .site-shell .site-header .language-switch--desktop { display: none; }
+  .site-shell .site-header .language-switch--mobile {
+   display: inline-flex; margin: 18px 0 4px;
+  }
+  .site-shell .site-header .mobile-menu .language-switch__choice {
+   padding: 6px 9px; border: 0; min-height: 38px;
+  }
+ }
+}
