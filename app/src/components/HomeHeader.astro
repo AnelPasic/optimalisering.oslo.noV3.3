@@ -26,8 +26,8 @@ const ctaClasses = {
     <nav class="desktop-nav" aria-label={content.navigationLabel}><HeaderNavigation links={content.navigation} mode="desktop" /></nav>
     <div class="header-actions">
       {content.headerOptions.showSearch && <SiteSearch mode="desktop" />}
-      {content.headerOptions.showLanguageSwitch && <LanguageSwitch links={languageLinks} currentLocale={currentLocale} />}
       {content.headerOptions.showThemeSwitch && <SiteChromeThemeSwitch themes={content.themes} placement="desktop" />}
+      {content.headerOptions.showLanguageSwitch && <LanguageSwitch links={languageLinks} currentLocale={currentLocale} />}
       {content.headerOptions.showCta && <a href={content.assessmentLink.href}
         class:list={["button", "button-small", "btn", "btn-sm", ctaClasses[content.assessmentLink.variant]]}>
         {content.assessmentLink.label}<Arrow diagonal />
@@ -38,8 +38,8 @@ const ctaClasses = {
   <nav id="mobile-menu" class="mobile-menu shell" aria-label={content.mobileNavigationLabel} hidden>
     <HeaderNavigation links={content.navigation} mode="mobile" />
     {content.headerOptions.showSearch && <SiteSearch mode="mobile" />}
-    {content.headerOptions.showLanguageSwitch && <LanguageSwitch links={languageLinks} currentLocale={currentLocale} placement="mobile" />}
     {content.headerOptions.showThemeSwitch && <SiteChromeThemeSwitch themes={content.themes} placement="mobile" />}
+    {content.headerOptions.showLanguageSwitch && <LanguageSwitch links={languageLinks} currentLocale={currentLocale} placement="mobile" />}
   </nav>
 </header>
 <script>
