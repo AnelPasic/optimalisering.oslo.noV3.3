@@ -14,8 +14,15 @@ for (const name of [
 }
 const home = readFileSync(resolve(root, 'index.html'), 'utf8');
 assert.ok(home.includes('data-pagefind-body'), 'Homepage main content must be indexed');
-assert.ok(home.includes('pagefind-modal-trigger'), 'Missing header search trigger');
-assert.ok(home.includes('pagefind-modal'), 'Missing search modal');
+const source = JSON.parse(readFileSync(resolve('src/content/pages/home.json'), 'utf8'));
+const enabled = source.homepage.chrome.headerOptions.showSearch;
+if (enabled) {
+  assert.ok(home.includes('pagefind-modal-trigger'), 'Enabled search must include the header trigger');
+  assert.ok(home.includes('<pagefind-modal'), 'Enabled search must include its modal');
+} else {
+  assert.ok(!home.includes('<pagefind-modal-trigger'), 'Disabled search must not show a trigger');
+  assert.ok(!home.includes('<pagefind-modal'), 'Disabled search must not show a modal');
+}
 assert.ok(readdirSync(resolve(root, 'pagefind')).some(name => name.endsWith('.pf_meta') || name === 'pagefind-entry.json'),
   'Missing generated Pagefind index metadata');
 console.log('Pagefind: static index and Norwegian search UI assets are present.');
