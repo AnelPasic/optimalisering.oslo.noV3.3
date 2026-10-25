@@ -1,6 +1,33 @@
 ---
 import type { LanguageLink } from '../lib/i18n';
-interface Props { links?: LanguageLink[]; }
-const { links = [] } = Astro.props;
+import type { Locale } from '../config/locales';
+
+interface Props {
+  links?: LanguageLink[];
+  currentLocale?: Locale;
+  placement?: 'desktop' | 'mobile';
+}
+const { links = [], currentLocale = 'nb', placement = 'desktop' } = Astro.props;
+// A locale is clickable ONLY when the site has an actual published destination.
+// EN remains visible but disabled until its own published page exists.
+const languages = [
+  { locale: 'nb', code: 'NO' },
+  { locale: 'en', code: 'EN' },
+] as const;
 ---
-{links.length > 0 && <nav class="language-switch" aria-label="Språk">{links.map(link => <a href={link.href} lang={link.locale} hreflang={link.locale}>{link.label}</a>)}</nav>}
+<div class:list={['language-switch', placement === 'mobile' ? 'language-switch--mobile' : 'language-switch--desktop']}
+  role="group" aria-label="Språkvalg">
+  {languages.map(language => {
+    const isCurrent = language.locale === currentLocale;
+    const destination = links.find(link => link.locale === language.locale);
+    return isCurrent
+      ? <span class="language-switch__choice is-active" aria-current="true" lang={language.locale}>{language.code}</span>
+      : destination
+        ? <a class="language-switch__choice" href={destination.href} lang={language.locale}
+            hreflang={language.locale}>{language.code}</a>
+        : <span class="language-switch__choice is-disabled" aria-disabled="true" lang={language.locale}
+            title={language.locale === 'en' ? 'Engelsk versjon kommer senere' : 'Norsk versjon er ikke tilgjengelig'}>
+            {language.code}
+          </span>;
+  })}
+</div>
