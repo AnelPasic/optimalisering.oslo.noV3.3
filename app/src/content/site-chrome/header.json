@@ -99,5 +99,7 @@
     "showLanguageSwitch": true,
     "showSearch": true,
     "showCta": true
-  }
+  },
+  "logoLight": "/images/branding/museo-medon.svg",
+  "logoDark": "/images/branding/apple-touch-icon.png"
 }
