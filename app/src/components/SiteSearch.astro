@@ -1,0 +1,18 @@
+---
+/**
+ * Lightweight, reusable Pagefind UI surface.
+ * The index and UI assets are emitted into /pagefind/ by the post-Astro build step.
+ * Search needs no API, cookies, account or additional database.
+ */
+interface Props { mode?: 'desktop' | 'mobile' | 'modal'; }
+const { mode = 'desktop' } = Astro.props;
+---
+{mode === 'modal'
+  ? <pagefind-modal reset-on-close></pagefind-modal>
+  : <pagefind-modal-trigger
+      class:list={['site-search-trigger', mode === 'mobile' ? 'site-search-trigger--mobile' : 'site-search-trigger--desktop']}
+      compact={mode === 'desktop'}
+      placeholder="Søk på nettstedet"
+      hide-shortcut
+      aria-label="Søk på nettstedet"
+    ></pagefind-modal-trigger>}
