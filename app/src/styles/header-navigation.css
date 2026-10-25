@@ -237,12 +237,15 @@
  }
 }
 
-/* Pagefind generates .trigger-icon (not .pf-trigger-icon) inside the
-   modal trigger. Keep the existing 44px clickable surface unchanged. */
-.site-shell .site-header pagefind-modal-trigger.site-search-trigger .trigger-icon {
-  width: 16px;
-  height: 16px;
-  background: var(--color-base-content);
+/* Pagefind's generated icon rules use triple-ID specificity. Limit the
+   necessary overrides to the header trigger; keep its 44px hit target. */
+.site-shell .site-header pagefind-modal-trigger.site-search-trigger {
+  --pf-text-muted: var(--color-base-content);
+}
+.site-shell .site-header pagefind-modal-trigger.site-search-trigger :is(.pf-trigger-icon, .trigger-icon) {
+  width: 16px !important;
+  height: 16px !important;
+  background: var(--color-base-content) !important;
 }
 
 /* Highlighted submenu items use theme secondary + secondary-content.
