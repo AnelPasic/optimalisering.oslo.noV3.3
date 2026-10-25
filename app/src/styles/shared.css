@@ -454,5 +454,29 @@ p { text-wrap: pretty; }
 /* Compact phones: retain CTA and menu by using the icon-only brand.
    The home link keeps its complete aria-label. Larger viewports are unchanged. */
 @media (max-width: 480px) {
-  .site-shell .site-header .wordmark > span { display: none; }
+  .site-shell .site-header .wordmark > span:not(.site-brand-image-pair) { display: none; }
+}
+
+/* Shared Light/Dark branding. Theme mode is set before first paint and
+   updated by the existing sun/moon controller without reload or flash. */
+.site-brand-image-pair { display: inline-flex; align-items: center; flex: 0 1 auto; min-width: 0; }
+.site-brand-image { display: block; max-width: 100%; object-fit: contain; }
+.site-brand-image--dark { display: none; }
+html[data-mws-theme-mode="dark"] .site-brand-image--light { display: none; }
+html[data-mws-theme-mode="dark"] .site-brand-image--dark { display: block; }
+.site-shell .site-header .site-brand-image-pair--header {
+  max-width: 176px;
+}
+.site-shell .site-header .site-brand-image-pair--header .site-brand-image {
+  width: auto; height: 42px; max-width: 176px;
+}
+.site-shell .site-footer .site-brand-image-pair--footer { max-width: 220px; }
+.site-shell .site-footer .site-brand-image-pair--footer .site-brand-image {
+  width: auto; height: auto; max-height: 60px; max-width: 220px;
+}
+@media (max-width: 480px) {
+  .site-shell .site-header .site-brand-image-pair--header,
+  .site-shell .site-header .site-brand-image-pair--header .site-brand-image {
+    max-width: 58px; max-height: 42px;
+  }
 }
