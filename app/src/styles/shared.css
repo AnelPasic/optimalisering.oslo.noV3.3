@@ -505,3 +505,14 @@ html[data-mws-theme-mode="dark"] .site-brand-image--dark { display: block; }
     object-fit: contain;
   }
 }
+
+/* At 320px the currently uploaded desktop logo must also fit beside the
+   existing CTA and hamburger. Do not change any wider phone or desktop. */
+@media (max-width: 359px) {
+  .site-shell .site-header .site-brand-image-pair--header,
+  .site-shell .site-header .site-brand-image-pair--header .site-brand-image,
+  .site-shell .site-header .site-brand-image-pair--mobile,
+  .site-shell .site-header .site-brand-image-pair--mobile .site-brand-image {
+    max-width: 38px;
+  }
+}
