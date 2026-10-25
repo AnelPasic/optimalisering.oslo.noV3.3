@@ -262,10 +262,10 @@
  .site-shell .site-header .mws-chrome-theme-switch.swap:focus-within {
   outline: 2px solid var(--color-focus); outline-offset: 2px;
  }
- .site-shell .site-header .mws-chrome-theme-switch--mobile { display: none; }
+ .site-shell .site-header .mws-chrome-theme-switch.swap.mws-chrome-theme-switch--mobile { display: none; }
  @media (max-width: 900px) {
-  .site-shell .site-header .mws-chrome-theme-switch--desktop { display: none; }
-  .site-shell .site-header .mws-chrome-theme-switch--mobile {
+  .site-shell .site-header .mws-chrome-theme-switch.swap.mws-chrome-theme-switch--desktop { display: none; }
+  .site-shell .site-header .mws-chrome-theme-switch.swap.mws-chrome-theme-switch--mobile {
    display: inline-grid; margin: 14px 0 4px;
   }
  }
