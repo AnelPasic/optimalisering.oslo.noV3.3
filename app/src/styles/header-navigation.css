@@ -250,39 +250,29 @@
 }
 
 
-/* MWS-039 shared Theme Generator adapter on the existing visually approved header. */
+/* Native daisyUI theme-controller, adapted to approved Oslo header. */
 @layer project {
- .site-shell .site-header .mws-chrome-theme-switch {
-  display: inline-flex; align-items: center; flex: 0 0 auto;
-  gap: 0; padding: 2px; border-radius: var(--radius-field);
-  border: 1px solid var(--color-base-300); background: var(--color-base-100);
+ .site-shell .site-header .mws-chrome-theme-switch.swap {
+  display: inline-grid; place-items: center; flex: 0 0 auto;
+  width: 44px; height: 44px; min-width: 44px;
+  border-radius: var(--radius-field); color: var(--color-base-content);
+  cursor: pointer;
  }
- .site-shell .site-header .mws-chrome-theme-switch > .btn {
-  min-height: 38px; height: 38px; padding-inline: 8px;
-  font-size: .76rem; font-weight: 600; border: 0; border-radius: calc(var(--radius-field) - 3px);
-  background: transparent; color: var(--color-base-content);
- }
- .site-shell .site-header .mws-chrome-theme-switch [aria-pressed="true"] {
-  background: var(--color-secondary); color: var(--color-secondary-content);
- }
- .site-shell .site-header .mws-chrome-theme-switch .mws-chrome-theme-cycle {
-  display: none; font-size: 1.15rem; min-width: 38px;
+ .site-shell .site-header .mws-chrome-theme-switch.swap > svg { width: 23px; height: 23px; }
+ .site-shell .site-header .mws-chrome-theme-switch.swap:focus-within {
+  outline: 2px solid var(--color-focus); outline-offset: 2px;
  }
  .site-shell .site-header .mws-chrome-theme-switch--mobile { display: none; }
- @media (min-width: 901px) and (max-width: 1279px) {
-  .site-shell .site-header .mws-chrome-theme-switch--desktop > [data-mws-theme-select] { display: none; }
-  .site-shell .site-header .mws-chrome-theme-switch--desktop > .mws-chrome-theme-cycle { display: inline-flex; }
- }
  @media (max-width: 900px) {
   .site-shell .site-header .mws-chrome-theme-switch--desktop { display: none; }
   .site-shell .site-header .mws-chrome-theme-switch--mobile {
-   display: inline-flex; margin: 14px 0 4px;
+   display: inline-grid; margin: 14px 0 4px;
   }
  }
 }
 
 /* Older client-only palette aliases not exported by the 20 standard daisyUI tokens. */
-html[data-theme="optimalisering-dark"] {
+html[data-mws-theme-mode="dark"] {
  --color-mint: oklch(31% 0.035 189);
  --color-lavender: oklch(30% 0.045 312);
  --color-muted: oklch(76% 0.025 310);

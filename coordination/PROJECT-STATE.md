@@ -1,5 +1,10 @@
 # Project state
 
+## 2026-10-25 — MWS-040 native DaisyUI swap and OS auto-theme
+
+OWNER saved a new Dark theme in Pages CMS, name sunset. Preserve complete CMS home content. This source-only change upgrades the same Site Chrome theme modules to daisyUI swap swap-rotate checkbox theme-controller with sun/moon SVG, CMS-derived Dark name, OS prefers-color-scheme auto detection when no stored choice, live OS changes until explicit user override and synchronized mobile/desktop controls. Existing localStorage key remains. Head selects data-theme before paint. Historical Dark-specific auxiliary styling now targets data-mws-theme-mode dark instead of old hardcoded dark name. No changes to CMS data, copy, ads, intake, search, header layout, navigation or preview noindex.
+
+
 ## 2026-10-25 — MWS-039 actual-site theme integration pilot (OWNER AUTHORIZED)
 
 OWNER explicitly approved testing the reusable Light/Dark Theme Generator paste-in implementation against the existing Optimalisering Oslo Astro + Pages CMS website and, on success, bringing the accepted shared code into MedonWebSystem main. This bounded pilot imports the **same shared** theme parser, head renderer, switcher and interactions from MedonWebSystem PR #8 instead of replacing the visually locked nav/mega/header. Adds two full theme CSS code fields and showThemeSwitch to the existing ONE homepage.chrome CMS JSON and stock Pages CMS editor. Recreates the existing production light scheme exactly from 20 existing standard daisyUI color tokens and 8 geometry/effect tokens; defines a separate dark-mode preview theme. Legacy client-specific nonstandard color aliases are adjusted in header-navigation.css ONLY for dark mode. Light remains default. Header search, NO|EN, CTA owner-selected current content/prices, mega menu, footer, noindex, Cloudflare D1/Resend and other systems unchanged. A dark palette is experimental and still requires visual owner acceptance; source push does not confirm Cloudflare build/live deployment. MWS #8 still requires separate full-kit release/merge decision and true authenticated CMS save review.

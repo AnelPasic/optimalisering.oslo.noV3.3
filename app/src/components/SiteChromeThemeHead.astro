@@ -19,12 +19,16 @@ const darkName = parseDaisyTheme(themes.darkCss, 'dark').name;
       try {
         const saved = localStorage.getItem('mws-theme-mode');
         if (saved === 'light' || saved === 'dark') return saved;
-      } catch { /* Browsers may disable local storage. */ }
+      } catch { /* Browsers may disable storage; OS detection still works. */ }
+      if (typeof window.matchMedia === 'function') {
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
     }
-    return defaultMode;
+    return defaultMode; // CMS fallback when switching is disabled or OS detection unavailable.
   })();
   root.dataset.mwsLightTheme = lightName;
   root.dataset.mwsDarkTheme = darkName;
+  root.dataset.mwsThemeSwitchEnabled = String(enabled);
   root.dataset.mwsThemeMode = mode;
   root.dataset.theme = mode === 'dark' ? darkName : lightName;
 </script>

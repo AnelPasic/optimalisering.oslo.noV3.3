@@ -27,7 +27,7 @@ test('Header CMS exposes all switches and one CTA label/link/variant selector', 
 test('Native CMS-equivalent save roundtrips false toggles and secondary CTA without touching content', () => {
   const edited = structuredClone(original);
   edited.homepage.chrome.headerOptions = {
-    sticky: false, showLanguageSwitch: false, showSearch: false, showCta: false,
+    sticky: false, showLanguageSwitch: false, showSearch: false, showCta: false, showThemeSwitch: false,
   };
   edited.homepage.chrome.assessmentLink = {
     label: 'Kontakt oss', href: '/kontakt/', variant: 'secondary',
@@ -62,7 +62,7 @@ test('MWS-039 shared theme is stored in native home chrome with two complete dai
   const chrome = original.homepage.chrome;
   assert.equal(chrome.headerOptions.showThemeSwitch, true);
   assert.equal(parseDaisyTheme(chrome.themes.lightCss, 'light').name, 'optimalisering');
-  assert.equal(parseDaisyTheme(chrome.themes.darkCss, 'dark').name, 'optimalisering-dark');
+  assert.equal(parseDaisyTheme(chrome.themes.darkCss, 'dark').name, 'sunset');
   const c = schema.parse(chrome);
   assert.equal(c.themes.defaultMode, 'light');
   const entry = cmsEntry.fields.find((field: any) => field.name === 'homepage').fields.find((field: any) => field.name === 'chrome');
@@ -80,4 +80,16 @@ test('Pages CMS preserves theme changes and disabled theme toggle', () => {
   assert.equal(saved.homepage.chrome.themes.lightLabel, 'Lys');
   assert.deepEqual(schema.parse(saved.homepage.chrome), schema.parse(edited.homepage.chrome));
   assert.deepEqual(saved.sections, original.sections);
+});
+
+test('native daisyUI swap uses the CMS dark name and follows system preference', () => {
+ const toggle = readFileSync('src/components/SiteChromeThemeSwitch.astro', 'utf8');
+ const head = readFileSync('src/components/SiteChromeThemeHead.astro', 'utf8');
+ const runtime = readFileSync('src/lib/site-chrome-theme-interactions.ts', 'utf8');
+ assert.match(toggle, /swap-rotate/);
+ assert.match(toggle, /class="theme-controller"/);
+ assert.match(toggle, /value=\{darkName\}/);
+ assert.match(head, /prefers-color-scheme: dark/);
+ assert.match(runtime, /onSystemChange/);
+ assert.match(runtime, /localStorage\.setItem\(preferenceKey, mode\)/);
 });
