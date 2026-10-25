@@ -3,10 +3,11 @@ import type { HomepageContent } from '../lib/home-section-data';
 import Arrow from './Arrow.astro';
 import LanguageSwitch from './LanguageSwitch.astro';
 import type { LanguageLink } from '../lib/i18n';
+import type { Locale } from '../config/locales';
 import HeaderNavigation from './HeaderNavigation.astro';
 import '../styles/header-navigation.css';
-interface Props { content: HomepageContent['chrome']; languageLinks?: LanguageLink[]; }
-const { content, languageLinks = [] } = Astro.props;
+interface Props { content: HomepageContent['chrome']; languageLinks?: LanguageLink[]; currentLocale?: Locale; }
+const { content, languageLinks = [], currentLocale = 'nb' } = Astro.props;
 ---
 <header class="site-header">
   <div class="shell header-inner navbar">
@@ -15,10 +16,13 @@ const { content, languageLinks = [] } = Astro.props;
       <span>{content.brand}<span class="wordmark-second">{content.brandLocation}<span class="wordmark-dot">.</span></span></span>
     </a>
     <nav class="desktop-nav" aria-label={content.navigationLabel}><HeaderNavigation links={content.navigation} mode="desktop" /></nav>
-    <LanguageSwitch links={languageLinks} />
+    <LanguageSwitch links={languageLinks} currentLocale={currentLocale} />
     <div class="header-actions"><a href={content.assessmentLink.href} class="button button-small btn btn-primary btn-sm">{content.assessmentLink.label}<Arrow diagonal /></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label={content.openMenu} data-home-menu data-open-label={content.openMenu} data-close-label={content.closeMenu}><span></span><span></span></button></div>
   </div>
-  <nav id="mobile-menu" class="mobile-menu shell" aria-label={content.mobileNavigationLabel} hidden><HeaderNavigation links={content.navigation} mode="mobile" /></nav>
+  <nav id="mobile-menu" class="mobile-menu shell" aria-label={content.mobileNavigationLabel} hidden>
+    <HeaderNavigation links={content.navigation} mode="mobile" />
+    <LanguageSwitch links={languageLinks} currentLocale={currentLocale} placement="mobile" />
+  </nav>
 </header>
 <script>
   import {mountHeaderNavigation} from '../lib/header-navigation';
