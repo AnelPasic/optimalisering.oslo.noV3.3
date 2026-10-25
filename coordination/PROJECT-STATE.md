@@ -1,5 +1,14 @@
 # Project state
 
+## 2026-10-25 — OPTIONAL NORWEGIAN PAGEFIND SEARCH (OWNER IMPLEMENTATION REQUEST)
+
+OWNER accepted adding the small free/static Pagefind search facility to the existing Optimalisering Oslo noindex preview, following visually accepted Mega Menu and NO | EN header: a compact search icon is placed in `HomeHeader.astro` immediately before NO | EN, a search trigger is also available inside the expanded mobile menu, and one accessible modal is inserted through `SiteLayout.astro`. Existing colors/fonts are reused; content, CMS, forms, D1/Resend, NO | EN (EN disabled), footer, prices and noindex remain unchanged.
+
+Implementation on `feat/pagefind-static-search-20261025` includes reusable `SiteSearch.astro`, Pagefind v1.5.2 (pinned via `npx --yes pagefind@1.5.2`) as a post-`astro build` index step, main-content-only `data-pagefind-body` with nonsearchable 404/design-system excluded, static Norwegian UI and generated-asset verifier. There is no search API, database or tracking. Build output `app/dist/pagefind/` must exist for Cloudflare Workers Assets and preview search to function; an Astro-only/dev-mode server is insufficient. See `app/SEARCH-PAGEFIND.md` for implementation and browser verification.
+
+USER preference: reuse existing connected Cloudflare builds, do not start unnecessary GitHub Actions runs, prioritize visual browser acceptance over speculative QA. Source commits do not prove live Cloudflare deploy; verify actual preview/build separately before claiming ready. For future Medon customer sites, search remains an OPTIONAL pinned static module (off by default when unnecessary); no English content published and the selector remains only visual. Owner has not yet reviewed actual search result UI.
+
+
 ## 2026-10-25 — NO | EN aligned beside the header CTA (OWNER visual tweak)
 
 OWNER approved NO | EN appearance and requested right alignment together with the existing Gratis sjekk CTA. The component has been moved inside `HomeHeader.astro` `.header-actions`, directly before the CTA. Existing right-hand flex layout provides alignment. No change to logo, mega menu, CMS contents, forms, footer, mobile language switch, theme, /en routes or noindex. Publish through the existing main-connected Cloudflare Workers Build only; no additional GitHub Actions. Source change is not evidence of completed Cloudflare deployment.
