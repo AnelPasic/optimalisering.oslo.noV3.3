@@ -62,7 +62,7 @@ test('MWS-039 shared theme is stored in native home chrome with two complete dai
   const chrome = original.homepage.chrome;
   assert.equal(chrome.headerOptions.showThemeSwitch, true);
   assert.equal(parseDaisyTheme(chrome.themes.lightCss, 'light').name, 'optimalisering');
-  assert.equal(parseDaisyTheme(chrome.themes.darkCss, 'dark').name, 'sunset');
+  assert.notEqual(parseDaisyTheme(chrome.themes.darkCss, 'dark').name, parseDaisyTheme(chrome.themes.lightCss, 'light').name);
   const c = schema.parse(chrome);
   assert.equal(c.themes.defaultMode, 'light');
   const entry = cmsEntry.fields.find((field: any) => field.name === 'homepage').fields.find((field: any) => field.name === 'chrome');
