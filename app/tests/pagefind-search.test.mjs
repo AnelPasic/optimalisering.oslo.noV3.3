@@ -24,7 +24,8 @@ test('header exposes search for both desktop and mobile without editing CMS copy
 
 test('Pagefind indexes page content only and does not expose internal visual review pages', () => {
   const layout = read('src/layouts/SiteLayout.astro');
-  assert.match(layout, /data-pagefind-body=\{!noindex/);
+  assert.match(layout, /data-pagefind-body=\{noindex/);
+  assert.match(layout, /\? undefined : ""/);
   assert.match(layout, /startsWith\("\/design-system\/"\)/);
   assert.match(layout, /pagefind-component-ui\.css/);
   assert.match(layout, /pagefind-component-ui\.js/);
