@@ -53,6 +53,18 @@ media:
       - jpeg
       - avif
     rename: safe
+  - name: brandLogos
+    label: Logoer til toppmeny og footer
+    input: app/public/images/branding
+    output: /images/branding
+    extensions:
+      - svg
+      - png
+      - webp
+      - jpg
+      - jpeg
+      - avif
+    rename: safe
 settings:
   content:
     merge: true
@@ -1704,6 +1716,18 @@ content:
             label: Stedsnavn i ordmerket
             type: string
             required: true
+          - name: logoLight
+            label: Logo for lyst tema (toppmeny)
+            type: image
+            options:
+              media: brandLogos
+            description: Last opp SVG eller transparent PNG/WebP. Valgfri — opprinnelig ordmerke beholdes til du velger en logo.
+          - name: logoDark
+            label: Logo for mørkt tema (toppmeny)
+            type: image
+            options:
+              media: brandLogos
+            description: Variant med kontrast mot mørk bakgrunn. Valgfri — lys logo brukes hvis kun én er valgt.
           - name: homeLabel
             label: Tilgjengelig forsidenavn
             type: string
@@ -1753,36 +1777,6 @@ content:
                 type: boolean
                 required: true
                 description: Viser eller skjuler handlingsknappen i toppmenyen.
-              - name: showThemeSwitch
-                label: Vis Light | Dark
-                type: boolean
-                required: true
-                description: Viser bryteren mellom lys og mørk fargeprofil.
-          - name: themes
-            label: Tema og utseende (daisyUI)
-            type: object
-            required: true
-            fields:
-              - name: defaultMode
-                label: Standard ved første besøk
-                type: select
-                required: true
-                options:
-                  values:
-                    - { name: light, label: Light }
-                    - { name: dark, label: Dark }
-              - { name: lightLabel, label: Tekst på lys knapp, type: string, required: true }
-              - { name: darkLabel, label: Tekst på mørk knapp, type: string, required: true }
-              - name: lightCss
-                label: Light - komplett daisyUI-temakode
-                type: text
-                required: true
-                description: Lim inn hele blokken fra daisyUI Theme Generator, med color-scheme light.
-              - name: darkCss
-                label: Dark - komplett daisyUI-temakode
-                type: text
-                required: true
-                description: Lim inn hele blokken fra daisyUI Theme Generator, med color-scheme dark.
           - name: assessmentLink
             label: CTA-knapp i toppmeny
             type: object
@@ -1935,6 +1929,46 @@ content:
                     type: text
                     required: true
             required: true
+      - name: siteAppearance
+        label: Tema og utseende
+        type: file
+        path: app/src/content/site-chrome/appearance.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: showThemeSwitch
+            label: Vis Light | Dark-bryter
+            type: boolean
+            required: true
+            description: Gjelder både toppmeny, mobilmeny og lagret systempreferanse.
+          - name: themes
+            label: Tema og utseende (daisyUI)
+            type: object
+            required: true
+            fields:
+              - name: defaultMode
+                label: Standard ved første besøk
+                type: select
+                required: true
+                options:
+                  values:
+                    - { name: light, label: Light }
+                    - { name: dark, label: Dark }
+              - { name: lightLabel, label: Tekst på lys knapp, type: string, required: true }
+              - { name: darkLabel, label: Tekst på mørk knapp, type: string, required: true }
+              - name: lightCss
+                label: Light - komplett daisyUI-temakode
+                type: text
+                required: true
+                description: Lim inn hele blokken fra daisyUI Theme Generator, med color-scheme light.
+              - name: darkCss
+                label: Dark - komplett daisyUI-temakode
+                type: text
+                required: true
+                description: Lim inn hele blokken fra daisyUI Theme Generator, med color-scheme dark.
       - name: siteFooter
         label: Footer
         type: file
@@ -1945,6 +1979,18 @@ content:
           rename: false
           delete: false
         fields:
+          - name: footerLogoLight
+            label: Logo for lyst tema (footer)
+            type: image
+            options:
+              media: brandLogos
+            description: Egen footerlogo for lys fargeprofil. Valgfri — eksisterende tekst beholdes hvis ikke valgt.
+          - name: footerLogoDark
+            label: Logo for mørkt tema (footer)
+            type: image
+            options:
+              media: brandLogos
+            description: Egen footerlogo for mørk fargeprofil. Valgfri — lys logo brukes hvis kun én er valgt.
           - name: providerText
             label: Påkrevd leverandøropplysning
             type: string
