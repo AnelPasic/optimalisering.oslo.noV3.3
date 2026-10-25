@@ -127,5 +127,24 @@
   "cta": {
     "label": "Ta en gratis sjekk",
     "href": "/vurdering/"
+  },
+  "heroVisual": {
+    "kind": "photo",
+    "src": "/images/services/happy-shopowner.png",
+    "alt": "En glad nettbutikkeier",
+    "positionX": 0,
+    "positionY": 0
+  },
+  "proof": {
+    "publicationApproved": false,
+    "caseIds": [
+      "eurotents",
+      "nysta"
+    ],
+    "eyebrow": "Fullført handel er det som teller",
+    "heading": "Nettbutikkoptimalisering for mer salg",
+    "beforeLabel": "Før optimalisering",
+    "afterLabel": "Etter optimalisering",
+    "changeLabel": "Justert kjøpsflyt"
   }
 }
