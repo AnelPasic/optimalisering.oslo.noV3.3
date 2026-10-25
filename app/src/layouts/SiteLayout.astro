@@ -47,7 +47,7 @@ const organization = { '@context': 'https://schema.org', '@type': 'Organization'
   <body data-ui-shell="true" class="site-shell">
     <a href="#main" class="skip-link">{homeChrome.skipLabel}</a>
     <HomeHeader content={homeChrome} languageLinks={languageLinks} currentLocale={locale} />
-    <main id="main" data-pagefind-body={!noindex && !Astro.url.pathname.startsWith("/design-system/")}><slot /></main>
+    <main id="main" data-pagefind-body={noindex || Astro.url.pathname.startsWith("/design-system/") ? undefined : ""}><slot /></main>
     <HomeFooter content={homeChrome} />
     <SiteSearch mode="modal" />
     <Attribution />
