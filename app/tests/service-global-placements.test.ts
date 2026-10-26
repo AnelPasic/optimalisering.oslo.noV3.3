@@ -89,7 +89,8 @@ test('other-route links and hidden draft links remain valid; ghost local sources
   const raw=structuredClone(source),row=raw.sections.find((s:any)=>s.id==='behov');
   row.visibility='hidden';row.links=[{label:'Skjult utkast',href:'/synlighet/#finnes-ikke'}];assert.ok(pageSchema.safeParse(raw).success);
   delete row.visibility;assert.equal(pageSchema.safeParse(raw).success,false);
-  for(const key of ['proof','faq'])assert.equal(pageSchema.safeParse({...source,[key]:key==='faq'?[]:{}}).success,false,key);
+  assert.equal(pageSchema.safeParse({...source,proof:{}}).success,false,'proof');
+  assert.equal(pageSchema.safeParse({...source,faq:[{question:'Lokalt spørsmål?',answer:'Lokalt svar.'}]}).success,true,'native local FAQ is now allowed');
   for(const key of ['proofAfter','pricingBridge','closingCta']){
     const raw=structuredClone(source);raw.composition.service[key]=key==='closingCta'?false:'prioritering';
     assert.equal(pageSchema.safeParse(raw).success,false,key);

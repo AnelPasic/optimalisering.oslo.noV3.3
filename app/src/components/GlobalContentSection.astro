@@ -4,12 +4,14 @@ import { getGlobalElement, type GlobalElementId } from '../lib/home-builder';
 import { validateServiceGlobalProof } from '../lib/service-sections';
 import HomepageBlock from './HomepageBlock.astro';
 import Packages from './PackageSection.astro';
+import type { FaqItem } from '../lib/faq-items';
 
 interface Props {
   element: GlobalElementId;
   pricingExpanded?: boolean;
+  faqItems?: readonly FaqItem[];
 }
-const { element, pricingExpanded = false } = Astro.props;
+const { element, pricingExpanded = false, faqItems = [] } = Astro.props;
 const block = getGlobalElement(element);
 // Read evidence only for the deliberately placed global proof block.
 const records = element === 'resultater' ? (await getCollection('proofCases')).map(record => record.data) : [];
@@ -19,4 +21,4 @@ if (element === 'resultater') {
 ---
 {pricingExpanded && element === 'priser'
   ? <Packages content={getGlobalElement('priser').content} mode="expanded" showHeading={false} showNotes={false} headingTag="h2" labelledBy="pricing-title" recommendedAnchor="begge" />
-  : <HomepageBlock block={block} records={records} />}
+  : <HomepageBlock block={block} records={records} faqItems={faqItems} />}

@@ -17,7 +17,7 @@ const hasGlobalAssessment = page.sections.some(section => section.globalElement 
 ---
 <CommercialHero content={resolvePageHero(page)}>{isAssessment&&!hasGlobalAssessment&&<AssessmentForm slot="auxiliary"/>}</CommercialHero>
 <div class:list={{ 'article-content': isArticle }}>{visibleServiceSections(page).map((section, index) => section.globalElement
-  ? <GlobalContentSection element={section.globalElement} />
+  ? <GlobalContentSection element={section.globalElement} faqItems={page.faq} />
   : <ContentSection section={section} index={index} />)}</div>
 {!hasGlobalFaq && <Faq items={page.faq} />}
 {!isAssessment && page.kind !== 'utility' && <ClosingCta link={page.cta} />}

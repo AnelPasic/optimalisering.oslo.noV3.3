@@ -856,7 +856,7 @@ content:
           max: 56
           collapsible:
             collapsed: true
-            summary: "{element}{name}"
+            summary: "{index}. {name}{element}"
         blocks:
           - name: global
             label: Globalt element
@@ -974,6 +974,24 @@ content:
                   collapsible:
                     collapsed: true
                     summary: "{label}"
+      - &a7
+        name: faq
+        label: Egne spørsmål og svar
+        description: Spørsmål som bare gjelder denne siden. Felles FAQ og egne spørsmål samles i én seksjon når global FAQ er valgt.
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{question}"
+        fields:
+          - name: question
+            label: Spørsmål
+            type: string
+            required: true
+          - name: answer
+            label: Svar
+            type: text
+            required: true
     operations: &a3
       create: false
       rename: false
@@ -1093,7 +1111,7 @@ content:
             list:
               collapsible:
                 collapsed: true
-                summary: "{heading}"
+                summary: "{index}. {heading}{element}"
             required: true
             blockKey: _block
             blocks:
@@ -1106,23 +1124,7 @@ content:
               - name: global
                 label: Globalt element
                 component: serviceGlobalPlacement
-          - &a7
-            name: faq
-            label: Ofte stilte spørsmål
-            type: object
-            list:
-              collapsible:
-                collapsed: true
-                summary: "{question}"
-            fields:
-              - name: question
-                label: Spørsmål
-                type: string
-                required: true
-              - name: answer
-                label: Svar
-                type: text
-                required: true
+          - *a7
           - &serviceproof
             name: proof
             label: Dokumenterte resultater - trygg presentasjon
@@ -1192,7 +1194,7 @@ content:
             list:
               collapsible:
                 collapsed: true
-                summary: "{element}{heading}"
+                summary: "{index}. {heading}{element}"
             required: true
             blockKey: _block
             blocks:
@@ -1219,7 +1221,7 @@ content:
             list:
               collapsible:
                 collapsed: true
-                summary: "{element}{heading}"
+                summary: "{index}. {heading}{element}"
             required: true
             blockKey: _block
             blocks:
@@ -1232,6 +1234,7 @@ content:
               - name: global
                 label: Globalt element
                 component: serviceGlobalPlacement
+          - *a7
       - name: serviceLokalSeo
         label: Lokal SEO
         type: file
@@ -1285,7 +1288,7 @@ content:
             list:
               collapsible:
                 collapsed: true
-                summary: "{heading}"
+                summary: "{index}. {heading}{element}"
             required: true
             blockKey: _block
             blocks:
