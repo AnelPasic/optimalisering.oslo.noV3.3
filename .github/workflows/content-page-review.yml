@@ -9,6 +9,10 @@ on:
       - "app/src/content/pages/**"
       - "app/tests/*seo*"
       - "app/tests/google-bedriftsprofil-page.test.ts"
+      - "app/tests/universal-global-content.test.ts"
+      - "app/src/lib/content-schema.ts"
+      - "app/src/lib/service-sections.ts"
+      - "app/src/components/**"
       - ".pages.yml"
       - ".github/workflows/content-page-review.yml"
 
@@ -31,7 +35,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Focused content tests
-        run: node --test tests/lokal-seo-page.test.ts tests/google-bedriftsprofil-page.test.ts tests/header-navigation.test.ts tests/seo-commercial-content.test.ts tests/seo-mixed-composition.test.ts tests/service-global-placements.test.ts tests/page-hero.test.ts tests/hero-presets.test.ts tests/synlighet-hero.test.ts tests/seo-editor-order.test.ts
+        run: node --test tests/lokal-seo-page.test.ts tests/google-bedriftsprofil-page.test.ts tests/header-navigation.test.ts tests/seo-commercial-content.test.ts tests/seo-mixed-composition.test.ts tests/service-global-placements.test.ts tests/page-hero.test.ts tests/hero-presets.test.ts tests/synlighet-hero.test.ts tests/seo-editor-order.test.ts tests/universal-global-content.test.ts
       - name: Astro check
         run: npm run check
       - name: Build static pages

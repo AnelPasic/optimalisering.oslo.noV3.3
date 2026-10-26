@@ -1,0 +1,22 @@
+---
+import { getCollection } from 'astro:content';
+import { getGlobalElement, type GlobalElementId } from '../lib/home-builder';
+import { validateServiceGlobalProof } from '../lib/service-sections';
+import HomepageBlock from './HomepageBlock.astro';
+import Packages from './PackageSection.astro';
+
+interface Props {
+  element: GlobalElementId;
+  pricingExpanded?: boolean;
+}
+const { element, pricingExpanded = false } = Astro.props;
+const block = getGlobalElement(element);
+// Read evidence only for the deliberately placed global proof block.
+const records = element === 'resultater' ? (await getCollection('proofCases')).map(record => record.data) : [];
+if (element === 'resultater') {
+  validateServiceGlobalProof({ slug: '', sections: [{ id: 'resultater', globalElement: 'resultater' }] }, records);
+}
+---
+{pricingExpanded && element === 'priser'
+  ? <Packages content={getGlobalElement('priser').content} mode="expanded" showHeading={false} showNotes={false} headingTag="h2" labelledBy="pricing-title" recommendedAnchor="begge" />
+  : <HomepageBlock block={block} records={records} />}

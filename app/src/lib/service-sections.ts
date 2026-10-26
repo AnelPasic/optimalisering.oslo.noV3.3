@@ -4,14 +4,15 @@ import { getPublishableCases } from './proof.ts';
 
 export const serviceGlobalIds = ['resultater', 'regneeksempel', 'sjekk', 'behov', 'mekanisme', 'passer', 'priser', 'sporsmal'] as const;
 export const serviceGlobalPlacementSchema = globalPlacementSchema.refine(placement => serviceGlobalIds.some(id => id === placement.element), 'Dette globale elementet er ikke tilgjengelig i tjenestebyggeren');
-export const seoGlobalIds = ['priser', 'sjekk'] as const;
+// The same eight catalogue entries are available in every page editor.
+export const seoGlobalIds = serviceGlobalIds;
 const mixedServiceSlugs = new Set(['synlighet', 'seo']);
 type Section = { id: string; visibility?: 'hidden'; globalElement?: typeof serviceGlobalIds[number] };
 type ServicePage = { slug: string; sections: Section[] };
 const fixedAnchors = ['service-hero', 'resultater', 'priser', 'service-priser', 'sporsmal', 'main', 'mobile-menu'];
 
 /** Resolve references only in memory; CMS continues to store reference + visibility. */
-export function resolveSynlighetSections(value: unknown, slug: 'synlighet' | 'seo' = 'synlighet') {
+export function resolvePageSections(value: unknown) {
   if (!Array.isArray(value)) throw new Error('Tjenestesiden krever en seksjonsliste');
   const globals = new Map<string, ReturnType<typeof resolveGlobalPlacement>>();
   const localIds = new Set<string>();
@@ -19,7 +20,6 @@ export function resolveSynlighetSections(value: unknown, slug: 'synlighet' | 'se
     if (!row || typeof row !== 'object' || 'globalElement' in row) throw new Error('Ugyldig seksjon; bruk Globalt element for bibliotekreferanser');
     if (row._block === 'global') {
       const placement = serviceGlobalPlacementSchema.parse(row);
-      if (slug === 'seo' && !seoGlobalIds.some(id => id === placement.element)) throw new Error('SEO tillater bare globale Pakker og priser og Gratis sjekk');
       if (globals.has(placement.element)) throw new Error(`Globalt element er allerede plassert: ${placement.element}`);
       globals.set(placement.element, resolveGlobalPlacement(placement));
     } else {
@@ -40,23 +40,27 @@ export function resolveSynlighetSections(value: unknown, slug: 'synlighet' | 'se
   });
 }
 
+/** All non-home page families can reference the same approved global blocks. */
+export function resolveSynlighetSections(value: unknown, _slug: 'synlighet' | 'seo' = 'synlighet') {
+  return resolvePageSections(value);
+}
+
 export function hasGlobalServiceProof(page: { slug: string; sections: Section[] }): boolean {
-  return page.slug === 'synlighet' && visibleServiceSections(page).some(section => section.globalElement === 'resultater');
+  return visibleServiceSections(page).some(section => section.globalElement === 'resultater');
 }
 
 /** A selected global proof must pass the existing evidence gates when explicitly placed. */
 export function validateServiceGlobalProof(page: ServicePage, records: readonly unknown[]): void {
-  if (page.slug !== 'synlighet') return;
   const global = hasGlobalServiceProof(page), slot = getGlobalElement('resultater').content;
   if (global && (!slot.publicationApproved || !slot.caseIds.length || slot.caseIds.some(id => getPublishableCases({ ...slot, caseIds: [id] }, records).length !== 1))) {
     throw new Error('Globale Kunderesultater krever publiseringsgodkjenning og publiserbare case med gyldig evidens/tillatelse');
   }
-  checkServiceLinks(page, liveAnchors(page));
+  if (mixedServiceSlugs.has(page.slug)) checkServiceLinks(page, liveAnchors(page));
 }
 
-/** Pilot only: other service renderers keep their established behavior. */
+/** Shared visibility semantics across all page types. */
 export function visibleServiceSections<T extends Section>(page: { slug: string; sections: T[] }): T[] {
-  return mixedServiceSlugs.has(page.slug) ? page.sections.filter(section => section.visibility !== 'hidden') : page.sections;
+  return page.sections.filter(section => section.visibility !== 'hidden');
 }
 
 export function validateSynlighetSections(page: ServicePage, _route: RouteFamily): void {
@@ -70,9 +74,6 @@ export function validateSynlighetSections(page: ServicePage, _route: RouteFamily
   }
   if (page.slug === 'synlighet' && page.sections.filter(section => section.id === 'sjekk' && section.visibility !== 'hidden').length !== 1) {
     throw new Error('Synlighet krever én synlig sjekk-seksjon, lokal eller global');
-  }
-  if (page.slug === 'seo' && page.sections.some(section => section.globalElement && !seoGlobalIds.some(id => id === section.globalElement))) {
-    throw new Error('SEO tillater bare globale Pakker og priser og Gratis sjekk');
   }
   checkServiceLinks(page, liveAnchors(page));
 }

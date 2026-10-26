@@ -6,12 +6,18 @@ import ClosingCta from './ClosingCta.astro';
 import ContentSection from './ContentSection.astro';
 import AssessmentForm from './AssessmentForm.astro';
 import Faq from './Faq.astro';
+import GlobalContentSection from './GlobalContentSection.astro';
+import { visibleServiceSections } from '../lib/service-sections';
 interface Props { page: CollectionEntry<'pages'>['data']; }
 const { page } = Astro.props;
 const isAssessment = page.kind === 'assessment';
 const isArticle = page.kind === 'article';
+const hasGlobalFaq = page.sections.some(section => section.globalElement === 'sporsmal');
+const hasGlobalAssessment = page.sections.some(section => section.globalElement === 'sjekk');
 ---
-<CommercialHero content={resolvePageHero(page)}>{isAssessment&&<AssessmentForm slot="auxiliary"/>}</CommercialHero>
-<div class:list={{ 'article-content': isArticle }}>{page.sections.map((section, index) => <ContentSection section={section} index={index} />)}</div>
-<Faq items={page.faq} />
+<CommercialHero content={resolvePageHero(page)}>{isAssessment&&!hasGlobalAssessment&&<AssessmentForm slot="auxiliary"/>}</CommercialHero>
+<div class:list={{ 'article-content': isArticle }}>{visibleServiceSections(page).map((section, index) => section.globalElement
+  ? <GlobalContentSection element={section.globalElement} />
+  : <ContentSection section={section} index={index} />)}</div>
+{!hasGlobalFaq && <Faq items={page.faq} />}
 {!isAssessment && page.kind !== 'utility' && <ClosingCta link={page.cta} />}

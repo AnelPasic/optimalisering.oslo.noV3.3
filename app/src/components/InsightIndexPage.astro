@@ -6,13 +6,17 @@ import ClosingCta from './ClosingCta.astro';
 import ContentSection from './HomeSection.astro';
 import Faq from './Faq.astro';
 import PageList from './PageList.astro';
+import GlobalContentSection from './GlobalContentSection.astro';
+import { visibleServiceSections } from '../lib/service-sections';
 import '../styles/compositions/service.css';
 interface Props { page: CollectionEntry<'pages'>['data']; pages: CollectionEntry<'pages'>['data'][]; }
 const { page, pages } = Astro.props;
 ---
 <div class="invite-home invite-service">
   <CommercialHero content={resolvePageHero(page)} />
-  {page.sections.map(section => section._block === 'pageList' ? <PageList section={section} pages={pages} /> : <ContentSection section={section} />)}
+  {visibleServiceSections(page).map(section => section.globalElement
+    ? <GlobalContentSection element={section.globalElement} />
+    : section._block === 'pageList' ? <PageList section={section} pages={pages} /> : <ContentSection section={section} />)}
   <Faq items={page.faq} />
   <ClosingCta link={page.cta} />
 </div>
