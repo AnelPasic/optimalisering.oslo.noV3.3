@@ -8,11 +8,18 @@
     "description": "Lokal SEO for bedrifter som møter kunder i et bestemt område. Forstå Google bedriftsprofil, relevante tjenestesider og veien fra lokalt søk til kontakt."
   },
   "hero": {
-    "layout": "centered-none"
+    "layout": "centered-none",
+    "eyebrow": "Google Maps, Google bedriftsprofil og lokale søk",
+    "title": "Bli funnet når kunden leter etter en bedrift i nærheten.",
+    "support": "Når noen søker etter en rørlegger i Ski eller en butikk som er åpen nå, må de raskt få svar på tre spørsmål: Kan dere hjelpe meg, gjelder det her jeg er, og hvordan tar jeg kontakt? Lokal SEO gjør disse svarene tydelige i Google bedriftsprofil og på nettsiden. Det er langt mer nyttig enn å bare putte flere stedsnavn inn i teksten.",
+    "primaryCta": {
+      "label": "Ta en gratis sjekk",
+      "href": "/#sjekk"
+    },
+    "visual": {
+      "kind": "none"
+    }
   },
-  "eyebrow": "Google Maps, Google bedriftsprofil og lokale søk",
-  "title": "Bli funnet når kunden leter etter en bedrift i nærheten.",
-  "intro": "Når noen søker etter en rørlegger i Ski eller en butikk som er åpen nå, må de raskt få svar på tre spørsmål: Kan dere hjelpe meg, gjelder det her jeg er, og hvordan tar jeg kontakt? Lokal SEO gjør disse svarene tydelige i Google bedriftsprofil og på nettsiden. Det er langt mer nyttig enn å bare putte flere stedsnavn inn i teksten.",
   "sections": [
     {
       "_block": "content",
@@ -153,9 +160,5 @@
       "question": "Hvorfor ligger en konkurrent høyere i Google Maps?",
       "answer": "Google vurderer blant annet relevans, avstand og hvor godt kjent bedriften er. Du kan gjøre bedriftsopplysninger, tjenester og nettsider tydeligere og riktigere. Du kan ikke endre kundens avstand med en ny overskrift, og ingen kan kjøpe en garantert organisk kartplassering."
     }
-  ],
-  "cta": {
-    "label": "Ta en gratis sjekk",
-    "href": "/#sjekk"
-  }
+  ]
 }
