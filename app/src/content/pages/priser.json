@@ -22,6 +22,14 @@
   },
   "sections": [
     {
+      "_block": "global",
+      "element": "priser"
+    },
+    {
+      "_block": "global",
+      "element": "regneeksempel"
+    },
+    {
       "_block": "content",
       "id": "arbeidsomrader",
       "eyebrow": "Hva vi kan jobbe med",
