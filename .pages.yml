@@ -764,6 +764,13 @@ content:
             type: text
             required: true
         required: true
+      - &serviceslug
+        name: slug
+        label: URL-slug
+        type: string
+        readonly: true
+        required: true
+        description: "Skrivebeskyttet URL-del. Forsidens interne slug home vises som /. Andre sider vises som /slug/."
       - name: hero
         label: Hero
         type: object
@@ -1023,6 +1030,7 @@ content:
                 type: text
                 required: true
             required: true
+          - *serviceslug
           - &standardHero
             name: hero
             label: Hero
@@ -1065,13 +1073,6 @@ content:
                         required: true
                       - *hubHeropositionX
                       - *hubHeropositionY
-          - &serviceslug
-            name: slug
-            label: URL-slug
-            type: string
-            readonly: true
-            required: true
-            description: "Sidens URL-del. Eksempel: seo vises som /seo/."
           - &a6
             name: sections
             label: Innholdsseksjoner og farger
@@ -1159,8 +1160,8 @@ content:
         operations: *a3
         fields:
           - *a4
-          - *standardHero
           - *serviceslug
+          - *standardHero
           - name: status
             label: Gjennomgangsstatus
             type: string
@@ -1195,8 +1196,8 @@ content:
         operations: *a3
         fields:
           - *a4
-          - *standardHero
           - *serviceslug
+          - *standardHero
           - name: sections
             label: Innholdsseksjoner
             type: block
@@ -1224,8 +1225,8 @@ content:
         operations: *a3
         fields:
           - *a4
-          - *standardHero
           - *serviceslug
+          - *standardHero
           - name: status
             label: Gjennomgangsstatus
             type: string
@@ -1245,6 +1246,7 @@ content:
     operations: *a3
     fields:
       - *a4
+      - *serviceslug
       - *standardHero
       - *a6
       - *a7
@@ -1260,6 +1262,7 @@ content:
         operations: *a3
         fields:
           - *a4
+          - *serviceslug
           - *standardHero
           - name: sections
             label: Innholdsseksjoner
@@ -1316,11 +1319,7 @@ content:
             - listing.title
         fields:
           - *a4
-          - name: slug
-            label: URL-slug
-            type: string
-            readonly: true
-            required: true
+          - *serviceslug
           - *standardHero
           - name: listing
             label: Visning i innholdslister
@@ -1362,6 +1361,7 @@ content:
     operations: *a3
     fields: &a13
       - *a4
+      - *serviceslug
       - *standardHero
       - *a6
       - *a7
