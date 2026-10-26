@@ -7,9 +7,19 @@
     "title": "Google bedriftsprofil - guide for bedrifter | Optimalisering Oslo",
     "description": "Slik kontrollerer du Google bedriftsprofil: eierskap, kategori, åpningstider, tjenester og synlighet i Google Maps. Praktisk guide med sjekkliste."
   },
-  "eyebrow": "Google Min Bedrift / Google Business Profile",
-  "title": "Google bedriftsprofil: Sjekk det kunden ser i Google Søk og Maps.",
-  "intro": "Google Min Bedrift heter nå Google bedriftsprofil (Google Business Profile). Kunden kan finne telefonnummer, åpningstider og veibeskrivelse uten å åpne nettsiden. Her får du en konkret sjekk av informasjonen som må være riktig, og hva du bør undersøke før du betaler noen for å forbedre synligheten.",
+  "hero": {
+    "layout": "split-right",
+    "eyebrow": "Google Min Bedrift / Google Business Profile",
+    "title": "Google bedriftsprofil: Sjekk det kunden ser i Google Søk og Maps.",
+    "support": "Google Min Bedrift heter nå Google bedriftsprofil (Google Business Profile). Kunden kan finne telefonnummer, åpningstider og veibeskrivelse uten å åpne nettsiden. Her får du en konkret sjekk av informasjonen som må være riktig, og hva du bør undersøke før du betaler noen for å forbedre synligheten.",
+    "primaryCta": {
+      "label": "Ta en gratis sjekk",
+      "href": "/#sjekk"
+    },
+    "visual": {
+      "kind": "none"
+    }
+  },
   "sections": [
     {
       "_block": "content",
@@ -144,10 +154,6 @@
       "answer": "Nei. Lokal rangering avhenger blant annet av relevans, avstand og hvor kjent virksomheten er. En byråleveranse bør være konkret om hva som undersøkes og forbedres, men ikke love en bestemt plassering."
     }
   ],
-  "cta": {
-    "label": "Ta en gratis sjekk",
-    "href": "/#sjekk"
-  },
   "listing": {
     "title": "Google bedriftsprofil - praktisk guide",
     "summary": "En enkel kontroll av eierskap, kategori, tjenesteområde, åpningstider og kontaktvei i Google Søk og Maps.",

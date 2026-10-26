@@ -7,9 +7,19 @@
     "title": "Vilkår - hva må avtales før videre arbeid? | Medon",
     "description": "Omfang, pris, fakturering og oppsigelse må avklares før betalt arbeid. Dette utkastet beskriver åpne avtalespørsmål og den gratis sjekkens grenser."
   },
-  "eyebrow": "Avtalegrunnlag - utkast",
-  "title": "Videre arbeid trenger en tydelig avtale.",
-  "intro": "Dette er en oversikt over hva som må avklares. Det er ikke et ferdig sett med salgs- eller kontraktsvilkår. Medon AS er leverandør av Optimalisering Oslo.",
+  "hero": {
+    "layout": "split-right",
+    "eyebrow": "Avtalegrunnlag - utkast",
+    "title": "Videre arbeid trenger en tydelig avtale.",
+    "support": "Dette er en oversikt over hva som må avklares. Det er ikke et ferdig sett med salgs- eller kontraktsvilkår. Medon AS er leverandør av Optimalisering Oslo.",
+    "primaryCta": {
+      "label": "Ta en gratis sjekk",
+      "href": "/vurdering/"
+    },
+    "visual": {
+      "kind": "none"
+    }
+  },
   "sections": [
     {
       "_block": "content",
@@ -65,9 +75,5 @@
       "question": "Bestiller jeg betalt arbeid ved å sende skjemaet?",
       "answer": "Den gratis sjekken er inngangen til en mulig vurdering av videre behov. Betalt arbeid må ha eget avtalt omfang og pris."
     }
-  ],
-  "cta": {
-    "label": "Ta en gratis sjekk",
-    "href": "/vurdering/"
-  }
+  ]
 }

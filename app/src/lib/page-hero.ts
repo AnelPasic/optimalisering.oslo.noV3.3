@@ -28,9 +28,19 @@ export function resolvePageHero(page:Source,commercial?:Commercial):HeroView{
   const hero=heroSchema.parse(page.hero);
   return heroViewSchema.parse({...hero,family:'home',visual:hero.visual.kind==='image'?{kind:'image',image:{...hero.visual.image,alt:'',kind:'photo',origin:'home'}}:{kind:'none'}});
  }
- if(page.slug==='synlighet'&&page.hero&&typeof page.hero==='object'&&'primaryCta' in page.hero){
-  const hero=synlighetHeroSchema.parse(page.hero),media=hero.visual.image?resolveServiceVisual(hero.visual.image):undefined;
-  return heroViewSchema.parse({...hero,family:'service',visual:hero.visual.kind==='image'&&media?{kind:'image',image:{...media,origin:'page'}}:{kind:'none'},breadcrumbs:[{label:'Forsiden',href:'/'},{label:'Synlighet'}]});
+ if(page.hero&&typeof page.hero==='object'&&'primaryCta' in page.hero){
+  const hero=synlighetHeroSchema.parse(page.hero);
+  const media=hero.visual.kind==='image'?resolveServiceVisual(hero.visual.image):undefined;
+  const family=route.family;
+  const breadcrumbs=page.slug==='synlighet'?[{label:'Forsiden',href:'/'},{label:'Synlighet'}]:
+    [{label:'Forsiden',href:'/'},...(family==='article'?[{label:'Innsikt',href:'/innsikt/'}]:[]),
+      {label:family==='service'?(route.service.pricingBridge?.serviceName??hero.eyebrow):hero.eyebrow}];
+  return heroViewSchema.parse({...hero,family,
+    primaryCta:family==='assessment'?undefined:hero.primaryCta,
+    secondaryCta:hero.secondaryCta??(family==='service'&&route.service.pricingBridge
+      ?{label:'Se priser',href:route.service.pricingBridge.link.href}:undefined),
+    visual:hero.visual.kind==='image'&&media?{kind:'image',image:{...media,origin:'page'}}:{kind:'none'},
+    breadcrumbs});
  }
  const layout=heroPresentationSchema.parse(page.hero??{}).layout;
  const media=resolveServiceVisual(page.heroVisual),family=route.family;

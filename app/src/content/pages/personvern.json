@@ -7,9 +7,19 @@
     "title": "Personvern - Optimalisering Oslo",
     "description": "Slik behandler Medon AS henvendelser og pakkebestillinger: kontaktopplysninger, lagring i Cloudflare D1, tilgang og sletting."
   },
-  "eyebrow": "Personvern",
-  "title": "Du skal vite hva som skjer med opplysningene dine.",
-  "intro": "Her beskriver vi hvordan opplysningene dine behandles når du ber om en gratis sjekk eller bestiller en pakke på dette nettstedet.",
+  "hero": {
+    "layout": "split-right",
+    "eyebrow": "Personvern",
+    "title": "Du skal vite hva som skjer med opplysningene dine.",
+    "support": "Her beskriver vi hvordan opplysningene dine behandles når du ber om en gratis sjekk eller bestiller en pakke på dette nettstedet.",
+    "primaryCta": {
+      "label": "Tilbake til den gratis sjekken",
+      "href": "/vurdering/"
+    },
+    "visual": {
+      "kind": "none"
+    }
+  },
   "sections": [
     {
       "_block": "content",
@@ -62,9 +72,5 @@
       "question": "Hvordan ber jeg om sletting?",
       "answer": "Send en e-post til kontakt@medon.no og oppgi nok informasjon til at Medon kan finne henvendelsen. Ikke send sensitive opplysninger."
     }
-  ],
-  "cta": {
-    "label": "Tilbake til den gratis sjekken",
-    "href": "/vurdering/"
-  }
+  ]
 }

@@ -35,9 +35,26 @@
     "title": "Konverteringsoptimalisering (CRO) | Optimalisering Oslo",
     "description": "Gjør flere relevante besøk til henvendelser og salg. Vi jobber med budskap, landingssider, skjema og kjøpsvei - og starter der kundene stopper."
   },
-  "eyebrow": "Fra besøk til henvendelser og kjøp",
-  "title": "Det er ikke alltid kunden som må overbevises. Noen ganger må nettsiden slutte å stå i veien.",
-  "intro": "Når relevante besøk ikke blir til henvendelser eller kjøp, ser vi etter friksjonen som stopper kunden. Så prioriterer vi det som er mest verdt å forbedre først.",
+  "hero": {
+    "layout": "split-right",
+    "eyebrow": "Fra besøk til henvendelser og kjøp",
+    "title": "Det er ikke alltid kunden som må overbevises. Noen ganger må nettsiden slutte å stå i veien.",
+    "support": "Når relevante besøk ikke blir til henvendelser eller kjøp, ser vi etter friksjonen som stopper kunden. Så prioriterer vi det som er mest verdt å forbedre først.",
+    "primaryCta": {
+      "label": "Ta en gratis sjekk",
+      "href": "/#sjekk"
+    },
+    "visual": {
+      "kind": "image",
+      "image": {
+        "kind": "photo",
+        "src": "/images/services/happy-shopowner.png",
+        "alt": "Butikk som selger",
+        "positionX": 50,
+        "positionY": 50
+      }
+    }
+  },
   "sections": [
     {
       "_block": "content",
@@ -153,17 +170,6 @@
       "answer": "Konvertering kan være det prioriterte området i Optimalisering til 4 500 kr/mnd eks. mva. Hvis konvertering skal jobbe sammen med et annet område, kan Vekst eller Partner være mer relevant. Se pakkene for full oversikt."
     }
   ],
-  "cta": {
-    "label": "Ta en gratis sjekk",
-    "href": "/#sjekk"
-  },
-  "heroVisual": {
-    "kind": "photo",
-    "src": "/images/services/happy-shopowner.png",
-    "alt": "Butikk som selger",
-    "positionX": 50,
-    "positionY": 50
-  },
   "proof": {
     "publicationApproved": true,
     "caseIds": [
@@ -174,8 +180,5 @@
     "beforeLabel": "Før",
     "afterLabel": "Etter",
     "changeLabel": "Arbeid"
-  },
-  "hero": {
-    "layout": "split-right"
   }
 }

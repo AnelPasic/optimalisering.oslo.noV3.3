@@ -7,9 +7,19 @@
     "title": "Innsikt - velg startpunkt og vurder effekten | Medon",
     "description": "Praktiske guider om Google bedriftsprofil, synlighet, konvertering og måling. Forstå hva du bør undersøke først, og når du trenger hjelp."
   },
-  "eyebrow": "Innsikt for deg som skal prioritere",
-  "title": "Et bedre grunnlag for neste beslutning.",
-  "intro": "Du trenger ikke lære alle kanalene for å ta gode valg. Begynn med spørsmålet som gjelder din bedrift: finner lokale kunder riktig informasjon, stopper de på nettsiden, eller er det vanskelig å se om tiltakene virker?",
+  "hero": {
+    "layout": "split-right",
+    "eyebrow": "Innsikt for deg som skal prioritere",
+    "title": "Et bedre grunnlag for neste beslutning.",
+    "support": "Du trenger ikke lære alle kanalene for å ta gode valg. Begynn med spørsmålet som gjelder din bedrift: finner lokale kunder riktig informasjon, stopper de på nettsiden, eller er det vanskelig å se om tiltakene virker?",
+    "primaryCta": {
+      "label": "Ta en gratis sjekk",
+      "href": "/vurdering/"
+    },
+    "visual": {
+      "kind": "none"
+    }
+  },
   "sections": [
     {
       "_block": "pageList",
@@ -44,9 +54,5 @@
         }
       ]
     }
-  ],
-  "cta": {
-    "label": "Ta en gratis sjekk",
-    "href": "/vurdering/"
-  }
+  ]
 }

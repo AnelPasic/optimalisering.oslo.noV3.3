@@ -14,7 +14,7 @@ test('SEO page covers consultant, services and Oslo without additional competing
  assert.equal(page.authority,'DRAFT / NON-AUTHORITATIVE');
  assert.equal(pageSchema.safeParse(page).success,true);
  assert.match(page.seo.title,/SEO-byrå.*Oslo/);
- assert.match(page.title,/SEO/);
+ assert.match(page.hero.title,/SEO/);
  assert.ok(page.sections.some((s:{id:string})=>s.id==='seo-tjenester'));
  assert.ok(page.sections.some((s:{id:string})=>s.id==='seo-oslo'));
  const visible=pageSchema.parse(page).sections;

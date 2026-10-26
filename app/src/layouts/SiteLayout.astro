@@ -19,8 +19,7 @@ const {title,description,noindex=false,locale=defaultLocale,languageLinks=[]}=As
 const pages=(await getCollection('pages')).map(p=>p.data);
 const homepageSource=pages.find(p=>p.kind==='home');
 if(homepageSource)validateHomepagePublicLinks(homepageSource,pages);
-const home=homepageSource?.homepage;
-if(!home)throw new Error('Shared commercial chrome requires the homepage source');
+if(!homepageSource)throw new Error('The homepage source is required for global chrome validation');
 const homeChrome=siteChrome;
 const canonical = new URL(Astro.url.pathname, site.url).href;
 const organization = { '@context': 'https://schema.org', '@type': 'Organization', name: site.provider, url: site.providerUrl };

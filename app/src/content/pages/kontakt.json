@@ -7,9 +7,19 @@
     "title": "Kontakt om Optimalisering Oslo | Medon AS",
     "description": "Vil du diskutere nettsiden, et samarbeid eller et annet behov? Optimalisering Oslo leveres av Medon AS. Bruk skjemaet og beskriv spørsmålet kort."
   },
-  "eyebrow": "Kontakt Medon om tjenesten",
-  "title": "Har du et annet spørsmål enn en sjekk av nettsiden?",
-  "intro": "Du kan også ta kontakt om et mulig samarbeid eller et behov som ikke passer helt i tjenestebeskrivelsene. Medon AS er leverandøren bak Optimalisering Oslo.",
+  "hero": {
+    "layout": "split-right",
+    "eyebrow": "Kontakt Medon om tjenesten",
+    "title": "Har du et annet spørsmål enn en sjekk av nettsiden?",
+    "support": "Du kan også ta kontakt om et mulig samarbeid eller et behov som ikke passer helt i tjenestebeskrivelsene. Medon AS er leverandøren bak Optimalisering Oslo.",
+    "primaryCta": {
+      "label": "Gå til skjemaet",
+      "href": "/vurdering/#skjema"
+    },
+    "visual": {
+      "kind": "none"
+    }
+  },
   "sections": [
     {
       "_block": "content",
@@ -55,9 +65,5 @@
       "question": "Hvor finner jeg telefon eller direkte e-post?",
       "answer": "Direkte kontaktopplysninger er ikke verifisert for dette utkastet. Vi viser derfor skjemaet som kontaktvei i forhåndsvisningen."
     }
-  ],
-  "cta": {
-    "label": "Gå til skjemaet",
-    "href": "/vurdering/#skjema"
-  }
+  ]
 }
