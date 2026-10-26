@@ -15,7 +15,15 @@ const link = z.object({label:z.string(),href:z.string().startsWith('/')});
 export { proofSlotSchema } from './home-section-data.ts';
 const homepage = z.object({}).strict(); // Header/footer have independent global CMS sources.
 export const pageSchema = z.preprocess((input,context)=>{
-  let raw=input as Record<string,any> & {slug?:string;kind?:string;sections:unknown;hero?:unknown};
+  let raw=input as Record<string,any> & {slug?:string;seo?:{slug?:string};kind?:string;sections:unknown;hero?:unknown};
+  // The URL is authored once, inside SEO in native Pages CMS.
+  // Expose the familiar top-level key only on validated runtime data,
+  // keeping every existing route, section and link contract unchanged.
+  if(raw && typeof raw==='object' && typeof raw.seo?.slug==='string'){
+    if(Object.hasOwn(raw,'slug')&&raw.slug!==raw.seo.slug)
+      context.addIssue({code:'custom',path:['seo','slug'],message:'Conflicting root and SEO URL slug sources'});
+    raw={...raw,slug:raw.seo.slug};
+  }
   // Native CMS Hero is now a single authored object. Legacy projections are
   // runtime-only for existing commercial/section components; they are never
   // written back as duplicate CMS fields.
@@ -61,7 +69,7 @@ export const pageSchema = z.preprocess((input,context)=>{
     composition: compositionSchema.optional(),
     status: z.enum(['REVIEW_REQUIRED', 'CONTENT_LOCKED', 'PUBLISHED']),
     authority: z.enum(['DRAFT / NON-AUTHORITATIVE', 'CONTENT_LOCKED / AUTHORITATIVE']),
-    seo: z.object({ title: z.string(), description: z.string() }),
+    seo: z.object({ title: z.string(), description: z.string(), slug: z.string().min(1) }),
     hero: z.union([heroSchema,synlighetHeroSchema,heroPresentationSchema]).optional(),
     eyebrow: z.string(), title: z.string(), intro: z.string(),
     listing: listingSchema.optional(),
