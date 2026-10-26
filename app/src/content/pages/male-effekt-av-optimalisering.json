@@ -7,9 +7,19 @@
     "title": "Måle effekt av optimalisering - fra besøk til verdi",
     "description": "Skill mellom synlighet, handlinger og forretningsverdi. En praktisk guide til relevante henvendelser, nettbutikkjøp og grensene for hva dataene viser."
   },
-  "eyebrow": "Innsikt - vurder om arbeidet er nyttig",
-  "title": "En bedre graf er ikke hele svaret.",
-  "intro": "Måling skal hjelpe bedriften å vurdere om arbeidet gir relevante henvendelser eller nyttige kjøp. Da må det være tydelig hva som telles, hva det betyr, og hva dataene ikke kan fortelle.",
+  "hero": {
+    "layout": "split-right",
+    "eyebrow": "Innsikt - vurder om arbeidet er nyttig",
+    "title": "En bedre graf er ikke hele svaret.",
+    "support": "Måling skal hjelpe bedriften å vurdere om arbeidet gir relevante henvendelser eller nyttige kjøp. Da må det være tydelig hva som telles, hva det betyr, og hva dataene ikke kan fortelle.",
+    "primaryCta": {
+      "label": "Ta en gratis sjekk",
+      "href": "/vurdering/"
+    },
+    "visual": {
+      "kind": "none"
+    }
+  },
   "sections": [
     {
       "_block": "content",
@@ -155,10 +165,6 @@
       "answer": "Det må vurderes ut fra spørsmålet og de dataene som finnes. Et nytt verktøy skaper ikke automatisk en relevant definisjon eller et sammenlignbart grunnlag. Denne guiden anbefaler ikke en bestemt plattform."
     }
   ],
-  "cta": {
-    "label": "Ta en gratis sjekk",
-    "href": "/vurdering/"
-  },
   "listing": {
     "title": "Hvordan måle effekten?",
     "summary": "Skill mellom visninger, handlinger og forretningsverdi. Definer relevante henvendelser eller nyttige kjøp, og gjør forutsetningene synlige.",
