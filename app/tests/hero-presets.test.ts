@@ -47,8 +47,7 @@ test('centered-no-image works for all page types without erasing supplied source
   assert.equal(view.visual.kind,'none',page.slug);
   assert.equal(JSON.stringify(source),before,'No mutation '+page.slug);
   const actual=resolvePageHero(page,commercial);
-  if(page.kind==='pricing')assert.equal(actual.title,commercial.packages.heading);
-  else assert.equal(actual.title,page.hero.title);
+  assert.equal(actual.title,page.hero.title);
   assert.equal(view.primaryCta?.href,actual.primaryCta?.href,page.slug);
  }
 });
