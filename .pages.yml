@@ -1091,7 +1091,7 @@ content:
               - name: protected
                 label: Beskyttet sjekk / handling
                 component: sectionProtected
-            - name: global
+              - name: global
                 label: Globalt element
                 component: serviceGlobalPlacement
           - &a7
