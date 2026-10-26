@@ -15,7 +15,7 @@ const link = z.object({label:z.string(),href:z.string().startsWith('/')});
 export { proofSlotSchema } from './home-section-data.ts';
 const homepage = z.object({}).strict(); // Header/footer have independent global CMS sources.
 export const pageSchema = z.preprocess((input,context)=>{
-  const raw=input as {slug?:string;kind?:string;sections:unknown;hero?:unknown};
+  let raw=input as {slug?:string;kind?:string;sections:unknown;hero?:unknown};
   // Native CMS Hero is now a single authored object. Legacy projections are
   // runtime-only for existing commercial/section components; they are never
   // written back as duplicate CMS fields.
@@ -25,7 +25,7 @@ export const pageSchema = z.preprocess((input,context)=>{
     if(legacyHeroKeys.some(key=>Object.hasOwn(raw,key)))context.addIssue({code:'custom',path:['hero'],message:'Hero is a single CMS authority; do not save duplicate top-level Hero fields'});
     if(hero.success) {
       const v=hero.data;
-      return {...raw,hero:v,eyebrow:v.eyebrow,title:v.title,intro:v.support,cta:v.primaryCta,
+      raw={...raw,hero:v,eyebrow:v.eyebrow,title:v.title,intro:v.support,cta:v.primaryCta,
         ...(v.visual.kind==='image'?{heroVisual:v.visual.image}:{})};
     }
   }
@@ -54,7 +54,7 @@ export const pageSchema = z.preprocess((input,context)=>{
     if(!hero.success)for(const issue of hero.error.issues)context.addIssue({...issue,path:['hero',...issue.path]});
     if(hero.success)return {...raw,eyebrow:hero.data.eyebrow,title:hero.data.title,intro:hero.data.support,cta:hero.data.primaryCta,sections:blocks?blocks.map(b=>({...b,heading:'heading' in b?b.heading:'',body:'body' in b?b.body:[]})):raw.sections};
   }
-  return input;
+  return raw;
 }, z.object({
     slug: z.string(),
     kind: routeKindSchema,
