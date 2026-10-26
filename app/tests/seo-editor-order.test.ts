@@ -15,22 +15,21 @@ function sitePageEditors(entries: Entry[]): Entry[] {
   ]);
 }
 
-test('SEO is the first native Pages CMS field in every page/article/service editor', () => {
+test('Readonly URL-slug comes first, immediately before SEO and Hero on every page editor', () => {
   const editors = sitePageEditors(config.content);
   assert.equal(editors.length, 13, 'Check the inventory when adding new page editor types');
   for (const editor of editors) {
-    assert.equal(editor.fields?.[0]?.name, 'seo', `${editor.label}: SEO must appear first`);
-    const seo = editor.fields?.[0];
+    assert.equal(editor.fields?.[0]?.name, 'slug', `${editor.label}: URL-slug must appear first`);
+    const seo = editor.fields?.[1];
     assert.equal(seo?.type, 'object', editor.label);
     assert.equal(seo?.required, true, editor.label);
     assert.deepEqual(seo.fields?.map(field => field.name), ['title', 'description'], editor.label);
     assert.deepEqual(seo.fields?.map(field => field.label), ['Sidetittel', 'Metabeskrivelse'], editor.label);
     assert.ok(seo.fields?.every(field => field.required === true), editor.label);
     assert.equal(editor.fields?.filter(field => field.name === 'seo').length, 1, editor.label);
-    // Slug lives at the root of the page JSON, but appears immediately
-    // beneath the SEO panel before the shared grouped Hero in Pages CMS.
-    assert.deepEqual(editor.fields?.slice(0, 3).map(field => field.name), ['seo', 'slug', 'hero'], editor.label);
-    const slug = editor.fields?.[1];
+    // URL-slug remains the unchanged top-level JSON field: this is only a visual reorder.
+    assert.deepEqual(editor.fields?.slice(0, 3).map(field => field.name), ['slug', 'seo', 'hero'], editor.label);
+    const slug = editor.fields?.[0];
     assert.equal(slug?.label, 'URL-slug', editor.label);
     assert.equal(slug?.type, 'string', editor.label);
     assert.equal(slug?.readonly, true, editor.label);
