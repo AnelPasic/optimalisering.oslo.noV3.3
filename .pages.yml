@@ -751,6 +751,19 @@ content:
     path: app/src/content/pages/home.json
     format: json
     fields:
+      - name: seo
+        label: SEO
+        type: object
+        fields:
+          - name: title
+            label: Sidetittel
+            type: string
+            required: true
+          - name: description
+            label: Metabeskrivelse
+            type: text
+            required: true
+        required: true
       - name: hero
         label: Hero
         type: object
@@ -952,19 +965,6 @@ content:
                   collapsible:
                     collapsed: true
                     summary: "{label}"
-      - name: seo
-        label: SEO
-        type: object
-        fields:
-          - name: title
-            label: Sidetittel
-            type: string
-            required: true
-          - name: description
-            label: Metabeskrivelse
-            type: text
-            required: true
-        required: true
     operations: &a3
       create: false
       rename: false
@@ -1009,13 +1009,6 @@ content:
             - seo.title
             - slug
         fields:
-          - &serviceslug
-            name: slug
-            label: URL-slug
-            type: string
-            readonly: true
-            required: true
-            description: "Sidens URL-del. Eksempel: seo vises som /seo/."
           - &a4
             name: seo
             label: SEO
@@ -1030,6 +1023,13 @@ content:
                 type: text
                 required: true
             required: true
+          - &serviceslug
+            name: slug
+            label: URL-slug
+            type: string
+            readonly: true
+            required: true
+            description: "Sidens URL-del. Eksempel: seo vises som /seo/."
           - &a9
             name: hero
             component: pageHero
@@ -1177,6 +1177,7 @@ content:
         format: json
         operations: *a3
         fields:
+          - *a4
           - *serviceslug
           - name: status
             label: Gjennomgangsstatus
@@ -1186,7 +1187,6 @@ content:
             label: Innholdsautoritet
             type: string
             readonly: true
-          - *a4
           - *a9
           - *a5
           - *a10
@@ -1218,6 +1218,7 @@ content:
         format: json
         operations: *a3
         fields:
+          - *a4
           - name: hero
             label: Hero
             type: object
@@ -1259,7 +1260,6 @@ content:
                         required: true
                       - *hubHeropositionX
                       - *hubHeropositionY
-          - *a4
           - *serviceslug
           - name: sections
             label: Innholdsseksjoner
@@ -1287,6 +1287,7 @@ content:
         format: json
         operations: *a3
         fields:
+          - *a4
           - *serviceslug
           - name: status
             label: Gjennomgangsstatus
@@ -1297,7 +1298,6 @@ content:
             label: Innholdsautoritet
             type: string
             readonly: true
-          - *a4
           - *a9
           - *a10
           - *a11
@@ -1407,12 +1407,12 @@ content:
             - listing.order
             - listing.title
         fields:
+          - *a4
           - name: slug
             label: URL-slug
             type: string
             readonly: true
             required: true
-          - *a4
           - *a9
           - *a5
           - *a10
