@@ -40,7 +40,8 @@ test('all seventeen pages save references in the existing section order, without
     assert.deepEqual(saved.seo,original.seo,file);
     const parsed = pageSchema.parse(saved);
     assert.equal(parsed.sections.at(-1)?.globalElement,'mekanisme',file);
-    assert.deepEqual(parsed.sections.at(-1)?.content,getGlobalElement('mekanisme').content,file);
+    assert.deepEqual(parsed.sections.at(-1)?.heading,getGlobalElement('mekanisme').heading,file);
+    assert.deepEqual(parsed.sections.at(-1)?.body,getGlobalElement('mekanisme').body,file);
   }
 });
 
