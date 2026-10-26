@@ -1023,13 +1023,6 @@ content:
                 type: text
                 required: true
             required: true
-          - &serviceslug
-            name: slug
-            label: URL-slug
-            type: string
-            readonly: true
-            required: true
-            description: "Sidens URL-del. Eksempel: seo vises som /seo/."
           - &standardHero
             name: hero
             label: Hero
@@ -1072,6 +1065,13 @@ content:
                         required: true
                       - *hubHeropositionX
                       - *hubHeropositionY
+          - &serviceslug
+            name: slug
+            label: URL-slug
+            type: string
+            readonly: true
+            required: true
+            description: "Sidens URL-del. Eksempel: seo vises som /seo/."
           - &a6
             name: sections
             label: Innholdsseksjoner og farger
@@ -1159,6 +1159,7 @@ content:
         operations: *a3
         fields:
           - *a4
+          - *standardHero
           - *serviceslug
           - name: status
             label: Gjennomgangsstatus
@@ -1168,7 +1169,6 @@ content:
             label: Innholdsautoritet
             type: string
             readonly: true
-          - *standardHero
           - name: sections
             label: Sidens seksjoner og globale elementer
             description: Dra seksjonene i ønsket rekkefølge. Velg to- eller trekolonneoppsett, farger og kort. Globale priser og skjema henter alltid innhold fra felles kilde.
@@ -1224,6 +1224,7 @@ content:
         operations: *a3
         fields:
           - *a4
+          - *standardHero
           - *serviceslug
           - name: status
             label: Gjennomgangsstatus
@@ -1234,7 +1235,6 @@ content:
             label: Innholdsautoritet
             type: string
             readonly: true
-          - *standardHero
           - *a6
           - *a7
   - name: priser
