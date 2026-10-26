@@ -1,11 +1,11 @@
 {
-  "slug": "nettbutikkoptimalisering",
   "kind": "service",
   "status": "REVIEW_REQUIRED",
   "authority": "DRAFT / NON-AUTHORITATIVE",
   "seo": {
     "title": "Nettbutikkoptimalisering - fra oppdagelse til kjøp | Medon",
-    "description": "Se nettbutikken som en sammenheng: produktoppdagelse, valg, handlekurv og kjøp som er verdifulle for bedriften. Få en gratis, manuell sjekk fra Medon."
+    "description": "Se nettbutikken som en sammenheng: produktoppdagelse, valg, handlekurv og kjøp som er verdifulle for bedriften. Få en gratis, manuell sjekk fra Medon.",
+    "slug": "nettbutikkoptimalisering"
   },
   "hero": {
     "layout": "split-right",
