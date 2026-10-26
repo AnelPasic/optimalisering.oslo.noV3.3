@@ -763,14 +763,13 @@ content:
             label: Metabeskrivelse
             type: text
             required: true
+          - name: slug
+            label: URL-slug
+            type: string
+            readonly: true
+            required: true
+            description: "Skrivebeskyttet URL-del. Internt home betyr /. Øvrige sider beholder sine eksisterende nettadresser."
         required: true
-      - &serviceslug
-        name: slug
-        label: URL-slug
-        type: string
-        readonly: true
-        required: true
-        description: "Skrivebeskyttet URL-del. Forsidens interne slug home vises som /. Andre sider vises som /slug/."
       - name: hero
         label: Hero
         type: object
@@ -1002,7 +1001,7 @@ content:
         format: json
         subfolders: false
         operations: *a3
-        filename: "{slug}.json"
+        filename: "{fields.seo.slug}.json"
         view:
           primary: seo.title
           fields:
@@ -1029,8 +1028,13 @@ content:
                 label: Metabeskrivelse
                 type: text
                 required: true
+              - name: slug
+                label: URL-slug
+                type: string
+                readonly: true
+                required: true
+                description: "Skrivebeskyttet URL-del, lagret sammen med sidens SEO-data."
             required: true
-          - *serviceslug
           - &standardHero
             name: hero
             label: Hero
@@ -1160,7 +1164,6 @@ content:
         operations: *a3
         fields:
           - *a4
-          - *serviceslug
           - *standardHero
           - name: status
             label: Gjennomgangsstatus
@@ -1196,7 +1199,6 @@ content:
         operations: *a3
         fields:
           - *a4
-          - *serviceslug
           - *standardHero
           - name: sections
             label: Innholdsseksjoner
@@ -1225,7 +1227,6 @@ content:
         operations: *a3
         fields:
           - *a4
-          - *serviceslug
           - *standardHero
           - name: status
             label: Gjennomgangsstatus
@@ -1246,7 +1247,6 @@ content:
     operations: *a3
     fields:
       - *a4
-      - *serviceslug
       - *standardHero
       - *a6
       - *a7
@@ -1262,7 +1262,6 @@ content:
         operations: *a3
         fields:
           - *a4
-          - *serviceslug
           - *standardHero
           - name: sections
             label: Innholdsseksjoner
@@ -1307,19 +1306,18 @@ content:
           primary: listing.title
           fields:
             - listing.title
-            - slug
+            - seo.slug
             - seo.title
           search:
             - listing.title
-            - title
-            - slug
+            - hero.title
+            - seo.slug
             - seo.title
           sort:
             - listing.order
             - listing.title
         fields:
           - *a4
-          - *serviceslug
           - *standardHero
           - name: listing
             label: Visning i innholdslister
@@ -1361,7 +1359,6 @@ content:
     operations: *a3
     fields: &a13
       - *a4
-      - *serviceslug
       - *standardHero
       - *a6
       - *a7
