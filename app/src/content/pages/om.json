@@ -7,9 +7,19 @@
     "title": "Om Optimalisering Oslo og Medon AS",
     "description": "Medon AS eier og leverer Optimalisering Oslo. Les om to behovsbaserte tjenester, leverandøransvar og hvordan vi prioriterer arbeid på nettsiden."
   },
-  "eyebrow": "Leverandøren bak tjenesten",
-  "title": "Optimalisering Oslo er en tjeneste fra Medon AS.",
-  "intro": "Optimalisering Oslo er tjenestenavnet. Medon AS er eier og leverandør. Vi skal gjøre det enkelt å forstå hvem du snakker med, og hvem som har ansvar for avtalt arbeid.",
+  "hero": {
+    "layout": "split-right",
+    "eyebrow": "Leverandøren bak tjenesten",
+    "title": "Optimalisering Oslo er en tjeneste fra Medon AS.",
+    "support": "Optimalisering Oslo er tjenestenavnet. Medon AS er eier og leverandør. Vi skal gjøre det enkelt å forstå hvem du snakker med, og hvem som har ansvar for avtalt arbeid.",
+    "primaryCta": {
+      "label": "Ta en gratis sjekk",
+      "href": "/vurdering/"
+    },
+    "visual": {
+      "kind": "none"
+    }
+  },
   "sections": [
     {
       "_block": "content",
@@ -89,9 +99,5 @@
       "question": "Er tjenesten bare for bedrifter i Oslo?",
       "answer": "Nei. Norge er det primære markedet. Bedrifter i andre nordiske land kan også være aktuelle. Behov og avtalt omfang avgjør om tjenesten passer."
     }
-  ],
-  "cta": {
-    "label": "Ta en gratis sjekk",
-    "href": "/vurdering/"
-  }
+  ]
 }
