@@ -11,13 +11,17 @@
 - **Preview-teknikk – grønt på siste main.** GitHub Actions og Cloudflare Workers Builds på siste sjekkede `main` viser SUCCESS. Eksisterende Worker + EU D1 + Resend og fire aktive formularflater for noindex-preview er konfigurert; tidligere «ingen deploy/ingen intake/Resend key mangler» er **utdatert**. OWNER har tidligere bekreftet faktisk mottatt e-post. Dette er **ikke** offentlig lanserings-/indekseringsaksept.
 - **Dark Mode – bevisst UTSATT.** OWNER melder at Light-layout er riktig; Dark har fortsatt visuelle svakheter, men **skal ikke prioriteres eller brukes nå**. Behold nåværende kode/tema uten flere kosmetiske runder. Dette er ikke en blocker for videre Light/CMS-arbeid.
 
+## Nytt teknisk levert – 26.10.2026
+
+- **Global Innhold på alle sider – CI PASS.** PR #18 er flettet; samme åtte globale innholdselementer kan nå legges til og flyttes i alle 17 CMS-redigerbare sider. Generiske seksjoner og sideinnhold er bevart, ingen innholds-JSON endret. Felles referanser kan lagres uten å kopiere globalt innhold; separat autentisert OWNER-test av plassering i Pages CMS-grensesnittet er ikke ennå dokumentert, men er ikke en blokkering for videre designjusteringer. Se [PROJECT-STATE.md](PROJECT-STATE.md).
+
 ## Reelt åpne punkter – ikke blokker dagens arbeid
 
 - **Offentlig lansering, SEO-indeksering og domene:** egen OWNER-godkjenning kreves. Nåværende nettsted forblir `noindex`. EN/språkvariant er ikke lansert.
 - **Drift og personvern:** avklar ved passende anledning reell tilgang/eksport, retention/sletting, databehandlerforhold og rutiner for det etablerte D1/Resend-mottaket. Ikke gjenåpne allerede konfigurert Worker eller late som sikkerhets-/juridisk sluttkontroll er fullført.
 - **Språk og tone, Spiss+ (D-124/D-125):** kilde/presets foreligger; særskilt autentisert lagre-/gjenopprettingstest og eventuell praktisk bruk av tonemodeller er **ikke eksplisitt bekreftet**. Valgfri senere arbeidsrunde, ikke nødvendig for godkjent Hero/CMS eller Light-layout.
 - **Schema.org per sidetype og øvrig SEO:** felles `Organization` JSON-LD finnes; `Service`, `Article` og relaterte JSON-LD-typer er mulig senere arbeid, ikke gammelt review-gjeld.
-- **MedonWebSystem gjenbruk:** overføring av den nå gjennomgåtte Light-designen, Site Chrome, SEO/slug/Hero og CMS-struktur til generisk starter gjenstår. Skill dette fra draft-PR-ene for full Astro-starter og lead intake; ikke kall disse generelt produksjonsklare før egne tester.
+- **MedonWebSystem gjenbruk:** MWS-050 med Light-baseline, Site Chrome, SEO/slug/Hero og Pages CMS-kildepakker er allerede flettet til MedonWebSystem. Pilotens nye universelle globale innholdsplasseringer fra PR #18 er ennå ikke portert til generisk kit. Full Astro-starter PR #4 er fortsatt draft; ikke kall en samlet starter produksjonsklar uten egen integrasjonstest.
 - **CMS revert-flyt:** ikke blokkert. GitHub-historikk er normal; fullstendig native Pages CMS restore via UI er ikke testet og trengs ikke som en ny obligatorisk gate nå.
 
 ## Historisk arkiv – tidligere review-pakker og krav
