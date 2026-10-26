@@ -1091,6 +1091,9 @@ content:
               - name: protected
                 label: Beskyttet sjekk / handling
                 component: sectionProtected
+            - name: global
+                label: Globalt element
+                component: serviceGlobalPlacement
           - &a7
             name: faq
             label: Ofte stilte spørsmål
@@ -1172,7 +1175,7 @@ content:
             readonly: true
           - name: sections
             label: Sidens seksjoner og globale elementer
-            description: Dra seksjonene i ønsket rekkefølge. Velg to- eller trekolonneoppsett, farger og kort. Globale priser og skjema henter alltid innhold fra felles kilde.
+            description: Dra lokale seksjoner og globale innholdselementer i ønsket rekkefølge. Felles innhold redigeres kun under Global Innhold.
             type: block
             list:
               collapsible:
@@ -1186,7 +1189,7 @@ content:
                 component: synlighetSectionContent
               - name: global
                 label: Globalt element
-                component: seoGlobalPlacement
+                component: serviceGlobalPlacement
           - *a7
       - name: serviceSynlighet
         label: Synlighet
@@ -1280,6 +1283,9 @@ content:
               - name: pageList
                 label: Innholdsliste
                 component: sectionPageList
+              - name: global
+                label: Globalt element
+                component: serviceGlobalPlacement
           - *a7
       - name: insightArticles
         label: Artikler
