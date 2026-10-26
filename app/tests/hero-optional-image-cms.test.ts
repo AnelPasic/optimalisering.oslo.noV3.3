@@ -40,7 +40,8 @@ test('pages with no Hero image save unchanged without validation errors in inact
     if (page.hero.visual.kind !== 'none') continue;
     const saved = JSON.parse(cmsJsonSave(page,page,editor(file),cms));
     assert.deepEqual(saved,page,file);
-    assert.equal(pageSchema.parse(saved).hero?.visual.kind,'none',file);
+    assert.equal(saved.hero.visual.kind,'none',file);
+    assert.ok(pageSchema.safeParse(saved).success,file);
   }
 });
 
