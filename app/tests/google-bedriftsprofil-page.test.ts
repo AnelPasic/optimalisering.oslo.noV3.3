@@ -11,7 +11,7 @@ test('Google bedriftsprofil is one genuine Innsikt page with CMS editing and Lok
  const article=JSON.parse(readFileSync(file,'utf8'));
  const hub=JSON.parse(readFileSync('src/content/pages/lokal-seo.json','utf8'));
  const index=JSON.parse(readFileSync('src/content/pages/innsikt.json','utf8'));
- assert.equal(article.slug,'innsikt/google-bedriftsprofil');
+ assert.equal(article.seo.slug,'innsikt/google-bedriftsprofil');
  assert.equal(article.kind,'article');
  assert.equal(article.status,'REVIEW_REQUIRED');
  assert.equal(article.authority,'DRAFT / NON-AUTHORITATIVE');
