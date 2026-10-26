@@ -8,7 +8,7 @@ import {cmsJsonSave,entryForFile,assertPreservedContent} from './helpers/pages-c
 test('Lokal SEO is a real service page with editable CMS fields and a working nav destination',()=>{
  const file='src/content/pages/lokal-seo.json';
  const page=JSON.parse(readFileSync(file,'utf8'));
- assert.equal(page.slug,'lokal-seo');
+ assert.equal(page.seo.slug,'lokal-seo');
  assert.equal(page.kind,'service');
  assert.equal(page.status,'REVIEW_REQUIRED');
  assert.equal(page.authority,'DRAFT / NON-AUTHORITATIVE');
