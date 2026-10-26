@@ -63,6 +63,10 @@
       ]
     },
     {
+      "_block": "global",
+      "element": "priser"
+    },
+    {
       "_block": "content",
       "id": "lokal-synlighet",
       "eyebrow": "Lokal SEO i praksis",
@@ -91,10 +95,6 @@
     {
       "_block": "global",
       "element": "regneeksempel"
-    },
-    {
-      "_block": "global",
-      "element": "priser"
     },
     {
       "_block": "content",
