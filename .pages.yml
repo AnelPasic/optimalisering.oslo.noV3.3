@@ -813,9 +813,11 @@ content:
             blocks:
               - name: none
                 label: Ingen
+                type: object
                 fields: []
               - name: image
                 label: Bilde
+                type: object
                 fields:
                   - name: image
                     label: Valgt bilde og utsnitt
@@ -1052,9 +1054,11 @@ content:
                 blocks:
                   - name: none
                     label: Ingen
+                    type: object
                     fields: []
                   - name: image
                     label: Bilde
+                    type: object
                     fields:
                       - name: image
                         label: Valgt bilde og utsnitt
