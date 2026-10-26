@@ -41,8 +41,9 @@ test('partial saves, dual authority, invalid image and invalid CTA fail; no-imag
 test('one Hero first uses homepage field names/order/shared labels and retains a service-specific image editor',()=>{
   const entry=entryForFile(cms,'app/src/content/pages/synlighet.json'),home=entryForFile(cms,'app/src/content/pages/home.json');
   assert.equal(entry.fields[0].name,'seo'); // OWNER-approved SEO-first editor policy
-  assert.equal(entry.fields[1].name,'hero');
-  const hero=resolveField(entry.fields[1],cms.components),homeHero=resolveField(home.fields.find((f:any)=>f.name==='hero'),cms.components);
+  assert.equal(entry.fields[1].name,'slug');
+  assert.equal(entry.fields[2].name,'hero');
+  const hero=resolveField(entry.fields[2],cms.components),homeHero=resolveField(home.fields.find((f:any)=>f.name==='hero'),cms.components);
   assert.deepEqual(hero.fields.map((f:any)=>f.name),homeHero.fields.map((f:any)=>f.name));
   for(const field of hero.fields.filter((f:any)=>f.name!=='visual'))assert.deepEqual(field,homeHero.fields.find((f:any)=>f.name===field.name));
   for(const key of legacyHeroKeys)assert.ok(!entry.fields.some((f:any)=>f.name===key));
