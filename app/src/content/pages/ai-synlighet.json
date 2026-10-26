@@ -7,9 +7,19 @@
     "title": "AI-synlighet - bli forstått med riktig informasjon | Medon",
     "description": "Undersøk hvordan bedriften kan bli funnet og forstått i AI-baserte svar. Medon skiller mellom omtale, kilder, besøk og kunder. Ta en gratis sjekk."
   },
-  "eyebrow": "Synlighet i AI-baserte søk og svar",
-  "title": "Gjør det tydelig hvem du er og hva du tilbyr.",
-  "intro": "Når kunder undersøker med AI, blir det viktig å være konkret om bedriften, tilbudet og hvem det passer for. Vi vurderer informasjonen og mulige uklarheter. Ingen kan love at en AI-tjeneste vil anbefale deg.",
+  "hero": {
+    "layout": "split-right",
+    "eyebrow": "Synlighet i AI-baserte søk og svar",
+    "title": "Gjør det tydelig hvem du er og hva du tilbyr.",
+    "support": "Når kunder undersøker med AI, blir det viktig å være konkret om bedriften, tilbudet og hvem det passer for. Vi vurderer informasjonen og mulige uklarheter. Ingen kan love at en AI-tjeneste vil anbefale deg.",
+    "primaryCta": {
+      "label": "Ta en gratis sjekk",
+      "href": "/vurdering/"
+    },
+    "visual": {
+      "kind": "none"
+    }
+  },
   "sections": [
     {
       "_block": "content",
@@ -127,9 +137,5 @@
       "question": "Hvordan bør vi vurdere en rapport om AI-synlighet?",
       "answer": "Se etter hvilke spørsmål, tjenester og tidspunkt den gjelder. Skill mellom omtale, kilder, besøk og relevante handlinger. Vær forsiktig med å tolke enkelte svar som en generell eller stabil posisjon."
     }
-  ],
-  "cta": {
-    "label": "Ta en gratis sjekk",
-    "href": "/vurdering/"
-  }
+  ]
 }
