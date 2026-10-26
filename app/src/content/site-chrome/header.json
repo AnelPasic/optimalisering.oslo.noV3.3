@@ -6,7 +6,7 @@
   "navigationLabel": "Hovedmeny",
   "mobileNavigationLabel": "Mobilmeny",
   "openMenu": "Åpne meny",
-  "closeMenu": "Lukk meny",
+  "closeMenu": "Lukk",
   "assessmentLink": {
     "label": "Se priser og bestill",
     "href": "/priser/",
