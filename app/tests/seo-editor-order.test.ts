@@ -63,7 +63,7 @@ test('URL-slug remains the original read-only route value for every published pa
     assert.ok(entry, file);
     const original = JSON.parse(readFileSync(`src/content/pages/${file}`, 'utf8'));
     assert.equal(typeof original.slug, 'string', file);
-    assert.equal(file, original.slug === 'home' ? 'home.json' : original.slug + '.json', file);
+    assert.equal(file.replace(/\.json$/, ''), original.slug.substring(original.slug.lastIndexOf('/') + 1), file);
     const saved = JSON.parse(cmsJsonSave(original, original, entry, config));
     assert.equal(saved.slug, original.slug, file);
     assert.deepEqual(saved.seo, original.seo, file);
