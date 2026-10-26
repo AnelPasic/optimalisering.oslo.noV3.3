@@ -115,6 +115,7 @@ test('Pricing page Hero is independently editable but does not rewrite global pa
  const pricing=pages.find(({page})=>page.kind==='pricing')!.page;
  const editor=entryForFile(cms,'app/src/content/pages/priser.json');
  assert.deepEqual(editor.fields.slice(0,2).map((f:any)=>f.name),['seo','hero']);
+ const commercial=resolveHomepageContent(home);
  const originalPackages=structuredClone(commercial.packages);
  const edited=structuredClone(pricing);
  edited.hero.title='Test: nytt Hero-budskap';
