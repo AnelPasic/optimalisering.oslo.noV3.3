@@ -74,7 +74,7 @@ test('Pages CMS edits one nested Hero; restores all sections, media and CTA with
   assertPreservedContent(edited,saved);
   assert.deepEqual(saved.sections,page.sections,file);
   assert.deepEqual(saved.hero.visual,page.hero.visual,file);
-  assert.equal(pageSchema.safeParse(saved).success,true,file);
+  const result=pageSchema.safeParse(saved);assert.ok(result.success,file+': '+(result.success?'':JSON.stringify(result.error.issues).slice(0,2600)));
   const restored=JSON.parse(cmsJsonSave(saved,page,editor,cms));
   assert.deepEqual(restored,page,file);
  }
