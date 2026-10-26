@@ -10,8 +10,9 @@ import Assessment from './HomeAssessment.astro';
 import Proof from './HomeProof.astro';
 import Packages from './PackageSection.astro';
 import Faq from './Faq.astro';
-interface Props { block: HomepageBlock; records: CollectionEntry<'proofCases'>['data'][]; }
-const {block,records}=Astro.props;
+import { combineFaqItems, type FaqItem } from '../lib/faq-items';
+interface Props { block: HomepageBlock; records: CollectionEntry<'proofCases'>['data'][]; faqItems?: readonly FaqItem[]; }
+const {block,records,faqItems=[]}=Astro.props;
 const render=(value:HomepageBlock)=>{switch(value._block){case 'selector':case 'calculator':case 'packages':case 'proof':case 'content':case 'assessment':case 'faq':return value._block;default:return assertNever(value);}};
 render(block);
 ---
@@ -21,4 +22,4 @@ render(block);
 {block._block==='proof'&&<Proof content={block.content} records={records} />}
 {block._block==='content'&&<ContentSection section={block} />}
 {block._block==='assessment'&&<Assessment section={block.content.section} content={block.content.form} layout={block.content.layout} />}
-{block._block==='faq'&&<Faq id={block.id} {...block.content} />}
+{block._block==='faq'&&<Faq id={block.id} {...block.content} items={combineFaqItems(block.content.items, faqItems)} />}

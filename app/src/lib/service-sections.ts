@@ -8,7 +8,7 @@ export const serviceGlobalPlacementSchema = globalPlacementSchema.refine(placeme
 export const seoGlobalIds = serviceGlobalIds;
 const mixedServiceSlugs = new Set(['synlighet', 'seo']);
 type Section = { id: string; visibility?: 'hidden'; globalElement?: typeof serviceGlobalIds[number] };
-type ServicePage = { slug: string; sections: Section[] };
+type ServicePage = { slug: string; sections: Section[]; faq?: readonly { question: string; answer: string }[] };
 const fixedAnchors = ['service-hero', 'resultater', 'priser', 'service-priser', 'sporsmal', 'main', 'mobile-menu'];
 
 /** Resolve references only in memory; CMS continues to store reference + visibility. */
@@ -79,7 +79,7 @@ export function validateSynlighetSections(page: ServicePage, _route: RouteFamily
 }
 
 function liveAnchors(page: ServicePage): Set<string> {
-  return new Set(['service-hero', 'main', 'mobile-menu', ...visibleServiceSections(page).map(section => section.id)]);
+  return new Set(['service-hero', 'main', 'mobile-menu', ...(page.faq?.length ? ['sporsmal'] : []), ...visibleServiceSections(page).map(section => section.id)]);
 }
 
 function checkServiceLinks(page: ServicePage, visibleIds: Set<string>): void {

@@ -25,12 +25,12 @@ validateServiceGlobalProof(page,records);
 <div class="invite-home invite-service">
   <CommercialHero content={resolvePageHero(page)} />
   {visibleServiceSections(page).map(section=><>
-    {section.globalElement ? <GlobalContentSection element={section.globalElement} /> : <>
+    {section.globalElement ? <GlobalContentSection element={section.globalElement} faqItems={page.faq} /> : <>
     <ContentSection section={section} visualId={capability.sectionVisuals.find(v=>v.section===section.id)?.visual} defaultSurface={capability.sectionSurfaces.find(v=>v.section===section.id)?.surface} />
     {!cmsOnly&&!globalProof&&capability.proofAfter===section.id&&page.proof&&<Proof content={page.proof} records={records} primary />}
     {!cmsOnly&&bridge?.after===section.id&&<PricingBridge content={commercial.packages} link={bridge.link} serviceName={bridge.serviceName} />}
     </>}
   </>)}
-  {!cmsOnly&&!hasGlobalFaq&&<Faq items={page.faq} id="sporsmal" heading={capability.closingCta||commercial.faqVisible===false?undefined:commercial.faqHeading} eyebrow={capability.closingCta||commercial.faqVisible===false?undefined:commercial.faqEyebrow} />}
+  {!hasGlobalFaq&&<Faq items={page.faq} id="sporsmal" heading={capability.closingCta||commercial.faqVisible===false?undefined:commercial.faqHeading} eyebrow={capability.closingCta||commercial.faqVisible===false?undefined:commercial.faqEyebrow} />}
   {!cmsOnly&&capability.closingCta&&!visibleServiceSections(page).some(section=>section.globalElement==='sjekk')&&<ClosingCta link={page.cta} />}
 </div>
