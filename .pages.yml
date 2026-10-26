@@ -805,47 +805,47 @@ content:
             label: Sekundær handling
             component: link
           - name: visual
-            label: Bilde
-            type: object
-            fields:
-              - &hubHeroVisualKind
-                name: kind
-                label: Visuelt innhold
-                type: select
-                options:
-                  values:
-                    - name: image
-                      label: Bilde
-                    - name: none
-                      label: Ingen
+            label: Visuelt innhold
+            description: Velg Ingen for tekst uten bilde, eller Bilde for å laste opp. Tidligere lagret bilde bevares når du velger Ingen.
+            type: block
+            blockKey: kind
+            required: true
+            blocks:
+              - name: none
+                label: Ingen
+                fields: []
               - name: image
-                label: Valgt bilde og utsnitt
-                type: object
+                label: Bilde
                 fields:
-                  - name: src
-                    label: Valgt bilde
-                    type: image
-                    options:
-                      media: heroImages
+                  - name: image
+                    label: Valgt bilde og utsnitt
+                    type: object
                     required: true
-                  - &hubHeropositionX
-                    name: positionX
-                    label: Horisontalt utsnitt (%)
-                    type: number
-                    default: 50
-                    options:
-                      min: 0
-                      max: 100
-                    required: true
-                  - &hubHeropositionY
-                    name: positionY
-                    label: Vertikalt utsnitt (%)
-                    type: number
-                    default: 50
-                    options:
-                      min: 0
-                      max: 100
-                    required: true
+                    fields:
+                      - name: src
+                        label: Valgt bilde
+                        type: image
+                        options:
+                          media: heroImages
+                        required: true
+                      - &hubHeropositionX
+                        name: positionX
+                        label: Horisontalt utsnitt (%)
+                        type: number
+                        default: 50
+                        options:
+                          min: 0
+                          max: 100
+                        required: true
+                      - &hubHeropositionY
+                        name: positionY
+                        label: Vertikalt utsnitt (%)
+                        type: number
+                        default: 50
+                        options:
+                          min: 0
+                          max: 100
+                        required: true
       - name: sections
         label: Innholdsseksjoner
         type: block
@@ -1044,35 +1044,43 @@ content:
               - *hubHeroprimaryCta
               - *hubHerosecondaryCta
               - name: visual
-                label: Bilde
-                type: object
+                label: Visuelt innhold
+                description: Ingen skjuler bildefeltene. Bilde viser bare feltene som kreves når du bruker et bilde. Valgt bilde bevares dersom du senere velger Ingen.
+                type: block
+                blockKey: kind
                 required: true
-                fields:
-                  - *hubHeroVisualKind
+                blocks:
+                  - name: none
+                    label: Ingen
+                    fields: []
                   - name: image
-                    label: Valgt bilde og utsnitt
-                    type: object
+                    label: Bilde
                     fields:
-                      - name: kind
-                        label: Bildetype
-                        type: select
-                        options:
-                          values:
-                            - photo
-                            - illustration
+                      - name: image
+                        label: Valgt bilde og utsnitt
+                        type: object
                         required: true
-                      - name: src
-                        label: Valgt bilde
-                        type: image
-                        options:
-                          media: serviceHeroImages
-                        required: true
-                      - name: alt
-                        label: Kort beskrivelse av bildets mening
-                        type: string
-                        required: true
-                      - *hubHeropositionX
-                      - *hubHeropositionY
+                        fields:
+                          - name: kind
+                            label: Bildetype
+                            type: select
+                            options:
+                              values:
+                                - photo
+                                - illustration
+                            required: true
+                          - name: src
+                            label: Valgt bilde
+                            type: image
+                            options:
+                              media: serviceHeroImages
+                            required: true
+                          - name: alt
+                            label: Kort beskrivelse av bildets mening
+                            type: string
+                            required: true
+                          - *hubHeropositionX
+                          - *hubHeropositionY
           - &a6
             name: sections
             label: Innholdsseksjoner og farger
