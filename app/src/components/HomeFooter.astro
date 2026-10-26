@@ -12,6 +12,10 @@ const footerGroups = content.footerGroups ?? [
   { heading: 'Veiledning', links: [{ label: glossary.linkLabel, href: '/begreper/' }] },
 ];
 const legalLinks = content.footerLegalLinks ?? [];
+// Reuse the theme-matched desktop header logo unless Footer explicitly chooses
+// its own variant. A single available variant remains a safe fallback.
+const footerLogoLight = content.footerLogoLight ?? content.logoLight ?? content.footerLogoDark ?? content.logoDark;
+const footerLogoDark = content.footerLogoDark ?? content.logoDark ?? content.footerLogoLight ?? content.logoLight;
 ---
 <footer class="site-footer">
   <div class="shell">
@@ -19,12 +23,12 @@ const legalLinks = content.footerLegalLinks ?? [];
       <div class="footer-about block justify-items-normal">
         <a class="footer-title footer-brand normal-case opacity-100 mb-0" href="/"
           aria-label={content.homeLabel}>
-          {content.footerLogoLight || content.footerLogoDark
+          {footerLogoLight || footerLogoDark
             ? <span class="site-brand-image-pair site-brand-image-pair--footer" aria-hidden="true">
                 <img class="site-brand-image site-brand-image--light"
-                  src={content.footerLogoLight ?? content.footerLogoDark} alt="" width="220" height="60" />
+                  src={footerLogoLight ?? footerLogoDark} alt="" width="220" height="60" />
                 <img class="site-brand-image site-brand-image--dark"
-                  src={content.footerLogoDark ?? content.footerLogoLight} alt="" width="220" height="60" />
+                  src={footerLogoDark ?? footerLogoLight} alt="" width="220" height="60" />
               </span>
             : <>{content.brand} {content.brandLocation}<span>.</span></>}
         </a>

@@ -163,3 +163,18 @@ test('Compact mobile logo is independent and theme-aware, with unchanged desktop
   assert.match(css,/html\[data-mws-theme-mode="dark"\] \.site-brand-image--dark/);
   assert.match(css,/max-width: 58px;/);
 });
+
+test('Footer Light/Dark logos inherit desktop Header logos unless specifically overridden', () => {
+  const footerAstro = readFileSync('src/components/HomeFooter.astro', 'utf8');
+  const pageCms = readFileSync('../.pages.yml', 'utf8');
+  const lightRule = 'content.footerLogoLight ?? content.logoLight ?? content.footerLogoDark ?? content.logoDark';
+  const darkRule = 'content.footerLogoDark ?? content.logoDark ?? content.footerLogoLight ?? content.logoLight';
+  assert.ok(footerAstro.includes(lightRule), 'Footer must prefer explicit Light logo, then Header Light');
+  assert.ok(footerAstro.includes(darkRule), 'Footer must prefer explicit Dark logo, then Header Dark');
+  assert.match(footerAstro, /src=\{footerLogoLight \?\? footerLogoDark\}/);
+  assert.match(footerAstro, /src=\{footerLogoDark \?\? footerLogoLight\}/);
+  assert.doesNotMatch(footerAstro, /mobileLogo(?:Light|Dark)/);
+  assert.match(pageCms, /Tomt felt bruker Light-logoen fra Toppmeny automatisk/);
+  assert.match(pageCms, /Tomt felt bruker Dark-logoen fra Toppmeny automatisk/);
+  // Uploaded client filenames are purposely not frozen as test fixtures.
+});

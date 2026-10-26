@@ -1998,13 +1998,13 @@ content:
             type: image
             options:
               media: brandLogos
-            description: Egen footerlogo for lys fargeprofil. Valgfri — eksisterende tekst beholdes hvis ikke valgt.
+            description: Valgfri egen footerlogo for Light. Tomt felt bruker Light-logoen fra Toppmeny automatisk.
           - name: footerLogoDark
             label: Logo for mørkt tema (footer)
             type: image
             options:
               media: brandLogos
-            description: Egen footerlogo for mørk fargeprofil. Valgfri — lys logo brukes hvis kun én er valgt.
+            description: Valgfri egen footerlogo for Dark. Tomt felt bruker Dark-logoen fra Toppmeny automatisk.
           - name: providerText
             label: Påkrevd leverandøropplysning
             type: string
