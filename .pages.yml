@@ -1030,62 +1030,48 @@ content:
             readonly: true
             required: true
             description: "Sidens URL-del. Eksempel: seo vises som /seo/."
-          - &a9
+          - &standardHero
             name: hero
-            component: pageHero
-          - &a5
-            name: heroVisual
-            label: Hero-bilde / drømmeutfall
+            label: Hero
             type: object
+            required: true
             fields:
-              - name: kind
-                label: Bildetype
-                type: select
-                options:
-                  values:
-                    - photo
-                    - illustration
+              - *hubHerolayout
+              - *hubHeroeyebrow
+              - *hubHerotitle
+              - *hubHerosupport
+              - *hubHeroprimaryCta
+              - *hubHerosecondaryCta
+              - name: visual
+                label: Bilde
+                type: object
                 required: true
-              - name: src
-                label: Levert tjenestebilde
-                type: image
-                options:
-                  media: serviceHeroImages
-                required: true
-              - name: alt
-                label: Kort beskrivelse av bildets mening
-                type: string
-                required: true
-              - name: positionX
-                label: Fokus vannrett (0–100)
-                type: number
-                required: true
-                options:
-                  min: 0
-                  max: 100
-              - name: positionY
-                label: Fokus loddrett (0–100)
-                type: number
-                required: true
-                options:
-                  min: 0
-                  max: 100
-            description: Valgfritt eksisterende Hero-bilde. Bilde og utsnitt bevares når Oppsett endres. Uten et levert bilde vises toppseksjonen med tekst.
-          - &a10
-            name: eyebrow
-            label: Toppseksjon (Hero) – Overtekst
-            type: string
-            required: true
-          - &a11
-            name: title
-            label: Hovedoverskrift
-            type: string
-            required: true
-          - &a12
-            name: intro
-            label: Ingress
-            type: text
-            required: true
+                fields:
+                  - *hubHeroVisualKind
+                  - name: image
+                    label: Valgt bilde og utsnitt
+                    type: object
+                    fields:
+                      - name: kind
+                        label: Bildetype
+                        type: select
+                        options:
+                          values:
+                            - photo
+                            - illustration
+                        required: true
+                      - name: src
+                        label: Valgt bilde
+                        type: image
+                        options:
+                          media: serviceHeroImages
+                        required: true
+                      - name: alt
+                        label: Kort beskrivelse av bildets mening
+                        type: string
+                        required: true
+                      - *hubHeropositionX
+                      - *hubHeropositionY
           - &a6
             name: sections
             label: Innholdsseksjoner og farger
@@ -1121,11 +1107,6 @@ content:
                 label: Svar
                 type: text
                 required: true
-          - &a8
-            name: cta
-            label: Neste steg
-            component: link
-            required: true
           - &serviceproof
             name: proof
             label: Dokumenterte resultater - trygg presentasjon
@@ -1187,11 +1168,7 @@ content:
             label: Innholdsautoritet
             type: string
             readonly: true
-          - *a9
-          - *a5
-          - *a10
-          - *a11
-          - *a12
+          - *standardHero
           - name: sections
             label: Sidens seksjoner og globale elementer
             description: Dra seksjonene i ønsket rekkefølge. Velg to- eller trekolonneoppsett, farger og kort. Globale priser og skjema henter alltid innhold fra felles kilde.
@@ -1210,7 +1187,6 @@ content:
                 label: Globalt element
                 component: seoGlobalPlacement
           - *a7
-          - *a8
       - name: serviceSynlighet
         label: Synlighet
         type: file
@@ -1219,47 +1195,7 @@ content:
         operations: *a3
         fields:
           - *a4
-          - name: hero
-            label: Hero
-            type: object
-            required: true
-            fields:
-              - *hubHerolayout
-              - *hubHeroeyebrow
-              - *hubHerotitle
-              - *hubHerosupport
-              - *hubHeroprimaryCta
-              - *hubHerosecondaryCta
-              - name: visual
-                label: Bilde
-                type: object
-                required: true
-                fields:
-                  - *hubHeroVisualKind
-                  - name: image
-                    label: Valgt bilde og utsnitt
-                    type: object
-                    fields:
-                      - name: kind
-                        label: Bildetype
-                        type: select
-                        options:
-                          values:
-                            - photo
-                            - illustration
-                        required: true
-                      - name: src
-                        label: Valgt bilde
-                        type: image
-                        options:
-                          media: serviceHeroImages
-                        required: true
-                      - name: alt
-                        label: Kort beskrivelse av bildets mening
-                        type: string
-                        required: true
-                      - *hubHeropositionX
-                      - *hubHeropositionY
+          - *standardHero
           - *serviceslug
           - name: sections
             label: Innholdsseksjoner
@@ -1298,13 +1234,9 @@ content:
             label: Innholdsautoritet
             type: string
             readonly: true
-          - *a9
-          - *a10
-          - *a11
-          - *a12
+          - *standardHero
           - *a6
           - *a7
-          - *a8
   - name: priser
     label: Priser
     type: file
@@ -1316,7 +1248,6 @@ content:
       - name: hero
         component: pageHero
         description: Hero-teksten hentes fra Forside → Seksjoner → Pakker og priser. Velg bare oppsett her. Ingen ekstra tekstkilde opprettes.
-      - *a5
       - name: eyebrow
         label: Overtekst (inaktiv kilde)
         type: string
@@ -1334,7 +1265,10 @@ content:
         readonly: true
       - *a6
       - *a7
-      - *a8
+      - name: cta
+        label: Neste steg
+        component: link
+        required: true
   - name: insight
     label: Innsikt
     type: group
@@ -1347,11 +1281,7 @@ content:
         operations: *a3
         fields:
           - *a4
-          - *a9
-          - *a5
-          - *a10
-          - *a11
-          - *a12
+          - *standardHero
           - name: sections
             label: Innholdsseksjoner
             type: block
@@ -1369,7 +1299,6 @@ content:
                 label: Innholdsliste
                 component: sectionPageList
           - *a7
-          - *a8
       - name: insightArticles
         label: Artikler
         type: collection
@@ -1413,11 +1342,7 @@ content:
             type: string
             readonly: true
             required: true
-          - *a9
-          - *a5
-          - *a10
-          - *a11
-          - *a12
+          - *standardHero
           - name: listing
             label: Visning i innholdslister
             type: object
@@ -1450,7 +1375,6 @@ content:
                 component: listingVisual
           - *a6
           - *a7
-          - *a8
   - name: om
     label: Om tjenesten
     type: file
@@ -1459,14 +1383,9 @@ content:
     operations: *a3
     fields: &a13
       - *a4
-      - *a9
-      - *a5
-      - *a10
-      - *a11
-      - *a12
+      - *standardHero
       - *a6
       - *a7
-      - *a8
   - name: vurdering
     label: Optimaliseringssjekk
     type: file
