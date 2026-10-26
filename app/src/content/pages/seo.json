@@ -7,9 +7,26 @@
     "title": "SEO-byrå for bedrifter i Oslo | Optimalisering Oslo",
     "description": "SEO-tjenester for bedrifter i Oslo og Norge. Vi vurderer søkeord, tjenestesider, tekniske hindringer og veien fra Google-søk til relevante henvendelser."
   },
-  "eyebrow": "SEO - søkemotoroptimalisering for bedrifter",
-  "title": "SEO for bedrifter som vil bli funnet av riktige kunder.",
-  "intro": "SEO gjør det lettere for kunder å finne relevante tjenester i Googles organiske søkeresultater. Vi hjelper bedrifter i Oslo og resten av Norge med å vurdere hva de bør bli funnet for, hvilke sider som trenger arbeid, og hvordan besøk kan bli til henvendelser. Først finner vi ut hva som faktisk holder nettsiden tilbake.",
+  "hero": {
+    "layout": "split-right",
+    "eyebrow": "SEO - søkemotoroptimalisering for bedrifter",
+    "title": "SEO for bedrifter som vil bli funnet av riktige kunder.",
+    "support": "SEO gjør det lettere for kunder å finne relevante tjenester i Googles organiske søkeresultater. Vi hjelper bedrifter i Oslo og resten av Norge med å vurdere hva de bør bli funnet for, hvilke sider som trenger arbeid, og hvordan besøk kan bli til henvendelser. Først finner vi ut hva som faktisk holder nettsiden tilbake.",
+    "primaryCta": {
+      "label": "Ta en gratis sjekk",
+      "href": "/seo/#sjekk"
+    },
+    "visual": {
+      "kind": "image",
+      "image": {
+        "kind": "illustration",
+        "src": "/images/services/discoveringlocalfavorite.png",
+        "alt": "Bli funnet",
+        "positionX": 50,
+        "positionY": 50
+      }
+    }
+  },
   "sections": [
     {
       "_block": "content",
@@ -205,16 +222,5 @@
       "question": "Hjelper dere bedrifter utenfor Oslo?",
       "answer": "Ja, vi vurderer SEO for bedrifter i Oslo og resten av Norge. Når kundene velger leverandør basert på hvor de befinner seg, vurderer vi også lokal SEO, Google bedriftsprofil og faktiske tjenesteområder."
     }
-  ],
-  "cta": {
-    "label": "Ta en gratis sjekk",
-    "href": "/seo/#sjekk"
-  },
-  "heroVisual": {
-    "kind": "illustration",
-    "src": "/images/services/discoveringlocalfavorite.png",
-    "alt": "Bli funnet",
-    "positionX": 50,
-    "positionY": 50
-  }
+  ]
 }
