@@ -137,6 +137,10 @@
           "href": "/synlighet/"
         }
       ]
+    },
+    {
+      "_block": "global",
+      "element": "resultater"
     }
   ],
   "faq": [
