@@ -54,7 +54,8 @@ test('reject duplicate/unknown/unsupported masters, copied payloads and global/l
   const copied=withGlobal('resultater',{content:getGlobalElement('resultater').content}); assert.equal(pageSchema.safeParse(copied).success,false);
   const collision=withGlobal('regneeksempel');collision.sections.push({_block:'content',id:'regneeksempel',heading:'Duplikat',body:[]});assert.equal(pageSchema.safeParse(collision).success,false);
   const forged={...source,sections:[...source.sections,{...getGlobalElement('resultater'),globalElement:'resultater'}]};assert.equal(pageSchema.safeParse(forged).success,false);
-  const other={...withGlobal('resultater'),slug:'konvertering'};assert.equal(pageSchema.safeParse(other).success,false);
+  const other=JSON.parse(readFileSync('src/content/pages/konvertering.json','utf8'));other.sections.push(placement('resultater'));
+  assert.equal(pageSchema.safeParse(other).success,true,'other services now share the same global catalogue');
 });
 
 test('live fragment links require visible targets; protected local sjekk cannot be hidden',()=>{
