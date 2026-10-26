@@ -7,9 +7,19 @@
     "title": "Hva bør du optimalisere først? Synlighet eller konvertering",
     "description": "En enkel beslutningsguide: undersøk relevante besøk, veien til kontakt eller kjøp og verdien av kundene. Se hva dataene kan fortelle og hva de mangler."
   },
-  "eyebrow": "Innsikt - velg første undersøkelse",
-  "title": "Hva bør du optimalisere først?",
-  "intro": "Start med hvor veien til kunde ser ut til å stoppe. Det er ofte mer nyttig enn å begynne med en bestemt kanal, et verktøy eller en liste med tiltak.",
+  "hero": {
+    "layout": "split-right",
+    "eyebrow": "Innsikt - velg første undersøkelse",
+    "title": "Hva bør du optimalisere først?",
+    "support": "Start med hvor veien til kunde ser ut til å stoppe. Det er ofte mer nyttig enn å begynne med en bestemt kanal, et verktøy eller en liste med tiltak.",
+    "primaryCta": {
+      "label": "Ta en gratis sjekk",
+      "href": "/vurdering/"
+    },
+    "visual": {
+      "kind": "none"
+    }
+  },
   "sections": [
     {
       "_block": "content",
@@ -133,10 +143,6 @@
       "answer": "Da kan de vurderes sammen, men arbeidet bør fortsatt ha en begrunnet rekkefølge. En kombinasjon betyr ikke at alle mulige tiltak skal gjennomføres samtidig."
     }
   ],
-  "cta": {
-    "label": "Ta en gratis sjekk",
-    "href": "/vurdering/"
-  },
   "listing": {
     "title": "Hva bør optimaliseres først?",
     "summary": "Undersøk om de rette finner deg, om de kommer videre, og om handlingene har verdi. Se hypotetiske situasjoner og en enkel beslutningsrekkefølge.",
