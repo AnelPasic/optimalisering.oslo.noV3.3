@@ -7,9 +7,19 @@
     "title": "Gratis manuell sjekk av nettsiden | Medon",
     "description": "Send nettsiden for en gratis, avgrenset manuell sjekk. Medon gir kort veiledning om hva vi ville startet med, hvorfor og hvilken retning som passer."
   },
-  "eyebrow": "En gratis sjekk. En tydelig start.",
-  "title": "Send en lenke. Finn et sted å begynne.",
-  "intro": "Du trenger ikke vite om problemet er synlighet eller konvertering. Medon ser manuelt på nettsiden og gir kort veiledning om hva vi ville startet med, og hvorfor.",
+  "hero": {
+    "layout": "split-right",
+    "eyebrow": "En gratis sjekk. En tydelig start.",
+    "title": "Send en lenke. Finn et sted å begynne.",
+    "support": "Du trenger ikke vite om problemet er synlighet eller konvertering. Medon ser manuelt på nettsiden og gir kort veiledning om hva vi ville startet med, og hvorfor.",
+    "primaryCta": {
+      "label": "Ta en gratis sjekk",
+      "href": "/vurdering/#skjema"
+    },
+    "visual": {
+      "kind": "none"
+    }
+  },
   "sections": [
     {
       "_block": "content",
@@ -86,9 +96,5 @@
       "question": "Kan jeg sende en nettbutikk?",
       "answer": "Ja. Del nettadressen, og fortell gjerne hvilken del av veien til kjøp du er usikker på. Sjekken har samme avgrensning som for andre nettsider."
     }
-  ],
-  "cta": {
-    "label": "Ta en gratis sjekk",
-    "href": "/vurdering/#skjema"
-  }
+  ]
 }
