@@ -15,7 +15,7 @@ const link = z.object({label:z.string(),href:z.string().startsWith('/')});
 export { proofSlotSchema } from './home-section-data.ts';
 const homepage = z.object({}).strict(); // Header/footer have independent global CMS sources.
 export const pageSchema = z.preprocess((input,context)=>{
-  let raw=input as {slug?:string;kind?:string;sections:unknown;hero?:unknown};
+  let raw=input as Record<string,any> & {slug?:string;kind?:string;sections:unknown;hero?:unknown};
   // Native CMS Hero is now a single authored object. Legacy projections are
   // runtime-only for existing commercial/section components; they are never
   // written back as duplicate CMS fields.
@@ -29,7 +29,7 @@ export const pageSchema = z.preprocess((input,context)=>{
         ...(v.visual.kind==='image'?{heroVisual:v.visual.image}:{})};
     }
   }
-  if(raw?.kind!=='home'&&raw?.slug!=='synlighet'&&raw?.hero!==undefined){const hero=heroPresentationSchema.safeParse(raw.hero);if(!hero.success)for(const issue of hero.error.issues)context.addIssue({...issue,path:['hero',...issue.path]});}
+  if(raw?.kind!=='home'&&raw?.slug!=='synlighet'&&raw?.hero!==undefined&&!(raw.hero&&typeof raw.hero==='object'&&'primaryCta' in raw.hero)){const hero=heroPresentationSchema.safeParse(raw.hero);if(!hero.success)for(const issue of hero.error.issues)context.addIssue({...issue,path:['hero',...issue.path]});}
   if(raw?.kind!=='home'&&Array.isArray(raw?.sections)&&raw.sections.some(section=>section&&typeof section==='object'&&'globalElement' in section)) context.addIssue({code:'custom',path:['sections'],message:'Use a global reference, not resolved master fields'});
   if(raw?.slug==='synlighet'&&raw.kind==='service') {
     try {
