@@ -73,6 +73,7 @@
     },
     {
       "heading": "Kom i gang",
+      "headingHref": "/priser/",
       "links": [
         {
           "label": "Gratis sjekk",
@@ -110,5 +111,6 @@
       "label": "Begreper",
       "href": "/begreper/"
     }
-  ]
+  ],
+  "footerLogoLight": "/images/branding/oo-orange-xs-dark-1.svg"
 }
