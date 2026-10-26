@@ -7,9 +7,26 @@
     "title": "Nettbutikkoptimalisering - fra oppdagelse til kjøp | Medon",
     "description": "Se nettbutikken som en sammenheng: produktoppdagelse, valg, handlekurv og kjøp som er verdifulle for bedriften. Få en gratis, manuell sjekk fra Medon."
   },
-  "eyebrow": "Synlighet og konvertering for nettbutikker",
-  "title": "Fra et produkt kunden finner til en bestilling som er verdt noe.",
-  "intro": "Besøk og fulle handlekurver er ikke nok. Kunden må finne riktige produkter, kunne velge og fullføre kjøpet. Bedriften må kunne vurdere verdien av bestillingene.",
+  "hero": {
+    "layout": "split-right",
+    "eyebrow": "Synlighet og konvertering for nettbutikker",
+    "title": "Fra et produkt kunden finner til en bestilling som er verdt noe.",
+    "support": "Besøk og fulle handlekurver er ikke nok. Kunden må finne riktige produkter, kunne velge og fullføre kjøpet. Bedriften må kunne vurdere verdien av bestillingene.",
+    "primaryCta": {
+      "label": "Ta en gratis sjekk",
+      "href": "/vurdering/"
+    },
+    "visual": {
+      "kind": "image",
+      "image": {
+        "kind": "photo",
+        "src": "/images/services/happy-shopowner.png",
+        "alt": "En glad nettbutikkeier",
+        "positionX": 0,
+        "positionY": 0
+      }
+    }
+  },
   "sections": [
     {
       "_block": "content",
@@ -124,17 +141,6 @@
       "answer": "Konverteringsraten sier hvor stor andel av et definert besøksgrunnlag som kjøper. Den sier ikke alene hva som blir igjen etter produktkostnader, rabatter og andre relevante kostnader. Ordrenes verdi må også vurderes."
     }
   ],
-  "cta": {
-    "label": "Ta en gratis sjekk",
-    "href": "/vurdering/"
-  },
-  "heroVisual": {
-    "kind": "photo",
-    "src": "/images/services/happy-shopowner.png",
-    "alt": "En glad nettbutikkeier",
-    "positionX": 0,
-    "positionY": 0
-  },
   "proof": {
     "publicationApproved": false,
     "caseIds": [
