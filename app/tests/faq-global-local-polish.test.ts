@@ -40,9 +40,9 @@ test('owned local FAQ can be saved and restored across every page without modify
     assert.deepEqual(saved.hero,source.hero,file);
     assert.deepEqual(saved.seo,source.seo,file);
     assert.ok(pageSchema.safeParse(saved).success,file);
-    const restored=JSON.parse(cmsJsonSave(saved,source,entry,cms));
-    // For a formerly absent optional FAQ, clearing all questions stores [].
-    assert.deepEqual(restored.faq,source.faq??[],file);
+    // CMS form has an explicit empty list when the editor removes all local questions.
+    const restored=JSON.parse(cmsJsonSave(saved,{...source,faq:source.faq??[]},entry,cms));
+    assert.deepEqual(restored.faq??[],source.faq??[],file);
     assert.deepEqual(restored.sections,source.sections,file);
   }
   assert.deepEqual(getGlobalElement('sporsmal').content,masterBefore);
