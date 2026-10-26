@@ -101,7 +101,8 @@ export const pageSchema = z.preprocess((input,context)=>{
       if (model === 'protected' && (section.layout !== 'default' || section.items?.some(item => item.boxVariant !== 'default'))) context.addIssue({code:'custom',path:['sections',index,'layout'],message:'Protected CTA/form layout and boxes are design-system controlled'});
     });
     if (['synlighet', 'konvertering'].includes(page.slug) && page.sections.filter(section => section.id === 'sjekk').length !== 1) context.addIssue({ code: 'custom', path: ['sections'], message: 'Protected service CTA identity must remain present' });
-    if (page.kind === 'home' && !page.homepage) context.addIssue({ code: 'custom', path: ['homepage'], message: 'Homepage content model is required' });
+    // The former empty homepage chrome stub is not authored in Pages CMS.
+    // Global header/footer/theme now live in their own validated files.
     if (page.kind === 'home') {
       if (!page.hero) context.addIssue({code:'custom',path:['hero'],message:'Structured homepage Hero is required'});
 
