@@ -32,7 +32,7 @@ export function resolvePageHero(page:Source,commercial?:Commercial):HeroView{
   const hero=synlighetHeroSchema.parse(page.hero);
   const media=hero.visual.kind==='image'?resolveServiceVisual(hero.visual.image):undefined;
   const family=route.family;
-  const breadcrumbs=page.slug==='synlighet'?[{label:'Forsiden',href:'/'},{label:'Synlighet'}]:
+  const breadcrumbs=family==='pricing'?[]:page.slug==='synlighet'?[{label:'Forsiden',href:'/'},{label:'Synlighet'}]:
     [{label:'Forsiden',href:'/'},...(family==='article'?[{label:'Innsikt',href:'/innsikt/'}]:[]),
       {label:family==='service'?(route.service.pricingBridge?.serviceName??hero.eyebrow):hero.eyebrow}];
   return heroViewSchema.parse({...hero,family,

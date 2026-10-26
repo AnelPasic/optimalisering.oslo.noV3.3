@@ -11,10 +11,10 @@ import {resolveHomepageContent} from '../src/lib/home-builder.ts';
 const pages=readdirSync('src/content/pages').filter(f=>f.endsWith('.json')).map(file=>({file,page:JSON.parse(readFileSync(`src/content/pages/${file}`,'utf8'))}));
 const home=pages.find(p=>p.page.kind==='home')!.page;
 const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
-const normal=pages.filter(p=>p.page.kind!=='home'&&p.page.kind!=='pricing'&&p.page.slug!=='synlighet');
+const normal=pages.filter(p=>p.page.kind!=='home'&&p.page.slug!=='synlighet');
 
 test('all ordinary pages have one canonical editable Hero, with no duplicated persisted text or image keys',()=>{
- assert.equal(normal.length,14);
+ assert.equal(normal.length,15);
  for(const {page} of normal){
   assert.equal(pageSchema.safeParse(page).success,true,page.slug);
   assert.deepEqual(Object.keys(page.hero).filter(k=>['layout','eyebrow','title','support','primaryCta','secondaryCta','visual'].includes(k)),
@@ -51,13 +51,8 @@ test('every ordinary page editor reuses the canonical Synlighet Hero field names
   assert.equal(hero.label,'Hero',file);
   const layout=resolveField(hero.fields.find((f:any)=>f.name==='layout'),cms.components);
   assert.deepEqual(layout.options.values.map((v:any)=>v.name),['split-right','split-left','centered','centered-none'],file);
-  if(page.kind!=='pricing'){
-   assert.deepEqual(hero.fields.map((f:any)=>f.name),expected,file);
-   assert.ok(!editor.fields.some((f:any)=>['eyebrow','title','intro','cta','heroVisual'].includes(f.name)),file);
-  }else{
-   assert.deepEqual(hero.fields.map((f:any)=>f.name),['layout'],'Pricing derives copy from global packages master');
-   for(const key of ['eyebrow','title','intro'])assert.ok(!editor.fields.some((f:any)=>f.name===key&&!f.hidden&&!f.readonly));
-  }
+  assert.deepEqual(hero.fields.map((f:any)=>f.name),expected,file);
+  assert.ok(!editor.fields.some((f:any)=>['eyebrow','title','intro','cta','heroVisual'].includes(f.name)),file);
  }
 });
 
@@ -66,10 +61,8 @@ test('Pages CMS edits one nested Hero; restores all sections, media and CTA with
   const editor=entryForFile(cms,`app/src/content/pages/${file}`);
   const edited=structuredClone(page);
   edited.hero.layout='centered-none';
-  if(page.kind!=='pricing'){
-   edited.hero.eyebrow+=' CMS-test';
-   edited.hero.title+=' CMS-test';
-  }
+  edited.hero.eyebrow+=' CMS-test';
+  edited.hero.title+=' CMS-test';
   const saved=JSON.parse(cmsJsonSave(page,edited,editor,cms));
   assertPreservedContent(edited,saved);
   assert.deepEqual(saved.sections,page.sections,file);
@@ -83,14 +76,13 @@ test('Pages CMS edits one nested Hero; restores all sections, media and CTA with
  }
 });
 
-test('all rendered Hero families preserve copy, CTA, image crop and shared Pricing authority',()=>{
+test('all rendered Hero families preserve copy, CTA, image crop and separate Package authority',()=>{
  const commercial=resolveHomepageContent(home);
  for(const {page} of pages){
   const view=resolvePageHero(page,commercial);
   assert.equal(view.family,page.kind,page.slug);
   assert.equal(view.layout,page.hero?.layout==='centered-none'?'centered':page.hero?.layout??'split-right');
-  if(page.kind==='pricing'){assert.equal(view.title,commercial.packages.heading);assert.throws(()=>resolvePageHero(page),/shared Packages/);}
-  else{
+  {
    assert.equal(view.title,page.hero.title,page.slug);
    assert.equal(view.support,page.hero.support,page.slug);
    assert.equal(view.primaryCta?.href,page.kind==='assessment'?undefined:page.hero.primaryCta.href,page.slug);
@@ -117,4 +109,23 @@ test('glossary and error pages keep their separate presentation-only Hero contra
  assert.equal(error.primaryCta?.href,'/');
  assert.equal(error.title,'Her var det\ningen vei videre.');
  assert.equal(heroViewSchema.safeParse({...error,layout:'raw-class'}).success,false);
+});
+
+test('Pricing page Hero is independently editable but does not rewrite global package content',()=>{
+ const pricing=pages.find(({page})=>page.kind==='pricing')!.page;
+ const editor=entryForFile(cms,'app/src/content/pages/priser.json');
+ assert.deepEqual(editor.fields.slice(0,2).map((f:any)=>f.name),['seo','hero']);
+ const commercial=resolveHomepageContent(home);
+ const originalPackages=structuredClone(commercial.packages);
+ const edited=structuredClone(pricing);
+ edited.hero.title='Test: nytt Hero-budskap';
+ edited.hero.support='Test: ny ingress';
+ edited.hero.primaryCta={label:'Test knapp',href:'/kontakt/'};
+ const saved=JSON.parse(cmsJsonSave(pricing,edited,editor,cms));
+ assert.deepEqual(saved.hero,edited.hero);
+ assert.equal(pageSchema.safeParse(saved).success,true);
+ assert.equal(resolvePageHero(saved,commercial).title,edited.hero.title);
+ assert.equal(resolvePageHero(saved,commercial).primaryCta?.href,'/kontakt/');
+ assert.deepEqual(commercial.packages,originalPackages);
+ assert.deepEqual(JSON.parse(cmsJsonSave(saved,pricing,editor,cms)),pricing);
 });

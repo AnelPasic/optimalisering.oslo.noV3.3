@@ -7,9 +7,19 @@
     "title": "Priser på SEO, CRO og digital optimalisering | Optimalisering Oslo",
     "description": "Fast månedlig optimalisering fra 4 500 kr/mnd eks. mva. Velg Optimalisering, Vekst eller Partner. Annonsebudsjett kommer i tillegg."
   },
-  "eyebrow": "Priser",
-  "title": "Start med det viktigste. Utvid når behovet er større.",
-  "intro": "Vi prioriterer det som begrenser resultatet mest. Velg ett prioritert område, to områder som jobber sammen eller større kapasitet på tvers.",
+  "hero": {
+    "layout": "split-right",
+    "eyebrow": "Fast månedlig optimalisering",
+    "title": "Tre pakker. Samme mål: flere riktige kunder.",
+    "support": "Velg pakken som passer hvor komplekst behovet ditt er, fra en tydelig flaskehals til flere kundereiser som må prioriteres løpende.",
+    "primaryCta": {
+      "label": "Ta en gratis sjekk",
+      "href": "/#sjekk"
+    },
+    "visual": {
+      "kind": "none"
+    }
+  },
   "sections": [
     {
       "_block": "content",
@@ -88,12 +98,5 @@
       "question": "Hva hvis jeg ikke vet hvilken pakke jeg trenger?",
       "answer": "Start med den gratis sjekken. Vi ser på nettsiden og sier hvor vi ville startet og hvorfor."
     }
-  ],
-  "cta": {
-    "label": "Ta en gratis sjekk",
-    "href": "/#sjekk"
-  },
-  "hero": {
-    "layout": "split-right"
-  }
+  ]
 }

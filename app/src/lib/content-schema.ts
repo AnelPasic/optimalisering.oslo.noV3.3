@@ -19,7 +19,7 @@ export const pageSchema = z.preprocess((input,context)=>{
   // Native CMS Hero is now a single authored object. Legacy projections are
   // runtime-only for existing commercial/section components; they are never
   // written back as duplicate CMS fields.
-  if(raw?.kind!=='home'&&raw?.slug!=='synlighet'&&raw?.kind!=='pricing'&&raw?.hero&&typeof raw.hero==='object'&&'primaryCta' in raw.hero){
+  if(raw?.kind!=='home'&&raw?.slug!=='synlighet'&&raw?.hero&&typeof raw.hero==='object'&&'primaryCta' in raw.hero){
     const hero=synlighetHeroSchema.safeParse(raw.hero);
     if(!hero.success)for(const issue of hero.error.issues)context.addIssue({...issue,path:['hero',...issue.path]});
     if(legacyHeroKeys.some(key=>Object.hasOwn(raw,key)))context.addIssue({code:'custom',path:['hero'],message:'Hero is a single CMS authority; do not save duplicate top-level Hero fields'});
