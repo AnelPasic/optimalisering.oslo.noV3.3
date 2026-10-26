@@ -47,7 +47,9 @@ test('one Hero first uses homepage field names/order/shared labels and retains a
   assert.deepEqual(hero.fields.map((f:any)=>f.name),homeHero.fields.map((f:any)=>f.name));
   for(const field of hero.fields.filter((f:any)=>f.name!=='visual'))assert.deepEqual(field,homeHero.fields.find((f:any)=>f.name===field.name));
   for(const key of legacyHeroKeys)assert.ok(!entry.fields.some((f:any)=>f.name===key));
-  const visual=hero.fields.find((f:any)=>f.name==='visual'),image=visual.fields.find((f:any)=>f.name==='image');
+  const visual=hero.fields.find((f:any)=>f.name==='visual');
+  assert.equal(visual.type,'block');
+  const image=visual.blocks.find((b:any)=>b.name==='image').fields.find((f:any)=>f.name==='image');
   assert.equal(image.fields.find((f:any)=>f.name==='src').options.media,'serviceHeroImages');assert.ok(image.fields.some((f:any)=>f.name==='alt'));
 });
 
