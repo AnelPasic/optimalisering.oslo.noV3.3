@@ -23,19 +23,19 @@ test('SEO is the first native Pages CMS field in every page/article/service edit
     const seo = editor.fields?.[0];
     assert.equal(seo?.type, 'object', editor.label);
     assert.equal(seo?.required, true, editor.label);
-    assert.deepEqual(seo.fields?.map(field => field.name), ['title', 'description'], editor.label);
-    assert.deepEqual(seo.fields?.map(field => field.label), ['Sidetittel', 'Metabeskrivelse'], editor.label);
+    assert.deepEqual(seo.fields?.map(field => field.name), ['title', 'description', 'slug'], editor.label);
+    assert.deepEqual(seo.fields?.map(field => field.label), ['Sidetittel', 'Metabeskrivelse', 'URL-slug'], editor.label);
     assert.ok(seo.fields?.every(field => field.required === true), editor.label);
     assert.equal(editor.fields?.filter(field => field.name === 'seo').length, 1, editor.label);
-    // Slug lives at the root of the page JSON, but appears immediately
-    // beneath the SEO panel before the shared grouped Hero in Pages CMS.
-    assert.deepEqual(editor.fields?.slice(0, 3).map(field => field.name), ['seo', 'slug', 'hero'], editor.label);
-    const slug = editor.fields?.[1];
+    // One canonical slug, inside SEO data, shown in the same SEO box.
+    assert.deepEqual(editor.fields?.slice(0, 2).map(field => field.name), ['seo', 'hero'], editor.label);
+    const slug = seo.fields?.[2];
     assert.equal(slug?.label, 'URL-slug', editor.label);
     assert.equal(slug?.type, 'string', editor.label);
     assert.equal(slug?.readonly, true, editor.label);
     assert.equal(slug?.required, true, editor.label);
-    assert.equal(editor.fields?.filter(field => field.name === 'slug').length, 1, editor.label);
+    assert.equal(editor.fields?.filter(field => field.name === 'slug').length, 0, editor.label);
+    assert.equal(seo.fields?.filter(field => field.name === 'slug').length, 1, editor.label);
   }
 });
 
@@ -62,16 +62,18 @@ test('URL-slug remains the original read-only route value for every published pa
     const entry = entryForFile(config, path);
     assert.ok(entry, file);
     const original = JSON.parse(readFileSync(`src/content/pages/${file}`, 'utf8'));
-    assert.equal(typeof original.slug, 'string', file);
-    assert.equal(file.replace(/\.json$/, ''), original.slug.substring(original.slug.lastIndexOf('/') + 1), file);
+    assert.equal(typeof original.seo.slug, 'string', file);
+    assert.equal(Object.hasOwn(original,'slug'),false,file);
+    assert.equal(file.replace(/\.json$/, ''), original.seo.slug.substring(original.seo.slug.lastIndexOf('/') + 1), file);
     const saved = JSON.parse(cmsJsonSave(original, original, entry, config));
-    assert.equal(saved.slug, original.slug, file);
+    assert.equal(saved.seo.slug, original.seo.slug, file);
+    assert.equal(Object.hasOwn(saved,'slug'),false,file);
     assert.deepEqual(saved.seo, original.seo, file);
     assert.deepEqual(saved.hero, original.hero, file);
   }
   // Home uses / in the router; its internal source id is "home".
   const home = JSON.parse(readFileSync('src/content/pages/home.json', 'utf8'));
-  assert.equal(home.slug, 'home');
+  assert.equal(home.seo.slug, 'home');
   const routes = readFileSync('src/pages/[...slug].astro','utf8');
   assert.match(routes, /route\.family === 'home' \? undefined : data\.slug/);
 });
