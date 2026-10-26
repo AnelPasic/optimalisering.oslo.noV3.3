@@ -19,7 +19,7 @@ test('SEO uses one native mixed sequence and references only the canonical packa
  const parsed=pageSchema.parse(source),sections=visibleServiceSections(parsed);
  assert.equal(sections.filter(row=>row.id==='priser').length,1);
  assert.equal(sections.filter(row=>row.id==='sjekk').length,1);
- for(const key of seoGlobalIds) {
+ for(const key of ['priser','sjekk'] as const) {
    const block=sections.find(row=>row.globalElement===key)!;
    assert.deepEqual(block.content,getGlobalElement(key).content);
  }
@@ -33,7 +33,7 @@ test('SEO uses one native mixed sequence and references only the canonical packa
  assert.equal(source.authority,'DRAFT / NON-AUTHORITATIVE');
 });
 
-test('native SEO page editor contains section layouts, card treatment and a two-entry global selector',()=>{
+test('native SEO page editor contains section layouts, card treatment and a shared eight-entry global selector',()=>{
  const entry=entryForFile(cms,'app/src/content/pages/seo.json');
  assert.equal(entry?.type,'file');
  const group=cms.content.find((e:any)=>e.name==='serviceGroup');
@@ -50,11 +50,12 @@ test('native SEO page editor contains section layouts, card treatment and a two-
  assert.ok(pageSchema.safeParse(saved).success);
 });
 
-test('SEO rejects duplicated, forged or unsupported global references and broken on-page links',()=>{
+test('SEO shares the full global catalogue while rejecting duplicates, forgeries and broken links',()=>{
  const add=(element:string)=>{const x=clone();x.sections.push({_block:'global',element});return x};
- for(const el of ['resultater','sporsmal','behov','regneeksempel','untrusted']) {
-  assert.equal(pageSchema.safeParse(add(el)).success,false,el);
+ for(const el of ['resultater','sporsmal','behov','regneeksempel','mekanisme','passer']) {
+  assert.equal(pageSchema.safeParse(add(el)).success,true,el);
  }
+ assert.equal(pageSchema.safeParse(add('untrusted')).success,false,'unknown global reference');
  for(const el of ['priser','sjekk'])assert.equal(pageSchema.safeParse(add(el)).success,false,'duplicate '+el);
  const forged=clone();forged.sections.push({...getGlobalElement('priser'),globalElement:'priser'});
  assert.equal(pageSchema.safeParse(forged).success,false);
