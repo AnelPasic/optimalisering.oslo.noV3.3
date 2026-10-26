@@ -1,5 +1,4 @@
 {
-  "slug": "konvertering",
   "kind": "service",
   "composition": {
     "commercialText": true,
@@ -33,7 +32,8 @@
   "authority": "DRAFT / NON-AUTHORITATIVE",
   "seo": {
     "title": "Konverteringsoptimalisering (CRO) | Optimalisering Oslo",
-    "description": "Gjør flere relevante besøk til henvendelser og salg. Vi jobber med budskap, landingssider, skjema og kjøpsvei - og starter der kundene stopper."
+    "description": "Gjør flere relevante besøk til henvendelser og salg. Vi jobber med budskap, landingssider, skjema og kjøpsvei - og starter der kundene stopper.",
+    "slug": "konvertering"
   },
   "hero": {
     "layout": "split-right",
