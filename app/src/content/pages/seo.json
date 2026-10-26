@@ -1,11 +1,11 @@
 {
-  "slug": "seo",
   "kind": "service",
   "status": "REVIEW_REQUIRED",
   "authority": "DRAFT / NON-AUTHORITATIVE",
   "seo": {
     "title": "SEO-byrå for bedrifter i Oslo | Optimalisering Oslo",
-    "description": "SEO-tjenester for bedrifter i Oslo og Norge. Vi vurderer søkeord, tjenestesider, tekniske hindringer og veien fra Google-søk til relevante henvendelser."
+    "description": "SEO-tjenester for bedrifter i Oslo og Norge. Vi vurderer søkeord, tjenestesider, tekniske hindringer og veien fra Google-søk til relevante henvendelser.",
+    "slug": "seo"
   },
   "hero": {
     "layout": "split-right",
