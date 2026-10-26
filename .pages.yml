@@ -1245,30 +1245,9 @@ content:
     operations: *a3
     fields:
       - *a4
-      - name: hero
-        component: pageHero
-        description: Hero-teksten hentes fra Forside → Seksjoner → Pakker og priser. Velg bare oppsett her. Ingen ekstra tekstkilde opprettes.
-      - name: eyebrow
-        label: Overtekst (inaktiv kilde)
-        type: string
-        hidden: true
-        readonly: true
-      - name: title
-        label: Overskrift (inaktiv kilde)
-        type: string
-        hidden: true
-        readonly: true
-      - name: intro
-        label: Ingress (inaktiv kilde)
-        type: text
-        hidden: true
-        readonly: true
+      - *standardHero
       - *a6
       - *a7
-      - name: cta
-        label: Neste steg
-        component: link
-        required: true
   - name: insight
     label: Innsikt
     type: group
