@@ -7,7 +7,6 @@
     "title": "SEO, AI-synlighet og konverteringsoptimalisering | Optimalisering Oslo",
     "description": "Bli funnet og gjør flere besøk til henvendelser og salg. Optimalisering for konkurranseutsatte bedrifter i Norge. Ta en gratis, manuell sjekk."
   },
-  "homepage": {},
   "hero": {
     "layout": "split-right",
     "eyebrow": "For bedrifter som konkurrerer om kundene",
@@ -70,6 +69,12 @@
     {
       "_block": "global",
       "element": "sporsmal"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Hvor fort kan vi forvente resultater",
+      "answer": "Det klassiske er at det kommer ann på veeeeldig mange ting. Først og fremst utgangspunkt og konkurransebilde. Har du ingen trafikk og henvendelser, da er det veldig lett å øke med 100% hver måned i starten, har du 20 000 besøkende og 1 000 bestillinger så ligger du ganske godt ann både med trafikk og konverteringsrate på 5%, da må man se om det er mer trafikk å hente.\nDerfor greit med en gratis sjekk først, da klarer vi å gi noe pekepinn på hva man kan forvente av forbedring."
     }
   ]
 }
