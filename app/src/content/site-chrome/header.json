@@ -101,7 +101,7 @@
     "showCta": true
   },
   "logoLight": "/images/branding/oo-logo.svg",
-  "logoDark": "/images/branding/oo-logo-dark.svg",
+  "logoDark": "/images/branding/oo-logoorange-dark.svg",
   "mobileLogoLight": "/images/branding/oo-xs.svg",
-  "mobileLogoDark": "/images/branding/oo-xs-dark.svg"
+  "mobileLogoDark": "/images/branding/oo-orange-xs-dark.svg"
 }
