@@ -27,7 +27,7 @@ validateServiceGlobalProof(page,records);
   {visibleServiceSections(page).map(section=><>
     {section.globalElement ? <GlobalContentSection element={section.globalElement} /> : <>
     <ContentSection section={section} visualId={capability.sectionVisuals.find(v=>v.section===section.id)?.visual} defaultSurface={capability.sectionSurfaces.find(v=>v.section===section.id)?.surface} />
-    {!cmsOnly&&capability.proofAfter===section.id&&page.proof&&<Proof content={page.proof} records={records} primary />}
+    {!cmsOnly&&!globalProof&&capability.proofAfter===section.id&&page.proof&&<Proof content={page.proof} records={records} primary />}
     {!cmsOnly&&bridge?.after===section.id&&<PricingBridge content={commercial.packages} link={bridge.link} serviceName={bridge.serviceName} />}
     </>}
   </>)}
