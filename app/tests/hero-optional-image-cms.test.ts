@@ -23,6 +23,10 @@ test('every page uses one non-list conditional Hero visual block matching existi
     assert.equal(visual.list,undefined,file);
     assert.equal(visual.required,true,file);
     assert.deepEqual(visual.blocks.map((block:any)=>block.name),['none','image'],file);
+    // Native Pages CMS BlocksField renders block.fields only when the selected
+    // definition has type=object; omitted type falls back to a text editor and
+    // renders the {kind:'none'} object as "[object Object]" (OWNER screenshot).
+    assert.deepEqual(visual.blocks.map((block:any)=>block.type),['object','object'],file);
     assert.deepEqual(visual.blocks[0].fields,[],file);
     const image = visual.blocks[1].fields.find((field:any)=>field.name==='image');
     assert.equal(image.type,'object',file);
