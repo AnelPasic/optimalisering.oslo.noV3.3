@@ -30,7 +30,7 @@ test('changing Hero layout in Pages CMS preserves all owned text, CTA, image and
   const edited=structuredClone(page);edited.hero={...edited.hero,layout:'centered-none'};
   const saved=JSON.parse(cmsJsonSave(page,edited,editor,cms));
   assertPreservedContent(edited,saved);
-  assert.equal(pageSchema.safeParse(saved).success,true,record.file);
+  const result=pageSchema.safeParse(saved);assert.ok(result.success,record.file+': '+(result.success?'':JSON.stringify(result.error.issues).slice(0,2600)));
   const before=JSON.stringify(saved),view=resolvePageHero(saved,commercial);
   assert.equal(view.layout,'centered');assert.deepEqual(view.visual,{kind:'none'});
   assert.equal(JSON.stringify(saved),before,'Rendering must not mutate CMS content');
