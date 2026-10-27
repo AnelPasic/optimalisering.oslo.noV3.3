@@ -40,6 +40,13 @@ export interface ListPage {
   listing?:z.input<typeof listingSchema>;
 }
 export interface PageListItem {slug:string;title:string;summary:string;label:string;href?:string;visual?:ListingVisual;}
+
+/** Presentation-only visual: alternating rows never collapse when a source page lacks media.
+ * The original item and CMS-owned listing.visual remain unchanged.
+ */
+export function pageListPresentationVisual(item: PageListItem, layout: PageListConfig['layout']): ListingVisual | undefined {
+  return layout === 'alternating' ? (item.visual ?? { kind: 'icon', icon: 'page' }) : item.visual;
+}
 const normalizeSlug=(slug:string)=>slug.replace(/^\/+|\/+$/g,'');
 const collator=new Intl.Collator('nb',{usage:'sort',sensitivity:'variant'});
 const sortPages=(pages:ListPage[],mode:'editorial'|'title')=>pages.sort((a,b)=>{
