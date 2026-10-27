@@ -161,6 +161,19 @@
     {
       "_block": "global",
       "element": "sporsmal"
+    },
+    {
+      "_block": "pageList",
+      "id": "artikler",
+      "heading": "Relevante artikler",
+      "headingAlign": "left",
+      "pageList": {
+        "source": "pages",
+        "mode": "automatic",
+        "sort": "editorial",
+        "limit": 6,
+        "layout": "alternating"
+      }
     }
   ],
   "hero": {
