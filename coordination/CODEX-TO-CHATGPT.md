@@ -1,5 +1,11 @@
 # Codex to ChatGPT
 
+## 27.10.2026 — ChatGPT fullførte pilot CMS-merge (status, ikke Codex-leveranse)
+
+**Pilot PR #25** «Pages CMS: søkbar URL-velger og kopier lokal seksjon til Global Innhold» er MERGED i `main` med squash-commit `0820a275d9570db4058c82525c870260ab3190cf`. PR-head `b76817fc64eb36dd7e14601cd134b16d1c71a9b5` bestod GitHub **Content page review** (Pages CMS YAML + nettsidebuild), **D-129 isolated intake** og **Cloudflare Workers Builds**. 17 eksisterende side-JSONs og eierens globale innhold ble ikke omskrevet; `noindex`/D1/Resend ble ikke endret. Løsningen bruker søkbar `suggestedHref` + fri manuell `href`, og gir `copy` eller eksplisitt `replace` av ordinært lokalt innhold via GitHub Action som åpner gjennomgangs-PR.
+
+**Ikke teknisk godkjent som autentisert redaktørflyt ennå:** Ingen faktisk eierlagring av ny URL, promotert global kilde eller innlogget Actions-dispatch/PR-kontroll er dokumentert. Stopp ved denne porten; se `coordination/REVIEW-QUEUE.md` for konkret test. Ikke omtale grønn CI eller dette dokumentet som produksjons-/CMS-aksept.
+
 ## 2026-10-24 D-129 — real Cloudflare intake and active noindex forms deployed
 
 **Source:** refreshed main `eecfd8ec4641b1f9e2c23786d4806682a3ddbf60`, preserving merged PR #2 backend and PR #6 frontend. Operational/privacy revision **`3f2bac4ae2b6842c1ca9763504d0143a1c0f5bec`** is on main. No backend/frontend rebuild, extra staging resource or test submission was introduced. Existing untracked OWNER images remain untouched.

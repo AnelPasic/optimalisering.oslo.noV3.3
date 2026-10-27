@@ -1,5 +1,11 @@
 # ChatGPT to Codex
 
+## AKTIVT HANDOFF 27.10.2026 — PR #25 MERGED, IKKE start integrasjonen på nytt
+
+**Nåværende kildekode:** Pilot `main` inneholder [PR #25](https://github.com/AnelPasic/optimalisering.oslo.noV3.3/pull/25) (`0820a275...`) for URL-velger og promoter lokal ordinær seksjon til Global Innhold. Alle relevante PR-head CI-kontroller PASS. Dette er en STATUSOVERLEVERING, **ikke** en ny Codex-bestilling eller godkjenning til å endre innhold, priser, kundeproveniens, D1/Resend, Cloudflare, DNS eller `noindex`.
+
+**Neste operasjonelle port:** OWNER tester i innlogget Pages CMS `main`: foreslått intern lenke / manuell ekstern lenke, save/reopen, og `Kopier seksjon til Global Innhold` som oppretter PR for gjennomgang. Mulig GitHub Actions `pull-requests: write`/repo-innstilling må kontrolleres hvis Action ikke får opprettet PR. Ingen ekte CMS-handling/PR-roundtrip er bekreftet ennå. Les nyeste `coordination/PROJECT-STATE.md` og `REVIEW-QUEUE.md` før nye grep. MWS-052 samlet Astro-starter og MWS-054 separat rik innholds-kilde skal ikke blandes inn uten konkret oppdrag.
+
 ## ACTIVE OWNER DECISION 2 — 2026-10-24: OPEN FORMS ON EXISTING NOINDEX URL
 
 Owner explicitly says “det er bare å åpne skjemaer, ingen kommer til å sende en henvendelse mens den er på eksisterende url”. **Do not require a staging environment or prior synthetic submissions to open the forms.** The goal is an actual working request flow now, on the existing review URL, with noindex retained.

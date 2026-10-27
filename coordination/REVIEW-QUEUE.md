@@ -1,5 +1,12 @@
 # Review queue — aktiv status
 
+## AKTIV REVIEW 27.10.2026 — CMS URL-valg og lokal → Global Innhold
+
+- **Teknisk kildekode PASS / MERGED:** [PR #25](https://github.com/AnelPasic/optimalisering.oslo.noV3.3/pull/25), merge `0820a275d9570db4058c82525c870260ab3190cf`; grønne `Content page review`, `D-129 isolated intake` og Cloudflare Workers PR-head-build. 13 editorer / 17 sider, URL-forslag fra ruter/snarveier og manuell `href`; ny global CMS-samling og egen «Kopier seksjon til Global Innhold»-handling. Ingen eksisterende innholds-JSON/priser/caser/skjema eller `noindex` er endret i denne funksjonsrunden.
+- **OWNER CMS-aksept ÅPEN:** Logg inn i Pages CMS på `main`, velg intern side i søkbar liste; lagre/åpne på nytt og kontroller faktisk URL. Test manuelt `https://`-valg når Select er tømt. Bekreft navigering i preview.
+- **OWNER promotering ÅPEN:** Lagre siden først; velg en ordinær lokal innholdsseksjon; prøv `copy` og kontroller at originalen består og at en PR opprettes; gjennomgå ny global kilde i PR. Test `replace` kun med godkjent ufarlig blokk og verifiser anker, plassering, farger og lenker før merge. Test referanse fra en annen side og se endringen i forhåndsvisning. **Ikke** bruk beskyttede priser, forms, kundecaser eller globale masterblokker som testdata.
+- **Integrasjonsgrense:** Standard Pages CMS lagrer `suggestedHref` og manuell `href` separat; nettstedet bruker én validert, effektiv URL. Ekte workflow-dispatch/PR-roundtrip er ennå ikke påvist. Repo-tillatelse til å opprette PR via GitHub Actions kan være nødvendig. [Issue #22](https://github.com/AnelPasic/optimalisering.oslo.noV3.3/issues/22) beholdes til faktisk aksept. MWS-052 full Astro starter er separat, og MWS-054 rich-global source PR #16 er ikke flettet inn i dette pilotarbeidet.
+
 **Oppdatert 26.10.2026 etter OWNER-gjennomgang.** Denne øverste oversikten er gjeldende review-status. Dokumentasjonen nedenfor er **historisk arkiv**, ikke en liste med nye eller fortsatt blokkerende oppgaver. Konflikter avgjøres etter siste OWNER-beslutning og faktisk `main`; se [PROJECT-STATE.md](PROJECT-STATE.md) for teknisk handoff. Ingen CMS-kundeinnhold, kode eller Cloudflare-innstillinger endres gjennom denne oppryddingen.
 
 ## Avsluttet / OWNER-bekreftet

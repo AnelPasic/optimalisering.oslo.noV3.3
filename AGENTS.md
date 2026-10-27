@@ -1,5 +1,9 @@
 # Project coordination rules
 
+## Live cross-thread continuation (2026-10-27)
+
+**Read first:** `coordination/PROJECT-STATE.md` and `coordination/REVIEW-QUEUE.md` after checking the latest `main`; both override historical older handoffs. [PR #25](https://github.com/AnelPasic/optimalisering.oslo.noV3.3/pull/25) is MERGED with the native CMS URL selector and local-to-global Action. Do **not** rebuild that integration or assert authenticated CMS editor/action acceptance from CI alone. The remaining OWNER test is URL selected/manual save/reopen and reviewed promotion PR + reuse; keep issue #22 open until proven. No new pilot content, design, pricing, protected globals, D1/Resend, `noindex` or deployment is authorized by a handoff update. MWS reusable source and MWS-052 starter must be read separately on current source branch.
+
 ## Read before substantial work
 
 Read `coordination/CHATGPT-TO-CODEX.md` and `coordination/DECISIONS.md` before substantial work. Then read `coordination/PROJECT-STATE.md` and the relevant entries in `coordination/REVIEW-QUEUE.md`. Repository paths in these rules are relative to this repository root.

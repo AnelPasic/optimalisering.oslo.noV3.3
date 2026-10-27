@@ -1,5 +1,9 @@
 # Decisions and authority
 
+## OWNER BESLUTNING 27.10.2026 — aktiver URL-velger og lokal→global promotering i Optimalisering Oslo
+
+OWNER ba uttrykkelig om å teste **begge** funksjoner i pilotens ekte Pages CMS, ikke bare i en generisk MWS-kildepakke. [PR #25](https://github.com/AnelPasic/optimalisering.oslo.noV3.3/pull/25) er MERGED (commit `0820a275d9570db4058c82525c870260ab3190cf`). Bruk genererte, søkbare interne URL-valg samt separat manuelt internt/eksternt felt (to lagrede felt, én aktiv lenke; valgt Select vinner). Lokal ordinær seksjon kan **kopieres** til en selvstendig Global Innhold-kilde med originalen bevart som trygg standard, eller **erstattes** med global referanse med samme plassering/anker kun etter eksplisitt valg. Promotering lager en **review-PR**, ikke automatisk merge. Beskyttede globale priser, forms og bevis skal ikke flyttes. Git-kode, CI og build PASS betyr IKKE at eier allerede har bekreftet UI, action-dispatch eller publisering. Den reelle CMS-aksepttesten er fortsatt åpen; behold `noindex` og øvrig produksjonsoppsett uendret.
+
 ## D-129 operations — direct OWNER activation instruction, 2026-10-24
 
 The direct instruction in this Codex chat authorizes **one real D1, the existing intake Worker, Resend/Access setup, active forms and deployment of fresh main to the existing noindex preview**. It explicitly removes synthetic test submissions as an activation prerequisite and prohibits extra staging infrastructure, public DNS changes and removing noindex. Earlier development-only or smoke-test-before-activation entries remain history and do not override this instruction.
