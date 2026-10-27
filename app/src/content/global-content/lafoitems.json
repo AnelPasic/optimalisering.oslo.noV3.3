@@ -1,0 +1,16 @@
+{
+  "_block": "content",
+  "uid": "9808dd2f-1b24-4a83-8213-055eba6b3fff",
+  "id": "lafoitems",
+  "name": "SEO Nytt",
+  "heading": "SEO Nytt",
+  "headingAlign": "center",
+  "layout": "three-columns",
+  "surface": "lavender",
+  "links": [
+    {
+      "label": "Innsikt",
+      "href": "/innsikt"
+    }
+  ]
+}
