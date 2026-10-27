@@ -4,7 +4,8 @@ import {resolve,basename} from 'node:path';
 import {surfaceSchema} from './surface.ts';
 import {headingAlignSchema} from './heading-alignment.ts';
 import {contentLayoutSchema,boxVariantSchema} from './content-presentation.ts';
-import {sectionVisibilitySchema} from './home-builder.ts';
+// Keep the shared library independent of home-builder to avoid circular imports.
+const sectionVisibilitySchema=z.preprocess(value=>value==null||value===''?undefined:value,z.literal('hidden').optional());
 
 // One editable JSON section, never a copied Page section or a protected commercial master.
 const key=z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/);
