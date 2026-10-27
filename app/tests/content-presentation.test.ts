@@ -6,6 +6,7 @@ import YAML from 'yaml';
 import {pageSchema} from '../src/lib/content-schema.ts';
 import {cmsJsonSave,entryForFile,resolveField,assertPreservedContent,localHomeFixture} from './helpers/pages-cms-json.ts';
 import {getGlobalElement,homepageBlockSchema,globalElementIds} from '../src/lib/home-builder.ts';
+import {paragraphLayoutAttribute} from '../src/lib/content-presentation.ts';
 const home=localHomeFixture();
 const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
 const normal=(p:any)=>sectionRecords(p).find((s:any)=>s.id==='cms-local-fixture');
@@ -38,4 +39,23 @@ test('co-located CMS choices expose semantics and round-trip variant/reorder wit
  const p=structuredClone(home),s=normal(p);s.layout='stacked';s.items[0].boxVariant='card';
  const saved=JSON.parse(cmsJsonSave(home,p,entry,cms));assertPreservedContent(p,saved);assert.equal(pageSchema.safeParse(saved).success,true);
  const restored=JSON.parse(cmsJsonSave(saved,home,entry,cms));assertPreservedContent(home,restored);
+});
+
+test('text-only sections distribute paragraphs; boxes and protected sections retain existing layout',()=>{
+ const content={body:['Faktum én','Faktum to','Faktum tre'],layout:'three-columns' as const};
+ assert.equal(paragraphLayoutAttribute(content),'three-columns');
+ assert.equal(paragraphLayoutAttribute({...content,layout:'two-columns'}),'two-columns');
+ for(const layout of ['default','stacked',undefined]) assert.equal(paragraphLayoutAttribute({...content,layout}),undefined);
+ assert.equal(paragraphLayoutAttribute({...content,body:['Bare ett']}),undefined);
+ assert.equal(paragraphLayoutAttribute({...content,items:[{title:'Boks',text:'Innhold'}]}),undefined);
+ assert.equal(paragraphLayoutAttribute({...content,items:[]}), 'three-columns');
+ assert.equal(paragraphLayoutAttribute(content,true),undefined);
+ assert.equal(paragraphLayoutAttribute({...content,layout:'unsafe-css'}),undefined);
+ for(const source of ['src/components/ContentSection.astro','src/components/HomeSection.astro']){
+  const component=readFileSync(source,'utf8');
+  assert.ok(component.includes('data-content-layout={paragraphLayoutAttribute(section,'),source);
+ }
+ const css=readFileSync('src/styles/shared.css','utf8');
+ assert.ok(css.includes('.body-copy[data-content-layout="three-columns"]'));
+ assert.ok(css.includes('grid-template-columns: repeat(3, minmax(0, 1fr))'));
 });

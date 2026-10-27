@@ -444,6 +444,31 @@ p { text-wrap: pretty; }
 }
 }
 
+/* Text-only sections: one CMS paragraph per column. Box sections retain
+   full-width introductions and their existing independent card grid. */
+.content-section .body-copy[data-content-layout] {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(20px, 3vw, 48px);
+  text-align: left;
+}
+.content-section .body-copy[data-content-layout] > p {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  margin-top: 0;
+}
+@media (min-width: 651px) {
+  .content-section .body-copy[data-content-layout="two-columns"],
+  .content-section .body-copy[data-content-layout="three-columns"] {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1000px) {
+  .content-section .body-copy[data-content-layout="three-columns"] {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 /* Explicit ordinary-content choices; absent attributes keep automatic compositions. */
 .content-section .section-items[data-content-layout] { grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 651px) {
