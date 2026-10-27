@@ -1,5 +1,9 @@
 # Codex to ChatGPT
 
+## 27.10.2026 — Etter ekte Pages CMS-action: isolert runtimefeil løst
+
+OWNER gjorde faktisk Pages CMS-action; [GitHub Actions #40509554747](https://github.com/AnelPasic/optimalisering.oslo.noV3.3/actions/runs/40509554747) avsluttet med `Repository mismatch` fordi CMS bruker lowercase repo-navn. Ingen global seksjon/review PR oppstod. Pilot [PR #26](https://github.com/AnelPasic/optimalisering.oslo.noV3.3/pull/26) squash-merged `617d9c0a` etter vellykket Content page review og D-129 isolated intake; lagt til ekte payload-case-regresjon og automatisk script-CI-filter. Ingen side-/global-/CMS-eierdata, priser, merkevare, skjemaer, D1/Resend, tema eller noindex endret. **Neste:** OWNER må prøve handlingen på nytt fra fersk autentisert Pages CMS `main` og kontrollere opprettet review-PR; egen save/reopen-test av URL-valg er fortsatt ikke akseptert. Ikke anta ekte full roundtrip fra CI. MWS-054 kildeutvidelse + identisk generisk casing-fix merged `4fa73346` i systemrepoet; assembled MWS-052 fremdeles åpen.
+
 ## 27.10.2026 — ChatGPT fullførte pilot CMS-merge (status, ikke Codex-leveranse)
 
 **Pilot PR #25** «Pages CMS: søkbar URL-velger og kopier lokal seksjon til Global Innhold» er MERGED i `main` med squash-commit `0820a275d9570db4058c82525c870260ab3190cf`. PR-head `b76817fc64eb36dd7e14601cd134b16d1c71a9b5` bestod GitHub **Content page review** (Pages CMS YAML + nettsidebuild), **D-129 isolated intake** og **Cloudflare Workers Builds**. 17 eksisterende side-JSONs og eierens globale innhold ble ikke omskrevet; `noindex`/D1/Resend ble ikke endret. Løsningen bruker søkbar `suggestedHref` + fri manuell `href`, og gir `copy` eller eksplisitt `replace` av ordinært lokalt innhold via GitHub Action som åpner gjennomgangs-PR.
