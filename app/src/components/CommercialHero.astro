@@ -6,6 +6,7 @@ import TermText from './TermText.astro';
 import HeroPhoto from './HeroMedia.astro';
 import {getCollection} from 'astro:content';
 import {getSelectedHeroProof} from '../lib/hero-proof';
+import type {getHeroProof} from '../lib/hero-proof';
 import {getGlobalElement} from '../lib/home-builder';
 interface Props {content:HeroView;proof?:ReturnType<typeof getHeroProof>;demo?:boolean;}
 const {content:input,proof,demo=false}=Astro.props;
