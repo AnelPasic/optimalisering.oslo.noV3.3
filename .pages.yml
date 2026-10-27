@@ -657,6 +657,23 @@ components:
         label: Visning på denne siden
         component: sectionVisibility
         description: Flytt, skjul eller fjern bare plasseringen. Originalinnholdet lagres ett sted.
+  sharedContentPlacement:
+    type: object
+    fields:
+      - name: entry
+        label: Velg global innholdsseksjon
+        type: reference
+        required: true
+        options:
+          collection: sharedContent
+          search: "name,heading,id"
+          value: "{fields.id}"
+          label: "{fields.name}"
+        description: Innholdet redigeres under Global Innhold → Egendefinerte seksjoner. Her velger du bare plassering.
+      - name: visibility
+        label: Visning på denne siden
+        component: sectionVisibility
+        description: Skjul eller fjern kun plasseringen; originalinnholdet beholdes.
   serviceGlobalPlacement:
     type: object
     fields:
@@ -915,6 +932,9 @@ content:
                 label: Visning på denne siden
                 component: sectionVisibility
                 description: "Fjerning sletter bare plasseringen. Eksisterende lenker til #sjekk og #priser må få et gyldig mål før disse skjules eller fjernes."
+          - name: sharedContent
+            label: Global innholdsseksjon
+            component: sharedContentPlacement
           - name: pageList
             label: PageList – innholdsliste
             component: sectionPageList
@@ -1159,6 +1179,9 @@ content:
               - name: global
                 label: Globalt element
                 component: serviceGlobalPlacement
+              - name: sharedContent
+                label: Global innholdsseksjon
+                component: sharedContentPlacement
           - *a7
           - &serviceproof
             name: proof
@@ -1242,6 +1265,9 @@ content:
               - name: global
                 label: Globalt element
                 component: serviceGlobalPlacement
+              - name: sharedContent
+                label: Global innholdsseksjon
+                component: sharedContentPlacement
           - *a7
       - name: serviceSynlighet
         label: Synlighet
@@ -1275,6 +1301,9 @@ content:
               - name: global
                 label: Globalt element
                 component: serviceGlobalPlacement
+              - name: sharedContent
+                label: Global innholdsseksjon
+                component: sharedContentPlacement
           - *a7
       - name: serviceLokalSeo
         label: Lokal SEO
@@ -1424,6 +1453,9 @@ content:
               - name: global
                 label: Globalt element
                 component: serviceGlobalPlacement
+              - name: sharedContent
+                label: Global innholdsseksjon
+                component: sharedContentPlacement
           - *a7
       - name: insightArticles
         label: Artikler
@@ -2159,6 +2191,54 @@ content:
     label: Global Innhold
     type: group
     items:
+      - name: sharedContent
+        label: Egendefinerte seksjoner
+        type: collection
+        path: app/src/content/global-content
+        format: json
+        subfolders: false
+        exclude: [README.md]
+        filename: "{fields.id}.json"
+        operations:
+          create: true
+          rename: false
+          delete: false
+        view:
+          primary: name
+          fields: [name, id, heading]
+          search: [name, heading, id]
+        fields:
+          - name: _block
+            type: string
+            hidden: true
+            readonly: true
+            default: content
+            required: true
+          - name: uid
+            type: uuid
+            hidden: true
+            required: true
+            options:
+              editable: false
+              generate: false
+          - name: id
+            label: Stabil ID og lenkeanker
+            type: string
+            required: true
+            pattern: ^[a-z0-9]+(?:-[a-z0-9]+)*$
+            description: Bruk små bokstaver og bindestrek, for eksempel seo-forklaring. Må ikke endres etter opprettelse; den brukes på alle sider.
+          - name: name
+            label: Navn i seksjonslisten
+            type: string
+            required: true
+          - *serviceEyebrow
+          - *serviceHeading
+          - *serviceHeadingAlign
+          - *serviceLayout
+          - *serviceSurface
+          - *serviceBody
+          - *serviceItems
+          - *serviceLinks
       - name: globalSelector
         label: Behovsvelger
         type: file
