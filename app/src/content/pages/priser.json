@@ -83,6 +83,10 @@
           "href": "/#sjekk"
         }
       ]
+    },
+    {
+      "_block": "global",
+      "element": "resultater"
     }
   ],
   "faq": [
