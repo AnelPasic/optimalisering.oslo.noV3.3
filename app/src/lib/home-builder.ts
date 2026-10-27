@@ -38,7 +38,7 @@ export const homepageBlockSchema=z.discriminatedUnion('_block',[
  singleton('proof','resultater',homeSectionDataSchema.shape.proof),
  singleton('assessment','sjekk',z.object({layout:assessmentLayoutSchema,section:homeSectionDataSchema.shape.assessmentSection,form:homeSectionDataSchema.shape.form}).strict()),
  singleton('faq','sporsmal',z.object({eyebrow:z.string(),heading:z.string(),items:z.array(z.object({question:z.string(),answer:z.string()}))}).strict()),
- z.object({_block:z.literal('pageList'),id:z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),name:z.string().optional(),visibility:sectionVisibilitySchema,eyebrow:z.string().optional(),heading:z.string().trim().min(1),body:z.array(z.string()).default([]),headingAlign:headingAlignSchema,surface:surfaceSchema,pageList:pageListSchema}).strict(),
+ z.object({_block:z.literal('pageList'),id:z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),name:z.string().optional(),visibility:sectionVisibilitySchema,eyebrow:z.string().optional(),heading:z.string().trim().min(1),body:z.array(z.string()).default([]),headingAlign:headingAlignSchema,surface:surfaceSchema,layout:contentLayoutSchema.optional(),pageList:pageListSchema}).strict(),
  z.object({...identity,_block:z.literal('content'),eyebrow:z.string().optional(),heading:z.string().trim().min(1),body:z.array(z.string()).default([]),surface:surfaceSchema,headingAlign:headingAlignSchema,layout:contentLayoutSchema,
  items:z.array(z.object({title:z.string(),text:z.string(),href:z.string().startsWith('/').optional(),label:z.string().optional(),surface:surfaceSchema,boxVariant:boxVariantSchema})).optional(),links:z.array(link).optional()}).strict(),
 ]);
