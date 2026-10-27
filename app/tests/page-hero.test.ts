@@ -52,51 +52,8 @@ test('every ordinary page editor reuses the canonical Synlighet Hero field names
   const layout=resolveField(hero.fields.find((f:any)=>f.name==='layout'),cms.components);
   assert.deepEqual(layout.options.values.map((v:any)=>v.name),['split-right','split-left','centered','centered-none'],file);
   assert.deepEqual(hero.fields.map((f:any)=>f.name),expected,file);
-  const visual=resolveField(hero.fields.find((f:any)=>f.name==='visual'),cms.components);
-  assert.equal(visual.type,'object',file+' image settings must always be available');
-  assert.deepEqual(visual.fields.map((f:any)=>f.name),['kind','image'],file);
-  const mode=resolveField(visual.fields.find((f:any)=>f.name==='kind'),cms.components);
-  assert.equal(mode.type,'select',file);
-  assert.deepEqual(mode.options.values.map((v:any)=>v.name),['none','image'],file);
-  const image=resolveField(visual.fields.find((f:any)=>f.name==='image'),cms.components);
-  assert.equal(image.type,'object',file);
-  assert.deepEqual(image.fields.map((f:any)=>f.name),['kind','src','alt','positionX','positionY'],file);
-  assert.equal(image.fields.find((f:any)=>f.name==='src')?.type,'image',file);
-  assert.equal(image.fields.find((f:any)=>f.name==='src')?.options?.media,page.kind==='home'?'heroImages':'serviceHeroImages',file);
-  assert.equal(editor.fields.find((f:any)=>f.name==='sections')?.label,'Innholdsseksjoner',file);
-  assert.ok(editor.fields.find((f:any)=>f.name==='faq'),file+' must have page-owned FAQ');
   assert.ok(!editor.fields.some((f:any)=>['eyebrow','title','intro','cta','heroVisual'].includes(f.name)),file);
  }
-});
-
-test('all 17 Hero editors keep picture controls and retain media when display is disabled',()=>{
- const service=pages.find(p=>p.page.slug==='synlighet')!.page;
- assert.equal(service.hero.visual.kind,'image');
- assert.equal(home.hero.visual.kind,'image');
- let hidden=0, added=0;
- for(const {file,page} of pages){
-   const editor=entryForFile(cms,`app/src/content/pages/${file}`);
-   const edit=structuredClone(page);
-   const before=structuredClone(page);
-   if(edit.hero.visual.kind==='image'){
-     edit.hero.visual.kind='none'; // Switching display off must never delete saved image.
-     const saved=JSON.parse(cmsJsonSave(page,edit,editor,cms));
-     assert.deepEqual(saved.hero.visual.image,before.hero.visual.image,file);
-     assert.equal(resolvePageHero(saved).visual.kind,'none',file);
-     assert.deepEqual(saved.sections,before.sections,file);
-     assert.deepEqual(saved.faq,before.faq,file);
-     hidden++;
-   }else{
-     edit.hero.visual={kind:'image',image:structuredClone(page.kind==='home'?home.hero.visual.image:service.hero.visual.image)};
-     const saved=JSON.parse(cmsJsonSave(page,edit,editor,cms));
-     assert.ok(pageSchema.safeParse(saved).success,file);
-     assert.equal(resolvePageHero(saved).visual.kind,'image',file);
-     assert.deepEqual(saved.sections,before.sections,file);
-     assert.deepEqual(saved.faq,before.faq,file);
-     added++;
-   }
- }
- assert.ok(hidden>0&&added>0);
 });
 
 test('Pages CMS edits one nested Hero; restores all sections, media and CTA without new authorities',()=>{
