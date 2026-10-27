@@ -140,7 +140,7 @@ test('Begreper and 404 use the full shared Hero editor and guarded source schema
  }
  const error=resolveNotFoundHero(source.hero);
  assert.equal(error.primaryCta?.href,'/');
- assert.equal(error.title,'Her var det\\ningen vei videre.');
+ assert.equal(error.title,'Her var det\ningen vei videre.');
  assert.equal(heroViewSchema.safeParse({...error,layout:'raw-class'}).success,false);
 });
 test('Pricing page Hero is independently editable but does not rewrite global package content',()=>{
