@@ -23,11 +23,20 @@
       "title": "En tredjedel av AI-referraltrafikken gikk direkte til kommersielle sider",
       "text": "AI-trafikk er ikke bare research-trafikk: I et datasett med 1,2 millioner AI-referrals landet omtrent én av tre sessions på produkt- eller kategorisider.",
       "label": "Se undersøkelsen",
-      "boxVariant": "default"
+      "boxVariant": "card",
+      "surface": "mint"
     },
     {
       "title": "Guides var det mest konsistente formatet",
-      "text": "Tools hadde høyest oppside, men guides var det eneste formatet som overpresterte i alle seks delutvalgene i StudioHawks studie. \n“Mest stabilt” betyr ikke nødvendigvis “best format” for en spesifikk bedrift."
+      "text": "Tools hadde høyest oppside, men guides var det eneste formatet som overpresterte i alle seks delutvalgene i StudioHawks studie. \n“Mest stabilt” betyr ikke nødvendigvis “best format” for en spesifikk bedrift.",
+      "boxVariant": "card",
+      "surface": "mint"
+    },
+    {
+      "title": "10 – 71 % av 2 000 rå AI-artikler ble indeksert raskt",
+      "text": "Google hadde ingen problemer med å indeksere rå AI-innhold i starten: 71 % av 2 000 AI-artikler ble indeksert innen 36 dager i SE Rankings eksperiment. \n\nI SE Ranking sitt 16-måneders eksperiment ble rundt 71 % av 2 000 rå AI-genererte artikler indeksert innen 36 dager.\n\nForsøket besto av:\n\n    20 helt nye domener\n    20 forskjellige nisjer\n    100 AI-artikler per domene\n    ingen backlinks\n    ingen human editing\n    ingen videre optimalisering",
+      "boxVariant": "card",
+      "surface": "mint"
     }
   ]
 }
