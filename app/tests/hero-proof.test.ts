@@ -3,6 +3,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 import { getHeroProof } from '../src/lib/hero-proof.ts';
+import {resolvePageHero} from '../src/lib/page-hero.ts';
+import {pageSchema} from '../src/lib/content-schema.ts';
 
 const home = JSON.parse(readFileSync('src/content/pages/home.json', 'utf8'));
 const records = readdirSync('src/content/proof').filter(file => file.endsWith('.json')).map(file => JSON.parse(readFileSync(`src/content/proof/${file}`, 'utf8')));
@@ -38,4 +40,21 @@ test('hero follows the first publishable selection and respects anonymized publi
   assert.equal(getHeroProof(getHomepageBlock(home,'proof').content, invalidFirst)?.support, 'Nysta · Shopify');
   const anonymized = { ...eurotents, namingPermission: 'ANONYMIZED_APPROVED', anonymizedLabel: 'Norsk nettbutikk' };
   assert.equal(getHeroProof({ publicationApproved: true, caseIds: ['eurotents'] }, [anonymized])?.support, 'Norsk nettbutikk · Google Ads');
+});
+
+test('an independently selected Hero proof on any page uses the existing publication guard',()=>{
+ const service=JSON.parse(readFileSync('src/content/pages/synlighet.json','utf8'));
+ const withSelection={...service,hero:{...service.hero,featuredProofCaseId:'eurotents'}};
+ assert.equal(pageSchema.safeParse(withSelection).success,true);
+ assert.equal(resolvePageHero(withSelection).featuredProofCaseId,'eurotents');
+ const slot={publicationApproved:true,caseIds:[withSelection.hero.featuredProofCaseId]};
+ assert.deepEqual(getHeroProof(slot,records),{
+   metric:'ROAS',comparison:'4,3x -> 17,2x',support:'Eurotents · Google Ads'
+ });
+ assert.equal(getHeroProof(slot,records.map(x=>x.id==='eurotents'?{...x,publicationApproved:false}:x)),undefined);
+ assert.equal(getHeroProof(slot,records.map(x=>x.id==='eurotents'?{...x,publicationStatus:'WITHDRAWN'}:x)),undefined);
+ assert.equal(getHeroProof(slot,records.filter(x=>x.id!=='eurotents')),undefined);
+ const withoutSelection=resolvePageHero(service);
+ assert.equal(withoutSelection.featuredProofCaseId,undefined);
+ assert.equal(getHeroProof({publicationApproved:true,caseIds:[]},records),undefined);
 });
