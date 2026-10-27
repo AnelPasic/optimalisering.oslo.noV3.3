@@ -23,6 +23,7 @@ export const heroSchema=z.object({
  eyebrow:z.string(),title:z.string().trim().min(1),support:z.string(),primaryCta:link,secondaryCta:link.optional(),
  visual:z.discriminatedUnion('kind',[z.object({kind:z.literal('none'),image:heroPhotoSchema.optional()}).strict(),z.object({kind:z.literal('image'),image:heroPhotoSchema}).strict()]),
  // A single typed project treatment, never arbitrary inline rich styling.
+ featuredProofCaseId:z.string().regex(/^[a-z0-9][a-z0-9-]*$/).optional(),
  titleEmphasis:z.enum(['none','first-sentence']).default('none'),
 }).strict();
 export type CommercialHero=z.infer<typeof heroSchema>;
