@@ -17,5 +17,17 @@
     "Det finnes ikke noe eget “AI SEO schema” for Google\n\nDu trenger ikke et eget “AI-schema” for Google. Vanlige SEO-grunnprinsipper gjelder også for AI Overviews og AI Mode.\n\nSiden må fortsatt være indeksert og kvalifisert til å vises med snippet i Google Search.\n\nKilde: Google Search Central\nhttps://developers.google.com/search/docs/appearance/ai-features",
     "I Seers 2025-data hadde brands som ble sitert i Google AI Overviews 35 % høyere organisk CTR og 91 % høyere paid CTR enn brands som ikke ble sitert i samme type søkeresultater.\n\nDatagrunnlag:\n    3 119 search terms\n    42 client organizations\n    25,1 millioner organic impressions\n    1,1 millioner paid impressions\n    juni 2024–september 2025\n",
     "I StudioHawks 2026-datasett fikk tools, templates og kalkulatorer 7,54× sin andel av AI-referraltrafikken – høyest av alle innholdsformatene som ble målt.\n\nStudioHawk analyserte 1 203 748 AI-referral sessions og fant at tools, templates og kalkulatorer hadde en AI Traffic Leverage Ratio på 7,54.\n\nDet betyr at formatet mottok omtrent 7,5 ganger så stor andel av AI-referraltrafikken som formatets andel av sidene i datasettet skulle tilsi."
+  ],
+  "items": [
+    {
+      "title": "En tredjedel av AI-referraltrafikken gikk direkte til kommersielle sider",
+      "text": "AI-trafikk er ikke bare research-trafikk: I et datasett med 1,2 millioner AI-referrals landet omtrent én av tre sessions på produkt- eller kategorisider.",
+      "label": "Se undersøkelsen",
+      "boxVariant": "default"
+    },
+    {
+      "title": "Guides var det mest konsistente formatet",
+      "text": "Tools hadde høyest oppside, men guides var det eneste formatet som overpresterte i alle seks delutvalgene i StudioHawks studie. \n“Mest stabilt” betyr ikke nødvendigvis “best format” for en spesifikk bedrift."
+    }
   ]
 }
