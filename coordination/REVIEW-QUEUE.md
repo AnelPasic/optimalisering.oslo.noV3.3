@@ -13,6 +13,8 @@
 
 ## Nytt teknisk levert – 26.10.2026
 
+- **PageList v2 – implementert / grønn CI (27.10.2026).** PR #23 flettet: samme PageList i alle 17 sideeditorer, automatisk artikkel-/side-/publiserbar case-kilde, manuelle blandelister med intern/ekstern URL og eksisterende kort-/liste-/bildevisninger. Nye sider hentes automatisk av rendereren; søkbar CMS-sideliste oppdateres via generator og verifiseres i CI. Faktisk innlogget CMS-save gjenstår som valgfri bruker-smoketest. **Normal lenkevelger** (Select + manuell URL) er separat framtidig [issue #22](https://github.com/AnelPasic/optimalisering.oslo.noV3.3/issues/22), ikke påbegynt. Se [PROJECT-STATE.md](PROJECT-STATE.md).
+
 - **Global Innhold på alle sider – CI PASS.** PR #18 er flettet; samme åtte globale innholdselementer kan nå legges til og flyttes i alle 17 CMS-redigerbare sider. Generiske seksjoner og sideinnhold er bevart, ingen innholds-JSON endret. Felles referanser kan lagres uten å kopiere globalt innhold; separat autentisert OWNER-test av plassering i Pages CMS-grensesnittet er ikke ennå dokumentert, men er ikke en blokkering for videre designjusteringer. Se [PROJECT-STATE.md](PROJECT-STATE.md).
 
 ## Reelt åpne punkter – ikke blokker dagens arbeid
