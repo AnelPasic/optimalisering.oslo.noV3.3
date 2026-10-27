@@ -6,7 +6,7 @@ import YAML from 'yaml';
 import {pageSchema} from '../src/lib/content-schema.ts';
 import {cmsJsonSave,entryForFile,resolveField,assertPreservedContent,localHomeFixture} from './helpers/pages-cms-json.ts';
 import {getGlobalElement,homepageBlockSchema,globalElementIds} from '../src/lib/home-builder.ts';
-import {paragraphLayoutAttribute} from '../src/lib/content-presentation.ts';
+import {contentLayoutAttribute,paragraphLayoutAttribute} from '../src/lib/content-presentation.ts';
 const home=localHomeFixture();
 const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
 const normal=(p:any)=>sectionRecords(p).find((s:any)=>s.id==='cms-local-fixture');
@@ -41,13 +41,19 @@ test('co-located CMS choices expose semantics and round-trip variant/reorder wit
  const restored=JSON.parse(cmsJsonSave(saved,home,entry,cms));assertPreservedContent(home,restored);
 });
 
-test('text-only sections distribute paragraphs; boxes and protected sections retain existing layout',()=>{
+test('mixed sections use independent paragraph and card grids, without changing protected layouts',()=>{
  const content={body:['Faktum én','Faktum to','Faktum tre'],layout:'three-columns' as const};
  assert.equal(paragraphLayoutAttribute(content),'three-columns');
  assert.equal(paragraphLayoutAttribute({...content,layout:'two-columns'}),'two-columns');
  for(const layout of ['default','stacked',undefined]) assert.equal(paragraphLayoutAttribute({...content,layout}),undefined);
  assert.equal(paragraphLayoutAttribute({...content,body:['Bare ett']}),undefined);
- assert.equal(paragraphLayoutAttribute({...content,items:[{title:'Boks',text:'Innhold'}]}),undefined);
+ assert.equal(paragraphLayoutAttribute({...content,items:[{title:'Boks',text:'Innhold'}]}),'three-columns');
+ assert.equal(paragraphLayoutAttribute({...content,items:[{title:'Boks',text:'Innhold'}],layout:'two-columns'}),'two-columns');
+ const seoFacts={layout:'three-columns',body:['Fakta A','Fakta B','Fakta C'],items:[{title:'Alternativ A'},{title:'Alternativ B'},{title:'Alternativ C'}]};
+ assert.equal(paragraphLayoutAttribute(seoFacts),'three-columns','three facts must stay in columns after adding cards');
+ assert.equal(contentLayoutAttribute(seoFacts.layout),'three-columns','card grid must be independent');
+ assert.equal(paragraphLayoutAttribute({...seoFacts,body:[]}),undefined);
+ assert.equal(paragraphLayoutAttribute(seoFacts,true),undefined);
  assert.equal(paragraphLayoutAttribute({...content,items:[]}), 'three-columns');
  assert.equal(paragraphLayoutAttribute(content,true),undefined);
  assert.equal(paragraphLayoutAttribute({...content,layout:'unsafe-css'}),undefined);

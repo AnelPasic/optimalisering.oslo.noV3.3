@@ -444,8 +444,8 @@ p { text-wrap: pretty; }
 }
 }
 
-/* Text-only sections: one CMS paragraph per column. Box sections retain
-   full-width introductions and their existing independent card grid. */
+/* Each CMS paragraph is one column item, regardless of whether the section
+   also has cards. Paragraphs and cards remain two independent grids. */
 .content-section .body-copy[data-content-layout] {
   display: grid;
   grid-template-columns: minmax(0, 1fr);

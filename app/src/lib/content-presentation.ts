@@ -14,9 +14,9 @@ export function boxVariantAttribute(value:unknown,protectedRow=false){
  return !protectedRow&&parsed.success&&parsed.data!=='default'?parsed.data:undefined;
 }
 
-/** Column preference also applies to individual paragraphs when there are no boxes. */
+/** Paragraphs and option cards each honor the chosen layout independently. */
 export function paragraphLayoutAttribute(section:{layout?:unknown;body?:readonly unknown[];items?:readonly unknown[]},protectedRow=false){
- if(protectedRow||!Array.isArray(section.body)||section.body.length<2||!!section.items?.length)return undefined;
+ if(protectedRow||!Array.isArray(section.body)||section.body.length<2)return undefined;
  const layout=contentLayoutAttribute(section.layout);
  return layout==='two-columns'||layout==='three-columns'?layout:undefined;
 }
