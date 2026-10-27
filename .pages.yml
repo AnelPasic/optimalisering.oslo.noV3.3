@@ -111,13 +111,6 @@ components:
           label: Sentrert med bilde
         - name: centered-none
           label: Sentrert uten bilde
-  pageHero:
-    type: object
-    label: Hero
-    fields:
-      - name: layout
-        label: Oppsett
-        component: heroLayoutChoice
   surfaceChoice:
     type: select
     options:
