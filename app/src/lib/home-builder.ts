@@ -43,7 +43,7 @@ export const homepageBlockSchema=z.discriminatedUnion('_block',[
  items:z.array(z.object({title:z.string(),text:z.string(),href:z.string().startsWith('/').optional(),label:z.string().optional(),surface:surfaceSchema,boxVariant:boxVariantSchema})).optional(),links:z.array(link).optional()}).strict(),
 ]);
 export const homepageBlocksSchema=z.array(homepageBlockSchema).max(56).superRefine((blocks,ctx)=>{
- for(const id of homepageCoreIds){const core=blocks.find(b=>b.id===id);if(core&&core.uid!==coreUids[id])ctx.addIssue({code:'custom',message:'Protected master UUID: '+id});}
+ for(const id of homepageCoreIds){const core=blocks.find(b=>b.id===id);if(core&&(!('uid' in core)||core.uid!==coreUids[id]))ctx.addIssue({code:'custom',message:'Protected master UUID: '+id});}
  const ids=new Set<string>(),uids=new Set<string>(),types=new Set<string>();
  // A content anchor also shares the DOM namespace with controls and ARIA targets.
  const reserved=new Set(['behov','regneeksempel','priser','resultater','sjekk','sporsmal','skjema','main','mobile-menu','site-menu','order-package','website','email','message','calc-visits','calc-conversion-label','calc-conversion','calc-traffic','calc-new-conversion-label','calc-new-conversion','calculator-error','scenario-illustration-label','scenario-current-label','scenario-improved-label','scenario-current-value','scenario-improved-value']);

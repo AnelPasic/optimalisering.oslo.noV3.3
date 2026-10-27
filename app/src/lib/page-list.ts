@@ -47,7 +47,7 @@ const sortPages=(pages:ListPage[],mode:'editorial'|'title')=>pages.sort((a,b)=>{
     const aOrder=a.listing?.order??Infinity,bOrder=b.listing?.order??Infinity;
     if(aOrder!==bOrder)return aOrder<bOrder?-1:1;
   }
-  return collator.compare(a.listing?.title||a.title,b.listing?.title||b.title)||collator.compare(a.slug,b.slug);
+  return collator.compare(listingSchema.parse({...a.listing,visual:undefined}).title??a.title,listingSchema.parse({...b.listing,visual:undefined}).title??b.title)||collator.compare(a.slug,b.slug);
 });
 const publicPage=(page:ListPage,publicDirectory:string):PageListItem=>{
   const listing=listingSchema.parse({...page.listing,visual:undefined});
