@@ -908,6 +908,16 @@ content:
             name: secondaryCta
             label: Sekundær handling
             component: link
+          - &heroProofCase
+            name: featuredProofCaseId
+            label: Utvalgt Proof i Hero
+            description: Valgfritt. Vis et dokumentert resultat som et lite kort over Hero-bildet. Bare kundecaser som oppfyller alle publiserings- og evidenskrav vises. Ingen overstyring av Case/evidens (intern).
+            type: reference
+            options:
+              collection: proofCases
+              value: "{fields.id}"
+              label: "{fields.clientName} ({fields.publicationStatus})"
+              search: id,clientName
           - name: visual
             label: Visuelt innhold
             description: Velg Bilde under Visuelt innhold for å åpne bildevelger, bildetype og utsnitt. Ingen viser bare tekst. Lagret bilde bevares hvis du senere velger Ingen.
@@ -1170,6 +1180,7 @@ content:
               - *hubHerosupport
               - *hubHeroprimaryCta
               - *hubHerosecondaryCta
+              - *heroProofCase
               - name: visual
                 label: Visuelt innhold
                 description: Velg Bilde under Visuelt innhold for å åpne bildevelger, bildetype og utsnitt. Ingen viser bare tekst. Lagret bilde bevares hvis du senere velger Ingen.
