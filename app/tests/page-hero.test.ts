@@ -136,7 +136,8 @@ test('Begreper and 404 use the full shared Hero editor and guarded source schema
    const saved=JSON.parse(cmsJsonSave(record,edited,entry,cms));
    assert.deepEqual(saved,edited,'special Hero roundtrip must retain all source fields');
    assert.equal(schema.safeParse(saved).success,true);
-   assert.deepEqual(JSON.parse(cmsJsonSave(saved,record,entry,cms)),record);
+   const cleared=structuredClone(record);cleared.hero.featuredProofCaseId='';
+   assert.deepEqual(JSON.parse(cmsJsonSave(saved,cleared,entry,cms)),record);
  }
  const error=resolveNotFoundHero(source.hero);
  assert.equal(error.primaryCta?.href,'/');
