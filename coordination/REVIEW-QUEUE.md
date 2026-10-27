@@ -1,5 +1,7 @@
 # Review queue — aktiv status
 
+**UPDATE: [PR #27](https://github.com/AnelPasic/optimalisering.oslo.noV3.3/pull/27) har nå GRØNN Content page review + D-129 CI (head `487f277a`).** PR-en er fortsatt **ÅPEN** og skal gjennomgås av OWNER før merge. Fire fokuserte regresjonstester og én runtime-only Hero-URL-projisering ble lagt til fordi PR-CI viste hardkodet åtte-elementsliste og OWNERs nye `om.json` `suggestedHref`; ingen side-JSON ble skrevet om. Handlingen selv lager fortsatt ikke PR før GitHub Actions repository-setting er slått på. Etter review/merge test nytt globalt element fra en annen side og reell URL-editor save/reopen. Ikke bland sammen grønne CI-tester med automatisk PR-rettighet.
+
 ## AKTIV REVIEW 27.10.2026 — Lokal Synlighet-kopi ligger til gjennomgang; GitHub-tilgang må åpnes
 
 - **Faktisk CMS-kopi:** `lokal-synlighet` → ny `lokalsynlighet` / «Lokal SEO i praksis». Workflow [#40536118471](https://github.com/AnelPasic/optimalisering.oslo.noV3.3/actions/runs/40536118471) lagde og pushet riktig Git-branch, men mislyktes i PR-opprettelse pga. repository-innstillingen `GitHub Actions is not permitted to create or approve pull requests`. ChatGPT gjenopprettet uten å kopiere på nytt ved å opprette **[PR #27](https://github.com/AnelPasic/optimalisering.oslo.noV3.3/pull/27)** fra eksisterende branch. PR-en er **ÅPEN, ikke merged**. Kontrollér den før merge; originalt `synlighet.json` er uendret. Endringene er kun ny masterfil, generert CMS-valgliste og master-importregister. Kodefeilen fra PR #26 er bekreftet løst i dette forsøket.
