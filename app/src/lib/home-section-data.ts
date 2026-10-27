@@ -1,8 +1,9 @@
+import { safeCmsHref } from './cms-link-choice.ts';
 import { z } from 'astro/zod';
 import { featuredProofVisualFieldSchema,proofLayoutSchema,proofCaseVisualsSchema } from './proof-presentation.ts';
 import {navigationLinkSchema} from './navigation.ts';
 import {chromeThemeSchema} from './site-chrome-theme.ts';
-const link = z.object({ label: z.string(), href: z.string().startsWith('/') });
+const link = z.object({ label: z.string(), href: z.string().refine(safeCmsHref) });
 export const proofSlotSchema = z.object({ publicationApproved: z.boolean(), caseIds: z.array(z.string()).default([]), eyebrow: z.string(), heading: z.string(), beforeLabel: z.string(), afterLabel: z.string(), changeLabel: z.string() });
 export const homeSectionDataSchema = z.object({
   assessmentSection: z.object({ _block: z.literal('protected'), id: z.literal('sjekk'), eyebrow: z.string().optional(), heading: z.string(), body: z.array(z.string()).default([]) }),

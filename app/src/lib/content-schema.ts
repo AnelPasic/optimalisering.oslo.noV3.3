@@ -1,3 +1,4 @@
+import { projectSelectedLinks, safeCmsHref } from './cms-link-choice.ts';
 import { z } from 'astro/zod';
 import { surfaceSchema, sectionModel } from './surface.ts';
 import { headingAlignSchema } from './heading-alignment.ts';
@@ -11,11 +12,11 @@ import {heroPresentationSchema} from './hero-presentation.ts';
 import { validateSynlighetSections, resolveSynlighetSections, resolvePageSections, serviceGlobalIds } from './service-sections.ts';
 import {synlighetHeroSchema,legacyHeroKeys} from './synlighet-hero.ts';
 
-const link = z.object({label:z.string(),href:z.string().startsWith('/')});
+const link = z.object({label:z.string(),href:z.string().refine(safeCmsHref)});
 export { proofSlotSchema } from './home-section-data.ts';
 const homepage = z.object({}).strict(); // Header/footer have independent global CMS sources.
 export const pageSchema = z.preprocess((input,context)=>{
-  let raw=input as Record<string,any> & {slug?:string;kind?:string;sections:unknown;hero?:unknown};
+  let raw=projectSelectedLinks(input) as Record<string,any> & {slug?:string;kind?:string;sections:unknown;hero?:unknown};
   // Native CMS Hero is now a single authored object. Legacy projections are
   // runtime-only for existing commercial/section components; they are never
   // written back as duplicate CMS fields.
@@ -67,13 +68,13 @@ export const pageSchema = z.preprocess((input,context)=>{
     listing: listingSchema.optional(),
     sections: z.array(z.object({
       uid: z.string().optional(), name: z.string().optional(), content: z.unknown().optional(), visibility: sectionVisibilitySchema,
-      globalElement: z.enum(serviceGlobalIds).optional(),
+      globalElement: z.string().optional(),
       _block: z.enum(['content', 'protected', 'pageList', 'selector', 'calculator', 'packages', 'proof', 'assessment', 'faq']).optional(), surface: surfaceSchema,
       pageList: pageListSchema.optional(),
       headingAlign: headingAlignSchema,
       layout: contentLayoutSchema,
       id: z.string(), eyebrow: z.string().optional(), heading: z.string(), body: z.array(z.string()).default([]),
-      items: z.array(z.object({ title: z.string(), text: z.string(), href: z.string().startsWith('/').optional(), label: z.string().optional(), surface: surfaceSchema, boxVariant: boxVariantSchema })).optional(),
+      items: z.array(z.object({ title: z.string(), text: z.string(), href: z.string().refine(safeCmsHref).optional(), label: z.string().optional(), surface: surfaceSchema, boxVariant: boxVariantSchema })).optional(),
       links: z.array(link).optional(),
     })),
     faq: z.array(z.object({ question: z.string(), answer: z.string() })).default([]),

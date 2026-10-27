@@ -1,13 +1,13 @@
 import type { RouteFamily } from './route-family.ts';
-import { globalPlacementSchema, resolveGlobalPlacement, getGlobalElement } from './home-builder.ts';
+import { globalPlacementSchema, resolveGlobalPlacement, getGlobalElement, hasPromotedGlobal } from './home-builder.ts';
 import { getPublishableCases } from './proof.ts';
 
 export const serviceGlobalIds = ['resultater', 'regneeksempel', 'sjekk', 'behov', 'mekanisme', 'passer', 'priser', 'sporsmal'] as const;
-export const serviceGlobalPlacementSchema = globalPlacementSchema.refine(placement => serviceGlobalIds.some(id => id === placement.element), 'Dette globale elementet er ikke tilgjengelig i tjenestebyggeren');
+export const serviceGlobalPlacementSchema = globalPlacementSchema.refine(placement => serviceGlobalIds.some(id => id === placement.element) || hasPromotedGlobal(placement.element), 'Dette globale elementet er ikke tilgjengelig i tjenestebyggeren');
 // The same eight catalogue entries are available in every page editor.
 export const seoGlobalIds = serviceGlobalIds;
 const mixedServiceSlugs = new Set(['synlighet', 'seo']);
-type Section = { id: string; visibility?: 'hidden'; globalElement?: typeof serviceGlobalIds[number] };
+type Section = { id: string; visibility?: 'hidden'; globalElement?: string };
 type ServicePage = { slug: string; sections: Section[]; faq?: readonly { question: string; answer: string }[] };
 const fixedAnchors = ['service-hero', 'resultater', 'priser', 'service-priser', 'sporsmal', 'main', 'mobile-menu'];
 
@@ -27,10 +27,13 @@ export function resolvePageSections(value: unknown) {
       localIds.add(row.id);
     }
   }
+  const visibleGlobalAnchors=new Set<string>();
   for (const [id, block] of globals) {
-    if (block.visibility !== 'hidden' && value.some(row => row._block !== 'global' && row.id === id && row.visibility !== 'hidden')) {
-      throw new Error(`Globalt og lokalt element deler synlig anker: ${id}. Skjul eller fjern den lokale raden eksplisitt.`);
-    }
+    if(block.visibility==='hidden')continue;
+    if(visibleGlobalAnchors.has(block.id))throw new Error('Two globals share an anchor: '+block.id);
+    visibleGlobalAnchors.add(block.id);
+    if(value.some(row => row._block !== 'global' && row.id === block.id && row.visibility !== 'hidden'))
+      throw new Error('Globalt og lokalt element deler synlig anker: '+block.id+'. Skjul eller fjern den lokale raden eksplisitt.');
   }
   return value.flatMap(row => {
     if (row._block !== 'global') return [row];
