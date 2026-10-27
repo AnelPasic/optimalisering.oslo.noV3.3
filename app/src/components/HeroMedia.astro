@@ -16,15 +16,13 @@ const supplied = existsSync(resolve('public', content.src.slice(1)));
 const image = supplied ? content.src : '/images/home/hero-customer-preview.svg';
 ---
 <div class:list={['hero-visual',{'service-hero-visual':!home}]} data-kind={!home?content.kind:undefined}>
- {home?<>
-  <div class="hero-photo" data-photo-src={content.src} data-photo-state={supplied ? 'supplied' : 'preview-placeholder'}>
-    <img src={image} width="1200" height="750" alt="" fetchpriority="high" decoding="async" style={{ objectPosition: `${content.positionX}% ${content.positionY}%` }} />
-  </div>
-  {proof && <div class="hero-proof">
-    <p class="hero-proof-result"><span><TermText text={proof.metric} terms={['roas']} /></span>{' '}<span class="hero-proof-comparison">{proof.comparison}</span></p>
-    <p class="hero-proof-support"><TermText text={proof.support} terms={['google-ads']} /></p>
-  </div>}
- </>:<><img src={content.src} alt={content.alt} width="960" height="720" fetchpriority="high" decoding="async" style={{objectPosition:`${content.positionX}% ${content.positionY}%`}}/>{proof&&<div class="hero-proof"><p class="hero-proof-result"><span><TermText text={proof.metric} terms={['roas']} /></span>{' '}<span class="hero-proof-comparison">{proof.comparison}</span></p><p class="hero-proof-support"><TermText text={proof.support} terms={['google-ads']} /></p></div>}</>}
+ {home?<div class="hero-photo" data-photo-src={content.src} data-photo-state={supplied ? 'supplied' : 'preview-placeholder'}>
+   <img src={image} width="1200" height="750" alt="" fetchpriority="high" decoding="async" style={{ objectPosition: `${content.positionX}% ${content.positionY}%` }} />
+ </div>:<img src={content.src} alt={content.alt} width="960" height="720" fetchpriority="high" decoding="async" style={{objectPosition:`${content.positionX}% ${content.positionY}%`}}/>}
+ {proof&&<div class="hero-proof">
+   <p class="hero-proof-result"><span><TermText text={proof.metric} terms={['roas']} /></span>{' '}<span class="hero-proof-comparison">{proof.comparison}</span></p>
+   <p class="hero-proof-support"><TermText text={proof.support} terms={['google-ads']} /></p>
+ </div>}
 </div>
 
 <style>
