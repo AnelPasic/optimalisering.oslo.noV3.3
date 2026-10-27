@@ -1,7 +1,5 @@
 {
   "authority": "DRAFT / NON-AUTHORITATIVE",
-  "title": "Hva betyr ROAS, CRO, SEO og resten av alfabetssuppen?",
-  "intro": "Kort forklart først. Litt mer under panseret hvis du faktisk vil vite hva tallene betyr.",
   "description": "Enkle forklaringer på ROAS, SEO, CRO, konverteringsrate og andre begreper innen synlighet, annonsering og måling.",
   "linkLabel": "Begreper",
   "moreLabel": "Se hele forklaringen",
@@ -256,5 +254,18 @@
       "fullDefinition": "Margin viser hvor stor del av salget som er igjen etter bestemte kostnader. Derfor må vi alltid spørre hvilke kostnader som er tatt med. Høy omsetning ser flott ut i et skjermbilde. Marginen avgjør om det også var en god idé.",
       "simpleExample": "Selger du for 1 000 kr og varen kostet 600 kr, er 400 kr igjen før andre kostnader. Det tilsvarer 40 % margin etter varekostnad."
     }
-  ]
+  ],
+  "hero": {
+    "layout": "split-right",
+    "eyebrow": "Ordbok for normale mennesker",
+    "title": "Hva betyr ROAS, CRO, SEO og resten av alfabetssuppen?",
+    "support": "Kort forklart først. Litt mer under panseret hvis du faktisk vil vite hva tallene betyr.",
+    "primaryCta": {
+      "label": "Til forsiden",
+      "href": "/"
+    },
+    "visual": {
+      "kind": "none"
+    }
+  }
 }
