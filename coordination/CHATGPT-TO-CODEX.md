@@ -1,5 +1,9 @@
 # ChatGPT to Codex
 
+## AKTIV HANDOFF 27.10.2026 — CMS-action-feilen er fikset; ikke bygg på nytt
+
+Pilot [PR #26](https://github.com/AnelPasic/optimalisering.oslo.noV3.3/pull/26) er **MERGED** (`617d9c0a`): faktisk innlogget Pages CMS action nådde GitHub workflow, men [run #40509554747](https://github.com/AnelPasic/optimalisering.oslo.noV3.3/actions/runs/40509554747) feilet før opprettelse av master/PR fordi Pages CMS normaliserte repository-navnet til lowercase. Code + regresjonstest aksepterer nå navn uavhengig av casing, men avviser fremmede repoer og gale revisions. PR-head Content page review og D-129 GREEN. **Ikke** restart utviklingen; vent på ny OWNER Pages CMS click→ny PR, lagring av valgt/manuell URL og review av innhold. Ingen ny Codex-oppgave eller publiseringsautorisasjon. MWS-054 [PR #16](https://github.com/AnelPasic/MedonWebSystem/pull/16) merged `4fa73346`; MWS-052 Astro-starter fremdeles åpen. Beskytt OWNER-innhold, logo, `sunset`, skjemaløsning og `noindex`.
+
 ## AKTIVT HANDOFF 27.10.2026 — PR #25 MERGED, IKKE start integrasjonen på nytt
 
 **Nåværende kildekode:** Pilot `main` inneholder [PR #25](https://github.com/AnelPasic/optimalisering.oslo.noV3.3/pull/25) (`0820a275...`) for URL-velger og promoter lokal ordinær seksjon til Global Innhold. Alle relevante PR-head CI-kontroller PASS. Dette er en STATUSOVERLEVERING, **ikke** en ny Codex-bestilling eller godkjenning til å endre innhold, priser, kundeproveniens, D1/Resend, Cloudflare, DNS eller `noindex`.
