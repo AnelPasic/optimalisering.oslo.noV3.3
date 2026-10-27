@@ -725,6 +725,8 @@ components:
             - name: sjekk
               label: Gratis sjekk / kontaktskjema
 # PILOT_PROMOTED_CHOICES_2_BEGIN
+            - name: "ansvar-global"
+              label: "Ansvar"
 # PILOT_PROMOTED_CHOICES_2_END
         description: Felles elementer fra Globale elementer. Endrer ikke pris, pakke eller skjemafelt. Bestilling og innsending forblir deaktivert i noindex-preview.
       - name: visibility
@@ -761,6 +763,8 @@ components:
             - name: sporsmal
               label: Ofte stilte spørsmål
 # PILOT_PROMOTED_CHOICES_3_BEGIN
+            - name: "ansvar-global"
+              label: "Ansvar"
 # PILOT_PROMOTED_CHOICES_3_END
         description: Én synlig rad gir én seksjon på samme sted. Innhold redigeres én gang under Globale elementer. Skjul eller fjern bare plasseringen; ingen lokal erstatning settes inn. Skjul eller fjern en lokal rad med samme lenkeanker før du velger det globale elementet. Gratis sjekk kan velges når den lokale sjekk-raden er fjernet; aldri begge samtidig.
       - name: visibility
@@ -1094,6 +1098,8 @@ content:
                     - name: sporsmal
                       label: Ofte stilte spørsmål
 # PILOT_PROMOTED_CHOICES_1_BEGIN
+                    - name: "ansvar-global"
+                      label: "Ansvar"
 # PILOT_PROMOTED_CHOICES_1_END
               - name: visibility
                 label: Visning på denne siden

@@ -1,0 +1,21 @@
+{
+  "_block": "content",
+  "uid": "b7d245bc-b005-4852-8e22-1ae4be8d125d",
+  "id": "ansvar-global",
+  "name": "Ansvar",
+  "heading": "Du skal forstå hva vi gjør og hva som er avtalt.",
+  "body": [
+    "Du trenger ikke lage en liste over hver lille oppgave før vi kan begynne. Samtidig må tjeneste, pris, ansvar og grenser for arbeidet være tydelige.",
+    "Vi skiller mellom mulig nytte, observasjoner og dokumenterte resultater. Det skal ikke bli lovet bestemte plasseringer, AI-anbefalinger eller nye kunder uten grunnlag."
+  ],
+  "links": [
+    {
+      "label": "Pris og omfang",
+      "href": "/priser/"
+    },
+    {
+      "label": "Hvordan vurdere effekt",
+      "href": "/innsikt/male-effekt-av-optimalisering/"
+    }
+  ]
+}
