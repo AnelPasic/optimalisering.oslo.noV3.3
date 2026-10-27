@@ -1436,6 +1436,7 @@ content:
           - seo.json
           - ai-synlighet.json
           - nettbutikkoptimalisering.json
+          - lokal-seo.json
         format: json
         subfolders: false
         operations: *a3

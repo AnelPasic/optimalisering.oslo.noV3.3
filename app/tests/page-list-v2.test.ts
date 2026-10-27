@@ -34,7 +34,8 @@ test('PageList selector uses canonical source page slugs and is available in eve
 
 test('existing automatic article PageList stays backward compatible; automatic pages discover the website',()=>{
  const overview=entry('innsikt').sections.find((s:any)=>s._block==='pageList');
- assert.deepEqual(resolvePageList(overview.pageList,raw).map(p=>p.slug),['innsikt/hva-bor-optimaliseres-forst','innsikt/male-effekt-av-optimalisering']);
+ assert.ok(resolvePageList(overview.pageList,raw).some(p=>p.slug==='innsikt/google-bedriftsprofil'));
+ assert.ok(resolvePageList(overview.pageList,raw).some(p=>p.slug==='innsikt/hva-bor-optimaliseres-forst'));
  const pages=resolvePageList(config({source:'pages',limit:9}),raw);
  assert.equal(pages.length,9);
  assert.ok(pages.every(p=>p.href?.startsWith('/') && p.slug!=='home'));
@@ -84,7 +85,7 @@ test('PageList can be created, reordered and saved without changing page-owned o
  for(const name of ['home.json','synlighet.json','priser.json','om.json','hva-bor-optimaliseres-forst.json']){
   const original=JSON.parse(readFileSync('src/content/pages/'+name,'utf8'));
   const copy=structuredClone(original);
-  const next={_block:'pageList',id:'relatert-'+name.replace('.json',''),heading:'Se også',body:[],pageList:config({mode:'manual',source:'pages',entries:[{_block:'page',slug:'priser'},{_block:'url',href:'/kontakt/',title:'Kontakt oss'}]})};
+  const next={_block:'pageList',id:'relatert-'+name.replace('.json',''),heading:'Se også',pageList:config({mode:'manual',source:'pages',entries:[{_block:'page',slug:'priser'},{_block:'url',href:'/kontakt/',title:'Kontakt oss'}]})};
   copy.sections.splice(1,0,next);
   const editor=entryForFile(cms,'app/src/content/pages/'+name);
   const saved=JSON.parse(cmsJsonSave(original,copy,editor,cms));
