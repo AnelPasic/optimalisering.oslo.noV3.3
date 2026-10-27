@@ -88,6 +88,10 @@
           "href": "/vurdering/"
         }
       ]
+    },
+    {
+      "_block": "sharedContent",
+      "entry": "lafoitems"
     }
   ],
   "faq": [
