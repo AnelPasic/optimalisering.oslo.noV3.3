@@ -5,6 +5,7 @@ import YAML from 'yaml';
 import { pageSchema } from '../src/lib/content-schema.ts';
 import { serviceGlobalIds, resolveSynlighetSections, hasGlobalServiceProof, validateServiceGlobalProof, visibleServiceSections } from '../src/lib/service-sections.ts';
 import { getGlobalElement } from '../src/lib/home-builder.ts';
+import { promotedGlobalMasters } from '../src/lib/promoted-global.generated.ts';
 import { cmsJsonSave, entryForFile, resolveField } from './helpers/pages-cms-json.ts';
 
 const source = JSON.parse(readFileSync('src/content/pages/synlighet.json','utf8'));
@@ -112,7 +113,7 @@ test('global proof requires actual case evidence and permission; never falls bac
 test('native pilot field reuses existing names/visibility; JSON save stores references only and preserves all local fields',()=>{
   const cms=YAML.parse(readFileSync('../.pages.yml','utf8')), entry=entryForFile(cms,'app/src/content/pages/synlighet.json');
   const sections=entry.fields.find((f:any)=>f.name==='sections'), global=resolveField(sections.blocks.find((b:any)=>b.name==='global'),cms.components);
-  assert.deepEqual(global.fields.find((f:any)=>f.name==='element').options.values.map((v:any)=>v.name).sort(),[...serviceGlobalIds].sort());
+  assert.deepEqual(global.fields.find((f:any)=>f.name==='element').options.values.map((v:any)=>v.name).sort(),[...serviceGlobalIds,...Object.keys(promotedGlobalMasters)].sort());
   assert.equal(global.fields.find((f:any)=>f.name==='visibility').component,'sectionVisibility');
   const raw=withGlobal('resultater'),saved=JSON.parse(cmsJsonSave(source,raw,entry,cms));assert.deepEqual(saved,raw);assert.deepEqual(saved.proof,source.proof);
   assert.ok(pageSchema.safeParse(saved).success);
