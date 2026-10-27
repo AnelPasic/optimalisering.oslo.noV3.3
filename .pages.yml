@@ -910,48 +910,63 @@ content:
             component: link
           - name: visual
             label: Visuelt innhold
-            description: Velg Ingen for tekst uten bilde, eller Bilde for å laste opp. Tidligere lagret bilde bevares når du velger Ingen.
-            type: block
-            blockKey: kind
+            description: Bildevelger og utsnitt er alltid tilgjengelige. Vis bilde styrer om bildet vises; valgt bilde beholdes når du velger Ingen.
+            type: object
             required: true
-            blocks:
-              - name: none
-                label: Ingen
-                type: object
-                fields: []
+            fields:
+              - &heroVisualVisibility
+                name: kind
+                label: Vis bilde i Hero
+                type: select
+                required: true
+                options:
+                  values:
+                    - name: none
+                      label: Ingen – bare tekst
+                    - name: image
+                      label: Bilde – vis valgt bilde
               - name: image
-                label: Bilde
+                label: Bilde og utsnitt
                 type: object
+                description: Velg et bilde også når visningen er satt til Ingen. Bildet vises først når du velger Bilde.
                 fields:
-                  - name: image
-                    label: Valgt bilde og utsnitt
-                    type: object
+                  - name: kind
+                    label: Bildetype
+                    type: select
+                    options:
+                      values:
+                        - name: photo
+                          label: Foto
+                        - name: illustration
+                          label: Illustrasjon
+                  - name: src
+                    label: Valgt bilde
+                    type: image
+                    options:
+                      media: heroImages
                     required: true
-                    fields:
-                      - name: src
-                        label: Valgt bilde
-                        type: image
-                        options:
-                          media: heroImages
-                        required: true
-                      - &hubHeropositionX
-                        name: positionX
-                        label: Horisontalt utsnitt (%)
-                        type: number
-                        default: 50
-                        options:
-                          min: 0
-                          max: 100
-                        required: true
-                      - &hubHeropositionY
-                        name: positionY
-                        label: Vertikalt utsnitt (%)
-                        type: number
-                        default: 50
-                        options:
-                          min: 0
-                          max: 100
-                        required: true
+                  - name: alt
+                    label: Kort beskrivelse av bildets mening
+                    type: string
+                    description: Valgfritt for dekorative forsidebilder. Tomt felt gir tom alt-tekst.
+                  - &hubHeropositionX
+                    name: positionX
+                    label: Horisontalt utsnitt (%)
+                    type: number
+                    default: 50
+                    options:
+                      min: 0
+                      max: 100
+                    required: true
+                  - &hubHeropositionY
+                    name: positionY
+                    label: Vertikalt utsnitt (%)
+                    type: number
+                    default: 50
+                    options:
+                      min: 0
+                      max: 100
+                    required: true
       - name: sections
         label: Innholdsseksjoner
         type: block
@@ -1172,44 +1187,38 @@ content:
               - *hubHerosecondaryCta
               - name: visual
                 label: Visuelt innhold
-                description: Ingen skjuler bildefeltene. Bilde viser bare feltene som kreves når du bruker et bilde. Valgt bilde bevares dersom du senere velger Ingen.
-                type: block
-                blockKey: kind
+                description: Bildevelger og utsnitt er alltid tilgjengelige. Vis bilde styrer om bildet vises; valgt bilde beholdes når du velger Ingen.
+                type: object
                 required: true
-                blocks:
-                  - name: none
-                    label: Ingen
-                    type: object
-                    fields: []
+                fields:
+                  - *heroVisualVisibility
                   - name: image
-                    label: Bilde
+                    label: Bilde og utsnitt
                     type: object
+                    description: Velg et bilde også når visningen er satt til Ingen. Bildet vises først når du velger Bilde.
                     fields:
-                      - name: image
-                        label: Valgt bilde og utsnitt
-                        type: object
+                      - name: kind
+                        label: Bildetype
+                        type: select
                         required: true
-                        fields:
-                          - name: kind
-                            label: Bildetype
-                            type: select
-                            options:
-                              values:
-                                - photo
-                                - illustration
-                            required: true
-                          - name: src
-                            label: Valgt bilde
-                            type: image
-                            options:
-                              media: serviceHeroImages
-                            required: true
-                          - name: alt
-                            label: Kort beskrivelse av bildets mening
-                            type: string
-                            required: true
-                          - *hubHeropositionX
-                          - *hubHeropositionY
+                        options:
+                          values:
+                            - name: photo
+                              label: Foto
+                            - name: illustration
+                              label: Illustrasjon
+                      - name: src
+                        label: Valgt bilde
+                        type: image
+                        options:
+                          media: serviceHeroImages
+                        required: true
+                      - name: alt
+                        label: Kort beskrivelse av bildets mening
+                        type: string
+                        required: true
+                      - *hubHeropositionX
+                      - *hubHeropositionY
           - &a6
             name: sections
             label: Innholdsseksjoner og farger
