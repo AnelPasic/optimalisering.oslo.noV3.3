@@ -6,6 +6,7 @@ import { headingAlignSchema } from './heading-alignment.ts';
 import {contentLayoutSchema,boxVariantSchema} from './content-presentation.ts';
 import {heroLayoutSchema} from './hero-presentation.ts';
 import {assessmentLayoutSchema} from './assessment-layout.ts';
+import {pageListSchema} from './page-list.ts';
 import calculatorMaster from '../content/global-elements/regneeksempel.json' with {type:'json'};
 import selectorMaster from '../content/global-elements/behov.json' with {type:'json'};
 import assessmentMaster from '../content/global-elements/sjekk.json' with {type:'json'};
@@ -37,6 +38,7 @@ export const homepageBlockSchema=z.discriminatedUnion('_block',[
  singleton('proof','resultater',homeSectionDataSchema.shape.proof),
  singleton('assessment','sjekk',z.object({layout:assessmentLayoutSchema,section:homeSectionDataSchema.shape.assessmentSection,form:homeSectionDataSchema.shape.form}).strict()),
  singleton('faq','sporsmal',z.object({eyebrow:z.string(),heading:z.string(),items:z.array(z.object({question:z.string(),answer:z.string()}))}).strict()),
+ z.object({...identity,_block:z.literal('pageList'),eyebrow:z.string().optional(),heading:z.string().trim().min(1),body:z.array(z.string()).default([]),headingAlign:headingAlignSchema,surface:surfaceSchema,pageList:pageListSchema}).strict(),
  z.object({...identity,_block:z.literal('content'),eyebrow:z.string().optional(),heading:z.string().trim().min(1),body:z.array(z.string()).default([]),surface:surfaceSchema,headingAlign:headingAlignSchema,layout:contentLayoutSchema,
  items:z.array(z.object({title:z.string(),text:z.string(),href:z.string().startsWith('/').optional(),label:z.string().optional(),surface:surfaceSchema,boxVariant:boxVariantSchema})).optional(),links:z.array(link).optional()}).strict(),
 ]);
@@ -46,9 +48,10 @@ export const homepageBlocksSchema=z.array(homepageBlockSchema).max(56).superRefi
  // A content anchor also shares the DOM namespace with controls and ARIA targets.
  const reserved=new Set(['behov','regneeksempel','priser','resultater','sjekk','sporsmal','skjema','main','mobile-menu','site-menu','order-package','website','email','message','calc-visits','calc-conversion-label','calc-conversion','calc-traffic','calc-new-conversion-label','calc-new-conversion','calculator-error','scenario-illustration-label','scenario-current-label','scenario-improved-label','scenario-current-value','scenario-improved-value']);
  blocks.forEach((b,i)=>{
+  if(b._block==='pageList'&&(reserved.has(b.id)||/^(?:package-home-|term-|header-(?:desktop|mobile)-submenu-)/.test(b.id)))ctx.addIssue({code:'custom',path:[i,'id'],message:'PageList cannot take a protected anchor'});
   if(ids.has(b.id)||uids.has(b.uid.toLowerCase()))ctx.addIssue({code:'custom',path:[i],message:'Block UUID and anchor must be unique'});
   if(b._block==='content'&&(reserved.has(b.id)||/^(?:package-home-|term-|header-(?:desktop|mobile)-submenu-)/.test(b.id)))ctx.addIssue({code:'custom',path:[i,'id'],message:'Content cannot take a protected section, control or ARIA identity'});
-  if(b._block!=='content'&&types.has(b._block))ctx.addIssue({code:'custom',path:[i,'_block'],message:'Duplicate homepage singleton'});
+  if(b._block!=='content'&&b._block!=='pageList'&&types.has(b._block))ctx.addIssue({code:'custom',path:[i,'_block'],message:'Duplicate homepage singleton'});
   ids.add(b.id);uids.add(b.uid.toLowerCase());types.add(b._block);
  });
 });
@@ -68,9 +71,10 @@ export function resolveGlobalPlacement(value:unknown):HomepageBlock{
  const placement=globalPlacementSchema.parse(value);
  return {...getGlobalElement(placement.element),...(placement.visibility?{visibility:placement.visibility}:{})};
 }
-const ordinarySchema=homepageBlockSchema.options[6];
+const ordinarySchema=homepageBlockSchema.options[7];
+const pageListHomeSchema=homepageBlockSchema.options[6].refine(b=>!globalElementIds.includes(b.id as GlobalElementId),'PageList cannot claim a shared module anchor');
 export const optionalHomepageSectionSchema=ordinarySchema.refine(b=>!globalElementIds.includes(b.id as GlobalElementId)&&!Object.values(coreUids).includes(b.uid),'Use a global reference for a library master, not a copied local record');
-export const pagePlacementSchema=z.union([globalPlacementSchema,optionalHomepageSectionSchema]);
+export const pagePlacementSchema=z.union([globalPlacementSchema,optionalHomepageSectionSchema,pageListHomeSchema]);
 export const homepageSourceSchema=z.object({sections:z.array(pagePlacementSchema).max(56)}).strict();
 export function isHomepageSectionVisible(section?:{visibility?:unknown}){return !!section&&section.visibility!=='hidden';}
 type Source={sections?:unknown};
@@ -87,7 +91,7 @@ export function getHomepageBlocks(page:Source){
  if(!Array.isArray(page.sections)||['topSections','bottomSections','optionalSections'].some(key=>Object.hasOwn(page,key))||page.sections.some(value=>value?._block==='global'))return resolveHomepageSections(page);
  return homepageBlocksSchema.parse(page.sections.map((value)=>{
   const s=value as Record<string,unknown>;
-  if(s._block==='content')return s;
+  if(s._block==='content'||s._block==='pageList')return s;
   const {_block,uid,id,name,content,...rest}=s;
   for(const key of ['heading','body','surface','headingAlign','layout'])delete rest[key];
   return {...rest,_block,uid,id,name,content};

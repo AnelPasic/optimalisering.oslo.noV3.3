@@ -94,7 +94,7 @@ export const pageSchema = z.preprocess((input,context)=>{
       if (section.globalElement) return;
       const model = sectionModel(page.slug, section.id);
       const isPageList = section._block === 'pageList';
-      if (isPageList && (page.slug !== 'innsikt' || page.kind !== 'index' || model === 'protected' || !section.pageList || section.items || section.links)) context.addIssue({ code: 'custom', path: ['sections', index], message: 'PageList requires Innsikt index configuration without duplicated items/links' });
+      if (isPageList && (model === 'protected' || !section.pageList || section.items || section.links)) context.addIssue({ code: 'custom', path: ['sections', index], message: 'PageList requires its dedicated configuration without duplicated items/links' });
       if (!isPageList && section.pageList) context.addIssue({ code: 'custom', path: ['sections', index, 'pageList'], message: 'PageList configuration requires its dedicated editor block' });
       if (!isPageList && section._block && section._block !== model) context.addIssue({ code: 'custom', path: ['sections', index, '_block'], message: 'Section editor model must match its protected identity' });
       if (model === 'protected' && (section.surface !== 'default' || section.items?.some(item => item.surface !== 'default'))) context.addIssue({ code: 'custom', path: ['sections', index, 'surface'], message: 'Protected CTA/form surfaces are design-system controlled' });
