@@ -12,6 +12,7 @@ import Faq from './Faq.astro';
 import ClosingCta from './ClosingCta.astro';
 import { visibleServiceSections, hasGlobalServiceProof, validateServiceGlobalProof } from '../lib/service-sections';
 import GlobalContentSection from './GlobalContentSection.astro';
+import PageList from './PageList.astro';
 import '../styles/compositions/service.css';
 interface Props {page:CollectionEntry<'pages'>['data'];commercial:HomepageContent;route:RouteFamily;}
 const {page,commercial,route}=Astro.props;
@@ -26,7 +27,7 @@ validateServiceGlobalProof(page,records);
   <CommercialHero content={resolvePageHero(page)} />
   {visibleServiceSections(page).map(section=><>
     {section.globalElement ? <GlobalContentSection element={section.globalElement} faqItems={page.faq} /> : <>
-    <ContentSection section={section} visualId={capability.sectionVisuals.find(v=>v.section===section.id)?.visual} defaultSurface={capability.sectionSurfaces.find(v=>v.section===section.id)?.surface} />
+    {section._block==='pageList'?<PageList section={section} />:<ContentSection section={section} visualId={capability.sectionVisuals.find(v=>v.section===section.id)?.visual} defaultSurface={capability.sectionSurfaces.find(v=>v.section===section.id)?.surface} />}
     {!cmsOnly&&!globalProof&&capability.proofAfter===section.id&&page.proof&&<Proof content={page.proof} records={records} primary />}
     {!cmsOnly&&bridge?.after===section.id&&<PricingBridge content={commercial.packages} link={bridge.link} serviceName={bridge.serviceName} />}
     </>}

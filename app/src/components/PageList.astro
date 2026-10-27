@@ -4,10 +4,13 @@ import HomeSection from './HomeSection.astro';
 import Arrow from './Arrow.astro';
 import ListingVisual from './ListingVisual.astro';
 import { resolvePageList, type ListPage } from '../lib/page-list';
-interface Props { section: CollectionEntry<'pages'>['data']['sections'][number]; pages: readonly ListPage[]; }
-const { section, pages } = Astro.props;
+import { getCollection } from 'astro:content';
+interface Props { section: CollectionEntry<'pages'>['data']['sections'][number]; pages?: readonly ListPage[]; }
+const { section, pages: suppliedPages } = Astro.props;
 const config = section.pageList!;
-const items = resolvePageList(config, pages);
+const pages = suppliedPages ?? (await getCollection('pages')).map(entry=>entry.data);
+const cases = config.source === 'cases' || config.mode === 'manual' ? (await getCollection('proofCases')).map(entry=>entry.data) : [];
+const items = resolvePageList(config, pages, 'public', cases);
 const cards = items.map(item => ({ title: item.title, text: item.summary, href: item.href, label: item.label, surface: 'default' as const, boxVariant: 'default' as const }));
 ---
 {config.layout === 'cards' ? <HomeSection section={{ ...section, items: cards }} /> :
@@ -17,10 +20,10 @@ const cards = items.map(item => ({ title: item.title, text: item.summary, href: 
         {config.layout === 'mediaCards' || config.layout === 'alternating' ?
           <article class="info-item listing-item" data-has-visual={!!item.visual} data-visual-kind={item.visual?.kind ?? 'none'} data-surface={config.layout === 'mediaCards' ? 'base' : undefined}>
             {config.layout === 'mediaCards' && item.visual && <ListingVisual visual={item.visual} />}
-            <div class="listing-copy"><h3>{item.title}</h3><p>{item.summary}</p><a class="text-link" href={item.href}>{item.label}<Arrow diagonal /></a></div>
+            <div class="listing-copy"><h3>{item.title}</h3><p>{item.summary}</p>{item.href&&<a class="text-link" href={item.href}>{item.label}<Arrow diagonal /></a>}</div>
             {config.layout === 'alternating' && item.visual && <ListingVisual visual={item.visual} />}
-          </article> : config.layout === 'links' ? <a class="text-link" href={item.href}>{item.title}<Arrow diagonal /></a> :
-          <article class="info-item page-list-row"><h3>{item.title}</h3><p>{item.summary}</p><a class="text-link" href={item.href}>{item.label}<Arrow diagonal /></a></article>}
+          </article> : config.layout === 'links' ? (item.href ? <a class="text-link" href={item.href}>{item.title}<Arrow diagonal /></a> : <span class="font-semibold">{item.title}</span>) :
+          <article class="info-item page-list-row"><h3>{item.title}</h3><p>{item.summary}</p>{item.href&&<a class="text-link" href={item.href}>{item.label}<Arrow diagonal /></a>}</article>}
       </li>)}
     </ul>
   </HomeSection>}

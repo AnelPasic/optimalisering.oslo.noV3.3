@@ -304,14 +304,55 @@ components:
       value: "{fields.slug}"
       label: "{primary} ({fields.slug})"
       search: listing.title,title,slug
+  pageListPageReference:
+    type: select
+    options:
+      placeholder: Søk etter side eller URL
+      values:
+# PAGE_LIST_PAGE_OPTIONS_START
+        - name: "ai-synlighet"
+          label: "AI-synlighet - bli forstått med riktig informasjon | Medon"
+        - name: "home"
+          label: "SEO, AI-synlighet og konverteringsoptimalisering | Optimalisering Oslo"
+        - name: "innsikt"
+          label: "Innsikt - velg startpunkt og vurder effekten | Medon"
+        - name: "innsikt/google-bedriftsprofil"
+          label: "Google bedriftsprofil - praktisk guide"
+        - name: "innsikt/hva-bor-optimaliseres-forst"
+          label: "Hva bør optimaliseres først?"
+        - name: "innsikt/male-effekt-av-optimalisering"
+          label: "Hvordan måle effekten?"
+        - name: "kontakt"
+          label: "Kontakt om Optimalisering Oslo | Medon AS"
+        - name: "konvertering"
+          label: "Konverteringsoptimalisering (CRO) | Optimalisering Oslo"
+        - name: "lokal-seo"
+          label: "Lokal SEO for Google Maps og lokale søk | Medon"
+        - name: "nettbutikkoptimalisering"
+          label: "Nettbutikkoptimalisering - fra oppdagelse til kjøp | Medon"
+        - name: "om"
+          label: "Om Optimalisering Oslo og Medon AS"
+        - name: "personvern"
+          label: "Personvern - Optimalisering Oslo"
+        - name: "priser"
+          label: "Priser på SEO, CRO og digital optimalisering | Optimalisering Oslo"
+        - name: "seo"
+          label: "SEO-byrå for bedrifter i Oslo | Optimalisering Oslo"
+        - name: "synlighet"
+          label: "SEO, lokal SEO og AI-synlighet | Optimalisering Oslo"
+        - name: "vilkar"
+          label: "Vilkår - hva må avtales før videre arbeid? | Medon"
+        - name: "vurdering"
+          label: "Gratis manuell sjekk av nettsiden | Medon"
+# PAGE_LIST_PAGE_OPTIONS_END
   sectionPageList:
     type: object
     fields:
       - name: id
         label: Seksjonens lenkeanker
         type: string
-        readonly: true
         required: true
+        pattern: ^[a-z0-9]+(?:-[a-z0-9]+)*$
       - name: eyebrow
         label: Overtekst
         type: string
@@ -335,6 +376,18 @@ components:
         type: object
         required: true
         fields:
+          - name: source
+            label: Automatisk kilde
+            type: select
+            default: articles
+            options:
+              values:
+                - name: articles
+                  label: Innsiktartikler
+                - name: pages
+                  label: Nettsider og tjenester
+                - name: cases
+                  label: Godkjente kundecaser
           - name: mode
             label: Utvalg
             type: select
@@ -350,7 +403,7 @@ components:
             label: Sortering
             type: select
             default: editorial
-            description: Gjelder automatisk utvalg. Manuelt utvalg følger rekkefølgen under Velg artikler.
+            description: Gjelder automatisk utvalg. Manuelt utvalg følger rekkefølgen under Velg innhold.
             options:
               values:
                 - name: editorial
@@ -361,7 +414,7 @@ components:
             label: Maks antall
             type: number
             default: 6
-            description: Bare automatisk utvalg, 1–12. Manuelt utvalg viser alle valgte, synlige artikler.
+            description: Automatisk 1–12 (anbefalt 2–9). Manuelt maksimalt 9.
             options:
               min: 1
               max: 12
@@ -382,9 +435,60 @@ components:
                   label: Kompakt
                 - name: links
                   label: Lenker
+          - name: entries
+            label: Velg innhold manuelt (2–9)
+            description: Bland valgte sider, godkjente kundecaser og egne URL-er i ønsket rekkefølge.
+            type: block
+            blockKey: _block
+            list:
+              max: 9
+              collapsible:
+                collapsed: true
+                summary: "{index}. {title}{slug}{caseId}{href}"
+            blocks:
+              - name: page
+                label: Eksisterende side
+                type: object
+                fields:
+                  - name: slug
+                    label: Velg side
+                    component: pageListPageReference
+                    required: true
+              - name: case
+                label: Kundecase
+                type: object
+                fields:
+                  - name: caseId
+                    label: Velg kundecase
+                    type: reference
+                    required: true
+                    options:
+                      collection: proofCases
+                      value: "{fields.id}"
+                      label: "{fields.clientName} ({fields.publicationStatus})"
+                      search: id,clientName
+              - name: url
+                label: Egen intern/ekstern URL
+                type: object
+                fields:
+                  - name: href
+                    label: URL
+                    type: string
+                    required: true
+                  - name: title
+                    label: Overskrift
+                    type: string
+                    required: true
+                  - name: summary
+                    label: Kort beskrivelse
+                    type: text
+                  - name: label
+                    label: Lenketekst
+                    type: string
+                    default: Les mer
           - name: selected
-            label: Velg artikler
-            description: Bare manuelt utvalg. Flytt radene for å endre rekkefølgen. Velg hver artikkel én gang.
+            label: Tidligere artikkelutvalg
+            description: For gamle H-021-lister; v2 bruker Velg innhold.
             type: object
             list:
               collapsible:
@@ -887,6 +991,9 @@ content:
                 label: Visning på denne siden
                 component: sectionVisibility
                 description: "Fjerning sletter bare plasseringen. Eksisterende lenker til #sjekk og #priser må få et gyldig mål før disse skjules eller fjernes."
+          - name: pageList
+            label: PageList – innholdsliste
+            component: sectionPageList
           - name: content
             label: Innholdsseksjon
             fields:
@@ -1121,6 +1228,9 @@ content:
               - name: protected
                 label: Beskyttet sjekk / handling
                 component: sectionProtected
+              - name: pageList
+                label: PageList – innholdsliste
+                component: sectionPageList
               - name: global
                 label: Globalt element
                 component: serviceGlobalPlacement
@@ -1201,6 +1311,9 @@ content:
               - name: content
                 label: Innholdsseksjon
                 component: synlighetSectionContent
+              - name: pageList
+                label: PageList – innholdsliste
+                component: sectionPageList
               - name: global
                 label: Globalt element
                 component: serviceGlobalPlacement
@@ -1231,6 +1344,9 @@ content:
               - name: protected
                 label: Beskyttet sjekk / handling
                 component: sectionProtected
+              - name: pageList
+                label: PageList – innholdsliste
+                component: sectionPageList
               - name: global
                 label: Globalt element
                 component: serviceGlobalPlacement
@@ -1320,6 +1436,7 @@ content:
           - seo.json
           - ai-synlighet.json
           - nettbutikkoptimalisering.json
+          - lokal-seo.json
         format: json
         subfolders: false
         operations: *a3

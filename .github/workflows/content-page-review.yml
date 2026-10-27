@@ -12,6 +12,9 @@ on:
       - "app/tests/universal-global-content.test.ts"
       - "app/tests/hero-optional-image-cms.test.ts"
       - "app/tests/faq-global-local-polish.test.ts"
+      - "app/tests/page-list-v2.test.ts"
+      - "app/src/lib/page-list.ts"
+      - "app/src/lib/home-builder.ts"
       - "app/src/lib/content-schema.ts"
       - "app/src/lib/service-sections.ts"
       - "app/src/components/**"
@@ -36,8 +39,10 @@ jobs:
           cache-dependency-path: app/package-lock.json
       - name: Install dependencies
         run: npm ci
+      - name: Verify generated PageList page dropdown
+        run: node scripts/sync-page-list-select.mjs --check
       - name: Focused content tests
-        run: node --test tests/lokal-seo-page.test.ts tests/google-bedriftsprofil-page.test.ts tests/header-navigation.test.ts tests/seo-commercial-content.test.ts tests/seo-mixed-composition.test.ts tests/service-global-placements.test.ts tests/page-hero.test.ts tests/hero-presets.test.ts tests/synlighet-hero.test.ts tests/seo-editor-order.test.ts tests/universal-global-content.test.ts tests/hero-optional-image-cms.test.ts tests/faq-global-local-polish.test.ts
+        run: node --test tests/lokal-seo-page.test.ts tests/google-bedriftsprofil-page.test.ts tests/header-navigation.test.ts tests/seo-commercial-content.test.ts tests/seo-mixed-composition.test.ts tests/service-global-placements.test.ts tests/page-hero.test.ts tests/hero-presets.test.ts tests/synlighet-hero.test.ts tests/seo-editor-order.test.ts tests/universal-global-content.test.ts tests/hero-optional-image-cms.test.ts tests/faq-global-local-polish.test.ts tests/page-list.test.ts tests/h021b-visuals.test.ts tests/page-list-v2.test.ts
       - name: Astro check
         run: npm run check
       - name: Build static pages

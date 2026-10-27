@@ -10,10 +10,11 @@ import Assessment from './HomeAssessment.astro';
 import Proof from './HomeProof.astro';
 import Packages from './PackageSection.astro';
 import Faq from './Faq.astro';
+import PageList from './PageList.astro';
 import { combineFaqItems, type FaqItem } from '../lib/faq-items';
 interface Props { block: HomepageBlock; records: CollectionEntry<'proofCases'>['data'][]; faqItems?: readonly FaqItem[]; }
 const {block,records,faqItems=[]}=Astro.props;
-const render=(value:HomepageBlock)=>{switch(value._block){case 'selector':case 'calculator':case 'packages':case 'proof':case 'content':case 'assessment':case 'faq':return value._block;default:return assertNever(value);}};
+const render=(value:HomepageBlock)=>{switch(value._block){case 'selector':case 'calculator':case 'packages':case 'proof':case 'content':case 'assessment':case 'faq':case 'pageList':return value._block;default:return assertNever(value);}};
 render(block);
 ---
 {block._block==='selector'&&<section id={block.id} class="need-section section-space"><div class="shell"><h2>{block.content.heading}</h2><div class="need-grid">{block.content.items.map((item,index)=><a class={`card need-card need-card-${index}`} href={item.link.href}><div class="home-card-top"><span class="discipline">{item.discipline}</span><HomeSymbol kind={index===0?'search':index===1?'choose':'both'} /></div><h3>{item.title}</h3><p>{item.description}</p><span class="text-link">{item.link.label}<Arrow diagonal /></span></a>)}</div></div></section>}
@@ -21,5 +22,6 @@ render(block);
 {block._block==='packages'&&<Packages content={block.content} />}
 {block._block==='proof'&&<Proof content={block.content} records={records} />}
 {block._block==='content'&&<ContentSection section={block} />}
+{block._block==='pageList'&&<PageList section={{...block,layout:'default'}} />}
 {block._block==='assessment'&&<Assessment section={block.content.section} content={block.content.form} layout={block.content.layout} />}
 {block._block==='faq'&&<Faq id={block.id} {...block.content} items={combineFaqItems(block.content.items, faqItems)} />}

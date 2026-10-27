@@ -73,6 +73,6 @@ test('invalid, forged and duplicate global placements fail on pricing and ordina
 
 test('global proof on non-service pages retains its independent evidence gate', () => {
   const source = JSON.parse(readFileSync('src/content/pages/priser.json','utf8'));
-  const page = pageSchema.parse({...source,sections:[...source.sections,reference('resultater')]});
+  const page = pageSchema.parse({...source,sections:[...source.sections.filter((s:any)=>s.element!=='resultater'),reference('resultater')]});
   assert.throws(()=>validateServiceGlobalProof(page,[]),/publiseringsgodkjenning|publiserbare/);
 });

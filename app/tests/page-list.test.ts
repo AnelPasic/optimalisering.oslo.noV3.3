@@ -16,6 +16,8 @@ const third=(edit:any={})=>({...load('hva-bor-optimaliseres-forst'),slug:'innsik
 const expected=[
   {slug:first,title:'Hva bør optimaliseres først?',summary:'Undersøk om de rette finner deg, om de kommer videre, og om handlingene har verdi. Se hypotetiske situasjoner og en enkel beslutningsrekkefølge.',label:'Les startguiden',href:`/${first}/`},
   {slug:second,title:'Hvordan måle effekten?',summary:'Skill mellom visninger, handlinger og forretningsverdi. Definer relevante henvendelser eller nyttige kjøp, og gjør forutsetningene synlige.',label:'Les måleguiden',href:`/${second}/`},
+  // Newly authored article in the live CMS is a valid third item, not a regression.
+  {slug:'innsikt/google-bedriftsprofil',title:'Google bedriftsprofil - praktisk guide',summary:'En enkel kontroll av eierskap, kategori, tjenesteområde, åpningstider og kontaktvei i Google Søk og Maps.',label:'Les guiden',href:'/innsikt/google-bedriftsprofil/'},
 ];
 
 test('automatic collection discovery preserves exact migrated titles, summaries, labels, URLs and order',()=>{
@@ -26,7 +28,7 @@ test('automatic collection discovery preserves exact migrated titles, summaries,
   for(const key of ['title','summary','href','visual','src','icon'])assert.ok(!(key in section.pageList));
 });
 test('synthetic article is discovered without overview edits; hidden/index/service/utility records are omitted',()=>{
-  assert.equal(resolveTextList(config(),[...pages(),third()]).length,3);
+  assert.equal(resolveTextList(config(),[...pages(),third()]).length,expected.length+1);
   for(const record of [third({visible:false}),{...third(),kind:'service'},{...third(),kind:'utility'},{...third(),slug:'innsikt'},{...third(),slug:'elsewhere/article'}]){
     assert.deepEqual(resolveTextList(config(),[...pages(),record]),expected);
   }
@@ -48,10 +50,10 @@ test('exclusion precedes automatic limit; manual row order and count are authori
 test('blank optional metadata defaults safely and href normalizes slashes',()=>{
   const record=third({title:'',summary:' ',label:''});record.slug='/innsikt/tredje/';
   assert.deepEqual(resolveTextList(config(),[record]),[{slug:'innsikt/tredje',title:record.title,summary:record.intro,label:'Les mer',href:'/innsikt/tredje/'}]);
-  assert.equal(pageSchema.parse({...third(),listing:{}}).listing?.visible,true);
+  assert.equal(pageList.listingSchema.parse({}).visible,true);
 });
 test('schema rejects unknown queries/enums/limits/outside or duplicate references and source duplication',()=>{
-  for(const edit of [{mode:'anything'},{sort:'mtime'},{layout:'html'},{source:'pages'},{query:'*'},{limit:0},{limit:13},{limit:1.5},{selected:[{slug:'synlighet'}]},{selected:[{slug:first},{slug:first}]},{selected:[{slug:first,title:'copy'}]}]){
+  for(const edit of [{mode:'anything'},{sort:'mtime'},{layout:'html'},{query:'*'},{limit:0},{limit:13},{limit:1.5},{selected:[{slug:'synlighet'}]},{selected:[{slug:first},{slug:first}]},{selected:[{slug:first,title:'copy'}]}]){
     assert.equal(pageList.pageListSchema.safeParse(config(edit)).success,false,JSON.stringify(edit));
   }
   for(const edit of [{order:1.5},{visible:'false'}])assert.equal(pageSchema.safeParse(third(edit)).success,false);
@@ -71,7 +73,7 @@ test('CMS editor has unique file ownership and article-only reference rows; save
   assert.equal(articles.name,'insightArticles');
   const files=readdirSync('src/content/pages').filter(f=>f.endsWith('.json'));
   const eligible=files.filter(f=>!articles.exclude.includes(f));
-  assert.deepEqual(eligible.sort(),['hva-bor-optimaliseres-forst.json','male-effekt-av-optimalisering.json']);
+  assert.deepEqual(eligible.sort(),['google-bedriftsprofil.json','hva-bor-optimaliseres-forst.json','male-effekt-av-optimalisering.json']);
   const section=resolveField(entry.fields.find((f:any)=>f.name==='sections').blocks.find((b:any)=>b.name==='pageList'),cms.components);
   const fields=section.fields.find((f:any)=>f.name==='pageList').fields;
   for(const name of ['selected','excluded']){

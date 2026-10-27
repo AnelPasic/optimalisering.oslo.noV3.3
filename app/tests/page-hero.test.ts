@@ -71,7 +71,12 @@ test('Pages CMS edits one nested Hero; restores all sections, media and CTA with
   const restored=JSON.parse(cmsJsonSave(saved,page,editor,cms));
   // Native Pages CMS has no editor for the retired empty home chrome stub.
   // That obsolete {} is not a source of visible page content anymore.
-  if(page.kind==='home')assert.deepEqual({...restored,homepage:{}},page,file);
+  if(page.kind==='home'){
+    const {homepage:retired, ...actual}=restored;
+    const {homepage:retiredSource, ...expected}=page;
+    assert.ok(retired===undefined||Object.keys(retired).length===0,file);
+    assert.deepEqual(actual,expected,file);
+  }
   else assert.deepEqual(restored,page,file);
  }
 });
