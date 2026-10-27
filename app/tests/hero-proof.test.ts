@@ -2,7 +2,7 @@ import {getHomepageBlock} from '../src/lib/home-builder.ts';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
-import { getHeroProof } from '../src/lib/hero-proof.ts';
+import { getHeroProof, getSelectedHeroProof } from '../src/lib/hero-proof.ts';
 import {resolvePageHero} from '../src/lib/page-hero.ts';
 import {pageSchema} from '../src/lib/content-schema.ts';
 
@@ -51,6 +51,11 @@ test('an independently selected Hero proof on any page uses the existing publica
  assert.deepEqual(getHeroProof(slot,records),{
    metric:'ROAS',comparison:'4,3x -> 17,2x',support:'Eurotents · Google Ads'
  });
+ const master=getHomepageBlock(home,'proof').content;
+ assert.deepEqual(getSelectedHeroProof('eurotents',master,records),getHeroProof(slot,records));
+ assert.equal(getSelectedHeroProof('eurotents',{...master,publicationApproved:false},records),undefined);
+ assert.equal(getSelectedHeroProof('eurotents',{...master,caseIds:['nysta']},records),undefined);
+ assert.equal(getSelectedHeroProof('eurotents',master,records.map(x=>x.id==='eurotents'?{...x,publicationApproved:false}:x)),undefined);
  assert.equal(getHeroProof(slot,records.map(x=>x.id==='eurotents'?{...x,publicationApproved:false}:x)),undefined);
  assert.equal(getHeroProof(slot,records.map(x=>x.id==='eurotents'?{...x,publicationStatus:'WITHDRAWN'}:x)),undefined);
  assert.equal(getHeroProof(slot,records.filter(x=>x.id!=='eurotents')),undefined);
