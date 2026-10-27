@@ -11,6 +11,7 @@ export const heroViewSchema=z.object({
  family:z.enum(['home','service','pricing','index','article','assessment','utility','glossary','error']),layout:heroLayoutSchema,
  eyebrow:z.string(),title:z.string().trim().min(1),support:z.string(),primaryCta:link.optional(),secondaryCta:link.optional(),
  visual:z.discriminatedUnion('kind',[z.object({kind:z.literal('none')}).strict(),z.object({kind:z.literal('image'),image}).strict()]),
+ featuredProofCaseId:z.string().regex(/^[a-z0-9][a-z0-9-]*$/).optional(),
  titleEmphasis:z.enum(['none','first-sentence']).default('none'),
  breadcrumbs:z.array(z.object({label:z.string(),href:z.string().startsWith('/').optional()}).strict()).default([]),
 }).strict().transform(({layout,...view})=>({
