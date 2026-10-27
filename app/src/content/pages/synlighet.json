@@ -190,7 +190,7 @@
       "href": "/#sjekk"
     },
     "visual": {
-      "kind": "image",
+      "kind": "none",
       "image": {
         "kind": "illustration",
         "src": "/images/services/discoveringlocalfavorite-1.png",
