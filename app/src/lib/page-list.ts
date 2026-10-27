@@ -68,9 +68,11 @@ function publicCases(records:readonly unknown[]):PageListItem[]{
 export function resolvePageList(input:unknown,pages:readonly ListPage[],publicDirectory='public',caseRecords:readonly unknown[]=[]):PageListItem[]{
   const config=pageListSchema.parse(input);
   const normalized=pages.map(page=>({...page,slug:normalizeSlug(page.slug)}));
-  const bySlug=new Map(normalized.map(page=>[page.slug,page]));
-  if(bySlug.size!==normalized.length)throw new Error('PageList: duplicate page slugs');
   const articles=normalized.filter(page=>page.kind==='article'&&articleReference.safeParse({slug:page.slug}).success);
+  const pageScope=config.source==='pages'||(config.mode==='manual'&&config.entries.some(entry=>entry._block==='page'));
+  const chosenScope=pageScope?normalized:articles;
+  if(new Set(chosenScope.map(page=>page.slug)).size!==chosenScope.length)throw new Error('PageList: duplicate page slugs');
+  const bySlug=new Map(normalized.map(page=>[page.slug,page]));
   const cases=publicCases(caseRecords);
   const casesById=new Map(cases.map(c=>[c.slug.slice(5),c]));
   if(config.mode==='manual'){
