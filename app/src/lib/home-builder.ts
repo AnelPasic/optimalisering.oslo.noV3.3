@@ -7,6 +7,7 @@ import {contentLayoutSchema,boxVariantSchema} from './content-presentation.ts';
 import {heroLayoutSchema} from './hero-presentation.ts';
 import {assessmentLayoutSchema} from './assessment-layout.ts';
 import {pageListSchema} from './page-list.ts';
+import {sharedContentPlacementSchema,resolveSharedContentPlacement} from './shared-content.ts';
 import calculatorMaster from '../content/global-elements/regneeksempel.json' with {type:'json'};
 import selectorMaster from '../content/global-elements/behov.json' with {type:'json'};
 import assessmentMaster from '../content/global-elements/sjekk.json' with {type:'json'};
@@ -75,7 +76,7 @@ export function resolveGlobalPlacement(value:unknown):HomepageBlock{
 const ordinarySchema=homepageBlockSchema.options[7];
 const pageListHomeSchema=homepageBlockSchema.options[6].refine(b=>!globalElementIds.includes(b.id as GlobalElementId),'PageList cannot claim a shared module anchor');
 export const optionalHomepageSectionSchema=ordinarySchema.refine(b=>!globalElementIds.includes(b.id as GlobalElementId)&&!Object.values(coreUids).includes(b.uid),'Use a global reference for a library master, not a copied local record');
-export const pagePlacementSchema=z.union([globalPlacementSchema,optionalHomepageSectionSchema,pageListHomeSchema]);
+export const pagePlacementSchema=z.union([globalPlacementSchema,sharedContentPlacementSchema,optionalHomepageSectionSchema,pageListHomeSchema]);
 export const homepageSourceSchema=z.object({sections:z.array(pagePlacementSchema).max(56)}).strict();
 export function isHomepageSectionVisible(section?:{visibility?:unknown}){return !!section&&section.visibility!=='hidden';}
 type Source={sections?:unknown};
@@ -84,7 +85,7 @@ export function resolveHomepageSections(page:Source){
  if(['topSections','bottomSections','optionalSections'].some(key=>Object.hasOwn(page,key)))throw new Error('Forsiden bruker bare sections. Migrer Topp/Hoved/Bunn til én liste og last CMS på nytt før lagring.');
  for(const id of globalElementIds)getGlobalElement(id);
  const source=homepageSourceSchema.parse({sections:page.sections});
- return homepageBlocksSchema.parse(source.sections.map(p=>p._block==='global'?resolveGlobalPlacement(p):p));
+ return homepageBlocksSchema.parse(source.sections.map(p=>p._block==='global'?resolveGlobalPlacement(p):p._block==='sharedContent'?resolveSharedContentPlacement(p):p));
 }
 export function assertNever(value:never):never{throw new Error(`Unknown homepage block: ${JSON.stringify(value)}`);}
 /** Parsed collection entries already contain the resolved render array. */

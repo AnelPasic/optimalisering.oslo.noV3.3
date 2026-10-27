@@ -1,6 +1,7 @@
 import type { RouteFamily } from './route-family.ts';
 import { globalPlacementSchema, resolveGlobalPlacement, getGlobalElement } from './home-builder.ts';
 import { getPublishableCases } from './proof.ts';
+import {resolveSharedContentPlacement,sharedContentPlacementSchema} from './shared-content.ts';
 
 export const serviceGlobalIds = ['resultater', 'regneeksempel', 'sjekk', 'behov', 'mekanisme', 'passer', 'priser', 'sporsmal'] as const;
 export const serviceGlobalPlacementSchema = globalPlacementSchema.refine(placement => serviceGlobalIds.some(id => id === placement.element), 'Dette globale elementet er ikke tilgjengelig i tjenestebyggeren');
@@ -13,31 +14,44 @@ const fixedAnchors = ['service-hero', 'resultater', 'priser', 'service-priser', 
 
 /** Resolve references only in memory; CMS continues to store reference + visibility. */
 export function resolvePageSections(value: unknown) {
-  if (!Array.isArray(value)) throw new Error('Tjenestesiden krever en seksjonsliste');
-  const globals = new Map<string, ReturnType<typeof resolveGlobalPlacement>>();
-  const localIds = new Set<string>();
-  for (const row of value) {
-    if (!row || typeof row !== 'object' || 'globalElement' in row) throw new Error('Ugyldig seksjon; bruk Globalt element for bibliotekreferanser');
-    if (row._block === 'global') {
-      const placement = serviceGlobalPlacementSchema.parse(row);
-      if (globals.has(placement.element)) throw new Error(`Globalt element er allerede plassert: ${placement.element}`);
-      globals.set(placement.element, resolveGlobalPlacement(placement));
-    } else {
-      if (localIds.has(row.id)) throw new Error(`Duplisert lokalt anker: ${row.id}`);
-      localIds.add(row.id);
-    }
+ if(!Array.isArray(value))throw new Error('Tjenestesiden krever en seksjonsliste');
+ const globals=new Map<string,ReturnType<typeof resolveGlobalPlacement>>();
+ const shared=new Map<string,ReturnType<typeof resolveSharedContentPlacement>>();
+ const localIds=new Set<string>();
+ for(const row of value){
+  if(!row||typeof row!=='object'||'globalElement' in row)throw new Error('Ugyldig seksjon; bruk en bibliotekreferanse');
+  if(row._block==='global'){
+   const placement=serviceGlobalPlacementSchema.parse(row);
+   if(globals.has(placement.element))throw new Error('Globalt element er allerede plassert: '+placement.element);
+   globals.set(placement.element,resolveGlobalPlacement(placement));
+  }else if(row._block==='sharedContent'){
+   const placement=sharedContentPlacementSchema.parse(row);
+   if(shared.has(placement.entry))throw new Error('Global innholdsseksjon er allerede plassert: '+placement.entry);
+   shared.set(placement.entry,resolveSharedContentPlacement(placement));
+  }else{
+   if(localIds.has(row.id))throw new Error('Duplisert lokalt anker: '+row.id);
+   localIds.add(row.id);
   }
-  for (const [id, block] of globals) {
-    if (block.visibility !== 'hidden' && value.some(row => row._block !== 'global' && row.id === id && row.visibility !== 'hidden')) {
-      throw new Error(`Globalt og lokalt element deler synlig anker: ${id}. Skjul eller fjern den lokale raden eksplisitt.`);
-    }
+ }
+ const placements=[...globals.values(),...shared.values()];
+ const active=new Set<string>();
+ for(const block of placements){
+  if(block.visibility==='hidden')continue;
+  if(active.has(block.id)||value.some(row=>row._block!=='global'&&row._block!=='sharedContent'&&row.id===block.id&&row.visibility!=='hidden'))
+   throw new Error('Global og lokal seksjon deler synlig anker: '+block.id);
+  active.add(block.id);
+ }
+ return value.flatMap(row=>{
+  if(row._block==='global'){
+   const block=globals.get(row.element)!;
+   return block.visibility==='hidden'?[]:[{...block,globalElement:row.element,heading:'heading' in block?block.heading:'',body:'body' in block?block.body:[]}];
   }
-  return value.flatMap(row => {
-    if (row._block !== 'global') return [row];
-    const block = globals.get(row.element)!;
-    if (block.visibility === 'hidden') return [];
-    return [{ ...block, globalElement: row.element, heading: 'heading' in block ? block.heading : '', body: 'body' in block ? block.body : [] }];
-  });
+  if(row._block==='sharedContent'){
+   const block=shared.get(row.entry)!;
+   return block.visibility==='hidden'?[]:[block];
+  }
+  return [row];
+ });
 }
 
 /** All non-home page families can reference the same approved global blocks. */
