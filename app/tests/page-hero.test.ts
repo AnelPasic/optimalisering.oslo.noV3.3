@@ -52,6 +52,17 @@ test('every ordinary page editor reuses the canonical Synlighet Hero field names
   const layout=resolveField(hero.fields.find((f:any)=>f.name==='layout'),cms.components);
   assert.deepEqual(layout.options.values.map((v:any)=>v.name),['split-right','split-left','centered','centered-none'],file);
   assert.deepEqual(hero.fields.map((f:any)=>f.name),expected,file);
+  const visual=resolveField(hero.fields.find((f:any)=>f.name==='visual'),cms.components);
+  assert.equal(visual.type,'block',file+' must keep conditional image validation');
+  assert.equal(visual.blockKey,'kind',file);
+  assert.deepEqual(visual.blocks.map((b:any)=>b.name),['none','image'],file);
+  assert.deepEqual(visual.blocks.map((b:any)=>b.label),[
+    'Ingen – bare tekst (velg Bilde for bildevalg)',
+    'Bilde – velg eller endre bilde',
+  ],file);
+  assert.match(visual.description,/Velg Bilde under Visuelt innhold/,file);
+  assert.equal(editor.fields.find((f:any)=>f.name==='sections')?.label,'Innholdsseksjoner',file);
+  assert.ok(editor.fields.find((f:any)=>f.name==='faq'),file+' owns its FAQ');
   assert.ok(!editor.fields.some((f:any)=>['eyebrow','title','intro','cta','heroVisual'].includes(f.name)),file);
  }
 });
