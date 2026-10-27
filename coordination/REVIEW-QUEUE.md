@@ -1,5 +1,12 @@
 # Review queue — aktiv status
 
+## AKTIV REVIEW 27.10.2026 — Lokal Synlighet-kopi ligger til gjennomgang; GitHub-tilgang må åpnes
+
+- **Faktisk CMS-kopi:** `lokal-synlighet` → ny `lokalsynlighet` / «Lokal SEO i praksis». Workflow [#40536118471](https://github.com/AnelPasic/optimalisering.oslo.noV3.3/actions/runs/40536118471) lagde og pushet riktig Git-branch, men mislyktes i PR-opprettelse pga. repository-innstillingen `GitHub Actions is not permitted to create or approve pull requests`. ChatGPT gjenopprettet uten å kopiere på nytt ved å opprette **[PR #27](https://github.com/AnelPasic/optimalisering.oslo.noV3.3/pull/27)** fra eksisterende branch. PR-en er **ÅPEN, ikke merged**. Kontrollér den før merge; originalt `synlighet.json` er uendret. Endringene er kun ny masterfil, generert CMS-valgliste og master-importregister. Kodefeilen fra PR #26 er bekreftet løst i dette forsøket.
+- **OWNER GitHub-innstilling:** Åpne repository `Settings → Actions → General → Workflow permissions` og aktiver `Allow GitHub Actions to create and approve pull requests`, lagre. Workflow har allerede nødvendige YAML-permissions; Actions-repositorykontrollen blokkerer likevel. Ingen unødvendig ny koderunde.
+- **Tidligere `hjelpmed`:** [Kjøring #40532718691](https://github.com/AnelPasic/optimalisering.oslo.noV3.3/actions/runs/40532718691) lagde en egen branch for skjult hjemme-testinnhold, men heller ingen PR/master i `main`; ikke promoter automatisk. En brukt global ID kan ikke kopieres på nytt uten nytt ID-valg.
+- **Gjenstående sluttaksept:** OWNER gjennomgår og godkjenner PR #27, tester redigering/bruk av globale `lokalsynlighet` etter en eventuell merge; etter at Actions-innstillingen er på, test ny action med annen ubrukt ID og verifiser automatisk PR. URL-velgeren krever fortsatt reell lagre/reopen-test. Bevar OWNER-data, `sunset`, priser, skjemaer, D1/Resend, noindex, og offentlig lanseringsgate.
+
 ## AKTIVT NESTE STEG 27.10.2026 — Prøv CMS-action på nytt etter feilretting
 
 - **Bekreftet ekte action-dispatch, men IKKE PR:** [Run #40509554747](https://github.com/AnelPasic/optimalisering.oslo.noV3.3/actions/runs/40509554747) feilet på store/små bokstaver i repository-identifikator. Dette er rettet på `main` via [PR #26](https://github.com/AnelPasic/optimalisering.oslo.noV3.3/pull/26), squash `617d9c0a`, med grønne Content page review og D-129. Ingen masterfil eller PR ble opprettet i det mislykkede forsøket.
