@@ -38,7 +38,7 @@ export const homepageBlockSchema=z.discriminatedUnion('_block',[
  singleton('proof','resultater',homeSectionDataSchema.shape.proof),
  singleton('assessment','sjekk',z.object({layout:assessmentLayoutSchema,section:homeSectionDataSchema.shape.assessmentSection,form:homeSectionDataSchema.shape.form}).strict()),
  singleton('faq','sporsmal',z.object({eyebrow:z.string(),heading:z.string(),items:z.array(z.object({question:z.string(),answer:z.string()}))}).strict()),
- z.object({...identity,_block:z.literal('pageList'),eyebrow:z.string().optional(),heading:z.string().trim().min(1),body:z.array(z.string()).default([]),headingAlign:headingAlignSchema,surface:surfaceSchema,pageList:pageListSchema}).strict(),
+ z.object({_block:z.literal('pageList'),id:z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),name:z.string().optional(),visibility:sectionVisibilitySchema,eyebrow:z.string().optional(),heading:z.string().trim().min(1),body:z.array(z.string()).default([]),headingAlign:headingAlignSchema,surface:surfaceSchema,pageList:pageListSchema}).strict(),
  z.object({...identity,_block:z.literal('content'),eyebrow:z.string().optional(),heading:z.string().trim().min(1),body:z.array(z.string()).default([]),surface:surfaceSchema,headingAlign:headingAlignSchema,layout:contentLayoutSchema,
  items:z.array(z.object({title:z.string(),text:z.string(),href:z.string().startsWith('/').optional(),label:z.string().optional(),surface:surfaceSchema,boxVariant:boxVariantSchema})).optional(),links:z.array(link).optional()}).strict(),
 ]);
@@ -49,10 +49,10 @@ export const homepageBlocksSchema=z.array(homepageBlockSchema).max(56).superRefi
  const reserved=new Set(['behov','regneeksempel','priser','resultater','sjekk','sporsmal','skjema','main','mobile-menu','site-menu','order-package','website','email','message','calc-visits','calc-conversion-label','calc-conversion','calc-traffic','calc-new-conversion-label','calc-new-conversion','calculator-error','scenario-illustration-label','scenario-current-label','scenario-improved-label','scenario-current-value','scenario-improved-value']);
  blocks.forEach((b,i)=>{
   if(b._block==='pageList'&&(reserved.has(b.id)||/^(?:package-home-|term-|header-(?:desktop|mobile)-submenu-)/.test(b.id)))ctx.addIssue({code:'custom',path:[i,'id'],message:'PageList cannot take a protected anchor'});
-  if(ids.has(b.id)||uids.has(b.uid.toLowerCase()))ctx.addIssue({code:'custom',path:[i],message:'Block UUID and anchor must be unique'});
+  if(ids.has(b.id)||(b._block!=='pageList'&&uids.has(b.uid.toLowerCase())))ctx.addIssue({code:'custom',path:[i],message:'Block UUID and anchor must be unique'});
   if(b._block==='content'&&(reserved.has(b.id)||/^(?:package-home-|term-|header-(?:desktop|mobile)-submenu-)/.test(b.id)))ctx.addIssue({code:'custom',path:[i,'id'],message:'Content cannot take a protected section, control or ARIA identity'});
   if(b._block!=='content'&&b._block!=='pageList'&&types.has(b._block))ctx.addIssue({code:'custom',path:[i,'_block'],message:'Duplicate homepage singleton'});
-  ids.add(b.id);uids.add(b.uid.toLowerCase());types.add(b._block);
+  ids.add(b.id);if(b._block!=='pageList')uids.add(b.uid.toLowerCase());types.add(b._block);
  });
 });
 export type HomepageBlock=z.infer<typeof homepageBlockSchema>;
