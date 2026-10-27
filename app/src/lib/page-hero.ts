@@ -26,7 +26,7 @@ export function resolvePageHero(page:Source,commercial?:Commercial):HeroView{
  const route=resolveRouteFamily(page);
  if(route.family==='home'){
   const hero=heroSchema.parse(page.hero);
-  return heroViewSchema.parse({...hero,family:'home',visual:hero.visual.kind==='image'?{kind:'image',image:{...hero.visual.image,alt:hero.visual.image.alt??'',kind:hero.visual.image.kind??'photo',origin:'home'}}:{kind:'none'}});
+  return heroViewSchema.parse({...hero,family:'home',visual:hero.visual.kind==='image'?{kind:'image',image:{...hero.visual.image,alt:'',kind:'photo',origin:'home'}}:{kind:'none'}});
  }
  if(page.hero&&typeof page.hero==='object'&&'primaryCta' in page.hero){
   const hero=synlighetHeroSchema.parse(page.hero);
