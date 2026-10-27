@@ -86,11 +86,11 @@ export function resolveGlobalPlacement(value:unknown):HomepageBlock{
  const placement=globalPlacementSchema.parse(value);
  if(placement.id && !hasPromotedGlobal(placement.element))throw new Error('Cannot override a protected global anchor');
  const master=getGlobalElement(placement.element);
- return {...master,...(placement.id?{id:placement.id}:{}),...(placement.visibility?{visibility:placement.visibility}:{})};
+ return {...master,...(placement.id?{id:placement.id}:{}),...(placement.visibility?{visibility:placement.visibility}:{})} as HomepageBlock;
 }
 const ordinarySchema=homepageBlockSchema.options[7];
-const pageListHomeSchema=homepageBlockSchema.options[6].refine(b=>!globalElementIds.includes(b.id as GlobalElementId),'PageList cannot claim a shared module anchor');
-export const optionalHomepageSectionSchema=ordinarySchema.refine(b=>!globalElementIds.includes(b.id as GlobalElementId)&&!Object.values(coreUids).includes(b.uid),'Use a global reference for a library master, not a copied local record');
+const pageListHomeSchema=homepageBlockSchema.options[6].refine(b=>!globalElementIds.includes(b.id as CoreGlobalElementId),'PageList cannot claim a shared module anchor');
+export const optionalHomepageSectionSchema=ordinarySchema.refine(b=>!globalElementIds.includes(b.id as CoreGlobalElementId)&&!Object.values(coreUids).includes(b.uid),'Use a global reference for a library master, not a copied local record');
 export const pagePlacementSchema=z.union([globalPlacementSchema,optionalHomepageSectionSchema,pageListHomeSchema]);
 export const homepageSourceSchema=z.object({sections:z.array(pagePlacementSchema).max(56)}).strict();
 export function isHomepageSectionVisible(section?:{visibility?:unknown}){return !!section&&section.visibility!=='hidden';}

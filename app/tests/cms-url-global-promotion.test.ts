@@ -9,7 +9,7 @@ import {validatePilotPromotionPayload} from '../scripts/dispatch-pilot-promotion
 import {pageSchema} from '../src/lib/content-schema.ts';
 import {resolvePageList} from '../src/lib/page-list.ts';
 const root=resolve(new URL('../',import.meta.url).pathname);
-const readPage=id=>JSON.parse(readFileSync(join(root,'src/content/pages/'+id+'.json'),'utf8'));
+const readPage=(id:string)=>JSON.parse(readFileSync(join(root,'src/content/pages/'+id+'.json'),'utf8'));
 
 test('all 17 CMS page JSON sources remain build-compatible without editing their source',()=>{
  const files=readdirSync(join(root,'src/content/pages')).filter(x=>x.endsWith('.json'));
@@ -36,7 +36,7 @@ test('selected URLs pass through existing Pages CMS page schema and PageList',()
  const page=readPage('om'),first=page.sections[0];
  const changed={...page,sections:[{...first,links:[{label:'Ny',href:'/om/',suggestedHref:'https://example.org'}]},...page.sections.slice(1)]};
  const out=pageSchema.parse(changed);
- assert.equal(out.sections[0].links[0].href,'https://example.org');
+ assert.equal(out.sections[0]?.links?.[0]?.href,'https://example.org');
  assert.equal(first.links[0].href,'/synlighet/');
  const pl=resolvePageList({source:'pages',mode:'manual',sort:'editorial',limit:3,layout:'links',selected:[],excluded:[],entries:[
  {_block:'url',title:'Valgt',href:'/om/'},{_block:'url',title:'Ekstern',href:'https://example.org'}
@@ -50,8 +50,8 @@ test('promotion copy keeps original text, paragraphs, links, options and styling
  assert.deepEqual(page,original);
  assert.equal(x.global._block,'content');
  assert.equal(x.global.id,'ny-introduksjon');
- assert.deepEqual(x.global.body,page.sections[0].body);
- assert.deepEqual(x.global.links,page.sections[0].links);
+ assert.deepEqual((x.global as Record<string,unknown>).body,page.sections[0].body);
+ assert.deepEqual((x.global as Record<string,unknown>).links,page.sections[0].links);
  assert.notEqual(x.global.uid,page.sections[0].uid);
 });
 test('promotion replace changes exactly one placement at the same index and anchor',()=>{
