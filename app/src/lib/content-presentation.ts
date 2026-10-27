@@ -13,3 +13,10 @@ export function boxVariantAttribute(value:unknown,protectedRow=false){
  const parsed=boxVariantSchema.safeParse(value);
  return !protectedRow&&parsed.success&&parsed.data!=='default'?parsed.data:undefined;
 }
+
+/** Column preference also applies to individual paragraphs when there are no boxes. */
+export function paragraphLayoutAttribute(section:{layout?:unknown;body?:readonly unknown[];items?:readonly unknown[]},protectedRow=false){
+ if(protectedRow||!Array.isArray(section.body)||section.body.length<2||!!section.items?.length)return undefined;
+ const layout=contentLayoutAttribute(section.layout);
+ return layout==='two-columns'||layout==='three-columns'?layout:undefined;
+}

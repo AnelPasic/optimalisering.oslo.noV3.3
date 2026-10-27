@@ -178,7 +178,7 @@ components:
         name: layout
         label: Seksjonsoppsett
         component: contentLayoutChoice
-        description: Fordeling av vanlige bokser. Standard beholder dagens oppsett. Flere kolonner blir én på mobil. Seksjonstype og farger endres ikke.
+        description: Velg kolonner for bokser. Har seksjonen bare avsnitt og ingen bokser, fordeles avsnittene i kolonner. På mobil blir alt én kolonne. Standard beholder eksisterende oppsett.
       - &serviceSurface
         name: surface
         label: Seksjonsfarge
@@ -977,7 +977,7 @@ content:
               - name: layout
                 label: Seksjonsoppsett
                 component: contentLayoutChoice
-                description: Fordeling av vanlige bokser. Standard beholder dagens oppsett. Flere kolonner blir én på mobil. Seksjonstype og farger endres ikke.
+                description: Velg kolonner for bokser. Har seksjonen bare avsnitt og ingen bokser, fordeles avsnittene i kolonner. På mobil blir alt én kolonne. Standard beholder eksisterende oppsett.
               - name: surface
                 label: Seksjonsfarge
                 component: surfaceChoice
@@ -3245,7 +3245,7 @@ content:
           - name: layout
             label: Seksjonsoppsett
             component: contentLayoutChoice
-            description: Fordeling av vanlige bokser. Standard beholder dagens oppsett. Flere kolonner blir én på mobil. Seksjonstype og farger endres ikke.
+            description: Velg kolonner for bokser. Har seksjonen bare avsnitt og ingen bokser, fordeles avsnittene i kolonner. På mobil blir alt én kolonne. Standard beholder eksisterende oppsett.
           - name: surface
             label: Seksjonsfarge
             component: surfaceChoice
@@ -3341,7 +3341,7 @@ content:
           - name: layout
             label: Seksjonsoppsett
             component: contentLayoutChoice
-            description: Fordeling av vanlige bokser. Standard beholder dagens oppsett. Flere kolonner blir én på mobil. Seksjonstype og farger endres ikke.
+            description: Velg kolonner for bokser. Har seksjonen bare avsnitt og ingen bokser, fordeles avsnittene i kolonner. På mobil blir alt én kolonne. Standard beholder eksisterende oppsett.
           - name: surface
             label: Seksjonsfarge
             component: surfaceChoice
