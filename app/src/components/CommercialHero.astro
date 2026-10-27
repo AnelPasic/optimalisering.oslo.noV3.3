@@ -5,16 +5,16 @@ import Arrow from './Arrow.astro';
 import TermText from './TermText.astro';
 import HeroPhoto from './HeroMedia.astro';
 import {getCollection} from 'astro:content';
-import {getHeroProof} from '../lib/hero-proof';
+import {getSelectedHeroProof} from '../lib/hero-proof';
 import {getGlobalElement} from '../lib/home-builder';
 interface Props {content:HeroView;proof?:ReturnType<typeof getHeroProof>;demo?:boolean;}
 const {content:input,proof,demo=false}=Astro.props;
 const content=heroViewSchema.parse(input),family=content.family;
 // A Hero selection never bypasses the existing proof-publication/evidence gate.
-const masterProof=getGlobalElement('resultater').content;
-const proofAllowed=!!content.featuredProofCaseId&&masterProof.publicationApproved&&masterProof.caseIds.includes(content.featuredProofCaseId);
-const proofRecords=proofAllowed?(await getCollection('proofCases')).map(entry=>entry.data):[];
-const selectedProof=proofAllowed?getHeroProof({...masterProof,caseIds:[content.featuredProofCaseId!] },proofRecords):family==='home'&&!content.featuredProofCaseId?proof:undefined;
+const proofRecords=content.featuredProofCaseId?(await getCollection('proofCases')).map(entry=>entry.data):[];
+const selectedProof=content.featuredProofCaseId
+ ? getSelectedHeroProof(content.featuredProofCaseId,getGlobalElement('resultater').content,proofRecords)
+ : family==='home'?proof:undefined;
 const Heading=demo?'h2':'h1',Section=family==='glossary'?'header':'section';
 const inner=['article','assessment','utility'].includes(family),service=family==='service'||family==='index';
 const media=content.visual.kind==='image',auxiliary=family==='assessment'&&Astro.slots.has('auxiliary');
