@@ -89,8 +89,9 @@ test('generated URL and global dropdowns match source files and CMS actions exis
 
 test('native Pages CMS config parses, all page editor actions and promoted collection are addressable',()=>{
  const doc=YAML.parse(readFileSync(join(root,'../.pages.yml'),'utf8'));
- const pageEditors=[];
- const walk=nodes=>{
+ type CmsNode={name?:string;type?:string;path?:string;scope?:string;workflow?:string;actions?:CmsNode[];items?:CmsNode[]};
+ const pageEditors:CmsNode[]=[];
+ const walk=(nodes:CmsNode[]|undefined)=>{
   for(const entry of nodes||[]){
    if(entry.type==='group')walk(entry.items);
    else if(entry.path==='app/src/content/pages'||entry.path?.startsWith('app/src/content/pages/'))pageEditors.push(entry);
@@ -104,10 +105,10 @@ test('native Pages CMS config parses, all page editor actions and promoted colle
   assert.equal(action.workflow,'promote-global-section.yml');
   if(editor.type==='collection')assert.equal(action.scope,'entry');
  }
- const globals=doc.content.find(x=>x.name==='globalElements');
+ const globals=(doc.content as CmsNode[]).find((x:CmsNode)=>x.name==='globalElements');
  assert.ok(globals.items.some(x=>x.name==='promotedGlobalContent'&&x.type==='collection'));
  const picker=doc.components.cmsSuggestedHref;
  assert.equal(picker.type,'select');
- assert.ok(picker.options.values.some(x=>x.name==='/'));
+ assert.ok(picker.options.values.some((x:{name:string})=>x.name==='/'));
  assert.ok(picker.options.values.some(x=>x.name==='/synlighet/'));
 });
