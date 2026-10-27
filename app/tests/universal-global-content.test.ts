@@ -4,6 +4,7 @@ import { readFileSync, readdirSync } from 'node:fs';
 import YAML from 'yaml';
 import { pageSchema } from '../src/lib/content-schema.ts';
 import { getGlobalElement } from '../src/lib/home-builder.ts';
+import { promotedGlobalMasters } from '../src/lib/promoted-global.generated.ts';
 import { serviceGlobalIds, validateServiceGlobalProof } from '../src/lib/service-sections.ts';
 import { cmsJsonSave, entryForFile, resolveField, assertPreservedContent } from './helpers/pages-cms-json.ts';
 
@@ -11,7 +12,7 @@ const cms = YAML.parse(readFileSync('../.pages.yml','utf8'));
 const sources = readdirSync('src/content/pages').filter(file => file.endsWith('.json')).sort();
 const reference = (element: string, visibility?: 'hidden') => ({ _block: 'global', element, ...(visibility ? { visibility } : {}) });
 
-test('every native page editor offers the same eight canonical global content references', () => {
+test('every native page editor offers the eight canonical and all promoted global references', () => {
   assert.equal(sources.length,17);
   for (const file of sources) {
     const entry = entryForFile(cms, 'app/src/content/pages/' + file);
@@ -22,7 +23,7 @@ test('every native page editor offers the same eight canonical global content re
     assert.ok(globalBlock, file);
     const fields = resolveField(globalBlock, cms.components).fields;
     const element = fields.find((field: any) => field.name === 'element');
-    assert.deepEqual(element.options.values.map((value: any) => value.name).sort(), [...serviceGlobalIds].sort(), file);
+    assert.deepEqual(element.options.values.map((value: any) => value.name).sort(), [...serviceGlobalIds,...Object.keys(promotedGlobalMasters)].sort(), file);
     assert.ok(fields.some((field: any) => field.name === 'visibility'), file);
   }
 });
