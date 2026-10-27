@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {readFileSync,mkdtempSync,writeFileSync,rmSync} from 'node:fs';
+import {readFileSync,readdirSync,mkdtempSync,writeFileSync,rmSync} from 'node:fs';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
 import {randomUUID} from 'node:crypto';
@@ -20,7 +20,9 @@ test('native JSON editor and reference on all seventeen pages, no promotion',()=
  assert.deepEqual(globalCollection.exclude,['README.md']);
  assert.equal(globalCollection.filename,'{fields.id}.json');
  assert.deepEqual(globalCollection.fields.map((f:any)=>f.name),['_block','uid','id','name','eyebrow','heading','headingAlign','layout','surface','body','items','links']);
- for(const file of (awaitableFiles())){
+ const files=readdirSync('src/content/pages').filter(file=>file.endsWith('.json'));
+ assert.equal(files.length,17);
+ for(const file of files){
   const editor=entryForFile(cms,'app/src/content/pages/'+file);
   const sections=editor.fields.find((f:any)=>f.name==='sections');
   const block=sections.blocks.find((b:any)=>b.name==='sharedContent');
@@ -37,11 +39,7 @@ test('native JSON editor and reference on all seventeen pages, no promotion',()=
   assert.deepEqual(saved.hero,raw.hero,file);
   assert.deepEqual(saved.faq,raw.faq,file);
  }
- const workflows=Object.keys(import.meta).filter(x=>x.includes('promot'));
- assert.equal(workflows.length,0);
 });
-function awaitableFiles(){return requirelessFiles();}
-function requirelessFiles(){return ['home.json','synlighet.json','om.json','priser.json','seo.json'];}
 test('global section content keeps identity and rejects unsafe or forged IDs',()=>{
  assert.ok(sharedContentSchema.safeParse(specimen).success);
  for(const id of ['sjekk','priser','sporsmal','main','term-seo','../bad']){
