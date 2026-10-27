@@ -4,4 +4,3 @@ export const heroPresetLabels={'split-right':'Tekst venstre / bilde høyre','spl
 export const heroLayoutSchema=z.preprocess(value=>value==null||value===''?undefined:value,z.enum(heroLayoutValues).default('split-right'));
 /** Normal pages retain their existing owned copy/media; this object is presentation only. */
 export const heroPresentationSchema=z.object({layout:heroLayoutSchema}).strict();
-export const specialHeroPresentationSchema=z.object({notFound:heroPresentationSchema}).strict();
