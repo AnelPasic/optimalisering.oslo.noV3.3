@@ -111,6 +111,9 @@ test('native Pages CMS config parses, all page editor actions and promoted colle
  const globals=(doc.content as CmsNode[]).find((x:CmsNode)=>x.name==='globalElements');
  assert.ok(globals && Array.isArray(globals.items),'Global elements group must have child entries');
  assert.ok(globals.items.some((x:CmsNode)=>x.name==='promotedGlobalContent'&&x.type==='collection'));
+ // Keep README in GitHub while excluding Markdown from this JSON-only CMS list.
+ const promotedCollection=globals.items.find((x:CmsNode)=>x.name==='promotedGlobalContent') as CmsNode&{exclude?:string[]};
+ assert.deepEqual(promotedCollection?.exclude,['README.md']);
  const picker=doc.components.cmsSuggestedHref;
  assert.equal(picker.type,'select');
  assert.ok(picker.options.values.some((x:{name:string})=>x.name==='/'));
