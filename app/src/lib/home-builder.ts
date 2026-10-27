@@ -17,12 +17,13 @@ import fitMaster from '../content/global-elements/passer.json' with {type:'json'
 import faqMaster from '../content/global-elements/sporsmal.json' with {type:'json'};
 
 const link=z.object({label:z.string().trim().min(1),href:z.string().startsWith('/')});
-export const heroPhotoSchema=z.object({src:z.string().regex(/^\/images\/home\/[a-z0-9][a-z0-9-]*\.webp$/),positionX:z.number().min(0).max(100),positionY:z.number().min(0).max(100)});
+export const heroPhotoSchema=z.object({kind:z.enum(['photo','illustration']).optional(),src:z.string().regex(/^\/images\/home\/[a-z0-9][a-z0-9-]*\.webp$/),alt:z.string().optional(),positionX:z.number().min(0).max(100),positionY:z.number().min(0).max(100)});
 export const heroSchema=z.object({
  layout:heroLayoutSchema,
  eyebrow:z.string(),title:z.string().trim().min(1),support:z.string(),primaryCta:link,secondaryCta:link.optional(),
  visual:z.discriminatedUnion('kind',[z.object({kind:z.literal('none'),image:heroPhotoSchema.optional()}).strict(),z.object({kind:z.literal('image'),image:heroPhotoSchema}).strict()]),
  // A single typed project treatment, never arbitrary inline rich styling.
+ featuredProofCaseId:z.string().regex(/^[a-z0-9][a-z0-9-]*$/).optional(),
  titleEmphasis:z.enum(['none','first-sentence']).default('none'),
 }).strict();
 export type CommercialHero=z.infer<typeof heroSchema>;

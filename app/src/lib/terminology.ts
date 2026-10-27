@@ -1,6 +1,6 @@
 import { z } from 'astro/zod';
 import source from '../content/terminology/glossary.json' with { type: 'json' };
-import {heroPresentationSchema} from './hero-presentation.ts';
+import {synlighetHeroSchema} from './synlighet-hero.ts';
 
 export const categories = ['Synlighet og søk', 'Annonsering', 'Konvertering', 'Måling og økonomi'] as const;
 const optionalText = z.string().max(500).optional().default('');
@@ -15,9 +15,9 @@ const termSchema = z.object({
   simpleExample: optionalText,
 }).strict();
 export const glossarySchema = z.object({
-  hero:heroPresentationSchema.optional(),
+  hero:synlighetHeroSchema,
   authority: z.literal('DRAFT / NON-AUTHORITATIVE'),
-  title: z.string().trim().min(1), intro: z.string().trim().min(1), description: z.string().trim().min(1),
+  description: z.string().trim().min(1),
   linkLabel: z.string().trim().min(1), moreLabel: z.string().trim().min(1),
   exampleLabel: z.string().trim().min(1), panelLabel: z.string().trim().min(1),
   terms: z.array(termSchema).min(1),

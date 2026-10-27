@@ -11,6 +11,7 @@ export const heroViewSchema=z.object({
  family:z.enum(['home','service','pricing','index','article','assessment','utility','glossary','error']),layout:heroLayoutSchema,
  eyebrow:z.string(),title:z.string().trim().min(1),support:z.string(),primaryCta:link.optional(),secondaryCta:link.optional(),
  visual:z.discriminatedUnion('kind',[z.object({kind:z.literal('none')}).strict(),z.object({kind:z.literal('image'),image}).strict()]),
+ featuredProofCaseId:z.string().regex(/^[a-z0-9][a-z0-9-]*$/).optional(),
  titleEmphasis:z.enum(['none','first-sentence']).default('none'),
  breadcrumbs:z.array(z.object({label:z.string(),href:z.string().startsWith('/').optional()}).strict()).default([]),
 }).strict().transform(({layout,...view})=>({
@@ -26,7 +27,7 @@ export function resolvePageHero(page:Source,commercial?:Commercial):HeroView{
  const route=resolveRouteFamily(page);
  if(route.family==='home'){
   const hero=heroSchema.parse(page.hero);
-  return heroViewSchema.parse({...hero,family:'home',visual:hero.visual.kind==='image'?{kind:'image',image:{...hero.visual.image,alt:'',kind:'photo',origin:'home'}}:{kind:'none'}});
+  return heroViewSchema.parse({...hero,family:'home',visual:hero.visual.kind==='image'?{kind:'image',image:{...hero.visual.image,alt:hero.visual.image.alt??'',kind:hero.visual.image.kind??'photo',origin:'home'}}:{kind:'none'}});
  }
  if(page.hero&&typeof page.hero==='object'&&'primaryCta' in page.hero){
   const hero=synlighetHeroSchema.parse(page.hero);
@@ -49,9 +50,17 @@ export function resolvePageHero(page:Source,commercial?:Commercial):HeroView{
  const crumbs=family==='pricing'?[]:[{label:'Forsiden',href:'/'},...(family==='article'?[{label:'Innsikt',href:'/innsikt/'}]:[]),{label:family==='service'?(route.service.pricingBridge?.serviceName??page.eyebrow):page.eyebrow}];
  return heroViewSchema.parse({family,layout,eyebrow:copy?.eyebrow??page.eyebrow,title:copy?.heading??page.title,support:copy?.intro??page.intro,primaryCta:family==='assessment'?undefined:page.cta,secondaryCta:family==='service'&&route.service.pricingBridge?{label:'Se priser',href:route.service.pricingBridge.link.href}:undefined,visual:media?{kind:'image',image:{...media,origin:'page'}}:{kind:'none'},breadcrumbs:crumbs});
 }
-export function resolveGlossaryHero(content:{title:string;intro:string;hero?:unknown}):HeroView{
- return heroViewSchema.parse({family:'glossary',layout:heroPresentationSchema.parse(content.hero??{}).layout,eyebrow:'Ordbok for normale mennesker',title:content.title,support:content.intro,visual:{kind:'none'}});
+export const specialHeroSourceSchema=z.object({hero:synlighetHeroSchema}).strict();
+
+/** 404 and glossary use the same authored Hero source/editor as service pages. */
+function resolveSpecialHero(input:unknown,family:'glossary'|'error'):HeroView{
+ const hero=synlighetHeroSchema.parse(input);
+ const media=hero.visual.kind==='image'?resolveServiceVisual(hero.visual.image):undefined;
+ return heroViewSchema.parse({...hero,family,visual:media?{kind:'image',image:{...media,origin:'page'}}:{kind:'none'}});
 }
-export function resolveNotFoundHero(presentation:unknown):HeroView{
- return heroViewSchema.parse({family:'error',layout:heroPresentationSchema.parse(presentation).layout,eyebrow:'404 · Siden finnes ikke',title:'Her var det\ningen vei videre.',support:'Gå til forsiden, eller finn tjenesten du trenger.',primaryCta:{label:'Til forsiden',href:'/'},visual:{kind:'none'}});
+export function resolveGlossaryHero(content:{hero:unknown}):HeroView{
+ return resolveSpecialHero(content.hero,'glossary');
+}
+export function resolveNotFoundHero(source:unknown):HeroView{
+ return resolveSpecialHero(source,'error');
 }

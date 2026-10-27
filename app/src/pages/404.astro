@@ -2,10 +2,9 @@
 import SiteLayout from '../layouts/SiteLayout.astro';
 import CommercialHero from '../components/CommercialHero.astro';
 import source from '../content/presentation/hero-layouts.json';
-import {specialHeroPresentationSchema} from '../lib/hero-presentation';
-import {resolveNotFoundHero} from '../lib/page-hero';
-const presentation=specialHeroPresentationSchema.parse(source);
+import {specialHeroSourceSchema,resolveNotFoundHero} from '../lib/page-hero';
+const presentation=specialHeroSourceSchema.parse(source);
 ---
 <SiteLayout title="Siden finnes ikke | Optimalisering Oslo" description="Finn tilbake til tjenestene eller en gratis sjekk." noindex>
- <CommercialHero content={resolveNotFoundHero(presentation.notFound)}/>
+ <CommercialHero content={resolveNotFoundHero(presentation.hero)}/>
 </SiteLayout>
