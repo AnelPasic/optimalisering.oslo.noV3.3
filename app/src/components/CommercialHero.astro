@@ -5,9 +5,14 @@ import type {getHeroProof} from '../lib/hero-proof';
 import Arrow from './Arrow.astro';
 import TermText from './TermText.astro';
 import HeroPhoto from './HeroMedia.astro';
+import {getCollection} from 'astro:content';
+import {getHeroProof} from '../lib/hero-proof';
 interface Props {content:HeroView;proof?:ReturnType<typeof getHeroProof>;demo?:boolean;}
 const {content:input,proof,demo=false}=Astro.props;
 const content=heroViewSchema.parse(input),family=content.family;
+// A Hero selection never bypasses the existing proof-publication/evidence gate.
+const proofRecords=content.featuredProofCaseId?(await getCollection('proofCases')).map(entry=>entry.data):[];
+const selectedProof=content.featuredProofCaseId?getHeroProof({publicationApproved:true,caseIds:[content.featuredProofCaseId]},proofRecords):family==='home'?proof:undefined;
 const Heading=demo?'h2':'h1',Section=family==='glossary'?'header':'section';
 const inner=['article','assessment','utility'].includes(family),service=family==='service'||family==='index';
 const media=content.visual.kind==='image',auxiliary=family==='assessment'&&Astro.slots.has('auxiliary');
@@ -35,7 +40,7 @@ const frameLayout=family==='home'
     <slot name="copy-end"/>
    </div>
    {content.visual.kind==='image'&&auxiliary?<div class="hero-aside"><HeroPhoto content={content.visual.image}/><div class="hero-auxiliary"><slot name="auxiliary"/></div></div>:<>
-    {content.visual.kind==='image'&&<HeroPhoto content={content.visual.image} proof={family==='home'?proof:undefined}/>}
+    {content.visual.kind==='image'&&<HeroPhoto content={content.visual.image} proof={selectedProof}/>}
     {auxiliary&&<div class="hero-auxiliary"><slot name="auxiliary"/></div>}
    </>}
   </div>
