@@ -6,12 +6,13 @@ import {pageSchema} from '../src/lib/content-schema.ts';
 import {glossarySchema} from '../src/lib/terminology.ts';
 import {entryForFile,resolveField,cmsJsonSave,assertPreservedContent} from './helpers/pages-cms-json.ts';
 import {resolvePageHero,resolveGlossaryHero,resolveNotFoundHero,heroViewSchema} from '../src/lib/page-hero.ts';
-import {specialHeroPresentationSchema} from '../src/lib/hero-presentation.ts';
+import {specialHeroSourceSchema} from '../src/lib/page-hero.ts';
 import {resolveHomepageContent} from '../src/lib/home-builder.ts';
 const pages=readdirSync('src/content/pages').filter(f=>f.endsWith('.json')).map(file=>({file,page:JSON.parse(readFileSync(`src/content/pages/${file}`,'utf8'))}));
 const home=pages.find(p=>p.page.kind==='home')!.page;
 const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
 const normal=pages.filter(p=>p.page.kind!=='home'&&p.page.slug!=='synlighet');
+const expectedHeroFields=['layout','eyebrow','title','support','primaryCta','secondaryCta','featuredProofCaseId','visual'];
 
 test('all ordinary pages have one canonical editable Hero, with no duplicated persisted text or image keys',()=>{
  assert.equal(normal.length,15);
@@ -38,7 +39,7 @@ test('canonical Hero rejects invalid presets, missing content, untrusted images 
 test('every ordinary page editor reuses the canonical Synlighet Hero field names and layout options',()=>{
  const syn=entryForFile(cms,'app/src/content/pages/synlighet.json');
  const homeEditor=entryForFile(cms,'app/src/content/pages/home.json');
- const expected=['layout','eyebrow','title','support','primaryCta','secondaryCta','visual'];
+ const expected=expectedHeroFields;
  const synHero=resolveField(syn.fields.find((f:any)=>f.name==='hero'),cms.components);
  const homeHero=resolveField(homeEditor.fields.find((f:any)=>f.name==='hero'),cms.components);
  assert.deepEqual(synHero.fields.map((f:any)=>f.name),expected);
@@ -112,21 +113,25 @@ test('all rendered Hero families preserve copy, CTA, image crop and separate Pac
  }
 });
 
-test('glossary and error pages keep their separate presentation-only Hero contract',()=>{
+test('Begreper and 404 use the full shared Hero editor and guarded source schema',()=>{
  const glossary=JSON.parse(readFileSync('src/content/terminology/glossary.json','utf8'));
- assert.equal(glossarySchema.safeParse({...glossary,hero:{layout:'centered'}}).success,true);
+ assert.equal(glossarySchema.safeParse({...glossary,hero:{...glossary.hero,layout:'centered'}}).success,true);
  const editor=entryForFile(cms,'app/src/content/terminology/glossary.json');
- assert.deepEqual(resolveField(editor.fields.find((f:any)=>f.name==='hero'),cms.components).fields.map((f:any)=>f.name),['layout']);
- assert.equal(resolveGlossaryHero(glossary).title,glossary.title);
+ const hero=resolveField(editor.fields.find((f:any)=>f.name==='hero'),cms.components);
+ assert.deepEqual(hero.fields.map((f:any)=>f.name),expectedHeroFields);
+ assert.equal(resolveGlossaryHero(glossary).title,glossary.hero.title);
+ assert.ok(!Object.hasOwn(glossary,'title')&&!Object.hasOwn(glossary,'intro'),'no duplicate editable glossary copy');
  const source=JSON.parse(readFileSync('src/content/presentation/hero-layouts.json','utf8'));
- assert.equal(specialHeroPresentationSchema.safeParse(source).success,true);
- assert.equal(specialHeroPresentationSchema.safeParse({notFound:{layout:'raw-class'}}).success,false);
- const error=resolveNotFoundHero(source.notFound);
+ assert.equal(specialHeroSourceSchema.safeParse(source).success,true);
+ assert.equal(specialHeroSourceSchema.safeParse({hero:{...source.hero,layout:'raw-class'}}).success,false);
+ const errEditor=entryForFile(cms,'app/src/content/presentation/hero-layouts.json');
+ const errHero=resolveField(errEditor.fields.find((f:any)=>f.name==='hero'),cms.components);
+ assert.deepEqual(errHero.fields.map((f:any)=>f.name),expectedHeroFields);
+ const error=resolveNotFoundHero(source.hero);
  assert.equal(error.primaryCta?.href,'/');
- assert.equal(error.title,'Her var det\ningen vei videre.');
+ assert.equal(error.title,'Her var det\\ningen vei videre.');
  assert.equal(heroViewSchema.safeParse({...error,layout:'raw-class'}).success,false);
 });
-
 test('Pricing page Hero is independently editable but does not rewrite global package content',()=>{
  const pricing=pages.find(({page})=>page.kind==='pricing')!.page;
  const editor=entryForFile(cms,'app/src/content/pages/priser.json');
