@@ -2645,6 +2645,7 @@ content:
         type: collection
         path: app/src/content/global-promoted
         format: json
+        exclude: [README.md]
         operations:
           create: false
           rename: false
