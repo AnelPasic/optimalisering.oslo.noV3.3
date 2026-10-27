@@ -14,7 +14,7 @@
     "support": "Optimalisering Oslo er tjenestenavnet. Medon AS er eier og leverandør. Vi skal gjøre det enkelt å forstå hvem du snakker med, og hvem som har ansvar for avtalt arbeid.",
     "primaryCta": {
       "label": "Ta en gratis sjekk",
-      "suggestedHref": "/#sjekk"
+      "href": "/vurdering/"
     },
     "visual": {
       "kind": "none"

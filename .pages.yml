@@ -76,52 +76,6 @@ settings:
       create: "Nytt innhold: {path} (via Pages CMS)"
       delete: "Slettet innhold: {path} (via Pages CMS)"
 components:
-  cmsSuggestedHref:
-    type: select
-    description: Søk i eksisterende sider eller snarveier. Valgt URL brukes; tøm valget for å bruke Manuell URL.
-    options:
-      placeholder: Søk etter sidetittel eller URL
-      values:
-# PILOT_URL_CHOICES_BEGIN
-        - name: "/"
-          label: "SEO, AI-synlighet og konverteringsoptimalisering | Optimalisering Oslo — /"
-        - name: "/#sjekk"
-          label: "Gratis sjekk — /#sjekk"
-        - name: "/ai-synlighet/"
-          label: "AI-synlighet - bli forstått med riktig informasjon | Medon — /ai-synlighet/"
-        - name: "/innsikt/"
-          label: "Innsikt - velg startpunkt og vurder effekten | Medon — /innsikt/"
-        - name: "/innsikt/google-bedriftsprofil/"
-          label: "Google bedriftsprofil - guide for bedrifter | Optimalisering Oslo — /innsikt/google-bedriftsprofil/"
-        - name: "/innsikt/hva-bor-optimaliseres-forst/"
-          label: "Hva bør du optimalisere først? Synlighet eller konvertering — /innsikt/hva-bor-optimaliseres-forst/"
-        - name: "/innsikt/male-effekt-av-optimalisering/"
-          label: "Måle effekt av optimalisering - fra besøk til verdi — /innsikt/male-effekt-av-optimalisering/"
-        - name: "/kontakt/"
-          label: "Kontakt om Optimalisering Oslo | Medon AS — /kontakt/"
-        - name: "/konvertering/"
-          label: "Konverteringsoptimalisering (CRO) | Optimalisering Oslo — /konvertering/"
-        - name: "/lokal-seo/"
-          label: "Lokal SEO for Google Maps og lokale søk | Medon — /lokal-seo/"
-        - name: "/nettbutikkoptimalisering/"
-          label: "Nettbutikkoptimalisering - fra oppdagelse til kjøp | Medon — /nettbutikkoptimalisering/"
-        - name: "/om/"
-          label: "Om Optimalisering Oslo og Medon AS — /om/"
-        - name: "/personvern/"
-          label: "Personvern - Optimalisering Oslo — /personvern/"
-        - name: "/priser/"
-          label: "Priser på SEO, CRO og digital optimalisering | Optimalisering Oslo — /priser/"
-        - name: "/priser/#optimalisering"
-          label: "Priser og pakker — /priser/#optimalisering"
-        - name: "/seo/"
-          label: "SEO-byrå for bedrifter i Oslo | Optimalisering Oslo — /seo/"
-        - name: "/synlighet/"
-          label: "SEO, lokal SEO og AI-synlighet | Optimalisering Oslo — /synlighet/"
-        - name: "/vilkar/"
-          label: "Vilkår - hva må avtales før videre arbeid? | Medon — /vilkar/"
-        - name: "/vurdering/"
-          label: "Gratis manuell sjekk av nettsiden | Medon — /vurdering/"
-# PILOT_URL_CHOICES_END
   sectionVisibility:
     type: select
     options:
@@ -138,13 +92,10 @@ components:
         label: Lenketekst
         type: string
         required: true
-      - name: suggestedHref
-        label: Velg side eller snarvei
-        component: cmsSuggestedHref
       - name: href
-        label: Manuell intern eller ekstern URL
+        label: Intern lenke
         type: string
-        description: Bruk listen over eller skriv valgfri trygg URL.
+        pattern: ^/
         required: false
   heroLayoutChoice:
     type: select
@@ -263,13 +214,10 @@ components:
             label: Beskrivelse
             type: text
             required: true
-          - name: suggestedHref
-            label: Velg side eller snarvei
-            component: cmsSuggestedHref
           - name: href
-            label: Manuell intern eller ekstern URL
+            label: Intern lenke
             type: string
-            description: Bruk listen over eller skriv valgfri trygg URL.
+            pattern: ^(/.*)?$
           - name: label
             label: Lenketekst
             type: string
@@ -523,13 +471,10 @@ components:
                 label: Egen intern/ekstern URL
                 type: object
                 fields:
-                  - name: suggestedHref
-                    label: Velg side eller snarvei
-                    component: cmsSuggestedHref
                   - name: href
                     label: URL
                     type: string
-                    required: false
+                    required: true
                   - name: title
                     label: Overskrift
                     type: string
@@ -607,13 +552,10 @@ components:
             label: Beskrivelse
             type: text
             required: true
-          - name: suggestedHref
-            label: Velg side eller snarvei
-            component: cmsSuggestedHref
           - name: href
-            label: Manuell intern eller ekstern URL
+            label: Intern lenke
             type: string
-            description: Bruk listen over eller skriv valgfri trygg URL.
+            pattern: ^(/.*)?$
           - name: label
             label: Lenketekst
             type: string
@@ -660,13 +602,10 @@ components:
             label: Beskrivelse
             type: text
             required: true
-          - name: suggestedHref
-            label: Velg side eller snarvei
-            component: cmsSuggestedHref
           - name: href
-            label: Manuell intern eller ekstern URL
+            label: Intern lenke
             type: string
-            description: Bruk listen over eller skriv valgfri trygg URL.
+            pattern: ^(/.*)?$
           - name: label
             label: Lenketekst
             type: string
@@ -710,10 +649,6 @@ components:
   seoGlobalPlacement:
     type: object
     fields:
-      - name: id
-        label: Behold originalt anker (bare egendefinert global)
-        type: string
-        pattern: ^[a-z0-9]+(?:-[a-z0-9]+)*$
       - name: element
         label: Globalt element
         type: select
@@ -724,8 +659,6 @@ components:
               label: Pakker og priser (inkludert bestillingspaneler)
             - name: sjekk
               label: Gratis sjekk / kontaktskjema
-# PILOT_PROMOTED_CHOICES_2_BEGIN
-# PILOT_PROMOTED_CHOICES_2_END
         description: Felles elementer fra Globale elementer. Endrer ikke pris, pakke eller skjemafelt. Bestilling og innsending forblir deaktivert i noindex-preview.
       - name: visibility
         label: Visning på denne siden
@@ -734,10 +667,6 @@ components:
   serviceGlobalPlacement:
     type: object
     fields:
-      - name: id
-        label: Behold originalt anker (bare egendefinert global)
-        type: string
-        pattern: ^[a-z0-9]+(?:-[a-z0-9]+)*$
       - name: element
         label: Globalt element
         type: select
@@ -760,8 +689,6 @@ components:
               label: Pakker og priser
             - name: sporsmal
               label: Ofte stilte spørsmål
-# PILOT_PROMOTED_CHOICES_3_BEGIN
-# PILOT_PROMOTED_CHOICES_3_END
         description: Én synlig rad gir én seksjon på samme sted. Innhold redigeres én gang under Globale elementer. Skjul eller fjern bare plasseringen; ingen lokal erstatning settes inn. Skjul eller fjern en lokal rad med samme lenkeanker før du velger det globale elementet. Gratis sjekk kan velges når den lokale sjekk-raden er fjernet; aldri begge samtidig.
       - name: visibility
         label: Visning på denne siden
@@ -927,35 +854,6 @@ content:
     type: file
     path: app/src/content/pages/home.json
     format: json
-    actions:
-      - name: promote-content-section
-        label: Kopier seksjon til Global Innhold
-        workflow: promote-global-section.yml
-        ref: current
-        cancelable: false
-        fields:
-          - name: section_id
-            label: Seksjonens lenkeanker (lagre siden først)
-            type: text
-            required: true
-          - name: global_id
-            label: Ny global ID
-            type: text
-            required: true
-          - name: global_name
-            label: Visningsnavn i globalt innhold
-            type: text
-            required: true
-          - name: mode
-            label: Hva skal skje med originalen?
-            type: select
-            required: true
-            default: copy
-            options:
-              - label: Kopier, behold originalen
-                value: copy
-              - label: Kopier og erstatt med global referanse
-                value: replace
     fields:
       - &serviceslug
         name: slug
@@ -1067,10 +965,6 @@ content:
           - name: global
             label: Globalt element
             fields:
-              - name: id
-                label: Behold originalt anker (bare egendefinert global)
-                type: string
-                pattern: ^[a-z0-9]+(?:-[a-z0-9]+)*$
               - name: element
                 label: Globalt element
                 type: select
@@ -1093,8 +987,6 @@ content:
                       label: Hvem det passer for
                     - name: sporsmal
                       label: Ofte stilte spørsmål
-# PILOT_PROMOTED_CHOICES_1_BEGIN
-# PILOT_PROMOTED_CHOICES_1_END
               - name: visibility
                 label: Visning på denne siden
                 component: sectionVisibility
@@ -1167,13 +1059,10 @@ content:
                     label: Beskrivelse
                     type: text
                     required: true
-                  - name: suggestedHref
-                    label: Velg side eller snarvei
-                    component: cmsSuggestedHref
                   - name: href
-                    label: Manuell intern eller ekstern URL
+                    label: Intern lenke
                     type: string
-                    description: Bruk listen over eller skriv valgfri trygg URL.
+                    pattern: ^(/.*)?$
                   - name: label
                     label: Lenketekst
                     type: string
@@ -1253,36 +1142,6 @@ content:
           sort:
             - seo.title
             - slug
-        actions:
-          - name: promote-content-section
-            label: Kopier seksjon til Global Innhold
-            workflow: promote-global-section.yml
-            ref: current
-            cancelable: false
-            scope: entry
-            fields:
-              - name: section_id
-                label: Seksjonens lenkeanker (lagre siden først)
-                type: text
-                required: true
-              - name: global_id
-                label: Ny global ID
-                type: text
-                required: true
-              - name: global_name
-                label: Visningsnavn i globalt innhold
-                type: text
-                required: true
-              - name: mode
-                label: Hva skal skje med originalen?
-                type: select
-                required: true
-                default: copy
-                options:
-                  - label: Kopier, behold originalen
-                    value: copy
-                  - label: Kopier og erstatt med global referanse
-                    value: replace
         fields:
           - *serviceslug
           - &a4
@@ -1426,35 +1285,6 @@ content:
         path: app/src/content/pages/seo.json
         format: json
         operations: *a3
-        actions:
-          - name: promote-content-section
-            label: Kopier seksjon til Global Innhold
-            workflow: promote-global-section.yml
-            ref: current
-            cancelable: false
-            fields:
-              - name: section_id
-                label: Seksjonens lenkeanker (lagre siden først)
-                type: text
-                required: true
-              - name: global_id
-                label: Ny global ID
-                type: text
-                required: true
-              - name: global_name
-                label: Visningsnavn i globalt innhold
-                type: text
-                required: true
-              - name: mode
-                label: Hva skal skje med originalen?
-                type: select
-                required: true
-                default: copy
-                options:
-                  - label: Kopier, behold originalen
-                    value: copy
-                  - label: Kopier og erstatt med global referanse
-                    value: replace
         fields:
           - *serviceslug
           - *a4
@@ -1494,35 +1324,6 @@ content:
         path: app/src/content/pages/synlighet.json
         format: json
         operations: *a3
-        actions:
-          - name: promote-content-section
-            label: Kopier seksjon til Global Innhold
-            workflow: promote-global-section.yml
-            ref: current
-            cancelable: false
-            fields:
-              - name: section_id
-                label: Seksjonens lenkeanker (lagre siden først)
-                type: text
-                required: true
-              - name: global_id
-                label: Ny global ID
-                type: text
-                required: true
-              - name: global_name
-                label: Visningsnavn i globalt innhold
-                type: text
-                required: true
-              - name: mode
-                label: Hva skal skje med originalen?
-                type: select
-                required: true
-                default: copy
-                options:
-                  - label: Kopier, behold originalen
-                    value: copy
-                  - label: Kopier og erstatt med global referanse
-                    value: replace
         fields:
           - *serviceslug
           - *a4
@@ -1556,35 +1357,6 @@ content:
         path: app/src/content/pages/lokal-seo.json
         format: json
         operations: *a3
-        actions:
-          - name: promote-content-section
-            label: Kopier seksjon til Global Innhold
-            workflow: promote-global-section.yml
-            ref: current
-            cancelable: false
-            fields:
-              - name: section_id
-                label: Seksjonens lenkeanker (lagre siden først)
-                type: text
-                required: true
-              - name: global_id
-                label: Ny global ID
-                type: text
-                required: true
-              - name: global_name
-                label: Visningsnavn i globalt innhold
-                type: text
-                required: true
-              - name: mode
-                label: Hva skal skje med originalen?
-                type: select
-                required: true
-                default: copy
-                options:
-                  - label: Kopier, behold originalen
-                    value: copy
-                  - label: Kopier og erstatt med global referanse
-                    value: replace
         fields:
           - *serviceslug
           - *a4
@@ -1606,35 +1378,6 @@ content:
     path: app/src/content/pages/priser.json
     format: json
     operations: *a3
-    actions:
-      - name: promote-content-section
-        label: Kopier seksjon til Global Innhold
-        workflow: promote-global-section.yml
-        ref: current
-        cancelable: false
-        fields:
-          - name: section_id
-            label: Seksjonens lenkeanker (lagre siden først)
-            type: text
-            required: true
-          - name: global_id
-            label: Ny global ID
-            type: text
-            required: true
-          - name: global_name
-            label: Visningsnavn i globalt innhold
-            type: text
-            required: true
-          - name: mode
-            label: Hva skal skje med originalen?
-            type: select
-            required: true
-            default: copy
-            options:
-              - label: Kopier, behold originalen
-                value: copy
-              - label: Kopier og erstatt med global referanse
-                value: replace
     fields:
       - *serviceslug
       - *a4
@@ -1651,35 +1394,6 @@ content:
         path: app/src/content/pages/innsikt.json
         format: json
         operations: *a3
-        actions:
-          - name: promote-content-section
-            label: Kopier seksjon til Global Innhold
-            workflow: promote-global-section.yml
-            ref: current
-            cancelable: false
-            fields:
-              - name: section_id
-                label: Seksjonens lenkeanker (lagre siden først)
-                type: text
-                required: true
-              - name: global_id
-                label: Ny global ID
-                type: text
-                required: true
-              - name: global_name
-                label: Visningsnavn i globalt innhold
-                type: text
-                required: true
-              - name: mode
-                label: Hva skal skje med originalen?
-                type: select
-                required: true
-                default: copy
-                options:
-                  - label: Kopier, behold originalen
-                    value: copy
-                  - label: Kopier og erstatt med global referanse
-                    value: replace
         fields:
           - *serviceslug
           - *a4
@@ -1741,36 +1455,6 @@ content:
           sort:
             - listing.order
             - listing.title
-        actions:
-          - name: promote-content-section
-            label: Kopier seksjon til Global Innhold
-            workflow: promote-global-section.yml
-            ref: current
-            cancelable: false
-            scope: entry
-            fields:
-              - name: section_id
-                label: Seksjonens lenkeanker (lagre siden først)
-                type: text
-                required: true
-              - name: global_id
-                label: Ny global ID
-                type: text
-                required: true
-              - name: global_name
-                label: Visningsnavn i globalt innhold
-                type: text
-                required: true
-              - name: mode
-                label: Hva skal skje med originalen?
-                type: select
-                required: true
-                default: copy
-                options:
-                  - label: Kopier, behold originalen
-                    value: copy
-                  - label: Kopier og erstatt med global referanse
-                    value: replace
         fields:
           - *serviceslug
           - *a4
@@ -1813,35 +1497,6 @@ content:
     path: app/src/content/pages/om.json
     format: json
     operations: *a3
-    actions:
-      - name: promote-content-section
-        label: Kopier seksjon til Global Innhold
-        workflow: promote-global-section.yml
-        ref: current
-        cancelable: false
-        fields:
-          - name: section_id
-            label: Seksjonens lenkeanker (lagre siden først)
-            type: text
-            required: true
-          - name: global_id
-            label: Ny global ID
-            type: text
-            required: true
-          - name: global_name
-            label: Visningsnavn i globalt innhold
-            type: text
-            required: true
-          - name: mode
-            label: Hva skal skje med originalen?
-            type: select
-            required: true
-            default: copy
-            options:
-              - label: Kopier, behold originalen
-                value: copy
-              - label: Kopier og erstatt med global referanse
-                value: replace
     fields: &a13
       - *serviceslug
       - *a4
@@ -1854,35 +1509,6 @@ content:
     path: app/src/content/pages/vurdering.json
     format: json
     operations: *a3
-    actions:
-      - name: promote-content-section
-        label: Kopier seksjon til Global Innhold
-        workflow: promote-global-section.yml
-        ref: current
-        cancelable: false
-        fields:
-          - name: section_id
-            label: Seksjonens lenkeanker (lagre siden først)
-            type: text
-            required: true
-          - name: global_id
-            label: Ny global ID
-            type: text
-            required: true
-          - name: global_name
-            label: Visningsnavn i globalt innhold
-            type: text
-            required: true
-          - name: mode
-            label: Hva skal skje med originalen?
-            type: select
-            required: true
-            default: copy
-            options:
-              - label: Kopier, behold originalen
-                value: copy
-              - label: Kopier og erstatt med global referanse
-                value: replace
     fields: *a13
   - name: kontakt
     label: Kontakt
@@ -1890,35 +1516,6 @@ content:
     path: app/src/content/pages/kontakt.json
     format: json
     operations: *a3
-    actions:
-      - name: promote-content-section
-        label: Kopier seksjon til Global Innhold
-        workflow: promote-global-section.yml
-        ref: current
-        cancelable: false
-        fields:
-          - name: section_id
-            label: Seksjonens lenkeanker (lagre siden først)
-            type: text
-            required: true
-          - name: global_id
-            label: Ny global ID
-            type: text
-            required: true
-          - name: global_name
-            label: Visningsnavn i globalt innhold
-            type: text
-            required: true
-          - name: mode
-            label: Hva skal skje med originalen?
-            type: select
-            required: true
-            default: copy
-            options:
-              - label: Kopier, behold originalen
-                value: copy
-              - label: Kopier og erstatt med global referanse
-                value: replace
     fields: *a13
   - name: personvern
     label: Personvern
@@ -1926,35 +1523,6 @@ content:
     path: app/src/content/pages/personvern.json
     format: json
     operations: *a3
-    actions:
-      - name: promote-content-section
-        label: Kopier seksjon til Global Innhold
-        workflow: promote-global-section.yml
-        ref: current
-        cancelable: false
-        fields:
-          - name: section_id
-            label: Seksjonens lenkeanker (lagre siden først)
-            type: text
-            required: true
-          - name: global_id
-            label: Ny global ID
-            type: text
-            required: true
-          - name: global_name
-            label: Visningsnavn i globalt innhold
-            type: text
-            required: true
-          - name: mode
-            label: Hva skal skje med originalen?
-            type: select
-            required: true
-            default: copy
-            options:
-              - label: Kopier, behold originalen
-                value: copy
-              - label: Kopier og erstatt med global referanse
-                value: replace
     fields: *a13
   - name: vilkar
     label: Vilkår
@@ -1962,35 +1530,6 @@ content:
     path: app/src/content/pages/vilkar.json
     format: json
     operations: *a3
-    actions:
-      - name: promote-content-section
-        label: Kopier seksjon til Global Innhold
-        workflow: promote-global-section.yml
-        ref: current
-        cancelable: false
-        fields:
-          - name: section_id
-            label: Seksjonens lenkeanker (lagre siden først)
-            type: text
-            required: true
-          - name: global_id
-            label: Ny global ID
-            type: text
-            required: true
-          - name: global_name
-            label: Visningsnavn i globalt innhold
-            type: text
-            required: true
-          - name: mode
-            label: Hva skal skje med originalen?
-            type: select
-            required: true
-            default: copy
-            options:
-              - label: Kopier, behold originalen
-                value: copy
-              - label: Kopier og erstatt med global referanse
-                value: replace
     fields: *a13
   - name: errorHero
     label: 404 – Hero-oppsett
@@ -2296,14 +1835,11 @@ content:
                 label: Knappetekst
                 type: string
                 required: true
-              - name: suggestedHref
-                label: Velg side eller snarvei
-                component: cmsSuggestedHref
               - name: href
-                label: Manuell intern eller ekstern URL (for eksempel /#sjekk eller /kontakt/)
+                label: Intern lenke (for eksempel /#sjekk eller /kontakt/)
                 type: string
-                description: Bruk listen over eller skriv valgfri trygg URL.
-                required: false
+                pattern: ^/
+                required: true
               - name: variant
                 label: Knappfarge (daisyUI)
                 type: select
@@ -2339,14 +1875,11 @@ content:
                 label: Tekst
                 type: string
                 required: true
-              - name: suggestedHref
-                label: Velg side eller snarvei
-                component: cmsSuggestedHref
               - name: href
-                label: Manuell intern eller ekstern URL
+                label: Intern lenke
                 type: string
-                description: Bruk listen over eller skriv valgfri trygg URL.
-                required: false
+                pattern: ^/
+                required: true
               - name: submenuLabel
                 label: Navn på undermenyknappen
                 type: string
@@ -2393,14 +1926,11 @@ content:
                             label: Lenketekst
                             type: string
                             required: true
-                          - name: suggestedHref
-                            label: Velg side eller snarvei
-                            component: cmsSuggestedHref
                           - name: href
-                            label: Manuell intern eller ekstern URL
+                            label: Intern lenke
                             type: string
-                            description: Bruk listen over eller skriv valgfri trygg URL.
-                            required: false
+                            pattern: ^/(?![/\\])
+                            required: true
                           - name: description
                             label: Kort forklaring
                             type: text
@@ -2422,13 +1952,10 @@ content:
                           - name: label
                             label: Knappetekst
                             type: string
-                          - name: suggestedHref
-                            label: Velg side eller snarvei
-                            component: cmsSuggestedHref
                           - name: href
-                            label: Manuell intern eller ekstern URL
+                            label: Intern lenke
                             type: string
-                            description: Bruk listen over eller skriv valgfri trygg URL.
+                            pattern: ^/(?![/\\])
               - name: children
                 label: Undermeny
                 type: object
@@ -2535,14 +2062,11 @@ content:
                 label: Tekst
                 type: string
                 required: true
-              - name: suggestedHref
-                label: Velg side eller snarvei
-                component: cmsSuggestedHref
               - name: href
-                label: Manuell intern eller ekstern URL
+                label: Intern lenke
                 type: string
-                description: Bruk listen over eller skriv valgfri trygg URL.
-                required: false
+                pattern: ^/
+                required: true
             required: true
           - name: informationLinks
             label: Informasjonslenker
@@ -2556,14 +2080,11 @@ content:
                 label: Tekst
                 type: string
                 required: true
-              - name: suggestedHref
-                label: Velg side eller snarvei
-                component: cmsSuggestedHref
               - name: href
-                label: Manuell intern eller ekstern URL
+                label: Intern lenke
                 type: string
-                description: Bruk listen over eller skriv valgfri trygg URL.
-                required: false
+                pattern: ^/
+                required: true
             required: true
           - name: copyrightProvider
             label: Tjenestemerke i opphavsrett
@@ -2607,14 +2128,11 @@ content:
                     label: Lenketekst
                     type: string
                     required: true
-                  - name: suggestedHref
-                    label: Velg side eller snarvei
-                    component: cmsSuggestedHref
                   - name: href
                     label: Eksisterende intern side
                     type: string
-                    description: Bruk listen over eller skriv valgfri trygg URL.
-                    required: false
+                    pattern: ^/
+                    required: true
           - name: footerLegalLinks
             label: Footer – juridiske lenker på bunnlinjen
             type: object
@@ -2628,58 +2146,15 @@ content:
                 label: Tekst
                 type: string
                 required: true
-              - name: suggestedHref
-                label: Velg side eller snarvei
-                component: cmsSuggestedHref
               - name: href
-                label: Manuell intern eller ekstern URL
+                label: Intern lenke
                 type: string
-                description: Bruk listen over eller skriv valgfri trygg URL.
-                required: false
+                pattern: ^/
+                required: true
   - name: globalElements
     label: Global Innhold
     type: group
     items:
-      - name: promotedGlobalContent
-        label: Egendefinerte globale seksjoner
-        type: collection
-        path: app/src/content/global-promoted
-        format: json
-        exclude: [README.md]
-        operations:
-          create: false
-          rename: false
-          delete: false
-        view:
-          primary: name
-        fields:
-          - name: _block
-            type: string
-            hidden: true
-            readonly: true
-            required: true
-          - name: uid
-            type: uuid
-            hidden: true
-            readonly: true
-            required: true
-          - name: id
-            label: Global ID
-            type: string
-            readonly: true
-            required: true
-          - name: name
-            label: Navn i seksjonslisten
-            type: string
-            required: true
-          - *serviceEyebrow
-          - *serviceHeading
-          - *serviceHeadingAlign
-          - *serviceLayout
-          - *serviceSurface
-          - *serviceBody
-          - *serviceItems
-          - *serviceLinks
       - name: globalSelector
         label: Behovsvelger
         type: file
@@ -2755,14 +2230,11 @@ content:
                         label: Tekst
                         type: string
                         required: true
-                      - name: suggestedHref
-                        label: Velg side eller snarvei
-                        component: cmsSuggestedHref
                       - name: href
-                        label: Manuell intern eller ekstern URL
+                        label: Intern lenke
                         type: string
-                        description: Bruk listen over eller skriv valgfri trygg URL.
-                        required: false
+                        pattern: ^/
+                        required: true
                     required: true
                 required: true
             required: true
@@ -2995,13 +2467,10 @@ content:
                         label: Beskrivelse
                         type: text
                         required: true
-                      - name: suggestedHref
-                        label: Velg side eller snarvei
-                        component: cmsSuggestedHref
                       - name: href
-                        label: Manuell intern eller ekstern URL
+                        label: Intern lenke
                         type: string
-                        description: Bruk listen over eller skriv valgfri trygg URL.
+                        pattern: ^(/.*)?$
                       - name: label
                         label: Lenketekst
                         type: string
@@ -3076,14 +2545,11 @@ content:
                         label: Tekst
                         type: string
                         required: true
-                      - name: suggestedHref
-                        label: Velg side eller snarvei
-                        component: cmsSuggestedHref
                       - name: href
-                        label: Manuell intern eller ekstern URL
+                        label: Intern lenke
                         type: string
-                        description: Bruk listen over eller skriv valgfri trygg URL.
-                        required: false
+                        pattern: ^/
+                        required: true
                     required: true
                   - name: disabledStatus
                     label: Status ved stengt innsending
@@ -3464,15 +2930,12 @@ content:
                         label: Knappetekst
                         type: string
                         required: true
-                      - name: suggestedHref
-                        label: Velg side eller snarvei
-                        component: cmsSuggestedHref
                       - name: href
-                        label: Manuell intern eller ekstern URL
+                        label: Intern lenke
                         type: string
                         readonly: true
-                        description: Bruk listen over eller skriv valgfri trygg URL.
-                        required: false
+                        pattern: ^/priser/\?pakke=(optimalisering|vekst|partner)#bestill$
+                        required: true
                     required: true
                 required: true
             required: true
@@ -3724,13 +3187,10 @@ content:
                 label: Beskrivelse
                 type: text
                 required: true
-              - name: suggestedHref
-                label: Velg side eller snarvei
-                component: cmsSuggestedHref
               - name: href
-                label: Manuell intern eller ekstern URL
+                label: Intern lenke
                 type: string
-                description: Bruk listen over eller skriv valgfri trygg URL.
+                pattern: ^(/.*)?$
               - name: label
                 label: Lenketekst
                 type: string
@@ -3823,13 +3283,10 @@ content:
                 label: Beskrivelse
                 type: text
                 required: true
-              - name: suggestedHref
-                label: Velg side eller snarvei
-                component: cmsSuggestedHref
               - name: href
-                label: Manuell intern eller ekstern URL
+                label: Intern lenke
                 type: string
-                description: Bruk listen over eller skriv valgfri trygg URL.
+                pattern: ^(/.*)?$
               - name: label
                 label: Lenketekst
                 type: string
