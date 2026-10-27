@@ -4,7 +4,7 @@ import CommercialHero from '../components/CommercialHero.astro';
 import {resolveGlossaryHero} from '../lib/page-hero';
 import { categories, glossary } from '../lib/terminology';
 ---
-<SiteLayout title={`${glossary.title} | Optimalisering Oslo`} description={glossary.description}>
+<SiteLayout title={`${glossary.hero.title} | Optimalisering Oslo`} description={glossary.description}>
   <div class="shell">
     <CommercialHero content={resolveGlossaryHero(glossary)}>
       <nav slot="copy-end" class="glossary-navigation" aria-label={glossary.linkLabel}>
