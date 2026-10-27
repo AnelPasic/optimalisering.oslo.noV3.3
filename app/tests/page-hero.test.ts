@@ -127,6 +127,17 @@ test('Begreper and 404 use the full shared Hero editor and guarded source schema
  const errEditor=entryForFile(cms,'app/src/content/presentation/hero-layouts.json');
  const errHero=resolveField(errEditor.fields.find((f:any)=>f.name==='hero'),cms.components);
  assert.deepEqual(errHero.fields.map((f:any)=>f.name),expectedHeroFields);
+ for(const {record,entry,schema} of [
+   {record:glossary,entry:editor,schema:glossarySchema},
+   {record:source,entry:errEditor,schema:specialHeroSourceSchema},
+ ]){
+   const edited=structuredClone(record);edited.hero.title+=' – CMS-test';
+   edited.hero.featuredProofCaseId='eurotents';
+   const saved=JSON.parse(cmsJsonSave(record,edited,entry,cms));
+   assert.deepEqual(saved,edited,'special Hero roundtrip must retain all source fields');
+   assert.equal(schema.safeParse(saved).success,true);
+   assert.deepEqual(JSON.parse(cmsJsonSave(saved,record,entry,cms)),record);
+ }
  const error=resolveNotFoundHero(source.hero);
  assert.equal(error.primaryCta?.href,'/');
  assert.equal(error.title,'Her var det\\ningen vei videre.');
