@@ -1,5 +1,11 @@
 # Review queue — aktiv status
 
+## AKTIVT NESTE STEG 27.10.2026 — Prøv CMS-action på nytt etter feilretting
+
+- **Bekreftet ekte action-dispatch, men IKKE PR:** [Run #40509554747](https://github.com/AnelPasic/optimalisering.oslo.noV3.3/actions/runs/40509554747) feilet på store/små bokstaver i repository-identifikator. Dette er rettet på `main` via [PR #26](https://github.com/AnelPasic/optimalisering.oslo.noV3.3/pull/26), squash `617d9c0a`, med grønne Content page review og D-129. Ingen masterfil eller PR ble opprettet i det mislykkede forsøket.
+- **OWNER: kun ny Pages CMS-test gjenstår:** Oppdater `main` i Pages CMS, lagre lokal ordinær seksjon først, velg `copy` og start handlingen på nytt. Se etter ny GitHub review-PR; gå gjennom ny global kilde og behold originalen. Test også en foreslått intern URL og en manuell ekstern `https://` etter lagre/åpne på nytt. Ikke bruk `replace` eller merge testinnhold automatisk. Ikke kjør den gamle Actions-jobben på nytt; den bruker gammel kode.
+- **Avgrensning:** Ingen nye OWNER-innholds-/designendringer, `sunset` Dark, pris, caser, D1/Resend, skjemaruter eller `noindex` er endret. Ny Cloudflare-publisering og faktisk post-fix CMS→PR er ikke dokumentert. MWS rich-parity [PR #16](https://github.com/AnelPasic/MedonWebSystem/pull/16) er nå merged som gjenbrukbar source kit, men MWS-052 full starter og andre merkevaretesting er fortsatt åpen. Issue #22 forblir åpen til aksept.
+
 ## AKTIV REVIEW 27.10.2026 — CMS URL-valg og lokal → Global Innhold
 
 - **Teknisk kildekode PASS / MERGED:** [PR #25](https://github.com/AnelPasic/optimalisering.oslo.noV3.3/pull/25), merge `0820a275d9570db4058c82525c870260ab3190cf`; grønne `Content page review`, `D-129 isolated intake` og Cloudflare Workers PR-head-build. 13 editorer / 17 sider, URL-forslag fra ruter/snarveier og manuell `href`; ny global CMS-samling og egen «Kopier seksjon til Global Innhold»-handling. Ingen eksisterende innholds-JSON/priser/caser/skjema eller `noindex` er endret i denne funksjonsrunden.
