@@ -68,7 +68,7 @@ export const pageSchema = z.preprocess((input,context)=>{
     listing: listingSchema.optional(),
     sections: z.array(z.object({
       uid: z.string().optional(), name: z.string().optional(), content: z.unknown().optional(), visibility: sectionVisibilitySchema,
-      globalElement: z.enum(serviceGlobalIds).optional(),
+      globalElement: z.string().optional(),
       _block: z.enum(['content', 'protected', 'pageList', 'selector', 'calculator', 'packages', 'proof', 'assessment', 'faq']).optional(), surface: surfaceSchema,
       pageList: pageListSchema.optional(),
       headingAlign: headingAlignSchema,

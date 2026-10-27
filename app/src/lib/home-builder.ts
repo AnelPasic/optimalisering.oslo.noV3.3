@@ -1,3 +1,4 @@
+import { promotedGlobalMasters } from './promoted-global.generated.ts';
 import { projectSelectedLinks, safeCmsHref } from './cms-link-choice.ts';
 import { z } from 'astro/zod';
 import { surfaceSchema } from './surface.ts';
@@ -58,19 +59,34 @@ export const homepageBlocksSchema=z.array(homepageBlockSchema).max(56).superRefi
 });
 export type HomepageBlock=z.infer<typeof homepageBlockSchema>;
 export const globalElementIds=homepageCoreIds;
-export type GlobalElementId=typeof globalElementIds[number];
+export type CoreGlobalElementId=typeof globalElementIds[number];
+export type GlobalElementId=string;
+export function hasPromotedGlobal(id:string){return Object.hasOwn(promotedGlobalMasters,id);}
 const catalogue={behov:selectorMaster,regneeksempel:calculatorMaster,sjekk:assessmentMaster,priser:packagesMaster,resultater:proofMaster,mekanisme:mechanismMaster,passer:fitMaster,sporsmal:faqMaster};
 const masterTypes={behov:'selector',regneeksempel:'calculator',sjekk:'assessment',priser:'packages',resultater:'proof',mekanisme:'content',passer:'content',sporsmal:'faq'} as const;
-export const globalPlacementSchema=z.object({_block:z.literal('global'),element:z.enum(globalElementIds),visibility:sectionVisibilitySchema}).strict();
-export function getGlobalElement<I extends GlobalElementId>(id:I):Extract<HomepageBlock,{_block:(typeof masterTypes)[I]}>{
- if(!Object.hasOwn(catalogue,id))throw new Error(`Unknown global element: ${id}`);
- const master=homepageBlockSchema.parse(projectSelectedLinks(catalogue[id]));
- if(master._block!==masterTypes[id]||master.id!==id||master.uid!==coreUids[id]||master.visibility!==undefined)throw new Error(`Invalid global master identity: ${id}`);
- return master as Extract<HomepageBlock,{_block:(typeof masterTypes)[I]}>;
+export const globalPlacementSchema=z.object({
+ _block:z.literal('global'),
+ element:z.string().refine(id=>globalElementIds.some(core=>core===id)||hasPromotedGlobal(id),'Unknown global section ID'),
+ id:z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/).optional(),
+ visibility:sectionVisibilitySchema,
+}).strict();
+export function getGlobalElement<I extends CoreGlobalElementId>(id:I):Extract<HomepageBlock,{_block:(typeof masterTypes)[I]}>;
+export function getGlobalElement(id:string):HomepageBlock;
+export function getGlobalElement(id:string):HomepageBlock{
+ const isCore=Object.hasOwn(catalogue,id);
+ const source=isCore?(catalogue as Record<string,unknown>)[id]:promotedGlobalMasters[id];
+ if(!source)throw new Error('Unknown global element: '+id);
+ const master=homepageBlockSchema.parse(projectSelectedLinks(source));
+ if(isCore){
+  if(master._block!==masterTypes[id as CoreGlobalElementId]||master.id!==id||master.uid!==coreUids[id]||master.visibility!==undefined)throw new Error('Invalid locked global identity: '+id);
+ }else if(master._block!=='content'||master.id!==id||master.visibility!==undefined)throw new Error('Invalid promoted global master identity: '+id);
+ return master;
 }
 export function resolveGlobalPlacement(value:unknown):HomepageBlock{
  const placement=globalPlacementSchema.parse(value);
- return {...getGlobalElement(placement.element),...(placement.visibility?{visibility:placement.visibility}:{})};
+ if(placement.id && !hasPromotedGlobal(placement.element))throw new Error('Cannot override a protected global anchor');
+ const master=getGlobalElement(placement.element);
+ return {...master,...(placement.id?{id:placement.id}:{}),...(placement.visibility?{visibility:placement.visibility}:{})};
 }
 const ordinarySchema=homepageBlockSchema.options[7];
 const pageListHomeSchema=homepageBlockSchema.options[6].refine(b=>!globalElementIds.includes(b.id as GlobalElementId),'PageList cannot claim a shared module anchor');
