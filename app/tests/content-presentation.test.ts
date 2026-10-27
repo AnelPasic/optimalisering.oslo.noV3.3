@@ -6,7 +6,7 @@ import YAML from 'yaml';
 import {pageSchema} from '../src/lib/content-schema.ts';
 import {cmsJsonSave,entryForFile,resolveField,assertPreservedContent,localHomeFixture} from './helpers/pages-cms-json.ts';
 import {getGlobalElement,homepageBlockSchema,globalElementIds} from '../src/lib/home-builder.ts';
-import {paragraphLayoutAttribute} from '../src/lib/content-presentation.ts';
+import {contentLayoutAttribute,paragraphLayoutAttribute} from '../src/lib/content-presentation.ts';
 const home=localHomeFixture();
 const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
 const normal=(p:any)=>sectionRecords(p).find((s:any)=>s.id==='cms-local-fixture');
