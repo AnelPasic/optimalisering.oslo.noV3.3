@@ -106,7 +106,8 @@ test('native Pages CMS config parses, all page editor actions and promoted colle
   if(editor.type==='collection')assert.equal(action.scope,'entry');
  }
  const globals=(doc.content as CmsNode[]).find((x:CmsNode)=>x.name==='globalElements');
- assert.ok(globals?.items?.some((x:CmsNode)=>x.name==='promotedGlobalContent'&&x.type==='collection'));
+ assert.ok(globals && Array.isArray(globals.items),'Global elements group must have child entries');
+ assert.ok(globals.items.some((x:CmsNode)=>x.name==='promotedGlobalContent'&&x.type==='collection'));
  const picker=doc.components.cmsSuggestedHref;
  assert.equal(picker.type,'select');
  assert.ok(picker.options.values.some((x:{name:string})=>x.name==='/'));
