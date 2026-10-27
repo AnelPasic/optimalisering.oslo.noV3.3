@@ -89,7 +89,11 @@ test('PageList can be created, reordered and saved without changing page-owned o
   copy.sections.splice(1,0,next);
   const editor=entryForFile(cms,'app/src/content/pages/'+name);
   const saved=JSON.parse(cmsJsonSave(original,copy,editor,cms));
-  assert.deepEqual(saved.sections,copy.sections,name);
+  // The CMS intentionally strips empty legacy arrays (selected/excluded),
+  // while the schema restores the exact same semantic defaults.
+  const expected=pageSchema.parse(copy);
+  const actual=pageSchema.parse(saved);
+  assert.deepEqual(actual.sections,expected.sections,name);
   assert.deepEqual(saved.hero,original.hero,name);
   assert.deepEqual(saved.seo,original.seo,name);
   assert.ok(pageSchema.safeParse(saved).success,name);
