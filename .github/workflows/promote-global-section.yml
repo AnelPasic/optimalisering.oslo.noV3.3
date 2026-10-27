@@ -1,0 +1,31 @@
+name: Pages CMS - Promoter lokal seksjon (PR)
+on:
+  workflow_dispatch:
+    inputs:
+      payload:
+        description: 'Pages CMS action context and options'
+        required: true
+        type: string
+permissions:
+  contents: write
+  pull-requests: write
+concurrency:
+  group: cms-promotion-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Validate saved Pages CMS block and create reviewed PR
+        env:
+          PAGES_ACTION_PAYLOAD: ${{ inputs.payload }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node app/scripts/dispatch-pilot-promotion.mjs
