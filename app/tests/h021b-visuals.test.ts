@@ -4,7 +4,7 @@ import { readFileSync, mkdtempSync, mkdirSync, writeFileSync, rmSync } from 'nod
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import YAML from 'yaml';
-import { listingSchema, pageListSchema, resolvePageList } from '../src/lib/page-list.ts';
+import { listingSchema, pageListSchema, resolvePageList, pageListPresentationVisual } from '../src/lib/page-list.ts';
 import { cmsJsonSave, entryForFile, resolveField, assertPreservedContent } from './helpers/pages-cms-json.ts';
 const page=(visual?:any,slug='innsikt/test')=>({slug,kind:'article',title:slug,intro:'Test ingress',listing:{title:slug,visible:true,visual}});
 const config=(edit:any={})=>({mode:'automatic',sort:'title',limit:6,layout:'alternating',...edit});
@@ -63,4 +63,42 @@ test('CMS visual blocks expose only kind-specific fields and dedicated safe rast
  }
  const restored=JSON.parse(cmsJsonSave(previous,structuredClone(original),article,cms));assertPreservedContent(original,restored);
  assert.equal(listingSchema.safeParse({visual:[{kind:'none'},{kind:'none'}]}).success,false);
+});
+
+test('alternating layout supplies a page icon only when a visible item lacks valid media',()=>{
+ const pages=[
+  {slug:'innsikt/one',title:'One',summary:'One',label:'Les',visual:{kind:'icon',icon:'analytics'}},
+  {slug:'innsikt/two',title:'Two',summary:'Two',label:'Les'},
+  {slug:'innsikt/three',title:'Three',summary:'Three',label:'Les',visual:{kind:'image',src:'/images/listing/test.png',alt:'Test',positionX:50,positionY:50}},
+  {slug:'innsikt/four',title:'Four',summary:'Four',label:'Les'},
+ ] as const;
+ const present=pages.map(item=>pageListPresentationVisual(item,'alternating'));
+ assert.deepEqual(present.map(x=>x?.kind),['icon','icon','image','icon']);
+ assert.deepEqual(present[0],pages[0].visual,'existing icon stays unchanged');
+ assert.deepEqual(present[1],{kind:'icon',icon:'page'},'no visual gets neutral page icon');
+ assert.deepEqual(present[2],pages[2].visual,'existing photo stays unchanged');
+ assert.deepEqual(present[3],{kind:'icon',icon:'page'});
+ assert.equal('visual' in pages[1],false,'presentation fallback never mutates page-owned media');
+ for(const layout of ['cards','mediaCards','compact','links'] as const){
+  assert.equal(pageListPresentationVisual(pages[1],layout),undefined,layout+' remains text-only');
+  assert.deepEqual(pageListPresentationVisual(pages[0],layout),pages[0].visual,layout+' retains existing visuals');
+ }
+});
+
+test('alternating PageList keeps index-based left/right placement with fallback after filtering',()=>{
+ const records=[
+  page({kind:'icon',icon:'route'},'innsikt/a'),
+  page(undefined,'innsikt/b'),
+  {...page(undefined,'innsikt/hidden'),listing:{visible:false}},
+  page(undefined,'innsikt/c'),
+ ];
+ const chosen=resolvePageList(config({sort:'title'}),records);
+ assert.deepEqual(chosen.map(item=>item.slug),['innsikt/a','innsikt/b','innsikt/c']);
+ assert.deepEqual(chosen.map(item=>pageListPresentationVisual(item,'alternating')?.kind),['icon','icon','icon']);
+ const markup=readFileSync('src/components/PageList.astro','utf8');
+ assert.match(markup,/displayedItems\.map\(item => <li>/,'final displayed index defines alternation');
+ assert.match(markup,/li:nth-child\(even\) \.listing-copy \{ grid-column: 2;/);
+ assert.match(markup,/li:nth-child\(even\) :global\(\.listing-visual\) \{ grid-column: 1;/);
+ assert.match(markup,/config\.layout === 'alternating' && item\.displayVisual && <ListingVisual visual=\{item\.displayVisual\}/);
+ assert.doesNotMatch(markup,/\.listing-item\[data-has-visual="false"\]/,'single-column fallback must not undo alternation');
 });
