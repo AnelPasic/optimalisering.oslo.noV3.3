@@ -1,4 +1,5 @@
 import {z} from 'astro/zod';
+import {projectSelectedLinks} from './cms-link-choice.ts';
 import {heroSchema} from './home-builder.ts';
 import {heroLayoutSchema,heroPresentationSchema} from './hero-presentation.ts';
 import {resolveRouteFamily} from './route-family.ts';
@@ -23,6 +24,9 @@ type Source={slug?:string;kind:string;hero?:unknown;eyebrow?:string;title?:strin
 type Commercial={packages:{eyebrow:string;heading:string;intro:string}};
 /** One-way adapters project existing owned content; no second editable source. */
 export function resolvePageHero(page:Source,commercial?:Commercial):HeroView{
+ // Direct source reads must honor the selected URL just like pageSchema.parse does.
+ // This is presentation-only: never rewrite OWNER-authored CMS JSON.
+ page=projectSelectedLinks(page);
  const route=resolveRouteFamily(page);
  if(route.family==='home'){
   const hero=heroSchema.parse(page.hero);
