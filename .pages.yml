@@ -840,12 +840,24 @@ content:
                     type: object
                     required: true
                     fields:
+                      - name: kind
+                        label: Bildetype
+                        type: select
+                        options:
+                          values:
+                            - photo
+                            - illustration
+                        description: Valgfritt for eksisterende dekorative forsidebilder. Foto er standard.
                       - name: src
                         label: Valgt bilde
                         type: image
                         options:
                           media: heroImages
                         required: true
+                      - name: alt
+                        label: Kort beskrivelse av bildets mening
+                        type: string
+                        description: Valgfritt for dekorative bilder. Tomt felt gir tom alt-tekst.
                       - &hubHeropositionX
                         name: positionX
                         label: Horisontalt utsnitt (%)
