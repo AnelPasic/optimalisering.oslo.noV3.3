@@ -20,6 +20,7 @@ on:
       - "app/scripts/sync-cms-url-options.mjs"
       - "app/scripts/sync-pilot-promoted.mjs"
       - "app/scripts/promote-local-section.mjs"
+      - "app/scripts/dispatch-pilot-promotion.mjs"
       - "app/tests/cms-url-global-promotion.test.ts"
       - "app/src/lib/content-schema.ts"
       - "app/src/lib/service-sections.ts"
