@@ -62,6 +62,9 @@ test('every ordinary page editor reuses the canonical Synlighet Hero field names
     'Bilde – velg eller endre bilde',
   ],file);
   assert.match(visual.description,/Velg Bilde under Visuelt innhold/,file);
+  const visualImage=visual.blocks.find((block:any)=>block.name==='image').fields.find((f:any)=>f.name==='image');
+  assert.deepEqual(visualImage.fields.map((f:any)=>f.name),['kind','src','alt','positionX','positionY'],file+' image controls must match the shared Hero');
+
   assert.equal(editor.fields.find((f:any)=>f.name==='sections')?.label,'Innholdsseksjoner',file);
   assert.ok(editor.fields.find((f:any)=>f.name==='faq'),file+' owns its FAQ');
   assert.ok(!editor.fields.some((f:any)=>['eyebrow','title','intro','cta','heroVisual'].includes(f.name)),file);
