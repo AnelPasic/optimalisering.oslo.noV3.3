@@ -1,5 +1,15 @@
 {
-  "notFound": {
-    "layout": "split-right"
+  "hero": {
+    "layout": "split-right",
+    "eyebrow": "404 · Siden finnes ikke",
+    "title": "Her var det\ningen vei videre.",
+    "support": "Gå til forsiden, eller finn tjenesten du trenger.",
+    "primaryCta": {
+      "label": "Til forsiden",
+      "href": "/"
+    },
+    "visual": {
+      "kind": "none"
+    }
   }
 }
