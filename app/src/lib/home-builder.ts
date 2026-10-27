@@ -1,5 +1,3 @@
-import { promotedGlobalMasters } from './promoted-global.generated.ts';
-import { projectSelectedLinks, safeCmsHref } from './cms-link-choice.ts';
 import { z } from 'astro/zod';
 import { surfaceSchema } from './surface.ts';
 import { homeSectionDataSchema } from './home-section-data.ts';
@@ -18,7 +16,7 @@ import mechanismMaster from '../content/global-elements/mekanisme.json' with {ty
 import fitMaster from '../content/global-elements/passer.json' with {type:'json'};
 import faqMaster from '../content/global-elements/sporsmal.json' with {type:'json'};
 
-const link=z.object({label:z.string().trim().min(1),href:z.string().refine(safeCmsHref)});
+const link=z.object({label:z.string().trim().min(1),href:z.string().startsWith('/')});
 export const heroPhotoSchema=z.object({src:z.string().regex(/^\/images\/home\/[a-z0-9][a-z0-9-]*\.webp$/),positionX:z.number().min(0).max(100),positionY:z.number().min(0).max(100)});
 export const heroSchema=z.object({
  layout:heroLayoutSchema,
@@ -42,7 +40,7 @@ export const homepageBlockSchema=z.discriminatedUnion('_block',[
  singleton('faq','sporsmal',z.object({eyebrow:z.string(),heading:z.string(),items:z.array(z.object({question:z.string(),answer:z.string()}))}).strict()),
  z.object({_block:z.literal('pageList'),id:z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),name:z.string().optional(),visibility:sectionVisibilitySchema,eyebrow:z.string().optional(),heading:z.string().trim().min(1),body:z.array(z.string()).default([]),headingAlign:headingAlignSchema,surface:surfaceSchema,layout:contentLayoutSchema.optional(),pageList:pageListSchema}).strict(),
  z.object({...identity,_block:z.literal('content'),eyebrow:z.string().optional(),heading:z.string().trim().min(1),body:z.array(z.string()).default([]),surface:surfaceSchema,headingAlign:headingAlignSchema,layout:contentLayoutSchema,
- items:z.array(z.object({title:z.string(),text:z.string(),href:z.string().refine(safeCmsHref).optional(),label:z.string().optional(),surface:surfaceSchema,boxVariant:boxVariantSchema})).optional(),links:z.array(link).optional()}).strict(),
+ items:z.array(z.object({title:z.string(),text:z.string(),href:z.string().startsWith('/').optional(),label:z.string().optional(),surface:surfaceSchema,boxVariant:boxVariantSchema})).optional(),links:z.array(link).optional()}).strict(),
 ]);
 export const homepageBlocksSchema=z.array(homepageBlockSchema).max(56).superRefine((blocks,ctx)=>{
  for(const id of homepageCoreIds){const core=blocks.find(b=>b.id===id);if(core&&(!('uid' in core)||core.uid!==coreUids[id]))ctx.addIssue({code:'custom',message:'Protected master UUID: '+id});}
@@ -59,38 +57,23 @@ export const homepageBlocksSchema=z.array(homepageBlockSchema).max(56).superRefi
 });
 export type HomepageBlock=z.infer<typeof homepageBlockSchema>;
 export const globalElementIds=homepageCoreIds;
-export type CoreGlobalElementId=typeof globalElementIds[number];
-export type GlobalElementId=string;
-export function hasPromotedGlobal(id:string){return Object.hasOwn(promotedGlobalMasters,id);}
+export type GlobalElementId=typeof globalElementIds[number];
 const catalogue={behov:selectorMaster,regneeksempel:calculatorMaster,sjekk:assessmentMaster,priser:packagesMaster,resultater:proofMaster,mekanisme:mechanismMaster,passer:fitMaster,sporsmal:faqMaster};
 const masterTypes={behov:'selector',regneeksempel:'calculator',sjekk:'assessment',priser:'packages',resultater:'proof',mekanisme:'content',passer:'content',sporsmal:'faq'} as const;
-export const globalPlacementSchema=z.object({
- _block:z.literal('global'),
- element:z.string().refine(id=>globalElementIds.some(core=>core===id)||hasPromotedGlobal(id),'Unknown global section ID'),
- id:z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/).optional(),
- visibility:sectionVisibilitySchema,
-}).strict();
-export function getGlobalElement<I extends CoreGlobalElementId>(id:I):Extract<HomepageBlock,{_block:(typeof masterTypes)[I]}>;
-export function getGlobalElement(id:string):HomepageBlock;
-export function getGlobalElement(id:string):HomepageBlock{
- const isCore=Object.hasOwn(catalogue,id);
- const source=isCore?(catalogue as Record<string,unknown>)[id]:promotedGlobalMasters[id];
- if(!source)throw new Error('Unknown global element: '+id);
- const master=homepageBlockSchema.parse(projectSelectedLinks(source));
- if(isCore){
-  if(master._block!==masterTypes[id as CoreGlobalElementId]||master.id!==id||master.uid!==coreUids[id]||master.visibility!==undefined)throw new Error('Invalid locked global identity: '+id);
- }else if(master._block!=='content'||master.id!==id||master.visibility!==undefined)throw new Error('Invalid promoted global master identity: '+id);
- return master;
+export const globalPlacementSchema=z.object({_block:z.literal('global'),element:z.enum(globalElementIds),visibility:sectionVisibilitySchema}).strict();
+export function getGlobalElement<I extends GlobalElementId>(id:I):Extract<HomepageBlock,{_block:(typeof masterTypes)[I]}>{
+ if(!Object.hasOwn(catalogue,id))throw new Error(`Unknown global element: ${id}`);
+ const master=homepageBlockSchema.parse(catalogue[id]);
+ if(master._block!==masterTypes[id]||master.id!==id||master.uid!==coreUids[id]||master.visibility!==undefined)throw new Error(`Invalid global master identity: ${id}`);
+ return master as Extract<HomepageBlock,{_block:(typeof masterTypes)[I]}>;
 }
 export function resolveGlobalPlacement(value:unknown):HomepageBlock{
  const placement=globalPlacementSchema.parse(value);
- if(placement.id && !hasPromotedGlobal(placement.element))throw new Error('Cannot override a protected global anchor');
- const master=getGlobalElement(placement.element);
- return {...master,...(placement.id?{id:placement.id}:{}),...(placement.visibility?{visibility:placement.visibility}:{})} as HomepageBlock;
+ return {...getGlobalElement(placement.element),...(placement.visibility?{visibility:placement.visibility}:{})};
 }
 const ordinarySchema=homepageBlockSchema.options[7];
-const pageListHomeSchema=homepageBlockSchema.options[6].refine(b=>!globalElementIds.includes(b.id as CoreGlobalElementId),'PageList cannot claim a shared module anchor');
-export const optionalHomepageSectionSchema=ordinarySchema.refine(b=>!globalElementIds.includes(b.id as CoreGlobalElementId)&&!Object.values(coreUids).includes(b.uid),'Use a global reference for a library master, not a copied local record');
+const pageListHomeSchema=homepageBlockSchema.options[6].refine(b=>!globalElementIds.includes(b.id as GlobalElementId),'PageList cannot claim a shared module anchor');
+export const optionalHomepageSectionSchema=ordinarySchema.refine(b=>!globalElementIds.includes(b.id as GlobalElementId)&&!Object.values(coreUids).includes(b.uid),'Use a global reference for a library master, not a copied local record');
 export const pagePlacementSchema=z.union([globalPlacementSchema,optionalHomepageSectionSchema,pageListHomeSchema]);
 export const homepageSourceSchema=z.object({sections:z.array(pagePlacementSchema).max(56)}).strict();
 export function isHomepageSectionVisible(section?:{visibility?:unknown}){return !!section&&section.visibility!=='hidden';}
@@ -100,7 +83,7 @@ export function resolveHomepageSections(page:Source){
  if(['topSections','bottomSections','optionalSections'].some(key=>Object.hasOwn(page,key)))throw new Error('Forsiden bruker bare sections. Migrer Topp/Hoved/Bunn til én liste og last CMS på nytt før lagring.');
  for(const id of globalElementIds)getGlobalElement(id);
  const source=homepageSourceSchema.parse({sections:page.sections});
- return homepageBlocksSchema.parse(source.sections.map(p=>p._block==='global'?resolveGlobalPlacement(p):projectSelectedLinks(p)));
+ return homepageBlocksSchema.parse(source.sections.map(p=>p._block==='global'?resolveGlobalPlacement(p):p));
 }
 export function assertNever(value:never):never{throw new Error(`Unknown homepage block: ${JSON.stringify(value)}`);}
 /** Parsed collection entries already contain the resolved render array. */
