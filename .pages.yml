@@ -76,6 +76,52 @@ settings:
       create: "Nytt innhold: {path} (via Pages CMS)"
       delete: "Slettet innhold: {path} (via Pages CMS)"
 components:
+  cmsSuggestedHref:
+    type: select
+    description: Søk i eksisterende sider eller snarveier. Valgt URL brukes; tøm valget for å bruke Manuell URL.
+    options:
+      placeholder: Søk etter sidetittel eller URL
+      values:
+# PILOT_URL_CHOICES_BEGIN
+        - name: "/"
+          label: "SEO, AI-synlighet og konverteringsoptimalisering | Optimalisering Oslo — /"
+        - name: "/#sjekk"
+          label: "Gratis sjekk — /#sjekk"
+        - name: "/ai-synlighet/"
+          label: "AI-synlighet - bli forstått med riktig informasjon | Medon — /ai-synlighet/"
+        - name: "/innsikt/"
+          label: "Innsikt - velg startpunkt og vurder effekten | Medon — /innsikt/"
+        - name: "/innsikt/google-bedriftsprofil/"
+          label: "Google bedriftsprofil - guide for bedrifter | Optimalisering Oslo — /innsikt/google-bedriftsprofil/"
+        - name: "/innsikt/hva-bor-optimaliseres-forst/"
+          label: "Hva bør du optimalisere først? Synlighet eller konvertering — /innsikt/hva-bor-optimaliseres-forst/"
+        - name: "/innsikt/male-effekt-av-optimalisering/"
+          label: "Måle effekt av optimalisering - fra besøk til verdi — /innsikt/male-effekt-av-optimalisering/"
+        - name: "/kontakt/"
+          label: "Kontakt om Optimalisering Oslo | Medon AS — /kontakt/"
+        - name: "/konvertering/"
+          label: "Konverteringsoptimalisering (CRO) | Optimalisering Oslo — /konvertering/"
+        - name: "/lokal-seo/"
+          label: "Lokal SEO for Google Maps og lokale søk | Medon — /lokal-seo/"
+        - name: "/nettbutikkoptimalisering/"
+          label: "Nettbutikkoptimalisering - fra oppdagelse til kjøp | Medon — /nettbutikkoptimalisering/"
+        - name: "/om/"
+          label: "Om Optimalisering Oslo og Medon AS — /om/"
+        - name: "/personvern/"
+          label: "Personvern - Optimalisering Oslo — /personvern/"
+        - name: "/priser/"
+          label: "Priser på SEO, CRO og digital optimalisering | Optimalisering Oslo — /priser/"
+        - name: "/priser/#optimalisering"
+          label: "Priser og pakker — /priser/#optimalisering"
+        - name: "/seo/"
+          label: "SEO-byrå for bedrifter i Oslo | Optimalisering Oslo — /seo/"
+        - name: "/synlighet/"
+          label: "SEO, lokal SEO og AI-synlighet | Optimalisering Oslo — /synlighet/"
+        - name: "/vilkar/"
+          label: "Vilkår - hva må avtales før videre arbeid? | Medon — /vilkar/"
+        - name: "/vurdering/"
+          label: "Gratis manuell sjekk av nettsiden | Medon — /vurdering/"
+# PILOT_URL_CHOICES_END
   sectionVisibility:
     type: select
     options:
@@ -92,6 +138,9 @@ components:
         label: Lenketekst
         type: string
         required: true
+      - name: suggestedHref
+        label: Velg side eller snarvei
+        component: cmsSuggestedHref
       - name: href
         label: Intern lenke
         type: string
@@ -214,6 +263,9 @@ components:
             label: Beskrivelse
             type: text
             required: true
+          - name: suggestedHref
+            label: Velg side eller snarvei
+            component: cmsSuggestedHref
           - name: href
             label: Intern lenke
             type: string
@@ -471,6 +523,9 @@ components:
                 label: Egen intern/ekstern URL
                 type: object
                 fields:
+                  - name: suggestedHref
+                    label: Velg side eller snarvei
+                    component: cmsSuggestedHref
                   - name: href
                     label: URL
                     type: string
@@ -552,6 +607,9 @@ components:
             label: Beskrivelse
             type: text
             required: true
+          - name: suggestedHref
+            label: Velg side eller snarvei
+            component: cmsSuggestedHref
           - name: href
             label: Intern lenke
             type: string
@@ -602,6 +660,9 @@ components:
             label: Beskrivelse
             type: text
             required: true
+          - name: suggestedHref
+            label: Velg side eller snarvei
+            component: cmsSuggestedHref
           - name: href
             label: Intern lenke
             type: string
@@ -1059,6 +1120,9 @@ content:
                     label: Beskrivelse
                     type: text
                     required: true
+                  - name: suggestedHref
+                    label: Velg side eller snarvei
+                    component: cmsSuggestedHref
                   - name: href
                     label: Intern lenke
                     type: string
@@ -1835,6 +1899,9 @@ content:
                 label: Knappetekst
                 type: string
                 required: true
+              - name: suggestedHref
+                label: Velg side eller snarvei
+                component: cmsSuggestedHref
               - name: href
                 label: Intern lenke (for eksempel /#sjekk eller /kontakt/)
                 type: string
@@ -1875,6 +1942,9 @@ content:
                 label: Tekst
                 type: string
                 required: true
+              - name: suggestedHref
+                label: Velg side eller snarvei
+                component: cmsSuggestedHref
               - name: href
                 label: Intern lenke
                 type: string
@@ -1926,6 +1996,9 @@ content:
                             label: Lenketekst
                             type: string
                             required: true
+                          - name: suggestedHref
+                            label: Velg side eller snarvei
+                            component: cmsSuggestedHref
                           - name: href
                             label: Intern lenke
                             type: string
@@ -1952,6 +2025,9 @@ content:
                           - name: label
                             label: Knappetekst
                             type: string
+                          - name: suggestedHref
+                            label: Velg side eller snarvei
+                            component: cmsSuggestedHref
                           - name: href
                             label: Intern lenke
                             type: string
@@ -2062,6 +2138,9 @@ content:
                 label: Tekst
                 type: string
                 required: true
+              - name: suggestedHref
+                label: Velg side eller snarvei
+                component: cmsSuggestedHref
               - name: href
                 label: Intern lenke
                 type: string
@@ -2080,6 +2159,9 @@ content:
                 label: Tekst
                 type: string
                 required: true
+              - name: suggestedHref
+                label: Velg side eller snarvei
+                component: cmsSuggestedHref
               - name: href
                 label: Intern lenke
                 type: string
@@ -2128,6 +2210,9 @@ content:
                     label: Lenketekst
                     type: string
                     required: true
+                  - name: suggestedHref
+                    label: Velg side eller snarvei
+                    component: cmsSuggestedHref
                   - name: href
                     label: Eksisterende intern side
                     type: string
@@ -2146,6 +2231,9 @@ content:
                 label: Tekst
                 type: string
                 required: true
+              - name: suggestedHref
+                label: Velg side eller snarvei
+                component: cmsSuggestedHref
               - name: href
                 label: Intern lenke
                 type: string
@@ -2230,6 +2318,9 @@ content:
                         label: Tekst
                         type: string
                         required: true
+                      - name: suggestedHref
+                        label: Velg side eller snarvei
+                        component: cmsSuggestedHref
                       - name: href
                         label: Intern lenke
                         type: string
@@ -2467,6 +2558,9 @@ content:
                         label: Beskrivelse
                         type: text
                         required: true
+                      - name: suggestedHref
+                        label: Velg side eller snarvei
+                        component: cmsSuggestedHref
                       - name: href
                         label: Intern lenke
                         type: string
@@ -2545,6 +2639,9 @@ content:
                         label: Tekst
                         type: string
                         required: true
+                      - name: suggestedHref
+                        label: Velg side eller snarvei
+                        component: cmsSuggestedHref
                       - name: href
                         label: Intern lenke
                         type: string
@@ -2930,6 +3027,9 @@ content:
                         label: Knappetekst
                         type: string
                         required: true
+                      - name: suggestedHref
+                        label: Velg side eller snarvei
+                        component: cmsSuggestedHref
                       - name: href
                         label: Intern lenke
                         type: string
@@ -3187,6 +3287,9 @@ content:
                 label: Beskrivelse
                 type: text
                 required: true
+              - name: suggestedHref
+                label: Velg side eller snarvei
+                component: cmsSuggestedHref
               - name: href
                 label: Intern lenke
                 type: string
@@ -3283,6 +3386,9 @@ content:
                 label: Beskrivelse
                 type: text
                 required: true
+              - name: suggestedHref
+                label: Velg side eller snarvei
+                component: cmsSuggestedHref
               - name: href
                 label: Intern lenke
                 type: string
