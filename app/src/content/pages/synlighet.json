@@ -172,7 +172,7 @@
         "mode": "automatic",
         "sort": "editorial",
         "limit": 6,
-        "layout": "mediaCards"
+        "layout": "alternating"
       }
     }
   ],
