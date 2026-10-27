@@ -3,7 +3,7 @@ import type { CollectionEntry } from 'astro:content';
 import HomeSection from './HomeSection.astro';
 import Arrow from './Arrow.astro';
 import ListingVisual from './ListingVisual.astro';
-import { resolvePageList, type ListPage } from '../lib/page-list';
+import { resolvePageList, pageListPresentationVisual, type ListPage } from '../lib/page-list';
 import { getCollection } from 'astro:content';
 interface Props { section: CollectionEntry<'pages'>['data']['sections'][number]; pages?: readonly ListPage[]; }
 const { section, pages: suppliedPages } = Astro.props;
@@ -12,16 +12,17 @@ const pages = suppliedPages ?? (await getCollection('pages')).map(entry=>entry.d
 const cases = config.source === 'cases' || config.mode === 'manual' ? (await getCollection('proofCases')).map(entry=>entry.data) : [];
 const items = resolvePageList(config, pages, 'public', cases);
 const cards = items.map(item => ({ title: item.title, text: item.summary, href: item.href, label: item.label, surface: 'default' as const, boxVariant: 'default' as const }));
+const displayedItems = items.map(item => ({ ...item, displayVisual: pageListPresentationVisual(item, config.layout) }));
 ---
 {config.layout === 'cards' ? <HomeSection section={{ ...section, items: cards }} /> :
   <HomeSection section={section}>
     <ul class:list={['page-list', `page-list-${config.layout}`]} data-count={items.length}>
-      {items.map(item => <li>
+      {displayedItems.map(item => <li>
         {config.layout === 'mediaCards' || config.layout === 'alternating' ?
-          <article class="info-item listing-item" data-has-visual={!!item.visual} data-visual-kind={item.visual?.kind ?? 'none'} data-surface={config.layout === 'mediaCards' ? 'base' : undefined}>
-            {config.layout === 'mediaCards' && item.visual && <ListingVisual visual={item.visual} />}
+          <article class="info-item listing-item" data-has-visual={!!item.displayVisual} data-visual-kind={item.displayVisual?.kind ?? 'none'} data-surface={config.layout === 'mediaCards' ? 'base' : undefined}>
+            {config.layout === 'mediaCards' && item.displayVisual && <ListingVisual visual={item.displayVisual} />}
             <div class="listing-copy"><h3>{item.title}</h3><p>{item.summary}</p>{item.href&&<a class="text-link" href={item.href}>{item.label}<Arrow diagonal /></a>}</div>
-            {config.layout === 'alternating' && item.visual && <ListingVisual visual={item.visual} />}
+            {config.layout === 'alternating' && item.displayVisual && <ListingVisual visual={item.displayVisual} />}
           </article> : config.layout === 'links' ? (item.href ? <a class="text-link" href={item.href}>{item.title}<Arrow diagonal /></a> : <span class="font-semibold">{item.title}</span>) :
           <article class="info-item page-list-row"><h3>{item.title}</h3><p>{item.summary}</p>{item.href&&<a class="text-link" href={item.href}>{item.label}<Arrow diagonal /></a>}</article>}
       </li>)}
@@ -44,8 +45,6 @@ const cards = items.map(item => ({ title: item.title, text: item.summary, href: 
   .page-list-alternating > li:nth-child(even) .listing-copy { grid-column: 2; grid-row: 1; }
   .page-list-alternating > li:nth-child(even) :global(.listing-visual) { grid-column: 1; grid-row: 1; }
   .page-list-alternating > li:nth-child(even) :global(.listing-visual[data-kind="icon"]) { background: var(--surface-mint); }
-  .page-list-alternating .listing-item[data-has-visual="false"] { grid-template-columns: 1fr; }
-  .page-list-alternating .listing-item[data-has-visual="false"] .listing-copy { grid-column: 1; }
   .page-list-mediaCards { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap); margin-top: var(--gap-lg); }
   .page-list-mediaCards[data-count="2"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .page-list-mediaCards[data-count="1"] { grid-template-columns: minmax(0, 1fr); }
