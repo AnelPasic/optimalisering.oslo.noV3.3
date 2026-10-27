@@ -991,6 +991,9 @@ content:
                 label: Visning på denne siden
                 component: sectionVisibility
                 description: "Fjerning sletter bare plasseringen. Eksisterende lenker til #sjekk og #priser må få et gyldig mål før disse skjules eller fjernes."
+          - name: pageList
+            label: PageList – innholdsliste
+            component: sectionPageList
           - name: content
             label: Innholdsseksjon
             fields:
@@ -1225,6 +1228,9 @@ content:
               - name: protected
                 label: Beskyttet sjekk / handling
                 component: sectionProtected
+              - name: pageList
+                label: PageList – innholdsliste
+                component: sectionPageList
               - name: global
                 label: Globalt element
                 component: serviceGlobalPlacement
@@ -1305,6 +1311,9 @@ content:
               - name: content
                 label: Innholdsseksjon
                 component: synlighetSectionContent
+              - name: pageList
+                label: PageList – innholdsliste
+                component: sectionPageList
               - name: global
                 label: Globalt element
                 component: serviceGlobalPlacement
@@ -1335,6 +1344,9 @@ content:
               - name: protected
                 label: Beskyttet sjekk / handling
                 component: sectionProtected
+              - name: pageList
+                label: PageList – innholdsliste
+                component: sectionPageList
               - name: global
                 label: Globalt element
                 component: serviceGlobalPlacement
