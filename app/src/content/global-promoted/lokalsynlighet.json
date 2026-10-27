@@ -1,0 +1,28 @@
+{
+  "_block": "content",
+  "uid": "5d24e235-3c9a-47a3-a4ec-e673cd9bb0a2",
+  "id": "lokalsynlighet",
+  "name": "Lokal SEO i praksis",
+  "eyebrow": "Lokal SEO i praksis",
+  "heading": "Lokale kunder skal slippe å gjette om dere kan hjelpe.",
+  "headingAlign": "center",
+  "layout": "three-columns",
+  "surface": "soft",
+  "body": [
+    "Når noen søker etter en leverandør i området, må de raskt se hva dere tilbyr, hvor dere leverer og hvordan de tar kontakt. Vi undersøker om bedriftsprofilen og nettsiden gir et tydelig, sammenhengende svar."
+  ],
+  "items": [
+    {
+      "title": "Google-bedriftsprofil",
+      "text": "Sjekk at kategori, tjenester, åpningstider og kontaktinformasjon stemmer med det bedriften faktisk tilbyr."
+    },
+    {
+      "title": "Tjenester og områder",
+      "text": "Vis hvilke tjenester dere tilbyr og hvilke områder dere dekker, med nyttig innhold fremfor mange nesten like lokalsider."
+    },
+    {
+      "title": "Veien til kontakt",
+      "text": "Gjør telefonnummer, bestilling eller kontaktskjema enkelt å finne når kunden er klar for neste steg."
+    }
+  ]
+}
