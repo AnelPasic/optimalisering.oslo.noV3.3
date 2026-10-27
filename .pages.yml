@@ -758,97 +758,6 @@ content:
         type: text
         required: false
         description: Gjelder fremtidige omskrivinger, ikke automatisk omformulering av eksisterende innhold. Priser, bestillingsfelt, resultater og juridisk innhold skal fortsatt være nøkterne.
-  - name: terminology
-    label: Begreper og forklaringer
-    type: file
-    path: app/src/content/terminology/glossary.json
-    format: json
-    fields:
-      - name: authority
-        label: Innholdsautoritet
-        type: string
-        required: true
-        readonly: true
-      - name: hero
-        component: pageHero
-      - name: title
-        label: Overskrift
-        type: string
-        required: true
-      - name: intro
-        label: Ingress
-        type: text
-        required: true
-      - name: description
-        label: Metabeskrivelse
-        type: text
-        required: true
-      - name: linkLabel
-        label: Lenketekst til begrepssiden
-        type: string
-        required: true
-      - name: moreLabel
-        label: Lenketekst i forklaringen
-        type: string
-        required: true
-      - name: exampleLabel
-        label: Eksempeletikett
-        type: string
-        required: true
-      - name: panelLabel
-        label: Tilgjengelig navn på forklaring
-        type: string
-        required: true
-      - name: terms
-        label: Begreper
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: "{fields.term}"
-        required: true
-        fields:
-          - name: id
-            label: Stabilt anker (beskyttet)
-            type: string
-            required: true
-            readonly: true
-            pattern: ^[a-z][a-z0-9]*(-[a-z0-9]+)*$
-          - name: term
-            label: Begrep
-            type: string
-            required: true
-          - name: fullName
-            label: Fullt navn
-            type: string
-            required: false
-          - name: aliases
-            label: Alternative navn
-            type: string
-            required: false
-            list: true
-          - name: category
-            label: Kategori
-            type: select
-            required: true
-            options:
-              values:
-                - Synlighet og søk
-                - Annonsering
-                - Konvertering
-                - Måling og økonomi
-          - name: shortDefinition
-            label: Kort forklaring (én setning, maks. 180 tegn)
-            type: text
-            required: true
-          - name: fullDefinition
-            label: Full forklaring
-            type: text
-            required: true
-          - name: simpleExample
-            label: Enkelt eksempel
-            type: text
-            required: false
   - name: homepage
     label: Forside
     type: file
@@ -1383,6 +1292,88 @@ content:
             readonly: true
           - *a6
           - *a7
+  - name: terminology
+    label: Begreper og forklaringer
+    type: file
+    path: app/src/content/terminology/glossary.json
+    format: json
+    fields:
+      - name: authority
+        label: Innholdsautoritet
+        type: string
+        required: true
+        readonly: true
+      - *standardHero
+      - name: description
+        label: Metabeskrivelse
+        type: text
+        required: true
+      - name: linkLabel
+        label: Lenketekst til begrepssiden
+        type: string
+        required: true
+      - name: moreLabel
+        label: Lenketekst i forklaringen
+        type: string
+        required: true
+      - name: exampleLabel
+        label: Eksempeletikett
+        type: string
+        required: true
+      - name: panelLabel
+        label: Tilgjengelig navn på forklaring
+        type: string
+        required: true
+      - name: terms
+        label: Begreper
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.term}"
+        required: true
+        fields:
+          - name: id
+            label: Stabilt anker (beskyttet)
+            type: string
+            required: true
+            readonly: true
+            pattern: ^[a-z][a-z0-9]*(-[a-z0-9]+)*$
+          - name: term
+            label: Begrep
+            type: string
+            required: true
+          - name: fullName
+            label: Fullt navn
+            type: string
+            required: false
+          - name: aliases
+            label: Alternative navn
+            type: string
+            required: false
+            list: true
+          - name: category
+            label: Kategori
+            type: select
+            required: true
+            options:
+              values:
+                - Synlighet og søk
+                - Annonsering
+                - Konvertering
+                - Måling og økonomi
+          - name: shortDefinition
+            label: Kort forklaring (én setning, maks. 180 tegn)
+            type: text
+            required: true
+          - name: fullDefinition
+            label: Full forklaring
+            type: text
+            required: true
+          - name: simpleExample
+            label: Enkelt eksempel
+            type: text
+            required: false
   - name: priser
     label: Priser
     type: file
@@ -1549,10 +1540,7 @@ content:
     format: json
     operations: *a3
     fields:
-      - name: notFound
-        label: Hero
-        component: pageHero
-        description: Oppsett for feilsiden. Feilmelding og navigasjon beholdes; ingen markedsføringshandling legges til.
+      - *standardHero
   - name: proofCases
     label: Case/evidens (intern)
     type: collection
