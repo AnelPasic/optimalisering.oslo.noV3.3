@@ -72,6 +72,9 @@ test('promotion rejects protected or unsupported blocks, malformed URLs and inva
 test('action context is verified before any file creation or Git commit',()=>{
  const req={source:'pages-cms',action:{name:'promote-content-section'},repository:{owner:'AnelPasic',repo:'optimalisering.oslo.noV3.3',ref:'main',sha:'abc'},context:{type:'file',path:'app/src/content/pages/om.json'},inputs:{section_id:'oppgave',global_id:'ny-introduksjon',global_name:'Ny introduksjon',mode:'copy'}};
  assert.equal(validatePilotPromotionPayload(req,'AnelPasic/optimalisering.oslo.noV3.3','main','abc').page,'om.json');
+ // Real authenticated Pages CMS action sends lowercase owner/repo despite GitHub's display casing.
+ assert.equal(validatePilotPromotionPayload({...req,repository:{...req.repository,owner:'anelpasic',repo:'optimalisering.oslo.nov3.3'}},'AnelPasic/optimalisering.oslo.noV3.3','main','abc').page,'om.json');
+ assert.throws(()=>validatePilotPromotionPayload({...req,repository:{...req.repository,owner:'other-org',repo:'optimalisering.oslo.nov3.3'}},'AnelPasic/optimalisering.oslo.noV3.3','main','abc'),/Repository mismatch/);
  assert.throws(()=>validatePilotPromotionPayload(req,'AnelPasic/optimalisering.oslo.noV3.3','main','newsha'),/latest saved/);
  assert.throws(()=>validatePilotPromotionPayload({...req,context:{type:'file',path:'app/.env'}},'AnelPasic/optimalisering.oslo.noV3.3','main','abc'),/page JSON/);
 });

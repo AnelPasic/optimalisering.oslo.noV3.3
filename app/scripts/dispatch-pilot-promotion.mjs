@@ -7,7 +7,9 @@ const run=(command,args,env)=>{
 };
 export function validatePilotPromotionPayload(payload,repo,ref,sha){
  if(payload?.source!=='pages-cms'||payload?.action?.name!=='promote-content-section')throw new Error('Unknown Pages CMS action');
- if(payload?.repository?.owner+'/'+payload?.repository?.repo!==repo)throw new Error('Repository mismatch');
+ // GitHub repository and owner names are case-insensitive; stock Pages CMS lowercases them.
+ const actionRepo=payload?.repository?.owner+'/'+payload?.repository?.repo;
+ if(actionRepo.toLowerCase()!==repo.toLowerCase())throw new Error('Repository mismatch');
  if(payload.repository.ref!==ref||payload.repository.sha!==sha)throw new Error('Page action requires latest saved Git revision; reopen Pages CMS and retry');
  if(!['file','entry'].includes(payload.context?.type)||typeof payload.context?.path!=='string'||
      !/^app\/src\/content\/pages\/[a-z0-9-]+\.json$/.test(payload.context.path))throw new Error('Only page JSON editors can promote sections');
