@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {readFileSync,readdirSync,mkdtempSync,writeFileSync,rmSync} from 'node:fs';
+import {readFileSync,readdirSync,mkdirSync,mkdtempSync,writeFileSync,rmSync} from 'node:fs';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
 import {randomUUID} from 'node:crypto';
@@ -62,4 +62,29 @@ test('one source can resolve unchanged on two pages; no hidden fallback or dupli
   writeFileSync(join(dir,'wrong-file.json'),JSON.stringify(specimen));
   assert.throws(()=>readSharedContent('wrong-file',dir),/filnavn/);
  }finally{rmSync(dir,{recursive:true,force:true});}
+});
+
+test('real page schema resolves one shared source on Home and Om, rejects collisions and hidden copies',()=>{
+ const cwd=process.cwd();
+ const root=mkdtempSync(join(tmpdir(),'medon-pages-'));
+ const dir=join(root,'src/content/global-content');
+ mkdirSync(dir,{recursive:true});
+ writeFileSync(join(dir,'demo-felles.json'),JSON.stringify(specimen));
+ const home=JSON.parse(readFileSync('src/content/pages/home.json','utf8'));
+ const om=JSON.parse(readFileSync('src/content/pages/om.json','utf8'));
+ try{
+  process.chdir(root);
+  const a=pageSchema.parse({...home,sections:[...home.sections,reference]});
+  const b=pageSchema.parse({...om,sections:[...om.sections,reference]});
+  assert.equal(a.sections.at(-1)?.id,'demo-felles');
+  assert.equal(b.sections.at(-1)?.id,'demo-felles');
+  assert.deepEqual(a.sections.at(-1)?.body,b.sections.at(-1)?.body);
+  writeFileSync(join(dir,'demo-felles.json'),JSON.stringify({...specimen,heading:'Oppdatert fra global editor'}));
+  assert.equal(pageSchema.parse({...om,sections:[...om.sections,reference]}).sections.at(-1)?.heading,'Oppdatert fra global editor');
+  assert.deepEqual(pageSchema.parse({...om,sections:[...om.sections,{...reference,visibility:'hidden'}]}).sections,b.sections.slice(0,-1));
+  assert.equal(pageSchema.safeParse({...om,sections:[...om.sections,reference,reference]}).success,false);
+  assert.equal(pageSchema.safeParse({...home,sections:[...home.sections,reference,reference]}).success,false);
+  const local={_block:'content',id:'demo-felles',heading:'Colliding local',body:['Too similar']};
+  assert.equal(pageSchema.safeParse({...om,sections:[...om.sections,local,reference]}).success,false);
+ }finally{process.chdir(cwd);rmSync(root,{recursive:true,force:true});}
 });
