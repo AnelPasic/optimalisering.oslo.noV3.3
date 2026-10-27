@@ -62,6 +62,7 @@ test('preset defaults and missing-image fallback retain existing semantics',()=>
  const empty=structuredClone(service);empty.hero={...empty.hero,layout:'centered',visual:{kind:'none'}};
  assert.deepEqual(resolvePageHero(empty).visual,{kind:'none'},'No invented placeholder');
  const glossary=JSON.parse(readFileSync('src/content/terminology/glossary.json','utf8'));
- assert.equal(resolveGlossaryHero({...glossary,hero:{layout:'centered-none'}}).layout,'centered');
- assert.equal(resolveNotFoundHero({layout:'centered-none'}).layout,'centered');
+ assert.equal(resolveGlossaryHero({...glossary,hero:{...glossary.hero,layout:'centered-none'}}).layout,'centered');
+ const notFound=JSON.parse(readFileSync('src/content/presentation/hero-layouts.json','utf8'));
+ assert.equal(resolveNotFoundHero({...notFound.hero,layout:'centered-none'}).layout,'centered');
 });
