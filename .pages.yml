@@ -910,17 +910,17 @@ content:
             component: link
           - name: visual
             label: Visuelt innhold
-            description: Velg Ingen for tekst uten bilde, eller Bilde for å laste opp. Tidligere lagret bilde bevares når du velger Ingen.
+            description: Velg Bilde under Visuelt innhold for å åpne bildevelger, bildetype og utsnitt. Ingen viser bare tekst. Lagret bilde bevares hvis du senere velger Ingen.
             type: block
             blockKey: kind
             required: true
             blocks:
               - name: none
-                label: Ingen
+                label: Ingen – bare tekst (velg Bilde for bildevalg)
                 type: object
                 fields: []
               - name: image
-                label: Bilde
+                label: Bilde – velg eller endre bilde
                 type: object
                 fields:
                   - name: image
@@ -1172,17 +1172,17 @@ content:
               - *hubHerosecondaryCta
               - name: visual
                 label: Visuelt innhold
-                description: Ingen skjuler bildefeltene. Bilde viser bare feltene som kreves når du bruker et bilde. Valgt bilde bevares dersom du senere velger Ingen.
+                description: Velg Bilde under Visuelt innhold for å åpne bildevelger, bildetype og utsnitt. Ingen viser bare tekst. Lagret bilde bevares hvis du senere velger Ingen.
                 type: block
                 blockKey: kind
                 required: true
                 blocks:
                   - name: none
-                    label: Ingen
+                    label: Ingen – bare tekst (velg Bilde for bildevalg)
                     type: object
                     fields: []
                   - name: image
-                    label: Bilde
+                    label: Bilde – velg eller endre bilde
                     type: object
                     fields:
                       - name: image
@@ -1212,7 +1212,7 @@ content:
                           - *hubHeropositionY
           - &a6
             name: sections
-            label: Innholdsseksjoner og farger
+            label: Innholdsseksjoner
             description: Åpne en vanlig Innholdsseksjon for Seksjonsfarge. Åpne en boks under Alternativer eller steg for Boksfarge. Beskyttede sjekk-/handlingsseksjoner har ikke fargevalg.
             type: block
             list:
@@ -1298,7 +1298,7 @@ content:
             type: string
             readonly: true
           - name: sections
-            label: Sidens seksjoner og globale elementer
+            label: Innholdsseksjoner
             description: Dra lokale seksjoner og globale innholdselementer i ønsket rekkefølge. Felles innhold redigeres kun under Global Innhold.
             type: block
             list:
