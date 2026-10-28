@@ -1,6 +1,6 @@
 /* H-023B: component-owned service composition; palette and primitives belong to app.css/daisyUI. */
 @layer composition {
-.invite-service .home-section-behov, .invite-service .home-section-prioritering { background: var(--surface-base); }
+.invite-service .home-section-behov, .invite-service .home-section-prioritering { background: var(--color-base-100); }
 .invite-service .home-section-kanaler .section-items { gap: 56px; }
 .invite-service .info-item { display: flex; flex-direction: column; align-items: start; }
 .invite-service .info-item .text-link { margin-top: auto; padding-top: 24px; }
