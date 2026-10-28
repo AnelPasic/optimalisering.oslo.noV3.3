@@ -35,7 +35,7 @@
       "heading": "Dette kan vi gjøre for å forbedre SEO.",
       "headingAlign": "center",
       "layout": "two-columns",
-      "surface": "base-200",
+      "surface": "soft",
       "body": [
         "Vi begynner med søkene som kan gi bedriften riktige kunder, og prioriterer tiltak på nettsiden. Hva som gjennomføres, bestemmes av behov og avtalt kapasitet."
       ],
@@ -44,25 +44,25 @@
           "title": "Søkeord og søkeintensjon",
           "text": "Avklare hva relevante kunder søker etter, om de vil kjøpe eller lære, og hvilke søk dere faktisk ønsker å svare på.",
           "boxVariant": "card",
-          "surface": "accent"
+          "surface": "mint"
         },
         {
           "title": "Tjenestesider og innhold",
           "text": "Forbedre overskrifter, beskrivelser, svar, interne lenker og veien videre fra en relevant side til kontakt eller kjøp.",
           "boxVariant": "card",
-          "surface": "secondary"
+          "surface": "lavender"
         },
         {
           "title": "Teknisk SEO",
           "text": "Undersøke blant annet indeksering, brutte lenker, omdirigeringer og sidens tilgjengelighet for søkemotorer, og prioritere reelle hindringer.",
           "boxVariant": "card",
-          "surface": "base-100"
+          "surface": "base"
         },
         {
           "title": "Måling og prioritering",
           "text": "Skille synlighet og klikk fra relevante henvendelser. Tilgjengelige tall fra søk, nettside og kundeoppfølging brukes med sine begrensninger.",
           "boxVariant": "card",
-          "surface": "base-200"
+          "surface": "soft"
         }
       ],
       "links": [
@@ -82,7 +82,7 @@
       "heading": "Hvilke søk skal føre kunden til hvilken side?",
       "headingAlign": "center",
       "layout": "three-columns",
-      "surface": "base-100",
+      "surface": "base",
       "body": [
         "Kunden som søker etter \"rørlegger døgnvakt\" er nærmere å velge leverandør enn den som søker \"hva gjør jeg ved vannlekkasje\". Vi sørger for at begge møter en side som svarer på det de faktisk trenger."
       ],
@@ -91,19 +91,19 @@
           "title": "Behovet",
           "text": "Hvilken tjeneste, løsning eller produktgruppe søker kunden etter, og passer denne kunden bedriften?",
           "boxVariant": "card",
-          "surface": "base-200"
+          "surface": "soft"
         },
         {
           "title": "Siden",
           "text": "Finnes det en konkret side som svarer på behovet med nyttig og riktig informasjon?",
           "boxVariant": "card",
-          "surface": "accent"
+          "surface": "mint"
         },
         {
           "title": "Neste steg",
           "text": "Kan kunden vurdere tilbudet og enkelt gå videre til relevant kontakt eller kjøp?",
           "boxVariant": "card",
-          "surface": "secondary"
+          "surface": "lavender"
         }
       ]
     },
@@ -113,7 +113,7 @@
       "eyebrow": "Teknisk SEO",
       "heading": "Teknisk SEO: Kan Google finne, lese og forstå de viktige sidene?",
       "headingAlign": "left",
-      "surface": "secondary",
+      "surface": "lavender",
       "body": [
         "Viktige sider må kunne indekseres og finnes gjennom tydelige interne lenker. Vi undersøker konkrete hindringer som feil omdirigeringer, utilgjengelig innhold og dårlig mobilopplevelse. Større tekniske endringer avtales separat."
       ]
@@ -124,7 +124,7 @@
       "eyebrow": "Prioritering før volum",
       "heading": "En SEO-plan skal prioritere arbeid, ikke bare produsere rapporter.",
       "headingAlign": "left",
-      "surface": "neutral",
+      "surface": "dark",
       "body": [
         "En side som ikke forklarer tilbudet, blir ikke bedre av at vi publiserer artikkel nummer 80. Vi vurderer søk, tilbud og eksisterende sider før vi foreslår mer arbeid.",
         "SEO kan være ett prioritert område i optimaliseringspakkene. Vi avtaler oppgavene og følger relevante resultater, men lover ikke en bestemt plassering eller antall kunder."
@@ -145,7 +145,7 @@
       "id": "seo-oslo",
       "heading": "SEO i Oslo: Hvem søker, og hvor leverer bedriften?",
       "headingAlign": "left",
-      "surface": "base-100",
+      "surface": "base",
       "body": [
         "Noen kunder søker etter en leverandør i et bestemt område. Andre sammenligner tjenester uten å bry seg om hvor leverandøren sitter. Vi vurderer hva som gjelder for dere, og kobler inn lokal SEO og Google bedriftsprofil når avstand og tjenesteområde betyr noe."
       ],
@@ -165,7 +165,7 @@
       "id": "effekt",
       "heading": "Hva får bedriften igjen for SEO-arbeidet?",
       "headingAlign": "left",
-      "surface": "accent",
+      "surface": "mint",
       "body": [
         "Vi følger med på synlighet og relevante besøk, men spør også hva som skjer videre: Ble det en kvalifisert henvendelse eller et nytt kjøp? Måling har begrensninger. Flere klikk alene sier lite om hva bedriften faktisk tjener."
       ],
@@ -181,7 +181,7 @@
       "id": "ai",
       "heading": "Hva med synlighet i ChatGPT og andre AI-svar?",
       "headingAlign": "left",
-      "surface": "base-200",
+      "surface": "soft",
       "body": [
         "Tydelige tjenestesider er et godt utgangspunkt også for AI-søk. Men en Google-plassering dokumenterer ikke en anbefaling fra en AI-tjeneste. Det vurderer vi separat."
       ],

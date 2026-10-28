@@ -7,7 +7,7 @@
       "sectionSurfaces": [
         {
           "section": "sammenheng",
-          "surface": "neutral"
+          "surface": "dark"
         }
       ],
       "sectionVisuals": [
@@ -46,19 +46,19 @@
           "text": "Bli funnet i Googles vanlige søkeresultater når noen søker etter det du tilbyr. Du betaler ikke Google for hvert klikk, slik du gjør med søkeannonser.",
           "href": "/seo/",
           "label": "Les om SEO",
-          "surface": "accent"
+          "surface": "mint"
         },
         {
           "title": "Lokal SEO",
           "text": "Når noen søker etter \"rørlegger i Ski\", viser Google ofte et kart med lokale bedrifter. Der vil du at kunden skal finne deg, se anmeldelser og kunne ringe direkte.",
-          "surface": "secondary"
+          "surface": "lavender"
         },
         {
           "title": "AI-synlighet",
           "text": "Når noen spør ChatGPT eller andre AI-tjenester hvem de bør kontakte, vil du være et aktuelt forslag. Vi kan forbedre grunnlaget for å bli nevnt, men ikke love en anbefaling.",
           "href": "/ai-synlighet/",
           "label": "Les om AI-synlighet",
-          "surface": "neutral"
+          "surface": "dark"
         }
       ]
     },
@@ -73,7 +73,7 @@
       "heading": "Lokale kunder skal slippe å gjette om dere kan hjelpe.",
       "headingAlign": "center",
       "layout": "three-columns",
-      "surface": "base-200",
+      "surface": "soft",
       "body": [
         "Når noen søker etter en leverandør i området, må de raskt se hva dere tilbyr, hvor dere leverer og hvordan de tar kontakt. Vi undersøker om bedriftsprofilen og nettsiden gir et tydelig, sammenhengende svar."
       ],
@@ -127,7 +127,7 @@
       "id": "prioritering",
       "eyebrow": "Kommersiell prioritering",
       "heading": "Vi starter med det som kan gjøre det lettere for en relevant kunde å finne deg.",
-      "surface": "neutral",
+      "surface": "dark",
       "body": [
         "Det kan være en viktig tjenesteside som mangler, en side som svarer uklart, intern struktur som skjuler viktig innhold eller bedriftsinformasjon som ikke henger godt nok sammen.",
         "Vi prioriterer ut fra tilbudet, kundene og hva vi faktisk kan måle. Du skal forstå hvorfor et tiltak kommer før et annet.",

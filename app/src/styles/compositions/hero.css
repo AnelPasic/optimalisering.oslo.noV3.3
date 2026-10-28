@@ -91,7 +91,7 @@
 .commercial-hero[data-hero-family="home"] .hero-emphasis { display: block; color: var(--green); }
 .commercial-hero[data-hero-family="home"] .hero-intro { color: var(--muted); font-size: var(--type-lead); line-height: var(--leading-lead); margin-top: 22px; max-width: 620px; }
 .commercial-hero[data-hero-family="home"] .hero-actions { margin-top: 24px; gap: 24px; }
-.commercial-hero[data-hero-family="home"] .hero-photo { width: 100%; max-width: 600px; aspect-ratio: 8 / 5; border-radius: var(--radius-card-lg); overflow: hidden; justify-self: end; background: var(--color-secondary); }
+.commercial-hero[data-hero-family="home"] .hero-photo { width: 100%; max-width: 600px; aspect-ratio: 8 / 5; border-radius: var(--radius-card-lg); overflow: hidden; justify-self: end; background: var(--color-lavender); }
 .commercial-hero[data-hero-family="home"] .hero-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .commercial-hero[data-hero-family="home"] .hero-copy .small-dot { display: none; }
 .commercial-hero[data-hero-family="home"] .hero-copy { min-width: 0; }
