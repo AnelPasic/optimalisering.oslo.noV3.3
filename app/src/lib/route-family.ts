@@ -9,7 +9,7 @@ export const compositionSchema=z.object({
     proofAfter:anchor.optional(),
     pricingBridge:z.object({after:anchor,href:z.literal('/priser/'),serviceName:z.string().trim().min(1)}).strict().optional(),
     sectionVisuals:z.array(z.object({section:anchor,visual:z.enum(['behov','kanaler'])}).strict()).default([]),
-    sectionSurfaces:z.array(z.object({section:anchor,surface:z.literal('dark')}).strict()).default([]),
+    sectionSurfaces:z.array(z.object({section:anchor,surface:z.literal('neutral')}).strict()).default([]),
   }).strict().optional(),
 }).strict();
 type Source={slug?:string;kind:string;composition?:unknown;proof?:unknown;sections:{id:string;links?:{href:string;label:string}[]}[]};
