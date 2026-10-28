@@ -118,16 +118,38 @@ components:
       values:
         - name: default
           label: Standard
+        - name: base-100
+          label: base-100
+        - name: base-200
+          label: base-200
+        - name: base-300
+          label: base-300
+        - name: primary
+          label: primary
+        - name: secondary
+          label: secondary
+        - name: accent
+          label: accent
+        - name: neutral
+          label: neutral
+        - name: info
+          label: info
+        - name: success
+          label: success
+        - name: warning
+          label: warning
+        - name: error
+          label: error
         - name: base
-          label: Hvit
+          label: Hvit (eldre valg)
         - name: soft
-          label: Lys
+          label: Lys (eldre valg)
         - name: mint
-          label: Mint
+          label: Mint (eldre valg)
         - name: lavender
-          label: Lavendel
+          label: Lavendel (eldre valg)
         - name: dark
-          label: Plomme
+          label: Plomme (eldre valg)
   contentLayoutChoice:
     type: select
     options:
