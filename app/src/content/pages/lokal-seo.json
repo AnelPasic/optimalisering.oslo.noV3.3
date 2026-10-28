@@ -141,6 +141,17 @@
     {
       "_block": "global",
       "element": "resultater"
+    },
+    {
+      "_block": "content",
+      "id": "lenkeankers",
+      "heading": "lenkeankers",
+      "items": [
+        {
+          "title": "Alt tittel",
+          "text": "da beskrivelse of tha beskrivelse"
+        }
+      ]
     }
   ],
   "faq": [
