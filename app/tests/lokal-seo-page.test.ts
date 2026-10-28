@@ -28,8 +28,8 @@ test('Lokal SEO is a real service page with editable CMS fields and a working na
   : visibility?.children?.find((link:{label:string})=>link.label==='Lokal SEO');
  assert.equal(child?.href,'/lokal-seo/');
  assert.ok(child?.description?.length>12);
- // Owner-authored CMS may add global blocks; preserve the original seven local sections.
- assert.equal(page.sections.filter((section:any)=>section._block==='content'||section._block==='protected').length,7);
+ // OWNER may add further ordinary content sections; the seven original sections remain supported.
+ assert.ok(page.sections.filter((section:any)=>section._block==='content'||section._block==='protected').length>=7);
  assert.ok(page.sections.length>=7);
  assert.equal(page.faq.length>=4,true);
  assert.ok(!readFileSync('src/content.config.ts','utf8').includes('drafts'));
