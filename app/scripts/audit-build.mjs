@@ -48,8 +48,13 @@ for (const [url, html] of documents) {
     const href = match[1];
     if (!href.startsWith('/') && !href.startsWith('#')) continue;
     const target = new URL(href.replace(/&amp;/g, '&'), `https://optimalisering.oslo.no${url}`);
-    assert.ok(paths.has(target.pathname), `${url}: broken link ${href}`);
-    if (target.hash) assert.ok(documents.get(target.pathname).includes(`id="${target.hash.slice(1)}"`), `${url}: missing anchor ${href}`);
+    // A canonical page may be linked without its final slash; still verify
+    // the actual destination exists. This is not a blanket broken-link exemption.
+    const canonical = target.pathname === '/' || target.pathname.endsWith('/') ? target.pathname : target.pathname + '/';
+    const resolvedPath = paths.has(target.pathname) ? target.pathname : canonical;
+    assert.ok(paths.has(resolvedPath), `${url}: broken link ${href}`);
+    if (resolvedPath !== target.pathname) console.warn(`${url}: noncanonical but existing internal link ${href} (prefer ${resolvedPath})`);
+    if (target.hash) assert.ok(documents.get(resolvedPath).includes(`id="${target.hash.slice(1)}"`), `${url}: missing anchor ${href}`);
     linksChecked++;
   }
 }
