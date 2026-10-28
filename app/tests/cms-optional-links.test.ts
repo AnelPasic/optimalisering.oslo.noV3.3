@@ -8,7 +8,7 @@ import {optionalInternalHref} from '../src/lib/optional-internal-href.ts';
 import {cmsJsonSave,entryForFile,localHomeFixture,resolveField} from './helpers/pages-cms-json.ts';
 
 const cms = YAML.parse(readFileSync('../.pages.yml','utf8'));
-const shared = {_block:'content',uid:'08b801c0-d028-4c9d-8810-76065fd244d0',id:'cms-empty-link',name:'Test',heading:'Test',body:[],items:[{title:'Kort',text:'Uten URL',surface:'default',boxVariant:'card'}]};
+const shared: any = {_block:'content',uid:'08b801c0-d028-4c9d-8810-76065fd244d0',id:'cms-empty-link',name:'Test',heading:'Test',body:[],items:[{title:'Kort',text:'Uten URL',surface:'default',boxVariant:'card'}]};
 const section = (page:any) => page.sections.find((row:any)=>row.id==='cms-local-fixture');
 
 test('pilot optional link: missing, empty, and whitespace are linkless for local + global',()=>{
@@ -21,15 +21,15 @@ test('pilot optional link: missing, empty, and whitespace are linkless for local
   const global=structuredClone(shared);
   if(value!==undefined)global.items[0].href=value;
   const parsed=sharedContentSchema.parse(global);
-  assert.equal(parsed.items[0].href,undefined);
-  assert.ok(!Object.hasOwn(parsed.items[0],'href'));
+  assert.equal(parsed.items![0].href,undefined);
+  assert.ok(!Object.hasOwn(parsed.items![0],'href'));
  }
 });
 test('nonempty optional href is still internal-only and survives on both paths',()=>{
  for(const value of ['/om/','/priser/#vilkar']){
   const local=localHomeFixture();section(local).items[0].href=value;
   const parsed=section(pageSchema.parse(local));
-  assert.equal(parsed.items[0].href,value);
+  assert.equal(parsed.items![0].href,value);
   const global=structuredClone(shared);global.items[0].href=value;
   assert.equal(sharedContentSchema.parse(global).items[0].href,value);
  }
