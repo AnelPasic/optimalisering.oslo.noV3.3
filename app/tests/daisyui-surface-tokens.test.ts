@@ -45,7 +45,7 @@ test('OSLO section full-bleed, only inner cards/text are constrained',()=>{
   assert.ok(source.indexOf('data-surface={surfaceAttribute(section.surface',i)>i);
  }
  const shared=readFileSync('src/styles/shared.css','utf8');
- assert.match(shared,/\\.shell\\s*\\{\\s*width:\\s*min\\(1200px/);
+ assert.ok(shared.includes('.shell { width: min(1200px, calc(100% - 96px))'));
  const css=readFileSync('src/styles/surfaces.css','utf8');
  for(const color of semantic) {
   assert.ok(css.includes(`[data-surface="${color}"]`),color);
