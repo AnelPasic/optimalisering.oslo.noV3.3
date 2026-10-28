@@ -59,5 +59,5 @@ test('CMS Center/Left save and restore preserve unrelated section, card, surface
 test('protected heading alignment does not grant surface overrides',()=>{
   const service=load('synlighet'),section=sectionRecords(service).find((s:any)=>s._block==='protected');section.headingAlign='left';
   assert.equal(pageSchema.safeParse(service).success,true);
-  section.surface='mint';assert.equal(pageSchema.safeParse(service).success,false);
+  section.surface='accent';assert.equal(pageSchema.safeParse(service).success,false);
 });

@@ -1,17 +1,17 @@
 /* H-023B: component-owned home composition; palette and primitives belong to app.css/daisyUI. */
 @layer composition {
 
-.invite-home .need-section { background: var(--surface-base); padding-block: 64px 88px; }
-.invite-home .need-card { display: flex; flex-direction: column; padding: var(--panel-pad-lg); background: var(--surface-mint); text-decoration: none; border: 1px solid transparent; transition: border-color .15s; }
+.invite-home .need-section { background: var(--color-base-100); padding-block: 64px 88px; }
+.invite-home .need-card { display: flex; flex-direction: column; padding: var(--panel-pad-lg); background: var(--color-accent); color: var(--color-accent-content); text-decoration: none; border: 1px solid transparent; transition: border-color .15s; }
 .invite-home .need-card:hover { border-color: var(--green); }
-.invite-home .need-card-1 { background: var(--surface-lavender); }
-.invite-home .need-card-2 { background: var(--surface-dark); color: var(--color-mint); }
+.invite-home .need-card-1 { background: var(--color-secondary); color: var(--color-secondary-content); }
+.invite-home .need-card-2 { background: var(--color-neutral); color: var(--color-neutral-content); }
 .invite-home .home-card-top { display: flex; justify-content: space-between; align-items: center; gap: var(--gap-sm); margin-bottom: 26px; }
 .invite-home .home-card-top .home-symbol { width: 34px; height: 34px; flex-shrink: 0; }
 .invite-home .discipline { font-size: var(--type-body); font-weight: var(--weight-label); line-height: var(--leading-body); }
 .invite-home .need-card h3 { font-size: var(--type-h3); line-height: var(--leading-h3); max-width: 390px; }
 .invite-home .need-card p { margin-top: 18px; margin-bottom: 20px; font-size: var(--type-body); line-height: var(--leading-body); color: var(--muted); overflow-wrap: break-word; }
-.invite-home .need-card-2 p { color: inherit; }
+.invite-home :is(.need-card-1,.need-card-2) p { color: inherit; }
 .invite-home .need-card .text-link { margin-top: auto; }
 .invite-home .item-number { color: var(--green); display: block; font-size: var(--type-label); font-family: var(--body); margin-bottom: 20px; line-height: var(--leading-small); }
 .invite-home .section-links { margin-top: 24px; }

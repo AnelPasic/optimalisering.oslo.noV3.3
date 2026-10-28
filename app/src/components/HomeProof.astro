@@ -57,8 +57,8 @@ const visual = primary ? undefined : resolveFeaturedProofVisual(content.featured
 <style>
   .proof-section { background: #f7f6ef; }
   .proof-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gap); }
-  .proof-card { min-width: 0; padding: var(--panel-pad-feature); border-radius: var(--radius-card-lg); background: var(--surface-mint); color: #173d39; }
-  .proof-primary .proof-featured { grid-column: 1 / -1; background: var(--surface-dark); color: #fff9ec; }
+  .proof-card { min-width: 0; padding: var(--panel-pad-feature); border-radius: var(--radius-card-lg); background: var(--color-accent); color: var(--color-accent-content); }
+  .proof-primary .proof-featured { grid-column: 1 / -1; background: var(--color-neutral); color: var(--color-neutral-content); }
   .proof-primary { grid-template-columns: minmax(0, 1fr); }
   .proof-primary h3 { margin: 0 0 12px; font-size: var(--type-h3); line-height: var(--leading-h3); }
   .proof-metric { margin: 0; font-weight: var(--weight-heading); }
