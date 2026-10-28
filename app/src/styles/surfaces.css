@@ -34,18 +34,9 @@
   --focus-gap: 3px;
 }
 
-/* Resolve palette aliases in their own context, rather than inheriting an
-   alias already computed against the root's legacy palette. The existing
-   Invite body and dark service section override --paper/--cream/--line. */
+/* Standard dividers follow the active theme. */
 :root, body, .invite-service .home-section-sammenheng {
   --border-subtle: 1px solid var(--line);
-}
-
-/* Capture the page's light palette before a section/card selects a dark one. */
-:root, body {
-  --surface-light-ink: var(--ink);
-  --surface-light-muted: var(--muted);
-  --surface-light-line: var(--line);
 }
 
 /* Semantic daisyUI CMS backgrounds. The outer section paints full-bleed;
@@ -61,9 +52,7 @@
   border: 1px solid color-mix(in srgb, currentColor 20%, transparent);
 }
 
-/* DaisyUI v5 theme-aware surfaces: full-bleed section, constrained .shell content.
-   Existing legacy choices retain their original paint and are intentionally untouched.
-   Explicit token attributes are shared by home/service and plain cards. */
+/* Theme-aware colors for ordinary sections and boxes; no legacy palette aliases. */
 :root .content-section[data-surface="base-100"],
 :root .content-section .info-item[data-surface="base-100"] {
   background: var(--color-base-100);

@@ -20,7 +20,7 @@ test('one Pages CMS surface picker for both section and box, without legacy alia
  assert.deepEqual(sectionSurface.options.values,boxSurface.options.values);
  for(const value of values){assert.equal(surfaceSchema.parse(value),value);assert.equal(surfaceAttribute(value),value==='default'?undefined:value);}
  assert.equal(surfaceAttribute('primary',true),undefined,'protected rows may not be recolored');
- assert.equal(surfaceSchema.safeParse('mint').success,false);
+ for(const old of ['base','soft','mint','lavender','dark'])assert.equal(surfaceSchema.safeParse(old).success,false,old);
 });
 test('all new daisyUI tokens roundtrip locally and globally without changing owner data',()=>{
  const entry=entryForFile(cms,'app/src/content/pages/home.json');
