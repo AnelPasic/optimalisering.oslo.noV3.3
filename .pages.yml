@@ -158,8 +158,9 @@ components:
       - name: id
         label: Seksjonens lenkeanker
         type: string
-        readonly: true
         required: true
+        pattern: ^[a-z0-9]+(?:-[a-z0-9]+)*$
+        description: Unikt anker på denne siden, for eksempel testing-links. Bruk små bokstaver og bindestrek. Eksisterende ankre bør ikke endres uten å oppdatere interne lenker.
       - &serviceEyebrow
         name: eyebrow
         label: Overtekst
