@@ -1,6 +1,7 @@
 import { z } from 'astro/zod';
 import { surfaceSchema } from './surface.ts';
 import { homeSectionDataSchema } from './home-section-data.ts';
+import {optionalInternalHref} from './optional-internal-href.ts';
 import { siteChrome } from './site-chrome-data.ts';
 import { headingAlignSchema } from './heading-alignment.ts';
 import {contentLayoutSchema,boxVariantSchema} from './content-presentation.ts';
@@ -42,7 +43,7 @@ export const homepageBlockSchema=z.discriminatedUnion('_block',[
  singleton('faq','sporsmal',z.object({eyebrow:z.string(),heading:z.string(),items:z.array(z.object({question:z.string(),answer:z.string()}))}).strict()),
  z.object({_block:z.literal('pageList'),id:z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),name:z.string().optional(),visibility:sectionVisibilitySchema,eyebrow:z.string().optional(),heading:z.string().trim().min(1),body:z.array(z.string()).default([]),headingAlign:headingAlignSchema,surface:surfaceSchema,layout:contentLayoutSchema.optional(),pageList:pageListSchema}).strict(),
  z.object({...identity,_block:z.literal('content'),eyebrow:z.string().optional(),heading:z.string().trim().min(1),body:z.array(z.string()).default([]),surface:surfaceSchema,headingAlign:headingAlignSchema,layout:contentLayoutSchema,
- items:z.array(z.object({title:z.string(),text:z.string(),href:z.string().startsWith('/').optional(),label:z.string().optional(),surface:surfaceSchema,boxVariant:boxVariantSchema})).optional(),links:z.array(link).optional()}).strict(),
+ items:z.array(z.object({title:z.string(),text:z.string(),href:optionalInternalHref,label:z.string().optional(),surface:surfaceSchema,boxVariant:boxVariantSchema})).optional(),links:z.array(link).optional()}).strict(),
 ]);
 export const homepageBlocksSchema=z.array(homepageBlockSchema).max(56).superRefine((blocks,ctx)=>{
  for(const id of homepageCoreIds){const core=blocks.find(b=>b.id===id);if(core&&(!('uid' in core)||core.uid!==coreUids[id]))ctx.addIssue({code:'custom',message:'Protected master UUID: '+id});}
