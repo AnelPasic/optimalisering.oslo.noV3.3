@@ -56,52 +56,17 @@
   --surface-light-line: var(--line);
 }
 
-/* H-019: approved color overrides only, scoped to the ordinary renderers.
-   Specificity deliberately wins over later Invite automatic paints. */
-:root :is(.content-section[data-surface], .content-section .info-item[data-surface]) {
-  color: var(--ink);
-  border-color: var(--line);
-  --border-subtle: 1px solid var(--line);
-}
-:root :is(.content-section[data-surface="base"], .content-section .info-item[data-surface="base"]) { background: var(--surface-base); }
-:root :is(.content-section[data-surface="soft"], .content-section .info-item[data-surface="soft"]) { background: var(--surface-soft); }
-:root :is(.content-section[data-surface="mint"], .content-section .info-item[data-surface="mint"]) { background: var(--surface-mint); }
-:root :is(.content-section[data-surface="lavender"], .content-section .info-item[data-surface="lavender"]) { background: var(--surface-lavender); }
-:root :is(.content-section[data-surface="dark"], .content-section .info-item[data-surface="dark"]) {
-  background: var(--surface-dark);
-  --ink: var(--surface-base);
-  --muted: var(--surface-dark-muted);
-  --green: var(--surface-mint-strong);
-  --line: var(--surface-dark-line);
-}
-:root :is(.content-section:is([data-surface="base"],[data-surface="soft"],[data-surface="mint"],[data-surface="lavender"]), .content-section .info-item:is([data-surface="base"],[data-surface="soft"],[data-surface="mint"],[data-surface="lavender"])),
-:root .content-section[data-surface] .section-items:not(.process-items) :is(.item-apricot,.item-sage):not([data-surface]),
-:root .invite-service .home-section-behov[data-surface] .info-item:not([data-surface]) {
-  --ink: var(--surface-light-ink);
-  --muted: var(--surface-light-muted);
-  --green: var(--surface-light-ink);
-  --line: var(--surface-light-line);
-  --border-subtle: 1px solid var(--line);
-  color: var(--ink);
-  border-color: var(--line);
-}
+/* Semantic daisyUI CMS backgrounds. The outer section paints full-bleed;
+   the inner .shell remains constrained. */
 :root .content-section[data-surface] .section-heading .eyebrow,
 :root .content-section[data-surface] .text-link,
-:root .content-section .info-item[data-surface] .text-link { color: var(--green); }
+:root .content-section .info-item[data-surface] .text-link { color: var(--ink); }
 :root .content-section[data-surface] .info-item p,
 :root .content-section .info-item[data-surface] p { color: var(--muted); }
 :root .content-section[data-surface] .item-number,
 :root .content-section .info-item[data-surface] .item-number { color: var(--ink); border-color: var(--line); }
-
-
-/* H-019 follow-up: keep explicitly same-colored child cards visually distinct
-   from their parent section without changing the selected surface. */
-:root .content-section[data-surface="base"] :is(.info-item,[data-content-card])[data-surface="base"],
-:root .content-section[data-surface="soft"] :is(.info-item,[data-content-card])[data-surface="soft"],
-:root .content-section[data-surface="mint"] :is(.info-item,[data-content-card])[data-surface="mint"],
-:root .content-section[data-surface="lavender"] :is(.info-item,[data-content-card])[data-surface="lavender"],
-:root .content-section[data-surface="dark"] :is(.info-item,[data-content-card])[data-surface="dark"] {
-  border: var(--border-subtle);
+:root .content-section[data-surface] :is(.info-item,[data-content-card])[data-surface] {
+  border: 1px solid color-mix(in srgb, currentColor 20%, transparent);
 }
 
 /* DaisyUI v5 theme-aware surfaces: full-bleed section, constrained .shell content.
