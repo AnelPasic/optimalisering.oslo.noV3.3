@@ -4,27 +4,26 @@ import {readFileSync} from 'node:fs';
 
 const read = (path: string) => readFileSync(new URL('../'+path,import.meta.url),'utf8');
 
-test('OWNER matchmap batch 1 uses only dark→secondary and lavender→info',()=>{
- for(const path of ['src/styles/surfaces.css','src/styles/project.css']){
+test('OWNER batch 1: dark→secondary and lavender→info in both live scopes and cards',()=>{
+ for (const path of ['src/styles/surfaces.css','src/styles/project.css']) {
   const css=read(path);
-  assert.match(css,/--surface-dark:\\s*var\\(--color-secondary\\);/);
-  assert.match(css,/--surface-lavender:\\s*var\\(--color-info\\);/);
+  assert.ok(css.includes('--surface-dark: var(--color-secondary);'),path+' dark');
+  assert.ok(css.includes('--surface-lavender: var(--color-info);'),path+' lavender');
  }
  const card=read('src/components/ContentCard.astro');
- assert.match(card,/dark:'bg-secondary text-secondary-content'/);
- assert.match(card,/lavender:'bg-info text-info-content'/);
- const root=read('src/styles/app.css');
- assert.match(root,/--color-secondary:\\s*oklch\\(/);
- assert.match(root,/--color-info:\\s*oklch\\(/);
+ assert.ok(card.includes("dark:'bg-secondary text-secondary-content'"));
+ assert.ok(card.includes("lavender:'bg-info text-info-content'"));
+ const theme=read('src/styles/app.css');
+ assert.ok(theme.includes('--color-secondary: oklch('));
+ assert.ok(theme.includes('--color-info: oklch('));
 });
 
-test('existing CMS choices and stored surface values remain unchanged for visual review',()=>{
+test('pilot CMS and current stored sections remain on legacy names until visual approval',()=>{
  const cms=read('../.pages.yml');
- assert.match(cms,/name: lavender/);
- assert.match(cms,/name: dark/);
- const schema=read('src/lib/surface.ts');
- assert.match(schema,/'mint', 'lavender', 'dark'/);
- const sections=read('src/styles/surfaces.css');
- assert.match(sections,/data-surface="lavender"\\]\\) \\{ background: var\\(--surface-lavender\\);/);
- assert.match(sections,/data-surface="dark"\\]\\) \\{/);
+ assert.ok(cms.includes('name: lavender'));
+ assert.ok(cms.includes('name: dark'));
+ assert.ok(read('src/lib/surface.ts').includes("'mint', 'lavender', 'dark'"));
+ const css=read('src/styles/surfaces.css');
+ assert.ok(css.includes('background: var(--surface-lavender);'));
+ assert.ok(css.includes('background: var(--surface-dark);'));
 });
