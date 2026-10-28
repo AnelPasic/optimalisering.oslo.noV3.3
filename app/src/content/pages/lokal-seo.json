@@ -149,7 +149,8 @@
       "items": [
         {
           "title": "Alt tittel",
-          "text": "da beskrivelse of tha beskrivelse"
+          "text": "da beskrivelse of tha beskrivelse",
+          "href": "/priser"
         }
       ]
     }
