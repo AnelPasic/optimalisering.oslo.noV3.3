@@ -31,7 +31,7 @@ test('nonempty optional href is still internal-only and survives on both paths',
   const parsed=section(pageSchema.parse(local));
   assert.equal(parsed.items![0].href,value);
   const global=structuredClone(shared);global.items[0].href=value;
-  assert.equal(sharedContentSchema.parse(global).items[0].href,value);
+  assert.equal(sharedContentSchema.parse(global).items![0].href,value);
  }
  for(const invalid of ['etablert','//other-host','https://elsewhere.test']){
   if(invalid==='//other-host')continue; // pilot legacy guard only checks leading '/'
