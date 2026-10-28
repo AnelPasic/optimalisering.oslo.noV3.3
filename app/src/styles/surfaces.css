@@ -9,17 +9,11 @@
   --radius-card-lg: var(--radius-feature);
   --radius-pill: 999px;
 
-  --surface-mint: var(--color-mint);
-  --surface-lavender: var(--color-lavender);
-  --surface-dark: var(--color-secondary);
-  --surface-mint-strong: var(--color-accent);
   --surface-cta: var(--color-cta);
   --surface-notice: var(--color-warning);
-  --surface-dark-muted: var(--color-dark-muted);
-  --surface-dark-line: var(--color-dark-line);
   --border-control: 1px solid var(--color-control-line);
-  --border-dark: 1px solid var(--surface-dark-line);
-  --border-featured: 2px solid var(--surface-dark);
+  --border-dark: 1px solid var(--color-base-300);
+  --border-featured: 2px solid var(--color-neutral);
   --shadow-soft: 0 8px 24px #320c4314;
 
   --panel-pad-xs: 12px;
@@ -44,8 +38,6 @@
    alias already computed against the root's legacy palette. The existing
    Invite body and dark service section override --paper/--cream/--line. */
 :root, body, .invite-service .home-section-sammenheng {
-  --surface-base: var(--paper);
-  --surface-soft: var(--cream);
   --border-subtle: 1px solid var(--line);
 }
 

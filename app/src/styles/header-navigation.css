@@ -8,7 +8,7 @@
  .site-header .nav-disclosure { display: inline-flex; flex: 0 0 44px; width: 44px; min-width: 44px; min-height: 44px; height: 44px; padding: 12px; border: 0; }
  .nav-disclosure .arrow-icon { width: 18px; height: 18px; transform: rotate(90deg); }
  .nav-disclosure[aria-expanded="true"] .arrow-icon { transform: rotate(-90deg); }
- /* Storebrand-style understated pill: existing Oslo lavender, no layout shift. */
+ /* Storebrand-style understated pill: theme accent, no layout shift. */
  @media (min-width: 901px) {
   /* Match the Storebrand navigation rhythm using Oslo's existing Figtree font. */
   .site-shell .site-header .desktop-nav > ul.menu {
@@ -25,13 +25,13 @@
   }
   @media (hover: hover) and (pointer: fine) {
    .site-shell .site-header .desktop-nav .header-nav-item > .header-nav-parent:hover {
-    background: color-mix(in srgb, var(--surface-lavender) 70%, var(--surface-soft));
+    background: color-mix(in srgb, var(--color-accent) 70%, var(--color-base-200));
    }
   }
   .site-shell .site-header .desktop-nav .header-nav-item > .header-nav-parent:is(:focus-within, :has(> a[aria-current="page"])),
   .site-shell .site-header .desktop-nav .header-nav-item[data-active-parent] > .header-nav-parent,
   .site-shell .site-header .desktop-nav .header-nav-item[data-nav-open] > .header-nav-parent {
-   background: var(--surface-lavender);
+   background: var(--color-accent);
   }
   .site-shell .site-header .desktop-nav .header-nav-parent > a:is(:hover, [aria-current="page"]) {
    text-decoration: none;
@@ -74,7 +74,7 @@
  .site-shell .site-header .header-mega-menu[hidden] { display: none !important; }
  .site-shell .site-header .header-mega-menu {
   position: absolute; top: 100%; left: 0; right: 0; z-index: 60;
-  padding: 34px 0 44px; background: var(--surface-base);
+  padding: 34px 0 44px; background: var(--color-base-100);
   border-bottom: var(--border-subtle);
   box-shadow: 0 25px 40px color-mix(in srgb, var(--ink) 12%, transparent);
   color: var(--ink);
@@ -104,7 +104,7 @@
   border: 0; font-size: var(--type-label); line-height: var(--leading-small);
  }
  .site-shell .site-header .header-mega-links.menu a:is(:hover,:focus-visible) {
-  background: var(--surface-soft); color: var(--ink);
+  background: var(--color-base-200); color: var(--ink);
  }
  .site-shell .site-header .header-mega-links .header-submenu-description {
   color: var(--muted); font-size: var(--type-label); line-height: var(--leading-small);
@@ -112,7 +112,7 @@
  .site-shell .site-header .header-mega-promo {
   display: flex; flex-direction: column; align-items: flex-start;
   padding: clamp(24px, 2.6vw, 38px); min-height: 270px;
-  background: var(--surface-dark); color: var(--color-secondary-content);
+  background: var(--color-neutral); color: var(--color-secondary-content);
   border-radius: var(--radius-box);
  }
  .site-shell .site-header .header-mega-promo h2 {
@@ -129,7 +129,7 @@
   font-size: var(--type-button-sm); white-space: normal;
  }
  .site-shell .site-header [data-nav-open] > .header-nav-parent {
-  background: var(--surface-lavender); border-radius: var(--radius-field);
+  background: var(--color-accent); border-radius: var(--radius-field);
  }
  @media (max-width: 1100px) and (min-width: 901px) {
   .site-shell .site-header .header-mega-inner.shell { gap: 18px; }
@@ -139,7 +139,7 @@
  @media (max-width: 900px) {
   .site-shell .site-header .header-mega-menu {
    position: static; inset: auto; width: 100%; padding: 14px 10px 22px;
-   box-shadow: none; border: 0; background: var(--surface-base);
+   box-shadow: none; border: 0; background: var(--color-base-100);
   }
   .site-shell .site-header .header-mega-inner.shell {
    width: 100%; display: flex; flex-direction: column; gap: 22px;
@@ -162,7 +162,7 @@
   gap: 2px; padding: 3px;
   border: 1px solid var(--color-base-300);
   border-radius: var(--radius-field);
-  background: var(--surface-base);
+  background: var(--color-base-100);
   font-family: var(--body);
   line-height: 1;
  }
@@ -182,7 +182,7 @@
   opacity: .6; cursor: default; user-select: none;
  }
  .site-shell .site-header .language-switch a.language-switch__choice:hover {
-  background: var(--surface-lavender);
+  background: var(--color-accent);
  }
  .site-shell .site-header .language-switch--mobile { display: none; }
  @media (max-width: 900px) {
@@ -208,7 +208,7 @@
   --pf-background: transparent;
   --pf-border: transparent;
   --pf-border-focus: var(--color-focus);
-  --pf-hover: var(--surface-lavender);
+  --pf-hover: var(--color-accent);
   --pf-outline-focus: var(--color-focus);
   --pf-font: var(--body);
  }
@@ -217,12 +217,12 @@
   --pf-text: var(--ink);
   --pf-text-secondary: var(--muted);
   --pf-text-muted: var(--muted);
-  --pf-background: var(--surface-base);
+  --pf-background: var(--color-base-100);
   --pf-border: var(--color-base-300);
   --pf-border-focus: var(--color-focus);
-  --pf-hover: var(--surface-lavender);
+  --pf-hover: var(--color-accent);
   --pf-outline-focus: var(--color-focus);
-  --pf-mark: var(--color-secondary);
+  --pf-mark: var(--color-accent);
   --pf-font: var(--body);
   --pf-modal-max-width: 680px;
   --pf-border-radius: var(--radius-field);
@@ -252,7 +252,7 @@
    Both title and description remain legible on active/focused/hovered items. */
 @layer project {
  .site-shell .site-header :is(.header-mega-links, .header-submenu).menu > li > a:is(:hover, :focus-visible, :active, [aria-current="page"]) {
-  background: var(--color-secondary);
+  background: var(--color-accent);
   color: var(--color-secondary-content);
  }
  .site-shell .site-header :is(.header-mega-links, .header-submenu).menu > li > a:is(:hover, :focus-visible, :active, [aria-current="page"]) :is(.header-submenu-label, .header-submenu-description) {
@@ -287,8 +287,6 @@
 
 /* Older client-only palette aliases not exported by the 20 standard daisyUI tokens. */
 html[data-mws-theme-mode="dark"] {
- --color-mint: oklch(31% 0.035 189);
- --color-lavender: oklch(30% 0.045 312);
  --color-muted: oklch(76% 0.025 310);
  --color-cta: oklch(31% 0.03 172);
  --color-dark-muted: oklch(82% 0.018 310);
