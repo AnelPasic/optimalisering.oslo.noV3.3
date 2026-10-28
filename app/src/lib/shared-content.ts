@@ -4,6 +4,7 @@ import {resolve,basename} from 'node:path';
 import {surfaceSchema} from './surface.ts';
 import {headingAlignSchema} from './heading-alignment.ts';
 import {contentLayoutSchema,boxVariantSchema} from './content-presentation.ts';
+import {optionalInternalHref} from './optional-internal-href.ts';
 // Keep the shared library independent of home-builder to avoid circular imports.
 const sectionVisibilitySchema=z.preprocess(value=>value==null||value===''?undefined:value,z.literal('hidden').optional());
 
@@ -14,7 +15,7 @@ export const sharedContentSchema=z.object({
  _block:z.literal('content'),uid:z.string().uuid(),id:key,name:z.string().trim().min(1),
  eyebrow:z.string().optional(),heading:z.string().trim().min(1),body:z.array(z.string()).default([]),
  headingAlign:headingAlignSchema,layout:contentLayoutSchema,surface:surfaceSchema,
- items:z.array(z.object({title:z.string(),text:z.string(),href:z.string().startsWith('/').optional(),label:z.string().optional(),surface:surfaceSchema,boxVariant:boxVariantSchema})).optional(),
+ items:z.array(z.object({title:z.string(),text:z.string(),href:optionalInternalHref,label:z.string().optional(),surface:surfaceSchema,boxVariant:boxVariantSchema})).optional(),
  links:z.array(z.object({label:z.string(),href:z.string().startsWith('/')})).optional(),
 }).strict().superRefine((section,ctx)=>{
  if(reserved.has(section.id)||/^(?:calc-|scenario-|package-home-|term-|header-(?:desktop|mobile)-submenu-)/.test(section.id))

@@ -210,7 +210,7 @@ components:
           - name: href
             label: Intern lenke
             type: string
-            pattern: ^(/.*)?$
+            pattern: '^(\s*|/.*)$'
           - name: label
             label: Lenketekst
             type: string
@@ -548,7 +548,7 @@ components:
           - name: href
             label: Intern lenke
             type: string
-            pattern: ^(/.*)?$
+            pattern: '^(\s*|/.*)$'
           - name: label
             label: Lenketekst
             type: string
@@ -598,7 +598,7 @@ components:
           - name: href
             label: Intern lenke
             type: string
-            pattern: ^(/.*)?$
+            pattern: '^(\s*|/.*)$'
           - name: label
             label: Lenketekst
             type: string
@@ -1006,7 +1006,7 @@ content:
                   - name: href
                     label: Intern lenke
                     type: string
-                    pattern: ^(/.*)?$
+                    pattern: '^(\s*|/.*)$'
                   - name: label
                     label: Lenketekst
                     type: string
@@ -2554,7 +2554,7 @@ content:
                       - name: href
                         label: Intern lenke
                         type: string
-                        pattern: ^(/.*)?$
+                        pattern: '^(\s*|/.*)$'
                       - name: label
                         label: Lenketekst
                         type: string
@@ -3274,7 +3274,7 @@ content:
               - name: href
                 label: Intern lenke
                 type: string
-                pattern: ^(/.*)?$
+                pattern: '^(\s*|/.*)$'
               - name: label
                 label: Lenketekst
                 type: string
@@ -3370,7 +3370,7 @@ content:
               - name: href
                 label: Intern lenke
                 type: string
-                pattern: ^(/.*)?$
+                pattern: '^(\s*|/.*)$'
               - name: label
                 label: Lenketekst
                 type: string

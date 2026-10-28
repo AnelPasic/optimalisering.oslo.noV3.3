@@ -10,6 +10,7 @@ import { heroSchema, resolveHomepageSections, sectionVisibilitySchema, validateH
 import {heroPresentationSchema} from './hero-presentation.ts';
 import { validateSynlighetSections, resolveSynlighetSections, resolvePageSections, serviceGlobalIds } from './service-sections.ts';
 import {synlighetHeroSchema,legacyHeroKeys} from './synlighet-hero.ts';
+import {optionalInternalHref} from './optional-internal-href.ts';
 
 const link = z.object({label:z.string(),href:z.string().startsWith('/')});
 export { proofSlotSchema } from './home-section-data.ts';
@@ -73,7 +74,7 @@ export const pageSchema = z.preprocess((input,context)=>{
       headingAlign: headingAlignSchema,
       layout: contentLayoutSchema,
       id: z.string(), eyebrow: z.string().optional(), heading: z.string(), body: z.array(z.string()).default([]),
-      items: z.array(z.object({ title: z.string(), text: z.string(), href: z.string().startsWith('/').optional(), label: z.string().optional(), surface: surfaceSchema, boxVariant: boxVariantSchema })).optional(),
+      items: z.array(z.object({ title: z.string(), text: z.string(), href: optionalInternalHref, label: z.string().optional(), surface: surfaceSchema, boxVariant: boxVariantSchema })).optional(),
       links: z.array(link).optional(),
     })),
     faq: z.array(z.object({ question: z.string(), answer: z.string() })).default([]),
