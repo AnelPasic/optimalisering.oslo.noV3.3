@@ -1,7 +1,7 @@
 /* H-023B: component-owned calculator composition; palette and primitives belong to app.css/daisyUI. */
 @layer composition {
 
-.invite-home .leverage-section { background: var(--color-neutral); color: var(--color-base-100); }
+.invite-home .leverage-section { background: var(--color-neutral); color: var(--color-neutral-content); }
 .invite-home .leverage-grid { grid-template-columns: .9fr 1.1fr; gap: 96px; align-items: center; }
 .invite-home .leverage-copy .eyebrow { color: var(--color-accent); }
 .invite-home .leverage-copy .body-copy { color: var(--color-dark-muted); margin-top: 28px; }

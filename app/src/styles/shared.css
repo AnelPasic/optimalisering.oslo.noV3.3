@@ -414,8 +414,8 @@ p { text-wrap: pretty; }
 .site-shell :focus-visible { outline-color: var(--color-focus); }
 .faq-section { background: var(--color-base-100); }
 .faq-grid { grid-template-columns: .8fr 1.2fr; gap: 96px; }
-.site-shell .site-footer { background: var(--color-neutral); color: var(--color-base-100); padding-top: 88px; }
-.site-shell .footer-brand { color: var(--color-base-100); }
+.site-shell .site-footer { background: var(--color-neutral); color: var(--color-neutral-content); padding-top: 88px; }
+.site-shell .footer-brand { color: var(--color-neutral-content); }
 .site-shell .footer-brand span { color: var(--color-footer-accent); }
 .site-shell .footer-grid p, .site-shell .footer-bottom { color: var(--color-footer-muted); }
 .site-shell .footer-grid nav a:hover { color: var(--color-accent); }
