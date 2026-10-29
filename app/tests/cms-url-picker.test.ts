@@ -42,7 +42,7 @@ test('URL suggestions are canonical, generated and in sync',()=>{
  assert.equal(run.status,0,run.stderr||run.stdout);
  const yaml=readFileSync(new URL('../../.pages.yml',import.meta.url),'utf8');
  assert.match(yaml,/name: suggestedHref\n\s+label: Velg side eller snarvei\n\s+component: cmsSuggestedHref/);
- assert.match(yaml,/name: href\n\s+label: Eller skriv URL manuelt/);
+ assert.match(yaml,/name: href\n\s+label: Manuell URL \(beholdes som reserve\)/);
 });
 
 test('CMS keeps manual fallback whenever a suggested link is selected',()=>{
