@@ -2088,7 +2088,7 @@ content:
               - name: cssVariables
                 label: CSS-variabler (avansert)
                 type: text
-                description: "Kun godkjente eksisterende Tailwind v4-tokens i én :root { --text-5xl: clamp(1.75rem, 4.5vw, 3.25rem); }-blokk. Ingen eksterne fonter, CSS-selectorer eller @import."
+                description: "Skriv én godkjent Tailwind v4-variabel per linje, f.eks. --text-5xl: clamp(1.75rem, 4.5vw, 3.25rem); Du kan også bruke :root { ... }. Ingen eksterne fonter, CSS-selectorer eller @import."
           - name: themes
             label: Tema og utseende (daisyUI)
             type: object

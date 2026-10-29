@@ -37,18 +37,22 @@ function validate(key: string, value: string): void {
   } else throw new Error('Ukjent typografiverdi: ' + key);
 }
 
-/** Exactly one parsed :root rule, no at-rules, selectors, comments or injections. */
+/** Only declarations of approved tokens, optionally wrapped in one :root rule.
+ * Pages CMS textarea users can paste --text-*: value; lines directly.
+ * Never embed unvalidated input: we always parse PostCSS nodes and reserialize values.
+ */
 export function parseTypographyVariables(input: string): Record<string, string> {
   if (!input.trim()) return {};
   if (input.length > 4000) throw new Error('Maks 4000 tegn i avanserte typografivariabler.');
   let ast: ReturnType<typeof postcss.parse>;
   try { ast = postcss.parse(input, { from: undefined }); }
-  catch { throw new Error('Ugyldig CSS-syntaks. Bruk én :root { --text-...: verdi; }-blokk.'); }
-  if (ast.nodes.length !== 1 || ast.nodes[0]?.type !== 'rule' || ast.nodes[0].selector !== ':root')
-    throw new Error('Kun én :root-blokk med Tailwind-variabler er tillatt.');
-  const rule = ast.nodes[0];
+  catch { throw new Error('Ugyldig CSS-syntaks. Bruk --text-5xl: 3rem; eller én :root { ... }-blokk.'); }
+  // A single optional :root wrapper is supported for existing pasted examples.
+  // Otherwise every top-level node must be an approved declaration; no selectors or at-rules.
+  const wrapped = ast.nodes.length === 1 && ast.nodes[0]?.type === 'rule' && ast.nodes[0].selector === ':root';
+  const nodes = wrapped ? (ast.nodes[0] as postcss.Rule).nodes : ast.nodes;
   const entries: Record<string, string> = {};
-  for (const node of rule.nodes ?? []) {
+  for (const node of nodes) {
     if (node.type !== 'decl' || node.important) throw new Error('Kun variabeldeklarasjoner uten !important er tillatt.');
     const key = node.prop.trim();
     const value = node.value.trim();
