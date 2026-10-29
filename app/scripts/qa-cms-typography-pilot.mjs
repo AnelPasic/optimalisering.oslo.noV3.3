@@ -70,7 +70,7 @@ try{
   // These selectors previously repeated identical font-size/line-height declarations per component.
   for(const sample of [
    {path:'/',selector:'.invite-home .need-card h3',role:'h3'},
-   {path:'/synlighet/',selector:'.invite-service .service-package h3',role:'h3'},
+   {path:'/konvertering/',selector:'.invite-service .service-package h3',role:'h3'},
    {path:'/begreper/',selector:'.glossary-group h2',role:'h2'}
   ]){
    const response=await page.goto(origin+sample.path,{waitUntil:'networkidle'});
