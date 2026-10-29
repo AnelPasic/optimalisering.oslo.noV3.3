@@ -16,7 +16,7 @@ try{for(const key of ['two','three','four-numbered','plain','automatic']){
  if(process.env.QA_CASE&&key!==process.env.QA_CASE)continue;
  const home=structuredClone(baseHome),inner=structuredClone(baseInner),selected=!['plain','automatic'].includes(key),four=key==='four-numbered',count=four?4:key==='three'?3:2,parent=key==='three'?'dark':'lavender';
  const target=home.sections.find(s=>s.id===(four?'mekanisme':'passer')),items=structuredClone(four||count===3?mechanism.items.slice(0,count):passer.items);
- for(let i=0;i<items.length;i++){items[i].boxVariant=selected?'card':key==='plain'?'plain':'default';items[i].surface=(count===3?['base','dark','mint']:four?['base','soft','mint','lavender']:['dark','soft'])[i];if(selected&&i===0&&key!=='two'){items[i].href='/priser/';items[i].label=home.hero.secondaryCta.label;}}
+ for(let i=0;i<items.length;i++){items[i].boxVariant=selected?'card':key==='plain'?'plain':'default';items[i].surface=(count===3?['base','dark','info']:four?['base','soft','info','lavender']:['dark','soft'])[i];if(selected&&i===0&&key!=='two'){items[i].href='/priser/';items[i].label=home.hero.secondaryCta.label;}}
  target.items=items;target.surface=parent;target.layout=four?'default':count===3?'three-columns':'two-columns';inner.sections[0]={...inner.sections[0],items:structuredClone(items),surface:parent,layout:count===3?'three-columns':'two-columns'};
  writeFileSync('src/content/pages/home.json',JSON.stringify(home,null,2)+'\n');writeFileSync('src/content/pages/om.json',JSON.stringify(inner,null,2)+'\n');writeFileSync(`${out}/${key}-build.log`,build());
  for(const renderer of ['home','inner'])for(const width of [1440,900,390,320]){

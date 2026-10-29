@@ -44,7 +44,7 @@
           "title": "Søkeord og søkeintensjon",
           "text": "Avklare hva relevante kunder søker etter, om de vil kjøpe eller lære, og hvilke søk dere faktisk ønsker å svare på.",
           "boxVariant": "card",
-          "surface": "mint"
+          "surface": "info"
         },
         {
           "title": "Tjenestesider og innhold",
@@ -97,7 +97,7 @@
           "title": "Siden",
           "text": "Finnes det en konkret side som svarer på behovet med nyttig og riktig informasjon?",
           "boxVariant": "card",
-          "surface": "mint"
+          "surface": "info"
         },
         {
           "title": "Neste steg",
@@ -165,7 +165,7 @@
       "id": "effekt",
       "heading": "Hva får bedriften igjen for SEO-arbeidet?",
       "headingAlign": "left",
-      "surface": "mint",
+      "surface": "info",
       "body": [
         "Vi følger med på synlighet og relevante besøk, men spør også hva som skjer videre: Ble det en kvalifisert henvendelse eller et nytt kjøp? Måling har begrensninger. Flere klikk alene sier lite om hva bedriften faktisk tjener."
       ],

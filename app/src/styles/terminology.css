@@ -54,8 +54,8 @@ a.term-trigger:focus-visible { outline: 2px solid currentColor; outline-offset: 
 }
 .glossary-navigation a:hover,
 .glossary-navigation a:focus-visible {
-  background: var(--surface-mint);
-  border-color: var(--surface-mint-strong);
+  background: var(--color-info);
+  border-color: var(--color-accent);
 }
 
 .glossary-group {
@@ -132,7 +132,7 @@ a.term-trigger:focus-visible { outline: 2px solid currentColor; outline-offset: 
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background: var(--surface-mint);
+  background: var(--color-info);
   color: #173d39;
   font-size: var(--type-icon);
   line-height: var(--leading-small);

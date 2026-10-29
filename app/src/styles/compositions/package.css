@@ -51,7 +51,7 @@
 .invite-home .package-offer .package-price .small-copy { margin-top: 4px; }
 .invite-home .package-offer .package-price-prefix { font-size: var(--type-meta); margin-right: .2em; line-height: var(--leading-small); }
 .invite-home .package-offer .package-descriptor { font-family: var(--heading); font-size: var(--type-body-lg); line-height: var(--leading-body); font-weight: var(--weight-heading); margin-top: 12px; min-height: 28px; }
-.invite-home .package-offer .package-visual-area { height: 120px; width: 100%; margin-block: 16px; border-radius: var(--radius-md); overflow: hidden; display: grid; place-items: center; background: var(--surface-mint); color: var(--color-primary); }
+.invite-home .package-offer .package-visual-area { height: 120px; width: 100%; margin-block: 16px; border-radius: var(--radius-md); overflow: hidden; display: grid; place-items: center; background: var(--color-info); color: var(--color-primary); }
 .invite-home .package-offer .package-visual-area-accelerating { background: #e4dbf1; color: var(--color-secondary); }
 .invite-home .package-offer .package-visual-area-tracks { background: #efe8f1; color: #5a4070; }
 .invite-home .package-offer .package-visual { width: 100%; height: 100%; }

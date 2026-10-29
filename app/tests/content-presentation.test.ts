@@ -13,8 +13,8 @@ const normal=(p:any)=>sectionRecords(p).find((s:any)=>s.id==='cms-local-fixture'
 
 test('ordinary layout and box choices survive primary ingestion independently of surfaces',()=>{
  for(const layout of ['default','two-columns','three-columns','stacked'])for(const boxVariant of ['default','plain','card']){
-  const p=structuredClone(home),s=normal(p);s.layout=layout;s.items[0].boxVariant=boxVariant;s.surface='mint';s.items[0].surface='dark';
-  const parsed=normal(pageSchema.parse(p));assert.equal(parsed.layout,layout);assert.equal(parsed.items[0].boxVariant,boxVariant);assert.equal(parsed.surface,'mint');assert.equal(parsed.items[0].surface,'dark');
+  const p=structuredClone(home),s=normal(p);s.layout=layout;s.items[0].boxVariant=boxVariant;s.surface='info';s.items[0].surface='dark';
+  const parsed=normal(pageSchema.parse(p));assert.equal(parsed.layout,layout);assert.equal(parsed.items[0].boxVariant,boxVariant);assert.equal(parsed.surface,'info');assert.equal(parsed.items[0].surface,'dark');
  }
  for(const value of ['grid-cols-8','custom','#fff',{},12])for(const field of ['layout','boxVariant']){
   const p=structuredClone(home),s=normal(p);(field==='layout'?s:s.items[0])[field]=value;assert.equal(pageSchema.safeParse(p).success,false);

@@ -44,7 +44,7 @@ const displayedItems = items.map(item => ({ ...item, displayVisual: pageListPres
   }
   .page-list-alternating > li:nth-child(even) .listing-copy { grid-column: 2; grid-row: 1; }
   .page-list-alternating > li:nth-child(even) :global(.listing-visual) { grid-column: 1; grid-row: 1; }
-  .page-list-alternating > li:nth-child(even) :global(.listing-visual[data-kind="icon"]) { background: var(--surface-mint); }
+  .page-list-alternating > li:nth-child(even) :global(.listing-visual[data-kind="icon"]) { background: var(--color-info); }
   .page-list-mediaCards { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap); margin-top: var(--gap-lg); }
   .page-list-mediaCards[data-count="2"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .page-list-mediaCards[data-count="1"] { grid-template-columns: minmax(0, 1fr); }

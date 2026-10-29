@@ -144,8 +144,6 @@ components:
           label: Hvit (eldre valg)
         - name: soft
           label: Lys (eldre valg)
-        - name: mint
-          label: Mint (eldre valg)
         - name: lavender
           label: Lavendel (eldre valg)
         - name: dark

@@ -11,7 +11,7 @@ const output = resolve(`../coordination/evidence/h019/${phase}`);
 mkdirSync(output, { recursive: true });
 const properties = ['color','backgroundColor','fontFamily','fontSize','fontWeight','lineHeight','letterSpacing','textAlign','padding','margin','borderRadius','borderWidth','borderColor','boxShadow','display','gridTemplateColumns','gap','maxWidth','objectFit','objectPosition'];
 const fixture = 'src/pages/h019-qa-temp.astro';
-const variants = ['default','base','soft','mint','lavender','dark'];
+const variants = ['default','base','soft','info','lavender','dark'];
 const build = () => execFileSync(process.execPath, ['node_modules/astro/bin/astro.mjs', 'build'], { stdio: 'pipe' });
 if (phase === 'after') {
   assert.equal(existsSync(fixture), false, 'Do not overwrite an existing route');
@@ -65,7 +65,7 @@ try {
       writeFileSync(`${output}/matrix-${width}.json`,JSON.stringify(rows,null,2));
       for (const row of rows) {
         for (const t of row.text) assert.ok(t.ratio>=4.5, `${row.id}: ${t.text} contrast ${t.ratio}`);
-        const family=row.id.replace(/-(default|base|soft|mint|lavender|dark)$/,'');
+        const family=row.id.replace(/-(default|base|soft|info|lavender|dark)$/,'');
         const standard=rows.find(r=>r.id===family+'-default');
         if (standard) {
           const frozen=o=>Object.fromEntries(Object.entries(o.style).filter(([p])=>!['color','backgroundColor','borderColor'].includes(p)));
@@ -77,7 +77,7 @@ try {
       }
       assert.equal(await page.locator('.invite-service #sjekk').getAttribute('data-surface'),null,'Protected CTA ignores override');
       assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
-      for(const value of ['default','mint','lavender','dark']) await page.locator(`#matrix-home-${value}`).screenshot({path:`${output}/matrix-${value}-${width}.png`});
+      for(const value of ['default','info','lavender','dark']) await page.locator(`#matrix-home-${value}`).screenshot({path:`${output}/matrix-${value}-${width}.png`});
       matrix.push({width,rows});
     }
     await page.close();

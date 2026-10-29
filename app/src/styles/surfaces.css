@@ -9,10 +9,8 @@
   --radius-card-lg: var(--radius-feature);
   --radius-pill: 999px;
 
-  --surface-mint: var(--color-info);
   --surface-lavender: var(--color-lavender);
   --surface-dark: var(--color-secondary);
-  --surface-mint-strong: var(--color-accent);
   --surface-cta: var(--color-cta);
   --surface-notice: var(--color-warning);
   --surface-dark-muted: var(--color-dark-muted);
@@ -65,16 +63,15 @@
 }
 :root :is(.content-section[data-surface="base"], .content-section .info-item[data-surface="base"]) { background: var(--surface-base); }
 :root :is(.content-section[data-surface="soft"], .content-section .info-item[data-surface="soft"]) { background: var(--surface-soft); }
-:root :is(.content-section[data-surface="mint"], .content-section .info-item[data-surface="mint"]) { background: var(--surface-mint); }
 :root :is(.content-section[data-surface="lavender"], .content-section .info-item[data-surface="lavender"]) { background: var(--surface-lavender); }
 :root :is(.content-section[data-surface="dark"], .content-section .info-item[data-surface="dark"]) {
   background: var(--surface-dark);
   --ink: var(--surface-base);
   --muted: var(--surface-dark-muted);
-  --green: var(--surface-mint-strong);
+  --green: var(--color-accent);
   --line: var(--surface-dark-line);
 }
-:root :is(.content-section:is([data-surface="base"],[data-surface="soft"],[data-surface="mint"],[data-surface="lavender"]), .content-section .info-item:is([data-surface="base"],[data-surface="soft"],[data-surface="mint"],[data-surface="lavender"])),
+:root :is(.content-section:is([data-surface="base"],[data-surface="soft"],[data-surface="lavender"]), .content-section .info-item:is([data-surface="base"],[data-surface="soft"],[data-surface="lavender"])),
 :root .content-section[data-surface] .section-items:not(.process-items) :is(.item-apricot,.item-sage):not([data-surface]),
 :root .invite-service .home-section-behov[data-surface] .info-item:not([data-surface]) {
   --ink: var(--surface-light-ink);
@@ -98,7 +95,7 @@
    from their parent section without changing the selected surface. */
 :root .content-section[data-surface="base"] :is(.info-item,[data-content-card])[data-surface="base"],
 :root .content-section[data-surface="soft"] :is(.info-item,[data-content-card])[data-surface="soft"],
-:root .content-section[data-surface="mint"] :is(.info-item,[data-content-card])[data-surface="mint"],
+:root .content-section[data-surface="info"] :is(.info-item,[data-content-card])[data-surface="info"],
 :root .content-section[data-surface="lavender"] :is(.info-item,[data-content-card])[data-surface="lavender"],
 :root .content-section[data-surface="dark"] :is(.info-item,[data-content-card])[data-surface="dark"] {
   border: var(--border-subtle);

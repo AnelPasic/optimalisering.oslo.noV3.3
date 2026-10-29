@@ -9,8 +9,8 @@ import { pageSchema } from '../src/lib/content-schema.ts';
 import { surfaceAttribute, surfaceValues } from '../src/lib/surface.ts';
 import { cmsJsonSave, entryForFile, resolveField, assertPreservedContent, localHomeFixture } from './helpers/pages-cms-json.ts';
 
-const values = ['default','base','soft','mint','lavender','dark'];
-const labels = ['Standard','Hvit','Lys','Mint','Lavendel','Plomme'];
+const values = [...surfaceValues];
+const labels = ['Standard','base-100','base-200','base-300','primary','secondary','accent','neutral','info','success','warning','error','Hvit (eldre valg)','Lys (eldre valg)','Lavendel (eldre valg)','Plomme (eldre valg)'];
 const cms = YAML.parse(readFileSync('../.pages.yml','utf8'));
 const pages = readdirSync('src/content/pages').filter(f=>f.endsWith('.json')).map(file=>({file, page:file==='home.json'?localHomeFixture():JSON.parse(readFileSync(`src/content/pages/${file}`,'utf8'))}));
 const home = pages.find(p=>p.file==='home.json')!.page;
@@ -23,9 +23,9 @@ test('renderer mapping validates the shared enum and suppresses default/protecte
   for(const value of values)assert.equal(surfaceAttribute(value,true),undefined);
 });
 
-test('ordinary section and item surfaces accept only the six approved values',()=>{
+test('ordinary section and item surfaces accept the approved values',()=>{
   for(const value of values){const p=structuredClone(home);sectionRecords(p).find((s:any)=>s.id==='cms-local-fixture').surface=value;sectionRecords(p).find((s:any)=>s.id==='cms-local-fixture').items[0].surface=value;const parsed=pageSchema.parse(p);assert.equal(sectionRecords(parsed).find(s=>s.id==='cms-local-fixture')!.surface,value);assert.equal(sectionRecords(parsed).find(s=>s.id==='cms-local-fixture')!.items![0].surface,value);}
-  for(const value of ['#ffffff','surface-dark','dark extra','mint; color:red',42,{},[]]){
+  for(const value of ['#ffffff','surface-dark','dark extra','info; color:red',42,{},[]]){
     for(const level of ['section','item']){const p=structuredClone(home);(level==='section'?sectionRecords(p).find((s:any)=>s.id==='cms-local-fixture'):sectionRecords(p).find((s:any)=>s.id==='cms-local-fixture').items[0]).surface=value;assert.equal(pageSchema.safeParse(p).success,false,`${level}: ${JSON.stringify(value)}`);}
   }
 });
@@ -68,7 +68,7 @@ test('protected CTA/form rows cannot acquire a surface or be retyped as content'
   for(const slug of ['home','synlighet','konvertering']){
     const original=pages.find(p=>p.page.slug===slug)!.page;
     const target=(p:any)=>slug==='home'?p.sections.find((s:any)=>s.element==='sjekk'):sectionRecords(p).find((s:any)=>s.id==='sjekk');
-    for(const value of ['base','soft','mint','lavender','dark']){const p=structuredClone(original);target(p).surface=value;assert.equal(pageSchema.safeParse(p).success,false);}
+    for(const value of ['base','soft','info','lavender','dark']){const p=structuredClone(original);target(p).surface=value;assert.equal(pageSchema.safeParse(p).success,false);}
     const p=structuredClone(original);target(p)._block='content';assert.equal(pageSchema.safeParse(p).success,false);
   }
   const p=structuredClone(home);sectionRecords(p).find((s:any)=>s.id==='cms-local-fixture')._block='protected';assert.equal(pageSchema.safeParse(p).success,false);

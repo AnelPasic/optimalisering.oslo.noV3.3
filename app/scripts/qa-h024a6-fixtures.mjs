@@ -16,7 +16,7 @@ try{for(const key of ['two','three','four-numbered','plain','automatic','plain-f
  if(process.env.QA_CASE&&key!==process.env.QA_CASE)continue;
  const home=structuredClone(baseHome),inner=structuredClone(baseInner),service=structuredClone(baseService),selected=['two','three','four-numbered'].includes(key),four=key==='four-numbered'||key==='plain-four',count=four?4:key==='three'?3:2,parent=key==='three'?'dark':'lavender';
  const target=home.sections.find(s=>s.id===(four?'mekanisme':'passer')),items=structuredClone(four||count===3?mechanism.items.slice(0,count):passer.items);
- for(let i=0;i<items.length;i++){items[i].boxVariant=selected?'card':key.startsWith('plain')?'plain':'default';items[i].surface=(count===3?['base','dark','mint']:four?['base','soft','mint','lavender']:['dark','soft'])[i];if(i===0&&key!=='two'){items[i].href='/priser/';items[i].label=home.hero.secondaryCta.label;}}
+ for(let i=0;i<items.length;i++){items[i].boxVariant=selected?'card':key.startsWith('plain')?'plain':'default';items[i].surface=(count===3?['base','dark','info']:four?['base','soft','info','lavender']:['dark','soft'])[i];if(i===0&&key!=='two'){items[i].href='/priser/';items[i].label=home.hero.secondaryCta.label;}}
  if(['plain-default','automatic-editorial'].includes(key))for(const item of items)item.surface='default';
  target.items=items;target.surface=parent;target.layout=four?'default':count===3?'three-columns':'two-columns';inner.sections[0]={...inner.sections[0],items:structuredClone(items),surface:parent,layout:count===3?'three-columns':'two-columns'};
  service.sections[0]={...service.sections[0],items:structuredClone(items),surface:parent,layout:count===3?'three-columns':'two-columns'};

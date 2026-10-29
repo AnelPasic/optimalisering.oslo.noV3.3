@@ -1,6 +1,6 @@
 import { z } from 'astro/zod';
 
-export const surfaceValues = ['default', 'base-100', 'base-200', 'base-300', 'primary', 'secondary', 'accent', 'neutral', 'info', 'success', 'warning', 'error', 'base', 'soft', 'mint', 'lavender', 'dark'] as const;
+export const surfaceValues = ['default', 'base-100', 'base-200', 'base-300', 'primary', 'secondary', 'accent', 'neutral', 'info', 'success', 'warning', 'error', 'base', 'soft', 'lavender', 'dark'] as const;
 export type Surface = typeof surfaceValues[number];
 export const surfaceSchema = z.preprocess(value => value === '' || value == null ? undefined : value, z.enum(surfaceValues).default('default'));
 
