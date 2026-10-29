@@ -1,8 +1,6 @@
 {
   "slug": "personvern",
   "kind": "utility",
-  "status": "PUBLISHED",
-  "authority": "DRAFT / NON-AUTHORITATIVE",
   "seo": {
     "title": "Personvern - Optimalisering Oslo",
     "description": "Slik behandler Medon AS henvendelser og pakkebestillinger: kontaktopplysninger, lagring i Cloudflare D1, tilgang og sletting."

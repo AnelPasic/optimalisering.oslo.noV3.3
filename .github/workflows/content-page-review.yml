@@ -43,6 +43,9 @@ on:
       - "app/tests/typography-cms-pilot.test.ts"
       - "app/tests/content-source-of-truth.test.ts"
       - "app/tests/content-02-editorial.test.ts"
+      - "app/tests/live-pages-no-status.test.ts"
+      - "app/src/content/terminology/glossary.json"
+      - "app/scripts/preflight.mjs"
       - "app/src/content/global-content/**"
       - "coordination/CONTENT-SOURCE-OF-TRUTH.md"
       - "app/scripts/qa-cms-typography-pilot.mjs"
@@ -84,6 +87,8 @@ jobs:
         run: node --test tests/content-source-of-truth.test.ts
       - name: Verify CONTENT-02 editorial cleanup
         run: node --test tests/content-02-editorial.test.ts
+      - name: Verify all pages live without draft/authority status and proof controls retained
+        run: node --test tests/live-pages-no-status.test.ts tests/preflight.test.mjs tests/terminology.test.ts tests/h017b-cms.test.ts
       - name: Astro check
         run: npm run check
       - name: Build static pages

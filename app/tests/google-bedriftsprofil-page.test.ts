@@ -13,8 +13,8 @@ test('Google bedriftsprofil is one genuine Innsikt page with CMS editing and Lok
  const index=JSON.parse(readFileSync('src/content/pages/innsikt.json','utf8'));
  assert.equal(article.slug,'innsikt/google-bedriftsprofil');
  assert.equal(article.kind,'article');
- assert.equal(article.status,'REVIEW_REQUIRED');
- assert.equal(article.authority,'DRAFT / NON-AUTHORITATIVE');
+
+
  assert.equal(pageSchema.safeParse(article).success,true);
  const ids=article.sections.map((section:{id:string})=>section.id);
  assert.equal(ids.length,new Set(ids).size);

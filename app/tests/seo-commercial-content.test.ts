@@ -10,8 +10,8 @@ test('SEO page covers consultant, services and Oslo without additional competing
  const header=JSON.parse(readFileSync('src/content/site-chrome/header.json','utf8'));
  assert.equal(page.slug,'seo');
  assert.equal(page.kind,'service');
- assert.equal(page.status,'REVIEW_REQUIRED');
- assert.equal(page.authority,'DRAFT / NON-AUTHORITATIVE');
+
+
  assert.equal(pageSchema.safeParse(page).success,true);
  assert.match(page.seo.title,/SEO-byrå.*Oslo/);
  assert.match(page.hero.title,/SEO/);

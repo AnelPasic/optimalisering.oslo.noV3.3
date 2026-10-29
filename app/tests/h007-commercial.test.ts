@@ -28,8 +28,8 @@ test('D-024 keeps the exact free-check promise and approved bounded manual safeg
   assert.equal(getHomepageBlock(page,'assessment').content.form.promise, 'Få våre 3 viktigste funn innen 2 virkedager.');
   const assessment = getHomepageBlock(page,'assessment').content.section;
   assert.match(assessment.body.join(' '), /kort, manuell vurdering.*ikke en full revisjon, prognose eller gratis gjennomføring/);
-  assert.equal(page.status, 'REVIEW_REQUIRED');
-  assert.equal(page.authority, 'DRAFT / NON-AUTHORITATIVE');
+
+
   assert.ok(!/ikke avklart|ikke.*fastsatt/.test(getHomepageBlock(page,'faq').content.items.find((item: any) => item.question === 'Hva koster videre arbeid?')!.answer));
 });
 

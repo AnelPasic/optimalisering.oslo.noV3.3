@@ -61,8 +61,6 @@ export const pageSchema = z.preprocess((input,context)=>{
     slug: z.string(),
     kind: routeKindSchema,
     composition: compositionSchema.optional(),
-    status: z.enum(['REVIEW_REQUIRED', 'CONTENT_LOCKED', 'PUBLISHED']),
-    authority: z.enum(['DRAFT / NON-AUTHORITATIVE', 'CONTENT_LOCKED / AUTHORITATIVE']),
     seo: z.object({ title: z.string(), description: z.string() }),
     hero: z.union([heroSchema,synlighetHeroSchema,heroPresentationSchema]).optional(),
     eyebrow: z.string(), title: z.string(), intro: z.string(),
