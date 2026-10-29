@@ -112,5 +112,6 @@
       "href": "/begreper/"
     }
   ],
-  "footerLogoLight": "/images/branding/oo-logo-v2-inverse.svg"
+  "footerLogoLight": "/images/branding/oo-logo-v2-inverse.svg",
+  "footerLogoDark": "/images/branding/oo-logo-v2-inverse.svg"
 }
