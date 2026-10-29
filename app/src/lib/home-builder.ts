@@ -1,5 +1,5 @@
 import { z } from 'astro/zod';
-import {safeCmsHref} from './cms-link-choice.ts';
+import {safeCmsHref,projectSelectedLinks} from './cms-link-choice.ts';
 import { surfaceSchema } from './surface.ts';
 import { homeSectionDataSchema } from './home-section-data.ts';
 import {optionalInternalHref} from './optional-internal-href.ts';
@@ -67,7 +67,7 @@ const masterTypes={behov:'selector',regneeksempel:'calculator',sjekk:'assessment
 export const globalPlacementSchema=z.object({_block:z.literal('global'),element:z.enum(globalElementIds),visibility:sectionVisibilitySchema}).strict();
 export function getGlobalElement<I extends GlobalElementId>(id:I):Extract<HomepageBlock,{_block:(typeof masterTypes)[I]}>{
  if(!Object.hasOwn(catalogue,id))throw new Error(`Unknown global element: ${id}`);
- const master=homepageBlockSchema.parse(catalogue[id]);
+ const master=homepageBlockSchema.parse(projectSelectedLinks(catalogue[id]));
  if(master._block!==masterTypes[id]||master.id!==id||master.uid!==coreUids[id]||master.visibility!==undefined)throw new Error(`Invalid global master identity: ${id}`);
  return master as Extract<HomepageBlock,{_block:(typeof masterTypes)[I]}>;
 }
