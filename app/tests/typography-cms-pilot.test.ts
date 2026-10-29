@@ -6,12 +6,42 @@ import {parseTypographyVariables,typographySchema,typographyOverridesCss,typogra
 import {siteChrome} from '../src/lib/site-chrome-data.ts';
 const read=(path:string)=>readFileSync(path,'utf8');
 const appearance=JSON.parse(read('src/content/site-chrome/appearance.json'));
-test('existing OWNER theme remains unchanged and optional typography does not affect defaults',()=>{
- assert.equal(appearance.typography,undefined);
- assert.equal(siteChrome.typography,undefined);
- assert.deepEqual(typographyVariables(siteChrome.typography),{});
+test('OWNER saved typography is accepted without rewriting appearance or changing default theme',()=>{
+ const expected=appearance.typography ? typographySchema.parse(appearance.typography) : undefined;
+ assert.deepEqual(siteChrome.typography,expected);
  assert.equal(typographyOverridesCss(siteChrome.themes,undefined),'');
  assert.match(appearance.themes.darkCss,/name: "sunset"/);
+ if(expected){
+  const tokens=typographyVariables(siteChrome.typography);
+  assert.ok(Object.keys(tokens).every(name=>name.startsWith('--text-')||name.startsWith('--font-')||name.startsWith('--leading-')||name.startsWith('--tracking-')));
+  const css=typographyOverridesCss(siteChrome.themes,siteChrome.typography);
+  assert.match(css,/html\[data-theme="optimalisering"\]/);
+  assert.match(css,/html\[data-theme="sunset"\]/);
+ }
+});
+test('Pages CMS accepts bare Tailwind declarations exactly as saved by OWNER',()=>{
+ const input='--text-5xl: clamp(1.75rem, 4.5vw, 3.25rem); \n--text-6xl: clamp(2.75rem, 4.5vw, 3.25rem); ';
+ const values=parseTypographyVariables(input);
+ assert.deepEqual(values,{
+  '--text-5xl':'clamp(1.75rem, 4.5vw, 3.25rem)',
+  '--text-6xl':'clamp(2.75rem, 4.5vw, 3.25rem)'
+ });
+ assert.deepEqual(parseTypographyVariables(':root { '+input+' }'),values);
+ assert.equal(typographySchema.safeParse({cssVariables:input}).success,true);
+ assert.equal(typographySchema.safeParse({cssVariables:':root { '+input+' }'}).success,true);
+ const css=typographyOverridesCss(siteChrome.themes,typographySchema.parse({cssVariables:input}));
+ assert.ok(css.includes('--text-6xl:clamp(2.75rem, 4.5vw, 3.25rem)'));
+ for(const theme of ['optimalisering','sunset'])assert.ok(css.includes('html[data-theme="'+theme+'"]'));
+ for(const bad of [
+  '--text-5xl: 3rem; body { color: red; }',
+  '--text-5xl: 3rem; @import "https://invalid.example/a";',
+  '--text-5xl: 3rem; --color-primary: red;',
+  '--text-5xl: 3rem; --text-5xl: 5rem;',
+  '--text-5xl: 3rem !important;',
+  '--text-5xl: url(https://invalid.example/font);',
+  '--text-5xl: 3rem; /* injected comment */',
+  ':root { --text-5xl: 3rem; } body { color:red }'
+ ])assert.throws(()=>parseTypographyVariables(bad),bad);
 });
 test('CMS has structured native Tailwind type controls and advanced token editor',()=>{
  const cms=YAML.parse(read('../.pages.yml'));
