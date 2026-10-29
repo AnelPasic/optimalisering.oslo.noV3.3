@@ -29,8 +29,8 @@ test('SEO uses one native mixed sequence and references only the canonical packa
  assert.deepEqual(sections.map(row=>row.id),sourceOrder);
  assert.equal(source.hero.primaryCta.href,'/seo/#sjekk');
  assert.equal(source.faq.length,6);
- assert.equal(source.status,'REVIEW_REQUIRED');
- assert.equal(source.authority,'DRAFT / NON-AUTHORITATIVE');
+
+
 });
 
 test('native SEO page editor contains section layouts, card treatment and a shared eight-entry global selector',()=>{

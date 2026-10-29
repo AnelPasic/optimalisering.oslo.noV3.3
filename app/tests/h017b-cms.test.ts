@@ -28,7 +28,8 @@ test('customer workflow maps each existing page to its dedicated file or correct
     const entry = entryForFile(cms, record.path);
     assert.ok(entry, record.path);
     assert.equal(cms.content.filter((candidate: any) => entryForFile({ ...cms, content: [candidate] }, record.path)).length, 1, 'No ambiguous page editor');
-    for (const field of entry.fields) assert.ok(!['slug', 'kind', 'status', 'authority', 'locale', 'translationKey'].includes(field.name) || field.hidden === true || (field.name === 'slug' && field.readonly === true), field.name);
+    for (const field of entry.fields) assert.ok(!['slug', 'kind', 'locale', 'translationKey'].includes(field.name) || field.hidden === true || (field.name === 'slug' && field.readonly === true), field.name);
+    assert.equal(entry.fields.some((field: any) => ['status', 'authority'].includes(field.name)), false, 'No page approval status editor');
     for (const operation of ['create', 'rename', 'delete']) assert.equal(entry.operations?.[operation], false, 'Existing page identity remains protected');
   }
 });
@@ -113,17 +114,17 @@ test('raw preservation checks expose nonempty unmodeled repeater data loss', () 
   assert.throws(() => assertPreservedContent(form, after), /futureInternalMetadata.*nonempty content lost/);
 });
 
-test('merge preserves omitted nonempty metadata without promoting authority or proof', () => {
+test('merge preserves omitted metadata and independent case proof protections', () => {
   const record = records.find(record => record.path.endsWith('/home.json'))!;
   const original = JSON.parse(record.bytes.toString());
   original.unmodeled = { token: 'preserve', nested: [1, 2] };
   original.homepage.unmodeled = { token: 'preserve nested object' };
   const form = structuredClone(original);
-  for (const field of ['slug', 'kind', 'status', 'authority', 'unmodeled']) delete form[field];
+  for (const field of ['slug', 'kind', 'unmodeled']) delete form[field];
   delete form.homepage.unmodeled;
   form.title = 'H017B harmless memory-only edit';
   const after = JSON.parse(cmsJsonSave(original, form, entryForFile(cms, record.path), cms));
-  for (const field of ['slug', 'kind', 'status', 'authority', 'unmodeled']) assert.deepEqual(after[field], original[field], field);
+  for (const field of ['slug', 'kind', 'unmodeled']) assert.deepEqual(after[field], original[field], field);
   assert.deepEqual(after.homepage.unmodeled, original.homepage.unmodeled);
   const proof = records.filter(record => record.directory === 'proof').map(record => JSON.parse(record.bytes.toString()));
   assert.deepEqual(getPublishableCases(getHomepageBlock(after,'proof').content, proof), getPublishableCases(getHomepageBlock(original,'proof').content, proof));

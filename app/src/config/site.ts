@@ -1,5 +1,5 @@
-// Shared customer-facing wording is DRAFT / NON-AUTHORITATIVE.
-// Scope and review record: ./copy-authority.json and /coordination/DECISIONS.md.
+// All authored pages and shared customer-facing copy are treated as live content.
+// Privacy, intake, deployment and search indexing are separate operational controls.
 import { isLeadEndpoint } from '../lib/lead';
 
 // Search indexing and contact-form availability are independent decisions.

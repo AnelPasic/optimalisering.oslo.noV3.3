@@ -1339,14 +1339,6 @@ content:
           - *serviceslug
           - *a4
           - *standardHero
-          - name: status
-            label: Gjennomgangsstatus
-            type: string
-            readonly: true
-          - name: authority
-            label: Innholdsautoritet
-            type: string
-            readonly: true
           - name: sections
             label: Innholdsseksjoner
             description: Dra lokale seksjoner og globale innholdselementer i ønsket rekkefølge. Felles innhold redigeres kun under Global Innhold.
@@ -1417,15 +1409,6 @@ content:
           - *serviceslug
           - *a4
           - *standardHero
-          - name: status
-            label: Gjennomgangsstatus
-            type: string
-            readonly: true
-            description: Siden kan vises i noindex-review. Offentlig publisering, innholdsgodkjenning og aktivering av produksjonsbygg krever egen OWNER-beslutning.
-          - name: authority
-            label: Innholdsautoritet
-            type: string
-            readonly: true
           - *a6
           - *a7
   - name: terminology
@@ -1434,11 +1417,6 @@ content:
     path: app/src/content/terminology/glossary.json
     format: json
     fields:
-      - name: authority
-        label: Innholdsautoritet
-        type: string
-        required: true
-        readonly: true
       - *standardHero
       - name: description
         label: Metabeskrivelse

@@ -10,8 +10,8 @@ test('Lokal SEO is a real service page with editable CMS fields and a working na
  const page=JSON.parse(readFileSync(file,'utf8'));
  assert.equal(page.slug,'lokal-seo');
  assert.equal(page.kind,'service');
- assert.equal(page.status,'REVIEW_REQUIRED');
- assert.equal(page.authority,'DRAFT / NON-AUTHORITATIVE');
+
+
  assert.equal(pageSchema.safeParse(page).success,true);
  const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
  const entry=entryForFile(cms,'app/'+file);

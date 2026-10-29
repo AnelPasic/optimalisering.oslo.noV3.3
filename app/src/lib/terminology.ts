@@ -16,7 +16,6 @@ const termSchema = z.object({
 }).strict();
 export const glossarySchema = z.object({
   hero:synlighetHeroSchema,
-  authority: z.literal('DRAFT / NON-AUTHORITATIVE'),
   description: z.string().trim().min(1),
   linkLabel: z.string().trim().min(1), moreLabel: z.string().trim().min(1),
   exampleLabel: z.string().trim().min(1), panelLabel: z.string().trim().min(1),

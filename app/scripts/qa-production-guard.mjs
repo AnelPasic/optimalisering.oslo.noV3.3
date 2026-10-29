@@ -12,5 +12,5 @@ try {
   const result = spawnSync(process.execPath, [cli, 'build', '--mode', 'guard-qa'], { encoding: 'utf8', timeout: 30000 });
   assert.notEqual(result.status, 0, 'Unapproved production build must fail');
   assert.match(result.stdout + result.stderr, /Production blocked/);
-  console.log('Actual Astro build refused production environment mode with draft content, as intended.');
+  console.log('Actual Astro build refused production with missing operational configuration, as intended.');
 } finally { unlinkSync(file); }

@@ -22,7 +22,6 @@ function collect(directory, include = () => true) {
 for (const directory of ['system', 'project', 'app/src/config']) collect(resolve(root, directory));
 collect(resolve('src/content'), path => path !== resolve('src/content/pages/home.json'));
 collect(resolve('server'), path => path.endsWith('.mjs'));
-for (const file of ['copy-authority.json']) frozen[`app/src/config/${file}`] = hash(readFileSync(`src/config/${file}`));
 collect(resolve('dist'), path => path.endsWith('.html') && !['/', '/priser/'].some(route => path === resolve('dist', route === '/' ? 'index.html' : route.slice(1) + 'index.html')));
 collect(resolve('dist/_astro'), path => path.endsWith('.css'));
 for (const file of ['home-invite.css', 'pricing-invite.css', 'service-invite.css']) frozen[`app/dist/styles/${file}`] = hash(readFileSync(`dist/styles/${file}`));

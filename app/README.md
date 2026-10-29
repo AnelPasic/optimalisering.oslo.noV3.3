@@ -1,22 +1,21 @@
 # Optimalisering Oslo v3.3
 
-**Exploratory baseline; expansion paused.** H-006 / D-018 polishes homepage width, spacing, hierarchy and containers, preserving H-005B copy/IA; the asset follow-up uses OWNER-selected generated photo 1. The homepage stays `REVIEW_REQUIRED` / **DRAFT / NON-AUTHORITATIVE**; the other 14 pages and shared wording remain draft/frozen. Formal layout R-04 passed under D-019, explicitly excluding the final photo. OWNER R-03 and separate supplied-photo review remain pending. Read `../coordination/PROJECT-STATE.md`, `CHATGPT-TO-CODEX.md` and `DECISIONS.md` before substantial work. Preserve the remaining pages until the recorded gates pass. See root `../AGENTS.md` for durable coordination rules.
+**Current baseline (OWNER decision 30.10.2026):** All 17 authored page files and the glossary are treated as live website content. Page-level `status` / `authority` metadata and shared-copy approval status have been removed from source data, Pages CMS and validation. Edit actual content directly using `../coordination/CONTENT-SOURCE-OF-TRUTH.md`. Historical phase notes in `../coordination/` do not reinstate draft-page states. This does not itself change external indexing, Cloudflare deployment or intake/security controls.
 
-The actual website is in this directory. `../system/` and `../project/` are read-only reference inputs. There are 15 Norwegian content routes, a responsive homepage, two service pillars, SEO and AI pages, store optimization, two distinct guides, a pricing decision page, and assessment/contact/provider/legal pages.
-
+The actual website is in this directory. `../system/` and `../project/` are read-only reference inputs.
 ## Run locally
 
 Requires Node 24.12 or newer. Install with `npm ci`, build with `npm run build`, then start `npm run preview`.
 
 Open http://127.0.0.1:4321. Preview serves static `dist/` and the local lead API. For active development run `npm run dev` and, in a second terminal, `npm run dev:api`. The Astro dev server proxies `/api` to port 4322.
 
-This checkout defaults to a noindex review preview. All current page records are `REVIEW_REQUIRED`. H-004's homepage form has only website/email/optional comment and stays disabled; enabling it requires a separate authorized integration. Existing other-page form behavior is preserved, with default intake disabled. Public prices and terms remain unresolved; the homepage uses an explicit non-price state and renders no client proof.
+All page content is considered live for editorial and rendering purposes; no page status labels remain. Search-engine indexing, Cloudflare exposure and lead/order activation are independently controlled by runtime configuration. Do not confuse content being live with lead processing being enabled.
 
 ## Content and CMS
 
 Source: `src/content/pages/*.json`, validated by `src/content.config.ts`. `slug` controls static URLs; `kind` chooses the template. Content owns commercial wording. Normal CMS edits change this semantic layer, rather than a separate hard-coded copy fallback.
 
-Repository-root `../.pages.yml` points into these JSON files. Pages CMS requires its configuration at the repository root. Connect the repository to Pages CMS when repository/app permissions are available; this build creates the schema, not an authenticated CMS account. Slugs, page types, approval states and copy authority are read-only in the CMS. Each page has explicit authority metadata; `src/config/copy-authority.json` covers shared wording. Changing a field alone is not approval: actual review/lock scope and evidence belong in `../coordination/DECISIONS.md`. Material changes to approved commercial meaning must return to content/owner review.
+Repository-root `../.pages.yml` points into these JSON files. Pages CMS requires its configuration at the repository root. Connect the repository to Pages CMS when repository/app permissions are available; this build creates the schema, not an authenticated CMS account. Slugs and page types retain their existing protections in the CMS; there are no page-approval or copy-authority status fields. Every page is edited as live content. Material changes to actual prices, scope, legal statements or documented customer results still need owner confirmation.
 
 The homepage has its own file editor; the remaining-page collection excludes `home.json`. Hero, selector, calculator, package placeholders, mechanism, fit, assessment, provider, FAQ, navigation and footer copy live in that JSON. The actual schema is in `src/lib/content-schema.ts`, consumed by Astro's collection configuration. Required homepage sections/order and calculator defaults are validated. The readonly proof slot is reserved for a future verified publication handoff. CMS field coverage is checked locally; authenticated editor/save integration remains unverified.
 
@@ -56,7 +55,7 @@ Node 24's built-in SQLite currently emits an experimental-feature warning. Pin t
 
 OWNER authorized web publication for review rounds under H-003 / D-013; H-006 specifically delivers to `main` for the connected review Worker and live verification. The existing V3.3 target in `wrangler.jsonc` serves static `dist/` through Workers; it does not deploy the Node/SQLite API. Future pushes/deployments require their actual scoped handoff. Keep default preview environment/intake settings. `public/_headers` adds `X-Robots-Tag: noindex, nofollow` to deployed assets, alongside preview metadata/robots. A production launch must revisit that preview header and all readiness gates below.
 
-Astro's build lifecycle checks the same resolved environment files used by Astro, including `.env.local` and `.env.production*`. Setting SITE_STAGE=production requires every page to be CONTENT_LOCKED/PUBLISHED, privacy and lead readiness, Resend configuration and LAUNCH_APPROVED=true. That flag is an operational assertion of an actual owner decision, not a substitute for obtaining one.
+Astro's build lifecycle checks the same resolved environment files used by Astro, including `.env.local` and `.env.production*`. Setting SITE_STAGE=production does **not** require any content-status/authority flags; it still validates privacy and lead readiness, Resend configuration and LAUNCH_APPROVED=true. That flag is an operational assertion of an actual owner decision, not a substitute for obtaining one.
 
 Before launch: review complete content and representative desktop/mobile composition; finalize public pricing/scope/terms and privacy/retention; configure and verify real notification delivery; establish persistent hosting/backups, trusted proxy/rate limits, domain/redirect/native Git deployment and production conversion measurement/Search Console; obtain launch authorization. H-003 authorizes review publication only; these production requirements remain unresolved.
 

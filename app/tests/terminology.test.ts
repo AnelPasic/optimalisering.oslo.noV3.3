@@ -32,13 +32,13 @@ test('inline selection preserves every character, chooses longest alias and expl
   assert.equal(explainTerms('ROAS 4,3x', ['roas'], new Set())[0].text, 'ROAS');
 });
 
-test('CMS exposes safe terminology fields, keeps anchors and authority read-only, and round-trips content', () => {
+test('CMS exposes safe terminology fields, keeps term anchors read-only, and round-trips content', () => {
   const cms = YAML.parse(readFileSync('../.pages.yml', 'utf8'));
   const entry = entryForFile(cms, 'app/src/content/terminology/glossary.json');
   assert.ok(entry);
   const terms = entry.fields.find((field: any) => field.name === 'terms');
   assert.equal(terms.fields.find((field: any) => field.name === 'id').readonly, true);
-  assert.equal(entry.fields.find((field: any) => field.name === 'authority').readonly, true);
+  assert.equal(entry.fields.some((field: any) => field.name === 'authority'), false);
   assert.deepEqual(terms.fields.map((field: any) => field.name).sort(), ['id', 'term', 'fullName', 'aliases', 'category', 'shortDefinition', 'fullDefinition', 'simpleExample'].sort());
   const form = structuredClone(glossary);
   form.terms[0].shortDefinition = 'En ufarlig redigering av forklaringen.';

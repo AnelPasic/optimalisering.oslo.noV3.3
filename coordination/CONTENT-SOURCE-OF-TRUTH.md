@@ -1,5 +1,7 @@
 # CONTENT-01 — Kildeansvar for innhold (Oslo-pilot)
 
+**GJELDENDE OWNER-REGEL (30.10.2026): Alle sider behandles som live.** Ingen `status`, `authority`, `REVIEW_REQUIRED` eller `DRAFT / NON-AUTHORITATIVE` i aktiv side-JSON, Begreper, Pages CMS eller sidevalidering. Ikke introduser nye godkjenningsstatuser. Ved revisjon, oppdater direkte den autoritative kilden. Faktisk godkjenning av priser, dokumenterte case/resultater, personvern, fungerende kontaktskjema og operativ publisering er separate forhold.
+
 Én redigeringsplass per innholdsbit. Denne korte fasiten beskriver **det som faktisk er implementert**, ikke et nytt CMS eller en plan om å flytte eksisterende data. [MWS issue #52](https://github.com/AnelPasic/MedonWebSystem/issues/52). Relevante design-/redaksjonsregler ligger fortsatt i MWS `docs/PAGE-BUILDER-AND-CRO-BASELINE.md` og `docs/CONTENT-QUALITY-AND-VOICE.md`.
 
 | Hva du vil endre | Eneste redigeringskilde i Oslo | På sidene |
