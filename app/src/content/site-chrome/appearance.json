@@ -6,5 +6,9 @@
     "darkCss": "@plugin \"daisyui/theme\" {\n  name: \"sunset\";\n  default: false;\n  prefersdark: false;\n  color-scheme: \"dark\";\n  --color-base-100: oklch(22% 0.019 237.69);\n  --color-base-200: oklch(20% 0.019 237.69);\n  --color-base-300: oklch(18% 0.019 237.69);\n  --color-base-content: oklch(77.383% 0.043 245.096);\n  --color-primary: oklch(74.703% 0.158 39.947);\n  --color-primary-content: oklch(14.94% 0.031 39.947);\n  --color-secondary: oklch(85.559% 0.085 206.015);\n  --color-secondary-content: oklch(17.111% 0.017 206.015);\n  --color-accent: oklch(71.294% 0.166 299.844);\n  --color-accent-content: oklch(14.258% 0.033 299.844);\n  --color-neutral: oklch(26% 0.019 237.69);\n  --color-neutral-content: oklch(70% 0.019 237.69);\n  --color-info: oklch(85.559% 0.085 206.015);\n  --color-info-content: oklch(17.111% 0.017 206.015);\n  --color-success: oklch(85.56% 0.085 144.778);\n  --color-success-content: oklch(17.112% 0.017 144.778);\n  --color-warning: oklch(85.569% 0.084 74.427);\n  --color-warning-content: oklch(17.113% 0.016 74.427);\n  --color-error: oklch(85.511% 0.078 16.886);\n  --color-error-content: oklch(17.102% 0.015 16.886);\n  --radius-selector: 2rem;\n  --radius-field: 1.5rem;\n  --radius-box: 2rem;\n  --size-selector: 0.25rem;\n  --size-field: 0.25rem;\n  --border: 1px;\n  --depth: 0;\n  --noise: 0;\n}",
     "lightLabel": "Light",
     "darkLabel": "Dark"
+  },
+  "typography": {
+    "scale": "normal",
+    "lineHeight": "normal"
   }
 }
