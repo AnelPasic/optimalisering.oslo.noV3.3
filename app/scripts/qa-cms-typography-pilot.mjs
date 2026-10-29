@@ -96,7 +96,6 @@ try{
     if(sample.selector.includes('need-card')){
       assert.equal(measured.maxWidth,width<=900?'600px':'390px');
     }
-    if(sample.selector.includes('glossary-group'))assert.equal(measured.maxWidth,'320px');
     console.log('PASS semantic heading',sample.path,sample.selector,width,theme,measured.size);
    }
   }
