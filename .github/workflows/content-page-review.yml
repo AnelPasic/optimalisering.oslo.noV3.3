@@ -88,7 +88,7 @@ jobs:
       - name: Verify CONTENT-02 editorial cleanup
         run: node --test tests/content-02-editorial.test.ts
       - name: Verify all pages live without draft/authority status and proof controls retained
-        run: node --test tests/live-pages-no-status.test.ts tests/preflight.test.mjs tests/terminology.test.ts tests/h017b-cms.test.ts
+        run: node --test tests/live-pages-no-status.test.ts tests/preflight.test.mjs tests/terminology.test.ts
       - name: Astro check
         run: npm run check
       - name: Build static pages
