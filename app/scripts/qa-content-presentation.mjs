@@ -24,7 +24,7 @@ try{
   assert.deepEqual(boxes.map(b=>b.variant),['default','plain','card']);assert.equal(boxes[0].card,false);assert.equal(boxes[1].card,false);assert.equal(boxes[2].card,true);assert.equal(boxes[2].radius,'20px');assert.equal(boxes[1].radius,'0px');
   const colors=await page.locator('#ds-box-colors article').evaluateAll(es=>es.map(e=>({surface:e.dataset.surface,background:getComputedStyle(e).backgroundColor,foreground:getComputedStyle(e).color,radius:getComputedStyle(e).borderTopLeftRadius})));
   assert.equal(new Set(colors.map(c=>c.background)).size,3,'surface selection remains independent of box shape');assert.equal(new Set(colors.map(c=>c.radius)).size,1);
-  const dark=colors.find(c=>c.surface==='dark');assert.notEqual(dark.foreground,colors[0].foreground,'dark surface applies readable foreground');
+  const dark=colors.find(c=>c.surface==='secondary');assert.notEqual(dark.foreground,colors[0].foreground,'dark surface applies readable foreground');
   assert.equal(await page.locator('h1').count(),1);assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
   assert.match(await page.locator('meta[name=robots]').getAttribute('content'),/noindex/);
   const duplicateIds=await page.evaluate(()=>{const ids=[...document.querySelectorAll('[id]')].map(e=>e.id);return ids.filter((id,i)=>ids.indexOf(id)!==i);});assert.deepEqual(duplicateIds,[]);

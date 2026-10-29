@@ -140,14 +140,8 @@ components:
           label: warning
         - name: error
           label: error
-        - name: base
-          label: Hvit (eldre valg)
-        - name: soft
-          label: Lys (eldre valg)
         - name: lavender
           label: Lavendel (eldre valg)
-        - name: dark
-          label: Plomme (eldre valg)
   contentLayoutChoice:
     type: select
     options:

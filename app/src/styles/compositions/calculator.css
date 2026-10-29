@@ -1,7 +1,7 @@
 /* H-023B: component-owned calculator composition; palette and primitives belong to app.css/daisyUI. */
 @layer composition {
 
-.invite-home .leverage-section { background: var(--surface-dark); color: var(--color-base-100); }
+.invite-home .leverage-section { background: var(--color-secondary); color: var(--color-base-100); }
 .invite-home .leverage-grid { grid-template-columns: .9fr 1.1fr; gap: 96px; align-items: center; }
 .invite-home .leverage-copy .eyebrow { color: var(--color-accent); }
 .invite-home .leverage-copy .body-copy { color: var(--color-dark-muted); margin-top: 28px; }
@@ -11,7 +11,7 @@
 .invite-home .calculator-inputs label { font-size: var(--type-form-label); display: flex; flex-direction: column; justify-content: space-between; gap: var(--gap-xs); min-width: 0; line-height: var(--leading-small); }
 .invite-home .calculator-error { font-size: var(--type-helper); margin-top: 18px; color: var(--color-error-on-dark); line-height: var(--leading-small); }
 .invite-home .math-results { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap); margin-top: 32px; }
-.invite-home .leverage-result, .invite-home .leverage-comparison { background: var(--surface-soft); color: var(--ink); border: 0; border-radius: var(--radius-md); padding: var(--panel-pad); display: flex; flex-direction: column; align-items: start; gap: 0; min-width: 0; }
+.invite-home .leverage-result, .invite-home .leverage-comparison { background: var(--color-base-200); color: var(--ink); border: 0; border-radius: var(--radius-md); padding: var(--panel-pad); display: flex; flex-direction: column; align-items: start; gap: 0; min-width: 0; }
 .invite-home .leverage-comparison { background: var(--color-accent); }
 .invite-home .leverage-result > span:first-child, .invite-home .leverage-comparison > span:first-child { font-size: var(--type-body-sm); font-weight: var(--weight-heading); line-height: var(--leading-body); }
 .invite-home .math-results output { display: block; font-family: var(--heading); font-size: var(--type-stat); font-weight: var(--weight-heading); line-height: var(--leading-stat); letter-spacing: -.045em; margin-block: 14px 10px; white-space: nowrap; }

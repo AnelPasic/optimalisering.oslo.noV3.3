@@ -20,9 +20,9 @@ import service from '../content/pages/synlighet.json';
 const rows=[seo,ai,shop].map(p=>p.sections.find(s=>s.id==='sjekk'));
 ---
 <Layout title="Lokal H-023B kontroll" description="Kun syntetisk lokal kontroll" noindex><div class="invite-home invite-service">
-{rows.map((section,i)=><div data-fixture={i}><HomeSection section={{...section,surface:'dark',headingAlign:'left',items:[{title:'Syntetisk kort',text:'Lokal kontroll av overflater.',surface:'base'},{title:'Samme flate',text:'Lokal kontroll av kant.',surface:'dark'}]}} /></div>)}
-<div data-fixture="cards"><HomeSection visualId="behov" section={{...rows[0],surface:'dark',items:[{title:'Syntetisk kort',text:'Kontroll av samme flate.',surface:'dark'}]}} /></div>
-<div data-fixture="protected"><HomeSection section={{...service.sections.find(s=>s.id==='sjekk'),surface:'dark'}} /></div>
+{rows.map((section,i)=><div data-fixture={i}><HomeSection section={{...section,surface:'secondary',headingAlign:'left',items:[{title:'Syntetisk kort',text:'Lokal kontroll av overflater.',surface:'base-100'},{title:'Samme flate',text:'Lokal kontroll av kant.',surface:'secondary'}]}} /></div>)}
+<div data-fixture="cards"><HomeSection visualId="behov" section={{...rows[0],surface:'secondary',items:[{title:'Syntetisk kort',text:'Kontroll av samme flate.',surface:'secondary'}]}} /></div>
+<div data-fixture="protected"><HomeSection section={{...service.sections.find(s=>s.id==='sjekk'),surface:'secondary'}} /></div>
 </div></Layout>`);
  build();
  server=createAppServer({config:{enabled:false},staticRoot:resolve('dist')});server.listen(0,'127.0.0.1');await once(server,'listening');
@@ -32,7 +32,7 @@ const rows=[seo,ai,shop].map(p=>p.sections.find(s=>s.id==='sjekk'));
   const page=await browser.newPage({viewport:{width,height:1000}});await page.goto(`http://127.0.0.1:${server.address().port}/h023b-qa-temp/`);
   for(const i of [0,1,2]){
    const section=page.locator(`[data-fixture="${i}"] section`);
-   assert.equal(await section.getAttribute('data-surface'),'dark','ordinary sjekk remains CMS-editable');
+   assert.equal(await section.getAttribute('data-surface'),'secondary','ordinary sjekk remains CMS-editable');
    const values=await section.evaluate(e=>{
     const ctx=document.createElement('canvas').getContext('2d');
     const rgb=c=>{ctx.clearRect(0,0,1,1);ctx.fillStyle=c;ctx.fillRect(0,0,1,1);return [...ctx.getImageData(0,0,1,1).data].slice(0,3);};

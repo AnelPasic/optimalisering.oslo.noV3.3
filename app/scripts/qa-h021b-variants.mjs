@@ -43,7 +43,7 @@ try{
  for(const variant of variants){
   const index=structuredClone(originals[0]);const config=index.sections[0].pageList;
   Object.assign(config,{mode:variant.manual?'manual':'automatic',sort:'editorial',layout:variant.layout,limit:variant.manual?1:variant.count,selected:(variant.manual??[]).map(slug=>({slug})),excluded:variant.excluded?[{slug:variant.excluded}]:[]});
-  if(variant.dark){index.sections[0].surface='dark';index.sections[0].headingAlign='left';}
+  if(variant.dark){index.sections[0].surface='secondary';index.sections[0].headingAlign='left';}
   const articles=[structuredClone(originals[1]),structuredClone(originals[2]),...[third,fourth].map((slug,i)=>({...structuredClone(originals[1]),slug,title:`H-021B fixture ${i+3}`,seo:{title:`H-021B fixture ${i+3}`,description:'Local synthetic fixture'},listing:{title:`H-021B artikkel ${i+3}`,summary:'Syntetisk lokal test. Ikke publiserbart innhold.',label:'Åpne testartikkel',order:(i+3)*10,visible:true,visual:[{kind:'icon',icon:i?'trend':'page'}]}}))];
   if(variant.hidden)articles.find(a=>a.slug===variant.hidden).listing.visible=false;
   if(variant.mixed){
@@ -85,7 +85,7 @@ try{
    }
    if(['cards','compact','links'].includes(variant.layout))assert.equal(await page.locator('#guider .listing-visual').count(),0);
    for(const icon of await page.locator('#guider .listing-visual svg').all())assert.equal(await icon.getAttribute('aria-hidden'),'true');
-   if(variant.dark){assert.equal(await page.locator('#guider').getAttribute('data-surface'),'dark');assert.equal(await page.locator('#guider .section-heading').evaluate(e=>getComputedStyle(e).textAlign),'left');}
+   if(variant.dark){assert.equal(await page.locator('#guider').getAttribute('data-surface'),'secondary');assert.equal(await page.locator('#guider .section-heading').evaluate(e=>getComputedStyle(e).textAlign),'left');}
    if(variant.name==='cards'){
     const actual=await page.screenshot({fullPage:true});const before=readFileSync(`../coordination/evidence/h021b/before/innsikt-${width}.png`);
     assert.ok(actual.equals(before),`cards ${width}: exact legacy screenshot`);

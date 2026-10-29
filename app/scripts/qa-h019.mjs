@@ -11,11 +11,11 @@ const output = resolve(`../coordination/evidence/h019/${phase}`);
 mkdirSync(output, { recursive: true });
 const properties = ['color','backgroundColor','fontFamily','fontSize','fontWeight','lineHeight','letterSpacing','textAlign','padding','margin','borderRadius','borderWidth','borderColor','boxShadow','display','gridTemplateColumns','gap','maxWidth','objectFit','objectPosition'];
 const fixture = 'src/pages/h019-qa-temp.astro';
-const variants = ['default','base','soft','info','lavender','dark'];
+const variants = ['default','base-100','base-200','info','lavender','secondary'];
 const build = () => execFileSync(process.execPath, ['node_modules/astro/bin/astro.mjs', 'build'], { stdio: 'pipe' });
 if (phase === 'after') {
   assert.equal(existsSync(fixture), false, 'Do not overwrite an existing route');
-  writeFileSync(fixture, `---\nimport Layout from '../layouts/SiteLayout.astro';\nimport HomeSection from '../components/HomeSection.astro';\nimport ContentSection from '../components/ContentSection.astro';\nimport home from '../content/pages/home.json';\nimport service from '../content/pages/synlighet.json';\nconst variants = ${JSON.stringify(variants)};\nconst normal = home.sections[0];\nconst item = { ...normal.items[0], href: home.cta.href, label: home.cta.label };\n---\n<Layout title="H-019 local QA" description="Local QA" noindex homeVisual serviceVisual homeChrome={home.homepage.chrome}><main><div class="invite-home invite-service">{variants.map(surface => <HomeSection section={{ ...normal, id: 'matrix-home-' + surface, surface, items: variants.map(surface => ({ ...item, surface })) }} visualId="behov" />)}{variants.map(surface => <HomeSection section={{ ...service.sections[0], id: 'matrix-auto-' + surface, surface }} visualId="behov" />)}<HomeSection section={{ ...service.sections.at(-1), _block: 'protected', surface: 'dark' }} /></div><div class="invite-home">{variants.map(surface => <div data-fixture={"matrix-flat-" + surface}><HomeSection section={{ ...normal, surface }} /></div>)}</div><div>{variants.map(surface => <div data-fixture={"matrix-process-" + surface}><ContentSection section={{ ...normal, id: "sjekk", surface }} /></div>)}{variants.map(surface => <ContentSection section={{ ...normal, id: 'matrix-legacy-' + surface, surface, items: variants.map(surface => ({ ...item, surface })) }} />)}{variants.map(surface => <ContentSection section={{ ...normal, id: 'matrix-legacy-auto-' + surface, surface }} />)}</div></main></Layout>`);
+  writeFileSync(fixture, `---\nimport Layout from '../layouts/SiteLayout.astro';\nimport HomeSection from '../components/HomeSection.astro';\nimport ContentSection from '../components/ContentSection.astro';\nimport home from '../content/pages/home.json';\nimport service from '../content/pages/synlighet.json';\nconst variants = ${JSON.stringify(variants)};\nconst normal = home.sections[0];\nconst item = { ...normal.items[0], href: home.cta.href, label: home.cta.label };\n---\n<Layout title="H-019 local QA" description="Local QA" noindex homeVisual serviceVisual homeChrome={home.homepage.chrome}><main><div class="invite-home invite-service">{variants.map(surface => <HomeSection section={{ ...normal, id: 'matrix-home-' + surface, surface, items: variants.map(surface => ({ ...item, surface })) }} visualId="behov" />)}{variants.map(surface => <HomeSection section={{ ...service.sections[0], id: 'matrix-auto-' + surface, surface }} visualId="behov" />)}<HomeSection section={{ ...service.sections.at(-1), _block: 'protected', surface: 'secondary' }} /></div><div class="invite-home">{variants.map(surface => <div data-fixture={"matrix-flat-" + surface}><HomeSection section={{ ...normal, surface }} /></div>)}</div><div>{variants.map(surface => <div data-fixture={"matrix-process-" + surface}><ContentSection section={{ ...normal, id: "sjekk", surface }} /></div>)}{variants.map(surface => <ContentSection section={{ ...normal, id: 'matrix-legacy-' + surface, surface, items: variants.map(surface => ({ ...item, surface })) }} />)}{variants.map(surface => <ContentSection section={{ ...normal, id: 'matrix-legacy-auto-' + surface, surface }} />)}</div></main></Layout>`);
   build();
 }
 const server = process.env.QA_BASE_URL ? null : createAppServer({ config: { enabled: false }, staticRoot: resolve('dist') });
@@ -65,7 +65,7 @@ try {
       writeFileSync(`${output}/matrix-${width}.json`,JSON.stringify(rows,null,2));
       for (const row of rows) {
         for (const t of row.text) assert.ok(t.ratio>=4.5, `${row.id}: ${t.text} contrast ${t.ratio}`);
-        const family=row.id.replace(/-(default|base|soft|info|lavender|dark)$/,'');
+        const family=row.id.replace(/-(default|base-100|base-200|info|lavender|secondary)$/,'');
         const standard=rows.find(r=>r.id===family+'-default');
         if (standard) {
           const frozen=o=>Object.fromEntries(Object.entries(o.style).filter(([p])=>!['color','backgroundColor','borderColor'].includes(p)));
@@ -77,7 +77,7 @@ try {
       }
       assert.equal(await page.locator('.invite-service #sjekk').getAttribute('data-surface'),null,'Protected CTA ignores override');
       assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
-      for(const value of ['default','info','lavender','dark']) await page.locator(`#matrix-home-${value}`).screenshot({path:`${output}/matrix-${value}-${width}.png`});
+      for(const value of ['default','info','lavender','secondary']) await page.locator(`#matrix-home-${value}`).screenshot({path:`${output}/matrix-${value}-${width}.png`});
       matrix.push({width,rows});
     }
     await page.close();

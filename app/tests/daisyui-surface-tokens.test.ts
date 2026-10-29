@@ -9,7 +9,7 @@ import {localHomeFixture,cmsJsonSave,entryForFile,resolveField,sectionRecords} f
 
 const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
 const semantic=["base-100","base-200","base-300","primary","secondary","accent","neutral","info","success","warning","error"];
-const legacy=['base','soft','lavender','dark'];
+const legacy=['lavender'];
 test('one Pages CMS surface picker for both section and box, including remaining legacy choices',()=>{
  const values=cms.components.surfaceChoice.options.values.map((x:any)=>x.name);
  assert.deepEqual(values,['default',...semantic,...legacy]);
@@ -22,7 +22,7 @@ test('one Pages CMS surface picker for both section and box, including remaining
  for(const value of values){assert.equal(surfaceSchema.parse(value),value);assert.equal(surfaceAttribute(value),value==='default'?undefined:value);}
  assert.equal(surfaceAttribute('primary',true),undefined,'protected rows may not be recolored');
  assert.equal(surfaceSchema.safeParse('info-green').success,false);
- assert.equal(surfaceSchema.safeParse('mint').success,false,'retired mint is not a current surface choice');
+ for(const retired of ['mint','base','soft','dark','secondary-200']) assert.equal(surfaceSchema.safeParse(retired).success,false,`${retired} is not a supported semantic surface`);
 });
 test('all new daisyUI tokens roundtrip locally and globally without changing owner data',()=>{
  const entry=entryForFile(cms,'app/src/content/pages/home.json');

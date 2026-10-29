@@ -29,7 +29,7 @@ try{
   browser=await chromium.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true});
   for(const variant of variants){
     const content=structuredClone(original);Object.assign(content.sections[0].pageList,variant.edit);
-    if(variant.styled){content.sections[0].surface='dark';content.sections[0].headingAlign='left';}
+    if(variant.styled){content.sections[0].surface='secondary';content.sections[0].headingAlign='left';}
     writeFileSync(path,JSON.stringify(content,null,2)+'\n');
     writeFileSync(fixturePath,JSON.stringify({...fixture,listing:{...fixture.listing,visible:!variant.hidden}},null,2)+'\n');build();
     for(const width of [1440,900,390,320]){
@@ -40,7 +40,7 @@ try{
       assert.equal(await page.locator('#guider h3').count(),variant.edit.layout==='links'?0:variant.slugs.length);
       if(variant.edit.layout==='links')assert.equal(await page.locator('#guider .info-item').count(),0);
       assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
-      if(variant.styled){assert.equal(await page.locator('#guider').getAttribute('data-surface'),'dark');assert.equal(await page.locator('#guider .section-heading').evaluate(e=>getComputedStyle(e).textAlign),'left');}
+      if(variant.styled){assert.equal(await page.locator('#guider').getAttribute('data-surface'),'secondary');assert.equal(await page.locator('#guider .section-heading').evaluate(e=>getComputedStyle(e).textAlign),'left');}
       for(let i=0;i<variant.slugs.length;i++){
         await links.nth(i).focus();assert.equal(await links.nth(i).evaluate(e=>e===document.activeElement),true);
         assert.ok((await links.nth(i).innerText()).trim());

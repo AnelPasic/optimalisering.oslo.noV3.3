@@ -35,7 +35,7 @@
       "heading": "Dette kan vi gjøre for å forbedre SEO.",
       "headingAlign": "center",
       "layout": "two-columns",
-      "surface": "soft",
+      "surface": "base-200",
       "body": [
         "Vi begynner med søkene som kan gi bedriften riktige kunder, og prioriterer tiltak på nettsiden. Hva som gjennomføres, bestemmes av behov og avtalt kapasitet."
       ],
@@ -56,13 +56,13 @@
           "title": "Teknisk SEO",
           "text": "Undersøke blant annet indeksering, brutte lenker, omdirigeringer og sidens tilgjengelighet for søkemotorer, og prioritere reelle hindringer.",
           "boxVariant": "card",
-          "surface": "base"
+          "surface": "base-100"
         },
         {
           "title": "Måling og prioritering",
           "text": "Skille synlighet og klikk fra relevante henvendelser. Tilgjengelige tall fra søk, nettside og kundeoppfølging brukes med sine begrensninger.",
           "boxVariant": "card",
-          "surface": "soft"
+          "surface": "base-200"
         }
       ],
       "links": [
@@ -82,7 +82,7 @@
       "heading": "Hvilke søk skal føre kunden til hvilken side?",
       "headingAlign": "center",
       "layout": "three-columns",
-      "surface": "base",
+      "surface": "base-100",
       "body": [
         "Kunden som søker etter \"rørlegger døgnvakt\" er nærmere å velge leverandør enn den som søker \"hva gjør jeg ved vannlekkasje\". Vi sørger for at begge møter en side som svarer på det de faktisk trenger."
       ],
@@ -91,7 +91,7 @@
           "title": "Behovet",
           "text": "Hvilken tjeneste, løsning eller produktgruppe søker kunden etter, og passer denne kunden bedriften?",
           "boxVariant": "card",
-          "surface": "soft"
+          "surface": "base-200"
         },
         {
           "title": "Siden",
@@ -124,7 +124,7 @@
       "eyebrow": "Prioritering før volum",
       "heading": "En SEO-plan skal prioritere arbeid, ikke bare produsere rapporter.",
       "headingAlign": "left",
-      "surface": "dark",
+      "surface": "secondary",
       "body": [
         "En side som ikke forklarer tilbudet, blir ikke bedre av at vi publiserer artikkel nummer 80. Vi vurderer søk, tilbud og eksisterende sider før vi foreslår mer arbeid.",
         "SEO kan være ett prioritert område i optimaliseringspakkene. Vi avtaler oppgavene og følger relevante resultater, men lover ikke en bestemt plassering eller antall kunder."
@@ -145,7 +145,7 @@
       "id": "seo-oslo",
       "heading": "SEO i Oslo: Hvem søker, og hvor leverer bedriften?",
       "headingAlign": "left",
-      "surface": "base",
+      "surface": "base-100",
       "body": [
         "Noen kunder søker etter en leverandør i et bestemt område. Andre sammenligner tjenester uten å bry seg om hvor leverandøren sitter. Vi vurderer hva som gjelder for dere, og kobler inn lokal SEO og Google bedriftsprofil når avstand og tjenesteområde betyr noe."
       ],
@@ -181,7 +181,7 @@
       "id": "ai",
       "heading": "Hva med synlighet i ChatGPT og andre AI-svar?",
       "headingAlign": "left",
-      "surface": "soft",
+      "surface": "base-200",
       "body": [
         "Tydelige tjenestesider er et godt utgangspunkt også for AI-søk. Men en Google-plassering dokumenterer ikke en anbefaling fra en AI-tjeneste. Det vurderer vi separat."
       ],

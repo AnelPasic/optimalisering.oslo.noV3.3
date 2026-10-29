@@ -10,14 +10,13 @@
   --radius-pill: 999px;
 
   --surface-lavender: var(--color-lavender);
-  --surface-dark: var(--color-secondary);
   --surface-cta: var(--color-cta);
   --surface-notice: var(--color-warning);
   --surface-dark-muted: var(--color-dark-muted);
   --surface-dark-line: var(--color-dark-line);
   --border-control: 1px solid var(--color-control-line);
   --border-dark: 1px solid var(--surface-dark-line);
-  --border-featured: 2px solid var(--surface-dark);
+  --border-featured: 2px solid var(--color-secondary);
   --shadow-soft: 0 8px 24px #320c4314;
 
   --panel-pad-xs: 12px;
@@ -42,8 +41,6 @@
    alias already computed against the root's legacy palette. The existing
    Invite body and dark service section override --paper/--cream/--line. */
 :root, body, .invite-service .home-section-sammenheng {
-  --surface-base: var(--paper);
-  --surface-soft: var(--cream);
   --border-subtle: 1px solid var(--line);
 }
 
@@ -61,17 +58,8 @@
   border-color: var(--line);
   --border-subtle: 1px solid var(--line);
 }
-:root :is(.content-section[data-surface="base"], .content-section .info-item[data-surface="base"]) { background: var(--surface-base); }
-:root :is(.content-section[data-surface="soft"], .content-section .info-item[data-surface="soft"]) { background: var(--surface-soft); }
 :root :is(.content-section[data-surface="lavender"], .content-section .info-item[data-surface="lavender"]) { background: var(--surface-lavender); }
-:root :is(.content-section[data-surface="dark"], .content-section .info-item[data-surface="dark"]) {
-  background: var(--surface-dark);
-  --ink: var(--surface-base);
-  --muted: var(--surface-dark-muted);
-  --green: var(--color-accent);
-  --line: var(--surface-dark-line);
-}
-:root :is(.content-section:is([data-surface="base"],[data-surface="soft"],[data-surface="lavender"]), .content-section .info-item:is([data-surface="base"],[data-surface="soft"],[data-surface="lavender"])),
+:root :is(.content-section:is([data-surface="lavender"]), .content-section .info-item:is([data-surface="lavender"])),
 :root .content-section[data-surface] .section-items:not(.process-items) :is(.item-apricot,.item-sage):not([data-surface]),
 :root .invite-service .home-section-behov[data-surface] .info-item:not([data-surface]) {
   --ink: var(--surface-light-ink);
@@ -93,11 +81,11 @@
 
 /* H-019 follow-up: keep explicitly same-colored child cards visually distinct
    from their parent section without changing the selected surface. */
-:root .content-section[data-surface="base"] :is(.info-item,[data-content-card])[data-surface="base"],
-:root .content-section[data-surface="soft"] :is(.info-item,[data-content-card])[data-surface="soft"],
+:root .content-section[data-surface="base-100"] :is(.info-item,[data-content-card])[data-surface="base-100"],
+:root .content-section[data-surface="base-200"] :is(.info-item,[data-content-card])[data-surface="base-200"],
 :root .content-section[data-surface="info"] :is(.info-item,[data-content-card])[data-surface="info"],
 :root .content-section[data-surface="lavender"] :is(.info-item,[data-content-card])[data-surface="lavender"],
-:root .content-section[data-surface="dark"] :is(.info-item,[data-content-card])[data-surface="dark"] {
+:root .content-section[data-surface="secondary"] :is(.info-item,[data-content-card])[data-surface="secondary"] {
   border: var(--border-subtle);
 }
 

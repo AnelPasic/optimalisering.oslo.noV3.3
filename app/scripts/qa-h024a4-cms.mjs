@@ -21,7 +21,7 @@ try{for(const width of [1440,900,390,320]){
  assert.deepEqual(snapshot.mechanism,baseline.records.find(r=>r.width===width).mechanism);
  assert.equal(snapshot.cards.length,2);
  for(const [i,c] of snapshot.cards.entries()){
-  const card=i===0||phase==='restored';assert.equal(c.body,card);assert.equal(c.variant,card?'card':'plain');assert.equal(c.radius,card?'20px':'0px');assert.equal(c.surface,i===0?'dark':'soft');assert.deepEqual(c.links,[]);
+  const card=i===0||phase==='restored';assert.equal(c.body,card);assert.equal(c.variant,card?'card':'plain');assert.equal(c.radius,card?'20px':'0px');assert.equal(c.surface,i===0?'secondary':'base-200');assert.deepEqual(c.links,[]);
   if(card){assert.equal(c.padding,'24px');assert.equal(c.gap,'20px');}
  }
  assert.equal(await p.locator('h1').count(),1);assert.ok(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));

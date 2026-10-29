@@ -7,7 +7,7 @@
       "sectionSurfaces": [
         {
           "section": "sammenheng",
-          "surface": "dark"
+          "surface": "secondary"
         }
       ],
       "sectionVisuals": [
@@ -58,7 +58,7 @@
           "text": "Når noen spør ChatGPT eller andre AI-tjenester hvem de bør kontakte, vil du være et aktuelt forslag. Vi kan forbedre grunnlaget for å bli nevnt, men ikke love en anbefaling.",
           "href": "/ai-synlighet/",
           "label": "Les om AI-synlighet",
-          "surface": "dark"
+          "surface": "secondary"
         }
       ]
     },
@@ -73,7 +73,7 @@
       "heading": "Lokale kunder skal slippe å gjette om dere kan hjelpe.",
       "headingAlign": "center",
       "layout": "three-columns",
-      "surface": "soft",
+      "surface": "base-200",
       "body": [
         "Når noen søker etter en leverandør i området, må de raskt se hva dere tilbyr, hvor dere leverer og hvordan de tar kontakt. Vi undersøker om bedriftsprofilen og nettsiden gir et tydelig, sammenhengende svar."
       ],
@@ -127,7 +127,7 @@
       "id": "prioritering",
       "eyebrow": "Kommersiell prioritering",
       "heading": "Vi starter med det som kan gjøre det lettere for en relevant kunde å finne deg.",
-      "surface": "dark",
+      "surface": "secondary",
       "body": [
         "Det kan være en viktig tjenesteside som mangler, en side som svarer uklart, intern struktur som skjuler viktig innhold eller bedriftsinformasjon som ikke henger godt nok sammen.",
         "Vi prioriterer ut fra tilbudet, kundene og hva vi faktisk kan måle. Du skal forstå hvorfor et tiltak kommer før et annet.",

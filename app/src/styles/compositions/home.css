@@ -1,11 +1,11 @@
 /* H-023B: component-owned home composition; palette and primitives belong to app.css/daisyUI. */
 @layer composition {
 
-.invite-home .need-section { background: var(--surface-base); padding-block: 64px 88px; }
+.invite-home .need-section { background: var(--color-base-100); padding-block: 64px 88px; }
 .invite-home .need-card { display: flex; flex-direction: column; padding: var(--panel-pad-lg); background: var(--color-info); text-decoration: none; border: 1px solid transparent; transition: border-color .15s; }
 .invite-home .need-card:hover { border-color: var(--green); }
 .invite-home .need-card-1 { background: var(--surface-lavender); }
-.invite-home .need-card-2 { background: var(--surface-dark); color: var(--color-info); }
+.invite-home .need-card-2 { background: var(--color-secondary); color: var(--color-info); }
 .invite-home .home-card-top { display: flex; justify-content: space-between; align-items: center; gap: var(--gap-sm); margin-bottom: 26px; }
 .invite-home .home-card-top .home-symbol { width: 34px; height: 34px; flex-shrink: 0; }
 .invite-home .discipline { font-size: var(--type-body); font-weight: var(--weight-label); line-height: var(--leading-body); }
