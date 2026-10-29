@@ -190,11 +190,11 @@
       "href": "/#sjekk"
     },
     "visual": {
-      "kind": "none",
+      "kind": "image",
       "image": {
         "kind": "illustration",
         "src": "/images/services/discoveringlocalfavorite-1.png",
-        "alt": "Bli funnet",
+        "alt": "bli funnet",
         "positionX": 50,
         "positionY": 50
       }
