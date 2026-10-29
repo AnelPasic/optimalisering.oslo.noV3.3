@@ -2,7 +2,6 @@
 @layer composition {
 .invite-pricing .package-section { padding-top: 44px; }
 .invite-pricing .package-grid { margin-top: 0; }
-.invite-pricing .package-card h2 { font-size: var(--type-h2); line-height: var(--leading-h2); }
 .invite-pricing .home-section-arbeidsomrader { background: var(--color-base-100); }
 .invite-pricing .home-section-arbeidsomrader .section-items { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .invite-pricing .home-section-kostnader { background: var(--color-base-200); }

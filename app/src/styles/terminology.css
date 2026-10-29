@@ -77,8 +77,6 @@ a.term-trigger:focus-visible { outline: 2px solid currentColor; outline-offset: 
  line-height: var(--leading-small); }
 .glossary-group h2 {
   max-width: 320px;
-  font-size: var(--type-h2);
-  line-height: var(--leading-h2);
 }
 .glossary-list {
   min-width: 0;
