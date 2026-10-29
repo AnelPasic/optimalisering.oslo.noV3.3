@@ -105,13 +105,14 @@ test('alternating PageList keeps index-based left/right placement with fallback 
 
 test('Issue #26 pilot: mediaCards use native daisyUI card parts while other PageList layouts remain editorial',()=>{
  const markup=readFileSync('src/components/PageList.astro','utf8');
- for(const part of ['card card-border bg-base-100','card-body min-w-0','card-title mb-4 text-2xl min-[1101px]:text-3xl','card-actions mt-auto','<figure class="listing-media">']){
+ for(const part of ['card card-border bg-base-100','card-body min-w-0','card-title mb-4 text-2xl','card-actions mt-auto','<figure class="listing-media">']){
   assert.ok(markup.includes(part),'missing native daisyUI media card part '+part);
  }
  assert.match(markup,/config\.layout === 'alternating' && item\.displayVisual && <ListingVisual visual=\{item\.displayVisual\}/);
  assert.match(markup,/config\.layout === 'links'/);
  assert.match(markup,/class="info-item page-list-row"/);
  assert.match(markup,/\.page-list-mediaCards\s*\{/);
+ assert.match(markup,/@media \(min-width: 1101px\) \{ \.page-list-mediaCards \.card-title \{/,'desktop H3 retains original 1100px breakpoint');
  assert.match(markup,/\.page-list-alternating \.listing-item\s*\{/);
  for(const oldRule of [
   '.page-list-mediaCards .listing-item { height: 100%',
