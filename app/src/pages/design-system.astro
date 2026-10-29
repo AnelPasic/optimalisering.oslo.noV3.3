@@ -34,6 +34,19 @@ const heroExamples=[
  {key:'long',label:'Lang overskrift',purpose:'Stresstest, ikke eget CMS-valg',preset:undefined,hero:{...homeHero,layout:'centered' as const,title:'Gjør veien fra det første relevante søket til en tydelig henvendelse enklere for kundene som vurderer bedriften din.',titleEmphasis:'none' as const}},
 ];
 const colors=['base-100','base-200','base-300','base-content','primary','primary-content','secondary','secondary-content','accent','accent-content','neutral','neutral-content','info','info-content','success','success-content','warning','warning-content','error','error-content'];
+const daisyCardSamples = [
+  {name:'base-100',classes:'bg-base-100 text-base-content'},
+  {name:'base-200',classes:'bg-base-200 text-base-content'},
+  {name:'base-300',classes:'bg-base-300 text-base-content'},
+  {name:'primary',classes:'bg-primary text-primary-content'},
+  {name:'secondary',classes:'bg-secondary text-secondary-content'},
+  {name:'accent',classes:'bg-accent text-accent-content'},
+  {name:'neutral',classes:'bg-neutral text-neutral-content'},
+  {name:'info',classes:'bg-info text-info-content'},
+  {name:'success',classes:'bg-success text-success-content'},
+  {name:'warning',classes:'bg-warning text-warning-content'},
+  {name:'error',classes:'bg-error text-error-content'},
+] as const;
 const ds={
  section:'ds-section border-t border-base-300 pt-12 md:pt-16 space-y-8 md:space-y-10',
  group:'ds-group space-y-5 md:space-y-6',
@@ -80,6 +93,20 @@ const ds={
    </section>
    <section class={ds.section}><div class={ds.group}><h2>Kort og varierende antall</h2><p>Hver rad viser et eget antall kort med samme indre avstand.</p></div>
     <div class="space-y-12 md:space-y-16">{[2,3,4].map(count=><div class={ds.grid}><h3>{count} kort</h3><div class:list={['grid gap-6',count===2?'md:grid-cols-2':count===3?'md:grid-cols-3':'md:grid-cols-2 xl:grid-cols-4']}>{Array.from({length:count},(_,index)=><ContentCard title={index===0?'Et tydelig utgangspunkt':'Et neste steg med en bevisst lang norsk overskrift'} text="Vurder innhold, struktur og veien videre i sammenheng." surface={index===1?'base-200':index===2?'secondary':'base-100'}><button slot="actions" class="btn btn-primary">Se eksempelet</button></ContentCard>)}</div></div>)}</div>
+    <div class={ds.group} id="daisyui-kort">
+     <h3>daisyUI Card – semantiske farger</h3>
+     <p>Samme rene daisyUI-kort i alle 11 temafarger. Her kan du sammenligne bakgrunn, tekstkontrast og en standardknapp uten prosjektets egne fargealiaser. Knappene er kun visuelle eksempler.</p>
+     <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3" data-daisy-card-gallery>
+      {daisyCardSamples.map(sample=><article class:list={['card min-w-0 min-h-64 border border-current/10',sample.classes]} data-daisy-card-color={sample.name}>
+       <div class="card-body gap-4">
+        <p class="text-sm font-semibold opacity-80">{sample.name}</p>
+        <h4 class="card-title">Et tydelig kort</h4>
+        <p class="card-copy">Vurder hvordan bakgrunn, overskrift og brødtekst fungerer sammen i et ekte daisyUI-kort.</p>
+        <div class="card-actions mt-auto justify-end"><span class="btn btn-sm">Knapp (demo)</span></div>
+       </div>
+      </article>)}
+     </div>
+    </div>
     <div class={ds.group}><h3>Kort med bilde</h3><article class="card md:card-side bg-base-100"><figure class="md:w-1/2"><img src="/images/home/hero-customer.webp" alt="Eksisterende illustrasjonsfoto fra forsiden" loading="lazy" /></figure><div class="card-body gap-5"><p class="card-copy">Medieeksempel med eksisterende bilde. Ingen ny kundehistorie.</p></div></article></div>
     <div class={ds.group}><h3>Resultatprimitiv</h3><div class="stats stats-vertical md:stats-horizontal bg-base-100 w-full"><div class="stat"><div class="stat-title">Resultatprimitiv</div><div class="stat-value">–</div><div class="stat-desc">Ingen nye resultatpåstander. Faktiske bevisdata er uendret.</div></div><div class="stat"><div class="stat-title">Datagrunnlag</div><div class="stat-value">–</div><div class="stat-desc">Kun demonstrasjon av komponenten.</div></div></div></div>
    </section>

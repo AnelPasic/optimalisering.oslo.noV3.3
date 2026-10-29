@@ -55,3 +55,16 @@ test('OSLO section full-bleed, only inner cards/text are constrained',()=>{
  const card=readFileSync('src/components/ContentCard.astro','utf8');
  for(const color of semantic)assert.ok(card.includes(`'bg-${color} text-`),color);
 });
+
+test('native daisyUI card specimens show all semantic theme colors immediately below four-card row',()=>{
+ const source=readFileSync('src/pages/design-system.astro','utf8');
+ const four=source.indexOf('{[2,3,4].map(count');
+ const gallery=source.indexOf('data-daisy-card-gallery');
+ const image=source.indexOf('<h3>Kort med bilde</h3>');
+ assert.ok(four>=0 && gallery>four && image>gallery,'gallery belongs after four cards, before media cards');
+ for(const color of semantic){
+  const foreground=color.startsWith('base-')?'base-content':color+'-content';
+  assert.ok(source.includes(`name:'${color}',classes:'bg-${color} text-${foreground}'`),`missing native specimen for ${color}`);
+ }
+ assert.ok(source.includes('Knapp (demo)'));
+});
