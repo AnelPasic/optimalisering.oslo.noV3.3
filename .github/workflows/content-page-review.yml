@@ -41,6 +41,8 @@ on:
       - "app/src/lib/site-chrome-theme.ts"
       - "app/tests/theme-semicolon-parity.test.ts"
       - "app/tests/typography-cms-pilot.test.ts"
+      - "app/tests/content-source-of-truth.test.ts"
+      - "coordination/CONTENT-SOURCE-OF-TRUTH.md"
       - "app/scripts/qa-cms-typography-pilot.mjs"
       - "app/scripts/qa-component-first-cards.mjs"
       - "app/tests/component-first-site-cards.test.ts"
@@ -76,6 +78,8 @@ jobs:
         run: node --test tests/typography-heading-dedup.test.ts
       - name: Verify CMS theme semicolon tolerance and security (Light/sunset Dark)
         run: node --test tests/theme-semicolon-parity.test.ts
+      - name: Verify CONTENT-01 source ownership on real page types
+        run: node --test tests/content-source-of-truth.test.ts
       - name: Astro check
         run: npm run check
       - name: Build static pages
