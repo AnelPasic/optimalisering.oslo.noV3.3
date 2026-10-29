@@ -23,7 +23,7 @@ const formatPrice = (value: number) => new Intl.NumberFormat('nb-NO', { maximumF
   <div class="shell">
     {showHeading && <div class="section-heading"><p class="eyebrow">{content.eyebrow}</p><h2>{content.heading}</h2><p class="body-copy">{content.intro}</p></div>}
     <span id="bestill" class="sr-only" aria-hidden="true"></span>
-    <div class="package-grid">{content.items.map((item, index) => <article id={expanded ? item.detailLink.href.split('#')[1] : undefined} class:list={['package-card',`package-card-${index}`,'card card-border bg-base-100 border-base-300 min-w-0',item.recommended&&'is-recommended bg-base-300 border-2 border-secondary']}>
+    <div class="package-grid">{content.items.map((item, index) => <article id={expanded ? item.detailLink.href.split('#')[1] : undefined} class:list={['package-card',`package-card-${index}`,'card card-border min-w-0',item.recommended?'is-recommended bg-base-300 border-2 border-secondary':'bg-base-100 border-base-300']}>
       {expanded && index === 1 && recommendedAnchor && item.detailLink.href.split('#')[1] !== recommendedAnchor && <span id={recommendedAnchor} aria-hidden="true"></span>}
       <div class="card-body min-w-0 gap-0">
       <div class="package-top"><div class="package-heading"><Heading>{item.title}</Heading>{item.recommended && item.badge && <span class="package-badge badge badge-success">{item.badge}</span>}</div>
