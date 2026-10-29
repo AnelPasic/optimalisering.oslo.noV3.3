@@ -31,9 +31,11 @@ test('Home Hero stored href remains unchanged after selected CMS projection',()=
  const home=page('home'),modified=structuredClone(home);
  modified.hero.primaryCta={...modified.hero.primaryCta,suggestedHref:'/kontakt/'};
  const parsed=pageSchema.parse(modified);
- assert.equal(parsed.hero?.primaryCta?.href,'/kontakt/');
+ const hero=parsed.hero;
+ assert.ok(hero && 'primaryCta' in hero,'Homepage must have a typed Hero CTA');
+ assert.equal(hero.primaryCta.href,'/kontakt/');
  assert.equal(home.hero.primaryCta.href,modified.hero.primaryCta.href);
- assert.equal(Object.hasOwn(parsed.hero.primaryCta,'suggestedHref'),false);
+ assert.equal(Object.hasOwn(hero.primaryCta,'suggestedHref'),false);
 });
 test('URL suggestions are canonical, generated and in sync',()=>{
  const run=spawnSync(process.execPath,['scripts/sync-cms-url-options.mjs','--check'],{cwd:new URL('..',import.meta.url),encoding:'utf8'});
