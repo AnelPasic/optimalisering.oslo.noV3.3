@@ -55,6 +55,7 @@ test('existing Oslo responsive sizes are preserved exactly by Tailwind token ada
  const old=read('src/styles/typography.css');
  for(const [name,value] of Object.entries({
   '--text-5xl':'clamp(1.75rem, 4.5vw, 3.25rem)',
+  '--text-6xl':'clamp(1.75rem, 4.5vw, 3.25rem)',
   '--text-4xl':'clamp(2rem, 3.2vw, 3rem)',
   '--text-3xl':'clamp(1.5rem, 2.2vw, 2rem)',
   '--text-2xl':'clamp(1.375rem, 1.8vw, 1.625rem)',
@@ -63,7 +64,7 @@ test('existing Oslo responsive sizes are preserved exactly by Tailwind token ada
   '--text-base':'clamp(1rem, 1.35vw, 1.125rem)'
  }))assert.ok(base.includes(name+': '+value+';'),name+' default changed');
  const expected={
- '--type-display':'--text-5xl',
+ '--type-display':'--text-6xl',
  '--type-h2':'--text-4xl',
  '--type-h3':'--text-3xl',
  '--type-h4':'--text-2xl',
@@ -72,6 +73,7 @@ test('existing Oslo responsive sizes are preserved exactly by Tailwind token ada
  '--type-body':'--text-base'
  };
  for(const [key,value] of Object.entries(expected))assert.ok(old.includes(key+': var('+value+');'),key+' no longer uses Tailwind');
+ assert.ok(old.includes('--leading-display: var(--text-6xl--line-height);'));
  assert.ok(base.includes("--font-heading: 'Instrument Sans Variable', sans-serif"));
  assert.ok(base.includes("--font-body: 'Figtree Variable', sans-serif"));
  assert.match(read('src/layouts/SiteLayout.astro'),/typography=\{homeChrome.typography\}/);
