@@ -3,8 +3,6 @@
 
 .invite-home .need-grid, .invite-home .package-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap-lg); margin-top: 44px; }
 .invite-home .package-section { background: var(--color-base-200); }
-.invite-home .package-card { background: none; border: 0; border-top: var(--border-subtle); padding: var(--panel-pad-lg) var(--panel-pad) 0; display: flex; flex-direction: column; min-width: 0; }
-.invite-home .package-card.is-recommended { border-top-color: var(--green); }
 .invite-home .package-heading { display: flex; align-items: center; justify-content: space-between; gap: var(--gap-sm); flex-wrap: wrap; }
 .invite-home .package-descriptor { font-size: var(--type-body-lg); margin-top: 14px; line-height: var(--leading-body); }
 .invite-home .package-card dl { margin: 32px 0; }
@@ -19,9 +17,6 @@
 .invite-home .package-notes p + p { margin-top: 10px; }
 .invite-home .package-budget-note { font-weight: var(--weight-heading); color: var(--ink); }
 .invite-home .package-card .button { margin-top: 24px; }
-@media (max-width: 1100px) {
-  .invite-home .package-card { padding: var(--panel-pad) var(--panel-pad-sm) 0; }
-}
 @media (max-width: 900px) {
   .invite-home .need-grid, .invite-home .package-grid { grid-template-columns: 1fr; }
 }
@@ -31,15 +26,10 @@
 @media (max-width: 650px) {
   .invite-home .need-grid, .invite-home .package-grid { gap: var(--gap); margin-top: 32px; }
 }
-@media (max-width: 650px) {
-  .invite-home .package-card { padding: var(--panel-pad) 0 0; }
-}
 .invite-home .package-offer .package-grid { align-items: start; gap: var(--gap); }
-.invite-home .package-offer .package-card { background: var(--color-base-100); border: var(--border-subtle); }
-.invite-home .package-offer .package-card.is-recommended { background: var(--color-base-300); border: var(--border-featured); }
 .invite-home .package-offer-full { padding-block: 24px 36px; }
-.invite-home .package-offer .package-card { min-height: 770px; padding: var(--panel-pad); }
-.invite-home .package-offer .package-card.is-recommended { padding: calc(var(--panel-pad) - 1px); }
+/* Package-card remains only as a feature-specific hook; daisyUI owns border, surface, padding and radius. */
+.invite-home .package-offer .package-card { min-height: 770px; }
 .invite-home .package-offer .package-top { display: flex; align-items: start; justify-content: space-between; flex-wrap: wrap; gap: var(--gap-sm); min-height: 68px; }
 .invite-home .package-offer .package-heading { display: flex; flex-direction: column; align-items: start; gap: var(--gap-xs); }
 .invite-home .package-offer .package-heading h2, .invite-home .package-offer .package-heading h3 { font-size: var(--type-h4); line-height: var(--leading-h4); }
@@ -96,12 +86,6 @@
 /* Former stand-alone order layout removed: forms now expand in each global package card. */
 @media (max-width: 1100px) {
   .invite-home .package-offer .package-grid { gap: var(--gap-md); }
-}
-@media (max-width: 1100px) {
-  .invite-home .package-offer .package-card { padding-inline: var(--panel-pad); }
-}
-@media (max-width: 1100px) {
-  .invite-home .package-offer .package-card.is-recommended { padding-inline: calc(var(--panel-pad) - 1px); }
 }
 @media (max-width: 900px) { .invite-home .package-offer .package-icon-items.package-combos { grid-template-columns: 1fr; } }
 @media (max-width: 900px) { .invite-home .package-offer .package-combos li { flex-direction: row; } }

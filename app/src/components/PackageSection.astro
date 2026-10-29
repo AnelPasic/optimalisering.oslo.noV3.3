@@ -23,8 +23,9 @@ const formatPrice = (value: number) => new Intl.NumberFormat('nb-NO', { maximumF
   <div class="shell">
     {showHeading && <div class="section-heading"><p class="eyebrow">{content.eyebrow}</p><h2>{content.heading}</h2><p class="body-copy">{content.intro}</p></div>}
     <span id="bestill" class="sr-only" aria-hidden="true"></span>
-    <div class="package-grid">{content.items.map((item, index) => <article id={expanded ? item.detailLink.href.split('#')[1] : undefined} class={`package-card package-card-${index} card${item.recommended ? ' is-recommended' : ''}`}>
+    <div class="package-grid">{content.items.map((item, index) => <article id={expanded ? item.detailLink.href.split('#')[1] : undefined} class:list={['package-card',`package-card-${index}`,'card card-border bg-base-100 border-base-300 min-w-0',item.recommended&&'is-recommended bg-base-300 border-2 border-secondary']}>
       {expanded && index === 1 && recommendedAnchor && item.detailLink.href.split('#')[1] !== recommendedAnchor && <span id={recommendedAnchor} aria-hidden="true"></span>}
+      <div class="card-body min-w-0 gap-0">
       <div class="package-top"><div class="package-heading"><Heading>{item.title}</Heading>{item.recommended && item.badge && <span class="package-badge badge badge-success">{item.badge}</span>}</div>
       <div class="package-price"><p>{item.pricePrefix && <span class="package-price-prefix">{item.pricePrefix} </span>}<span class="package-price-amount">{formatPrice(item.price)}</span> <span class="package-price-unit">{item.priceSuffix}</span></p><p class="small-copy">{item.vatSuffix}</p></div></div>
       <p class="package-descriptor">{item.descriptor}</p>
@@ -44,6 +45,7 @@ const formatPrice = (value: number) => new Intl.NumberFormat('nb-NO', { maximumF
         <p class="package-selection">{item.selectionRule}</p>
         {item.priceNote && <p class="package-price-note">{item.priceNote}</p>}
       </div></details>
+      </div>
     </article>)}</div>
     {showNotes && <div class="package-notes body-copy"><p class="package-budget-note">{content.adBudgetNote}</p><a class="text-link package-uncertain" href="/#sjekk">{content.labels.uncertain}<Arrow /></a></div>}
   </div>

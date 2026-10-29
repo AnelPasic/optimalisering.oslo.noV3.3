@@ -66,6 +66,63 @@ try {
   }
   await page.close();
  }
+
+ // Native cards on live business sections and pricing retain presentation and behavior.
+ for(const width of [390,768,1440]){
+  const page=await browser.newPage({viewport:{width,height:900}});
+  for(const route of ['/synlighet/','/priser/']){
+   const response=await page.goto(origin+route,{waitUntil:'networkidle'});
+   assert.equal(response.status(),200,route);
+   await page.evaluate(()=>document.fonts.ready);
+   for(const theme of ['optimalisering','sunset']){
+    const state=await page.evaluate(theme=>{
+     document.documentElement.dataset.theme=theme;
+     const section=document.querySelector('.home-section-behov');
+     const packages=[...document.querySelectorAll('.package-offer .package-card')];
+     const cardNodes=section?[...section.querySelectorAll('.section-items > article')]:[];
+     const regular=packages.filter(p=>!p.classList.contains('is-recommended'));
+     const featured=packages.find(p=>p.classList.contains('is-recommended'));
+     const sample=packages[0];
+     const rects=packages.map(p=>p.getBoundingClientRect());
+     return {
+      route:location.pathname,
+      count:cardNodes.length,
+      sectionCards:cardNodes.length>0&&cardNodes.every(x=>x.classList.contains('card')&&!x.classList.contains('info-item')&&!!x.querySelector('.card-body')),
+      sectionLink:cardNodes.length>0&&cardNodes.every(x=>!x.querySelector('a')||!!x.querySelector('.card-actions .text-link')),
+      legacyMixed:document.querySelectorAll('.info-item.card').length,
+      packageCount:packages.length,
+      packageNative:packages.every(p=>p.classList.contains('card')&&p.classList.contains('card-border')&&p.querySelector(':scope > .card-body')!==null),
+      packageBodyPadding:sample?parseFloat(getComputedStyle(sample.querySelector('.card-body')).paddingLeft):0,
+      packageBorder:regular.map(p=>parseFloat(getComputedStyle(p).borderTopWidth)),
+      featuredBorder:featured?parseFloat(getComputedStyle(featured).borderTopWidth):0,
+      expandedDetails:packages.filter(p=>p.querySelector('.package-details')).length,
+      orderForms:packages.filter(p=>p.querySelector('[data-package-order-form]')).length,
+      columnCount:rects.length>1?new Set(rects.map(r=>Math.round(r.top))).size:0,
+      overflow:document.documentElement.scrollWidth-innerWidth
+     };
+    },theme);
+    assert.equal(state.legacyMixed,0,'Mixed legacy info-item.card remains '+route);
+    if(route==='/synlighet/'&&state.count>0){
+     assert.equal(state.sectionCards,true,'Service visual cards must use native ContentCard');
+     assert.equal(state.sectionLink,true,'Existing text CTA style is preserved');
+    }
+    if(route==='/priser/'){
+     assert.equal(state.packageCount,3,'Three approved offers remain visible');
+     assert.equal(state.packageNative,true,'Pricing packages need native card-body and card-border');
+     assert.ok(state.packageBodyPadding>=16,'daisyUI card-body padding missing');
+     assert.ok(state.packageBorder.every(v=>v>=1),'Regular package borders missing');
+     assert.ok(state.featuredBorder>=2,'Recommended package distinction lost');
+     assert.equal(state.expandedDetails,3,'Package details lost');
+     assert.equal(state.orderForms,3,'Package order forms lost');
+     const expectedRows=width<=900?3:1;
+     assert.equal(state.columnCount,expectedRows,'Package grid responsive layout changed '+width);
+    }
+    assert.ok(state.overflow<=2,'Horizontal overflow '+route+' '+width+' '+theme);
+    console.log('PASS #26 sections/packages',route,width,theme,state.count,state.packageCount);
+   }
+  }
+  await page.close();
+ }
 }finally{
  await browser.close();
  await new Promise(r=>server.close(r));
