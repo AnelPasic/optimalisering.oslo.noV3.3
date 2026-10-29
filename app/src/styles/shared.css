@@ -16,7 +16,7 @@ button { cursor: pointer; }
 .shell { width: min(1200px, calc(100% - 96px)); margin-inline: auto; }
 h1, h2, h3, h4, p { margin: 0; }
 h1, h2, h3, h4 { font-family: var(--heading); font-weight: var(--weight-heading); text-wrap: balance; }
-h1 { font-size: var(--type-display); line-height: var(--leading-display); letter-spacing: -.052em; }
+h1 { font-size: var(--type-display); line-height: var(--leading-display); letter-spacing: var(--tracking-tight); }
 h2 { font-size: var(--type-h2); line-height: var(--leading-h2); letter-spacing: -.04em; }
 h3 { font-size: var(--type-h3); line-height: var(--leading-h3); letter-spacing: -.035em; }
 h4 { font-size: var(--type-h4); line-height: var(--leading-h4); }

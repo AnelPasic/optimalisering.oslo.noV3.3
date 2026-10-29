@@ -2043,6 +2043,52 @@ content:
             type: boolean
             required: true
             description: Gjelder både toppmeny, mobilmeny og lagret systempreferanse.
+          - name: typography
+            label: Typografi (Tailwind CSS v4)
+            type: object
+            description: Valgfritt. Standard lar dagens Oslo-design stå uendret. Bruk eksisterende Tailwind-tokens.
+            fields:
+              - name: fontFamily
+                label: Skriftfamilie
+                type: select
+                options:
+                  values:
+                    - { name: current, label: Dagens Instrument Sans + Figtree (standard) }
+                    - { name: instrument, label: Instrument Sans overalt }
+                    - { name: figtree, label: Figtree overalt }
+              - name: scale
+                label: Tekststørrelser
+                type: select
+                options:
+                  values:
+                    - { name: normal, label: Dagens størrelser (standard) }
+                    - { name: compact, label: Kompakt }
+                    - { name: large, label: Stor }
+              - name: lineHeight
+                label: Linjehøyde
+                type: select
+                options:
+                  values:
+                    - { name: normal, label: Dagens linjehøyde (standard) }
+                    - { name: relaxed, label: Luftigere }
+              - name: tracking
+                label: Bokstavavstand
+                type: select
+                options:
+                  values:
+                    - { name: normal, label: Dagens avstand (standard) }
+                    - { name: tight, label: Tettere overskrifter }
+              - name: weight
+                label: Skriftvekt
+                type: select
+                options:
+                  values:
+                    - { name: normal, label: Dagens vekt (standard) }
+                    - { name: strong, label: Tyngre overskrifter }
+              - name: cssVariables
+                label: CSS-variabler (avansert)
+                type: text
+                description: "Kun godkjente eksisterende Tailwind v4-tokens i én :root { --text-5xl: clamp(1.75rem, 4.5vw, 3.25rem); }-blokk. Ingen eksterne fonter, CSS-selectorer eller @import."
           - name: themes
             label: Tema og utseende (daisyUI)
             type: object

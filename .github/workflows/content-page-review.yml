@@ -47,5 +47,9 @@ jobs:
         run: npm run check
       - name: Build static pages
         run: npm run build
+      - name: Install Chromium for native typography parity
+        run: npx playwright install --with-deps chromium
+      - name: Verify Oslo computed typography unchanged and native CMS overrides functional
+        run: node scripts/qa-cms-typography-pilot.mjs
       - name: Validate generated links and page metadata
         run: node scripts/audit-build.mjs
