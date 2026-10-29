@@ -37,6 +37,8 @@ on:
       - "app/src/styles/terminology.css"
       - "app/tests/typography-heading-dedup.test.ts"
       - "app/src/lib/site-chrome-typography.ts"
+      - "app/src/lib/site-chrome-theme.ts"
+      - "app/tests/theme-semicolon-parity.test.ts"
       - "app/tests/typography-cms-pilot.test.ts"
       - "app/scripts/qa-cms-typography-pilot.mjs"
       - ".github/workflows/content-page-review.yml"
@@ -69,6 +71,8 @@ jobs:
         run: node --test tests/typography-cms-pilot.test.ts
       - name: Verify global heading ownership and intentional exceptions
         run: node --test tests/typography-heading-dedup.test.ts
+      - name: Verify CMS theme semicolon tolerance and security (Light/sunset Dark)
+        run: node --test tests/theme-semicolon-parity.test.ts
       - name: Astro check
         run: npm run check
       - name: Build static pages
