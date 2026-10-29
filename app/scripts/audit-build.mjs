@@ -26,7 +26,7 @@ for (const [url, page] of paths) {
   assert.ok(html.includes('name="description"'), `${url}: description`);
   assert.ok(html.includes(`href="https://optimalisering.oslo.no${url}"`), `${url}: canonical`);
   assert.ok(html.includes('lang="nb"'), `${url}: Norwegian document language`);
-  if (process.env.SITE_STAGE !== 'production') assert.ok(html.includes('content="noindex, nofollow"'), `${url}: preview noindex`);
+  if (!['404', 'design-system', 'design-system/global-elements'].includes(page.slug)) assert.ok(!html.includes('content="noindex, nofollow"'), `${url}: no global noindex; Cloudflare owns indexing`);
   if (page.slug === 'design-system') assert.ok(html.includes('content="noindex, nofollow"'), 'Internal design-system always stays noindex');
   assert.ok(!/P10[1-5]|Oslo Privatklinikk|Tankeverksted|Oracles|Beck Maskin|Gram Car Carriers/.test(html), `${url}: no unapproved proof`);
   if (!['home', 'priser', 'synlighet', 'konvertering'].includes(page.slug)) assert.ok(!/4[\s,.]?490|6[\s,.]?990/.test(html), `${url}: frozen exploratory prices`);
@@ -59,5 +59,5 @@ for (const [url, html] of documents) {
   }
 }
 assert.ok(existsSync('dist/404.html'));
-assert.ok(readFileSync('dist/robots.txt', 'utf8').includes(process.env.SITE_STAGE === 'production' ? 'Allow: /' : 'Disallow: /'));
-console.log(`Static QA passed: ${paths.size} pages, ${linksChecked} internal links/anchors, titles, canonicals, IDs, preview indexing and proof/price limits.`);
+assert.ok(readFileSync('dist/robots.txt', 'utf8').includes('Allow: /'));
+console.log(`Static QA passed: ${paths.size} pages, ${linksChecked} internal links/anchors, titles, canonicals, IDs, Cloudflare-managed indexing and proof/price limits.`);
