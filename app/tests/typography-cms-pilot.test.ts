@@ -4,7 +4,7 @@ import {readFileSync} from 'node:fs';
 import YAML from 'yaml';
 import {parseTypographyVariables,typographySchema,typographyOverridesCss,typographyVariables} from '../src/lib/site-chrome-typography.ts';
 import {siteChrome} from '../src/lib/site-chrome-data.ts';
-const read=path=>readFileSync(path,'utf8');
+const read=(path:string)=>readFileSync(path,'utf8');
 const appearance=JSON.parse(read('src/content/site-chrome/appearance.json'));
 test('existing OWNER theme remains unchanged and optional typography does not affect defaults',()=>{
  assert.equal(appearance.typography,undefined);
@@ -15,9 +15,9 @@ test('existing OWNER theme remains unchanged and optional typography does not af
 });
 test('CMS has structured native Tailwind type controls and advanced token editor',()=>{
  const cms=YAML.parse(read('../.pages.yml'));
- const editor=cms.content.flatMap(x=>x.items??[]).find(x=>x.name==='siteAppearance');
+ const editor=cms.content.flatMap((x:any)=>x.items??[]).find((x:any)=>x.name==='siteAppearance');
  assert.ok(editor,'siteAppearance CMS entry');
- assert.deepEqual(editor.fields.find(x=>x.name==='typography').fields.map(x=>x.name),
+ assert.deepEqual(editor.fields.find((x:any)=>x.name==='typography').fields.map((x:any)=>x.name),
  ['fontFamily','scale','lineHeight','tracking','weight','cssVariables']);
 });
 test('existing Oslo responsive sizes are preserved exactly by Tailwind token adapters',()=>{

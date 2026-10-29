@@ -49,7 +49,7 @@ test('The existing shared layout always emits canonical, SEO metadata and basic 
   assert.match(pageLayout, /'@context': 'https:\/\/schema\.org'/);
   assert.match(pageLayout, /'@type': 'Organization'/);
   assert.match(pageLayout, /script type="application\/ld\+json"/);
-  assert.match(pageLayout, /site\.preview \|\| noindex/);
+  assert.match(pageLayout, /\{noindex && <meta name="robots" content="noindex, nofollow" \/>\}/);
   for (const page of [routes, glossary, notFound]) assert.match(page, /<SiteLayout\b/);
 });
 
