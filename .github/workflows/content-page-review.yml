@@ -41,6 +41,7 @@ on:
       - "app/tests/theme-semicolon-parity.test.ts"
       - "app/tests/typography-cms-pilot.test.ts"
       - "app/scripts/qa-cms-typography-pilot.mjs"
+      - "app/scripts/qa-component-first-cards.mjs"
       - ".github/workflows/content-page-review.yml"
 
 permissions:
@@ -81,5 +82,7 @@ jobs:
         run: npx playwright install --with-deps chromium
       - name: Verify Oslo computed typography unchanged and native CMS overrides functional
         run: node scripts/qa-cms-typography-pilot.mjs
+      - name: Verify native media cards across mobile/tablet/desktop and both themes
+        run: node scripts/qa-component-first-cards.mjs
       - name: Validate generated links and page metadata
         run: node scripts/audit-build.mjs

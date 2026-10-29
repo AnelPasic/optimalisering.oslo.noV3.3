@@ -19,9 +19,13 @@ const displayedItems = items.map(item => ({ ...item, displayVisual: pageListPres
     <ul class:list={['page-list', `page-list-${config.layout}`]} data-count={items.length}>
       {displayedItems.map(item => <li>
         {config.layout === 'mediaCards' || config.layout === 'alternating' ?
-          <article class="info-item listing-item" data-has-visual={!!item.displayVisual} data-visual-kind={item.displayVisual?.kind ?? 'none'} data-surface={config.layout === 'mediaCards' ? 'base-100' : undefined}>
-            {config.layout === 'mediaCards' && item.displayVisual && <ListingVisual visual={item.displayVisual} />}
-            <div class="listing-copy"><h3>{item.title}</h3><p>{item.summary}</p>{item.href&&<a class="text-link" href={item.href}>{item.label}<Arrow diagonal /></a>}</div>
+          <article class:list={['listing-item min-w-0',config.layout === 'mediaCards'?'card card-border bg-base-100 h-full overflow-hidden':'info-item']} data-has-visual={!!item.displayVisual} data-visual-kind={item.displayVisual?.kind ?? 'none'} data-surface={config.layout === 'mediaCards' ? 'base-100' : undefined}>
+            {config.layout === 'mediaCards' && item.displayVisual && <figure class="listing-media"><ListingVisual visual={item.displayVisual} /></figure>}
+            <div class:list={['listing-copy',config.layout === 'mediaCards'&&'card-body min-w-0 flex-1 items-start gap-0']}>
+              <h3 class:list={[config.layout === 'mediaCards'&&'card-title mb-4 text-[length:var(--type-h3)] leading-[var(--leading-h3)]']}>{item.title}</h3>
+              <p class:list={[config.layout === 'mediaCards'&&'mb-6 text-base-content']}>{item.summary}</p>
+              {item.href&&(config.layout === 'mediaCards'?<div class="card-actions mt-auto"><a class="text-link text-base-content" href={item.href}>{item.label}<Arrow diagonal /></a></div>:<a class="text-link" href={item.href}>{item.label}<Arrow diagonal /></a>)}
+            </div>
             {config.layout === 'alternating' && item.displayVisual && <ListingVisual visual={item.displayVisual} />}
           </article> : config.layout === 'links' ? (item.href ? <a class="text-link" href={item.href}>{item.title}<Arrow diagonal /></a> : <span class="font-semibold">{item.title}</span>) :
           <article class="info-item page-list-row"><h3>{item.title}</h3><p>{item.summary}</p>{item.href&&<a class="text-link" href={item.href}>{item.label}<Arrow diagonal /></a>}</article>}
@@ -32,7 +36,7 @@ const displayedItems = items.map(item => ({ ...item, displayVisual: pageListPres
   .page-list { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--gap); }
   .page-list li { min-width: 0; }
   .page-list .page-list-row { padding: var(--panel-pad-sm) 0; background: transparent; border: 0; border-radius: 0; box-shadow: none; }
-  .page-list .listing-item { padding: 0; border: 0; min-width: 0; }
+  .page-list-alternating .listing-item { padding: 0; border: 0; min-width: 0; }
   .listing-copy { min-width: 0; }
   .listing-copy .text-link { margin-top: var(--gap); }
   .page-list-alternating { gap: clamp(48px, 5vw, 80px); margin-top: var(--gap-lg); }
@@ -48,9 +52,6 @@ const displayedItems = items.map(item => ({ ...item, displayVisual: pageListPres
   .page-list-mediaCards { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap); margin-top: var(--gap-lg); }
   .page-list-mediaCards[data-count="2"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .page-list-mediaCards[data-count="1"] { grid-template-columns: minmax(0, 1fr); }
-  .page-list-mediaCards .listing-item { height: 100%; display: flex; flex-direction: column; border: var(--border-subtle); border-radius: var(--radius-card); overflow: hidden; }
-  .page-list-mediaCards .listing-copy { padding: var(--panel-pad); flex: 1; display: flex; flex-direction: column; align-items: start; }
-  .page-list-mediaCards .listing-copy .text-link { margin-top: auto; padding-top: var(--gap); }
   .page-list-mediaCards :global(.listing-visual) { aspect-ratio: 3 / 2; border-radius: 0; }
   @media (max-width: 1100px) { .page-list-mediaCards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   @media (max-width: 700px) {
