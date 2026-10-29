@@ -25,6 +25,7 @@ test('PageList selector uses canonical source page slugs and is available in eve
   const pageList=resolveField(sections.blocks.find((block:any)=>block.name==='pageList'),cms.components);
   const settings=pageList.fields.find((field:any)=>field.name==='pageList').fields;
   assert.deepEqual(settings.find((f:any)=>f.name==='source').options.values.map((v:any)=>v.name),['articles','pages','cases'],name);
+  assert.equal(settings.find((f:any)=>f.name==='source').options.values.find((v:any)=>v.name==='pages').label,'Tjenester og produkter',name);
   const entries=settings.find((f:any)=>f.name==='entries');
   assert.equal(entries.list.max,9,name);
   assert.deepEqual(entries.blocks.map((b:any)=>b.name),['page','case','url'],name);

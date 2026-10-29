@@ -399,7 +399,7 @@ components:
                 - name: articles
                   label: Innsiktartikler
                 - name: pages
-                  label: Nettsider og tjenester
+                  label: Tjenester og produkter
                 - name: cases
                   label: Godkjente kundecaser
           - name: mode
