@@ -1,4 +1,5 @@
 import {z} from 'astro/zod';
+import {projectSelectedLinks,safeCmsHref} from './cms-link-choice.ts';
 import {readFileSync,readdirSync} from 'node:fs';
 import {resolve,basename} from 'node:path';
 import {surfaceSchema} from './surface.ts';
@@ -16,7 +17,7 @@ export const sharedContentSchema=z.object({
  eyebrow:z.string().optional(),heading:z.string().trim().min(1),body:z.array(z.string()).default([]),
  headingAlign:headingAlignSchema,layout:contentLayoutSchema,surface:surfaceSchema,
  items:z.array(z.object({title:z.string(),text:z.string(),href:optionalInternalHref,label:z.string().optional(),surface:surfaceSchema,boxVariant:boxVariantSchema})).optional(),
- links:z.array(z.object({label:z.string(),href:z.string().startsWith('/')})).optional(),
+ links:z.array(z.object({label:z.string(),href:z.string().refine(safeCmsHref)})).optional(),
 }).strict().superRefine((section,ctx)=>{
  if(reserved.has(section.id)||/^(?:calc-|scenario-|package-home-|term-|header-(?:desktop|mobile)-submenu-)/.test(section.id))
   ctx.addIssue({code:'custom',path:['id'],message:'Reservert eller beskyttet lenkeanker'});
@@ -28,7 +29,7 @@ const defaultDirectory=()=>resolve(process.cwd(),'src/content/global-content');
 export function readSharedContent(id:string,directory=defaultDirectory()){
  const safeId=key.parse(id);
  const path=resolve(directory,safeId+'.json');
- const data=sharedContentSchema.parse(JSON.parse(readFileSync(path,'utf8')));
+ const data=sharedContentSchema.parse(projectSelectedLinks(JSON.parse(readFileSync(path,'utf8'))));
  if(data.id!==safeId)throw new Error('Global seksjon har forskjellig filnavn og ID: '+safeId);
  return data;
 }

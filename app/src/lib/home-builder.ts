@@ -1,4 +1,5 @@
 import { z } from 'astro/zod';
+import {safeCmsHref} from './cms-link-choice.ts';
 import { surfaceSchema } from './surface.ts';
 import { homeSectionDataSchema } from './home-section-data.ts';
 import {optionalInternalHref} from './optional-internal-href.ts';
@@ -18,7 +19,7 @@ import mechanismMaster from '../content/global-elements/mekanisme.json' with {ty
 import fitMaster from '../content/global-elements/passer.json' with {type:'json'};
 import faqMaster from '../content/global-elements/sporsmal.json' with {type:'json'};
 
-const link=z.object({label:z.string().trim().min(1),href:z.string().startsWith('/')});
+const link=z.object({label:z.string().trim().min(1),href:z.string().refine(safeCmsHref)});
 export const heroPhotoSchema=z.object({kind:z.enum(['photo','illustration']).optional(),src:z.string().regex(/^\/images\/home\/[a-z0-9][a-z0-9-]*\.webp$/),alt:z.string().optional(),positionX:z.number().min(0).max(100),positionY:z.number().min(0).max(100)});
 export const heroSchema=z.object({
  layout:heroLayoutSchema,

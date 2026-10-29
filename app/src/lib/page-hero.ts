@@ -1,11 +1,12 @@
 import {z} from 'astro/zod';
+import {safeCmsHref,projectSelectedLinks} from './cms-link-choice.ts';
 import {heroSchema} from './home-builder.ts';
 import {heroLayoutSchema,heroPresentationSchema} from './hero-presentation.ts';
 import {resolveRouteFamily} from './route-family.ts';
 import {resolveServiceVisual,type ServiceVisual} from './service-visual.ts';
 import {synlighetHeroSchema} from './synlighet-hero.ts';
 
-const link=z.object({label:z.string().trim().min(1),href:z.string().startsWith('/')}).strict();
+const link=z.object({label:z.string().trim().min(1),href:z.string().refine(safeCmsHref)}).strict();
 const image=z.object({src:z.string().regex(/^\/images\/(?:home|services)\/(?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.(?:webp|png|jpe?g|avif|svg)$/),alt:z.string(),positionX:z.number().min(0).max(100),positionY:z.number().min(0).max(100),kind:z.enum(['photo','illustration']),origin:z.enum(['home','page'])}).strict();
 export const heroViewSchema=z.object({
  family:z.enum(['home','service','pricing','index','article','assessment','utility','glossary','error']),layout:heroLayoutSchema,
@@ -54,7 +55,7 @@ export const specialHeroSourceSchema=z.object({hero:synlighetHeroSchema}).strict
 
 /** 404 and glossary use the same authored Hero source/editor as service pages. */
 function resolveSpecialHero(input:unknown,family:'glossary'|'error'):HeroView{
- const hero=synlighetHeroSchema.parse(input);
+ const hero=synlighetHeroSchema.parse(projectSelectedLinks(input));
  const media=hero.visual.kind==='image'?resolveServiceVisual(hero.visual.image):undefined;
  return heroViewSchema.parse({...hero,family,visual:media?{kind:'image',image:{...media,origin:'page'}}:{kind:'none'}});
 }
