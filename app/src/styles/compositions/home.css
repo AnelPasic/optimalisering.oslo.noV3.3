@@ -9,7 +9,7 @@
 .invite-home .home-card-top { display: flex; justify-content: space-between; align-items: center; gap: var(--gap-sm); margin-bottom: 26px; }
 .invite-home .home-card-top .home-symbol { width: 34px; height: 34px; flex-shrink: 0; }
 .invite-home .discipline { font-size: var(--type-body); font-weight: var(--weight-label); line-height: var(--leading-body); }
-.invite-home .need-card h3 { font-size: var(--type-h3); line-height: var(--leading-h3); max-width: 390px; }
+.invite-home .need-card h3 { max-width: 390px; }
 .invite-home .need-card p { margin-top: 18px; margin-bottom: 20px; font-size: var(--type-body); line-height: var(--leading-body); color: var(--muted); overflow-wrap: break-word; }
 .invite-home .need-card-2 p { color: inherit; }
 .invite-home .need-card .text-link { margin-top: auto; }

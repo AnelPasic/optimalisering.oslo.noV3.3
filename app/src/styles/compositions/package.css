@@ -4,7 +4,6 @@
 .invite-home .need-grid, .invite-home .package-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap-lg); margin-top: 44px; }
 .invite-home .package-section { background: var(--color-base-200); }
 .invite-home .package-card { background: none; border: 0; border-top: var(--border-subtle); padding: var(--panel-pad-lg) var(--panel-pad) 0; display: flex; flex-direction: column; min-width: 0; }
-.invite-home .package-card h3 { font-size: var(--type-h3); line-height: var(--leading-h3); }
 .invite-home .package-card.is-recommended { border-top-color: var(--green); }
 .invite-home .package-heading { display: flex; align-items: center; justify-content: space-between; gap: var(--gap-sm); flex-wrap: wrap; }
 .invite-home .package-descriptor { font-size: var(--type-body-lg); margin-top: 14px; line-height: var(--leading-body); }
