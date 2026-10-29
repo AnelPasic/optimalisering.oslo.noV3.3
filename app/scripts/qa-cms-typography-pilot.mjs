@@ -66,6 +66,39 @@ try{
     console.log('PASS',path,width,theme,'baseline',before.h1,before.h2,before.body,'CMS override',after.h1,after.h2,after.body);
    }
   }
+  // Check semantic H2/H3 computed sizes with code defaults, ignoring OWNER's optional H1 CMS test override.
+  // These selectors previously repeated identical font-size/line-height declarations per component.
+  for(const sample of [
+   {path:'/',selector:'.invite-home .need-card h3',role:'h3'},
+   {path:'/konvertering/',selector:'.invite-service .service-package h3',role:'h3'},
+   {path:'/begreper/',selector:'.glossary-group h2',role:'h2'}
+  ]){
+   const response=await page.goto(origin+sample.path,{waitUntil:'networkidle'});
+   assert.equal(response.status(),200,'semantic heading route '+sample.path);
+   for(const theme of ['optimalisering','sunset']){
+    const measured=await page.evaluate(({theme,selector})=>{
+     document.documentElement.dataset.theme=theme;
+     const heading=document.querySelector(selector);
+     if(!heading)return null;
+     const style=getComputedStyle(heading);
+     return {size:parseFloat(style.fontSize),lineHeight:parseFloat(style.lineHeight),
+       maxWidth:style.maxWidth, fontFamily:style.fontFamily};
+    },{theme,selector:sample.selector});
+    assert.ok(measured,'Missing semantic heading '+sample.selector+' at '+width);
+    const target=sample.role==='h2'?clamp(32,3.2,48,width):
+      sample.role==='h3'?clamp(24,2.2,32,width):clamp(22,1.8,26,width);
+    assert.ok(Math.abs(measured.size-target)<.4,
+      sample.selector+' '+width+'/'+theme+' got '+measured.size+' instead of '+target);
+    const expectedLeading=sample.role==='h2'?1.12:sample.role==='h3'?1.2:1.25;
+    assert.ok(Math.abs(measured.lineHeight-target*expectedLeading)<.85,
+      sample.selector+' '+width+'/'+theme+' unexpected line-height: '+measured.lineHeight);
+    assert.match(measured.fontFamily,/Instrument Sans/i);
+    if(sample.selector.includes('need-card')){
+      assert.equal(measured.maxWidth,width<=900?'600px':'390px');
+    }
+    console.log('PASS semantic heading',sample.path,sample.selector,width,theme,measured.size);
+   }
+  }
   await page.close();
  }
 }finally{

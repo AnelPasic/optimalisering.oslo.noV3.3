@@ -2,7 +2,6 @@
 @layer composition {
 
 .invite-home .section-space { padding-block: 104px; }
-.invite-home h2 { font-size: var(--type-h2); line-height: var(--leading-h2); }
 .invite-home .eyebrow { font-size: var(--type-eyebrow); letter-spacing: var(--tracking-eyebrow); margin-bottom: 24px; line-height: var(--leading-small); }
 .invite-home .section-heading .body-copy { margin-top: 28px; }
 .invite-home .home-section-mekanisme { background: var(--color-base-100); }
