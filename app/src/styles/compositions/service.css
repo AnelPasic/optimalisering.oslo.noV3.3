@@ -11,7 +11,6 @@
 .invite-service .service-package-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; max-width: 1080px; margin-top: 48px; }
 .invite-service .service-package { border-top: 2px solid var(--line); padding-top: 28px; min-width: 0; }
 .invite-service .service-package.is-recommended { border-top-color: var(--green); }
-.invite-service .service-package h3 { font-size: var(--type-h3); line-height: var(--leading-h3); }
 .invite-service .service-package > p { color: var(--muted); line-height: var(--leading-body); margin-top: 16px; }
 .invite-service .service-package .package-price { border: 0; margin-top: 12px; }
 .invite-service .home-section-sjekk { background: var(--surface-cta); }

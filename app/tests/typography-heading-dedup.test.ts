@@ -9,6 +9,10 @@ test('h3 type scale has one shared owner, not one declaration per card', () => {
   const home = read('compositions/home.css');
   const packages = read('compositions/package.css');
   const assessment = read('compositions/assessment.css');
+  const sections = read('compositions/sections.css');
+  const pricing = read('compositions/pricing.css');
+  const service = read('compositions/service.css');
+  const terminology = read('terminology.css');
 
   assert.match(shared, /h3\s*\{\s*font-size:\s*var\(--type-h3\);\s*line-height:\s*var\(--leading-h3\);\s*letter-spacing:\s*-.035em;\s*\}/);
   assert.match(home, /\.invite-home \.need-card h3\s*\{\s*max-width:\s*390px;\s*\}/);
@@ -17,6 +21,10 @@ test('h3 type scale has one shared owner, not one declaration per card', () => {
   assert.doesNotMatch(assessment, /\.invite-home \.form-heading h3\s*\{/);
   assert.match(shared, /\.form-heading h3\s*\{\s*margin-bottom:\s*27px;\s*\}/);
   assert.doesNotMatch(shared, /\.assessment-copy h2\s*\{/);
+  assert.doesNotMatch(sections, /\.invite-home h2\s*\{/);
+  assert.doesNotMatch(pricing, /\.invite-pricing \.package-card h2\s*\{/);
+  assert.doesNotMatch(service, /\.invite-service \.service-package h3\s*\{/);
+  assert.match(terminology, /\.glossary-group h2\s*\{\s*max-width:\s*320px;\s*\}/);
 });
 
 test('intentional smaller heading variants remain untouched', () => {
@@ -26,4 +34,5 @@ test('intentional smaller heading variants remain untouched', () => {
   assert.match(shared, /\.process-items h3\s*\{\s*font-size:\s*var\(--type-h4\);\s*line-height:\s*var\(--leading-h4\);\s*\}/);
   assert.match(packages, /\.package-offer \.package-heading h2, \.invite-home \.package-offer \.package-heading h3\s*\{\s*font-size:\s*var\(--type-h4\);\s*line-height:\s*var\(--leading-h4\);\s*\}/);
   assert.match(shared, /\.info-item h3\s*\{\s*margin-bottom:\s*16px;\s*\}/);
+  assert.match(read('compositions/sections.css'), /\.invite-home \.info-item h3\s*\{\s*font-size:\s*var\(--type-h4\);\s*line-height:\s*var\(--leading-h4\);\s*\}/);
 });
