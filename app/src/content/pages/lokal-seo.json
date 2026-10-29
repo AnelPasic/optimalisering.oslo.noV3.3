@@ -142,18 +142,6 @@
     {
       "_block": "global",
       "element": "resultater"
-    },
-    {
-      "_block": "content",
-      "id": "testing-links",
-      "heading": "lenkeankers",
-      "items": [
-        {
-          "title": "Alt tittel",
-          "text": "da beskrivelse of tha beskrivelse",
-          "href": "/priser"
-        }
-      ]
     }
   ],
   "faq": [

@@ -34,21 +34,6 @@
   },
   "sections": [
     {
-      "_block": "content",
-      "visibility": "hidden",
-      "uid": "8ac621d2-d9aa-40ae-9875-ea9c7a2c2462",
-      "name": "Test før behovsregler",
-      "id": "forbehovsvelger",
-      "eyebrow": "Overtekst",
-      "heading": "OVerskrift",
-      "surface": "base-300",
-      "body": [
-        "Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Seksjoner → Pakker og priser.",
-        "Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Seksjoner → Pakker og priser.",
-        "Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Seksjoner → Pakker og priser."
-      ]
-    },
-    {
       "_block": "global",
       "element": "behov"
     },
@@ -75,8 +60,8 @@
   ],
   "faq": [
     {
-      "question": "Hvor fort kan vi forvente resultater",
-      "answer": "Det klassiske er at det kommer ann på veeeeldig mange ting. Først og fremst utgangspunkt og konkurransebilde. Har du ingen trafikk og henvendelser, da er det veldig lett å øke med 100% hver måned i starten, har du 20 000 besøkende og 1 000 bestillinger så ligger du ganske godt ann både med trafikk og konverteringsrate på 5%, da må man se om det er mer trafikk å hente.\nDerfor greit med en gratis sjekk først, da klarer vi å gi noe pekepinn på hva man kan forvente av forbedring."
+      "question": "Hvor fort kan vi forvente resultater?",
+      "answer": "Det avhenger av utgangspunktet, konkurransen og hvilke hindringer vi faktisk kan forbedre. Har dere nesten ingen besøk eller henvendelser i dag, kan små endringer gi store prosentvise utslag. Har nettsiden allerede 20 000 besøk og 1 000 bestillinger, er konverteringsraten 5 %. Da må vi undersøke om det er mer relevant trafikk å hente, om kjøpsveien kan forbedres, eller begge deler. Den gratis sjekken gir oss et bedre grunnlag for å prioritere, men er ingen garanti for bestemte resultater."
     }
   ]
 }

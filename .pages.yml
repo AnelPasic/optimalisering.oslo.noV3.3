@@ -261,7 +261,7 @@ components:
         type: string
         required: true
         pattern: ^[a-z0-9]+(?:-[a-z0-9]+)*$
-        description: Unikt anker på denne siden, for eksempel testing-links. Bruk små bokstaver og bindestrek. Eksisterende ankre bør ikke endres uten å oppdatere interne lenker.
+        description: Unikt anker på denne siden, for eksempel slik-jobber-vi. Bruk små bokstaver og bindestrek. Eksisterende ankre bør ikke endres uten å oppdatere interne lenker.
       - &serviceEyebrow
         name: eyebrow
         label: Overtekst
