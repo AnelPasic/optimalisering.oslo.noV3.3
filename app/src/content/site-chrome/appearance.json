@@ -1,4 +1,5 @@
 {
+  "searchEngineNoindex": true,
   "showThemeSwitch": false,
   "themes": {
     "defaultMode": "light",

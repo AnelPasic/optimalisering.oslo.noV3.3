@@ -2040,6 +2040,11 @@ content:
           rename: false
           delete: false
         fields:
+          - name: searchEngineNoindex
+            label: Skjul nettstedet fra søkemotorer (noindex)
+            type: boolean
+            required: true
+            description: "På = skjul nettstedet for Google og andre søkemotorer. Av = produksjonsdomenet kan indekseres. Preview forblir skjult. Pagefind påvirkes ikke."
           - name: showThemeSwitch
             label: Vis Light | Dark-bryter
             type: boolean

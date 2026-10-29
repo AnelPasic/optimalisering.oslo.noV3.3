@@ -1,2 +1,14 @@
-/*
+# Always noindex on Cloudflare preview hosts regardless of CMS choice.
+# npm run build emits the global header only if CMS noindex is ON.
+https://:version.:subdomain.workers.dev/*
+  X-Robots-Tag: noindex, nofollow
+https://:subdomain.workers.dev/*
+  X-Robots-Tag: noindex, nofollow
+https://:branch.:project.pages.dev/*
+  X-Robots-Tag: noindex, nofollow
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex, nofollow
+/404.html
+  X-Robots-Tag: noindex, nofollow
+/design-system/*
   X-Robots-Tag: noindex, nofollow

@@ -1,6 +1,7 @@
 // Shared customer-facing wording is DRAFT / NON-AUTHORITATIVE.
 // Scope and review record: ./copy-authority.json and /coordination/DECISIONS.md.
 import { isLeadEndpoint } from '../lib/lead';
+import appearance from '../content/site-chrome/appearance.json';
 
 // Search indexing and contact-form availability are independent decisions.
 // This site is hosted as static assets on Cloudflare: a relative /api/leads path
@@ -15,6 +16,7 @@ export const site = {
   providerUrl: 'https://medon.no',
   url: 'https://optimalisering.oslo.no',
   preview: import.meta.env.SITE_STAGE !== 'production',
+  searchEngineNoindex: appearance.searchEngineNoindex !== false, // legacy default stays safe
   leadsEnabled,
   ordersEnabled: leadsEnabled && import.meta.env.PUBLIC_ORDERS_ENABLED === 'true',
   leadEndpoint: endpoint || '/api/leads',
