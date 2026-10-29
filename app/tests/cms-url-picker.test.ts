@@ -48,11 +48,14 @@ test('URL suggestions are canonical, generated and in sync',()=>{
 test('CMS keeps manual fallback whenever a suggested link is selected',()=>{
  const om=page('om');
  assert.deepEqual(om.hero.primaryCta,{label:'Ta en gratis sjekk',href:'/vurdering/',suggestedHref:'/#sjekk'});
- const selected=pageSchema.parse(om);
- assert.equal(selected.hero.primaryCta.href,'/#sjekk');
+ const selected=pageSchema.parse(om).hero;
+ assert.ok(selected && 'primaryCta' in selected,'Om has a native Hero CTA');
+ assert.equal(selected.primaryCta.href,'/#sjekk');
  const cleared=structuredClone(om);
  delete cleared.hero.primaryCta.suggestedHref;
- assert.equal(pageSchema.parse(cleared).hero.primaryCta.href,'/vurdering/');
+ const restored=pageSchema.parse(cleared).hero;
+ assert.ok(restored && 'primaryCta' in restored,'Om Hero CTA remains valid after clearing the choice');
+ assert.equal(restored.primaryCta.href,'/vurdering/');
  assert.deepEqual(om.hero.primaryCta,{label:'Ta en gratis sjekk',href:'/vurdering/',suggestedHref:'/#sjekk'});
  for(const manualHref of [undefined,'','javascript:alert(1)']){
   assert.throws(()=>projectSelectedLinks({label:'Demo',href:manualHref,suggestedHref:'/kontakt/'}),/saved manual href fallback/);
