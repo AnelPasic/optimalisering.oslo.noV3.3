@@ -19,6 +19,12 @@ on:
       - "app/src/lib/service-sections.ts"
       - "app/src/components/**"
       - ".pages.yml"
+      - "app/src/content/site-chrome/appearance.json"
+      - "app/src/styles/app.css"
+      - "app/src/styles/typography.css"
+      - "app/src/lib/site-chrome-typography.ts"
+      - "app/tests/typography-cms-pilot.test.ts"
+      - "app/scripts/qa-cms-typography-pilot.mjs"
       - ".github/workflows/content-page-review.yml"
 
 permissions:
@@ -43,6 +49,8 @@ jobs:
         run: node scripts/sync-page-list-select.mjs --check
       - name: Focused content tests
         run: node --test tests/lokal-seo-page.test.ts tests/google-bedriftsprofil-page.test.ts tests/header-navigation.test.ts tests/seo-commercial-content.test.ts tests/seo-mixed-composition.test.ts tests/service-global-placements.test.ts tests/page-hero.test.ts tests/hero-presets.test.ts tests/synlighet-hero.test.ts tests/seo-editor-order.test.ts tests/universal-global-content.test.ts tests/hero-optional-image-cms.test.ts tests/faq-global-local-polish.test.ts tests/page-list.test.ts tests/h021b-visuals.test.ts tests/page-list-v2.test.ts
+      - name: Validate CMS typography schema, saved values and 6xl mapping
+        run: node --test tests/typography-cms-pilot.test.ts
       - name: Astro check
         run: npm run check
       - name: Build static pages
