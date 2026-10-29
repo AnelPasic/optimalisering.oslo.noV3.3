@@ -15,6 +15,8 @@ export function projectSelectedLinks<T>(input:T):T {
  const selected=source.suggestedHref;
  if(typeof selected==='string'&&selected.trim()){
    if(!safeCmsHref(selected))throw new Error('Invalid selected CMS URL');
+   // A selected link must not silently replace or delete the CMS-saved manual fallback.
+   if(!safeCmsHref(source.href))throw new Error('CMS selected URL requires a saved manual href fallback');
    result.href=selected;
  }else if(selected!=null&&selected!=='')throw new Error('Invalid selected CMS URL');
  return result as T;
