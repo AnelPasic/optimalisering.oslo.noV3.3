@@ -1,6 +1,6 @@
 /* H-023B: shared structure and type roles; palette and primitives belong to app.css/daisyUI. */
 @layer composition {
-:root { --heading: var(--font-heading); --body: var(--font-body); --sage: var(--color-info); --apricot: var(--surface-lavender); }
+:root { --heading: var(--font-heading); --body: var(--font-body); --sage: var(--color-info); --apricot: var(--color-base-300); }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 110px; }
 body { margin: 0; background: var(--cream); color: var(--ink); font-family: var(--body); font-size: var(--type-body); line-height: var(--leading-body); -webkit-font-smoothing: antialiased; }
@@ -57,7 +57,7 @@ p { text-wrap: pretty; }
 .section-items { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 42px; }
 .section-items.two-items { grid-template-columns: repeat(2, 1fr); }
 .info-item { position: relative; padding: var(--panel-pad-lg); display: flex; flex-direction: column; align-items: start; }
-.item-apricot { background: var(--surface-lavender); }
+.item-apricot { background: var(--color-base-300); }
 .item-sage { background: var(--sage); }
 .item-plain { background: transparent; border: 1px solid var(--line); }
 .item-number { font-size: var(--type-label); font-weight: var(--weight-label); border-bottom: var(--border-subtle); padding-bottom: 15px; margin-bottom: 37px; width: 100%; line-height: var(--leading-small); }

@@ -50,7 +50,7 @@
           "title": "Tjenestesider og innhold",
           "text": "Forbedre overskrifter, beskrivelser, svar, interne lenker og veien videre fra en relevant side til kontakt eller kjøp.",
           "boxVariant": "card",
-          "surface": "lavender"
+          "surface": "base-300"
         },
         {
           "title": "Teknisk SEO",
@@ -103,7 +103,7 @@
           "title": "Neste steg",
           "text": "Kan kunden vurdere tilbudet og enkelt gå videre til relevant kontakt eller kjøp?",
           "boxVariant": "card",
-          "surface": "lavender"
+          "surface": "base-300"
         }
       ]
     },
@@ -113,7 +113,7 @@
       "eyebrow": "Teknisk SEO",
       "heading": "Teknisk SEO: Kan Google finne, lese og forstå de viktige sidene?",
       "headingAlign": "left",
-      "surface": "lavender",
+      "surface": "base-300",
       "body": [
         "Viktige sider må kunne indekseres og finnes gjennom tydelige interne lenker. Vi undersøker konkrete hindringer som feil omdirigeringer, utilgjengelig innhold og dårlig mobilopplevelse. Større tekniske endringer avtales separat."
       ]

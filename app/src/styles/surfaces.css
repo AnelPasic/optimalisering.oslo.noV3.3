@@ -9,7 +9,6 @@
   --radius-card-lg: var(--radius-feature);
   --radius-pill: 999px;
 
-  --surface-lavender: var(--color-lavender);
   --surface-cta: var(--color-cta);
   --surface-notice: var(--color-warning);
   --surface-dark-muted: var(--color-dark-muted);
@@ -58,8 +57,6 @@
   border-color: var(--line);
   --border-subtle: 1px solid var(--line);
 }
-:root :is(.content-section[data-surface="lavender"], .content-section .info-item[data-surface="lavender"]) { background: var(--surface-lavender); }
-:root :is(.content-section:is([data-surface="lavender"]), .content-section .info-item:is([data-surface="lavender"])),
 :root .content-section[data-surface] .section-items:not(.process-items) :is(.item-apricot,.item-sage):not([data-surface]),
 :root .invite-service .home-section-behov[data-surface] .info-item:not([data-surface]) {
   --ink: var(--surface-light-ink);
@@ -84,13 +81,13 @@
 :root .content-section[data-surface="base-100"] :is(.info-item,[data-content-card])[data-surface="base-100"],
 :root .content-section[data-surface="base-200"] :is(.info-item,[data-content-card])[data-surface="base-200"],
 :root .content-section[data-surface="info"] :is(.info-item,[data-content-card])[data-surface="info"],
-:root .content-section[data-surface="lavender"] :is(.info-item,[data-content-card])[data-surface="lavender"],
+:root .content-section[data-surface="base-300"] :is(.info-item,[data-content-card])[data-surface="base-300"],
 :root .content-section[data-surface="secondary"] :is(.info-item,[data-content-card])[data-surface="secondary"] {
   border: var(--border-subtle);
 }
 
 /* DaisyUI v5 theme-aware surfaces: full-bleed section, constrained .shell content.
-   Existing legacy choices retain their original paint and are intentionally untouched.
+   Only native daisyUI semantic surfaces are exposed to the CMS.
    Explicit token attributes are shared by home/service and plain cards. */
 :root .content-section[data-surface="base-100"],
 :root .content-section .info-item[data-surface="base-100"] {

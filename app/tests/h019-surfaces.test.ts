@@ -10,7 +10,7 @@ import { surfaceAttribute, surfaceValues } from '../src/lib/surface.ts';
 import { cmsJsonSave, entryForFile, resolveField, assertPreservedContent, localHomeFixture } from './helpers/pages-cms-json.ts';
 
 const values = [...surfaceValues];
-const labels = ['Standard','base-100','base-200','base-300','primary','secondary','accent','neutral','info','success','warning','error','Lavendel (eldre valg)'];
+const labels = ['Standard','base-100','base-200','base-300','primary','secondary','accent','neutral','info','success','warning','error',];
 const cms = YAML.parse(readFileSync('../.pages.yml','utf8'));
 const pages = readdirSync('src/content/pages').filter(f=>f.endsWith('.json')).map(file=>({file, page:file==='home.json'?localHomeFixture():JSON.parse(readFileSync(`src/content/pages/${file}`,'utf8'))}));
 const home = pages.find(p=>p.file==='home.json')!.page;
@@ -68,7 +68,7 @@ test('protected CTA/form rows cannot acquire a surface or be retyped as content'
   for(const slug of ['home','synlighet','konvertering']){
     const original=pages.find(p=>p.page.slug===slug)!.page;
     const target=(p:any)=>slug==='home'?p.sections.find((s:any)=>s.element==='sjekk'):sectionRecords(p).find((s:any)=>s.id==='sjekk');
-    for(const value of ['base-100','base-200','info','lavender','secondary']){const p=structuredClone(original);target(p).surface=value;assert.equal(pageSchema.safeParse(p).success,false);}
+    for(const value of ['base-100','base-200','info','base-300','secondary']){const p=structuredClone(original);target(p).surface=value;assert.equal(pageSchema.safeParse(p).success,false);}
     const p=structuredClone(original);target(p)._block='content';assert.equal(pageSchema.safeParse(p).success,false);
   }
   const p=structuredClone(home);sectionRecords(p).find((s:any)=>s.id==='cms-local-fixture')._block='protected';assert.equal(pageSchema.safeParse(p).success,false);

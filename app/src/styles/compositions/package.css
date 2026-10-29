@@ -37,7 +37,7 @@
 }
 .invite-home .package-offer .package-grid { align-items: start; gap: var(--gap); }
 .invite-home .package-offer .package-card { background: var(--color-base-100); border: var(--border-subtle); }
-.invite-home .package-offer .package-card.is-recommended { background: var(--surface-lavender); border: var(--border-featured); }
+.invite-home .package-offer .package-card.is-recommended { background: var(--color-base-300); border: var(--border-featured); }
 .invite-home .package-offer-full { padding-block: 24px 36px; }
 .invite-home .package-offer .package-card { min-height: 770px; padding: var(--panel-pad); }
 .invite-home .package-offer .package-card.is-recommended { padding: calc(var(--panel-pad) - 1px); }

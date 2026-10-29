@@ -140,8 +140,6 @@ components:
           label: warning
         - name: error
           label: error
-        - name: lavender
-          label: Lavendel (eldre valg)
   contentLayoutChoice:
     type: select
     options:

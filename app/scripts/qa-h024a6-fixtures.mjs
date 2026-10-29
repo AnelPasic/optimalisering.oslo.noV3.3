@@ -14,9 +14,9 @@ const server=createAppServer({config:{enabled:false},staticRoot:resolve('dist')}
 const luminance=rgb=>rgb.slice(0,3).map(v=>{v/=255;return v<=.04045?v/12.92:((v+.055)/1.055)**2.4;}).reduce((v,c,i)=>v+c*[.2126,.7152,.0722][i],0);
 try{for(const key of ['two','three','four-numbered','plain','automatic','plain-four','plain-default','automatic-editorial']){
  if(process.env.QA_CASE&&key!==process.env.QA_CASE)continue;
- const home=structuredClone(baseHome),inner=structuredClone(baseInner),service=structuredClone(baseService),selected=['two','three','four-numbered'].includes(key),four=key==='four-numbered'||key==='plain-four',count=four?4:key==='three'?3:2,parent=key==='three'?'secondary':'lavender';
+ const home=structuredClone(baseHome),inner=structuredClone(baseInner),service=structuredClone(baseService),selected=['two','three','four-numbered'].includes(key),four=key==='four-numbered'||key==='plain-four',count=four?4:key==='three'?3:2,parent=key==='three'?'secondary':'base-300';
  const target=home.sections.find(s=>s.id===(four?'mekanisme':'passer')),items=structuredClone(four||count===3?mechanism.items.slice(0,count):passer.items);
- for(let i=0;i<items.length;i++){items[i].boxVariant=selected?'card':key.startsWith('plain')?'plain':'default';items[i].surface=(count===3?['base-100','secondary','info']:four?['base-100','base-200','info','lavender']:['secondary','base-200'])[i];if(i===0&&key!=='two'){items[i].href='/priser/';items[i].label=home.hero.secondaryCta.label;}}
+ for(let i=0;i<items.length;i++){items[i].boxVariant=selected?'card':key.startsWith('plain')?'plain':'default';items[i].surface=(count===3?['base-100','secondary','info']:four?['base-100','base-200','info','base-300']:['secondary','base-200'])[i];if(i===0&&key!=='two'){items[i].href='/priser/';items[i].label=home.hero.secondaryCta.label;}}
  if(['plain-default','automatic-editorial'].includes(key))for(const item of items)item.surface='default';
  target.items=items;target.surface=parent;target.layout=four?'default':count===3?'three-columns':'two-columns';inner.sections[0]={...inner.sections[0],items:structuredClone(items),surface:parent,layout:count===3?'three-columns':'two-columns'};
  service.sections[0]={...service.sections[0],items:structuredClone(items),surface:parent,layout:count===3?'three-columns':'two-columns'};

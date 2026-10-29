@@ -35,5 +35,5 @@ for (const s of sources.filter(s => !authorityPaths.includes(s.path))) assert.ok
 const failures = inventory.declarations.filter(d => d.path !== 'src/styles/surfaces.css').map(d => ({ ...d, issue: issue(d) })).filter(d => d.issue);
 assert.deepEqual(failures, [], JSON.stringify(failures, null, 2));
 for (const e of exceptions) assert.ok(inventory.declarations.filter(d => d.path === e.path && d.property === e.property && d.value === e.value).length <= 1, `Duplicated exception: ${e.reason}`);
-for (const name of ['radius-button','radius-sm','radius-md','radius-card','radius-card-lg','radius-pill','surface-lavender','border-subtle','border-dark','shadow-soft','panel-pad-sm','panel-pad','panel-pad-lg']) assert.ok(tokens.includes(`--${name}:`));
+for (const name of ['radius-button','radius-sm','radius-md','radius-card','radius-card-lg','radius-pill','border-subtle','border-dark','shadow-soft','panel-pad-sm','panel-pad','panel-pad-lg']) assert.ok(tokens.includes(`--${name}:`));
 console.log(`H-018 source guard PASS: shared radii/shadow/borders, ${exceptions.length} explicit series exceptions; new one-offs fail.`);

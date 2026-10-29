@@ -9,8 +9,8 @@ import {localHomeFixture,cmsJsonSave,entryForFile,resolveField,sectionRecords} f
 
 const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
 const semantic=["base-100","base-200","base-300","primary","secondary","accent","neutral","info","success","warning","error"];
-const legacy=['lavender'];
-test('one Pages CMS surface picker for both section and box, including remaining legacy choices',()=>{
+const legacy=[];
+test('one Pages CMS surface picker for both section and box, with exclusively native semantic choices',()=>{
  const values=cms.components.surfaceChoice.options.values.map((x:any)=>x.name);
  assert.deepEqual(values,['default',...semantic,...legacy]);
  assert.deepEqual(values,[...surfaceValues]);
@@ -67,4 +67,45 @@ test('native daisyUI card specimens show all semantic theme colors immediately b
   assert.ok(source.includes(`name:'${color}',classes:'bg-${color} text-${foreground}'`),`missing native specimen for ${color}`);
  }
  assert.ok(source.includes('Knapp (demo)'));
+});
+
+test('retired lavender surface maps to base-300 in every active CMS and renderer source',()=>{
+ assert.equal(surfaceSchema.safeParse('lavender').success,false);
+ assert.ok(surfaceValues.includes('base-300'));
+ const active=[
+  'src/lib/surface.ts',
+  'src/components/ContentCard.astro',
+  'src/components/HomeSection.astro',
+  'src/components/ListingVisual.astro',
+  'src/styles/app.css',
+  'src/styles/project.css',
+  'src/styles/surfaces.css',
+  'src/styles/header-navigation.css',
+  'src/styles/shared.css',
+  'src/styles/compositions/home.css',
+  'src/styles/compositions/package.css',
+  'src/styles/compositions/hero.css',
+  'src/pages/design-system.astro',
+ ];
+ for(const path of active)assert.ok(!/lavender/i.test(readFileSync(path,'utf8')),path);
+ const files=[
+  'src/content/global-content/lafoitems.json',
+  'src/content/global-elements/passer.json',
+  'src/content/pages/home.json',
+  'src/content/pages/seo.json',
+  'src/content/pages/synlighet.json',
+ ];
+ let all=0;
+ for(const path of files){
+  const src=readFileSync(path,'utf8');
+  const values=[...src.matchAll(/"surface":\s*"base-300"/g)];
+  assert.ok(!/"surface":\s*"lavender"/.test(src),path);
+  all+=values.length;
+ }
+ assert.ok(all>=7,'source retains all seven migrated lavender surface choices');
+ const css=readFileSync('src/styles/surfaces.css','utf8');
+ assert.ok(css.includes('[data-surface="base-300"]'));
+ assert.ok(css.includes('--color-base-300'));
+ const cms=readFileSync('../.pages.yml','utf8');
+ assert.ok(!cms.includes('name: lavender'),'old lavender CMS option is retired');
 });
