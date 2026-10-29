@@ -76,6 +76,52 @@ settings:
       create: "Nytt innhold: {path} (via Pages CMS)"
       delete: "Slettet innhold: {path} (via Pages CMS)"
 components:
+  cmsSuggestedHref:
+    type: select
+    description: "Valg i listen brukes som URL. Tøm valget for å bruke manuell URL. Begge redigeringsfeltene lagres, men bare én lenke brukes på nettsiden."
+    options:
+      placeholder: "Søk på sidetittel eller URL"
+      values:
+# CMS_URL_CHOICES_BEGIN
+        - name: "/"
+          label: "SEO, AI-synlighet og konverteringsoptimalisering | Optimalisering Oslo — /"
+        - name: "/#sjekk"
+          label: "Gratis sjekk — /#sjekk"
+        - name: "/ai-synlighet/"
+          label: "AI-synlighet - bli forstått med riktig informasjon | Medon — /ai-synlighet/"
+        - name: "/innsikt/"
+          label: "Innsikt - velg startpunkt og vurder effekten | Medon — /innsikt/"
+        - name: "/innsikt/google-bedriftsprofil/"
+          label: "Google bedriftsprofil - praktisk guide — /innsikt/google-bedriftsprofil/"
+        - name: "/innsikt/hva-bor-optimaliseres-forst/"
+          label: "Hva bør optimaliseres først? — /innsikt/hva-bor-optimaliseres-forst/"
+        - name: "/innsikt/male-effekt-av-optimalisering/"
+          label: "Hvordan måle effekten? — /innsikt/male-effekt-av-optimalisering/"
+        - name: "/kontakt/"
+          label: "Kontakt om Optimalisering Oslo | Medon AS — /kontakt/"
+        - name: "/konvertering/"
+          label: "Konverteringsoptimalisering (CRO) | Optimalisering Oslo — /konvertering/"
+        - name: "/lokal-seo/"
+          label: "Lokal SEO for Google Maps og lokale søk | Medon — /lokal-seo/"
+        - name: "/nettbutikkoptimalisering/"
+          label: "Nettbutikkoptimalisering - fra oppdagelse til kjøp | Medon — /nettbutikkoptimalisering/"
+        - name: "/om/"
+          label: "Om Optimalisering Oslo og Medon AS — /om/"
+        - name: "/personvern/"
+          label: "Personvern - Optimalisering Oslo — /personvern/"
+        - name: "/priser/"
+          label: "Priser på SEO, CRO og digital optimalisering | Optimalisering Oslo — /priser/"
+        - name: "/priser/#optimalisering"
+          label: "Priser og pakker — /priser/#optimalisering"
+        - name: "/seo/"
+          label: "SEO-byrå for bedrifter i Oslo | Optimalisering Oslo — /seo/"
+        - name: "/synlighet/"
+          label: "SEO, lokal SEO og AI-synlighet | Optimalisering Oslo — /synlighet/"
+        - name: "/vilkar/"
+          label: "Vilkår - hva må avtales før videre arbeid? | Medon — /vilkar/"
+        - name: "/vurdering/"
+          label: "Gratis manuell sjekk av nettsiden | Medon — /vurdering/"
+# CMS_URL_CHOICES_END
   sectionVisibility:
     type: select
     options:
@@ -92,10 +138,13 @@ components:
         label: Lenketekst
         type: string
         required: true
+      - name: suggestedHref
+        label: Velg side eller snarvei
+        component: cmsSuggestedHref
       - name: href
-        label: Intern lenke
+        label: Eller skriv URL manuelt
+        description: "Intern sti, anker eller HTTPS-adresse. Listen over har forrang; tøm valget for å bruke den manuelle URL-en."
         type: string
-        pattern: ^/
         required: false
   heroLayoutChoice:
     type: select

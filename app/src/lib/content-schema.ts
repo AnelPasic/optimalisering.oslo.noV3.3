@@ -1,4 +1,5 @@
 import { z } from 'astro/zod';
+import {projectSelectedLinks,safeCmsHref} from './cms-link-choice.ts';
 import { surfaceSchema, sectionModel } from './surface.ts';
 import { headingAlignSchema } from './heading-alignment.ts';
 import {contentLayoutSchema,boxVariantSchema} from './content-presentation.ts';
@@ -12,11 +13,11 @@ import { validateSynlighetSections, resolveSynlighetSections, resolvePageSection
 import {synlighetHeroSchema,legacyHeroKeys} from './synlighet-hero.ts';
 import {optionalInternalHref} from './optional-internal-href.ts';
 
-const link = z.object({label:z.string(),href:z.string().startsWith('/')});
+const link = z.object({label:z.string(),href:z.string().refine(safeCmsHref)});
 export { proofSlotSchema } from './home-section-data.ts';
 const homepage = z.object({}).strict(); // Header/footer have independent global CMS sources.
 export const pageSchema = z.preprocess((input,context)=>{
-  let raw=input as Record<string,any> & {slug?:string;kind?:string;sections:unknown;hero?:unknown};
+  let raw=projectSelectedLinks(input) as Record<string,any> & {slug?:string;kind?:string;sections:unknown;hero?:unknown};
   // Native CMS Hero is now a single authored object. Legacy projections are
   // runtime-only for existing commercial/section components; they are never
   // written back as duplicate CMS fields.
