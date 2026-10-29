@@ -3,7 +3,7 @@
    The smallest public role is 0.875rem (14px at the default root size).
    Narrow-column headings/results reflow; there are no sub-14px exceptions. */
 :root {
-  --type-display: var(--text-5xl);
+  --type-display: var(--text-6xl);
   --type-h1: var(--type-display);
   --type-h2: var(--text-4xl);
   --type-h3: var(--text-3xl);
@@ -24,7 +24,7 @@
   --type-stat: clamp(2rem, 3.5vw, 3.5rem);
   --type-icon: 1.5rem;
 
-  --leading-display: var(--text-5xl--line-height);
+  --leading-display: var(--text-6xl--line-height);
   --leading-h2: var(--text-4xl--line-height);
   --leading-h3: var(--text-3xl--line-height);
   --leading-h4: var(--text-2xl--line-height);

@@ -15,11 +15,11 @@ await once(server,'listening');
 const browser=await chromium.launch({headless:true});
 const origin='http://127.0.0.1:'+server.address().port;
 const cmsCss=typographyOverridesCss(siteChrome.themes,{
- cssVariables:':root { --text-5xl: 3rem; --text-4xl: 2.5rem; --text-base: 1.25rem; }'
+ cssVariables:':root { --text-6xl: 3rem; --text-4xl: 2.5rem; --text-base: 1.25rem; }'
 });
 function clamp(min,vw,max,width){return Math.min(max,Math.max(min,vw*width/100));}
 const expected={
- h1:w=>clamp(28,4.5,52,w),
+ h1:w=>clamp(44,4.5,52,w),
  h2:w=>clamp(32,3.2,48,w),
  body:w=>clamp(16,1.35,18,w)
 };
@@ -53,14 +53,14 @@ try{
     assert.ok(before.overflow<=2,'baseline overflow '+path+' '+width+' '+theme);
     await page.addStyleTag({content:cmsCss});
     const after=await page.evaluate(inspect);
-    assert.ok(Math.abs(after.h1-48)<=.35,'H1 did not consume --text-5xl: '+after.h1);
+    assert.ok(Math.abs(after.h1-48)<=.35,'H1 did not consume --text-6xl: '+after.h1);
     assert.ok(Math.abs(after.h2-40)<=.35,'H2 did not consume --text-4xl: '+after.h2);
     assert.ok(Math.abs(after.body-20)<=.35,'Body did not consume --text-base: '+after.body);
     assert.equal(after.header,before.header,'Navigation size must remain identical');
     assert.equal(after.fontHeading,before.fontHeading,'Heading font changed');
     assert.equal(after.fontBody,before.fontBody,'Body font changed');
     assert.ok(after.overflow<=2,'CMS override caused overflow '+path+' '+width+' '+theme);
-    await page.evaluate(()=>[...document.querySelectorAll('style')].filter(s=>s.textContent.includes('--text-5xl:3rem')).forEach(s=>s.remove()));
+    await page.evaluate(()=>[...document.querySelectorAll('style')].filter(s=>s.textContent.includes('--text-6xl:3rem')).forEach(s=>s.remove()));
     const restored=await page.evaluate(inspect);
     for(const key of ['h1','h2','body'])assert.ok(Math.abs(restored[key]-before[key])<=.35,key+' did not restore');
     console.log('PASS',path,width,theme,'baseline',before.h1,before.h2,before.body,'CMS override',after.h1,after.h2,after.body);
