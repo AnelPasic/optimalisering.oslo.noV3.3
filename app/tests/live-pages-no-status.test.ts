@@ -23,10 +23,10 @@ test('all 17 authored pages are live content without redundant approval metadata
 
 test('Pages CMS no longer exposes page or glossary review/authority fields',()=>{
  const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
- const inspect=(entries)=>{
+ const inspect=(entries:any[])=>{
   for(const entry of entries){
    if(entry.path?.startsWith('app/src/content/pages/') || entry.path==='app/src/content/terminology/glossary.json'){
-    assert.equal(entry.fields?.some(f=>f.name==='status'||f.name==='authority'),false,entry.path);
+    assert.equal(entry.fields?.some((f:any)=>f.name==='status'||f.name==='authority'),false,entry.path);
    }
    if(entry.items)inspect(entry.items);
   }
