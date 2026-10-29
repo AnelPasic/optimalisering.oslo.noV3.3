@@ -14,7 +14,8 @@
     "support": "SEO, AI-synlighet, kampanje og konverteringsoptimalisering for bedrifter i Oslo og resten av Norge. Du vinner med ren mattematikk.",
     "primaryCta": {
       "label": "Ta en gratis sjekk",
-      "href": "/#sjekk"
+      "href": "/#sjekk",
+      "suggestedHref": "/#sjekk"
     },
     "secondaryCta": {
       "label": "Se priser",
