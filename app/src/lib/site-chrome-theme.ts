@@ -23,6 +23,12 @@ const color = /^(?:oklch\(\s*\d+(?:\.\d+)?%?\s+\d+(?:\.\d+)?\s+\d+(?:\.\d+)?(?:\
 const length = /^(?:0|\d+(?:\.\d+)?(?:px|rem|em|%))$/;
 const number = /^(?:0|1|0\.\d+)$/;
 const directive = /^@plugin\s+["']daisyui\/theme["']\s*\{([\s\S]*?)\}\s*;?\s*$/;
+// MWS #33: tolerate only a missing semicolon directly before a known theme
+// variable on a NEW line. Everything else still goes through strict validation.
+const missingSemicolon = new RegExp(
+  String.raw`([^;\s])([ \t]*\r?\n[ \t]*)(?=(?:${[...colorKeys, ...numericKeys].join('|')})[ \t]*:)`,
+  'g',
+);
 
 export interface ParsedTheme {
   name: string;
@@ -41,7 +47,7 @@ export function parseDaisyTheme(source: string, expectedMode: ThemeMode): Parsed
   const match = directive.exec(withoutComments);
   if (!match) throw new Error('Lim inn én komplett @plugin "daisyui/theme" { ... }-blokk.');
   const fields = new Map<string, string>();
-  for (const piece of match[1].split(';')) {
+  for (const piece of match[1].replace(missingSemicolon, '$1;$2').split(';')) {
     const declaration = piece.trim();
     if (!declaration) continue;
     const colon = declaration.indexOf(':');
