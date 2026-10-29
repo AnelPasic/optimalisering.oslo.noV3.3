@@ -1,2 +1,2 @@
-/*
-  X-Robots-Tag: noindex, nofollow
+# No global X-Robots-Tag. OWNER manages search engine indexing in Cloudflare.
+# Explicit 404/design-system HTML meta policies remain local.

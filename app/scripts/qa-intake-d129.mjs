@@ -53,9 +53,9 @@ try {
         }).filter(x => x.right > innerWidth + 1 || x.left < -1).slice(0, 14);
       });
       assert.equal(overflow, null, `${name} ${width} overflow: ${JSON.stringify(overflow)}`);
-      assert.match(await page.locator('meta[name=robots]').getAttribute('content'), /noindex/);
+      assert.equal(await page.locator('meta[name=robots]').count(),0,'normal pages must not have hardcoded global noindex');
       await page.screenshot({ path: resolve(output, `${name}-${width}.png`), fullPage: true });
-      checks.push(`${name} ${width}px: zero POST, disabled transport, native submit guarded, no overflow, noindex`);
+      checks.push(`${name} ${width}px: zero POST, disabled transport, native submit guarded, no overflow, no app-level noindex`);
     }
   }
   const noJs = await browser.newPage({ javaScriptEnabled: false });
