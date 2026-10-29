@@ -42,5 +42,24 @@ test('URL suggestions are canonical, generated and in sync',()=>{
  assert.equal(run.status,0,run.stderr||run.stdout);
  const yaml=readFileSync(new URL('../../.pages.yml',import.meta.url),'utf8');
  assert.match(yaml,/name: suggestedHref\n\s+label: Velg side eller snarvei\n\s+component: cmsSuggestedHref/);
- assert.match(yaml,/name: href\n\s+label: Eller skriv URL manuelt/);
+ assert.match(yaml,/name: href\n\s+label: Manuell URL \(beholdes som reserve\)/);
+});
+
+test('CMS keeps manual fallback whenever a suggested link is selected',()=>{
+ const om=page('om');
+ assert.deepEqual(om.hero.primaryCta,{label:'Ta en gratis sjekk',href:'/vurdering/',suggestedHref:'/#sjekk'});
+ const selected=pageSchema.parse(om).hero;
+ assert.ok(selected && 'primaryCta' in selected,'Om has a native Hero CTA');
+ assert.equal(selected.primaryCta.href,'/#sjekk');
+ const cleared=structuredClone(om);
+ delete cleared.hero.primaryCta.suggestedHref;
+ const restored=pageSchema.parse(cleared).hero;
+ assert.ok(restored && 'primaryCta' in restored,'Om Hero CTA remains valid after clearing the choice');
+ assert.equal(restored.primaryCta.href,'/vurdering/');
+ assert.deepEqual(om.hero.primaryCta,{label:'Ta en gratis sjekk',href:'/vurdering/',suggestedHref:'/#sjekk'});
+ for(const manualHref of [undefined,'','javascript:alert(1)']){
+  assert.throws(()=>projectSelectedLinks({label:'Demo',href:manualHref,suggestedHref:'/kontakt/'}),/saved manual href fallback/);
+ }
+ const yaml=readFileSync(new URL('../../.pages.yml',import.meta.url),'utf8');
+ assert.match(yaml,/name: href\n\s+label: Manuell URL \(beholdes som reserve\)\n[\s\S]*?type: string\n\s+required: true/);
 });

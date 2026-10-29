@@ -182,10 +182,10 @@ components:
         label: Velg side eller snarvei
         component: cmsSuggestedHref
       - name: href
-        label: Eller skriv URL manuelt
-        description: "Intern sti, anker eller HTTPS-adresse. Listen over har forrang; tøm valget for å bruke den manuelle URL-en."
+        label: Manuell URL (beholdes som reserve)
+        description: "Obligatorisk reserveadresse. Behold eksisterende URL når du velger en side over. Det valgte alternativet brukes først; tøm valget for å bruke denne URL-en."
         type: string
-        required: false
+        required: true
   heroLayoutChoice:
     type: select
     description: Bildet, bildetype, beskrivelse og utsnitt bevares når du velger Sentrert uten bilde. Velg et annet oppsett for å vise det igjen. Sentrert med bilde viser tekst uten bilde hvis siden ikke har et lagret bilde. Teksten kommer først på mobil.
