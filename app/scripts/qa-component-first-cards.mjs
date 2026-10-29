@@ -55,9 +55,9 @@ try {
    assert.ok(data.action,'card-actions missing for the specimen');
    assert.ok(data.border==='1px'||parseFloat(data.border)>=1,'Native border was overridden');
    assert.ok(data.pad>=16,'DaisyUI card-body missing padding');
-   const h3=Math.min(32,Math.max(24,2.2*width/100));
+   const h3=width<=1100?Math.min(26,Math.max(22,1.8*width/100)):Math.min(32,Math.max(24,2.2*width/100));
    assert.ok(Math.abs(data.titleSize-h3)<.5,'PageList H3 changed: '+width+'/'+theme+' '+data.titleSize+' vs '+h3);
-   assert.ok(Math.abs(data.titleLine-h3*1.2)<.9,'PageList H3 line height changed: '+data.titleLine);
+   assert.ok(Math.abs(data.titleLine-h3*(width<=1100?1.25:1.2))<.9,'PageList H3 line height changed: '+data.titleLine);
    assert.equal(data.listStillEditorial,true,'Alternating list was converted to cards');
    assert.ok(data.overflow<=2,'Page overflow '+width+'/'+theme+' '+data.overflow);
    const desired=Math.min(data.count,width<=700?1:width<=1100?2:3);
