@@ -105,7 +105,7 @@ test('all rendered Hero families preserve copy, CTA, image crop and separate Pac
   {
    assert.equal(view.title,page.hero.title,page.slug);
    assert.equal(view.support,page.hero.support,page.slug);
-   assert.equal(view.primaryCta?.href,page.kind==='assessment'?undefined:page.hero.primaryCta.href,page.slug);
+   assert.equal(view.primaryCta?.href,page.kind==='assessment'?undefined:(page.hero.primaryCta.suggestedHref||page.hero.primaryCta.href),page.slug);
    if(view.visual.kind==='image'){
     const image=page.hero.visual.image;
     assert.equal(view.visual.image.src,image.src,page.slug);
