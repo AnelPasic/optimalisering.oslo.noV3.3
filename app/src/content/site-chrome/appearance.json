@@ -9,6 +9,9 @@
   },
   "typography": {
     "scale": "normal",
-    "lineHeight": "normal"
+    "lineHeight": "normal",
+    "fontFamily": "current",
+    "tracking": "normal",
+    "weight": "normal"
   }
 }
