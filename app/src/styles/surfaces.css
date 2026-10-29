@@ -9,7 +9,7 @@
   --radius-card-lg: var(--radius-feature);
   --radius-pill: 999px;
 
-  --surface-mint: var(--color-mint);
+  --surface-mint: var(--color-info);
   --surface-lavender: var(--color-lavender);
   --surface-dark: var(--color-secondary);
   --surface-mint-strong: var(--color-accent);
