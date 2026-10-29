@@ -76,6 +76,46 @@ settings:
       create: "Nytt innhold: {path} (via Pages CMS)"
       delete: "Slettet innhold: {path} (via Pages CMS)"
 components:
+  globalMarkdownBody:
+    type: rich-text
+    list: {}
+    description: "Ett Markdown-felt per kolonne. H2–H6, punktlister, nummererte lister, lenker, fet og kursiv. H1 tilhører Hero."
+    options:
+      format: markdown
+      media: false
+      switcher: true
+  globalMarkdownItems:
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{title}"
+    fields:
+      - name: title
+        label: Tittel
+        type: string
+        required: true
+      - name: text
+        label: Beskrivelse (rik tekst / Markdown)
+        type: rich-text
+        required: true
+        options:
+          format: markdown
+          media: false
+          switcher: true
+      - name: href
+        label: Intern lenke
+        type: string
+        pattern: '^(\s*|/.*)$'
+      - name: label
+        label: Lenketekst
+        type: string
+      - name: boxVariant
+        label: Boksvariant
+        component: boxVariantChoice
+      - name: surface
+        label: Boksfarge
+        component: surfaceChoice
   cmsSuggestedHref:
     type: select
     description: "Valg i listen brukes som URL. Tøm valget for å bruke manuell URL. Begge redigeringsfeltene lagres, men bare én lenke brukes på nettsiden."
@@ -2344,8 +2384,12 @@ content:
           - *serviceHeadingAlign
           - *serviceLayout
           - *serviceSurface
-          - *serviceBody
-          - *serviceItems
+          - name: body
+            label: Avsnitt / kolonner (Markdown)
+            component: globalMarkdownBody
+          - name: items
+            label: Kort / alternativer (Markdown)
+            component: globalMarkdownItems
           - *serviceLinks
       - name: globalSelector
         label: Behovsvelger

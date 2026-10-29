@@ -1,6 +1,8 @@
 ---
 import Arrow from './Arrow.astro';
 import TermText from './TermText.astro';
+import RichMarkdown from './RichMarkdown.astro';
+import {hasRichMarkdown} from '../lib/rich-markdown';
 import {surfaceAttribute,type Surface} from '../lib/surface';
 interface Props {title:string;text:string;surface?:Surface;number?:string;href?:string;label?:string;titleTerms?:string[];textTerms?:string[];}
 const {title,text,surface,number,href,label,titleTerms=[],textTerms=[]}=Astro.props;
@@ -11,7 +13,7 @@ const surfaces={'base-100':'bg-base-100 text-base-content','base-200':'bg-base-2
  <div class="card-body min-w-0 gap-5">
   {number&&<span class="font-semibold" aria-hidden="true" data-card-number>{number}</span>}
   <h3 class="card-title"><TermText text={title} terms={titleTerms}/></h3>
-  <p class="card-copy"><TermText text={text} terms={textTerms}/></p>
+  {hasRichMarkdown(text)?<RichMarkdown text={text} variant="card"/>:<p class="card-copy"><TermText text={text} terms={textTerms}/></p>}
   {(href||Astro.slots.has('actions'))&&<div class="card-actions mt-3"><slot name="actions">{href&&<a class="btn btn-primary" href={href}>{label||title}<Arrow diagonal/></a>}</slot></div>}
  </div>
 </article>

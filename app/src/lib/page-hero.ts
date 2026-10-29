@@ -24,7 +24,8 @@ export type HeroView=z.infer<typeof heroViewSchema>;
 type Source={slug?:string;kind:string;hero?:unknown;eyebrow?:string;title?:string;intro?:string;cta?:{label:string;href:string};heroVisual?:ServiceVisual;composition?:unknown;proof?:unknown;sections:{id:string;links?:{label:string;href:string}[]}[]};
 type Commercial={packages:{eyebrow:string;heading:string;intro:string}};
 /** One-way adapters project existing owned content; no second editable source. */
-export function resolvePageHero(page:Source,commercial?:Commercial):HeroView{
+export function resolvePageHero(authoredPage:Source,commercial?:Commercial):HeroView{
+ const page=projectSelectedLinks(authoredPage);
  const route=resolveRouteFamily(page);
  if(route.family==='home'){
   const hero=heroSchema.parse(page.hero);
