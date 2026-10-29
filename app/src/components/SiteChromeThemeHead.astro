@@ -1,11 +1,12 @@
 ---
 import type { ChromeThemes } from '../lib/site-chrome-theme';
+import { typographyOverridesCss, type ChromeTypography } from '../lib/site-chrome-typography';
 import { chromeThemeSchema } from '../lib/site-chrome-theme';
 import { parseDaisyTheme, themeOverridesCss } from '../lib/site-chrome-theme';
-interface Props { themes: ChromeThemes; enabled?: boolean; }
+interface Props { themes: ChromeThemes; typography?: ChromeTypography; enabled?: boolean; }
 const themes = chromeThemeSchema.parse(Astro.props.themes);
 const enabled = Astro.props.enabled ?? true;
-const overrides = themeOverridesCss(themes);
+const overrides = themeOverridesCss(themes) + '\n' + typographyOverridesCss(themes, Astro.props.typography);
 const defaultMode = themes.defaultMode;
 const lightName = parseDaisyTheme(themes.lightCss, 'light').name;
 const darkName = parseDaisyTheme(themes.darkCss, 'dark').name;

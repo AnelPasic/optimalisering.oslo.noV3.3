@@ -9,7 +9,7 @@ import {localHomeFixture,cmsJsonSave,entryForFile,resolveField,sectionRecords} f
 
 const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
 const semantic=["base-100","base-200","base-300","primary","secondary","accent","neutral","info","success","warning","error"];
-const legacy=[];
+const legacy: string[]=[];
 test('one Pages CMS surface picker for both section and box, with exclusively native semantic choices',()=>{
  const values=cms.components.surfaceChoice.options.values.map((x:any)=>x.name);
  assert.deepEqual(values,['default',...semantic,...legacy]);

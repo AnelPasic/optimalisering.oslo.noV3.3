@@ -10,6 +10,7 @@ import appearance from '../content/site-chrome/appearance.json' with { type: 'js
 export const siteChrome = homeSectionDataSchema.shape.chrome.parse({
   ...header, ...footer,
   themes: appearance.themes,
+  ...('typography' in appearance ? { typography: (appearance as typeof appearance & { typography?: unknown }).typography } : {}),
   headerOptions: { ...header.headerOptions, showThemeSwitch: appearance.showThemeSwitch },
 });
 export type SiteChrome = typeof siteChrome;
