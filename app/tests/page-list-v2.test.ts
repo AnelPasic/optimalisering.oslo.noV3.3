@@ -86,7 +86,7 @@ test('PageList can be created, reordered and saved without changing page-owned o
  for(const name of ['home.json','synlighet.json','priser.json','om.json','managed-articles/innsikt-hva-bor-optimaliseres-forst.json']){
   const original=JSON.parse(readFileSync('src/content/pages/'+name,'utf8'));
   const copy=structuredClone(original);
-  const next={_block:'pageList',id:'relatert-'+name.replace('.json',''),heading:'Se også',pageList:config({mode:'manual',source:'pages',entries:[{_block:'page',slug:'priser'},{_block:'url',href:'/kontakt/',title:'Kontakt oss'}]})};
+  const next={_block:'pageList',id:'relatert-'+name.replace('.json','').replaceAll('/','-'),heading:'Se også',pageList:config({mode:'manual',source:'pages',entries:[{_block:'page',slug:'priser'},{_block:'url',href:'/kontakt/',title:'Kontakt oss'}]})};
   copy.sections.splice(1,0,next);
   const editor=entryForFile(cms,'app/src/content/pages/'+name);
   const saved=JSON.parse(cmsJsonSave(original,copy,editor,cms));

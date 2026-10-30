@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 import YAML from 'yaml';
+import {pageFilePaths} from './helpers/page-sources.ts';
 import { entryForFile, cmsJsonSave } from './helpers/pages-cms-json.ts';
 
 const config = YAML.parse(readFileSync('../.pages.yml', 'utf8'));
@@ -17,14 +18,19 @@ function sitePageEditors(entries: Entry[]): Entry[] {
 
 test('Readonly URL-slug comes first, immediately before SEO and Hero on every page editor', () => {
   const editors = sitePageEditors(config.content);
-  assert.equal(editors.length, 11, 'One unified service editor, nine other fixed editors and one managed article collection');
+  assert.equal(editors.length, 10, 'Two unified collections and eight other fixed page editors');
   const services=editors.find(editor=>editor.name==='services');
   assert.ok(services);
   assert.deepEqual(services.fields?.slice(0,3).map(field=>field.name),['slug','seo','hero']);
   assert.equal(services.fields?.[0]?.readonly,undefined,'Create needs editable URL slug');
   assert.equal(services.fields?.[0]?.required,true);
-  const originalEditors = editors.filter(editor => !['services', 'managedArticles'].includes(editor.name));
-  assert.equal(originalEditors.length, 9);
+  const articles=editors.find(editor=>editor.name==='insightArticles');
+  assert.ok(articles);
+  assert.deepEqual(articles.fields?.slice(0,3).map(field=>field.name),['slug','seo','hero']);
+  assert.equal(articles.fields?.[0]?.readonly,undefined);
+  assert.equal(articles.fields?.[0]?.required,true);
+  const originalEditors=editors.filter(editor=>!['services','insightArticles'].includes(editor.name));
+  assert.equal(originalEditors.length,8);
   for (const editor of originalEditors) {
     assert.equal(editor.fields?.[0]?.name, 'slug', `${editor.label}: URL-slug must appear first`);
     const seo = editor.fields?.[1];
@@ -61,7 +67,7 @@ test('The existing shared layout always emits canonical, SEO metadata and basic 
 });
 
 test('URL-slug remains the original read-only route value for every published page source', () => {
-  const files = readdirSync('src/content/pages').filter(file => file.endsWith('.json'));
+  const files = pageFilePaths();
   assert.equal(files.length, 17, 'Include new sources when expanding page inventory');
   for (const file of files) {
     const path = `app/src/content/pages/${file}`;
@@ -69,7 +75,7 @@ test('URL-slug remains the original read-only route value for every published pa
     assert.ok(entry, file);
     const original = JSON.parse(readFileSync(`src/content/pages/${file}`, 'utf8'));
     assert.equal(typeof original.slug, 'string', file);
-    assert.equal(file.replace(/\.json$/, ''), original.slug.substring(original.slug.lastIndexOf('/') + 1), file);
+    assert.equal(file.replace(/^managed-articles\/innsikt-/,'').replace(/\.json$/, ''), original.slug.substring(original.slug.lastIndexOf('/') + 1), file);
     const saved = JSON.parse(cmsJsonSave(original, original, entry, config));
     assert.equal(saved.slug, original.slug, file);
     assert.deepEqual(saved.seo, original.seo, file);

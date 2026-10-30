@@ -2,13 +2,14 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 import YAML from 'yaml';
+import {pageFilePaths} from './helpers/page-sources.ts';
 import { pageSchema } from '../src/lib/content-schema.ts';
 import { getGlobalElement } from '../src/lib/home-builder.ts';
 import { serviceGlobalIds, validateServiceGlobalProof } from '../src/lib/service-sections.ts';
 import { cmsJsonSave, entryForFile, resolveField, assertPreservedContent } from './helpers/pages-cms-json.ts';
 
 const cms = YAML.parse(readFileSync('../.pages.yml','utf8'));
-const sources = readdirSync('src/content/pages').filter(file => file.endsWith('.json')).sort();
+const sources = pageFilePaths();
 const reference = (element: string, visibility?: 'hidden') => ({ _block: 'global', element, ...(visibility ? { visibility } : {}) });
 
 test('every native page editor offers the same eight canonical global content references', () => {
@@ -58,7 +59,7 @@ test('every non-home page can hide a placed reference without destroying the sou
 });
 
 test('invalid, forged and duplicate global placements fail on pricing and ordinary pages too', () => {
-  for (const file of ['priser.json','om.json','innsikt.json','google-bedriftsprofil.json','konvertering.json']) {
+  for (const file of ['priser.json','om.json','innsikt.json','managed-articles/innsikt-google-bedriftsprofil.json','konvertering.json']) {
     const original = JSON.parse(readFileSync('src/content/pages/'+file,'utf8'));
     for (const extra of [
       [reference('invalid')],
