@@ -7,7 +7,7 @@ import {resolvePageList} from '../src/lib/page-list.ts';
 import {cmsJsonSave,entryForFile,assertPreservedContent} from './helpers/pages-cms-json.ts';
 
 test('Google bedriftsprofil is one genuine Innsikt page with CMS editing and Lokal SEO link',()=>{
- const file='src/content/pages/google-bedriftsprofil.json';
+ const file='src/content/pages/managed-articles/innsikt-google-bedriftsprofil.json';
  const article=JSON.parse(readFileSync(file,'utf8'));
  const hub=JSON.parse(readFileSync('src/content/pages/lokal-seo.json','utf8'));
  const index=JSON.parse(readFileSync('src/content/pages/innsikt.json','utf8'));
