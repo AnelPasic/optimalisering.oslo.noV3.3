@@ -142,6 +142,7 @@ try {
      noLegacy:document.querySelectorAll('.need-card, [class*="need-card-"], .need-grid').length===0,
      links:cards.map(c=>c.getAttribute('href')),
      colors:cards.map(c=>getComputedStyle(c).backgroundColor),
+     expectedColors:['--color-info','--color-base-300','--color-secondary'].map(token=>{const x=document.createElement('span');x.style.backgroundColor='var('+token+')';document.body.append(x);const bg=getComputedStyle(x).backgroundColor;x.remove();return bg;}),
      padding:cards.map(c=>parseFloat(getComputedStyle(c.querySelector(':scope > .card-body')).paddingLeft)),
      titles:cards.map(c=>parseFloat(getComputedStyle(c.querySelector('h3')).fontSize)),
      iconSizes:cards.map(c=>c.querySelector('svg')?.getBoundingClientRect().width??0),
@@ -153,7 +154,7 @@ try {
    assert.equal(data.native,true,'DaisyUI card/body/actions required');
    assert.equal(data.noLegacy,true,'Legacy selector card classes remain');
    assert.deepEqual(data.links,['/synlighet/','/konvertering/','/#priser']);
-   assert.equal(new Set(data.colors).size,3,'Original three distinct theme surfaces are missing');
+   assert.deepEqual(data.colors,data.expectedColors,'Semantic theme surfaces differ from approved info/base-300/secondary mapping');
    assert.ok(data.padding.every(v=>Math.abs(v-(width>1100?32:24))<.6),'Approved 32/24px responsive padding changed');
    assert.ok(data.iconSizes.every(v=>Math.abs(v-34)<.6),'Original 34px selector icons changed');
    assert.ok(data.rounded.every(v=>v>0),'DaisyUI rounded cards missing');
