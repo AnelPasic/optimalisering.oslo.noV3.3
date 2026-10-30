@@ -34,7 +34,7 @@ const sections = page.sections.map(section => section.id === 'kostnader' ? {
     ? section.globalElement==='priser'
       ? <><GlobalContentSection element={section.globalElement} pricingExpanded faqItems={page.faq} /><Comparison packages={packages} /></>
       : <GlobalContentSection element={section.globalElement} pricingExpanded={false} faqItems={page.faq} />
-    : section._block==='pageList' ? <PageList section={section} /> : <ContentSection section={section} linkVariant={section.id==='gratis'?'button':undefined}>
+    : section._block==='pageList' ? <PageList section={section} /> : <ContentSection section={section} linkVariant={section.id==='gratis'?'button':undefined} infoSurface={section.id==='gratis'}>
     {section.id === 'arbeidsomrader' && <div class="package-notes body-copy"><p>{packages.areasLabel}: {packages.areas.join(' / ')}.</p><p>{packages.foundationNote}</p></div>}
   </ContentSection>)}
   {!hasGlobalFaq && <Faq items={page.faq} id="sporsmal" heading={commercial.faqVisible===false?undefined:commercial.faqHeading} eyebrow={commercial.faqVisible===false?undefined:commercial.faqEyebrow} />}

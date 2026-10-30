@@ -43,7 +43,8 @@ test('OSLO section full-bleed, only inner cards/text are constrained',()=>{
   const i=source.indexOf('<section ');
   assert.ok(i>=0);
   assert.ok(source.indexOf('<div class="shell">',i)>i);
-  assert.ok(source.indexOf('data-surface={surfaceAttribute(section.surface',i)>i);
+  assert.ok(source.indexOf('data-surface={',i)>i);
+  assert.ok(source.includes('surfaceAttribute(section.surface'),'CMS surface resolution remains in the renderer');
  }
  const shared=readFileSync('src/styles/shared.css','utf8');
  assert.ok(shared.includes('.shell { width: min(1200px, calc(100% - 96px))'));

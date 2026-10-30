@@ -13,7 +13,6 @@
 .invite-service .service-package.is-recommended { border-top-color: var(--green); }
 .invite-service .service-package > p { color: var(--muted); line-height: var(--leading-body); margin-top: 16px; }
 .invite-service .service-package .package-price { border: 0; margin-top: 12px; }
-.invite-service .home-section-sjekk { background: var(--surface-cta); }
 .invite-service .home-section-sjekk .section-links { margin-left: calc((100% + 96px) / 2); }
 @media (max-width: 1100px) {
   .invite-service .home-section-sammenheng .section-links, .invite-service .home-section-sjekk .section-links { margin-left: calc((100% + 36px) / 2); }

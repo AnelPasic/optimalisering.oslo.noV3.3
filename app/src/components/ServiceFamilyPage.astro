@@ -27,7 +27,7 @@ validateServiceGlobalProof(page,records);
   <CommercialHero content={resolvePageHero(page)} />
   {visibleServiceSections(page).map(section=><>
     {section.globalElement ? <GlobalContentSection element={section.globalElement} faqItems={page.faq} /> : <>
-    {section._block==='pageList'?<PageList section={section} />:<ContentSection section={section} visualId={capability.sectionVisuals.find(v=>v.section===section.id)?.visual} defaultSurface={capability.sectionSurfaces.find(v=>v.section===section.id)?.surface} />}
+    {section._block==='pageList'?<PageList section={section} />:<ContentSection section={section} visualId={capability.sectionVisuals.find(v=>v.section===section.id)?.visual} defaultSurface={capability.sectionSurfaces.find(v=>v.section===section.id)?.surface} infoSurface={section.id==='sjekk'} />}
     {!cmsOnly&&!globalProof&&capability.proofAfter===section.id&&page.proof&&<Proof content={page.proof} records={records} primary />}
     {!cmsOnly&&bridge?.after===section.id&&<PricingBridge content={commercial.packages} link={bridge.link} serviceName={bridge.serviceName} />}
     </>}
