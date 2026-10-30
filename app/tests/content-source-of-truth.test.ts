@@ -29,8 +29,12 @@ test('CONTENT-01: canonical sources are separate native Pages CMS owners, not du
   assert.equal(editor('contentTone').path,'coordination/CONTENT-TONE.json');
   assert.equal(editor('proofCases').path,'app/src/content/proof');
   const globalFiles=global.items.filter((x:any)=>x.name!=='sharedContent').map((x:any)=>x.path);
-  assert.deepEqual(globalFiles.map((x:string)=>x.split('/').pop()?.replace('.json','')).sort(),fixed.slice().sort());
-  assert.equal(new Set(globalFiles).size,8);
+  assert.deepEqual(globalFiles.map((x:string)=>x.split('/').pop()?.replace('.json','')).sort(),fixed.filter(x=>x!=='priser').sort());
+  assert.equal(new Set(globalFiles).size,7);
+  const price=cms.content.find((x:any)=>x.name==='priceGroup');
+  assert.deepEqual(price.items.map((x:any)=>x.name),['pricePage','globalPackages']);
+  assert.equal(price.items[1].path,'app/src/content/global-elements/priser.json');
+  assert.equal(price.items[0].path,'app/src/content/pages/priser.json');
 });
 
 test('CONTENT-01: real homepage, service and article use the same one-owner mental model',()=>{
