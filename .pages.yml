@@ -1365,7 +1365,28 @@ content:
             hidden: true
           - *a4
           - *standardHero
-          - *a6
+          - name: sections
+            label: Content sections
+            type: block
+            required: true
+            blockKey: _block
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{index}. {heading}{element}"
+            blocks:
+              - name: content
+                label: Content section
+                component: sectionContent
+              - name: pageList
+                label: Page list
+                component: sectionPageList
+              - name: global
+                label: Shared master
+                component: serviceGlobalPlacement
+              - name: sharedContent
+                label: Shared content
+                component: sharedContentPlacement
           - *a7
       - name: serviceSeo
         label: SEO - seksjonsbygger
@@ -1684,7 +1705,28 @@ content:
             hidden: true
           - *a4
           - *standardHero
-          - *a6
+          - name: sections
+            label: Content sections
+            type: block
+            required: true
+            blockKey: _block
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{index}. {heading}{element}"
+            blocks:
+              - name: content
+                label: Content section
+                component: sectionContent
+              - name: pageList
+                label: Page list
+                component: sectionPageList
+              - name: global
+                label: Shared master
+                component: serviceGlobalPlacement
+              - name: sharedContent
+                label: Shared content
+                component: sharedContentPlacement
           - *a7
   - name: om
     label: Om tjenesten
