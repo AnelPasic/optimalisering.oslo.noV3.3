@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync, readdirSync} from 'node:fs';
 import {pageSchema} from '../src/lib/content-schema.ts';
 import {sharedContentSchema} from '../src/lib/shared-content.ts';
+import {pageFilePaths} from './helpers/page-sources.ts';
 
 const read = (path:string) => JSON.parse(readFileSync(path,'utf8'));
 const home=read('src/content/pages/home.json');
@@ -34,7 +35,7 @@ test('CONTENT-02: SEO fakta preserves three independent cards and source-backed 
 });
 
 test('CONTENT-02: all seventeen existing page files still validate and keep safe section anchors',()=>{
- const names=readdirSync('src/content/pages').filter(name=>name.endsWith('.json'));
+ const names=pageFilePaths();
  assert.equal(names.length,17);
  for(const name of names){
    const raw=read('src/content/pages/'+name);
