@@ -1,14 +1,14 @@
 # Optimalisering Oslo – kanonisk sitemap og innholdsgrunnlag
 
-**Oppdatert:** 30.10.2026 · **Beslutningspunkter:** 36 avklart (35 JA / 1 NEI) · **Godkjente tjeneste-URL-er:** 41 · **Neste punkt:** 37 (ikke besluttet)
+**Oppdatert:** 30.10.2026 · **Beslutningspunkter:** 37 avklart (36 JA / 1 NEI) · **Godkjente tjeneste-URL-er:** 42 · **Neste punkt:** 38 (ikke besluttet)
 
 Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **Kun optimalisering.oslo.no**, ikke medon.no. Ingen av de foreslåtte sidene er implementert av denne sitemap-arbeidsflyten.
 
-## Gjeldende versjon (36)
+## Gjeldende versjon (37)
 
-- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-36-2026-10-30.md)
-- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-36-2026-10-30.json)
-- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-36-2026-10-30.md)
+- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-37-2026-10-30.md)
+- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-37-2026-10-30.json)
+- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-37-2026-10-30.md)
 - [Innholdsbrief-standard / utarbeidelseskrav](./innholdsbrief-standard.md)
 - [GitHub issues-struktur og oppgavemal – snapshot fra punkt 32](./github-issues-plan-32-2026-10-30.md)
 
@@ -34,6 +34,8 @@ Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **K
 
 **Punkt 36 – JA:** Shopify-optimalisering godkjent som egen plattformspesifikk underside `/nettbutikkoptimalisering/shopify/`. Briefen beskriver Shopify-analyse, tema, apper, ytelse, produkt-/kategorisider, checkout, SEO, sporing og løpende arbeid med konkrete forbehold.
 
-**Punkt 37 – venter:** WooCommerce-optimalisering, foreslått `/nettbutikkoptimalisering/woocommerce/`. Må vurderes opp mot eksisterende nettbutikk- og Shopify-tjenester.
+**Punkt 37 – JA med kommentar:** WooCommerce-optimalisering på `/nettbutikkoptimalisering/woocommerce/`. Kundens ønskede Magento-kritiske posisjonering er lagret ordrett og redaksjonelt konkretisert: Magento/Adobe Commerce kan være unødvendig tungt for mange SMB-er; vurder Shopify eller en enklere løsning når den samlede økonomien og funksjonsbehovene tilsier det. Ikke publiser «Magento er trash» som universelt faktum.
 
-**Historikk:** Versjonerte snapshots 32–35 beholdes uendret. I #34 ble én side avvist og omfanget samlet under kjøpsflyt; #35 godkjente gjenkjøp og #36 Shopify-optimalisering.
+**Punkt 38 – venter:** WordPress-optimalisering på `/wordpress-optimalisering/`. Avgjør om en egen tjenesteside for vanlige WordPress-nettsider er hensiktsmessig.
+
+**Historikk:** Versjonerte snapshots 32–36 beholdes uendret. #34 avviste en egen handlekurv-URL, #35 godkjente gjenkjøp, #36 Shopify, og #37 WooCommerce med plattformstrategisk kommentar.
