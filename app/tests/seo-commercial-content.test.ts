@@ -33,7 +33,7 @@ test('SEO service copy is editable in native Pages CMS without modifying commerc
  const page=JSON.parse(readFileSync('src/content/pages/seo.json','utf8'));
  const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
  const entry=entryForFile(cms,'app/src/content/pages/seo.json');
- assert.equal(entry?.type,'file');
+ assert.equal(entry?.type,'collection');
  const edited=structuredClone(page);
  edited.sections[0].body.push('Kun syntetisk SEO CMS-fixture.');
  const serialized=JSON.parse(cmsJsonSave(page,edited,entry,cms));
