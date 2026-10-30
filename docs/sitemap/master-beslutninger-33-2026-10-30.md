@@ -2,7 +2,7 @@
 
 **Versjon:** 1.3 · **Dato:** 30.10.2026 · **Beslutningspunkt:** 33 fullført, 34 venter · **Status:** Plan / godkjente beslutninger, ikke implementert
 
-> **Avgrensning:** Dette gjelder kun **optimalisering.oslo.no**. Ikke slå sammen strategi eller URL-struktur med **medon.no**. Godkjent betyr avklart i samtalen, **ikke** at siden er utviklet, publisert eller lagt inn i GitHub.
+> **Avgrensning:** Dette gjelder kun **optimalisering.oslo.no**. Ikke slå sammen strategi eller URL-struktur med **medon.no**. Godkjent betyr avklart i samtalen og dokumentert i GitHub, **ikke** at siden er utviklet eller publisert.
 
 ## 1. Handoff – les dette først
 
@@ -667,7 +667,7 @@ Bygg en stor, gjennomarbeidet og kommersielt sterk tjenestearkitektur for Optima
 
 1. **Én overordnet EPIC** – `[EPIC] Optimalisering Oslo – sitemap, tjenester og publiseringsplan` med mål, lenke til masterfiler, nåværende beslutningsnummer, beslutningslogg og akseptkriterier.
 2. **Område-issues / underoppgaver** – ni foreslåtte grupper: `SEO`, `Lokal SEO`, `AI-synlighet`, `Konvertering og CRO`, `Landingssider`, `Nettbutikk og Shopping`, `Annonsering`, `Måling/ytelse/UU/drift`, `Pakker, navigasjon og publisering`. Hver område-issue har lenker til sine godkjente sidebriefs og oversikt over avhengigheter.
-3. **Én implementeringsissue per URL når siden faktisk skal bygges** – ikke opprett alle 37 som åpne utviklingsoppgaver før sitemap, pakkematrise og sidemaler er låst. Hver slik issue bør være underoppgave av riktig områdeissue (GitHub støtter ekte sub-issues). En sideissue kan dekke design, tekst, kode, meta, schema, QA og publisering for **én URL**, med avkrysningspunkter.
+3. **Én implementeringsissue per URL når siden faktisk skal bygges** – ikke opprett alle 39 som åpne utviklingsoppgaver før sitemap, pakkematrise og sidemaler er låst. Hver slik issue bør være underoppgave av riktig områdeissue (GitHub støtter ekte sub-issues). En sideissue kan dekke design, tekst, kode, meta, schema, QA og publisering for **én URL**, med avkrysningspunkter.
 
 **Hvorfor:** Én gigantissue blir uoversiktlig for Codex og review. 37 uavhengige issues mister prioriteringer og beslutningskontekst. En trestruktur gir oversikt **og** en håndterlig arbeidsenhet per side når byggingen starter.
 
@@ -701,7 +701,7 @@ Bygg en stor, gjennomarbeidet og kommersielt sterk tjenestearkitektur for Optima
 
 **Forslag til lett metadata:** Labels `type:service-page`, `area:seo|cro|local|ads|shop|etc`, `state:spec-ready|build|qa`; status `Godkjent`, `Klar til bygging`, `Pågår`, `QA`, `Publisert`. Ikke innfør separat tung approval-prosess, siden sidene allerede er besluttet.
 
-**Teknisk begrensning:** GitHub-integrasjonen som ble inspisert støtter opprettelse/oppdatering av issues, men hadde ingen dokumentert operasjon for å knytte native parent/sub-issue-relasjoner. Manuell kobling via GitHub UI eller `gh issue create --parent` kan brukes ved opprettelse. Ingen issues er opprettet her.
+**Teknisk begrensning:** GitHub-integrasjonen som ble inspisert støtter opprettelse/oppdatering av issues, men hadde ingen dokumentert operasjon for å knytte native parent/sub-issue-relasjoner. Manuell kobling via GitHub UI eller støttet GitHub-verktøy kan brukes ved opprettelse. **EPIC #62** og **innholdsbrief #63** er opprettet; egne sideimplementeringsissues er ikke opprettet.
 
 ## 8. Neste beslutning
 
@@ -721,7 +721,7 @@ Vi fortsetter sitemap-gjennomgangen for optimalisering.oslo.no. Bruk vedlagte ma
 
 ## 10. Fullstendig innholdsgrunnlag (beslutning 32)
 
-**Obligatorisk:** Les `optimalisering-oslo-fullstendige-tjenestebriefs-33-2026-10-30.md` sammen med denne masteren. Den gir for alle 39 URL-er:
+**Obligatorisk:** Les `docs/sitemap/fullstendige-tjenestebriefs-33-2026-10-30.md` sammen med denne masteren. Den gir for alle 39 URL-er:
 
 - konkret kundeproblem
 - navngitte leveransepunkter med hver sin forklaring (formatet «Dette kan vi levere»)
