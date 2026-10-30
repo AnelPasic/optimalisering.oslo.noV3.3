@@ -143,6 +143,15 @@ try {
      links:cards.map(c=>c.getAttribute('href')),
      colors:cards.map(c=>getComputedStyle(c).backgroundColor),
      expectedColors:['--color-info','--color-base-300','--color-secondary'].map(token=>{const x=document.createElement('span');x.style.backgroundColor='var('+token+')';document.body.append(x);const bg=getComputedStyle(x).backgroundColor;x.remove();return bg;}),
+     foregrounds:cards.map(c=>getComputedStyle(c).color),
+     expectedForegrounds:['--color-info-content','--color-base-content','--color-secondary-content'].map(token=>{
+      const x=document.createElement('span');x.style.color='var('+token+')';document.body.append(x);
+      const fg=getComputedStyle(x).color;x.remove();return fg;
+     }),
+     childForegrounds:cards.map(c=>[
+      c.querySelector('h3'),c.querySelector('p'),c.querySelector('.text-link'),c.querySelector('svg'),
+      c.querySelector('.card-body > div > span')
+     ].map(el=>el?getComputedStyle(el).color:null)),
      padding:cards.map(c=>parseFloat(getComputedStyle(c.querySelector(':scope > .card-body')).paddingLeft)),
      titles:cards.map(c=>parseFloat(getComputedStyle(c.querySelector('h3')).fontSize)),
      iconSizes:cards.map(c=>c.querySelector('svg')?.getBoundingClientRect().width??0),
@@ -155,6 +164,10 @@ try {
    assert.equal(data.noLegacy,true,'Legacy selector card classes remain');
    assert.deepEqual(data.links,['/synlighet/','/konvertering/','/#priser']);
    assert.deepEqual(data.colors,data.expectedColors,'Semantic theme surfaces differ from approved info/base-300/secondary mapping');
+   assert.deepEqual(data.foregrounds,data.expectedForegrounds,'Home selector text must pair with daisyUI surface content tokens');
+   for(let i=0;i<3;i++) for(const [k,fg] of data.childForegrounds[i].entries())
+    assert.equal(fg,data.expectedForegrounds[i],'Home selector '+i+' child '+k+' overrides semantic text color in '+theme);
+
    assert.ok(data.padding.every(v=>Math.abs(v-(width>1100?32:24))<.6),'Approved 32/24px responsive padding changed');
    assert.ok(data.iconSizes.every(v=>Math.abs(v-34)<.6),'Original 34px selector icons changed');
    assert.ok(data.rounded.every(v=>v>0),'DaisyUI rounded cards missing');
