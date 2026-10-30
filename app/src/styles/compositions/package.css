@@ -1,7 +1,7 @@
 /* H-023B: component-owned package composition; palette and primitives belong to app.css/daisyUI. */
 @layer composition {
 
-.invite-home .need-grid, .invite-home .package-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap-lg); margin-top: 44px; }
+.invite-home .package-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap-lg); margin-top: 44px; }
 .invite-home .package-section { background: var(--color-base-200); }
 .invite-home .package-heading { display: flex; align-items: center; justify-content: space-between; gap: var(--gap-sm); flex-wrap: wrap; }
 .invite-home .package-descriptor { font-size: var(--type-body-lg); margin-top: 14px; line-height: var(--leading-body); }
@@ -18,13 +18,13 @@
 .invite-home .package-budget-note { font-weight: var(--weight-heading); color: var(--ink); }
 .invite-home .package-card .button { margin-top: 24px; }
 @media (max-width: 900px) {
-  .invite-home .need-grid, .invite-home .package-grid { grid-template-columns: 1fr; }
+  .invite-home .package-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 900px) {
   .invite-home .package-card .button { align-self: start; }
 }
 @media (max-width: 650px) {
-  .invite-home .need-grid, .invite-home .package-grid { gap: var(--gap); margin-top: 32px; }
+  .invite-home .package-grid { gap: var(--gap); margin-top: 32px; }
 }
 .invite-home .package-offer .package-grid { align-items: start; gap: var(--gap); }
 .invite-home .package-offer-full { padding-block: 24px 36px; }
