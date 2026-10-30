@@ -44,7 +44,7 @@ test('final result index remains the alternation authority after filtering, excl
 });
 test('CMS visual blocks expose only kind-specific fields and dedicated safe raster media',()=>{
  const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
- const article=entryForFile(cms,'app/src/content/pages/hva-bor-optimaliseres-forst.json');
+ const article=entryForFile(cms,'app/src/content/pages/managed-articles/innsikt-hva-bor-optimaliseres-forst.json');
  const listing=article.fields.find((f:any)=>f.name==='listing');
  const visual=resolveField(listing.fields.find((f:any)=>f.name==='visual'),cms.components);
  assert.equal(visual.label,'Listevisual');assert.equal(visual.type,'block');assert.equal(visual.blockKey,'kind');
@@ -54,7 +54,7 @@ test('CMS visual blocks expose only kind-specific fields and dedicated safe rast
  const imageBlock=resolveField(visual.blocks.find((b:any)=>b.name==='image'),cms.components);
  assert.equal(imageBlock.fields.find((f:any)=>f.name==='src').options.media,'listingImages');
  assert.deepEqual(imageBlock.fields.map((f:any)=>f.name),['src','alt','positionX','positionY']);
- const original=JSON.parse(readFileSync('src/content/pages/hva-bor-optimaliseres-forst.json','utf8'));let previous=original;
+ const original=JSON.parse(readFileSync('src/content/pages/managed-articles/innsikt-hva-bor-optimaliseres-forst.json','utf8'));let previous=original;
  for(const visual of [[image],[{kind:'icon',icon:'trend'}],[{kind:'none'}],[]]){
   const form=structuredClone(original);form.listing.visual=visual;
   const saved=JSON.parse(cmsJsonSave(previous,form,article,cms));assertPreservedContent(form,saved);
