@@ -75,7 +75,7 @@ test('CONTENT-06: validate create/read/delete in isolated folder; detect duplica
 test('CONTENT-06: static CMS URL suggestions remain for fixed pages; dynamic pages use manual URL or automatic PageList',()=>{
  const urlSync=readFileSync('scripts/sync-cms-url-options.mjs','utf8');
  const listSync=readFileSync('scripts/sync-page-list-select.mjs','utf8');
- for(const source of [urlSync,listSync])assert.match(source,/readdirSync\(pagesDir\)|readdirSync\(root\)/);
+ for(const source of [urlSync,listSync]){assert.match(source,/readdirSync\(dir\)/);assert.match(source,/managed-articles/);assert.match(source,/previous/);}
  // Both legacy picker generators retain pinned suggestions, ignoring new and removed root service slugs; no YAML edit after native Add/Delete.
  const audit=readFileSync('scripts/audit-build.mjs','utf8');
  assert.match(audit,/managed-services/);assert.match(audit,/managed-articles/);
