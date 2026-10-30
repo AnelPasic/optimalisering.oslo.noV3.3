@@ -123,6 +123,46 @@ try {
   }
   await page.close();
  }
+
+ // OWNER 30.10: the three home choice cards use native daisyUI Card (no need-card family).
+ for(const width of [390,768,1440]){
+  const page=await browser.newPage({viewport:{width,height:900}});
+  const response=await page.goto(origin+'/',{waitUntil:'networkidle'});
+  assert.equal(response.status(),200,'homepage selector route');
+  await page.evaluate(()=>document.fonts.ready);
+  for(const theme of ['optimalisering','sunset']){
+   const data=await page.evaluate(theme=>{
+    document.documentElement.dataset.theme=theme;
+    const cards=[...document.querySelectorAll('[data-home-selector-card]')];
+    const grid=cards[0]?.parentElement;
+    return {
+     count:cards.length,
+     columns:grid?getComputedStyle(grid).gridTemplateColumns.split(' ').filter(Boolean).length:0,
+     native:cards.every(c=>c.classList.contains('card')&&!!c.querySelector(':scope > .card-body')&&!!c.querySelector('.card-actions')),
+     noLegacy:document.querySelectorAll('.need-card, [class*="need-card-"], .need-grid').length===0,
+     links:cards.map(c=>c.getAttribute('href')),
+     colors:cards.map(c=>getComputedStyle(c).backgroundColor),
+     padding:cards.map(c=>parseFloat(getComputedStyle(c.querySelector(':scope > .card-body')).paddingLeft)),
+     titles:cards.map(c=>parseFloat(getComputedStyle(c.querySelector('h3')).fontSize)),
+     iconSizes:cards.map(c=>c.querySelector('svg')?.getBoundingClientRect().width??0),
+     rounded:cards.map(c=>parseFloat(getComputedStyle(c).borderTopLeftRadius)),
+     overflow:document.documentElement.scrollWidth-innerWidth
+    };
+   },theme);
+   assert.equal(data.count,3,'Three homepage entry choices remain');
+   assert.equal(data.native,true,'DaisyUI card/body/actions required');
+   assert.equal(data.noLegacy,true,'Legacy selector card classes remain');
+   assert.deepEqual(data.links,['/synlighet/','/konvertering/','/#priser']);
+   assert.equal(new Set(data.colors).size,3,'Original three distinct theme surfaces are missing');
+   assert.ok(data.padding.every(v=>Math.abs(v-(width>1100?32:24))<.6),'Approved 32/24px responsive padding changed');
+   assert.ok(data.iconSizes.every(v=>Math.abs(v-34)<.6),'Original 34px selector icons changed');
+   assert.ok(data.rounded.every(v=>v>0),'DaisyUI rounded cards missing');
+   assert.equal(data.columns,width<=900?1:3,'Three/one column selector layout changed');
+   assert.ok(data.overflow<=2,'Homepage overflow '+width+'/'+theme);
+   console.log('PASS homepage native selector',width,theme,data.colors.join(' / '));
+  }
+  await page.close();
+ }
 }finally{
  await browser.close();
  await new Promise(r=>server.close(r));
