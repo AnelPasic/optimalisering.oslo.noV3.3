@@ -10,9 +10,11 @@
 Bygg en stor, gjennomarbeidet og kommersielt sterk tjenestearkitektur for Optimalisering Oslo: tydelige hovedtjenester, målrettede underside-tilbud og nyttig støtteinnhold. Primær effekt er relevante nye kunder og lønnsomme engangsprosjekter / månedlige avtaler, ikke antall URL-er i seg selv.
 
 ### Siste status
-- **32 beslutningspunkter er godkjent**, tilsvarende **38 godkjente nye/planlagte tjeneste-URL-er**. Nummer er beslutningspunkt, ikke unike URL-er.
+- **32 beslutningspunkter er avklart**, tilsvarende **38 godkjente nye/planlagte tjeneste-URL-er**. Nummer er beslutningspunkt, ikke unike URL-er.
 - **#31 er JA:** `/google-shopping/merchant-center/` som underside under Google Shopping.
-- **#32 er godkjent med kommentar (ANNET → JA):** `/google-ads/konverteringssporing/` som egen underside under Google Ads. **#33 venter:** Meta Pixel/CAPI-sporing, `/meta-ads/konverteringssporing/`.
+- **#32 er ANNET med eksplisitt JA:** `/google-ads/konverteringssporing/` godkjent som egen underside under Google Ads. Brukeren krevde samtidig fullstendige kunde-/leveransebriefs i backlog.
+- **Innholdskontrakt:** Hver tjenesteside skal ha konkret kundeproblem, navngitte leveranser med forklaring, hvorfor egen URL, avgrensning, kommersiell modell og kvalitetskrav. Se `optimalisering-oslo-fullstendige-tjenestebriefs-32-2026-10-30.md` og `optimalisering-oslo-sitemap-decisions-32-2026-10-30.json`.
+- **#33 er IKKE besluttet:** Meta Pixel og Conversions API – tentativ URL `/meta-ads/konverteringssporing/`. Presenter JA/NEI/ANNET.
 - **#15 særregel:** Omfattende A/B-testing er foreløpig bare inkludert i **Partner-pakken**; volumkrav og separat prising må respekteres.
 - **Pakke-/prisfordeling for alle tjenester er utsatt** til etter sitemap-beslutningene. Ikke dikt opp bindende pakkepriser eller inkluderingsnivåer.
 - **Ingen kode, nettsider eller GitHub-filer er endret** i denne sitemap-gjennomgangen per 30.10.2026.
@@ -21,7 +23,7 @@ Bygg en stor, gjennomarbeidet og kommersielt sterk tjenestearkitektur for Optima
 1. Bruk denne filen som beslutningsregister; ikke be om å godkjenne #1–#32 på nytt.
 2. Vis **kun ett nytt beslutningspunkt av gangen**, med foreslått URL, hierarki, kundeproblem, konkret leveranse, overlapp/risiko, anbefaling og **JA / NEI / ANNET med kommentar**.
 3. Når brukeren svarer, registrer faktisk valg og begrunnelse. Ikke konverter ANNET til ubetinget JA når brukeren har lagt til vilkår.
-4. **Oppdater master, JSON og fullstendige tjenestebriefs etter hver avgjørelse**. Lever nye nedlastbare filer eller lagre i en eksplisitt valgt felles dokumentkilde; ikke påstå at tidligere nedlastinger automatisk oppdateres.
+4. **Oppdater denne `.md`, detaljbriefene og den tilhørende `.json` etter hver avgjørelse**. Lever nye nedlastbare filer eller lagre i en eksplisitt valgt felles dokumentkilde; ikke påstå at tidligere nedlastinger automatisk oppdateres.
 5. Ikke endre repo eller publiser nettsider uten separat klarsignal.
 6. Etter full gjennomgang: konsolider sitemap, ranger implementeringsrekkefølge, lås navigasjon og sidemaler, og gjennomgå samtlige tjenester opp mot pakker/prising og kapasitet.
 
@@ -578,16 +580,13 @@ Bygg en stor, gjennomarbeidet og kommersielt sterk tjenestearkitektur for Optima
 - **Kvalitetskrav / forbehold:** Ingen garanti om Google-godkjenning; endringer må stemme med faktiske produktdata og gjeldende Merchant Center-krav.
 
 
+### 32. Google Ads-konverteringssporing — ANNET (JA, egen underside under Google Ads)
 
-### #32 · `/google-ads/konverteringssporing/` — Google Ads-konverteringssporing (JA, med kommentar)
-
-- **Kundeproblem:** Google Ads teller feil eller doble konverteringer, mangler kvalifiserte leads/salg eller optimaliserer mot misvisende handlinger.
-- **Hvorfor egen side:** Konkret, teknisk kjøpsintensjon og selvstendig feilrettingsprosjekt for kunder som kan beholde sitt nåværende byrå.
-- **Avgrensning / nabosider:** Smalere enn /sporing-og-maling/ og /google-ads/kontoanalyse/; handler om Ads-konverteringer og budgivningssignaler.
-- **Dette kan vi levere:** Konverteringsaudit; Google tag og GTM; GA4-import og måleforskjeller; enhanced conversions; offline-konverteringer ved tilstrekkelig grunnlag; samtykke, deduplisering og QA.
-- **Leveranse og salgsløp:** Analyse → implementering → ende-til-ende kontroll → dokumentasjon → eventuell vedlikeholdsavtale.
-- **Kvalitetskrav:** Ingen garanti for eksakt attribusjon eller ROAS; dataminimering, tillatelse og korrekt personvern kreves.
-- **Beslutningskommentar:** Alle tjenester skal bevares som fullstendige innholdsbriefs i formatet *Kundens problem → Dette kan vi levere* (navngitte leveranser med egne forklaringer) → hvorfor egen side → overlapp → anbefaling og avgrensninger. Se `docs/sitemap/innholdsbrief-standard.md`.
+- **/google-ads/konverteringssporing/** · Google Ads
+  - **Kundens problem:** Feil eller doble konverteringer gjør at Google Ads kan optimalisere mot feil handlinger eller misvisende datagrunnlag.
+  - **Leveranse:** Konverteringsaudit, GTM/google tag, GA4-import, enhanced/offline conversions, samtykkekontroll og QA.
+  - **Hvorfor egen side:** Selvstendig teknisk feilretting, også når kunden beholder sitt eksisterende annonsebyrå.
+  - **Beslutningsvilkår:** Innholdsbriefene må bevare kundens problem og konkrete leveransepunkt med egne forklaringer – ikke bare en kort liste.
 
 ## 4. Eksisterende sider og foreløpig informasjonsarkitektur
 
@@ -694,7 +693,9 @@ Bygg en stor, gjennomarbeidet og kommersielt sterk tjenestearkitektur for Optima
 
 ## 8. Neste beslutning
 
-**Punkt 33, venter:** Meta Pixel og Conversions API / Meta-konverteringssporing på `/meta-ads/konverteringssporing/`. Må avgjøres med JA / NEI / ANNET.
+**Punkt 33 – venter:** Meta Ads-konverteringssporing (`/meta-ads/konverteringssporing/`). Spør JA/NEI/ANNET.
+
+**Viktig endring fra punkt 32:** Se den komplette, autoriserte innholdsstrukturen i detaljbriefene og JSON. Ikke publiser en side uten kundeproblem + individuelle leveranser med begrunnelse.
 
 ## 9. Handoff-prompt for ny samtale
 
@@ -705,6 +706,16 @@ Vi fortsetter sitemap-gjennomgangen for optimalisering.oslo.no. Bruk vedlagte ma
 ---
 
 **Filrutine:** Denne masterfilen er et tidsstemplet øyeblikksbilde. Ved senere beslutninger skal en oppdatert versjon genereres med ny beslutningslogg og oppdatert versjon/dato; gamle nedlastede filer oppdateres ikke automatisk.
-## 10. Obligatorisk gjenbrukbar innholdsbrief (besluttet i punkt 32)
 
-For **hver godkjente URL** må backloggen bevare: 1) konkret kundeproblem, 2) en seksjon «Dette kan vi levere» med **individuelle navngitte leveranser og én forklarende tekst per leveranse**, 3) begrunnelse for egen side, 4) forskjellen fra nabotjenestene, 5) kommersiell modell og 6) kvalitetskrav. Se `docs/sitemap/innholdsbrief-standard.md`. Masterens korte URL-/scope-tabell er **ikke** tilstrekkelig grunnlag for å generere nettsideinnhold. Fullstendige tjenestebriefs er separat leveranse fra beslutningslogg.
+## 10. Fullstendig innholdsgrunnlag (beslutning 32)
+
+**Obligatorisk:** Les `optimalisering-oslo-fullstendige-tjenestebriefs-32-2026-10-30.md` sammen med denne masteren. Den gir for alle 38 URL-er:
+
+- konkret kundeproblem
+- navngitte leveransepunkter med hver sin forklaring (formatet «Dette kan vi levere»)
+- hvorfor egen side
+- avgrensning mot nabosider
+- forretningsmodell og CTA-retning
+- kvalitetskrav og dokumentasjonsbegrensninger
+
+Utgangspunktet for #31 Merchant Center er bevart med seks spesifikke leveranser i fullstendig tekst. Dette er *source of truth* for innholdsproduksjon, ikke generiske URL-titler.
