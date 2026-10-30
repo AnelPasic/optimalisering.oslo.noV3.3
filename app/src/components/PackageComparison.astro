@@ -10,18 +10,18 @@ const format=(price:number)=>new Intl.NumberFormat('nb-NO',{maximumFractionDigit
   <div class="shell">
     <h2 id="comparison-heading">{labels.heading}</h2>
     <p class="body-copy package-comparison-intro">{labels.intro}</p>
-    <div class="package-comparison-scroll" role="region" aria-label={labels.heading} tabindex="0">
-      <table class="package-comparison-table">
+    <div class="package-comparison-scroll overflow-x-auto rounded-box border border-base-content/10 bg-base-100" role="region" aria-label={labels.heading} tabindex="0">
+      <table class="table table-zebra table-md package-comparison-table">
         <thead><tr><th scope="col">Sammenlign</th>{packages.items.map(item=><th scope="col">{item.title}</th>)}</tr></thead>
         <tbody>
           <tr><th scope="row">Månedspris eks. mva.</th>{packages.items.map(item=><td>{item.pricePrefix && <span>{item.pricePrefix} </span>}{format(item.price)} {item.priceSuffix}</td>)}</tr>
           <tr><th scope="row">Passer for</th>{packages.items.map(item=><td>{item.compact.fit}</td>)}</tr>
           <tr><th scope="row">Omfang og prioritering</th>{packages.items.map(item=><td>{item.scope ?? item.selectionRule}</td>)}</tr>
-          <tr class="compare-category"><th scope="row">{labels.focusHeading}</th><td>Velg ett</td><td>Velg inntil to</td><td>Avklares sammen</td></tr>
+          <tr class="compare-category bg-base-200"><th scope="row">{labels.focusHeading}</th><td>Velg ett</td><td>Velg inntil to</td><td>Avklares sammen</td></tr>
           {labels.options.map(option=><tr>
             <th scope="row">{option.label}{option.description && <span class="package-compare-text">{option.description}</span>}</th>
-            <td><label class="package-compare-option"><input type="radio" name="comparison-optimalisering" value={option.id} data-package-focus-choice data-focus-package="optimalisering" data-focus-label={option.label} aria-label={`Optimalisering: ${option.label}`} /></label></td>
-            <td><label class="package-compare-option"><input type="checkbox" name="comparison-vekst" value={option.id} data-package-focus-choice data-focus-package="vekst" data-focus-label={option.label} aria-label={`Vekst: ${option.label}`} /></label></td>
+            <td><label class="package-compare-option"><input class="radio radio-primary radio-sm" type="radio" name="comparison-optimalisering" value={option.id} data-package-focus-choice data-focus-package="optimalisering" data-focus-label={option.label} aria-label={`Optimalisering: ${option.label}`} /></label></td>
+            <td><label class="package-compare-option"><input class="checkbox checkbox-primary checkbox-sm" type="checkbox" name="comparison-vekst" value={option.id} data-package-focus-choice data-focus-package="vekst" data-focus-label={option.label} aria-label={`Vekst: ${option.label}`} /></label></td>
             <td>Etter avtale</td>
           </tr>)}
         </tbody>

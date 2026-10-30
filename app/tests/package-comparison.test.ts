@@ -61,11 +61,22 @@ test('Pricing comparison is only on pricing page and has correct accessible inte
  const order=readFileSync('src/components/PackageOrder.astro','utf8');
  assert.match(page,/<Comparison packages={packages}/);
  assert.match(comparison,/role="region"/);
- assert.match(comparison,/type="radio" name="comparison-optimalisering"/);
- assert.match(comparison,/type="checkbox" name="comparison-vekst"/);
+ assert.match(comparison,/class="radio radio-primary radio-sm" type="radio" name="comparison-optimalisering"/);
+ assert.match(comparison,/class="table table-zebra table-md package-comparison-table"/);
+ assert.match(comparison,/class="package-comparison-scroll overflow-x-auto rounded-box border border-base-content\/10 bg-base-100"/);
+ assert.match(comparison,/class="compare-category bg-base-200"/);
+ assert.match(comparison,/class="checkbox checkbox-primary checkbox-sm" type="checkbox" name="comparison-vekst"/);
  assert.match(comparison,/input.disabled=vekst>=2&&!input.checked/);
  assert.match(comparison,/scope="col"/);
  assert.match(order,/createPackageFocusMessage/);
  assert.match(order,/name="partnerNeeds"/);
  assert.match(order,/data-package-focus-summary/);
+});
+
+test('daisyUI owns comparison row and zebra styling rather than duplicate author CSS',()=>{
+ const css=readFileSync('src/styles/compositions/pricing.css','utf8');
+ assert.doesNotMatch(css,/\.package-comparison-table\s+(?:th|td)\s*\{/);
+ assert.doesNotMatch(css,/\.package-comparison-table\s+thead\s+th\s*\{/);
+ assert.doesNotMatch(css,/\.package-comparison-table\s*\{[^}]*border-collapse/);
+ assert.doesNotMatch(css,/\.package-compare-option\s+input\s*\{/);
 });
