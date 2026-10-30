@@ -54,7 +54,9 @@ test('CONTENT-06: validate create/read/delete in isolated folder; detect duplica
   const a={...s,slug:'innsikt/demo-article',kind:'article'};
   const ap=join(temp,'managed-articles','innsikt-demo-article.json');
   writeFileSync(ap,JSON.stringify(a));assert.equal(checkManagedPages(temp).managedFiles.length,2);
-  writeFileSync(path,JSON.stringify({...s,slug:'seo'}));assert.throws(()=>checkManagedPages(temp),/Duplicate canonical slug/);
+  const duplicate=join(temp,'managed-services','seo.json');
+  writeFileSync(duplicate,JSON.stringify({...s,slug:'seo'}));assert.throws(()=>checkManagedPages(temp),/Duplicate canonical slug/);
+  rmSync(duplicate);
   writeFileSync(path,JSON.stringify({...s,slug:'other-name'}));assert.throws(()=>checkManagedPages(temp),/Filename\/slug mismatch/);
   writeFileSync(path,JSON.stringify({...s,kind:'article'}));assert.throws(()=>checkManagedPages(temp),/Wrong page kind/);
   writeFileSync(path,JSON.stringify(s));rmSync(path);
