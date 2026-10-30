@@ -1,14 +1,14 @@
 # Optimalisering Oslo – kanonisk sitemap og innholdsgrunnlag
 
-**Oppdatert:** 30.10.2026 · **Beslutningspunkter:** 47 avklart (43 JA / 1 ANNET med JA / 3 NEI) · **Godkjente tjeneste-URL-er:** 50 · **Neste punkt:** 48 (ikke besluttet)
+**Oppdatert:** 31.10.2026 · **Beslutningspunkter:** 48 avklart (43 JA / 1 ANNET med JA / 4 NEI) · **Godkjente tjeneste-URL-er:** 50 · **Neste punkt:** 49 (ikke besluttet)
 
 Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **Kun optimalisering.oslo.no**, ikke medon.no. Ingen av de foreslåtte sidene er implementert av denne sitemap-arbeidsflyten.
 
-## Gjeldende versjon (47)
+## Gjeldende versjon (48)
 
-- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-47-2026-10-30.md)
-- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-47-2026-10-30.json)
-- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-47-2026-10-30.md)
+- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-48-2026-10-31.md)
+- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-48-2026-10-31.json)
+- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-48-2026-10-31.md)
 - [Innholdsbrief-standard / utarbeidelseskrav](./innholdsbrief-standard.md)
 - [GitHub issues-struktur og oppgavemal – snapshot fra punkt 32](./github-issues-plan-32-2026-10-30.md)
 
@@ -56,6 +56,8 @@ Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **K
 
 **Punkt 47 – ANNET med eksplisitt JA:** `/kundeanmeldelser/` er godkjent som **egen tjenesteside**, men **lav produksjonsprioritet / senere publiseringsbølge**. Den eksisterende anmeldelsesprosessen/løsningen i [Medon Growth](https://github.com/AnelPasic/BusinessIntelligence/blob/main/medon-growth/BACKLOG.md) og [Radar Review Gap](https://github.com/AnelPasic/BusinessIntelligence/blob/main/radar/BACKLOG.md) er relevante avhengigheter. Før nettstedets side lages og publiseres, må en lovlig, reell og driftbar review-arbeidsflyt bygges og valideres. Backlognotater beviser ikke at et ferdig review-system er deployert.
 
-**Punkt 48 – venter:** Kundereiseoptimalisering på tvers av kanaler, mulig `/kundereiseoptimalisering/`. Vurder mot `/kontinuerlig-optimalisering/`, `/sporing-og-maling/` og `/nettsideanalyse/`.
+**Punkt 48 – NEI:** Ingen separat `/kundereiseoptimalisering/`. Kundereisekartlegging under `/nettsideanalyse/`, løpende forbedring under `/kontinuerlig-optimalisering/`, tverrkanal måling under `/sporing-og-maling/` og oppfølging under `/konvertering/leadoppfolging/`. Fullstendige leveransebeskrivelser er ført videre til eksisterende briefs. Antall URL-er fortsatt 50.
 
-**Historikk:** Versjonerte snapshots 32–46 beholdes uendret. #34, #44 og #45 avviste egne undersider; #46 godkjente AI-chatbot; #47 godkjente kundeanmeldelser som ANNET med JA, med bygg-først-avhengighet og lav prioritet.
+**Punkt 49 – venter:** Remarketing og retargeting, mulig `/remarketing/`. Vurder om det bør være egen spesialisert tjeneste eller om det dekkes av Google Ads / Meta Ads / annonseoptimalisering.
+
+**Historikk:** Versjonerte snapshots 32–47 beholdes uendret. #34, #44, #45 og #48 avviste egne undersider; #46 godkjente AI-chatbot; #47 godkjente kundeanmeldelser som ANNET med JA, med bygg-først-avhengighet og lav prioritet.
