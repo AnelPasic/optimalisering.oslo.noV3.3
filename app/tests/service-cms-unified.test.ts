@@ -78,11 +78,13 @@ const check=(script:string,cwd:string)=>{
 test('New service create/delete never requires a manual generated YAML update',()=>{
  const tmp=mkdtempSync(join(tmpdir(),'cms-pinned-services-'));
  try {
-  mkdirSync(join(tmp,'app','src/content/pages'),{recursive:true});
+  mkdirSync(join(tmp,'app','src/content/pages/managed-articles'),{recursive:true});
   copyFileSync(join(app,'../.pages.yml'),join(tmp,'.pages.yml'));
   copyFileSync(join(app,'src/content/link-shortcuts.json'),join(tmp,'app','src/content/link-shortcuts.json'));
   for(const f of readdirSync(join(app,'src/content/pages')).filter(x=>x.endsWith('.json')))
    copyFileSync(join(app,'src/content/pages',f),join(tmp,'app','src/content/pages',f));
+  for(const f of readdirSync(join(app,'src/content/pages/managed-articles')).filter(x=>x.endsWith('.json')))
+   copyFileSync(join(app,'src/content/pages/managed-articles',f),join(tmp,'app','src/content/pages/managed-articles',f));
   const yamlBefore=readFileSync(join(tmp,'.pages.yml'),'utf8');
   for(const s of ['sync-page-list-select.mjs','sync-cms-url-options.mjs'])check(s,join(tmp,'app'));
   const source=JSON.parse(readFileSync(join(tmp,'app','src/content/pages','seo.json'),'utf8'));
