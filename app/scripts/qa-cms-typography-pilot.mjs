@@ -69,7 +69,7 @@ try{
   // Check semantic H2/H3 computed sizes with code defaults, ignoring OWNER's optional H1 CMS test override.
   // These selectors previously repeated identical font-size/line-height declarations per component.
   for(const sample of [
-   {path:'/',selector:'.invite-home .need-card h3',role:'h3'},
+   {path:'/',selector:'[data-home-selector-card] h3',role:'h3'},
    {path:'/konvertering/',selector:'.invite-service .service-package h3',role:'h3'},
    {path:'/begreper/',selector:'.glossary-group h2',role:'h2'}
   ]){
@@ -93,7 +93,7 @@ try{
     assert.ok(Math.abs(measured.lineHeight-target*expectedLeading)<.85,
       sample.selector+' '+width+'/'+theme+' unexpected line-height: '+measured.lineHeight);
     assert.match(measured.fontFamily,/Instrument Sans/i);
-    if(sample.selector.includes('need-card')){
+    if(sample.selector.includes('data-home-selector-card')){
       assert.equal(measured.maxWidth,width<=900?'600px':'390px');
     }
     console.log('PASS semantic heading',sample.path,sample.selector,width,theme,measured.size);
