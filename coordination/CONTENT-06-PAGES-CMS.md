@@ -1,22 +1,25 @@
-# CONTENT-06 — Add or delete pages in stock Pages CMS
+# CONTENT-06 — Native Add / Delete of service and article pages
 
-**Only new controls are in English.** Existing navigation groups and all existing published page editors are unchanged. Every saved page is live content: no draft or review statuses.
+All service pages are now in **Tjenester → Alle tjenester**. Pages CMS supports Create and Delete in this single collection, including the existing SEO, Synlighet and Lokal SEO pages. No separate `New service pages` menu item remains.
 
 ## Create a service page
-1. Pages CMS → **Tjenester** → **New service pages (Add / Delete)** → **Create**. Enter a unique lowercase URL slug (for example `roof-cleaning`). Public URL becomes `/roof-cleaning/`.
-2. Fill the existing **SEO**, **Hero**, **Sections** and optional FAQ fields. Provide meaningful customer-ready content before saving. `kind: service` is automatic and fixed; no source editing or new CMS schema file.
-3. Save to Git. The normal Astro build discovers the page and adds it to the sitemap. The automatic PageList for services includes it. For manual links, paste `/roof-cleaning/` in the existing Manual URL field.
 
-## Create an article
-Pages CMS → **Innsikt** → **New articles (Add / Delete)** → Create. Use a slug such as `innsikt/checklist`; public URL is `/innsikt/checklist/`. The CMS stores a flattened `innsikt-checklist.json` filename inside its isolated collection, and `kind: article` is fixed. As with services, complete the current SEO, Hero and Sections editors, then save.
+1. Open **Tjenester → Alle tjenester → Add an entry**.
+2. Choose a unique `Page URL slug`, e.g. `roof-cleaning`. The page URL will be `/roof-cleaning/` and the canonical file will be `app/src/content/pages/roof-cleaning.json`.
+3. Add genuine SEO metadata, Hero, sections and optional FAQ, then Save. The page kind is fixed to `service`. Astro discovers the new root JSON without extra YAML edits.
 
-## Delete a page
-Only pages created in these two dedicated collections have **Delete** enabled. Open the entry → Delete. **Before deletion**, remove all internal navigation links, CTAs, manually selected PageList references and page anchors pointing to it. The normal site build/QA fails on broken rendered links; deleting does not automatically rewrite others' content. If a deleted page has search traffic, plan its redirect separately; there is no automatic redirect or SEO-preserving migration. Use Git history to restore an accidentally removed managed JSON file.
+## Edit or delete any service
 
-**Existing pages are intentionally protected** (Home, Pricing, Contact, SEO, legal and other pre-existing routes). Do not copy them into the deletable collection or bypass the protections. Ask a developer to retire a core page and handle its backlinks/redirects.
+Existing SEO, Synlighet, Lokal SEO, AI-synlighet, Konvertering and Nettbutikkoptimalisering are in the same list and can be edited. **Delete really is enabled for every service in this collection**, not just newly created ones; Pages CMS does not offer per-file exceptions within a collection. Remove inbound navigation, CTAs, PageLists and anchor links before deletion. If the page has traffic, arrange a redirect outside CMS. CI/build detects dangling links; Git history can restore deleted files. Be especially careful with important existing service URLs. Their original content, route, SEO/hero, global references and proof are unchanged by this CMS reorganization.
 
-## Why no manual YAML sync?
+**Not deletable from Alle tjenester:** Home, Pricing, Contact, legal pages, Insight, About and other fixed or article pages. Their own editors remain protected.
 
-The pre-existing PageList and suggested-URL select choices are generated from the fixed root page files only. Managed pages are in separate folders, so creating/deleting them does not invalidate these check-in-time lists. **Automatic** PageList queries and Astro routes/sitemap discover new managed JSON automatically. A newly created managed page **will not appear in legacy static dropdown options**; the existing Manual URL input remains available. Native references covering all dynamic pages require a future CMS-native option rather than a parallel custom tool.
+## Create and delete articles
 
-**Verification:** CMS configuration and source fixtures plus Astro build, link audit, GitHub CI. This does not claim an authenticated Pages CMS Create/Delete round-trip or automatic redirect.
+Articles retain the separate **Innsikt → New articles (Add / Delete)** collection. Use a slug such as `innsikt/checklist`. CMS stores `managed-articles/innsikt-checklist.json` and Astro routes `/innsikt/checklist/`.
+
+## Reference and verification notes
+
+Legacy PageList and suggested-URL dropdowns are **pinned to their existing choices** so native Add/Delete does not require editing `.pages.yml`. New services are available immediately in automatic PageLists and via Manual URL; they are intentionally not appended to the old static pickers. After deleting an established service, its old static suggestion may remain, but link/build validation rejects any actual dangling links. Prefer Manual URL for new pages. This is not a new CMS, template engine, status workflow, redirect manager or custom browser UI.
+
+The prior disposable `test-service` page created via authenticated Pages CMS was deleted by OWNER before this regrouping. The existing managed-services folder is retained for backward compatibility with any older nested content, but new service pages are created **only** in the root `Alle tjenester` collection. This change needs a fresh authenticated CMS Add → Save → Edit → Delete acceptance check.

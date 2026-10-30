@@ -35,10 +35,11 @@ test('SEO uses one native mixed sequence and references only the canonical packa
 
 test('native SEO page editor contains section layouts, card treatment and a shared eight-entry global selector',()=>{
  const entry=entryForFile(cms,'app/src/content/pages/seo.json');
- assert.equal(entry?.type,'file');
+ assert.equal(entry?.type,'collection');
  const group=cms.content.find((e:any)=>e.name==='serviceGroup');
  const generic=group.items.find((e:any)=>e.name==='services');
- assert.ok(generic.exclude.includes('seo.json'),'SEO must have only one editor');
+ assert.equal(generic.label,'Alle tjenester');
+ assert.ok(!generic.exclude.includes('seo.json'),'SEO belongs in the one editor');
  const sections=entry.fields.find((f:any)=>f.name==='sections');
  const local=resolveField(sections.blocks.find((b:any)=>b.name==='content'),cms.components);
  const global=resolveField(sections.blocks.find((b:any)=>b.name==='global'),cms.components);

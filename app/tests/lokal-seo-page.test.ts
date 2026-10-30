@@ -15,7 +15,7 @@ test('Lokal SEO is a real service page with editable CMS fields and a working na
  assert.equal(pageSchema.safeParse(page).success,true);
  const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
  const entry=entryForFile(cms,'app/'+file);
- assert.equal(entry?.type,'file');
+ assert.equal(entry?.type,'collection');
  const edited=structuredClone(page);
  edited.sections[0].body.push('Kun syntetisk CMS-fixture.');
  const saved=JSON.parse(cmsJsonSave(page,edited,entry,cms));

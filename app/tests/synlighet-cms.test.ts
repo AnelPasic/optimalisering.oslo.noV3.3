@@ -60,19 +60,17 @@ test('ordinary hide/remove is safe while duplicate, reserved and invalid anchors
   assert.equal(pageSchema.safeParse(invalid).success, false);
 });
 
-test('pilot editor reuses all service fields, adds native visibility and writable validated local anchors only here', () => {
+test('unified service editor retains visibility, proof and validated local anchors', () => {
   const entry = entryForFile(cms, 'app/src/content/pages/synlighet.json');
   const group = cms.content.find((e: any) => e.name === 'serviceGroup');
   assert.equal(group?.type, 'group');
   const services = group.items.find((e: any) => e.name === 'services');
-  const pilot = group.items.find((e: any) => e.name === 'serviceSynlighet');
-  assert.equal(services?.label, 'Øvrige tjenester');
-  assert.equal(pilot?.label, 'Synlighet');
-  assert.equal(pilot?.path, 'app/src/content/pages/synlighet.json');
-  assert.equal(entry.type, 'file');
-  assert.ok(services.exclude.includes('synlighet.json'));
-  for (const field of services.fields.filter((f: any) => !['sections','proof','faq','hero','heroVisual','eyebrow','title','intro','cta'].includes(f.name))) assert.deepEqual(entry.fields.find((f: any) => f.name === field.name), field);
-  for(const name of ['proof','faq']) {assert.ok(!entry.fields.some((f:any)=>f.name===name));assert.ok(services.fields.some((f:any)=>f.name===name));}
+  assert.equal(services?.label, 'Alle tjenester');
+  assert.equal(group.items.length, 1, 'One collection, not duplicate editors');
+  assert.equal(entry.type, 'collection');
+  assert.equal(entry.name,'services');
+  assert.ok(!services.exclude.includes('synlighet.json'));
+  for (const name of ['sections','proof','faq','hero','seo','kind'])assert.ok(services.fields.some((f:any)=>f.name===name),name);
   const sections = entry.fields.find((f: any) => f.name === 'sections');
   const content = resolveField(sections.blocks.find((b: any) => b.name === 'content'), cms.components);
   assert.equal(content.fields.find((f: any) => f.name === 'id').readonly, undefined);

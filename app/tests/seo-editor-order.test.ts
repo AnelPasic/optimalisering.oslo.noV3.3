@@ -17,9 +17,14 @@ function sitePageEditors(entries: Entry[]): Entry[] {
 
 test('Readonly URL-slug comes first, immediately before SEO and Hero on every page editor', () => {
   const editors = sitePageEditors(config.content);
-  assert.equal(editors.length, 15, '13 existing editors plus two new collections');
-  const originalEditors = editors.filter(editor => !['managedServices', 'managedArticles'].includes(editor.name));
-  assert.equal(originalEditors.length, 13);
+  assert.equal(editors.length, 11, 'One unified service editor, nine other fixed editors and one managed article collection');
+  const services=editors.find(editor=>editor.name==='services');
+  assert.ok(services);
+  assert.deepEqual(services.fields?.slice(0,3).map(field=>field.name),['slug','seo','hero']);
+  assert.equal(services.fields?.[0]?.readonly,undefined,'Create needs editable URL slug');
+  assert.equal(services.fields?.[0]?.required,true);
+  const originalEditors = editors.filter(editor => !['services', 'managedArticles'].includes(editor.name));
+  assert.equal(originalEditors.length, 9);
   for (const editor of originalEditors) {
     assert.equal(editor.fields?.[0]?.name, 'slug', `${editor.label}: URL-slug must appear first`);
     const seo = editor.fields?.[1];

@@ -9,12 +9,15 @@ import {checkManagedPages} from '../scripts/check-managed-pages.mjs';
 
 const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
 const child=(group:string,id:string)=>cms.content.find((x:any)=>x.name===group).items.find((x:any)=>x.name===id);
-const service=child('serviceGroup','managedServices'),article=child('insight','managedArticles');
+const service=child('serviceGroup','services'),article=child('insight','managedArticles');
 
-test('CONTENT-06: isolated native Add/Delete; all existing editors remain non-deletable',()=>{
- for(const [entry,folder,kind] of [[service,'managed-services','service'],[article,'managed-articles','article']] as const){
+test('CONTENT-06: single All services native Create/Delete, fixed pages remain outside it',()=>{
+ assert.equal(service.label,'Alle tjenester');
+ assert.equal(cms.content.find((x:any)=>x.name==='serviceGroup').items.length,1);
+ assert.equal(cms.content.find((x:any)=>x.name==='serviceGroup').items[0].name,'services');
+ for(const [entry,folder,kind] of [[service,'','service'],[article,'/managed-articles','article']] as const){
   assert.equal(entry.type,'collection');
-  assert.equal(entry.path,'app/src/content/pages/'+folder);
+  assert.equal(entry.path,'app/src/content/pages'+folder);
   assert.deepEqual(entry.operations,{create:true,rename:false,delete:true});
   assert.equal(entry.filename.template,'{fields.slug}.json');
   assert.equal(entry.filename.field,false);
@@ -25,10 +28,13 @@ test('CONTENT-06: isolated native Add/Delete; all existing editors remain non-de
   assert.ok(entry.fields.find((f:any)=>f.name==='hero'));
   assert.ok(entry.fields.find((f:any)=>f.name==='sections'));
  }
+ const protectedNames=['home','priser','kontakt','personvern','vilkar','om','vurdering','innsikt'];
+ for(const n of protectedNames)assert.ok(service.exclude.includes(n+'.json'),n);
+ for(const n of ['seo','synlighet','lokal-seo','ai-synlighet','konvertering','nettbutikkoptimalisering'])assert.ok(!service.exclude.includes(n+'.json'),n);
  const all=(entries:any[]):any[]=>entries.flatMap((e:any)=>e.type==='group'?all(e.items):[e]);
  for(const editor of all(cms.content)){
   if(editor.type==='file'&&editor.path?.startsWith('app/src/content/pages/'))assert.equal(editor.operations?.delete,false,editor.path);
-  if(editor.name==='services'||editor.name==='insightArticles')assert.equal(editor.operations?.delete,false);
+  if(editor.name==='insightArticles')assert.equal(editor.operations?.delete,false);
  }
  assert.equal(service.path===article.path,false);
 });
@@ -69,7 +75,7 @@ test('CONTENT-06: static CMS URL suggestions remain for fixed pages; dynamic pag
  const urlSync=readFileSync('scripts/sync-cms-url-options.mjs','utf8');
  const listSync=readFileSync('scripts/sync-page-list-select.mjs','utf8');
  for(const source of [urlSync,listSync])assert.match(source,/readdirSync\(pagesDir\)|readdirSync\(root\)/);
- // Both generators deliberately scan only the fixed root: adding/removing isolated managed pages never requires a YAML rewrite.
+ // Both legacy picker generators retain pinned suggestions, ignoring new and removed root service slugs; no YAML edit after native Add/Delete.
  const audit=readFileSync('scripts/audit-build.mjs','utf8');
  assert.match(audit,/managed-services/);assert.match(audit,/managed-articles/);
 });
