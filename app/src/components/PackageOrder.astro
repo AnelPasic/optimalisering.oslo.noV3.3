@@ -41,6 +41,7 @@ const enabled = site.ordersEnabled;
 </details>
 <script>
   import { createOrderPayload } from '../lib/order';
+  import { createPackageFocusMessage } from '../lib/package-focus';
   import { normalizeWebsite, submitLead } from '../lib/lead';
   import { captureAttribution } from '../lib/attribution';
   const accordions = [...document.querySelectorAll<HTMLDetailsElement>('[data-package-order]')];
@@ -78,18 +79,11 @@ const enabled = site.ordersEnabled;
       if (!form.checkValidity()) { form.reportValidity(); return; }
       const fields = Object.fromEntries(new FormData(form).entries()) as Record<string,string>;
       if (fields.website_confirmation) return;
-      const selected=selectedFocus();
-      const max=packageKey==='optimalisering'?1:packageKey==='vekst'?2:0;
-      if (selected.length>max) { show('Velg maksimalt '+max+' fokusområde'+(max===1?'':'r')+'.'); return; }
-      if (packageKey==='partner') {
-        fields.message=(fields.partnerNeeds??'').trim();
-      } else if (selected.length) {
-        fields.message='Ønsket fokusområde'+(selected.length===1?'':'r')+': '+selected.map(f=>f.label).join(' + ')+'. Endelig omfang avklares før oppstart.';
-      }
-      if (!normalizeWebsite(website.value)) {
-        website.setCustomValidity('Skriv inn en gyldig nettadresse.');
-        website.setAttribute('aria-invalid','true');
-        website.reportValidity(); website.focus(); return;
+      try {
+        fields.message=createPackageFocusMessage(packageKey,selectedFocus().map(choice=>choice.label),fields.partnerNeeds);
+      } catch (error) {
+        show(error instanceof Error ? error.message : 'Kontroller valgte fokusområder.');
+        return;
       }
       let payload;
       try {
