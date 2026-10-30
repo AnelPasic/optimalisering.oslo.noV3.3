@@ -43,6 +43,8 @@ on:
       - "app/tests/typography-cms-pilot.test.ts"
       - "app/tests/content-source-of-truth.test.ts"
       - "app/tests/content-02-editorial.test.ts"
+      - "app/tests/content-04-archetype-patterns.test.ts"
+      - "coordination/CONTENT-04-ARCHETYPE-PILOT.md"
       - "app/tests/live-pages-no-status.test.ts"
       - "app/src/content/terminology/glossary.json"
       - "app/scripts/preflight.mjs"
@@ -89,6 +91,8 @@ jobs:
         run: node --test tests/content-02-editorial.test.ts
       - name: Verify all pages live without draft/authority status and proof controls retained
         run: node --test tests/live-pages-no-status.test.ts tests/preflight.test.mjs tests/terminology.test.ts
+      - name: "CONTENT-04: verify three existing page archetypes without mutating content"
+        run: node --test tests/content-04-archetype-patterns.test.ts
       - name: Astro check
         run: npm run check
       - name: Build static pages
