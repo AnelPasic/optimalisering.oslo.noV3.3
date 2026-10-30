@@ -4,11 +4,12 @@ import {readFileSync,readdirSync} from 'node:fs';
 import {spawnSync} from 'node:child_process';
 import {projectSelectedLinks,safeCmsHref} from '../src/lib/cms-link-choice.ts';
 import {pageSchema} from '../src/lib/content-schema.ts';
-const page=(name:string)=>JSON.parse(readFileSync(new URL('../src/content/pages/'+name+'.json',import.meta.url),'utf8'));
+import {pageFilePaths,loadPageFile} from './helpers/page-sources.ts';
+const page=(name:string)=>loadPageFile(name+'.json');
 test('17 existing page JSON records stay valid and are never mutated',()=>{
- const files=readdirSync(new URL('../src/content/pages/',import.meta.url)).filter(n=>n.endsWith('.json'));
+ const files=pageFilePaths();
  assert.equal(files.length,17);
- for(const file of files){const p=page(file.slice(0,-5)),before=structuredClone(p);
+ for(const file of files){const p=loadPageFile(file),before=structuredClone(p);
   const parsed=pageSchema.safeParse(p);assert.equal(parsed.success,true,file+': '+(parsed.success?'':JSON.stringify(parsed.error.issues.slice(0,3))));
   assert.deepEqual(p,before,file);
  }
