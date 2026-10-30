@@ -1,14 +1,14 @@
 # Optimalisering Oslo – kanonisk sitemap og innholdsgrunnlag
 
-**Oppdatert:** 30.10.2026 · **Beslutningspunkter:** 39 avklart (38 JA / 1 NEI) · **Godkjente tjeneste-URL-er:** 44 · **Neste punkt:** 40 (ikke besluttet)
+**Oppdatert:** 30.10.2026 · **Beslutningspunkter:** 40 avklart (39 JA / 1 NEI) · **Godkjente tjeneste-URL-er:** 45 · **Neste punkt:** 41 (ikke besluttet)
 
 Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **Kun optimalisering.oslo.no**, ikke medon.no. Ingen av de foreslåtte sidene er implementert av denne sitemap-arbeidsflyten.
 
-## Gjeldende versjon (39)
+## Gjeldende versjon (40)
 
-- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-39-2026-10-30.md)
-- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-39-2026-10-30.json)
-- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-39-2026-10-30.md)
+- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-40-2026-10-30.md)
+- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-40-2026-10-30.json)
+- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-40-2026-10-30.md)
 - [Innholdsbrief-standard / utarbeidelseskrav](./innholdsbrief-standard.md)
 - [GitHub issues-struktur og oppgavemal – snapshot fra punkt 32](./github-issues-plan-32-2026-10-30.md)
 
@@ -40,6 +40,8 @@ Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **K
 
 **Punkt 39 – JA:** `/nettsidemigrering/` godkjent som selvstendig plattformuavhengig tjenesteside. Full brief dekker teknisk/kommersiell vurdering, plattformvalg, overføring av innhold og data, SEO-/URL-bevaring, integrasjoner, testing, cutover og etterkontroll. SEO-migrering er en spesialisert del av et større mulig prosjekt.
 
-**Punkt 40 – venter:** Vedlikehold og teknisk drift av nettsider, mulig `/nettsidevedlikehold/` som tydelig avgrenset månedsavtale, atskilt fra `/kontinuerlig-optimalisering/`.
+**Punkt 40 – JA:** `/nettsidevedlikehold/` godkjent som selvstendig tjenesteside med plattformtilpassede månedlige avtaler. Full brief dekker oppdateringer, sikkerhet, backup, oppetid, hosting/domene/SSL, kontroll av kritiske funksjoner etter oppdatering og enkel status. Ikke ubegrenset driftshjelp eller garantert responstid uten spesifisert SLA.
 
-**Historikk:** Versjonerte snapshots 32–38 beholdes uendret. #34 avviste en egen handlekurv-URL; #35 godkjente gjenkjøp, #36 Shopify, #37 WooCommerce med Magento/Shopify-kommentar, #38 WordPress og #39 nettsidemigrering.
+**Punkt 41 – venter:** Overvåkning av kritiske funksjoner (skjema/booking/betaling/integrasjoner). Egen URL `/funksjonsovervakning/` er kun et forslag, ikke godkjent. Må vurderes opp mot vedlikeholdstilbudet.
+
+**Historikk:** Versjonerte snapshots 32–39 beholdes uendret. #34 avviste egen handlekurv-URL; #35 gjenkjøp, #36 Shopify, #37 WooCommerce (Magento/Shopify-kommentar), #38 WordPress, #39 nettsidemigrering, #40 nettsidevedlikehold.
