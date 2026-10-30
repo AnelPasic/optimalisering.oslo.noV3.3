@@ -1,14 +1,14 @@
 # Optimalisering Oslo – kanonisk sitemap og innholdsgrunnlag
 
-**Oppdatert:** 30.10.2026 · **Beslutningspunkter:** 45 avklart (42 JA / 3 NEI) · **Godkjente tjeneste-URL-er:** 48 · **Neste punkt:** 46 (ikke besluttet)
+**Oppdatert:** 30.10.2026 · **Beslutningspunkter:** 46 avklart (43 JA / 3 NEI) · **Godkjente tjeneste-URL-er:** 49 · **Neste punkt:** 47 (ikke besluttet)
 
 Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **Kun optimalisering.oslo.no**, ikke medon.no. Ingen av de foreslåtte sidene er implementert av denne sitemap-arbeidsflyten.
 
-## Gjeldende versjon (45)
+## Gjeldende versjon (46)
 
-- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-45-2026-10-30.md)
-- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-45-2026-10-30.json)
-- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-45-2026-10-30.md)
+- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-46-2026-10-30.md)
+- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-46-2026-10-30.json)
+- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-46-2026-10-30.md)
 - [Innholdsbrief-standard / utarbeidelseskrav](./innholdsbrief-standard.md)
 - [GitHub issues-struktur og oppgavemal – snapshot fra punkt 32](./github-issues-plan-32-2026-10-30.md)
 
@@ -52,6 +52,8 @@ Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **K
 
 **Punkt 45 – NEI:** Egen `/konvertering/kontaktskjemaer/` er avvist. Skjemadesign, kvalifiserende/dynamiske spørsmål, mobil, validering, spamvern, personvern og skjemamåling inngår i `/konvertering/henvendelser-og-booking/`; CRM-routing, prioritering, oppfølging og måling av kvalifiserte leads inngår i `/konvertering/leadoppfolging/`. Begge fullstendige briefs er utvidet, ingen ny URL.
 
-**Punkt 46 – venter:** AI-chatbot og digital kundedialog. Mulig `/ai-chatbot/`, men må vurderes mot godkjente tjenester for skjema og leadoppfølging, og faktisk leveranseevne.
+**Punkt 46 – JA:** `/ai-chatbot/` er godkjent som egen tjenesteside for AI-basert kundedialog, godkjent kunnskapsbase, svar, kvalifiserende spørsmål, eskalering til mennesker, integrasjoner, personvern og kvalitetskontroll. Kan tilbys med avgrenset oppsett og mulig månedlig avtale; faktisk drifts- og leveranseevne må dokumenteres før aktivt salg.
 
-**Historikk:** Versjonerte snapshots 32–44 beholdes uendret. #34 avviste handlekurv-URL, #44 avviste egen tilbudsoptimalisering, og #45 avviste egen kontaktskjema-URL, med alle tre temaene innlemmet i godkjente sider.
+**Punkt 47 – venter:** Kundeanmeldelser og omdømmeoptimalisering, mulig `/kundeanmeldelser/`. Vurder som selvstendig tjeneste mot Google Maps/lokal SEO og sosialt bevis under budskap og tilbud.
+
+**Historikk:** Versjonerte snapshots 32–45 beholdes uendret. #34, #44 og #45 avviste egne undersider, og omfangene ble lagt i eksisterende godkjente tjenester. #46 godkjente egen AI-chatbot-side med leveransekontroll før publisering.
