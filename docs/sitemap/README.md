@@ -1,14 +1,14 @@
 # Optimalisering Oslo – kanonisk sitemap og innholdsgrunnlag
 
-**Oppdatert:** 30.10.2026 · **Beslutningspunkter:** 44 avklart (42 JA / 2 NEI) · **Godkjente tjeneste-URL-er:** 48 · **Neste punkt:** 45 (ikke besluttet)
+**Oppdatert:** 30.10.2026 · **Beslutningspunkter:** 45 avklart (42 JA / 3 NEI) · **Godkjente tjeneste-URL-er:** 48 · **Neste punkt:** 46 (ikke besluttet)
 
 Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **Kun optimalisering.oslo.no**, ikke medon.no. Ingen av de foreslåtte sidene er implementert av denne sitemap-arbeidsflyten.
 
-## Gjeldende versjon (44)
+## Gjeldende versjon (45)
 
-- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-44-2026-10-30.md)
-- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-44-2026-10-30.json)
-- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-44-2026-10-30.md)
+- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-45-2026-10-30.md)
+- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-45-2026-10-30.json)
+- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-45-2026-10-30.md)
 - [Innholdsbrief-standard / utarbeidelseskrav](./innholdsbrief-standard.md)
 - [GitHub issues-struktur og oppgavemal – snapshot fra punkt 32](./github-issues-plan-32-2026-10-30.md)
 
@@ -50,6 +50,8 @@ Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **K
 
 **Punkt 44 – NEI:** Egen `/konvertering/tilbudsoptimalisering/` er avvist. Analyse av tilbud, reelle tjenestepakker og verdiforslag er dokumentert under `/konvertering/budskap-og-tilbud/`, mens tydelige prissider, pakkesammenligning, pakkevelgere og resultatevaluering ligger under `/konvertering/prissider/`. Ingen ny tjeneste-URL.
 
-**Punkt 45 – venter:** Optimalisering av kontaktskjemaer og leadkvalifisering. Mulig `/konvertering/kontaktskjemaer/`, men må skilles fra `/konvertering/henvendelser-og-booking/` og `/konvertering/leadoppfolging/`.
+**Punkt 45 – NEI:** Egen `/konvertering/kontaktskjemaer/` er avvist. Skjemadesign, kvalifiserende/dynamiske spørsmål, mobil, validering, spamvern, personvern og skjemamåling inngår i `/konvertering/henvendelser-og-booking/`; CRM-routing, prioritering, oppfølging og måling av kvalifiserte leads inngår i `/konvertering/leadoppfolging/`. Begge fullstendige briefs er utvidet, ingen ny URL.
 
-**Historikk:** Versjonerte snapshots 32–43 beholdes uendret. #34 avviste egen handlekurv-URL; #35 gjenkjøp, #36 Shopify, #37 WooCommerce (Magento/Shopify-kommentar), #38 WordPress, #39 migrering, #40 vedlikehold, #41 funksjonsovervåkning, #42 nettsideanalyse, #43 digital konkurrentanalyse og #44 avviste egen tilbudsoptimaliseringsside.
+**Punkt 46 – venter:** AI-chatbot og digital kundedialog. Mulig `/ai-chatbot/`, men må vurderes mot godkjente tjenester for skjema og leadoppfølging, og faktisk leveranseevne.
+
+**Historikk:** Versjonerte snapshots 32–44 beholdes uendret. #34 avviste handlekurv-URL, #44 avviste egen tilbudsoptimalisering, og #45 avviste egen kontaktskjema-URL, med alle tre temaene innlemmet i godkjente sider.
