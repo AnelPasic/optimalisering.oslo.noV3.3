@@ -1,14 +1,14 @@
 # Optimalisering Oslo – kanonisk sitemap og innholdsgrunnlag
 
-**Oppdatert:** 31.10.2026 · **Beslutningspunkter:** 51 avklart (45 JA / 2 ANNET med JA / 4 NEI) · **Godkjente tjeneste-URL-er:** 53 · **Neste punkt:** 52 (ikke besluttet)
+**Oppdatert:** 31.10.2026 · **Beslutningspunkter:** 52 avklart (46 JA / 2 ANNET med JA / 4 NEI) · **Godkjente tjeneste-URL-er:** 54 · **Neste punkt:** 53 (ikke besluttet)
 
 Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **Kun optimalisering.oslo.no**, ikke medon.no. Ingen av de foreslåtte sidene er implementert av denne sitemap-arbeidsflyten.
 
-## Gjeldende versjon (51)
+## Gjeldende versjon (52)
 
-- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-51-2026-10-31.md)
-- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-51-2026-10-31.json)
-- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-51-2026-10-31.md)
+- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-52-2026-10-31.md)
+- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-52-2026-10-31.json)
+- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-52-2026-10-31.md)
 - [Innholdsbrief-standard / utarbeidelseskrav](./innholdsbrief-standard.md)
 - [GitHub issues-struktur og oppgavemal – snapshot fra punkt 32](./github-issues-plan-32-2026-10-30.md)
 
@@ -64,6 +64,8 @@ Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **K
 
 **Punkt 51 – ANNET med JA:** `/youtube-annonsering/` er godkjent som spesialisert tjeneste for annonsering med **kundeleverte ferdige videoer/creatives**. Kampanjestrategi, oppsett, målgrupper, vurdering av kundens video-assets, landingssider, måling og optimalisering er innenfor scope. **Vi tilbyr normalt ikke videoproduksjon.** Kun helt enkle tilpasninger av eksisterende video kan avtales separat; filming, animasjoner og profesjonell redigering er utenfor. Ingen egen video-/filmproduksjonspakke, nettsidekode eller publisering.
 
-**Punkt 52 – venter:** LinkedIn-annonsering for B2B, mulig `/linkedin-annonsering/`. Vurder særskilt kjøpsintensjon og lønnsomt omfang opp mot eksisterende annonsekanaler.
+**Punkt 52 – JA:** `/linkedin-annonsering/` er godkjent som spesialisert B2B-annonseside under Annonseoptimalisering, uten egen hovedmenykategori. Seks individuelt beskrevne leveranser: B2B-målgrupper, LinkedIn Campaign Manager, annonser/kreativer, Lead Gen Forms, Insight Tag/CRM og løpende optimalisering med fokus på leadkvalitet. Senere publiseringsbølge enn kjerne-SEO/CRO/Google Ads. Annonsebudsjett og større kreativ-/CRM-produksjon i tillegg. Ingen lovnad om leadpris eller salg.
 
-**Historikk:** Versjonerte snapshots 32–50 beholdes uendret. #34, #44, #45 og #48 avviste egne undersider; #46 godkjente AI-chatbot; #47 godkjente kundeanmeldelser som ANNET med JA, med bygg-først-avhengighet og lav prioritet.
+**Punkt 53 – venter:** Microsoft Advertising (Bing Ads), mulig `/microsoft-ads/`. Vurder egen side versus kanaltillegg innen annonseoptimalisering.
+
+**Historikk:** Versjonerte snapshots 32–51 beholdes uendret. #34, #44, #45 og #48 avviste egne undersider; #46 godkjente AI-chatbot; #47 godkjente kundeanmeldelser som ANNET med JA, med bygg-først-avhengighet og lav prioritet.
