@@ -6,4 +6,4 @@ interface Props { kind?: 'search' | 'choose' | 'both'; }
 const { kind = 'search' } = Astro.props;
 const Icon = kind === 'search' ? MagnifyingGlass : kind === 'choose' ? CursorClick : TrendUp;
 ---
-<Icon class="home-symbol" aria-hidden="true" focusable="false" width="64" height="64" />
+<Icon class="size-[34px] shrink-0" aria-hidden="true" focusable="false" width="34" height="34" />

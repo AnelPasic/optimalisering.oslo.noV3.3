@@ -15,8 +15,9 @@ test('h3 type scale has one shared owner, not one declaration per card', () => {
   const terminology = read('terminology.css');
 
   assert.match(shared, /h3\s*\{\s*font-size:\s*var\(--type-h3\);\s*line-height:\s*var\(--leading-h3\);\s*letter-spacing:\s*-.035em;\s*\}/);
-  assert.match(home, /\.invite-home \.need-card h3\s*\{\s*max-width:\s*390px;\s*\}/);
-  assert.match(home, /@media\s*\(max-width:\s*900px\)[\s\S]*?\.invite-home \.need-card h3\s*\{\s*max-width:\s*600px;\s*\}/);
+  assert.doesNotMatch(home, /need-card/);
+  const selector = readFileSync('src/components/HomepageBlock.astro','utf8');
+  assert.ok(selector.includes('max-w-[390px] max-[900px]:max-w-[600px]'));
   assert.doesNotMatch(packages, /\.invite-home \.package-card h3\s*\{/);
   assert.doesNotMatch(assessment, /\.invite-home \.form-heading h3\s*\{/);
   assert.match(shared, /\.form-heading h3\s*\{\s*margin-bottom:\s*27px;\s*\}/);

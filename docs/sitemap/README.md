@@ -1,14 +1,14 @@
 # Optimalisering Oslo – kanonisk sitemap og innholdsgrunnlag
 
-**Oppdatert:** 30.10.2026 · **Beslutningspunkter:** 34 avklart (33 JA / 1 NEI) · **Godkjente tjeneste-URL-er:** 39 · **Neste punkt:** 35 (ikke besluttet)
+**Oppdatert:** 30.10.2026 · **Beslutningspunkter:** 36 avklart (35 JA / 1 NEI) · **Godkjente tjeneste-URL-er:** 41 · **Neste punkt:** 37 (ikke besluttet)
 
 Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **Kun optimalisering.oslo.no**, ikke medon.no. Ingen av de foreslåtte sidene er implementert av denne sitemap-arbeidsflyten.
 
-## Gjeldende versjon (34)
+## Gjeldende versjon (36)
 
-- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-34-2026-10-30.md)
-- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-34-2026-10-30.json)
-- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-34-2026-10-30.md)
+- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-36-2026-10-30.md)
+- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-36-2026-10-30.json)
+- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-36-2026-10-30.md)
 - [Innholdsbrief-standard / utarbeidelseskrav](./innholdsbrief-standard.md)
 - [GitHub issues-struktur og oppgavemal – snapshot fra punkt 32](./github-issues-plan-32-2026-10-30.md)
 
@@ -30,6 +30,10 @@ Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **K
 
 **Punkt 34:** Handlekurvoptimalisering og mersalg – **NEI** til separat `/nettbutikkoptimalisering/handlekurv/`. Omfanget er dokumentert som del av godkjent `/nettbutikkoptimalisering/kjopsflyt/`. Antallet tjeneste-URL-er er fortsatt **39**.
 
-**Punkt 35 – venter:** Kundelojalitet og gjenkjøp. Foreslått `/nettbutikkoptimalisering/gjenkjop/`; vurder om dette har en selvstendig leveranse utover `/epostmarkedsforing/`.
+**Punkt 35 – JA:** Kundelojalitet og gjenkjøp godkjent på `/nettbutikkoptimalisering/gjenkjop/`. Tjenesten skal ikke kopiere e-postmarkedsføring, men dekke hele gjenkjøpsstrategien, inkludert butikkfunksjonalitet, kundeverdi og lojalitetstiltak.
 
-**Historikk:** Versjonerte snapshots 32 og 33 beholdes uendret. I versjon 34 ble en side avvist, og innholdet ble lagt inn under eksisterende kjøpsflyt.
+**Punkt 36 – JA:** Shopify-optimalisering godkjent som egen plattformspesifikk underside `/nettbutikkoptimalisering/shopify/`. Briefen beskriver Shopify-analyse, tema, apper, ytelse, produkt-/kategorisider, checkout, SEO, sporing og løpende arbeid med konkrete forbehold.
+
+**Punkt 37 – venter:** WooCommerce-optimalisering, foreslått `/nettbutikkoptimalisering/woocommerce/`. Må vurderes opp mot eksisterende nettbutikk- og Shopify-tjenester.
+
+**Historikk:** Versjonerte snapshots 32–35 beholdes uendret. I #34 ble én side avvist og omfanget samlet under kjøpsflyt; #35 godkjente gjenkjøp og #36 Shopify-optimalisering.
