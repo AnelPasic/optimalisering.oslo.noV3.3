@@ -13,9 +13,14 @@ const reserved=new Set(['home','404','begreper','design-system','sitemap.xml']);
 export function checkManagedPages(base=root){
  const seen=new Set(),files=[];
  const rootFiles=readdirSync(base,{withFileTypes:true}).filter(d=>d.isFile()&&d.name.endsWith('.json'));
+ const nonServiceLegacy=new Set(['home','innsikt','priser','om','vurdering','kontakt','personvern','vilkar','hva-bor-optimaliseres-forst','male-effekt-av-optimalisering','google-bedriftsprofil']);
  for(const f of rootFiles){
   const p=JSON.parse(readFileSync(join(base,f.name),'utf8'));
   if(seen.has(p.slug))throw new Error('Duplicate canonical slug: '+p.slug);
+  if(!nonServiceLegacy.has(f.name.slice(0,-5))){
+   if(p.kind!=='service')throw new Error('All services only accepts service kind: '+f.name);
+   if(!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(p.slug)||f.name!==p.slug+'.json')throw new Error('Service filename/slug mismatch: '+f.name);
+  }
   seen.add(p.slug);
  }
  for(const def of definitions){

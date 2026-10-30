@@ -1154,7 +1154,7 @@ content:
     type: group
     items:
       - name: services
-        label: Øvrige tjenester
+        label: Alle tjenester
         type: collection
         path: app/src/content/pages
         exclude:
@@ -1168,14 +1168,17 @@ content:
           - vilkar.json
           - hva-bor-optimaliseres-forst.json
           - male-effekt-av-optimalisering.json
-          - synlighet.json
-          - seo.json
-          - lokal-seo.json
           - google-bedriftsprofil.json
         format: json
         subfolders: false
-        operations: *a3
-        filename: "{slug}.json"
+        operations:
+          create: true
+          rename: false
+          delete: true
+        filename:
+          template: "{fields.slug}.json"
+          field: false
+        description: "Create or delete services in this collection. Delete includes existing service pages: remove inbound links and plan redirects first. Core, legal, pricing and contact pages remain outside the collection."
         view:
           primary: seo.title
           fields:
@@ -1189,7 +1192,14 @@ content:
             - seo.title
             - slug
         fields:
-          - *serviceslug
+          - name: slug
+            label: Page URL slug
+            type: string
+            required: true
+            pattern:
+              regex: "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+              message: "Use lowercase letters, numbers and hyphens."
+            description: "Public URL /your-slug/. Existing URLs are protected by filename/slug validation."
           - &a4
             name: seo
             label: SEO
@@ -1271,7 +1281,7 @@ content:
             blocks:
               - name: content
                 label: Innholdsseksjon
-                component: sectionContent
+                component: synlighetSectionContent
               - name: protected
                 label: Beskyttet sjekk / handling
                 component: sectionProtected
@@ -1285,6 +1295,13 @@ content:
                 label: Global innholdsseksjon
                 component: sharedContentPlacement
           - *a7
+          - name: kind
+            label: Page type
+            type: string
+            default: service
+            required: true
+            readonly: true
+            hidden: true
           - &serviceproof
             name: proof
             label: Dokumenterte resultater - trygg presentasjon
@@ -1329,248 +1346,6 @@ content:
                 type: string
                 required: true
             required: false
-      - name: managedServices
-        label: New service pages (Add / Delete)
-        type: collection
-        path: app/src/content/pages/managed-services
-        format: json
-        subfolders: false
-        filename:
-          template: "{fields.slug}.json"
-          field: false
-        operations:
-          create: true
-          rename: false
-          delete: true
-        description: "Create pages here. Before Delete, remove links from navigation and other pages; broken links fail the site build. Existing core pages cannot be deleted here."
-        view:
-          primary: seo.title
-          fields: [seo.title, slug]
-          search: [seo.title, slug]
-        fields:
-          - name: slug
-            label: Page URL slug
-            type: string
-            required: true
-            pattern:
-              regex: "^[a-z0-9]+(?:-[a-z0-9]+)*$"
-              message: "Use lowercase letters, numbers and hyphens; do not include slashes."
-            description: "Public address /your-slug/. Must be unique. Changing it later requires a deliberate URL migration."
-          - name: kind
-            label: Page type
-            type: string
-            default: service
-            required: true
-            readonly: true
-            hidden: true
-          - name: seo
-            label: SEO
-            type: object
-            required: true
-            fields:
-              - name: title
-                label: SEO title
-                type: string
-                required: true
-              - name: description
-                label: SEO description
-                type: text
-                required: true
-          - name: hero
-            label: Hero
-            type: object
-            required: true
-            fields:
-              - name: layout
-                label: Layout
-                type: select
-                default: centered-none
-                required: true
-                options:
-                  values: [split-right, split-left, centered, centered-none]
-              - name: eyebrow
-                label: Eyebrow
-                type: string
-                default: ""
-                required: true
-              - name: title
-                label: Main heading
-                type: string
-                required: true
-              - name: support
-                label: Introduction
-                type: text
-                required: true
-              - name: primaryCta
-                label: Main action
-                component: link
-                required: true
-              - name: secondaryCta
-                label: Optional second action
-                component: link
-              - name: visual
-                label: Hero visual
-                type: block
-                blockKey: kind
-                required: true
-                blocks:
-                  - name: none
-                    label: No image
-                    type: object
-                    fields: []
-                  - name: image
-                    label: Image
-                    type: object
-                    fields:
-                      - name: image
-                        label: Image and crop
-                        type: object
-                        required: true
-                        fields:
-                          - name: kind
-                            label: Image type
-                            type: select
-                            default: photo
-                            options:
-                              values: [photo, illustration]
-                          - name: src
-                            label: File
-                            type: image
-                            required: true
-                            options:
-                              media: serviceHeroImages
-                          - name: alt
-                            label: Alt text
-                            type: string
-                            required: true
-                          - name: positionX
-                            label: Horizontal crop
-                            type: number
-                            default: 50
-                          - name: positionY
-                            label: Vertical crop
-                            type: number
-                            default: 50
-          - name: sections
-            label: Content sections
-            type: block
-            required: true
-            blockKey: _block
-            list:
-              collapsible:
-                collapsed: true
-                summary: "{index}. {heading}{element}"
-            blocks:
-              - name: content
-                label: Content section
-                component: sectionContent
-              - name: pageList
-                label: Page list
-                component: sectionPageList
-              - name: global
-                label: Shared master
-                component: serviceGlobalPlacement
-              - name: sharedContent
-                label: Shared content
-                component: sharedContentPlacement
-          - name: faq
-            label: Optional FAQ
-            type: object
-            list:
-              collapsible:
-                collapsed: true
-                summary: "{question}"
-            fields:
-              - name: question
-                label: Question
-                type: string
-                required: true
-              - name: answer
-                label: Answer
-                type: text
-                required: true
-      - name: serviceSeo
-        label: SEO - seksjonsbygger
-        type: file
-        path: app/src/content/pages/seo.json
-        format: json
-        operations: *a3
-        fields:
-          - *serviceslug
-          - *a4
-          - *standardHero
-          - name: sections
-            label: Innholdsseksjoner
-            description: Dra lokale seksjoner og globale innholdselementer i ønsket rekkefølge. Felles innhold redigeres kun under Global Innhold.
-            type: block
-            list:
-              collapsible:
-                collapsed: true
-                summary: "{index}. {heading}{element}"
-            required: true
-            blockKey: _block
-            blocks:
-              - name: content
-                label: Innholdsseksjon
-                component: synlighetSectionContent
-              - name: pageList
-                label: PageList – innholdsliste
-                component: sectionPageList
-              - name: global
-                label: Globalt element
-                component: serviceGlobalPlacement
-              - name: sharedContent
-                label: Global innholdsseksjon
-                component: sharedContentPlacement
-          - *a7
-      - name: serviceSynlighet
-        label: Synlighet
-        type: file
-        path: app/src/content/pages/synlighet.json
-        format: json
-        operations: *a3
-        fields:
-          - *serviceslug
-          - *a4
-          - *standardHero
-          - name: sections
-            label: Innholdsseksjoner
-            type: block
-            list:
-              collapsible:
-                collapsed: true
-                summary: "{index}. {heading}{element}"
-            required: true
-            blockKey: _block
-            blocks:
-              - name: content
-                label: Innholdsseksjon
-                component: synlighetSectionContent
-              - name: protected
-                label: Beskyttet sjekk / handling
-                component: sectionProtected
-              - name: pageList
-                label: PageList – innholdsliste
-                component: sectionPageList
-              - name: global
-                label: Globalt element
-                component: serviceGlobalPlacement
-              - name: sharedContent
-                label: Global innholdsseksjon
-                component: sharedContentPlacement
-          - *a7
-      - name: serviceLokalSeo
-        label: Lokal SEO
-        type: file
-        path: app/src/content/pages/lokal-seo.json
-        format: json
-        operations: *a3
-        fields:
-          - *serviceslug
-          - *a4
-          - *standardHero
-          - *a6
-          - *a7
   - name: terminology
     label: Begreper og forklaringer
     type: file

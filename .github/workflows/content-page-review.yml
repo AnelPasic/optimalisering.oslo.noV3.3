@@ -26,6 +26,7 @@ on:
       - ".pages.yml"
       - "app/scripts/check-managed-pages.mjs"
       - "app/tests/content-06-page-lifecycle.test.ts"
+      - "app/tests/service-cms-unified.test.ts"
       - "app/src/content/site-chrome/appearance.json"
       - "app/src/styles/app.css"
       - "app/src/styles/project.css"
@@ -97,6 +98,8 @@ jobs:
         run: node --test tests/content-04-archetype-patterns.test.ts
       - name: CONTENT-06 validate safe native Add/Delete collections
         run: node --test tests/content-06-page-lifecycle.test.ts && node scripts/check-managed-pages.mjs
+      - name: Verify single All services CMS and lossless editing of current service pages
+        run: node --test tests/service-cms-unified.test.ts
       - name: Astro check
         run: npm run check
       - name: Build static pages
