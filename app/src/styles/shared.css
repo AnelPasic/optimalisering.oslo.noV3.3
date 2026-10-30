@@ -108,7 +108,7 @@ p { text-wrap: pretty; }
 .closing-cta > .shell { display: flex; align-items: center; justify-content: space-between; gap: 35px; }
 .closing-cta .eyebrow { margin-bottom: 18px; }
 
-.site-footer { background: var(--cream); padding-top: 65px; }
+.site-footer { padding-top: 65px; }
 
 .footer-brand { font-family: var(--heading); text-decoration: none; font-size: var(--type-h4); letter-spacing: -.04em; line-height: var(--leading-h4); }
 .footer-brand span { color: var(--color-primary); }
@@ -152,7 +152,7 @@ p { text-wrap: pretty; }
   text-decoration: none;
 }
 .site-shell .site-footer .footer-group-title a:is(:hover, :focus-visible) {
-  color: var(--color-accent);
+  color: inherit;
   text-decoration: underline;
   text-underline-offset: 4px;
 }
@@ -415,13 +415,12 @@ p { text-wrap: pretty; }
 .site-shell :focus-visible { outline-color: var(--color-focus); }
 .faq-section { background: var(--color-base-100); }
 .faq-grid { grid-template-columns: .8fr 1.2fr; gap: 96px; }
-.site-shell .site-footer { background: var(--color-secondary); color: var(--color-base-100); padding-top: 88px; }
-.site-shell .footer-brand { color: var(--color-base-100); }
-.site-shell .footer-brand span { color: var(--color-footer-accent); }
-.site-shell .footer-grid p, .site-shell .footer-bottom { color: var(--color-footer-muted); }
-.site-shell .footer-grid nav a:hover { color: var(--color-accent); }
-.site-shell .preview-tag { color: var(--color-footer-preview); border: var(--border-dark); }
-.site-shell .footer-bottom { border-top: var(--border-dark); }
+/* daisyUI semantic pair owns the footer palette; CSS here only handles layout. */
+.site-shell .site-footer { padding-top: 88px; }
+.site-shell .footer-brand span { color: inherit; }
+.site-shell .footer-grid p, .site-shell .footer-bottom { color: var(--color-secondary-content); }
+.site-shell .preview-tag { color: var(--color-secondary-content); border: 1px solid color-mix(in srgb, var(--color-secondary-content) 25%, transparent); }
+.site-shell .footer-bottom { border-top: 1px solid color-mix(in srgb, var(--color-secondary-content) 25%, transparent); }
 @media (max-width: 1100px) {
   .site-shell .shell { width: calc(100% - 64px); }
 }

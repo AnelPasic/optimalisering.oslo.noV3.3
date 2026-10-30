@@ -164,6 +164,33 @@ try {
   }
   await page.close();
  }
+
+ // Regression: bright daisyUI secondary themes require secondary-content throughout footer.
+ for(const width of [390,1440]){
+  const page=await browser.newPage({viewport:{width,height:900}});
+  assert.equal((await page.goto(origin+'/',{waitUntil:'networkidle'})).status(),200);
+  for(const theme of ['optimalisering','sunset']){
+   const d=await page.evaluate(theme=>{
+    document.documentElement.dataset.theme=theme;
+    const el=document.querySelector('.site-footer');
+    const expected=document.createElement('span');
+    expected.style.background='var(--color-secondary)';
+    expected.style.color='var(--color-secondary-content)';
+    document.body.append(expected);
+    const bg=getComputedStyle(expected).backgroundColor,fg=getComputedStyle(expected).color;
+    expected.remove();
+    const sample=sel=>{const node=el?.querySelector(sel);return node?getComputedStyle(node).color:null;};
+    return {bg,fg,actualBg:getComputedStyle(el).backgroundColor,
+      colors:[getComputedStyle(el).color,sample('.footer-about p'),sample('.footer-link-group a'),sample('.footer-bottom'),sample('.footer-bottom nav a')],
+      overflow:document.documentElement.scrollWidth-innerWidth};
+   },theme);
+   assert.equal(d.actualBg,d.bg,'footer background mismatch '+theme);
+   for(const value of d.colors) assert.equal(value,d.fg,'footer text contrast pair mismatch '+theme);
+   assert.ok(d.overflow<=2,'footer horizontal overflow '+width+'/'+theme);
+   console.log('PASS footer semantic secondary-content',width,theme);
+  }
+  await page.close();
+ }
 }finally{
  await browser.close();
  await new Promise(r=>server.close(r));
