@@ -1,14 +1,14 @@
 # Optimalisering Oslo – kanonisk sitemap og innholdsgrunnlag
 
-**Oppdatert:** 30.10.2026 · **Beslutningspunkter:** 42 avklart (41 JA / 1 NEI) · **Godkjente tjeneste-URL-er:** 47 · **Neste punkt:** 43 (ikke besluttet)
+**Oppdatert:** 30.10.2026 · **Beslutningspunkter:** 43 avklart (42 JA / 1 NEI) · **Godkjente tjeneste-URL-er:** 48 · **Neste punkt:** 44 (ikke besluttet)
 
 Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **Kun optimalisering.oslo.no**, ikke medon.no. Ingen av de foreslåtte sidene er implementert av denne sitemap-arbeidsflyten.
 
-## Gjeldende versjon (42)
+## Gjeldende versjon (43)
 
-- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-42-2026-10-30.md)
-- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-42-2026-10-30.json)
-- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-42-2026-10-30.md)
+- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-43-2026-10-30.md)
+- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-43-2026-10-30.json)
+- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-43-2026-10-30.md)
 - [Innholdsbrief-standard / utarbeidelseskrav](./innholdsbrief-standard.md)
 - [GitHub issues-struktur og oppgavemal – snapshot fra punkt 32](./github-issues-plan-32-2026-10-30.md)
 
@@ -46,6 +46,8 @@ Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **K
 
 **Punkt 42 – JA:** `/nettsideanalyse/` er godkjent som egen betalt, tverrfaglig nettsideanalyse. Full brief dekker faktiske funn innen SEO/AI-søk, UX/CRO, mobil, hastighet, sporing og en prioritert tiltaksrapport med kundegjennomgang. Skal ikke være generisk AI-PDF eller gratis full audit via `/vurdering/`; skiller fra spesialist-analyser.
 
-**Punkt 43 – venter:** Digital konkurrentanalyse, mulig `/digital-konkurrentanalyse/`, med fokus på nettsider, tilbud, synlighet og konverteringsstrategier. Krever avgrensning mot `/seo/konkurrentanalyse/` og `/nettsideanalyse/`.
+**Punkt 43 – JA:** `/digital-konkurrentanalyse/` godkjent som selvstendig betalt tjeneste for tverrfaglig sammenligning av typisk 3–5 reelle konkurrenters synlige nettsider, tilbud, budskap, priser, søke- og AI-synlighet, offentlig annonsering og konverteringsgrep. Dokumenterte observasjoner og prioritert handlingsplan, ikke påstander om konkurrentenes interne data. Skiller fra `/seo/konkurrentanalyse/` og `/nettsideanalyse/`.
 
-**Historikk:** Versjonerte snapshots 32–41 beholdes uendret. #34 avviste egen handlekurv-URL; #35 gjenkjøp, #36 Shopify, #37 WooCommerce (Magento/Shopify-kommentar), #38 WordPress, #39 nettsidemigrering, #40 nettsidevedlikehold, #41 kritisk funksjonsovervåkning og #42 betalt nettsideanalyse.
+**Punkt 44 – venter:** Optimalisering av tilbud og tjenestepakker, mulig `/konvertering/tilbudsoptimalisering/`. Vurder først overlapp med `/konvertering/budskap-og-tilbud/` og `/konvertering/prissider/`.
+
+**Historikk:** Versjonerte snapshots 32–42 beholdes uendret. #34 avviste egen handlekurv-URL; #35 gjenkjøp, #36 Shopify, #37 WooCommerce (Magento/Shopify-kommentar), #38 WordPress, #39 nettsidemigrering, #40 nettsidevedlikehold, #41 funksjonsovervåkning, #42 nettsideanalyse og #43 digital konkurrentanalyse.
