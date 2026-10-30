@@ -293,8 +293,5 @@ html[data-mws-theme-mode="dark"] {
  --color-dark-line: oklch(48% 0.04 314);
  --color-control-line: oklch(51% 0.025 307);
  --color-focus: oklch(82% 0.12 64);
- --color-footer-accent: oklch(78% 0.09 169);
- --color-footer-muted: oklch(80% 0.02 309);
- --color-footer-preview: oklch(80% 0.018 312);
  --color-error-on-dark: oklch(80% 0.12 45);
 }

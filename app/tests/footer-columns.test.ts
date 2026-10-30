@@ -46,3 +46,15 @@ test('footer links render from dedicated global JSON and work with stock Pages C
   assert.match(cms, /name: headingHref/);
   assert.match(cms, /name: footerLegalLinks/);
 });
+
+test('footer always pairs the semantic secondary surface with secondary-content', () => {
+  const view=read(join(appDir,'src/components/HomeFooter.astro'));
+  const styles=read(join(appDir,'src/styles/shared.css'));
+  assert.match(view, /<footer class="site-footer bg-secondary text-secondary-content">/);
+  assert.match(styles, /\.site-shell \.footer-grid p, \.site-shell \.footer-bottom \{ color: var\(--color-secondary-content\); \}/);
+  assert.doesNotMatch(styles, /\.site-shell \.site-footer \{[^}]*background:/);
+  assert.doesNotMatch(styles, /\.site-shell \.footer-brand \{ color: var\(--color-base-100\)/);
+  assert.doesNotMatch(styles, /--color-footer-(?:accent|muted|preview)/);
+  assert.doesNotMatch(read(join(appDir,'src/styles/app.css')), /--color-footer-(?:accent|muted|preview)/);
+  assert.doesNotMatch(read(join(appDir,'src/styles/header-navigation.css')), /--color-footer-(?:accent|muted|preview)/);
+});
