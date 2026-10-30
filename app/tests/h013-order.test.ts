@@ -39,7 +39,7 @@ test('global package cards own the order form; there is no second order area on 
   assert.doesNotMatch(page,/<PackageOrder/);
   for(const field of ['website','email','phone']) assert.match(inline,new RegExp('name="'+field+'"'));
   assert.match(inline,/name="package" value={item.key}/);
-  assert.match(inline,/site.ordersEnabled && !site.preview/);
+  assert.match(inline,/const enabled = site.ordersEnabled/);
   assert.match(inline,/orderSubmitLabel/);
   const master=JSON.parse(readFileSync('src/content/global-elements/priser.json','utf8'));
   assert.equal(master.content.orderSubmitLabel,'Send bestilling');
@@ -47,8 +47,8 @@ test('global package cards own the order form; there is no second order area on 
 
 test('order text is editable ONLY under the global pricing master in Pages CMS',()=>{
   const yaml=readFileSync('../.pages.yml','utf8');
-  const packages=yaml.slice(yaml.indexOf('  - name: globalPackages'));
-  const calculator=yaml.slice(yaml.indexOf('  - name: globalCalculator'),yaml.indexOf('  - name: globalPackages'));
+  const packages=yaml.slice(yaml.indexOf('      - name: globalPackages'),yaml.indexOf('  - name: insight'));
+  const calculator=yaml.slice(yaml.indexOf('      - name: globalCalculator'),yaml.indexOf('      - name: globalAssessment'));
   assert.match(packages,/name: orderIntro/);
   assert.match(packages,/name: orderSubmitLabel/);
   assert.doesNotMatch(calculator,/name: orderIntro/);

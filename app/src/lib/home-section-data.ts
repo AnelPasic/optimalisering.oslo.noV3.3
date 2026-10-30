@@ -20,6 +20,11 @@ export const homeSectionDataSchema = z.object({
     adBudgetNote: z.string(), externalCostsNote: z.string(), separateWorkNote: z.string(), capacityNote: z.string(),
     decisionStrip: z.object({ heading: z.string(), items: z.array(z.string()).length(3) }),
     multiplier: z.object({ eyebrow: z.string(), heading: z.string(), body: z.string(), conceptualRow: z.string(), support: z.string() }),
+    comparison: z.object({
+      heading: z.string().trim().min(1), intro: z.string().trim().min(1), focusHeading: z.string().trim().min(1),
+      options: z.array(z.object({id:z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),label:z.string().trim().min(1),description:z.string().optional()}).strict()).min(3).max(8)
+        .refine(options=>new Set(options.map(option=>option.id)).size===options.length,{message:'Comparison focus IDs must be unique'}),
+    }).strict(),
     items: z.array(z.object({
       title: z.string(), descriptor: z.string(), fit: z.string(), scope: z.string().optional(),
       price: z.number().int().positive().max(100000000), pricePrefix: z.literal('fra').optional(), priceSuffix: z.string(), vatSuffix: z.string(),

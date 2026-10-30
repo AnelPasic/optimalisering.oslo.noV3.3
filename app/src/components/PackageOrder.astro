@@ -9,11 +9,12 @@ const id = (field: string) => `package-${item.key}-${field}`;
 const enabled = site.ordersEnabled;
 // Real intake requires backend, privacy, notification and launch approval.
 ---
-<details class="package-order-inline" data-package-order data-package-key={item.key}>
+<details id={`package-order-${item.key}`} class="package-order-inline" data-package-order data-package-key={item.key}>
   <summary class:list={['button', 'btn', featured ? 'btn-secondary' : 'btn-primary']}>{item.cta.label}<Arrow diagonal /></summary>
   <div class="package-order-panel">
     <h4>Bestill {item.title}</h4>
     <p>{orderIntro}</p>
+    <p class="package-focus-order-summary" data-package-focus-summary aria-live="polite"></p>
     <form data-package-order-form data-enabled={String(enabled)} data-endpoint={site.leadEndpoint} method="post" onsubmit="return false">
       <input type="hidden" name="form" value="pakke-bestilling" />
       <input type="hidden" name="package" value={item.key} />
@@ -24,6 +25,10 @@ const enabled = site.ordersEnabled;
         <input class="input w-full" id={id('email')} name="email" type="email" autocomplete="email" placeholder="deg@dinbedrift.no" maxlength="254" required />
         <label for={id('phone')}>Telefon <span aria-hidden="true">*</span></label>
         <input class="input w-full" id={id('phone')} name="phone" type="tel" autocomplete="tel" placeholder="+47 900 00 000" maxlength="40" required />
+        {item.key === 'partner' && <>
+          <label for={id('partner-needs')}>Hva ønsker du hjelp med? (valgfritt)</label>
+          <textarea class="textarea w-full" id={id('partner-needs')} name="partnerNeeds" rows="3" maxlength="650" placeholder="Fortell kort om tjenester, markeder eller mål dere vil prioritere."></textarea>
+        </>}
       </div>
       <div hidden aria-hidden="true"><label for={id('website-confirmation')}>La feltet stå tomt</label><input id={id('website-confirmation')} name="website_confirmation" tabindex="-1" autocomplete="off" maxlength="200" /></div>
       <p class="form-privacy">Ikke send innlogging eller sensitive opplysninger. <a href="/personvern/">Les om personvern</a>.</p>
@@ -36,6 +41,7 @@ const enabled = site.ordersEnabled;
 </details>
 <script>
   import { createOrderPayload } from '../lib/order';
+  import { createPackageFocusMessage } from '../lib/package-focus';
   import { normalizeWebsite, submitLead } from '../lib/lead';
   import { captureAttribution } from '../lib/attribution';
   const accordions = [...document.querySelectorAll<HTMLDetailsElement>('[data-package-order]')];
@@ -50,6 +56,19 @@ const enabled = site.ordersEnabled;
     const status = form.querySelector<HTMLElement>('[data-order-status]')!;
     const enabled = form.dataset.enabled === 'true';
     const endpoint = form.dataset.endpoint ?? '';
+    const packageKey = form.querySelector<HTMLInputElement>('[name="package"]')!.value;
+    const focusSummary = details.querySelector<HTMLElement>('[data-package-focus-summary]')!;
+    const selectedFocus = () => [...document.querySelectorAll<HTMLInputElement>('[data-package-focus-choice]')]
+      .filter(input => input.checked && input.dataset.focusPackage === packageKey)
+      .map(input => ({id:input.value,label:input.dataset.focusLabel ?? ''}));
+    const refreshFocusSummary = () => {
+      const chosen=selectedFocus().map(f=>f.label);
+      focusSummary.textContent=chosen.length?('Valgt fokus: '+chosen.join(' + ')):'';
+    };
+    document.addEventListener('change', event => {
+      if(event.target instanceof HTMLInputElement && event.target.matches('[data-package-focus-choice]')) refreshFocusSummary();
+    });
+    refreshFocusSummary();
     let key = crypto.randomUUID(), previousBody = '', busy = false;
     const show = (message: string) => { status.textContent = message; status.hidden = false; status.focus({preventScroll: true}); };
     website.addEventListener('input', () => { website.setCustomValidity(''); website.removeAttribute('aria-invalid'); });
@@ -60,10 +79,11 @@ const enabled = site.ordersEnabled;
       if (!form.checkValidity()) { form.reportValidity(); return; }
       const fields = Object.fromEntries(new FormData(form).entries()) as Record<string,string>;
       if (fields.website_confirmation) return;
-      if (!normalizeWebsite(website.value)) {
-        website.setCustomValidity('Skriv inn en gyldig nettadresse.');
-        website.setAttribute('aria-invalid','true');
-        website.reportValidity(); website.focus(); return;
+      try {
+        fields.message=createPackageFocusMessage(packageKey,selectedFocus().map(choice=>choice.label),fields.partnerNeeds);
+      } catch (error) {
+        show(error instanceof Error ? error.message : 'Kontroller valgte fokusområder.');
+        return;
       }
       let payload;
       try {

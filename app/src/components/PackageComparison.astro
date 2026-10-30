@@ -1,0 +1,64 @@
+---
+import type {HomepageContent} from '../lib/home-section-data';
+type PackageSource=HomepageContent['packages'];
+interface Props { packages: PackageSource }
+const {packages}=Astro.props;
+const labels=packages.comparison;
+const format=(price:number)=>new Intl.NumberFormat('nb-NO',{maximumFractionDigits:0}).format(price);
+---
+<section id="sammenlign" class="package-comparison section-space" aria-labelledby="comparison-heading" data-package-comparison>
+  <div class="shell">
+    <h2 id="comparison-heading">{labels.heading}</h2>
+    <p class="body-copy package-comparison-intro">{labels.intro}</p>
+    <div class="package-comparison-scroll overflow-x-auto rounded-box border border-base-content/10 bg-base-100" role="region" aria-label={labels.heading} tabindex="0">
+      <table class="table table-zebra table-md package-comparison-table">
+        <thead><tr><th scope="col">Sammenlign</th>{packages.items.map(item=><th scope="col">{item.title}</th>)}</tr></thead>
+        <tbody>
+          <tr><th scope="row">Månedspris eks. mva.</th>{packages.items.map(item=><td>{item.pricePrefix && <span>{item.pricePrefix} </span>}{format(item.price)} {item.priceSuffix}</td>)}</tr>
+          <tr><th scope="row">Passer for</th>{packages.items.map(item=><td>{item.compact.fit}</td>)}</tr>
+          <tr><th scope="row">Omfang og prioritering</th>{packages.items.map(item=><td>{item.scope ?? item.selectionRule}</td>)}</tr>
+          <tr class="compare-category bg-base-200"><th scope="row">{labels.focusHeading}</th><td>Velg ett</td><td>Velg inntil to</td><td>Avklares sammen</td></tr>
+          {labels.options.map(option=><tr>
+            <th scope="row">{option.label}{option.description && <span class="package-compare-text">{option.description}</span>}</th>
+            <td><label class="package-compare-option"><input class="radio radio-primary radio-sm" type="radio" name="comparison-optimalisering" value={option.id} data-package-focus-choice data-focus-package="optimalisering" data-focus-label={option.label} aria-label={`Optimalisering: ${option.label}`} /></label></td>
+            <td><label class="package-compare-option"><input class="checkbox checkbox-primary checkbox-sm" type="checkbox" name="comparison-vekst" value={option.id} data-package-focus-choice data-focus-package="vekst" data-focus-label={option.label} aria-label={`Vekst: ${option.label}`} /></label></td>
+            <td>Etter avtale</td>
+          </tr>)}
+        </tbody>
+      </table>
+    </div>
+    <div class="comparison-notes" aria-live="polite">
+      <span class="comparison-status" data-compare-count="optimalisering">Optimalisering: ikke valgt ennå</span>
+      <span class="comparison-status" data-compare-count="vekst">Vekst: 0 av 2 valgt</span>
+      <span>Partner prioriterer flere kundereiser etter avtalt kapasitet – ikke alt samtidig.</span>
+    </div>
+    <div class="comparison-actions">{packages.items.map(item=><a class="btn btn-outline" href={`#package-order-${item.key}`} data-open-package-order={item.key}>Velg {item.title}</a>)}</div>
+  </div>
+</section>
+<script>
+ const root=document.querySelector<HTMLElement>('[data-package-comparison]');
+ if(root){
+   const options=[...root.querySelectorAll<HTMLInputElement>('[data-package-focus-choice]')];
+   const update=()=>{
+     const selected=(key:string)=>options.filter(input=>input.dataset.focusPackage===key&&input.checked);
+     const optimal=selected('optimalisering').length,vekst=selected('vekst').length;
+     for(const input of options)if(input.dataset.focusPackage==='vekst')input.disabled=vekst>=2&&!input.checked;
+     const single=root.querySelector<HTMLElement>('[data-compare-count="optimalisering"]');
+     const double=root.querySelector<HTMLElement>('[data-compare-count="vekst"]');
+     if(single)single.textContent=optimal?'Optimalisering: 1 fokusområde valgt':'Optimalisering: ikke valgt ennå';
+     if(double)double.textContent=`Vekst: ${vekst} av 2 valgt`;
+   };
+   root.addEventListener('change',event=>{if(event.target instanceof HTMLInputElement&&event.target.matches('[data-package-focus-choice]'))update();});
+   root.addEventListener('click',event=>{
+     const link=(event.target instanceof Element?event.target.closest<HTMLAnchorElement>('[data-open-package-order]'):null);
+     if(!link)return;
+     const key=link.dataset.openPackageOrder;
+     const target=[...document.querySelectorAll<HTMLDetailsElement>('[data-package-order]')].find(x=>x.dataset.packageKey===key);
+     if(!target)return;
+     event.preventDefault();
+     target.open=true;
+     target.scrollIntoView({behavior:'smooth',block:'center'});
+   });
+   update();
+ }
+</script>
