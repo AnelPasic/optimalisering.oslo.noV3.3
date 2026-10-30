@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {pageSchema} from '../src/lib/content-schema.ts';
 
-const page=(name:string)=>JSON.parse(readFileSync('src/content/pages/'+name+'.json','utf8'));
+const page=(name:string)=>JSON.parse(readFileSync('src/content/pages/'+(name==='google-bedriftsprofil'?'managed-articles/innsikt-google-bedriftsprofil':name)+'.json','utf8'));
 const home=page('home'),service=page('seo'),article=page('google-bedriftsprofil');
 
 test('CONTENT-04 Oslo pilot: three different intents with native SEO, Hero and independently owned sections',()=>{
