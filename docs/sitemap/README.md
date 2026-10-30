@@ -1,14 +1,14 @@
 # Optimalisering Oslo – kanonisk sitemap og innholdsgrunnlag
 
-**Oppdatert:** 30.10.2026 · **Beslutningspunkter:** 40 avklart (39 JA / 1 NEI) · **Godkjente tjeneste-URL-er:** 45 · **Neste punkt:** 41 (ikke besluttet)
+**Oppdatert:** 30.10.2026 · **Beslutningspunkter:** 41 avklart (40 JA / 1 NEI) · **Godkjente tjeneste-URL-er:** 46 · **Neste punkt:** 42 (ikke besluttet)
 
 Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **Kun optimalisering.oslo.no**, ikke medon.no. Ingen av de foreslåtte sidene er implementert av denne sitemap-arbeidsflyten.
 
-## Gjeldende versjon (40)
+## Gjeldende versjon (41)
 
-- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-40-2026-10-30.md)
-- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-40-2026-10-30.json)
-- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-40-2026-10-30.md)
+- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-41-2026-10-30.md)
+- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-41-2026-10-30.json)
+- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-41-2026-10-30.md)
 - [Innholdsbrief-standard / utarbeidelseskrav](./innholdsbrief-standard.md)
 - [GitHub issues-struktur og oppgavemal – snapshot fra punkt 32](./github-issues-plan-32-2026-10-30.md)
 
@@ -42,6 +42,8 @@ Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **K
 
 **Punkt 40 – JA:** `/nettsidevedlikehold/` godkjent som selvstendig tjenesteside med plattformtilpassede månedlige avtaler. Full brief dekker oppdateringer, sikkerhet, backup, oppetid, hosting/domene/SSL, kontroll av kritiske funksjoner etter oppdatering og enkel status. Ikke ubegrenset driftshjelp eller garantert responstid uten spesifisert SLA.
 
-**Punkt 41 – venter:** Overvåkning av kritiske funksjoner (skjema/booking/betaling/integrasjoner). Egen URL `/funksjonsovervakning/` er kun et forslag, ikke godkjent. Må vurderes opp mot vedlikeholdstilbudet.
+**Punkt 41 – JA:** `/funksjonsovervakning/` godkjent som egen spesialisert månedlig tjeneste, atskilt fra ordinært nettsidevedlikehold. Full brief omfatter kritiske brukerflyter, skjematesting, booking-/checkoutkontroller, integrasjoner, automatisk varsling og feilhistorikk. Krever reelle, sikre og testede kontroller før tjenesten selges som automatisk overvåkning; ingen løfter om ubegrenset feiloppdagelse eller beredskap.
 
-**Historikk:** Versjonerte snapshots 32–39 beholdes uendret. #34 avviste egen handlekurv-URL; #35 gjenkjøp, #36 Shopify, #37 WooCommerce (Magento/Shopify-kommentar), #38 WordPress, #39 nettsidemigrering, #40 nettsidevedlikehold.
+**Punkt 42 – venter:** Helhetlig nettsideanalyse og forbedringsplan, mulig `/nettsideanalyse/`. Må vurderes opp mot `/vurdering/` (kort vurdering) og spesialiserte analysetjenester.
+
+**Historikk:** Versjonerte snapshots 32–40 beholdes uendret. #34 avviste egen handlekurv-URL; #35 gjenkjøp, #36 Shopify, #37 WooCommerce (Magento/Shopify-kommentar), #38 WordPress, #39 nettsidemigrering, #40 nettsidevedlikehold og #41 kritisk funksjonsovervåkning.
