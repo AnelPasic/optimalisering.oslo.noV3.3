@@ -8,7 +8,7 @@ import { getHomepageBlocks } from '../src/lib/home-builder.ts';
 import { cmsJsonSave, entryForFile, resolveField } from './helpers/pages-cms-json.ts';
 
 const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
-const names=readdirSync('src/content/pages').filter(name=>name.endsWith('.json')).sort();
+const names=[...readdirSync('src/content/pages').filter(name=>name.endsWith('.json')),...readdirSync('src/content/pages/managed-articles').filter(name=>name.endsWith('.json')).map(name=>'managed-articles/'+name)].sort();
 const raw=names.map(name=>JSON.parse(readFileSync('src/content/pages/'+name,'utf8')));
 const proofs=readdirSync('src/content/proof').filter(name=>name.endsWith('.json')).map(name=>JSON.parse(readFileSync('src/content/proof/'+name,'utf8')));
 const config=(edit:any={})=>({mode:'automatic',sort:'editorial',limit:6,layout:'cards',selected:[],excluded:[],...edit});
@@ -83,7 +83,7 @@ test('rejects unsafe URL protocols, duplicates, unknown page slugs and too many 
 });
 
 test('PageList can be created, reordered and saved without changing page-owned or global content',()=>{
- for(const name of ['home.json','synlighet.json','priser.json','om.json','hva-bor-optimaliseres-forst.json']){
+ for(const name of ['home.json','synlighet.json','priser.json','om.json','managed-articles/innsikt-hva-bor-optimaliseres-forst.json']){
   const original=JSON.parse(readFileSync('src/content/pages/'+name,'utf8'));
   const copy=structuredClone(original);
   const next={_block:'pageList',id:'relatert-'+name.replace('.json',''),heading:'Se også',pageList:config({mode:'manual',source:'pages',entries:[{_block:'page',slug:'priser'},{_block:'url',href:'/kontakt/',title:'Kontakt oss'}]})};
