@@ -22,19 +22,37 @@ a.term-trigger:focus-visible { outline: 2px solid currentColor; outline-offset: 
   margin: 0;
   width: max-content;
   max-width: min(340px, calc(100vw - 24px));
-  padding: var(--panel-pad-sm);
-  border: var(--border-subtle);
-  border-radius: var(--radius-md);
-  background: var(--color-base-100);
-  color: #320c43;
-  font-family: var(--body); font-size: var(--type-body-sm); font-weight: var(--weight-body); line-height: var(--leading-small);
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-field);
+  background: var(--color-info);
+  color: var(--color-info-content);
   box-shadow: var(--shadow-soft);
   overflow: auto;
   z-index: 1000;
 }
+/* daisyUI controls the theme/tooltip palette. The interactive glossary link
+   requires a static, clickable content box within the existing top-layer popover. */
+.term-panel > .tooltip-content {
+  position: static;
+  inset: auto;
+  transform: none;
+  opacity: 1;
+  pointer-events: auto;
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  padding: var(--panel-pad-sm);
+  text-align: left;
+  font-family: var(--body);
+  font-size: var(--type-body-sm);
+  font-weight: var(--weight-body);
+  line-height: var(--leading-small);
+}
+.term-panel::after { display: none; }
 .term-panel[hidden] { display: none; }
 .term-panel [data-term-description] { display: block; margin: 0 0 8px; }
-.term-panel a { color: #320c43; font-weight: var(--weight-heading); text-decoration: underline; }
+.term-panel a { color: inherit; font-weight: var(--weight-heading); }
 .glossary-navigation {
   display: flex;
   flex-wrap: wrap;

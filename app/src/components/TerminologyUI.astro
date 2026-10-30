@@ -1,9 +1,11 @@
 ---
 import { glossary } from '../lib/terminology';
 ---
-<span id="term-panel" class="term-panel" data-term-panel popover="manual" role="region" aria-label={glossary.panelLabel} hidden>
-  <span id="term-description" data-term-description></span>
-  <a data-term-more>{glossary.moreLabel}</a>
+<span id="term-panel" class="term-panel tooltip tooltip-info tooltip-bottom tooltip-open" data-term-panel popover="manual" role="region" aria-label={glossary.panelLabel} hidden>
+  <span class="tooltip-content">
+    <span id="term-description" data-term-description></span>
+    <a class="link link-hover" data-term-more>{glossary.moreLabel}</a>
+  </span>
 </span>
 <script>
   import { initTerminology } from '../lib/terminology-client';
