@@ -40,3 +40,16 @@ test('Oslo homepage three selector cards use semantic daisyUI background AND mat
  assert.doesNotMatch(markup,/text-\(--muted\)/,'description should inherit the semantic card foreground');
  assert.match(markup,/text-inherit/,'card descriptions inherit the correct content color');
 });
+
+test('calculator uses matching daisyUI surface/content pairs, not fixed light text or chart ink',()=>{
+ const view=read('src/components/HomeLeverage.astro');
+ const css=read('src/styles/compositions/calculator.css');
+ for(const pair of ['bg-secondary text-secondary-content','leverage-result bg-base-200 text-base-content','leverage-comparison bg-accent text-accent-content','scenario-chart bg-base-200 text-base-content'])
+  assert.ok(view.includes(pair),'Missing calculator semantic color pair: '+pair);
+ assert.doesNotMatch(css,/color:\s*var\(--color-base-100\)/,'section background must not use base-100 as foreground');
+ assert.doesNotMatch(css,/background:\s*var\(--color-accent\)/,'result card colors should come from daisyUI');
+ assert.doesNotMatch(view,/#(?:[0-9a-fA-F]{3,8})\b/,'hardcoded chart ink needs theme tokens');
+ assert.doesNotMatch(view,/color:\s*#[a-fA-F0-9]+/,'hardcoded calculator text must be removed');
+ for(const color of ['--color-base-content','--color-base-300','--color-primary'])
+  assert.ok(view.includes(color),'missing theme-derived SVG presentation token: '+color);
+});
