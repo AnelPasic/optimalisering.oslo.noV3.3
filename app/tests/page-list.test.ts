@@ -6,8 +6,9 @@ import { pageSchema } from '../src/lib/content-schema.ts';
 import * as pageList from '../src/lib/page-list.ts';
 import { cmsJsonSave, entryForFile, resolveField, assertPreservedContent } from './helpers/pages-cms-json.ts';
 
-const load=(name:string)=>JSON.parse(readFileSync(`src/content/pages/${name}.json`,'utf8'));
-const pages=()=>readdirSync('src/content/pages').filter(f=>f.endsWith('.json')).map(f=>load(f.slice(0,-5)));
+const articleNames=new Set(['google-bedriftsprofil','hva-bor-optimaliseres-forst','male-effekt-av-optimalisering']);
+const load=(name:string)=>JSON.parse(readFileSync(articleNames.has(name)?`src/content/pages/managed-articles/innsikt-${name}.json`:`src/content/pages/${name}.json`,'utf8'));
+const pages=()=>[...readdirSync('src/content/pages').filter(f=>f.endsWith('.json')).map(f=>load(f.slice(0,-5))),...readdirSync('src/content/pages/managed-articles').filter(f=>f.endsWith('.json')).map(f=>JSON.parse(readFileSync('src/content/pages/managed-articles/'+f,'utf8')))];
 const first='innsikt/hva-bor-optimaliseres-forst',second='innsikt/male-effekt-av-optimalisering';
 // H-021 checks text/query contracts; H-021B separately verifies editable visuals.
 const resolveTextList=(config:unknown,records:any[])=>pageList.resolvePageList(config,records).map(({visual,...item})=>item);
@@ -69,11 +70,10 @@ test('CMS editor has unique file ownership and article-only reference rows; save
   const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
   const overview=load('innsikt'),entry=entryForFile(cms,'app/src/content/pages/innsikt.json');
   assert.equal(entry.type,'file');
-  const articles=entryForFile(cms,'app/src/content/pages/hva-bor-optimaliseres-forst.json');
+  const articles=entryForFile(cms,'app/src/content/pages/managed-articles/innsikt-hva-bor-optimaliseres-forst.json');
   assert.equal(articles.name,'insightArticles');
-  const files=readdirSync('src/content/pages').filter(f=>f.endsWith('.json'));
-  const eligible=files.filter(f=>!articles.exclude.includes(f));
-  assert.deepEqual(eligible.sort(),['google-bedriftsprofil.json','hva-bor-optimaliseres-forst.json','male-effekt-av-optimalisering.json']);
+  const eligible=readdirSync('src/content/pages/managed-articles').filter(f=>f.endsWith('.json'));
+  assert.deepEqual(eligible.sort(),['innsikt-google-bedriftsprofil.json','innsikt-hva-bor-optimaliseres-forst.json','innsikt-male-effekt-av-optimalisering.json']);
   const section=resolveField(entry.fields.find((f:any)=>f.name==='sections').blocks.find((b:any)=>b.name==='pageList'),cms.components);
   const fields=section.fields.find((f:any)=>f.name==='pageList').fields;
   for(const name of ['selected','excluded']){
