@@ -204,6 +204,75 @@ try {
   }
   await page.close();
  }
+
+ // OWNER 30.10: calculator must preserve semantic background+text pairs in
+ // both active themes, including inputs, result cards and SVG chart labels.
+ for(const width of [390,768,1440]){
+  const page=await browser.newPage({viewport:{width,height:900}});
+  const response=await page.goto(origin+'/',{waitUntil:'networkidle'});
+  assert.equal(response.status(),200,'calculator route');
+  await page.evaluate(()=>document.fonts.ready);
+  await page.waitForFunction(()=>!document.querySelector('[data-scenario-chart]')?.hidden);
+  for(const theme of ['optimalisering','sunset']){
+   const d=await page.evaluate(theme=>{
+    document.documentElement.dataset.theme=theme;
+    const root=document.querySelector('#regneeksempel');
+    const by=sel=>root.querySelector(sel);
+    const token=(name,kind)=>{
+     const sample=document.createElement('span');
+     sample.style[kind]='var('+name+')';document.body.append(sample);
+     const out=getComputedStyle(sample)[kind];sample.remove();return out;
+    };
+    const pairs=[
+     {sel:'.leverage-section',elem:root,bg:'--color-secondary',fg:'--color-secondary-content'},
+     {sel:'.leverage-result',elem:by('.leverage-result'),bg:'--color-base-200',fg:'--color-base-content'},
+     {sel:'.leverage-comparison',elem:by('.leverage-comparison'),bg:'--color-accent',fg:'--color-accent-content'},
+     {sel:'.scenario-chart',elem:by('.scenario-chart'),bg:'--color-base-200',fg:'--color-base-content'}
+    ].map(x=>({name:x.sel,bg:getComputedStyle(x.elem).backgroundColor,fg:getComputedStyle(x.elem).color,expectedBg:token(x.bg,'backgroundColor'),expectedFg:token(x.fg,'color')}));
+    const secFg=token('--color-secondary-content','color');
+    const baseFg=token('--color-base-content','color');
+    const accentFg=token('--color-accent-content','color');
+    const read=sel=>getComputedStyle(by(sel)).color;
+    const svgFill=sel=>getComputedStyle(by(sel)).fill;
+    return {pairs,
+     heading:read('.calculator-introduction h2'),
+     intro:read('.calculator-introduction .body-copy'),
+     eyebrow:read('.calculator-introduction .eyebrow'),
+     formula:read('.calculator-introduction .calculator-formula'),
+     label:read('.calculator-field label'),
+     multiplier:read('.calculator-multiplier [data-percentage]'),
+     inputColor:read('.calculator-field input[type=number]'),
+     inputBg:getComputedStyle(by('.calculator-field input[type=number]')).backgroundColor,
+     resultValue:read('.leverage-result output'),
+     comparisonValue:read('.leverage-comparison output'),
+     chartCaption:read('.scenario-chart figcaption'),
+     chartMonth:svgFill('.scenario-month'),
+     chartValue:svgFill('.scenario-current-value'),
+     currentLine:getComputedStyle(by('.scenario-current-line')).stroke,
+     improvedLine:getComputedStyle(by('.scenario-improved-line')).stroke,
+     secFg,baseFg,accentFg,baseBg:token('--color-base-200','backgroundColor'),
+     overflow:document.documentElement.scrollWidth-innerWidth
+    };
+   },theme);
+   for(const pair of d.pairs){
+    assert.equal(pair.bg,pair.expectedBg,'calculator '+pair.name+' background mismatch at '+width+'/'+theme);
+    assert.equal(pair.fg,pair.expectedFg,'calculator '+pair.name+' text mismatch at '+width+'/'+theme);
+   }
+   for(const part of ['heading','intro','eyebrow','formula','label','multiplier'])
+    assert.equal(d[part],d.secFg,'calculator '+part+' uses mismatched foreground '+theme);
+   for(const part of ['resultValue','chartCaption'])
+    assert.equal(d[part],d.baseFg,'calculator '+part+' uses mismatched foreground '+theme);
+   assert.equal(d.comparisonValue,d.accentFg,'Scenario value text contrast '+theme);
+   assert.equal(d.inputColor,d.baseFg,'Input text must pair with base-200');
+   assert.equal(d.inputBg,d.baseBg,'Input surface must match text theme');
+   assert.equal(d.chartMonth,d.baseFg,'Month labels must be legible in '+theme);
+   assert.equal(d.chartValue,d.baseFg,'Chart values must be legible in '+theme);
+   assert.ok(d.currentLine&&d.improvedLine,'Chart strokes must render');
+   assert.ok(d.overflow<=2,'Calculator page overflow '+width+'/'+theme);
+   console.log('PASS calculator semantic contrast',width,theme);
+  }
+  await page.close();
+ }
 }finally{
  await browser.close();
  await new Promise(r=>server.close(r));
