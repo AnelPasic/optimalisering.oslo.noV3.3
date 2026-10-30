@@ -288,7 +288,6 @@
 /* Older client-only palette aliases not exported by the 20 standard daisyUI tokens. */
 html[data-mws-theme-mode="dark"] {
  --color-muted: oklch(76% 0.025 310);
- --color-cta: oklch(31% 0.03 172);
  --color-dark-muted: oklch(82% 0.018 310);
  --color-dark-line: oklch(48% 0.04 314);
  --color-control-line: oklch(51% 0.025 307);

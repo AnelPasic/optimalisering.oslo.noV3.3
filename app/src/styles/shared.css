@@ -83,7 +83,7 @@ p { text-wrap: pretty; }
 .leverage-comparison strong { font-weight: var(--weight-heading); }
 .leverage-tool .small-copy { margin-top: 16px; font-size: var(--type-meta); line-height: var(--leading-small); }
 
-.assessment-section { background: var(--color-cta); }
+.assessment-section .assessment-copy { --ink: var(--color-info-content); --muted: var(--color-info-content); --green: var(--color-info-content); }
 .standalone-assessment-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 90px; align-items: start; }
 .assessment-copy { padding-top: 36px; }
 .assessment-copy > p:not(.eyebrow) { max-width: 400px; margin-top: 25px; }

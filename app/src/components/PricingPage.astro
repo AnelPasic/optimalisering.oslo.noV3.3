@@ -31,7 +31,7 @@ const sections = page.sections.map(section => section.id === 'kostnader' ? {
   <section id="pricing-multiplier" class="pricing-multiplier section-space"><div class="shell"><h2>{packages.multiplier.heading}</h2><p class="multiplier-row">{packages.multiplier.conceptualRow}</p><details class="multiplier-detail"><summary>{packages.multiplier.eyebrow}</summary><p class="body-copy">{packages.multiplier.body}</p><p class="body-copy">{packages.multiplier.support}</p></details></div></section>
   {visibleServiceSections({slug:page.slug,sections}).map(section => section.globalElement
     ? <GlobalContentSection element={section.globalElement} pricingExpanded={section.globalElement==='priser'} faqItems={page.faq} />
-    : section._block==='pageList' ? <PageList section={section} /> : <ContentSection section={section} linkVariant={section.id==='gratis'?'button':undefined}>
+    : section._block==='pageList' ? <PageList section={section} /> : <ContentSection section={section} linkVariant={section.id==='gratis'?'button':undefined} infoSurface={section.id==='gratis'}>
     {section.id === 'arbeidsomrader' && <div class="package-notes body-copy"><p>{packages.areasLabel}: {packages.areas.join(' / ')}.</p><p>{packages.foundationNote}</p></div>}
   </ContentSection>)}
   {!hasGlobalFaq && <Faq items={page.faq} id="sporsmal" heading={commercial.faqVisible===false?undefined:commercial.faqHeading} eyebrow={commercial.faqVisible===false?undefined:commercial.faqEyebrow} />}
