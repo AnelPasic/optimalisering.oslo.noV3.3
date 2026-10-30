@@ -1,14 +1,14 @@
 # Optimalisering Oslo – kanonisk sitemap og innholdsgrunnlag
 
-**Oppdatert:** 31.10.2026 · **Beslutningspunkter:** 48 avklart (43 JA / 1 ANNET med JA / 4 NEI) · **Godkjente tjeneste-URL-er:** 50 · **Neste punkt:** 49 (ikke besluttet)
+**Oppdatert:** 31.10.2026 · **Beslutningspunkter:** 49 avklart (44 JA / 1 ANNET med JA / 4 NEI) · **Godkjente tjeneste-URL-er:** 51 · **Neste punkt:** 50 (ikke besluttet)
 
 Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **Kun optimalisering.oslo.no**, ikke medon.no. Ingen av de foreslåtte sidene er implementert av denne sitemap-arbeidsflyten.
 
-## Gjeldende versjon (48)
+## Gjeldende versjon (49)
 
-- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-48-2026-10-31.md)
-- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-48-2026-10-31.json)
-- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-48-2026-10-31.md)
+- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-49-2026-10-31.md)
+- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-49-2026-10-31.json)
+- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-49-2026-10-31.md)
 - [Innholdsbrief-standard / utarbeidelseskrav](./innholdsbrief-standard.md)
 - [GitHub issues-struktur og oppgavemal – snapshot fra punkt 32](./github-issues-plan-32-2026-10-30.md)
 
@@ -58,6 +58,8 @@ Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **K
 
 **Punkt 48 – NEI:** Ingen separat `/kundereiseoptimalisering/`. Kundereisekartlegging under `/nettsideanalyse/`, løpende forbedring under `/kontinuerlig-optimalisering/`, tverrkanal måling under `/sporing-og-maling/` og oppfølging under `/konvertering/leadoppfolging/`. Fullstendige leveransebeskrivelser er ført videre til eksisterende briefs. Antall URL-er fortsatt 50.
 
-**Punkt 49 – venter:** Remarketing og retargeting, mulig `/remarketing/`. Vurder om det bør være egen spesialisert tjeneste eller om det dekkes av Google Ads / Meta Ads / annonseoptimalisering.
+**Punkt 49 – JA:** `/remarketing/` er godkjent som selvstendig spesialisert tjenesteside under Annonseoptimalisering, uten plass som ny hovedkategori i toppmenyen. Full brief inkluderer seks forklarte leveranser: målgrupper, Google Ads, Facebook/Instagram, dynamiske produktannonser, kreative budskap/frekvens og konverteringsmåling. Egnethet, samtykke og tilstrekkelige målgrupper må vurderes; annonsebudsjett kommer i tillegg. Ingen kode/publisering. **51 URL-er.**
 
-**Historikk:** Versjonerte snapshots 32–47 beholdes uendret. #34, #44, #45 og #48 avviste egne undersider; #46 godkjente AI-chatbot; #47 godkjente kundeanmeldelser som ANNET med JA, med bygg-først-avhengighet og lav prioritet.
+**Punkt 50 – venter:** Performance Max-optimalisering, mulig `/google-ads/performance-max/`. Vurder overlapp med `/google-ads/`, `/google-shopping/` og `/google-shopping/merchant-center/`.
+
+**Historikk:** Versjonerte snapshots 32–48 beholdes uendret. #34, #44, #45 og #48 avviste egne undersider; #46 godkjente AI-chatbot; #47 godkjente kundeanmeldelser som ANNET med JA, med bygg-først-avhengighet og lav prioritet.
