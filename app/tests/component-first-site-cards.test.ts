@@ -31,3 +31,12 @@ test('MWS #26 Oslo pilot: package shells are daisyUI and complex offer internals
  assert.match(css,/\.invite-home \.package-offer \.package-card \{ min-height: 770px; \}/,'pricing min-height is a permitted business-specific layout');
  assert.match(css,/\.package-order-inline/,'specialized pricing behavior is preserved');
 });
+
+test('Oslo homepage three selector cards use semantic daisyUI background AND matching foreground',()=>{
+ const markup=read('src/components/HomepageBlock.astro');
+ for (const pair of ['bg-info text-info-content','bg-base-300 text-base-content','bg-secondary text-secondary-content'])
+  assert.ok(markup.includes(pair),'missing theme-safe color pair: '+pair);
+ assert.doesNotMatch(markup,/bg-secondary text-info(?!-content)/,'never mix secondary and info text colors');
+ assert.doesNotMatch(markup,/text-\(--muted\)/,'description should inherit the semantic card foreground');
+ assert.match(markup,/text-inherit/,'card descriptions inherit the correct content color');
+});
