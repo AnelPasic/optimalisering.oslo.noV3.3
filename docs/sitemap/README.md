@@ -1,14 +1,14 @@
 # Optimalisering Oslo – kanonisk sitemap og innholdsgrunnlag
 
-**Oppdatert:** 30.10.2026 · **Beslutningspunkter:** 38 avklart (37 JA / 1 NEI) · **Godkjente tjeneste-URL-er:** 43 · **Neste punkt:** 39 (ikke besluttet)
+**Oppdatert:** 30.10.2026 · **Beslutningspunkter:** 39 avklart (38 JA / 1 NEI) · **Godkjente tjeneste-URL-er:** 44 · **Neste punkt:** 40 (ikke besluttet)
 
 Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **Kun optimalisering.oslo.no**, ikke medon.no. Ingen av de foreslåtte sidene er implementert av denne sitemap-arbeidsflyten.
 
-## Gjeldende versjon (38)
+## Gjeldende versjon (39)
 
-- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-38-2026-10-30.md)
-- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-38-2026-10-30.json)
-- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-38-2026-10-30.md)
+- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-39-2026-10-30.md)
+- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-39-2026-10-30.json)
+- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-39-2026-10-30.md)
 - [Innholdsbrief-standard / utarbeidelseskrav](./innholdsbrief-standard.md)
 - [GitHub issues-struktur og oppgavemal – snapshot fra punkt 32](./github-issues-plan-32-2026-10-30.md)
 
@@ -38,6 +38,8 @@ Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **K
 
 **Punkt 38 – JA:** WordPress-optimalisering på `/wordpress-optimalisering/` er egen tjenesteside uten hovedmenyplass. WordPress-analyse, hastighet, hosting/PHP/database, plugin-/temaopprydding, teknisk SEO, CRO, sikkerhet og vedlikehold beskrives konkret; ikke WooCommerce.
 
-**Punkt 39 – venter:** Nettsidemigrering og plattformbytte – mulig `/nettsidemigrering/`; må skilles fra `/seo/seo-migrering/` og plattformspesifikke tjenestesider.
+**Punkt 39 – JA:** `/nettsidemigrering/` godkjent som selvstendig plattformuavhengig tjenesteside. Full brief dekker teknisk/kommersiell vurdering, plattformvalg, overføring av innhold og data, SEO-/URL-bevaring, integrasjoner, testing, cutover og etterkontroll. SEO-migrering er en spesialisert del av et større mulig prosjekt.
 
-**Historikk:** Versjonerte snapshots 32–37 beholdes uendret. #34 avviste en egen handlekurv-URL; #35 godkjente gjenkjøp, #36 Shopify, #37 WooCommerce med Magento/Shopify-kommentar og #38 WordPress-optimalisering.
+**Punkt 40 – venter:** Vedlikehold og teknisk drift av nettsider, mulig `/nettsidevedlikehold/` som tydelig avgrenset månedsavtale, atskilt fra `/kontinuerlig-optimalisering/`.
+
+**Historikk:** Versjonerte snapshots 32–38 beholdes uendret. #34 avviste en egen handlekurv-URL; #35 godkjente gjenkjøp, #36 Shopify, #37 WooCommerce med Magento/Shopify-kommentar, #38 WordPress og #39 nettsidemigrering.
