@@ -2,12 +2,13 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync,readdirSync,existsSync} from 'node:fs';
 import YAML from 'yaml';
+import {pageFilePaths} from './helpers/page-sources.ts';
 import {pageSchema} from '../src/lib/content-schema.ts';
 import {glossarySchema} from '../src/lib/terminology.ts';
 import {proofContentSchema} from '../src/lib/proof.ts';
 
 test('all 17 authored pages are live content without redundant approval metadata',()=>{
- const names=readdirSync('src/content/pages').filter(name=>name.endsWith('.json'));
+ const names=pageFilePaths();
  assert.equal(names.length,17);
  for(const name of names){
   const raw=JSON.parse(readFileSync('src/content/pages/'+name,'utf8'));

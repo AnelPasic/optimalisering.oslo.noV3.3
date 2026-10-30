@@ -105,6 +105,9 @@ export function cmsJsonSave(original: any, form: any, entry: any, cms: any): str
 
 export function entryForFile(cms: any, path: string): any {
   const entries = (items: any[]): any[] => items.flatMap(entry => entry.type === 'group' ? entries(entry.items) : [entry]);
-  return entries(cms.content).find((entry: any) => entry.type === 'file' ? entry.path === path
-    : entry.type === 'collection' && path.startsWith(entry.path + '/') && !(entry.exclude ?? []).includes(path.slice(entry.path.length + 1)));
+  return entries(cms.content).filter((entry: any) => entry.type === 'file' ? entry.path === path
+    : entry.type === 'collection' && path.startsWith(entry.path + '/') &&
+      (entry.subfolders !== false || !path.slice(entry.path.length+1).includes('/')) &&
+      !(entry.exclude ?? []).includes(path.slice(entry.path.length + 1)))
+   .sort((a:any,b:any)=>(b.path?.length??0)-(a.path?.length??0))[0];
 }

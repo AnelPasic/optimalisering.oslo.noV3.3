@@ -14,6 +14,9 @@ assert.equal(cms.settings.content.merge, true);
 const hash = (bytes: Buffer | string) => createHash('sha256').update(bytes).digest('hex');
 const records = ['pages', 'proof', 'terminology', 'global-elements'].flatMap(directory => readdirSync(`src/content/${directory}`)
   .filter(file => file.endsWith('.json')).map(file => ({ directory, file: `src/content/${directory}/${file}` })));
+records.push(...readdirSync('src/content/pages/managed-articles').filter(file=>file.endsWith('.json')).map(file=>({
+ directory:'pages',file:'src/content/pages/managed-articles/'+file
+})));
 const snapshots = records.map(record => ({ ...record, bytes: readFileSync(record.file) }));
 const checks = snapshots.map(record => {
   const original = JSON.parse(record.bytes.toString());

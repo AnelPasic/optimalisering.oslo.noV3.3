@@ -9,7 +9,7 @@ import {checkManagedPages} from '../scripts/check-managed-pages.mjs';
 
 const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
 const child=(group:string,id:string)=>cms.content.find((x:any)=>x.name===group).items.find((x:any)=>x.name===id);
-const service=child('serviceGroup','services'),article=child('insight','managedArticles');
+const service=child('serviceGroup','services'),article=child('insight','insightArticles');
 
 test('CONTENT-06: single All services native Create/Delete, fixed pages remain outside it',()=>{
  assert.equal(service.label,'Alle tjenester');
@@ -34,9 +34,10 @@ test('CONTENT-06: single All services native Create/Delete, fixed pages remain o
  const all=(entries:any[]):any[]=>entries.flatMap((e:any)=>e.type==='group'?all(e.items):[e]);
  for(const editor of all(cms.content)){
   if(editor.type==='file'&&editor.path?.startsWith('app/src/content/pages/'))assert.equal(editor.operations?.delete,false,editor.path);
-  if(editor.name==='insightArticles')assert.equal(editor.operations?.delete,false);
+  if(editor.name==='insightArticles')assert.deepEqual(editor.operations,{create:true,rename:false,delete:true});
  }
  assert.equal(service.path===article.path,false);
+ assert.deepEqual(cms.content.find((x:any)=>x.name==='insight').items.map((x:any)=>x.name),['insightOverview','insightArticles']);
 });
 
 test('CONTENT-06: real schema validates a new plain service and article without review statuses',()=>{
@@ -74,7 +75,7 @@ test('CONTENT-06: validate create/read/delete in isolated folder; detect duplica
 test('CONTENT-06: static CMS URL suggestions remain for fixed pages; dynamic pages use manual URL or automatic PageList',()=>{
  const urlSync=readFileSync('scripts/sync-cms-url-options.mjs','utf8');
  const listSync=readFileSync('scripts/sync-page-list-select.mjs','utf8');
- for(const source of [urlSync,listSync])assert.match(source,/readdirSync\(pagesDir\)|readdirSync\(root\)/);
+ for(const source of [urlSync,listSync]){assert.match(source,/readdirSync\(dir\)/);assert.match(source,/managed-articles/);assert.match(source,/previous/);}
  // Both legacy picker generators retain pinned suggestions, ignoring new and removed root service slugs; no YAML edit after native Add/Delete.
  const audit=readFileSync('scripts/audit-build.mjs','utf8');
  assert.match(audit,/managed-services/);assert.match(audit,/managed-articles/);

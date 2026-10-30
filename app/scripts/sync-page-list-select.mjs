@@ -14,10 +14,12 @@ const previous=[...match[1].matchAll(/^\s+- name: ("(?:\\.|[^"\\])*")\n\s+label:
 if(!previous.length||new Set(previous.map(row=>row.name)).size!==previous.length)
  throw new Error('Invalid or duplicate pinned PageList choices');
 
-const pages=new Map(readdirSync(root).filter(name=>name.endsWith('.json')).map(name=>{
- const page=JSON.parse(readFileSync(resolve(root,name),'utf8'));
- return [page.slug,page];
-}));
+const pages=new Map([root,resolve(root,'managed-articles')].flatMap(dir=>
+ readdirSync(dir).filter(name=>name.endsWith('.json')).map(name=>{
+  const page=JSON.parse(readFileSync(resolve(dir,name),'utf8'));
+  return [page.slug,page];
+ })
+));
 const choices=previous.map(old=>{
  const page=pages.get(old.name);
  return page?{name:old.name,label:page.listing?.title||page.seo?.title||page.title||page.slug}:old;

@@ -2,13 +2,14 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 import YAML from 'yaml';
+import {pageFilePaths} from './helpers/page-sources.ts';
 import { pageSchema } from '../src/lib/content-schema.ts';
 import { combineFaqItems, hasGlobalFaq } from '../src/lib/faq-items.ts';
 import { getGlobalElement } from '../src/lib/home-builder.ts';
 import { cmsJsonSave, entryForFile } from './helpers/pages-cms-json.ts';
 
 const cms = YAML.parse(readFileSync('../.pages.yml','utf8'));
-const files = readdirSync('src/content/pages').filter(file=>file.endsWith('.json')).sort();
+const files = pageFilePaths();
 const load = (file: string) => JSON.parse(readFileSync('src/content/pages/'+file,'utf8'));
 
 test('all 17 pages expose the same native page-specific FAQ list, without changing the slug/SEO/Hero contract',()=>{

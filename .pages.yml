@@ -1475,26 +1475,17 @@ content:
       - name: insightArticles
         label: Artikler
         type: collection
-        path: app/src/content/pages
-        exclude:
-          - home.json
-          - innsikt.json
-          - priser.json
-          - om.json
-          - vurdering.json
-          - kontakt.json
-          - personvern.json
-          - vilkar.json
-          - synlighet.json
-          - konvertering.json
-          - seo.json
-          - ai-synlighet.json
-          - nettbutikkoptimalisering.json
-          - lokal-seo.json
+        path: app/src/content/pages/managed-articles
         format: json
         subfolders: false
-        operations: *a3
-        filename: "{primary}.json"
+        operations:
+          create: true
+          rename: false
+          delete: true
+        filename:
+          template: "{fields.slug}.json"
+          field: false
+        description: "Create, edit and delete articles here, including existing articles. Check inbound links and redirects first."
         view:
           primary: listing.title
           fields:
@@ -1510,7 +1501,14 @@ content:
             - listing.order
             - listing.title
         fields:
-          - *serviceslug
+          - name: slug
+            label: Article URL slug
+            type: string
+            required: true
+            pattern:
+              regex: "^innsikt/[a-z0-9]+(?:-[a-z0-9]+)*$"
+              message: "Use innsikt/ followed by lowercase letters, numbers and hyphens."
+            description: "Public URL /innsikt/article-name/. Existing URLs must not be renamed."
           - *a4
           - *standardHero
           - name: listing
@@ -1545,33 +1543,6 @@ content:
                 component: listingVisual
           - *a6
           - *a7
-      - name: managedArticles
-        label: New articles (Add / Delete)
-        type: collection
-        path: app/src/content/pages/managed-articles
-        format: json
-        subfolders: false
-        filename:
-          template: "{fields.slug}.json"
-          field: false
-        operations:
-          create: true
-          rename: false
-          delete: true
-        description: "For new articles. Before Delete, remove inbound links; broken links fail CI. Existing editorial pages stay protected."
-        view:
-          primary: seo.title
-          fields: [seo.title, slug]
-          search: [seo.title, slug]
-        fields:
-          - name: slug
-            label: Article URL slug
-            type: string
-            required: true
-            pattern:
-              regex: "^innsikt/[a-z0-9]+(?:-[a-z0-9]+)*$"
-              message: "Use innsikt/ followed by lowercase letters, numbers and hyphens."
-            description: "Public URL /innsikt/article-name/. The stored filename uses the flattened slug."
           - name: kind
             label: Page type
             type: string
@@ -1579,132 +1550,6 @@ content:
             required: true
             readonly: true
             hidden: true
-          - name: seo
-            label: SEO
-            type: object
-            required: true
-            fields:
-              - name: title
-                label: SEO title
-                type: string
-                required: true
-              - name: description
-                label: SEO description
-                type: text
-                required: true
-          - name: hero
-            label: Hero
-            type: object
-            required: true
-            fields:
-              - name: layout
-                label: Layout
-                type: select
-                default: centered-none
-                required: true
-                options:
-                  values: [split-right, split-left, centered, centered-none]
-              - name: eyebrow
-                label: Eyebrow
-                type: string
-                default: ""
-                required: true
-              - name: title
-                label: Main heading
-                type: string
-                required: true
-              - name: support
-                label: Introduction
-                type: text
-                required: true
-              - name: primaryCta
-                label: Main action
-                component: link
-                required: true
-              - name: secondaryCta
-                label: Optional second action
-                component: link
-              - name: visual
-                label: Hero visual
-                type: block
-                blockKey: kind
-                required: true
-                blocks:
-                  - name: none
-                    label: No image
-                    type: object
-                    fields: []
-                  - name: image
-                    label: Image
-                    type: object
-                    fields:
-                      - name: image
-                        label: Image and crop
-                        type: object
-                        required: true
-                        fields:
-                          - name: kind
-                            label: Image type
-                            type: select
-                            default: photo
-                            options:
-                              values: [photo, illustration]
-                          - name: src
-                            label: File
-                            type: image
-                            required: true
-                            options:
-                              media: serviceHeroImages
-                          - name: alt
-                            label: Alt text
-                            type: string
-                            required: true
-                          - name: positionX
-                            label: Horizontal crop
-                            type: number
-                            default: 50
-                          - name: positionY
-                            label: Vertical crop
-                            type: number
-                            default: 50
-          - name: sections
-            label: Content sections
-            type: block
-            required: true
-            blockKey: _block
-            list:
-              collapsible:
-                collapsed: true
-                summary: "{index}. {heading}{element}"
-            blocks:
-              - name: content
-                label: Content section
-                component: sectionContent
-              - name: pageList
-                label: Page list
-                component: sectionPageList
-              - name: global
-                label: Shared master
-                component: serviceGlobalPlacement
-              - name: sharedContent
-                label: Shared content
-                component: sharedContentPlacement
-          - name: faq
-            label: Optional FAQ
-            type: object
-            list:
-              collapsible:
-                collapsed: true
-                summary: "{question}"
-            fields:
-              - name: question
-                label: Question
-                type: string
-                required: true
-              - name: answer
-                label: Answer
-                type: text
-                required: true
   - name: om
     label: Om tjenesten
     type: file

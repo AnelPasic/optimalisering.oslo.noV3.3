@@ -16,7 +16,7 @@ Existing SEO, Synlighet, Lokal SEO, AI-synlighet, Konvertering and Nettbutikkopt
 
 ## Create and delete articles
 
-Articles retain the separate **Innsikt → New articles (Add / Delete)** collection. Use a slug such as `innsikt/checklist`. CMS stores `managed-articles/innsikt-checklist.json` and Astro routes `/innsikt/checklist/`.
+Articles now use **Innsikt → Artikler** for all existing and new articles. The separate `New articles (Add / Delete)` menu has been removed. The three existing article JSON files were moved byte-for-byte to `managed-articles/innsikt-*.json`, preserving slugs and public URLs. Use a slug such as `innsikt/checklist`: CMS stores `managed-articles/innsikt-checklist.json` and Astro routes `/innsikt/checklist/`. Native Delete is available for all articles, so review inbound links and redirects first. Services and fixed pages remain outside this collection.
 
 ## Reference and verification notes
 

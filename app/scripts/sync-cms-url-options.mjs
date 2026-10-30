@@ -15,8 +15,8 @@ if(!previous.length||new Set(previous.map(row=>row.href)).size!==previous.length
  throw Error('Invalid or duplicate pinned CMS URL choices');
 
 const available=new Map();
-for(const name of readdirSync(pagesDir).filter(f=>f.endsWith('.json'))){
- const page=JSON.parse(readFileSync(resolve(pagesDir,name),'utf8')),slug=page.slug;
+for(const dir of [pagesDir,resolve(pagesDir,'managed-articles')])for(const name of readdirSync(dir).filter(f=>f.endsWith('.json'))){
+ const page=JSON.parse(readFileSync(resolve(dir,name),'utf8')),slug=page.slug;
  if(!/^(home|[a-z0-9]+(?:[a-z0-9/-]*[a-z0-9])?)$/.test(slug)||slug.includes('//')||!page.seo?.title?.trim())throw Error('Invalid canonical page '+name);
  const href=slug==='home'?'/':'/'+slug+'/';
  available.set(href,{href,label:(page.listing?.title||page.seo?.title||page.title||slug)+' — '+href});
