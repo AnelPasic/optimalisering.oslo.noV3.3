@@ -1,0 +1,162 @@
+{
+  "slug": "innsikt/google-bedriftsprofil",
+  "kind": "article",
+  "seo": {
+    "title": "Google bedriftsprofil - guide for bedrifter | Optimalisering Oslo",
+    "description": "Slik kontrollerer du Google bedriftsprofil: eierskap, kategori, åpningstider, tjenester og synlighet i Google Maps. Praktisk guide med sjekkliste."
+  },
+  "hero": {
+    "layout": "split-right",
+    "eyebrow": "Google Min Bedrift / Google Business Profile",
+    "title": "Google bedriftsprofil: Sjekk det kunden ser i Google Søk og Maps.",
+    "support": "Google Min Bedrift heter nå Google bedriftsprofil (Google Business Profile). Kunden kan finne telefonnummer, åpningstider og veibeskrivelse uten å åpne nettsiden. Her får du en konkret sjekk av informasjonen som må være riktig, og hva du bør undersøke før du betaler noen for å forbedre synligheten.",
+    "primaryCta": {
+      "label": "Ta en gratis sjekk",
+      "href": "/#sjekk"
+    },
+    "visual": {
+      "kind": "none"
+    }
+  },
+  "sections": [
+    {
+      "_block": "content",
+      "id": "finn-profilen",
+      "heading": "Finn den eksisterende profilen før du lager en ny.",
+      "body": [
+        "Søk etter bedriftens navn i Google Søk og Maps. Finnes det allerede en oppføring, undersøk hvem som administrerer den før du gjør noe annet. En ny profil for samme virksomhet kan gjøre oversikten mer forvirrende.",
+        "Du redigerer gjennom Google-kontoen som har tilgang til profilen. Hvis bedriften ikke har tatt kontroll over oppføringen, må eierskap og verifisering håndteres gjennom Googles egen prosess. At profilen synes i Maps, betyr ikke automatisk at du har administratortilgang."
+      ],
+      "links": [
+        {
+          "label": "Se hvorfor bedriftsprofilen hører sammen med lokal SEO",
+          "href": "/lokal-seo/"
+        }
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "viktig-informasjon",
+      "heading": "Kontroller informasjonen en kunde trenger før de ringer.",
+      "body": [
+        "En profil med feil åpningstider eller telefonnummer kan koste en relevant henvendelse selv om bedriften blir vist høyt i søket. Begynn med opplysninger du kan bekrefte mot den faktiske virksomheten.",
+        "Sjekk den primære bedriftskategorien, relevante tjenester, telefonnummer, nettsidelenke, beskrivelse, vanlige åpningstider og spesielle åpningstider. Opplysningene bør stemme med det kunden møter på nettstedet."
+      ],
+      "items": [
+        {
+          "title": "Hvem er dere?",
+          "text": "Bruk virksomhetens reelle navn og en kategori som faktisk beskriver hovedaktiviteten. Kategorier er ikke et sted å legge inn flest mulig søkeord."
+        },
+        {
+          "title": "Hva kan dere hjelpe med?",
+          "text": "Beskriv tjenester kundene kan bestille, med tydelige navn. Det gjør det lettere å se forskjell på et relevant tilbud og et treff som bare er i nærheten."
+        },
+        {
+          "title": "Kan kunden kontakte dere?",
+          "text": "Test telefonnummer, nettsidelenke og åpningstider - også fra mobilen. Et telefonklikk er først nyttig når noen kan svare."
+        }
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "adresse-omrade",
+      "heading": "En besøksadresse og et tjenesteområde er ikke det samme.",
+      "body": [
+        "En butikk som tar imot kunder, bør ha riktig besøksadresse og åpningstid. En rørlegger som reiser hjem til kundene, trenger normalt å beskrive hvor tjenesten leveres, uten å utgi en privat adresse for å være et bemannet mottak.",
+        "Google har egne regler for bedriftsprofiler, tjenesteområder og kvalifiserte steder. Virtuelle kontorer eller postadresser er ikke en snarvei til å fremstå som lokalt til stede. Først må profilen samsvare med hvordan bedriften faktisk betjener kunder."
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "omtaler-bilder",
+      "heading": "Anmeldelser og bilder bør hjelpe kunden å velge.",
+      "body": [
+        "Oppdaterte bilder fra den faktiske virksomheten gjør det enklere å kjenne igjen lokalet, teamet eller tjenesten. De bør vise noe ekte, ikke en tilfeldig modell av en bedrift.",
+        "Be faktiske kunder om ærlige anmeldelser, og svar saklig når det er relevant. Ikke kjøp omtaler eller gi belønning mot en bestemt vurdering. Flere stjerner er heller ingen garanti for at en kunde velger dere."
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "rangering",
+      "heading": "Hvorfor ligger konkurrenten foran i Google Maps?",
+      "body": [
+        "Google peker på relevans, avstand og hvor godt kjent bedriften er som sentrale forhold ved lokal rangering. En bedre kategori og riktig tjenesteinformasjon kan gjøre profilen lettere å forstå. Kundens avstand til virksomheten bestemmer du derimot ikke med en ny tekst.",
+        "Et større oppført tjenesteområde gjør ikke at bedriften automatisk rangerer i alle stedene. Ingen kan selge en garantert organisk førsteplass i Google Maps. Betalt annonsering er en egen kanal.",
+        "Hvis det lokale markedet er viktig, bør du se på bedriftsprofil, tjenestesider og kontaktvei under ett - det er nettopp dette Lokal SEO-siden handler om."
+      ],
+      "links": [
+        {
+          "label": "Les om Lokal SEO og synlighet i Google Maps",
+          "href": "/lokal-seo/"
+        }
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "mal-riktig",
+      "heading": "Mål henvendelsene - ikke bare hvor ofte profilen vises.",
+      "body": [
+        "Profilvisninger, klikk til nettsiden og telefonhandlinger forteller noe om interesse. De beviser ikke hvor mange nye betalende kunder bedriften fikk.",
+        "Se om henvendelsene faktisk gjelder en tjeneste dere tilbyr, og om de kommer fra områder dere betjener. Sammenlign perioder med hensyn til sesong og andre markedsføringstiltak. Ikke kall alle telefonklikk for salg."
+      ],
+      "links": [
+        {
+          "label": "Les om å måle effekten av optimalisering",
+          "href": "/innsikt/male-effekt-av-optimalisering/"
+        }
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "sjekkliste",
+      "heading": "Bruk ti minutter på disse kontrollene før du bestiller hjelp.",
+      "body": [
+        "Sjekk om profilen eksisterer og hvem som eier den. Bekreft at kategori, adresse eller tjenesteområde, åpningstider, telefon og nettadresse er riktige. Åpne deretter nettsiden fra profilen på mobilen: Forstår en kunde tjenesten og finner veien til kontakt?",
+        "Hvis det er feil i grunnopplysningene, rett disse først. Hvis profilen ser riktig ut men få relevante kunder tar kontakt, må du undersøke tjenestesidene, søkeresultatene og hva som skjer etter klikket. Den gratis sjekken er en avgrenset manuell vurdering, ikke en full revisjon eller et løfte om rangering."
+      ],
+      "links": [
+        {
+          "label": "Ta en gratis sjekk",
+          "href": "/#sjekk"
+        },
+        {
+          "label": "Se eksisterende tjenester og priser",
+          "href": "/priser/"
+        },
+        {
+          "label": "Se oversikten over Synlighet",
+          "href": "/synlighet/"
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Er Google bedriftsprofil gratis?",
+      "answer": "Ja. Selve bedriftsprofilen hos Google er gratis for virksomheter som oppfyller kravene. Hvis du bruker et byrå til å kontrollere eller forbedre informasjonen, er dette et eget arbeid som må avtales."
+    },
+    {
+      "question": "Er Google Min Bedrift det samme som Google Business Profile?",
+      "answer": "Ja. Google Min Bedrift er et tidligere navn. Tjenesten heter nå Google bedriftsprofil på norsk og Google Business Profile på engelsk. Du trenger ikke opprette en ny profil fordi navnet har endret seg."
+    },
+    {
+      "question": "Hvordan logger jeg inn på Google bedriftsprofil?",
+      "answer": "Logg inn med Google-kontoen som administrerer virksomhetens profil, og søk etter bedriften i Google Søk eller åpne Google Maps. Hvis du ikke har tilgang, må du undersøke eksisterende eierskap og Googles verifiseringsprosess."
+    },
+    {
+      "question": "Hvorfor vises ikke bedriften min i Google Maps?",
+      "answer": "Det kan være flere årsaker, blant annet manglende verifisering, feil eller ufullstendige opplysninger, profilstatus eller at virksomheten ikke kvalifiserer for en profil. Sjekk status og Googles retningslinjer før du oppretter en ny oppføring."
+    },
+    {
+      "question": "Kan et byrå garantere førsteplass i Google Maps?",
+      "answer": "Nei. Lokal rangering avhenger blant annet av relevans, avstand og hvor kjent virksomheten er. En byråleveranse bør være konkret om hva som undersøkes og forbedres, men ikke love en bestemt plassering."
+    }
+  ],
+  "listing": {
+    "title": "Google bedriftsprofil - praktisk guide",
+    "summary": "En enkel kontroll av eierskap, kategori, tjenesteområde, åpningstider og kontaktvei i Google Søk og Maps.",
+    "label": "Les guiden",
+    "order": 30,
+    "visible": true
+  }
+}
