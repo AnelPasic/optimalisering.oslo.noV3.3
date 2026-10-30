@@ -4,7 +4,11 @@ import { readdirSync, readFileSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { stripTerminologyLinks } from './terminology-markup.mjs';
 
-const pages = readdirSync('src/content/pages').filter(f => f.endsWith('.json')).map(f => JSON.parse(readFileSync(resolve('src/content/pages', f), 'utf8')));
+// Dynamic editorial pages live in isolated folders; all rendered URLs still need full audit.
+const pageDirs=['src/content/pages','src/content/pages/managed-services','src/content/pages/managed-articles'];
+const pages = pageDirs.flatMap(dir => readdirSync(dir).filter(f=>f.endsWith('.json')).map(f=>JSON.parse(readFileSync(resolve(dir,f),'utf8'))));
+const duplicateSlugs=new Set();
+for(const page of pages){if(duplicateSlugs.has(page.slug))throw new Error('Duplicate page slug in audit: '+page.slug);duplicateSlugs.add(page.slug);}
 for(const page of pages)if(page.kind==='home'){page.sections=getHomepageBlocks(page).filter(isHomepageSectionVisible);}
 const paths = new Map(pages.map(page => [page.slug === 'home' ? '/' : `/${page.slug}/`, page]));
 // The editorial glossary has its own structured source, rather than page JSON.

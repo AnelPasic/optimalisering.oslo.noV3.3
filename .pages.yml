@@ -1329,6 +1329,44 @@ content:
                 type: string
                 required: true
             required: false
+      - name: managedServices
+        label: New service pages (Add / Delete)
+        type: collection
+        path: app/src/content/pages/managed-services
+        format: json
+        subfolders: false
+        filename:
+          template: "{fields.slug}.json"
+          field: false
+        operations:
+          create: true
+          rename: false
+          delete: true
+        description: "Create pages here. Before Delete, remove links from navigation and other pages; broken links fail the site build. Existing core pages cannot be deleted here."
+        view:
+          primary: seo.title
+          fields: [seo.title, slug]
+          search: [seo.title, slug]
+        fields:
+          - name: slug
+            label: Page URL slug
+            type: string
+            required: true
+            pattern:
+              regex: "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+              message: "Use lowercase letters, numbers and hyphens; do not include slashes."
+            description: "Public address /your-slug/. Must be unique. Changing it later requires a deliberate URL migration."
+          - name: kind
+            label: Page type
+            type: string
+            default: service
+            required: true
+            readonly: true
+            hidden: true
+          - *a4
+          - *standardHero
+          - *a6
+          - *a7
       - name: serviceSeo
         label: SEO - seksjonsbygger
         type: file
@@ -1608,6 +1646,44 @@ content:
               - name: visual
                 label: Listevisual
                 component: listingVisual
+          - *a6
+          - *a7
+      - name: managedArticles
+        label: New articles (Add / Delete)
+        type: collection
+        path: app/src/content/pages/managed-articles
+        format: json
+        subfolders: false
+        filename:
+          template: "{fields.slug}.json"
+          field: false
+        operations:
+          create: true
+          rename: false
+          delete: true
+        description: "For new articles. Before Delete, remove inbound links; broken links fail CI. Existing editorial pages stay protected."
+        view:
+          primary: seo.title
+          fields: [seo.title, slug]
+          search: [seo.title, slug]
+        fields:
+          - name: slug
+            label: Article URL slug
+            type: string
+            required: true
+            pattern:
+              regex: "^innsikt/[a-z0-9]+(?:-[a-z0-9]+)*$"
+              message: "Use innsikt/ followed by lowercase letters, numbers and hyphens."
+            description: "Public URL /innsikt/article-name/. The stored filename uses the flattened slug."
+          - name: kind
+            label: Page type
+            type: string
+            default: article
+            required: true
+            readonly: true
+            hidden: true
+          - *a4
+          - *standardHero
           - *a6
           - *a7
   - name: om
