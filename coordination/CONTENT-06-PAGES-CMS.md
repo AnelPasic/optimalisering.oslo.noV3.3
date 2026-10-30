@@ -20,6 +20,6 @@ Articles retain the separate **Innsikt → New articles (Add / Delete)** collect
 
 ## Reference and verification notes
 
-The legacy URL suggestion dropdown is generated from root files; adding/deleting a root service may change generated dropdown options and a subsequent CI sync may be necessary. Automatic PageLists discover all new services. Use Manual URL for immediate links. This is not a new CMS, template engine, status workflow, redirect manager or custom browser UI.
+Legacy PageList and suggested-URL dropdowns are **pinned to their existing choices** so native Add/Delete does not require editing `.pages.yml`. New services are available immediately in automatic PageLists and via Manual URL; they are intentionally not appended to the old static pickers. After deleting an established service, its old static suggestion may remain, but link/build validation rejects any actual dangling links. Prefer Manual URL for new pages. This is not a new CMS, template engine, status workflow, redirect manager or custom browser UI.
 
 The prior disposable `test-service` page created via authenticated Pages CMS was deleted by OWNER before this regrouping. The existing managed-services folder is retained for backward compatibility with any older nested content, but new service pages are created **only** in the root `Alle tjenester` collection. This change needs a fresh authenticated CMS Add → Save → Edit → Delete acceptance check.

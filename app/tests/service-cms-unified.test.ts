@@ -63,3 +63,35 @@ test('Create uses existing SEO/Hero/Sections editor, fixed service kind and vali
  const page={...base,slug:'example-new-service',seo:{...base.seo,title:'Example new service'}};
  assert.equal(pageSchema.safeParse(page).success,true);
 });
+
+import {writeFileSync,copyFileSync,mkdtempSync,mkdirSync,rmSync} from 'node:fs';
+import {tmpdir} from 'node:os';
+import {join} from 'node:path';
+import {spawnSync} from 'node:child_process';
+import {fileURLToPath} from 'node:url';
+
+const app=fileURLToPath(new URL('../',import.meta.url));
+const check=(script:string,cwd:string)=>{
+ const r=spawnSync(process.execPath,[join(app,'scripts',script),'--check'],{cwd,encoding:'utf8'});
+ assert.equal(r.status,0,(r.stdout||'')+'\n'+(r.stderr||''));
+};
+test('New service create/delete never requires a manual generated YAML update',()=>{
+ const tmp=mkdtempSync(join(tmpdir(),'cms-pinned-services-'));
+ try {
+  mkdirSync(join(tmp,'src/content/pages'),{recursive:true});
+  copyFileSync(join(app,'../.pages.yml'),join(tmp,'.pages.yml'));
+  copyFileSync(join(app,'src/content/link-shortcuts.json'),join(tmp,'src/content/link-shortcuts.json'));
+  for(const f of readdirSync(join(app,'src/content/pages')).filter(x=>x.endsWith('.json')))
+   copyFileSync(join(app,'src/content/pages',f),join(tmp,'src/content/pages',f));
+  const yamlBefore=readFileSync(join(tmp,'.pages.yml'),'utf8');
+  for(const s of ['sync-page-list-select.mjs','sync-cms-url-options.mjs'])check(s,tmp);
+  const source=JSON.parse(readFileSync(join(tmp,'src/content/pages','seo.json'),'utf8'));
+  const synthetic={...source,slug:'new-managed-service',seo:{...source.seo,title:'New service page'}};
+  const path=join(tmp,'src/content/pages','new-managed-service.json');
+  writeFileSync(path,JSON.stringify(synthetic));
+  for(const s of ['sync-page-list-select.mjs','sync-cms-url-options.mjs'])check(s,tmp);
+  rmSync(path);
+  for(const s of ['sync-page-list-select.mjs','sync-cms-url-options.mjs'])check(s,tmp);
+  assert.equal(readFileSync(join(tmp,'.pages.yml'),'utf8'),yamlBefore,'No unintended YAML edit');
+ }finally{rmSync(tmp,{recursive:true,force:true});}
+});

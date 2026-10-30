@@ -3,27 +3,35 @@ import {resolve} from 'node:path';
 const pagesDir=resolve('src/content/pages'),config=resolve('../.pages.yml');
 const shortcuts=JSON.parse(readFileSync(resolve('src/content/link-shortcuts.json'),'utf8'));
 const current=readFileSync(config,'utf8');
-const choices=readdirSync(pagesDir).filter(name=>name.endsWith('.json')).map(name=>{
- const page=JSON.parse(readFileSync(resolve(pagesDir,name),'utf8'));
- const slug=page.slug;
+const marker=/# CMS_URL_CHOICES_BEGIN\n([\s\S]*?)# CMS_URL_CHOICES_END/;
+const match=current.match(marker);
+if(!match)throw Error('Missing CMS URL choice markers');
+
+// The legacy static picker is a pinned suggestion list. Never make a new
+// service page's first CMS commit depend on rewriting a generated YAML block.
+const previous=[...match[1].matchAll(/^\s+- name: ("(?:\\.|[^"\\])*")\n\s+label: ("(?:\\.|[^"\\])*")$/gm)]
+ .map(row=>({href:JSON.parse(row[1]),label:JSON.parse(row[2])}));
+if(!previous.length||new Set(previous.map(row=>row.href)).size!==previous.length)
+ throw Error('Invalid or duplicate pinned CMS URL choices');
+
+const available=new Map();
+for(const name of readdirSync(pagesDir).filter(f=>f.endsWith('.json'))){
+ const page=JSON.parse(readFileSync(resolve(pagesDir,name),'utf8')),slug=page.slug;
  if(!/^(home|[a-z0-9]+(?:[a-z0-9/-]*[a-z0-9])?)$/.test(slug)||slug.includes('//')||!page.seo?.title?.trim())throw Error('Invalid canonical page '+name);
  const href=slug==='home'?'/':'/'+slug+'/';
- return {href,label:(page.listing?.title||page.seo?.title||page.title||slug)+' — '+href};
-});
+ available.set(href,{href,label:(page.listing?.title||page.seo?.title||page.title||slug)+' — '+href});
+}
 for(const s of shortcuts){
  if(typeof s.title!=='string'||!s.title.trim()||typeof s.href!=='string'||!/^\/(?![\\/])[^<>"\\\s]*$/.test(s.href))throw Error('Unsafe URL shortcut');
- choices.push({href:s.href,label:s.title+' — '+s.href});
+ available.set(s.href,{href:s.href,label:s.title+' — '+s.href});
 }
-if(new Set(choices.map(c=>c.href)).size!==choices.length)throw Error('Duplicate CMS URL suggestions');
-choices.sort((a,b)=>a.href.localeCompare(b.href,'nb'));
-const marker=/# CMS_URL_CHOICES_BEGIN\n([\s\S]*?)# CMS_URL_CHOICES_END/;
-if(!marker.test(current))throw Error('Missing CMS URL choice markers');
+const choices=previous.map(old=>available.get(old.href)??old).sort((a,b)=>a.href.localeCompare(b.href,'nb'));
 const generated=choices.map(c=>'        - name: '+JSON.stringify(c.href)+'\n          label: '+JSON.stringify(c.label)).join('\n');
 const updated=current.replace(marker,'# CMS_URL_CHOICES_BEGIN\n'+generated+'\n# CMS_URL_CHOICES_END');
 if(process.argv.includes('--write')){
  if(updated!==current)writeFileSync(config,updated);
- console.log('Generated '+choices.length+' CMS URL suggestions');
+ console.log('Updated '+choices.length+' pinned CMS URL suggestions');
 }else if(updated!==current){
- console.error('Stale CMS URL suggestions: run cd app && node scripts/sync-cms-url-options.mjs --write');
+ console.error('Pinned CMS URL labels changed: run node scripts/sync-cms-url-options.mjs --write');
  process.exitCode=1;
-}else console.log('CMS URL choices synchronized: '+choices.length);
+}else console.log('Pinned CMS URL suggestions verified: '+choices.length);
