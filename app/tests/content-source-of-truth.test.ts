@@ -8,7 +8,7 @@ const read=(p:string)=>readFileSync(new URL(p,import.meta.url),'utf8');
 const json=(p:string)=>JSON.parse(read(p));
 const cms=YAML.parse(read('../../.pages.yml'));
 const editor=(id:string)=>cms.content.find((x:any)=>x.name===id);
-const local=(file:string)=>json('../src/content/pages/'+file+'.json');
+const local=(file:string)=>json('../src/content/pages/'+(file==='google-bedriftsprofil'?'managed-articles/innsikt-google-bedriftsprofil':file)+'.json');
 const fixed=['behov','regneeksempel','sjekk','priser','resultater','mekanisme','passer','sporsmal'];
 
 test('CONTENT-01: canonical sources are separate native Pages CMS owners, not duplicate editable copies',()=>{
