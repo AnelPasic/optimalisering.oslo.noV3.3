@@ -1423,18 +1423,448 @@ content:
             label: Enkelt eksempel
             type: text
             required: false
-  - name: priser
+  - name: priceGroup
     label: Priser
-    type: file
-    path: app/src/content/pages/priser.json
-    format: json
-    operations: *a3
-    fields:
-      - *serviceslug
-      - *a4
-      - *standardHero
-      - *a6
-      - *a7
+    type: group
+    items:
+      - name: pricePage
+        label: Prissiden
+        type: file
+        path: app/src/content/pages/priser.json
+        format: json
+        operations: *a3
+        fields:
+          - *serviceslug
+          - *a4
+          - *standardHero
+          - *a6
+          - *a7
+
+      - name: globalPackages
+        label: Pakker og priser
+        type: file
+        path: app/src/content/global-elements/priser.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: _block
+            type: string
+            hidden: true
+            readonly: true
+            default: packages
+            required: true
+          - name: uid
+            type: uuid
+            hidden: true
+            options:
+              editable: false
+              generate: false
+            required: true
+            readonly: true
+          - name: id
+            type: string
+            hidden: true
+            default: priser
+            readonly: true
+            required: true
+          - name: name
+            label: Seksjon
+            type: string
+            default: Pakker og priser
+            readonly: true
+            required: true
+            hidden: true
+          - name: content
+            label: false
+            description: Endringer her gjelder alle plasseringer på dette nettstedet. Fjern eller skjul en plassering på siden for å beholde originalinnholdet her.
+            type: object
+            fields:
+              - name: eyebrow
+                label: Overtekst
+                type: string
+                required: true
+              - name: heading
+                label: Overskrift
+                type: string
+                required: true
+              - name: intro
+                label: Ingress
+                type: text
+                required: true
+              - name: orderIntro
+                label: Bestilling – kort forklaring
+                type: text
+                required: true
+              - name: orderSubmitLabel
+                label: Bestilling – sendknapp
+                type: string
+                required: true
+              - name: labels
+                label: Etiketter i pakkekortene
+                type: object
+                fields:
+                  - name: situations
+                    label: Typiske situasjoner
+                    type: string
+                    required: true
+                  - name: typicalBusiness
+                    label: Typisk virksomhet
+                    type: string
+                    required: true
+                  - name: focus
+                    label: Fokus
+                    type: string
+                    required: true
+                  - name: combinations
+                    label: Populære kombinasjoner
+                    type: string
+                    required: true
+                  - name: workAreas
+                    label: Arbeidsområder
+                    type: string
+                    required: true
+                  - name: uncertain
+                    label: Usikker? Ta en gratis sjekk
+                    type: string
+                    required: true
+                required: true
+              - name: fitLabel
+                label: Etikett for hvem tjenesten passer
+                type: string
+                required: true
+              - name: scopeLabel
+                label: Etikett for arbeidsidé
+                type: string
+                required: true
+              - name: areasLabel
+                label: Etikett for arbeidsområder
+                type: string
+                required: true
+              - name: areas
+                label: Fire arbeidsområder
+                type: string
+                list:
+                  min: 4
+                  max: 4
+                required: true
+              - name: foundationNote
+                label: Måling og sporing – felles grunnlag
+                type: text
+                required: true
+              - name: adBudgetNote
+                label: Annonsebudsjett kommer i tillegg
+                type: string
+                required: true
+              - name: externalCostsNote
+                label: Eksterne plattformkostnader
+                type: text
+                required: true
+              - name: separateWorkNote
+                label: Arbeid som prises separat
+                type: text
+                required: true
+              - name: capacityNote
+                label: Ubrukt kapasitet
+                type: text
+                required: true
+              - name: decisionStrip
+                label: Valgstripe på prissiden
+                type: object
+                fields:
+                  - name: heading
+                    label: Overskrift
+                    type: string
+                    required: true
+                  - name: items
+                    label: Tre valgregler i pakkerekkefølge
+                    type: text
+                    list:
+                      min: 3
+                      max: 3
+                    required: true
+                required: true
+              - name: multiplier
+                label: Hvorfor Vekst finnes – prissiden
+                type: object
+                fields:
+                  - name: eyebrow
+                    label: Overtekst
+                    type: string
+                    required: true
+                  - name: heading
+                    label: Overskrift
+                    type: string
+                    required: true
+                  - name: body
+                    label: Forklaring
+                    type: text
+                    required: true
+                  - name: conceptualRow
+                    label: Bli funnet → bli valgt → gå videre
+                    type: string
+                    required: true
+                  - name: support
+                    label: Støttetekst
+                    type: text
+                    required: true
+                required: true
+              - name: comparison
+                label: Sammenligningstabell
+                type: object
+                description: Overskrift og fokusområder for prissidens sammenligning. Priser, pakkenavn og omfang hentes automatisk fra Alternativer.
+                fields:
+                  - name: heading
+                    label: Overskrift
+                    type: string
+                    required: true
+                  - name: intro
+                    label: Forklaring under overskriften
+                    type: text
+                    required: true
+                  - name: focusHeading
+                    label: Overskrift over valg av fokus
+                    type: string
+                    required: true
+                  - name: options
+                    label: Fokusområder kunden kan velge
+                    type: object
+                    list:
+                      min: 3
+                      max: 8
+                      collapsible:
+                        collapsed: true
+                        summary: "{label}"
+                    fields:
+                      - name: id
+                        label: Stabil ID
+                        type: string
+                        pattern: ^[a-z0-9]+(?:-[a-z0-9]+)*$
+                        required: true
+                        description: Brukes til å knytte kundens valg til bestillingsforespørselen.
+                      - name: label
+                        label: Navn på fokusområdet
+                        type: string
+                        required: true
+                      - name: description
+                        label: Valgfri forklaring
+                        type: string
+                    required: true
+                required: true
+              - name: items
+                label: Alternativer
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{title}"
+                  min: 3
+                  max: 3
+                fields:
+                  - name: title
+                    label: Tittel
+                    type: string
+                    required: true
+                  - name: descriptor
+                    label: Pakkeoppsummering
+                    type: string
+                    required: true
+                  - name: fit
+                    label: Full tekst – hvem pakken passer for
+                    type: text
+                    required: true
+                  - name: compact
+                    label: Kort tekst
+                    type: object
+                    fields:
+                      - name: fit
+                        label: Kort Passer for – forsiden og prissiden
+                        type: text
+                        required: true
+                      - name: situations
+                        label: Maks tre korte situasjoner
+                        type: string
+                        list:
+                          min: 1
+                          max: 3
+                        required: true
+                    required: true
+                  - name: scope
+                    label: Slik jobber vi – valgfritt
+                    type: text
+                  - name: typicalBusiness
+                    label: Typisk virksomhet
+                    type: text
+                  - name: situations
+                    label: Typiske situasjoner
+                    type: text
+                    list:
+                      min: 1
+                    required: true
+                  - name: key
+                    label: Stabil pakkenøkkel for bestilling
+                    type: string
+                    readonly: true
+                    required: true
+                  - name: iconItems
+                    label: Fokus og populære kombinasjoner
+                    type: object
+                    list:
+                      collapsible:
+                        collapsed: true
+                        summary: "{label}"
+                      min: 1
+                    fields:
+                      - name: icon
+                        label: Generisk ikon
+                        type: select
+                        options:
+                          values:
+                            - search
+                            - conversion
+                            - local
+                            - paid-search
+                            - social-paid
+                            - analytics
+                            - page
+                            - route
+                        required: true
+                      - name: label
+                        label: Fokus eller kombinasjon
+                        type: string
+                        required: true
+                      - name: compactLabel
+                        label: Kort etikett
+                        type: string
+                        required: true
+                      - name: description
+                        label: Forklaring – valgfri
+                        type: text
+                    required: true
+                  - name: selectionRule
+                    label: Valgregel
+                    type: text
+                    required: true
+                  - name: distinction
+                    label: Ekstra forklaring – valgfri
+                    type: text
+                  - name: priceNote
+                    label: Partner – omfang og prisavtale
+                    type: text
+                  - name: visual
+                    label: SVG-motiv – brukes når eget bilde ikke er valgt
+                    type: select
+                    options:
+                      values:
+                        - controlled
+                        - accelerating
+                        - tracks
+                    required: true
+                  - name: visualAsset
+                    label: Eget pakkebilde – velg eller last opp SVG, WebP eller PNG
+                    type: object
+                    fields:
+                      - name: src
+                        label: Bilde
+                        type: image
+                        options:
+                          media: packageVisuals
+                          extensions:
+                            - svg
+                            - webp
+                            - png
+                        required: true
+                      - name: alt
+                        label: Sannferdig beskrivende alternativ tekst
+                        type: string
+                        required: true
+                      - name: positionX
+                        label: Horisontalt utsnitt (%) – raster
+                        type: number
+                        options:
+                          min: 0
+                          max: 100
+                      - name: positionY
+                        label: Vertikalt utsnitt (%) – raster
+                        type: number
+                        options:
+                          min: 0
+                          max: 100
+                  - name: visualCaption
+                    label: Bildetekst ved SVG-motivet
+                    description: Vises ved SVG-motivet når eget bilde ikke er valgt. Eget bilde bruker sin alternative tekst og sitt utsnitt.
+                    type: object
+                    fields:
+                      - name: label
+                        label: Kort semantisk etikett
+                        type: string
+                        required: true
+                      - name: support
+                        label: Kort støtte – valgfri
+                        type: string
+                  - name: price
+                    label: Månedspris i kroner
+                    type: number
+                    required: true
+                  - name: pricePrefix
+                    label: Fra-pris – bare Partner
+                    description: Valgfritt. Kun tredje pakke kan ha fra; de to andre har fast pris. Fjern feltet for pakker uten prefiks.
+                    type: select
+                    options:
+                      values:
+                        - fra
+                  - name: detailLink
+                    label: Detaljer – rediger teksten, lenkemålet er beskyttet
+                    type: object
+                    fields:
+                      - name: label
+                        label: Lenketekst
+                        type: string
+                        required: true
+                      - name: href
+                        label: Pakkeanker på /priser/
+                        type: string
+                        readonly: true
+                        pattern: ^/priser/#
+                        required: true
+                    required: true
+                  - name: priceSuffix
+                    label: Prisenhet
+                    type: string
+                    required: true
+                  - name: vatSuffix
+                    label: MVA-tekst
+                    description: Bruk samme MVA-tekst for alle tre pakker; felles prisforklaring og gjentatte prisopplysninger arver den.
+                    type: string
+                    required: true
+                  - name: recommended
+                    label: Anbefalt pakke
+                    type: boolean
+                    default: false
+                    required: true
+                  - name: badge
+                    label: Anbefalt-merke
+                    type: string
+                  - name: cta
+                    label: Primær bestilling – sikker rute og valgt pakke
+                    type: object
+                    fields:
+                      - name: label
+                        label: Knappetekst
+                        type: string
+                        required: true
+                      - name: href
+                        label: Intern lenke
+                        type: string
+                        readonly: true
+                        pattern: ^/priser/\?pakke=(optimalisering|vekst|partner)#bestill$
+                        required: true
+                    required: true
+                required: true
+            required: true
+
   - name: insight
     label: Innsikt
     type: group
@@ -2711,388 +3141,6 @@ content:
                     required: true
                 required: true
             description: Endringer her gjelder alle plasseringer på dette nettstedet. Fjern eller skjul en plassering på siden for å beholde originalinnholdet her.
-      - name: globalPackages
-        label: Pakker og priser
-        type: file
-        path: app/src/content/global-elements/priser.json
-        format: json
-        operations:
-          create: false
-          rename: false
-          delete: false
-        fields:
-          - name: _block
-            type: string
-            hidden: true
-            readonly: true
-            default: packages
-            required: true
-          - name: uid
-            type: uuid
-            hidden: true
-            options:
-              editable: false
-              generate: false
-            required: true
-            readonly: true
-          - name: id
-            type: string
-            hidden: true
-            default: priser
-            readonly: true
-            required: true
-          - name: name
-            label: Seksjon
-            type: string
-            default: Pakker og priser
-            readonly: true
-            required: true
-            hidden: true
-          - name: content
-            label: false
-            description: Endringer her gjelder alle plasseringer på dette nettstedet. Fjern eller skjul en plassering på siden for å beholde originalinnholdet her.
-            type: object
-            fields:
-              - name: eyebrow
-                label: Overtekst
-                type: string
-                required: true
-              - name: heading
-                label: Overskrift
-                type: string
-                required: true
-              - name: intro
-                label: Ingress
-                type: text
-                required: true
-              - name: orderIntro
-                label: Bestilling – kort forklaring
-                type: text
-                required: true
-              - name: orderSubmitLabel
-                label: Bestilling – sendknapp
-                type: string
-                required: true
-              - name: labels
-                label: Etiketter i pakkekortene
-                type: object
-                fields:
-                  - name: situations
-                    label: Typiske situasjoner
-                    type: string
-                    required: true
-                  - name: typicalBusiness
-                    label: Typisk virksomhet
-                    type: string
-                    required: true
-                  - name: focus
-                    label: Fokus
-                    type: string
-                    required: true
-                  - name: combinations
-                    label: Populære kombinasjoner
-                    type: string
-                    required: true
-                  - name: workAreas
-                    label: Arbeidsområder
-                    type: string
-                    required: true
-                  - name: uncertain
-                    label: Usikker? Ta en gratis sjekk
-                    type: string
-                    required: true
-                required: true
-              - name: fitLabel
-                label: Etikett for hvem tjenesten passer
-                type: string
-                required: true
-              - name: scopeLabel
-                label: Etikett for arbeidsidé
-                type: string
-                required: true
-              - name: areasLabel
-                label: Etikett for arbeidsområder
-                type: string
-                required: true
-              - name: areas
-                label: Fire arbeidsområder
-                type: string
-                list:
-                  min: 4
-                  max: 4
-                required: true
-              - name: foundationNote
-                label: Måling og sporing – felles grunnlag
-                type: text
-                required: true
-              - name: adBudgetNote
-                label: Annonsebudsjett kommer i tillegg
-                type: string
-                required: true
-              - name: externalCostsNote
-                label: Eksterne plattformkostnader
-                type: text
-                required: true
-              - name: separateWorkNote
-                label: Arbeid som prises separat
-                type: text
-                required: true
-              - name: capacityNote
-                label: Ubrukt kapasitet
-                type: text
-                required: true
-              - name: decisionStrip
-                label: Valgstripe på prissiden
-                type: object
-                fields:
-                  - name: heading
-                    label: Overskrift
-                    type: string
-                    required: true
-                  - name: items
-                    label: Tre valgregler i pakkerekkefølge
-                    type: text
-                    list:
-                      min: 3
-                      max: 3
-                    required: true
-                required: true
-              - name: multiplier
-                label: Hvorfor Vekst finnes – prissiden
-                type: object
-                fields:
-                  - name: eyebrow
-                    label: Overtekst
-                    type: string
-                    required: true
-                  - name: heading
-                    label: Overskrift
-                    type: string
-                    required: true
-                  - name: body
-                    label: Forklaring
-                    type: text
-                    required: true
-                  - name: conceptualRow
-                    label: Bli funnet → bli valgt → gå videre
-                    type: string
-                    required: true
-                  - name: support
-                    label: Støttetekst
-                    type: text
-                    required: true
-                required: true
-              - name: items
-                label: Alternativer
-                type: object
-                list:
-                  collapsible:
-                    collapsed: true
-                    summary: "{title}"
-                  min: 3
-                  max: 3
-                fields:
-                  - name: title
-                    label: Tittel
-                    type: string
-                    required: true
-                  - name: descriptor
-                    label: Pakkeoppsummering
-                    type: string
-                    required: true
-                  - name: fit
-                    label: Full tekst – hvem pakken passer for
-                    type: text
-                    required: true
-                  - name: compact
-                    label: Kort tekst
-                    type: object
-                    fields:
-                      - name: fit
-                        label: Kort Passer for – forsiden og prissiden
-                        type: text
-                        required: true
-                      - name: situations
-                        label: Maks tre korte situasjoner
-                        type: string
-                        list:
-                          min: 1
-                          max: 3
-                        required: true
-                    required: true
-                  - name: scope
-                    label: Slik jobber vi – valgfritt
-                    type: text
-                  - name: typicalBusiness
-                    label: Typisk virksomhet
-                    type: text
-                  - name: situations
-                    label: Typiske situasjoner
-                    type: text
-                    list:
-                      min: 1
-                    required: true
-                  - name: key
-                    label: Stabil pakkenøkkel for bestilling
-                    type: string
-                    readonly: true
-                    required: true
-                  - name: iconItems
-                    label: Fokus og populære kombinasjoner
-                    type: object
-                    list:
-                      collapsible:
-                        collapsed: true
-                        summary: "{label}"
-                      min: 1
-                    fields:
-                      - name: icon
-                        label: Generisk ikon
-                        type: select
-                        options:
-                          values:
-                            - search
-                            - conversion
-                            - local
-                            - paid-search
-                            - social-paid
-                            - analytics
-                            - page
-                            - route
-                        required: true
-                      - name: label
-                        label: Fokus eller kombinasjon
-                        type: string
-                        required: true
-                      - name: compactLabel
-                        label: Kort etikett
-                        type: string
-                        required: true
-                      - name: description
-                        label: Forklaring – valgfri
-                        type: text
-                    required: true
-                  - name: selectionRule
-                    label: Valgregel
-                    type: text
-                    required: true
-                  - name: distinction
-                    label: Ekstra forklaring – valgfri
-                    type: text
-                  - name: priceNote
-                    label: Partner – omfang og prisavtale
-                    type: text
-                  - name: visual
-                    label: SVG-motiv – brukes når eget bilde ikke er valgt
-                    type: select
-                    options:
-                      values:
-                        - controlled
-                        - accelerating
-                        - tracks
-                    required: true
-                  - name: visualAsset
-                    label: Eget pakkebilde – velg eller last opp SVG, WebP eller PNG
-                    type: object
-                    fields:
-                      - name: src
-                        label: Bilde
-                        type: image
-                        options:
-                          media: packageVisuals
-                          extensions:
-                            - svg
-                            - webp
-                            - png
-                        required: true
-                      - name: alt
-                        label: Sannferdig beskrivende alternativ tekst
-                        type: string
-                        required: true
-                      - name: positionX
-                        label: Horisontalt utsnitt (%) – raster
-                        type: number
-                        options:
-                          min: 0
-                          max: 100
-                      - name: positionY
-                        label: Vertikalt utsnitt (%) – raster
-                        type: number
-                        options:
-                          min: 0
-                          max: 100
-                  - name: visualCaption
-                    label: Bildetekst ved SVG-motivet
-                    description: Vises ved SVG-motivet når eget bilde ikke er valgt. Eget bilde bruker sin alternative tekst og sitt utsnitt.
-                    type: object
-                    fields:
-                      - name: label
-                        label: Kort semantisk etikett
-                        type: string
-                        required: true
-                      - name: support
-                        label: Kort støtte – valgfri
-                        type: string
-                  - name: price
-                    label: Månedspris i kroner
-                    type: number
-                    required: true
-                  - name: pricePrefix
-                    label: Fra-pris – bare Partner
-                    description: Valgfritt. Kun tredje pakke kan ha fra; de to andre har fast pris. Fjern feltet for pakker uten prefiks.
-                    type: select
-                    options:
-                      values:
-                        - fra
-                  - name: detailLink
-                    label: Detaljer – rediger teksten, lenkemålet er beskyttet
-                    type: object
-                    fields:
-                      - name: label
-                        label: Lenketekst
-                        type: string
-                        required: true
-                      - name: href
-                        label: Pakkeanker på /priser/
-                        type: string
-                        readonly: true
-                        pattern: ^/priser/#
-                        required: true
-                    required: true
-                  - name: priceSuffix
-                    label: Prisenhet
-                    type: string
-                    required: true
-                  - name: vatSuffix
-                    label: MVA-tekst
-                    description: Bruk samme MVA-tekst for alle tre pakker; felles prisforklaring og gjentatte prisopplysninger arver den.
-                    type: string
-                    required: true
-                  - name: recommended
-                    label: Anbefalt pakke
-                    type: boolean
-                    default: false
-                    required: true
-                  - name: badge
-                    label: Anbefalt-merke
-                    type: string
-                  - name: cta
-                    label: Primær bestilling – sikker rute og valgt pakke
-                    type: object
-                    fields:
-                      - name: label
-                        label: Knappetekst
-                        type: string
-                        required: true
-                      - name: href
-                        label: Intern lenke
-                        type: string
-                        readonly: true
-                        pattern: ^/priser/\?pakke=(optimalisering|vekst|partner)#bestill$
-                        required: true
-                    required: true
-                required: true
-            required: true
       - name: globalProof
         label: Kunderesultater
         type: file

@@ -6,6 +6,7 @@ import {resolvePageHero} from '../lib/page-hero';
 import Faq from './Faq.astro';
 import '../styles/compositions/pricing.css';
 import Packages from './PackageSection.astro';
+import Comparison from './PackageComparison.astro';
 import ContentSection from './HomeSection.astro';
 import GlobalContentSection from './GlobalContentSection.astro';
 import PageList from './PageList.astro';
@@ -26,11 +27,13 @@ const sections = page.sections.map(section => section.id === 'kostnader' ? {
 ---
 <div class="invite-home invite-pricing">
   <CommercialHero content={resolvePageHero(page,commercial)} />
-  {!hasGlobalPackages && <Packages content={packages} mode="expanded" showHeading={false} showNotes={false} headingTag="h2" labelledBy="pricing-title" recommendedAnchor="begge" />}
+  {!hasGlobalPackages && <><Packages content={packages} mode="expanded" showHeading={false} showNotes={false} headingTag="h2" labelledBy="pricing-title" recommendedAnchor="begge" /><Comparison packages={packages} /></>}
   <section id="pricing-decision" class="pricing-decision section-space"><div class="shell"><h2>{packages.decisionStrip.heading}</h2><div class="pricing-decision-grid">{packages.decisionStrip.items.map(text => <p>{text}</p>)}</div></div></section>
   <section id="pricing-multiplier" class="pricing-multiplier section-space"><div class="shell"><h2>{packages.multiplier.heading}</h2><p class="multiplier-row">{packages.multiplier.conceptualRow}</p><details class="multiplier-detail"><summary>{packages.multiplier.eyebrow}</summary><p class="body-copy">{packages.multiplier.body}</p><p class="body-copy">{packages.multiplier.support}</p></details></div></section>
   {visibleServiceSections({slug:page.slug,sections}).map(section => section.globalElement
-    ? <GlobalContentSection element={section.globalElement} pricingExpanded={section.globalElement==='priser'} faqItems={page.faq} />
+    ? section.globalElement==='priser'
+      ? <><GlobalContentSection element={section.globalElement} pricingExpanded faqItems={page.faq} /><Comparison packages={packages} /></>
+      : <GlobalContentSection element={section.globalElement} pricingExpanded={false} faqItems={page.faq} />
     : section._block==='pageList' ? <PageList section={section} /> : <ContentSection section={section} linkVariant={section.id==='gratis'?'button':undefined}>
     {section.id === 'arbeidsomrader' && <div class="package-notes body-copy"><p>{packages.areasLabel}: {packages.areas.join(' / ')}.</p><p>{packages.foundationNote}</p></div>}
   </ContentSection>)}

@@ -235,6 +235,38 @@
           "href": "/priser/?pakke=partner#bestill"
         }
       }
-    ]
+    ],
+    "comparison": {
+      "heading": "Sammenlign pakkene",
+      "intro": "Velg hva du ønsker hjelp med. Optimalisering har ett hovedfokus, Vekst kan kombinere inntil to. Med Partner avklarer vi omfang og prioritering sammen.",
+      "focusHeading": "Hva ønsker du å forbedre?",
+      "options": [
+        {
+          "id": "seo-ai",
+          "label": "SEO og AI-synlighet",
+          "description": "Bli funnet i søk og relevante AI-svar."
+        },
+        {
+          "id": "lokal-seo",
+          "label": "Lokal SEO",
+          "description": "Bli synlig for kunder i ditt område."
+        },
+        {
+          "id": "konvertering",
+          "label": "Konvertering",
+          "description": "Få flere relevante besøk til å bli henvendelser eller kjøp."
+        },
+        {
+          "id": "google-ads",
+          "label": "Google Ads",
+          "description": "Få mer relevant trafikk fra betalte søk."
+        },
+        {
+          "id": "meta-ads",
+          "label": "Meta Ads",
+          "description": "Nå relevante målgrupper på Facebook og Instagram."
+        }
+      ]
+    }
   }
 }
