@@ -78,20 +78,20 @@ const check=(script:string,cwd:string)=>{
 test('New service create/delete never requires a manual generated YAML update',()=>{
  const tmp=mkdtempSync(join(tmpdir(),'cms-pinned-services-'));
  try {
-  mkdirSync(join(tmp,'src/content/pages'),{recursive:true});
+  mkdirSync(join(tmp,'app','src/content/pages'),{recursive:true});
   copyFileSync(join(app,'../.pages.yml'),join(tmp,'.pages.yml'));
-  copyFileSync(join(app,'src/content/link-shortcuts.json'),join(tmp,'src/content/link-shortcuts.json'));
+  copyFileSync(join(app,'src/content/link-shortcuts.json'),join(tmp,'app','src/content/link-shortcuts.json'));
   for(const f of readdirSync(join(app,'src/content/pages')).filter(x=>x.endsWith('.json')))
-   copyFileSync(join(app,'src/content/pages',f),join(tmp,'src/content/pages',f));
+   copyFileSync(join(app,'src/content/pages',f),join(tmp,'app','src/content/pages',f));
   const yamlBefore=readFileSync(join(tmp,'.pages.yml'),'utf8');
-  for(const s of ['sync-page-list-select.mjs','sync-cms-url-options.mjs'])check(s,tmp);
-  const source=JSON.parse(readFileSync(join(tmp,'src/content/pages','seo.json'),'utf8'));
+  for(const s of ['sync-page-list-select.mjs','sync-cms-url-options.mjs'])check(s,join(tmp,'app'));
+  const source=JSON.parse(readFileSync(join(tmp,'app','src/content/pages','seo.json'),'utf8'));
   const synthetic={...source,slug:'new-managed-service',seo:{...source.seo,title:'New service page'}};
-  const path=join(tmp,'src/content/pages','new-managed-service.json');
+  const path=join(tmp,'app','src/content/pages','new-managed-service.json');
   writeFileSync(path,JSON.stringify(synthetic));
-  for(const s of ['sync-page-list-select.mjs','sync-cms-url-options.mjs'])check(s,tmp);
+  for(const s of ['sync-page-list-select.mjs','sync-cms-url-options.mjs'])check(s,join(tmp,'app'));
   rmSync(path);
-  for(const s of ['sync-page-list-select.mjs','sync-cms-url-options.mjs'])check(s,tmp);
+  for(const s of ['sync-page-list-select.mjs','sync-cms-url-options.mjs'])check(s,join(tmp,'app'));
   assert.equal(readFileSync(join(tmp,'.pages.yml'),'utf8'),yamlBefore,'No unintended YAML edit');
  }finally{rmSync(tmp,{recursive:true,force:true});}
 });
