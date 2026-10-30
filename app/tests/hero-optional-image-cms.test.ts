@@ -2,11 +2,12 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 import YAML from 'yaml';
+import {pageFilePaths} from './helpers/page-sources.ts';
 import { pageSchema } from '../src/lib/content-schema.ts';
 import { cmsJsonSave, entryForFile, resolveField } from './helpers/pages-cms-json.ts';
 
 const cms = YAML.parse(readFileSync('../.pages.yml','utf8'));
-const files = readdirSync('src/content/pages').filter(file=>file.endsWith('.json')).sort();
+const files = pageFilePaths();
 const load = (file:string) => JSON.parse(readFileSync('src/content/pages/'+file,'utf8'));
 const editor = (file:string) => entryForFile(cms,'app/src/content/pages/'+file);
 function visualField(file:string) {
