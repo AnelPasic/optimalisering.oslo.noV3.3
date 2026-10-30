@@ -1,14 +1,14 @@
 # Optimalisering Oslo – kanonisk sitemap og innholdsgrunnlag
 
-**Oppdatert:** 30.10.2026 · **Beslutningspunkter:** 43 avklart (42 JA / 1 NEI) · **Godkjente tjeneste-URL-er:** 48 · **Neste punkt:** 44 (ikke besluttet)
+**Oppdatert:** 30.10.2026 · **Beslutningspunkter:** 44 avklart (42 JA / 2 NEI) · **Godkjente tjeneste-URL-er:** 48 · **Neste punkt:** 45 (ikke besluttet)
 
 Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **Kun optimalisering.oslo.no**, ikke medon.no. Ingen av de foreslåtte sidene er implementert av denne sitemap-arbeidsflyten.
 
-## Gjeldende versjon (43)
+## Gjeldende versjon (44)
 
-- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-43-2026-10-30.md)
-- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-43-2026-10-30.json)
-- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-43-2026-10-30.md)
+- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-44-2026-10-30.md)
+- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-44-2026-10-30.json)
+- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-44-2026-10-30.md)
 - [Innholdsbrief-standard / utarbeidelseskrav](./innholdsbrief-standard.md)
 - [GitHub issues-struktur og oppgavemal – snapshot fra punkt 32](./github-issues-plan-32-2026-10-30.md)
 
@@ -48,6 +48,8 @@ Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **K
 
 **Punkt 43 – JA:** `/digital-konkurrentanalyse/` godkjent som selvstendig betalt tjeneste for tverrfaglig sammenligning av typisk 3–5 reelle konkurrenters synlige nettsider, tilbud, budskap, priser, søke- og AI-synlighet, offentlig annonsering og konverteringsgrep. Dokumenterte observasjoner og prioritert handlingsplan, ikke påstander om konkurrentenes interne data. Skiller fra `/seo/konkurrentanalyse/` og `/nettsideanalyse/`.
 
-**Punkt 44 – venter:** Optimalisering av tilbud og tjenestepakker, mulig `/konvertering/tilbudsoptimalisering/`. Vurder først overlapp med `/konvertering/budskap-og-tilbud/` og `/konvertering/prissider/`.
+**Punkt 44 – NEI:** Egen `/konvertering/tilbudsoptimalisering/` er avvist. Analyse av tilbud, reelle tjenestepakker og verdiforslag er dokumentert under `/konvertering/budskap-og-tilbud/`, mens tydelige prissider, pakkesammenligning, pakkevelgere og resultatevaluering ligger under `/konvertering/prissider/`. Ingen ny tjeneste-URL.
 
-**Historikk:** Versjonerte snapshots 32–42 beholdes uendret. #34 avviste egen handlekurv-URL; #35 gjenkjøp, #36 Shopify, #37 WooCommerce (Magento/Shopify-kommentar), #38 WordPress, #39 nettsidemigrering, #40 nettsidevedlikehold, #41 funksjonsovervåkning, #42 nettsideanalyse og #43 digital konkurrentanalyse.
+**Punkt 45 – venter:** Optimalisering av kontaktskjemaer og leadkvalifisering. Mulig `/konvertering/kontaktskjemaer/`, men må skilles fra `/konvertering/henvendelser-og-booking/` og `/konvertering/leadoppfolging/`.
+
+**Historikk:** Versjonerte snapshots 32–43 beholdes uendret. #34 avviste egen handlekurv-URL; #35 gjenkjøp, #36 Shopify, #37 WooCommerce (Magento/Shopify-kommentar), #38 WordPress, #39 migrering, #40 vedlikehold, #41 funksjonsovervåkning, #42 nettsideanalyse, #43 digital konkurrentanalyse og #44 avviste egen tilbudsoptimaliseringsside.
