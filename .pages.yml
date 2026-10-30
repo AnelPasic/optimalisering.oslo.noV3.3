@@ -1363,8 +1363,94 @@ content:
             required: true
             readonly: true
             hidden: true
-          - *a4
-          - *standardHero
+          - name: seo
+            label: SEO
+            type: object
+            required: true
+            fields:
+              - name: title
+                label: SEO title
+                type: string
+                required: true
+              - name: description
+                label: SEO description
+                type: text
+                required: true
+          - name: hero
+            label: Hero
+            type: object
+            required: true
+            fields:
+              - name: layout
+                label: Layout
+                type: select
+                default: centered-none
+                required: true
+                options:
+                  values: [split-right, split-left, centered, centered-none]
+              - name: eyebrow
+                label: Eyebrow
+                type: string
+                default: ""
+                required: true
+              - name: title
+                label: Main heading
+                type: string
+                required: true
+              - name: support
+                label: Introduction
+                type: text
+                required: true
+              - name: primaryCta
+                label: Main action
+                component: link
+                required: true
+              - name: secondaryCta
+                label: Optional second action
+                component: link
+              - name: visual
+                label: Hero visual
+                type: block
+                blockKey: kind
+                required: true
+                blocks:
+                  - name: none
+                    label: No image
+                    type: object
+                    fields: []
+                  - name: image
+                    label: Image
+                    type: object
+                    fields:
+                      - name: image
+                        label: Image and crop
+                        type: object
+                        required: true
+                        fields:
+                          - name: kind
+                            label: Image type
+                            type: select
+                            default: photo
+                            options:
+                              values: [photo, illustration]
+                          - name: src
+                            label: File
+                            type: image
+                            required: true
+                            options:
+                              media: serviceHeroImages
+                          - name: alt
+                            label: Alt text
+                            type: string
+                            required: true
+                          - name: positionX
+                            label: Horizontal crop
+                            type: number
+                            default: 50
+                          - name: positionY
+                            label: Vertical crop
+                            type: number
+                            default: 50
           - name: sections
             label: Content sections
             type: block
@@ -1387,7 +1473,22 @@ content:
               - name: sharedContent
                 label: Shared content
                 component: sharedContentPlacement
-          - *a7
+          - name: faq
+            label: Optional FAQ
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{question}"
+            fields:
+              - name: question
+                label: Question
+                type: string
+                required: true
+              - name: answer
+                label: Answer
+                type: text
+                required: true
       - name: serviceSeo
         label: SEO - seksjonsbygger
         type: file
@@ -1703,8 +1804,94 @@ content:
             required: true
             readonly: true
             hidden: true
-          - *a4
-          - *standardHero
+          - name: seo
+            label: SEO
+            type: object
+            required: true
+            fields:
+              - name: title
+                label: SEO title
+                type: string
+                required: true
+              - name: description
+                label: SEO description
+                type: text
+                required: true
+          - name: hero
+            label: Hero
+            type: object
+            required: true
+            fields:
+              - name: layout
+                label: Layout
+                type: select
+                default: centered-none
+                required: true
+                options:
+                  values: [split-right, split-left, centered, centered-none]
+              - name: eyebrow
+                label: Eyebrow
+                type: string
+                default: ""
+                required: true
+              - name: title
+                label: Main heading
+                type: string
+                required: true
+              - name: support
+                label: Introduction
+                type: text
+                required: true
+              - name: primaryCta
+                label: Main action
+                component: link
+                required: true
+              - name: secondaryCta
+                label: Optional second action
+                component: link
+              - name: visual
+                label: Hero visual
+                type: block
+                blockKey: kind
+                required: true
+                blocks:
+                  - name: none
+                    label: No image
+                    type: object
+                    fields: []
+                  - name: image
+                    label: Image
+                    type: object
+                    fields:
+                      - name: image
+                        label: Image and crop
+                        type: object
+                        required: true
+                        fields:
+                          - name: kind
+                            label: Image type
+                            type: select
+                            default: photo
+                            options:
+                              values: [photo, illustration]
+                          - name: src
+                            label: File
+                            type: image
+                            required: true
+                            options:
+                              media: serviceHeroImages
+                          - name: alt
+                            label: Alt text
+                            type: string
+                            required: true
+                          - name: positionX
+                            label: Horizontal crop
+                            type: number
+                            default: 50
+                          - name: positionY
+                            label: Vertical crop
+                            type: number
+                            default: 50
           - name: sections
             label: Content sections
             type: block
@@ -1727,7 +1914,22 @@ content:
               - name: sharedContent
                 label: Shared content
                 component: sharedContentPlacement
-          - *a7
+          - name: faq
+            label: Optional FAQ
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{question}"
+            fields:
+              - name: question
+                label: Question
+                type: string
+                required: true
+              - name: answer
+                label: Answer
+                type: text
+                required: true
   - name: om
     label: Om tjenesten
     type: file
