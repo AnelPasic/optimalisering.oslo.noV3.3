@@ -1,14 +1,14 @@
 # Optimalisering Oslo – kanonisk sitemap og innholdsgrunnlag
 
-**Oppdatert:** 30.10.2026 · **Beslutningspunkter:** 46 avklart (43 JA / 3 NEI) · **Godkjente tjeneste-URL-er:** 49 · **Neste punkt:** 47 (ikke besluttet)
+**Oppdatert:** 30.10.2026 · **Beslutningspunkter:** 47 avklart (43 JA / 1 ANNET med JA / 3 NEI) · **Godkjente tjeneste-URL-er:** 50 · **Neste punkt:** 48 (ikke besluttet)
 
 Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **Kun optimalisering.oslo.no**, ikke medon.no. Ingen av de foreslåtte sidene er implementert av denne sitemap-arbeidsflyten.
 
-## Gjeldende versjon (46)
+## Gjeldende versjon (47)
 
-- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-46-2026-10-30.md)
-- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-46-2026-10-30.json)
-- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-46-2026-10-30.md)
+- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-47-2026-10-30.md)
+- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-47-2026-10-30.json)
+- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-47-2026-10-30.md)
 - [Innholdsbrief-standard / utarbeidelseskrav](./innholdsbrief-standard.md)
 - [GitHub issues-struktur og oppgavemal – snapshot fra punkt 32](./github-issues-plan-32-2026-10-30.md)
 
@@ -54,6 +54,8 @@ Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **K
 
 **Punkt 46 – JA:** `/ai-chatbot/` er godkjent som egen tjenesteside for AI-basert kundedialog, godkjent kunnskapsbase, svar, kvalifiserende spørsmål, eskalering til mennesker, integrasjoner, personvern og kvalitetskontroll. Kan tilbys med avgrenset oppsett og mulig månedlig avtale; faktisk drifts- og leveranseevne må dokumenteres før aktivt salg.
 
-**Punkt 47 – venter:** Kundeanmeldelser og omdømmeoptimalisering, mulig `/kundeanmeldelser/`. Vurder som selvstendig tjeneste mot Google Maps/lokal SEO og sosialt bevis under budskap og tilbud.
+**Punkt 47 – ANNET med eksplisitt JA:** `/kundeanmeldelser/` er godkjent som **egen tjenesteside**, men **lav produksjonsprioritet / senere publiseringsbølge**. Den eksisterende anmeldelsesprosessen/løsningen i [Medon Growth](https://github.com/AnelPasic/BusinessIntelligence/blob/main/medon-growth/BACKLOG.md) og [Radar Review Gap](https://github.com/AnelPasic/BusinessIntelligence/blob/main/radar/BACKLOG.md) er relevante avhengigheter. Før nettstedets side lages og publiseres, må en lovlig, reell og driftbar review-arbeidsflyt bygges og valideres. Backlognotater beviser ikke at et ferdig review-system er deployert.
 
-**Historikk:** Versjonerte snapshots 32–45 beholdes uendret. #34, #44 og #45 avviste egne undersider, og omfangene ble lagt i eksisterende godkjente tjenester. #46 godkjente egen AI-chatbot-side med leveransekontroll før publisering.
+**Punkt 48 – venter:** Kundereiseoptimalisering på tvers av kanaler, mulig `/kundereiseoptimalisering/`. Vurder mot `/kontinuerlig-optimalisering/`, `/sporing-og-maling/` og `/nettsideanalyse/`.
+
+**Historikk:** Versjonerte snapshots 32–46 beholdes uendret. #34, #44 og #45 avviste egne undersider; #46 godkjente AI-chatbot; #47 godkjente kundeanmeldelser som ANNET med JA, med bygg-først-avhengighet og lav prioritet.
