@@ -1,14 +1,14 @@
 # Optimalisering Oslo – kanonisk sitemap og innholdsgrunnlag
 
-**Oppdatert:** 31.10.2026 · **Beslutningspunkter:** 49 avklart (44 JA / 1 ANNET med JA / 4 NEI) · **Godkjente tjeneste-URL-er:** 51 · **Neste punkt:** 50 (ikke besluttet)
+**Oppdatert:** 31.10.2026 · **Beslutningspunkter:** 50 avklart (45 JA / 1 ANNET med JA / 4 NEI) · **Godkjente tjeneste-URL-er:** 52 · **Neste punkt:** 51 (ikke besluttet)
 
 Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **Kun optimalisering.oslo.no**, ikke medon.no. Ingen av de foreslåtte sidene er implementert av denne sitemap-arbeidsflyten.
 
-## Gjeldende versjon (49)
+## Gjeldende versjon (50)
 
-- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-49-2026-10-31.md)
-- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-49-2026-10-31.json)
-- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-49-2026-10-31.md)
+- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-50-2026-10-31.md)
+- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-50-2026-10-31.json)
+- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-50-2026-10-31.md)
 - [Innholdsbrief-standard / utarbeidelseskrav](./innholdsbrief-standard.md)
 - [GitHub issues-struktur og oppgavemal – snapshot fra punkt 32](./github-issues-plan-32-2026-10-30.md)
 
@@ -60,6 +60,8 @@ Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **K
 
 **Punkt 49 – JA:** `/remarketing/` er godkjent som selvstendig spesialisert tjenesteside under Annonseoptimalisering, uten plass som ny hovedkategori i toppmenyen. Full brief inkluderer seks forklarte leveranser: målgrupper, Google Ads, Facebook/Instagram, dynamiske produktannonser, kreative budskap/frekvens og konverteringsmåling. Egnethet, samtykke og tilstrekkelige målgrupper må vurderes; annonsebudsjett kommer i tillegg. Ingen kode/publisering. **51 URL-er.**
 
-**Punkt 50 – venter:** Performance Max-optimalisering, mulig `/google-ads/performance-max/`. Vurder overlapp med `/google-ads/`, `/google-shopping/` og `/google-shopping/merchant-center/`.
+**Punkt 50 – JA:** `/google-ads/performance-max/` godkjent som egen Google Ads-spesialistunderside, uten hovedmenyplass. Seks beskrevne leveranser: PMax-audit, asset groups/kreativer, søketemaer/signaler, Merchant Center-feed, landingssider/URL-er og konverteringsmåling/lønnsomhet. Skill fra ordinær Google Ads, Google Shopping og Merchant Center. Ingen garanti om kontroll over alle plasseringer eller ROAS; annonsebudsjett og evt. nytt kreativt materiell kommer i tillegg.
 
-**Historikk:** Versjonerte snapshots 32–48 beholdes uendret. #34, #44, #45 og #48 avviste egne undersider; #46 godkjente AI-chatbot; #47 godkjente kundeanmeldelser som ANNET med JA, med bygg-først-avhengighet og lav prioritet.
+**Punkt 51 – venter:** YouTube-annonsering og videokampanjer, mulig `/youtube-annonsering/`. Vurder selvstendig kjøpsintensjon, kreativer og leveranseøkonomi opp mot øvrig annonsearbeid.
+
+**Historikk:** Versjonerte snapshots 32–49 beholdes uendret. #34, #44, #45 og #48 avviste egne undersider; #46 godkjente AI-chatbot; #47 godkjente kundeanmeldelser som ANNET med JA, med bygg-først-avhengighet og lav prioritet.
