@@ -1,14 +1,14 @@
 # Optimalisering Oslo – kanonisk sitemap og innholdsgrunnlag
 
-**Oppdatert:** 31.10.2026 · **Beslutningspunkter:** 61 avklart (49 JA / 2 ANNET med JA / 10 NEI) · **Godkjente tjeneste-URL-er:** 57 · **Neste punkt:** 62 (ikke besluttet)
+**Oppdatert:** 31.10.2026 · **Beslutningspunkter:** 62 avklart (50 JA / 2 ANNET med JA / 10 NEI) · **Godkjente tjeneste-URL-er:** 58 · **Neste punkt:** 63 (ikke besluttet)
 
 Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **Kun optimalisering.oslo.no**, ikke medon.no. Ingen av de foreslåtte sidene er implementert av denne sitemap-arbeidsflyten.
 
-## Gjeldende versjon (61)
+## Gjeldende versjon (62)
 
-- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-61-2026-10-31.md)
-- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-61-2026-10-31.json)
-- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-61-2026-10-31.md)
+- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-62-2026-10-31.md)
+- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-62-2026-10-31.json)
+- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-62-2026-10-31.md)
 - [Innholdsbrief-standard / utarbeidelseskrav](./innholdsbrief-standard.md)
 - [GitHub issues-struktur og oppgavemal – snapshot fra punkt 32](./github-issues-plan-32-2026-10-30.md)
 
@@ -84,6 +84,8 @@ Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **K
 
 **Punkt 61 – NEI:** Ingen separat `/nettsidehosting/`. Seks utførlig beskrevne leveranser er beholdt under `/nettsidevedlikehold/`: hostinganalyse, oppsett/migrering, domene/DNS/TLS, backup/restore, ressurs-/kapasitetskontroll og månedlig hostingadministrasjon. Skillet mot `/funksjonsovervakning/` og `/nettsidesikkerhet/` er dokumentert med særskilte punkter i deres briefs. **Ingen oppdiktede SLA-er, priser, oppetidsgarantier, døgnbemannet support eller gjenopprettingstider.** Kunden beholder som hovedregel domeneeierskapet. Ingen ny URL.
 
-**Punkt 62 – venter:** CRM-integrasjoner og automatisert leadflyt, mulig `/crm-integrasjoner/`. Vurder egen teknisk spesialisttjeneste og avgrensning mot leadoppfølging, skjemaflyt og LeadProof.
+**Punkt 62 – JA:** `/crm-integrasjoner/` godkjent som selvstendig teknisk spesialisttjeneste for automatisert leadflyt. Seks utførlige leveranser: (1) system-/leadsprosesskartlegging, (2) kontrollert CRM-API/webhook-integrasjon, (3) automatisk fordeling av henvendelser, (4) varsler og avgrenset oppfølging, (5) datakvalitet/sikkerhet/feilhåndtering, (6) integrasjonstesting og valgfritt løpende vedlikehold. Avgrenset eksplisitt mot `/konvertering/henvendelser-og-booking/`, `/konvertering/leadoppfolging/` og `/sporing-og-maling/leadsporing/` (LeadProof er ikke CRM). **Ingen uverifiserte CRM-integrasjoner, ferdig LeadProof-kobling, ubegrenset automatisering eller garantert null tapte leads.** Priser bestemmes senere.
 
-**Historikk:** Versjonerte snapshots 32–60 beholdes uendret. #34, #44, #45, #48, #53, #54, #55, #58, #60 og #61 avviste egne undersider; #46 godkjente AI-chatbot; #47 godkjente kundeanmeldelser som ANNET med JA, med bygg-først-avhengighet og lav prioritet.
+**Punkt 63 – venter:** Arbeidsflytautomatisering og systemintegrasjoner, mulig `/arbeidsflytautomatisering/`, som må skilles fra CRM-/leadflyt og AI-chatbot.
+
+**Historikk:** Versjonerte snapshots 32–61 beholdes uendret. #34, #44, #45, #48, #53, #54, #55, #58, #60 og #61 avviste egne undersider; #46 godkjente AI-chatbot; #47 godkjente kundeanmeldelser som ANNET med JA, med bygg-først-avhengighet og lav prioritet.
