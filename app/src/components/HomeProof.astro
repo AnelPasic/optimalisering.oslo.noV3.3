@@ -16,9 +16,9 @@ const publishedIds=content.caseIds.filter(id=>getPublishableCases({...content,ca
 const visuals=primary?[]:publishedIds.map(id=>resolveProofCaseVisual(id,content,content,records));
 const visual = primary ? undefined : resolveFeaturedProofVisual(content.featuredVisual, content, records);
 ---
-{cases.length > 0 && <section id="resultater" class="proof-section section-space"><div class="shell">
+{cases.length > 0 && <section id="resultater" class="proof-section section-space bg-base-200 text-base-content"><div class="shell">
   <div class:list={['section-heading', {'mb-(--gap-lg)': !primary}]}><p class="eyebrow">{content.eyebrow}</p><h2><TermText text={content.heading} terms={['roas', 'checkout', 'organisk-trafikk']} /></h2></div>
-  {primary ? <div class="proof-grid proof-primary">{cases.map((proof,index)=><article class:list={['proof-card',{'proof-featured':index===0}]}>
+  {primary ? <div class="proof-grid proof-primary">{cases.map((proof,index)=><article class:list={['proof-card',index===0?'proof-featured bg-secondary text-secondary-content':'bg-info text-info-content']}>
 
     <div class="proof-context">
       {!primary && index === 0 && visual && <div class="proof-media"><img src={visual.src} alt={visual.alt} width="1011" height="674" loading="lazy" decoding="async" style={{ objectPosition: `${visual.positionX}% ${visual.positionY}%` }} /></div>}
@@ -39,7 +39,7 @@ const visual = primary ? undefined : resolveFeaturedProofVisual(content.featured
     {cases.map((proof,index)=>{
       const image=visuals[index];
       const editorial=layout==='alternating'&&!!image;
-      return <li class="min-w-0"><article class:list={[editorial?'grid grid-cols-1 min-[701px]:grid-cols-2 gap-(--gap) min-[701px]:gap-[clamp(24px,4vw,64px)] items-center':'card bg-base-100 h-full overflow-hidden',layout==='mediaCards'&&'[border:var(--border-subtle)] rounded-(--radius-card)',{'proof-featured':index===0}]} data-proof-index={index} data-has-visual={!!image}>
+      return <li class="min-w-0"><article class:list={[editorial?'grid grid-cols-1 min-[701px]:grid-cols-2 gap-(--gap) min-[701px]:gap-[clamp(24px,4vw,64px)] items-center':'card card-border bg-base-100 text-base-content h-full overflow-hidden',{'proof-featured':index===0}]} data-proof-index={index} data-has-visual={!!image}>
         {layout==='mediaCards'&&image&&<div class="[&_.listing-visual]:rounded-none"><ListingVisual visual={{kind:'image',...image}} /></div>}
         <div class:list={[editorial?'min-w-0 space-y-5':'card-body min-w-0 gap-5 p-(--panel-pad)',editorial&&index%2===1&&'min-[701px]:col-start-2 min-[701px]:row-start-1']}>
           <h3 class:list={{'card-title':!editorial}}>{proof.displayName}</h3>
@@ -55,10 +55,9 @@ const visual = primary ? undefined : resolveFeaturedProofVisual(content.featured
 </div></section>}
 
 <style>
-  .proof-section { background: #f7f6ef; }
   .proof-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gap); }
-  .proof-card { min-width: 0; padding: var(--panel-pad-feature); border-radius: var(--radius-card-lg); background: var(--color-info); color: #173d39; }
-  .proof-primary .proof-featured { grid-column: 1 / -1; background: var(--color-secondary); color: #fff9ec; }
+  .proof-card { min-width: 0; padding: var(--panel-pad-feature); border-radius: var(--radius-card-lg); }
+  .proof-primary .proof-featured { grid-column: 1 / -1; }
   .proof-primary { grid-template-columns: minmax(0, 1fr); }
   .proof-primary h3 { margin: 0 0 12px; font-size: var(--type-h3); line-height: var(--leading-h3); }
   .proof-metric { margin: 0; font-weight: var(--weight-heading); }
@@ -68,7 +67,7 @@ const visual = primary ? undefined : resolveFeaturedProofVisual(content.featured
   .proof-primary dt { font-size: var(--type-label); font-weight: var(--weight-label); line-height: var(--leading-small); }
   .proof-primary dd { margin: 0; }
   .proof-comparison strong { display: block; font-family: 'Instrument Sans Variable', sans-serif; font-size: var(--type-stat); line-height: var(--leading-stat); font-weight: var(--weight-heading); overflow-wrap: anywhere; }
-  .proof-featured .proof-comparison strong { font-size: var(--type-display); line-height: var(--leading-stat); }
+  .proof-primary .proof-featured .proof-comparison strong { font-size: var(--type-display); line-height: var(--leading-stat); }
   .proof-comparison dd span { display: block; margin-top: 8px; font-size: var(--type-meta); line-height: var(--leading-small); }
   .proof-arrow { font-size: var(--type-icon); align-self: center; line-height: var(--leading-small); }
   .proof-primary .proof-context { display: contents; }
@@ -77,7 +76,6 @@ const visual = primary ? undefined : resolveFeaturedProofVisual(content.featured
   .proof-values dl, .proof-values dd { margin: 0; }
   .proof-values dt { font-size: var(--type-label); font-weight: var(--weight-label); line-height: var(--leading-small); }
   .proof-values strong { display: block; font-family: 'Instrument Sans Variable', sans-serif; font-size: var(--type-h3); font-weight: var(--weight-heading); line-height: var(--leading-stat); white-space: nowrap; }
-  .proof-home > li:first-child .proof-values strong { font-size: var(--type-stat); }
   .proof-values dd span { display: block; margin-top: var(--gap-xs); font-size: var(--type-meta); line-height: var(--leading-small); }
   @media (max-width: 700px) {
     .proof-grid { grid-template-columns: minmax(0, 1fr); }
