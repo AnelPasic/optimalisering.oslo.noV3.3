@@ -19,6 +19,8 @@ SEO/AIO authority must be built into the information architecture and content, b
 
 ## Hero contract
 
+For a new or materially revised H1, apply [`H1-LAB.md`](H1-LAB.md) **before** assembling the eyebrow, support paragraph, proof and CTA. The H1 must stand on its own; use this site's current `CONTENT-TONE.json` and `COPY-STYLE.md`. Existing page copy is unchanged unless the task explicitly authorizes an edit.
+
 Every commercial service page must support:
 - quiet breadcrumb;
 - one eyebrow;
