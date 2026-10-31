@@ -1,14 +1,14 @@
 # Optimalisering Oslo – kanonisk sitemap og innholdsgrunnlag
 
-**Oppdatert:** 31.10.2026 · **Beslutningspunkter:** 60 avklart (49 JA / 2 ANNET med JA / 9 NEI) · **Godkjente tjeneste-URL-er:** 57 · **Neste punkt:** 61 (ikke besluttet)
+**Oppdatert:** 31.10.2026 · **Beslutningspunkter:** 61 avklart (49 JA / 2 ANNET med JA / 10 NEI) · **Godkjente tjeneste-URL-er:** 57 · **Neste punkt:** 62 (ikke besluttet)
 
 Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **Kun optimalisering.oslo.no**, ikke medon.no. Ingen av de foreslåtte sidene er implementert av denne sitemap-arbeidsflyten.
 
-## Gjeldende versjon (60)
+## Gjeldende versjon (61)
 
-- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-60-2026-10-31.md)
-- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-60-2026-10-31.json)
-- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-60-2026-10-31.md)
+- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-61-2026-10-31.md)
+- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-61-2026-10-31.json)
+- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-61-2026-10-31.md)
 - [Innholdsbrief-standard / utarbeidelseskrav](./innholdsbrief-standard.md)
 - [GitHub issues-struktur og oppgavemal – snapshot fra punkt 32](./github-issues-plan-32-2026-10-30.md)
 
@@ -82,6 +82,8 @@ Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **K
 
 **Punkt 60 – NEI:** Ingen separat `/epostlevering-fra-nettsider/`. Alle seks individuelt beskrevne leveranser er bevart under `/konvertering/henvendelser-og-booking/`: feilsøking, SPF/DKIM/DMARC, transaksjonell SMTP/API, avvisninger/retry/varsler, ende-til-ende test og periodisk kontroll. To egne driftsoppgaver er lagt til `/funksjonsovervakning/`. `/epostmarkedsforing/` avgrenses eksplisitt til nyhetsbrev og kampanjer. Ingen garanti om innbokslevering, ingen endringer av eksisterende DNS uten kartlegging, og ingen ny URL.
 
-**Punkt 61 – venter:** Administrert nettsidehosting og teknisk drift, mulig `/nettsidehosting/`. Vurder egen side eller tydelig driftstjeneste under `/nettsidevedlikehold/`.
+**Punkt 61 – NEI:** Ingen separat `/nettsidehosting/`. Seks utførlig beskrevne leveranser er beholdt under `/nettsidevedlikehold/`: hostinganalyse, oppsett/migrering, domene/DNS/TLS, backup/restore, ressurs-/kapasitetskontroll og månedlig hostingadministrasjon. Skillet mot `/funksjonsovervakning/` og `/nettsidesikkerhet/` er dokumentert med særskilte punkter i deres briefs. **Ingen oppdiktede SLA-er, priser, oppetidsgarantier, døgnbemannet support eller gjenopprettingstider.** Kunden beholder som hovedregel domeneeierskapet. Ingen ny URL.
 
-**Historikk:** Versjonerte snapshots 32–59 beholdes uendret. #34, #44, #45, #48, #53, #54, #55, #58 og #60 avviste egne undersider; #46 godkjente AI-chatbot; #47 godkjente kundeanmeldelser som ANNET med JA, med bygg-først-avhengighet og lav prioritet.
+**Punkt 62 – venter:** CRM-integrasjoner og automatisert leadflyt, mulig `/crm-integrasjoner/`. Vurder egen teknisk spesialisttjeneste og avgrensning mot leadoppfølging, skjemaflyt og LeadProof.
+
+**Historikk:** Versjonerte snapshots 32–60 beholdes uendret. #34, #44, #45, #48, #53, #54, #55, #58, #60 og #61 avviste egne undersider; #46 godkjente AI-chatbot; #47 godkjente kundeanmeldelser som ANNET med JA, med bygg-først-avhengighet og lav prioritet.
