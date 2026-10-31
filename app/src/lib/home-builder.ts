@@ -7,6 +7,7 @@ import { siteChrome } from './site-chrome-data.ts';
 import { headingAlignSchema } from './heading-alignment.ts';
 import {contentLayoutSchema,boxVariantSchema} from './content-presentation.ts';
 import {heroLayoutSchema} from './hero-presentation.ts';
+import {heroToneOverridesSchema} from './hero-tone-overrides.ts';
 import {assessmentLayoutSchema} from './assessment-layout.ts';
 import {pageListSchema} from './page-list.ts';
 import {sharedContentPlacementSchema,resolveSharedContentPlacement} from './shared-content.ts';
@@ -24,6 +25,7 @@ export const heroPhotoSchema=z.object({kind:z.enum(['photo','illustration']).opt
 export const heroSchema=z.object({
  layout:heroLayoutSchema,
  eyebrow:z.string(),title:z.string().trim().min(1),support:z.string(),primaryCta:link,secondaryCta:link.optional(),
+ toneOverrides:heroToneOverridesSchema,
  visual:z.discriminatedUnion('kind',[z.object({kind:z.literal('none'),image:heroPhotoSchema.optional()}).strict(),z.object({kind:z.literal('image'),image:heroPhotoSchema}).strict()]),
  // A single typed project treatment, never arbitrary inline rich styling.
  featuredProofCaseId:z.string().regex(/^[a-z0-9][a-z0-9-]*$/).optional(),

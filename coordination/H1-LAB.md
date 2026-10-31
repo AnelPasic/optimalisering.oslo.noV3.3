@@ -10,6 +10,18 @@
 - Current `coordination/CONTENT-TONE.json`, `CONTENT-VOICE-PROFILE.md` and approved project facts.
 - Relevant BusinessIntelligence research **when accessible and useful**; never require a private repository to export, build or edit a standalone site.
 
+## Per-page Hero tone (Pages CMS)
+
+The `hero.toneOverrides` object may be set on **each page**, independently of global `coordination/CONTENT-TONE.json`. Controls exist for `eyebrowPreset`, `titlePreset` (H1), `supportPreset`, `primaryCtaPreset` and `secondaryCtaPreset`. Each field resolves separately:
+
+1. A selected named preset on that Hero part wins.
+2. Missing, empty or `inherit` follows the site's `heroPreset`.
+3. If site `heroPreset` is `inherit`, use the site's `defaultPreset`.
+
+Read the current CMS-backed page JSON, `coordination/CONTENT-TONE.json`, `CONTENT-VOICE-PROFILE.md` and `COPY-STYLE.md` immediately before writing. Keep H1 Lab's relevance, concrete value, truth and independent readability gates even with an expressive tone. CTA labels stay unmistakably actionable; proof data and image alt are factual, not creative tone controls.
+
+**Editorial preference only:** Changing a dropdown does not regenerate or publish text, change rendered HTML, open a content queue or overwrite OWNER-edited copy. Apply the effective per-part tone when next explicitly asked to write/rewrite that part. When testing alternative SEO Heroes, prefer isolated draft/test fixtures over multiple public same-intent `/seo` variants. New public pages require their own distinct search intent and sitemap decision.
+
 ## Non-negotiable H1 gates
 
 Read the H1 **alone**, with eyebrow, subheading, images and logo hidden.

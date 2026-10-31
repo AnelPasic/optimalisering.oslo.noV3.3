@@ -937,6 +937,50 @@ content:
             name: secondaryCta
             label: Sekundær handling
             component: link
+          - &heroToneOverrides
+            name: toneOverrides
+            label: Språk og tone for denne Hero
+            type: object
+            required: false
+            description: Valgfri overstyring per tekstfelt. Følg Hero-tonen bruker Språk og tone → Hero og hovedoverskrifter, deretter normal tone. Tonevalgene påvirker bare fremtidig skriving – ikke teksten som allerede er lagret.
+            fields:
+              - name: eyebrowPreset
+                label: Overtekst – tone
+                type: select
+                options: &heroPartPresetOverrides
+                  values:
+                    - name: inherit
+                      label: Følg Hero-tonen for nettstedet
+                    - name: noktern
+                      label: Nøktern
+                    - name: medon
+                      label: Medon
+                    - name: spiss
+                      label: Spiss
+                    - name: spissplus
+                      label: Spiss+ (nivå 4)
+                    - name: spisspluskomisk
+                      label: Spiss+ komisk (nivå 5)
+                    - name: spisspluskomiskplus
+                      label: Spiss+ komisk+ (nivå 6)
+              - name: titlePreset
+                label: H1 / hovedoverskrift – tone
+                type: select
+                description: H1 Lab gjelder alltid: konkret tjeneste, kundeverdi og forståelighet før kreativitet.
+                options: *heroPartPresetOverrides
+              - name: supportPreset
+                label: Ingress / støttetekst – tone
+                type: select
+                options: *heroPartPresetOverrides
+              - name: primaryCtaPreset
+                label: Primær CTA – tone
+                type: select
+                description: Kort og handlingsrettet uansett tone.
+                options: *heroPartPresetOverrides
+              - name: secondaryCtaPreset
+                label: Sekundær CTA – tone
+                type: select
+                options: *heroPartPresetOverrides
           - &heroProofCase
             name: featuredProofCaseId
             label: Utvalgt Proof i Hero
@@ -1234,6 +1278,7 @@ content:
               - *hubHerosupport
               - *hubHeroprimaryCta
               - *hubHerosecondaryCta
+              - *heroToneOverrides
               - *heroProofCase
               - name: visual
                 label: Visuelt innhold
