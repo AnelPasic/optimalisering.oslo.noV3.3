@@ -1,14 +1,14 @@
 # Optimalisering Oslo – kanonisk sitemap og innholdsgrunnlag
 
-**Oppdatert:** 31.10.2026 · **Beslutningspunkter:** 54 avklart (46 JA / 2 ANNET med JA / 6 NEI) · **Godkjente tjeneste-URL-er:** 54 · **Neste punkt:** 55 (ikke besluttet)
+**Oppdatert:** 31.10.2026 · **Beslutningspunkter:** 55 avklart (46 JA / 2 ANNET med JA / 7 NEI) · **Godkjente tjeneste-URL-er:** 54 · **Neste punkt:** 56 (ikke besluttet)
 
 Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **Kun optimalisering.oslo.no**, ikke medon.no. Ingen av de foreslåtte sidene er implementert av denne sitemap-arbeidsflyten.
 
-## Gjeldende versjon (54)
+## Gjeldende versjon (55)
 
-- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-54-2026-10-31.md)
-- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-54-2026-10-31.json)
-- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-54-2026-10-31.md)
+- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-55-2026-10-31.md)
+- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-55-2026-10-31.json)
+- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-55-2026-10-31.md)
 - [Innholdsbrief-standard / utarbeidelseskrav](./innholdsbrief-standard.md)
 - [GitHub issues-struktur og oppgavemal – snapshot fra punkt 32](./github-issues-plan-32-2026-10-30.md)
 
@@ -70,6 +70,8 @@ Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **K
 
 **Punkt 54 – NEI:** Ingen separat `/tiktok-annonsering/`. Seks detaljerte leveranser beholdes som behovsprøvd TikTok-kanaltillegg under `/annonseoptimalisering/`: annonse-/målgruppeanalyse, gjennomgang av kundeleverte videoer, Ads Manager-oppsett/drift, Spark Ads/eksisterende innhold, mobil landingsside og konverteringsmåling/optimalisering. **Kunden leverer normalt ferdige videoer/creatives. Videoproduksjon inngår ikke.** Kun helt enkel trimming, formatendring eller teksting kan avtales separat. Ingen ny URL.
 
-**Punkt 55 – venter:** Snapchat-annonsering, mulig `/snapchat-annonsering/`. Vurder egen side versus kanaltillegg, særlig leveransekapasitet og kundeleverte creatives.
+**Punkt 55 – NEI:** Ingen egen `/snapchat-annonsering/`. Alle seks Snapchat-leveranser er bevart med konkrete forklaringer under `/annonseoptimalisering/`: kanal-/målgruppeanalyse, Ads Manager, bilde-/videoannonser fra kundeleverte assets, produktannonser, mobil landing og Snap Pixel/måling. **Ingen ordinær videoproduksjon eller AR-produksjon som standard.** Bare enkle tilpasninger av eksisterende materiell kan avtales særskilt. Ingen ny URL.
 
-**Historikk:** Versjonerte snapshots 32–53 beholdes uendret. #34, #44, #45, #48, #53 og #54 avviste egne undersider; #46 godkjente AI-chatbot; #47 godkjente kundeanmeldelser som ANNET med JA, med bygg-først-avhengighet og lav prioritet.
+**Punkt 56 – venter:** Samtykkestyring, cookie-banner og Google Consent Mode, mulig `/sporing-og-maling/samtykkestyring/`. Vurder separat teknisk tjeneste vs. eksisterende `/sporing-og-maling/`; ingen juridisk garanti.
+
+**Historikk:** Versjonerte snapshots 32–54 beholdes uendret. #34, #44, #45, #48, #53, #54 og #55 avviste egne undersider; #46 godkjente AI-chatbot; #47 godkjente kundeanmeldelser som ANNET med JA, med bygg-først-avhengighet og lav prioritet.
