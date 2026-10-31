@@ -109,13 +109,6 @@ components:
       - name: supportPreset
         label: Ingress / støttetekst - tone
         component: heroPartToneChoice
-      - name: primaryCtaPreset
-        label: Primær CTA - tone
-        component: heroPartToneChoice
-        description: Kort og handlingsrettet uansett tone.
-      - name: secondaryCtaPreset
-        label: Sekundær CTA - tone
-        component: heroPartToneChoice
   globalMarkdownBody:
     type: rich-text
     list: {}
@@ -953,6 +946,9 @@ content:
             name: layout
             label: Oppsett
             component: heroLayoutChoice
+          - name: toneOverrides
+            label: Språk og tone for denne Hero
+            component: heroToneOverrides
           - &hubHeroeyebrow
             name: eyebrow
             label: Overtekst
@@ -977,9 +973,6 @@ content:
             name: secondaryCta
             label: Sekundær handling
             component: link
-          - name: toneOverrides
-            label: Språk og tone for denne Hero
-            component: heroToneOverrides
           - &heroProofCase
             name: featuredProofCaseId
             label: Utvalgt Proof i Hero
@@ -1272,14 +1265,14 @@ content:
             required: true
             fields:
               - *hubHerolayout
+              - name: toneOverrides
+                label: Språk og tone for denne Hero
+                component: heroToneOverrides
               - *hubHeroeyebrow
               - *hubHerotitle
               - *hubHerosupport
               - *hubHeroprimaryCta
               - *hubHerosecondaryCta
-              - name: toneOverrides
-                label: Språk og tone for denne Hero
-                component: heroToneOverrides
               - *heroProofCase
               - name: visual
                 label: Visuelt innhold

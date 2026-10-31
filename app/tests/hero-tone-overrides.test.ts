@@ -21,10 +21,13 @@ test('all normal page Hero editors expose independent optional tone controls',()
   const editor=entryForFile(cms,source);
   const h=resolveField(editor.fields.find((f:any)=>f.name==='hero'),cms.components);
   assert.ok(h,source);
-  const tone=resolveField(h.fields.find((f:any)=>f.name==='toneOverrides'),cms.components);
+  const toneIndex=h.fields.findIndex((f:any)=>f.name==='toneOverrides');
+  const eyebrowIndex=h.fields.findIndex((f:any)=>f.name==='eyebrow');
+  assert.equal(toneIndex,eyebrowIndex-1,source+' places tone directly before Overtekst');
+  const tone=resolveField(h.fields[toneIndex],cms.components);
   assert.equal(tone.type,'object',source);
   assert.notEqual(tone.required,true,source);
-  assert.deepEqual(tone.fields.map((f:any)=>f.name),['eyebrowPreset','titlePreset','supportPreset','primaryCtaPreset','secondaryCtaPreset']);
+  assert.deepEqual(tone.fields.map((f:any)=>f.name),['eyebrowPreset','titlePreset','supportPreset']);
   for(const field of tone.fields)assert.deepEqual(resolveField(field,cms.components).options.values.map((v:any)=>v.name),presets);
  }
  assert.deepEqual([...heroTonePresetValues],presets);
@@ -35,11 +38,11 @@ test('five different /seo Hero tone strategies can be saved independently, prese
  const editor=entryForFile(cms,'app/src/content/pages/seo.json');
  const baselineHeroView=resolvePageHero(page);
  const candidates=[
-  {eyebrowPreset:'noktern',titlePreset:'medon',supportPreset:'noktern',primaryCtaPreset:'inherit',secondaryCtaPreset:'inherit'},
-  {eyebrowPreset:'noktern',titlePreset:'spiss',supportPreset:'medon',primaryCtaPreset:'inherit',secondaryCtaPreset:'inherit'},
-  {eyebrowPreset:'medon',titlePreset:'spissplus',supportPreset:'noktern',primaryCtaPreset:'noktern',secondaryCtaPreset:'inherit'},
-  {eyebrowPreset:'spiss',titlePreset:'spisspluskomisk',supportPreset:'medon',primaryCtaPreset:'noktern',secondaryCtaPreset:'inherit'},
-  {eyebrowPreset:'spissplus',titlePreset:'spisspluskomiskplus',supportPreset:'spiss',primaryCtaPreset:'noktern',secondaryCtaPreset:'medon'},
+  {eyebrowPreset:'noktern',titlePreset:'medon',supportPreset:'noktern'},
+  {eyebrowPreset:'noktern',titlePreset:'spiss',supportPreset:'medon'},
+  {eyebrowPreset:'medon',titlePreset:'spissplus',supportPreset:'noktern'},
+  {eyebrowPreset:'spiss',titlePreset:'spisspluskomisk',supportPreset:'medon'},
+  {eyebrowPreset:'spissplus',titlePreset:'spisspluskomiskplus',supportPreset:'spiss'},
  ] as const;
  for(const toneOverrides of candidates){
   const proposed=structuredClone(page);
@@ -63,6 +66,8 @@ test('invalid presets rejected; inheritance stays optional and site-specific',()
  assert.ok(heroToneOverridesSchema.safeParse({titlePreset:'inherit'}).success);
  assert.ok(heroToneOverridesSchema.safeParse({titlePreset:'spiss'}).success);
  assert.equal(heroToneOverridesSchema.safeParse({titlePreset:'garbage'}).success,false);
+ assert.equal(heroToneOverridesSchema.safeParse({primaryCtaPreset:'spiss'}).success,false,'CTA uses shared tone, not per-Hero override');
+ assert.equal(heroToneOverridesSchema.safeParse({secondaryCtaPreset:'spiss'}).success,false,'CTA uses shared tone, not per-Hero override');
  assert.equal(heroToneOverridesSchema.safeParse({unknownPreset:'spiss'}).success,false);
  const siteTone=JSON.parse(text('../coordination/CONTENT-TONE.json'));
  assert.equal(siteTone.defaultPreset,'medon');

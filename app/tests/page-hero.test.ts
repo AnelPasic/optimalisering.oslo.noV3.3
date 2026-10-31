@@ -13,7 +13,7 @@ const pages=pageFilePaths().map(file=>({file,page:JSON.parse(readFileSync(`src/c
 const home=pages.find(p=>p.page.kind==='home')!.page;
 const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
 const normal=pages.filter(p=>p.page.kind!=='home'&&p.page.slug!=='synlighet');
-const expectedHeroFields=['layout','eyebrow','title','support','primaryCta','secondaryCta','toneOverrides','featuredProofCaseId','visual'];
+const expectedHeroFields=['layout','toneOverrides','eyebrow','title','support','primaryCta','secondaryCta','featuredProofCaseId','visual'];
 
 test('all ordinary pages have one canonical editable Hero, with no duplicated persisted text or image keys',()=>{
  assert.equal(normal.length,15);
