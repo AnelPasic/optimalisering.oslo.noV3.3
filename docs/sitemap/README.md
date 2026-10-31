@@ -1,14 +1,14 @@
 # Optimalisering Oslo – kanonisk sitemap og innholdsgrunnlag
 
-**Oppdatert:** 31.10.2026 · **Beslutningspunkter:** 58 avklart (48 JA / 2 ANNET med JA / 8 NEI) · **Godkjente tjeneste-URL-er:** 56 · **Neste punkt:** 59 (ikke besluttet)
+**Oppdatert:** 31.10.2026 · **Beslutningspunkter:** 59 avklart (49 JA / 2 ANNET med JA / 8 NEI) · **Godkjente tjeneste-URL-er:** 57 · **Neste punkt:** 60 (ikke besluttet)
 
 Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **Kun optimalisering.oslo.no**, ikke medon.no. Ingen av de foreslåtte sidene er implementert av denne sitemap-arbeidsflyten.
 
-## Gjeldende versjon (58)
+## Gjeldende versjon (59)
 
-- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-58-2026-10-31.md)
-- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-58-2026-10-31.json)
-- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-58-2026-10-31.md)
+- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-59-2026-10-31.md)
+- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-59-2026-10-31.json)
+- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-59-2026-10-31.md)
 - [Innholdsbrief-standard / utarbeidelseskrav](./innholdsbrief-standard.md)
 - [GitHub issues-struktur og oppgavemal – snapshot fra punkt 32](./github-issues-plan-32-2026-10-30.md)
 
@@ -78,6 +78,8 @@ Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **K
 
 **Punkt 58 – NEI:** Ingen separat `/sporing-og-maling/server-side-sporing/`. Seks fullstendige tekniske leveranser legges inn under `/sporing-og-maling/`: måleaudit, server-side GTM/infrastruktur, Google Ads forbedrede konverteringer/offline signaler, Meta CAPI/deduplisering, samtykke/sikkerhet/dataminimering og teknisk testing/vedlikehold. Individuelle avgrensninger er også lagt inn i de eksisterende briefene for `/sporing-og-maling/samtykkestyring/`, `/google-ads/konverteringssporing/`, `/meta-ads/konverteringssporing/` og `/sporing-og-maling/leadsporing/`. **Server-side sporing er ikke et samtykkefritak** og gir verken automatisk LeadProof-integrasjon eller garantert attribusjon. Ingen ny URL.
 
-**Punkt 59 – venter:** Nettsidesikkerhet og sårbarhetskontroll, mulig `/nettsidesikkerhet/`. Vurder egen tjeneste mot vedlikehold/overvåkning/nettsideanalyse med tydelig avgrensning av faktisk sikkerhetsansvar.
+**Punkt 59 – JA:** `/nettsidesikkerhet/` er godkjent som egen sikkerhetsfokusert tjenesteside. Seks fullstendige leveranser: (1) sårbarhets-/sikkerhetsgjennomgang, (2) oppdateringer og kompatibilitet, (3) brukertilgang, (4) hosting-/WAF-beskyttelse, (5) sikkerhetskopiering og trygg gjenopprettingstest, (6) periodisk sikkerhetskontroll. Avgrens fra `/nettsidevedlikehold/`, `/funksjonsovervakning/` og `/nettsideanalyse/`. Ikke lov sertifisert penetrasjonstest, 24/7 SOC, sikkerhetsgaranti eller beredskap som ikke er etablert. Prosjektgjennomgang og mulig avtalt månedlig sikkerhetskontroll; priser senere.
 
-**Historikk:** Versjonerte snapshots 32–57 beholdes uendret. #34, #44, #45, #48, #53, #54, #55 og #58 avviste egne undersider; #46 godkjente AI-chatbot; #47 godkjente kundeanmeldelser som ANNET med JA, med bygg-først-avhengighet og lav prioritet.
+**Punkt 60 – venter:** E-postlevering fra nettsider og domenets e-postautentisering, mulig `/epostlevering-fra-nettsider/`. Vurder konkret tap av webskjema-/bookingvarsler og teknisk levering, ikke e-postmarkedsføring.
+
+**Historikk:** Versjonerte snapshots 32–58 beholdes uendret. #34, #44, #45, #48, #53, #54, #55 og #58 avviste egne undersider; #46 godkjente AI-chatbot; #47 godkjente kundeanmeldelser som ANNET med JA, med bygg-først-avhengighet og lav prioritet.
