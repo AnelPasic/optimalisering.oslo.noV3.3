@@ -1,0 +1,1832 @@
+{
+  "date": "2026-11-01",
+  "status": "PROPOSED_FOR_OWNER_REVIEW_NOT_SITE_CHANGES",
+  "approved_sitemap_version": "5.4",
+  "approved_url_count": 63,
+  "source_sheet": "https://docs.google.com/spreadsheets/d/1ZvFikP6jKJ8r41H66oFQ31BPdhNzp6-N11VIJ-cetWM/edit",
+  "quality": {
+    "source": {
+      "sheet": "https://docs.google.com/spreadsheets/d/1ZvFikP6jKJ8r41H66oFQ31BPdhNzp6-N11VIJ-cetWM/edit",
+      "title": "Medon – Søkeordsanalyse (løpende)",
+      "tab": "Søkeord",
+      "range": "A1:R854",
+      "import_date": "2026-10-24",
+      "captured_at": "2026-11-01",
+      "data_source": "skjermbildeimportert Google.no SEO-kilde"
+    },
+    "rows": 853,
+    "distinct_exact_keywords": 851,
+    "volume_present": 841,
+    "volume_missing": 12,
+    "kd_present": 645,
+    "kd_missing": 208,
+    "duplicate_exact_keywords": [
+      {
+        "term": "markedsstrategi",
+        "rows": [
+          {
+            "row": 60,
+            "volume": 390,
+            "organic_kd": null
+          },
+          {
+            "row": 66,
+            "volume": 320,
+            "organic_kd": 29.7
+          }
+        ]
+      },
+      {
+        "term": "digital markedsførings byrå",
+        "rows": [
+          {
+            "row": 344,
+            "volume": 50,
+            "organic_kd": 20.2
+          },
+          {
+            "row": 797,
+            "volume": 10,
+            "organic_kd": 23.8
+          }
+        ]
+      }
+    ],
+    "prioritization": {
+      "P0": 12,
+      "P1": 29,
+      "P2": 22
+    },
+    "mapping": {
+      "pages_with_at_least_one_present_volume_anchor": 46,
+      "pages_without_present_volume_anchor": 17,
+      "method": "Manuelt oppgitte eksakte ankere per eksisterende URL, ikke en full clustering av alle 853 rader. Åpne kandidater for søkevolum må valideres per SERP før publisering."
+    }
+  },
+  "existing_hubs": [
+    {
+      "url": "/seo/",
+      "recommended_intent": "SEO-byrå Oslo / SEO tjenester / SEO konsulent, ikke la teknisk SEO/SEO-analyse kopiere samme primære søkeord"
+    },
+    {
+      "url": "/konvertering/",
+      "recommended_intent": "konverteringsoptimalisering, CRO; undersidene eier smalere prosessproblem"
+    },
+    {
+      "url": "/lokal-seo/",
+      "recommended_intent": "lokal SEO; Google bedriftsprofil-siden dekker profiloppgaver"
+    },
+    {
+      "url": "/nettbutikkoptimalisering/",
+      "recommended_intent": "bred nettbutikkoptimalisering; Shopify, checkout og integrasjoner er spesialister"
+    },
+    {
+      "url": "/ai-synlighet/",
+      "recommended_intent": "bred AI-synlighet; ChatGPT/Google AI kan være seksjoner inntil separat SERP bekrefter intensjon"
+    },
+    {
+      "url": "/synlighet/",
+      "recommended_intent": "SEO + Ads + AI overview; ikke kannibaliser /seo/ og /google-ads/"
+    }
+  ],
+  "pages": [
+    {
+      "url": "/landingssider/",
+      "title": "Landingssider",
+      "decision_number": 1,
+      "status": "approved_not_implemented",
+      "priority": "P0",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "landingsside",
+        "monthly_searches_reported": 40,
+        "organic_kd": 18.4,
+        "kei": 0.028,
+        "google_sheet_row": 442,
+        "source_batch": "2026-10-24-05"
+      },
+      "other_exact_keywords": [
+        {
+          "term": "landingsside optimalisering",
+          "monthly_searches_reported": null,
+          "organic_kd": 38.6,
+          "sheet_row": 850
+        }
+      ],
+      "anchor_candidates": [
+        "landingsside",
+        "landingsside optimalisering"
+      ],
+      "commercial_rationale": "Nær kjernetilbud eller repeterbar inngangs-/månedsavtale; publiser først etter validering av kapasitet, internlenker og budskap.",
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+    },
+    {
+      "url": "/konvertering/henvendelser-og-booking/",
+      "title": "Skjema og bookingflyt",
+      "decision_number": 2,
+      "status": "approved_not_implemented",
+      "priority": "P1",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "no_exact_keyword_anchor",
+      "primary_keyword": null,
+      "other_exact_keywords": [],
+      "anchor_candidates": [
+        "kontaktskjema",
+        "online booking",
+        "booking nettside"
+      ],
+      "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
+      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk."
+    },
+    {
+      "url": "/nettbutikkoptimalisering/kjopsflyt/",
+      "title": "Kjøpsflyt og checkout",
+      "decision_number": 3,
+      "status": "approved_not_implemented",
+      "priority": "P1",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "konverteringsoptimalisering nettbutikk",
+        "monthly_searches_reported": 10,
+        "organic_kd": 19.5,
+        "kei": 0.042,
+        "google_sheet_row": 402,
+        "source_batch": "2026-10-24-07"
+      },
+      "other_exact_keywords": [
+        {
+          "term": "øke konvertering nettbutikk",
+          "monthly_searches_reported": null,
+          "organic_kd": 23.7,
+          "sheet_row": 854
+        }
+      ],
+      "anchor_candidates": [
+        "konverteringsoptimalisering nettbutikk",
+        "øke konvertering nettbutikk"
+      ],
+      "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+    },
+    {
+      "url": "/nettbutikkoptimalisering/produktsider/",
+      "title": "Produkt- og kategorisider",
+      "decision_number": 4,
+      "status": "approved_not_implemented",
+      "priority": "P1",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "seo nettbutikk",
+        "monthly_searches_reported": 90,
+        "organic_kd": 22,
+        "kei": 0.891,
+        "google_sheet_row": 71,
+        "source_batch": "2026-10-24-04"
+      },
+      "other_exact_keywords": [
+        {
+          "term": "nettbutikk seo",
+          "monthly_searches_reported": 70,
+          "organic_kd": 22.3,
+          "sheet_row": 155
+        }
+      ],
+      "anchor_candidates": [
+        "seo nettbutikk",
+        "nettbutikk seo"
+      ],
+      "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+    },
+    {
+      "url": "/sporing-og-maling/",
+      "title": "Sporing og måling",
+      "decision_number": 5,
+      "status": "approved_not_implemented",
+      "priority": "P0",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "webanalyse",
+        "monthly_searches_reported": 70,
+        "organic_kd": 24,
+        "kei": 0.16,
+        "google_sheet_row": 218,
+        "source_batch": "2026-10-24-04"
+      },
+      "other_exact_keywords": [
+        {
+          "term": "google analytics 4",
+          "monthly_searches_reported": 390,
+          "organic_kd": 51.5,
+          "sheet_row": 76
+        }
+      ],
+      "anchor_candidates": [
+        "webanalyse",
+        "google analytics 4"
+      ],
+      "commercial_rationale": "Nær kjernetilbud eller repeterbar inngangs-/månedsavtale; publiser først etter validering av kapasitet, internlenker og budskap.",
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+    },
+    {
+      "url": "/konvertering/budskap-og-tilbud/",
+      "title": "Budskap og tilbud",
+      "decision_number": 6,
+      "status": "approved_not_implemented",
+      "priority": "P1",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "konverteringsoptimalisering",
+        "monthly_searches_reported": 210,
+        "organic_kd": 17,
+        "kei": 0.48,
+        "google_sheet_row": 117,
+        "source_batch": "2026-10-24-03"
+      },
+      "other_exact_keywords": [
+        {
+          "term": "forbedre konverteringsrate",
+          "monthly_searches_reported": 10,
+          "organic_kd": null,
+          "sheet_row": 721
+        }
+      ],
+      "anchor_candidates": [
+        "konverteringsoptimalisering",
+        "forbedre konverteringsrate"
+      ],
+      "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+    },
+    {
+      "url": "/nettsidehastighet/",
+      "title": "Nettsidehastighet og ytelse",
+      "decision_number": 7,
+      "status": "approved_not_implemented",
+      "priority": "P1",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "nettside hastighet",
+        "monthly_searches_reported": 10,
+        "organic_kd": 37.7,
+        "kei": 0.03,
+        "google_sheet_row": 436,
+        "source_batch": "2026-10-24-07"
+      },
+      "other_exact_keywords": [
+        {
+          "term": "hastighet nettside",
+          "monthly_searches_reported": 10,
+          "organic_kd": 35.2,
+          "sheet_row": 730
+        },
+        {
+          "term": "raske nettsider",
+          "monthly_searches_reported": 40,
+          "organic_kd": 31.3,
+          "sheet_row": 176
+        }
+      ],
+      "anchor_candidates": [
+        "nettside hastighet",
+        "hastighet nettside",
+        "raske nettsider"
+      ],
+      "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+    },
+    {
+      "url": "/kontinuerlig-optimalisering/",
+      "title": "Kontinuerlig optimalisering",
+      "decision_number": 8,
+      "status": "approved_not_implemented",
+      "priority": "P0",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "optimalisering av nettsider",
+        "monthly_searches_reported": 170,
+        "organic_kd": 21.5,
+        "kei": 0.05,
+        "google_sheet_row": 370,
+        "source_batch": "2026-10-24-03"
+      },
+      "other_exact_keywords": [
+        {
+          "term": "optimalisering av nettside",
+          "monthly_searches_reported": 170,
+          "organic_kd": null,
+          "sheet_row": 369
+        },
+        {
+          "term": "nettside optimalisering",
+          "monthly_searches_reported": 30,
+          "organic_kd": 23.7,
+          "sheet_row": 209
+        }
+      ],
+      "anchor_candidates": [
+        "optimalisering av nettsider",
+        "optimalisering av nettside",
+        "nettside optimalisering"
+      ],
+      "commercial_rationale": "Nær kjernetilbud eller repeterbar inngangs-/månedsavtale; publiser først etter validering av kapasitet, internlenker og budskap.",
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+    },
+    {
+      "url": "/annonseoptimalisering/",
+      "title": "Kampanje- og annonseoptimalisering",
+      "decision_number": 9,
+      "status": "approved_not_implemented",
+      "priority": "P2",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "annonsering",
+        "monthly_searches_reported": 590,
+        "organic_kd": 24.6,
+        "kei": 1.593,
+        "google_sheet_row": 38,
+        "source_batch": "2026-10-24-01"
+      },
+      "other_exact_keywords": [
+        {
+          "term": "betalt annonsering",
+          "monthly_searches_reported": 50,
+          "organic_kd": null,
+          "sheet_row": 306
+        }
+      ],
+      "anchor_candidates": [
+        "annonsering",
+        "betalt annonsering"
+      ],
+      "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+    },
+    {
+      "url": "/google-ads/",
+      "title": "Kampanje- og annonseoptimalisering",
+      "decision_number": 9,
+      "status": "approved_not_implemented",
+      "priority": "P0",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "google ads byrå",
+        "monthly_searches_reported": 90,
+        "organic_kd": 17.8,
+        "kei": 0.382,
+        "google_sheet_row": 140,
+        "source_batch": "2026-10-24-04"
+      },
+      "other_exact_keywords": [
+        {
+          "term": "google ads oslo",
+          "monthly_searches_reported": 50,
+          "organic_kd": 16.4,
+          "sheet_row": 275
+        },
+        {
+          "term": "google ads",
+          "monthly_searches_reported": 12100,
+          "organic_kd": 55,
+          "sheet_row": 11
+        },
+        {
+          "term": "google annonsering",
+          "monthly_searches_reported": 260,
+          "organic_kd": 25.7,
+          "sheet_row": 190
+        }
+      ],
+      "anchor_candidates": [
+        "google ads byrå",
+        "google ads oslo",
+        "google ads",
+        "google annonsering"
+      ],
+      "commercial_rationale": "Nær kjernetilbud eller repeterbar inngangs-/månedsavtale; publiser først etter validering av kapasitet, internlenker og budskap.",
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+    },
+    {
+      "url": "/meta-ads/",
+      "title": "Kampanje- og annonseoptimalisering",
+      "decision_number": 9,
+      "status": "approved_not_implemented",
+      "priority": "P0",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "facebook annonsering",
+        "monthly_searches_reported": 390,
+        "organic_kd": 35.2,
+        "kei": 0.429,
+        "google_sheet_row": 129,
+        "source_batch": "2026-10-24-02"
+      },
+      "other_exact_keywords": [
+        {
+          "term": "instagram annonsering",
+          "monthly_searches_reported": 70,
+          "organic_kd": 27.9,
+          "sheet_row": 273
+        },
+        {
+          "term": "annonsering på instagram",
+          "monthly_searches_reported": 30,
+          "organic_kd": 31.3,
+          "sheet_row": 412
+        }
+      ],
+      "anchor_candidates": [
+        "facebook annonsering",
+        "instagram annonsering",
+        "annonsering på instagram"
+      ],
+      "commercial_rationale": "Nær kjernetilbud eller repeterbar inngangs-/månedsavtale; publiser først etter validering av kapasitet, internlenker og budskap.",
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+    },
+    {
+      "url": "/google-shopping/",
+      "title": "Kampanje- og annonseoptimalisering",
+      "decision_number": 9,
+      "status": "approved_not_implemented",
+      "priority": "P1",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "no_exact_keyword_anchor",
+      "primary_keyword": null,
+      "other_exact_keywords": [],
+      "anchor_candidates": [
+        "google shopping",
+        "google shopping annonser"
+      ],
+      "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
+      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk."
+    },
+    {
+      "url": "/konvertering/leadoppfolging/",
+      "title": "Leadoppfølging og automasjon",
+      "decision_number": 10,
+      "status": "approved_not_implemented",
+      "priority": "P2",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "no_exact_keyword_anchor",
+      "primary_keyword": null,
+      "other_exact_keywords": [],
+      "anchor_candidates": [
+        "leadoppfølging",
+        "lead generering"
+      ],
+      "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
+      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk."
+    },
+    {
+      "url": "/seo/teknisk-seo/",
+      "title": "Teknisk SEO og SEO-analyse",
+      "decision_number": 11,
+      "status": "approved_not_implemented",
+      "priority": "P0",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "teknisk seo",
+        "monthly_searches_reported": 320,
+        "organic_kd": 15.5,
+        "kei": 1.188,
+        "google_sheet_row": 54,
+        "source_batch": "2026-10-24-03"
+      },
+      "other_exact_keywords": [
+        {
+          "term": "teknisk søkemotoroptimalisering",
+          "monthly_searches_reported": 260,
+          "organic_kd": 17.7,
+          "sheet_row": 53
+        },
+        {
+          "term": "teknisk seo analyse",
+          "monthly_searches_reported": 50,
+          "organic_kd": 13.9,
+          "sheet_row": 41
+        }
+      ],
+      "anchor_candidates": [
+        "teknisk seo",
+        "teknisk søkemotoroptimalisering",
+        "teknisk seo analyse"
+      ],
+      "commercial_rationale": "Nær kjernetilbud eller repeterbar inngangs-/månedsavtale; publiser først etter validering av kapasitet, internlenker og budskap.",
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+    },
+    {
+      "url": "/seo/seo-analyse/",
+      "title": "Teknisk SEO og SEO-analyse",
+      "decision_number": 11,
+      "status": "approved_not_implemented",
+      "priority": "P0",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "seo analyse",
+        "monthly_searches_reported": 210,
+        "organic_kd": 33.5,
+        "kei": 0.693,
+        "google_sheet_row": 91,
+        "source_batch": "2026-10-24-03"
+      },
+      "other_exact_keywords": [
+        {
+          "term": "seo-analyse",
+          "monthly_searches_reported": 210,
+          "organic_kd": 17.8,
+          "sheet_row": 92
+        },
+        {
+          "term": "hva er seo analyse",
+          "monthly_searches_reported": 40,
+          "organic_kd": 21.8,
+          "sheet_row": 341
+        }
+      ],
+      "anchor_candidates": [
+        "seo analyse",
+        "seo-analyse",
+        "hva er seo analyse"
+      ],
+      "commercial_rationale": "Nær kjernetilbud eller repeterbar inngangs-/månedsavtale; publiser først etter validering av kapasitet, internlenker og budskap.",
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+    },
+    {
+      "url": "/seo/innholdsoptimalisering/",
+      "title": "Innholdsoptimalisering og SEO-innhold",
+      "decision_number": 12,
+      "status": "approved_not_implemented",
+      "priority": "P1",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "seo innhold",
+        "monthly_searches_reported": 30,
+        "organic_kd": 25.4,
+        "kei": 0.042,
+        "google_sheet_row": 389,
+        "source_batch": "2026-10-24-05"
+      },
+      "other_exact_keywords": [
+        {
+          "term": "innholdsoptimalisering",
+          "monthly_searches_reported": 10,
+          "organic_kd": 14.6,
+          "sheet_row": 160
+        },
+        {
+          "term": "seo on page",
+          "monthly_searches_reported": 50,
+          "organic_kd": 53.4,
+          "sheet_row": 419
+        }
+      ],
+      "anchor_candidates": [
+        "seo innhold",
+        "innholdsoptimalisering",
+        "seo on page"
+      ],
+      "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+    },
+    {
+      "url": "/lokal-seo/google-maps/",
+      "title": "Google Maps og Google bedriftsprofil",
+      "decision_number": 13,
+      "status": "approved_not_implemented",
+      "priority": "P0",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "google bedriftsprofil",
+        "monthly_searches_reported": 590,
+        "organic_kd": 23,
+        "kei": 1.947,
+        "google_sheet_row": 35,
+        "source_batch": "2026-10-24-08"
+      },
+      "other_exact_keywords": [
+        {
+          "term": "google min bedrift",
+          "monthly_searches_reported": 720,
+          "organic_kd": null,
+          "sheet_row": 4
+        },
+        {
+          "term": "google maps seo",
+          "monthly_searches_reported": 10,
+          "organic_kd": 29.1,
+          "sheet_row": 842
+        },
+        {
+          "term": "google maps bedrift",
+          "monthly_searches_reported": null,
+          "organic_kd": 69.4,
+          "sheet_row": 847
+        }
+      ],
+      "anchor_candidates": [
+        "google bedriftsprofil",
+        "google min bedrift",
+        "google maps seo",
+        "google maps bedrift"
+      ],
+      "commercial_rationale": "Nær kjernetilbud eller repeterbar inngangs-/månedsavtale; publiser først etter validering av kapasitet, internlenker og budskap.",
+      "risk_gate": "Primærterm kan være navigasjons-/informasjonsorientert. Verifiser faktisk SERP før isolert URL-optimalisering."
+    },
+    {
+      "url": "/ai-synlighet/chatgpt/",
+      "title": "AI-synlighet i ChatGPT og Google AI",
+      "decision_number": 14,
+      "status": "approved_not_implemented",
+      "priority": "P1",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "chatgpt seo",
+        "monthly_searches_reported": 10,
+        "organic_kd": 46.6,
+        "kei": 0.003,
+        "google_sheet_row": 775,
+        "source_batch": "2026-10-24-08"
+      },
+      "other_exact_keywords": [
+        {
+          "term": "synlighet i chatgpt",
+          "monthly_searches_reported": null,
+          "organic_kd": 24.6,
+          "sheet_row": 853
+        },
+        {
+          "term": "geo optimalisering",
+          "monthly_searches_reported": null,
+          "organic_kd": 20.6,
+          "sheet_row": 845
+        }
+      ],
+      "anchor_candidates": [
+        "chatgpt seo",
+        "synlighet i chatgpt",
+        "geo optimalisering"
+      ],
+      "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+    },
+    {
+      "url": "/ai-synlighet/google-ai/",
+      "title": "AI-synlighet i ChatGPT og Google AI",
+      "decision_number": 14,
+      "status": "approved_not_implemented",
+      "priority": "P1",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "ai seo",
+        "monthly_searches_reported": 110,
+        "organic_kd": 44,
+        "kei": 0.05,
+        "google_sheet_row": 371,
+        "source_batch": "2026-10-24-08"
+      },
+      "other_exact_keywords": [
+        {
+          "term": "ai søk",
+          "monthly_searches_reported": 260,
+          "organic_kd": 41.1,
+          "sheet_row": 100
+        },
+        {
+          "term": "aio",
+          "monthly_searches_reported": 720,
+          "organic_kd": 39,
+          "sheet_row": 184
+        }
+      ],
+      "anchor_candidates": [
+        "ai seo",
+        "ai søk",
+        "aio"
+      ],
+      "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+    },
+    {
+      "url": "/konvertering/ab-testing/",
+      "title": "A/B-testing og konverteringseksperimenter",
+      "decision_number": 15,
+      "status": "approved_not_implemented",
+      "priority": "P2",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "a/b-testing",
+        "monthly_searches_reported": 210,
+        "organic_kd": 50.7,
+        "kei": 0.446,
+        "google_sheet_row": 125,
+        "source_batch": "2026-10-24-03"
+      },
+      "other_exact_keywords": [],
+      "anchor_candidates": [
+        "a/b-testing",
+        "ab testing"
+      ],
+      "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+    },
+    {
+      "url": "/seo/sokeordsanalyse/",
+      "title": "Søkeordsanalyse og konkurrentanalyse",
+      "decision_number": 16,
+      "status": "approved_not_implemented",
+      "priority": "P1",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "søkeordsanalyse",
+        "monthly_searches_reported": 140,
+        "organic_kd": 14.3,
+        "kei": 0.134,
+        "google_sheet_row": 247,
+        "source_batch": "2026-10-24-03"
+      },
+      "other_exact_keywords": [
+        {
+          "term": "analyse av søkeord",
+          "monthly_searches_reported": 40,
+          "organic_kd": 17.1,
+          "sheet_row": 522
+        },
+        {
+          "term": "søkeordanalyse",
+          "monthly_searches_reported": 30,
+          "organic_kd": 15.7,
+          "sheet_row": 280
+        }
+      ],
+      "anchor_candidates": [
+        "søkeordsanalyse",
+        "analyse av søkeord",
+        "søkeordanalyse"
+      ],
+      "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+    },
+    {
+      "url": "/seo/konkurrentanalyse/",
+      "title": "Søkeordsanalyse og konkurrentanalyse",
+      "decision_number": 16,
+      "status": "approved_not_implemented",
+      "priority": "P1",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "no_exact_keyword_anchor",
+      "primary_keyword": null,
+      "other_exact_keywords": [],
+      "anchor_candidates": [
+        "seo konkurrentanalyse",
+        "konkurrentanalyse seo"
+      ],
+      "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
+      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk."
+    },
+    {
+      "url": "/seo/nettsidestruktur/",
+      "title": "Nettsidestruktur og internlenking",
+      "decision_number": 17,
+      "status": "approved_not_implemented",
+      "priority": "P1",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "seo strategi",
+        "monthly_searches_reported": 260,
+        "organic_kd": 26.5,
+        "kei": 0.702,
+        "google_sheet_row": 88,
+        "source_batch": "2026-10-24-03"
+      },
+      "other_exact_keywords": [
+        {
+          "term": "seo-strategi",
+          "monthly_searches_reported": 260,
+          "organic_kd": 24.9,
+          "sheet_row": 89
+        }
+      ],
+      "anchor_candidates": [
+        "seo strategi",
+        "seo-strategi",
+        "nettsidestruktur"
+      ],
+      "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+    },
+    {
+      "url": "/seo/lenkebygging/",
+      "title": "Lenkebygging og digital PR",
+      "decision_number": 18,
+      "status": "approved_not_implemented",
+      "priority": "P1",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "no_exact_keyword_anchor",
+      "primary_keyword": null,
+      "other_exact_keywords": [],
+      "anchor_candidates": [
+        "lenkebygging",
+        "backlink"
+      ],
+      "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
+      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk."
+    },
+    {
+      "url": "/seo/seo-migrering/",
+      "title": "SEO ved redesign og migrering",
+      "decision_number": 19,
+      "status": "approved_not_implemented",
+      "priority": "P1",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "nettbutikk migrering",
+        "monthly_searches_reported": 10,
+        "organic_kd": null,
+        "kei": null,
+        "google_sheet_row": 838,
+        "source_batch": "2026-10-24-07"
+      },
+      "other_exact_keywords": [],
+      "anchor_candidates": [
+        "seo migrering",
+        "nettbutikk migrering"
+      ],
+      "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+    },
+    {
+      "url": "/nettbutikkoptimalisering/sok-og-filtrering/",
+      "title": "Produktsøk og filtrering",
+      "decision_number": 20,
+      "status": "approved_not_implemented",
+      "priority": "P2",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "nettbutikk funksjoner",
+        "monthly_searches_reported": 30,
+        "organic_kd": 25.6,
+        "kei": 0.009,
+        "google_sheet_row": 571,
+        "source_batch": "2026-10-24-05"
+      },
+      "other_exact_keywords": [],
+      "anchor_candidates": [
+        "nettside søk",
+        "nettbutikk funksjoner"
+      ],
+      "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+    },
+    {
+      "url": "/epostmarkedsforing/",
+      "title": "E-postmarkedsføring og automatiserte kundeflyter",
+      "decision_number": 21,
+      "status": "approved_not_implemented",
+      "priority": "P1",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "nyhetsbrev",
+        "monthly_searches_reported": 720,
+        "organic_kd": 33.8,
+        "kei": 0.428,
+        "google_sheet_row": 130,
+        "source_batch": "2026-10-24-01"
+      },
+      "other_exact_keywords": [],
+      "anchor_candidates": [
+        "nyhetsbrev",
+        "e-postmarkedsføring",
+        "epostmarkedsføring"
+      ],
+      "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
+      "risk_gate": "Primærterm kan være navigasjons-/informasjonsorientert. Verifiser faktisk SERP før isolert URL-optimalisering."
+    },
+    {
+      "url": "/landingssider/google-ads/",
+      "title": "Google Ads-landingssider",
+      "decision_number": 22,
+      "status": "approved_not_implemented",
+      "priority": "P2",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "only_missing_volume",
+      "primary_keyword": {
+        "term": "landingsside optimalisering",
+        "monthly_searches_reported": null,
+        "organic_kd": 38.6,
+        "kei": null,
+        "google_sheet_row": 850,
+        "source_batch": "2026-10-24-08"
+      },
+      "other_exact_keywords": [],
+      "anchor_candidates": [
+        "landingsside optimalisering",
+        "google ads landingsside"
+      ],
+      "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+    },
+    {
+      "url": "/konvertering/mobiloptimalisering/",
+      "title": "Mobiloptimalisering",
+      "decision_number": 23,
+      "status": "approved_not_implemented",
+      "priority": "P2",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "no_exact_keyword_anchor",
+      "primary_keyword": null,
+      "other_exact_keywords": [],
+      "anchor_candidates": [
+        "mobiloptimalisering",
+        "mobilvennlig nettside"
+      ],
+      "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
+      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk."
+    },
+    {
+      "url": "/konvertering/prissider/",
+      "title": "Pris- og pakkepresentasjon",
+      "decision_number": 24,
+      "status": "approved_not_implemented",
+      "priority": "P1",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "nettside pris",
+        "monthly_searches_reported": 260,
+        "organic_kd": 19.1,
+        "kei": 0.188,
+        "google_sheet_row": 199,
+        "source_batch": "2026-10-24-03"
+      },
+      "other_exact_keywords": [],
+      "anchor_candidates": [
+        "nettside pris",
+        "nettside prisliste"
+      ],
+      "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+    },
+    {
+      "url": "/konvertering/brukertesting/",
+      "title": "UX-analyse og brukertesting",
+      "decision_number": 25,
+      "status": "approved_not_implemented",
+      "priority": "P1",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "brukervennlighet",
+        "monthly_searches_reported": 90,
+        "organic_kd": null,
+        "kei": 0.027,
+        "google_sheet_row": 445,
+        "source_batch": "2026-10-24-04"
+      },
+      "other_exact_keywords": [
+        {
+          "term": "brukervennlighet webdesign",
+          "monthly_searches_reported": 10,
+          "organic_kd": 16.8,
+          "sheet_row": 792
+        },
+        {
+          "term": "kundereiser",
+          "monthly_searches_reported": 110,
+          "organic_kd": 33.2,
+          "sheet_row": 78
+        }
+      ],
+      "anchor_candidates": [
+        "brukervennlighet",
+        "brukervennlighet webdesign",
+        "kundereiser"
+      ],
+      "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+    },
+    {
+      "url": "/universell-utforming/",
+      "title": "Universell utforming og tilgjengelighet",
+      "decision_number": 26,
+      "status": "approved_not_implemented",
+      "priority": "P1",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "universell utforming nettside",
+        "monthly_searches_reported": 140,
+        "organic_kd": 31.7,
+        "kei": 0.32,
+        "google_sheet_row": 150,
+        "source_batch": "2026-10-24-03"
+      },
+      "other_exact_keywords": [],
+      "anchor_candidates": [
+        "universell utforming nettside",
+        "universell utforming web"
+      ],
+      "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+    },
+    {
+      "url": "/lokal-seo/lokale-landingssider/",
+      "title": "Lokale landingssider og geografisk SEO",
+      "decision_number": 27,
+      "status": "approved_not_implemented",
+      "priority": "P2",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "seo oslo",
+        "monthly_searches_reported": 590,
+        "organic_kd": null,
+        "kei": 2.921,
+        "google_sheet_row": 22,
+        "source_batch": "2026-10-24-01"
+      },
+      "other_exact_keywords": [
+        {
+          "term": "lokal seo",
+          "monthly_searches_reported": 70,
+          "organic_kd": 21,
+          "sheet_row": 212
+        },
+        {
+          "term": "lokal søkemotoroptimalisering",
+          "monthly_searches_reported": 50,
+          "organic_kd": 14.8,
+          "sheet_row": 200
+        }
+      ],
+      "anchor_candidates": [
+        "seo oslo",
+        "lokal seo",
+        "lokal søkemotoroptimalisering"
+      ],
+      "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+    },
+    {
+      "url": "/lokal-seo/flere-lokasjoner/",
+      "title": "Lokal SEO for flere lokasjoner",
+      "decision_number": 28,
+      "status": "approved_not_implemented",
+      "priority": "P2",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "google bedriftsprofil",
+        "monthly_searches_reported": 590,
+        "organic_kd": 23,
+        "kei": 1.947,
+        "google_sheet_row": 35,
+        "source_batch": "2026-10-24-08"
+      },
+      "other_exact_keywords": [],
+      "anchor_candidates": [
+        "google bedriftsprofil",
+        "flere lokasjoner seo"
+      ],
+      "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
+      "risk_gate": "Primærterm kan være navigasjons-/informasjonsorientert. Verifiser faktisk SERP før isolert URL-optimalisering."
+    },
+    {
+      "url": "/google-ads/kontoanalyse/",
+      "title": "Google Ads-kontoanalyse",
+      "decision_number": 29,
+      "status": "approved_not_implemented",
+      "priority": "P0",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "google ads byrå",
+        "monthly_searches_reported": 90,
+        "organic_kd": 17.8,
+        "kei": 0.382,
+        "google_sheet_row": 140,
+        "source_batch": "2026-10-24-04"
+      },
+      "other_exact_keywords": [
+        {
+          "term": "google ads tjenester",
+          "monthly_searches_reported": 10,
+          "organic_kd": null,
+          "sheet_row": 629
+        }
+      ],
+      "anchor_candidates": [
+        "google ads analyse",
+        "google ads byrå",
+        "google ads tjenester"
+      ],
+      "commercial_rationale": "Nær kjernetilbud eller repeterbar inngangs-/månedsavtale; publiser først etter validering av kapasitet, internlenker og budskap.",
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+    },
+    {
+      "url": "/meta-ads/kontoanalyse/",
+      "title": "Meta Ads-analyse og kontorevisjon",
+      "decision_number": 30,
+      "status": "approved_not_implemented",
+      "priority": "P1",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "facebook annonsering pris",
+        "monthly_searches_reported": 40,
+        "organic_kd": 28.9,
+        "kei": 0.028,
+        "google_sheet_row": 439,
+        "source_batch": "2026-10-24-05"
+      },
+      "other_exact_keywords": [
+        {
+          "term": "facebook annonsering",
+          "monthly_searches_reported": 390,
+          "organic_kd": 35.2,
+          "sheet_row": 129
+        }
+      ],
+      "anchor_candidates": [
+        "facebook annonsering pris",
+        "facebook annonsering"
+      ],
+      "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+    },
+    {
+      "url": "/google-shopping/merchant-center/",
+      "title": "Google Merchant Center og produktfeed",
+      "decision_number": 31,
+      "status": "approved_not_implemented",
+      "priority": "P2",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "no_exact_keyword_anchor",
+      "primary_keyword": null,
+      "other_exact_keywords": [],
+      "anchor_candidates": [
+        "google merchant center",
+        "merchant center",
+        "produktfiler"
+      ],
+      "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
+      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk."
+    },
+    {
+      "url": "/google-ads/konverteringssporing/",
+      "title": "Google Ads-konverteringssporing",
+      "decision_number": 32,
+      "status": "approved_not_implemented",
+      "priority": "P1",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "no_exact_keyword_anchor",
+      "primary_keyword": null,
+      "other_exact_keywords": [],
+      "anchor_candidates": [
+        "google ads konverteringssporing",
+        "konverteringssporing google ads"
+      ],
+      "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
+      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk."
+    },
+    {
+      "url": "/meta-ads/konverteringssporing/",
+      "title": "Meta-konverteringssporing",
+      "decision_number": 33,
+      "status": "approved_not_implemented",
+      "priority": "P1",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "no_exact_keyword_anchor",
+      "primary_keyword": null,
+      "other_exact_keywords": [],
+      "anchor_candidates": [
+        "facebook pixel",
+        "meta conversions api"
+      ],
+      "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
+      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk."
+    },
+    {
+      "url": "/nettbutikkoptimalisering/gjenkjop/",
+      "title": "Kundelojalitet og gjenkjøp",
+      "decision_number": 35,
+      "status": "approved_not_implemented",
+      "priority": "P1",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "konverteringsoptimalisering nettbutikk",
+        "monthly_searches_reported": 10,
+        "organic_kd": 19.5,
+        "kei": 0.042,
+        "google_sheet_row": 402,
+        "source_batch": "2026-10-24-07"
+      },
+      "other_exact_keywords": [],
+      "anchor_candidates": [
+        "gjenkjøp nettbutikk",
+        "konverteringsoptimalisering nettbutikk"
+      ],
+      "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+    },
+    {
+      "url": "/nettbutikkoptimalisering/shopify/",
+      "title": "Shopify-optimalisering",
+      "decision_number": 36,
+      "status": "approved_not_implemented",
+      "priority": "P1",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "shopify nettbutikk",
+        "monthly_searches_reported": 90,
+        "organic_kd": 27.5,
+        "kei": 0.045,
+        "google_sheet_row": 382,
+        "source_batch": "2026-10-24-04"
+      },
+      "other_exact_keywords": [],
+      "anchor_candidates": [
+        "shopify nettbutikk",
+        "shopify optimalisering"
+      ],
+      "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
+      "risk_gate": "Primærterm kan være navigasjons-/informasjonsorientert. Verifiser faktisk SERP før isolert URL-optimalisering."
+    },
+    {
+      "url": "/nettbutikkoptimalisering/woocommerce/",
+      "title": "WooCommerce-optimalisering",
+      "decision_number": 37,
+      "status": "approved_not_implemented",
+      "priority": "P1",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "woocommerce webshop",
+        "monthly_searches_reported": 30,
+        "organic_kd": 48.9,
+        "kei": null,
+        "google_sheet_row": 778,
+        "source_batch": "2026-10-24-05"
+      },
+      "other_exact_keywords": [],
+      "anchor_candidates": [
+        "woocommerce webshop",
+        "woocommerce optimalisering"
+      ],
+      "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+    },
+    {
+      "url": "/wordpress-optimalisering/",
+      "title": "WordPress-optimalisering",
+      "decision_number": 38,
+      "status": "approved_not_implemented",
+      "priority": "P1",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "wordpress seo",
+        "monthly_searches_reported": 70,
+        "organic_kd": null,
+        "kei": 0.208,
+        "google_sheet_row": 187,
+        "source_batch": "2026-10-24-04"
+      },
+      "other_exact_keywords": [
+        {
+          "term": "wordpress nettside",
+          "monthly_searches_reported": 210,
+          "organic_kd": 32.4,
+          "sheet_row": 183
+        },
+        {
+          "term": "wordpress drift",
+          "monthly_searches_reported": 40,
+          "organic_kd": 13.9,
+          "sheet_row": 328
+        }
+      ],
+      "anchor_candidates": [
+        "wordpress seo",
+        "wordpress nettside",
+        "wordpress drift"
+      ],
+      "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+    },
+    {
+      "url": "/nettsidemigrering/",
+      "title": "Nettsidemigrering og plattformbytte",
+      "decision_number": 39,
+      "status": "approved_not_implemented",
+      "priority": "P2",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "nettbutikk migrering",
+        "monthly_searches_reported": 10,
+        "organic_kd": null,
+        "kei": null,
+        "google_sheet_row": 838,
+        "source_batch": "2026-10-24-07"
+      },
+      "other_exact_keywords": [],
+      "anchor_candidates": [
+        "nettbutikk migrering",
+        "nettside migrering"
+      ],
+      "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+    },
+    {
+      "url": "/nettsidevedlikehold/",
+      "title": "Nettsidevedlikehold og teknisk drift",
+      "decision_number": 40,
+      "status": "approved_not_implemented",
+      "priority": "P0",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "drift av nettside",
+        "monthly_searches_reported": 50,
+        "organic_kd": 12.9,
+        "kei": 0.099,
+        "google_sheet_row": 293,
+        "source_batch": "2026-10-24-04"
+      },
+      "other_exact_keywords": [
+        {
+          "term": "wordpress drift",
+          "monthly_searches_reported": 40,
+          "organic_kd": 13.9,
+          "sheet_row": 328
+        }
+      ],
+      "anchor_candidates": [
+        "drift av nettside",
+        "wordpress drift",
+        "vedlikehold nettside"
+      ],
+      "commercial_rationale": "Nær kjernetilbud eller repeterbar inngangs-/månedsavtale; publiser først etter validering av kapasitet, internlenker og budskap.",
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+    },
+    {
+      "url": "/funksjonsovervakning/",
+      "title": "Overvåkning av nettsidens kritiske funksjoner",
+      "decision_number": 41,
+      "status": "approved_not_implemented",
+      "priority": "P2",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "no_exact_keyword_anchor",
+      "primary_keyword": null,
+      "other_exact_keywords": [],
+      "anchor_candidates": [
+        "overvåkning nettside",
+        "nettside overvåkning"
+      ],
+      "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
+      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk."
+    },
+    {
+      "url": "/nettsideanalyse/",
+      "title": "Nettsideanalyse og forbedringsplan",
+      "decision_number": 42,
+      "status": "approved_not_implemented",
+      "priority": "P0",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "nettside sjekk",
+        "monthly_searches_reported": 90,
+        "organic_kd": null,
+        "kei": 0.107,
+        "google_sheet_row": 284,
+        "source_batch": "2026-10-24-04"
+      },
+      "other_exact_keywords": [
+        {
+          "term": "webanalyse",
+          "monthly_searches_reported": 70,
+          "organic_kd": 24,
+          "sheet_row": 218
+        },
+        {
+          "term": "nettside analyse",
+          "monthly_searches_reported": 10,
+          "organic_kd": 18.5,
+          "sheet_row": 584
+        }
+      ],
+      "anchor_candidates": [
+        "nettside sjekk",
+        "webanalyse",
+        "nettside analyse"
+      ],
+      "commercial_rationale": "Nær kjernetilbud eller repeterbar inngangs-/månedsavtale; publiser først etter validering av kapasitet, internlenker og budskap.",
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+    },
+    {
+      "url": "/digital-konkurrentanalyse/",
+      "title": "Digital konkurrentanalyse",
+      "decision_number": 43,
+      "status": "approved_not_implemented",
+      "priority": "P2",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "konkurrentanalyse",
+        "monthly_searches_reported": 260,
+        "organic_kd": 19.3,
+        "kei": 3.861,
+        "google_sheet_row": 15,
+        "source_batch": "2026-10-24-03"
+      },
+      "other_exact_keywords": [],
+      "anchor_candidates": [
+        "konkurrentanalyse",
+        "digital konkurrentanalyse"
+      ],
+      "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+    },
+    {
+      "url": "/ai-chatbot/",
+      "title": "AI-chatbot og digital kundedialog",
+      "decision_number": 46,
+      "status": "approved_not_implemented",
+      "priority": "P2",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "ai chat norsk",
+        "monthly_searches_reported": 170,
+        "organic_kd": null,
+        "kei": 0.133,
+        "google_sheet_row": 250,
+        "source_batch": "2026-10-24-03"
+      },
+      "other_exact_keywords": [],
+      "anchor_candidates": [
+        "ai chat norsk",
+        "ai chatbot",
+        "chatbot nettside"
+      ],
+      "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+    },
+    {
+      "url": "/kundeanmeldelser/",
+      "title": "Kundeanmeldelser og omdømmeoptimalisering",
+      "decision_number": 47,
+      "status": "approved_blocked_by_product_build_low_publication_priority",
+      "priority": "P2",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "no_exact_keyword_anchor",
+      "primary_keyword": null,
+      "other_exact_keywords": [],
+      "anchor_candidates": [
+        "google anmeldelser",
+        "kundeanmeldelser"
+      ],
+      "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
+      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk."
+    },
+    {
+      "url": "/remarketing/",
+      "title": "Remarketing og retargeting",
+      "decision_number": 49,
+      "status": "approved_not_implemented",
+      "priority": "P2",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "retargeting annonsering",
+        "monthly_searches_reported": 20,
+        "organic_kd": 17.3,
+        "kei": 0.149,
+        "google_sheet_row": 231,
+        "source_batch": "2026-10-24-06"
+      },
+      "other_exact_keywords": [],
+      "anchor_candidates": [
+        "retargeting annonsering",
+        "remarketing"
+      ],
+      "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+    },
+    {
+      "url": "/google-ads/performance-max/",
+      "title": "Google Ads Performance Max-optimalisering",
+      "decision_number": 50,
+      "status": "approved_not_implemented",
+      "priority": "P2",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "no_exact_keyword_anchor",
+      "primary_keyword": null,
+      "other_exact_keywords": [],
+      "anchor_candidates": [
+        "performance max",
+        "pmax"
+      ],
+      "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
+      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk."
+    },
+    {
+      "url": "/youtube-annonsering/",
+      "title": "YouTube-annonsering og videokampanjer",
+      "decision_number": 51,
+      "status": "approved_not_implemented",
+      "priority": "P2",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "youtube annonsering",
+        "monthly_searches_reported": 50,
+        "organic_kd": 30.1,
+        "kei": 0.124,
+        "google_sheet_row": 259,
+        "source_batch": "2026-10-24-05"
+      },
+      "other_exact_keywords": [
+        {
+          "term": "annonsering youtube",
+          "monthly_searches_reported": 50,
+          "organic_kd": 34.6,
+          "sheet_row": 258
+        }
+      ],
+      "anchor_candidates": [
+        "youtube annonsering",
+        "annonsering youtube"
+      ],
+      "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+    },
+    {
+      "url": "/linkedin-annonsering/",
+      "title": "LinkedIn-annonsering for B2B",
+      "decision_number": 52,
+      "status": "approved_not_implemented",
+      "priority": "P2",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "linkedin annonsering",
+        "monthly_searches_reported": 90,
+        "organic_kd": 33.2,
+        "kei": 0.157,
+        "google_sheet_row": 219,
+        "source_batch": "2026-10-24-04"
+      },
+      "other_exact_keywords": [
+        {
+          "term": "linked in annonsering",
+          "monthly_searches_reported": 90,
+          "organic_kd": 33.2,
+          "sheet_row": 220
+        }
+      ],
+      "anchor_candidates": [
+        "linkedin annonsering",
+        "linked in annonsering"
+      ],
+      "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+    },
+    {
+      "url": "/sporing-og-maling/samtykkestyring/",
+      "title": "Samtykkestyring, cookie-banner og Google Consent Mode",
+      "decision_number": 56,
+      "status": "approved_not_implemented",
+      "priority": "P1",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "gdpr nettside",
+        "monthly_searches_reported": 30,
+        "organic_kd": 17.5,
+        "kei": 0.178,
+        "google_sheet_row": 206,
+        "source_batch": "2026-10-24-05"
+      },
+      "other_exact_keywords": [
+        {
+          "term": "gdpr nettsider",
+          "monthly_searches_reported": 20,
+          "organic_kd": 29,
+          "sheet_row": 296
+        },
+        {
+          "term": "cookies gdpr",
+          "monthly_searches_reported": 10,
+          "organic_kd": null,
+          "sheet_row": 624
+        }
+      ],
+      "anchor_candidates": [
+        "gdpr nettside",
+        "gdpr nettsider",
+        "cookies gdpr"
+      ],
+      "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+    },
+    {
+      "url": "/sporing-og-maling/leadsporing/",
+      "title": "Leadsporing og salgsattribusjon med LeadProof",
+      "decision_number": 57,
+      "status": "approved_not_implemented",
+      "priority": "P0",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "no_exact_keyword_anchor",
+      "primary_keyword": null,
+      "other_exact_keywords": [],
+      "anchor_candidates": [
+        "leadsporing",
+        "lead generering",
+        "lead tracking"
+      ],
+      "commercial_rationale": "Nær kjernetilbud eller repeterbar inngangs-/månedsavtale; publiser først etter validering av kapasitet, internlenker og budskap.",
+      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk."
+    },
+    {
+      "url": "/nettsidesikkerhet/",
+      "title": "Nettsidesikkerhet og sårbarhetskontroll",
+      "decision_number": 59,
+      "status": "approved_not_implemented",
+      "priority": "P1",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "trygg nettside",
+        "monthly_searches_reported": 140,
+        "organic_kd": 35,
+        "kei": 2.079,
+        "google_sheet_row": 31,
+        "source_batch": "2026-10-24-03"
+      },
+      "other_exact_keywords": [
+        {
+          "term": "gdpr nettside",
+          "monthly_searches_reported": 30,
+          "organic_kd": 17.5,
+          "sheet_row": 206
+        }
+      ],
+      "anchor_candidates": [
+        "trygg nettside",
+        "nettside sikkerhet",
+        "gdpr nettside"
+      ],
+      "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+    },
+    {
+      "url": "/crm-integrasjoner/",
+      "title": "CRM-integrasjoner og automatisert leadflyt",
+      "decision_number": 62,
+      "status": "approved_not_implemented",
+      "priority": "P1",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "integrasjoner nettside",
+        "monthly_searches_reported": 10,
+        "organic_kd": null,
+        "kei": 0.003,
+        "google_sheet_row": 758,
+        "source_batch": "2026-10-24-07"
+      },
+      "other_exact_keywords": [],
+      "anchor_candidates": [
+        "integrasjoner nettside",
+        "crm integrasjoner"
+      ],
+      "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+    },
+    {
+      "url": "/arbeidsflytautomatisering/",
+      "title": "Arbeidsflytautomatisering og systemintegrasjoner",
+      "decision_number": 63,
+      "status": "approved_not_implemented",
+      "priority": "P2",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "no_exact_keyword_anchor",
+      "primary_keyword": null,
+      "other_exact_keywords": [],
+      "anchor_candidates": [
+        "automatisering nettside",
+        "arbeidsflyt automatisering"
+      ],
+      "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
+      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk."
+    },
+    {
+      "url": "/nettbutikkoptimalisering/integrasjoner/",
+      "title": "Nettbutikk-integrasjoner for lager, ordre og frakt",
+      "decision_number": 64,
+      "status": "approved_not_implemented",
+      "priority": "P2",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "integrasjoner nettside",
+        "monthly_searches_reported": 10,
+        "organic_kd": null,
+        "kei": 0.003,
+        "google_sheet_row": 758,
+        "source_batch": "2026-10-24-07"
+      },
+      "other_exact_keywords": [],
+      "anchor_candidates": [
+        "integrasjoner nettside",
+        "nettbutikk integrasjon"
+      ],
+      "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+    },
+    {
+      "url": "/nettbutikkoptimalisering/b2b-nettbutikk/",
+      "title": "B2B-nettbutikk og forhandlerportal",
+      "decision_number": 65,
+      "status": "approved_not_implemented",
+      "priority": "P1",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "available_anchor",
+      "primary_keyword": {
+        "term": "b2b markedsføring",
+        "monthly_searches_reported": 70,
+        "organic_kd": 24.7,
+        "kei": 0.063,
+        "google_sheet_row": 339,
+        "source_batch": "2026-10-24-04"
+      },
+      "other_exact_keywords": [],
+      "anchor_candidates": [
+        "b2b nettbutikk",
+        "b2b markedsføring"
+      ],
+      "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+    },
+    {
+      "url": "/nettbutikkoptimalisering/abonnement/",
+      "title": "Abonnementsløsninger og faste leveranser i nettbutikk",
+      "decision_number": 66,
+      "status": "approved_not_implemented",
+      "priority": "P2",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "no_exact_keyword_anchor",
+      "primary_keyword": null,
+      "other_exact_keywords": [],
+      "anchor_candidates": [
+        "abonnement nettbutikk",
+        "netthandel abonnement"
+      ],
+      "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
+      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk."
+    },
+    {
+      "url": "/konvertering/priskalkulator/",
+      "title": "Priskalkulatorer og interaktive tilbudsverktøy",
+      "decision_number": 71,
+      "status": "approved_not_implemented",
+      "priority": "P2",
+      "publication_status": "not_approved_for_publication",
+      "source_evidence_status": "no_exact_keyword_anchor",
+      "primary_keyword": null,
+      "other_exact_keywords": [],
+      "anchor_candidates": [
+        "priskalkulator",
+        "priskalkulator nettside"
+      ],
+      "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
+      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk."
+    }
+  ]
+}
