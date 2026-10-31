@@ -3275,6 +3275,50 @@ content:
                         options:
                           min: 0
                           max: 100
+              - name: displayOverrides
+                label: Overstyr visning per case (valgfritt)
+                description: "Tomt felt bruker verdien fra evidensregisteret. Dette gjelder alle plasseringer av Kunderesultater på denne nettsiden. Navn kan f.eks. være nysta.no. Ved endring av måltall eller periode må du oppgi kilde. Originale case-data endres aldri."
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{caseId}"
+                fields:
+                  - name: caseId
+                    label: Case
+                    type: reference
+                    required: true
+                    options:
+                      collection: proofCases
+                      value: "{fields.id}"
+                      label: "{fields.clientName}"
+                      search: id,clientName
+                  - name: displayName
+                    label: Vist kundenavn
+                    description: "For eksempel Nysta eller nysta.no. La stå tomt for godkjent navn."
+                    type: string
+                  - name: dominantMetric
+                    label: Vist målebeskrivelse
+                    type: string
+                  - name: before
+                    label: Vist før-verdi
+                    type: string
+                  - name: after
+                    label: Vist etter-verdi
+                    type: string
+                  - name: delta
+                    label: Vist endring / støtteverdi
+                    type: string
+                  - name: periodBefore
+                    label: Vist før-periode
+                    type: string
+                  - name: periodAfter
+                    label: Vist etter-periode
+                    type: string
+                  - name: sourceNote
+                    label: Kilde for endrede måltall (intern)
+                    description: "Kort referanse til dokumenterte tall, for eksempel Shopify-rapport og periode. Kreves ved endring av målebeskrivelse, tall eller perioder. Vises ikke offentlig."
+                    type: text
               - name: publicationApproved
                 label: Godkjenn visning av allerede publiserbare case
                 description: Slå bare på etter dokumentert godkjenning. Dette overstyrer aldri case-status, tillatelse eller manglende evidens.

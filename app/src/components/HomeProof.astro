@@ -1,18 +1,18 @@
 ---
 import type { HomepageContent } from '../lib/home-section-data';
 import { getPublishableCases } from '../lib/proof';
-import { resolveFeaturedProofVisual,resolveProofCaseVisual,proofLayoutSchema } from '../lib/proof-presentation';
+import { resolveFeaturedProofVisual,resolveProofCaseVisual,proofLayoutSchema,applyProofDisplayOverride } from '../lib/proof-presentation';
 import TermText from './TermText.astro';
 import ListingVisual from './ListingVisual.astro';
 interface Props {
-  content: Omit<HomepageContent['proof'],'layout'> & {layout?:HomepageContent['proof']['layout']};
+  content: Omit<HomepageContent['proof'],'layout'|'displayOverrides'> & {layout?:HomepageContent['proof']['layout'];displayOverrides?:HomepageContent['proof']['displayOverrides']};
   records: unknown[];
   primary?: boolean;
 }
 const { content, records, primary = false } = Astro.props;
-const cases = getPublishableCases(content, records);
+const publishedIds=[...new Set(content.caseIds)].filter(id=>getPublishableCases({...content,caseIds:[id]},records).length>0);
+const cases=getPublishableCases(content,records).map((proof,index)=>applyProofDisplayOverride(proof,publishedIds[index],content.displayOverrides,records));
 const layout=proofLayoutSchema.parse(content.layout);
-const publishedIds=content.caseIds.filter(id=>getPublishableCases({...content,caseIds:[id]},records).length>0);
 const visuals=primary?[]:publishedIds.map(id=>resolveProofCaseVisual(id,content,content,records));
 const visual = primary ? undefined : resolveFeaturedProofVisual(content.featuredVisual, content, records);
 ---

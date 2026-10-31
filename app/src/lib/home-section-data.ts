@@ -1,5 +1,5 @@
 import { z } from 'astro/zod';
-import { featuredProofVisualFieldSchema,proofLayoutSchema,proofCaseVisualsSchema } from './proof-presentation.ts';
+import { featuredProofVisualFieldSchema,proofLayoutSchema,proofCaseVisualsSchema,proofDisplayOverridesSchema } from './proof-presentation.ts';
 import {navigationLinkSchema} from './navigation.ts';
 import {chromeThemeSchema} from './site-chrome-theme.ts';
 import {typographySchema} from './site-chrome-typography.ts';
@@ -50,7 +50,7 @@ export const homeSectionDataSchema = z.object({
     });
   }),
   // Section approval never substitutes for a case's independent publication guard.
-  proof: proofSlotSchema.extend({ featuredVisual: featuredProofVisualFieldSchema.optional(),layout:proofLayoutSchema,caseVisuals:proofCaseVisualsSchema.optional() }),
+  proof: proofSlotSchema.extend({ featuredVisual: featuredProofVisualFieldSchema.optional(),layout:proofLayoutSchema,caseVisuals:proofCaseVisualsSchema.optional(),displayOverrides:proofDisplayOverridesSchema }),
   form: z.object({ promise: z.string(), heading: z.string(), websiteLabel: z.string(), websitePlaceholder: z.string(), emailLabel: z.string(), emailPlaceholder: z.string(), messageLabel: z.string(), optional: z.string(), messagePlaceholder: z.string(), sensitiveNotice: z.string(), previewNotice: z.string(), submitLabel: z.string(), privacyText: z.string(), privacyLink: link, disabledStatus: z.string() }),
   faqHeading: z.string(), faqEyebrow: z.string(),
   chrome: z.object({
