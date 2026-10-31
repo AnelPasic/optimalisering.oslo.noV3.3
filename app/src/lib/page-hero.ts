@@ -29,16 +29,18 @@ export function resolvePageHero(authoredPage:Source,commercial?:Commercial):Hero
  const route=resolveRouteFamily(page);
  if(route.family==='home'){
   const hero=heroSchema.parse(page.hero);
-  return heroViewSchema.parse({...hero,family:'home',visual:hero.visual.kind==='image'?{kind:'image',image:{...hero.visual.image,alt:hero.visual.image.alt??'',kind:hero.visual.image.kind??'photo',origin:'home'}}:{kind:'none'}});
+  const {toneOverrides:_editorialTone,...renderHero}=hero;
+  return heroViewSchema.parse({...renderHero,family:'home',visual:hero.visual.kind==='image'?{kind:'image',image:{...hero.visual.image,alt:hero.visual.image.alt??'',kind:hero.visual.image.kind??'photo',origin:'home'}}:{kind:'none'}});
  }
  if(page.hero&&typeof page.hero==='object'&&'primaryCta' in page.hero){
   const hero=synlighetHeroSchema.parse(page.hero);
+  const {toneOverrides:_editorialTone,...renderHero}=hero;
   const media=hero.visual.kind==='image'?resolveServiceVisual(hero.visual.image):undefined;
   const family=route.family;
   const breadcrumbs=family==='pricing'?[]:page.slug==='synlighet'?[{label:'Forsiden',href:'/'},{label:'Synlighet'}]:
     [{label:'Forsiden',href:'/'},...(family==='article'?[{label:'Innsikt',href:'/innsikt/'}]:[]),
       {label:family==='service'?(route.service.pricingBridge?.serviceName??hero.eyebrow):hero.eyebrow}];
-  return heroViewSchema.parse({...hero,family,
+  return heroViewSchema.parse({...renderHero,family,
     primaryCta:family==='assessment'?undefined:hero.primaryCta,
     secondaryCta:hero.secondaryCta??(family==='service'&&route.service.pricingBridge
       ?{label:'Se priser',href:route.service.pricingBridge.link.href}:undefined),
@@ -57,8 +59,9 @@ export const specialHeroSourceSchema=z.object({hero:synlighetHeroSchema}).strict
 /** 404 and glossary use the same authored Hero source/editor as service pages. */
 function resolveSpecialHero(input:unknown,family:'glossary'|'error'):HeroView{
  const hero=synlighetHeroSchema.parse(projectSelectedLinks(input));
+ const {toneOverrides:_editorialTone,...renderHero}=hero;
  const media=hero.visual.kind==='image'?resolveServiceVisual(hero.visual.image):undefined;
- return heroViewSchema.parse({...hero,family,visual:media?{kind:'image',image:{...media,origin:'page'}}:{kind:'none'}});
+ return heroViewSchema.parse({...renderHero,family,visual:media?{kind:'image',image:{...media,origin:'page'}}:{kind:'none'}});
 }
 export function resolveGlossaryHero(content:{hero:unknown}):HeroView{
  return resolveSpecialHero(content.hero,'glossary');

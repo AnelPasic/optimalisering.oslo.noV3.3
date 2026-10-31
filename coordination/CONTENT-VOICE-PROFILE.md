@@ -13,7 +13,7 @@
 - `editorNotes`: additional directions for the next editorial pass; never override factual/SEO/KRO quality rules.
 - Pricing, order forms, proof and legal copy **remain factual and nøkterne**, regardless of a broad `spiss` preference.
 
-**Operational process for ChatGPT/Codex:** before writing, read *fresh* `coordination/CONTENT-TONE.json` alongside this file, resolve effective preset for the target section, and perform the MWS-031 Content Quality Gate. Show the OWNER an example/diff or make the specifically authorized content edit. The setting alone never edits existing content, starts AI generation, alters route rendering or deploys a website. An authenticated CMS save and real preview require their own verification.
+**Operational process for ChatGPT/Codex:** before writing, read *fresh* `coordination/CONTENT-TONE.json` alongside this file, resolve effective preset for the target section, and perform the MWS-031 Content Quality Gate. For Hero copy, check the current page's optional `hero.toneOverrides`: each specified eyebrow, H1, support, primary CTA and secondary CTA preset overrides `heroPreset` individually; `inherit` or omitted fields follow `heroPreset`, then `defaultPreset`. For important H1 edits also use `coordination/H1-LAB.md`. Show the OWNER an example/diff or make the specifically authorized content edit. The setting alone never edits existing content, starts AI generation, alters route rendering or deploys a website. An authenticated CMS save and real preview require their own verification.
 
 ## Fixed priorities (must always pass)
 

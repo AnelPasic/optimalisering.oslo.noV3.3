@@ -76,6 +76,46 @@ settings:
       create: "Nytt innhold: {path} (via Pages CMS)"
       delete: "Slettet innhold: {path} (via Pages CMS)"
 components:
+  heroPartToneChoice:
+    type: select
+    options:
+      values:
+      - name: inherit
+        label: Følg Hero-tonen for nettstedet
+      - name: noktern
+        label: Nøktern
+      - name: medon
+        label: Medon
+      - name: spiss
+        label: Spiss
+      - name: spissplus
+        label: Spiss+ (nivå 4)
+      - name: spisspluskomisk
+        label: Spiss+ komisk (nivå 5)
+      - name: spisspluskomiskplus
+        label: Spiss+ komisk+ (nivå 6)
+
+  heroToneOverrides:
+    type: object
+    description: Valgfri overstyring per Hero-tekstfelt. Velg Følg Hero-tonen for nettstedet for å bruke nettsidens Hero-innstilling, deretter normal tone. Endrer ikke lagret tekst automatisk.
+    fields:
+      - name: eyebrowPreset
+        label: Overtekst - tone
+        component: heroPartToneChoice
+      - name: titlePreset
+        label: H1 / hovedoverskrift - tone
+        component: heroPartToneChoice
+        description: "H1 Lab: konkret søkeintensjon og kundeverdi før kreativitet."
+      - name: supportPreset
+        label: Ingress / støttetekst - tone
+        component: heroPartToneChoice
+      - name: primaryCtaPreset
+        label: Primær CTA - tone
+        component: heroPartToneChoice
+        description: Kort og handlingsrettet uansett tone.
+      - name: secondaryCtaPreset
+        label: Sekundær CTA - tone
+        component: heroPartToneChoice
   globalMarkdownBody:
     type: rich-text
     list: {}
@@ -937,6 +977,9 @@ content:
             name: secondaryCta
             label: Sekundær handling
             component: link
+          - name: toneOverrides
+            label: Språk og tone for denne Hero
+            component: heroToneOverrides
           - &heroProofCase
             name: featuredProofCaseId
             label: Utvalgt Proof i Hero
@@ -1234,6 +1277,9 @@ content:
               - *hubHerosupport
               - *hubHeroprimaryCta
               - *hubHerosecondaryCta
+              - name: toneOverrides
+                label: Språk og tone for denne Hero
+                component: heroToneOverrides
               - *heroProofCase
               - name: visual
                 label: Visuelt innhold
