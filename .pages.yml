@@ -832,6 +832,10 @@ content:
               label: Spiss - mer observasjonshumor og litt frekkhet
             - name: spissplus
               label: Spiss+ (nivå 4) - skarpere observasjoner og kommersiell brodd
+            - name: spisspluskomisk
+              label: Spiss+ komisk (nivå 5) - faktisk humor med faglig poeng
+            - name: spisspluskomiskplus
+              label: Spiss+ komisk+ (nivå 6) - absurd vri og morsom punchline
       - name: heroPreset
         label: Hero og hovedoverskrifter
         type: select
@@ -849,6 +853,10 @@ content:
               label: Spiss
             - name: spissplus
               label: Spiss+ (nivå 4)
+            - name: spisspluskomisk
+              label: Spiss+ komisk (nivå 5)
+            - name: spisspluskomiskplus
+              label: Spiss+ komisk+ (nivå 6)
       - name: servicePreset
         label: Tjenestekort og salgstekster
         type: select

@@ -9,7 +9,7 @@
     "layout": "centered-none",
     "eyebrow": "Google Maps, Google bedriftsprofil og lokale søk",
     "title": "Bli funnet når kunden leter etter en bedrift i nærheten.",
-    "support": "Når noen søker etter en rørlegger i Ski eller en butikk som er åpen nå, må de raskt få svar på tre spørsmål: Kan dere hjelpe meg, gjelder det her jeg er, og hvordan tar jeg kontakt? Lokal SEO gjør disse svarene tydelige i Google bedriftsprofil og på nettsiden. Det er langt mer nyttig enn å bare putte flere stedsnavn inn i teksten.",
+    "support": "En kunde som søker etter rørlegger i Ski, vil vite om du faktisk kommer til Ski. Den som leter etter en åpen butikk, vil slippe å møte en låst dør. Lokal SEO gjør tjenester, områder, åpningstider og kontakt tydelige i Google bedriftsprofil og på nettsiden. Kunden trenger svar, ikke en samling kommunenavn.",
     "primaryCta": {
       "label": "Ta en gratis sjekk",
       "href": "/#sjekk"
@@ -57,7 +57,7 @@
       "heading": "Nettsiden må svare på det kartet ikke forklarer.",
       "body": [
         "En bedriftsprofil kan vise at dere finnes. Tjenestesiden må forklare hva dere kan hjelpe med, hvem tjenesten passer for, hvilke områder dere dekker og hva kunden bør gjøre videre.",
-        "Skriv om reelle leveringsområder og forskjeller som betyr noe. Lag en egen lokal side når den hjelper kunden med noe en eksisterende side ikke svarer på. Ti nesten like tekster med forskjellige stedsnavn er sjelden ti forskjellige svar.",
+        "Lag en egen lokalside når den svarer på noe kunden ikke finner på de andre sidene. Å kopiere samme tekst og bytte kommunenavn ti ganger er som å photoshoppe firmabilen foran ti rådhus og kalle det ti avdelinger. Kunden i Ski trenger fortsatt å vite om dere faktisk tar oppdrag der.",
         "Opplysninger om bedriften må stemme på tvers av profil, kontaktside og relevante tjenestesider. Strukturerte bedriftsdata kan beskrive eksisterende fakta for søkemotorer, men erstatter ikke synlig informasjon og gir ingen garanti for en bestemt visning."
       ],
       "links": [
