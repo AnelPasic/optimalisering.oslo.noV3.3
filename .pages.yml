@@ -1351,8 +1351,10 @@ content:
             hidden: true
           - &serviceproof
             name: proof
-            label: Dokumenterte resultater - trygg presentasjon
+            label: Dokumenterte resultater - trygg presentasjon (eldre lokaldata)
             type: object
+            hidden: true
+            description: Bevarer eksisterende godkjente lokale proof-data i JSON, men redigeres ikke lenger i tjenesteeditoren. Bruk Global Innhold → Kunderesultater for nye visningsvalg.
             fields: &serviceProofFields
               - name: publicationApproved
                 label: Godkjenn visning av allerede publiserbare case
