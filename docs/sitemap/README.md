@@ -1,14 +1,14 @@
 # Optimalisering Oslo – kanonisk sitemap og innholdsgrunnlag
 
-**Oppdatert:** 31.10.2026 · **Beslutningspunkter:** 64 avklart (52 JA / 2 ANNET med JA / 10 NEI) · **Godkjente tjeneste-URL-er:** 60 · **Neste punkt:** 65 (ikke besluttet)
+**Oppdatert:** 31.10.2026 · **Beslutningspunkter:** 65 avklart (53 JA / 2 ANNET med JA / 10 NEI) · **Godkjente tjeneste-URL-er:** 61 · **Neste punkt:** 66 (ikke besluttet)
 
 Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **Kun optimalisering.oslo.no**, ikke medon.no. Ingen av de foreslåtte sidene er implementert av denne sitemap-arbeidsflyten.
 
-## Gjeldende versjon (64)
+## Gjeldende versjon (65)
 
-- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-64-2026-10-31.md)
-- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-64-2026-10-31.json)
-- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-64-2026-10-31.md)
+- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-65-2026-10-31.md)
+- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-65-2026-10-31.json)
+- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-65-2026-10-31.md)
 - [Innholdsbrief-standard / utarbeidelseskrav](./innholdsbrief-standard.md)
 - [GitHub issues-struktur og oppgavemal – snapshot fra punkt 32](./github-issues-plan-32-2026-10-30.md)
 
@@ -90,6 +90,8 @@ Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **K
 
 **Punkt 64 – JA:** `/nettbutikkoptimalisering/integrasjoner/` godkjent som selvstendig spesialisert underside for lager-, ordre- og fraktdata. Seks forklarte leveranser: (1) kartlegging av netthandelssystemer, (2) SKU-/lager-/produktsynkronisering, (3) ordre- og statusintegrasjon, (4) frakt-/leveringsintegrasjon, (5) logg/feilsikring/datavalidering og (6) ende-til-ende testing med periodisk vedlikehold. Avgrenset mot `/crm-integrasjoner/` (henvendelser/leads), `/arbeidsflytautomatisering/` (brede interne prosesser), Shopify- og WooCommerce-sidene (plattformoptimalisering). **Ingen uverifiserte WMS/ERP/fraktintegrasjoner, feilfri sanntidssynk, garantert null tapte ordrer eller oppdiktede priser.** Senere publiseringsbølge enn kjerneinntekter.
 
-**Punkt 65 – venter:** B2B-nettbutikk og forhandlerportal, mulig `/nettbutikkoptimalisering/b2b-nettbutikk/`. Vurder bedriftskonti, priser, ordre-/tilbudsprosesser og lønnsom leveranse uten å love uverifiserte plattformfunksjoner.
+**Punkt 65 – JA:** `/nettbutikkoptimalisering/b2b-nettbutikk/` godkjent som egen B2B-/forhandlerportal-side. Seks individuelt beskrevne leveranser: (1) kartlegging av B2B-salgsprosess, (2) bedriftskontoer/trygg innlogging, (3) kundespesifikke priser og volumrabatter, (4) tilbud og bestilling, (5) gjenbestilling/større ordre og (6) B2B-testing/optimalisering/vedlikehold. Tydelig skille mot `/nettbutikkoptimalisering/shopify/`, `/nettbutikkoptimalisering/woocommerce/`, `/nettbutikkoptimalisering/integrasjoner/`, `/nettbutikkoptimalisering/kjopsflyt/`, `/nettbutikkoptimalisering/gjenkjop/` og `/crm-integrasjoner/`. **Ingen uverifiserte B2B-funksjoner, ubegrenset spesialutvikling, mva-/betalingsgarantier eller oppdiktede priser.** Middels/senere publiseringsprioritet.
 
-**Historikk:** Versjonerte snapshots 32–63 beholdes uendret. #34, #44, #45, #48, #53, #54, #55, #58, #60 og #61 avviste egne undersider; #46 godkjente AI-chatbot; #47 godkjente kundeanmeldelser som ANNET med JA, med bygg-først-avhengighet og lav prioritet.
+**Punkt 66 – venter:** Abonnementsløsninger og faste leveranser i nettbutikk, mulig `/nettbutikkoptimalisering/abonnement/`. Vurder eget abonnementstilbud mot gjenkjøp, B2B, integrasjoner og generell kjøpsflyt.
+
+**Historikk:** Versjonerte snapshots 32–64 beholdes uendret. #34, #44, #45, #48, #53, #54, #55, #58, #60 og #61 avviste egne undersider; #46 godkjente AI-chatbot; #47 godkjente kundeanmeldelser som ANNET med JA, med bygg-først-avhengighet og lav prioritet.
