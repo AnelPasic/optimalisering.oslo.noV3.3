@@ -5,6 +5,7 @@ import YAML from 'yaml';
 import {pageFilePaths} from './helpers/page-sources.ts';
 import {pageSchema} from '../src/lib/content-schema.ts';
 import {synlighetHeroSchema} from '../src/lib/synlighet-hero.ts';
+import {resolvePageHero} from '../src/lib/page-hero.ts';
 import {heroToneOverridesSchema,heroTonePresetValues} from '../src/lib/hero-tone-overrides.ts';
 import {entryForFile,cmsJsonSave,resolveField} from './helpers/pages-cms-json.ts';
 
@@ -32,6 +33,7 @@ test('all normal page Hero editors expose independent optional tone controls',()
 test('five different /seo Hero tone strategies can be saved independently, preserving original text',()=>{
  const page=JSON.parse(text('src/content/pages/seo.json'));
  const editor=entryForFile(cms,'app/src/content/pages/seo.json');
+ const baselineHeroView=resolvePageHero(page);
  const candidates=[
   {eyebrowPreset:'noktern',titlePreset:'medon',supportPreset:'noktern',primaryCtaPreset:'inherit',secondaryCtaPreset:'inherit'},
   {eyebrowPreset:'noktern',titlePreset:'spiss',supportPreset:'medon',primaryCtaPreset:'inherit',secondaryCtaPreset:'inherit'},
@@ -51,6 +53,7 @@ test('five different /seo Hero tone strategies can be saved independently, prese
   assert.deepEqual(saved.sections,page.sections);
   assert.ok(pageSchema.safeParse(saved).success,'page schema must accept per-part presets');
   assert.ok(synlighetHeroSchema.safeParse(saved.hero).success,'service Hero schema must preserve per-part presets');
+  assert.deepEqual(resolvePageHero(saved),baselineHeroView,'editorial tone must never change rendered Hero');
  }
  assert.equal(page.hero.toneOverrides,undefined,'no published page content or settings changed');
 });
