@@ -1,14 +1,14 @@
 # Optimalisering Oslo – kanonisk sitemap og innholdsgrunnlag
 
-**Oppdatert:** 31.10.2026 · **Beslutningspunkter:** 70 avklart (54 JA / 2 ANNET med JA / 14 NEI) · **Godkjente tjeneste-URL-er:** 62 · **Neste punkt:** 71 (ikke besluttet)
+**Oppdatert:** 31.10.2026 · **Beslutningspunkter:** 71 avklart (55 JA / 2 ANNET med JA / 14 NEI) · **Godkjente tjeneste-URL-er:** 63 · **Neste punkt:** 72 (ikke besluttet)
 
 Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **Kun optimalisering.oslo.no**, ikke medon.no. Ingen av de foreslåtte sidene er implementert av denne sitemap-arbeidsflyten.
 
-## Gjeldende versjon (70)
+## Gjeldende versjon (71)
 
-- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-70-2026-10-31.md)
-- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-70-2026-10-31.json)
-- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-70-2026-10-31.md)
+- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-71-2026-10-31.md)
+- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-71-2026-10-31.json)
+- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-71-2026-10-31.md)
 - [Innholdsbrief-standard / utarbeidelseskrav](./innholdsbrief-standard.md)
 - [GitHub issues-struktur og oppgavemal – snapshot fra punkt 32](./github-issues-plan-32-2026-10-30.md)
 
@@ -102,6 +102,8 @@ Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **K
 
 **Punkt 70 – NEI:** Ingen egen `/sporing-og-maling/telefonsporing/`. Seks individuelt beskrevne tekniske telefonsporingsleveranser videreføres under `/sporing-og-maling/leadsporing/` som **betingede eksterne integrasjonsmuligheter**: analyse av telefonhenvendelser, faktisk samtalesporing, kildenumre, leadkvalifisering, Ads-/CRM-kobling og løpende rapportering. Dette er **ikke** bevis for at LeadProof har ferdig innebygd telefonsporing, samtaleopptak eller kvalifisering. Klikk-for-å-ringe er ikke det samme som en registrert eller besvart samtale. Krev verifiserte leverandører, gyldig behandlingsgrunnlag, nødvendige avtaler og eksplisitte kostnader. 62 godkjente URL-er uendret.
 
-**Punkt 71 – venter:** Priskalkulatorer og interaktive tilbudsverktøy, mulig `/konvertering/priskalkulator/`. Vurder separat kjøpsintensjon opp mot `/konvertering/prissider/`, `/konvertering/henvendelser-og-booking/`, `/konvertering/budskap-og-tilbud/` og `/landingssider/`. JA/NEI/ANNET.
+**Punkt 71 – JA:** `/konvertering/priskalkulator/` er godkjent som egen spesialistunderside under Konvertering, **ikke i hovedmenyen**, med middels publiseringsprioritet. Seks fullt beskrevne leveranser: kartlegging av prismodell, interaktiv prisberegner, produkt-/tjenestekonfigurator, strukturert tilbudsforespørsel, valgfri verifisert CRM-/bestillingsintegrasjon og måling/vedlikehold. Prisreglene skal godkjennes av virksomheten; estimater er ikke bindende tilbud. Skill fra statisk prisside, vanlig booking-/henvendelsesflyt, verdiforslag og landingssider. Selges som avgrenset betalt prosjekt, med mulighet for avgrenset vedlikeholdsavtale; ingen priser låst. 63 godkjente URL-er.
 
-**Historikk:** Versjonerte snapshots 32–69 beholdes uendret. #34, #44, #45, #48, #53, #54, #55, #58, #60 og #61 avviste egne undersider; #46 godkjente AI-chatbot; #47 godkjente kundeanmeldelser som ANNET med JA, med bygg-først-avhengighet og lav prioritet.
+**Punkt 72 – venter:** Interaktive produktvelgere og behovsguider, mulig `/konvertering/behovsguider/`. Må vurderes mot den nå godkjente priskalkulatoren, henvendelser/booking, nettbutikkens produktsider samt produktsøk og filtrering. JA/NEI/ANNET.
+
+**Historikk:** Versjonerte snapshots 32–70 beholdes uendret. #34, #44, #45, #48, #53, #54, #55, #58, #60 og #61 avviste egne undersider; #46 godkjente AI-chatbot; #47 godkjente kundeanmeldelser som ANNET med JA, med bygg-først-avhengighet og lav prioritet.
