@@ -1,14 +1,14 @@
 # Optimalisering Oslo – kanonisk sitemap og innholdsgrunnlag
 
-**Oppdatert:** 31.10.2026 · **Beslutningspunkter:** 62 avklart (50 JA / 2 ANNET med JA / 10 NEI) · **Godkjente tjeneste-URL-er:** 58 · **Neste punkt:** 63 (ikke besluttet)
+**Oppdatert:** 31.10.2026 · **Beslutningspunkter:** 63 avklart (51 JA / 2 ANNET med JA / 10 NEI) · **Godkjente tjeneste-URL-er:** 59 · **Neste punkt:** 64 (ikke besluttet)
 
 Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **Kun optimalisering.oslo.no**, ikke medon.no. Ingen av de foreslåtte sidene er implementert av denne sitemap-arbeidsflyten.
 
-## Gjeldende versjon (62)
+## Gjeldende versjon (63)
 
-- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-62-2026-10-31.md)
-- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-62-2026-10-31.json)
-- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-62-2026-10-31.md)
+- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-63-2026-10-31.md)
+- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-63-2026-10-31.json)
+- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-63-2026-10-31.md)
 - [Innholdsbrief-standard / utarbeidelseskrav](./innholdsbrief-standard.md)
 - [GitHub issues-struktur og oppgavemal – snapshot fra punkt 32](./github-issues-plan-32-2026-10-30.md)
 
@@ -86,6 +86,8 @@ Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **K
 
 **Punkt 62 – JA:** `/crm-integrasjoner/` godkjent som selvstendig teknisk spesialisttjeneste for automatisert leadflyt. Seks utførlige leveranser: (1) system-/leadsprosesskartlegging, (2) kontrollert CRM-API/webhook-integrasjon, (3) automatisk fordeling av henvendelser, (4) varsler og avgrenset oppfølging, (5) datakvalitet/sikkerhet/feilhåndtering, (6) integrasjonstesting og valgfritt løpende vedlikehold. Avgrenset eksplisitt mot `/konvertering/henvendelser-og-booking/`, `/konvertering/leadoppfolging/` og `/sporing-og-maling/leadsporing/` (LeadProof er ikke CRM). **Ingen uverifiserte CRM-integrasjoner, ferdig LeadProof-kobling, ubegrenset automatisering eller garantert null tapte leads.** Priser bestemmes senere.
 
-**Punkt 63 – venter:** Arbeidsflytautomatisering og systemintegrasjoner, mulig `/arbeidsflytautomatisering/`, som må skilles fra CRM-/leadflyt og AI-chatbot.
+**Punkt 63 – JA:** `/arbeidsflytautomatisering/` godkjent som selvstendig spesialisttjeneste. Seks individuelt forklarte leveranser: (1) prosesskartlegging, (2) støttet systemintegrasjon, (3) automatiserte rutineoppgaver, (4) menneskelig godkjenning, (5) feilhåndtering/databeskyttelse og (6) før/etter-måling og valgfritt vedlikehold. Avgrenset mot `/crm-integrasjoner/` (teknisk leadoverføring), `/konvertering/leadoppfolging/` (salgsprosessen) og `/ai-chatbot/` (kundedialog). **Ingen universelle integrasjoner, ubegrensede automatiseringer eller uverifisert AI-agentfunksjonalitet.** Én tydelig avgrenset arbeidsflyt om gangen; ingen priser bestemt.
 
-**Historikk:** Versjonerte snapshots 32–61 beholdes uendret. #34, #44, #45, #48, #53, #54, #55, #58, #60 og #61 avviste egne undersider; #46 godkjente AI-chatbot; #47 godkjente kundeanmeldelser som ANNET med JA, med bygg-først-avhengighet og lav prioritet.
+**Punkt 64 – venter:** Nettbutikk-integrasjoner for lager, ordre og frakt, mulig `/nettbutikkoptimalisering/integrasjoner/`. Vurder egne e-handelsintegrasjoner mot bred arbeidsflytautomatisering, CRM og Shopify/WooCommerce-tilbudene.
+
+**Historikk:** Versjonerte snapshots 32–62 beholdes uendret. #34, #44, #45, #48, #53, #54, #55, #58, #60 og #61 avviste egne undersider; #46 godkjente AI-chatbot; #47 godkjente kundeanmeldelser som ANNET med JA, med bygg-først-avhengighet og lav prioritet.
