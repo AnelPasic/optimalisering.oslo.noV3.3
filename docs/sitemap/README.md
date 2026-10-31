@@ -1,14 +1,14 @@
 # Optimalisering Oslo – kanonisk sitemap og innholdsgrunnlag
 
-**Oppdatert:** 31.10.2026 · **Beslutningspunkter:** 53 avklart (46 JA / 2 ANNET med JA / 5 NEI) · **Godkjente tjeneste-URL-er:** 54 · **Neste punkt:** 54 (ikke besluttet)
+**Oppdatert:** 31.10.2026 · **Beslutningspunkter:** 54 avklart (46 JA / 2 ANNET med JA / 6 NEI) · **Godkjente tjeneste-URL-er:** 54 · **Neste punkt:** 55 (ikke besluttet)
 
 Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **Kun optimalisering.oslo.no**, ikke medon.no. Ingen av de foreslåtte sidene er implementert av denne sitemap-arbeidsflyten.
 
-## Gjeldende versjon (53)
+## Gjeldende versjon (54)
 
-- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-53-2026-10-31.md)
-- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-53-2026-10-31.json)
-- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-53-2026-10-31.md)
+- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-54-2026-10-31.md)
+- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-54-2026-10-31.json)
+- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-54-2026-10-31.md)
 - [Innholdsbrief-standard / utarbeidelseskrav](./innholdsbrief-standard.md)
 - [GitHub issues-struktur og oppgavemal – snapshot fra punkt 32](./github-issues-plan-32-2026-10-30.md)
 
@@ -68,6 +68,8 @@ Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **K
 
 **Punkt 53 – NEI:** Ingen separat `/microsoft-ads/`. Microsoft Advertising/Bing Ads bevares som behovsprøvd kanaltillegg med seks individuelt forklarte leveranser under `/annonseoptimalisering/`, med krysshenvisning fra `/google-ads/`. Dette inkluderer kanal-/søkeanalyse, kontrollert import fra Google Ads, kampanjer/søkeord, UET-konverteringssporing, landingssider og løpende budsjettoptimalisering. Ingen automatisk inkludering, garanti eller ny URL.
 
-**Punkt 54 – venter:** TikTok-annonsering, mulig `/tiktok-annonsering/`. Vurder egen side mot `/meta-ads/` og `/youtube-annonsering/`, særlig behovet for creatives og at vi ikke driver vanlig videoproduksjon.
+**Punkt 54 – NEI:** Ingen separat `/tiktok-annonsering/`. Seks detaljerte leveranser beholdes som behovsprøvd TikTok-kanaltillegg under `/annonseoptimalisering/`: annonse-/målgruppeanalyse, gjennomgang av kundeleverte videoer, Ads Manager-oppsett/drift, Spark Ads/eksisterende innhold, mobil landingsside og konverteringsmåling/optimalisering. **Kunden leverer normalt ferdige videoer/creatives. Videoproduksjon inngår ikke.** Kun helt enkel trimming, formatendring eller teksting kan avtales separat. Ingen ny URL.
 
-**Historikk:** Versjonerte snapshots 32–52 beholdes uendret. #34, #44, #45, #48 og #53 avviste egne undersider; #46 godkjente AI-chatbot; #47 godkjente kundeanmeldelser som ANNET med JA, med bygg-først-avhengighet og lav prioritet.
+**Punkt 55 – venter:** Snapchat-annonsering, mulig `/snapchat-annonsering/`. Vurder egen side versus kanaltillegg, særlig leveransekapasitet og kundeleverte creatives.
+
+**Historikk:** Versjonerte snapshots 32–53 beholdes uendret. #34, #44, #45, #48, #53 og #54 avviste egne undersider; #46 godkjente AI-chatbot; #47 godkjente kundeanmeldelser som ANNET med JA, med bygg-først-avhengighet og lav prioritet.
