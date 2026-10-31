@@ -1,14 +1,14 @@
 # Optimalisering Oslo – kanonisk sitemap og innholdsgrunnlag
 
-**Oppdatert:** 31.10.2026 · **Beslutningspunkter:** 52 avklart (46 JA / 2 ANNET med JA / 4 NEI) · **Godkjente tjeneste-URL-er:** 54 · **Neste punkt:** 53 (ikke besluttet)
+**Oppdatert:** 31.10.2026 · **Beslutningspunkter:** 53 avklart (46 JA / 2 ANNET med JA / 5 NEI) · **Godkjente tjeneste-URL-er:** 54 · **Neste punkt:** 54 (ikke besluttet)
 
 Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **Kun optimalisering.oslo.no**, ikke medon.no. Ingen av de foreslåtte sidene er implementert av denne sitemap-arbeidsflyten.
 
-## Gjeldende versjon (52)
+## Gjeldende versjon (53)
 
-- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-52-2026-10-31.md)
-- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-52-2026-10-31.json)
-- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-52-2026-10-31.md)
+- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-53-2026-10-31.md)
+- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-53-2026-10-31.json)
+- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-53-2026-10-31.md)
 - [Innholdsbrief-standard / utarbeidelseskrav](./innholdsbrief-standard.md)
 - [GitHub issues-struktur og oppgavemal – snapshot fra punkt 32](./github-issues-plan-32-2026-10-30.md)
 
@@ -66,6 +66,8 @@ Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **K
 
 **Punkt 52 – JA:** `/linkedin-annonsering/` er godkjent som spesialisert B2B-annonseside under Annonseoptimalisering, uten egen hovedmenykategori. Seks individuelt beskrevne leveranser: B2B-målgrupper, LinkedIn Campaign Manager, annonser/kreativer, Lead Gen Forms, Insight Tag/CRM og løpende optimalisering med fokus på leadkvalitet. Senere publiseringsbølge enn kjerne-SEO/CRO/Google Ads. Annonsebudsjett og større kreativ-/CRM-produksjon i tillegg. Ingen lovnad om leadpris eller salg.
 
-**Punkt 53 – venter:** Microsoft Advertising (Bing Ads), mulig `/microsoft-ads/`. Vurder egen side versus kanaltillegg innen annonseoptimalisering.
+**Punkt 53 – NEI:** Ingen separat `/microsoft-ads/`. Microsoft Advertising/Bing Ads bevares som behovsprøvd kanaltillegg med seks individuelt forklarte leveranser under `/annonseoptimalisering/`, med krysshenvisning fra `/google-ads/`. Dette inkluderer kanal-/søkeanalyse, kontrollert import fra Google Ads, kampanjer/søkeord, UET-konverteringssporing, landingssider og løpende budsjettoptimalisering. Ingen automatisk inkludering, garanti eller ny URL.
 
-**Historikk:** Versjonerte snapshots 32–51 beholdes uendret. #34, #44, #45 og #48 avviste egne undersider; #46 godkjente AI-chatbot; #47 godkjente kundeanmeldelser som ANNET med JA, med bygg-først-avhengighet og lav prioritet.
+**Punkt 54 – venter:** TikTok-annonsering, mulig `/tiktok-annonsering/`. Vurder egen side mot `/meta-ads/` og `/youtube-annonsering/`, særlig behovet for creatives og at vi ikke driver vanlig videoproduksjon.
+
+**Historikk:** Versjonerte snapshots 32–52 beholdes uendret. #34, #44, #45, #48 og #53 avviste egne undersider; #46 godkjente AI-chatbot; #47 godkjente kundeanmeldelser som ANNET med JA, med bygg-først-avhengighet og lav prioritet.
