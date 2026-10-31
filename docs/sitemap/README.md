@@ -1,14 +1,14 @@
 # Optimalisering Oslo – kanonisk sitemap og innholdsgrunnlag
 
-**Oppdatert:** 31.10.2026 · **Beslutningspunkter:** 65 avklart (53 JA / 2 ANNET med JA / 10 NEI) · **Godkjente tjeneste-URL-er:** 61 · **Neste punkt:** 66 (ikke besluttet)
+**Oppdatert:** 31.10.2026 · **Beslutningspunkter:** 66 avklart (54 JA / 2 ANNET med JA / 10 NEI) · **Godkjente tjeneste-URL-er:** 62 · **Neste punkt:** 67 (ikke besluttet)
 
 Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **Kun optimalisering.oslo.no**, ikke medon.no. Ingen av de foreslåtte sidene er implementert av denne sitemap-arbeidsflyten.
 
-## Gjeldende versjon (65)
+## Gjeldende versjon (66)
 
-- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-65-2026-10-31.md)
-- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-65-2026-10-31.json)
-- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-65-2026-10-31.md)
+- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-66-2026-10-31.md)
+- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-66-2026-10-31.json)
+- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-66-2026-10-31.md)
 - [Innholdsbrief-standard / utarbeidelseskrav](./innholdsbrief-standard.md)
 - [GitHub issues-struktur og oppgavemal – snapshot fra punkt 32](./github-issues-plan-32-2026-10-30.md)
 
@@ -92,6 +92,8 @@ Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **K
 
 **Punkt 65 – JA:** `/nettbutikkoptimalisering/b2b-nettbutikk/` godkjent som egen B2B-/forhandlerportal-side. Seks individuelt beskrevne leveranser: (1) kartlegging av B2B-salgsprosess, (2) bedriftskontoer/trygg innlogging, (3) kundespesifikke priser og volumrabatter, (4) tilbud og bestilling, (5) gjenbestilling/større ordre og (6) B2B-testing/optimalisering/vedlikehold. Tydelig skille mot `/nettbutikkoptimalisering/shopify/`, `/nettbutikkoptimalisering/woocommerce/`, `/nettbutikkoptimalisering/integrasjoner/`, `/nettbutikkoptimalisering/kjopsflyt/`, `/nettbutikkoptimalisering/gjenkjop/` og `/crm-integrasjoner/`. **Ingen uverifiserte B2B-funksjoner, ubegrenset spesialutvikling, mva-/betalingsgarantier eller oppdiktede priser.** Middels/senere publiseringsprioritet.
 
-**Punkt 66 – venter:** Abonnementsløsninger og faste leveranser i nettbutikk, mulig `/nettbutikkoptimalisering/abonnement/`. Vurder eget abonnementstilbud mot gjenkjøp, B2B, integrasjoner og generell kjøpsflyt.
+**Punkt 66 – JA:** `/nettbutikkoptimalisering/abonnement/` er godkjent som egen spesialisert underside under Nettbutikkoptimalisering, med middels publiseringsprioritet. Seks individuelt forklarte leveranser: (1) abonnementsanalyse, (2) abonnement/gjentakende betaling, (3) faste leveranser og fleksible intervaller, (4) selvbetjening for abonnenter, (5) ordre-, lager- og fraktintegrasjoner, (6) lønnsomhet og abonnementsoptimalisering. Abonnementsforhold skal skilles fra vanlig gjenkjøp, B2B-prisavtaler, generell integrasjon og kjøpsflyt. Plattform, betalingsleverandør, apper, lisens og kundens rettigheter må kontrolleres; ingen garantier om funksjoner, lovmessig etterlevelse eller fast inntekt. Betalt oppsett med mulig avgrenset månedlig vedlikehold. Ingen kode eller publisering. 
 
-**Historikk:** Versjonerte snapshots 32–64 beholdes uendret. #34, #44, #45, #48, #53, #54, #55, #58, #60 og #61 avviste egne undersider; #46 godkjente AI-chatbot; #47 godkjente kundeanmeldelser som ANNET med JA, med bygg-først-avhengighet og lav prioritet.
+**Punkt 67 – venter:** Produktanbefalinger, kryssalg og mersalg i nettbutikk; mulig `/nettbutikkoptimalisering/produktanbefalinger/`. Vurder om det gir en selvstendig kjøpsintensjon, eller om alt bør inngå i `/nettbutikkoptimalisering/produktsider/`, `/nettbutikkoptimalisering/kjopsflyt/` og `/nettbutikkoptimalisering/gjenkjop/`. Viktig: #34 avviste egen handlekurv-/mersalgsside og la omfanget inn i kjøpsflyten.
+
+**Historikk:** Versjonerte snapshots 32–65 beholdes uendret. #34, #44, #45, #48, #53, #54, #55, #58, #60 og #61 avviste egne undersider; #46 godkjente AI-chatbot; #47 godkjente kundeanmeldelser som ANNET med JA, med bygg-først-avhengighet og lav prioritet.
