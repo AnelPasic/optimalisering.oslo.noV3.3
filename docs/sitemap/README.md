@@ -1,8 +1,17 @@
 # Optimalisering Oslo – kanonisk sitemap og innholdsgrunnlag
 
-**Oppdatert:** 01.11.2026 · **Beslutningspunkter:** 74 avklart (55 JA / 2 ANNET med JA / 17 NEI) · **Godkjente tjeneste-URL-er:** 63 · **Kartlegging:** AVSLUTTET – neste er datastøttet kommersiell prioritering
+**Oppdatert:** 01.11.2026 · **Beslutningspunkter:** 74 avklart (55 JA / 2 ANNET med JA / 17 NEI) · **Godkjente tjeneste-URL-er:** 63 · **Kartlegging:** AVSLUTTET · **Fase 2:** prioriteringsanalyse levert for eiergjennomgang (ingen implementering)
 
 Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **Kun optimalisering.oslo.no**, ikke medon.no. Ingen av de foreslåtte sidene er implementert av denne sitemap-arbeidsflyten.
+
+## Fase 2 – analyse levert 01.11.2026 (venter eierbeslutning)
+
+- [**Fase 2: Analyse, P0/P1/P2, overlappskontroll, tjenestepakker og foreslått publiseringsplan**](./fase2-prioritering-og-publiseringsplan-2026-11-01.md) – anbefaling, **ikke** vedtatt publiseringsrekkefølge eller nye priser.
+- [**Fase 2: Datamatrise for 63 godkjente URL-er**](./fase2-sokeord-url-matrise-2026-11-01.json) – eksakte kildeankere, søkevolum, organisk KD, manglende data, klyngeoverlapp og foreløpig P0/P1/P2.
+- **Obligatorisk søkeordkilde:** [Medon – Søkeordsanalyse (løpende)](https://docs.google.com/spreadsheets/d/1ZvFikP6jKJ8r41H66oFQ31BPdhNzp6-N11VIJ-cetWM/edit), fanen `Søkeord`, 853 rader, skjermbildeimportert 24.10.2026. Importdato er ikke en verifisert måledato.
+- **Datakvalitet:** 841 av 853 rader med oppgitt volum; 645 med organisk KD; 2 eksakte duplikatord med konflikt; 46 av 63 URL-er har minst ett eksakt anker med volum, 17 har ikke det. 10 delte ankere mellom godkjente URL-er krever gjennomgang av unik søkeintensjon.
+- **Foreslått prioritet:** P0 12, P1 29, P2 22. **P0-A = seks sider** som vurderes først, etter kontroll av eksisterende huber `/seo/`, `/konvertering/`, `/lokal-seo/`, `/synlighet/` og `/nettbutikkoptimalisering/`. Dette er ikke en ordre om å bygge alle 63.
+- **Åpen eierbeslutning:** Godkjen/juster den første prioriterte bølgen og eventuelle intensjonskonsolideringer, deretter avgrens pakker/priser/kapasitet. Først etter godkjenning kan implementering planlegges. Ingen nettsted-, CMS- eller prisendring inngår i analysen.
 
 ## Gjeldende versjon (74)
 
@@ -18,15 +27,17 @@ Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **K
 - [Innholdsbrief #63 – Obligatorisk kvalitet og beskrivelser](https://github.com/AnelPasic/optimalisering.oslo.noV3.3/issues/63)
 - [CONTENT-05 #55 – Eksisterende arbeid med hierarki og internlenking](https://github.com/AnelPasic/optimalisering.oslo.noV3.3/issues/55)
 
-## Arbeidsregler
+## Gjeldende arbeidsregler
 
-1. **Ett nytt beslutningspunkt om gangen**, med kundens problem, individuelle leveranser med forklaringer, egen URL, avgrensning og JA/NEI/ANNET.
-2. Registrer brukerens faktiske svar; ikke forhåndsgodkjenn neste punkt.
-3. Etter hvert punkt oppdateres **alle tre** artefakter: master, JSON, briefs. Lag ny versjon ved godkjennelse og oppdater denne indeksens gjeldende lenker.
+1. **Ingen punkt #75 eller ny tjenesteidéserie.** Kartleggingen ble avsluttet av eieren etter #74. Nye URL-er krever særskilt ny bestilling.
+2. **Prioriteringsanalysen er forslag.** P0/P1/P2 innebærer ikke automatisk godkjenning for publisering, prisendring, konsolidering eller kodeendring.
+3. Ved eiergodkjent senere endring: bevar alle 74 OWNER-beslutninger og samkjør master, JSON, briefs, sitemap README og fase-2-evidens; registrer hva som faktisk endres.
 4. Implementering av nettsider og pakkepriser krever egen beslutning. Omfattende A/B-testing ligger foreløpig kun i Partner-pakken. Ingen oppdiktede kundecaser, priser eller resultater.
 5. En kort URL-liste er ikke et tilstrekkelig innholdsgrunnlag; leveranseoverskriftene skal ha beskrivende tekst hver.
 
-## Nåværende beslutning
+## Historiske beslutningspunkter og begrunnelser
+
+**Merk:** Tall under historiske beslutningspunkter beskriver status **da punktet ble avgjort**. Gjeldende total er alltid **74 avgjorte punkter / 63 godkjente URL-er**.
 
 **Punkt 34:** Handlekurvoptimalisering og mersalg – **NEI** til separat `/nettbutikkoptimalisering/handlekurv/`. Omfanget er dokumentert som del av godkjent `/nettbutikkoptimalisering/kjopsflyt/`. Antallet tjeneste-URL-er er fortsatt **39**.
 
