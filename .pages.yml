@@ -966,7 +966,7 @@ content:
               - name: titlePreset
                 label: H1 / hovedoverskrift – tone
                 type: select
-                description: H1 Lab gjelder alltid: konkret tjeneste, kundeverdi og forståelighet før kreativitet.
+                description: "H1 Lab gjelder alltid: konkret tjeneste, kundeverdi og forståelighet før kreativitet."
                 options: *heroPartPresetOverrides
               - name: supportPreset
                 label: Ingress / støttetekst – tone
