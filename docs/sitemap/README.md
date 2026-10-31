@@ -1,14 +1,14 @@
 # Optimalisering Oslo – kanonisk sitemap og innholdsgrunnlag
 
-**Oppdatert:** 31.10.2026 · **Beslutningspunkter:** 73 avklart (55 JA / 2 ANNET med JA / 16 NEI) · **Godkjente tjeneste-URL-er:** 63 · **Neste punkt:** 74 (ikke besluttet)
+**Oppdatert:** 01.11.2026 · **Beslutningspunkter:** 74 avklart (55 JA / 2 ANNET med JA / 17 NEI) · **Godkjente tjeneste-URL-er:** 63 · **Kartlegging:** AVSLUTTET – neste er datastøttet kommersiell prioritering
 
 Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **Kun optimalisering.oslo.no**, ikke medon.no. Ingen av de foreslåtte sidene er implementert av denne sitemap-arbeidsflyten.
 
-## Gjeldende versjon (73)
+## Gjeldende versjon (74)
 
-- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-73-2026-10-31.md)
-- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-73-2026-10-31.json)
-- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-73-2026-10-31.md)
+- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-74-2026-11-01.md)
+- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-74-2026-11-01.json)
+- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-74-2026-11-01.md)
 - [Innholdsbrief-standard / utarbeidelseskrav](./innholdsbrief-standard.md)
 - [GitHub issues-struktur og oppgavemal – snapshot fra punkt 32](./github-issues-plan-32-2026-10-30.md)
 
@@ -108,6 +108,14 @@ Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **K
 
 **Punkt 73 – NEI:** Ingen egen `/konvertering/b2b-tilbudsprosesser/`. Seks individuelt forklarte B2B-tilbudsleveranser er bevart under `/nettbutikkoptimalisering/b2b-nettbutikk/` (prosesskartlegging, tilbudsstatus/bestilling), `/konvertering/henvendelser-og-booking/` (flerstegsforespørsler), `/konvertering/priskalkulator/` (pris-/tilbudskonfigurering), `/arbeidsflytautomatisering/` (godkjenningsflyt) og `/crm-integrasjoner/` (CRM-status og måling). Samordne resultater mot `/sporing-og-maling/`. Ingen automatisk ordre/kontrakt, uverifisert ERP/CRM eller oppdiktet pris. 63 godkjente URL-er uendret.
 
-**Punkt 74 – venter:** Kundeportaler og selvbetjening, tentativ `/kundeportaler/`. Vurder selvstendig teknisk leveranse mot B2B-nettbutikk, CRM-integrasjoner, arbeidsflytautomatisering, gjenkjøp og LeadProof-kundedashboard. Sikkerhet, tilgang og faktisk integrasjonsstøtte må være realistisk. JA/NEI/ANNET.
+**Punkt 74 – NEI:** Ingen egen `/kundeportaler/`. Seks detaljerte leveranser (kartlegging av kundeportal, sikker B2B-kundetilgang, dokument-/avtalevisning ved godkjent integrasjon, selvbetjening/saksstatus, CRM-/sakssystemkoblinger og sikkerhet/vedlikehold) videreføres under `/arbeidsflytautomatisering/`, `/nettbutikkoptimalisering/b2b-nettbutikk/` og `/crm-integrasjoner/`. LeadProof er et særskilt kundeverktøy for leadsporing og skal ikke fremstilles som en universell kundeportal. 63 godkjente URL-er, ingen ny side.
 
-**Historikk:** Versjonerte snapshots 32–72 beholdes uendret. #34, #44, #45, #48, #53, #54, #55, #58, #60 og #61 avviste egne undersider; #46 godkjente AI-chatbot; #47 godkjente kundeanmeldelser som ANNET med JA, med bygg-først-avhengighet og lav prioritet.
+**STOPP – tjenesteidéinnsamling avsluttet ved #74 på uttrykkelig OWNER-beskjed.** **Ikke presenter punkt #75 eller flere nye tjenestesider** med mindre OWNER særskilt gjenåpner kartleggingen.
+
+### Neste fase: søkedatastøttet kvalitetskontroll og prioritering
+
+**Obligatorisk kilde:** [Medon – Søkeordsanalyse (løpende)](https://docs.google.com/spreadsheets/d/1ZvFikP6jKJ8r41H66oFQ31BPdhNzp6-N11VIJ-cetWM/edit) – fane `Søkeord` (853 rader) og `Om datasettet`. Søkeordene er importert 24.10.2026 fra skjermbilder; importdatoen er ikke verifisert dato for søkevolummåling.
+
+For samtlige 63 godkjente URL-er: finn tilhørende relevante søkeord-/intensjonsklynger; vurder volum, KEI, organisk Keyword Difficulty, faktisk søkeintensjon og forventet konverterings-/inntektspotensial. Suppler med konkurranse, leveransens realisme og muligheter for vedvarende månedsavtaler. Identiske/nærliggende søkeord skal ikke summeres blindt; manglende søkevolum er ukjent, ikke null. `Competition` er Google Ads-konkurranse, ikke organisk KD. Klynger kan mangle data; ikke oppfinn volum. Deretter revider overlapping, sitemap/hierarki, internlenking og P0/P1/P2-publiseringsplan. Pakker/priser krever separat OWNER-godkjenning. Ingen kode-/CMS-endring eller publisering som del av kartleggingsavslutningen.
+
+**Historikk:** Versjonerte snapshots 32–73 beholdes uendret. #34, #44, #45, #48, #53, #54, #55, #58, #60 og #61 avviste egne undersider; #46 godkjente AI-chatbot; #47 godkjente kundeanmeldelser som ANNET med JA, med bygg-først-avhengighet og lav prioritet.
