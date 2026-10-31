@@ -1,14 +1,14 @@
 # Optimalisering Oslo – kanonisk sitemap og innholdsgrunnlag
 
-**Oppdatert:** 31.10.2026 · **Beslutningspunkter:** 72 avklart (55 JA / 2 ANNET med JA / 15 NEI) · **Godkjente tjeneste-URL-er:** 63 · **Neste punkt:** 73 (ikke besluttet)
+**Oppdatert:** 31.10.2026 · **Beslutningspunkter:** 73 avklart (55 JA / 2 ANNET med JA / 16 NEI) · **Godkjente tjeneste-URL-er:** 63 · **Neste punkt:** 74 (ikke besluttet)
 
 Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **Kun optimalisering.oslo.no**, ikke medon.no. Ingen av de foreslåtte sidene er implementert av denne sitemap-arbeidsflyten.
 
-## Gjeldende versjon (72)
+## Gjeldende versjon (73)
 
-- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-72-2026-10-31.md)
-- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-72-2026-10-31.json)
-- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-72-2026-10-31.md)
+- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-73-2026-10-31.md)
+- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-73-2026-10-31.json)
+- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-73-2026-10-31.md)
 - [Innholdsbrief-standard / utarbeidelseskrav](./innholdsbrief-standard.md)
 - [GitHub issues-struktur og oppgavemal – snapshot fra punkt 32](./github-issues-plan-32-2026-10-30.md)
 
@@ -106,6 +106,8 @@ Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **K
 
 **Punkt 72 – NEI:** Ingen egen `/konvertering/behovsguider/`. Alle seks leveranser er bevart med egne forklaringer under `/konvertering/priskalkulator/` (behovskartlegging og interaktive guider), `/konvertering/henvendelser-og-booking/` (dynamiske spørsmål og kvalifiserte forespørsler), `/nettbutikkoptimalisering/produktsider/` (anbefalinger) og `/sporing-og-maling/` (måling). Vurder fortsatt forholdet til `/nettbutikkoptimalisering/sok-og-filtrering/` og tidligere avslag på egen anbefalingsside (#67). Ingen automatisk AI-rådgivning eller garantier om korrekte anbefalinger. Antall godkjente URL-er er uendret: 63.
 
-**Punkt 73 – venter:** Digitale tilbuds- og bestillingsløp for B2B; tentativ `/konvertering/b2b-tilbudsprosesser/`. Vurder om dette er en egen kjøpeintensjon eller dekkes av `/nettbutikkoptimalisering/b2b-nettbutikk/`, `/konvertering/priskalkulator/`, `/crm-integrasjoner/`, `/arbeidsflytautomatisering/` og `/konvertering/henvendelser-og-booking/`. JA/NEI/ANNET.
+**Punkt 73 – NEI:** Ingen egen `/konvertering/b2b-tilbudsprosesser/`. Seks individuelt forklarte B2B-tilbudsleveranser er bevart under `/nettbutikkoptimalisering/b2b-nettbutikk/` (prosesskartlegging, tilbudsstatus/bestilling), `/konvertering/henvendelser-og-booking/` (flerstegsforespørsler), `/konvertering/priskalkulator/` (pris-/tilbudskonfigurering), `/arbeidsflytautomatisering/` (godkjenningsflyt) og `/crm-integrasjoner/` (CRM-status og måling). Samordne resultater mot `/sporing-og-maling/`. Ingen automatisk ordre/kontrakt, uverifisert ERP/CRM eller oppdiktet pris. 63 godkjente URL-er uendret.
 
-**Historikk:** Versjonerte snapshots 32–71 beholdes uendret. #34, #44, #45, #48, #53, #54, #55, #58, #60 og #61 avviste egne undersider; #46 godkjente AI-chatbot; #47 godkjente kundeanmeldelser som ANNET med JA, med bygg-først-avhengighet og lav prioritet.
+**Punkt 74 – venter:** Kundeportaler og selvbetjening, tentativ `/kundeportaler/`. Vurder selvstendig teknisk leveranse mot B2B-nettbutikk, CRM-integrasjoner, arbeidsflytautomatisering, gjenkjøp og LeadProof-kundedashboard. Sikkerhet, tilgang og faktisk integrasjonsstøtte må være realistisk. JA/NEI/ANNET.
+
+**Historikk:** Versjonerte snapshots 32–72 beholdes uendret. #34, #44, #45, #48, #53, #54, #55, #58, #60 og #61 avviste egne undersider; #46 godkjente AI-chatbot; #47 godkjente kundeanmeldelser som ANNET med JA, med bygg-først-avhengighet og lav prioritet.
