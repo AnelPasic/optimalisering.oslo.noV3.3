@@ -61,7 +61,100 @@
       "pages_with_at_least_one_present_volume_anchor": 46,
       "pages_without_present_volume_anchor": 17,
       "method": "Manuelt oppgitte eksakte ankere per eksisterende URL, ikke en full clustering av alle 853 rader. Åpne kandidater for søkevolum må valideres per SERP før publisering."
-    }
+    },
+    "keyword_anchor_collisions": [
+      {
+        "term": "landingsside optimalisering",
+        "urls": [
+          "/landingssider/",
+          "/landingssider/google-ads/"
+        ],
+        "canonical_intent_target": "/landingssider/",
+        "resolution": "Do not target the same primary query on multiple approved pages; other pages must use narrower intent. Canonical proposal requires SERP validation."
+      },
+      {
+        "term": "konverteringsoptimalisering nettbutikk",
+        "urls": [
+          "/nettbutikkoptimalisering/kjopsflyt/",
+          "/nettbutikkoptimalisering/gjenkjop/"
+        ],
+        "canonical_intent_target": "/nettbutikkoptimalisering/",
+        "resolution": "Do not target the same primary query on multiple approved pages; other pages must use narrower intent. Canonical proposal requires SERP validation."
+      },
+      {
+        "term": "webanalyse",
+        "urls": [
+          "/sporing-og-maling/",
+          "/nettsideanalyse/"
+        ],
+        "canonical_intent_target": "/sporing-og-maling/",
+        "resolution": "Do not target the same primary query on multiple approved pages; other pages must use narrower intent. Canonical proposal requires SERP validation."
+      },
+      {
+        "term": "google ads byrå",
+        "urls": [
+          "/google-ads/",
+          "/google-ads/kontoanalyse/"
+        ],
+        "canonical_intent_target": "/google-ads/",
+        "resolution": "Do not target the same primary query on multiple approved pages; other pages must use narrower intent. Canonical proposal requires SERP validation."
+      },
+      {
+        "term": "facebook annonsering",
+        "urls": [
+          "/meta-ads/",
+          "/meta-ads/kontoanalyse/"
+        ],
+        "canonical_intent_target": "/meta-ads/",
+        "resolution": "Do not target the same primary query on multiple approved pages; other pages must use narrower intent. Canonical proposal requires SERP validation."
+      },
+      {
+        "term": "google bedriftsprofil",
+        "urls": [
+          "/lokal-seo/google-maps/",
+          "/lokal-seo/flere-lokasjoner/"
+        ],
+        "canonical_intent_target": "/lokal-seo/google-maps/",
+        "resolution": "Do not target the same primary query on multiple approved pages; other pages must use narrower intent. Canonical proposal requires SERP validation."
+      },
+      {
+        "term": "nettbutikk migrering",
+        "urls": [
+          "/seo/seo-migrering/",
+          "/nettsidemigrering/"
+        ],
+        "canonical_intent_target": "/nettsidemigrering/",
+        "resolution": "Do not target the same primary query on multiple approved pages; other pages must use narrower intent. Canonical proposal requires SERP validation."
+      },
+      {
+        "term": "wordpress drift",
+        "urls": [
+          "/wordpress-optimalisering/",
+          "/nettsidevedlikehold/"
+        ],
+        "canonical_intent_target": "/nettsidevedlikehold/",
+        "resolution": "Do not target the same primary query on multiple approved pages; other pages must use narrower intent. Canonical proposal requires SERP validation."
+      },
+      {
+        "term": "gdpr nettside",
+        "urls": [
+          "/sporing-og-maling/samtykkestyring/",
+          "/nettsidesikkerhet/"
+        ],
+        "canonical_intent_target": "/sporing-og-maling/samtykkestyring/",
+        "resolution": "Do not target the same primary query on multiple approved pages; other pages must use narrower intent. Canonical proposal requires SERP validation."
+      },
+      {
+        "term": "integrasjoner nettside",
+        "urls": [
+          "/crm-integrasjoner/",
+          "/nettbutikkoptimalisering/integrasjoner/"
+        ],
+        "canonical_intent_target": null,
+        "resolution": "Ambiguous general query; neither page should claim exclusive intent until SERP confirms."
+      }
+    ],
+    "priority_notes": "P0/P1/P2 er rådgivende. 10 kryss-URL-kollisjoner i de manuelt kuraterte søkeordankrene krever SERP-kontroll. Ingen url-konverteringer, slettinger eller publisering godkjent."
   },
   "existing_hubs": [
     {
@@ -119,7 +212,18 @@
         "landingsside optimalisering"
       ],
       "commercial_rationale": "Nær kjernetilbud eller repeterbar inngangs-/månedsavtale; publiser først etter validering av kapasitet, internlenker og budskap.",
-      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd.",
+      "intent_overlap_flags": [
+        {
+          "keyword": "landingsside optimalisering",
+          "other_urls": [
+            "/landingssider/google-ads/"
+          ],
+          "proposed_canonical_target": "/landingssider/"
+        }
+      ],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Kjerne-/inngangstilbud og/eller realistisk løpende avtale; må validere evnen til å levere."
     },
     {
       "url": "/konvertering/henvendelser-og-booking/",
@@ -137,7 +241,10 @@
         "booking nettside"
       ],
       "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
-      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk."
+      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk.",
+      "intent_overlap_flags": [],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Spesialist-/supporttjeneste; publisering styres av kundenes behov og lønnsomhet, ikke volum alene."
     },
     {
       "url": "/nettbutikkoptimalisering/kjopsflyt/",
@@ -168,7 +275,18 @@
         "øke konvertering nettbutikk"
       ],
       "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
-      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd.",
+      "intent_overlap_flags": [
+        {
+          "keyword": "konverteringsoptimalisering nettbutikk",
+          "other_urls": [
+            "/nettbutikkoptimalisering/gjenkjop/"
+          ],
+          "proposed_canonical_target": "/nettbutikkoptimalisering/"
+        }
+      ],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Spesialist-/supporttjeneste; publisering styres av kundenes behov og lønnsomhet, ikke volum alene."
     },
     {
       "url": "/nettbutikkoptimalisering/produktsider/",
@@ -199,7 +317,10 @@
         "nettbutikk seo"
       ],
       "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
-      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd.",
+      "intent_overlap_flags": [],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Spesialist-/supporttjeneste; publisering styres av kundenes behov og lønnsomhet, ikke volum alene."
     },
     {
       "url": "/sporing-og-maling/",
@@ -230,7 +351,18 @@
         "google analytics 4"
       ],
       "commercial_rationale": "Nær kjernetilbud eller repeterbar inngangs-/månedsavtale; publiser først etter validering av kapasitet, internlenker og budskap.",
-      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd.",
+      "intent_overlap_flags": [
+        {
+          "keyword": "webanalyse",
+          "other_urls": [
+            "/nettsideanalyse/"
+          ],
+          "proposed_canonical_target": "/sporing-og-maling/"
+        }
+      ],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Kjerne-/inngangstilbud og/eller realistisk løpende avtale; må validere evnen til å levere."
     },
     {
       "url": "/konvertering/budskap-og-tilbud/",
@@ -261,7 +393,10 @@
         "forbedre konverteringsrate"
       ],
       "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
-      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd.",
+      "intent_overlap_flags": [],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Spesialist-/supporttjeneste; publisering styres av kundenes behov og lønnsomhet, ikke volum alene."
     },
     {
       "url": "/nettsidehastighet/",
@@ -299,7 +434,10 @@
         "raske nettsider"
       ],
       "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
-      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd.",
+      "intent_overlap_flags": [],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Spesialist-/supporttjeneste; publisering styres av kundenes behov og lønnsomhet, ikke volum alene."
     },
     {
       "url": "/kontinuerlig-optimalisering/",
@@ -337,7 +475,10 @@
         "nettside optimalisering"
       ],
       "commercial_rationale": "Nær kjernetilbud eller repeterbar inngangs-/månedsavtale; publiser først etter validering av kapasitet, internlenker og budskap.",
-      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd.",
+      "intent_overlap_flags": [],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Kjerne-/inngangstilbud og/eller realistisk løpende avtale; må validere evnen til å levere."
     },
     {
       "url": "/annonseoptimalisering/",
@@ -368,7 +509,10 @@
         "betalt annonsering"
       ],
       "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
-      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd.",
+      "intent_overlap_flags": [],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Ikke publiser som separat URL før dokumentert behov og unik intensjon."
     },
     {
       "url": "/google-ads/",
@@ -413,7 +557,18 @@
         "google annonsering"
       ],
       "commercial_rationale": "Nær kjernetilbud eller repeterbar inngangs-/månedsavtale; publiser først etter validering av kapasitet, internlenker og budskap.",
-      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd.",
+      "intent_overlap_flags": [
+        {
+          "keyword": "google ads byrå",
+          "other_urls": [
+            "/google-ads/kontoanalyse/"
+          ],
+          "proposed_canonical_target": "/google-ads/"
+        }
+      ],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Kjerne-/inngangstilbud og/eller realistisk løpende avtale; må validere evnen til å levere."
     },
     {
       "url": "/meta-ads/",
@@ -451,7 +606,18 @@
         "annonsering på instagram"
       ],
       "commercial_rationale": "Nær kjernetilbud eller repeterbar inngangs-/månedsavtale; publiser først etter validering av kapasitet, internlenker og budskap.",
-      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd.",
+      "intent_overlap_flags": [
+        {
+          "keyword": "facebook annonsering",
+          "other_urls": [
+            "/meta-ads/kontoanalyse/"
+          ],
+          "proposed_canonical_target": "/meta-ads/"
+        }
+      ],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Kjerne-/inngangstilbud og/eller realistisk løpende avtale; må validere evnen til å levere."
     },
     {
       "url": "/google-shopping/",
@@ -468,7 +634,10 @@
         "google shopping annonser"
       ],
       "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
-      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk."
+      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk.",
+      "intent_overlap_flags": [],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Spesialist-/supporttjeneste; publisering styres av kundenes behov og lønnsomhet, ikke volum alene."
     },
     {
       "url": "/konvertering/leadoppfolging/",
@@ -485,7 +654,10 @@
         "lead generering"
       ],
       "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
-      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk."
+      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk.",
+      "intent_overlap_flags": [],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Ikke publiser som separat URL før dokumentert behov og unik intensjon."
     },
     {
       "url": "/seo/teknisk-seo/",
@@ -523,7 +695,10 @@
         "teknisk seo analyse"
       ],
       "commercial_rationale": "Nær kjernetilbud eller repeterbar inngangs-/månedsavtale; publiser først etter validering av kapasitet, internlenker og budskap.",
-      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd.",
+      "intent_overlap_flags": [],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Kjerne-/inngangstilbud og/eller realistisk løpende avtale; må validere evnen til å levere."
     },
     {
       "url": "/seo/seo-analyse/",
@@ -561,7 +736,10 @@
         "hva er seo analyse"
       ],
       "commercial_rationale": "Nær kjernetilbud eller repeterbar inngangs-/månedsavtale; publiser først etter validering av kapasitet, internlenker og budskap.",
-      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd.",
+      "intent_overlap_flags": [],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Kjerne-/inngangstilbud og/eller realistisk løpende avtale; må validere evnen til å levere."
     },
     {
       "url": "/seo/innholdsoptimalisering/",
@@ -599,7 +777,10 @@
         "seo on page"
       ],
       "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
-      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd.",
+      "intent_overlap_flags": [],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Spesialist-/supporttjeneste; publisering styres av kundenes behov og lønnsomhet, ikke volum alene."
     },
     {
       "url": "/lokal-seo/google-maps/",
@@ -644,7 +825,18 @@
         "google maps bedrift"
       ],
       "commercial_rationale": "Nær kjernetilbud eller repeterbar inngangs-/månedsavtale; publiser først etter validering av kapasitet, internlenker og budskap.",
-      "risk_gate": "Primærterm kan være navigasjons-/informasjonsorientert. Verifiser faktisk SERP før isolert URL-optimalisering."
+      "risk_gate": "Primærterm kan være navigasjons-/informasjonsorientert. Verifiser faktisk SERP før isolert URL-optimalisering.",
+      "intent_overlap_flags": [
+        {
+          "keyword": "google bedriftsprofil",
+          "other_urls": [
+            "/lokal-seo/flere-lokasjoner/"
+          ],
+          "proposed_canonical_target": "/lokal-seo/google-maps/"
+        }
+      ],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Kjerne-/inngangstilbud og/eller realistisk løpende avtale; må validere evnen til å levere."
     },
     {
       "url": "/ai-synlighet/chatgpt/",
@@ -682,7 +874,10 @@
         "geo optimalisering"
       ],
       "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
-      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd.",
+      "intent_overlap_flags": [],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Spesialist-/supporttjeneste; publisering styres av kundenes behov og lønnsomhet, ikke volum alene."
     },
     {
       "url": "/ai-synlighet/google-ai/",
@@ -720,7 +915,10 @@
         "aio"
       ],
       "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
-      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd.",
+      "intent_overlap_flags": [],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Spesialist-/supporttjeneste; publisering styres av kundenes behov og lønnsomhet, ikke volum alene."
     },
     {
       "url": "/konvertering/ab-testing/",
@@ -744,7 +942,10 @@
         "ab testing"
       ],
       "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
-      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd.",
+      "intent_overlap_flags": [],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Ikke publiser som separat URL før dokumentert behov og unik intensjon."
     },
     {
       "url": "/seo/sokeordsanalyse/",
@@ -782,7 +983,10 @@
         "søkeordanalyse"
       ],
       "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
-      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd.",
+      "intent_overlap_flags": [],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Spesialist-/supporttjeneste; publisering styres av kundenes behov og lønnsomhet, ikke volum alene."
     },
     {
       "url": "/seo/konkurrentanalyse/",
@@ -799,7 +1003,10 @@
         "konkurrentanalyse seo"
       ],
       "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
-      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk."
+      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk.",
+      "intent_overlap_flags": [],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Spesialist-/supporttjeneste; publisering styres av kundenes behov og lønnsomhet, ikke volum alene."
     },
     {
       "url": "/seo/nettsidestruktur/",
@@ -831,7 +1038,10 @@
         "nettsidestruktur"
       ],
       "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
-      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd.",
+      "intent_overlap_flags": [],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Spesialist-/supporttjeneste; publisering styres av kundenes behov og lønnsomhet, ikke volum alene."
     },
     {
       "url": "/seo/lenkebygging/",
@@ -848,7 +1058,10 @@
         "backlink"
       ],
       "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
-      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk."
+      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk.",
+      "intent_overlap_flags": [],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Spesialist-/supporttjeneste; publisering styres av kundenes behov og lønnsomhet, ikke volum alene."
     },
     {
       "url": "/seo/seo-migrering/",
@@ -872,7 +1085,18 @@
         "nettbutikk migrering"
       ],
       "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
-      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd.",
+      "intent_overlap_flags": [
+        {
+          "keyword": "nettbutikk migrering",
+          "other_urls": [
+            "/nettsidemigrering/"
+          ],
+          "proposed_canonical_target": "/nettsidemigrering/"
+        }
+      ],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Spesialist-/supporttjeneste; publisering styres av kundenes behov og lønnsomhet, ikke volum alene."
     },
     {
       "url": "/nettbutikkoptimalisering/sok-og-filtrering/",
@@ -896,7 +1120,10 @@
         "nettbutikk funksjoner"
       ],
       "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
-      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd.",
+      "intent_overlap_flags": [],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Ikke publiser som separat URL før dokumentert behov og unik intensjon."
     },
     {
       "url": "/epostmarkedsforing/",
@@ -921,7 +1148,10 @@
         "epostmarkedsføring"
       ],
       "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
-      "risk_gate": "Primærterm kan være navigasjons-/informasjonsorientert. Verifiser faktisk SERP før isolert URL-optimalisering."
+      "risk_gate": "Primærterm kan være navigasjons-/informasjonsorientert. Verifiser faktisk SERP før isolert URL-optimalisering.",
+      "intent_overlap_flags": [],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Spesialist-/supporttjeneste; publisering styres av kundenes behov og lønnsomhet, ikke volum alene."
     },
     {
       "url": "/landingssider/google-ads/",
@@ -945,7 +1175,18 @@
         "google ads landingsside"
       ],
       "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
-      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd.",
+      "intent_overlap_flags": [
+        {
+          "keyword": "landingsside optimalisering",
+          "other_urls": [
+            "/landingssider/"
+          ],
+          "proposed_canonical_target": "/landingssider/"
+        }
+      ],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Ikke publiser som separat URL før dokumentert behov og unik intensjon."
     },
     {
       "url": "/konvertering/mobiloptimalisering/",
@@ -962,7 +1203,10 @@
         "mobilvennlig nettside"
       ],
       "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
-      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk."
+      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk.",
+      "intent_overlap_flags": [],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Ikke publiser som separat URL før dokumentert behov og unik intensjon."
     },
     {
       "url": "/konvertering/prissider/",
@@ -986,7 +1230,10 @@
         "nettside prisliste"
       ],
       "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
-      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd.",
+      "intent_overlap_flags": [],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Spesialist-/supporttjeneste; publisering styres av kundenes behov og lønnsomhet, ikke volum alene."
     },
     {
       "url": "/konvertering/brukertesting/",
@@ -1024,7 +1271,10 @@
         "kundereiser"
       ],
       "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
-      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd.",
+      "intent_overlap_flags": [],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Spesialist-/supporttjeneste; publisering styres av kundenes behov og lønnsomhet, ikke volum alene."
     },
     {
       "url": "/universell-utforming/",
@@ -1048,7 +1298,10 @@
         "universell utforming web"
       ],
       "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
-      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd.",
+      "intent_overlap_flags": [],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Spesialist-/supporttjeneste; publisering styres av kundenes behov og lønnsomhet, ikke volum alene."
     },
     {
       "url": "/lokal-seo/lokale-landingssider/",
@@ -1086,7 +1339,10 @@
         "lokal søkemotoroptimalisering"
       ],
       "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
-      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd.",
+      "intent_overlap_flags": [],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Ikke publiser som separat URL før dokumentert behov og unik intensjon."
     },
     {
       "url": "/lokal-seo/flere-lokasjoner/",
@@ -1110,7 +1366,18 @@
         "flere lokasjoner seo"
       ],
       "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
-      "risk_gate": "Primærterm kan være navigasjons-/informasjonsorientert. Verifiser faktisk SERP før isolert URL-optimalisering."
+      "risk_gate": "Primærterm kan være navigasjons-/informasjonsorientert. Verifiser faktisk SERP før isolert URL-optimalisering.",
+      "intent_overlap_flags": [
+        {
+          "keyword": "google bedriftsprofil",
+          "other_urls": [
+            "/lokal-seo/google-maps/"
+          ],
+          "proposed_canonical_target": "/lokal-seo/google-maps/"
+        }
+      ],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Ikke publiser som separat URL før dokumentert behov og unik intensjon."
     },
     {
       "url": "/google-ads/kontoanalyse/",
@@ -1142,7 +1409,18 @@
         "google ads tjenester"
       ],
       "commercial_rationale": "Nær kjernetilbud eller repeterbar inngangs-/månedsavtale; publiser først etter validering av kapasitet, internlenker og budskap.",
-      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd.",
+      "intent_overlap_flags": [
+        {
+          "keyword": "google ads byrå",
+          "other_urls": [
+            "/google-ads/"
+          ],
+          "proposed_canonical_target": "/google-ads/"
+        }
+      ],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Kjerne-/inngangstilbud og/eller realistisk løpende avtale; må validere evnen til å levere."
     },
     {
       "url": "/meta-ads/kontoanalyse/",
@@ -1173,7 +1451,18 @@
         "facebook annonsering"
       ],
       "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
-      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd.",
+      "intent_overlap_flags": [
+        {
+          "keyword": "facebook annonsering",
+          "other_urls": [
+            "/meta-ads/"
+          ],
+          "proposed_canonical_target": "/meta-ads/"
+        }
+      ],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Spesialist-/supporttjeneste; publisering styres av kundenes behov og lønnsomhet, ikke volum alene."
     },
     {
       "url": "/google-shopping/merchant-center/",
@@ -1191,7 +1480,10 @@
         "produktfiler"
       ],
       "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
-      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk."
+      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk.",
+      "intent_overlap_flags": [],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Ikke publiser som separat URL før dokumentert behov og unik intensjon."
     },
     {
       "url": "/google-ads/konverteringssporing/",
@@ -1208,7 +1500,10 @@
         "konverteringssporing google ads"
       ],
       "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
-      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk."
+      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk.",
+      "intent_overlap_flags": [],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Spesialist-/supporttjeneste; publisering styres av kundenes behov og lønnsomhet, ikke volum alene."
     },
     {
       "url": "/meta-ads/konverteringssporing/",
@@ -1225,7 +1520,10 @@
         "meta conversions api"
       ],
       "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
-      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk."
+      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk.",
+      "intent_overlap_flags": [],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Spesialist-/supporttjeneste; publisering styres av kundenes behov og lønnsomhet, ikke volum alene."
     },
     {
       "url": "/nettbutikkoptimalisering/gjenkjop/",
@@ -1249,7 +1547,18 @@
         "konverteringsoptimalisering nettbutikk"
       ],
       "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
-      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd.",
+      "intent_overlap_flags": [
+        {
+          "keyword": "konverteringsoptimalisering nettbutikk",
+          "other_urls": [
+            "/nettbutikkoptimalisering/kjopsflyt/"
+          ],
+          "proposed_canonical_target": "/nettbutikkoptimalisering/"
+        }
+      ],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Spesialist-/supporttjeneste; publisering styres av kundenes behov og lønnsomhet, ikke volum alene."
     },
     {
       "url": "/nettbutikkoptimalisering/shopify/",
@@ -1273,7 +1582,10 @@
         "shopify optimalisering"
       ],
       "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
-      "risk_gate": "Primærterm kan være navigasjons-/informasjonsorientert. Verifiser faktisk SERP før isolert URL-optimalisering."
+      "risk_gate": "Primærterm kan være navigasjons-/informasjonsorientert. Verifiser faktisk SERP før isolert URL-optimalisering.",
+      "intent_overlap_flags": [],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Spesialist-/supporttjeneste; publisering styres av kundenes behov og lønnsomhet, ikke volum alene."
     },
     {
       "url": "/nettbutikkoptimalisering/woocommerce/",
@@ -1297,7 +1609,10 @@
         "woocommerce optimalisering"
       ],
       "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
-      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd.",
+      "intent_overlap_flags": [],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Spesialist-/supporttjeneste; publisering styres av kundenes behov og lønnsomhet, ikke volum alene."
     },
     {
       "url": "/wordpress-optimalisering/",
@@ -1335,7 +1650,18 @@
         "wordpress drift"
       ],
       "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
-      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd.",
+      "intent_overlap_flags": [
+        {
+          "keyword": "wordpress drift",
+          "other_urls": [
+            "/nettsidevedlikehold/"
+          ],
+          "proposed_canonical_target": "/nettsidevedlikehold/"
+        }
+      ],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Spesialist-/supporttjeneste; publisering styres av kundenes behov og lønnsomhet, ikke volum alene."
     },
     {
       "url": "/nettsidemigrering/",
@@ -1359,7 +1685,18 @@
         "nettside migrering"
       ],
       "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
-      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd.",
+      "intent_overlap_flags": [
+        {
+          "keyword": "nettbutikk migrering",
+          "other_urls": [
+            "/seo/seo-migrering/"
+          ],
+          "proposed_canonical_target": "/nettsidemigrering/"
+        }
+      ],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Ikke publiser som separat URL før dokumentert behov og unik intensjon."
     },
     {
       "url": "/nettsidevedlikehold/",
@@ -1391,7 +1728,18 @@
         "vedlikehold nettside"
       ],
       "commercial_rationale": "Nær kjernetilbud eller repeterbar inngangs-/månedsavtale; publiser først etter validering av kapasitet, internlenker og budskap.",
-      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd.",
+      "intent_overlap_flags": [
+        {
+          "keyword": "wordpress drift",
+          "other_urls": [
+            "/wordpress-optimalisering/"
+          ],
+          "proposed_canonical_target": "/nettsidevedlikehold/"
+        }
+      ],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Kjerne-/inngangstilbud og/eller realistisk løpende avtale; må validere evnen til å levere."
     },
     {
       "url": "/funksjonsovervakning/",
@@ -1408,7 +1756,10 @@
         "nettside overvåkning"
       ],
       "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
-      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk."
+      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk.",
+      "intent_overlap_flags": [],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Ikke publiser som separat URL før dokumentert behov og unik intensjon."
     },
     {
       "url": "/nettsideanalyse/",
@@ -1446,7 +1797,18 @@
         "nettside analyse"
       ],
       "commercial_rationale": "Nær kjernetilbud eller repeterbar inngangs-/månedsavtale; publiser først etter validering av kapasitet, internlenker og budskap.",
-      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd.",
+      "intent_overlap_flags": [
+        {
+          "keyword": "webanalyse",
+          "other_urls": [
+            "/sporing-og-maling/"
+          ],
+          "proposed_canonical_target": "/sporing-og-maling/"
+        }
+      ],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Kjerne-/inngangstilbud og/eller realistisk løpende avtale; må validere evnen til å levere."
     },
     {
       "url": "/digital-konkurrentanalyse/",
@@ -1470,7 +1832,10 @@
         "digital konkurrentanalyse"
       ],
       "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
-      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd.",
+      "intent_overlap_flags": [],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Ikke publiser som separat URL før dokumentert behov og unik intensjon."
     },
     {
       "url": "/ai-chatbot/",
@@ -1495,7 +1860,10 @@
         "chatbot nettside"
       ],
       "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
-      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd.",
+      "intent_overlap_flags": [],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Ikke publiser som separat URL før dokumentert behov og unik intensjon."
     },
     {
       "url": "/kundeanmeldelser/",
@@ -1512,7 +1880,10 @@
         "kundeanmeldelser"
       ],
       "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
-      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk."
+      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk.",
+      "intent_overlap_flags": [],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Ikke publiser som separat URL før dokumentert behov og unik intensjon."
     },
     {
       "url": "/remarketing/",
@@ -1536,7 +1907,10 @@
         "remarketing"
       ],
       "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
-      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd.",
+      "intent_overlap_flags": [],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Ikke publiser som separat URL før dokumentert behov og unik intensjon."
     },
     {
       "url": "/google-ads/performance-max/",
@@ -1553,7 +1927,10 @@
         "pmax"
       ],
       "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
-      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk."
+      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk.",
+      "intent_overlap_flags": [],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Ikke publiser som separat URL før dokumentert behov og unik intensjon."
     },
     {
       "url": "/youtube-annonsering/",
@@ -1584,7 +1961,10 @@
         "annonsering youtube"
       ],
       "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
-      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd.",
+      "intent_overlap_flags": [],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Ikke publiser som separat URL før dokumentert behov og unik intensjon."
     },
     {
       "url": "/linkedin-annonsering/",
@@ -1615,7 +1995,10 @@
         "linked in annonsering"
       ],
       "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
-      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd.",
+      "intent_overlap_flags": [],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Ikke publiser som separat URL før dokumentert behov og unik intensjon."
     },
     {
       "url": "/sporing-og-maling/samtykkestyring/",
@@ -1653,7 +2036,18 @@
         "cookies gdpr"
       ],
       "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
-      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd.",
+      "intent_overlap_flags": [
+        {
+          "keyword": "gdpr nettside",
+          "other_urls": [
+            "/nettsidesikkerhet/"
+          ],
+          "proposed_canonical_target": "/sporing-og-maling/samtykkestyring/"
+        }
+      ],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Spesialist-/supporttjeneste; publisering styres av kundenes behov og lønnsomhet, ikke volum alene."
     },
     {
       "url": "/sporing-og-maling/leadsporing/",
@@ -1671,7 +2065,10 @@
         "lead tracking"
       ],
       "commercial_rationale": "Nær kjernetilbud eller repeterbar inngangs-/månedsavtale; publiser først etter validering av kapasitet, internlenker og budskap.",
-      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk."
+      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk.",
+      "intent_overlap_flags": [],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Kjerne-/inngangstilbud og/eller realistisk løpende avtale; må validere evnen til å levere."
     },
     {
       "url": "/nettsidesikkerhet/",
@@ -1703,7 +2100,18 @@
         "gdpr nettside"
       ],
       "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
-      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd.",
+      "intent_overlap_flags": [
+        {
+          "keyword": "gdpr nettside",
+          "other_urls": [
+            "/sporing-og-maling/samtykkestyring/"
+          ],
+          "proposed_canonical_target": "/sporing-og-maling/samtykkestyring/"
+        }
+      ],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Spesialist-/supporttjeneste; publisering styres av kundenes behov og lønnsomhet, ikke volum alene."
     },
     {
       "url": "/crm-integrasjoner/",
@@ -1727,7 +2135,18 @@
         "crm integrasjoner"
       ],
       "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
-      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd.",
+      "intent_overlap_flags": [
+        {
+          "keyword": "integrasjoner nettside",
+          "other_urls": [
+            "/nettbutikkoptimalisering/integrasjoner/"
+          ],
+          "proposed_canonical_target": null
+        }
+      ],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Spesialist-/supporttjeneste; publisering styres av kundenes behov og lønnsomhet, ikke volum alene."
     },
     {
       "url": "/arbeidsflytautomatisering/",
@@ -1744,7 +2163,10 @@
         "arbeidsflyt automatisering"
       ],
       "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
-      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk."
+      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk.",
+      "intent_overlap_flags": [],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Ikke publiser som separat URL før dokumentert behov og unik intensjon."
     },
     {
       "url": "/nettbutikkoptimalisering/integrasjoner/",
@@ -1768,7 +2190,18 @@
         "nettbutikk integrasjon"
       ],
       "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
-      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd.",
+      "intent_overlap_flags": [
+        {
+          "keyword": "integrasjoner nettside",
+          "other_urls": [
+            "/crm-integrasjoner/"
+          ],
+          "proposed_canonical_target": null
+        }
+      ],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Ikke publiser som separat URL før dokumentert behov og unik intensjon."
     },
     {
       "url": "/nettbutikkoptimalisering/b2b-nettbutikk/",
@@ -1792,7 +2225,10 @@
         "b2b markedsføring"
       ],
       "commercial_rationale": "Relevant støtte-/spesialisttjeneste; publiser etter kjerne og når kundegrunnlag, SERP og bevis støtter eget innhold.",
-      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd."
+      "risk_gate": "Volum gjelder term, ikke landingssiden eller hele klyngen. Intentsjekk påkrevd.",
+      "intent_overlap_flags": [],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Spesialist-/supporttjeneste; publisering styres av kundenes behov og lønnsomhet, ikke volum alene."
     },
     {
       "url": "/nettbutikkoptimalisering/abonnement/",
@@ -1809,7 +2245,10 @@
         "netthandel abonnement"
       ],
       "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
-      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk."
+      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk.",
+      "intent_overlap_flags": [],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Ikke publiser som separat URL før dokumentert behov og unik intensjon."
     },
     {
       "url": "/konvertering/priskalkulator/",
@@ -1826,7 +2265,10 @@
         "priskalkulator nettside"
       ],
       "commercial_rationale": "Hold tilbake til dokumentert kundeetterspørsel, særskilt prosjekt eller verifisert selvstendig søkeintensjon.",
-      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk."
+      "risk_gate": "Ingen eksakt søkevolumreferanse i kilden – ikke tolk som 0 søk.",
+      "intent_overlap_flags": [],
+      "intent_validation_status": "needs_live_SERP_and_owner_review_before_publication",
+      "revenue_bias": "Ikke publiser som separat URL før dokumentert behov og unik intensjon."
     }
   ]
 }
