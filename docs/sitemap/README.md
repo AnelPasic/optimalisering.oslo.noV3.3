@@ -1,14 +1,14 @@
 # Optimalisering Oslo – kanonisk sitemap og innholdsgrunnlag
 
-**Oppdatert:** 31.10.2026 · **Beslutningspunkter:** 59 avklart (49 JA / 2 ANNET med JA / 8 NEI) · **Godkjente tjeneste-URL-er:** 57 · **Neste punkt:** 60 (ikke besluttet)
+**Oppdatert:** 31.10.2026 · **Beslutningspunkter:** 60 avklart (49 JA / 2 ANNET med JA / 9 NEI) · **Godkjente tjeneste-URL-er:** 57 · **Neste punkt:** 61 (ikke besluttet)
 
 Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **Kun optimalisering.oslo.no**, ikke medon.no. Ingen av de foreslåtte sidene er implementert av denne sitemap-arbeidsflyten.
 
-## Gjeldende versjon (59)
+## Gjeldende versjon (60)
 
-- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-59-2026-10-31.md)
-- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-59-2026-10-31.json)
-- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-59-2026-10-31.md)
+- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-60-2026-10-31.md)
+- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-60-2026-10-31.json)
+- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-60-2026-10-31.md)
 - [Innholdsbrief-standard / utarbeidelseskrav](./innholdsbrief-standard.md)
 - [GitHub issues-struktur og oppgavemal – snapshot fra punkt 32](./github-issues-plan-32-2026-10-30.md)
 
@@ -80,6 +80,8 @@ Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **K
 
 **Punkt 59 – JA:** `/nettsidesikkerhet/` er godkjent som egen sikkerhetsfokusert tjenesteside. Seks fullstendige leveranser: (1) sårbarhets-/sikkerhetsgjennomgang, (2) oppdateringer og kompatibilitet, (3) brukertilgang, (4) hosting-/WAF-beskyttelse, (5) sikkerhetskopiering og trygg gjenopprettingstest, (6) periodisk sikkerhetskontroll. Avgrens fra `/nettsidevedlikehold/`, `/funksjonsovervakning/` og `/nettsideanalyse/`. Ikke lov sertifisert penetrasjonstest, 24/7 SOC, sikkerhetsgaranti eller beredskap som ikke er etablert. Prosjektgjennomgang og mulig avtalt månedlig sikkerhetskontroll; priser senere.
 
-**Punkt 60 – venter:** E-postlevering fra nettsider og domenets e-postautentisering, mulig `/epostlevering-fra-nettsider/`. Vurder konkret tap av webskjema-/bookingvarsler og teknisk levering, ikke e-postmarkedsføring.
+**Punkt 60 – NEI:** Ingen separat `/epostlevering-fra-nettsider/`. Alle seks individuelt beskrevne leveranser er bevart under `/konvertering/henvendelser-og-booking/`: feilsøking, SPF/DKIM/DMARC, transaksjonell SMTP/API, avvisninger/retry/varsler, ende-til-ende test og periodisk kontroll. To egne driftsoppgaver er lagt til `/funksjonsovervakning/`. `/epostmarkedsforing/` avgrenses eksplisitt til nyhetsbrev og kampanjer. Ingen garanti om innbokslevering, ingen endringer av eksisterende DNS uten kartlegging, og ingen ny URL.
 
-**Historikk:** Versjonerte snapshots 32–58 beholdes uendret. #34, #44, #45, #48, #53, #54, #55 og #58 avviste egne undersider; #46 godkjente AI-chatbot; #47 godkjente kundeanmeldelser som ANNET med JA, med bygg-først-avhengighet og lav prioritet.
+**Punkt 61 – venter:** Administrert nettsidehosting og teknisk drift, mulig `/nettsidehosting/`. Vurder egen side eller tydelig driftstjeneste under `/nettsidevedlikehold/`.
+
+**Historikk:** Versjonerte snapshots 32–59 beholdes uendret. #34, #44, #45, #48, #53, #54, #55, #58 og #60 avviste egne undersider; #46 godkjente AI-chatbot; #47 godkjente kundeanmeldelser som ANNET med JA, med bygg-først-avhengighet og lav prioritet.
