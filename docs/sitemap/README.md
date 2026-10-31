@@ -1,14 +1,14 @@
 # Optimalisering Oslo – kanonisk sitemap og innholdsgrunnlag
 
-**Oppdatert:** 31.10.2026 · **Beslutningspunkter:** 69 avklart (54 JA / 2 ANNET med JA / 13 NEI) · **Godkjente tjeneste-URL-er:** 62 · **Neste punkt:** 70 (ikke besluttet)
+**Oppdatert:** 31.10.2026 · **Beslutningspunkter:** 70 avklart (54 JA / 2 ANNET med JA / 14 NEI) · **Godkjente tjeneste-URL-er:** 62 · **Neste punkt:** 71 (ikke besluttet)
 
 Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **Kun optimalisering.oslo.no**, ikke medon.no. Ingen av de foreslåtte sidene er implementert av denne sitemap-arbeidsflyten.
 
-## Gjeldende versjon (69)
+## Gjeldende versjon (70)
 
-- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-69-2026-10-31.md)
-- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-69-2026-10-31.json)
-- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-69-2026-10-31.md)
+- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-70-2026-10-31.md)
+- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-70-2026-10-31.json)
+- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-70-2026-10-31.md)
 - [Innholdsbrief-standard / utarbeidelseskrav](./innholdsbrief-standard.md)
 - [GitHub issues-struktur og oppgavemal – snapshot fra punkt 32](./github-issues-plan-32-2026-10-30.md)
 
@@ -100,6 +100,8 @@ Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **K
 
 **Punkt 69 – NEI:** Ingen separat `/konvertering/kontaktsider/`. Seks individuelt beskrevne leveranser er fordelt på `/konvertering/henvendelser-og-booking/` (kontaktsideanalyse, mobil klikk-for-å-ringe, skjema/booking), `/lokal-seo/google-maps/` (kart, veibeskrivelse, besøksinformasjon), `/lokal-seo/lokale-landingssider/` (lokale CTA-er) og `/sporing-og-maling/` (måling av lokale kontaktpunkter). Skill telefonklikk fra faktiske samtaler, og bruk reelle besøksadresser. 62 godkjente URL-er uendret.
 
-**Punkt 70 – venter:** Telefonsporing og attribusjon av telefonsamtaler, mulig `/sporing-og-maling/telefonsporing/`. Vurder egen kommersiell kjøpsintensjon og faktisk produkt-/integrasjonsstøtte. LeadProof har ikke automatisk dokumenterte telefonsporingsegenskaper. JA/NEI/ANNET.
+**Punkt 70 – NEI:** Ingen egen `/sporing-og-maling/telefonsporing/`. Seks individuelt beskrevne tekniske telefonsporingsleveranser videreføres under `/sporing-og-maling/leadsporing/` som **betingede eksterne integrasjonsmuligheter**: analyse av telefonhenvendelser, faktisk samtalesporing, kildenumre, leadkvalifisering, Ads-/CRM-kobling og løpende rapportering. Dette er **ikke** bevis for at LeadProof har ferdig innebygd telefonsporing, samtaleopptak eller kvalifisering. Klikk-for-å-ringe er ikke det samme som en registrert eller besvart samtale. Krev verifiserte leverandører, gyldig behandlingsgrunnlag, nødvendige avtaler og eksplisitte kostnader. 62 godkjente URL-er uendret.
 
-**Historikk:** Versjonerte snapshots 32–68 beholdes uendret. #34, #44, #45, #48, #53, #54, #55, #58, #60 og #61 avviste egne undersider; #46 godkjente AI-chatbot; #47 godkjente kundeanmeldelser som ANNET med JA, med bygg-først-avhengighet og lav prioritet.
+**Punkt 71 – venter:** Priskalkulatorer og interaktive tilbudsverktøy, mulig `/konvertering/priskalkulator/`. Vurder separat kjøpsintensjon opp mot `/konvertering/prissider/`, `/konvertering/henvendelser-og-booking/`, `/konvertering/budskap-og-tilbud/` og `/landingssider/`. JA/NEI/ANNET.
+
+**Historikk:** Versjonerte snapshots 32–69 beholdes uendret. #34, #44, #45, #48, #53, #54, #55, #58, #60 og #61 avviste egne undersider; #46 godkjente AI-chatbot; #47 godkjente kundeanmeldelser som ANNET med JA, med bygg-først-avhengighet og lav prioritet.
