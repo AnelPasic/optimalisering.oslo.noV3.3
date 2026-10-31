@@ -1,14 +1,14 @@
 # Optimalisering Oslo – kanonisk sitemap og innholdsgrunnlag
 
-**Oppdatert:** 31.10.2026 · **Beslutningspunkter:** 63 avklart (51 JA / 2 ANNET med JA / 10 NEI) · **Godkjente tjeneste-URL-er:** 59 · **Neste punkt:** 64 (ikke besluttet)
+**Oppdatert:** 31.10.2026 · **Beslutningspunkter:** 64 avklart (52 JA / 2 ANNET med JA / 10 NEI) · **Godkjente tjeneste-URL-er:** 60 · **Neste punkt:** 65 (ikke besluttet)
 
 Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **Kun optimalisering.oslo.no**, ikke medon.no. Ingen av de foreslåtte sidene er implementert av denne sitemap-arbeidsflyten.
 
-## Gjeldende versjon (63)
+## Gjeldende versjon (64)
 
-- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-63-2026-10-31.md)
-- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-63-2026-10-31.json)
-- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-63-2026-10-31.md)
+- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-64-2026-10-31.md)
+- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-64-2026-10-31.json)
+- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-64-2026-10-31.md)
 - [Innholdsbrief-standard / utarbeidelseskrav](./innholdsbrief-standard.md)
 - [GitHub issues-struktur og oppgavemal – snapshot fra punkt 32](./github-issues-plan-32-2026-10-30.md)
 
@@ -88,6 +88,8 @@ Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **K
 
 **Punkt 63 – JA:** `/arbeidsflytautomatisering/` godkjent som selvstendig spesialisttjeneste. Seks individuelt forklarte leveranser: (1) prosesskartlegging, (2) støttet systemintegrasjon, (3) automatiserte rutineoppgaver, (4) menneskelig godkjenning, (5) feilhåndtering/databeskyttelse og (6) før/etter-måling og valgfritt vedlikehold. Avgrenset mot `/crm-integrasjoner/` (teknisk leadoverføring), `/konvertering/leadoppfolging/` (salgsprosessen) og `/ai-chatbot/` (kundedialog). **Ingen universelle integrasjoner, ubegrensede automatiseringer eller uverifisert AI-agentfunksjonalitet.** Én tydelig avgrenset arbeidsflyt om gangen; ingen priser bestemt.
 
-**Punkt 64 – venter:** Nettbutikk-integrasjoner for lager, ordre og frakt, mulig `/nettbutikkoptimalisering/integrasjoner/`. Vurder egne e-handelsintegrasjoner mot bred arbeidsflytautomatisering, CRM og Shopify/WooCommerce-tilbudene.
+**Punkt 64 – JA:** `/nettbutikkoptimalisering/integrasjoner/` godkjent som selvstendig spesialisert underside for lager-, ordre- og fraktdata. Seks forklarte leveranser: (1) kartlegging av netthandelssystemer, (2) SKU-/lager-/produktsynkronisering, (3) ordre- og statusintegrasjon, (4) frakt-/leveringsintegrasjon, (5) logg/feilsikring/datavalidering og (6) ende-til-ende testing med periodisk vedlikehold. Avgrenset mot `/crm-integrasjoner/` (henvendelser/leads), `/arbeidsflytautomatisering/` (brede interne prosesser), Shopify- og WooCommerce-sidene (plattformoptimalisering). **Ingen uverifiserte WMS/ERP/fraktintegrasjoner, feilfri sanntidssynk, garantert null tapte ordrer eller oppdiktede priser.** Senere publiseringsbølge enn kjerneinntekter.
 
-**Historikk:** Versjonerte snapshots 32–62 beholdes uendret. #34, #44, #45, #48, #53, #54, #55, #58, #60 og #61 avviste egne undersider; #46 godkjente AI-chatbot; #47 godkjente kundeanmeldelser som ANNET med JA, med bygg-først-avhengighet og lav prioritet.
+**Punkt 65 – venter:** B2B-nettbutikk og forhandlerportal, mulig `/nettbutikkoptimalisering/b2b-nettbutikk/`. Vurder bedriftskonti, priser, ordre-/tilbudsprosesser og lønnsom leveranse uten å love uverifiserte plattformfunksjoner.
+
+**Historikk:** Versjonerte snapshots 32–63 beholdes uendret. #34, #44, #45, #48, #53, #54, #55, #58, #60 og #61 avviste egne undersider; #46 godkjente AI-chatbot; #47 godkjente kundeanmeldelser som ANNET med JA, med bygg-først-avhengighet og lav prioritet.
