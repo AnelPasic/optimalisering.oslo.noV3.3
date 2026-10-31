@@ -1,14 +1,14 @@
 # Optimalisering Oslo – kanonisk sitemap og innholdsgrunnlag
 
-**Oppdatert:** 31.10.2026 · **Beslutningspunkter:** 56 avklart (47 JA / 2 ANNET med JA / 7 NEI) · **Godkjente tjeneste-URL-er:** 55 · **Neste punkt:** 57 (ikke besluttet)
+**Oppdatert:** 31.10.2026 · **Beslutningspunkter:** 57 avklart (48 JA / 2 ANNET med JA / 7 NEI) · **Godkjente tjeneste-URL-er:** 56 · **Neste punkt:** 58 (ikke besluttet)
 
 Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **Kun optimalisering.oslo.no**, ikke medon.no. Ingen av de foreslåtte sidene er implementert av denne sitemap-arbeidsflyten.
 
-## Gjeldende versjon (56)
+## Gjeldende versjon (57)
 
-- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-56-2026-10-31.md)
-- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-56-2026-10-31.json)
-- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-56-2026-10-31.md)
+- [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-57-2026-10-31.md)
+- [JSON – maskinlesbar beslutningslogg + detaljerte leveranser](./beslutninger-57-2026-10-31.json)
+- [Fullstendige tjenestebriefs – problem, «Dette kan vi levere», hvorfor egen side, differensiering, kommersiell modell, kvalitetskrav](./fullstendige-tjenestebriefs-57-2026-10-31.md)
 - [Innholdsbrief-standard / utarbeidelseskrav](./innholdsbrief-standard.md)
 - [GitHub issues-struktur og oppgavemal – snapshot fra punkt 32](./github-issues-plan-32-2026-10-30.md)
 
@@ -74,6 +74,8 @@ Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **K
 
 **Punkt 56 – JA:** `/sporing-og-maling/samtykkestyring/` er godkjent som egen teknisk spesialistunderside under Sporing og måling. Seks individuelt forklarte leveranser: cookie-/taggaudit, samtykkeplattform (CMP)/cookie-banner, Google Consent Mode, GTM/øvrige tagger, funksjonstesting/dokumentasjon og periodisk overvåkning. **BINDENDE:** Teknisk bistand er ikke juridisk rådgivning. Ingen garanti om full GDPR-/ekom-etterlevelse; personverndokumenter og behandlingsgrunnlag vurderes av kundens ansvarlige/kvalifisert juridisk rådgiver. CMP-lisens og juridisk bistand kommer eventuelt i tillegg.
 
-**Punkt 57 – venter:** Leadsporing og salgsattribusjon, mulig `/sporing-og-maling/leadsporing/`. Vurder egen kommersiell leveranse mot eksisterende sporing/leadoppfølging, og lov ikke uverifiserte interne produktfunksjoner.
+**Punkt 57 – JA:** `/sporing-og-maling/leadsporing/` godkjent med **LeadProof som konkret kundeverktøy**: kunden skal få tilgang til sitt eget rollebegrensede dashboard med relevante leads/kilder, etter verifisert onboarding og datainnsamling. Syv utførlige leveranser omfatter kildekartlegging, skjemaer, attribusjon/kvalitet, LeadProof-dashboard, kvalifisering, tydelig adskilt estimert verdi fra bekreftede salg og løpende datakontroll. **Verifiserte kodefunksjoner er ikke det samme som produksjonsverifisert kundetilgang:** Railway hadde SUCCESS for commit `44c5a7a` (30.10.2026), mens nyeste LeadProof-main `da5caec` var SKIPPED. CRM/salgsrapportering og ekte omsetning er valgfrie integrasjoner, ikke standardfunksjoner. Før publikasjon må LeadProof-innlogging, tillatelser, sporingskode, godkjent måleflyt og korrekt dashboard kontrolleres ende-til-ende.
 
-**Historikk:** Versjonerte snapshots 32–55 beholdes uendret. #34, #44, #45, #48, #53, #54 og #55 avviste egne undersider; #46 godkjente AI-chatbot; #47 godkjente kundeanmeldelser som ANNET med JA, med bygg-først-avhengighet og lav prioritet.
+**Punkt 58 – venter:** Server-side sporing og Conversions API, mulig `/sporing-og-maling/server-side-sporing/`. Vurder egen teknisk tjeneste vs. overlapp med kanalsporing og samtykkestyring.
+
+**Historikk:** Versjonerte snapshots 32–56 beholdes uendret. #34, #44, #45, #48, #53, #54 og #55 avviste egne undersider; #46 godkjente AI-chatbot; #47 godkjente kundeanmeldelser som ANNET med JA, med bygg-først-avhengighet og lav prioritet.
