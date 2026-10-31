@@ -25,7 +25,7 @@ test('all normal page Hero editors expose independent optional tone controls',()
   assert.equal(tone.type,'object',source);
   assert.notEqual(tone.required,true,source);
   assert.deepEqual(tone.fields.map((f:any)=>f.name),['eyebrowPreset','titlePreset','supportPreset','primaryCtaPreset','secondaryCtaPreset']);
-  for(const field of tone.fields)assert.deepEqual(field.options.values.map((v:any)=>v.name),presets);
+  for(const field of tone.fields)assert.deepEqual(resolveField(field,cms.components).options.values.map((v:any)=>v.name),presets);
  }
  assert.deepEqual([...heroTonePresetValues],presets);
 });
