@@ -7,6 +7,4 @@ export const heroToneOverridesSchema=z.object({
  eyebrowPreset:option,
  titlePreset:option,
  supportPreset:option,
- primaryCtaPreset:option,
- secondaryCtaPreset:option,
 }).strict().optional();
