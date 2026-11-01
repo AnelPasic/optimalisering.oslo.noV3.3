@@ -219,6 +219,20 @@ components:
         description: "Obligatorisk reserveadresse. Behold eksisterende URL når du velger en side over. Det valgte alternativet brukes først; tøm valget for å bruke denne URL-en."
         type: string
         required: true
+  optionalHeroLink:
+    type: object
+    description: Valgfri sekundær handling. La både lenketekst og URL stå tomme hvis du ikke trenger en ekstra knapp. Fyll ut begge hvis knappen skal vises.
+    fields:
+      - name: label
+        label: Lenketekst
+        type: string
+      - name: suggestedHref
+        label: Velg side eller snarvei
+        component: cmsSuggestedHref
+      - name: href
+        label: Manuell URL (reserve)
+        type: string
+        description: Brukes når ingen side er valgt. For en sekundær knapp, fyll ut både lenketekst og URL.
   heroLayoutChoice:
     type: select
     description: Bildet, bildetype, beskrivelse og utsnitt bevares når du velger Sentrert uten bilde. Velg et annet oppsett for å vise det igjen. Sentrert med bilde viser tekst uten bilde hvis siden ikke har et lagret bilde. Teksten kommer først på mobil.
@@ -972,7 +986,8 @@ content:
           - &hubHerosecondaryCta
             name: secondaryCta
             label: Sekundær handling
-            component: link
+            component: optionalHeroLink
+            description: Ekstra knapp er valgfri. La feltene stå tomme for å bruke kun primær handling.
           - &heroProofCase
             name: featuredProofCaseId
             label: Utvalgt Proof i Hero
