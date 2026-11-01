@@ -11,14 +11,14 @@ const collection=group.items[0];
 const roots=readdirSync('src/content/pages').filter(f=>f.endsWith('.json'));
 const serviceFiles=roots.filter(file=>JSON.parse(readFileSync('src/content/pages/'+file,'utf8')).kind==='service');
 
-test('All services is the only service menu and has exactly six existing sites',()=>{
+test('All services is the only service menu and has five OWNER-retained service pages',()=>{
  assert.equal(group.items.length,1);
  assert.equal(collection.name,'services');
  assert.equal(collection.label,'Alle tjenester');
  assert.equal(collection.path,'app/src/content/pages');
  assert.deepEqual(collection.operations,{create:true,rename:false,delete:true});
  assert.deepEqual(collection.filename,{template:'{fields.slug}.json',field:false});
- assert.equal(serviceFiles.length,6);
+ assert.equal(serviceFiles.length,5);
  for(const file of serviceFiles){
   assert.ok(!collection.exclude.includes(file),file);
   const editors=cms.content.flatMap((e:any)=>e.type==='group'?e.items:[e]).filter((e:any)=>e.type==='file'&&e.path==='app/src/content/pages/'+file);
@@ -31,7 +31,7 @@ test('All services is the only service menu and has exactly six existing sites',
  }
 });
 
-test('All six service sources roundtrip in native CMS model without losing content, global placements, proof or visibility',()=>{
+test('All five service sources roundtrip without restoring local proof or losing OWNER content',()=>{
  assert.equal(cms.settings.content.merge,true);
  for(const file of serviceFiles){
   const original=JSON.parse(readFileSync('src/content/pages/'+file,'utf8'));
@@ -41,7 +41,8 @@ test('All six service sources roundtrip in native CMS model without losing conte
   assert.equal(pageSchema.safeParse(saved).success,true,file);
   assert.deepEqual(saved.sections,original.sections,file+' sections unchanged');
   assert.deepEqual(saved.hero,original.hero,file+' hero unchanged');
-  if(original.proof)assert.deepEqual(saved.proof,original.proof,file+' proof remains intact');
+  assert.equal(Object.hasOwn(saved,'proof'),false,file+' no local proof');
+  assert.equal(saved.sections.some((x:any)=>x._block==='proof'),false,file+' global-only Kunderesultater');
   if(original.composition)assert.deepEqual(saved.composition,original.composition,file+' special composition remains intact');
  }
 });
