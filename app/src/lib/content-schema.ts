@@ -4,7 +4,7 @@ import { surfaceSchema, sectionModel } from './surface.ts';
 import { headingAlignSchema } from './heading-alignment.ts';
 import {contentLayoutSchema,boxVariantSchema} from './content-presentation.ts';
 import { listingSchema, pageListSchema } from './page-list.ts';
-import { homeSectionDataSchema, proofSlotSchema } from './home-section-data.ts';
+import { homeSectionDataSchema } from './home-section-data.ts';
 import { compositionSchema, resolveRouteFamily, routeKindSchema } from './route-family.ts';
 
 import { heroSchema, resolveHomepageSections, sectionVisibilitySchema, validateHomepagePublicLinks } from './home-builder.ts';
@@ -32,7 +32,7 @@ export const pageSchema = z.preprocess((input,context)=>{
     }
   }
   if(raw?.kind!=='home'&&raw?.slug!=='synlighet'&&raw?.hero!==undefined&&!(raw.hero&&typeof raw.hero==='object'&&'primaryCta' in raw.hero)){const hero=heroPresentationSchema.safeParse(raw.hero);if(!hero.success)for(const issue of hero.error.issues)context.addIssue({...issue,path:['hero',...issue.path]});}
-  if(raw?.kind==='service'&&Object.hasOwn(raw,'proof'))context.addIssue({code:'custom',path:['proof'],message:'Lokale kundecaser skal ligge som flyttbar proof-blokk i sections, ikke som et eget toppnivåfelt'});
+  if(raw&&Object.hasOwn(raw,'proof'))context.addIssue({code:'custom',path:['proof'],message:'Lokale proof-felt er avviklet; bruk Global Innhold → Kunderesultater'});
   if(raw?.kind!=='home'&&Array.isArray(raw?.sections)&&raw.sections.some(section=>section&&typeof section==='object'&&'globalElement' in section)) context.addIssue({code:'custom',path:['sections'],message:'Use a global reference, not resolved master fields'});
   if(raw?.slug==='synlighet'&&raw.kind==='service') {
     try {
@@ -69,8 +69,8 @@ export const pageSchema = z.preprocess((input,context)=>{
     sections: z.array(z.object({
       uid: z.string().optional(), name: z.string().optional(), content: z.unknown().optional(), visibility: sectionVisibilitySchema,
       globalElement: z.enum(serviceGlobalIds).optional(),
-      _block: z.enum(['content', 'protected', 'pageList', 'selector', 'calculator', 'packages', 'proof', 'assessment', 'faq', 'pricingBridge', 'pageFaq', 'closingCta']).optional(), surface: surfaceSchema,
-      presentation:proofSlotSchema.optional(), serviceName:z.string().optional(), link:link.optional(),
+      _block: z.enum(['content', 'protected', 'pageList', 'selector', 'calculator', 'packages', 'assessment', 'faq', 'pricingBridge', 'pageFaq', 'closingCta']).optional(), surface: surfaceSchema,
+      serviceName:z.string().optional(), link:link.optional(),
       pageList: pageListSchema.optional(),
       headingAlign: headingAlignSchema,
       layout: contentLayoutSchema,
@@ -80,7 +80,6 @@ export const pageSchema = z.preprocess((input,context)=>{
     })),
     faq: z.array(z.object({ question: z.string(), answer: z.string() })).default([]),
     cta: link,
-    proof: proofSlotSchema.optional(),
     heroVisual: z.object({
       kind: z.enum(['photo', 'illustration']),
       src: z.string().regex(/^\/images\/services\/(?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.(?:webp|png|jpe?g|avif|svg)$/),
@@ -94,7 +93,6 @@ export const pageSchema = z.preprocess((input,context)=>{
     try { const route = resolveRouteFamily(page); validateSynlighetSections(page, route); } catch (error) { context.addIssue({code:'custom',path:['composition'],message:error instanceof Error?error.message:'Invalid composition'}); }
     if (page.kind !== 'home') page.sections.forEach((section, index) => {
       if (section.globalElement) return;
-      if (section._block==='proof') {if(page.kind!=='service'||section.id!=='resultater'||!section.presentation)context.addIssue({code:'custom',path:['sections',index],message:'Lokal proof krever et godkjent presentasjonsobjekt og resultater-anker'});return;}
       if (section._block==='pricingBridge') {if(page.kind!=='service'||section.id!=='service-priser'||section.link?.href!=='/priser/'||!section.serviceName?.trim())context.addIssue({code:'custom',path:['sections',index],message:'Prisbro krever navn og fast lenke til /priser/'});return;}
       if (section._block==='pageFaq') {if(section.id!=='sporsmal'||page.faq.length===0)context.addIssue({code:'custom',path:['sections',index],message:'FAQ-plassering krever egne spørsmål og sporsmal-anker'});return;}
       if (section._block==='closingCta') {if(section.id!=='avslutning'||page.kind!=='service')context.addIssue({code:'custom',path:['sections',index],message:'CTA-plassering krever service-side og avslutning-anker'});return;}

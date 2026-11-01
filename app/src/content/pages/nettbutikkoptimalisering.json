@@ -125,23 +125,6 @@
       ]
     },
     {
-      "_block": "proof",
-      "id": "resultater",
-      "visibility": "hidden",
-      "presentation": {
-        "publicationApproved": false,
-        "caseIds": [
-          "eurotents",
-          "nysta"
-        ],
-        "eyebrow": "Fullført handel er det som teller",
-        "heading": "Nettbutikkoptimalisering for mer salg",
-        "beforeLabel": "Før optimalisering",
-        "afterLabel": "Etter optimalisering",
-        "changeLabel": "Justert kjøpsflyt"
-      }
-    },
-    {
       "_block": "pageFaq",
       "id": "sporsmal"
     },

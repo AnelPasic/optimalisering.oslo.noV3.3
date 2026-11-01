@@ -38,5 +38,5 @@ test('old auto insertion fields are rejected with an exact source path', () => {
 });
 
 test('current Oslo page content has no retired composition flags',()=>{
-  assert.equal(checkPageSources()>=17,true);
+  assert.equal(checkPageSources()>=16,true,'OWNER-deleted Lokal SEO is not recreated');
 });

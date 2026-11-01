@@ -55,9 +55,8 @@ test('reject duplicate/unknown/unsupported masters, copied payloads and global/l
   const collision=withGlobal('regneeksempel');collision.sections.push({_block:'content',id:'regneeksempel',heading:'Duplikat',body:[]});assert.equal(pageSchema.safeParse(collision).success,false);
   const forged={...source,sections:[...source.sections,{...getGlobalElement('resultater'),globalElement:'resultater'}]};assert.equal(pageSchema.safeParse(forged).success,false);
   const other=JSON.parse(readFileSync('src/content/pages/konvertering.json','utf8'));other.sections.push(placement('resultater'));
-  assert.equal(pageSchema.safeParse(other).success,false,'explicit local and global proof may not share resultater anchor');
-  other.sections.find((s:any)=>s._block==='proof').visibility='hidden';
-  assert.equal(pageSchema.safeParse(other).success,true,'a hidden local proof may coexist with a visible global proof');
+  assert.equal(pageSchema.safeParse(other).success,true,'global Kunderesultater can be added to Konvertering explicitly');
+  assert.equal(other.sections.filter((s:any)=>s._block==='proof').length,0,'no local proof survives');
 });
 
 test('live fragment links require visible targets; protected local sjekk cannot be hidden',()=>{

@@ -3,53 +3,55 @@ import assert from 'node:assert/strict';
 import {readFileSync,readdirSync} from 'node:fs';
 import YAML from 'yaml';
 import {getPublishableCases,proofContentSchema} from '../src/lib/proof.ts';
-import {getHomepageBlock} from '../src/lib/home-builder.ts';
+import {getGlobalElement} from '../src/lib/home-builder.ts';
 import {pageSchema} from '../src/lib/content-schema.ts';
 import {cmsJsonSave,entryForFile} from './helpers/pages-cms-json.ts';
 
 const read=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
-const cases=readdirSync('src/content/proof').filter(p=>p.endsWith('.json')).map(p=>read('src/content/proof/'+p));
-const global=read('src/content/global-elements/resultater.json');
-const home=read('src/content/pages/home.json');
-const conversion=read('src/content/pages/konvertering.json');
-const netshop=read('src/content/pages/nettbutikkoptimalisering.json');
+const records=readdirSync('src/content/proof').filter(p=>p.endsWith('.json')).map(p=>read('src/content/proof/'+p));
+const global=read('src/content/global-elements/resultater.json').content;
+const pages=['home','synlighet','seo','priser','konvertering','nettbutikkoptimalisering'].map(slug=>read('src/content/pages/'+slug+'.json'));
 
-test('approved global and conversion cases retain their exact original public projection',()=>{
-  assert.deepEqual(getPublishableCases(getHomepageBlock(home,'proof').content,cases).map(c=>c.displayName),['Eurotents','Nysta','Helt Opplagt']);
-  const local=conversion.sections.find((s:any)=>s._block==='proof');
-  assert.ok(local);
-  assert.equal(local.id,'resultater');
-  assert.deepEqual(getPublishableCases(local.presentation,cases).map(c=>c.displayName),['Nysta']);
-  assert.equal(local.presentation.beforeLabel,'Før');
-  assert.equal(local.presentation.heading,'Fullført checkout økte fra 7,1 % til 43,6 %');
-  assert.equal(Object.hasOwn(conversion,'proof'),false,'no competing top-level proof');
-  assert.deepEqual(getPublishableCases(netshop.sections.find((s:any)=>s._block==='proof').presentation,cases),[]);
-  assert.equal(netshop.sections.find((s:any)=>s._block==='proof').visibility,'hidden');
-  assert.ok(global.content.publicationApproved);
+test('only global Kunderesultater controls published proof',()=>{
+  assert.deepEqual(getPublishableCases(global,records).map(p=>p.displayName),['Eurotents','Nysta','Helt Opplagt']);
+  assert.deepEqual(getGlobalElement('resultater').content,global);
+  for(const page of pages){
+    assert.equal(Object.hasOwn(page,'proof'),false,page.slug+' has no root proof');
+    assert.equal(page.sections.some((s:any)=>s._block==='proof'),false,page.slug+' has no local proof block');
+    assert.equal(pageSchema.safeParse(page).success,true,page.slug+' remains valid');
+    const hasGlobal=page.sections.some((s:any)=>s._block==='global'&&s.element==='resultater'&&s.visibility!=='hidden');
+    assert.equal(hasGlobal,['home','synlighet','seo','priser'].includes(page.slug),page.slug+' proof must be explicitly global');
+  }
 });
 
-test('proof gate rejects invalid, unauthorized and non-comparable records after relocation',()=>{
- const slot=conversion.sections.find((s:any)=>s._block==='proof').presentation;
+test('proof evidence still requires permission, period comparability and publication approval',()=>{
  for(const id of ['eurotents','nysta','helt-opplagt']){
-  const record=cases.find(r=>r.id===id);
-  for(const mutation of [{period:{...record.period,comparable:false}},{publicationApproved:false},{namingPermission:'NEEDS_PERMISSION'},{strategyReviewStatus:'READY_FOR_STRATEGY_REVIEW'},{before:null}]){
-   assert.deepEqual(getPublishableCases({...slot,caseIds:[id]},[proofContentSchema.parse({...record,...mutation})]),[]);
+  const record=records.find(r=>r.id===id);
+  assert.equal(getPublishableCases({...global,caseIds:[id]},records).length,1);
+  for(const patch of [{period:{...record.period,comparable:false}},{publicationApproved:false},{namingPermission:'NEEDS_PERMISSION'},{strategyReviewStatus:'READY_FOR_STRATEGY_REVIEW'},{before:null}]){
+    assert.deepEqual(getPublishableCases({...global,caseIds:[id]},[proofContentSchema.parse({...record,...patch})]),[]);
   }
  }
- assert.equal(pageSchema.safeParse({...conversion,proof:slot}).success,false);
+ assert.deepEqual(getPublishableCases({...global,publicationApproved:false},records),[]);
 });
 
-test('Pages CMS presents the local approved proof solely inside the ordered section list',()=>{
+test('CMS cannot create local proof but can still edit the global master and read evidence',()=>{
  const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
  const editor=entryForFile(cms,'app/src/content/pages/konvertering.json');
+ const blocks=editor.fields.find((f:any)=>f.name==='sections').blocks;
  assert.equal(editor.fields.some((f:any)=>f.name==='proof'),false);
- const sections=editor.fields.find((f:any)=>f.name==='sections');
- const proof=sections.blocks.find((block:any)=>block.name==='proof');
- assert.ok(proof);
- assert.equal(proof.fields.find((f:any)=>f.name==='presentation').fields.find((f:any)=>f.name==='publicationApproved').readonly,true);
- const saved=JSON.parse(cmsJsonSave(conversion,conversion,editor,cms));
- assert.deepEqual(saved,conversion);
- assert.equal(pageSchema.safeParse(saved).success,true);
- const registry=cms.content.find((entry:any)=>entry.name==='proofCases');
+ assert.equal(blocks.some((b:any)=>b.name==='proof'),false);
+ const globalEditor=cms.content.find((e:any)=>e.name==='globalElements').items.find((e:any)=>e.name==='globalProof');
+ assert.ok(globalEditor);
+ assert.ok(globalEditor.fields.find((f:any)=>f.name==='content').fields.some((f:any)=>f.name==='displayOverrides'));
+ const registry=cms.content.find((e:any)=>e.name==='proofCases');
  for(const op of ['create','rename','delete'])assert.equal(registry.operations[op],false);
+ for(const page of pages){
+   if(page.kind!=='service')continue;
+   const saved=JSON.parse(cmsJsonSave(page,page,entryForFile(cms,'app/src/content/pages/'+page.slug+'.json'),cms));
+   assert.deepEqual(saved,page);
+ }
+ const conversion=pages.find(p=>p.slug==='konvertering')!;
+ assert.equal(pageSchema.safeParse({...conversion,proof:{}}).success,false);
+ assert.equal(pageSchema.safeParse({...conversion,sections:[...conversion.sections,{_block:'proof',id:'resultater',presentation:global}]}).success,false);
 });

@@ -6,7 +6,6 @@ import type { RouteFamily } from '../lib/route-family';
 import CommercialHero from './CommercialHero.astro';
 import {resolvePageHero} from '../lib/page-hero';
 import ContentSection from './HomeSection.astro';
-import Proof from './HomeProof.astro';
 import PricingBridge from './ServicePricingBridge.astro';
 import Faq from './Faq.astro';
 import ClosingCta from './ClosingCta.astro';
@@ -18,16 +17,14 @@ interface Props {page:CollectionEntry<'pages'>['data'];commercial:HomepageConten
 const {page,commercial,route}=Astro.props;
 const capability=route.service;
 const globalProof=hasGlobalServiceProof(page);
-const localProof=page.sections.some(section=>section._block==='proof'&&section.visibility!=='hidden');
 const closingCta=page.sections.some(section=>section._block==='closingCta'&&section.visibility!=='hidden');
-const records=(localProof||globalProof)?(await getCollection('proofCases')).map(p=>p.data):[];
+const records=globalProof?(await getCollection('proofCases')).map(p=>p.data):[];
 validateServiceGlobalProof(page,records);
 ---
 <div class="invite-home invite-service">
   <CommercialHero content={resolvePageHero(page)} />
   {visibleServiceSections(page).map(section=><>
     {section.globalElement ? <GlobalContentSection element={section.globalElement} faqItems={page.faq} /> :
-     section._block==='proof'&&section.presentation ? <Proof content={section.presentation} records={records} primary /> :
      section._block==='pricingBridge'&&section.link&&section.serviceName ? <PricingBridge content={commercial.packages} link={section.link} serviceName={section.serviceName} /> :
      section._block==='pageFaq' ? <Faq items={page.faq} id="sporsmal" heading={closingCta||commercial.faqVisible===false?undefined:commercial.faqHeading} eyebrow={closingCta||commercial.faqVisible===false?undefined:commercial.faqEyebrow} /> :
      section._block==='closingCta' ? <ClosingCta id={section.id} link={page.cta} /> :

@@ -50,7 +50,7 @@ export function resolvePageSections(value: unknown) {
    const block=shared.get(row.entry)!;
    return block.visibility==='hidden'?[]:[block];
   }
-  if(['proof','pricingBridge','pageFaq','closingCta'].includes(row._block))return [{...row,heading:'',body:[]}];
+  if(['pricingBridge','pageFaq','closingCta'].includes(row._block))return [{...row,heading:'',body:[]}];
   return [row];
  });
 }

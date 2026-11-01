@@ -44,6 +44,9 @@
         "positionX": 50,
         "positionY": 50
       }
+    },
+    "toneOverrides": {
+      "eyebrowPreset": "inherit"
     }
   },
   "sections": [
@@ -105,21 +108,6 @@
         "Vi analyserer, gjennomfører avtalt arbeid og følger effekten. Du skal forstå hvorfor et tiltak kommer før et annet.",
         "Vi kan forbedre det vi kontrollerer. Vi kan ikke love en bestemt økning i konverteringsrate, omsetning eller antall kunder."
       ]
-    },
-    {
-      "_block": "proof",
-      "id": "resultater",
-      "presentation": {
-        "publicationApproved": true,
-        "caseIds": [
-          "nysta"
-        ],
-        "eyebrow": "Dokumenterte resultater",
-        "heading": "Fullført checkout økte fra 7,1 % til 43,6 %",
-        "beforeLabel": "Før",
-        "afterLabel": "Etter",
-        "changeLabel": "Arbeid"
-      }
     },
     {
       "_block": "content",
