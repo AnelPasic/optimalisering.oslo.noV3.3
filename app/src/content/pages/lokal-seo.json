@@ -15,9 +15,20 @@
       "href": "/#sjekk"
     },
     "visual": {
-      "kind": "none"
-    }
-  },
-  "sections": [],
-  "faq": []
+      "kind": "image",
+      "image": {
+        "kind": "photo",
+        "src": "/images/services/discoveringlocalfavorite-1.png",
+        "alt": "bli funnet på Google Maps",
+        "positionX": 50,
+        "positionY": 50
+      }
+    },
+    "toneOverrides": {
+      "eyebrowPreset": "spisspluskomiskplus",
+      "titlePreset": "spisspluskomiskplus",
+      "supportPreset": "spisspluskomiskplus"
+    },
+    "featuredProofCaseId": "helt-opplagt"
+  }
 }
