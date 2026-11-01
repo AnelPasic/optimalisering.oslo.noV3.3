@@ -7,9 +7,9 @@
   },
   "hero": {
     "layout": "split-right",
-    "eyebrow": "Tjeneste",
-    "title": "Lokal SEO",
-    "support": "Innhold kommer.",
+    "eyebrow": "Google Maps, bedriftsprofil og lokale søk",
+    "title": "Lokal SEO som gjør deg enklere å finne på Google. Postbudet har allerede adressen.",
+    "support": "Vi forbedrer Google bedriftsprofilen og nettsiden, slik at kunder ser hva dere tilbyr, hvor dere tar oppdrag og hvordan de får tak i dere. Kunder som trenger hjelp i nærheten, skal slippe å gjette om dere kan ta jobben. Gjetting er en dårlig bestillingsknapp.",
     "primaryCta": {
       "label": "Ta en gratis sjekk",
       "href": "/#sjekk"
