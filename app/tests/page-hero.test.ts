@@ -19,7 +19,7 @@ test('all ordinary pages have one canonical editable Hero, with no duplicated pe
  assert.equal(normal.length,15);
  for(const {page} of normal){
   assert.equal(pageSchema.safeParse(page).success,true,page.slug);
-  assert.deepEqual(Object.keys(page.hero).filter(k=>['layout','eyebrow','title','support','primaryCta','secondaryCta','visual'].includes(k)),
+  assert.deepEqual(Object.keys(page.hero).filter(k=>['layout','eyebrow','title','support','primaryCta','secondaryCta','visual','toneOverrides'].includes(k)),
     Object.keys(page.hero));
   assert.ok(page.hero.title&&page.hero.eyebrow&&page.hero.support&&page.hero.primaryCta);
   for(const key of ['eyebrow','title','intro','cta','heroVisual'])assert.ok(!Object.hasOwn(page,key),page.slug+' duplicated '+key);

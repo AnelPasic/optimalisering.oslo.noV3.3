@@ -1323,7 +1323,7 @@ content:
               collapsible:
                 collapsed: true
                 summary: "{index}. {heading}{element}"
-            required: true
+            required: false
             blockKey: _block
             blocks:
               - name: content
