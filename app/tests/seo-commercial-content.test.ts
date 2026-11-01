@@ -20,8 +20,7 @@ test('SEO page covers consultant, services and Oslo without additional competing
  const visible=pageSchema.parse(page).sections;
  assert.equal(new Set(visible.map(s=>s.id)).size,visible.length);
  const links=page.sections.flatMap((s:{links?:Array<{href:string}>})=>s.links??[]);
- for(const url of ['/innsikt/google-bedriftsprofil/','/priser/']) assert.ok(links.some((l:{href:string})=>l.href===url),url);
- assert.equal(links.some((l:{href:string})=>l.href==='/lokal-seo/'),false,'deleted route cannot remain linked');
+ for(const url of ['/lokal-seo/','/innsikt/google-bedriftsprofil/','/priser/']) assert.ok(links.some((l:{href:string})=>l.href===url),url);
  const menu=header.navigation.find((l:{href:string})=>l.href==='/synlighet/');
  const childLinks=menu.presentation==='mega'
   ? menu.mega?.columns.flatMap((column:{links:Array<{href:string}>})=>column.links)??[]

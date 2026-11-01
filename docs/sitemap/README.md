@@ -13,6 +13,16 @@ Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **K
 - **Foreslått prioritet:** P0 12, P1 29, P2 22. **P0-A = seks sider** som vurderes først, etter kontroll av eksisterende huber `/seo/`, `/konvertering/`, `/lokal-seo/`, `/synlighet/` og `/nettbutikkoptimalisering/`. Dette er ikke en ordre om å bygge alle 63.
 - **Åpen eierbeslutning:** Godkjen/juster den første prioriterte bølgen og eventuelle intensjonskonsolideringer, deretter avgrens pakker/priser/kapasitet. Først etter godkjenning kan implementering planlegges. Ingen nettsted-, CMS- eller prisendring inngår i analysen.
 
+## LÅST arkitekturbeslutning – fire tjenestekategorier (01.11.2026)
+
+**EIERBESLUTNING – BINDENDE FOR NESTE NAVIGASJONSRUNDE:** Toppnivået for tjenestene på **Optimalisering Oslo** er nøyaktig **Synlighet**, **Konvertering**, **Nettbutikk** og **Nettside & systemer**. Dette oppretter ingen nye tjeneste-URL-er og gjenåpner ikke tjenesteidéinnsamlingen ved #74.
+
+- [**Låst beslutning, prinsipper og full arbeidsordre for neste tråd**](./fase2-navigasjonsbeslutning-4-kategorier-2026-11-01.md).
+- [**Sorteringsutkast med alle 63 godkjente URL-er**](./fase2-navigasjon-63-tjenester-utkast-2026-11-01.json): foreløpig 27 / 17 / 9 / 10; **hver enkelttjenestes plassering er ikke låst**. Neste tråd skal gå gjennom, begrunne, justere og forelegge sorteringen eier før implementering.
+- **Priser** kan være separat nav-lenke, **Kontakt/Gratis sjekk** primær CTA og **Innsikt** sekundær inngang. Ingen av dem er en femte tjenestekategori.
+- **Ikke** flytt/endre/redirect URL-er bare for å passe menyen. En tjeneste har én primær megamenykategori, men kan internlenkes fra flere. Vis et kuratert utvalg – ikke alle 63 lenker i dropdown.
+- Dagens `app/src/content/site-chrome/header.json` er **ikke** endret; den viser fremdeles deler av Konvertering/Nettbutikk under Synlighet og skal først revideres etter gjennomgang og eiergodkjenning av endelig menykart.
+
 ## Gjeldende versjon (74)
 
 - [Master – beslutningslogg, begrunnelser, sitemap og handoff](./master-beslutninger-74-2026-11-01.md)

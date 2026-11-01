@@ -13,7 +13,7 @@ const sources = pageFilePaths();
 const reference = (element: string, visibility?: 'hidden') => ({ _block: 'global', element, ...(visibility ? { visibility } : {}) });
 
 test('every native page editor offers the same eight canonical global content references', () => {
-  assert.equal(sources.length,16);
+  assert.equal(sources.length,17);
   for (const file of sources) {
     const entry = entryForFile(cms, 'app/src/content/pages/' + file);
     assert.ok(entry, file);
@@ -28,7 +28,7 @@ test('every native page editor offers the same eight canonical global content re
   }
 });
 
-test('all remaining pages save references in the existing section order, without copying masters or changing owned content', () => {
+test('all 17 pages save references in the existing section order, without copying masters or changing owned content', () => {
   for (const file of sources) {
     const original = JSON.parse(readFileSync('src/content/pages/' + file,'utf8'));
     const entry = entryForFile(cms, 'app/src/content/pages/' + file);

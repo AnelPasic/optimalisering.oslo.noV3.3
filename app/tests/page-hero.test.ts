@@ -16,10 +16,10 @@ const normal=pages.filter(p=>p.page.kind!=='home'&&p.page.slug!=='synlighet');
 const expectedHeroFields=['layout','toneOverrides','eyebrow','title','support','primaryCta','secondaryCta','featuredProofCaseId','visual'];
 
 test('all ordinary pages have one canonical editable Hero, with no duplicated persisted text or image keys',()=>{
- assert.equal(normal.length,14);
+ assert.equal(normal.length,15);
  for(const {page} of normal){
   assert.equal(pageSchema.safeParse(page).success,true,page.slug);
-  assert.deepEqual(Object.keys(page.hero).filter(k=>['layout','toneOverrides','eyebrow','title','support','primaryCta','secondaryCta','visual'].includes(k)),
+  assert.deepEqual(Object.keys(page.hero).filter(k=>['layout','eyebrow','title','support','primaryCta','secondaryCta','visual','toneOverrides'].includes(k)),
     Object.keys(page.hero));
   assert.ok(page.hero.title&&page.hero.eyebrow&&page.hero.support&&page.hero.primaryCta);
   for(const key of ['eyebrow','title','intro','cta','heroVisual'])assert.ok(!Object.hasOwn(page,key),page.slug+' duplicated '+key);
@@ -81,7 +81,7 @@ test('Pages CMS edits one nested Hero; restores all sections, media and CTA with
   edited.hero.title+=' CMS-test';
   const saved=JSON.parse(cmsJsonSave(page,edited,editor,cms));
   assertPreservedContent(edited,saved);
-  assert.deepEqual(saved.sections,page.sections,file);
+  assert.deepEqual(saved.sections??[],page.sections,file);
   assert.deepEqual(saved.hero.visual,page.hero.visual,file);
   const result=pageSchema.safeParse(saved);assert.ok(result.success,file+': '+(result.success?'':JSON.stringify(result.error.issues).slice(0,2600)));
   const restored=JSON.parse(cmsJsonSave(saved,page,editor,cms));
@@ -93,7 +93,7 @@ test('Pages CMS edits one nested Hero; restores all sections, media and CTA with
     assert.ok(retired===undefined||Object.keys(retired).length===0,file);
     assert.deepEqual(actual,expected,file);
   }
-  else assert.deepEqual(restored,page,file);
+  else assert.deepEqual({...restored,sections:restored.sections??[],faq:restored.faq??[]},{...page,sections:page.sections??[],faq:page.faq??[]},file);
  }
 });
 

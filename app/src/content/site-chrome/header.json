@@ -32,6 +32,11 @@
                 "label": "AI-synlighet (AIO)",
                 "href": "/ai-synlighet/",
                 "description": "Bli lettere å forstå og finne i AI-søk og svar"
+              },
+              {
+                "label": "Lokal SEO",
+                "href": "/lokal-seo/",
+                "description": "Google Maps, Google bedriftsprofil og lokale søk"
               }
             ]
           },

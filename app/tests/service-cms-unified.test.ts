@@ -11,14 +11,14 @@ const collection=group.items[0];
 const roots=readdirSync('src/content/pages').filter(f=>f.endsWith('.json'));
 const serviceFiles=roots.filter(file=>JSON.parse(readFileSync('src/content/pages/'+file,'utf8')).kind==='service');
 
-test('All services is the only service menu and has five OWNER-retained service pages',()=>{
+test('All services is the only service menu and has six currently authored service pages',()=>{
  assert.equal(group.items.length,1);
  assert.equal(collection.name,'services');
  assert.equal(collection.label,'Alle tjenester');
  assert.equal(collection.path,'app/src/content/pages');
  assert.deepEqual(collection.operations,{create:true,rename:false,delete:true});
  assert.deepEqual(collection.filename,{template:'{fields.slug}.json',field:false});
- assert.equal(serviceFiles.length,5);
+ assert.equal(serviceFiles.length,6);
  for(const file of serviceFiles){
   assert.ok(!collection.exclude.includes(file),file);
   const editors=cms.content.flatMap((e:any)=>e.type==='group'?e.items:[e]).filter((e:any)=>e.type==='file'&&e.path==='app/src/content/pages/'+file);
@@ -31,7 +31,7 @@ test('All services is the only service menu and has five OWNER-retained service 
  }
 });
 
-test('All five service sources roundtrip without restoring local proof or losing OWNER content',()=>{
+test('All six service sources roundtrip without restoring local proof or losing OWNER content',()=>{
  assert.equal(cms.settings.content.merge,true);
  for(const file of serviceFiles){
   const original=JSON.parse(readFileSync('src/content/pages/'+file,'utf8'));
@@ -39,7 +39,7 @@ test('All five service sources roundtrip without restoring local proof or losing
   const saved=JSON.parse(cmsJsonSave(original,structuredClone(original),entry,cms));
   assertPreservedContent(original,saved);
   assert.equal(pageSchema.safeParse(saved).success,true,file);
-  assert.deepEqual(saved.sections,original.sections,file+' sections unchanged');
+  assert.deepEqual(saved.sections??[],original.sections??[],file+' sections unchanged');
   assert.deepEqual(saved.hero,original.hero,file+' hero unchanged');
   assert.equal(Object.hasOwn(saved,'proof'),false,file+' no local proof');
   assert.equal(saved.sections.some((x:any)=>x._block==='proof'),false,file+' global-only Kunderesultater');

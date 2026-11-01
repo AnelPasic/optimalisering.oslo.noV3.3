@@ -1,19 +1,23 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {readFileSync, readdirSync, existsSync} from 'node:fs';
+import {readFileSync, readdirSync} from 'node:fs';
 import {pageSchema} from '../src/lib/content-schema.ts';
 import {sharedContentSchema} from '../src/lib/shared-content.ts';
 import {pageFilePaths} from './helpers/page-sources.ts';
 
 const read = (path:string) => JSON.parse(readFileSync(path,'utf8'));
 const home=read('src/content/pages/home.json');
+const local=read('src/content/pages/lokal-seo.json');
 const facts=read('src/content/global-content/lafoitems.json');
 
 test('CONTENT-02: live pages no longer contain the two identified obsolete test blocks',()=>{
  assert.equal(home.sections.some((s:any)=>s.id==='forbehovsvelger'),false);
- assert.equal(existsSync('src/content/pages/lokal-seo.json'),false,'OWNER deletion must be preserved');
+ assert.equal(local.sections.some((s:any)=>s.id==='testing-links'),false);
  assert.deepEqual(home.sections.filter((s:any)=>s._block==='global').map((s:any)=>s.element),
    ['behov','regneeksempel','resultater','priser','sjekk','sporsmal']);
+ // OWNER intentionally deleted the former Lokal SEO body. Do not require old sections.
+ assert.deepEqual(local.sections,[]);
+ assert.deepEqual(local.faq,[]);
 });
 
 test('CONTENT-02: SEO fakta preserves three independent cards and source-backed numbers without repetition',()=>{
@@ -31,9 +35,9 @@ test('CONTENT-02: SEO fakta preserves three independent cards and source-backed 
  assert.equal((final.text.match(/1 419 av 2 000/g)||[]).length,1);
 });
 
-test('CONTENT-02: all remaining page files still validate and keep safe section anchors',()=>{
+test('CONTENT-02: all seventeen existing page files still validate and keep safe section anchors',()=>{
  const names=pageFilePaths();
- assert.equal(names.length,16);
+ assert.equal(names.length,17);
  for(const name of names){
    const raw=read('src/content/pages/'+name);
    const check=pageSchema.safeParse(raw);

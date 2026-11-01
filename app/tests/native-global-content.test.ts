@@ -21,7 +21,7 @@ test('native JSON editor and reference on all remaining pages, no promotion',()=
  assert.equal(globalCollection.filename,'{fields.id}.json');
  assert.deepEqual(globalCollection.fields.map((f:any)=>f.name),['_block','uid','id','name','eyebrow','heading','headingAlign','layout','surface','body','items','links']);
  const files=readdirSync('src/content/pages').filter(file=>file.endsWith('.json'));
- assert.equal(files.length,16);
+ assert.equal(files.length,17);
  for(const file of files){
   const editor=entryForFile(cms,'app/src/content/pages/'+file);
   const sections=editor.fields.find((f:any)=>f.name==='sections');

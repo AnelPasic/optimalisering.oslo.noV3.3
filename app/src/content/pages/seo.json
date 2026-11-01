@@ -149,6 +149,10 @@
       ],
       "links": [
         {
+          "label": "Les om lokal SEO og Google Maps",
+          "href": "/lokal-seo/"
+        },
+        {
           "label": "Guide til Google bedriftsprofil",
           "href": "/innsikt/google-bedriftsprofil/"
         }
@@ -189,10 +193,6 @@
     {
       "_block": "global",
       "element": "sjekk"
-    },
-    {
-      "_block": "pageFaq",
-      "id": "sporsmal"
     }
   ],
   "faq": [

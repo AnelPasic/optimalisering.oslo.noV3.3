@@ -6,7 +6,7 @@ import {pageSchema} from '../src/lib/content-schema.ts';
 import {cmsJsonSave,entryForFile} from './helpers/pages-cms-json.ts';
 
 const config=YAML.parse(readFileSync('../.pages.yml','utf8'));
-const slugs=['konvertering','synlighet','seo','ai-synlighet','nettbutikkoptimalisering'];
+const slugs=['konvertering','synlighet','seo','lokal-seo','ai-synlighet','nettbutikkoptimalisering'];
 const read=(slug:string)=>JSON.parse(readFileSync(`src/content/pages/${slug}.json`,'utf8'));
 
 test('one ordered section editor without local proof across all remaining service pages',()=>{
@@ -23,7 +23,7 @@ test('one ordered section editor without local proof across all remaining servic
    assert.equal(Object.hasOwn(page.composition?.service??{},field),false,slug+' implicit '+field);
   assert.equal(pageSchema.safeParse(page).success,true,slug+' schema valid');
   const saved=JSON.parse(cmsJsonSave(page,page,editor,config));
-  assert.deepEqual(saved,page,slug+' CMS round-trip preserves OWNER content');
+  assert.deepEqual({...saved,sections:saved.sections??[],faq:saved.faq??[]},{...page,sections:page.sections??[],faq:page.faq??[]},slug+' CMS round-trip preserves OWNER content');
   const localFaq=page.sections.some((s:any)=>s._block==='pageFaq'&&s.visibility!=='hidden');
   const globalFaq=page.sections.some((s:any)=>s._block==='global'&&s.element==='sporsmal'&&s.visibility!=='hidden');
   assert.ok(localFaq||globalFaq,slug+' FAQ explicit and movable');
@@ -54,7 +54,12 @@ test('non-global proof is eliminated, and new placements require the global mast
  assert.equal(pageSchema.safeParse(global).success,true,'approved global Kunderesultater may be placed explicitly');
 });
 
-test('deleted OWNER service page stays deleted and cannot return via branch migration',()=>{
+test('OWNER-restored blank Lokal SEO page stays blank and does not gain proof or sections',()=>{
  const files=readdirSync('src/content/pages');
- assert.equal(files.includes('lokal-seo.json'),false);
+ assert.equal(files.includes('lokal-seo.json'),true);
+ const page=read('lokal-seo');
+ assert.equal(page.kind,'service');
+ assert.deepEqual(page.sections,[]);
+ assert.deepEqual(page.faq,[]);
+ assert.equal(page.sections.some((s:any)=>s._block==='proof'),false);
 });

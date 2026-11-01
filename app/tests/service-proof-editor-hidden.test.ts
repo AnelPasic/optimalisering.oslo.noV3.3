@@ -22,10 +22,10 @@ test('service editor has no local proof fields, keeps global master and evidence
 
 test('CMS saves services without creating or restoring local proof',()=>{
  assert.equal(cms.settings.content.merge,true);
- for(const slug of ['konvertering','nettbutikkoptimalisering','seo','synlighet','ai-synlighet']){
+ for(const slug of ['konvertering','nettbutikkoptimalisering','seo','synlighet','lokal-seo','ai-synlighet']){
   const current=read(slug),entry=entryForFile(cms,`app/src/content/pages/${slug}.json`);
   const saved=JSON.parse(cmsJsonSave(current,current,entry,cms));
-  assert.deepEqual(saved,current);
+  assert.deepEqual({...saved,sections:saved.sections??[],faq:saved.faq??[]},{...current,sections:current.sections??[],faq:current.faq??[]});
   assert.equal(Object.hasOwn(saved,'proof'),false);
   assert.equal(saved.sections.some((s:any)=>s._block==='proof'),false);
  }

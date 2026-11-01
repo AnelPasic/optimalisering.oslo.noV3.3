@@ -37,7 +37,7 @@ test('CONTENT-04 Service: delivery, context and qualified next step, without a f
  assert.ok(service.sections.some((s:any)=>s._block==='global'&&s.element==='priser'));
  assert.equal(service.hero.primaryCta.href,'/seo/#sjekk');
  const links=service.sections.flatMap((s:any)=>s.links??[]).map((l:any)=>l.href);
- for(const href of ['/priser/','/ai-synlighet/']) assert.ok(links.includes(href),href);
+ for(const href of ['/priser/','/lokal-seo/','/ai-synlighet/']) assert.ok(links.includes(href),href);
 });
 
 test('CONTENT-04 Article: substantive local answer, relevant cross-link, no forced sale/proof',()=>{
@@ -45,7 +45,7 @@ test('CONTENT-04 Article: substantive local answer, relevant cross-link, no forc
  assert.ok(article.listing?.title?.trim()&&article.listing?.summary?.trim());
  assert.equal(article.sections.some((s:any)=>s._block==='global'),false);
  const links=article.sections.flatMap((s:any)=>s.links??[]).map((l:any)=>l.href);
- assert.equal(links.includes('/lokal-seo/'),false,'no link to OWNER-deleted route');
+ assert.ok(links.includes('/lokal-seo/'));
  assert.ok(links.includes('/#sjekk'));
  assert.ok(article.faq.length>0);
 });

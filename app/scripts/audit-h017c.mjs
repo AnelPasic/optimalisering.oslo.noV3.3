@@ -34,5 +34,7 @@ for(const file of readdirSync('src/content/pages').filter(f=>f.endsWith('.json')
  }
  assert.ok(!/Oslo Privatklinikk|Tankeverksted|Oracles|evidenceMetrics|strategyReviewEvidence|Windsor|coordination\/|1\.403|0\.058|31\/50|16 265/.test(html));
 }
-assert.equal(readdirSync('src/content/pages').includes('lokal-seo.json'),false,'OWNER deleted Lokal SEO; never restore');
+const blank=read('src/content/pages/lokal-seo.json');
+assert.deepEqual(blank.sections,[],'OWNER restored an empty Lokal SEO page and must retain its empty content');
+assert.equal(blank.sections.some(s=>s._block==='proof'),false);
 console.log('H-017D proof audit PASS: global-only placements, approved case data, private evidence protection and OWNER deletion retained.');

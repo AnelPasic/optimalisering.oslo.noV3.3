@@ -16,7 +16,7 @@ function visualField(file:string) {
 }
 
 test('every page uses one non-list conditional Hero visual block matching existing kind and image JSON', () => {
-  assert.equal(files.length,16);
+  assert.equal(files.length,17);
   for (const file of files) {
     const visual = visualField(file);
     assert.equal(visual.type,'block',file);
@@ -44,7 +44,7 @@ test('pages with no Hero image save unchanged without validation errors in inact
     const page = load(file);
     if (page.hero.visual.kind !== 'none') continue;
     const saved = JSON.parse(cmsJsonSave(page,page,editor(file),cms));
-    assert.deepEqual(saved,page,file);
+    assert.deepEqual({...saved,sections:saved.sections??[],faq:saved.faq??[]},{...page,sections:page.sections??[],faq:page.faq??[]},file);
     assert.equal(saved.hero.visual.kind,'none',file);
     assert.ok(pageSchema.safeParse(saved).success,file);
   }

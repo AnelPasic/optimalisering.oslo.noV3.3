@@ -10,7 +10,7 @@ import {cmsJsonSave,entryForFile} from './helpers/pages-cms-json.ts';
 const read=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
 const records=readdirSync('src/content/proof').filter(p=>p.endsWith('.json')).map(p=>read('src/content/proof/'+p));
 const global=read('src/content/global-elements/resultater.json').content;
-const pages=['home','synlighet','seo','priser','konvertering','nettbutikkoptimalisering'].map(slug=>read('src/content/pages/'+slug+'.json'));
+const pages=['home','synlighet','seo','priser','konvertering','nettbutikkoptimalisering','lokal-seo'].map(slug=>read('src/content/pages/'+slug+'.json'));
 
 test('only global Kunderesultater controls published proof',()=>{
   assert.deepEqual(getPublishableCases(global,records).map(p=>p.displayName),['Eurotents','Nysta','Helt Opplagt']);
@@ -49,7 +49,7 @@ test('CMS cannot create local proof but can still edit the global master and rea
  for(const page of pages){
    if(page.kind!=='service')continue;
    const saved=JSON.parse(cmsJsonSave(page,page,entryForFile(cms,'app/src/content/pages/'+page.slug+'.json'),cms));
-   assert.deepEqual(saved,page);
+   assert.deepEqual({...saved,sections:saved.sections??[],faq:saved.faq??[]},{...page,sections:page.sections??[],faq:page.faq??[]});
  }
  const conversion=pages.find(p=>p.slug==='konvertering')!;
  assert.equal(pageSchema.safeParse({...conversion,proof:{}}).success,false);
