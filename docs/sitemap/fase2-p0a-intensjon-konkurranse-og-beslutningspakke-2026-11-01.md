@@ -81,6 +81,8 @@ Kollisjonene er **eksakte delt anker** fra kuratert JSON, ikke bevis for at Goog
 - **Partner:** høyere prosjekt-/avtalenivå (historisk anker rundt 24 900), begrunnet i faktisk timekapasitet/kompetanse og ikke ubegrenset arbeid. Omfattende A/B-testing foreløpig kun Partner i eksisterende prosjektregler.
 - **LeadProof:** ikke pris et kundedashboard som bevist tilgjengelig før innlogging, RBAC, faktisk dataflyt og samtykke-/måleoppsett er testet. Ingen inkludert innbygd telefonsporing eller full salg/CRM-attribusjon.
 
+**Offentlig prisreferanse (kontroll 01.11.2026, ikke representativ statistikk):** [Gads](https://gads.no/) oppgir 4 900 kr/mnd pluss 4 900 i oppstart; [Pagelook](https://pagelook.no/tjenester/google-ads/) oppgir løpende drift fra 4 900 kr/mnd; [Techspace](https://techspace.no/digital-markedsforing-tjenester/google-ads-oslo/) oppgir fra 7 900 kr/mnd, alle med separate annonsekostnader. Disse tre offentlige prisene viser at Medons 4 500-hypotese er en **lav inngang**, ikke nødvendigvis en lønnsom pris. Omfang og kampanjetall varierer og kan ikke sammenlignes som like produkter.
+
 **Margin-gate før prislås:** Beregn for hver variant `månedspris − intern timekost × estimert månedstid − verktøy/ekstern kost − support/rapport = bidrag`. Test spesielt worst-case måned; ta separat oppstartsbetaling ved oppsettarbeid. Timer, intern kost, kundetilgang, plattform/tredjepart, responstid og oppsigelse er **ikke dokumentert** i SEO-arket og skal ikke anslås som faktiske Medon-data.
 
 ## E. Owner-beslutning / gjenstående kontroller
