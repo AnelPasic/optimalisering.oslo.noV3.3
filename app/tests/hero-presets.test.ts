@@ -15,7 +15,7 @@ const choices=[{name:'split-right',label:'Tekst venstre / bilde høyre'},{name:'
 
 test('every Hero editor offers identical four presets with non-destructive image guidance',()=>{
  const sources=pages.map(p=>`app/src/content/pages/${p.file}`).concat('app/src/content/terminology/glossary.json','app/src/content/presentation/hero-layouts.json');
- assert.equal(sources.length,19);
+ assert.equal(sources.length,18);
  for(const path of sources){
   const editor=entryForFile(cms,path),root=editor.fields.find((f:any)=>f.name==='hero'),hero=resolveField(root,cms.components);
   const field=resolveField(hero.fields.find((f:any)=>f.name==='layout'),cms.components);

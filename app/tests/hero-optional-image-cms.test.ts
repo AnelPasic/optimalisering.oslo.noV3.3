@@ -16,7 +16,7 @@ function visualField(file:string) {
 }
 
 test('every page uses one non-list conditional Hero visual block matching existing kind and image JSON', () => {
-  assert.equal(files.length,17);
+  assert.equal(files.length,16);
   for (const file of files) {
     const visual = visualField(file);
     assert.equal(visual.type,'block',file);

@@ -15,7 +15,7 @@ const config=(edit:any={})=>({mode:'automatic',sort:'editorial',limit:6,layout:'
 const entry=(slug:string)=>raw.find(page=>page.slug===slug)!;
 
 test('PageList selector uses canonical source page slugs and is available in every page editor',()=>{
- assert.equal(names.length,17);
+ assert.equal(names.length,16);
  const values=cms.components.pageListPageReference.options.values.map((v:any)=>v.name).sort();
  assert.deepEqual(values,raw.map(p=>p.slug).sort());
  for(const name of names) {

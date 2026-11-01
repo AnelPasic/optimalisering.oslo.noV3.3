@@ -6,9 +6,9 @@ import {projectSelectedLinks,safeCmsHref} from '../src/lib/cms-link-choice.ts';
 import {pageSchema} from '../src/lib/content-schema.ts';
 import {pageFilePaths,loadPageFile} from './helpers/page-sources.ts';
 const page=(name:string)=>loadPageFile(name+'.json');
-test('17 existing page JSON records stay valid and are never mutated',()=>{
+test('16 remaining page JSON records stay valid and are never mutated',()=>{
  const files=pageFilePaths();
- assert.equal(files.length,17);
+ assert.equal(files.length,16);
  for(const file of files){const p=loadPageFile(file),before=structuredClone(p);
   const parsed=pageSchema.safeParse(p);assert.equal(parsed.success,true,file+': '+(parsed.success?'':JSON.stringify(parsed.error.issues.slice(0,3))));
   assert.deepEqual(p,before,file);

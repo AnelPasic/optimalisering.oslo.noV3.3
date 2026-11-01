@@ -12,8 +12,8 @@ const cms = YAML.parse(readFileSync('../.pages.yml','utf8'));
 const files = pageFilePaths();
 const load = (file: string) => JSON.parse(readFileSync('src/content/pages/'+file,'utf8'));
 
-test('all 17 pages expose the same native page-specific FAQ list, without changing the slug/SEO/Hero contract',()=>{
-  assert.equal(files.length,17);
+test('all remaining 16 pages expose the same native page-specific FAQ list, without changing the slug/SEO/Hero contract',()=>{
+  assert.equal(files.length,16);
   for (const file of files) {
     const path='app/src/content/pages/'+file;
     const entry=entryForFile(cms,path);

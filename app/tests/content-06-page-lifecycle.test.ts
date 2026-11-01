@@ -30,7 +30,7 @@ test('CONTENT-06: single All services native Create/Delete, fixed pages remain o
  }
  const protectedNames=['home','priser','kontakt','personvern','vilkar','om','vurdering','innsikt'];
  for(const n of protectedNames)assert.ok(service.exclude.includes(n+'.json'),n);
- for(const n of ['seo','synlighet','lokal-seo','ai-synlighet','konvertering','nettbutikkoptimalisering'])assert.ok(!service.exclude.includes(n+'.json'),n);
+ for(const n of ['seo','synlighet','ai-synlighet','konvertering','nettbutikkoptimalisering'])assert.ok(!service.exclude.includes(n+'.json'),n);
  const all=(entries:any[]):any[]=>entries.flatMap((e:any)=>e.type==='group'?all(e.items):[e]);
  for(const editor of all(cms.content)){
   if(editor.type==='file'&&editor.path?.startsWith('app/src/content/pages/'))assert.equal(editor.operations?.delete,false,editor.path);

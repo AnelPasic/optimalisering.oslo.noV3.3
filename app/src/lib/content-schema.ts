@@ -69,7 +69,7 @@ export const pageSchema = z.preprocess((input,context)=>{
     sections: z.array(z.object({
       uid: z.string().optional(), name: z.string().optional(), content: z.unknown().optional(), visibility: sectionVisibilitySchema,
       globalElement: z.enum(serviceGlobalIds).optional(),
-      _block: z.enum(['content', 'protected', 'pageList', 'selector', 'calculator', 'packages', 'assessment', 'faq', 'pricingBridge', 'pageFaq', 'closingCta']).optional(), surface: surfaceSchema,
+      _block: z.enum(['content', 'protected', 'pageList', 'selector', 'calculator', 'packages', 'proof', 'assessment', 'faq', 'pricingBridge', 'pageFaq', 'closingCta']).optional(), surface: surfaceSchema,
       serviceName:z.string().optional(), link:link.optional(),
       pageList: pageListSchema.optional(),
       headingAlign: headingAlignSchema,
@@ -93,6 +93,7 @@ export const pageSchema = z.preprocess((input,context)=>{
     try { const route = resolveRouteFamily(page); validateSynlighetSections(page, route); } catch (error) { context.addIssue({code:'custom',path:['composition'],message:error instanceof Error?error.message:'Invalid composition'}); }
     if (page.kind !== 'home') page.sections.forEach((section, index) => {
       if (section.globalElement) return;
+      if (section._block==='proof') {context.addIssue({code:'custom',path:['sections',index],message:'Lokal proof er ikke tillatt: bruk Global Innhold → Kunderesultater'});return;}
       if (section._block==='pricingBridge') {if(page.kind!=='service'||section.id!=='service-priser'||section.link?.href!=='/priser/'||!section.serviceName?.trim())context.addIssue({code:'custom',path:['sections',index],message:'Prisbro krever navn og fast lenke til /priser/'});return;}
       if (section._block==='pageFaq') {if(section.id!=='sporsmal'||page.faq.length===0)context.addIssue({code:'custom',path:['sections',index],message:'FAQ-plassering krever egne spørsmål og sporsmal-anker'});return;}
       if (section._block==='closingCta') {if(section.id!=='avslutning'||page.kind!=='service')context.addIssue({code:'custom',path:['sections',index],message:'CTA-plassering krever service-side og avslutning-anker'});return;}
