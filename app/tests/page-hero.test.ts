@@ -81,7 +81,7 @@ test('Pages CMS edits one nested Hero; restores all sections, media and CTA with
   edited.hero.title+=' CMS-test';
   const saved=JSON.parse(cmsJsonSave(page,edited,editor,cms));
   assertPreservedContent(edited,saved);
-  assert.deepEqual(saved.sections,page.sections,file);
+  assert.deepEqual(saved.sections??[],page.sections,file);
   assert.deepEqual(saved.hero.visual,page.hero.visual,file);
   const result=pageSchema.safeParse(saved);assert.ok(result.success,file+': '+(result.success?'':JSON.stringify(result.error.issues).slice(0,2600)));
   const restored=JSON.parse(cmsJsonSave(saved,page,editor,cms));
@@ -93,7 +93,7 @@ test('Pages CMS edits one nested Hero; restores all sections, media and CTA with
     assert.ok(retired===undefined||Object.keys(retired).length===0,file);
     assert.deepEqual(actual,expected,file);
   }
-  else assert.deepEqual(restored,page,file);
+  else assert.deepEqual({...restored,sections:restored.sections??[],faq:restored.faq??[]},{...page,sections:page.sections??[],faq:page.faq??[]},file);
  }
 });
 

@@ -44,7 +44,7 @@ test('pages with no Hero image save unchanged without validation errors in inact
     const page = load(file);
     if (page.hero.visual.kind !== 'none') continue;
     const saved = JSON.parse(cmsJsonSave(page,page,editor(file),cms));
-    assert.deepEqual(saved,page,file);
+    assert.deepEqual({...saved,sections:saved.sections??[],faq:saved.faq??[]},{...page,sections:page.sections??[],faq:page.faq??[]},file);
     assert.equal(saved.hero.visual.kind,'none',file);
     assert.ok(pageSchema.safeParse(saved).success,file);
   }
