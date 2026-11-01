@@ -48,17 +48,19 @@ export function prepareCleanBuild(root = appRoot) {
 }
 
 if (process.argv[1] && pathToFileURL(resolve(process.argv[1])).href === import.meta.url) {
-  let commit = process.env.CF_PAGES_COMMIT_SHA || process.env.GITHUB_SHA || 'unknown';
-  if (commit === 'unknown') {
-    try {
-      commit = execFileSync('git', ['rev-parse', 'HEAD'], {
-        cwd: dirname(fileURLToPath(import.meta.url)),
-        encoding: 'utf8',
-        stdio: ['ignore', 'pipe', 'ignore'],
-      }).trim();
-    } catch { /* Build providers do not always expose a git checkout. */ }
+  const declaredCommit = process.env.WORKERS_CI_COMMIT_SHA || process.env.CF_PAGES_COMMIT_SHA || process.env.GITHUB_SHA || 'unknown';
+  let checkoutCommit = 'unknown';
+  try {
+    checkoutCommit = execFileSync('git', ['rev-parse', 'HEAD'], {
+      cwd: dirname(fileURLToPath(import.meta.url)),
+      encoding: 'utf8',
+      stdio: ['ignore', 'pipe', 'ignore'],
+    }).trim();
+  } catch { /* Some build providers do not expose a git checkout. */ }
+  console.log(`[cms-parity-prebuild] Source commit: ${declaredCommit === 'unknown' ? checkoutCommit : declaredCommit}; checkout: ${checkoutCommit}`);
+  if (process.env.WORKERS_CI_COMMIT_SHA && checkoutCommit !== 'unknown' && checkoutCommit !== process.env.WORKERS_CI_COMMIT_SHA) {
+    throw new Error('Cloudflare build checkout does not match WORKERS_CI_COMMIT_SHA');
   }
-  console.log(`[cms-parity-prebuild] Source commit: ${commit}`);
   const count = prepareCleanBuild();
   console.log(`[cms-parity-prebuild] Validated ${count} page sources; cleared Astro/Vite build cache.`);
 }

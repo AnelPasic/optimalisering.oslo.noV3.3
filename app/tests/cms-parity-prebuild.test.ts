@@ -40,3 +40,8 @@ test('old auto insertion fields are rejected with an exact source path', () => {
 test('current Oslo page content has no retired composition flags',()=>{
   assert.equal(checkPageSources()>=17,true,'OWNER-deleted Lokal SEO is not recreated');
 });
+
+test('Astro rebuild refreshes the Content Layer independently of provider cache', () => {
+  const packageJson = JSON.parse(readFileSync(new URL('../package.json', import.meta.url), 'utf8'));
+  assert.equal(packageJson.scripts.build, 'astro build --force && npm run search:index');
+});
