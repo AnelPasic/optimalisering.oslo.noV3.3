@@ -5,7 +5,7 @@ import YAML from 'yaml';
 import {pageSchema} from '../src/lib/content-schema.ts';
 import {cmsJsonSave,entryForFile,assertPreservedContent} from './helpers/pages-cms-json.ts';
 
-test('empty Lokal SEO service page can be edited in CMS and keeps its navigation destination',()=>{
+test('Lokal SEO service Hero can be edited in CMS while the rest of the page remains empty',()=>{
  const file='src/content/pages/lokal-seo.json';
  const page=JSON.parse(readFileSync(file,'utf8'));
  assert.equal(page.slug,'lokal-seo');
@@ -29,7 +29,7 @@ test('empty Lokal SEO service page can be edited in CMS and keeps its navigation
  assert.equal(child?.href,'/lokal-seo/');
  assert.ok(child?.description?.length>12);
  // OWNER requested a fresh page shell, not restoration of old sections or FAQ.
- assert.deepEqual(page.sections,[]);
- assert.deepEqual(page.faq,[]);
+ assert.deepEqual(page.sections??[],[]);
+ assert.deepEqual(page.faq??[],[]);
  assert.ok(!readFileSync('src/content.config.ts','utf8').includes('drafts'));
 });

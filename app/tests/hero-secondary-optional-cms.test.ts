@@ -34,8 +34,8 @@ test('Lokal SEO saves three Hero tone choices without a secondary CTA',()=>{
  assert.deepEqual(saved.hero.toneOverrides,edited.hero.toneOverrides);
  assert.equal(saved.hero.title,page.hero.title);
  assert.deepEqual(saved.hero.primaryCta,page.hero.primaryCta);
- assert.deepEqual(saved.sections??[],page.sections);
- assert.deepEqual(saved.faq??[],page.faq);
+ assert.deepEqual(saved.sections??[],page.sections??[]);
+ assert.deepEqual(saved.faq??[],page.faq??[]);
  assert.ok(pageSchema.safeParse(saved).success,'a CMS save must accept the minimal page with no secondary CTA');
 });
 

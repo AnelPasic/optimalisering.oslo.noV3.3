@@ -33,7 +33,7 @@ test('all seventeen pages save references in the existing section order, without
     const original = JSON.parse(readFileSync('src/content/pages/' + file,'utf8'));
     const entry = entryForFile(cms, 'app/src/content/pages/' + file);
     const changed = structuredClone(original);
-    changed.sections.push(reference('mekanisme'));
+    changed.sections=[...(changed.sections??[]),reference('mekanisme')];
     const saved = JSON.parse(cmsJsonSave(original, changed, entry, cms));
     assertPreservedContent(changed,saved);
     assert.deepEqual(saved.sections.at(-1),reference('mekanisme'),file);
@@ -50,8 +50,8 @@ test('all seventeen pages save references in the existing section order, without
 test('every non-home page can hide a placed reference without destroying the source or resurrecting a fallback', () => {
   for (const file of sources.filter(file=>file!=='home.json')) {
     const source = JSON.parse(readFileSync('src/content/pages/'+file,'utf8'));
-    const before = structuredClone(source.sections);
-    source.sections.push(reference('mekanisme','hidden'));
+    const before = structuredClone(source.sections??[]);
+    source.sections=[...(source.sections??[]),reference('mekanisme','hidden')];
     const parsed = pageSchema.parse(source);
     assert.equal(parsed.sections.some(section => section.globalElement === 'mekanisme'),false,file);
     assert.deepEqual(source.sections.slice(0,-1),before,file);
