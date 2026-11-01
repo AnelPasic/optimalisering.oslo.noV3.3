@@ -19,7 +19,7 @@ test('explicit references resolve canonical masters without copying source or ad
     const page = pageSchema.parse(raw), global = page.sections.find(s=>s.globalElement===id)!;
     const master=getGlobalElement(id);
     assert.ok(global,id); assert.deepEqual(global.content,'content' in master ? master.content : undefined);
-    assert.equal(page.proof,undefined); assert.equal(page.composition?.service?.sectionVisuals.length,source.composition.service.sectionVisuals.length);
+    assert.equal(Object.hasOwn(page,'proof'),false); assert.equal(page.composition?.service?.sectionVisuals.length,source.composition.service.sectionVisuals.length);
     assert.deepEqual(raw.hero,original.hero); assert.deepEqual(Object.keys(raw.sections.at(-1)).sort(),['_block','element']);
   }
 });
@@ -29,7 +29,7 @@ test('only explicitly placed visible proof renders; hiding/removing never restor
   assert.equal(hasGlobalServiceProof(page),true); validateServiceGlobalProof(page,records);
   for(const raw of [source,withGlobal('resultater',{visibility:'hidden'})]){
     const parsed = pageSchema.parse(raw); assert.equal(hasGlobalServiceProof(parsed),false);
-    assert.deepEqual(parsed.sections,pageSchema.parse(source).sections); assert.deepEqual(parsed.proof,source.proof);
+    assert.deepEqual(parsed.sections,pageSchema.parse(source).sections); assert.equal(Object.hasOwn(parsed,'proof'),false);
   }
 });
 
@@ -81,7 +81,7 @@ test('proof, prices and FAQ follow explicit position/visibility/removal without 
     raw.hero.primaryCta=source.hero.primaryCta;
     assert.equal(visibleServiceSections(pageSchema.parse(raw)).some((s:any)=>s.id===id),false);
     raw.sections.splice(1,1);assert.deepEqual(pageSchema.parse(raw).sections,pageSchema.parse(base).sections);
-    assert.equal(pageSchema.parse(raw).proof,undefined);
+    assert.equal(Object.hasOwn(pageSchema.parse(raw),'proof'),false);
   }
 });
 
