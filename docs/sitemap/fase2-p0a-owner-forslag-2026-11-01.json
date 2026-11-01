@@ -1,0 +1,186 @@
+{
+  "schema": "phase2_owner_review_v1",
+  "as_of": "2026-11-01",
+  "status": "proposed_not_approved",
+  "main_basis_sha": "1895d4bb30f4b03e564d81d00a83f7e61e3aaaa6",
+  "intake_closed": true,
+  "approved_url_count_unchanged": 63,
+  "tiers_unchanged": {
+    "P0": 12,
+    "P1": 29,
+    "P2": 22
+  },
+  "sheet": "https://docs.google.com/spreadsheets/d/1ZvFikP6jKJ8r41H66oFQ31BPdhNzp6-N11VIJ-cetWM/edit",
+  "sheet_rows_total": 853,
+  "google_no_top10_verified": false,
+  "serp_evidence": "sampled_public_norwegian_search_results_not_locally_pinned_top10",
+  "semantic_clustering_853_complete": false,
+  "publication_approved": false,
+  "price_approved": false,
+  "owner_proposals": [
+    {
+      "url": "/google-ads/",
+      "decision": "JA",
+      "sequence": 1,
+      "primary_intent": "google_ads_agency_management",
+      "keyword": "google ads byrå",
+      "sheet_row": 140,
+      "volume": 90,
+      "organic_kd": 17.8,
+      "retainer": "high",
+      "gate": "ads_scope_measurement_margin"
+    },
+    {
+      "url": "/lokal-seo/google-maps/",
+      "decision": "ENDRE",
+      "sequence": 2,
+      "primary_intent": "paid_help_optimizing_existing_google_business_profile",
+      "keyword": "google maps seo",
+      "sheet_row": 842,
+      "volume": 10,
+      "organic_kd": 29.1,
+      "additional_keyword_row_851": {
+        "term": "optimalisere google bedriftsprofil",
+        "volume": null,
+        "organic_kd": 44.7
+      },
+      "retainer": "conditional_on_real_monthly_local_SEO_work",
+      "gate": "separate_navigational_GBP_queries_and_local_hub"
+    },
+    {
+      "url": "/seo/seo-analyse/",
+      "decision": "ENDRE",
+      "sequence": 3,
+      "primary_intent": "paid_seo_audit_and_action_plan",
+      "keyword": "seo analyse",
+      "sheet_row": 91,
+      "volume": 210,
+      "organic_kd": 33.5,
+      "variant_row_92": {
+        "term": "seo-analyse",
+        "volume": 210,
+        "organic_kd": 17.8,
+        "do_not_sum": true
+      },
+      "retainer": "audit_to_implementation",
+      "gate": "paid_audit_separate_from_free_vurdering"
+    },
+    {
+      "url": "/kontinuerlig-optimalisering/",
+      "decision": "JA",
+      "sequence": 4,
+      "primary_intent": "scoped_monthly_site_improvement",
+      "keyword": "optimalisering av nettsider",
+      "sheet_row": 370,
+      "volume": 170,
+      "organic_kd": 21.5,
+      "variant_row_369": {
+        "term": "optimalisering av nettside",
+        "volume": 170,
+        "organic_kd": null,
+        "do_not_sum": true
+      },
+      "retainer": "primary",
+      "gate": "time_cap_margin_scope"
+    },
+    {
+      "url": "/nettsideanalyse/",
+      "decision": "UTSETT",
+      "sequence": null,
+      "primary_intent": "paid_holistic_website_diagnostic",
+      "keyword": "nettside analyse",
+      "sheet_row": 584,
+      "volume": 10,
+      "organic_kd": 18.5,
+      "retainer": "indirect",
+      "gate": "priced_audit_example_not_free_website_check"
+    },
+    {
+      "url": "/sporing-og-maling/leadsporing/",
+      "decision": "UTSETT",
+      "sequence": null,
+      "primary_intent": "customer_visible_verified_leadproof_lead_source_quality",
+      "keyword": null,
+      "sheet_row": null,
+      "volume": null,
+      "organic_kd": null,
+      "retainer": "conditional",
+      "gate": "leadproof_production_customer_rbac_forms_consent_data_end_to_end"
+    }
+  ],
+  "collision_ownership": [
+    {
+      "term": "landingsside optimalisering",
+      "sheet_row": 850,
+      "volume": null,
+      "organic_kd": 38.6,
+      "owner": "/landingssider/"
+    },
+    {
+      "term": "konverteringsoptimalisering nettbutikk",
+      "sheet_row": 402,
+      "volume": 10,
+      "organic_kd": 19.5,
+      "owner": "/nettbutikkoptimalisering/"
+    },
+    {
+      "term": "webanalyse",
+      "sheet_row": 218,
+      "volume": 70,
+      "organic_kd": 24,
+      "owner": "/sporing-og-maling/"
+    },
+    {
+      "term": "google ads byrå",
+      "sheet_row": 140,
+      "volume": 90,
+      "organic_kd": 17.8,
+      "owner": "/google-ads/"
+    },
+    {
+      "term": "facebook annonsering",
+      "sheet_row": 129,
+      "volume": 390,
+      "organic_kd": 35.2,
+      "owner": "/meta-ads/"
+    },
+    {
+      "term": "google bedriftsprofil",
+      "sheet_row": 35,
+      "volume": 590,
+      "organic_kd": 23,
+      "owner": "/lokal-seo/google-maps/",
+      "buyer_intent_caveat": "mostly_mixed_navigational_informational_not_590_paid_leads"
+    },
+    {
+      "term": "nettbutikk migrering",
+      "sheet_row": 838,
+      "volume": 10,
+      "organic_kd": null,
+      "owner": "/nettsidemigrering/"
+    },
+    {
+      "term": "wordpress drift",
+      "sheet_row": 328,
+      "volume": 40,
+      "organic_kd": 13.9,
+      "owner": "/nettsidevedlikehold/"
+    },
+    {
+      "term": "gdpr nettside",
+      "sheet_row": 206,
+      "volume": 30,
+      "organic_kd": 17.5,
+      "owner": "/sporing-og-maling/samtykkestyring/",
+      "caveat": "technical_consent_intent_only_not_legal_advice"
+    },
+    {
+      "term": "integrasjoner nettside",
+      "sheet_row": 758,
+      "volume": 10,
+      "organic_kd": null,
+      "owner": null,
+      "caveat": "mixed_CRM_ecommerce_workflow_intent_requires_serp"
+    }
+  ]
+}
