@@ -25,7 +25,8 @@
     "qa:cms": "node scripts/audit-cms-roundtrip.ts",
     "qa:proof": "node scripts/qa-proof-guard.mjs",
     "search:index": "npx --yes pagefind@1.5.2 --site dist && node scripts/verify-pagefind.mjs",
-    "check:managed": "node scripts/check-managed-pages.mjs"
+    "check:managed": "node scripts/check-managed-pages.mjs",
+    "prebuild": "node scripts/prepare-clean-build.mjs"
   },
   "dependencies": {
     "@fontsource-variable/figtree": "^5.3.0",

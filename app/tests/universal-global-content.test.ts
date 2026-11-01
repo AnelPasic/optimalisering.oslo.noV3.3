@@ -28,7 +28,7 @@ test('every native page editor offers the same eight canonical global content re
   }
 });
 
-test('all seventeen pages save references in the existing section order, without copying masters or changing owned content', () => {
+test('all 17 pages save references in the existing section order, without copying masters or changing owned content', () => {
   for (const file of sources) {
     const original = JSON.parse(readFileSync('src/content/pages/' + file,'utf8'));
     const entry = entryForFile(cms, 'app/src/content/pages/' + file);

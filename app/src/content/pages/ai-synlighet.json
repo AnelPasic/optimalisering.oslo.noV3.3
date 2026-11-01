@@ -120,6 +120,14 @@
           "href": "/vurdering/"
         }
       ]
+    },
+    {
+      "_block": "pageFaq",
+      "id": "sporsmal"
+    },
+    {
+      "_block": "closingCta",
+      "id": "avslutning"
     }
   ],
   "faq": [

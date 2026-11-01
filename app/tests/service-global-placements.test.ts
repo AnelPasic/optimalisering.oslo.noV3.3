@@ -19,7 +19,7 @@ test('explicit references resolve canonical masters without copying source or ad
     const page = pageSchema.parse(raw), global = page.sections.find(s=>s.globalElement===id)!;
     const master=getGlobalElement(id);
     assert.ok(global,id); assert.deepEqual(global.content,'content' in master ? master.content : undefined);
-    assert.deepEqual(page.proof,source.proof); assert.deepEqual(page.composition?.service?.pricingBridge,source.composition.service.pricingBridge);
+    assert.equal(Object.hasOwn(page,'proof'),false); assert.equal(page.composition?.service?.sectionVisuals.length,source.composition.service.sectionVisuals.length);
     assert.deepEqual(raw.hero,original.hero); assert.deepEqual(Object.keys(raw.sections.at(-1)).sort(),['_block','element']);
   }
 });
@@ -29,7 +29,7 @@ test('only explicitly placed visible proof renders; hiding/removing never restor
   assert.equal(hasGlobalServiceProof(page),true); validateServiceGlobalProof(page,records);
   for(const raw of [source,withGlobal('resultater',{visibility:'hidden'})]){
     const parsed = pageSchema.parse(raw); assert.equal(hasGlobalServiceProof(parsed),false);
-    assert.deepEqual(parsed.sections,pageSchema.parse(source).sections); assert.deepEqual(parsed.proof,source.proof);
+    assert.deepEqual(parsed.sections,pageSchema.parse(source).sections); assert.equal(Object.hasOwn(parsed,'proof'),false);
   }
 });
 
@@ -55,7 +55,8 @@ test('reject duplicate/unknown/unsupported masters, copied payloads and global/l
   const collision=withGlobal('regneeksempel');collision.sections.push({_block:'content',id:'regneeksempel',heading:'Duplikat',body:[]});assert.equal(pageSchema.safeParse(collision).success,false);
   const forged={...source,sections:[...source.sections,{...getGlobalElement('resultater'),globalElement:'resultater'}]};assert.equal(pageSchema.safeParse(forged).success,false);
   const other=JSON.parse(readFileSync('src/content/pages/konvertering.json','utf8'));other.sections.push(placement('resultater'));
-  assert.equal(pageSchema.safeParse(other).success,true,'other services now share the same global catalogue');
+  assert.equal(pageSchema.safeParse(other).success,true,'global Kunderesultater can be added to Konvertering explicitly');
+  assert.equal(other.sections.filter((s:any)=>s._block==='proof').length,0,'no local proof survives');
 });
 
 test('live fragment links require visible targets; protected local sjekk cannot be hidden',()=>{
@@ -80,7 +81,7 @@ test('proof, prices and FAQ follow explicit position/visibility/removal without 
     raw.hero.primaryCta=source.hero.primaryCta;
     assert.equal(visibleServiceSections(pageSchema.parse(raw)).some((s:any)=>s.id===id),false);
     raw.sections.splice(1,1);assert.deepEqual(pageSchema.parse(raw).sections,pageSchema.parse(base).sections);
-    assert.equal(pageSchema.parse(raw).proof,undefined);
+    assert.equal(Object.hasOwn(pageSchema.parse(raw),'proof'),false);
   }
 });
 

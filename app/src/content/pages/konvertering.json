@@ -4,19 +4,12 @@
   "composition": {
     "commercialText": true,
     "service": {
-      "closingCta": false,
       "sectionSurfaces": [
         {
           "section": "sammenheng",
           "surface": "secondary"
         }
       ],
-      "proofAfter": "prioritering",
-      "pricingBridge": {
-        "after": "sammenheng",
-        "href": "/priser/",
-        "serviceName": "Konvertering"
-      },
       "sectionVisuals": [
         {
           "section": "friksjon",
@@ -137,6 +130,15 @@
       ]
     },
     {
+      "_block": "pricingBridge",
+      "id": "service-priser",
+      "serviceName": "Konvertering",
+      "link": {
+        "label": "Se pakker og priser",
+        "href": "/priser/"
+      }
+    },
+    {
       "_block": "protected",
       "id": "sjekk",
       "eyebrow": "Gratis, manuell sjekk",
@@ -151,6 +153,10 @@
           "href": "/#sjekk"
         }
       ]
+    },
+    {
+      "_block": "pageFaq",
+      "id": "sporsmal"
     }
   ],
   "faq": [
@@ -170,16 +176,5 @@
       "question": "Hva koster arbeid med konvertering?",
       "answer": "Konvertering kan være det prioriterte området i Optimalisering til 4 500 kr/mnd eks. mva. Hvis konvertering skal jobbe sammen med et annet område, kan Vekst eller Partner være mer relevant. Se pakkene for full oversikt."
     }
-  ],
-  "proof": {
-    "publicationApproved": true,
-    "caseIds": [
-      "nysta"
-    ],
-    "eyebrow": "Dokumenterte resultater",
-    "heading": "Fullført checkout økte fra 7,1 % til 43,6 %",
-    "beforeLabel": "Før",
-    "afterLabel": "Etter",
-    "changeLabel": "Arbeid"
-  }
+  ]
 }

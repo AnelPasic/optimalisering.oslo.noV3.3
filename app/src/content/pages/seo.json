@@ -193,6 +193,10 @@
     {
       "_block": "global",
       "element": "sjekk"
+    },
+    {
+      "_block": "pageFaq",
+      "id": "sporsmal"
     }
   ],
   "faq": [

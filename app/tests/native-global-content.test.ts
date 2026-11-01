@@ -12,7 +12,7 @@ const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
 const globalCollection=cms.content.find((x:any)=>x.name==='globalElements').items.find((x:any)=>x.name==='sharedContent');
 const specimen={_block:'content',uid:randomUUID(),id:'demo-felles',name:'Global demonstrasjon',eyebrow:'Felles',heading:'Samme tekst på flere sider',body:['Avsnitt en','Avsnitt to'],headingAlign:'left',layout:'two-columns',surface:'base-200',items:[{title:'Eksempel',text:'Kortet følger med',surface:'default',boxVariant:'card'}],links:[{label:'Les mer',href:'/om/'}]};
 const reference={_block:'sharedContent',entry:'demo-felles'};
-test('native JSON editor and reference on all seventeen pages, no promotion',()=>{
+test('native JSON editor and reference on all remaining pages, no promotion',()=>{
  assert.equal(globalCollection.type,'collection');
  assert.equal(globalCollection.operations.create,true);
  assert.equal(globalCollection.operations.rename,false);

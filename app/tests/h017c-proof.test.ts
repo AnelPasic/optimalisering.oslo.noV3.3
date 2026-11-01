@@ -1,67 +1,57 @@
-import {homepageBlockEditor} from './helpers/pages-cms-json.ts';
-import {getHomepageBlock, homepageBlockSchema} from '../src/lib/home-builder.ts';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync, readdirSync } from 'node:fs';
+import {readFileSync,readdirSync} from 'node:fs';
 import YAML from 'yaml';
-import { getPublishableCases, proofContentSchema } from '../src/lib/proof.ts';
-import { pageSchema } from '../src/lib/content-schema.ts';
-import { cmsJsonSave, entryForFile, assertPreservedContent, resolveField } from './helpers/pages-cms-json.ts';
+import {getPublishableCases,proofContentSchema} from '../src/lib/proof.ts';
+import {getGlobalElement} from '../src/lib/home-builder.ts';
+import {pageSchema} from '../src/lib/content-schema.ts';
+import {cmsJsonSave,entryForFile} from './helpers/pages-cms-json.ts';
 
-const read = (file: string) => JSON.parse(readFileSync(file, 'utf8'));
-const records = readdirSync('src/content/proof').filter(f => f.endsWith('.json')).map(f => read(`src/content/proof/${f}`));
-const home = read('src/content/pages/home.json');
-const cms = YAML.parse(readFileSync('../.pages.yml', 'utf8'));
+const read=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
+const records=readdirSync('src/content/proof').filter(p=>p.endsWith('.json')).map(p=>read('src/content/proof/'+p));
+const global=read('src/content/global-elements/resultater.json').content;
+const pages=['home','synlighet','seo','priser','konvertering','nettbutikkoptimalisering','lokal-seo'].map(slug=>read('src/content/pages/'+slug+'.json'));
 
-test('D-075-D-076 selects the final guarded proof placements in order', () => {
-  assert.deepEqual(getPublishableCases(getHomepageBlock(home,'proof').content, records).map(p => p.displayName), ['Eurotents', 'Nysta', 'Helt Opplagt']);
-  for (const [slug, name] of [['konvertering', 'Nysta'], ['synlighet', 'Helt Opplagt']]) {
-    const page = read(`src/content/pages/${slug}.json`);
-    assert.deepEqual(getPublishableCases(page.proof, records).map(p => p.displayName), [name]);
-  }
-  assert.deepEqual(getPublishableCases({ publicationApproved: true, caseIds: ['oslo-privatklinikk'] }, records), []);
-  for (const id of ['eurotents', 'nysta', 'helt-opplagt']) {
-    const record = records.find(p => p.id === id);
-    assert.ok(record);
-    for (const mutation of [{ period: { ...record.period, comparable: false } }, { publicationApproved: false }, { namingPermission: 'NEEDS_PERMISSION' }, { strategyReviewStatus: 'READY_FOR_STRATEGY_REVIEW' }, { before: null }]) {
-      assert.deepEqual(getPublishableCases({ publicationApproved: true, caseIds: [id] }, [proofContentSchema.parse({ ...record, ...mutation })]), []);
-    }
+test('only global Kunderesultater controls published proof',()=>{
+  assert.deepEqual(getPublishableCases(global,records).map(p=>p.displayName),['Eurotents','Nysta','Helt Opplagt']);
+  assert.deepEqual(getGlobalElement('resultater').content,global);
+  for(const page of pages){
+    assert.equal(Object.hasOwn(page,'proof'),false,page.slug+' has no root proof');
+    assert.equal(page.sections.some((s:any)=>s._block==='proof'),false,page.slug+' has no local proof block');
+    assert.equal(pageSchema.safeParse(page).success,true,page.slug+' remains valid');
+    const hasGlobal=page.sections.some((s:any)=>s._block==='global'&&s.element==='resultater'&&s.visibility!=='hidden');
+    assert.equal(hasGlobal,['home','synlighet','seo','priser'].includes(page.slug),page.slug+' proof must be explicitly global');
   }
 });
 
-test('safe home/service CMS presentation edits preserve authority and case gates', () => {
-  for (const slug of ['home', 'konvertering', 'synlighet']) {
-    const file=slug==='home'?'src/content/global-elements/resultater.json':`src/content/pages/${slug}.json`;
-    const original = read(file);
-    const form = structuredClone(original);
-    const slot = slug === 'home' ? form.content : form.proof;
-    assert.ok(slot);
-    slot.heading = 'Resultater fra kundearbeid';
-    slot.eyebrow = 'Dokumenterte resultater';
-    slot.beforeLabel = 'Før tiltakene'; slot.afterLabel = 'Etter tiltakene'; slot.changeLabel = 'Arbeidet';
-    slot.caseIds = ['nysta'];
-    const entry = entryForFile(cms, `app/${file}`);
-    const saved = readFromSave(cmsJsonSave(original, form, entry, cms));
-    assertPreservedContent(form, saved);
-    const schema=slug==='home'?homepageBlockSchema:pageSchema;
-    assert.deepEqual(schema.parse(saved), schema.parse(form));
-    const savedSlot = slug === 'home' ? saved.content : saved.proof;
-    assert.equal(savedSlot.heading, slot.heading);
-    assert.deepEqual(getPublishableCases(savedSlot, records).map(p => p.displayName), ['Nysta']);
-    if(slug==='home') assert.equal(saved.content.publicationApproved,original.content.publicationApproved);
-    else assert.equal(saved.authority, original.authority);
-    const proof=slug==='home'?homepageBlockEditor(cms,'proof'):resolveField(entry.fields.find((f:any)=>f.name==='proof'),cms.components);
-    assert.equal(proof.fields.find((f: any) => f.name === 'publicationApproved').readonly, true);
-    slot.caseIds = [];
-    const cleared = readFromSave(cmsJsonSave(original, form, entry, cms));
-    schema.parse(cleared);
-    const clearedSlot = slug === 'home' ? cleared.content : cleared.proof;
-    assert.deepEqual(getPublishableCases(clearedSlot, records), [], 'Empty CMS reference selection removes proof');
+test('proof evidence still requires permission, period comparability and publication approval',()=>{
+ for(const id of ['eurotents','nysta','helt-opplagt']){
+  const record=records.find(r=>r.id===id);
+  assert.equal(getPublishableCases({...global,caseIds:[id]},records).length,1);
+  for(const patch of [{period:{...record.period,comparable:false}},{publicationApproved:false},{namingPermission:'NEEDS_PERMISSION'},{strategyReviewStatus:'READY_FOR_STRATEGY_REVIEW'},{before:null}]){
+    assert.deepEqual(getPublishableCases({...global,caseIds:[id]},[proofContentSchema.parse({...record,...patch})]),[]);
   }
-  const registry = cms.content.find((e: any) => e.name === 'proofCases');
-  const check = (fields: any[]) => fields.forEach(f => { assert.equal(f.readonly, true, f.name); if (f.fields) check(f.fields); });
-  check(registry.fields);
-  for (const op of ['create', 'delete', 'rename']) assert.equal(registry.operations[op], false);
+ }
+ assert.deepEqual(getPublishableCases({...global,publicationApproved:false},records),[]);
 });
 
-function readFromSave(value: string) { return JSON.parse(value); }
+test('CMS cannot create local proof but can still edit the global master and read evidence',()=>{
+ const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
+ const editor=entryForFile(cms,'app/src/content/pages/konvertering.json');
+ const blocks=editor.fields.find((f:any)=>f.name==='sections').blocks;
+ assert.equal(editor.fields.some((f:any)=>f.name==='proof'),false);
+ assert.equal(blocks.some((b:any)=>b.name==='proof'),false);
+ const globalEditor=cms.content.find((e:any)=>e.name==='globalElements').items.find((e:any)=>e.name==='globalProof');
+ assert.ok(globalEditor);
+ assert.ok(globalEditor.fields.find((f:any)=>f.name==='content').fields.some((f:any)=>f.name==='displayOverrides'));
+ const registry=cms.content.find((e:any)=>e.name==='proofCases');
+ for(const op of ['create','rename','delete'])assert.equal(registry.operations[op],false);
+ for(const page of pages){
+   if(page.kind!=='service')continue;
+   const saved=JSON.parse(cmsJsonSave(page,page,entryForFile(cms,'app/src/content/pages/'+page.slug+'.json'),cms));
+   assert.deepEqual({...saved,sections:saved.sections??[],faq:saved.faq??[]},{...page,sections:page.sections??[],faq:page.faq??[]});
+ }
+ const conversion=pages.find(p=>p.slug==='konvertering')!;
+ assert.equal(pageSchema.safeParse({...conversion,proof:{}}).success,false);
+ assert.equal(pageSchema.safeParse({...conversion,sections:[...conversion.sections,{_block:'proof',id:'resultater',presentation:global}]}).success,false);
+});

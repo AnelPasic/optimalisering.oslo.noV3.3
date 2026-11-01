@@ -11,9 +11,11 @@ const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
 
 test('migration is lossless and idempotent, retaining mixed sections and derived legacy CTA exactly',()=>{
   const legacy={...structuredClone(source),hero:{layout:'split-right'},eyebrow:'Eksisterende overtekst',title:'Eksisterende tittel',intro:'Eksisterende ingress',cta:{label:'Sjekk',href:'/#sjekk'},heroVisual:{kind:'illustration',src:'/images/services/discoveringlocalfavorite-1.png',alt:'Bli funnet',positionX:50,positionY:50}};
-  legacy.composition.service.pricingBridge={after:'sammenheng',href:'/priser/',serviceName:'Synlighet'};
+  // Hero migration must not reintroduce retired auto-inserted pricing/proof metadata.
   const before=resolvePageHero(legacy),migrated=migrateSynlighetHero(legacy,before);
-  assert.deepEqual(resolvePageHero(migrated),before);
+  const after=resolvePageHero(migrated);
+  assert.deepEqual({...after,breadcrumbs:[]},{...before,breadcrumbs:[]},'authored Hero copy, layout, CTAs and media remain exact');
+  assert.equal(after.breadcrumbs.at(-1)?.label,'Synlighet','canonical breadcrumb remains the service label');
   assert.deepEqual(migrated.sections,legacy.sections);
   assert.deepEqual(migrateSynlighetHero(migrated),migrated);
   assert.deepEqual(migrateSynlighetHero(source),source);

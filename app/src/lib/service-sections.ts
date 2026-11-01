@@ -8,7 +8,7 @@ export const serviceGlobalPlacementSchema = globalPlacementSchema.refine(placeme
 // The same eight catalogue entries are available in every page editor.
 export const seoGlobalIds = serviceGlobalIds;
 const mixedServiceSlugs = new Set(['synlighet', 'seo']);
-type Section = { id: string; visibility?: 'hidden'; globalElement?: typeof serviceGlobalIds[number] };
+type Section = { id: string; visibility?: 'hidden'; globalElement?: typeof serviceGlobalIds[number]; _block?: string };
 type ServicePage = { slug: string; sections: Section[]; faq?: readonly { question: string; answer: string }[] };
 const fixedAnchors = ['service-hero', 'resultater', 'priser', 'service-priser', 'sporsmal', 'main', 'mobile-menu'];
 
@@ -50,6 +50,7 @@ export function resolvePageSections(value: unknown) {
    const block=shared.get(row.entry)!;
    return block.visibility==='hidden'?[]:[block];
   }
+  if(['pricingBridge','pageFaq','closingCta'].includes(row._block))return [{...row,heading:'',body:[]}];
   return [row];
  });
 }
@@ -81,7 +82,8 @@ export function validateSynlighetSections(page: ServicePage, _route: RouteFamily
   if (!mixedServiceSlugs.has(page.slug)) return;
   const ids = new Set<string>();
   for (const section of page.sections) {
-    if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(section.id) || (!section.globalElement && (['hero', ...fixedAnchors].includes(section.id) || /^(?:calc-|scenario-|term-|package-home-|header-(?:desktop|mobile)-submenu-)/.test(section.id))) || (section.visibility !== 'hidden' && ids.has(section.id))) {
+      const intentionalFaq = section._block==='pageFaq' && section.id==='sporsmal';
+    if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(section.id) || (!section.globalElement && !intentionalFaq && (['hero', ...fixedAnchors].includes(section.id) || /^(?:calc-|scenario-|term-|package-home-|header-(?:desktop|mobile)-submenu-)/.test(section.id))) || (section.visibility !== 'hidden' && ids.has(section.id))) {
       throw new Error('Tjenestesidens seksjoner krever unike, gyldige ankre, og kan ikke bruke reserverte module-ID-er');
     }
     if (section.visibility !== 'hidden') ids.add(section.id);
@@ -93,7 +95,7 @@ export function validateSynlighetSections(page: ServicePage, _route: RouteFamily
 }
 
 function liveAnchors(page: ServicePage): Set<string> {
-  return new Set(['service-hero', 'main', 'mobile-menu', ...(page.faq?.length ? ['sporsmal'] : []), ...visibleServiceSections(page).map(section => section.id)]);
+  return new Set(['service-hero', 'main', 'mobile-menu', ...visibleServiceSections(page).map(section => section.id)]);
 }
 
 function checkServiceLinks(page: ServicePage, visibleIds: Set<string>): void {

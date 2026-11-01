@@ -68,7 +68,7 @@ test('The existing shared layout always emits canonical, SEO metadata and basic 
 
 test('URL-slug remains the original read-only route value for every published page source', () => {
   const files = pageFilePaths();
-  assert.equal(files.length, 17, 'Include new sources when expanding page inventory');
+  assert.equal(files.length, 17, 'Respect OWNER-deleted Lokal SEO while retaining remaining page sources');
   for (const file of files) {
     const path = `app/src/content/pages/${file}`;
     const entry = entryForFile(config, path);
