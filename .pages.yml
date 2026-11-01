@@ -1341,6 +1341,102 @@ content:
               - name: sharedContent
                 label: Global innholdsseksjon
                 component: sharedContentPlacement
+              - name: proof
+                label: Dokumentert kundecase (lokal plassering)
+                fields:
+                  - name: id
+                    type: string
+                    default: resultater
+                    readonly: true
+                    hidden: true
+                    required: true
+                  - name: presentation
+                    label: Godkjent case og visning
+                    type: object
+                    required: true
+                    fields:
+                      - name: publicationApproved
+                        label: Publiseringsgodkjenning (låst)
+                        type: boolean
+                        readonly: true
+                        required: true
+                        default: false
+                      - name: caseIds
+                        label: Velg publiserbare kundecaser
+                        type: reference
+                        options:
+                          collection: proofCases
+                          multiple: true
+                          value: "{fields.id}"
+                          label: "{fields.clientName} ({fields.publicationStatus})"
+                          search: id,clientName
+                      - name: eyebrow
+                        label: Overtekst
+                        type: string
+                        required: true
+                      - name: heading
+                        label: Overskrift
+                        type: string
+                        required: true
+                      - name: beforeLabel
+                        label: Før-etikett
+                        type: string
+                        required: true
+                      - name: afterLabel
+                        label: Etter-etikett
+                        type: string
+                        required: true
+                      - name: changeLabel
+                        label: Endring-etikett
+                        type: string
+                        required: true
+              - name: pricingBridge
+                label: Prisbro med globale pakker
+                fields:
+                  - name: id
+                    type: string
+                    default: service-priser
+                    readonly: true
+                    hidden: true
+                    required: true
+                  - name: serviceName
+                    label: Tjenestenavn
+                    type: string
+                    required: true
+                  - name: link
+                    label: Lenke til priser
+                    type: object
+                    required: true
+                    fields:
+                      - name: label
+                        label: Lenketekst
+                        type: string
+                        required: true
+                      - name: href
+                        type: string
+                        label: Lenke
+                        default: /priser/
+                        required: true
+                        readonly: true
+              - name: pageFaq
+                label: Egne spørsmål og svar (plassering)
+                description: Spørsmålene redigeres under Egne spørsmål og svar på siden.
+                fields:
+                  - name: id
+                    type: string
+                    default: sporsmal
+                    readonly: true
+                    hidden: true
+                    required: true
+              - name: closingCta
+                label: Avsluttende CTA (plassering)
+                fields:
+                  - name: id
+                    type: string
+                    default: avslutning
+                    readonly: true
+                    hidden: true
+                    required: true
           - *a7
           - name: kind
             label: Page type
@@ -1349,52 +1445,6 @@ content:
             required: true
             readonly: true
             hidden: true
-          - &serviceproof
-            name: proof
-            label: Dokumenterte resultater - trygg presentasjon (eldre lokaldata)
-            type: object
-            hidden: true
-            description: Bevarer eksisterende godkjente lokale proof-data i JSON, men redigeres ikke lenger i tjenesteeditoren. Bruk Global Innhold → Kunderesultater for nye visningsvalg.
-            fields: &serviceProofFields
-              - name: publicationApproved
-                label: Godkjenn visning av allerede publiserbare case
-                description: Slå bare på etter dokumentert godkjenning. Dette overstyrer aldri case-status, tillatelse eller manglende evidens.
-                type: boolean
-                default: false
-                required: true
-                readonly: true
-              - name: caseIds
-                label: Velg case fra evidensregisteret
-                type: reference
-                options:
-                  collection: proofCases
-                  multiple: true
-                  value: "{fields.id}"
-                  label: "{fields.clientName} ({fields.publicationStatus})"
-                  search: id,clientName,anonymizedLabel
-                required: false
-                description: Velg primært case. Visning støttes på Synlighet og Konvertering før prisbroen.
-              - name: eyebrow
-                label: Overtekst
-                type: string
-                required: true
-              - name: heading
-                label: Overskrift
-                type: string
-                required: true
-              - name: beforeLabel
-                label: Før-etikett
-                type: string
-                required: true
-              - name: afterLabel
-                label: Etter-etikett
-                type: string
-                required: true
-              - name: changeLabel
-                label: Endring-etikett
-                type: string
-                required: true
-            required: false
   - name: terminology
     label: Begreper og forklaringer
     type: file

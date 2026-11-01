@@ -123,6 +123,31 @@
           "href": "/vurdering/"
         }
       ]
+    },
+    {
+      "_block": "proof",
+      "id": "resultater",
+      "visibility": "hidden",
+      "presentation": {
+        "publicationApproved": false,
+        "caseIds": [
+          "eurotents",
+          "nysta"
+        ],
+        "eyebrow": "Fullført handel er det som teller",
+        "heading": "Nettbutikkoptimalisering for mer salg",
+        "beforeLabel": "Før optimalisering",
+        "afterLabel": "Etter optimalisering",
+        "changeLabel": "Justert kjøpsflyt"
+      }
+    },
+    {
+      "_block": "pageFaq",
+      "id": "sporsmal"
+    },
+    {
+      "_block": "closingCta",
+      "id": "avslutning"
     }
   ],
   "faq": [
@@ -138,17 +163,5 @@
       "question": "Hvorfor holder det ikke å måle konverteringsrate?",
       "answer": "Konverteringsraten sier hvor stor andel av et definert besøksgrunnlag som kjøper. Den sier ikke alene hva som blir igjen etter produktkostnader, rabatter og andre relevante kostnader. Ordrenes verdi må også vurderes."
     }
-  ],
-  "proof": {
-    "publicationApproved": false,
-    "caseIds": [
-      "eurotents",
-      "nysta"
-    ],
-    "eyebrow": "Fullført handel er det som teller",
-    "heading": "Nettbutikkoptimalisering for mer salg",
-    "beforeLabel": "Før optimalisering",
-    "afterLabel": "Etter optimalisering",
-    "changeLabel": "Justert kjøpsflyt"
-  }
+  ]
 }

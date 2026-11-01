@@ -140,6 +140,14 @@
     {
       "_block": "global",
       "element": "resultater"
+    },
+    {
+      "_block": "pageFaq",
+      "id": "sporsmal"
+    },
+    {
+      "_block": "closingCta",
+      "id": "avslutning"
     }
   ],
   "faq": [

@@ -16,22 +16,22 @@ import PageList from './PageList.astro';
 import '../styles/compositions/service.css';
 interface Props {page:CollectionEntry<'pages'>['data'];commercial:HomepageContent;route:RouteFamily;}
 const {page,commercial,route}=Astro.props;
-const cmsOnly=page.slug==='synlighet';
-const capability=route.service,bridge=capability.pricingBridge;
+const capability=route.service;
 const globalProof=hasGlobalServiceProof(page);
-const hasGlobalFaq=page.sections.some(section=>section.globalElement==='sporsmal');
-const records=(!cmsOnly&&capability.proofAfter)||globalProof?(await getCollection('proofCases')).map(p=>p.data):[];
+const localProof=page.sections.some(section=>section._block==='proof'&&section.visibility!=='hidden');
+const closingCta=page.sections.some(section=>section._block==='closingCta'&&section.visibility!=='hidden');
+const records=(localProof||globalProof)?(await getCollection('proofCases')).map(p=>p.data):[];
 validateServiceGlobalProof(page,records);
 ---
 <div class="invite-home invite-service">
   <CommercialHero content={resolvePageHero(page)} />
   {visibleServiceSections(page).map(section=><>
-    {section.globalElement ? <GlobalContentSection element={section.globalElement} faqItems={page.faq} /> : <>
-    {section._block==='pageList'?<PageList section={section} />:<ContentSection section={section} visualId={capability.sectionVisuals.find(v=>v.section===section.id)?.visual} defaultSurface={capability.sectionSurfaces.find(v=>v.section===section.id)?.surface} infoSurface={section.id==='sjekk'} />}
-    {!cmsOnly&&!globalProof&&capability.proofAfter===section.id&&page.proof&&<Proof content={page.proof} records={records} primary />}
-    {!cmsOnly&&bridge?.after===section.id&&<PricingBridge content={commercial.packages} link={bridge.link} serviceName={bridge.serviceName} />}
-    </>}
+    {section.globalElement ? <GlobalContentSection element={section.globalElement} faqItems={page.faq} /> :
+     section._block==='proof'&&section.presentation ? <Proof content={section.presentation} records={records} primary /> :
+     section._block==='pricingBridge'&&section.link&&section.serviceName ? <PricingBridge content={commercial.packages} link={section.link} serviceName={section.serviceName} /> :
+     section._block==='pageFaq' ? <Faq items={page.faq} id="sporsmal" heading={closingCta||commercial.faqVisible===false?undefined:commercial.faqHeading} eyebrow={closingCta||commercial.faqVisible===false?undefined:commercial.faqEyebrow} /> :
+     section._block==='closingCta' ? <ClosingCta id={section.id} link={page.cta} /> :
+     section._block==='pageList'?<PageList section={section} />:<ContentSection section={section} visualId={capability.sectionVisuals.find(v=>v.section===section.id)?.visual} defaultSurface={capability.sectionSurfaces.find(v=>v.section===section.id)?.surface} infoSurface={section.id==='sjekk'} />}
+
   </>)}
-  {!hasGlobalFaq&&<Faq items={page.faq} id="sporsmal" heading={capability.closingCta||commercial.faqVisible===false?undefined:commercial.faqHeading} eyebrow={capability.closingCta||commercial.faqVisible===false?undefined:commercial.faqEyebrow} />}
-  {!cmsOnly&&capability.closingCta&&!visibleServiceSections(page).some(section=>section.globalElement==='sjekk')&&<ClosingCta link={page.cta} />}
 </div>
