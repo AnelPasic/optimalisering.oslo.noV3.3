@@ -19,7 +19,7 @@ test('all ordinary pages have one canonical editable Hero, with no duplicated pe
  assert.equal(normal.length,15);
  for(const {page} of normal){
   assert.equal(pageSchema.safeParse(page).success,true,page.slug);
-  assert.deepEqual(Object.keys(page.hero).filter(k=>['layout','eyebrow','title','support','primaryCta','secondaryCta','visual','toneOverrides'].includes(k)),
+  assert.deepEqual(Object.keys(page.hero).filter(k=>['layout','eyebrow','title','support','primaryCta','secondaryCta','visual','toneOverrides','featuredProofCaseId'].includes(k)),
     Object.keys(page.hero));
   assert.ok(page.hero.title&&page.hero.eyebrow&&page.hero.support&&page.hero.primaryCta);
   for(const key of ['eyebrow','title','intro','cta','heroVisual'])assert.ok(!Object.hasOwn(page,key),page.slug+' duplicated '+key);
@@ -81,7 +81,7 @@ test('Pages CMS edits one nested Hero; restores all sections, media and CTA with
   edited.hero.title+=' CMS-test';
   const saved=JSON.parse(cmsJsonSave(page,edited,editor,cms));
   assertPreservedContent(edited,saved);
-  assert.deepEqual(saved.sections??[],page.sections,file);
+  assert.deepEqual(saved.sections??[],page.sections??[],file);
   assert.deepEqual(saved.hero.visual,page.hero.visual,file);
   const result=pageSchema.safeParse(saved);assert.ok(result.success,file+': '+(result.success?'':JSON.stringify(result.error.issues).slice(0,2600)));
   const restored=JSON.parse(cmsJsonSave(saved,page,editor,cms));

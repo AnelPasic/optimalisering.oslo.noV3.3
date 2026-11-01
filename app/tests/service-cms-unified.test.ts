@@ -39,7 +39,7 @@ test('All six service sources roundtrip in native CMS model without losing conte
   const saved=JSON.parse(cmsJsonSave(original,structuredClone(original),entry,cms));
   assertPreservedContent(original,saved);
   assert.equal(pageSchema.safeParse(saved).success,true,file);
-  assert.deepEqual(saved.sections??[],original.sections,file+' sections unchanged');
+  assert.deepEqual(saved.sections??[],original.sections??[],file+' sections unchanged');
   assert.deepEqual(saved.hero,original.hero,file+' hero unchanged');
   if(original.proof)assert.deepEqual(saved.proof,original.proof,file+' proof remains intact');
   if(original.composition)assert.deepEqual(saved.composition,original.composition,file+' special composition remains intact');
