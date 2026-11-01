@@ -1364,52 +1364,6 @@ content:
             required: true
             readonly: true
             hidden: true
-          - &serviceproof
-            name: proof
-            label: Dokumenterte resultater - trygg presentasjon (eldre lokaldata)
-            type: object
-            hidden: true
-            description: Bevarer eksisterende godkjente lokale proof-data i JSON, men redigeres ikke lenger i tjenesteeditoren. Bruk Global Innhold → Kunderesultater for nye visningsvalg.
-            fields: &serviceProofFields
-              - name: publicationApproved
-                label: Godkjenn visning av allerede publiserbare case
-                description: Slå bare på etter dokumentert godkjenning. Dette overstyrer aldri case-status, tillatelse eller manglende evidens.
-                type: boolean
-                default: false
-                required: true
-                readonly: true
-              - name: caseIds
-                label: Velg case fra evidensregisteret
-                type: reference
-                options:
-                  collection: proofCases
-                  multiple: true
-                  value: "{fields.id}"
-                  label: "{fields.clientName} ({fields.publicationStatus})"
-                  search: id,clientName,anonymizedLabel
-                required: false
-                description: Velg primært case. Visning støttes på Synlighet og Konvertering før prisbroen.
-              - name: eyebrow
-                label: Overtekst
-                type: string
-                required: true
-              - name: heading
-                label: Overskrift
-                type: string
-                required: true
-              - name: beforeLabel
-                label: Før-etikett
-                type: string
-                required: true
-              - name: afterLabel
-                label: Etter-etikett
-                type: string
-                required: true
-              - name: changeLabel
-                label: Endring-etikett
-                type: string
-                required: true
-            required: false
   - name: terminology
     label: Begreper og forklaringer
     type: file

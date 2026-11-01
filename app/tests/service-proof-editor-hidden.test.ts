@@ -9,24 +9,23 @@ const read=(slug:string)=>JSON.parse(readFileSync(`src/content/pages/${slug}.jso
 
 test('service editors hide the obsolete local proof form, keeping global proof and evidence editable',()=>{
   const service=entryForFile(cms,'app/src/content/pages/lokal-seo.json');
-  const legacy=service.fields.find((f:any)=>f.name==='proof');
-  assert.equal(legacy.hidden,true);
-  assert.equal(legacy.required,false);
-  assert.equal(read('lokal-seo').proof,undefined,'Lokal SEO uses the global proof placement, not local proof data');
-  assert.ok(read('lokal-seo').sections.some((s:any)=>s._block==='global'&&s.element==='resultater'));
+  assert.equal(service.fields.some((f:any)=>f.name==='proof'),false,
+    'obsolete local proof must be absent from CMS schema, not merely hidden: an absent proof initializes publicationApproved=false and then fails invisible required strings');
+  assert.equal(read('lokal-seo').proof,undefined,'empty Lokal SEO must not acquire local proof');
+  assert.deepEqual(read('lokal-seo').sections,[],'no dummy section should be required to save a new page');
   const global=cms.content.find((e:any)=>e.name==='globalElements').items.find((e:any)=>e.name==='globalProof');
   const registry=cms.content.find((e:any)=>e.name==='proofCases');
   assert.ok(global && registry,'global editor and evidence registry remain available');
   assert.ok(global.fields.find((f:any)=>f.name==='content').fields.some((f:any)=>f.name==='displayOverrides'));
 });
 
-test('CMS merge preserves existing local proof records when editors omit the hidden field',()=>{
+test('CMS merge preserves existing local proof records when the field is no longer in the editor',()=>{
   assert.equal(cms.settings.content.merge,true);
   for(const slug of ['konvertering','nettbutikkoptimalisering']){
     const original=read(slug);
     assert.ok(original.proof,'existing legacy proof must remain in '+slug);
     const form=structuredClone(original);
-    delete form.proof; // hidden field is not submitted from service editor
+    delete form.proof; // retired field is not submitted from service editor
     const entry=entryForFile(cms,`app/src/content/pages/${slug}.json`);
     const saved=JSON.parse(cmsJsonSave(original,form,entry,cms));
     assert.deepEqual(saved.proof,original.proof,slug+' proof survives editor save');
