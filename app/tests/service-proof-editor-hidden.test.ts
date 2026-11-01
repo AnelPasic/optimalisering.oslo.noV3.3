@@ -26,7 +26,7 @@ test('existing approved and draft local cases move into movable blocks without c
  const oldValues=[['konvertering','nysta',true],['nettbutikkoptimalisering','eurotents',false]];
  for(const [slug,id,isApproved] of oldValues){
   const current=read(String(slug)),proof=current.sections.find((s:any)=>s._block==='proof');
-  assert.ok(proof,slug);
+  assert.ok(proof,String(slug));
   assert.equal(proof.presentation.caseIds.includes(id),true);
   assert.equal(proof.presentation.publicationApproved,isApproved);
   assert.equal(current.proof,undefined);

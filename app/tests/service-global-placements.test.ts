@@ -19,7 +19,7 @@ test('explicit references resolve canonical masters without copying source or ad
     const page = pageSchema.parse(raw), global = page.sections.find(s=>s.globalElement===id)!;
     const master=getGlobalElement(id);
     assert.ok(global,id); assert.deepEqual(global.content,'content' in master ? master.content : undefined);
-    assert.deepEqual(page.proof,source.proof); assert.deepEqual(page.composition?.service?.pricingBridge,source.composition.service.pricingBridge);
+    assert.equal(page.proof,undefined); assert.equal(page.composition?.service?.sectionVisuals.length,source.composition.service.sectionVisuals.length);
     assert.deepEqual(raw.hero,original.hero); assert.deepEqual(Object.keys(raw.sections.at(-1)).sort(),['_block','element']);
   }
 });

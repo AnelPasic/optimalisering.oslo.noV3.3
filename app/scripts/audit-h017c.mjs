@@ -5,7 +5,7 @@ import {readFileSync,readdirSync} from 'node:fs';
 import {getPublishableCases} from '../src/lib/proof.ts';
 
 const records=readdirSync('src/content/proof').filter(f=>f.endsWith('.json')).map(f=>JSON.parse(readFileSync('src/content/proof/'+f)));
-const text=html=>stripTerminologyLinks(html).replace(/<[^>]*>/g,' ').replace(/&amp;/g,'&').replace(/&gt;/g,'>').replace(/&lt;/g,'<').replace(/\\s+/g,' ').trim();
+const text=html=>stripTerminologyLinks(html).replace(/<[^>]*>/g,' ').replace(/&amp;/g,'&').replace(/&gt;/g,'>').replace(/&lt;/g,'<').replace(/\s+/g,' ').trim();
 const global=JSON.parse(readFileSync('src/content/global-elements/resultater.json')).content;
 const expected=[
  ['home',['Eurotents','Nysta','Helt Opplagt']],
@@ -19,10 +19,10 @@ for(const [slug,names] of expected){
  const slot=slug==='home'?getHomepageBlock(page,'proof').content:slug==='konvertering'?page.sections.find(s=>s._block==='proof').presentation:global;
  const cases=getPublishableCases(slot,records);
  assert.deepEqual(cases.map(p=>p.displayName),names,slug+' proof selection');
- const section=html.match(/<section id="resultater"[^>]*>(.*?)<\\/section>/s)?.[1];
+ const section=html.match(/<section id="resultater"[^>]*>(.*?)<\/section>/s)?.[1];
  if(slug==='home'&&!isHomepageSectionVisible(getHomepageBlock(page,'proof'))){assert.equal(section,undefined);continue}
  assert.ok(section,slug+' proof section');
- assert.deepEqual([...section.matchAll(/<h3[^>]*>(.*?)<\\/h3>/gs)].map(m=>text(m[1])),names);
+ assert.deepEqual([...section.matchAll(/<h3[^>]*>(.*?)<\/h3>/gs)].map(m=>text(m[1])),names);
  assert.equal((section.match(/proof-featured/g)??[]).length,1);
  for(const proof of cases){
   for(const val of [proof.dominantMetric,proof.before,proof.after,proof.delta,proof.period.before,proof.period.after].filter(Boolean))assert.ok(text(section).includes(val),slug+' missing '+val);
@@ -38,7 +38,7 @@ for(const [slug,names] of expected){
   assert.ok(ids.indexOf('resultater')>ids.indexOf('prioritering'));
   assert.ok(ids.indexOf('resultater')<ids.indexOf('service-priser'));
  }
- assert.ok(!/Oslo Privatklinikk|Tankeverksted|Oracles|evidenceMetrics|strategyReviewEvidence|Windsor|coordination\\/|1\\.403|0\\.058|31\\/50|16 265/.test(html));
+ assert.ok(!/Oslo Privatklinikk|Tankeverksted|Oracles|evidenceMetrics|strategyReviewEvidence|Windsor|coordination\/|1\.403|0\.058|31\/50|16 265/.test(html));
 }
 for(const file of readdirSync('src/content/pages').filter(f=>f.endsWith('.json'))){
  const page=JSON.parse(readFileSync('src/content/pages/'+file));
