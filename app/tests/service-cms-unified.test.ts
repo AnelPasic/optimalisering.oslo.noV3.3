@@ -42,7 +42,7 @@ test('All six service sources roundtrip without restoring local proof or losing 
   assert.deepEqual(saved.sections??[],original.sections??[],file+' sections unchanged');
   assert.deepEqual(saved.hero,original.hero,file+' hero unchanged');
   assert.equal(Object.hasOwn(saved,'proof'),false,file+' no local proof');
-  assert.equal(saved.sections.some((x:any)=>x._block==='proof'),false,file+' global-only Kunderesultater');
+  assert.equal((saved.sections??[]).some((x:any)=>x._block==='proof'),false,file+' global-only Kunderesultater');
   if(original.composition)assert.deepEqual(saved.composition,original.composition,file+' special composition remains intact');
  }
 });
