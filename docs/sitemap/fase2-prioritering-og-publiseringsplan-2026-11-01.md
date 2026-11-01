@@ -192,3 +192,11 @@ Dette er en **foreslått arbeidsrekkefølge**, ikke en tids- eller resultatgaran
 ---
 
 **Status:** Fase-2-analyse utarbeidet som beslutningsgrunnlag. **Ikke** endret kode, CMS, eksisterende sider, godkjente URL-er, prisstruktur eller produksjon. Fase 1 er fortsatt avsluttet. Fase 2 sine forslag venter eierbeslutning før gjennomføring.
+
+## Tillegg 01.11.2026: P0-A intensjons- og konkurransekontroll (OWNER-gate fortsatt åpen)
+
+[Se versjonert P0-A beslutningspakke](./fase2-p0a-intensjon-konkurranse-og-beslutningspakke-2026-11-01.md) med Google Sheet-rader, eksakte volumer/KD, representativ kontroll av norske kommersielle sidetyper, faktisk SEO-/CRO-/lokal SEO-hubinnhold, de ti delte keyword-ankrene og avgrensede kommersielle alternativer.
+
+**Endret anbefaling, ikke endrede vedtak:** Første implementeringsbølge foreslås nå som **fire** sider: `/google-ads/`, `/lokal-seo/google-maps/` (endre primær kjøpsintensjon fra generisk profilnavn til hjelp/optimalisering), `/seo/seo-analyse/` (betalt audit, ikke generisk gratis-score) og `/kontinuerlig-optimalisering/` (retainer-bro). **Utsett** `/nettsideanalyse/` til fast betalt scope og leveransekost er avklart, og `/sporing-og-maling/leadsporing/` til LeadProof er produksjonsverifisert for kunde ende-til-ende. Alle seks er fortsatt blant de 63 godkjente sitemap-URL-ene og opprinnelige P0/P1/P2-antall **12/29/22 beholdes** inntil eier bestemmer noe annet. P0-B `/seo/teknisk-seo/` kan prioriteres ved kapasitet, men er ikke automatisk oppgradert eller bygget.
+
+**Evidensbegrensning:** Ekstern gjennomgang dokumenterer norske, indekserte konkurrenters sidetyper, men ikke en lokalisert Google.no topp-10. Full 853-term semantisk query-to-SERP-klynging er ikke ferdig; 853 rader er lest på nytt for datakvalitet og målrettede primær-/sekundærtermer samt ti collisions er gjennomgått. Volumer for varianter er ikke summert. Alle konkrete eier-/publiserings-/prisbeslutninger er fortsatt åpne.
