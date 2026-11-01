@@ -19,7 +19,8 @@ test('Google bedriftsprofil is one genuine Innsikt page with CMS editing and Lok
  const ids=article.sections.map((section:{id:string})=>section.id);
  assert.equal(ids.length,new Set(ids).size);
  assert.ok(article.sections.some((section:{id:string})=>section.id==='sjekkliste'));
- assert.ok(hub.sections.flatMap((section:{links?:Array<{href:string}>})=>section.links??[]).some((link:{href:string})=>link.href==='/innsikt/google-bedriftsprofil/'));
+ assert.equal(hub.slug,'lokal-seo');
+ assert.deepEqual(hub.sections,[],'Lokal SEO is deliberately empty until rewritten');
  const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
  const entry=entryForFile(cms,'app/'+file);
  assert.equal(entry?.type,'collection');

@@ -7,9 +7,9 @@
   },
   "hero": {
     "layout": "centered-none",
-    "eyebrow": "",
+    "eyebrow": "Tjeneste",
     "title": "Lokal SEO",
-    "support": "",
+    "support": "Innhold kommer.",
     "primaryCta": {
       "label": "Ta en gratis sjekk",
       "href": "/#sjekk"
