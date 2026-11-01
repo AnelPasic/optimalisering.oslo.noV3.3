@@ -6,6 +6,9 @@ Dette dokumentet er inngangspunktet for nye tråder, Codex og GitHub-issues. **K
 
 ## Fase 2 – analyse levert 01.11.2026 (venter eierbeslutning)
 
+- [**Fase 2 – P0-A intensjon, offentlig norsk konkurranse, 10 kollisjoner og kommersiell beslutningspakke (01.11.2026)**](./fase2-p0a-intensjon-konkurranse-og-beslutningspakke-2026-11-01.md) – **ny eieranbefaling:** fire sider først, to avventes. De seks P0-A er fremdeles godkjente som sitemap, **ikke** publisering. Direkte lokalisert Google.no topp-10 er ikke verifisert; konkurrentanalyse er representativ. Ingen pris låst.
+
+
 - [**Fase 2: Analyse, P0/P1/P2, overlappskontroll, tjenestepakker og foreslått publiseringsplan**](./fase2-prioritering-og-publiseringsplan-2026-11-01.md) – anbefaling, **ikke** vedtatt publiseringsrekkefølge eller nye priser.
 - [**Fase 2: Datamatrise for 63 godkjente URL-er**](./fase2-sokeord-url-matrise-2026-11-01.json) – eksakte kildeankere, søkevolum, organisk KD, manglende data, klyngeoverlapp og foreløpig P0/P1/P2.
 - **Obligatorisk søkeordkilde:** [Medon – Søkeordsanalyse (løpende)](https://docs.google.com/spreadsheets/d/1ZvFikP6jKJ8r41H66oFQ31BPdhNzp6-N11VIJ-cetWM/edit), fanen `Søkeord`, 853 rader, skjermbildeimportert 24.10.2026. Importdato er ikke en verifisert måledato.
