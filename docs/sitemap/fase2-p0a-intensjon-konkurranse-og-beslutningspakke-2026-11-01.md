@@ -1,0 +1,96 @@
+# Fase 2 – P0-A søkeintensjon, konkurransesjekk og beslutningspakke
+
+**Dato:** 01.11.2026 · **Status:** Forslag til OWNER, ingen publiserings- eller prisgodkjenning · **Basis:** `main` `1895d4bb30f4b03e564d81d00a83f7e61e3aaaa6` (2026-11-01 00:48 CET).
+**Omfang:** Bare `optimalisering.oslo.no`. 74 avsluttede beslutningspunkter; 63 allerede godkjente tjeneste-URL-er. **Ingen punkt 75, nye tjenester, kode eller CMS-endring.**
+
+## Kildestatus og etterprøvbarhet
+
+- GitHub: [Sitemap README](./README.md), [fase-2-rapport](./fase2-prioritering-og-publiseringsplan-2026-11-01.md), [63-URL JSON-matrise](./fase2-sokeord-url-matrise-2026-11-01.json) og [fullstendige tjenestebriefs](./fullstendige-tjenestebriefs-74-2026-11-01.md).
+- Google Sheet [Medon – Søkeordsanalyse](https://docs.google.com/spreadsheets/d/1ZvFikP6jKJ8r41H66oFQ31BPdhNzp6-N11VIJ-cetWM/edit): `Søkeord!A1:R854` og `Om datasettet` lest via tilkoblingen 01.11.2026. 853 rader, 851 unike eksakte termer, 841 med søkevolum, 645 med organisk KD. Duplikater med konflikt: `markedsstrategi` 390/320 og `digital markedsførings byrå` 50/10.
+- `# of Searches`: rapportert månedsvolum per eksakt term, ikke målte leads eller predikert SEO-trafikk. `Google.no Keyword Difficulty` er kilde-KD, mens `Competition` er Ads-konkurranse. USD-CPC er ikke NOK. Importdato 24.10.2026 er ikke dokumentert volum-måledato. Blankt = **ukjent**, ikke 0.
+- **Ekstern konkurransekontroll:** offentlig indekserte norske leverandør-/hjelpe-/verktøysider hentet 01.11.2026 (eksempler nedenfor). Dette dokumenterer tilgjengelige sidetyper, **ikke en reproduserbar, lokaliseringslåst Google.no topp-10 eller faktisk rangering**; topp-10-SERP-overlapp, annonseplasseringer og kartpakke kan ikke erklæres ferdig validert. Slik kontroll er en gjenstående gate, ikke et funn vi skal finne på.
+- Alle 853 radene ble kontrollert på nytt for kildefelt. De eksakte prioriterte termene, alle 10 overlappankere og nære varianter er gjennomgått. En enkel tematisk kandidatgruppering fant 509/853 rader med ordtreff i minst ett bredt tema, 344 uten slikt treff og 18 som traff flere temaer; dette er **ikke semantisk SERP-klynging av hele arket**. Det gir ikke grunnlag for summerte klyngevolumer. Hele arket krever fortsatt query-to-SERP-kontroll før endelige volumestimat.
+
+## A. P0-A – seks konkrete beslutninger
+
+| URL / forslag | Primær kjøpsintensjon og kilde (Google Sheet-rad; volum; KD) | Konkurranse-/intensjonsfunn | Kundens ønskede resultat og budskap | CTA og avgrenset leveranse | Kommersiell modell, gate |
+|---|---|---|---|---|---|
+| **JA nå** `/google-ads/` | **Google Ads-byrå / drift:** `google ads byrå` [140; 90; 17,8]. Støtte: `google ads oslo` [275; 50; 16,4], `google annonsering pris` [364; 70; 16,1], `google annonsering` [190; 260; 25,7]. `google ads` [11; 12 100; 55] er hovedsakelig navigasjons-/blandingssøk; **ikke målgruppevolum**. | Tydelige kommersielle tjenestesider med pris og løpende drift: [Techspace](https://techspace.no/digital-markedsforing-tjenester/google-ads-oslo/), [Gads](https://gads.no/), [Pagelook](https://pagelook.no/tjenester/google-ads/). Konkurranse om pris, tillit og dokumentasjon, ikke bare SEO. | «Få flere **relevante** henvendelser fra annonser, uten å betale for feil søk.» | **CTA:** «Få vurdert Google Ads-kontoen». Konto-/måleaudit, søketermer og negative ord, annonseoppsett, landingsside-samsvar, månedlig beslutningsrapport. | **Høy retainer-egnethet**; oppstart + månedsdrift; annonsebudsjett direkte til Google. Før publisering: spesifiser antall kampanjer, målingsansvar, rapportfrekvens og dokumenterte resultater; sjekk aktuelt prisark. |
+| **JA, endret innpakning** `/seo/seo-analyse/` | **Betalt SEO-revisjon med tiltaksplan:** `seo analyse` [91; 210; 33,5], `seo-analyse` [92; 210; 17,8], `hva er seo analyse` [341; 40; 21,8]. **Ikke** 420 ved å addere de to like variantene. | Mange gratis-tilbud og verktøy, bl.a. [Box](https://box.no/verktoy/seo-analyse), [Digimark](https://digimark.no/seo-analyse/), [Ryze](https://ryze.no/verktoy/seo-analyse). Søket er blandet: verktøy/DIY og tjenestekjøp. | «Få vite *hva som hindrer riktige kunder i å finne deg*, og hvilke endringer du bør betale for først.» | **CTA:** «Bestill en grundig SEO-analyse». Betalt gjennomgang av søkeintensjon, teknikk/indeks, viktige landingssider, konkurrenter og prioriterte tiltak med innsats. **Gratis 3-funns sjekk forblir på `/vurdering/`, ikke gratis full audit.** | **Prosjekt → implementering → evt. SEO-retainer**. Gate: konkret fastpris/omfang, leveranseeksempel og tydelig forskjell fra gratis søkeverktøy og `/seo/`. |
+| **ENDRE primærterm, JA ved avklart scope** `/lokal-seo/google-maps/` | **Få profesjonell hjelp med eksisterende profil/Maps:** `google maps seo` [842; 10; 29,1]; `optimalisere google bedriftsprofil` [851; **ukjent**; 44,7]; `hjelp med google bedriftsprofil` [849; **ukjent**; 49,1]. `google bedriftsprofil` [35; 590; 23] og `google min bedrift` [4; 720; KD ukjent] er informativ/navigasjonell blanding, ikke salgsvolum. | Googles [egen veiledning](https://support.google.com/business/answer/3039617?hl=no) og [lokal rangering](https://support.google.com/business/answer/7091?hl=no), [Mementor-guide](https://mementor.no/blogg/seo/google-bedriftsprofil/) og [oppsettstjeneste med engangspris](https://www.nordicdigisolutions.no/google-bedriftsprofil-oppsett/). | «Bli lettere å velge når lokale kunder søker – riktig kategori, tjenester, åpningstider og vei til kontakt.» | **CTA:** «Få vurdert bedriftsprofilen». Korrekt eier/tilgang/verifikasjon, kategori/tjenester, bilder/opplysninger, nettsidesamsvar, legitime review-rutiner, sporing av tilgjengelige profilhandlinger. | **Oppstart + lokal SEO som reelt arbeid hver måned**, ikke abonnement på passiv profilvedlikehold. Gate: riktig kundeprofil (lokal SMB), verifikasjon/regler, ingen ranking- eller telefonsamtalegaranti; internlenke til informativ `/innsikt/google-bedriftsprofil/`. |
+| **UTSETT fra første bygg, behold JA som URL** `/nettsideanalyse/` | **Betalt tverrfaglig diagnose:** `nettside analyse` [584; 10; 18,5]; `nettside sjekk` [284; 90; KD **ukjent**] er typisk gratis verktøy. `webanalyse` [218; 70; 24] eies av `/sporing-og-maling/`. | [Wevo](https://wevo.no/nettside-analyse), [Box](https://box.no/verktoy) og lignende konkurrerer om gratissjekk-intensjonen. | «Finn de 3–5 største hindringene for henvendelser eller salg før du bruker mer penger.» | **CTA:** «Bestill en helhetlig nettsideanalyse». Betalt SEO/UX/CRO/ytelse/måling, dokumenterte skjermbilder, tydelig prioritering og kundegjennomgang; må **aldri** kopiere gratis `/vurdering/` eller SEO-audit. | Godt betalt inngangsprosjekt, ikke automatisk retainer. Gate før publisering: fast pris, begrensning (nettsidestørrelse/tilgang), rapporteksempel og økonomi per analyse. |
+| **UTSETT salgs- og publiseringsløfte** `/sporing-og-maling/leadsporing/` | **Kildekvalitet for faktiske leads og kundedashboard**. Ingen eksakt relevant term med oppgitt volum/KD i arket. **Datagap, ikke null etterspørsel.** | Lite pålitelig norsk SERP-evidens for isolert betalt «leadsporing»; markedshypotese må testes med eksisterende kunder og faktisk lead-kvalitet. | «Se hvilke kanaler som gir reelle henvendelser – og hvilke kilder vi ikke kan fastslå.» | **CTA etter godkjent pilot:** «Se hvordan vi kan måle henvendelsene dine». Oppsett av JS/loader og godkjente kilder, kontroll av mottak/deduplisering, kundeinnsyn i LeadProof, datakvalitetsrapport. | Setup + avgrenset månedlig målekontroll, **ikke** ferdig SaaS-/CRM-/telefonsalgsattribusjon. **Hard gate:** verifisert ekte kundelogin/RBAC, kildedata, skjemainnsending, tillatt innsamlingsflyt og korrekt dashboard ende-til-ende. Historisk dokumentert kode/CI er ikke dette beviset. |
+| **JA som retainer-støtteside, ikke volumjakt** `/kontinuerlig-optimalisering/` | **Fast forbedringskapasitet:** `optimalisering av nettsider` [370; 170; 21,5], `optimalisering av nettside` [369; 170; KD ukjent], `nettside optimalisering` [209; 30; 23,7]. Varianten på 170 må **ikke summeres til 340**. | [Digitalfeet](https://digitalfeet.com/no/nettside/growth-driven-design/kontinuerlig-optimalisering/) har konkret månedlig sprint-modell, mens generiske søk ofte er DIY/SEO-råd. | «Slutt å la nettsiden stå stille: få en viktig forbedring prioritert og utført innenfor avtalt kapasitet hver måned.» | **CTA:** «Få plan for månedlig forbedring». Månedlig prioritert backlog, avtalte SEO/CRO/innholdstiltak, enkel effekt-/endringsrapport og neste prioritet. | **Sterk retainer-/oppgraderingsside**, kan legges frem ved salg av andre tjenester; ikke ubegrenset byrå/drift/A/B-testing. Gate: avtalt time-/oppgavekapasitet, support, avhengigheter og margin. |
+
+### Konkurransevurdering og usikkerhet
+
+**Godt støttet:** Google Ads-byrå har tydelig kjøpsintensjon og betalt månedsleveranse i norske konkurrenters faktiske tjenestesider. Gratis SEO-/nettsidesjekk er utbredt. Google Bedriftsprofil har omfattende selvbetjeningsdokumentasjon og kjøpbar oppsetthjelp. Kontinuerlige optimaliseringsavtaler eksisterer i markedet.
+
+**Analytiske hypoteser, ikke rangeringstall:** Hvor stor del av volumet som er betalingsvillig; hvor raskt ny side kan rangere; andel leadsporing-kjøpere; hva søkeren forventer på eksakt Google.no topp 10. Egnetheten for Medons to-personers kapasitet må vurderes mot virkelig leveransetid.
+
+## B. Faktiske eksisterende huber på `main` – unikt ansvar
+
+Følgende er verifisert ved lesing av `app/src/content/pages/*.json`, **ikke antatt fra sitemap**.
+
+| Eksisterende URL / faktisk nåværende innhold | Primær intensjon og beskyttelse | Sekundært / internlenker |
+|---|---|---|
+| `/seo/` – title «SEO-byrå for bedrifter i Oslo», hero «SEO for bedrifter som vil bli funnet av riktige kunder.» | **SEO-byrå Oslo, SEO-hjelp/SEO-tjenester, løpende SEO**. Søk i arket: `seo byrå oslo` [124; 260; 24,2], `seo-byrå oslo` [97; 320; 19,6]. Ikke summer skrivemåtene. | Referer diagnose på `/seo/seo-analyse/` og spesifikk teknisk feilsituasjon på `/seo/teknisk-seo/`. Detaljert audit-salg skal ikke kopieres hit. |
+| `/konvertering/` – title «Konverteringsoptimalisering (CRO)», hero «Det er ikke alltid kunden som må overbevises ...» | **Konverteringsoptimalisering/CRO, mer verdi fra eksisterende trafikk**; `konverteringsoptimalisering` [117; 210; 17], `konverteringsoptimalisering oslo` [504; 50; 18,6]. | Ulike CTA-er: forbedre konvertering (hub); **betalt helhetlig diagnose** (`/nettsideanalyse/`); bygg landingsside (`/landingssider/`); 3-funn gratis (`/vurdering/`). |
+| `/lokal-seo/` – title «Lokal SEO for Google Maps og lokale søk», hero «Bli funnet når kunden leter etter en bedrift i nærheten.» | **Lokal SEO / lokal søkemotoroptimalisering og lokal kjøpsreise**, `lokal seo` [212; 70; 21] og `lokal søkemotoroptimalisering` [200; 50; 14,8]. | «Google Maps» kan fortsatt omtales naturlig, men en *operasjonell GBP-tjeneste* eies av `/lokal-seo/google-maps/`. Guide for selvbetjening er `/innsikt/google-bedriftsprofil/`. Ingen fiktive avdelinger. |
+| `/synlighet/` – SEO + lokal SEO + AI-synlighet, allerede klart formulert | **Velg riktig vei til synlighet**, ikke spesifikk Ads-/SEO-/Maps-leveranse. | Link til tjenestehubene. Google Ads kan nevnes som alternativ betalt kanal, men primær salgsside eies av `/google-ads/`. |
+| `/ai-synlighet/` – eget AI-synlighetsløp | **AI-baserte svar/forståelig informasjon**, ikke SEO-byrå/synlighet generelt | Link til `/seo/` når vanlig organisk søk er hovedproblemet. |
+| `/nettbutikkoptimalisering/` – bred kjøpsflyt fra produkt til ordre | **Nettbutikkoptimalisering/CRO netthandel**; ikke gi kjøpsflyt/gjenkjøp samme brede primærsøk. | Spesialister på `kjopsflyt/`, `gjenkjop/`, Shopify/WooCommerce når deres egen oppgave er forskjellig. |
+| `/vurdering/` – hero «Send en lenke. Finn et sted å begynne.» | **Gratis, avgrenset, manuell første sjekk**, ingen full rapport. | Link videre til riktig betalt analyse eller kanaltjeneste. Bevar grensen; ingen gratis «full audit». |
+
+**Konkrete redaksjonelle forbedringer til etter godkjenning:** Legg til tydelige tekstlenker fra SEO-hub til betalt SEO-audit og fra lokal SEO-hub til operasjonell Google Maps-hjelp; gjør CTA på gratissjekken tydelig forskjellig fra kjøp av full analyse; lenk fra Google Ads til kontoanalyse bare ved særskilt audit-intensjon; fra Konvertering og analyser til månedlig forbedring etter funn; ikke endre titler/H1 eller CMS i denne fasen.
+
+## C. De ti eksakte kollisjonene – eier per kjøpsintensjon (forslag)
+
+Kollisjonene er **eksakte delt anker** fra kuratert JSON, ikke bevis for at Google allerede kannibaliserer sider. Ingen automatisk redirect, sletting eller endret sitemap-godkjenning.
+
+| Term; ark-rad, volum og KD | Foreslått eier av intensjonen | Andre godkjente URL-er / grense |
+|---|---|---|
+| `landingsside optimalisering` [850; **ukjent**; 38,6] | `/landingssider/` – generelle landingssideforbedringer | `/landingssider/google-ads/` er kun annonser/landing-fit og har ikke bred primærterm. |
+| `konverteringsoptimalisering nettbutikk` [402; 10; 19,5] | **Eksisterende** `/nettbutikkoptimalisering/` | `kjopsflyt/` eier checkout; `gjenkjop/` eier gjenkjøp/lojalitet. |
+| `webanalyse` [218; 70; 24] | `/sporing-og-maling/` – GA4, hendelser, datainfrastruktur | `/nettsideanalyse/` eier **betalt full nettsid revisjon**, ikke webanalyse. |
+| `google ads byrå` [140; 90; 17,8] | `/google-ads/` – drift/forvaltning | `/google-ads/kontoanalyse/` = betalt/gratis avgrenset kontorevisjon; ingen byrå-H1 som primær. |
+| `facebook annonsering` [129; 390; 35,2] | `/meta-ads/` – Meta-kanal | `/meta-ads/kontoanalyse/` = analyse av eksisterende konto, ikke generell annonseforvaltning. |
+| `google bedriftsprofil` [35; 590; 23] | `/lokal-seo/google-maps/` **som operasjonell kommersiell GBP-tjeneste**, men **ikke som bevis for 590 salgssøk** | `/lokal-seo/flere-lokasjoner/` handler om faktisk flere avdelinger; `/innsikt/google-bedriftsprofil/` kan eie informasjons- og selvhjelpsspørsmål; Google eier navigasjonen. |
+| `nettbutikk migrering` [838; 10; **ukjent**] | `/nettsidemigrering/` – plattform/flytt/redirects/kjøpsflyt | `/seo/seo-migrering/` = SEO-spesifikk risiko under migrering. |
+| `wordpress drift` [328; 40; 13,9] | `/nettsidevedlikehold/` – drift/oppdateringer/avtale | `/wordpress-optimalisering/` = WordPress-forbedringer/ytelse/SEO; omtaler drift kun støtte. |
+| `gdpr nettside` [206; 30; 17,5] | `/sporing-og-maling/samtykkestyring/` **kun for teknisk CMP/Consent Mode-intensjon** | Juridisk GDPR-spørsmål er ikke en teknisk kjøpsterm; `/nettsidesikkerhet/` er sikkerhetsrisiko, ikke samtykkejuridikk. |
+| `integrasjoner nettside` [758; 10; **ukjent**] | **Ingen eksklusiv eier nå** – blandet og uavklart; legg ikke begge inn som primærterm | `/crm-integrasjoner/` eier leadoverføring/CRM; `/nettbutikkoptimalisering/integrasjoner/` eier lager/ordre/frakt/betaling; `/arbeidsflytautomatisering/` eier prosessflyt. |
+
+**Annen overlapp uten identisk kollisjonanker:** `/seo/` vs `/seo/seo-analyse/` (bred byrå vs audit), `/konvertering/` vs `/nettsideanalyse/` (CRO-hub vs paid cross-functional audit), `/lokal-seo/` vs Google Maps (lokale søk vs profiltiltak), gratis `/vurdering/` vs betalte audits. Ingen direkte sletting anbefales. **`gdpr nettside` kan være juridisk informativt og skal ikke brukes til å love rettslig compliance.**
+
+## D. Anbefalt rekkefølge, pris- og marginhypoteser
+
+**Første bygge-/publiseringsbølge etter OWNER-gate: fire sider, ikke seks av plikt:**
+1. `/google-ads/` – mest direkte dokumentert betalt månedskanal.
+2. `/lokal-seo/google-maps/` – konkret SMB-problem, men ikke basert på generisk GBP-volum; helst salg sammen med `/lokal-seo/`.
+3. `/seo/seo-analyse/` – betalt, avgrenset audit med demonstrerbar differanse fra gratis.
+4. `/kontinuerlig-optimalisering/` – hovedside for å forklare oppfølgingsavtale og stoppe gratisarbeid etter analyse.
+
+**Neste gate / hold igjen:** `/nettsideanalyse/` til betalt rapport/fast scope/kundeøkonomi er utformet. `/sporing-og-maling/leadsporing/` til LeadProof faktisk er verifisert ende-til-ende for kunde; kan omtales internt og selges etter pilotsjekk. En eksisterende P0-B-kandidat, `/seo/teknisk-seo/`, kan få høyere redaksjonell prioritet ved kapasitet (`teknisk seo` [54; 320; 15,5]), **uten** å opprette en ny tjeneste eller automatisk endre godkjent P0/P1/P2.
+
+**Kommersiell arkitektur, ikke prisvedtak:**
+- **Gratis kvalifisering:** eksisterende `/vurdering/` = kort 3-funnssjekk, med bedriftsnettside og beslutningsmyndighet/budsjett kvalifisert. Ikke ubetinget gratis timesvis audit.
+- **Betalt diagnose:** SEO-audit, Ads-audit, lokalprofilgjennomgang eller betalt helhetlig nettsideanalyse med fast leveranse. Kan føre til et priset forbedringsprosjekt.
+- **Én hovedkanal:** 4 500 kr/mnd **kun som testhypotese** basert på tidligere Medon-salg, med tydelig maksimal innsats og enkel månedlig rapport. Ads-budsjett kommer i tillegg.
+- **Kombinert vekst:** mulig `6 900` eller `9 900` kr/mnd som *alternative* priseksperimenter, men begrenset tillegg til én hovedkanal – ikke to fulle kanaltjenester til halv pris. Valg av nivå, scope og oppsigelse må vedtas.
+- **Partner:** høyere prosjekt-/avtalenivå (historisk anker rundt 24 900), begrunnet i faktisk timekapasitet/kompetanse og ikke ubegrenset arbeid. Omfattende A/B-testing foreløpig kun Partner i eksisterende prosjektregler.
+- **LeadProof:** ikke pris et kundedashboard som bevist tilgjengelig før innlogging, RBAC, faktisk dataflyt og samtykke-/måleoppsett er testet. Ingen inkludert innbygd telefonsporing eller full salg/CRM-attribusjon.
+
+**Margin-gate før prislås:** Beregn for hver variant `månedspris − intern timekost × estimert månedstid − verktøy/ekstern kost − support/rapport = bidrag`. Test spesielt worst-case måned; ta separat oppstartsbetaling ved oppsettarbeid. Timer, intern kost, kundetilgang, plattform/tredjepart, responstid og oppsigelse er **ikke dokumentert** i SEO-arket og skal ikke anslås som faktiske Medon-data.
+
+## E. Owner-beslutning / gjenstående kontroller
+
+- [ ] Godkjenn **JA / ENDRE / UTSETT** per de seks P0-A-sidene; fire i første bølge er et forslag, ikke implementeringsordre.
+- [ ] Godkjenn unikt intensjonsansvar for de ti ankerkonfliktene, særlig at `integrasjoner nettside` forblir uallokert til SERP er tydelig.
+- [ ] Lås publiserbar leveranse per side; gratis vs betalt SEO/nettsideanalyse skal være konkret og lønnsomt.
+- [ ] Få direkte lokalisert `google.no` topp-10-snapshot (dato/område/device/organisk vs annonser/kart), spesielt `seo analyse`, `google bedriftsprofil`, `nettside analyse` og `webanalyse`; nåværende konkurrentutvalg er **kun representativt**.
+- [ ] Verifiser LeadProof kunde-tilgang og faktisk datainnsamling før verktøyløfte/publisering.
+- [ ] Bestem scope, timer, kost, oppstartsbetaling og endelige priser.
+- [ ] Etter eiergodkjenning: kort, separat Codex-implementeringsbrief. **Ikke bygg/endre design/kode/CMS/deploy nå.**
+
+**Konklusjon:** 63 godkjente URL-er forblir 63. Søkedata støtter flere muligheter, men Medons kortsiktige mål er høyere månedsomsetning og realistisk dekningsbidrag – ikke flere URL-er. Delte varianter skal ikke adderes og manglende tall betyr ukjent.
