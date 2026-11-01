@@ -52,7 +52,9 @@ test('native SEO page editor contains section layouts, card treatment and a shar
 });
 
 test('SEO shares the full global catalogue while rejecting duplicates, forgeries and broken links',()=>{
- const add=(element:string)=>{const x=clone();x.sections.push({_block:'global',element});return x};
+ const add=(element:string)=>{const x=clone();if(element==='sporsmal')x.sections=x.sections.filter((s:any)=>s._block!=='pageFaq');x.sections.push({_block:'global',element});return x};
+ const duplicateFaq=clone();duplicateFaq.sections.push({_block:'global',element:'sporsmal'});
+ assert.equal(pageSchema.safeParse(duplicateFaq).success,false,'local and global FAQ cannot both occupy the same anchor');
  for(const el of ['resultater','sporsmal','behov','regneeksempel','mekanisme','passer']) {
   assert.equal(pageSchema.safeParse(add(el)).success,true,el);
  }

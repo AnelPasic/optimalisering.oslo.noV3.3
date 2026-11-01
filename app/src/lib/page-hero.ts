@@ -21,12 +21,13 @@ export const heroViewSchema=z.object({
  visual:layout==='centered-none'?{kind:'none' as const}:view.visual,
 }));
 export type HeroView=z.infer<typeof heroViewSchema>;
-type Source={slug?:string;kind:string;hero?:unknown;eyebrow?:string;title?:string;intro?:string;cta?:{label:string;href:string};heroVisual?:ServiceVisual;composition?:unknown;proof?:unknown;sections:{id:string;links?:{label:string;href:string}[]}[]};
+type Source={slug?:string;kind:string;hero?:unknown;eyebrow?:string;title?:string;intro?:string;cta?:{label:string;href:string};heroVisual?:ServiceVisual;composition?:unknown;sections:{id:string;_block?:string;serviceName?:string;visibility?:'hidden';link?:{label:string;href:string};links?:{label:string;href:string}[]}[]};
 type Commercial={packages:{eyebrow:string;heading:string;intro:string}};
 /** One-way adapters project existing owned content; no second editable source. */
 export function resolvePageHero(authoredPage:Source,commercial?:Commercial):HeroView{
  const page=projectSelectedLinks(authoredPage);
  const route=resolveRouteFamily(page);
+ const pricingBridge=route.family==='service'?page.sections.find(section=>section._block==='pricingBridge'&&section.visibility!=='hidden'):undefined;
  if(route.family==='home'){
   const hero=heroSchema.parse(page.hero);
   const {toneOverrides:_editorialTone,...renderHero}=hero;
@@ -39,11 +40,11 @@ export function resolvePageHero(authoredPage:Source,commercial?:Commercial):Hero
   const family=route.family;
   const breadcrumbs=family==='pricing'?[]:page.slug==='synlighet'?[{label:'Forsiden',href:'/'},{label:'Synlighet'}]:
     [{label:'Forsiden',href:'/'},...(family==='article'?[{label:'Innsikt',href:'/innsikt/'}]:[]),
-      {label:family==='service'?(route.service.pricingBridge?.serviceName??hero.eyebrow):hero.eyebrow}];
+      {label:family==='service'?(pricingBridge?.serviceName??hero.eyebrow):hero.eyebrow}];
   return heroViewSchema.parse({...renderHero,family,
     primaryCta:family==='assessment'?undefined:hero.primaryCta,
-    secondaryCta:hero.secondaryCta??(family==='service'&&route.service.pricingBridge
-      ?{label:'Se priser',href:route.service.pricingBridge.link.href}:undefined),
+    secondaryCta:hero.secondaryCta??(family==='service'&&pricingBridge?.link
+      ?{label:'Se priser',href:pricingBridge.link.href}:undefined),
     visual:hero.visual.kind==='image'&&media?{kind:'image',image:{...media,origin:'page'}}:{kind:'none'},
     breadcrumbs});
  }
@@ -51,8 +52,8 @@ export function resolvePageHero(authoredPage:Source,commercial?:Commercial):Hero
  const media=resolveServiceVisual(page.heroVisual),family=route.family;
  const copy=family==='pricing'?commercial?.packages:undefined;
  if(family==='pricing'&&!copy)throw new Error('Pricing Hero requires the shared Packages source');
- const crumbs=family==='pricing'?[]:[{label:'Forsiden',href:'/'},...(family==='article'?[{label:'Innsikt',href:'/innsikt/'}]:[]),{label:family==='service'?(route.service.pricingBridge?.serviceName??page.eyebrow):page.eyebrow}];
- return heroViewSchema.parse({family,layout,eyebrow:copy?.eyebrow??page.eyebrow,title:copy?.heading??page.title,support:copy?.intro??page.intro,primaryCta:family==='assessment'?undefined:page.cta,secondaryCta:family==='service'&&route.service.pricingBridge?{label:'Se priser',href:route.service.pricingBridge.link.href}:undefined,visual:media?{kind:'image',image:{...media,origin:'page'}}:{kind:'none'},breadcrumbs:crumbs});
+ const crumbs=family==='pricing'?[]:[{label:'Forsiden',href:'/'},...(family==='article'?[{label:'Innsikt',href:'/innsikt/'}]:[]),{label:family==='service'?(pricingBridge?.serviceName??page.eyebrow):page.eyebrow}];
+ return heroViewSchema.parse({family,layout,eyebrow:copy?.eyebrow??page.eyebrow,title:copy?.heading??page.title,support:copy?.intro??page.intro,primaryCta:family==='assessment'?undefined:page.cta,secondaryCta:family==='service'&&pricingBridge?.link?{label:'Se priser',href:pricingBridge.link.href}:undefined,visual:media?{kind:'image',image:{...media,origin:'page'}}:{kind:'none'},breadcrumbs:crumbs});
 }
 export const specialHeroSourceSchema=z.object({hero:synlighetHeroSchema}).strict();
 
