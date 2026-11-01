@@ -6,7 +6,7 @@
     "description": "Lokal SEO."
   },
   "hero": {
-    "layout": "centered-none",
+    "layout": "split-right",
     "eyebrow": "Tjeneste",
     "title": "Lokal SEO",
     "support": "Innhold kommer.",
