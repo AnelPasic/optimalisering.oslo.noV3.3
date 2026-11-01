@@ -51,6 +51,9 @@
         "positionX": 50,
         "positionY": 50
       }
+    },
+    "toneOverrides": {
+      "eyebrowPreset": "inherit"
     }
   },
   "sections": [
