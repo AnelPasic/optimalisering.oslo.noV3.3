@@ -1,0 +1,23 @@
+{
+  "slug": "lokal-seo",
+  "kind": "service",
+  "seo": {
+    "title": "Lokal SEO | Optimalisering Oslo",
+    "description": "Lokal SEO."
+  },
+  "hero": {
+    "layout": "centered-none",
+    "eyebrow": "Tjeneste",
+    "title": "Lokal SEO",
+    "support": "Innhold kommer.",
+    "primaryCta": {
+      "label": "Ta en gratis sjekk",
+      "href": "/#sjekk"
+    },
+    "visual": {
+      "kind": "none"
+    }
+  },
+  "sections": [],
+  "faq": []
+}

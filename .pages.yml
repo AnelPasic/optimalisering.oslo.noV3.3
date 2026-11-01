@@ -175,7 +175,7 @@ components:
         - name: "/konvertering/"
           label: "Konverteringsoptimalisering (CRO) | Optimalisering Oslo — /konvertering/"
         - name: "/lokal-seo/"
-          label: "Lokal SEO for Google Maps og lokale søk | Medon — /lokal-seo/"
+          label: "Lokal SEO | Optimalisering Oslo — /lokal-seo/"
         - name: "/nettbutikkoptimalisering/"
           label: "Nettbutikkoptimalisering - fra oppdagelse til kjøp | Medon — /nettbutikkoptimalisering/"
         - name: "/om/"
@@ -455,7 +455,7 @@ components:
         - name: "konvertering"
           label: "Konverteringsoptimalisering (CRO) | Optimalisering Oslo"
         - name: "lokal-seo"
-          label: "Lokal SEO for Google Maps og lokale søk | Medon"
+          label: "Lokal SEO | Optimalisering Oslo"
         - name: "nettbutikkoptimalisering"
           label: "Nettbutikkoptimalisering - fra oppdagelse til kjøp | Medon"
         - name: "om"
@@ -1323,7 +1323,7 @@ content:
               collapsible:
                 collapsed: true
                 summary: "{index}. {heading}{element}"
-            required: true
+            required: false
             blockKey: _block
             blocks:
               - name: content
