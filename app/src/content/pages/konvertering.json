@@ -11,7 +11,6 @@
           "surface": "secondary"
         }
       ],
-      "proofAfter": "prioritering",
       "pricingBridge": {
         "after": "sammenheng",
         "href": "/priser/",
@@ -181,18 +180,6 @@
     {
       "question": "Hva koster arbeid med konvertering?",
       "answer": "Konvertering kan være det prioriterte området i Optimalisering til 4 500 kr/mnd eks. mva. Hvis konvertering skal jobbe sammen med et annet område, kan Vekst eller Partner være mer relevant. Se pakkene for full oversikt."
-    },
-    {}
-  ],
-  "proof": {
-    "publicationApproved": true,
-    "caseIds": [
-      "nysta"
-    ],
-    "eyebrow": "Dokumenterte resultater",
-    "heading": "Fullført checkout økte fra 7,1 % til 43,6 %",
-    "beforeLabel": "Før",
-    "afterLabel": "Etter",
-    "changeLabel": "Arbeid"
-  }
+    }
+  ]
 }

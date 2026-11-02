@@ -153,17 +153,5 @@
       "question": "Hvorfor holder det ikke å måle konverteringsrate?",
       "answer": "Konverteringsraten sier hvor stor andel av et definert besøksgrunnlag som kjøper. Den sier ikke alene hva som blir igjen etter produktkostnader, rabatter og andre relevante kostnader. Ordrenes verdi må også vurderes."
     }
-  ],
-  "proof": {
-    "publicationApproved": false,
-    "caseIds": [
-      "eurotents",
-      "nysta"
-    ],
-    "eyebrow": "Fullført handel er det som teller",
-    "heading": "Nettbutikkoptimalisering for mer salg",
-    "beforeLabel": "Før optimalisering",
-    "afterLabel": "Etter optimalisering",
-    "changeLabel": "Justert kjøpsflyt"
-  }
+  ]
 }

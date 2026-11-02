@@ -41,7 +41,8 @@ test('All six service sources roundtrip in native CMS model without losing conte
   assert.equal(pageSchema.safeParse(saved).success,true,file);
   assert.deepEqual(saved.sections??[],original.sections??[],file+' sections unchanged');
   assert.deepEqual(saved.hero,original.hero,file+' hero unchanged');
-  if(original.proof)assert.deepEqual(saved.proof,original.proof,file+' proof remains intact');
+  assert.equal(Object.hasOwn(original,'proof'),false,file+' uses ProofList/global master, not a legacy service proof slot');
+  assert.equal(Object.hasOwn(saved,'proof'),false,file+' must not acquire obsolete proof data');
   if(original.composition)assert.deepEqual(saved.composition,original.composition,file+' special composition remains intact');
  }
 });

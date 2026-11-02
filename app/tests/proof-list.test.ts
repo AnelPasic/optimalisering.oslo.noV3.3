@@ -96,5 +96,9 @@ test('public renderers provide a ProofList branch without disturbing legacy proo
  const proof=readFileSync('src/components/HomeProof.astro','utf8');
  assert.match(proof,/<section id=\{sectionId\}/);
  assert.match(proof,/sectionId = 'resultater'/);
- assert.ok(read('src/content/pages/konvertering.json').proof,'pre-existing local Konvertering proof untouched');
+ for(const slug of ['konvertering','nettbutikkoptimalisering']){
+  const page=read('src/content/pages/'+slug+'.json');
+  assert.equal(page.proof,undefined,'legacy service proof has been removed: '+slug);
+  assert.equal(page.sections.filter((section:any)=>section._block==='proofList').length,1);
+ }
 });
