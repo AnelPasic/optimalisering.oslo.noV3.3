@@ -12,6 +12,7 @@ const text=html=>stripTerminologyLinks(html).replace(/<[^>]*>/g,' ').replace(/&a
 const checked=new Set();
 for(const [slug,expectedNames] of [
  ['home',['Eurotents','Nysta','Helt Opplagt']],
+ ['priser',['Eurotents','Nysta','Helt Opplagt']],
  ['konvertering',['Nysta']],
  ['nettbutikkoptimalisering',['Helt Opplagt','Eurotents']]
  ]){
@@ -24,6 +25,9 @@ for(const [slug,expectedNames] of [
   const ids=[...html.matchAll(/<section id="([^"]+)"/g)].map(m=>m[1]);
   const expected=getHomepageBlocks(page).filter(isHomepageSectionVisible).map(b=>b.id);
   assert.deepEqual(ids.filter(id=>expected.includes(id)),expected);
+ }else if(slug==='priser'){
+  assert.ok(page.sections.some(s=>s._block==='global'&&s.element==='resultater'),'pricing has explicit global Kunderesultater');
+  sectionId='resultater';slot=global;
  }else{
   assert.equal(page.proof,undefined,'legacy local proof slot removed');
   assert.equal(page.composition?.service?.proofAfter,undefined,'old auto-insertion removed');
