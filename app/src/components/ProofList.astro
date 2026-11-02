@@ -1,0 +1,12 @@
+---
+import { getCollection } from 'astro:content';
+import { getGlobalElement } from '../lib/home-builder';
+import { resolveProofListContent, type ProofListConfig } from '../lib/proof-list';
+import Proof from './HomeProof.astro';
+interface Props { sectionId:string; config:ProofListConfig; records?:unknown[]; }
+const { sectionId, config, records:givenRecords }=Astro.props;
+const records=givenRecords??(await getCollection('proofCases')).map(item=>item.data);
+const master=getGlobalElement('resultater').content;
+const content=resolveProofListContent(master,config,records);
+---
+<Proof content={content} records={records} sectionId={sectionId} />
