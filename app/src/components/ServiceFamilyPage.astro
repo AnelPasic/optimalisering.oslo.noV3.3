@@ -16,6 +16,7 @@ import ProofList from './ProofList.astro';
 import '../styles/compositions/service.css';
 interface Props {page:CollectionEntry<'pages'>['data'];commercial:HomepageContent;route:RouteFamily;}
 const {page,commercial,route}=Astro.props;
+const cmsOnly=page.slug==='synlighet';
 const capability=route.service,bridge=capability.pricingBridge;
 const globalProof=hasGlobalServiceProof(page);
 const hasGlobalFaq=page.sections.some(section=>section.globalElement==='sporsmal');
