@@ -8,6 +8,7 @@ import AssessmentForm from './AssessmentForm.astro';
 import Faq from './Faq.astro';
 import GlobalContentSection from './GlobalContentSection.astro';
 import PageList from './PageList.astro';
+import ProofList from './ProofList.astro';
 import { visibleServiceSections } from '../lib/service-sections';
 interface Props { page: CollectionEntry<'pages'>['data']; }
 const { page } = Astro.props;
@@ -19,6 +20,7 @@ const hasGlobalAssessment = page.sections.some(section => section.globalElement 
 <CommercialHero content={resolvePageHero(page)}>{isAssessment&&!hasGlobalAssessment&&<AssessmentForm slot="auxiliary"/>}</CommercialHero>
 <div class:list={{ 'article-content': isArticle }}>{visibleServiceSections(page).map((section, index) => section.globalElement
   ? <GlobalContentSection element={section.globalElement} faqItems={page.faq} />
+  : section._block === 'proofList'&&section.proofList ? <ProofList sectionId={section.id} config={section.proofList} />
   : section._block === 'pageList' ? <PageList section={section} />
   : <ContentSection section={section} index={index} />)}</div>
 {!hasGlobalFaq && <Faq items={page.faq} />}

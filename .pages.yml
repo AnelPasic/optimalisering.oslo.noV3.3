@@ -654,6 +654,55 @@ components:
                 label: Artikkel
                 component: insightArticleReference
                 required: true
+  sectionProofList:
+    type: object
+    fields:
+      - name: id
+        label: Seksjonens lenkeanker
+        description: Unik på siden, f.eks. proof-kunder. Ikke bruk resultater som er reservert for den globale seksjonen.
+        type: string
+        required: true
+        pattern: ^[a-z0-9]+(?:-[a-z0-9]+)*$
+      - name: visibility
+        label: Visning på denne siden
+        component: sectionVisibility
+      - name: proofList
+        label: Kundecaser og visning
+        type: object
+        required: true
+        fields:
+          - name: layout
+            label: Visning
+            type: select
+            default: inherit
+            required: true
+            options:
+              values:
+                - name: inherit
+                  label: Global standard
+                - name: mediaCards
+                  label: Bildekort
+                - name: alternating
+                  label: Bilde og tekst annenhver side
+          - name: entries
+            label: Velg kundecaser – legg til flere og dra i riktig rekkefølge
+            description: Tom liste viser globalt standardutvalg. Hver rad velger en case fra evidensregisteret. Bare godkjente caser publiseres.
+            type: object
+            list:
+              max: 12
+              collapsible:
+                collapsed: true
+                summary: "{caseId}"
+            fields:
+              - name: caseId
+                label: Kundecase
+                type: reference
+                required: true
+                options:
+                  collection: proofCases
+                  value: "{fields.id}"
+                  label: "{fields.clientName}"
+                  search: id,clientName
   sectionProtected:
     type: object
     fields:
@@ -1099,6 +1148,9 @@ content:
           - name: pageList
             label: PageList – innholdsliste
             component: sectionPageList
+          - name: proofList
+            label: ProofList – kundecaser
+            component: sectionProofList
           - name: content
             label: Innholdsseksjon
             fields:
@@ -1350,6 +1402,9 @@ content:
               - name: pageList
                 label: PageList – innholdsliste
                 component: sectionPageList
+              - name: proofList
+                label: ProofList – kundecaser
+                component: sectionProofList
               - name: global
                 label: Globalt element
                 component: serviceGlobalPlacement
@@ -1957,6 +2012,9 @@ content:
               - name: pageList
                 label: Innholdsliste
                 component: sectionPageList
+              - name: proofList
+                label: ProofList – kundecaser
+                component: sectionProofList
               - name: global
                 label: Globalt element
                 component: serviceGlobalPlacement

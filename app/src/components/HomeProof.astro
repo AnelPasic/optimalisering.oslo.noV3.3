@@ -8,15 +8,16 @@ interface Props {
   content: Omit<HomepageContent['proof'],'layout'|'displayOverrides'> & {layout?:HomepageContent['proof']['layout'];displayOverrides?:HomepageContent['proof']['displayOverrides']};
   records: unknown[];
   primary?: boolean;
+  sectionId?: string;
 }
-const { content, records, primary = false } = Astro.props;
+const { content, records, primary = false, sectionId = 'resultater' } = Astro.props;
 const publishedIds=[...new Set(content.caseIds)].filter(id=>getPublishableCases({...content,caseIds:[id]},records).length>0);
 const cases=getPublishableCases(content,records).map((proof,index)=>applyProofDisplayOverride(proof,publishedIds[index],content.displayOverrides,records));
 const layout=proofLayoutSchema.parse(content.layout);
 const visuals=primary?[]:publishedIds.map(id=>resolveProofCaseVisual(id,content,content,records));
 const visual = primary ? undefined : resolveFeaturedProofVisual(content.featuredVisual, content, records);
 ---
-{cases.length > 0 && <section id="resultater" class="proof-section section-space bg-base-200 text-base-content"><div class="shell">
+{cases.length > 0 && <section id={sectionId} class="proof-section section-space bg-base-200 text-base-content"><div class="shell">
   <div class:list={['section-heading', {'mb-(--gap-lg)': !primary}]}><p class="eyebrow">{content.eyebrow}</p><h2><TermText text={content.heading} terms={['roas', 'checkout', 'organisk-trafikk']} /></h2></div>
   {primary ? <div class="proof-grid proof-primary">{cases.map((proof,index)=><article class:list={['proof-card',index===0?'proof-featured bg-secondary text-secondary-content':'bg-info text-info-content']}>
 

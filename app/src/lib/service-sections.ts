@@ -1,6 +1,7 @@
 import type { RouteFamily } from './route-family.ts';
 import { globalPlacementSchema, resolveGlobalPlacement, getGlobalElement } from './home-builder.ts';
 import { getPublishableCases } from './proof.ts';
+import {proofListSchema,proofListAnchorSchema} from './proof-list.ts';
 import {resolveSharedContentPlacement,sharedContentPlacementSchema} from './shared-content.ts';
 
 export const serviceGlobalIds = ['resultater', 'regneeksempel', 'sjekk', 'behov', 'mekanisme', 'passer', 'priser', 'sporsmal'] as const;
@@ -29,6 +30,10 @@ export function resolvePageSections(value: unknown) {
    if(shared.has(placement.entry))throw new Error('Global innholdsseksjon er allerede plassert: '+placement.entry);
    shared.set(placement.entry,resolveSharedContentPlacement(placement));
   }else{
+   if(row._block==='proofList'){
+    proofListAnchorSchema.parse(row.id);
+    proofListSchema.parse(row.proofList);
+   }
    if(localIds.has(row.id))throw new Error('Duplisert lokalt anker: '+row.id);
    localIds.add(row.id);
   }
@@ -50,6 +55,7 @@ export function resolvePageSections(value: unknown) {
    const block=shared.get(row.entry)!;
    return block.visibility==='hidden'?[]:[block];
   }
+  if(row._block==='proofList')return [{...row,proofList:proofListSchema.parse(row.proofList),heading:'',body:[]}];
   return [row];
  });
 }

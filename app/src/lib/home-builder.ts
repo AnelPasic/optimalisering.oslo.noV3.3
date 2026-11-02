@@ -10,6 +10,7 @@ import {heroLayoutSchema} from './hero-presentation.ts';
 import {heroToneOverridesSchema} from './hero-tone-overrides.ts';
 import {assessmentLayoutSchema} from './assessment-layout.ts';
 import {pageListSchema} from './page-list.ts';
+import {proofListSchema,proofListAnchorSchema} from './proof-list.ts';
 import {sharedContentPlacementSchema,resolveSharedContentPlacement} from './shared-content.ts';
 import calculatorMaster from '../content/global-elements/regneeksempel.json' with {type:'json'};
 import selectorMaster from '../content/global-elements/behov.json' with {type:'json'};
@@ -47,6 +48,7 @@ export const homepageBlockSchema=z.discriminatedUnion('_block',[
  z.object({_block:z.literal('pageList'),id:z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),name:z.string().optional(),visibility:sectionVisibilitySchema,eyebrow:z.string().optional(),heading:z.string().trim().min(1),body:z.array(z.string()).default([]),headingAlign:headingAlignSchema,surface:surfaceSchema,layout:contentLayoutSchema.optional(),pageList:pageListSchema}).strict(),
  z.object({...identity,_block:z.literal('content'),eyebrow:z.string().optional(),heading:z.string().trim().min(1),body:z.array(z.string()).default([]),surface:surfaceSchema,headingAlign:headingAlignSchema,layout:contentLayoutSchema,
  items:z.array(z.object({title:z.string(),text:z.string(),href:optionalInternalHref,label:z.string().optional(),surface:surfaceSchema,boxVariant:boxVariantSchema})).optional(),links:z.array(link).optional()}).strict(),
+ z.object({_block:z.literal('proofList'),id:proofListAnchorSchema,visibility:sectionVisibilitySchema,proofList:proofListSchema,heading:z.string().optional(),body:z.array(z.string()).default([])}).strict(),
 ]);
 export const homepageBlocksSchema=z.array(homepageBlockSchema).max(56).superRefine((blocks,ctx)=>{
  for(const id of homepageCoreIds){const core=blocks.find(b=>b.id===id);if(core&&(!('uid' in core)||core.uid!==coreUids[id]))ctx.addIssue({code:'custom',message:'Protected master UUID: '+id});}
@@ -54,11 +56,11 @@ export const homepageBlocksSchema=z.array(homepageBlockSchema).max(56).superRefi
  // A content anchor also shares the DOM namespace with controls and ARIA targets.
  const reserved=new Set(['behov','regneeksempel','priser','resultater','sjekk','sporsmal','skjema','main','mobile-menu','site-menu','order-package','website','email','message','calc-visits','calc-conversion-label','calc-conversion','calc-traffic','calc-new-conversion-label','calc-new-conversion','calculator-error','scenario-illustration-label','scenario-current-label','scenario-improved-label','scenario-current-value','scenario-improved-value']);
  blocks.forEach((b,i)=>{
-  if(b._block==='pageList'&&(reserved.has(b.id)||/^(?:package-home-|term-|header-(?:desktop|mobile)-submenu-)/.test(b.id)))ctx.addIssue({code:'custom',path:[i,'id'],message:'PageList cannot take a protected anchor'});
-  if(ids.has(b.id)||(b._block!=='pageList'&&uids.has(b.uid.toLowerCase())))ctx.addIssue({code:'custom',path:[i],message:'Block UUID and anchor must be unique'});
+  if((b._block==='pageList'||b._block==='proofList')&&(reserved.has(b.id)||/^(?:package-home-|term-|header-(?:desktop|mobile)-submenu-)/.test(b.id)))ctx.addIssue({code:'custom',path:[i,'id'],message:'PageList cannot take a protected anchor'});
+  if(ids.has(b.id)||(b._block!=='pageList'&&b._block!=='proofList'&&uids.has(b.uid.toLowerCase())))ctx.addIssue({code:'custom',path:[i],message:'Block UUID and anchor must be unique'});
   if(b._block==='content'&&(reserved.has(b.id)||/^(?:package-home-|term-|header-(?:desktop|mobile)-submenu-)/.test(b.id)))ctx.addIssue({code:'custom',path:[i,'id'],message:'Content cannot take a protected section, control or ARIA identity'});
-  if(b._block!=='content'&&b._block!=='pageList'&&types.has(b._block))ctx.addIssue({code:'custom',path:[i,'_block'],message:'Duplicate homepage singleton'});
-  ids.add(b.id);if(b._block!=='pageList')uids.add(b.uid.toLowerCase());types.add(b._block);
+  if(!['content','pageList','proofList'].includes(b._block)&&types.has(b._block))ctx.addIssue({code:'custom',path:[i,'_block'],message:'Duplicate homepage singleton'});
+  ids.add(b.id);if(b._block!=='pageList'&&b._block!=='proofList')uids.add(b.uid.toLowerCase());types.add(b._block);
  });
 });
 export type HomepageBlock=z.infer<typeof homepageBlockSchema>;
@@ -79,8 +81,9 @@ export function resolveGlobalPlacement(value:unknown):HomepageBlock{
 }
 const ordinarySchema=homepageBlockSchema.options[7];
 const pageListHomeSchema=homepageBlockSchema.options[6].refine(b=>!globalElementIds.includes(b.id as GlobalElementId),'PageList cannot claim a shared module anchor');
+const proofListHomeSchema=homepageBlockSchema.options[8];
 export const optionalHomepageSectionSchema=ordinarySchema.refine(b=>!globalElementIds.includes(b.id as GlobalElementId)&&!Object.values(coreUids).includes(b.uid),'Use a global reference for a library master, not a copied local record');
-export const pagePlacementSchema=z.union([globalPlacementSchema,sharedContentPlacementSchema,optionalHomepageSectionSchema,pageListHomeSchema]);
+export const pagePlacementSchema=z.union([globalPlacementSchema,sharedContentPlacementSchema,optionalHomepageSectionSchema,pageListHomeSchema,proofListHomeSchema]);
 export const homepageSourceSchema=z.object({sections:z.array(pagePlacementSchema).max(56)}).strict();
 export function isHomepageSectionVisible(section?:{visibility?:unknown}){return !!section&&section.visibility!=='hidden';}
 type Source={sections?:unknown};
@@ -97,7 +100,7 @@ export function getHomepageBlocks(page:Source){
  if(!Array.isArray(page.sections)||['topSections','bottomSections','optionalSections'].some(key=>Object.hasOwn(page,key))||page.sections.some(value=>value?._block==='global'))return resolveHomepageSections(page);
  return homepageBlocksSchema.parse(page.sections.map((value)=>{
   const s=value as Record<string,unknown>;
-  if(s._block==='content'||s._block==='pageList')return s;
+  if(s._block==='content'||s._block==='pageList'||s._block==='proofList')return s;
   const {_block,uid,id,name,content,...rest}=s;
   for(const key of ['heading','body','surface','headingAlign','layout'])delete rest[key];
   return {...rest,_block,uid,id,name,content};
