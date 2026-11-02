@@ -123,6 +123,21 @@
           "href": "/vurdering/"
         }
       ]
+    },
+    {
+      "_block": "proofList",
+      "id": "proofs",
+      "proofList": {
+        "layout": "mediaCards",
+        "entries": [
+          {
+            "caseId": "helt-opplagt"
+          },
+          {
+            "caseId": "eurotents"
+          }
+        ]
+      }
     }
   ],
   "faq": [
