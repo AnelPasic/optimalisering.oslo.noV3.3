@@ -231,7 +231,7 @@
         "vatSuffix": "eks. mva.",
         "recommended": false,
         "cta": {
-          "label": "Bestill Partner",
+          "label": "Bestill Enterprise",
           "href": "/priser/?pakke=partner#bestill"
         }
       }
