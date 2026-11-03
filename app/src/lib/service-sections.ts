@@ -1,3 +1,4 @@
+import {z} from 'astro/zod';
 import type { RouteFamily } from './route-family.ts';
 import { globalPlacementSchema, resolveGlobalPlacement, getGlobalElement } from './home-builder.ts';
 import { getPublishableCases } from './proof.ts';
@@ -8,6 +9,13 @@ export const serviceGlobalIds = ['resultater', 'regneeksempel', 'sjekk', 'behov'
 export const serviceGlobalPlacementSchema = globalPlacementSchema.refine(placement => serviceGlobalIds.some(id => id === placement.element), 'Dette globale elementet er ikke tilgjengelig i tjenestebyggeren');
 // The same eight catalogue entries are available in every page editor.
 export const seoGlobalIds = serviceGlobalIds;
+// CMS-only placements. Rendered pricing copy stays in the global Packages master.
+export const pricingModuleIds={valg:'pricing-decision',vekst:'pricing-multiplier',sammenligning:'sammenlign'} as const;
+const pricingPlacementSchema=z.object({
+ _block:z.literal('pricingModule'),
+ pricingModule:z.enum(['valg','vekst','sammenligning']),
+ visibility:z.literal('hidden').optional(),
+}).strict();
 const mixedServiceSlugs = new Set(['synlighet', 'seo']);
 type Section = { id: string; visibility?: 'hidden'; globalElement?: typeof serviceGlobalIds[number] };
 type ServicePage = { slug: string; sections: Section[]; faq?: readonly { question: string; answer: string }[] };
@@ -29,6 +37,11 @@ export function resolvePageSections(value: unknown) {
    const placement=sharedContentPlacementSchema.parse(row);
    if(shared.has(placement.entry))throw new Error('Global innholdsseksjon er allerede plassert: '+placement.entry);
    shared.set(placement.entry,resolveSharedContentPlacement(placement));
+  }else if(row._block==='pricingModule'){
+   const placement=pricingPlacementSchema.parse(row);
+   const id=pricingModuleIds[placement.pricingModule];
+   if(localIds.has(id))throw new Error('Prismodul kan bare plasseres én gang: '+placement.pricingModule);
+   localIds.add(id);
   }else{
    if(row._block==='proofList'){
     proofListAnchorSchema.parse(row.id);
@@ -54,6 +67,10 @@ export function resolvePageSections(value: unknown) {
   if(row._block==='sharedContent'){
    const block=shared.get(row.entry)!;
    return block.visibility==='hidden'?[]:[block];
+  }
+  if(row._block==='pricingModule'){
+   const placement=pricingPlacementSchema.parse(row);
+   return [{...placement,id:pricingModuleIds[placement.pricingModule],heading:'',body:[]}];
   }
   if(row._block==='proofList')return [{...row,proofList:proofListSchema.parse(row.proofList),heading:'',body:[]}];
   return [row];

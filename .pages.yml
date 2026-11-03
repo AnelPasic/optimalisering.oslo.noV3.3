@@ -1516,7 +1516,52 @@ content:
           - *serviceslug
           - *a4
           - *standardHero
-          - *a6
+          - name: sections
+            label: Innholdsseksjoner
+            description: Flytt eller skjul seksjoner her. Tekster, pakkepriser og sammenligningspunkter redigeres i Priser → Pakker og priser. Kalkulator og resultater redigeres under Globale Elementer.
+            type: block
+            blockKey: _block
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{index}. {pricingModule}{element}{heading}"
+            blocks:
+              - name: pricingModule
+                label: Prismodul – innhold fra Pakker og priser
+                fields:
+                  - name: pricingModule
+                    label: Del av prissiden
+                    type: select
+                    required: true
+                    options:
+                      values:
+                        - name: valg
+                          label: Valgregler – tre pakker
+                        - name: vekst
+                          label: Hvorfor Vekst finnes – lilla seksjon
+                        - name: sammenligning
+                          label: Sammenlign pakkene – tabell
+                  - name: visibility
+                    label: Visning på prissiden
+                    component: sectionVisibility
+              - name: content
+                label: Innholdsseksjon
+                component: synlighetSectionContent
+              - name: protected
+                label: Beskyttet sjekk / handling
+                component: sectionProtected
+              - name: pageList
+                label: PageList – innholdsliste
+                component: sectionPageList
+              - name: proofList
+                label: ProofList – kundecaser
+                component: sectionProofList
+              - name: global
+                label: Globalt element
+                component: serviceGlobalPlacement
+              - name: sharedContent
+                label: Global innholdsseksjon
+                component: sharedContentPlacement
           - *a7
 
       - name: globalPackages

@@ -9,7 +9,7 @@ import { compositionSchema, resolveRouteFamily, routeKindSchema } from './route-
 
 import { heroSchema, resolveHomepageSections, sectionVisibilitySchema, validateHomepagePublicLinks } from './home-builder.ts';
 import {heroPresentationSchema} from './hero-presentation.ts';
-import { validateSynlighetSections, resolveSynlighetSections, resolvePageSections, serviceGlobalIds } from './service-sections.ts';
+import { validateSynlighetSections, resolveSynlighetSections, resolvePageSections, serviceGlobalIds, pricingModuleIds } from './service-sections.ts';
 import {synlighetHeroSchema,legacyHeroKeys} from './synlighet-hero.ts';
 import {optionalInternalHref} from './optional-internal-href.ts';
 
@@ -70,7 +70,7 @@ export const pageSchema = z.preprocess((input,context)=>{
     sections: z.array(z.object({
       uid: z.string().optional(), name: z.string().optional(), content: z.unknown().optional(), visibility: sectionVisibilitySchema,
       globalElement: z.enum(serviceGlobalIds).optional(),
-      _block: z.enum(['content', 'protected', 'pageList', 'selector', 'calculator', 'packages', 'proof', 'assessment', 'faq', 'proofList']).optional(), surface: surfaceSchema,
+      _block: z.enum(['content', 'protected', 'pageList', 'selector', 'calculator', 'packages', 'proof', 'assessment', 'faq', 'proofList', 'pricingModule']).optional(), pricingModule: z.enum(['valg','vekst','sammenligning']).optional(), surface: surfaceSchema,
       pageList: pageListSchema.optional(), proofList:proofListSchema.optional(),
       headingAlign: headingAlignSchema,
       layout: contentLayoutSchema,
@@ -93,6 +93,12 @@ export const pageSchema = z.preprocess((input,context)=>{
     try { const route = resolveRouteFamily(page); validateSynlighetSections(page, route); } catch (error) { context.addIssue({code:'custom',path:['composition'],message:error instanceof Error?error.message:'Invalid composition'}); }
     if (page.kind !== 'home') page.sections.forEach((section, index) => {
       if (section.globalElement) return;
+      if(section._block==='pricingModule'){
+        if(page.kind!=='pricing'||!section.pricingModule||section.id!==pricingModuleIds[section.pricingModule]||section.pageList||section.proofList||section.items||section.links)
+          context.addIssue({code:'custom',path:['sections',index],message:'Prismodul er bare tillatt på prissiden og må ha riktig seksjonsidentitet'});
+        return;
+      }
+      if(section.pricingModule)context.addIssue({code:'custom',path:['sections',index,'pricingModule'],message:'Prismodulvalg krever seksjonstypen prismodul'});
       if(section._block==='proofList'){
         if(!section.proofList||section.pageList||section.items||section.links)context.addIssue({code:'custom',path:['sections',index],message:'ProofList krever bare egen case- og visningskonfigurasjon'});
         return;
