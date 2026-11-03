@@ -52,16 +52,19 @@
         {
           "title": "Bli vurdert når behovet oppstår",
           "text": "Målet er å gjøre bedriften til et relevant alternativ når folk leter etter tjenester du faktisk leverer i området. Vi prioriterer søk med kommersiell verdi, ikke bare visninger.",
+          "boxVariant": "card",
           "surface": "info"
         },
         {
           "title": "Bli valgt, ikke bare sett",
           "text": "Kunder trenger å forstå hva dere tilbyr, om dere dekker området og hvordan de kommer i kontakt. Vi jobber med hele veien fra lokalt søk til henvendelse.",
+          "boxVariant": "card",
           "surface": "base-300"
         },
         {
           "title": "Få arbeid som kan følges opp",
           "text": "Vi ser etter signaler som relevante klikk, samtaler og henvendelser der det finnes data. En pen graf er ikke det samme som flere betalende kunder.",
+          "boxVariant": "card",
           "surface": "secondary"
         }
       ]
