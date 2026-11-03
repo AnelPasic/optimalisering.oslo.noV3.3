@@ -14,23 +14,30 @@ export function createCommercialTextBinding(home: Page, pricing: Page, shared=re
   const prices = new Map(reference.map((match, index) => [spaces(match[4]), source.items[index]]));
   const names = new Map(reference.map((match, index) => [match[2], source.items[index].title]));
   const namesPattern = new RegExp(`\\b(?:${[...names.keys()].map(escape).join('|')})\\b`, 'gu');
-  const costs = pricing.sections.find(section => section.id === 'kostnader')!.body;
-  const boundary = costs[0].indexOf('. ') + 1;
-  if (!boundary || costs.length !== 3) throw new Error('Pricing cost reference must retain the approved budget/external/separate-work/capacity paragraphs');
-  const budgetReference = costs[0].slice(0, boundary);
-  const externalReference = costs[0].slice(boundary).trim();
-  const externalCanonical = externalReference.replace('kommer også i tillegg', 'kommer i tillegg');
-  const rules = new Map([
-    [budgetReference, source.adBudgetNote], [costs[1], source.separateWorkNote], [costs[2], source.capacityNote],
-    [externalReference, source.externalCostsNote === externalCanonical ? externalReference : source.externalCostsNote],
-  ]);
+  // Pricing may use only global CMS sections. Preserve the former local
+  // cost-copy binding for legacy pages, but do not require a deleted local section.
+  const costs = pricing.sections.find(section => section.id === 'kostnader')?.body;
+  const rules = new Map<string,string>();
+  let budgetReference: string | undefined;
+  let externalCanonical: string | undefined;
+  if (costs) {
+    const boundary = costs[0]?.indexOf('. ') + 1;
+    if (!boundary || costs.length !== 3) throw new Error('Legacy pricing cost section must keep its three approved paragraphs');
+    budgetReference = costs[0].slice(0, boundary);
+    const externalReference = costs[0].slice(boundary).trim();
+    externalCanonical = externalReference.replace('kommer også i tillegg', 'kommer i tillegg');
+    rules.set(budgetReference, source.adBudgetNote);
+    rules.set(costs[1], source.separateWorkNote);
+    rules.set(costs[2], source.capacityNote);
+    rules.set(externalReference, source.externalCostsNote === externalCanonical ? externalReference : source.externalCostsNote);
+  }
   // H-012 supersedes the old capacity-based package comparison. Reuse the
   // shared selection sentences, including in the repeated home price answer.
   const selection = source.items.map(item => item.selectionRule).join(' ');
   rules.set(pricing.faq[1].answer, selection);
   const previousDifference = shared.faq.find(item => item.question === 'Hva koster videre arbeid?')?.answer.match(/Forskjellen er .*$/u)?.[0];
   if (previousDifference) rules.set(previousDifference, selection);
-  for (const item of shared.faq) if (item.answer.startsWith(`${budgetReference} `)) {
+  if (budgetReference) for (const item of shared.faq) if (item.answer.startsWith(`${budgetReference} `)) {
     const variant = item.answer.slice(budgetReference.length).trim();
     rules.set(variant, source.externalCostsNote === externalCanonical ? variant : source.externalCostsNote);
   }

@@ -41,7 +41,20 @@ test('inserted CMS selection and cost strings retain edited names verbatim', () 
   edited.packages.externalCostsNote = 'For Vekst Pro kommer eksterne kostnader i tillegg.';
   const bind = createCommercialTextBinding(home, pricing, edited);
   assert.equal(bind(pricing.faq[1].answer), edited.packages.items.map((item: any) => item.selectionRule).join(' '));
-  const costs = pricing.sections.find((section: any) => section.id === 'kostnader').body[0];
-  assert.ok(bind(costs).endsWith(edited.packages.externalCostsNote));
+  const legacyCosts = pricing.sections.find((section: any) => section.id === 'kostnader')?.body?.[0];
+  if (legacyCosts) {
+    assert.ok(bind(legacyCosts).endsWith(edited.packages.externalCostsNote));
+  } else {
+    // Owner can remove local cost prose when switching to global CMS blocks.
+    assert.doesNotThrow(()=>bind(pricing.faq[2].answer));
+    assert.ok(bind(pricing.faq[1].answer).includes('Vekst Pro'));
+  }
   assert.ok(!bind(pricing.faq[1].answer).includes('Vekst Pro Pro'));
+});
+
+test('CMS global-only pricing sections keep live commercial binding valid',()=>{
+ const globalOnly={...pricing,sections:pricing.sections.filter((section: any)=>section.id!=='kostnader')};
+ const bind=createCommercialTextBinding(home,globalOnly);
+ assert.equal(typeof bind(pricing.faq[0].answer),'string');
+ assert.ok(bind(pricing.faq[0].answer).includes('Vekst'));
 });
