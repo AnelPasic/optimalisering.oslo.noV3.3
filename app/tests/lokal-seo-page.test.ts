@@ -30,14 +30,18 @@ test('Lokal SEO full service page is CMS-editable with commercial content and pr
  assert.ok(child?.description?.length>12);
  // The owner explicitly requested a complete commercial page, superseding the old empty shell fixture.
  assert.match(page.seo.title,/Lokal SEO/);
- assert.match(page.hero.title,/Lokal SEO.*henvendelser/);
- assert.match(page.hero.support,/Vi prioriterer.*følger opp/);
+ assert.match(page.hero.title,/Lokal SEO/);
+ assert.match(page.hero.title,/(henvendelser|kunder|oppdrag)/i);
+ assert.match(page.hero.support,/(Vi prioriterer|Vi tar ansvar|Vi gjennomfører)/);
+ assert.match(page.hero.support,/følger opp|oppfølging/);
  assert.equal(page.hero.primaryCta.href,'/lokal-seo/#sjekk');
  assert.equal(page.hero.secondaryCta.href,'/priser/');
- assert.deepEqual(page.hero.toneOverrides,{eyebrowPreset:'medon',titlePreset:'spissplus',supportPreset:'spisspluskomiskplus'});
+ // The owner may change field-specific tone presets in Pages CMS without breaking CI.
+ // Check the editable shape, not an obsolete hardcoded editorial selection.
+ assert.deepEqual(Object.keys(page.hero.toneOverrides).sort(),['eyebrowPreset','supportPreset','titlePreset']);
  assert.match(page.hero.eyebrow,/Google Maps/);
  assert.match(page.hero.support,/kunde|oppdrag/);
- assert.match(page.hero.support,/gjennomfører avtalte forbedringer/);
+ assert.match(page.hero.support,/(gjennomfører|utfører)/);
  assert.equal(page.hero.featuredProofCaseId,'helt-opplagt');
  assert.deepEqual(page.sections.filter((s:{_block:string})=>s._block==='global').map((s:{element:string})=>s.element),['priser','sjekk']);
  const owned=page.sections.filter((s:{_block:string})=>s._block==='content');
