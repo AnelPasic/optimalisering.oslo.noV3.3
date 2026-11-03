@@ -25,14 +25,14 @@ const format=(price:number)=>new Intl.NumberFormat('nb-NO',{maximumFractionDigit
             <td>Etter avtale</td>
           </tr>)}
         </tbody>
+        <tfoot>
+          <tr>
+            <th scope="row">Velg pakke</th>
+            {packages.items.map(item=><td><a class="btn btn-outline" href={`#package-order-${item.key}`} data-open-package-order={item.key}>Velg {item.title}</a></td>)}
+          </tr>
+        </tfoot>
       </table>
     </div>
-    <div class="comparison-notes" aria-live="polite">
-      <span class="comparison-status" data-compare-count="optimalisering">Optimalisering: ikke valgt ennå</span>
-      <span class="comparison-status" data-compare-count="vekst">Vekst: 0 av 2 valgt</span>
-      <span>Partner prioriterer flere kundereiser etter avtalt kapasitet – ikke alt samtidig.</span>
-    </div>
-    <div class="comparison-actions">{packages.items.map(item=><a class="btn btn-outline" href={`#package-order-${item.key}`} data-open-package-order={item.key}>Velg {item.title}</a>)}</div>
   </div>
 </section>
 <script>
@@ -40,13 +40,8 @@ const format=(price:number)=>new Intl.NumberFormat('nb-NO',{maximumFractionDigit
  if(root){
    const options=[...root.querySelectorAll<HTMLInputElement>('[data-package-focus-choice]')];
    const update=()=>{
-     const selected=(key:string)=>options.filter(input=>input.dataset.focusPackage===key&&input.checked);
-     const optimal=selected('optimalisering').length,vekst=selected('vekst').length;
-     for(const input of options)if(input.dataset.focusPackage==='vekst')input.disabled=vekst>=2&&!input.checked;
-     const single=root.querySelector<HTMLElement>('[data-compare-count="optimalisering"]');
-     const double=root.querySelector<HTMLElement>('[data-compare-count="vekst"]');
-     if(single)single.textContent=optimal?'Optimalisering: 1 fokusområde valgt':'Optimalisering: ikke valgt ennå';
-     if(double)double.textContent=`Vekst: ${vekst} av 2 valgt`;
+     const selected=options.filter(input=>input.dataset.focusPackage==='vekst'&&input.checked).length;
+     for(const input of options)if(input.dataset.focusPackage==='vekst')input.disabled=selected>=2&&!input.checked;
    };
    root.addEventListener('change',event=>{if(event.target instanceof HTMLInputElement&&event.target.matches('[data-package-focus-choice]'))update();});
    root.addEventListener('click',event=>{

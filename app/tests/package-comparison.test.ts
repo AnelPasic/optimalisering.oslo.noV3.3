@@ -68,6 +68,14 @@ test('Pricing comparison is only on pricing page and has correct accessible inte
  assert.match(comparison,/class="checkbox checkbox-primary checkbox-sm" type="checkbox" name="comparison-vekst"/);
  assert.match(comparison,/input.disabled=vekst>=2&&!input.checked/);
  assert.match(comparison,/scope="col"/);
+ const footer=comparison.match(/<tfoot>([\s\S]*?)<\/tfoot>/)?.[1];
+ assert.ok(footer,'Package buttons must be inside table footer');
+ assert.match(footer,/<th scope="row">Velg pakke<\/th>/);
+ assert.match(footer,/packages\.items\.map\(item=><td><a class="btn btn-outline"/);
+ assert.match(footer,/data-open-package-order={item\.key}/);
+ assert.equal((comparison.match(/data-open-package-order={item\.key}/g)??[]).length,1,'Buttons rendered once, only inside table');
+ for(const obsolete of ['comparison-notes','comparison-actions','data-compare-count','Optimalisering: ikke valgt ennå','Vekst: 0 av 2 valgt','Partner prioriterer flere kundereiser']) assert.ok(!comparison.includes(obsolete),obsolete);
+ assert.match(comparison,/input\.disabled=selected>=2&&!input\.checked/);
  assert.match(order,/createPackageFocusMessage/);
  assert.match(order,/name="partnerNeeds"/);
  assert.match(order,/data-package-focus-summary/);
