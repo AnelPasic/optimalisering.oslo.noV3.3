@@ -11,7 +11,7 @@ import {entryForFile,cmsJsonSave,resolveField} from './helpers/pages-cms-json.ts
 
 const text=(path:string)=>readFileSync(path,'utf8');
 const cms=YAML.parse(text('../.pages.yml'));
-const presets=['inherit','noktern','medon','spiss','spissplus','spisspluskomisk','spisspluskomiskplus'];
+const presets=['inherit','noktern','medon','spiss','spissplus','spisspluskomisk','spisspluskomiskplus','spissplushysterisk'];
 
 test('all normal page Hero editors expose independent optional tone controls',()=>{
  const files=pageFilePaths();
@@ -33,7 +33,7 @@ test('all normal page Hero editors expose independent optional tone controls',()
  assert.deepEqual([...heroTonePresetValues],presets);
 });
 
-test('five different /seo Hero tone strategies can be saved independently, preserving original text',()=>{
+test('six different /seo Hero tone strategies can be saved independently, preserving original text',()=>{
  const page=JSON.parse(text('src/content/pages/seo.json'));
  const editor=entryForFile(cms,'app/src/content/pages/seo.json');
  const baselineHeroView=resolvePageHero(page);
@@ -43,6 +43,7 @@ test('five different /seo Hero tone strategies can be saved independently, prese
   {eyebrowPreset:'medon',titlePreset:'spissplus',supportPreset:'noktern'},
   {eyebrowPreset:'spiss',titlePreset:'spisspluskomisk',supportPreset:'medon'},
   {eyebrowPreset:'spissplus',titlePreset:'spisspluskomiskplus',supportPreset:'spiss'},
+  {eyebrowPreset:'noktern',titlePreset:'spissplushysterisk',supportPreset:'spissplus'},
  ] as const;
  for(const toneOverrides of candidates){
   const proposed=structuredClone(page);
@@ -65,6 +66,7 @@ test('invalid presets rejected; inheritance stays optional and site-specific',()
  assert.ok(heroToneOverridesSchema.safeParse(undefined).success);
  assert.ok(heroToneOverridesSchema.safeParse({titlePreset:'inherit'}).success);
  assert.ok(heroToneOverridesSchema.safeParse({titlePreset:'spiss'}).success);
+ assert.ok(heroToneOverridesSchema.safeParse({titlePreset:'spissplushysterisk'}).success);
  assert.equal(heroToneOverridesSchema.safeParse({titlePreset:'garbage'}).success,false);
  assert.equal(heroToneOverridesSchema.safeParse({primaryCtaPreset:'spiss'}).success,false,'CTA uses shared tone, not per-Hero override');
  assert.equal(heroToneOverridesSchema.safeParse({secondaryCtaPreset:'spiss'}).success,false,'CTA uses shared tone, not per-Hero override');
