@@ -25,9 +25,9 @@
       }
     },
     "toneOverrides": {
-      "eyebrowPreset": "spissplushysterisk",
-      "titlePreset": "spissplushysterisk",
-      "supportPreset": "spissplushysterisk"
+      "eyebrowPreset": "medon",
+      "titlePreset": "medon",
+      "supportPreset": "medon"
     },
     "featuredProofCaseId": "helt-opplagt",
     "secondaryCta": {
@@ -74,12 +74,6 @@
       "headingAlign": "center",
       "layout": "three-columns",
       "surface": "base-100",
-      "links": [
-        {
-          "label": "Se hvordan lokal SEO kan inngå i en månedsavtale",
-          "href": "/priser/"
-        }
-      ],
       "body": [
         "Medon tar ansvar for å analysere mulighetene, prioritere og gjennomføre avtalt lokal SEO-arbeid. Du bidrar med kunnskap om tjenestene, områdene du faktisk betjener og nødvendige tilganger. Resten planlegger vi sammen.",
         "Dette er faglig arbeid som må vurderes og justeres over tid. Det selges ikke som en mirakelknapp eller en engangsopprydding."
@@ -100,6 +94,12 @@
           "text": "Vi vurderer synlighet, relevant aktivitet og mulige henvendelser med de dataene som finnes, og foreslår neste prioritet. Målet er fremgang i bedriften, ikke flest utfylte SEO-felter.",
           "surface": "secondary"
         }
+      ],
+      "links": [
+        {
+          "label": "Se hvordan lokal SEO kan inngå i en månedsavtale",
+          "href": "/priser/"
+        }
       ]
     },
     {
@@ -110,16 +110,6 @@
       "headingAlign": "left",
       "layout": "three-columns",
       "surface": "base-300",
-      "links": [
-        {
-          "label": "Les om vanlig SEO",
-          "href": "/seo/"
-        },
-        {
-          "label": "Google bedriftsprofil forklart",
-          "href": "/innsikt/google-bedriftsprofil/"
-        }
-      ],
       "body": [
         "Google beskriver lokal rangering med tre hovedfaktorer: relevans, avstand og hvor kjent bedriften er. Derfor holder det ikke å bytte profilbilde og vente på telefonstorm.",
         "Vi velger tiltak som passer bedriftens virkelige tjenester og områder. Avstand kan vi ikke optimalisere bort, og vi lager ikke falske kontorer eller løfter om topp tre."
@@ -139,6 +129,16 @@
           "title": "Kjennskap og tillit",
           "text": "Anmeldelser, omtale og signaler fra nettsiden kan ha betydning. Vi vurderer troverdige forbedringer uten kjøpte anmeldelser eller oppdiktet sosialt bevis.",
           "surface": "base-200"
+        }
+      ],
+      "links": [
+        {
+          "label": "Les om vanlig SEO",
+          "href": "/seo/"
+        },
+        {
+          "label": "Google bedriftsprofil forklart",
+          "href": "/innsikt/google-bedriftsprofil/"
         }
       ]
     },
@@ -182,6 +182,11 @@
       "heading": "Vi måler det som kan måles. Og later ikke som Google har lovet noe.",
       "headingAlign": "left",
       "surface": "secondary",
+      "body": [
+        "Vi kan jobbe for at flere relevante lokale kunder skal finne og vurdere bedriften. Vi kan ikke love en bestemt plassering i Google Maps, et antall telefoner eller hvor raskt utviklingen kommer.",
+        "Vi undersøker tilgjengelige signaler fra søk og nettside. Der vi kan, kobler vi dem til kvalifiserte henvendelser. En økning i visninger eller organiske klikk er nyttig informasjon, men er ikke dokumentasjon på økt omsetning.",
+        "Dere skal vite hvilke prioriteringer som er gjort, hva vi har gjennomført, og hva vi mener er mest fornuftig å gjøre videre."
+      ],
       "links": [
         {
           "label": "Hvordan vi vurderer effekten av optimalisering",
@@ -191,11 +196,6 @@
           "label": "Se priser og arbeidsomfang",
           "href": "/priser/"
         }
-      ],
-      "body": [
-        "Vi kan jobbe for at flere relevante lokale kunder skal finne og vurdere bedriften. Vi kan ikke love en bestemt plassering i Google Maps, et antall telefoner eller hvor raskt utviklingen kommer.",
-        "Vi undersøker tilgjengelige signaler fra søk og nettside. Der vi kan, kobler vi dem til kvalifiserte henvendelser. En økning i visninger eller organiske klikk er nyttig informasjon, men er ikke dokumentasjon på økt omsetning.",
-        "Dere skal vite hvilke prioriteringer som er gjort, hva vi har gjennomført, og hva vi mener er mest fornuftig å gjøre videre."
       ]
     },
     {
@@ -234,6 +234,10 @@
       "heading": "Skal du satse på Google Maps, vanlig SEO eller begge deler?",
       "headingAlign": "left",
       "surface": "base-100",
+      "body": [
+        "Lokal SEO handler om søk der nærhet og lokal leverandør betyr noe. Vanlig SEO handler om å bli funnet i de organiske resultatene for relevante tjenester og spørsmål, også når kunden ikke søker etter et sted.",
+        "Vi ser på hva kundene faktisk søker etter, og anbefaler innsats der det er størst grunn til å tro at den kan føre til relevante henvendelser. Noen bedrifter trenger begge deler; andre bør starte med ett prioritert område."
+      ],
       "links": [
         {
           "label": "Se SEO-tjenesten",
@@ -243,10 +247,6 @@
           "label": "Se samlet synlighetstilbud",
           "href": "/synlighet/"
         }
-      ],
-      "body": [
-        "Lokal SEO handler om søk der nærhet og lokal leverandør betyr noe. Vanlig SEO handler om å bli funnet i de organiske resultatene for relevante tjenester og spørsmål, også når kunden ikke søker etter et sted.",
-        "Vi ser på hva kundene faktisk søker etter, og anbefaler innsats der det er størst grunn til å tro at den kan føre til relevante henvendelser. Noen bedrifter trenger begge deler; andre bør starte med ett prioritert område."
       ]
     },
     {
