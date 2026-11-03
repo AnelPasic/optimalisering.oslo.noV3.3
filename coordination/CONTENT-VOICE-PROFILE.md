@@ -40,13 +40,13 @@
 - **Spiss+ (nivå 4, OWNER-selected for FAQ/explanations 2026-10-22):** humor 2, absurd 3, cheekiness 2, candor 3. Stronger contrast with a recognizable and useful analogy, specific business consequences and restrained sting. **Not** extra jokes, longer text or a guaranteed dramatic last line.
 - **Spiss+ komisk (nivå 5, available option):** an intentionally funny, recognizable twist after the relevant answer. Use wordplay, dry surprise or gentle absurdity to make the practical point stick. It should give a reader an actual reason to smile. Never hide facts, manufacture a claim or insert a gag into every paragraph.
 - **Spiss+ komisk+ (nivå 6, optional editorial preset):** a bolder, genuinely funny surprise: one vivid but recognizable absurd business situation, followed by an earned punchline tied directly to the buyer's practical question. More originality and memorable imagery, not more jokes per paragraph. Make the explanation clear first; avoid mocking the buyer, unsupported claims, forced slang or comedy in pricing, proof, legal texts and forms.
-- **Spiss+ Hysterisk (nivå 7, optional, mainly for SoMe):** standalone-comedy energy for an explicitly requested post or campaign. Use original standup-style setups, absurd larger-than-life reversals, self-irony and 'Chuck Norris logic' about industry clichés; never mock real clients. Exaggeration must obviously be fictional, not fabricated marketing results or guaranteed rankings. No copied jokes. Do not apply site-wide or rewrite existing pages merely because the option exists; keep prices, proof, legal and forms nøkterne.
+- **Spiss+ Hysterisk (nivå 7, opt-in anywhere OWNER explicitly selects it):** genuine high comedy, not slightly cheeky marketing copy. Build a specific comic situation with **setup, escalation and an unexpected last-turn punchline** (or a character exchange/callback of equal strength). Explore different premise types privately; reject one-liner analogies and neat observations that merely provoke a smirk as level 4-6. The punchline should feel like an actual joke someone might retell, not a forced moral after a sensible paragraph. When this page saves Hysterisk for a Hero part, **use it**; do not silently downshift because examples were originally SoMe-first. Humor may lead, but H1 must identify the service and buyer value on its own. Never mock the buyer, real clients or vulnerable people. Use clearly fictional absurdity, never invented marketing results or rankings; no borrowed standup/Chuck Norris jokes. Factual pricing, proof, legal, forms, safety and health remain nøkterne. Subjective laughter requires OWNER/reader feedback, never 'CI green'.
 
 Apply a preset per **section/brief**, not by adding CMS runtime classes. OWNER may request "gjør den spissere" or "nøkternt" and the content agent must then rewrite only the requested text, with a before/after diff. No global automatic rewriting. A native Pages CMS profile editor is now configured. Its choices are stored in `coordination/CONTENT-TONE.json`; this Markdown file remains the interpretive guide, not a second editable preset authority.
 
 ## Apply by content role
 
-- Hero/H1/subline: **Medon**, with unambiguous category/outcome first; minimal humor.
+- Hero/H1/subline: honor the **actual per-field saved `hero.toneOverrides` first**, then `heroPreset`/default. Normally clear with minimal humor; if OWNER selected **Hysterisk**, the text should be genuinely funny, not restrained by this ordinary Hero suggestion. H1 must independently identify service and buyer outcome; dramatic setup and payoff can span H1 and support.
 - Three SEO / lokal SEO / AI visibility choice cards: **Medon leaning nøktern** - distinguish Google organic results, Google Maps/local intent, and AI answers using recognizable real customer situations. Do not promise ranking or ChatGPT recommendation.
 - Glossary, CPC/ROAS/attribution and educational explanations: selected preset for future editing is **Spiss+ komisk+**. The Lokal SEO example is a calibration, not a site-wide rewriting mandate. Use deliberate humor only where it improves understanding.
 - Packages/pricing and contact/order forms: **Nøktern**; scope/next action, conditions, no winks that hide costs.
@@ -66,6 +66,15 @@ Why it works: starts with a concrete diagnostic fork, uses a real-world analogy 
 
 The labels `nivå 4`, `nivå 5`, `nivå 6` and `nivå 7` refer to **overall editorial presets**, not extra points on the independent 0-3 dimension scales above.
 
+## Hysterisk quality calibration - internal fiction, not production copy
+
+The OWNER rejected the 2026-11-03 Lokal SEO Hero jokes about Skatteetaten, postbudet and rørlegger-etterlysning: **slightly cheeky is not Hysterisk**. Never recycle these as passed examples. Mentioning a funny authority, police or Chuck Norris does not itself make a real joke.
+
+- **Explore distinct mechanisms:** an invented mini-scene with escalating consequences and a sideways last line; sharp fictional character dialogue; absurd bureaucracy with internal logic; a surprise callback. A single dry comparison or one cheeky phrase is insufficient.
+- **Fictional sketch (not a client case):** 'En kunde vil bare vite hva en nettside koster. Skjemaet spør om navn, telefon, mors pikenavn og hvor han var natt til 14. juli. Nå har han advokat. Fortsatt ingen pris.' Understand the setup/payoff, but do not copy this scene by default.
+- **An explicitly comedic Hero** still needs H1 service/value clarity, but its humor must be substantive. Never append a polite joke after a generic SEO introduction and declare it 'hysterisk'.
+- **Real evaluation:** have a person unaware of the prompt read it. A smile can qualify as level 5/6; level 7 is a higher editorial target, not something proved by model self-rating, repository tests or successful deployment.
+
 ## Historical style calibration - illustrations, not proof of site results
 
 Previous direction used:
@@ -80,7 +89,7 @@ These are *educational voice samples*, not automatically suitable headlines, ver
 
 1. Would a non-marketer understand what the service does and why it matters?
 2. Is there a concrete business consequence (not "vi gjør det tydelig")?
-3. Does the humor actually help understanding, and is it sparse enough to remain surprising?
+3. Does the humor actually help understanding? For `spissplushysterisk`, is there a real setup, escalation and unexpected payoff, rather than a tidy analogy? If not, reject it as insufficient for level 7 and try a different premise.
 4. Can any phrase imply guaranteed rankings, AI mentions, ROI or sales? If so, qualify/rewrite.
 5. Does it match this section's preset and the surrounding page voice?
 6. Did only the explicitly requested CMS fields change? Is latest OWNER copy preserved? Was source verified separately from Worker preview?
