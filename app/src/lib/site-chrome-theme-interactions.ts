@@ -37,16 +37,22 @@ function onSystemChange(event: MediaQueryListEvent): void {
   if (inPageOverride || storedChoice()) return;
   applyMode(event.matches ? 'dark' : 'light');
 }
+/** Shared explicit theme choice for both header toggles and the QA gallery.
+ * A single implementation persists and synchronizes the canonical html theme.
+ */
+export function setChromeThemeMode(mode: Mode): void {
+  inPageOverride = mode;
+  try { localStorage.setItem(preferenceKey, mode); }
+  catch { /* Preserve the current document choice if storage is unavailable. */ }
+  applyMode(mode);
+}
+
 export function mountChromeThemeSwitchers(): void {
   document.querySelectorAll<HTMLInputElement>('input[data-mws-theme-toggle]').forEach(input => {
     if (input.dataset.mwsThemeMounted === '1') return;
     input.dataset.mwsThemeMounted = '1';
     input.addEventListener('change', () => {
-      const mode: Mode = input.checked ? 'dark' : 'light';
-      inPageOverride = mode;
-      try { localStorage.setItem(preferenceKey, mode); }
-      catch { /* Keep manual preference for this document anyway. */ }
-      applyMode(mode);
+      setChromeThemeMode(input.checked ? 'dark' : 'light');
     });
   });
   if (!listeningSystem && typeof window.matchMedia === 'function') {
