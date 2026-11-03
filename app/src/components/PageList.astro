@@ -13,10 +13,12 @@ const cases = config.source === 'cases' || config.mode === 'manual' ? (await get
 const items = resolvePageList(config, pages, 'public', cases);
 const cards = items.map(item => ({ title: item.title, text: item.summary, href: item.href, label: item.label, surface: 'default' as const, boxVariant: 'default' as const }));
 const displayedItems = items.map(item => ({ ...item, displayVisual: pageListPresentationVisual(item, config.layout) }));
+// For PageList cards, reuse HomeSection's existing column/viewport contract.
+const cardLayout = config.columns === 1 ? 'stacked' : config.columns === 2 ? 'two-columns' : config.columns === 3 ? 'three-columns' : section.layout;
 ---
-{config.layout === 'cards' ? <HomeSection section={{ ...section, items: cards }} /> :
+{config.layout === 'cards' ? <HomeSection section={{ ...section, items: cards, layout: cardLayout }} /> :
   <HomeSection section={section}>
-    <ul class:list={['page-list', `page-list-${config.layout}`]} data-count={items.length}>
+    <ul class:list={['page-list', `page-list-${config.layout}`]} data-count={items.length} data-columns={config.layout==='alternating'?undefined:config.columns}>
       {displayedItems.map(item => <li>
         {config.layout === 'mediaCards' || config.layout === 'alternating' ?
           <article class:list={['listing-item min-w-0',config.layout === 'mediaCards'?'card card-border bg-base-100 h-full overflow-hidden':'info-item']} data-has-visual={!!item.displayVisual} data-visual-kind={item.displayVisual?.kind ?? 'none'} data-surface={config.layout === 'mediaCards' ? 'base-100' : undefined}>
@@ -61,5 +63,18 @@ const displayedItems = items.map(item => ({ ...item, displayVisual: pageListPres
     .page-list-alternating .listing-item { grid-template-columns: minmax(0, 1fr); gap: var(--gap); }
     .page-list-alternating .listing-item[data-visual-kind="icon"] :global(.listing-visual) { height: clamp(140px, 40vw, 180px); }
     .page-list-alternating > li:nth-child(even) .listing-copy, .page-list-alternating > li:nth-child(even) :global(.listing-visual) { grid-column: auto; grid-row: auto; }
+  }
+
+  /* A selected 1/2/3-column grid applies to independent list items only.
+     Alternating preserves its full-width split-image composition. */
+  @media (min-width: 701px) {
+    .page-list[data-columns="1"] { grid-template-columns: minmax(0, 1fr); }
+    .page-list[data-columns="2"], .page-list[data-columns="3"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (min-width: 1101px) {
+    .page-list[data-columns="3"] { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  }
+  @media (max-width: 700px) {
+    .page-list[data-columns] { grid-template-columns: minmax(0, 1fr); }
   }
 </style>

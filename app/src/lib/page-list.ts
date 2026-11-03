@@ -27,6 +27,8 @@ export const pageListSchema = z.object({
   sort: z.enum(['editorial','title']).default('editorial'),
   limit: z.number().int().min(1).max(12).default(6),
   layout: z.enum(['cards','mediaCards','alternating','compact','links']).default('cards'),
+  /** Undefined keeps legacy automatic columns, including alternating full-width rows. */
+  columns: z.preprocess(value => value == null || value === '' ? undefined : value, z.number().int().min(1).max(3).optional()),
   selected: articleReferences,
   excluded: articleReferences,
   entries:z.array(pageListEntrySchema).max(9).default([]).refine(entries=>{

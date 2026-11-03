@@ -579,6 +579,14 @@ components:
                   label: Kompakt
                 - name: links
                   label: Lenker
+          - name: columns
+            label: Antall per rad
+            type: number
+            description: 1, 2 eller 3. Tomt felt bruker eksisterende automatisk oppsett. Gjelder Kort, Bildekort, Kompakt og Lenker. Vekslende visning er alltid én rad per oppføring.
+            options:
+              min: 1
+              max: 3
+              step: 1
           - name: entries
             label: Velg innhold manuelt (2–9)
             description: Bland valgte sider, godkjente kundecaser og egne URL-er i ønsket rekkefølge.
