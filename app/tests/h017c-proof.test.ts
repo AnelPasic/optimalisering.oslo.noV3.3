@@ -63,7 +63,14 @@ test('Pages CMS saves ordered ProofList without an editable old local proof obje
  assert.equal(localProof,undefined);
  const master=resolveField(homepageBlockEditor(cms,'proof'),cms.components);
  assert.equal(master.fields.find((f:any)=>f.name==='publicationApproved').readonly,true);
- const fields=cms.content.find((c:any)=>c.name==='proofCases').fields;
- const readonly=(rows:any[])=>rows.forEach(f=>{assert.equal(f.readonly,true,f.name);if(f.fields)readonly(f.fields)});
- readonly(fields);
+ const evidence=cms.content.find((c:any)=>c.name==='proofCases');
+ const editable=(rows:any[])=>rows.forEach(f=>{
+   assert.notEqual(f.readonly,true,'proof register must allow editing '+f.name);
+   if(f.fields)editable(f.fields);
+ });
+ editable(evidence.fields);
+ assert.equal(evidence.operations.create,true,'new cases may be added directly in CMS');
+ assert.equal(evidence.operations.rename,false,'renaming an ID needs updating existing references');
+ assert.equal(evidence.operations.delete,false,'deleting approved evidence needs explicit migration');
+ assert.equal(evidence.fields.find((f:any)=>f.name==='originKey').required,false);
 });
