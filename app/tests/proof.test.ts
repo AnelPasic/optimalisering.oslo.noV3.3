@@ -21,7 +21,8 @@ test('CMS preserves the existing page CTA and exposes only declared proof fields
   const config = YAML.parse(readFileSync('../.pages.yml', 'utf8'));
   assert.equal(config.content.find((entry: any) => entry.name === 'services').fields.find((field: any) => field.name === 'cta')?.component, 'link');
   const proofFields = config.content.find((entry: any) => entry.name === 'proofCases').fields;
-  assert.deepEqual(proofFields.map((field: any) => field.name).sort(), Object.keys(complete).sort());
+  assert.deepEqual(proofFields.filter((field:any)=>field.name!=='originKey').map((field:any)=>field.name).sort(), Object.keys(complete).sort());
+  assert.equal(proofFields.find((field:any)=>field.name==='originKey').required,false);
 });
 
 test('proof renders only explicitly selected, complete, permitted and approved records', () => {

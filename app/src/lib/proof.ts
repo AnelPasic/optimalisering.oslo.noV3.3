@@ -3,6 +3,7 @@ import { z } from 'astro/zod';
 const nullableText = z.string().nullable();
 export const proofCaseSchema = z.object({
   id: z.string().regex(/^[a-z0-9][a-z0-9-]*$/),
+  originKey: z.string().nullable().optional(),
   clientName: z.string(), anonymizedLabel: nullableText, relationship: nullableText,
   dominantMetric: z.string(), before: nullableText, after: nullableText, delta: nullableText,
   period: z.object({ before: nullableText, after: nullableText, comparable: z.boolean() }).strict(),
