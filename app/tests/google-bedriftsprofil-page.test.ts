@@ -20,7 +20,11 @@ test('Google bedriftsprofil is one genuine Innsikt page with CMS editing and Lok
  assert.equal(ids.length,new Set(ids).size);
  assert.ok(article.sections.some((section:{id:string})=>section.id==='sjekkliste'));
  assert.equal(hub.slug,'lokal-seo');
- assert.deepEqual(hub.sections??[],[],'Lokal SEO may have a written Hero without content sections yet');
+ // The OWNER's later full Lokal SEO sales-page request replaces the old empty shell.
+ assert.ok(pageSchema.safeParse(hub).success,'local service page remains CMS-valid');
+ assert.equal(hub.sections.filter((s:{_block:string})=>s._block==='content').length,7);
+ assert.ok(hub.sections.some((s:{id:string})=>s.id==='vi-tar-ansvaret'));
+ assert.ok(hub.sections.some((s:{links?:Array<{href:string}>})=>s.links?.some(l=>l.href==='/innsikt/google-bedriftsprofil/')),'guide remains linked from paid service page');
  const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
  const entry=entryForFile(cms,'app/'+file);
  assert.equal(entry?.type,'collection');

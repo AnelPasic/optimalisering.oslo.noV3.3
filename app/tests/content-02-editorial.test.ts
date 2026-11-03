@@ -15,9 +15,10 @@ test('CONTENT-02: live pages no longer contain the two identified obsolete test 
  assert.equal((local.sections??[]).some((s:any)=>s.id==='testing-links'),false);
  assert.deepEqual(home.sections.filter((s:any)=>s._block==='global').map((s:any)=>s.element),
    ['behov','regneeksempel','resultater','priser','sjekk','sporsmal']);
- // OWNER intentionally deleted the former Lokal SEO body. Do not require old sections.
- assert.deepEqual(local.sections??[],[]);
- assert.deepEqual(local.faq??[],[]);
+ // OWNER later approved a new complete commercial page, while deleted test blocks stay absent.
+ assert.equal(local.sections.filter((s:any)=>s._block==='content').length,7);
+ assert.deepEqual(local.sections.filter((s:any)=>s._block==='global').map((s:any)=>s.element),['priser','sjekk']);
+ assert.equal(local.faq.length,8);
 });
 
 test('CONTENT-02: SEO fakta preserves three independent cards and source-backed numbers without repetition',()=>{

@@ -2,17 +2,17 @@
   "slug": "lokal-seo",
   "kind": "service",
   "seo": {
-    "title": "Lokal SEO | Optimalisering Oslo",
-    "description": "Lokal SEO."
+    "title": "Lokal SEO for bedrifter | Google Maps og lokale kunder",
+    "description": "Lokal SEO for bedrifter som vil bli funnet og vurdert av kunder i nærheten. Vi prioriterer, gjennomfører og følger opp arbeid i Google Maps og lokale søk."
   },
   "hero": {
     "layout": "split-right",
-    "eyebrow": "Google Maps, Google bedriftsprofil og lokale søk",
-    "title": "Lokal SEO: Bli funnet av lokale kunder. Skatteetaten har allerede klart det.",
-    "support": "Vi gjør Google bedriftsprofilen og nettsiden tydeligere på tjenester, åpningstider, områder og kontakt. Når vasken lekker i Ski, skal kunden slippe å etterlyse rørleggeren med bilde, signalement og dusør. Det er en lekkasje, ikke en kriminalsak.",
+    "eyebrow": "Google Maps og lokale søk. Faktiske kunder, ikke diplomer.",
+    "title": "Lokal SEO for flere lokale henvendelser. Vi deler ikke ut diplomer for å finne deg selv.",
+    "support": "Et byrå ropte \"FØRSTEPLASS!\" og kom med kake, ballonger og diplom. Søkeordet? Firmanavnet ditt skrevet baklengs. Ingen kunder hadde søkt etter det. Kaken kom på fakturaen som \"strategisk synlighet\". Vi jobber med søk fra folk som faktisk trenger tjenesten din i nærheten. Vi prioriterer, gjør avtalt arbeid og følger opp utviklingen. Du driver bedriften. Vi tar oss av lokal SEO.",
     "primaryCta": {
       "label": "Ta en gratis sjekk",
-      "href": "/#sjekk"
+      "href": "/lokal-seo/#sjekk"
     },
     "visual": {
       "kind": "image",
@@ -29,6 +29,263 @@
       "titlePreset": "spissplushysterisk",
       "supportPreset": "spissplushysterisk"
     },
-    "featuredProofCaseId": "helt-opplagt"
-  }
+    "featuredProofCaseId": "helt-opplagt",
+    "secondaryCta": {
+      "label": "Se pakker og priser",
+      "href": "/priser/"
+    }
+  },
+  "sections": [
+    {
+      "_block": "content",
+      "id": "lokale-kundemuligheter",
+      "eyebrow": "Når kunden er klar for å velge",
+      "heading": "De søker etter en leverandør i nærheten. Finner de deg eller konkurrenten?",
+      "headingAlign": "center",
+      "layout": "three-columns",
+      "surface": "base-200",
+      "body": [
+        "Et søk som \"rørlegger i Ski\" eller \"tannlege i nærheten\" handler ofte om å velge hvem man skal kontakte. Hvis bedriften ikke er et aktuelt alternativ i Google Maps og lokale søkeresultater, kan den miste muligheten før første samtale.",
+        "Vi undersøker hvor det er mest relevant å konkurrere, og hva som hindrer kunder i å finne og velge bedriften din."
+      ],
+      "items": [
+        {
+          "title": "Bli vurdert når behovet oppstår",
+          "text": "Målet er å gjøre bedriften til et relevant alternativ når folk leter etter tjenester du faktisk leverer i området. Vi prioriterer søk med kommersiell verdi, ikke bare visninger.",
+          "surface": "info"
+        },
+        {
+          "title": "Bli valgt, ikke bare sett",
+          "text": "Kunder trenger å forstå hva dere tilbyr, om dere dekker området og hvordan de kommer i kontakt. Vi jobber med hele veien fra lokalt søk til henvendelse.",
+          "surface": "base-300"
+        },
+        {
+          "title": "Få arbeid som kan følges opp",
+          "text": "Vi ser etter signaler som relevante klikk, samtaler og henvendelser der det finnes data. En pen graf er ikke det samme som flere betalende kunder.",
+          "surface": "secondary"
+        }
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "vi-tar-ansvaret",
+      "eyebrow": "Det du faktisk kjøper",
+      "heading": "Du trenger flere riktige henvendelser. Ikke en ekstra jobb som Google-ekspert.",
+      "headingAlign": "center",
+      "layout": "three-columns",
+      "surface": "base-100",
+      "links": [
+        {
+          "label": "Se hvordan lokal SEO kan inngå i en månedsavtale",
+          "href": "/priser/"
+        }
+      ],
+      "body": [
+        "Medon tar ansvar for å analysere mulighetene, prioritere og gjennomføre avtalt lokal SEO-arbeid. Du bidrar med kunnskap om tjenestene, områdene du faktisk betjener og nødvendige tilganger. Resten planlegger vi sammen.",
+        "Dette er faglig arbeid som må vurderes og justeres over tid. Det selges ikke som en mirakelknapp eller en engangsopprydding."
+      ],
+      "items": [
+        {
+          "title": "Vi finner hvor mulighetene ligger",
+          "text": "Vi vurderer lokale søk, konkurrentene kundene faktisk møter og hva som bør prioriteres for virksomheten. Ikke alle steder og søkeord er like verdifulle.",
+          "surface": "info"
+        },
+        {
+          "title": "Vi gjennomfører tiltakene",
+          "text": "Innen avtalt omfang forbedrer vi Google bedriftsprofil, aktuelle tjenestesider og kundens vei til kontakt. Du får gjort arbeidet uten å måtte lære SEO-verktøyene selv.",
+          "surface": "base-300"
+        },
+        {
+          "title": "Vi følger utviklingen",
+          "text": "Vi vurderer synlighet, relevant aktivitet og mulige henvendelser med de dataene som finnes, og foreslår neste prioritet. Målet er fremgang i bedriften, ikke flest utfylte SEO-felter.",
+          "surface": "secondary"
+        }
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "google-lokale-resultater",
+      "eyebrow": "Google Maps er mer enn et kart",
+      "heading": "Hvorfor du ikke kan kjøpe deg til førsteplassen i Google Maps.",
+      "headingAlign": "left",
+      "layout": "three-columns",
+      "surface": "base-300",
+      "links": [
+        {
+          "label": "Les om vanlig SEO",
+          "href": "/seo/"
+        },
+        {
+          "label": "Google bedriftsprofil forklart",
+          "href": "/innsikt/google-bedriftsprofil/"
+        }
+      ],
+      "body": [
+        "Google beskriver lokal rangering med tre hovedfaktorer: relevans, avstand og hvor kjent bedriften er. Derfor holder det ikke å bytte profilbilde og vente på telefonstorm.",
+        "Vi velger tiltak som passer bedriftens virkelige tjenester og områder. Avstand kan vi ikke optimalisere bort, og vi lager ikke falske kontorer eller løfter om topp tre."
+      ],
+      "items": [
+        {
+          "title": "Relevans",
+          "text": "Når noen søker etter en tjeneste, må Google forstå hva bedriften faktisk tilbyr. Vi vurderer samsvaret mellom søkeintensjon, bedriftsprofil og relevante sider.",
+          "surface": "base-100"
+        },
+        {
+          "title": "Avstand",
+          "text": "Google vurderer hvor søker og bedrift befinner seg. Vi tar hensyn til geografien og faktiske tjenesteområder i stedet for å love rangering i byer dere ikke betjener.",
+          "surface": "info"
+        },
+        {
+          "title": "Kjennskap og tillit",
+          "text": "Anmeldelser, omtale og signaler fra nettsiden kan ha betydning. Vi vurderer troverdige forbedringer uten kjøpte anmeldelser eller oppdiktet sosialt bevis.",
+          "surface": "base-200"
+        }
+      ]
+    },
+    {
+      "_block": "global",
+      "element": "priser"
+    },
+    {
+      "_block": "content",
+      "id": "fra-sjekk-til-arbeid",
+      "eyebrow": "En enkel vei i gang",
+      "heading": "Du skal vite hva vi gjør, hvorfor vi gjør det og hva som skjer videre.",
+      "headingAlign": "center",
+      "layout": "three-columns",
+      "surface": "base-100",
+      "body": [
+        "Vi begynner med å forstå virksomheten, hvilke kunder dere ønsker og hvor det er verdt å bruke tid. Deretter avklarer vi om lokal SEO bør være det første arbeidsområdet i en avtale."
+      ],
+      "items": [
+        {
+          "title": "1. Vi vurderer utgangspunktet",
+          "text": "Vi ser på den offentlige nettsiden og synligheten som er mulig å undersøke. Du får en begrunnet anbefaling om hvor vi ville startet - ikke en automatisk rapport på 80 sider.",
+          "surface": "base-200"
+        },
+        {
+          "title": "2. Vi avtaler prioritet og omfang",
+          "text": "Vi avklarer mål, hvilke tjenester og områder som betyr mest, nødvendige tilganger og hva som inngår i den valgte pakken. Større utviklingsarbeid avtales separat.",
+          "surface": "info"
+        },
+        {
+          "title": "3. Vi gjør jobben og følger opp",
+          "text": "Vi gjennomfører avtalte tiltak og vurderer utviklingen før vi velger neste prioritet. Lokal synlighet er et løpende konkurransearbeid, ikke et diplom man henger opp.",
+          "surface": "base-300"
+        }
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "maal-og-forventninger",
+      "eyebrow": "Ærlig om resultater",
+      "heading": "Vi måler det som kan måles. Og later ikke som Google har lovet noe.",
+      "headingAlign": "left",
+      "surface": "secondary",
+      "links": [
+        {
+          "label": "Hvordan vi vurderer effekten av optimalisering",
+          "href": "/innsikt/male-effekt-av-optimalisering/"
+        },
+        {
+          "label": "Se priser og arbeidsomfang",
+          "href": "/priser/"
+        }
+      ],
+      "body": [
+        "Vi kan jobbe for at flere relevante lokale kunder skal finne og vurdere bedriften. Vi kan ikke love en bestemt plassering i Google Maps, et antall telefoner eller hvor raskt utviklingen kommer.",
+        "Vi undersøker tilgjengelige signaler fra søk og nettside. Der vi kan, kobler vi dem til kvalifiserte henvendelser. En økning i visninger eller organiske klikk er nyttig informasjon, men er ikke dokumentasjon på økt omsetning.",
+        "Dere skal vite hvilke prioriteringer som er gjort, hva vi har gjennomført, og hva vi mener er mest fornuftig å gjøre videre."
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "hvem-passer-det-for",
+      "eyebrow": "Passer det bedriften din?",
+      "heading": "Lokal SEO er mest interessant når kunden faktisk velger leverandør etter sted.",
+      "headingAlign": "center",
+      "layout": "three-columns",
+      "surface": "base-200",
+      "body": [
+        "Vi prioriterer først behov der geografi påvirker kjøpsvalget. For andre tjenester kan vanlig SEO, annonser eller bedre konvertering være viktigere."
+      ],
+      "items": [
+        {
+          "title": "Lokale tjenestebedrifter",
+          "text": "Rørlegger, elektriker, verksted eller flyttebyrå: Kunder trenger raskt å vite hvem som tar jobber der de er. Vi vurderer hvilke tjenester og områder som gir mest mening.",
+          "surface": "info"
+        },
+        {
+          "title": "Klinikker og besøkssteder",
+          "text": "Når folk søker etter en klinikk, frisør eller annet sted å besøke, teller nærheten og tilliten til virksomheten. Vi jobber med et tydelig og troverdig grunnlag for å bli valgt.",
+          "surface": "base-300"
+        },
+        {
+          "title": "Bedrifter med flere tjenesteområder",
+          "text": "Vi kan prioritere reelle geografiske markeder uten å fabrikkprodusere nesten like lokalsider eller opprette adresser virksomheten ikke har.",
+          "surface": "secondary"
+        }
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "lokal-versus-vanlig-seo",
+      "eyebrow": "Riktig type synlighet",
+      "heading": "Skal du satse på Google Maps, vanlig SEO eller begge deler?",
+      "headingAlign": "left",
+      "surface": "base-100",
+      "links": [
+        {
+          "label": "Se SEO-tjenesten",
+          "href": "/seo/"
+        },
+        {
+          "label": "Se samlet synlighetstilbud",
+          "href": "/synlighet/"
+        }
+      ],
+      "body": [
+        "Lokal SEO handler om søk der nærhet og lokal leverandør betyr noe. Vanlig SEO handler om å bli funnet i de organiske resultatene for relevante tjenester og spørsmål, også når kunden ikke søker etter et sted.",
+        "Vi ser på hva kundene faktisk søker etter, og anbefaler innsats der det er størst grunn til å tro at den kan føre til relevante henvendelser. Noen bedrifter trenger begge deler; andre bør starte med ett prioritert område."
+      ]
+    },
+    {
+      "_block": "global",
+      "element": "sjekk"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Hva gjør dere når vi kjøper lokal SEO?",
+      "answer": "Vi vurderer lokale søk og konkurranse, prioriterer tiltak og gjennomfører avtalt arbeid i Google bedriftsprofil og på relevante sider. Deretter følger vi utviklingen og vurderer neste steg. Omfanget avhenger av pakken og hva vi avtaler - du kjøper ikke en ubegrenset oppgaveliste."
+    },
+    {
+      "question": "Hvor raskt kan vi forvente resultater fra lokal SEO?",
+      "answer": "Det finnes ingen felles tidsfrist. Utgangspunkt, konkurranse, avstand, arbeidets omfang og Googles egne systemer påvirker utviklingen. Vi avtaler prioritering og oppfølging, men lover ikke førsteplass eller et bestemt antall henvendelser."
+    },
+    {
+      "question": "Hva koster lokal SEO hos dere?",
+      "answer": "Lokal SEO kan være ett prioritert arbeidsområde i Optimalisering fra 4 500 kr/mnd eks. mva. Hvis to områder må forbedres samtidig, kan Vekst til 6 900 kr/mnd være mer relevant. Det faktiske omfanget avklares før oppstart. Se prissiden for gjeldende pakker og vilkår."
+    },
+    {
+      "question": "Må vi ha Google bedriftsprofil fra før?",
+      "answer": "Nei. Vi kan vurdere hvordan bedriften bør være representert, men opprettelse og verifisering forutsetter at virksomheten oppfyller Googles krav. Ingen kan love at en profil blir godkjent eller rangerer på en bestemt plass."
+    },
+    {
+      "question": "Kan dere få oss synlige i alle byene vi ønsker?",
+      "answer": "Vi tar utgangspunkt i reelle lokasjoner og områdene dere faktisk betjener. Google vurderer blant annet avstand, relevans og kjennskap. Vi oppretter ikke fiktive adresser eller gir løfter om kartplasseringer i områder dere ikke har tilknytning til."
+    },
+    {
+      "question": "Må vi gjøre SEO-arbeidet selv?",
+      "answer": "Nei, vi gjennomfører arbeidet som inngår i avtalen. Dere bidrar med informasjon om tjenester, faktisk dekningsområde og nødvendige tilganger, og godkjenner eventuelle større endringer. Vi tar ansvar for prioritering og utførelse innen avtalt omfang."
+    },
+    {
+      "question": "Hvordan vet vi om arbeidet gir verdi?",
+      "answer": "Vi vurderer relevante søk, synlighet og aktivitet, og kobler til henvendelser der det finnes forsvarlige data. Flere visninger er ikke automatisk flere kunder. Vi beskriver hva tallene kan og ikke kan si."
+    },
+    {
+      "question": "Hva er forskjellen på lokal SEO og vanlig SEO?",
+      "answer": "Lokal SEO retter seg mot situasjoner der kunden vil finne en leverandør i nærheten, ofte gjennom Google Maps og lokale søkeresultater. Vanlig SEO handler bredere om organiske søkeresultater. Vi vurderer hva som passer best for din virksomhet."
+    }
+  ]
 }
