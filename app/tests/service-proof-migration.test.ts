@@ -26,7 +26,7 @@ test('Konvertering proof migrated to its approved Nysta ProofList, no automatic 
  const sections=page.sections.filter((section:any)=>section._block==='proofList');
  assert.equal(sections.length,1);
  assert.deepEqual(sections[0].proofList.entries,[{caseId:'nysta'}]);
- assert.equal(resolveRouteFamily(page).service.proofAfter,undefined);
+ assert.equal(Object.hasOwn(resolveRouteFamily(page).service,'proofAfter'),false);
  assert.equal(pageSchema.safeParse(page).success,true);
  const entry=entryForFile(cms,'app/src/content/pages/konvertering.json');
  const saved=JSON.parse(cmsJsonSave(page,page,entry,cms));

@@ -5,7 +5,6 @@ import { headingAlignSchema } from './heading-alignment.ts';
 import {contentLayoutSchema,boxVariantSchema} from './content-presentation.ts';
 import { listingSchema, pageListSchema } from './page-list.ts';
 import {proofListSchema} from './proof-list.ts';
-import { homeSectionDataSchema, proofSlotSchema } from './home-section-data.ts';
 import { compositionSchema, resolveRouteFamily, routeKindSchema } from './route-family.ts';
 
 import { heroSchema, resolveHomepageSections, sectionVisibilitySchema, validateHomepagePublicLinks } from './home-builder.ts';
@@ -15,10 +14,12 @@ import {synlighetHeroSchema,legacyHeroKeys} from './synlighet-hero.ts';
 import {optionalInternalHref} from './optional-internal-href.ts';
 
 const link = z.object({label:z.string(),href:z.string().refine(safeCmsHref)});
-export { proofSlotSchema } from './home-section-data.ts';
 const homepage = z.object({}).strict(); // Header/footer have independent global CMS sources.
 export const pageSchema = z.preprocess((input,context)=>{
   let raw=projectSelectedLinks(input) as Record<string,any> & {slug?:string;kind?:string;sections:unknown;hero?:unknown};
+  // Retired page-local proof is not a valid editor source on any page family.
+  // Never silently discard it: tell the editor to place a shared global proof or ProofList.
+  if(raw&&Object.hasOwn(raw,'proof')) context.addIssue({code:'custom',path:['proof'],message:'Lokalt proof er utgått. Bruk Globalt element → Kunderesultater eller ProofList i Innholdsseksjoner.'});
   // Native CMS Hero is now a single authored object. Legacy projections are
   // runtime-only for existing commercial/section components; they are never
   // written back as duplicate CMS fields.
@@ -36,8 +37,8 @@ export const pageSchema = z.preprocess((input,context)=>{
   if(raw?.kind!=='home'&&Array.isArray(raw?.sections)&&raw.sections.some(section=>section&&typeof section==='object'&&'globalElement' in section)) context.addIssue({code:'custom',path:['sections'],message:'Use a global reference, not resolved master fields'});
   if(raw?.slug==='synlighet'&&raw.kind==='service') {
     try {
-      const hub=raw as typeof raw&{proof?:unknown;faq?:unknown;composition?:{service?:Record<string,unknown>}};
-      if(Object.hasOwn(hub,'proof')||['proofAfter','pricingBridge','closingCta'].some(key=>Object.hasOwn(hub.composition?.service??{},key))) throw new Error('Synlighet krever CMS-plasserte seksjoner; fjern lokal proof og automatisk proofAfter/pricingBridge/closingCta');
+      const hub=raw as typeof raw&{composition?:{service?:Record<string,unknown>}};
+      if(['pricingBridge','closingCta'].some(key=>Object.hasOwn(hub.composition?.service??{},key))) throw new Error('Synlighet krever CMS-plasserte seksjoner for priser og CTA, uten automatisk innsetting');
       if(legacyHeroKeys.some(key=>Object.hasOwn(raw,key))) throw new Error('Synlighet Hero must have one nested source; remove legacy top-level Hero fields');
       const hero=synlighetHeroSchema.parse(raw.hero);
       // Compatibility projections exist only in parsed collection data, never in CMS JSON.
@@ -79,7 +80,6 @@ export const pageSchema = z.preprocess((input,context)=>{
     })).default([]),
     faq: z.array(z.object({ question: z.string(), answer: z.string() })).default([]),
     cta: link,
-    proof: proofSlotSchema.optional(),
     heroVisual: z.object({
       kind: z.enum(['photo', 'illustration']),
       src: z.string().regex(/^\/images\/services\/(?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.(?:webp|png|jpe?g|avif|svg)$/),

@@ -12,14 +12,14 @@ test('semantic families cover every supported kind and all current pages',()=>{
 });
 test('optional service composition validates actual anchors and source links',()=>{
  assert.equal(resolveRouteFamily(page()).service.closingCta,true);
- const source=page({proof:{},sections:[{id:'evidence'},{id:'context',links:[{href:'/priser/',label:'Se priser'}]}],composition:{commercialText:true,service:{closingCta:false,proofAfter:'evidence',pricingBridge:{after:'context',href:'/priser/',serviceName:'Synlighet'},sectionVisuals:[{section:'context',visual:'kanaler'}]}}});
+ const source=page({sections:[{id:'evidence'},{id:'context',links:[{href:'/priser/',label:'Se priser'}]}],composition:{commercialText:true,service:{closingCta:false,pricingBridge:{after:'context',href:'/priser/',serviceName:'Synlighet'},sectionVisuals:[{section:'context',visual:'kanaler'}]}}});
  assert.equal(resolveRouteFamily(source).service.pricingBridge?.link.label,'Se priser');
  assert.equal(resolveRouteFamily(source).service.closingCta,false);
+ assert.throws(()=>resolveRouteFamily({...source,composition:{...source.composition,service:{...source.composition.service,proofAfter:'evidence'}}}),/unrecognized|proofAfter|Invalid/);
  for(const modify of [
   (p:any)=>p.sections.pop(),
   (p:any)=>p.sections.push({id:'context'}),
   (p:any)=>p.sections[1].links=[],
-  (p:any)=>delete p.proof,
   (p:any)=>p.composition.service.sectionVisuals[0].visual='raw-class',
   (p:any)=>p.composition.service.unknown=true,
   (p:any)=>p.kind='article',
