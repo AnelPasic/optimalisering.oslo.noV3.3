@@ -4,6 +4,7 @@ import {readFileSync} from 'node:fs';
 import YAML from 'yaml';
 import {pageSchema} from '../src/lib/content-schema.ts';
 import {visibleServiceSections} from '../src/lib/service-sections.ts';
+import {cmsJsonSave,entryForFile} from './helpers/pages-cms-json.ts';
 
 const raw=JSON.parse(readFileSync('src/content/pages/priser.json','utf8'));
 const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
@@ -60,4 +61,16 @@ test('Original CMS content, shared master and section references retain authorit
  assert.deepEqual(raw.sections.filter((s:any)=>s._block==='global').map((s:any)=>s.element),['priser','regneeksempel','resultater']);
  const master=JSON.parse(readFileSync('src/content/global-elements/priser.json','utf8'));
  assert.deepEqual(master.content.items.map((i:any)=>i.key),['optimalisering','vekst','partner']);
+});
+
+test('Stock Pages CMS saves pricing placements without stripping shared or owner fields',()=>{
+ const editor=entryForFile(cms,'app/src/content/pages/priser.json');
+ const saved=JSON.parse(cmsJsonSave(raw,raw,editor,cms));
+ assert.deepEqual(saved,raw);
+ const reordered=JSON.parse(JSON.stringify(raw));
+ reordered.sections=[reordered.sections[3],...reordered.sections.filter((_:any,i:number)=>i!==3)];
+ const resaved=JSON.parse(cmsJsonSave(raw,reordered,editor,cms));
+ assert.deepEqual(resaved.sections,reordered.sections);
+ assert.deepEqual(resaved.hero,raw.hero);
+ assert.deepEqual(resaved.faq,raw.faq);
 });
