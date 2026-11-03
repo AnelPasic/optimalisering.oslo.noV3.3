@@ -1,0 +1,12 @@
+---
+import type {HomepageContent} from '../lib/home-section-data';
+interface Props {packages: HomepageContent['packages']}
+const {packages}=Astro.props;
+---
+<section id="pricing-multiplier" class="pricing-multiplier section-space">
+  <div class="shell">
+    <h2>{packages.multiplier.heading}</h2>
+    <p class="multiplier-row">{packages.multiplier.conceptualRow}</p>
+    <details class="multiplier-detail"><summary>{packages.multiplier.eyebrow}</summary><p class="body-copy">{packages.multiplier.body}</p><p class="body-copy">{packages.multiplier.support}</p></details>
+  </div>
+</section>

@@ -1,0 +1,11 @@
+---
+import type {HomepageContent} from '../lib/home-section-data';
+interface Props {packages: HomepageContent['packages']}
+const {packages}=Astro.props;
+---
+<section id="pricing-decision" class="pricing-decision section-space">
+  <div class="shell">
+    <h2>{packages.decisionStrip.heading}</h2>
+    <div class="pricing-decision-grid">{packages.decisionStrip.items.map(text=><p>{text}</p>)}</div>
+  </div>
+</section>
