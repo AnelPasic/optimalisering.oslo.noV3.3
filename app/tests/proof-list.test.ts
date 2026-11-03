@@ -27,7 +27,7 @@ test('multiple approved cases follow exactly the local ordered choices',()=>{
  const result=resolveProofListContent(master,selected,records);
  assert.deepEqual(result.caseIds,['nysta','eurotents']);
  assert.equal(result.layout,'mediaCards');
- assert.deepEqual(getPublishableCases(result,records).map(c=>c.displayName),['Nysta','Eurotents']);
+ assert.deepEqual(getPublishableCases(result,records).map(c=>c.displayName),['nysta','eurotents'].map(id=>records.find(record=>record.id===id)?.clientName));
  assert.deepEqual(master.caseIds,['eurotents','nysta','helt-opplagt']);
  assert.equal(result.featuredVisual?.caseId,master.featuredVisual?.caseId);
 });
