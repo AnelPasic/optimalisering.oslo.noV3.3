@@ -14,6 +14,7 @@ import Faq from '../components/Faq.astro';
 import {createCommercialTextBinding} from '../lib/commercial-text';
 import {contentLayoutValues,boxVariantValues} from '../lib/content-presentation';
 import {heroLayoutValues,heroPresetLabels} from '../lib/hero-presentation';
+import type {PageListConfig} from '../lib/page-list';
 const pages=(await getCollection('pages')).map(p=>p.data);
 const home=pages.find(p=>p.kind==='home')!;
 const pageList=pages.find(p=>p.kind==='index')!.sections.find(s=>s.pageList)!;
@@ -25,6 +26,14 @@ const bindCommercialText=createCommercialTextBinding(home,pages.find(p=>p.kind==
 const faq={...faqSource,items:faqSource.items.map(item=>({...item,answer:bindCommercialText(item.answer)}))};
 const layoutLabels={'default':'Standard (automatisk)','two-columns':'To kolonner','three-columns':'Tre kolonner','stacked':'Liste (én kolonne)'};
 const boxLabels={'default':'Standard (automatisk)','plain':'Åpen boks','card':'Kort'};
+const pageListLayouts: {key:PageListConfig['layout'];label:string;description:string}[] = [
+ {key:'cards',label:'Kort',description:'Kortliste med tittel, beskrivelse og eventuell lenke.'},
+ {key:'mediaCards',label:'Bildekort',description:'Kort med bilde eller illustrasjon og tilhørende tekst.'},
+ {key:'alternating',label:'Vekslende bilde og tekst',description:'Én fullbredde oppføring med bilde og tekst annenhver side.'},
+ {key:'compact',label:'Kompakt',description:'Tette redaksjonelle rader uten kortflate.'},
+ {key:'links',label:'Lenker',description:'Enkel lenkeliste uten ekstra kortinnhold.'},
+];
+const pageListColumns=[1,2,3] as const;
 const homeHero=resolvePageHero(home);
 const heroExamples=[
  ...heroLayoutValues.map(layout=>({key:layout,label:heroPresetLabels[layout],purpose:'CMS-valg',preset:layout,hero:resolvePageHero({...home,hero:{...home.hero!,layout}})})),
@@ -58,11 +67,11 @@ const ds={
 <SiteLayout title="Designsystem – intern gjennomgang" description="Intern gjennomgang av tema, typografi og komponenter." noindex>
  <div data-theme-root class="design-system bg-base-200 text-base-content">
   <header class="mx-auto max-w-7xl px-5 pt-12 pb-16 md:pt-16 md:pb-20 space-y-8">
-   <div class={ds.group}><p class="badge badge-warning">Internt / kun for gjennomgang · DRAFT</p><h1>Felles designsystem</h1><p class="type-lead">Tema, typografi og komponenter for Optimalisering.</p></div>
-   <fieldset class={ds.specimen}><legend class="font-semibold px-2">Temasammenligning</legend><div class="flex flex-col md:flex-row flex-wrap gap-5 md:gap-8">
-    <label class="flex items-center gap-3"><input type="radio" name="theme" class="radio theme-controller" value="optimalisering" checked /> Optimalisering (godkjent standardtema)</label>
-    <label class="flex items-center gap-3"><input type="radio" name="theme" class="radio theme-controller" value="light" /> Light (kun QA, ikke godkjent merkevaretema)</label>
-   </div></fieldset>
+   <div class={ds.group}><p class="badge badge-warning">Internt / kun for gjennomgang · DRAFT</p><h1>Felles designsystem</h1><p class="type-lead">Tema, typografi og komponenter – visuell kontroll i Light og Dark.</p></div>
+   <fieldset class={ds.specimen} data-ds-theme-picker><legend class="font-semibold px-2">Temasammenligning</legend><div class="flex flex-col md:flex-row flex-wrap gap-5 md:gap-8">
+    <label class="flex items-center gap-3"><input type="radio" name="design-system-theme" class="radio" value="light" data-design-theme-mode checked /> Light</label>
+    <label class="flex items-center gap-3"><input type="radio" name="design-system-theme" class="radio" value="dark" data-design-theme-mode /> Dark</label>
+   </div><p class="text-sm mt-4 opacity-75">Bruker nettsidens faktiske Light- og Dark-tema fra Pages CMS. Valget oppdaterer også header og footer.</p></fieldset>
    <p>Eksemplene er til intern visuell vurdering. Skjemaet sender ingen opplysninger.</p>
   </header>
   <div class="mx-auto max-w-7xl px-5 pb-20 md:pb-28 space-y-16 md:space-y-24">
@@ -135,13 +144,39 @@ const ds={
    </section>
    </>}
    {isHomepageSectionVisible(getHomepageBlock(home,'packages'))&&<section class={ds.section}><div class={ds.group}><h2>Eksisterende kommersielle komponenter</h2><p>Hentet fra samme kilde som forsiden. Priser, ordvalg og valglogikk er uendret.</p></div><div class="ds-real-example invite-home"><PackageSection content={getHomepageBlock(home,'packages').content} /></div></section>}
-   <section class={ds.section}><div class={ds.group}><h2>PageList og CMS-styrte seksjoner</h2><p>Eksisterende primitiveksempler i egne presentasjonsgrupper.</p></div>
-    <div class="ds-real-example space-y-12 md:space-y-16"><div class={ds.group}><h3>Vekslende liste</h3><PageList section={{...pageList,id:'ds-alternating',pageList:{...pageList.pageList!,layout:'alternating'}}} pages={pages} /></div><div class={ds.group}><h3>Bildekort</h3><PageList section={{...pageList,id:'ds-media',pageList:{...pageList.pageList!,layout:'mediaCards'}}} pages={pages} /></div>{examples.map(section=><div class={ds.group}><HomeSection section={section} /></div>)}</div>
+   <section class={ds.section} id="pagelist-varianter">
+    <div class={ds.group}><h2>PageList – visningstyper og kolonner</h2>
+     <p>Alle fem visningstyper rendres med den samme PageList-komponenten og publisert CMS-innhold. «Antall per rad» kan settes til 1, 2 eller 3 i Pages CMS. På mobil brukes én kolonne; på nettbrett maksimalt to.</p>
+     <p>Vekslende bilde og tekst beholder alltid én oppføring per rad. Hver oppføring inneholder allerede to interne kolonner. Uten et eksplisitt kolonnevalg beholdes dagens automatiske oppsett.</p>
+    </div>
+    <div class="space-y-16 md:space-y-24">
+     {pageListLayouts.map(layout=><div class={ds.group} data-page-list-type={layout.key}>
+      <h3>{layout.label}</h3><p>{layout.description}</p>
+      {(layout.key==='alternating'?[1]:pageListColumns).map(columns=><div class={ds.grid} data-page-list-demo-layout={layout.key} data-page-list-demo-columns={columns}>
+       <h4>{columns} {columns===1?'oppføring':'oppføringer'} per rad</h4>
+       <div class="ds-real-example"><PageList section={{...pageList,id:`ds-page-list-${layout.key}-${columns}`,heading:`${layout.label} · ${columns} per rad`,pageList:{...pageList.pageList!,source:'articles',mode:'automatic',limit:3,layout:layout.key,columns}}} pages={pages} /></div>
+      </div>)}
+     </div>)}
+    </div>
+    <div class="mt-16 space-y-12 md:space-y-16">{examples.map(section=><div class={ds.group}><HomeSection section={section} /></div>)}</div>
    </section>
   </div>
   <section class="space-y-8" id="production-home-sections"><div class="shell space-y-5"><h2>Faktiske seksjoner fra forsiden</h2><p>Samme produksjonskomponenter og gjeldende CMS-innhold som på forsiden, vist i hele sidebredden. Eksempel-ID-er er egne; skjemaet har deaktivert innsending og ingen endepunktadresse.</p>{isHomepageSectionVisible(getHomepageBlock(home,'assessment'))&&<><h3>Kontakt: To kolonner (dagens)</h3><p>CMS: Gratis sjekk → Kontaktoppsett. Tomt valg eller To kolonner beholder denne godkjente standardvarianten.</p></>}</div>{isHomepageSectionVisible(getHomepageBlock(home,'assessment'))&&<><div class="invite-home"><HomeAssessment section={assessment.section} content={assessment.form} layout="split" specimen /></div><div class="shell space-y-5"><h3>Kontakt: Vannrett (kompakt skjema)</h3><p>Alternativt CMS-oppsett med samme kilde og komponent. Nettside, e-post og knapp står på én rad på desktop; støttetekster og valgfri kommentar bevares. Dette er et alternativ for OWNER-review, ikke en endring av forsidens standard.</p></div><div class="invite-home"><HomeAssessment section={assessment.section} content={assessment.form} layout="horizontal" specimen /></div></>}{isHomepageSectionVisible(getHomepageBlock(home,'faq'))&&<><div class="shell"><h3>Forsidens FAQ</h3></div><div class="invite-home"><Faq id="ds-home-faq" {...faq} /></div></>}</section>
  </div>
 </SiteLayout>
+<script>
+ import {setChromeThemeMode} from '../lib/site-chrome-theme-interactions.ts';
+ const inputs=document.querySelectorAll<HTMLInputElement>('[data-design-theme-mode]');
+ const sync=()=>{
+   const mode=document.documentElement.dataset.mwsThemeMode==='dark'?'dark':'light';
+   inputs.forEach(input=>{input.checked=input.value===mode;});
+ };
+ inputs.forEach(input=>input.addEventListener('change',()=>{
+   if(input.checked&&(input.value==='light'||input.value==='dark'))setChromeThemeMode(input.value);
+ }));
+ new MutationObserver(sync).observe(document.documentElement,{attributes:true,attributeFilter:['data-mws-theme-mode']});
+ sync();
+</script>
 <style>
  .design-system { overflow-wrap: anywhere; }
  .design-system section, .ds-type-specimen > * { min-width: 0; }
