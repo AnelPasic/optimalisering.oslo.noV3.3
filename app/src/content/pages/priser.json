@@ -15,7 +15,14 @@
       "href": "/#sjekk"
     },
     "visual": {
-      "kind": "none"
+      "kind": "image",
+      "image": {
+        "kind": "photo",
+        "src": "/images/services/discoveringlocalfavorite-1.png",
+        "alt": "Happy maps user",
+        "positionX": 50,
+        "positionY": 50
+      }
     }
   },
   "sections": [
