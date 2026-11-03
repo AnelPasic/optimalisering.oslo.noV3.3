@@ -16,7 +16,7 @@ const displayedItems = items.map(item => ({ ...item, displayVisual: pageListPres
 // For PageList cards, reuse HomeSection's existing column/viewport contract.
 const cardLayout = config.columns === 1 ? 'stacked' : config.columns === 2 ? 'two-columns' : config.columns === 3 ? 'three-columns' : section.layout;
 ---
-{config.layout === 'cards' ? <HomeSection section={{ ...section, items: cards, layout: cardLayout }} /> :
+{config.layout === 'cards' ? <HomeSection section={{ ...section, items: cards, layout: cardLayout }} pageListColumns={config.columns} /> :
   <HomeSection section={section}>
     <ul class:list={['page-list', `page-list-${config.layout}`]} data-count={items.length} data-columns={config.layout==='alternating'?undefined:config.columns}>
       {displayedItems.map(item => <li>
@@ -65,6 +65,18 @@ const cardLayout = config.columns === 1 ? 'stacked' : config.columns === 2 ? 'tw
     .page-list-alternating > li:nth-child(even) .listing-copy, .page-list-alternating > li:nth-child(even) :global(.listing-visual) { grid-column: auto; grid-row: auto; }
   }
 
+  /* HomeSection renders PageList cards; keep its existing desktop grid,
+     but constrain 3 chosen columns to 2 at tablet widths and 1 on phones. */
+  @media (min-width: 701px) and (max-width: 1100px) {
+    :global(.content-section .section-items[data-content-layout="three-columns"][data-page-list-columns="3"]) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (max-width: 700px) {
+    :global(.content-section .section-items[data-page-list-columns]) {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
   /* A selected 1/2/3-column grid applies to independent list items only.
      Alternating preserves its full-width split-image composition. */
   @media (min-width: 701px) {
