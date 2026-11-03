@@ -57,7 +57,7 @@ test('manual PageList allows ordered pages, direct root link, external URLs and 
  assert.equal(actual[1].title,'Ekstern side');
  assert.equal(actual[3]?.slug,'case:nysta');
  assert.equal(actual[3]?.href,undefined,'case record has no invented public route');
- assert.equal(actual[3]?.title,'Nysta');
+ assert.equal(actual[3]?.title,proofs.find(record=>record.id==='nysta')?.clientName,'CMS-edited case name is the source of truth');
  assert.equal(pageListSchema.safeParse(config({mode:'manual',entries:rows})).success,true);
 });
 

@@ -10,11 +10,11 @@ const records=readdirSync('src/content/proof').filter(f=>f.endsWith('.json')).ma
 const global=read('src/content/global-elements/resultater.json').content;
 const text=html=>stripTerminologyLinks(html).replace(/<[^>]*>/g,' ').replace(/&amp;/g,'&').replace(/&gt;/g,'>').replace(/&lt;/g,'<').replace(/\s+/g,' ').trim();
 const checked=new Set();
-for(const [slug,expectedNames] of [
- ['home',['Eurotents','Nysta','Helt Opplagt']],
- ['priser',['Eurotents','Nysta','Helt Opplagt']],
- ['konvertering',['Nysta']],
- ['nettbutikkoptimalisering',['Helt Opplagt','Eurotents']]
+for(const [slug,expectedIds] of [
+ ['home',['eurotents','nysta','helt-opplagt']],
+ ['priser',['eurotents','nysta','helt-opplagt']],
+ ['konvertering',['nysta']],
+ ['nettbutikkoptimalisering',['helt-opplagt','eurotents']]
  ]){
  const page=read(`src/content/pages/${slug}.json`);
  const html=readFileSync(slug==='home'?'dist/index.html':`dist/${slug}/index.html`,'utf8');
@@ -37,11 +37,12 @@ for(const [slug,expectedNames] of [
   slot=resolveProofListContent(global,placements[0].proofList,records);
  }
  const cases=getPublishableCases(slot,records);
- assert.deepEqual(cases.map(p=>p.displayName),expectedNames,slug+' ordered selected cases');
+ assert.equal(cases.length,expectedIds.length,slug+' must render each approved case');
+ assert.deepEqual(cases.map(p=>p.displayName),expectedIds.map(id=>records.find(record=>record.id===id)?.clientName),slug+' ordered selected cases');
  const matches=[...html.matchAll(new RegExp(`<section id="${sectionId}"[^>]*>(.*?)<\\/section>`,'gs'))];
  assert.equal(matches.length,1,slug+' one and only one proof section');
  const section=matches[0][1];
- assert.deepEqual([...section.matchAll(/<h3[^>]*>(.*?)<\/h3>/gs)].map(m=>text(m[1])),expectedNames);
+ assert.deepEqual([...section.matchAll(/<h3[^>]*>(.*?)<\/h3>/gs)].map(m=>text(m[1])),expectedIds.map(id=>records.find(record=>record.id===id)?.clientName));
  for(const proof of cases){
   for(const value of [proof.dominantMetric,proof.before,proof.after,proof.delta,proof.period.before,proof.period.after].filter(Boolean))
    assert.ok(text(section).includes(value),slug+' missing public result '+value);

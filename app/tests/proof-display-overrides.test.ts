@@ -10,6 +10,7 @@ import {cmsJsonSave,entryForFile,assertPreservedContent} from './helpers/pages-c
 const source=JSON.parse(readFileSync('src/content/global-elements/resultater.json','utf8'));
 const registry=readdirSync('src/content/proof').filter(p=>p.endsWith('.json')).map(p=>JSON.parse(readFileSync('src/content/proof/'+p,'utf8')));
 const nysta=getPublishableCases({...source.content,caseIds:['nysta']},registry)[0];
+const originalName=registry.find(r=>r.id==='nysta')?.clientName;
 
 test('no override leaves locked case values, periods and name untouched',()=>{
   const original=getPublishableCases(source.content,registry);
@@ -20,13 +21,13 @@ test('no override leaves locked case values, periods and name untouched',()=>{
 });
 
 test('optional presentation name can differ without changing the approved registry',()=>{
-  const override=proofDisplayOverridesSchema.parse([{caseId:'nysta',displayName:'nysta.no'}]);
+  const override=proofDisplayOverridesSchema.parse([{caseId:'nysta',displayName:'Testvisning nettbutikk'}]);
   const shown=applyProofDisplayOverride(nysta,'nysta',override,registry);
-  assert.equal(shown.displayName,'nysta.no');
+  assert.equal(shown.displayName,'Testvisning nettbutikk');
   assert.equal(shown.before,nysta.before);
   assert.equal(shown.after,nysta.after);
-  assert.equal(nysta.displayName,'Nysta');
-  assert.equal(registry.find(r=>r.id==='nysta').clientName,'Nysta');
+  assert.equal(nysta.displayName,originalName);
+  assert.equal(registry.find(r=>r.id==='nysta').clientName,originalName);
 });
 
 test('edited measurements require a source note, cannot bypass approved publication',()=>{

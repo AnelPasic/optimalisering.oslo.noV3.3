@@ -30,12 +30,10 @@ const cmsProofSchema = proofCaseSchema.extend({
   artifactReferences: z.array(z.string()).default([]),
   evidenceMetrics: z.array(z.object({ metric: z.string(), before: unknownText, after: unknownText, delta: unknownText, nextPeriod: unknownText, timeframe: unknownText }).strict()).default([]),
 });
-export const proofContentSchema = z.preprocess(record => {
-  if (record && typeof record === 'object' && 'publicationApproved' in record && record.publicationApproved === true && !proofCaseSchema.safeParse(record).success) {
-    return { ...record, publicationApproved: false };
-  }
-  return record;
-}, cmsProofSchema);
+// Pages CMS omits blank nullable fields and empty arrays on save. Normalize
+// those optional slots without mutating the author's publication approval.
+// Required evidence is still enforced by getPublishableCases, never inferred.
+export const proofContentSchema = cmsProofSchema;
 
 export type ProofCase = z.infer<typeof proofCaseSchema>;
 export interface PublicProof {
@@ -61,7 +59,7 @@ export function getPublishableCases(slot: unknown, records: readonly unknown[]):
   return [...new Set(selection.data.caseIds)].flatMap(id => {
     const matches = records.filter(record => record && typeof record === 'object' && 'id' in record && record.id === id);
     if (matches.length !== 1) return [];
-    const parsed = proofCaseSchema.safeParse(matches[0]);
+    const parsed = proofContentSchema.safeParse(matches[0]);
     if (!parsed.success) return [];
     const proof = parsed.data;
     if (proof.publicationStatus !== 'PUBLISHABLE' || proof.publicationApproved !== true || proof.namingPermission === 'NEEDS_PERMISSION' || proof.period.comparable !== true || proof.strategyReviewStatus !== 'CONTENT_LOCKED') return [];
