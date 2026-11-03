@@ -5,7 +5,7 @@ import YAML from 'yaml';
 import {pageSchema} from '../src/lib/content-schema.ts';
 import {cmsJsonSave,entryForFile,assertPreservedContent} from './helpers/pages-cms-json.ts';
 
-test('Lokal SEO service Hero can be edited in CMS while the rest of the page remains empty',()=>{
+test('Lokal SEO full service page is CMS-editable with commercial content and preserved owned Hero fields',()=>{
  const file='src/content/pages/lokal-seo.json';
  const page=JSON.parse(readFileSync(file,'utf8'));
  assert.equal(page.slug,'lokal-seo');
@@ -28,8 +28,24 @@ test('Lokal SEO service Hero can be edited in CMS while the rest of the page rem
   : visibility?.children?.find((link:{label:string})=>link.label==='Lokal SEO');
  assert.equal(child?.href,'/lokal-seo/');
  assert.ok(child?.description?.length>12);
- // OWNER requested a fresh page shell, not restoration of old sections or FAQ.
- assert.deepEqual(page.sections??[],[]);
- assert.deepEqual(page.faq??[],[]);
+ // The owner explicitly requested a complete commercial page, superseding the old empty shell fixture.
+ assert.match(page.seo.title,/Lokal SEO/);
+ assert.match(page.hero.title,/Lokal SEO.*henvendelser/);
+ assert.match(page.hero.support,/Vi prioriterer.*følger opp/);
+ assert.equal(page.hero.primaryCta.href,'/lokal-seo/#sjekk');
+ assert.equal(page.hero.secondaryCta.href,'/priser/');
+ assert.deepEqual(page.hero.toneOverrides,{eyebrowPreset:'spissplushysterisk',titlePreset:'spissplushysterisk',supportPreset:'spissplushysterisk'});
+ assert.equal(page.hero.featuredProofCaseId,'helt-opplagt');
+ assert.deepEqual(page.sections.filter((s:{_block:string})=>s._block==='global').map((s:{element:string})=>s.element),['priser','sjekk']);
+ const owned=page.sections.filter((s:{_block:string})=>s._block==='content');
+ assert.equal(owned.length,7);
+ assert.equal(new Set(owned.map((s:{id:string})=>s.id)).size,owned.length);
+ for(const id of ['vi-tar-ansvaret','fra-sjekk-til-arbeid','maal-og-forventninger'])
+  assert.ok(owned.some((s:{id:string})=>s.id===id),id);
+ assert.equal(page.faq.length,8);
+ const commercial=[page.hero.support,...owned.flatMap((s:{body?:string[]})=>s.body??[]),...page.faq.map((f:{answer:string})=>f.answer)].join(' ');
+ assert.match(commercial,/Vi tar|Vi gjennomfører|Medon tar/);
+ assert.match(commercial,/kan ikke love|lover ikke|kan ikke.*love/);
+ assert.deepEqual(pageSchema.parse(JSON.parse(cmsJsonSave(page,page,entry,cms))),pageSchema.parse(page));
  assert.ok(!readFileSync('src/content.config.ts','utf8').includes('drafts'));
 });
