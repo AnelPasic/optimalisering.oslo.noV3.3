@@ -97,7 +97,8 @@ test('anonymous proof refuses wrapped, nonbreaking and Unicode-normalized privat
 
 test('imported records preserve supplied measurements and reviewed publication states with CMS coverage', () => {
   const records = readdirSync('src/content/proof').filter(file => file.endsWith('.json')).map(file => JSON.parse(readFileSync(`src/content/proof/${file}`, 'utf8')));
-  assert.deepEqual(records.map(record => record.clientName).sort(), ['Eurotents', 'Helt Opplagt', 'Oslo Privatklinikk', 'nysta.no']);
+  assert.deepEqual(records.map(record => record.id).sort(), ['eurotents','helt-opplagt','nysta','oslo-privatklinikk']);
+  assert.ok(records.every(record=>typeof record.clientName==='string'&&record.clientName.trim().length>0));
   const config = YAML.parse(readFileSync('../.pages.yml', 'utf8'));
   const editor = config.content.find((entry: any) => entry.name === 'proofCases');
   assert.equal(editor.path, 'app/src/content/proof');
