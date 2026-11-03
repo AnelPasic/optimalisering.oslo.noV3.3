@@ -6,15 +6,14 @@ export const compositionSchema=z.object({
   commercialText:z.boolean().optional(),
   service:z.object({
     closingCta:z.boolean().default(true),
-    proofAfter:anchor.optional(),
     pricingBridge:z.object({after:anchor,href:z.literal('/priser/'),serviceName:z.string().trim().min(1)}).strict().optional(),
     sectionVisuals:z.array(z.object({section:anchor,visual:z.enum(['behov','kanaler'])}).strict()).default([]),
     sectionSurfaces:z.array(z.object({section:anchor,surface:z.literal('secondary')}).strict()).default([]),
   }).strict().optional(),
 }).strict();
-type Source={slug?:string;kind:string;composition?:unknown;proof?:unknown;sections:{id:string;links?:{href:string;label:string}[]}[]};
+type Source={slug?:string;kind:string;composition?:unknown;sections:{id:string;links?:{href:string;label:string}[]}[]};
 
-/** Presentation metadata selects composition only; proof and prices retain their independent authority. */
+/** Composition selects placement hints; proof comes only from explicit global or ProofList sections. */
 export function resolveRouteFamily(page:Source){
   const family=routeKindSchema.parse(page.kind);
   const composition=compositionSchema.parse(page.composition??{});
@@ -27,7 +26,6 @@ export function resolveRouteFamily(page:Source){
     if(matches.length!==1)throw new Error(`Composition requires exactly one section: ${id}`);
     return matches[0];
   }
-  if(service.proofAfter){section(service.proofAfter);if(!page.proof)throw new Error('Proof placement requires an existing proof slot');}
   const seen=new Set<string>();
   for(const visual of service.sectionVisuals){if(!cmsOnly)section(visual.section);if(seen.has(visual.section))throw new Error('Duplicate section visual');seen.add(visual.section);}
   const surfaces=new Set<string>();
