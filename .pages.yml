@@ -94,6 +94,8 @@ components:
         label: Spiss+ komisk (nivå 5)
       - name: spisspluskomiskplus
         label: Spiss+ komisk+ (nivå 6)
+      - name: spissplushysterisk
+        label: Spiss+ Hysterisk (nivå 7)
 
   heroToneOverrides:
     type: object
@@ -932,6 +934,8 @@ content:
               label: Spiss+ komisk (nivå 5) - faktisk humor med faglig poeng
             - name: spisspluskomiskplus
               label: Spiss+ komisk+ (nivå 6) - absurd vri og morsom punchline
+            - name: spissplushysterisk
+              label: Spiss+ Hysterisk (nivå 7) - standup og absurd bransjesatire (mest SoMe)
       - name: heroPreset
         label: Hero og hovedoverskrifter
         type: select
@@ -953,6 +957,8 @@ content:
               label: Spiss+ komisk (nivå 5)
             - name: spisspluskomiskplus
               label: Spiss+ komisk+ (nivå 6)
+            - name: spissplushysterisk
+              label: Spiss+ Hysterisk (nivå 7)
       - name: servicePreset
         label: Tjenestekort og salgstekster
         type: select

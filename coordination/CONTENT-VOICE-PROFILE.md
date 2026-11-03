@@ -8,7 +8,7 @@
 
 **Pages CMS → Språk og tone** edits `coordination/CONTENT-TONE.json` directly. This structured JSON is the **single source of truth for currently selected intensity presets**; this document explains what those selections mean.
 
-- `defaultPreset`: `noktern`, `medon`, `spiss`, `spissplus`, `spisspluskomisk` or `spisspluskomiskplus`. The current default remains `medon` (OWNER's saved setting).
+- `defaultPreset`: `noktern`, `medon`, `spiss`, `spissplus`, `spisspluskomisk`, `spisspluskomiskplus` or `spissplushysterisk`. The current default remains `medon` (OWNER's saved setting).
 - `heroPreset`, `servicePreset`, `explanationPreset`, `faqPreset`: `inherit` means use default; otherwise select the named preset. Previously approved selection was `spissplus` for explanations and FAQ. The newly selected `spisspluskomiskplus` applies to **future explanation/insight edits** only; FAQ remains Spiss+, Hero remains Spiss and service inherits Medon. This preference does not rewrite existing content.
 - `editorNotes`: additional directions for the next editorial pass; never override factual/SEO/KRO quality rules.
 - Pricing, order forms, proof and legal copy **remain factual and nøkterne**, regardless of a broad `spiss` preference.
@@ -40,6 +40,7 @@
 - **Spiss+ (nivå 4, OWNER-selected for FAQ/explanations 2026-10-22):** humor 2, absurd 3, cheekiness 2, candor 3. Stronger contrast with a recognizable and useful analogy, specific business consequences and restrained sting. **Not** extra jokes, longer text or a guaranteed dramatic last line.
 - **Spiss+ komisk (nivå 5, available option):** an intentionally funny, recognizable twist after the relevant answer. Use wordplay, dry surprise or gentle absurdity to make the practical point stick. It should give a reader an actual reason to smile. Never hide facts, manufacture a claim or insert a gag into every paragraph.
 - **Spiss+ komisk+ (nivå 6, optional editorial preset):** a bolder, genuinely funny surprise: one vivid but recognizable absurd business situation, followed by an earned punchline tied directly to the buyer's practical question. More originality and memorable imagery, not more jokes per paragraph. Make the explanation clear first; avoid mocking the buyer, unsupported claims, forced slang or comedy in pricing, proof, legal texts and forms.
+- **Spiss+ Hysterisk (nivå 7, optional, mainly for SoMe):** standalone-comedy energy for an explicitly requested post or campaign. Use original standup-style setups, absurd larger-than-life reversals, self-irony and 'Chuck Norris logic' about industry clichés; never mock real clients. Exaggeration must obviously be fictional, not fabricated marketing results or guaranteed rankings. No copied jokes. Do not apply site-wide or rewrite existing pages merely because the option exists; keep prices, proof, legal and forms nøkterne.
 
 Apply a preset per **section/brief**, not by adding CMS runtime classes. OWNER may request "gjør den spissere" or "nøkternt" and the content agent must then rewrite only the requested text, with a before/after diff. No global automatic rewriting. A native Pages CMS profile editor is now configured. Its choices are stored in `coordination/CONTENT-TONE.json`; this Markdown file remains the interpretive guide, not a second editable preset authority.
 
@@ -63,7 +64,7 @@ This **tone reference** was explicitly preferred by OWNER over the preceding `Sp
 
 Why it works: starts with a concrete diagnostic fork, uses a real-world analogy for wasted traffic, then lands the commercial cost in a dry final observation. The factual answer remains understandable without the analogy. For highly sensitive, exact, legal or proof-heavy topics, tone is subdued regardless of the selected preset.
 
-The labels `nivå 4`, `nivå 5` and `nivå 6` refer to **overall editorial presets**, not extra points on the independent 0-3 dimension scales above.
+The labels `nivå 4`, `nivå 5`, `nivå 6` and `nivå 7` refer to **overall editorial presets**, not extra points on the independent 0-3 dimension scales above.
 
 ## Historical style calibration - illustrations, not proof of site results
 
