@@ -16,17 +16,17 @@ const home=read('src/content/pages/home.json');
 const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
 
 test('public proofs are rendered from global evidence and per-page ProofList selection',()=>{
- assert.deepEqual(getPublishableCases(getHomepageBlock(home,'proof').content,registry).map(p=>p.displayName),['Eurotents','Nysta','Helt Opplagt']);
- for(const [slug,expected] of [
-  ['konvertering',['Nysta']],
-  ['nettbutikkoptimalisering',['Helt Opplagt','Eurotents']]
+ assert.deepEqual(getPublishableCases(getHomepageBlock(home,'proof').content,registry).map(p=>p.displayName),global.content.caseIds.map((id:string)=>registry.find(r=>r.id===id).clientName));
+ for(const [slug,expectedIds] of [
+  ['konvertering',['nysta']],
+  ['nettbutikkoptimalisering',['helt-opplagt','eurotents']]
  ] as const){
   const page=read(`src/content/pages/${slug}.json`);
   assert.equal(page.proof,undefined,'old local proof must be absent');
   const sections=page.sections.filter((row:any)=>row._block==='proofList');
   assert.equal(sections.length,1,'one new proof placement');
   const effective=resolveProofListContent(global.content,sections[0].proofList,registry);
-  assert.deepEqual(getPublishableCases(effective,registry).map(p=>p.displayName),expected);
+  assert.deepEqual(getPublishableCases(effective,registry).map(p=>p.displayName),expectedIds.map(id=>registry.find(r=>r.id===id)?.clientName));
  }
  assert.deepEqual(getPublishableCases({publicationApproved:true,caseIds:['oslo-privatklinikk']},registry),[]);
 });
@@ -57,7 +57,7 @@ test('Pages CMS saves ordered ProofList without an editable old local proof obje
  form.content.caseIds=['nysta'];
  const entry=entryForFile(cms,'app/src/content/global-elements/resultater.json');
  const saved=JSON.parse(cmsJsonSave(original,form,entry,cms));
- assert.deepEqual(getPublishableCases(saved.content,registry).map(p=>p.displayName),['Nysta']);
+ assert.deepEqual(getPublishableCases(saved.content,registry).map(p=>p.displayName),[registry.find(r=>r.id==='nysta')?.clientName]);
  assert.equal(homepageBlockSchema.safeParse(saved).success,true);
  const localProof=entryForFile(cms,'app/src/content/pages/konvertering.json').fields.find((f:any)=>f.name==='proof');
  assert.equal(localProof,undefined);

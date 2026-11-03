@@ -41,14 +41,14 @@ test('CMS can override actual case values, metadata and add an optional origin t
   edited.publicationApproved=true;
   const persisted=JSON.parse(cmsJsonSave(source,edited,entryForFile(config,'app/src/content/proof/eurotents.json'),config));
   assert.deepEqual(proofContentSchema.parse(persisted),proofContentSchema.parse(edited));
-  assert.equal(proofCaseSchema.safeParse(persisted).success,true);
+  assert.equal(proofCaseSchema.safeParse(proofContentSchema.parse(persisted)).success,true);
   const visible=getPublishableCases({publicationApproved:true,caseIds:['eurotents']},[persisted]);
   assert.equal(visible[0].displayName,'Ny kundeoverskrift');
   assert.equal(visible[0].before,'5x');
   assert.equal(visible[0].after,'18x');
   assert.ok(!JSON.stringify(visible[0]).includes(edited.originKey),'origin metadata is never public');
   const original=read('eurotents');
-  assert.equal(original.before,'4,3x','test never writes actual approved proof');
+  assert.equal(original.before,'ROAS: 4,3 X','test never writes actual approved proof');
 });
 
 test('an editable register cannot bypass existing publication and permission gates',()=>{
@@ -70,7 +70,7 @@ test('an editable register cannot bypass existing publication and permission gat
 test('originKey is optional for every existing proof; global case selections remain unchanged',()=>{
   for(const id of ['eurotents','nysta','helt-opplagt','oslo-privatklinikk']){
     const data=read(id);
-    assert.equal(proofCaseSchema.safeParse(data).success,true);
+    assert.equal(proofCaseSchema.safeParse(proofContentSchema.parse(data)).success,true);
     assert.equal(Object.hasOwn(data,'originKey'),false);
   }
   const global=JSON.parse(readFileSync('src/content/global-elements/resultater.json','utf8'));

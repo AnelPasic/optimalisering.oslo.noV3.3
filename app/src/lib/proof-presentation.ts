@@ -1,7 +1,7 @@
 import { z } from 'astro/zod';
 import { realpathSync, statSync } from 'node:fs';
 import { resolve, sep } from 'node:path';
-import { getPublishableCases, proofCaseSchema, type PublicProof } from './proof.ts';
+import { getPublishableCases, proofContentSchema, type PublicProof } from './proof.ts';
 
 // Presentation only. The proof registry and public projection remain authoritative.
 export const featuredProofVisualSchema = z.object({
@@ -93,7 +93,7 @@ export function applyProofDisplayOverride(
   const candidate=overrides?.find(value=>value.caseId===caseId);
   if(!candidate)return original;
   const record=records.find(value=>value&&typeof value==='object'&&'id' in value&&value.id===caseId);
-  const parsed=proofCaseSchema.safeParse(record);
+  const parsed=proofContentSchema.safeParse(record);
   if(!parsed.success||!['GRANTED','NAME_APPROVED'].includes(parsed.data.namingPermission))return original;
   return {
     ...original,

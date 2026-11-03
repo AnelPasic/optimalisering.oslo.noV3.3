@@ -7,7 +7,7 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import YAML from 'yaml';
 import { pageSchema } from '../src/lib/content-schema.ts';
-import { proofCaseSchema, proofContentSchema, getPublishableCases } from '../src/lib/proof.ts';
+import { proofContentSchema, getPublishableCases } from '../src/lib/proof.ts';
 import { cmsJsonSave, entryForFile, resolveField, assertPreservedContent } from './helpers/pages-cms-json.ts';
 
 const cms = YAML.parse(readFileSync('../.pages.yml', 'utf8'));
@@ -75,8 +75,7 @@ test('CMS-equivalent edit preserves every current JSON record semantically and u
     const expected = structuredClone(form);
     assertPreservedContent(expected, after);
     const schema = edited.directory === 'pages' ? pageSchema : proofContentSchema;
-    const normalizedExpected = edited.directory === 'proof' && expected.publicationApproved === true && !proofCaseSchema.safeParse(after).success ? { ...expected, publicationApproved: false } : expected;
-    assert.deepEqual(schema.parse(after), schema.parse(normalizedExpected), edited.path + ': only the chosen field changes; incomplete proof stays fail-closed');
+    assert.deepEqual(schema.parse(after), schema.parse(expected), edited.path + ': optional CMS values normalize without changing approval');
     for (const record of records.filter(record => record !== edited)) assert.equal(hash(readFileSync(record.path.slice(4))), hash(record.bytes), record.path);
   }
 });
