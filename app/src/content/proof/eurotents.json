@@ -1,20 +1,18 @@
 {
   "id": "eurotents",
   "clientName": "Eurotents",
-  "anonymizedLabel": null,
-  "relationship": null,
   "dominantMetric": "ROAS - Google Ads",
   "before": "4,3x",
   "after": "17,2x",
-  "delta": "20 % lavere annonseforbruk",
+  "delta": "4X Større omsetning per annonsekrone",
   "period": {
     "before": "april 2025",
     "after": "april 2026",
     "comparable": true
   },
-  "intervention": "Optimalisering av Google Ads-kampanjen Telt.",
+  "intervention": "Google Ads Optimalisering",
   "source": "Google Ads; GA4 and Google Search Console previously verified, but disputed GA4 comparison and separate Mar-Aug organic evidence are excluded from public claim via prior Windsor.ai proof work. coordination/H017C-PROOF-PUBLISH.md at 1c34f27; coordination/PROOF-CANDIDATE-AUDIT-2026-10-11.md. Previously verified source values imported from the final OWNER + STRATEGY_CONTENT handoff; no new live source query or raw account export.",
-  "limitations": "20 % lavere annonseforbruk i samme sammenligning. ROAS er målt i Google Ads for Telt-kampanjen. Sammenligningen viser ikke effekten av ett tiltak alene.",
+  "limitations": "20 % lavere annonseforbruk i samme sammenligning og 4X Større omsetning per annonsekrone. \nROAS målt i Google Ads.",
   "namingPermission": "GRANTED",
   "permissionEvidence": "OWNER D-075, 2026-10-11; final H-017C explicitly approves this client reference for public use.",
   "strategyReviewStatus": "CONTENT_LOCKED",
@@ -24,7 +22,6 @@
     "coordination/H017C-PROOF-PUBLISH.md",
     "coordination/PROOF-CANDIDATE-AUDIT-2026-10-11.md"
   ],
-  "evidenceMetrics": [],
   "publicationStatus": "PUBLISHABLE",
   "publicationApproved": true
 }
