@@ -28,7 +28,7 @@ Read the H1 **alone**, with eyebrow, subheading, images and logo hidden.
 
 1. **SEO / relevance:** A buyer searching for the intended service/question should recognize the subject and intent. On high-intent service pages, normally identify the service/category directly. Natural language beats mechanical keyword repetition.
 2. **AIO / meaning:** The heading accurately labels the question, service or answer the page genuinely provides. It must not imply AI ranking, citations or claims the page cannot support.
-3. **CRO / buyer value:** State a meaningful result, problem solved, decision or offer. The user should know why this page matters. Don't substitute vague promises for real value or make every informational article a hard sell.
+3. **CRO / buyer value + Commercial Value Gate (sales pages):** State a meaningful buyer outcome and reason to hire our service, not a task-led DIY checklist. The buyer should know why this page matters and why it is worth engaging us. Don't substitute empty or unsupported promises for value or turn genuine information pages into hard sells.
 4. **Content Voice / distinction:** Be direct and specific enough to remember; use the site's chosen tone where it helps. Cleverness alone does not count; a plain, excellent service H1 beats an abstract slogan.
 5. **Truth / clarity:** Instantly understandable and consistent with the actual offer, proof and page. Reject empty words like “løsninger som tar deg videre” that could describe any company.
 
@@ -40,7 +40,7 @@ A **critical failure in relevance, standalone clarity, buyer value or truth disq
 - **B — substantial H1/section revision:** make 2–3 meaningfully different candidates if needed, choose one that passes the gates.
 - **C — new important page / core service Hero:** use the page's short Page Contract, explore roughly 6–10 genuinely distinct angles internally (straight service, buyer result, problem → solution, useful contrast, clear offer). Discard invalid ones; present **up to three finalists**, one recommendation and one-sentence trade-offs. Do not generate arbitrary quotas if the answer is already clear.
 
-After choosing the H1, assemble eyebrow (category/relevance), subheading (explain offer/process), proof (believability) and CTA (natural next step). Check the complete Hero and heading-only story; never make the user guess what is being sold. Use Value Equation to diagnose credibility, delay and effort on the **whole page**, not to stuff four promises into H1.
+After choosing the H1, assemble eyebrow (category/relevance), subheading (buyer outcome, why hire Medon, credible professional delivery/ownership), proof (believability) and CTA (approved next step). Check the complete Hero and heading-only story; never make the user guess what is being sold. **Commercial Value Gate** for a sales-intent Hero: reject task-only phrasing that suggests 'I can do this myself'; use Value Equation to assess desired outcome, credibility, time and customer effort on the **whole page**, not to stuff four promises into H1. No invented performance promises or false zero-effort claims.
 
 ## Quick red-team
 

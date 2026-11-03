@@ -54,6 +54,17 @@ test('changing just one tone selector preserves every other preference and exist
   assert.throws(() => cmsJsonSave(settings, invalid, entry, cms), /select choice/);
 });
 
+test('commercial sales-copy gate is part of the active authoring instructions, not a CMS rewrite automation', () => {
+  const agent = read('../AGENTS.md');
+  const profile = read('../coordination/CONTENT-VOICE-PROFILE.md');
+  const h1 = read('../coordination/H1-LAB.md');
+  assert.match(agent, /Commercial Value Gate/);
+  assert.match(profile, /Commercial Value Gate/);
+  assert.match(profile, /DIY-substitution test/);
+  assert.match(h1, /Commercial Value Gate/);
+  assert.match(profile, /no automatic rewrite/i);
+});
+
 test('voice selector must be loaded by content agents, not treated as a public automatic rewrite trigger', () => {
   const agent = read('../AGENTS.md');
   const profile = read('../coordination/CONTENT-VOICE-PROFILE.md');
