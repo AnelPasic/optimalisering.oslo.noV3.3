@@ -13,13 +13,29 @@
 - `editorNotes`: additional directions for the next editorial pass; never override factual/SEO/KRO quality rules.
 - Pricing, order forms, proof and legal copy **remain factual and nøkterne**, regardless of a broad `spiss` preference.
 
-**Operational process for ChatGPT/Codex:** before writing, read *fresh* `coordination/CONTENT-TONE.json` alongside this file, resolve effective preset for the target section, and perform the MWS-031 Content Quality Gate. For Hero copy, check the current page's optional `hero.toneOverrides`: each specified eyebrow, H1 and support preset overrides `heroPreset` individually; CTA uses the general site tone without per-Hero selectors; `inherit` or omitted fields follow `heroPreset`, then `defaultPreset`. For important H1 edits also use `coordination/H1-LAB.md`. Show the OWNER an example/diff or make the specifically authorized content edit. The setting alone never edits existing content, starts AI generation, alters route rendering or deploys a website. An authenticated CMS save and real preview require their own verification.
+**Operational process for ChatGPT/Codex:** before writing, read *fresh* `coordination/CONTENT-TONE.json` alongside this file, resolve effective preset for the target section, and perform the MWS-031 Content Quality Gate **plus the Commercial Value Gate for sales-intent copy** before applying tone. For Hero copy, check the current page's optional `hero.toneOverrides`: each specified eyebrow, H1 and support preset overrides `heroPreset` individually; CTA uses the general site tone without per-Hero selectors; `inherit` or omitted fields follow `heroPreset`, then `defaultPreset`. For important H1 edits also use `coordination/H1-LAB.md`. Show the OWNER an example/diff or make the specifically authorized content edit. The setting alone never edits existing content, starts AI generation, alters route rendering or deploys a website. An authenticated CMS save and real preview require their own verification.
 
 ## Fixed priorities (must always pass)
 
 1. Norsk klarhet / ELI10 - a plumber, electrician or shop owner should understand a paragraph on first reading. State service category/outcome before playing with wording.
 2. Commercial logic - say what the buyer gains or avoids: qualified enquiries, relevant searches, calls, time wasted, order friction, revenue where supportable.
 3. Self-aware honesty - admit uncomfortable limitations, uncertainty and costs. Never use humor to disguise an inaccurate or unproven claim.
+
+## Commercial Value Gate - required before Content Voice on sales-intent pages
+
+This is a **service business**, not a do-it-yourself tutorial. For a new or materially rewritten Hero, service text, package/offer, sales landing page or lead CTA, sell the **business outcome and reason to hire us**, not just our list of Google/website chores. For a small edit to one of these fields, preserve the commercial proposition. Articles and genuinely educational explanations should still answer questions; never disguise a sales pitch as a how-to answer.
+
+Use the Value Equation as an editorial diagnostic: **desired result x believable likelihood, divided by time to value x buyer effort**. The entire Hero/page should give a persuasive, truthful answer to five questions:
+
+1. **What is the buyer buying?** Better opportunities for relevant inquiries, fewer lost sales opportunities or a specific approved business benefit; not simply tidier opening hours or metadata.
+2. **Why believe us?** Real expertise in prioritization, implementation and ongoing evaluation, and only verified evidence where available. No fabricated cases, lead numbers, guarantees or rankings.
+3. **How does the work progress?** An honest first step and realistic continued effort. Local SEO needs work over time; do not promise immediate positions or a fixed result date.
+4. **Who does the work?** Explain what Medon owns and what the customer still needs to provide, without assuming unlimited done-for-you scope or zero customer effort.
+5. **Why hire Medon rather than DIY, and what next?** Make the value of professional judgment, execution and follow-up evident, then point to the actual approved CTA. Mention monthly follow-up only if it is genuinely part of the offered service.
+
+**DIY-substitution test:** if the prospect sees "Vi gjør åpningstider og kontaktinformasjon tydeligere i Google bedriftsprofilen" and thinks "Dette fikser jeg selv", the commercial Hero/ingress **fails**. Technical tasks can support a credible explanation, but cannot be the whole paid-service value. Better orientation (illustrative, not a verified result): "Vi finner hvor lokale kundemuligheter går tapt, prioriterer og gjennomfører forbedringene og følger opp utviklingen. Målet er flere relevante henvendelser, mens du kan drive bedriften."
+
+The **H1** must identify the service and buyer benefit independently. **Ingress** makes professional ownership, credibility, realistic timing and reduced customer effort tangible. **CTA** reflects the existing approved offer. Selected humor level (including Spiss+ Hysterisk) changes the expression only; commercial value comes first. No requirement to insert all five claims in every sentence, and no automatic rewrite or permission to change prices/offers/OWNER content.
 
 ## Adjustable flavor (0 none; 1 light; 2 noticeable; 3 sharp)
 
@@ -46,7 +62,7 @@ Apply a preset per **section/brief**, not by adding CMS runtime classes. OWNER m
 
 ## Apply by content role
 
-- Hero/H1/subline: honor the **actual per-field saved `hero.toneOverrides` first**, then `heroPreset`/default. Normally clear with minimal humor; if OWNER selected **Hysterisk**, the text should be genuinely funny, not restrained by this ordinary Hero suggestion. H1 must independently identify service and buyer outcome; dramatic setup and payoff can span H1 and support.
+- Hero/H1/subline: first pass **Commercial Value Gate** (buyer outcome and why pay us, not DIY instructions), then honor the **actual per-field saved `hero.toneOverrides`**, then `heroPreset`/default. Normally clear with minimal humor; if OWNER selected **Hysterisk**, the text should be genuinely funny, not restrained by this ordinary Hero suggestion. H1 must independently identify service and buyer outcome; dramatic setup and payoff can span H1 and support.
 - Three SEO / lokal SEO / AI visibility choice cards: **Medon leaning nøktern** - distinguish Google organic results, Google Maps/local intent, and AI answers using recognizable real customer situations. Do not promise ranking or ChatGPT recommendation.
 - Glossary, CPC/ROAS/attribution and educational explanations: selected preset for future editing is **Spiss+ komisk+**. The Lokal SEO example is a calibration, not a site-wide rewriting mandate. Use deliberate humor only where it improves understanding.
 - Packages/pricing and contact/order forms: **Nøktern**; scope/next action, conditions, no winks that hide costs.
@@ -88,7 +104,7 @@ These are *educational voice samples*, not automatically suitable headlines, ver
 ## Short self-review before every direct edit
 
 1. Would a non-marketer understand what the service does and why it matters?
-2. Is there a concrete business consequence (not "vi gjør det tydelig")?
+2. On a sales-intent page, does the copy sell a specific buyer outcome and a reason to hire us, rather than invite "I can do this myself"? Check credible execution, timeframe, customer effort and approved CTA (Commercial Value Gate).
 3. Does the humor actually help understanding? For `spissplushysterisk`, is there a real setup, escalation and unexpected payoff, rather than a tidy analogy? If not, reject it as insufficient for level 7 and try a different premise.
 4. Can any phrase imply guaranteed rankings, AI mentions, ROI or sales? If so, qualify/rewrite.
 5. Does it match this section's preset and the surrounding page voice?
