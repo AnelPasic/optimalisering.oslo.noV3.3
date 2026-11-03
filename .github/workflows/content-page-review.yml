@@ -7,6 +7,15 @@ on:
   pull_request:
     paths:
       - "app/src/content/pages/**"
+      - "app/src/content/proof/**"
+      - "app/src/content/global-elements/resultater.json"
+      - "app/src/pages/design-system/proof-list.astro"
+      - "app/src/lib/proof.ts"
+      - "app/src/lib/proof-list.ts"
+      - "app/src/lib/proof-presentation.ts"
+      - "app/tests/*proof*"
+      - "app/scripts/audit-h017c.mjs"
+      - "app/scripts/audit-cms-roundtrip.ts"
       - "app/tests/*seo*"
       - "app/tests/google-bedriftsprofil-page.test.ts"
       - "app/tests/universal-global-content.test.ts"
@@ -82,6 +91,8 @@ jobs:
         run: node scripts/sync-cms-url-options.mjs --check
       - name: Focused content tests
         run: node --test tests/lokal-seo-page.test.ts tests/google-bedriftsprofil-page.test.ts tests/header-navigation.test.ts tests/seo-commercial-content.test.ts tests/seo-mixed-composition.test.ts tests/pricing-cms-render-parity.test.ts tests/service-global-placements.test.ts tests/page-hero.test.ts tests/hero-presets.test.ts tests/synlighet-hero.test.ts tests/seo-editor-order.test.ts tests/universal-global-content.test.ts tests/hero-optional-image-cms.test.ts tests/faq-global-local-polish.test.ts tests/page-list.test.ts tests/h021b-visuals.test.ts tests/component-first-site-cards.test.ts tests/page-list-v2.test.ts tests/cms-url-picker.test.ts tests/global-rich-markdown.test.ts
+      - name: Verify Proof Register CMS normalization, approval gates and ProofList
+        run: node --test tests/proof.test.ts tests/proof-cms-null-normalization.test.ts tests/proof-register-editable.test.ts tests/proof-display-overrides.test.ts tests/h017c-proof.test.ts tests/proof-list.test.ts
       - name: Validate CMS typography schema, saved values and 6xl mapping
         run: node --test tests/typography-cms-pilot.test.ts
       - name: Verify global heading ownership and intentional exceptions
@@ -104,6 +115,8 @@ jobs:
         run: npm run check
       - name: Build static pages
         run: npm run build
+      - name: Audit rendered proof sections against selected approved evidence
+        run: node scripts/audit-h017c.mjs
       - name: Install Chromium for native typography parity
         run: npx playwright install --with-deps chromium
       - name: Verify Oslo computed typography unchanged and native CMS overrides functional

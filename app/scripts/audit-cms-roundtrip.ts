@@ -4,7 +4,7 @@ import { createHash } from 'node:crypto';
 import { readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import YAML from 'yaml';
 import { pageSchema } from '../src/lib/content-schema.ts';
-import { proofCaseSchema, proofContentSchema, getPublishableCases } from '../src/lib/proof.ts';
+import { proofContentSchema, getPublishableCases } from '../src/lib/proof.ts';
 import { cmsJsonSave, entryForFile, assertPreservedContent } from '../tests/helpers/pages-cms-json.ts';
 import { glossarySchema } from '../src/lib/terminology.ts';
 
@@ -30,8 +30,7 @@ const checks = snapshots.map(record => {
   const expected = form;
   assertPreservedContent(expected, saved);
   const schema = record.directory === 'pages' ? pageSchema : record.directory === 'terminology' ? glossarySchema : record.directory==='global-elements'?homepageBlockSchema:proofContentSchema;
-  const normalizedExpected = record.directory === 'proof' && expected.publicationApproved === true && !proofCaseSchema.safeParse(saved).success ? { ...expected, publicationApproved: false } : expected;
-  assert.deepEqual(schema.parse(saved), schema.parse(normalizedExpected), record.file);
+  assert.deepEqual(schema.parse(saved),schema.parse(expected),record.file);
     return { file: `app/${record.file}`, originalSha256: hash(record.bytes), serializedFixtureSha256: hash(serialized), editor: entry.name, editedField: form.kind === 'pricing' ? 'seo.description' : form.kind === 'home'||form.slug==='synlighet' ? 'hero.title' : field, semanticOnlyExpectedEdit: true };
 });
 const home = JSON.parse(readFileSync('src/content/pages/home.json', 'utf8'));
