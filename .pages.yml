@@ -1517,7 +1517,7 @@ content:
           - *a4
           - *standardHero
           - name: sections
-            label: Innholdsseksjoner – samme rekkefølge som nettsiden
+            label: Innholdsseksjoner
             description: Flytt eller skjul seksjoner her. Tekster, pakkepriser og sammenligningspunkter redigeres i Priser → Pakker og priser. Kalkulator og resultater redigeres under Globale Elementer.
             type: block
             blockKey: _block
