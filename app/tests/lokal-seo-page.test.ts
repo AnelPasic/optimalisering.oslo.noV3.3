@@ -34,7 +34,10 @@ test('Lokal SEO full service page is CMS-editable with commercial content and pr
  assert.match(page.hero.support,/Vi prioriterer.*følger opp/);
  assert.equal(page.hero.primaryCta.href,'/lokal-seo/#sjekk');
  assert.equal(page.hero.secondaryCta.href,'/priser/');
- assert.deepEqual(page.hero.toneOverrides,{eyebrowPreset:'spissplushysterisk',titlePreset:'spissplushysterisk',supportPreset:'spissplushysterisk'});
+ assert.deepEqual(page.hero.toneOverrides,{eyebrowPreset:'medon',titlePreset:'spissplus',supportPreset:'spisspluskomiskplus'});
+ assert.match(page.hero.eyebrow,/Google Maps/);
+ assert.match(page.hero.support,/kunde|oppdrag/);
+ assert.match(page.hero.support,/gjennomfører avtalte forbedringer/);
  assert.equal(page.hero.featuredProofCaseId,'helt-opplagt');
  assert.deepEqual(page.sections.filter((s:{_block:string})=>s._block==='global').map((s:{element:string})=>s.element),['priser','sjekk']);
  const owned=page.sections.filter((s:{_block:string})=>s._block==='content');
