@@ -1,10 +1,32 @@
 name: D-129 isolated intake
+# Intake/security regression is for transport and submission code, not every
+# page, theme or pricing layout edit. workflow_dispatch remains a manual escape
+# hatch if a cross-cutting change affects ingress indirectly.
 on:
   pull_request:
-    paths: ['intake-worker/**', 'app/**', '.github/workflows/d129-intake.yml']
+    paths:
+      - 'intake-worker/**'
+      - 'app/server/**'
+      - 'app/src/lib/lead.ts'
+      - 'app/src/lib/order.ts'
+      - 'app/src/lib/attribution.ts'
+      - 'app/src/config/site.ts'
+      - 'app/src/components/*Form*.astro'
+      - 'app/src/components/PackageOrder.astro'
+      - 'app/src/pages/api/**'
+      - 'app/scripts/qa-intake-*.mjs'
+      - 'app/tests/*intake*'
+      - 'app/tests/lead.test.ts'
+      - 'app/tests/http.test.mjs'
+      - 'app/package.json'
+      - 'app/package-lock.json'
+      - '.github/workflows/d129-intake.yml'
   workflow_dispatch:
 permissions:
   contents: read
+concurrency:
+  group: d129-intake-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 jobs:
   synthetic:
     runs-on: ubuntu-latest
@@ -29,12 +51,8 @@ jobs:
       - run: npm ci
       - run: npm run test:intake
       - run: node --test tests/h013-intake.test.mjs tests/h017a-intake.test.mjs tests/http.test.mjs tests/lead.test.ts
-      - name: Verify current SEO/Lokal SEO/CMS globals and navigation
-        run: node --test tests/lokal-seo-page.test.ts tests/google-bedriftsprofil-page.test.ts tests/header-navigation.test.ts tests/seo-commercial-content.test.ts tests/seo-mixed-composition.test.ts tests/service-global-placements.test.ts
       - run: npm run check
       - run: npm run build
-      - name: Audit generated pages and internal links
-        run: node scripts/audit-build.mjs
       - run: npx playwright install --with-deps chromium
       - run: npm run qa:intake:review
       - uses: actions/upload-artifact@v4
