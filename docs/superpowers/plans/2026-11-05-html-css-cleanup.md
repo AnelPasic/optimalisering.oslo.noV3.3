@@ -18,8 +18,11 @@
 - [x] Capture representative markup/style baselines and byte/node counts in local evidence.
 - [x] Simplify Hero wrappers and home photo wrapper in both projects; remove Oslo's empty homepage wrapper. Keep wrappers with active page-family/layout/semantic responsibilities.
 - [x] Remove verified orphan class tokens and CSS rules; consolidate exact duplicates only in the same cascade context. Preserve future CMS states and generated Pagefind parts.
-- [ ] Verify source diffs/protected records, typecheck/build, representative rendering and affected interactions. One coherent PR per repository, followed by authorized integration/preview verification.
+- [x] Verify source diffs/protected records, typecheck/build, representative rendering and affected interactions.
+- [ ] Integrate the existing PR and verify the established preview.
 
 Ruling: keep the width-constraining shell for inner Hero families through a tiny server-rendered HeroContainer; native Hero width overrides a shell applied to that same element. Remove the wrapper only for families that already own their shell. Before/after geometry exposed this dependency.
 
 Measured result: 16 MWS and 28 Oslo route/width/theme states preserve content and computed geometry/type/colors/crop. The four before/after homepage captures at 390/1440 are pixel-identical. MWS removes two homepage DOM elements; Oslo removes three. Built CSS decreases by 1,527 bytes and 875 bytes respectively (269/131 bytes gzip). Publication and CI are verified through the associated PR/provider records. No new tests or dependency changes.
+
+Local verification is complete. A documentation-only synchronization retries the missing PR workflow event after GitHub API timeouts; the application source remains identical to 701948d.
