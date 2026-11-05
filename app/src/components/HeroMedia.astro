@@ -19,7 +19,7 @@ const image = supplied ? content.src : '/images/home/hero-customer-preview.svg';
  {home?<div class="hero-photo" data-photo-src={content.src} data-photo-state={supplied ? 'supplied' : 'preview-placeholder'}>
    <img src={image} width="1200" height="750" alt="" fetchpriority="high" decoding="async" style={{ objectPosition: `${content.positionX}% ${content.positionY}%` }} />
  </div>:<img src={content.src} alt={content.alt} width="960" height="720" fetchpriority="high" decoding="async" style={{objectPosition:`${content.positionX}% ${content.positionY}%`}}/>}
- {proof&&<div class="hero-proof">
+ {proof&&<div class="hero-proof card bg-base-100 text-base-content">
    <p class="hero-proof-result"><span><TermText text={proof.metric} terms={['roas']} /></span>{' '}<span class="hero-proof-comparison">{proof.comparison}</span></p>
    <p class="hero-proof-support"><TermText text={proof.support} terms={['google-ads']} /></p>
  </div>}
@@ -27,7 +27,7 @@ const image = supplied ? content.src : '/images/home/hero-customer-preview.svg';
 
 <style>
   .hero-visual { position: relative; width: 100%; max-width: 600px; }
-  .hero-proof { position: absolute; left: 16px; bottom: 16px; width: max-content; max-width: calc(100% - 32px); padding: var(--panel-pad-xs) var(--panel-pad-sm); border-radius: var(--radius-md); background: #f5f3ec; color: #320c43; }
+  .hero-proof { position: absolute; left: 16px; bottom: 16px; width: max-content; max-width: calc(100% - 32px); padding: var(--panel-pad-xs) var(--panel-pad-sm); border-radius: var(--radius-md); }
   .hero-proof-result { display: flex; flex-wrap: wrap; gap: 0 6px; font-family: var(--heading); font-size: var(--type-h4); font-weight: var(--weight-heading); line-height: var(--leading-h4); }
   .hero-proof-comparison { white-space: nowrap; }
   .hero-proof-support { margin-top: 5px; font-size: var(--type-body-sm); line-height: var(--leading-body); }

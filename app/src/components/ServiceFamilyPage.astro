@@ -23,7 +23,7 @@ const hasGlobalFaq=page.sections.some(section=>section.globalElement==='sporsmal
 const records=globalProof?(await getCollection('proofCases')).map(p=>p.data):[];
 validateServiceGlobalProof(page,records);
 ---
-<div class="invite-home invite-service">
+<div data-page-family="service">
   <CommercialHero content={resolvePageHero(page)} />
   {visibleServiceSections(page).map(section=><>
     {section.globalElement ? <GlobalContentSection element={section.globalElement} faqItems={page.faq} /> : <>

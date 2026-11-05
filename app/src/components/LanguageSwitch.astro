@@ -25,7 +25,7 @@ const languages = [
       : destination
         ? <a class="language-switch__choice" href={destination.href} lang={language.locale}
             hreflang={language.locale}>{language.code}</a>
-        : <span class="language-switch__choice is-disabled" aria-disabled="true" lang={language.locale}
+        : <span class="language-switch__choice is-disabled" role="button" tabindex="-1" aria-disabled="true" lang={language.locale}
             title={language.locale === 'en' ? 'Engelsk versjon kommer senere' : 'Norsk versjon er ikke tilgjengelig'}>
             {language.code}
           </span>;

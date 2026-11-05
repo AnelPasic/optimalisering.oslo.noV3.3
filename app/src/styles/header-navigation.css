@@ -71,7 +71,6 @@
  .site-shell .site-header.site-header--sticky { position: sticky; top: 0; }
  .site-shell .site-header .header-nav-item--mega { position: static; }
  .site-shell .site-header .desktop-nav > ul.menu { position: static; }
- .site-shell .site-header .header-mega-menu[hidden] { display: none !important; }
  .site-shell .site-header .header-mega-menu {
   position: absolute; top: 100%; left: 0; right: 0; z-index: 60;
   padding: 34px 0 44px; background: var(--color-base-100);
@@ -119,7 +118,7 @@
   color: inherit; font-size: var(--type-h4); line-height: var(--leading-h4);
  }
  .site-shell .site-header .header-mega-promo p {
-  color: var(--color-dark-muted); font-size: var(--type-meta);
+  color: inherit; font-size: var(--type-meta);
   line-height: var(--leading-body); margin: 16px 0 28px;
  }
  .site-shell .site-header .header-mega-promo .btn {
@@ -283,14 +282,4 @@
    display: inline-grid; margin: 14px 0 4px;
   }
  }
-}
-
-/* Older client-only palette aliases not exported by the 20 standard daisyUI tokens. */
-html[data-mws-theme-mode="dark"] {
- --color-muted: oklch(76% 0.025 310);
- --color-dark-muted: oklch(82% 0.018 310);
- --color-dark-line: oklch(48% 0.04 314);
- --color-control-line: oklch(51% 0.025 307);
- --color-focus: oklch(82% 0.12 64);
- --color-error-on-dark: oklch(80% 0.12 45);
 }

@@ -10,7 +10,7 @@ const enabled = site.ordersEnabled;
 // Real intake requires backend, privacy, notification and launch approval.
 ---
 <details id={`package-order-${item.key}`} class="package-order-inline" data-package-order data-package-key={item.key}>
-  <summary class:list={['button', 'btn', featured ? 'btn-secondary' : 'btn-primary']}>{item.cta.label}<Arrow diagonal /></summary>
+  <summary class:list={['btn', featured ? 'btn-secondary' : 'btn-primary']}>{item.cta.label}<Arrow diagonal /></summary>
   <div class="package-order-panel">
     <h4>Bestill {item.title}</h4>
     <p>{orderIntro}</p>
@@ -33,7 +33,7 @@ const enabled = site.ordersEnabled;
       <div hidden aria-hidden="true"><label for={id('website-confirmation')}>La feltet stå tomt</label><input id={id('website-confirmation')} name="website_confirmation" tabindex="-1" autocomplete="off" maxlength="200" /></div>
       <p class="form-privacy">Ikke send innlogging eller sensitive opplysninger. <a href="/personvern/">Les om personvern</a>.</p>
       {!enabled && <p class="form-notice alert alert-warning">Dette er en forhåndsvisning. Bestilling er ikke åpnet ennå. Ingen opplysninger blir sendt.</p>}
-      <button type="submit" class="button btn btn-primary package-order-submit" disabled>{orderSubmitLabel}<Arrow diagonal /></button>
+      <button type="submit" class="btn btn-primary package-order-submit" disabled>{orderSubmitLabel}<Arrow diagonal /></button>
       <p class="form-status" data-order-status role="status" aria-live="polite" tabindex="-1" hidden></p>
       <noscript><p>Bestilling er ikke åpnet i denne forhåndsvisningen.</p></noscript>
     </form>

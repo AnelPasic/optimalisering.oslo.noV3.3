@@ -14,6 +14,23 @@ const browser=await chromium.launch({headless:true});
 const origin='http://127.0.0.1:'+server.address().port;
 
 try {
+ // A late .project primitive rule used to defeat ordinary per-element utilities.
+ const probe=await browser.newPage();
+ await probe.goto(origin+'/design-system/',{waitUntil:'networkidle'});
+ const sizes=await probe.evaluate(()=>{
+  const host=document.createElement('div');
+  host.innerHTML='<span class="text-2xl" data-ref-large>x</span><span class="text-(length:--type-body)" data-ref-body>x</span><button class="btn text-2xl">x</button><input class="input text-2xl"><h3 class="card-title text-(length:--type-body)">x</h3><output class="stat-value text-(length:--type-body)">1</output>';
+  document.body.append(host);
+  const size=selector=>getComputedStyle(host.querySelector(selector)).fontSize;
+  const values={large:size('[data-ref-large]'),body:size('[data-ref-body]'),button:size('.btn'),input:size('.input'),title:size('.card-title'),stat:size('.stat-value')};
+  host.remove();return values;
+ });
+ assert.equal(sizes.button,sizes.large,'Button utility must override approved default typography');
+ assert.equal(sizes.input,sizes.large,'Input utility must override approved default typography');
+ assert.equal(sizes.title,sizes.body,'Card title utility must override approved default typography');
+ assert.equal(sizes.stat,sizes.body,'Stat value utility must override approved default typography');
+ await probe.close();
+ console.log('PASS native primitive utility overrides');
  for(const width of [390,768,1440]){
   const page=await browser.newPage({viewport:{width,height:900}});
   const response=await page.goto(origin+'/design-system/',{waitUntil:'networkidle'});
@@ -22,8 +39,8 @@ try {
   for(const theme of ['optimalisering','sunset']){
    const data=await page.evaluate(theme=>{
     document.documentElement.dataset.theme=theme;
-    const grid=document.querySelector('.page-list-mediaCards');
-    const cards=[...document.querySelectorAll('.page-list-mediaCards > li > article')];
+    const grid=document.querySelector('.page-list-mediaCards[data-columns="3"]');
+    const cards=[...document.querySelectorAll('.page-list-mediaCards[data-columns="3"] > li > article')];
     const list=document.querySelector('.page-list-alternating');
     const first=cards[0];
     if(!grid||!first)return null;

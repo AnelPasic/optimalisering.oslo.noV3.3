@@ -14,7 +14,7 @@ import '../styles/compositions/service.css';
 interface Props { page: CollectionEntry<'pages'>['data']; pages: CollectionEntry<'pages'>['data'][]; }
 const { page, pages } = Astro.props;
 ---
-<div class="invite-home invite-service">
+<div data-page-family="service">
   <CommercialHero content={resolvePageHero(page)} />
   {visibleServiceSections(page).map(section => section.globalElement
     ? <GlobalContentSection element={section.globalElement} faqItems={page.faq} />

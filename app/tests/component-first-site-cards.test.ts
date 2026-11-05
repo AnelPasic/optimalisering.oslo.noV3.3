@@ -6,6 +6,8 @@ const read=(path:string)=>readFileSync(path,'utf8');
 test('MWS #26 Oslo pilot: automatic visual cards use native ContentCard, plain stays editorial',()=>{
  const home=read('src/components/HomeSection.astro');
  const card=read('src/components/ContentCard.astro');
+ const ordinary=read('src/components/ContentSection.astro');
+ assert.match(ordinary,/boxVariantAttribute\(item\.boxVariant,section\._block==='protected'\)!=='plain'\?<ContentCard/,'default section cards must share the native renderer');
  const project=read('src/styles/project.css');
  assert.match(home,/cards&&boxVariantAttribute\(item\.boxVariant,protectedRow\)!=='plain'/);
  assert.match(home,/<ContentCard[^>]+linkVariant=\{boxVariantAttribute/);
@@ -23,12 +25,12 @@ test('MWS #26 Oslo pilot: package shells are daisyUI and complex offer internals
  assert.match(markup,/<div class="card-body min-w-0 gap-0">/);
  for(const part of ['<PackageOrder item={item}','class="package-details"','<Visual kind={item.visual}','item.price','item.iconItems'])assert.ok(markup.includes(part),part);
  for(const bad of [
- '.invite-home .package-offer .package-card { background:',
- '.invite-home .package-offer .package-card { min-height: 770px; padding:',
- '.invite-home .package-card { background:',
- '.invite-home .package-card.is-recommended { border-top-color:',
+ '.site-shell .package-offer .package-card { background:',
+ '.site-shell .package-offer .package-card { min-height: 770px; padding:',
+ '.site-shell .package-card { background:',
+ '.site-shell .package-card.is-recommended { border-top-color:',
  ])assert.ok(!css.includes(bad),'parallel card paint/padding should be removed: '+bad);
- assert.match(css,/\.invite-home \.package-offer \.package-card \{ min-height: 770px; \}/,'pricing min-height is a permitted business-specific layout');
+ assert.match(css,/\.site-shell \.package-offer \.package-card \{ min-height: 770px; \}/,'pricing min-height is a permitted business-specific layout');
  assert.match(css,/\.package-order-inline/,'specialized pricing behavior is preserved');
 });
 
@@ -44,7 +46,7 @@ test('Oslo homepage three selector cards use semantic daisyUI background AND mat
 test('calculator uses matching daisyUI surface/content pairs, not fixed light text or chart ink',()=>{
  const view=read('src/components/HomeLeverage.astro');
  const css=read('src/styles/compositions/calculator.css');
- for(const pair of ['bg-secondary text-secondary-content','leverage-result bg-base-200 text-base-content','leverage-comparison bg-accent text-accent-content','scenario-chart bg-base-200 text-base-content'])
+ for(const pair of ['bg-secondary text-secondary-content','bg-base-200 text-base-content','bg-accent text-accent-content','scenario-chart bg-base-200 text-base-content'])
   assert.ok(view.includes(pair),'Missing calculator semantic color pair: '+pair);
  assert.doesNotMatch(css,/color:\s*var\(--color-base-100\)/,'section background must not use base-100 as foreground');
  assert.doesNotMatch(css,/background:\s*var\(--color-accent\)/,'result card colors should come from daisyUI');

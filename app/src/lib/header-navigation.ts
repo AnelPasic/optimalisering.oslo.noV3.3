@@ -10,7 +10,12 @@ export function mountHeaderNavigation(header:HTMLElement){
  function setOpen(button:HTMLButtonElement,open:boolean){
   const item=button.closest('li')!;cancelClose(item);
   button.setAttribute('aria-expanded',String(open));
-  panel(button).hidden=!open;
+  const submenu=panel(button);
+  submenu.hidden=!open;
+  if(submenu.classList.contains('menu-dropdown')){
+   submenu.classList.toggle('menu-dropdown-show',open);
+   button.classList.toggle('menu-dropdown-show',open);
+  }
   item.toggleAttribute('data-nav-open',open);
  }
  function closeChildren(){controls.forEach(button=>setOpen(button,false));}

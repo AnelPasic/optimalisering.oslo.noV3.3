@@ -6,7 +6,7 @@ const content = JSON.parse(readFileSync('src/content/pages/konvertering.json', '
 const bind = createCommercialTextBinding(JSON.parse(readFileSync('src/content/pages/home.json', 'utf8')), JSON.parse(readFileSync('src/content/pages/priser.json', 'utf8')));
 const html = readFileSync('dist/konvertering/index.html', 'utf8');
 const text = value => stripTerminologyLinks(value).replace(/<[^>]*>/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
-assert.ok(html.includes('class="invite-home invite-service"'), 'Konvertering must use the validated service renderer');
+assert.ok(html.includes('data-page-family="service"'), 'Konvertering must use the validated service renderer');
 assert.equal((html.match(/<h1(?:\s|>)/g) ?? []).length, 1);
 assert.equal(text(html.match(/<h1[^>]*>(.*?)<\/h1>/s)[1]), 'Det er ikke alltid kunden som må overbevises. Noen ganger må nettsiden slutte å stå i veien.');
 assert.equal(content.eyebrow, 'Fra besøk til henvendelser og kjøp');

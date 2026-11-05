@@ -10,6 +10,7 @@ import HomeFooter from '../components/HomeFooter.astro';
 import SiteSearch from '../components/SiteSearch.astro';
 import SiteChromeThemeHead from '../components/SiteChromeThemeHead.astro';
 import { siteChrome } from '../lib/site-chrome-data.ts';
+import {parseDaisyTheme} from '../lib/site-chrome-theme';
 import Attribution from '../components/Attribution.astro';
 import { site } from '../config/site';
 import { defaultLocale, type Locale } from '../config/locales';
@@ -21,11 +22,15 @@ const homepageSource=pages.find(p=>p.kind==='home');
 if(homepageSource)validateHomepagePublicLinks(homepageSource,pages);
 if(!homepageSource)throw new Error('The homepage source is required for global chrome validation');
 const homeChrome=siteChrome;
+const lightTheme=parseDaisyTheme(homeChrome.themes.lightCss,'light').name;
+const darkTheme=parseDaisyTheme(homeChrome.themes.darkCss,'dark').name;
+const defaultMode=homeChrome.themes.defaultMode;
+const defaultTheme=defaultMode==='dark'?darkTheme:lightTheme;
 const canonical = new URL(Astro.url.pathname, site.url).href;
 const organization = { '@context': 'https://schema.org', '@type': 'Organization', name: site.provider, url: site.providerUrl };
 ---
 <!doctype html>
-<html lang={locale} data-theme="optimalisering">
+<html lang={locale} data-theme={defaultTheme} data-mws-theme-mode={defaultMode} data-mws-light-theme={lightTheme} data-mws-dark-theme={darkTheme}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />

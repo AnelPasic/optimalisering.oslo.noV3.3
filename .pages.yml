@@ -2442,6 +2442,8 @@ content:
                 required: true
                 options:
                   values:
+                    - name: default
+                      label: Default
                     - name: primary
                       label: Primary
                     - name: secondary
