@@ -13,6 +13,7 @@ const { content, languageLinks = [], currentLocale = 'nb' } = Astro.props;
 const hasMobileLogo = Boolean(content.mobileLogoLight || content.mobileLogoDark);
 // Static class map: Tailwind/daisyUI must see every supported variant at build time.
 const ctaClasses = {
+  default: '',
   primary: 'btn-primary', secondary: 'btn-secondary', accent: 'btn-accent',
   neutral: 'btn-neutral', info: 'btn-info', success: 'btn-success',
   warning: 'btn-warning', error: 'btn-error',
@@ -40,12 +41,12 @@ const ctaClasses = {
       </span>}
     </a>
     <nav class="desktop-nav" aria-label={content.navigationLabel}><HeaderNavigation links={content.navigation} mode="desktop" /></nav>
-    <div class="header-actions">
+    <div class="header-actions shrink-0">
       {content.headerOptions.showSearch && <SiteSearch mode="desktop" />}
       {content.headerOptions.showThemeSwitch && <SiteChromeThemeSwitch themes={content.themes} placement="desktop" />}
       {content.headerOptions.showLanguageSwitch && <LanguageSwitch links={languageLinks} currentLocale={currentLocale} />}
       {content.headerOptions.showCta && <a href={content.assessmentLink.href}
-        class:list={["button", "button-small", "btn", "btn-sm", ctaClasses[content.assessmentLink.variant]]}>
+        class:list={["btn", "btn-sm", ctaClasses[content.assessmentLink.variant]]}>
         {content.assessmentLink.label}<Arrow diagonal />
       </a>}
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label={content.openMenu} data-home-menu data-open-label={content.openMenu} data-close-label={content.closeMenu}><span></span><span></span></button>

@@ -8,7 +8,7 @@ const packages = getHomepageBlock(home,'packages').content;
 const bind = createCommercialTextBinding(home, JSON.parse(readFileSync('src/content/pages/priser.json', 'utf8')));
 const html = readFileSync('dist/synlighet/index.html', 'utf8');
 const text = value => value.replace(/<[^>]*>/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
-assert.match(html, /class="invite-home invite-service"/, 'Dedicated H-009 service renderer');
+assert.match(html, /data-page-family="service"/, 'Dedicated H-009 service renderer');
 assert.equal((html.match(/<h1(?:\s|>)/g) ?? []).length, 1);
 assert.equal(text(html.match(/<h1[^>]*>(.*?)<\/h1>/s)[1]), 'De søker etter løsningen. Så etter deg.');
 assert.equal(content.eyebrow, 'SEO, lokal SEO og AI-synlighet');

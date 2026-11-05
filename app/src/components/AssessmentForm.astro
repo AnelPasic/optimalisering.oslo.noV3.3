@@ -16,7 +16,7 @@ import Arrow from './Arrow.astro';
   <p class="form-privacy">Ikke send innlogging, sensitive opplysninger eller personopplysninger om andre.</p>
   <div class="honeypot" aria-hidden="true"><label for="website-confirmation">La feltet stå tomt</label><input class="input w-full" id="website-confirmation" name="website_confirmation" tabindex="-1" autocomplete="off" /></div>
   {!site.leadsEnabled && <p class="form-notice alert alert-warning">Dette er en forhåndsvisning. Innsending er ikke åpnet ennå.</p>}
-  <button type="submit" class="button form-submit btn btn-primary" disabled>Ta en gratis sjekk <Arrow diagonal /></button>
+  <button type="submit" class="form-submit btn btn-primary" disabled>Ta en gratis sjekk <Arrow diagonal /></button>
   <p class="form-privacy">Vi bruker opplysningene for å følge opp forespørselen. <a href="/personvern/">Les om personvern</a>.</p>
   <p class="form-status" role="status" aria-live="polite" tabindex="-1" hidden></p>
   <noscript><p>Skjemaet trenger JavaScript for innsending. <a href="/kontakt/">Se kontaktinformasjon</a>.</p></noscript>

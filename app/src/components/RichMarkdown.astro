@@ -4,11 +4,11 @@ interface Props {text:string; variant?:'body'|'card';}
 const {text,variant='body'}=Astro.props;
 const safeHtml=renderSafeMarkdown(text);
 ---
-<div class:list={['rich-markdown',variant==='card'&&'card-copy']} set:html={safeHtml}></div>
+<div class:list={['rich-markdown',variant==='card'&&'text-(length:--type-body) leading-(--leading-body)']} set:html={safeHtml}></div>
 <style is:global>
 .rich-markdown{min-width:0;overflow-wrap:anywhere;line-height:inherit;color:inherit;}
 .rich-markdown :is(p,h2,h3,h4,h5,h6,ul,ol){margin:0;}
-.rich-markdown>*+*{margin-top:.85em!important;}
+.rich-markdown>*+*{margin-top:.85em;}
 .rich-markdown :is(h2,h3,h4,h5,h6){font-weight:700;line-height:1.25;letter-spacing:normal;color:inherit;}
 .rich-markdown h2{font-size:1.45em;}
 .rich-markdown h3{font-size:1.3em;}

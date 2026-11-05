@@ -1,7 +1,7 @@
 import { z } from 'astro/zod';
 
 export const ctaVariants = [
-  'primary', 'secondary', 'accent', 'neutral',
+  'default', 'primary', 'secondary', 'accent', 'neutral',
   'info', 'success', 'warning', 'error',
 ] as const;
 export type ThemeMode = 'light' | 'dark';
@@ -110,10 +110,52 @@ export const chromeThemeSchema = z.object({
 });
 export type ChromeThemes = z.infer<typeof chromeThemeSchema>;
 
+/* Source-accurate supplemental Oslo Light/Dark semantics. These variables are
+ * in Oslo app.css, but outside the 28 daisyUI CMS theme keys. Apply them ONLY
+ * when the entire unedited canonical palette matches the Oslo source; a customer
+ * editing the theme (even retaining its name) inherits normal semantic aliases.
+ * Source: optimalisering.oslo.noV3.3@b14b703a app/src/styles/app.css.
+ */
+const osloBaselineLightSignature = "oklch(0.99999999 0.00000004 89.875563)|oklch(0.98448538 0.00447018 314.805168)|oklch(0.952366 0.0152201 302.554)|oklch(0.27871246 0.04378087 312.743227)|oklch(0.52558456 0.09022346 186.796455)|oklch(0.99999999 0.00000004 89.875563)|oklch(0.25075315 0.10077263 313.031100)|oklch(0.94297432 0.01697831 192.350958)|oklch(0.89248500 0.05576943 167.275491)|oklch(0.27871246 0.04378087 312.743227)|oklch(0.27871246 0.04378087 312.743227)|oklch(0.99999999 0.00000004 89.875563)|oklch(0.94297432 0.01697831 192.350958)|oklch(0.27871246 0.04378087 312.743227)|oklch(0.89248500 0.05576943 167.275491)|oklch(0.27871246 0.04378087 312.743227)|oklch(0.94976849 0.02496090 89.213447)|oklch(0.25075315 0.10077263 313.031100)|oklch(0.48326547 0.13904820 28.765185)|oklch(0.99999999 0.00000004 89.875563)|0.375rem|0.5rem|1.25rem|0.25rem|0.25rem|1px|0|0";
+const osloBaselineSemanticColors: Record<string,string> = {
+  "--color-muted": "oklch(0.49158061 0.02696654 307.853282)",
+  "--color-dark-muted": "oklch(0.89496413 0.02032388 308.208563)",
+  "--color-dark-line": "oklch(0.47041354 0.04809311 314.327700)",
+  "--color-control-line": "oklch(0.82684622 0.02665445 308.103296)",
+  "--color-focus": "oklch(0.57093736 0.12197198 64.769138)",
+  "--color-error-on-dark": "oklch(0.89052872 0.06213697 45.936158)"
+};
+const osloBaselineDarkSignature = "oklch(22% 0.019 237.69)|oklch(20% 0.019 237.69)|oklch(18% 0.019 237.69)|oklch(77.383% 0.043 245.096)|oklch(74.703% 0.158 39.947)|oklch(14.94% 0.031 39.947)|oklch(85.559% 0.085 206.015)|oklch(17.111% 0.017 206.015)|oklch(71.294% 0.166 299.844)|oklch(14.258% 0.033 299.844)|oklch(26% 0.019 237.69)|oklch(70% 0.019 237.69)|oklch(72.537% 0.177 2.72)|oklch(14.507% 0.035 2.72)|oklch(85.56% 0.085 144.778)|oklch(17.112% 0.017 144.778)|oklch(85.569% 0.084 74.427)|oklch(17.113% 0.016 74.427)|oklch(85.511% 0.078 16.886)|oklch(17.102% 0.015 16.886)|1rem|0.5rem|1rem|0.25rem|0.25rem|1px|0|0";
+const osloBaselineDarkSemanticColors: Record<string,string> = {
+  "--color-muted": "oklch(76% 0.025 310)",
+  "--color-dark-muted": "oklch(82% 0.018 310)",
+  "--color-dark-line": "oklch(48% 0.04 314)",
+  "--color-control-line": "oklch(51% 0.025 307)",
+  "--color-focus": "oklch(82% 0.12 64)",
+  "--color-error-on-dark": "oklch(80% 0.12 45)"
+};
+// Emit aliases per theme so a CSS-only controller/nested theme cannot inherit
+// the previously selected palette's supplemental roles.
+const semanticFallbackColors: Record<string,string> = {
+  "--color-muted": "color-mix(in srgb, var(--color-base-content) 65%, transparent)",
+  "--color-dark-muted": "color-mix(in srgb, var(--color-base-content) 85%, transparent)",
+  "--color-dark-line": "color-mix(in srgb, var(--color-base-content) 30%, transparent)",
+  "--color-control-line": "var(--color-base-300)",
+  "--color-focus": "var(--color-primary)",
+  "--color-error-on-dark": "var(--color-error-content)"
+};
+
 export function themeOverridesCss(themes: ChromeThemes): string {
   return (['light', 'dark'] as const).map(mode => {
     const theme = parseDaisyTheme(themes[mode + 'Css' as 'lightCss' | 'darkCss'], mode);
-    const declarations = Object.entries(theme.variables).map(([key, value]) => key + ':' + value + ';').join('');
-    return 'html[data-theme="' + theme.name + '"]{color-scheme:' + mode + ';' + declarations + '}';
+    const isUnmodifiedOsloLight = mode === 'light' && theme.name === 'optimalisering'
+      && Object.values(theme.variables).join('|') === osloBaselineLightSignature;
+    const isUnmodifiedOsloDark = mode === 'dark' && theme.name === 'sunset'
+      && Object.values(theme.variables).join('|') === osloBaselineDarkSignature;
+    const variables = isUnmodifiedOsloLight
+      ? { ...theme.variables, ...osloBaselineSemanticColors }
+      : isUnmodifiedOsloDark ? { ...theme.variables, ...osloBaselineDarkSemanticColors } : { ...theme.variables, ...semanticFallbackColors };
+    const declarations = Object.entries(variables).map(([key,value]) => key+':'+value+';').join('');
+    return ':root:has(input.theme-controller[value="' + theme.name + '"]:checked),[data-theme="' + theme.name + '"]{color-scheme:' + mode + ';' + declarations + '}';
   }).join('\n');
 }

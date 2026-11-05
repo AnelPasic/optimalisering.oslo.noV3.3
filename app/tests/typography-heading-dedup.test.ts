@@ -18,13 +18,13 @@ test('h3 type scale has one shared owner, not one declaration per card', () => {
   assert.doesNotMatch(home, /need-card/);
   const selector = readFileSync('src/components/HomepageBlock.astro','utf8');
   assert.ok(selector.includes('max-w-[390px] max-[900px]:max-w-[600px]'));
-  assert.doesNotMatch(packages, /\.invite-home \.package-card h3\s*\{/);
-  assert.doesNotMatch(assessment, /\.invite-home \.form-heading h3\s*\{/);
+  assert.doesNotMatch(packages, /\.site-shell \.package-card h3\s*\{/);
+  assert.doesNotMatch(assessment, /\.site-shell \.form-heading h3\s*\{/);
   assert.match(shared, /\.form-heading h3\s*\{\s*margin-bottom:\s*27px;\s*\}/);
   assert.doesNotMatch(shared, /\.assessment-copy h2\s*\{/);
-  assert.doesNotMatch(sections, /\.invite-home h2\s*\{/);
-  assert.doesNotMatch(pricing, /\.invite-pricing \.package-card h2\s*\{/);
-  assert.doesNotMatch(service, /\.invite-service \.service-package h3\s*\{/);
+  assert.doesNotMatch(sections, /\.site-shell h2\s*\{/);
+  assert.doesNotMatch(pricing, /\[data-page-family="pricing"\] \.package-card h2\s*\{/);
+  assert.doesNotMatch(service, /\[data-page-family="service"\] \.service-package h3\s*\{/);
   assert.match(terminology, /\.glossary-group h2\s*\{\s*max-width:\s*320px;\s*\}/);
 });
 
@@ -33,7 +33,7 @@ test('intentional smaller heading variants remain untouched', () => {
   const packages = read('compositions/package.css');
 
   assert.match(shared, /\.process-items h3\s*\{\s*font-size:\s*var\(--type-h4\);\s*line-height:\s*var\(--leading-h4\);\s*\}/);
-  assert.match(packages, /\.package-offer \.package-heading h2, \.invite-home \.package-offer \.package-heading h3\s*\{\s*font-size:\s*var\(--type-h4\);\s*line-height:\s*var\(--leading-h4\);\s*\}/);
+  assert.match(packages, /\.package-offer \.package-heading h2, \.site-shell \.package-offer \.package-heading h3\s*\{\s*font-size:\s*var\(--type-h4\);\s*line-height:\s*var\(--leading-h4\);\s*\}/);
   assert.match(shared, /\.info-item h3\s*\{\s*margin-bottom:\s*16px;\s*\}/);
-  assert.match(read('compositions/sections.css'), /\.invite-home \.info-item h3\s*\{\s*font-size:\s*var\(--type-h4\);\s*line-height:\s*var\(--leading-h4\);\s*\}/);
+  assert.match(read('compositions/sections.css'), /\.site-shell \.info-item h3\s*\{\s*font-size:\s*var\(--type-h4\);\s*line-height:\s*var\(--leading-h4\);\s*\}/);
 });

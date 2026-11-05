@@ -15,7 +15,7 @@
   --border-control: 1px solid var(--color-control-line);
   --border-dark: 1px solid var(--surface-dark-line);
   --border-featured: 2px solid var(--color-secondary);
-  --shadow-soft: 0 8px 24px #320c4314;
+  --shadow-soft: 0 8px 24px color-mix(in srgb, var(--color-base-content) 8%, transparent);
 
   --panel-pad-xs: 12px;
   --panel-pad-sm: 16px;
@@ -37,8 +37,8 @@
 
 /* Resolve palette aliases in their own context, rather than inheriting an
    alias already computed against the root's legacy palette. The existing
-   Invite body and dark service section override --paper/--cream/--line. */
-:root, body, .invite-service .home-section-sammenheng {
+   site body and dark service section override --paper/--cream/--line. */
+:root, body, [data-page-family="service"] .home-section-sammenheng {
   --border-subtle: 1px solid var(--line);
 }
 
@@ -57,7 +57,7 @@
   --border-subtle: 1px solid var(--line);
 }
 :root .content-section[data-surface] .section-items:not(.process-items) :is(.item-apricot,.item-sage):not([data-surface]),
-:root .invite-service .home-section-behov[data-surface] .info-item:not([data-surface]) {
+:root [data-page-family="service"] .home-section-behov[data-surface] .info-item:not([data-surface]) {
   --ink: var(--surface-light-ink);
   --muted: var(--surface-light-muted);
   --green: var(--surface-light-ink);

@@ -26,7 +26,7 @@ const sections = page.sections.map(section => section.id === 'kostnader' ? {
   ...section, body: [`${packages.adBudgetNote} ${packages.externalCostsNote.replace('kommer i tillegg', 'kommer også i tillegg')}`, packages.separateWorkNote, packages.capacityNote],
 } : section);
 ---
-<div class="invite-home invite-pricing">
+<div data-page-family="pricing">
   <CommercialHero content={resolvePageHero(page,commercial)} />
   {/* All pricing placements are now authored in the CMS sections list. */}
   {visibleServiceSections({slug:page.slug,sections}).map(section => section._block==='pricingModule'

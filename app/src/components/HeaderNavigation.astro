@@ -15,7 +15,7 @@ const pathname=Astro.url.pathname;
   return <li class:list={['header-nav-item',{'header-nav-item--mega':mega}]} data-active-parent={state.within||undefined} data-mega={mega||undefined}>
    <div class="header-nav-parent">
     <a href={link.href} aria-current={state.current?'page':undefined}>{link.label}{mode==='mobile'&&!disclosure&&<Arrow />}</a>
-    {disclosure&&<button type="button" class="nav-disclosure btn btn-ghost btn-square"
+    {disclosure&&<button type="button" class:list={['nav-disclosure btn btn-ghost btn-square',!mega&&'menu-dropdown-toggle after:hidden']}
       aria-expanded="false" aria-controls={id} aria-label={link.submenuLabel} data-nav-disclosure><Arrow /></button>}
    </div>
    {mega&&link.mega&&<div id={id} class="header-mega-menu bg-base-100" hidden>
@@ -35,11 +35,11 @@ const pathname=Astro.url.pathname;
      {link.mega.promo&&<aside class="header-mega-promo">
       <h2>{link.mega.promo.heading}</h2>
       <p>{link.mega.promo.body}</p>
-      <a class="btn btn-primary" href={link.mega.promo.cta.href}>{link.mega.promo.cta.label}<Arrow diagonal /></a>
+      <a class="btn" href={link.mega.promo.cta.href}>{link.mega.promo.cta.label}<Arrow diagonal /></a>
      </aside>}
     </div>
    </div>}
-   {!mega&&!!link.children?.length&&<ul id={id} class="header-submenu menu bg-base-100" hidden>
+   {!mega&&!!link.children?.length&&<ul id={id} class="header-submenu menu menu-dropdown bg-base-100" hidden>
     {link.children.map(child=><li><a href={child.href}
       aria-current={navigationState(child,pathname).current?'page':undefined}>
       <span class="header-submenu-label">{child.label}</span>

@@ -13,7 +13,7 @@ const surfaces={'base-100':'bg-base-100 text-base-content','base-200':'bg-base-2
  <div class="card-body min-w-0 gap-5">
   {number&&<span class="font-semibold" aria-hidden="true" data-card-number>{number}</span>}
   <h3 class="card-title"><TermText text={title} terms={titleTerms}/></h3>
-  {hasRichMarkdown(text)?<RichMarkdown text={text} variant="card"/>:<p class="card-copy"><TermText text={text} terms={textTerms}/></p>}
-  {(href||Astro.slots.has('actions'))&&<div class:list={['card-actions',linkVariant==='text'?'mt-auto pt-3':'mt-3']}><slot name="actions">{href&&<a class={linkVariant==='text'?'text-link':'btn btn-primary'} href={href}>{label||title}<Arrow diagonal/></a>}</slot></div>}
+  {hasRichMarkdown(text)?<RichMarkdown text={text} variant="card"/>:<p class="text-(length:--type-body) leading-(--leading-body)"><TermText text={text} terms={textTerms}/></p>}
+  {(href||Astro.slots.has('actions'))&&<div class:list={['card-actions',linkVariant==='text'?'mt-auto pt-3':'mt-3']}><slot name="actions">{href&&<a class={linkVariant==='text'?'text-link':'btn'} href={href}>{label||title}<Arrow diagonal/></a>}</slot></div>}
  </div>
 </article>

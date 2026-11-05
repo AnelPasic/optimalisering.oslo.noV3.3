@@ -1,5 +1,5 @@
 /* Inline terms keep the surrounding sentence readable. */
-a.term-trigger, .invite-home a.term-trigger {
+a.term-trigger {
   display: inline;
   padding: 0;
   margin: 0;
@@ -53,7 +53,7 @@ a.term-trigger:focus-visible { outline: 2px solid currentColor; outline-offset: 
   padding: var(--gap-xs) var(--panel-pad-sm);
   border: var(--border-subtle);
   border-radius: var(--radius-pill);
-  color: #320c43;
+  color: var(--color-base-content);
   text-decoration: none;
   font-weight: var(--weight-heading);
 }
@@ -78,7 +78,7 @@ a.term-trigger:focus-visible { outline: 2px solid currentColor; outline-offset: 
 .glossary-group-heading .eyebrow {
   margin: 0 0 10px;
   font-size: var(--type-eyebrow);
-  color: #087b73;
+  color: var(--color-primary);
  line-height: var(--leading-small); }
 .glossary-group h2 {
   max-width: 320px;
@@ -116,18 +116,18 @@ a.term-trigger:focus-visible { outline: 2px solid currentColor; outline-offset: 
   font-size: var(--type-h4);
   font-weight: var(--weight-heading);
   line-height: var(--leading-h4);
-  color: #320c43;
+  color: var(--color-base-content);
 }
 .glossary-full-name {
   font-size: var(--type-meta);
   line-height: var(--leading-small);
-  color: #796b82;
+  color: var(--color-muted);
 }
 .glossary-short {
   max-width: 62ch;
   font-size: var(--type-body-sm);
   line-height: var(--leading-body);
-  color: #4d4055;
+  color: var(--color-base-content);
 }
 .glossary-toggle {
   display: grid;
@@ -136,7 +136,7 @@ a.term-trigger:focus-visible { outline: 2px solid currentColor; outline-offset: 
   height: 28px;
   border-radius: 50%;
   background: var(--color-info);
-  color: #173d39;
+  color: var(--color-info-content);
   font-size: var(--type-icon);
   line-height: var(--leading-small);
   transition: transform .15s ease;
@@ -145,23 +145,23 @@ a.term-trigger:focus-visible { outline: 2px solid currentColor; outline-offset: 
 .glossary-entry details[open] summary { padding-bottom: 16px; }
 
 .glossary-example {
-  margin-top: 18px !important;
+  margin-top: 18px;
   padding: var(--panel-pad-sm);
   border: 0;
   border-radius: var(--radius-md);
-  background: #f1eee7;
-  color: #320c43;
+  background: var(--color-base-300);
+  color: var(--color-base-content);
 }
 .glossary-anchor {
   display: inline-block;
   margin-top: 14px;
-  color: #796b82;
+  color: var(--color-muted);
   font-size: var(--type-meta);
   text-decoration: none;
  line-height: var(--leading-small); }
 .glossary-anchor:hover { text-decoration: underline; }
 .glossary-entry:target details {
-  background: linear-gradient(90deg, #e0f0ef80, transparent 80%);
+  background: linear-gradient(90deg, color-mix(in srgb, var(--color-info) 50%, transparent), transparent 80%);
 }
 
 @media (max-width: 900px) {
