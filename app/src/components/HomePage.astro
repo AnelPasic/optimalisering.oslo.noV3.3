@@ -12,8 +12,6 @@ const {page}=Astro.props;
 const records=(await getCollection('proofCases')).map(record=>record.data);
 const blocks=getHomepageBlocks(page);
 ---
-<div>
  <CommercialHero content={resolvePageHero(page)} proof={isHomepageSectionVisible(getHomepageBlock(page,'proof'))?getHeroProof(getHomepageBlock(page,'proof').content,records):undefined} />
  {blocks.filter(isHomepageSectionVisible).map(block=><HomepageBlock block={block} records={records} faqItems={page.faq} />)}
  {!blocks.some(block => block._block==='faq' && isHomepageSectionVisible(block)) && <Faq id="sporsmal" items={page.faq} />}
-</div>

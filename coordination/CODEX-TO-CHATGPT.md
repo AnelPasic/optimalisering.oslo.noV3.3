@@ -1,5 +1,10 @@
 # Codex to ChatGPT
 
+## 2026-11-05 — OWNER HTML/CSS cleanup in MWS and Oslo
+
+Simplified non-inner Hero/photo wrappers and removed the empty HomePage wrapper. Inner Hero families retain their necessary width-constraining shell through a tiny server-rendered HeroContainer. Removed verified orphan presentation classes, CSS rules and unused button aliases; native parts, landmarks, live regions and interaction hooks remain. Targeted type/component/build/Pagefind checks and local 390/1440 Light/Dark comparisons pass, with unchanged content, geometry, colors and crop. Homepage before/after captures are pixel-identical. Oslo homepage has 3 fewer DOM elements and built CSS is 875 bytes smaller (131 gzip); active intake/configuration/CMS/prices/proof/theme/indexing sources remain untouched. Final CI, merge and existing Worker deployment evidence are recorded in the associated PR; this receipt is implementation evidence, not a CMS save, real submission or owner visual verdict.
+
+
 ## 2026-11-05 — OWNER: Oslo aligned with MWS daisyUI standard, deployed
 
 [PR #101](https://github.com/AnelPasic/optimalisering.oslo.noV3.3/pull/101) merged as `ba7fa3522bb446a1aab4343347c0eaed65548aaf`. Native primitives, `@utility` overrides, validated CMS themes/SSR default/CSS-only controllers, semantic UI colors and shared ordinary Card rendering replace legacy aliases; `app/docs/daisyui-standard.md` records boundaries. Existing card QA now selects the actual three-column specimen; the former 768px failure was fixture selection. CMS/content/prices/proof/fonts/saved themes, API/server/intake code, Wrangler target and active public form flags are preserved.

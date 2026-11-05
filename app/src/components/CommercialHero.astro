@@ -4,6 +4,7 @@ import {heroViewSchema,type HeroView} from '../lib/page-hero';
 import Arrow from './Arrow.astro';
 import TermText from './TermText.astro';
 import HeroPhoto from './HeroMedia.astro';
+import HeroContainer from './HeroContainer.astro';
 import {getCollection} from 'astro:content';
 import {getSelectedHeroProof} from '../lib/hero-proof';
 import type {getHeroProof} from '../lib/hero-proof';
@@ -21,7 +22,7 @@ const inner=['article','assessment','utility'].includes(family),service=family==
 const media=content.visual.kind==='image',auxiliary=family==='assessment'&&Astro.slots.has('auxiliary');
 const split=content.titleEmphasis==='first-sentence'&&content.title.includes('.')?content.title.indexOf('.')+1:0;
 const shellInside=inner;
-const classes=['commercial-hero',family==='home'?'home-hero shell':service?'service-hero shell':family==='pricing'?'pricing-hero shell':inner?`inner-hero inner-${family}`:family==='error'?'error-page shell':'glossary-hero'];
+const classes=['commercial-hero',family==='home'?'home-hero shell':service?'service-hero shell':family==='pricing'?'pricing-hero shell':inner?'inner-hero':family==='error'?'error-page shell':'glossary-hero'];
 const anchor=family==='service'?'service-hero':family==='pricing'?'pricing-hero':undefined;
 const centered=content.layout==='centered',left=content.layout==='split-left';
 const frameLayout=family==='home'
@@ -31,7 +32,8 @@ const frameLayout=family==='home'
  : auxiliary?['items-start gap-[30px] min-[651px]:gap-[45px] min-[1101px]:gap-[85px]',!centered&&'min-[651px]:grid-cols-2']:[];
 ---
 <Section id={demo?undefined:anchor} class:list={classes} data-hero-family={family} data-hero-layout={content.layout} data-hero-visual={media?'image':auxiliary?'auxiliary':'none'}>
- <div class:list={['hero-container',{shell:shellInside}]}>
+ <HeroContainer contained={shellInside}>
+
   {content.breadcrumbs.length>0&&<nav class="breadcrumbs" aria-label="Brødsmuler"><ul>{content.breadcrumbs.map(crumb=><li>{crumb.href?<a href={crumb.href}>{crumb.label}</a>:<span class="cursor-default" aria-current="page">{crumb.label}</span>}</li>)}</ul></nav>}
   <div class="hero place-items-start">
   <div class:list={['hero-content hero-frame w-full p-0 grid-cols-1',inner&&family!=='assessment'?'max-w-[980px]':'max-w-none',centered?'justify-center':'justify-start',frameLayout,{'grid':media||auxiliary,'inner-hero-grid':inner,'assessment-hero-grid':family==='assessment'}]}>
@@ -48,5 +50,5 @@ const frameLayout=family==='home'
    </>}
   </div>
   </div>
- </div>
+ </HeroContainer>
 </Section>

@@ -15,8 +15,6 @@
 
 .assessment-hero-grid :is(h1,h2){ font-size: var(--type-display); line-height: var(--leading-display); }
 .assessment-hero-grid .assessment-form .btn{ margin-top: 22px; }
-.inner-article{ background: var(--color-base-200); }
-.inner-utility{ background: var(--cream); }
 .error-page{ padding-block: 100px; }
 .error-page p:not(.eyebrow){ margin-block: 25px; }@media (max-width: 900px){
 .hero-copy h1{ font-size: var(--type-display); line-height: var(--leading-display); }}@media (max-width: 650px){
@@ -92,7 +90,7 @@
 .commercial-hero[data-hero-family="home"] .hero-intro { color: var(--muted); font-size: var(--type-lead); line-height: var(--leading-lead); margin-top: 22px; max-width: 620px; }
 .commercial-hero[data-hero-family="home"] .hero-actions { margin-top: 24px; gap: 24px; }
 .commercial-hero[data-hero-family="home"] .hero-photo { width: 100%; max-width: 600px; aspect-ratio: 8 / 5; border-radius: var(--radius-card-lg); overflow: hidden; justify-self: end; background: var(--color-base-300); }
-.commercial-hero[data-hero-family="home"] .hero-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.commercial-hero[data-hero-family="home"] img.hero-photo { display: block; height: auto; object-fit: cover; }
 .commercial-hero[data-hero-family="home"] .hero-copy .small-dot { display: none; }
 .commercial-hero[data-hero-family="home"] .hero-copy { min-width: 0; }
 .commercial-hero[data-hero-family="home"] .hero-copy .eyebrow { text-transform:none; letter-spacing:var(--tracking-eyebrow); font-size:var(--type-eyebrow); display:flex; align-items:center; gap:9px; margin-bottom:18px; line-height:var(--leading-small); }

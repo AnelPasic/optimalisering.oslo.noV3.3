@@ -1,0 +1,7 @@
+---
+// Inner Hero families need a width-constrained shell. Other families already
+// own their shell, so this component renders their children without a wrapper.
+interface Props { contained: boolean; }
+const {contained}=Astro.props;
+---
+{contained ? <div class="shell"><slot /></div> : <slot />}

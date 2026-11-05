@@ -110,13 +110,13 @@ const ds={
        <div class="card-body gap-4">
         <p class="text-sm font-semibold opacity-80">{sample.name}</p>
         <h4 class="card-title">Et tydelig kort</h4>
-        <p class="">Vurder hvordan bakgrunn, overskrift og brødtekst fungerer sammen i et ekte daisyUI-kort.</p>
+        <p >Vurder hvordan bakgrunn, overskrift og brødtekst fungerer sammen i et ekte daisyUI-kort.</p>
         <div class="card-actions mt-auto justify-end"><span class="btn btn-sm">Knapp (demo)</span></div>
        </div>
       </article>)}
      </div>
     </div>
-    <div class={ds.group}><h3>Kort med bilde</h3><article class="card md:card-side bg-base-100"><figure class="md:w-1/2"><img src="/images/home/hero-customer.webp" alt="Eksisterende illustrasjonsfoto fra forsiden" loading="lazy" /></figure><div class="card-body gap-5"><p class="">Medieeksempel med eksisterende bilde. Ingen ny kundehistorie.</p></div></article></div>
+    <div class={ds.group}><h3>Kort med bilde</h3><article class="card md:card-side bg-base-100"><figure class="md:w-1/2"><img src="/images/home/hero-customer.webp" alt="Eksisterende illustrasjonsfoto fra forsiden" loading="lazy" /></figure><div class="card-body gap-5"><p >Medieeksempel med eksisterende bilde. Ingen ny kundehistorie.</p></div></article></div>
     <div class={ds.group}><h3>Resultatprimitiv</h3><div class="stats stats-vertical md:stats-horizontal bg-base-100 w-full"><div class="stat"><div class="stat-title">Resultatprimitiv</div><div class="stat-value">–</div><div class="stat-desc">Ingen nye resultatpåstander. Faktiske bevisdata er uendret.</div></div><div class="stat"><div class="stat-title">Datagrunnlag</div><div class="stat-value">–</div><div class="stat-desc">Kun demonstrasjon av komponenten.</div></div></div></div>
    </section>
    <section class={ds.section}><div class={ds.group}><h2>Spørsmål og skjema</h2><p>Skjemaet er et internt eksempel med deaktivert innsending.</p></div>
@@ -130,7 +130,7 @@ const ds={
      <button class="btn btn-primary self-start" type="submit" disabled>Innsending er ikke åpnet</button>
     </div></form>
    </section>
-   <section class={ds.section}><div class={ds.group}><h2>Seksjonsflater og justering</h2><p>Lik ytre avstand og indre polstring i alle flateeksempler.</p></div><div class="grid gap-6 md:gap-8">{['base-100','base-200','info','base-300','secondary'].map((surface,index)=><section class:list={['ds-surface rounded-box p-6 md:p-10 space-y-5',index%2===0?'text-center':'text-left']} style={`background:var(--color-${surface});color:var(--color-${surface==='secondary'?'secondary-content':surface==='info'?'info-content':'base-content'})`}><p class="eyebrow">{surface}</p><h3>{index%2===0?'Sentrert overskrift':'Venstrejustert overskrift'}</h3><p>Felles farger og lesbar tekst i samme designsystem.</p></section>)}</div></section>
+   <section class={ds.section}><div class={ds.group}><h2>Seksjonsflater og justering</h2><p>Lik ytre avstand og indre polstring i alle flateeksempler.</p></div><div class="grid gap-6 md:gap-8">{['base-100','base-200','info','base-300','secondary'].map((surface,index)=><section class:list={['rounded-box p-6 md:p-10 space-y-5',index%2===0?'text-center':'text-left']} style={`background:var(--color-${surface});color:var(--color-${surface==='secondary'?'secondary-content':surface==='info'?'info-content':'base-content'})`}><p class="eyebrow">{surface}</p><h3>{index%2===0?'Sentrert overskrift':'Venstrejustert overskrift'}</h3><p>Felles farger og lesbar tekst i samme designsystem.</p></section>)}</div></section>
    {isHomepageSectionVisible(ordinary)&&<>
    <section class={ds.section} id="cms-content-variants"><div class={ds.group}><h2>CMS: seksjonstype, oppsett og boksvariant</h2>
     <p>Seksjonstype bestemmer innholdsmodellen: Innholdsseksjon, Regneeksempel, Pakker og priser og de øvrige beskyttede seksjonene har ulike oppgaver. Seksjonstype er ikke et fargevalg eller en boksvariant.</p>
