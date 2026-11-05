@@ -32,7 +32,7 @@ const visual = primary ? undefined : resolveFeaturedProofVisual(content.featured
         {!primary && index === 0 && <p class="proof-metric"><TermText text={proof.dominantMetric} terms={['roas', 'google-ads']} /></p>}
         <div class="proof-comparison"><dl><dt>{content.beforeLabel}</dt><dd><strong>{proof.before}</strong><span>{proof.period.before}</span></dd></dl><span class="proof-arrow" aria-hidden="true">-&gt;</span><dl><dt>{content.afterLabel}</dt><dd><strong>{proof.after}</strong><span>{proof.period.after}</span></dd></dl></div>
       </div>
-      {!primary && index === 0 && proof.delta && <p class="proof-delta proof-result-support">{proof.delta}</p>}
+      {!primary && index === 0 && proof.delta && <p class="proof-delta">{proof.delta}</p>}
     </div>
 
   </article>)}</div> :

@@ -2,7 +2,6 @@
    Card: 20px; functional/data inset: 12px; feature: 24px; controls: 8px.
    Divider rows remain flat. No typography, layout, state logic or utilities. */
 :root {
-  --radius-button: var(--radius-selector);
   --radius-sm: var(--radius-field);
   --radius-md: 12px;
   --radius-card: var(--radius-box);
@@ -30,8 +29,6 @@
   --control-height: 48px;
   --control-height-sm: 44px;
   --control-pad: 10px 16px;
-  --button-pad: 14px 24px;
-  --button-pad-sm: 10px 12px;
   --focus-gap: 3px;
 }
 

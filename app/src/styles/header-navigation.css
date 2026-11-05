@@ -47,7 +47,6 @@
  .header-submenu a:is(:focus, :active) .header-submenu-description { color: inherit; }
  @media (max-width: 900px) {
   .site-header .menu-toggle { flex: 0 0 44px; width: 44px; min-width: 44px; min-height: 44px; height: 44px; }
-  .site-header .header-actions { flex-shrink: 0; }
   .site-header .mobile-menu .header-nav-parent > a { flex: 1; justify-content: space-between; min-width: 44px; }
   .site-header .mobile-menu .header-nav-parent { border-top: var(--border-subtle); }
   .site-header .mobile-menu .header-nav-parent > a { border: 0; }

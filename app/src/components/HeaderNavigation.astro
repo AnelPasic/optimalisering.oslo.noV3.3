@@ -21,7 +21,7 @@ const pathname=Astro.url.pathname;
    {mega&&link.mega&&<div id={id} class="header-mega-menu bg-base-100" hidden>
     <div class="header-mega-inner shell">
      <div class="header-mega-columns">
-      {link.mega.columns.map(column=><section class="header-mega-column" aria-label={column.heading}>
+      {link.mega.columns.map(column=><section  aria-label={column.heading}>
        <p class="header-mega-heading">{column.heading}</p>
        <ul class="menu header-mega-links">
         {column.links.map(child=><li><a href={child.href}

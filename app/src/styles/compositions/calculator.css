@@ -2,7 +2,6 @@
 @layer composition {
 
 .site-shell .leverage-grid { grid-template-columns: .9fr 1.1fr; gap: 96px; align-items: center; }
-.site-shell .leverage-copy .body-copy { color: inherit; margin-top: 28px; }
 .site-shell .calculator-formula { border-left: 2px solid currentColor; padding-left: 18px; font-size: var(--type-meta); margin-top: 24px; line-height: var(--leading-small); }
 .site-shell .leverage-tool { background: none; border: 0; padding: 0; min-width: 0; width: 100%; max-width: 680px; justify-self: end; }
 .site-shell .calculator-inputs { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap); }

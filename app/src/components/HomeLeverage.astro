@@ -34,7 +34,7 @@ const ratio = formatScenarioRatio(result.current, result.scenario);
     <div class="leverage-tool">
       <figure class="scenario-chart bg-base-200 text-base-content" data-scenario-chart hidden>
         <figcaption id="scenario-illustration-label">Illustrasjon - ikke prognose <span>{SCENARIO_MONTHS} måneder</span></figcaption>
-        <div class="scenario-legend"><span id="scenario-current-label" class="scenario-current">Uten optimalisering</span><span id="scenario-improved-label" class="scenario-improved">Med optimalisering</span></div>
+        <div class="scenario-legend"><span id="scenario-current-label" >Uten optimalisering</span><span id="scenario-improved-label" class="scenario-improved">Med optimalisering</span></div>
         <svg viewBox="0 0 480 128" role="img" aria-labelledby="scenario-illustration-label scenario-current-label scenario-improved-label" aria-describedby="scenario-current-value scenario-improved-value">
           <path class="scenario-grid" data-chart-grid />
           <path class="scenario-current-line" data-chart-current />
