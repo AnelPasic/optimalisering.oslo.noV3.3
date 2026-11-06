@@ -1,10 +1,15 @@
 @layer project {
+ .site-header[data-surface] {
+  --header-surface-text: currentColor;
+  --header-nav-hover: color-mix(in srgb, currentColor 12%, transparent);
+  --header-nav-active: color-mix(in srgb, currentColor 18%, transparent);
+ }
  .site-header .header-nav-item { position: relative; padding: 0; }
  .site-header .header-nav-parent { display: flex; align-items: center; padding: 0; gap: 0; border-radius: 0; background: transparent; }
  .site-header .header-nav-parent > a { display: flex; align-items: center; min-height: 44px; padding: 10px 12px; text-decoration: none; }
  .site-header .header-nav-parent > a[aria-current="page"], .site-header .header-submenu a[aria-current="page"] .header-submenu-label { text-decoration: underline; text-underline-offset: 6px; font-weight: var(--weight-label); }
  .site-header .header-submenu a[aria-current="page"] { text-decoration: none; }
- .site-header [data-active-parent] > .header-nav-parent > a { color: var(--green); }
+ .site-header [data-active-parent] > .header-nav-parent > a { color: var(--header-surface-text, var(--green)); }
  .site-header .nav-disclosure { display: inline-flex; flex: 0 0 44px; width: 44px; min-width: 44px; min-height: 44px; height: 44px; padding: 12px; border: 0; }
  .nav-disclosure .arrow-icon { width: 18px; height: 18px; transform: rotate(90deg); }
  .nav-disclosure[aria-expanded="true"] .arrow-icon { transform: rotate(-90deg); }
@@ -25,13 +30,13 @@
   }
   @media (hover: hover) and (pointer: fine) {
    .site-shell .site-header .desktop-nav .header-nav-item > .header-nav-parent:hover {
-    background: color-mix(in srgb, var(--color-base-300) 70%, var(--color-base-200));
+    background: var(--header-nav-hover, color-mix(in srgb, var(--color-base-300) 70%, var(--color-base-200)));
    }
   }
   .site-shell .site-header .desktop-nav .header-nav-item > .header-nav-parent:is(:focus-within, :has(> a[aria-current="page"])),
   .site-shell .site-header .desktop-nav .header-nav-item[data-active-parent] > .header-nav-parent,
   .site-shell .site-header .desktop-nav .header-nav-item[data-nav-open] > .header-nav-parent {
-   background: var(--color-base-300);
+   background: var(--header-nav-active, var(--color-base-300));
   }
   .site-shell .site-header .desktop-nav .header-nav-parent > a:is(:hover, [aria-current="page"]) {
    text-decoration: none;
@@ -200,13 +205,13 @@
  .site-shell .site-header .site-search-trigger {
   display: inline-flex; align-items: center; justify-content: center;
   flex: 0 0 auto; min-width: 42px; min-height: 44px;
-  color: var(--color-base-content);
-  --pf-text: var(--color-base-content);
+  color: var(--header-surface-text, var(--color-base-content));
+  --pf-text: var(--header-surface-text, var(--color-base-content));
   --pf-text-secondary: var(--muted);
   --pf-background: transparent;
   --pf-border: transparent;
   --pf-border-focus: var(--color-focus);
-  --pf-hover: var(--color-base-300);
+  --pf-hover: var(--header-nav-hover, var(--color-base-300));
   --pf-outline-focus: var(--color-focus);
   --pf-font: var(--body);
  }
@@ -238,12 +243,12 @@
 /* Pagefind's generated icon rules use triple-ID specificity. Limit the
    necessary overrides to the header trigger; keep its 44px hit target. */
 .site-shell .site-header pagefind-modal-trigger.site-search-trigger {
-  --pf-text-muted: var(--color-base-content);
+  --pf-text-muted: var(--header-surface-text, var(--color-base-content));
 }
 .site-shell .site-header pagefind-modal-trigger.site-search-trigger :is(.pf-trigger-icon, .trigger-icon) {
   width: 16px !important;
   height: 16px !important;
-  background: var(--color-base-content) !important;
+  background: var(--header-surface-text, var(--color-base-content)) !important;
 }
 
 /* Highlighted submenu items use theme secondary + secondary-content.

@@ -2,16 +2,18 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import YAML from 'yaml';
-import {surfaceValues,surfaceSchema,surfaceAttribute} from '../src/lib/surface.ts';
+import {surfaceValues,surfaceSchema,surfaceAttribute,surfaceClasses,type Surface} from '../src/lib/surface.ts';
 import {pageSchema} from '../src/lib/content-schema.ts';
 import {sharedContentSchema} from '../src/lib/shared-content.ts';
 import {localHomeFixture,cmsJsonSave,entryForFile,resolveField,sectionRecords} from './helpers/pages-cms-json.ts';
 
 const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
-const semantic=["base-100","base-200","base-300","primary","secondary","accent","neutral","info","success","warning","error"];
+const semantic: Exclude<Surface, 'default'>[]=["base-100","base-200","base-300","primary","secondary","accent","neutral","info","success","warning","error"];
 const legacy: string[]=[];
 test('one Pages CMS surface picker for both section and box, with exclusively native semantic choices',()=>{
- const values=cms.components.surfaceChoice.options.values.map((x:any)=>x.name);
+ const options=cms.components.surfaceChoice.options.values;
+ const values=options.map((x:any)=>x.name);
+ assert.deepEqual(options.slice(1),semantic.map(name=>({name,label:`${name} ${name.startsWith('base-')?'base-content':name+'-content'}` })));
  assert.deepEqual(values,['default',...semantic,...legacy]);
  assert.deepEqual(values,[...surfaceValues]);
  const page=entryForFile(cms,'app/src/content/pages/home.json');
@@ -53,8 +55,10 @@ test('OSLO section full-bleed, only inner cards/text are constrained',()=>{
   assert.ok(css.includes(`[data-surface="${color}"]`),color);
   assert.ok(css.includes(`var(--color-${color})`),color);
  }
- const card=readFileSync('src/components/ContentCard.astro','utf8');
- for(const color of semantic)assert.ok(card.includes(`'bg-${color} text-`),color);
+ for(const color of semantic) {
+  const foreground=color.startsWith('base-')?'base-content':color+'-content';
+  assert.equal(surfaceClasses(color),`bg-${color} text-${foreground}`);
+ }
 });
 
 test('native daisyUI card specimens show all semantic theme colors immediately below four-card row',()=>{

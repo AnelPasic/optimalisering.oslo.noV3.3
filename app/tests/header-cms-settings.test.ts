@@ -41,6 +41,21 @@ test('Header keeps current navigation controls and CTA, but no theme code or tog
   assert.deepEqual(cta.fields.map((x:any)=>x.name), ['label','href','variant']);
 });
 
+test('CMS chrome color pairs are optional and survive a save in their own files', () => {
+  const options = headerEntry.fields.find((field:any)=>field.name==='headerOptions');
+  assert.equal(options.fields.find((field:any)=>field.name==='surface')?.component,'surfaceChoice');
+  assert.equal(footerEntry.fields.find((field:any)=>field.name==='footerSurface')?.component,'surfaceChoice');
+  const editedHeader = {...header, headerOptions: {...header.headerOptions, surface:'primary'}};
+  const editedFooter = {...footer, footerSurface:'info'};
+  const savedHeader = JSON.parse(cmsJsonSave(header,editedHeader,headerEntry,cms));
+  const savedFooter = JSON.parse(cmsJsonSave(footer,editedFooter,footerEntry,cms));
+  const chrome = schema.parse(combined(savedHeader,savedFooter));
+  assert.equal(chrome.headerOptions.surface,'primary');
+  assert.equal(chrome.footerSurface,'info');
+  assert.equal(schema.parse(combined()).footerSurface,undefined);
+  assert.equal(schema.safeParse(combined(savedHeader,{...savedFooter,footerSurface:'#fff'})).success,false);
+});
+
 test('Independent header CMS edit preserves OWNER menu and separate appearance and footer', () => {
   const edited = structuredClone(header);
   edited.headerOptions.sticky = false;

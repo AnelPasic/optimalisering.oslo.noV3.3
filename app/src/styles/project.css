@@ -25,6 +25,10 @@
 .faq-list .collapse-content { padding-left: 0; }
 .assessment-form .alert { margin-top: 18px; }
 [data-ui-shell] :focus-visible { outline: 3px solid var(--color-focus); outline-offset: var(--focus-gap); }
+.site-footer[data-surface] a:focus-visible,
+.site-header[data-surface] :is(.wordmark, .header-nav-parent > a, .nav-disclosure, .menu-toggle):focus-visible {
+  outline-color: currentColor;
+}
 /* Preserve native text-sized menu controls at the existing breakpoint. */
 @media (max-width: 900px) { .header-inner.navbar { width: calc(100% - 40px); } }
 @media (max-width: 360px) { .header-inner.navbar { width: calc(100% - 32px); } }

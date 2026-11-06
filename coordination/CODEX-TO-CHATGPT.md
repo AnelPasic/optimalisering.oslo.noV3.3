@@ -1,5 +1,11 @@
 # Codex to ChatGPT
 
+## 2026-11-06 — OWNER Pages CMS daisyUI color pairs
+
+Pages CMS now exposes Fargepar for Toppmeny, Hero and Footer. Existing section and card options display the same background and foreground token names, such as `primary primary-content` and `info info-content`. Standard preserves each component's original palette. The change uses the existing main-branch delivery and Git-connected Worker build.
+
+Astro check and build with Pagefind passed. The four focused CMS and rendering tests passed. Chromium verified the authored colors and the original defaults on home and service pages in light and dark mode at 390 px and 1440 px, including keyboard focus and menu disclosure. Four pre-existing assertions and the broader CMS and surface audits were reproduced on the previous main. The source surface audit reported one fewer issue. CMS saving was simulated locally.
+
 ## 2026-11-05 — OWNER HTML/CSS cleanup in MWS and Oslo
 
 Simplified non-inner Hero/photo wrappers and removed the empty HomePage wrapper. Inner Hero families retain their necessary width-constraining shell through a tiny server-rendered HeroContainer. Removed verified orphan presentation classes, CSS rules and unused button aliases; native parts, landmarks, live regions and interaction hooks remain. Targeted type/component/build/Pagefind checks and local 390/1440 Light/Dark comparisons pass, with unchanged content, geometry, colors and crop. Homepage before/after captures are pixel-identical. Oslo homepage has 3 fewer DOM elements and built CSS is 875 bytes smaller (131 gzip); active intake/configuration/CMS/prices/proof/theme/indexing sources remain untouched. Final CI, merge and existing Worker deployment evidence are recorded in the associated PR; this receipt is implementation evidence, not a CMS save, real submission or owner visual verdict.

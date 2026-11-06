@@ -102,6 +102,9 @@
 /* All families use this frame/copy/media composition. Existing semantic profiles
    retain their accepted default spacing and page-owned text treatment. */
 .commercial-hero .page-hero-copy { min-width:0; }
+.commercial-hero[data-surface] :is(.breadcrumbs, .page-hero-copy :is(.eyebrow, .hero-intro, .hero-support, .hero-emphasis, .text-link)) {
+ color: inherit;
+}
 .commercial-hero .hero-visual { justify-self:end; }
 @media(max-width:900px){.commercial-hero .hero-visual { justify-self:start; }}
 .commercial-hero .hero-aside { display:grid;gap:var(--gap-lg);min-width:0; }

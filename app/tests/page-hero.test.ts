@@ -13,19 +13,30 @@ const pages=pageFilePaths().map(file=>({file,page:JSON.parse(readFileSync(`src/c
 const home=pages.find(p=>p.page.kind==='home')!.page;
 const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
 const normal=pages.filter(p=>p.page.kind!=='home'&&p.page.slug!=='synlighet');
-const expectedHeroFields=['layout','toneOverrides','eyebrow','title','support','primaryCta','secondaryCta','featuredProofCaseId','visual'];
+const expectedHeroFields=['layout','surface','toneOverrides','eyebrow','title','support','primaryCta','secondaryCta','featuredProofCaseId','visual'];
 
 test('all ordinary pages have one canonical editable Hero, with no duplicated persisted text or image keys',()=>{
  assert.equal(normal.length,15);
  for(const {page} of normal){
   assert.equal(pageSchema.safeParse(page).success,true,page.slug);
-  assert.deepEqual(Object.keys(page.hero).filter(k=>['layout','eyebrow','title','support','primaryCta','secondaryCta','visual','toneOverrides','featuredProofCaseId'].includes(k)),
+  assert.deepEqual(Object.keys(page.hero).filter(k=>['layout','surface','eyebrow','title','support','primaryCta','secondaryCta','visual','toneOverrides','featuredProofCaseId'].includes(k)),
     Object.keys(page.hero));
   assert.ok(page.hero.title&&page.hero.eyebrow&&page.hero.support&&page.hero.primaryCta);
   for(const key of ['eyebrow','title','intro','cta','heroVisual'])assert.ok(!Object.hasOwn(page,key),page.slug+' duplicated '+key);
   for(const layout of ['split-right','split-left','centered','centered-none'])
    assert.equal(pageSchema.safeParse({...page,hero:{...page.hero,layout}}).success,true,page.slug+' '+layout);
  }
+});
+
+test('Hero color survives the CMS save and projection with its original default',()=>{
+ const entry=entryForFile(cms,'app/src/content/pages/home.json');
+ const field=entry.fields.find((f:any)=>f.name==='hero').fields.find((f:any)=>f.name==='surface');
+ assert.equal(field.component,'surfaceChoice');
+ const edited={...home,hero:{...home.hero,surface:'info'}};
+ const saved=JSON.parse(cmsJsonSave(home,edited,entry,cms));
+ assert.equal(resolvePageHero(pageSchema.parse(saved)).surface,'info');
+ assert.equal(resolvePageHero(pageSchema.parse(home)).surface,undefined);
+ assert.equal(pageSchema.safeParse({...edited,hero:{...edited.hero,surface:'#fff'}}).success,false);
 });
 
 test('canonical Hero rejects invalid presets, missing content, untrusted images and duplicate authored top-level sources',()=>{

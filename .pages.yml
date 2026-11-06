@@ -257,27 +257,27 @@ components:
         - name: default
           label: Standard
         - name: base-100
-          label: base-100
+          label: base-100 base-content
         - name: base-200
-          label: base-200
+          label: base-200 base-content
         - name: base-300
-          label: base-300
+          label: base-300 base-content
         - name: primary
-          label: primary
+          label: primary primary-content
         - name: secondary
-          label: secondary
+          label: secondary secondary-content
         - name: accent
-          label: accent
+          label: accent accent-content
         - name: neutral
-          label: neutral
+          label: neutral neutral-content
         - name: info
-          label: info
+          label: info info-content
         - name: success
-          label: success
+          label: success success-content
         - name: warning
-          label: warning
+          label: warning warning-content
         - name: error
-          label: error
+          label: error error-content
   contentLayoutChoice:
     type: select
     options:
@@ -1023,6 +1023,10 @@ content:
             name: layout
             label: Oppsett
             component: heroLayoutChoice
+          - &heroSurface
+            name: surface
+            label: Fargepar
+            component: surfaceChoice
           - name: toneOverrides
             label: Språk og tone for denne Hero
             component: heroToneOverrides
@@ -1346,6 +1350,7 @@ content:
             required: true
             fields:
               - *hubHerolayout
+              - *heroSurface
               - name: toneOverrides
                 label: Språk og tone for denne Hero
                 component: heroToneOverrides
@@ -2399,10 +2404,13 @@ content:
             type: string
             required: true
           - name: headerOptions
-            label: Header-innstillinger (av/på)
+            label: Header-innstillinger
             type: object
             required: true
             fields:
+              - name: surface
+                label: Fargepar
+                component: surfaceChoice
               - name: sticky
                 label: Sticky ved scrolling
                 type: boolean
@@ -2443,23 +2451,23 @@ content:
                 options:
                   values:
                     - name: default
-                      label: Default
+                      label: Standard
                     - name: primary
-                      label: Primary
+                      label: primary primary-content
                     - name: secondary
-                      label: Secondary
+                      label: secondary secondary-content
                     - name: accent
-                      label: Accent
+                      label: accent accent-content
                     - name: neutral
-                      label: Neutral
+                      label: neutral neutral-content
                     - name: info
-                      label: Info
+                      label: info info-content
                     - name: success
-                      label: Success
+                      label: success success-content
                     - name: warning
-                      label: Warning
+                      label: warning warning-content
                     - name: error
-                      label: Error
+                      label: error error-content
             required: true
           - name: navigation
             label: Navigasjon
@@ -2673,6 +2681,9 @@ content:
           rename: false
           delete: false
         fields:
+          - name: footerSurface
+            label: Fargepar
+            component: surfaceChoice
           - name: footerLogoLight
             label: Logo for lyst tema (footer)
             type: image

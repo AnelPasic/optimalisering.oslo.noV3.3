@@ -1,4 +1,5 @@
 ---
+import { surfaceAttribute, surfaceClasses } from '../lib/surface';
 import type { HomepageContent } from '../lib/home-section-data';
 import { glossary } from '../lib/terminology';
 interface Props { content: HomepageContent['chrome']; }
@@ -16,8 +17,9 @@ const legalLinks = content.footerLegalLinks ?? [];
 // its own variant. A single available variant remains a safe fallback.
 const footerLogoLight = content.footerLogoLight ?? content.logoLight ?? content.footerLogoDark ?? content.logoDark;
 const footerLogoDark = content.footerLogoDark ?? content.logoDark ?? content.footerLogoLight ?? content.logoLight;
+const surface = surfaceAttribute(content.footerSurface);
 ---
-<footer class="site-footer bg-secondary text-secondary-content">
+<footer class:list={['site-footer', surfaceClasses(surface ?? 'secondary')]} data-surface={surface}>
   <div class="shell">
     <div class="footer footer-grid footer-grid--columns footer-vertical min-[651px]:footer-horizontal gap-x-5 gap-y-8 pb-9 min-[651px]:pb-[55px] text-(length:--type-body) leading-(--leading-body) *:w-full">
       <div class="footer-about block justify-items-normal">

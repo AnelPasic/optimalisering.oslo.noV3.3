@@ -1,4 +1,5 @@
 ---
+import { surfaceAttribute, surfaceClasses } from '../lib/surface';
 import type { HomepageContent } from '../lib/home-section-data';
 import Arrow from './Arrow.astro';
 import LanguageSwitch from './LanguageSwitch.astro';
@@ -10,6 +11,7 @@ import HeaderNavigation from './HeaderNavigation.astro';
 import '../styles/header-navigation.css';
 interface Props { content: HomepageContent['chrome']; languageLinks?: LanguageLink[]; currentLocale?: Locale; }
 const { content, languageLinks = [], currentLocale = 'nb' } = Astro.props;
+const surface = surfaceAttribute(content.headerOptions.surface);
 const hasMobileLogo = Boolean(content.mobileLogoLight || content.mobileLogoDark);
 // Static class map: Tailwind/daisyUI must see every supported variant at build time.
 const ctaClasses = {
@@ -19,7 +21,7 @@ const ctaClasses = {
   warning: 'btn-warning', error: 'btn-error',
 } as const;
 ---
-<header class:list={["site-header", { "site-header--sticky": content.headerOptions.sticky }]}>
+<header class:list={["site-header", surfaceClasses(surface ?? 'default'), { "site-header--sticky": content.headerOptions.sticky }]} data-surface={surface}>
   <div class="shell header-inner navbar">
     <a href="/" class:list={["wordmark", {"wordmark--has-mobile-logo": hasMobileLogo}]} aria-label={content.homeLabel}>
       {content.logoLight || content.logoDark

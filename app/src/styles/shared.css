@@ -407,7 +407,10 @@ p { text-wrap: pretty; }
 }
 .site-shell .shell { width: min(1440px, calc(100% - 80px)); }
 .site-shell .site-header { background: var(--color-base-200); }
+.site-shell .site-header[data-surface] .mws-chrome-theme-switch { color: inherit; }
+.site-shell .site-header[data-surface] .menu-toggle span { background: currentColor; }
 .site-shell .wordmark-dot { color: var(--green); }
+.site-shell .site-header[data-surface] .wordmark-dot { color: inherit; }
 .site-shell .btn:disabled { cursor: default; }
 .site-shell .desktop-nav a, .site-shell .header-actions { font-family: var(--body); }
 .site-shell :focus-visible { outline-color: var(--color-focus); }
@@ -416,8 +419,8 @@ p { text-wrap: pretty; }
 /* daisyUI semantic pair owns the footer palette; CSS here only handles layout. */
 .site-shell .site-footer { padding-top: 88px; }
 .site-shell .footer-brand span { color: inherit; }
-.site-shell .footer-grid p, .site-shell .footer-bottom { color: var(--color-secondary-content); }
-.site-shell .footer-bottom { border-top: 1px solid color-mix(in srgb, var(--color-secondary-content) 25%, transparent); }
+.site-shell .footer-grid p, .site-shell .footer-bottom { color: inherit; }
+.site-shell .footer-bottom { border-top: 1px solid color-mix(in srgb, currentColor 25%, transparent); }
 @media (max-width: 1100px) {
   .site-shell .shell { width: calc(100% - 64px); }
 }

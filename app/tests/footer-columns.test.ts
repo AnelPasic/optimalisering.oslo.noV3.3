@@ -47,11 +47,11 @@ test('footer links render from dedicated global JSON and work with stock Pages C
   assert.match(cms, /name: footerLegalLinks/);
 });
 
-test('footer always pairs the semantic secondary surface with secondary-content', () => {
+test('footer inherits the selected daisyUI text color and defaults to secondary', () => {
   const view=read(join(appDir,'src/components/HomeFooter.astro'));
   const styles=read(join(appDir,'src/styles/shared.css'));
-  assert.match(view, /<footer class="site-footer bg-secondary text-secondary-content">/);
-  assert.match(styles, /\.site-shell \.footer-grid p, \.site-shell \.footer-bottom \{ color: var\(--color-secondary-content\); \}/);
+  assert.match(view, /surfaceClasses\(surface \?\? 'secondary'\)/);
+  assert.match(styles, /\.site-shell \.footer-grid p, \.site-shell \.footer-bottom \{ color: inherit; \}/);
   assert.doesNotMatch(styles, /\.site-shell \.site-footer \{[^}]*background:/);
   assert.doesNotMatch(styles, /\.site-shell \.footer-brand \{ color: var\(--color-base-100\)/);
   assert.doesNotMatch(styles, /--color-footer-(?:accent|muted|preview)/);

@@ -1,3 +1,4 @@
+import {surfaceSchema} from './surface.ts';
 import {z} from 'astro/zod';
 import {safeCmsHref,projectSelectedLinks} from './cms-link-choice.ts';
 import {heroSchema} from './home-builder.ts';
@@ -9,6 +10,7 @@ import {synlighetHeroSchema} from './synlighet-hero.ts';
 const link=z.object({label:z.string().trim().min(1),href:z.string().refine(safeCmsHref)}).strict();
 const image=z.object({src:z.string().regex(/^\/images\/(?:home|services)\/(?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.(?:webp|png|jpe?g|avif|svg)$/),alt:z.string(),positionX:z.number().min(0).max(100),positionY:z.number().min(0).max(100),kind:z.enum(['photo','illustration']),origin:z.enum(['home','page'])}).strict();
 export const heroViewSchema=z.object({
+ surface:surfaceSchema.optional(),
  family:z.enum(['home','service','pricing','index','article','assessment','utility','glossary','error']),layout:heroLayoutSchema,
  eyebrow:z.string(),title:z.string().trim().min(1),support:z.string(),primaryCta:link.optional(),secondaryCta:link.optional(),
  visual:z.discriminatedUnion('kind',[z.object({kind:z.literal('none')}).strict(),z.object({kind:z.literal('image'),image}).strict()]),
@@ -47,12 +49,12 @@ export function resolvePageHero(authoredPage:Source,commercial?:Commercial):Hero
     visual:hero.visual.kind==='image'&&media?{kind:'image',image:{...media,origin:'page'}}:{kind:'none'},
     breadcrumbs});
  }
- const layout=heroPresentationSchema.parse(page.hero??{}).layout;
+ const {layout,surface}=heroPresentationSchema.parse(page.hero??{});
  const media=resolveServiceVisual(page.heroVisual),family=route.family;
  const copy=family==='pricing'?commercial?.packages:undefined;
  if(family==='pricing'&&!copy)throw new Error('Pricing Hero requires the shared Packages source');
  const crumbs=family==='pricing'?[]:[{label:'Forsiden',href:'/'},...(family==='article'?[{label:'Innsikt',href:'/innsikt/'}]:[]),{label:family==='service'?(route.service.pricingBridge?.serviceName??page.eyebrow):page.eyebrow}];
- return heroViewSchema.parse({family,layout,eyebrow:copy?.eyebrow??page.eyebrow,title:copy?.heading??page.title,support:copy?.intro??page.intro,primaryCta:family==='assessment'?undefined:page.cta,secondaryCta:family==='service'&&route.service.pricingBridge?{label:'Se priser',href:route.service.pricingBridge.link.href}:undefined,visual:media?{kind:'image',image:{...media,origin:'page'}}:{kind:'none'},breadcrumbs:crumbs});
+ return heroViewSchema.parse({family,layout,surface,eyebrow:copy?.eyebrow??page.eyebrow,title:copy?.heading??page.title,support:copy?.intro??page.intro,primaryCta:family==='assessment'?undefined:page.cta,secondaryCta:family==='service'&&route.service.pricingBridge?{label:'Se priser',href:route.service.pricingBridge.link.href}:undefined,visual:media?{kind:'image',image:{...media,origin:'page'}}:{kind:'none'},breadcrumbs:crumbs});
 }
 export const specialHeroSourceSchema=z.object({hero:synlighetHeroSchema}).strict();
 

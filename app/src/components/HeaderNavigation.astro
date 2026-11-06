@@ -39,7 +39,7 @@ const pathname=Astro.url.pathname;
      </aside>}
     </div>
    </div>}
-   {!mega&&!!link.children?.length&&<ul id={id} class="header-submenu menu menu-dropdown bg-base-100" hidden>
+   {!mega&&!!link.children?.length&&<ul id={id} class="header-submenu menu menu-dropdown bg-base-100 text-base-content" hidden>
     {link.children.map(child=><li><a href={child.href}
       aria-current={navigationState(child,pathname).current?'page':undefined}>
       <span class="header-submenu-label">{child.label}</span>

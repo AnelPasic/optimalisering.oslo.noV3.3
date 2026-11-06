@@ -2,6 +2,26 @@ import { z } from 'astro/zod';
 
 export const surfaceValues = ['default', 'base-100', 'base-200', 'base-300', 'primary', 'secondary', 'accent', 'neutral', 'info', 'success', 'warning', 'error'] as const;
 export type Surface = typeof surfaceValues[number];
+
+// Keep complete utility names visible to Tailwind's source scanner.
+const classes = {
+  default: '',
+  'base-100': 'bg-base-100 text-base-content',
+  'base-200': 'bg-base-200 text-base-content',
+  'base-300': 'bg-base-300 text-base-content',
+  'primary': 'bg-primary text-primary-content',
+  'secondary': 'bg-secondary text-secondary-content',
+  'accent': 'bg-accent text-accent-content',
+  'neutral': 'bg-neutral text-neutral-content',
+  'info': 'bg-info text-info-content',
+  'success': 'bg-success text-success-content',
+  'warning': 'bg-warning text-warning-content',
+  'error': 'bg-error text-error-content',
+} as const satisfies Record<Surface, string>;
+
+export function surfaceClasses(value: Surface): string {
+  return classes[value];
+}
 export const surfaceSchema = z.preprocess(value => value === '' || value == null ? undefined : value, z.enum(surfaceValues).default('default'));
 
 /** CMS editor metadata never grants permission to recolor a protected row. */

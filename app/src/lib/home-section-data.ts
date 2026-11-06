@@ -1,7 +1,8 @@
+import {surfaceSchema} from './surface.ts';
 import { z } from 'astro/zod';
 import { featuredProofVisualFieldSchema,proofLayoutSchema,proofCaseVisualsSchema,proofDisplayOverridesSchema } from './proof-presentation.ts';
 import {navigationLinkSchema} from './navigation.ts';
-import {chromeThemeSchema} from './site-chrome-theme.ts';
+import {chromeThemeSchema, ctaVariants} from './site-chrome-theme.ts';
 import {typographySchema} from './site-chrome-typography.ts';
 const link = z.object({ label: z.string(), href: z.string().startsWith('/') });
 export const proofSlotSchema = z.object({ publicationApproved: z.boolean(), caseIds: z.array(z.string()).default([]), eyebrow: z.string(), heading: z.string(), beforeLabel: z.string(), afterLabel: z.string(), changeLabel: z.string() });
@@ -65,6 +66,7 @@ export const homeSectionDataSchema = z.object({
     footerLogoDark: z.string().regex(/^\/images\/branding\/[a-zA-Z0-9_-]+\.(?:svg|png|webp|jpe?g|avif)$/).optional(),
     navigationLabel: z.string(), mobileNavigationLabel: z.string(), openMenu: z.string(), closeMenu: z.string(),
     headerOptions: z.object({
+      surface: surfaceSchema.optional(),
       sticky: z.boolean(),
       showLanguageSwitch: z.boolean(),
       showSearch: z.boolean(),
@@ -73,13 +75,14 @@ export const homeSectionDataSchema = z.object({
     themes: chromeThemeSchema,
     typography: typographySchema.optional(),
     assessmentLink: link.extend({
-      variant: z.enum(['primary', 'secondary', 'accent', 'neutral', 'info', 'success', 'warning', 'error']),
+      variant: z.enum(ctaVariants),
     }),
     navigation: z.array(navigationLinkSchema), providerText: z.string(),
     serviceNavigationLabel: z.string(), informationNavigationLabel: z.string(), storeLink: link,
     informationLinks: z.array(link), copyrightProvider: z.string(), footerNote: z.string(),
     // Footer is CMS-managed independently from mega navigation; the older fields
     // remain readable for already-authored site data and a safe migration.
+    footerSurface: surfaceSchema.optional(),
     footerGroups: z.array(z.object({
       heading: z.string().trim().min(1),
       headingHref: z.string().regex(/^\/(?![\/\\])(?:[a-z0-9-]+\/)*(?:#[a-z0-9-]+)?$/).optional(),

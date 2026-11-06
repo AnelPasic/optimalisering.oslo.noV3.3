@@ -24,6 +24,7 @@ import faqMaster from '../content/global-elements/sporsmal.json' with {type:'jso
 const link=z.object({label:z.string().trim().min(1),href:z.string().refine(safeCmsHref)});
 export const heroPhotoSchema=z.object({kind:z.enum(['photo','illustration']).optional(),src:z.string().regex(/^\/images\/home\/[a-z0-9][a-z0-9-]*\.webp$/),alt:z.string().optional(),positionX:z.number().min(0).max(100),positionY:z.number().min(0).max(100)});
 export const heroSchema=z.object({
+ surface:surfaceSchema.optional(),
  layout:heroLayoutSchema,
  eyebrow:z.string(),title:z.string().trim().min(1),support:z.string(),primaryCta:link,secondaryCta:link.optional(),
  toneOverrides:heroToneOverridesSchema,
