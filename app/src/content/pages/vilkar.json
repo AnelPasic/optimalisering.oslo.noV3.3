@@ -3,13 +3,13 @@
   "kind": "utility",
   "seo": {
     "title": "Vilkår - hva må avtales før videre arbeid? | Medon",
-    "description": "Omfang, pris, fakturering og oppsigelse må avklares før betalt arbeid. Dette utkastet beskriver åpne avtalespørsmål og den gratis sjekkens grenser."
+    "description": "Omfang, pris, fakturering og oppsigelse må avklares før betalt arbeid. Her forklarer vi den gratis sjekkens grenser og hva som må avtales før betalt arbeid."
   },
   "hero": {
     "layout": "split-right",
-    "eyebrow": "Avtalegrunnlag - utkast",
+    "eyebrow": "Vilkår og avklaringer",
     "title": "Videre arbeid trenger en tydelig avtale.",
-    "support": "Dette er en oversikt over hva som må avklares. Det er ikke et ferdig sett med salgs- eller kontraktsvilkår. Medon AS er leverandør av Optimalisering Oslo.",
+    "support": "Her forklarer vi rammene for den gratis sjekken og hva som må avtales før betalt arbeid. Dette er ikke en selvstendig standardkontrakt. Medon AS står bak Optimalisering Oslo.",
     "primaryCta": {
       "label": "Ta en gratis sjekk",
       "href": "/vurdering/"
@@ -25,7 +25,7 @@
       "heading": "Den gratis sjekken er avgrenset.",
       "body": [
         "Sjekken er en manuell vurdering som gir kort veiledning om hva Medon ville startet med, hvorfor, og om Synlighet, Konvertering eller begge ser mest relevant ut.",
-        "Den inkluderer ikke automatisk poengsum, full revisjon, komplett feilliste, prognose eller gjennomføring. Det er ikke fastsatt et løfte om svartid. Å be om sjekken fastsetter ikke en avtale om betalt arbeid."
+        "Den inkluderer ikke automatisk poengsum, full revisjon, komplett feilliste, prognose eller gjennomføring. Vi sender tre prioriterte funn innen to virkedager etter mottatt forespørsel. Å be om sjekken fastsetter ikke en avtale om betalt arbeid."
       ]
     },
     {
@@ -35,7 +35,7 @@
       "body": [
         "Videre arbeid kan gjelde Synlighet, Konvertering, begge eller et større omfang. Hovednettsiden eller nettbutikken er normalt utgangspunktet. Flere nettsteder og ekstra landingssider må vurderes særskilt.",
         "Avtalen må beskrive hva som inngår og faller utenfor, hvem som gir nødvendige tilganger, og hvem som har ansvar for arbeid i systemer eller hos andre leverandører.",
-        "Medon skal prioritere arbeidet innenfor avtalt omfang. Dette utkastet fastsetter ikke endelige inkluderinger eller leveransekvoter."
+        "Medon skal prioritere arbeidet innenfor avtalt omfang. Konkrete leveranser og eventuelle kapasitetsgrenser må fremgå av avtalen som godkjennes før oppstart."
       ],
       "links": [
         {
@@ -47,9 +47,9 @@
     {
       "_block": "content",
       "id": "pris",
-      "heading": "Pris, fakturering og oppsigelse er ikke fastsatt her.",
+      "heading": "Pris og øvrige avtalevilkår avklares før oppstart.",
       "body": [
-        "Videre arbeid skal ha avtalt pris og omfang. Offentlige månedspriser, faktureringsregler, eventuell binding og oppsigelsesvilkår er ikke ferdigstilt i dette utkastet.",
+        "Videre arbeid skal ha avtalt pris og omfang. Offentlige månedspriser fremgår av prissiden. Fakturering, eventuell bindingstid og oppsigelse må avtales før kunden inngår en betalt avtale.",
         "Annonsebudsjett og aktuelle eksterne plattformkostnader er utenom den normale tjenesteprisen dersom det ikke uttrykkelig er avtalt noe annet. Aktuelle kostnader må beskrives konkret i tilbudet.",
         "Denne siden innfører ikke betalingsfrist, bindingstid, oppsigelsesperiode, rabatt eller refusjonsordning."
       ]
@@ -67,7 +67,7 @@
   "faq": [
     {
       "question": "Er dette gjeldende kontraktsvilkår?",
-      "answer": "Nei. Dette er en oversikt til gjennomgang. Endelig avtale må fastsette pris, omfang, ansvar og øvrige vilkår."
+      "answer": "Dette er informasjon om prosessen, ikke et fullstendig sett standardvilkår. Bindende vilkår for betalt arbeid må fremgå av avtalen kunden godkjenner."
     },
     {
       "question": "Bestiller jeg betalt arbeid ved å sende skjemaet?",

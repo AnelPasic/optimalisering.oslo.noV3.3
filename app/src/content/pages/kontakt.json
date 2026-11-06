@@ -40,7 +40,7 @@
       "heading": "Usikker på hvor du bør starte? Be om en gratis sjekk.",
       "body": [
         "For spørsmål om hva som begrenser nettsiden, er den gratis sjekken den vanlige inngangen. Den er avgrenset og manuell, og gir kort veiledning om hva Medon ville startet med og hvorfor.",
-        "Den inkluderer ikke en full revisjon, komplett feilliste, prognose eller gjennomføring. Det er ikke fastsatt et løfte om svartid i dette utkastet."
+        "Den inkluderer ikke en full revisjon, komplett feilliste, prognose eller gjennomføring. For den gratis sjekken sender vi tre prioriterte funn innen to virkedager."
       ],
       "links": [
         {
@@ -60,8 +60,8 @@
       "answer": "Ja. Bruk meldingen til å beskrive spørsmålet. Videre betalt arbeid krever et eget avtalt omfang og en avtalt pris."
     },
     {
-      "question": "Hvor finner jeg telefon eller direkte e-post?",
-      "answer": "Direkte kontaktopplysninger er ikke verifisert for dette utkastet. Vi viser derfor skjemaet som kontaktvei i forhåndsvisningen."
+      "question": "Hvordan kontakter jeg dere direkte?",
+      "answer": "Du kan sende e-post til kontakt@medon.no eller bruke skjemaet på vurderingssiden. Ikke send passord eller sensitive opplysninger i første henvendelse."
     }
   ]
 }
