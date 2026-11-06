@@ -2,7 +2,7 @@
   "defaultPreset": "medon",
   "heroPreset": "spiss",
   "servicePreset": "inherit",
-  "explanationPreset": "spisspluskomiskplus",
+  "explanationPreset": "spissplus",
   "faqPreset": "spissplus",
-  "editorNotes": "Bruk humor om den kan gjøre forklaringen bedre eller lettere å huske."
+  "editorNotes": "Bruk humor der det er mulig og kan gjøre forklaringen bedre eller lettere å huske."
 }
