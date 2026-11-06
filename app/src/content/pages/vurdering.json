@@ -25,7 +25,7 @@
       "heading": "En startretning, ikke en perm med feil.",
       "body": [
         "Den gratis sjekken er en avgrenset manuell vurdering av den offentlige nettsiden eller nettbutikken. Vi vurderer om Synlighet, Konvertering eller begge ser mest relevant ut å begynne med.",
-        "Du får kort, begrunnet veiledning. Vi lover ikke en bestemt svartid eller et bestemt resultat."
+        "Du får våre tre viktigste funn innen to virkedager etter mottatt forespørsel. Sjekken gir ingen garanti for et bestemt resultat."
       ],
       "items": [
         {
@@ -52,7 +52,7 @@
       ],
       "links": [
         {
-          "label": "Les personvernutkastet",
+          "label": "Les om personvern",
           "href": "/personvern/"
         }
       ]
@@ -88,7 +88,7 @@
     },
     {
       "question": "Når får jeg svar?",
-      "answer": "Det er ikke fastsatt en svartid i dette utkastet. Vi skal ikke love et tidspunkt som ikke er avklart."
+      "answer": "Vi sender de tre viktigste funnene innen to virkedager etter at vi har mottatt forespørselen. Dette er en kort, manuell sjekk – ikke en full revisjon."
     },
     {
       "question": "Kan jeg sende en nettbutikk?",
