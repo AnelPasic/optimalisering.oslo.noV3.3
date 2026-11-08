@@ -324,7 +324,7 @@ components:
         name: headingAlign
         label: Overskriftsjustering
         component: headingAlignment
-        description: Sentrert er standard. Velg Venstrejustert når seksjonen leses bedre som en vanlig tekstseksjon.
+        description: Standard følger justeringen for seksjonens plassering under Tema og utseende.
       - &serviceLayout
         name: layout
         label: Seksjonsoppsett
@@ -507,7 +507,7 @@ components:
       - name: headingAlign
         label: Overskriftsjustering
         component: headingAlignment
-        description: Sentrert er standard. Velg Venstrejustert når seksjonen leses bedre som en vanlig tekstseksjon.
+        description: Standard følger justeringen for seksjonens plassering under Tema og utseende.
       - name: surface
         label: Seksjonsfarge
         component: surfaceChoice
@@ -731,7 +731,7 @@ components:
       - name: headingAlign
         label: Overskriftsjustering
         component: headingAlignment
-        description: Sentrert er standard. Velg Venstrejustert når seksjonen leses bedre som en vanlig tekstseksjon.
+        description: Standard følger justeringen for seksjonens plassering under Tema og utseende.
       - name: body
         label: Avsnitt
         type: text
@@ -820,12 +820,14 @@ components:
   headingAlignment:
     type: select
     options:
-      placeholder: Sentrert (standard)
+      placeholder: Standard
       values:
+        - name: default
+          label: Standard
         - name: center
-          label: Sentrert (standard)
+          label: Sentrert
         - name: left
-          label: Venstrejustert
+          label: Venstrestilt
   synlighetSectionContent:
     type: object
     fields:
@@ -1204,7 +1206,7 @@ content:
               - name: headingAlign
                 label: Overskriftsjustering
                 component: headingAlignment
-                description: Sentrert er standard. Velg Venstrejustert når seksjonen leses bedre som en vanlig tekstseksjon.
+                description: Standard følger justeringen for seksjonens plassering under Tema og utseende.
               - name: layout
                 label: Seksjonsoppsett
                 component: contentLayoutChoice
@@ -2613,6 +2615,18 @@ content:
               - { name: third, label: "3. seksjon", component: surfaceChoice }
               - { name: fourth, label: "4. seksjon", component: surfaceChoice }
               - { name: fifth, label: "5. seksjon", component: surfaceChoice }
+          - name: sectionAlignmentDefaults
+            label: Standardjustering for seksjon 1–5
+            type: object
+            description: >
+              Gjelder når Overskriftsjustering står på Standard. Plassene følger
+              synlige rader i Innholdsseksjoner. Justeringen gjelder også knapperaden.
+            fields:
+              - { name: first, label: "1. seksjon", component: headingAlignment }
+              - { name: second, label: "2. seksjon", component: headingAlignment }
+              - { name: third, label: "3. seksjon", component: headingAlignment }
+              - { name: fourth, label: "4. seksjon", component: headingAlignment }
+              - { name: fifth, label: "5. seksjon", component: headingAlignment }
           - name: typography
             label: Typografi (Tailwind CSS v4)
             type: object
@@ -3539,7 +3553,7 @@ content:
           - name: headingAlign
             label: Overskriftsjustering
             component: headingAlignment
-            description: Sentrert er standard. Velg Venstrejustert når seksjonen leses bedre som en vanlig tekstseksjon.
+            description: Standard følger justeringen for seksjonens plassering under Tema og utseende.
           - name: layout
             label: Seksjonsoppsett
             component: contentLayoutChoice
@@ -3635,7 +3649,7 @@ content:
           - name: headingAlign
             label: Overskriftsjustering
             component: headingAlignment
-            description: Sentrert er standard. Velg Venstrejustert når seksjonen leses bedre som en vanlig tekstseksjon.
+            description: Standard følger justeringen for seksjonens plassering under Tema og utseende.
           - name: layout
             label: Seksjonsoppsett
             component: contentLayoutChoice

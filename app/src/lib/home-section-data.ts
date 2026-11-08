@@ -1,4 +1,5 @@
 import {sectionSurfaceDefaultsSchema, surfaceSchema} from './surface.ts';
+import {sectionAlignmentDefaultsSchema} from './heading-alignment.ts';
 import { z } from 'astro/zod';
 import { featuredProofVisualFieldSchema,proofLayoutSchema,proofCaseVisualsSchema,proofDisplayOverridesSchema } from './proof-presentation.ts';
 import {navigationLinkSchema} from './navigation.ts';
@@ -75,6 +76,7 @@ export const homeSectionDataSchema = z.object({
     themes: chromeThemeSchema,
     typography: typographySchema.optional(),
     sectionSurfaceDefaults: sectionSurfaceDefaultsSchema.optional(),
+    sectionAlignmentDefaults: sectionAlignmentDefaultsSchema.optional(),
     assessmentLink: link.extend({
       variant: z.enum(ctaVariants),
     }),

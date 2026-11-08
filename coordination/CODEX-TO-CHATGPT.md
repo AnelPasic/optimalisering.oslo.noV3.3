@@ -1,5 +1,11 @@
 # Codex to ChatGPT
 
+## 2026-11-08 — OWNER section and button alignment
+
+Pages CMS now lists Standardjustering for seksjon 1–5 directly below the color defaults. Standard uses the setting for the visible section row, with centered headings and actions as the built-in fallback. Explicit Sentrert and Venstrestilt choices take precedence. Section-level links follow the same alignment as the heading, including the Konvertering check CTA. The saved appearance and content records remain the source.
+
+Astro check, build with Pagefind and the focused CMS tests passed. Chromium checked computed text and button placement on Home, Synlighet and Konvertering at 390 px and 1440 px in both themes. The fixture also verified local overrides, shared placements, hidden rows and PageList headings. CMS saves were simulated locally.
+
 ## 2026-11-08 — OWNER positional section colors
 
 Pages CMS exposes five optional daisyUI color pairs under Globale Elementer → Tema og utseende. Standard in an editable section uses the pair for that row's position in the visible Innholdsseksjoner list. The section's explicit choice takes precedence. Hero is separate and specialized modules keep their own palettes. Empty settings and positions after five use the existing design.

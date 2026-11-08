@@ -5,23 +5,28 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import YAML from 'yaml';
 import { pageSchema } from '../src/lib/content-schema.ts';
-import { headingAlignAttribute, headingAlignValues } from '../src/lib/heading-alignment.ts';
+import { resolveHeadingAlignment, headingAlignValues } from '../src/lib/heading-alignment.ts';
 import { cmsJsonSave, entryForFile, resolveField, assertPreservedContent, localHomeFixture } from './helpers/pages-cms-json.ts';
 
 const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
 const load=(name:string)=>name==='home'?localHomeFixture():JSON.parse(readFileSync(`src/content/pages/${name}.json`,'utf8'));
 
-test('safe mapping emits only a validated left override and leaves the homepage form model unchanged',()=>{
-  assert.deepEqual(headingAlignValues,['center','left']);assert.equal(headingAlignAttribute('left'),'left');
-  for(const value of ['center',undefined,null,'','right','left extra',{},0])assert.equal(headingAlignAttribute(value),undefined);
+test('effective alignment gives explicit choices priority and keeps the homepage form model unchanged',()=>{
+  assert.deepEqual(headingAlignValues,['default','center','left']);
+  const defaults={first:'left',second:'default',fifth:'center'} as const;
+  assert.equal(resolveHeadingAlignment('default',0,defaults),'left');
+  assert.equal(resolveHeadingAlignment('center',0,defaults),'center');
+  assert.equal(resolveHeadingAlignment('left',4,defaults),'left');
+  assert.equal(resolveHeadingAlignment(undefined,1,defaults),'center');
+  assert.equal(resolveHeadingAlignment('default',5,defaults),'center');
   const model=homepageBlockEditor(cms,'assessment').fields.find((f:any)=>f.name==='section');
   assert.ok(!model.fields.some((f:any)=>['headingAlign','surface'].includes(f.name)));
 });
 
-test('section heading alignment accepts center/left; missing and cleared values default to center',()=>{
-  for(const value of ['center','left',undefined,'',null]){
+test('section heading alignment accepts Standard, Sentrert and Venstrestilt',()=>{
+  for(const value of ['default','center','left',undefined,'',null]){
     const home=load('home');sectionRecords(home).find((s:any)=>s.id==='cms-local-fixture').headingAlign=value;
-    assert.equal(pageSchema.parse(home).sections.find(s=>s.id==='cms-local-fixture')!.headingAlign,value==='left'?'left':'center');
+    assert.equal(pageSchema.parse(home).sections.find(s=>s.id==='cms-local-fixture')!.headingAlign,value || 'default');
   }
   for(const value of ['right','justify','left extra','text-left','#fff',0,{},[]]){
     const home=load('home');sectionRecords(home).find((s:any)=>s.id==='cms-local-fixture').headingAlign=value;
@@ -34,8 +39,8 @@ test('ordinary and protected CMS heading models use the same select directly aft
     const fields=cms.components[name].fields, index=fields.findIndex((f:any)=>f.name==='heading');
     const field=resolveField(fields[index+1],cms.components);
     assert.equal(field.name,'headingAlign');assert.equal(field.type,'select');assert.equal(field.label,'Overskriftsjustering');
-    assert.equal(field.description,'Sentrert er standard. Velg Venstrejustert når seksjonen leses bedre som en vanlig tekstseksjon.');
-    assert.deepEqual(field.options.values,[{name:'center',label:'Sentrert (standard)'},{name:'left',label:'Venstrejustert'}]);
+    assert.equal(field.description,'Standard følger justeringen for seksjonens plassering under Tema og utseende.');
+    assert.deepEqual(field.options.values,[{name:'default',label:'Standard'},{name:'center',label:'Sentrert'},{name:'left',label:'Venstrestilt'}]);
   }
   assert.ok(!cms.components.sectionProtected.fields.some((f:any)=>f.name==='surface'));
   assert.ok(!JSON.stringify(cms.components.sectionProtected).includes('Boksfarge'));
@@ -57,7 +62,7 @@ test('CMS Center/Left save and restore preserve unrelated section, card, surface
 });
 
 test('protected heading alignment does not grant surface overrides',()=>{
-  const service=load('synlighet'),section=sectionRecords(service).find((s:any)=>s._block==='protected');section.headingAlign='left';
+  const service=load('konvertering'),section=sectionRecords(service).find((s:any)=>s._block==='protected');section.headingAlign='left';
   assert.equal(pageSchema.safeParse(service).success,true);
   section.surface='info';assert.equal(pageSchema.safeParse(service).success,false);
 });

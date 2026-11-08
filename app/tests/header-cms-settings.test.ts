@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import YAML from 'yaml';
 import { homeSectionDataSchema } from '../src/lib/home-section-data.ts';
+import { resolveHeadingAlignment } from '../src/lib/heading-alignment.ts';
 import { resolveSectionSurface } from '../src/lib/surface.ts';
 import { cmsJsonSave, entryForFile } from './helpers/pages-cms-json.ts';
 
@@ -67,7 +68,7 @@ test('CMS Appearance saves five positional defaults and keeps the local color in
   const edited={...appearance,sectionSurfaceDefaults:values};
   const saved=JSON.parse(cmsJsonSave(appearance,edited,appearanceEntry,cms));
   const defaults=schema.parse({...combined(),sectionSurfaceDefaults:saved.sectionSurfaceDefaults}).sectionSurfaceDefaults;
-  assert.deepEqual(defaults,values);
+  assert.deepEqual(defaults,{...appearance.sectionSurfaceDefaults,...values});
   assert.equal(resolveSectionSurface('default',1,defaults),'info');
   assert.equal(resolveSectionSurface('primary',1,defaults),'primary');
   assert.equal(resolveSectionSurface(undefined,4,defaults),'success');
@@ -76,6 +77,22 @@ test('CMS Appearance saves five positional defaults and keeps the local color in
   assert.equal(resolveSectionSurface('default',1,defaults,true),undefined);
   assert.equal(resolveSectionSurface('default',1,schema.parse(combined()).sectionSurfaceDefaults),undefined);
   assert.equal(schema.safeParse({...combined(),sectionSurfaceDefaults:{second:'#fff'}}).success,false);
+});
+
+test('CMS stores the five alignment defaults below the colors and preserves the saved colors', () => {
+  const fields = appearanceEntry.fields;
+  const colorIndex = fields.findIndex((field:any)=>field.name==='sectionSurfaceDefaults');
+  const field = fields[colorIndex+1];
+  assert.equal(field.name,'sectionAlignmentDefaults');
+  assert.deepEqual(field.fields.map((item:any)=>item.name), ['first','second','third','fourth','fifth']);
+  assert.ok(field.fields.every((item:any)=>item.component==='headingAlignment'));
+  const values={first:'left',second:'default',fifth:'center'};
+  const saved=JSON.parse(cmsJsonSave(appearance,{...appearance,sectionAlignmentDefaults:values},appearanceEntry,cms));
+  assert.deepEqual(saved.sectionSurfaceDefaults,appearance.sectionSurfaceDefaults);
+  const defaults=schema.parse({...combined(),sectionAlignmentDefaults:saved.sectionAlignmentDefaults}).sectionAlignmentDefaults;
+  assert.deepEqual(defaults,{...appearance.sectionAlignmentDefaults,...values});
+  assert.equal(resolveHeadingAlignment('default',0,defaults),'left');
+  assert.equal(schema.safeParse({...combined(),sectionAlignmentDefaults:{second:'justify'}}).success,false);
 });
 
 test('Independent header CMS edit preserves OWNER menu and separate appearance and footer', () => {

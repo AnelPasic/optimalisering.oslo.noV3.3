@@ -1,4 +1,5 @@
 import { z } from 'astro/zod';
+import { sectionPositions } from './section-position.ts';
 
 export const surfaceValues = ['default', 'base-100', 'base-200', 'base-300', 'primary', 'secondary', 'accent', 'neutral', 'info', 'success', 'warning', 'error'] as const;
 export type Surface = typeof surfaceValues[number];
@@ -24,7 +25,6 @@ export function surfaceClasses(value: Surface): string {
 }
 export const surfaceSchema = z.preprocess(value => value === '' || value == null ? undefined : value, z.enum(surfaceValues).default('default'));
 
-const sectionPositions = ['first', 'second', 'third', 'fourth', 'fifth'] as const;
 export const sectionSurfaceDefaultsSchema = z.partialRecord(z.enum(sectionPositions), surfaceSchema);
 type SectionSurfaceDefaults = z.infer<typeof sectionSurfaceDefaultsSchema>;
 

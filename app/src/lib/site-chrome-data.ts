@@ -5,8 +5,8 @@ import header from '../content/site-chrome/header.json' with { type: 'json' };
 import footer from '../content/site-chrome/footer.json' with { type: 'json' };
 import appearance from '../content/site-chrome/appearance.json' with { type: 'json' };
 
-type Appearance = typeof appearance & Pick<z.input<typeof homeSectionDataSchema.shape.chrome>, 'typography' | 'sectionSurfaceDefaults'>;
-const { themes, typography, showThemeSwitch, sectionSurfaceDefaults } = appearance as Appearance;
+type Appearance = typeof appearance & Pick<z.input<typeof homeSectionDataSchema.shape.chrome>, 'typography' | 'sectionSurfaceDefaults' | 'sectionAlignmentDefaults'>;
+const { themes, typography, showThemeSwitch, sectionSurfaceDefaults, sectionAlignmentDefaults } = appearance as Appearance;
 
 /** Single runtime authority for all routes.
  * Three independent stock Pages CMS files (header/footer/appearance), never Home page data.
@@ -14,7 +14,7 @@ const { themes, typography, showThemeSwitch, sectionSurfaceDefaults } = appearan
  */
 export const siteChrome = homeSectionDataSchema.shape.chrome.parse(projectSelectedLinks({
   ...header, ...footer,
-  themes, typography, sectionSurfaceDefaults,
+  themes, typography, sectionSurfaceDefaults, sectionAlignmentDefaults,
   headerOptions: { ...header.headerOptions, showThemeSwitch },
 }));
 export type SiteChrome = typeof siteChrome;
