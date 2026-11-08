@@ -4,33 +4,33 @@
   "id": "behov",
   "name": "Behovsvelger",
   "content": {
-    "heading": "Hva trenger du hjelp med?",
+    "heading": "Hvor vil du se størst fremgang?",
     "items": [
       {
         "title": "Bli funnet",
-        "discipline": "Synlighet",
-        "description": "SEO, AI-synlighet og lokal synlighet når kundene leter etter det du tilbyr.",
+        "discipline": "Synlighet · 4 500 kr/mnd eks. mva.",
+        "description": "Når kundene leter etter det du tilbyr, skal de finne deg, ikke bare konkurrentene. Vi gjør bedriften din mer synlig på Google, Google Maps, AI-svar eller med annonser, også for kunder som aldri har hørt om deg.",
         "link": {
-          "label": "Se Synlighet",
-          "href": "/synlighet/"
+          "label": "Velg Synlighet",
+          "href": "/priser/?pakke=optimalisering&fokus=synlighet#bestill"
         }
       },
       {
-        "title": "Flere besøk til henvendelser og salg",
-        "discipline": "Konvertering",
-        "description": "Konverteringsoptimalisering for nettsider, landingssider og nettbutikker.",
+        "title": "Bli valgt",
+        "discipline": "Konvertering · 4 500 kr/mnd eks. mva.",
+        "description": "Kundene har funnet deg. Nå skal de velge deg. Vi gjør tilbudet tydeligere, nettsiden mer overbevisende og veien til kontakt og bestilling enklere. Slik får flere en god grunn til å velge nettopp deg.",
         "link": {
-          "label": "Se Konvertering",
-          "href": "/konvertering/"
+          "label": "Velg Konvertering",
+          "href": "/priser/?pakke=optimalisering&fokus=konvertering#bestill"
         }
       },
       {
-        "title": "Ja takk - Begge deler",
-        "discipline": "Synlighet X Konvertering",
-        "description": "Vi finner flaskehalsen og starter der det gir mest effekt.",
+        "title": "Ja takk, begge deler",
+        "discipline": "Synlighet X Konvertering · 6 900 kr/mnd eks. mva.",
+        "description": "Bli lettere å finne og få flere av besøkene til å fullføre bestilling. Vi forbedrer både synligheten og nettsidens evne til å gjøre interesse om til kunder. Flere oppdager deg. Flere velger deg.",
         "link": {
-          "label": "Se alternativene",
-          "href": "/#priser"
+          "label": "Velg Vekst",
+          "href": "/priser/?pakke=vekst&fokus=synlighet-konvertering#bestill"
         }
       }
     ]
