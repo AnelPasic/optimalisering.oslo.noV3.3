@@ -62,12 +62,12 @@ const visual = primary ? undefined : resolveFeaturedProofVisual(content.featured
   .proof-primary { grid-template-columns: minmax(0, 1fr); }
   .proof-primary h3 { margin: 0 0 12px; font-size: var(--type-h3); line-height: var(--leading-h3); }
   .proof-metric { margin: 0; font-weight: var(--weight-heading); }
-  .proof-delta { margin: 8px 0 0; font-family: 'Instrument Sans Variable', sans-serif; font-size: var(--type-h3); font-weight: var(--weight-heading); line-height: var(--leading-h3); }
+  .proof-delta { margin: 8px 0 0; font-family: var(--heading); font-size: var(--type-h3); font-weight: var(--weight-heading); line-height: var(--leading-h3); }
   .proof-comparison { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: start; gap: var(--gap-md); margin: 24px 0 0; max-width: 800px; }
   .proof-comparison dl { margin: 0; }
   .proof-primary dt { font-size: var(--type-label); font-weight: var(--weight-label); line-height: var(--leading-small); }
   .proof-primary dd { margin: 0; }
-  .proof-comparison strong { display: block; font-family: 'Instrument Sans Variable', sans-serif; font-size: var(--type-stat); line-height: var(--leading-stat); font-weight: var(--weight-heading); overflow-wrap: anywhere; }
+  .proof-comparison strong { display: block; font-family: var(--heading); font-size: var(--type-stat); line-height: var(--leading-stat); font-weight: var(--weight-heading); overflow-wrap: anywhere; }
   .proof-primary .proof-featured .proof-comparison strong { font-size: var(--type-display); line-height: var(--leading-stat); }
   .proof-comparison dd span { display: block; margin-top: 8px; font-size: var(--type-meta); line-height: var(--leading-small); }
   .proof-arrow { font-size: var(--type-icon); align-self: center; line-height: var(--leading-small); }
@@ -76,7 +76,7 @@ const visual = primary ? undefined : resolveFeaturedProofVisual(content.featured
   /* Only numerical and period roles are specific to proof; Cards use the theme. */
   .proof-values dl, .proof-values dd { margin: 0; }
   .proof-values dt { font-size: var(--type-label); font-weight: var(--weight-label); line-height: var(--leading-small); }
-  .proof-values strong { display: block; font-family: 'Instrument Sans Variable', sans-serif; font-size: var(--type-h3); font-weight: var(--weight-heading); line-height: var(--leading-stat); white-space: nowrap; }
+  .proof-values strong { display: block; font-family: var(--heading); font-size: var(--type-h3); font-weight: var(--weight-heading); line-height: var(--leading-stat); white-space: nowrap; }
   .proof-values dd span { display: block; margin-top: var(--gap-xs); font-size: var(--type-meta); line-height: var(--leading-small); }
   @media (max-width: 700px) {
     .proof-grid { grid-template-columns: minmax(0, 1fr); }

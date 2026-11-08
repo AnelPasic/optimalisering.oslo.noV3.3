@@ -43,13 +43,33 @@ test('Pages CMS accepts bare Tailwind declarations exactly as saved by OWNER',()
   ':root { --text-5xl: 3rem; } body { color:red }'
  ])assert.throws(()=>parseTypographyVariables(bad),bad);
 });
-test('CMS has structured native Tailwind type controls and advanced token editor',()=>{
+test('CMS exposes only the font picker and advanced Tailwind variables',()=>{
  const cms=YAML.parse(read('../.pages.yml'));
  const editor=cms.content.flatMap((x:any)=>x.items??[]).find((x:any)=>x.name==='siteAppearance');
  assert.ok(editor,'siteAppearance CMS entry');
- assert.deepEqual(editor.fields.find((x:any)=>x.name==='typography').fields.map((x:any)=>x.name),
- ['fontFamily','scale','lineHeight','tracking','weight','cssVariables']);
+ const fields=editor.fields.find((x:any)=>x.name==='typography').fields;
+ assert.deepEqual(fields.map((x:any)=>x.name),['fontFamily','cssVariables']);
+ assert.deepEqual(fields[0].options.values.map((option:any)=>option.name),
+  ['current','instrument','figtree','montserrat','hanken-grotesk','outfit-figtree']);
 });
+test('font choices set heading, body and Tailwind sans with explicit CSS taking precedence',()=>{
+ const cases={
+  current:null,instrument:'Instrument Sans',figtree:'Figtree',montserrat:'Montserrat',
+  'hanken-grotesk':'Hanken Grotesk','outfit-figtree':'Outfit',
+ };
+ for(const [fontFamily,heading] of Object.entries(cases)){
+  const values=typographyVariables(typographySchema.parse({fontFamily}));
+  if(!heading){assert.deepEqual(values,{});continue;}
+  assert.equal(values['--font-heading'],`'${heading} Variable', sans-serif`);
+  const body=fontFamily==='outfit-figtree'?'Figtree':heading;
+  assert.equal(values['--font-body'],`'${body} Variable', sans-serif`);
+  assert.equal(values['--font-sans'],values['--font-body']);
+ }
+ const override=typographyVariables(typographySchema.parse({fontFamily:'outfit-figtree',cssVariables:"--font-heading: 'Hanken Grotesk Variable', sans-serif;"}));
+ assert.equal(override['--font-heading'],"'Hanken Grotesk Variable', sans-serif");
+ assert.equal(typographyVariables(typographySchema.parse({tracking:'tight'}))['--tracking-tight'],'-0.06em');
+});
+
 test('existing Oslo responsive sizes are preserved exactly by Tailwind token adapters',()=>{
  const base=read('src/styles/app.css');
  const old=read('src/styles/typography.css');

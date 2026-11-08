@@ -2651,49 +2651,25 @@ content:
           - name: typography
             label: Typografi (Tailwind CSS v4)
             type: object
-            description: Valgfritt. Standard lar dagens Oslo-design stå uendret. Bruk eksisterende Tailwind-tokens.
             fields:
               - name: fontFamily
                 label: Skriftfamilie
                 type: select
+                description: Outfit-Figtree bruker Outfit i overskrifter og Figtree i brødtekst.
                 options:
                   values:
                     - { name: current, label: Dagens Instrument Sans + Figtree (standard) }
                     - { name: instrument, label: Instrument Sans overalt }
                     - { name: figtree, label: Figtree overalt }
-              - name: scale
-                label: Tekststørrelser
-                type: select
-                options:
-                  values:
-                    - { name: normal, label: Dagens størrelser (standard) }
-                    - { name: compact, label: Kompakt }
-                    - { name: large, label: Stor }
-              - name: lineHeight
-                label: Linjehøyde
-                type: select
-                options:
-                  values:
-                    - { name: normal, label: Dagens linjehøyde (standard) }
-                    - { name: relaxed, label: Luftigere }
-              - name: tracking
-                label: Bokstavavstand
-                type: select
-                options:
-                  values:
-                    - { name: normal, label: Dagens avstand (standard) }
-                    - { name: tight, label: Tettere overskrifter }
-              - name: weight
-                label: Skriftvekt
-                type: select
-                options:
-                  values:
-                    - { name: normal, label: Dagens vekt (standard) }
-                    - { name: strong, label: Tyngre overskrifter }
+                    - { name: montserrat, label: Montserrat }
+                    - { name: hanken-grotesk, label: Hanken Grotesk }
+                    - { name: outfit-figtree, label: Outfit-Figtree }
               - name: cssVariables
                 label: CSS-variabler (avansert)
                 type: text
-                description: "Skriv én godkjent Tailwind v4-variabel per linje, f.eks. --text-5xl: clamp(1.75rem, 4.5vw, 3.25rem); Du kan også bruke :root { ... }. Ingen eksterne fonter, CSS-selectorer eller @import."
+                description: >
+                  Bruk godkjente Tailwind v4-variabler, for eksempel --text-5xl: clamp(1.75rem, 4.5vw, 3.25rem);
+                  Du kan også lime inn én :root-blokk med variablene.
           - name: themes
             label: Tema og utseende (daisyUI)
             type: object

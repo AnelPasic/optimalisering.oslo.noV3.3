@@ -92,7 +92,7 @@ a.term-trigger:focus-visible { outline: 2px solid currentColor; outline-offset: 
   gap: 5px;
 }
 .glossary-term-name {
-  font-family: 'Instrument Sans Variable', sans-serif;
+  font-family: var(--heading);
   font-size: var(--type-h4);
   font-weight: var(--weight-heading);
   line-height: var(--leading-h4);

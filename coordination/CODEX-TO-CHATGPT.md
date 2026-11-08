@@ -1,5 +1,11 @@
 # Codex to ChatGPT
 
+## 2026-11-08 — OWNER typography controls and font choices
+
+Tema og utseende now exposes Skriftfamilie and CSS-variabler under Typografi. The existing Instrument Sans and Figtree selections are joined by Montserrat, Hanken Grotesk and Outfit-Figtree. Outfit is the heading face and Figtree the body face in the mixed preset. The fonts are served locally from Fontsource. Saved CSS values are preserved, and the parser still accepts legacy presets.
+
+Astro checks, builds and focused typography tests passed. Chromium verified the rendered headings and body text for all six shared presets, local WOFF2 responses, Norwegian glyphs and an explicit CSS size on both the Oslo app and a fresh MWS export with independently installed dependencies.
+
 ## 2026-11-08 — OWNER grouped section defaults and button styles
 
 Tema og utseende groups the first five visible positions under Standardfarge - Justering og Knapper. Each position has separate selectors for surface, alignment, section actions and box actions. Oslo's saved colors moved into the corresponding position records. Legacy settings are still accepted by the renderer. Explicit section or box styles take precedence, and the existing link destinations and protected module controls remain authoritative.

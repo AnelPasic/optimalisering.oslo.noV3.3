@@ -11,13 +11,21 @@ const allowed = new Set([
   '--leading-tight','--leading-normal','--leading-relaxed',
   '--tracking-tight','--tracking-normal','--tracking-wide',
 ]);
-const fontStacks = new Set([
-  'system-ui, sans-serif',
-  "'Instrument Sans Variable', sans-serif",
-  "'Figtree Variable', sans-serif",
-  'Georgia, serif',
-  'ui-monospace, SFMono-Regular, Menlo, monospace',
-]);
+const fonts = {
+  instrument: "'Instrument Sans Variable', sans-serif",
+  figtree: "'Figtree Variable', sans-serif",
+  montserrat: "'Montserrat Variable', sans-serif",
+  'hanken-grotesk': "'Hanken Grotesk Variable', sans-serif",
+  outfit: "'Outfit Variable', sans-serif",
+  system: 'system-ui, sans-serif',
+  serif: 'Georgia, serif',
+  mono: 'ui-monospace, SFMono-Regular, Menlo, monospace',
+} as const;
+const fontStacks = new Set<string>(Object.values(fonts));
+const fontFamilies = [
+  'current', 'instrument', 'figtree', 'montserrat', 'hanken-grotesk', 'outfit-figtree',
+  'system', 'serif', 'mono',
+] as const;
 const singleSize = /^\d+(?:\.\d+)?(?:rem|px|em)$/;
 const clampSize = /^clamp\(\s*\d+(?:\.\d+)?(?:rem|px|em)\s*,\s*\d+(?:\.\d+)?(?:vw|rem|px)\s*,\s*\d+(?:\.\d+)?(?:rem|px|em)\s*\)$/;
 const trackingValue = /^-?(?:0|0?\.\d+)(?:em|rem|px)$/;
@@ -64,7 +72,8 @@ export function parseTypographyVariables(input: string): Record<string, string> 
 }
 
 export const typographySchema = z.object({
-  fontFamily: z.enum(['current','instrument','figtree']).optional(),
+  fontFamily: z.enum(fontFamilies).optional(),
+  // Legacy presets remain readable for existing sites and saved CMS records.
   scale: z.enum(['normal','compact','large']).optional(),
   lineHeight: z.enum(['normal','relaxed']).optional(),
   tracking: z.enum(['normal','tight']).optional(),
@@ -79,17 +88,15 @@ export const typographySchema = z.object({
 });
 export type ChromeTypography = z.infer<typeof typographySchema>;
 
-const stacks = {
-  current: null,
-  instrument: "'Instrument Sans Variable', sans-serif",
-  figtree: "'Figtree Variable', sans-serif",
-} as const;
 export function typographyVariables(typography?: ChromeTypography): Record<string, string> {
   if (!typography) return {};
   const result: Record<string, string> = {};
-  if (typography.fontFamily && stacks[typography.fontFamily]) {
-    result['--font-heading'] = stacks[typography.fontFamily]!;
-    result['--font-body'] = stacks[typography.fontFamily]!;
+  const family = typography.fontFamily;
+  if (family && family !== 'current') {
+    const body = family === 'outfit-figtree' ? fonts.figtree : fonts[family];
+    result['--font-heading'] = family === 'outfit-figtree' ? fonts.outfit : body;
+    result['--font-body'] = body;
+    result['--font-sans'] = body;
   }
   if (typography.scale === 'compact') Object.assign(result, {
     '--text-base': 'clamp(0.9375rem, 1.25vw, 1.0625rem)',
