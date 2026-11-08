@@ -25,10 +25,11 @@ test('CONTENT-04 Oslo pilot: three different intents with native SEO, Hero and i
 
 test('CONTENT-04 Home: buyer journey uses canonical global refs; no copied commercial/proof data',()=>{
  const globals=home.sections.filter((s:any)=>s._block==='global').map((s:any)=>s.element);
- assert.deepEqual(globals,['behov','regneeksempel','resultater','priser','sjekk','sporsmal']);
- assert.equal(home.hero.primaryCta.href,'/#sjekk');
- assert.ok(home.faq.length>0);
- assert.ok(home.sections.every((s:any)=>!Object.hasOwn(s,'content')&&!Object.hasOwn(s,'globalElement')));
+ assert.deepEqual(globals,['behov','resultater','priser','sjekk','sporsmal']);
+ assert.equal(home.hero.primaryCta.href,'/#priser');
+ assert.equal(home.faq.length,0,'No duplicate local FAQ in addition to the shared seven');
+ assert.ok(home.sections.filter((s:any)=>s._block==='global').every((s:any)=>!Object.hasOwn(s,'content')&&!Object.hasOwn(s,'globalElement')));
+ assert.ok(home.sections.some((s:any)=>s._block==='content'&&s.id==='klar-for-neste-steg'),'End with the approved CTA');
 });
 
 test('CONTENT-04 Service: delivery, context and qualified next step, without a fixed order requirement',()=>{
