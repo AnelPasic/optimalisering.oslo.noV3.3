@@ -113,5 +113,6 @@
     }
   ],
   "footerLogoLight": "/images/branding/oo-logo-v2-inverse.svg",
-  "footerLogoDark": "/images/branding/oo-logo-v2-inverse.svg"
+  "footerLogoDark": "/images/branding/oo-logo-v2-inverse.svg",
+  "footerSurface": "neutral"
 }
