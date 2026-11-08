@@ -19,19 +19,27 @@ import { categories, glossary } from '../lib/terminology';
       </div>
       <div class="glossary-list">
         {glossary.terms.filter(term => term.category === category).map(term =>
-          <article id={term.id} class="glossary-entry" aria-labelledby={`${term.id}-navn`}>
-            <details>
-              <summary>
+          <article id={term.id} class="glossary-entry scroll-mt-[100px] border-t border-base-300 last:border-b target:bg-info/20" aria-labelledby={`${term.id}-navn`}>
+            <details class="collapse group rounded-none">
+              <summary class:list={[
+                'collapse-title grid grid-cols-[minmax(0,1fr)_auto] items-start gap-x-4 gap-y-2 px-4 py-5 group-open:pb-4 md:px-5 font-(--weight-body)',
+                'min-[651px]:grid-cols-[minmax(120px,0.7fr)_minmax(0,1.3fr)_auto] min-[651px]:gap-x-5',
+                'min-[901px]:grid-cols-[minmax(150px,0.65fr)_minmax(0,1.35fr)_auto] min-[901px]:gap-x-6',
+              ]}>
                 <span class="glossary-term-heading">
                   <span class="glossary-term-name" id={`${term.id}-navn`}>{term.term}</span>
                   {term.fullName && <span class="glossary-full-name">{term.fullName}</span>}
                 </span>
-                <span class="glossary-short">{term.shortDefinition}</span>
-                <span class="glossary-toggle" aria-hidden="true">+</span>
+                <span class="glossary-short col-span-full min-[651px]:col-span-1">{term.shortDefinition}</span>
+                <span class="glossary-toggle col-start-2 row-start-1 grid size-7 place-items-center rounded-full bg-info text-info-content min-[651px]:col-start-3" aria-hidden="true">
+                  <svg class="size-3.5 group-open:rotate-45 motion-safe:transition-transform" viewBox="0 0 16 16" fill="none" focusable="false">
+                    <path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+                </span>
               </summary>
-              <div>
+              <div class="collapse-content px-4 group-open:pb-6 md:px-5">
                 <p>{term.fullDefinition}</p>
-                {term.simpleExample && <p class="glossary-example"><strong>{glossary.exampleLabel}: </strong>{term.simpleExample}</p>}
+                {term.simpleExample && <p class="glossary-example mt-4 rounded-box bg-base-300 p-4 text-base-content"><strong>{glossary.exampleLabel}: </strong>{term.simpleExample}</p>}
                 <a class="glossary-anchor" href={`#${term.id}`} aria-label={`Direktelenke til ${term.term}`}>#{term.id}</a>
               </div>
             </details>

@@ -1,5 +1,11 @@
 # Codex to ChatGPT
 
+## 2026-11-08 — OWNER glossary collapse spacing
+
+The Begreper rows use daisyUI Collapse with native details and summary. The SVG marker shares one center in its plus and cross states. The title and definition use matching insets, and the deep-link highlight uses the info theme token.
+
+Astro check, build with Pagefind and the focused terminology tests passed. Chromium verified padding, marker centering, keyboard and focus behavior, and direct links at 390 px and 1440 px in both themes. The evidence compared the expanded definition and typography with the previous build.
+
 ## 2026-11-08 — OWNER transparent card text
 
 Transparent section cards inherit the section's foreground. Chromium confirmed the Måling card and its text on Konvertering at 390 px and 1440 px in both themes. The opaque neighboring cards matched the previous build. Focused card tests and the Astro build with Pagefind passed.
