@@ -15,7 +15,7 @@ test('hero uses only the guarded featured public result and source label', () =>
   });
   const reordered = { ...getHomepageBlock(home,'proof').content, caseIds: ['nysta', 'eurotents'] };
   assert.deepEqual(getHeroProof(reordered, records), {
-    metric: 'Fullført checkout', comparison: '7,1 % -> 43,6 %', support: 'Nysta · Shopify',
+    metric: 'Fullført checkout', comparison: '7,1 % -> 58,1 %', support: 'Nysta · Shopify',
   });
 });
 
@@ -62,4 +62,21 @@ test('an independently selected Hero proof on any page uses the existing publica
  const withoutSelection=resolvePageHero(service);
  assert.equal(withoutSelection.featuredProofCaseId,undefined);
  assert.equal(getHeroProof({publicationApproved:true,caseIds:[]},records),undefined);
+});
+
+test('Tankeverksted is available for later review but cannot render as public proof', () => {
+  const candidate = records.find(record => record.id === 'tankeverksted');
+  assert.ok(candidate);
+  assert.equal(candidate.publicationStatus, 'EVIDENCE_ONLY');
+  assert.equal(candidate.publicationApproved, false);
+  assert.equal(candidate.period.comparable, false);
+  assert.equal(getHeroProof({ publicationApproved: true, caseIds: ['tankeverksted'] }, records), undefined);
+});
+
+test('Nysta later-period claim is not presented as a 60-day aggregate', () => {
+  const nysta = records.find(record => record.id === 'nysta');
+  assert.equal(nysta.after, '58,1 %');
+  assert.equal(nysta.period.after, 'dag 31-60 etter endringene');
+  assert.equal(nysta.evidenceMetrics[0].after, '43.6%');
+  assert.equal(nysta.evidenceMetrics[0].nextPeriod, '58.1%');
 });
