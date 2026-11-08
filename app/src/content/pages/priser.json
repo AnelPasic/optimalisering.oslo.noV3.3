@@ -53,6 +53,14 @@
   ],
   "faq": [
     {
+      "question": "Hva koster pakkene?",
+      "answer": "Optimalisering koster 4 500 kr/mnd, Vekst 6 900 kr/mnd og Enterprise fra 14 900 kr/mnd. Alle priser er eks. mva. Annonsebudsjett kommer i tillegg."
+    },
+    {
+      "question": "Hva er forskjellen på pakkene?",
+      "answer": "Alle pakkene kan løse de samme problemene. Optimalisering jobber med ett prioritert område, Vekst med to, og Enterprise gir større kapasitet."
+    },
+    {
       "question": "Er annonsebudsjett inkludert?",
       "answer": "Nei. Annonsebudsjett kommer i tillegg. Eksterne verktøy og plattformkostnader kommer også i tillegg når de er nødvendige og ikke er avtalt inkludert."
     },
@@ -62,7 +70,7 @@
     },
     {
       "question": "Hva hvis jeg ikke vet hvilken pakke jeg trenger?",
-      "answer": "Start med den gratis sjekken. Vi ser på nettsiden og sier hvor vi ville startet og hvorfor."
+      "answer": "Du velger kapasiteten, og vi finner hvor du har mest å hente. Start gjerne med tre gratis funn hvis du vil se hva vi ville forbedret først."
     }
   ]
 }
