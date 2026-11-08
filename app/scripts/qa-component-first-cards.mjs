@@ -179,7 +179,11 @@ try {
    assert.equal(data.count,3,'Three homepage entry choices remain');
    assert.equal(data.native,true,'DaisyUI card/body/actions required');
    assert.equal(data.noLegacy,true,'Legacy selector card classes remain');
-   assert.deepEqual(data.links,['/synlighet/','/konvertering/','/#priser']);
+   assert.deepEqual(data.links,[
+      '/priser/?pakke=optimalisering&fokus=synlighet#bestill',
+      '/priser/?pakke=optimalisering&fokus=konvertering#bestill',
+      '/priser/?pakke=vekst&fokus=synlighet-konvertering#bestill',
+    ],'Three needs must lead to the correct single commercial packages and focus');
    assert.deepEqual(data.colors,data.expectedColors,'Semantic theme surfaces differ from approved info/base-300/secondary mapping');
    assert.deepEqual(data.foregrounds,data.expectedForegrounds,'Home selector text must pair with daisyUI surface content tokens');
    for(let i=0;i<3;i++) for(const [k,fg] of data.childForegrounds[i].entries())
