@@ -1,3 +1,4 @@
+import { buttonChoice, buttonStyleSchema } from './section-buttons.ts';
 import { z } from 'astro/zod';
 import {projectSelectedLinks,safeCmsHref} from './cms-link-choice.ts';
 import { surfaceSchema, sectionModel } from './surface.ts';
@@ -73,9 +74,11 @@ export const pageSchema = z.preprocess((input,context)=>{
       _block: z.enum(['content', 'protected', 'pageList', 'selector', 'calculator', 'packages', 'proof', 'assessment', 'faq', 'proofList', 'pricingModule']).optional(), pricingModule: z.enum(['valg','vekst','sammenligning']).optional(), surface: surfaceSchema,
       pageList: pageListSchema.optional(), proofList:proofListSchema.optional(),
       headingAlign: headingAlignSchema,
+      buttonStyle: buttonStyleSchema,
+      boxButtonStyle: buttonStyleSchema,
       layout: contentLayoutSchema,
       id: z.string(), eyebrow: z.string().optional(), heading: z.string(), body: z.array(z.string()).default([]),
-      items: z.array(z.object({ title: z.string(), text: z.string(), href: optionalInternalHref, label: z.string().optional(), surface: surfaceSchema, boxVariant: boxVariantSchema })).optional(),
+      items: z.array(z.object({ title: z.string(), text: z.string(), href: optionalInternalHref, label: z.string().optional(), surface: surfaceSchema, boxVariant: boxVariantSchema, buttonStyle: buttonStyleSchema })).optional(),
       links: z.array(link).optional(),
     })).default([]),
     faq: z.array(z.object({ question: z.string(), answer: z.string() })).default([]),
@@ -110,6 +113,8 @@ export const pageSchema = z.preprocess((input,context)=>{
       if (!isPageList && section.pageList) context.addIssue({ code: 'custom', path: ['sections', index, 'pageList'], message: 'PageList configuration requires its dedicated editor block' });
       if (!isPageList && section._block && section._block !== model) context.addIssue({ code: 'custom', path: ['sections', index, '_block'], message: 'Section editor model must match its protected identity' });
       if (model === 'protected' && (section.surface !== 'default' || section.items?.some(item => item.surface !== 'default'))) context.addIssue({ code: 'custom', path: ['sections', index, 'surface'], message: 'Protected CTA/form surfaces are design-system controlled' });
+      if (model === 'protected' && (buttonChoice(section.buttonStyle) || buttonChoice(section.boxButtonStyle) || section.items?.some(item => buttonChoice(item.buttonStyle))))
+        context.addIssue({code:'custom',path:['sections',index,'buttonStyle'],message:'Protected CTA/form buttons are design-system controlled'});
       if (model === 'protected' && (section.layout !== 'default' || section.items?.some(item => item.boxVariant !== 'default'))) context.addIssue({code:'custom',path:['sections',index,'layout'],message:'Protected CTA/form layout and boxes are design-system controlled'});
     });
     if (['synlighet', 'konvertering'].includes(page.slug) && page.sections.filter(section => section.id === 'sjekk').length !== 1) context.addIssue({ code: 'custom', path: ['sections'], message: 'Protected service CTA identity must remain present' });

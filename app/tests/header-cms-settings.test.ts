@@ -3,6 +3,8 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import YAML from 'yaml';
 import { homeSectionDataSchema } from '../src/lib/home-section-data.ts';
+import { sectionDefaultsAt } from '../src/lib/section-appearance.ts';
+import { actionClasses, buttonChoice } from '../src/lib/section-buttons.ts';
 import { resolveHeadingAlignment } from '../src/lib/heading-alignment.ts';
 import { resolveSectionSurface } from '../src/lib/surface.ts';
 import { cmsJsonSave, entryForFile } from './helpers/pages-cms-json.ts';
@@ -60,39 +62,34 @@ test('CMS chrome color pairs are optional and survive a save in their own files'
   assert.equal(schema.safeParse(combined(savedHeader,{...savedFooter,footerSurface:'#fff'})).success,false);
 });
 
-test('CMS Appearance saves five positional defaults and keeps the local color in control', () => {
-  const field = appearanceEntry.fields.find((field:any)=>field.name==='sectionSurfaceDefaults');
-  assert.deepEqual(field.fields.map((item:any)=>item.name), ['first','second','third','fourth','fifth']);
-  assert.ok(field.fields.every((item:any)=>item.component==='surfaceChoice'));
-  const values={first:'accent',second:'info',third:'default',fifth:'success'};
-  const edited={...appearance,sectionSurfaceDefaults:values};
+test('CMS saves the grouped position controls and preserves other saved slot values', () => {
+  const field=appearanceEntry.fields.find((field:any)=>field.name==='sectionDefaults');
+  assert.equal(field.label,'Standardfarge - Justering og Knapper');
+  assert.deepEqual(field.fields.map((item:any)=>item.name),['first','second','third','fourth','fifth']);
+  assert.ok(field.fields.every((item:any)=>item.component==='sectionPositionAppearance'));
+  assert.deepEqual(cms.components.sectionPositionAppearance.fields.map((item:any)=>item.name),['surface','headingAlign','buttonStyle','boxButtonStyle']);
+  const second={...appearance.sectionDefaults?.second,headingAlign:'left',buttonStyle:'btn-primary',boxButtonStyle:'btn-outline'};
+  const edited={...appearance,sectionDefaults:{...appearance.sectionDefaults,second}};
   const saved=JSON.parse(cmsJsonSave(appearance,edited,appearanceEntry,cms));
-  const defaults=schema.parse({...combined(),sectionSurfaceDefaults:saved.sectionSurfaceDefaults}).sectionSurfaceDefaults;
-  assert.deepEqual(defaults,{...appearance.sectionSurfaceDefaults,...values});
-  assert.equal(resolveSectionSurface('default',1,defaults),'info');
-  assert.equal(resolveSectionSurface('primary',1,defaults),'primary');
-  assert.equal(resolveSectionSurface(undefined,4,defaults),'success');
-  assert.equal(resolveSectionSurface('default',2,defaults),undefined);
-  assert.equal(resolveSectionSurface('default',5,defaults),undefined);
-  assert.equal(resolveSectionSurface('default',1,defaults,true),undefined);
-  assert.equal(resolveSectionSurface('default',1,schema.parse(combined()).sectionSurfaceDefaults),undefined);
-  assert.equal(schema.safeParse({...combined(),sectionSurfaceDefaults:{second:'#fff'}}).success,false);
+  assert.deepEqual(saved.sectionDefaults,edited.sectionDefaults);
+  const chrome=schema.parse({...combined(),sectionDefaults:saved.sectionDefaults});
+  const defaults=sectionDefaultsAt(chrome,1);
+  assert.equal(resolveSectionSurface('default',defaults?.surface),second.surface);
+  assert.equal(resolveHeadingAlignment('default',defaults?.headingAlign),'left');
+  assert.equal(actionClasses(buttonChoice('default',defaults?.buttonStyle) ?? 'link'),'btn btn-primary');
+  assert.equal(buttonChoice('btn-info',defaults?.boxButtonStyle),'btn-info');
+  assert.equal(sectionDefaultsAt(chrome,5),undefined);
+  assert.equal(schema.safeParse({...combined(),sectionDefaults:{second:{buttonStyle:'custom'}}}).success,false);
 });
 
-test('CMS stores the five alignment defaults below the colors and preserves the saved colors', () => {
-  const fields = appearanceEntry.fields;
-  const colorIndex = fields.findIndex((field:any)=>field.name==='sectionSurfaceDefaults');
-  const field = fields[colorIndex+1];
-  assert.equal(field.name,'sectionAlignmentDefaults');
-  assert.deepEqual(field.fields.map((item:any)=>item.name), ['first','second','third','fourth','fifth']);
-  assert.ok(field.fields.every((item:any)=>item.component==='headingAlignment'));
-  const values={first:'left',second:'default',fifth:'center'};
-  const saved=JSON.parse(cmsJsonSave(appearance,{...appearance,sectionAlignmentDefaults:values},appearanceEntry,cms));
-  assert.deepEqual(saved.sectionSurfaceDefaults,appearance.sectionSurfaceDefaults);
-  const defaults=schema.parse({...combined(),sectionAlignmentDefaults:saved.sectionAlignmentDefaults}).sectionAlignmentDefaults;
-  assert.deepEqual(defaults,{...appearance.sectionAlignmentDefaults,...values});
-  assert.equal(resolveHeadingAlignment('default',0,defaults),'left');
-  assert.equal(schema.safeParse({...combined(),sectionAlignmentDefaults:{second:'justify'}}).success,false);
+test('Legacy color and alignment fill missing fields and explicit Standard clears their effect', () => {
+  const legacy={sectionSurfaceDefaults:{second:'info'},sectionAlignmentDefaults:{second:'left'}};
+  const old=sectionDefaultsAt(schema.parse({...combined(),...legacy}),1);
+  assert.equal(old?.surface,'info');
+  assert.equal(old?.headingAlign,'left');
+  const current=sectionDefaultsAt(schema.parse({...combined(),...legacy,sectionDefaults:{second:{surface:'default',headingAlign:'default'}}}),1);
+  assert.equal(current?.surface,'default');
+  assert.equal(current?.headingAlign,'default');
 });
 
 test('Independent header CMS edit preserves OWNER menu and separate appearance and footer', () => {

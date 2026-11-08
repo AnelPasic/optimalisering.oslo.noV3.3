@@ -76,6 +76,32 @@ settings:
       create: "Nytt innhold: {path} (via Pages CMS)"
       delete: "Slettet innhold: {path} (via Pages CMS)"
 components:
+  sectionButtonChoice:
+    type: select
+    options:
+      placeholder: Standard
+      values:
+        - { name: default, label: Standard }
+        - { name: link, label: Tekstlenke }
+        - { name: btn, label: btn }
+        - { name: btn-primary, label: btn-primary }
+        - { name: btn-secondary, label: btn-secondary }
+        - { name: btn-accent, label: btn-accent }
+        - { name: btn-neutral, label: btn-neutral }
+        - { name: btn-info, label: btn-info }
+        - { name: btn-success, label: btn-success }
+        - { name: btn-warning, label: btn-warning }
+        - { name: btn-error, label: btn-error }
+        - { name: btn-outline, label: btn-outline }
+        - { name: btn-soft, label: btn-soft }
+        - { name: btn-ghost, label: btn-ghost }
+  sectionPositionAppearance:
+    type: object
+    fields:
+      - { name: surface, label: Seksjonsfarge, component: surfaceChoice }
+      - { name: headingAlign, label: Justering, component: headingAlignment }
+      - { name: buttonStyle, label: Knapp i seksjonen, component: sectionButtonChoice }
+      - { name: boxButtonStyle, label: Knapp i boksene, component: sectionButtonChoice }
   heroPartToneChoice:
     type: select
     options:
@@ -151,6 +177,7 @@ components:
       - name: surface
         label: Boksfarge
         component: surfaceChoice
+      - { name: buttonStyle, label: Knapp, component: sectionButtonChoice }
   cmsSuggestedHref:
     type: select
     description: "Valg i listen brukes som URL. Tøm valget for å bruke manuell URL. Begge redigeringsfeltene lagres, men bare én lenke brukes på nettsiden."
@@ -335,6 +362,8 @@ components:
         label: Seksjonsfarge
         component: surfaceChoice
         description: Bakgrunn for hele seksjonen. Standard beholder designets opprinnelige farge.
+      - &serviceButtonStyle { name: buttonStyle, label: Knapp i seksjonen, component: sectionButtonChoice }
+      - &serviceBoxButtonStyle { name: boxButtonStyle, label: Knapp i boksene, component: sectionButtonChoice }
       - &serviceBody
         name: body
         label: Avsnitt
@@ -373,6 +402,7 @@ components:
             label: Boksfarge
             component: surfaceChoice
             description: Bakgrunn for denne boksen. Standard beholder designets opprinnelige farge.
+          - { name: buttonStyle, label: Knapp, component: sectionButtonChoice }
       - &serviceLinks
         name: links
         label: Relaterte lenker
@@ -511,6 +541,7 @@ components:
       - name: surface
         label: Seksjonsfarge
         component: surfaceChoice
+      - { name: boxButtonStyle, label: Knapp i boksene, component: sectionButtonChoice }
       - name: body
         label: Avsnitt
         type: text
@@ -1215,6 +1246,8 @@ content:
                 label: Seksjonsfarge
                 component: surfaceChoice
                 description: Bakgrunn for hele seksjonen. Standard beholder designets opprinnelige farge.
+              - { name: buttonStyle, label: Knapp i seksjonen, component: sectionButtonChoice }
+              - { name: boxButtonStyle, label: Knapp i boksene, component: sectionButtonChoice }
               - name: body
                 label: Avsnitt
                 type: text
@@ -1251,6 +1284,7 @@ content:
                     label: Boksfarge
                     component: surfaceChoice
                     description: Bakgrunn for denne boksen. Standard beholder designets opprinnelige farge.
+                  - { name: buttonStyle, label: Knapp, component: sectionButtonChoice }
               - name: links
                 label: Relaterte lenker
                 component: link
@@ -2602,31 +2636,18 @@ content:
             type: boolean
             required: true
             description: Gjelder både toppmeny, mobilmeny og lagret systempreferanse.
-          - name: sectionSurfaceDefaults
-            label: Standardfarger for seksjon 1–5
+          - name: sectionDefaults
+            label: Standardfarge - Justering og Knapper
             type: object
             description: >
-              Gjelder når Seksjonsfarge står på Standard. Plassene følger rekkefølgen
-              på synlige rader i Innholdsseksjoner. Hero er separat.
-              Standard her beholder seksjonens vanlige fargepar.
+              Gjelder seksjon 1–5 etter rekkefølgen på synlige rader i Innholdsseksjoner.
+              Standard på seksjonen eller boksen følger valget for plassen. Hero har egne valg.
             fields:
-              - { name: first, label: "1. seksjon", component: surfaceChoice }
-              - { name: second, label: "2. seksjon", component: surfaceChoice }
-              - { name: third, label: "3. seksjon", component: surfaceChoice }
-              - { name: fourth, label: "4. seksjon", component: surfaceChoice }
-              - { name: fifth, label: "5. seksjon", component: surfaceChoice }
-          - name: sectionAlignmentDefaults
-            label: Standardjustering for seksjon 1–5
-            type: object
-            description: >
-              Gjelder når Overskriftsjustering står på Standard. Plassene følger
-              synlige rader i Innholdsseksjoner. Justeringen gjelder også knapperaden.
-            fields:
-              - { name: first, label: "1. seksjon", component: headingAlignment }
-              - { name: second, label: "2. seksjon", component: headingAlignment }
-              - { name: third, label: "3. seksjon", component: headingAlignment }
-              - { name: fourth, label: "4. seksjon", component: headingAlignment }
-              - { name: fifth, label: "5. seksjon", component: headingAlignment }
+              - { name: first, label: "1. seksjon", component: sectionPositionAppearance }
+              - { name: second, label: "2. seksjon", component: sectionPositionAppearance }
+              - { name: third, label: "3. seksjon", component: sectionPositionAppearance }
+              - { name: fourth, label: "4. seksjon", component: sectionPositionAppearance }
+              - { name: fifth, label: "5. seksjon", component: sectionPositionAppearance }
           - name: typography
             label: Typografi (Tailwind CSS v4)
             type: object
@@ -2882,6 +2903,8 @@ content:
           - *serviceHeadingAlign
           - *serviceLayout
           - *serviceSurface
+          - *serviceButtonStyle
+          - *serviceBoxButtonStyle
           - name: body
             label: Avsnitt / kolonner (Markdown)
             component: globalMarkdownBody
@@ -3562,6 +3585,8 @@ content:
             label: Seksjonsfarge
             component: surfaceChoice
             description: Bakgrunn for hele seksjonen. Standard beholder designets opprinnelige farge.
+          - { name: buttonStyle, label: Knapp i seksjonen, component: sectionButtonChoice }
+          - { name: boxButtonStyle, label: Knapp i boksene, component: sectionButtonChoice }
           - name: body
             label: Avsnitt
             type: text
@@ -3598,6 +3623,7 @@ content:
                 label: Boksfarge
                 component: surfaceChoice
                 description: Bakgrunn for denne boksen. Standard beholder designets opprinnelige farge.
+              - { name: buttonStyle, label: Knapp, component: sectionButtonChoice }
           - name: links
             label: Relaterte lenker
             component: link
@@ -3658,6 +3684,8 @@ content:
             label: Seksjonsfarge
             component: surfaceChoice
             description: Bakgrunn for hele seksjonen. Standard beholder designets opprinnelige farge.
+          - { name: buttonStyle, label: Knapp i seksjonen, component: sectionButtonChoice }
+          - { name: boxButtonStyle, label: Knapp i boksene, component: sectionButtonChoice }
           - name: body
             label: Avsnitt
             type: text
@@ -3694,6 +3722,7 @@ content:
                 label: Boksfarge
                 component: surfaceChoice
                 description: Bakgrunn for denne boksen. Standard beholder designets opprinnelige farge.
+              - { name: buttonStyle, label: Knapp, component: sectionButtonChoice }
           - name: links
             label: Relaterte lenker
             component: link

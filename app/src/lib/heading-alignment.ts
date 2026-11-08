@@ -8,10 +8,7 @@ export const headingAlignSchema = z.preprocess(
 );
 export type HeadingAlign = z.infer<typeof headingAlignSchema>;
 export const sectionAlignmentDefaultsSchema = z.partialRecord(z.enum(sectionPositions), headingAlignSchema);
-type SectionAlignmentDefaults = z.infer<typeof sectionAlignmentDefaultsSchema>;
-
-export function resolveHeadingAlignment(value: HeadingAlign | undefined, index?: number, defaults?: SectionAlignmentDefaults): Exclude<HeadingAlign, 'default'> {
+export function resolveHeadingAlignment(value: HeadingAlign | undefined, fallback?: HeadingAlign): Exclude<HeadingAlign, 'default'> {
   if (value === 'left' || value === 'center') return value;
-  const position = index === undefined ? undefined : sectionPositions[index];
-  return position && defaults?.[position] === 'left' ? 'left' : 'center';
+  return fallback === 'left' ? 'left' : 'center';
 }

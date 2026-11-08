@@ -1,18 +1,20 @@
 ---
 import Arrow from './Arrow.astro';
+import { actionClasses, buttonChoice, type ButtonStyle } from '../lib/section-buttons';
 import TermText from './TermText.astro';
 import RichMarkdown from './RichMarkdown.astro';
 import {hasRichMarkdown} from '../lib/rich-markdown';
 import {surfaceAttribute,surfaceClasses,type Surface} from '../lib/surface';
-interface Props {title:string;text:string;surface?:Surface;number?:string;href?:string;label?:string;titleTerms?:string[];textTerms?:string[];linkVariant?:'button'|'text';transparent?:boolean;}
-const {title,text,surface,number,href,label,titleTerms=[],textTerms=[],linkVariant='button',transparent=false}=Astro.props;
+interface Props {title:string;text:string;surface?:Surface;number?:string;href?:string;label?:string;titleTerms?:string[];textTerms?:string[];linkVariant?:'button'|'text';buttonStyle?:ButtonStyle;transparent?:boolean;}
+const {title,text,surface,number,href,label,titleTerms=[],textTerms=[],linkVariant='button',buttonStyle,transparent=false}=Astro.props;
 const selected=surfaceAttribute(surface)??'base-100';
+const action = buttonChoice(buttonStyle) ?? (linkVariant === 'text' ? 'link' : 'btn');
 ---
 <article class:list={['card min-w-0 wrap-anywhere',transparent?'bg-transparent card-border border-base-300':surfaceClasses(selected),!transparent&&selected==='base-200'&&'border border-base-300']} data-content-card data-box-variant="card" data-surface={transparent?undefined:selected}>
  <div class="card-body min-w-0 gap-5">
   {number&&<span class="font-semibold" aria-hidden="true" data-card-number>{number}</span>}
   <h3 class="card-title"><TermText text={title} terms={titleTerms}/></h3>
   {hasRichMarkdown(text)?<RichMarkdown text={text} variant="card"/>:<p class="text-(length:--type-body) leading-(--leading-body)"><TermText text={text} terms={textTerms}/></p>}
-  {(href||Astro.slots.has('actions'))&&<div class:list={['card-actions',linkVariant==='text'?'mt-auto pt-3':'mt-3']}><slot name="actions">{href&&<a class={linkVariant==='text'?'text-link':'btn'} href={href}>{label||title}<Arrow diagonal/></a>}</slot></div>}
+  {(href||Astro.slots.has('actions'))&&<div class:list={['card-actions',action==='link'?'mt-auto pt-3':'mt-3']}><slot name="actions">{href&&<a class={actionClasses(action)} href={href}>{label||title}<Arrow diagonal/></a>}</slot></div>}
  </div>
 </article>

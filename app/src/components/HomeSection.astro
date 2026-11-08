@@ -2,6 +2,8 @@
 import '../styles/compositions/sections.css';
 import type { CollectionEntry } from 'astro:content';
 import Arrow from './Arrow.astro';
+import { sectionDefaultsAt } from '../lib/section-appearance';
+import { actionClasses, buttonChoice } from '../lib/section-buttons';
 import TermText from './TermText.astro';
 import ContentCard from './ContentCard.astro';
 import RichMarkdown from './RichMarkdown.astro';
@@ -13,20 +15,23 @@ import {contentLayoutAttribute,boxVariantAttribute,paragraphLayoutAttribute} fro
 interface Props { section: CollectionEntry<'pages'>['data']['sections'][number]; index?: number; visualId?: 'behov' | 'kanaler'; linkVariant?:'button'; defaultSurface?:'secondary'; anchor?:string; infoSurface?:boolean; pageListColumns?:number; }
 const { section, index, visualId, linkVariant, defaultSurface, anchor, infoSurface = false, pageListColumns } = Astro.props;
 const protectedRow = section._block === 'protected';
-const surface = resolveSectionSurface(section.surface, index, chrome.sectionSurfaceDefaults, protectedRow)
+const defaults = sectionDefaultsAt(chrome, index);
+const sectionButton = protectedRow ? undefined : buttonChoice(section.buttonStyle, defaults?.buttonStyle);
+const boxButton = protectedRow ? undefined : buttonChoice(section.boxButtonStyle, defaults?.boxButtonStyle);
+const surface = resolveSectionSurface(section.surface, defaults?.surface, protectedRow)
   ?? (infoSurface ? 'info' : protectedRow ? undefined : defaultSurface);
 const cards=!!visualId;
 const terms = Astro.url.pathname === '/synlighet/' ? ['seo', 'lokal-seo', 'ai-synlighet'] : Astro.url.pathname === '/konvertering/' ? ['cro', 'konverteringsrate', 'ordreverdi', 'margin', 'relevant-trafikk'] : Astro.url.pathname === '/seo/' ? ['seo'] : Astro.url.pathname === '/ai-synlighet/' ? ['ai-synlighet', 'aeo', 'aio', 'geo', 'seo'] : Astro.url.pathname === '/nettbutikkoptimalisering/' ? ['checkout', 'ordreverdi', 'margin', 'konverteringsrate'] : [];
-const alignment = resolveHeadingAlignment(section.headingAlign, index, chrome.sectionAlignmentDefaults);
+const alignment = resolveHeadingAlignment(section.headingAlign, defaults?.headingAlign);
 ---
 <section id={anchor??section.id} class:list={[`content-section section-space home-section-${visualId ?? section.id}`,{'bg-info text-info-content':infoSurface&&surface==='info'}]} data-surface={surface}>
   <div class="shell">
     <div class="section-heading" data-heading-align={alignment}><div>{section.eyebrow && <p class="eyebrow">{section.eyebrow}</p>}<h2>{section.heading}</h2></div><div class="body-copy" data-content-layout={paragraphLayoutAttribute(section,protectedRow)}>{section.body.map(text => hasRichMarkdown(text)?<RichMarkdown text={text}/>:<p><TermText text={text} terms={terms}/></p>)}</div></div>
-    {section.items && <div class:list={['section-items', { 'two-items': section.items.length === 2, 'mechanism-steps': section.id === 'mekanisme', 'max-sm:grid-cols-1':section.id==='mekanisme'&&section.items.some(item=>boxVariantAttribute(item.boxVariant,protectedRow)==='card') }]} data-content-layout={contentLayoutAttribute(section.layout,protectedRow)} data-page-list-columns={pageListColumns}>{section.items.map((item, i) => (boxVariantAttribute(item.boxVariant,protectedRow)==='card'||(cards&&boxVariantAttribute(item.boxVariant,protectedRow)!=='plain'))?<ContentCard title={item.title} text={item.text} surface={surfaceAttribute(item.surface,protectedRow)??(visualId==='behov'?(['info','base-300','base-200'] as const)[i%3]:visualId==='kanaler'?(['base-300','info','base-100'] as const)[i%3]:undefined)} number={section.id==='mekanisme'?String(i+1).padStart(2,'0'):undefined} href={item.href} label={item.label} titleTerms={terms} textTerms={terms} linkVariant={boxVariantAttribute(item.boxVariant,protectedRow)==='card'?'button':'text'} transparent={visualId==='kanaler'&&i%3===2&&!surfaceAttribute(item.surface,protectedRow)}/>:<article class:list={['info-item data-[box-variant=plain]:p-(--panel-pad) data-[surface]:p-(--panel-pad)', `home-item-${i}`]} data-box-variant={boxVariantAttribute(item.boxVariant,protectedRow)} data-surface={surfaceAttribute(item.surface, protectedRow)??(visualId==='behov'?(['info','base-300','base-200'] as const)[i%3]:undefined)}>
+    {section.items && <div class:list={['section-items', { 'two-items': section.items.length === 2, 'mechanism-steps': section.id === 'mekanisme', 'max-sm:grid-cols-1':section.id==='mekanisme'&&section.items.some(item=>boxVariantAttribute(item.boxVariant,protectedRow)==='card') }]} data-content-layout={contentLayoutAttribute(section.layout,protectedRow)} data-page-list-columns={pageListColumns}>{section.items.map((item, i) => (boxVariantAttribute(item.boxVariant,protectedRow)==='card'||(cards&&boxVariantAttribute(item.boxVariant,protectedRow)!=='plain'))?<ContentCard buttonStyle={buttonChoice(item.buttonStyle, boxButton)} title={item.title} text={item.text} surface={surfaceAttribute(item.surface,protectedRow)??(visualId==='behov'?(['info','base-300','base-200'] as const)[i%3]:visualId==='kanaler'?(['base-300','info','base-100'] as const)[i%3]:undefined)} number={section.id==='mekanisme'?String(i+1).padStart(2,'0'):undefined} href={item.href} label={item.label} titleTerms={terms} textTerms={terms} linkVariant={boxVariantAttribute(item.boxVariant,protectedRow)==='card'?'button':'text'} transparent={visualId==='kanaler'&&i%3===2&&!surfaceAttribute(item.surface,protectedRow)}/>:<article class:list={['info-item data-[box-variant=plain]:p-(--panel-pad) data-[surface]:p-(--panel-pad)', `home-item-${i}`]} data-box-variant={boxVariantAttribute(item.boxVariant,protectedRow)} data-surface={surfaceAttribute(item.surface, protectedRow)??(visualId==='behov'?(['info','base-300','base-200'] as const)[i%3]:undefined)}>
       {section.id === 'mekanisme' && <span class="item-number" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>}
-      <h3><TermText text={item.title} terms={terms} /></h3>{hasRichMarkdown(item.text)?<RichMarkdown text={item.text} variant="card"/>:<p>{item.text}</p>}{item.href && <a class="text-link" href={item.href}>{item.label || item.title}<Arrow diagonal /></a>}
+      <h3><TermText text={item.title} terms={terms} /></h3>{hasRichMarkdown(item.text)?<RichMarkdown text={item.text} variant="card"/>:<p>{item.text}</p>}{item.href && <a class={actionClasses(buttonChoice(item.buttonStyle, boxButton) ?? 'link')} href={item.href}>{item.label || item.title}<Arrow diagonal /></a>}
     </article>)}</div>}
-    {section.links && <div class:list={['section-links', alignment === 'center' ? 'justify-center' : 'justify-start']}>{section.links.map(link => <a class={protectedRow||linkVariant==='button'?'btn':'text-link'} href={link.href}>{link.label}<Arrow /></a>)}</div>}
+    {section.links && <div class:list={['section-links', alignment === 'center' ? 'justify-center' : 'justify-start']}>{section.links.map(link => <a class={actionClasses(sectionButton ?? (protectedRow || linkVariant==='button' ? 'btn' : 'link'))} href={link.href}>{link.label}<Arrow /></a>)}</div>}
     <slot />
   </div>
 </section>

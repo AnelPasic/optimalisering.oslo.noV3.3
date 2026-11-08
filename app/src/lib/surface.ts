@@ -26,13 +26,8 @@ export function surfaceClasses(value: Surface): string {
 export const surfaceSchema = z.preprocess(value => value === '' || value == null ? undefined : value, z.enum(surfaceValues).default('default'));
 
 export const sectionSurfaceDefaultsSchema = z.partialRecord(z.enum(sectionPositions), surfaceSchema);
-type SectionSurfaceDefaults = z.infer<typeof sectionSurfaceDefaultsSchema>;
-
-/** Resolve against the index in the visible CMS section list. */
-export function resolveSectionSurface(value: unknown, index: number | undefined, defaults?: SectionSurfaceDefaults, protectedRow = false) {
-  if (protectedRow) return undefined;
-  const position = index === undefined ? undefined : sectionPositions[index];
-  return surfaceAttribute(value) ?? (position ? surfaceAttribute(defaults?.[position]) : undefined);
+export function resolveSectionSurface(value: unknown, fallback?: Surface, protectedRow = false) {
+  return protectedRow ? undefined : surfaceAttribute(value) ?? surfaceAttribute(fallback);
 }
 
 /** CMS editor metadata never grants permission to recolor a protected row. */

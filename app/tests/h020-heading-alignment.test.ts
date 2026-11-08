@@ -14,11 +14,11 @@ const load=(name:string)=>name==='home'?localHomeFixture():JSON.parse(readFileSy
 test('effective alignment gives explicit choices priority and keeps the homepage form model unchanged',()=>{
   assert.deepEqual(headingAlignValues,['default','center','left']);
   const defaults={first:'left',second:'default',fifth:'center'} as const;
-  assert.equal(resolveHeadingAlignment('default',0,defaults),'left');
-  assert.equal(resolveHeadingAlignment('center',0,defaults),'center');
-  assert.equal(resolveHeadingAlignment('left',4,defaults),'left');
-  assert.equal(resolveHeadingAlignment(undefined,1,defaults),'center');
-  assert.equal(resolveHeadingAlignment('default',5,defaults),'center');
+  assert.equal(resolveHeadingAlignment('default',defaults.first),'left');
+  assert.equal(resolveHeadingAlignment('center',defaults.first),'center');
+  assert.equal(resolveHeadingAlignment('left',defaults.fifth),'left');
+  assert.equal(resolveHeadingAlignment(undefined,defaults.second),'center');
+  assert.equal(resolveHeadingAlignment('default'),'center');
   const model=homepageBlockEditor(cms,'assessment').fields.find((f:any)=>f.name==='section');
   assert.ok(!model.fields.some((f:any)=>['headingAlign','surface'].includes(f.name)));
 });

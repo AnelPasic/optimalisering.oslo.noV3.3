@@ -1,13 +1,17 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import HomeSection from './HomeSection.astro';
+import { siteChrome } from '../lib/site-chrome-data';
 import Arrow from './Arrow.astro';
+import { sectionDefaultsAt } from '../lib/section-appearance';
+import { actionClasses, buttonChoice } from '../lib/section-buttons';
 import ListingVisual from './ListingVisual.astro';
 import { resolvePageList, pageListPresentationVisual, type ListPage } from '../lib/page-list';
 import { getCollection } from 'astro:content';
 interface Props { section: CollectionEntry<'pages'>['data']['sections'][number]; index?: number; pages?: readonly ListPage[]; }
 const { section, index, pages: suppliedPages } = Astro.props;
 const config = section.pageList!;
+const listAction = buttonChoice(section.boxButtonStyle, sectionDefaultsAt(siteChrome, index)?.boxButtonStyle) ?? 'link';
 const pages = suppliedPages ?? (await getCollection('pages')).map(entry=>entry.data);
 const cases = config.source === 'cases' || config.mode === 'manual' ? (await getCollection('proofCases')).map(entry=>entry.data) : [];
 const items = resolvePageList(config, pages, 'public', cases);
@@ -26,11 +30,11 @@ const cardLayout = config.columns === 1 ? 'stacked' : config.columns === 2 ? 'tw
             <div class:list={['listing-copy',config.layout === 'mediaCards'&&'card-body min-w-0 flex-1 items-start gap-0']}>
               <h3 class:list={[config.layout === 'mediaCards'&&'card-title mb-4 text-2xl']}>{item.title}</h3>
               <p class:list={[config.layout === 'mediaCards'&&'mb-6 text-base-content']}>{item.summary}</p>
-              {item.href&&(config.layout === 'mediaCards'?<div class="card-actions mt-auto"><a class="text-link text-base-content" href={item.href}>{item.label}<Arrow diagonal /></a></div>:<a class="text-link" href={item.href}>{item.label}<Arrow diagonal /></a>)}
+              {item.href&&(config.layout === 'mediaCards'?<div class="card-actions mt-auto"><a class:list={[actionClasses(listAction), listAction === 'link' && 'text-base-content']} href={item.href}>{item.label}<Arrow diagonal /></a></div>:<a class={actionClasses(listAction)} href={item.href}>{item.label}<Arrow diagonal /></a>)}
             </div>
             {config.layout === 'alternating' && item.displayVisual && <ListingVisual visual={item.displayVisual} />}
-          </article> : config.layout === 'links' ? (item.href ? <a class="text-link" href={item.href}>{item.title}<Arrow diagonal /></a> : <span class="font-semibold">{item.title}</span>) :
-          <article class="info-item page-list-row"><h3>{item.title}</h3><p>{item.summary}</p>{item.href&&<a class="text-link" href={item.href}>{item.label}<Arrow diagonal /></a>}</article>}
+          </article> : config.layout === 'links' ? (item.href ? <a class={actionClasses(listAction)} href={item.href}>{item.title}<Arrow diagonal /></a> : <span class="font-semibold">{item.title}</span>) :
+          <article class="info-item page-list-row"><h3>{item.title}</h3><p>{item.summary}</p>{item.href&&<a class={actionClasses(listAction)} href={item.href}>{item.label}<Arrow diagonal /></a>}</article>}
       </li>)}
     </ul>
   </HomeSection>}

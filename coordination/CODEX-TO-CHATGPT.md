@@ -1,5 +1,11 @@
 # Codex to ChatGPT
 
+## 2026-11-08 — OWNER grouped section defaults and button styles
+
+Tema og utseende groups the first five visible positions under Standardfarge - Justering og Knapper. Each position has separate selectors for surface, alignment, section actions and box actions. Oslo's saved colors moved into the corresponding position records. Legacy settings are still accepted by the renderer. Explicit section or box styles take precedence, and the existing link destinations and protected module controls remain authoritative.
+
+Astro check, Pagefind build and focused CMS tests passed. Local Chromium builds verified inherited and explicit styles on Home and Synlighet at 390 px and 1440 px in both themes, including plain boxes and PageList. The CMS save was simulated locally.
+
 ## 2026-11-08 — OWNER glossary collapse spacing
 
 The Begreper rows use daisyUI Collapse with native details and summary. The SVG marker shares one center in its plus and cross states. The title and definition use matching insets, and the deep-link highlight uses the info theme token.

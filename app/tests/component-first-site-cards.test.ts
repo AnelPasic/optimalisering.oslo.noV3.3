@@ -13,7 +13,7 @@ test('MWS #26 Oslo pilot: automatic visual cards use native ContentCard, plain s
  assert.match(home,/<ContentCard[^>]+linkVariant=\{boxVariantAttribute/);
  assert.doesNotMatch(home,/\{card:cards&&/);
  assert.doesNotMatch(project,/\.info-item\.card\s*\{/,'legacy duplicate card padding must retire');
- for(const part of ['card-body','card-title','card-actions','linkVariant','text-link','transparent'])assert.ok(card.includes(part),part);
+ for(const part of ['card-body','card-title','card-actions','linkVariant','actionClasses(action)','transparent'])assert.ok(card.includes(part),part);
  assert.match(home,/class:list=\{\['info-item/,'editorial/plain variants stay separate');
 });
 test('MWS #26 Oslo pilot: package shells are daisyUI and complex offer internals remain unchanged',()=>{

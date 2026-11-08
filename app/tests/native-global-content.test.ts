@@ -1,10 +1,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {readFileSync,readdirSync,mkdirSync,mkdtempSync,writeFileSync,rmSync} from 'node:fs';
+import {copyFileSync,readFileSync,mkdirSync,mkdtempSync,writeFileSync,rmSync} from 'node:fs';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
 import {randomUUID} from 'node:crypto';
 import YAML from 'yaml';
+import {pageFilePaths} from './helpers/page-sources.ts';
 import {pageSchema} from '../src/lib/content-schema.ts';
 import {readSharedContent,resolveSharedContentPlacement,sharedContentSchema} from '../src/lib/shared-content.ts';
 import {cmsJsonSave,entryForFile,resolveField} from './helpers/pages-cms-json.ts';
@@ -19,8 +20,8 @@ test('native JSON editor and reference on all seventeen pages, no promotion',()=
  assert.equal(globalCollection.operations.delete,false);
  assert.deepEqual(globalCollection.exclude,['README.md']);
  assert.equal(globalCollection.filename,'{fields.id}.json');
- assert.deepEqual(globalCollection.fields.map((f:any)=>f.name),['_block','uid','id','name','eyebrow','heading','headingAlign','layout','surface','body','items','links']);
- const files=readdirSync('src/content/pages').filter(file=>file.endsWith('.json'));
+ assert.deepEqual(globalCollection.fields.map((f:any)=>f.name),['_block','uid','id','name','eyebrow','heading','headingAlign','layout','surface','buttonStyle','boxButtonStyle','body','items','links']);
+ const files=pageFilePaths();
  assert.equal(files.length,17);
  for(const file of files){
   const editor=entryForFile(cms,'app/src/content/pages/'+file);
@@ -73,6 +74,12 @@ test('real page schema resolves one shared source on Home and Om, rejects collis
  const home=JSON.parse(readFileSync('src/content/pages/home.json','utf8'));
  const om=JSON.parse(readFileSync('src/content/pages/om.json','utf8'));
  try{
+  for (const section of [...home.sections,...om.sections]) {
+   if (section._block === 'sharedContent') {
+    const file = section.entry + '.json';
+    copyFileSync(join('src/content/global-content',file),join(dir,file));
+   }
+  }
   process.chdir(root);
   const a=pageSchema.parse({...home,sections:[...home.sections,reference]});
   const b=pageSchema.parse({...om,sections:[...om.sections,reference]});

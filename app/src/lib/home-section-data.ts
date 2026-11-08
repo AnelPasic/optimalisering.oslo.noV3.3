@@ -1,3 +1,4 @@
+import { sectionDefaultsSchema } from './section-appearance.ts';
 import {sectionSurfaceDefaultsSchema, surfaceSchema} from './surface.ts';
 import {sectionAlignmentDefaultsSchema} from './heading-alignment.ts';
 import { z } from 'astro/zod';
@@ -75,6 +76,7 @@ export const homeSectionDataSchema = z.object({
     }).strict(),
     themes: chromeThemeSchema,
     typography: typographySchema.optional(),
+    sectionDefaults: sectionDefaultsSchema.optional(),
     sectionSurfaceDefaults: sectionSurfaceDefaultsSchema.optional(),
     sectionAlignmentDefaults: sectionAlignmentDefaultsSchema.optional(),
     assessmentLink: link.extend({
