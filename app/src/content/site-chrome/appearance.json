@@ -8,7 +8,7 @@
     "darkLabel": "Dark"
   },
   "typography": {
-    "fontFamily": "hanken-grotesk",
+    "fontFamily": "current",
     "cssVariables": "--text-5xl: clamp(1.75rem, 4.5vw, 3.25rem); \n--text-6xl: clamp(2.75rem, 4.5vw, 3.25rem); "
   },
   "sectionDefaults": {
