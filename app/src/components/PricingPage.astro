@@ -29,15 +29,15 @@ const sections = page.sections.map(section => section.id === 'kostnader' ? {
 <div data-page-family="pricing">
   <CommercialHero content={resolvePageHero(page,commercial)} />
   {/* All pricing placements are now authored in the CMS sections list. */}
-  {visibleServiceSections({slug:page.slug,sections}).map(section => section._block==='pricingModule'
+  {visibleServiceSections({slug:page.slug,sections}).map((section, index) => section._block==='pricingModule'
     ? section.pricingModule==='valg'
       ? <PricingDecision packages={packages} />
       : section.pricingModule==='vekst'
         ? <PricingMultiplier packages={packages} />
         : <Comparison packages={packages} />
     : section.globalElement
-      ? <GlobalContentSection element={section.globalElement} pricingExpanded={section.globalElement==='priser'} faqItems={page.faq} />
-    : section._block==='proofList'&&section.proofList ? <ProofList sectionId={section.id} config={section.proofList} /> : section._block==='pageList' ? <PageList section={section} /> : <ContentSection section={section} linkVariant={section.id==='gratis'?'button':undefined} infoSurface={section.id==='gratis'}>
+      ? <GlobalContentSection element={section.globalElement} index={index} pricingExpanded={section.globalElement==='priser'} faqItems={page.faq} />
+    : section._block==='proofList'&&section.proofList ? <ProofList sectionId={section.id} config={section.proofList} /> : section._block==='pageList' ? <PageList section={section} index={index} /> : <ContentSection section={section} index={index} linkVariant={section.id==='gratis'?'button':undefined} infoSurface={section.id==='gratis'}>
     {section.id === 'arbeidsomrader' && <div class="package-notes body-copy"><p>{packages.areasLabel}: {packages.areas.join(' / ')}.</p><p>{packages.foundationNote}</p></div>}
   </ContentSection>)}
   {!hasGlobalFaq && <Faq items={page.faq} id="sporsmal" heading={commercial.faqVisible===false?undefined:commercial.faqHeading} eyebrow={commercial.faqVisible===false?undefined:commercial.faqEyebrow} />}

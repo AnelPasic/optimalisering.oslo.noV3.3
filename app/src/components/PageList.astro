@@ -5,8 +5,8 @@ import Arrow from './Arrow.astro';
 import ListingVisual from './ListingVisual.astro';
 import { resolvePageList, pageListPresentationVisual, type ListPage } from '../lib/page-list';
 import { getCollection } from 'astro:content';
-interface Props { section: CollectionEntry<'pages'>['data']['sections'][number]; pages?: readonly ListPage[]; }
-const { section, pages: suppliedPages } = Astro.props;
+interface Props { section: CollectionEntry<'pages'>['data']['sections'][number]; index?: number; pages?: readonly ListPage[]; }
+const { section, index, pages: suppliedPages } = Astro.props;
 const config = section.pageList!;
 const pages = suppliedPages ?? (await getCollection('pages')).map(entry=>entry.data);
 const cases = config.source === 'cases' || config.mode === 'manual' ? (await getCollection('proofCases')).map(entry=>entry.data) : [];
@@ -16,8 +16,8 @@ const displayedItems = items.map(item => ({ ...item, displayVisual: pageListPres
 // For PageList cards, reuse HomeSection's existing column/viewport contract.
 const cardLayout = config.columns === 1 ? 'stacked' : config.columns === 2 ? 'two-columns' : config.columns === 3 ? 'three-columns' : section.layout;
 ---
-{config.layout === 'cards' ? <HomeSection section={{ ...section, items: cards, layout: cardLayout }} pageListColumns={config.columns} /> :
-  <HomeSection section={section}>
+{config.layout === 'cards' ? <HomeSection section={{ ...section, items: cards, layout: cardLayout }} index={index} pageListColumns={config.columns} /> :
+  <HomeSection section={section} index={index}>
     <ul class:list={['page-list', `page-list-${config.layout}`]} data-count={items.length} data-columns={config.layout==='alternating'?undefined:config.columns}>
       {displayedItems.map(item => <li>
         {config.layout === 'mediaCards' || config.layout === 'alternating' ?

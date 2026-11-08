@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import YAML from 'yaml';
 import { homeSectionDataSchema } from '../src/lib/home-section-data.ts';
+import { resolveSectionSurface } from '../src/lib/surface.ts';
 import { cmsJsonSave, entryForFile } from './helpers/pages-cms-json.ts';
 
 const read = (path: string) => JSON.parse(readFileSync(path, 'utf8'));
@@ -52,8 +53,29 @@ test('CMS chrome color pairs are optional and survive a save in their own files'
   const chrome = schema.parse(combined(savedHeader,savedFooter));
   assert.equal(chrome.headerOptions.surface,'primary');
   assert.equal(chrome.footerSurface,'info');
-  assert.equal(schema.parse(combined()).footerSurface,undefined);
+  const legacyFooter = {...footer};
+  delete legacyFooter.footerSurface;
+  assert.equal(schema.parse(combined(header,legacyFooter)).footerSurface,undefined);
   assert.equal(schema.safeParse(combined(savedHeader,{...savedFooter,footerSurface:'#fff'})).success,false);
+});
+
+test('CMS Appearance saves five positional defaults and keeps the local color in control', () => {
+  const field = appearanceEntry.fields.find((field:any)=>field.name==='sectionSurfaceDefaults');
+  assert.deepEqual(field.fields.map((item:any)=>item.name), ['first','second','third','fourth','fifth']);
+  assert.ok(field.fields.every((item:any)=>item.component==='surfaceChoice'));
+  const values={first:'accent',second:'info',third:'default',fifth:'success'};
+  const edited={...appearance,sectionSurfaceDefaults:values};
+  const saved=JSON.parse(cmsJsonSave(appearance,edited,appearanceEntry,cms));
+  const defaults=schema.parse({...combined(),sectionSurfaceDefaults:saved.sectionSurfaceDefaults}).sectionSurfaceDefaults;
+  assert.deepEqual(defaults,values);
+  assert.equal(resolveSectionSurface('default',1,defaults),'info');
+  assert.equal(resolveSectionSurface('primary',1,defaults),'primary');
+  assert.equal(resolveSectionSurface(undefined,4,defaults),'success');
+  assert.equal(resolveSectionSurface('default',2,defaults),undefined);
+  assert.equal(resolveSectionSurface('default',5,defaults),undefined);
+  assert.equal(resolveSectionSurface('default',1,defaults,true),undefined);
+  assert.equal(resolveSectionSurface('default',1,schema.parse(combined()).sectionSurfaceDefaults),undefined);
+  assert.equal(schema.safeParse({...combined(),sectionSurfaceDefaults:{second:'#fff'}}).success,false);
 });
 
 test('Independent header CMS edit preserves OWNER menu and separate appearance and footer', () => {

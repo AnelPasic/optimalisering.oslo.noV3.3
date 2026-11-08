@@ -2600,6 +2600,19 @@ content:
             type: boolean
             required: true
             description: Gjelder både toppmeny, mobilmeny og lagret systempreferanse.
+          - name: sectionSurfaceDefaults
+            label: Standardfarger for seksjon 1–5
+            type: object
+            description: >
+              Gjelder når Seksjonsfarge står på Standard. Plassene følger rekkefølgen
+              på synlige rader i Innholdsseksjoner. Hero er separat.
+              Standard her beholder seksjonens vanlige fargepar.
+            fields:
+              - { name: first, label: "1. seksjon", component: surfaceChoice }
+              - { name: second, label: "2. seksjon", component: surfaceChoice }
+              - { name: third, label: "3. seksjon", component: surfaceChoice }
+              - { name: fourth, label: "4. seksjon", component: surfaceChoice }
+              - { name: fifth, label: "5. seksjon", component: surfaceChoice }
           - name: typography
             label: Typografi (Tailwind CSS v4)
             type: object

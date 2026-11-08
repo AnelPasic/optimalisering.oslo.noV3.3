@@ -16,10 +16,10 @@ const { page, pages } = Astro.props;
 ---
 <div data-page-family="service">
   <CommercialHero content={resolvePageHero(page)} />
-  {visibleServiceSections(page).map(section => section.globalElement
-    ? <GlobalContentSection element={section.globalElement} faqItems={page.faq} />
+  {visibleServiceSections(page).map((section, index) => section.globalElement
+    ? <GlobalContentSection element={section.globalElement} index={index} faqItems={page.faq} />
     : section._block === 'proofList'&&section.proofList ? <ProofList sectionId={section.id} config={section.proofList} />
-    : section._block === 'pageList' ? <PageList section={section} pages={pages} /> : <ContentSection section={section} />)}
+    : section._block === 'pageList' ? <PageList section={section} index={index} pages={pages} /> : <ContentSection section={section} index={index} />)}
   {!hasGlobalFaq(page.sections) && <Faq id="sporsmal" items={page.faq} />}
   <ClosingCta link={page.cta} />
 </div>

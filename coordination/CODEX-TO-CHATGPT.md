@@ -1,5 +1,11 @@
 # Codex to ChatGPT
 
+## 2026-11-08 — OWNER positional section colors
+
+Pages CMS exposes five optional daisyUI color pairs under Globale Elementer → Tema og utseende. Standard in an editable section uses the pair for that row's position in the visible Innholdsseksjoner list. The section's explicit choice takes precedence. Hero is separate and specialized modules keep their own palettes. Empty settings and positions after five use the existing design.
+
+Astro check, build with Pagefind and five focused CMS and surface tests passed. Chromium checked computed colors on Home and Synlighet at desktop and mobile widths in both themes using isolated CMS fixtures. Coverage included a shared section at two positions, local overrides, a hidden row, PageList and the original footer selection. CMS saving was simulated locally.
+
 ## 2026-11-06 — OWNER Pages CMS daisyUI color pairs
 
 Pages CMS now exposes Fargepar for Toppmeny, Hero and Footer. Existing section and card options display the same background and foreground token names, such as `primary primary-content` and `info info-content`. Standard preserves each component's original palette. The change uses the existing main-branch delivery and Git-connected Worker build.

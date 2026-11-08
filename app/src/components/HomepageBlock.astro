@@ -13,8 +13,8 @@ import Faq from './Faq.astro';
 import PageList from './PageList.astro';
 import ProofList from './ProofList.astro';
 import { combineFaqItems, type FaqItem } from '../lib/faq-items';
-interface Props { block: HomepageBlock; records: CollectionEntry<'proofCases'>['data'][]; faqItems?: readonly FaqItem[]; }
-const {block,records,faqItems=[]}=Astro.props;
+interface Props { block: HomepageBlock; index?: number; records: CollectionEntry<'proofCases'>['data'][]; faqItems?: readonly FaqItem[]; }
+const {block,index,records,faqItems=[]}=Astro.props;
 const render=(value:HomepageBlock)=>{switch(value._block){case 'selector':case 'calculator':case 'packages':case 'proof':case 'content':case 'assessment':case 'faq':case 'pageList':case 'proofList':return value._block;default:return assertNever(value);}};
 render(block);
 ---
@@ -22,8 +22,8 @@ render(block);
 {block._block==='calculator'&&<Leverage content={block.content} />}
 {block._block==='packages'&&<Packages content={block.content} />}
 {block._block==='proof'&&<Proof content={block.content} records={records} />}
-{block._block==='content'&&<ContentSection section={block} />}
-{block._block==='pageList'&&<PageList section={{...block,layout:'default'}} />}
+{block._block==='content'&&<ContentSection section={block} index={index} />}
+{block._block==='pageList'&&<PageList section={{...block,layout:'default'}} index={index} />}
 {block._block==='proofList'&&<ProofList sectionId={block.id} config={block.proofList} records={records} />}
 {block._block==='assessment'&&<Assessment section={block.content.section} content={block.content.form} layout={block.content.layout} />}
 {block._block==='faq'&&<Faq id={block.id} {...block.content} items={combineFaqItems(block.content.items, faqItems)} />}

@@ -8,10 +8,11 @@ import type { FaqItem } from '../lib/faq-items';
 
 interface Props {
   element: GlobalElementId;
+  index?: number;
   pricingExpanded?: boolean;
   faqItems?: readonly FaqItem[];
 }
-const { element, pricingExpanded = false, faqItems = [] } = Astro.props;
+const { element, index, pricingExpanded = false, faqItems = [] } = Astro.props;
 const block = getGlobalElement(element);
 // Read evidence only for the deliberately placed global proof block.
 const records = element === 'resultater' ? (await getCollection('proofCases')).map(record => record.data) : [];
@@ -21,4 +22,4 @@ if (element === 'resultater') {
 ---
 {pricingExpanded && element === 'priser'
   ? <Packages content={getGlobalElement('priser').content} mode="expanded" showHeading={false} showNotes={false} headingTag="h2" labelledBy="pricing-title" recommendedAnchor="begge" />
-  : <HomepageBlock block={block} records={records} faqItems={faqItems} />}
+  : <HomepageBlock block={block} index={index} records={records} faqItems={faqItems} />}
