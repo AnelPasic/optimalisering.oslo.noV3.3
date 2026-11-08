@@ -2,17 +2,17 @@
   "slug": "vilkar",
   "kind": "utility",
   "seo": {
-    "title": "Vilkår - hva må avtales før videre arbeid? | Medon",
-    "description": "Omfang, pris, fakturering og oppsigelse må avklares før betalt arbeid. Dette utkastet beskriver åpne avtalespørsmål og den gratis sjekkens grenser."
+    "title": "Avtalevilkår | Optimalisering Oslo",
+    "description": "Slik fungerer bestilling, tilbud, månedlig fakturering, oppsigelse og tjenesteomfang hos Optimalisering Oslo."
   },
   "hero": {
     "layout": "split-right",
-    "eyebrow": "Avtalegrunnlag - utkast",
-    "title": "Videre arbeid trenger en tydelig avtale.",
-    "support": "Dette er en oversikt over hva som må avklares. Det er ikke et ferdig sett med salgs- eller kontraktsvilkår. Medon AS er leverandør av Optimalisering Oslo.",
+    "eyebrow": "Avtalevilkår",
+    "title": "Klare avtaler. Ingen bindingstid.",
+    "support": "Du skal vite hva du kjøper og hva du betaler før vi starter. Optimalisering Oslo leveres og faktureres av Medon AS.",
     "primaryCta": {
-      "label": "Ta en gratis sjekk",
-      "href": "/vurdering/"
+      "label": "Se pakker",
+      "href": "/priser/"
     },
     "visual": {
       "kind": "none"
@@ -22,20 +22,20 @@
     {
       "_block": "content",
       "id": "gratis",
-      "heading": "Den gratis sjekken er avgrenset.",
+      "heading": "Gratis sjekk er gratis.",
       "body": [
-        "Sjekken er en manuell vurdering som gir kort veiledning om hva Medon ville startet med, hvorfor, og om Synlighet, Konvertering eller begge ser mest relevant ut.",
-        "Den inkluderer ikke automatisk poengsum, full revisjon, komplett feilliste, prognose eller gjennomføring. Det er ikke fastsatt et løfte om svartid. Å be om sjekken fastsetter ikke en avtale om betalt arbeid."
+        "Vi tilbyr en avgrenset vurdering av den offentlige nettsiden og sender tre konkrete prioriterte funn innen 2 norske virkedager. Den gratis sjekken inkluderer ikke gjennomføring eller en full teknisk revisjon.",
+        "Innsending av skjema er en forespørsel, ikke en bindende avtale eller en betalingsforpliktelse."
       ]
     },
     {
       "_block": "content",
       "id": "omfang",
-      "heading": "Tjeneste, ansvar og leveransegrenser må avtales.",
+      "heading": "Vi avtaler pris og arbeid før vi starter.",
       "body": [
-        "Videre arbeid kan gjelde Synlighet, Konvertering, begge eller et større omfang. Hovednettsiden eller nettbutikken er normalt utgangspunktet. Flere nettsteder og ekstra landingssider må vurderes særskilt.",
-        "Avtalen må beskrive hva som inngår og faller utenfor, hvem som gir nødvendige tilganger, og hvem som har ansvar for arbeid i systemer eller hos andre leverandører.",
-        "Medon skal prioritere arbeidet innenfor avtalt omfang. Dette utkastet fastsetter ikke endelige inkluderinger eller leveransekvoter."
+        "Du får et skriftlig oppstartstilbud som angir valgt pakke, månedspris, prioritert arbeidsomfang og oppstart. Du godkjenner ved å svare «Jeg godkjenner tilbudet» på e-post.",
+        "Optimalisering arbeider med ett prioritert område av gangen. Vekst arbeider med to områder som støtter hverandre. Enterprise gir større kapasitet etter avtalt omfang. Vi begynner ikke arbeid, fakturering eller deling av tilganger før tilbudet er godkjent.",
+        "Tilganger gis gjennom plattformenes egne invitasjonsfunksjoner, ikke ved å sende passord på e-post."
       ],
       "links": [
         {
@@ -47,31 +47,31 @@
     {
       "_block": "content",
       "id": "pris",
-      "heading": "Pris, fakturering og oppsigelse er ikke fastsatt her.",
+      "heading": "Månedlig betaling, uten bindingstid.",
       "body": [
-        "Videre arbeid skal ha avtalt pris og omfang. Offentlige månedspriser, faktureringsregler, eventuell binding og oppsigelsesvilkår er ikke ferdigstilt i dette utkastet.",
-        "Annonsebudsjett og aktuelle eksterne plattformkostnader er utenom den normale tjenesteprisen dersom det ikke uttrykkelig er avtalt noe annet. Aktuelle kostnader må beskrives konkret i tilbudet.",
-        "Denne siden innfører ikke betalingsfrist, bindingstid, oppsigelsesperiode, rabatt eller refusjonsordning."
+        "Månedsprisen faktureres forskuddsvis fra avtalt oppstartsdato etter skriftlig godkjenning. Priser er ekskl. mva. Eventuelt annonsebudsjett kommer i tillegg. Andre eksterne kostnader avklares særskilt.",
+        "Du kan si opp på e-post når som helst. Vi fortsetter tjenesten ut den allerede betalte månedsperioden. Deretter avsluttes tjenesten uten ekstra oppsigelsesmåned eller ny faktura.",
+        "Det gis normalt ikke forholdsmessig refusjon for en påbegynt månedsperiode, med mindre noe annet er avtalt. Konkrete avvik fra standardvilkårene oppgis i tilbudet."
       ]
     },
     {
       "_block": "content",
       "id": "resultat",
-      "heading": "Arbeid og forventet nytte skal ikke forveksles med garantier.",
+      "heading": "Forbedringer, ikke garantier.",
       "body": [
-        "Medon undersøker, gjennomfører avtalt arbeid og følger effekten. Det er ikke lovet bestemte søkeplasseringer, AI-anbefalinger, trafikkmengder eller nye kunder.",
-        "Forutsetninger, rapportering, håndtering av endringer og eventuelle øvrige kontraktsbestemmelser må avklares i en konkret avtale før gjennomføring."
+        "Vi gjennomfører prioriterte forbedringer innenfor avtalt omfang og følger med på resultatene. Vi garanterer ikke bestemte plasseringer i Google, omtale i AI-svar, trafikkmengder eller antall nye kunder.",
+        "Optimalisering Oslo er tjenestens kundevendte navn. Medon AS er juridisk avtalepart og fakturautsteder. Ved motstrid går et individuelt godkjent tilbud foran generelle beskrivelser på nettsiden."
       ]
     }
   ],
   "faq": [
     {
-      "question": "Er dette gjeldende kontraktsvilkår?",
-      "answer": "Nei. Dette er en oversikt til gjennomgang. Endelig avtale må fastsette pris, omfang, ansvar og øvrige vilkår."
+      "question": "Er bestillingsskjemaet bindende?",
+      "answer": "Nei. Du får først et skriftlig tilbud med pris og omfang, som du må godkjenne før vi starter."
     },
     {
-      "question": "Bestiller jeg betalt arbeid ved å sende skjemaet?",
-      "answer": "Den gratis sjekken er inngangen til en mulig vurdering av videre behov. Betalt arbeid må ha eget avtalt omfang og pris."
+      "question": "Hvor lang oppsigelsestid har jeg?",
+      "answer": "Ingen ekstra oppsigelsesmåned. Du kan si opp på e-post når som helst, og tjenesten løper ut den allerede betalte månedsperioden."
     }
   ]
 }
