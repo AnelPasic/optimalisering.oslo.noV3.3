@@ -2,16 +2,16 @@
   "slug": "kontakt",
   "kind": "utility",
   "seo": {
-    "title": "Kontakt om Optimalisering Oslo | Medon AS",
-    "description": "Vil du diskutere nettsiden, et samarbeid eller et annet behov? Optimalisering Oslo leveres av Medon AS. Bruk skjemaet og beskriv spørsmålet kort."
+    "title": "Kontakt Optimalisering Oslo",
+    "description": "Spørsmål om SEO, annonsering, synlighet, konvertering eller samarbeid? Ta kontakt med Optimalisering Oslo."
   },
   "hero": {
     "layout": "split-right",
-    "eyebrow": "Kontakt Medon om tjenesten",
-    "title": "Har du et annet spørsmål enn en sjekk av nettsiden?",
-    "support": "Du kan også ta kontakt om et mulig samarbeid eller et behov som ikke passer helt i tjenestebeskrivelsene. Medon AS er leverandøren bak Optimalisering Oslo.",
+    "eyebrow": "Kontakt",
+    "title": "Har du et spørsmål? Vi er her.",
+    "support": "Enten du vurderer å bli kunde eller bare lurer på hvor du bør starte, hjelper vi deg videre.",
     "primaryCta": {
-      "label": "Gå til skjemaet",
+      "label": "Få 3 gratis funn",
       "href": "/vurdering/#skjema"
     },
     "visual": {
@@ -22,10 +22,10 @@
     {
       "_block": "content",
       "id": "sporsmal",
-      "heading": "Fortell kort hva det gjelder.",
+      "heading": "Fortell oss kort hva du trenger hjelp med.",
       "body": [
-        "Bruk skjemaet på vurderingssiden og skriv i meldingen at det gjelder et annet spørsmål. Oppgi en e-postadresse for bedriften og nettadressen som er relevant for spørsmålet.",
-        "Du trenger ikke sende innlogging eller sensitive opplysninger. En kort forklaring av behovet er et bedre sted å starte enn å dele interne dokumenter."
+        "Bruk skjemaet og skriv gjerne hva det gjelder. Vi ser på henvendelsen og tar kontakt med deg.",
+        "Ikke send passord eller sensitive opplysninger."
       ],
       "links": [
         {
@@ -37,19 +37,19 @@
     {
       "_block": "content",
       "id": "retning",
-      "heading": "Usikker på hvor du bør starte? Be om en gratis sjekk.",
+      "heading": "Usikker på hvor du bør starte?",
       "body": [
-        "For spørsmål om hva som begrenser nettsiden, er den gratis sjekken den vanlige inngangen. Den er avgrenset og manuell, og gir kort veiledning om hva Medon ville startet med og hvorfor.",
-        "Den inkluderer ikke en full revisjon, komplett feilliste, prognose eller gjennomføring. Det er ikke fastsatt et løfte om svartid i dette utkastet."
+        "Send oss nettsiden din, så får du tre konkrete funn og vår anbefaling om hva du bør forbedre først innen 2 virkedager.",
+        "Gratis vurdering. Ingen forpliktelser. Vil du ha hjelp med gjennomføringen, finner vi en passende start sammen."
       ],
       "links": [
         {
-          "label": "Les om den gratis sjekken",
+          "label": "Få 3 gratis funn",
           "href": "/vurdering/"
         },
         {
-          "label": "Om leverandøren",
-          "href": "/om/"
+          "label": "Se pakker og priser",
+          "href": "/priser/"
         }
       ]
     }
@@ -58,10 +58,6 @@
     {
       "question": "Kan jeg kontakte dere uten å bestille en tjeneste?",
       "answer": "Ja. Bruk meldingen til å beskrive spørsmålet. Videre betalt arbeid krever et eget avtalt omfang og en avtalt pris."
-    },
-    {
-      "question": "Hvor finner jeg telefon eller direkte e-post?",
-      "answer": "Direkte kontaktopplysninger er ikke verifisert for dette utkastet. Vi viser derfor skjemaet som kontaktvei i forhåndsvisningen."
     }
   ]
 }
