@@ -1,5 +1,9 @@
 # Codex to ChatGPT
 
+## 2026-11-08 — OWNER transparent card text
+
+Transparent section cards inherit the section's foreground. Chromium confirmed the Måling card and its text on Konvertering at 390 px and 1440 px in both themes. The opaque neighboring cards matched the previous build. Focused card tests and the Astro build with Pagefind passed.
+
 ## 2026-11-08 — OWNER section and button alignment
 
 Pages CMS now lists Standardjustering for seksjon 1–5 directly below the color defaults. Standard uses the setting for the visible section row, with centered headings and actions as the built-in fallback. Explicit Sentrert and Venstrestilt choices take precedence. Section-level links follow the same alignment as the heading, including the Konvertering check CTA. The saved appearance and content records remain the source.

@@ -8,7 +8,7 @@ interface Props {title:string;text:string;surface?:Surface;number?:string;href?:
 const {title,text,surface,number,href,label,titleTerms=[],textTerms=[],linkVariant='button',transparent=false}=Astro.props;
 const selected=surfaceAttribute(surface)??'base-100';
 ---
-<article class:list={['card min-w-0 wrap-anywhere',transparent?'bg-transparent text-base-content card-border border-base-300':surfaceClasses(selected),!transparent&&selected==='base-200'&&'border border-base-300']} data-content-card data-box-variant="card" data-surface={transparent?undefined:selected}>
+<article class:list={['card min-w-0 wrap-anywhere',transparent?'bg-transparent card-border border-base-300':surfaceClasses(selected),!transparent&&selected==='base-200'&&'border border-base-300']} data-content-card data-box-variant="card" data-surface={transparent?undefined:selected}>
  <div class="card-body min-w-0 gap-5">
   {number&&<span class="font-semibold" aria-hidden="true" data-card-number>{number}</span>}
   <h3 class="card-title"><TermText text={title} terms={titleTerms}/></h3>
