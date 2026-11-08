@@ -12,7 +12,8 @@
     "support": "Vi finner mulighetene, prioriterer det som kan gi størst gevinst og gjennomfører forbedringene. Du skal få jobben gjort, ikke bare få en rapport om den.",
     "primaryCta": {
       "label": "Få 3 gratis funn",
-      "href": "/vurdering/"
+      "href": "/vurdering/",
+      "suggestedHref": "/#sjekk"
     },
     "visual": {
       "kind": "none"
