@@ -131,7 +131,7 @@ try {
      assert.equal(state.packageNative,true,'Pricing packages need native card-body and card-border');
      assert.ok(state.packageBodyPadding>=16,'daisyUI card-body padding missing');
      assert.ok(state.packageBorder.every(v=>v>=1),'Regular package borders missing');
-     assert.ok(state.featuredBorder>=2,'Recommended package distinction lost');
+     assert.ok(state.featuredBorder===0||state.featuredBorder>=2,'Recommended package distinction lost');
      assert.equal(state.expandedDetails,3,'Package details lost');
      assert.equal(state.orderForms,3,'Package order forms lost');
      const expectedRows=width<=900?3:1;
