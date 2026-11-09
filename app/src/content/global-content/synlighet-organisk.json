@@ -14,7 +14,8 @@
       "text": "Vi finner søkene som kan gi deg kunder, forbedrer sidene de møter og følger opp det som virker. Målet er flere relevante bestillinger uten å betale Google for hvert klikk.",
       "href": "/seo/",
       "label": "Les mer om SEO",
-      "surface": "info"
+      "surface": "info",
+      "buttonStyle": "btn-neutral"
     }
   ],
   "eyebrow": "Organisk synlighet",
