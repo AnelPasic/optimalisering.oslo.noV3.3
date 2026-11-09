@@ -29,18 +29,6 @@
   "sections": [
     {
       "_block": "content",
-      "id": "vekstmodell",
-      "eyebrow": "Vår vekstmodell",
-      "heading": "Finn en lønnsom kostnad per bestilling. Forbedre den. Skaler så langt etterspørsel, marginer og kapasitet tillater.",
-      "headingAlign": "center",
-      "layout": "default",
-      "surface": "base-200",
-      "body": [
-        "Vi ser på hva det faktisk koster å få en bestilling, og om den er lønnsom. Når tallene fungerer, kan vi øke innsatsen. Først da blir mer trafikk til vekst."
-      ]
-    },
-    {
-      "_block": "content",
       "id": "kanaler",
       "eyebrow": "Organisk synlighet",
       "heading": "Annonser gir fart. Organisk synlighet bygger lønnsomhet.",
@@ -74,6 +62,22 @@
           "label": "Les om AI-synlighet",
           "surface": "secondary"
         }
+      ]
+    },
+    {
+      "_block": "global",
+      "element": "regneeksempel"
+    },
+    {
+      "_block": "content",
+      "id": "vekstmodell",
+      "eyebrow": "Vår vekstmodell",
+      "heading": "Finn en lønnsom kostnad per bestilling. Forbedre den. Skaler så langt etterspørsel, marginer og kapasitet tillater.",
+      "headingAlign": "center",
+      "layout": "default",
+      "surface": "base-200",
+      "body": [
+        "Vi ser på hva det faktisk koster å få en bestilling, og om den er lønnsom. Når tallene fungerer, kan vi øke innsatsen. Først da blir mer trafikk til vekst."
       ]
     },
     {
@@ -134,10 +138,6 @@
           "text": "Gjør telefonnummer, bestilling eller kontaktskjema enkelt å finne når kunden er klar for neste steg."
         }
       ]
-    },
-    {
-      "_block": "global",
-      "element": "regneeksempel"
     },
     {
       "_block": "content",
