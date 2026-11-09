@@ -1844,10 +1844,6 @@ content:
                     label: Pakkeoppsummering
                     type: string
                     required: true
-                  - name: fit
-                    label: Full tekst – hvem pakken passer for
-                    type: text
-                    required: true
                   - name: compact
                     label: Kort tekst
                     type: object

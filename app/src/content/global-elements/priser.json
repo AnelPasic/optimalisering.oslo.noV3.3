@@ -50,7 +50,6 @@
       {
         "title": "Optimalisering",
         "descriptor": "Ett viktig forbedringsområde om gangen.",
-        "fit": "-",
         "compact": {
           "fit": "Passer for små og mellomstore bedrifter med én tydelig kundereise, én hovedtjeneste eller én flaskehals som er viktigst om gangen.",
           "situations": [
@@ -112,7 +111,6 @@
       {
         "title": "Vekst",
         "descriptor": "To grep som forsterker hverandre.",
-        "fit": "-",
         "compact": {
           "fit": "For bedrifter som ønsker både mer trafikk og større andel av besøkende til å bestille.",
           "situations": [
@@ -170,7 +168,6 @@
       {
         "title": "Enterprise",
         "descriptor": "Flere tjenester og kundereiser.",
-        "fit": "-",
         "compact": {
           "fit": "Passer for bedrifter med flere typer tjenester, produktområder, markeder, lokasjoner eller målgrupper som møter forskjellige konkurrenter og trenger samtidig prioritering.",
           "situations": [

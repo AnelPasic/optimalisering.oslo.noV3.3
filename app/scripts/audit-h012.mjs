@@ -21,7 +21,7 @@ for (const [path, full] of [['dist/index.html', false], ['dist/priser/index.html
   assert.equal(cards.length, 3);
   for (const [index, card] of cards.entries()) {
     const item = expected.items[index], text = normalize(card);
-    for (const copy of [item.title, item.descriptor, item.cta.label, ...(full ? [item.fit, item.typicalBusiness, item.scope, item.distinction, item.priceNote, item.selectionRule, ...item.situations, ...(item.focusAreas ?? []), ...(item.combinations ?? []).flatMap(pair => [pair.title, pair.text])] : [item.detailLink.label])].filter(Boolean)) assert.ok(text.includes(copy), `${path}: exact ${copy}`);
+    for (const copy of [item.title, item.descriptor, item.cta.label, ...(full ? [item.typicalBusiness, item.scope, item.distinction, item.priceNote, item.selectionRule, ...item.situations, ...(item.focusAreas ?? []), ...(item.combinations ?? []).flatMap(pair => [pair.title, pair.text])] : [item.detailLink.label])].filter(Boolean)) assert.ok(text.includes(copy), `${path}: exact ${copy}`);
     const asset = resolvePackageAsset(source.items[index].visualAsset);
     assert.equal((card.match(/class="package-curve"/g) ?? []).length, asset ? 0 : index === 2 ? 3 : 1, 'Supplied asset replaces conceptual fallback');
     assert.equal((card.match(/class="package-visual-asset"/g) ?? []).length, asset ? 1 : 0);
