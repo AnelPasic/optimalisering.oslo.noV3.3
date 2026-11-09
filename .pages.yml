@@ -156,6 +156,10 @@ components:
         label: Tittel
         type: string
         required: true
+      - name: headline
+        label: Stor overskrift på valgkort (valgfritt)
+        type: string
+        description: "For valgkort på Synlighet. Tjenestenavnet står i topplinjen, mens denne teksten blir kortets hovedoverskrift."
       - name: text
         label: Beskrivelse (rik tekst / Markdown)
         type: rich-text
