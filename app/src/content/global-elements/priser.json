@@ -53,9 +53,9 @@
         "compact": {
           "fit": "Passer for små og mellomstore bedrifter med én tydelig kundereise, én hovedtjeneste eller én flaskehals som er viktigst om gangen.",
           "situations": [
-            "Blir ikke funnet når kundene søker.",
-            "Har trafikk, men får for få henvendelser eller kjøp.",
-            "For lite ut av Google Ads eller annonsebudsjettet."
+            "Trenger å bli funnet når kundene søker.",
+            "Har trafikk, men trenger henvendelser eller kjøp.",
+            "Trenger å få mer ut av annonsebudsjettet."
           ]
         },
         "scope": "Vi jobber med én hovedflaskehals til neste prioritet er viktigere.",
