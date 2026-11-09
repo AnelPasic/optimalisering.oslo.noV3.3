@@ -1,0 +1,20 @@
+{
+  "_block": "content",
+  "uid": "a8ec0922-6e61-48be-82f8-00a9914baf1d",
+  "id": "synlighet-organisk",
+  "name": "Organisk synlighet",
+  "heading": "Annonser gir fart. Organisk synlighet bygger lønnsomhet.",
+  "layout": "three-columns",
+  "buttonStyle": "btn-secondary",
+  "boxButtonStyle": "btn-neutral",
+  "items": [
+    {
+      "title": "Søkemotoroptimalisering (SEO)",
+      "headline": "Bli funnet på Google Søk",
+      "text": "Vi finner søkene som kan gi deg kunder, forbedrer sidene de møter og følger opp det som virker. Målet er flere relevante bestillinger uten å betale Google for hvert klikk.",
+      "href": "/seo/",
+      "label": "Les mer om SEO",
+      "surface": "info"
+    }
+  ]
+}
