@@ -57,7 +57,9 @@ test('nested CMS saves preserve all unmigrated content, local/global order, imag
   const entry=entryForFile(cms,'app/src/content/pages/synlighet.json');
   for(const field of ['eyebrow','title','support']){const edit=structuredClone(source);edit.hero[field]+=' (CMS-test)';const saved=JSON.parse(cmsJsonSave(source,edit,entry,cms));assertPreservedContent(edit,saved);assert.ok(pageSchema.safeParse(saved).success);assert.deepEqual(saved.sections,source.sections);assert.deepEqual(saved.hero.visual,source.hero.visual);assert.deepEqual(saved.hero.primaryCta,source.hero.primaryCta);const restore=JSON.parse(cmsJsonSave(saved,source,entry,cms));assert.deepEqual(restore,source);}
   assert.ok(source.sections.some((s:any)=>s._block==='global'&&s.element==='regneeksempel'));
-  const topics=source.sections.find((s:any)=>s.id==='kanaler').items;
+  assert.deepEqual(source.sections[0],{_block:'sharedContent',entry:'kanaler'},'Synlighet must hold a reference, not duplicate organic cards');
+  const global=JSON.parse(readFileSync('src/content/global-content/kanaler.json','utf8'));
+  const topics=global.items;
   assert.deepEqual(topics.map((t:any)=>t.title),['SEO','Lokal SEO','AI-synlighet']);
   assert.deepEqual(topics.map((t:any)=>t.headline),['Bli funnet i Google','Bli valgt i nærområdet','Bli med i svaret']);
   assert.deepEqual(topics.map((t:any)=>t.href),[
@@ -65,4 +67,6 @@ test('nested CMS saves preserve all unmigrated content, local/global order, imag
     '/priser/?pakke=optimalisering&fokus=lokal-seo#bestill',
     '/priser/?pakke=optimalisering&fokus=seo-ai#bestill'
   ]);
+  const resolved=pageSchema.parse(source).sections.find((section:any)=>section.id==='kanaler');
+  assert.deepEqual(resolved?.items?.map((item:any)=>item.headline),topics.map((item:any)=>item.headline));
 });
