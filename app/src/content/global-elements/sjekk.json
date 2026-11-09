@@ -7,27 +7,26 @@
     "section": {
       "_block": "protected",
       "id": "sjekk",
-      "eyebrow": "Gratis, manuell sjekk",
-      "heading": "Send nettsiden. Vi sier hvor vi ville startet - og hvorfor.",
+      "eyebrow": "3 gratis funn",
+      "heading": "Vil du vite hvor du har mest å hente?",
       "body": [
-        "Vi ser på den offentlige nettsiden eller nettbutikken og sender deg de tre viktigste tingene vi ville prioritert å optimalisere først.",
-        "Dette er en rask, manuell vurdering. Videre arbeid avtales separat."
+        "Send oss nettsiden din. Vi ser etter muligheter for bedre synlighet og flere bestillinger, og sender deg våre 3 viktigste funn innen 2 virkedager."
       ]
     },
     "form": {
-      "promise": "Få våre 3 viktigste funn innen 2 virkedager.",
-      "heading": "Send nettsiden",
-      "websiteLabel": "Nettside eller nettbutikk",
+      "promise": "3 konkrete funn innen 2 virkedager.",
+      "heading": "Få 3 gratis funn",
+      "websiteLabel": "Nettside",
       "websitePlaceholder": "dinbedrift.no",
-      "emailLabel": "E-post",
-      "emailPlaceholder": "deg@dinbedrift.no",
+      "emailLabel": "Jobb-e-post",
+      "emailPlaceholder": "navn@bedrift.no",
       "messageLabel": "Kort kommentar",
       "optional": "Valgfritt",
       "messagePlaceholder": "Noe vi bør vite?",
       "sensitiveNotice": "Ikke send innlogging, sensitive opplysninger eller personopplysninger om andre.",
       "previewNotice": "Dette er en forhåndsvisning. Innsending er ikke åpnet ennå.",
-      "submitLabel": "Ta en gratis sjekk",
-      "privacyText": "Vi bruker opplysningene for å følge opp forespørselen.",
+      "submitLabel": "Få 3 gratis funn",
+      "privacyText": "Gratis vurdering. Ingen binding. Vi bruker opplysningene til å følge opp forespørselen.",
       "privacyLink": {
         "label": "Les om personvern",
         "href": "/personvern/"

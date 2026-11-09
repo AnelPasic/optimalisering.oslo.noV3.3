@@ -2,16 +2,16 @@
   "slug": "om",
   "kind": "utility",
   "seo": {
-    "title": "Om Optimalisering Oslo og Medon AS",
-    "description": "Medon AS eier og leverer Optimalisering Oslo. Les om to behovsbaserte tjenester, leverandøransvar og hvordan vi prioriterer arbeid på nettsiden."
+    "title": "Om Optimalisering Oslo",
+    "description": "Vi hjelper bedrifter å bli funnet, bli valgt og få mer ut av nettsiden. Les hvordan Optimalisering Oslo prioriterer og gjennomfører forbedringer."
   },
   "hero": {
     "layout": "split-right",
-    "eyebrow": "Leverandøren bak tjenesten",
-    "title": "Optimalisering Oslo er en tjeneste fra Medon AS.",
-    "support": "Optimalisering Oslo er tjenestenavnet. Medon AS er eier og leverandør. Vi skal gjøre det enkelt å forstå hvem du snakker med, og hvem som har ansvar for avtalt arbeid.",
+    "eyebrow": "Om Optimalisering Oslo",
+    "title": "Du driver bedriften. Vi gjør det enklere å bli funnet og valgt.",
+    "support": "Vi finner mulighetene, prioriterer det som kan gi størst gevinst og gjennomfører forbedringene. Du skal få jobben gjort, ikke bare få en rapport om den.",
     "primaryCta": {
-      "label": "Ta en gratis sjekk",
+      "label": "Få 3 gratis funn",
       "href": "/vurdering/",
       "suggestedHref": "/#sjekk"
     },
@@ -26,7 +26,7 @@
       "heading": "Finn begrensningen. Prioriter arbeidet derfra.",
       "body": [
         "Bedriften kan trenge hjelp til å bli funnet, hjelp til å gjøre veien til kontakt eller kjøp enklere, eller begge deler. Det er utgangspunktet for tjenestene Synlighet og Konvertering.",
-        "Medon undersøker behovet, gjennomfører avtalt arbeid og følger effekten. Prioriteringen skal bygge på erfaring og forventet kommersiell nytte innenfor avtalt omfang."
+        "Vi undersøker behovet, gjennomfører avtalt arbeid og følger resultatene. Vi starter der forbedringene kan bety mest for bedriften din."
       ],
       "links": [
         {
@@ -64,7 +64,7 @@
       "heading": "Norske bedrifter først. Behovet avgjør om tjenesten passer.",
       "body": [
         "Tjenesten retter seg først mot norske bedrifter, både tjenestebedrifter og nettbutikker. Bedrifter i andre nordiske land kan også være aktuelle.",
-        "Navnet Optimalisering Oslo innebærer ikke at tjenesten er en egen juridisk virksomhet eller at vi har et separat Oslo-kontor. Det er Medon AS som står bak."
+        "Optimalisering Oslo er et markedsføringsnavn. Medon AS er juridisk leverandør og avtalepart, slik det fremgår av vilkårene."
       ],
       "links": [
         {
@@ -78,12 +78,12 @@
       "id": "start",
       "heading": "Start med nettsiden dere allerede har.",
       "body": [
-        "Send en nettadresse og en e-postadresse for bedriften. I den gratis, avgrensede manuelle sjekken gir Medon kort veiledning om hva vi ville startet med og hvorfor.",
+        "Send oss nettsiden din og jobb-e-posten. Vi sender deg tre konkrete, prioriterte funn og hva vi ville forbedret først, innen 2 virkedager.",
         "Den er ikke en full revisjon, komplett feilliste, prognose eller gratis gjennomføring. Videre arbeid må avtales særskilt."
       ],
       "links": [
         {
-          "label": "Ta en gratis sjekk",
+          "label": "Få 3 gratis funn",
           "href": "/vurdering/"
         }
       ]

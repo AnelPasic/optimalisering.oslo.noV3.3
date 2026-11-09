@@ -4,10 +4,10 @@
   "id": "priser",
   "name": "Pakker og priser",
   "content": {
-    "eyebrow": "Fast månedlig optimalisering",
+    "eyebrow": "Fast månedlig optimalisering. Ingen bindingstid.",
     "heading": "Tre pakker. Samme mål: flere riktige kunder.",
-    "intro": "Velg pakken som passer hvor komplekst behovet ditt er, fra en tydelig flaskehals til flere kundereiser som må prioriteres løpende.",
-    "orderIntro": "Vi ser på bestillingen og tar kontakt for å avklare tilganger, oppstart og eventuelle spørsmål. Omfang og pris bekreftes før arbeidet starter.",
+    "intro": "Alle pakkene kan løse de samme typene utfordringer. Forskjellen er hvor mange områder vi forbedrer samtidig, og hvor raskt vi kan komme videre.",
+    "orderIntro": "Dette er en bestillingsforespørsel. Ingen betaling eller bindende avtale nå. Vi bekrefter pris og omfang med deg før arbeidet starter.",
     "orderSubmitLabel": "Send bestilling",
     "labels": {
       "situations": "Typiske situasjoner",
@@ -27,16 +27,16 @@
       "Meta Ads"
     ],
     "foundationNote": "Måling og sporing ligger i bunn, så vi kan følge med på hva som faktisk skjer.",
-    "adBudgetNote": "Ved betalt annonsering annonsebudsjett kommer i tillegg.",
+    "adBudgetNote": "Annonsebudsjett kommer i tillegg dersom vi kjører annonser. Du bestemmer budsjettet.",
     "externalCostsNote": "Eksterne verktøy og plattformkostnader er som regel inkludert, med mindre det er spesielle ønsker og behov.",
     "separateWorkNote": "Justeringer og arbeid på eksisterende landingssider inngår i avtalt omfang ved alle optimaliseringspakker.\nStørre nye landingssider, nettsider, omfattende teknisk arbeid og redesign prises separat men er som regel inkludert i partner pakka.",
-    "capacityNote": "Avtalt optimalisering gjelder per måned.",
+    "capacityNote": "Ingen bindingstid. Du skal bruke oss fordi det lønner seg, ikke fordi du må.",
     "decisionStrip": {
-      "heading": "Et forbedringsområde, to områder eller flere samtidig?",
+      "heading": "Hva vil du forbedre først?",
       "items": [
-        "Velg Optimalisering når ett forbedringsområde er tydelig viktigst.",
-        "Velg Vekst når to deler av samme kundereise bør forbedres samtidig f.eks mer relevant trafikk og større andel som skal fullføre bestilling.",
-        "Velg Partner når virksomheten har flere forskjellige typer tjenester, markeder eller kjøpsveier som må prioriteres og koordineres løpende."
+        "Optimalisering: ett prioritert område av gangen.",
+        "Vekst: to områder som jobber sammen.",
+        "Enterprise: større kapasitet og flere forbedringsområder."
       ]
     },
     "multiplier": {
@@ -49,14 +49,14 @@
     "items": [
       {
         "title": "Optimalisering",
-        "descriptor": "Ett viktig forbedringsområde om gangen.",
-        "fit": "Passer for små og mellomstore bedrifter med én tydelig kundereise, én hovedtjeneste eller én flaskehals som er viktigst om gangen.",
+        "descriptor": "Flere kunder starter med å forbedre det som betyr mest.",
+        "fit": "Vi finner hvor bedriften din har størst potensial akkurat nå. Kanskje du bør bli mer synlig på Google og i AI-søk, få mer ut av annonsene eller gjøre det enklere for besøkende å bestille. Vi prioriterer, forbedrer og følger resultatene hver måned. Du får en tydelig innsats der den kan gi størst gevinst, i stedet for å betale for litt av alt.",
         "compact": {
-          "fit": "For små og mellomstore bedrifter med én tydelig kundereise eller én flaskehals som er viktigst nå.",
+          "fit": "Ett prioritert område. Vi finner hva som er viktigst, forbedrer det og følger resultatene.",
           "situations": [
-            "Blir ikke funnet når kundene søker.",
-            "Har trafikk, men får for få henvendelser eller kjøp.",
-            "Får for lite ut av Google Ads eller en annen viktig kanal."
+            "Vi finner og prioriterer de beste mulighetene.",
+            "Løpende forbedringer innen ett hovedområde.",
+            "Måling og oppfølging av resultatene."
           ]
         },
         "scope": "Vi jobber med én hovedflaskehals til neste prioritet er viktigere. Støttearbeid rundt samme mål kan inngå.",
@@ -91,7 +91,7 @@
             "compactLabel": "Google Ads"
           }
         ],
-        "selectionRule": "Velg Optimalisering når én flaskehals er tydelig viktigst akkurat nå.",
+        "selectionRule": "ETT PRIORITERT OMRÅDE",
         "visual": "controlled",
         "visualCaption": {
           "label": "Tydelig fremgang"
@@ -105,20 +105,20 @@
         "vatSuffix": "eks. mva.",
         "recommended": false,
         "cta": {
-          "label": "Bestill Optimalisering",
+          "label": "Velg Optimalisering",
           "href": "/priser/?pakke=optimalisering#bestill"
         }
       },
       {
         "title": "Vekst",
-        "descriptor": "To grep som forsterker hverandre.",
-        "fit": "Passer for bedrifter som ønsker både mer trafikk og større andel av besøkende til å bestille.",
+        "descriptor": "Få flere kunder inn. Få mer ut av hver eneste mulighet.",
+        "fit": "Vi jobber med to områder som forsterker hverandre. For eksempel gjør vi bedriften din lettere å finne, samtidig som vi forbedrer nettsiden slik at flere tar kontakt eller fullfører en bestilling. Kanskje Google Ads og landingssider gir størst gevinst. Kanskje SEO og konvertering. Vi finner kombinasjonen som gir bedriften din best muligheter, og forbedrer begge områdene hver måned.",
         "compact": {
-          "fit": "For bedrifter som trenger fremgang på to deler av samme kundereise samtidig.",
+          "fit": "To områder som jobber sammen. Flere besøk er bra. Flere bestillinger fra de samme besøkene er enda bedre.",
           "situations": [
-            "Betalt annonsering og vil bygge organisk synlighet.",
-            "Bedre ranking, samt større andel som bestiller.",
-            "Betalt annonsering og større andel som bestiller."
+            "To prioriterte forbedringsområder som jobber sammen.",
+            "Løpende optimalisering av begge områdene.",
+            "Måling og prioritering av det som gir størst verdi."
           ]
         },
         "situations": [
@@ -147,7 +147,7 @@
             "description": "Bruk betalt synlighet for å få fart nå, og bygg organisk synlighet for å redusere avhengigheten av annonsebudsjett over tid."
           }
         ],
-        "selectionRule": "Velg Vekst for to forbedringer som forsterker hverandre.",
+        "selectionRule": "TO OMRÅDER SOM JOBBER SAMMEN",
         "visual": "accelerating",
         "visualCaption": {
           "label": "To grep",
@@ -163,20 +163,21 @@
         "recommended": true,
         "badge": "Anbefalt",
         "cta": {
-          "label": "Bestill Vekst",
+          "label": "Velg Vekst",
           "href": "/priser/?pakke=vekst#bestill"
-        }
+        },
+        "priceNote": "To separate Optimalisering-pakker koster 9 000 kr/mnd. Vekst gir to prioriterte områder for 6 900 kr/mnd."
       },
       {
         "title": "Enterprise",
-        "descriptor": "Flere tjenester og kundereiser.",
-        "fit": "Passer for bedrifter med flere tjenester, produktområder, markeder, lokasjoner eller målgrupper som møter forskjellige konkurrenter og trenger løpende prioritering på tvers.",
+        "descriptor": "Din eksterne markedsføringsavdeling. Uten flere ansettelser.",
+        "fit": "Med Enterprise får du dedikert ekspertise på synlighet og konverteringsoptimalisering, og større kapasitet til å forbedre det som betyr mest for bedriften din. Vi finner mulighetene, prioriterer innsatsen og gjennomfører forbedringene. Fra Google, AI-søk og annonsering til nettsider som skaper tillit og får flere til å bestille. Målet er enkelt: Gjøre bedriften din til et stadig sterkere valg enn konkurrentene.",
         "compact": {
-          "fit": "For bedrifter med flere tjenester, markeder eller kundereiser som må prioriteres løpende.",
+          "fit": "Dedikert ekspertise og større kapasitet. Du driver bedriften. Vi jobber for at flere kunder skal finne den og velge den.",
           "situations": [
-            "Flere tjenester konkurrerer i ulike markeder.",
-            "Ulike kundereiser trenger ulike grep.",
-            "Trenger løpende prioritering på tvers."
+            "Dedikert ekspertise innen synlighet og konvertering.",
+            "Flere tjenester og forbedringsområder.",
+            "Gjennomføring, måling og løpende optimalisering."
           ]
         },
         "scope": "Vi prioriterer løpende kundereisene med størst kommersiell verdi eller størst forbedringspotensial. Det betyr ikke at alt gjøres samtidig eller at kapasiteten er ubegrenset.",
@@ -214,8 +215,8 @@
             "compactLabel": "Analyse"
           }
         ],
-        "selectionRule": "Velg Partner når flere forskjellige kundereiser må forbedres og prioriteres løpende.",
-        "priceNote": "Omfang og fast månedspris avtales før oppstart.",
+        "selectionRule": "FOR BEDRIFTER MED STØRRE AMBISJONER",
+        "priceNote": "Omfang og fast månedspris avtales før oppstart. Annonsebudsjett kommer i tillegg.",
         "visual": "tracks",
         "visualCaption": {
           "label": "Flere kundereiser",
@@ -231,14 +232,14 @@
         "vatSuffix": "eks. mva.",
         "recommended": false,
         "cta": {
-          "label": "Bestill Enterprise",
+          "label": "Velg Enterprise",
           "href": "/priser/?pakke=partner#bestill"
         }
       }
     ],
     "comparison": {
       "heading": "Sammenlign pakkene",
-      "intro": "Velg hva du ønsker hjelp med. Optimalisering har ett hovedfokus, Vekst kan kombinere inntil to. Med Partner avklarer vi omfang og prioritering sammen, som regel 4-6 avhengig av komplesistet.",
+      "intro": "Velg hva du ønsker hjelp med. Alle pakkene kan løse de samme utfordringene, men kapasiteten og antallet samtidige prioriteringer er forskjellig.",
       "focusHeading": "Hva ønsker du å forbedre?",
       "options": [
         {

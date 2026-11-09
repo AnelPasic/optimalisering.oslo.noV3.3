@@ -2,22 +2,21 @@
   "slug": "home",
   "kind": "home",
   "seo": {
-    "title": "SEO, AI-synlighet og konverteringsoptimalisering | Optimalisering Oslo",
-    "description": "Bli funnet og gjør flere besøk til henvendelser og salg. Optimalisering for konkurranseutsatte bedrifter i Norge. Ta en gratis, manuell sjekk."
+    "title": "Optimalisering av synlighet og konvertering | Optimalisering Oslo",
+    "description": "Bli funnet på Google og i AI-søk. Få flere henvendelser og salg fra trafikken du allerede har. Fast optimalisering fra 4 500 kr/mnd, uten bindingstid."
   },
   "hero": {
     "layout": "split-right",
     "eyebrow": "For bedrifter som konkurrerer om kundene",
-    "title": "Bli funnet. Gjør større andel av besøk til henvendelser og salg.",
-    "support": "SEO, AI-synlighet, kampanje og konverteringsoptimalisering for bedrifter i Oslo og resten av Norge. Du vinner med ren mattematikk.",
+    "title": "Bli funnet på Google og AI-Søk. Gjør større andel av besøk til henvendelser og salg.",
+    "support": "De beste kundene velger ikke nødvendigvis den beste bedriften. De velger den som blir funnet, skaper tillit og fremstår som det beste valget. Vi gjør bedriften din mer synlig, mer overbevisende og enklere å velge - slik at du kan vinne kunder konkurrentene ellers ville fått.",
     "primaryCta": {
-      "label": "Ta en gratis sjekk",
-      "href": "/#sjekk",
-      "suggestedHref": "/#sjekk"
+      "label": "Velg pakke",
+      "href": "/#priser"
     },
     "secondaryCta": {
-      "label": "Se priser",
-      "href": "/#priser"
+      "label": "Få 3 gratis funn",
+      "href": "/#sjekk"
     },
     "visual": {
       "kind": "image",
@@ -37,10 +36,6 @@
     },
     {
       "_block": "global",
-      "element": "regneeksempel"
-    },
-    {
-      "_block": "global",
       "element": "resultater"
     },
     {
@@ -54,12 +49,29 @@
     {
       "_block": "global",
       "element": "sporsmal"
+    },
+    {
+      "_block": "content",
+      "uid": "30bf986d-0526-4f48-94c1-41496f6c79ed",
+      "id": "klar-for-neste-steg",
+      "name": "Avsluttende CTA",
+      "eyebrow": "Klar for neste steg?",
+      "heading": "Konkurrentene dine venter neppe på at du skal bli klar.",
+      "body": [
+        "Du vet hva du vil oppnå. Vi finner hvor du har mest å hente og gjør jobben.",
+        "Fra 4 500 kr/mnd. Ingen bindingstid."
+      ],
+      "surface": "base-200",
+      "headingAlign": "center",
+      "layout": "default",
+      "buttonStyle": "btn-primary",
+      "links": [
+        {
+          "label": "Velg pakke",
+          "href": "/#priser"
+        }
+      ]
     }
   ],
-  "faq": [
-    {
-      "question": "Hvor fort kan vi forvente resultater?",
-      "answer": "Det avhenger av utgangspunktet, konkurransen og hvilke hindringer vi faktisk kan forbedre. Har dere nesten ingen besøk eller henvendelser i dag, kan små endringer gi store prosentvise utslag. Har nettsiden allerede 20 000 besøk og 1 000 bestillinger, er konverteringsraten 5 %. Da må vi undersøke om det er mer relevant trafikk å hente, om kjøpsveien kan forbedres, eller begge deler. Den gratis sjekken gir oss et bedre grunnlag for å prioritere, men er ingen garanti for bestemte resultater."
-    }
-  ]
+  "faq": []
 }

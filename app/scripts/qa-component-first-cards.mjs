@@ -5,6 +5,7 @@ import {chromium} from '@playwright/test';
 import assert from 'node:assert/strict';
 import {resolve} from 'node:path';
 import {once} from 'node:events';
+import {readFileSync} from 'node:fs';
 import {createAppServer} from '../server/http.mjs';
 
 const server=createAppServer({config:{enabled:false},staticRoot:resolve('dist')});
@@ -12,6 +13,8 @@ server.listen(0,'127.0.0.1');
 await once(server,'listening');
 const browser=await chromium.launch({headless:true});
 const origin='http://127.0.0.1:'+server.address().port;
+const savedFooterSurface=JSON.parse(readFileSync(new URL('../src/content/site-chrome/footer.json',import.meta.url),'utf8')).footerSurface || 'secondary';
+assert.ok(['secondary','neutral','primary','accent','info'].includes(savedFooterSurface),'Approved CMS footer surface has a semantic content token');
 
 try {
  // A late .project primitive rule used to defeat ordinary per-element utilities.
@@ -179,7 +182,11 @@ try {
    assert.equal(data.count,3,'Three homepage entry choices remain');
    assert.equal(data.native,true,'DaisyUI card/body/actions required');
    assert.equal(data.noLegacy,true,'Legacy selector card classes remain');
-   assert.deepEqual(data.links,['/synlighet/','/konvertering/','/#priser']);
+   assert.deepEqual(data.links,[
+      '/priser/?pakke=optimalisering&fokus=synlighet#bestill',
+      '/priser/?pakke=optimalisering&fokus=konvertering#bestill',
+      '/priser/?pakke=vekst&fokus=synlighet-konvertering#bestill',
+    ],'Three needs must lead to the correct single commercial packages and focus');
    assert.deepEqual(data.colors,data.expectedColors,'Semantic theme surfaces differ from approved info/base-300/secondary mapping');
    assert.deepEqual(data.foregrounds,data.expectedForegrounds,'Home selector text must pair with daisyUI surface content tokens');
    for(let i=0;i<3;i++) for(const [k,fg] of data.childForegrounds[i].entries())
@@ -195,17 +202,17 @@ try {
   await page.close();
  }
 
- // Regression: bright daisyUI secondary themes require secondary-content throughout footer.
+ // Regression: the OWNER CMS-selected footer semantic surface must have matched content contrast.
  for(const width of [390,1440]){
   const page=await browser.newPage({viewport:{width,height:900}});
   assert.equal((await page.goto(origin+'/',{waitUntil:'networkidle'})).status(),200);
   for(const theme of ['optimalisering','sunset']){
-   const d=await page.evaluate(theme=>{
+   const d=await page.evaluate(({theme,surface})=>{
     document.documentElement.dataset.theme=theme;
     const el=document.querySelector('.site-footer');
     const expected=document.createElement('span');
-    expected.style.background='var(--color-secondary)';
-    expected.style.color='var(--color-secondary-content)';
+    expected.style.background=`var(--color-${surface})`;
+    expected.style.color=`var(--color-${surface}-content)`;
     document.body.append(expected);
     const bg=getComputedStyle(expected).backgroundColor,fg=getComputedStyle(expected).color;
     expected.remove();
@@ -217,7 +224,7 @@ try {
    assert.equal(d.actualBg,d.bg,'footer background mismatch '+theme);
    for(const value of d.colors) assert.equal(value,d.fg,'footer text contrast pair mismatch '+theme);
    assert.ok(d.overflow<=2,'footer horizontal overflow '+width+'/'+theme);
-   console.log('PASS footer semantic secondary-content',width,theme);
+   console.log('PASS footer semantic CMS surface/content',width,theme,savedFooterSurface);
   }
   await page.close();
  }
@@ -226,8 +233,8 @@ try {
  // both active themes, including inputs, result cards and SVG chart labels.
  for(const width of [390,768,1440]){
   const page=await browser.newPage({viewport:{width,height:900}});
-  const response=await page.goto(origin+'/',{waitUntil:'networkidle'});
-  assert.equal(response.status(),200,'calculator route');
+  const response=await page.goto(origin+'/priser/',{waitUntil:'networkidle'});
+  assert.equal(response.status(),200,'calculator now lives on the pricing route');
   await page.evaluate(()=>document.fonts.ready);
   await page.waitForFunction(()=>!document.querySelector('[data-scenario-chart]')?.hidden);
   for(const theme of ['optimalisering','sunset']){

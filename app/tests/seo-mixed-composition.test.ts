@@ -75,6 +75,6 @@ test('SEO changes do not modify locked package prices, order contract or global 
  assert.deepEqual(packages.items.map(x=>x.key),['optimalisering','vekst','partner']);
  assert.equal(packages.items.length,3);
  assert.ok(packages.items.every(x=>Number.isFinite(x.price)));
- assert.equal(getGlobalElement('sjekk').content.form.submitLabel,'Ta en gratis sjekk');
+ assert.equal(getGlobalElement('sjekk').content.form.submitLabel,'Få 3 gratis funn');
  assert.equal(source.sections.some((s:any)=>Object.hasOwn(s,'content')),false);
 });

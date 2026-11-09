@@ -2,17 +2,17 @@
   "slug": "priser",
   "kind": "pricing",
   "seo": {
-    "title": "Priser på SEO, CRO og digital optimalisering | Optimalisering Oslo",
-    "description": "Fast månedlig optimalisering fra 4 500 kr/mnd eks. mva. Velg Optimalisering, Vekst eller Partner. Annonsebudsjett kommer i tillegg."
+    "title": "Pakker og priser | Optimalisering Oslo",
+    "description": "Optimalisering fra 4 500 kr/mnd, Vekst 6 900 kr/mnd og Enterprise fra 14 900 kr/mnd. Flere forbedringer, uten bindingstid. Annonsebudsjett kommer i tillegg."
   },
   "hero": {
     "layout": "split-right",
     "eyebrow": "Fast månedlig optimalisering",
-    "title": "Tre pakker. Samme mål: flere riktige kunder.",
-    "support": "Velg pakken som passer hvor komplekst behovet ditt er, fra en tydelig flaskehals til flere kundereiser som må prioriteres løpende.",
+    "title": "Du velger kapasitet. Vi finner hvor du har mest å hente.",
+    "support": "Optimalisering tar ett område av gangen. Vekst jobber med to. Enterprise gir større kapasitet. Alle pakkene kan løse de samme problemene, og du betaler ikke for mer enn du trenger.",
     "primaryCta": {
-      "label": "Ta en gratis sjekk",
-      "href": "/#sjekk"
+      "label": "Velg pakke",
+      "href": "/priser/#priser"
     },
     "visual": {
       "kind": "image",
@@ -54,11 +54,11 @@
   "faq": [
     {
       "question": "Hva koster pakkene?",
-      "answer": "Optimalisering koster 4 500 kr/mnd, Vekst 6 900 kr/mnd og Partner fra 14 900 kr/mnd. Alle priser er eks. mva."
+      "answer": "Optimalisering koster 4 500 kr/mnd, Vekst 6 900 kr/mnd og Enterprise fra 14 900 kr/mnd. Alle priser er eks. mva. Annonsebudsjett kommer i tillegg."
     },
     {
       "question": "Hva er forskjellen på pakkene?",
-      "answer": "Optimalisering er for ett prioritert område om gangen. Vekst er for to områder som jobber sammen. Partner passer når flere områder må prioriteres løpende."
+      "answer": "Alle pakkene kan løse de samme problemene. Optimalisering jobber med ett prioritert område, Vekst med to, og Enterprise gir større kapasitet."
     },
     {
       "question": "Er annonsebudsjett inkludert?",
@@ -70,7 +70,7 @@
     },
     {
       "question": "Hva hvis jeg ikke vet hvilken pakke jeg trenger?",
-      "answer": "Start med den gratis sjekken. Vi ser på nettsiden og sier hvor vi ville startet og hvorfor."
+      "answer": "Du velger kapasiteten, og vi finner hvor du har mest å hente. Start gjerne med tre gratis funn hvis du vil se hva vi ville forbedret først."
     }
   ]
 }
