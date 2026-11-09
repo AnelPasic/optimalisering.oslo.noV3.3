@@ -13,7 +13,7 @@ test('compact CMS copy stays editable without losing long copy; invalid decision
   const parsed = pageSchema.parse(fixture).content.items[0];
   assert.equal(parsed.compact.fit,'CMS short fit');
   assert.equal(parsed.iconItems[0].compactLabel,'CMS short icon');
-  assert.equal(parsed.fit,home.content.items[0].fit);
+  assert.equal(parsed.typicalBusiness,home.content.items[0].typicalBusiness);
   assert.equal(parsed.iconItems[0].label,home.content.items[0].iconItems[0].label);
   for (const change of ['empty-fit','four-situations','empty-label']) {
     const invalid=structuredClone(fixture), item=invalid.content.items[0];
