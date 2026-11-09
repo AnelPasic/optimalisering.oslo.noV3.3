@@ -122,7 +122,7 @@
           ]
         },
         "scope": "Vi prioriterer løpende kundereisene med størst kommersiell verdi eller størst forbedringspotensial. Det betyr ikke at alt gjøres samtidig eller at kapasiteten er ubegrenset.",
-        "typicalBusiness": "Typisk en virksomhet med fire-fem forskjellige tjenester - for eksempel kantine, catering, fruktlevering og andre B2B-tjenester - der hver kundereise har egne søk, konkurrenter, sider og prioriteringer.",
+        "typicalBusiness": "Typisk en virksomhet med fire-fem forskjellige typer B2B tjenester der hver kundereise har egne søk, konkurrenter, sider og prioriteringer.",
         "key": "partner",
         "selectionRule": "Velg Partner når flere forskjellige kundereiser må forbedres og prioriteres løpende.",
         "priceNote": "Omfang og fast månedspris avtales før oppstart.",
