@@ -13,28 +13,28 @@
   ],
   "items": [
     {
-      "title": "SEO",
+      "title": "Søkemotoroptimalisering - SEO",
+      "headline": "Bli funnet i Google",
       "text": "Vi finner søkene som kan gi deg kunder, forbedrer sidene de møter og følger opp det som virker. Målet er flere relevante bestillinger uten å betale Google for hvert klikk.",
-      "href": "/priser/?pakke=optimalisering&fokus=seo-ai#bestill",
+      "href": "/seo/",
       "label": "Velg SEO",
-      "surface": "info",
-      "headline": "Bli funnet i Google"
+      "surface": "info"
     },
     {
       "title": "Lokal SEO",
+      "headline": "Bli valgt i nærområdet",
       "text": "Når folk leter etter en bedrift i nærheten, skal de enkelt finne og velge deg. Vi forbedrer synligheten i Google Maps og lokale søk og gjør veien til kontakt enklere.",
       "href": "/priser/?pakke=optimalisering&fokus=lokal-seo#bestill",
       "label": "Velg Lokal SEO",
-      "surface": "base-300",
-      "headline": "Bli valgt i nærområdet"
+      "surface": "base-300"
     },
     {
       "title": "AI-synlighet",
+      "headline": "Bli med i svaret",
       "text": "Flere bruker ChatGPT og AI-søk for å finne produkter og tjenester. Vi gjør bedriften din lettere å forstå og oppdage, slik at du kan bli vurdert når kundene spør AI.",
       "href": "/priser/?pakke=optimalisering&fokus=seo-ai#bestill",
       "label": "Velg AI-synlighet",
-      "surface": "secondary",
-      "headline": "Bli med i svaret"
+      "surface": "secondary"
     }
   ]
 }
