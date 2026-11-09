@@ -2,7 +2,7 @@
   "_block": "content",
   "uid": "a8ec0922-6e61-48be-82f8-00a9914baf1d",
   "id": "synlighet-organisk",
-  "name": "Organisk synlighet",
+  "name": "Tjenester-Organisk synlighet: SEO, Lokal SEO og AI-synlighet",
   "heading": "Annonser gir fart. Organisk synlighet bygger lønnsomhet.",
   "layout": "three-columns",
   "buttonStyle": "btn-secondary",
@@ -16,5 +16,6 @@
       "label": "Les mer om SEO",
       "surface": "info"
     }
-  ]
+  ],
+  "eyebrow": "Organisk synlighet"
 }
