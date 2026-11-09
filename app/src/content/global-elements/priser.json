@@ -158,8 +158,7 @@
         },
         "priceSuffix": "kr/mnd",
         "vatSuffix": "eks. mva.",
-        "recommended": true,
-        "badge": "Anbefalt",
+        "recommended": false,
         "cta": {
           "label": "Bestill Vekst",
           "href": "/priser/?pakke=vekst#bestill"
