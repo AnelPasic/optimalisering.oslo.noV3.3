@@ -58,5 +58,5 @@ test('nested CMS saves preserve all unmigrated content, local/global order, imag
   for(const field of ['eyebrow','title','support']){const edit=structuredClone(source);edit.hero[field]+=' (CMS-test)';const saved=JSON.parse(cmsJsonSave(source,edit,entry,cms));assertPreservedContent(edit,saved);assert.ok(pageSchema.safeParse(saved).success);assert.deepEqual(saved.sections,source.sections);assert.deepEqual(saved.hero.visual,source.hero.visual);assert.deepEqual(saved.hero.primaryCta,source.hero.primaryCta);const restore=JSON.parse(cmsJsonSave(saved,source,entry,cms));assert.deepEqual(restore,source);}
   assert.ok(source.sections.some((s:any)=>s._block==='global'&&s.element==='regneeksempel'));
   const topics=source.sections.find((s:any)=>s.id==='kanaler').items;
-  assert.deepEqual(topics.map((t:any)=>t.title),['SEO','Lokal SEO','AI-synlighet']);assert.equal(topics[0].href,'/seo/');assert.equal(topics[1].href,undefined);assert.equal(topics[2].href,'/ai-synlighet/');
+  assert.deepEqual(topics.map((t:any)=>t.title),['SEO','Lokal SEO','AI-synlighet']);assert.equal(topics[0].href,'/seo/');assert.equal(topics[1].href,'/lokal-seo/');assert.equal(topics[2].href,'/ai-synlighet/');
 });

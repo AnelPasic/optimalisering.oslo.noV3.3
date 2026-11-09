@@ -13,7 +13,7 @@ test('CONTENT-04 Oslo pilot: three different intents with native SEO, Hero and i
   assert.ok(data.seo.description?.trim());
   assert.ok(data.hero.title?.trim());
   assert.ok(Array.isArray(data.sections));
-  assert.ok(Array.isArray(data.faq));
+  assert.ok(Array.isArray(pageSchema.parse(data).faq));
   assert.equal(pageSchema.safeParse(data).success,true,kind);
   assert.equal(Object.hasOwn(data,'authority'),false,'Every page is live, no review statuses');
   assert.equal(Object.hasOwn(data,'status'),false);
@@ -25,9 +25,9 @@ test('CONTENT-04 Oslo pilot: three different intents with native SEO, Hero and i
 
 test('CONTENT-04 Home: buyer journey uses canonical global refs; no copied commercial/proof data',()=>{
  const globals=home.sections.filter((s:any)=>s._block==='global').map((s:any)=>s.element);
- assert.deepEqual(globals,['behov','resultater','priser','sjekk','sporsmal']);
+ assert.deepEqual(globals,['behov','regneeksempel','priser','resultater','sjekk','sporsmal']);
  assert.equal(home.hero.primaryCta.href,'/#priser');
- assert.equal(home.faq.length,0,'No duplicate local FAQ in addition to the shared seven');
+ assert.equal(pageSchema.parse(home).faq.length,0,'No duplicate local FAQ in addition to the shared seven');
  assert.ok(home.sections.filter((s:any)=>s._block==='global').every((s:any)=>!Object.hasOwn(s,'content')&&!Object.hasOwn(s,'globalElement')));
  assert.ok(home.sections.some((s:any)=>s._block==='content'&&s.id==='klar-for-neste-steg'),'End with the approved CTA');
 });

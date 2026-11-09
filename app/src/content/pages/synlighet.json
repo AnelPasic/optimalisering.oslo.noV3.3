@@ -23,39 +23,84 @@
     }
   },
   "seo": {
-    "title": "SEO, lokal SEO og AI-synlighet | Optimalisering Oslo",
-    "description": "Bli funnet når relevante kunder leter etter det du tilbyr. Vi jobber med SEO, lokal SEO og AI-synlighet - og starter der synligheten faktisk stopper."
+    "title": "SEO og digital markedsføring | Organisk og betalt synlighet | Optimalisering Oslo",
+    "description": "SEO, lokal SEO, AI-synlighet og annonsering på Google, YouTube, ChatGPT, Facebook og Instagram. Få flere relevante bestillinger til en lønnsom kostnad."
   },
   "sections": [
     {
       "_block": "content",
+      "id": "vekstmodell",
+      "eyebrow": "Vår vekstmodell",
+      "heading": "Finn en lønnsom kostnad per bestilling. Forbedre den. Skaler så langt etterspørsel, marginer og kapasitet tillater.",
+      "headingAlign": "center",
+      "layout": "default",
+      "surface": "base-200",
+      "body": [
+        "Vi ser på hva det faktisk koster å få en bestilling, og om den er lønnsom. Når tallene fungerer, kan vi øke innsatsen. Først da blir mer trafikk til vekst."
+      ]
+    },
+    {
+      "_block": "content",
       "id": "kanaler",
-      "eyebrow": "Tre deler av synligheten",
-      "heading": "SEO, lokal SEO og AI-synlighet løser ulike deler av samme jobb.",
+      "eyebrow": "Organisk synlighet",
+      "heading": "Annonser gir fart. Organisk synlighet bygger lønnsomhet.",
       "headingAlign": "center",
       "layout": "three-columns",
       "surface": "default",
       "body": [
-        "Kunder leter etter hjelp på ulike måter: i vanlige søk, etter leverandører i nærheten eller gjennom AI-baserte svar. Vi prioriterer det som passer tilbudet og kundene dine, i stedet for å gjøre litt av alt."
+        "Med annonser kan vi nå nye kunder raskt. Med SEO, Google Maps og AI-synlighet bygger vi synlighet som kan gi bestillinger uten betaling for hvert klikk.",
+        "Begge deler skal bidra til det samme: flere lønnsomme bestillinger.",
+        "Å øke markedsbudsjettet før vi vet hva en bestilling koster, er ikke skalering. Det er bare en dyrere måte å gjette på."
       ],
       "items": [
         {
           "title": "SEO",
-          "text": "Bli funnet i Googles vanlige søkeresultater når noen søker etter det du tilbyr. Du betaler ikke Google for hvert klikk, slik du gjør med søkeannonser.",
+          "text": "**Gjør Google til en kilde til bestillinger, ikke bare besøk.**\n\nVi gjør nettsiden din lettere å finne når folk søker etter det du selger. Gode plasseringer kan gi nye bestillinger måned etter måned, uten at du betaler for hvert klikk.\n\n**MÅLET:** Flere bestillinger fra Google til lavere kostnad over tid.",
           "href": "/seo/",
           "label": "Les om SEO",
           "surface": "info"
         },
         {
           "title": "Lokal SEO",
-          "text": "Når noen søker etter \"rørlegger i Ski\", viser Google ofte et kart med lokale bedrifter. Der vil du at kunden skal finne deg, se anmeldelser og kunne ringe direkte.",
+          "text": "**Google Maps er ikke bare et kart. Det er der kundene velger.**\n\nNår noen leter etter en bedrift som din i nærheten, bør de finne deg. Vi styrker synligheten i Google Maps og lokale søk, slik at flere relevante kunder oppdager deg.\n\n**MÅLET:** Flere lokale bestillinger uten å kjøpe hvert besøk.",
+          "href": "/lokal-seo/",
+          "label": "Les om lokal SEO",
           "surface": "base-300"
         },
         {
           "title": "AI-synlighet",
-          "text": "Når noen spør ChatGPT eller andre AI-tjenester hvem de bør kontakte, vil du være et aktuelt forslag. Vi kan forbedre grunnlaget for å bli nevnt, men ikke love en anbefaling.",
+          "text": "**Når kundene spør AI hvem de bør velge, bør du være med i svaret.**\n\nFlere bruker ChatGPT og AI-søk for å finne produkter og tjenester. Vi gjør bedriften din lettere å forstå og oppdage, slik at du også kan bli vurdert når kundene spør AI.\n\n**MÅLET:** Flere muligheter til å bli funnet og valgt gjennom AI-søk.",
           "href": "/ai-synlighet/",
           "label": "Les om AI-synlighet",
+          "surface": "secondary"
+        }
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "betalt-synlighet",
+      "eyebrow": "Betalt synlighet",
+      "heading": "Få fart på bestillingene når det lønner seg.",
+      "headingAlign": "center",
+      "layout": "three-columns",
+      "surface": "default",
+      "body": [
+        "Annonser lar deg nå potensielle kunder raskt. Vi tester kanalene, måler kostnad per bestilling og prioriterer det som kan skaleres med lønnsomhet."
+      ],
+      "items": [
+        {
+          "title": "Google Ads",
+          "text": "**Fang kundene når de leter. Nå dem før de gjør det.**\n\nVi gjør bedriften din synlig i Google Søk, viser produktene dine i Google Shopping og når nye kunder gjennom YouTube. Vi forbedrer annonseringen med ett mål: flere lønnsomme bestillinger.\n\n**MÅLET:** Flere bestillinger til en kostnad som gjør det lønnsomt å skalere.",
+          "surface": "info"
+        },
+        {
+          "title": "ChatGPT Ads",
+          "text": "**Når kundene spør AI, bør de også oppdage deg.**\n\nVi hjelper deg å utforske annonsering i ChatGPT der kanalen er tilgjengelig. Vi tester om dette kan gi relevante kunder og lønnsomme bestillinger.\n\n**MÅLET:** Nye kundemuligheter gjennom AI-annonsering, med kontroll på resultatene.",
+          "surface": "base-300"
+        },
+        {
+          "title": "Meta Ads",
+          "text": "**Slutt å vente på at kundene skal lete. Gi dem en grunn til å velge deg.**\n\nMed annonser på Facebook og Instagram viser vi produktene og tjenestene dine til potensielle kunder. Vi tester hva som vekker interesse og gjør flere av dem til betalende kunder.\n\n**MÅLET:** Skape etterspørsel og flere bestillinger til riktig pris.",
           "surface": "secondary"
         }
       ]
@@ -178,13 +223,13 @@
     "layout": "split-right",
     "eyebrow": "SEO · Lokal SEO · AI-synlighet · Google Ads · Meta Ads · ChatGPT Ads",
     "title": "SEO og digital markedsføring som gjør deg synlig for de riktige kundene.",
-    "support": "Du startet neppe bedriften for å samle visninger og imponere et dashboard. Men pene grafer bestiller ikke produkter og tjenester. Vi bruker SEO, AI-synlighet og annonsering til å gjøre bedriften din synlig for folk som faktisk blir til bestillinger. Bestillingene er målet. Du får konsentrere deg om det du gjør best. \n<br />\nVår vekstmodell er ganske enkel: Finn en lønnsom kostnad per bestilling. Forbedre den. Skaler så langt etterspørsel, marginer og kapasitet tillater.",
+    "support": "Du startet neppe bedriften for å samle visninger og imponere et dashboard. Du vil ha kunder som bestiller produktene og tjenestene dine. Vi finner hvor de leter, gjør bedriften din mer synlig og tar oss av SEO og annonsering. Du får konsentrere deg om det du gjør best.",
     "primaryCta": {
-      "label": "Se priser og pakker",
+      "label": "Velg pakke",
       "href": "/priser/"
     },
     "secondaryCta": {
-      "label": "Ta en gratis sjekk",
+      "label": "Få 3 gratis funn",
       "href": "/#sjekk"
     },
     "visual": {

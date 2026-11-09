@@ -44,7 +44,7 @@ test('CONTENT-01: real homepage, service and article use the same one-owner ment
     assert.equal(typeof page.seo.title,'string');
     assert.equal(typeof page.hero.title,'string');
     assert.ok(Array.isArray(page.sections));
-    assert.ok(Array.isArray(page.faq));
+    assert.ok(Array.isArray(pageSchema.parse(page).faq),kind+' resolved FAQ must be an array');
     assert.equal(pageSchema.safeParse(page).success,true,kind+' page must still validate');
   }
   const globalRef=(p:any,id:string)=>p.sections.find((s:any)=>s._block==='global'&&s.element===id);
