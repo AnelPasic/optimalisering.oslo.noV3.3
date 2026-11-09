@@ -176,6 +176,11 @@
           "id": "meta-ads",
           "label": "Meta Ads",
           "description": "Nå relevante målgrupper på Facebook og Instagram."
+        },
+        {
+          "id": "seo",
+          "label": "Søkemotoroptimalisering",
+          "description": "Bli funnet på Google søk"
         }
       ]
     }
