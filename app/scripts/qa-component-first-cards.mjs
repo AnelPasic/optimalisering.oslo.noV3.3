@@ -209,7 +209,7 @@ try {
  const organicItems=organicSource.sections.find(s=>s.id==='kanaler').items;
  const selectedOffer=JSON.parse(readFileSync(new URL('../src/content/global-elements/priser.json',import.meta.url),'utf8'))
    .content.items.find(item=>item.key==='optimalisering');
- const expectedPrice=[new Intl.NumberFormat('nb-NO').format(selectedOffer.price),selectedOffer.priceSuffix,selectedOffer.vatSuffix].join(' ').replace(/\\s+/g,' ');
+ const expectedPrice=[new Intl.NumberFormat('nb-NO').format(selectedOffer.price),selectedOffer.priceSuffix,selectedOffer.vatSuffix].join(' ').replace(/\s+/g,' ');
  for(const width of [390,768,1440]){
   const page=await browser.newPage({viewport:{width,height:900}});
   assert.equal((await page.goto(origin+'/synlighet/',{waitUntil:'networkidle'})).status(),200);
@@ -223,7 +223,7 @@ try {
      count:nodes.length,
      columns:grid?getComputedStyle(grid).gridTemplateColumns.split(' ').filter(Boolean).length:0,
      title:nodes.map(n=>n.querySelector('h3')?.textContent?.trim()),
-     top:nodes.map(n=>n.querySelector('.card-body > div > span')?.textContent?.trim().replace(/\\s+/g,' ')),
+     top:nodes.map(n=>n.querySelector('.card-body > div > span')?.textContent?.trim().replace(/\s+/g,' ')),
      href:nodes.map(n=>n.getAttribute('href')),
      buttons:nodes.map(n=>n.querySelector('.card-actions .text-link')?.textContent?.trim()),
      styles:nodes.map(n=>({native:n.classList.contains('card')&&!!n.querySelector(':scope > .card-body'),color:getComputedStyle(n).backgroundColor,
