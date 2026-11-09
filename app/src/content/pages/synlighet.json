@@ -245,8 +245,8 @@
     "featuredProofCaseId": "helt-opplagt",
     "toneOverrides": {
       "eyebrowPreset": "inherit",
-      "titlePreset": "inherit",
-      "supportPreset": "inherit"
+      "titlePreset": "medon",
+      "supportPreset": "spissplushysterisk"
     }
   }
 }
