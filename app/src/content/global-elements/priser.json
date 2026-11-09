@@ -50,9 +50,9 @@
       {
         "title": "Optimalisering",
         "descriptor": "Ett viktig forbedringsområde om gangen.",
-        "fit": "Passer for små og mellomstore bedrifter med én tydelig kundereise, én hovedtjeneste eller én flaskehals som er viktigst om gangen.",
+        "fit": "-",
         "compact": {
-          "fit": "For små og mellomstore bedrifter med én tydelig kundereise eller én flaskehals som er viktigst nå.",
+          "fit": "Passer for små og mellomstore bedrifter med én tydelig kundereise, én hovedtjeneste eller én flaskehals som er viktigst om gangen.",
           "situations": [
             "Blir ikke funnet når kundene søker.",
             "Har trafikk, men får for få henvendelser eller kjøp.",
