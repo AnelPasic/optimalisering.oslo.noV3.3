@@ -17,7 +17,7 @@ test('OWNER can edit package CTA wording while order and detail routes remain re
     assert.ok(field(path),`CMS field exists: ${path}`);assert.notEqual(field(path).readonly,true,path);
   }
   assert.equal(field('iconItems'),undefined,'Retired package icon list is absent from CMS');
-  for(const {path,field:shared}of leaves(packages.fields.filter((f:any)=>f.name!=='items'))assert.notEqual(shared.readonly,true,`Shared field ${path}`);
+  for(const {path,field:shared}of leaves(packages.fields.filter((f:any)=>f.name!=='items')))assert.notEqual(shared.readonly,true,`Shared field ${path}`);
   for(const path of ['key','cta.href','detailLink.href']) assert.equal(field(path)?.readonly,true,path);
   assert.ok(!/låst|scoped.*handoff/i.test(JSON.stringify(packages)),'Editor guidance must allow routine safe OWNER editing');
   assert.ok(!/lås/i.test(cms.content.find((c:any)=>c.name==='homepage').label),'The package editor entry also uses a neutral label');
