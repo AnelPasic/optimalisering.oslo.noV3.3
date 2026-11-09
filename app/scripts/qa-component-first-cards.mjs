@@ -205,8 +205,8 @@ try {
 
  // Synlighet organic choice cards must share the homepage selector's native layout,
  // spacing, contrast and one-click package path at all review breakpoints.
- const organicSource=JSON.parse(readFileSync(new URL('../src/content/pages/synlighet.json',import.meta.url),'utf8'));
- const organicItems=organicSource.sections.find(s=>s.id==='kanaler').items;
+ const organicSource=JSON.parse(readFileSync(new URL('../src/content/global-content/kanaler.json',import.meta.url),'utf8'));
+ const organicItems=organicSource.items;
  const selectedOffer=JSON.parse(readFileSync(new URL('../src/content/global-elements/priser.json',import.meta.url),'utf8'))
    .content.items.find(item=>item.key==='optimalisering');
  const expectedPrice=[new Intl.NumberFormat('nb-NO').format(selectedOffer.price),selectedOffer.priceSuffix,selectedOffer.vatSuffix].join(' ').replace(/\s+/g,' ');

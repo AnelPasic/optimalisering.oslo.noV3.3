@@ -1,0 +1,40 @@
+{
+  "_block": "content",
+  "uid": "6f6689c5-6fcd-4d3d-9ef3-1d5c9340d9ba",
+  "id": "kanaler",
+  "name": "Organisk synlighet: SEO, Lokal SEO og AI-synlighet",
+  "eyebrow": "Organisk synlighet",
+  "heading": "Annonser gir fart. Organisk synlighet bygger lønnsomhet.",
+  "headingAlign": "center",
+  "layout": "three-columns",
+  "surface": "default",
+  "body": [
+    "Med annonser kan vi nå nye kunder raskt. Med SEO, Google Maps og AI-synlighet bygger vi synlighet som kan gi bestillinger uten betaling for hvert klikk. Å øke markedsbudsjettet før vi vet hva en bestilling koster, er ikke skalering. Det er bare en dyrere måte å gjette på."
+  ],
+  "items": [
+    {
+      "title": "SEO",
+      "text": "Vi finner søkene som kan gi deg kunder, forbedrer sidene de møter og følger opp det som virker. Målet er flere relevante bestillinger uten å betale Google for hvert klikk.",
+      "href": "/priser/?pakke=optimalisering&fokus=seo-ai#bestill",
+      "label": "Velg SEO",
+      "surface": "info",
+      "headline": "Bli funnet i Google"
+    },
+    {
+      "title": "Lokal SEO",
+      "text": "Når folk leter etter en bedrift i nærheten, skal de enkelt finne og velge deg. Vi forbedrer synligheten i Google Maps og lokale søk og gjør veien til kontakt enklere.",
+      "href": "/priser/?pakke=optimalisering&fokus=lokal-seo#bestill",
+      "label": "Velg Lokal SEO",
+      "surface": "base-300",
+      "headline": "Bli valgt i nærområdet"
+    },
+    {
+      "title": "AI-synlighet",
+      "text": "Flere bruker ChatGPT og AI-søk for å finne produkter og tjenester. Vi gjør bedriften din lettere å forstå og oppdage, slik at du kan bli vurdert når kundene spør AI.",
+      "href": "/priser/?pakke=optimalisering&fokus=seo-ai#bestill",
+      "label": "Velg AI-synlighet",
+      "surface": "secondary",
+      "headline": "Bli med i svaret"
+    }
+  ]
+}
