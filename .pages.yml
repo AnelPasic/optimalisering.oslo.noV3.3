@@ -1866,12 +1866,6 @@ content:
                   - name: typicalBusiness
                     label: Typisk virksomhet
                     type: text
-                  - name: situations
-                    label: Typiske situasjoner
-                    type: text
-                    list:
-                      min: 1
-                    required: true
                   - name: key
                     label: Stabil pakkenøkkel for bestilling
                     type: string

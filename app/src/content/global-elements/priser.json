@@ -60,11 +60,6 @@
         },
         "scope": "Vi fokuserrer på der det er mest å hente til neste prioritet er viktigere.",
         "typicalBusiness": "Typisk en konkurranseutsatt lokal tjenestebedrift, mindre klinikk, regnskapskontor eller nisje-B2B-bedrift med én tydelig hovedtjeneste.",
-        "situations": [
-          "Kundene finner deg ikke når de søker etter det du tilbyr.",
-          "Du får relevant trafikk, men for få henvendelser eller kjøp.",
-          "Du får for lite ut av Google Ads eller en annen viktig kanal."
-        ],
         "key": "optimalisering",
         "iconItems": [
           {
@@ -119,11 +114,6 @@
             "Betalt annonsering og større andel som bestiller."
           ]
         },
-        "situations": [
-          "Du trenger betalt synlighet for å få fart nå, men vil bygge organisk synlighet over tid.",
-          "Du får trafikk, men vil få mer ut av den med bedre konvertering.",
-          "Resultatet avhenger av at to områder forbedres samtidig."
-        ],
         "key": "vekst",
         "iconItems": [
           {
@@ -177,11 +167,6 @@
         },
         "scope": "Vi prioriterer løpende kundereisene med størst kommersiell verdi eller størst forbedringspotensial. Det betyr ikke at alt gjøres samtidig eller at kapasiteten er ubegrenset.",
         "typicalBusiness": "Typisk en virksomhet med fire-fem forskjellige tjenester - for eksempel kantine, catering, fruktlevering og andre B2B-tjenester - der hver kundereise har egne søk, konkurrenter, sider og prioriteringer.",
-        "situations": [
-          "Flere tjenester eller produktområder konkurrerer i ulike markeder.",
-          "Ulike kundereiser trenger ulike kombinasjoner av synlighet, annonser og konvertering.",
-          "Du trenger en fast partner som prioriterer hva som bør forbedres hvor - og i hvilken rekkefølge."
-        ],
         "key": "partner",
         "iconItems": [
           {

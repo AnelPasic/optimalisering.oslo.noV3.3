@@ -37,7 +37,6 @@ const formatPrice = (value: number) => new Intl.NumberFormat('nb-NO', { maximumF
       <PackageOrder item={item} featured={item.recommended} orderIntro={content.orderIntro} orderSubmitLabel={content.orderSubmitLabel} />
       <details class="package-details" open={expanded}><summary>{item.detailLink.label}</summary><div class="package-detail">
         {item.typicalBusiness && <div><h3 class="package-block-heading">{content.labels.typicalBusiness}</h3><p>{item.typicalBusiness}</p></div>}
-        <div><h3 class="package-block-heading">{content.labels.situations}</h3><ul>{item.situations.map(text => <li>{text}</li>)}</ul></div>
         <div><h3 class="package-block-heading">{index === 1 ? content.labels.combinations : index === 2 ? content.labels.workAreas : content.labels.focus}</h3><ul >{item.iconItems.map(focus => <li><p class="package-focus-label">{focus.label}</p>{focus.description && <p class="package-focus-description">{focus.description}</p>}</li>)}</ul></div>
         {item.scope && <div ><h3 class="package-block-heading">{content.scopeLabel}</h3><p>{item.scope}</p></div>}
         {item.distinction && <p >{item.distinction}</p>}

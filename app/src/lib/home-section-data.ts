@@ -41,7 +41,7 @@ export const homeSectionDataSchema = z.object({
       compact: z.object({ fit: z.string().trim().min(1), situations: z.array(z.string().trim().min(1)).min(1).max(3) }),
       visual: z.enum(['controlled', 'accelerating', 'tracks']),
       visualCaption: z.object({ label: z.string().trim().min(1), support: z.string().trim().min(1).optional() }).optional(),
-      typicalBusiness: z.string().optional(), situations: z.array(z.string()).min(1), focusAreas: z.array(z.string()).optional(),
+      typicalBusiness: z.string().optional(), focusAreas: z.array(z.string()).optional(),
       combinations: z.array(z.object({ title: z.string(), text: z.string() })).optional(),
       selectionRule: z.string(), distinction: z.string().optional(), priceNote: z.string().optional(),
     })).length(3),

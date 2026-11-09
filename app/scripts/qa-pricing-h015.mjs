@@ -142,7 +142,7 @@ try {
             assert.equal(await detail.locator('.package-detail').isVisible(), false);
             await detail.locator('summary').focus(); await page.keyboard.press('Enter');
             assert.equal(await detail.locator('.package-detail').isVisible(), true, 'Keyboard reads full package without a custom toggle');
-            for (const copy of [item.scope, item.distinction, item.typicalBusiness, item.priceNote, item.selectionRule, ...item.situations, ...item.iconItems.flatMap(icon => [icon.label, icon.description])].filter(Boolean)) assert.ok((await detail.innerText()).includes(copy));
+            for (const copy of [item.scope, item.distinction, item.typicalBusiness, item.priceNote, item.selectionRule, ...item.iconItems.flatMap(icon => [icon.label, icon.description])].filter(Boolean)) assert.ok((await detail.innerText()).includes(copy));
             assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), 'Expanded detail also fits');
             if (index === 0 && width !== 320) await card.screenshot({animations:'disabled', path:resolve(output,`detail-expanded-${width}.png`)});
             await detail.locator('summary').focus(); await page.keyboard.press('Space');
