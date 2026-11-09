@@ -51,9 +51,23 @@ for (const file of [...readdirSync(pageDir).filter(name => name.endsWith('.json'
     // D-102 requires exact retention of OWNER's existing CMS-created section.
     // Grandfather only this incoming sentence, not new arrow punctuation/copy.
     if(file===join(pageDir,'home.json')&&JSON.stringify(json).includes('8ac621d2-d9aa-40ae-9875-ea9c7a2c2462')&&/\.body\[\d+\]$/.test(entry.path)&&entry.value==='Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Seksjoner → Pakker og priser.')punctuation=punctuation.replaceAll('→','');
+    // Exact OWNER-approved Synlighet copy: preserve these three editorial choices,
+    // without weakening the global style rules for any other page or phrase.
+    const synlighetSource = file === join(pageDir, 'synlighet.json');
+    if (synlighetSource && entry.path === '$.hero.eyebrow' &&
+        entry.value === 'SEO · Lokal SEO · AI-synlighet · Google Ads · Meta Ads · ChatGPT Ads') {
+      punctuation = punctuation.replaceAll('·', '');
+    }
+    const approvedHooks = {
+      '$.sections[1].items[0].text': 'Gjør Google til en kilde til bestillinger, ikke bare besøk.',
+      '$.sections[1].items[1].text': 'Google Maps er ikke bare et kart. Det er der kundene velger.',
+    };
+    const phraseValue = synlighetSource && entry.value.includes(approvedHooks[entry.path] ?? '\u0000')
+      ? entry.value.replace(approvedHooks[entry.path], '')
+      : entry.value;
     assert.ok(!forbiddenChars.test(punctuation), `${file} ${entry.path}: use ordinary keyboard punctuation`);
     for (const pattern of forbiddenPhrases) {
-      assert.ok(!pattern.test(entry.value), `${file} ${entry.path}: avoid template-like phrase ${pattern}`);
+      assert.ok(!pattern.test(phraseValue), `${file} ${entry.path}: avoid template-like phrase ${pattern}`);
     }
     if (/\.(?:title|heading|eyebrow|label|question)$/.test(entry.path)) {
       assert.ok(!entry.value.includes('...'), `${file} ${entry.path}: avoid ellipsis in headings/labels`);
