@@ -170,9 +170,9 @@
       {
         "title": "Enterprise",
         "descriptor": "Flere tjenester og kundereiser.",
-        "fit": "Passer for bedrifter med flere tjenester, produktområder, markeder, lokasjoner eller målgrupper som møter forskjellige konkurrenter og trenger løpende prioritering på tvers.",
+        "fit": "-",
         "compact": {
-          "fit": "For bedrifter med flere tjenester, markeder eller kundereiser som må prioriteres løpende.",
+          "fit": "Passer for bedrifter med flere typer tjenester, produktområder, markeder, lokasjoner eller målgrupper som møter forskjellige konkurrenter og trenger samtidig prioritering.",
           "situations": [
             "Flere tjenester konkurrerer i ulike markeder.",
             "Ulike kundereiser trenger ulike grep.",
