@@ -13,10 +13,11 @@ function leaves(fields:any[],prefix=''):any[] {return fields.flatMap(f=>f.fields
 test('OWNER can edit package CTA wording while order and detail routes remain readonly',()=>{
   const fields=leaves(packages.fields.find((f:any)=>f.name==='items').fields);
   const field=(path:string)=>fields.find(f=>f.path===path)?.field;
-  for(const path of ['cta.label','detailLink.label','title','descriptor','compact.fit','compact.situations','fit','price','pricePrefix','priceSuffix','vatSuffix','recommended','badge','visual','visualAsset.src','visualAsset.alt','visualAsset.positionX','visualAsset.positionY','visualCaption.label','visualCaption.support','situations','typicalBusiness','scope','distinction','selectionRule','priceNote','iconItems.icon','iconItems.compactLabel','iconItems.label','iconItems.description']) {
+  for(const path of ['cta.label','detailLink.label','title','descriptor','compact.fit','compact.situations','price','pricePrefix','priceSuffix','vatSuffix','recommended','badge','visual','visualAsset.src','visualAsset.alt','visualAsset.positionX','visualAsset.positionY','visualCaption.label','visualCaption.support','typicalBusiness','scope','distinction','selectionRule','priceNote']) {
     assert.ok(field(path),`CMS field exists: ${path}`);assert.notEqual(field(path).readonly,true,path);
   }
-  for(const {path,field:shared}of leaves(packages.fields.filter((f:any)=>f.name!=='items')))assert.notEqual(shared.readonly,true,`Shared field ${path}`);
+  assert.equal(field('iconItems'),undefined,'Retired package icon list is absent from CMS');
+  for(const {path,field:shared}of leaves(packages.fields.filter((f:any)=>f.name!=='items'))assert.notEqual(shared.readonly,true,`Shared field ${path}`);
   for(const path of ['key','cta.href','detailLink.href']) assert.equal(field(path)?.readonly,true,path);
   assert.ok(!/låst|scoped.*handoff/i.test(JSON.stringify(packages)),'Editor guidance must allow routine safe OWNER editing');
   assert.ok(!/lås/i.test(cms.content.find((c:any)=>c.name==='homepage').label),'The package editor entry also uses a neutral label');

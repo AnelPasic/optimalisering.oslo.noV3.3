@@ -3,8 +3,6 @@ import type { HomepageContent } from '../lib/home-section-data';
 import '../styles/compositions/package.css';
 import Arrow from './Arrow.astro';
 import Visual from './PackageVisual.astro';
-import FocusIcon from './PackageFocusIcon.astro';
-import TermText from './TermText.astro';
 import PackageOrder from './PackageOrder.astro';
 interface Props {
   content: HomepageContent['packages'];
@@ -33,11 +31,9 @@ const formatPrice = (value: number) => new Intl.NumberFormat('nb-NO', { maximumF
       <h3 class="package-block-heading">{content.fitLabel}</h3>
       <p class="package-fit">{item.compact.fit}</p>
         <div class="package-situations"><h3 class="package-block-heading">{content.labels.situations}</h3><ul>{item.compact.situations.map(text => <li>{text}</li>)}</ul></div>
-        <div class="package-focus"><ul class:list={['package-icon-items', { 'package-combos': index === 1 }]}>{item.iconItems.map(focus => <li><FocusIcon kind={focus.icon} /><span><TermText text={focus.compactLabel} terms={['seo', 'lokal-seo', 'ai-synlighet', 'google-ads', 'meta-ads', 'cro']} /></span></li>)}</ul></div>
       <PackageOrder item={item} featured={item.recommended} orderIntro={content.orderIntro} orderSubmitLabel={content.orderSubmitLabel} />
       <details class="package-details" open={expanded}><summary>{item.detailLink.label}</summary><div class="package-detail">
         {item.typicalBusiness && <div><h3 class="package-block-heading">{content.labels.typicalBusiness}</h3><p>{item.typicalBusiness}</p></div>}
-        <div><h3 class="package-block-heading">{index === 1 ? content.labels.combinations : index === 2 ? content.labels.workAreas : content.labels.focus}</h3><ul >{item.iconItems.map(focus => <li><p class="package-focus-label">{focus.label}</p>{focus.description && <p class="package-focus-description">{focus.description}</p>}</li>)}</ul></div>
         {item.scope && <div ><h3 class="package-block-heading">{content.scopeLabel}</h3><p>{item.scope}</p></div>}
         {item.distinction && <p >{item.distinction}</p>}
         <p >{item.selectionRule}</p>

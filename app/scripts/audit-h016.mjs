@@ -10,7 +10,7 @@ for(const [file,open] of [['dist/index.html',false],['dist/priser/index.html',tr
   assert.equal(cards.length,3);
   for(const [index,card] of cards.entries()) {
     const item=packages.items[index];
-    assert.ok(card.includes('class="package-situations"')&&card.includes('package-icon-items'),'Both pages use the standard compact chooser');
+    assert.ok(card.includes('class="package-situations"')&&!card.includes('package-icon-items'),'Compact situations remain; retired icon rows absent');
     assert.ok(card.includes(`<details class="package-details"${open?' open':''}>`),'Native detail state follows page presentation');
     assert.ok(text(card).includes(item.cta.label)&&text(card).includes(item.detailLink.label),'CTA and disclosure labels follow CMS');
     assert.ok(card.includes(`href="/priser/?pakke=${item.key}#bestill"`));
@@ -24,7 +24,7 @@ for(const [file,open] of [['dist/index.html',false],['dist/priser/index.html',tr
       const svg=card.match(/<svg class="package-visual[^>]*>(.*?)<\/svg>/s)?.[1];
       assert.ok(svg&&!/<text|<image|<foreignObject|<script|\d+\s*%|https?:/i.test(svg),'Conceptual SVG has no baked copy or numeric performance claim');
     }
-    for(const copy of [item.selectionRule,item.scope,item.distinction,item.priceNote,...item.iconItems.flatMap(icon=>[icon.label,icon.description])].filter(Boolean))assert.ok(text(card).includes(copy),'Details consume the same full CMS source');
+    for(const copy of [item.selectionRule,item.scope,item.distinction,item.priceNote].filter(Boolean))assert.ok(text(card).includes(copy),'Details consume the same full CMS source');
     assert.ok(!/problem/i.test(text(card)),'No problem wording on the customer package surface');
     assert.ok(!text(card).includes('Optimalisering er ikke laget for to uavhengige vekstspor samtidig.'));
     assert.ok(!text(card).includes('Velg Vekst hvis resultatet avhenger av at to ting forbedres samtidig.'));

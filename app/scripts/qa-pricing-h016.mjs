@@ -80,7 +80,6 @@ try {
           assert.equal(await detail.locator('summary').innerText(),item.detailLink.label);
           assert.equal(await card.locator('.button').getAttribute('href'),item.cta.href); assert.ok((await card.locator('.button').innerText()).startsWith(item.cta.label));
           assert.deepEqual(await card.locator('.package-situations li').allTextContents(),item.compact.situations);
-          assert.deepEqual(await card.locator('.package-icon-items span').allTextContents(),item.iconItems.map(icon=>icon.compactLabel));
           assert.equal(await card.locator('.package-fit').innerText(),item.compact.fit);
           assert.ok(!/problem|Optimalisering er ikke laget for to uavhengige|Velg Vekst hvis resultatet/.test(await card.textContent()));
           const initial=route==='/priser/'; await detail.locator('summary').focus(); await page.keyboard.press('Enter');

@@ -11,7 +11,6 @@ for(const file of ['dist/index.html','dist/priser/index.html']) {
   for(const [index,item] of getHomepageBlock(home,'packages').content.items.entries()) {
     assert.ok(cards[index].includes(`href="${item.cta.href}"`) && text(cards[index]).includes(item.cta.label));
     assert.ok(cards[index].includes('class="package-visual-area'));
-    if(file.includes('/priser/')) for(const focus of item.iconItems) assert.ok(text(cards[index]).includes(focus.label));
   }
 }
 assert.equal((html.match(/<form\b[^>]*data-package-order/g)??[]).length,1);

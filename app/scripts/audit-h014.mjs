@@ -6,7 +6,6 @@ const packages = getHomepageBlock(JSON.parse(readFileSync('src/content/pages/hom
 const expected = getH014Compact();
 for (const [index, item] of packages.items.entries()) {
   assert.deepEqual(item.compact, { fit: expected[index].fit, situations: expected[index].situations }, 'D-048 exact compact fit/situations');
-  assert.deepEqual(item.iconItems.map(icon => icon.compactLabel), expected[index].iconLabels, 'D-048 exact compact icon labels');
 }
 for (const [file, full] of [['dist/index.html', false], ['dist/priser/index.html', true]]) {
   const html = readFileSync(file, 'utf8');
@@ -21,9 +20,9 @@ for (const [file, full] of [['dist/index.html', false], ['dist/priser/index.html
       assert.ok(detail && detail.startsWith('<summary>Se detaljer'), 'Native collapsed disclosure after CTA');
       assert.ok(card.indexOf('class="button"') < card.indexOf('<details class="package-details">'));
       const visible = card.split('<details class="package-details">')[0];
-      for (const text of [...item.compact.situations, ...item.iconItems.map(icon => icon.compactLabel)]) assert.ok(visible.includes(text));
-      for (const text of [item.typicalBusiness, item.scope, item.distinction, item.priceNote, item.selectionRule, ...item.iconItems.flatMap(icon => [icon.label, icon.description])].filter(Boolean)) assert.ok(detail.includes(text), 'Full H-012/H-013 copy remains in the disclosure');
-      for (const text of [item.typicalBusiness, item.scope, item.distinction, item.priceNote, item.selectionRule, ...item.iconItems.map(icon => icon.description)].filter(Boolean)) assert.ok(!visible.includes(text), 'Long text is absent from default card');
+      for (const text of item.compact.situations) assert.ok(visible.includes(text));
+      for (const text of [item.typicalBusiness, item.scope, item.distinction, item.priceNote, item.selectionRule].filter(Boolean)) assert.ok(detail.includes(text), 'Full H-012/H-013 copy remains in the disclosure');
+      for (const text of [item.typicalBusiness, item.scope, item.distinction, item.priceNote, item.selectionRule].filter(Boolean)) assert.ok(!visible.includes(text), 'Long text is absent from default card');
     } else {
       assert.ok(!card.includes('package-details') && !card.includes('package-icon-items') && !card.includes('package-situations'));
       assert.ok(card.includes('Se pakken'));

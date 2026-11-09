@@ -1871,41 +1871,6 @@ content:
                     type: string
                     readonly: true
                     required: true
-                  - name: iconItems
-                    label: Fokus og populære kombinasjoner
-                    type: object
-                    list:
-                      collapsible:
-                        collapsed: true
-                        summary: "{label}"
-                      min: 1
-                    fields:
-                      - name: icon
-                        label: Generisk ikon
-                        type: select
-                        options:
-                          values:
-                            - search
-                            - conversion
-                            - local
-                            - paid-search
-                            - social-paid
-                            - analytics
-                            - page
-                            - route
-                        required: true
-                      - name: label
-                        label: Fokus eller kombinasjon
-                        type: string
-                        required: true
-                      - name: compactLabel
-                        label: Kort etikett
-                        type: string
-                        required: true
-                      - name: description
-                        label: Forklaring – valgfri
-                        type: text
-                    required: true
                   - name: selectionRule
                     label: Valgregel
                     type: text
