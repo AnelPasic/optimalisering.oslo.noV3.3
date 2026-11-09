@@ -72,12 +72,14 @@ test('live fragment links require visible targets; protected local sjekk cannot 
 test('proof, prices and FAQ follow explicit position/visibility/removal without fallback',()=>{
   for(const id of ['resultater','priser','sporsmal']){
     const base=structuredClone(source);base.sections=base.sections.filter((s:any)=>s.element!==id);
+    // If pricing is removed, the page's own primary CTA must point elsewhere.
+    if(id==='priser')base.hero.primaryCta.href='/priser/';
     const raw=structuredClone(base);raw.sections.splice(1,0,placement(id));
     assert.equal(visibleServiceSections(pageSchema.parse(raw))[1].id,id);
     validateServiceGlobalProof(pageSchema.parse(raw),records);
     raw.hero.primaryCta.href='/synlighet/?test=1#'+id;assert.ok(pageSchema.safeParse(raw).success);
     raw.sections[1].visibility='hidden';assert.equal(pageSchema.safeParse(raw).success,false,'live target hidden');
-    raw.hero.primaryCta=source.hero.primaryCta;
+    raw.hero.primaryCta=base.hero.primaryCta;
     assert.equal(visibleServiceSections(pageSchema.parse(raw)).some((s:any)=>s.id===id),false);
     raw.sections.splice(1,1);assert.deepEqual(pageSchema.parse(raw).sections,pageSchema.parse(base).sections);
     assert.equal(Object.hasOwn(pageSchema.parse(raw),'proof'),false);
