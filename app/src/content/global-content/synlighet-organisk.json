@@ -17,5 +17,6 @@
       "surface": "info"
     }
   ],
-  "eyebrow": "Organisk synlighet"
+  "eyebrow": "Organisk synlighet",
+  "headingAlign": "left"
 }
