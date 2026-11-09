@@ -41,24 +41,27 @@
       "items": [
         {
           "title": "SEO",
-          "text": "**Gjør Google til en kilde til bestillinger, ikke bare besøk.**\n\nVi gjør nettsiden din lettere å finne når folk søker etter det du selger. Gode plasseringer kan gi nye bestillinger måned etter måned, uten at du betaler for hvert klikk.\n\n**MÅLET:** Flere bestillinger fra Google til lavere kostnad over tid.",
-          "href": "/seo/",
-          "label": "Les om SEO",
-          "surface": "info"
+          "text": "Vi finner søkene som kan gi deg kunder, forbedrer sidene de møter og følger opp det som virker. Målet er flere relevante bestillinger uten å betale Google for hvert klikk.",
+          "href": "/priser/?pakke=optimalisering&fokus=seo-ai#bestill",
+          "label": "Velg SEO",
+          "surface": "info",
+          "headline": "Bli funnet i Google"
         },
         {
           "title": "Lokal SEO",
-          "text": "**Google Maps er ikke bare et kart. Det er der kundene velger.**\n\nNår noen leter etter en bedrift som din i nærheten, bør de finne deg. Vi styrker synligheten i Google Maps og lokale søk, slik at flere relevante kunder oppdager deg.\n\n**MÅLET:** Flere lokale bestillinger uten å kjøpe hvert besøk.",
-          "href": "/lokal-seo/",
-          "label": "Les om lokal SEO",
-          "surface": "base-300"
+          "text": "Når folk leter etter en bedrift i nærheten, skal de enkelt finne og velge deg. Vi forbedrer synligheten i Google Maps og lokale søk og gjør veien til kontakt enklere.",
+          "href": "/priser/?pakke=optimalisering&fokus=lokal-seo#bestill",
+          "label": "Velg Lokal SEO",
+          "surface": "base-300",
+          "headline": "Bli valgt i nærområdet"
         },
         {
           "title": "AI-synlighet",
-          "text": "**Når kundene spør AI hvem de bør velge, bør du være med i svaret.**\n\nFlere bruker ChatGPT og AI-søk for å finne produkter og tjenester. Vi gjør bedriften din lettere å forstå og oppdage, slik at du også kan bli vurdert når kundene spør AI.\n\n**MÅLET:** Flere muligheter til å bli funnet og valgt gjennom AI-søk.",
-          "href": "/ai-synlighet/",
-          "label": "Les om AI-synlighet",
-          "surface": "secondary"
+          "text": "Flere bruker ChatGPT og AI-søk for å finne produkter og tjenester. Vi gjør bedriften din lettere å forstå og oppdage, slik at du kan bli vurdert når kundene spør AI.",
+          "href": "/priser/?pakke=optimalisering&fokus=seo-ai#bestill",
+          "label": "Velg AI-synlighet",
+          "surface": "secondary",
+          "headline": "Bli med i svaret"
         }
       ]
     },
