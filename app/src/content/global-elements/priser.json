@@ -90,6 +90,7 @@
             "Betalt annonsering og større andel som bestiller."
           ]
         },
+        "typicalBusiness": "Typisk en konkurranseutsatt lokal tjenestebedrift, klinikk, regnskapskontor eller nisje-B2B-bedrift tydelig hovedtjeneste som trenger forbedring raskt.",
         "key": "vekst",
         "selectionRule": "Velg Vekst for to forbedringer som forsterker hverandre.",
         "visual": "accelerating",
