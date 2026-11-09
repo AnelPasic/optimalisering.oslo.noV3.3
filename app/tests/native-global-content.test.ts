@@ -95,3 +95,26 @@ test('real page schema resolves one shared source on Home and Om, rejects collis
   assert.equal(pageSchema.safeParse({...om,sections:[...om.sections,local,reference]}).success,false);
  }finally{process.chdir(cwd);rmSync(root,{recursive:true,force:true});}
 });
+
+test('organiske valgkort lagres under Global Innhold og kan redigeres uten dobbel kilde',()=>{
+  const filename='app/src/content/global-content/kanaler.json';
+  const original=JSON.parse(readFileSync('src/content/global-content/kanaler.json','utf8'));
+  const entry=entryForFile(cms,filename);
+  assert.ok(entry,'Globalt innhold must expose the organic card editor');
+  const fields=entry.fields.find((f:any)=>f.name==='items');
+  const itemEditor=resolveField(fields,cms.components);
+  assert.ok(itemEditor.fields.some((f:any)=>f.name==='headline'),'Cards must expose headline in CMS');
+  const saved=JSON.parse(cmsJsonSave(original,original,entry,cms));
+  assert.deepEqual(saved,original,'CMS round trip must keep all three cards and current content');
+  const modified=structuredClone(original);
+  modified.items[1].headline='Nytt lokalt budskap';
+  modified.items[1].text='Ny CMS-beskrivelse';
+  const updated=JSON.parse(cmsJsonSave(original,modified,entry,cms));
+  assert.deepEqual(updated,modified);
+  assert.equal(sharedContentSchema.safeParse(updated).success,true);
+  const page=JSON.parse(readFileSync('src/content/pages/synlighet.json','utf8'));
+  assert.deepEqual(page.sections[0],{_block:'sharedContent',entry:'kanaler'});
+  const parsed=pageSchema.parse(page);
+  assert.equal(parsed.sections.find((s:any)=>s.id==='kanaler')?.items?.[1]?.headline,original.items[1].headline);
+  assert.equal(page.sections.some((s:any)=>s.id==='kanaler'||s.items?.some((i:any)=>i.headline==='Bli med i svaret')),false);
+});
