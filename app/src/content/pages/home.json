@@ -36,11 +36,15 @@
     },
     {
       "_block": "global",
-      "element": "resultater"
+      "element": "regneeksempel"
     },
     {
       "_block": "global",
       "element": "priser"
+    },
+    {
+      "_block": "global",
+      "element": "resultater"
     },
     {
       "_block": "global",
@@ -53,18 +57,18 @@
     {
       "_block": "content",
       "uid": "30bf986d-0526-4f48-94c1-41496f6c79ed",
-      "id": "klar-for-neste-steg",
       "name": "Avsluttende CTA",
+      "id": "klar-for-neste-steg",
       "eyebrow": "Klar for neste steg?",
       "heading": "Konkurrentene dine venter neppe på at du skal bli klar.",
+      "headingAlign": "center",
+      "layout": "default",
+      "surface": "base-200",
+      "buttonStyle": "btn-primary",
       "body": [
         "Du vet hva du vil oppnå. Vi finner hvor du har mest å hente og gjør jobben.",
         "Fra 4 500 kr/mnd. Ingen bindingstid."
       ],
-      "surface": "base-200",
-      "headingAlign": "center",
-      "layout": "default",
-      "buttonStyle": "btn-primary",
       "links": [
         {
           "label": "Velg pakke",
@@ -72,6 +76,5 @@
         }
       ]
     }
-  ],
-  "faq": []
+  ]
 }
