@@ -8,7 +8,7 @@ import {cmsJsonSave,entryForFile} from './helpers/pages-cms-json.ts';
 
 const raw=JSON.parse(readFileSync('src/content/pages/priser.json','utf8'));
 const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
-const order=raw.sections.map((section:any)=>section._block==='pricingModule'?({valg:'pricing-decision',vekst:'pricing-multiplier',sammenligning:'sammenlign'} as const)[section.pricingModule as 'valg'|'vekst'|'sammenligning']:section.element);
+const order:string[]=raw.sections.map((section:any)=>section._block==='pricingModule'?({valg:'pricing-decision',vekst:'pricing-multiplier',sammenligning:'sammenlign'} as const)[section.pricingModule as 'valg'|'vekst'|'sammenligning']:section.element);
 
 test('Prissiden six visible sections appear in the same order as Pages CMS',()=>{
  assert.deepEqual([...new Set(raw.sections.map((s:any)=>s._block==='pricingModule'?s.pricingModule:s.element))].sort(),
