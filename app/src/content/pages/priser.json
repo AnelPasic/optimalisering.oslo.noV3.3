@@ -27,16 +27,16 @@
   },
   "sections": [
     {
+      "_block": "global",
+      "element": "priser"
+    },
+    {
       "_block": "pricingModule",
       "pricingModule": "valg"
     },
     {
       "_block": "pricingModule",
       "pricingModule": "vekst"
-    },
-    {
-      "_block": "global",
-      "element": "priser"
     },
     {
       "_block": "pricingModule",
