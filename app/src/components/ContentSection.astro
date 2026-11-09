@@ -5,7 +5,6 @@ import { sectionDefaultsAt } from '../lib/section-appearance';
 import { actionClasses, buttonChoice } from '../lib/section-buttons';
 import TermText from './TermText.astro';
 import ContentCard from './ContentCard.astro';
-import SynlighetChoiceCards from './SynlighetChoiceCards.astro';
 import RichMarkdown from './RichMarkdown.astro';
 import {hasRichMarkdown} from '../lib/rich-markdown';
 import { resolveSectionSurface, surfaceAttribute } from '../lib/surface';
@@ -16,7 +15,6 @@ interface Props { section: CollectionEntry<'pages'>['data']['sections'][number];
 const { section, index } = Astro.props;
 const terms = Astro.url.pathname === '/nettbutikkoptimalisering/' ? ['checkout', 'ordreverdi', 'margin', 'konverteringsrate'] : Astro.url.pathname === '/seo/' ? ['seo'] : Astro.url.pathname === '/ai-synlighet/' ? ['ai-synlighet', 'aeo', 'aio', 'geo', 'seo'] : [];
 const protectedRow = section._block === 'protected';
-const synlighetChoiceCards = Astro.url.pathname === '/synlighet/' && section.id === 'kanaler';
 const defaults = sectionDefaultsAt(chrome, index);
 const sectionButton = protectedRow ? undefined : buttonChoice(section.buttonStyle, defaults?.buttonStyle);
 const boxButton = protectedRow ? undefined : buttonChoice(section.boxButtonStyle, defaults?.boxButtonStyle);
@@ -25,9 +23,7 @@ const alignment = resolveHeadingAlignment(section.headingAlign, defaults?.headin
 <section id={section.id} class:list={['content-section section-space', { 'section-tint': (index ?? 0) % 3 === 1 }]} data-surface={resolveSectionSurface(section.surface, defaults?.surface, protectedRow)}>
   <div class="shell">
     <div class="section-heading" data-heading-align={alignment}><div>{section.eyebrow && <p class="eyebrow">{section.eyebrow}</p>}<h2>{section.heading}</h2></div><div class="body-copy" data-content-layout={paragraphLayoutAttribute(section,section._block === 'protected')}>{section.body.map(text => hasRichMarkdown(text)?<RichMarkdown text={text}/>:<p><TermText text={text} terms={terms} /></p>)}</div></div>
-    {section.items && (synlighetChoiceCards
-      ? <SynlighetChoiceCards items={section.items} />
-      : <div class:list={['section-items', { 'two-items': section.items.length === 2, 'process-items': section.id === 'sjekk' }]} data-content-layout={contentLayoutAttribute(section.layout,section._block==='protected')}>{section.items.map((item, i) => boxVariantAttribute(item.boxVariant,section._block==='protected')!=='plain'?<ContentCard buttonStyle={buttonChoice(item.buttonStyle, boxButton)} title={item.title} text={item.text} surface={surfaceAttribute(item.surface,section._block==='protected')??(i===0?'base-300':'base-100')} transparent={i>0&&!surfaceAttribute(item.surface,section._block==='protected')} number={String(i+1).padStart(2,'0')} href={item.href} label={item.label} textTerms={terms}/>:<article class:list={['info-item data-[box-variant=plain]:p-(--panel-pad) not-[.card]:data-[surface]:p-(--panel-pad)', {'item-apricot': i === 0, 'item-sage': i === 1, 'item-plain': i > 1 }]} data-box-variant={boxVariantAttribute(item.boxVariant,section._block==='protected')} data-surface={surfaceAttribute(item.surface, section._block === 'protected')}><span class="item-number" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span><h3>{item.title}</h3>{hasRichMarkdown(item.text)?<RichMarkdown text={item.text} variant="card"/>:<p><TermText text={item.text} terms={terms}/></p>}{item.href && <a class={actionClasses(buttonChoice(item.buttonStyle, boxButton) ?? 'link')} href={item.href}>{item.label || item.title}<Arrow diagonal /></a>}</article>)}</div>)}
+    {section.items && <div class:list={['section-items', { 'two-items': section.items.length === 2, 'process-items': section.id === 'sjekk' }]} data-content-layout={contentLayoutAttribute(section.layout,section._block==='protected')}>{section.items.map((item, i) => boxVariantAttribute(item.boxVariant,section._block==='protected')!=='plain'?<ContentCard buttonStyle={buttonChoice(item.buttonStyle, boxButton)} title={item.title} text={item.text} surface={surfaceAttribute(item.surface,section._block==='protected')??(i===0?'base-300':'base-100')} transparent={i>0&&!surfaceAttribute(item.surface,section._block==='protected')} number={String(i+1).padStart(2,'0')} href={item.href} label={item.label} textTerms={terms}/>:<article class:list={['info-item data-[box-variant=plain]:p-(--panel-pad) not-[.card]:data-[surface]:p-(--panel-pad)', {'item-apricot': i === 0, 'item-sage': i === 1, 'item-plain': i > 1 }]} data-box-variant={boxVariantAttribute(item.boxVariant,section._block==='protected')} data-surface={surfaceAttribute(item.surface, section._block === 'protected')}><span class="item-number" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span><h3>{item.title}</h3>{hasRichMarkdown(item.text)?<RichMarkdown text={item.text} variant="card"/>:<p><TermText text={item.text} terms={terms}/></p>}{item.href && <a class={actionClasses(buttonChoice(item.buttonStyle, boxButton) ?? 'link')} href={item.href}>{item.label || item.title}<Arrow diagonal /></a>}</article>)}</div>}
     {section.links && <div class:list={['section-links', alignment === 'center' ? 'justify-center' : 'justify-start']}>{section.links.map(link => <a class={actionClasses(sectionButton ?? 'link')} href={link.href}>{link.label}<Arrow /></a>)}</div>}
   </div>
 </section>
