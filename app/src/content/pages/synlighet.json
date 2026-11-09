@@ -223,7 +223,7 @@
     "layout": "split-right",
     "eyebrow": "SEO · Lokal SEO · AI-synlighet · Google Ads · ChatGPT Ads · Meta Ads",
     "title": "SEO og Digital markedsføring som gjør deg synlig for kunder som bestiller",
-    "support": "Vi finner hvor kundene dine leter, gjør deg synlig der det teller og forbedrer veien fra besøk til bestilling. Vi tar oss av SEO, AI-synlighet og annonsering, måler hva som fungerer og prioriterer det som gir mest igjen.",
+    "support": "Du trenger ikke mer trafikk men kunder som bestiller. Vi bruker SEO, AI-synlighet og annonsering til å finne de riktige kundene, gjøre det enklere å velge deg og forbedre det som faktisk lønner seg. Konkurrentene kan kjempe om klikk og visninger.",
     "primaryCta": {
       "label": "Velg pakke",
       "href": "#priser"
@@ -246,7 +246,7 @@
     "toneOverrides": {
       "eyebrowPreset": "inherit",
       "titlePreset": "medon",
-      "supportPreset": "spissplushysterisk"
+      "supportPreset": "spissplus"
     }
   }
 }
