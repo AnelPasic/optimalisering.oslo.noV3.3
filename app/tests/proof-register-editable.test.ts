@@ -48,7 +48,7 @@ test('CMS can override actual case values, metadata and add an optional origin t
   assert.equal(visible[0].after,'18x');
   assert.ok(!JSON.stringify(visible[0]).includes(edited.originKey),'origin metadata is never public');
   const original=read('eurotents');
-  assert.equal(original.before,'ROAS: 4,3 X','test never writes actual approved proof');
+  assert.deepEqual(original,source,'test never writes actual approved proof');
 });
 
 test('an editable register cannot bypass existing publication and permission gates',()=>{
