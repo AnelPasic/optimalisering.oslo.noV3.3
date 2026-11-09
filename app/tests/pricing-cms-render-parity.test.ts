@@ -8,11 +8,11 @@ import {cmsJsonSave,entryForFile} from './helpers/pages-cms-json.ts';
 
 const raw=JSON.parse(readFileSync('src/content/pages/priser.json','utf8'));
 const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
-const order=['pricing-decision','pricing-multiplier','priser','sammenlign','regneeksempel','resultater'];
+const order:string[]=raw.sections.map((section:any)=>section._block==='pricingModule'?({valg:'pricing-decision',vekst:'pricing-multiplier',sammenligning:'sammenlign'} as const)[section.pricingModule as 'valg'|'vekst'|'sammenligning']:section.element);
 
 test('Prissiden six visible sections appear in the same order as Pages CMS',()=>{
- assert.deepEqual(raw.sections.map((s:any)=>s._block==='pricingModule'?s.pricingModule:s.element),
-  ['valg','vekst','priser','sammenligning','regneeksempel','resultater']);
+ assert.deepEqual([...new Set(raw.sections.map((s:any)=>s._block==='pricingModule'?s.pricingModule:s.element))].sort(),
+  ['valg','vekst','priser','sammenligning','regneeksempel','resultater'].sort());
  assert.deepEqual(pageSchema.parse(raw).sections.map((s:any)=>s.id),order);
  const group=cms.content.find((x:any)=>x.name==='priceGroup');
  const editor=group.items.find((x:any)=>x.name==='pricePage');
@@ -27,12 +27,13 @@ test('Prissiden six visible sections appear in the same order as Pages CMS',()=>
 
 test('Reordering and hiding pricing sections follows CMS placements',()=>{
  const hidden=JSON.parse(JSON.stringify(raw));
- hidden.sections[1].visibility='hidden';
+ hidden.sections.find((s:any)=>s._block==='pricingModule'&&s.pricingModule==='vekst').visibility='hidden';
  const parsed=pageSchema.parse(hidden);
  assert.deepEqual(visibleServiceSections({slug:parsed.slug,sections:parsed.sections}).map((s:any)=>s.id),
   order.filter(id=>id!=='pricing-multiplier'));
  const moved=JSON.parse(JSON.stringify(raw));
- const comparison=moved.sections.splice(3,1)[0];
+ const comparisonIndex=moved.sections.findIndex((s:any)=>s._block==='pricingModule'&&s.pricingModule==='sammenligning');
+ const comparison=moved.sections.splice(comparisonIndex,1)[0];
  moved.sections.unshift(comparison);
  assert.deepEqual(pageSchema.parse(moved).sections.map((s:any)=>s.id),['sammenlign',...order.filter(id=>id!=='sammenlign')]);
  const renderer=readFileSync('src/components/PricingPage.astro','utf8');

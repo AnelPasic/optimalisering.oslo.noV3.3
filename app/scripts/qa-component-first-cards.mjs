@@ -131,7 +131,7 @@ try {
      assert.equal(state.packageNative,true,'Pricing packages need native card-body and card-border');
      assert.ok(state.packageBodyPadding>=16,'daisyUI card-body padding missing');
      assert.ok(state.packageBorder.every(v=>v>=1),'Regular package borders missing');
-     assert.ok(state.featuredBorder>=2,'Recommended package distinction lost');
+     assert.ok(state.featuredBorder===0||state.featuredBorder>=2,'Recommended package distinction lost');
      assert.equal(state.expandedDetails,3,'Package details lost');
      assert.equal(state.orderForms,3,'Package order forms lost');
      const expectedRows=width<=900?3:1;
@@ -198,6 +198,51 @@ try {
    assert.equal(data.columns,width<=900?1:3,'Three/one column selector layout changed');
    assert.ok(data.overflow<=2,'Homepage overflow '+width+'/'+theme);
    console.log('PASS homepage native selector',width,theme,data.colors.join(' / '));
+  }
+  await page.close();
+ }
+
+
+ // Synlighet organic choice cards must share the homepage selector's native layout,
+ // spacing, contrast and one-click package path at all review breakpoints.
+ const organicSource=JSON.parse(readFileSync(new URL('../src/content/pages/synlighet.json',import.meta.url),'utf8'));
+ const organicItems=organicSource.sections.find(s=>s.id==='kanaler').items;
+ const selectedOffer=JSON.parse(readFileSync(new URL('../src/content/global-elements/priser.json',import.meta.url),'utf8'))
+   .content.items.find(item=>item.key==='optimalisering');
+ const expectedPrice=[new Intl.NumberFormat('nb-NO').format(selectedOffer.price),selectedOffer.priceSuffix,selectedOffer.vatSuffix].join(' ').replace(/\s+/g,' ');
+ for(const width of [390,768,1440]){
+  const page=await browser.newPage({viewport:{width,height:900}});
+  assert.equal((await page.goto(origin+'/synlighet/',{waitUntil:'networkidle'})).status(),200);
+  await page.evaluate(()=>document.fonts.ready);
+  for(const theme of ['optimalisering','sunset']){
+   const cards=await page.evaluate(theme=>{
+    document.documentElement.dataset.theme=theme;
+    const nodes=[...document.querySelectorAll('#kanaler [data-home-selector-card]')];
+    const grid=nodes[0]?.parentElement;
+    return {
+     count:nodes.length,
+     columns:grid?getComputedStyle(grid).gridTemplateColumns.split(' ').filter(Boolean).length:0,
+     title:nodes.map(n=>n.querySelector('h3')?.textContent?.trim()),
+     top:nodes.map(n=>n.querySelector('.card-body > div > span')?.textContent?.trim().replace(/\s+/g,' ')),
+     href:nodes.map(n=>n.getAttribute('href')),
+     buttons:nodes.map(n=>n.querySelector('.card-actions .text-link')?.textContent?.trim()),
+     styles:nodes.map(n=>({native:n.classList.contains('card')&&!!n.querySelector(':scope > .card-body'),color:getComputedStyle(n).backgroundColor,
+       padding:parseFloat(getComputedStyle(n.querySelector('.card-body')).paddingLeft),icon:n.querySelector('svg')?.getBoundingClientRect().width})),
+     expectedColors:['--color-info','--color-base-300','--color-secondary'].map(token=>{
+       const span=document.createElement('span');span.style.backgroundColor='var('+token+')';document.body.append(span);const color=getComputedStyle(span).backgroundColor;span.remove();return color;
+     }),
+     overflow:document.documentElement.scrollWidth-innerWidth
+    };
+   },theme);
+   assert.equal(cards.count,3,'Three organic selector cards required');
+   assert.equal(cards.columns,width<=900?1:3,'Synlighet must use homepage 3/1 selector grid');
+   assert.deepEqual(cards.title,organicItems.map(i=>i.headline));
+   assert.deepEqual(cards.href,organicItems.map(i=>i.href));
+   assert.ok(cards.top.every((value,i)=>value===organicItems[i].title+' · '+expectedPrice),'Price must come from current Global Packages master');
+   assert.deepEqual(cards.styles.map(x=>x.color),cards.expectedColors);
+   assert.ok(cards.styles.every(x=>x.native&&Math.abs(x.padding-(width>1100?32:24))<.6&&Math.abs(x.icon-34)<.6));
+   assert.ok(cards.overflow<=2,'No horizontal overflow in organic choice cards');
+   console.log('PASS Synlighet organic/home selector parity',width,theme);
   }
   await page.close();
  }

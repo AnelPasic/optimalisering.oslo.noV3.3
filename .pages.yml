@@ -383,6 +383,10 @@ components:
             label: Tittel
             type: string
             required: true
+          - name: headline
+            label: Stor overskrift på valgkort
+            type: string
+            description: "På Synlighet sine tre valgkort vises denne som stor tittel under tjenesten og prisen. Prisen hentes automatisk fra pakken Optimalisering."
           - name: text
             label: Beskrivelse
             type: text
