@@ -242,6 +242,11 @@
         "positionY": 50
       }
     },
-    "featuredProofCaseId": "helt-opplagt"
+    "featuredProofCaseId": "helt-opplagt",
+    "toneOverrides": {
+      "eyebrowPreset": "inherit",
+      "titlePreset": "inherit",
+      "supportPreset": "inherit"
+    }
   }
 }
