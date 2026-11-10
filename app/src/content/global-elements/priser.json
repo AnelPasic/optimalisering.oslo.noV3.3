@@ -81,16 +81,16 @@
             "compactLabel": "Lokal SEO"
           },
           {
-            "icon": "page",
-            "group": "Betalt Synlighet",
-            "label": "ChatGPT Ads",
-            "compactLabel": "ChatGPT Ads"
-          },
-          {
             "icon": "paid-search",
             "group": "Betalt Synlighet",
             "label": "Google Ads",
             "compactLabel": "Google Ads"
+          },
+          {
+            "icon": "page",
+            "group": "Betalt Synlighet",
+            "label": "ChatGPT Ads",
+            "compactLabel": "ChatGPT Ads"
           },
           {
             "icon": "social-paid",
