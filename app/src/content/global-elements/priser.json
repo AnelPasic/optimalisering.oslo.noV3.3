@@ -51,13 +51,14 @@
         "title": "Optimalisering",
         "descriptor": "Ett viktig forbedringsområde om gangen.",
         "compact": {
-          "fit": "Små og mellomstore bedrifter med én tydelig kundereise, én hovedtjeneste eller én flaskehals som er viktigst om gangen. Typisk en konkurranseutsatt lokal tjenestebedrift, håndverker, mindre klinikk, regnskapskontor eller B2B-bedrift med én tydelig hovedtjeneste. \nVi fokuserrer på der det er mest å hente til neste prioritet er viktigere. ",
+          "fit": "Små og mellomstore bedrifter med én tydelig kundereise, én hovedtjeneste eller én flaskehals som er viktigst om gangen. Typisk en konkurranseutsatt lokal tjenestebedrift, håndverker, mindre klinikk, regnskapskontor eller B2B-bedrift med én tydelig hovedtjeneste. ",
           "situations": [
             "Trenger å bli funnet når kundene søker.",
             "Har trafikk, men trenger henvendelser eller kjøp.",
             "Trenger å få mer ut av annonsebudsjettet."
           ]
         },
+        "scope": "Vi fokuserrer på der det er mest å hente til neste prioritet er viktigere. ",
         "key": "optimalisering",
         "iconItems": [
           {
@@ -104,13 +105,14 @@
         "title": "Vekst",
         "descriptor": "To grep som forsterker hverandre.",
         "compact": {
-          "fit": "Små og mellomstore bedrifter som ønsker raskere forbedring både på trafikk og større andel av besøkende til å foreta bestilling. Typisk en konkurranseutsatt tjenestebedrift, håndverker, klinikk, regnskapskontor eller B2B-bedrift med én tydelig hovedtjeneste. Vi fokuserrer på der det er mest å hente til neste prioritet er viktigere. \n\n",
+          "fit": "Små og mellomstore bedrifter som ønsker raskere forbedring både på trafikk og større andel av besøkende til å foreta bestilling. Typisk en konkurranseutsatt tjenestebedrift, håndverker, klinikk, regnskapskontor eller B2B-bedrift med én tydelig hovedtjeneste. \n\n",
           "situations": [
             "Betalt annonsering og vil bygge organisk synlighet.",
             "Bedre ranking, samt større andel som bestiller.",
             "Betalt annonsering og større andel som bestiller."
           ]
         },
+        "scope": "Vi fokuserrer på de to områdene der det er mest å hente til neste har større potensial.",
         "typicalBusiness": "Typisk en konkurranseutsatt lokal tjenestebedrift, klinikk, regnskapskontor eller nisje-B2B-bedrift tydelig hovedtjeneste som trenger rask forbedring.",
         "key": "vekst",
         "iconItems": [
