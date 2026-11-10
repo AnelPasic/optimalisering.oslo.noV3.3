@@ -22,16 +22,18 @@ test('every editable package service remains unique, grouped and locally icon-ba
   }
 });
 
-test('every selectable Phosphor icon has a pinned, local SVG and a static renderer mapping',()=>{
+test('the complete pinned Phosphor Regular catalog is available at build time, not just 20 names',()=>{
   const component=readFileSync('src/components/PackageFocusIcon.astro','utf8');
-  assert.equal(PHOSPHOR_ICON_NAMES.length,20);
-  for(const name of PHOSPHOR_ICON_NAMES){
-    const file='src/assets/phosphor/'+name+'.svg';
-    assert.ok(existsSync(file),'Missing local icon: '+file);
-    assert.match(readFileSync(file,'utf8'),/^<svg[^>]*fill="currentColor"/);
-    assert.ok(component.includes("'"+name+"'"),'Renderer not mapped: '+name);
+  assert.ok(PHOSPHOR_ICON_NAMES.length>1000,'Full upstream icon catalog must be available');
+  for(const name of ['meta-logo','facebook-logo','instagram-logo','google-logo','sparkle','map-pin','grid-four']){
+    assert.equal(isPhosphorIconName(name),true,name+' must be selectable in CMS');
+    const path='node_modules/@phosphor-icons/core/assets/regular/'+name+'.svg';
+    assert.ok(existsSync(path),'Missing pinned npm asset: '+path);
+    assert.ok(readFileSync(path,'utf8').startsWith('<svg'),'Unexpected upstream SVG');
   }
-  assert.ok(component.includes('kind ==='), 'Legacy generic icon fallback is preserved');
+  assert.ok(component.includes('set:html={svgBody}'),'Only the selected SVG markup is inlined in static HTML');
+  assert.ok(component.includes('node:fs'),'Icons are loaded while building, not in client JS');
+  assert.ok(component.includes('kind ==='),'Legacy generic icon fallback remains available');
 });
 
 test('Pages CMS supports free-text local icon names but rejects unknown or unsafe entries',()=>{
@@ -42,6 +44,9 @@ test('Pages CMS supports free-text local icon names but rejects unknown or unsaf
   assert.equal(input.type,'string');
   assert.notEqual(input.required,true);
   assert.equal(schema.safeParse(doc).success,true);
+  const hasMeta=JSON.parse(JSON.stringify(doc));
+  hasMeta.content.items[0].iconItems[5].iconName='meta-logo';
+  assert.equal(schema.safeParse(hasMeta).success,true,'Meta logo must validate in the full Phosphor catalog');
   const bad=JSON.parse(JSON.stringify(doc));
   bad.content.items[0].iconItems[0].iconName='<script>bad</script>';
   assert.equal(schema.safeParse(bad).success,false);

@@ -1,28 +1,18 @@
-# Lokale Phosphor Regular-ikoner
+# Phosphor Regular: fullt ikonbibliotek i Pages CMS
 
-Kilde: [phosphor-icons/core](https://github.com/phosphor-icons/core/tree/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular) – pinned commit `2b75f3ad12b420c9504ef05df8d2564a28f8500e`, MIT-lisens ved `app/public/licenses/phosphor-icons.txt`.
+Hele biblioteket er tilgjengelig via den offisielle, versjonslåste NPM-pakken [`@phosphor-icons/core@2.1.1`](https://www.npmjs.com/package/@phosphor-icons/core) (MIT-lisens). Lokale historiske SVG-er i denne mappen beholdes for eksisterende komponenter; de begrenser **ikke** lenger hvilke ikonnavn du kan bruke.
 
-**Pages CMS → Tjenester med ikoner → Phosphor-ikonnavn**: Skriv et av filnavnene nedenfor **uten** `.svg`. Navnet må stemme nøyaktig. Feltet er valgfritt; `Generisk ikon` er fortsatt fallback for eldre innhold. Bare lokale, tillatte ikonnavn fungerer. Ingen ekstern ikonfont, CDN, fjerntilgang eller brukerdefinert SVG/HTML.
+## Slik bruker du det
 
-- `magnifying-glass`
-- `cursor-click`
-- `sparkle`
-- `map-pin`
-- `target`
-- `chat-circle-dots`
-- `megaphone`
-- `shopping-cart`
-- `browser`
-- `credit-card`
-- `wrench`
-- `chart-line-up`
-- `eye`
-- `grid-four`
-- `binoculars`
-- `toolbox`
-- `robot`
-- `map-trifold`
-- `chat-teardrop-dots`
-- `chart-bar`
+I **Pages CMS → Tjenester med ikoner → Phosphor-ikonnavn (valgfritt)** skriver du ikonets navn fra [phosphoricons.com](https://phosphoricons.com) som kebab-case, for eksempel `meta-logo`, `facebook-logo`, `robot`, `map-pin`, `sparkle` eller `magnifying-glass`. Bruk bare navnet, **uten** `.svg` eller vekt-suffikser. Dette feltet gir **Regular**-varianten.
 
-`PackageFocusIcon.astro` bruker disse ikonene på pakkekortene, mens eldre generiske ikonformer fortsatt kan brukes i andre komponenter. SVGene bruker `fill=currentColor` og skjules for skjermlesere fordi tjenestenavnet står ved siden av.
+CMS-feltet **Generisk ikon** er fortsatt fallback for gamle oppføringer eller et tomt felt. Ugyldige ikonnavn stoppes av innholdsskjemaet under validering/bygging og må korrigeres før publisering.
+
+## Ytelse og sikkerhet
+
+- Astro-prosjektet er statisk. `PackageFocusIcon.astro` leser *kun ikonene som brukes* fra `node_modules/@phosphor-icons/core/assets/regular/` ved bygging og legger dem direkte inn som SVG i HTML.
+- Biblioteket, dets katalog og SVG-filene sendes ikke til nettleseren som JS-pakke, ikonfont eller separate CDN-forespørsler.
+- Ikonnavn må finnes i bibliotekets katalog. Ingen HTML-/SVG-kode fra CMS tolkes som ikon, og det er ingen nettverksoppslag ved rendering.
+- `app/public/licenses/phosphor-icons.txt` inneholder eksisterende MIT-lisens.
+
+Eksempel: `meta-logo` bruker den offisielle Phosphor Meta-logoen, ikke det generiske annonseringsikonet.

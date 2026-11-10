@@ -1,6 +1,12 @@
-/** Phosphor Regular icon slugs bundled locally; no network requests or arbitrary SVG. */
-export const PHOSPHOR_ICON_NAMES = ["magnifying-glass","cursor-click","sparkle","map-pin","target","chat-circle-dots","megaphone","shopping-cart","browser","credit-card","wrench","chart-line-up","eye","grid-four","binoculars","toolbox","robot","map-trifold","chat-teardrop-dots","chart-bar"] as const;
-export type PhosphorIconName = (typeof PHOSPHOR_ICON_NAMES)[number];
-export function isPhosphorIconName(name:string):name is PhosphorIconName {
-  return (PHOSPHOR_ICON_NAMES as readonly string[]).includes(name);
+/** Full Phosphor Regular icon catalog from the pinned build dependency.
+ * No SVG assets or catalog metadata are sent as client JavaScript in this static Astro site.
+ */
+import { icons } from '@phosphor-icons/core';
+
+export const PHOSPHOR_ICON_NAMES = icons.map(icon => icon.name);
+export type PhosphorIconName = (typeof icons)[number]['name'];
+const available = new Set<string>(PHOSPHOR_ICON_NAMES);
+
+export function isPhosphorIconName(name: string): name is PhosphorIconName {
+  return available.has(name);
 }
