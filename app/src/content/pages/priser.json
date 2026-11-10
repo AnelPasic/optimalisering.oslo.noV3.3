@@ -36,7 +36,8 @@
     },
     {
       "_block": "pricingModule",
-      "pricingModule": "vekst"
+      "pricingModule": "vekst",
+      "visibility": "hidden"
     },
     {
       "_block": "pricingModule",
