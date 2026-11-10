@@ -32,6 +32,10 @@
       "entry": "kanaler"
     },
     {
+      "_block": "sharedContent",
+      "entry": "betalt-synlighet"
+    },
+    {
       "_block": "global",
       "element": "regneeksempel"
     },
@@ -45,35 +49,6 @@
       "surface": "base-200",
       "body": [
         "Vi ser på hva det faktisk koster å få en bestilling, og om den er lønnsom. Når tallene fungerer, kan vi øke innsatsen. Først da blir mer trafikk til vekst."
-      ]
-    },
-    {
-      "_block": "content",
-      "id": "betalt-synlighet",
-      "eyebrow": "Betalt synlighet",
-      "heading": "Få fart på bestillingene når det lønner seg.",
-      "headingAlign": "center",
-      "layout": "three-columns",
-      "surface": "default",
-      "body": [
-        "Annonser lar deg nå potensielle kunder raskt. Vi tester kanalene, måler kostnad per bestilling og prioriterer det som kan skaleres med lønnsomhet."
-      ],
-      "items": [
-        {
-          "title": "Google Ads",
-          "text": "**Fang kundene når de leter. Nå dem før de gjør det.**\n\nVi gjør bedriften din synlig i Google Søk, viser produktene dine i Google Shopping og når nye kunder gjennom YouTube. Vi forbedrer annonseringen med ett mål: flere lønnsomme bestillinger.\n\n**MÅLET:** Flere bestillinger til en kostnad som gjør det lønnsomt å skalere.",
-          "surface": "info"
-        },
-        {
-          "title": "ChatGPT Ads",
-          "text": "**Når kundene spør AI, bør de også oppdage deg.**\n\nVi hjelper deg å utforske annonsering i ChatGPT der kanalen er tilgjengelig. Vi tester om dette kan gi relevante kunder og lønnsomme bestillinger.\n\n**MÅLET:** Nye kundemuligheter gjennom AI-annonsering, med kontroll på resultatene.",
-          "surface": "base-300"
-        },
-        {
-          "title": "Meta Ads",
-          "text": "**Slutt å vente på at kundene skal lete. Gi dem en grunn til å velge deg.**\n\nMed annonser på Facebook og Instagram viser vi produktene og tjenestene dine til potensielle kunder. Vi tester hva som vekker interesse og gjør flere av dem til betalende kunder.\n\n**MÅLET:** Skape etterspørsel og flere bestillinger til riktig pris.",
-          "surface": "secondary"
-        }
       ]
     },
     {
