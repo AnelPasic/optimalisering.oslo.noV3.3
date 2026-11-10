@@ -78,7 +78,7 @@ export const pageSchema = z.preprocess((input,context)=>{
       boxButtonStyle: buttonStyleSchema,
       layout: contentLayoutSchema,
       id: z.string(), eyebrow: z.string().optional(), heading: z.string(), body: z.array(z.string()).default([]),
-      items: z.array(z.object({ title: z.string(), headline: z.string().trim().min(1).optional(), badge: z.string().trim().min(1).optional(), text: z.string(), href: optionalInternalHref, label: z.string().optional(), surface: surfaceSchema, boxVariant: boxVariantSchema, buttonStyle: buttonStyleSchema })).optional(),
+      items: z.array(z.object({ title: z.string(), headline: z.string().trim().min(1).optional(), badge: z.string().trim().min(1).optional(), icon: z.preprocess(v=>v===''||v==null?undefined:v,z.enum(['seo','local-seo','ai-search','google-ads','chatgpt-ads','meta-ads']).optional()), text: z.string(), href: optionalInternalHref, label: z.string().optional(), surface: surfaceSchema, boxVariant: boxVariantSchema, buttonStyle: buttonStyleSchema })).optional(),
       links: z.array(link).optional(),
     })).default([]),
     faq: z.array(z.object({ question: z.string(), answer: z.string() })).default([]),

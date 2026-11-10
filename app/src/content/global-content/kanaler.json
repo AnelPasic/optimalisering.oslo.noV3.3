@@ -20,7 +20,8 @@
       "label": "Velg SEO",
       "boxVariant": "card",
       "surface": "info",
-      "badge": "Inkludert i alle pakker"
+      "badge": "Inkludert i alle pakker",
+      "icon": "seo"
     },
     {
       "title": "Lokal SEO",
@@ -29,7 +30,8 @@
       "href": "/lokal-seo/",
       "label": "Velg Lokal SEO",
       "surface": "base-300",
-      "badge": "Inkludert i alle pakker"
+      "badge": "Inkludert i alle pakker",
+      "icon": "local-seo"
     },
     {
       "title": "AI-synlighet",
@@ -38,7 +40,8 @@
       "href": "/ai-synlighet/",
       "label": "Velg AI-synlighet",
       "surface": "secondary",
-      "badge": "Inkludert i alle pakker"
+      "badge": "Inkludert i alle pakker",
+      "icon": "ai-search"
     }
   ]
 }

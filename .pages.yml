@@ -164,6 +164,19 @@ components:
         label: Merke / badge (valgfritt)
         type: string
         description: "Vises som et lite DaisyUI-merke under tjenestenavnet. La feltet stå tomt for å skjule merket."
+      - name: icon
+        label: Tjenesteikon (valgfritt)
+        type: select
+        description: "Ikonet følger kortet ved endring av rekkefølge. Brukes på de seks kortene under Organisk og Betalt synlighet."
+        options:
+          placeholder: Uten ikon
+          values:
+            - { name: seo, label: "SEO – søk" }
+            - { name: local-seo, label: "Lokal SEO – kartnål" }
+            - { name: ai-search, label: "AI-synlighet – stjerner" }
+            - { name: google-ads, label: "Google Ads – målskive" }
+            - { name: chatgpt-ads, label: "ChatGPT Ads – samtale" }
+            - { name: meta-ads, label: "Meta Ads – megafon" }
       - name: text
         label: Beskrivelse (rik tekst / Markdown)
         type: rich-text
