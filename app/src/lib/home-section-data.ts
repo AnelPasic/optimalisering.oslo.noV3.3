@@ -2,7 +2,7 @@ import { sectionDefaultsSchema } from './section-appearance.ts';
 import {sectionSurfaceDefaultsSchema, surfaceSchema} from './surface.ts';
 import {sectionAlignmentDefaultsSchema} from './heading-alignment.ts';
 import { z } from 'astro/zod';
-import {PHOSPHOR_ICON_NAMES} from './package-icon-names';
+import {PHOSPHOR_ICON_NAMES} from './package-icon-names.ts';
 import { featuredProofVisualFieldSchema,proofLayoutSchema,proofCaseVisualsSchema,proofDisplayOverridesSchema } from './proof-presentation.ts';
 import {navigationLinkSchema} from './navigation.ts';
 import {chromeThemeSchema, ctaVariants} from './site-chrome-theme.ts';
