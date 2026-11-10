@@ -13,10 +13,12 @@ function leaves(fields:any[],prefix=''):any[] {return fields.flatMap(f=>f.fields
 test('OWNER can edit package CTA wording while order and detail routes remain readonly',()=>{
   const fields=leaves(packages.fields.find((f:any)=>f.name==='items').fields);
   const field=(path:string)=>fields.find(f=>f.path===path)?.field;
-  for(const path of ['cta.label','detailLink.label','title','descriptor','compact.fit','compact.situations','price','pricePrefix','priceSuffix','vatSuffix','recommended','badge','visual','visualAsset.src','visualAsset.alt','visualAsset.positionX','visualAsset.positionY','visualCaption.label','visualCaption.support','typicalBusiness','scope','distinction','priceNote']) {
+  for(const path of ['cta.label','detailLink.label','title','descriptor','compact.fit','compact.situations','price','pricePrefix','priceSuffix','vatSuffix','recommended','badge','visual','visualAsset.src','visualAsset.alt','visualAsset.positionX','visualAsset.positionY','visualCaption.label','visualCaption.support','scope','distinction','priceNote']) {
     assert.ok(field(path),`CMS field exists: ${path}`);assert.notEqual(field(path).readonly,true,path);
   }
   assert.equal(field('selectionRule'),undefined,'Removed Valgregel must not remain in CMS');
+  assert.equal(field('typicalBusiness'),undefined,'Typisk virksomhet must be absent from package fields');
+  assert.equal(packages.fields.find((f:any)=>f.name==='labels').fields.some((f:any)=>f.name==='typicalBusiness'),false,'Shared Typisk virksomhet label must be removed');
   for (const key of ['iconItems.icon','iconItems.iconName','iconItems.group','iconItems.label','iconItems.compactLabel','iconItems.description']) assert.ok(field(key),`CMS exposes service icon field: ${key}`);
   for(const {path,field:shared}of leaves(packages.fields.filter((f:any)=>f.name!=='items')))assert.notEqual(shared.readonly,true,`Shared field ${path}`);
   for(const path of ['key','cta.href','detailLink.href']) assert.equal(field(path)?.readonly,true,path);

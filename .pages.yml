@@ -1708,10 +1708,6 @@ content:
                     label: Typiske situasjoner
                     type: string
                     required: true
-                  - name: typicalBusiness
-                    label: Typisk virksomhet
-                    type: string
-                    required: true
                   - name: focus
                     label: Fokus
                     type: string
@@ -1887,9 +1883,6 @@ content:
                     required: true
                   - name: scope
                     label: Slik jobber vi – valgfritt
-                    type: text
-                  - name: typicalBusiness
-                    label: Typisk virksomhet
                     type: text
                   - name: key
                     label: Stabil pakkenøkkel for bestilling

@@ -11,8 +11,7 @@
     "orderSubmitLabel": "Send bestilling",
     "labels": {
       "situations": "Mål",
-      "typicalBusiness": "Typisk virksomhet",
-      "focus": "Fokus",
+        "focus": "Fokus",
       "combinations": "Populære kombinasjoner",
       "workAreas": "Arbeidsområder",
       "uncertain": "Usikker? Ta en gratis sjekk"
@@ -195,8 +194,7 @@
           ]
         },
         "scope": "Vi fokuserrer på de to områdene der det er mest å hente til neste har større potensial.",
-        "typicalBusiness": "Typisk en konkurranseutsatt lokal tjenestebedrift, klinikk, regnskapskontor eller nisje-B2B-bedrift tydelig hovedtjeneste som trenger rask forbedring.",
-        "key": "vekst",
+          "key": "vekst",
         "iconItems": [
           {
             "icon": "search",
@@ -333,8 +331,7 @@
           ]
         },
         "scope": "Vi prioriterer løpende kundereisene med størst kommersiell verdi eller størst forbedringspotensial. Det betyr ikke at alt gjøres samtidig eller at kapasiteten er ubegrenset.",
-        "typicalBusiness": "Typisk en virksomhet med fire-fem forskjellige typer B2B tjenester der hver kundereise har egne søk, konkurrenter, sider og prioriteringer.",
-        "key": "partner",
+          "key": "partner",
         "iconItems": [
           {
             "icon": "search",

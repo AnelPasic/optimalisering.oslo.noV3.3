@@ -19,7 +19,7 @@ export const homeSectionDataSchema = z.object({
   }),
   packages: z.object({
     eyebrow: z.string(), heading: z.string(), intro: z.string(), orderIntro: z.string().trim().min(1), orderSubmitLabel: z.string().trim().min(1), fitLabel: z.string(), scopeLabel: z.string(),
-    labels: z.object({ situations: z.string().trim().min(1), typicalBusiness: z.string().trim().min(1), focus: z.string().trim().min(1), combinations: z.string().trim().min(1), workAreas: z.string().trim().min(1), uncertain: z.string().trim().min(1) }),
+    labels: z.object({ situations: z.string().trim().min(1), focus: z.string().trim().min(1), combinations: z.string().trim().min(1), workAreas: z.string().trim().min(1), uncertain: z.string().trim().min(1) }),
     areasLabel: z.string(), areas: z.array(z.string()).length(4), foundationNote: z.string(),
     adBudgetNote: z.string(), externalCostsNote: z.string(), separateWorkNote: z.string(), capacityNote: z.string(),
     decisionStrip: z.object({ heading: z.string(), items: z.array(z.string()).length(3) }),
@@ -42,7 +42,7 @@ export const homeSectionDataSchema = z.object({
       compact: z.object({ fit: z.string().trim().min(1), situations: z.array(z.string().trim().min(1)).min(1).max(3) }),
       visual: z.enum(['controlled', 'accelerating', 'tracks']),
       visualCaption: z.object({ label: z.string().trim().min(1), support: z.string().trim().min(1).optional() }).optional(),
-      typicalBusiness: z.string().optional(), focusAreas: z.array(z.string()).optional(),
+      focusAreas: z.array(z.string()).optional(),
       combinations: z.array(z.object({ title: z.string(), text: z.string() })).optional(),
       distinction: z.string().optional(), priceNote: z.string().optional(),
     })).length(3),

@@ -48,6 +48,7 @@
 .site-shell .package-offer .package-block-heading { font-family: var(--body); font-size: var(--type-label); font-weight: var(--weight-heading); line-height: var(--leading-small); letter-spacing: 0; margin-bottom: 6px; }
 .site-shell .package-offer .package-fit, .site-shell .package-offer .package-detail { font-size: var(--type-body-sm); line-height: var(--leading-body); color: var(--muted); }
 .site-shell .package-offer .package-fit { margin-bottom: 16px; }
+.site-shell .package-offer .package-scope p { font-size: var(--type-body-sm); line-height: var(--leading-body); color: var(--muted); }
 .site-shell .package-offer .package-fit-goals { margin-top: 22px; }
 .site-shell .package-offer .package-services-heading { margin-bottom: 4px; }
 .site-shell .package-offer .package-services-note { margin: 0 0 14px; color: var(--muted); font-size: var(--type-meta); line-height: var(--leading-small); }

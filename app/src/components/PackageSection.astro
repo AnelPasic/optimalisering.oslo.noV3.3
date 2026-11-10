@@ -47,13 +47,12 @@ const formatPrice = (value: number) => new Intl.NumberFormat('nb-NO', { maximumF
       <div class="package-fit-goals">
         <h3 class="package-block-heading">{content.fitLabel}</h3>
         <p class="package-fit">{item.compact.fit}</p>
+        {item.scope && <div class="package-scope"><h3 class="package-block-heading">{content.scopeLabel}</h3><p>{item.scope}</p></div>}
       </div>
-      <details class="package-details" open={expanded}><summary>{item.detailLink.label}</summary><div class="package-detail">
-        {item.typicalBusiness && <div><h3 class="package-block-heading">{content.labels.typicalBusiness}</h3><p>{item.typicalBusiness}</p></div>}
-        {item.scope && <div ><h3 class="package-block-heading">{content.scopeLabel}</h3><p>{item.scope}</p></div>}
-        {item.distinction && <p >{item.distinction}</p>}
+      {(item.distinction || item.priceNote) && <details class="package-details" open={expanded}><summary>{item.detailLink.label}</summary><div class="package-detail">
+        {item.distinction && <p>{item.distinction}</p>}
         {item.priceNote && <p class="package-price-note">{item.priceNote}</p>}
-      </div></details>
+      </div></details>}
       </div>
     </article>)}</div>
     {showNotes && <div class="package-notes body-copy"><p class="package-budget-note">{content.adBudgetNote}</p><a class="text-link package-uncertain" href="/#sjekk">{content.labels.uncertain}<Arrow /></a></div>}

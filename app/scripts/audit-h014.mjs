@@ -16,10 +16,11 @@ for (const [file, full] of [['dist/index.html', false], ['dist/priser/index.html
     assert.ok(card.includes(item.compact.fit));
     assert.ok(card.includes(`href="${item.cta.href}"`));
     if (full) {
-      const detail = card.match(/<details class="package-details">(.*?)<\/details>/s)?.[1];
-      assert.ok(detail && detail.startsWith('<summary>Se detaljer'), 'Native collapsed disclosure after CTA');
-      assert.ok(card.indexOf('class="button"') < card.indexOf('<details class="package-details">'));
-      const visible = card.split('<details class="package-details">')[0];
+      const detail = card.match(/<details class="package-details"[^>]*>(.*?)<\/details>/s)?.[1];
+      const hasMore = Boolean(item.distinction || item.priceNote);
+      assert.equal(Boolean(detail),hasMore,'Do not render empty Om pakken accordion');
+      if(detail) assert.ok(card.indexOf('package-order-inline') < card.indexOf('<details class="package-details"'),'Bestill precedes expanded details');
+      const visible = card.split('<details class="package-details"')[0];
       for (const text of [...item.compact.situations, ...item.iconItems.map(icon=>icon.compactLabel)]) assert.ok(visible.includes(text));
       for (const text of [item.typicalBusiness, item.scope, item.distinction, item.priceNote].filter(Boolean)) assert.ok(detail.includes(text), 'Full H-012/H-013 copy remains in the disclosure');
       for (const text of [item.typicalBusiness, item.scope, item.distinction, item.priceNote].filter(Boolean)) assert.ok(!visible.includes(text), 'Long text is absent from default card');
