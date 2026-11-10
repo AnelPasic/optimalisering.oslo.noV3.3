@@ -58,8 +58,6 @@
 .site-shell .package-offer .package-icon-items span { min-width: 0; overflow-wrap: anywhere; }
 .site-shell .package-offer .package-focus-icon { flex-shrink: 0; width: 20px; height: 20px; color: var(--color-primary); }
 .site-shell .package-offer .is-recommended .package-focus-icon { color: var(--color-secondary); }
-.site-shell .package-offer .package-icon-items.package-combos { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap-sm); }
-.site-shell .package-offer .package-combos li { flex-direction: column; }
 .site-shell .package-offer .package-card .btn { margin-top: auto; align-self: stretch; justify-content: space-between; }
 .site-shell .package-offer .package-uncertain { margin-top: 16px; font-size: var(--type-body-sm); line-height: var(--leading-body); }
 .site-shell .package-offer .package-details { margin-top: 12px; font-size: var(--type-body-sm); line-height: var(--leading-body); }
@@ -87,8 +85,6 @@
 @media (max-width: 1100px) {
   .site-shell .package-offer .package-grid { gap: var(--gap-md); }
 }
-@media (max-width: 900px) { .site-shell .package-offer .package-icon-items.package-combos { grid-template-columns: 1fr; } }
-@media (max-width: 900px) { .site-shell .package-offer .package-combos li { flex-direction: row; } }
 @media (max-width: 650px) {
   .site-shell .package-offer .package-grid { gap: var(--gap-lg); }
 }
