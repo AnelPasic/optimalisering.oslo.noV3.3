@@ -52,6 +52,10 @@
           "href": "/priser/"
         }
       ]
+    },
+    {
+      "_block": "sharedContent",
+      "entry": "test"
     }
   ],
   "faq": [
@@ -59,5 +63,8 @@
       "question": "Kan jeg kontakte dere uten å bestille en tjeneste?",
       "answer": "Ja. Bruk meldingen til å beskrive spørsmålet. Videre betalt arbeid krever et eget avtalt omfang og en avtalt pris."
     }
-  ]
+  ],
+  "listing": {
+    "visible": true
+  }
 }
