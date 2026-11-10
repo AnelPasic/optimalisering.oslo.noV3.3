@@ -83,9 +83,20 @@
       "heading": "Innholdsseksjon Standard Overskrift",
       "items": [
         {
-          "title": "Alternativ 1",
-          "headline": "Alternativ 1 Stor overskrift",
-          "text": "En glemt sekk. Nøkler som falt ut av lomma. Med et MisterTing-merke kan den som finner tingen din skanne QR-koden og sende deg et varsel. Telefonnummeret og e-postadressen din vises ikke til finneren."
+          "title": "Alternativ 1 - Standard",
+          "headline": "Alternativ 1 Stor overskrift - Standard",
+          "text": "En glemt sekk. Nøkler som falt ut av lomma. Med et MisterTing-merke kan den som finner tingen din skanne QR-koden og sende deg et varsel. Telefonnummeret og e-postadressen din vises ikke til finneren.",
+          "surface": "accent"
+        },
+        {
+          "title": "Alternativ 2 - Kort",
+          "headline": "Alternativ 2 Stor overskrift - Kort",
+          "text": "En glemt sekk. Nøkler som falt ut av lomma. Med et MisterTing-merke kan den som finner tingen din skanne QR-koden og sende deg et varsel. Telefonnummeret og e-postadressen din vises ikke til finneren.",
+          "href": "/priser/",
+          "label": "Priser",
+          "boxVariant": "card",
+          "surface": "accent",
+          "badgeClass": "badge-accent"
         }
       ]
     }
