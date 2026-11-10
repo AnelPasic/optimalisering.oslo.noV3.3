@@ -76,6 +76,7 @@
           },
           {
             "icon": "analytics",
+            "group": "Organisk Synlighet",
             "label": "AI-synlighet",
             "compactLabel": "AI-synlighet"
           },
