@@ -1,0 +1,42 @@
+---
+/** Icons are service-specific, not determined by card position. */
+type ServiceIcon = 'seo' | 'local-seo' | 'ai-search' | 'google-ads' | 'chatgpt-ads' | 'meta-ads';
+interface Props { kind: ServiceIcon; }
+const { kind } = Astro.props;
+---
+<svg
+  data-service-channel-icon={kind}
+  class="size-[34px] shrink-0"
+  width="34" height="34" viewBox="0 0 24 24"
+  fill="none" stroke="currentColor" stroke-width="1.8"
+  stroke-linecap="round" stroke-linejoin="round"
+  aria-hidden="true" focusable="false"
+>
+  {kind === 'seo' && <>
+    <circle cx="10.5" cy="10.5" r="7.5" />
+    <path d="m16 16 5 5" />
+  </>}
+  {kind === 'local-seo' && <>
+    <path d="M20 10c0 5.5-8 12-8 12S4 15.5 4 10a8 8 0 1 1 16 0Z" />
+    <circle cx="12" cy="10" r="2.75" />
+  </>}
+  {kind === 'ai-search' && <>
+    <path d="m11.5 2 2 6 6 2-6 2-2 6-2-6-6-2 6-2 2-6Z" />
+    <path d="m20 15 .9 2.2L23 18l-2.1.8L20 21l-.9-2.2L17 18l2.1-.8L20 15Z" />
+    <path d="M4 17v4m-2-2h4" />
+  </>}
+  {kind === 'google-ads' && <>
+    <circle cx="12" cy="12" r="9" />
+    <circle cx="12" cy="12" r="5" />
+    <circle cx="12" cy="12" r="1" />
+  </>}
+  {kind === 'chatgpt-ads' && <>
+    <path d="M20.5 11.5a8.3 8.3 0 0 1-8.5 8.2 9.6 9.6 0 0 1-3.5-.7L3 21l1.5-4.7A8 8 0 0 1 3.5 11.5a8.3 8.3 0 0 1 8.5-8.2 8.3 8.3 0 0 1 8.5 8.2Z" />
+    <path d="M8 10h8M8 14h6" />
+  </>}
+  {kind === 'meta-ads' && <>
+    <path d="M3 10v4l12 4V6L3 10Z" />
+    <path d="M7 15.3V21h4v-4.4" />
+    <path d="m18 9 3-2M18 15l3 2M20 12h2" />
+  </>}
+</svg>
