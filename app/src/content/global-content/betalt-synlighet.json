@@ -19,7 +19,8 @@
       "text": "Vi gjør deg synlig i Google Søk, viser produktene dine i Google Shopping og når nye kunder gjennom YouTube. Vi jobber for flere lønnsomme bestillinger, ikke bare flere klikk.",
       "label": "Velg Google Ads",
       "boxVariant": "card",
-      "surface": "info"
+      "surface": "info",
+      "icon": "google-ads"
     },
     {
       "title": "ChatGPT Ads",
@@ -28,7 +29,8 @@
       "text": "Vi hjelper deg å utforske ChatGPT-annonsering der kanalen er tilgjengelig. Vi tester om den kan nå relevante kunder og gi bestillinger til en fornuftig kostnad.",
       "label": "Velg ChatGPT Ads",
       "boxVariant": "card",
-      "surface": "base-300"
+      "surface": "base-300",
+      "icon": "chatgpt-ads"
     },
     {
       "title": "Meta Ads",
@@ -37,7 +39,8 @@
       "text": "Med annonser på Facebook og Instagram viser vi produktene og tjenestene dine til potensielle kunder. Vi tester hva som vekker interesse og kan føre til flere bestillinger.",
       "label": "Velg Meta Ads",
       "boxVariant": "card",
-      "surface": "secondary"
+      "surface": "secondary",
+      "icon": "meta-ads"
     }
   ]
 }
