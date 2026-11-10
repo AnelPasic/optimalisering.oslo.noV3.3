@@ -36,14 +36,6 @@
       "entry": "betalt-synlighet"
     },
     {
-      "_block": "global",
-      "element": "priser"
-    },
-    {
-      "_block": "global",
-      "element": "regneeksempel"
-    },
-    {
       "_block": "content",
       "id": "vekstmodell",
       "eyebrow": "Vår vekstmodell",
@@ -54,6 +46,14 @@
       "body": [
         "Vi ser på hva det faktisk koster å få en bestilling, og om den er lønnsom. Når tallene fungerer, kan vi øke innsatsen. Først da blir mer trafikk til vekst."
       ]
+    },
+    {
+      "_block": "global",
+      "element": "regneeksempel"
+    },
+    {
+      "_block": "global",
+      "element": "priser"
     },
     {
       "_block": "content",
