@@ -1,5 +1,11 @@
 # Codex to ChatGPT
 
+## 2026-11-10 — OWNER global card editor icon field
+
+Global Innhold → Egendefinerte seksjoner exposes a single optional Phosphor icon name for ordinary cards and open boxes. The former service icon field is hidden in the editor so previously saved Synlighet icons can still act as fallbacks. The badge text and class remain editable.
+
+Twelve focused tests and the Pagefind build passed. A local build rendered chart-bar in the open box from Test Navn and all six original Synlighet icons. The example edit was simulated locally. The live authenticated CMS form needs reopening against the updated configuration.
+
 ## 2026-11-10 — OWNER card icons and badges
 
 Pages CMS now offers Phosphor-ikon, Badge and Badge-klasse on authored content cards, selection cards, packages, public named cases and card listings. Enter a Phosphor Regular name. Leave Badge empty to hide it. Existing Synlighet card icons, package badges and link destinations still render from their current data. Case decorations follow named publication permission.

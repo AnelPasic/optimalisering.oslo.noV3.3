@@ -110,10 +110,13 @@ test('organiske valgkort lagres under Global Innhold og kan redigeres uten dobbe
   const modified=structuredClone(original);
   modified.items[1].headline='Nytt lokalt budskap';
   modified.items[1].badge='Ny badge fra CMS';
-  modified.items[1].icon='seo';
+  modified.items[1].iconName='chart-bar';
   modified.items[1].text='Ny CMS-beskrivelse';
   assert.ok(itemEditor.fields.some((f:any)=>f.name==='badge'),'Globalt innhold must expose editable DaisyUI badge');
-  assert.ok(itemEditor.fields.some((f:any)=>f.name==='icon'),'Globalt innhold must expose service icons');
+  const iconField=resolveField(itemEditor.fields.find((f:any)=>f.name==='iconName'),cms.components);
+  assert.equal(iconField.type,'string');
+  assert.equal(iconField.hidden,undefined);
+  assert.equal(itemEditor.fields.find((f:any)=>f.name==='icon').hidden,true,'Keep existing service icon data without exposing a second picker');
   const updated=JSON.parse(cmsJsonSave(original,modified,entry,cms));
   assert.deepEqual(updated,modified);
   assert.equal(sharedContentSchema.safeParse(updated).success,true);
@@ -142,7 +145,7 @@ test('Betalt synlighet uses one globally editable CMS source directly after Orga
   const changed=structuredClone(original);
   changed.items[0].headline='Ny annonseringsoverskrift';
   changed.items[1].badge='Oppdatert badgetekst';
-  changed.items[1].icon='meta-ads';
+  changed.items[1].iconName='chart-bar';
   changed.items[2].text='CMS-redigert beskrivelse';
   assert.deepEqual(JSON.parse(cmsJsonSave(original,changed,entry,cms)),changed);
   assert.equal(sharedContentSchema.safeParse(changed).success,true);

@@ -111,7 +111,7 @@ components:
       - { name: badgeClass, label: Badge-klasse, component: cardBadgeClass }
   cardIconName:
     type: string
-    description: Valgfritt. Skriv navnet fra phosphoricons.com, for eksempel lightning eller map-pin.
+    description: Skriv ikonnavnet fra Phosphor Regular, for eksempel chart-bar eller map-pin. Bruk bare navnet, uten .svg.
   cardBadgeText:
     type: string
     description: Valgfri merketekst. Tomt felt skjuler merket.
@@ -217,22 +217,11 @@ components:
         label: Stor overskrift på valgkort (valgfritt)
         type: string
         description: "For valgkort på Synlighet. Tjenestenavnet står i topplinjen, mens denne teksten blir kortets hovedoverskrift."
-      - { name: iconName, label: Phosphor-ikon, component: cardIconName }
+      - { name: iconName, label: Phosphor-ikonnavn (valgfritt), component: cardIconName }
       - { name: badge, label: Badge, component: cardBadgeText }
       - { name: badgeClass, label: Badge-klasse, component: cardBadgeClass }
-      - name: icon
-        label: Tjenesteikon (valgfritt)
-        type: select
-        description: "Ikonet følger kortet ved endring av rekkefølge. Brukes på de seks kortene under Organisk og Betalt synlighet."
-        options:
-          placeholder: Uten ikon
-          values:
-            - { name: seo, label: "SEO – søk" }
-            - { name: local-seo, label: "Lokal SEO – kartnål" }
-            - { name: ai-search, label: "AI-synlighet – stjerner" }
-            - { name: google-ads, label: "Google Ads – målskive" }
-            - { name: chatgpt-ads, label: "ChatGPT Ads – samtale" }
-            - { name: meta-ads, label: "Meta Ads – megafon" }
+      # Preserve the saved fallback on existing Synlighet cards.
+      - { name: icon, type: string, hidden: true }
       - name: text
         label: Beskrivelse (rik tekst / Markdown)
         type: rich-text
