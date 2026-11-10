@@ -1,19 +1,17 @@
-import { cardDecorationFields } from './card-decoration.ts';
 import { buttonStyleSchema } from './section-buttons.ts';
 import { z } from 'astro/zod';
 import {safeCmsHref,projectSelectedLinks} from './cms-link-choice.ts';
 import { surfaceSchema } from './surface.ts';
 import { homeSectionDataSchema } from './home-section-data.ts';
-import {optionalInternalHref} from './optional-internal-href.ts';
 import { siteChrome } from './site-chrome-data.ts';
 import { headingAlignSchema } from './heading-alignment.ts';
-import {contentLayoutSchema,boxVariantSchema} from './content-presentation.ts';
+import {contentLayoutSchema} from './content-presentation.ts';
 import {heroLayoutSchema} from './hero-presentation.ts';
 import {heroToneOverridesSchema} from './hero-tone-overrides.ts';
 import {assessmentLayoutSchema} from './assessment-layout.ts';
 import {pageListSchema} from './page-list.ts';
 import {proofListSchema,proofListAnchorSchema} from './proof-list.ts';
-import {sharedContentPlacementSchema,resolveSharedContentPlacement} from './shared-content.ts';
+import {contentItemSchema,sharedContentPlacementSchema,resolveSharedContentPlacement} from './shared-content.ts';
 import calculatorMaster from '../content/global-elements/regneeksempel.json' with {type:'json'};
 import selectorMaster from '../content/global-elements/behov.json' with {type:'json'};
 import assessmentMaster from '../content/global-elements/sjekk.json' with {type:'json'};
@@ -50,7 +48,7 @@ export const homepageBlockSchema=z.discriminatedUnion('_block',[
  singleton('faq','sporsmal',z.object({eyebrow:z.string(),heading:z.string(),items:z.array(z.object({question:z.string(),answer:z.string()}))}).strict()),
  z.object({_block:z.literal('pageList'),id:z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),name:z.string().optional(),visibility:sectionVisibilitySchema,eyebrow:z.string().optional(),heading:z.string().trim().min(1),body:z.array(z.string()).default([]),headingAlign:headingAlignSchema,surface:surfaceSchema,boxButtonStyle:buttonStyleSchema,layout:contentLayoutSchema.optional(),pageList:pageListSchema}).strict(),
  z.object({...identity,_block:z.literal('content'),eyebrow:z.string().optional(),heading:z.string().trim().min(1),body:z.array(z.string()).default([]),surface:surfaceSchema,headingAlign:headingAlignSchema,layout:contentLayoutSchema,buttonStyle:buttonStyleSchema,boxButtonStyle:buttonStyleSchema,
- items:z.array(z.object({title:z.string(),headline:z.string().trim().min(1).optional(),...cardDecorationFields, icon:z.preprocess(v=>v===''||v==null?undefined:v,z.enum(['seo','local-seo','ai-search','google-ads','chatgpt-ads','meta-ads']).optional()),text:z.string(),href:optionalInternalHref,label:z.string().optional(),surface:surfaceSchema,boxVariant:boxVariantSchema,buttonStyle:buttonStyleSchema})).optional(),links:z.array(link).optional()}).strict(),
+ items:z.array(contentItemSchema).optional(),links:z.array(link).optional()}).strict(),
  z.object({_block:z.literal('proofList'),id:proofListAnchorSchema,visibility:sectionVisibilitySchema,proofList:proofListSchema,heading:z.string().optional(),body:z.array(z.string()).default([])}).strict(),
 ]);
 export const homepageBlocksSchema=z.array(homepageBlockSchema).max(56).superRefine((blocks,ctx)=>{

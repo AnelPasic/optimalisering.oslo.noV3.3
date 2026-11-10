@@ -11,6 +11,30 @@ import {optionalInternalHref} from './optional-internal-href.ts';
 // Keep the shared library independent of home-builder to avoid circular imports.
 const sectionVisibilitySchema=z.preprocess(value=>value==null||value===''?undefined:value,z.literal('hidden').optional());
 
+// Accept older saved content while exposing only Phosphor names to renderers.
+const legacyServiceIcons = {
+  seo: 'magnifying-glass',
+  'local-seo': 'map-pin',
+  'ai-search': 'sparkle',
+  'google-ads': 'target',
+  'chatgpt-ads': 'chat-circle-text',
+  'meta-ads': 'megaphone',
+} as const;
+const legacyServiceIconNames = Object.keys(legacyServiceIcons) as (keyof typeof legacyServiceIcons)[];
+
+export const contentItemSchema = z.object({
+  title: z.string(),
+  headline: z.string().trim().min(1).optional(),
+  ...cardDecorationFields,
+  icon: z.preprocess(value => value === '' || value == null ? undefined : value, z.enum(legacyServiceIconNames).optional()),
+  text: z.string(),
+  href: optionalInternalHref,
+  label: z.string().optional(),
+  surface: surfaceSchema,
+  boxVariant: boxVariantSchema,
+  buttonStyle: buttonStyleSchema,
+}).transform(({icon, ...item}) => icon && !item.iconName ? { ...item, iconName: legacyServiceIcons[icon] } : item);
+
 // One editable JSON section, never a copied Page section or a protected commercial master.
 const key=z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/);
 const reserved=new Set(['behov','regneeksempel','sjekk','priser','resultater','mekanisme','passer','sporsmal','skjema','main','mobile-menu','site-menu','order-package','website','email','message']);
@@ -18,7 +42,7 @@ export const sharedContentSchema=z.object({
  _block:z.literal('content'),uid:z.string().uuid(),id:key,name:z.string().trim().min(1),
  eyebrow:z.string().optional(),heading:z.string().trim().min(1),body:z.array(z.string()).default([]),
  headingAlign:headingAlignSchema,layout:contentLayoutSchema,surface:surfaceSchema,buttonStyle:buttonStyleSchema,boxButtonStyle:buttonStyleSchema,
- items:z.array(z.object({title:z.string(),headline:z.string().trim().min(1).optional(),...cardDecorationFields, icon:z.preprocess(v=>v===''||v==null?undefined:v,z.enum(['seo','local-seo','ai-search','google-ads','chatgpt-ads','meta-ads']).optional()),text:z.string(),href:optionalInternalHref,label:z.string().optional(),surface:surfaceSchema,boxVariant:boxVariantSchema,buttonStyle:buttonStyleSchema})).optional(),
+ items:z.array(contentItemSchema).optional(),
  links:z.array(z.object({label:z.string(),href:z.string().refine(safeCmsHref)})).optional(),
 }).strict().superRefine((section,ctx)=>{
  if(reserved.has(section.id)||/^(?:calc-|scenario-|package-home-|term-|header-(?:desktop|mobile)-submenu-)/.test(section.id))

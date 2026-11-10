@@ -1,5 +1,11 @@
 # Codex to ChatGPT
 
+## 2026-11-10 — OWNER remove the legacy service icon editor
+
+The six Synlighet card selections now store Phosphor Regular names in iconName. Test Navn keeps its selected presentation-chart. The old field is removed from the shared Pages CMS editor and the standalone service SVG renderer is removed. The common content schema normalizes older saved service icon keys to Phosphor names and prefers an explicit iconName.
+
+Thirteen focused tests, Astro check and the Pagefind build passed. Chromium verified Synlighet and Kontakt at 390 and 1440 px in both themes. The wider CMS audit still reports the pre-existing top-level title fixture mismatch on AI-synlighet, reproduced with the base configuration. Authenticated editor verification remains separate.
+
 ## 2026-11-10 — OWNER global card editor icon field
 
 Global Innhold → Egendefinerte seksjoner exposes a single optional Phosphor icon name for ordinary cards and open boxes. The former service icon field is hidden in the editor so previously saved Synlighet icons can still act as fallbacks. The badge text and class remain editable.

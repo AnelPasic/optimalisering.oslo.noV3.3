@@ -99,7 +99,7 @@ test('real page schema resolves one shared source on Home and Om, rejects collis
 test('organiske valgkort lagres under Global Innhold og kan redigeres uten dobbel kilde',()=>{
   const filename='app/src/content/global-content/kanaler.json';
   const original=JSON.parse(readFileSync('src/content/global-content/kanaler.json','utf8'));
-  assert.deepEqual(original.items.map((item:any)=>item.icon),['seo','local-seo','ai-search']);
+  assert.deepEqual(original.items.map((item:any)=>item.iconName),['magnifying-glass','map-pin','sparkle']);
   const entry=entryForFile(cms,filename);
   assert.ok(entry,'Globalt innhold must expose the organic card editor');
   const fields=entry.fields.find((f:any)=>f.name==='items');
@@ -116,10 +116,10 @@ test('organiske valgkort lagres under Global Innhold og kan redigeres uten dobbe
   const iconField=resolveField(itemEditor.fields.find((f:any)=>f.name==='iconName'),cms.components);
   assert.equal(iconField.type,'string');
   assert.equal(iconField.hidden,undefined);
-  assert.equal(itemEditor.fields.find((f:any)=>f.name==='icon').hidden,true,'Keep existing service icon data without exposing a second picker');
+  assert.equal(itemEditor.fields.some((f:any)=>f.name==='icon'),false,'Only the Phosphor field belongs in the editor');
   const updated=JSON.parse(cmsJsonSave(original,modified,entry,cms));
   assert.deepEqual(updated,modified);
-  assert.equal(sharedContentSchema.safeParse(updated).success,true);
+  assert.equal(sharedContentSchema.parse(updated).items?.[1].iconName,'chart-bar');
   const page=JSON.parse(readFileSync('src/content/pages/synlighet.json','utf8'));
   assert.deepEqual(page.sections[0],{_block:'sharedContent',entry:'kanaler'});
   const parsed=pageSchema.parse(page);
@@ -137,7 +137,7 @@ test('Betalt synlighet uses one globally editable CMS source directly after Orga
     {_block:'sharedContent',entry:'betalt-synlighet'}
   ]);
   assert.equal(original.items.length,3);
-  assert.deepEqual(original.items.map((item:any)=>item.icon),['google-ads','chatgpt-ads','meta-ads']);
+  assert.deepEqual(original.items.map((item:any)=>item.iconName),['target','chat-circle-text','megaphone']);
   assert.deepEqual(original.items.map((item:any)=>item.title),['Google Ads','ChatGPT Ads','Meta Ads']);
   assert.ok(original.items.every((item:any)=>item.badge&&item.headline&&item.label));
   assert.ok(original.items.every((item:any)=>item.href===undefined),'No dead links to unavailable paid service pages');
@@ -153,4 +153,13 @@ test('Betalt synlighet uses one globally editable CMS source directly after Orga
   assert.deepEqual(resolved.sections.slice(0,2).map((section:any)=>section.id),['kanaler','betalt-synlighet']);
   assert.equal(resolved.sections[1].items?.[1].headline,original.items[1].headline);
   assert.equal(source.sections.some((section:any)=>section.id==='betalt-synlighet'),false,'No local copy');
+});
+
+test('older card saves resolve to a Phosphor name and explicit names take precedence',()=>{
+  const legacy={...specimen.items[0],icon:'meta-ads'};
+  const migrated=sharedContentSchema.parse({...specimen,items:[legacy]}).items?.[0];
+  assert.equal(migrated?.iconName,'megaphone');
+  assert.equal(Object.hasOwn(migrated!,'icon'),false);
+  const updated=sharedContentSchema.parse({...specimen,items:[{...legacy,iconName:'chart-bar'}]});
+  assert.equal(updated.items?.[0].iconName,'chart-bar');
 });

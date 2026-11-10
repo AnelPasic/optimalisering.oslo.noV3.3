@@ -1,10 +1,9 @@
-import { cardDecorationFields } from './card-decoration.ts';
 import { buttonChoice, buttonStyleSchema } from './section-buttons.ts';
 import { z } from 'astro/zod';
 import {projectSelectedLinks,safeCmsHref} from './cms-link-choice.ts';
 import { surfaceSchema, sectionModel } from './surface.ts';
 import { headingAlignSchema } from './heading-alignment.ts';
-import {contentLayoutSchema,boxVariantSchema} from './content-presentation.ts';
+import {contentLayoutSchema} from './content-presentation.ts';
 import { listingSchema, pageListSchema } from './page-list.ts';
 import {proofListSchema} from './proof-list.ts';
 import { compositionSchema, resolveRouteFamily, routeKindSchema } from './route-family.ts';
@@ -13,7 +12,7 @@ import { heroSchema, resolveHomepageSections, sectionVisibilitySchema, validateH
 import {heroPresentationSchema} from './hero-presentation.ts';
 import { validateSynlighetSections, resolveSynlighetSections, resolvePageSections, serviceGlobalIds, pricingModuleIds } from './service-sections.ts';
 import {synlighetHeroSchema,legacyHeroKeys} from './synlighet-hero.ts';
-import {optionalInternalHref} from './optional-internal-href.ts';
+import { contentItemSchema } from './shared-content.ts';
 
 const link = z.object({label:z.string(),href:z.string().refine(safeCmsHref)});
 const homepage = z.object({}).strict(); // Header/footer have independent global CMS sources.
@@ -79,7 +78,7 @@ export const pageSchema = z.preprocess((input,context)=>{
       boxButtonStyle: buttonStyleSchema,
       layout: contentLayoutSchema,
       id: z.string(), eyebrow: z.string().optional(), heading: z.string(), body: z.array(z.string()).default([]),
-      items: z.array(z.object({ title: z.string(), headline: z.string().trim().min(1).optional(), ...cardDecorationFields, icon: z.preprocess(v=>v===''||v==null?undefined:v,z.enum(['seo','local-seo','ai-search','google-ads','chatgpt-ads','meta-ads']).optional()), text: z.string(), href: optionalInternalHref, label: z.string().optional(), surface: surfaceSchema, boxVariant: boxVariantSchema, buttonStyle: buttonStyleSchema })).optional(),
+      items: z.array(contentItemSchema).optional(),
       links: z.array(link).optional(),
     })).default([]),
     faq: z.array(z.object({ question: z.string(), answer: z.string() })).default([]),

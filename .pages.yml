@@ -220,8 +220,6 @@ components:
       - { name: iconName, label: Phosphor-ikonnavn (valgfritt), component: cardIconName }
       - { name: badge, label: Badge, component: cardBadgeText }
       - { name: badgeClass, label: Badge-klasse, component: cardBadgeClass }
-      # Preserve the saved fallback on existing Synlighet cards.
-      - { name: icon, type: string, hidden: true }
       - name: text
         label: Beskrivelse (rik tekst / Markdown)
         type: rich-text

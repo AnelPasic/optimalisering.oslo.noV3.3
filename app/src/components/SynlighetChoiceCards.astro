@@ -1,7 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import { surfaceAttribute, surfaceClasses } from '../lib/surface';
-import ServiceChannelIcon from './ServiceChannelIcon.astro';
 import Arrow from './Arrow.astro';
 import PhosphorIcon from './PhosphorIcon.astro';
 
@@ -43,7 +42,7 @@ const backgrounds = ['info', 'base-300', 'secondary'] as const;
               {item.badge}
             </span>}
           </div>
-          {item.iconName ? <PhosphorIcon name={item.iconName} class="size-[34px] shrink-0" size={34} /> : item.icon && <ServiceChannelIcon kind={item.icon} />}
+          <PhosphorIcon name={item.iconName} class="size-[34px] shrink-0" size={34} />
         </div>
         <h3 class="max-w-[390px] max-[900px]:max-w-[600px]">{item.headline ?? item.title}</h3>
         <p class="mt-[18px] mb-5 grow-0 break-words text-(length:--type-body) leading-(--leading-body) text-inherit">{item.text}</p>
