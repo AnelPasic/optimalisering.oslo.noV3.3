@@ -51,5 +51,15 @@
     "iconName": "tree-structure",
     "badge": "the badge"
   },
-  "kind": "service"
+  "kind": "service",
+  "sections": [
+    {
+      "_block": "sharedContent",
+      "entry": "test"
+    },
+    {
+      "_block": "global",
+      "element": "priser"
+    }
+  ]
 }
