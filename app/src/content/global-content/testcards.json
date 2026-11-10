@@ -1,0 +1,22 @@
+{
+  "_block": "content",
+  "uid": "b6219c71-9840-4619-95ab-49a08ee8cded",
+  "id": "testcards",
+  "name": "Test Cards",
+  "eyebrow": "Test Cards - Overtekst",
+  "heading": "Test Cards - Overskrift",
+  "items": [
+    {
+      "title": "tittelkorts",
+      "headline": "Stor overskrift på valgkort (valgfritt)",
+      "iconName": "trend-up",
+      "badge": "Badge it is primary",
+      "badgeClass": "badge-primary",
+      "text": "MisterTing er fysiske QR-merker du fester på eiendelene dine. Arket har merker i ulike størrelser og en egen kode for aktivering. Du kobler merkene til kontaktopplysningene dine, så en finner kan varsle deg.",
+      "href": "/seo/",
+      "label": "SEO",
+      "boxVariant": "card",
+      "surface": "default"
+    }
+  ]
+}
