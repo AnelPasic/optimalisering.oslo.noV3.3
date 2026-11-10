@@ -118,6 +118,13 @@
             "label": "Landingssider",
             "compactLabel": "Landingssider",
             "description": "Nettside spesialisert for konverteringer"
+          },
+          {
+            "icon": "conversion",
+            "group": "Konverteringsoptimalisering",
+            "label": "Checkout optimalisering",
+            "compactLabel": "Checkout optimalisering",
+            "description": "Få større andel av kunder til å fullføre checkout"
           }
         ],
         "visual": "controlled",
