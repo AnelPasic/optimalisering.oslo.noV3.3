@@ -239,6 +239,10 @@
       "focusHeading": "Hva ønsker du å forbedre?",
       "options": [
         {
+          "id": "aisok",
+          "label": "AI-synlighet"
+        },
+        {
           "id": "seo-ai",
           "label": "Søkemotoroptimalisering (SEO)",
           "description": "Bli funnet i søk og relevante AI-svar."
@@ -267,10 +271,6 @@
           "id": "seo",
           "label": "Søkemotoroptimalisering",
           "description": "Bli funnet på Google søk"
-        },
-        {
-          "id": "aisok",
-          "label": "AI-synlighet"
         }
       ]
     }
