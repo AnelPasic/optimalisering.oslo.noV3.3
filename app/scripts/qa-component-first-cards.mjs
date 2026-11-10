@@ -221,6 +221,9 @@ try {
      count:nodes.length,
      columns:grid?getComputedStyle(grid).gridTemplateColumns.split(' ').filter(Boolean).length:0,
      title:nodes.map(n=>n.querySelector('h3')?.textContent?.trim()),
+     icons:nodes.map(n=>n.querySelector('svg[data-service-channel-icon]')?.getAttribute('data-service-channel-icon')),
+     iconSizes:nodes.map(n=>n.querySelector('svg[data-service-channel-icon]')?.getBoundingClientRect().width),
+     iconAccessibility:nodes.map(n=>n.querySelector('svg[data-service-channel-icon]')?.getAttribute('aria-hidden')),
      top:nodes.map(n=>n.querySelector('.card-body > div > div > span')?.textContent?.trim().replace(/\s+/g,' ')),
      badges:nodes.map(n=>n.querySelector('.badge')?.textContent?.trim()),
      badgeClasses:nodes.map(n=>n.querySelector('.badge')?.classList.contains('badge-outline')),
@@ -243,6 +246,9 @@ try {
    assert.equal(cards.count,3,'Three organic selector cards required');
    assert.equal(cards.columns,width<=900?1:3,'Synlighet must use homepage 3/1 selector grid');
    assert.deepEqual(cards.title,organicItems.map(i=>i.headline));
+   assert.deepEqual(cards.icons,organicItems.map(i=>i.icon),'Icon identity must follow the CMS item rather than its index');
+   assert.ok(cards.iconSizes.every(n=>n===34),'All service icons must keep native 34px size');
+   assert.ok(cards.iconAccessibility.every(a=>a==='true'),'Icons are decorative; card text supplies the accessible name');
    assert.deepEqual(cards.href,organicItems.map(i=>i.href));
    assert.deepEqual(cards.actions,['#bestill','#bestill','#bestill'],'Each select CTA must use this page\'s local order anchor');
    assert.ok(cards.linkCount.every(count=>count===2),'Each card has two sibling links, never nested anchors');
@@ -293,6 +299,9 @@ try {
     const grid=cards[0]?.parentElement;
     const cardData=cards.map(node=>({
      title:node.querySelector('h3')?.textContent?.trim(),
+     icon:node.querySelector('svg[data-service-channel-icon]')?.getAttribute('data-service-channel-icon'),
+     iconSize:node.querySelector('svg[data-service-channel-icon]')?.getBoundingClientRect().width,
+     iconAccessibility:node.querySelector('svg[data-service-channel-icon]')?.getAttribute('aria-hidden'),
      service:node.querySelector('.card-body > div > div > span')?.textContent?.trim(),
      badge:node.querySelector('.badge')?.textContent?.trim(),
      badgeClass:node.querySelector('.badge')?.classList.contains('badge-outline'),
@@ -322,6 +331,8 @@ try {
    assert.equal(paid.cards.length,3,'Paid cards must have three choices');
    assert.equal(paid.columns,width<=900?1:3,'Paid cards must use same 3/1 responsive grid');
    assert.deepEqual(paid.cards.map(c=>c.title),paidSource.items.map(i=>i.headline));
+   assert.deepEqual(paid.cards.map(c=>c.icon),paidSource.items.map(i=>i.icon),'Paid icons must match service keys');
+   assert.ok(paid.cards.every(c=>c.iconSize===34&&c.iconAccessibility==='true'));
    assert.deepEqual(paid.cards.map(c=>c.service),paidSource.items.map(i=>i.title));
    assert.deepEqual(paid.cards.map(c=>c.badge),paidSource.items.map(i=>i.badge));
    assert.ok(paid.cards.every(c=>c.badgeClass&&c.badgeTextColor===c.cardTextColor));
