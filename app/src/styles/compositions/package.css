@@ -59,7 +59,7 @@
 .site-shell .package-offer .package-situations li + li { margin-top: 7px; }
 .site-shell .package-offer .package-focus { margin-bottom: 16px; }
 .site-shell .package-offer .package-icon-items { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: var(--gap-sm); }
-.site-shell .package-offer .package-icon-items li { display: flex; gap: var(--gap-xs); align-items: start; min-width: 0; font-size: var(--type-body-sm); line-height: var(--leading-body); }
+.site-shell .package-offer .package-icon-items li { display: flex; flex: 0 0 calc((100% - var(--gap-sm)) / 2); gap: var(--gap-xs); align-items: start; min-width: 0; font-size: var(--type-body-sm); line-height: var(--leading-body); }
 .site-shell .package-offer .package-icon-items span { min-width: 0; overflow-wrap: anywhere; }
 .site-shell .package-offer .package-focus-icon { flex-shrink: 0; width: 20px; height: 20px; color: var(--color-primary); }
 .site-shell .package-offer .is-recommended .package-focus-icon { color: var(--color-secondary); }
