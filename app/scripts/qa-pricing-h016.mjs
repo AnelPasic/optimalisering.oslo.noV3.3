@@ -3,6 +3,7 @@ import { chromium, expect } from '@playwright/test';
 import { readFileSync, readdirSync, writeFileSync, mkdirSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { resolve, relative } from 'node:path';
+import { groupPackageServices } from '../src/lib/package-service-groups.ts';
 const snapshot = process.argv.includes('--baseline');
 const base = process.env.QA_BASE_URL || 'http://127.0.0.1:4321';
 const output = resolve(process.env.QA_EVIDENCE_DIR || '../coordination/evidence/h016');
@@ -80,7 +81,8 @@ try {
           assert.equal(await detail.locator('summary').innerText(),item.detailLink.label);
           assert.equal(await card.locator('.button').getAttribute('href'),item.cta.href); assert.ok((await card.locator('.button').innerText()).startsWith(item.cta.label));
           assert.deepEqual(await card.locator('.package-situations li').allTextContents(),item.compact.situations);
-          assert.deepEqual(await card.locator('.package-icon-items span').allTextContents(),item.iconItems.map(icon=>icon.compactLabel));
+          assert.deepEqual(await card.locator('.package-icon-items span').allTextContents(),groupPackageServices(item.iconItems).flatMap(group=>group.items.map(icon=>icon.compactLabel)));
+          assert.deepEqual(await card.locator('[data-service-category]').evaluateAll(nodes=>nodes.map(node=>node.getAttribute('data-service-category'))),groupPackageServices(item.iconItems).map(group=>group.label));
           assert.equal(await card.locator('.package-fit').innerText(),item.compact.fit);
           assert.ok(!/problem|Optimalisering er ikke laget for to uavhengige|Velg Vekst hvis resultatet/.test(await card.textContent()));
           const initial=route==='/priser/'; await detail.locator('summary').focus(); await page.keyboard.press('Enter');

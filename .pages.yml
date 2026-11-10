@@ -1919,6 +1919,16 @@ content:
                             - page
                             - route
                         required: true
+                      - name: group
+                        label: Tjenestegruppe
+                        type: select
+                        description: Plasser tjenesten i riktig gruppe på pakkekortet. Uten valg brukes ikonet som reserve.
+                        options:
+                          values:
+                            - Organisk Synlighet
+                            - Betalt Synlighet
+                            - Konverteringsoptimalisering
+                            - Systemer
                       - name: label
                         label: Tjeneste eller kombinasjon
                         type: string

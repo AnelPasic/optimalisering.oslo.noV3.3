@@ -48,6 +48,11 @@
 .site-shell .package-offer .package-block-heading { font-family: var(--body); font-size: var(--type-label); font-weight: var(--weight-heading); line-height: var(--leading-small); letter-spacing: 0; margin-bottom: 6px; }
 .site-shell .package-offer .package-fit, .site-shell .package-offer .package-detail { font-size: var(--type-body-sm); line-height: var(--leading-body); color: var(--muted); }
 .site-shell .package-offer .package-fit { margin-bottom: 16px; }
+.site-shell .package-offer .package-fit-goals { margin-top: 22px; }
+.site-shell .package-offer .package-services-heading { margin-bottom: 4px; }
+.site-shell .package-offer .package-services-note { margin: 0 0 14px; color: var(--muted); font-size: var(--type-meta); line-height: var(--leading-small); }
+.site-shell .package-offer .package-service-group + .package-service-group { margin-top: 16px; }
+.site-shell .package-offer .package-service-group-heading { font-family: var(--body); font-size: var(--type-meta); font-weight: var(--weight-heading); line-height: var(--leading-small); color: var(--ink); margin-bottom: 8px; overflow-wrap: anywhere; }
 .site-shell .package-offer .package-situations { margin-bottom: 16px; }
 .site-shell .package-offer .package-situations ul, .site-shell .package-offer .package-icon-items { margin: 0; }
 .site-shell .package-offer .package-situations ul { padding-left: 18px; font-size: var(--type-body-sm); line-height: var(--leading-body); color: var(--muted); }
@@ -58,7 +63,7 @@
 .site-shell .package-offer .package-icon-items span { min-width: 0; overflow-wrap: anywhere; }
 .site-shell .package-offer .package-focus-icon { flex-shrink: 0; width: 20px; height: 20px; color: var(--color-primary); }
 .site-shell .package-offer .is-recommended .package-focus-icon { color: var(--color-secondary); }
-.site-shell .package-offer .package-card .btn { margin-top: auto; align-self: stretch; justify-content: space-between; }
+.site-shell .package-offer .package-card .btn { margin-top: 0; align-self: stretch; justify-content: space-between; }
 .site-shell .package-offer .package-uncertain { margin-top: 16px; font-size: var(--type-body-sm); line-height: var(--leading-body); }
 .site-shell .package-offer .package-details { margin-top: 12px; font-size: var(--type-body-sm); line-height: var(--leading-body); }
 .site-shell .package-offer .package-details summary { cursor: pointer; padding-block: 8px; }
@@ -116,7 +121,7 @@
 @media (max-width: 359px) { .site-shell .package-offer .package-infographic.has-caption { gap: 6px; } }
 
 /* Global package order: compact in-card reveal using existing daisyUI inputs. */
-.site-shell .package-offer .package-order-inline { margin-top: auto; min-width: 0; }
+.site-shell .package-offer .package-order-inline { margin-top: 16px; min-width: 0; }
 .site-shell .package-offer .package-order-inline > summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: var(--gap-xs); width: 100%; }
 .site-shell .package-offer .package-order-inline > summary::-webkit-details-marker { display: none; }
 .site-shell .package-offer .package-order-inline > summary:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }

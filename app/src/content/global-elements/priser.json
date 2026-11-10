@@ -63,23 +63,27 @@
         "iconItems": [
           {
             "icon": "search",
+            "group": "Organisk Synlighet",
             "label": "SEO / AI-synlighet",
             "compactLabel": "SEO / AI-synlighet",
             "description": "Bli funnet på Google, Google Maps eller AI Søk"
           },
           {
             "icon": "conversion",
+            "group": "Konverteringsoptimalisering",
             "label": "Konverteringsoptimalisering",
             "compactLabel": "Konvertering",
             "description": "Få flere av de som lander på nettsiden til å fullføre bestilling eller kjøp."
           },
           {
             "icon": "local",
+            "group": "Organisk Synlighet",
             "label": "Lokal SEO",
             "compactLabel": "Lokal SEO"
           },
           {
             "icon": "paid-search",
+            "group": "Betalt Synlighet",
             "label": "Google Ads - ett tydelig fokusområde",
             "compactLabel": "Google Ads"
           }
@@ -118,37 +122,44 @@
         "iconItems": [
           {
             "icon": "conversion",
+            "group": "Konverteringsoptimalisering",
             "label": "Konverteringsoptimalisering",
             "compactLabel": "Konvertering"
           },
           {
             "icon": "search",
+            "group": "Organisk Synlighet",
             "label": "SEO - Søkemotoroptimalisering",
             "compactLabel": "SEO"
           },
           {
             "icon": "route",
+            "group": "Organisk Synlighet",
             "label": "AI-Søk Optimalisering",
             "compactLabel": "AI-Synlighet"
           },
           {
             "icon": "local",
+            "group": "Organisk Synlighet",
             "label": "Lokal SEO",
             "compactLabel": "Lokal SEO",
             "description": "Bli funnet på Google Maps"
           },
           {
             "icon": "paid-search",
+            "group": "Betalt Synlighet",
             "label": "Google Ads",
             "compactLabel": "Google Ads"
           },
           {
             "icon": "social-paid",
+            "group": "Betalt Synlighet",
             "label": "Facebook Annonser",
             "compactLabel": "Meta Ads"
           },
           {
             "icon": "paid-search",
+            "group": "Betalt Synlighet",
             "label": "ChatGPT Ads",
             "compactLabel": "ChatGPT Ads"
           }
@@ -188,26 +199,31 @@
         "iconItems": [
           {
             "icon": "search",
+            "group": "Organisk Synlighet",
             "label": "SEO / AI-synlighet",
             "compactLabel": "SEO / AI-synlighet"
           },
           {
             "icon": "paid-search",
+            "group": "Betalt Synlighet",
             "label": "Google Ads",
             "compactLabel": "Google Ads"
           },
           {
             "icon": "social-paid",
+            "group": "Betalt Synlighet",
             "label": "Meta Ads",
             "compactLabel": "Meta Ads"
           },
           {
             "icon": "conversion",
+            "group": "Konverteringsoptimalisering",
             "label": "Konverteringsoptimalisering",
             "compactLabel": "Konvertering"
           },
           {
             "icon": "analytics",
+            "group": "Systemer",
             "label": "Analyse og sporing",
             "compactLabel": "Analyse"
           }

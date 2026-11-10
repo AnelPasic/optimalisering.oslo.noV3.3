@@ -17,7 +17,7 @@ test('OWNER can edit package CTA wording while order and detail routes remain re
     assert.ok(field(path),`CMS field exists: ${path}`);assert.notEqual(field(path).readonly,true,path);
   }
   assert.equal(field('selectionRule'),undefined,'Removed Valgregel must not remain in CMS');
-  for (const key of ['iconItems.icon','iconItems.label','iconItems.compactLabel','iconItems.description']) assert.ok(field(key),`CMS exposes service icon field: ${key}`);
+  for (const key of ['iconItems.icon','iconItems.group','iconItems.label','iconItems.compactLabel','iconItems.description']) assert.ok(field(key),`CMS exposes service icon field: ${key}`);
   for(const {path,field:shared}of leaves(packages.fields.filter((f:any)=>f.name!=='items')))assert.notEqual(shared.readonly,true,`Shared field ${path}`);
   for(const path of ['key','cta.href','detailLink.href']) assert.equal(field(path)?.readonly,true,path);
   assert.ok(!/låst|scoped.*handoff/i.test(JSON.stringify(packages)),'Editor guidance must allow routine safe OWNER editing');
