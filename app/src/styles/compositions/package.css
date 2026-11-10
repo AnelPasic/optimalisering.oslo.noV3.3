@@ -53,9 +53,9 @@
 .site-shell .package-offer .package-services-note { margin: 0 0 14px; color: var(--muted); font-size: var(--type-meta); line-height: var(--leading-small); }
 .site-shell .package-offer .package-service-group + .package-service-group { margin-top: 16px; }
 .site-shell .package-offer .package-service-group-heading { font-family: var(--body); font-size: var(--type-meta); font-weight: var(--weight-heading); line-height: var(--leading-small); color: var(--ink); margin-bottom: 8px; overflow-wrap: anywhere; }
-.site-shell .package-offer .package-situations { margin-bottom: 16px; }
+.site-shell .package-offer .package-situations { margin-top: 22px; margin-bottom: 16px; }
 .site-shell .package-offer .package-situations ul, .site-shell .package-offer .package-icon-items { margin: 0; }
-.site-shell .package-offer .package-situations ul { padding-left: 18px; font-size: var(--type-body-sm); line-height: var(--leading-body); color: var(--muted); }
+.site-shell .package-offer .package-situations ul { padding-left: 0; list-style: none; font-size: var(--type-body-sm); line-height: var(--leading-body); color: var(--muted); }
 .site-shell .package-offer .package-situations li + li { margin-top: 7px; }
 .site-shell .package-offer .package-focus { margin-bottom: 16px; }
 .site-shell .package-offer .package-icon-items { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: var(--gap-sm); }
