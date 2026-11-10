@@ -32,15 +32,6 @@
     },
     {
       "_block": "pricingModule",
-      "pricingModule": "valg"
-    },
-    {
-      "_block": "pricingModule",
-      "pricingModule": "vekst",
-      "visibility": "hidden"
-    },
-    {
-      "_block": "pricingModule",
       "pricingModule": "sammenligning"
     },
     {
@@ -50,6 +41,11 @@
     {
       "_block": "global",
       "element": "resultater"
+    },
+    {
+      "_block": "pricingModule",
+      "pricingModule": "vekst",
+      "visibility": "hidden"
     }
   ],
   "faq": [
