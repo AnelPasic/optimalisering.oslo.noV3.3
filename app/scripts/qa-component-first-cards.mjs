@@ -208,6 +208,8 @@ try {
  const organicSource=JSON.parse(readFileSync(new URL('../src/content/global-content/kanaler.json',import.meta.url),'utf8'));
  const organicItems=organicSource.items;
  const expectedBadges=organicItems.map(item=>item.badge);
+ const includedBadgeClass='badge badge-success badge-sm h-auto min-h-5 max-w-full whitespace-normal border-current py-1';
+ const outlinedBadgeClass='badge badge-outline badge-sm h-auto min-h-5 max-w-full whitespace-normal border-current py-1 text-inherit';
  for(const width of [390,768,1440]){
   const page=await browser.newPage({viewport:{width,height:900}});
   assert.equal((await page.goto(origin+'/synlighet/',{waitUntil:'networkidle'})).status(),200);
@@ -226,8 +228,8 @@ try {
      iconAccessibility:nodes.map(n=>n.querySelector('svg[data-service-channel-icon]')?.getAttribute('aria-hidden')),
      top:nodes.map(n=>n.querySelector('.card-body > div > div > span')?.textContent?.trim().replace(/\s+/g,' ')),
      badges:nodes.map(n=>n.querySelector('.badge')?.textContent?.trim()),
-     badgeClasses:nodes.map(n=>n.querySelector('.badge')?.classList.contains('badge-outline')),
-     badgeColors:nodes.map(n=>n.querySelector('.badge') ? {color:getComputedStyle(n.querySelector('.badge')).color,card:getComputedStyle(n).color} : null),
+     badgeClasses:nodes.map(n=>n.querySelector('.badge')?.getAttribute('class')),
+     badgeColors:nodes.map(n=>n.querySelector('.badge') ? {color:getComputedStyle(n.querySelector('.badge')).color,bg:getComputedStyle(n.querySelector('.badge')).backgroundColor} : null),
      priceVisible:nodes.some(n=>/4\s?500\s?kr/.test(n.textContent||'')),
      href:nodes.map(n=>n.querySelector('[data-card-detail-link]')?.getAttribute('href')),
      actions:nodes.map(n=>n.querySelector('[data-card-order-link]')?.getAttribute('href')),
@@ -256,8 +258,8 @@ try {
    assert.ok(cards.targetExists,'The local price/order section must expose #bestill');
    assert.deepEqual(cards.top,organicItems.map(i=>i.title),'Card top line must show only service name');
    assert.deepEqual(cards.badges,expectedBadges,'DaisyUI badges must match global CMS copy');
-   assert.ok(cards.badgeClasses.every(Boolean),'Use native DaisyUI outlined badges');
-   assert.ok(cards.badgeColors.every(c=>c&&c.color===c.card),'Badge text must inherit the card surface contrast');
+   assert.deepEqual(cards.badgeClasses,organicItems.map(i=>i.badge==='Inkludert i alle pakker'?includedBadgeClass:outlinedBadgeClass),'Only included-in-all-packages badges use exact success classes');
+   assert.ok(cards.badgeColors.every(c=>c&&c.color!==c.bg),'Badge must have distinguishable text and background');
    assert.equal(cards.priceVisible,false,'Price must not be displayed on organic choice cards');
    assert.deepEqual(cards.styles.map(x=>x.color),cards.expectedColors);
    assert.ok(cards.styles.every(x=>x.native&&Math.abs(x.padding-(width>1100?32:24))<.6&&Math.abs(x.icon-34)<.6));
@@ -304,8 +306,9 @@ try {
      iconAccessibility:node.querySelector('svg[data-service-channel-icon]')?.getAttribute('aria-hidden'),
      service:node.querySelector('.card-body > div > div > span')?.textContent?.trim(),
      badge:node.querySelector('.badge')?.textContent?.trim(),
-     badgeClass:node.querySelector('.badge')?.classList.contains('badge-outline'),
+     badgeClass:node.querySelector('.badge')?.getAttribute('class'),
      badgeTextColor:node.querySelector('.badge')?getComputedStyle(node.querySelector('.badge')).color:null,
+     badgeBackgroundColor:node.querySelector('.badge')?getComputedStyle(node.querySelector('.badge')).backgroundColor:null,
      cardTextColor:getComputedStyle(node).color,
      cardColor:getComputedStyle(node).backgroundColor,
      link:node.querySelector('[data-card-detail-link]')?.getAttribute('href')??null,
@@ -335,7 +338,8 @@ try {
    assert.ok(paid.cards.every(c=>c.iconSize===34&&c.iconAccessibility==='true'));
    assert.deepEqual(paid.cards.map(c=>c.service),paidSource.items.map(i=>i.title));
    assert.deepEqual(paid.cards.map(c=>c.badge),paidSource.items.map(i=>i.badge));
-   assert.ok(paid.cards.every(c=>c.badgeClass&&c.badgeTextColor===c.cardTextColor));
+   assert.deepEqual(paid.cards.map(c=>c.badgeClass),paidSource.items.map(i=>i.badge==='Inkludert i alle pakker'?includedBadgeClass:outlinedBadgeClass));
+   assert.ok(paid.cards.every(c=>c.badgeTextColor!==c.badgeBackgroundColor),'Paid badge text and background must differ');
    assert.ok(paid.cards.every(c=>c.link===null&&c.linkCount===1),'No fabricated links to unpublished paid service pages');
    assert.deepEqual(paid.cards.map(c=>c.order),['#bestill','#bestill','#bestill']);
    assert.ok(paid.cards.every(c=>c.tag==='article'&&Math.abs(c.padding-(width>1100?32:24))<.6));

@@ -26,7 +26,9 @@ const backgrounds = ['info', 'base-300', 'secondary'] as const;
         <div class="mb-[26px] flex items-center justify-between gap-(--gap-sm) max-[900px]:mb-[18px]">
           <div class="flex min-w-0 flex-col items-start gap-2">
             <span class="text-(length:--type-body) font-semibold leading-(--leading-body)">{item.title}</span>
-            {item.badge && <span class="badge badge-outline badge-sm h-auto min-h-5 max-w-full whitespace-normal border-current py-1 text-inherit">{item.badge}</span>}
+            {item.badge && <span class={item.badge === 'Inkludert i alle pakker'
+              ? 'badge badge-success badge-sm h-auto min-h-5 max-w-full whitespace-normal border-current py-1'
+              : 'badge badge-outline badge-sm h-auto min-h-5 max-w-full whitespace-normal border-current py-1 text-inherit'}>{item.badge}</span>}
           </div>
           {item.icon && <ServiceChannelIcon kind={item.icon} />}
         </div>
