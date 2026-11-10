@@ -61,6 +61,28 @@
       "iconName": "chat",
       "badge": "beedge",
       "text": "Lenovo LOQ Tower 26L R7-8745HX/16/512GB/5060Ti stasjonær gaming-PC kombinerer AMD Ryzen 7, RTX 5060 Ti, 16GB DDR5 RAM og 512GB SSD i et gjennomsiktig 26L kabinett med ARGB-belysning, og leverer kraftig spillytelse og imponerende grafikk."
+    },
+    {
+      "title": "Kort Tittel - Standard",
+      "headline": "Kort Stor overskrift",
+      "iconName": "chat-centered-text",
+      "badge": "Badge info",
+      "badgeClass": "badge-info",
+      "text": "### Lenovo LOQ Tower 26L R7-8745HX/16/512GB/5060Ti \n\nStasjonær gaming-PC kombinerer AMD Ryzen 7, RTX 5060 Ti, 16GB DDR5 RAM og 512GB SSD i et gjennomsiktig 26L kabinett med ARGB-belysning, og leverer kraftig spillytelse og imponerende grafikk.\n\nLenovo LOQ Tower 26L R7-8745HX/16/512GB/5060Ti stasjonær gaming-PC kombinerer AMD Ryzen 7, RTX 5060 Ti, 16GB DDR5 RAM og 512GB SSD i et gjennomsiktig 26L kabinett med ARGB-belysning, og leverer kraftig spillytelse og imponerende grafikk.",
+      "boxVariant": "card",
+      "surface": "default"
+    },
+    {
+      "title": "Kort Tittel - Base 100",
+      "headline": "Kort Stor overskrift - Base 100",
+      "iconName": "chat-circle-text",
+      "badge": "Badge outline",
+      "badgeClass": "badge-outline",
+      "text": "### Lenovo LOQ Tower 26L R7-8745HX/16/512GB/5060Ti Stasjonær gaming-PC kombinerer AMD Ryzen 7, RTX 5060 Ti, 16GB DDR5 RAM og 512GB SSD i et gjennomsiktig 26L kabinett med ARGB-belysning, og leverer kraftig spillytelse og imponerende grafikk.Lenovo LOQ Tower 26L R7-8745HX/16/512GB/5060Ti stasjonær gaming-PC kombinerer AMD Ryzen 7, RTX 5060 Ti, 16GB DDR5 RAM og 512GB SSD i et gjennomsiktig 26L kabinett med ARGB-belysning, og leverer kraftig spillytelse og imponerende grafikk.",
+      "href": "/#priser",
+      "label": "Priser",
+      "boxVariant": "card",
+      "surface": "base-100"
     }
   ]
 }
