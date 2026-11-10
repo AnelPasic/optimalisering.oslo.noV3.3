@@ -3,18 +3,18 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 
 const read=(path:string)=>readFileSync(path,'utf8');
-test('MWS #26 Oslo pilot: automatic visual cards use native ContentCard, plain stays editorial',()=>{
+test('MWS #26 Oslo pilot: automatic visual cards use native ContentCard and Standard keeps its editorial layout',()=>{
  const home=read('src/components/HomeSection.astro');
  const card=read('src/components/ContentCard.astro');
  const ordinary=read('src/components/ContentSection.astro');
- assert.match(ordinary,/boxVariantAttribute\(item\.boxVariant,section\._block==='protected'\)!=='plain'\?<ContentCard/,'default section cards must share the native renderer');
+ assert.match(ordinary,/section.items.map\(\(item, i\) => <ContentCard/,'section cards must share the native renderer');
  const project=read('src/styles/project.css');
- assert.match(home,/cards&&boxVariantAttribute\(item\.boxVariant,protectedRow\)!=='plain'/);
- assert.match(home,/<ContentCard[^>]+linkVariant=\{boxVariantAttribute/);
+ assert.match(home,/useVisualCards \|\| explicitCard\(item\)/);
+ assert.match(home,/<ContentCard[^>]+linkVariant=\{explicitCard/);
  assert.doesNotMatch(home,/\{card:cards&&/);
  assert.doesNotMatch(project,/\.info-item\.card\s*\{/,'legacy duplicate card padding must retire');
  for(const part of ['card-body','card-title','card-actions','linkVariant','actionClasses(action)','transparent'])assert.ok(card.includes(part),part);
- assert.match(home,/class:list=\{\['info-item/,'editorial/plain variants stay separate');
+ assert.match(home,/class:list=\{\['info-item/,'Standard editorial sections keep their layout');
 });
 test('MWS #26 Oslo pilot: package shells are daisyUI and complex offer internals remain unchanged',()=>{
  const markup=read('src/components/PackageSection.astro');

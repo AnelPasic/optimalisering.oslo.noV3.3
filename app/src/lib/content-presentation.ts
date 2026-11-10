@@ -1,16 +1,13 @@
 import {z} from 'astro/zod';
 
 export const contentLayoutValues=['default','two-columns','three-columns','stacked'] as const;
-export const boxVariantValues=['default','plain','card'] as const;
+export const boxVariantValues=['default','card'] as const;
 const automatic=(value:unknown)=>value==null||value===''?'default':value;
 export const contentLayoutSchema=z.preprocess(automatic,z.enum(contentLayoutValues));
-export const boxVariantSchema=z.preprocess(automatic,z.enum(boxVariantValues));
+// Older exports use 'plain'. Resolve that value to Standard during ingestion.
+export const boxVariantSchema=z.preprocess(value=>value==='plain'?'default':automatic(value),z.enum(boxVariantValues));
 export function contentLayoutAttribute(value:unknown,protectedRow=false){
  const parsed=contentLayoutSchema.safeParse(value);
- return !protectedRow&&parsed.success&&parsed.data!=='default'?parsed.data:undefined;
-}
-export function boxVariantAttribute(value:unknown,protectedRow=false){
- const parsed=boxVariantSchema.safeParse(value);
  return !protectedRow&&parsed.success&&parsed.data!=='default'?parsed.data:undefined;
 }
 

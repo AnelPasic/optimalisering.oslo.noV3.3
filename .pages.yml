@@ -389,8 +389,6 @@ components:
       values:
         - name: default
           label: Standard (automatisk)
-        - name: plain
-          label: Åpen boks
         - name: card
           label: Kort
   sectionContent:
@@ -465,7 +463,7 @@ components:
           - name: boxVariant
             label: Boksvariant
             component: boxVariantChoice
-            description: Standard beholder dagens boks. Åpen boks og Kort bruker felles designprimitiver; Boksfarge velges separat.
+            description: Standard følger seksjonens oppsett. Kort viser innholdet som et kort. Boksfarge velges separat.
           - name: surface
             label: Boksfarge
             component: surfaceChoice
@@ -1354,7 +1352,7 @@ content:
                   - name: boxVariant
                     label: Boksvariant
                     component: boxVariantChoice
-                    description: Standard beholder dagens boks. Åpen boks og Kort bruker felles designprimitiver; Boksfarge velges separat.
+                    description: Standard følger seksjonens oppsett. Kort viser innholdet som et kort. Boksfarge velges separat.
                   - name: surface
                     label: Boksfarge
                     component: surfaceChoice
@@ -3646,7 +3644,7 @@ content:
               - name: boxVariant
                 label: Boksvariant
                 component: boxVariantChoice
-                description: Standard beholder dagens boks. Åpen boks og Kort bruker felles designprimitiver; Boksfarge velges separat.
+                description: Standard følger seksjonens oppsett. Kort viser innholdet som et kort. Boksfarge velges separat.
               - name: surface
                 label: Boksfarge
                 component: surfaceChoice
@@ -3748,7 +3746,7 @@ content:
               - name: boxVariant
                 label: Boksvariant
                 component: boxVariantChoice
-                description: Standard beholder dagens boks. Åpen boks og Kort bruker felles designprimitiver; Boksfarge velges separat.
+                description: Standard følger seksjonens oppsett. Kort viser innholdet som et kort. Boksfarge velges separat.
               - name: surface
                 label: Boksfarge
                 component: surfaceChoice

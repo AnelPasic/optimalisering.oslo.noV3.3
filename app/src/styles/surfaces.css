@@ -53,7 +53,6 @@
   border-color: var(--line);
   --border-subtle: 1px solid var(--line);
 }
-:root .content-section[data-surface] .section-items:not(.process-items) :is(.item-apricot,.item-sage):not([data-surface]),
 :root [data-page-family="service"] .home-section-behov[data-surface] .info-item:not([data-surface]) {
   --ink: var(--surface-light-ink);
   --muted: var(--surface-light-muted);

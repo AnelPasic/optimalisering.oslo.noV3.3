@@ -1,5 +1,11 @@
 # Codex to ChatGPT
 
+## 2026-11-10 — OWNER retire Open Box
+
+Pages CMS and the design galleries now expose Standard and Card. The dedicated Open Box rendering branch and styles are removed. Existing records with the retired value are read as Standard. Current Oslo content has no saved use. The MWS starter had one saved use on Tjeneste in the Redigerbar example, which now stores Standard and still uses the native Card component.
+
+Oslo's focused tests, Astro check and Pagefind build passed. MWS verification passed all 67 tests, Astro check and Pagefind build. Chromium verified both galleries, Oslo Testside and MWS Tjeneste at 390 px and 1440 px in both themes. The saved content and built HTML contain no active Open Box variants.
+
 ## 2026-11-10 — OWNER repair the Testside build
 
 Cloudflare and the local build both stopped because the secondary Hero CTA saved a selected URL without the required manual fallback. Testside now uses the same selected destination for its manual fallback. The Pages CMS helper text makes the requirement explicit.

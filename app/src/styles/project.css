@@ -15,7 +15,7 @@
 .assessment-form .btn { transition: none; }
 .assessment-form.card { background: var(--color-base-100); }
 .assessment-form[data-assessment] { padding: var(--panel-pad-lg); }
-.info-item:not(.card):not([data-box-variant="plain"]):not([data-surface]) { border-radius: 0; padding: var(--panel-pad) 0 0; }
+.info-item:not(.card):not([data-surface]) { border-radius: 0; padding: var(--panel-pad) 0 0; }
 .info-item:not(.card):not([data-surface]) { border: 0; border-top: var(--border-subtle); background: none; }
 .header-inner.navbar { padding: 0; width: min(1440px, calc(100% - 80px)); }
 .desktop-nav .menu { padding: 0; }

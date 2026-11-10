@@ -21,7 +21,7 @@ try{
    assert.equal(actual,expected,`${layout} at ${width}`);layouts[layout]=actual;
   }
   const boxes=await page.locator('#ds-box-variants article').evaluateAll(es=>es.map(e=>({variant:e.dataset.boxVariant||'default',card:e.classList.contains('card'),radius:getComputedStyle(e).borderTopLeftRadius,padding:getComputedStyle(e).paddingLeft})));
-  assert.deepEqual(boxes.map(b=>b.variant),['default','plain','card']);assert.equal(boxes[0].card,false);assert.equal(boxes[1].card,false);assert.equal(boxes[2].card,true);assert.equal(boxes[2].radius,'20px');assert.equal(boxes[1].radius,'0px');
+  assert.deepEqual(boxes.map(b=>b.variant),['default','card']);assert.equal(boxes[0].card,false);assert.equal(boxes[1].card,true);assert.equal(boxes[1].radius,'20px');
   const colors=await page.locator('#ds-box-colors article').evaluateAll(es=>es.map(e=>({surface:e.dataset.surface,background:getComputedStyle(e).backgroundColor,foreground:getComputedStyle(e).color,radius:getComputedStyle(e).borderTopLeftRadius})));
   assert.equal(new Set(colors.map(c=>c.background)).size,3,'surface selection remains independent of box shape');assert.equal(new Set(colors.map(c=>c.radius)).size,1);
   const dark=colors.find(c=>c.surface==='secondary');assert.notEqual(dark.foreground,colors[0].foreground,'dark surface applies readable foreground');
@@ -32,5 +32,5 @@ try{
   await page.locator('#ds-box-variants').screenshot({path:`${out}/${phase}/boxes-${width}.png`});
   records.push({width,layouts,boxes,colors});await page.close();
  }
- assert.deepEqual(errors,[]);writeFileSync(`${out}/${phase}/variants.json`,JSON.stringify({base,records,errors},null,2)+'\n');console.log(`Content presentation ${phase}: 4 layouts, 3 boxes, 3 independent surfaces at four widths PASS.`);
+ assert.deepEqual(errors,[]);writeFileSync(`${out}/${phase}/variants.json`,JSON.stringify({base,records,errors},null,2)+'\n');console.log(`Content presentation ${phase}: 4 layouts, 2 box choices, 3 independent surfaces at four widths PASS.`);
 }finally{await browser.close();if(server)await new Promise(r=>server.close(r));}
