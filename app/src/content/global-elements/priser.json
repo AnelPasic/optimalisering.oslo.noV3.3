@@ -64,16 +64,9 @@
           {
             "icon": "search",
             "group": "Organisk Synlighet",
-            "label": "SEO",
+            "label": "Søkemotoroptimalisering",
             "compactLabel": "Søkemotoroptimalisering",
             "description": "Bli funnet på Google"
-          },
-          {
-            "icon": "conversion",
-            "group": "Konverteringsoptimalisering",
-            "label": "Konverteringsoptimalisering",
-            "compactLabel": "Konverteringsoptimalisering",
-            "description": "Få flere av de som lander på nettsiden til å fullføre bestilling eller kjøp."
           },
           {
             "icon": "local",
@@ -82,21 +75,34 @@
             "compactLabel": "Lokal SEO"
           },
           {
+            "icon": "analytics",
+            "label": "AI-synlighet",
+            "compactLabel": "AI-synlighet"
+          },
+          {
+            "icon": "page",
+            "group": "Betalt Synlighet",
+            "label": "ChatGPT Ads",
+            "compactLabel": "ChatGPT Ads"
+          },
+          {
             "icon": "paid-search",
             "group": "Betalt Synlighet",
             "label": "Google Ads",
             "compactLabel": "Google Ads"
           },
           {
-            "icon": "analytics",
-            "label": "AI-synlighet",
-            "compactLabel": "AI-synlighet"
-          },
-          {
             "icon": "social-paid",
             "group": "Betalt Synlighet",
             "label": "Facebook Annonser",
             "compactLabel": "Facebook Annonser"
+          },
+          {
+            "icon": "conversion",
+            "group": "Konverteringsoptimalisering",
+            "label": "Konverteringsoptimalisering",
+            "compactLabel": "Konverteringsoptimalisering",
+            "description": "Få flere av de som lander på nettsiden til å fullføre bestilling eller kjøp."
           }
         ],
         "visual": "controlled",
