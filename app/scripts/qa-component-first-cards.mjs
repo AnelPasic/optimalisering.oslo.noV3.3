@@ -225,7 +225,7 @@ try {
      badges:nodes.map(n=>n.querySelector('.badge')?.textContent?.trim()),
      badgeClasses:nodes.map(n=>n.querySelector('.badge')?.classList.contains('badge-outline')),
      badgeColors:nodes.map(n=>n.querySelector('.badge') ? {color:getComputedStyle(n.querySelector('.badge')).color,card:getComputedStyle(n).color} : null),
-     priceVisible:nodes.some(n=>/4\\s?500\\s?kr/.test(n.textContent||'')),
+     priceVisible:nodes.some(n=>/4\s?500\s?kr/.test(n.textContent||'')),
      href:nodes.map(n=>n.getAttribute('href')),
      buttons:nodes.map(n=>n.querySelector('.card-actions .text-link')?.textContent?.trim()),
      styles:nodes.map(n=>({native:n.classList.contains('card')&&!!n.querySelector(':scope > .card-body'),color:getComputedStyle(n).backgroundColor,
