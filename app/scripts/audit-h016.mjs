@@ -10,7 +10,7 @@ for(const [file,open] of [['dist/index.html',false],['dist/priser/index.html',tr
   assert.equal(cards.length,3);
   for(const [index,card] of cards.entries()) {
     const item=packages.items[index];
-    assert.ok(card.includes('class="package-situations"')&&!card.includes('package-icon-items'),'Compact situations remain; retired icon rows absent');
+    assert.ok(card.includes('class="package-situations"')&&card.includes('package-icon-items'),'Compact situations and service icons both render');
     assert.ok(card.includes(`<details class="package-details"${open?' open':''}>`),'Native detail state follows page presentation');
     assert.ok(text(card).includes(item.cta.label)&&text(card).includes(item.detailLink.label),'CTA and disclosure labels follow CMS');
     assert.ok(card.includes(`href="/priser/?pakke=${item.key}#bestill"`));

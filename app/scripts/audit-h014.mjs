@@ -20,7 +20,7 @@ for (const [file, full] of [['dist/index.html', false], ['dist/priser/index.html
       assert.ok(detail && detail.startsWith('<summary>Se detaljer'), 'Native collapsed disclosure after CTA');
       assert.ok(card.indexOf('class="button"') < card.indexOf('<details class="package-details">'));
       const visible = card.split('<details class="package-details">')[0];
-      for (const text of item.compact.situations) assert.ok(visible.includes(text));
+      for (const text of [...item.compact.situations, ...item.iconItems.map(icon=>icon.compactLabel)]) assert.ok(visible.includes(text));
       for (const text of [item.typicalBusiness, item.scope, item.distinction, item.priceNote, item.selectionRule].filter(Boolean)) assert.ok(detail.includes(text), 'Full H-012/H-013 copy remains in the disclosure');
       for (const text of [item.typicalBusiness, item.scope, item.distinction, item.priceNote, item.selectionRule].filter(Boolean)) assert.ok(!visible.includes(text), 'Long text is absent from default card');
     } else {

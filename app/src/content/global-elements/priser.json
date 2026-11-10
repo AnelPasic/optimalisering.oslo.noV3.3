@@ -59,6 +59,30 @@
           ]
         },
         "key": "optimalisering",
+        "iconItems": [
+          {
+            "icon": "search",
+            "label": "SEO / AI-synlighet",
+            "compactLabel": "SEO / AI-synlighet",
+            "description": "Bli funnet på Google, Google Maps eller AI Søk"
+          },
+          {
+            "icon": "conversion",
+            "label": "Konverteringsoptimalisering",
+            "compactLabel": "Konvertering",
+            "description": "Få flere av de som lander på nettsiden til å fullføre bestilling eller kjøp."
+          },
+          {
+            "icon": "local",
+            "label": "Lokal SEO",
+            "compactLabel": "Lokal SEO"
+          },
+          {
+            "icon": "paid-search",
+            "label": "Google Ads - ett tydelig fokusområde",
+            "compactLabel": "Google Ads"
+          }
+        ],
         "selectionRule": "Velg Optimalisering når én flaskehals er tydelig viktigst akkurat nå.",
         "visual": "controlled",
         "visualCaption": {
@@ -90,6 +114,26 @@
         },
         "typicalBusiness": "Typisk en konkurranseutsatt lokal tjenestebedrift, klinikk, regnskapskontor eller nisje-B2B-bedrift tydelig hovedtjeneste som trenger rask forbedring.",
         "key": "vekst",
+        "iconItems": [
+          {
+            "icon": "paid-search",
+            "label": "Google Ads X konverteringsoptimalisering",
+            "compactLabel": "Google Ads x konvertering",
+            "description": "Få relevant trafikk nå og få flere av besøkende til å bestille tjeneste eller fullføre kjøp."
+          },
+          {
+            "icon": "conversion",
+            "label": "SEO / AI-synlighet + konverteringsoptimalisering",
+            "compactLabel": "SEO / AI-synlighet + konvertering",
+            "description": "Bygg organisk synlighet og få flere relevante besøk videre til henvendelse eller kjøp."
+          },
+          {
+            "icon": "search",
+            "label": "Google Ads + SEO / AI-synlighet",
+            "compactLabel": "Google Ads + SEO / AI-synlighet",
+            "description": "Bruk betalt synlighet for å få fart nå, og bygg organisk synlighet for å redusere avhengigheten av annonsebudsjett over tid."
+          }
+        ],
         "selectionRule": "Velg Vekst for to forbedringer som forsterker hverandre.",
         "visual": "accelerating",
         "visualCaption": {
@@ -123,6 +167,33 @@
         "scope": "Vi prioriterer løpende kundereisene med størst kommersiell verdi eller størst forbedringspotensial. Det betyr ikke at alt gjøres samtidig eller at kapasiteten er ubegrenset.",
         "typicalBusiness": "Typisk en virksomhet med fire-fem forskjellige typer B2B tjenester der hver kundereise har egne søk, konkurrenter, sider og prioriteringer.",
         "key": "partner",
+        "iconItems": [
+          {
+            "icon": "search",
+            "label": "SEO / AI-synlighet",
+            "compactLabel": "SEO / AI-synlighet"
+          },
+          {
+            "icon": "paid-search",
+            "label": "Google Ads",
+            "compactLabel": "Google Ads"
+          },
+          {
+            "icon": "social-paid",
+            "label": "Meta Ads",
+            "compactLabel": "Meta Ads"
+          },
+          {
+            "icon": "conversion",
+            "label": "Konverteringsoptimalisering",
+            "compactLabel": "Konvertering"
+          },
+          {
+            "icon": "analytics",
+            "label": "Analyse og sporing",
+            "compactLabel": "Analyse"
+          }
+        ],
         "selectionRule": "Velg Partner når flere forskjellige kundereiser må forbedres og prioriteres løpende.",
         "priceNote": "Omfang og fast månedspris avtales før oppstart.",
         "visual": "tracks",

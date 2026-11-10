@@ -16,7 +16,7 @@ test('OWNER can edit package CTA wording while order and detail routes remain re
   for(const path of ['cta.label','detailLink.label','title','descriptor','compact.fit','compact.situations','price','pricePrefix','priceSuffix','vatSuffix','recommended','badge','visual','visualAsset.src','visualAsset.alt','visualAsset.positionX','visualAsset.positionY','visualCaption.label','visualCaption.support','typicalBusiness','scope','distinction','selectionRule','priceNote']) {
     assert.ok(field(path),`CMS field exists: ${path}`);assert.notEqual(field(path).readonly,true,path);
   }
-  assert.equal(field('iconItems'),undefined,'Retired package icon list is absent from CMS');
+  for (const key of ['iconItems.icon','iconItems.label','iconItems.compactLabel','iconItems.description']) assert.ok(field(key),`CMS exposes service icon field: ${key}`);
   for(const {path,field:shared}of leaves(packages.fields.filter((f:any)=>f.name!=='items')))assert.notEqual(shared.readonly,true,`Shared field ${path}`);
   for(const path of ['key','cta.href','detailLink.href']) assert.equal(field(path)?.readonly,true,path);
   assert.ok(!/låst|scoped.*handoff/i.test(JSON.stringify(packages)),'Editor guidance must allow routine safe OWNER editing');

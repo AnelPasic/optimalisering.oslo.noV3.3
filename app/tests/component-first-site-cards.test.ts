@@ -23,7 +23,7 @@ test('MWS #26 Oslo pilot: package shells are daisyUI and complex offer internals
  assert.match(markup,/\?'is-recommended bg-base-300 border-2 border-secondary':'bg-base-100 border-base-300'/);
  assert.match(markup,/is-recommended bg-base-300 border-2 border-secondary/);
  assert.match(markup,/<div class="card-body min-w-0 gap-0">/);
- for(const part of ['<PackageOrder item={item}','class="package-details"','<Visual kind={item.visual}','item.price','item.compact.situations'])assert.ok(markup.includes(part),part);
+ for(const part of ['<PackageOrder item={item}','class="package-details"','<Visual kind={item.visual}','item.price','item.compact.situations','item.iconItems'])assert.ok(markup.includes(part),part);
  for(const bad of [
  '.site-shell .package-offer .package-card { background:',
  '.site-shell .package-offer .package-card { min-height: 770px; padding:',

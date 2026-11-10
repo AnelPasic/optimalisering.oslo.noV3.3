@@ -37,6 +37,7 @@ export const homeSectionDataSchema = z.object({
         src: z.string().regex(/^\/images\/pricing\/(?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.(?:svg|webp|png)$/),
         alt: z.string().trim().min(1), positionX: z.number().min(0).max(100).optional(), positionY: z.number().min(0).max(100).optional(),
       }).optional(),
+      iconItems: z.array(z.object({ icon: z.enum(['search', 'conversion', 'local', 'paid-search', 'social-paid', 'analytics', 'page', 'route']), label: z.string().trim().min(1), compactLabel: z.string().trim().min(1), description: z.string().optional() })).min(1),
       compact: z.object({ fit: z.string().trim().min(1), situations: z.array(z.string().trim().min(1)).min(1).max(3) }),
       visual: z.enum(['controlled', 'accelerating', 'tracks']),
       visualCaption: z.object({ label: z.string().trim().min(1), support: z.string().trim().min(1).optional() }).optional(),

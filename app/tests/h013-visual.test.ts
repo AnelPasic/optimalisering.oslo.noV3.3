@@ -25,6 +25,6 @@ test('CMS exposes dedicated pricing media and safe readonly order paths', () => 
   assert.equal(cms.media.find((m: any)=>m.name==='packageVisuals')?.input,'app/public/images/pricing');
   const fields=homepageBlockEditor(cms,'packages').fields.find((f: any)=>f.name==='items').fields;
   assert.ok(fields.find((f: any)=>f.name==='visualAsset'));
-  assert.equal(fields.find((f: any)=>f.name==='iconItems'),undefined);
+  assert.ok(fields.find((f: any)=>f.name==='iconItems')?.fields?.some((f: any)=>f.name==='compactLabel'),'Service icons and labels remain editable');
   assert.equal(fields.find((f: any)=>f.name==='cta').fields.find((f: any)=>f.name==='href').readonly,true);
 });

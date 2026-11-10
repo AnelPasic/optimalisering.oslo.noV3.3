@@ -20,5 +20,5 @@ test('compact CMS copy stays editable; invalid decision summaries fail validatio
   const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
   const fields=homepageBlockEditor(cms,'packages').fields.find((f:any)=>f.name==='items').fields;
   assert.deepEqual(fields.find((f:any)=>f.name==='compact').fields.map((f:any)=>f.name),['fit','situations']);
-  assert.equal(fields.find((f:any)=>f.name==='iconItems'),undefined);
+  assert.ok(fields.find((f:any)=>f.name==='iconItems')?.fields?.some((f:any)=>f.name==='compactLabel'),'Icon labels remain editable in CMS');
 });

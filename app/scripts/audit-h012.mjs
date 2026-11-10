@@ -9,7 +9,7 @@ const source = getHomepageBlock(JSON.parse(readFileSync('src/content/pages/home.
 // structured icon items. All H-012 offer sentences remain exact.
 for (const [index, item] of expected.items.entries()) { delete item.situations; delete item.focusAreas; delete item.combinations; item.cta = { label: `Bestill ${item.title}`, href: `/priser/?pakke=${['optimalisering','vekst','partner'][index]}#bestill` }; }
 const projected = { ...source, items: source.items.map(item => {
-  const { key, visualAsset, visualCaption, compact, ...offer } = item;
+  const { key, iconItems, visualAsset, visualCaption, compact, ...offer } = item;
   return offer;
 }) };
 for (const key of Object.keys(expected)) assert.deepEqual(projected[key], expected[key], `D-041 exact shared ${key}`);
