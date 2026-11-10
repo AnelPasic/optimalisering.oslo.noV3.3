@@ -17,7 +17,7 @@ export const sharedContentSchema=z.object({
  _block:z.literal('content'),uid:z.string().uuid(),id:key,name:z.string().trim().min(1),
  eyebrow:z.string().optional(),heading:z.string().trim().min(1),body:z.array(z.string()).default([]),
  headingAlign:headingAlignSchema,layout:contentLayoutSchema,surface:surfaceSchema,buttonStyle:buttonStyleSchema,boxButtonStyle:buttonStyleSchema,
- items:z.array(z.object({title:z.string(),headline:z.string().trim().min(1).optional(),badge:z.string().trim().min(1).optional(),text:z.string(),href:optionalInternalHref,label:z.string().optional(),surface:surfaceSchema,boxVariant:boxVariantSchema,buttonStyle:buttonStyleSchema})).optional(),
+ items:z.array(z.object({title:z.string(),headline:z.string().trim().min(1).optional(),badge:z.string().trim().min(1).optional(),icon:z.enum(['seo','local-seo','ai-search','google-ads','chatgpt-ads','meta-ads']).optional(),text:z.string(),href:optionalInternalHref,label:z.string().optional(),surface:surfaceSchema,boxVariant:boxVariantSchema,buttonStyle:buttonStyleSchema})).optional(),
  links:z.array(z.object({label:z.string(),href:z.string().refine(safeCmsHref)})).optional(),
 }).strict().superRefine((section,ctx)=>{
  if(reserved.has(section.id)||/^(?:calc-|scenario-|package-home-|term-|header-(?:desktop|mobile)-submenu-)/.test(section.id))
