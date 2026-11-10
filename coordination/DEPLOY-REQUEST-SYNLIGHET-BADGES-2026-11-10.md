@@ -14,3 +14,9 @@ Git merge or green CI alone is not a Cloudflare deploy confirmation.
 At current main `3f789a077db4d42f6f87eb091416dd658acb0260`, merged PR #115. Trigger a fresh connected Worker build, preserving latest Pages CMS edits.
 
 Validate on `/synlighet/` that each **card surface** opens respectively `/seo/`, `/lokal-seo/`, `/ai-synlighet/`, while each separate **Velg** CTA anchors to the same page's `#bestill` inside the local package section. Do not reintroduce monthly price labels. This note has no runtime effect.
+
+## 2026-11-10 PR #116: immediate paid section, same cards
+
+Source commit at request: `ea5d2f40c2aa6194cee1d24b73e1fc44cbd0a385`. Request a fresh connected Worker build from **latest main**. Preserve every Pages CMS edit.
+
+Verify `/synlighet/` renders two adjacent global sections `#kanaler` and `#betalt-synlighet`; the paid section has three native selection cards with headings "Fang kundene når de leter", "Bli oppdaget når kundene spør AI", and "Gi kundene en grunn til å velge deg". Each paid card's "Velg" goes to local `#bestill`. No nonexistent service page hrefs. Ad spend is additional. This coordination note has no runtime effect.
