@@ -2,6 +2,7 @@ import { sectionDefaultsSchema } from './section-appearance.ts';
 import {sectionSurfaceDefaultsSchema, surfaceSchema} from './surface.ts';
 import {sectionAlignmentDefaultsSchema} from './heading-alignment.ts';
 import { z } from 'astro/zod';
+import {PHOSPHOR_ICON_NAMES} from './package-icon-names';
 import { featuredProofVisualFieldSchema,proofLayoutSchema,proofCaseVisualsSchema,proofDisplayOverridesSchema } from './proof-presentation.ts';
 import {navigationLinkSchema} from './navigation.ts';
 import {chromeThemeSchema, ctaVariants} from './site-chrome-theme.ts';
@@ -37,7 +38,7 @@ export const homeSectionDataSchema = z.object({
         src: z.string().regex(/^\/images\/pricing\/(?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.(?:svg|webp|png)$/),
         alt: z.string().trim().min(1), positionX: z.number().min(0).max(100).optional(), positionY: z.number().min(0).max(100).optional(),
       }).optional(),
-      iconItems: z.array(z.object({ icon: z.enum(['search', 'conversion', 'local', 'paid-search', 'social-paid', 'analytics', 'page', 'route']), group: z.enum(['Organisk Synlighet', 'Betalt Synlighet', 'Konverteringsoptimalisering', 'Systemer']).optional(), label: z.string().trim().min(1), compactLabel: z.string().trim().min(1), description: z.string().optional() })).min(1),
+      iconItems: z.array(z.object({ icon: z.enum(['search', 'conversion', 'local', 'paid-search', 'social-paid', 'analytics', 'page', 'route']), iconName: z.preprocess(value => typeof value === 'string' && !value.trim() ? undefined : value, z.enum(PHOSPHOR_ICON_NAMES).optional()), group: z.enum(['Organisk Synlighet', 'Betalt Synlighet', 'Konverteringsoptimalisering', 'Systemer']).optional(), label: z.string().trim().min(1), compactLabel: z.string().trim().min(1), description: z.string().optional() })).min(1),
       compact: z.object({ fit: z.string().trim().min(1), situations: z.array(z.string().trim().min(1)).min(1).max(3) }),
       visual: z.enum(['controlled', 'accelerating', 'tracks']),
       visualCaption: z.object({ label: z.string().trim().min(1), support: z.string().trim().min(1).optional() }).optional(),

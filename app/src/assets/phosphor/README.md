@@ -1,10 +1,28 @@
-# Homepage Phosphor icons
+# Lokale Phosphor Regular-ikoner
 
-Official regular-weight SVGs from [phosphor-icons/core](https://github.com/phosphor-icons/core/tree/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular), pinned to commit `2b75f3ad12b420c9504ef05df8d2564a28f8500e`:
+Kilde: [phosphor-icons/core](https://github.com/phosphor-icons/core/tree/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular) – pinned commit `2b75f3ad12b420c9504ef05df8d2564a28f8500e`, MIT-lisens ved `app/public/licenses/phosphor-icons.txt`.
 
-- `magnifying-glass.svg`: find / visibility
-- `cursor-click.svg`: choose / conversion
-- `trend-up.svg`: combined service / progress
-- `arrows-left-right.svg`: retained previous combined-service icon; inactive
+**Pages CMS → Tjenester med ikoner → Phosphor-ikonnavn**: Skriv et av filnavnene nedenfor **uten** `.svg`. Navnet må stemme nøyaktig. Feltet er valgfritt; `Generisk ikon` er fortsatt fallback for eldre innhold. Bare lokale, tillatte ikonnavn fungerer. Ingen ekstern ikonfont, CDN, fjerntilgang eller brukerdefinert SVG/HTML.
 
-Used only by `HomeSymbol.astro`. SVGs are rendered inline with inherited color, hidden from assistive technology alongside their existing text labels. No icon font, runtime CDN or package dependency is required. The original MIT notice is shipped at `app/public/licenses/phosphor-icons.txt`.
+- `magnifying-glass`
+- `cursor-click`
+- `sparkle`
+- `map-pin`
+- `target`
+- `chat-circle-dots`
+- `megaphone`
+- `shopping-cart`
+- `browser`
+- `credit-card`
+- `wrench`
+- `chart-line-up`
+- `eye`
+- `grid-four`
+- `binoculars`
+- `toolbox`
+- `robot`
+- `map-trifold`
+- `chat-teardrop-dots`
+- `chart-bar`
+
+`PackageFocusIcon.astro` bruker disse ikonene på pakkekortene, mens eldre generiske ikonformer fortsatt kan brukes i andre komponenter. SVGene bruker `fill=currentColor` og skjules for skjermlesere fordi tjenestenavnet står ved siden av.

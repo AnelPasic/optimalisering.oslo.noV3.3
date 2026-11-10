@@ -36,7 +36,7 @@ const formatPrice = (value: number) => new Intl.NumberFormat('nb-NO', { maximumF
         <p class="package-services-note">{item.key === 'optimalisering' ? 'Én av tjenestene prioriteres om gangen.' : item.key === 'vekst' ? 'To av tjenestene prioriteres samtidig.' : 'Tjenester og kapasitet prioriteres etter avtale.'}</p>
         {groupPackageServices(item.iconItems).map(group => <section class="package-service-group" data-service-category={group.label}>
           <h4 class="package-service-group-heading">{group.label}</h4>
-          <ul class="package-icon-items">{group.items.map(focus => <li><FocusIcon kind={focus.icon} /><span><TermText text={focus.compactLabel} terms={['seo', 'lokal-seo', 'ai-synlighet', 'google-ads', 'meta-ads', 'cro']} /></span></li>)}</ul>
+          <ul class="package-icon-items">{group.items.map(focus => <li><FocusIcon kind={focus.icon} iconName={focus.iconName} /><span><TermText text={focus.compactLabel} terms={['seo', 'lokal-seo', 'ai-synlighet', 'google-ads', 'meta-ads', 'cro']} /></span></li>)}</ul>
         </section>)}
       </div>
       <PackageOrder item={item} featured={item.recommended} orderIntro={content.orderIntro} orderSubmitLabel={content.orderSubmitLabel} />

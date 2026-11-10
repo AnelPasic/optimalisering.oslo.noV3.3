@@ -1,8 +1,50 @@
 ---
 import Search from '../assets/phosphor/magnifying-glass.svg';
 import Conversion from '../assets/phosphor/cursor-click.svg';
-interface Props { kind: string; }
-const { kind } = Astro.props;
+import Sparkle from '../assets/phosphor/sparkle.svg';
+import MapPin from '../assets/phosphor/map-pin.svg';
+import Target from '../assets/phosphor/target.svg';
+import ChatCircleDots from '../assets/phosphor/chat-circle-dots.svg';
+import Megaphone from '../assets/phosphor/megaphone.svg';
+import ShoppingCart from '../assets/phosphor/shopping-cart.svg';
+import Browser from '../assets/phosphor/browser.svg';
+import CreditCard from '../assets/phosphor/credit-card.svg';
+import Wrench from '../assets/phosphor/wrench.svg';
+import ChartLineUp from '../assets/phosphor/chart-line-up.svg';
+import Eye from '../assets/phosphor/eye.svg';
+import GridFour from '../assets/phosphor/grid-four.svg';
+import Binoculars from '../assets/phosphor/binoculars.svg';
+import Toolbox from '../assets/phosphor/toolbox.svg';
+import Robot from '../assets/phosphor/robot.svg';
+import MapTrifold from '../assets/phosphor/map-trifold.svg';
+import ChatTeardropDots from '../assets/phosphor/chat-teardrop-dots.svg';
+import ChartBar from '../assets/phosphor/chart-bar.svg';
+import {isPhosphorIconName} from '../lib/package-icon-names';
+interface Props { kind: string; iconName?: string; }
+const { kind, iconName } = Astro.props;
+const icons = {
+  'magnifying-glass': Search,
+  'cursor-click': Conversion,
+  'sparkle': Sparkle,
+  'map-pin': MapPin,
+  'target': Target,
+  'chat-circle-dots': ChatCircleDots,
+  'megaphone': Megaphone,
+  'shopping-cart': ShoppingCart,
+  'browser': Browser,
+  'credit-card': CreditCard,
+  'wrench': Wrench,
+  'chart-line-up': ChartLineUp,
+  'eye': Eye,
+  'grid-four': GridFour,
+  'binoculars': Binoculars,
+  'toolbox': Toolbox,
+  'robot': Robot,
+  'map-trifold': MapTrifold,
+  'chat-teardrop-dots': ChatTeardropDots,
+  'chart-bar': ChartBar,
+};
+const NamedIcon = iconName && isPhosphorIconName(iconName) ? icons[iconName] : undefined;
 // Generic local line icons, no third-party brand marks.
 const shapes: Record<string, string[]> = {
   local: ['M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z', 'M15 10a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z'],
@@ -13,4 +55,4 @@ const shapes: Record<string, string[]> = {
   route: ['M6 4h11a4 4 0 0 1 0 8H8a4 4 0 0 0 0 8h10', 'M16 17l3 3-3 3'],
 };
 ---
-{kind === 'search' ? <Search class="package-focus-icon" width="24" height="24" aria-hidden="true" focusable="false" /> : kind === 'conversion' ? <Conversion class="package-focus-icon" width="24" height="24" aria-hidden="true" focusable="false" /> : <svg class="package-focus-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">{(shapes[kind] ?? shapes.route).map(d => <path d={d} />)}</svg>}
+{NamedIcon ? <NamedIcon class="package-focus-icon" width="24" height="24" aria-hidden="true" focusable="false" /> : kind === 'search' ? <Search class="package-focus-icon" width="24" height="24" aria-hidden="true" focusable="false" /> : kind === 'conversion' ? <Conversion class="package-focus-icon" width="24" height="24" aria-hidden="true" focusable="false" /> : <svg class="package-focus-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">{(shapes[kind] ?? shapes.route).map(d => <path d={d} />)}</svg>}

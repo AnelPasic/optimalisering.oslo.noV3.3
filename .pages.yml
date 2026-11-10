@@ -1919,6 +1919,10 @@ content:
                             - page
                             - route
                         required: true
+                      - name: iconName
+                        label: Phosphor-ikonnavn (valgfritt)
+                        type: string
+                        description: "Skriv navnet på et lokalt Phosphor Regular-ikon, for eksempel sparkle, map-pin, target, chat-circle-dots eller grid-four. Tilgjengelige navn står i app/src/assets/phosphor/README.md. Tomt felt bruker Generisk ikon. Ugyldige navn stoppes ved bygg."
                       - name: group
                         label: Tjenestegruppe
                         type: select
