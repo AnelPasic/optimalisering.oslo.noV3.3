@@ -160,6 +160,10 @@ components:
         label: Stor overskrift på valgkort (valgfritt)
         type: string
         description: "For valgkort på Synlighet. Tjenestenavnet står i topplinjen, mens denne teksten blir kortets hovedoverskrift."
+      - name: badge
+        label: Merke / badge (valgfritt)
+        type: string
+        description: "Vises som et lite DaisyUI-merke under tjenestenavnet. La feltet stå tomt for å skjule merket."
       - name: text
         label: Beskrivelse (rik tekst / Markdown)
         type: rich-text
