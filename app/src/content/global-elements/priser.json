@@ -63,107 +63,107 @@
         "iconItems": [
           {
             "icon": "search",
+            "iconName": "magnifying-glass",
             "group": "Organisk Synlighet",
             "label": "SEO",
             "compactLabel": "SEO",
-            "description": "Bli funnet på Google",
-            "iconName": "magnifying-glass"
+            "description": "Bli funnet på Google"
           },
           {
             "icon": "page",
+            "iconName": "sparkle",
             "group": "Organisk Synlighet",
             "label": "AI-Synlighet",
             "compactLabel": "AI-Synlighet",
-            "description": "AIO - AEO - GEO",
-            "iconName": "sparkle"
+            "description": "AIO - AEO - GEO"
           },
           {
             "icon": "local",
+            "iconName": "map-pin",
             "group": "Organisk Synlighet",
             "label": "Lokal SEO",
-            "compactLabel": "Lokal SEO",
-            "iconName": "map-pin"
+            "compactLabel": "Lokal SEO"
           },
           {
             "icon": "paid-search",
+            "iconName": "target",
             "group": "Betalt Synlighet",
             "label": "Google Ads",
-            "compactLabel": "Google Ads",
-            "iconName": "target"
+            "compactLabel": "Google Ads"
           },
           {
             "icon": "page",
+            "iconName": "chat-circle-dots",
             "group": "Betalt Synlighet",
             "label": "ChatGPT Ads",
-            "compactLabel": "ChatGPT Ads",
-            "iconName": "chat-circle-dots"
+            "compactLabel": "ChatGPT Ads"
           },
           {
             "icon": "social-paid",
+            "iconName": "meta-logo",
             "group": "Betalt Synlighet",
             "label": "Facebook Annonser",
-            "compactLabel": "Facebook Annonser",
-            "iconName": "megaphone"
+            "compactLabel": "Facebook Annonser"
           },
           {
             "icon": "paid-search",
+            "iconName": "shopping-cart",
             "group": "Betalt Synlighet",
             "label": "Google Shopping",
             "compactLabel": "Shopping Ads",
-            "description": "Google Shopping annonser for nettbutikker",
-            "iconName": "shopping-cart"
+            "description": "Google Shopping annonser for nettbutikker"
           },
           {
             "icon": "conversion",
+            "iconName": "cursor-click",
             "group": "Konverteringsoptimalisering",
             "label": "Konvertering",
             "compactLabel": "Konvertering",
-            "description": "Få flere av de som lander på nettsiden til å fullføre bestilling eller kjøp.",
-            "iconName": "cursor-click"
+            "description": "Få flere av de som lander på nettsiden til å fullføre bestilling eller kjøp."
           },
           {
             "icon": "page",
+            "iconName": "browser",
             "group": "Konverteringsoptimalisering",
             "label": "Landingssider",
             "compactLabel": "Landingssider",
-            "description": "Nettside spesialisert for konverteringer",
-            "iconName": "browser"
+            "description": "Nettside spesialisert for konverteringer"
           },
           {
             "icon": "conversion",
+            "iconName": "credit-card",
             "group": "Konverteringsoptimalisering",
             "label": "Checkout flow",
             "compactLabel": "Checkout flow",
-            "description": "Få større andel av kunder til å fullføre checkout",
-            "iconName": "credit-card"
+            "description": "Få større andel av kunder til å fullføre checkout"
           },
           {
             "icon": "analytics",
+            "iconName": "wrench",
             "group": "Systemer",
             "label": "SEO Tool",
-            "compactLabel": "SEO Tool",
-            "iconName": "wrench"
+            "compactLabel": "SEO Tool"
           },
           {
             "icon": "analytics",
+            "iconName": "chart-line-up",
             "group": "Systemer",
             "label": "Lead Proof",
-            "compactLabel": "Lead Proof",
-            "iconName": "chart-line-up"
+            "compactLabel": "Lead Proof"
           },
           {
             "icon": "analytics",
+            "iconName": "eye",
             "group": "Systemer",
             "label": "SEO Overvåkning",
-            "compactLabel": "SEO Overvåkning",
-            "iconName": "eye"
+            "compactLabel": "SEO Overvåkning"
           },
           {
             "icon": "local",
+            "iconName": "grid-four",
             "group": "Systemer",
             "label": "GEO - Grid",
-            "compactLabel": "GEO - Grid",
-            "iconName": "grid-four"
+            "compactLabel": "GEO - Grid"
           }
         ],
         "visual": "controlled",
@@ -200,107 +200,107 @@
         "iconItems": [
           {
             "icon": "search",
+            "iconName": "magnifying-glass",
             "group": "Organisk Synlighet",
             "label": "SEO",
             "compactLabel": "SEO",
-            "description": "Bli funnet på Google",
-            "iconName": "magnifying-glass"
+            "description": "Bli funnet på Google"
           },
           {
             "icon": "page",
+            "iconName": "sparkle",
             "group": "Organisk Synlighet",
             "label": "AI-Synlighet",
             "compactLabel": "AI-Synlighet",
-            "description": "AIO - AEO - GEO",
-            "iconName": "sparkle"
+            "description": "AIO - AEO - GEO"
           },
           {
             "icon": "local",
+            "iconName": "map-pin",
             "group": "Organisk Synlighet",
             "label": "Lokal SEO",
-            "compactLabel": "Lokal SEO",
-            "iconName": "map-pin"
+            "compactLabel": "Lokal SEO"
           },
           {
             "icon": "paid-search",
+            "iconName": "target",
             "group": "Betalt Synlighet",
             "label": "Google Ads",
-            "compactLabel": "Google Ads",
-            "iconName": "target"
+            "compactLabel": "Google Ads"
           },
           {
             "icon": "page",
+            "iconName": "chat-circle-dots",
             "group": "Betalt Synlighet",
             "label": "ChatGPT Ads",
-            "compactLabel": "ChatGPT Ads",
-            "iconName": "chat-circle-dots"
+            "compactLabel": "ChatGPT Ads"
           },
           {
             "icon": "social-paid",
+            "iconName": "megaphone",
             "group": "Betalt Synlighet",
             "label": "Facebook Annonser",
-            "compactLabel": "Facebook Annonser",
-            "iconName": "megaphone"
+            "compactLabel": "Facebook Annonser"
           },
           {
             "icon": "paid-search",
+            "iconName": "shopping-cart",
             "group": "Betalt Synlighet",
             "label": "Google Shopping",
             "compactLabel": "Shopping Ads",
-            "description": "Google Shopping annonser for nettbutikker",
-            "iconName": "shopping-cart"
+            "description": "Google Shopping annonser for nettbutikker"
           },
           {
             "icon": "conversion",
+            "iconName": "cursor-click",
             "group": "Konverteringsoptimalisering",
             "label": "Konvertering",
             "compactLabel": "Konvertering",
-            "description": "Få flere av de som lander på nettsiden til å fullføre bestilling eller kjøp.",
-            "iconName": "cursor-click"
+            "description": "Få flere av de som lander på nettsiden til å fullføre bestilling eller kjøp."
           },
           {
             "icon": "page",
+            "iconName": "browser",
             "group": "Konverteringsoptimalisering",
             "label": "Landingssider",
             "compactLabel": "Landingssider",
-            "description": "Nettside spesialisert for konverteringer",
-            "iconName": "browser"
+            "description": "Nettside spesialisert for konverteringer"
           },
           {
             "icon": "conversion",
+            "iconName": "credit-card",
             "group": "Konverteringsoptimalisering",
             "label": "Checkout flow",
             "compactLabel": "Checkout flow",
-            "description": "Få større andel av kunder til å fullføre checkout",
-            "iconName": "credit-card"
+            "description": "Få større andel av kunder til å fullføre checkout"
           },
           {
             "icon": "analytics",
+            "iconName": "wrench",
             "group": "Systemer",
             "label": "SEO Tool",
-            "compactLabel": "SEO Tool",
-            "iconName": "wrench"
+            "compactLabel": "SEO Tool"
           },
           {
             "icon": "analytics",
+            "iconName": "chart-line-up",
             "group": "Systemer",
             "label": "Lead Proof",
-            "compactLabel": "Lead Proof",
-            "iconName": "chart-line-up"
+            "compactLabel": "Lead Proof"
           },
           {
             "icon": "analytics",
+            "iconName": "eye",
             "group": "Systemer",
             "label": "SEO Overvåkning",
-            "compactLabel": "SEO Overvåkning",
-            "iconName": "eye"
+            "compactLabel": "SEO Overvåkning"
           },
           {
             "icon": "local",
+            "iconName": "grid-four",
             "group": "Systemer",
             "label": "GEO - Grid",
-            "compactLabel": "GEO - Grid",
-            "iconName": "grid-four"
+            "compactLabel": "GEO - Grid"
           }
         ],
         "visual": "accelerating",
@@ -338,107 +338,107 @@
         "iconItems": [
           {
             "icon": "search",
+            "iconName": "magnifying-glass",
             "group": "Organisk Synlighet",
             "label": "SEO",
             "compactLabel": "SEO",
-            "description": "Bli funnet på Google",
-            "iconName": "magnifying-glass"
+            "description": "Bli funnet på Google"
           },
           {
             "icon": "page",
+            "iconName": "sparkle",
             "group": "Organisk Synlighet",
             "label": "AI-Synlighet",
             "compactLabel": "AI-Synlighet",
-            "description": "AIO - AEO - GEO",
-            "iconName": "sparkle"
+            "description": "AIO - AEO - GEO"
           },
           {
             "icon": "local",
+            "iconName": "map-pin",
             "group": "Organisk Synlighet",
             "label": "Lokal SEO",
-            "compactLabel": "Lokal SEO",
-            "iconName": "map-pin"
+            "compactLabel": "Lokal SEO"
           },
           {
             "icon": "paid-search",
+            "iconName": "target",
             "group": "Betalt Synlighet",
             "label": "Google Ads",
-            "compactLabel": "Google Ads",
-            "iconName": "target"
+            "compactLabel": "Google Ads"
           },
           {
             "icon": "page",
+            "iconName": "chat-circle-dots",
             "group": "Betalt Synlighet",
             "label": "ChatGPT Ads",
-            "compactLabel": "ChatGPT Ads",
-            "iconName": "chat-circle-dots"
+            "compactLabel": "ChatGPT Ads"
           },
           {
             "icon": "social-paid",
+            "iconName": "megaphone",
             "group": "Betalt Synlighet",
             "label": "Facebook Annonser",
-            "compactLabel": "Facebook Annonser",
-            "iconName": "megaphone"
+            "compactLabel": "Facebook Annonser"
           },
           {
             "icon": "paid-search",
+            "iconName": "shopping-cart",
             "group": "Betalt Synlighet",
             "label": "Google Shopping",
             "compactLabel": "Shopping Ads",
-            "description": "Google Shopping annonser for nettbutikker",
-            "iconName": "shopping-cart"
+            "description": "Google Shopping annonser for nettbutikker"
           },
           {
             "icon": "conversion",
+            "iconName": "cursor-click",
             "group": "Konverteringsoptimalisering",
             "label": "Konvertering",
             "compactLabel": "Konvertering",
-            "description": "Få flere av de som lander på nettsiden til å fullføre bestilling eller kjøp.",
-            "iconName": "cursor-click"
+            "description": "Få flere av de som lander på nettsiden til å fullføre bestilling eller kjøp."
           },
           {
             "icon": "page",
+            "iconName": "browser",
             "group": "Konverteringsoptimalisering",
             "label": "Landingssider",
             "compactLabel": "Landingssider",
-            "description": "Nettside spesialisert for konverteringer",
-            "iconName": "browser"
+            "description": "Nettside spesialisert for konverteringer"
           },
           {
             "icon": "conversion",
+            "iconName": "credit-card",
             "group": "Konverteringsoptimalisering",
             "label": "Checkout flow",
             "compactLabel": "Checkout flow",
-            "description": "Få større andel av kunder til å fullføre checkout",
-            "iconName": "credit-card"
+            "description": "Få større andel av kunder til å fullføre checkout"
           },
           {
             "icon": "analytics",
+            "iconName": "wrench",
             "group": "Systemer",
             "label": "SEO Tool",
-            "compactLabel": "SEO Tool",
-            "iconName": "wrench"
+            "compactLabel": "SEO Tool"
           },
           {
             "icon": "analytics",
+            "iconName": "chart-line-up",
             "group": "Systemer",
             "label": "Lead Proof",
-            "compactLabel": "Lead Proof",
-            "iconName": "chart-line-up"
+            "compactLabel": "Lead Proof"
           },
           {
             "icon": "analytics",
+            "iconName": "eye",
             "group": "Systemer",
             "label": "SEO Overvåkning",
-            "compactLabel": "SEO Overvåkning",
-            "iconName": "eye"
+            "compactLabel": "SEO Overvåkning"
           },
           {
             "icon": "local",
+            "iconName": "grid-four",
             "group": "Systemer",
             "label": "GEO - Grid",
-            "compactLabel": "GEO - Grid",
-            "iconName": "grid-four"
+            "compactLabel": "GEO - Grid"
           }
         ],
         "priceNote": "Omfang og fast månedspris avtales før oppstart.",
