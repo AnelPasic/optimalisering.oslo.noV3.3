@@ -127,6 +127,17 @@
             "compactLabel": "SEO"
           },
           {
+            "icon": "route",
+            "label": "AI-Søk Optimalisering",
+            "compactLabel": "AI-Synlighet"
+          },
+          {
+            "icon": "local",
+            "label": "Lokal SEO",
+            "compactLabel": "Google Maps - Synlighet",
+            "description": "Bli funnet på Google Maps"
+          },
+          {
             "icon": "paid-search",
             "label": "Google Ads",
             "compactLabel": "Google Ads"
@@ -137,9 +148,9 @@
             "compactLabel": "Meta Ads"
           },
           {
-            "icon": "route",
-            "label": "AI-Søk Optimalisering",
-            "compactLabel": "AI-Synlighet"
+            "icon": "paid-search",
+            "label": "ChatGPT Ads",
+            "compactLabel": "ChatGPT Ads"
           }
         ],
         "visual": "accelerating",
