@@ -11,7 +11,7 @@
     "orderSubmitLabel": "Send bestilling",
     "labels": {
       "situations": "Mål",
-        "focus": "Fokus",
+      "focus": "Fokus",
       "combinations": "Populære kombinasjoner",
       "workAreas": "Arbeidsområder",
       "uncertain": "Usikker? Ta en gratis sjekk"
@@ -194,7 +194,7 @@
           ]
         },
         "scope": "Vi fokuserrer på de to områdene der det er mest å hente til neste har større potensial.",
-          "key": "vekst",
+        "key": "vekst",
         "iconItems": [
           {
             "icon": "search",
@@ -302,6 +302,10 @@
           }
         ],
         "visual": "accelerating",
+        "visualAsset": {
+          "src": "/images/pricing/exponentialgrowthblue.png",
+          "alt": "Raskere vekst"
+        },
         "visualCaption": {
           "label": "To grep",
           "support": "Forsterker hverandre"
@@ -331,7 +335,7 @@
           ]
         },
         "scope": "Vi prioriterer løpende kundereisene med størst kommersiell verdi eller størst forbedringspotensial. Det betyr ikke at alt gjøres samtidig eller at kapasiteten er ubegrenset.",
-          "key": "partner",
+        "key": "partner",
         "iconItems": [
           {
             "icon": "search",
