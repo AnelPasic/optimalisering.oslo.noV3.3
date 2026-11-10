@@ -12,11 +12,16 @@ const backgrounds = ['info', 'base-300', 'secondary'] as const;
 ---
 <div class="mt-[44px] grid grid-cols-3 gap-(--gap-lg) max-[900px]:grid-cols-1 max-[650px]:mt-8 max-[650px]:gap-(--gap)">
   {items.map((item, index) => (
-    <a
+    <article
       data-home-selector-card
-      class:list={['card min-w-0 border border-transparent no-underline transition-[border-color] duration-150 hover:border-primary', surfaceClasses(surfaceAttribute(item.surface) ?? backgrounds[index % backgrounds.length])]}
-      href={item.href ?? '/priser/?pakke=optimalisering#bestill'}
+      class:list={['card relative min-w-0 border border-transparent transition-[border-color] duration-150 hover:border-primary', surfaceClasses(surfaceAttribute(item.surface) ?? backgrounds[index % backgrounds.length])]}
     >
+      {item.href && <a
+        data-card-detail-link
+        href={item.href}
+        aria-label={`Les om ${item.title}`}
+        class="absolute inset-0 z-10 rounded-[inherit] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+      ></a>}
       <div class="card-body min-w-0 gap-0 p-(--panel-pad-lg) max-[1100px]:p-(--panel-pad)">
         <div class="mb-[26px] flex items-center justify-between gap-(--gap-sm) max-[900px]:mb-[18px]">
           <div class="flex min-w-0 flex-col items-start gap-2">
@@ -27,10 +32,10 @@ const backgrounds = ['info', 'base-300', 'secondary'] as const;
         </div>
         <h3 class="max-w-[390px] max-[900px]:max-w-[600px]">{item.headline ?? item.title}</h3>
         <p class="mt-[18px] mb-5 grow-0 break-words text-(length:--type-body) leading-(--leading-body) text-inherit">{item.text}</p>
-        <div class="card-actions mt-auto">
-          <span class="text-link">{item.label ?? 'Se pakken'}<Arrow diagonal /></span>
+        <div class="card-actions relative z-20 mt-auto">
+          <a data-card-order-link href="#bestill" class="text-link">{item.label ?? 'Velg tjeneste'}<Arrow diagonal /></a>
         </div>
       </div>
-    </a>
+    </article>
   ))}
 </div>
