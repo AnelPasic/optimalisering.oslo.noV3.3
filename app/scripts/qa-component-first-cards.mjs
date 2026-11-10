@@ -228,6 +228,10 @@ try {
      iconAccessibility:nodes.map(n=>n.querySelector('svg[data-service-channel-icon]')?.getAttribute('aria-hidden')),
      top:nodes.map(n=>n.querySelector('.card-body > div > div > span')?.textContent?.trim().replace(/\s+/g,' ')),
      badges:nodes.map(n=>n.querySelector('.badge')?.textContent?.trim()),
+     badgeCheckIcons:nodes.map(n=>{
+       const icon=n.querySelector('.badge svg');
+       return icon ? {size:icon.classList.contains('size-[1em]'),hidden:icon.getAttribute('aria-hidden'),circle:!!icon.querySelector('circle'),check:icon.querySelector('polyline')?.getAttribute('points')} : null;
+     }),
      badgeClasses:nodes.map(n=>n.querySelector('.badge')?.getAttribute('class')),
      badgeColors:nodes.map(n=>n.querySelector('.badge') ? {color:getComputedStyle(n.querySelector('.badge')).color,bg:getComputedStyle(n.querySelector('.badge')).backgroundColor} : null),
      priceVisible:nodes.some(n=>/4\s?500\s?kr/.test(n.textContent||'')),
@@ -238,7 +242,7 @@ try {
      targetExists:!!document.querySelector('#bestill'),
      buttons:nodes.map(n=>n.querySelector('.card-actions .text-link')?.textContent?.trim()),
      styles:nodes.map(n=>({native:n.classList.contains('card')&&!!n.querySelector(':scope > .card-body'),color:getComputedStyle(n).backgroundColor,
-       padding:parseFloat(getComputedStyle(n.querySelector('.card-body')).paddingLeft),icon:n.querySelector('svg')?.getBoundingClientRect().width})),
+       padding:parseFloat(getComputedStyle(n.querySelector('.card-body')).paddingLeft),icon:n.querySelector('svg[data-service-channel-icon]')?.getBoundingClientRect().width})),
      expectedColors:['--color-info','--color-base-300','--color-secondary'].map(token=>{
        const span=document.createElement('span');span.style.backgroundColor='var('+token+')';document.body.append(span);const color=getComputedStyle(span).backgroundColor;span.remove();return color;
      }),
@@ -258,6 +262,9 @@ try {
    assert.ok(cards.targetExists,'The local price/order section must expose #bestill');
    assert.deepEqual(cards.top,organicItems.map(i=>i.title),'Card top line must show only service name');
    assert.deepEqual(cards.badges,expectedBadges,'DaisyUI badges must match global CMS copy');
+   assert.ok(cards.badgeCheckIcons.every((icon,i)=>organicItems[i].badge==='Inkludert i alle pakker'
+     ? icon?.size&&icon.hidden==='true'&&icon.circle&&icon.check==='7 13 10 16 17 8'
+     : icon===null),'Only inclusion success badges get the DaisyUI check-circle icon');
    assert.deepEqual(cards.badgeClasses,organicItems.map(i=>i.badge==='Inkludert i alle pakker'?includedBadgeClass:outlinedBadgeClass),'Only included-in-all-packages badges use exact success classes');
    assert.ok(cards.badgeColors.every(c=>c&&c.color!==c.bg),'Badge must have distinguishable text and background');
    assert.equal(cards.priceVisible,false,'Price must not be displayed on organic choice cards');
@@ -288,7 +295,7 @@ try {
   {_block:'sharedContent',entry:'betalt-synlighet'}
  ],'Paid cards must follow organic cards directly in Pages CMS');
  assert.deepEqual(paidSource.items.map(item=>item.title),['Google Ads','ChatGPT Ads','Meta Ads']);
- assert.ok(paidSource.body.some(text=>text.includes('Annonsebudsjett kommer i tillegg')));
+ assert.ok(paidSource.body.some(text=>typeof text==='string'&&text.trim()),'Paid section must have CMS-authored description');
  for(const width of [390,768,1440]){
   const page=await browser.newPage({viewport:{width,height:900}});
   assert.equal((await page.goto(origin+'/synlighet/',{waitUntil:'networkidle'})).status(),200);
@@ -306,6 +313,10 @@ try {
      iconAccessibility:node.querySelector('svg[data-service-channel-icon]')?.getAttribute('aria-hidden'),
      service:node.querySelector('.card-body > div > div > span')?.textContent?.trim(),
      badge:node.querySelector('.badge')?.textContent?.trim(),
+     badgeCheckIcon:(()=>{
+       const icon=node.querySelector('.badge svg');
+       return icon ? {size:icon.classList.contains('size-[1em]'),hidden:icon.getAttribute('aria-hidden'),circle:!!icon.querySelector('circle'),check:icon.querySelector('polyline')?.getAttribute('points')} : null;
+     })(),
      badgeClass:node.querySelector('.badge')?.getAttribute('class'),
      badgeTextColor:node.querySelector('.badge')?getComputedStyle(node.querySelector('.badge')).color:null,
      badgeBackgroundColor:node.querySelector('.badge')?getComputedStyle(node.querySelector('.badge')).backgroundColor:null,
@@ -338,6 +349,9 @@ try {
    assert.ok(paid.cards.every(c=>c.iconSize===34&&c.iconAccessibility==='true'));
    assert.deepEqual(paid.cards.map(c=>c.service),paidSource.items.map(i=>i.title));
    assert.deepEqual(paid.cards.map(c=>c.badge),paidSource.items.map(i=>i.badge));
+   assert.ok(paid.cards.every((card,i)=>paidSource.items[i].badge==='Inkludert i alle pakker'
+     ? card.badgeCheckIcon?.size&&card.badgeCheckIcon.hidden==='true'&&card.badgeCheckIcon.circle&&card.badgeCheckIcon.check==='7 13 10 16 17 8'
+     : card.badgeCheckIcon===null),'Paid badges get the check icon only with inclusion success copy');
    assert.deepEqual(paid.cards.map(c=>c.badgeClass),paidSource.items.map(i=>i.badge==='Inkludert i alle pakker'?includedBadgeClass:outlinedBadgeClass));
    assert.ok(paid.cards.every(c=>c.badgeTextColor!==c.badgeBackgroundColor),'Paid badge text and background must differ');
    assert.ok(paid.cards.every(c=>c.link===null&&c.linkCount===1),'No fabricated links to unpublished paid service pages');

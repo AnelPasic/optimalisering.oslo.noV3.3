@@ -45,7 +45,7 @@ test('native SEO page editor contains section layouts, card treatment and a shar
  const global=resolveField(sections.blocks.find((b:any)=>b.name==='global'),cms.components);
  for(const name of ['headingAlign','layout','surface','items','visibility'])assert.ok(local.fields.find((f:any)=>f.name===name),name);
  assert.deepEqual(global.fields.find((f:any)=>f.name==='element').options.values.map((v:any)=>v.name).sort(),[...seoGlobalIds].sort());
- const modified=clone();modified.sections[0].items[0].text+=' Test';
+ const modified=clone();modified.sections.find((s:any)=>s._block==='content'&&s.items?.length).items[0].text+=' Test';
  const saved=JSON.parse(cmsJsonSave(source,modified,entry,cms));
  assertPreservedContent(modified,saved);
  assert.ok(pageSchema.safeParse(saved).success);
