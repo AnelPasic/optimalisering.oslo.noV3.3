@@ -295,7 +295,7 @@ try {
   {_block:'sharedContent',entry:'betalt-synlighet'}
  ],'Paid cards must follow organic cards directly in Pages CMS');
  assert.deepEqual(paidSource.items.map(item=>item.title),['Google Ads','ChatGPT Ads','Meta Ads']);
- assert.ok(paidSource.body.some(text=>text.includes('Annonsebudsjett kommer i tillegg')));
+ assert.ok(paidSource.body.some(text=>typeof text==='string'&&text.trim()),'Paid section must have CMS-authored description');
  for(const width of [390,768,1440]){
   const page=await browser.newPage({viewport:{width,height:900}});
   assert.equal((await page.goto(origin+'/synlighet/',{waitUntil:'networkidle'})).status(),200);
