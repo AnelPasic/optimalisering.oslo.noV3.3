@@ -122,10 +122,9 @@
             "compactLabel": "Konvertering"
           },
           {
-            "icon": "conversion",
-            "label": "SEO / AI-synlighet + konverteringsoptimalisering",
-            "compactLabel": "SEO / AI-synlighet + konvertering",
-            "description": "Bygg organisk synlighet og få flere relevante besøk videre til henvendelse eller kjøp."
+            "icon": "search",
+            "label": "SEO - Søkemotoroptimalisering",
+            "compactLabel": "SEO"
           },
           {
             "icon": "search",
