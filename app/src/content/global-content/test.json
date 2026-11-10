@@ -1,0 +1,27 @@
+{
+  "_block": "content",
+  "uid": "0ac48bc4-ea95-4091-ad5f-dec4500b1d18",
+  "id": "test",
+  "name": "Test Navn",
+  "eyebrow": "Overtekst",
+  "heading": "Overskrift - Tre Kolonner",
+  "headingAlign": "default",
+  "layout": "three-columns",
+  "body": [
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  ],
+  "items": [
+    {
+      "title": "Lorem ipsum - Åpen Boks",
+      "headline": "Lorem ipsum - Stor overskrift",
+      "badge": "badge",
+      "icon": "meta-ads",
+      "text": "Lenovo LOQ Tower 26L R7-8745HX/16/512GB/5060Ti stasjonær gaming-PC kombinerer AMD Ryzen 7, RTX 5060 Ti, 16GB DDR5 RAM og 512GB SSD i et gjennomsiktig 26L kabinett med ARGB-belysning, og leverer kraftig spillytelse og imponerende grafikk.",
+      "href": "/#pris",
+      "label": "pris",
+      "boxVariant": "plain"
+    }
+  ]
+}
