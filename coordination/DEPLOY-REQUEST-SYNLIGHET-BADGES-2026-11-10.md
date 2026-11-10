@@ -8,3 +8,9 @@ Deploy the **entire latest main**, preserving all Pages CMS edits. This file has
 Verify `/synlighet/` displays the three DaisyUI badges `Inkludert i alle pakker` on SEO, Lokal SEO and AI-synlighet; previous `4 500 kr/mnd` labels must be absent from those three cards. Prices elsewhere, CTA links, contact forms, other routes and robots remain unchanged.
 
 Git merge or green CI alone is not a Cloudflare deploy confirmation.
+
+## Follow-up build request: independent card/detail links
+
+At current main `3f789a077db4d42f6f87eb091416dd658acb0260`, merged PR #115. Trigger a fresh connected Worker build, preserving latest Pages CMS edits.
+
+Validate on `/synlighet/` that each **card surface** opens respectively `/seo/`, `/lokal-seo/`, `/ai-synlighet/`, while each separate **Velg** CTA anchors to the same page's `#bestill` inside the local package section. Do not reintroduce monthly price labels. This note has no runtime effect.
