@@ -99,6 +99,13 @@
             "compactLabel": "Facebook Annonser"
           },
           {
+            "icon": "paid-search",
+            "group": "Betalt Synlighet",
+            "label": "Google Shopping",
+            "compactLabel": "Shopping Ads",
+            "description": "Google Shopping annonser for nettbutikker"
+          },
+          {
             "icon": "conversion",
             "group": "Konverteringsoptimalisering",
             "label": "Konverteringsoptimalisering",
