@@ -1,0 +1,55 @@
+{
+  "slug": "testside",
+  "seo": {
+    "title": "Testside",
+    "description": "Testside metabeskrivelse"
+  },
+  "hero": {
+    "toneOverrides": {
+      "eyebrowPreset": "spisspluskomisk",
+      "titlePreset": "spisspluskomisk",
+      "supportPreset": "spisspluskomisk"
+    },
+    "eyebrow": "SEO · Lokal SEO · AI-synlighet · Google Ads · Meta Ads · ChatGPT Ads",
+    "title": "Overskrift",
+    "support": "En glemt sekk. Nøkler som falt ut av lomma. Med et MisterTing-merke kan den som finner tingen din skanne QR-koden og sende deg et varsel. Telefonnummeret og e-postadressen din vises ikke til finneren.",
+    "primaryCta": {
+      "label": "Sjekk",
+      "suggestedHref": "/#sjekk",
+      "href": "/#sjekk"
+    },
+    "secondaryCta": {
+      "label": "Optimalisere først",
+      "suggestedHref": "/innsikt/hva-bor-optimaliseres-forst/"
+    },
+    "featuredProofCaseId": "nysta",
+    "visual": {
+      "kind": "image",
+      "image": {
+        "kind": "photo",
+        "src": "/images/services/exponentialgrowthblue.png",
+        "alt": "Kort beskrivelse",
+        "positionX": 50,
+        "positionY": 50
+      }
+    }
+  },
+  "listing": {
+    "title": "Listetittel",
+    "summary": "Sammendrag - Liste. MisterTing er fysiske QR-merker du fester på eiendelene dine. Arket har merker i ulike størrelser og en egen kode for aktivering. Du kobler merkene til kontaktopplysningene dine, så en finner kan varsle deg.",
+    "label": "Les mer om Lenketekst",
+    "visible": true,
+    "visual": [
+      {
+        "kind": "image",
+        "src": "/images/listing/exponentialgrowthblue.png",
+        "alt": "Alt tekst",
+        "positionX": 50,
+        "positionY": 50
+      }
+    ],
+    "iconName": "tree-structure",
+    "badge": "the badge"
+  },
+  "kind": "service"
+}
