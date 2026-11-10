@@ -117,10 +117,9 @@
         "key": "vekst",
         "iconItems": [
           {
-            "icon": "paid-search",
-            "label": "Google Ads X konverteringsoptimalisering",
-            "compactLabel": "Google Ads x konvertering",
-            "description": "Få relevant trafikk nå og få flere av besøkende til å bestille tjeneste eller fullføre kjøp."
+            "icon": "conversion",
+            "label": "Konverteringsoptimalisering",
+            "compactLabel": "Konvertering"
           },
           {
             "icon": "conversion",
