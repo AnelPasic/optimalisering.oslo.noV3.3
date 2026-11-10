@@ -303,7 +303,7 @@
         ],
         "visual": "accelerating",
         "visualAsset": {
-          "src": "/images/pricing/exponentialgrowthblue.png",
+          "src": "/images/pricing/exponentialgrowthblue.svg",
           "alt": "Raskere vekst"
         },
         "visualCaption": {
