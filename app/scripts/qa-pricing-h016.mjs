@@ -77,7 +77,7 @@ try {
         const packages=JSON.parse(readFileSync('src/content/pages/home.json')).homepage.packages;
         for(const [index,item] of packages.items.entries()){
           const card=cards.nth(index),detail=card.locator('.package-details');
-          assert.equal(await detail.locator('.package-detail').isVisible(),route==='/priser/','Page presentation controls initial details');
+          assert.equal(await detail.locator('.package-detail').isVisible(),false,'Mer om pakken is closed initially on both routes');
           assert.equal(await detail.locator('summary').innerText(),item.detailLink.label);
           assert.equal(await card.locator('.button').getAttribute('href'),item.cta.href); assert.ok((await card.locator('.button').innerText()).startsWith(item.cta.label));
           assert.deepEqual(await card.locator('.package-situations li').allTextContents(),item.compact.situations);
@@ -85,9 +85,9 @@ try {
           assert.deepEqual(await card.locator('[data-service-category]').evaluateAll(nodes=>nodes.map(node=>node.getAttribute('data-service-category'))),groupPackageServices(item.iconItems).map(group=>group.label));
           assert.equal(await card.locator('.package-fit').innerText(),item.compact.fit);
           assert.ok(!/problem|Optimalisering er ikke laget for to uavhengige|Velg Vekst hvis resultatet/.test(await card.textContent()));
-          const initial=route==='/priser/'; await detail.locator('summary').focus(); await page.keyboard.press('Enter');
+          const initial=false; await detail.locator('summary').focus(); await page.keyboard.press('Enter');
           assert.equal(await detail.locator('.package-detail').isVisible(),!initial,'Native keyboard toggles either initial state');
-          if(route==='/priser/'&&index===0&&width!==320)await card.screenshot({animations:'disabled',path:resolve(output,`pricing-manually-collapsed-${width}.png`)});
+          if(route==='/priser/'&&index===0&&width!==320)await card.screenshot({animations:'disabled',path:resolve(output,`pricing-manually-expanded-${width}.png`)});
           await page.keyboard.press('Space'); assert.equal(await detail.locator('.package-detail').isVisible(),initial);
           await detail.locator('summary').evaluate(el=>el.blur());
         }
@@ -140,11 +140,11 @@ try {
     noJs.on('request',request=>{if(request.method()==='POST')posts++;});
     await noJs.goto(`${base}/priser/?pakke=partner#bestill`);
     for (const detail of await noJs.locator('.package-details').all()) {
-      assert.equal(await detail.locator('.package-detail').isVisible(),true);
+      assert.equal(await detail.locator('.package-detail').isVisible(),false);
       await detail.locator('summary').click();
-      assert.equal(await detail.locator('.package-detail').isVisible(),false,'Initially open full detail collapses without JavaScript');
+      assert.equal(await detail.locator('.package-detail').isVisible(),true,'Collapsed details open without JavaScript');
       await detail.locator('summary').click();
-      assert.equal(await detail.locator('.package-detail').isVisible(),true);
+      assert.equal(await detail.locator('.package-detail').isVisible(),false);
     }
     await noJs.locator('.multiplier-detail summary').click();
     assert.equal(await noJs.locator('.multiplier-detail .body-copy').first().isVisible(),true,'Multiplier logic also works without JS');

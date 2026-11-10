@@ -70,6 +70,9 @@
 .site-shell .package-offer .package-details summary { cursor: pointer; padding-block: 8px; }
 .site-shell .package-offer .package-details summary:focus-visible, .site-shell .multiplier-detail summary:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
 .site-shell .package-offer .package-detail { border-top: 1px solid var(--line); margin-top: 12px; padding-top: 24px; }
+.site-shell .package-offer .package-detail > .package-situations { margin: 0; }
+.site-shell .package-offer .package-detail > .package-fit-goals { margin-top: 20px; }
+.site-shell .package-offer .package-detail > .package-included-systems { margin-top: 20px; }
 .site-shell .package-offer .package-detail > * + * { margin-top: 24px; }
 .site-shell .package-offer .package-detail ul { padding-left: 18px; }
 .site-shell .package-offer .package-detail li + li { margin-top: 12px; }

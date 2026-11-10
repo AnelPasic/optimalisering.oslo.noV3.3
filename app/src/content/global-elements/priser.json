@@ -171,7 +171,7 @@
         },
         "price": 4500,
         "detailLink": {
-          "label": "Om pakken",
+          "label": "Mer om pakken",
           "href": "/priser/#optimalisering"
         },
         "priceSuffix": "kr/mnd",
@@ -308,7 +308,7 @@
         },
         "price": 6900,
         "detailLink": {
-          "label": "Om pakken",
+          "label": "Mer om pakken",
           "href": "/priser/#begge"
         },
         "priceSuffix": "kr/mnd",
@@ -447,7 +447,7 @@
         "price": 14900,
         "pricePrefix": "fra",
         "detailLink": {
-          "label": "Om pakken",
+          "label": "Mer om pakken",
           "href": "/priser/#partner"
         },
         "priceSuffix": "kr/mnd",

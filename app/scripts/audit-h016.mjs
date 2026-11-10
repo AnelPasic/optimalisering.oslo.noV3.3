@@ -11,7 +11,13 @@ for(const [file,open] of [['dist/index.html',false],['dist/priser/index.html',tr
   for(const [index,card] of cards.entries()) {
     const item=packages.items[index];
     assert.ok(card.includes('class="package-situations"')&&card.includes('package-icon-items'),'Compact situations and service icons both render');
-    assert.ok(card.includes(`<details class="package-details"${open?' open':''}>`),'Native detail state follows page presentation');
+    assert.ok(card.includes('<details class="package-details">'),'Mer om pakken must exist and remain closed by default on both routes');
+    const detailsHtml=card.split('<details class="package-details">')[1]?.split('</details>')[0]??'';
+    const beforeDetails=card.split('<details class="package-details">')[0];
+    assert.ok(detailsHtml.includes('Systemer inkludert')&&detailsHtml.includes('data-service-category="Systemer"'),'System tools moved into accordion');
+    assert.ok(!beforeDetails.includes('data-service-category="Systemer"'),'System tools are not duplicated ahead of Bestill');
+    assert.ok(detailsHtml.includes(item.compact.fit)&&item.compact.situations.every(text=>detailsHtml.includes(text)),'Goals and fit are under Mer om pakken');
+    if(item.scope)assert.ok(detailsHtml.includes(item.scope.trim()),'Existing scope copy remains in accordion');
     assert.ok(text(card).includes(item.cta.label)&&text(card).includes(item.detailLink.label),'CTA and disclosure labels follow CMS');
     assert.ok(card.includes(`href="/priser/?pakke=${item.key}#bestill"`));
     const supplied=resolvePackageAsset(item.visualAsset);

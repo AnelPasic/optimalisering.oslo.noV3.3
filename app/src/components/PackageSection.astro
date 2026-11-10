@@ -36,25 +36,29 @@ const formatPrice = (value: number) => new Intl.NumberFormat('nb-NO', { maximumF
       <div class="package-focus">
         <h3 class="package-block-heading package-services-heading">Tjenester inkludert</h3>
         <p class="package-services-note">{item.key === 'optimalisering' ? 'Én av tjenestene prioriteres om gangen.' : item.key === 'vekst' ? 'To av tjenestene prioriteres samtidig.' : 'Tjenester og kapasitet prioriteres etter avtale.'}</p>
-        {groupPackageServices(item.iconItems).map(group => <section class="package-service-group" data-service-category={group.label}>
+        {groupPackageServices(item.iconItems).filter(group => group.label !== 'Systemer').map(group => <section class="package-service-group" data-service-category={group.label}>
           <h4 class="package-service-group-heading">{group.label}</h4>
           <ul class="package-icon-items">{group.items.map(focus => <li><FocusIcon kind={focus.icon} iconName={focus.iconName} /><span><TermText text={focus.compactLabel} terms={['seo', 'lokal-seo', 'ai-synlighet', 'google-ads', 'meta-ads', 'cro']} /></span></li>)}</ul>
         </section>)}
       </div>
       <PackageOrder item={item} featured={item.recommended} orderIntro={content.orderIntro} orderSubmitLabel={content.orderSubmitLabel} />
-      <div class="package-situations">
-        <h3 class="package-block-heading">{content.labels.situations}</h3>
-        <ul>{item.compact.situations.map(text => <li>{text}</li>)}</ul>
-      </div>
-      <div class="package-fit-goals">
-        <h3 class="package-block-heading">{content.fitLabel}</h3>
-        <p class="package-fit">{item.compact.fit}</p>
-        {item.scope && <div class="package-scope"><h3 class="package-block-heading">{content.scopeLabel}</h3><p>{item.scope}</p></div>}
-      </div>
-      {(item.distinction || item.priceNote) && <details class="package-details" open={expanded}><summary>{item.detailLink.label}</summary><div class="package-detail">
+      <details class="package-details"><summary>{item.detailLink.label}</summary><div class="package-detail">
+        <div class="package-situations">
+          <h3 class="package-block-heading">{content.labels.situations}</h3>
+          <ul>{item.compact.situations.map(text => <li>{text}</li>)}</ul>
+        </div>
+        <div class="package-fit-goals">
+          <h3 class="package-block-heading">{content.fitLabel}</h3>
+          <p class="package-fit">{item.compact.fit}</p>
+          {item.scope && <div class="package-scope"><h3 class="package-block-heading">{content.scopeLabel}</h3><p>{item.scope}</p></div>}
+        </div>
+        {groupPackageServices(item.iconItems).filter(group => group.label === 'Systemer').map(group => <section class="package-service-group package-included-systems" data-service-category={group.label}>
+          <h4 class="package-service-group-heading">Systemer inkludert</h4>
+          <ul class="package-icon-items">{group.items.map(focus => <li><FocusIcon kind={focus.icon} iconName={focus.iconName} /><span><TermText text={focus.compactLabel} terms={['seo', 'lokal-seo', 'ai-synlighet', 'google-ads', 'meta-ads', 'cro']} /></span></li>)}</ul>
+        </section>)}
         {item.distinction && <p>{item.distinction}</p>}
         {item.priceNote && <p class="package-price-note">{item.priceNote}</p>}
-      </div></details>}
+      </div></details>
       </div>
     </article>)}</div>
     {showNotes && <div class="package-notes body-copy"><p class="package-budget-note">{content.adBudgetNote}</p><a class="text-link package-uncertain" href="/#sjekk">{content.labels.uncertain}<Arrow /></a></div>}

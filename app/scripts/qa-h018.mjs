@@ -68,10 +68,10 @@ try {
       if (route === '/' || route === '/priser/') {
         const details = page.locator('.package-details');
         assert.equal(await details.count(), packages.length);
-        assert.equal(await page.locator('.package-details[open]').count(), route === '/' ? 0 : packages.length);
+        assert.equal(await page.locator('.package-details[open]').count(), 0);
         const summary = details.first().locator('summary');
         await summary.focus(); await page.keyboard.press('Enter');
-        assert.equal(await details.first().getAttribute('open') !== null, route === '/');
+        assert.equal(await details.first().getAttribute('open') !== null, true);
         await page.keyboard.press('Enter');
         behavior.nativePackageDisclosure = true;
         assert.equal(await page.locator('.package-card.is-recommended').count(), packages.filter(p => p.recommended).length);
