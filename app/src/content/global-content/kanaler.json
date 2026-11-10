@@ -18,6 +18,7 @@
       "text": "Vi finner søkene som kan gi deg kunder, forbedrer sidene de møter og følger opp det som virker. Målet er flere relevante bestillinger uten å betale Google for hvert klikk.",
       "href": "/seo/",
       "label": "Velg SEO",
+      "boxVariant": "card",
       "surface": "info"
     },
     {
