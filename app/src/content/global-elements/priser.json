@@ -229,7 +229,7 @@
       "options": [
         {
           "id": "seo-ai",
-          "label": "SEO og AI-synlighet",
+          "label": "Søkemotoroptimalisering (SEO)",
           "description": "Bli funnet i søk og relevante AI-svar."
         },
         {
@@ -256,6 +256,10 @@
           "id": "seo",
           "label": "Søkemotoroptimalisering",
           "description": "Bli funnet på Google søk"
+        },
+        {
+          "id": "aisok",
+          "label": "AI-synlighet"
         }
       ]
     }
