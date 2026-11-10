@@ -61,6 +61,20 @@
     {
       "_block": "global",
       "element": "priser"
+    },
+    {
+      "_block": "pageList",
+      "id": "pagelist",
+      "eyebrow": "Pagelist Overtekst",
+      "heading": "PageList Overskrift",
+      "pageList": {
+        "source": "pages",
+        "mode": "automatic",
+        "sort": "editorial",
+        "limit": 6,
+        "layout": "cards",
+        "columns": 2
+      }
     }
   ]
 }
