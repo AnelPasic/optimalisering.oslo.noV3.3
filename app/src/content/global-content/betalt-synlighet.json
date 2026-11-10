@@ -9,38 +9,38 @@
   "layout": "three-columns",
   "surface": "base-200",
   "body": [
-    "Annonser lar deg nå potensielle kunder raskt. Vi tester kanalene, måler kostnad per bestilling og prioriterer det som kan skaleres med lønnsomhet. Annonsebudsjett kommer i tillegg til månedsprisen og du bestemmer den."
+    "Med annonser kan vi nå nye kunder raskt. Vi tester kanalene, måler kostnad per bestilling og prioriterer det som kan skaleres med lønnsomhet. Å øke markedsbudsjettet før vi vet hva en bestilling koster, er ikke skalering. Det er bare en dyrere måte å gjette på."
   ],
   "items": [
     {
       "title": "Google Ads",
       "headline": "Fang kundene når de leter",
       "badge": "Inkludert i alle pakker",
+      "icon": "google-ads",
       "text": "Vi gjør deg synlig i Google Søk, viser produktene dine i Google Shopping og når nye kunder gjennom YouTube. Vi jobber for flere lønnsomme bestillinger, ikke bare flere klikk.",
       "label": "Velg Google Ads",
       "boxVariant": "card",
-      "surface": "info",
-      "icon": "google-ads"
+      "surface": "info"
     },
     {
       "title": "ChatGPT Ads",
       "headline": "Bli oppdaget når kundene spør AI",
       "badge": "Inkludert i alle pakker",
+      "icon": "chatgpt-ads",
       "text": "Vi hjelper deg å utforske ChatGPT-annonsering der kanalen er tilgjengelig. Vi tester om den kan nå relevante kunder og gi bestillinger til en fornuftig kostnad.",
       "label": "Velg ChatGPT Ads",
       "boxVariant": "card",
-      "surface": "base-300",
-      "icon": "chatgpt-ads"
+      "surface": "base-300"
     },
     {
       "title": "Meta Ads",
       "headline": "Gi kundene en grunn til å velge deg",
       "badge": "Inkludert i alle pakker",
+      "icon": "meta-ads",
       "text": "Med annonser på Facebook og Instagram viser vi produktene og tjenestene dine til potensielle kunder. Vi tester hva som vekker interesse og kan føre til flere bestillinger.",
       "label": "Velg Meta Ads",
       "boxVariant": "card",
-      "surface": "secondary",
-      "icon": "meta-ads"
+      "surface": "secondary"
     }
   ]
 }
