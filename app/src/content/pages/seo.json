@@ -18,8 +18,8 @@
       "kind": "image",
       "image": {
         "kind": "illustration",
-        "src": "/images/services/discoveringlocalfavorite.png",
-        "alt": "Bli funnet",
+        "src": "/images/services/discoveringlocalfavorite-1.png",
+        "alt": "Funnet på Google",
         "positionX": 50,
         "positionY": 50
       }
