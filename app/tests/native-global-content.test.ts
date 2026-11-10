@@ -120,3 +120,29 @@ test('organiske valgkort lagres under Global Innhold og kan redigeres uten dobbe
   assert.equal(parsed.sections.find((s:any)=>s.id==='kanaler')?.items?.[1]?.headline,original.items[1].headline);
   assert.equal(page.sections.some((s:any)=>s.id==='kanaler'||s.items?.some((i:any)=>i.headline==='Bli med i svaret')),false);
 });
+
+test('Betalt synlighet uses one globally editable CMS source directly after Organic',()=>{
+  const original=JSON.parse(readFileSync('src/content/global-content/betalt-synlighet.json','utf8'));
+  const source=JSON.parse(readFileSync('src/content/pages/synlighet.json','utf8'));
+  const entry=entryForFile(cms,'app/src/content/global-content/betalt-synlighet.json');
+  assert.ok(entry,'Paid card section must be editable in Globalt innhold');
+  assert.deepEqual(source.sections.slice(0,2),[
+    {_block:'sharedContent',entry:'kanaler'},
+    {_block:'sharedContent',entry:'betalt-synlighet'}
+  ]);
+  assert.equal(original.items.length,3);
+  assert.deepEqual(original.items.map((item:any)=>item.title),['Google Ads','ChatGPT Ads','Meta Ads']);
+  assert.ok(original.items.every((item:any)=>item.badge&&item.headline&&item.label));
+  assert.ok(original.items.every((item:any)=>item.href===undefined),'No dead links to unavailable paid service pages');
+  assert.deepEqual(JSON.parse(cmsJsonSave(original,original,entry,cms)),original);
+  const changed=structuredClone(original);
+  changed.items[0].headline='Ny annonseringsoverskrift';
+  changed.items[1].badge='Oppdatert badgetekst';
+  changed.items[2].text='CMS-redigert beskrivelse';
+  assert.deepEqual(JSON.parse(cmsJsonSave(original,changed,entry,cms)),changed);
+  assert.equal(sharedContentSchema.safeParse(changed).success,true);
+  const resolved=pageSchema.parse(source);
+  assert.deepEqual(resolved.sections.slice(0,2).map((section:any)=>section.id),['kanaler','betalt-synlighet']);
+  assert.equal(resolved.sections[1].items?.[1].headline,original.items[1].headline);
+  assert.equal(source.sections.some((section:any)=>section.id==='betalt-synlighet'),false,'No local copy');
+});

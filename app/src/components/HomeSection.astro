@@ -22,7 +22,7 @@ const boxButton = protectedRow ? undefined : buttonChoice(section.boxButtonStyle
 const surface = resolveSectionSurface(section.surface, defaults?.surface, protectedRow)
   ?? (infoSurface ? 'info' : protectedRow ? undefined : defaultSurface);
 const cards=!!visualId;
-const synlighetChoiceCards = Astro.url.pathname === '/synlighet/' && section.id === 'kanaler';
+const synlighetChoiceCards = Astro.url.pathname === '/synlighet/' && (section.id === 'kanaler' || section.id === 'betalt-synlighet');
 const terms = Astro.url.pathname === '/synlighet/' ? ['seo', 'lokal-seo', 'ai-synlighet'] : Astro.url.pathname === '/konvertering/' ? ['cro', 'konverteringsrate', 'ordreverdi', 'margin', 'relevant-trafikk'] : Astro.url.pathname === '/seo/' ? ['seo'] : Astro.url.pathname === '/ai-synlighet/' ? ['ai-synlighet', 'aeo', 'aio', 'geo', 'seo'] : Astro.url.pathname === '/nettbutikkoptimalisering/' ? ['checkout', 'ordreverdi', 'margin', 'konverteringsrate'] : [];
 const alignment = resolveHeadingAlignment(section.headingAlign, defaults?.headingAlign);
 ---

@@ -271,6 +271,73 @@ try {
   await response.close();
  }
 
+ // Paid visibility uses the exact same card UI as organic, immediately below it.
+ // The three paid service-detail pages do not exist yet: no dead overlay links.
+ const paidSource=JSON.parse(readFileSync(new URL('../src/content/global-content/betalt-synlighet.json',import.meta.url),'utf8'));
+ const synlighetPage=JSON.parse(readFileSync(new URL('../src/content/pages/synlighet.json',import.meta.url),'utf8'));
+ assert.deepEqual(synlighetPage.sections.slice(0,2),[
+  {_block:'sharedContent',entry:'kanaler'},
+  {_block:'sharedContent',entry:'betalt-synlighet'}
+ ],'Paid cards must follow organic cards directly in Pages CMS');
+ assert.deepEqual(paidSource.items.map(item=>item.title),['Google Ads','ChatGPT Ads','Meta Ads']);
+ assert.ok(paidSource.body.some(text=>text.includes('Annonsebudsjett kommer i tillegg')));
+ for(const width of [390,768,1440]){
+  const page=await browser.newPage({viewport:{width,height:900}});
+  assert.equal((await page.goto(origin+'/synlighet/',{waitUntil:'networkidle'})).status(),200);
+  for(const theme of ['optimalisering','sunset']){
+   const paid=await page.evaluate(theme=>{
+    document.documentElement.dataset.theme=theme;
+    const a=document.querySelector('#kanaler');
+    const b=document.querySelector('#betalt-synlighet');
+    const cards=[...b?.querySelectorAll('[data-home-selector-card]')??[]];
+    const grid=cards[0]?.parentElement;
+    const cardData=cards.map(node=>({
+     title:node.querySelector('h3')?.textContent?.trim(),
+     service:node.querySelector('.card-body > div > div > span')?.textContent?.trim(),
+     badge:node.querySelector('.badge')?.textContent?.trim(),
+     badgeClass:node.querySelector('.badge')?.classList.contains('badge-outline'),
+     badgeTextColor:node.querySelector('.badge')?getComputedStyle(node.querySelector('.badge')).color:null,
+     cardTextColor:getComputedStyle(node).color,
+     cardColor:getComputedStyle(node).backgroundColor,
+     link:node.querySelector('[data-card-detail-link]')?.getAttribute('href')??null,
+     order:node.querySelector('[data-card-order-link]')?.getAttribute('href'),
+     linkCount:node.querySelectorAll('a').length,
+     tag:node.tagName.toLowerCase(),
+     padding:parseFloat(getComputedStyle(node.querySelector('.card-body')).paddingLeft)
+    }));
+    return {
+     consecutive:a?.nextElementSibling===b,
+     columns:grid?getComputedStyle(grid).gridTemplateColumns.split(' ').filter(Boolean).length:0,
+     cards:cardData,hasAnchor:!!document.querySelector('#bestill'),
+     surfaceMatches:cardData.every((item,i)=>{
+      const token=['--color-info','--color-base-300','--color-secondary'][i];
+      const sample=document.createElement('span');sample.style.backgroundColor='var('+token+')';document.body.append(sample);
+      const expected=getComputedStyle(sample).backgroundColor;sample.remove();
+      return item.cardColor===expected;
+     }),
+     overflow:document.documentElement.scrollWidth-innerWidth
+    };
+   },theme);
+   assert.equal(paid.consecutive,true,'Organic and paid sections must render adjacent');
+   assert.equal(paid.cards.length,3,'Paid cards must have three choices');
+   assert.equal(paid.columns,width<=900?1:3,'Paid cards must use same 3/1 responsive grid');
+   assert.deepEqual(paid.cards.map(c=>c.title),paidSource.items.map(i=>i.headline));
+   assert.deepEqual(paid.cards.map(c=>c.service),paidSource.items.map(i=>i.title));
+   assert.deepEqual(paid.cards.map(c=>c.badge),paidSource.items.map(i=>i.badge));
+   assert.ok(paid.cards.every(c=>c.badgeClass&&c.badgeTextColor===c.cardTextColor));
+   assert.ok(paid.cards.every(c=>c.link===null&&c.linkCount===1),'No fabricated links to unpublished paid service pages');
+   assert.deepEqual(paid.cards.map(c=>c.order),['#bestill','#bestill','#bestill']);
+   assert.ok(paid.cards.every(c=>c.tag==='article'&&Math.abs(c.padding-(width>1100?32:24))<.6));
+   assert.equal(paid.hasAnchor,true,'Order anchor must exist on local Synlighet page');
+   assert.equal(paid.surfaceMatches,true,'Paid and organic card colors must be identical');
+   assert.ok(paid.overflow<=2,'Paid cards must have no horizontal overflow');
+   console.log('PASS Synlighet paid/organic card parity',width,theme);
+  }
+  await page.locator('#betalt-synlighet [data-card-order-link]').first().click();
+  assert.equal(new URL(page.url()).hash,'#bestill','Paid CTA must stay on page at local order');
+  await page.close();
+ }
+
  // Regression: the OWNER CMS-selected footer semantic surface must have matched content contrast.
  for(const width of [390,1440]){
   const page=await browser.newPage({viewport:{width,height:900}});
