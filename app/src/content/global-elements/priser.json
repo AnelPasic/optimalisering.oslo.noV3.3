@@ -108,8 +108,8 @@
           {
             "icon": "conversion",
             "group": "Konverteringsoptimalisering",
-            "label": "Konverteringsoptimalisering",
-            "compactLabel": "Konverteringsoptimalisering",
+            "label": "Konvertering",
+            "compactLabel": "Konvertering",
             "description": "Få flere av de som lander på nettsiden til å fullføre bestilling eller kjøp."
           },
           {
@@ -122,8 +122,8 @@
           {
             "icon": "conversion",
             "group": "Konverteringsoptimalisering",
-            "label": "Checkout optimalisering",
-            "compactLabel": "Checkout optimalisering",
+            "label": "Checkout flow",
+            "compactLabel": "Checkout flow",
             "description": "Få større andel av kunder til å fullføre checkout"
           }
         ],
