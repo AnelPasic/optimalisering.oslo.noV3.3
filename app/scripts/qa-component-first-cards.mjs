@@ -242,7 +242,7 @@ try {
      targetExists:!!document.querySelector('#bestill'),
      buttons:nodes.map(n=>n.querySelector('.card-actions .text-link')?.textContent?.trim()),
      styles:nodes.map(n=>({native:n.classList.contains('card')&&!!n.querySelector(':scope > .card-body'),color:getComputedStyle(n).backgroundColor,
-       padding:parseFloat(getComputedStyle(n.querySelector('.card-body')).paddingLeft),icon:n.querySelector('svg')?.getBoundingClientRect().width})),
+       padding:parseFloat(getComputedStyle(n.querySelector('.card-body')).paddingLeft),icon:n.querySelector('svg[data-service-channel-icon]')?.getBoundingClientRect().width})),
      expectedColors:['--color-info','--color-base-300','--color-secondary'].map(token=>{
        const span=document.createElement('span');span.style.backgroundColor='var('+token+')';document.body.append(span);const color=getComputedStyle(span).backgroundColor;span.remove();return color;
      }),
