@@ -75,6 +75,19 @@
         "layout": "cards",
         "columns": 2
       }
+    },
+    {
+      "_block": "content",
+      "id": "innholdss",
+      "eyebrow": "Innholdsseksjon Standard Overtekst ",
+      "heading": "Innholdsseksjon Standard Overskrift",
+      "items": [
+        {
+          "title": "Alternativ 1",
+          "headline": "Alternativ 1 Stor overskrift",
+          "text": "En glemt sekk. Nøkler som falt ut av lomma. Med et MisterTing-merke kan den som finner tingen din skanne QR-koden og sende deg et varsel. Telefonnummeret og e-postadressen din vises ikke til finneren."
+        }
+      ]
     }
   ]
 }
