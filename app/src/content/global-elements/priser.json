@@ -237,7 +237,7 @@
           },
           {
             "icon": "social-paid",
-            "iconName": "megaphone",
+            "iconName": "meta-logo",
             "group": "Betalt Synlighet",
             "label": "Facebook Annonser",
             "compactLabel": "Facebook Annonser"
@@ -375,7 +375,7 @@
           },
           {
             "icon": "social-paid",
-            "iconName": "megaphone",
+            "iconName": "meta-logo",
             "group": "Betalt Synlighet",
             "label": "Facebook Annonser",
             "compactLabel": "Facebook Annonser"
