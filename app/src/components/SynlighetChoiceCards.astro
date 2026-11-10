@@ -28,7 +28,17 @@ const backgrounds = ['info', 'base-300', 'secondary'] as const;
             <span class="text-(length:--type-body) font-semibold leading-(--leading-body)">{item.title}</span>
             {item.badge && <span class={item.badge === 'Inkludert i alle pakker'
               ? 'badge badge-success badge-sm h-auto min-h-5 max-w-full whitespace-normal border-current py-1'
-              : 'badge badge-outline badge-sm h-auto min-h-5 max-w-full whitespace-normal border-current py-1 text-inherit'}>{item.badge}</span>}
+              : 'badge badge-outline badge-sm h-auto min-h-5 max-w-full whitespace-normal border-current py-1 text-inherit'}>
+              {item.badge === 'Inkludert i alle pakker' && (
+                <svg class="size-[1em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <g fill="currentColor" stroke-linejoin="miter" stroke-linecap="butt">
+                    <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2"></circle>
+                    <polyline points="7 13 10 16 17 8" fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2"></polyline>
+                  </g>
+                </svg>
+              )}
+              {item.badge}
+            </span>}
           </div>
           {item.icon && <ServiceChannelIcon kind={item.icon} />}
         </div>
