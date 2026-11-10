@@ -226,7 +226,11 @@ try {
      badgeClasses:nodes.map(n=>n.querySelector('.badge')?.classList.contains('badge-outline')),
      badgeColors:nodes.map(n=>n.querySelector('.badge') ? {color:getComputedStyle(n.querySelector('.badge')).color,card:getComputedStyle(n).color} : null),
      priceVisible:nodes.some(n=>/4\s?500\s?kr/.test(n.textContent||'')),
-     href:nodes.map(n=>n.getAttribute('href')),
+     href:nodes.map(n=>n.querySelector('[data-card-detail-link]')?.getAttribute('href')),
+     actions:nodes.map(n=>n.querySelector('[data-card-order-link]')?.getAttribute('href')),
+     linkCount:nodes.map(n=>n.querySelectorAll('a').length),
+     semantic:nodes.map(n=>n.tagName.toLowerCase()),
+     targetExists:!!document.querySelector('#bestill'),
      buttons:nodes.map(n=>n.querySelector('.card-actions .text-link')?.textContent?.trim()),
      styles:nodes.map(n=>({native:n.classList.contains('card')&&!!n.querySelector(':scope > .card-body'),color:getComputedStyle(n).backgroundColor,
        padding:parseFloat(getComputedStyle(n.querySelector('.card-body')).paddingLeft),icon:n.querySelector('svg')?.getBoundingClientRect().width})),
@@ -240,6 +244,10 @@ try {
    assert.equal(cards.columns,width<=900?1:3,'Synlighet must use homepage 3/1 selector grid');
    assert.deepEqual(cards.title,organicItems.map(i=>i.headline));
    assert.deepEqual(cards.href,organicItems.map(i=>i.href));
+   assert.deepEqual(cards.actions,['#bestill','#bestill','#bestill'],'Each select CTA must use this page\'s local order anchor');
+   assert.ok(cards.linkCount.every(count=>count===2),'Each card has two sibling links, never nested anchors');
+   assert.ok(cards.semantic.every(tag=>tag==='article'),'Cards must remain semantic articles');
+   assert.ok(cards.targetExists,'The local price/order section must expose #bestill');
    assert.deepEqual(cards.top,organicItems.map(i=>i.title),'Card top line must show only service name');
    assert.deepEqual(cards.badges,expectedBadges,'DaisyUI badges must match global CMS copy');
    assert.ok(cards.badgeClasses.every(Boolean),'Use native DaisyUI outlined badges');
@@ -250,7 +258,15 @@ try {
    assert.ok(cards.overflow<=2,'No horizontal overflow in organic choice cards');
    console.log('PASS Synlighet organic/home selector parity',width,theme);
   }
+  await page.locator('#kanaler [data-card-order-link]').first().click();
+  assert.equal(new URL(page.url()).hash,'#bestill','CTA click must stay on Synlighet and scroll to local order');
   await page.close();
+ }
+ for(const [index,destination] of ['/seo/','/lokal-seo/','/ai-synlighet/'].entries()){
+  assert.equal(organicItems[index].href,destination,'Organic card should lead to its matching service detail page');
+  const response=await browser.newPage();
+  assert.equal((await response.goto(origin+destination,{waitUntil:'domcontentloaded'})).status(),200,'Service destination must exist: '+destination);
+  await response.close();
  }
 
  // Regression: the OWNER CMS-selected footer semantic surface must have matched content contrast.
