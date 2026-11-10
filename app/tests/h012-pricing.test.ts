@@ -34,13 +34,13 @@ test('CMS names ending in digits cannot swallow following FAQ price amounts', ()
   assert.ok(!/4 500 kr\/mnd|6 900 kr\/mnd|14 900 kr\/mnd/.test(answer));
 });
 
-test('inserted CMS selection and cost strings retain edited names verbatim', () => {
+test('global package decision text and costs retain edited names verbatim', () => {
   const edited = resolveHomepageContent(home);
   edited.packages.items[1].title = 'Vekst Pro';
-  edited.packages.items[1].selectionRule = 'Velg Vekst Pro når to forbedringer kan forsterke hverandre.';
+  edited.packages.decisionStrip.items[1] = 'Vekst Pro: to områder som jobber sammen.';
   edited.packages.externalCostsNote = 'For Vekst Pro kommer eksterne kostnader i tillegg.';
   const bind = createCommercialTextBinding(home, pricing, edited);
-  assert.equal(bind(pricing.faq[1].answer), edited.packages.items.map((item: any) => item.selectionRule).join(' '));
+  assert.equal(bind(pricing.faq[1].answer), edited.packages.decisionStrip.items.join(' '));
   const legacyCosts = pricing.sections.find((section: any) => section.id === 'kostnader')?.body?.[0];
   if (legacyCosts) {
     assert.ok(bind(legacyCosts).endsWith(edited.packages.externalCostsNote));

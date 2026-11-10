@@ -1918,10 +1918,6 @@ content:
                         label: Forklaring – valgfri
                         type: text
                     required: true
-                  - name: selectionRule
-                    label: Valgregel
-                    type: text
-                    required: true
                   - name: distinction
                     label: Ekstra forklaring – valgfri
                     type: text

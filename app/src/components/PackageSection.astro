@@ -39,7 +39,6 @@ const formatPrice = (value: number) => new Intl.NumberFormat('nb-NO', { maximumF
         {item.typicalBusiness && <div><h3 class="package-block-heading">{content.labels.typicalBusiness}</h3><p>{item.typicalBusiness}</p></div>}
         {item.scope && <div ><h3 class="package-block-heading">{content.scopeLabel}</h3><p>{item.scope}</p></div>}
         {item.distinction && <p >{item.distinction}</p>}
-        <p >{item.selectionRule}</p>
         {item.priceNote && <p class="package-price-note">{item.priceNote}</p>}
       </div></details>
       </div>

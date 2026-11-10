@@ -83,7 +83,6 @@
             "compactLabel": "Google Ads"
           }
         ],
-        "selectionRule": "Velg Optimalisering når én flaskehals er tydelig viktigst akkurat nå.",
         "visual": "controlled",
         "visualCaption": {
           "label": "Tydelig fremgang"
@@ -134,7 +133,6 @@
             "description": "Bruk betalt synlighet for å få fart nå, og bygg organisk synlighet for å redusere avhengigheten av annonsebudsjett over tid."
           }
         ],
-        "selectionRule": "Velg Vekst for to forbedringer som forsterker hverandre.",
         "visual": "accelerating",
         "visualCaption": {
           "label": "To grep",
@@ -194,7 +192,6 @@
             "compactLabel": "Analyse"
           }
         ],
-        "selectionRule": "Velg Partner når flere forskjellige kundereiser må forbedres og prioriteres løpende.",
         "priceNote": "Omfang og fast månedspris avtales før oppstart.",
         "visual": "tracks",
         "visualCaption": {

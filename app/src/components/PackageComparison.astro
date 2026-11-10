@@ -16,7 +16,7 @@ const format=(price:number)=>new Intl.NumberFormat('nb-NO',{maximumFractionDigit
         <tbody>
           <tr><th scope="row">Månedspris eks. mva.</th>{packages.items.map(item=><td>{item.pricePrefix && <span>{item.pricePrefix} </span>}{format(item.price)} {item.priceSuffix}</td>)}</tr>
           <tr><th scope="row">Passer for</th>{packages.items.map(item=><td>{item.compact.fit}</td>)}</tr>
-          <tr><th scope="row">Omfang og prioritering</th>{packages.items.map(item=><td>{item.scope ?? item.selectionRule}</td>)}</tr>
+          <tr><th scope="row">Omfang og prioritering</th>{packages.items.map(item=><td>{item.scope?.trim() || item.descriptor}</td>)}</tr>
           <tr class="compare-category bg-base-200"><th scope="row">{labels.focusHeading}</th><td>Velg ett</td><td>Velg inntil to</td><td>Avklares sammen</td></tr>
           {labels.options.map(option=><tr>
             <th scope="row">{option.label}{option.description && <span class="package-compare-text">{option.description}</span>}</th>

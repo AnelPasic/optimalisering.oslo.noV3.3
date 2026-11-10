@@ -31,9 +31,8 @@ export function createCommercialTextBinding(home: Page, pricing: Page, shared=re
     rules.set(costs[2], source.capacityNote);
     rules.set(externalReference, source.externalCostsNote === externalCanonical ? externalReference : source.externalCostsNote);
   }
-  // H-012 supersedes the old capacity-based package comparison. Reuse the
-  // shared selection sentences, including in the repeated home price answer.
-  const selection = source.items.map(item => item.selectionRule).join(' ');
+  // Reuse the global package decision strip instead of duplicating selection rules per package.
+  const selection = source.decisionStrip.items.join(' ');
   rules.set(pricing.faq[1].answer, selection);
   const previousDifference = shared.faq.find(item => item.question === 'Hva koster videre arbeid?')?.answer.match(/Forskjellen er .*$/u)?.[0];
   if (previousDifference) rules.set(previousDifference, selection);
