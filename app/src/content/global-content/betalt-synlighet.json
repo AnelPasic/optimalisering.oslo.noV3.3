@@ -7,7 +7,7 @@
   "heading": "Få fart på bestillingene når det lønner seg.",
   "headingAlign": "center",
   "layout": "three-columns",
-  "surface": "default",
+  "surface": "base-200",
   "body": [
     "Annonser lar deg nå potensielle kunder raskt. Vi tester kanalene, måler kostnad per bestilling og prioriterer det som kan skaleres med lønnsomhet.",
     "Annonsebudsjett kommer i tillegg til månedsprisen."
@@ -16,29 +16,29 @@
     {
       "title": "Google Ads",
       "headline": "Fang kundene når de leter",
+      "badge": "Kan inngå i alle pakker",
       "text": "Vi gjør deg synlig i Google Søk, viser produktene dine i Google Shopping og når nye kunder gjennom YouTube. Vi jobber for flere lønnsomme bestillinger, ikke bare flere klikk.",
       "label": "Velg Google Ads",
-      "badge": "Kan inngå i alle pakker",
-      "surface": "info",
-      "boxVariant": "card"
+      "boxVariant": "card",
+      "surface": "info"
     },
     {
       "title": "ChatGPT Ads",
       "headline": "Bli oppdaget når kundene spør AI",
+      "badge": "Kan inngå i alle pakker",
       "text": "Vi hjelper deg å utforske ChatGPT-annonsering der kanalen er tilgjengelig. Vi tester om den kan nå relevante kunder og gi bestillinger til en fornuftig kostnad.",
       "label": "Velg ChatGPT Ads",
-      "badge": "Kan inngå i alle pakker",
-      "surface": "base-300",
-      "boxVariant": "card"
+      "boxVariant": "card",
+      "surface": "base-300"
     },
     {
       "title": "Meta Ads",
       "headline": "Gi kundene en grunn til å velge deg",
+      "badge": "Kan inngå i alle pakker",
       "text": "Med annonser på Facebook og Instagram viser vi produktene og tjenestene dine til potensielle kunder. Vi tester hva som vekker interesse og kan føre til flere bestillinger.",
       "label": "Velg Meta Ads",
-      "badge": "Kan inngå i alle pakker",
-      "surface": "secondary",
-      "boxVariant": "card"
+      "boxVariant": "card",
+      "surface": "secondary"
     }
   ]
 }
