@@ -9,39 +9,39 @@
   "layout": "three-columns",
   "surface": "default",
   "body": [
-    "Med annonser kan vi nå nye kunder raskt. Med SEO, Google Maps og AI-synlighet bygger vi synlighet som kan gi bestillinger uten betaling for hvert klikk. Å øke markedsbudsjettet før vi vet hva en bestilling koster, er ikke skalering. Det er bare en dyrere måte å gjette på."
+    "Med SEO, Google Maps og AI-synlighet bygger vi synlighet som gir bestillinger uten betaling for hvert klikk. Gir som regel høyest bidrag til redusert pris per bestilling over tid."
   ],
   "items": [
     {
       "title": "Søkemotoroptimalisering - SEO",
       "headline": "Bli funnet i Google",
+      "badge": "Inkludert i alle pakker",
+      "icon": "seo",
       "text": "Vi finner søkene som kan gi deg kunder, forbedrer sidene de møter og følger opp det som virker. Målet er flere relevante bestillinger uten å betale Google for hvert klikk.",
       "href": "/seo/",
       "label": "Velg SEO",
       "boxVariant": "card",
-      "surface": "info",
-      "badge": "Inkludert i alle pakker",
-      "icon": "seo"
+      "surface": "info"
     },
     {
       "title": "Lokal SEO",
       "headline": "Bli valgt i nærområdet",
+      "badge": "Inkludert i alle pakker",
+      "icon": "local-seo",
       "text": "Når folk leter etter en bedrift i nærheten, skal de enkelt finne og velge deg. Vi forbedrer synligheten i Google Maps og lokale søk og gjør veien til kontakt enklere.",
       "href": "/lokal-seo/",
       "label": "Velg Lokal SEO",
-      "surface": "base-300",
-      "badge": "Inkludert i alle pakker",
-      "icon": "local-seo"
+      "surface": "base-300"
     },
     {
       "title": "AI-synlighet",
       "headline": "Bli med i svaret",
+      "badge": "Inkludert i alle pakker",
+      "icon": "ai-search",
       "text": "Flere bruker ChatGPT og AI-søk for å finne produkter og tjenester. Vi gjør bedriften din lettere å forstå og oppdage, slik at du kan bli vurdert når kundene spør AI.",
       "href": "/ai-synlighet/",
       "label": "Velg AI-synlighet",
-      "surface": "secondary",
-      "badge": "Inkludert i alle pakker",
-      "icon": "ai-search"
+      "surface": "secondary"
     }
   ]
 }
