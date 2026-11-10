@@ -260,6 +260,8 @@ try {
   }
   await page.locator('#kanaler [data-card-order-link]').first().click();
   assert.equal(new URL(page.url()).hash,'#bestill','CTA click must stay on Synlighet and scroll to local order');
+  await page.locator('#kanaler [data-card-detail-link]').first().click();
+  assert.equal(new URL(page.url()).pathname,'/seo/','Clicking the card surface should open the SEO detail page');
   await page.close();
  }
  for(const [index,destination] of ['/seo/','/lokal-seo/','/ai-synlighet/'].entries()){
