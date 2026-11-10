@@ -125,6 +125,30 @@
             "label": "Checkout flow",
             "compactLabel": "Checkout flow",
             "description": "Få større andel av kunder til å fullføre checkout"
+          },
+          {
+            "icon": "analytics",
+            "group": "Systemer",
+            "label": "SEO Tool",
+            "compactLabel": "SEO Tool"
+          },
+          {
+            "icon": "analytics",
+            "group": "Systemer",
+            "label": "Lead Proof",
+            "compactLabel": "Lead Proof"
+          },
+          {
+            "icon": "analytics",
+            "group": "Systemer",
+            "label": "SEO Overvåkning",
+            "compactLabel": "SEO Overvåkning"
+          },
+          {
+            "icon": "local",
+            "group": "Systemer",
+            "label": "GEO - Grid",
+            "compactLabel": "GEO - Grid"
           }
         ],
         "visual": "controlled",
