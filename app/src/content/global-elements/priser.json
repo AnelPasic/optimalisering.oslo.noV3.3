@@ -64,8 +64,8 @@
           {
             "icon": "search",
             "group": "Organisk Synlighet",
-            "label": "Søkemotoroptimalisering",
-            "compactLabel": "Søkemotoroptimalisering",
+            "label": "SEO",
+            "compactLabel": "SEO",
             "description": "Bli funnet på Google"
           },
           {
@@ -138,16 +138,17 @@
         "key": "vekst",
         "iconItems": [
           {
+            "icon": "search",
+            "group": "Organisk Synlighet",
+            "label": "SEO - Søkemotoroptimalisering",
+            "compactLabel": "SEO",
+            "description": "Søkemotoroptimalisering"
+          },
+          {
             "icon": "conversion",
             "group": "Konverteringsoptimalisering",
             "label": "Konverteringsoptimalisering",
             "compactLabel": "Konverteringsoptimalisering"
-          },
-          {
-            "icon": "search",
-            "group": "Organisk Synlighet",
-            "label": "SEO - Søkemotoroptimalisering",
-            "compactLabel": "SEO"
           },
           {
             "icon": "route",
@@ -217,8 +218,14 @@
           {
             "icon": "search",
             "group": "Organisk Synlighet",
-            "label": "SEO / AI-synlighet",
-            "compactLabel": "SEO / AI-synlighet"
+            "label": "SEO",
+            "compactLabel": "SEO"
+          },
+          {
+            "icon": "analytics",
+            "group": "Organisk Synlighet",
+            "label": "AI-synlighet",
+            "compactLabel": "AI-synlighet"
           },
           {
             "icon": "paid-search",
@@ -272,13 +279,13 @@
       "focusHeading": "Hva ønsker du å forbedre?",
       "options": [
         {
-          "id": "aisok",
-          "label": "AI-synlighet"
-        },
-        {
           "id": "seo-ai",
           "label": "Søkemotoroptimalisering (SEO)",
           "description": "Bli funnet i søk og relevante AI-svar."
+        },
+        {
+          "id": "aisok",
+          "label": "AI-synlighet"
         },
         {
           "id": "lokal-seo",
