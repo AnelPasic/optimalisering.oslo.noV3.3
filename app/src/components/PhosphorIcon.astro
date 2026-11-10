@@ -1,0 +1,15 @@
+---
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+import { isPhosphorIconName } from '../lib/phosphor-icon-names';
+
+interface Props { name?: string; class?: string; size?: number; }
+const { name, class: className, size = 24 } = Astro.props;
+// Only validated names can select a local SVG from the pinned dependency.
+const source = name && isPhosphorIconName(name)
+  ? readFileSync(join(process.cwd(), 'node_modules', '@phosphor-icons', 'core', 'assets', 'regular', name + '.svg'), 'utf8')
+  : undefined;
+const svgBody = source?.match(/^<svg\b[^>]*>([\s\S]*?)<\/svg>\s*$/)?.[1];
+if (source && !svgBody) throw new Error('Unexpected Phosphor SVG format for ' + name);
+---
+{svgBody && <svg class={className} data-phosphor-icon={name} width={size} height={size} viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false" set:html={svgBody} />}

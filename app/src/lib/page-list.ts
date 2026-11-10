@@ -1,9 +1,11 @@
 import { z } from 'astro/zod';
 import { listingVisualFieldSchema, resolveListingVisual, type ListingVisual } from './listing-visual.ts';
 import { getPublishableCases } from './proof.ts';
+import { cardDecoration, cardDecorationFields, type CardDecoration } from './card-decoration.ts';
 
 const optionalText = z.preprocess(value => typeof value === 'string' && !value.trim() ? undefined : value, z.string().optional());
 export const listingSchema = z.object({
+  ...cardDecorationFields,
   title: optionalText, summary: optionalText, label: optionalText,
   order: z.number().int().optional(), visible: z.boolean().default(true),
   visual: listingVisualFieldSchema.optional(),
@@ -18,7 +20,7 @@ const internalOrHttps = z.string().trim().min(1).refine(value=>{
 },'Use a root-relative path or an http(s) URL');
 const pageEntry=z.object({_block:z.literal('page'),slug:pageSlug}).strict();
 const caseEntry=z.object({_block:z.literal('case'),caseId:z.string().regex(/^[a-z0-9][a-z0-9-]*$/)}).strict();
-const urlEntry=z.object({_block:z.literal('url'),href:internalOrHttps,title:z.string().trim().min(1),summary:z.string().default(''),label:z.string().default('Les mer')}).strict();
+const urlEntry=z.object({...cardDecorationFields,_block:z.literal('url'),href:internalOrHttps,title:z.string().trim().min(1),summary:z.string().default(''),label:z.string().default('Les mer')}).strict();
 export const pageListEntrySchema=z.discriminatedUnion('_block',[pageEntry,caseEntry,urlEntry]);
 export const pageListSchema = z.object({
   // Missing source/entries are intentional for already published H-021 PageLists.
@@ -41,7 +43,7 @@ export interface ListPage {
   slug:string;kind:string;title:string;intro:string;
   listing?:z.input<typeof listingSchema>;
 }
-export interface PageListItem {slug:string;title:string;summary:string;label:string;href?:string;visual?:ListingVisual;}
+export interface PageListItem extends CardDecoration {slug:string;title:string;summary:string;label:string;href?:string;visual?:ListingVisual;}
 
 /** Presentation-only visual: alternating rows never collapse when a source page lacks media.
  * The original item and CMS-owned listing.visual remain unchanged.
@@ -62,7 +64,7 @@ const publicPage=(page:ListPage,publicDirectory:string):PageListItem=>{
   const listing=listingSchema.parse({...page.listing,visual:undefined});
   const visual=resolveListingVisual(page.listing?.visual,publicDirectory);
   const slug=normalizeSlug(page.slug);
-  return {slug,title:listing.title??page.title,summary:listing.summary??page.intro,label:listing.label??'Les mer',href:slug==='home'?'/':`/${slug}/`,...(visual?{visual}:{})};
+  return {...cardDecoration(listing),slug,title:listing.title??page.title,summary:listing.summary??page.intro,label:listing.label??'Les mer',href:slug==='home'?'/':`/${slug}/`,...(visual?{visual}:{})};
 };
 type CaseRecord={id?:unknown;clientName?:unknown};
 function publicCases(records:readonly unknown[]):PageListItem[]{
@@ -70,7 +72,7 @@ function publicCases(records:readonly unknown[]):PageListItem[]{
   const unique=[...new Set(ids)];
   return unique.flatMap(id=>{
     const publicEntry=getPublishableCases({publicationApproved:true,caseIds:[id]},records)[0];
-    return publicEntry?[{slug:'case:'+id,title:publicEntry.displayName,summary:publicEntry.dominantMetric,label:'',}]:[];
+    return publicEntry?[{...cardDecoration(publicEntry),slug:'case:'+id,title:publicEntry.displayName,summary:publicEntry.dominantMetric,label:'',}]:[];
   });
 }
 /** Resolves existing CMS content at build time. The PageList is never a second page authority. */
@@ -87,7 +89,7 @@ export function resolvePageList(input:unknown,pages:readonly ListPage[],publicDi
   if(config.mode==='manual'){
     if(config.entries.length){
       return config.entries.flatMap(entry=>{
-        if(entry._block==='url')return [{slug:'url:'+entry.href,title:entry.title,summary:entry.summary,label:entry.label,href:entry.href}];
+        if(entry._block==='url')return [{...cardDecoration(entry),slug:'url:'+entry.href,title:entry.title,summary:entry.summary,label:entry.label,href:entry.href}];
         if(entry._block==='case')return casesById.has(entry.caseId)?[casesById.get(entry.caseId)!]:[];
         const page=bySlug.get(entry.slug);
         if(!page)throw new Error(`PageList: missing page reference "${entry.slug}"`);

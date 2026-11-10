@@ -1,22 +1,11 @@
 ---
-import { readFileSync } from 'node:fs';
-import { join } from 'node:path';
+import PhosphorIcon from './PhosphorIcon.astro';
 import Search from '../assets/phosphor/magnifying-glass.svg';
 import Conversion from '../assets/phosphor/cursor-click.svg';
-import { isPhosphorIconName } from '../lib/package-icon-names';
+import { isPhosphorIconName } from '../lib/phosphor-icon-names';
 
 interface Props { kind: string; iconName?: string; }
 const { kind, iconName } = Astro.props;
-
-// Astro renders this static site during the Node build. Only requested
-// Phosphor Regular SVGs are read and inlined into the generated HTML.
-// Never load a CDN, icon font, browser module or SVG markup from CMS.
-const iconPath = iconName && isPhosphorIconName(iconName)
-  ? join(process.cwd(), 'node_modules', '@phosphor-icons', 'core', 'assets', 'regular', iconName + '.svg')
-  : undefined;
-const svgSource = iconPath ? readFileSync(iconPath, 'utf8') : undefined;
-const svgBody = svgSource?.match(/^<svg\b[^>]*>([\s\S]*?)<\/svg>\s*$/)?.[1];
-if (svgSource && !svgBody) throw new Error('Unexpected Phosphor SVG format for ' + iconName);
 
 // Backwards compatibility for older CMS records and other components
 // that still use the existing generic icon codes.
@@ -29,8 +18,8 @@ const shapes: Record<string, string[]> = {
   route: ['M6 4h11a4 4 0 0 1 0 8H8a4 4 0 0 0 0 8h10', 'M16 17l3 3-3 3'],
 };
 ---
-{svgBody
-  ? <svg class="package-focus-icon" data-phosphor-icon={iconName} width="24" height="24" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false" set:html={svgBody} />
+{iconName && isPhosphorIconName(iconName)
+  ? <PhosphorIcon name={iconName} class="package-focus-icon" />
   : kind === 'search'
     ? <Search class="package-focus-icon" width="24" height="24" aria-hidden="true" focusable="false" />
     : kind === 'conversion'

@@ -1,4 +1,5 @@
 import { getPublishableCases } from './proof.ts';
+import { cardDecoration } from './card-decoration.ts';
 
 // Format only the existing public projection; the registry remains the sole source.
 export function getHeroProof(slot: unknown, records: readonly unknown[]) {
@@ -6,6 +7,7 @@ export function getHeroProof(slot: unknown, records: readonly unknown[]) {
   if (!featured) return undefined;
   const [metric, ...source] = featured.dominantMetric.split(' - ');
   return {
+    ...cardDecoration(featured),
     metric,
     comparison: `${featured.before} -> ${featured.after}`,
     support: [featured.displayName, source.join(' - ')].filter(Boolean).join(' · '),

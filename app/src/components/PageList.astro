@@ -3,6 +3,7 @@ import type { CollectionEntry } from 'astro:content';
 import HomeSection from './HomeSection.astro';
 import { siteChrome } from '../lib/site-chrome-data';
 import Arrow from './Arrow.astro';
+import CardDecorations from './CardDecorations.astro';
 import { sectionDefaultsAt } from '../lib/section-appearance';
 import { actionClasses, buttonChoice } from '../lib/section-buttons';
 import ListingVisual from './ListingVisual.astro';
@@ -15,7 +16,7 @@ const listAction = buttonChoice(section.boxButtonStyle, sectionDefaultsAt(siteCh
 const pages = suppliedPages ?? (await getCollection('pages')).map(entry=>entry.data);
 const cases = config.source === 'cases' || config.mode === 'manual' ? (await getCollection('proofCases')).map(entry=>entry.data) : [];
 const items = resolvePageList(config, pages, 'public', cases);
-const cards = items.map(item => ({ title: item.title, text: item.summary, href: item.href, label: item.label, surface: 'default' as const, boxVariant: 'default' as const }));
+const cards = items.map(item => ({ iconName:item.iconName, badge:item.badge, badgeClass:item.badgeClass, title: item.title, text: item.summary, href: item.href, label: item.label, surface: 'default' as const, boxVariant: 'default' as const }));
 const displayedItems = items.map(item => ({ ...item, displayVisual: pageListPresentationVisual(item, config.layout) }));
 // For PageList cards, reuse HomeSection's existing column/viewport contract.
 const cardLayout = config.columns === 1 ? 'stacked' : config.columns === 2 ? 'two-columns' : config.columns === 3 ? 'three-columns' : section.layout;
@@ -28,13 +29,14 @@ const cardLayout = config.columns === 1 ? 'stacked' : config.columns === 2 ? 'tw
           <article class:list={['listing-item min-w-0',config.layout === 'mediaCards'?'card card-border bg-base-100 h-full overflow-hidden':'info-item']} data-has-visual={!!item.displayVisual} data-visual-kind={item.displayVisual?.kind ?? 'none'} data-surface={config.layout === 'mediaCards' ? 'base-100' : undefined}>
             {config.layout === 'mediaCards' && item.displayVisual && <figure class="listing-media"><ListingVisual visual={item.displayVisual} /></figure>}
             <div class:list={['listing-copy',config.layout === 'mediaCards'&&'card-body min-w-0 flex-1 items-start gap-0']}>
+              <CardDecorations iconName={item.iconName} badge={item.badge} badgeClass={item.badgeClass} />
               <h3 class:list={[config.layout === 'mediaCards'&&'card-title mb-4 text-2xl']}>{item.title}</h3>
               <p class:list={[config.layout === 'mediaCards'&&'mb-6 text-base-content']}>{item.summary}</p>
               {item.href&&(config.layout === 'mediaCards'?<div class="card-actions mt-auto"><a class:list={[actionClasses(listAction), listAction === 'link' && 'text-base-content']} href={item.href}>{item.label}<Arrow diagonal /></a></div>:<a class={actionClasses(listAction)} href={item.href}>{item.label}<Arrow diagonal /></a>)}
             </div>
             {config.layout === 'alternating' && item.displayVisual && <ListingVisual visual={item.displayVisual} />}
           </article> : config.layout === 'links' ? (item.href ? <a class={actionClasses(listAction)} href={item.href}>{item.title}<Arrow diagonal /></a> : <span class="font-semibold">{item.title}</span>) :
-          <article class="info-item page-list-row"><h3>{item.title}</h3><p>{item.summary}</p>{item.href&&<a class={actionClasses(listAction)} href={item.href}>{item.label}<Arrow diagonal /></a>}</article>}
+          <article class="info-item page-list-row"><CardDecorations iconName={item.iconName} badge={item.badge} badgeClass={item.badgeClass} /><h3>{item.title}</h3><p>{item.summary}</p>{item.href&&<a class={actionClasses(listAction)} href={item.href}>{item.label}<Arrow diagonal /></a>}</article>}
       </li>)}
     </ul>
   </HomeSection>}

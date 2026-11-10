@@ -1,0 +1,6 @@
+---
+import type { BadgeClass } from '../lib/card-decoration';
+interface Props { text?: string; badgeClass?: BadgeClass; class?: string; }
+const { text, badgeClass = 'badge', class: className } = Astro.props;
+---
+{text?.trim() && <span class:list={['badge', badgeClass !== 'badge' && badgeClass, 'h-auto max-w-full whitespace-normal', badgeClass === 'badge-outline' && 'border-current text-inherit', className]} data-card-badge><slot />{text}</span>}

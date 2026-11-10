@@ -1,5 +1,11 @@
 # Codex to ChatGPT
 
+## 2026-11-10 — OWNER card icons and badges
+
+Pages CMS now offers Phosphor-ikon, Badge and Badge-klasse on authored content cards, selection cards, packages, public named cases and card listings. Enter a Phosphor Regular name. Leave Badge empty to hide it. Existing Synlighet card icons, package badges and link destinations still render from their current data. Case decorations follow named publication permission.
+
+Astro check, the Pagefind build and focused tests passed. Local Chromium verified saved-field fixtures on Home, Synlighet and Priser at 390 px and 1440 px in both themes, including the existing Synlighet badges. The fixtures simulated the CMS data. Authenticated CMS save and editorial acceptance are pending.
+
 ## 2026-11-08 — OWNER typography controls and font choices
 
 Tema og utseende now exposes Skriftfamilie and CSS-variabler under Typografi. The existing Instrument Sans and Figtree selections are joined by Montserrat, Hanken Grotesk and Outfit-Figtree. Outfit is the heading face and Figtree the body face in the mixed preset. The fonts are served locally from Fontsource. Saved CSS values are preserved, and the parser still accepts legacy presets.

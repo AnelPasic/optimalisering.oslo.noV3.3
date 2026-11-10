@@ -3,6 +3,7 @@ import type { CollectionEntry } from 'astro:content';
 import { surfaceAttribute, surfaceClasses } from '../lib/surface';
 import ServiceChannelIcon from './ServiceChannelIcon.astro';
 import Arrow from './Arrow.astro';
+import PhosphorIcon from './PhosphorIcon.astro';
 
 type Item = NonNullable<CollectionEntry<'pages'>['data']['sections'][number]['items']>[number];
 interface Props { items: Item[]; }
@@ -11,7 +12,9 @@ const { items } = Astro.props;
 const backgrounds = ['info', 'base-300', 'secondary'] as const;
 ---
 <div class="mt-[44px] grid grid-cols-3 gap-(--gap-lg) max-[900px]:grid-cols-1 max-[650px]:mt-8 max-[650px]:gap-(--gap)">
-  {items.map((item, index) => (
+  {items.map((item, index) => {
+    const badgeClass = item.badgeClass ?? (item.badge === 'Inkludert i alle pakker' ? 'badge-success' : 'badge-outline');
+    return (
     <article
       data-home-selector-card
       class:list={['card relative min-w-0 border border-transparent transition-[border-color] duration-150 hover:border-primary', surfaceClasses(surfaceAttribute(item.surface) ?? backgrounds[index % backgrounds.length])]}
@@ -26,9 +29,9 @@ const backgrounds = ['info', 'base-300', 'secondary'] as const;
         <div class="mb-[26px] flex items-center justify-between gap-(--gap-sm) max-[900px]:mb-[18px]">
           <div class="flex min-w-0 flex-col items-start gap-2">
             <span class="text-(length:--type-body) font-semibold leading-(--leading-body)">{item.title}</span>
-            {item.badge && <span class={item.badge === 'Inkludert i alle pakker'
-              ? 'badge badge-success badge-sm h-auto min-h-5 max-w-full whitespace-normal border-current py-1'
-              : 'badge badge-outline badge-sm h-auto min-h-5 max-w-full whitespace-normal border-current py-1 text-inherit'}>
+            {item.badge && <span
+              class:list={['badge', badgeClass !== 'badge' && badgeClass, 'badge-sm h-auto min-h-5 max-w-full whitespace-normal border-current py-1', badgeClass === 'badge-outline' && 'text-inherit']}
+              data-card-badge>
               {item.badge === 'Inkludert i alle pakker' && (
                 <svg class="size-[1em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                   <g fill="currentColor" stroke-linejoin="miter" stroke-linecap="butt">
@@ -40,7 +43,7 @@ const backgrounds = ['info', 'base-300', 'secondary'] as const;
               {item.badge}
             </span>}
           </div>
-          {item.icon && <ServiceChannelIcon kind={item.icon} />}
+          {item.iconName ? <PhosphorIcon name={item.iconName} class="size-[34px] shrink-0" size={34} /> : item.icon && <ServiceChannelIcon kind={item.icon} />}
         </div>
         <h3 class="max-w-[390px] max-[900px]:max-w-[600px]">{item.headline ?? item.title}</h3>
         <p class="mt-[18px] mb-5 grow-0 break-words text-(length:--type-body) leading-(--leading-body) text-inherit">{item.text}</p>
@@ -49,5 +52,6 @@ const backgrounds = ['info', 'base-300', 'secondary'] as const;
         </div>
       </div>
     </article>
-  ))}
+    );
+  })}
 </div>

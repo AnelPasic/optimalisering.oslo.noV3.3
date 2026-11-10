@@ -76,6 +76,63 @@ settings:
       create: "Nytt innhold: {path} (via Pages CMS)"
       delete: "Slettet innhold: {path} (via Pages CMS)"
 components:
+  cardListing:
+    label: Visning i innholdslister
+    type: object
+    fields:
+      - name: title
+        label: Kort listetittel
+        type: string
+        description: Tomt felt bruker hovedoverskriften.
+      - name: summary
+        label: Sammendrag
+        type: text
+        description: Tomt felt bruker ingressen.
+      - name: label
+        label: Lenketekst
+        type: string
+        description: Tomt felt bruker Les mer.
+      - name: order
+        label: Redaksjonell rekkefølge
+        type: number
+        options:
+          step: 1
+        description: Laveste heltall først. Uten tall kommer artikkelen etter de nummererte. Dette er ikke en dato.
+      - name: visible
+        label: Vis i innholdslister
+        type: boolean
+        default: true
+        description: Av skjuler siden i både automatiske og manuelle lister. URL og indeksering endres ikke.
+      - name: visual
+        label: Listevisual
+        component: listingVisual
+      - { name: iconName, label: Phosphor-ikon, component: cardIconName }
+      - { name: badge, label: Badge, component: cardBadgeText }
+      - { name: badgeClass, label: Badge-klasse, component: cardBadgeClass }
+  cardIconName:
+    type: string
+    description: Valgfritt. Skriv navnet fra phosphoricons.com, for eksempel lightning eller map-pin.
+  cardBadgeText:
+    type: string
+    description: Valgfri merketekst. Tomt felt skjuler merket.
+  cardBadgeClass:
+    type: select
+    options:
+      placeholder: Standard
+      values:
+        - { name: badge, label: badge }
+        - { name: badge-primary, label: badge-primary }
+        - { name: badge-secondary, label: badge-secondary }
+        - { name: badge-accent, label: badge-accent }
+        - { name: badge-neutral, label: badge-neutral }
+        - { name: badge-info, label: badge-info }
+        - { name: badge-success, label: badge-success }
+        - { name: badge-warning, label: badge-warning }
+        - { name: badge-error, label: badge-error }
+        - { name: badge-outline, label: badge-outline }
+        - { name: badge-soft, label: badge-soft }
+        - { name: badge-dash, label: badge-dash }
+        - { name: badge-ghost, label: badge-ghost }
   sectionButtonChoice:
     type: select
     options:
@@ -160,10 +217,9 @@ components:
         label: Stor overskrift på valgkort (valgfritt)
         type: string
         description: "For valgkort på Synlighet. Tjenestenavnet står i topplinjen, mens denne teksten blir kortets hovedoverskrift."
-      - name: badge
-        label: Merke / badge (valgfritt)
-        type: string
-        description: "Vises som et lite DaisyUI-merke under tjenestenavnet. La feltet stå tomt for å skjule merket."
+      - { name: iconName, label: Phosphor-ikon, component: cardIconName }
+      - { name: badge, label: Badge, component: cardBadgeText }
+      - { name: badgeClass, label: Badge-klasse, component: cardBadgeClass }
       - name: icon
         label: Tjenesteikon (valgfritt)
         type: select
@@ -428,6 +484,9 @@ components:
             component: surfaceChoice
             description: Bakgrunn for denne boksen. Standard beholder designets opprinnelige farge.
           - { name: buttonStyle, label: Knapp, component: sectionButtonChoice }
+          - { name: iconName, label: Phosphor-ikon, component: cardIconName }
+          - { name: badge, label: Badge, component: cardBadgeText }
+          - { name: badgeClass, label: Badge-klasse, component: cardBadgeClass }
       - &serviceLinks
         name: links
         label: Relaterte lenker
@@ -690,6 +749,9 @@ components:
                   - name: summary
                     label: Kort beskrivelse
                     type: text
+                  - { name: iconName, label: Phosphor-ikon, component: cardIconName }
+                  - { name: badge, label: Badge, component: cardBadgeText }
+                  - { name: badgeClass, label: Badge-klasse, component: cardBadgeClass }
                   - name: label
                     label: Lenketekst
                     type: string
@@ -1179,6 +1241,7 @@ content:
                           min: 0
                           max: 100
                         required: true
+      - { name: listing, component: cardListing }
       - name: sections
         label: Innholdsseksjoner
         type: block
@@ -1310,6 +1373,9 @@ content:
                     component: surfaceChoice
                     description: Bakgrunn for denne boksen. Standard beholder designets opprinnelige farge.
                   - { name: buttonStyle, label: Knapp, component: sectionButtonChoice }
+                  - { name: iconName, label: Phosphor-ikon, component: cardIconName }
+                  - { name: badge, label: Badge, component: cardBadgeText }
+                  - { name: badgeClass, label: Badge-klasse, component: cardBadgeClass }
               - name: links
                 label: Relaterte lenker
                 component: link
@@ -1461,6 +1527,7 @@ content:
                             required: true
                           - *hubHeropositionX
                           - *hubHeropositionY
+          - { name: listing, component: cardListing }
           - &a6
             name: sections
             label: Innholdsseksjoner
@@ -1590,6 +1657,7 @@ content:
           - *serviceslug
           - *a4
           - *standardHero
+          - { name: listing, component: cardListing }
           - name: sections
             label: Innholdsseksjoner
             description: Flytt eller skjul seksjoner her. Tekster, pakkepriser og sammenligningspunkter redigeres i Priser → Pakker og priser. Kalkulator og resultater redigeres under Globale Elementer.
@@ -2035,9 +2103,9 @@ content:
                     type: boolean
                     default: false
                     required: true
-                  - name: badge
-                    label: Anbefalt-merke
-                    type: string
+                  - { name: iconName, label: Phosphor-ikon, component: cardIconName }
+                  - { name: badge, label: Badge, component: cardBadgeText }
+                  - { name: badgeClass, label: Badge-klasse, component: cardBadgeClass }
                   - name: cta
                     label: Primær bestilling – sikker rute og valgt pakke
                     type: object
@@ -2070,6 +2138,7 @@ content:
           - *serviceslug
           - *a4
           - *standardHero
+          - { name: listing, component: cardListing }
           - name: sections
             label: Innholdsseksjoner
             type: block
@@ -2135,36 +2204,7 @@ content:
             description: "Public URL /innsikt/article-name/. Existing URLs must not be renamed."
           - *a4
           - *standardHero
-          - name: listing
-            label: Visning i innholdslister
-            type: object
-            fields:
-              - name: title
-                label: Kort listetittel
-                type: string
-                description: Tomt felt bruker hovedoverskriften.
-              - name: summary
-                label: Sammendrag
-                type: text
-                description: Tomt felt bruker ingressen.
-              - name: label
-                label: Lenketekst
-                type: string
-                description: Tomt felt bruker Les mer.
-              - name: order
-                label: Redaksjonell rekkefølge
-                type: number
-                options:
-                  step: 1
-                description: Laveste heltall først. Uten tall kommer artikkelen etter de nummererte. Dette er ikke en dato.
-              - name: visible
-                label: Vis i innholdslister
-                type: boolean
-                default: true
-                description: Av skjuler artikkelen i både automatiske og manuelle lister. URL og indeksering endres ikke.
-              - name: visual
-                label: Listevisual
-                component: listingVisual
+          - { name: listing, component: cardListing }
           - *a6
           - *a7
           - name: kind
@@ -2184,6 +2224,7 @@ content:
       - *serviceslug
       - *a4
       - *standardHero
+      - { name: listing, component: cardListing }
       - *a6
       - *a7
   - name: vurdering
@@ -2251,6 +2292,9 @@ content:
         label: Kunde- eller visningsnavn
         type: string
         required: true
+      - { name: iconName, label: Phosphor-ikon, component: cardIconName }
+      - { name: badge, label: Badge, component: cardBadgeText }
+      - { name: badgeClass, label: Badge-klasse, component: cardBadgeClass }
       - name: anonymizedLabel
         label: Godkjent anonymisert navn
         type: string
@@ -2973,6 +3017,9 @@ content:
                     label: Beskrivelse
                     type: text
                     required: true
+                  - { name: iconName, label: Phosphor-ikon, component: cardIconName }
+                  - { name: badge, label: Badge, component: cardBadgeText }
+                  - { name: badgeClass, label: Badge-klasse, component: cardBadgeClass }
                   - name: link
                     label: Lenke
                     type: object
@@ -3618,6 +3665,9 @@ content:
                 component: surfaceChoice
                 description: Bakgrunn for denne boksen. Standard beholder designets opprinnelige farge.
               - { name: buttonStyle, label: Knapp, component: sectionButtonChoice }
+              - { name: iconName, label: Phosphor-ikon, component: cardIconName }
+              - { name: badge, label: Badge, component: cardBadgeText }
+              - { name: badgeClass, label: Badge-klasse, component: cardBadgeClass }
           - name: links
             label: Relaterte lenker
             component: link
@@ -3717,6 +3767,9 @@ content:
                 component: surfaceChoice
                 description: Bakgrunn for denne boksen. Standard beholder designets opprinnelige farge.
               - { name: buttonStyle, label: Knapp, component: sectionButtonChoice }
+              - { name: iconName, label: Phosphor-ikon, component: cardIconName }
+              - { name: badge, label: Badge, component: cardBadgeText }
+              - { name: badgeClass, label: Badge-klasse, component: cardBadgeClass }
           - name: links
             label: Relaterte lenker
             component: link

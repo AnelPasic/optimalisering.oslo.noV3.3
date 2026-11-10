@@ -1,17 +1,20 @@
 ---
 import Arrow from './Arrow.astro';
+import CardDecorations from './CardDecorations.astro';
+import type { CardDecoration } from '../lib/card-decoration';
 import { actionClasses, buttonChoice, type ButtonStyle } from '../lib/section-buttons';
 import TermText from './TermText.astro';
 import RichMarkdown from './RichMarkdown.astro';
 import {hasRichMarkdown} from '../lib/rich-markdown';
 import {surfaceAttribute,surfaceClasses,type Surface} from '../lib/surface';
-interface Props {title:string;text:string;surface?:Surface;number?:string;href?:string;label?:string;titleTerms?:string[];textTerms?:string[];linkVariant?:'button'|'text';buttonStyle?:ButtonStyle;transparent?:boolean;}
-const {title,text,surface,number,href,label,titleTerms=[],textTerms=[],linkVariant='button',buttonStyle,transparent=false}=Astro.props;
+interface Props extends CardDecoration {title:string;text:string;surface?:Surface;number?:string;href?:string;label?:string;titleTerms?:string[];textTerms?:string[];linkVariant?:'button'|'text';buttonStyle?:ButtonStyle;transparent?:boolean;}
+const {title,text,surface,number,href,label,iconName,badge,badgeClass,titleTerms=[],textTerms=[],linkVariant='button',buttonStyle,transparent=false}=Astro.props;
 const selected=surfaceAttribute(surface)??'base-100';
 const action = buttonChoice(buttonStyle) ?? (linkVariant === 'text' ? 'link' : 'btn');
 ---
 <article class:list={['card min-w-0 wrap-anywhere',transparent?'bg-transparent card-border border-base-300':surfaceClasses(selected),!transparent&&selected==='base-200'&&'border border-base-300']} data-content-card data-box-variant="card" data-surface={transparent?undefined:selected}>
  <div class="card-body min-w-0 gap-5">
+  <CardDecorations iconName={iconName} badge={badge} badgeClass={badgeClass} />
   {number&&<span class="font-semibold" aria-hidden="true" data-card-number>{number}</span>}
   <h3 class="card-title"><TermText text={title} terms={titleTerms}/></h3>
   {hasRichMarkdown(text)?<RichMarkdown text={text} variant="card"/>:<p class="text-(length:--type-body) leading-(--leading-body)"><TermText text={text} terms={textTerms}/></p>}

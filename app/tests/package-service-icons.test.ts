@@ -2,9 +2,9 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {existsSync,readFileSync} from 'node:fs';
 import {homepageBlockSchema} from '../src/lib/home-builder.ts';
-import {PHOSPHOR_ICON_NAMES,isPhosphorIconName} from '../src/lib/package-icon-names.ts';
+import {PHOSPHOR_ICON_NAMES,isPhosphorIconName} from '../src/lib/phosphor-icon-names.ts';
 import {groupPackageServices} from '../src/lib/package-service-groups.ts';
-import {homepageBlockEditor} from './helpers/pages-cms-json.ts';
+import {entryForFile} from './helpers/pages-cms-json.ts';
 import YAML from 'yaml';
 
 const doc=JSON.parse(readFileSync('src/content/global-elements/priser.json','utf8'));
@@ -31,14 +31,16 @@ test('the complete pinned Phosphor Regular catalog is available at build time, n
     assert.ok(existsSync(path),'Missing pinned npm asset: '+path);
     assert.ok(readFileSync(path,'utf8').startsWith('<svg'),'Unexpected upstream SVG');
   }
-  assert.ok(component.includes('set:html={svgBody}'),'Only the selected SVG markup is inlined in static HTML');
-  assert.ok(component.includes('node:fs'),'Icons are loaded while building, not in client JS');
+  const renderer=readFileSync('src/components/PhosphorIcon.astro','utf8');
+  assert.ok(renderer.includes('set:html={svgBody}'),'Only the selected SVG markup is inlined in static HTML');
+  assert.ok(renderer.includes('node:fs'),'Icons are loaded while building, not in client JS');
   assert.ok(component.includes('kind ==='),'Legacy generic icon fallback remains available');
 });
 
 test('Pages CMS supports free-text local icon names but rejects unknown or unsafe entries',()=>{
   const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
-  const items=homepageBlockEditor(cms,'packages').fields.find((f:any)=>f.name==='items').fields;
+  const editor=entryForFile(cms,'app/src/content/global-elements/priser.json');
+  const items=editor.fields.find((f:any)=>f.name==='content').fields.find((f:any)=>f.name==='items').fields;
   const icons=items.find((f:any)=>f.name==='iconItems').fields;
   const input=icons.find((f:any)=>f.name==='iconName');
   assert.equal(input.type,'string');

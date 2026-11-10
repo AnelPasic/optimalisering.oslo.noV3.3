@@ -1,0 +1,11 @@
+---
+import type { CardDecoration } from '../lib/card-decoration';
+import CardBadge from './CardBadge.astro';
+import PhosphorIcon from './PhosphorIcon.astro';
+interface Props extends CardDecoration {}
+const { iconName, badge, badgeClass } = Astro.props;
+---
+{(iconName || badge?.trim()) && <div class="flex min-w-0 items-start justify-between gap-3" data-card-decorations>
+  <CardBadge text={badge} badgeClass={badgeClass} class="badge-sm min-h-5 py-1" />
+  <PhosphorIcon name={iconName} class="ml-auto size-6 shrink-0" />
+</div>}

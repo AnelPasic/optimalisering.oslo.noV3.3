@@ -1,4 +1,5 @@
 ---
+import CardDecorations from './CardDecorations.astro';
 import { existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 import type { HeroView } from '../lib/page-hero';
@@ -19,6 +20,7 @@ const image = supplied ? content.src : '/images/home/hero-customer-preview.svg';
  {home?<img class="hero-photo" data-photo-src={content.src} data-photo-state={supplied ? 'supplied' : 'preview-placeholder'}
    src={image} width="1200" height="750" alt="" fetchpriority="high" decoding="async" style={{ objectPosition: `${content.positionX}% ${content.positionY}%` }} />:<img src={content.src} alt={content.alt} width="960" height="720" fetchpriority="high" decoding="async" style={{objectPosition:`${content.positionX}% ${content.positionY}%`}}/>}
  {proof&&<div class="hero-proof card bg-base-100 text-base-content">
+  <CardDecorations iconName={proof.iconName} badge={proof.badge} badgeClass={proof.badgeClass} />
    <p class="hero-proof-result"><span><TermText text={proof.metric} terms={['roas']} /></span>{' '}<span class="hero-proof-comparison">{proof.comparison}</span></p>
    <p class="hero-proof-support"><TermText text={proof.support} terms={['google-ads']} /></p>
  </div>}

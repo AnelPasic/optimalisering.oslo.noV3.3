@@ -1,7 +1,9 @@
 import { z } from 'astro/zod';
+import { cardDecoration, cardDecorationFields, type CardDecoration } from './card-decoration.ts';
 
 const nullableText = z.string().nullable();
 export const proofCaseSchema = z.object({
+  ...cardDecorationFields,
   id: z.string().regex(/^[a-z0-9][a-z0-9-]*$/),
   originKey: z.string().nullable().optional(),
   clientName: z.string(), anonymizedLabel: nullableText, relationship: nullableText,
@@ -36,7 +38,7 @@ const cmsProofSchema = proofCaseSchema.extend({
 export const proofContentSchema = cmsProofSchema;
 
 export type ProofCase = z.infer<typeof proofCaseSchema>;
-export interface PublicProof {
+export interface PublicProof extends CardDecoration {
   displayName: string;
   dominantMetric: string;
   before: string;
@@ -67,6 +69,7 @@ export function getPublishableCases(slot: unknown, records: readonly unknown[]):
     const displayName = proof.namingPermission === 'ANONYMIZED_APPROVED' ? proof.anonymizedLabel : proof.clientName;
     if (!nonempty(displayName)) return [];
     const publicProof: PublicProof = {
+      ...(proof.namingPermission === 'ANONYMIZED_APPROVED' ? {} : cardDecoration(proof)),
       displayName, dominantMetric: proof.dominantMetric, before: proof.before!, after: proof.after!, delta: proof.delta,
       period: { before: proof.period.before!, after: proof.period.after! }, intervention: proof.intervention!, limitations: proof.limitations!,
     };
