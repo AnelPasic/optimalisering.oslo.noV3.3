@@ -72,7 +72,8 @@
             "icon": "page",
             "group": "Organisk Synlighet",
             "label": "AI-synlighet",
-            "compactLabel": "AI-synlighet - AIO - AEO - GEO"
+            "compactLabel": "AI-synlighet",
+            "description": "AIO - AEO - GEO"
           },
           {
             "icon": "local",
