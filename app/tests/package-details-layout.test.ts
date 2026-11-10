@@ -27,3 +27,14 @@ test('Systemer flyttes bare i visningen, uten å miste eller kopiere ikondata',(
     assert.equal(hidden[0].items.length,4);
   }
 });
+
+test('Accordion CSS does not override the original goal and service icon list styling',()=>{
+  const css=readFileSync('src/styles/compositions/package.css','utf8');
+  assert.ok(css.includes('.package-detail > ul { padding-left: 18px; }'),'Generic indent is limited to direct detail lists');
+  assert.ok(css.includes('.package-detail > ul li + li { margin-top: 12px; }'),'Generic spacing excludes nested goals and icons');
+  assert.ok(css.includes('.package-situations ul { padding-left: 0; list-style: none;'),'Goals retain no indentation');
+  assert.ok(css.includes('.package-situations li + li { margin-top: 7px; }'),'Goals retain original vertical rhythm');
+  assert.ok(css.includes('.package-icon-items { list-style: none; padding: 0; display: flex; flex-wrap: wrap;'),'Icons retain original two-column flex layout');
+  assert.ok(css.includes('.package-detail .package-block-heading { color: var(--ink); }'),'Expanded headings retain card text color');
+  assert.ok(css.includes('.package-detail .package-icon-items { color: var(--ink); }'),'Expanded service labels retain card text color');
+});
