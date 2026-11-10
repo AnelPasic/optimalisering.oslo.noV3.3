@@ -99,6 +99,7 @@ test('real page schema resolves one shared source on Home and Om, rejects collis
 test('organiske valgkort lagres under Global Innhold og kan redigeres uten dobbel kilde',()=>{
   const filename='app/src/content/global-content/kanaler.json';
   const original=JSON.parse(readFileSync('src/content/global-content/kanaler.json','utf8'));
+  assert.deepEqual(original.items.map((item:any)=>item.icon),['seo','local-seo','ai-search']);
   const entry=entryForFile(cms,filename);
   assert.ok(entry,'Globalt innhold must expose the organic card editor');
   const fields=entry.fields.find((f:any)=>f.name==='items');
@@ -109,8 +110,10 @@ test('organiske valgkort lagres under Global Innhold og kan redigeres uten dobbe
   const modified=structuredClone(original);
   modified.items[1].headline='Nytt lokalt budskap';
   modified.items[1].badge='Ny badge fra CMS';
+  modified.items[1].icon='seo';
   modified.items[1].text='Ny CMS-beskrivelse';
   assert.ok(itemEditor.fields.some((f:any)=>f.name==='badge'),'Globalt innhold must expose editable DaisyUI badge');
+  assert.ok(itemEditor.fields.some((f:any)=>f.name==='icon'),'Globalt innhold must expose service icons');
   const updated=JSON.parse(cmsJsonSave(original,modified,entry,cms));
   assert.deepEqual(updated,modified);
   assert.equal(sharedContentSchema.safeParse(updated).success,true);
@@ -131,6 +134,7 @@ test('Betalt synlighet uses one globally editable CMS source directly after Orga
     {_block:'sharedContent',entry:'betalt-synlighet'}
   ]);
   assert.equal(original.items.length,3);
+  assert.deepEqual(original.items.map((item:any)=>item.icon),['google-ads','chatgpt-ads','meta-ads']);
   assert.deepEqual(original.items.map((item:any)=>item.title),['Google Ads','ChatGPT Ads','Meta Ads']);
   assert.ok(original.items.every((item:any)=>item.badge&&item.headline&&item.label));
   assert.ok(original.items.every((item:any)=>item.href===undefined),'No dead links to unavailable paid service pages');
@@ -138,6 +142,7 @@ test('Betalt synlighet uses one globally editable CMS source directly after Orga
   const changed=structuredClone(original);
   changed.items[0].headline='Ny annonseringsoverskrift';
   changed.items[1].badge='Oppdatert badgetekst';
+  changed.items[1].icon='meta-ads';
   changed.items[2].text='CMS-redigert beskrivelse';
   assert.deepEqual(JSON.parse(cmsJsonSave(original,changed,entry,cms)),changed);
   assert.equal(sharedContentSchema.safeParse(changed).success,true);
