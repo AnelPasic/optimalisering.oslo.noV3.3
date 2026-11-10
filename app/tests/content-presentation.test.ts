@@ -11,10 +11,10 @@ const home=localHomeFixture();
 const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
 const normal=(p:any)=>sectionRecords(p).find((s:any)=>s.id==='cms-local-fixture');
 
-test('ordinary layout and box choices survive primary ingestion independently of surfaces',()=>{
- for(const layout of ['default','two-columns','three-columns','stacked'])for(const boxVariant of ['default','card']){
-  const p=structuredClone(home),s=normal(p);s.layout=layout;s.items[0].boxVariant=boxVariant;s.surface='info';s.items[0].surface='secondary';
-  const parsed=normal(pageSchema.parse(p));assert.equal(parsed.layout,layout);assert.equal(parsed.items[0].boxVariant,boxVariant);assert.equal(parsed.surface,'info');assert.equal(parsed.items[0].surface,'secondary');
+test('ordinary layout and card metadata survive ingestion independently of surfaces',()=>{
+ for(const layout of ['default','two-columns','three-columns','stacked']){
+  const p=structuredClone(home),s=normal(p);s.layout=layout;s.items[0].boxVariant='card';s.surface='info';s.items[0].surface='secondary';
+  const parsed=normal(pageSchema.parse(p));assert.equal(parsed.layout,layout);assert.equal(parsed.items[0].boxVariant,'card');assert.equal(parsed.surface,'info');assert.equal(parsed.items[0].surface,'secondary');
  }
  for(const value of ['grid-cols-8','custom','#fff',{},12])for(const field of ['layout','boxVariant']){
   const p=structuredClone(home),s=normal(p);(field==='layout'?s:s.items[0])[field]=value;assert.equal(pageSchema.safeParse(p).success,false);
@@ -23,19 +23,19 @@ test('ordinary layout and box choices survive primary ingestion independently of
 
 test('new presentation fields preserve automatic rendering defaults and reject protected use',()=>{
  const legacy=structuredClone(home);normal(legacy).items[0].boxVariant='plain';
- assert.equal(normal(pageSchema.parse(legacy)).items[0].boxVariant,'default');
- for(const empty of [undefined,null,'','default']){const p=structuredClone(home),s=normal(p);s.layout=empty;s.items[0].boxVariant=empty;const parsed=normal(pageSchema.parse(p));assert.equal(parsed.layout,'default');assert.equal(parsed.items[0].boxVariant,'default');}
+ assert.equal(normal(pageSchema.parse(legacy)).items[0].boxVariant,undefined);
+ for(const empty of [undefined,null,'','default']){const p=structuredClone(home),s=normal(p);s.layout=empty;s.items[0].boxVariant=empty;const parsed=normal(pageSchema.parse(p));assert.equal(parsed.layout,'default');assert.equal(parsed.items[0].boxVariant,undefined);}
  for(const id of globalElementIds.filter(id=>!['mekanisme','passer'].includes(id))){const master:any=getGlobalElement(id);master.layout='stacked';assert.equal(homepageBlockSchema.safeParse(master).success,false,id);}
  const calculator=structuredClone(home);sectionRecords(calculator).find(s=>s._block==='global'&&s.element==='regneeksempel').layout='stacked';assert.equal(pageSchema.safeParse(calculator).success,false,'placement cannot accept arbitrary layout');
  const service=JSON.parse(readFileSync('src/content/pages/synlighet.json','utf8'));
  for(const field of ['layout','boxVariant']){const p=structuredClone(service),s=sectionRecords(p).find(s=>s._block==='global'&&s.element==='sjekk');if(field==='layout')s.layout='stacked';else{s.items=[{title:'Test',text:'Test',boxVariant:'card'}];}assert.equal(pageSchema.safeParse(p).success,false,field);}
 });
 
-test('co-located CMS choices expose semantics and round-trip variant/reorder without authority changes',()=>{
+test('CMS preserves card metadata and exposes only section layout and surface choices',()=>{
  const entry=entryForFile(cms,'app/src/content/pages/home.json'),sections=entry.fields.find((f:any)=>f.name==='sections'),content=sections.blocks.find((b:any)=>b.name==='content');
  const layout=resolveField(content.fields.find((f:any)=>f.name==='layout'),cms.components),items=content.fields.find((f:any)=>f.name==='items'),box=resolveField(items.fields.find((f:any)=>f.name==='boxVariant'),cms.components);
  assert.equal(layout.type,'select');assert.deepEqual(layout.options.values.map((v:any)=>v.name),['default','two-columns','three-columns','stacked']);
- assert.equal(box.type,'select');assert.deepEqual(box.options.values.map((v:any)=>v.name),['default','card']);
+ assert.equal(box.type,'string');assert.equal(box.hidden,true);assert.equal(box.default,'card');
  assert.ok(sections.list);
  const ref=sections.blocks.find((b:any)=>b.name==='global');assert.ok(!ref.fields.some((f:any)=>['layout','boxVariant'].includes(f.name)));
  const p=structuredClone(home),s=normal(p);s.layout='stacked';s.items[0].boxVariant='card';

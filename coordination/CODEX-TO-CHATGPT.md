@@ -1,5 +1,11 @@
 # Codex to ChatGPT
 
+## 2026-11-10 — OWNER use Card for all ordinary content items
+
+Ordinary section items and the PageList Card layout now render through ContentCard. Pages CMS no longer exposes a box variant choice. Saved Standard selections in Oslo Testside and the MWS Tjeneste fixture now store card. Older items without that metadata use the same renderer. Configured colors, decorations and button styles continue through the shared Card, and PageList keeps its independent layouts and link default.
+
+Oslo's focused tests, Astro check and Pagefind build passed. MWS verify passed all 67 tests and the build. Chromium checked 24 combinations of affected routes, viewport and theme. Dark Oslo styling was tested by applying the configured theme in the browser because the owner had disabled theme switching.
+
 ## 2026-11-10 — OWNER retire Open Box
 
 Pages CMS and the design galleries now expose Standard and Card. The dedicated Open Box rendering branch and styles are removed. Existing records with the retired value are read as Standard. Current Oslo content has no saved use. The MWS starter had one saved use on Tjeneste in the Redigerbar example, which now stores Standard and still uses the native Card component.

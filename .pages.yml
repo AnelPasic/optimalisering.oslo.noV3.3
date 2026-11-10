@@ -235,9 +235,7 @@ components:
       - name: label
         label: Lenketekst
         type: string
-      - name: boxVariant
-        label: Boksvariant
-        component: boxVariantChoice
+      - { name: boxVariant, component: cardVariant }
       - name: surface
         label: Boksfarge
         component: surfaceChoice
@@ -382,15 +380,10 @@ components:
           label: Tre kolonner
         - name: stacked
           label: Liste (én kolonne)
-  boxVariantChoice:
-    type: select
-    options:
-      placeholder: Standard (automatisk)
-      values:
-        - name: default
-          label: Standard (automatisk)
-        - name: card
-          label: Kort
+  cardVariant:
+    type: string
+    hidden: true
+    default: card
   sectionContent:
     type: object
     fields:
@@ -460,10 +453,7 @@ components:
           - name: label
             label: Lenketekst
             type: string
-          - name: boxVariant
-            label: Boksvariant
-            component: boxVariantChoice
-            description: Standard følger seksjonens oppsett. Kort viser innholdet som et kort. Boksfarge velges separat.
+          - { name: boxVariant, component: cardVariant }
           - name: surface
             label: Boksfarge
             component: surfaceChoice
@@ -1349,10 +1339,7 @@ content:
                   - name: label
                     label: Lenketekst
                     type: string
-                  - name: boxVariant
-                    label: Boksvariant
-                    component: boxVariantChoice
-                    description: Standard følger seksjonens oppsett. Kort viser innholdet som et kort. Boksfarge velges separat.
+                  - { name: boxVariant, component: cardVariant }
                   - name: surface
                     label: Boksfarge
                     component: surfaceChoice
@@ -3641,10 +3628,7 @@ content:
               - name: label
                 label: Lenketekst
                 type: string
-              - name: boxVariant
-                label: Boksvariant
-                component: boxVariantChoice
-                description: Standard følger seksjonens oppsett. Kort viser innholdet som et kort. Boksfarge velges separat.
+              - { name: boxVariant, component: cardVariant }
               - name: surface
                 label: Boksfarge
                 component: surfaceChoice
@@ -3743,10 +3727,7 @@ content:
               - name: label
                 label: Lenketekst
                 type: string
-              - name: boxVariant
-                label: Boksvariant
-                component: boxVariantChoice
-                description: Standard følger seksjonens oppsett. Kort viser innholdet som et kort. Boksfarge velges separat.
+              - { name: boxVariant, component: cardVariant }
               - name: surface
                 label: Boksfarge
                 component: surfaceChoice

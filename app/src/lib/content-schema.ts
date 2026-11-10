@@ -115,7 +115,7 @@ export const pageSchema = z.preprocess((input,context)=>{
       if (model === 'protected' && (section.surface !== 'default' || section.items?.some(item => item.surface !== 'default'))) context.addIssue({ code: 'custom', path: ['sections', index, 'surface'], message: 'Protected CTA/form surfaces are design-system controlled' });
       if (model === 'protected' && (buttonChoice(section.buttonStyle) || buttonChoice(section.boxButtonStyle) || section.items?.some(item => buttonChoice(item.buttonStyle))))
         context.addIssue({code:'custom',path:['sections',index,'buttonStyle'],message:'Protected CTA/form buttons are design-system controlled'});
-      if (model === 'protected' && (section.layout !== 'default' || section.items?.some(item => item.boxVariant !== 'default'))) context.addIssue({code:'custom',path:['sections',index,'layout'],message:'Protected CTA/form layout and boxes are design-system controlled'});
+      if (model === 'protected' && (section.layout !== 'default' || section.items?.some(item => item.boxVariant === 'card'))) context.addIssue({code:'custom',path:['sections',index,'layout'],message:'Protected CTA/form layout and boxes are design-system controlled'});
     });
     if (['synlighet', 'konvertering'].includes(page.slug) && page.sections.filter(section => section.id === 'sjekk').length !== 1) context.addIssue({ code: 'custom', path: ['sections'], message: 'Protected service CTA identity must remain present' });
     // The former empty homepage chrome stub is not authored in Pages CMS.

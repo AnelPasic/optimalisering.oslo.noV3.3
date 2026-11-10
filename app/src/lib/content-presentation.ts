@@ -1,11 +1,10 @@
 import {z} from 'astro/zod';
 
 export const contentLayoutValues=['default','two-columns','three-columns','stacked'] as const;
-export const boxVariantValues=['default','card'] as const;
 const automatic=(value:unknown)=>value==null||value===''?'default':value;
 export const contentLayoutSchema=z.preprocess(automatic,z.enum(contentLayoutValues));
-// Older exports use 'plain'. Resolve that value to Standard during ingestion.
-export const boxVariantSchema=z.preprocess(value=>value==='plain'?'default':automatic(value),z.enum(boxVariantValues));
+// Keep validating stored card metadata from earlier CMS versions.
+export const boxVariantSchema=z.preprocess(value=>value==='plain'||automatic(value)==='default'?undefined:value,z.literal('card').optional());
 export function contentLayoutAttribute(value:unknown,protectedRow=false){
  const parsed=contentLayoutSchema.safeParse(value);
  return !protectedRow&&parsed.success&&parsed.data!=='default'?parsed.data:undefined;

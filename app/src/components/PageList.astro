@@ -16,7 +16,7 @@ const listAction = buttonChoice(section.boxButtonStyle, sectionDefaultsAt(siteCh
 const pages = suppliedPages ?? (await getCollection('pages')).map(entry=>entry.data);
 const cases = config.source === 'cases' || config.mode === 'manual' ? (await getCollection('proofCases')).map(entry=>entry.data) : [];
 const items = resolvePageList(config, pages, 'public', cases);
-const cards = items.map(item => ({ iconName:item.iconName, badge:item.badge, badgeClass:item.badgeClass, title: item.title, text: item.summary, href: item.href, label: item.label, surface: 'default' as const, boxVariant: 'default' as const }));
+const cards = items.map(item => ({ iconName:item.iconName, badge:item.badge, badgeClass:item.badgeClass, title: item.title, text: item.summary, href: item.href, label: item.label, surface: 'default' as const }));
 const displayedItems = items.map(item => ({ ...item, displayVisual: pageListPresentationVisual(item, config.layout) }));
 // For PageList cards, reuse HomeSection's existing column/viewport contract.
 const cardLayout = config.columns === 1 ? 'stacked' : config.columns === 2 ? 'two-columns' : config.columns === 3 ? 'three-columns' : section.layout;
