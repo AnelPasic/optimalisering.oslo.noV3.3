@@ -207,9 +207,7 @@ try {
  // spacing, contrast and one-click package path at all review breakpoints.
  const organicSource=JSON.parse(readFileSync(new URL('../src/content/global-content/kanaler.json',import.meta.url),'utf8'));
  const organicItems=organicSource.items;
- const selectedOffer=JSON.parse(readFileSync(new URL('../src/content/global-elements/priser.json',import.meta.url),'utf8'))
-   .content.items.find(item=>item.key==='optimalisering');
- const expectedPrice=[new Intl.NumberFormat('nb-NO').format(selectedOffer.price),selectedOffer.priceSuffix,selectedOffer.vatSuffix].join(' ').replace(/\s+/g,' ');
+ const expectedBadges=organicItems.map(item=>item.badge);
  for(const width of [390,768,1440]){
   const page=await browser.newPage({viewport:{width,height:900}});
   assert.equal((await page.goto(origin+'/synlighet/',{waitUntil:'networkidle'})).status(),200);
@@ -223,7 +221,11 @@ try {
      count:nodes.length,
      columns:grid?getComputedStyle(grid).gridTemplateColumns.split(' ').filter(Boolean).length:0,
      title:nodes.map(n=>n.querySelector('h3')?.textContent?.trim()),
-     top:nodes.map(n=>n.querySelector('.card-body > div > span')?.textContent?.trim().replace(/\s+/g,' ')),
+     top:nodes.map(n=>n.querySelector('.card-body > div > div > span')?.textContent?.trim().replace(/\s+/g,' ')),
+     badges:nodes.map(n=>n.querySelector('.badge')?.textContent?.trim()),
+     badgeClasses:nodes.map(n=>n.querySelector('.badge')?.classList.contains('badge-outline')),
+     badgeColors:nodes.map(n=>n.querySelector('.badge') ? {color:getComputedStyle(n.querySelector('.badge')).color,card:getComputedStyle(n).color} : null),
+     priceVisible:nodes.some(n=>/4\s?500\s?kr/.test(n.textContent||'')),
      href:nodes.map(n=>n.getAttribute('href')),
      buttons:nodes.map(n=>n.querySelector('.card-actions .text-link')?.textContent?.trim()),
      styles:nodes.map(n=>({native:n.classList.contains('card')&&!!n.querySelector(':scope > .card-body'),color:getComputedStyle(n).backgroundColor,
@@ -238,7 +240,11 @@ try {
    assert.equal(cards.columns,width<=900?1:3,'Synlighet must use homepage 3/1 selector grid');
    assert.deepEqual(cards.title,organicItems.map(i=>i.headline));
    assert.deepEqual(cards.href,organicItems.map(i=>i.href));
-   assert.ok(cards.top.every((value,i)=>value===organicItems[i].title+' · '+expectedPrice),'Price must come from current Global Packages master');
+   assert.deepEqual(cards.top,organicItems.map(i=>i.title),'Card top line must show only service name');
+   assert.deepEqual(cards.badges,expectedBadges,'DaisyUI badges must match global CMS copy');
+   assert.ok(cards.badgeClasses.every(Boolean),'Use native DaisyUI outlined badges');
+   assert.ok(cards.badgeColors.every(c=>c&&c.color===c.card),'Badge text must inherit the card surface contrast');
+   assert.equal(cards.priceVisible,false,'Price must not be displayed on organic choice cards');
    assert.deepEqual(cards.styles.map(x=>x.color),cards.expectedColors);
    assert.ok(cards.styles.every(x=>x.native&&Math.abs(x.padding-(width>1100?32:24))<.6&&Math.abs(x.icon-34)<.6));
    assert.ok(cards.overflow<=2,'No horizontal overflow in organic choice cards');
