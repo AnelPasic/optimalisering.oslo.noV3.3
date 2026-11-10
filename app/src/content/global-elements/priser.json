@@ -64,15 +64,15 @@
           {
             "icon": "search",
             "group": "Organisk Synlighet",
-            "label": "SEO / AI-synlighet",
-            "compactLabel": "SEO / AI-synlighet",
-            "description": "Bli funnet på Google, Google Maps eller AI Søk"
+            "label": "SEO",
+            "compactLabel": "Søkemotoroptimalisering",
+            "description": "Bli funnet på Google"
           },
           {
             "icon": "conversion",
             "group": "Konverteringsoptimalisering",
             "label": "Konverteringsoptimalisering",
-            "compactLabel": "Konvertering",
+            "compactLabel": "Konverteringsoptimalisering",
             "description": "Få flere av de som lander på nettsiden til å fullføre bestilling eller kjøp."
           },
           {
@@ -84,8 +84,19 @@
           {
             "icon": "paid-search",
             "group": "Betalt Synlighet",
-            "label": "Google Ads - ett tydelig fokusområde",
+            "label": "Google Ads",
             "compactLabel": "Google Ads"
+          },
+          {
+            "icon": "analytics",
+            "label": "AI-synlighet",
+            "compactLabel": "AI-synlighet"
+          },
+          {
+            "icon": "social-paid",
+            "group": "Betalt Synlighet",
+            "label": "Facebook Annonser",
+            "compactLabel": "Facebook Annonser"
           }
         ],
         "visual": "controlled",
@@ -124,7 +135,7 @@
             "icon": "conversion",
             "group": "Konverteringsoptimalisering",
             "label": "Konverteringsoptimalisering",
-            "compactLabel": "Konvertering"
+            "compactLabel": "Konverteringsoptimalisering"
           },
           {
             "icon": "search",
