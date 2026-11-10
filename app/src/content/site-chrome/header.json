@@ -21,7 +21,7 @@
       "mega": {
         "columns": [
           {
-            "heading": "Synlighet i søk",
+            "heading": "Organisk Synlighet i søk",
             "links": [
               {
                 "label": "SEO",
@@ -41,8 +41,13 @@
             ]
           },
           {
-            "heading": "Bedre konvertering",
+            "heading": "Betalt Synlighet",
             "links": [
+              {
+                "label": "Facebook Annonser",
+                "href": "/synlighet/",
+                "description": "Annonser på Facebook og Instagram"
+              },
               {
                 "label": "Konvertering",
                 "href": "/konvertering/",
