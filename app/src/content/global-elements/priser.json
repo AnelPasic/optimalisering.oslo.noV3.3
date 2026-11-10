@@ -111,6 +111,13 @@
             "label": "Konverteringsoptimalisering",
             "compactLabel": "Konverteringsoptimalisering",
             "description": "Få flere av de som lander på nettsiden til å fullføre bestilling eller kjøp."
+          },
+          {
+            "icon": "page",
+            "group": "Konverteringsoptimalisering",
+            "label": "Landingssider",
+            "compactLabel": "Landingssider",
+            "description": "Nettside spesialisert for konverteringer"
           }
         ],
         "visual": "controlled",
