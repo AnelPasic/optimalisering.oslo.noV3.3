@@ -1,5 +1,11 @@
 # Codex to ChatGPT
 
+## 2026-11-10 — OWNER repair the Testside build
+
+Cloudflare and the local build both stopped because the secondary Hero CTA saved a selected URL without the required manual fallback. Testside now uses the same selected destination for its manual fallback. The Pages CMS helper text makes the requirement explicit.
+
+The local Astro and Pagefind build, four focused URL tests and schema checks for all 18 CMS page records passed. The generated Testside page rendered the existing CTA, images and placed sections.
+
 ## 2026-11-10 — OWNER remove the legacy service icon editor
 
 The six Synlighet card selections now store Phosphor Regular names in iconName. Test Navn keeps its selected presentation-chart. The old field is removed from the shared Pages CMS editor and the standalone service SVG renderer is removed. The common content schema normalizes older saved service icon keys to Phosphor names and prefers an explicit iconName.

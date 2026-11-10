@@ -325,7 +325,7 @@ components:
       - name: href
         label: Manuell URL (reserve)
         type: string
-        description: Brukes når ingen side er valgt. For en sekundær knapp, fyll ut både lenketekst og URL.
+        description: Fyll inn denne adressen og lenketeksten hvis du vil vise knappen. Ved valg av side over beholdes adressen som reserve.
   heroLayoutChoice:
     type: select
     description: Bildet, bildetype, beskrivelse og utsnitt bevares når du velger Sentrert uten bilde. Velg et annet oppsett for å vise det igjen. Sentrert med bilde viser tekst uten bilde hvis siden ikke har et lagret bilde. Teksten kommer først på mobil.

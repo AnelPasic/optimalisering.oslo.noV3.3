@@ -20,7 +20,8 @@
     },
     "secondaryCta": {
       "label": "Optimalisere først",
-      "suggestedHref": "/innsikt/hva-bor-optimaliseres-forst/"
+      "suggestedHref": "/innsikt/hva-bor-optimaliseres-forst/",
+      "href": "/innsikt/hva-bor-optimaliseres-forst/"
     },
     "featuredProofCaseId": "nysta",
     "visual": {
