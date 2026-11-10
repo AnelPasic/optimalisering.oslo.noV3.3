@@ -10,9 +10,12 @@ const raw=JSON.parse(readFileSync('src/content/pages/priser.json','utf8'));
 const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
 const order:string[]=raw.sections.map((section:any)=>section._block==='pricingModule'?({valg:'pricing-decision',vekst:'pricing-multiplier',sammenligning:'sammenlign'} as const)[section.pricingModule as 'valg'|'vekst'|'sammenligning']:section.element);
 
-test('Prissiden six visible sections appear in the same order as Pages CMS',()=>{
- assert.deepEqual([...new Set(raw.sections.map((s:any)=>s._block==='pricingModule'?s.pricingModule:s.element))].sort(),
-  ['valg','vekst','priser','sammenligning','regneeksempel','resultater'].sort());
+test('Prissiden CMS-configured sections appear in the same order as Pages CMS',()=>{
+ const names=raw.sections.map((section:any)=>section._block==='pricingModule'?section.pricingModule:section.element);
+ const allowed=new Set(['valg','vekst','priser','sammenligning','regneeksempel','resultater']);
+ assert.ok(names.every((name:string)=>allowed.has(name)),'Only recognized pricing placements are allowed');
+ assert.equal(new Set(names).size,names.length,'Each pricing placement occurs at most once');
+ assert.ok(names.includes('priser'),'Shared pricing block must be present');
  assert.deepEqual(pageSchema.parse(raw).sections.map((s:any)=>s.id),order);
  const group=cms.content.find((x:any)=>x.name==='priceGroup');
  const editor=group.items.find((x:any)=>x.name==='pricePage');
