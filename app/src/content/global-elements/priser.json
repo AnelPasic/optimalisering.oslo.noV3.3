@@ -127,10 +127,19 @@
             "compactLabel": "SEO"
           },
           {
-            "icon": "search",
-            "label": "Google Ads + SEO / AI-synlighet",
-            "compactLabel": "Google Ads + SEO / AI-synlighet",
-            "description": "Bruk betalt synlighet for å få fart nå, og bygg organisk synlighet for å redusere avhengigheten av annonsebudsjett over tid."
+            "icon": "paid-search",
+            "label": "Google Ads",
+            "compactLabel": "Google Ads"
+          },
+          {
+            "icon": "social-paid",
+            "label": "Facebook Annonser",
+            "compactLabel": "Meta Ads"
+          },
+          {
+            "icon": "route",
+            "label": "AI-Søk Optimalisering",
+            "compactLabel": "AI-Synlighet"
           }
         ],
         "visual": "accelerating",
