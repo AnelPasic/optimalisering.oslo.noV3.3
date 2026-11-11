@@ -104,58 +104,165 @@
       "element": "priser"
     },
     {
+      "_block": "global",
+      "element": "resultater"
+    },
+    {
       "_block": "content",
-      "id": "konkurransefordel",
-      "eyebrow": "DET VIRKELIGE KONKURRANSEFORTRINNET",
-      "heading": "Det er ikke alltid den som byr mest, som vinner.",
+      "id": "erfaring-siden-2009",
+      "eyebrow": "NETTSIDER OG OPTIMALISERING SIDEN 2009",
+      "heading": "Du kjøper ikke en rapport. Du kjøper at jobben blir gjort.",
       "headingAlign": "left",
       "layout": "three-columns",
+      "surface": "base-100",
       "body": [
-        "I første runde fikk begge butikkene **60 bestillinger**, men Konverteringskongen brukte **10 000 kr mindre på annonser**. I neste runde, med samme annonsebudsjett, fikk Konverteringskongen **120 bestillinger mot Klikkekongens 60**.",
-        "Når flere bedrifter byr på de samme kundene, kan annonsekostnadene stige. Med mindre du selger vann i ørkenen, er flere klikk alene sjelden hele løsningen. **Du må også få flere av besøkene til å bli kunder.**"
+        "Vi har jobbet med nettsider og optimalisering siden **2009**. Vi vet at en pen rapport ikke skaper én eneste bestilling. Det gjør konkrete forbedringer på siden kunden faktisk besøker.",
+        "**Vi finner hindringene, gjennomfører avtalte endringer og måler hva som skjer.** Du beholder kontrollen. Vi tar oss av arbeidet."
       ],
       "items": [
         {
-          "title": "Lavere kostnad per bestilling",
-          "text": "I eksempelet faller annonsekostnaden per bestilling fra omtrent 333 kr til 167 kr.",
+          "title": "Vi gjør endringene",
+          "text": "Vi forbedrer budskap, landingssider, skjema og kjøpsvei innen avtalt omfang. Ikke bare en PDF med forslag.",
+          "iconName": "wrench",
+          "surface": "base-300",
+          "badge": "Gjennomføring",
           "boxVariant": "card"
         },
         {
-          "title": "Bedre rustet for dyre klikk",
-          "text": "Når flere besøk blir til bestillinger, får du større rom til å konkurrere om kunder.",
+          "title": "Vi følger kundene, ikke klikkene",
+          "text": "Vi måler relevante henvendelser, fullførte kjøp og hvor folk stopper. Tallene skal kunne brukes til beslutninger.",
+          "iconName": "chart-line-up",
+          "surface": "info",
+          "badge": "Effekt",
           "boxVariant": "card"
         },
         {
-          "title": "Mer å hente når du skalerer",
-          "text": "Forbedre først det som skjer etter klikket. Deretter kan mer relevant trafikk gi større effekt.",
+          "title": "Du bestemmer hvor lenge",
+          "text": "Fast månedspris for avtalt arbeid. **Ingen bindingstid.** Større prosjekter prises og godkjennes separat.",
+          "iconName": "eye",
+          "surface": "base-200",
+          "badge": "Kontroll",
           "boxVariant": "card"
         }
       ]
     },
     {
       "_block": "content",
-      "id": "friksjon",
-      "eyebrow": "SLIK JOBBER VI",
-      "heading": "Vi finner ut hvorfor kundene stopper – og gjør det enklere å bestille.",
+      "id": "potensial",
+      "eyebrow": "HVA KAN DET BETY FOR DIN BEDRIFT?",
+      "heading": "50–100 % flere bestillinger. Uten en eneste ekstra besøkende.",
       "headingAlign": "left",
       "layout": "three-columns",
+      "surface": "base-200",
       "body": [
-        "Vi gjetter ikke hvilken knapp som bør være grønnere. Vi finner hindringen som betyr mest, forbedrer den og følger med på om flere tar neste steg."
+        "Det er ikke magi. Når flere av besøkene blir til kunder, vokser resultatet selv om trafikken står stille. Se hva en høyere konverteringsrate **kan bety** for tre forskjellige bedrifter.",
+        "**Tre illustrerende scenarioer – ikke forventede bransjeresultater eller garantier.** Vi setter mål ut fra dine faktiske tall, trafikkvalitet og hvor kundene stopper."
       ],
       "items": [
         {
-          "title": "1. Finn hvor det stopper",
-          "text": "Vi ser på budskap, tilbud, tillit, mobilopplevelse, skjema og kjøpsvei for å finne hva som holder kundene igjen.",
+          "title": "+67 % flere henvendelser",
+          "text": "**Lokal tjenestebedrift**\n\n1 000 besøk i måneden\n\n3 % → **5 %** konvertering\n\n**30 → 50 henvendelser**\n\n20 flere muligheter til å vinne en kunde. Samme trafikk.",
+          "iconName": "map-pin",
+          "surface": "base-100",
+          "badge": "Lokale tjenester",
           "boxVariant": "card"
         },
         {
-          "title": "2. Gjør det lettere å velge deg",
-          "text": "Vi forbedrer de viktigste sidene og stegene, uten å bygge om alt som allerede fungerer.",
+          "title": "+100 % flere bestillinger",
+          "text": "**Nettbutikk**\n\n4 000 besøk i måneden\n\n1,5 % → **3 %** konvertering\n\n**60 → 120 kjøp**\n\n60 flere bestillinger uten et høyere trafikkbudsjett.",
+          "iconName": "shopping-cart",
+          "surface": "info",
+          "badge": "Nettbutikk",
           "boxVariant": "card"
         },
         {
-          "title": "3. Mål det som gir verdi",
-          "text": "Vi følger relevante henvendelser, bestillinger og kjøp – ikke bare klikk og pene rapporter.",
+          "title": "+50 % flere leads",
+          "text": "**B2B og tjenester**\n\n1 000 besøk i måneden\n\n2 % → **3 %** konvertering\n\n**20 → 30 henvendelser**\n\n10 ekstra mulige kunder fra besøkene du allerede har.",
+          "iconName": "target",
+          "surface": "base-300",
+          "badge": "B2B",
+          "boxVariant": "card"
+        }
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "oppstart",
+      "eyebrow": "DETTE FÅR DU DEN FØRSTE MÅNEDEN",
+      "heading": "Fra første gjennomgang til faktiske forbedringer.",
+      "headingAlign": "left",
+      "layout": "three-columns",
+      "surface": "base-100",
+      "body": [
+        "Vi starter ikke med å selge deg en ny nettside. Vi starter med den du har og jobber oss mot en enklere vei til henvendelse eller kjøp. **Én prioritert flaskehals om gangen i Optimalisering-pakken.**"
+      ],
+      "items": [
+        {
+          "title": "1. Finn lekkasjen",
+          "text": "**Oppstart og kartlegging.** Vi avklarer målet, ser på trafikken og finner hvor relevante besøk stopper før bestilling. Du vet hva vi vil prioritere først.",
+          "iconName": "magnifying-glass",
+          "surface": "base-300",
+          "badge": "Kartlegging",
+          "boxVariant": "card"
+        },
+        {
+          "title": "2. Tett den",
+          "text": "**Konkrete endringer.** Vi forbedrer det viktigste vi har avtalt: tilbudet, innholdet, mobilvisningen, skjemaet eller kjøpsveien. Ingen unødvendig totalrenovering.",
+          "iconName": "cursor-click",
+          "surface": "info",
+          "badge": "Gjennomføring",
+          "boxVariant": "card"
+        },
+        {
+          "title": "3. Se hva som skjer",
+          "text": "**Oppfølging og neste grep.** Vi viser hva som er gjort, følger relevante bestillinger og avtaler hva vi bør forbedre videre. Ved lav trafikk bruker vi også kvalitative observasjoner.",
+          "iconName": "chart-line-up",
+          "surface": "base-200",
+          "badge": "Måling",
+          "boxVariant": "card"
+        }
+      ],
+      "links": [
+        {
+          "label": "Se pris og omfang",
+          "href": "/priser/#optimalisering"
+        }
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "lav-risiko",
+      "eyebrow": "ET SAMARBEID DU HAR KONTROLL PÅ",
+      "heading": "Ingen bindingstid. Ingen ombygging bare for å fakturere.",
+      "headingAlign": "left",
+      "layout": "three-columns",
+      "surface": "base-200",
+      "body": [
+        "Vi skal ikke vinne på å holde deg fast. Vi skal vinne på at du ser verdien av at vi fortsetter."
+      ],
+      "items": [
+        {
+          "title": "Ingen bindingstid",
+          "text": "Du skal ikke måtte bli fordi du er låst i en lang kontrakt. Oppsigelse og praktisk avslutning følger vilkårene vi avtaler før oppstart.",
+          "iconName": "eye",
+          "surface": "base-100",
+          "badge": "Frihet",
+          "boxVariant": "card"
+        },
+        {
+          "title": "Vi starter med det du har",
+          "text": "Vi forbedrer eksisterende sider først når det er fornuftig. Større nettsider, redesign og omfattende nyutvikling avtales separat.",
+          "iconName": "browser",
+          "surface": "base-300",
+          "badge": "Ingen unødvendig rebuild",
+          "boxVariant": "card"
+        },
+        {
+          "title": "Du vet hva du betaler for",
+          "text": "Vi avklarer prioritet, pris og omfang før arbeidet starter. Hvis første grep ikke gir ønsket effekt, vurderer vi resultatene og velger neste tiltak.",
+          "iconName": "chart-line-up",
+          "surface": "info",
+          "badge": "Åpenhet",
           "boxVariant": "card"
         }
       ]
@@ -163,26 +270,22 @@
     {
       "_block": "protected",
       "id": "sjekk",
-      "eyebrow": "KLAR FOR Å FÅ MER UT AV TRAFIKKEN?",
-      "heading": "Du har sett regnestykket. Hva kan vi forbedre hos deg?",
+      "eyebrow": "DIN NETTSIDE ER NESTE REGNESTYKKE",
+      "heading": "Vil du ha flere bestillinger fra trafikken du allerede betaler for?",
       "body": [
-        "Vi starter med det som hindrer relevante besøk i å bli bestillinger. Velg fast optimalisering, eller få en kort, gratis vurdering av hvor vi ville begynt.",
-        "Gratis sjekk: Tre konkrete funn innen to virkedager. Ingen full revisjon eller resultatgaranti."
+        "Vi har jobbet med dette siden 2009. Nå finner vi ut hva som holder kundene tilbake på din side. Start med **Optimalisering fra 4 500 kr/mnd eks. mva.**, eller få tre konkrete forbedringsforslag helt gratis.",
+        "**Gratis sjekk:** Send nettadressen. Du får tre prioriterte funn innen to virkedager, uten innlogging eller forpliktelser. Betalt arbeid avtales separat."
       ],
       "links": [
         {
-          "label": "Bestill optimalisering",
+          "label": "Bestill Optimalisering",
           "href": "/priser/?pakke=optimalisering#bestill"
         },
         {
-          "label": "Ta en gratis sjekk",
-          "href": "/#sjekk"
+          "label": "Få 3 gratis funn",
+          "href": "/vurdering/"
         }
       ]
-    },
-    {
-      "_block": "global",
-      "element": "resultater"
     },
     {
       "_block": "global",
@@ -191,20 +294,28 @@
   ],
   "faq": [
     {
-      "question": "Hva er konverteringsoptimalisering?",
-      "answer": "Konverteringsoptimalisering, ofte kalt CRO, handler om å gjøre det enklere for relevante besøkende å ta en nyttig handling - for eksempel å sende en henvendelse eller fullføre et kjøp."
+      "question": "Hva får jeg faktisk for 4 500 kr i måneden?",
+      "answer": "Du får løpende arbeid med ett prioritert forbedringsområde om gangen – ikke bare en rapport. Vi kartlegger hindringen, gjennomfører avtalte endringer på eksisterende sider og følger resultatene. Omfanget avklares før oppstart. Større nye nettsider, redesign og omfattende tekniske prosjekter prises separat."
     },
     {
-      "question": "Må nettsiden bygges på nytt?",
-      "answer": "Nei, ikke alltid. Mye kan forbedres på eksisterende sider. Større nye landingssider, nettsider, omfattende teknisk arbeid og redesign prises separat når det er nødvendig."
+      "question": "Hva skjer den første måneden?",
+      "answer": "Vi begynner med målet ditt og hvor kundene stopper. Så prioriterer vi den viktigste hindringen, gjennomfører avtalt forbedringsarbeid og følger opp hva vi har gjort og hva vi bør ta videre. Hvor mye vi kan måle statistisk avhenger av trafikken og antall bestillinger."
     },
     {
-      "question": "Er CRO bare testing av knapper og farger?",
-      "answer": "Nei. Tilbud, budskap, informasjon, landingssider, skjema og kjøpsvei kan alle påvirke om kunden kommer videre. En test er nyttig først når vi har et tydelig spørsmål og et grunnlag for å vurdere svaret."
+      "question": "Kan jeg virkelig få 50–100 % flere bestillinger?",
+      "answer": "Eksemplene viser hva et løft i konverteringsraten ville bety med samme antall besøk. Det er regneeksempler, ikke prognoser eller garantier. Noen sider har stort potensial; andre trenger først bedre trafikk, tilbud eller måling. Vi vurderer muligheten ut fra dine egne tall."
     },
     {
-      "question": "Hva koster arbeid med konvertering?",
-      "answer": "Konvertering kan være det prioriterte området i Optimalisering til 4 500 kr/mnd eks. mva. Vekst koster 6 900 kr/mnd for to prioriterte områder, mens Enterprise starter fra 14 900 kr/mnd. Se pakker og priser for omfang og bestilling. Annonsebudsjett kommer i tillegg dersom du ønsker annonsering."
+      "question": "Hva hvis vi ikke ser forbedring med en gang?",
+      "answer": "Vi viser hvilke endringer som er gjort, hva målingene sier, og hva vi anbefaler videre. Ikke alle tiltak virker på første forsøk. Ved lav trafikk bruker vi også brukerobservasjoner og kvalitativ gjennomgang i stedet for å late som vi har statistisk sikre A/B-tester."
+    },
+    {
+      "question": "Må dere bygge om nettsiden eller få tilgang til den?",
+      "answer": "Nei, full ombygging er vanligvis ikke nødvendig. Den gratis sjekken krever bare nettadressen. Skal vi gjøre endringer på nettsiden, avtaler vi nødvendig redaktørtilgang eller samarbeid med din utvikler. Du skal aldri sende passord i et kontaktskjema."
+    },
+    {
+      "question": "Er det bindingstid? Og er gratis sjekk virkelig gratis?",
+      "answer": "Pakkene har ingen bindingstid; praktiske vilkår bekreftes før oppstart. Gratis sjekk koster ingenting og forplikter deg ikke til å kjøpe. Du får tre prioriterte forbedringsforslag innen to virkedager. Betalt arbeid starter først etter at vi har avtalt det."
     }
   ],
   "listing": {
