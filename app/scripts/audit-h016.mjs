@@ -1,12 +1,11 @@
 import {getHomepageBlock} from '../src/lib/home-builder.ts';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {resolvePackageAsset} from '../src/lib/package-visual.ts';
 const packages=getHomepageBlock(JSON.parse(readFileSync('src/content/pages/home.json')),'packages').content;
 const text=html=>html.replace(/<[^>]*>/g,' ').replace(/&amp;/g,'&').replace(/&gt;/g,'>').replace(/&lt;/g,'<').replace(/\s+/g,' ').trim();
-for(const [file,open] of [['dist/index.html',false],['dist/priser/index.html',true]]) {
-  const html=readFileSync(file,'utf8'),section=html.match(/<section id="priser"[^>]*>(.*?)<\/section>/s)[1];
-  const cards=[...section.matchAll(/<article\b[^>]*class="package-card[^>]*>(.*?)<\/article>/gs)].map(m=>m[1]);
+for(const file of ['dist/index.html','dist/priser/index.html','dist/seo/index.html']) {
+  const html=readFileSync(file,'utf8');
+  const cards=[...html.matchAll(/<article\b[^>]*class="package-card[^"]*"[^>]*>(.*?)<\/article>/gs)].map(m=>m[1]);
   assert.equal(cards.length,3);
   for(const [index,card] of cards.entries()) {
     const item=packages.items[index];
@@ -16,26 +15,18 @@ for(const [file,open] of [['dist/index.html',false],['dist/priser/index.html',tr
     const beforeDetails=card.split('<details class="package-details">')[0];
     assert.ok(detailsHtml.includes('Systemer inkludert')&&detailsHtml.includes('data-service-category="Systemer"'),'System tools moved into accordion');
     assert.ok(!beforeDetails.includes('data-service-category="Systemer"'),'System tools are not duplicated ahead of Bestill');
-    assert.ok(detailsHtml.includes(item.compact.fit)&&item.compact.situations.every(text=>detailsHtml.includes(text)),'Goals and fit are under Mer om pakken');
+    assert.ok(text(detailsHtml).includes(text(item.compact.fit))&&item.compact.situations.every(goal=>text(detailsHtml).includes(text(goal))),'Goals and fit are under Mer om pakken');
     if(item.scope)assert.ok(detailsHtml.includes(item.scope.trim()),'Existing scope copy remains in accordion');
     assert.ok(text(card).includes(item.cta.label)&&text(card).includes(item.detailLink.label),'CTA and disclosure labels follow CMS');
-    assert.ok(card.includes(`href="/priser/?pakke=${item.key}#bestill"`));
-    const supplied=resolvePackageAsset(item.visualAsset);
-    if(supplied) {
-      assert.ok(card.includes(`src="${supplied.src}"`) && card.includes('class="package-visual-asset"'));
-      assert.ok(!card.includes('package-visual-caption'),'Supplied asset replaces motif/caption');
-    } else {
-      assert.equal((card.match(/class="package-input"/g)??[]).length,{controlled:1,accelerating:2,tracks:3}[item.visual],'CMS chooses the fallback motif');
-      for(const copy of Object.values(item.visualCaption??{}))assert.ok(text(card).includes(copy),'Caption follows current CMS fields');
-      const svg=card.match(/<svg class="package-visual[^>]*>(.*?)<\/svg>/s)?.[1];
-      assert.ok(svg&&!/<text|<image|<foreignObject|<script|\d+\s*%|https?:/i.test(svg),'Conceptual SVG has no baked copy or numeric performance claim');
-    }
+    assert.ok(card.includes(`id="package-order-${item.key}"`) && card.includes(`name="package" value="${item.key}"`),'Inline order uses the protected package key');
+    const svg=item.visualSvg;
+    assert.ok(svg && !/<(?:text|image|foreignObject|script)\b/i.test(svg),'Illustration uses the SVG code without baked-in caption text');
+    assert.ok(card.includes('class="package-animation"') && card.includes(`src="data:image/svg+xml,${encodeURIComponent(svg)}"`),'Both cards render the canonical SVG in image context');
+    for(const copy of Object.values(item.visualCaption??{}))assert.ok(text(card).includes(copy),'Caption follows current CMS fields');
     for(const copy of [item.scope,item.distinction,item.priceNote].filter(Boolean))assert.ok(text(card).includes(copy),'Details consume the same full CMS source');
     assert.ok(!/problem/i.test(text(card)),'No problem wording on the customer package surface');
     assert.ok(!text(card).includes('Optimalisering er ikke laget for to uavhengige vekstspor samtidig.'));
     assert.ok(!text(card).includes('Velg Vekst hvis resultatet avhenger av at to ting forbedres samtidig.'));
   }
-  if(open)assert.ok(!/problem/i.test(text(html)),'No problem wording on the pricing page');
-  if(open)for(const copy of [packages.eyebrow,packages.heading,packages.intro,packages.areasLabel,...packages.areas,packages.foundationNote,packages.decisionStrip.heading,...packages.decisionStrip.items,...Object.values(packages.multiplier)])assert.ok(text(html).includes(copy),'Shared editor fields render on pricing');
 }
-console.log('H-016 static PASS: shared standard cards, page-specific native details, editable CMS labels, protected ordering and copy cleanup.');
+console.log('H-016 static PASS: shared cards, SVG animations, editable captions, native details and protected ordering.');

@@ -24,15 +24,6 @@ media:
       - avif
       - svg
     rename: safe
-  - name: packageVisuals
-    label: Pakkeillustrasjoner – SVG, WebP og PNG
-    input: app/public/images/pricing
-    output: /images/pricing
-    extensions:
-      - svg
-      - webp
-      - png
-    rename: safe
   - name: listingImages
     label: Bilder til innholdslister
     input: app/public/images/listing
@@ -1985,7 +1976,7 @@ content:
                     label: Partner – omfang og prisavtale
                     type: text
                   - name: visual
-                    label: SVG-motiv – brukes når eget bilde ikke er valgt
+                    hidden: true
                     type: select
                     options:
                       values:
@@ -1993,47 +1984,23 @@ content:
                         - accelerating
                         - tracks
                     required: true
-                  - name: visualAsset
-                    label: Eget pakkebilde – velg eller last opp SVG, WebP eller PNG
-                    type: object
-                    fields:
-                      - name: src
-                        label: Bilde
-                        type: image
-                        options:
-                          media: packageVisuals
-                          extensions:
-                            - svg
-                            - webp
-                            - png
-                        required: true
-                      - name: alt
-                        label: Sannferdig beskrivende alternativ tekst
-                        type: string
-                        required: true
-                      - name: positionX
-                        label: Horisontalt utsnitt (%) – raster
-                        type: number
-                        options:
-                          min: 0
-                          max: 100
-                      - name: positionY
-                        label: Vertikalt utsnitt (%) – raster
-                        type: number
-                        options:
-                          min: 0
-                          max: 100
+                  - name: visualSvg
+                    label: SVG-kode for animasjonen
+                    type: code
+                    readonly: true
+                    options:
+                      format: html
                   - name: visualCaption
-                    label: Bildetekst ved SVG-motivet
-                    description: Vises ved SVG-motivet når eget bilde ikke er valgt. Eget bilde bruker sin alternative tekst og sitt utsnitt.
+                    label: Tekst på animasjonen
+                    description: Vises øverst til venstre på priskortets illustrasjon.
                     type: object
                     fields:
                       - name: label
-                        label: Kort semantisk etikett
+                        label: Etikett
                         type: string
                         required: true
                       - name: support
-                        label: Kort støtte – valgfri
+                        label: Undertekst – valgfri
                         type: string
                   - name: price
                     label: Månedspris i kroner

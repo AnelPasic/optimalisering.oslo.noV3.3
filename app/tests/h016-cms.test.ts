@@ -1,4 +1,4 @@
-import {homepageBlockEditor} from './helpers/pages-cms-json.ts';
+import {entryForFile, resolveField} from './helpers/pages-cms-json.ts';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
@@ -7,13 +7,14 @@ import {homepageBlockSchema} from '../src/lib/home-builder.ts';
 const pageSchema=homepageBlockSchema.options[2];
 const home=JSON.parse(readFileSync('src/content/global-elements/priser.json','utf8'));
 const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
-const packages=homepageBlockEditor(cms,'packages');
+const entry=entryForFile(cms,'app/src/content/global-elements/priser.json');
+const packages=resolveField(entry.fields.find((f:any)=>f.name==='content'),cms.components);
 function leaves(fields:any[],prefix=''):any[] {return fields.flatMap(f=>f.fields?leaves(f.fields,`${prefix}${f.name}.`):[{path:`${prefix}${f.name}`,field:f}]);}
 
 test('OWNER can edit package CTA wording while order and detail routes remain readonly',()=>{
   const fields=leaves(packages.fields.find((f:any)=>f.name==='items').fields);
   const field=(path:string)=>fields.find(f=>f.path===path)?.field;
-  for(const path of ['cta.label','detailLink.label','title','descriptor','compact.fit','compact.situations','price','pricePrefix','priceSuffix','vatSuffix','recommended','badge','visual','visualAsset.src','visualAsset.alt','visualAsset.positionX','visualAsset.positionY','visualCaption.label','visualCaption.support','scope','distinction','priceNote']) {
+  for(const path of ['cta.label','detailLink.label','title','descriptor','compact.fit','compact.situations','price','pricePrefix','priceSuffix','vatSuffix','recommended','badge','visualCaption.label','visualCaption.support','scope','distinction','priceNote']) {
     assert.ok(field(path),`CMS field exists: ${path}`);assert.notEqual(field(path).readonly,true,path);
   }
   assert.equal(field('selectionRule'),undefined,'Removed Valgregel must not remain in CMS');
@@ -23,9 +24,7 @@ test('OWNER can edit package CTA wording while order and detail routes remain re
   for(const {path,field:shared}of leaves(packages.fields.filter((f:any)=>f.name!=='items')))assert.notEqual(shared.readonly,true,`Shared field ${path}`);
   for(const path of ['key','cta.href','detailLink.href']) assert.equal(field(path)?.readonly,true,path);
   assert.ok(!/låst|scoped.*handoff/i.test(JSON.stringify(packages)),'Editor guidance must allow routine safe OWNER editing');
-  assert.ok(!/lås/i.test(cms.content.find((c:any)=>c.name==='homepage').label),'The package editor entry also uses a neutral label');
-  assert.equal(field('visualAsset.src').options.media,'packageVisuals');
-  assert.deepEqual(field('visualAsset.src').options.extensions,['svg','webp','png']);
+  assert.ok(!/lås/i.test(entry.label),'The package editor entry also uses a neutral label');
 });
 
 test('schema accepts independent CTA/detail labels but rejects edited routing and package intent',()=>{

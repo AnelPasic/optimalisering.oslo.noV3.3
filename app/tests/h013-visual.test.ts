@@ -1,4 +1,4 @@
-import {homepageBlockEditor} from './helpers/pages-cms-json.ts';
+import {entryForFile, resolveField} from './helpers/pages-cms-json.ts';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
@@ -20,11 +20,20 @@ test('three independent package assets survive schema with strict local paths', 
     assert.equal(pageSchema.safeParse(invalid).success,false);
   }
 });
-test('CMS exposes dedicated pricing media and safe readonly order paths', () => {
+test('CMS replaces pricing uploads with readonly SVG code and preserves order paths', () => {
   const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
-  assert.equal(cms.media.find((m: any)=>m.name==='packageVisuals')?.input,'app/public/images/pricing');
-  const fields=homepageBlockEditor(cms,'packages').fields.find((f: any)=>f.name==='items').fields;
-  assert.ok(fields.find((f: any)=>f.name==='visualAsset'));
+  assert.equal(cms.media.some((m: any)=>m.name==='packageVisuals'),false);
+  const entry=entryForFile(cms,'app/src/content/global-elements/priser.json');
+  const content=resolveField(entry.fields.find((f: any)=>f.name==='content'),cms.components);
+  const fields=content.fields.find((f: any)=>f.name==='items').fields;
+  assert.equal(fields.some((f: any)=>f.name==='visualAsset'),false);
+  const code=fields.find((f: any)=>f.name==='visualSvg');
+  assert.equal(code?.type,'code');
+  assert.equal(code.readonly,true);
+  assert.equal(code.options.format,'html');
+  for (const item of pageSchema.parse(home).content.items) {
+    assert.match(item.visualSvg ?? '', /^<svg\b[^>]*viewBox="0 0 320 180"/);
+  }
   assert.ok(fields.find((f: any)=>f.name==='iconItems')?.fields?.some((f: any)=>f.name==='compactLabel'),'Service icons and labels remain editable');
   assert.equal(fields.find((f: any)=>f.name==='cta').fields.find((f: any)=>f.name==='href').readonly,true);
 });

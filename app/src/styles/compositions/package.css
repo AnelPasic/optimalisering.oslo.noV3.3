@@ -125,6 +125,30 @@
 .site-shell .package-offer .package-visual-caption p + p { margin-top: 6px; font-size: var(--type-meta); line-height: var(--leading-small); }
 .site-shell .package-offer .package-visual-area[data-editorial="true"] { background: linear-gradient(115deg, var(--color-base-100), color-mix(in srgb, var(--color-accent) 8%, var(--color-base-100))); color: var(--ink); }
 .site-shell .package-offer .package-visual-area-accelerating[data-editorial="true"] { background: linear-gradient(115deg, color-mix(in srgb, var(--color-accent) 8%, var(--color-base-100)), color-mix(in srgb, var(--color-accent) 24%, var(--color-base-100))); }
+.site-shell .package-offer .package-visual-area[data-animation="true"] {
+  display: block;
+  height: auto;
+  overflow: visible;
+  background: transparent;
+}
+.site-shell .package-offer .package-visual-area[data-animation="true"] .package-infographic {
+  display: block;
+  position: relative;
+  height: auto;
+  padding: 0;
+}
+.site-shell .package-offer .package-animation {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.site-shell .package-offer .package-visual-area[data-animation="true"] .package-visual-caption {
+  position: absolute;
+  inset-block-start: 8px;
+  inset-inline-start: 9px;
+  max-inline-size: calc(100% - 18px);
+  overflow-wrap: anywhere;
+}
 @media (max-width: 359px) { .site-shell .package-offer .package-infographic.has-caption { gap: 6px; } }
 
 /* Global package order: compact in-card reveal using existing daisyUI inputs. */

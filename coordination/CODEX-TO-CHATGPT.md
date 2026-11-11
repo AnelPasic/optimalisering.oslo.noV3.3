@@ -1,5 +1,11 @@
 # Codex to ChatGPT
 
+## 2026-11-11 – Animerte priskort
+
+Godkjente 16:9-animasjoner for Optimalisering, Vekst og Enterprise bruker gjennomsiktig SVG og pilspisser som følger kurvene. Slutthøydene er 75 %, 95 % og 95/75/55 %. De delte priskortene starter animasjonen i synsfeltet og viser ferdige kurver ved redusert bevegelse. Pris, overskrift og etikett står som vanlig HTML. Under **Priser → Pakker og priser** viser Pages CMS den samme SVG-koden skrivebeskyttet og lar eieren redigere etikett og undertekst. Opplasting for pakkebilder er fjernet fra CMS. De tidligere bildefilene ligger fortsatt i repoet.
+
+Verifisert lokalt med Astro check, Astro- og Pagefind-bygg, målrettede CMS-tester med simulert tekstlagring, H-016 og Chromium på forsiden, Priser og SEO i 320 og 1440 px. Den brede CMS-rundturen stopper fortsatt på den samme `$.title`-feilen som gjeldende main før endringen. Innlogget CMS-visning og automatisk Cloudflare-publisering verifiseres separat. Leveres direkte på `main` etter eiers instruks.
+
 ## 2026-11-11 – Omdirigeringer fra tidligere Pages-nettsted
 
 Åtte erstattede sider ble kartlagt mot gammelt sitemap, Git-historikken og faktisk HTML på Pages-nettstedet. Meta Ads-siden fantes utenfor sitemapet. Cloudflare-reglene i app/public/_redirects gir ett permanent hopp for de bekreftede adressene med og uten skråstrek og med .html. Google Ads og Meta Ads går til seksjonen Betalt synlighet. Forsiden og personvernsiden hadde fungerende adresser. Lokalt bygg bekreftet 24 regler med eksisterende målsider og ankre.

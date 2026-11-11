@@ -32,7 +32,7 @@ const formatPrice = (value: number) => new Intl.NumberFormat('nb-NO', { maximumF
       <div class="package-top"><div class="package-heading"><Heading>{item.title}</Heading><CardBadge text={item.badge} badgeClass={item.badgeClass ?? (item.recommended ? 'badge-success' : 'badge')} class="package-badge" /><PhosphorIcon name={item.iconName} class="size-6 shrink-0" /></div>
       <div class="package-price"><p>{item.pricePrefix && <span class="package-price-prefix">{item.pricePrefix} </span>}<span class="package-price-amount">{formatPrice(item.price)}</span> <span class="package-price-unit">{item.priceSuffix}</span></p><p class="small-copy">{item.vatSuffix}</p></div></div>
       <p class="package-descriptor">{item.descriptor}</p>
-      <Visual kind={item.visual} motifId={`package-${expanded ? 'pricing' : 'home'}-${item.key}`} asset={item.visualAsset} caption={item.visualCaption} />
+      <Visual kind={item.visual} motifId={`package-${expanded ? 'pricing' : 'home'}-${item.key}`} svg={item.visualSvg} asset={item.visualAsset} caption={item.visualCaption} />
       <div class="package-focus">
         <h3 class="package-block-heading package-services-heading">Tjenester inkludert</h3>
         <p class="package-services-note">{item.key === 'optimalisering' ? 'Én av tjenestene prioriteres om gangen.' : item.key === 'vekst' ? 'To av tjenestene prioriteres samtidig.' : 'Tjenester og kapasitet prioriteres etter avtale.'}</p>

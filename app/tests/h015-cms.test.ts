@@ -1,4 +1,4 @@
-import {homepageBlockEditor} from './helpers/pages-cms-json.ts';
+import {assertPreservedContent, cmsJsonSave, entryForFile, resolveField} from './helpers/pages-cms-json.ts';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
@@ -18,7 +18,16 @@ test('optional semantic motif caption survives CMS parsing and preserves indepen
   item.visualCaption={label:' '};assert.equal(pageSchema.safeParse(fixture).success,false);
   delete item.visualCaption;assert.equal(pageSchema.safeParse(fixture).success,true);
   const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
-  const fields=homepageBlockEditor(cms,'packages').fields.find((f:any)=>f.name==='items').fields;
-  assert.deepEqual(fields.find((f:any)=>f.name==='visualCaption').fields.map((f:any)=>f.name),['label','support']);
-  assert.deepEqual(fields.find((f:any)=>f.name==='visualAsset').fields.map((f:any)=>f.name),['src','alt','positionX','positionY']);
+  const entry=entryForFile(cms,'app/src/content/global-elements/priser.json');
+  const content=resolveField(entry.fields.find((f:any)=>f.name==='content'),cms.components);
+  const fields=content.fields.find((f:any)=>f.name==='items').fields;
+  const captionFields=fields.find((f:any)=>f.name==='visualCaption').fields;
+  assert.deepEqual(captionFields.map((f:any)=>f.name),['label','support']);
+  assert.ok(captionFields.every((f:any)=>f.type==='string'&&f.readonly!==true));
+
+  const edited=structuredClone(home);
+  edited.content.items[1].visualCaption={label:'Ny etikett',support:'Ny undertekst'};
+  const saved=JSON.parse(cmsJsonSave(home,edited,entry,cms));
+  assertPreservedContent(edited,saved);
+  assert.deepEqual(pageSchema.parse(saved).content.items[1].visualCaption,edited.content.items[1].visualCaption);
 });

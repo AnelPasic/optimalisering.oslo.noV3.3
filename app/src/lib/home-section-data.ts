@@ -41,6 +41,7 @@ export const homeSectionDataSchema = z.object({
       iconItems: z.array(z.object({ icon: z.enum(['search', 'conversion', 'local', 'paid-search', 'social-paid', 'analytics', 'page', 'route']), iconName: phosphorIconSchema, group: z.enum(['Organisk Synlighet', 'Betalt Synlighet', 'Konverteringsoptimalisering', 'Systemer']).optional(), label: z.string().trim().min(1), compactLabel: z.string().trim().min(1), description: z.string().optional() })).min(1),
       compact: z.object({ fit: z.string().trim().min(1), situations: z.array(z.string().trim().min(1)).min(1).max(3) }),
       visual: z.enum(['controlled', 'accelerating', 'tracks']),
+      visualSvg: z.string().trim().min(1).optional(),
       visualCaption: z.object({ label: z.string().trim().min(1), support: z.string().trim().min(1).optional() }).optional(),
       focusAreas: z.array(z.string()).optional(),
       combinations: z.array(z.object({ title: z.string(), text: z.string() })).optional(),
