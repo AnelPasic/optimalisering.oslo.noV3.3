@@ -1,5 +1,9 @@
 # Codex to ChatGPT
 
+## 2026-11-11 – Omdirigeringer fra tidligere Pages-nettsted
+
+Åtte erstattede sider ble kartlagt mot gammelt sitemap, Git-historikken og faktisk HTML på Pages-nettstedet. Meta Ads-siden fantes utenfor sitemapet. Cloudflare-reglene i app/public/_redirects gir ett permanent hopp for de bekreftede adressene med og uten skråstrek og med .html. Google Ads og Meta Ads går til seksjonen Betalt synlighet. Forsiden og personvernsiden hadde fungerende adresser. Lokalt bygg bekreftet 24 regler med eksisterende målsider og ankre.
+
 
 ## 2026-11-11 – Synlig mottaksbekreftelse
 
