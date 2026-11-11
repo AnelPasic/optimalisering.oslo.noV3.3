@@ -100,6 +100,18 @@
       "element": "regneeksempel"
     },
     {
+      "_block": "content",
+      "id": "bransjerater",
+      "eyebrow": "KONVERTERINGSRATER ETTER BRANSJE",
+      "heading": "Er konverteringsraten din god – eller lar du kundene slippe unna?",
+      "headingAlign": "left",
+      "surface": "base-100",
+      "body": [
+        "Vi har samlet referanser for **12 bransjer**, fra nettbutikker til rørleggere, tannleger og advokater. Se hvor bransjen ligger, hva som regnes som svakt, og hvilke ambisiøse mål du kan regne på.",
+        "Tallene kommer fra Shopify-butikker og amerikanske søkeannonser. **Kjøp per økt og henvendelser per annonseklikk er ikke samme måling.** De ambisiøse intervallene er målscenarioer, ikke lovnader."
+      ]
+    },
+    {
       "_block": "global",
       "element": "priser"
     },
