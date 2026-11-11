@@ -64,7 +64,7 @@
       "heading": "Den hemmelige oppskriften",
       "headingAlign": "left",
       "layout": "two-columns",
-      "surface": "base-200",
+      "surface": "base-100",
       "body": [
         "To butikker starter likt: **10 000 kr i annonser, 3 000 besøk og 1 % konverteringsrate**. Det gir **30 bestillinger** med en ordreverdi på **1 000 kr**, altså **30 000 kr i omsetning**. \n\nAlle vil selge mer. Klikkekongen AS kjøper mer trafikk, Konverteringskongen AS forbedrer konverteringsraten."
       ],
@@ -94,7 +94,7 @@
       "layout": "two-columns",
       "surface": "base-200",
       "body": [
-        "### Steg 2.\n\n### Konverteringskongen AS sitter igjen med 10 000 ekstra, som han bruker til å kjøpe mer trafikk.\n\n### Nå bruker de like mye på betalt trafikk.\n\n"
+        "### Konverteringskongen AS sitter igjen med 10 000 ekstra, som han bruker til å kjøpe mer trafikk.\n\n### Steg 2.\n\n### Nå bruker de like mye på betalt trafikk.\n\n"
       ],
       "items": [
         {
