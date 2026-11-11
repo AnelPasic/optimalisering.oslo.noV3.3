@@ -1,5 +1,5 @@
 /**
- * Bransjereferanser hentet fra samtalen «Konverteringsrater for bransjer» (25.10.2026).
+ * Bransjereferanser hentet fra samtalen "Konverteringsrater for bransjer" (25.10.2026).
  * Oppdatert Shopify-total fra 1,4 til 1,3 % etter Littledata november 2026.
  *
  * Viktig: typical er publiserte US-benchmarks/medianer (annonser eller Shopify).
@@ -54,15 +54,15 @@ export const conversionBenchmarks: readonly ConversionBenchmark[] = [
   { id: 'renhold', name: 'Renhold', channel: 'search', lowBelow: 9, typical: 17.7, targetLow: 25, targetHigh: 30, source: 'home2025', proxy: 'Undersøkelsen gjelder hovedsakelig privat rengjøring, ikke alle former for næringsrenhold.' },
   { id: 'bygg', name: 'Bygg og entreprenør', channel: 'search', lowBelow: 2, typical: 2.6, targetLow: 4, targetHigh: 6, source: 'home2025' },
   { id: 'trafikkskole', name: 'Trafikkskole', channel: 'search', lowBelow: 7, typical: 13.1, targetLow: 19, targetHigh: 24, source: 'search2026', proxy: 'Utdanning og undervisning generelt, ikke et eget trafikkskoleutvalg.' },
-  { id: 'kantine', name: 'Kantine og B2B-catering', channel: 'search', lowBelow: 3, typical: 4.9, targetLow: 7, targetHigh: 10, source: 'search2026', proxy: 'Bredere kategori for bedriftstjenester – ikke et eget kantineutvalg.' },
-  { id: 'byra', name: 'Web- og markedsføringsbyrå', channel: 'search', lowBelow: 3, typical: 4.9, targetLow: 7, targetHigh: 10, source: 'search2026', proxy: 'Bredere kategori for bedriftstjenester – ikke kun byråer.' }
+  { id: 'kantine', name: 'Kantine og B2B-catering', channel: 'search', lowBelow: 3, typical: 4.9, targetLow: 7, targetHigh: 10, source: 'search2026', proxy: 'Bredere kategori for bedriftstjenester, ikke et eget kantineutvalg.' },
+  { id: 'byra', name: 'Web- og markedsføringsbyrå', channel: 'search', lowBelow: 3, typical: 4.9, targetLow: 7, targetHigh: 10, source: 'search2026', proxy: 'Bredere kategori for bedriftstjenester, ikke et rent byråutvalg.' }
 ];
 
 export const rateNumber = (value: number): string => new Intl.NumberFormat('nb-NO', {maximumFractionDigits: 1}).format(value);
 export const rateText = (value: number): string => rateNumber(value) + ' %';
 export const formatLowRate = (benchmark: ConversionBenchmark): string => '< ' + rateText(benchmark.lowBelow);
-export const formatTargetRate = (benchmark: ConversionBenchmark): string => rateNumber(benchmark.targetLow) + '–' + rateText(benchmark.targetHigh);
-export const channelName = (channel: RateChannel): string => channel === 'shopify' ? 'Nettbutikk · kjøp per økt' : 'Søkeannonser · henvendelser/konverteringer per klikk';
+export const formatTargetRate = (benchmark: ConversionBenchmark): string => rateNumber(benchmark.targetLow) + '-' + rateText(benchmark.targetHigh);
+export const channelName = (channel: RateChannel): string => channel === 'shopify' ? 'Nettbutikk - kjøp per økt' : 'Søkeannonser - henvendelser/konverteringer per klikk';
 
 for (const entry of conversionBenchmarks) {
   if (!entry.id || entry.lowBelow >= entry.typical || entry.typical >= entry.targetLow || entry.targetLow > entry.targetHigh || entry.targetHigh > 100) {
