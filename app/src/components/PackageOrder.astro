@@ -22,6 +22,8 @@ const enabled = site.ordersEnabled;
         <input class="input w-full" id={id('website')} name="website" type="text" inputmode="url" autocomplete="url" placeholder="dinbedrift.no" maxlength="2048" required />
         <label for={id('email')}>Jobb-e-post <span aria-hidden="true">*</span></label>
         <input class="input w-full" id={id('email')} name="email" type="email" autocomplete="email" placeholder="deg@dinbedrift.no" maxlength="254" required />
+        <label for={id('phone')}>Telefon <span class="optional">(valgfritt)</span></label>
+        <input class="input w-full" id={id('phone')} name="phone" type="tel" autocomplete="tel" maxlength="40" />
       </div>
       <div hidden aria-hidden="true"><label for={id('website-confirmation')}>La feltet stå tomt</label><input id={id('website-confirmation')} name="website_confirmation" tabindex="-1" autocomplete="off" maxlength="200" /></div>
       <p class="form-privacy">Ikke send innlogging eller sensitive opplysninger. <a href="/personvern/">Les om personvern</a>.</p>

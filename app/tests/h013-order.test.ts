@@ -37,8 +37,11 @@ test('global package cards own the order form; there is no second order area on 
   const page=readFileSync('src/components/PricingPage.astro','utf8');
   assert.match(cards,/<PackageOrder item={item}/);
   assert.doesNotMatch(page,/<PackageOrder/);
-  for(const field of ['website','email']) assert.match(inline,new RegExp('name="'+field+'"'));
-  assert.doesNotMatch(inline,/name="(?:phone|focus|partnerNeeds)"/);
+  for(const field of ['website','email','phone']) assert.match(inline,new RegExp('name="'+field+'"'));
+  assert.match(inline, /Telefon[^\n]*\(valgfritt\)/);
+  assert.match(inline, /name="phone"[^>]+type="tel"[^>]+autocomplete="tel"/);
+  assert.doesNotMatch(inline, /<input[^>]*name="phone"[^>]*\brequired\b/);
+  assert.doesNotMatch(inline,/name="(?:focus|partnerNeeds)"/);
   assert.match(inline,/name="package" value={item.key}/);
   assert.match(inline,/const enabled = site.ordersEnabled/);
   assert.match(inline,/orderSubmitLabel/);

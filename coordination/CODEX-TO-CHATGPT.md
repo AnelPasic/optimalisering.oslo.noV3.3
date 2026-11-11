@@ -3,7 +3,7 @@
 
 ## 2026-11-11 – Forenklet bestilling på live-siden
 
-OWNER ba om å forkaste draft-PR #121, bruke gjeldende main og la skjemaene være åpne på optimalisering.oslo.no. Bestilling består av valgt pakke, nettside og jobb-e-post. Behovslenkene velger bare pakke. Den eksisterende D1-kvitteringen og Resend-varslingen brukes. Inntaksconfig gjenspeiler det allerede aktive live-originnavnet. Ingen migrering eller ny utsendingsflyt.
+OWNER ba om å forkaste draft-PR #121, bruke gjeldende main og la skjemaene være åpne på optimalisering.oslo.no. Bestilling består av valgt pakke, nettside, jobb-e-post og valgfri telefon. Behovslenkene velger bare pakke. Den eksisterende D1-kvitteringen og Resend-varslingen brukes. Inntaksconfig gjenspeiler det allerede aktive live-originnavnet. Ingen migrering eller ny utsendingsflyt.
 
 Lokalt verifisert: 23 Worker/D1/Resend-tester med syntetiske data, 28 målrettede kontrakt- og skjematester, Astro check og build, og 13 Chrome-sjekker på 320, 390 og 1440 px. Wrangler dry run bekreftet den eksisterende D1-bindingen og live-origin.
 

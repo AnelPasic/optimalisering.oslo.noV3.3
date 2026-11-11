@@ -45,7 +45,7 @@ test('Pricing comparison is only on pricing page and has correct accessible inte
  assert.match(comparison,/class="package-comparison-scroll overflow-x-auto rounded-box border border-base-content\/10 bg-base-100"/);
  assert.match(comparison,/scope="col"/);
  assert.doesNotMatch(comparison,/<(?:input|select|textarea)\b/);
- assert.doesNotMatch(order,/data-package-focus|name="(?:phone|focus|partnerNeeds)"/);
+ assert.doesNotMatch(order,/data-package-focus|name="(?:focus|partnerNeeds)"/);
  assert.match(order,/name="website"[^>]+required/);
  assert.match(order,/name="email"[^>]+required/);
  const footer=comparison.match(/<tfoot>([\s\S]*?)<\/tfoot>/)?.[1];

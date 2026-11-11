@@ -32,7 +32,13 @@ try {
       await form.locator('[name=website]').fill('example.test');
       await form.locator('[name=email]').fill('synthetic@example.test');
       if (name === 'order') {
-        assert.equal(await form.locator('[name=phone], [name=focus], [name=partnerNeeds]').count(), 0);
+        const phone = form.getByRole('textbox', { name: 'Telefon (valgfritt)' });
+        assert.equal(await phone.getAttribute('type'), 'tel');
+        assert.equal(await phone.getAttribute('required'), null);
+        assert.equal(await form.evaluate(form => form.checkValidity()), true);
+        await phone.fill('+47 900 00 000');
+        assert.equal(await form.evaluate(form => form.checkValidity()), true);
+        assert.equal(await form.locator('[name=focus], [name=partnerNeeds]').count(), 0);
         assert.equal(await form.locator('[name=company], [name=contact]').count(), 0);
         assert.equal(await form.locator('[type=submit]').isDisabled(), true);
         assert.equal(await page.locator('[data-package-key=vekst]').getAttribute('open'), '');
