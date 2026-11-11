@@ -65,19 +65,20 @@
       "headingAlign": "default",
       "layout": "two-columns",
       "body": [
-        "To butikker starter likt: **10 000 kr i annonser, 3 000 besøk og 1 % konverteringsrate**. Det gir **30 bestillinger** med en ordreverdi på **1 000 kr**, altså **30 000 kr i omsetning**. Alle vil selge mer. A kjøper mer trafikk, B forbedrer konverteringen."
+        "To butikker starter likt: **10 000 kr i annonser, 3 000 besøk og 1 % konverteringsrate**. Det gir **30 bestillinger** med en ordreverdi på **1 000 kr**, altså **30 000 kr i omsetning**. \n\nAlle vil selge mer. Klikkekongen AS kjøper mer trafikk, Konverteringskongen AS forbedrer konverteringsraten."
       ],
       "items": [
         {
           "title": "Klikkekongen AS",
-          "headline": "Klikkekongen AS",
-          "text": "**Dobler annonsebudsjettet.**\n\n- Annonser: **20 000 kr**\n- Besøk: **6 000**\n- Konverteringsrate: **1 %**\n- Bestillinger: **60**\n- Ordreverdi: **1 000 kr**\n- Omsetning: **60 × 1 000 = 60 000 kr**\n\n**Omsetning minus annonser: 40 000 kr**\n\nAnnonsekostnad per bestilling: ca. **333 kr**.",
+          "headline": "Dobler annonsebudsjettet",
+          "text": "- Annonsekroner: **20 000 kr**\n- Besøk: **6 000**\n- Konverteringsrate: **1 %**\n- Bestillinger: **60**\n- Ordreverdi: **1 000 kr**\n- Omsetning: **60 × 1 000 = 60 000 kr**\n\n**Omsetning minus annonser: 40 000 kr**",
           "boxVariant": "card",
           "surface": "base-300"
         },
         {
           "title": "Konverteringskongen AS",
-          "text": "**Dobler konverteringsraten.**\n\n- Annonser: **10 000 kr**\n- Besøk: **3 000**\n- Konverteringsrate: **2 %**\n- Bestillinger: **60**\n- Ordreverdi: **1 000 kr**\n- Omsetning: **60 × 1 000 = 60 000 kr**\n\n**Omsetning minus annonser: 50 000 kr**\n\nAnnonsekostnad per bestilling: ca. **167 kr**.",
+          "headline": "Dobler konverteringsraten",
+          "text": "- Annonsekroner: **10 000 kr**\n- Besøk: **3 000**\n- Konverteringsrate: **2 %**\n- Bestillinger: **60**\n- Ordreverdi: **1 000 kr**\n- Omsetning: **60 × 1 000 = 60 000 kr**\n\n**Omsetning minus annonser: 50 000 kr**",
           "boxVariant": "card",
           "surface": "info"
         }
