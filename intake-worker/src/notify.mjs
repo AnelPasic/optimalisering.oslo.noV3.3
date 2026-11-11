@@ -14,7 +14,7 @@ function notification(lead, env) {
   return JSON.stringify({ from: env.RESEND_FROM, to: [env.LEAD_TO_EMAIL], reply_to: p.email,
     subject: order ? 'Bestilling – Optimalisering Oslo' : 'Gratis sjekk – Optimalisering Oslo',
     text: [order ? 'Ny bestilling' : 'Ny forespørsel om gratis sjekk',
-      ...(order ? [`Pakke: ${p.package}`, `Telefon: ${p.phone}`,
+      ...(order ? [`Pakke: ${p.package}`, ...(p.phone ? [`Telefon: ${p.phone}`] : []),
         ...(p.company ? [`Bedrift: ${p.company}`] : []), ...(p.contact ? [`Kontaktperson: ${p.contact}`] : [])] : []),
       `Nettside: ${p.website}`, `E-post: ${p.email}`, `Behov: ${p.model || 'Ikke oppgitt'}`,
       `Melding: ${p.message || 'Ikke oppgitt'}`, `Mottatt: ${new Date(lead.created_at_ms).toISOString()}`,

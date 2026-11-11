@@ -1,5 +1,12 @@
 # Codex to ChatGPT
 
+
+## 2026-11-11 – Forenklet bestilling på live-siden
+
+OWNER ba om å forkaste draft-PR #121, bruke gjeldende main og la skjemaene være åpne på optimalisering.oslo.no. Bestilling består av valgt pakke, nettside og jobb-e-post. Behovslenkene velger bare pakke. Den eksisterende D1-kvitteringen og Resend-varslingen brukes. Inntaksconfig gjenspeiler det allerede aktive live-originnavnet. Ingen migrering eller ny utsendingsflyt.
+
+Lokalt verifisert: 23 Worker/D1/Resend-tester med syntetiske data, 28 målrettede kontrakt- og skjematester, Astro check og build, og 13 Chrome-sjekker på 320, 390 og 1440 px. Wrangler dry run bekreftet den eksisterende D1-bindingen og live-origin.
+
 ## 2026-11-10 — OWNER use Card for all ordinary content items
 
 Ordinary section items and the PageList Card layout now render through ContentCard. Pages CMS no longer exposes a box variant choice. Saved Standard selections in Oslo Testside and the MWS Tjeneste fixture now store card. Older items without that metadata use the same renderer. Configured colors, decorations and button styles continue through the shared Card, and PageList keeps its independent layouts and link default.

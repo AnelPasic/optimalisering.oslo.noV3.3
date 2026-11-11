@@ -1,5 +1,11 @@
 # D-129 durable form ingress
 
+## Live order form — 2026-11-11
+
+The live website at `https://optimalisering.oslo.no` uses the existing HTTPS intake Worker. That is the exact allowed browser origin. An order uses the selected package, website and email. The existing D1 receipt and internal Resend notification handle the submission. The public success message follows a stored D1 acknowledgement. Resend retries independently of that acknowledgement.
+
+The Worker still uses `0001_receipts.sql`, the existing D1 binding, Resend secrets, rate limit, Access policy and retry schedule. There is no schema migration in this change.
+
 ## Current operation — 2026-10-24
 
 OWNER now authorizes the real resources and active forms on the existing **noindex** preview; this supersedes the development-only restrictions in the historical runbook below. Exactly one real intake Worker (`optimalisering-oslo-intake`) and one EU-jurisdiction D1 (`optimalisering-oslo-leads`, `495f1fd2-2337-43fc-88d7-38885ba38134`) are provisioned. Migration `0001_receipts.sql` is applied. Endpoint: `https://optimalisering-oslo-intake.anel.workers.dev/api/leads`; exact allowed browser origin: `https://optimalisering-oslo-v33.anel.workers.dev`. The separate static website Worker is preserved.
@@ -39,7 +45,7 @@ The test suite uses synthetic `.test` addresses, SQLite executing production SQL
 
 ## Receipt contract and site boundary
 
-`POST /api/leads`, JSON ≤16KiB, body deadline 5 seconds. Required `Origin`, JSON content type and `Idempotency-Key` of 8–100 ASCII letters/digits/`_`/`-`. The existing `createLeadPayload` and `createOrderPayload` remain canonical validators. Required assessment fields: website/email. Orders additionally require the existing package key and phone; legacy company/contact remain optional. Attribution is restricted and URL queries removed. Filled `website_confirmation`, malformed types and invalid fields fail before persistence. Browser callers carry no secret.
+`POST /api/leads`, JSON ≤16KiB, body deadline 5 seconds. Required `Origin`, JSON content type and `Idempotency-Key` of 8–100 ASCII letters/digits/`_`/`-`. The existing `createLeadPayload` and `createOrderPayload` remain canonical validators. Required assessment fields: website/email. Orders additionally require the existing package key. The live form sends website and email. The endpoint still accepts optional phone, company and contact from older clients. Attribution is restricted and URL queries removed. Filled `website_confirmation`, malformed types and invalid fields fail before persistence. Browser callers carry no secret.
 
 Each Worker has **one server-configured `SITE_ID`**, one exact HTTPS `INGRESS_ORIGIN` and an exact browser `ALLOWED_ORIGINS` list. A body cannot select another tenant. Host/URL, origin and body-site must all match their bindings. Origin is a browser boundary, not proof of the caller's identity; non-browser clients can forge it. A required Cloudflare Rate Limiting binding enforces the public IP key (10 requests/minute in the checked-in development config), failing closed if unavailable. `CF-Connecting-IP` must be provided by Cloudflare's edge. No public bearer key belongs in browser code. Rate Limiting is approximate/distributed, so quotas and abuse still need monitoring; assess WAF/Turnstile during authorized launch verification if actual traffic requires it.
 

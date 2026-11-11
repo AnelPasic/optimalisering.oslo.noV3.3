@@ -66,7 +66,7 @@ test('site identity is bound by server configuration and ingress, not caller bod
 
 test('strict validation, honeypot, body size, content type and distributed rate limiter', async () => {
   const { send, DB } = setup();
-  for (const patch of [{ email: 'invalid' }, { email: 12 }, { website: 'javascript:alert(1)' }, { website_confirmation: 'bot' }, { message: 'x'.repeat(2001) }, { source: [] }, { source: { page: 12 } }, { form: 'other' }, { form: 'pakke-bestilling', package: 'unknown', phone: '90000000' }, { form: 'pakke-bestilling', package: 'vekst', phone: '' }]) {
+  for (const patch of [{ email: 'invalid' }, { email: 12 }, { website: 'javascript:alert(1)' }, { website_confirmation: 'bot' }, { message: 'x'.repeat(2001) }, { source: [] }, { source: { page: 12 } }, { form: 'other' }, { form: 'pakke-bestilling', package: 'unknown', phone: '90000000' }, { form: 'pakke-bestilling', package: 'vekst', phone: 'invalid' }]) {
     assert.equal((await send({ ...sample, ...patch })).status, 422, JSON.stringify(patch));
   }
   assert.equal((await send(sample, '')).status, 422);
@@ -117,4 +117,20 @@ test('uncertain write result returns failure but retry recovers the committed re
   const response = await send(); assert.equal(response.status, 200);
   assert.equal((await response.json()).id, stored.id);
   assert.equal(DB.sqlite.prepare('SELECT count(*) n FROM receipts').get().n, 1);
+});
+
+test('live order contract requires only package, website and email', async () => {
+  const { DB, send } = setup();
+  const order = { site: sample.site, form: 'pakke-bestilling', package: 'vekst',
+    website: 'example.test', email: 'synthetic@example.test' };
+  const first = await send(order, 'synthetic-simple-order');
+  assert.equal(first.status, 201);
+  const { id } = await first.json();
+  const stored = JSON.parse(DB.sqlite.prepare('SELECT payload_json FROM receipts WHERE id=?').get(id).payload_json);
+  assert.equal(stored.package, 'vekst');
+  assert.equal(stored.email, order.email);
+  assert.equal(stored.phone, undefined);
+  assert.equal(stored.focus, undefined);
+  assert.equal((await send(order, 'synthetic-simple-order')).status, 200);
+  assert.equal(DB.sqlite.prepare('SELECT count(*) AS n FROM receipts').get().n, 1);
 });

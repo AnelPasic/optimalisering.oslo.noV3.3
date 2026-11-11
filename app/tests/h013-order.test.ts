@@ -14,17 +14,17 @@ test('order intent and selected package survive the shared intake payload withou
   assert.equal(payload.source.page, '/priser/');
   assert.equal('extra' in payload, false);
 });
-test('new three-field inline order preserves the selected package and source page', () => {
-  const payload = createOrderPayload({form:'pakke-bestilling',package:'vekst',website:'example.test',email:'synthetic@example.test',phone:'+47 901 02 345'}, {page:'/synlighet/'});
+test('website and email order preserves the selected package and source page', () => {
+  const payload = createOrderPayload({form:'pakke-bestilling',package:'vekst',website:'example.test',email:'synthetic@example.test'}, {page:'/synlighet/'});
   assert.equal(payload.intent,'order');
   assert.equal(payload.package,'vekst');
-  assert.equal(payload.phone,'+47 901 02 345');
+  assert.equal('phone' in payload,false);
   assert.equal(payload.source.page,'/synlighet/');
   assert.equal('company' in payload,false);
   assert.equal('contact' in payload,false);
 });
 test('orders reject invalid intent, package, phone and excessive optional legacy fields', () => {
-  for (const changes of [{form:'checkout'},{package:'sprint'},{package:''},{company:'x'.repeat(201)},{contact:'x'.repeat(201)},{phone:''},{phone:'abcde'},{phone:'x'.repeat(41)}])
+  for (const changes of [{form:'checkout'},{package:'sprint'},{package:''},{company:'x'.repeat(201)},{contact:'x'.repeat(201)},{phone:'abcde'},{phone:'x'.repeat(41)}])
     assert.throws(()=>createOrderPayload({...fields,...changes},{}));
   const assessment=createLeadPayload({website:'example.test',email:fields.email},{});
   assert.equal(assessment.form,'gratis-sjekk');
@@ -37,7 +37,8 @@ test('global package cards own the order form; there is no second order area on 
   const page=readFileSync('src/components/PricingPage.astro','utf8');
   assert.match(cards,/<PackageOrder item={item}/);
   assert.doesNotMatch(page,/<PackageOrder/);
-  for(const field of ['website','email','phone']) assert.match(inline,new RegExp('name="'+field+'"'));
+  for(const field of ['website','email']) assert.match(inline,new RegExp('name="'+field+'"'));
+  assert.doesNotMatch(inline,/name="(?:phone|focus|partnerNeeds)"/);
   assert.match(inline,/name="package" value={item.key}/);
   assert.match(inline,/const enabled = site.ordersEnabled/);
   assert.match(inline,/orderSubmitLabel/);
