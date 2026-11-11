@@ -78,14 +78,14 @@
         {
           "title": "Klikkekongen AS",
           "headline": "Dobler annonsebudsjettet",
-          "text": "- Annonsekroner: **20 000 kr**\n- Besøk: **6 000**\n- Konverteringsrate: **1 %**\n- Bestillinger: **60**\n- Ordreverdi: **1 000 kr**\n- Omsetning: **60 × 1 000 = 60 000 kr**\n\n\n\n**Omsetning minus annonser: 40 000 kr**",
+          "text": "- Annonsekroner: **20 000 kr**\n- Besøk: **6 000**\n- Konverteringsrate: **1 %**\n- Bestillinger: **60**\n- Ordreverdi: **1 000 kr**\n- Omsetning: **60 × 1 000 = 60 000 kr**\n- Omsetning minus annonser: ++**40 000 kr**++\n\n",
           "boxVariant": "card",
           "surface": "base-300"
         },
         {
           "title": "Konverteringskongen AS",
           "headline": "Dobler konverteringsraten",
-          "text": "- Annonsekroner: **10 000 kr**\n- Besøk: **3 000**\n- Konverteringsrate: **2 %**\n- Bestillinger: **60**\n- Ordreverdi: **1 000 kr**\n- Omsetning: **60 × 1 000 = 60 000 kr**\n\n\n\n**Omsetning minus annonser: 50 000 kr**",
+          "text": "- Annonsekroner: **10 000 kr**\n- Besøk: **3 000**\n- Konverteringsrate: **2 %**\n- Bestillinger: **60**\n- Ordreverdi: **1 000 kr**\n- Omsetning: **60 × 1 000 = 60 000 kr**\n- Omsetning minus annonser: **50 000 kr  (10 000 mer)**\n\n",
           "boxVariant": "card",
           "surface": "info"
         }
