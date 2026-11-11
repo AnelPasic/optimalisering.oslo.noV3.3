@@ -19,6 +19,7 @@ test('Resend acknowledgement is accepted, never delivered; duplicate claims send
   const transport = async (_url, options) => {
     calls++; const mail = JSON.parse(options.body);
     assert.match(mail.subject, /Bestilling/); assert.match(mail.text, /Pakke: vekst/);
+    assert.match(mail.text, /Telefon: 90000000/);
     assert.equal(mail.text.includes('undefined'), false);
     assert.equal(options.headers['Idempotency-Key'], `receipt/${id}`);
     return accepted();
