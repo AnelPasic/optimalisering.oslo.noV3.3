@@ -58,7 +58,7 @@
         {
           "title": "Klikkekongen AS",
           "headline": "Dobler annonsebudsjettet",
-          "text": "- Annonsekroner: **20 000 kr**\n- Besøk: **6 000**\n- Konverteringsrate: **1 %**\n- Bestillinger: **60**\n- Ordreverdi: **1 000 kr**\n- Omsetning: **60 × 1 000 = 60 000 kr**\n- Omsetning minus annonser: **40 000 kr**\n\n",
+          "text": "- Annonsekroner: **20 000 kr**\n- Besøk: **6 000**\n- Konverteringsrate: **1 %**\n- Bestillinger: **60**\n- Ordreverdi: **1 000 kr**\n- Omsetning: **60 × 1 000 = 60 000 kr**\n- Omsetning minus annonser: ++**40 000 kr**++\n\n",
           "boxVariant": "card",
           "surface": "base-300"
         },
@@ -74,25 +74,24 @@
     {
       "_block": "content",
       "id": "nestenivaa",
-      "heading": "Men vent. Nå blir forskjellen enda større.",
+      "heading": "Gjett Hva! Det er ikke hele historien - Steg 2:",
       "headingAlign": "left",
       "layout": "two-columns",
       "surface": "base-200",
       "body": [
-        "**Konverteringskongen AS brukte 10 000 kr mindre på annonser i steg 1.** Hva skjer hvis selskapet nå øker annonsebudsjettet til samme nivå som Klikkekongen AS?",
-        "Med samme klikkpris og konverteringsrate får de like mange besøk, men ikke like mange bestillinger. **Eksempelet viser omsetning minus annonser – ikke overskudd.** Andre kostnader kommer i tillegg."
+        "### Konverteringskongen AS sitter igjen med 10 000 ekstra fra forrige steg.\n\nHan bruker de til å kjøpe mer trafikk. Nå bruker de like mye på betalt trafikk."
       ],
       "items": [
         {
           "title": "Klikkekongen AS",
-          "text": "### Fortsetter med samme annonsebudsjett\n\n- Annonsekroner: **20 000 kr**\n- Besøk: **6 000**\n- Konverteringsrate: **1 %**\n- Bestillinger: **60**\n- Ordreverdi: **1 000 kr**\n- Omsetning: **60 × 1 000 = 60 000 kr**\n- Omsetning minus annonser: **40 000 kr**\n\n",
+          "text": "### Fortsatt dobbel annonsebudsjettet\n\n- Annonsekroner: **20 000 kr**\n- Besøk: **6 000**\n- Konverteringsrate: **1 %**\n- Bestillinger: **60**\n- Ordreverdi: **1 000 kr**\n- Omsetning: **60 × 1 000 = 60 000 kr**\n- Omsetning etter annonsekostnader: **40 000 kr**\n\n",
           "boxVariant": "card",
           "surface": "base-300"
         },
         {
           "title": "Konverteringskongen AS",
-          "headline": "Øker annonseringen til 20 000 kr",
-          "text": "### Øker annonsebudsjettet til samme nivå\n\n- Annonsekroner: **20 000 kr**\n- Besøk: **6 000**\n- Konverteringsrate: **2 %**\n- Bestillinger: **120**\n- Ordreverdi: **1 000 kr**\n- Omsetning: **120 × 1 000 = 120 000 kr**\n- Omsetning minus annonser: **100 000 kr (mot 40 000 kr)**\n\n",
+          "headline": "Bruker 10 000 ekstra",
+          "text": "### Brukt ekstra overskudd på annonser\n\n- Annonsekroner: **20 000 kr**\n- Besøk: **6 000**\n- Konverteringsrate: **2 %**\n- Bestillinger: **120**\n- Ordreverdi: **1 000 kr**\n- Omsetning: **120 × 1 000 = 120 000 kr**\n- Omsetning etter annonsekostnader: **100 000 kr (2.5 X mer)**\n\n",
           "boxVariant": "card",
           "surface": "secondary"
         }
