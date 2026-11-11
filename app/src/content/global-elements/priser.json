@@ -166,6 +166,10 @@
           }
         ],
         "visual": "controlled",
+        "visualAsset": {
+          "src": "/images/pricing/lineargrowthgreenv2.svg",
+          "alt": "Solid vekst"
+        },
         "visualCaption": {
           "label": "Tydelig fremgang"
         },
