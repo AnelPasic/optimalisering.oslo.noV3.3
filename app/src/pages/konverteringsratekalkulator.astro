@@ -1,0 +1,65 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import ConversionRateCalculator from '../components/ConversionRateCalculator.astro';
+import IndustryConversionRates from '../components/IndustryConversionRates.astro';
+---
+<SiteLayout title="Konverteringsratekalkulator – regn ut konvertering og salg | Optimalisering Oslo"
+  description="Gratis konverteringsratekalkulator: regn ut din konverteringsrate, flere bestillinger, mulig omsetning og kostnad per kundehenvendelse. Se bransjetall for 12 bransjer.">
+  <div class="calculator-page">
+    <header class="calculator-page-hero section-space bg-secondary text-secondary-content">
+      <div class="shell">
+        <p class="eyebrow">GRATIS VERKTØY · KONVERTERINGSOPTIMALISERING</p>
+        <h1>Konverteringsratekalkulator</h1>
+        <p>Hvor mange flere bestillinger kan du få fra trafikken du allerede har? Regn ut konverteringsraten, sammenlign med bransjetall og se hva en forbedring ville betydd for omsetningen.</p>
+        <div class="calculator-page-jump">
+          <a class="btn btn-primary" href="#konverteringskalkulator">Regn ut potensialet</a>
+          <a class="btn btn-outline" href="#bransjereferanser">Se bransjetallene</a>
+        </div>
+      </div>
+    </header>
+    <div id="konverteringskalkulator">
+      <ConversionRateCalculator />
+    </div>
+    <section class="section-space bg-base-200 text-base-content" id="bransjereferanser">
+      <div class="shell">
+        <p class="eyebrow">KILDEBASERTE REFERANSER · 12 BRANSJER</p>
+        <h2>Hva er en god konverteringsrate i din bransje?</h2>
+        <p class="calculator-page-text">Her er bransjetallene fra gjennomgangen vår av nettbutikker og tjenestebedrifter. Søkedrevne henvendelser og kjøp i nettbutikk måles forskjellig. Derfor har vi delt dem i to tabeller.</p>
+        <IndustryConversionRates />
+      </div>
+    </section>
+    <section class="section-space bg-info text-info-content" id="fa-hjelp">
+      <div class="shell calculator-page-cta">
+        <div>
+          <p class="eyebrow">FRA REGNESTYKKE TIL RESULTAT</p>
+          <h2>Tallene er interessante. Hva gjør vi med dem?</h2>
+          <p>Vi har jobbet med nettsider og optimalisering siden 2009. Vi finner hvor kundene stopper, gjør konkrete forbedringer og måler om flere går videre. Start med en gratis vurdering – eller la oss forbedre nettsiden din.</p>
+        </div>
+        <div class="calculator-page-buttons">
+          <a class="btn btn-primary" href="/vurdering/">Få 3 gratis funn</a>
+          <a class="btn btn-outline" href="/konvertering/#priser">Se priser på optimalisering</a>
+        </div>
+      </div>
+    </section>
+    <section class="section-space bg-base-100 text-base-content">
+      <div class="shell calculator-page-explainer">
+        <h2>Hva betyr konverteringsrate?</h2>
+        <p>Konverteringsrate viser hvor stor andel av besøk eller annonseklikk som ender i en ønsket handling. For nettbutikk er dette ofte et kjøp. For tjenestebedrifter kan det være en kvalifisert henvendelse eller booking.</p>
+        <p><strong>Eksempel:</strong> Har du 2 000 økter og 20 bestillinger, er konverteringsraten 1 %. Får du 40 bestillinger fra de samme 2 000 øktene, øker den til 2 %. Det betyr dobbelt så mange bestillinger, men ikke automatisk dobbelt så mye fortjeneste.</p>
+      </div>
+    </section>
+  </div>
+</SiteLayout>
+<style>
+.calculator-page-hero .shell { max-width:1050px; }
+.calculator-page-hero h1 { max-width:900px; }
+.calculator-page-hero p:not(.eyebrow) { max-width:800px; margin-top:22px; }
+.calculator-page-jump { display:flex; flex-wrap:wrap; gap:12px; margin-top:26px; }
+.calculator-page-text { margin-top:15px; max-width:830px; }
+.calculator-page-cta { display:grid; grid-template-columns:minmax(0,1.5fr) minmax(230px,.5fr); gap:34px; align-items:center; }
+.calculator-page-cta p:not(.eyebrow) { margin-top:20px; max-width:730px; }
+.calculator-page-buttons { display:flex; flex-direction:column; gap:12px; }
+.calculator-page-explainer { max-width:950px; }
+.calculator-page-explainer p { margin-top:20px; }
+@media(max-width:800px){ .calculator-page-cta {grid-template-columns:1fr;} .calculator-page-buttons {flex-direction:row;flex-wrap:wrap;} }
+</style>
