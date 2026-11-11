@@ -39,8 +39,7 @@
     "support": "Byråer elsker å selge mer trafikk. Vi foretrekker elementær barneskolematte som fyller kontoen din. Den kjedeligste prosenten i regnearket kan vise seg å være den mest lønnsomme. Og du trenger ikke kjøpe ett eneste ekstra klikk.",
     "primaryCta": {
       "label": "Bestill optimalisering",
-      "href": "#priser",
-      "suggestedHref": "/konvertering/"
+      "href": "/optimalisering/#priser"
     },
     "visual": {
       "kind": "image",
