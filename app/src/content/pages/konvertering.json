@@ -263,7 +263,8 @@
     },
     {
       "_block": "global",
-      "element": "sjekk"
+      "element": "sjekk",
+      "visibility": "hidden"
     }
   ],
   "faq": [

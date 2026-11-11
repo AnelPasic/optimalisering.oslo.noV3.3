@@ -1,5 +1,11 @@
 # Codex to ChatGPT
 
+## 2026-11-12 — Mobiloppsett for sammenligningskort på Konvertering
+
+Fjernet mobilregelen for kortene under «Den hemmelige oppskriften». De følger nå det felles seksjonsoppsettet. Bygget stoppet på to synlige seksjoner med ankeret `#sjekk`. Den globale plasseringen er skjult på Konvertering, og den lokale seksjonen beholder ankeret og innholdet.
+
+Astro-sjekk, statisk bygg og Pagefind-indeksering bestod. Chromium bekreftet én kolonne ved 390 px, to ved 1440 px og ett synlig `#sjekk`-anker. Cloudflare-bygg og visuell sjekk på offentlig side følger etter oppdatering av main.
+
 ## 2026-11-11 — OWNER rich-text editing and URL suggestions
 
 Pages CMS now uses the Markdown editor for longer editorial fields. Local and shared sections, Hero support, FAQ answers, listing summaries and the relevant pricing and glossary copy render through the safe Markdown implementation. Link editors offer page suggestions. A selection works by itself and any saved manual URL remains the fallback after clearing the selection. Existing page JSON was preserved.
