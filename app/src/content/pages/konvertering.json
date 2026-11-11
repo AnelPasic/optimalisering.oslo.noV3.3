@@ -4,9 +4,7 @@
   "composition": {
     "commercialText": true,
     "service": {
-      "closingCta": false,
-      "sectionSurfaces": [],
-      "sectionVisuals": []
+      "closingCta": false
     }
   },
   "seo": {
@@ -84,14 +82,14 @@
       "items": [
         {
           "title": "Klikkekongen AS",
-          "text": "### Fortsatt dobbel annonsebudsjettet\n\n- Annonsekroner: **20 000 kr**\n- Besøk: **6 000**\n- Konverteringsrate: **1 %**\n- Bestillinger: **60**\n- Ordreverdi: **1 000 kr**\n- Omsetning: **60 × 1 000 = 60 000 kr**\n- Omsetning etter annonsekostnader: **40 000 kr**\n\n",
+          "text": "#### Fortsatt dobbel annonsebudsjettet\n\n- Annonsekroner: **20 000 kr**\n- Besøk: **6 000**\n- Konverteringsrate: **1 %**\n- Bestillinger: **60**\n- Ordreverdi: **1 000 kr**\n- Omsetning: **60 × 1 000 = 60 000 kr**\n- Omsetning etter annonsekostnader: **40 000 kr**\n\n",
           "boxVariant": "card",
           "surface": "base-300"
         },
         {
           "title": "Konverteringskongen AS",
           "headline": "Bruker 10 000 ekstra",
-          "text": "### Brukt ekstra overskudd på annonser\n\n- Annonsekroner: **20 000 kr**\n- Besøk: **6 000**\n- Konverteringsrate: **2 %**\n- Bestillinger: **120**\n- Ordreverdi: **1 000 kr**\n- Omsetning: **120 × 1 000 = 120 000 kr**\n- Omsetning etter annonsekostnader: **100 000 kr (2.5 X mer)**\n\n",
+          "text": "#### Brukt ekstra overskudd på annonser\n\n- Annonsekroner: **20 000 kr**\n- Besøk: **6 000**\n- Konverteringsrate: **2 %**\n- Bestillinger: **120**\n- Ordreverdi: **1 000 kr**\n- Omsetning: **120 × 1 000 = 120 000 kr**\n- Omsetning etter annonsekostnader: **100 000 kr (2.5 X mer)**\n\n",
           "boxVariant": "card",
           "surface": "secondary"
         }
@@ -151,6 +149,8 @@
       "id": "friksjon",
       "eyebrow": "SLIK JOBBER VI",
       "heading": "Vi finner ut hvorfor kundene stopper – og gjør det enklere å bestille.",
+      "headingAlign": "left",
+      "layout": "three-columns",
       "body": [
         "Vi gjetter ikke hvilken knapp som bør være grønnere. Vi finner hindringen som betyr mest, forbedrer den og følger med på om flere tar neste steg."
       ],
@@ -170,9 +170,7 @@
           "text": "Vi følger relevante henvendelser, bestillinger og kjøp – ikke bare klikk og pene rapporter.",
           "boxVariant": "card"
         }
-      ],
-      "headingAlign": "left",
-      "layout": "three-columns"
+      ]
     },
     {
       "_block": "protected",
