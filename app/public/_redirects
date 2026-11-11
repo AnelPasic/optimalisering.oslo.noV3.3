@@ -1,0 +1,34 @@
+# Legacy URLs from optimalisering-oslo-no.pages.dev.
+# Each historical page had a bare path, a slash variant and an HTML variant.
+
+/seo-ai-sok /synlighet/ 301
+/seo-ai-sok/ /synlighet/ 301
+/seo-ai-sok.html /synlighet/ 301
+
+/konverteringsoptimalisering /konvertering/ 301
+/konverteringsoptimalisering/ /konvertering/ 301
+/konverteringsoptimalisering.html /konvertering/ 301
+
+/google-ads-optimalisering /synlighet/#betalt-synlighet 301
+/google-ads-optimalisering/ /synlighet/#betalt-synlighet 301
+/google-ads-optimalisering.html /synlighet/#betalt-synlighet 301
+
+/meta-ads-optimalisering /synlighet/#betalt-synlighet 301
+/meta-ads-optimalisering/ /synlighet/#betalt-synlighet 301
+/meta-ads-optimalisering.html /synlighet/#betalt-synlighet 301
+
+/nettsideoptimalisering /konvertering/ 301
+/nettsideoptimalisering/ /konvertering/ 301
+/nettsideoptimalisering.html /konvertering/ 301
+
+/nettbutikk-optimalisering /nettbutikkoptimalisering/ 301
+/nettbutikk-optimalisering/ /nettbutikkoptimalisering/ 301
+/nettbutikk-optimalisering.html /nettbutikkoptimalisering/ 301
+
+/optimaliseringssjekk /vurdering/ 301
+/optimaliseringssjekk/ /vurdering/ 301
+/optimaliseringssjekk.html /vurdering/ 301
+
+/om-oss /om/ 301
+/om-oss/ /om/ 301
+/om-oss.html /om/ 301
