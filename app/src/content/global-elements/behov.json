@@ -12,7 +12,7 @@
         "description": "Når kundene leter etter det du tilbyr, skal de finne deg, ikke bare konkurrentene. Vi gjør bedriften din mer synlig på Google, Google Maps, AI-svar eller med annonser, også for kunder som aldri har hørt om deg.",
         "link": {
           "label": "Velg Synlighet",
-          "href": "/priser/?pakke=optimalisering&fokus=synlighet#bestill"
+          "href": "/priser/?pakke=optimalisering#bestill"
         }
       },
       {
@@ -21,7 +21,7 @@
         "description": "Kundene har funnet deg. Nå skal de velge deg. Vi gjør tilbudet tydeligere, nettsiden mer overbevisende og veien til kontakt og bestilling enklere. Slik får flere en god grunn til å velge nettopp deg.",
         "link": {
           "label": "Velg Konvertering",
-          "href": "/priser/?pakke=optimalisering&fokus=konvertering#bestill"
+          "href": "/priser/?pakke=optimalisering#bestill"
         }
       },
       {
@@ -30,7 +30,7 @@
         "description": "Bli lettere å finne og få flere av besøkene til å fullføre bestilling. Vi forbedrer både synligheten og nettsidens evne til å gjøre interesse om til kunder. Flere oppdager deg. Flere velger deg.",
         "link": {
           "label": "Velg Vekst",
-          "href": "/priser/?pakke=vekst&fokus=synlighet-konvertering#bestill"
+          "href": "/priser/?pakke=vekst#bestill"
         }
       }
     ]

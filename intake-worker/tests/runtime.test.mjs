@@ -20,6 +20,12 @@ test('workerd + real local D1: migration, racing POSTs, write failure, default g
       try {
         assert.equal(request.url, 'https://api.resend.com/emails');
         const payload = await request.json(); assert.equal(payload.to[0], 'recipient@example.test');
+        if (payload.subject.startsWith('Bestilling')) {
+          assert.match(payload.text, /Pakke: vekst/);
+          assert.match(payload.text, /Nettside: https:\/\/example.test\//);
+          assert.match(payload.text, /E-post: synthetic@example.test/);
+          assert.doesNotMatch(payload.text, /Telefon:|undefined/);
+        }
         subjects.push(payload.subject); mails++; return Response.json({ id: 'synthetic-runtime-resend' });
       } catch (error) { outboundErrors.push(error.message); throw error; }
     },
@@ -46,7 +52,7 @@ test('workerd + real local D1: migration, racing POSTs, write failure, default g
     }
     assert.equal(stored.notification_status, 'accepted', JSON.stringify({ error: stored.last_error, mails, outboundErrors })); assert.equal(mails, 1);
     assert.equal(stored.leadproof_status, 'not_configured');
-    assert.equal((await send('synthetic-runtime-order', { ...payload, form: 'pakke-bestilling', package: 'vekst', phone: '90000000' })).status, 201);
+    assert.equal((await send('synthetic-runtime-order', { ...payload, form: 'pakke-bestilling', package: 'vekst' })).status, 201);
     for (let i = 0; i < 100; i++) {
       const count = await db.prepare("SELECT count(*) n FROM receipts WHERE notification_status='accepted'").first();
       if (count.n === 2) break;

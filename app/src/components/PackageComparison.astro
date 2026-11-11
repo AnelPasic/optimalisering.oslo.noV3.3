@@ -17,13 +17,6 @@ const format=(price:number)=>new Intl.NumberFormat('nb-NO',{maximumFractionDigit
           <tr><th scope="row">Månedspris eks. mva.</th>{packages.items.map(item=><td>{item.pricePrefix && <span>{item.pricePrefix} </span>}{format(item.price)} {item.priceSuffix}</td>)}</tr>
           <tr><th scope="row">Passer for</th>{packages.items.map(item=><td>{item.compact.fit}</td>)}</tr>
           <tr><th scope="row">Omfang og prioritering</th>{packages.items.map(item=><td>{item.scope?.trim() || item.descriptor}</td>)}</tr>
-          <tr class="compare-category bg-base-200"><th scope="row">{labels.focusHeading}</th><td>Velg ett</td><td>Velg inntil to</td><td>Avklares sammen</td></tr>
-          {labels.options.map(option=><tr>
-            <th scope="row">{option.label}{option.description && <span class="package-compare-text">{option.description}</span>}</th>
-            <td><label class="package-compare-option"><input class="radio radio-primary radio-sm" type="radio" name="comparison-optimalisering" value={option.id} data-package-focus-choice data-focus-package="optimalisering" data-focus-label={option.label} aria-label={`Optimalisering: ${option.label}`} /></label></td>
-            <td><label class="package-compare-option"><input class="checkbox checkbox-primary checkbox-sm" type="checkbox" name="comparison-vekst" value={option.id} data-package-focus-choice data-focus-package="vekst" data-focus-label={option.label} aria-label={`Vekst: ${option.label}`} /></label></td>
-            <td>Etter avtale</td>
-          </tr>)}
         </tbody>
         <tfoot>
           <tr>
@@ -38,12 +31,6 @@ const format=(price:number)=>new Intl.NumberFormat('nb-NO',{maximumFractionDigit
 <script>
  const root=document.querySelector<HTMLElement>('[data-package-comparison]');
  if(root){
-   const options=[...root.querySelectorAll<HTMLInputElement>('[data-package-focus-choice]')];
-   const update=()=>{
-     const selected=options.filter(input=>input.dataset.focusPackage==='vekst'&&input.checked).length;
-     for(const input of options)if(input.dataset.focusPackage==='vekst')input.disabled=selected>=2&&!input.checked;
-   };
-   root.addEventListener('change',event=>{if(event.target instanceof HTMLInputElement&&event.target.matches('[data-package-focus-choice]'))update();});
    root.addEventListener('click',event=>{
      const link=(event.target instanceof Element?event.target.closest<HTMLAnchorElement>('[data-open-package-order]'):null);
      if(!link)return;
@@ -52,8 +39,8 @@ const format=(price:number)=>new Intl.NumberFormat('nb-NO',{maximumFractionDigit
      if(!target)return;
      event.preventDefault();
      target.open=true;
+     target.querySelector('summary')?.focus({preventScroll:true});
      target.scrollIntoView({behavior:'smooth',block:'center'});
    });
-   update();
  }
 </script>

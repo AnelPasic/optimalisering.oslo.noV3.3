@@ -11,7 +11,7 @@
   "vars": {
     "SITE_ID": "optimalisering.oslo.no",
     "INGRESS_ORIGIN": "https://optimalisering-oslo-intake.anel.workers.dev",
-    "ALLOWED_ORIGINS": "https://optimalisering-oslo-v33.anel.workers.dev",
+    "ALLOWED_ORIGINS": "https://optimalisering.oslo.no",
     "SITE_STAGE": "production",
     "PRIVACY_APPROVED": "true",
     "PUBLIC_LEADS_ENABLED": "true",
