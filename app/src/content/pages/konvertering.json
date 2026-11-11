@@ -86,6 +86,31 @@
     },
     {
       "_block": "content",
+      "id": "nestenivaa",
+      "eyebrow": "Gjett Hva!",
+      "heading": "Det er ikke hele historien",
+      "headingAlign": "left",
+      "body": [
+        "### Konverteringskongen AS sitter igjen med 10 000 ekstra, som han bruker til å kjøpe mer trafikk."
+      ],
+      "items": [
+        {
+          "title": "Klikkekongen AS",
+          "headline": "Fortsatt dobbel annonsebudsjettet",
+          "text": "- Annonsekroner: **20 000 kr**\n- Besøk: **6 000**\n- Konverteringsrate: **1 %**\n- Bestillinger: **60**\n- Ordreverdi: **1 000 kr**\n- Omsetning: **60 × 1 000 = 60 000 kr**\n\n**Omsetning minus annonser: 40 000 kr**",
+          "boxVariant": "card",
+          "badge": "Overskudd: 40.000"
+        },
+        {
+          "title": "Konverteringskongen AS",
+          "headline": "Bruker 10 000 ekstra",
+          "text": "- Annonsekroner: **20 000 kr**\n- Besøk: **6 000**\n- Konverteringsrate: **2 %**\n- Bestillinger: **120**\n- Ordreverdi: **1 000 kr**\n- Omsetning: **60 × 1 000 = 120 000 kr**\n\n**Omsetning minus annonser: 100 000 kr**",
+          "boxVariant": "card"
+        }
+      ]
+    },
+    {
+      "_block": "content",
       "id": "konkurransefordel",
       "eyebrow": "FORDI DET IKKE BARE HANDLER OM FLERE ORDRE",
       "heading": "Den som får mest ut av hvert klikk, har mer å konkurrere med.",
