@@ -1,0 +1,175 @@
+---
+import { conversionBenchmarks, rateText } from '../lib/conversion-rate-benchmarks';
+const initial = { visits: 3000, actions: 30, target: 2, value: 1000, adSpend: 10000 };
+const fmt = new Intl.NumberFormat('nb-NO',{maximumFractionDigits:1});
+---
+<section class="conversion-calc-section section-space" aria-labelledby="conversion-calculator-heading" data-conversion-rate-calculator>
+  <div class="shell">
+    <div class="conversion-calc-heading">
+      <p class="eyebrow">GRATIS KONVERTERINGSRATEKALKULATOR</p>
+      <h2 id="conversion-calculator-heading">Hvor mye mer kan trafikken din være verdt?</h2>
+      <p>Legg inn besøk, bestillinger og et mål. Se både konverteringsraten du har i dag, og hva en forbedring kan gi ved samme trafikk.</p>
+    </div>
+    <div class="conversion-calc-grid">
+      <div class="card bg-base-200 text-base-content">
+        <div class="card-body">
+          <h3>Regn på din bedrift</h3>
+          <div class="conversion-calc-inputs">
+            <label class="field">
+              <span>Bransje og trafikktype</span>
+              <select class="select w-full" id="crc-industry" name="industry">
+                <optgroup label="Nettbutikk – kjøp per økt">
+                  {conversionBenchmarks.filter(b=>b.channel==='shopify').map(b=><option value={b.id} selected={b.id==='nettbutikk'}>{b.name}</option>)}
+                </optgroup>
+                <optgroup label="Søkeannonser – konvertering per klikk">
+                  {conversionBenchmarks.filter(b=>b.channel==='search').map(b=><option value={b.id}>{b.name}{b.proxy?' (bransjeproxy)':''}</option>)}
+                </optgroup>
+              </select>
+            </label>
+            <p class="conversion-calc-hint" data-channel-explainer>Bruk nettbutikkøkter og kjøp, ikke alle annonseklikk.</p>
+            <div class="conversion-calc-input-row">
+              <label class="field"><span data-visits-label>Økter per måned</span><input class="input w-full" id="crc-visits" name="visits" type="number" min="1" max="10000000" step="1" required value={initial.visits}/></label>
+              <label class="field"><span data-actions-label>Kjøp per måned</span><input class="input w-full" id="crc-actions" name="actions" type="number" min="0" max="10000000" step="1" required value={initial.actions}/></label>
+            </div>
+            <label class="field">
+              <span>Ønsket konverteringsrate (%)</span>
+              <input class="input w-full" id="crc-target" name="target" type="number" min="0" max="100" step="0.1" required value={initial.target}/>
+            </label>
+            <div class="conversion-calc-references">
+              <span>Bransjereferanse: <strong data-reference>{rateText(1.3)}</strong></span>
+              <button class="btn btn-sm btn-outline" type="button" data-use-median>Bruk referansen</button>
+              <button class="btn btn-sm btn-outline" type="button" data-use-target>Bruk ambisiøst mål</button>
+            </div>
+            <div class="conversion-calc-input-row">
+              <label class="field"><span data-value-label>Ordreverdi (kr)</span><input class="input w-full" id="crc-value" name="value" type="number" min="0" max="1000000000" step="10" required value={initial.value}/></label>
+              <label class="field"><span>Annonsebudsjett per måned (kr)</span><input class="input w-full" id="crc-spend" name="adSpend" type="number" min="0" max="1000000000" step="100" required value={initial.adSpend}/></label>
+            </div>
+            <p class="conversion-calc-hint">Annonsebudsjett er valgfritt: skriv 0 hvis du ikke vil beregne kostnad per bestilling. For henvendelser oppgir du estimert <strong>verdi per henvendelse</strong>, ikke nødvendigvis kundens salgspris.</p>
+            <p class="conversion-calc-error" data-error hidden role="alert">Kontroller tallene. Økter/klikk må være minst 1, antall kjøp/henvendelser kan ikke overstige antall økter/klikk, og prosenter må være mellom 0 og 100.</p>
+          </div>
+        </div>
+      </div>
+      <div class="conversion-calc-results" role="status" aria-live="polite" aria-atomic="true">
+        <div class="card bg-secondary text-secondary-content">
+          <div class="card-body">
+            <span class="text-sm">Din konverteringsrate i dag</span>
+            <output class="conversion-calc-big" data-current-rate>1 %</output>
+            <span class="text-sm">30 av 3 000 økter ender med kjøp.</span>
+          </div>
+        </div>
+        <div class="conversion-calc-stats">
+          <div class="card bg-info text-info-content"><div class="card-body">
+            <span class="text-sm" data-expected-label>Forventede kjøp ved målet</span>
+            <output class="conversion-calc-strong" data-projected>60</output>
+            <span class="text-sm" data-projected-detail>Ved 2 % konvertering</span>
+          </div></div>
+          <div class="card bg-base-300 text-base-content"><div class="card-body">
+            <span class="text-sm" data-extra-label>Ekstra kjøp per måned</span>
+            <output class="conversion-calc-strong" data-extra>+30</output>
+            <span class="text-sm" data-lift>+100 % mot i dag</span>
+          </div></div>
+        </div>
+        <div class="card bg-primary text-primary-content"><div class="card-body">
+          <span class="text-sm" data-value-output-label>Mulig ekstra omsetning per måned</span>
+          <output class="conversion-calc-big" data-extra-value>30 000 kr</output>
+          <span class="text-sm">Basert på oppgitt verdi og uendret trafikk – ikke prognose eller overskudd.</span>
+        </div></div>
+        <div class="card bg-base-200 text-base-content"><div class="card-body">
+          <span class="text-sm">Annonsekostnad per handling ved samme budsjett</span>
+          <p class="conversion-calc-cost"><span data-cpa-now>333 kr</span> <span aria-hidden="true">→</span> <strong data-cpa-new>167 kr</strong></p>
+          <span class="text-sm">Annonsebudsjett delt på antall bestillinger/henvendelser. Ikke kundeanskaffelseskostnad eller fortjeneste.</span>
+        </div></div>
+      </div>
+    </div>
+    <div class="conversion-calc-notes">
+      <p><strong>Formlene:</strong> Konverteringsrate = handlinger ÷ økter/klikk × 100. Handlinger ved mål = økter/klikk × ønsket prosent ÷ 100. Potensiell ekstra verdi = ekstra handlinger × oppgitt verdi. Kostnad per handling = annonsebudsjett ÷ handlinger.</p>
+      <p><strong>Viktig:</strong> En god rate kan være helt forskjellig for annonser og hele nettsiden. Sammenlign lik trafikk, samme konverteringsmål og samme måleperiode. Illustrasjonen garanterer ikke framtidig økning, ordreverdi eller kvalifiserte leads.</p>
+    </div>
+    <div class="conversion-calc-actions">
+      <a class="btn btn-primary" href="/vurdering/">Få 3 gratis forbedringsforslag</a>
+      <a class="btn btn-outline" href="/konvertering/#priser">Se optimaliseringspakkene</a>
+    </div>
+  </div>
+</section>
+<script>
+  import { conversionBenchmarks } from '../lib/conversion-rate-benchmarks';
+  const root = document.querySelector<HTMLElement>('[data-conversion-rate-calculator]');
+  if (root) {
+    const get = <T extends Element>(selector:string):T => root.querySelector<T>(selector)!;
+    const fields = {
+      industry: get<HTMLSelectElement>('#crc-industry'),
+      visits: get<HTMLInputElement>('#crc-visits'),
+      actions: get<HTMLInputElement>('#crc-actions'),
+      target: get<HTMLInputElement>('#crc-target'),
+      value: get<HTMLInputElement>('#crc-value'),
+      spend: get<HTMLInputElement>('#crc-spend'),
+    };
+    const fmt=new Intl.NumberFormat('nb-NO',{maximumFractionDigits:1});
+    const money=new Intl.NumberFormat('nb-NO',{maximumFractionDigits:0});
+    const set=(selector:string,value:string)=>{get<HTMLElement>(selector).textContent=value};
+    const num=(value:number)=>fmt.format(value);
+    const kr=(value:number)=>money.format(value)+' kr';
+    const currentBenchmark=()=>conversionBenchmarks.find(b=>b.id===fields.industry.value)!;
+    const update=()=>{
+      const benchmark=currentBenchmark(),shop=benchmark.channel==='shopify';
+      set('[data-visits-label]',shop?'Økter per måned':'Søkeannonseklikk per måned');
+      set('[data-actions-label]',shop?'Kjøp per måned':'Målte henvendelser per måned');
+      set('[data-value-label]',shop?'Ordreverdi (kr)':'Verdi per henvendelse (kr)');
+      set('[data-channel-explainer]',shop?'Bruk nettbutikkøkter og kjøp, ikke alle annonseklikk.':'Bruk søkeannonseklikk og konverteringer fra samme kampanjer/periode. Ikke bland med alle nettsidebesøk.');
+      set('[data-reference]',num(benchmark.typical)+' %'+(benchmark.proxy?' (bred bransjeproxy)':''));
+      set('[data-expected-label]',shop?'Mulige kjøp ved målet':'Mulige henvendelser ved målet');
+      set('[data-extra-label]',shop?'Ekstra kjøp per måned':'Ekstra henvendelser per måned');
+      set('[data-value-output-label]',shop?'Mulig ekstra omsetning per måned':'Mulig ekstra henvendelsesverdi per måned');
+      const vals=[fields.visits,fields.actions,fields.target,fields.value,fields.spend];
+      const valid=vals.every(input=>input.value!=='' && input.checkValidity() && Number.isFinite(Number(input.value)))
+       && Number(fields.actions.value)<=Number(fields.visits.value);
+      get<HTMLElement>('[data-error]').hidden=valid;
+      vals.forEach(el=>el.setAttribute('aria-invalid',String(!el.checkValidity()||(el===fields.actions&&Number(el.value)>Number(fields.visits.value)))));
+      if(!valid){
+        for(const key of ['[data-current-rate]','[data-projected]','[data-projected-detail]','[data-extra]','[data-lift]','[data-extra-value]','[data-cpa-now]','[data-cpa-new]'])set(key,'–');
+        return;
+      }
+      const visits=Number(fields.visits.value),actions=Number(fields.actions.value),
+        target=Number(fields.target.value),value=Number(fields.value.value),spend=Number(fields.spend.value);
+      const currentRate=actions/visits*100,projected=visits*target/100,extra=projected-actions;
+      const improvement=actions>0?(extra/actions*100):null;
+      set('[data-current-rate]',num(currentRate)+' %');
+      set('[data-projected]',num(projected));
+      set('[data-projected-detail]','Ved '+num(target)+' % konvertering');
+      set('[data-extra]',(extra>0?'+':'')+num(extra));
+      set('[data-lift]',improvement===null?'Ingen prosentvis sammenligning fra 0':(improvement>0?'+':'')+num(improvement)+' % mot i dag');
+      set('[data-extra-value]',(extra>0?'+':'')+kr(extra*value));
+      set('[data-cpa-now]',spend===0||actions===0?'–':kr(spend/actions));
+      set('[data-cpa-new]',spend===0||projected===0?'–':kr(spend/projected));
+      set('.conversion-calc-results .card:first-child .card-body > span:last-child',num(actions)+' av '+num(visits)+(shop?' økter ender med kjøp.':' annonseklikk ender med målt henvendelse.'));
+    };
+    get<HTMLButtonElement>('[data-use-median]').addEventListener('click',()=>{fields.target.value=String(currentBenchmark().typical);update()});
+    get<HTMLButtonElement>('[data-use-target]').addEventListener('click',()=>{fields.target.value=String(currentBenchmark().targetLow);update()});
+    Object.values(fields).forEach(input=>input.addEventListener('input',update));
+    fields.industry.addEventListener('change',update);
+    update();
+  }
+</script>
+<style>
+.conversion-calc-section { background:var(--color-base-100); }
+.conversion-calc-heading { max-width:850px; margin:0 auto 35px; text-align:center; }
+.conversion-calc-heading h2 { max-width:750px; margin:0 auto 14px; }
+.conversion-calc-heading > p:last-child { color:var(--muted); }
+.conversion-calc-grid { display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,1fr); align-items:start; gap:var(--gap-lg,24px); }
+.conversion-calc-inputs { display:grid; gap:17px; }
+.conversion-calc-inputs .field { display:flex; flex-direction:column; gap:7px; min-width:0; font-size:var(--type-body-sm); font-weight:var(--weight-label); }
+.conversion-calc-input-row { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+.conversion-calc-hint { margin:0; font-size:var(--type-meta); line-height:1.5; color:var(--muted); }
+.conversion-calc-references { display:flex; align-items:center; flex-wrap:wrap; gap:9px; font-size:var(--type-meta); }
+.conversion-calc-references > span { width:100%; }
+.conversion-calc-error { font-size:var(--type-meta); color:var(--color-error); }
+.conversion-calc-results { display:grid; gap:var(--gap,14px); }
+.conversion-calc-stats { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:var(--gap,14px); }
+.conversion-calc-big { font-family:var(--heading); font-size:clamp(34px,5vw,57px); font-weight:var(--weight-heading); letter-spacing:-.055em; line-height:1.15; padding-block:8px; overflow-wrap:anywhere; }
+.conversion-calc-strong { font-family:var(--heading); font-size:clamp(24px,3vw,38px); font-weight:var(--weight-heading); letter-spacing:-.04em; padding:7px 0; overflow-wrap:anywhere; }
+.conversion-calc-cost { font-size:clamp(20px,2.8vw,32px); font-weight:var(--weight-heading); margin:6px 0; }
+.conversion-calc-notes { margin:26px 0; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:var(--gap,18px); color:var(--muted); font-size:var(--type-meta); }
+.conversion-calc-actions { display:flex; flex-wrap:wrap; gap:12px; }
+@media(max-width:850px){.conversion-calc-grid { grid-template-columns:1fr; }.conversion-calc-notes {grid-template-columns:1fr;} }
+@media(max-width:380px){ .conversion-calc-input-row,.conversion-calc-stats{grid-template-columns:1fr;} .conversion-calc-grid .card-body{padding:15px;} }
+</style>
