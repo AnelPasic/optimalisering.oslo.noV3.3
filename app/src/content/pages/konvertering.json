@@ -38,8 +38,9 @@
     "title": "Fra 1 til 2 % høres lite ut. Helt til bestillingene dobles.",
     "support": "Byråer elsker å selge mer trafikk. Vi foretrekker elementær barneskolematte som fyller kontoen din. Den kjedeligste prosenten i regnearket kan vise seg å være den mest lønnsomme. Og du trenger ikke kjøpe ett eneste ekstra klikk.",
     "primaryCta": {
-      "label": "Ta en gratis sjekk",
-      "href": "/#sjekk"
+      "label": "Bestill optimalisering",
+      "href": "#priser",
+      "suggestedHref": "/konvertering/"
     },
     "visual": {
       "kind": "image",
@@ -54,7 +55,12 @@
     "toneOverrides": {
       "eyebrowPreset": "inherit"
     },
-    "featuredProofCaseId": "nysta"
+    "featuredProofCaseId": "nysta",
+    "secondaryCta": {
+      "label": "Ta en gratis sjekk",
+      "suggestedHref": "/#sjekk",
+      "href": "#sjekk"
+    }
   },
   "sections": [
     {
@@ -109,6 +115,14 @@
           "boxVariant": "card"
         }
       ]
+    },
+    {
+      "_block": "global",
+      "element": "regneeksempel"
+    },
+    {
+      "_block": "global",
+      "element": "priser"
     },
     {
       "_block": "content",
@@ -192,14 +206,6 @@
           "boxVariant": "card"
         }
       ]
-    },
-    {
-      "_block": "global",
-      "element": "regneeksempel"
-    },
-    {
-      "_block": "global",
-      "element": "priser"
     },
     {
       "_block": "content",
