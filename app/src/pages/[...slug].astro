@@ -34,6 +34,6 @@ export async function getStaticPaths() {
 interface Props { page: CollectionEntry<'pages'>['data']; commercial: HomepageContent; pages: CollectionEntry<'pages'>['data'][]; route: ReturnType<typeof resolveRouteFamily>; }
 const { page, commercial, pages, route } = Astro.props;
 ---
-<SiteLayout title={page.seo.title} description={page.seo.description}>
+<SiteLayout title={page.seo.title} description={page.seo.description} noindex={page.slug === 'testside'}>
   {route.family === 'home' ? <HomePage page={page} /> : route.family === 'pricing' ? <PricingPage page={page} commercial={commercial} /> : route.family === 'service' ? <ServicePage page={page} commercial={commercial} route={route} /> : route.family === 'index' ? <InsightIndexPage page={page} pages={pages} /> : <InnerPage page={page} />}
 </SiteLayout>
