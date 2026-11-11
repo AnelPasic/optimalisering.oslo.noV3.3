@@ -1,0 +1,94 @@
+---
+import {
+  conversionBenchmarks, conversionRateSources, formatLowRate, formatTargetRate, rateText, channelName,
+  type ConversionBenchmark
+} from '../lib/conversion-rate-benchmarks';
+
+interface Props { compact?: boolean; }
+const { compact = false } = Astro.props;
+const featuredIds = new Set(['nettbutikk','klaer','rorlegger','tannlege','advokat','trafikkskole']);
+const featured = compact ? conversionBenchmarks.filter(item => featuredIds.has(item.id)) : [];
+const fullGroups = [
+  { key: 'shopify', title: 'Nettbutikker: kjøp per økt' },
+  { key: 'search', title: 'Tjenester: målt konvertering per søkeannonseklikk' }
+] as const;
+const sources = Object.entries(conversionRateSources);
+const color = (benchmark: ConversionBenchmark) => benchmark.channel === 'shopify' ? 'bg-info text-info-content' : 'bg-base-200 text-base-content';
+---
+<div class="industry-rates" data-industry-benchmarks>
+  {compact && <>
+    <div class="industry-rates-featured">
+      {featured.map(benchmark => <article class:list={['card min-w-0', color(benchmark)]}>
+        <div class="card-body gap-2 min-w-0">
+          <span class="text-sm opacity-85">{benchmark.channel === 'shopify' ? 'Kjøp i nettbutikk' : 'Søkeannonser'}</span>
+          <h3 class="card-title !text-(length:--type-body-lg)">{benchmark.name}</h3>
+          <p class="industry-rates-number">{rateText(benchmark.typical)}</p>
+          <p class="text-sm">Referanse · {benchmark.channel === 'shopify' ? 'per økt' : 'per annonseklikk'}</p>
+          <p class="text-sm mt-1">Svakt: <strong>{formatLowRate(benchmark)}</strong></p>
+          <p class="text-sm">Ambisiøst mål: <strong>{formatTargetRate(benchmark)}</strong></p>
+          {benchmark.proxy && <p class="text-xs opacity-85">Bredere bransjekategori*</p>}
+        </div>
+      </article>)}
+    </div>
+    <details class="industry-rates-details mt-5">
+      <summary>Se alle 12 bransjer og tallene bak</summary>
+      <div class="industry-rates-tables">
+        {fullGroups.map(group => <section aria-label={group.title}>
+          <h3>{group.title}</h3>
+          <div class="industry-rates-scroll">
+            <table>
+              <thead><tr><th scope="col">Bransje</th><th scope="col">Svakt</th><th scope="col">Referanse</th><th scope="col">Ambisiøst mål</th></tr></thead>
+              <tbody>{conversionBenchmarks.filter(b=>b.channel===group.key).map(b=><tr>
+                <th scope="row">{b.name}{b.proxy && <span aria-label="Bred bransjereferanse">*</span>}</th>
+                <td>{formatLowRate(b)}</td><td><strong>{rateText(b.typical)}</strong></td><td>{formatTargetRate(b)}</td>
+              </tr>)}</tbody>
+            </table>
+          </div>
+        </section>)}
+      </div>
+    </details>
+  </>}
+  {!compact && <div class="industry-rates-tables">
+    {fullGroups.map(group => <section aria-label={group.title}>
+      <h3>{group.title}</h3>
+      <p>{channelName(group.key)}</p>
+      <div class="industry-rates-scroll">
+        <table>
+          <thead><tr><th scope="col">Bransje</th><th scope="col">Svakt</th><th scope="col">Referanse</th><th scope="col">Ambisiøst mål</th></tr></thead>
+          <tbody>{conversionBenchmarks.filter(b=>b.channel===group.key).map(b=><tr>
+            <th scope="row">{b.name}{b.proxy && <span aria-label="Bred bransjereferanse">*</span>}</th>
+            <td>{formatLowRate(b)}</td><td><strong>{rateText(b.typical)}</strong></td><td>{formatTargetRate(b)}</td>
+          </tr>)}</tbody>
+        </table>
+      </div>
+    </section>)}
+  </div>}
+  <p class="industry-rates-disclaimer"><strong>Slik leser du tallene:</strong> «Referanse» er offentlig rapporterte medianer/avrundede bransjetall, primært fra USA. «Svakt» og «Ambisiøst mål» er våre arbeidsgrenser og illustrative mål, ikke observerte persentiler eller resultatløfter. Kjøp per økt kan <strong>ikke</strong> sammenlignes direkte med konverteringer per annonseklikk. * = bredere bransjekategori brukt som tilnærming.</p>
+  <div class="industry-rates-sources">
+    <strong>Kilder:</strong>
+    {sources.map(([key,source]) => <a href={source.url} rel="noopener noreferrer" target="_blank">{source.label}</a>)}
+  </div>
+  {compact && <a class="btn btn-primary mt-5" href="/konverteringsratekalkulator/">Åpne konverteringsratekalkulatoren →</a>}
+</div>
+<style>
+  .industry-rates { margin-top: 28px; }
+  .industry-rates-featured { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:var(--gap,18px); }
+  .industry-rates-featured .card-body { padding:clamp(16px,2vw,26px); }
+  .industry-rates-number { font-family:var(--heading); font-weight:var(--weight-heading); font-size:clamp(25px,3vw,41px); line-height:1.1; letter-spacing:-.05em; margin:5px 0; }
+  .industry-rates-tables { display:grid; gap:24px; margin-top:16px; }
+  .industry-rates-tables h3 { font-size:var(--type-h4); margin-bottom:8px; }
+  .industry-rates-tables p { font-size:var(--type-meta); margin-bottom:10px; }
+  .industry-rates-scroll { max-width:100%; overflow-x:auto; border:1px solid var(--color-base-300); border-radius:var(--radius-md); }
+  .industry-rates table { border-collapse:collapse; width:100%; min-width:560px; text-align:left; font-size:var(--type-body-sm); }
+  .industry-rates th,.industry-rates td { border-bottom:1px solid var(--color-base-300); padding:12px 14px; white-space:nowrap; }
+  .industry-rates tbody tr:last-child > * { border-bottom:0; }
+  .industry-rates th { font-weight:var(--weight-heading); }
+  .industry-rates th span { margin-left:2px; }
+  .industry-rates-details { border:1px solid var(--color-base-300); border-radius:var(--radius-md); padding:18px; }
+  .industry-rates-details summary { cursor:pointer; font-weight:var(--weight-heading); }
+  .industry-rates-disclaimer { margin:20px 0 0; max-width:1000px; font-size:var(--type-meta); line-height:1.55; }
+  .industry-rates-sources { display:flex; align-items:baseline; flex-wrap:wrap; gap:6px 18px; margin-top:16px; font-size:var(--type-meta); }
+  .industry-rates-sources a { text-decoration:underline; text-underline-offset:3px; }
+  @media (max-width:900px) { .industry-rates-featured { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+  @media (max-width:420px) { .industry-rates-featured { grid-template-columns:repeat(2,minmax(0,1fr)); gap:9px; } .industry-rates-featured .card-body { padding:12px; } .industry-rates-featured .card-title { overflow-wrap:anywhere; } .industry-rates-details { padding:12px; } }
+</style>
