@@ -34,9 +34,9 @@
   },
   "hero": {
     "layout": "split-right",
-    "eyebrow": "Fra besøk til henvendelser og kjøp",
-    "title": "Det er ikke alltid kunden som må overbevises. Noen ganger må nettsiden slutte å stå i veien.",
-    "support": "De fleste undervurderer styrken av konverteringsoptimalisering og dette er noe de få bruker til sin fordel når de skal vinne i markedet. Når relevante besøk ikke blir til bestillinger fjerner vi friksjonen som stopper kunden. Så prioriterer vi det som er mest verdt å forbedre først.",
+    "eyebrow": "KONVERTERINGSOPTIMALISERING (CRO): FLERE BESTILLINGER SAMME TRAFIKK",
+    "title": "Fra 1 til 2 % høres lite ut. Helt til bestillingene dobles.",
+    "support": "Byråer elsker å selge mer trafikk. Vi foretrekker elementær barneskolematte som fyller kontoen din. Den kjedeligste prosenten i regnearket kan vise seg å være den mest lønnsomme. Og du trenger ikke kjøpe ett eneste ekstra klikk.",
     "primaryCta": {
       "label": "Ta en gratis sjekk",
       "href": "/#sjekk"
@@ -56,6 +56,91 @@
     }
   },
   "sections": [
+    {
+      "_block": "content",
+      "id": "hemmelige-oppskriften",
+      "eyebrow": "DEN OVERSETTE VEKSTMULIGHETEN",
+      "heading": "Du har funnet den hemmelige oppskriften.",
+      "headingAlign": "left",
+      "layout": "three-columns",
+      "body": [
+        "Tre butikker starter med de samme tallene: **10 000 kr i annonser, 3 000 besøk og 1 % konverteringsrate**. Det gir **30 bestillinger**. Med **1 000 kr per ordre** og **500 kr i varekost** sitter hver butikk igjen med **5 000 kr etter varer og annonser**.",
+        "Alle vil vokse. A dobler annonsebudsjettet. B dobler konverteringsraten. C gjør begge deler. Se hvor forskjellig resultatet blir."
+      ],
+      "items": [
+        {
+          "title": "A. Kjøper dobbelt så mange klikk",
+          "text": "**Dobler annonsebudsjettet.**\n\n- Annonser: **20 000 kr**\n- Besøk: **6 000**\n- Konvertering: **1 %**\n- Bestillinger: **6 000 × 1 % = 60**\n- Omsetning: **60 × 1 000 = 60 000 kr**\n- Varekost: **60 × 500 = 30 000 kr**\n\n**Igjen: 60 000 − 30 000 − 20 000 = 10 000 kr**\n\nAnnonsekostnad per bestilling: ca. **333 kr**.",
+          "boxVariant": "card"
+        },
+        {
+          "title": "B. Får mer ut av samme trafikk",
+          "text": "**Dobler konverteringsraten.**\n\n- Annonser: **10 000 kr**\n- Besøk: **3 000**\n- Konvertering: **2 %**\n- Bestillinger: **3 000 × 2 % = 60**\n- Omsetning: **60 × 1 000 = 60 000 kr**\n- Varekost: **60 × 500 = 30 000 kr**\n\n**Igjen: 60 000 − 30 000 − 10 000 = 20 000 kr**\n\nAnnonsekostnad per bestilling: ca. **167 kr**.",
+          "boxVariant": "card"
+        },
+        {
+          "title": "C. Gjør begge deler",
+          "text": "**Dobler både trafikken og konverteringsraten.**\n\n- Annonser: **20 000 kr**\n- Besøk: **6 000**\n- Konvertering: **2 %**\n- Bestillinger: **6 000 × 2 % = 120**\n- Omsetning: **120 × 1 000 = 120 000 kr**\n- Varekost: **120 × 500 = 60 000 kr**\n\n**Igjen: 120 000 − 60 000 − 20 000 = 40 000 kr**\n\nAnnonsekostnad per bestilling: ca. **167 kr**.",
+          "boxVariant": "card"
+        }
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "konkurransefordel",
+      "eyebrow": "FORDI DET IKKE BARE HANDLER OM FLERE ORDRE",
+      "heading": "Den som får mest ut av hvert klikk, har mer å konkurrere med.",
+      "headingAlign": "left",
+      "layout": "three-columns",
+      "body": [
+        "A og B får **like mange bestillinger**. Likevel sitter B igjen med **dobbelt så mye** etter varer og annonser. Og C sitter igjen med **fire ganger så mye som A**, med det samme annonsebudsjettet.",
+        "Den forskjellen handler ikke bare om regneark. Den gir deg flere muligheter når konkurransen blir tøffere."
+      ],
+      "items": [
+        {
+          "title": "Tål dyrere klikk",
+          "text": "Når flere besøk blir til kjøp, har du større rom til å konkurrere om attraktive kunder.",
+          "boxVariant": "card"
+        },
+        {
+          "title": "Lavere kostnad per bestilling",
+          "text": "I eksempelet går annonsekostnaden fra omtrent 333 til 167 kr per bestilling.",
+          "boxVariant": "card"
+        },
+        {
+          "title": "Mer igjen av salget",
+          "text": "Samme omsetning kan gi bedre resultat når du ikke må kjøpe dobbelt så mange besøk.",
+          "boxVariant": "card"
+        },
+        {
+          "title": "Mer ut av SEO og AI-søk",
+          "text": "En bedre kjøpsvei gjør også relevante besøk fra andre kanaler mer verdifulle.",
+          "boxVariant": "card"
+        },
+        {
+          "title": "Sterkere grunnlag for vekst",
+          "text": "Optimaliser først, skaler deretter. C viser hva som kan skje når de to grepene kombineres.",
+          "boxVariant": "card"
+        },
+        {
+          "title": "Bedre rustet mot konkurranse",
+          "text": "Du er mindre sårbar for stigende klikkpriser når flere av besøkene du får, ender i en bestilling.",
+          "boxVariant": "card"
+        }
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "annonsekapplopet",
+      "eyebrow": "KAPPLØPET OM DE DYRE KLIKKENE",
+      "heading": "Hvis alle bare byr mer, hvem sitter igjen med pengene?",
+      "headingAlign": "left",
+      "body": [
+        "Det er lett å kjøpe seg flere klikk. Men når mange bedrifter byr på de samme kundene, kan annonseprisen spise opp stadig mer av fortjenesten. Mer annonsebudsjett alene er ingen garanti for bedre butikk.",
+        "Selger du vann til noen som tørster i ørkenen, trenger du kanskje ikke overbevise dem. De fleste bedrifter har ikke den luksusen. Kundene sammenligner, nøler og velger det alternativet som virker best.",
+        "**Den smarte veien er å få mer ut av trafikken du allerede har, før du betaler for enda mer.**"
+      ]
+    },
     {
       "_block": "content",
       "id": "friksjon",
