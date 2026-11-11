@@ -12,7 +12,7 @@ const fullGroups = [
   { key: 'shopify', title: 'Nettbutikker: kjøp per økt' },
   { key: 'search', title: 'Tjenester: målt konvertering per søkeannonseklikk' }
 ] as const;
-const sources = Object.entries(conversionRateSources);
+const sources = Object.values(conversionRateSources);
 const color = (benchmark: ConversionBenchmark) => benchmark.channel === 'shopify' ? 'bg-info text-info-content' : 'bg-base-200 text-base-content';
 ---
 <div class="industry-rates" data-industry-benchmarks>
@@ -66,7 +66,7 @@ const color = (benchmark: ConversionBenchmark) => benchmark.channel === 'shopify
   <p class="industry-rates-disclaimer"><strong>Slik leser du tallene:</strong> «Referanse» er offentlig rapporterte medianer/avrundede bransjetall, primært fra USA. «Svakt» og «Ambisiøst mål» er våre arbeidsgrenser og illustrative mål, ikke observerte persentiler eller resultatløfter. Kjøp per økt kan <strong>ikke</strong> sammenlignes direkte med konverteringer per annonseklikk. * = bredere bransjekategori brukt som tilnærming.</p>
   <div class="industry-rates-sources">
     <strong>Kilder:</strong>
-    {sources.map(([key,source]) => <a href={source.url} rel="noopener noreferrer" target="_blank">{source.label}</a>)}
+    {sources.map(source => <a href={source.url} rel="noopener noreferrer" target="_blank">{source.label}</a>)}
   </div>
   {compact && <a class="btn btn-primary mt-5" href="/konverteringsratekalkulator/">Åpne konverteringsratekalkulatoren →</a>}
 </div>
