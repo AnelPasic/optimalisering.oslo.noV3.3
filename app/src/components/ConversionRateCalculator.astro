@@ -17,10 +17,10 @@ const initial = { visits: 3000, actions: 30, target: 2, value: 1000, adSpend: 10
             <label class="field">
               <span>Bransje og trafikktype</span>
               <select class="select w-full" id="crc-industry" name="industry">
-                <optgroup label="Nettbutikk – kjøp per økt">
+                <optgroup label="Nettbutikk - kjøp per økt">
                   {conversionBenchmarks.filter(b=>b.channel==='shopify').map(b=><option value={b.id} selected={b.id==='nettbutikk'}>{b.name}</option>)}
                 </optgroup>
-                <optgroup label="Søkeannonser – konvertering per klikk">
+                <optgroup label="Søkeannonser - konvertering per klikk">
                   {conversionBenchmarks.filter(b=>b.channel==='search').map(b=><option value={b.id}>{b.name}{b.proxy?' (bransjeproxy)':''}</option>)}
                 </optgroup>
               </select>
@@ -71,17 +71,17 @@ const initial = { visits: 3000, actions: 30, target: 2, value: 1000, adSpend: 10
         <div class="card bg-primary text-primary-content"><div class="card-body">
           <span class="text-sm" data-value-output-label>Mulig ekstra omsetning per måned</span>
           <output class="conversion-calc-big" data-extra-value>30 000 kr</output>
-          <span class="text-sm">Basert på oppgitt verdi og uendret trafikk – ikke prognose eller overskudd.</span>
+          <span class="text-sm">Basert på oppgitt verdi og uendret trafikk. Dette er ikke en prognose eller et overskudd.</span>
         </div></div>
         <div class="card bg-base-200 text-base-content"><div class="card-body">
           <span class="text-sm">Annonsekostnad per handling ved samme budsjett</span>
-          <p class="conversion-calc-cost"><span data-cpa-now>333 kr</span> <span aria-hidden="true">→</span> <strong data-cpa-new>167 kr</strong></p>
+          <p class="conversion-calc-cost"><span data-cpa-now>333 kr</span> <span aria-hidden="true">til</span> <strong data-cpa-new>167 kr</strong></p>
           <span class="text-sm">Annonsebudsjett delt på antall bestillinger/henvendelser. Ikke kundeanskaffelseskostnad eller fortjeneste.</span>
         </div></div>
       </div>
     </div>
     <div class="conversion-calc-notes">
-      <p><strong>Formlene:</strong> Konverteringsrate = handlinger ÷ økter/klikk × 100. Handlinger ved mål = økter/klikk × ønsket prosent ÷ 100. Potensiell ekstra verdi = ekstra handlinger × oppgitt verdi. Kostnad per handling = annonsebudsjett ÷ handlinger.</p>
+      <p><strong>Formlene:</strong> Konverteringsrate = (handlinger / økter eller klikk) x 100. Handlinger ved mål = (økter eller klikk x ønsket prosent) / 100. Ekstra verdi = ekstra handlinger x oppgitt verdi. Annonsekostnad per handling = annonsebudsjett / handlinger.</p>
       <p><strong>Viktig:</strong> En god rate kan være helt forskjellig for annonser og hele nettsiden. Sammenlign lik trafikk, samme konverteringsmål og samme måleperiode. Illustrasjonen garanterer ikke framtidig økning, ordreverdi eller kvalifiserte leads.</p>
     </div>
     <div class="conversion-calc-actions">
@@ -125,7 +125,7 @@ const initial = { visits: 3000, actions: 30, target: 2, value: 1000, adSpend: 10
       get<HTMLElement>('[data-error]').hidden=valid;
       vals.forEach(el=>el.setAttribute('aria-invalid',String(!el.checkValidity()||(el===fields.actions&&Number(el.value)>Number(fields.visits.value)))));
       if(!valid){
-        for(const key of ['[data-current-rate]','[data-projected]','[data-projected-detail]','[data-extra]','[data-lift]','[data-extra-value]','[data-cpa-now]','[data-cpa-new]'])set(key,'–');
+        for(const key of ['[data-current-rate]','[data-projected]','[data-projected-detail]','[data-extra]','[data-lift]','[data-extra-value]','[data-cpa-now]','[data-cpa-new]'])set(key,'-');
         return;
       }
       const visits=Number(fields.visits.value),actions=Number(fields.actions.value),
@@ -138,8 +138,8 @@ const initial = { visits: 3000, actions: 30, target: 2, value: 1000, adSpend: 10
       set('[data-extra]',(extra>0?'+':'')+num(extra));
       set('[data-lift]',improvement===null?'Ingen prosentvis sammenligning fra 0':(improvement>0?'+':'')+num(improvement)+' % mot i dag');
       set('[data-extra-value]',(extra>0?'+':'')+kr(extra*value));
-      set('[data-cpa-now]',spend===0||actions===0?'–':kr(spend/actions));
-      set('[data-cpa-new]',spend===0||projected===0?'–':kr(spend/projected));
+      set('[data-cpa-now]',spend===0||actions===0?'-':kr(spend/actions));
+      set('[data-cpa-new]',spend===0||projected===0?'-':kr(spend/projected));
       set('.conversion-calc-results .card:first-child .card-body > span:last-child',num(actions)+' av '+num(visits)+(shop?' økter ender med kjøp.':' annonseklikk ender med målt henvendelse.'));
     };
     get<HTMLButtonElement>('[data-use-median]').addEventListener('click',()=>{fields.target.value=String(currentBenchmark().typical);update()});
