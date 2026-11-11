@@ -8,12 +8,16 @@ import { isLeadEndpoint } from '../lib/lead';
 const endpoint = import.meta.env.PUBLIC_LEAD_ENDPOINT ?? '';
 const hasIntake = endpoint.startsWith('https://') && isLeadEndpoint(endpoint) &&
   new URL(endpoint).pathname === '/api/leads';
-const leadsEnabled = import.meta.env.PUBLIC_LEADS_ENABLED === 'true' && hasIntake;
+const buildBranch = import.meta.env.WORKERS_CI_BRANCH;
+// Cloudflare builds previews for non-main branches using the same site repository.
+const branchPreview = Boolean(buildBranch && buildBranch !== 'main');
+const leadsEnabled = !branchPreview && import.meta.env.PUBLIC_LEADS_ENABLED === 'true' && hasIntake;
 export const site = {
   name: 'Optimalisering Oslo',
   provider: 'Medon AS',
   providerUrl: 'https://medon.no',
   url: 'https://optimalisering.oslo.no',
+  branchPreview,
   preview: import.meta.env.SITE_STAGE !== 'production',
   leadsEnabled,
   ordersEnabled: leadsEnabled && import.meta.env.PUBLIC_ORDERS_ENABLED === 'true',

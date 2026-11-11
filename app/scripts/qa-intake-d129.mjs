@@ -110,7 +110,9 @@ try {
       if (!['GET', 'HEAD'].includes(req.method())) return route.abort();
       if (!req.isNavigationRequest()) return route.continue();
       const response = await route.fetch();
-      const html = (await response.text()).replaceAll('data-enabled="false"', 'data-enabled="true"');
+      const html = (await response.text())
+        .replaceAll('data-enabled="false"', 'data-enabled="true"')
+        .replace(/data-endpoint="[^"]*"/g, 'data-endpoint="/api/leads"');
       return route.fulfill({ response, body: html });
     });
     const active = await synthetic.newPage();

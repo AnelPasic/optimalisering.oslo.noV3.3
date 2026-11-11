@@ -19,7 +19,8 @@ import { site } from '../config/site';
 import { defaultLocale, type Locale } from '../config/locales';
 import type { LanguageLink } from '../lib/i18n';
 interface Props { title:string;description:string;noindex?:boolean;locale?:Locale;languageLinks?:LanguageLink[]; }
-const {title,description,noindex=false,locale=defaultLocale,languageLinks=[]}=Astro.props;
+const {title,description,noindex: noindexPage = false,locale=defaultLocale,languageLinks=[]}=Astro.props;
+const noindex = noindexPage || site.branchPreview || import.meta.env.SITE_STAGE === 'preview';
 const pages=(await getCollection('pages')).map(p=>p.data);
 const homepageSource=pages.find(p=>p.kind==='home');
 if(homepageSource)validateHomepagePublicLinks(homepageSource,pages);
@@ -41,7 +42,7 @@ const organization = { '@context': 'https://schema.org', '@type': 'Organization'
     <meta name="description" content={description} />
     <meta name="theme-color" content="#f5f3ec" />
     <link rel="canonical" href={canonical} />
-    {(noindex || import.meta.env.SITE_STAGE === "preview") && <meta name="robots" content="noindex, nofollow" />}
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
     <meta property="og:type" content="website" />
     <meta property="og:locale" content={locale === 'nb' ? 'nb_NO' : 'en_GB'} />
     <meta property="og:site_name" content={site.name} />
@@ -57,7 +58,7 @@ const organization = { '@context': 'https://schema.org', '@type': 'Organization'
   <body data-ui-shell="true" class="site-shell">
     <a href="#main" class="skip-link">{homeChrome.skipLabel}</a>
     <HomeHeader content={homeChrome} languageLinks={languageLinks} currentLocale={locale} />
-    <main id="main" data-pagefind-body={noindex || Astro.url.pathname.startsWith("/design-system/") ? undefined : ""}><slot /></main>
+    <main id="main" data-pagefind-body={noindexPage || Astro.url.pathname.startsWith("/design-system/") ? undefined : ""}><slot /></main>
     <HomeFooter content={homeChrome} />
     {homeChrome.headerOptions.showSearch && <SiteSearch mode="modal" />}
     <Attribution />
