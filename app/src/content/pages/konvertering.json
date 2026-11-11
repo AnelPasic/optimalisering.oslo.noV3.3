@@ -111,7 +111,7 @@
       "_block": "content",
       "id": "erfaring-siden-2009",
       "eyebrow": "NETTSIDER OG OPTIMALISERING SIDEN 2009",
-      "heading": "Du kjøper ikke en rapport. Du kjøper at jobben blir gjort.",
+      "heading": "Du kjøper forbedringer. Ikke enda en rapport.",
       "headingAlign": "left",
       "layout": "three-columns",
       "surface": "base-100",
@@ -150,7 +150,7 @@
       "_block": "content",
       "id": "potensial",
       "eyebrow": "HVA KAN DET BETY FOR DIN BEDRIFT?",
-      "heading": "50–100 % flere bestillinger. Uten en eneste ekstra besøkende.",
+      "heading": "50–100 % flere henvendelser eller kjøp. Samme trafikk.",
       "headingAlign": "left",
       "layout": "three-columns",
       "surface": "base-200",
@@ -230,50 +230,12 @@
       ]
     },
     {
-      "_block": "content",
-      "id": "lav-risiko",
-      "eyebrow": "ET SAMARBEID DU HAR KONTROLL PÅ",
-      "heading": "Ingen bindingstid. Ingen ombygging bare for å fakturere.",
-      "headingAlign": "left",
-      "layout": "three-columns",
-      "surface": "base-200",
-      "body": [
-        "Vi skal ikke vinne på å holde deg fast. Vi skal vinne på at du ser verdien av at vi fortsetter."
-      ],
-      "items": [
-        {
-          "title": "Ingen bindingstid",
-          "text": "Du skal ikke måtte bli fordi du er låst i en lang kontrakt. Oppsigelse og praktisk avslutning følger vilkårene vi avtaler før oppstart.",
-          "iconName": "eye",
-          "surface": "base-100",
-          "badge": "Frihet",
-          "boxVariant": "card"
-        },
-        {
-          "title": "Vi starter med det du har",
-          "text": "Vi forbedrer eksisterende sider først når det er fornuftig. Større nettsider, redesign og omfattende nyutvikling avtales separat.",
-          "iconName": "browser",
-          "surface": "base-300",
-          "badge": "Ingen unødvendig rebuild",
-          "boxVariant": "card"
-        },
-        {
-          "title": "Du vet hva du betaler for",
-          "text": "Vi avklarer prioritet, pris og omfang før arbeidet starter. Hvis første grep ikke gir ønsket effekt, vurderer vi resultatene og velger neste tiltak.",
-          "iconName": "chart-line-up",
-          "surface": "info",
-          "badge": "Åpenhet",
-          "boxVariant": "card"
-        }
-      ]
-    },
-    {
       "_block": "protected",
       "id": "sjekk",
       "eyebrow": "DIN NETTSIDE ER NESTE REGNESTYKKE",
       "heading": "Vil du ha flere bestillinger fra trafikken du allerede betaler for?",
       "body": [
-        "Vi har jobbet med dette siden 2009. Nå finner vi ut hva som holder kundene tilbake på din side. Start med **Optimalisering fra 4 500 kr/mnd eks. mva.**, eller få tre konkrete forbedringsforslag helt gratis.",
+        "Har du trafikk, men for få bestillinger? Vi finner det som stopper kundene og gjør konkrete forbedringer. Start med **Optimalisering fra 4 500 kr/mnd eks. mva.**, eller få tre gratis funn for nettsiden din.",
         "**Gratis sjekk:** Send nettadressen. Du får tre prioriterte funn innen to virkedager, uten innlogging eller forpliktelser. Betalt arbeid avtales separat."
       ],
       "links": [
