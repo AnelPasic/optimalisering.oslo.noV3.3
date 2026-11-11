@@ -1,16 +1,46 @@
 import { configuration, HttpError, json, readJson, validate } from './domain.mjs';
-import { saveReceipt, readReceipts, csv } from './store.mjs';
+import { saveReceipt, readReceipts, countConversions, csv } from './store.mjs';
 import { authorize } from './access.mjs';
-import { notifyOne, retryDue } from './notify.mjs';
+import { dispositions, eraseReceipt, retentionCandidates, setDisposition } from './retention.mjs';
+import { customerConfirmationEnabled, notifyReceipt, retryDue } from './notify.mjs';
+
+const isUuid = value => typeof value === 'string' && /^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/.test(value);
 
 async function admin(request, env, url) {
   const retry = url.pathname === '/admin/retry';
-  if (!await authorize(request, env, retry ? 'retry' : 'read')) return json({ ok: false }, 403);
-  if ((retry && request.method !== 'POST') || (!retry && request.method !== 'GET')) return json({ ok: false }, 405);
+  const retention = ['/admin/retention', '/admin/retention/disposition', '/admin/retention/erase'].includes(url.pathname);
+  const mutate = retry || (retention && url.pathname !== '/admin/retention');
+  if (!await authorize(request, env, retention ? 'retention' : retry ? 'retry' : 'read')) return json({ ok: false }, 403);
+  if (request.method !== (mutate ? 'POST' : 'GET')) return json({ ok: false }, 405);
   if (url.searchParams.has('site') && url.searchParams.get('site') !== env.SITE_ID) return json({ ok: false }, 403);
+  if (mutate && request.headers.has('Origin') && request.headers.get('Origin') !== url.origin) return json({ ok: false }, 403);
   if (retry) {
-    if (request.headers.has('Origin') && request.headers.get('Origin') !== url.origin) return json({ ok: false }, 403);
     await retryDue(env); return json({ ok: true });
+  }
+  if (retention) {
+    if (env.RETENTION_OPERATIONS_ENABLED !== 'true') return json({ ok: false }, 503);
+    if (!mutate) {
+      const after = url.searchParams.get('after') ?? '';
+      if (after && !isUuid(after)) return json({ ok: false }, 422);
+      return json(await retentionCandidates(env.DB, env.SITE_ID, Date.now(), after));
+    }
+    const input = await readJson(request, 1024);
+    if (!isUuid(input?.id)) {
+      return json({ ok: false }, 422);
+    }
+    const erase = url.pathname === '/admin/retention/erase';
+    if (erase ? input.externalCleanupComplete !== true || !isUuid(input.revision) : !dispositions.includes(input.disposition)) {
+      return json({ ok: false }, 422);
+    }
+    const ok = erase
+      ? await eraseReceipt(env.DB, env.SITE_ID, input.id, input.revision)
+      : await setDisposition(env.DB, env.SITE_ID, input.id, input.disposition);
+    return json({ ok }, ok ? 200 : 409);
+  }
+  if (url.pathname === '/admin/conversions') {
+    const days = Number(url.searchParams.get('days') ?? 30);
+    if (!Number.isInteger(days) || days < 1 || days > 366) return json({ ok: false }, 422);
+    return json({ days, counts: await countConversions(env.DB, env.SITE_ID, Date.now() - days * 86400000) });
   }
   if (!['/admin/receipts', '/admin/export'].includes(url.pathname)) return json({ ok: false }, 404);
   const after = url.searchParams.get('after') ?? '';
@@ -50,9 +80,9 @@ export default {
       if (!key || !/^[A-Za-z0-9_-]{8,100}$/.test(key)) throw new HttpError(422, 'idempotency-required');
       const payload = validate(await readJson(request), config.site);
       if (payload.form === 'pakke-bestilling' && env.PUBLIC_ORDERS_ENABLED !== 'true') return json({ ok: false, error: 'orders-disabled' }, 503, cors);
-      const receipt = await saveReceipt(env.DB, payload, origin, key);
+      const receipt = await saveReceipt(env.DB, payload, origin, key, Date.now(), customerConfirmationEnabled(env));
       if (receipt.conflict) return json({ ok: false, error: 'idempotency-conflict' }, 409, cors);
-      ctx.waitUntil(notifyOne(env, receipt.id).catch(() => console.error('notification-sweep-required')));
+      ctx.waitUntil(notifyReceipt(env, receipt.id).catch(() => console.error('notification-sweep-required')));
       return json({ ok: true, id: receipt.id, receipt_status: 'stored' }, receipt.created ? 201 : 200, cors);
     } catch (error) {
       return json({ ok: false, error: error instanceof HttpError ? error.message : 'unavailable' }, error instanceof HttpError ? error.status : 503, cors);

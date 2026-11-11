@@ -4,6 +4,7 @@ export type LeadPayload = {
   website: string;
   email: string;
   message: string;
+  phone?: string;
   model: string;
   source: Record<string, string>;
 };
@@ -23,6 +24,8 @@ export function createLeadPayload(fields: Record<string, string>, rawSource: Rec
   const website = normalizeWebsite(fields.website ?? '');
   const email = (fields.email ?? '').trim();
   const message = (fields.message ?? '').trim();
+  const phone = (fields.phone ?? '').trim();
+  if (phone && (!/^[+()\d .-]{5,40}$/.test(phone) || !/\d/.test(phone))) throw new Error('Skriv inn et gyldig telefonnummer.');
   const model = fields.model ?? '';
   if (!website || website.length > 2048) throw new Error('Skriv inn en gyldig nettadresse.');
   if (email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) throw new Error('Skriv inn en gyldig e-postadresse.');
@@ -41,8 +44,10 @@ export function createLeadPayload(fields: Record<string, string>, rawSource: Rec
     const value = (rawSource[field] ?? '').trim();
     if (value && value.length <= 120 && /^[\p{L}\p{N} _./+-]+$/u.test(value)) source[field] = value;
   }
-  return { site: 'optimalisering.oslo.no', form: 'gratis-sjekk', website, email, message, model, source };
+  return { site: 'optimalisering.oslo.no', form: 'gratis-sjekk', website, email, message, model, source, ...(phone ? { phone } : {}) };
 }
+
+export const assessmentSuccess = 'Da er vi i gang! Du får 3 konkrete funn innen 2 virkedager.';
 
 type SubmitOptions = { transport?: typeof fetch; timeoutMs?: number; idempotencyKey?: string };
 

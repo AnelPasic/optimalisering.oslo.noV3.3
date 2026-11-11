@@ -5,10 +5,12 @@
   "name": "Behovsvelger",
   "content": {
     "heading": "Hvor vil du se størst fremgang?",
+    "intro": "Velg hvor vi skal starte. Med Optimalisering prioriterer vi ett område om gangen. Med Vekst jobber vi med synlighet og konvertering samtidig.",
     "items": [
       {
         "title": "Bli funnet",
-        "discipline": "Synlighet · 4 500 kr/mnd",
+        "discipline": "Synlighet",
+        "scope": "Én prioritet om gangen",
         "description": "Når kundene leter etter det du tilbyr, skal de finne deg, ikke bare konkurrentene. Vi gjør bedriften din mer synlig på Google, Google Maps, AI-svar eller med annonser, også for kunder som aldri har hørt om deg.",
         "link": {
           "label": "Velg Synlighet",
@@ -17,7 +19,8 @@
       },
       {
         "title": "Bli valgt",
-        "discipline": "Konvertering · 4 500 kr/mnd",
+        "discipline": "Konvertering",
+        "scope": "Én prioritet om gangen",
         "description": "Kundene har funnet deg. Nå skal de velge deg. Vi gjør tilbudet tydeligere, nettsiden mer overbevisende og veien til kontakt og bestilling enklere. Slik får flere en god grunn til å velge nettopp deg.",
         "link": {
           "label": "Velg Konvertering",
@@ -26,7 +29,8 @@
       },
       {
         "title": "Ja takk, begge deler",
-        "discipline": "Synlighet X Konvertering · 6 900 kr/mnd",
+        "discipline": "Synlighet X Konvertering",
+        "scope": "To prioriteringer samtidig",
         "description": "Bli lettere å finne og få flere av besøkene til å fullføre bestilling. Vi forbedrer både synligheten og nettsidens evne til å gjøre interesse om til kunder. Flere oppdager deg. Flere velger deg.",
         "link": {
           "label": "Velg Vekst",

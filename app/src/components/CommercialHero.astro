@@ -13,6 +13,9 @@ import {getGlobalElement} from '../lib/home-builder';
 interface Props {content:HeroView;proof?:ReturnType<typeof getHeroProof>;demo?:boolean;}
 const {content:input,proof,demo=false}=Astro.props;
 const content=heroViewSchema.parse(input),family=content.family;
+const offers = family === 'home' && !demo ? getGlobalElement('priser').content : undefined;
+const primarySupport = offers ? 'Fra ' + new Intl.NumberFormat('nb-NO').format(offers.items[0].price) + ' kr/mnd' : undefined;
+const secondarySupport = offers ? 'Innen 2 virkedager' : undefined;
 // A Hero selection never bypasses the existing proof-publication/evidence gate.
 const proofRecords=content.featuredProofCaseId?(await getCollection('proofCases')).map(entry=>entry.data):[];
 const selectedProof=content.featuredProofCaseId
@@ -43,7 +46,16 @@ const frameLayout=family==='home'
     <p class="eyebrow">{family==='home'&&<span class="small-dot"></span>}{content.eyebrow}</p>
     <Heading id={!demo&&family==='pricing'?'pricing-title':undefined} class={family==='home'?'hero-title':undefined}>{split?<><span class="hero-emphasis">{content.title.slice(0,split)}</span>{content.title.slice(split)}</>:content.title.split('\n').map((line,index)=><>{index>0&&<br/>}{line}</>)}</Heading>
     <p class={['glossary','error'].includes(family)?'hero-support':'hero-intro'}>{family==='home'?<TermText text={content.support} terms={['seo','ai-synlighet','cro']}/>:content.support}</p>
-    {(content.primaryCta||content.secondaryCta)&&<div class={family==='home'||service?'hero-actions':'hero-links'}>{content.primaryCta&&<a class="btn btn-primary" href={content.primaryCta.href}>{content.primaryCta.label}{family==='error'?<>{' '}<span aria-hidden="true">&#8599;</span></>:<Arrow diagonal/>}</a>}{content.secondaryCta&&<a class="text-link" href={content.secondaryCta.href}>{content.secondaryCta.label}<Arrow/></a>}</div>}
+    {(content.primaryCta || content.secondaryCta) && <div class={family === 'home' || service ? 'hero-actions' : 'hero-links'}>
+      {content.primaryCta && <div class={primarySupport ? 'grid self-stretch content-end justify-items-start gap-1' : 'contents'}>
+        <a class="btn btn-primary" href={content.primaryCta.href}>{content.primaryCta.label}{family === 'error' ? <>{' '}<span aria-hidden="true">&#8599;</span></> : <Arrow diagonal />}</a>
+        {primarySupport && <span class="small-copy">{primarySupport}</span>}
+      </div>}
+      {content.secondaryCta && <div class={secondarySupport ? 'grid self-stretch content-end justify-items-start gap-1' : 'contents'}>
+        <a class="text-link" href={content.secondaryCta.href}>{content.secondaryCta.label}<Arrow /></a>
+        {secondarySupport && <span class="small-copy">{secondarySupport}</span>}
+      </div>}
+    </div>}
     <slot name="copy-end"/>
    </div>
    {content.visual.kind==='image'&&auxiliary?<div class="hero-aside"><HeroPhoto content={content.visual.image}/><div class="hero-auxiliary"><slot name="auxiliary"/></div></div>:<>

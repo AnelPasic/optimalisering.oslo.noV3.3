@@ -52,7 +52,7 @@ export function validate(input, site) {
   if (!input || typeof input !== 'object' || Array.isArray(input)) throw new HttpError(422, 'validation');
   if (input.site !== site) throw new HttpError(403, 'site-binding');
   if (!['gratis-sjekk', 'pakke-bestilling'].includes(input.form)) throw new HttpError(422, 'validation');
-  for (const field of ['website', 'email', 'model', 'message', 'phone', 'company', 'contact', 'package', 'website_confirmation']) {
+  for (const field of ['website', 'email', 'model', 'message', 'phone', 'company', 'contact', 'package', 'focus', 'website_confirmation']) {
     if (input[field] !== undefined && typeof input[field] !== 'string') throw new HttpError(422, 'validation');
   }
   if (input.website_confirmation) throw new HttpError(422, 'validation');

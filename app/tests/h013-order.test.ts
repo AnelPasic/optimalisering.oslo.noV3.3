@@ -24,7 +24,7 @@ test('new three-field inline order preserves the selected package and source pag
   assert.equal('contact' in payload,false);
 });
 test('orders reject invalid intent, package, phone and excessive optional legacy fields', () => {
-  for (const changes of [{form:'checkout'},{package:'sprint'},{package:''},{company:'x'.repeat(201)},{contact:'x'.repeat(201)},{phone:''},{phone:'abcde'},{phone:'x'.repeat(41)}])
+  for (const changes of [{form:'checkout'},{package:'sprint'},{package:''},{company:'x'.repeat(201)},{contact:'x'.repeat(201)},{phone:'abcde'},{phone:'x'.repeat(41)}])
     assert.throws(()=>createOrderPayload({...fields,...changes},{}));
   const assessment=createLeadPayload({website:'example.test',email:fields.email},{});
   assert.equal(assessment.form,'gratis-sjekk');

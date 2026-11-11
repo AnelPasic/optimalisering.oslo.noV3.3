@@ -74,3 +74,35 @@ test('body deadline, streamed overflow and malformed UTF-8 fail without unbounde
   await assert.rejects(readJson(new Response('x'.repeat(101)), 100), error => error.status === 413);
   await assert.rejects(readJson(new Response(new Uint8Array([255]))), error => error.status === 400);
 });
+
+test('signed retention grants scope preview, disposition and erasure to the operator site', async t => {
+  const DB = database();
+  const site = env.SITE_ID;
+  const payload = { site, form: 'gratis-sjekk', website: 'https://example.test/', email: 'synthetic@example.test' };
+  const { id } = await saveReceipt(DB, payload, 'https://site.example.test', 'synthetic-retain-key', 1600000000000, true);
+  const { id: foreign } = await saveReceipt(DB, { ...payload, site: 'other.example.test' }, 'https://site.example.test', 'synthetic-retain-key', 1600000000000);
+  const jwt = await token();
+  const readOnly = { ...env, DB, RETENTION_OPERATIONS_ENABLED: 'true' };
+  const authorized = { ...readOnly, ADMIN_GRANTS_JSON: JSON.stringify({
+    'operator@example.test': [{ site, permissions: ['retention'] }],
+  }) };
+  t.mock.method(globalThis, 'fetch', certs);
+  const call = (path, bindings, body, origin = env.INGRESS_ORIGIN) => worker.fetch(new Request(env.INGRESS_ORIGIN + path, {
+    method: body ? 'POST' : 'GET',
+    headers: { 'Cf-Access-Jwt-Assertion': jwt, Origin: origin, 'Content-Type': 'application/json' },
+    body: body ? JSON.stringify(body) : undefined,
+  }), bindings, {});
+  const path = '/admin/retention';
+  assert.equal((await call(path, readOnly)).status, 403);
+  assert.equal((await call(path, { ...authorized, RETENTION_OPERATIONS_ENABLED: '' })).status, 503);
+  const list = await (await call(path, authorized)).json();
+  assert.deepEqual(list.receipts.map(row => row.id), [id]);
+  assert.ok(!JSON.stringify(list).includes('synthetic@example.test'));
+  assert.equal((await call(path + '/disposition', authorized, { id, disposition: 'erasure_pending' }, 'https://foreign.example.test')).status, 403);
+  assert.equal((await call(path + '/disposition', authorized, { id: foreign, disposition: 'erasure_pending' })).status, 409);
+  assert.equal((await call(path + '/disposition', authorized, { id, disposition: 'erasure_pending' })).status, 200);
+  const revision = (await (await call(path, authorized)).json()).receipts[0].erasure_revision;
+  assert.equal((await call(path + '/erase', authorized, { id, revision })).status, 422);
+  assert.equal((await call(path + '/erase', authorized, { id, revision, externalCleanupComplete: true })).status, 200);
+  assert.equal(DB.sqlite.prepare('SELECT COUNT(*) AS n FROM customer_confirmations').get().n, 0);
+});

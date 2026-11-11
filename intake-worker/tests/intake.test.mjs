@@ -66,7 +66,7 @@ test('site identity is bound by server configuration and ingress, not caller bod
 
 test('strict validation, honeypot, body size, content type and distributed rate limiter', async () => {
   const { send, DB } = setup();
-  for (const patch of [{ email: 'invalid' }, { email: 12 }, { website: 'javascript:alert(1)' }, { website_confirmation: 'bot' }, { message: 'x'.repeat(2001) }, { source: [] }, { source: { page: 12 } }, { form: 'other' }, { form: 'pakke-bestilling', package: 'unknown', phone: '90000000' }, { form: 'pakke-bestilling', package: 'vekst', phone: '' }]) {
+  for (const patch of [{ email: 'invalid' }, { email: 12 }, { website: 'javascript:alert(1)' }, { website_confirmation: 'bot' }, { message: 'x'.repeat(2001) }, { source: [] }, { source: { page: 12 } }, { form: 'other' }, { form: 'pakke-bestilling', package: 'unknown', phone: '90000000' }, { form: 'pakke-bestilling', package: 'vekst', phone: 'invalid' }]) {
     assert.equal((await send({ ...sample, ...patch })).status, 422, JSON.stringify(patch));
   }
   assert.equal((await send(sample, '')).status, 422);
@@ -88,7 +88,7 @@ test('shared D1 isolates idempotency per site and never allows caller-selected t
 
 test('unauthenticated admin/export and unexpected methods never expose records', async () => {
   const { env, ctx, send } = setup(); await send();
-  for (const path of ['/admin/receipts', '/admin/export?format=csv', '/admin/retry']) {
+  for (const path of ['/admin/receipts', '/admin/export?format=csv', '/admin/retry', '/admin/conversions', '/admin/retention', '/admin/retention/disposition', '/admin/retention/erase']) {
     const response = await worker.fetch(new Request('https://ingress.example.test' + path), env, ctx);
     assert.equal(response.status, 403); assert.equal((await response.text()).includes(sample.email), false);
     assert.equal(response.headers.get('Cache-Control'), 'no-store');
@@ -117,4 +117,55 @@ test('uncertain write result returns failure but retry recovers the committed re
   const response = await send(); assert.equal(response.status, 200);
   assert.equal((await response.json()).id, stored.id);
   assert.equal(DB.sqlite.prepare('SELECT count(*) n FROM receipts').get().n, 1);
+});
+
+test('need focus and optional phone survive D1 canonicalisation', async () => {
+  const { DB, send } = setup();
+  const payload = { ...sample, form: 'pakke-bestilling', package: 'vekst', focus: 'synlighet-konvertering' };
+  const response = await send(payload, 'synthetic-need-focus');
+  assert.equal(response.status, 201);
+  const stored = JSON.parse(DB.sqlite.prepare('SELECT payload_json FROM receipts').get().payload_json);
+  assert.equal(stored.focus, 'synlighet-konvertering');
+  assert.equal(stored.phone, undefined);
+  assert.equal((await send(payload, 'synthetic-need-focus')).status, 200);
+  assert.equal((await send({ ...payload, focus: 'synlighet' }, 'synthetic-invalid-focus')).status, 422);
+
+  assert.equal((await send({ ...sample, phone: '+47 900 00 000' }, 'synthetic-assessment-phone')).status, 201);
+  const assessment = DB.sqlite.prepare("SELECT payload_json FROM receipts WHERE intent='gratis-sjekk'").get();
+  assert.equal(JSON.parse(assessment.payload_json).phone, '+47 900 00 000');
+});
+
+test('customer confirmation is enqueued only for new eligible receipts, with a separate retry and provider ID', async t => {
+  const provider = { SEND_NOTIFICATIONS: 'true', SEND_CUSTOMER_CONFIRMATIONS: 'true',
+    RESEND_API_KEY: 'synthetic-not-a-key', RESEND_FROM: 'sender@example.test',
+    RESEND_REPLY_TO: 'staff@example.test', LEAD_TO_EMAIL: 'ops@example.test' };
+  const { DB, env, send, jobs } = setup(provider);
+  const { retryDue } = await import('../src/notify.mjs');
+  const observed = [];
+  t.mock.method(globalThis, 'fetch', async (_url, request) => {
+    const body = JSON.parse(request.body);
+    observed.push({ key: request.headers['Idempotency-Key'], body });
+    return body.to[0] === sample.email ? new Response('{}', { status: 503 }) : Response.json({ id: 'ops-id' });
+  });
+  const response = await send(sample, 'synthetic-two-jobs');
+  assert.equal(response.status, 201);
+  const { id } = await response.json();
+  const customer = () => DB.sqlite.prepare('SELECT * FROM customer_confirmations WHERE id=?').get(id);
+  assert.ok(customer());
+  await Promise.all(jobs);
+  assert.equal(DB.sqlite.prepare('SELECT resend_message_id FROM receipts WHERE id=?').get(id).resend_message_id, 'ops-id');
+  assert.equal(customer().notification_status, 'retry');
+  assert.equal((await send(sample, 'synthetic-two-jobs')).status, 200);
+  await Promise.all(jobs);
+  await retryDue(env, { now: customer().due_at_ms, transport: async (_url, request) => {
+    observed.push({ key: request.headers['Idempotency-Key'], body: JSON.parse(request.body) });
+    return Response.json({ id: 'customer-id' });
+  } });
+  const toCustomer = observed.filter(mail => mail.body.to[0] === sample.email);
+  assert.equal(observed.length, 3);
+  assert.equal(toCustomer.length, 2);
+  assert.deepEqual(toCustomer[0], toCustomer[1]);
+  assert.equal(toCustomer[0].body.reply_to, provider.RESEND_REPLY_TO);
+  assert.equal(toCustomer[0].body.subject, 'Vi ser etter mulighetene du går glipp av');
+  assert.equal(customer().resend_message_id, 'customer-id');
 });

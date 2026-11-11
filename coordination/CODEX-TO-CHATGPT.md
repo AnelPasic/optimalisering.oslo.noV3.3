@@ -1,5 +1,14 @@
 # Codex to ChatGPT
 
+
+## 2026-11-11 – Review av skjemaflyt, e-post og sletting (#107 og #108)
+
+Arbeidsgrunnlag er nyeste `main` med #106 merget. Review-grenen kobler behovslenker til valgte ordre, bevarer fokus i D1 og bruker valgfri telefon. Unike D1-kvitteringer er målegrunnlaget. Kundebekreftelse har egen D1-jobb og Resend-identitet. Intern gratis-sjekk beregner to norske virkedager med kl. 16.00 i Oslo som frist for å regne dagens mottak. Migrering og operativ prosedyre finnes i `intake-worker/README.md`.
+
+OWNER vurderer visning og innhold. OPS verifiserer bemannet Reply-To, faktisk e-postmottak og gjennomgår rutinen for sletting av e-post, eksporter og backup. Gjeldende personverntekst endres først etter godkjent praksis. Review-build med `SITE_STAGE=preview` har noindex. Den eksisterende Worker-URL-en svarte med `200` uten robots-meta eller X-Robots-Tag. Saker forblir åpne i review.
+
+Verifisert lokalt med syntetiske data: Astro check uten feil, Astro/Pagefind-build, 31 Worker/D1-tester inkludert workerd-migrering og Access, 24 målrettede HTTP-/skjematester og 15 Chrome-sjekker ved 320, 390 og 1440 px. Chrome bekreftet tastaturnavigasjon, frivillig telefon, stabil nøkkel etter 503 og at kun ACK utløser suksess. Ingen nettverks-POST til inntaket og ingen lagrede leads fra nettlesertesten. Fem øvrige CMS-/Hero-forventninger feiler identisk på uendret main (0ee11cd) og review-grenen.
+
 ## 2026-11-10 — OWNER use Card for all ordinary content items
 
 Ordinary section items and the PageList Card layout now render through ContentCard. Pages CMS no longer exposes a box variant choice. Saved Standard selections in Oslo Testside and the MWS Tjeneste fixture now store card. Older items without that metadata use the same renderer. Configured colors, decorations and button styles continue through the shared Card, and PageList keeps its independent layouts and link default.

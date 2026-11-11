@@ -21,10 +21,10 @@ const enabled = site.ordersEnabled;
       <div class="package-order-fields">
         <label for={id('website')}>Nettside <span aria-hidden="true">*</span></label>
         <input class="input w-full" id={id('website')} name="website" type="text" inputmode="url" autocomplete="url" placeholder="dinbedrift.no" maxlength="2048" required />
-        <label for={id('email')}>E-post <span aria-hidden="true">*</span></label>
+        <label for={id('email')}>Jobb-e-post <span aria-hidden="true">*</span></label>
         <input class="input w-full" id={id('email')} name="email" type="email" autocomplete="email" placeholder="deg@dinbedrift.no" maxlength="254" required />
-        <label for={id('phone')}>Telefon <span aria-hidden="true">*</span></label>
-        <input class="input w-full" id={id('phone')} name="phone" type="tel" autocomplete="tel" placeholder="+47 900 00 000" maxlength="40" required />
+        <label for={id('phone')}>Telefon <span class="optional">(valgfritt)</span></label>
+        <input class="input w-full" id={id('phone')} name="phone" type="tel" autocomplete="tel" placeholder="+47 900 00 000" maxlength="40" />
         {item.key === 'partner' && <>
           <label for={id('partner-needs')}>Hva ønsker du hjelp med? (valgfritt)</label>
           <textarea class="textarea w-full" id={id('partner-needs')} name="partnerNeeds" rows="3" maxlength="650" placeholder="Fortell kort om tjenester, markeder eller mål dere vil prioritere."></textarea>
@@ -40,11 +40,12 @@ const enabled = site.ordersEnabled;
   </div>
 </details>
 <script>
-  import { createOrderPayload } from '../lib/order';
+  import { createOrderPayload, isNeedFocus, needFocusLabels } from '../lib/order';
   import { createPackageFocusMessage } from '../lib/package-focus';
-  import { normalizeWebsite, submitLead } from '../lib/lead';
+  import { submitLead } from '../lib/lead';
   import { captureAttribution } from '../lib/attribution';
   const accordions = [...document.querySelectorAll<HTMLDetailsElement>('[data-package-order]')];
+  const applyNeedFocus = new Map<string, (focus: string) => void>();
   for (const details of accordions) {
     details.addEventListener('toggle', () => {
       if (!details.open) return;
@@ -61,12 +62,28 @@ const enabled = site.ordersEnabled;
     const selectedFocus = () => [...document.querySelectorAll<HTMLInputElement>('[data-package-focus-choice]')]
       .filter(input => input.checked && input.dataset.focusPackage === packageKey)
       .map(input => ({id:input.value,label:input.dataset.focusLabel ?? ''}));
+    let needFocus = '';
     const refreshFocusSummary = () => {
-      const chosen=selectedFocus().map(f=>f.label);
-      focusSummary.textContent=chosen.length?('Valgt fokus: '+chosen.join(' + ')):'';
+      const chosen = isNeedFocus(packageKey, needFocus) ? needFocusLabels[needFocus] : selectedFocus().map(f => f.label).join(' + ');
+      focusSummary.textContent = chosen ? 'Valgt fokus: ' + chosen : '';
     };
+    applyNeedFocus.set(packageKey, focus => {
+      if (isNeedFocus(packageKey, focus)) {
+        for (const input of document.querySelectorAll<HTMLInputElement>('[data-package-focus-choice]')) {
+          if (input.dataset.focusPackage !== packageKey || !input.checked) continue;
+          input.checked = false;
+          input.dispatchEvent(new Event('change', { bubbles: true }));
+        }
+      }
+      needFocus = isNeedFocus(packageKey, focus) ? focus : '';
+      refreshFocusSummary();
+    });
     document.addEventListener('change', event => {
-      if(event.target instanceof HTMLInputElement && event.target.matches('[data-package-focus-choice]')) refreshFocusSummary();
+      if (event.target instanceof HTMLInputElement && event.target.matches('[data-package-focus-choice]') &&
+          event.target.dataset.focusPackage === packageKey) {
+        needFocus = '';
+        refreshFocusSummary();
+      }
     });
     refreshFocusSummary();
     let key = crypto.randomUUID(), previousBody = '', busy = false;
@@ -79,6 +96,7 @@ const enabled = site.ordersEnabled;
       if (!form.checkValidity()) { form.reportValidity(); return; }
       const fields = Object.fromEntries(new FormData(form).entries()) as Record<string,string>;
       if (fields.website_confirmation) return;
+      fields.focus = needFocus;
       try {
         fields.message=createPackageFocusMessage(packageKey,selectedFocus().map(choice=>choice.label),fields.partnerNeeds);
       } catch (error) {
@@ -96,7 +114,7 @@ const enabled = site.ordersEnabled;
       show('Sender bestillingen.');
       try {
         await submitLead(endpoint,payload,{idempotencyKey:key});
-        show('Bestillingen er mottatt. Vi tar kontakt for å avklare videre oppstart.');
+        show('Bestillingsforespørselen er sendt! Bra valg. Nå tar vi over. Vi tar kontakt for å avklare pris, omfang og oppstart.');
         form.reset(); key = crypto.randomUUID(); previousBody = '';
       } catch(error) { show(error instanceof Error ? error.message : 'Vi kunne ikke bekrefte bestillingen. Prøv igjen.'); }
       finally { busy = false; button.disabled = !enabled; button.removeAttribute('aria-busy'); }
@@ -108,12 +126,18 @@ const enabled = site.ordersEnabled;
   // Legacy deep links from packages to /priser/?pakke=…#bestill.
   if (location.pathname === '/priser/') {
     const openSelected = () => {
-      const key = new URL(location.href).searchParams.get('pakke');
-      if (!key) return;
+      const params = new URL(location.href).searchParams;
+      const key = params.get('pakke') ?? '';
       const match = accordions.find(a => a.dataset.packageKey === key);
+      for (const [packageKey, apply] of applyNeedFocus) apply(packageKey === key ? params.get('fokus') ?? '' : '');
       if (!match) return;
-      match.open = true;
-      match.scrollIntoView({block:'center'});
+      for (const accordion of accordions) accordion.open = accordion === match;
+      const focusOrder = () => requestAnimationFrame(() => {
+        match.querySelector('summary')?.focus({ preventScroll: true });
+        match.scrollIntoView({ block: 'center' });
+      });
+      if (document.readyState === 'complete') focusOrder();
+      else window.addEventListener('load', focusOrder, { once: true });
     };
     openSelected();
     window.addEventListener('popstate', openSelected);

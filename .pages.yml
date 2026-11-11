@@ -1887,6 +1887,9 @@ content:
                         type: string
                     required: true
                 required: true
+              - name: intro
+                label: Ingress
+                type: text
               - name: items
                 label: Alternativer
                 type: object
@@ -2985,6 +2988,9 @@ content:
                     label: Fagområde
                     type: string
                     required: true
+                  - name: scope
+                    label: Omfang
+                    type: string
                   - name: description
                     label: Beskrivelse
                     type: text

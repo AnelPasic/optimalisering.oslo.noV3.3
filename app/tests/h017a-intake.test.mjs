@@ -42,7 +42,7 @@ test('all package keys persist explicit order intent and normalized attribution 
 }));
 
 test('unknown package, filled honeypot and invalid required or excessive fields create no record', () => withServer({}, async ({ store, send, notifications }) => {
-  const invalid = [{ package: 'unknown' }, { website_confirmation: 'bot' }, { phone: '' }, { contact: 'x'.repeat(201) }, { email: 'invalid' }, { website: 'javascript:alert(1)' }, { phone: 'x'.repeat(41) }, { message: 'x'.repeat(2001) }];
+  const invalid = [{ package: 'unknown' }, { website_confirmation: 'bot' }, { phone: 'invalid' }, { contact: 'x'.repeat(201) }, { email: 'invalid' }, { website: 'javascript:alert(1)' }, { phone: 'x'.repeat(41) }, { message: 'x'.repeat(2001) }];
   for (const [index, changes] of invalid.entries()) assert.equal((await send({ ...body, ...changes }, `synthetic-invalid-${index}`)).status, 422);
   assert.deepEqual(store.counts(), { leads: 0, conversions: 0 }); assert.equal(notifications.length, 0);
 }));

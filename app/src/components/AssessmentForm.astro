@@ -7,8 +7,10 @@ import Arrow from './Arrow.astro';
   <label for="website">Nettside eller nettbutikk <span aria-hidden="true">*</span></label>
   <input class="input w-full" id="website" name="website" type="text" inputmode="url" placeholder="dinbedrift.no" required maxlength="2048" autocomplete="url" aria-describedby="website-error" />
   <p id="website-error" class="field-error" hidden></p>
-  <label for="email">E-post for bedriften <span aria-hidden="true">*</span></label>
+  <label for="email">Jobb-e-post <span aria-hidden="true">*</span></label>
   <input class="input w-full" id="email" name="email" type="email" placeholder="deg@dinbedrift.no" required maxlength="254" autocomplete="email" />
+  <label for="phone">Telefon <span class="optional">(valgfritt)</span></label>
+  <input class="input w-full" id="phone" name="phone" type="tel" maxlength="40" autocomplete="tel" />
   <label for="model">Hva ønsker du flere av? <span class="optional">Valgfritt</span></label>
   <select class="select w-full" id="model" name="model"><option value="">Velg hvis du vil</option><option value="henvendelser">Relevante henvendelser</option><option value="nettbutikk">Kjøp i nettbutikken</option><option value="annet">Annet / usikker</option></select>
   <label for="message">Noe vi bør vite? <span class="optional">Valgfritt</span></label>
@@ -22,7 +24,7 @@ import Arrow from './Arrow.astro';
   <noscript><p>Skjemaet trenger JavaScript for innsending. <a href="/kontakt/">Se kontaktinformasjon</a>.</p></noscript>
 </form>
 <script>
-  import { createLeadPayload, normalizeWebsite, submitLead } from '../lib/lead';
+  import { assessmentSuccess, createLeadPayload, normalizeWebsite, submitLead } from '../lib/lead';
   import { captureAttribution } from '../lib/attribution';
   const form = document.querySelector<HTMLFormElement>('[data-assessment]');
   if (form) {
@@ -35,6 +37,12 @@ import Arrow from './Arrow.astro';
     website.addEventListener('input', () => { website.setCustomValidity(''); website.removeAttribute('aria-invalid'); websiteError.hidden = true; });
     form.addEventListener('submit', async event => {
       event.preventDefault();
+      if (form.dataset.enabled !== 'true') {
+        status.hidden = false;
+        status.textContent = 'Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt.';
+        status.focus();
+        return;
+      }
       if (button.disabled) return;
       if (!normalizeWebsite(website.value)) {
         websiteError.textContent = 'Skriv inn en gyldig nettadresse, for eksempel dinbedrift.no.';
@@ -44,7 +52,6 @@ import Arrow from './Arrow.astro';
         return;
       }
       status.hidden = false;
-      if (form.dataset.enabled !== 'true') { status.textContent = 'Innsending er ikke åpnet i denne forhåndsvisningen. Ingen opplysninger er sendt.'; status.focus(); return; }
       if ((form.elements.namedItem('website_confirmation') as HTMLInputElement).value) return;
       try {
         const values = Object.fromEntries(new FormData(form).entries()) as Record<string, string>;
@@ -57,7 +64,7 @@ import Arrow from './Arrow.astro';
         form.setAttribute('aria-busy', 'true');
         status.textContent = 'Sender forespørselen...';
         await submitLead(form.dataset.endpoint || '', payload, { idempotencyKey: key });
-        status.textContent = 'Takk! Forespørselen er mottatt. Vi følger opp på e-post.';
+        status.textContent = assessmentSuccess;
         form.reset();
         key = crypto.randomUUID();
         previousBody = '';
@@ -65,6 +72,6 @@ import Arrow from './Arrow.astro';
       finally { button.disabled = false; form.removeAttribute('aria-busy'); status.focus(); }
     });
     form.submit = () => form.requestSubmit();
-    button.disabled = false;
+    button.disabled = form.dataset.enabled !== 'true';
   }
 </script>

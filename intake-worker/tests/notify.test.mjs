@@ -18,7 +18,7 @@ test('Resend acknowledgement is accepted, never delivered; duplicate claims send
   const { env, id, now, row } = await fixture(); let calls = 0;
   const transport = async (_url, options) => {
     calls++; const mail = JSON.parse(options.body);
-    assert.match(mail.subject, /Bestilling/); assert.match(mail.text, /Pakke: vekst/);
+    assert.match(mail.subject, /Bestilling/); assert.match(mail.text, /Pakke: Vekst/);
     assert.equal(mail.text.includes('undefined'), false);
     assert.equal(options.headers['Idempotency-Key'], `receipt/${id}`);
     return accepted();
@@ -116,4 +116,28 @@ test('lease lost before body freeze never sends stale recipient or template', as
   assert.equal(messages.length, 1);
   assert.equal(messages[0].to[0], 'new@example.test');
   assert.equal(row().notification_status, 'accepted');
+});
+
+test('a stalled freeze response cannot start transport after the sending lease expires', async () => {
+  const { env, DB, id, now } = await fixture();
+  const prepare = DB.prepare.bind(DB);
+  let elapsed = 0;
+  DB.prepare = sql => {
+    const statement = prepare(sql);
+    if (!sql.startsWith('UPDATE receipts SET notification_json=')) return statement;
+    return { bind(...values) {
+      const bound = statement.bind(...values);
+      return { async run() {
+        const result = await bound.run();
+        elapsed = 61000;
+        return result;
+      } };
+    } };
+  };
+  let calls = 0;
+  await notifyOne(env, id, { now, clock: () => elapsed, transport: async () => {
+    calls++;
+    return accepted();
+  } });
+  assert.equal(calls, 0);
 });

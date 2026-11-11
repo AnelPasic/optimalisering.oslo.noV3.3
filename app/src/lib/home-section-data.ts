@@ -11,7 +11,7 @@ const link = z.object({ label: z.string(), href: z.string().startsWith('/') });
 export const proofSlotSchema = z.object({ publicationApproved: z.boolean(), caseIds: z.array(z.string()).default([]), eyebrow: z.string(), heading: z.string(), beforeLabel: z.string(), afterLabel: z.string(), changeLabel: z.string() });
 export const homeSectionDataSchema = z.object({
   assessmentSection: z.object({ _block: z.literal('protected'), id: z.literal('sjekk'), eyebrow: z.string().optional(), heading: z.string(), body: z.array(z.string()).default([]) }),
-  selector: z.object({ heading: z.string(), items: z.array(z.object({ ...cardDecorationFields, title: z.string(), discipline: z.string(), description: z.string(), link })).length(3) }),
+  selector: z.object({ heading: z.string(), intro: z.string().optional(), items: z.array(z.object({ ...cardDecorationFields, title: z.string(), discipline: z.string(), scope: z.string().optional(), description: z.string(), link })).length(3) }),
   calculator: z.object({
     eyebrow: z.string(), heading: z.string(), intro: z.string(), formula: z.string(), caveat: z.string(),
     labels: z.object({ visits: z.string(), conversion: z.string(), trafficIncrease: z.string(), newConversion: z.string(), current: z.string(), scenario: z.string(), difference: z.string(), outcome: z.string(), increase: z.string(), undefinedIncrease: z.string(), invalid: z.string() }),
