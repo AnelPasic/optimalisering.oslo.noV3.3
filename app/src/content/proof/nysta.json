@@ -3,20 +3,20 @@
   "clientName": "nysta.no",
   "dominantMetric": "Fullført checkout i nettbutikken",
   "before": "7,1 %",
-  "after": "43,6 %",
-  "delta": "6,14 X Større andel som fullfører et kjøp",
+  "after": "58,1 %",
+  "delta": "+51 prosentpoeng i andelen som fullfører kjøp",
   "period": {
     "before": "30 dager før",
-    "after": "første 30 dager etter",
+    "after": "dag 31-60 etter endringene",
     "comparable": true
   },
   "intervention": "Konverteringsoptimalisering av checkout.",
-  "source": "Shopify-data fra dokumentert Nysta-case. Før/etter er 30 dager før mot første 30 dager etter CRO/Vipps-endringene.",
-  "limitations": "Målt blant brukere som startet checkout, ikke alle besøkende. Flere endringer ble gjort i samme periode, så effekten kan ikke tilskrives ett tiltak alene. Neste 30-dagersperiode var 58,1 %.",
+  "source": "Shopify-data fra dokumentert Nysta-case. Andel fullførte kjøp blant dem som startet checkout: 7,1 % i 30-dagersperioden før CRO/Vipps-endringene, 43,6 % de første 30 dagene etter og 58,1 % i den påfølgende 30-dagersperioden (dag 31-60).",
+  "limitations": "Gjelder bare brukere som startet checkout, ikke alle besøkende. 58,1 % er målingen i dag 31-60 etter endringene, ikke et aggregert gjennomsnitt for hele 60-dagersperioden. Flere endringer ble gjort i samme periode, så effekten kan ikke tilskrives ett tiltak alene.",
   "namingPermission": "GRANTED",
   "permissionEvidence": "main 2090639; coordination/DECISIONS.md D-023; coordination/H007-COMMERCIAL-INPUT.md; OWNER confirmation in ChatGPT, 2026-10-08, grants customer-name/case publication permission.",
   "strategyReviewStatus": "CONTENT_LOCKED",
-  "strategyReviewEvidence": "OWNER + STRATEGY_CONTENT public-case lock, 2026-10-11. Exact public claim limited to checkout completion 7,1 % -> 43,6 % with stated caveat.",
+  "strategyReviewEvidence": "OWNER 2026-11-08: Oppdater offentlig Nysta-resultat fra 7,1 % før endringene til 58,1 % i dag 31-60 etter, med 43,6 % i de første 30 dagene som intern dokumentert mellomperiode. Erstatter offentlig tallvalg fra OWNER + STRATEGY_CONTENT 2026-10-11; målegrunnlag og avgrensninger beholdes.",
   "artifactStatus": "NOT_IMPORTED",
   "evidenceMetrics": [
     {

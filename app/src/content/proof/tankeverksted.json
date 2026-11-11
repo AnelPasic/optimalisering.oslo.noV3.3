@@ -1,0 +1,52 @@
+{
+  "id": "tankeverksted",
+  "clientName": "Tankeverksted",
+  "anonymizedLabel": null,
+  "relationship": null,
+  "dominantMetric": "Registrerte henvendelser og bestillinger",
+  "before": null,
+  "after": "47",
+  "delta": null,
+  "period": {
+    "before": null,
+    "after": "mars-september 2026",
+    "comparable": false
+  },
+  "intervention": "Google Ads-arbeid i måleperioden. Ingen sammenlignbar førperiode er dokumentert.",
+  "source": "Tidligere Medon-kundecase, dokumentert i coordination/H017C-PROOF-PUBLISH.md (OWNER + STRATEGY_CONTENT, 2026-10-11). Periode mars-september 2026: 28 181 kr i Google Ads-forbruk og 47 faktiske henvendelser/bestillinger registrert via Gmail og skjema.",
+  "limitations": "Dette er et øyeblikksbilde fra én periode, ikke en før/etter-sammenligning. Omtrent 600 kr er annonseforbruk delt på 47 faktiske henvendelser/bestillinger, ikke et dokumentert antall salg eller en tilsvarende Google Ads-konverteringsmetrik. September 2026 var kostnaden per faktisk henvendelse/bestilling omtrent 381 kr.",
+  "namingPermission": "GRANTED",
+  "permissionEvidence": "OWNER D-075 og endelig H-017C, 2026-10-11, godkjente kundereferansen for senere bruk. Godkjenningen er ikke en godkjenning av en oppdiktet før/etter-sammenligning.",
+  "strategyReviewStatus": "READY_FOR_STRATEGY_REVIEW",
+  "strategyReviewEvidence": null,
+  "artifactStatus": "NOT_IMPORTED",
+  "artifactReferences": [],
+  "evidenceMetrics": [
+    {
+      "metric": "Google Ads-forbruk",
+      "before": null,
+      "after": "28 181 kr",
+      "delta": null,
+      "nextPeriod": null,
+      "timeframe": "mars-september 2026"
+    },
+    {
+      "metric": "Faktiske registrerte henvendelser og bestillinger (Gmail/skjema)",
+      "before": null,
+      "after": "47",
+      "delta": null,
+      "nextPeriod": null,
+      "timeframe": "mars-september 2026"
+    },
+    {
+      "metric": "Annonseforbruk per registrert henvendelse/bestilling",
+      "before": null,
+      "after": "ca. 600 kr",
+      "delta": null,
+      "nextPeriod": "ca. 381 kr i september 2026",
+      "timeframe": "mars-september 2026"
+    }
+  ],
+  "publicationStatus": "EVIDENCE_ONLY",
+  "publicationApproved": false
+}
