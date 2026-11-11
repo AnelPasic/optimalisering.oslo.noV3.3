@@ -94,13 +94,12 @@
     {
       "_block": "content",
       "id": "nestenivaa",
-      "eyebrow": "Gjett Hva!",
-      "heading": "Det er ikke hele historien",
+      "heading": "Gjett Hva! Det er ikke hele historien - Steg 2:",
       "headingAlign": "left",
       "layout": "two-columns",
       "surface": "base-300",
       "body": [
-        "### Steg 2: Nå bruker de like mye på betalt trafikk.\n\n### Konverteringskongen AS sitter igjen med 10 000 ekstra, som han bruker til å kjøpe mer trafikk.\n\n"
+        "### Konverteringskongen AS sitter igjen med 10 000 ekstra fra forrige steg, som han bruker til å kjøpe mer trafikk. Nå bruker de like mye på betalt trafikk.\n\n"
       ],
       "items": [
         {
