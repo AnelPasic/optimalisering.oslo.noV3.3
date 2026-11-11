@@ -89,6 +89,7 @@ const enabled = site.leadsEnabled && !specimen;
         form.reset();
         key = crypto.randomUUID();
         previousBody = '';
+        window.location.assign('/takk/');
       } catch(error) {
         show(error instanceof Error ? error.message : 'Vi kunne ikke bekrefte innsendingen. Prøv igjen.');
       } finally {

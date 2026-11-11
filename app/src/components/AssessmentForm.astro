@@ -61,6 +61,7 @@ import Arrow from './Arrow.astro';
         form.reset();
         key = crypto.randomUUID();
         previousBody = '';
+        window.location.assign('/takk/');
       } catch (error) { status.textContent = error instanceof Error ? error.message : 'Innsendingen kunne ikke bekreftes. Prøv igjen.'; }
       finally { button.disabled = false; form.removeAttribute('aria-busy'); status.focus(); }
     });
