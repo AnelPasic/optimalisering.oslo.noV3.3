@@ -68,23 +68,35 @@
       "items": [
         {
           "title": "Før kunden bestemmer seg",
-          "text": "Gjør det tydelig hva kunden får, hvem tilbudet passer for og hvorfor det er relevant."
+          "text": "Gjør det tydelig hva kunden får, hvem tilbudet passer for og hvorfor det er relevant.",
+          "boxVariant": "card"
         },
         {
           "title": "Når kunden vil videre",
-          "text": "Gjør kontakt, skjema, produktvalg eller kjøpsvei enkel nok til at kunden ikke stopper unødvendig."
+          "text": "Gjør kontakt, skjema, produktvalg eller kjøpsvei enkel nok til at kunden ikke stopper unødvendig.",
+          "boxVariant": "card"
         },
         {
           "title": "Etter handlingen",
-          "text": "Mål om henvendelsen eller kjøpet faktisk har verdi for bedriften."
+          "text": "Mål om henvendelsen eller kjøpet faktisk har verdi for bedriften.",
+          "boxVariant": "card"
         }
       ]
+    },
+    {
+      "_block": "global",
+      "element": "regneeksempel"
+    },
+    {
+      "_block": "global",
+      "element": "priser"
     },
     {
       "_block": "content",
       "id": "kvalitet",
       "eyebrow": "Riktig handling teller mer enn antallet",
       "heading": "Flere skjema er lite verdt hvis henvendelsene ikke passer.",
+      "headingAlign": "left",
       "body": [
         "For en tjenestebedrift er målet relevante henvendelser som kan bli kunder. For en nettbutikk må flere kjøp også vurderes mot ordreverdi, margin og kostnader.",
         "Derfor definerer vi hva en nyttig handling faktisk er før vi vurderer om konverteringen har blitt bedre."
@@ -92,15 +104,18 @@
       "items": [
         {
           "title": "Tjenestebedrift",
-          "text": "Følg relevante henvendelser og om de faktisk kan bli gode kunder."
+          "text": "Følg relevante henvendelser og om de faktisk kan bli gode kunder.",
+          "boxVariant": "card"
         },
         {
           "title": "Nettbutikk",
-          "text": "Se kjøp sammen med ordreverdi, margin og kostnader. Antall ordre alene er ikke nok."
+          "text": "Se kjøp sammen med ordreverdi, margin og kostnader. Antall ordre alene er ikke nok.",
+          "boxVariant": "card"
         },
         {
           "title": "Måling",
-          "text": "Bruk dataene som finnes, og vær tydelig på hva de kan og ikke kan bevise."
+          "text": "Bruk dataene som finnes, og vær tydelig på hva de kan og ikke kan bevise.",
+          "boxVariant": "card"
         }
       ]
     },
@@ -109,6 +124,7 @@
       "id": "prioritering",
       "eyebrow": "Kommersiell prioritering",
       "heading": "Vi starter med hindringen som står mest i veien.",
+      "headingAlign": "left",
       "body": [
         "Det kan være et uklart tilbud, feil rekkefølge på informasjonen, et tungvint skjema, en svak landingsside eller en kjøpsvei som skaper unødvendig friksjon.",
         "Vi analyserer, gjennomfører avtalt arbeid og følger effekten. Du skal forstå hvorfor et tiltak kommer før et annet.",
@@ -162,6 +178,10 @@
           }
         ]
       }
+    },
+    {
+      "_block": "global",
+      "element": "sjekk"
     }
   ],
   "faq": [
@@ -181,5 +201,8 @@
       "question": "Hva koster arbeid med konvertering?",
       "answer": "Konvertering kan være det prioriterte området i Optimalisering til 4 500 kr/mnd eks. mva. Hvis konvertering skal jobbe sammen med et annet område, kan Vekst eller Enterprise være mer relevant. Se pakkene for full oversikt."
     }
-  ]
+  ],
+  "listing": {
+    "visible": true
+  }
 }
