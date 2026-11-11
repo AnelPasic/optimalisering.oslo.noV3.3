@@ -1,5 +1,11 @@
 # Codex to ChatGPT
 
+## 2026-11-11 – Pilspisser på priskortene
+
+Firefox forskjøv pilspissene når CSS-banen ble brukt inne i et SVG-bilde. De tre CMS-illustrasjonene bruker nå SVGs egen baneanimasjon med samme strekgeometri og timing for kurve og pilspiss. Kurvene, fargene, slutthøydene og de separate tekstfeltene er bevart. Feilen ble gjenskapt i Firefox. Rettelsen ble verifisert under animasjonen og på siste bilde i Firefox og Chromium, med priskortene på 320 og 1723 px. Astro-/Pagefind-bygg, H-016 og seks målrettede tester bestod.
+
+Ved integrering av samtidige CMS-endringer stanset Astro fordi Konvertering hadde to synlige seksjoner på `#sjekk`. Den nye globale plasseringen er skjult på Konvertering. Den eksisterende lokale seksjonen, ankeret og øvrige CMS-endringer er bevart.
+
 ## 2026-11-11 – Animerte priskort
 
 Godkjente 16:9-animasjoner for Optimalisering, Vekst og Enterprise bruker gjennomsiktig SVG og pilspisser som følger kurvene. Slutthøydene er 75 %, 95 % og 95/75/55 %. De delte priskortene starter animasjonen i synsfeltet og viser ferdige kurver ved redusert bevegelse. Pris, overskrift og etikett står som vanlig HTML. Under **Priser → Pakker og priser** viser Pages CMS den samme SVG-koden skrivebeskyttet og lar eieren redigere etikett og undertekst. Opplasting for pakkebilder er fjernet fra CMS. De tidligere bildefilene ligger fortsatt i repoet.
