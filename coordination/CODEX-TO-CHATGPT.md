@@ -1,6 +1,11 @@
 # Codex to ChatGPT
 
 
+## 2026-11-11 – Synlig mottaksbekreftelse
+
+Bestilling og gratis sjekk bruker den felles, ikke-indekserbare siden `/takk/` etter mottatt lagringskvittering. Manglende kvittering beholder kunden og feltene på skjemaet. Ingen kundedata legges i URL-en. Gjenværende offentlig bruk av «Partner» fra #103 ble rettet i prisnotatet og FAQ på Konvertering. Oppdateringen bygger på main etter siste Pages CMS-endringer.
+
+
 ## 2026-11-11 – Forenklet bestilling på live-siden
 
 OWNER ba om å forkaste draft-PR #121, bruke gjeldende main og la skjemaene være åpne på optimalisering.oslo.no. Bestilling består av valgt pakke, nettside, jobb-e-post og valgfri telefon. Behovslenkene velger bare pakke. Den eksisterende D1-kvitteringen og Resend-varslingen brukes. Inntaksconfig gjenspeiler det allerede aktive live-originnavnet. Ingen migrering eller ny utsendingsflyt.

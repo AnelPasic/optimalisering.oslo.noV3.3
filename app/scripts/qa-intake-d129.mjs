@@ -73,9 +73,51 @@ try {
     checks.push('all four form paths have disabled no-JS submit buttons');
   } finally { await noJs.close(); }
   assert.equal(requests.length, 0); assert.deepEqual(errors, []);
+  const synthetic = await browser.newContext({ viewport: { width: 390, height: 900 } });
+  try {
+    let incompleteAck = true;
+    await synthetic.route('**/*', async route => {
+      const request = route.request();
+      if (new URL(request.url()).origin !== base) return route.abort();
+      if (request.method() === 'POST' && new URL(request.url()).pathname === '/api/leads') {
+        const json = incompleteAck ? { ok: true } : { ok: true, id: 'synthetic-d1-id' };
+        incompleteAck = false;
+        return route.fulfill({ status: 200, json });
+      }
+      if (!['GET', 'HEAD'].includes(request.method())) return route.abort();
+      if (!request.isNavigationRequest()) return route.continue();
+      const response = await route.fetch();
+      const body = (await response.text())
+        .replaceAll('data-enabled="false"', 'data-enabled="true"')
+        .replace(/data-endpoint="[^"]*"/g, 'data-endpoint="/api/leads"');
+      return route.fulfill({ response, body });
+    });
+    const submitted = await synthetic.newPage();
+    for (const [path, selector] of [
+      ['/priser/?pakke=vekst#bestill', '[data-package-key="vekst"] form'],
+      ['/', '[data-home-assessment]'],
+      ['/vurdering/', '[data-assessment]'],
+    ]) {
+      await submitted.goto(base + path);
+      const form = submitted.locator(selector).first();
+      await form.locator('[name=website]').fill('example.test');
+      await form.locator('[name=email]').fill('synthetic@example.test');
+      const button = form.locator('[type=submit]');
+      if (path.startsWith('/priser/')) {
+        await button.click();
+        await form.locator('[role=status]').filter({ hasText: 'Vi kunne ikke bekrefte innsendingen' }).waitFor();
+        assert.equal(submitted.url(), base + path);
+        assert.equal(await form.locator('[name=email]').inputValue(), 'synthetic@example.test');
+      }
+      await Promise.all([submitted.waitForURL(base + '/takk/', { timeout: 5000 }), button.click()]);
+      assert.equal(await submitted.getByRole('heading', { level: 1 }).textContent(), 'Takk! Henvendelsen er mottatt.');
+      assert.match(await submitted.locator('meta[name=robots]').getAttribute('content'), /noindex/);
+    }
+    checks.push('incomplete acknowledgement stays on the form; all three entry points navigate to the noindex confirmation after a stored receipt');
+  } finally { await synthetic.close(); }
   assert.deepEqual(store.counts(), { leads: 0, conversions: 0 });
   writeFileSync(resolve(output, 'browser.json'), JSON.stringify({ checks, postRequests: requests, pageErrors: errors, counts: store.counts(), scope: 'local preview only; no remote POST' }, null, 2));
-  console.log(`${checks.length} checks passed; 0 POST, 0 stored leads, 0 page errors.`);
+  console.log(`${checks.length} checks passed; 0 outbound POST, 0 stored leads, 0 page errors.`);
 } finally {
   await browser.close(); server.closeAllConnections(); await new Promise(done => server.close(done)); store.close();
 }

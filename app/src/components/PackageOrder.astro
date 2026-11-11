@@ -71,6 +71,7 @@ const enabled = site.ordersEnabled;
         await submitLead(endpoint,payload,{idempotencyKey:key});
         show('Bestillingen er mottatt. Vi tar kontakt for å avklare videre oppstart.');
         form.reset(); key = crypto.randomUUID(); previousBody = '';
+        window.location.assign('/takk/');
       } catch(error) { show(error instanceof Error ? error.message : 'Vi kunne ikke bekrefte bestillingen. Prøv igjen.'); }
       finally { busy = false; button.disabled = !enabled; button.removeAttribute('aria-busy'); }
     });
