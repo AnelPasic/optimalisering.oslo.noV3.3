@@ -133,18 +133,6 @@
       ]
     },
     {
-      "_block": "proofList",
-      "id": "proofs",
-      "proofList": {
-        "layout": "inherit",
-        "entries": [
-          {
-            "caseId": "nysta"
-          }
-        ]
-      }
-    },
-    {
       "_block": "content",
       "id": "friksjon",
       "eyebrow": "SLIK JOBBER VI",
@@ -194,8 +182,11 @@
     },
     {
       "_block": "global",
-      "element": "sjekk",
-      "visibility": "hidden"
+      "element": "resultater"
+    },
+    {
+      "_block": "global",
+      "element": "sjekk"
     }
   ],
   "faq": [
