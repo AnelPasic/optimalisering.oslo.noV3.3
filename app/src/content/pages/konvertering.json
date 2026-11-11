@@ -69,14 +69,14 @@
       ],
       "items": [
         {
-          "title": "A. Kjøper dobbelt så mange klikk",
-          "headline": "A. Dobler annonsebudsjett",
+          "title": "Klikkekongen AS",
+          "headline": "Klikkekongen AS",
           "text": "**Dobler annonsebudsjettet.**\n\n- Annonser: **20 000 kr**\n- Besøk: **6 000**\n- Konverteringsrate: **1 %**\n- Bestillinger: **60**\n- Ordreverdi: **1 000 kr**\n- Omsetning: **60 × 1 000 = 60 000 kr**\n\n**Omsetning minus annonser: 40 000 kr**\n\nAnnonsekostnad per bestilling: ca. **333 kr**.",
           "boxVariant": "card",
           "surface": "base-300"
         },
         {
-          "title": "B. Får mer ut av samme trafikk",
+          "title": "Konverteringskongen AS",
           "text": "**Dobler konverteringsraten.**\n\n- Annonser: **10 000 kr**\n- Besøk: **3 000**\n- Konverteringsrate: **2 %**\n- Bestillinger: **60**\n- Ordreverdi: **1 000 kr**\n- Omsetning: **60 × 1 000 = 60 000 kr**\n\n**Omsetning minus annonser: 50 000 kr**\n\nAnnonsekostnad per bestilling: ca. **167 kr**.",
           "boxVariant": "card",
           "surface": "info"
