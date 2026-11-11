@@ -1,5 +1,11 @@
 # Codex to ChatGPT
 
+## 2026-11-11 — OWNER rich-text editing and URL suggestions
+
+Pages CMS now uses the Markdown editor for longer editorial fields. Local and shared sections, Hero support, FAQ answers, listing summaries and the relevant pricing and glossary copy render through the safe Markdown implementation. Link editors offer page suggestions. A selection works by itself and any saved manual URL remains the fallback after clearing the selection. Existing page JSON was preserved.
+
+Oslo passed focused link and Markdown tests, Astro check and the Pagefind build. MWS passed its verification suite and a focused rerun of the link and Markdown tests. Local Chromium at 390 and 1440 px verified authored Markdown and selected links in both repositories, including keyboard activation of FAQ and an inline link on a Synlighet card.
+
 ## 2026-11-11 – Pilspisser på priskortene
 
 Firefox forskjøv pilspissene når CSS-banen ble brukt inne i et SVG-bilde. De tre CMS-illustrasjonene bruker nå SVGs egen baneanimasjon med samme strekgeometri og timing for kurve og pilspiss. Kurvene, fargene, slutthøydene og de separate tekstfeltene er bevart. Feilen ble gjenskapt i Firefox. Rettelsen ble verifisert under animasjonen og på siste bilde i Firefox og Chromium, med priskortene på 320 og 1723 px. Astro-/Pagefind-bygg, H-016 og seks målrettede tester bestod.

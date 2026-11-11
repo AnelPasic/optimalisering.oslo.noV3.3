@@ -1,4 +1,5 @@
 ---
+import EditorialText from './EditorialText.astro';
 import type { HomepageContent } from '../lib/home-section-data';
 import Arrow from './Arrow.astro';
 import { site } from '../config/site';
@@ -13,7 +14,7 @@ const enabled = site.ordersEnabled;
   <summary class:list={['btn', featured ? 'btn-secondary' : 'btn-primary']}>{item.cta.label}<Arrow diagonal /></summary>
   <div class="package-order-panel">
     <h4>Bestill {item.title}</h4>
-    <p>{orderIntro}</p>
+    <EditorialText text={orderIntro} />
     <form data-package-order-form data-enabled={String(enabled)} data-endpoint={site.leadEndpoint} method="post" onsubmit="return false">
       <input type="hidden" name="form" value="pakke-bestilling" />
       <input type="hidden" name="package" value={item.key} />

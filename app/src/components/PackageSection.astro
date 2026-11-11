@@ -1,4 +1,5 @@
 ---
+import EditorialText from './EditorialText.astro';
 import PhosphorIcon from './PhosphorIcon.astro';
 import CardBadge from './CardBadge.astro';
 import type { HomepageContent } from '../lib/home-section-data';
@@ -24,7 +25,7 @@ const formatPrice = (value: number) => new Intl.NumberFormat('nb-NO', { maximumF
 ---
 <section id="priser" class:list={['package-section', 'package-offer', 'section-space', { 'package-offer-full': expanded }]} aria-labelledby={labelledBy}>
   <div class="shell">
-    {showHeading && <div class="section-heading"><p class="eyebrow">{content.eyebrow}</p><h2>{content.heading}</h2><p class="body-copy">{content.intro}</p></div>}
+    {showHeading && <div class="section-heading"><p class="eyebrow">{content.eyebrow}</p><h2>{content.heading}</h2><EditorialText class="body-copy" text={content.intro} /></div>}
     <span id="bestill" class="sr-only" aria-hidden="true"></span>
     <div class="package-grid">{content.items.map((item, index) => <article id={expanded ? item.detailLink.href.split('#')[1] : undefined} class:list={['package-card',`package-card-${index}`,'card card-border min-w-0',item.recommended?'is-recommended bg-base-300 border-2 border-secondary':'bg-base-100 border-base-300']}>
       {expanded && index === 1 && recommendedAnchor && item.detailLink.href.split('#')[1] !== recommendedAnchor && <span id={recommendedAnchor} aria-hidden="true"></span>}
@@ -49,15 +50,15 @@ const formatPrice = (value: number) => new Intl.NumberFormat('nb-NO', { maximumF
         </div>
         <div class="package-fit-goals">
           <h3 class="package-block-heading">{content.fitLabel}</h3>
-          <p class="package-fit">{item.compact.fit}</p>
-          {item.scope && <div class="package-scope"><h3 class="package-block-heading">{content.scopeLabel}</h3><p>{item.scope}</p></div>}
+          <EditorialText class="package-fit" text={item.compact.fit} />
+          {item.scope && <div class="package-scope"><h3 class="package-block-heading">{content.scopeLabel}</h3><EditorialText text={item.scope} /></div>}
         </div>
         {groupPackageServices(item.iconItems).filter(group => group.label === 'Systemer').map(group => <section class="package-service-group package-included-systems" data-service-category={group.label}>
           <h4 class="package-service-group-heading">Systemer inkludert</h4>
           <ul class="package-icon-items">{group.items.map(focus => <li><FocusIcon kind={focus.icon} iconName={focus.iconName} /><span><TermText text={focus.compactLabel} terms={['seo', 'lokal-seo', 'ai-synlighet', 'google-ads', 'meta-ads', 'cro']} /></span></li>)}</ul>
         </section>)}
-        {item.distinction && <p>{item.distinction}</p>}
-        {item.priceNote && <p class="package-price-note">{item.priceNote}</p>}
+        {item.distinction && <EditorialText text={item.distinction} />}
+        {item.priceNote && <EditorialText class="package-price-note" text={item.priceNote} />}
       </div></details>
       </div>
     </article>)}</div>

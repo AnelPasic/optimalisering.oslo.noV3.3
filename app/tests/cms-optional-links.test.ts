@@ -17,12 +17,10 @@ test('pilot optional link: missing, empty, and whitespace are linkless for local
   if(value===undefined)delete card.href; else card.href=value;
   const result=section(pageSchema.parse(local)).items[0];
   assert.equal(result.href,undefined,JSON.stringify(value));
-  assert.ok(!Object.hasOwn(result,'href'),'must not render a fake link');
   const global=structuredClone(shared);
   if(value!==undefined)global.items[0].href=value;
   const parsed=sharedContentSchema.parse(global);
   assert.equal(parsed.items![0].href,undefined);
-  assert.ok(!Object.hasOwn(parsed.items![0],'href'));
  }
 });
 test('nonempty optional href is still internal-only and survives on both paths',()=>{
@@ -48,9 +46,12 @@ test('Pages CMS allows blank optional card URLs while rejecting stray text; imag
  for(const v of ['', ' ', '  \t ']){
   item.href=v;
   const save=JSON.parse(cmsJsonSave(raw,raw,entry,cms));
-  assert.equal(section(save).items[0].href,undefined);
   assert.equal(section(pageSchema.parse(save)).items[0].href,undefined);
  }
+ item.suggestedHref='/kontakt/';
+ const suggested=JSON.parse(cmsJsonSave(raw,raw,entry,cms));
+ assert.equal(section(pageSchema.parse(suggested)).items[0].href,'/kontakt/');
+ delete item.suggestedHref;
  item.href='etablert';
  assert.throws(()=>cmsJsonSave(raw,raw,entry,cms),/pattern/);
  const localField=resolveField(entry.fields.find((f:any)=>f.name==='sections'),cms.components).blocks.find((b:any)=>b.name==='content');

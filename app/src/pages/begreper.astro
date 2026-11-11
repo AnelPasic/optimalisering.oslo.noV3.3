@@ -1,4 +1,5 @@
 ---
+import EditorialText from '../components/EditorialText.astro';
 import SiteLayout from '../layouts/SiteLayout.astro';
 import CommercialHero from '../components/CommercialHero.astro';
 import {resolveGlossaryHero} from '../lib/page-hero';
@@ -38,8 +39,8 @@ import { categories, glossary } from '../lib/terminology';
                 </span>
               </summary>
               <div class="collapse-content px-4 group-open:pb-6 md:px-5">
-                <p>{term.fullDefinition}</p>
-                {term.simpleExample && <p class="glossary-example mt-4 rounded-box bg-base-300 p-4 text-base-content"><strong>{glossary.exampleLabel}: </strong>{term.simpleExample}</p>}
+                <EditorialText text={term.fullDefinition} />
+                {term.simpleExample && <EditorialText class="glossary-example mt-4 rounded-box bg-base-300 p-4 text-base-content" text={term.simpleExample}><strong slot="prefix">{glossary.exampleLabel}: </strong></EditorialText>}
                 <a class="glossary-anchor" href={`#${term.id}`} aria-label={`Direktelenke til ${term.term}`}>#{term.id}</a>
               </div>
             </details>

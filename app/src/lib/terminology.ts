@@ -1,6 +1,7 @@
 import { z } from 'astro/zod';
 import source from '../content/terminology/glossary.json' with { type: 'json' };
 import {synlighetHeroSchema} from './synlighet-hero.ts';
+import {projectSelectedLinks} from './cms-link-choice.ts';
 
 export const categories = ['Synlighet og søk', 'Annonsering', 'Konvertering', 'Måling og økonomi'] as const;
 const optionalText = z.string().max(500).optional().default('');
@@ -36,7 +37,7 @@ export const glossarySchema = z.object({
     }
   });
 });
-export const glossary = glossarySchema.parse(source);
+export const glossary = glossarySchema.parse(projectSelectedLinks(source));
 export type TermPart = { text: string; id?: string };
 
 // Explicit placements opt in. The shared per-render Set prevents repeated explanations.

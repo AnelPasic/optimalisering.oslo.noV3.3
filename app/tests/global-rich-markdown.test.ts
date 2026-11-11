@@ -5,7 +5,7 @@ import {hasRichMarkdown,renderSafeMarkdown} from '../src/lib/rich-markdown.ts';
 import {sharedContentSchema,readSharedContent} from '../src/lib/shared-content.ts';
 const read=(path:string)=>readFileSync(new URL(path,import.meta.url),'utf8');
 
-test('Pages CMS edits only global Markdown body and cards; original sources stay byte-identical',()=>{
+test('Pages CMS uses Markdown for global and local body and cards; original sources stay byte-identical',()=>{
  const yaml=read('../../.pages.yml');
  const start=yaml.indexOf('  - name: globalElements\n'),end=yaml.indexOf('      - name: globalSelector',start);
  assert.ok(start>0&&end>start);
@@ -16,7 +16,7 @@ test('Pages CMS edits only global Markdown body and cards; original sources stay
  assert.match(yaml,/globalMarkdownItems:[\s\S]*?type: rich-text/);
  assert.match(yaml,/media: false/);
  assert.match(yaml,/format: markdown/);
- assert.match(yaml,/&serviceBody\n\s+name: body\n\s+label: Avsnitt\n\s+type: text/);
+ assert.match(yaml,/&serviceBody\n\s+name: body\n\s+label: Avsnitt\n\s+component: editorialMarkdown/);
  const raw=read('../src/content/global-content/lafoitems.json');
  const parsed=JSON.parse(raw),copy=structuredClone(parsed);
  assert.equal(sharedContentSchema.safeParse(parsed).success,true);

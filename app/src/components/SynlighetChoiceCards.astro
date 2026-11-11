@@ -1,4 +1,5 @@
 ---
+import EditorialText from './EditorialText.astro';
 import type { CollectionEntry } from 'astro:content';
 import { surfaceAttribute, surfaceClasses } from '../lib/surface';
 import Arrow from './Arrow.astro';
@@ -45,7 +46,7 @@ const backgrounds = ['info', 'base-300', 'secondary'] as const;
           <PhosphorIcon name={item.iconName} class="size-[34px] shrink-0" size={34} />
         </div>
         <h3 class="max-w-[390px] max-[900px]:max-w-[600px]">{item.headline ?? item.title}</h3>
-        <p class="mt-[18px] mb-5 grow-0 break-words text-(length:--type-body) leading-(--leading-body) text-inherit">{item.text}</p>
+        <EditorialText class="mt-[18px] mb-5 grow-0 break-words text-(length:--type-body) leading-(--leading-body) text-inherit [&_a]:relative [&_a]:z-20" text={item.text} />
         <div class="card-actions relative z-20 mt-auto">
           <a data-card-order-link href="#bestill" class="text-link">{item.label ?? 'Velg tjeneste'}<Arrow diagonal /></a>
         </div>

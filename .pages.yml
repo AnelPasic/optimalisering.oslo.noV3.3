@@ -67,6 +67,12 @@ settings:
       create: "Nytt innhold: {path} (via Pages CMS)"
       delete: "Slettet innhold: {path} (via Pages CMS)"
 components:
+  editorialMarkdown:
+    type: rich-text
+    options:
+      format: markdown
+      media: false
+      switcher: true
   cardListing:
     label: Visning i innholdslister
     type: object
@@ -77,7 +83,7 @@ components:
         description: Tomt felt bruker hovedoverskriften.
       - name: summary
         label: Sammendrag
-        type: text
+        component: editorialMarkdown
         description: Tomt felt bruker ingressen.
       - name: label
         label: Lenketekst
@@ -219,6 +225,9 @@ components:
           format: markdown
           media: false
           switcher: true
+      - name: suggestedHref
+        label: Velg side eller snarvei
+        component: cmsSuggestedHref
       - name: href
         label: Intern lenke
         type: string
@@ -233,7 +242,7 @@ components:
       - { name: buttonStyle, label: Knapp, component: sectionButtonChoice }
   cmsSuggestedHref:
     type: select
-    description: "Valg i listen brukes som URL. Tøm valget for å bruke manuell URL. Begge redigeringsfeltene lagres, men bare én lenke brukes på nettsiden."
+    description: "Velg en side eller skriv inn en manuell adresse. Tøm valget for å bruke den manuelle adressen."
     options:
       placeholder: "Søk på sidetittel eller URL"
       values:
@@ -255,7 +264,7 @@ components:
         - name: "/kontakt/"
           label: "Kontakt Optimalisering Oslo — /kontakt/"
         - name: "/konvertering/"
-          label: "Konverteringsoptimalisering (CRO) - Optimalisering Oslo — /konvertering/"
+          label: "Konverteringsoptimalisering — /konvertering/"
         - name: "/lokal-seo/"
           label: "Lokal SEO for bedrifter | Google Maps og lokale kunder — /lokal-seo/"
         - name: "/nettbutikkoptimalisering/"
@@ -297,13 +306,12 @@ components:
         label: Velg side eller snarvei
         component: cmsSuggestedHref
       - name: href
-        label: Manuell URL (beholdes som reserve)
-        description: "Obligatorisk reserveadresse. Behold eksisterende URL når du velger en side over. Det valgte alternativet brukes først; tøm valget for å bruke denne URL-en."
+        label: Manuell URL
+        description: "Brukes når ingen side eller snarvei er valgt."
         type: string
-        required: true
   optionalHeroLink:
     type: object
-    description: Valgfri sekundær handling. La både lenketekst og URL stå tomme hvis du ikke trenger en ekstra knapp. Fyll ut begge hvis knappen skal vises.
+    description: Valgfri sekundær handling. Fyll inn lenketekst og velg en side eller skriv inn en adresse for å vise knappen.
     fields:
       - name: label
         label: Lenketekst
@@ -314,7 +322,7 @@ components:
       - name: href
         label: Manuell URL (reserve)
         type: string
-        description: Fyll inn denne adressen og lenketeksten hvis du vil vise knappen. Ved valg av side over beholdes adressen som reserve.
+        description: Brukes når ingen side eller snarvei er valgt.
   heroLayoutChoice:
     type: select
     description: Bildet, bildetype, beskrivelse og utsnitt bevares når du velger Sentrert uten bilde. Velg et annet oppsett for å vise det igjen. Sentrert med bilde viser tekst uten bilde hvis siden ikke har et lagret bilde. Teksten kommer først på mobil.
@@ -413,7 +421,7 @@ components:
       - &serviceBody
         name: body
         label: Avsnitt
-        type: text
+        component: editorialMarkdown
         list: {}
         description: Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Globale elementer → Pakker og priser.
       - &serviceItems
@@ -435,8 +443,11 @@ components:
             description: "På Synlighet sine tre valgkort vises denne som stor tittel under tjenesten og prisen. Prisen hentes automatisk fra pakken Optimalisering."
           - name: text
             label: Beskrivelse
-            type: text
+            component: editorialMarkdown
             required: true
+          - name: suggestedHref
+            label: Velg side eller snarvei
+            component: cmsSuggestedHref
           - name: href
             label: Intern lenke
             type: string
@@ -594,7 +605,7 @@ components:
       - { name: boxButtonStyle, label: Knapp i boksene, component: sectionButtonChoice }
       - name: body
         label: Avsnitt
-        type: text
+        component: editorialMarkdown
         list: {}
       - name: pageList
         label: Innholdsliste
@@ -704,17 +715,19 @@ components:
                 label: Egen intern/ekstern URL
                 type: object
                 fields:
+                  - name: suggestedHref
+                    label: Velg side eller snarvei
+                    component: cmsSuggestedHref
                   - name: href
                     label: URL
                     type: string
-                    required: true
                   - name: title
                     label: Overskrift
                     type: string
                     required: true
                   - name: summary
                     label: Kort beskrivelse
-                    type: text
+                    component: editorialMarkdown
                   - { name: iconName, label: Phosphor-ikon, component: cardIconName }
                   - { name: badge, label: Badge, component: cardBadgeText }
                   - { name: badgeClass, label: Badge-klasse, component: cardBadgeClass }
@@ -818,7 +831,7 @@ components:
         description: Standard følger justeringen for seksjonens plassering under Tema og utseende.
       - name: body
         label: Avsnitt
-        type: text
+        component: editorialMarkdown
         list: {}
         description: Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Seksjoner → Pakker og priser.
       - name: items
@@ -835,8 +848,11 @@ components:
             required: true
           - name: text
             label: Beskrivelse
-            type: text
+            component: editorialMarkdown
             required: true
+          - name: suggestedHref
+            label: Velg side eller snarvei
+            component: cmsSuggestedHref
           - name: href
             label: Intern lenke
             type: string
@@ -868,7 +884,7 @@ components:
         required: true
       - name: body
         label: Avsnitt
-        type: text
+        component: editorialMarkdown
         list: {}
         description: Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Seksjoner → Pakker og priser.
       - name: items
@@ -885,8 +901,11 @@ components:
             required: true
           - name: text
             label: Beskrivelse
-            type: text
+            component: editorialMarkdown
             required: true
+          - name: suggestedHref
+            label: Velg side eller snarvei
+            component: cmsSuggestedHref
           - name: href
             label: Intern lenke
             type: string
@@ -1129,7 +1148,7 @@ content:
           - &hubHerosupport
             name: support
             label: Ingress
-            type: text
+            component: editorialMarkdown
             required: true
           - &hubHeroprimaryCta
             name: primaryCta
@@ -1304,7 +1323,7 @@ content:
               - { name: boxButtonStyle, label: Knapp i boksene, component: sectionButtonChoice }
               - name: body
                 label: Avsnitt
-                type: text
+                component: editorialMarkdown
                 list: {}
                 description: Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Seksjoner → Pakker og priser.
               - name: items
@@ -1321,8 +1340,11 @@ content:
                     required: true
                   - name: text
                     label: Beskrivelse
-                    type: text
+                    component: editorialMarkdown
                     required: true
+                  - name: suggestedHref
+                    label: Velg side eller snarvei
+                    component: cmsSuggestedHref
                   - name: href
                     label: Intern lenke
                     type: string
@@ -1362,7 +1384,7 @@ content:
             required: true
           - name: answer
             label: Svar
-            type: text
+            component: editorialMarkdown
             required: true
     operations: &a3
       create: false
@@ -1600,11 +1622,11 @@ content:
             required: true
           - name: fullDefinition
             label: Full forklaring
-            type: text
+            component: editorialMarkdown
             required: true
           - name: simpleExample
             label: Enkelt eksempel
-            type: text
+            component: editorialMarkdown
             required: false
   - name: priceGroup
     label: Priser
@@ -1721,11 +1743,11 @@ content:
                 required: true
               - name: intro
                 label: Ingress
-                type: text
+                component: editorialMarkdown
                 required: true
               - name: orderIntro
                 label: Bestilling – kort forklaring
-                type: text
+                component: editorialMarkdown
                 required: true
               - name: orderSubmitLabel
                 label: Bestilling – sendknapp
@@ -1777,7 +1799,7 @@ content:
                 required: true
               - name: foundationNote
                 label: Måling og sporing – felles grunnlag
-                type: text
+                component: editorialMarkdown
                 required: true
               - name: adBudgetNote
                 label: Annonsebudsjett kommer i tillegg
@@ -1785,15 +1807,15 @@ content:
                 required: true
               - name: externalCostsNote
                 label: Eksterne plattformkostnader
-                type: text
+                component: editorialMarkdown
                 required: true
               - name: separateWorkNote
                 label: Arbeid som prises separat
-                type: text
+                component: editorialMarkdown
                 required: true
               - name: capacityNote
                 label: Ubrukt kapasitet
-                type: text
+                component: editorialMarkdown
                 required: true
               - name: decisionStrip
                 label: Valgstripe på prissiden
@@ -1825,7 +1847,7 @@ content:
                     required: true
                   - name: body
                     label: Forklaring
-                    type: text
+                    component: editorialMarkdown
                     required: true
                   - name: conceptualRow
                     label: Bli funnet → bli valgt → gå videre
@@ -1833,7 +1855,7 @@ content:
                     required: true
                   - name: support
                     label: Støttetekst
-                    type: text
+                    component: editorialMarkdown
                     required: true
                 required: true
               - name: comparison
@@ -1847,7 +1869,7 @@ content:
                     required: true
                   - name: intro
                     label: Forklaring under overskriften
-                    type: text
+                    component: editorialMarkdown
                     required: true
                   - name: focusHeading
                     label: Overskrift over valg av fokus
@@ -1902,7 +1924,7 @@ content:
                     fields:
                       - name: fit
                         label: Kort Passer for – forsiden og prissiden
-                        type: text
+                        component: editorialMarkdown
                         required: true
                       - name: situations
                         label: Maks tre korte situasjoner
@@ -1914,7 +1936,7 @@ content:
                     required: true
                   - name: scope
                     label: Slik jobber vi – valgfritt
-                    type: text
+                    component: editorialMarkdown
                   - name: key
                     label: Stabil pakkenøkkel for bestilling
                     type: string
@@ -1971,10 +1993,10 @@ content:
                     required: true
                   - name: distinction
                     label: Ekstra forklaring – valgfri
-                    type: text
+                    component: editorialMarkdown
                   - name: priceNote
                     label: Partner – omfang og prisavtale
-                    type: text
+                    component: editorialMarkdown
                   - name: visual
                     hidden: true
                     type: select
@@ -2476,11 +2498,13 @@ content:
                 label: Knappetekst
                 type: string
                 required: true
+              - name: suggestedHref
+                label: Velg side eller snarvei
+                component: cmsSuggestedHref
               - name: href
                 label: Intern lenke (for eksempel /#sjekk eller /kontakt/)
                 type: string
                 pattern: ^/
-                required: true
               - name: variant
                 label: Knappfarge (daisyUI)
                 type: select
@@ -2518,11 +2542,13 @@ content:
                 label: Tekst
                 type: string
                 required: true
+              - name: suggestedHref
+                label: Velg side eller snarvei
+                component: cmsSuggestedHref
               - name: href
                 label: Intern lenke
                 type: string
                 pattern: ^/
-                required: true
               - name: submenuLabel
                 label: Navn på undermenyknappen
                 type: string
@@ -2569,11 +2595,13 @@ content:
                             label: Lenketekst
                             type: string
                             required: true
+                          - name: suggestedHref
+                            label: Velg side eller snarvei
+                            component: cmsSuggestedHref
                           - name: href
                             label: Intern lenke
                             type: string
                             pattern: ^/(?![/\\])
-                            required: true
                           - name: description
                             label: Kort forklaring
                             type: text
@@ -2587,7 +2615,7 @@ content:
                         type: string
                       - name: body
                         label: Kort tekst
-                        type: text
+                        component: editorialMarkdown
                       - name: cta
                         label: Knapp
                         type: object
@@ -2595,6 +2623,9 @@ content:
                           - name: label
                             label: Knappetekst
                             type: string
+                          - name: suggestedHref
+                            label: Velg side eller snarvei
+                            component: cmsSuggestedHref
                           - name: href
                             label: Intern lenke
                             type: string
@@ -2612,11 +2643,13 @@ content:
                     label: Lenketekst
                     type: string
                     required: true
+                  - name: suggestedHref
+                    label: Velg side eller snarvei
+                    component: cmsSuggestedHref
                   - name: href
                     label: Eksisterende side eller seksjon
                     type: string
                     pattern: ^/(?![/\\])
-                    required: true
                   - name: description
                     label: Kort forklaring
                     type: text
@@ -2742,11 +2775,13 @@ content:
                 label: Tekst
                 type: string
                 required: true
+              - name: suggestedHref
+                label: Velg side eller snarvei
+                component: cmsSuggestedHref
               - name: href
                 label: Intern lenke
                 type: string
                 pattern: ^/
-                required: true
             required: true
           - name: informationLinks
             label: Informasjonslenker
@@ -2760,11 +2795,13 @@ content:
                 label: Tekst
                 type: string
                 required: true
+              - name: suggestedHref
+                label: Velg side eller snarvei
+                component: cmsSuggestedHref
               - name: href
                 label: Intern lenke
                 type: string
                 pattern: ^/
-                required: true
             required: true
           - name: copyrightProvider
             label: Tjenestemerke i opphavsrett
@@ -2789,6 +2826,9 @@ content:
                 label: Kolonneoverskrift
                 type: string
                 required: true
+              - name: suggestedHeadingHref
+                label: Velg side for overskriften
+                component: cmsSuggestedHref
               - name: headingHref
                 label: Lenke fra kolonneoverskrift (valgfri)
                 description: Bruk bare dersom en relevant side eksisterer. Eksempel /synlighet/
@@ -2808,11 +2848,13 @@ content:
                     label: Lenketekst
                     type: string
                     required: true
+                  - name: suggestedHref
+                    label: Velg side eller snarvei
+                    component: cmsSuggestedHref
                   - name: href
                     label: Eksisterende intern side
                     type: string
                     pattern: ^/
-                    required: true
           - name: footerLegalLinks
             label: Footer – juridiske lenker på bunnlinjen
             type: object
@@ -2826,11 +2868,13 @@ content:
                 label: Tekst
                 type: string
                 required: true
+              - name: suggestedHref
+                label: Velg side eller snarvei
+                component: cmsSuggestedHref
               - name: href
                 label: Intern lenke
                 type: string
                 pattern: ^/
-                required: true
   - name: globalElements
     label: Global Innhold
     type: group
@@ -2967,11 +3011,13 @@ content:
                         label: Tekst
                         type: string
                         required: true
+                      - name: suggestedHref
+                        label: Velg side eller snarvei
+                        component: cmsSuggestedHref
                       - name: href
                         label: Intern lenke
                         type: string
                         pattern: ^/
-                        required: true
                     required: true
                 required: true
             required: true
@@ -3027,7 +3073,7 @@ content:
                 required: true
               - name: intro
                 label: Ingress
-                type: text
+                component: editorialMarkdown
                 required: true
               - name: formula
                 label: Enkel formel
@@ -3185,7 +3231,7 @@ content:
                     required: true
                   - name: body
                     label: Avsnitt
-                    type: text
+                    component: editorialMarkdown
                     list: {}
                     description: Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Seksjoner → Pakker og priser.
                   - name: items
@@ -3202,8 +3248,11 @@ content:
                         required: true
                       - name: text
                         label: Beskrivelse
-                        type: text
+                        component: editorialMarkdown
                         required: true
+                      - name: suggestedHref
+                        label: Velg side eller snarvei
+                        component: cmsSuggestedHref
                       - name: href
                         label: Intern lenke
                         type: string
@@ -3282,11 +3331,13 @@ content:
                         label: Tekst
                         type: string
                         required: true
+                      - name: suggestedHref
+                        label: Velg side eller snarvei
+                        component: cmsSuggestedHref
                       - name: href
                         label: Intern lenke
                         type: string
                         pattern: ^/
-                        required: true
                     required: true
                   - name: disabledStatus
                     label: Status ved stengt innsending
@@ -3569,7 +3620,7 @@ content:
           - { name: boxButtonStyle, label: Knapp i boksene, component: sectionButtonChoice }
           - name: body
             label: Avsnitt
-            type: text
+            component: editorialMarkdown
             list: {}
             description: Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Seksjoner → Pakker og priser.
           - name: items
@@ -3586,8 +3637,11 @@ content:
                 required: true
               - name: text
                 label: Beskrivelse
-                type: text
+                component: editorialMarkdown
                 required: true
+              - name: suggestedHref
+                label: Velg side eller snarvei
+                component: cmsSuggestedHref
               - name: href
                 label: Intern lenke
                 type: string
@@ -3668,7 +3722,7 @@ content:
           - { name: boxButtonStyle, label: Knapp i boksene, component: sectionButtonChoice }
           - name: body
             label: Avsnitt
-            type: text
+            component: editorialMarkdown
             list: {}
             description: Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Seksjoner → Pakker og priser.
           - name: items
@@ -3685,8 +3739,11 @@ content:
                 required: true
               - name: text
                 label: Beskrivelse
-                type: text
+                component: editorialMarkdown
                 required: true
+              - name: suggestedHref
+                label: Velg side eller snarvei
+                component: cmsSuggestedHref
               - name: href
                 label: Intern lenke
                 type: string
@@ -3773,6 +3830,6 @@ content:
                     required: true
                   - name: answer
                     label: Svar
-                    type: text
+                    component: editorialMarkdown
                     required: true
             description: Endringer her gjelder alle plasseringer på dette nettstedet. Fjern eller skjul en plassering på siden for å beholde originalinnholdet her.

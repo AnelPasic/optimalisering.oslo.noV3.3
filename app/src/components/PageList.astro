@@ -1,4 +1,5 @@
 ---
+import EditorialText from './EditorialText.astro';
 import type { CollectionEntry } from 'astro:content';
 import HomeSection from './HomeSection.astro';
 import { siteChrome } from '../lib/site-chrome-data';
@@ -31,12 +32,12 @@ const cardLayout = config.columns === 1 ? 'stacked' : config.columns === 2 ? 'tw
             <div class:list={['listing-copy',config.layout === 'mediaCards'&&'card-body min-w-0 flex-1 items-start gap-0']}>
               <CardDecorations iconName={item.iconName} badge={item.badge} badgeClass={item.badgeClass} />
               <h3 class:list={[config.layout === 'mediaCards'&&'card-title mb-4 text-2xl']}>{item.title}</h3>
-              <p class:list={[config.layout === 'mediaCards'&&'mb-6 text-base-content']}>{item.summary}</p>
+              <EditorialText class={config.layout === 'mediaCards' ? 'mb-6 text-base-content' : undefined} text={item.summary} />
               {item.href&&(config.layout === 'mediaCards'?<div class="card-actions mt-auto"><a class:list={[actionClasses(listAction), listAction === 'link' && 'text-base-content']} href={item.href}>{item.label}<Arrow diagonal /></a></div>:<a class={actionClasses(listAction)} href={item.href}>{item.label}<Arrow diagonal /></a>)}
             </div>
             {config.layout === 'alternating' && item.displayVisual && <ListingVisual visual={item.displayVisual} />}
           </article> : config.layout === 'links' ? (item.href ? <a class={actionClasses(listAction)} href={item.href}>{item.title}<Arrow diagonal /></a> : <span class="font-semibold">{item.title}</span>) :
-          <article class="info-item page-list-row"><CardDecorations iconName={item.iconName} badge={item.badge} badgeClass={item.badgeClass} /><h3>{item.title}</h3><p>{item.summary}</p>{item.href&&<a class={actionClasses(listAction)} href={item.href}>{item.label}<Arrow diagonal /></a>}</article>}
+          <article class="info-item page-list-row"><CardDecorations iconName={item.iconName} badge={item.badge} badgeClass={item.badgeClass} /><h3>{item.title}</h3><EditorialText text={item.summary} />{item.href&&<a class={actionClasses(listAction)} href={item.href}>{item.label}<Arrow diagonal /></a>}</article>}
       </li>)}
     </ul>
   </HomeSection>}

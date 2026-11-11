@@ -1,4 +1,5 @@
 ---
+import EditorialText from './EditorialText.astro';
 import type {HomepageContent} from '../lib/home-section-data';
 import {navigationState} from '../lib/navigation';
 import Arrow from './Arrow.astro';
@@ -34,7 +35,7 @@ const pathname=Astro.url.pathname;
      </div>
      {link.mega.promo&&<aside class="header-mega-promo">
       <h2>{link.mega.promo.heading}</h2>
-      <p>{link.mega.promo.body}</p>
+      <EditorialText text={link.mega.promo.body} />
       <a class="btn" href={link.mega.promo.cta.href}>{link.mega.promo.cta.label}<Arrow diagonal /></a>
      </aside>}
     </div>

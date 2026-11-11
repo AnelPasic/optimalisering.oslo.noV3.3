@@ -1,4 +1,5 @@
 ---
+import EditorialText from './EditorialText.astro';
 import type {HomepageContent} from '../lib/home-section-data';
 interface Props {packages: HomepageContent['packages']}
 const {packages}=Astro.props;
@@ -7,6 +8,6 @@ const {packages}=Astro.props;
   <div class="shell">
     <h2>{packages.multiplier.heading}</h2>
     <p class="multiplier-row">{packages.multiplier.conceptualRow}</p>
-    <details class="multiplier-detail"><summary>{packages.multiplier.eyebrow}</summary><p class="body-copy">{packages.multiplier.body}</p><p class="body-copy">{packages.multiplier.support}</p></details>
+    <details class="multiplier-detail"><summary>{packages.multiplier.eyebrow}</summary><EditorialText class="body-copy" text={packages.multiplier.body} /><EditorialText class="body-copy" text={packages.multiplier.support} /></details>
   </div>
 </section>

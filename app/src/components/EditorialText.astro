@@ -1,0 +1,17 @@
+---
+import RichMarkdown from './RichMarkdown.astro';
+import { hasRichMarkdown } from '../lib/rich-markdown';
+
+interface Props {
+  text: string;
+  class?: string;
+  as?: 'p' | 'td';
+}
+const { text, class: className, as = 'p' } = Astro.props;
+const formatted = hasRichMarkdown(text) || /\r?\n[ \t]*\r?\n/.test(text);
+const Tag = formatted && as === 'p' ? 'div' : as;
+---
+<Tag class={className}>
+  <slot name="prefix" />
+  {formatted ? <RichMarkdown text={text} /> : <slot>{text}</slot>}
+</Tag>

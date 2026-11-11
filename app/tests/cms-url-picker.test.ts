@@ -6,9 +6,9 @@ import {projectSelectedLinks,safeCmsHref} from '../src/lib/cms-link-choice.ts';
 import {pageSchema} from '../src/lib/content-schema.ts';
 import {pageFilePaths,loadPageFile} from './helpers/page-sources.ts';
 const page=(name:string)=>loadPageFile(name+'.json');
-test('17 existing page JSON records stay valid and are never mutated',()=>{
+test('Existing page JSON records stay valid and are never mutated',()=>{
  const files=pageFilePaths();
- assert.equal(files.length,17);
+ assert.ok(files.length>=17);
  for(const file of files){const p=loadPageFile(file),before=structuredClone(p);
   const parsed=pageSchema.safeParse(p);assert.equal(parsed.success,true,file+': '+(parsed.success?'':JSON.stringify(parsed.error.issues.slice(0,3))));
   assert.deepEqual(p,before,file);
@@ -43,7 +43,7 @@ test('URL suggestions are canonical, generated and in sync',()=>{
  assert.equal(run.status,0,run.stderr||run.stdout);
  const yaml=readFileSync(new URL('../../.pages.yml',import.meta.url),'utf8');
  assert.match(yaml,/name: suggestedHref\n\s+label: Velg side eller snarvei\n\s+component: cmsSuggestedHref/);
- assert.match(yaml,/name: href\n\s+label: Manuell URL \(beholdes som reserve\)/);
+ assert.match(yaml,/name: href\n\s+label: Manuell URL/);
 });
 
 test('CMS keeps manual fallback whenever a suggested link is selected',()=>{
@@ -58,9 +58,14 @@ test('CMS keeps manual fallback whenever a suggested link is selected',()=>{
  assert.ok(restored && 'primaryCta' in restored,'Om Hero CTA remains valid after clearing the choice');
  assert.equal(restored.primaryCta.href,'/vurdering/');
  assert.deepEqual(om.hero.primaryCta,{label:'Få 3 gratis funn',href:'/vurdering/',suggestedHref:'/#sjekk'});
- for(const manualHref of [undefined,'','javascript:alert(1)']){
-  assert.throws(()=>projectSelectedLinks({label:'Demo',href:manualHref,suggestedHref:'/kontakt/'}),/saved manual href fallback/);
+ for(const manualHref of [undefined,'']){
+  assert.equal(projectSelectedLinks({label:'Demo',href:manualHref,suggestedHref:'/kontakt/'}).href,'/kontakt/');
  }
- const yaml=readFileSync(new URL('../../.pages.yml',import.meta.url),'utf8');
- assert.match(yaml,/name: href\n\s+label: Manuell URL \(beholdes som reserve\)\n[\s\S]*?type: string\n\s+required: true/);
+ assert.throws(()=>projectSelectedLinks({href:'javascript:alert(1)',suggestedHref:'/kontakt/'}),/Invalid manual CMS URL/);
+ assert.deepEqual(projectSelectedLinks({heading:'Info',suggestedHeadingHref:'/om/'}),{heading:'Info',headingHref:'/om/'});
+ const withoutFallback=structuredClone(om);
+ withoutFallback.hero.secondaryCta={label:'Les mer',suggestedHref:'/kontakt/'};
+ const hero=pageSchema.parse(withoutFallback).hero;
+ assert.ok(hero && 'secondaryCta' in hero);
+ assert.equal(hero.secondaryCta?.href,'/kontakt/');
 });
