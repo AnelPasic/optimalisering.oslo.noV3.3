@@ -103,7 +103,7 @@
       "_block": "content",
       "id": "bransjerater",
       "eyebrow": "KONVERTERINGSRATER ETTER BRANSJE",
-      "heading": "Er konverteringsraten din god – eller lar du kundene slippe unna?",
+      "heading": "Er konverteringsraten din god, eller går du glipp av bestillinger?",
       "headingAlign": "left",
       "surface": "base-100",
       "body": [
@@ -134,7 +134,7 @@
       "items": [
         {
           "title": "Vi gjør endringene",
-          "text": "Vi forbedrer budskap, landingssider, skjema og kjøpsvei innen avtalt omfang. Ikke bare en PDF med forslag.",
+          "text": "Vi forbedrer budskap, landingssider, skjema og kjøpsvei innen avtalt omfang. Du får konkrete endringer på nettsiden.",
           "iconName": "wrench",
           "surface": "base-300",
           "badge": "Gjennomføring",
@@ -162,18 +162,18 @@
       "_block": "content",
       "id": "potensial",
       "eyebrow": "HVA KAN DET BETY FOR DIN BEDRIFT?",
-      "heading": "50–100 % flere henvendelser eller kjøp. Samme trafikk.",
+      "heading": "50 til 100 % flere henvendelser eller kjøp. Samme trafikk.",
       "headingAlign": "left",
       "layout": "three-columns",
       "surface": "base-200",
       "body": [
         "Det er ikke magi. Når flere av besøkene blir til kunder, vokser resultatet selv om trafikken står stille. Se hva en høyere konverteringsrate **kan bety** for tre forskjellige bedrifter.",
-        "**Tre illustrerende scenarioer – ikke forventede bransjeresultater eller garantier.** Vi setter mål ut fra dine faktiske tall, trafikkvalitet og hvor kundene stopper."
+        "**Tre illustrerende scenarioer. Dette er mål du kan regne på, ikke forventede bransjeresultater eller garantier.** Vi setter mål ut fra dine faktiske tall, trafikkvalitet og hvor kundene stopper."
       ],
       "items": [
         {
           "title": "+67 % flere henvendelser",
-          "text": "**Lokal tjenestebedrift**\n\n1 000 besøk i måneden\n\n3 % → **5 %** konvertering\n\n**30 → 50 henvendelser**\n\n20 flere muligheter til å vinne en kunde. Samme trafikk.",
+          "text": "**Lokal tjenestebedrift**\n\n1 000 besøk i måneden\n\n3 % til **5 %** konvertering\n\n**30 til 50 henvendelser**\n\n20 flere muligheter til å vinne en kunde. Samme trafikk.",
           "iconName": "map-pin",
           "surface": "base-100",
           "badge": "Lokale tjenester",
@@ -181,7 +181,7 @@
         },
         {
           "title": "+100 % flere bestillinger",
-          "text": "**Nettbutikk**\n\n4 000 besøk i måneden\n\n1,5 % → **3 %** konvertering\n\n**60 → 120 kjøp**\n\n60 flere bestillinger uten et høyere trafikkbudsjett.",
+          "text": "**Nettbutikk**\n\n4 000 besøk i måneden\n\n1,5 % til **3 %** konvertering\n\n**60 til 120 kjøp**\n\n60 flere bestillinger uten et høyere trafikkbudsjett.",
           "iconName": "shopping-cart",
           "surface": "info",
           "badge": "Nettbutikk",
@@ -189,7 +189,7 @@
         },
         {
           "title": "+50 % flere leads",
-          "text": "**B2B og tjenester**\n\n1 000 besøk i måneden\n\n2 % → **3 %** konvertering\n\n**20 → 30 henvendelser**\n\n10 ekstra mulige kunder fra besøkene du allerede har.",
+          "text": "**B2B og tjenester**\n\n1 000 besøk i måneden\n\n2 % til **3 %** konvertering\n\n**20 til 30 henvendelser**\n\n10 ekstra mulige kunder fra besøkene du allerede har.",
           "iconName": "target",
           "surface": "base-300",
           "badge": "B2B",
@@ -270,14 +270,14 @@
   "faq": [
     {
       "question": "Hva får jeg faktisk for 4 500 kr i måneden?",
-      "answer": "Du får løpende arbeid med ett prioritert forbedringsområde om gangen – ikke bare en rapport. Vi kartlegger hindringen, gjennomfører avtalte endringer på eksisterende sider og følger resultatene. Omfanget avklares før oppstart. Større nye nettsider, redesign og omfattende tekniske prosjekter prises separat."
+      "answer": "Du får løpende arbeid med ett prioritert forbedringsområde om gangen. Vi kartlegger hindringen, gjennomfører avtalte endringer på eksisterende sider og følger resultatene. Omfanget avklares før oppstart. Større nye nettsider, redesign og omfattende tekniske prosjekter prises separat."
     },
     {
       "question": "Hva skjer den første måneden?",
       "answer": "Vi begynner med målet ditt og hvor kundene stopper. Så prioriterer vi den viktigste hindringen, gjennomfører avtalt forbedringsarbeid og følger opp hva vi har gjort og hva vi bør ta videre. Hvor mye vi kan måle statistisk avhenger av trafikken og antall bestillinger."
     },
     {
-      "question": "Er 50–100 % flere henvendelser eller kjøp realistisk?",
+      "question": "Er 50 til 100 % flere henvendelser eller kjøp realistisk?",
       "answer": "Eksemplene viser hva et løft i konverteringsraten ville bety med samme antall besøk. Det er regneeksempler, ikke prognoser eller garantier. Noen sider har stort potensial; andre trenger først bedre trafikk, tilbud eller måling. Vi vurderer muligheten ut fra dine egne tall."
     },
     {
