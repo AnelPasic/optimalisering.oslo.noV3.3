@@ -23,7 +23,7 @@ const color = (benchmark: ConversionBenchmark) => benchmark.channel === 'shopify
           <span class="text-sm opacity-85">{benchmark.channel === 'shopify' ? 'Kjøp i nettbutikk' : 'Søkeannonser'}</span>
           <h3 class="card-title !text-(length:--type-body-lg)">{benchmark.name}</h3>
           <p class="industry-rates-number">{rateText(benchmark.typical)}</p>
-          <p class="text-sm">Referanse · {benchmark.channel === 'shopify' ? 'per økt' : 'per annonseklikk'}</p>
+          <p class="text-sm">Referanse: {benchmark.channel === 'shopify' ? 'per økt' : 'per annonseklikk'}</p>
           <p class="text-sm mt-1">Svakt: <strong>{formatLowRate(benchmark)}</strong></p>
           <p class="text-sm">Ambisiøst mål: <strong>{formatTargetRate(benchmark)}</strong></p>
           {benchmark.proxy && <p class="text-xs opacity-85">Bredere bransjekategori*</p>}
@@ -63,12 +63,12 @@ const color = (benchmark: ConversionBenchmark) => benchmark.channel === 'shopify
       </div>
     </section>)}
   </div>}
-  <p class="industry-rates-disclaimer"><strong>Slik leser du tallene:</strong> «Referanse» er offentlig rapporterte medianer/avrundede bransjetall, primært fra USA. «Svakt» og «Ambisiøst mål» er våre arbeidsgrenser og illustrative mål, ikke observerte persentiler eller resultatløfter. Kjøp per økt kan <strong>ikke</strong> sammenlignes direkte med konverteringer per annonseklikk. * = bredere bransjekategori brukt som tilnærming.</p>
+  <p class="industry-rates-disclaimer"><strong>Slik leser du tallene:</strong> Referansetallet bygger på publiserte bransjetall, primært fra USA. Svakt og Ambisiøst mål er våre veiledende grenser og målscenarioer, ikke observerte persentiler eller resultatløfter. Kjøp per økt kan <strong>ikke</strong> sammenlignes direkte med konverteringer per annonseklikk. * = bredere bransjekategori brukt som tilnærming.</p>
   <div class="industry-rates-sources">
     <strong>Kilder:</strong>
     {sources.map(source => <a href={source.url} rel="noopener noreferrer" target="_blank">{source.label}</a>)}
   </div>
-  {compact && <a class="btn btn-primary mt-5" href="/konverteringsratekalkulator/">Åpne konverteringsratekalkulatoren →</a>}
+  {compact && <a class="btn btn-primary mt-5" href="/konverteringsratekalkulator/">Åpne konverteringsratekalkulatoren</a>}
 </div>
 <style>
   .industry-rates { margin-top: 28px; }
