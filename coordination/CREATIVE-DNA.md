@@ -9,7 +9,8 @@ Norwegian small and medium business owners who want more relevant enquiries and 
 - Clicks are not the end goal. An order, qualified enquiry or profitable new customer matters more.
 - Sometimes the right advice is to improve the offer, web page or measurement before spending more on advertising.
 - Challenge empty agency promises and marketing dashboards. Do not mock business owners for unfamiliar technical terms.
-- Make a strong, concrete claim first. Explain the mechanism in everyday words. Use a short caveat only where needed.
+- Make a strong, concrete claim first. Explain the mechanism in everyday words. Sell the upside: more qualified leads, more orders, better return. Never turn the page into a list of losses or mistakes.
+- Do not interrupt Hero, worked examples, sales sections or benefit cards with technical caveat paragraphs. A compact "Regneeksempel" label is enough for simple arithmetic. Place optional explanations in FAQ. Keep real-case dates, approved prices, ad-spend exclusions and other material buying conditions accurate and visible.
 - Verify claims in proportion to risk. Basic advertising mechanics need a short authoritative check, not an exhaustive research report; client results, prices, promises and legal facts require approved evidence.
 
 ## Existing owner-liked creative calibration
@@ -26,7 +27,7 @@ These lines are project-specific. Never copy them to unrelated customer websites
 
 ## Rules for creative writing
 1. For new important sales content, consider genuinely different angles internally before choosing one. Reject irrelevant cleverness and filler.
-2. Keep the buyer's job, desired outcome and one economic consequence immediately understandable.
+2. Keep the buyer's job, desired upside and one economic consequence immediately understandable. The customer asks "Hvordan tjener jeg mer på dette?", not "Hvor taper jeg penger?". Use problems to set up the opportunity; put the reward at the center.
 3. Use the current components, colored cards and approved layouts to reinforce the argument visually. No empty white stretches or new speculative design system.
 4. Do not weaken an approved hook during copy QA. Fix punctuation, unclear syntax and factual overreach locally. If a fix would kill the actual insight, explain the conflict.
 5. No made-up customer numbers, guarantee of 10x cheaper Ads, or false claim that SEO itself sets Google Ads quality score. Hypothetical math may be bold when clearly marked as hypothetical.
