@@ -9,11 +9,12 @@
   },
   "seo": {
     "title": "ChatGPT Ads i Norge | Annonsering i ChatGPT - Optimalisering Oslo",
-    "description": "Få flere relevante henvendelser med ChatGPT Ads. Vi lager annonser, finner riktige kjøpssituasjoner og gjør klikk til kunder. Annonsering i ChatGPT for bedrifter."
+    "description": "Få flere relevante henvendelser med ChatGPT Ads. Vi lager annonser, finner riktige kjøpssituasjoner og gjør klikk til kunder. Annonsering i ChatGPT for bedrifter.",
+    "noindex": false
   },
   "hero": {
     "layout": "split-right",
-    "eyebrow": "CHATGPT ADS | INNGÅR I ALLE PAKKER",
+    "eyebrow": "ChatGPT Ads - Gjort riktig",
     "title": "Glem førsteplassen på Google. Bli den kunden velger i ChatGPT.",
     "support": "Kundene spør allerede ChatGPT hva de bør kjøpe og hvem de bør velge. Vi gjør tilbudet ditt synlig når de vurderer alternativene, og tar dem fra interesse til bestilling.",
     "primaryCta": {
@@ -21,7 +22,7 @@
       "href": "#priser"
     },
     "secondaryCta": {
-      "label": "Få 3 gratis funn",
+      "label": "Ta en gratis sjekk",
       "href": "#sjekk"
     },
     "visual": {
@@ -41,9 +42,8 @@
     },
     "highlights": [
       "ChatGPT Ads inngår i alle pakker",
-      "Fra 4 500 kr/mnd eks. mva.",
-      "Ett, to eller flere fokusområder",
-      "Annonsebudsjett kommer i tillegg"
+      "4 500,- som enkeltjeneste",
+      "6 900,- kombinert med andre"
     ]
   },
   "sections": [
@@ -63,26 +63,26 @@
         {
           "title": "Hvem kan gjøre jobben?",
           "text": "Kunden leter etter en leverandør. Vis hva du tilbyr, hvem du hjelper og hvordan de kan be om pris.",
-          "iconName": "magnifying-glass",
+          "boxVariant": "card",
           "surface": "base-300",
-          "badge": "Tjenester",
-          "boxVariant": "card"
+          "iconName": "magnifying-glass",
+          "badge": "Tjenester"
         },
         {
           "title": "Hvilken løsning bør vi velge?",
           "text": "Kunden sammenligner alternativer. En god annonse viser hvorfor akkurat ditt produkt kan passe.",
-          "iconName": "lightbulb",
+          "boxVariant": "card",
           "surface": "info",
-          "badge": "Produkter",
-          "boxVariant": "card"
+          "iconName": "lightbulb",
+          "badge": "Produkter"
         },
         {
           "title": "Hva koster det å komme i gang?",
           "text": "Kunden er nærmere en avgjørelse. Møt spørsmålet med et tydelig tilbud og en enkel vei til kontakt.",
-          "iconName": "credit-card",
+          "boxVariant": "card",
           "surface": "secondary",
-          "badge": "Pris og bestilling",
-          "boxVariant": "card"
+          "iconName": "credit-card",
+          "badge": "Pris og bestilling"
         }
       ]
     },
@@ -101,18 +101,18 @@
         {
           "title": "Kunden spør ChatGPT",
           "text": "**\"Hvordan velger vi kantine til kontoret?\"**\n\nKunden undersøker pris, levering og hva som passer bedriften.",
-          "iconName": "chat-circle-text",
+          "boxVariant": "card",
           "surface": "base-300",
-          "badge": "Spørsmål",
-          "boxVariant": "card"
+          "iconName": "chat-circle-text",
+          "badge": "Spørsmål"
         },
         {
           "title": "Annonsen viser neste steg",
           "text": "**\"Få forslag til kantineløsning og pris.\"**\n\nEn tydelig annonse under et relevant svar kan sende kunden rett til tilbudet.",
-          "iconName": "cursor-click",
+          "boxVariant": "card",
           "surface": "info",
-          "badge": "Annonse",
-          "boxVariant": "card"
+          "iconName": "cursor-click",
+          "badge": "Annonse"
         }
       ]
     },
@@ -131,26 +131,26 @@
         {
           "title": "Finn situasjonen der du er relevant",
           "text": "Vi beskriver hvem tilbudet passer for og hvilke behov, spørsmål og temaer som henger sammen med et kjøp.",
-          "iconName": "target",
+          "boxVariant": "card",
           "surface": "base-100",
-          "badge": "Relevans",
-          "boxVariant": "card"
+          "iconName": "target",
+          "badge": "Relevans"
         },
         {
           "title": "Lag en annonse som er verdt et klikk",
           "text": "Vi gjør tilbudet lett å forstå med en konkret overskrift, et godt argument og et bilde som passer.",
-          "iconName": "megaphone",
+          "boxVariant": "card",
           "surface": "base-300",
-          "badge": "Annonser",
-          "boxVariant": "card"
+          "iconName": "megaphone",
+          "badge": "Annonser"
         },
         {
           "title": "Gjør neste steg latterlig enkelt",
           "text": "Kunden skal ikke trenge kart og kompass for å finne bestillingsknappen. Vi forbedrer siden som skal skaffe henvendelsen.",
-          "iconName": "shopping-cart",
+          "boxVariant": "card",
           "surface": "secondary",
-          "badge": "Bestilling",
-          "boxVariant": "card"
+          "iconName": "shopping-cart",
+          "badge": "Bestilling"
         }
       ]
     },
@@ -169,26 +169,26 @@
         {
           "title": "ChatGPT Ads",
           "text": "Møt folk som utforsker og sammenligner i ChatGPT. Annonsen vises som en egen, tydelig merket plassering under relevante svar.",
-          "iconName": "open-ai-logo",
+          "boxVariant": "card",
           "surface": "secondary",
-          "badge": "Spørsmål",
-          "boxVariant": "card"
+          "iconName": "open-ai-logo",
+          "badge": "Spørsmål"
         },
         {
           "title": "Google Ads",
           "text": "Fang opp folk som aktivt søker etter en tjeneste eller et produkt. Riktige søk og annonser kan føre rett til en bestilling.",
-          "iconName": "target",
+          "boxVariant": "card",
           "surface": "info",
-          "badge": "Søk",
-          "boxVariant": "card"
+          "iconName": "target",
+          "badge": "Søk"
         },
         {
           "title": "Konvertering",
           "text": "Gjør det enklere å velge deg når kunden først kommer til nettsiden. Da får begge annonsekanalene en bedre sjanse til å selge.",
-          "iconName": "cursor-click",
+          "boxVariant": "card",
           "surface": "base-100",
-          "badge": "Bestilling",
-          "boxVariant": "card"
+          "iconName": "cursor-click",
+          "badge": "Bestilling"
         }
       ],
       "links": [
@@ -217,26 +217,26 @@
         {
           "title": "Visninger",
           "text": "Hvor mange får se annonsen? Det forteller oss om kampanjen når frem til folk.",
-          "iconName": "eye",
+          "boxVariant": "card",
           "surface": "base-300",
-          "badge": "Oppmerksomhet",
-          "boxVariant": "card"
+          "iconName": "eye",
+          "badge": "Oppmerksomhet"
         },
         {
           "title": "Klikk",
           "text": "Hvem er interessert nok til å se tilbudet ditt? Her begynner kundereisen på nettsiden.",
-          "iconName": "cursor-click",
+          "boxVariant": "card",
           "surface": "info",
-          "badge": "Interesse",
-          "boxVariant": "card"
+          "iconName": "cursor-click",
+          "badge": "Interesse"
         },
         {
           "title": "Henvendelser og kjøp",
           "text": "Hvem ber om pris, bestiller time eller handler? Det er disse tallene vi vil forbedre.",
-          "iconName": "shopping-cart",
+          "boxVariant": "card",
           "surface": "secondary",
-          "badge": "Resultat",
-          "boxVariant": "card"
+          "iconName": "shopping-cart",
+          "badge": "Resultat"
         }
       ]
     },
@@ -259,26 +259,26 @@
         {
           "title": "1. Finn kjøpssituasjonene",
           "text": "Vi kartlegger hva kundene trenger, hva bedriften tjener på å selge og hvilke budskap som kan få dem til å velge deg.",
-          "iconName": "magnifying-glass",
+          "boxVariant": "card",
           "surface": "base-300",
-          "badge": "Plan",
-          "boxVariant": "card"
+          "iconName": "magnifying-glass",
+          "badge": "Plan"
         },
         {
           "title": "2. Lag annonser og landingsside",
           "text": "Vi setter opp kampanjen og gjør det enkelt for kunden å forstå tilbudet og ta kontakt. Større nettsidearbeid avtales separat.",
-          "iconName": "wrench",
+          "boxVariant": "card",
           "surface": "info",
-          "badge": "Oppsett",
-          "boxVariant": "card"
+          "iconName": "wrench",
+          "badge": "Oppsett"
         },
         {
           "title": "3. Forbedre etter faktiske resultater",
           "text": "Vi ser på trafikk og målbare handlinger, justerer annonsene og prioriterer det som gir best grunnlag for flere kunder.",
-          "iconName": "chart-line-up",
+          "boxVariant": "card",
           "surface": "base-200",
-          "badge": "Oppfølging",
-          "boxVariant": "card"
+          "iconName": "chart-line-up",
+          "badge": "Oppfølging"
         }
       ]
     },
@@ -324,5 +324,8 @@
       "question": "Hva får jeg i gratis sjekk?",
       "answer": "Send nettsiden din, så får du tre konkrete funn innen to virkedager. Vi ser etter muligheter for flere bestillinger og bedre synlighet. Du trenger ikke gi oss innlogging for den første vurderingen."
     }
-  ]
+  ],
+  "listing": {
+    "visible": true
+  }
 }
