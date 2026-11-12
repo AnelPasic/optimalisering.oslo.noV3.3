@@ -13,7 +13,7 @@ test('ChatGPT Ads is an editable CMS service and is reachable from navigation',(
  assert.equal(page.slug,'chatgpt-ads');
  assert.equal(page.kind,'service');
  assert.equal(page.hero.eyebrow,'CHATGPT ADS | INNGÅR I ALLE PAKKER');
- assert.deepEqual(page.hero.highlights,['ChatGPT Ads inngår i alle pakker','Fra 4 500 kr/mnd eks. mva.','Omfanget velger du med pakken','Annonsebudsjett kommer i tillegg']);
+ assert.deepEqual(page.hero.highlights,['ChatGPT Ads inngår i alle pakker','Fra 4 500 kr/mnd eks. mva.','Ett, to eller flere fokusområder','Annonsebudsjett kommer i tillegg']);
  assert.equal(page.hero.title,'Glem førsteplassen på Google. Bli den kunden velger i ChatGPT.');
  assert.equal(page.hero.support,'Kundene spør allerede ChatGPT hva de bør kjøpe og hvem de bør velge. Vi gjør tilbudet ditt synlig når de vurderer alternativene, og tar dem fra interesse til bestilling.');
  assert.equal(page.hero.primaryCta.href,'#priser');
