@@ -3,6 +3,12 @@ on:
   pull_request:
     paths:
       - "app/src/content/pages/chatgpt-ads.json"
+      - "app/src/lib/home-builder.ts"
+      - "app/src/lib/page-hero.ts"
+      - "app/src/components/CommercialHero.astro"
+      - "app/src/styles/compositions/hero.css"
+      - ".pages.yml"
+      - "app/tests/hero-highlights.test.ts"
       - "app/tests/chatgpt-ads-page.test.ts"
       - "app/src/content/site-chrome/header.json"
       - "coordination/H1-LAB.md"
@@ -31,7 +37,7 @@ jobs:
       - name: Verify pinned Pages CMS options
         run: node scripts/sync-page-list-select.mjs --check && node scripts/sync-cms-url-options.mjs --check
       - name: Test ChatGPT Ads page, CMS model and creative contract
-        run: node --test tests/chatgpt-ads-page.test.ts
+        run: node --test tests/chatgpt-ads-page.test.ts tests/hero-highlights.test.ts
       - name: Type-check CMS and Astro
         run: npm run check
       - name: Build and index new service route
