@@ -18,21 +18,21 @@ The `hero.toneOverrides` object may be set on **each page**, independently of gl
 2. Missing, empty or `inherit` follows the site's `heroPreset`.
 3. If site `heroPreset` is `inherit`, use the site's `defaultPreset`.
 
-Read the current CMS-backed page JSON, `coordination/CONTENT-TONE.json`, `CONTENT-VOICE-PROFILE.md` and `COPY-STYLE.md` immediately before writing. Keep H1 Lab's relevance, concrete value, truth and independent readability gates even with an expressive tone. CTA labels use the normal site-wide editorial rules without per-Hero tone controls; proof data and image alt stay factual.
+Read the current CMS-backed page JSON, `coordination/CONTENT-TONE.json`, `CONTENT-VOICE-PROFILE.md` and `COPY-STYLE.md` immediately before writing. Keep H1 Lab's relevance, concrete buyer value, truth and **whole-Hero** readability gates even with an expressive tone. CTA labels use the normal site-wide editorial rules without per-Hero tone controls; proof data and image alt stay factual.
 
 **Editorial preference only:** Changing a dropdown does not regenerate or publish text, change rendered HTML, open a content queue or overwrite OWNER-edited copy. Apply the effective per-part tone when next explicitly asked to write/rewrite that part. When testing alternative SEO Heroes, prefer isolated draft/test fixtures over multiple public same-intent `/seo` variants. New public pages require their own distinct search intent and sitemap decision.
 
-## Non-negotiable H1 gates
+## H1 and full-Hero quality gates (MWS current authority)
 
-Read the H1 **alone**, with eyebrow, subheading, images and logo hidden.
+Evaluate the **complete Hero**: H1, eyebrow, supporting copy, SEO title and the page itself. A striking H1 may be indirect when the complete Hero immediately makes the service, buyer gain and next action clear. Do not force the keyword into every headline or neutralize an original observation just to make the H1 stand alone.
 
-1. **SEO / relevance:** A buyer searching for the intended service/question should recognize the subject and intent. On high-intent service pages, normally identify the service/category directly. Natural language beats mechanical keyword repetition.
-2. **AIO / meaning:** The heading accurately labels the question, service or answer the page genuinely provides. It must not imply AI ranking, citations or claims the page cannot support.
-3. **CRO / buyer value + Commercial Value Gate (sales pages):** State a meaningful buyer outcome and reason to hire our service, not a task-led DIY checklist. The buyer should know why this page matters and why it is worth engaging us. Don't substitute empty or unsupported promises for value or turn genuine information pages into hard sells.
-4. **Content Voice / distinction:** Be direct and specific enough to remember; use the site's chosen tone where it helps. Cleverness alone does not count; a plain, excellent service H1 beats an abstract slogan.
-5. **Truth / clarity:** Instantly understandable and consistent with the actual offer, proof and page. Reject empty words like “løsninger som tar deg videre” that could describe any company.
+1. **SEO / relevance:** The page metadata and content answer the search intent; the full Hero makes the service recognizable.
+2. **AIO / meaning:** The Hero and page accurately describe what is offered, without claiming paid ads buy AI recommendations or organic rankings.
+3. **CRO / buyer outcome:** State the positive commercial reason to hire, not a list of DIY tasks. Show what the provider takes responsibility for.
+4. **Voice / distinctiveness:** Follow this project's saved tone, including direct, pointed or comic phrasing. Reject interchangeable agency language, not creative headlines.
+5. **Truth / clarity:** The combined Hero is understandable in seconds and consistent with approved facts. A FAQ cannot rescue a materially misleading claim.
 
-A **critical failure in relevance, standalone clarity, buyer value or truth disqualifies** the candidate. Do not average a weak SEO/AIO H1 against a strong CRO or Voice score. The eyebrow/subheading should *reinforce* a strong H1, never rescue an unclear one.
+A failure in complete-Hero clarity, service relevance, buyer value or factual integrity disqualifies the candidate. If the OWNER already chose a Hero, do not restart the headline contest merely to add keywords.
 
 ## Workflow by change size
 
@@ -40,12 +40,12 @@ A **critical failure in relevance, standalone clarity, buyer value or truth disq
 - **B — substantial H1/section revision:** make 2–3 meaningfully different candidates if needed, choose one that passes the gates.
 - **C — new important page / core service Hero:** use the page's short Page Contract, explore roughly 6–10 genuinely distinct angles internally (straight service, buyer result, problem → solution, useful contrast, clear offer). Discard invalid ones; present **up to three finalists**, one recommendation and one-sentence trade-offs. Do not generate arbitrary quotas if the answer is already clear.
 
-After choosing the H1, assemble eyebrow (category/relevance), subheading (buyer outcome, why hire Medon, credible professional delivery/ownership), proof (believability) and CTA (approved next step). Check the complete Hero and heading-only story; never make the user guess what is being sold. **Commercial Value Gate** for a sales-intent Hero: reject task-only phrasing that suggests 'I can do this myself'; use Value Equation to assess desired outcome, credibility, time and customer effort on the **whole page**, not to stuff four promises into H1. No invented performance promises or false zero-effort claims.
+After choosing the H1, assemble eyebrow (category/relevance), subheading (buyer outcome, why hire Medon, credible professional delivery/ownership), proof (believability) and CTA (approved next step). Check the complete Hero and heading story in context; never make the user guess what is being sold. **Commercial Value Gate** for a sales-intent Hero: reject task-only phrasing that suggests 'I can do this myself'; use Value Equation to assess desired outcome, credibility, time and customer effort on the **whole page**, not to stuff four promises into H1. No invented performance promises or false zero-effort claims.
 
 ## Quick red-team
 
 - **Three-second test:** What is this page about and why should the target visitor care?
-- **Isolation test:** Would the H1 work without supporting Hero elements?
+- **Full-Hero test:** Can a buyer recognize the service and the gain from H1, eyebrow and support together?
 - **Replaceability test:** Can competitors reuse it by swapping a name? If so, improve specificity when genuine differentiation is available; do not force novelty at the expense of clarity.
 - **One revision pass:** Fix only the failed dimension. If critical buyer/offer facts are missing, ask for those facts instead of inventing a grander promise.
 
