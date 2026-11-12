@@ -1,0 +1,42 @@
+name: ChatGPT Ads focused page QA
+on:
+  pull_request:
+    paths:
+      - "app/src/content/pages/chatgpt-ads.json"
+      - "app/tests/chatgpt-ads-page.test.ts"
+      - "app/src/content/site-chrome/header.json"
+      - "coordination/H1-LAB.md"
+      - ".github/workflows/chatgpt-ads-page-qa.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  chatgpt-ads:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    defaults:
+      run:
+        working-directory: app
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+      - name: Install dependencies
+        run: npm ci
+      - name: Verify pinned Pages CMS options
+        run: node scripts/sync-page-list-select.mjs --check && node scripts/sync-cms-url-options.mjs --check
+      - name: Test ChatGPT Ads page, CMS model and creative contract
+        run: node --test tests/chatgpt-ads-page.test.ts
+      - name: Enforce copy style
+        run: npm run qa:copy
+      - name: Type-check CMS and Astro
+        run: npm run check
+      - name: Build and index new service route
+        run: npm run build
+      - name: Audit output routes and metadata
+        run: node scripts/audit-build.mjs
