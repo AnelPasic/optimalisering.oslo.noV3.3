@@ -47,8 +47,18 @@ test('New content obeys punctuation and preserves Ads vs SEO quality-score expla
   }
   check(page);
   const text=page.sections.map((s:any)=>[...(s.body??[]),...(s.items??[]).map((i:any)=>i.text)].join(' ')).join(' ');
-  assert.match(text,/SEO i seg selv bestemmer ikke kvalitetsscoren/);
-  assert.match(text,/regneeksempel, ikke en lovet klikkpris/);
+  assert.match(text,/Samme tusenlapp|Ti ganger flere muligheter/);
+  assert.match(text,/1 eller 10 henvendelser/);
+  const click=page.sections.find((s:any)=>s.id==='klikkpris');
+  assert.match(click.eyebrow,/REGNEEKSEMPEL/);
+  assert.doesNotMatch(click.body.join(' '),/regneeksempel, ikke|ikke en lovet|automatisk 90|garanti/i);
+  assert.doesNotMatch(page.sections.filter((s:any)=>s._block==='content').flatMap((s:any)=>s.body).join(' '),/Dette er et dokumentert kundecase, ikke et løfte|ikke en lovet klikkpris|ingen får automatisk/i);
+  const faq=page.faq.map((q:any)=>q.answer).join(' ');
+  assert.match(faq,/SEO gir ikke automatisk høyere kvalitetsscore/);
+  assert.match(faq,/regneeksempel, ikke faktiske priser/);
+  assert.match(faq,/ikke et anslag for din bedrift/);
   assert.equal(1000/100,10);
   assert.equal(1000/10,100);
+  assert.equal(10*0.1,1);
+  assert.equal(100*0.1,10);
 });
