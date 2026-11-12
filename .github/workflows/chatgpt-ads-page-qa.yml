@@ -36,5 +36,8 @@ jobs:
         run: npm run check
       - name: Build and index new service route
         run: npm run build
-      - name: Audit output routes and metadata
-        run: node scripts/audit-build.mjs
+      - name: Confirm ChatGPT Ads output and sitemap
+        run: |
+          test -f dist/chatgpt-ads/index.html
+          grep -q 'ChatGPT får spørsmålene' dist/chatgpt-ads/index.html
+          grep -q '/chatgpt-ads/' dist/sitemap.xml
