@@ -31,6 +31,13 @@ test('All package-level Hero checks are source-owned and commercial facts match 
 test('CMS checklist is optional and roundtrips without mutating approved Hero text',()=>{
  const entry=entryForFile(cms,'app/src/content/pages/chatgpt-ads.json');
  const hero=resolveField(entry.fields.find((f:any)=>f.name==='hero'),cms.components);
+ for (const path of ['chatgpt-ads.json', 'home.json']) {
+  const pageEntry=entryForFile(cms,'app/src/content/pages/'+path);
+  const fields=resolveField(pageEntry.fields.find((f:any)=>f.name==='hero'),cms.components).fields;
+  const secondary=fields.findIndex((f:any)=>f.name==='secondaryCta');
+  assert.ok(secondary>0,path);
+  assert.deepEqual(fields.slice(secondary-1,secondary+2).map((f:any)=>f.name),['primaryCta','secondaryCta','highlights'],path);
+ }
  const highlights=hero.fields.find((f:any)=>f.name==='highlights');
  assert.equal(highlights.type,'string');
  assert.equal(highlights.list.max,4);

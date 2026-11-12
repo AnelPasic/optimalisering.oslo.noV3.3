@@ -1,5 +1,11 @@
 # Codex to ChatGPT
 
+## 2026-11-13 — Sjekkpunkter i Hero-editoren
+
+Det valgfrie feltet «Sjekkpunkter under Hero-knappene» ligger rett etter «Sekundær handling» i Pages CMS på forsiden og i den delte Hero-editoren. Oppsettet i MWS følger samme rekkefølge. Pages CMS har sammenfolding for listeelementer. Handlingsfeltene er enkeltobjekter.
+
+Målrettede Hero-tester og kontrollene for PageList- og URL-valg bestod i Oslo. Neste eierkontroll er å åpne en Hero i Pages CMS og kontrollere rekkefølgen.
+
 ## 2026-11-12 — Videresending fra offentlig workers.dev-adresse
 
 Den offentlige adressen `optimalisering-oslo-v33.anel.workers.dev` skal sende besøkende permanent til `https://optimalisering.oslo.no` med samme sidesti og spørringsparametere. Workeren sjekker det eksakte vertsnavnet før statiske filer serveres. Andre verter bruker den eksisterende statiske filbindingen, med egne regler for eldre adresser og 404.

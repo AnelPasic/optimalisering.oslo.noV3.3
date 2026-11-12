@@ -1156,14 +1156,6 @@ content:
             label: Ingress
             component: editorialMarkdown
             required: true
-          - &hubHeroHighlights
-            name: highlights
-            label: Sjekkpunkter under Hero-knappene (valgfritt)
-            description: Korte, kontrollerte fakta om tjenester, inkludering, startpris og omfang. Maks fire. Beskrivelser må stemme med godkjente pakker.
-            type: string
-            list:
-              min: 0
-              max: 4
           - &hubHeroprimaryCta
             name: primaryCta
             label: Primær handling
@@ -1174,6 +1166,14 @@ content:
             label: Sekundær handling
             component: optionalHeroLink
             description: Ekstra knapp er valgfri. La feltene stå tomme for å bruke kun primær handling.
+          - &hubHeroHighlights
+            name: highlights
+            label: Sjekkpunkter under Hero-knappene (valgfritt)
+            description: Korte, kontrollerte fakta om tjenester, inkludering, startpris og omfang. Maks fire. Beskrivelser må stemme med godkjente pakker.
+            type: string
+            list:
+              min: 0
+              max: 4
           - &heroProofCase
             name: featuredProofCaseId
             label: Utvalgt Proof i Hero
@@ -1484,9 +1484,9 @@ content:
               - *hubHeroeyebrow
               - *hubHerotitle
               - *hubHerosupport
-              - *hubHeroHighlights
               - *hubHeroprimaryCta
               - *hubHerosecondaryCta
+              - *hubHeroHighlights
               - *heroProofCase
               - name: visual
                 label: Visuelt innhold
