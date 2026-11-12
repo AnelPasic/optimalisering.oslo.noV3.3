@@ -33,9 +33,9 @@
     "decisionStrip": {
       "heading": "Hva ønsker du forbedre først?",
       "items": [
-        "Optimalisering: ett prioritert område av gangen.",
-        "Vekst: to områder som jobber sammen.",
-        "Enterprise: større kapasitet og flere forbedringsområder."
+        "Optimalisering: ett prioritert område av gangen. Har du trafikk starter vi vanligvis med konverteringsoptimalisering.",
+        "Vekst: to områder som jobber sammen. Konverteringsoptimalisering kombinert med mer relevant trafikk slår alt.",
+        "Enterprise: større kapasitet og flere forbedringsområder. Vekst på flere områder."
       ]
     },
     "multiplier": {
