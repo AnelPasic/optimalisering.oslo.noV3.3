@@ -49,6 +49,11 @@
                 "description": "Annonser på Facebook og Instagram"
               },
               {
+                "label": "ChatGPT Ads",
+                "href": "/chatgpt-ads/",
+                "description": "Nå kunder mens de sammenligner og velger i ChatGPT"
+              },
+              {
                 "label": "Konvertering",
                 "href": "/konvertering/",
                 "description": "Gjør flere relevante besøk til henvendelser og salg"
