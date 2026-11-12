@@ -1156,6 +1156,13 @@ content:
             label: Ingress
             component: editorialMarkdown
             required: true
+          - name: highlights
+            label: Sjekkpunkter under Hero-knappene (valgfritt)
+            description: Korte, kontrollerte fakta om tjenester, inkludering, startpris og omfang. Maks fire. Beskrivelser må stemme med godkjente pakker.
+            type: string
+            list:
+              min: 0
+              max: 4
           - &hubHeroprimaryCta
             name: primaryCta
             label: Primær handling
