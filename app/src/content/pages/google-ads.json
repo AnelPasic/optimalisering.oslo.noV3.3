@@ -95,16 +95,16 @@
       ],
       "items": [
         {
-          "title": "10 klikk for 1 000 kr",
-          "text": "**100 kr per klikk**\n\n**1 henvendelse**\n\nRegnet med 10 % henvendelsesrate.",
+          "title": "1 henvendelse",
+          "text": "**10 klikk for 1 000 kr**\n\n100 kr per klikk. 10 % tar kontakt.",
           "iconName": "coins",
           "surface": "base-300",
           "badge": "Eksempel A",
           "boxVariant": "card"
         },
         {
-          "title": "100 klikk for 1 000 kr",
-          "text": "**10 kr per klikk**\n\n**10 henvendelser**\n\nRegnet med samme henvendelsesrate.",
+          "title": "10 henvendelser",
+          "text": "**100 klikk for 1 000 kr**\n\n10 kr per klikk. Samme andel tar kontakt.",
           "iconName": "chart-line-up",
           "surface": "info",
           "badge": "Eksempel B",
