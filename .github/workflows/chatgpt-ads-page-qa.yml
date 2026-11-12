@@ -39,5 +39,5 @@ jobs:
       - name: Confirm ChatGPT Ads output and sitemap
         run: |
           test -f dist/chatgpt-ads/index.html
-          grep -q 'ChatGPT får spørsmålene' dist/chatgpt-ads/index.html
+          grep -q 'Glem førsteplassen på Google' dist/chatgpt-ads/index.html
           grep -q '/chatgpt-ads/' dist/sitemap.xml
