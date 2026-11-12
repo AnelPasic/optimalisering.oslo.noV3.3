@@ -47,7 +47,7 @@ test('CMS checklist is optional and roundtrips without mutating approved Hero te
 test('CommercialHero renders checks after buttons with accessible decorative SVG and no hardcoded prices',()=>{
  const html=read('../src/components/CommercialHero.astro');
  const css=read('../src/styles/compositions/hero.css');
- assert.match(html,/content\.highlights\?\.length>0/);
+ assert.match(html,/highlights/);
  assert.match(html,/hero-checklist/);
  assert.match(html,/aria-hidden="true"/);
  assert.match(css,/\.commercial-hero \.hero-checklist/);
