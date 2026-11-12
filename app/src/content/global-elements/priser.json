@@ -5,8 +5,8 @@
   "name": "Pakker og priser",
   "content": {
     "eyebrow": "Fast månedlig optimalisering. Ingen bindingstid.",
-    "heading": "Tre pakker. Samme mål: flere riktige kunder.",
-    "intro": "Alle pakkene løser de samme typene utfordringer. Forskjellen er hvor mange områder vi forbedrer samtidig, og hvor raskt resultatene kommer.",
+    "heading": "Tre pakker. Samme mål: Mer salg for din bedrift!",
+    "intro": "Alle pakkene løser de samme typene utfordringer. Forskjellen er hvor mange områder vi forbedrer samtidig, og hvor raskt resultatene kommer. Du kan ikke velge feil pakke.",
     "orderIntro": "Vi bekrefter bestillingen med deg før arbeidet starter.",
     "orderSubmitLabel": "Send bestilling",
     "labels": {
@@ -20,10 +20,10 @@
     "scopeLabel": "Dette jobber vi med",
     "areasLabel": "Vi kan jobbe med",
     "areas": [
-      "Konvertering",
-      "SEO, lokal SEO og AI-synlighet",
-      "Google Ads",
-      "Meta Ads"
+      "Konverteringsoptimalisering",
+      "Organisk Synlighet (SEO, lokal SEO og AI-synlighet)",
+      "Betalt Synlighet: Google Ads, Google Shopping",
+      "Betalt Synlighet: Meta Ads"
     ],
     "foundationNote": "Måling og sporing ligger i bunn, så vi kan følge med på hva som faktisk skjer.",
     "adBudgetNote": "Annonsebudsjett kommer i tillegg dersom du ønsker betalt synlighet og annonsering. Du bestemmer budsjettet.",
