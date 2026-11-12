@@ -13,7 +13,9 @@ for (const name of [
   assert.ok(existsSync(resolve(root, name)), `Missing generated Pagefind asset: ${name}`);
 }
 const home = readFileSync(resolve(root, 'index.html'), 'utf8');
-assert.ok(home.includes('data-pagefind-body'), 'Homepage main content must be indexed');
+const homeNoindex = /<meta name="robots" content="noindex, nofollow"/.test(home);
+assert.equal(/<main\b[^>]*\bdata-pagefind-body\b/.test(home), !homeNoindex,
+  'Homepage search eligibility must match its robots metadata');
 const header = JSON.parse(readFileSync(resolve('src/content/site-chrome/header.json'), 'utf8'));
 const enabled = header.headerOptions.showSearch;
 if (enabled) {

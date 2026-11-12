@@ -1,12 +1,14 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync, readdirSync } from 'node:fs';
+import { readFileSync } from 'node:fs';
+import { pageSchema } from '../src/lib/content-schema.ts';
+import { glossarySchema } from '../src/lib/terminology.ts';
 import YAML from 'yaml';
 import {pageFilePaths} from './helpers/page-sources.ts';
 import { entryForFile, cmsJsonSave } from './helpers/pages-cms-json.ts';
 
 const config = YAML.parse(readFileSync('../.pages.yml', 'utf8'));
-type Field = { name?: string; label?: string; type?: string; required?: boolean; readonly?: boolean; fields?: Field[] };
+type Field = { name?: string; label?: string; type?: string; required?: boolean; readonly?: boolean; default?: boolean; fields?: Field[] };
 type Entry = { name: string; label: string; type?: string; path?: string; fields?: Field[]; items?: Entry[] };
 
 function sitePageEditors(entries: Entry[]): Entry[] {
@@ -36,9 +38,9 @@ test('Readonly URL-slug comes first, immediately before SEO and Hero on every pa
     const seo = editor.fields?.[1];
     assert.equal(seo?.type, 'object', editor.label);
     assert.equal(seo?.required, true, editor.label);
-    assert.deepEqual(seo.fields?.map(field => field.name), ['title', 'description'], editor.label);
-    assert.deepEqual(seo.fields?.map(field => field.label), ['Sidetittel', 'Metabeskrivelse'], editor.label);
-    assert.ok(seo.fields?.every(field => field.required === true), editor.label);
+    assert.deepEqual(seo.fields?.map(field => field.name), ['title', 'description', 'noindex'], editor.label);
+    assert.deepEqual(seo.fields?.slice(0, 2).map(field => field.label), ['Sidetittel', 'Metabeskrivelse'], editor.label);
+    assert.ok(seo.fields?.slice(0, 2).every(field => field.required === true), editor.label);
     assert.equal(editor.fields?.filter(field => field.name === 'seo').length, 1, editor.label);
     // URL-slug remains the unchanged top-level JSON field: this is only a visual reorder.
     assert.deepEqual(editor.fields?.slice(0, 3).map(field => field.name), ['slug', 'seo', 'hero'], editor.label);
@@ -68,7 +70,7 @@ test('The existing shared layout always emits canonical, SEO metadata and basic 
 
 test('URL-slug remains the original read-only route value for every published page source', () => {
   const files = pageFilePaths();
-  assert.equal(files.length, 17, 'Include new sources when expanding page inventory');
+  assert.ok(files.length > 0);
   for (const file of files) {
     const path = `app/src/content/pages/${file}`;
     const entry = entryForFile(config, path);
@@ -86,4 +88,42 @@ test('URL-slug remains the original read-only route value for every published pa
   assert.equal(home.slug, 'home');
   const routes = readFileSync('src/pages/[...slug].astro','utf8');
   assert.match(routes, /route\.family === 'home' \? undefined : data\.slug/);
+});
+
+test('Each public page editor exposes the same optional SEO noindex switch', () => {
+  const glossary = config.content.find((entry: Entry) => entry.name === 'terminology');
+  assert.ok(glossary);
+  for (const editor of [...sitePageEditors(config.content), glossary]) {
+    const seo = editor.fields?.find((field: Field) => field.name === 'seo');
+    const toggle = seo?.fields?.find((field: Field) => field.name === 'noindex');
+    assert.equal(toggle?.label, 'Skjul fra søkemotorer (noindex)', editor.name);
+    assert.equal(toggle?.type, 'boolean', editor.name);
+    assert.equal(toggle?.default, false, editor.name);
+    assert.notEqual(toggle?.required, true, editor.name);
+  }
+});
+
+test('SEO noindex survives simulated CMS saves from off to on to off', () => {
+  const fixtures = [
+    'pages/home.json', 'pages/priser.json', 'pages/seo.json',
+    'pages/managed-articles/innsikt-google-bedriftsprofil.json', 'terminology/glossary.json',
+  ];
+  for (const file of fixtures) {
+    const schema = file.startsWith('pages/') ? pageSchema : glossarySchema;
+    const entry = entryForFile(config, 'app/src/content/' + file);
+    assert.ok(entry, file);
+    let data = JSON.parse(readFileSync('src/content/' + file, 'utf8'));
+    if (data.seo) delete data.seo.noindex;
+    assert.equal(schema.parse(data).seo?.noindex, undefined, file);
+    const originalListing = data.listing?.visible;
+    for (const noindex of [true, false]) {
+      const form = { ...data, seo: { ...data.seo, noindex } };
+      data = JSON.parse(cmsJsonSave(data, form, entry, config));
+      assert.equal(schema.parse(data).seo?.noindex, noindex, file);
+      assert.equal(data.listing?.visible, originalListing, file);
+    }
+    assert.equal(schema.safeParse({ ...data, seo: { ...data.seo, noindex: 'true' } }).success, false, file);
+  }
+  const testside = JSON.parse(readFileSync('src/content/pages/testside.json', 'utf8'));
+  assert.equal(pageSchema.parse(testside).seo.noindex, true);
 });

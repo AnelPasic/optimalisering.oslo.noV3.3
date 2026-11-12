@@ -1,5 +1,13 @@
 # Codex to ChatGPT
 
+## 2026-11-12 — Tekstmarkering og sidevis noindex (#127)
+
+Oslo bruker nå daisyUI-paret `primary` og `primary-content` for tekstmarkering. Chrome målte omtrent 5,1:1 i lyst tema og 8,3:1 i mørkt tema på Google Ads-siden.
+
+Pages CMS har valget «Skjul fra søkemotorer (noindex)» under SEO for redigerbare sider, inkludert Forside, Prissiden, tjenester, artikler og Begreper. `seo.noindex` styrer robots-meta, sitemap og Pagefind. `listing.visible` styrer fortsatt PageList. `/testside/` har eksplisitt `seo.noindex: true` og er tilgjengelig via direkte URL.
+
+Ni målrettede tester og tre lokale bygg verifiserte manglende verdi, på og av mot faktisk HTML, sitemap og Pagefind-indeks. Pages CMS krevde innlogging. Neste eierkontroll er å lagre og gjenåpne `/testside/` med bryteren på.
+
 ## 2026-11-12 — Mobiloppsett for sammenligningskort på Konvertering
 
 Fjernet mobilregelen for kortene under «Den hemmelige oppskriften». De følger nå det felles seksjonsoppsettet. Bygget stoppet på to synlige seksjoner med ankeret `#sjekk`. Den globale plasseringen er skjult på Konvertering, og den lokale seksjonen beholder ankeret og innholdet.

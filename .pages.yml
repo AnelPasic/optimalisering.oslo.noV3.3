@@ -1118,6 +1118,12 @@ content:
             label: Metabeskrivelse
             type: text
             required: true
+          - &seoNoindex
+            name: noindex
+            label: Skjul fra søkemotorer (noindex)
+            type: boolean
+            default: false
+            description: Holder siden ute av søkemotorer, sitemap og nettstedets søk. Siden kan fortsatt åpnes med direkte lenke.
         required: true
       - name: hero
         label: Hero
@@ -1454,6 +1460,7 @@ content:
                 label: Metabeskrivelse
                 type: text
                 required: true
+              - *seoNoindex
             required: true
           - &standardHero
             name: hero
@@ -1562,6 +1569,11 @@ content:
         label: Metabeskrivelse
         type: text
         required: true
+      - name: seo
+        label: SEO
+        type: object
+        fields:
+          - *seoNoindex
       - name: linkLabel
         label: Lenketekst til begrepssiden
         type: string

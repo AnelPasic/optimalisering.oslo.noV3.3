@@ -64,7 +64,7 @@ export const pageSchema = z.preprocess((input,context)=>{
     slug: z.string(),
     kind: routeKindSchema,
     composition: compositionSchema.optional(),
-    seo: z.object({ title: z.string(), description: z.string() }),
+    seo: z.object({ title: z.string(), description: z.string(), noindex: z.boolean().optional() }),
     hero: z.union([heroSchema,synlighetHeroSchema,heroPresentationSchema]).optional(),
     eyebrow: z.string(), title: z.string(), intro: z.string(),
     listing: listingSchema.optional(),

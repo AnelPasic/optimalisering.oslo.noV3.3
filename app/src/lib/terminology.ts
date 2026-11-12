@@ -18,6 +18,7 @@ const termSchema = z.object({
 export const glossarySchema = z.object({
   hero:synlighetHeroSchema,
   description: z.string().trim().min(1),
+  seo: z.object({ noindex: z.boolean().optional() }).optional(),
   linkLabel: z.string().trim().min(1), moreLabel: z.string().trim().min(1),
   exampleLabel: z.string().trim().min(1), panelLabel: z.string().trim().min(1),
   terms: z.array(termSchema).min(1),

@@ -2,7 +2,8 @@
   "slug": "testside",
   "seo": {
     "title": "Testside",
-    "description": "Testside metabeskrivelse"
+    "description": "Testside metabeskrivelse",
+    "noindex": true
   },
   "hero": {
     "toneOverrides": {
