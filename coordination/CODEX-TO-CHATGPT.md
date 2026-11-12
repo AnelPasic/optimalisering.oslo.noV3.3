@@ -1,5 +1,11 @@
 # Codex to ChatGPT
 
+## 2026-11-12 — Videresending fra offentlig workers.dev-adresse
+
+Den offentlige adressen `optimalisering-oslo-v33.anel.workers.dev` skal sende besøkende permanent til `https://optimalisering.oslo.no` med samme sidesti og spørringsparametere. Workeren sjekker det eksakte vertsnavnet før statiske filer serveres. Andre verter bruker den eksisterende statiske filbindingen, med egne regler for eldre adresser og 404.
+
+Lokal Wrangler-verifikasjon dekket undersider, URL-parametere, eldre videresending, 404 og et versjonsspesifikt vertsnavn. Produksjonskontrollen følger Cloudflare-bygget for samme endring på main.
+
 ## 2026-11-12 — Tekstmarkering og sidevis noindex (#127)
 
 Oslo bruker nå daisyUI-paret `primary` og `primary-content` for tekstmarkering. Chrome målte omtrent 5,1:1 i lyst tema og 8,3:1 i mørkt tema på Google Ads-siden.
