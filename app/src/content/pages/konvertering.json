@@ -56,7 +56,7 @@
         {
           "title": "Klikkekongen AS",
           "headline": "Dobler annonsebudsjettet",
-          "text": "- Annonsekroner: **20 000 kr**\n- Besøk: **6 000**\n- Konverteringsrate: **1 %**\n- Bestillinger: **60**\n- Ordreverdi: **1 000 kr**\n- Omsetning: **60 × 1 000 = 60 000 kr**\n- Omsetning minus annonser: ++**40 000 kr**++\n\n",
+          "text": "- Annonsekroner: **20 000 kr**\n- Besøk: **6 000**\n- Konverteringsrate: **1 %**\n- Bestillinger: **60**\n- Ordreverdi: **1 000 kr**\n- Omsetning: **60 × 1 000 = 60 000 kr**\n- Omsetning minus annonser:**40 000 kr**\n\n",
           "boxVariant": "card",
           "surface": "base-300"
         },
@@ -135,26 +135,26 @@
         {
           "title": "Vi gjør endringene",
           "text": "Vi forbedrer budskap, landingssider, skjema og kjøpsvei innen avtalt omfang. Du får konkrete endringer på nettsiden.",
-          "iconName": "wrench",
+          "boxVariant": "card",
           "surface": "base-300",
-          "badge": "Gjennomføring",
-          "boxVariant": "card"
+          "iconName": "wrench",
+          "badge": "Gjennomføring"
         },
         {
           "title": "Vi følger kundene, ikke klikkene",
           "text": "Vi måler relevante henvendelser, fullførte kjøp og hvor folk stopper. Tallene skal kunne brukes til beslutninger.",
-          "iconName": "chart-line-up",
+          "boxVariant": "card",
           "surface": "info",
-          "badge": "Effekt",
-          "boxVariant": "card"
+          "iconName": "chart-line-up",
+          "badge": "Effekt"
         },
         {
           "title": "Du bestemmer hvor lenge",
           "text": "Fast månedspris for avtalt arbeid. **Ingen bindingstid.** Større prosjekter prises og godkjennes separat.",
-          "iconName": "eye",
+          "boxVariant": "card",
           "surface": "base-200",
-          "badge": "Kontroll",
-          "boxVariant": "card"
+          "iconName": "eye",
+          "badge": "Kontroll"
         }
       ]
     },
@@ -174,26 +174,26 @@
         {
           "title": "+67 % flere henvendelser",
           "text": "**Lokal tjenestebedrift**\n\n1 000 besøk i måneden\n\n3 % til **5 %** konvertering\n\n**30 til 50 henvendelser**\n\n20 flere muligheter til å vinne en kunde. Samme trafikk.",
-          "iconName": "map-pin",
+          "boxVariant": "card",
           "surface": "base-100",
-          "badge": "Lokale tjenester",
-          "boxVariant": "card"
+          "iconName": "map-pin",
+          "badge": "Lokale tjenester"
         },
         {
           "title": "+100 % flere bestillinger",
           "text": "**Nettbutikk**\n\n4 000 besøk i måneden\n\n1,5 % til **3 %** konvertering\n\n**60 til 120 kjøp**\n\n60 flere bestillinger uten et høyere trafikkbudsjett.",
-          "iconName": "shopping-cart",
+          "boxVariant": "card",
           "surface": "info",
-          "badge": "Nettbutikk",
-          "boxVariant": "card"
+          "iconName": "shopping-cart",
+          "badge": "Nettbutikk"
         },
         {
           "title": "+50 % flere leads",
           "text": "**B2B og tjenester**\n\n1 000 besøk i måneden\n\n2 % til **3 %** konvertering\n\n**20 til 30 henvendelser**\n\n10 ekstra mulige kunder fra besøkene du allerede har.",
-          "iconName": "target",
+          "boxVariant": "card",
           "surface": "base-300",
-          "badge": "B2B",
-          "boxVariant": "card"
+          "iconName": "target",
+          "badge": "B2B"
         }
       ]
     },
@@ -212,26 +212,26 @@
         {
           "title": "1. Finn lekkasjen",
           "text": "**Oppstart og kartlegging.** Vi avklarer målet, ser på trafikken og finner hvor relevante besøk stopper før bestilling. Du vet hva vi vil prioritere først.",
-          "iconName": "magnifying-glass",
+          "boxVariant": "card",
           "surface": "base-300",
-          "badge": "Kartlegging",
-          "boxVariant": "card"
+          "iconName": "magnifying-glass",
+          "badge": "Kartlegging"
         },
         {
           "title": "2. Tett den",
           "text": "**Konkrete endringer.** Vi forbedrer det viktigste vi har avtalt: tilbudet, innholdet, mobilvisningen, skjemaet eller kjøpsveien. Ingen unødvendig totalrenovering.",
-          "iconName": "cursor-click",
+          "boxVariant": "card",
           "surface": "info",
-          "badge": "Gjennomføring",
-          "boxVariant": "card"
+          "iconName": "cursor-click",
+          "badge": "Gjennomføring"
         },
         {
           "title": "3. Se hva som skjer",
           "text": "**Oppfølging og neste grep.** Vi viser hva som er gjort, følger relevante bestillinger og avtaler hva vi bør forbedre videre. Ved lav trafikk bruker vi også kvalitative observasjoner.",
-          "iconName": "chart-line-up",
+          "boxVariant": "card",
           "surface": "base-200",
-          "badge": "Måling",
-          "boxVariant": "card"
+          "iconName": "chart-line-up",
+          "badge": "Måling"
         }
       ],
       "links": [
