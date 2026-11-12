@@ -28,7 +28,7 @@
       "kind": "image",
       "image": {
         "kind": "illustration",
-        "src": "/images/services/exponentialgrowthblue.png",
+        "src": "/images/services/discoveringlocalfavorite-1.png",
         "alt": "Illustrasjon av utvikling og vekst",
         "positionX": 50,
         "positionY": 50
@@ -58,26 +58,26 @@
         {
           "title": "Et tilbud folk vil velge",
           "text": "Vis kunden hva de får, hva det koster og hvorfor dere er et godt valg. Et tydelig tilbud gjør annonsen mer interessant.",
-          "iconName": "tag",
+          "boxVariant": "card",
           "surface": "base-300",
-          "badge": "Tilbud",
-          "boxVariant": "card"
+          "iconName": "tag",
+          "badge": "Tilbud"
         },
         {
           "title": "Finn folk som vil kjøpe",
           "text": "Vi prioriterer søk fra folk som er klare til å bestille. Da bruker du budsjettet på potensielle kunder, ikke nysgjerrige forbipasserende.",
-          "iconName": "magnifying-glass",
+          "boxVariant": "card",
           "surface": "info",
-          "badge": "Målretting",
-          "boxVariant": "card"
+          "iconName": "magnifying-glass",
+          "badge": "Målretting"
         },
         {
           "title": "Gjør besøket til en bestilling",
           "text": "Kunden klikker og møter akkurat det annonsen lovet: et godt tilbud, gode svar og en enkel bestillingsknapp.",
-          "iconName": "cursor-click",
+          "boxVariant": "card",
           "surface": "secondary",
-          "badge": "Konvertering",
-          "boxVariant": "card"
+          "iconName": "cursor-click",
+          "badge": "Konvertering"
         }
       ]
     },
@@ -97,18 +97,18 @@
         {
           "title": "1 henvendelse",
           "text": "**10 klikk for 1 000 kr**\n\n100 kr per klikk. 10 % tar kontakt.",
-          "iconName": "coins",
+          "boxVariant": "card",
           "surface": "base-300",
-          "badge": "Eksempel A",
-          "boxVariant": "card"
+          "iconName": "coins",
+          "badge": "Eksempel A"
         },
         {
           "title": "10 henvendelser",
           "text": "**100 klikk for 1 000 kr**\n\n10 kr per klikk. Samme andel tar kontakt.",
-          "iconName": "chart-line-up",
+          "boxVariant": "card",
           "surface": "info",
-          "badge": "Eksempel B",
-          "boxVariant": "card"
+          "iconName": "chart-line-up",
+          "badge": "Eksempel B"
         }
       ],
       "links": [
@@ -133,26 +133,26 @@
         {
           "title": "Fang opp kunden som vil kjøpe",
           "text": "Vi velger søkeord, steder og tidspunkt med størst mulighet for relevante henvendelser. Budsjettet skal treffe folk som faktisk trenger det du selger.",
-          "iconName": "target",
+          "boxVariant": "card",
           "surface": "info",
-          "badge": "Søkeord",
-          "boxVariant": "card"
+          "iconName": "target",
+          "badge": "Søkeord"
         },
         {
           "title": "Gi kunden en grunn til å klikke",
           "text": "Søker noen etter EU-kontroll, skal annonsen svare på EU-kontroll. Pris, tidspunkt eller en god grunn til å velge verkstedet hjelper mer enn et langt slagord.",
-          "iconName": "megaphone",
+          "boxVariant": "card",
           "surface": "base-300",
-          "badge": "Annonser",
-          "boxVariant": "card"
+          "iconName": "megaphone",
+          "badge": "Annonser"
         },
         {
           "title": "Gjør klikket til en bestilling",
           "text": "Kunden kommer rett til riktig tjeneste. Tilbud, tillit og bestilling er enkelt å finne, også på mobil. Færre hindringer gir flere muligheter til å selge.",
-          "iconName": "browser",
+          "boxVariant": "card",
           "surface": "secondary",
-          "badge": "Landingsside",
-          "boxVariant": "card"
+          "iconName": "browser",
+          "badge": "Landingsside"
         }
       ]
     },
@@ -171,26 +171,26 @@
         {
           "title": "Google Ads",
           "text": "Vi bruker Google Ads for å møte folk som søker etter det du tilbyr akkurat nå. Mer relevant trafikk gir flere muligheter til å selge.",
-          "iconName": "target",
+          "boxVariant": "card",
           "surface": "base-100",
-          "badge": "Betalt",
-          "boxVariant": "card"
+          "iconName": "target",
+          "badge": "Betalt"
         },
         {
           "title": "SEO",
           "text": "Vi gjør viktige tjenestesider lettere å finne i de vanlige søkeresultatene. Da kan du få kunder også fra besøk du ikke betaler per klikk for.",
-          "iconName": "magnifying-glass",
+          "boxVariant": "card",
           "surface": "base-300",
-          "badge": "Organisk",
-          "boxVariant": "card"
+          "iconName": "magnifying-glass",
+          "badge": "Organisk"
         },
         {
           "title": "Konvertering",
           "text": "Vi forbedrer tekst, tilbud og bestillingsvei, slik at flere av de som finner siden blir kunder.",
-          "iconName": "shopping-cart",
+          "boxVariant": "card",
           "surface": "secondary",
-          "badge": "Flere bestillinger",
-          "boxVariant": "card"
+          "iconName": "shopping-cart",
+          "badge": "Flere bestillinger"
         }
       ],
       "links": [
@@ -220,18 +220,18 @@
         {
           "title": "4,3x til 17,2x",
           "text": "**ROAS i Google Ads**\n\nFire ganger så mye registrert omsetning per annonsekrone i sammenligningen.",
-          "iconName": "chart-line-up",
+          "boxVariant": "card",
           "surface": "info",
-          "badge": "Resultat",
-          "boxVariant": "card"
+          "iconName": "chart-line-up",
+          "badge": "Resultat"
         },
         {
           "title": "20 % lavere annonseforbruk",
           "text": "**April 2025 sammenlignet med april 2026**\n\nMindre penger brukt på annonser, mens hver annonsekrone ga mer omsetning.",
-          "iconName": "coins",
+          "boxVariant": "card",
           "surface": "base-300",
-          "badge": "Annonsekostnad",
-          "boxVariant": "card"
+          "iconName": "coins",
+          "badge": "Annonsekostnad"
         }
       ]
     },
@@ -254,26 +254,26 @@
         {
           "title": "1. Finn mulighetene",
           "text": "Vi ser hvilke søk og annonser som kan gi mest tilbake, og hvilke sider som bør bli bedre. Du får en tydelig prioritering.",
-          "iconName": "magnifying-glass",
+          "boxVariant": "card",
           "surface": "base-300",
-          "badge": "Kartlegging",
-          "boxVariant": "card"
+          "iconName": "magnifying-glass",
+          "badge": "Kartlegging"
         },
         {
           "title": "2. Få mer ut av budsjettet",
           "text": "Vi forbedrer målretting, annonser og landingssider innen avtalt omfang. Målet er flere relevante besøk som blir til kunder.",
-          "iconName": "wrench",
+          "boxVariant": "card",
           "surface": "info",
-          "badge": "Gjennomføring",
-          "boxVariant": "card"
+          "iconName": "wrench",
+          "badge": "Gjennomføring"
         },
         {
           "title": "3. Se hva du får igjen",
           "text": "Vi følger bestillinger, henvendelser og annonsekostnader. Deretter bruker vi tallene til å finne neste mulighet for vekst.",
-          "iconName": "chart-line-up",
+          "boxVariant": "card",
           "surface": "base-200",
-          "badge": "Oppfølging",
-          "boxVariant": "card"
+          "iconName": "chart-line-up",
+          "badge": "Oppfølging"
         }
       ]
     },
@@ -319,5 +319,8 @@
       "question": "Er fire ganger mer omsetning per annonsekrone det samme som fire ganger mer overskudd?",
       "answer": "Nei. ROAS viser registrert omsetning per annonsekrone. Overskudd avhenger også av kostnader og marginer. Eurotents-tallene sammenligner april 2025 og april 2026 i Google Ads og viser 4,3x mot 17,2x ROAS, med 20 % lavere annonseforbruk."
     }
-  ]
+  ],
+  "listing": {
+    "visible": true
+  }
 }
