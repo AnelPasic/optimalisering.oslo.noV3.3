@@ -12,7 +12,9 @@ const image=z.object({src:z.string().regex(/^\/images\/(?:home|services)\/(?:[a-
 export const heroViewSchema=z.object({
  surface:surfaceSchema.optional(),
  family:z.enum(['home','service','pricing','index','article','assessment','utility','glossary','error']),layout:heroLayoutSchema,
- eyebrow:z.string(),title:z.string().trim().min(1),support:z.string(),primaryCta:link.optional(),secondaryCta:link.optional(),
+ eyebrow:z.string(),title:z.string().trim().min(1),support:z.string(),
+ highlights:z.array(z.string().trim().min(1).max(110)).max(4).optional(),
+ primaryCta:link.optional(),secondaryCta:link.optional(),
  visual:z.discriminatedUnion('kind',[z.object({kind:z.literal('none')}).strict(),z.object({kind:z.literal('image'),image}).strict()]),
  featuredProofCaseId:z.string().regex(/^[a-z0-9][a-z0-9-]*$/).optional(),
  titleEmphasis:z.enum(['none','first-sentence']).default('none'),
