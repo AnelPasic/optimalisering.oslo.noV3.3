@@ -13,8 +13,8 @@ test('ChatGPT Ads is an editable CMS service and is reachable from navigation',(
  assert.equal(page.slug,'chatgpt-ads');
  assert.equal(page.kind,'service');
  assert.match(page.hero.eyebrow,/CHATGPT ADS/);
- assert.match(page.hero.title,/ChatGPT får spørsmålene/);
- assert.match(page.hero.support,/kan annonsen din vises under relevante svar/);
+ assert.equal(page.hero.title,'Glem førsteplassen på Google. Bli den kunden velger i ChatGPT.');
+ assert.equal(page.hero.support,'Kundene spør allerede ChatGPT hva de bør kjøpe og hvem de bør velge. Vi gjør tilbudet ditt synlig når de vurderer alternativene, og tar dem fra interesse til bestilling.');
  assert.equal(page.hero.primaryCta.href,'#priser');
  assert.equal(page.hero.secondaryCta.href,'#sjekk');
  assert.ok(existsSync(new URL('../public/images/services/discoveringlocalfavorite-1.png',import.meta.url)));
@@ -38,10 +38,10 @@ test('One coherent sales journey with alternating surfaces and existing protecte
 });
 
 test('Creative, benefit-first copy keeps sponsored placement separate from AI answers',()=>{
- assert.match(page.hero.title,/Vi går etter bestillingene/);
+ assert.match(page.hero.title,/Bli den kunden velger i ChatGPT/);
  assert.doesNotMatch(page.hero.title,/annonsering|kampanjeoppsett|målretting/);
  assert.match(page.hero.eyebrow,/CHATGPT ADS/);
- assert.match(page.hero.support,/under relevante svar/);
+ assert.match(page.hero.support,/tar dem fra interesse til bestilling/);
  assert.match(content.find((s:any)=>s.id==='maaling').heading,/Bestillinger fyller kalenderen/);
  assert.match(content.find((s:any)=>s.id==='eksempel').eyebrow,/EKSEMPEL/);
  assert.ok(!content.some((s:any)=>s.body.some((p:string)=>/ikke en garanti|ingen garanti|kan ikke love|garanterer ikke|resultater kan variere/i.test(p))));
