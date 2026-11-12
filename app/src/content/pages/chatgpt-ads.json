@@ -1,0 +1,322 @@
+{
+  "slug": "chatgpt-ads",
+  "kind": "service",
+  "composition": {
+    "commercialText": true,
+    "service": {
+      "closingCta": false
+    }
+  },
+  "seo": {
+    "title": "ChatGPT Ads i Norge | Annonsering i ChatGPT - Optimalisering Oslo",
+    "description": "Få flere relevante henvendelser med ChatGPT Ads. Vi lager annonser, finner riktige kjøpssituasjoner og gjør klikk til kunder. Annonsering i ChatGPT for bedrifter."
+  },
+  "hero": {
+    "layout": "split-right",
+    "eyebrow": "CHATGPT ADS | ANNONSERING I CHATGPT",
+    "title": "ChatGPT får spørsmålene. Vi går etter bestillingene.",
+    "support": "Mens folk sammenligner produkter og tjenester i ChatGPT, kan annonsen din vises under relevante svar. Vi lager annonser som fanger interessen, treffer riktig kjøpssituasjon og leder kunden til en side der det er enkelt å bestille.",
+    "primaryCta": {
+      "label": "Start med ChatGPT Ads",
+      "href": "#priser"
+    },
+    "secondaryCta": {
+      "label": "Få 3 gratis funn",
+      "href": "#sjekk"
+    },
+    "visual": {
+      "kind": "image",
+      "image": {
+        "kind": "illustration",
+        "src": "/images/services/discoveringlocalfavorite-1.png",
+        "alt": "Illustrasjon av å oppdage et relevant tilbud",
+        "positionX": 50,
+        "positionY": 50
+      }
+    },
+    "toneOverrides": {
+      "eyebrowPreset": "inherit",
+      "titlePreset": "spissplus",
+      "supportPreset": "spissplus"
+    }
+  },
+  "sections": [
+    {
+      "_block": "content",
+      "id": "sporsmalene",
+      "eyebrow": "KUNDENE ER ALLEREDE I GANG",
+      "heading": "Kunden har allerede sagt hva de trenger. Nå er det din tur.",
+      "headingAlign": "left",
+      "layout": "three-columns",
+      "surface": "base-200",
+      "body": [
+        "Noen undersøker priser. Andre sammenligner løsninger eller leter etter en leverandør. ChatGPT Ads gir bedriften din en ny mulighet til å bli oppdaget mens kunden faktisk vurderer hva de skal velge.",
+        "Her er tre helt vanlige kjøpsspørsmål som viser hvorfor tidspunktet er interessant."
+      ],
+      "items": [
+        {
+          "title": "Hvem kan gjøre jobben?",
+          "text": "Kunden leter etter en leverandør. Vis hva du tilbyr, hvem du hjelper og hvordan de kan be om pris.",
+          "iconName": "magnifying-glass",
+          "surface": "base-300",
+          "badge": "Tjenester",
+          "boxVariant": "card"
+        },
+        {
+          "title": "Hvilken løsning bør vi velge?",
+          "text": "Kunden sammenligner alternativer. En god annonse viser hvorfor akkurat ditt produkt kan passe.",
+          "iconName": "lightbulb",
+          "surface": "info",
+          "badge": "Produkter",
+          "boxVariant": "card"
+        },
+        {
+          "title": "Hva koster det å komme i gang?",
+          "text": "Kunden er nærmere en avgjørelse. Møt spørsmålet med et tydelig tilbud og en enkel vei til kontakt.",
+          "iconName": "credit-card",
+          "surface": "secondary",
+          "badge": "Pris og bestilling",
+          "boxVariant": "card"
+        }
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "eksempel",
+      "eyebrow": "ET EKSEMPEL PÅ KUNDEREISEN",
+      "heading": "Fra \"Hva bør vi velge?\" til \"Kan vi få et tilbud?\"",
+      "headingAlign": "left",
+      "layout": "two-columns",
+      "surface": "secondary",
+      "body": [
+        "Se for deg en bedrift som undersøker kantine til de ansatte. De har et ekte behov, men har ikke bestemt seg for leverandør. Da er et relevant tilbud langt mer interessant enn en tilfeldig bannerannonse."
+      ],
+      "items": [
+        {
+          "title": "Kunden spør ChatGPT",
+          "text": "**\"Hvordan velger vi kantine til kontoret?\"**\n\nKunden undersøker pris, levering og hva som passer bedriften.",
+          "iconName": "chat-circle-text",
+          "surface": "base-300",
+          "badge": "Spørsmål",
+          "boxVariant": "card"
+        },
+        {
+          "title": "Annonsen viser neste steg",
+          "text": "**\"Få forslag til kantineløsning og pris.\"**\n\nEn tydelig annonse under et relevant svar kan sende kunden rett til tilbudet.",
+          "iconName": "cursor-click",
+          "surface": "info",
+          "badge": "Annonse",
+          "boxVariant": "card"
+        }
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "fra-klikk-til-kunde",
+      "eyebrow": "SLIK FÅR ANNONSEN JOBBEN GJORT",
+      "heading": "Annonsen vekker interessen. Nettsiden tar imot bestillingen.",
+      "headingAlign": "left",
+      "layout": "three-columns",
+      "surface": "info",
+      "body": [
+        "Vi kobler sammen det kunden vurderer, budskapet i annonsen og siden de kommer til. Det er sånn oppmerksomhet får sjansen til å bli omsetning."
+      ],
+      "items": [
+        {
+          "title": "Finn situasjonen der du er relevant",
+          "text": "Vi beskriver hvem tilbudet passer for og hvilke behov, spørsmål og temaer som henger sammen med et kjøp.",
+          "iconName": "target",
+          "surface": "base-100",
+          "badge": "Relevans",
+          "boxVariant": "card"
+        },
+        {
+          "title": "Lag en annonse som er verdt et klikk",
+          "text": "Vi gjør tilbudet lett å forstå med en konkret overskrift, et godt argument og et bilde som passer.",
+          "iconName": "megaphone",
+          "surface": "base-300",
+          "badge": "Annonser",
+          "boxVariant": "card"
+        },
+        {
+          "title": "Gjør neste steg latterlig enkelt",
+          "text": "Kunden skal ikke trenge kart og kompass for å finne bestillingsknappen. Vi forbedrer siden som skal skaffe henvendelsen.",
+          "iconName": "shopping-cart",
+          "surface": "secondary",
+          "badge": "Bestilling",
+          "boxVariant": "card"
+        }
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "kanaler",
+      "eyebrow": "SAMME KUNDE, FLERE VEIER TIL SALG",
+      "heading": "Google får søkene. ChatGPT får spørsmålene. Begge kan gi kunder.",
+      "headingAlign": "left",
+      "layout": "three-columns",
+      "surface": "base-300",
+      "body": [
+        "En kunde kan google et produkt på mandag, spørre ChatGPT om alternativene på tirsdag og bestille på onsdag. Vi hjelper deg å være relevant der kunden vurderer, og gjør nettsiden klar når de bestemmer seg."
+      ],
+      "items": [
+        {
+          "title": "ChatGPT Ads",
+          "text": "Møt folk som utforsker og sammenligner i ChatGPT. Annonsen vises som en egen, tydelig merket plassering under relevante svar.",
+          "iconName": "open-ai-logo",
+          "surface": "secondary",
+          "badge": "Spørsmål",
+          "boxVariant": "card"
+        },
+        {
+          "title": "Google Ads",
+          "text": "Fang opp folk som aktivt søker etter en tjeneste eller et produkt. Riktige søk og annonser kan føre rett til en bestilling.",
+          "iconName": "target",
+          "surface": "info",
+          "badge": "Søk",
+          "boxVariant": "card"
+        },
+        {
+          "title": "Konvertering",
+          "text": "Gjør det enklere å velge deg når kunden først kommer til nettsiden. Da får begge annonsekanalene en bedre sjanse til å selge.",
+          "iconName": "cursor-click",
+          "surface": "base-100",
+          "badge": "Bestilling",
+          "boxVariant": "card"
+        }
+      ],
+      "links": [
+        {
+          "label": "Les om Google Ads",
+          "href": "/google-ads/"
+        },
+        {
+          "label": "Les om konvertering",
+          "href": "/konvertering/"
+        }
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "maaling",
+      "eyebrow": "MÅL DET SOM BETYR NOE",
+      "heading": "Visninger fyller rapporten. Bestillinger fyller kalenderen.",
+      "headingAlign": "left",
+      "layout": "three-columns",
+      "surface": "base-100",
+      "body": [
+        "Vi følger med på hva annonsene skaper: interesse, besøk og faktiske handlinger på nettsiden. Med riktig sporing kan vi prioritere budskapene som skaffer relevante henvendelser og salg."
+      ],
+      "items": [
+        {
+          "title": "Visninger",
+          "text": "Hvor mange får se annonsen? Det forteller oss om kampanjen når frem til folk.",
+          "iconName": "eye",
+          "surface": "base-300",
+          "badge": "Oppmerksomhet",
+          "boxVariant": "card"
+        },
+        {
+          "title": "Klikk",
+          "text": "Hvem er interessert nok til å se tilbudet ditt? Her begynner kundereisen på nettsiden.",
+          "iconName": "cursor-click",
+          "surface": "info",
+          "badge": "Interesse",
+          "boxVariant": "card"
+        },
+        {
+          "title": "Henvendelser og kjøp",
+          "text": "Hvem ber om pris, bestiller time eller handler? Det er disse tallene vi vil forbedre.",
+          "iconName": "shopping-cart",
+          "surface": "secondary",
+          "badge": "Resultat",
+          "boxVariant": "card"
+        }
+      ]
+    },
+    {
+      "_block": "global",
+      "element": "priser"
+    },
+    {
+      "_block": "content",
+      "id": "oppstart",
+      "eyebrow": "DU DRIVER BEDRIFTEN. VI TAR OSS AV ANNONSENE.",
+      "heading": "Du trenger ikke bli ChatGPT Ads-ekspert for å få kunder derfra.",
+      "headingAlign": "left",
+      "layout": "three-columns",
+      "surface": "secondary",
+      "body": [
+        "Vi begynner med tilbudet ditt og en konkret plan. Deretter bygger vi kampanjen, gjør landingssiden klar og måler det som skjer etter klikket. Du får vite hva vi jobber med og hvorfor."
+      ],
+      "items": [
+        {
+          "title": "1. Finn kjøpssituasjonene",
+          "text": "Vi kartlegger hva kundene trenger, hva bedriften tjener på å selge og hvilke budskap som kan få dem til å velge deg.",
+          "iconName": "magnifying-glass",
+          "surface": "base-300",
+          "badge": "Plan",
+          "boxVariant": "card"
+        },
+        {
+          "title": "2. Lag annonser og landingsside",
+          "text": "Vi setter opp kampanjen og gjør det enkelt for kunden å forstå tilbudet og ta kontakt. Større nettsidearbeid avtales separat.",
+          "iconName": "wrench",
+          "surface": "info",
+          "badge": "Oppsett",
+          "boxVariant": "card"
+        },
+        {
+          "title": "3. Forbedre etter faktiske resultater",
+          "text": "Vi ser på trafikk og målbare handlinger, justerer annonsene og prioriterer det som gir best grunnlag for flere kunder.",
+          "iconName": "chart-line-up",
+          "surface": "base-200",
+          "badge": "Oppfølging",
+          "boxVariant": "card"
+        }
+      ]
+    },
+    {
+      "_block": "global",
+      "element": "sjekk"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Kan norske bedrifter annonsere i ChatGPT?",
+      "answer": "Ja. ChatGPT Ads har selvbetjent tilgang for annonsører i Norge gjennom Ads Manager på ads.openai.com. Vi kan hjelpe med oppsett, annonser, landingsside og løpende optimalisering."
+    },
+    {
+      "question": "Hvordan ser en ChatGPT-annonse ut?",
+      "answer": "Annonsen vises som en egen, tydelig merket plassering under et relevant ChatGPT-svar. Den kan ha annonsørnavn, bilde, overskrift, beskrivelse og lenke til nettsiden din. Den er ikke en del av selve ChatGPT-svaret."
+    },
+    {
+      "question": "Kan dere velge nøyaktig hvilke spørsmål annonsen skal vises ved?",
+      "answer": "Vi kan velge relevante temaer og kontekstbeskrivelser, sammen med tilgjengelige målgruppe- og geografivalg. Det er ikke det samme som å kjøpe et eksakt søkeord. ChatGPT vurderer hvilke annonser som passer situasjonen."
+    },
+    {
+      "question": "Er ChatGPT Ads det samme som AI-synlighet?",
+      "answer": "Nei. ChatGPT Ads er betalt annonsering som vises separat fra svaret. AI-synlighet handler om hvordan bedriften og innholdet ditt kan bli funnet og forstått i AI-baserte søk og svar. Vi tilbyr begge tjenestene, men annonser kjøper ikke anbefalinger fra ChatGPT."
+    },
+    {
+      "question": "Hva koster hjelp med ChatGPT Ads?",
+      "answer": "ChatGPT Ads kan være det prioriterte området i Optimalisering fra 4 500 kr per måned eks. mva. Vekst passer når vi også skal forbedre et annet område samtidig. Annonsebudsjettet kommer i tillegg og betales til annonseplattformen. Vi avtaler omfanget før oppstart."
+    },
+    {
+      "question": "Hvordan vet vi om annonseringen skaffer kunder?",
+      "answer": "Vi kan følge visninger, klikk og kostnader i Ads Manager. Når konverteringsmåling eller sporing på nettsiden er satt opp, kan vi også se relevante henvendelser og kjøp. Vi vurderer resultater ut fra det bedriften faktisk tjener på."
+    },
+    {
+      "question": "Trenger jeg en ny nettside for å annonsere?",
+      "answer": "Nei. Vi starter med den nettsiden du har. Ofte holder det å forbedre én viktig landingsside, tilbudet eller bestillingsveien. Større utvikling avtales separat."
+    },
+    {
+      "question": "Hvem kan se annonser i ChatGPT?",
+      "answer": "Annonser kan vises for kvalifiserte brukere på Free- og Go-abonnement. Betalte Plus-, Pro- og Business-kontoer er ikke del av annonsevisningen. Tilgjengelighet og visning styres av ChatGPT."
+    },
+    {
+      "question": "Hva får jeg i gratis sjekk?",
+      "answer": "Send nettsiden din, så får du tre konkrete funn innen to virkedager. Vi ser etter muligheter for flere bestillinger og bedre synlighet. Du trenger ikke gi oss innlogging for den første vurderingen."
+    }
+  ]
+}
