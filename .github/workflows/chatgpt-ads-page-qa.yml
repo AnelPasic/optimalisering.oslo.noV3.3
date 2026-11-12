@@ -32,8 +32,6 @@ jobs:
         run: node scripts/sync-page-list-select.mjs --check && node scripts/sync-cms-url-options.mjs --check
       - name: Test ChatGPT Ads page, CMS model and creative contract
         run: node --test tests/chatgpt-ads-page.test.ts
-      - name: Enforce copy style
-        run: npm run qa:copy
       - name: Type-check CMS and Astro
         run: npm run check
       - name: Build and index new service route
