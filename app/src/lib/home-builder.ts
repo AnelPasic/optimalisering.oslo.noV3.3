@@ -26,7 +26,9 @@ export const heroPhotoSchema=z.object({kind:z.enum(['photo','illustration']).opt
 export const heroSchema=z.object({
  surface:surfaceSchema.optional(),
  layout:heroLayoutSchema,
- eyebrow:z.string(),title:z.string().trim().min(1),support:z.string(),primaryCta:link,secondaryCta:link.optional(),
+ eyebrow:z.string(),title:z.string().trim().min(1),support:z.string(),
+ highlights:z.array(z.string().trim().min(1).max(110)).max(4).optional(),
+ primaryCta:link,secondaryCta:link.optional(),
  toneOverrides:heroToneOverridesSchema,
  visual:z.discriminatedUnion('kind',[z.object({kind:z.literal('none'),image:heroPhotoSchema.optional()}).strict(),z.object({kind:z.literal('image'),image:heroPhotoSchema}).strict()]),
  // A single typed project treatment, never arbitrary inline rich styling.
