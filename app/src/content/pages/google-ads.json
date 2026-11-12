@@ -1,0 +1,315 @@
+{
+  "slug": "google-ads",
+  "kind": "service",
+  "composition": {
+    "commercialText": true,
+    "service": {
+      "closingCta": false
+    }
+  },
+  "seo": {
+    "title": "Google Ads-byrå og annonsering i Oslo | Flere kunder fra Google",
+    "description": "Google Ads skal gi henvendelser og salg, fremfor klikk for klikkets skyld. Vi forbedrer søk, annonser, landingssider og konvertering."
+  },
+  "hero": {
+    "layout": "split-right",
+    "eyebrow": "GOOGLE ADS | ANNONSEDRIFT OG OPTIMALISERING",
+    "title": "Google Ads skal skaffe kunder. Klikk har du allerede betalt for.",
+    "support": "Feil søk, uklare tilbud og dårlige landingssider kan sluke annonsebudsjettet lenge før kunden rekker å bestille. Vi finner hvor pengene forsvinner, forbedrer annonsene og gjør nettsiden klar til å selge. Noen ganger er det smarteste rådet å vente med annonseringen.",
+    "primaryCta": {
+      "label": "Få vurdert Google Ads",
+      "href": "#sjekk"
+    },
+    "secondaryCta": {
+      "label": "Se hva vi gjør",
+      "href": "#annonsering"
+    },
+    "visual": {
+      "kind": "image",
+      "image": {
+        "kind": "illustration",
+        "src": "/images/services/exponentialgrowthblue.png",
+        "alt": "Illustrasjon av utvikling og vekst",
+        "positionX": 50,
+        "positionY": 50
+      }
+    },
+    "featuredProofCaseId": "eurotents",
+    "toneOverrides": {
+      "eyebrowPreset": "inherit",
+      "titlePreset": "spiss",
+      "supportPreset": "spissplus"
+    }
+  },
+  "sections": [
+    {
+      "_block": "content",
+      "id": "for-du-annonserer",
+      "eyebrow": "FØR VI BRUKER EN KRONE",
+      "heading": "Google er flink til å bruke penger. Er nettsiden din flink til å tjene dem?",
+      "headingAlign": "left",
+      "layout": "three-columns",
+      "surface": "base-200",
+      "body": [
+        "Google Ads fungerer best når kunden søker etter noe du faktisk selger, tilbudet er forståelig og siden gjør det enkelt å bestille. Hvis én av delene svikter, kan du kjøpe mye trafikk og likevel sitte igjen med lite.",
+        "Det første vi gjør, er å finne ut om bedriften er klar for annonsering. Noen trenger bedre annonser. Andre trenger først et tilbud og en nettside som tåler konkurransen."
+      ],
+      "items": [
+        {
+          "title": "Ingen god grunn til å velge deg",
+          "text": "Hvis tilbudet ikke svarer på pris, behov eller hvorfor kunden bør velge dere, gjør ikke et høyere bud det mer fristende.",
+          "iconName": "tag",
+          "surface": "base-300",
+          "badge": "Tilbud",
+          "boxVariant": "card"
+        },
+        {
+          "title": "Betaler for feil søk",
+          "text": "En kunde på jakt etter gratis råd kan koste like mye per klikk som en som vil bestille. Vi rydder i søkeord og utelukker irrelevante søk.",
+          "iconName": "magnifying-glass",
+          "surface": "info",
+          "badge": "Målretting",
+          "boxVariant": "card"
+        },
+        {
+          "title": "Kunden forsvinner på nettsiden",
+          "text": "Annonsen lover et svar. Landingssiden viser en generell forside og et kontaktskjema gjemt i menyen. Konkurrenten er ett klikk unna.",
+          "iconName": "cursor-click",
+          "surface": "secondary",
+          "badge": "Konvertering",
+          "boxVariant": "card"
+        }
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "klikkpris",
+      "eyebrow": "HVA KOSTER EGENTLIG ET KLIKK?",
+      "heading": "Samme tusenlapp. 10 klikk eller 100.",
+      "headingAlign": "left",
+      "layout": "two-columns",
+      "surface": "secondary",
+      "body": [
+        "Se for deg at ett klikk koster 100 kr og et annet 10 kr. Med samme tusenlapp blir forskjellen brutal. Google vurderer bud, annonsekvalitet, landingsside og konkurransen i hvert søk.",
+        "**Dette er et regneeksempel, ikke en lovet klikkpris.** Bedre relevans kan hjelpe deg å konkurrere til lavere kostnad, men ingen får automatisk 90 % rabatt fordi nettsiden er SEO-optimalisert."
+      ],
+      "items": [
+        {
+          "title": "100 kr per klikk",
+          "text": "**Annonsebudsjett: 1 000 kr**\n\n**10 klikk**\n\nDyre klikk er ikke nødvendigvis dårlige. Problemet starter når du betaler mye for folk som aldri kommer til å kjøpe.",
+          "iconName": "coins",
+          "surface": "base-300",
+          "badge": "Dyrt klikk",
+          "boxVariant": "card"
+        },
+        {
+          "title": "10 kr per klikk",
+          "text": "**Annonsebudsjett: 1 000 kr**\n\n**100 klikk**\n\nLav klikkpris kan gi flere besøk. Men det er først når de riktige besøkene blir til bestillinger at regnestykket er interessant.",
+          "iconName": "chart-line-up",
+          "surface": "info",
+          "badge": "Rimelig klikk",
+          "boxVariant": "card"
+        }
+      ],
+      "links": [
+        {
+          "label": "Se hva konvertering kan gjøre",
+          "href": "/konvertering/"
+        }
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "annonsering",
+      "eyebrow": "DET VI FAKTISK FORBEDRER",
+      "heading": "Google belønner relevans. Kundene belønner et godt svar.",
+      "headingAlign": "left",
+      "layout": "three-columns",
+      "surface": "base-100",
+      "body": [
+        "Google Ads sin kvalitetsscore gir en pekepinn på forventet klikkrate, annonserelevans og landingssideopplevelse. Poengsummen er ikke en knapp som bestemmer prisen. Vi forbedrer det som ligger bak tallene, og følger med på faktiske henvendelser og kjøp."
+      ],
+      "items": [
+        {
+          "title": "Søk som kan gi kunder",
+          "text": "Vi prioriterer søk med kjøpsintensjon, vurderer geografi og tidspunkt, og stenger ute søk som spiser budsjett uten å passe tilbudet.",
+          "iconName": "target",
+          "surface": "info",
+          "badge": "Søkeord",
+          "boxVariant": "card"
+        },
+        {
+          "title": "Annonser som svarer på søket",
+          "text": "En annonse for EU-kontroll skal snakke om EU-kontroll, ikke ramse opp alt verkstedet har gjort siden 1987. Kunden skal kjenne igjen behovet sitt.",
+          "iconName": "megaphone",
+          "surface": "base-300",
+          "badge": "Annonser",
+          "boxVariant": "card"
+        },
+        {
+          "title": "En side som gjør jobben ferdig",
+          "text": "Vi kobler annonsen til en relevant side med tydelig tilbud, tillit, mobilopplevelse og enkel vei til bestilling. Her kan flere klikk bli til kunder.",
+          "iconName": "browser",
+          "surface": "secondary",
+          "badge": "Landingsside",
+          "boxVariant": "card"
+        }
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "seo-og-konvertering",
+      "eyebrow": "ET BEDRE GRUNNLAG",
+      "heading": "SEO er ingen rabattkode. En bedre nettside kan likevel hjelpe begge deler.",
+      "headingAlign": "left",
+      "layout": "three-columns",
+      "surface": "info",
+      "body": [
+        "Godt innhold og tydelige tjenestesider kan gjøre deg mer relevant for både betalte og organiske søk. SEO i seg selv bestemmer ikke kvalitetsscoren i Google Ads. Men en landingsside som svarer godt på søket, er nyttig uansett hvordan kunden fant deg."
+      ],
+      "items": [
+        {
+          "title": "Google Ads",
+          "text": "Vi finner de riktige søkene og gjør annonsen relevant for behovet. Målet er bestillinger til en kostnad bedriften kan leve med.",
+          "iconName": "target",
+          "surface": "base-100",
+          "badge": "Betalt",
+          "boxVariant": "card"
+        },
+        {
+          "title": "SEO",
+          "text": "Vi gjør de viktigste sidene lettere å forstå og finne i de organiske søkeresultatene. Du bør ikke måtte betale for hvert eneste relevante besøk.",
+          "iconName": "magnifying-glass",
+          "surface": "base-300",
+          "badge": "Organisk",
+          "boxVariant": "card"
+        },
+        {
+          "title": "Konvertering",
+          "text": "Vi fjerner unødvendige hindringer etter klikket. Hvis flere besøkende bestiller, gir både annonser og organisk trafikk mer verdi.",
+          "iconName": "shopping-cart",
+          "surface": "secondary",
+          "badge": "Flere bestillinger",
+          "boxVariant": "card"
+        }
+      ],
+      "links": [
+        {
+          "label": "Se SEO-tjenestene",
+          "href": "/seo/"
+        },
+        {
+          "label": "Se konverteringsoptimalisering",
+          "href": "/konvertering/"
+        }
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "eurotents-case",
+      "eyebrow": "ET REELT KUNDERESULTAT",
+      "heading": "Eurotents: Fire ganger mer omsetning per annonsekrone.",
+      "headingAlign": "left",
+      "layout": "two-columns",
+      "surface": "base-200",
+      "body": [
+        "Hos Eurotents gikk registrert ROAS i Google Ads fra **4,3x i april 2025 til 17,2x i april 2026**. Samtidig var annonseforbruket **20 % lavere**.",
+        "Dette er et dokumentert kundecase, ikke et løfte om samme utvikling hos deg. ROAS viser registrert omsetning per annonsekrone, ikke fortjenesten etter varekostnader og drift."
+      ],
+      "items": [
+        {
+          "title": "4,3x til 17,2x",
+          "text": "**ROAS i Google Ads**\n\nFire ganger så mye registrert omsetning per annonsekrone i den sammenlignede perioden.",
+          "iconName": "chart-line-up",
+          "surface": "info",
+          "badge": "Resultat",
+          "boxVariant": "card"
+        },
+        {
+          "title": "20 % lavere annonseforbruk",
+          "text": "**Samme sammenligningsperiode**\n\nMer omsetning per annonsekrone, samtidig som annonseforbruket var lavere.",
+          "iconName": "coins",
+          "surface": "base-300",
+          "badge": "Annonsekostnad",
+          "boxVariant": "card"
+        }
+      ]
+    },
+    {
+      "_block": "global",
+      "element": "priser"
+    },
+    {
+      "_block": "content",
+      "id": "oppstart",
+      "eyebrow": "DU BESTILLER JOBBEN, IKKE EN PRESENTASJON",
+      "heading": "Slik starter vi med Google Ads hos deg.",
+      "headingAlign": "left",
+      "layout": "three-columns",
+      "surface": "secondary",
+      "body": [
+        "Vi starter med det som kan koste deg kunder i dag. Om kontoen allerede fungerer godt, sier vi det. Har vi funnet en tydelig lekkasje, prioriterer vi den før vi anbefaler å øke budsjettet."
+      ],
+      "items": [
+        {
+          "title": "1. Sjekk hva du betaler for",
+          "text": "Vi ser på søkeord, søketermer, kampanjer, sporing, budsjett og hva kundene møter etter klikket. Du får vite hva som bør fikses først.",
+          "iconName": "magnifying-glass",
+          "surface": "base-300",
+          "badge": "Kartlegging",
+          "boxVariant": "card"
+        },
+        {
+          "title": "2. Gjør de viktige endringene",
+          "text": "Vi rydder søk, justerer annonser og målretting og forbedrer landingssider innenfor avtalt omfang. Nye sider eller større utvikling avtales separat.",
+          "iconName": "wrench",
+          "surface": "info",
+          "badge": "Gjennomføring",
+          "boxVariant": "card"
+        },
+        {
+          "title": "3. Mål bestillinger, ikke applaus",
+          "text": "Vi følger med på relevante henvendelser, kjøp og kostnad per handling. Tallene styrer neste prioritet, ikke antall grønne piler i rapporten.",
+          "iconName": "chart-line-up",
+          "surface": "base-200",
+          "badge": "Oppfølging",
+          "boxVariant": "card"
+        }
+      ]
+    },
+    {
+      "_block": "global",
+      "element": "sjekk"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Bør alle bedrifter bruke Google Ads?",
+      "answer": "Nei. Hvis tilbudet er uklart, fortjenesten for lav eller nettsiden gjør det vanskelig å bestille, kan flere annonser gjøre et dårlig regnestykke større. Vi vurderer først hva som bør forbedres."
+    },
+    {
+      "question": "Kan jeg virkelig betale 10 kr når konkurrenten betaler 100 kr per klikk?",
+      "answer": "Forskjellen er et illustrerende regneeksempel. Faktiske klikkpriser påvirkes av søket, konkurransen, budet, annonsekvaliteten og landingssiden. En mer relevant annonse kan vinne god synlighet til lavere pris, men ingen kan love en fast rabatt eller en tidel av konkurrentens pris."
+    },
+    {
+      "question": "Gir bedre SEO høyere kvalitetsscore i Google Ads?",
+      "answer": "Ikke automatisk. SEO er ingen direkte faktor i Google Ads sin kvalitetsscore. Men arbeid med nyttige, relevante tjenestesider kan også forbedre opplevelsen for folk som kommer fra annonser. Da kan samme nettsidearbeid være verdifullt i begge kanaler."
+    },
+    {
+      "question": "Hva gjør dere med en Google Ads-konto som allerede bruker penger?",
+      "answer": "Vi starter med kontoen slik den er. Vi ser på hvilke søk som får budsjett, hva som faktisk telles som konvertering, kvaliteten på annonsene og sidene folk lander på. Deretter prioriterer vi avtalte forbedringer."
+    },
+    {
+      "question": "Hva koster Google Ads-hjelp, og er annonsebudsjettet inkludert?",
+      "answer": "Google Ads kan være ett prioritert område i Optimalisering til 4 500 kr per måned eks. mva. Større eller mer sammensatte behov vurderes i Vekst eller Partner. Annonsebudsjettet betales i tillegg direkte til Google. Oppgaver og omfang avtales før oppstart."
+    },
+    {
+      "question": "Hva får jeg i gratis sjekk?",
+      "answer": "Vi gir tre konkrete funn for nettstedet ditt og peker på hva vi ville prioritert først. Selve gratis sjekken krever ikke tilgang til Google Ads-kontoen. En grundigere kontoanalyse og gjennomføring avtales separat."
+    },
+    {
+      "question": "Må jeg ha ny nettside eller mange landingssider?",
+      "answer": "Nei. Vi begynner med sidene som finnes. Hvis én bedre tjenesteside kan gjøre jobben, trenger du ikke ti nesten like. Større nyutvikling er et eget prosjekt."
+    }
+  ]
+}
