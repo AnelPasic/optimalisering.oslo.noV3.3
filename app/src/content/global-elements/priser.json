@@ -335,8 +335,8 @@
         "descriptor": "Flere tjenester og kundereiser.",
         "deliveryLabel": "Dette får du",
         "deliverySummary": "Vi prioriterer og gjennomfører forbedringer for flere tjenester eller markeder. Vi måler utviklingen innenfor kapasiteten vi avtaler.",
-        "servicesLabel": "Tjenester vi kan jobbe med",
-        "servicesNote": "Tjenester og kapasitet prioriteres etter avtale.",
+        "servicesLabel": "4 eller flere av tjenestene prioriteres samtidig.",
+        "servicesNote": "  ",
         "compact": {
           "fit": "Passer for bedrifter med flere typer tjenester, produktområder, markeder eller  lokasjoner som møter forskjellige konkurrenter og trenger samtidig prioritering.",
           "situations": [
