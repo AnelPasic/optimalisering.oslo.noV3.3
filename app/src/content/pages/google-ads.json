@@ -9,7 +9,8 @@
   },
   "seo": {
     "title": "Google Ads-byrå og annonsering i Oslo | Flere kunder fra Google",
-    "description": "Få mer salg fra Google Ads med riktige søk, relevante annonser og landingssider som gjør besøk til bestillinger. Google Ads-hjelp fra Optimalisering Oslo."
+    "description": "Få mer salg fra Google Ads med riktige søk, relevante annonser og landingssider som gjør besøk til bestillinger. Google Ads-hjelp fra Optimalisering Oslo.",
+    "noindex": false
   },
   "hero": {
     "layout": "split-right",
@@ -39,7 +40,11 @@
       "eyebrowPreset": "inherit",
       "titlePreset": "spiss",
       "supportPreset": "spissplus"
-    }
+    },
+    "highlights": [
+      "Google Ads inngår i alle våre pakker",
+      "4 500,- som enkeltjeneste"
+    ]
   },
   "sections": [
     {
