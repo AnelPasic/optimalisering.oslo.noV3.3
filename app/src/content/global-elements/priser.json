@@ -50,9 +50,8 @@
         "title": "Optimalisering",
         "descriptor": "Ett viktig forbedringsområde om gangen.",
         "deliveryLabel": "Dette får du",
-        "deliverySummary": "En prioritert optimaliseringstjeneste per måned i riktig rekkefølge. Konkrete forbedringer og målinger hva som ender opp i bestillinger.",
-        "servicesLabel": "Tjenester vi kan jobbe med",
-        "servicesNote": "Én av tjenestene prioriteres om gangen.",
+        "deliverySummary": "En prioritert optimaliseringstjeneste per måned i riktig rekkefølge. Konkrete forbedringer og målinger over hva som ender opp i bestillinger.",
+        "servicesLabel": "Én av tjenestene prioriteres om gangen.",
         "compact": {
           "fit": "Små og mellomstore bedrifter med én tydelig kundereise, én hovedtjeneste eller én flaskehals som er viktigst om gangen. Typisk en konkurranseutsatt lokal tjenestebedrift, håndverker, mindre klinikk, regnskapskontor eller B2B-bedrift med én tydelig hovedtjeneste. ",
           "situations": [
