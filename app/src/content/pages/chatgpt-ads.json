@@ -28,9 +28,9 @@
     "visual": {
       "kind": "image",
       "image": {
-        "kind": "illustration",
-        "src": "/images/services/discoveringlocalfavorite-1.png",
-        "alt": "Illustrasjon av å oppdage et relevant tilbud",
+        "kind": "photo",
+        "src": "/images/services/hero-chatgpt-ads.webp",
+        "alt": "Visning på ChatGPT Ads",
         "positionX": 50,
         "positionY": 50
       }
