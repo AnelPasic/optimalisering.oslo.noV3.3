@@ -30,7 +30,7 @@ export const homeSectionDataSchema = z.object({
         .refine(options=>new Set(options.map(option=>option.id)).size===options.length,{message:'Comparison focus IDs must be unique'}),
     }).strict(),
     items: z.array(z.object({
-      title: z.string(), descriptor: z.string(), deliverySummary: z.string().trim().min(1).optional(), scope: z.string().optional(),
+      title: z.string(), descriptor: z.string(), deliveryLabel: z.string().optional(), deliverySummary: z.string().optional(), servicesLabel: z.string().optional(), servicesNote: z.string().optional(), scope: z.string().optional(),
       price: z.number().int().positive().max(100000000), pricePrefix: z.literal('fra').optional(), priceSuffix: z.string(), vatSuffix: z.string(),
       recommended: z.boolean(), ...cardDecorationFields, cta: link.extend({ label: z.string().trim().min(1) }), detailLink: link.extend({ label: z.string().trim().min(1) }),
       key: z.enum(['optimalisering', 'vekst', 'partner']),

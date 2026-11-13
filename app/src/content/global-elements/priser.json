@@ -49,7 +49,10 @@
       {
         "title": "Optimalisering",
         "descriptor": "Ett viktig forbedringsområde om gangen.",
+        "deliveryLabel": "Dette får du",
         "deliverySummary": "Vi velger én prioritet, gjør konkrete forbedringer og måler hva som skjer med besøk, henvendelser eller kjøp.",
+        "servicesLabel": "Tjenester vi kan jobbe med",
+        "servicesNote": "Én av tjenestene prioriteres om gangen.",
         "compact": {
           "fit": "Små og mellomstore bedrifter med én tydelig kundereise, én hovedtjeneste eller én flaskehals som er viktigst om gangen. Typisk en konkurranseutsatt lokal tjenestebedrift, håndverker, mindre klinikk, regnskapskontor eller B2B-bedrift med én tydelig hovedtjeneste. ",
           "situations": [
@@ -188,7 +191,10 @@
       {
         "title": "Vekst",
         "descriptor": "To grep som forsterker hverandre.",
+        "deliveryLabel": "Dette får du",
         "deliverySummary": "Vi forbedrer to områder i samme periode, for eksempel Google Ads og bestillingssiden. Du slipper å sette det ene på vent mens vi jobber med det andre.",
+        "servicesLabel": "Tjenester vi kan jobbe med",
+        "servicesNote": "To av tjenestene prioriteres samtidig.",
         "compact": {
           "fit": "Bedrifter som ønsker raskere forbedring både på trafikk og større andel av besøkende til å foreta bestilling. Typisk en konkurranseutsatt tjenestebedrift, håndverker, klinikk, regnskapskontor eller B2B-bedrift med én tydelig hovedtjeneste. \n\n",
           "situations": [
@@ -327,7 +333,10 @@
       {
         "title": "Enterprise",
         "descriptor": "Flere tjenester og kundereiser.",
+        "deliveryLabel": "Dette får du",
         "deliverySummary": "Vi prioriterer og gjennomfører forbedringer for flere tjenester eller markeder. Vi måler utviklingen innenfor kapasiteten vi avtaler.",
+        "servicesLabel": "Tjenester vi kan jobbe med",
+        "servicesNote": "Tjenester og kapasitet prioriteres etter avtale.",
         "compact": {
           "fit": "Passer for bedrifter med flere typer tjenester, produktområder, markeder eller  lokasjoner som møter forskjellige konkurrenter og trenger samtidig prioritering.",
           "situations": [

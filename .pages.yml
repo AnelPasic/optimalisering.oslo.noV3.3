@@ -1939,10 +1939,22 @@ content:
                     label: Pakkeoppsummering
                     type: string
                     required: true
+                  - name: deliveryLabel
+                    label: Dette får du - overskrift (valgfritt)
+                    type: string
+                    description: Vises over leveransebeskrivelsen. Tomt felt skjuler overskriften.
                   - name: deliverySummary
-                    label: Dette får du - konkret leveranse
+                    label: Dette får du - tekst (valgfritt)
                     type: text
-                    description: Forklar hva kunden får utført og hvorfor pakken er relevant. Ingen garanterte resultater eller ubegrenset kapasitet.
+                    description: Forklar hva kunden får utført. Tomt felt skjuler teksten.
+                  - name: servicesLabel
+                    label: Tjenester vi kan jobbe med - overskrift (valgfritt)
+                    type: string
+                    description: Vises over tjenestelisten. Tomt felt skjuler overskriften.
+                  - name: servicesNote
+                    label: Tjenester vi kan jobbe med - støttetekst (valgfritt)
+                    type: text
+                    description: Vises under overskriften, før tjenestegruppene. Tomt felt skjuler teksten.
                   - name: compact
                     label: Kort tekst
                     type: object
