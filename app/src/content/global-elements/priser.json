@@ -192,8 +192,8 @@
         "descriptor": "To grep som forsterker hverandre.",
         "deliveryLabel": "Dette får du",
         "deliverySummary": "Vi forbedrer to områder i samme periode, for eksempel Google Ads og bestillingssiden. Du slipper å sette det ene på vent mens vi jobber med det andre.",
-        "servicesLabel": "Tjenester vi kan jobbe med",
-        "servicesNote": "To av tjenestene prioriteres samtidig.",
+        "servicesLabel": "To av tjenestene prioriteres samtidig.",
+        "servicesNote": "  ",
         "compact": {
           "fit": "Bedrifter som ønsker raskere forbedring både på trafikk og større andel av besøkende til å foreta bestilling. Typisk en konkurranseutsatt tjenestebedrift, håndverker, klinikk, regnskapskontor eller B2B-bedrift med én tydelig hovedtjeneste. \n\n",
           "situations": [
