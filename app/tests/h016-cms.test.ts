@@ -14,7 +14,7 @@ function leaves(fields:any[],prefix=''):any[] {return fields.flatMap(f=>f.fields
 test('OWNER can edit package CTA wording while order and detail routes remain readonly',()=>{
   const fields=leaves(packages.fields.find((f:any)=>f.name==='items').fields);
   const field=(path:string)=>fields.find(f=>f.path===path)?.field;
-  for(const path of ['cta.label','detailLink.label','title','descriptor','compact.fit','compact.situations','price','pricePrefix','priceSuffix','vatSuffix','recommended','badge','visualCaption.label','visualCaption.support','scope','distinction','priceNote']) {
+  for(const path of ['cta.label','detailLink.label','title','descriptor','deliverySummary','compact.fit','compact.situations','price','pricePrefix','priceSuffix','vatSuffix','recommended','badge','visualCaption.label','visualCaption.support','scope','distinction','priceNote']) {
     assert.ok(field(path),`CMS field exists: ${path}`);assert.notEqual(field(path).readonly,true,path);
   }
   assert.equal(field('selectionRule'),undefined,'Removed Valgregel must not remain in CMS');

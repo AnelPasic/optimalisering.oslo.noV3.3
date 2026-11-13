@@ -7,6 +7,7 @@ type Package = HomepageContent['packages']['items'][number];
 interface Props { item: Package; featured?: boolean; orderIntro: string; orderSubmitLabel: string; }
 const { item, featured = false, orderIntro, orderSubmitLabel } = Astro.props;
 const id = (field: string) => `package-${item.key}-${field}`;
+const formatPrice = (value: number) => new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 0 }).format(value);
 const enabled = site.ordersEnabled;
 // Real intake requires backend, privacy, notification and launch approval.
 ---
@@ -14,6 +15,7 @@ const enabled = site.ordersEnabled;
   <summary class:list={['btn', featured ? 'btn-secondary' : 'btn-primary']}>{item.cta.label}<Arrow diagonal /></summary>
   <div class="package-order-panel">
     <h4>Bestill {item.title}</h4>
+    <p class="package-order-selection"><strong>Valgt pakke:</strong> {item.title} - {item.pricePrefix && `${item.pricePrefix} `}{formatPrice(item.price)} {item.priceSuffix} {item.vatSuffix}</p>
     <EditorialText text={orderIntro} />
     <form data-package-order-form data-enabled={String(enabled)} data-endpoint={site.leadEndpoint} method="post" onsubmit="return false">
       <input type="hidden" name="form" value="pakke-bestilling" />

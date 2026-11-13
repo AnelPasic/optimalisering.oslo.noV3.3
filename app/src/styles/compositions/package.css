@@ -50,6 +50,8 @@
 .site-shell .package-offer .package-fit { margin-bottom: 16px; }
 .site-shell .package-offer .package-scope p { font-size: var(--type-body-sm); line-height: var(--leading-body); color: var(--muted); }
 .site-shell .package-offer .package-fit-goals { margin-top: 22px; }
+.site-shell .package-offer .package-delivery { margin: 0 0 20px; }
+.site-shell .package-offer .package-delivery p { color: var(--ink); font-size: var(--type-body-sm); line-height: var(--leading-body); }
 .site-shell .package-offer .package-services-heading { margin-bottom: 4px; }
 .site-shell .package-offer .package-services-note { margin: 0 0 14px; color: var(--muted); font-size: var(--type-meta); line-height: var(--leading-small); }
 .site-shell .package-offer .package-service-group + .package-service-group { margin-top: 16px; }
@@ -160,6 +162,7 @@
 .site-shell .package-offer .package-order-panel { border-top: 1px solid var(--line); padding-top: 16px; }
 .site-shell .package-offer .package-order-panel h4 { font-size: var(--type-body-lg); line-height: var(--leading-body); font-weight: var(--weight-heading); }
 .site-shell .package-offer .package-order-panel > p { color: var(--muted); font-size: var(--type-body-sm); line-height: var(--leading-body); margin-top: 8px; }
+.site-shell .package-offer .package-order-panel .package-order-selection { color: var(--ink); font-size: var(--type-body-sm); }
 .site-shell .package-offer .package-order-panel form { display: grid; gap: 12px; margin-top: 16px; }
 .site-shell .package-offer .package-order-panel label { font-size: var(--type-label); font-weight: var(--weight-label); }
 .site-shell .package-offer .package-order-fields { display: grid; gap: 8px; }

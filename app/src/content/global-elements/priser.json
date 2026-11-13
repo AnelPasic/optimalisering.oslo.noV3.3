@@ -7,8 +7,8 @@
     "eyebrow": "Fast månedlig optimalisering. Ingen bindingstid.",
     "heading": "Tre pakker. Samme mål: Mer salg for din bedrift!",
     "intro": "Alle pakkene løser de samme typene utfordringer. Forskjellen er hvor mange områder vi forbedrer samtidig, og hvor raskt resultatene kommer. Du kan ikke velge feil pakke.",
-    "orderIntro": "Vi bekrefter bestillingen med deg før arbeidet starter.",
-    "orderSubmitLabel": "Send bestilling",
+    "orderIntro": "Send nettside og jobb-e-post. Vi kontakter deg for å avklare mål, omfang, pris og oppstart før du bekrefter avtalen. Ingen betaling når du sender forespørselen.",
+    "orderSubmitLabel": "Send forespørsel",
     "labels": {
       "situations": "Mål",
       "focus": "Fokus",
@@ -49,6 +49,7 @@
       {
         "title": "Optimalisering",
         "descriptor": "Ett viktig forbedringsområde om gangen.",
+        "deliverySummary": "Vi velger én prioritet, gjør konkrete forbedringer og måler hva som skjer med besøk, henvendelser eller kjøp.",
         "compact": {
           "fit": "Små og mellomstore bedrifter med én tydelig kundereise, én hovedtjeneste eller én flaskehals som er viktigst om gangen. Typisk en konkurranseutsatt lokal tjenestebedrift, håndverker, mindre klinikk, regnskapskontor eller B2B-bedrift med én tydelig hovedtjeneste. ",
           "situations": [
@@ -187,6 +188,7 @@
       {
         "title": "Vekst",
         "descriptor": "To grep som forsterker hverandre.",
+        "deliverySummary": "Vi forbedrer to områder i samme periode, for eksempel Google Ads og bestillingssiden. Du slipper å sette det ene på vent mens vi jobber med det andre.",
         "compact": {
           "fit": "Bedrifter som ønsker raskere forbedring både på trafikk og større andel av besøkende til å foreta bestilling. Typisk en konkurranseutsatt tjenestebedrift, håndverker, klinikk, regnskapskontor eller B2B-bedrift med én tydelig hovedtjeneste. \n\n",
           "situations": [
@@ -325,6 +327,7 @@
       {
         "title": "Enterprise",
         "descriptor": "Flere tjenester og kundereiser.",
+        "deliverySummary": "Vi prioriterer og gjennomfører forbedringer for flere tjenester eller markeder. Vi måler utviklingen innenfor kapasiteten vi avtaler.",
         "compact": {
           "fit": "Passer for bedrifter med flere typer tjenester, produktområder, markeder eller  lokasjoner som møter forskjellige konkurrenter og trenger samtidig prioritering.",
           "situations": [

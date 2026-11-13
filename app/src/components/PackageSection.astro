@@ -34,8 +34,9 @@ const formatPrice = (value: number) => new Intl.NumberFormat('nb-NO', { maximumF
       <div class="package-price"><p>{item.pricePrefix && <span class="package-price-prefix">{item.pricePrefix} </span>}<span class="package-price-amount">{formatPrice(item.price)}</span> <span class="package-price-unit">{item.priceSuffix}</span></p><p class="small-copy">{item.vatSuffix}</p></div></div>
       <p class="package-descriptor">{item.descriptor}</p>
       <Visual kind={item.visual} motifId={`package-${expanded ? 'pricing' : 'home'}-${item.key}`} svg={item.visualSvg} asset={item.visualAsset} caption={item.visualCaption} />
+      {item.deliverySummary && <div class="package-delivery"><h3 class="package-block-heading">Dette får du</h3><p>{item.deliverySummary}</p></div>}
       <div class="package-focus">
-        <h3 class="package-block-heading package-services-heading">Tjenester inkludert</h3>
+        <h3 class="package-block-heading package-services-heading">Tjenester vi kan jobbe med</h3>
         <p class="package-services-note">{item.key === 'optimalisering' ? 'Én av tjenestene prioriteres om gangen.' : item.key === 'vekst' ? 'To av tjenestene prioriteres samtidig.' : 'Tjenester og kapasitet prioriteres etter avtale.'}</p>
         {groupPackageServices(item.iconItems).filter(group => group.label !== 'Systemer').map(group => <section class="package-service-group" data-service-category={group.label}>
           <h4 class="package-service-group-heading">{group.label}</h4>

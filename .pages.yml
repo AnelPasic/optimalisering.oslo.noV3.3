@@ -1939,6 +1939,10 @@ content:
                     label: Pakkeoppsummering
                     type: string
                     required: true
+                  - name: deliverySummary
+                    label: Dette får du - konkret leveranse
+                    type: text
+                    description: Forklar hva kunden får utført og hvorfor pakken er relevant. Ingen garanterte resultater eller ubegrenset kapasitet.
                   - name: compact
                     label: Kort tekst
                     type: object
