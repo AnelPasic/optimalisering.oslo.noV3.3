@@ -59,14 +59,14 @@
       ],
       "items": [
         {
-          "title": "1. Riktig målgruppe?",
+          "title": "1. Riktig person?",
           "text": "**Å vise en annonse for badoppussing til en student er som å dra på elgjakt med fiskestang.**\n\nVis den samme annonsen til boligeiere som faktisk planlegger nytt bad, , og du kan lett tidoble antall bestillinger med samme annonsebudsjett.",
           "boxVariant": "card",
           "iconName": "target",
           "badge": "Målgruppe"
         },
         {
-          "title": "2. Fenger annonsen?",
+          "title": "2. Riktig annonse?",
           "text": "**Å fylle annonsen med bedriftens verdier og filosofi er som at brannvesenet leser dikt mens huset brenner.**\n\nFortell heller kunden nøyaktig hvordan du slukker problemet deres i dag, så stopper tommelen og de trykker seg videre.",
           "boxVariant": "card",
           "surface": "base-300",
@@ -74,7 +74,14 @@
           "badge": "Budskap"
         },
         {
-          "title": "3. Enkel nettside?",
+          "title": "3. Riktig tilbud?",
+          "text": "**Ingen markedsfører kan selge ullgensere i Sahara midt på sommeren.**\n\nHvis konkurrenten tilbyr fastpris, garanti og oppstart i morgen, hjelper det lite at du tilbyr timepris og befaring om fire uker.",
+          "boxVariant": "card",
+          "iconName": "credit-card",
+          "badge": "Verdiforslag"
+        },
+        {
+          "title": "4. Riktig nettside?",
           "text": "**Å sende trafikk til en treg forside er som å be middagsgjester klatre inn gjennom kjellervinduet.**\n\nHvis siden bruker fem sekunder på mobil og skjemaet krever 14 felter, snur kunden i døra og velger neste resultat.",
           "boxVariant": "card",
           "surface": "info",
@@ -82,14 +89,7 @@
           "badge": "Brukeropplevelse"
         },
         {
-          "title": "4. Godt tilbud?",
-          "text": "**Ingen markedsfører kan selge ullgensere i Sahara midt på sommeren.**\n\nHvis konkurrenten tilbyr fastpris, garanti og oppstart i morgen, hjelper det lite at du tilbyr timepris og befaring om fire uker.",
-          "boxVariant": "card",
-          "iconName": "credit-card",
-          "badge": "Verdiforslag"
-        },
-        {
-          "title": "5. Faktiske bestillinger?",
+          "title": "5. Ble det bestillinger?",
           "text": "**Å feire 2 000 klikk uten bestillinger er som å feire at folk titter i butikkvinduet mens kassen står tom.**\n\nTrafikk er en ren utgift, det er målte henvendelser og faktiske kjøp som betaler regningene.",
           "boxVariant": "card",
           "surface": "secondary",
@@ -97,7 +97,7 @@
           "badge": "Resultat"
         },
         {
-          "title": "6. Forsvarlig kostnad?",
+          "title": "6. Hva koster det?",
           "text": "**Tjener du 500 kr på et salg, men betaler 750 kr for å skaffe kunden, taper du penger på hver bestilling.**\n\nAnnonsering måles ikke i klikkpris, men i bunnlinje etter at alle kostnader er trukket fra.",
           "boxVariant": "card",
           "iconName": "chart-bar",
