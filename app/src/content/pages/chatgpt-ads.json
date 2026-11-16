@@ -81,7 +81,19 @@
           "badge": "Besøk"
         },
         {
-          "title": "4. Noen av de som klikker bestiller?",
+          "title": "4. Tilbudet noe bra?",
+          "headline": "Er det dere selger noe ",
+          "text": "Selger dere noe som noen ønsker å kjøpe?",
+          "boxVariant": "card"
+        },
+        {
+          "title": "5. Nettsiden optimalisert?",
+          "headline": "Lar nettsiden kundene bestille?",
+          "text": "Er nettsiden en hinderløype eller smooth opplevelse.",
+          "boxVariant": "card"
+        },
+        {
+          "title": "6. Noen av de som klikker bestiller?",
           "text": "Med konverteringsmåling kan vi følge henvendelser og kjøp, og vurdere om resultatene er verdt annonsekostnaden.",
           "boxVariant": "card",
           "surface": "secondary",
@@ -89,13 +101,13 @@
           "badge": "Resultat"
         },
         {
-          "title": "5. Målbart?",
+          "title": "7. Målbart?",
           "headline": "Måler man hvilken annonse skaper bestilling?",
           "text": "Hvis du ikke vet hvilken annonse eller målretting skaper kunder, så blir det vanskelig å kvitte seg med de som ikke resulterer i noe fornuftig.",
           "boxVariant": "card"
         },
         {
-          "title": "6. Kostnad?",
+          "title": "8. Kostnad?",
           "headline": "Koster det noe",
           "text": "Er kostnaden per bestilling forsvarlig?",
           "boxVariant": "card"
