@@ -17,7 +17,7 @@ test('All ordinary pages expose the native local FAQ immediately after the conte
   for (const file of files) {
     const path='app/src/content/pages/'+file;
     const entry=entryForFile(cms,path);
-    assert.deepEqual(entry.fields.slice(0,4).map((field:any)=>field.name),['slug','seo','sections','faq'],file);
+    assert.deepEqual(entry.fields.slice(3,5).map((field:any)=>field.name),['sections','faq'],file);
     const faq=entry.fields.find((field:any)=>field.name==='faq');
     assert.ok(faq,file);
     // Pages CMS accepts YAML field aliases; a single schema is reused by all editors.

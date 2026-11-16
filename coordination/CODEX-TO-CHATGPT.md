@@ -1,5 +1,9 @@
 # Codex to ChatGPT
 
+## 2026-11-16 — Hero tilbake over hovedinnholdet i Pages CMS
+
+Hero ligger igjen rett etter SEO på ordinære sider og øverst på Begreper. Visning i innholdslister ligger under Innholdsseksjoner og Egne spørsmål og svar. Sammenligning av YAML før og etter bekreftet at editorene bare endret rekkefølge. Neste kontroll er å åpne en side i innlogget Pages CMS.
+
 ## 2026-11-16 — Hovedinnhold tidligere i Pages CMS
 
 Sideredaktører viser nå Innholdsseksjoner og FAQ etter URL og SEO. Hero og Visning i innholdslister ligger under hovedinnholdet. Begreper viser termlisten før Hero. Pages CMS kan folde sammen rader i lister. De to feltene er enkeltobjekter i CMS.
