@@ -10,7 +10,7 @@
   "seo": {
     "title": "ChatGPT Ads i Norge | Annonsering for flere kunder | Optimalisering Oslo",
     "description": "ChatGPT Ads i Norge. Vi lager annonser, kobler dem til en god landingsside og måler henvendelser og kjøp. Fra 4 500 kr/mnd eks. mva.",
-    "noindex": false
+    "noindex": true
   },
   "hero": {
     "layout": "split-right",
