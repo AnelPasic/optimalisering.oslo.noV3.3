@@ -73,7 +73,7 @@
           "badge": "Synlighet"
         },
         {
-          "title": "Går folk videre?",
+          "title": "3. Klikker noen?",
           "text": "Vi ser hvilke annonser som skaper interesse, og om siden de lander på svarer godt nok.",
           "boxVariant": "card",
           "surface": "info",
@@ -81,12 +81,24 @@
           "badge": "Besøk"
         },
         {
-          "title": "Kom det en kunde?",
+          "title": "4. Noen av de som klikker bestiller?",
           "text": "Med konverteringsmåling kan vi følge henvendelser og kjøp, og vurdere om resultatene er verdt annonsekostnaden.",
           "boxVariant": "card",
           "surface": "secondary",
           "iconName": "shopping-cart",
           "badge": "Resultat"
+        },
+        {
+          "title": "5. Målbart?",
+          "headline": "Måler man hvilken annonse skaper bestilling?",
+          "text": "Hvis du ikke vet hvilken annonse eller målretting skaper kunder, så blir det vanskelig å kvitte seg med de som ikke resulterer i noe fornuftig.",
+          "boxVariant": "card"
+        },
+        {
+          "title": "6. Kostnad?",
+          "headline": "Koster det noe",
+          "text": "Er kostnaden per bestilling forsvarlig?",
+          "boxVariant": "card"
         }
       ]
     },
