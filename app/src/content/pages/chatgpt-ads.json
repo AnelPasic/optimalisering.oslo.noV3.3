@@ -164,6 +164,18 @@
       ]
     },
     {
+      "_block": "content",
+      "id": "begge-sider-av-klikket",
+      "eyebrow": "DERFOR OPTIMALISERING OSLO",
+      "heading": "Vi har kompetansen på begge sider av klikket.",
+      "headingAlign": "left",
+      "layout": "default",
+      "surface": "secondary",
+      "body": [
+        "- Lang erfaring med betalt annonsering og kampanjeoptimalisering.\n- Teknisk kompetanse til å forbedre landingssider, skjema, hastighet og kjøpsløp.\n- Forståelse for hvordan målretting og trafikkvalitet påvirker konverteringsraten.\n- Evne til å prioritere den forbedringen som har størst potensial først."
+      ]
+    },
+    {
       "_block": "global",
       "element": "priser"
     },
