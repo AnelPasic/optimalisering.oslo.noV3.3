@@ -81,6 +81,12 @@
           "surface": "secondary",
           "iconName": "shopping-cart",
           "badge": "Resultat"
+        },
+        {
+          "title": "Riktig målretting",
+          "headline": "Riktig målretting",
+          "text": "Viser du annonsen til riktig person så er det såklart mye større sannsynlighet at det blir en bestilling av det. Viser du den samme annonsen til en pensjonist eller student, så er det omtrent null sjanse for at det blir en bestilling.",
+          "boxVariant": "card"
         }
       ]
     },
