@@ -29,10 +29,10 @@
       "kind": "image",
       "image": {
         "kind": "photo",
-        "src": "/images/services/hero-chatgpt-ads.webp",
+        "src": "/images/services/chatgptads.png",
         "alt": "Visning på ChatGPT Ads",
-        "positionX": 50,
-        "positionY": 50
+        "positionX": 0,
+        "positionY": 0
       }
     },
     "toneOverrides": {
