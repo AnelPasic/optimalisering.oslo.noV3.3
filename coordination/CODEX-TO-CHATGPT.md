@@ -1,5 +1,11 @@
 # Codex to ChatGPT
 
+## 2026-11-16 — Publisering av to globale seksjoner på ChatGPT Ads
+
+Cloudflare-bygget stoppet etter at «Annonsering Step 2» fikk ny ID. Filnavnet samsvarer nå med den lagrede ID-en og referansen `annonseringtwo`. Begge plasseringene på ChatGPT Ads er bekreftet i det lokale bygget.
+
+Sammenfoldede rader for Global innholdsseksjon bruker den lagrede seksjons-ID-en i tittelen. Neste kontroll er å åpne de to radene i en innlogget Pages CMS-økt.
+
 ## 2026-11-16 — Hero tilbake over hovedinnholdet i Pages CMS
 
 Hero ligger igjen rett etter SEO på ordinære sider og øverst på Begreper. Visning i innholdslister ligger under Innholdsseksjoner og Egne spørsmål og svar. Sammenligning av YAML før og etter bekreftet at editorene bare endret rekkefølge. Neste kontroll er å åpne en side i innlogget Pages CMS.

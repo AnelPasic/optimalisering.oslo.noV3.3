@@ -70,6 +70,7 @@ test('every global block row gets a visible summary from its position and select
     const summary=sections.list.collapsible.summary as string;
     assert.match(summary,/\{index\}/,file);
     assert.match(summary,/\{element\}/,file);
+    assert.match(summary,/\{entry\}/,file);
     assert.ok(summary.includes('{heading}')||summary.includes('{name}'),file);
     assert.ok(sections.blocks.some((block:any)=>block.name==='global'),file);
   }
