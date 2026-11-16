@@ -9,7 +9,8 @@
   },
   "seo": {
     "title": "Konverteringsoptimalisering (CRO) - Flere bestillinger med like mye trafikk",
-    "description": "Den hemmelige løsningen som gjør flere relevante besøk til henvendelser og salg.\nDu vinner ikke med flere annonsekroner i dagens marked."
+    "description": "Den hemmelige løsningen som gjør flere relevante besøk til henvendelser og salg.\nDu vinner ikke med flere annonsekroner i dagens marked.",
+    "noindex": false
   },
   "hero": {
     "layout": "split-right",
@@ -38,7 +39,11 @@
       "label": "Ta en gratis sjekk",
       "suggestedHref": "/#sjekk",
       "href": "#sjekk"
-    }
+    },
+    "highlights": [
+      "Inngår i alle våre pakker",
+      "4 500,- som enkeltjeneste"
+    ]
   },
   "sections": [
     {
