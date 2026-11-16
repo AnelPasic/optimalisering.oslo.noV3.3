@@ -59,7 +59,13 @@
       ],
       "items": [
         {
-          "title": "Blir annonsen vist?",
+          "title": "1. Riktig målretting",
+          "headline": "Riktig målretting",
+          "text": "Viser du annonsen til riktig person så er det såklart mye større sannsynlighet at det blir en bestilling av det. Viser du den samme annonsen til en pensjonist eller student, så er det omtrent null sjanse for at det blir en bestilling.",
+          "boxVariant": "card"
+        },
+        {
+          "title": "2. Annonsen noe bra?",
           "text": "Vi følger med på visninger, annonsekostnad og om kampanjen faktisk kommer ut til publikum.",
           "boxVariant": "card",
           "surface": "base-300",
@@ -81,12 +87,6 @@
           "surface": "secondary",
           "iconName": "shopping-cart",
           "badge": "Resultat"
-        },
-        {
-          "title": "1. Riktig målretting",
-          "headline": "Riktig målretting",
-          "text": "Viser du annonsen til riktig person så er det såklart mye større sannsynlighet at det blir en bestilling av det. Viser du den samme annonsen til en pensjonist eller student, så er det omtrent null sjanse for at det blir en bestilling.",
-          "boxVariant": "card"
         }
       ]
     },
