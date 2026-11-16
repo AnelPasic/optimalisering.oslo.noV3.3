@@ -210,10 +210,11 @@ components:
         label: Tittel
         type: string
         required: true
-      - name: headline
-        label: Stor overskrift på valgkort (valgfritt)
+      - &cardHeadline
+        name: headline
+        label: Stor overskrift (valgfritt)
         type: string
-        description: "For valgkort på Synlighet. Tjenestenavnet står i topplinjen, mens denne teksten blir kortets hovedoverskrift."
+        description: Med egen overskrift vises Tittel som en mindre topplinje. Tomt felt bruker Tittel som kortets overskrift.
       - { name: iconName, label: Phosphor-ikonnavn (valgfritt), component: cardIconName }
       - { name: badge, label: Badge, component: cardBadgeText }
       - { name: badgeClass, label: Badge-klasse, component: cardBadgeClass }
@@ -437,10 +438,7 @@ components:
             label: Tittel
             type: string
             required: true
-          - name: headline
-            label: Stor overskrift på valgkort
-            type: string
-            description: "På Synlighet sine tre valgkort vises denne som stor tittel under tjenesten og prisen. Prisen hentes automatisk fra pakken Optimalisering."
+          - *cardHeadline
           - name: text
             label: Beskrivelse
             component: editorialMarkdown

@@ -1,10 +1,10 @@
 ---
 import {renderSafeMarkdown} from '../lib/rich-markdown';
-interface Props {text:string; variant?:'body'|'card';}
-const {text,variant='body'}=Astro.props;
+interface Props {text:string; variant?:'body'|'card';class?:string;}
+const {text,variant='body',class:className}=Astro.props;
 const safeHtml=renderSafeMarkdown(text);
 ---
-<div class:list={['rich-markdown',variant==='card'&&'text-(length:--type-body) leading-(--leading-body)']} set:html={safeHtml}></div>
+<div class:list={['rich-markdown',variant==='card'&&'text-(length:--type-body) leading-(--leading-body)',className]} set:html={safeHtml}></div>
 <style is:global>
 .rich-markdown{min-width:0;overflow-wrap:anywhere;line-height:inherit;color:inherit;}
 .rich-markdown :is(p,h2,h3,h4,h5,h6,ul,ol){margin:0;}

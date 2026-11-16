@@ -6,7 +6,7 @@ import { sectionDefaultsAt } from '../lib/section-appearance';
 import { actionClasses, buttonChoice } from '../lib/section-buttons';
 import TermText from './TermText.astro';
 import ContentCard from './ContentCard.astro';
-import SynlighetChoiceCards from './SynlighetChoiceCards.astro';
+import type { Surface } from '../lib/surface';
 import RichMarkdown from './RichMarkdown.astro';
 import {hasRichMarkdown} from '../lib/rich-markdown';
 import { resolveSectionSurface, surfaceAttribute } from '../lib/surface';
@@ -21,40 +21,48 @@ const sectionButton = protectedRow ? undefined : buttonChoice(section.buttonStyl
 const boxButton = protectedRow ? undefined : buttonChoice(section.boxButtonStyle, defaults?.boxButtonStyle);
 const surface = resolveSectionSurface(section.surface, defaults?.surface, protectedRow)
   ?? (infoSurface ? 'info' : protectedRow ? undefined : defaultSurface);
+const choiceSurfaces: Surface[] = ['info', 'base-300', 'secondary'];
 const numbered = section.id === 'mekanisme';
 const boxLinkVariant = section._block === 'pageList' || protectedRow ? 'text' : 'button';
 const visualSurfaces = visualId === 'behov' ? ['info', 'base-300', 'base-200'] as const
   : visualId === 'kanaler' ? ['base-300', 'info', 'base-100'] as const : undefined;
-const synlighetChoiceCards = Astro.url.pathname === '/synlighet/' && (section.id === 'kanaler' || section.id === 'betalt-synlighet');
+const serviceChoices = Astro.url.pathname === '/synlighet/' && (section.id === 'kanaler' || section.id === 'betalt-synlighet');
 const terms = Astro.url.pathname === '/synlighet/' ? ['seo', 'lokal-seo', 'ai-synlighet'] : Astro.url.pathname === '/konvertering/' ? ['cro', 'konverteringsrate', 'ordreverdi', 'margin', 'relevant-trafikk'] : Astro.url.pathname === '/seo/' ? ['seo'] : Astro.url.pathname === '/ai-synlighet/' ? ['ai-synlighet', 'aeo', 'aio', 'geo', 'seo'] : Astro.url.pathname === '/nettbutikkoptimalisering/' ? ['checkout', 'ordreverdi', 'margin', 'konverteringsrate'] : [];
 const alignment = resolveHeadingAlignment(section.headingAlign, defaults?.headingAlign);
 ---
 <section id={anchor??section.id} class:list={[`content-section section-space home-section-${visualId ?? section.id}`,{'bg-info text-info-content':infoSurface&&surface==='info'}]} data-surface={surface}>
   <div class="shell">
     <div class="section-heading" data-heading-align={alignment}><div>{section.eyebrow && <p class="eyebrow">{section.eyebrow}</p>}<h2>{section.heading}</h2></div><div class="body-copy" data-content-layout={paragraphLayoutAttribute(section,protectedRow)}>{section.body.map(text => hasRichMarkdown(text)?<RichMarkdown text={text}/>:<p><TermText text={text} terms={terms}/></p>)}</div></div>
-    {section.items && (synlighetChoiceCards
-      ? <SynlighetChoiceCards items={section.items} />
-      : <div class:list={['section-items', { 'two-items': section.items.length === 2, 'mechanism-steps max-sm:grid-cols-1': numbered }]} data-content-layout={contentLayoutAttribute(section.layout,protectedRow)} data-page-list-columns={pageListColumns}>
+    {section.items && <div class:list={serviceChoices
+      ? 'mt-[44px] grid grid-cols-3 gap-(--gap-lg) max-[900px]:grid-cols-1 max-[650px]:mt-8 max-[650px]:gap-(--gap)'
+      : ['section-items', { 'two-items': section.items.length === 2, 'mechanism-steps max-sm:grid-cols-1': numbered }]}
+      data-content-layout={contentLayoutAttribute(section.layout,protectedRow)} data-page-list-columns={pageListColumns}>
         {section.items.map((item, index) => {
           const itemSurface = surfaceAttribute(item.surface, protectedRow);
+          const included = serviceChoices && item.badge === 'Inkludert i alle pakker';
+          const fallbackSurface = serviceChoices ? choiceSurfaces[index % 3] : visualSurfaces?.[index % 3];
           return <ContentCard
             iconName={item.iconName}
             badge={item.badge}
-            badgeClass={item.badgeClass}
-            buttonStyle={buttonChoice(item.buttonStyle, boxButton)}
+            badgeClass={item.badgeClass ?? (serviceChoices ? (included ? 'badge-success' : 'badge-outline') : undefined)}
+            badgeCheck={included}
+            buttonStyle={buttonChoice(item.buttonStyle, serviceChoices ? 'link' : boxButton)}
             title={item.title}
+            headline={item.headline}
             text={item.text}
-            surface={itemSurface ?? visualSurfaces?.[index % 3]}
+            surface={itemSurface ?? fallbackSurface}
             number={numbered ? String(index + 1).padStart(2, '0') : undefined}
-            href={item.href}
-            label={item.label}
-            titleTerms={terms}
-            textTerms={terms}
+            href={serviceChoices ? '#bestill' : item.href}
+            label={item.label ?? (serviceChoices ? 'Velg tjeneste' : undefined)}
+            detailHref={serviceChoices ? item.href : undefined}
+            choice={serviceChoices}
+            titleTerms={serviceChoices ? undefined : terms}
+            textTerms={serviceChoices ? undefined : terms}
             linkVariant={boxLinkVariant}
-            transparent={visualId === 'kanaler' && index % 3 === 2 && !itemSurface}
+            transparent={!serviceChoices && visualId === 'kanaler' && index % 3 === 2 && !itemSurface}
           />;
         })}
-      </div>)}
+      </div>}
     {section.links && <div class:list={['section-links', alignment === 'center' ? 'justify-center' : 'justify-start']}>{section.links.map(link => <a class={actionClasses(sectionButton ?? (protectedRow || linkVariant==='button' ? 'btn' : 'link'))} href={link.href}>{link.label}<Arrow /></a>)}</div>}
     <slot />
   </div>

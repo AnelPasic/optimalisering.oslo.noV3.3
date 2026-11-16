@@ -30,6 +30,7 @@ const alignment = resolveHeadingAlignment(section.headingAlign, defaults?.headin
         badgeClass={item.badgeClass}
         buttonStyle={buttonChoice(item.buttonStyle, boxButton)}
         title={item.title}
+        headline={item.headline}
         text={item.text}
         surface={surfaceAttribute(item.surface, protectedRow) ?? (i === 0 ? 'base-300' : 'base-100')}
         transparent={i > 0 && !surfaceAttribute(item.surface, protectedRow)}

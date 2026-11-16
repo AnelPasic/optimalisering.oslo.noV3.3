@@ -1,5 +1,11 @@
 # Codex to ChatGPT
 
+## 2026-11-16 — Felles kortmal med valgfri stor overskrift
+
+ContentCard brukes for forsiden, Synlighet og vanlige innholdskort i Oslo. Feltet «Stor overskrift (valgfritt)» ligger etter Tittel i Pages CMS. Med en stor overskrift blir Tittel kortets topplinje. Tomt felt bruker Tittel som hovedoverskrift. Innhold og bestillingsmål er bevart. MWS-starteren bruker samme visning for lokale og globale innholdskort.
+
+Astro-sjekk og bygg bestod i begge repoer. Chrome verifiserte 390 og 1440 px, begge temaer og kortlenker på relevante ruter. Pages CMS-feltene er verifisert i YAML og målrettede tester. Neste eierkontroll er å åpne et vanlig kort i den innloggede editoren.
+
 ## 2026-11-13 — Sjekkpunkter i Hero-editoren
 
 Det valgfrie feltet «Sjekkpunkter under Hero-knappene» ligger rett etter «Sekundær handling» i Pages CMS på forsiden og i den delte Hero-editoren. Oppsettet i MWS følger samme rekkefølge. Pages CMS har sammenfolding for listeelementer. Handlingsfeltene er enkeltobjekter.

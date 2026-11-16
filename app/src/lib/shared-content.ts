@@ -24,7 +24,7 @@ const legacyServiceIconNames = Object.keys(legacyServiceIcons) as (keyof typeof 
 
 export const contentItemSchema = z.object({
   title: z.string(),
-  headline: z.string().trim().min(1).optional(),
+  headline: z.preprocess(value => typeof value === 'string' && !value.trim() ? undefined : value, z.string().trim().min(1).optional()),
   ...cardDecorationFields,
   icon: z.preprocess(value => value === '' || value == null ? undefined : value, z.enum(legacyServiceIconNames).optional()),
   text: z.string(),

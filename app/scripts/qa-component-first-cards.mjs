@@ -144,7 +144,8 @@ try {
   await page.close();
  }
 
- // OWNER 30.10: the three home choice cards use native daisyUI Card (no need-card family).
+ // OWNER 30.10: the three home choice cards use native daisyUI Card.
+ const selectorItems=JSON.parse(readFileSync(new URL('../src/content/global-elements/behov.json',import.meta.url),'utf8')).content.items;
  for(const width of [390,768,1440]){
   const page=await browser.newPage({viewport:{width,height:900}});
   const response=await page.goto(origin+'/',{waitUntil:'networkidle'});
@@ -160,7 +161,7 @@ try {
      columns:grid?getComputedStyle(grid).gridTemplateColumns.split(' ').filter(Boolean).length:0,
      native:cards.every(c=>c.classList.contains('card')&&!!c.querySelector(':scope > .card-body')&&!!c.querySelector('.card-actions')),
      noLegacy:document.querySelectorAll('.need-card, [class*="need-card-"], .need-grid').length===0,
-     links:cards.map(c=>c.getAttribute('href')),
+     links:cards.map(c=>c.querySelector('[data-card-detail-link]')?.getAttribute('href')),
      colors:cards.map(c=>getComputedStyle(c).backgroundColor),
      expectedColors:['--color-info','--color-base-300','--color-secondary'].map(token=>{const x=document.createElement('span');x.style.backgroundColor='var('+token+')';document.body.append(x);const bg=getComputedStyle(x).backgroundColor;x.remove();return bg;}),
      foregrounds:cards.map(c=>getComputedStyle(c).color),
@@ -170,7 +171,7 @@ try {
      }),
      childForegrounds:cards.map(c=>[
       c.querySelector('h3'),c.querySelector('p'),c.querySelector('.text-link'),c.querySelector('svg'),
-      c.querySelector('.card-body > div > span')
+      c.querySelector('[data-card-topline]')
      ].map(el=>el?getComputedStyle(el).color:null)),
      padding:cards.map(c=>parseFloat(getComputedStyle(c.querySelector(':scope > .card-body')).paddingLeft)),
      titles:cards.map(c=>parseFloat(getComputedStyle(c.querySelector('h3')).fontSize)),
@@ -182,11 +183,7 @@ try {
    assert.equal(data.count,3,'Three homepage entry choices remain');
    assert.equal(data.native,true,'DaisyUI card/body/actions required');
    assert.equal(data.noLegacy,true,'Legacy selector card classes remain');
-   assert.deepEqual(data.links,[
-      '/priser/?pakke=optimalisering&fokus=synlighet#bestill',
-      '/priser/?pakke=optimalisering&fokus=konvertering#bestill',
-      '/priser/?pakke=vekst&fokus=synlighet-konvertering#bestill',
-    ],'Three needs must lead to the correct single commercial packages and focus');
+   assert.deepEqual(data.links,selectorItems.map(item=>item.link.href),'Card links must follow the CMS package choices');
    assert.deepEqual(data.colors,data.expectedColors,'Semantic theme surfaces differ from approved info/base-300/secondary mapping');
    assert.deepEqual(data.foregrounds,data.expectedForegrounds,'Home selector text must pair with daisyUI surface content tokens');
    for(let i=0;i<3;i++) for(const [k,fg] of data.childForegrounds[i].entries())
@@ -208,8 +205,9 @@ try {
  const organicSource=JSON.parse(readFileSync(new URL('../src/content/global-content/kanaler.json',import.meta.url),'utf8'));
  const organicItems=organicSource.items;
  const expectedBadges=organicItems.map(item=>item.badge);
- const includedBadgeClass='badge badge-success badge-sm h-auto min-h-5 max-w-full whitespace-normal border-current py-1';
- const outlinedBadgeClass='badge badge-outline badge-sm h-auto min-h-5 max-w-full whitespace-normal border-current py-1 text-inherit';
+ const badgeClasses = value => value?.trim().split(/\s+/).sort().join(' ');
+ const includedBadgeClass=badgeClasses('badge badge-success badge-sm h-auto min-h-5 max-w-full whitespace-normal border-current py-1');
+ const outlinedBadgeClass=badgeClasses('badge badge-outline badge-sm h-auto min-h-5 max-w-full whitespace-normal border-current py-1 text-inherit');
  for(const width of [390,768,1440]){
   const page=await browser.newPage({viewport:{width,height:900}});
   assert.equal((await page.goto(origin+'/synlighet/',{waitUntil:'networkidle'})).status(),200);
@@ -226,7 +224,7 @@ try {
      icons:nodes.map(n=>n.querySelector('svg[data-phosphor-icon]')?.getAttribute('data-phosphor-icon')),
      iconSizes:nodes.map(n=>n.querySelector('svg[data-phosphor-icon]')?.getBoundingClientRect().width),
      iconAccessibility:nodes.map(n=>n.querySelector('svg[data-phosphor-icon]')?.getAttribute('aria-hidden')),
-     top:nodes.map(n=>n.querySelector('.card-body > div > div > span')?.textContent?.trim().replace(/\s+/g,' ')),
+     top:nodes.map(n=>n.querySelector('[data-card-topline]')?.textContent?.trim().replace(/\s+/g,' ')),
      badges:nodes.map(n=>n.querySelector('.badge')?.textContent?.trim()),
      badgeCheckIcons:nodes.map(n=>{
        const icon=n.querySelector('.badge svg');
@@ -265,7 +263,7 @@ try {
    assert.ok(cards.badgeCheckIcons.every((icon,i)=>organicItems[i].badge==='Inkludert i alle pakker'
      ? icon?.size&&icon.hidden==='true'&&icon.circle&&icon.check==='7 13 10 16 17 8'
      : icon===null),'Only inclusion success badges get the DaisyUI check-circle icon');
-   assert.deepEqual(cards.badgeClasses,organicItems.map(i=>i.badge==='Inkludert i alle pakker'?includedBadgeClass:outlinedBadgeClass),'Only included-in-all-packages badges use exact success classes');
+   assert.deepEqual(cards.badgeClasses.map(badgeClasses),organicItems.map(i=>i.badge==='Inkludert i alle pakker'?includedBadgeClass:outlinedBadgeClass),'Only included-in-all-packages badges use exact success classes');
    assert.ok(cards.badgeColors.every(c=>c&&c.color!==c.bg),'Badge must have distinguishable text and background');
    assert.equal(cards.priceVisible,false,'Price must not be displayed on organic choice cards');
    assert.deepEqual(cards.styles.map(x=>x.color),cards.expectedColors);
@@ -287,7 +285,7 @@ try {
  }
 
  // Paid visibility uses the exact same card UI as organic, immediately below it.
- // The three paid service-detail pages do not exist yet: no dead overlay links.
+ // Paid cards only link to detail pages configured in CMS.
  const paidSource=JSON.parse(readFileSync(new URL('../src/content/global-content/betalt-synlighet.json',import.meta.url),'utf8'));
  const synlighetPage=JSON.parse(readFileSync(new URL('../src/content/pages/synlighet.json',import.meta.url),'utf8'));
  assert.deepEqual(synlighetPage.sections.slice(0,2),[
@@ -311,7 +309,7 @@ try {
      icon:node.querySelector('svg[data-phosphor-icon]')?.getAttribute('data-phosphor-icon'),
      iconSize:node.querySelector('svg[data-phosphor-icon]')?.getBoundingClientRect().width,
      iconAccessibility:node.querySelector('svg[data-phosphor-icon]')?.getAttribute('aria-hidden'),
-     service:node.querySelector('.card-body > div > div > span')?.textContent?.trim(),
+     service:node.querySelector('[data-card-topline]')?.textContent?.trim(),
      badge:node.querySelector('.badge')?.textContent?.trim(),
      badgeCheckIcon:(()=>{
        const icon=node.querySelector('.badge svg');
@@ -352,9 +350,10 @@ try {
    assert.ok(paid.cards.every((card,i)=>paidSource.items[i].badge==='Inkludert i alle pakker'
      ? card.badgeCheckIcon?.size&&card.badgeCheckIcon.hidden==='true'&&card.badgeCheckIcon.circle&&card.badgeCheckIcon.check==='7 13 10 16 17 8'
      : card.badgeCheckIcon===null),'Paid badges get the check icon only with inclusion success copy');
-   assert.deepEqual(paid.cards.map(c=>c.badgeClass),paidSource.items.map(i=>i.badge==='Inkludert i alle pakker'?includedBadgeClass:outlinedBadgeClass));
+   assert.deepEqual(paid.cards.map(c=>badgeClasses(c.badgeClass)),paidSource.items.map(i=>i.badge==='Inkludert i alle pakker'?includedBadgeClass:outlinedBadgeClass));
    assert.ok(paid.cards.every(c=>c.badgeTextColor!==c.badgeBackgroundColor),'Paid badge text and background must differ');
-   assert.ok(paid.cards.every(c=>c.link===null&&c.linkCount===1),'No fabricated links to unpublished paid service pages');
+   assert.deepEqual(paid.cards.map(c=>c.link),paidSource.items.map(item=>item.href??null));
+   assert.ok(paid.cards.every(c=>c.linkCount===(c.link ? 2 : 1)),'Only configured detail links are added to the order action');
    assert.deepEqual(paid.cards.map(c=>c.order),['#bestill','#bestill','#bestill']);
    assert.ok(paid.cards.every(c=>c.tag==='article'&&Math.abs(c.padding-(width>1100?32:24))<.6));
    assert.equal(paid.hasAnchor,true,'Order anchor must exist on local Synlighet page');

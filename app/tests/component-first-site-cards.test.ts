@@ -34,13 +34,16 @@ test('MWS #26 Oslo pilot: package shells are daisyUI and complex offer internals
  assert.match(css,/\.package-order-inline/,'specialized pricing behavior is preserved');
 });
 
-test('Oslo homepage three selector cards use semantic daisyUI background AND matching foreground',()=>{
- const markup=read('src/components/HomepageBlock.astro');
- for (const pair of ['bg-info text-info-content','bg-base-300 text-base-content','bg-secondary text-secondary-content'])
-  assert.ok(markup.includes(pair),'missing theme-safe color pair: '+pair);
- assert.doesNotMatch(markup,/bg-secondary text-info(?!-content)/,'never mix secondary and info text colors');
- assert.doesNotMatch(markup,/text-\(--muted\)/,'description should inherit the semantic card foreground');
- assert.match(markup,/text-inherit/,'card descriptions inherit the correct content color');
+test('Homepage, Synlighet and ordinary sections share the same card and heading fields',()=>{
+ const homepage=read('src/components/HomepageBlock.astro');
+ const sections=read('src/components/HomeSection.astro')+read('src/components/ContentSection.astro');
+ const card=read('src/components/ContentCard.astro');
+ assert.match(homepage,/<ContentCard[\s\S]*?title=\{item.discipline\}[\s\S]*?headline=\{item.title\}/);
+ assert.match(homepage,/selectorSurfaces.*\['info', 'base-300', 'secondary'\]/);
+ assert.equal([...sections.matchAll(/headline=\{item.headline\}/g)].length,2);
+ assert.match(card,/surfaceClasses\(selected\)/);
+ assert.match(card,/text=\{heading \|\| title\}/);
+ assert.doesNotMatch(sections,/SynlighetChoiceCards/);
 });
 
 test('calculator uses matching daisyUI surface/content pairs, not fixed light text or chart ink',()=>{
