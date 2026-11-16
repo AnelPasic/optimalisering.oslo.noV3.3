@@ -55,65 +55,50 @@
       "layout": "three-columns",
       "surface": "base-100",
       "body": [
-        "Målretting×Budskap×Klikk×Tilbud×Nettside×Konvertering×Måling=Lønnsomhet\n\nSelve verktøyet og knappene for å starte en kampanje i OpenAI Ads Manager eller Google Ads kan hvem som helst trykke på. Men annonsering er en **kjede**, og hvis ett ledd svikter, multipliseres hele regnestykket med null:\n\nEt nytt annonseformat er spennende, deretter vil du vite hva pengene ga igjen. Vi følger hele reisen fra annonse til bestilling. Klikk er interessant, men det er bestillinger som teller."
+        "Målgruppe x Budskap x Nettside x Tilbud x Bestilling = Lønnsomhet\n\nSelve verktøyet og knappene for å starte en kampanje i OpenAI Ads Manager eller Google Ads kan hvem som helst trykke på. Men annonsering er en **kjede**, og hvis ett ledd svikter, multipliseres hele regnestykket med null:\n\nEt nytt annonseformat er spennende, deretter vil du vite hva pengene ga igjen. Vi følger hele reisen fra annonse til bestilling. Klikk er interessant, men det er bestillinger som teller."
       ],
       "items": [
         {
-          "title": "1. Riktig person?",
-          "text": "**Å vise en annonse for badoppussing til en student er som å dra på elgjakt med fiskestang.**\n\nVis den samme annonsen til boligeiere som faktisk planlegger nytt bad, og du kan lett tidoble antall bestillinger med samme annonsebudsjett.",
+          "title": "1. Riktig målgruppe?",
+          "text": "**Å vise en annonse for badoppussing til en student er som å dra på elgjakt med fiskestang.**\n\nVis den samme annonsen til boligeiere som faktisk planlegger nytt bad, og du henter langt flere bestillinger ut av samme budsjett.",
           "boxVariant": "card",
           "iconName": "target",
           "badge": "Målgruppe"
         },
         {
-          "title": "2. Annonsen noe bra?",
-          "headline": "Hvor synlig er annonsen?",
-          "text": "Å skrive om visjoner og verdier i en annonse er som å kaste en lærebok i svømming til noen som holder på å drukne. \n\nFortell heller kunden nøyaktig hvordan du slukker problemet deres i dag, og du gjør annonsen umulig å overse.",
+          "title": "2. Fenger annonsen?",
+          "text": "**Å fylle annonsen med bedriftens verdier og filosofi er som at brannvesenet leser dikt mens huset brenner.**\n\nFortell heller kunden nøyaktig hvordan du slukker problemet deres i dag, så stopper tommelen og de trykker seg videre.",
           "boxVariant": "card",
           "surface": "base-300",
-          "iconName": "eye",
-          "badge": "Treffer annonsen"
+          "iconName": "cursor-click",
+          "badge": "Budskap"
         },
         {
-          "title": "3. Klikker noen?",
-          "text": "Tenk deg en butikk der 10 000 personer går forbi vinduet hver dag, men bare tre tar i dørhåndtaket. Da er det enten feil folk i gata, eller skiltet gir ingen grunn til å gå inn. Klikkraten viser om løftet skaper ekte interesse.",
+          "title": "3. Enkel nettside?",
+          "text": "**Å sende trafikk til en treg forside er som å be middagsgjester klatre inn gjennom kjellervinduet.**\n\nHvis siden bruker fem sekunder på mobil og skjemaet krever 14 felter, snur kunden i døra og velger neste resultat.",
           "boxVariant": "card",
           "surface": "info",
-          "iconName": "cursor-click",
-          "badge": "Besøk"
+          "iconName": "browser",
+          "badge": "Brukeropplevelse"
         },
         {
-          "title": "4. Tilbudet noe bra?",
-          "text": "Ingen markedsfører kan selge ullgensere i Sahara midt på sommeren. Hvis konkurrenten tilbyr fastpris, garanti og oppstart i morgen, hjelper det lite at du tilbyr timepris og befaring om fire uker. Tilbudet må tåle sammenligning.",
+          "title": "4. Godt tilbud?",
+          "text": "**Ingen markedsfører kan selge ullgensere i Sahara midt på sommeren.**\n\nHvis konkurrenten tilbyr fastpris, garanti og oppstart i morgen, hjelper det lite at du tilbyr timepris og befaring om fire uker.",
           "boxVariant": "card",
           "iconName": "credit-card",
-          "badge": "Tilbud"
+          "badge": "Verdiforslag"
         },
         {
-          "title": "5. Nettsiden optimalisert?",
-          "text": "Å sende trafikk til en treg forside er som å be middagsgjester klatre inn gjennom kjellervinduet. Hvis siden bruker fem sekunder på mobil og skjemaet krever 14 felter, snur kunden i døra og velger neste resultat.",
-          "boxVariant": "card",
-          "iconName": "browser",
-          "badge": "Nettside"
-        },
-        {
-          "title": "6. Noen av de som klikker bestiller?",
-          "text": "Å feire 2 000 klikk uten bestillinger er som å feire at folk titter i butikkvinduet mens kassen står tom. Trafikk er en utgift. Henvendelser og faktiske kjøp er det som betaler regningene. Her skiller vi støy fra resultat.",
+          "title": "5. Faktiske bestillinger?",
+          "text": "**Å feire 2 000 klikk uten bestillinger er som å feire at folk titter i butikkvinduet mens kassen står tom.**\n\nTrafikk er en ren utgift, det er målte henvendelser og faktiske kjøp som betaler regningene.",
           "boxVariant": "card",
           "surface": "secondary",
           "iconName": "shopping-cart",
           "badge": "Resultat"
         },
         {
-          "title": "7. Målbart?",
-          "text": "Uten sporing kaster du dart med bind for øynene: Treffer én pil midt i blinken, aner du ikke hvilken pil det var eller hvordan du gjentar det. Med presis måling vet vi nøyaktig hvilken annonse og krone som skapte kunden.",
-          "boxVariant": "card",
-          "iconName": "chart-line-up",
-          "badge": "Måling"
-        },
-        {
-          "title": "8. Kostnad?",
-          "text": "Tjener du 500 kr på et salg, men betaler 750 kr i annonsekostnad for å skaffe kunden, taper du penger på hver eneste bestilling. Annonsering måles ikke i klikkpris, men i bunnlinje: Kostnaden per kunde må være forsvarlig.",
+          "title": "6. Forsvarlig kostnad?",
+          "text": "**Tjener du 500 kr på et salg, men betaler 750 kr for å skaffe kunden, taper du penger på hver bestilling.**\n\nAnnonsering måles ikke i klikkpris, men i bunnlinje etter at alle kostnader er trukket fra.",
           "boxVariant": "card",
           "iconName": "chart-bar",
           "badge": "Lønnsomhet"
