@@ -107,6 +107,14 @@
       ]
     },
     {
+      "_block": "sharedContent",
+      "entry": "annonseringone"
+    },
+    {
+      "_block": "sharedContent",
+      "entry": "annonseringtwo"
+    },
+    {
       "_block": "content",
       "id": "sporsmalene",
       "eyebrow": "DET BEGYNNER MED ET SPØRSMÅL",
