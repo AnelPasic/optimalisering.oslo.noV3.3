@@ -1,0 +1,14 @@
+{
+  "_block": "content",
+  "uid": "5ca00e7c-c579-4347-a14d-baf6b20c85de",
+  "id": "annonseringsteptwo",
+  "name": "Annonsering Step 2",
+  "heading": "Mange stopper her, men du er bare halvveis.",
+  "items": [
+    {
+      "title": "4. Riktig nettside?",
+      "text": "**Å sende trafikk til en dårlig optimalisert nettside er som å be middagsgjester klatre inn gjennom kjellervinduet.**\n\nHvis siden bruker fem sekunder på mobil og skjemaet krever 14 felter, snur kunden i døra og velger neste resultat.",
+      "boxVariant": "card"
+    }
+  ]
+}
