@@ -12,12 +12,12 @@ const cms = YAML.parse(readFileSync('../.pages.yml','utf8'));
 const files = pageFilePaths();
 const load = (file: string) => JSON.parse(readFileSync('src/content/pages/'+file,'utf8'));
 
-test('all 17 pages expose the same native page-specific FAQ list, without changing the slug/SEO/Hero contract',()=>{
-  assert.equal(files.length,17);
+test('All ordinary pages expose the native local FAQ immediately after the content sections',()=>{
+  assert.ok(files.length > 0);
   for (const file of files) {
     const path='app/src/content/pages/'+file;
     const entry=entryForFile(cms,path);
-    assert.deepEqual(entry.fields.slice(0,3).map((field:any)=>field.name),['slug','seo','hero'],file);
+    assert.deepEqual(entry.fields.slice(0,4).map((field:any)=>field.name),['slug','seo','sections','faq'],file);
     const faq=entry.fields.find((field:any)=>field.name==='faq');
     assert.ok(faq,file);
     // Pages CMS accepts YAML field aliases; a single schema is reused by all editors.

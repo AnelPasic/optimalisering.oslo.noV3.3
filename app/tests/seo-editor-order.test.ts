@@ -18,17 +18,19 @@ function sitePageEditors(entries: Entry[]): Entry[] {
   ]);
 }
 
-test('Readonly URL-slug comes first, immediately before SEO and Hero on every page editor', () => {
+test('URL-slug and SEO come first, followed by the page content', () => {
   const editors = sitePageEditors(config.content);
   assert.equal(editors.length, 10, 'Two unified collections and eight other fixed page editors');
   const services=editors.find(editor=>editor.name==='services');
   assert.ok(services);
-  assert.deepEqual(services.fields?.slice(0,3).map(field=>field.name),['slug','seo','hero']);
+  assert.deepEqual(services.fields?.slice(0,6).map(field=>field.name),['slug','seo','sections','faq','hero','listing']);
+  const glossary = config.content.find((entry: Entry) => entry.name === 'terminology');
+  assert.deepEqual(glossary?.fields?.slice(-2).map((field: Field) => field.name), ['terms', 'hero']);
   assert.equal(services.fields?.[0]?.readonly,undefined,'Create needs editable URL slug');
   assert.equal(services.fields?.[0]?.required,true);
   const articles=editors.find(editor=>editor.name==='insightArticles');
   assert.ok(articles);
-  assert.deepEqual(articles.fields?.slice(0,3).map(field=>field.name),['slug','seo','hero']);
+  assert.deepEqual(articles.fields?.slice(0,6).map(field=>field.name),['slug','seo','sections','faq','hero','listing']);
   assert.equal(articles.fields?.[0]?.readonly,undefined);
   assert.equal(articles.fields?.[0]?.required,true);
   const originalEditors=editors.filter(editor=>!['services','insightArticles'].includes(editor.name));
@@ -43,7 +45,7 @@ test('Readonly URL-slug comes first, immediately before SEO and Hero on every pa
     assert.ok(seo.fields?.slice(0, 2).every(field => field.required === true), editor.label);
     assert.equal(editor.fields?.filter(field => field.name === 'seo').length, 1, editor.label);
     // URL-slug remains the unchanged top-level JSON field: this is only a visual reorder.
-    assert.deepEqual(editor.fields?.slice(0, 3).map(field => field.name), ['slug', 'seo', 'hero'], editor.label);
+    assert.deepEqual(editor.fields?.map(field => field.name), ['slug', 'seo', 'sections', 'faq', 'hero', 'listing'], editor.label);
     const slug = editor.fields?.[0];
     assert.equal(slug?.label, 'URL-slug', editor.label);
     assert.equal(slug?.type, 'string', editor.label);

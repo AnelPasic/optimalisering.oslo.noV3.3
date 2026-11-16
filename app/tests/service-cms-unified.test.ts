@@ -49,7 +49,7 @@ test('All six service sources roundtrip in native CMS model without losing conte
 
 test('Create uses existing SEO/Hero/Sections editor, fixed service kind and validated unique slug',()=>{
  const fields=collection.fields;
- assert.deepEqual(fields.slice(0,3).map((f:any)=>f.name),['slug','seo','hero']);
+ assert.deepEqual(fields.slice(0,3).map((f:any)=>f.name),['slug','seo','sections']);
  const slug=fields[0];
  assert.equal(slug.readonly,undefined,'Create requires writable slug');
  assert.equal(slug.required,true);

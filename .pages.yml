@@ -1123,122 +1123,6 @@ content:
             default: false
             description: Holder siden ute av søkemotorer, sitemap og nettstedets søk. Siden kan fortsatt åpnes med direkte lenke.
         required: true
-      - name: hero
-        label: Hero
-        type: object
-        required: true
-        fields:
-          - &hubHerolayout
-            name: layout
-            label: Oppsett
-            component: heroLayoutChoice
-          - &heroSurface
-            name: surface
-            label: Fargepar
-            component: surfaceChoice
-          - name: toneOverrides
-            label: Språk og tone for denne Hero
-            component: heroToneOverrides
-          - &hubHeroeyebrow
-            name: eyebrow
-            label: Overtekst
-            type: string
-            required: true
-          - &hubHerotitle
-            name: title
-            label: Hovedoverskrift
-            type: string
-            required: true
-          - &hubHerosupport
-            name: support
-            label: Ingress
-            component: editorialMarkdown
-            required: true
-          - &hubHeroprimaryCta
-            name: primaryCta
-            label: Primær handling
-            component: link
-            required: true
-          - &hubHerosecondaryCta
-            name: secondaryCta
-            label: Sekundær handling
-            component: optionalHeroLink
-            description: Ekstra knapp er valgfri. La feltene stå tomme for å bruke kun primær handling.
-          - &hubHeroHighlights
-            name: highlights
-            label: Sjekkpunkter under Hero-knappene (valgfritt)
-            description: Korte, kontrollerte fakta om tjenester, inkludering, startpris og omfang. Maks fire. Beskrivelser må stemme med godkjente pakker.
-            type: string
-            list:
-              min: 0
-              max: 4
-          - &heroProofCase
-            name: featuredProofCaseId
-            label: Utvalgt Proof i Hero
-            description: Valgfritt. Vis et dokumentert resultat som et lite kort over Hero-bildet. Bare kundecaser som oppfyller alle publiserings- og evidenskrav vises. Ingen overstyring av Case/evidens (intern).
-            type: reference
-            options:
-              collection: proofCases
-              value: "{fields.id}"
-              label: "{fields.clientName} ({fields.publicationStatus})"
-              search: id,clientName
-          - name: visual
-            label: Visuelt innhold
-            description: Velg Bilde under Visuelt innhold for å åpne bildevelger, bildetype og utsnitt. Ingen viser bare tekst. Lagret bilde bevares hvis du senere velger Ingen.
-            type: block
-            blockKey: kind
-            required: true
-            blocks:
-              - name: none
-                label: Ingen – bare tekst (velg Bilde for bildevalg)
-                type: object
-                fields: []
-              - name: image
-                label: Bilde – velg eller endre bilde
-                type: object
-                fields:
-                  - name: image
-                    label: Valgt bilde og utsnitt
-                    type: object
-                    required: true
-                    fields:
-                      - name: kind
-                        label: Bildetype
-                        type: select
-                        options:
-                          values:
-                            - photo
-                            - illustration
-                        description: Valgfritt for eksisterende dekorative forsidebilder. Foto er standard.
-                      - name: src
-                        label: Valgt bilde
-                        type: image
-                        options:
-                          media: heroImages
-                        required: true
-                      - name: alt
-                        label: Kort beskrivelse av bildets mening
-                        type: string
-                        description: Valgfritt for dekorative bilder. Tomt felt gir tom alt-tekst.
-                      - &hubHeropositionX
-                        name: positionX
-                        label: Horisontalt utsnitt (%)
-                        type: number
-                        default: 50
-                        options:
-                          min: 0
-                          max: 100
-                        required: true
-                      - &hubHeropositionY
-                        name: positionY
-                        label: Vertikalt utsnitt (%)
-                        type: number
-                        default: 50
-                        options:
-                          min: 0
-                          max: 100
-                        required: true
-      - { name: listing, component: cardListing }
       - name: sections
         label: Innholdsseksjoner
         type: block
@@ -1398,6 +1282,122 @@ content:
             label: Svar
             component: editorialMarkdown
             required: true
+      - name: hero
+        label: Hero
+        type: object
+        required: true
+        fields:
+          - &hubHerolayout
+            name: layout
+            label: Oppsett
+            component: heroLayoutChoice
+          - &heroSurface
+            name: surface
+            label: Fargepar
+            component: surfaceChoice
+          - name: toneOverrides
+            label: Språk og tone for denne Hero
+            component: heroToneOverrides
+          - &hubHeroeyebrow
+            name: eyebrow
+            label: Overtekst
+            type: string
+            required: true
+          - &hubHerotitle
+            name: title
+            label: Hovedoverskrift
+            type: string
+            required: true
+          - &hubHerosupport
+            name: support
+            label: Ingress
+            component: editorialMarkdown
+            required: true
+          - &hubHeroprimaryCta
+            name: primaryCta
+            label: Primær handling
+            component: link
+            required: true
+          - &hubHerosecondaryCta
+            name: secondaryCta
+            label: Sekundær handling
+            component: optionalHeroLink
+            description: Ekstra knapp er valgfri. La feltene stå tomme for å bruke kun primær handling.
+          - &hubHeroHighlights
+            name: highlights
+            label: Sjekkpunkter under Hero-knappene (valgfritt)
+            description: Korte, kontrollerte fakta om tjenester, inkludering, startpris og omfang. Maks fire. Beskrivelser må stemme med godkjente pakker.
+            type: string
+            list:
+              min: 0
+              max: 4
+          - &heroProofCase
+            name: featuredProofCaseId
+            label: Utvalgt Proof i Hero
+            description: Valgfritt. Vis et dokumentert resultat som et lite kort over Hero-bildet. Bare kundecaser som oppfyller alle publiserings- og evidenskrav vises. Ingen overstyring av Case/evidens (intern).
+            type: reference
+            options:
+              collection: proofCases
+              value: "{fields.id}"
+              label: "{fields.clientName} ({fields.publicationStatus})"
+              search: id,clientName
+          - name: visual
+            label: Visuelt innhold
+            description: Velg Bilde under Visuelt innhold for å åpne bildevelger, bildetype og utsnitt. Ingen viser bare tekst. Lagret bilde bevares hvis du senere velger Ingen.
+            type: block
+            blockKey: kind
+            required: true
+            blocks:
+              - name: none
+                label: Ingen – bare tekst (velg Bilde for bildevalg)
+                type: object
+                fields: []
+              - name: image
+                label: Bilde – velg eller endre bilde
+                type: object
+                fields:
+                  - name: image
+                    label: Valgt bilde og utsnitt
+                    type: object
+                    required: true
+                    fields:
+                      - name: kind
+                        label: Bildetype
+                        type: select
+                        options:
+                          values:
+                            - photo
+                            - illustration
+                        description: Valgfritt for eksisterende dekorative forsidebilder. Foto er standard.
+                      - name: src
+                        label: Valgt bilde
+                        type: image
+                        options:
+                          media: heroImages
+                        required: true
+                      - name: alt
+                        label: Kort beskrivelse av bildets mening
+                        type: string
+                        description: Valgfritt for dekorative bilder. Tomt felt gir tom alt-tekst.
+                      - &hubHeropositionX
+                        name: positionX
+                        label: Horisontalt utsnitt (%)
+                        type: number
+                        default: 50
+                        options:
+                          min: 0
+                          max: 100
+                        required: true
+                      - &hubHeropositionY
+                        name: positionY
+                        label: Vertikalt utsnitt (%)
+                        type: number
+                        default: 50
+                        options:
+                          min: 0
+                          max: 100
+                        required: true
+      - { name: listing, component: cardListing }
     operations: &a3
       create: false
       rename: false
@@ -1468,6 +1468,37 @@ content:
                 required: true
               - *seoNoindex
             required: true
+          - &a6
+            name: sections
+            label: Innholdsseksjoner
+            description: Åpne en vanlig Innholdsseksjon for Seksjonsfarge. Åpne en boks under Alternativer eller steg for Boksfarge. Beskyttede sjekk-/handlingsseksjoner har ikke fargevalg.
+            type: block
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{index}. {heading}{element}"
+            required: false
+            blockKey: _block
+            blocks:
+              - name: content
+                label: Innholdsseksjon
+                component: synlighetSectionContent
+              - name: protected
+                label: Beskyttet sjekk / handling
+                component: sectionProtected
+              - name: pageList
+                label: PageList – innholdsliste
+                component: sectionPageList
+              - name: proofList
+                label: ProofList – kundecaser
+                component: sectionProofList
+              - name: global
+                label: Globalt element
+                component: serviceGlobalPlacement
+              - name: sharedContent
+                label: Global innholdsseksjon
+                component: sharedContentPlacement
+          - *a7
           - &standardHero
             name: hero
             label: Hero
@@ -1527,37 +1558,6 @@ content:
                           - *hubHeropositionX
                           - *hubHeropositionY
           - { name: listing, component: cardListing }
-          - &a6
-            name: sections
-            label: Innholdsseksjoner
-            description: Åpne en vanlig Innholdsseksjon for Seksjonsfarge. Åpne en boks under Alternativer eller steg for Boksfarge. Beskyttede sjekk-/handlingsseksjoner har ikke fargevalg.
-            type: block
-            list:
-              collapsible:
-                collapsed: true
-                summary: "{index}. {heading}{element}"
-            required: false
-            blockKey: _block
-            blocks:
-              - name: content
-                label: Innholdsseksjon
-                component: synlighetSectionContent
-              - name: protected
-                label: Beskyttet sjekk / handling
-                component: sectionProtected
-              - name: pageList
-                label: PageList – innholdsliste
-                component: sectionPageList
-              - name: proofList
-                label: ProofList – kundecaser
-                component: sectionProofList
-              - name: global
-                label: Globalt element
-                component: serviceGlobalPlacement
-              - name: sharedContent
-                label: Global innholdsseksjon
-                component: sharedContentPlacement
-          - *a7
           - name: kind
             label: Page type
             type: string
@@ -1571,7 +1571,6 @@ content:
     path: app/src/content/terminology/glossary.json
     format: json
     fields:
-      - *standardHero
       - name: description
         label: Metabeskrivelse
         type: text
@@ -1647,6 +1646,7 @@ content:
             label: Enkelt eksempel
             component: editorialMarkdown
             required: false
+      - *standardHero
   - name: priceGroup
     label: Priser
     type: group
@@ -1660,8 +1660,6 @@ content:
         fields:
           - *serviceslug
           - *a4
-          - *standardHero
-          - { name: listing, component: cardListing }
           - name: sections
             label: Innholdsseksjoner
             description: Flytt eller skjul seksjoner her. Tekster, pakkepriser og sammenligningspunkter redigeres i Priser → Pakker og priser. Kalkulator og resultater redigeres under Globale Elementer.
@@ -1709,6 +1707,8 @@ content:
                 label: Global innholdsseksjon
                 component: sharedContentPlacement
           - *a7
+          - *standardHero
+          - { name: listing, component: cardListing }
 
       - name: globalPackages
         label: Pakker og priser
@@ -2133,8 +2133,6 @@ content:
         fields:
           - *serviceslug
           - *a4
-          - *standardHero
-          - { name: listing, component: cardListing }
           - name: sections
             label: Innholdsseksjoner
             type: block
@@ -2161,6 +2159,8 @@ content:
                 label: Global innholdsseksjon
                 component: sharedContentPlacement
           - *a7
+          - *standardHero
+          - { name: listing, component: cardListing }
       - name: insightArticles
         label: Artikler
         type: collection
@@ -2199,10 +2199,10 @@ content:
               message: "Use innsikt/ followed by lowercase letters, numbers and hyphens."
             description: "Public URL /innsikt/article-name/. Existing URLs must not be renamed."
           - *a4
-          - *standardHero
-          - { name: listing, component: cardListing }
           - *a6
           - *a7
+          - *standardHero
+          - { name: listing, component: cardListing }
           - name: kind
             label: Page type
             type: string
@@ -2219,10 +2219,10 @@ content:
     fields: &a13
       - *serviceslug
       - *a4
-      - *standardHero
-      - { name: listing, component: cardListing }
       - *a6
       - *a7
+      - *standardHero
+      - { name: listing, component: cardListing }
   - name: vurdering
     label: Optimaliseringssjekk
     type: file

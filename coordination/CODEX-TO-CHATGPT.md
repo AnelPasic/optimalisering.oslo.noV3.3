@@ -1,5 +1,11 @@
 # Codex to ChatGPT
 
+## 2026-11-16 — Hovedinnhold tidligere i Pages CMS
+
+Sideredaktører viser nå Innholdsseksjoner og FAQ etter URL og SEO. Hero og Visning i innholdslister ligger under hovedinnholdet. Begreper viser termlisten før Hero. Pages CMS kan folde sammen rader i lister. De to feltene er enkeltobjekter i CMS.
+
+Sammenligning av før og etter bekreftet samme YAML-felt og verdier utenom rekkefølgen. Målrettede tester dekket feltrekkefølge og simulert lagring. Feltplasseringen i en innlogget Pages CMS-økt gjenstår.
+
 ## 2026-11-16 — Felles kortmal med valgfri stor overskrift
 
 ContentCard brukes for forsiden, Synlighet og vanlige innholdskort i Oslo. Feltet «Stor overskrift (valgfritt)» ligger etter Tittel i Pages CMS. Med en stor overskrift blir Tittel kortets topplinje. Tomt felt bruker Tittel som hovedoverskrift. Innhold og bestillingsmål er bevart. MWS-starteren bruker samme visning for lokale og globale innholdskort.
