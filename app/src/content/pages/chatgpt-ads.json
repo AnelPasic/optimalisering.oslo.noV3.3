@@ -55,13 +55,14 @@
       "layout": "three-columns",
       "surface": "base-100",
       "body": [
-        "Målgruppe x Budskap x Tilbud x Nettside x Bestilling = Lønnsomhet\n\nSelve verktøyet og knappene for å starte en kampanje i ChatGPT Ads eller Google Ads kan hvem som helst trykke på. Men annonsering er en **kjede**, og hvis ett ledd svikter, multipliseres hele regnestykket med null.\n\nEt nytt annonseformat er spennende, deretter vil du vite hva pengene ga igjen. Vi følger hele reisen fra annonse til bestilling. Klikk er interessant, men det er bestillinger som teller."
+        "### **Målgruppe x Budskap x Tilbud x Nettside x Bestilling = Lønnsomhet**\n\nSelve verktøyet og knappene for å starte en kampanje i ChatGPT Ads eller Google Ads kan hvem som helst trykke på. Men annonsering er en **kjede.** \n\n**Hvis ett ledd svikter, multipliseres hele regnestykket med null.**\n\nEt nytt annonseformat er spennende, deretter vil du vite hva pengene ga igjen. Vi følger hele reisen fra annonse til bestilling. Klikk er interessant, men det er bestillinger som teller."
       ],
       "items": [
         {
           "title": "1. Riktig person?",
           "text": "**Å vise en annonse for badoppussing til en student er som å dra på elgjakt med fiskestang.**\n\nVis den samme annonsen til boligeiere som faktisk planlegger nytt bad, og du kan lett tidoble antall bestillinger med samme annonsebudsjett.",
           "boxVariant": "card",
+          "surface": "base-200",
           "iconName": "target",
           "badge": "Målgruppe"
         },
