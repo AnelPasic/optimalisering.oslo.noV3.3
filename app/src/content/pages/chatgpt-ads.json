@@ -60,13 +60,14 @@
       "items": [
         {
           "title": "1. Riktig målretting?",
-          "headline": "Riktig målretting",
-          "text": "Viser du annonsen som handler om badoppussing til en pensjonist eller student, så er det omtrent null sjanse for at det blir en bestilling. Viser du annonsen til riktig person så er det såklart mye større sannsynlighet at det blir en bestilling av det. ",
-          "boxVariant": "card"
+          "text": "Å vise badoppussing til en student på hybel er som å dele ut snømåkingsbrosjyrer i juli: Null sjanse for bestilling uansett hvor fin annonsen er. Viser du den til en huseier med aktivt oppussingsbehov, øker sannsynligheten dramatisk.",
+          "boxVariant": "card",
+          "iconName": "target",
+          "badge": "Målgruppe"
         },
         {
           "title": "2. Annonsen noe bra?",
-          "text": "Vi følger med på visninger, annonsekostnad og om kampanjen faktisk kommer ut til publikum.",
+          "text": "Kan du bytte ut logoen din med konkurrentens uten at noen merker forskjell, er annonsen usynlig. Tekster som 'god kvalitet og personlig service' blir bakgrunnsstøy. Annonsen må svare direkte på problemet kunden sitter med akkurat nå.",
           "boxVariant": "card",
           "surface": "base-300",
           "iconName": "eye",
@@ -74,7 +75,7 @@
         },
         {
           "title": "3. Klikker noen?",
-          "text": "Vi ser hvilke annonser som skaper interesse, og om siden de lander på svarer godt nok.",
+          "text": "Tenk deg en butikk der 10 000 personer går forbi vinduet hver dag, men bare tre tar i dørhåndtaket. Da er det enten feil folk i gata, eller skiltet gir ingen grunn til å gå inn. Klikkraten viser om løftet skaper ekte interesse.",
           "boxVariant": "card",
           "surface": "info",
           "iconName": "cursor-click",
@@ -82,19 +83,21 @@
         },
         {
           "title": "4. Tilbudet noe bra?",
-          "headline": "Er det dere selger noe ",
-          "text": "Selger dere noe som noen ønsker å kjøpe?",
-          "boxVariant": "card"
+          "text": "Ingen markedsfører kan selge ullgensere i Sahara midt på sommeren. Hvis konkurrenten tilbyr fastpris, garanti og oppstart i morgen, hjelper det lite at du tilbyr timepris og befaring om fire uker. Tilbudet må tåle sammenligning.",
+          "boxVariant": "card",
+          "iconName": "credit-card",
+          "badge": "Tilbud"
         },
         {
           "title": "5. Nettsiden optimalisert?",
-          "headline": "Lar nettsiden kundene bestille?",
-          "text": "Er nettsiden en hinderløype eller smooth opplevelse.",
-          "boxVariant": "card"
+          "text": "Å sende trafikk til en treg forside er som å be middagsgjester klatre inn gjennom kjellervinduet. Hvis siden bruker fem sekunder på mobil og skjemaet krever 14 felter, snur kunden i døra og velger neste resultat.",
+          "boxVariant": "card",
+          "iconName": "browser",
+          "badge": "Nettside"
         },
         {
           "title": "6. Noen av de som klikker bestiller?",
-          "text": "Med konverteringsmåling kan vi følge henvendelser og kjøp, og vurdere om resultatene er verdt annonsekostnaden.",
+          "text": "Å feire 2 000 klikk uten bestillinger er som å feire at folk titter i butikkvinduet mens kassen står tom. Trafikk er en utgift. Henvendelser og faktiske kjøp er det som betaler regningene. Her skiller vi støy fra resultat.",
           "boxVariant": "card",
           "surface": "secondary",
           "iconName": "shopping-cart",
@@ -102,15 +105,17 @@
         },
         {
           "title": "7. Målbart?",
-          "headline": "Måler man hvilken annonse skaper bestilling?",
-          "text": "Hvis du ikke vet hvilken annonse eller målretting skaper kunder, så blir det vanskelig å kvitte seg med de som ikke resulterer i noe fornuftig.",
-          "boxVariant": "card"
+          "text": "Uten sporing kaster du dart med bind for øynene: Treffer én pil midt i blinken, aner du ikke hvilken pil det var eller hvordan du gjentar det. Med presis måling vet vi nøyaktig hvilken annonse og krone som skapte kunden.",
+          "boxVariant": "card",
+          "iconName": "chart-line-up",
+          "badge": "Måling"
         },
         {
           "title": "8. Kostnad?",
-          "headline": "Koster det noe",
-          "text": "Er kostnaden per bestilling forsvarlig?",
-          "boxVariant": "card"
+          "text": "Tjener du 500 kr på et salg, men betaler 750 kr i annonsekostnad for å skaffe kunden, taper du penger på hver eneste bestilling. Annonsering måles ikke i klikkpris, men i bunnlinje: Kostnaden per kunde må være forsvarlig.",
+          "boxVariant": "card",
+          "iconName": "chart-bar",
+          "badge": "Lønnsomhet"
         }
       ]
     },
