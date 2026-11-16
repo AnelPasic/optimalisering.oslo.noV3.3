@@ -48,6 +48,44 @@
   "sections": [
     {
       "_block": "content",
+      "id": "maaling",
+      "eyebrow": "MÅL DET SOM FAKTISK HAR VERDI",
+      "heading": "Ny annonsekanal. Gammel regel: Den må lønne seg.",
+      "headingAlign": "left",
+      "layout": "three-columns",
+      "surface": "base-100",
+      "body": [
+        "Et nytt annonseformat er spennende i omtrent fem minutter. Deretter vil du vite hva pengene ga igjen. Vi følger hele reisen fra annonse til henvendelse eller kjøp. Klikk er interessant. Betalende kunder er mer interessante."
+      ],
+      "items": [
+        {
+          "title": "Blir annonsen vist?",
+          "text": "Vi følger med på visninger, annonsekostnad og om kampanjen faktisk kommer ut til publikum.",
+          "boxVariant": "card",
+          "surface": "base-300",
+          "iconName": "eye",
+          "badge": "Synlighet"
+        },
+        {
+          "title": "Går folk videre?",
+          "text": "Vi ser hvilke annonser som skaper interesse, og om siden de lander på svarer godt nok.",
+          "boxVariant": "card",
+          "surface": "info",
+          "iconName": "cursor-click",
+          "badge": "Besøk"
+        },
+        {
+          "title": "Kom det en kunde?",
+          "text": "Med konverteringsmåling kan vi følge henvendelser og kjøp, og vurdere om resultatene er verdt annonsekostnaden.",
+          "boxVariant": "card",
+          "surface": "secondary",
+          "iconName": "shopping-cart",
+          "badge": "Resultat"
+        }
+      ]
+    },
+    {
+      "_block": "content",
       "id": "sporsmalene",
       "eyebrow": "DET BEGYNNER MED ET SPØRSMÅL",
       "heading": "Kunden beskriver problemet. Ikke firmanavnet ditt.",
@@ -213,44 +251,6 @@
           "surface": "secondary",
           "iconName": "shopping-cart",
           "badge": "Oppfølging"
-        }
-      ]
-    },
-    {
-      "_block": "content",
-      "id": "maaling",
-      "eyebrow": "MÅL DET SOM FAKTISK HAR VERDI",
-      "heading": "Ny annonsekanal. Gammel regel: Den må lønne seg.",
-      "headingAlign": "left",
-      "layout": "three-columns",
-      "surface": "base-100",
-      "body": [
-        "Et nytt annonseformat er spennende i omtrent fem minutter. Deretter vil du vite hva pengene ga igjen. Vi følger hele reisen fra annonse til henvendelse eller kjøp. Klikk er interessant. Betalende kunder er mer interessante."
-      ],
-      "items": [
-        {
-          "title": "Blir annonsen vist?",
-          "text": "Vi følger med på visninger, annonsekostnad og om kampanjen faktisk kommer ut til publikum.",
-          "boxVariant": "card",
-          "surface": "base-300",
-          "iconName": "eye",
-          "badge": "Synlighet"
-        },
-        {
-          "title": "Går folk videre?",
-          "text": "Vi ser hvilke annonser som skaper interesse, og om siden de lander på svarer godt nok.",
-          "boxVariant": "card",
-          "surface": "info",
-          "iconName": "cursor-click",
-          "badge": "Besøk"
-        },
-        {
-          "title": "Kom det en kunde?",
-          "text": "Med konverteringsmåling kan vi følge henvendelser og kjøp, og vurdere om resultatene er verdt annonsekostnaden.",
-          "boxVariant": "card",
-          "surface": "secondary",
-          "iconName": "shopping-cart",
-          "badge": "Resultat"
         }
       ]
     },
