@@ -1,7 +1,7 @@
 {
   "id": "eurotents",
   "clientName": "Eurotents",
-  "dominantMetric": "ROAS - Google Ads",
+  "dominantMetric": "4X [ROAS] Omsetning per annonsekrone",
   "before": "4,3 X",
   "after": "17,2 X",
   "delta": "4X Større omsetning per annonsekrone",
@@ -23,5 +23,6 @@
     "coordination/PROOF-CANDIDATE-AUDIT-2026-10-11.md"
   ],
   "publicationStatus": "PUBLISHABLE",
-  "publicationApproved": true
+  "publicationApproved": true,
+  "relationship": "ROAS - Google Ads"
 }
