@@ -3,5 +3,27 @@
   "uid": "1883a0b2-bddf-434c-a5cb-f98703351d43",
   "id": "annonseringone",
   "name": "Annonsering Step 1",
-  "heading": "Uansett annonsekanal det samme gjelder: Må være lønnsomt"
+  "heading": "Uansett annonsekanal det samme gjelder: Må være lønnsomt",
+  "items": [
+    {
+      "title": "1. Riktig person?",
+      "iconName": "target",
+      "badge": "Målgruppe",
+      "text": "**Å vise en annonse for badoppussing til en student er som å dra på elgjakt med fiskestang.**Vis den samme annonsen til boligeiere som faktisk planlegger nytt bad, og du kan lett tidoble antall bestillinger med samme annonsebudsjett.",
+      "boxVariant": "card"
+    },
+    {
+      "title": "2. Riktig annonse?",
+      "iconName": "cursor-click",
+      "badge": "Budskap",
+      "text": "**Annonsere med \"Vi brenner for bærekraft, innovasjon og verdiskaping\" er ja.. lite effektivt**\n\nDu har toppen 1.5 sekund å overbevise. Fortell heller nøyaktig hvordan du slukker problemet deres nå, så gidder de å lese. ",
+      "boxVariant": "card"
+    },
+    {
+      "title": "3. Riktig tilbud?",
+      "iconName": "credit-card",
+      "text": "**Å annonsere for et svakt tilbud er som å prøve å selge piggdekk i Spania.**\n\nHvis konkurrenten tilbyr fastpris, garanti og oppstart i morgen, hjelper det lite at du tilbyr timepris og befaring om fire uker.",
+      "boxVariant": "card"
+    }
+  ]
 }
