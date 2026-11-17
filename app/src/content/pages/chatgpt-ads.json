@@ -53,7 +53,7 @@
       "eyebrow": "Mål det som faktisk har verdi",
       "heading": "Ny annonsekanal samme prinsipp: Må være lønnsomt",
       "headingAlign": "left",
-      "layout": "stacked",
+      "layout": "two-columns",
       "surface": "base-100",
       "items": [
         {
