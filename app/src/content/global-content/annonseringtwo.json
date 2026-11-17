@@ -21,6 +21,11 @@
       "badgeClass": "badge-info",
       "text": "**Å feire 2 000 klikk uten bestillinger er som å feire at folk titter i butikkvinduet.**\n\nTrafikk er en ren utgift, det er målte bestillinger som de fleste lever av.",
       "boxVariant": "card"
+    },
+    {
+      "title": "6. Hva koster det?",
+      "text": "**Tjener en bedrift 5000 kr på et salg, men betaler 7500 kr for å skaffe kunden, taper den penger på bestilling.**\n\nAnnonsering måles ikke i klikkpris og antall visninger, men i bunnlinje etter at alle kostnader er trukket fra, ja også byråkostnader.",
+      "boxVariant": "card"
     }
   ]
 }
