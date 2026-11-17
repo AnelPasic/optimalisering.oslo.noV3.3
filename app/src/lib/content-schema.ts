@@ -79,6 +79,7 @@ export const pageSchema = z.preprocess((input,context)=>{
       layout: contentLayoutSchema,
       id: z.string(), eyebrow: z.string().optional(), heading: z.string(), body: z.array(z.string()).default([]),
       items: z.array(contentItemSchema).optional(),
+      afterCards: z.array(z.string()).optional(),
       links: z.array(link).optional(),
     })).default([]),
     faq: z.array(z.object({ question: z.string(), answer: z.string() })).default([]),

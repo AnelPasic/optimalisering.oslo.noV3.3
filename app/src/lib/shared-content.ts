@@ -43,6 +43,7 @@ export const sharedContentSchema=z.object({
  eyebrow:z.string().optional(),heading:z.string().trim().min(1),body:z.array(z.string()).default([]),
  headingAlign:headingAlignSchema,layout:contentLayoutSchema,surface:surfaceSchema,buttonStyle:buttonStyleSchema,boxButtonStyle:buttonStyleSchema,
  items:z.array(contentItemSchema).optional(),
+ afterCards:z.array(z.string()).optional(),
  links:z.array(z.object({label:z.string(),href:z.string().refine(safeCmsHref)})).optional(),
 }).strict().superRefine((section,ctx)=>{
  if(reserved.has(section.id)||/^(?:calc-|scenario-|package-home-|term-|header-(?:desktop|mobile)-submenu-)/.test(section.id))

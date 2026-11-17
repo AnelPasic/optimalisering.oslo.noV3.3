@@ -1,0 +1,17 @@
+---
+import EditorialText from './EditorialText.astro';
+import TermText from './TermText.astro';
+
+interface Props {
+  paragraphs?: string[];
+  alignment: 'left' | 'center';
+  terms?: string[];
+}
+const { paragraphs = [], alignment, terms = [] } = Astro.props;
+const visibleParagraphs = paragraphs.filter(text => text.trim());
+---
+{visibleParagraphs.length > 0 && (
+  <div class:list={['body-copy mt-7 [&>*+*]:mt-[18px]', alignment === 'center' && 'text-center']} data-after-cards>
+    {visibleParagraphs.map(text => <EditorialText text={text}><TermText text={text} terms={terms} /></EditorialText>)}
+  </div>
+)}

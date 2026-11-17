@@ -6,6 +6,7 @@ import { actionClasses, buttonChoice } from '../lib/section-buttons';
 import TermText from './TermText.astro';
 import ContentCard from './ContentCard.astro';
 import RichMarkdown from './RichMarkdown.astro';
+import SectionAfterCards from './SectionAfterCards.astro';
 import {hasRichMarkdown} from '../lib/rich-markdown';
 import { resolveSectionSurface, surfaceAttribute } from '../lib/surface';
 import { siteChrome as chrome } from '../lib/site-chrome-data';
@@ -40,6 +41,7 @@ const alignment = resolveHeadingAlignment(section.headingAlign, defaults?.headin
         textTerms={terms}
       />)}
     </div>}
+    <SectionAfterCards paragraphs={section.afterCards} alignment={alignment} terms={terms} />
     {section.links && <div class:list={['section-links', alignment === 'center' ? 'justify-center' : 'justify-start']}>{section.links.map(link => <a class={actionClasses(sectionButton ?? 'link')} href={link.href}>{link.label}<Arrow /></a>)}</div>}
   </div>
 </section>

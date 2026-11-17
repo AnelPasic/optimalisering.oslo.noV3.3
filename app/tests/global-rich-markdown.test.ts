@@ -1,17 +1,20 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
+import YAML from 'yaml';
+import {pageSchema} from '../src/lib/content-schema.ts';
+import {homepageBlockSchema} from '../src/lib/home-builder.ts';
 import {hasRichMarkdown,renderSafeMarkdown} from '../src/lib/rich-markdown.ts';
 import {sharedContentSchema,readSharedContent} from '../src/lib/shared-content.ts';
 const read=(path:string)=>readFileSync(new URL(path,import.meta.url),'utf8');
 
 test('Pages CMS uses Markdown for global and local body and cards; original sources stay byte-identical',()=>{
- const yaml=read('../../.pages.yml');
+ const yaml=read('../../.pages.yml').replaceAll('\r\n','\n');
  const start=yaml.indexOf('  - name: globalElements\n'),end=yaml.indexOf('      - name: globalSelector',start);
  assert.ok(start>0&&end>start);
  const global=yaml.slice(start,end);
  assert.match(global,/name: body\n\s+label: Avsnitt \/ kolonner \(Markdown\)\n\s+component: globalMarkdownBody/);
- assert.match(global,/name: items\n\s+label: Kort \/ alternativer \(Markdown\)\n\s+component: globalMarkdownItems/);
+ assert.match(global,/name: items\n\s+label: Cards\n\s+component: globalMarkdownItems/);
  assert.match(yaml,/globalMarkdownBody:\n\s+type: rich-text\n\s+list: \{\}/);
  assert.match(yaml,/globalMarkdownItems:[\s\S]*?type: rich-text/);
  assert.match(yaml,/media: false/);
@@ -75,4 +78,27 @@ test('global text still uses same layouts and has no new stored flags',()=>{
  assert.deepEqual(result.body,item.body);
  assert.equal(result.items?.[0]?.text,'- Punkt');
  assert.equal(Object.keys(result).includes('richText'),false);
+});
+
+test('Cards is followed by optional rich-text paragraphs in local and global section editors',()=>{
+ const yaml=YAML.parse(read('../../.pages.yml'));
+ const group=yaml.content.find((entry:any)=>entry.name==='globalElements');
+ const shared=group.items.find((entry:any)=>entry.name==='sharedContent');
+ for(const fields of [yaml.components.synlighetSectionContent.fields,shared.fields]){
+  const i=fields.findIndex((field:any)=>field.name==='items');
+  assert.equal(fields[i].label,'Cards');
+  assert.equal(fields[i+1].name,'afterCards');
+  assert.equal(fields[i+1].component,'sectionAfterCards');
+ }
+ assert.equal(yaml.components.sectionAfterCards.type,'rich-text');
+ assert.equal(yaml.components.sectionAfterCards.options.format,'markdown');
+ const afterCards=['**Et avsnitt** under kortene.','[Kontakt](/kontakt/)'];
+ const local=JSON.parse(read('../src/content/pages/chatgpt-ads.json'));
+ local.sections.find((section:any)=>section._block==='content').afterCards=afterCards;
+ assert.deepEqual(pageSchema.parse(local).sections.find(section=>section.id==='maaling')?.afterCards,afterCards);
+ const global={...JSON.parse(read('../src/content/global-content/lafoitems.json')),afterCards};
+ assert.deepEqual(sharedContentSchema.parse(global).afterCards,afterCards);
+ const homepageBlock=homepageBlockSchema.parse(global);
+ assert.equal(homepageBlock._block,'content');
+ assert.deepEqual(homepageBlock.afterCards,afterCards);
 });

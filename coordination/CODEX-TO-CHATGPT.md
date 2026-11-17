@@ -1,5 +1,11 @@
 # Codex to ChatGPT
 
+## 2026-11-17 — Cards og avsnitt under kortene
+
+Kortlistene heter «Cards». Lokale og gjenbrukbare innholdsseksjoner har et valgfritt Markdown-felt for avsnitt under kortene. Teksten lagres som afterCards og vises før seksjonslenkene.
+
+Astro-sjekk og bygg bestod i begge repoer. Neste kontroll i Pages CMS er å åpne en lokal eller global seksjon og se feltet rett etter Cards.
+
 ## 2026-11-16 — Publisering av to globale seksjoner på ChatGPT Ads
 
 Cloudflare-bygget stoppet etter at «Annonsering Step 2» fikk ny ID. Filnavnet samsvarer nå med den lagrede ID-en og referansen `annonseringtwo`. Begge plasseringene på ChatGPT Ads er bekreftet i det lokale bygget.

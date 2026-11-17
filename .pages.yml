@@ -191,6 +191,11 @@ components:
       - name: supportPreset
         label: Ingress / støttetekst - tone
         component: heroPartToneChoice
+  sectionAfterCards:
+    label: Avsnitt under kortene
+    type: rich-text
+    list: {}
+    options: { format: markdown, media: false, switcher: true }
   globalMarkdownBody:
     type: rich-text
     list: {}
@@ -427,7 +432,7 @@ components:
         description: Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Globale elementer → Pakker og priser.
       - &serviceItems
         name: items
-        label: Alternativer eller steg
+        label: Cards
         type: object
         list:
           collapsible:
@@ -462,6 +467,7 @@ components:
           - { name: iconName, label: Phosphor-ikon, component: cardIconName }
           - { name: badge, label: Badge, component: cardBadgeText }
           - { name: badgeClass, label: Badge-klasse, component: cardBadgeClass }
+      - { name: afterCards, component: sectionAfterCards }
       - &serviceLinks
         name: links
         label: Relaterte lenker
@@ -833,7 +839,7 @@ components:
         list: {}
         description: Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Seksjoner → Pakker og priser.
       - name: items
-        label: Alternativer eller steg
+        label: Cards
         type: object
         list:
           collapsible:
@@ -858,6 +864,7 @@ components:
           - name: label
             label: Lenketekst
             type: string
+      - { name: afterCards, component: sectionAfterCards }
       - name: links
         label: Relaterte lenker
         component: link
@@ -886,7 +893,7 @@ components:
         list: {}
         description: Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Seksjoner → Pakker og priser.
       - name: items
-        label: Alternativer eller steg
+        label: Cards
         type: object
         list:
           collapsible:
@@ -949,6 +956,7 @@ components:
       - *serviceSurface
       - *serviceBody
       - *serviceItems
+      - { name: afterCards, component: sectionAfterCards }
       - *serviceLinks
   seoGlobalPlacement:
     type: object
@@ -1338,7 +1346,7 @@ content:
                 list: {}
                 description: Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Seksjoner → Pakker og priser.
               - name: items
-                label: Alternativer eller steg
+                label: Cards
                 type: object
                 list:
                   collapsible:
@@ -1372,6 +1380,7 @@ content:
                   - { name: iconName, label: Phosphor-ikon, component: cardIconName }
                   - { name: badge, label: Badge, component: cardBadgeText }
                   - { name: badgeClass, label: Badge-klasse, component: cardBadgeClass }
+              - { name: afterCards, component: sectionAfterCards }
               - name: links
                 label: Relaterte lenker
                 component: link
@@ -1529,7 +1538,7 @@ content:
           - &a6
             name: sections
             label: Innholdsseksjoner
-            description: Åpne en vanlig Innholdsseksjon for Seksjonsfarge. Åpne en boks under Alternativer eller steg for Boksfarge. Beskyttede sjekk-/handlingsseksjoner har ikke fargevalg.
+            description: Åpne en vanlig Innholdsseksjon for Seksjonsfarge. Åpne en boks under Cards for Boksfarge. Beskyttede sjekk-/handlingsseksjoner har ikke fargevalg.
             type: block
             list:
               collapsible:
@@ -2965,8 +2974,9 @@ content:
             label: Avsnitt / kolonner (Markdown)
             component: globalMarkdownBody
           - name: items
-            label: Kort / alternativer (Markdown)
+            label: Cards
             component: globalMarkdownItems
+          - { name: afterCards, component: sectionAfterCards }
           - *serviceLinks
       - name: globalSelector
         label: Behovsvelger
@@ -3270,7 +3280,7 @@ content:
                     list: {}
                     description: Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Seksjoner → Pakker og priser.
                   - name: items
-                    label: Alternativer eller steg
+                    label: Cards
                     type: object
                     list:
                       collapsible:
@@ -3659,7 +3669,7 @@ content:
             list: {}
             description: Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Seksjoner → Pakker og priser.
           - name: items
-            label: Alternativer eller steg
+            label: Cards
             type: object
             list:
               collapsible:
@@ -3693,6 +3703,7 @@ content:
               - { name: iconName, label: Phosphor-ikon, component: cardIconName }
               - { name: badge, label: Badge, component: cardBadgeText }
               - { name: badgeClass, label: Badge-klasse, component: cardBadgeClass }
+          - { name: afterCards, component: sectionAfterCards }
           - name: links
             label: Relaterte lenker
             component: link
@@ -3761,7 +3772,7 @@ content:
             list: {}
             description: Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Seksjoner → Pakker og priser.
           - name: items
-            label: Alternativer eller steg
+            label: Cards
             type: object
             list:
               collapsible:
@@ -3795,6 +3806,7 @@ content:
               - { name: iconName, label: Phosphor-ikon, component: cardIconName }
               - { name: badge, label: Badge, component: cardBadgeText }
               - { name: badgeClass, label: Badge-klasse, component: cardBadgeClass }
+          - { name: afterCards, component: sectionAfterCards }
           - name: links
             label: Relaterte lenker
             component: link
