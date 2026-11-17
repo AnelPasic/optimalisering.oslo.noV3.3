@@ -11,7 +11,8 @@
       "badge": "Målgruppe",
       "badgeClass": "badge-info",
       "text": "**Å vise en annonse for badoppussing til en student er som å dra på elgjakt med fiskestang.**\n\nVis den samme annonsen til boligeiere som faktisk planlegger nytt bad, og du kan lett tidoble antall bestillinger med samme annonsebudsjett.",
-      "boxVariant": "card"
+      "boxVariant": "card",
+      "surface": "base-300"
     },
     {
       "title": "2. Riktig annonse?",
@@ -19,7 +20,8 @@
       "badge": "Hjelper",
       "badgeClass": "badge-info",
       "text": "**Annonsere med \"Vi brenner for bærekraft, innovasjon og verdiskaping\" er ja.. lite effektivt**\n\nDu har toppen 1.5 sekund å overbevise. Fortell heller nøyaktig hvordan du slukker problemet deres nå, så gidder de å lese. ",
-      "boxVariant": "card"
+      "boxVariant": "card",
+      "surface": "base-300"
     },
     {
       "title": "3. Riktig tilbud?",
@@ -27,7 +29,8 @@
       "badge": "Salgbart",
       "badgeClass": "badge-info",
       "text": "**Å annonsere for et svakt tilbud er som å prøve å selge piggdekk i Spania.**\n\nHvis konkurrenten tilbyr fastpris, garanti og oppstart i morgen, hjelper det lite at en tilbyr timepris og befaring om fire uker.",
-      "boxVariant": "card"
+      "boxVariant": "card",
+      "surface": "base-300"
     }
   ]
 }
