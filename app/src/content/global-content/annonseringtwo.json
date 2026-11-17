@@ -7,6 +7,7 @@
   "items": [
     {
       "title": "4. Riktig nettside?",
+      "iconName": "browser",
       "badge": "Brukeropplevelse",
       "text": "**Å sende trafikk til en dårlig optimalisert nettside er som å be middagsgjester klatre inn gjennom kjellervinduet.**\n\nHvis siden bruker fem sekunder på mobil og skjemaet krever 14 felter, snur kunden i døra og velger neste resultat.",
       "suggestedHref": "/konvertering/",
