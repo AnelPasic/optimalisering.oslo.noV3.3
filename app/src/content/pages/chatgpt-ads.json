@@ -56,57 +56,6 @@
       "surface": "base-100",
       "body": [
         "Et nytt annonseformat er spennende, deretter vil du vite hva pengene ga igjen. Vi tar os av hele reisen fra annonse til bestilling. \n\nKlikk er viktig, men det er **bestillinger** som teller.\n\nSelve verktøyet og knappene for å starte en kampanje i ChatGPT Ads eller Google Ads kan hvem som helst trykke på.\n\nMen annonsering er en **kjede** og annonseplatform er bare halve reisen kunden tar til en fullført bestilling.\n\n#### **Målgruppe x Budskap x Tilbud x Nettside x Bestilling = Lønnsomhet**\n\n**Hvert ledd har potensialet til å tidoble eller gange hele regnestykket med null.**"
-      ],
-      "items": [
-        {
-          "title": "1. Riktig person?",
-          "text": "**Å vise en annonse for badoppussing til en student er som å dra på elgjakt med fiskestang.**\n\nVis den samme annonsen til boligeiere som faktisk planlegger nytt bad, og du kan lett tidoble antall bestillinger med samme annonsebudsjett.",
-          "boxVariant": "card",
-          "surface": "info",
-          "iconName": "target",
-          "badge": "Målgruppe"
-        },
-        {
-          "title": "2. Riktig annonse?",
-          "text": "**Annonsere med \"Vi brenner for bærekraft, innovasjon og verdiskaping\" er ja.. lite effektivt**\n\nDu har toppen 1.5 sekund å overbevise. Fortell heller kunden nøyaktig hvordan du slukker problemet deres nå, så gidder de å lese. ",
-          "boxVariant": "card",
-          "surface": "base-300",
-          "iconName": "cursor-click",
-          "badge": "Budskap"
-        },
-        {
-          "title": "3. Riktig tilbud?",
-          "text": "**Å annonsere for et svakt tilbud er som å prøve å selge piggdekk i Spania.**\n\nHvis konkurrenten tilbyr fastpris, garanti og oppstart i morgen, hjelper det lite at du tilbyr timepris og befaring om fire uker.",
-          "boxVariant": "card",
-          "surface": "secondary",
-          "iconName": "credit-card",
-          "badge": "Verdiforslag"
-        },
-        {
-          "title": "4. Riktig nettside?",
-          "text": "**Å sende trafikk til en treg forside er som å be middagsgjester klatre inn gjennom kjellervinduet.**\n\nHvis siden bruker fem sekunder på mobil og skjemaet krever 14 felter, snur kunden i døra og velger neste resultat.",
-          "suggestedHref": "/konvertering/",
-          "label": "Les mer om konverteringsoptimalsering.",
-          "boxVariant": "card",
-          "surface": "info",
-          "iconName": "browser",
-          "badge": "Brukeropplevelse"
-        },
-        {
-          "title": "5. Ble det bestillinger?",
-          "text": "**Å feire 2 000 klikk uten bestillinger er som å feire at folk titter i butikkvinduet.**\n\nTrafikk er en ren utgift, det er målte henvendelser og faktiske kjøp som betaler regningene.",
-          "boxVariant": "card",
-          "surface": "secondary",
-          "iconName": "shopping-cart",
-          "badge": "Resultat"
-        },
-        {
-          "title": "6. Hva koster det?",
-          "text": "**Tjener du 500 kr på et salg, men betaler 750 kr for å skaffe kunden, taper du penger på hver bestilling.**\n\nAnnonsering måles ikke i klikkpris, men i bunnlinje etter at alle kostnader er trukket fra.",
-          "boxVariant": "card",
-          "iconName": "chart-bar",
-          "badge": "Lønnsomhet"
-        }
       ]
     },
     {
