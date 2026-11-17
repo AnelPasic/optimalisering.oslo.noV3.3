@@ -1,8 +1,8 @@
 {
   "id": "eurotents",
   "clientName": "Eurotents",
-  "dominantMetric": "4X [ROAS] Omsetning per annonsekrone",
-  "before": "4,3 X",
+  "dominantMetric": "4X Omsetning per annonsekrone",
+  "before": "ROAS: 4,3 X",
   "after": "17,2 X",
   "delta": "4X Større omsetning per annonsekrone",
   "period": {
