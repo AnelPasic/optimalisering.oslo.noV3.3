@@ -30,5 +30,6 @@
       "text": "**Tjener en bedrift 5000 kr på et salg, men betaler 7500 kr for å skaffe kunden, taper den penger på bestilling.**\n\nAnnonsering måles ikke i klikkpris og antall visninger, men i bunnlinje etter at alle kostnader er trukket fra, ja også byråkostnader.",
       "boxVariant": "card"
     }
-  ]
+  ],
+  "surface": "base-300"
 }
