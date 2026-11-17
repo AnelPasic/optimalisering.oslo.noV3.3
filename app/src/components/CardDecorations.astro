@@ -21,6 +21,6 @@ const badgeStyle = 'badge-sm min-h-5 py-1';
       </div>
     : <CardBadge text={badge} badgeClass={badgeClass} class={badgeStyle} />}
   {iconName
-    ? <PhosphorIcon name={iconName} class:list={['ml-auto shrink-0', title ? 'size-[34px]' : 'size-6']} size={title ? 34 : 24} />
+    ? <PhosphorIcon name={iconName} class="card-icon ml-auto" />
     : <slot name="icon" />}
 </div>}

@@ -49,6 +49,11 @@
   white-space: normal;
   padding-block: 4px;
 }
+@utility card-icon {
+  inline-size: 34px;
+  block-size: 34px;
+  flex-shrink: 0;
+}
 @utility card-title {
   font-size: var(--type-h4);
   line-height: var(--leading-h4);

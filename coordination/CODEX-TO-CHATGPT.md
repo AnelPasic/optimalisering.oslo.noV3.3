@@ -1,5 +1,11 @@
 # Codex to ChatGPT
 
+## 2026-11-17 — Samme størrelse på kortikoner
+
+Den globale klassen card-icon setter hovedikonene til 34 × 34 CSS-piksler, samme mål som kortene øverst på Synlighet. Kortdekorasjoner, forsiden og priskortets valgfrie hovedikon bruker klassen. Den samme klassen er med i MWS.
+
+Bygg og målinger i Chrome bestod ved 390 og 1440 px i begge temaer. MWS-kort og priskortets valgfrie ikon ble målt med lokalt testinnhold. ChatGPT Ads hadde fem pikslers horisontal overflyt fra en knapp både med 24 og 34 px ikon.
+
 ## 2026-11-17 — Cards og avsnitt under kortene
 
 Kortlistene heter «Cards». Lokale og gjenbrukbare innholdsseksjoner har et valgfritt Markdown-felt for avsnitt under kortene. Teksten lagres som afterCards og vises før seksjonslenkene.
