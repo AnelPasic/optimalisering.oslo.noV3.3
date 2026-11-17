@@ -82,6 +82,60 @@
     },
     {
       "_block": "content",
+      "id": "begge-sider-av-klikket",
+      "eyebrow": "DERFOR OPTIMALISERING OSLO",
+      "heading": "Vi har kompetansen på begge sider av klikket.",
+      "headingAlign": "left",
+      "layout": "default",
+      "surface": "secondary",
+      "body": [
+        "- Lang erfaring med betalt annonsering og kampanjeoptimalisering.\n- Teknisk kompetanse til å forbedre landingssider, skjema, hastighet og kjøpsløp.\n- Forståelse for hvordan målretting og trafikkvalitet påvirker konverteringsraten.\n- Evne til å prioritere den forbedringen som har størst potensial først.\n\n"
+      ]
+    },
+    {
+      "_block": "global",
+      "element": "priser"
+    },
+    {
+      "_block": "content",
+      "id": "fra-klikk-til-kunde",
+      "eyebrow": "DETTE GJØR VI",
+      "heading": "Du trenger ikke lære deg Ads Manager. Du trenger et tilbud som selger.",
+      "headingAlign": "left",
+      "layout": "three-columns",
+      "surface": "info",
+      "body": [
+        "Du kjenner kundene og bedriften din. Vi gjør jobben med annonseoppsett, budskap og oppfølging. Målet er å bruke annonsebudsjettet på muligheter som faktisk kan gi nye kunder."
+      ],
+      "items": [
+        {
+          "title": "Finn de riktige kjøpssituasjonene",
+          "text": "Vi undersøker hvilke behov og spørsmål tilbudet ditt er relevant for, og bruker det til å planlegge kampanjen.",
+          "boxVariant": "card",
+          "surface": "base-100",
+          "iconName": "target",
+          "badge": "Plan"
+        },
+        {
+          "title": "Lag annonser folk vil se nærmere på",
+          "text": "Vi lager tekst og annonsemateriell, setter opp kampanjen og kobler den til en side som svarer på det kunden trenger.",
+          "boxVariant": "card",
+          "surface": "base-300",
+          "iconName": "megaphone",
+          "badge": "Oppsett"
+        },
+        {
+          "title": "Forbedre det som gir resultater",
+          "text": "Vi følger med på kostnader, klikk og målbare henvendelser eller kjøp. Deretter justerer vi det som har størst verdi for bedriften.",
+          "boxVariant": "card",
+          "surface": "secondary",
+          "iconName": "shopping-cart",
+          "badge": "Oppfølging"
+        }
+      ]
+    },
+    {
+      "_block": "content",
       "id": "sporsmalene",
       "eyebrow": "DET BEGYNNER MED ET SPØRSMÅL",
       "heading": "Kunden beskriver problemet. Ikke firmanavnet ditt.",
@@ -193,60 +247,6 @@
         {
           "label": "Les om konvertering",
           "href": "/konvertering/"
-        }
-      ]
-    },
-    {
-      "_block": "content",
-      "id": "begge-sider-av-klikket",
-      "eyebrow": "DERFOR OPTIMALISERING OSLO",
-      "heading": "Vi har kompetansen på begge sider av klikket.",
-      "headingAlign": "left",
-      "layout": "default",
-      "surface": "secondary",
-      "body": [
-        "- Lang erfaring med betalt annonsering og kampanjeoptimalisering.\n- Teknisk kompetanse til å forbedre landingssider, skjema, hastighet og kjøpsløp.\n- Forståelse for hvordan målretting og trafikkvalitet påvirker konverteringsraten.\n- Evne til å prioritere den forbedringen som har størst potensial først.\n\n"
-      ]
-    },
-    {
-      "_block": "global",
-      "element": "priser"
-    },
-    {
-      "_block": "content",
-      "id": "fra-klikk-til-kunde",
-      "eyebrow": "DETTE GJØR VI",
-      "heading": "Du trenger ikke lære deg Ads Manager. Du trenger et tilbud som selger.",
-      "headingAlign": "left",
-      "layout": "three-columns",
-      "surface": "info",
-      "body": [
-        "Du kjenner kundene og bedriften din. Vi gjør jobben med annonseoppsett, budskap og oppfølging. Målet er å bruke annonsebudsjettet på muligheter som faktisk kan gi nye kunder."
-      ],
-      "items": [
-        {
-          "title": "Finn de riktige kjøpssituasjonene",
-          "text": "Vi undersøker hvilke behov og spørsmål tilbudet ditt er relevant for, og bruker det til å planlegge kampanjen.",
-          "boxVariant": "card",
-          "surface": "base-100",
-          "iconName": "target",
-          "badge": "Plan"
-        },
-        {
-          "title": "Lag annonser folk vil se nærmere på",
-          "text": "Vi lager tekst og annonsemateriell, setter opp kampanjen og kobler den til en side som svarer på det kunden trenger.",
-          "boxVariant": "card",
-          "surface": "base-300",
-          "iconName": "megaphone",
-          "badge": "Oppsett"
-        },
-        {
-          "title": "Forbedre det som gir resultater",
-          "text": "Vi følger med på kostnader, klikk og målbare henvendelser eller kjøp. Deretter justerer vi det som har størst verdi for bedriften.",
-          "boxVariant": "card",
-          "surface": "secondary",
-          "iconName": "shopping-cart",
-          "badge": "Oppfølging"
         }
       ]
     },
