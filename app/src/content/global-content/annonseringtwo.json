@@ -7,11 +7,20 @@
   "items": [
     {
       "title": "4. Riktig nettside?",
+      "badge": "Brukeropplevelse",
       "text": "**Å sende trafikk til en dårlig optimalisert nettside er som å be middagsgjester klatre inn gjennom kjellervinduet.**\n\nHvis siden bruker fem sekunder på mobil og skjemaet krever 14 felter, snur kunden i døra og velger neste resultat.",
       "suggestedHref": "/konvertering/",
       "label": "Mer om Konverteringsoptimalisering",
       "boxVariant": "card",
       "buttonStyle": "btn-neutral"
+    },
+    {
+      "title": "5. Ble det bestillinger?",
+      "iconName": "shopping-cart",
+      "badge": "Resultat",
+      "badgeClass": "badge-info",
+      "text": "**Å feire 2 000 klikk uten bestillinger er som å feire at folk titter i butikkvinduet.**\n\nTrafikk er en ren utgift, det er målte bestillinger som de fleste lever av.",
+      "boxVariant": "card"
     }
   ]
 }
