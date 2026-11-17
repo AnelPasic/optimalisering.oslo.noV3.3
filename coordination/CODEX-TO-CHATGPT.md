@@ -1,5 +1,11 @@
 # Codex to ChatGPT
 
+## 2026-11-17 — Overskrift og ikon på samme rad
+
+Kort med én overskrift og ikon, uten badge, viser overskriften til venstre og ikonet til høyre på samme rad. Kort med badge eller egen topplinje bruker eksisterende oppsett.
+
+Astro-sjekk, statisk bygg og Pagefind bestod. Chrome ved 390 og 1440 px bekreftet oppsettet på ChatGPT Ads og Synlighet.
+
 ## 2026-11-17 — Samme størrelse på kortikoner
 
 Den globale klassen card-icon setter hovedikonene til 34 × 34 CSS-piksler, samme mål som kortene øverst på Synlighet. Kortdekorasjoner, forsiden og priskortets valgfrie hovedikon bruker klassen. Den samme klassen er med i MWS.

@@ -1,6 +1,7 @@
 ---
 import Arrow from './Arrow.astro';
 import CardDecorations from './CardDecorations.astro';
+import PhosphorIcon from './PhosphorIcon.astro';
 import type { CardDecoration } from '../lib/card-decoration';
 import { actionClasses, buttonChoice, type ButtonStyle } from '../lib/section-buttons';
 import TermText from './TermText.astro';
@@ -28,6 +29,7 @@ interface Props extends CardDecoration {
 const { title, headline, text, surface, number, href, label, iconName, badge, badgeClass,
   titleTerms = [], textTerms = [], linkVariant = 'button', buttonStyle, transparent = false, detailHref, choice = false, badgeCheck = false } = Astro.props;
 const heading = headline?.trim();
+const iconBesideTitle = !heading && !badge?.trim() && Boolean(iconName || Astro.slots.has('icon'));
 const selected = surfaceAttribute(surface) ?? 'base-100';
 const action = buttonChoice(buttonStyle) ?? (linkVariant === 'text' ? 'link' : 'btn');
 const bodyClass = 'text-(length:--type-body) leading-(--leading-body)';
@@ -39,11 +41,16 @@ const bodyClass = 'text-(length:--type-body) leading-(--leading-body)';
   {detailHref && <a data-card-detail-link href={detailHref} aria-label={href ? `Les om ${title}` : label || title}
     class="absolute inset-0 z-10 rounded-[inherit] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"></a>}
   <div class:list={['card-body min-w-0', heading ? 'gap-0 p-(--panel-pad-lg) max-[1100px]:p-(--panel-pad)' : 'gap-5']}>
-    <CardDecorations title={heading ? title : undefined} iconName={iconName} badge={badge} badgeClass={badgeClass} badgeCheck={badgeCheck}>
+    {!iconBesideTitle && <CardDecorations title={heading ? title : undefined} iconName={iconName} badge={badge} badgeClass={badgeClass} badgeCheck={badgeCheck}>
       <slot name="icon" slot="icon" />
-    </CardDecorations>
+    </CardDecorations>}
     {number && <span class="font-semibold" aria-hidden="true" data-card-number>{number}</span>}
-    <h3 class:list={['card-title', heading && 'max-w-[390px] text-(length:--type-h3) leading-(--leading-h3) max-[900px]:max-w-[600px]']}><TermText text={heading || title} terms={titleTerms} /></h3>
+    <h3 class:list={['card-title', heading && 'max-w-[390px] text-(length:--type-h3) leading-(--leading-h3) max-[900px]:max-w-[600px]', iconBesideTitle && 'justify-between gap-3']}>
+      {iconBesideTitle ? <>
+        <span class="min-w-0"><TermText text={title} terms={titleTerms} /></span>
+        {iconName ? <PhosphorIcon name={iconName} class="card-icon" /> : <slot name="icon" />}
+      </> : <TermText text={heading || title} terms={titleTerms} />}
+    </h3>
     {hasRichMarkdown(text) || (heading && /\r?\n[ \t]*\r?\n/.test(text))
       ? <RichMarkdown text={text} variant="card" class={heading ? 'mt-[18px] mb-5' : undefined} />
       : <p class:list={[bodyClass, heading && 'mt-[18px] mb-5 grow-0']}><TermText text={text} terms={textTerms} /></p>}
