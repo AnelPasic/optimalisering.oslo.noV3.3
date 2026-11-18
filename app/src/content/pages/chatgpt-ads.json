@@ -58,13 +58,13 @@
       "items": [
         {
           "title": "ChatGPT Ads - Fordeler",
-          "text": "1. Høy kjøpsintensjon: Kunden scroller ikke tidsfordriv i en feed. De sitter aktivt og spør etter råd, priser og hvem de bør velge.\n\n2. Mindre støy og lavere konkurranse: Kanalen er helt fersk i Norge. Mens konkurrentene dine byr hverandre i hjel på Google Ads til 80 kr per klikk, kan du etablere deg først her.\n\n3. Full oppmerksomhet: Annonsen dukker opp som et naturlig forslag under et svar, i en uforstyrret 1-til-1 samtale.",
+          "text": "1. Høy kjøpsintensjon: Kunden scroller ikke tidsfordriv i en feed. De sitter aktivt og spør etter råd, priser og hvem de bør velge.\n2. Mindre støy og lavere konkurranse: Kanalen er helt fersk i Norge. Mens konkurrentene dine byr hverandre i hjel på Google Ads til 80 kr per klikk, kan du etablere deg først her.\n3. Full oppmerksomhet: Annonsen dukker opp som et naturlig forslag under et svar, i en uforstyrret 1-til-1 samtale.\n\n",
           "boxVariant": "card",
           "surface": "base-300",
           "iconName": "open-ai-logo"
         },
         {
-          "title": "Regnestykket",
+          "title": "Slik henter du ut effekten",
           "text": "**Målgruppe x Budskap x Tilbud x Nettside = Bestillinger**\n\nÅ trykke på startknappen i OpenAI Ads Manager eller Google Ads kan hvem som helst gjøre. Men annonsering er en kjede. \n\n**Hvert ledd har potensialet til å tidoble eller gange hele regnestykket med null.** ",
           "boxVariant": "card",
           "surface": "base-300",
