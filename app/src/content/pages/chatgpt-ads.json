@@ -65,11 +65,14 @@
         },
         {
           "title": "Regnestykket",
-          "text": "Annonsering er en lang **kjede** med mange detaljer som gir store utslag og annonseplatform er bare en liten del regnestykket frem til en fullført bestilling.\n\n### **Målgruppe x Budskap x Tilbud x Nettside x Bestilling = Lønnsomhet**\n\n**Hvert ledd har potensialet til å tidoble, halvere eller gange hele regnestykket med null.**",
+          "text": "Regnestykket",
           "boxVariant": "card",
           "surface": "base-300",
           "iconName": "calculator"
         }
+      ],
+      "afterCards": [
+        "Annonsering er en lang **kjede** med mange detaljer som gir store utslag og annonseplatform er bare en liten del regnestykket frem til en fullført bestilling.\n\n### **Målgruppe x Budskap x Tilbud x Nettside x Bestilling = Resultat**\n\n**Hvert ledd har potensialet til å tidoble, halvere eller gange hele regnestykket med null.**"
       ]
     },
     {
