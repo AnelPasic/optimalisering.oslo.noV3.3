@@ -67,11 +67,9 @@
           "iconName": "open-ai-logo"
         },
         {
-          "title": "Slik henter du ut effekten",
-          "text": "**Målgruppe x Budskap x Tilbud x Nettside = Bestillinger**\n\nÅ trykke på startknappen i OpenAI Ads Manager eller Google Ads kan hvem som helst gjøre. Men annonsering er en kjede. \n\n**Hvert ledd har potensialet til å tidoble eller gange hele regnestykket med null.** ",
-          "boxVariant": "card",
-          "surface": "base-300",
-          "iconName": "calculator"
+          "title": "Et svar, ikke bare et banner",
+          "text": "Annonsen vises i direkte sammenheng med samtalen. Når kunden spør om et problem du løser, er annonsen din det naturlige neste steget fra research til bestilling.",
+          "boxVariant": "card"
         },
         {
           "title": "Vær først i din bransje",
@@ -79,9 +77,11 @@
           "boxVariant": "card"
         },
         {
-          "title": "Et svar, ikke bare et banner",
-          "text": "Annonsen vises i direkte sammenheng med samtalen. Når kunden spør om et problem du løser, er annonsen din det naturlige neste steget fra research til bestilling.",
-          "boxVariant": "card"
+          "title": "Slik henter du ut effekten",
+          "text": "**Målgruppe x Budskap x Tilbud x Nettside = Bestillinger**\n\nÅ trykke på startknappen i OpenAI Ads Manager eller Google Ads kan hvem som helst gjøre. Men annonsering er en kjede. \n\n**Hvert ledd har potensialet til å tidoble eller gange hele regnestykket med null.** ",
+          "boxVariant": "card",
+          "surface": "base-300",
+          "iconName": "calculator"
         }
       ],
       "afterCards": [
