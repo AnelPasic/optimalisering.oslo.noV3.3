@@ -70,6 +70,7 @@
           "title": "Et svar, ikke bare et banner",
           "text": "Annonsen vises i direkte sammenheng med samtalen. Når kunden spør om et problem du løser, er annonsen din det naturlige neste steget fra research til bestilling.",
           "boxVariant": "card",
+          "surface": "base-300",
           "iconName": "cursor-click"
         },
         {
