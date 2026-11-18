@@ -61,24 +61,27 @@
       "items": [
         {
           "title": "Høy kjøpsintensjon",
-          "text": "Kunden scroller ikke tidsfordriv i en feed. De sitter aktivt og spør etter råd, priser og hvem de bør velge for sitt neste prosjekt eller produkt de har tenkt å kjøpe. \n\nI sosiale medier avbryter du folk, på ChatGPT er de allerede i kjøpsmodus og ber aktivt om alternativer.\n\n",
+          "text": "Kunden scroller ikke tidsfordriv i en feed. På ChatGPT er brukere allerede i kjøpsmodus, de sitter aktivt og spør etter råd, priser og hvem de bør velge for sitt neste prosjekt eller produkt de har tenkt å kjøpe. \n\n\n\n&nbsp;",
           "boxVariant": "card",
           "surface": "base-300",
-          "iconName": "open-ai-logo"
+          "iconName": "open-ai-logo",
+          "badge": "Kjøpsmodus"
         },
         {
           "title": "Et svar, ikke bare et banner",
-          "text": "Annonsen vises i direkte sammenheng med samtalen. Når kunden spør om et problem du løser, er annonsen din det naturlige neste steget fra research til bestilling.",
+          "text": "Annonsen vises i direkte sammenheng med samtalen. Når kunden spør om et problem du løser, er annonsen din det naturlige neste steget fra research til bestilling i motsetning til sosiale medier hvor du avbryter folk. ",
           "boxVariant": "card",
           "surface": "base-300",
-          "iconName": "cursor-click"
+          "iconName": "cursor-click",
+          "badge": "Relevans"
         },
         {
-          "title": "Mindre støy og lavere konkurranse",
+          "title": "Vær først i din bransje",
           "text": "OpenAI åpnet nylig annonsering i Norge. Det betyr færre om beinet, lavere klikkpriser og en mulighet til å ta posisjonen før konkurrentene dine i det hele tatt har oppdaget kanalen.",
           "boxVariant": "card",
           "surface": "base-300",
-          "iconName": "trend-up"
+          "iconName": "trend-up",
+          "badge": "Lav konkurranse"
         }
       ],
       "afterCards": [
