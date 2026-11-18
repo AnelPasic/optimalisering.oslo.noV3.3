@@ -259,6 +259,14 @@
     {
       "_block": "global",
       "element": "sjekk"
+    },
+    {
+      "_block": "global",
+      "element": "resultater"
+    },
+    {
+      "_block": "global",
+      "element": "regneeksempel"
     }
   ],
   "faq": [
