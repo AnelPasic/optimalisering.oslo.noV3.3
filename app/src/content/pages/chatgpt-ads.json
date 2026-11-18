@@ -51,14 +51,14 @@
       "_block": "content",
       "id": "maaling",
       "eyebrow": "Hele reisen fra klikk til fullførte bestillinger",
-      "heading": "Ny annonsekanal, samme regnestykke: Det må gi overskudd",
+      "heading": "Møt kunden i det øyeblikket de ber om en anbefaling",
       "headingAlign": "left",
       "layout": "two-columns",
       "surface": "base-100",
       "items": [
         {
-          "title": "ChatGPT Ads",
-          "text": "Et nytt annonsekanal er spennende og gir nye muligheter, men endrer ikke elementær bedriftsøkonomi.  For at annonsekronene skal komme tilbake med gevinst, må hele løpet henge sammen fra første spørsmål til fullført bestilling. \n\nMange bedrifter tror de har et annonseproblem, når de i realiteten har et tilbudsproblem eller en nettside som skremmer bort kundene. ",
+          "title": "ChatGPT Ads - Fordeler",
+          "text": "1. Høy kjøpsintensjon: Kunden scroller ikke tidsfordriv i en feed. De sitter aktivt og spør etter råd, priser og hvem de bør velge.\n\n2. Mindre støy og lavere konkurranse: Kanalen er helt fersk i Norge. Mens konkurrentene dine byr hverandre i hjel på Google Ads til 80 kr per klikk, kan du etablere deg først her.\n\n3. Full oppmerksomhet: Annonsen dukker opp som et naturlig forslag under et svar, i en uforstyrret 1-til-1 samtale.",
           "boxVariant": "card",
           "surface": "base-300",
           "iconName": "open-ai-logo"
@@ -70,6 +70,9 @@
           "surface": "base-300",
           "iconName": "calculator"
         }
+      ],
+      "afterCards": [
+        "Et nytt annonsekanal er spennende og gir nye muligheter, men endrer ikke elementær bedriftsøkonomi.  For at annonsekronene skal komme tilbake med gevinst, må hele løpet henge sammen fra første spørsmål til fullført bestilling. "
       ]
     },
     {
@@ -111,7 +114,7 @@
       "layout": "three-columns",
       "surface": "info",
       "body": [
-        "Du kjenner kundene og bedriften din. Vi gjør jobben med annonseoppsett, budskap og oppfølging. Målet er å bruke annonsebudsjettet på muligheter som faktisk kan gi nye kunder."
+        "Du kjenner kundene og bedriften din. Vi gjør jobben med annonseoppsett, budskap og oppfølging. Målet er å bruke annonsebudsjettet på muligheter som faktisk kan gi nye kunder. "
       ],
       "items": [
         {
@@ -138,6 +141,9 @@
           "iconName": "shopping-cart",
           "badge": "Oppfølging"
         }
+      ],
+      "afterCards": [
+        "Mange bedrifter tror de har et annonseproblem, når de i realiteten har et tilbudsproblem eller en nettside som skremmer bort kundene. "
       ]
     },
     {
