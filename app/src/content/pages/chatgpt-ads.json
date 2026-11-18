@@ -61,7 +61,7 @@
       "items": [
         {
           "title": "Høy kjøpsintensjon",
-          "text": "Kunden scroller ikke tidsfordriv i en feed. De sitter aktivt og spør etter råd, priser og hvem de bør velge. I sosiale medier avbryter du folk. I ChatGPT stiller kunden spørsmål som \"hva koster nytt bad?\" eller \"hvilket regnskapsbyrå bør vi velge?\". De er allerede i kjøpsmodus og ber aktivt om alternativer.\n\n",
+          "text": "Kunden scroller ikke tidsfordriv i en feed. De sitter aktivt og spør etter råd, priser og hvem de bør velge for sitt neste prosjekt eller produkt de har tenkt å kjøpe. \n\nI sosiale medier avbryter du folk, på ChatGPT er de allerede i kjøpsmodus og ber aktivt om alternativer.\n\n",
           "boxVariant": "card",
           "surface": "base-300",
           "iconName": "open-ai-logo"
