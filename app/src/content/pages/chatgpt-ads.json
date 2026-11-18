@@ -58,14 +58,14 @@
       "items": [
         {
           "title": "ChatGPT Ads",
-          "text": "Vi tar oss av hele reisen **fra første annonse til fullført bestilling**. \n\nDet er lett å starte en annonsekampanje. Selve verktøyet og knappene for å starte en kampanje i ChatGPT Ads eller Google Ads kan hvem som helst trykke på. \n\nKunststykket er å få den til å skaffe **flest bestillinger per annonsekrone**. Klikk og visninger er viktige signaler ja, men det er prisen per **fullført bestilling som teller**.",
+          "text": "Vi tar oss av hele reisen **fra første annonse til fullført bestilling**. \n\nDet er lett å starte en annonsekampanje. Selve verktøyet og knappene for å starte en kampanje i ChatGPT Ads eller Google Ads kan hvem som helst trykke på. Kunststykket er å få den til å skaffe **flest bestillinger per annonsekrone**. Klikk og visninger er viktige signaler ja, men det er prisen per **fullført bestilling som teller**.",
           "boxVariant": "card",
           "surface": "base-300",
           "iconName": "open-ai-logo"
         },
         {
           "title": "Regnestykket",
-          "text": "Annonsering er en **kjede** hvor hvert ledd gir store utslag frem til en fullført bestilling.\n\n### Målgruppe x Budskap x Tilbud x Nettside = Bestillinger\n\n**Hvert ledd har potensialet til å tidoble, halvere eller gange hele regnestykket med null.**",
+          "text": "Annonsering er en **kjede** hvor hvert ledd gir store utslag frem til en fullført bestilling.\n\n```\nMålgruppe x Budskap x Tilbud x Nettside = Bestillinger\n```\n\n**Hvert ledd har potensialet til å tidoble, halvere eller gange hele regnestykket med null.**",
           "boxVariant": "card",
           "surface": "base-300",
           "iconName": "calculator"
