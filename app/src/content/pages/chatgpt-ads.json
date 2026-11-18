@@ -51,7 +51,7 @@
       "_block": "content",
       "id": "maaling",
       "eyebrow": "Mål det som faktisk har verdi",
-      "heading": "Ny annonsekanal samme prinsipp: Må være lønnsomt",
+      "heading": "Ny annonsekanal samme prinsipp: Skal være lønnsomt",
       "headingAlign": "left",
       "layout": "two-columns",
       "surface": "base-100",
@@ -65,7 +65,7 @@
         },
         {
           "title": "Regnestykket",
-          "text": "Annonsering er en **kjede** med mange ledd som gir store utslag frem til en fullført bestilling.\n\n### **Målgruppe x Budskap x Tilbud x Nettside x Bestilling = Resultat**\n\n**Hvert ledd har potensialet til å tidoble, halvere eller gange hele regnestykket med null.**",
+          "text": "Annonsering er en **kjede** hvor hvert ledd gir store utslag frem til en fullført bestilling.\n\n### Målgruppe x Budskap x Tilbud x Nettside = Bestillinger\n\n**Hvert ledd har potensialet til å tidoble, halvere eller gange hele regnestykket med null.**",
           "boxVariant": "card",
           "surface": "base-300",
           "iconName": "calculator"
