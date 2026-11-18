@@ -1,6 +1,6 @@
 import {z} from 'astro/zod';
 
-export const contentLayoutValues=['default','two-columns','three-columns','stacked'] as const;
+export const contentLayoutValues=['default','two-columns','three-columns','four-columns','stacked'] as const;
 const automatic=(value:unknown)=>value==null||value===''?'default':value;
 export const contentLayoutSchema=z.preprocess(automatic,z.enum(contentLayoutValues));
 // Keep validating stored card metadata from earlier CMS versions.
@@ -14,5 +14,5 @@ export function contentLayoutAttribute(value:unknown,protectedRow=false){
 export function paragraphLayoutAttribute(section:{layout?:unknown;body?:readonly unknown[];items?:readonly unknown[]},protectedRow=false){
  if(protectedRow||!Array.isArray(section.body)||section.body.length<2)return undefined;
  const layout=contentLayoutAttribute(section.layout);
- return layout==='two-columns'||layout==='three-columns'?layout:undefined;
+ return layout==='two-columns'||layout==='three-columns'||layout==='four-columns'?layout:undefined;
 }

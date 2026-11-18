@@ -24,7 +24,7 @@ const assessment=getHomepageBlock(home,'assessment').content;
 const faqSource=getHomepageBlock(home,'faq').content;
 const bindCommercialText=createCommercialTextBinding(home,pages.find(p=>p.kind==='pricing')!);
 const faq={...faqSource,items:faqSource.items.map(item=>({...item,answer:bindCommercialText(item.answer)}))};
-const layoutLabels={'default':'Standard (automatisk)','two-columns':'To kolonner','three-columns':'Tre kolonner','stacked':'Liste (én kolonne)'};
+const layoutLabels={'default':'Standard (automatisk)','two-columns':'To kolonner','three-columns':'Tre kolonner','four-columns':'Fire kolonner','stacked':'Liste (én kolonne)'};
 const pageListLayouts: {key:PageListConfig['layout'];label:string;description:string}[] = [
  {key:'cards',label:'Kort',description:'Kortliste med tittel, beskrivelse og eventuell lenke.'},
  {key:'mediaCards',label:'Bildekort',description:'Kort med bilde eller illustrasjon og tilhørende tekst.'},

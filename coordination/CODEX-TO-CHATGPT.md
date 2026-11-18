@@ -1,5 +1,11 @@
 # Codex to ChatGPT
 
+## 2026-11-18 — Fire kolonner i seksjonsoppsettet
+
+Seksjonsoppsett har valget Fire kolonner for lokale og globale innholdsseksjoner i Oslo og MWS. Avsnitt og kort bruker hver sin firekolonnegrid. Oppsettet viser én kolonne til og med 650 px, to fra 651 px og fire fra 1101 px. Designsystemet viser det nye valget.
+
+Målrettede layouttester, Astro-sjekk, bygg og Pagefind bestod i begge repoer. Chrome ved 390, 800 og 1440 px bekreftet antall kolonner på både avsnitt og kort gjennom lokale og globale seksjoner, samt designsystemet. Skjermbildene brukte midlertidig testinnhold. Innlogget Pages CMS-lagring gjenstår å kontrollere.
+
 ## 2026-11-18 — Valgfritt bilde på Cards
 
 Lokale og globale Cards, behovsvelgeren og de delte innholdskortene har bildevalg med alternativ tekst og utsnitt. Bildet vises i et native figure over card-body, i 3:2-format. Bildevalget kan tømmes med Pages CMS sin eksisterende merge-innstilling. MWS har samme støtte.

@@ -12,7 +12,7 @@ const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
 const normal=(p:any)=>sectionRecords(p).find((s:any)=>s.id==='cms-local-fixture');
 
 test('ordinary layout and card metadata survive ingestion independently of surfaces',()=>{
- for(const layout of ['default','two-columns','three-columns','stacked']){
+ for(const layout of ['default','two-columns','three-columns','four-columns','stacked']){
   const p=structuredClone(home),s=normal(p);s.layout=layout;s.items[0].boxVariant='card';s.surface='info';s.items[0].surface='secondary';
   const parsed=normal(pageSchema.parse(p));assert.equal(parsed.layout,layout);assert.equal(parsed.items[0].boxVariant,'card');assert.equal(parsed.surface,'info');assert.equal(parsed.items[0].surface,'secondary');
  }
@@ -34,7 +34,7 @@ test('new presentation fields preserve automatic rendering defaults and reject p
 test('CMS preserves card metadata and exposes only section layout and surface choices',()=>{
  const entry=entryForFile(cms,'app/src/content/pages/home.json'),sections=entry.fields.find((f:any)=>f.name==='sections'),content=sections.blocks.find((b:any)=>b.name==='content');
  const layout=resolveField(content.fields.find((f:any)=>f.name==='layout'),cms.components),items=content.fields.find((f:any)=>f.name==='items'),box=resolveField(items.fields.find((f:any)=>f.name==='boxVariant'),cms.components);
- assert.equal(layout.type,'select');assert.deepEqual(layout.options.values.map((v:any)=>v.name),['default','two-columns','three-columns','stacked']);
+ assert.equal(layout.type,'select');assert.deepEqual(layout.options.values.map((v:any)=>v.name),['default','two-columns','three-columns','four-columns','stacked']);
  assert.equal(box.type,'string');assert.equal(box.hidden,true);assert.equal(box.default,'card');
  assert.ok(sections.list);
  const ref=sections.blocks.find((b:any)=>b.name==='global');assert.ok(!ref.fields.some((f:any)=>['layout','boxVariant'].includes(f.name)));
@@ -47,6 +47,7 @@ test('mixed sections use independent paragraph and card grids, without changing 
  const content={body:['Faktum én','Faktum to','Faktum tre'],layout:'three-columns' as const};
  assert.equal(paragraphLayoutAttribute(content),'three-columns');
  assert.equal(paragraphLayoutAttribute({...content,layout:'two-columns'}),'two-columns');
+ assert.equal(paragraphLayoutAttribute({...content,layout:'four-columns'}),'four-columns');
  for(const layout of ['default','stacked',undefined]) assert.equal(paragraphLayoutAttribute({...content,layout}),undefined);
  assert.equal(paragraphLayoutAttribute({...content,body:['Bare ett']}),undefined);
  assert.equal(paragraphLayoutAttribute({...content,items:[{title:'Boks',text:'Innhold'}]}),'three-columns');

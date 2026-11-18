@@ -418,6 +418,8 @@ components:
           label: To kolonner
         - name: three-columns
           label: Tre kolonner
+        - name: four-columns
+          label: Fire kolonner
         - name: stacked
           label: Liste (én kolonne)
   cardVariant:

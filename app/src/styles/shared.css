@@ -444,7 +444,8 @@ p { text-wrap: pretty; }
 }
 @media (min-width: 651px) {
   .content-section .body-copy[data-content-layout="two-columns"],
-  .content-section .body-copy[data-content-layout="three-columns"] {
+  .content-section .body-copy[data-content-layout="three-columns"],
+  .content-section .body-copy[data-content-layout="four-columns"] {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -459,6 +460,13 @@ p { text-wrap: pretty; }
 @media (min-width: 651px) {
   .content-section .section-items[data-content-layout="two-columns"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .content-section .section-items[data-content-layout="three-columns"] { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .content-section .section-items[data-content-layout="four-columns"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 1101px) {
+  .content-section .body-copy[data-content-layout="four-columns"],
+  .content-section .section-items[data-content-layout="four-columns"] {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 
 /* Compact phones: retain CTA and menu by using the icon-only brand.
