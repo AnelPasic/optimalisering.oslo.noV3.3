@@ -87,6 +87,7 @@
           "title": "Slik henter du ut effekten",
           "text": "**Målgruppe x Budskap x Tilbud x Nettside = Bestillinger**\n\nÅ trykke på startknappen i OpenAI Ads Manager eller Google Ads kan hvem som helst gjøre. Men annonsering er en kjede av sannsynlige hendelser.\n\n**Hvert ledd har potensialet til å tidoble eller gange hele regnestykket med null. Her utnytter vi dette systemet for å gi deg et forsprang.**",
           "boxVariant": "card",
+          "surface": "success",
           "iconName": "chart-bar",
           "badge": "Riktig system"
         }
