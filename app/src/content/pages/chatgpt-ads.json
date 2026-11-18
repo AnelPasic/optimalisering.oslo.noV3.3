@@ -72,6 +72,11 @@
           "boxVariant": "card",
           "surface": "base-300",
           "iconName": "calculator"
+        },
+        {
+          "title": "Vær først i din bransje",
+          "text": "OpenAI åpnet nylig annonsering i Norge. Det betyr færre om beinet, lavere klikkpriser og en mulighet til å ta posisjonen før konkurrentene dine i det hele tatt har oppdaget kanalen.",
+          "boxVariant": "card"
         }
       ],
       "afterCards": [
