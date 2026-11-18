@@ -65,7 +65,7 @@
         },
         {
           "title": "Regnestykket",
-          "text": "Annonsering er en **kjede** hvor hvert ledd gir store utslag frem til en fullført bestilling.\n\n```\nMålgruppe x Budskap x Tilbud x Nettside = Bestillinger\n```\n\n**Hvert ledd har potensialet til å tidoble, halvere eller gange hele regnestykket med null.**",
+          "text": "**Målgruppe x Budskap x Tilbud x Nettside = Bestillinger**\n\nÅ trykke på startknappen i OpenAI Ads Manager eller Google Ads kan hvem som helst gjøre. Men annonsering er en kjede. **Hvert ledd har potensialet til å tidoble, halvere eller gange hele regnestykket med null.** \n\nMange bedrifter tror de har et annonseproblem, når de i realiteten har et tilbudsproblem eller en nettside som skremmer bort kundene. ",
           "boxVariant": "card",
           "surface": "base-300",
           "iconName": "calculator"
