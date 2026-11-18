@@ -43,6 +43,7 @@ const alignment = resolveHeadingAlignment(section.headingAlign, defaults?.headin
           const included = serviceChoices && item.badge === 'Inkludert i alle pakker';
           const fallbackSurface = serviceChoices ? choiceSurfaces[index % 3] : visualSurfaces?.[index % 3];
           return <ContentCard
+            image={item.image}
             iconName={item.iconName}
             badge={item.badge}
             badgeClass={item.badgeClass ?? (serviceChoices ? (included ? 'badge-success' : 'badge-outline') : undefined)}

@@ -25,6 +25,7 @@ const selectorSurfaces: Surface[] = ['info', 'base-300', 'secondary'];
     <h2>{block.content.heading}</h2>
     <div class="mt-[44px] grid grid-cols-3 gap-(--gap-lg) max-[900px]:grid-cols-1 max-[650px]:mt-8 max-[650px]:gap-(--gap)">
       {block.content.items.map((item, index) => <ContentCard
+        image={item.image}
         title={item.discipline}
         headline={item.title}
         text={item.description}

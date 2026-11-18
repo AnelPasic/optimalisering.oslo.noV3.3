@@ -1,4 +1,5 @@
 import { cardDecorationFields } from './card-decoration.ts';
+import { cardImageSchema } from './card-image.ts';
 import { buttonStyleSchema } from './section-buttons.ts';
 import {z} from 'astro/zod';
 import {projectSelectedLinks,safeCmsHref} from './cms-link-choice.ts';
@@ -23,6 +24,7 @@ const legacyServiceIcons = {
 const legacyServiceIconNames = Object.keys(legacyServiceIcons) as (keyof typeof legacyServiceIcons)[];
 
 export const contentItemSchema = z.object({
+  image: cardImageSchema,
   title: z.string(),
   headline: z.preprocess(value => typeof value === 'string' && !value.trim() ? undefined : value, z.string().trim().min(1).optional()),
   ...cardDecorationFields,

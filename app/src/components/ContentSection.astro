@@ -26,6 +26,7 @@ const alignment = resolveHeadingAlignment(section.headingAlign, defaults?.headin
     <div class="section-heading" data-heading-align={alignment}><div>{section.eyebrow && <p class="eyebrow">{section.eyebrow}</p>}<h2>{section.heading}</h2></div><div class="body-copy" data-content-layout={paragraphLayoutAttribute(section,section._block === 'protected')}>{section.body.map(text => hasRichMarkdown(text)?<RichMarkdown text={text}/>:<p><TermText text={text} terms={terms} /></p>)}</div></div>
     {section.items && <div class:list={['section-items', { 'two-items': section.items.length === 2, 'process-items': section.id === 'sjekk' }]} data-content-layout={contentLayoutAttribute(section.layout,section._block==='protected')}>
       {section.items.map((item, i) => <ContentCard
+        image={item.image}
         iconName={item.iconName}
         badge={item.badge}
         badgeClass={item.badgeClass}

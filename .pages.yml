@@ -1,6 +1,12 @@
 # Pages CMS schema refresh 2026-10-26: Toppmeny mobileLogoLight / mobileLogoDark.
 # This comment-only GitHub push refreshes the per-branch config cache via CMS webhook when installed.
 media:
+  - name: cardImages
+    label: Bilder til Cards
+    input: app/public/images/cards
+    output: /images/cards
+    extensions: [webp, png, jpg, jpeg, avif, svg]
+    rename: safe
   - name: assets
     label: Eksisterende media
     input: app/src/assets
@@ -106,6 +112,34 @@ components:
       - { name: iconName, label: Phosphor-ikon, component: cardIconName }
       - { name: badge, label: Badge, component: cardBadgeText }
       - { name: badgeClass, label: Badge-klasse, component: cardBadgeClass }
+  cardImage:
+    type: object
+    list:
+      min: 0
+      max: 1
+      collapsible: { collapsed: true, summary: "{alt}" }
+    description: Valgfritt bilde over kortinnholdet. Fjern bilderaden for å vise kortet uten bilde.
+    fields:
+      - name: src
+        label: Bilde
+        type: image
+        required: true
+        options: { media: cardImages }
+      - name: alt
+        label: Alternativ tekst
+        type: string
+        required: true
+        description: Beskriv det faktiske bildet kort og konkret.
+      - name: positionX
+        label: Horisontalt utsnitt (%)
+        type: number
+        default: 50
+        options: { min: 0, max: 100 }
+      - name: positionY
+        label: Vertikalt utsnitt (%)
+        type: number
+        default: 50
+        options: { min: 0, max: 100 }
   cardIconName:
     type: string
     description: Skriv ikonnavnet fra Phosphor Regular, for eksempel chart-bar eller map-pin. Bruk bare navnet, uten .svg.
@@ -211,6 +245,7 @@ components:
         collapsed: true
         summary: "{title}"
     fields:
+      - { name: image, label: Bilde (valgfritt), component: cardImage }
       - name: title
         label: Tittel
         type: string
@@ -439,6 +474,7 @@ components:
             collapsed: true
             summary: "{title}"
         fields:
+          - { name: image, label: Bilde (valgfritt), component: cardImage }
           - name: title
             label: Tittel
             type: string
@@ -1353,6 +1389,7 @@ content:
                     collapsed: true
                     summary: "{title}"
                 fields:
+                  - { name: image, label: Bilde (valgfritt), component: cardImage }
                   - name: title
                     label: Tittel
                     type: string
@@ -3033,6 +3070,7 @@ content:
                   min: 3
                   max: 3
                 fields:
+                  - { name: image, label: Bilde (valgfritt), component: cardImage }
                   - name: title
                     label: Tittel
                     type: string
@@ -3676,6 +3714,7 @@ content:
                 collapsed: true
                 summary: "{title}"
             fields:
+              - { name: image, label: Bilde (valgfritt), component: cardImage }
               - name: title
                 label: Tittel
                 type: string
@@ -3779,6 +3818,7 @@ content:
                 collapsed: true
                 summary: "{title}"
             fields:
+              - { name: image, label: Bilde (valgfritt), component: cardImage }
               - name: title
                 label: Tittel
                 type: string

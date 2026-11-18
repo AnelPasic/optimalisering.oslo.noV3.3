@@ -1,6 +1,7 @@
 ---
 import Arrow from './Arrow.astro';
 import CardDecorations from './CardDecorations.astro';
+import { resolveCardImage, type CardImage } from '../lib/card-image';
 import PhosphorIcon from './PhosphorIcon.astro';
 import type { CardDecoration } from '../lib/card-decoration';
 import { actionClasses, buttonChoice, type ButtonStyle } from '../lib/section-buttons';
@@ -12,6 +13,7 @@ import { surfaceAttribute, surfaceClasses, type Surface } from '../lib/surface';
 interface Props extends CardDecoration {
   title: string;
   headline?: string;
+  image?: CardImage;
   text: string;
   surface?: Surface;
   number?: string;
@@ -29,6 +31,7 @@ interface Props extends CardDecoration {
 const { title, headline, text, surface, number, href, label, iconName, badge, badgeClass,
   titleTerms = [], textTerms = [], linkVariant = 'button', buttonStyle, transparent = false, detailHref, choice = false, badgeCheck = false } = Astro.props;
 const heading = headline?.trim();
+const image = resolveCardImage(Astro.props.image);
 const iconBesideTitle = !heading && !badge?.trim() && Boolean(iconName || Astro.slots.has('icon'));
 const selected = surfaceAttribute(surface) ?? 'base-100';
 const action = buttonChoice(buttonStyle) ?? (linkVariant === 'text' ? 'link' : 'btn');
@@ -38,6 +41,10 @@ const bodyClass = 'text-(length:--type-body) leading-(--leading-body)';
   transparent ? 'bg-transparent card-border border-base-300' : surfaceClasses(selected),
   !transparent && selected === 'base-200' && 'border border-base-300', choice && 'relative border border-transparent transition-[border-color] duration-150 hover:border-primary [&_.rich-markdown_a]:relative [&_.rich-markdown_a]:z-20'
 ]} data-content-card data-box-variant="card" data-surface={transparent ? undefined : selected} data-home-selector-card={choice || undefined}>
+  {image && <figure class="shrink-0">
+    <img src={image.src} alt={image.alt} width="1200" height="800" loading="lazy" decoding="async"
+      class="aspect-3/2 w-full object-cover" style={{ objectPosition: `${image.positionX}% ${image.positionY}%` }} />
+  </figure>}
   {detailHref && <a data-card-detail-link href={detailHref} aria-label={href ? `Les om ${title}` : label || title}
     class="absolute inset-0 z-10 rounded-[inherit] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"></a>}
   <div class:list={['card-body min-w-0', heading ? 'gap-0 p-(--panel-pad-lg) max-[1100px]:p-(--panel-pad)' : 'gap-5']}>

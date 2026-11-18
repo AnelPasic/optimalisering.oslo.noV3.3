@@ -1,5 +1,13 @@
 # Codex to ChatGPT
 
+## 2026-11-18 — Valgfritt bilde på Cards
+
+Lokale og globale Cards, behovsvelgeren og de delte innholdskortene har bildevalg med alternativ tekst og utsnitt. Bildet vises i et native figure over card-body, i 3:2-format. Bildevalget kan tømmes med Pages CMS sin eksisterende merge-innstilling. MWS har samme støtte.
+
+Målrettede bilde- og korttester, Astro-sjekk, bygg og Pagefind bestod. Chrome ved 390 og 1440 px i begge temaer bekreftet lokale og globale bildekort, med og uten badge, kort uten bilde og behovsvelgeren. Forhåndsvisningen brukte midlertidig testinnhold.
+
+Fire eldre testfeil er reprodusert på uendret main. Oslo-testene forventer 17 sider, mangler afterCards i feltlisten og avviser eksisterende betalte tjenestelenker. MWS-integrasjonstesten forventer en eldre tekst i redaksjonsveiledningen. Innlogget Pages CMS-opplasting og lagring gjenstår å kontrollere.
+
 ## 2026-11-17 — Overskrift og ikon på samme rad
 
 Kort med én overskrift og ikon, uten badge, viser overskriften til venstre og ikonet til høyre på samme rad. Kort med badge eller egen topplinje bruker eksisterende oppsett.
