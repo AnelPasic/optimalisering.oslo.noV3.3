@@ -64,15 +64,12 @@
           "iconName": "open-ai-logo"
         },
         {
-          "title": "Regnestykket",
-          "text": "Regnestykket",
+          "title": "Regnestykket (forenklet)",
+          "text": "Annonsering er en **kjede** med mange ledd som gir store utslag frem til en fullført bestilling.\n\n### **Målgruppe x Budskap x Tilbud x Nettside x Bestilling = Resultat**\n\n**Hvert ledd har potensialet til å tidoble, halvere eller gange hele regnestykket med null.**",
           "boxVariant": "card",
           "surface": "base-300",
           "iconName": "calculator"
         }
-      ],
-      "afterCards": [
-        "Annonsering er en lang **kjede** med mange detaljer som gir store utslag og annonseplatform er bare en liten del regnestykket frem til en fullført bestilling.\n\n### **Målgruppe x Budskap x Tilbud x Nettside x Bestilling = Resultat**\n\n**Hvert ledd har potensialet til å tidoble, halvere eller gange hele regnestykket med null.**"
       ]
     },
     {
