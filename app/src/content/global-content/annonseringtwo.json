@@ -21,15 +21,15 @@
       "iconName": "shopping-cart",
       "badge": "Resultat",
       "badgeClass": "badge-info",
-      "text": "**Å feire 2 000 klikk uten bestillinger er som å feire at folk titter i butikkvinduet.**\n\nTrafikk er en ren utgift, det er målte bestillinger som de fleste lever av.",
+      "text": "**Å feire 2 000 klikk uten bestillinger er som å feire at folk titter i butikkvinduet.**\n\nBetalt trafikk er en ren utgift, det er målte bestillinger som de fleste lever av. Riktig måling av kampanjene og annonsene lar en luke ut tapere slik at de ikke spiser budsjett som vinnere kan benytte seg av.",
       "boxVariant": "card"
     },
     {
-      "title": "6. Hva koster det?",
+      "title": "6. Hva koster bestillingen?",
       "iconName": "chart-bar",
       "badge": "ROAS",
       "badgeClass": "badge-info",
-      "text": "**Tjener en bedrift 5000 kr på et salg, men betaler 7500 kr for å skaffe kunden, taper den penger på bestilling.**\n\nAnnonsering måles ikke i klikkpris og antall visninger, men i bunnlinje etter at alle kostnader er trukket fra, ja også byråkostnader.",
+      "text": "**Å tjene 500 kr på et salg mens man betaler 700 kr for å skaffe kunden er tap på bestilling.**\n\nAnnonsering måles ikke i klikkpris og antall visninger, men i bunnlinje etter at alle kostnader er trukket fra, ja også byråkostnader.",
       "boxVariant": "card"
     }
   ],
