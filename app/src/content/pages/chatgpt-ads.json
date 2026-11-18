@@ -50,15 +50,15 @@
     {
       "_block": "content",
       "id": "maaling",
-      "eyebrow": "Mål det som faktisk har verdi",
-      "heading": "Ny annonsekanal samme prinsipp: Skal være lønnsomt",
+      "eyebrow": "Hele reisen fra klikk til fullførte bestillinger",
+      "heading": "Ny annonsekanal, samme regnestykke: Det må gi overskudd",
       "headingAlign": "left",
       "layout": "two-columns",
       "surface": "base-100",
       "items": [
         {
           "title": "ChatGPT Ads",
-          "text": "Vi tar oss av hele reisen **fra første annonse til fullført bestilling**. \n\nDet er lett å starte en annonsekampanje. Selve verktøyet og knappene for å starte en kampanje i ChatGPT Ads eller Google Ads kan hvem som helst trykke på. Kunststykket er å få den til å skaffe **flest bestillinger per annonsekrone**. Klikk og visninger er viktige signaler ja, men det er prisen per **fullført bestilling som teller**.",
+          "text": "Et nytt annonseformat gir nye muligheter, men algoritmene endrer ikke elementær bedriftsøkonomi.  Hvis målgruppen er feil, nettsiden er treg eller tilbudet er svakt, hjelper det lite at annonsen er plassert i en smart samtale. For at annonsekronene skal komme tilbake med gevinst, må hele løpet henge sammen fra første spørsmål til fullført bestilling. \n\nDet er lett å starte en annonsekampanje. Selve verktøyet og knappene for å starte en kampanje i ChatGPT Ads eller Google Ads kan hvem som helst trykke på. ",
           "boxVariant": "card",
           "surface": "base-300",
           "iconName": "open-ai-logo"
