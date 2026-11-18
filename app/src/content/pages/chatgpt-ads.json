@@ -58,7 +58,7 @@
       "items": [
         {
           "title": "ChatGPT Ads",
-          "text": "Vi tar oss av hele reisen **fra første annonse til fullført bestilling**. \n\nDet er lett å starte en annonsekampanje. Selve verktøyet og knappene for å starte en kampanje i ChatGPT Ads eller Google Ads kan hvem som helst trykke på. **Kunststykket** er å få den til å skaffe lønnsomme kunder samt få mest ut av hver annonsekrone.\n\nKlikk og visninger er viktige signaler ja, men det er prisen per **fullført bestilling som teller**.",
+          "text": "Vi tar oss av hele reisen **fra første annonse til fullført bestilling**. \n\nDet er lett å starte en annonsekampanje. Selve verktøyet og knappene for å starte en kampanje i ChatGPT Ads eller Google Ads kan hvem som helst trykke på. \n\nKunststykket er å få den til å skaffe **flest bestillinger per annonsekrone**. Klikk og visninger er viktige signaler ja, men det er prisen per **fullført bestilling som teller**.",
           "boxVariant": "card",
           "surface": "base-300",
           "iconName": "open-ai-logo"
@@ -90,6 +90,12 @@
       "surface": "secondary",
       "body": [
         "- Lang erfaring med betalt annonsering og kampanjeoptimalisering.\n- Teknisk kompetanse til å forbedre landingssider, skjema, hastighet og kjøpsløp.\n- Forståelse for hvordan målretting og trafikkvalitet påvirker konverteringsraten.\n- Evne til å prioritere den forbedringen som har størst potensial først.\n\n"
+      ],
+      "links": [
+        {
+          "label": "ChatGPT Ads - Prøve selv?",
+          "href": "https://ads.openai.com/nb-NO"
+        }
       ]
     },
     {
