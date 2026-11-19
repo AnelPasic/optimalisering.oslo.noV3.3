@@ -63,7 +63,8 @@
           "headline": "Dobler annonsebudsjettet",
           "text": "- Annonsekroner: **20.000 kr**\n- Besøk: **6.000**\n- Konverteringsrate: **1 %**\n- Bestillinger: **60**\n- Fortjeneste: **60 × 5.000 = 300.000 kr**\n- Fortjeneste etter annonser: **280.000 kr**\n\n",
           "boxVariant": "card",
-          "surface": "base-300"
+          "surface": "base-300",
+          "iconName": "cursor-click"
         },
         {
           "title": "Konverteringskongen AS",
@@ -90,7 +91,8 @@
           "title": "Klikkekongen AS",
           "text": "#### Fortsatt dobbel annonsebudsjettet\n\n- Annonsekroner: **20.000 kr**\n- Besøk: **6.000**\n- Konverteringsrate: **1 %**\n- Bestillinger: **60**\n- Fortjeneste: **60 × 5.000 = 300.000 kr**\n- Fortjeneste etter annonser: **280.000 kr**\n\n",
           "boxVariant": "card",
-          "surface": "base-300"
+          "surface": "base-300",
+          "iconName": "cursor-click"
         },
         {
           "title": "Konverteringskongen AS",
