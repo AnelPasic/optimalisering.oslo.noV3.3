@@ -87,7 +87,7 @@
       "items": [
         {
           "title": "Klikkekongen AS",
-          "text": "#### Fortsatt dobbel annonsebudsjettet\n\n- Annonsekroner: **20 000 kr**\n- Besøk: **6 000**\n- Konverteringsrate: **1 %**\n- Bestillinger: **60**\n- Ordreverdi: **1 000 kr**\n- Omsetning: **60 × 1 000 = 60 000 kr**\n- Omsetning etter annonsekostnader: **40 000 kr**\n\n",
+          "text": "#### Fortsatt dobbel annonsebudsjettet\n\n- Annonsekroner: **20.000 kr**\n- Besøk: **6.000**\n- Konverteringsrate: **1 %**\n- Bestillinger: **60**\n- Fortjeneste: **60 × 5.000 = 300.000 kr**\n- Fortjeneste etter annonser: **280.000 kr**",
           "boxVariant": "card",
           "surface": "base-300"
         },
