@@ -24,7 +24,8 @@
   },
   "seo": {
     "title": "SEO og digital markedsføring | Organisk og betalt synlighet | Optimalisering Oslo",
-    "description": "SEO, lokal SEO, AI-synlighet og annonsering på Google, YouTube, ChatGPT, Facebook og Instagram. Få flere relevante bestillinger til en lønnsom kostnad."
+    "description": "SEO, Lokal SEO, AI-synlighet og annonsering på Google, YouTube, ChatGPT, Facebook og Instagram. \nFå flere relevante bestillinger til en lønnsom kostnad.",
+    "noindex": false
   },
   "sections": [
     {
@@ -69,15 +70,18 @@
       "items": [
         {
           "title": "Google-bedriftsprofil",
-          "text": "Sjekk at kategori, tjenester, åpningstider og kontaktinformasjon stemmer med det bedriften faktisk tilbyr."
+          "text": "Sjekk at kategori, tjenester, åpningstider og kontaktinformasjon stemmer med det bedriften faktisk tilbyr.",
+          "boxVariant": "card"
         },
         {
           "title": "Tjenester og områder",
-          "text": "Vis hvilke tjenester dere tilbyr og hvilke områder dere dekker, med nyttig innhold fremfor mange nesten like lokalsider."
+          "text": "Vis hvilke tjenester dere tilbyr og hvilke områder dere dekker, med nyttig innhold fremfor mange nesten like lokalsider.",
+          "boxVariant": "card"
         },
         {
           "title": "Veien til kontakt",
-          "text": "Gjør telefonnummer, bestilling eller kontaktskjema enkelt å finne når kunden er klar for neste steg."
+          "text": "Gjør telefonnummer, bestilling eller kontaktskjema enkelt å finne når kunden er klar for neste steg.",
+          "boxVariant": "card"
         }
       ]
     },
@@ -93,17 +97,20 @@
       "items": [
         {
           "title": "Riktig søk",
-          "text": "Bli synlig på søk og spørsmål som passer det bedriften faktisk tilbyr."
+          "text": "Bli synlig på søk og spørsmål som passer det bedriften faktisk tilbyr.",
+          "boxVariant": "card"
         },
         {
           "title": "Riktig side",
-          "text": "Send kunden til en side som svarer på behovet og gjør tilbudet lett å forstå."
+          "text": "Send kunden til en side som svarer på behovet og gjør tilbudet lett å forstå.",
+          "boxVariant": "card"
         },
         {
           "title": "Riktig neste steg",
           "text": "Gjør veien videre tydelig når kunden er klar for kontakt eller kjøp.",
           "href": "/konvertering/",
-          "label": "Se Konvertering"
+          "label": "Se Konvertering",
+          "boxVariant": "card"
         }
       ]
     },
@@ -165,7 +172,7 @@
     "layout": "split-right",
     "eyebrow": "SEO · Lokal SEO · AI-synlighet · Google Ads · ChatGPT Ads · Meta Ads",
     "title": "SEO og Digital markedsføring som gjør deg synlig for kunder som bestiller",
-    "support": "Vi finner hvor kundene dine leter, hva som gjør det enklere å velge deg og hvilke tiltak som kan gi mest igjen. Så gjør vi jobben med SEO, AI-synlighet eller annonsering og følger opp resultatene.\nDu får bruke tiden på bedriften. \nJa, vi teller klikk også. Vi stopper bare ikke der.",
+    "support": "Vi finner hvor kundene dine leter, hva som gjør det enklere å velge deg og hvilke tiltak som gir mest igjen. Så gjør vi jobben med SEO, AI-synlighet eller annonsering og optimaliserer for flest bestillinger. Du får bruke tiden på bedriften. ",
     "primaryCta": {
       "label": "Velg pakke",
       "href": "#priser"
@@ -190,5 +197,8 @@
       "titlePreset": "medon",
       "supportPreset": "spissplus"
     }
+  },
+  "listing": {
+    "visible": true
   }
 }
