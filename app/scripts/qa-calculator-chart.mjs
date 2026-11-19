@@ -114,7 +114,7 @@ try {
     const results = await page.locator('.calculator-results').boundingBox();
     assert.ok(results.y >= fields.y + fields.height, 'Cards stay below the input grid');
     assert.equal((await page.locator('label[for=calc-traffic]').textContent()).trim(), 'Mer relevant trafikk per måned (%)');
-    assert.equal(await page.locator('.scenario-period').textContent(), 'Måned 12');
+    assert.equal(await page.locator('.leverage-comparison .stat-title').textContent(), 'Etter optimalisering (Måned 12)');
     if (width > 900) {
       const left = await page.locator('.calculator-inputs').boundingBox(), right = await page.locator('.leverage-tool').boundingBox();
       assert.ok(left.x + left.width <= right.x, 'Desktop fields stay in the left column under the text');
@@ -126,7 +126,7 @@ try {
     assert.deepEqual(await page.locator('[data-chart-month]').allTextContents(), Array.from({ length: 12 }, (_, index) => String(index + 1)));
     assert.deepEqual(await page.locator('.scenario-legend span').allTextContents(), ['Uten optimalisering', 'Med optimalisering']);
     const cases = [];
-    for (const [visits, conversion, traffic, next] of [[1000, 1, 0, 2], [1000, 1, 0, 5.5], [1500, 1.25, 20, 2.75], [1000, 2, 0, 1], [1000, 2, 0, 2], [1000, 2, 10, 0], [0, 1, 50, 2], [1000, 0, 50, 2], [10000000, 100, 1000, 100]]) {
+    for (const [visits, conversion, traffic, next] of [[1000, 1, 0, 2], [1000, 1, 0, 5.5], [1500, 1.25, 20, 2.75], [1000, 2, 0, 1], [1000, 2, 0, 2], [1000, 2, 10, 0], [0, 1, 50, 2], [1000, 0, 50, 2], [10000000, 100, 1000, 25]]) {
       await setNumbers({ visits, conversion, trafficIncrease: traffic, newConversion: next });
       cases.push(await assertScenario(visits, conversion, traffic, next));
       assert.ok(await page.locator('[data-scenario-chart]').isVisible());
@@ -180,7 +180,7 @@ try {
   const native = await context.newPage(); await native.goto(base);
   assert.equal(await native.locator('[data-current]').textContent(), '20'); assert.equal(await native.locator('[data-scenario]').textContent(), format.format(2000 * 1.1 ** 12 * .02));
   assert.equal(await native.locator('[data-multiplier]').textContent(), '6,3X'); assert.equal(await native.locator('[data-percentage]').textContent(), '(628%)');
-  assert.equal(await native.locator('.scenario-period').textContent(), 'Måned 12');
+  assert.equal(await native.locator('.leverage-comparison .stat-title').textContent(), 'Etter optimalisering (Måned 12)');
   assert.ok(await native.evaluate(() => document.documentElement.scrollWidth <= 320), 'Native result cards fit mobile without JavaScript');
   assert.equal(await native.locator('.calculator-caveat').count(), 0);
   assert.ok(await native.locator('[data-scenario-chart]').isHidden());

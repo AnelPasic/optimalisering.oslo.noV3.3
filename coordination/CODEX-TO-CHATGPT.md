@@ -1,5 +1,11 @@
 # Codex to ChatGPT
 
+## 2026-11-19 — Calculator rate limit and result badge
+
+New conversion rate is limited to 25% in the numeric input, range slider, CMS start-value field and calculator schema. Result labels now read “Bestillinger per måned” and “Etter optimalisering (Måned 12)”. The live multiplier and percentage use a native daisyUI badge at the top right of the accent result panel; the separate multiplier row and duplicate month label are removed. MWS has the same presentation and input limit in its existing fictional calculator specimen.
+
+Ten relevant calculation/ratio tests, the CMS YAML/schema boundary check, Astro checks and builds with Pagefind passed. Chrome checks passed for both repos at 1440, 390 and 320 px, including the supplied 100 → 627.7 example, keyboard slider limits, invalid-value recovery, zero-baseline wrapping, SSR without JavaScript and no submissions. Screenshots and machine-readable evidence are in the current Codex visualization workspace. Authenticated Pages CMS save/reopen remains unverified. The full Oslo copy audit encounters an existing “ikke bare” phrase in unchanged ChatGPT Ads content; MWS copy QA passes.
+
 ## 2026-11-19 — Automatic favicons and optional CMS upload
 
 Toppmeny has an optional Favicon field accepting SVG, PNG or ICO. An empty field generates a transparent 48 × 48 PNG at build time from a small mobile logo, then the header logo. File contents determine generated filenames and custom-icon query versions. Sharp 0.35.5 is a direct dependency in both repos.

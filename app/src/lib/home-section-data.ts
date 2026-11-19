@@ -17,7 +17,7 @@ export const homeSectionDataSchema = z.object({
   calculator: z.object({
     eyebrow: z.string(), heading: z.string(), intro: z.string(), formula: z.string(), caveat: z.string(),
     labels: z.object({ visits: z.string(), conversion: z.string(), trafficIncrease: z.string(), newConversion: z.string(), current: z.string(), scenario: z.string(), difference: z.string(), outcome: z.string(), increase: z.string(), undefinedIncrease: z.string(), invalid: z.string() }),
-    defaults: z.object({ visits: z.number().int().min(0).max(10000000), conversion: z.number().min(0).max(100), trafficIncrease: z.number().min(0).max(1000), newConversion: z.number().min(0).max(100) }),
+    defaults: z.object({ visits: z.number().int().min(0).max(10000000), conversion: z.number().min(0).max(100), trafficIncrease: z.number().min(0).max(1000), newConversion: z.number().min(0).max(25) }),
   }),
   packages: z.object({
     eyebrow: z.string(), heading: z.string(), intro: z.string(), orderIntro: z.string().trim().min(1), orderSubmitLabel: z.string().trim().min(1), fitLabel: z.string(), scopeLabel: z.string(),

@@ -175,7 +175,7 @@ try {
         await scan(route, 'disabled-intake-status');
       }
       if (route === '/') {
-        for (const [name, value] of [['visits', '10000000'], ['newConversion', '100'], ['trafficIncrease', '1000']]) await page.locator(`[data-leverage] [name="${name}"]`).fill(value);
+        for (const [name, value] of [['visits', '10000000'], ['newConversion', '25'], ['trafficIncrease', '1000']]) await page.locator(`[data-leverage] [name="${name}"]`).fill(value);
         await scan(route, 'large-calculator-values');
         await page.locator('[data-leverage] [name="visits"]').fill('');
         await scan(route, 'calculator-error');

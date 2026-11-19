@@ -14,12 +14,12 @@
       "trafficIncrease": "Mer relevant trafikk per måned (%)",
       "newConversion": "Ny konverteringsrate (%)",
       "current": "I dag",
-      "scenario": "Scenario",
+      "scenario": "Etter optimalisering (Måned 12)",
       "difference": "X",
-      "outcome": "henvendelser / kjøp per måned",
+      "outcome": "Bestillinger per måned",
       "increase": "endring",
       "undefinedIncrease": "Forholdstall kan ikke beregnes for dette utgangspunktet",
-      "invalid": "Bruk besøk fra 0 til 10 000 000, trafikkøkning fra 0 til 1 000 % og konverteringsrater fra 0 til 100 %."
+      "invalid": "Bruk besøk fra 0 til 10 000 000, trafikkøkning fra 0 til 1 000 % og dagens konverteringsrate fra 0 til 100 %. Ny konverteringsrate må være fra 0 til 25 %."
     },
     "defaults": {
       "visits": 2000,
