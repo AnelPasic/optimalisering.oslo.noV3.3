@@ -90,16 +90,16 @@
       ],
       "items": [
         {
-          "title": "Klikkekongen AS",
-          "headline": "Fortsatt dobbel annonsebudsjettet",
+          "title": "Fortsatt dobbel annonsebudsjettet",
+          "headline": "Klikkekongen AS",
           "text": "- Annonsekroner: **20.000 kr**\n- Besøk: **6.000**\n- Konverteringsrate: **1 %**\n- Bestillinger: **60**\n- Fortjeneste: **60 × 2.500 = 150.000 kr**\n- Fortjeneste etter annonser: **130.000 kr**\n\n",
           "boxVariant": "card",
           "surface": "base-300",
           "iconName": "cursor-click"
         },
         {
-          "title": "Konverteringskongen AS",
-          "headline": "Brukt ekstra fortjeneste på annonser",
+          "title": "Brukt ekstra fortjeneste på annonser",
+          "headline": "Konverteringskongen AS",
           "text": "- Annonsekroner: **20.000 kr**\n- Besøk: **6.000**\n- Konverteringsrate: **2 %**\n- Bestillinger: **120**\n- Fortjeneste: **120 × 2.500 = 300.000 kr**\n- Fortjeneste etter annonser: **290.000 kr  (2.2X mer)**\n\n",
           "boxVariant": "card",
           "surface": "secondary",
