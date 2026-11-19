@@ -55,20 +55,20 @@
       "layout": "two-columns",
       "surface": "base-100",
       "body": [
-        "To butikker starter likt: **10 000 kr i annonser, 3 000 besøk og 1 % konverteringsrate**. Det gir **30 bestillinger** med en ordreverdi på **1 000 kr**, altså **30 000 kr i omsetning**. \n\nAlle vil selge mer. Klikkekongen AS kjøper mer trafikk, Konverteringskongen AS forbedrer konverteringsraten."
+        "To butikker starter likt: **10.000 kr i annonser, 3.000 besøk og 1 % konverteringsrate**. Det gir **30 bestillinger** med en fortjeneste (dekningsbidrag) på **5.000 kr** pr.bestilling, altså **150.000 kr**.\n\nAlle vil selge mer. **Klikkekongen** AS kjøper **mer trafikk**, **Konverteringskongen** AS forbedrer **konverteringsraten**."
       ],
       "items": [
         {
           "title": "Klikkekongen AS",
           "headline": "Dobler annonsebudsjettet",
-          "text": "- Annonsekroner: **20 000 kr**\n- Besøk: **6 000**\n- Konverteringsrate: **1 %**\n- Bestillinger: **60**\n- Ordreverdi: **1 000 kr**\n- Omsetning: **60 × 1 000 = 60 000 kr**\n- Omsetning minus annonser:**40 000 kr**\n\n",
+          "text": "- Annonsekroner: **20.000 kr**\n- Besøk: **6.000**\n- Konverteringsrate: **1 %**\n- Bestillinger: **60**\n- Fortjeneste: **60 × 5.000 = 300.000 kr**\n- Fortjeneste etter annonser: **280.000 kr**\n\n",
           "boxVariant": "card",
           "surface": "base-300"
         },
         {
           "title": "Konverteringskongen AS",
           "headline": "Dobler konverteringsraten",
-          "text": "- Annonsekroner: **10 000 kr**\n- Besøk: **3 000**\n- Konverteringsrate: **2 %**\n- Bestillinger: **60**\n- Ordreverdi: **1 000 kr**\n- Omsetning: **60 × 1 000 = 60 000 kr**\n- Omsetning minus annonser: **50 000 kr  (10 000 mer)**\n\n",
+          "text": "- Annonsekroner: **10 000 kr**\n- Besøk: **3.000**\n- Konverteringsrate: **2 %**\n- Bestillinger: **60**\n- Fortjeneste: **60 × 5.000 = 300.000 kr**\n- Fortjeneste etter annonser: **290.000 kr   (10 000 mer)**\n\n",
           "boxVariant": "card",
           "surface": "info"
         }
