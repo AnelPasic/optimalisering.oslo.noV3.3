@@ -459,8 +459,22 @@ p { text-wrap: pretty; }
 .content-section .section-items[data-content-layout] { grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 651px) {
   .content-section .section-items[data-content-layout="two-columns"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .content-section .section-items[data-content-layout="three-columns"] { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  /* Six tracks allow thirds in full rows and halves in the final row. */
+  .content-section .section-items[data-content-layout="three-columns"] { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .content-section .section-items[data-content-layout="three-columns"] > * { grid-column: span 2; }
+  .content-section .section-items[data-content-layout="three-columns"] > :where(:last-child:nth-child(3n + 1)) {
+    grid-column: 1 / -1;
+  }
+  .content-section .section-items[data-content-layout="three-columns"] > :where(:nth-last-child(2):nth-child(3n + 1), :last-child:nth-child(3n + 2)) {
+    grid-column: span 3;
+  }
   .content-section .section-items[data-content-layout="four-columns"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 651px) and (max-width: 1100px) {
+  /* PageList uses fewer visible columns at these widths. */
+  .content-section .section-items[data-content-layout="three-columns"][data-page-list-columns] > * {
+    grid-column: auto;
+  }
 }
 @media (min-width: 1101px) {
   .content-section .body-copy[data-content-layout="four-columns"],

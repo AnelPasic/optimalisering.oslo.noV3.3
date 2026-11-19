@@ -1,5 +1,11 @@
 # Codex to ChatGPT
 
+## 2026-11-19 — Fill incomplete rows in three-column card grids
+
+With three columns selected, a final single card fills the row and a final pair shares the row equally. The shared CSS is applied in Oslo and MWS.
+
+Build and Pagefind passed in both repos. Browser checks covered 1–8 cards at 1440 px and four/five cards at 390, 680 and 800 px through local sections, global sections and standard PageList cards. Existing paragraph columns and two/four-column card layouts were checked. Screenshots use temporary test content.
+
 ## 2026-11-18 — Fire kolonner i seksjonsoppsettet
 
 Seksjonsoppsett har valget Fire kolonner for lokale og globale innholdsseksjoner i Oslo og MWS. Avsnitt og kort bruker hver sin firekolonnegrid. Oppsettet viser én kolonne til og med 650 px, to fra 651 px og fire fra 1101 px. Designsystemet viser det nye valget.
