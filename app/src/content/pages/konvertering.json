@@ -89,21 +89,23 @@
       "items": [
         {
           "title": "Klikkekongen AS",
-          "text": "#### Fortsatt dobbel annonsebudsjettet\n\n- Annonsekroner: **20.000 kr**\n- Besøk: **6.000**\n- Konverteringsrate: **1 %**\n- Bestillinger: **60**\n- Fortjeneste: **60 × 5.000 = 300.000 kr**\n- Fortjeneste etter annonser: **280.000 kr**\n\n",
+          "headline": "Fortsatt dobbel annonsebudsjettet",
+          "text": "- Annonsekroner: **20.000 kr**\n- Besøk: **6.000**\n- Konverteringsrate: **1 %**\n- Bestillinger: **60**\n- Fortjeneste: **60 × 5.000 = 300.000 kr**\n- Fortjeneste etter annonser: **280.000 kr**\n\n",
           "boxVariant": "card",
           "surface": "base-300",
           "iconName": "cursor-click"
         },
         {
           "title": "Konverteringskongen AS",
-          "text": "#### Brukt ekstra overskudd på annonser\n\n- Annonsekroner: **20.000 kr**\n- Besøk: **6.000**\n- Konverteringsrate: **2 %**\n- Bestillinger: **120**\n- Fortjeneste: **120 × 5.000 = 600.000 kr**\n- Fortjeneste etter annonser: **590.000 kr  (2X mer)**\n\n",
+          "headline": "Brukt ekstra fortjeneste på annonser",
+          "text": "- Annonsekroner: **20.000 kr**\n- Besøk: **6.000**\n- Konverteringsrate: **2 %**\n- Bestillinger: **120**\n- Fortjeneste: **120 × 5.000 = 600.000 kr**\n- Fortjeneste etter annonser: **590.000 kr  (2X mer)**\n\n",
           "boxVariant": "card",
           "surface": "secondary",
           "iconName": "crown"
         }
       ],
       "afterCards": [
-        "### De fleste undervurderer effekten av riktig prioritert optimalisering og dette kan du bruke til din fordel.\n\n\n\n&nbsp;"
+        "### De fleste undervurderer effekten av riktig prioritert optimalisering og dette kan du bruke til din fordel.\n\n"
       ]
     },
     {
