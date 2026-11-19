@@ -13,7 +13,7 @@
       },
       {
         "question": "Hva får jeg egentlig for 4 500 kr i måneden?",
-        "answer": "Vi gjør jobben. Ikke bare forteller deg hva som burde gjøres.\n\nVi finner hvor bedriften din har mest å hente og forbedrer det. Kanskje du bør bli mer synlig på Google, Google Maps eller i AI-søk. Kanskje annonsene dine sløser bort penger, eller nettsiden mister kunder rett før bestilling.\n\nFor 4 500 kr/mnd jobber vi med ett prioritert område om gangen. Vi finner mulighetene, gjennomfører forbedringene og måler resultatene.\n\nFine rapporter betaler ikke regningene dine. Flere kunder gjør det."
+        "answer": "Vi gjør jobben fremfor å bare fortelle deg hva som burde gjøres.\n\nVi finner hvor bedriften din har mest å hente og forbedrer det. Kanskje du bør bli mer synlig på Google, Google Maps eller i AI-søk. Kanskje annonsene dine sløser bort penger, eller nettsiden mister kunder rett før bestilling.\n\nFor 4 500 kr/mnd jobber vi med ett prioritert område om gangen. Vi finner mulighetene, gjennomfører forbedringene og måler resultatene.\n\nFine rapporter betaler ikke regningene dine. Flere kunder gjør det."
       },
       {
         "question": "Er det bindingstid?",
@@ -25,7 +25,7 @@
       },
       {
         "question": "Må jeg ha en ny nettside for å få bedre resultater?",
-        "answer": "Nei. Vi river ikke huset fordi ringeklokken er ødelagt.\n\nKanskje kundene ikke finner døra. Kanskje de finner den, men ingen åpner. Vi fikser det som stopper dem. Enkle landingssider er som regel inkludert, selv i den rimeligste pakken.\n\nVi bygger nytt først når det gamle faktisk står i veien."
+        "answer": "Nei. Vi river ikke huset fordi ringeklokken er ødelagt.\n\nVi starter nesten alltid med siden du allerede har og fikser det som hindrer kundene i å bestille.\n\nHvis du likevel trenger en ny, enkel nettside eller en landingsside, er dette inkludert i alle pakkene våre. På den minste pakken (Optimalisering til 4 500 kr/mnd) tar det for eksempel 1-2 måneders arbeid innenfor rammen. Vi bygger nytt først når det gamle faktisk står i veien for salget."
       },
       {
         "question": "Hva skjer etter at jeg velger en pakke?",
@@ -34,6 +34,18 @@
       {
         "question": "Er annonsebudsjettet inkludert i prisen?",
         "answer": "Nei. Hvis vi kjører annonser, kommer annonsebudsjettet i tillegg.\n\nPengene går til Google, Meta eller annonseplattformen vi bruker. Du bestemmer hvor mye du vil investere. Vi anbefaler hvor pengene bør brukes, setter opp kampanjene og forbedrer dem underveis.\n\nOg hvis annonser ikke er det smarteste for bedriften din akkurat nå, sier vi det.\n\nMålet er ikke å bruke mest mulig penger. Det er å få mest mulig igjen for dem."
+      },
+      {
+        "question": "Hva hvis vi allerede bruker et annet byrå?",
+        "answer": "Det fungerer utmerket. Hvis du allerede betaler et byrå for å kjøpe klikk eller drifte siden din, sørger arbeidet vårt for at du får mer igjen for pengene du betaler dem.\n\nVi samarbeider gjerne direkte med dine eksisterende leverandører eller webutviklere."
+      },
+      {
+        "question": "Må dere ha tilgang til publiseringssystemet vårt?",
+        "answer": "Det velger du selv. Vi kan logge inn i CMS-et ditt (som WordPress, Shopify, Squarespace eller Webflow) og utføre endringene direkte, eller vi kan levere ferdige spesifikasjoner og tekster som din faste webutvikler legger inn."
+      },
+      {
+        "question": "Hva innebærer den gratis sjekken?",
+        "answer": "Du sender oss nettadressen din. Vi går manuelt gjennom siden din fra mobil og datamaskin, og identifiserer de tre største hindringene for at besøkende tar kontakt eller bestiller.\n\nDu får tre konkrete funn innen to virkedager, helt uten innlogging eller forpliktelser."
       }
     ]
   }

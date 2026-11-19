@@ -60,7 +60,7 @@
       "items": [
         {
           "title": "Klikkekongen AS",
-          "text": "- Annonsekroner: **20.000 kr**\n- Besøk: **6.000**\n- Konverteringsrate: **1 %**\n- Bestillinger: **60**\n- Fortjeneste: **60 × 2.500 = 150.000 kr**\n- Fortjeneste etter annonser: **130.000 kr**\n\n",
+          "text": "- Annonsekroner: **20.000 kr**\n- Besøk: **6.000**\n- Konverteringsrate: **1 %**\n- Bestillinger: **60**\n- Fortjeneste: **60 x 2.500 = 150.000 kr**\n- Fortjeneste etter annonser: **130.000 kr**\n\n",
           "boxVariant": "card",
           "surface": "base-300",
           "iconName": "cursor-click",
@@ -69,7 +69,7 @@
         },
         {
           "title": "Konverteringskongen AS",
-          "text": "- Annonsekroner: **10.000 kr**\n- Besøk: **3.000**\n- Konverteringsrate: **2 %**\n- Bestillinger: **60**\n- Fortjeneste: **60 × 2.500 = 150.000 kr**\n- Fortjeneste etter annonser: **140.000 kr** (**10.000 mer**)\n\n",
+          "text": "- Annonsekroner: **10.000 kr**\n- Besøk: **3.000**\n- Konverteringsrate: **2 %**\n- Bestillinger: **60**\n- Fortjeneste: **60 x 2.500 = 150.000 kr**\n- Fortjeneste etter annonser: **140.000 kr** (**10.000 mer**)\n\n",
           "boxVariant": "card",
           "surface": "info",
           "iconName": "crown",
@@ -92,7 +92,7 @@
         {
           "title": "Fortsatt dobbel annonsebudsjettet",
           "headline": "Klikkekongen AS",
-          "text": "- Annonsekroner: **20.000 kr**\n- Besøk: **6.000**\n- Konverteringsrate: **1 %**\n- Bestillinger: **60**\n- Fortjeneste: **60 × 2.500 = 150.000 kr**\n- Fortjeneste etter annonser: **130.000 kr**\n\n",
+          "text": "- Annonsekroner: **20.000 kr**\n- Besøk: **6.000**\n- Konverteringsrate: **1 %**\n- Bestillinger: **60**\n- Fortjeneste: **60 x 2.500 = 150.000 kr**\n- Fortjeneste etter annonser: **130.000 kr**\n\n",
           "boxVariant": "card",
           "surface": "base-300",
           "iconName": "cursor-click"
@@ -100,7 +100,7 @@
         {
           "title": "Brukt ekstra fortjeneste på annonser",
           "headline": "Konverteringskongen AS",
-          "text": "- Annonsekroner: **20.000 kr**\n- Besøk: **6.000**\n- Konverteringsrate: **2 %**\n- Bestillinger: **120**\n- Fortjeneste: **120 × 2.500 = 300.000 kr**\n- Fortjeneste etter annonser: **280.000 kr  (2.15X mer)**\n\n",
+          "text": "- Annonsekroner: **20.000 kr**\n- Besøk: **6.000**\n- Konverteringsrate: **2 %**\n- Bestillinger: **120**\n- Fortjeneste: **120 x 2.500 = 300.000 kr**\n- Fortjeneste etter annonser: **280.000 kr  (2.15X mer)**\n\n",
           "boxVariant": "card",
           "surface": "secondary",
           "iconName": "crown"
@@ -257,6 +257,10 @@
       ]
     },
     {
+      "_block": "global",
+      "element": "sporsmal"
+    },
+    {
       "_block": "protected",
       "id": "sjekk",
       "eyebrow": "DIN NETTSIDE ER NESTE REGNESTYKKE",
@@ -284,28 +288,36 @@
   ],
   "faq": [
     {
-      "question": "Hva får jeg faktisk for 4 500 kr i måneden?",
-      "answer": "Du får løpende arbeid med ett prioritert forbedringsområde om gangen. Vi kartlegger hindringen, gjennomfører avtalte endringer på eksisterende sider og følger resultatene. Omfanget avklares før oppstart. Større nye nettsider, redesign og omfattende tekniske prosjekter prises separat."
+      "question": "Hva er egentlig konverteringsoptimalisering i praksis?",
+      "answer": "Det betyr å fjerne hindringene som gjør at besøkende snur i døra uten å ta kontakt eller handle.\n\nI praksis handler det om å gjøre tilbudet ditt krystallklart, kutte overflødige felter i skjemaer, gjøre siden lynrask på mobil og fjerne all tvil som gjør at kunden utsetter beslutningen. Målet er flere bestillinger ut av de besøkende du allerede har."
     },
     {
-      "question": "Hva skjer den første måneden?",
-      "answer": "Vi begynner med målet ditt og hvor kundene stopper. Så prioriterer vi den viktigste hindringen, gjennomfører avtalt forbedringsarbeid og følger opp hva vi har gjort og hva vi bør ta videre. Hvor mye vi kan måle statistisk avhenger av trafikken og antall bestillinger."
+      "question": "Hvorfor snakker de fleste byråer om å kjøpe mer trafikk?",
+      "answer": "Fordi det er enkelt for et byrå å skru opp et annonsebudsjett og sende en rapport med høye klikktall. Å forbedre konverteringsraten krever derimot at man forstår tilbudet ditt, kundenes innvendinger og det tekniske kjøpsløpet.\n\nTrafikk er en løpende utgift; en optimalisert side gir varig avkastning på hvert eneste fremtidige besøk."
+    },
+    {
+      "question": "Må vi ha titusenvis av besøkende for at dette skal lønne seg?",
+      "answer": "Nei, det er en seiglivet myte. Hvis du selger tjenester til 15 000 eller 50 000 kr, eller driver en lokal håndverkerbedrift, utgjør tre til fem ekstra henvendelser i måneden en stor forskjell på bunnlinjen.\n\nDu trenger ikke et halvt år med testing for å fjerne åpenbare feil og uklarheter som jager bort kundene dine i dag."
+    },
+    {
+      "question": "Må dere kjøre avansert A/B-testing på siden vår?",
+      "answer": "Ærlig talt: De færreste små og mellomstore norske bedrifter har nok trafikk til statistisk gyldig A/B-testing. Byråer som lover A/B-testing med 1 000 besøk i måneden driver med ren gjetting.\n\nVi jobber med hypotesebaserte forbedringer: Vi fjerner dokumentert friksjon, gjør siden enklere å bruke og måler utviklingen i faktiske henvendelser og salg over tid."
+    },
+    {
+      "question": "Hvorfor forlater folk nettsiden uten å bestille?",
+      "answer": "Det koker nesten alltid ned til fire ting: Kunden forstår ikke hva du løser i løpet av tre sekunder, tilbudet krever for stor forpliktelse for tidlig, skjemaet krever for mange felter, eller siden er treg og knotete på mobil.\n\nI tillegg mangler det ofte priser, garantier og bevis som fjerner risikoen for kjøperen."
+    },
+    {
+      "question": "Hva er en normal konverteringsrate i Norge?",
+      "answer": "For nettbutikker ligger snittet ofte mellom 1,5 % og 3 %. For lokale tjenester (som rørlegger, taktekker eller tannlege) kan den ligge på 5 til 12 % på relevante søk. For B2B og rådgivning er 2 til 4 % et solid nivå.\n\nMen det viktigste tallet er ditt eget: Å løfte raten fra 1 % til 2 % dobler henvendelsene dine uten at du bruker en krone mer på annonser."
     },
     {
       "question": "Er 50 til 100 % flere henvendelser eller kjøp realistisk?",
-      "answer": "Eksemplene viser hva et løft i konverteringsraten ville bety med samme antall besøk. Det er regneeksempler, ikke prognoser eller garantier. Noen sider har stort potensial; andre trenger først bedre trafikk, tilbud eller måling. Vi vurderer muligheten ut fra dine egne tall."
+      "answer": "Eksemplene på siden viser hva et løft i konverteringsraten betyr med samme antall besøk. Det er regneeksempler, ikke garantier.\n\nNoen nettsider har store, åpenbare svakheter og opplever rask vekst. Andre har allerede en velfungerende side og trenger mer subtile justeringer. Vi vurderer potensialet ut fra dine faktiske tall."
     },
     {
       "question": "Hva hvis vi ikke ser forbedring med en gang?",
-      "answer": "Vi viser hvilke endringer som er gjort, hva målingene sier, og hva vi anbefaler videre. Ikke alle tiltak virker på første forsøk. Ved lav trafikk bruker vi også brukerobservasjoner og kvalitativ gjennomgang i stedet for å late som vi har statistisk sikre A/B-tester."
-    },
-    {
-      "question": "Må dere bygge om nettsiden eller få tilgang til den?",
-      "answer": "Nei, full ombygging er vanligvis ikke nødvendig. Den gratis sjekken krever bare nettadressen. Skal vi gjøre endringer på nettsiden, avtaler vi nødvendig redaktørtilgang eller samarbeid med din utvikler. Du skal aldri sende passord i et kontaktskjema."
-    },
-    {
-      "question": "Er det bindingstid? Og er gratis sjekk virkelig gratis?",
-      "answer": "Pakkene har ingen bindingstid; praktiske vilkår bekreftes før oppstart. Gratis sjekk koster ingenting og forplikter deg ikke til å kjøpe. Du får tre prioriterte forbedringsforslag innen to virkedager. Betalt arbeid starter først etter at vi har avtalt det."
+      "answer": "Vi viser hvilke endringer som er gjort, hva målingene sier, og hva vi anbefaler videre. Ikke alle tiltak gir umiddelbart utslag.\n\nVed lav trafikk bruker vi brukerobservasjoner og grundige manuelle gjennomganger fremfor å late som vi har statistisk sikre tall. Ser vi at en endring ikke fungerer, justerer vi kursen."
     }
   ],
   "listing": {
