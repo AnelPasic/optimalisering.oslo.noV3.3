@@ -65,7 +65,7 @@
           "surface": "base-300",
           "iconName": "cursor-click",
           "badge": "Dobler annonsebudsjettet",
-          "badgeClass": "badge-info"
+          "badgeClass": "badge-secondary"
         },
         {
           "title": "Konverteringskongen AS",
@@ -74,7 +74,7 @@
           "surface": "info",
           "iconName": "crown",
           "badge": "Dobler konverteringsraten",
-          "badgeClass": "badge-info"
+          "badgeClass": "badge-secondary"
         }
       ]
     },
