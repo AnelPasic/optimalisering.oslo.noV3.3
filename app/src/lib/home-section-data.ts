@@ -4,6 +4,7 @@ import {sectionAlignmentDefaultsSchema} from './heading-alignment.ts';
 import { z } from 'astro/zod';
 import { cardDecorationFields, phosphorIconSchema } from './card-decoration.ts';
 import { cardImageSchema } from './card-image.ts';
+import { faviconSchema } from './site-favicon.ts';
 import { featuredProofVisualFieldSchema,proofLayoutSchema,proofCaseVisualsSchema,proofDisplayOverridesSchema } from './proof-presentation.ts';
 import {navigationLinkSchema} from './navigation.ts';
 import {chromeThemeSchema, ctaVariants} from './site-chrome-theme.ts';
@@ -60,6 +61,7 @@ export const homeSectionDataSchema = z.object({
   form: z.object({ promise: z.string(), heading: z.string(), websiteLabel: z.string(), websitePlaceholder: z.string(), emailLabel: z.string(), emailPlaceholder: z.string(), messageLabel: z.string(), optional: z.string(), messagePlaceholder: z.string(), sensitiveNotice: z.string(), previewNotice: z.string(), submitLabel: z.string(), privacyText: z.string(), privacyLink: link, disabledStatus: z.string() }),
   faqHeading: z.string(), faqEyebrow: z.string(),
   chrome: z.object({
+    favicon: faviconSchema,
     brand: z.string(), brandLocation: z.string(), homeLabel: z.string(), skipLabel: z.string(),
     // Uploaded Pages CMS image paths only. Optional: retain each location's approved text/icon fallback.
     logoLight: z.string().regex(/^\/images\/branding\/[a-zA-Z0-9_-]+\.(?:svg|png|webp|jpe?g|avif)$/).optional(),

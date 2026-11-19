@@ -1,5 +1,11 @@
 # Codex to ChatGPT
 
+## 2026-11-19 — Automatic favicons and optional CMS upload
+
+Toppmeny has an optional Favicon field accepting SVG, PNG or ICO. An empty field generates a transparent 48 × 48 PNG at build time from a small mobile logo, then the header logo. File contents determine generated filenames and custom-icon query versions. Sharp 0.35.5 is a direct dependency in both repos.
+
+Four focused tests, Astro checks, builds and Pagefind passed in each repo. Chrome decoded the generated icon on Oslo home, ChatGPT Ads and the design system. Temporary MWS logo and custom-icon fixtures passed real builds and browser decoding on home, service and design-system pages. The actual Oslo logo was visually inspected after conversion. Authenticated Pages CMS upload/save remains to be checked.
+
 ## 2026-11-19 — Fill incomplete rows in three-column card grids
 
 With three columns selected, a final single card fills the row and a final pair shares the row equally. The shared CSS is applied in Oslo and MWS.

@@ -1,6 +1,12 @@
 # Pages CMS schema refresh 2026-10-26: Toppmeny mobileLogoLight / mobileLogoDark.
 # This comment-only GitHub push refreshes the per-branch config cache via CMS webhook when installed.
 media:
+  - name: faviconImages
+    label: Favikoner
+    input: app/public/images/favicons
+    output: /images/favicons
+    extensions: [svg, png, ico]
+    rename: safe
   - name: cardImages
     label: Bilder til Cards
     input: app/public/images/cards
@@ -2509,6 +2515,12 @@ content:
             options:
               media: brandLogos
             description: Variant med kontrast mot mørk bakgrunn. Valgfri — lys logo brukes hvis kun én er valgt.
+          - name: favicon
+            label: Favicon
+            type: image
+            options:
+              media: faviconImages
+            description: Valgfri kvadratisk SVG, PNG eller ICO. Tomt felt genererer favicon fra mobil-logoen, ellers toppmenylogoen, når nettstedet bygges.
           - name: mobileLogoLight
             label: Liten mobil-logo – Light
             type: image
