@@ -31,7 +31,7 @@ const ratio = formatScenarioRatio(result.current, result.scenario);
               <span class="stat-title whitespace-normal text-inherit text-(length:--type-body-sm) leading-(--leading-body) font-(--weight-heading)">{labels.scenario}</span>
             </div><output class="stat-value block max-w-full font-(--weight-heading) tracking-[-.045em] mt-3.5 mb-2.5 whitespace-normal wrap-anywhere" data-scenario>{format.format(result.scenario)}</output><span class="outcome-label stat-desc text-inherit text-(length:--type-label) leading-(--leading-small) font-(family-name:--body)">{labels.outcome}</span><span class="math-equation stat-desc text-inherit mt-[13px] max-w-full wrap-anywhere [@media(max-width:650px)]:text-(length:--type-label)" data-scenario-equation>{format.format(result.scenarioVisits)} × {String(defaults.newConversion).replace('.', ',')} %</span>
           <div class="mt-auto flex w-full justify-end pt-4">
-            <span class="calculator-multiplier badge badge-sm h-auto max-w-full self-end flex-wrap gap-x-1 gap-y-0.5 whitespace-normal py-1">{labels.difference}: <output class="min-w-0 wrap-anywhere font-semibold" data-multiplier>{ratio?.multiplier ?? '–'}</output><span class="min-w-0 wrap-anywhere" data-percentage>{ratio?.percentage ?? labels.undefinedIncrease}</span></span>
+            <span class="calculator-multiplier badge badge-xl h-auto w-full self-end flex-wrap whitespace-normal py-1">{labels.difference}: <output class="min-w-0 wrap-anywhere font-semibold" data-multiplier>{ratio?.multiplier ?? '–'}</output><span class="min-w-0 wrap-anywhere" data-percentage>{ratio?.percentage ?? labels.undefinedIncrease}</span></span>
           </div>
         </div>
         </div>
