@@ -2,8 +2,12 @@ import { configuration, HttpError, json, readJson, validate } from './domain.mjs
 import { saveReceipt, readReceipts, csv } from './store.mjs';
 import { authorize } from './access.mjs';
 import { notifyOne, retryDue } from './notify.mjs';
+import { dashboard } from './dashboard.mjs';
 
 async function admin(request, env, url) {
+  if (['/admin/', '/admin/style.css', '/admin/report', '/admin/dashboard/receipts', '/admin/dashboard/export'].includes(url.pathname)) {
+    return dashboard(request, env);
+  }
   const retry = url.pathname === '/admin/retry';
   if (!await authorize(request, env, retry ? 'retry' : 'read')) return json({ ok: false }, 403);
   if ((retry && request.method !== 'POST') || (!retry && request.method !== 'GET')) return json({ ok: false }, 405);
