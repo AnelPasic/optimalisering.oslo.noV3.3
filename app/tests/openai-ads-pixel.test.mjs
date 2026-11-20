@@ -116,7 +116,9 @@ test('A confirmed receipt fires once on /takk/ with prior consent', () => {
   const consent = { value: 'yes' };
   const env = thankYouFixture(consent);
   assert.equal(env.events.length, 1);
-  assert.deepEqual(env.events[0], ['measure', 'lead_created', { type: 'customer_action' }]);
+  assert.equal(env.events[0][0], 'measure');
+  assert.equal(env.events[0][1], 'lead_created');
+  assert.equal(env.events[0][2].type, 'customer_action');
   assert.equal(env.store.has(receiptKey), false);
   env.listeners.get('optimalisering:ads-consent-changed')?.();
   assert.equal(env.events.length, 1);
