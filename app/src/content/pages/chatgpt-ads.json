@@ -180,8 +180,8 @@
       ],
       "items": [
         {
-          "title": "Hva koster kantine til 40 ansatte?",
-          "text": "En bedrift har et konkret behov. En annonse som leder til et tydelig kantinetilbud, gir dem noe å ta stilling til.",
+          "title": "Hva koster det å pusse opp badet?",
+          "text": "En boligeier har et konkret prosjekt. En annonse som viser fastpris eller gratis befaring, gir dem et klart neste steg.",
           "boxVariant": "card",
           "surface": "base-300",
           "iconName": "magnifying-glass",
@@ -209,25 +209,25 @@
       "_block": "content",
       "id": "eksempel",
       "eyebrow": "ET KONKRET EKSEMPEL",
-      "heading": "De spør om kantine. Du kan vise veien til et tilbud.",
+      "heading": "De spør om råd. Du viser veien til et tilbud.",
       "headingAlign": "left",
       "layout": "two-columns",
       "surface": "secondary",
       "body": [
-        "Tenk deg en bedrift som ser etter lunsj til 40 ansatte. De vet hva de trenger, men har ikke valgt leverandør. En annonse som svarer på behovet, er mer interessant enn en som bare roper firmanavnet."
+        "Tenk deg en bedrift som vurderer å bytte regnskapsfører. De vet hva som skurrer i dag, men har ikke valgt hvem som skal overta. En annonse som svarer på det de faktisk lurer på, er langt mer interessant enn en som bare roper firmanavnet ditt."
       ],
       "items": [
         {
           "title": "Spørsmålet",
-          "text": "**\"Hva bør vi se etter når vi velger kantine til kontoret?\"**\n\nKunden vil forstå pris, utvalg og om ordningen passer de ansatte.",
+          "text": "**\"Hva bør vi passe på når vi bytter regnskapsfører for et lite AS?\"**\n\nKunden vil forstå prosessen, unngå feil med MVA og finne noen med forutsigbar fastpris.",
           "boxVariant": "card",
           "surface": "base-300",
-          "iconName": "chat-circle-text",
+          "iconName": "chat-circle-dots",
           "badge": "I ChatGPT"
         },
         {
           "title": "Annonsen",
-          "text": "**\"Kantine til bedrifter - få forslag og pris.\"**\n\nAnnonsen kan vises separat under svaret og føre til en side der kunden enkelt kan be om et tilbud.",
+          "text": "**\"Bytt regnskapsfører uten stress - få fastpris på 2 minutter.\"**\n\nAnnonsen vises separat under svaret og leder til en enkel side der kunden raskt kan be om et tilbud.",
           "boxVariant": "card",
           "surface": "info",
           "iconName": "cursor-click",
@@ -244,20 +244,20 @@
       "layout": "three-columns",
       "surface": "base-300",
       "body": [
-        "I Google Ads jobber vi blant annet med hva folk søker etter. I ChatGPT Ads kan annonsen vurderes ut fra temaet og sammenhengen i samtalen. Det gir oss en annen mulighet til å være relevante når folk undersøker alternativer."
+        "I Google Ads byr du på ord folk taster inn i et søkefelt. I ChatGPT Ads kan annonsen vurderes ut fra hele sammenhengen i samtalen. Det gir en helt annen mulighet til å treffe kunden med et svar som faktisk løser problemet deres."
       ],
       "items": [
         {
           "title": "Google Ads",
-          "text": "En kunde søker etter \"kantine bedriftsavtale\". En annonse kan møte søket med en tjeneste som passer.",
+          "text": "Kunden taster inn et telegram: \"regnskapsfører oslo pris\". Du vet hva han leter etter, men aner ikke om han er et enkeltpersonforetak med tre bilag eller et AS med 15 ansatte og akutt bilagskaos.",
           "boxVariant": "card",
           "surface": "secondary",
-          "iconName": "open-ai-logo",
+          "iconName": "magnifying-glass",
           "badge": "Søket"
         },
         {
           "title": "ChatGPT Ads",
-          "text": "En kunde spør hvordan de bør velge kantine. En tydelig merket annonse kan vises under svaret når den er relevant.",
+          "text": "Kunden tømmer hjertet sitt: \"Vi er et AS med 8 ansatte. Vi byttet system i fjor, har mistet oversikten over bilagene, og styret krever fastpris uten overraskelser. Hvem bør vi velge?\". Annonsen din dukker opp som det perfekte svaret på nøyaktig det problemet.",
           "boxVariant": "card",
           "surface": "info",
           "iconName": "target",
@@ -265,7 +265,7 @@
         },
         {
           "title": "Landingssiden",
-          "text": "Etter klikket må kunden se hva de får, hvorfor tilbudet passer og hvordan de tar neste steg. Det er her interessen kan bli til en bestilling.",
+          "text": "Når kunden klikker, må siden bekrefte løsningen umiddelbart: Fastpris uten overraskelser, vi rydder opp i etterslepet, og du får svar samme dag. Ingen skjemaer med 14 felter der kunden må vente en uke på svar.",
           "boxVariant": "card",
           "surface": "base-100",
           "iconName": "cursor-click",
