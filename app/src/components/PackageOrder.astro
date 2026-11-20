@@ -72,7 +72,7 @@ const enabled = site.ordersEnabled;
       show('Sender bestillingen.');
       try {
         await submitLead(endpoint,payload,{idempotencyKey:key});
-        window.dispatchEvent(new Event('optimalisering:lead-confirmed'));
+        try { sessionStorage.setItem('optimalisering:confirmed-lead-for-takk', '1'); } catch { /* Intake succeeded; storage must not block confirmation. */ }
         show('Bestillingen er mottatt. Vi tar kontakt for å avklare videre oppstart.');
         form.reset(); key = crypto.randomUUID(); previousBody = '';
         window.location.assign('/takk/');

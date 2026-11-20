@@ -15,3 +15,34 @@ import SiteLayout from '../layouts/SiteLayout.astro';
     </div>
   </section>
 </SiteLayout>
+
+<script is:inline>
+  // Count only the receipt for a lead accepted by the intake endpoint.
+  (function () {
+    var key = "optimalisering:confirmed-lead-for-takk";
+    function pending() {
+      try { return window.sessionStorage.getItem(key) === "1"; } catch (_) { return false; }
+    }
+    function clear() {
+      try { window.sessionStorage.removeItem(key); } catch (_) {}
+    }
+    if (!pending()) return;
+
+    function recordConfirmedLead() {
+      if (!pending()) return;
+      var api = window.OptimaliseringOpenAIAds;
+      var choice = api && api.getChoice();
+      if (choice === "no") {
+        clear();
+        window.removeEventListener("optimalisering:ads-consent-changed", recordConfirmedLead);
+        return;
+      }
+      if (choice !== "yes" || typeof window.oaiq !== "function") return;
+      clear(); // Before measurement, so refresh/back cannot double count.
+      window.removeEventListener("optimalisering:ads-consent-changed", recordConfirmedLead);
+      window.oaiq("measure", "lead_created", { type: "customer_action" });
+    }
+    window.addEventListener("optimalisering:ads-consent-changed", recordConfirmedLead);
+    recordConfirmedLead();
+  })();
+</script>

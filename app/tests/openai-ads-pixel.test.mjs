@@ -83,29 +83,73 @@ test('Footer and privacy offer a way to change or withdraw consent', () => {
   assert.ok(privacy.sections.some(section => section.id === 'annonsemaaling'));
 });
 
-test('Confirmed lead event only fires with measurement consent', () => {
-  const env = fixture();
-  env.listeners.get('optimalisering:lead-confirmed')();
-  assert.equal(env.inserted.length, 0);
-  env.window.OptimaliseringOpenAIAds.setChoice('yes');
-  env.listeners.get('optimalisering:lead-confirmed')();
-  const event = [...env.queued().at(-1)];
-  assert.equal(event[0], 'measure');
-  assert.equal(event[1], 'lead_created');
-  assert.equal(event[2].type, 'customer_action');
-  env.window.OptimaliseringOpenAIAds.setChoice('no');
-  const count = env.queued().length;
-  env.listeners.get('optimalisering:lead-confirmed')();
-  assert.equal(env.queued().length, count);
+const receiptKey = 'optimalisering:confirmed-lead-for-takk';
+const thanksSource = readFileSync('src/pages/takk.astro', 'utf8');
+const thanksSnippet = thanksSource.match(/<script is:inline>([\s\S]*?)<\/script>/)?.[1];
+assert.ok(thanksSnippet, 'Thank-you receipt script must exist');
+
+function thankYouFixture(consent, isPending = true) {
+  const store = new Map(isPending ? [[receiptKey, '1']] : []);
+  const events = [];
+  const listeners = new Map();
+  const api = { getChoice: () => consent.value };
+  const window = {
+    sessionStorage: {
+      getItem: k => store.get(k) ?? null,
+      removeItem: k => store.delete(k),
+    },
+    OptimaliseringOpenAIAds: api,
+    oaiq: (...args) => events.push(args),
+    addEventListener: (name, fn) => listeners.set(name, fn),
+    removeEventListener: name => listeners.delete(name),
+  };
+  vm.runInNewContext(thanksSnippet, { window });
+  return { window, store, events, listeners };
+}
+
+test('Opening /takk/ directly never fires a lead event', () => {
+  const env = thankYouFixture({ value: 'yes' }, false);
+  assert.equal(env.events.length, 0);
 });
 
-test('Both existing forms dispatch only after successful intake response', () => {
+test('A confirmed receipt fires once on /takk/ with prior consent', () => {
+  const consent = { value: 'yes' };
+  const env = thankYouFixture(consent);
+  assert.equal(env.events.length, 1);
+  assert.deepEqual(env.events[0], ['measure', 'lead_created', { type: 'customer_action' }]);
+  assert.equal(env.store.has(receiptKey), false);
+  env.listeners.get('optimalisering:ads-consent-changed')?.();
+  assert.equal(env.events.length, 1);
+});
+
+test('Rejected measurement drops the receipt without tracking', () => {
+  const env = thankYouFixture({ value: 'no' });
+  assert.equal(env.events.length, 0);
+  assert.equal(env.store.has(receiptKey), false);
+});
+
+test('Accepting consent on thank-you page tracks only one accepted lead', () => {
+  const consent = { value: null };
+  const env = thankYouFixture(consent);
+  assert.equal(env.events.length, 0);
+  assert.equal(env.store.has(receiptKey), true);
+  consent.value = 'yes';
+  env.listeners.get('optimalisering:ads-consent-changed')?.();
+  assert.equal(env.events.length, 1);
+  assert.equal(env.store.has(receiptKey), false);
+});
+
+test('One confirmed receipt is recorded only by /takk/, never on the originating form', () => {
+  const pixel = readFileSync('src/components/OpenAiAdsPixel.astro', 'utf8');
+  assert.doesNotMatch(pixel, /optimalisering:lead-confirmed/);
   for (const path of ['src/components/AssessmentForm.astro', 'src/components/PackageOrder.astro']) {
     const content = readFileSync(path, 'utf8');
     const acceptedAt = content.indexOf('await submitLead(');
-    const measuredAt = content.indexOf("dispatchEvent(new Event('optimalisering:lead-confirmed'))");
-    assert.ok(acceptedAt > 0, path + ': confirmed submission exists');
-    assert.ok(measuredAt > acceptedAt, path + ': event must follow confirmed submission');
-    assert.equal(content.split("dispatchEvent(new Event('optimalisering:lead-confirmed'))").length - 1, 1);
+    const markedAt = content.indexOf("sessionStorage.setItem('" + receiptKey + "', '1')");
+    const redirectAt = content.indexOf("window.location.assign('/takk/')");
+    assert.ok(acceptedAt > 0, path + ': accepted intake must be awaited');
+    assert.ok(markedAt > acceptedAt && markedAt < redirectAt, path + ': receipt recorded after acceptance and before redirect');
+    assert.doesNotMatch(content, /optimalisering:lead-confirmed/);
   }
+  assert.equal(thanksSource.match(/"lead_created"/g)?.length, 1);
 });
