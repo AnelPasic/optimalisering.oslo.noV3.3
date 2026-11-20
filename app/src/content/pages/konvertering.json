@@ -136,6 +136,7 @@
     },
     {
       "_block": "content",
+      "visibility": "hidden",
       "id": "erfaring-siden-2009",
       "eyebrow": "NETTSIDER OG OPTIMALISERING SIDEN 2009",
       "heading": "Du kjøper forbedringer. Ikke enda en rapport.",
