@@ -6,8 +6,8 @@
   "content": {
     "eyebrow": "Synlighet og konvertering forsterker hverandre",
     "heading": "Hva betyr flere relevante besøk og en bedre kjøpsvei?",
-    "intro": "Endre trafikken, andelen som tar kontakt eller kjøper - eller begge. Se hvordan de to grepene virker sammen.",
-    "formula": "Relevante besøk x konverteringsrate = henvendelser / kjøp",
+    "intro": "Endre trafikken, andelen som bestiller, eller begge. Se hvordan de to grepene forsterker hverandre.",
+    "formula": "Relevante besøk X konverteringsrate = henvendelser / kjøp",
     "labels": {
       "visits": "Relevante besøk per måned",
       "conversion": "Konverteringsrate i dag (%)",
@@ -27,6 +27,6 @@
       "trafficIncrease": 10,
       "newConversion": 1
     },
-    "caveat": "Hypotetisk regneeksempel - ikke et kundecase."
+    "caveat": "Forskjellige bransjer har forskjellige konverteringsrater."
   }
 }
