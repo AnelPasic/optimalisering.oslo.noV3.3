@@ -43,6 +43,12 @@
     }
 
     w.OptimaliseringOpenAIAds = { getChoice: getChoice, setChoice: setChoice };
+
+    // Record only a confirmed, successfully stored form submission.
+    w.addEventListener("optimalisering:lead-confirmed", function () {
+      if (getChoice() !== "yes" || typeof w.oaiq !== "function") return;
+      w.oaiq("measure", "lead_created", { type: "customer_action" });
+    });
     if (getChoice() === "yes") allowMeasurement();
 
     w.addEventListener("storage", function (event) {

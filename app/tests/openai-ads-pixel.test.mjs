@@ -25,7 +25,7 @@ function fixture(initial = null) {
     createElement: name => ({ tagName: name }),
   };
   vm.runInNewContext(snippet, { window, document, Event: class { constructor(type) { this.type = type; } } });
-  return { window, inserted, store, listeners, queued: () => window.oaiq?.q?.q ?? [] };
+  return { window, inserted, store, listeners, queued: () => window.oaiq?.q ?? [] };
 }
 
 test('No SDK load or measurement before explicit consent', () => {
@@ -81,4 +81,31 @@ test('Footer and privacy offer a way to change or withdraw consent', () => {
   assert.match(banner, /data-openai-ads-reject/);
   assert.match(banner, /data-openai-ads-accept/);
   assert.ok(privacy.sections.some(section => section.id === 'annonsemaaling'));
+});
+
+test('Confirmed lead event only fires with measurement consent', () => {
+  const env = fixture();
+  env.listeners.get('optimalisering:lead-confirmed')();
+  assert.equal(env.inserted.length, 0);
+  env.window.OptimaliseringOpenAIAds.setChoice('yes');
+  env.listeners.get('optimalisering:lead-confirmed')();
+  const event = [...env.queued().at(-1)];
+  assert.equal(event[0], 'measure');
+  assert.equal(event[1], 'lead_created');
+  assert.equal(event[2].type, 'customer_action');
+  env.window.OptimaliseringOpenAIAds.setChoice('no');
+  const count = env.queued().length;
+  env.listeners.get('optimalisering:lead-confirmed')();
+  assert.equal(env.queued().length, count);
+});
+
+test('Both existing forms dispatch only after successful intake response', () => {
+  for (const path of ['src/components/AssessmentForm.astro', 'src/components/PackageOrder.astro']) {
+    const content = readFileSync(path, 'utf8');
+    const acceptedAt = content.indexOf('await submitLead(');
+    const measuredAt = content.indexOf("dispatchEvent(new Event('optimalisering:lead-confirmed'))");
+    assert.ok(acceptedAt > 0, path + ': confirmed submission exists');
+    assert.ok(measuredAt > acceptedAt, path + ': event must follow confirmed submission');
+    assert.equal(content.split("dispatchEvent(new Event('optimalisering:lead-confirmed'))").length - 1, 1);
+  }
 });
