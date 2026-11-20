@@ -51,6 +51,7 @@ const surface = surfaceAttribute(content.footerSurface);
     <span>{content.footerNote}</span>
     {legalLinks.length > 0 && <nav aria-label="Personvern og informasjon">
       {legalLinks.map(link => <a href={link.href}>{link.label}</a>)}
+      <button type="button" class="cursor-pointer underline underline-offset-2" data-openai-ads-manage>Sporingsvalg</button>
     </nav>}
   </div>
 </footer>

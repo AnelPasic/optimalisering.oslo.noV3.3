@@ -1,0 +1,58 @@
+<script is:inline>
+  (function (w, d, s, u) {
+    var consentKey = "optimalisering.oslo.no:openai-ads-consent";
+    var pixelId = "X6jHpYi7S193GRHHHfndZ4";
+    var initialized = false;
+
+    function getChoice() {
+      try {
+        var stored = w.localStorage.getItem(consentKey);
+        return stored === "yes" || stored === "no" ? stored : null;
+      } catch (_) {
+        return null;
+      }
+    }
+
+    function allowMeasurement() {
+      if (!w.oaiq) {
+        var q = function () { q.q.push(arguments); };
+        q.q = [];
+        w.oaiq = q;
+        var j = d.createElement(s);
+        j.async = true;
+        j.src = u;
+        d.head.appendChild(j);
+      }
+
+      w.oaiq("consent", true);
+      if (!initialized) {
+        w.oaiq("init", { pixelId: pixelId, debug: true });
+        initialized = true;
+      }
+    }
+
+    function setChoice(choice) {
+      if (choice !== "yes" && choice !== "no") return;
+      if (choice === "yes") {
+        allowMeasurement();
+      } else if (typeof w.oaiq === "function") {
+        w.oaiq("consent", false);
+      }
+      try { w.localStorage.setItem(consentKey, choice); } catch (_) {}
+      w.dispatchEvent(new Event("optimalisering:ads-consent-changed"));
+    }
+
+    w.OptimaliseringOpenAIAds = { getChoice: getChoice, setChoice: setChoice };
+    if (getChoice() === "yes") allowMeasurement();
+
+    w.addEventListener("storage", function (event) {
+      if (event.key !== consentKey) return;
+      if (event.newValue === "yes") {
+        allowMeasurement();
+      } else if (typeof w.oaiq === "function") {
+        w.oaiq("consent", false);
+      }
+      w.dispatchEvent(new Event("optimalisering:ads-consent-changed"));
+    });
+  })(window, document, "script", "https://bzrcdn.openai.com/sdk/oaiq.min.js");
+</script>
