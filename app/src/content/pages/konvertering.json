@@ -176,6 +176,7 @@
     },
     {
       "_block": "content",
+      "visibility": "hidden",
       "id": "potensial",
       "eyebrow": "HVA KAN DET BETY FOR DIN BEDRIFT?",
       "heading": "50 til 100 % flere henvendelser eller kjøp. Samme trafikk.",
