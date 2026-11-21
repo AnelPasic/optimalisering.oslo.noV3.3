@@ -37,7 +37,6 @@
     "featuredProofCaseId": "nysta",
     "secondaryCta": {
       "label": "Ta en gratis sjekk",
-      "suggestedHref": "/#sjekk",
       "href": "#sjekk"
     },
     "highlights": [
