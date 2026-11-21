@@ -57,7 +57,6 @@ import Arrow from './Arrow.astro';
         form.setAttribute('aria-busy', 'true');
         status.textContent = 'Sender forespørselen...';
         await submitLead(form.dataset.endpoint || '', payload, { idempotencyKey: key });
-        try { sessionStorage.setItem('optimalisering:confirmed-lead-for-takk', '1'); } catch { /* Intake succeeded; storage must not block confirmation. */ }
         status.textContent = 'Takk! Forespørselen er mottatt. Vi følger opp på e-post.';
         form.reset();
         key = crypto.randomUUID();

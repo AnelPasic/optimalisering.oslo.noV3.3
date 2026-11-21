@@ -41,15 +41,6 @@
     },
     {
       "_block": "content",
-      "id": "annonsemaaling",
-      "heading": "Måling av ChatGPT-annonser.",
-      "body": [
-        "Hvis du samtykker, bruker vi OpenAI Measurement Pixel for å måle effekten av annonser i ChatGPT. OpenAI kan få informasjon om besøk og målehendelser fra nettleseren din. Pikselen kan bruke informasjonskapslene __oppref (inntil 30 dager) og __obref (inntil 365 dager). Pikselen lastes ikke før du tillater måling.",
-        "Denne målingen bygger på ditt samtykke, jf. personvernforordningen artikkel 6 nr. 1 bokstav a. Vi lagrer valget lokalt i nettleseren for å huske det. Du kan avslå eller trekke tilbake samtykket via \"Sporingsvalg\" nederst på siden. Ved avslag stanser pikselen målingen og fjerner sine egne sporingskapsler. Mer informasjon finnes i OpenAIs personvernerklæring på https://openai.com/policies/privacy-policy/."
-      ]
-    },
-    {
-      "_block": "content",
       "id": "plan",
       "heading": "Henvendelsen lagres før du får bekreftelse.",
       "body": [

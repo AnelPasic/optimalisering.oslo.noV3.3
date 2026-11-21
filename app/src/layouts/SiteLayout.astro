@@ -16,8 +16,6 @@ import { siteChrome } from '../lib/site-chrome-data.ts';
 import { resolveSiteFavicon } from '../lib/site-favicon';
 import {parseDaisyTheme} from '../lib/site-chrome-theme';
 import Attribution from '../components/Attribution.astro';
-import OpenAiAdsPixel from '../components/OpenAiAdsPixel.astro';
-import OpenAiAdsConsent from '../components/OpenAiAdsConsent.astro';
 import { site } from '../config/site';
 import { defaultLocale, type Locale } from '../config/locales';
 import type { LanguageLink } from '../lib/i18n';
@@ -41,7 +39,6 @@ const organization = { '@context': 'https://schema.org', '@type': 'Organization'
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <OpenAiAdsPixel />
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="theme-color" content="#f5f3ec" />
@@ -64,7 +61,6 @@ const organization = { '@context': 'https://schema.org', '@type': 'Organization'
     <HomeHeader content={homeChrome} languageLinks={languageLinks} currentLocale={locale} />
     <main id="main" data-pagefind-body={noindex || Astro.url.pathname.startsWith("/design-system/") ? undefined : ""}><slot /></main>
     <HomeFooter content={homeChrome} />
-    <OpenAiAdsConsent />
     {homeChrome.headerOptions.showSearch && <SiteSearch mode="modal" />}
     <Attribution />
     <TerminologyUI />
