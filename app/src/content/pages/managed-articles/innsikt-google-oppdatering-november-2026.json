@@ -52,7 +52,8 @@
         "I SEO-podkasten som utløste denne gjennomgangen, forteller Craig Campbell om et eksperiment der han og James Dooley publiserte rundt 1 200 AI-genererte artikler. Nettstedet fikk først vekst, falt kraftig etter omtrent et halvt år og kom ifølge Campbell ikke tilbake selv etter at de forsøkte å erstatte innholdet. Det er en interessant erfaring fra ett eksperiment, ikke bevis for en universell seksmånedersgrense eller permanent domenestraff.",
         "Et annet omtalt nettsted falt ifølge eieren fra rundt 200 til 20 klikk daglig. Rett før oppdateringen hadde nettstedet blitt bygget om på en annen plattform, fått rundt 15 nye lokasjonssider og flere artikler. Her er det umulig å utpeke AI-tekst som eneste årsak. Migrering, tekniske endringer, nytt innhold og en Google-oppdatering skjedde tett på hverandre.",
         "Vi tar slike observasjoner alvorlig. De viser risikoen ved store endringer og publisering i høyt tempo. Men vi undersøker den enkelte nettsiden før vi bestemmer hva som skal repareres."
-      ]
+      ],
+      "headingAlign": "left"
     },
     {
       "_block": "content",
@@ -72,7 +73,8 @@
           "label": "Googles regler for masseprodusert lavverdiinnhold",
           "href": "https://developers.google.com/search/docs/essentials/spam-policies"
         }
-      ]
+      ],
+      "headingAlign": "left"
     },
     {
       "_block": "content",
@@ -109,7 +111,8 @@
           "label": "Googles veiledning for analyse etter core updates",
           "href": "https://developers.google.com/search/docs/appearance/core-updates"
         }
-      ]
+      ],
+      "headingAlign": "left"
     },
     {
       "_block": "content",
@@ -129,7 +132,8 @@
           "label": "Hvordan måler vi verdi av trafikken?",
           "href": "/innsikt/male-effekt-av-optimalisering/"
         }
-      ]
+      ],
+      "headingAlign": "left"
     },
     {
       "_block": "content",
@@ -138,7 +142,8 @@
       "body": [
         "Google anbefaler å vente minst én full uke etter at en core update er ferdig utrullet før du lager en ordentlig før- og etteranalyse. I mellomtiden kan du fortsette vanlig publisering av nyttig innhold, rette åpenbare tekniske feil og hjelpe kunder som ikke kommer gjennom skjemaet.",
         "Et kraftig fall på viktige sider fortjener undersøkelse allerede nå. Men det er forskjell på å undersøke problemet og å flytte alle URL-er, slette hundre artikler eller bytte publiseringssystem i frustrasjon. Store inngrep gjør det også vanskeligere å forstå hva som faktisk hjalp."
-      ]
+      ],
+      "headingAlign": "left"
     },
     {
       "_block": "content",
@@ -157,7 +162,8 @@
           "label": "Se SEO-tjenesten",
           "href": "/seo/"
         }
-      ]
+      ],
+      "headingAlign": "left"
     },
     {
       "_block": "content",
@@ -179,7 +185,8 @@
           "label": "Google: People-first innhold",
           "href": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
         }
-      ]
+      ],
+      "headingAlign": "left"
     }
   ],
   "faq": [
