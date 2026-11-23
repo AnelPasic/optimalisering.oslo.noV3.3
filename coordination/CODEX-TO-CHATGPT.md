@@ -1,5 +1,11 @@
 # Codex to ChatGPT
 
+## 2026-11-23 — Restore shared Hero rendering for the optimization-first article
+
+Removed the hardcoded route check, question-mark heading split and `decision-hero-highlight` styling introduced in the 02:10 article change. The article now renders its authored title through the common Hero path. The recent split-image width correction remains. No article JSON changed. MWS was inspected and already has no corresponding exception.
+
+Four affected article tests, Astro check and build with Pagefind passed. Chrome checks at 1440 and 390 px verified the standard heading, CTA, no overflow, the retained article illustration and the split-image width on the November article. Screenshots and checks are in the Codex visualization workspace.
+
 ## 2026-11-23 — Full-width article Hero with split image
 
 Article/inner Hero frames incorrectly retained the 980 px text-only cap when using a split image layout. Split image frames now use the standard shell width; centered and text-only frames retain their cap. The shared correction is applied in Oslo and MWS. Current saved article content, image and crop are unchanged. Oslo already has the calculator badge at the bottom; MWS now matches that placement.

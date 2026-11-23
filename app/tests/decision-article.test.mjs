@@ -19,12 +19,13 @@ test('regneeksempel is consistent and does not promise a result',()=>{
  assert.match(article.sections[1].afterCards.join(' '),/ikke automatisk billigere/);
  assert.match(article.sections[2].body.join(' '),/ikke en prognose/);
 });
-test('scoped custom layout and no new tracking',()=>{
+test('article illustration stays scoped and Hero uses the shared template',()=>{
  const hero=readFileSync('src/components/CommercialHero.astro','utf8');
  const inner=readFileSync('src/components/InnerPage.astro','utf8');
  assert.match(inner,/isDecisionArticle && section.id === 'kombinasjon'/);
  assert.match(inner,/data-decision-article/);
- assert.match(hero,/decisionSplit/);
+ assert.doesNotMatch(hero,/decisionArticle|decisionSplit|decision-hero-highlight|hva-bor-optimaliseres-forst/);
+ assert.doesNotMatch(source,/decision-hero-highlight/);
  assert.match(source,/max-width:650px/);
  assert.doesNotMatch(source,/oaiq|pixelId|localStorage|cookie-banner/i);
 });
