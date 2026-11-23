@@ -28,3 +28,8 @@ test('scoped custom layout and no new tracking',()=>{
  assert.match(source,/max-width:650px/);
  assert.doesNotMatch(source,/oaiq|pixelId|localStorage|cookie-banner/i);
 });
+
+test('ContentSection renders the optional article illustration slot', () => {
+ const content = readFileSync('src/components/ContentSection.astro', 'utf8');
+ assert.match(content, /<slot\s*\/>/);
+});
