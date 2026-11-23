@@ -41,7 +41,7 @@ const frameLayout=family==='home'
 
   {content.breadcrumbs.length>0&&<nav class="breadcrumbs" aria-label="Brødsmuler"><ul>{content.breadcrumbs.map(crumb=><li>{crumb.href?<a href={crumb.href}>{crumb.label}</a>:<span class="cursor-default" aria-current="page">{crumb.label}</span>}</li>)}</ul></nav>}
   <div class="hero place-items-start">
-  <div class:list={['hero-content hero-frame w-full p-0 grid-cols-1',inner&&family!=='assessment'?'max-w-[980px]':'max-w-none',centered?'justify-center':'justify-start',frameLayout,{'grid':media||auxiliary,'inner-hero-grid':inner,'assessment-hero-grid':family==='assessment'}]}>
+  <div class:list={['hero-content hero-frame w-full p-0 grid-cols-1',inner&&family!=='assessment'&&(!media||centered)?'max-w-[980px]':'max-w-none',centered?'justify-center':'justify-start',frameLayout,{'grid':media||auxiliary,'inner-hero-grid':inner,'assessment-hero-grid':family==='assessment'}]}>
    <div class:list={['page-hero-copy',{'w-full':!centered,'hero-copy':family==='home','service-hero-copy':service&&media}]}>
     <p class="eyebrow">{family==='home'&&<span class="small-dot"></span>}{content.eyebrow}</p>
     <Heading id={!demo&&family==='pricing'?'pricing-title':undefined} class={family==='home'?'hero-title':undefined}>{decisionSplit?<>{content.title.slice(0,decisionSplit)}<span class="decision-hero-highlight">{content.title.slice(decisionSplit).trim()}</span></>:split?<><span class="hero-emphasis">{content.title.slice(0,split)}</span>{content.title.slice(split)}</>:content.title.split('\n').map((line,index)=><>{index>0&&<br/>}{line}</>)}</Heading>

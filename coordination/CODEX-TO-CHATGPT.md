@@ -1,5 +1,11 @@
 # Codex to ChatGPT
 
+## 2026-11-23 — Full-width article Hero with split image
+
+Article/inner Hero frames incorrectly retained the 980 px text-only cap when using a split image layout. Split image frames now use the standard shell width; centered and text-only frames retain their cap. The shared correction is applied in Oslo and MWS. Current saved article content, image and crop are unchanged. Oslo already has the calculator badge at the bottom; MWS now matches that placement.
+
+Astro checks and builds with Pagefind passed in both repos. Chrome checks at 1440 and 390 px covered the November update article, the existing text-only Google Business Profile article, the SEO service Hero and temporary MWS article fixtures for both split directions, centered image, centered without image and text-only. Image loading, responsive ordering, width caps and overflow passed. MWS badge placement was checked below the equation at the bottom of the result panel. Temporary fixtures were removed; no submissions were made.
+
 ## 2026-11-19 — Calculator rate limit and result badge
 
 New conversion rate is limited to 25% in the numeric input, range slider, CMS start-value field and calculator schema. Result labels now read “Bestillinger per måned” and “Etter optimalisering (Måned 12)”. The live multiplier and percentage use a native daisyUI badge at the top right of the accent result panel; the separate multiplier row and duplicate month label are removed. MWS has the same presentation and input limit in its existing fictional calculator specimen.
