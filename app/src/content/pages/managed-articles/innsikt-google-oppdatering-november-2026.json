@@ -3,10 +3,11 @@
   "kind": "article",
   "seo": {
     "title": "Google november 2026: SEO-trafikk, AI-innhold og tiltak | Optimalisering Oslo",
-    "description": "Hva lærer vi av store SEO-fall under Googles novemberoppdatering? Eksempler fra virkelige nettsteder, AI-innhold og en konkret sjekkliste i Search Console."
+    "description": "Hva lærer vi av store SEO-fall under Googles novemberoppdatering? Eksempler fra virkelige nettsteder, AI-innhold og en konkret sjekkliste i Search Console.",
+    "noindex": false
   },
   "hero": {
-    "layout": "centered-none",
+    "layout": "split-right",
     "eyebrow": "SEO-innsikt - 23. november 2026",
     "title": "Google flytter på plasseringene. Er problemet algoritmen eller nettsiden?",
     "support": "Noen nettsteder har mistet store deler av Google-trafikken i november. Andre vokser. Flere av de hardt rammede har publisert mye AI-innhold, men det betyr ikke at Google har innført en egen AI-straff. Her er hva vi faktisk vet, hva konkrete eksempler lærer oss, og hvordan du undersøker din egen nettside før du begynner å slette sider.",
@@ -15,7 +16,14 @@
       "href": "/seo/#sjekk"
     },
     "visual": {
-      "kind": "none"
+      "kind": "image",
+      "image": {
+        "kind": "photo",
+        "src": "/images/services/discoveringlocalfavorite-1.png",
+        "alt": "Bli funnet",
+        "positionX": 50,
+        "positionY": 50
+      }
     }
   },
   "sections": [
@@ -23,6 +31,7 @@
       "_block": "content",
       "id": "hva-skjer",
       "heading": "Oppdateringen er ekte. Forklaringen er ikke like enkel.",
+      "headingAlign": "left",
       "body": [
         "Google startet en global core update 10. november 2026. Google beskrev målet som å vise mer relevant og tilfredsstillende innhold. Da denne guiden ble skrevet 23. november, hadde Google ennå ikke oppgitt noen offisiell sluttdato i statusloggen.",
         "Det er fristende å kalle enhver nedgang en straff for AI-tekst. Men en core update er en bred endring i hvordan Google vurderer resultater. En side kan miste synlighet selv om den ikke har fått noen manuell straff. Google har ikke bekreftet at denne oppdateringen bruker en egen AI-detektor eller en bestemt grense for hvor mye automatisert tekst et nettsted kan ha.",
@@ -76,19 +85,23 @@
       "items": [
         {
           "title": "1. Finn sidene som faktisk mistet klikk",
-          "text": "Sorter etter størst endring i klikk og visninger. Se etter om det gjelder én tjeneste, en artikkeltype eller nesten hele nettstedet."
+          "text": "Sorter etter størst endring i klikk og visninger. Se etter om det gjelder én tjeneste, en artikkeltype eller nesten hele nettstedet.",
+          "boxVariant": "card"
         },
         {
           "title": "2. Se hvilke søk som forsvant",
-          "text": "Åpne queries for de berørte sidene. Søkte kundene etter akkurat denne tjenesten, eller ble siden vist for noe den egentlig ikke svarte godt på?"
+          "text": "Åpne queries for de berørte sidene. Søkte kundene etter akkurat denne tjenesten, eller ble siden vist for noe den egentlig ikke svarte godt på?",
+          "boxVariant": "card"
         },
         {
           "title": "3. Undersøk teknikken før du omskriver teksten",
-          "text": "Har URL-er, canonical, redirects, robots/noindex eller internlenker endret seg? Sjekk også indeksering og eventuelle manuelle tiltak. En feil ved plattformbytte kan ligne et algoritmetap."
+          "text": "Har URL-er, canonical, redirects, robots/noindex eller internlenker endret seg? Sjekk også indeksering og eventuelle manuelle tiltak. En feil ved plattformbytte kan ligne et algoritmetap.",
+          "boxVariant": "card"
         },
         {
           "title": "4. Vurder søkeintensjonen med nye øyne",
-          "text": "Åpne siden på mobil. Får søkeren svaret eller tilbudet raskt? Er det tydelig hvem bedriften hjelper, hva den leverer og hvordan kunden går videre?"
+          "text": "Åpne siden på mobil. Får søkeren svaret eller tilbudet raskt? Er det tydelig hvem bedriften hjelper, hva den leverer og hvordan kunden går videre?",
+          "boxVariant": "card"
         }
       ],
       "links": [
