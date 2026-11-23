@@ -1,0 +1,46 @@
+---
+const scenarios = [
+  { label: 'Utgangspunkt', visits: '1 500', rate: '1 %', leads: 15, width: '25%' },
+  { label: 'Mer trafikk', visits: '3 000', rate: '1 %', leads: 30, width: '50%' },
+  { label: 'Bedre konvertering', visits: '1 500', rate: '2 %', leads: 30, width: '50%' },
+  { label: 'Begge forbedringer', visits: '3 000', rate: '2 %', leads: 60, width: '100%' },
+];
+---
+<div class="decision-growth-chart" aria-label="Regneeksempel som sammenligner henvendelser ved mer trafikk og bedre konvertering">
+  <p class="decision-growth-caption">Illustrasjon: antall henvendelser</p>
+  <div class="decision-growth-rows">
+    {scenarios.map(scenario => <div class="decision-growth-row">
+      <div class="decision-growth-meta">
+        <strong>{scenario.label}</strong>
+        <span>{scenario.visits} besøk x {scenario.rate}</span>
+      </div>
+      <div class="decision-growth-track" aria-hidden="true"><span class="decision-growth-bar" style={{width: scenario.width}}></span></div>
+      <strong class="decision-growth-value">{scenario.leads}</strong>
+    </div>)}
+  </div>
+  <p class="decision-growth-note">15 til 60 henvendelser i regneeksemplet. Ikke en prognose eller et faktisk kunderesultat.</p>
+</div>
+<style is:global>
+.site-shell .commercial-hero .decision-hero-highlight{display:block;margin-top:.12em;color:var(--color-primary);text-decoration:underline;text-decoration-color:color-mix(in srgb,var(--color-primary) 35%,transparent);text-underline-offset:.12em;text-decoration-thickness:.055em}
+.site-shell .article-content[data-decision-article] .content-section{padding-block:clamp(52px,6vw,88px)}
+.site-shell .article-content[data-decision-article] .section-heading{text-align:left}
+.site-shell .article-content[data-decision-article] .section-heading h2{max-width:920px}
+.site-shell .article-content[data-decision-article] .section-heading .body-copy{max-width:880px;margin-top:22px}
+.site-shell .article-content[data-decision-article] .section-items{gap:clamp(16px,2.2vw,28px);margin-top:34px}
+.site-shell .article-content[data-decision-article] [data-content-card]{border-radius:var(--radius-card);border:1px solid color-mix(in srgb,var(--color-base-content) 12%,transparent)}
+.site-shell .article-content[data-decision-article] [data-content-card] .card-body{padding:clamp(22px,2.6vw,34px)}
+.site-shell .article-content[data-decision-article] .decision-growth-chart{margin-top:38px;padding:clamp(22px,3.5vw,40px);border:1px solid color-mix(in srgb,currentColor 24%,transparent);border-radius:var(--radius-feature)}
+.site-shell .article-content[data-decision-article] .decision-growth-caption{margin:0 0 24px;font-size:var(--type-label);font-weight:700;text-transform:uppercase;letter-spacing:.055em}
+.site-shell .article-content[data-decision-article] .decision-growth-rows{display:grid;gap:18px}
+.site-shell .article-content[data-decision-article] .decision-growth-row{display:grid;align-items:center;grid-template-columns:minmax(170px,.8fr) minmax(0,1.8fr) 55px;gap:22px}
+.site-shell .article-content[data-decision-article] .decision-growth-meta{display:grid;gap:2px;min-width:0}
+.site-shell .article-content[data-decision-article] .decision-growth-meta strong{font-size:var(--type-body-sm)}
+.site-shell .article-content[data-decision-article] .decision-growth-meta span{font-size:var(--type-label);opacity:.78}
+.site-shell .article-content[data-decision-article] .decision-growth-track{height:17px;background:color-mix(in srgb,currentColor 15%,transparent);overflow:hidden;border-radius:999px}
+.site-shell .article-content[data-decision-article] .decision-growth-bar{display:block;height:100%;background:var(--color-primary);border-radius:inherit}
+.site-shell .article-content[data-decision-article] .decision-growth-row:last-child .decision-growth-bar{background:var(--color-success)}
+.site-shell .article-content[data-decision-article] .decision-growth-value{font-family:var(--font-heading);font-size:var(--type-h4);font-variant-numeric:tabular-nums;text-align:right}
+.site-shell .article-content[data-decision-article] .decision-growth-note{margin-top:22px;font-size:var(--type-label);line-height:1.5;opacity:.8}
+@media(max-width:900px){.site-shell .article-content[data-decision-article] .section-items{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.site-shell .article-content[data-decision-article] .section-items{grid-template-columns:minmax(0,1fr)}.site-shell .article-content[data-decision-article] .decision-growth-row{grid-template-columns:minmax(0,1fr) 50px;gap:5px 12px}.site-shell .article-content[data-decision-article] .decision-growth-track{grid-column:1;grid-row:2}.site-shell .article-content[data-decision-article] .decision-growth-value{grid-column:2;grid-row:2}}
+</style>

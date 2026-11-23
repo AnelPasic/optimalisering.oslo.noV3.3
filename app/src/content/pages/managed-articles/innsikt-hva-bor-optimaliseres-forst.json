@@ -2,14 +2,14 @@
   "slug": "innsikt/hva-bor-optimaliseres-forst",
   "kind": "article",
   "seo": {
-    "title": "Hva bør du optimalisere først? Synlighet eller konvertering",
-    "description": "En enkel beslutningsguide: undersøk relevante besøk, veien til kontakt eller kjøp og verdien av kundene. Se hva dataene kan fortelle og hva de mangler."
+    "title": "Hva bør du optimalisere først? Synlighet, konvertering eller tilbud",
+    "description": "Finn ut om du bør satse på synlighet, konvertering eller selve tilbudet. Se regneeksempel, tre typiske situasjoner og hvilke tall som avgjør."
   },
   "hero": {
     "layout": "split-right",
-    "eyebrow": "Innsikt - velg første undersøkelse",
-    "title": "Hva bør du optimalisere først?",
-    "support": "Start med hvor veien til kunde ser ut til å stoppe. Det er ofte mer nyttig enn å begynne med en bestemt kanal, et verktøy eller en liste med tiltak.",
+    "eyebrow": "Innsikt - hva lønner seg først?",
+    "title": "Hva bør du optimalisere først? Synlighet, konvertering eller tilbud?",
+    "support": "Mer trafikk kan hjelpe. Bedre landingssider kan hjelpe. Men hvis kunden ikke vil ha tilbudet, hjelper ingen av delene særlig mye. Finn først ut hvor kundereisen stopper.",
     "primaryCta": {
       "label": "Ta en gratis sjekk",
       "href": "/vurdering/"
@@ -21,107 +21,202 @@
   "sections": [
     {
       "_block": "content",
-      "id": "definer",
-      "heading": "Bestem hvilken handling som er nyttig for bedriften.",
+      "id": "veivalg",
+      "eyebrow": "Tre mulige flaskehalser",
+      "heading": "Hvor stopper kundereisen din?",
+      "surface": "base-100",
+      "headingAlign": "left",
+      "layout": "three-columns",
       "body": [
-        "For en tjenestebedrift kan handlingen være en henvendelse som passer tilbudet og kan bli en kunde. For en nettbutikk kan det være et kjøp som er verdifullt når kostnadene er tatt med.",
-        "Hvis målet bare heter \"mer trafikk\" eller \"flere skjema\", er det lett å forbedre tallet uten å forbedre bedriften. Skriv heller ned hvem dere vil nå og hvilken nyttig handling dere ønsker flere av."
+        "Det er tre steder å lete. Spør først hva som skjer med de rette kundene, før du bestemmer deg for SEO, annonser eller en ny landingsside."
+      ],
+      "items": [
+        {
+          "title": "Finner de deg?",
+          "badge": "01 / Synlighet",
+          "surface": "base-200",
+          "text": "For få relevante mennesker kommer inn. Kanskje finnes det ingen god side for det de faktisk søker etter, eller du når ikke fram i kanalene de bruker.",
+          "href": "/synlighet/",
+          "label": "Se Synlighet"
+        },
+        {
+          "title": "Tar de neste steg?",
+          "badge": "02 / Konvertering",
+          "surface": "info",
+          "text": "Besøkene er relevante, men få tar kontakt eller kjøper. Da må vi undersøke budskapet, skjemaet, mobilvisningen og hva som stopper dem.",
+          "href": "/konvertering/",
+          "label": "Se Konvertering"
+        },
+        {
+          "title": "Velger de tilbudet?",
+          "badge": "03 / Tilbud",
+          "surface": "base-300",
+          "text": "Kundene finner deg og viser interesse, men mange passer ikke eller velger noe annet. Da må vi se på tilbud, pris, risiko og hvem du prøver å nå.",
+          "href": "/vurdering/",
+          "label": "Få en vurdering"
+        }
       ]
     },
     {
       "_block": "content",
-      "id": "kart",
-      "heading": "Still tre spørsmål i denne rekkefølgen.",
+      "id": "regnestykke",
+      "eyebrow": "Regneeksempel",
+      "heading": "Hvorfor bedre konvertering kan slå mer trafikk",
+      "surface": "base-200",
+      "headingAlign": "left",
+      "layout": "two-columns",
       "body": [
-        "Spørsmålene er en start på undersøkelsen, ikke en automatisk fasit. Kilde, side og kundetype kan gjøre at ulike deler av nettstedet har ulike begrensninger."
+        "To bedrifter starter likt: **1 500 relevante besøk, 1 % konverteringsrate og 15 henvendelser**. Begge vil ha 30 henvendelser. De velger ulik vei."
       ],
       "items": [
         {
-          "title": "Kommer de rette inn?",
-          "text": "Se på hvem tilbudet er for, hvilke behov som leder til nettstedet, og om besøkene er relevante. Få relevante besøk kan gjøre synlighet til en naturlig første undersøkelse."
+          "title": "Doble trafikken til 3 000 besøk",
+          "badge": "Mer trafikk",
+          "surface": "base-100",
+          "text": "**3 000 besøk x 1 % = 30 henvendelser.**\n\nBedriften må skaffe 1 500 ekstra relevante besøk. Hvis de kjøpes gjennom annonser, øker trafikkostnaden.",
+          "href": "/synlighet/",
+          "label": "Se synlighetsarbeidet"
         },
         {
-          "title": "Kommer de videre?",
-          "text": "Se om kunden forstår tilbudet, får viktige svar og kan gjennomføre neste steg. Relevante besøk som stopper kan gjøre konvertering til en naturlig første undersøkelse."
-        },
-        {
-          "title": "Er handlingene verdifulle?",
-          "text": "Se på kvaliteten på henvendelser eller økonomien i kjøpene. Hvis handlingene ikke er nyttige, må målgruppe, tilbud eller oppfølging også undersøkes."
+          "title": "Øk konverteringsraten til 2 %",
+          "badge": "Bedre konvertering",
+          "surface": "info",
+          "text": "**1 500 besøk x 2 % = 30 henvendelser.**\n\nIngen nye besøk er nødvendige i regnestykket. Men forbedringene krever arbeid, og en dobling er ikke garantert.",
+          "href": "/konvertering/",
+          "label": "Se konverteringsarbeidet"
         }
+      ],
+      "afterCards": [
+        "Begge veiene gir like mange henvendelser i eksemplet. **Det avgjørende er kostnaden, kvaliteten på henvendelsene og hva som faktisk kan forbedres.** Konvertering er ikke automatisk billigere enn trafikk."
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "kombinasjon",
+      "eyebrow": "Den samlede effekten",
+      "heading": "Hva skjer når du forbedrer begge deler?",
+      "surface": "neutral",
+      "headingAlign": "left",
+      "body": [
+        "Med 3 000 besøk og 2 % konvertering ender regnestykket på **60 henvendelser**. Det er fire ganger så mange som utgangspunktet med 15. Synlighet og konvertering kan forsterke hverandre når begge forbedringene lykkes.",
+        "Illustrasjonen er ikke en prognose. Den sier ingenting om hvor mye ekstra trafikk eller bedre konvertering vil koste, eller om henvendelsene blir kunder."
       ]
     },
     {
       "_block": "content",
       "id": "situasjoner",
-      "eyebrow": "Hypotetiske situasjoner - ingen kundedata",
-      "heading": "Tre utgangspunkt gir tre ulike første spørsmål.",
+      "eyebrow": "Beslutningshjelp",
+      "heading": "Tre situasjoner. Tre forskjellige første grep.",
+      "surface": "base-100",
+      "headingAlign": "left",
+      "layout": "three-columns",
       "body": [
-        "Situasjonene under er laget for å vise beslutningslogikken. De er ikke eksempler på resultater Medon har levert."
+        "Du får ikke en fasit av å se på ett tall. Men disse utgangspunktene gjør det enklere å velge hva som skal undersøkes først."
       ],
       "items": [
         {
-          "title": "Tydelig tilbud, få relevante besøk",
-          "text": "En bedrift har en forståelig tjenesteside, men ser mest besøk fra dem som allerede kjenner navnet. Undersøk først om relevante behovssøk har en tydelig side å møte. Det er en synlighetsundersøkelse; siden kan fortsatt ha konverteringshindringer."
+          "title": "For få relevante besøk",
+          "badge": "Undersøk synlighet",
+          "surface": "base-200",
+          "text": "En rørlegger er synlig på firmanavnet, men nesten ingen finner tjenestene. Undersøk søkebehov, landingssider og hvor konkurrentene blir valgt før du kjøper mer trafikk."
         },
         {
-          "title": "Interesserte besøk, krevende kontakt",
-          "text": "En bedrift får besøk på riktig tjenesteside, men kontakt krever et langt skjema før kunden vet hva som skjer videre. Undersøk om neste steg passer kundens forventning. Det er en konverteringsundersøkelse; besøkenes kvalitet må også sjekkes."
+          "title": "Trafikk, men få henvendelser",
+          "badge": "Undersøk konvertering",
+          "surface": "info",
+          "text": "En nettbutikk får riktige besøk, men få fullfører kjøpet. Start med produktsidene, leveringsvilkårene og kassen før du skalerer annonsebudsjettet."
         },
         {
-          "title": "Flere bestillinger, uklar verdi",
-          "text": "En nettbutikk ser flere kjøp i en periode der rabatter og produktmiks også endres. Undersøk ordreverdi, margin og relevante kostnader før du konkluderer med at utviklingen er nyttig. Kjøpstall alene svarer ikke på det."
+          "title": "Mange leads, få kunder",
+          "badge": "Undersøk tilbudet",
+          "surface": "base-300",
+          "text": "En B2B-bedrift får henvendelser som sjelden blir avtaler. Se på målgruppe, verdi, forventninger og salgsoppfølging. Flere skjema er ikke nødvendigvis løsningen."
+        }
+      ],
+      "afterCards": [
+        "Situasjonene er hypotetiske og ment som eksempler på hvordan du kan prioritere."
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "tilbud",
+      "eyebrow": "Den glemte flaskehalsen",
+      "heading": "Kanskje er det tilbudet som bør forbedres først?",
+      "surface": "info",
+      "headingAlign": "left",
+      "layout": "two-columns",
+      "body": [
+        "Hvis kunden kommer inn på riktig side og lett kan ta kontakt, men fortsatt ikke velger bedriften, hjelper det lite å flytte en knapp fem piksler. Sjekk hva kunden faktisk får, hvordan det forklares og om tilbudet passer behovet."
+      ],
+      "items": [
+        {
+          "title": "Er det lett å velge deg?",
+          "surface": "base-100",
+          "text": "Er pris, levering, ventetid og hva som inngår forståelig? Må kunden gjette hvorfor du er et bedre valg enn alternativet? Start med det de trenger for å bestemme seg."
+        },
+        {
+          "title": "Er kunden lønnsom?",
+          "surface": "base-200",
+          "text": "Flere bestillinger er ikke nok hvis marginen forsvinner. Se på dekningsbidrag, kvaliteten på henvendelsene og hvor mye du må bruke på å få kunden."
         }
       ]
     },
     {
       "_block": "content",
-      "id": "matte",
-      "heading": "En brøk forklarer mekanikken. Den velger ikke tiltaket.",
+      "id": "maaling",
+      "eyebrow": "Tallene som hjelper",
+      "heading": "Tre tall er viktigere enn en pen rapport.",
+      "surface": "base-200",
+      "headingAlign": "left",
+      "layout": "three-columns",
       "body": [
-        "Konverteringsrate er relevante, definerte handlinger delt på det avtalte besøksgrunnlaget. I et illustrerende regneeksempel gir 500 besøk med 2 % som tar kontakt samme antall henvendelser som 1 000 besøk med 1 %: 10.",
-        "Regnestykket forutsetter samme definisjon av en henvendelse og et sammenlignbart besøksgrunnlag. Det sier ikke at en dobling av konverteringsraten er mulig, lett eller mer lønnsom enn å få flere relevante besøk.",
-        "Handlingenes kvalitet og verdi kommer i tillegg. Forretningsverdi kan forenklet ses som relevant trafikk x konverteringsrate x kundeverdi. Modellen lærer bort sammenhengen; den er ingen prognose."
-      ]
-    },
-    {
-      "_block": "content",
-      "id": "betalt",
-      "heading": "Betalt synlighet kan gi fart når resten av regnestykket henger sammen.",
-      "body": [
-        "Annonser kan være en måte å nå relevante kunder på. Før mer budsjett vurderes, bør tilbud, kjøpsvei, måling og økonomi gi et fornuftig utgangspunkt.",
-        "Hvis kunden stopper på siden, kan mer trafikk også gi flere besøk som stopper. Hvis siden fungerer og bedriften trenger relevant rekkevidde, kan betalt synlighet være et nyttig tillegg. Det er en vurdering av behov og økonomi, ikke et valg mellom \"annonser\" og \"optimalisering\"."
-      ]
-    },
-    {
-      "_block": "content",
-      "id": "usikkerhet",
-      "heading": "Mangler du data, begynn med en begrunnet hypotese.",
-      "body": [
-        "En manuell gjennomgang kan finne mulige hindringer og stille bedre spørsmål. Den kan ikke alene fastslå hvor mange kunder en hindring koster, eller hvilket tiltak som vil gi størst effekt.",
-        "Skill mellom det dere ser, det dere antar, og det dere kan følge med data. En første prioritering kan være nyttig selv om den senere må endres når bedre informasjon kommer til."
+        "Følg den samme kundereisen hele veien. Besøk, henvendelser og betalende kunder forteller ulike deler av historien."
+      ],
+      "items": [
+        {
+          "title": "Relevante besøk",
+          "badge": "Oppdagelse",
+          "surface": "base-100",
+          "text": "Hvor mange kommer inn på den aktuelle siden, og fra hvilke søk eller kampanjer? En økning i feil trafikk gjør ikke tilbudet mer lønnsomt."
+        },
+        {
+          "title": "Henvendelser eller kjøp",
+          "badge": "Handling",
+          "surface": "base-100",
+          "text": "Hvor mange gjør det du ønsker, og hva er målegrunnlaget? Bruk samme definisjon og tidsperiode når du sammenligner."
+        },
+        {
+          "title": "Kunder og dekningsbidrag",
+          "badge": "Verdi",
+          "surface": "base-100",
+          "text": "Hvor mange henvendelser blir gode kunder, og hva sitter bedriften igjen med? Det er dette som avgjør hvor mye trafikk og optimalisering er verdt."
+        }
       ],
       "links": [
         {
-          "label": "Slik vurderer du effekten etterpå",
+          "label": "Slik måler du effekten av optimalisering",
           "href": "/innsikt/male-effekt-av-optimalisering/"
         }
       ]
     },
     {
       "_block": "content",
-      "id": "start",
-      "heading": "Du kan be om en kort vurdering av hvor Medon ville startet.",
+      "id": "forste-grep",
+      "eyebrow": "Hva gjør du nå?",
+      "heading": "Start med én flaskehals du faktisk kan undersøke.",
+      "surface": "base-100",
+      "headingAlign": "left",
       "body": [
-        "Send nettadressen og en e-postadresse for bedriften. Den gratis sjekken er manuell og avgrenset: kort veiledning om hva vi ville startet med, hvorfor, og om Synlighet, Konvertering eller begge bør komme først.",
-        "Den inkluderer ikke automatisk poengsum, full revisjon, komplett feilliste, prognose eller gjennomføring."
+        "Har du lite data, begynn med en begrunnet hypotese. Se på søkene som leder folk inn, gå gjennom siden på mobil og les noen reelle kundehenvendelser. Finn én konkret hindring å undersøke før du bestiller en totalrenovering.",
+        "Hos Medon ser vi på hvor det er mest fornuftig å starte og foreslår konkrete forbedringer. Du kan sende nettadressen og få tre prioriterte funn. Da velger vi retning før vi bruker penger på tiltak."
       ],
       "links": [
         {
-          "label": "Ta en gratis sjekk",
+          "label": "Få 3 gratis funn",
           "href": "/vurdering/"
         },
         {
-          "label": "Se tjenestene og omfanget",
+          "label": "Se tjenester og priser",
           "href": "/priser/"
         }
       ]
@@ -129,21 +224,25 @@
   ],
   "faq": [
     {
-      "question": "Er høy trafikk et tegn på at synligheten er god nok?",
-      "answer": "Ikke alene. Trafikken må passe tilbudet og kundene bedriften ønsker. Det er også relevant hvilke sider de kommer til og hvilken forventning de har."
+      "question": "Bør vi alltid optimalisere konverteringen før vi kjøper mer trafikk?",
+      "answer": "Nei. Mangler du relevante besøk, kan synlighet være viktigst først. Får du trafikk, men få henvendelser, kan konvertering være neste undersøkelse. Vi vurderer behov, kostnad og forventet verdi."
     },
     {
-      "question": "Bør vi alltid løse konvertering før vi får mer trafikk?",
-      "answer": "Nei. Vi må undersøke utgangspunktet. En liten trafikkmengde kan gjøre det vanskelig å vurdere handlinger, mens en tydelig hindring på en mye besøkt side kan være relevant å begynne med."
+      "question": "Hvordan vet vi om tilbudet er problemet?",
+      "answer": "Se på spørsmålene kundene stiller, hvorfor relevante henvendelser ikke blir salg og om pris, levering eller innhold skaper tvil. Ikke konkluder fra trafikk- og skjemaantall alene."
     },
     {
-      "question": "Hva hvis både synlighet og konvertering er begrensningen?",
-      "answer": "Da kan de vurderes sammen, men arbeidet bør fortsatt ha en begrunnet rekkefølge. En kombinasjon betyr ikke at alle mulige tiltak skal gjennomføres samtidig."
+      "question": "Hva hvis vi mangler pålitelig besøksstatistikk?",
+      "answer": "Start med en manuell gjennomgang og en konkret hypotese. Vi kan avdekke mulige hindringer, men kan ikke vite hvor stor effekten blir uten bedre målinger."
+    },
+    {
+      "question": "Betyr regneeksemplet at konverteringsoptimalisering er billigere enn annonser?",
+      "answer": "Nei. Begge veier kan doble antall henvendelser i det illustrerte eksemplet. Hvor lønnsomt tiltaket er, avhenger av kostnadene, trafikkvaliteten og hvor mye som faktisk lar seg forbedre."
     }
   ],
   "listing": {
     "title": "Hva bør optimaliseres først?",
-    "summary": "Undersøk om de rette finner deg, om de kommer videre, og om handlingene har verdi. Se hypotetiske situasjoner og en enkel beslutningsrekkefølge.",
+    "summary": "Synlighet, konvertering eller selve tilbudet? Se de tre vanligste flaskehalsene, sammenlign regnestykkene og velg et fornuftig første grep.",
     "label": "Les startguiden",
     "order": 10,
     "visible": true,
