@@ -2,16 +2,17 @@
   "slug": "seo",
   "kind": "service",
   "seo": {
-    "title": "SEO-byrå for bedrifter i Oslo | Optimalisering Oslo",
-    "description": "SEO-tjenester for bedrifter i Oslo og Norge. Vi vurderer søkeord, tjenestesider, tekniske hindringer og veien fra Google-søk til relevante henvendelser."
+    "title": "SEO-byrå Oslo | Søkemotoroptimalisering for flere kunder",
+    "description": "SEO og søkemotoroptimalisering i Oslo og Norge. Vi finner kjøpssøkene, forbedrer sidene, gjør tekniske endringer og måler relevante henvendelser. Se priser.",
+    "noindex": false
   },
   "hero": {
     "layout": "split-right",
-    "eyebrow": "SEO - søkemotoroptimalisering for bedrifter",
-    "title": "SEO for bedrifter som vil bli funnet av riktige kunder.",
-    "support": "SEO gjør det lettere for kunder å finne relevante tjenester i Googles organiske søkeresultater. Vi hjelper bedrifter i Oslo og resten av Norge med å vurdere hva de bør bli funnet for, hvilke sider som trenger arbeid, og hvordan besøk kan bli til henvendelser. Først finner vi ut hva som faktisk holder nettsiden tilbake.",
+    "eyebrow": "SEO og søkemotoroptimalisering for bedrifter",
+    "title": "Google-plasseringer betaler ikke regninger. Kundene gjør.",
+    "support": "Vi gjør nettsiden lettere å finne for folk som leter etter det du selger. Vi forbedrer sidene som skal hjelpe dem å velge deg, rydder tekniske hindringer og følger med på henvendelsene. Hos oss er SEO noe vi gjennomfører på nettsiden, ikke enda en rapport du betaler for å lese.",
     "primaryCta": {
-      "label": "Ta en gratis sjekk",
+      "label": "Få 3 gratis SEO-funn",
       "href": "/seo/#sjekk"
     },
     "visual": {
@@ -23,184 +24,320 @@
         "positionX": 50,
         "positionY": 50
       }
-    }
+    },
+    "highlights": [
+      "Vi gjennomfører avtalte endringer",
+      "SEO og konvertering hos samme leverandør",
+      "Fast månedspris. Ingen bindingstid."
+    ]
   },
   "sections": [
     {
-      "_block": "global",
-      "element": "priser"
-    },
-    {
       "_block": "content",
-      "id": "seo-tjenester",
-      "eyebrow": "SEO-tjenester",
-      "heading": "Dette kan vi gjøre for å forbedre SEO.",
-      "headingAlign": "center",
-      "layout": "two-columns",
-      "surface": "base-200",
+      "id": "hva-er-seo",
+      "heading": "Det finnes søk som er langt mer verdt enn andre.",
+      "headingAlign": "left",
       "body": [
-        "Vi begynner med søkene som kan gi bedriften riktige kunder, og prioriterer tiltak på nettsiden. Hva som gjennomføres, bestemmes av behov og avtalt kapasitet."
+        "**Søkemotoroptimalisering (SEO)** betyr å forbedre nettsidens synlighet i organiske søkeresultater. Målet vårt er at relevante kunder skal finne riktig tjeneste, forstå tilbudet og ha en enkel vei til kontakt eller kjøp.",
+        "Vi begynner med spørsmålet som bestemmer om SEO-arbeidet blir lønnsomt: Hva søker folk etter akkurat når de vurderer å velge en leverandør?"
       ],
-      "items": [
-        {
-          "title": "Søkeord og søkeintensjon",
-          "text": "Avklare hva relevante kunder søker etter, om de vil kjøpe eller lære, og hvilke søk dere faktisk ønsker å svare på.",
-          "boxVariant": "card",
-          "surface": "info"
-        },
-        {
-          "title": "Tjenestesider og innhold",
-          "text": "Forbedre overskrifter, beskrivelser, svar, interne lenker og veien videre fra en relevant side til kontakt eller kjøp.",
-          "boxVariant": "card",
-          "surface": "base-300"
-        },
-        {
-          "title": "Teknisk SEO",
-          "text": "Undersøke blant annet indeksering, brutte lenker, omdirigeringer og sidens tilgjengelighet for søkemotorer, og prioritere reelle hindringer.",
-          "boxVariant": "card",
-          "surface": "base-100"
-        },
-        {
-          "title": "Måling og prioritering",
-          "text": "Skille synlighet og klikk fra relevante henvendelser. Tilgjengelige tall fra søk, nettside og kundeoppfølging brukes med sine begrensninger.",
-          "boxVariant": "card",
-          "surface": "base-200"
-        }
-      ],
-      "links": [
-        {
-          "label": "Se hvordan SEO inngår i våre pakker",
-          "href": "/priser/"
-        }
-      ]
-    },
-    {
-      "_block": "content",
-      "id": "sok-side",
-      "heading": "Hvilke søk skal føre kunden til hvilken side?",
-      "headingAlign": "center",
+      "eyebrow": "Kjøpsintensjon før søkevolum",
       "layout": "three-columns",
       "surface": "base-100",
-      "body": [
-        "Kunden som søker etter \"rørlegger døgnvakt\" er nærmere å velge leverandør enn den som søker \"hva gjør jeg ved vannlekkasje\". Vi sørger for at begge møter en side som svarer på det de faktisk trenger."
-      ],
       "items": [
         {
-          "title": "Behovet",
-          "text": "Hvilken tjeneste, løsning eller produktgruppe søker kunden etter, og passer denne kunden bedriften?",
+          "title": "Klar til å bestille",
+          "text": "Søket \"bestill EU-kontroll\" fortjener en side med tjenesten, pris eller prisvei, beliggenhet og en enkel bestilling. Ingen trenger verkstedets livshistorie først.",
+          "surface": "info",
           "boxVariant": "card",
-          "surface": "base-200"
+          "badge": "Nær kjøpet",
+          "iconName": "target"
         },
         {
-          "title": "Siden",
-          "text": "Finnes det en konkret side som svarer på behovet med nyttig og riktig informasjon?",
+          "title": "Sammenligner leverandører",
+          "text": "Søket \"regnskapsfører for AS pris\" krever konkrete svar på hvem tjenesten passer for, hva som er inkludert og hvordan man får et tilbud.",
+          "surface": "base-200",
           "boxVariant": "card",
-          "surface": "info"
+          "badge": "Vurderer valget",
+          "iconName": "magnifying-glass"
         },
         {
-          "title": "Neste steg",
-          "text": "Kan kunden vurdere tilbudet og enkelt gå videre til relevant kontakt eller kjøp?",
+          "title": "Trenger et svar",
+          "text": "Søket \"når må bilen på EU-kontroll\" krever et presist svar. Her kan nyttig innhold bygge tillit og lede videre til tjenestesiden når behovet oppstår.",
+          "surface": "base-300",
           "boxVariant": "card",
-          "surface": "base-300"
+          "badge": "Før kjøpet",
+          "iconName": "chat-circle-text"
         }
       ]
     },
     {
       "_block": "content",
-      "id": "teknisk",
-      "eyebrow": "Teknisk SEO",
-      "heading": "Teknisk SEO: Kan Google finne, lese og forstå de viktige sidene?",
+      "id": "faktisk-seo-arbeid",
+      "heading": "Hos oss skjer det noe mellom SEO-rapporten og den neste rapporten.",
       "headingAlign": "left",
-      "surface": "base-300",
       "body": [
-        "Viktige sider må kunne indekseres og finnes gjennom tydelige interne lenker. Vi undersøker konkrete hindringer som feil omdirigeringer, utilgjengelig innhold og dårlig mobilopplevelse. Større tekniske endringer avtales separat."
-      ]
-    },
-    {
-      "_block": "content",
-      "id": "prioritering",
-      "eyebrow": "Prioritering før volum",
-      "heading": "En SEO-plan skal prioritere arbeid, ikke bare produsere rapporter.",
-      "headingAlign": "left",
-      "surface": "secondary",
-      "body": [
-        "En side som ikke forklarer tilbudet, blir ikke bedre av at vi publiserer artikkel nummer 80. Vi vurderer søk, tilbud og eksisterende sider før vi foreslår mer arbeid.",
-        "SEO kan være ett prioritert område i optimaliseringspakkene. Vi avtaler oppgavene og følger relevante resultater, men lover ikke en bestemt plassering eller antall kunder."
+        "Mange kan levere en liste over feil. Vi prioriterer de viktigste funnene og utfører endringer på nettsiden innen avtalt omfang. Du skal kunne se hva vi har gjort, og hvorfor det var verdt å gjøre.",
+        "Vi jobber med SEO, nettsideutvikling og konvertering. Det betyr at vi også kan rette siden som kunden lander på, fremfor å avslutte jobben idet Google sender et klikk."
       ],
-      "links": [
+      "eyebrow": "Dette jobber vi med",
+      "layout": "two-columns",
+      "surface": "base-200",
+      "items": [
         {
-          "label": "Se hvordan Synlighet vurderes",
-          "href": "/synlighet/"
+          "title": "Søkene som kan bli kunder",
+          "text": "Vi undersøker hva relevante kunder søker etter, hvilke sider som allerede får synlighet og hvor konkurrentene møter behovet bedre. Vi velger søk ut fra muligheten til å få en god henvendelse.",
+          "surface": "base-100",
+          "boxVariant": "card",
+          "badge": "Analyse",
+          "iconName": "magnifying-glass"
         },
         {
-          "label": "Se tjenestealternativene",
-          "href": "/priser/"
-        }
-      ]
-    },
-    {
-      "_block": "content",
-      "id": "google-oppdatering-2026",
-      "heading": "Google-oppdateringen i november: Hva skjer når SEO-trafikken faller?",
-      "body": [
-        "Enkelte nettsteder rapporterer store fall, andre vekst. AI-massepublisering er en reell risiko, men det er for tidlig å gi all skyld til én algoritme. Vi har samlet konkrete eksempler og fire kontroller som skiller innholdsproblemer fra tekniske feil og vanlige søkesvingninger."
-      ],
-      "links": [
+          "title": "Tjenestesider som svarer",
+          "text": "Vi forbedrer overskrifter, nyttige svar, tjenestebeskrivelser, interne lenker og neste steg. Vi oppretter nye sider når de fyller et reelt behov som eksisterende sider ikke dekker.",
+          "surface": "info",
+          "boxVariant": "card",
+          "badge": "Innhold",
+          "iconName": "browser"
+        },
         {
-          "label": "Les analysen av novemberoppdateringen",
-          "href": "/innsikt/google-oppdatering-november-2026/"
+          "title": "Tekniske hindringer",
+          "text": "Vi undersøker blant annet indeksering, canonical, omdirigeringer, tilgjengelighet og mobilopplevelse. Avtalte feil rettes. Større utviklingsarbeid avklares før det settes i gang.",
+          "surface": "base-300",
+          "boxVariant": "card",
+          "badge": "Teknisk SEO",
+          "iconName": "wrench"
+        },
+        {
+          "title": "Relevans og autoritet",
+          "text": "Vi ser etter naturlige muligheter for omtale og relevante lenker. Vi følger utviklingen i Google Search Console og justerer arbeidet etter funn, fremfor å kjøpe tilfeldige lenkepakker.",
+          "surface": "base-100",
+          "boxVariant": "card",
+          "badge": "Oppfølging",
+          "iconName": "link"
         }
       ]
     },
     {
       "_block": "content",
-      "id": "seo-oslo",
-      "heading": "SEO i Oslo: Hvem søker, og hvor leverer bedriften?",
+      "id": "landingsside",
+      "heading": "Google sender kunden til nettsiden. Hva skjer der?",
       "headingAlign": "left",
+      "body": [
+        "Tenk deg at kunden søker etter EU-kontroll nær seg. Begge disse sidene kan bli funnet på Google. Forskjellen er hvor mye arbeid kunden må gjøre for å forstå tilbudet.",
+        "Eksemplet er illustrerende. Vi undersøker alltid den faktiske tjenesten og kundenes spørsmål før vi gjør endringer."
+      ],
+      "eyebrow": "Før og etter",
+      "layout": "two-columns",
       "surface": "base-100",
-      "body": [
-        "Noen kunder søker etter en leverandør i et bestemt område. Andre sammenligner tjenester uten å bry seg om hvor leverandøren sitter. Vi vurderer hva som gjelder for dere, og kobler inn lokal SEO og Google bedriftsprofil når avstand og tjenesteområde betyr noe."
+      "items": [
+        {
+          "title": "Den vanlige bedriftssiden",
+          "text": "\"Velkommen! Vi tilbyr kvalitet, god service og mange års erfaring. Ta kontakt for mer informasjon.\"\n\nKunden må fortsatt finne ut om dere tilbyr EU-kontroll, hvor dere holder til og hvordan en time bestilles.",
+          "surface": "base-300",
+          "boxVariant": "card",
+          "badge": "Før"
+        },
+        {
+          "title": "Siden som tar kunden på alvor",
+          "text": "\"EU-kontroll: se hva som inngår, hvor verkstedet ligger, pris eller prisvei og hvordan du bestiller time.\"\n\nKunden kan avgjøre om tilbudet passer og gå videre uten detektivarbeid.",
+          "surface": "info",
+          "boxVariant": "card",
+          "badge": "Etter"
+        }
       ],
       "links": [
         {
-          "label": "Les om lokal SEO og Google Maps",
-          "href": "/lokal-seo/"
-        },
-        {
-          "label": "Guide til Google bedriftsprofil",
-          "href": "/innsikt/google-bedriftsprofil/"
+          "label": "Se hvordan konverteringsoptimalisering fungerer",
+          "href": "/konvertering/"
         }
       ]
     },
     {
       "_block": "content",
-      "id": "effekt",
-      "heading": "Hva får bedriften igjen for SEO-arbeidet?",
+      "id": "seo-regneeksempel",
+      "heading": "Én relevant kunde kan være mer verdt enn tusen tilfeldige besøk.",
       "headingAlign": "left",
-      "surface": "info",
       "body": [
-        "Vi følger med på synlighet og relevante besøk, men spør også hva som skjer videre: Ble det en kvalifisert henvendelse eller et nytt kjøp? Måling har begrensninger. Flere klikk alene sier lite om hva bedriften faktisk tjener."
+        "**Regneeksempel:** Et nettsted får fem ekstra relevante henvendelser. To blir kunder, og hver gir 6 000 kr i dekningsbidrag. Det tilsvarer **12 000 kr i dekningsbidrag**. Hvis arbeidet kostet 5 000 kr i samme periode, er differansen **7 000 kr før øvrige kostnader**.",
+        "Tallene er oppdiktet for å vise hvordan regnestykket fungerer, ikke for å anslå effekten av SEO. Vi må kjenne verdien av faktiske kunder og hva som er betalt for arbeidet før vi kan vurdere lønnsomheten."
+      ],
+      "eyebrow": "Regn på kunder, ikke klikk",
+      "layout": "two-columns",
+      "surface": "neutral",
+      "items": [
+        {
+          "title": "Den pene rapporten",
+          "text": "1 000 flere visninger eller ti nye søkeord på førstesiden kan se bra ut. Men rapporten forteller fortsatt ikke hva bedriften sitter igjen med.",
+          "surface": "base-100",
+          "boxVariant": "card",
+          "badge": "Aktivitet"
+        },
+        {
+          "title": "Det nyttige regnestykket",
+          "text": "**5 henvendelser x 40 % salg = 2 kunder**\n\n**2 kunder x 6 000 kr = 12 000 kr**\n\n**12 000 - 5 000 kr i kostnad = 7 000 kr** før andre kostnader.",
+          "surface": "info",
+          "boxVariant": "card",
+          "badge": "Verdi"
+        }
       ],
       "links": [
         {
-          "label": "Les om måling av effekt",
+          "label": "Les hvordan vi måler effekt",
           "href": "/innsikt/male-effekt-av-optimalisering/"
         }
       ]
     },
     {
       "_block": "content",
-      "id": "ai",
-      "heading": "Hva med synlighet i ChatGPT og andre AI-svar?",
+      "id": "oppstart",
+      "heading": "Den første måneden skal det skje mer enn planlegging.",
       "headingAlign": "left",
-      "surface": "base-200",
       "body": [
-        "Tydelige tjenestesider er et godt utgangspunkt også for AI-søk. Men en Google-plassering dokumenterer ikke en anbefaling fra en AI-tjeneste. Det vurderer vi separat."
+        "Vi avklarer mål, tilganger og hvilket forbedringsområde som er viktigst. Med pakken Optimalisering jobber vi på ett prioritert område av gangen. Hvor mye vi kan gjøre samtidig, avhenger av valgt pakke og nettsidens behov."
+      ],
+      "eyebrow": "Slik starter samarbeidet",
+      "layout": "three-columns",
+      "surface": "base-100",
+      "items": [
+        {
+          "title": "1. Finn oppgaven med størst verdi",
+          "text": "Vi ser på søk, sider, konkurranse og tilgjengelige målinger. Vi forklarer hva vi vil prioritere og hva vi trenger fra deg for å gjennomføre det.",
+          "surface": "base-200",
+          "boxVariant": "card",
+          "badge": "Kartlegging",
+          "iconName": "magnifying-glass"
+        },
+        {
+          "title": "2. Gjør avtalte forbedringer",
+          "text": "Med nødvendig tilgang jobber vi med den prioriterte siden eller den tekniske hindringen. Større nyutvikling og oppgaver utenfor avtalen avklares separat.",
+          "surface": "info",
+          "boxVariant": "card",
+          "badge": "Gjennomføring",
+          "iconName": "wrench"
+        },
+        {
+          "title": "3. Følg opp det som betyr noe",
+          "text": "Vi viser gjennomførte endringer og undersøker utviklingen i relevante søk, henvendelser og bestillinger så langt dataene tillater. Neste tiltak velges ut fra det vi lærer.",
+          "surface": "base-300",
+          "boxVariant": "card",
+          "badge": "Oppfølging",
+          "iconName": "chart-line-up"
+        }
+      ]
+    },
+    {
+      "_block": "global",
+      "element": "priser"
+    },
+    {
+      "_block": "content",
+      "id": "seo-og-konvertering",
+      "heading": "En SEO-konsulent kan skaffe klikket. Vi kan også fikse siden som får det.",
+      "headingAlign": "left",
+      "body": [
+        "Du kan ha gode plasseringer og fortsatt miste salget. Prisen er uklar. Mobilskjemaet er vanskelig. Kunden skjønner ikke hva som inngår. Vi har kompetanse på begge sider av klikket.",
+        "Noen ganger trenger bedriften mer synlighet. Andre ganger bør vi få mer ut av trafikken den allerede har. Vi prioriterer den jobben som har best begrunnelse, og utfører avtalte endringer."
+      ],
+      "eyebrow": "Vårt fortrinn",
+      "layout": "two-columns",
+      "surface": "base-200",
+      "items": [
+        {
+          "title": "For få relevante kunder finner deg",
+          "text": "Da er spørsmålet hvilke søk dere bør synes på, og hvilke sider Google og kunden trenger.",
+          "surface": "base-100",
+          "boxVariant": "card",
+          "badge": "SEO",
+          "iconName": "magnifying-glass",
+          "href": "/synlighet/",
+          "label": "Se synlighet"
+        },
+        {
+          "title": "Kundene finner deg, men bestiller ikke",
+          "text": "Da må vi undersøke budskap, prisinformasjon, trygghet og friksjon i skjema eller kjøpsløp.",
+          "surface": "info",
+          "boxVariant": "card",
+          "badge": "Konvertering",
+          "iconName": "cursor-click",
+          "href": "/konvertering/",
+          "label": "Se konvertering"
+        }
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "lokal-og-ai",
+      "heading": "Søket endrer seg. Det er fortsatt kunden som bestemmer.",
+      "headingAlign": "left",
+      "body": [
+        "God teknikk, nyttige svar og tydelige tjenester er et felles utgangspunkt for vanlig Google-søk og AI-baserte søkeopplevelser. Vi vurderer hvilke flater som er relevante for din bedrift og hva vi faktisk kan kontrollere."
+      ],
+      "eyebrow": "Google, Maps og AI-søk",
+      "layout": "three-columns",
+      "surface": "base-100",
+      "items": [
+        {
+          "title": "Lokal SEO og Google Maps",
+          "text": "En tannlege eller håndverker må ofte bli funnet der tjenesten faktisk leveres. Vi vurderer bedriftsprofil, lokale søk og relevante tjenestesider.",
+          "surface": "base-200",
+          "boxVariant": "card",
+          "iconName": "map-pin",
+          "href": "/lokal-seo/",
+          "label": "Les om lokal SEO"
+        },
+        {
+          "title": "Synlighet i ChatGPT og AI-svar",
+          "text": "Vi gjør informasjon om tjenester, priser og fakta forståelig og tilgjengelig. Vi kan kontrollere teknisk tilgang, men ingen kan garantere anbefalinger i AI-svar.",
+          "surface": "info",
+          "boxVariant": "card",
+          "iconName": "sparkle",
+          "href": "/ai-synlighet/",
+          "label": "Les om AI-synlighet"
+        },
+        {
+          "title": "Når Google endrer plasseringene",
+          "text": "Vi undersøker hva som faktisk har endret seg før vi foreslår tiltak. En rød graf på mandag er ikke god nok grunn til å rive ned nettstedet på tirsdag.",
+          "surface": "base-300",
+          "boxVariant": "card",
+          "iconName": "compass",
+          "href": "/innsikt/google-oppdatering-november-2026/",
+          "label": "Les vurderingen"
+        }
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "riktig-tid",
+      "heading": "Noen ganger bør du bruke pengene på noe annet enn SEO først.",
+      "headingAlign": "left",
+      "body": [
+        "Hvis nesten ingen søker etter tilbudet, må vi først forstå hvordan markedet finner leverandører. Hvis du trenger nye bestillinger denne uken, kan annonser være raskere å teste. Hvis besøkene allerede er relevante, men ingen tar kontakt, kan konvertering være viktigere enn mer trafikk.",
+        "Det er derfor vi begynner med en kort vurdering. En god SEO-leverandør bør også kunne fortelle deg når SEO ikke er neste riktige investering."
+      ],
+      "eyebrow": "Før du kjøper",
+      "layout": "two-columns",
+      "surface": "info",
+      "items": [
+        {
+          "title": "Når SEO gir mening",
+          "text": "Kundene søker etter tjenestene dine, det finnes relevante søk å konkurrere om, og bedriften vil bygge synlighet gjennom løpende forbedringer.",
+          "surface": "base-100",
+          "boxVariant": "card",
+          "badge": "Prioriter synlighet"
+        },
+        {
+          "title": "Når vi anbefaler noe annet først",
+          "text": "Tilbudet er uklart, siden fungerer dårlig på mobil, henvendelser blir ikke fulgt opp eller behovet haster mer enn organisk synlighet kan løse.",
+          "surface": "base-200",
+          "boxVariant": "card",
+          "badge": "Prioriter hindringen"
+        }
       ],
       "links": [
         {
-          "label": "Les om AI-synlighet",
-          "href": "/ai-synlighet/"
+          "label": "Finn ut hva du bør optimalisere først",
+          "href": "/innsikt/hva-bor-optimaliseres-forst/"
         }
       ]
     },
@@ -211,28 +348,36 @@
   ],
   "faq": [
     {
-      "question": "Må vi lage en ny side for hvert søkeord?",
-      "answer": "Nei. Flere ord kan uttrykke det samme behovet. En ny side bør ha en egen jobb og nyttig informasjon, fremfor å gjenta en eksisterende side med en ny overskrift."
-    },
-    {
-      "question": "Hvor raskt virker SEO?",
-      "answer": "Det kan vi ikke gi et generelt løfte om. Utgangspunkt, tiltak og forhold utenfor nettsiden påvirker utviklingen. Vi må se på hva som faktisk er gjort og hvilke data som finnes."
-    },
-    {
-      "question": "Kan SEO erstatte annonser?",
-      "answer": "Det avhenger av behovet og økonomien. SEO og betalt synlighet kan ha ulike roller og kan vurderes sammen. Annonsebudsjett er ikke inkludert med mindre det uttrykkelig avtales."
-    },
-    {
-      "question": "Hva gjør et SEO-byrå eller en SEO-konsulent?",
-      "answer": "Et SEO-byrå kan undersøke søkeord og kundebehov, gjøre tjenestesider tydeligere, avdekke tekniske hindringer og følge med på relevante resultater. Hvilke tiltak som faktisk utføres, bestemmes av nettsidens behov og avtalt omfang. En rapport alene er ingen forbedring."
+      "question": "Hva er søkemotoroptimalisering?",
+      "answer": "Søkemotoroptimalisering (SEO) er arbeidet med å forbedre nettsidens synlighet i organiske søkeresultater, særlig Google. Det innebærer å velge relevante søk, gjøre innholdet nyttig, fjerne tekniske hindringer og sørge for at kunden finner riktig tjeneste. Målet er relevante henvendelser og salg, fremfor bare trafikk."
     },
     {
       "question": "Hva koster SEO hos Optimalisering Oslo?",
-      "answer": "SEO kan inngå som ett prioritert arbeidsområde i våre eksisterende optimaliseringspakker. Se prisoversikten for gjeldende månedspriser og vilkår. Større utvikling eller nye nettsider kan kreve et separat tilbud; vi lover ikke en fast mengde SEO-arbeid uten avtale."
+      "answer": "SEO kan inngå som et prioritert arbeidsområde i våre faste optimaliseringspakker. Optimalisering dekker ett område om gangen, Vekst to, og Enterprise flere områder med høyere kapasitet. Du finner gjeldende priser, omfang og vilkår i prisoversikten på denne siden. Større utviklingsarbeid kan kreve et separat tilbud."
     },
     {
-      "question": "Hjelper dere bedrifter utenfor Oslo?",
-      "answer": "Ja, vi vurderer SEO for bedrifter i Oslo og resten av Norge. Når kundene velger leverandør basert på hvor de befinner seg, vurderer vi også lokal SEO, Google bedriftsprofil og faktiske tjenesteområder."
+      "question": "Hvor lang tid tar det før SEO virker?",
+      "answer": "Det finnes ingen fast tid til førsteplass. Noen tekniske feil kan løses raskt, mens bedre synlighet for konkurranseutsatte søk kan ta måneder. Vi lover ikke en bestemt plassering eller dato. Du skal derimot kunne se hvilke avtalte forbedringer vi gjennomfører underveis."
+    },
+    {
+      "question": "Hva er forskjellen på SEO og Google Ads?",
+      "answer": "SEO handler om organisk synlighet og krever arbeid på nettsiden, uten betaling per organisk klikk. Google Ads kjøper annonseplass og kan gi raskere trafikk når kampanjen fungerer. Det er etterspørsel, konkurranse, kostnad per kunde og tidshorisont som avgjør hva som bør prioriteres."
+    },
+    {
+      "question": "Må vi publisere nye SEO-artikler hver måned?",
+      "answer": "Nei. Å forbedre en eksisterende tjenesteside kan være viktigere enn å produsere fem nye artikler. Vi publiserer nytt innhold når det svarer på et eget relevant spørsmål som dagens sider ikke dekker godt."
+    },
+    {
+      "question": "Kan dere skaffe oss anbefalinger i ChatGPT og AI-søk?",
+      "answer": "Vi kan forbedre tilgjengeligheten, kvaliteten og tydeligheten i informasjonen som søke- og AI-systemer kan finne. Vi kan ikke garantere omtale, siteringer, anbefalinger eller en bestemt plassering i ChatGPT eller Google AI."
+    },
+    {
+      "question": "Kan vi gjøre SEO selv i stedet for å bruke et byrå?",
+      "answer": "Ja. Hvis dere har tid og kompetanse til å velge søk, forbedre innhold, løse tekniske problemer og måle henvendelsene, kan mye gjøres internt. Vi passer når dere ønsker en leverandør som tar ansvar for prioritering og gjennomføring innen avtalt omfang."
+    },
+    {
+      "question": "Hjelper dere med SEO utenfor Oslo?",
+      "answer": "Ja. Vi jobber med SEO for bedrifter i Oslo og resten av Norge. Lokal SEO er aktuelt når kundens beliggenhet og bedriftens faktiske tjenesteområde påvirker valg av leverandør."
     }
   ]
 }
