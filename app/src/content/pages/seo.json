@@ -140,6 +140,20 @@
     },
     {
       "_block": "content",
+      "id": "google-oppdatering-2026",
+      "heading": "Google-oppdateringen i november: Hva skjer når SEO-trafikken faller?",
+      "body": [
+        "Enkelte nettsteder rapporterer store fall, andre vekst. AI-massepublisering er en reell risiko, men det er for tidlig å gi all skyld til én algoritme. Vi har samlet konkrete eksempler og fire kontroller som skiller innholdsproblemer fra tekniske feil og vanlige søkesvingninger."
+      ],
+      "links": [
+        {
+          "label": "Les analysen av novemberoppdateringen",
+          "href": "/innsikt/google-oppdatering-november-2026/"
+        }
+      ]
+    },
+    {
+      "_block": "content",
       "id": "seo-oslo",
       "heading": "SEO i Oslo: Hvem søker, og hvor leverer bedriften?",
       "headingAlign": "left",
