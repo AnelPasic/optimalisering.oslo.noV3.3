@@ -1,0 +1,260 @@
+{
+  "slug": "innsikt/google-ai-sok-seo",
+  "kind": "article",
+  "seo": {
+    "title": "Google tester mindre AI i søk - 5 SEO-tiltak som virker",
+    "description": "Google tester å skjule AI-funksjoner. Her er tre SEO-grep du kan gjøre i dag, en femdagersplan og en enkel test for lønnsom annonsering."
+  },
+  "hero": {
+    "layout": "split-right",
+    "eyebrow": "SEO-innsikt - 23. november 2026",
+    "title": "Google tester å skjule AI-søk. Dette bør du gjøre med SEO nå.",
+    "support": "Begynn med søkene som kan gi kunder, og gjør de viktigste sidene lettere å velge fra. Her er tre grep du kan starte på i dag og en plan for resten av uken. Googles AI-tester endrer ikke den prioriteringen.",
+    "primaryCta": {
+      "label": "Start med de tre grepene",
+      "href": "/innsikt/google-ai-sok-seo/#start-her"
+    },
+    "secondaryCta": {
+      "label": "Ta en gratis SEO-sjekk",
+      "href": "/seo/#sjekk"
+    },
+    "visual": {
+      "kind": "image",
+      "image": {
+        "kind": "illustration",
+        "src": "/images/services/google-ai-seo.svg",
+        "alt": "Illustrasjon av Google-søk, en AI-samtale og veien fra relevant treff til ny kunde.",
+        "positionX": 50,
+        "positionY": 50
+      }
+    }
+  },
+  "sections": [
+    {
+      "_block": "content",
+      "id": "start-her",
+      "eyebrow": "Start her - 60 minutter",
+      "heading": "Tre SEO-grep du kan gjøre i dag.",
+      "headingAlign": "left",
+      "layout": "three-columns",
+      "surface": "base-100",
+      "body": [
+        "Du trenger ikke vente på at Google bestemmer seg for hvilke AI-knapper de vil vise. Sett av én time til de tre jobbene som er nærmest nye kunder."
+      ],
+      "items": [
+        {
+          "title": "Finn 10 kjøpssøk",
+          "badge": "20 minutter",
+          "surface": "info",
+          "text": "Velg tre tjenester du helst vil selge. Skriv ned ti søk noen kan gjøre rett før de bestiller. Ta med tjeneste, pris, sted eller behov der det passer. Velg de tre viktigste."
+        },
+        {
+          "title": "Åpne de tre landingssidene",
+          "badge": "20 minutter",
+          "surface": "base-200",
+          "text": "Finn siden som skal svare på hvert søk. Kontroller på mobil at tjeneste, hvem dere hjelper, pris eller prisvei og neste steg er tydelig uten leting."
+        },
+        {
+          "title": "Test kontakt og måling",
+          "badge": "20 minutter",
+          "surface": "base-300",
+          "text": "Send inn en testhenvendelse eller gjennomfør et testkjøp. Sjekk at det når frem. Noter hvordan dere skal telle relevante henvendelser og faktiske nye kunder."
+        }
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "ukeplan",
+      "eyebrow": "Arbeidsplan",
+      "heading": "Fem dager. Fem leveranser. Mindre synsing.",
+      "headingAlign": "left",
+      "layout": "three-columns",
+      "surface": "base-200",
+      "body": [
+        "Bruk denne planen på ett tjenesteområde først. Da vet du hva som ble endret, i stedet for å oppgradere hele nettstedet i blinde."
+      ],
+      "items": [
+        {
+          "title": "Mandag: Velg kjøpssøkene",
+          "badge": "Dag 1",
+          "surface": "base-100",
+          "text": "Skriv ti relevante søk og prioriter tre. Bruk gjerne Google Search Console for å se hvilke søk dere allerede vises på. Leveranse: tre prioriterte søk."
+        },
+        {
+          "title": "Tirsdag: Finn riktig side",
+          "badge": "Dag 2",
+          "surface": "info",
+          "text": "Knytt hvert søk til én konkret tjeneste- eller produktside. Mangler siden, lag en disposisjon. Leveranse: tre URL-er med tydelig formål."
+        },
+        {
+          "title": "Onsdag: Fjern friksjon",
+          "badge": "Dag 3",
+          "surface": "base-100",
+          "text": "Rett uklare overskrifter, tjenestebeskrivelser og kontaktveier. Vis pris når dere kan, ellers hvordan den fastsettes. Leveranse: tre bedre sider."
+        },
+        {
+          "title": "Torsdag: Hjelp Google og kunden",
+          "badge": "Dag 4",
+          "surface": "base-100",
+          "text": "Kontroller indeksering og interne lenker. Legg til ett faktisk kundespørsmål med et nyttig svar. Finn én relevant mulighet for ekstern omtale. Leveranse: færre hindringer."
+        },
+        {
+          "title": "Fredag: Skriv ned utgangspunktet",
+          "badge": "Dag 5",
+          "surface": "base-300",
+          "text": "Noter relevante besøk, henvendelser og nye kunder fra de aktuelle sidene de siste 30 dagene, så langt dere kan måle. Sammenlign med neste periode. Leveranse: et grunnlag for neste beslutning."
+        }
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "kjopsintensjon",
+      "eyebrow": "Praktisk eksempel",
+      "heading": "Lag siden for kunden som er klar til å bestille.",
+      "headingAlign": "left",
+      "surface": "base-100",
+      "body": [
+        "Se for deg et verksted som vil selge flere EU-kontroller. Et søk som \"bestill EU-kontroll\" viser et mer konkret behov enn \"hva er EU-kontroll\". Da bør kunden komme til en side som forklarer tjenesten, viser pris eller hvordan prisen avklares, og gjør det enkelt å bestille.",
+        "Bruk en beskrivende sidetittel og H1, konkret tjenesteinformasjon og interne lenker fra relevante sider. Ikke begrav bestillingen under en lang innføring i bilkontrollens historie.",
+        "En enkel kontroll er å spørre en person som ikke kjenner nettstedet: \"Hvor ville du trykket for å bestille?\" Hvis vedkommende må lete, har du funnet et sted å forbedre."
+      ],
+      "links": [
+        {
+          "label": "Se flere grep for tjenestesider og SEO",
+          "href": "/seo/"
+        },
+        {
+          "label": "Slik vurderer du hva som bør optimaliseres først",
+          "href": "/innsikt/hva-bor-optimaliseres-forst/"
+        }
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "hva-vi-ser",
+      "eyebrow": "Vår vurdering",
+      "heading": "Google tester AI-grensesnittet. Kjøpsbehovet står igjen.",
+      "headingAlign": "left",
+      "surface": "info",
+      "body": [
+        "Google tester å fjerne AI Mode fra søkefanen og oppfølgingsfeltet fra AI Overviews. Det er tester, ikke en beslutning om at AI-søk forsvinner. Samtidig har Google beskrevet lavere annonseinntekter fra AI Mode enn fra tradisjonelt søk.",
+        "Det forklarer hvorfor vi ikke ville bygget en SEO-plan rundt plasseringen av én AI-knapp. En bedrift må fremdeles ha sider som blir funnet, svarer på kundens spørsmål og gjør det lett å velge leverandør.",
+        "God sidestruktur, relevante tjenestesider, tydelige svar, indeksering og naturlige lenker er derfor arbeid vi ville prioritert før spekulasjoner om neste søkegrensesnitt."
+      ],
+      "links": [
+        {
+          "label": "Les vår gjennomgang av novemberoppdateringen i Google",
+          "href": "/innsikt/google-oppdatering-november-2026/"
+        }
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "chatgpt-annonser",
+      "eyebrow": "Annonseøkonomi",
+      "heading": "ChatGPT Ads må vurderes på nye kunder, ikke på nysgjerrige klikk.",
+      "headingAlign": "left",
+      "surface": "base-100",
+      "body": [
+        "En studie med nesten 1 900 nettbutikker og 60 uker med data viste svakere kjøpsresultater fra betalte ChatGPT-besøk enn fra Google Ads, vanlig Google-søk og ubetalte anbefalinger i ChatGPT. Betalte ChatGPT-besøk kom dårligst ut på alle de seks undersøkte målene.",
+        "Vår konklusjon er at en ChatGPT Ads-test må fortjene budsjettet sitt. Resultatene fra nettbutikker gir ikke en fasit for alle tjenester eller bedrifter. Men de gir heller ingen grunn til å kjøpe trafikk uten skikkelig måling.",
+        "Skill mellom betalte ChatGPT-besøk, ubetalt AI-trafikk og Google Ads. Følg henvendelsene videre til faktiske kunder. Hvis du ikke kan telle kundene, vet du heller ikke hva et klikk er verdt."
+      ],
+      "items": [
+        {
+          "title": "Definer en lønnsom kunde",
+          "badge": "Før testen",
+          "surface": "base-200",
+          "text": "Finn dekningsbidraget på en typisk ny kunde. Bestem hvor mye av dette dere maksimalt vil bruke på å skaffe kunden."
+        },
+        {
+          "title": "Merk og mål kanalen separat",
+          "badge": "Under testen",
+          "surface": "info",
+          "text": "Bruk egne kampanjelenker. Følg registrerte henvendelser og hvilke som faktisk blir salg, ikke kun besøk og klikk."
+        },
+        {
+          "title": "Sammenlign med alternativet",
+          "badge": "Etter testen",
+          "surface": "base-300",
+          "text": "Regn ut kostnad per ny kunde og sammenlign med Google Ads og andre kanaler på samme grunnlag. Stopp eller juster hvis regnestykket ikke går opp."
+        }
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "regneeksempel",
+      "eyebrow": "Regneeksempel",
+      "heading": "6 000 kroner i annonser. Tre kunder. Hva kostet egentlig salget?",
+      "headingAlign": "left",
+      "surface": "base-200",
+      "body": [
+        "Bruker du 6 000 kroner på annonser og får tre nye kunder, blir annonsekostnaden 2 000 kroner per kunde. Det er den verdien du må sammenligne med det bedriften faktisk sitter igjen med etter å ha levert.",
+        "Hvis dekningsbidraget er 1 500 kroner per kunde, taper annonsekostnaden alene 500 kroner per ny kunde i eksemplet. Med 5 000 kroner i dekningsbidrag kan testen være lønnsom før andre kostnader. Begge tallene er illustrative.",
+        "Samme fremgangsmåte kan brukes for Google Ads, ChatGPT Ads og andre betalte kanaler. Den kanalen som gir flest klikk, trenger slett ikke gi flest lønnsomme kunder."
+      ],
+      "links": [
+        {
+          "label": "Se hvordan du måler effekt av optimalisering",
+          "href": "/innsikt/male-effekt-av-optimalisering/"
+        }
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "neste-steg",
+      "eyebrow": "Kom videre",
+      "heading": "Vil du vite hvilke tre SEO-tiltak vi ville prioritert hos deg?",
+      "headingAlign": "left",
+      "surface": "base-100",
+      "body": [
+        "Send oss nettadressen og fortell hvilken tjeneste du ønsker flere kunder til. Vi kan begynne med å se etter manglende kjøpssøk, uklare tjenestesider og hindringer på veien til kontakt.",
+        "Den første sjekken er en kort vurdering med tre prioriterte funn. Videre SEO-arbeid og annonsering avtales separat."
+      ],
+      "links": [
+        {
+          "label": "Få tre gratis funn",
+          "href": "/seo/#sjekk"
+        },
+        {
+          "label": "Se SEO-tjenesten",
+          "href": "/seo/"
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Er SEO bortkastet når Google viser AI-svar?",
+      "answer": "Nei. De grunnleggende jobbene er fortsatt å svare på relevante søk, ha sider som kan finnes og gjøre det enkelt å ta neste steg. AI-grensesnittet kan endre seg, men bedriften trenger fortsatt gode landingssider."
+    },
+    {
+      "question": "Skal vi stoppe ChatGPT Ads?",
+      "answer": "Ikke automatisk. Test kanalen avgrenset hvis dere har måling av reelle kunder og en tydelig grense for akseptabel kostnad per kunde. Sammenlign med andre kanaler før dere øker budsjettet."
+    },
+    {
+      "question": "Hvilke SEO-tiltak bør en liten bedrift begynne med?",
+      "answer": "Velg søk med tydelig kjøpsintensjon, forbedre de mest relevante tjenestesidene og test kontaktveiene. Deretter kontrollerer du indeksering og interne lenker og følger med på henvendelser og salg."
+    },
+    {
+      "question": "Hvordan vet vi om SEO-forbedringene har virket?",
+      "answer": "Sammenlign relevante besøk, kvalifiserte henvendelser og faktiske kunder før og etter endringen. Se på samme type sider og ta hensyn til sesong, annonser og andre endringer. En høyere rangering er ikke alene et salg."
+    }
+  ],
+  "listing": {
+    "title": "Google tester mindre AI: SEO-jobben du bør gjøre nå",
+    "summary": "Start med tre konkrete SEO-grep, følg en femdagersplan og finn ut når nye annonsekanaler faktisk lønner seg.",
+    "label": "Se tiltakene",
+    "order": 12,
+    "visible": true,
+    "visual": [
+      {
+        "kind": "image",
+        "src": "/images/listing/google-ai-seo.svg",
+        "alt": "Illustrasjon av relevante søk som fører til en ny kunde.",
+        "positionX": 50,
+        "positionY": 50
+      }
+    ]
+  }
+}

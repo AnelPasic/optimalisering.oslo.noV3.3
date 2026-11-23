@@ -8,7 +8,7 @@ export const listingVisualSchema = z.discriminatedUnion('kind', [
   z.object({ kind: z.literal('icon'), icon: z.enum(listingIcons) }).strict(),
   z.object({
     kind: z.literal('image'),
-    src: z.string().regex(/^\/images\/listing\/(?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.(?:webp|png|jpe?g|avif)$/),
+    src: z.string().regex(/^\/images\/listing\/(?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.(?:webp|png|jpe?g|avif|svg)$/),
     alt: z.string().trim().min(1),
     positionX: z.number().min(0).max(100).default(50),
     positionY: z.number().min(0).max(100).default(50),
