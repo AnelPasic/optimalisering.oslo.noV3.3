@@ -48,17 +48,18 @@
       "_block": "content",
       "id": "eksempler",
       "heading": "To kraftige trafikkfall. To forskjellige mulige forklaringer.",
+      "headingAlign": "left",
       "body": [
         "I SEO-podkasten som utløste denne gjennomgangen, forteller Craig Campbell om et eksperiment der han og James Dooley publiserte rundt 1 200 AI-genererte artikler. Nettstedet fikk først vekst, falt kraftig etter omtrent et halvt år og kom ifølge Campbell ikke tilbake selv etter at de forsøkte å erstatte innholdet. Det er en interessant erfaring fra ett eksperiment, ikke bevis for en universell seksmånedersgrense eller permanent domenestraff.",
         "Et annet omtalt nettsted falt ifølge eieren fra rundt 200 til 20 klikk daglig. Rett før oppdateringen hadde nettstedet blitt bygget om på en annen plattform, fått rundt 15 nye lokasjonssider og flere artikler. Her er det umulig å utpeke AI-tekst som eneste årsak. Migrering, tekniske endringer, nytt innhold og en Google-oppdatering skjedde tett på hverandre.",
         "Vi tar slike observasjoner alvorlig. De viser risikoen ved store endringer og publisering i høyt tempo. Men vi undersøker den enkelte nettsiden før vi bestemmer hva som skal repareres."
-      ],
-      "headingAlign": "left"
+      ]
     },
     {
       "_block": "content",
       "id": "ai-risiko",
       "heading": "AI kan skrive 100 artikler før lunsj. Det betyr ikke at nettstedet trenger dem.",
+      "headingAlign": "left",
       "body": [
         "Google tillater AI som hjelp til research, struktur og innholdsproduksjon. I den offentlige veiledningen sier Google også at AI-generert tekst må faktasjekkes og gjennomgås før publisering. Store mengder tekst uten egenverdi kan rammes av reglene om scaled content abuse, uansett om teksten ble laget av mennesker eller AI.",
         "Det er rimelig å anta at Google har flere metoder for å oppdage mønstre i masseprodusert innhold. Vi kjenner derimot ikke den nøyaktige kombinasjonen eller vektingen. Derfor er det lite nyttig å forsøke å gjøre AI-tekst usynlig for en tenkt detektor. Det er langt mer nyttig å gi siden informasjon som kommer fra bedriftens faktiske tjenester, erfaring, priser, begrensninger og kundespørsmål.",
@@ -73,13 +74,14 @@
           "label": "Googles regler for masseprodusert lavverdiinnhold",
           "href": "https://developers.google.com/search/docs/essentials/spam-policies"
         }
-      ],
-      "headingAlign": "left"
+      ]
     },
     {
       "_block": "content",
       "id": "diagnose",
       "heading": "Har trafikken falt? Begynn med disse fire kontrollene.",
+      "headingAlign": "left",
+      "layout": "two-columns",
       "body": [
         "Ikke start med å slette halve nettstedet. Åpne Google Search Console, velg organisk nettsøk og sammenlign perioder som gir mening. Under en pågående core update kan tallene flytte seg flere ganger.",
         "Vær særlig oppmerksom på forskjellen mellom et lite antall klikk og et stort, vedvarende fall. Å gå fra 20 til 11 klikk på én dag ser dramatisk ut i prosent, men er et svakt grunnlag for å konkludere med en algoritmisk straff."
@@ -111,13 +113,13 @@
           "label": "Googles veiledning for analyse etter core updates",
           "href": "https://developers.google.com/search/docs/appearance/core-updates"
         }
-      ],
-      "headingAlign": "left"
+      ]
     },
     {
       "_block": "content",
       "id": "naer-kunden",
       "heading": "Sider som skaffer kunder fortjener mer oppmerksomhet enn artikkelantallet.",
+      "headingAlign": "left",
       "body": [
         "Podkasten anbefaler tjenestesider som møter folk nær kjøpsbeslutningen. Det er en fornuftig prioritering for mange små bedrifter. En kunde som søker etter EU-kontroll, akutt rørlegger eller pris på regnskapstjenester, bør komme rett til en side som besvarer behovet. En lang innledning om bransjens historie gjør sjelden bestillingen enklere.",
         "Bruk søkeord i en naturlig og tydelig tittel, en beskrivende H1 og en URL som gir mening. Men ikke tro at første setning må inneholde en magisk ordkombinasjon. En troverdig side trenger også riktig tjenesteinformasjon, nyttig detaljeringsgrad, tydelige valg og en kontaktvei som fungerer.",
@@ -132,23 +134,23 @@
           "label": "Hvordan måler vi verdi av trafikken?",
           "href": "/innsikt/male-effekt-av-optimalisering/"
         }
-      ],
-      "headingAlign": "left"
+      ]
     },
     {
       "_block": "content",
       "id": "vent-eller-rett",
       "heading": "Vent med panikkombygging. Ikke vent med å rette faktiske feil.",
+      "headingAlign": "left",
       "body": [
         "Google anbefaler å vente minst én full uke etter at en core update er ferdig utrullet før du lager en ordentlig før- og etteranalyse. I mellomtiden kan du fortsette vanlig publisering av nyttig innhold, rette åpenbare tekniske feil og hjelpe kunder som ikke kommer gjennom skjemaet.",
         "Et kraftig fall på viktige sider fortjener undersøkelse allerede nå. Men det er forskjell på å undersøke problemet og å flytte alle URL-er, slette hundre artikler eller bytte publiseringssystem i frustrasjon. Store inngrep gjør det også vanskeligere å forstå hva som faktisk hjalp."
-      ],
-      "headingAlign": "left"
+      ]
     },
     {
       "_block": "content",
       "id": "neste-steg",
       "heading": "Vet du hvilke SEO-sider som gir henvendelser, og hvilke som bare fyller menyen?",
+      "headingAlign": "left",
       "body": [
         "Vi kan begynne med en kort vurdering av hvilke søk som er viktigst for bedriften, om eksisterende tjenestesider svarer på dem og om Google eller teknikken har endret forutsetningene. Derfra kan vi prioritere tiltak som faktisk er verdt arbeidet.",
         "En gratis første sjekk er ikke en full algoritmeanalyse eller et løfte om rask ranking. Den skal vise hvor det er mest fornuftig å begynne."
@@ -162,13 +164,13 @@
           "label": "Se SEO-tjenesten",
           "href": "/seo/"
         }
-      ],
-      "headingAlign": "left"
+      ]
     },
     {
       "_block": "content",
       "id": "kilder",
       "heading": "Kilder og hva vi vet per 23. november 2026",
+      "headingAlign": "left",
       "body": [
         "Google Search Status Dashboard dokumenterer startdato og omfang. Google Search Central beskriver AI-innhold, scaled content abuse og hvordan core updates bør analyseres. Eksemplene fra Craig Campbell og andre nettstedseiere er gjengitt i SEO-podkastens episode 1 235 og er selvrapporterte observasjoner. De er ikke representative bransjetall eller en bekreftelse av oppdateringens interne algoritme."
       ],
@@ -185,8 +187,7 @@
           "label": "Google: People-first innhold",
           "href": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
         }
-      ],
-      "headingAlign": "left"
+      ]
     }
   ],
   "faq": [
