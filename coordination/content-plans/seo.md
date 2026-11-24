@@ -257,6 +257,21 @@ Derfor starter vi med søk der kundens behov og det bedriften selger, passer god
 
 Editorial note: the table labels possible intent, not certain individual intentions. Format is an editorial illustration, not chosen MWS component. No new external numeric performance claim. Both exact approved Hero and draft section fields passed the current 11 hard phrase regexes, prohibited character and hidden-format checks. Full copy QA/build not run; only coordination file changed. Section 02 remains open for OWNER feedback; sections 03–19 pending.
 
+### Section 02 — research refinement: bilverksted (OWNER-selected example, not approved copy)
+
+OWNER chose bilverksted over the earlier warm-pump example and asked to explore intent, commercial value and relevant searches before completing the section. Retain prior draft as history, not the current example. Strongest pedagogical mechanism: two people can both have purchase intent, but one wants to buy a part and the other wants to buy workshop labor/service. Commercial intent must match what the particular business sells. Specificity alone does not guarantee intent, volume, margin, conversion or ease of ranking.
+
+Illustrative query candidates, not measured volumes or verified actual customer queries:
+- "bremseklosser BMW" — ambiguous parts-shopping/information intent; online parts retailers serve this.
+- "bytte bremseklosser selv" — DIY guidance, potential parts customer.
+- "bytte bremseklosser pris" — cost research, potentially a workshop prospect; may also be comparing DIY costs.
+- "bytte bremseklosser BMW Oslo" — explicit service/action, brand and geographical fit; potentially valuable to a workshop serving BMWs in Oslo.
+- "bestille bremseservice Oslo" — explicit booking intent, but service scope may differ from pad replacement.
+
+Public search-result spot check: [Skruvat BMW brake pads](https://www.skruvat.no/bmw/reservedeler/bremsesystem/bremseklosser) represents parts-commerce; [MECA brake disc/pad price and booking page](https://www.meca.no/tjenester/bremseservice/pris-bremseskiver-og-bremseklosser) represents workshop service; [MECA brake service pricing](https://www.meca.no/tjenester/bremser/pris-bremseservice) explains that work/prices depend on the car and requested service. These are examples of competing result/page types surfaced in research, not a full live Google SERP overlap audit or measured rankings. [Edward Sturm, SEO Down the Funnel](https://edwardsturm.com/articles/seo-down-the-funnel/) and [Compact Keywords](https://edwardsturm.com/compact-keywords/) support prioritizing specific purchase/use intent as strategic inspiration. BI Backlog 215, 223 (VURDER), 243, 257 (intent), 363–364, 440–445, 449 support buyer/service fit, discovery/validation, business-value weighting, and relevance of small-volume searches. Do not claim exact Norwegian volumes, competition, margins or conversion rates without measured data. Informational searches may be useful when they support actual buyer decisions.
+
+Recommendation: compare "bremseklosser BMW" with "bytte bremseklosser BMW Oslo" as the primary contrast, then add DIY and price-research examples only if they aid the explanation. Focus section 02 on interpreting what is being purchased, by whom and where; reserve economic calculator for section 15, coverage mapping for section 09, and detailed page mapping for section 08. The prospective customer must understand why a keyword can be a good keyword for one business and the wrong keyword for another. Final wording pending owner direction.
+
 ## Decision log
 
 - 2026-11-24 OWNER approved using a persistent project workflow and starting with philosophy and positioning; no final positioning approval yet.
@@ -268,3 +283,4 @@ Editorial note: the table labels possible intent, not certain individual intenti
 - OWNER requested a sharper competitive-market ending for the refined Hero. Round 4 proposed; awaiting explicit approval.
 - OWNER requested red-team and skeptical-buyer review of the selected ending. Original and recommended refinement saved; no final Hero approval.
 - OWNER explicitly approved the exact Hero wording. Step 3 complete; section 02 draft 1 prepared for step 4. No implementation authorized.
+- OWNER selected bilverksted as the principal illustrative example for section 02. Research refinement saved; section wording still open.
