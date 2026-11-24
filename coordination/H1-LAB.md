@@ -1,6 +1,8 @@
 # H1 Lab — relevant, concrete, memorable
 
-**Scope:** Use for a NEW or substantially rewritten H1 on an important commercial/service/landing page. This process ships with the exported Astro site and needs no external knowledge base. A small copy correction does not trigger a headline contest.
+**Scope:** Required for a NEW or substantially rewritten Hero on an important commercial/service/landing page. This process ships with the exported Astro site and needs no external knowledge base. A small copy correction does not trigger a headline contest.
+
+**OWNER 2026-11-24 - Rule 04:** For a new or substantially rewritten important commercial page (e.g. Home, core service SEO/CRO or a strategic sales landing page), H1 Lab is required: explore roughly 6–10 distinct research-led angles internally, discard weak candidates, present up to three distinct complete Hero proposals with one recommendation and concise trade-offs, then stop for explicit OWNER selection/approval before writing the full page around the chosen direction or implementing it. No filler candidates. A previously explicitly selected Hero for the same scope satisfies this step; do not reopen it without instruction. For informational articles, independently choose the relevant, compelling title/H1 and introduction, apply editorial quality and evidence checks, and proceed within the authorized task without a mandatory headline approval step. Minor edits do not trigger H1 Lab. No new runtime/CMS approval status.
 
 ## Inputs (use the current site, not generic templates)
 
@@ -38,9 +40,9 @@ A failure in complete-Hero clarity, service relevance, buyer value or factual in
 
 - **A — ordinary copy fix:** preserve existing H1 and page intent unless specifically asked to change them; no research or variants.
 - **B — substantial H1/section revision:** make 2–3 meaningfully different candidates if needed, choose one that passes the gates.
-- **C — new important page / core service Hero:** use the page's short Page Contract, explore roughly 6–10 genuinely distinct angles internally (straight service, buyer result, problem → solution, useful contrast, clear offer). Discard invalid ones; present **up to three finalists**, one recommendation and one-sentence trade-offs. Do not generate arbitrary quotas if the answer is already clear.
+- **C — new important page / core service Hero:** use the page's short Page Contract, explore roughly 6–10 genuinely distinct angles internally (straight service, buyer result, problem → solution, useful contrast, clear offer). Discard invalid ones; present **up to three complete Hero finalists** (eyebrow, H1, support and CTA), one recommendation and one-sentence trade-offs. Do not pad the candidate list. Wait for explicit OWNER approval of the chosen Hero direction before full-page drafting and implementation.
 
-After choosing the H1, assemble eyebrow (category/relevance), subheading (buyer outcome, why hire Medon, credible professional delivery/ownership), proof (believability) and CTA (approved next step). Check the complete Hero and heading story in context; never make the user guess what is being sold. **Commercial Value Gate** for a sales-intent Hero: reject task-only phrasing that suggests 'I can do this myself'; use Value Equation to assess desired outcome, credibility, time and customer effort on the **whole page**, not to stuff four promises into H1. No invented performance promises or false zero-effort claims.
+For each finalist, assemble eyebrow (category/relevance), subheading (buyer outcome, why hire Medon, credible professional delivery/ownership), proof (believability) and CTA (approved next step). After OWNER approval, develop the full page around the chosen direction. Check the complete Hero and heading story in context; never make the user guess what is being sold. **Commercial Value Gate** for a sales-intent Hero: reject task-only phrasing that suggests 'I can do this myself'; use Value Equation to assess desired outcome, credibility, time and customer effort on the **whole page**, not to stuff four promises into H1. No invented performance promises or false zero-effort claims.
 
 ## Quick red-team
 
