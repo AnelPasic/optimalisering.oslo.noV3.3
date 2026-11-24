@@ -1,6 +1,6 @@
 # Creative DNA - Optimalisering Oslo
 
-**OWNER 2026-11-24 - Rule 08:** Project-specific creative experience bank, not a template or a separate review/implementation process. Learn the insight, not the wording, rhythm, joke or sentence structure. Status distinguishes OWNER-approved reference, experiment, and rejected execution. A tone reference is not permission to publish or change existing copy. Preserve approved source copy under the canonical editorial standard; never copy these lines to unrelated customer sites.
+**OWNER 2026-11-24 - Rule 08:** Project-specific creative experience bank, not a template or a separate review/implementation process. Learn the insight, not the wording, rhythm, joke or sentence structure. Status distinguishes OWNER-approved reference, experiment, and rejected execution. A tone reference is not permission to publish or change existing copy. Preserve approved source copy outside the authorized rewrite scope; a full rewrite may replace its earlier concept under canonical Rule 12; never copy these lines to unrelated customer sites.
 
 ## Buyer
 

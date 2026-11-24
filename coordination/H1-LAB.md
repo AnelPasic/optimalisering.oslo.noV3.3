@@ -34,7 +34,7 @@ Evaluate the **complete Hero**: H1, eyebrow, supporting copy, SEO title and the 
 4. **Voice / distinctiveness:** Follow this project's saved tone, including direct, pointed or comic phrasing. Reject interchangeable agency language, not creative headlines.
 5. **Truth / clarity:** The combined Hero is understandable in seconds and consistent with approved facts. A FAQ cannot rescue a materially misleading claim.
 
-A failure in complete-Hero clarity, service relevance, buyer value or factual integrity disqualifies the candidate. If the OWNER already chose a Hero, do not restart the headline contest merely to add keywords.
+A failure in complete-Hero clarity, service relevance, buyer value or factual integrity disqualifies the candidate. If the OWNER already chose a Hero, do not restart the headline contest merely to add keywords. An explicitly authorized full rewrite under Rule 12 may replace the prior Hero direction, subject to fresh Rule 04 selection for important commercial pages.
 
 ## Workflow by change size
 
