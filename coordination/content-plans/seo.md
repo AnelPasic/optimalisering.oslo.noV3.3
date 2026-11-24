@@ -171,6 +171,22 @@ CTA support: 3 konkrete funn innen 2 virkedager.
 
 Draft fields passed current 11 phrase regexes, prohibited characters and hidden-format rules. Full site QA and build not run; only project plan changed. Step 3 remains open; no publication or section drafting until OWNER approval.
 
+### H1 Lab refinement — round 4 (awaiting OWNER approval)
+
+OWNER revised eyebrow and support, requesting a better ending than "alfa og omega i konkurranseutsatte områder". Keep H1 and CTA; change only the ending and make "flest bestillinger for SEO-budsjettet" idiomatic and explicitly aspirational ("flest mulig"). Proposed ending ties competition to the financial cost of prioritizing the wrong queries. No implied guaranteed optimum.
+
+Eyebrow: SEO-byrå for Oslo og bedrifter i Norge
+
+H1: Søkeord har ulik verdi. Det er tanken som teller!
+
+Support: SEO krever tid og ressurser, selv om klikkene er gratis. Derfor fokuserer vi på hva en bestilling er verdt, hvor nær kunden er et kjøp, og hva det krever å slå konkurrentene. Vårt system er utviklet for å gi deg flest mulig bestillinger for SEO-budsjettet ditt. Når konkurransen er hard, er førsteplass på feil søkeord en dyr fornøyelse.
+
+CTA: Ta en gratis sjekk
+
+CTA support: 3 konkrete funn innen 2 virkedager.
+
+Draft fields passed current 11 phrase regexes, prohibited characters and hidden-format checks. No full site QA/build; planning only. Step 3 remains open.
+
 ## Decision log
 
 - 2026-11-24 OWNER approved using a persistent project workflow and starting with philosophy and positioning; no final positioning approval yet.
@@ -179,3 +195,4 @@ Draft fields passed current 11 phrase regexes, prohibited characters and hidden-
 - OWNER explicitly approved the 19-section sequence and notes. Step 2 complete; Step 3 Hero finalists saved, awaiting selection.
 - OWNER requested further Hero refinement: exact proverb, search terms, efficient use of SEO investment and orders. Round 2 saved for selection; step 3 not complete.
 - OWNER requested round 3, with chosen working eyebrow/H1 and Value Equation-driven support; awaiting explicit Hero approval.
+- OWNER requested a sharper competitive-market ending for the refined Hero. Round 4 proposed; awaiting explicit approval.
