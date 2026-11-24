@@ -9,7 +9,7 @@ Norwegian small and medium business owners who want more relevant enquiries and 
 - Clicks are not the end goal. An order, qualified enquiry or profitable new customer matters more.
 - Sometimes the right advice is to improve the offer, web page or measurement before spending more on advertising.
 - Challenge empty agency promises and marketing dashboards. Do not mock business owners for unfamiliar technical terms.
-- Make a strong, concrete claim first. Explain the mechanism in everyday words. Sell the upside: more qualified leads, more orders, better return. Never turn the page into a list of losses or mistakes.
+- Make a strong, concrete claim first. Introduce the mechanism in accessible language, then use precise technical explanation and evidence where they add value, in accordance with canonical MWS Rule 06. Sell the upside: more qualified leads, more orders, better return. Never turn the page into a list of losses or mistakes.
 - Do not interrupt Hero, worked examples, sales sections or benefit cards with technical caveat paragraphs. A compact "Regneeksempel" label is enough for simple arithmetic. Place optional explanations in FAQ. Keep real-case dates, approved prices, ad-spend exclusions and other material buying conditions accurate and visible.
 - Verify claims in proportion to risk. Basic advertising mechanics need a short authoritative check, not an exhaustive research report; client results, prices, promises and legal facts require approved evidence.
 

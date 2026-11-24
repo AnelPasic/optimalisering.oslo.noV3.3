@@ -61,7 +61,7 @@ If removing a sentence loses no useful information, remove it.
 
 ## Adjustable tone of voice for this website
 
-The site-specific tone rules are documented in `coordination/CONTENT-VOICE-PROFILE.md`, while editable, current preset choices live ONLY in `coordination/CONTENT-TONE.json` (Pages CMS → Språk og tone). OWNER selected: Norsk klarhet + tørr observasjonshumor + kommersiell logikk + absurd konkretisering + litt frekkhet + self-aware honesty. Humor/edge/intensity are adjustable by content role; factual accuracy, ELI10 buyer clarity and the approved commercial model are not adjustable. Before saving new or revised copy, apply the canonical MedonWebSystem `docs/CONTENT-QUALITY-AND-VOICE.md` quality gate. This does not authorize a wholesale rewrite or automated Pages CMS selector.
+The site-specific tone rules are documented in `coordination/CONTENT-VOICE-PROFILE.md`, while editable, current preset choices live ONLY in `coordination/CONTENT-TONE.json` (Pages CMS → Språk og tone). OWNER selected: Norsk klarhet + tørr observasjonshumor + kommersiell logikk + absurd konkretisering + litt frekkhet + self-aware honesty. Humor/edge/intensity are adjustable by content role; factual accuracy, audience-appropriate clarity and the approved commercial model are not adjustable. OWNER Rule 06 replaces blanket ELI10: retain necessary domain terminology and professional depth where useful; introduce unfamiliar concepts clearly, without reducing factual precision. See canonical MWS layered communication. Before saving new or revised copy, apply the canonical MedonWebSystem `docs/CONTENT-QUALITY-AND-VOICE.md` quality gate. This does not authorize a wholesale rewrite or automated Pages CMS selector.
 
 ## Scope
 
