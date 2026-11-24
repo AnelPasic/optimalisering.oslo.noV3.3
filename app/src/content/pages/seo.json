@@ -1,29 +1,50 @@
 {
   "slug": "seo",
   "kind": "service",
+  "composition": {
+    "commercialText": true,
+    "service": {
+      "closingCta": false
+    }
+  },
   "seo": {
-    "title": "SEO-byrå for bedrifter i Oslo | Optimalisering Oslo",
-    "description": "SEO-tjenester for bedrifter i Oslo og Norge. Vi vurderer søkeord, tjenestesider, tekniske hindringer og veien fra Google-søk til relevante henvendelser."
+    "title": "SEO-byrå i Oslo | Søkemotoroptimalisering som gir salg",
+    "description": "Vi hjelper bedrifter i Oslo og Norge med SEO som merkes på bunnlinjen. Riktige søk, tydelige tjenestesider og faste priser uten bindingstid.",
+    "noindex": false
   },
   "hero": {
     "layout": "split-right",
-    "eyebrow": "SEO - søkemotoroptimalisering for bedrifter",
-    "title": "SEO for bedrifter som vil bli funnet av riktige kunder.",
-    "support": "SEO gjør det lettere for kunder å finne relevante tjenester i Googles organiske søkeresultater. Vi hjelper bedrifter i Oslo og resten av Norge med å vurdere hva de bør bli funnet for, hvilke sider som trenger arbeid, og hvordan besøk kan bli til henvendelser. Først finner vi ut hva som faktisk holder nettsiden tilbake.",
+    "eyebrow": "Søkemotoroptimalisering for bedrifter",
+    "title": "Google kan sende deg trafikk. Jobben vår er å gjøre den verdt noe.",
+    "support": "Mange byråer feirer trafikkvekst i fargerike grafer, selv om innboksen din forblir tom. Vi hjelper bedrifter i Oslo og resten av landet med å bli funnet av kunder som faktisk skal handle, fjerne hindringer på nettsiden og gjøre organiske besøk om til henvendelser og salg. Faste månedspriser fra 4 500 kr. Ingen bindingstid.",
     "primaryCta": {
       "label": "Ta en gratis sjekk",
-      "href": "/seo/#sjekk"
+      "href": "#sjekk"
+    },
+    "secondaryCta": {
+      "label": "Se pakker og priser",
+      "href": "#priser"
     },
     "visual": {
       "kind": "image",
       "image": {
         "kind": "illustration",
         "src": "/images/services/discoveringlocalfavorite-1.png",
-        "alt": "Funnet på Google",
+        "alt": "Søkemotoroptimalisering som gir salg for bedrifter i Oslo",
         "positionX": 50,
         "positionY": 50
       }
-    }
+    },
+    "toneOverrides": {
+      "eyebrowPreset": "inherit",
+      "titlePreset": "spissplus",
+      "supportPreset": "spissplus"
+    },
+    "highlights": [
+      "SEO inngår i alle våre pakker",
+      "Fast pris fra 4 500 kr/mnd"
+    ],
+    "featuredProofCaseId": "helt-opplagt"
   },
   "sections": [
     {
@@ -32,120 +53,213 @@
     },
     {
       "_block": "content",
-      "id": "seo-tjenester",
-      "eyebrow": "SEO-tjenester",
-      "heading": "Dette kan vi gjøre for å forbedre SEO.",
+      "id": "trafikkfellen",
+      "eyebrow": "Økonomisk realitet",
+      "heading": "Trafikk uten konvertering er bare en serverkostnad.",
       "headingAlign": "center",
       "layout": "two-columns",
+      "surface": "base-100",
+      "body": [
+        "Norske byråer elsker å snakke om synlighet, klikkvolum og førsteposisjoner på Google. Men trafikk i seg selv har aldri betalt en eneste lønning. Hvis 5 000 personer besøker nettsiden din hver måned uten å finne det de leter etter, sitter du bare igjen med en høyere driftsregning og et pent analyseverktøy.",
+        "Vi jobber ut fra elementær barneskolematte: Dobler du konverteringsraten på nettsiden din fra 1 til 2 %, trenger du halvparten så mange besøk for å få nøyaktig samme antall kunder. Når vi kombinerer målrettet søkesynlighet med sider som faktisk overbeviser, blir hvert eneste Google-klikk en investering fremfor en utgift."
+      ],
+      "items": [
+        {
+          "title": "Den klassiske byråfellen",
+          "text": "10 000 månedlige klikk fra tilfeldige søk på irrelevante veiledninger. Konverteringsrate på 0,1 %. Resultat: 10 henvendelser og en feit konsulentfaktura.",
+          "boxVariant": "card",
+          "surface": "base-200",
+          "iconName": "warning-circle",
+          "badge": "Feil fokus"
+        },
+        {
+          "title": "Vår tilnærming",
+          "text": "1 500 månedlige klikk fra kjøpeklare kunder som leter etter akkurat det du leverer. Konverteringsrate på 2,5 %. Resultat: 37 kvalifiserte henvendelser til fast månedspris.",
+          "boxVariant": "card",
+          "surface": "success",
+          "iconName": "chart-line-up",
+          "badge": "Lønnsomhet"
+        }
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "bevis",
+      "eyebrow": "Dokumenterte caser",
+      "heading": "Tallene vi tør å vise, og hva de faktisk betyr.",
+      "headingAlign": "left",
+      "layout": "three-columns",
       "surface": "base-200",
       "body": [
-        "Vi begynner med søkene som kan gi bedriften riktige kunder, og prioriterer tiltak på nettsiden. Hva som gjennomføres, bestemmes av behov og avtalt kapasitet."
+        "De fleste markedsførere viser kun frem de grafene som peker oppover mot høyre. Vi mener du fortjener hele bildet. Her er to ekte eksempler fra våre godkjente kundecaser som viser nøyaktig hvorfor søk og konvertering må spille på lag."
       ],
       "items": [
         {
-          "title": "Søkeord og søkeintensjon",
-          "text": "Avklare hva relevante kunder søker etter, om de vil kjøpe eller lære, og hvilke søk dere faktisk ønsker å svare på.",
+          "title": "Helt Opplagt: +93 % organisk vekst",
+          "text": "Organiske klikk i Google Search Console økte fra 2 162 til 4 181, og gjennomsnittlig rangering klatret fra 21,8 til 12,2. Men her er den ærlige sannheten: Totalt antall kontaktskjemaer gikk fra 79 til 67. Trafikken steg kraftig, men uten en tilpasset konverteringssti ble ikke klikkene automatisk til henvendelser.",
           "boxVariant": "card",
-          "surface": "info"
+          "surface": "base-100",
+          "iconName": "magnifying-glass",
+          "badge": "Søkevekst"
         },
         {
-          "title": "Tjenestesider og innhold",
-          "text": "Forbedre overskrifter, beskrivelser, svar, interne lenker og veien videre fra en relevant side til kontakt eller kjøp.",
+          "title": "nysta.no: 10x bestillinger med 65 % færre besøk",
+          "text": "Ved å rette opp flaskehalser og gjøre det enkelt å handle, økte konverteringsraten på Google-trafikk fra 0,10 % til 1,93 %, og videre til 2,91 %. Fullført checkout hoppet fra 7,1 % til 43,6 %. Færre besøkende, men over seks ganger så mange som faktisk fullførte kjøpet.",
           "boxVariant": "card",
-          "surface": "base-300"
+          "surface": "base-100",
+          "iconName": "trend-up",
+          "badge": "Konvertering"
         },
         {
-          "title": "Teknisk SEO",
-          "text": "Undersøke blant annet indeksering, brutte lenker, omdirigeringer og sidens tilgjengelighet for søkemotorer, og prioritere reelle hindringer.",
+          "title": "Konklusjonen for din bedrift",
+          "text": "Før du bruker titusenvis av kroner på å jage mer trafikk, sørger vi for at sidene dine er klare til å ta imot kundene. Organisk synlighet fungerer best når målet er salg fremfor skrytetall.",
           "boxVariant": "card",
-          "surface": "base-100"
-        },
-        {
-          "title": "Måling og prioritering",
-          "text": "Skille synlighet og klikk fra relevante henvendelser. Tilgjengelige tall fra søk, nettside og kundeoppfølging brukes med sine begrensninger.",
-          "boxVariant": "card",
-          "surface": "base-200"
-        }
-      ],
-      "links": [
-        {
-          "label": "Se hvordan SEO inngår i våre pakker",
-          "href": "/priser/"
+          "surface": "info",
+          "iconName": "check-circle",
+          "badge": "Strategi"
         }
       ]
     },
     {
       "_block": "content",
-      "id": "sok-side",
-      "heading": "Hvilke søk skal føre kunden til hvilken side?",
+      "id": "metode",
+      "eyebrow": "Vår arbeidsmetode",
+      "heading": "Slik bygger vi organisk synlighet som gir kunder.",
       "headingAlign": "center",
-      "layout": "three-columns",
+      "layout": "four-columns",
       "surface": "base-100",
       "body": [
-        "Kunden som søker etter \"rørlegger døgnvakt\" er nærmere å velge leverandør enn den som søker \"hva gjør jeg ved vannlekkasje\". Vi sørger for at begge møter en side som svarer på det de faktisk trenger."
+        "God SEO handler ikke om hemmelige triks eller å lure søkemotorene. Det handler om å svare så presist og troverdig på kundens problem at både Google, AI-tjenester og kunden selv skjønner at din bedrift er det opplagte valget."
       ],
       "items": [
         {
-          "title": "Behovet",
-          "text": "Hvilken tjeneste, løsning eller produktgruppe søker kunden etter, og passer denne kunden bedriften?",
+          "title": "1. Kjøpsklare søk",
+          "text": "Kunden som søker \"pris varmepumpe montert Oslo\" er i ferd med å trekke kortet. Kunden som søker \"hvordan virker en kompressor\" skal bare skrive en skoleoppgave. Vi prioriterer søkene som fører til omsetning.",
           "boxVariant": "card",
-          "surface": "base-200"
+          "surface": "base-300",
+          "iconName": "target",
+          "badge": "Søkeintensjon"
         },
         {
-          "title": "Siden",
-          "text": "Finnes det en konkret side som svarer på behovet med nyttig og riktig informasjon?",
+          "title": "2. Tjenestesider som svarer",
+          "text": "Hver side må bestå vår eksistenstest: Hva ville faktisk mangle hvis denne siden ikke fantes? Vi fjerner fyllstoff og forklarer hva du leverer, hva det koster og hvordan kunden går videre.",
           "boxVariant": "card",
-          "surface": "info"
+          "surface": "base-300",
+          "iconName": "browser",
+          "badge": "Tjenestesider"
         },
         {
-          "title": "Neste steg",
-          "text": "Kan kunden vurdere tilbudet og enkelt gå videre til relevant kontakt eller kjøp?",
+          "title": "3. Teknisk klarhet",
+          "text": "Google må finne, lese og forstå nettsiden uten hindringer. Vi rydder vekk indekseringsfeil, brutte lenker, trege elementer og dårlige mobilløsninger som jager kundene vekk.",
           "boxVariant": "card",
-          "surface": "base-300"
+          "surface": "base-300",
+          "iconName": "wrench",
+          "badge": "Teknisk fundament"
+        },
+        {
+          "title": "4. Måling og forbedring",
+          "text": "Vi følger med på hvilke søkeord som sender trafikk, men måler suksess i telefoner, skjemaer og bestillinger. Så justerer vi arbeidet der gevinsten er størst.",
+          "boxVariant": "card",
+          "surface": "base-300",
+          "iconName": "chart-bar",
+          "badge": "Reell effekt"
         }
       ]
     },
     {
       "_block": "content",
-      "id": "teknisk",
-      "eyebrow": "Teknisk SEO",
-      "heading": "Teknisk SEO: Kan Google finne, lese og forstå de viktige sidene?",
+      "id": "ai-sok",
+      "eyebrow": "AI-søk og fremtiden",
+      "heading": "Hva betyr AI Overviews og ChatGPT for bedriften din?",
       "headingAlign": "left",
-      "surface": "base-300",
+      "layout": "two-columns",
+      "surface": "info",
       "body": [
-        "Viktige sider må kunne indekseres og finnes gjennom tydelige interne lenker. Vi undersøker konkrete hindringer som feil omdirigeringer, utilgjengelig innhold og dårlig mobilopplevelse. Større tekniske endringer avtales separat."
-      ]
-    },
-    {
-      "_block": "content",
-      "id": "prioritering",
-      "eyebrow": "Prioritering før volum",
-      "heading": "En SEO-plan skal prioritere arbeid, ikke bare produsere rapporter.",
-      "headingAlign": "left",
-      "surface": "secondary",
-      "body": [
-        "En side som ikke forklarer tilbudet, blir ikke bedre av at vi publiserer artikkel nummer 80. Vi vurderer søk, tilbud og eksisterende sider før vi foreslår mer arbeid.",
-        "SEO kan være ett prioritert område i optimaliseringspakkene. Vi avtaler oppgavene og følger relevante resultater, men lover ikke en bestemt plassering eller antall kunder."
+        "Mange frykter at kunstig intelligens skal fjerne nettsidebesøk for godt. Realiteten i 2026 er mer jordnær: Store studier viser at bedriftenes egne nettsider utgjør 42 % av kildene når AI-modeller anbefaler lokale leverandører. AI sitter ikke og gjetter; den henter informasjonen sin direkte fra velstrukturerte nettsider som forteller sannheten.",
+        "Når Google bruker query fan-out for å besvare et spørsmål, gjøres det flere parallelle undersøk i bakgrunnen. Det finnes ingen hemmelig AI-kode eller snarveier som lurer systemet. Modellen velger nettsidene som har klare tjenestebeskrivelser, reelle priser, konkrete forutsetninger og verifiserte kundereferanser."
+      ],
+      "items": [
+        {
+          "title": "Det som straffes i AI-alderen",
+          "text": "Masseproduserte artikler laget med automatiske verktøy uten manuell faktasjekk, tynne lokasjonssider med byttede bynavn, og generisk byråspråk som \"vi leverer gode løsninger\".",
+          "boxVariant": "card",
+          "surface": "base-100",
+          "iconName": "warning-octagon",
+          "badge": "Fyllmasse"
+        },
+        {
+          "title": "Det som belønnes",
+          "text": "Ekte førstehåndskunnskap, konkrete priseksempler, tydelige vilkår, ekte kundeerfaringer og nettsider som gjør det lynraskt for et menneske å ta neste steg.",
+          "boxVariant": "card",
+          "surface": "base-100",
+          "iconName": "sparkle",
+          "badge": "Førstehåndsverdi"
+        }
       ],
       "links": [
         {
-          "label": "Se hvordan Synlighet vurderes",
-          "href": "/synlighet/"
-        },
-        {
-          "label": "Se tjenestealternativene",
-          "href": "/priser/"
+          "label": "Les mer om AI-synlighet",
+          "href": "/ai-synlighet/"
         }
       ]
     },
     {
       "_block": "content",
-      "id": "seo-oslo",
-      "heading": "SEO i Oslo: Hvem søker, og hvor leverer bedriften?",
+      "id": "oppgjor",
+      "eyebrow": "Rent bord",
+      "heading": "Fire ting du aldri vil oppleve hos Optimalisering Oslo.",
+      "headingAlign": "center",
+      "layout": "four-columns",
+      "surface": "base-200",
+      "body": [
+        "Vi har bygget tjenesten vår som et direkte motsvar til det bedriftsledere irriterer seg mest over i markedsføringsbransjen."
+      ],
+      "items": [
+        {
+          "title": "Ingen 40-siders PDF-rapporter",
+          "text": "Vi fakturerer ikke for å produsere fargelagte grafer over problemer vi burde ha fikset. Vi bruker tiden på å rette feilene direkte på nettsiden din.",
+          "boxVariant": "card",
+          "surface": "base-100",
+          "iconName": "file-x",
+          "badge": "Handling før prat"
+        },
+        {
+          "title": "Ingen bindingstid",
+          "text": "Vi låser deg aldri til en 12-måneders kontrakt. Hvis samarbeidet ikke gir verdi på bunnlinjen, skal du kunne avslutte det på dagen.",
+          "boxVariant": "card",
+          "surface": "base-100",
+          "iconName": "lock-open",
+          "badge": "Frihet"
+        },
+        {
+          "title": "Ingen artikkelfabrikk",
+          "text": "Vi skriver ikke 80 intetsigende artikler for å fylle en kvote. Hver eneste side vi lager eller forbedrer, skal ha en reell kommersiell oppgave.",
+          "boxVariant": "card",
+          "surface": "base-100",
+          "iconName": "newspaper-clipping",
+          "badge": "Kvalitet"
+        },
+        {
+          "title": "Ingen hemmelige timepriser",
+          "text": "Du vet nøyaktig hva du betaler hver måned. Ingen overraskende etableringsgebyrer, uventede tillegg eller skjulte konsulenttimer.",
+          "boxVariant": "card",
+          "surface": "base-100",
+          "iconName": "currency-circle-dollar",
+          "badge": "Fast pris"
+        }
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "geografi",
+      "eyebrow": "Lokal og nasjonal synlighet",
+      "heading": "Hvem leter etter deg, og hvor leverer bedriften din?",
       "headingAlign": "left",
+      "layout": "two-columns",
       "surface": "base-100",
       "body": [
-        "Noen kunder søker etter en leverandør i et bestemt område. Andre sammenligner tjenester uten å bry seg om hvor leverandøren sitter. Vi vurderer hva som gjelder for dere, og kobler inn lokal SEO og Google bedriftsprofil når avstand og tjenesteområde betyr noe."
+        "En håndverker eller klinikk i Oslo trenger kunder i nærområdet som har akutt behov akkurat nå. En nettbutikk eller en B2B-konsulent kan levere til hele landet uten at kunden bryr seg om hvor kontoret ligger.",
+        "Vi skiller klart mellom lokal søkesynlighet og nasjonal SEO. Hvis bedriften din leverer tjenester i et bestemt geografisk område, kobler vi på Lokal SEO, optimaliserer Google bedriftsprofil og sørger for at dere vises i Google Maps når kundene leter lokalt. Hvis dere leverer landsdekkende, bygger vi autoritet rundt løsningene og fagområdene deres."
       ],
       "links": [
         {
@@ -159,66 +273,34 @@
       ]
     },
     {
-      "_block": "content",
-      "id": "effekt",
-      "heading": "Hva får bedriften igjen for SEO-arbeidet?",
-      "headingAlign": "left",
-      "surface": "info",
-      "body": [
-        "Vi følger med på synlighet og relevante besøk, men spør også hva som skjer videre: Ble det en kvalifisert henvendelse eller et nytt kjøp? Måling har begrensninger. Flere klikk alene sier lite om hva bedriften faktisk tjener."
-      ],
-      "links": [
-        {
-          "label": "Les om måling av effekt",
-          "href": "/innsikt/male-effekt-av-optimalisering/"
-        }
-      ]
-    },
-    {
-      "_block": "content",
-      "id": "ai",
-      "heading": "Hva med synlighet i ChatGPT og andre AI-svar?",
-      "headingAlign": "left",
-      "surface": "base-200",
-      "body": [
-        "Tydelige tjenestesider er et godt utgangspunkt også for AI-søk. Men en Google-plassering dokumenterer ikke en anbefaling fra en AI-tjeneste. Det vurderer vi separat."
-      ],
-      "links": [
-        {
-          "label": "Les om AI-synlighet",
-          "href": "/ai-synlighet/"
-        }
-      ]
-    },
-    {
       "_block": "global",
       "element": "sjekk"
     }
   ],
   "faq": [
     {
-      "question": "Må vi lage en ny side for hvert søkeord?",
-      "answer": "Nei. Flere ord kan uttrykke det samme behovet. En ny side bør ha en egen jobb og nyttig informasjon, fremfor å gjenta en eksisterende side med en ny overskrift."
+      "question": "Hvor lang tid tar det før SEO gir resultater?",
+      "answer": "De fleste som lover resultater innen 14 dager, selger deg luft eller jukser med tallene. Normalt tar det mellom tre og seks måneder før Google justerer indeksering og rangering etter større forbedringer. Men hvis vi retter opp åpenbare feil på en eksisterende side som allerede har trafikk, kan konverteringen øke fra første uke."
     },
     {
-      "question": "Hvor raskt virker SEO?",
-      "answer": "Det kan vi ikke gi et generelt løfte om. Utgangspunkt, tiltak og forhold utenfor nettsiden påvirker utviklingen. Vi må se på hva som faktisk er gjort og hvilke data som finnes."
+      "question": "Hvorfor har dere ingen bindingstid når andre byråer krever 12 måneder?",
+      "answer": "Fordi vi mener du bare skal betale for arbeid som faktisk lønner seg for bedriften din. Hvis du opplever at arbeidet vårt ikke gir mening eller resultater, skal du slippe å sitte fast i en kontrakt. Det holder oss skjerpet hver eneste måned."
     },
     {
-      "question": "Kan SEO erstatte annonser?",
-      "answer": "Det avhenger av behovet og økonomien. SEO og betalt synlighet kan ha ulike roller og kan vurderes sammen. Annonsebudsjett er ikke inkludert med mindre det uttrykkelig avtales."
+      "question": "Må vi skrive en ny artikkel for hvert eneste søkeord?",
+      "answer": "Nei. Google forstår synonymer og hensikten bak et søk. Hvis du lager ti nesten identiske sider for å fange ti litt forskjellige fraser, ender du bare opp med å forvirre både kunden og søkemotoren. Én solid, gjennomarbeidet side gjør nesten alltid en bedre jobb enn ti tynne."
     },
     {
-      "question": "Hva gjør et SEO-byrå eller en SEO-konsulent?",
-      "answer": "Et SEO-byrå kan undersøke søkeord og kundebehov, gjøre tjenestesider tydeligere, avdekke tekniske hindringer og følge med på relevante resultater. Hvilke tiltak som faktisk utføres, bestemmes av nettsidens behov og avtalt omfang. En rapport alene er ingen forbedring."
+      "question": "Kan SEO erstatte Google Ads helt?",
+      "answer": "SEO og Google Ads løser to forskjellige oppgaver. Annonser gir synlighet og trafikk på dagen så lenge du betaler for klikkene. SEO bygger varige posisjoner som fortsetter å levere henvendelser uten at du betaler Google per klikk. De fleste bedrifter tjener mest på å bruke dem sammen, eller starte med det området som tetter den største lekkasjen."
     },
     {
-      "question": "Hva koster SEO hos Optimalisering Oslo?",
-      "answer": "SEO kan inngå som ett prioritert arbeidsområde i våre eksisterende optimaliseringspakker. Se prisoversikten for gjeldende månedspriser og vilkår. Større utvikling eller nye nettsider kan kreve et separat tilbud; vi lover ikke en fast mengde SEO-arbeid uten avtale."
+      "question": "Hva skiller Optimalisering Oslo fra andre SEO-byråer?",
+      "answer": "Vi måler suksess i omsetning fremfor klikk, vi har faste åpne priser fra 4 500 kr i måneden, vi nekter å låse deg til bindingstid, og vi kaster ikke bort tiden din med 40-siders rapporter over ting vi heller burde ha fikset."
     },
     {
-      "question": "Hjelper dere bedrifter utenfor Oslo?",
-      "answer": "Ja, vi vurderer SEO for bedrifter i Oslo og resten av Norge. Når kundene velger leverandør basert på hvor de befinner seg, vurderer vi også lokal SEO, Google bedriftsprofil og faktiske tjenesteområder."
+      "question": "Hjelper dere bedrifter som holder til utenfor Oslo?",
+      "answer": "Ja. Vi hjelper bedrifter over hele Norge med organisk synlighet, nettsideoptimalisering og konvertering. Geografien din avgjør bare om vi skal fokusere på lokal synlighet i ditt distrikt eller nasjonale søk."
     }
   ]
 }
