@@ -1,41 +1,26 @@
 # Optimalisering Oslo - adjustable editorial voice
 
-2026-10-21. **OWNER-selected direction from the earlier Medon Blueprint pilot:** NORSK KLARHET + TØRR OBSERVASJONSHUMOR + KOMMERSIELL LOGIKK + ABSURD KONKRETISERING + LITT FREKKHET + SELF-AWARE HONESTY.
+**OWNER-selected direction:** NORSK KLARHET + TØRR OBSERVASJONSHUMOR + KOMMERSIELL LOGIKK + ABSURD KONKRETISERING + LITT FREKKHET + SELF-AWARE HONESTY.
 
-**Scope:** content for Optimalisering Oslo only. This is a brand-specific authoring profile and companion to its native Pages CMS tone editor, **not** a rewrite instruction for existing pages, not a global rule for other customers, and not permission to change offers, proof, prices or approved layouts. Project punctuation/house style in `coordination/COPY-STYLE.md` is binding. Medon-wide gate: `AnelPasic/MedonWebSystem/docs/CONTENT-QUALITY-AND-VOICE.md`.
+**OWNER 2026-11-24 - Rule 05:** This profile explains how the brand expresses itself. It is not a second editorial process, a source of currently selected presets, an automatic rewrite instruction or permission to alter approved material. Research, commercial strategy, SEO/AIO/CRO, whole-Hero quality, approval, evidence and QA are governed by the canonical [MWS Content Quality and Voice](https://github.com/AnelPasic/MedonWebSystem/blob/main/docs/CONTENT-QUALITY-AND-VOICE.md) and the active project AGENTS. House style is in `coordination/COPY-STYLE.md`. Approved examples and rejected creative calibration are in `coordination/CREATIVE-DNA.md`.
 
-## Pages CMS controls - source of current selections
+## Current tone - JSON only
 
-**Pages CMS → Språk og tone** edits `coordination/CONTENT-TONE.json` directly. This structured JSON is the **single source of truth for currently selected intensity presets**; this document explains what those selections mean.
+Pages CMS / Språk og tone edits `coordination/CONTENT-TONE.json` directly. Read the actual current file before authoring; no active selection is recorded in this Markdown profile.
 
-- `defaultPreset`: `noktern`, `medon`, `spiss`, `spissplus`, `spisspluskomisk`, `spisspluskomiskplus` or `spissplushysterisk`. The current default remains `medon` (OWNER's saved setting).
-- `heroPreset`, `servicePreset`, `explanationPreset`, `faqPreset`: `inherit` means use default; otherwise select the named preset. Previously approved selection was `spissplus` for explanations and FAQ. The newly selected `spisspluskomiskplus` applies to **future explanation/insight edits** only; FAQ remains Spiss+, Hero remains Spiss and service inherits Medon. This preference does not rewrite existing content.
-- `editorNotes`: additional directions for the next editorial pass; never override factual/SEO/KRO quality rules.
-- Pricing, order forms, proof and legal copy **remain factual and nøkterne**, regardless of a broad `spiss` preference.
+- `defaultPreset`: `noktern`, `medon`, `spiss`, `spissplus`, `spisspluskomisk`, `spisspluskomiskplus`, `spissplushysterisk`.
+- `heroPreset`, `servicePreset`, `explanationPreset`, `faqPreset`: selected role preset; `inherit` resolves to `defaultPreset`.
+- Optional page-level `hero.toneOverrides`: resolve `eyebrowPreset`, `titlePreset` and `supportPreset` individually. Missing/empty/`inherit` uses `heroPreset`, then `defaultPreset`. CTA uses the general site tone; no per-Hero CTA selector.
+- `editorNotes`: additional preferences for expression within the editorial standard.
 
-**Operational process for ChatGPT/Codex:** before writing, read *fresh* `coordination/CONTENT-TONE.json` alongside this file, resolve effective preset for the target section, and perform the MWS-031 Content Quality Gate **plus the Commercial Value Gate for sales-intent copy** before applying tone. For Hero copy, check the current page's optional `hero.toneOverrides`: each specified eyebrow, H1 and support preset overrides `heroPreset` individually; CTA uses the general site tone without per-Hero selectors; `inherit` or omitted fields follow `heroPreset`, then `defaultPreset`. For important new or substantially rewritten commercial Heroes, follow Rule 04 in `coordination/H1-LAB.md`: present finalists and obtain explicit OWNER approval of the selected Hero before full-page drafting or implementation. Informational articles use independent editorial selection and QA without mandatory headline approval. For other scoped edits, show the OWNER an example/diff or make the specifically authorized content edit. The setting alone never edits existing content, starts AI generation, alters route rendering or deploys a website. An authenticated CMS save and real preview require their own verification.
+Changing a tone setting does not regenerate or publish existing content, change rendering or authorize changes beyond the requested scope.
 
-## Fixed priorities (must always pass)
+## Expression
 
-1. Norsk klarhet / ELI10 - a plumber, electrician or shop owner should understand a paragraph on first reading. State service category/outcome before playing with wording.
-2. Commercial logic - say what the buyer gains or avoids: qualified enquiries, relevant searches, calls, time wasted, order friction, revenue where supportable.
-3. Self-aware honesty - admit uncomfortable limitations, uncertainty and costs. Never use humor to disguise an inaccurate or unproven claim.
-
-## Commercial Value Gate - required before Content Voice on sales-intent pages
-
-This is a **service business**, not a do-it-yourself tutorial. For a new or materially rewritten Hero, service text, package/offer, sales landing page or lead CTA, sell the **business outcome and reason to hire us**, not just our list of Google/website chores. For a small edit to one of these fields, preserve the commercial proposition. Articles and genuinely educational explanations should still answer questions; never disguise a sales pitch as a how-to answer.
-
-Use the Value Equation as an editorial diagnostic: **desired result x believable likelihood, divided by time to value x buyer effort**. The entire Hero/page should give a persuasive, truthful answer to five questions:
-
-1. **What is the buyer buying?** Better opportunities for relevant inquiries, fewer lost sales opportunities or a specific approved business benefit; not simply tidier opening hours or metadata.
-2. **Why believe us?** Real expertise in prioritization, implementation and ongoing evaluation, and only verified evidence where available. No fabricated cases, lead numbers, guarantees or rankings.
-3. **How does the work progress?** An honest first step and realistic continued effort. Local SEO needs work over time; do not promise immediate positions or a fixed result date.
-4. **Who does the work?** Explain what Medon owns and what the customer still needs to provide, without assuming unlimited done-for-you scope or zero customer effort.
-5. **Why hire Medon rather than DIY, and what next?** Make the value of professional judgment, execution and follow-up evident, then point to the actual approved CTA. Mention monthly follow-up only if it is genuinely part of the offered service.
-
-**DIY-substitution test:** if the prospect sees "Vi gjør åpningstider og kontaktinformasjon tydeligere i Google bedriftsprofilen" and thinks "Dette fikser jeg selv", the commercial Hero/ingress **fails**. Technical tasks can support a credible explanation, but cannot be the whole paid-service value. Better orientation (illustrative, not a verified result): "Vi finner hvor lokale kundemuligheter går tapt, prioriterer og gjennomfører forbedringene og følger opp utviklingen. Målet er flere relevante henvendelser, mens du kan drive bedriften."
-
-The **complete Hero** must immediately identify the service, buyer benefit, relevance and next action. H1 should be relevant and engaging, but need not communicate the service and buyer benefit independently. Use important search terms naturally where they strengthen the message; do not sacrifice creativity for mechanical keyword placement. **Ingress** makes professional ownership, credibility, realistic timing and reduced customer effort tangible. **CTA** reflects the existing approved offer. Selected humor level (including Spiss+ Hysterisk) changes the expression only; commercial value comes first. No requirement to insert all five claims in every sentence, and no automatic rewrite or permission to change prices/offers/OWNER content.
+- Clear Norwegian appropriate to the buyer, concrete situations and commercially meaningful contrasts.
+- Dry observation, absurd concretization and a little cheekiness may sharpen the message.
+- Self-aware honesty: humor must not hide limits, costs or uncertainty. Tease an inefficient system or industry habit, never the buyer.
+- Keep prices, proof, forms, legal, safety, health and transactional details nøktern, including inside mixed sections.
 
 ## Adjustable flavor (0 none; 1 light; 2 noticeable; 3 sharp)
 
@@ -53,61 +38,19 @@ The **complete Hero** must immediately identify the service, buyer benefit, rele
 - **Nøktern:** humor 0, absurd 0, cheekiness 0, candor 1. For pricing, forms, factual details, legal, warnings.
 - **Medon:** humor 1, absurd 1, cheekiness 1, candor 2. Suggested default for general commercial/service copy.
 - **Spiss (nivå 3):** humor 2, absurd 2, cheekiness 2, candor 2. A dry, clear commercial observation that sharpens an answer.
-- **Spiss+ (nivå 4, OWNER-selected for FAQ/explanations 2026-10-22):** humor 2, absurd 3, cheekiness 2, candor 3. Stronger contrast with a recognizable and useful analogy, specific business consequences and restrained sting. **Not** extra jokes, longer text or a guaranteed dramatic last line.
+- **Spiss+ (nivå 4):** humor 2, absurd 3, cheekiness 2, candor 3. Stronger contrast with a recognizable and useful analogy, specific business consequences and restrained sting. **Not** extra jokes, longer text or a guaranteed dramatic last line.
 - **Spiss+ komisk (nivå 5, available option):** an intentionally funny, recognizable twist after the relevant answer. Use wordplay, dry surprise or gentle absurdity to make the practical point stick. It should give a reader an actual reason to smile. Never hide facts, manufacture a claim or insert a gag into every paragraph.
 - **Spiss+ komisk+ (nivå 6, optional editorial preset):** a bolder, genuinely funny surprise: one vivid but recognizable absurd business situation, followed by an earned punchline tied directly to the buyer's practical question. More originality and memorable imagery, not more jokes per paragraph. Make the explanation clear first; avoid mocking the buyer, unsupported claims, forced slang or comedy in pricing, proof, legal texts and forms.
-- **Spiss+ Hysterisk (nivå 7, opt-in anywhere OWNER explicitly selects it):** genuine high comedy, not slightly cheeky marketing copy. Build a specific comic situation with **setup, escalation and an unexpected last-turn punchline** (or a character exchange/callback of equal strength). Explore different premise types privately; reject one-liner analogies and neat observations that merely provoke a smirk as level 4-6. The punchline should feel like an actual joke someone might retell, not a forced moral after a sensible paragraph. When this page saves Hysterisk for a Hero part, **use it**; do not silently downshift because examples were originally SoMe-first. Humor may lead in H1 when the complete Hero clearly identifies the service and buyer value. Never mock the buyer, real clients or vulnerable people. Use clearly fictional absurdity, never invented marketing results or rankings; no borrowed standup/Chuck Norris jokes. Factual pricing, proof, legal, forms, safety and health remain nøkterne. Subjective laughter requires OWNER/reader feedback, never 'CI green'.
+- **Spiss+ Hysterisk (nivå 7, opt-in anywhere OWNER explicitly selects it):** genuine high comedy, not slightly cheeky marketing copy. Build a specific comic situation with **setup, escalation and an unexpected last-turn punchline** (or a character exchange/callback of equal strength). Explore different premise types privately; reject one-liner analogies and neat observations that merely provoke a smirk as level 4-6. The punchline should feel like an actual joke someone might retell, not a forced moral after a sensible paragraph. When this page saves Hysterisk for a Hero part, **use it**; do not silently downshift because examples were originally SoMe-first. Humor may lead in H1; follow the canonical complete-Hero rule. Never mock the buyer, real clients or vulnerable people. Use clearly fictional absurdity, never invented marketing results or rankings; no borrowed standup/Chuck Norris jokes. Factual pricing, proof, legal, forms, safety and health remain nøkterne. Subjective laughter requires OWNER/reader feedback, never 'CI green'.
 
 Apply a preset per **section/brief**, not by adding CMS runtime classes. OWNER may request "gjør den spissere" or "nøkternt" and the content agent must then rewrite only the requested text, with a before/after diff. No global automatic rewriting. A native Pages CMS profile editor is now configured. Its choices are stored in `coordination/CONTENT-TONE.json`; this Markdown file remains the interpretive guide, not a second editable preset authority.
 
-## Apply by content role
+## Apply by role
 
-- Hero/H1/subline: first pass **Commercial Value Gate** (buyer outcome and why pay us, not DIY instructions), then honor the **actual per-field saved `hero.toneOverrides`**, then `heroPreset`/default. Normally clear with minimal humor; if OWNER selected **Hysterisk**, the text should be genuinely funny, not restrained by this ordinary Hero suggestion. The complete Hero must identify service and buyer outcome; dramatic setup and payoff can span H1 and support.
-- Three SEO / lokal SEO / AI visibility choice cards: **Medon leaning nøktern** - distinguish Google organic results, Google Maps/local intent, and AI answers using recognizable real customer situations. Do not promise ranking or ChatGPT recommendation.
-- Glossary, CPC/ROAS/attribution and educational explanations: selected preset for future editing is **Spiss+ komisk+**. The Lokal SEO example is a calibration, not a site-wide rewriting mandate. Use deliberate humor only where it improves understanding.
-- Packages/pricing and contact/order forms: **Nøktern**; scope/next action, conditions, no winks that hide costs.
-- Proof/testimonials: **Nøktern** and source-accurate.
-- FAQ: current saved preset is **Spiss+**, with plain answer first, then optionally one sharp observation/analogy that genuinely illuminates the buyer's decision; never a punchline instead of an answer.
-- Legal/accessibility/errors: no humor.
+- Hero: honor the actual selected Hero/per-field preset. A sharp or comic opening may lead; do not silently downgrade a selected level. Whole-Hero relevance and OWNER approval are governed by MWS and H1 Lab.
+- Service copy: use the selected service preset, with the actual buyer's language.
+- Explanations and articles: use the selected explanation preset; make examples and humor improve understanding or memorability.
+- FAQ: use the selected FAQ preset; give the answer, then an observation or analogy where useful.
+- Legal, accessibility, form errors, pricing and evidence: precise, factual and nøktern.
 
-## OWNER-approved Spiss+ calibration (nivå 4, 2026-10-22)
-
-FAQ question: **Hva hvis både synlighet og konvertering begrenser resultatet?**
-
-> Da finner vi ut om kundene ikke finner deg, eller om de finner deg og gir opp. Å skaffe mer trafikk til en nettside uten en tydelig vei til kontakt, er som å annonsere for en butikk som har gjemt inngangen. Flere interesserte. Samme problem.
-
-This **tone reference** was explicitly preferred by OWNER over the preceding `Spiss` example. It is **not** approval to replace or publish the existing global FAQ answer, and it must not be repeated as a template on every card or page.
-
-Why it works: starts with a concrete diagnostic fork, uses a real-world analogy for wasted traffic, then lands the commercial cost in a dry final observation. The factual answer remains understandable without the analogy. For highly sensitive, exact, legal or proof-heavy topics, tone is subdued regardless of the selected preset.
-
-The labels `nivå 4`, `nivå 5`, `nivå 6` and `nivå 7` refer to **overall editorial presets**, not extra points on the independent 0-3 dimension scales above.
-
-## Hysterisk quality calibration - internal fiction, not production copy
-
-The OWNER rejected the 2026-11-03 Lokal SEO Hero jokes about Skatteetaten, postbudet and rørlegger-etterlysning: **slightly cheeky is not Hysterisk**. Never recycle these as passed examples. Mentioning a funny authority, police or Chuck Norris does not itself make a real joke.
-
-- **Explore distinct mechanisms:** an invented mini-scene with escalating consequences and a sideways last line; sharp fictional character dialogue; absurd bureaucracy with internal logic; a surprise callback. A single dry comparison or one cheeky phrase is insufficient.
-- **Fictional sketch (not a client case):** 'En kunde vil bare vite hva en nettside koster. Skjemaet spør om navn, telefon, mors pikenavn og hvor han var natt til 14. juli. Nå har han advokat. Fortsatt ingen pris.' Understand the setup/payoff, but do not copy this scene by default.
-- **An explicitly comedic Hero** still needs full-Hero service/value clarity, but its humor must be substantive. Never append a polite joke after a generic SEO introduction and declare it 'hysterisk'.
-- **Real evaluation:** have a person unaware of the prompt read it. A smile can qualify as level 5/6; level 7 is a higher editorial target, not something proved by model self-rating, repository tests or successful deployment.
-
-## Historical style calibration - illustrations, not proof of site results
-
-Previous direction used:
-- ROAS: "4,30 kr i registrert omsetning per annonsekrone" does not mean profit. "Varekostnad, lønn, frakt, returer og resten av virkeligheten vil også ha sitt."
-- CPC: "CPC bryr seg ikke om klikket endte i et kjøp av en gravemaskin eller i at noen lukket fanen etter tre sekunder."
-- Attribution: "Rapporten vil likevel gjerne kåre én vinner."
-- Checkout: "de siste meterne før pengene skifter eier" - an oddly popular place to introduce unnecessary friction.
-
-These are *educational voice samples*, not automatically suitable headlines, verified client facts or phrases to repeat everywhere.
-
-## Short self-review before every direct edit
-
-1. Would a non-marketer understand what the service does and why it matters?
-2. On a sales-intent page, does the copy sell a specific buyer outcome and a reason to hire us, rather than invite "I can do this myself"? Check credible execution, timeframe, customer effort and approved CTA (Commercial Value Gate).
-3. Does the humor actually help understanding? For `spissplushysterisk`, is there a real setup, escalation and unexpected payoff, rather than a tidy analogy? If not, reject it as insufficient for level 7 and try a different premise.
-4. Can any phrase imply guaranteed rankings, AI mentions, ROI or sales? If so, qualify/rewrite.
-5. Does it match this section's preset and the surrounding page voice?
-6. Did only the explicitly requested CMS fields change? Is latest OWNER copy preserved? Was source verified separately from Worker preview?
-
-**Release status:** Pages CMS now has a configured `Språk og tone` editor including the OWNER-selected Spiss+ option. The Git-backed config and focused test are present; authenticated CMS Save, build, and deployed Worker verification must still be observed before end-to-end PASS. These choices govern future authoring; they do not themselves change published copy, design or release permissions.
+Read the relevant creative examples in `coordination/CREATIVE-DNA.md` for calibration, not as automatic publishing instructions. The selected tone determines expression, not the underlying research, claims or commercial proposition.
