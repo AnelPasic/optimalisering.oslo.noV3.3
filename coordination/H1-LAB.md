@@ -6,7 +6,7 @@
 
 ## Inputs (use the current site, not generic templates)
 
-- Page role, actual offer/service, primary buyer and the ONE main decision/action.
+- Page role, actual offer/service, primary buyer, overarching commercial direction and primary conversion action. Rule 10 allows relevant secondary actions and multiple original perspectives in the full page. The Hero establishes direction, not a limit on content breadth.
 - Use Rule 09 strategic research already completed for the important page: buyer/search intent, GSC where available, competing answers, first-party experience and a concrete information advantage. Challenge conventional agency claims, do not seek consensus as approval. Avoid competing with another page on the same intent.
 - Concrete customer outcome, relevant proof/process, real constraints and geography where applicable.
 - Current `coordination/CONTENT-TONE.json`, `CONTENT-VOICE-PROFILE.md` and approved project facts.
