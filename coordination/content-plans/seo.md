@@ -24,6 +24,19 @@ Audience hypothesis: businesses competing for customers where relevant visibilit
 
 Open decision: OWNER selection/refinement of philosophy and positioning before section plan. No final Hero or section structure approved.
 
+## Step 1 — alternative concept exploration
+
+OWNER prefers the combination of intent-led philosophy and commercial positioning. Keep "Fra søkemarked til ordrebok" as the methodology. OWNER asks to explore competing/complementary concepts from the knowledge bank before closing step 1 and wants the eventual page to teach the buyer why the approach is better suited to commercial outcomes, through concrete mechanisms and comparisons rather than unsupported superiority claims.
+
+Research candidates (strategic concepts, not approved public copy):
+- Revenue-first SEO: begin with products/services, margins, customer value and actual demand, then select queries and pages (Backlog 215, 223 [VURDER], 243, 364, 444).
+- Search-market coverage: map commercially relevant demand clusters to owned pages and current visibility, discover uncovered needs and opportunities in existing pages; no false percentage of the whole market from incomplete GSC data (215, 362–364, 440, 444).
+- Commercial pages as authority assets: build supporting authority around valuable service/product pages, rather than selling article counts (242–245, 248).
+- First-party expertise as a competitive moat: use jobs, sales questions, support, original data and experience to create information a competitor cannot reproduce from the same generic prompt (260 reproducibility, 380, 382).
+- Outcome-led measurement: distinguish visibility, qualified demand and actual business outcomes; separate branded/non-branded demand where available, use paid-search evidence when useful, and respect attribution coverage (75, 205–206, 284, 294).
+
+Recommendation for decision: keep intent-led philosophy + commercial positioning as the umbrella; make search-market coverage the distinctive teachable mechanism and the six-step method the delivery model. First-party expertise and outcome-led measurement support it; no need to invent a new branded SEO term. Later sections should explain a concrete mechanism, example or comparison that lets the buyer understand why the priority matters, then connect it to what we do. Avoid repeated traffic-versus-orders rhetoric. Supporting education is a purpose, not a mandatory template for every section. Step 1 remains open until OWNER confirms the final strategic direction after considering alternatives.
+
 ## Sources
 
 - [MWS Content Quality and Voice](https://github.com/AnelPasic/MedonWebSystem/blob/main/docs/CONTENT-QUALITY-AND-VOICE.md) (Rules 01–13, knowledge-first research and flagship plan)
@@ -40,3 +53,4 @@ Pending step 1. Record order, topic, job, evidence, and draft status here after 
 ## Decision log
 
 - 2026-11-24 OWNER approved using a persistent project workflow and starting with philosophy and positioning; no final positioning approval yet.
+- OWNER expressed preference for the combined intent-led philosophy and commercial positioning; requested alternatives from the knowledge bank and educational demonstration of the approach. Final selection pending.
