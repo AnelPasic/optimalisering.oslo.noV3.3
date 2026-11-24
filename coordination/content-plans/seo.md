@@ -272,6 +272,25 @@ Public search-result spot check: [Skruvat BMW brake pads](https://www.skruvat.no
 
 Recommendation: compare "bremseklosser BMW" with "bytte bremseklosser BMW Oslo" as the primary contrast, then add DIY and price-research examples only if they aid the explanation. Focus section 02 on interpreting what is being purchased, by whom and where; reserve economic calculator for section 15, coverage mapping for section 09, and detailed page mapping for section 08. The prospective customer must understand why a keyword can be a good keyword for one business and the wrong keyword for another. Final wording pending owner direction.
 
+### Section 02 — alternative industry research (not approved copy)
+
+OWNER asks to retain workshop as an option and investigate clinic, dentist, plumber and solar shading. No principal example selected yet. Treat all candidate queries as illustrative, not measured volumes or observed customer searches. Public source spot checks validate actual offer/page types, not exact SERP rankings, conversion or profitability.
+
+| Industry | Candidate contrast | Mechanism |
+|---|---|---|
+| Bilverksted | bremseklosser BMW vs bytte bremseklosser BMW Oslo | Parts purchase versus paid installation; retain earlier research as option. |
+| Private clinic (dermatology) | hudlege med offentlig avtale Oslo vs privat hudlege Oslo uten henvisning | Same need, different financing/access model; private self-pay offer vs publicly funded specialist care. Respect clinical eligibility and avoid equating patient value with financial value. |
+| Dentist | akutt tannlege Oslo i dag vs tannimplantat pris Oslo | Both relevant, but different urgency, service, capacity, decision criteria and potentially commercial economics. No implication that one patient is worth more or clinical need is determined by search. |
+| Plumber | åpne tett avløp selv vs rørlegger tett avløp Oslo nå; alternatively rørlegger montere kjøkkenkran vs totalrenovering bad tilbud Oslo | DIY vs hiring, urgency vs planned work, service fit; different jobs require different capacity. |
+| Solar shading | billig rullegardin vs utvendig screen med montering Oslo vs solskjerming borettslag tilbud | Commodity item vs complete installation vs project/organization buyer. Same field, very different scope, fit, potential order value and purchasing process. Strongest candidate for teaching economics and commercial fit; not necessarily largest margin or most valuable query. |
+
+Public research references:
+- [Helsenorge: avtalespesialister](https://www.helsenorge.no/behandlere/avtalespesialist/), [Oslo City Legesenter: privat hudlege](https://oslocitylegesenter.no/hudlege/).
+- [DiDent: separate services and booking](https://dident.no/), [Tannlege Oslo: price list](https://www.oslotannlegeklinikk.no/tjenester/priser.html).
+- [Huseierne: tette rør](https://www.huseierne.no/alt-om-bolig/vedlikehold-og-oppussing/slik-unngar-du-tette-ror/), [NødRørlegger: akutt rørlegger Oslo](https://nod-rorlegger.no/), [tett avløp service](https://nod-rorlegger.no/tett-avl%C3%B8p/oslo).
+- [IKEA: solskjerming](https://www.ikea.com/no/no/cat/solskjerming-tl002/), [ZIP Screens: DIY measurement/installation](https://www.zipscreens.no/sporsmal-og-svar), [Bovik: screen on measure/befaring](https://bovik.no/produkter/screen/), [Solskjermingsgruppen: boligprosjekt/borettslag](https://www.solskjermingsgruppen.no/proff/boligprosjekt-og-sameie/).
+Recommendation: solar shading or workshop for the principal example, because the buyer can understand differences in what is being purchased without specialized healthcare context. Plumbing is especially useful for urgency and DIY versus hiring. Clinic demonstrates commercial fit; dentist demonstrates urgency/service distinction. Consider a compact contrast between two or three queries rather than a comprehensive keyword table in final customer copy. No numerical estimates, full SERP audit, GSC or conversion data obtained. Keep section 02 open; no new public draft yet.
+
 ## Decision log
 
 - 2026-11-24 OWNER approved using a persistent project workflow and starting with philosophy and positioning; no final positioning approval yet.
@@ -284,3 +303,4 @@ Recommendation: compare "bremseklosser BMW" with "bytte bremseklosser BMW Oslo" 
 - OWNER requested red-team and skeptical-buyer review of the selected ending. Original and recommended refinement saved; no final Hero approval.
 - OWNER explicitly approved the exact Hero wording. Step 3 complete; section 02 draft 1 prepared for step 4. No implementation authorized.
 - OWNER selected bilverksted as the principal illustrative example for section 02. Research refinement saved; section wording still open.
+- OWNER requested retaining workshop as an option and comparing clinic, dentist, plumber and solar shading; research alternatives saved, selection pending.
