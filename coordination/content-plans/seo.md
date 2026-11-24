@@ -1,13 +1,13 @@
 # SEO Flagship V3 — /seo/
 
-**Status:** Active editorial project; step 2 in progress; step 1 approved. No page rewrite, implementation or publication authorized in this planning phase.
+**Status:** Active editorial project; step 3 in progress; steps 1 and 2 approved. No page rewrite, implementation or publication authorized in this planning phase.
 **Target:** https://optimalisering.oslo.no/seo/
 **Scope:** Clean-sheet commercial flagship, structure first, one section at a time. Preserve protected facts, prices, shared content, design and existing technical rules.
 
 ## Progress
 
 - [x] 1. Establish overall philosophy and positioning
-- [ ] 2. Agree themes and section order
+- [x] 2. Agree themes and section order
 - [ ] 3. Develop and approve the Hero
 - [ ] 4. Develop one section at a time with relevant research
 - [ ] 5. Review the whole page and eliminate repetition
@@ -24,7 +24,7 @@ Recommended positioning for discussion: start with the commercial opportunity in
 
 Audience hypothesis: businesses competing for customers where relevant visibility and qualified demand have real economic value; not necessarily every small business. No promises of rankings, new sales, or product availability beyond actual offer and evidence. Validate current system capabilities before public claims about SeoTool/LeadProof.
 
-Decision recorded above. No final Hero or section structure approved.
+Decision recorded above. Section structure approved in step 2; no final Hero approved.
 
 ## Step 1 — alternative concept exploration
 
@@ -48,31 +48,80 @@ Recommendation for decision: keep intent-led philosophy + commercial positioning
 - [V2 preview](https://review-seo-flagship-v2-optimalisering-oslo-v33.anel.workers.dev/seo/) and [Antigravity preview](https://seo-flaggskip-optimalisering-oslo-v33.anel.workers.dev/seo/): research references, not templates.
 - Further buyer/search/competitor and first-party research is needed before final editorial claims and Hero selection. Do not claim Norway exclusivity from the current evidence.
 
-## Step 2 — section plan
+## Step 2 — section plan (OWNER approved)
 
-**Status:** Proposed structure for OWNER review, not approved. Theme labels below describe jobs, not final H2s or fixed component choices. Use relevant evidence when writing each section; do not force every research item onto the page. High-intent visitors should have a direct path from Hero to approved pricing and assessment without reading the entire page. Consider concise approved proof and price context in Hero development, not a separate repeated proof section there.
+**Status:** OWNER-approved themes and exact order, 19 sections. Theme labels are planning labels, not final H2s or selected components. Keep all 19 in this order for drafting; flag overlap or propose consolidation with OWNER review rather than silently removing, moving or duplicating content. Lead with the essential arguments that persuade a skeptical buyer who has compared several SEO agencies. Teach mechanisms and demonstrate value; aim for useful, citeable content and search relevance, not guarantees of rankings or citations. Move excessive detail to relevant supporting pages.
 
-| # | Theme | Editorial job / customer learning | Research and evidence candidates | Draft |
-|---|---|---|---|---|
-| 01 | Hero | Establish who we help, the commercial value of SEO, the distinctive approach and a clear next step; optional quick path to price. | Approved philosophy, Rule 04, actual offer, authorized proof; H1 Lab after structure approval. | Pending |
-| 02 | Intent behind the search | Teach why two searches about the same subject can have very different value. Explain purchase/use/contact intent versus information-seeking, without assuming smaller searches are always better. | Compact Keywords/BOFU, Backlog 243, 257 (intent), 440, 444; Article Bank A03. Concrete contrasting queries. | Pending |
-| 03 | Search-market coverage | Map what the business actually sells to relevant demand, existing visibility/pages and missing opportunities. Show why strong rankings for a few services can coexist with missed business. | Backlog 215, 362–364, 440, 444, 223 (VURDER). Illustrated service matrix, no invented whole-market coverage percentage. | Pending |
-| 04 | Fra søkemarked til ordrebok | Present the approved six-step method: demand, coverage, competition, profitability, implementation, measurement. Explain why that ordering guides investment; this is the overview, not six duplicate mini-articles. | Backlog 449, 129, 243. | Pending |
-| 05 | Documented results | Establish credibility immediately after method; use approved Helt Opplagt organic click comparison (2162 → 4181, Mar–Sep YoY) accurately and distinguish SEO visibility from conversion outcomes. Other authorized cases only with clear channel labels. | Current proof registry/master, approved facts and publication scope. Do not claim method caused all results or traffic proved sales. | Pending |
-| 06 | From search intent to the right page | Demonstrate one actual SEO improvement end to end: distinguish when to improve an existing page vs create a new one, write useful buying answers, support with relevant internal links and fix technical accessibility/indexing where needed. Explain technical SEO as prerequisite, not checklist for its own sake. | Backlog 1, 204–205, 231–239, 245, 257 (intent), 362–364, 440; Article A04. Concrete service-page example; verify actual examples or label hypothetical. | Pending |
-| 07 | Authority and first-party expertise | Explain how real operating experience, useful commercial pages, original data/tools, selected supporting content and earned mentions establish relevant trust; why publishing volume is not the objective. | Backlog 242–248, 260 (reproducibility), 380–382, 304; Fact 6 with scope; Article A05/A16. | Pending |
-| 08 | Google, AI search and local discovery | Explain shared relevance principles and actual differences across organic results, AI retrieval/citation and local search. Avoid repeating the SEO/CRO value argument; link to specialist pages for depth. | Backlog 40, 303, 395 (fan-out); Facts 2–3, 42, 69–71; Articles A01/A02; local SEO sources. Current platform claims checked as needed. | Pending |
-| 09 | Measurement and next investment | Demonstrate the feedback loop: queries/page visibility, branded/non-branded demand where available, qualified inquiries and actual outcomes where measurable; how SeoTool/LeadProof or other verified capabilities guide next decisions. Distinguish attribution coverage and unknowns. | Backlog 169, 205, 215, 284, 294, 364; Fact 63; actual system capability and customer data checks before copy. No implied exact organic query-to-sale attribution. | Pending |
-| 10 | Offer, pricing and collaboration | Explain what the customer buys, what we do, what they contribute, capacity, realistic timescale and approved terms. Reuse actual pricing masters; provide buyer fit and accessible buying path. | Rule 07, Rule 12; current global package and pricing source; Backlog 294. | Pending |
-| 11 | Free check / next step | Present the approved assessment promise and CTA through the current global content; show how findings connect to the business's own opportunity. | Global sjekk; approved three findings / two business days. | Pending |
-| 12 | FAQ and further learning | Resolve remaining genuine buying objections; link relevant existing and future supporting articles without forcing all article topics into the money page. | Article Bank A01–A05, A16; actual sales questions; existing related pages. | Pending |
+| # | OWNER-approved theme | Editorial job / research direction | Draft |
+|---|---|---|---|
+| 01 | Hero | Distinct commercial proposition, audience, reason to read and approved next action. H1 Lab. | In progress |
+| 02 | Intensjonen bak søket | Explain the economics of search intent and BOFU versus information. Backlog 243, 257, 440, 444, 449; Article A03. | Pending |
+| 03 | Hvem dette er for - Og ikke for - Eneste snekker/tannlege 5 mils radius. | Qualify by competition, commercial opportunity and need; the sole carpenter/dentist in a 50 km radius is an illustrative scenario, not a hard eligibility rule. | Pending |
+| 04 | Fordeler med SEO - Senker kostnad pr. bestilling - Lavere Ads kostnad - AI-Synlighet - Konkurransefortrinn | Demonstrate mechanisms and business benefits with evidence/calculations. Lower order costs and ad CPC are possible, not guaranteed; distinguish shared landing-page quality from direct effects of organic rank. | Pending |
+| 05 | SEO er både AIO - GEO og AI-Søk Optimalisering - Ref. en av de forrige Intelligence intakes. | Challenge artificial rebranding and selling the same fundamentals twice. SEO as umbrella and AI visibility as specialist work, not identical operationally. Backlog 302, 303, 307, 313, 314, 393; F2–3, F69–71. | Pending |
+| 06 | Fra søkemarked til ordrebok | Present approved six-step method, explain why sequence matters. Backlog 449. | Pending |
+| 07 | Pakker og Priser | Early actual global package selection/prices and approved buying conditions. No duplicated pricing master. | Pending |
+| 08 | Fra søkeintensjon til riktig nettside | Demonstrate practical implementation with a real or explicitly hypothetical example: intent mapping, improve vs create, technical accessibility, internal links. Backlog 1, 204, 231, 257, 362–364, 440. | Pending |
+| 09 | Søkemarkedsdekning | Show the distinctive analytical map of services, demand, visibility and gaps; don't invent whole-market coverage metrics. Backlog 215, 223, 362–364, 440, 444. | Pending |
+| 10 | Dokumenterte resultater | Approved proof, with Helt Opplagt search result and accurate channel/metric scope; do not imply lead or sales lift from clicks. | Pending |
+| 11 | Autoritet og fagkunnskap | First-party expertise, commercially relevant authority, original research/tools and earned links. Backlog 242–248, 260, 380–382. | Pending |
+| 12 | Google, AI-søk og lokal synlighet | Practical channel differences, source/retrieval/citation, local relevance and measurement. Link to specialist pages; do not repeat section 05's taxonomy argument. | Pending |
+| 13 | Måling og kontinuerlig optimalisering | Show feedback loop and verified SeoTool/LeadProof capabilities; no claim of exact organic query-to-sale attribution without data. Backlog 169, 205, 284, 294. | Pending |
+| 14 | Investering, pakker og samarbeid | Explain delivery, provider/client responsibilities, capacity, fit, timescale and ongoing priorities; do not duplicate section 07's package cards/prices. | Pending |
+| 15 | SEO - KRO - Kombinasjon og kalkulator | Demonstrate the multiplicative effect of relevant traffic and conversion; transparent user-editable assumptions, no forecast disguised as results. Backlog 75, 104, 248; component feasibility assessed later. | Pending |
+| 16 | Gratis sjekk | Existing approved global assessment promise: 3 concrete findings within 2 working days. Primary conversion. | Pending |
+| 17 | FAQ og faglig fordypning | Answer actual remaining buyer objections; point to useful deeper pages. | Pending |
+| 18 | SEO - Nytt - Artikler | Relevant topical SEO developments and analyses, including existing November update article where appropriate. | Pending |
+| 19 | SEO - Fakta og Gjør det selv - Artikler | Evergreen factual and practical supporting articles; Article Bank, Fun Facts, Evidence Registry; select useful topics rather than fill a quota. | Pending |
 
-**Sequence rationale:** establish the proposition and a quick buying path; teach intent and missing demand; show the method and relevant proof; demonstrate professional delivery, authority, search ecosystem and measurement; close with offer and action. Section 06 demonstrates implementation, section 07 explains defensible information/authority, section 08 covers cross-engine differences, section 09 explains evaluation and next prioritization. No repeated generic SEO benefits, no obligatory SEO glossary block, no preselected MWS components. Pricing can be accessed early via Hero/links while full commercial section is later; preserve approved pricing and global data. Owner may add, merge, reorder or reject sections before step 3.
+**OWNER notes:** Vi må også utfordre de som prøver å selge GEO AIO , vi skal ha de tjenestene også men alt er SEO. Skal ha det viktigste for at en skeptisk kunde som har vært gjennom mange SEO byrå nettsider sier JA dette skal vi ha. Samt at du ville ha sitert siden og Google hadde rangert den godt. Er det noe overflødig, ja da finnes det undersider.
 
-**Outstanding:** structure approval; final search-market/competitor and first-party evidence research as relevant; verified product capabilities; Hero selection. No production changes authorized.
+**Research basis for section 05:** BusinessIntelligence Backlog 302, 313 and 314 explicitly place GEO on top of SEO fundamentals, with additional AI-specific workflows. Google's [AI features guide](https://developers.google.com/search/docs/appearance/ai-features) and [generative AI optimization guide](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide) confirm the SEO foundation for Google's AI features. Distinguish independent assistants and their measurement/retrieval from Google. No claim all engines work identically.
+
+## Step 3 — H1 Lab (in progress; OWNER selection required)
+
+Current Hero preset: spiss; CTA from live source, approved global assessment terms retained. Considered distinct angles: familiar proverb/search intention, search-market coverage, ready-to-buy decision, marginal economics, qualified customer fit, alternative to traffic reports, AI terminology challenge, first-party authority. Rejected weaker directions that repeat other sections or depend on unsupported promises. A/B/C below are proposals only. No changes to actual CMS source.
+
+### A - Intensjonen
+
+Eyebrow: SEO-byrå i Oslo og resten av Norge
+
+H1: Det er tanken som teller.
+
+Support: Den som søker etter hvordan en varmepumpe virker, er ute etter noe annet enn den som søker etter varmepumpe ferdig montert. Vi finner de lønnsomme søkemulighetene for din bedrift og forbedrer nettsiden slik at flere av de riktige kundene finner og velger deg.
+
+CTA: Ta en gratis sjekk
+
+### B - Søkemarkedsdekning
+
+Eyebrow: Søkemotoroptimalisering for bedrifter
+
+H1: Førsteplass på Google. For hvor mye av det du selger?
+
+Support: Du kan være godt synlig for én tjeneste og nesten usynlig for resten. Vi kartlegger etterspørselen etter det du selger, finner de lønnsomme mulighetene og utfører SEO-arbeidet som skal gi deg en større del av markedet.
+
+CTA: Ta en gratis sjekk
+
+### C - Kjøpsbeslutningen
+
+Eyebrow: SEO-byrå for bedrifter i konkurranseutsatte markeder
+
+H1: Kundene har bestemt seg for hva. Nå gjenstår hvem.
+
+Support: Vi finner søkene til folk som leter etter en leverandør av det du selger. Deretter forbedrer vi synligheten din i Google og AI-søk og sidene som skal overbevise kundene om å velge deg.
+
+CTA: Ta en gratis sjekk
+
+
+Recommendation: A for distinct memorable philosophy; B for sharper commercial curiosity and coverage differentiation; C for explicit purchase-intent framing. Shared CTA support can use exact approved assessment promise, "3 konkrete funn innen 2 virkedager." No invented proof, price or promises. The exact draft fields passed the live forbidden-character, hidden-format and 11 hard phrase regexes; full site copy-QA/build not run for planning-only edits.
+
+Competitor scan: AI SEO (https://aiseo.no/), Synlighet (https://synlighet.no/tjenester/seo/), Maverix (https://www.maverix.no/no/seo/) and Solid Media (https://solidmedia.no/tjenester/seo) already frame SEO around relevant customers and AI visibility. Differentiate through the specific intent/coverage mechanism and demonstrate it rather than claiming this is unique in Norway. This is an initial search-result scan, not an exhaustive audit.
+
+**Outstanding:** OWNER Hero selection, then section-by-section drafting and targeted research; verified system capabilities, actual proof scope, full-page review, implementation and technical QA. No publication authorized.
 
 ## Decision log
 
 - 2026-11-24 OWNER approved using a persistent project workflow and starting with philosophy and positioning; no final positioning approval yet.
 - OWNER expressed preference for the combined intent-led philosophy and commercial positioning; requested alternatives from the knowledge bank and educational demonstration of the approach. Final selection pending.
 - OWNER explicitly approved the combined philosophy, positioning, search-market coverage differentiation and six-step methodology, with buyer education as a through-line. Step 1 complete. Step 2 proposal saved for review; no final copy or layout selected.
+- OWNER explicitly approved the 19-section sequence and notes. Step 2 complete; Step 3 Hero finalists saved, awaiting selection.
