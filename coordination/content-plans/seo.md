@@ -119,9 +119,46 @@ Competitor scan: AI SEO (https://aiseo.no/), Synlighet (https://synlighet.no/tje
 
 **Outstanding:** OWNER Hero selection, then section-by-section drafting and targeted research; verified system capabilities, actual proof scope, full-page review, implementation and technical QA. No publication authorized.
 
+### H1 Lab refinement — round 2 (awaiting OWNER approval)
+
+OWNER: Retain "Det er tanken som teller", preferably with "søkeord" in the headline. Emphasize resource-intensive SEO, the economic importance of choosing the right searches and an efficient system focused on searches that affect orders. Previous three candidates remain historical proposals; none approved. Do not imply organic search costs nothing or promise orders. The new finalists vary the emphasis on economics, the creative mechanism and the delivery process.
+
+#### A2 - Ordtaket og investeringen
+
+Eyebrow: SEO-byrå i Oslo og resten av Norge
+
+H1: Søkeord har ulik verdi. Det er tanken som teller!
+
+Support: Det koster å bli synlig på Google, selv når klikkene er gratis. Derfor vurderer vi kjøpsintensjon, konkurranse og verdien av en bestilling før vi setter i gang SEO-arbeidet. Vi bruker tiden der bedriften din har mest å hente.
+
+CTA: Ta en gratis sjekk
+
+#### B2 - Tanken bak søkeordet
+
+Eyebrow: Søkemotoroptimalisering for bedrifter
+
+H1: Søkeord er bare ord. Det er tanken som teller!
+
+Support: Søkeord gir oss et spor etter hva kundene har tenkt å gjøre. Med vår SEO-metodikk finner vi søkene med størst potensial for lønnsomme bestillinger og optimaliserer sidene som skal få kundene til å velge deg.
+
+CTA: Ta en gratis sjekk
+
+#### C2 - Effektiv SEO
+
+Eyebrow: SEO for bedrifter i konkurranseutsatte markeder
+
+H1: Når vi velger søkeord, er det tanken som teller!
+
+Support: SEO krever tid, og tiden betaler du for. Vi starter med det bedriften din tjener penger på, finner søkene der du har best mulighet til å vinne kunder, og gjør arbeidet som skal få deg synlig i Google og AI-søk.
+
+CTA: Ta en gratis sjekk
+
+Recommendation: A2. The opening acknowledges that organic visibility requires an investment and describes how we prioritize its use. B2 is a more pointed wordplay; C2 emphasizes the professional work. Shared CTA support remains "3 konkrete funn innen 2 virkedager." All draft fields checked against current 11 hard phrase patterns, forbidden characters and hidden formatting. No full site QA or build; planning-only update. Step 3 remains open. No CMS or production changes.
+
 ## Decision log
 
 - 2026-11-24 OWNER approved using a persistent project workflow and starting with philosophy and positioning; no final positioning approval yet.
 - OWNER expressed preference for the combined intent-led philosophy and commercial positioning; requested alternatives from the knowledge bank and educational demonstration of the approach. Final selection pending.
 - OWNER explicitly approved the combined philosophy, positioning, search-market coverage differentiation and six-step methodology, with buyer education as a through-line. Step 1 complete. Step 2 proposal saved for review; no final copy or layout selected.
 - OWNER explicitly approved the 19-section sequence and notes. Step 2 complete; Step 3 Hero finalists saved, awaiting selection.
+- OWNER requested further Hero refinement: exact proverb, search terms, efficient use of SEO investment and orders. Round 2 saved for selection; step 3 not complete.
