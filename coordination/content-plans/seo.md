@@ -55,7 +55,7 @@ Recommendation for decision: keep intent-led philosophy + commercial positioning
 | # | OWNER-approved theme | Editorial job / research direction | Draft |
 |---|---|---|---|
 | 01 | Hero | Distinct commercial proposition, audience, reason to read and approved next action. H1 Lab. | OWNER approved |
-| 02 | Intensjonen bak søket | Explain the economics of search intent and BOFU versus information. Backlog 243, 257, 440, 444, 449; Article A03. | Draft 1 / review |
+| 02 | Intensjonen bak søket | Explain the economics of search intent and BOFU versus information. Backlog 243, 257, 440, 444, 449; Article A03. | Draft 2 / review; volume unavailable |
 | 03 | Hvem dette er for - Og ikke for - Eneste snekker/tannlege 5 mils radius. | Qualify by competition, commercial opportunity and need; the sole carpenter/dentist in a 50 km radius is an illustrative scenario, not a hard eligibility rule. | Pending |
 | 04 | Fordeler med SEO - Senker kostnad pr. bestilling - Lavere Ads kostnad - AI-Synlighet - Konkurransefortrinn | Demonstrate mechanisms and business benefits with evidence/calculations. Lower order costs and ad CPC are possible, not guaranteed; distinguish shared landing-page quality from direct effects of organic rank. | Pending |
 | 05 | SEO er både AIO - GEO og AI-Søk Optimalisering - Ref. en av de forrige Intelligence intakes. | Challenge artificial rebranding and selling the same fundamentals twice. SEO as umbrella and AI visibility as specialist work, not identical operationally. Backlog 302, 303, 307, 313, 314, 393; F2–3, F69–71. | Pending |
@@ -291,6 +291,39 @@ Public research references:
 - [IKEA: solskjerming](https://www.ikea.com/no/no/cat/solskjerming-tl002/), [ZIP Screens: DIY measurement/installation](https://www.zipscreens.no/sporsmal-og-svar), [Bovik: screen on measure/befaring](https://bovik.no/produkter/screen/), [Solskjermingsgruppen: boligprosjekt/borettslag](https://www.solskjermingsgruppen.no/proff/boligprosjekt-og-sameie/).
 Recommendation: solar shading or workshop for the principal example, because the buyer can understand differences in what is being purchased without specialized healthcare context. Plumbing is especially useful for urgency and DIY versus hiring. Clinic demonstrates commercial fit; dentist demonstrates urgency/service distinction. Consider a compact contrast between two or three queries rather than a comprehensive keyword table in final customer copy. No numerical estimates, full SERP audit, GSC or conversion data obtained. Keep section 02 open; no new public draft yet.
 
+### Section 02 — solar shading research and draft 2 (not approved)
+
+OWNER requested deeper research into solskjerming, actual prices, available search volume and the pedagogical argument. Workshop and other examples retained as alternatives.
+
+Verified published price examples (retrieved 2026-11-25; recheck if used at publication):
+- [IKEA Norway roller blinds](https://www.ikea.com/no/no/cat/rullegardiner-700223/): FÖNSTERBLAD beige 100 x 155 cm, NOK 199, standard consumer product.
+- [Markisemannen price examples](https://www.markisemannen.no/priseksempel/): HAUK exterior ZIP screen 100 x 150 cm, indicative NOK 10,328; administration fee and installation additional; updated 2026-10-05. Not a mounted price.
+- [Mellomgården borettslag, 2024-10-01](https://mellomgaarden.no/nyheter/balkong-informasjon-om-innvendig-solskjerming-01102024/): published offer for interior pleated blinds on glazed balconies, NOK 7,187–14,276 for 4–8 glass panels, NOK 10,732 for 6; VAT, shipping and fitting included. Hypothetical 20 orders at NOK 10,732 = NOK 214,640 gross sales including VAT. Not actual contract or profit, not outdoor ZIP screens, not a current quote.
+- [Solskjermingsgruppen project model](https://www.solskjermingsgruppen.no/proff/boligprosjekt-og-sameie/): board contact, site visit, coordinated products/colors and price agreement; residents subsequently order individually. One project inquiry can lead to multiple orders, but no guaranteed take-up.
+- [Google Keyword Planner historical metrics](https://support.google.com/google-ads/answer/3022575): average monthly volume rounded and includes close variants; use selected market/time/network. [Google Trends FAQ](https://support.google.com/trends/answer/4365533): normalized relative interest 0–100, low-volume terms may show zero; not absolute monthly counts.
+
+Search volume blocker: public searches for Norwegian exact volume data yielded no reliable figures. GSC Wizard Bing keyword stats call for solskjerming/no/nb-NO returned payment_required (expired trial/no active subscription); no Bing data. No connected Google Keyword Planner historical-volume action identified. Do not invent figures or claim relative popularity proven. Keyword Planner export recommended for Norway and relevant local market separately, Google Search, latest 12 complete months, monthly breakdown for seasonal variation, no summing overlapping close variants. Candidate list: solskjerming, rullegardin, rullegardiner, billig rullegardin, utvendig solskjerming, screen solskjerming, zip screen, zip screen pris, solskjerming med montering, utvendig solskjerming Oslo, solskjerming borettslag, solskjerming borettslag tilbud, markiser borettslag, solskjerming næringsbygg. These are candidate queries, not observed demand. No volume, CVR or margin verified. Need real market/fit, SEO opportunity, expected orders and contribution margin; order revenue alone is insufficient. BI 215, 223 (VURDER), 243, 443–445, 449.
+
+Proposed copy (draft 2, OWNER review, no components selected):
+
+## Ett vindu eller et helt borettslag?
+
+To personer søker etter solskjerming. Begge er interessert i å kjøpe, men den ene trenger en rullegardin til soverommet. Den andre sitter i styret i et borettslag. Forskjellen er ganske interessant hvis du lever av å selge og montere solskjerming.
+
+| Søk | Mulig kjøp |
+|---|---|
+| Billig rullegardin | Standard rullegardin til 199 kr |
+| Utvendig zip screen pris | Måltilpasset screen til 10 328 kr, før montering og gebyr |
+| Solskjerming borettslag tilbud | Fellesleveranse til 214 640 kr hvis 20 balkonger bestiller til 10 732 kr hver |
+
+Priseksemplene er hentet fra norske leverandører og en publisert borettslagsavtale fra 2024. Fellesleveransen er et regneeksempel, ikke en faktisk ordre.
+
+Søkeintensjon forteller oss hva kunden ønsker å oppnå. For en nettbutikk som selger standard rullegardiner, kan det første søket være midt i blinken. For en leverandør som spesialiserer seg på større installasjoner, kan det siste søket være langt mer interessant.
+
+Vi begynner med det bedriften din ønsker å selge. Deretter undersøker vi hvilke søk som passer tilbudet, hvor mange som søker, hva du kan tjene på bestillingene, og hva det krever å bli funnet. Et stort søkevolum er verdifullt når det representerer etterspørsel du kan tjene penger på.
+
+Editorial note: draft refers to actual prices but uses hypothetical query-to-purchase and uptake; add direct sources near public price examples, verify prices before publication. Keep price comparison concise, no claim that largest deal is always highest value; project lead longer sales cycle and uncertain take-up. No imaginary volume chart. All draft text passes current 11 phrase regexes, forbidden punctuation and hidden formatting. Full site QA/build not run; coordination-only. Section 02 remains open.
+
 ## Decision log
 
 - 2026-11-24 OWNER approved using a persistent project workflow and starting with philosophy and positioning; no final positioning approval yet.
@@ -304,3 +337,4 @@ Recommendation: solar shading or workshop for the principal example, because the
 - OWNER explicitly approved the exact Hero wording. Step 3 complete; section 02 draft 1 prepared for step 4. No implementation authorized.
 - OWNER selected bilverksted as the principal illustrative example for section 02. Research refinement saved; section wording still open.
 - OWNER requested retaining workshop as an option and comparing clinic, dentist, plumber and solar shading; research alternatives saved, selection pending.
+- OWNER requested solar shading deep dive. Verified price sources and illustrative project arithmetic, documented volume-access blocker, and saved draft 2 for review. Section 02 not approved.
