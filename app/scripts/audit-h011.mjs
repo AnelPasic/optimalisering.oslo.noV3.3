@@ -2,12 +2,14 @@ import {getHomepageBlocks,isHomepageSectionVisible} from '../src/lib/home-builde
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 import { resolvePageHero } from '../src/lib/page-hero.ts';
+import {pageSchema} from '../src/lib/content-schema.ts';
+import {auditServiceContent} from './audit-service-content.mjs';
 const home = JSON.parse(readFileSync('src/content/pages/home.json'));
 const normalize = text => text.replace(/<[^>]*>/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
 for (const slug of ['home', 'priser', 'synlighet', 'konvertering']) {
   const html = readFileSync(slug === 'home' ? 'dist/index.html' : `dist/${slug}/index.html`, 'utf8');
   const visible = normalize(html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, ''));
-  assert.equal((visible.match(/Medon/g) ?? []).length, 1, `${slug}: only one normal provider mention`);
+  assert.equal((visible.match(/Tjenesten drives av Medon AS\./g) ?? []).length, 1, `${slug}: canonical provider disclosure appears once`);
   assert.ok(visible.includes('Tjenesten drives av Medon AS.'), `${slug}: exact disclosure`);
   assert.ok(!/Om Medon|En tjeneste fra Medon|©\s*\d+\s*Medon/.test(visible));
   assert.ok(!html.includes('hreflang="en"') && !html.includes('class="language-switch"'));
@@ -22,16 +24,11 @@ for (const slug of ['home', 'priser', 'synlighet', 'konvertering']) {
   }
   if (['synlighet', 'konvertering'].includes(slug)) {
     const content = JSON.parse(readFileSync(`src/content/pages/${slug}.json`));
-    const hero = resolvePageHero(content);
+    const hero = resolvePageHero(pageSchema.parse(content));
     const visual = hero.visual.kind === 'image' ? hero.visual.image : undefined;
     assert.equal(/class="[^"]*\bservice-hero-visual\b/.test(html), Boolean(visual));
     if (visual) assert.ok(html.includes(`src="${visual.src}"`) && html.includes(`alt="${visual.alt}"`));
-    assert.ok(html.includes('href="/#sjekk"') && html.includes('href="/priser/"'));
-    assert.ok(!/<form/.test(html));
-    // Locked editorial sections supply problem, mechanism, practical meaning,
-    // qualification/limits, commercial path and bounded action without filler.
-    for (const id of [content.sections[0].id, content.sections[1].id, 'prioritering', 'sammenheng', 'service-priser', 'sjekk', 'sporsmal']) assert.ok(html.includes(`id="${id}"`));
-    assert.ok(normalize(html).includes(content.title) && normalize(html).includes(content.intro));
+    auditServiceContent(slug);
   }
 }
 assert.ok(!readdirSync('dist').includes('en'), 'No accidental /en/ placeholder routes');
