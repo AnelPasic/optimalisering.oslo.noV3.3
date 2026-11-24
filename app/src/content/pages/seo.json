@@ -203,8 +203,8 @@
       "surface": "base-100",
       "layout": "stacked",
       "body": [
-        "Helt Opplagt viser verdien av bedre organisk synlighet. I Google Search Console gikk organisk trafikk fra 2 162 til 4 181 klikk (+93 %), og gjennomsnittlig posisjon fra 21,8 til 12,2, mars-september 2025 mot samme periode i 2026. Registrerte kontaktskjemaer totalt gikk fra 79 til 67. Caset dokumenterer søkesynlighet, ikke økte totale henvendelser eller omsetning.",
-        "Nysta viser verdien av konverteringsoptimalisering. Andelen som fullførte checkout steg fra 7,1 % til 43,6 % blant dem som startet checkout, 30 dager før mot de første 30 dagene etter. Flere endringer ble gjort, så effekten kan ikke tilskrives ett tiltak alene. Kilde: Shopify.",
+        "Helt Opplagt viser verdien av bedre organisk synlighet. I samme periode gikk gjennomsnittlig posisjon i Google Search Console fra 21,8 til 12,2. Registrerte kontaktskjemaer totalt gikk fra 79 til 67. Caset dokumenterer søkesynlighet, ikke økte totale henvendelser eller omsetning.",
+        "Nysta viser verdien av konverteringsoptimalisering. Sammenligningen gjelder andelen som fullførte checkout blant dem som startet checkout, 30 dager før mot de første 30 dagene etter. Flere endringer ble gjort, så effekten kan ikke tilskrives ett tiltak alene. Kilde: Shopify.",
         "Når vi vurderer SEO, undersøker vi både hvordan kundene finner deg og hva de møter når de kommer inn på nettsiden. Har du allerede nok trafikk, kan konverteringsoptimalisering være førsteprioritet."
       ],
       "links": [
@@ -229,7 +229,7 @@
       "links": [
         {
           "label": "Se pakker og priser",
-          "href": "#priser"
+          "href": "/seo/#priser"
         }
       ]
     },
@@ -539,7 +539,7 @@
           "boxVariant": "card",
           "surface": "base-100",
           "iconName": "wrench",
-          "href": "#teknisk",
+          "href": "/seo/#teknisk",
           "label": "Les om teknisk SEO"
         },
         {
@@ -586,7 +586,7 @@
           "boxVariant": "card",
           "surface": "base-100",
           "iconName": "magnifying-glass",
-          "href": "#sjekk",
+          "href": "/seo/#sjekk",
           "label": "Ta en gratis sjekk"
         },
         {
