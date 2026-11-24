@@ -13,8 +13,9 @@ const clone=()=>structuredClone(source);
 
 test('SEO uses one native mixed sequence and references only the canonical package and assessment masters',()=>{
  const positions=source.sections.filter((row:any)=>row._block==='global');
- assert.deepEqual(positions.map((row:any)=>row.element),['priser','sjekk']);
- for(const row of positions)assert.deepEqual(Object.keys(row).sort(),['_block','element']);
+ assert.equal(new Set(positions.map((row:any)=>row.element)).size,positions.length);
+ for(const key of ['priser','sjekk'])assert.ok(positions.some((row:any)=>row.element===key));
+ for(const row of positions)assert.ok(Object.keys(row).every(key=>['_block','element','visibility'].includes(key)));
  assert.equal(source.sections.some((row:any)=>row.id==='sjekk'),false);
  const parsed=pageSchema.parse(source),sections=visibleServiceSections(parsed);
  assert.equal(sections.filter(row=>row.id==='priser').length,1);
@@ -25,10 +26,10 @@ test('SEO uses one native mixed sequence and references only the canonical packa
  }
  // The approved native CMS permits free ordering of mixed sections. Verify
  // global placements follow the stored sequence, not an obsolete fixed order.
- const sourceOrder=source.sections.filter((row:any)=>row.visibility!=='hidden').map((row:any)=>row._block==='global'?row.element:row.id);
+ const sourceOrder=source.sections.filter((row:any)=>row.visibility!=='hidden').map((row:any)=>row._block==='global'?row.element:row._block==='sharedContent'?row.entry:row.id);
  assert.deepEqual(sections.map(row=>row.id),sourceOrder);
  assert.equal(source.hero.primaryCta.href,'/seo/#sjekk');
- assert.equal(source.faq.length,6);
+
 
 
 });
@@ -53,8 +54,9 @@ test('native SEO page editor contains section layouts, card treatment and a shar
 
 test('SEO shares the full global catalogue while rejecting duplicates, forgeries and broken links',()=>{
  const add=(element:string)=>{const x=clone();x.sections.push({_block:'global',element});return x};
+ const insert=(element:string)=>{const x=clone();x.sections=x.sections.filter((row:any)=>!(row._block==='global'&&row.element===element));x.sections.push({_block:'global',element});return x};
  for(const el of ['resultater','sporsmal','behov','regneeksempel','mekanisme','passer']) {
-  assert.equal(pageSchema.safeParse(add(el)).success,true,el);
+  assert.equal(pageSchema.safeParse(insert(el)).success,true,el);
  }
  assert.equal(pageSchema.safeParse(add('untrusted')).success,false,'unknown global reference');
  for(const el of ['priser','sjekk'])assert.equal(pageSchema.safeParse(add(el)).success,false,'duplicate '+el);

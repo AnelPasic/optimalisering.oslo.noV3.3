@@ -10,6 +10,8 @@ on:
       - ".pages.yml"
       - "app/tests/hero-highlights.test.ts"
       - "app/tests/chatgpt-ads-page.test.ts"
+      - "app/tests/copy-style.test.mjs"
+      - "app/scripts/audit-copy-style.mjs"
       - "app/src/content/site-chrome/header.json"
       - "coordination/H1-LAB.md"
       - ".github/workflows/chatgpt-ads-page-qa.yml"
@@ -36,8 +38,8 @@ jobs:
         run: npm ci
       - name: Verify pinned Pages CMS options
         run: node scripts/sync-page-list-select.mjs --check && node scripts/sync-cms-url-options.mjs --check
-      - name: Test ChatGPT Ads page, CMS model and creative contract
-        run: node --test tests/chatgpt-ads-page.test.ts tests/hero-highlights.test.ts
+      - name: Test ChatGPT Ads page, CMS model and copy guard
+        run: node --test tests/chatgpt-ads-page.test.ts tests/hero-highlights.test.ts tests/copy-style.test.mjs
       - name: Type-check CMS and Astro
         run: npm run check
       - name: Build and index new service route
@@ -45,5 +47,5 @@ jobs:
       - name: Confirm ChatGPT Ads output and sitemap
         run: |
           test -f dist/chatgpt-ads/index.html
-          grep -q 'Glem førsteplassen på Google' dist/chatgpt-ads/index.html
+          node scripts/audit-service-content.mjs chatgpt-ads
           grep -q '/chatgpt-ads/' dist/sitemap.xml

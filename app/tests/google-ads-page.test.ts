@@ -27,11 +27,13 @@ test('Google Ads preserves source-authorized Eurotents proof',()=>{
   assert.equal(proof.publicationApproved,true);
   assert.equal(proof.namingPermission,'GRANTED');
   assert.equal(page.hero.featuredProofCaseId,proof.id);
-  assert.equal(proof.before,'4,3 X');
-  assert.equal(proof.after,'17,2 X');
+  assert.match(proof.before,/(?:^|\s)4,3\s*[xX]$/);
+  assert.match(proof.after,/(?:^|\s)17,2\s*[xX]$/);
+  assert.match(proof.limitations,/20 % lavere annonseforbruk/);
+  assert.match(proof.source,/Google Ads/);
 });
 
-test('New content obeys punctuation and preserves Ads vs SEO quality-score explanation',()=>{
+test('Google Ads copy obeys hard punctuation/phrase rules and illustrative arithmetic stays correct',()=>{
   const forbiddenChars=/[\u2013\u2014\u2011\u2212\u2026\u2192\u2190\u2197\u2198\u201c\u201d\u2018\u2019\u00ab\u00bb\u00d7\u00b7]/u;
   const forbiddenPhrases=/det handler ikke om|ikke bare|med andre ord|kan bidra til|bidrar til å sikre|gjør det mulig å|\bhelhetlig\b|\bsømløs\b|\bskreddersydd\b|\brobust\b|\bdatadrevet\b/i;
   function check(value:unknown):void {
