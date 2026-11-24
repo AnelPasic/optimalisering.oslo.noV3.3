@@ -18,7 +18,7 @@ test('copy-style guard permits formal calculator notation but still rejects orna
     mkdirSync(pageDir, { recursive: true }); mkdirSync(componentDir);
     writeFileSync(pageFile, '{}');
     mkdirSync(termDir);
-    writeFileSync(termFile, readFileSync('src/content/terminology/glossary.json'));
+    writeFileSync(termFile, '{}');
     const math = '<span class="math-equation" data-current-equation>{visits} × {conversion} %</span>\ncurrentEquation.textContent = `${visits} × ${conversion} %`;\n[current, scenario, difference, percentage, currentEquation, scenarioEquation].forEach(output => output.textContent = \'–\');';
     const run = source => { writeFileSync(componentFile, source); return spawnSync(process.execPath, [guard], { cwd: root, encoding: 'utf8' }); };
     assert.equal(run(math).status, 0, 'formal math and numeric unavailable placeholder are functional notation');
@@ -72,5 +72,33 @@ test('hidden formatting is rejected in decoded CMS copy including nested article
   } finally {
     unlinkSync(article); unlinkSync(term);
     for (const dir of [articleDir,pageDir,termDir,join(root,'src/content'),componentDir,join(root,'src'),root]) rmdirSync(dir);
+  }
+});
+
+test('all eleven absolute phrase rules remain hard failures; ASCII punctuation is valid', () => {
+  const root = mkdtempSync(join(tmpdir(), 'copy-phrase-'));
+  const guard = resolve('scripts/audit-copy-style.mjs');
+  const pages = join(root, 'src/content/pages'), terms = join(root, 'src/content/terminology');
+  const components = join(root, 'src/components'), page = join(pages, 'example.json'), term = join(terms, 'glossary.json');
+  try {
+    mkdirSync(pages,{recursive:true}); mkdirSync(terms); mkdirSync(components);
+    writeFileSync(term,'{}');
+    const run = value => {
+      writeFileSync(page, JSON.stringify({hero:{title:value}}));
+      return spawnSync(process.execPath,[guard],{cwd:root,encoding:'utf8'});
+    };
+    const ok = run('En tydelig overskrift - med vanlig tegnsetting.');
+    assert.equal(ok.status,0,ok.stderr);
+    for (const phrase of ['det handler ikke om','ikke bare','med andre ord','kan bidra til','bidrar til å sikre','gjør det mulig å','helhetlig','sømløse','skreddersydd','robuste','datadrevet']) {
+      const result=run(phrase);
+      assert.notEqual(result.status,0,phrase);
+      assert.match(result.stderr,/avoid template-like phrase/);
+    }
+    const ellipsis=run('Vent...');
+    assert.notEqual(ellipsis.status,0);
+    assert.match(ellipsis.stderr,/avoid ellipsis/);
+  } finally {
+    unlinkSync(page); unlinkSync(term);
+    for (const dir of [pages,terms,join(root,'src/content'),components,join(root,'src'),root]) rmdirSync(dir);
   }
 });
