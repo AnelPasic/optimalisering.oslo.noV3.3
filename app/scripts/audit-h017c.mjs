@@ -44,7 +44,7 @@ for(const dir of dirs)for(const file of readdirSync(dir).filter(f=>f.endsWith('.
   for(const proof of entry.cases)for(const value of [proof.dominantMetric,proof.before,proof.after,proof.delta,proof.period.before,proof.period.after].filter(Boolean))
    assert.ok(text(section).includes(text(value)),slug+' missing public result '+value);
   for(const proof of entry.approved)for(const hidden of [proof.intervention,proof.limitations].filter(Boolean))
-   assert.ok(!text(section).includes(text(hidden)),slug+': internal evidence must not render in proof cards');
+   assert.ok(!text(html).includes(text(hidden)),slug+': internal evidence must not render on the public page');
   for(const label of ['eyebrow','heading','beforeLabel','afterLabel'])assert.ok(text(section).includes(text(entry.slot[label])),slug+' missing '+label);
  }
  assert.equal(expected.size,0,slug+': no selected proof section omitted');
