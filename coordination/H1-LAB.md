@@ -30,7 +30,7 @@ Evaluate the **complete Hero**: H1, eyebrow, supporting copy, SEO title and the 
 
 1. **SEO / relevance:** The page metadata and content answer the search intent; the full Hero makes the service recognizable.
 2. **AIO / meaning:** The Hero and page accurately describe what is offered, without claiming paid ads buy AI recommendations or organic rankings.
-3. **CRO / buyer outcome:** State the positive commercial reason to hire, not a list of DIY tasks. Show what the provider takes responsibility for.
+3. **Commercial relevance:** Express the researched value proposition established in canonical MWS Rule 07; do not run another Commercial Value Gate.
 4. **Voice / distinctiveness:** Follow this project's saved tone, including direct, pointed or comic phrasing. Reject interchangeable agency language, not creative headlines.
 5. **Truth / clarity:** The combined Hero is understandable in seconds and consistent with approved facts. A FAQ cannot rescue a materially misleading claim.
 
@@ -42,7 +42,7 @@ A failure in complete-Hero clarity, service relevance, buyer value or factual in
 - **B — substantial H1/section revision:** make 2–3 meaningfully different candidates if needed, choose one that passes the gates.
 - **C — new important page / core service Hero:** use the page's short Page Contract, explore roughly 6–10 genuinely distinct angles internally (straight service, buyer result, problem → solution, useful contrast, clear offer). Discard invalid ones; present **up to three complete Hero finalists** (eyebrow, H1, support and CTA), one recommendation and one-sentence trade-offs. Do not pad the candidate list. Wait for explicit OWNER approval of the chosen Hero direction before full-page drafting and implementation.
 
-For each finalist, assemble eyebrow (category/relevance), subheading (buyer outcome, why hire Medon, credible professional delivery/ownership), proof (believability) and CTA (approved next step). After OWNER approval, develop the full page around the chosen direction. Check the complete Hero and heading story in context; never make the user guess what is being sold. **Commercial Value Gate** for a sales-intent Hero: reject task-only phrasing that suggests 'I can do this myself'; use Value Equation to assess desired outcome, credibility, time and customer effort on the **whole page**, not to stuff four promises into H1. No invented performance promises or false zero-effort claims.
+For each finalist, assemble eyebrow (category/relevance), subheading (buyer outcome, why hire Medon, credible professional delivery/ownership), proof (believability) and CTA (approved next step). After OWNER approval, develop the full page around the chosen direction. Check the complete Hero and heading story in context; never make the user guess what is being sold. Use the already-established Rule 07 commercial proposition. The existing flagship quality review assesses it on the whole page; H1 Lab does not repeat the Value Equation assessment. No invented performance promises or false zero-effort claims.
 
 ## Quick red-team
 
