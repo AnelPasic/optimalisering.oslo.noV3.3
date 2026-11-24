@@ -187,6 +187,36 @@ CTA support: 3 konkrete funn innen 2 virkedager.
 
 Draft fields passed current 11 phrase regexes, prohibited characters and hidden-format checks. No full site QA/build; planning only. Step 3 remains open.
 
+### H1 Lab refinement — round 5, red-team and skeptical buyer (awaiting OWNER approval)
+
+OWNER submitted the following and requested a red-team review and skeptical customer perspective. This is an in-agent critical review / simulated buyer perspective, not independent human or agent testing.
+
+eyebrow: SEO-byrå for Oslo og bedrifter i Norge
+
+title: Søkeord har ulik verdi. Det er tanken som teller!
+
+support: SEO krever tid og ressurser, selv om klikkene er gratis. Derfor fokuserer vi på hva en bestilling er verdt, hvor nær kunden er et kjøp, og hva det krever å slå konkurrentene. Vårt system er utviklet for å gi deg flest mulig bestillinger for SEO-budsjettet ditt. La andre kjempe om søk som aldri blir til noe.
+
+cta: Ta en gratis sjekk
+
+ctaSupport: 3 konkrete funn innen 2 virkedager.
+
+**Findings:** Retain the distinctive H1: the familiar proverb is relevant once the complete Hero explains intent and commercial value. Eyebrow has a grammatical/geographic asymmetry ("for Oslo og bedrifter i Norge"); propose a natural audience-specific alternative. Clarify organic clicks have no per-click charge, not all Google traffic. "Vårt system" needs a concrete mechanism and eventual demonstration; do not imply an automated capability or guaranteed optimal order count. The goal is profitable demand, not necessarily maximum order volume. The ending "søk som aldri blir til noe" is rhetorically sharp but dismisses potentially valuable informational/assisted demand and sounds like an unsupported prediction; retain the competitive sting and make it about investment priority. The buyer asks what the system actually does, why this is better than their previous provider, how the work is performed, what it costs, how value is measured, and when value is plausible. The Hero should earn the next scroll or free assessment; answer those questions in the already approved sections 6, 7, 9, 10, 13 and 14, with actual verified system capabilities and approved proof. No invented results or guaranteed timeframe. Rule 07 value equation: outcome and likelihood are clear; resource allocation is addressed; delivery ownership and time to value require further substantiation in the full page. Do not overload Hero with all four factors.
+
+**Recommended minimal refinement (not approved):**
+
+eyebrow: SEO-byrå for bedrifter i Oslo og resten av Norge
+
+title: Søkeord har ulik verdi. Det er tanken som teller!
+
+support: SEO krever tid og ressurser, selv om de organiske klikkene er gratis. Derfor vurderer vi hva en bestilling er verdt, hvor nær kunden er et kjøp, og hva det krever å slå konkurrentene. Med vårt SEO-system kartlegger vi søkemarkedet ditt og prioriterer arbeidet der du har størst potensial for lønnsomme bestillinger. La andre kjempe om førsteplasser som ikke er verdt prisen.
+
+cta: Ta en gratis sjekk
+
+ctaSupport: 3 konkrete funn innen 2 virkedager.
+
+"SEO-system" refers to the methodology/workflow in this draft, not a claim of fully automated capability. Verify product-specific assertions before final copy. Both exact draft variants pass current 11 hard phrase regexes, prohibited character and hidden-format checks. Full site copy QA/build not run; planning-only change. No customer-facing content changed. No Hero approval; step 3 remains open.
+
 ## Decision log
 
 - 2026-11-24 OWNER approved using a persistent project workflow and starting with philosophy and positioning; no final positioning approval yet.
@@ -196,3 +226,4 @@ Draft fields passed current 11 phrase regexes, prohibited characters and hidden-
 - OWNER requested further Hero refinement: exact proverb, search terms, efficient use of SEO investment and orders. Round 2 saved for selection; step 3 not complete.
 - OWNER requested round 3, with chosen working eyebrow/H1 and Value Equation-driven support; awaiting explicit Hero approval.
 - OWNER requested a sharper competitive-market ending for the refined Hero. Round 4 proposed; awaiting explicit approval.
+- OWNER requested red-team and skeptical-buyer review of the selected ending. Original and recommended refinement saved; no final Hero approval.
