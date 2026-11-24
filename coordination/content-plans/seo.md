@@ -155,6 +155,22 @@ CTA: Ta en gratis sjekk
 
 Recommendation: A2. The opening acknowledges that organic visibility requires an investment and describes how we prioritize its use. B2 is a more pointed wordplay; C2 emphasizes the professional work. Shared CTA support remains "3 konkrete funn innen 2 virkedager." All draft fields checked against current 11 hard phrase patterns, forbidden characters and hidden formatting. No full site QA or build; planning-only update. Step 3 remains open. No CMS or production changes.
 
+### H1 Lab refinement — round 3 (awaiting OWNER approval)
+
+OWNER selected a working combination of eyebrow "SEO-byrå for Oslo og Norge", H1 "Søkeord har ulik verdi. Det er tanken som teller!", and the previous A2 support as a starting point, not final approval. Requested a clearer Value Equation angle and proposed "SEO krever tid, og ressurser, selv om klikkene er gratis. Derfor fokuserer vi på kjøpsintensjon, konkurranse og verdien av en bestilling. Vår metode bruker ressursene dine der det er mest å hente." Interpret Value Equation as the commercial reasoning behind the copy (not a required literal visual/formula): desired profitable orders, credible likelihood through purchase intent and competition, work/time required, customer investment and provider taking responsibility for the actual SEO work. Preserve eyebrow/H1/CTA; refine support only. No guaranteed outcomes or timing.
+
+Eyebrow: SEO-byrå for Oslo og Norge
+
+H1: Søkeord har ulik verdi. Det er tanken som teller!
+
+Support: SEO krever tid og ressurser, selv om klikkene er gratis. Derfor vurderer vi hva en bestilling er verdt, hvor nær kunden er et kjøp, og hva det krever å slå konkurrentene. Vi prioriterer og utfører SEO-arbeidet der du har størst potensial for lønnsomme bestillinger i forhold til investeringen.
+
+CTA: Ta en gratis sjekk
+
+CTA support: 3 konkrete funn innen 2 virkedager.
+
+Draft fields passed current 11 phrase regexes, prohibited characters and hidden-format rules. Full site QA and build not run; only project plan changed. Step 3 remains open; no publication or section drafting until OWNER approval.
+
 ## Decision log
 
 - 2026-11-24 OWNER approved using a persistent project workflow and starting with philosophy and positioning; no final positioning approval yet.
@@ -162,3 +178,4 @@ Recommendation: A2. The opening acknowledges that organic visibility requires an
 - OWNER explicitly approved the combined philosophy, positioning, search-market coverage differentiation and six-step methodology, with buyer education as a through-line. Step 1 complete. Step 2 proposal saved for review; no final copy or layout selected.
 - OWNER explicitly approved the 19-section sequence and notes. Step 2 complete; Step 3 Hero finalists saved, awaiting selection.
 - OWNER requested further Hero refinement: exact proverb, search terms, efficient use of SEO investment and orders. Round 2 saved for selection; step 3 not complete.
+- OWNER requested round 3, with chosen working eyebrow/H1 and Value Equation-driven support; awaiting explicit Hero approval.
