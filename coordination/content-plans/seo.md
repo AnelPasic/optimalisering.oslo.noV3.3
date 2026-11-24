@@ -1,6 +1,6 @@
 # SEO Flagship V3 — /seo/
 
-**Status:** Active editorial project; step 3 in progress; steps 1 and 2 approved. No page rewrite, implementation or publication authorized in this planning phase.
+**Status:** Active editorial project; step 4 in progress; steps 1–3 approved. No page rewrite, implementation or publication authorized in this planning phase.
 **Target:** https://optimalisering.oslo.no/seo/
 **Scope:** Clean-sheet commercial flagship, structure first, one section at a time. Preserve protected facts, prices, shared content, design and existing technical rules.
 
@@ -8,7 +8,7 @@
 
 - [x] 1. Establish overall philosophy and positioning
 - [x] 2. Agree themes and section order
-- [ ] 3. Develop and approve the Hero
+- [x] 3. Develop and approve the Hero
 - [ ] 4. Develop one section at a time with relevant research
 - [ ] 5. Review the whole page and eliminate repetition
 - [ ] 6. Select existing MWS components and implement
@@ -16,7 +16,7 @@
 
 ## Step 1 — philosophy and positioning (OWNER approved)
 
-**OWNER APPROVED:** Intensjonsdrevet SEO as philosophy; kommersiell søkemotoroptimalisering as positioning; søkemarkedsdekning as the distinctive analytical perspective; "Fra søkemarked til ordrebok" as the six-step methodology. The buyer must learn why the approach works through concrete mechanisms, relevant comparisons, demonstrations and evidence. Show the benefits rather than merely claiming superiority. Purchase intent and business value guide prioritization without excluding valuable informational demand. No unverified claim of market exclusivity or guaranteed outcomes. "Det er tanken som teller" remains a creative candidate, not approved Hero wording.
+**OWNER APPROVED:** Intensjonsdrevet SEO as philosophy; kommersiell søkemotoroptimalisering as positioning; søkemarkedsdekning as the distinctive analytical perspective; "Fra søkemarked til ordrebok" as the six-step methodology. The buyer must learn why the approach works through concrete mechanisms, relevant comparisons, demonstrations and evidence. Show the benefits rather than merely claiming superiority. Purchase intent and business value guide prioritization without excluding valuable informational demand. No unverified claim of market exclusivity or guaranteed outcomes. "Det er tanken som teller" is included in the approved Hero recorded in step 3.
 
 OWNER wants to explore Edward Sturm's Compact Keywords / bottom-of-funnel philosophy and differentiate from generic volume-first SEO. The working hook "Det er tanken som teller" is an OWNER-suggested creative experiment, not approved Hero copy. The six-step "Fra søkemarked til ordrebok" method is approved strategic calibration and saved in BusinessIntelligence backlog 449; its final expression remains open.
 
@@ -24,7 +24,7 @@ Recommended positioning for discussion: start with the commercial opportunity in
 
 Audience hypothesis: businesses competing for customers where relevant visibility and qualified demand have real economic value; not necessarily every small business. No promises of rankings, new sales, or product availability beyond actual offer and evidence. Validate current system capabilities before public claims about SeoTool/LeadProof.
 
-Decision recorded above. Section structure approved in step 2; no final Hero approved.
+Decision recorded above. Section structure and Hero approved in steps 2 and 3.
 
 ## Step 1 — alternative concept exploration
 
@@ -54,8 +54,8 @@ Recommendation for decision: keep intent-led philosophy + commercial positioning
 
 | # | OWNER-approved theme | Editorial job / research direction | Draft |
 |---|---|---|---|
-| 01 | Hero | Distinct commercial proposition, audience, reason to read and approved next action. H1 Lab. | In progress |
-| 02 | Intensjonen bak søket | Explain the economics of search intent and BOFU versus information. Backlog 243, 257, 440, 444, 449; Article A03. | Pending |
+| 01 | Hero | Distinct commercial proposition, audience, reason to read and approved next action. H1 Lab. | OWNER approved |
+| 02 | Intensjonen bak søket | Explain the economics of search intent and BOFU versus information. Backlog 243, 257, 440, 444, 449; Article A03. | Draft 1 / review |
 | 03 | Hvem dette er for - Og ikke for - Eneste snekker/tannlege 5 mils radius. | Qualify by competition, commercial opportunity and need; the sole carpenter/dentist in a 50 km radius is an illustrative scenario, not a hard eligibility rule. | Pending |
 | 04 | Fordeler med SEO - Senker kostnad pr. bestilling - Lavere Ads kostnad - AI-Synlighet - Konkurransefortrinn | Demonstrate mechanisms and business benefits with evidence/calculations. Lower order costs and ad CPC are possible, not guaranteed; distinguish shared landing-page quality from direct effects of organic rank. | Pending |
 | 05 | SEO er både AIO - GEO og AI-Søk Optimalisering - Ref. en av de forrige Intelligence intakes. | Challenge artificial rebranding and selling the same fundamentals twice. SEO as umbrella and AI visibility as specialist work, not identical operationally. Backlog 302, 303, 307, 313, 314, 393; F2–3, F69–71. | Pending |
@@ -217,6 +217,46 @@ ctaSupport: 3 konkrete funn innen 2 virkedager.
 
 "SEO-system" refers to the methodology/workflow in this draft, not a claim of fully automated capability. Verify product-specific assertions before final copy. Both exact draft variants pass current 11 hard phrase regexes, prohibited character and hidden-format checks. Full site copy QA/build not run; planning-only change. No customer-facing content changed. No Hero approval; step 3 remains open.
 
+## Step 3 — approved Hero (OWNER decision)
+
+OWNER explicitly approved the exact following copy. This supersedes all earlier H1 Lab proposals. Do not modify the wording without further OWNER instruction.
+
+eyebrow: SEO-byrå for bedrifter i Oslo og resten av Norge
+
+title: Søkeord har ulik verdi. Det er tanken som teller!
+
+support: SEO krever tid og ressurser, selv om de organiske klikkene er gratis. Derfor fokuserer vi på hva en bestilling er verdt, hvor nær kunden er et kjøp, og hva det krever å slå konkurrentene. Med vårt SEO-system kartlegger vi søkemarkedet og prioriterer der du har størst potensial for lønnsomme bestillinger. La andre kjempe om førsteplasser som ikke er verdt prisen.
+
+cta: Ta en gratis sjekk
+
+ctaSupport: 3 konkrete funn innen 2 virkedager.
+
+Step 3 complete. Approved editorial draft only, not authorization to change CMS or publish. SEO-system denotes the actual methodology; later sections must demonstrate its mechanisms and verified tooling.
+
+## Step 4 — section-by-section drafting (in progress)
+
+### Section 02 — Intensjonen bak søket (draft 1, not approved)
+
+Purpose: teach the difference between query topic and the user's intended action through one concrete service example. Demonstrate how a specific query reveals delivery, price and geographic requirements, then explain why low estimated volume can still be relevant. Do not repeat the Hero's financial premise, the later six-step method, or the section 15 calculator. Examples are illustrative intent interpretations, not observed customer data or guaranteed purchase behavior. Research: BusinessIntelligence Backlog 243, 257 (search intent), 440, 441, 443–445, 447, 449; Article Bank A03; F30, F35 and F83 (available query evidence and limits); Evidence Registry. Edward Sturm's BOFU / Compact Keywords inspiration is recorded in 449; not a claim every long-tail search converts.
+
+Proposed customer copy:
+
+**Hva har kunden tenkt å gjøre etter søket?**
+
+En som søker etter varmepumpe, kan allerede ha en. Det er en ganske vesentlig detalj hvis du lever av å selge og montere dem. Søkeintensjon beskriver hva personen ønsker å oppnå med søket.
+
+| Søk | Mulig intensjon |
+|---|---|
+| Hvordan virker en varmepumpe? | Vil forstå hvordan den fungerer. |
+| Varmepumpe best i test | Undersøker hvilke produkter som er verdt å kjøpe. |
+| Varmepumpe ferdig montert pris Oslo | Undersøker pris på en konkret leveranse i sitt område. |
+
+Det siste søket forteller oss mye: hva kunden vil ha, at monteringen skal være inkludert, at prisen er viktig, og hvor jobben skal utføres. Alt dette vet vi før kunden har tatt kontakt.
+
+Derfor starter vi med søk der kundens behov og det bedriften selger, passer godt sammen. Vi vurderer deretter etterspørsel og konkurranse. Et søk med lavt eller uregistrert søkevolum kan være verdt å jobbe med hvis det representerer en lønnsom bestilling. Informative søk får også sin plass når de hjelper kunden med å ta en kjøpsbeslutning.
+
+Editorial note: the table labels possible intent, not certain individual intentions. Format is an editorial illustration, not chosen MWS component. No new external numeric performance claim. Both exact approved Hero and draft section fields passed the current 11 hard phrase regexes, prohibited character and hidden-format checks. Full copy QA/build not run; only coordination file changed. Section 02 remains open for OWNER feedback; sections 03–19 pending.
+
 ## Decision log
 
 - 2026-11-24 OWNER approved using a persistent project workflow and starting with philosophy and positioning; no final positioning approval yet.
@@ -227,3 +267,4 @@ ctaSupport: 3 konkrete funn innen 2 virkedager.
 - OWNER requested round 3, with chosen working eyebrow/H1 and Value Equation-driven support; awaiting explicit Hero approval.
 - OWNER requested a sharper competitive-market ending for the refined Hero. Round 4 proposed; awaiting explicit approval.
 - OWNER requested red-team and skeptical-buyer review of the selected ending. Original and recommended refinement saved; no final Hero approval.
+- OWNER explicitly approved the exact Hero wording. Step 3 complete; section 02 draft 1 prepared for step 4. No implementation authorized.
