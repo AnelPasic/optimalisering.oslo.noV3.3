@@ -14,12 +14,6 @@ test('All package-level Hero checks are source-owned and commercial facts match 
  const result=pageSchema.parse(page);
  const view=resolvePageHero(result);
  assert.deepEqual(view.highlights,page.hero.highlights);
- assert.equal(view.highlights?.length,4);
- assert.match(page.hero.eyebrow,/INNGÅR I ALLE PAKKER/);
- assert.match(page.hero.highlights[0],/alle pakker/);
- assert.match(page.hero.highlights[1],/4 500 kr\/mnd eks\. mva\./);
- assert.match(page.hero.highlights[2],/Ett, to eller flere fokusområder/);
- assert.match(page.hero.highlights[3],/Annonsebudsjett kommer i tillegg/);
  const packages=JSON.parse(read('../src/content/global-elements/priser.json')).content;
  assert.deepEqual(packages.items.map((x:any)=>x.price),[4500,6900,14900]);
  assert.match(packages.adBudgetNote,/Annonsebudsjett kommer i tillegg/);

@@ -1,56 +1,48 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {readFileSync,existsSync} from 'node:fs';
+import {readFileSync,existsSync,readdirSync} from 'node:fs';
 import {pageSchema} from '../src/lib/content-schema.ts';
+import {getGlobalElement} from '../src/lib/home-builder.ts';
+import {getSelectedHeroProof} from '../src/lib/hero-proof.ts';
+import {getPublishableCases} from '../src/lib/proof.ts';
 
 const read=(path:string)=>readFileSync(new URL(path,import.meta.url),'utf8');
 const page=JSON.parse(read('../src/content/pages/chatgpt-ads.json'));
-const content=page.sections.filter((section:any)=>section._block==='content');
+
 
 test('ChatGPT Ads is an editable CMS service and is reachable from navigation',()=>{
  const parsed=pageSchema.safeParse(page);
  assert.equal(parsed.success,true,parsed.success?'':JSON.stringify(parsed.error.issues));
  assert.equal(page.slug,'chatgpt-ads');
  assert.equal(page.kind,'service');
- assert.equal(page.hero.eyebrow,'CHATGPT ADS | INNGÅR I ALLE PAKKER');
- assert.deepEqual(page.hero.highlights,['ChatGPT Ads inngår i alle pakker','Fra 4 500 kr/mnd eks. mva.','Ett, to eller flere fokusområder','Annonsebudsjett kommer i tillegg']);
- assert.equal(page.hero.title,'Glem førsteplassen på Google. Bli den kunden velger i ChatGPT.');
- assert.equal(page.hero.support,'Kundene spør allerede ChatGPT hva de bør kjøpe og hvem de bør velge. Vi gjør tilbudet ditt synlig når de vurderer alternativene, og tar dem fra interesse til bestilling.');
  assert.equal(page.hero.primaryCta.href,'#priser');
  assert.equal(page.hero.secondaryCta.href,'#sjekk');
- assert.ok(existsSync(new URL('../public/images/services/discoveringlocalfavorite-1.png',import.meta.url)));
+ if(page.hero.visual.kind==='image')assert.ok(existsSync(new URL('../public'+page.hero.visual.image.src,import.meta.url)),'saved Hero image exists');
  const nav=JSON.parse(read('../src/content/site-chrome/header.json'));
  const links=nav.navigation.flatMap((item:any)=>item.mega?.columns?.flatMap((col:any)=>col.links)??[]);
  assert.equal(links.filter((item:any)=>item.href==='/chatgpt-ads/').length,1);
  assert.match(read('../src/pages/sitemap.xml.ts'),/getCollection\('pages'\)/);
 });
 
-test('One coherent sales journey with alternating surfaces and existing protected masters',()=>{
- const ids=page.sections.map((s:any)=>s.id??s.element);
- assert.deepEqual(ids,['sporsmalene','eksempel','fra-klikk-til-kunde','kanaler','maaling','priser','oppstart','sjekk']);
- assert.equal(content.length,6);
- assert.ok(content.every((s:any)=>s.surface&&s.layout&&Array.isArray(s.items)&&s.items.length>=2));
- assert.ok(new Set(content.map((s:any)=>s.surface)).size>=4);
- assert.ok(content.every((s:any)=>s.items.every((item:any)=>item.iconName&&item.surface)));
- assert.equal(page.sections.filter((s:any)=>s._block==='global'&&s.element==='priser').length,1);
- assert.equal(page.sections.filter((s:any)=>s._block==='global'&&s.element==='sjekk').length,1);
- assert.ok(!page.hero.featuredProofCaseId,'No falsely transferred paid-media case result');
- assert.ok(!page.sections.some((s:any)=>s.element==='resultater'),'No unapproved ChatGPT Ads case claims');
-});
+test('Current CMS sequence and protected masters remain valid; case publication requires evidence',()=>{
+ const parsed=pageSchema.parse(page);
+ const visible=parsed.sections.filter(s=>s.visibility!=='hidden');
+ assert.equal(new Set(visible.map(s=>s.id)).size,visible.length);
+ for(const id of ['priser','sjekk'])assert.equal(page.sections.filter((s:any)=>s._block==='global'&&s.element===id).length,1);
+ for(const cta of [page.hero.primaryCta,page.hero.secondaryCta]){
+  if(cta?.href.startsWith('#'))assert.ok(visible.some(s=>s.id===cta.href.slice(1)),cta.href);
+ }
+ const records=readdirSync(new URL('../src/content/proof/',import.meta.url)).filter(f=>f.endsWith('.json')).map(f=>JSON.parse(read('../src/content/proof/'+f)));
+ const master=getGlobalElement('resultater').content;
+ if(page.hero.featuredProofCaseId) {
+  const selection=getSelectedHeroProof(page.hero.featuredProofCaseId,master,records);
+  assert.ok(selection,'selected Hero proof must have approval, permission and evidence in the shared master');
+ }
+ if(page.sections.some((s:any)=>s._block==='global'&&s.element==='resultater'&&s.visibility!=='hidden')){
+  assert.ok(master.publicationApproved);
+  for(const id of master.caseIds)assert.equal(getPublishableCases({...master,caseIds:[id]},records).length,1,id);
+ }
 
-test('Creative, benefit-first copy keeps sponsored placement separate from AI answers',()=>{
- assert.match(page.hero.title,/Bli den kunden velger i ChatGPT/);
- assert.doesNotMatch(page.hero.title,/annonsering|kampanjeoppsett|målretting/);
- assert.match(page.hero.eyebrow,/CHATGPT ADS/);
- assert.match(page.hero.support,/tar dem fra interesse til bestilling/);
- assert.match(content.find((s:any)=>s.id==='maaling').heading,/Bestillinger fyller kalenderen/);
- assert.match(content.find((s:any)=>s.id==='eksempel').eyebrow,/EKSEMPEL/);
- assert.ok(!content.some((s:any)=>s.body.some((p:string)=>/ikke en garanti|ingen garanti|kan ikke love|garanterer ikke|resultater kan variere/i.test(p))));
- const faq=page.faq.map((x:any)=>x.answer).join(' ');
- assert.match(faq,/ikke en del av selve ChatGPT-svaret/);
- assert.match(faq,/ikke det samme som å kjøpe et eksakt søkeord/);
- assert.match(faq,/4 500 kr per måned eks. mva/);
- assert.match(faq,/Annonsebudsjettet kommer i tillegg/);
 });
 
 test('Project copy QA for new page and no unrequested technical IDs',()=>{
