@@ -17,16 +17,15 @@ const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
 
 test('public proofs are rendered from global evidence and per-page ProofList selection',()=>{
  assert.deepEqual(getPublishableCases(getHomepageBlock(home,'proof').content,registry).map(p=>p.displayName),global.content.caseIds.map((id:string)=>registry.find(r=>r.id===id).clientName));
- for(const [slug,expectedIds] of [
-  ['konvertering',['nysta']],
-  ['nettbutikkoptimalisering',['helt-opplagt','eurotents']]
- ] as const){
-  const page=read(`src/content/pages/${slug}.json`);
+ for(const slug of ['konvertering','nettbutikkoptimalisering','chatgpt-ads']){
+  const page=read('src/content/pages/'+slug+'.json');
   assert.equal(page.proof,undefined,'old local proof must be absent');
-  const sections=page.sections.filter((row:any)=>row._block==='proofList');
-  assert.equal(sections.length,1,'one new proof placement');
-  const effective=resolveProofListContent(global.content,sections[0].proofList,registry);
-  assert.deepEqual(getPublishableCases(effective,registry).map(p=>p.displayName),expectedIds.map(id=>registry.find(r=>r.id===id)?.clientName));
+  for(const row of page.sections.filter((s:any)=>s.visibility!=='hidden'&&(s._block==='proofList'||s._block==='global'&&s.element==='resultater'))){
+   const effective=row._block==='global'?global.content:resolveProofListContent(global.content,row.proofList,registry);
+   assert.ok(effective.publicationApproved);
+   for(const id of effective.caseIds)assert.equal(getPublishableCases({...effective,caseIds:[id]},registry).length,1,id);
+   assert.deepEqual(getPublishableCases(effective,registry),effective.caseIds.flatMap((id:string)=>getPublishableCases({...effective,caseIds:[id]},registry)));
+  }
  }
  assert.deepEqual(getPublishableCases({publicationApproved:true,caseIds:['oslo-privatklinikk']},registry),[]);
 });

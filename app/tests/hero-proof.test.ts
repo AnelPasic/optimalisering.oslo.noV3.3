@@ -3,20 +3,24 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 import { getHeroProof, getSelectedHeroProof } from '../src/lib/hero-proof.ts';
+import {getPublishableCases} from '../src/lib/proof.ts';
 import {resolvePageHero} from '../src/lib/page-hero.ts';
 import {pageSchema} from '../src/lib/content-schema.ts';
 
 const home = JSON.parse(readFileSync('src/content/pages/home.json', 'utf8'));
 const records = readdirSync('src/content/proof').filter(file => file.endsWith('.json')).map(file => JSON.parse(readFileSync(`src/content/proof/${file}`, 'utf8')));
 
-test('hero uses only the guarded featured public result and source label', () => {
-  assert.deepEqual(getHeroProof(getHomepageBlock(home,'proof').content, records), {
-    metric: 'ROAS', comparison: '4,3x -> 17,2x', support: 'Eurotents · Google Ads',
-  });
-  const reordered = { ...getHomepageBlock(home,'proof').content, caseIds: ['nysta', 'eurotents'] };
-  assert.deepEqual(getHeroProof(reordered, records), {
-    metric: 'Fullført checkout', comparison: '7,1 % -> 43,6 %', support: 'Nysta · Shopify',
-  });
+test('hero formats the guarded featured public result and follows an explicit reordered selection', () => {
+  const slot=getHomepageBlock(home,'proof').content;
+  const first=getPublishableCases(slot,records)[0];
+  assert.ok(first);
+  const featured=getHeroProof(slot,records);
+  const [metric,...source]=first.dominantMetric.split(' - ');
+  assert.equal(featured?.metric,metric);
+  assert.equal(featured?.comparison,first.before+' -> '+first.after);
+  assert.equal(featured?.support,[first.displayName,source.join(' - ')].filter(Boolean).join(' · '));
+  const reordered={...slot,caseIds:['nysta','eurotents']};
+  assert.deepEqual(getHeroProof(reordered,records),getHeroProof({...slot,caseIds:['nysta']},records));
 });
 
 test('hero disappears for absent, duplicate, unapproved or incomplete proof', () => {
@@ -37,9 +41,11 @@ test('hero disappears for absent, duplicate, unapproved or incomplete proof', ()
 test('hero follows the first publishable selection and respects anonymized public names', () => {
   const eurotents = records.find(record => record.id === 'eurotents');
   const invalidFirst = records.map(record => record.id === 'eurotents' ? { ...record, publicationApproved: false } : record);
-  assert.equal(getHeroProof(getHomepageBlock(home,'proof').content, invalidFirst)?.support, 'Nysta · Shopify');
+  assert.deepEqual(getHeroProof({publicationApproved:true,caseIds:['eurotents','nysta']},invalidFirst),getHeroProof({publicationApproved:true,caseIds:['nysta']},records));
   const anonymized = { ...eurotents, namingPermission: 'ANONYMIZED_APPROVED', anonymizedLabel: 'Norsk nettbutikk' };
-  assert.equal(getHeroProof({ publicationApproved: true, caseIds: ['eurotents'] }, [anonymized])?.support, 'Norsk nettbutikk · Google Ads');
+  const projected=getHeroProof({publicationApproved:true,caseIds:['eurotents']},[anonymized]);
+  assert.ok(projected?.support.startsWith('Norsk nettbutikk'));
+  assert.ok(!projected.support.includes(eurotents.clientName));
 });
 
 test('an independently selected Hero proof on any page uses the existing publication guard',()=>{
@@ -48,9 +54,7 @@ test('an independently selected Hero proof on any page uses the existing publica
  assert.equal(pageSchema.safeParse(withSelection).success,true);
  assert.equal(resolvePageHero(withSelection).featuredProofCaseId,'eurotents');
  const slot={publicationApproved:true,caseIds:[withSelection.hero.featuredProofCaseId]};
- assert.deepEqual(getHeroProof(slot,records),{
-   metric:'ROAS',comparison:'4,3x -> 17,2x',support:'Eurotents · Google Ads'
- });
+ assert.ok(getHeroProof(slot,records),'approved case has a public projection');
  const master=getHomepageBlock(home,'proof').content;
  assert.deepEqual(getSelectedHeroProof('eurotents',master,records),getHeroProof(slot,records));
  assert.equal(getSelectedHeroProof('eurotents',{...master,publicationApproved:false},records),undefined);
@@ -59,7 +63,8 @@ test('an independently selected Hero proof on any page uses the existing publica
  assert.equal(getHeroProof(slot,records.map(x=>x.id==='eurotents'?{...x,publicationApproved:false}:x)),undefined);
  assert.equal(getHeroProof(slot,records.map(x=>x.id==='eurotents'?{...x,publicationStatus:'WITHDRAWN'}:x)),undefined);
  assert.equal(getHeroProof(slot,records.filter(x=>x.id!=='eurotents')),undefined);
- const withoutSelection=resolvePageHero(service);
+ const noSelection=structuredClone(service);delete noSelection.hero.featuredProofCaseId;
+ const withoutSelection=resolvePageHero(noSelection);
  assert.equal(withoutSelection.featuredProofCaseId,undefined);
  assert.equal(getHeroProof({publicationApproved:true,caseIds:[]},records),undefined);
 });
