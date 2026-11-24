@@ -3,7 +3,8 @@
   "kind": "index",
   "seo": {
     "title": "Innsikt om synlighet og konvertering | Optimalisering Oslo",
-    "description": "Praktiske guider om Google bedriftsprofil, synlighet, konvertering og måling. Forstå hva du bør undersøke først, og når du trenger hjelp."
+    "description": "Praktiske guider om Google bedriftsprofil, synlighet, konvertering og måling. Forstå hva du bør undersøke først, og når du trenger hjelp.",
+    "noindex": false
   },
   "hero": {
     "layout": "split-right",
@@ -27,10 +28,12 @@
         "Guidene forklarer beslutninger og måling i enkelt språk. Eksemplene er illustrative og gir ingen løfter om resultat."
       ],
       "pageList": {
+        "source": "articles",
         "mode": "automatic",
         "sort": "title",
-        "limit": 6,
-        "layout": "alternating"
+        "limit": 12,
+        "layout": "mediaCards",
+        "columns": 3
       }
     },
     {
@@ -52,5 +55,8 @@
         }
       ]
     }
-  ]
+  ],
+  "listing": {
+    "visible": true
+  }
 }
