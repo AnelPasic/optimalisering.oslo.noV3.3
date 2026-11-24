@@ -46,3 +46,31 @@ test('copy-style guard permits formal calculator notation but still rejects orna
     for (const dir of [pageDir, termDir, join(root, 'src/content'), componentDir, join(root, 'src'), root]) rmdirSync(dir);
   }
 });
+
+
+test('hidden formatting is rejected in decoded CMS copy including nested articles; normal line breaks remain valid', () => {
+  const root = mkdtempSync(join(tmpdir(), 'mws-hidden-copy-'));
+  const guard = resolve('scripts/audit-copy-style.mjs');
+  const pageDir = join(root, 'src/content/pages'), articleDir = join(pageDir, 'managed-articles');
+  const termDir = join(root, 'src/content/terminology'), componentDir = join(root, 'src/components');
+  const article = join(articleDir, 'example.json'), term = join(termDir, 'glossary.json');
+  try {
+    mkdirSync(articleDir, { recursive: true }); mkdirSync(termDir); mkdirSync(componentDir);
+    writeFileSync(term, '{}');
+    const run = value => {
+      writeFileSync(article, JSON.stringify({hero:{title:'En god overskrift'},sections:[{body:[value],href:'/example\u200b'}]}));
+      return spawnSync(process.execPath, [guard], {cwd:root, encoding:'utf8'});
+    };
+    assert.equal(run('Vanlig avsnitt.\n\n- Liste\r\n- Neste punkt').status, 0);
+    for (const char of ['\u000b','\u000c','\u0085','\u00ad','\u200b','\u2028','\u2029','\u2060','\ufeff','\r']) {
+      const result = run('Ord'+char+'ord');
+      assert.notEqual(result.status, 0);
+      const cp = 'U+'+char.codePointAt(0).toString(16).toUpperCase().padStart(4,'0');
+      assert.ok(result.stderr.includes(cp), result.stderr);
+      assert.ok(result.stderr.includes('managed-articles'));
+    }
+  } finally {
+    unlinkSync(article); unlinkSync(term);
+    for (const dir of [articleDir,pageDir,termDir,join(root,'src/content'),componentDir,join(root,'src'),root]) rmdirSync(dir);
+  }
+});

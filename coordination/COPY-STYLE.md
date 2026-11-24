@@ -25,6 +25,8 @@ Avoid:
 
 Actual SVG/icon arrows used as interface graphics are not text punctuation and may remain.
 
+**OWNER 2026-11-24 - invisible formatting:** In ordinary Norwegian/English customer-facing prose, prohibit hidden/nonstandard line and paragraph separators (U+000B, U+000C, U+0085, U+2028, U+2029, lone CR) and invisible discretionary break/format characters (U+00AD, U+200B, U+2060, U+FEFF). Use ordinary LF/CRLF, intentional Markdown paragraphs, lists and ordinary spaces. Do not insert invisible characters to force layout or wrapping. Inspect decoded content, including escaped JSON sequences; report exact field and U+ code. Fix only affected prose, not code, URLs, identifiers or approved unrelated content. Ordinary line breaks and meaningful Unicode in other languages are not banned.
+
 ## Language patterns to avoid
 
 Do not systematically use these AI-like copy formulas:
@@ -39,7 +41,7 @@ Do not systematically use these AI-like copy formulas:
 - repeated use of "samtidig som", "på tvers av", "i praksis" and "med andre ord";
 - redundant summary sentences that merely repeat the preceding paragraph.
 
-These constructions are not banned when they are genuinely the clearest wording. The rule is to avoid template-like repetition.
+**OWNER 2026-11-24 - Rule 03:** Keep the existing absolute phrase bans enforced by `app/scripts/audit-copy-style.mjs`: det handler ikke om, ikke bare, med andre ord, kan bidra til, bidrar til å sikre, gjør det mulig å, helhetlig, sømløs (including variants), skreddersydd, robust (including variants), datadrevet. The other patterns above remain editorial guidance. Preserve the existing narrowly scoped OWNER-approved exceptions; do not introduce new exceptions or rewrite approved text without authority.
 
 ## Preferred writing
 
