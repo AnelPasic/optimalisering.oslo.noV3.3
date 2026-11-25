@@ -14,9 +14,9 @@
   "items": [
     {
       "title": "Søkemotoroptimalisering - SEO",
-      "headline": "Bli funnet i Google",
-      "badge": "Inkludert i alle pakker",
+      "headline": "Bli funnet på Google",
       "iconName": "magnifying-glass",
+      "badge": "Inkludert i alle pakker",
       "text": "Vi finner søkene som kan gi deg kunder, forbedrer sidene de møter og følger opp det som virker. Målet er flere relevante bestillinger uten å betale Google for hvert klikk.",
       "href": "/seo/",
       "label": "Velg SEO",
@@ -25,22 +25,24 @@
     },
     {
       "title": "Lokal SEO",
-      "headline": "Bli valgt i nærområdet",
-      "badge": "Inkludert i alle pakker",
+      "headline": "Bli funnet på Google Maps",
       "iconName": "map-pin",
-      "text": "Når folk leter etter en bedrift i nærheten, skal de enkelt finne og velge deg. Vi forbedrer synligheten i Google Maps og lokale søk og gjør veien til kontakt enklere.",
+      "badge": "Inkludert i alle pakker",
+      "text": "Når folk leter etter en bedrift i nærheten, skal de enkelt finne og velge deg. Vi forbedrer synligheten på Google Maps og lokale søk og gjør veien til kontakt enklere.",
       "href": "/lokal-seo/",
       "label": "Velg Lokal SEO",
+      "boxVariant": "card",
       "surface": "base-300"
     },
     {
       "title": "AI-synlighet",
       "headline": "Bli med i svaret",
-      "badge": "Inkludert i alle pakker",
       "iconName": "sparkle",
+      "badge": "Inkludert i alle pakker",
       "text": "Flere bruker ChatGPT og AI-søk for å finne produkter og tjenester. Vi gjør bedriften din lettere å forstå og oppdage, slik at du kan bli vurdert når kundene spør AI.",
       "href": "/ai-synlighet/",
       "label": "Velg AI-synlighet",
+      "boxVariant": "card",
       "surface": "secondary"
     }
   ]
