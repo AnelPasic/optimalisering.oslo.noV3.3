@@ -34,7 +34,7 @@ This compact handoff is embedded in the single authoritative page plan, not a se
 
 ### Current resume point
 
-Steps 1–3 complete. Step 4 active, section 16 of 19 (Gratis sjekk). Sections 01–15 are OWNER-approved; preserve exact copy, sources, presentations, global pricing and calculator references, Helt Opplagt proof selection and section 13 use restrictions. Next: review section 16 draft 1, unchanged protected global sjekk reference at this position, preserving primary CTA, form and existing terms. No new copy, offer, intake changes or duplicate form. Section 16 not approved; section 17 pending.
+Steps 1–3 complete. Step 4 active, section 17 of 19 (FAQ og faglig fordypning). Sections 01–16 are OWNER-approved; preserve exact copy, sources, presentations, protected global pricing/calculator/assessment references, Helt Opplagt proof selection and section 13 use restrictions. Next: review section 17 draft 1, seven page-specific FAQ questions; note existing global FAQ vs price-master scope conflict and local FAQ placement gap for whole-page/implementation review. No global changes. Section 17 not approved; section 18 pending.
 
 No verified search volumes or conversion/margin data; GSC Wizard subscription blocked Bing query-volume access. Do not present invented figures or historical price comparisons as proof of profitability. Explicitly labeled hypothetical scenarios are allowed for the OWNER-requested demonstration. Approved section 02 teaches how intent and actual offer fit change the economic opportunity; detailed methods/coverage/measurement/calculator belong to sections 06/09/13/15 respectively. No site changes or publication authorized.
 
@@ -111,8 +111,8 @@ Recommendation for decision: keep intent-led philosophy + commercial positioning
 | 13 | Måling og kontinuerlig optimalisering | Show feedback loop and verified SeoTool/LeadProof capabilities; no claim of exact organic query-to-sale attribution without data. Backlog 169, 205, 284, 294. | OWNER approved (draft 1) |
 | 14 | Investering, pakker og samarbeid | Explain delivery, provider/client responsibilities, capacity, fit, timescale and ongoing priorities; do not duplicate section 07's package cards/prices. | OWNER approved (draft 1) |
 | 15 | SEO - KRO - Kombinasjon og kalkulator | Demonstrate the multiplicative effect of relevant traffic and conversion; transparent user-editable assumptions, no forecast disguised as results. Backlog 75, 104, 248; component feasibility assessed later. | OWNER approved (draft 1) |
-| 16 | Gratis sjekk | Existing approved global assessment promise: 3 concrete findings within 2 working days. Primary conversion. | Draft 1 / review |
-| 17 | FAQ og faglig fordypning | Answer actual remaining buyer objections; point to useful deeper pages. | Pending |
+| 16 | Gratis sjekk | Existing approved global assessment promise: 3 concrete findings within 2 working days. Primary conversion. | OWNER approved (draft 1) |
+| 17 | FAQ og faglig fordypning | Answer actual remaining buyer objections; point to useful deeper pages. | Draft 1 / review |
 | 18 | SEO - Nytt - Artikler | Relevant topical SEO developments and analyses, including existing November update article where appropriate. | Pending |
 | 19 | SEO - Fakta og Gjør det selv - Artikler | Evergreen factual and practical supporting articles; Article Bank, Fun Facts, Evidence Registry; select useful topics rather than fill a quota. | Pending |
 
@@ -1543,7 +1543,7 @@ For å vurdere lønnsomheten må vi også vite hva hver bestilling gir i dekning
 
 The global calculator's actual heading is "Hva betyr flere relevante besøk og en bedre kjøpsvei?", eyebrow "Synlighet og konvertering forsterker hverandre". Preserve these, current labels, formula, caveat and component as sourced; local intro/closing are new proposal, not a global edit. Consider clearer global input wording separately in whole-page review only if OWNER authorizes shared copy changes. User-entered hypothetical assumptions do not establish revenue, contribution margin, actual sales, close rate, causal impact or ROI; define a conversion consistently (lead or order) and apply contribution margin and relevant costs, plus lead-to-sale rate when relevant. No fifth monetary field, second calculator, forecast, new service or price proposed. Section 15 follows commercial model and uses source link /konvertering/. 13 targeted copy checks and five calculation spot checks (default, conversion-only, traffic-only, zero baseline, no change) passed in isolated JS mirroring actual source; not full site or native browser QA. No CMS/build or global source changes. OWNER approved exact draft 1 on 2026-11-26; editorial approval only.
 
-### Section 16 — draft 1: reuse existing protected free assessment (not approved)
+### Section 16 — draft 1: reuse existing protected free assessment (OWNER approved 2026-11-26)
 
 OWNER explicitly approved section 15 draft 1 on 2026-11-26. Preserve exact contextual copy, existing global calculator reference and monthly-compounding explanation. Section 16 is the primary conversion action, not a new lead magnet or sales-copy exercise.
 
@@ -1555,7 +1555,55 @@ Proposed section (reference only, not a second master):
 { "_block": "global", "element": "sjekk" }
 ```
 
-Preview verified against source: eyebrow "3 gratis funn", heading "Vil du vite hvor du har mest å hente?", original body and promise, form heading and submit "Få 3 gratis funn", required Nettside and Jobb-e-post, optional Kort kommentar, original sensitive-data and privacy notices. Chat preview uses disabled inputs/submit to prevent transmission; it is not a new design, functional intake test or assertion that the live website is disabled. Actual form enablement depends on site configuration and production controls; no real submission, endpoint change or verification of live intake performed. At implementation preserve current intake state and verify authorized end-to-end behavior through the existing release process. No new customer-facing text or data claims; no new research needed for unchanged protected reuse. Full CMS copy audit/build deferred. No CMS or global changes. Next: OWNER review section 16 draft 1, then section 17.
+Preview verified against source: eyebrow "3 gratis funn", heading "Vil du vite hvor du har mest å hente?", original body and promise, form heading and submit "Få 3 gratis funn", required Nettside and Jobb-e-post, optional Kort kommentar, original sensitive-data and privacy notices. Chat preview uses disabled inputs/submit to prevent transmission; it is not a new design, functional intake test or assertion that the live website is disabled. Actual form enablement depends on site configuration and production controls; no real submission, endpoint change or verification of live intake performed. At implementation preserve current intake state and verify authorized end-to-end behavior through the existing release process. No new customer-facing text or data claims; no new research needed for unchanged protected reuse. Full CMS copy audit/build deferred. No CMS or global changes. OWNER approved exact draft 1 on 2026-11-26; editorial approval only.
+
+### Section 17 — draft 1: remaining buyer questions and deeper reading (not approved)
+
+OWNER explicitly approved section 16 draft 1 on 2026-11-26. Preserve exact global sjekk reference, protected form, anchor, primary CTA and current assessment terms. Read current [SEO page FAQ](../../app/src/content/pages/seo.json), [global FAQ](../../app/src/content/global-elements/sporsmal.json), [global pricing master](../../app/src/content/global-elements/priser.json), [pricing page FAQ](../../app/src/content/pages/priser.json), and BI Backlog 83, 87, 157, 169, 294, 307, 354, 444; reviewed relevant Fun Facts/Evidence Registry and Article Bank A08/A16 entries. No fresh sales-call transcripts, customer FAQ logs or query-volume evidence obtained; the selection is an editorial synthesis of existing questions and plausible unresolved buyer objections, not a claim of measured frequency. Distinct purpose: remove final practical/commercial objections. Retain the existing geographic answer verbatim, add specialist link; adapt current pricing and Ads questions; recover CMS/existing-provider and new-website objections from shared FAQ; add ranking guarantee and post-termination visibility questions. Existing SEO FAQ questions about individual keyword pages, speed and agency work are covered by approved sections 08, 14, 06/13; proposed removal from local FAQ only, not removal of their useful answers from the page. No global source changes. Keep articles/news for sections 18–19.
+
+Proposed customer copy:
+
+Greit å vite
+
+## Før du tar neste steg.
+
+### Hva koster SEO hos dere?
+
+SEO inngår som et prioritert arbeidsområde i våre optimaliseringspakker, fra 4 500 kr/mnd eks. mva. Du velger kapasiteten, og vi prioriterer arbeidet ut fra bedriftens behov.
+
+[Se pakker og priser](/priser/)
+
+### Kan dere garantere førsteplass på Google?
+
+Nei. Vi bestemmer hvilke forbedringer vi gjennomfører. Google bestemmer hvem som ligger øverst. Vi prioriterer søk der bedriften har gode muligheter til å bli synlig og vinne kunder.
+
+### Hva skjer med synligheten hvis vi avslutter SEO-avtalen?
+
+Innholdet og forbedringene som er gjort på nettsiden forsvinner ikke automatisk når samarbeidet avsluttes. Konkurrentene fortsetter imidlertid å jobbe, og søkemotorene utvikler seg videre. Synligheten kan derfor endre seg over tid.
+
+### Må vi ha en ny nettside for å lykkes med SEO?
+
+Nei. Vi starter med nettsiden du allerede har. Hvis det er tekniske begrensninger som hindrer nødvendig arbeid, vurderer vi hva som må utbedres. Større utviklingsarbeid avklares separat.
+
+### Hva hvis vi allerede har et byrå eller en fast webutvikler?
+
+Vi samarbeider gjerne med dem. Vi kan gjennomføre avtalte SEO-endringer direkte eller levere konkrete spesifikasjoner og innhold som utvikleren deres legger inn. Tilganger og ansvar avklares ved oppstart.
+
+### Bør vi velge SEO eller Google Ads?
+
+Trenger du synlighet raskt, er Google Ads ofte et naturlig utgangspunkt. SEO bygger opp organisk synlighet over tid. Vi vurderer hva som passer bedriftens økonomi, konkurransesituasjon og behov for nye kunder. Annonsebudsjett kommer i tillegg.
+
+### Hjelper dere bedrifter utenfor Oslo?
+
+Ja, vi vurderer SEO for bedrifter i Oslo og resten av Norge. Når kundene velger leverandør basert på hvor de befinner seg, vurderer vi også lokal SEO, Google bedriftsprofil og faktiske tjenesteområder.
+
+[Les mer om lokal SEO](/lokal-seo/)
+
+Commercial/evidence notes: 4 500 kr/mnd excluding VAT is current approved entry price from global master and pricing page, not a new price authority or a new standalone SEO package. Use current global conditions at implementation; no binding period, separate media budget and agreed capacity preserved. No guarantee of rankings, time to results, lasting visibility or Google Ads approvals. Post-termination answer concerns changes to the existing website, not ownership, ongoing hosting/license/third-party tool availability, content transfer, or a contractual retention promise. The cooperation answer follows existing shared FAQ direct implementation/specification model; access and approvals required. Google Ads is often a practical option for quick visibility, not a guaranteed timeline or universally better investment. Do not treat these editorial questions as measured customer frequency.
+
+**Existing commercial conflict discovered:** global sporsmal answer "Må jeg ha en ny nettside for å få bedre resultater?" says a new simple website or dedicated landing page is included in all packages and specifies 1–2 months in Optimalisering. Current global price master says larger new landing pages, websites, extensive technical work and redesign are priced separately but usually included in Enterprise; pricing page FAQ also says larger work is priced separately. The wording/scope is potentially inconsistent; do not silently reconcile or change either approved global source. Section 17 follows the authoritative price master by saying larger work is agreed separately, with no new promise about a simple website. Flag for OWNER in whole-page review; no change authorized.
+
+Presentation intent: existing FAQ heading/eyebrow, seven page-specific questions in accessible native accordion with complete answers rendered and meaningful inline links, first answer open in chat preview only. Current [Faq.astro](../../app/src/components/Faq.astro) supports local question/answer pairs and EditorialText; existing [InnerPage](../../app/src/components/InnerPage.astro) appends local FAQ after all content sections unless a global sporsmal reference exists. [HomepageBlock](../../app/src/components/HomepageBlock.astro) and [faq-items.ts](../../app/src/lib/faq-items.ts) merge the ten global items before local FAQ when sporsmal is placed; this would introduce repetitive and conflicting answers. Preserve desired FAQ-before-articles sequence (17 before 18–19). Do not choose global sporsmal placement merely to force order or overwrite shared FAQ; resolve local-only movable FAQ placement during step 6 with existing MWS capability if available, otherwise report precise component/ordering gap and obtain OWNER decision. Existing local-only fallback after articles is a possible interim only if OWNER approves order deviation. No implementation or component choice now. Targeted 13 copy checks passed on customer draft, no full site audit/build. Next: OWNER review section 17 draft 1.
 
 ## Decision log
 
@@ -1597,3 +1645,4 @@ Preview verified against source: eyebrow "3 gratis funn", heading "Vil du vite h
 - 2026-11-26 OWNER explicitly approved section 13 draft 1. Section 14 draft 1 saved for review after checking current commercial master and cooperation terms; illustrates flexible priorities, responsibilities and time expectations. No implementation authorized.
 - 2026-11-26 OWNER explicitly approved section 14 draft 1. Section 15 draft 1 saved for review, reusing the existing global calculator with explicit 12-month monthly-compounding assumptions and local copy. No implementation authorized.
 - 2026-11-26 OWNER explicitly approved section 15 draft 1. Section 16 draft 1 saved for review, reusing unchanged existing protected global sjekk reference and preserving primary CTA/form/terms. No implementation authorized.
+- 2026-11-26 OWNER explicitly approved section 16 draft 1. Section 17 draft 1 saved for review with seven local FAQ items; documented existing global FAQ pricing scope conflict and local FAQ placement gap. No implementation authorized.
