@@ -34,7 +34,7 @@ This compact handoff is embedded in the single authoritative page plan, not a se
 
 ### Current resume point
 
-Steps 1–3 complete. Step 4 active, section 13 of 19 (Måling og kontinuerlig optimalisering). Sections 01–12 are OWNER-approved; preserve exact copy, sources, presentations, unchanged global pricing and Helt Opplagt proof selection. Next: review section 13 draft 1, measurement-led decisions, illustrative SeoTool/LeadProof internal tool cards and feedback loop. Respect documented provider/use restrictions and paused integration; no automatic attribution or customer-access promises. Section 13 not approved; section 14 pending.
+Steps 1–3 complete. Step 4 active, section 14 of 19 (Investering, pakker og samarbeid). Sections 01–13 are OWNER-approved; preserve exact copy, sources, presentations, unchanged global pricing, Helt Opplagt proof selection and section 13 provider/use restrictions. Next: review section 14 draft 1, flexible priorities within agreed package capacity, responsibilities, realistic timescale and current purchasing conditions. No new offer or duplicated pricing. Section 14 not approved; section 15 pending.
 
 No verified search volumes or conversion/margin data; GSC Wizard subscription blocked Bing query-volume access. Do not present invented figures or historical price comparisons as proof of profitability. Explicitly labeled hypothetical scenarios are allowed for the OWNER-requested demonstration. Approved section 02 teaches how intent and actual offer fit change the economic opportunity; detailed methods/coverage/measurement/calculator belong to sections 06/09/13/15 respectively. No site changes or publication authorized.
 
@@ -108,8 +108,8 @@ Recommendation for decision: keep intent-led philosophy + commercial positioning
 | 10 | Dokumenterte resultater | Approved proof, with Helt Opplagt search result and accurate channel/metric scope; do not imply lead or sales lift from clicks. | OWNER approved (draft 1) |
 | 11 | Autoritet og fagkunnskap | First-party expertise, commercially relevant authority, original research/tools and earned links. Backlog 242–248, 260, 380–382. | OWNER approved (draft 1) |
 | 12 | Google, AI-søk og lokal synlighet | Practical channel differences, source/retrieval/citation, local relevance and measurement. Link to specialist pages; do not repeat section 05's taxonomy argument. | OWNER approved (draft 1) |
-| 13 | Måling og kontinuerlig optimalisering | Show feedback loop and verified SeoTool/LeadProof capabilities; no claim of exact organic query-to-sale attribution without data. Backlog 169, 205, 284, 294. | Draft 1 / review |
-| 14 | Investering, pakker og samarbeid | Explain delivery, provider/client responsibilities, capacity, fit, timescale and ongoing priorities; do not duplicate section 07's package cards/prices. | Pending |
+| 13 | Måling og kontinuerlig optimalisering | Show feedback loop and verified SeoTool/LeadProof capabilities; no claim of exact organic query-to-sale attribution without data. Backlog 169, 205, 284, 294. | OWNER approved (draft 1) |
+| 14 | Investering, pakker og samarbeid | Explain delivery, provider/client responsibilities, capacity, fit, timescale and ongoing priorities; do not duplicate section 07's package cards/prices. | Draft 1 / review |
 | 15 | SEO - KRO - Kombinasjon og kalkulator | Demonstrate the multiplicative effect of relevant traffic and conversion; transparent user-editable assumptions, no forecast disguised as results. Backlog 75, 104, 248; component feasibility assessed later. | Pending |
 | 16 | Gratis sjekk | Existing approved global assessment promise: 3 concrete findings within 2 working days. Primary conversion. | Pending |
 | 17 | FAQ og faglig fordypning | Answer actual remaining buyer objections; point to useful deeper pages. | Pending |
@@ -1377,7 +1377,7 @@ Derfor undersøker vi også søkene som ligger bak AI-svarene. Vi vil at bedrift
 
 Presentation intent: three practical channel blocks with sample search/question, work areas and goal; specialist links; compact query fan-out diagram using the listed labels. Actual arrows are graphical, not textual punctuation. Links shown separately (no ornamental middle dot); the diagram is explicitly illustrative and not a real AI result. Logos/icons are preview suggestions, not new approved assets/components. No CMS edits, new services, prices, guarantees or full build. 13 targeted copy checks passed on proposed customer copy and diagram labels. OWNER approved exact draft 1 on 2026-11-26; editorial approval only.
 
-### Section 13 — draft 1: measurement-led decisions and internal tools (not approved)
+### Section 13 — draft 1: measurement-led decisions and internal tools (OWNER approved 2026-11-26)
 
 OWNER explicitly approved section 12 draft 1 on 2026-11-26. Preserve exact customer copy, links and illustrative query fan-out diagram. Distinct job: show what measured changes mean for the next optimization decision, not repeat section 06's method, section 09's market mapping or section 15's calculator.
 
@@ -1443,7 +1443,77 @@ Diagram: Måle, Analysere, Forbedre, Måle effekten på nytt
 
 [Les mer om hvordan vi måler effekten av optimalisering](/innsikt/male-effekt-av-optimalisering/)
 
-Presentation intent: two tool cards with clearly labeled abstract illustrative line and channel-division graphics (no actual customer data, axes, numeric share or product screenshot); the channel labels are chart legend only, not a measured data split. Do not present synthetic graphs as measured improvements or reuse an actual customer screenshot without authorization. A diagnostic table pairs observations with investigations, not unproven causes or automatic conclusions. Show a simple feedback-loop diagram. Keep link to existing measurement article, and clear distinction between visibility, visits, genuine inquiries, qualified leads, confirmed orders and estimated value. GSC aggregate query/page data does not identify an individual buyer's query; unknown source stays unknown; no exact query-to-sale attribution, automatic AI-vs-organic classification or causal proof. Comparisons require comparable periods and coverage; no new report cadence or access promise. Icons and diagrams are proposals, no components chosen. Targeted 13 copy checks passed, full CMS copy audit/build deferred. No CMS or product repository changes. Next: OWNER review section 13 draft 1.
+Presentation intent: two tool cards with clearly labeled abstract illustrative line and channel-division graphics (no actual customer data, axes, numeric share or product screenshot); the channel labels are chart legend only, not a measured data split. Do not present synthetic graphs as measured improvements or reuse an actual customer screenshot without authorization. A diagnostic table pairs observations with investigations, not unproven causes or automatic conclusions. Show a simple feedback-loop diagram. Keep link to existing measurement article, and clear distinction between visibility, visits, genuine inquiries, qualified leads, confirmed orders and estimated value. GSC aggregate query/page data does not identify an individual buyer's query; unknown source stays unknown; no exact query-to-sale attribution, automatic AI-vs-organic classification or causal proof. Comparisons require comparable periods and coverage; no new report cadence or access promise. Icons and diagrams are proposals, no components chosen. Targeted 13 copy checks passed, full CMS copy audit/build deferred. No CMS or product repository changes. OWNER approved exact draft 1 on 2026-11-26; editorial approval only, provider restrictions and paused integration unchanged.
+
+### Section 14 — draft 1: flexible priorities, cooperation and investment (not approved)
+
+OWNER explicitly approved section 13 draft 1 on 2026-11-26. Preserve exact text, tool cards, diagnostic table and feedback-loop presentation; its documented SeoTool provider/customer-use restrictions and LeadProof integration pause remain binding operational constraints. Editorial approval does not authorize a new service, product access, provider disclosure or activation.
+
+Read current [global package master](../../app/src/content/global-elements/priser.json), [pricing page](../../app/src/content/pages/priser.json), existing [conversion cooperation section](../../app/src/content/pages/konvertering.json), BI Backlog 169, 243, 294, 449 and relevant Article Bank SEO/Ads decision-guide entry. Distinct job: explain why the existing capacity-based agreement is commercially useful, practical provider/customer responsibilities and realistic time expectations. Do not repeat section 07 price cards or recreate the global price/terms master, section 06 delivery steps, section 13 measurement table, or section 15's multiplication/calculator. Current master confirms all packages cover the same services, differing in parallel priorities and capacity; Optimalisering one, Vekst two, Enterprise greater agreed capacity. The illustrative progression SEO to CRO to SEO/paid acquisition is conditional on evidence and business priorities, not a promised timeline, mandatory sequence, replacement of all SEO upkeep or instruction to pause successful work. "Om noen måneder" is a hypothetical customer situation, not a promised SEO result or minimum term. "Samme pakke" assumes unchanged agreed capacity and scope. No binding period per current master; the existing exact reassurance "Du skal bruke oss fordi det lønner seg, ikke fordi du må." is reused intentionally. Ads media budget extra, external costs per existing agreement, larger work separately agreed (Enterprise nuances preserved). Customer-facing link delegates exact terms to current master. Do not promise specific turnaround, fixed article/link/hour quotas, universal access to tooling, guaranteed rankings, free unlimited development, automatic scope changes, or causal commercial outcomes. No changes to commercial terms, prices or global sources.
+
+Proposed customer copy:
+
+Investering og samarbeid
+
+## Prioriteringene endrer seg. Avtalen trenger ikke gjøre det.
+
+Kanskje trenger bedriften din mer synlighet på Google i dag. Om noen måneder har du trafikken du trenger, men ønsker at flere av besøkene skal ende i bestillinger.
+
+Med våre optimaliseringspakker flytter vi innsatsen dit bedriften har mest å hente, innenfor kapasiteten du har valgt.
+
+### Slik kan samarbeidet utvikle seg
+
+Eksempel på endring av prioritet underveis.
+
+**SEO**
+
+Øke synligheten på bedriftens viktigste tjenester.
+
+Når konvertering blir viktigere enn mer trafikk
+
+**Konverteringsoptimalisering**
+
+Få flere av de relevante besøkende til å bestille.
+
+Når bedriften ønsker å nå flere kunder
+
+**SEO eller annonsering**
+
+Tiltrekke flere relevante kunder til en bedre fungerende nettside.
+
+**Samme pakke. Nye prioriteringer.**
+
+### Du kjenner bedriften. Vi kjenner faget.
+
+**Dette tar vi oss av**
+
+- Analyse og prioritering av tiltak
+- Avtalte forbedringer av nettsiden
+- Måling og oppfølging
+- Anbefalinger om videre arbeid
+
+**Dette trenger vi fra deg**
+
+- Innsikt i tjenester, kunder og lønnsomhet
+- Nødvendige tilganger og godkjenninger
+- Fagkunnskap når vi utvikler innhold
+- Tilbakemelding på kvaliteten på henvendelsene
+
+### Hvor lang tid tar SEO?
+
+Vi begynner med forbedringer på nettsiden innenfor avtalt kapasitet. Enkelte tekniske hindringer er raske å rette, mens det tar tid å bygge opp synlighet på konkurranseutsatte søk.
+
+Vi vurderer utviklingen underveis og prioriterer arbeidet ut fra resultatene og mulighetene vi ser.
+
+**Ingen bindingstid.**
+
+Du skal bruke oss fordi det lønner seg, ikke fordi du må.
+
+Arbeidet utføres innenfor avtalt omfang. Større prosjekter og eventuelle tilleggskostnader avklares i avtalen.
+
+[Se pakker og priser](/priser/)
+
+Presentation intent: short eyebrow and headline, one conditional three-stage priority illustration (not month-by-month roadmap), two compact responsibility cards and concise time-to-value explanation, existing no-binding reassurance and pricing link. Icons/layout are review suggestions only. Customer need not provide more personal data than required, and access is subject to authorization. No external factual or numerical claims introduced; first-party terms verified from current main. 13 targeted copy checks passed on proposed text and labels. Full site copy audit, build and component mapping deferred. No CMS edits. Next: OWNER review section 14 draft 1.
 
 ## Decision log
 
@@ -1482,3 +1552,4 @@ Presentation intent: two tool cards with clearly labeled abstract illustrative l
 - 2026-11-25 OWNER explicitly approved section 10 draft 1. Section 11 draft 1 saved for review with first-party expertise, original content assets, earned authority and E-E-A-T. No implementation authorized.
 - 2026-11-25 OWNER explicitly approved section 11 draft 1. Section 12 draft 1 saved for review, covering practical organic, local and AI-search work with illustrative query fan-out. No implementation authorized.
 - 2026-11-26 OWNER explicitly approved section 12 draft 1. Section 13 draft 1 saved for review after checking both product repositories and measurement contract; documented current restrictions and paused integration. No implementation authorized.
+- 2026-11-26 OWNER explicitly approved section 13 draft 1. Section 14 draft 1 saved for review after checking current commercial master and cooperation terms; illustrates flexible priorities, responsibilities and time expectations. No implementation authorized.
