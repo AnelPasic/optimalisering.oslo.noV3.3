@@ -34,7 +34,7 @@ This compact handoff is embedded in the single authoritative page plan, not a se
 
 ### Current resume point
 
-Steps 1–3 complete. Step 4 active, section 10 of 19 (Dokumenterte resultater). Sections 01–09 are OWNER-approved; preserve exact copy, source links, presentations and unchanged global pricing reference. Next: review section 10 draft 1, selecting the existing approved Helt Opplagt organic-click proof through native ProofList without changing proof master or other placements. Section 10 not approved; section 11 pending.
+Steps 1–3 complete. Step 4 active, section 11 of 19 (Autoritet og fagkunnskap). Sections 01–10 are OWNER-approved; preserve exact copy, source links, presentations, unchanged global pricing reference and approved Helt Opplagt proof selection. Next: review section 11 draft 1, using first-party operational expertise, original useful assets, earned recognition and scoped E-E-A-T explanation. Section 11 not approved; section 12 pending.
 
 No verified search volumes or conversion/margin data; GSC Wizard subscription blocked Bing query-volume access. Do not present invented figures or historical price comparisons as proof of profitability. Explicitly labeled hypothetical scenarios are allowed for the OWNER-requested demonstration. Approved section 02 teaches how intent and actual offer fit change the economic opportunity; detailed methods/coverage/measurement/calculator belong to sections 06/09/13/15 respectively. No site changes or publication authorized.
 
@@ -105,8 +105,8 @@ Recommendation for decision: keep intent-led philosophy + commercial positioning
 | 07 | Pakker og Priser | Early actual global package selection/prices and approved buying conditions. No duplicated pricing master. | OWNER approved (draft 1) |
 | 08 | Fra søkeintensjon til riktig nettside | Demonstrate practical implementation with a real or explicitly hypothetical example: intent mapping, improve vs create, technical accessibility, internal links. Backlog 1, 204, 231, 257, 362–364, 440. | OWNER approved (draft 1) |
 | 09 | Søkemarkedsdekning | Show the distinctive analytical map of services, demand, visibility and gaps; don't invent whole-market coverage metrics. Backlog 215, 223, 362–364, 440, 444. | OWNER approved (draft 1) |
-| 10 | Dokumenterte resultater | Approved proof, with Helt Opplagt search result and accurate channel/metric scope; do not imply lead or sales lift from clicks. | Draft 1 / review |
-| 11 | Autoritet og fagkunnskap | First-party expertise, commercially relevant authority, original research/tools and earned links. Backlog 242–248, 260, 380–382. | Pending |
+| 10 | Dokumenterte resultater | Approved proof, with Helt Opplagt search result and accurate channel/metric scope; do not imply lead or sales lift from clicks. | OWNER approved (draft 1) |
+| 11 | Autoritet og fagkunnskap | First-party expertise, commercially relevant authority, original research/tools and earned links. Backlog 242–248, 260, 380–382. | Draft 1 / review |
 | 12 | Google, AI-søk og lokal synlighet | Practical channel differences, source/retrieval/citation, local relevance and measurement. Link to specialist pages; do not repeat section 05's taxonomy argument. | Pending |
 | 13 | Måling og kontinuerlig optimalisering | Show feedback loop and verified SeoTool/LeadProof capabilities; no claim of exact organic query-to-sale attribution without data. Backlog 169, 205, 284, 294. | Pending |
 | 14 | Investering, pakker og samarbeid | Explain delivery, provider/client responsibilities, capacity, fit, timescale and ongoing priorities; do not duplicate section 07's package cards/prices. | Pending |
@@ -1210,7 +1210,7 @@ Vi identifiserer verdifulle søk der bedriften mangler synlighet, undersøker ko
 
 Presentation intent: eyebrow "Søkemarkedsdekning" above H2, compact matrix with two service columns and four search themes, visible text labels plus restrained green/amber/red/neutral cell backgrounds for good/weak/not found/not investigated. Retain explicit illustration label adjacent to matrix. No market share percentages or simulated actual ranking scores. Three follow-on actions: protect existing visibility, improve existing opportunities, identify new commercially relevant search opportunities. No new components or CMS fields selected; actual data/technical capability review later. 13 targeted copy checks passed on the customer-facing draft. No full site audit/build or CMS changes. OWNER approved exact draft 1 on 2026-11-25; editorial approval only.
 
-### Section 10 — draft 1: approved Helt Opplagt search proof (not approved)
+### Section 10 — draft 1: approved Helt Opplagt search proof (OWNER approved 2026-11-25)
 
 OWNER explicitly approved section 09 draft 1 on 2026-11-25. Preserve exact wording, matrix and presentation. Section 10 moves from labeled illustrations to actual approved evidence. Read the current [global resultater master](../../app/src/content/global-elements/resultater.json), [Helt Opplagt proof record](../../app/src/content/proof/helt-opplagt.json), [Nysta](../../app/src/content/proof/nysta.json), [Eurotents](../../app/src/content/proof/eurotents.json), and [H017C proof authorization](../H017C-PROOF-PUBLISH.md). Prefer Helt Opplagt as the single primary case on /seo/, because its approved dominant metric directly concerns organic search, while the other two approved public cases concern checkout completion and paid Ads ROAS. Preserve the global homepage case hierarchy and all proof records; no changes to other placements.
 
@@ -1222,7 +1222,68 @@ Proposed section: reuse the existing native ProofList selection of the approved 
 
 Preview snapshot for review, not a second proof master: global eyebrow "Dokumenterte resultater", heading "Resultater av kontinuerlig optimalisering"; Helt Opplagt; dominantMetric "Organiske klikk - Google Search Console"; before 2 162, mars-september 2025; after 4 181, mars-september 2026; delta +93 %. No claim of increased total inquiries, orders, sales or causal certainty. Registry source is previously verified/imported GSC evidence, not a fresh live account pull. The registry also records average position 21,8 -> 12,2 and lower total recorded forms (79 -> 67); these are internal contextual evidence under the current public renderer rules, not proposed new public fields. Keep the claim visibly scoped to organic clicks. No private evidenceMetrics, provenance or raw limitations/intervention text in public rendering. No new data, guarantees, customer permissions or case narratives invented.
 
-The chat preview used a simple before/after bar comparison, a short client description and customer website link to communicate the intended result; these are preview-only, not instructions to alter the native design or add unverified metadata. Actual page should reuse existing selected-case presentation, not create a custom chart, duplicate record or bypass gates. No new customer-facing copy in the implementation proposal; retain existing approved wording. Full copy QA, proof gates, actual schema, build and responsive visual checks deferred to authorized implementation. No CMS changes. Next: OWNER review section 10 draft 1, then section 11.
+The chat preview used a simple before/after bar comparison, a short client description and customer website link to communicate the intended result; these are preview-only, not instructions to alter the native design or add unverified metadata. Actual page should reuse existing selected-case presentation, not create a custom chart, duplicate record or bypass gates. No new customer-facing copy in the implementation proposal; retain existing approved wording. Full copy QA, proof gates, actual schema, build and responsive visual checks deferred to authorized implementation. No CMS changes. OWNER approved exact draft 1 on 2026-11-25; editorial approval only.
+
+### Section 11 — draft 1: first-party expertise and earned authority (not approved)
+
+OWNER explicitly approved section 10 draft 1 on 2026-11-25. Preserve selected Helt Opplagt proof, exact approved claim, periods and existing guarded ProofList ownership. No changes to proof or global sources.
+
+Read current BI Backlog 242–248, 260, 380–382, Fun Facts 14–15, 38–39, 44, 55, 100, 110, 112, relevant Evidence Registry and Article Bank entries. Distinct job: explain why useful business-specific expertise and independently earned recognition are a competitive content advantage, rather than equate topical authority with article quantity, a vendor score or a deliverable. Reuse the fictional solskjerming setting from sections 02/08/09. The experienced installer and generic-vs-specific content contrast are illustrative, not a Medon/customer case, measured frequency, actual wind rating or testimonial. The rhetorical "hundrevis" is a generic observation, not an audited SERP count. In actual work, use verified manufacturer data and real staff input, anonymize customer details and obtain permission for job photos. Do not fabricate authors, credentials, prices, data, experiences or product claims. Use genuinely useful commercial pages, comparison pages, original tools/research and genuine off-site editorial/partner coverage when warranted; no fixed article/link quotas or paid/automated link schemes. Authority is an outcome, not a guaranteed score. The E-E-A-T explanation uses the existing primary-source citation in BI F38 (Google Search Central); no new live source check was made, no assertion of a single ranking factor or guaranteed AI citation. Keep detailed platform distinctions for section 12 and measurement for section 13.
+
+Proposed customer copy:
+
+Autoritet og fagkunnskap
+
+## AI har aldri vært på befaring.
+
+En montør med 20 års erfaring vet hvorfor to tilsynelatende like hus trenger forskjellige løsninger for solskjerming. Den kunnskapen ligger sjelden på nettsiden.
+
+Vi bruker erfaringen, fagkunnskapen og arbeidet bedriften din allerede har utført til å utvikle innhold som gir kundene bedre svar enn de finner hos konkurrentene.
+
+### Generisk innhold
+
+Dette bør du vite om solskjerming.
+
+Generelle fordeler, produktbeskrivelser og informasjon som finnes på hundrevis av andre nettsider.
+
+### Innhold basert på fagkunnskap
+
+Hvilken screen passer til et vindutsatt hus?
+
+Montørens erfaring, konkrete produktvalg, dokumenterte vindgrenser og bilder fra relevante oppdrag.
+
+### Gode kilder har noe eget å bidra med.
+
+**Utførte oppdrag**
+
+Vis hva dere har levert, hvilke utfordringer dere løste og hvorfor dere valgte løsningen.
+
+**Kundenes spørsmål**
+
+Bruk spørsmålene dere får på telefon, e-post og befaringer som utgangspunkt for nyttig innhold.
+
+**Egne data og verktøy**
+
+Utvikle prisguider, kalkulatorer, sammenligninger og analyser som hjelper kunden med å velge riktig.
+
+**Omtale og anbefalinger**
+
+Jobb for å bli omtalt og lenket til av relevante fagmiljøer, samarbeidspartnere og bransjenettsteder.
+
+### Google kaller det E-E-A-T.
+
+- E: Erfaring
+- E: Ekspertise
+- A: Autoritet
+- T: Troverdighet
+
+Google bruker E-E-A-T som et rammeverk for å beskrive kvalitet og troverdighet i innhold. Det er ingen enkeltstående rangeringsfaktor.
+
+[Googles veiledning om kvalitet og faginnhold](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)
+
+**Vi bruker gjerne AI til å bearbeide fagkunnskapen din. Vi bruker den ikke til å dikte den opp.**
+
+Presentation intent: eyebrow above H2; two contrasting editorial example cards; four compact examples of first-party inputs and earned authority; a four-letter E-E-A-T explanation with a source link. Icons/card layout are preview suggestions, not selected components. No new client data, delivery quotas, guaranteed links or contractual work beyond agreed capacity. 13 targeted copy checks passed on proposed text; full site QA/build and CMS implementation deferred. Next: OWNER review section 11 draft 1.
 
 ## Decision log
 
@@ -1258,3 +1319,4 @@ The chat preview used a simple before/after bar comparison, a short client descr
 - 2026-11-25 OWNER explicitly approved section 07 draft 1 (unchanged global pricing reference). Section 08 draft 1 saved for review with illustrative query-to-page mapping and practical SEO tasks. No implementation authorized.
 - 2026-11-25 OWNER explicitly approved section 08 draft 1. Section 09 draft 1 saved for review with illustrative search-market visibility matrix and priority approach. No implementation authorized.
 - 2026-11-25 OWNER explicitly approved section 09 draft 1. Section 10 draft 1 saved for review, selecting existing approved Helt Opplagt organic search proof via native ProofList. No implementation authorized.
+- 2026-11-25 OWNER explicitly approved section 10 draft 1. Section 11 draft 1 saved for review with first-party expertise, original content assets, earned authority and E-E-A-T. No implementation authorized.
