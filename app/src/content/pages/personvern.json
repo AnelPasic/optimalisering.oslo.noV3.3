@@ -52,6 +52,16 @@
     },
     {
       "_block": "content",
+      "id": "besoksstatistikk",
+      "heading": "Du velger om vi kan måle besøket ditt",
+      "body": [
+        "Medon AS bruker valgfri besøksstatistikk for å se hvilke sider som blir åpnet og hvilke kanaler og annonser som fører besøkende dit. Målingen starter når du samtykker. Vi registrerer sidesti, aktiv tid, rulledybde og eventuelle kampanje-, annonsegruppe- og annonsemerker. Vi sender ingen opplysninger fra skjemaene til besøksstatistikken.",
+        "Nettleseren husker valget ditt i opptil 90 dager. Ved samtykke lagrer den også en tilfeldig besøks-ID for å telle samme nettleser én gang i rapporten. Nettleserfanen husker hvor besøket kom fra i 30 minutter fra siste målte sideåpning.",
+        "Måledata lagres i Cloudflare D1 med EU-avgrenset lagring og slettes automatisk etter 90 dager. Autoriserte Medon-operatører kan se statistikken. Du kan trekke samtykket ved å velge Innstillinger for besøksstatistikk nederst på siden og deretter Avslå statistikk. Da stopper målingen og besøks-ID-en fjernes fra nettleseren."
+      ]
+    },
+    {
+      "_block": "content",
       "id": "avklaringer",
       "heading": "Lagring, sletting og rettigheter.",
       "body": [
