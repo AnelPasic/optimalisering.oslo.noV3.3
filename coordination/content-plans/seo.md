@@ -34,7 +34,7 @@ This compact handoff is embedded in the single authoritative page plan, not a se
 
 ### Current resume point
 
-Steps 1–3 complete. Step 4 active, section 04 of 19 (Fordeler med SEO). Hero, section 02 draft 6 (compact three cards and approved formula) and section 03 with exact OWNER revised closing are approved; preserve all. Next: review section 04 draft 4, with benefit-first ELI10 Google Ads card, concrete exterior-screen example, linked Google documentation and explicitly illustrative 10x click-price contrast. Other draft 3 copy unchanged. Section 04 not approved; section 05 pending.
+Steps 1–3 complete. Step 4 active, section 04 of 19 (Fordeler med SEO). Hero, section 02 draft 6 (compact three cards and approved formula) and section 03 with exact OWNER revised closing are approved; preserve all. Next: review section 04 draft 5, with direct Google Ads benefit, QS 1/10 vs 10/10 and a clearly labeled historical WordStream model demonstrating the 10x contrast. Current Google diagnostic score is not a direct auction input; no claim of measured/guaranteed CPC effects. Other copy unchanged. Section 04 not approved; section 05 pending.
 
 No verified search volumes or conversion/margin data; GSC Wizard subscription blocked Bing query-volume access. Do not present invented figures or historical price comparisons as proof of profitability. Explicitly labeled hypothetical scenarios are allowed for the OWNER-requested demonstration. Approved section 02 teaches how intent and actual offer fit change the economic opportunity; detailed methods/coverage/measurement/calculator belong to sections 06/09/13/15 respectively. No site changes or publication authorized.
 
@@ -99,7 +99,7 @@ Recommendation for decision: keep intent-led philosophy + commercial positioning
 | 01 | Hero | Distinct commercial proposition, audience, reason to read and approved next action. H1 Lab. | OWNER approved |
 | 02 | Intensjonen bak søket | Explain the economics of search intent and BOFU versus information. Backlog 243, 257, 440, 444, 449; Article A03. | OWNER approved (draft 6) |
 | 03 | Hvem dette er for - Og ikke for - Eneste snekker/tannlege 5 mils radius. | Qualify by competition, commercial opportunity and need; the sole carpenter/dentist in a 50 km radius is an illustrative scenario, not a hard eligibility rule. | OWNER approved (revised closing) |
-| 04 | Fordeler med SEO - Senker kostnad pr. bestilling - Lavere Ads kostnad - AI-Synlighet - Konkurransefortrinn | Demonstrate mechanisms and business benefits with evidence/calculations. Lower order costs and ad CPC are possible, not guaranteed; distinguish shared landing-page quality from direct effects of organic rank. | Draft 4 / review |
+| 04 | Fordeler med SEO - Senker kostnad pr. bestilling - Lavere Ads kostnad - AI-Synlighet - Konkurransefortrinn | Demonstrate mechanisms and business benefits with evidence/calculations. Lower order costs and ad CPC are possible, not guaranteed; distinguish shared landing-page quality from direct effects of organic rank. | Draft 5 / review |
 | 05 | SEO er både AIO - GEO og AI-Søk Optimalisering - Ref. en av de forrige Intelligence intakes. | Challenge artificial rebranding and selling the same fundamentals twice. SEO as umbrella and AI visibility as specialist work, not identical operationally. Backlog 302, 303, 307, 313, 314, 393; F2–3, F69–71. | Pending |
 | 06 | Fra søkemarked til ordrebok | Present approved six-step method, explain why sequence matters. Backlog 449. | Pending |
 | 07 | Pakker og Priser | Early actual global package selection/prices and approved buying conditions. No duplicated pricing master. | Pending |
@@ -774,6 +774,70 @@ Det er her det virkelig interessante konkurransefortrinnet ligger.
 
 Editorial notes: retain draft 3 layout and assumptions except second-card example. No new component choice or CMS changes. Existing blended acquisition calculation still 500 vs 416.67 kr, rounded 417 and 17% reduction. Both examples are illustrative; no actual results or package prices. All 13 targeted copy checks passed on the draft, arithmetic checked. No full site audit/build. Next: OWNER review draft 4.
 
+### Section 04 — draft 5: source-backed Quality Score comparison (not approved)
+
+OWNER requested removal of "ofte lavere" and deeper research into QS 1/10 versus 10/10. Keep benefit-first wording and show the actual score comparison; only Google Ads card changes. Research 2026-11-25: [WordStream's 2013 article](https://www.wordstream.com/blog/ws/2013/07/16/quality-score-cost-per-conversion) and [CPC guide](https://www.wordstream.com/cost-per-click) support the historical illustrative 400% surcharge at QS 1 and 50% discount at QS 10 relative to QS 5 (5/1 and 5/10 cost multipliers). At a hypothetical baseline of 6 kr, this gives 30 vs 3 kr, a ratio of 10. This is a theoretical historical calculation, not measured CPC elasticity, not a present-day Google pricing table, and not proof that improving landing-page quality alone produces a 10x result. WordStream's separate empirical CPA analysis is not evidence of the 10x CPC relationship. Google's current [ad quality guidance](https://support.google.com/google-ads/answer/156066), [Quality Score documentation](https://support.google.com/google-ads/answer/6167118), and [actual CPC definition](https://support.google.com/google-ads/answer/6297) distinguish real-time auction quality (expected CTR, ad relevance and landing page experience, among other factors) from the displayed diagnostic score, which is not directly an auction input. Newer [Fiera Lab October 2026 analysis](https://fiera.digital/lab/quality-score), retrieved via indexed search text (direct page open unavailable), reports a within-keyword association of -3.4% CPC per QS point versus -17.9% between keywords in the same account/month, and explicitly identifies the WordStream 10x relationship as a textbook model rather than measured elasticity. Keep these distinctions in editorial notes; present the historical model with a concise adjacent source label, no extra defensive copy. Do not claim the model predicts actual CPC. No new research-based offer or guarantee.
+
+## SEO forbedrer økonomien i hele markedsføringen.
+
+En godt optimalisert tjenesteside jobber for deg i flere kanaler. Den svarer på det kundene søker etter på Google, gir AI-assistenter faginnhold å hente svar fra og fungerer som landingsside for annonseringen din.
+
+SEO skaffer relevante besøk. Konverteringsoptimalisering gjør flere av besøkene til bestillinger.
+
+### Lavere kostnad per bestilling
+
+Når bestillingene øker mer enn markedsføringskostnadene, faller kostnaden per bestilling.
+
+Regneeksempel per måned
+
+| | Kun Ads | Ads + SEO |
+|---|---|---|
+| Kostnad | 20 000 kr | 25 000 kr |
+| Bestillinger | 40 | 60 |
+| Kostnad per bestilling | 500 kr | 417 kr |
+
+17 % lavere kostnad per bestilling
+
+### Billigere annonser på Google
+
+Google belønner gode annonser og relevante nettsider. Søker en kunde etter utvendig screen med montering i Oslo, ønsker Google å sende kunden til en side som tilbyr nettopp dette. Også når du betaler for klikket.
+
+Google vurderer kvaliteten på både annonsen og nettsiden når klikkprisen bestemmes.
+
+Regneeksempel basert på WordStreams Quality Score-modell
+
+| | Eksempel A | Eksempel B |
+|---|---|---|
+| Quality Score | 1/10 | 10/10 |
+| Per klikk | 30 kr | 3 kr |
+| Klikk for 10 000 kr (avrundet) | 333 | 3 333 |
+
+10x flere klikk.
+
+Samme annonsebudsjett.
+
+Kilder: [Google om annonsekvalitet](https://support.google.com/google-ads/answer/156066?hl=no), [Google om Quality Score](https://support.google.com/google-ads/answer/6167118?hl=no) og [WordStreams beregningsmodell fra 2013](https://www.wordstream.com/blog/ws/2013/07/16/quality-score-cost-per-conversion).
+
+### Synlighet i AI-søk
+
+Kundene bruker AI til å finne, sammenligne og velge leverandører. Godt faginnhold, tydelig struktur og opparbeidet autoritet styrker grunnlaget for synlighet i disse søkene.
+
+Google AI, ChatGPT, Perplexity
+
+### Et økonomisk konkurransefortrinn
+
+Konkurrentene dine trenger noen sekunder for å øke annonsebudsjettet. Å bygge faginnhold, autoritet og organisk synlighet tar tid.
+
+Med høyere konverteringsrate tåler du også en høyere klikkpris enn konkurrentene ved samme fortjeneste per bestilling.
+
+### SEO + Konverteringsoptimalisering
+
+Flere relevante besøk kombinert med høyere konverteringsrate gir en multiplikatoreffekt. Du får mer ut av Google, AI-søk, Meta Ads, e-post og resten av markedsføringen din.
+
+Det er her det virkelig interessante konkurransefortrinnet ligger.
+
+Presentation: keep draft 4 card bars, add QS 1/10 and 10/10 score indicators above prices. Preserve the rest of the section and shared diagram. Two examples remain labeled. 10,000/30 and 10,000/3 yield 333 and 3,333 displayed whole clicks; underlying ratio 10. Other example 500 vs 416.67 kr/order, rounded 417 and 17% lower. Targeted 13 copy checks passed; no CMS changes/full site audit/build. Next: OWNER review draft 5.
+
 ## Decision log
 
 - 2026-11-24 OWNER approved using a persistent project workflow and starting with philosophy and positioning; no final positioning approval yet.
@@ -798,3 +862,4 @@ Editorial notes: retain draft 3 layout and assumptions except second-card exampl
 - 2026-11-25 OWNER requested new section 04 heading and stronger cross-channel leverage, competitive economics and SEO/KRO interaction. Draft 2 saved; no approval or implementation.
 - 2026-11-25 OWNER first approved draft 2, then immediately requested a direct-language revision. Latest request takes precedence; draft 3 saved for review, and the site-specific voice profile records the enduring preference. No implementation authorized.
 - 2026-11-25 OWNER requested simple, benefit-first Google Ads card with concrete 10x contrast and Google sources. Draft 4 saved for review; 10x is a hypothetical calculation, not a verified effect. No implementation authorized.
+- 2026-11-25 OWNER requested direct language and research into Quality Score 1 vs 10. Draft 5 saved with Google sources and explicit historical WordStream model; newer evidence distinguishes theoretical from observed CPC. No implementation authorized.
