@@ -34,7 +34,7 @@ This compact handoff is embedded in the single authoritative page plan, not a se
 
 ### Current resume point
 
-Steps 1–3 complete. Step 4 active, section 18 of 19 (SEO - Nytt - Artikler). Sections 01–17 are OWNER-approved; preserve exact copy, sources, presentations, protected global references, Helt Opplagt proof, section 13 use restrictions and section 17 FAQ conflict/placement follow-ups. Next: review section 18 draft 1, curated topical article selection starting with the existing November update article. Official rollout completion 24 November verified; article/BI freshness follow-up recorded, no source changes authorized. Section 18 not approved; section 19 pending.
+Steps 1–3 complete. Step 4 active, section 19 of 19 (SEO - Fakta og Gjør det selv - Artikler). Sections 01–18 are OWNER-approved; preserve exact copy, sources, presentations, protected global references, Helt Opplagt proof, section 13 use restrictions, section 17 FAQ scope/placement follow-ups and section 18 article freshness follow-up. Next: review section 19 draft 1, three existing evergreen article selections and five future article ideas. No article creation, CMS changes or publication. Section 19 not approved; after approval proceed to step 5 whole-page review, not implementation.
 
 No verified search volumes or conversion/margin data; GSC Wizard subscription blocked Bing query-volume access. Do not present invented figures or historical price comparisons as proof of profitability. Explicitly labeled hypothetical scenarios are allowed for the OWNER-requested demonstration. Approved section 02 teaches how intent and actual offer fit change the economic opportunity; detailed methods/coverage/measurement/calculator belong to sections 06/09/13/15 respectively. No site changes or publication authorized.
 
@@ -113,8 +113,8 @@ Recommendation for decision: keep intent-led philosophy + commercial positioning
 | 15 | SEO - KRO - Kombinasjon og kalkulator | Demonstrate the multiplicative effect of relevant traffic and conversion; transparent user-editable assumptions, no forecast disguised as results. Backlog 75, 104, 248; component feasibility assessed later. | OWNER approved (draft 1) |
 | 16 | Gratis sjekk | Existing approved global assessment promise: 3 concrete findings within 2 working days. Primary conversion. | OWNER approved (draft 1) |
 | 17 | FAQ og faglig fordypning | Answer actual remaining buyer objections; point to useful deeper pages. | OWNER approved (draft 2) |
-| 18 | SEO - Nytt - Artikler | Relevant topical SEO developments and analyses, including existing November update article where appropriate. | Draft 1 / review |
-| 19 | SEO - Fakta og Gjør det selv - Artikler | Evergreen factual and practical supporting articles; Article Bank, Fun Facts, Evidence Registry; select useful topics rather than fill a quota. | Pending |
+| 18 | SEO - Nytt - Artikler | Relevant topical SEO developments and analyses, including existing November update article where appropriate. | OWNER approved (draft 1) |
+| 19 | SEO - Fakta og Gjør det selv - Artikler | Evergreen factual and practical supporting articles; Article Bank, Fun Facts, Evidence Registry; select useful topics rather than fill a quota. | Draft 1 / review |
 
 **OWNER notes:** Vi må også utfordre de som prøver å selge GEO AIO , vi skal ha de tjenestene også men alt er SEO. Skal ha det viktigste for at en skeptisk kunde som har vært gjennom mange SEO byrå nettsider sier JA dette skal vi ha. Samt at du ville ha sitert siden og Google hadde rangert den godt. Er det noe overflødig, ja da finnes det undersider.
 
@@ -1605,7 +1605,7 @@ Commercial/evidence notes: 4 500 kr/mnd excluding VAT is current approved entry 
 
 Presentation intent: existing FAQ heading/eyebrow, seven page-specific questions in accessible native accordion with complete answers rendered and meaningful inline links, first answer open in chat preview only. Current [Faq.astro](../../app/src/components/Faq.astro) supports local question/answer pairs and EditorialText; existing [InnerPage](../../app/src/components/InnerPage.astro) appends local FAQ after all content sections unless a global sporsmal reference exists. [HomepageBlock](../../app/src/components/HomepageBlock.astro) and [faq-items.ts](../../app/src/lib/faq-items.ts) merge the ten global items before local FAQ when sporsmal is placed; this would introduce repetitive and conflicting answers. Preserve desired FAQ-before-articles sequence (17 before 18–19). Do not choose global sporsmal placement merely to force order or overwrite shared FAQ; resolve local-only movable FAQ placement during step 6 with existing MWS capability if available, otherwise report precise component/ordering gap and obtain OWNER decision. Existing local-only fallback after articles is a possible interim only if OWNER approves order deviation. No implementation or component choice now. Targeted 13 copy checks passed on customer draft, no full site audit/build. OWNER approved exact draft 2 on 2026-11-26; editorial approval only.
 
-### Section 18 — draft 1: curated topical SEO and AI-search articles (not approved)
+### Section 18 — draft 1: curated topical SEO and AI-search articles (OWNER approved 2026-11-26)
 
 OWNER explicitly approved section 17 draft 2 on 2026-11-26. Preserve exact seven FAQ questions and answers including OWNER geographic wording, existing links, and unresolved global FAQ scope conflict/local FAQ ordering issue. Section 18's distinct purpose is useful timely analysis, not generic news aggregation or repetition of service explanations. Read current BI Article Bank A16, Fun Facts 110–113, 129, Backlog 248 and relevant Evidence Registry; inspected existing [November update article](../../app/src/content/pages/managed-articles/innsikt-google-oppdatering-november-2026.json), [Innsikt index](../../app/src/content/pages/innsikt.json), [PageList](../../app/src/components/PageList.astro) and [page-list resolver](../../app/src/lib/page-list.ts). Current source has visible listing, canonical slug, noindex false. This establishes source configuration, not actual live deployment. Start with one substantive existing article rather than filler or undeveloped Article Bank proposals. Preserve the original article and listing metadata, not a duplicated teaser master.
 
@@ -1623,7 +1623,42 @@ Existing article selection (snapshot for review, article source remains authorit
 
 Editorial policy: select consequential changes to organic search and AI search that affect Norwegian businesses, distinguish confirmed platform changes, observed results and our interpretation, explain business relevance and actionable response. No posting quota, automated external news feed or unsourced claims. Section 19 will be evergreen facts and practical guides; keep selections distinct. Native PageList manual article selection supports canonical source ownership, listing visibility and editorial selection; consider one compact article listing at launch, add future relevant published articles deliberately. Existing listing has no explicit visual and date field; do not invent an image or require a new date field solely for chat preview. Actual layout/components and exact placement after local FAQ determined in step 6. No page creation or live article revision authorized in this turn.
 
-**Freshness follow-up discovered 2026-11-26:** official [Google Search Status Dashboard](https://status.search.google.com/incidents/WLxcJyC6jMWMfryxsKMc) now confirms rollout completed 24 November 2026 at 06:03 PST, after existing article's 23 November written-date snapshot. The dated statement that Google had not yet announced an end at writing is historically correct, but add a clearly dated update to article and synchronize BI F129/A16 before publication/reuse; do not silently rewrite historical observation or infer causation. Respect at least one full week after confirmed completion for systematic before/after analysis as documented in the article/BI. This is a follow-up, not a claim of observed customer impact or an authorization to edit another source. No current live URL/render test or site build performed. 13 targeted copy checks passed on local heading/intro and existing listing snapshot. Next: OWNER review section 18 draft 1, then section 19.
+**Freshness follow-up discovered 2026-11-26:** official [Google Search Status Dashboard](https://status.search.google.com/incidents/WLxcJyC6jMWMfryxsKMc) now confirms rollout completed 24 November 2026 at 06:03 PST, after existing article's 23 November written-date snapshot. The dated statement that Google had not yet announced an end at writing is historically correct, but add a clearly dated update to article and synchronize BI F129/A16 before publication/reuse; do not silently rewrite historical observation or infer causation. Respect at least one full week after confirmed completion for systematic before/after analysis as documented in the article/BI. This is a follow-up, not a claim of observed customer impact or an authorization to edit another source. No current live URL/render test or site build performed. 13 targeted copy checks passed on local heading/intro and existing listing snapshot. OWNER approved exact draft 1 on 2026-11-26; editorial approval only.
+
+### Section 19 — draft 1: evergreen SEO facts and practical guides (not approved)
+
+OWNER explicitly approved section 18 draft 1 on 2026-11-26. Preserve exact heading, intro, November article selection and freshness follow-up. Distinct purpose: practical, durable reader value for businesses that want to understand or do some of the work themselves, not a second news feed or a repeat of service arguments. Read current BI Article Bank (including A01, A03, A04, A13), full Fun Facts 18–19, 34–37, 83, Backlog 248, 354, 362–364 and Evidence Registry retrieval model. Existing CMS article sources inspected on main; use three relevant existing guides, rather than create placeholder articles to fill a quota. The mixed news/DIY article /innsikt/google-ai-sok-seo/ also exists, but has topical platform and ad-study claims; do not select it as evergreen or silently add it to approved section 18. Consider topical inclusion separately after a freshness review if OWNER requests it.
+
+Proposed local section copy:
+
+## SEO-fakta og praktiske guider
+
+Vil du gjøre noe av SEO-arbeidet selv? Her finner du konkrete fremgangsmåter for å undersøke synligheten din, velge tiltak og måle effekten.
+
+Existing article selection in this order (snapshot for review, canonical article listing owns all titles, summaries, labels and available visuals):
+
+- [Google bedriftsprofil - praktisk guide](../../app/src/content/pages/managed-articles/innsikt-google-bedriftsprofil.json)
+  En enkel kontroll av eierskap, kategori, tjenesteområde, åpningstider og kontaktvei i Google Søk og Maps.
+  [Les guiden](/innsikt/google-bedriftsprofil/)
+
+- [Hva bør optimaliseres først?](../../app/src/content/pages/managed-articles/innsikt-hva-bor-optimaliseres-forst.json)
+  Synlighet, konvertering eller selve tilbudet? Se de tre vanligste flaskehalsene, sammenlign regnestykkene og velg et fornuftig første grep.
+  [Les startguiden](/innsikt/hva-bor-optimaliseres-forst/)
+
+- [Hvordan måle effekten?](../../app/src/content/pages/managed-articles/innsikt-male-effekt-av-optimalisering.json)
+  Skill mellom visninger, handlinger og forretningsverdi. Definer relevante henvendelser eller nyttige kjøp, og gjør forutsetningene synlige.
+  [Les måleguiden](/innsikt/male-effekt-av-optimalisering/)
+
+All three article files have visible listings and canonical article slugs; actual deployment and URL response not tested. Use native PageList manual article selection at implementation, no duplicate teaser master. Existing listing visuals are not modified; Google profile has no explicit listing visual, other two have icons. Chat preview icons/layout are illustrative, not new assets or selected components. The broader start and measurement guides are relevant to SEO decisions and deepen sections 03/13/15; contextual links elsewhere may lead to the same guide, not duplicate articles. Preserve section 18/19 distinction.
+
+Future article priorities (editorial ideas only, no new pages, URLs, published claims, production quotas or promises):
+1. Slik finner du søkeordene som er verdt å jobbe med — A03 and BI 362–364. Concrete existing-page GSC workflow; intent/offer fit, demand clusters, priority by business value; avoid repeating flagship examples, show step-by-step application.
+2. Hvorfor Google ikke indekserer alle sidene dine — A04, F18–19. Distinguish discovery, crawling, eligibility and indexing; practical diagnosis, no guaranteed indexing.
+3. Er du egentlig på sjetteplass? Slik leser du Search Console — F34–37, F83. Explain average position, hidden queries, chart/table differences, and query-to-page exploration. Distinct analytical guide; avoid duplicating idea 1.
+4. Slik undersøker du om ChatGPT finner bedriften din — A01, Evidence Registry OPENAI-SEARCH-001/002. Separate availability, discovery, retrieval and actual mentions/citations; no guaranteed recommendation or restricted provider output.
+5. Slik ber du kunder om Google-anmeldelser — A13; supporting F105–109 referenced by Article Bank, retrieve full entries and verify current platform policy when writing. Not a new factual assertion or review-generation promise.
+
+Select only ideas that pass Page Existence Test, provide concrete independent reader value and complement existing guides. Current articles' substantive claims not re-audited as part of this listing-only task. No new external factual claims. Future writing requires source review and relevant current verification. 13 targeted copy checks passed on local heading/intro and existing listing snapshots; no full site audit/build. No CMS, global, article or BI changes authorized. Next: OWNER review section 19 draft 1. After approval, mark step 4 complete and proceed to step 5 whole-page review including all prior unresolved conditions; do not implement or publish yet.
 
 ## Decision log
 
@@ -1668,3 +1703,4 @@ Editorial policy: select consequential changes to organic search and AI search t
 - 2026-11-26 OWNER explicitly approved section 16 draft 1. Section 17 draft 1 saved for review with seven local FAQ items; documented existing global FAQ pricing scope conflict and local FAQ placement gap. No implementation authorized.
 - 2026-11-26 OWNER revised section 17 geographic FAQ answer; draft 2 saved with only that customer-facing answer changed (comma after Ja), existing specialist link retained. Other six questions unchanged. Awaiting review; no implementation authorized.
 - 2026-11-26 OWNER explicitly approved section 17 draft 2. Section 18 draft 1 saved for review; existing November article listing selected, official completion date verified and follow-up recorded. No implementation authorized.
+- 2026-11-26 OWNER explicitly approved section 18 draft 1. Section 19 draft 1 saved for review with three existing evergreen article references and five research-backed future article ideas. Step 4 remains active pending section 19 approval; next step 5 whole-page review. No implementation authorized.
