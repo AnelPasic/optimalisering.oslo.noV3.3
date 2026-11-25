@@ -34,9 +34,9 @@ This compact handoff is embedded in the single authoritative page plan, not a se
 
 ### Current resume point
 
-Steps 1–3 complete. Step 4 active, section 02 of 19 (Intensjonen bak søket). Hero locked by OWNER approval; section 02 not approved. The cheap-rullegardin contrast in draft 2 is rejected. Do not reuse it as final copy. Next: review draft 6 below: compact three-card example with "Solskjerming", "Solskjerming hus" and "Utvendig screen montert i Oslo", each with all assumptions, calculation and result in the same card. The formula is OWNER-approved; section copy and illustrative assumptions are still pending review.
+Steps 1–3 complete. Step 4 active, section 03 of 19 (Hvem dette er for - og ikke for). Hero and section 02 draft 6 are OWNER-approved and must be preserved, including compact three cards, exact formula and explicitly illustrative assumptions. Next: review section 03 draft 1 below; distinguish a discoverability constraint from capacity, demand and conversion constraints. The sole carpenter within five mil is a hypothetical example, not an eligibility threshold. Section 03 not approved.
 
-No verified search volumes or conversion/margin data; GSC Wizard subscription blocked Bing query-volume access. Do not present invented figures or historical price comparisons as proof of profitability. Explicitly labeled hypothetical scenarios are allowed for the OWNER-requested demonstration. Section 02 should teach how intent and actual offer fit change the economic opportunity; detailed methods/coverage/measurement/calculator belong to sections 06/09/13/15 respectively. No site changes or publication authorized.
+No verified search volumes or conversion/margin data; GSC Wizard subscription blocked Bing query-volume access. Do not present invented figures or historical price comparisons as proof of profitability. Explicitly labeled hypothetical scenarios are allowed for the OWNER-requested demonstration. Approved section 02 teaches how intent and actual offer fit change the economic opportunity; detailed methods/coverage/measurement/calculator belong to sections 06/09/13/15 respectively. No site changes or publication authorized.
 
 ### Resume workflow
 
@@ -97,8 +97,8 @@ Recommendation for decision: keep intent-led philosophy + commercial positioning
 | # | OWNER-approved theme | Editorial job / research direction | Draft |
 |---|---|---|---|
 | 01 | Hero | Distinct commercial proposition, audience, reason to read and approved next action. H1 Lab. | OWNER approved |
-| 02 | Intensjonen bak søket | Explain the economics of search intent and BOFU versus information. Backlog 243, 257, 440, 444, 449; Article A03. | Draft 6 / review |
-| 03 | Hvem dette er for - Og ikke for - Eneste snekker/tannlege 5 mils radius. | Qualify by competition, commercial opportunity and need; the sole carpenter/dentist in a 50 km radius is an illustrative scenario, not a hard eligibility rule. | Pending |
+| 02 | Intensjonen bak søket | Explain the economics of search intent and BOFU versus information. Backlog 243, 257, 440, 444, 449; Article A03. | OWNER approved (draft 6) |
+| 03 | Hvem dette er for - Og ikke for - Eneste snekker/tannlege 5 mils radius. | Qualify by competition, commercial opportunity and need; the sole carpenter/dentist in a 50 km radius is an illustrative scenario, not a hard eligibility rule. | Draft 1 / review |
 | 04 | Fordeler med SEO - Senker kostnad pr. bestilling - Lavere Ads kostnad - AI-Synlighet - Konkurransefortrinn | Demonstrate mechanisms and business benefits with evidence/calculations. Lower order costs and ad CPC are possible, not guaranteed; distinguish shared landing-page quality from direct effects of organic rank. | Pending |
 | 05 | SEO er både AIO - GEO og AI-Søk Optimalisering - Ref. en av de forrige Intelligence intakes. | Challenge artificial rebranding and selling the same fundamentals twice. SEO as umbrella and AI visibility as specialist work, not identical operationally. Backlog 302, 303, 307, 313, 314, 393; F2–3, F69–71. | Pending |
 | 06 | Fra søkemarked til ordrebok | Present approved six-step method, explain why sequence matters. Backlog 449. | Pending |
@@ -461,7 +461,7 @@ Editorial/calculation note: relevant searches = monthly query searches x assumed
 
 Targeted QA: all 13 current character/hidden-format/phrase checks passed and arithmetic verified. Full site audit/build not run; no CMS or production changes. Next: OWNER review of draft 5, including assumptions, then section 03 when approved.
 
-### Section 02 — draft 6: compact three-card comparison (not approved)
+### Section 02 — draft 6: compact three-card comparison (OWNER approved 2026-11-25)
 
 OWNER requested a compressed display and explicitly locked the formula "søkevolum x andel relevante søk x andel vi klarer å tiltrekke". Adopt the suggested example queries "Solskjerming", "Solskjerming hus", "Utvendig screen montert i Oslo". Retain draft 5 numeric assumptions for illustration, not measured estimates for the revised queries. One card per query, with the calculation and result inside each; remove the separate comparison table and bar chart in the actual presentation. The following Markdown table is the editorial record of card fields, not a proposed additional rendered table. Keep the formula and two comparative figures under the cards. No components selected.
 
@@ -492,7 +492,37 @@ Det bredeste søket ser imponerende ut i en SEO-rapport. I dette regneeksempelet
 
 Vi undersøker hva kundene vil kjøpe, hvem du konkurrerer mot og hvor vi realistisk kan vinne synlighet. Deretter prioriterer vi søkene der SEO-investeringen har best utsikt til å gi lønnsomme bestillinger.
 
-Editorial note: the displayed "Relevant kjøpsintensjon" is the assumed proportion of searches with need/offer/geography fit, not a measured readiness-to-order rate. The third factor is conditional capture of relevant searches. All numbers (including competition/difficulty) are hypothetical, the difficulty score is illustrative, named firms illustrate competitor categories only. A more competitive broad query may outperform if capture is higher; the scenario is not a prediction. Full commercial prioritization needs costs, time, orders and margin. Preserve the approved formula as part of the methodology, not a separate mandatory UI component or additional QA gate. Targeted 13 regex checks and arithmetic passed; no full build/site QA or CMS changes. Next: OWNER review draft 6.
+Editorial note: the displayed "Relevant kjøpsintensjon" is the assumed proportion of searches with need/offer/geography fit, not a measured readiness-to-order rate. The third factor is conditional capture of relevant searches. All numbers (including competition/difficulty) are hypothetical, the difficulty score is illustrative, named firms illustrate competitor categories only. A more competitive broad query may outperform if capture is higher; the scenario is not a prediction. Full commercial prioritization needs costs, time, orders and margin. Preserve the approved formula as part of the methodology, not a separate mandatory UI component or additional QA gate. Targeted 13 regex checks and arithmetic passed; no full build/site QA or CMS changes. OWNER approved exact draft 6 on 2026-11-25. Editorial approval only; no implementation authorized.
+
+### Section 03 — draft 1: when SEO is worth the investment (not approved)
+
+OWNER explicitly approved section 02 draft 6 on 2026-11-25 and requested continuation to section 03. Section 03's distinct editorial job is commercial qualification: identify whether discoverability/demand acquisition is the relevant constraint, rather than repeat the intent arithmetic or explain all benefits before section 04. Retain OWNER's sole carpenter/dentist within 50 km example as a hypothetical, not an eligibility criterion. The carpenter example combines little local direct competition and a full order book to make the constraint concrete. Research basis: previously approved commercial positioning and BI 215, 223, 243, 443, 444, 449 reread on main; project Creative DNA buyer/constraint calibration, supplied Hormozi marketing material (audience qualification, truthful specificity), MWS commercial value lens. No external numerical claim, new SERP study or market data required for this illustrative diagnosis.
+
+Proposed customer copy (compact comparison, content first):
+
+## Trenger du egentlig et SEO-byrå?
+
+Er du den eneste snekkeren innenfor fem mil og har arbeid frem til neste sommer, er det neppe Google du har et problem med. Du trenger sannsynligvis en snekker til.
+
+Driver du derimot en bedrift der kundene har flere leverandører å velge mellom, og du har kapasitet til å ta flere bestillinger, blir regnestykket et annet.
+
+### Når SEO er verdt å vurdere
+
+- Kundene søker etter det du selger.
+- Konkurrentene blir funnet før deg.
+- Du har kapasitet til flere kunder.
+- Nye bestillinger forsvarer investeringen.
+
+### Når pengene kan gjøre mer nytte andre steder
+
+- Du blir allerede funnet av kundene du ønsker.
+- Du har mer arbeid enn du kan håndtere.
+- Kundene dine søker sjelden etter det du selger.
+- Du får besøk, men nettsiden skaffer få bestillinger.
+
+Før du investerer i SEO, bør vi finne ut om økt synlighet faktisk er det bedriften din trenger. En SEO-avtale skal være en investering med et kommersielt formål, ikke enda en fast utgift i regnskapet.
+
+Editorial note: these are diagnostic indicators, not exclusions or a rigid qualification policy; capacity constraints may be addressed through better customer mix, higher-value work, selective demand or expansion plans. Low search volume alone does not rule out SEO. Existing good visibility may need ongoing maintenance; low conversion can also reflect traffic quality, offer or trust, so diagnose before recommending a different investment. The example does not claim sole providers need no online visibility. Keep deeper SEO/CRO interaction for section 15 and benefits for section 04. Targeted copy QA: 13 phrase, punctuation and hidden-format checks passed on draft fields. No implementation, full site audit or build. Next: OWNER review section 03 draft 1.
 
 ## Decision log
 
@@ -513,3 +543,4 @@ Editorial note: the displayed "Relevant kjøpsintensjon" is the assumed proporti
 - 2026-11-25 resumed on main; refined section 02 to draft 4, retaining heading, comparison and word breakdown. No OWNER approval or CMS changes.
 - 2026-11-25 OWNER requested three cards with mathematical logic, broad-query assumptions and competition/difficulty. Draft 5 saved for review, with explicit fictional scenario and correct arithmetic. No approval or implementation.
 - 2026-11-25 OWNER locked the exact relevant-visit formula and requested compact cards with revised example searches. Draft 6 saved; formula approved, section remains open.
+- 2026-11-25 OWNER explicitly approved section 02 draft 6, including compact three cards and illustrative numbers. Section 03 draft 1 saved for review; no implementation authorized.
