@@ -34,7 +34,7 @@ This compact handoff is embedded in the single authoritative page plan, not a se
 
 ### Current resume point
 
-Steps 1–3 complete. Step 4 active, section 07 of 19 (Pakker og priser). Sections 01–06 are OWNER-approved (Hero, section 02 draft 6, section 03 revised closing, section 04 draft 5, section 05 draft 3, section 06 draft 2); preserve exact wording, sources and presentation. Next: review section 07 draft 1, unchanged existing global pricing reference at this position. No duplicate pricing master or new package copy; section 07 pending approval, section 08 pending.
+Steps 1–3 complete. Step 4 active, section 08 of 19 (Fra søkeintensjon til riktig nettside). Sections 01–07 are OWNER-approved; preserve exact copy, source links, presentations and unchanged global pricing reference. Next: review section 08 draft 1, illustrative solskjerming query-to-page mapping, improve existing page versus create distinct answer, and practical accessibility/internal linking tasks. Section 08 not approved; section 09 pending.
 
 No verified search volumes or conversion/margin data; GSC Wizard subscription blocked Bing query-volume access. Do not present invented figures or historical price comparisons as proof of profitability. Explicitly labeled hypothetical scenarios are allowed for the OWNER-requested demonstration. Approved section 02 teaches how intent and actual offer fit change the economic opportunity; detailed methods/coverage/measurement/calculator belong to sections 06/09/13/15 respectively. No site changes or publication authorized.
 
@@ -102,8 +102,8 @@ Recommendation for decision: keep intent-led philosophy + commercial positioning
 | 04 | Fordeler med SEO - Senker kostnad pr. bestilling - Lavere Ads kostnad - AI-Synlighet - Konkurransefortrinn | Demonstrate mechanisms and business benefits with evidence/calculations. Lower order costs and ad CPC are possible, not guaranteed; distinguish shared landing-page quality from direct effects of organic rank. | OWNER approved (draft 5) |
 | 05 | SEO er både AIO - GEO og AI-Søk Optimalisering - Ref. en av de forrige Intelligence intakes. | Challenge artificial rebranding and selling the same fundamentals twice. SEO as umbrella and AI visibility as specialist work, not identical operationally. Backlog 302, 303, 307, 313, 314, 393; F2–3, F69–71. | OWNER approved (draft 3) |
 | 06 | Fra søkemarked til ordrebok | Present approved six-step method, explain why sequence matters. Backlog 449. | OWNER approved (draft 2) |
-| 07 | Pakker og Priser | Early actual global package selection/prices and approved buying conditions. No duplicated pricing master. | Draft 1 / review |
-| 08 | Fra søkeintensjon til riktig nettside | Demonstrate practical implementation with a real or explicitly hypothetical example: intent mapping, improve vs create, technical accessibility, internal links. Backlog 1, 204, 231, 257, 362–364, 440. | Pending |
+| 07 | Pakker og Priser | Early actual global package selection/prices and approved buying conditions. No duplicated pricing master. | OWNER approved (draft 1) |
+| 08 | Fra søkeintensjon til riktig nettside | Demonstrate practical implementation with a real or explicitly hypothetical example: intent mapping, improve vs create, technical accessibility, internal links. Backlog 1, 204, 231, 257, 362–364, 440. | Draft 1 / review |
 | 09 | Søkemarkedsdekning | Show the distinctive analytical map of services, demand, visibility and gaps; don't invent whole-market coverage metrics. Backlog 215, 223, 362–364, 440, 444. | Pending |
 | 10 | Dokumenterte resultater | Approved proof, with Helt Opplagt search result and accurate channel/metric scope; do not imply lead or sales lift from clicks. | Pending |
 | 11 | Autoritet og fagkunnskap | First-party expertise, commercially relevant authority, original research/tools and earned links. Backlog 242–248, 260, 380–382. | Pending |
@@ -1077,7 +1077,7 @@ Vi følger med på hvilke søk som gir synlighet, hvilke sider som tiltrekker ku
 
 Presentation intent: three phase blocks, the first containing the four numbered planning steps and a checklist of completed planning work, the second with numbered execution step and example tasks, and the third with numbered measurement step and four metric tiles (labels only, no invented figures). Eyebrow "Slik jobber vi" above H2. Icons and card arrangements are preview suggestions only; actual component choice later. Do not present example tasks or planning items as already done for a particular customer. No new guaranteed timelines, pricing, reporting frequency or portal features. Planning is part of the paid delivery as applicable, not a promise of free exhaustive assessment. Competitor visibility and commercial opportunity are inferred from available evidence, not verified customer ownership; the term "kunder konkurrentene får i stedet" is commercial shorthand, not measured competitor sales. Profitability prioritization depends on business input and available evidence. Preserve detailed tracking explanation for section 13. Targeted 13 copy checks passed; no CMS changes/full build. OWNER approved exact draft 2 on 2026-11-25; editorial approval only.
 
-### Section 07 — draft 1: reuse existing global packages and prices (not approved)
+### Section 07 — draft 1: reuse existing global packages and prices (OWNER approved 2026-11-25)
 
 OWNER explicitly approved section 06 draft 2 on 2026-11-25. Preserve its exact wording and three-phase presentation. Section 07 is not a new sales-copy exercise: reuse the existing global package section intact. Current main source inspected: [global price master](../../app/src/content/global-elements/priser.json), [SEO page](../../app/src/content/pages/seo.json) and [prices page](../../app/src/content/pages/priser.json), with [content source of truth](../CONTENT-SOURCE-OF-TRUTH.md). The SEO page already references the global element. Move its existing placement to section 07 during authorized implementation, without duplicating it or editing the global master.
 
@@ -1089,7 +1089,75 @@ Proposed section content (reference only, not a second copy of the offer):
 
 Retain the actual global heading, intro, three package cards, existing visuals, recommended state, service/system icons, details and order links, purchasing conditions, shared notes and existing component behavior. The global master remains the sole authority for current package content, prices and commercial terms. At review the global master contains Optimalisering 4 500 kr/mnd (one priority), Vekst 6 900 kr/mnd (two priorities, recommended), and Enterprise from 14 900 kr/mnd (four or more services prioritized; agreed capacity), all excluding VAT. These are a verification snapshot, not new price fields or an independent master. Verify the live source again at implementation. No binding period; ad spend extra; tool/platform costs and larger work subject to existing global notes; package scope, price and start agreed before acceptance; no payment on inquiry. Preserve full current wording and nuances in source, not the abbreviated chat preview. No SEO-specific price change, extra package, duplicated feature list, new CTA or new component proposed. Section 14 explains cooperation and delivery without repeating prices.
 
-QA: zero new customer-facing copy in this section; no copy rewrite or changes to global pricing authorized. The existing master contains legacy wording, including "fokuserrer"; preserve as instructed rather than silently clean up shared content in this task. Existing copy QA/build deferred to implementation; no CMS changes. Next: OWNER review the global reference placement, then section 08.
+QA: zero new customer-facing copy in this section; no copy rewrite or changes to global pricing authorized. The existing master contains legacy wording, including "fokuserrer"; preserve as instructed rather than silently clean up shared content in this task. Existing copy QA/build deferred to implementation; no CMS changes. OWNER approved unchanged global reference placement on 2026-11-25; editorial approval only.
+
+### Section 08 — draft 1: match the customer's question to the right page (not approved)
+
+OWNER explicitly approved section 07 draft 1 on 2026-11-25. Retain unchanged global pricing reference at its agreed position; no global price master edits.
+
+Read current BI Backlog 1, 204, 231, 257, 362–364, 440; Fun Facts 34–37, 83; Evidence Registry retrieval claims; Article Bank A03–A04. Distinct job: demonstrate query-to-page decisions, not repeat section 02's opportunity arithmetic or section 09's whole-market mapping. Reuse the explicitly illustrative solskjerming business from section 02. A cluster of plausible related queries is mapped to an existing service page with useful missing answers; a comparison question represents a distinct user task and illustrative separate page opportunity. Do not claim observed SERP overlap, measured query demand, specific existing client content or a validated one-page solution without real query/SERP and business data. In actual delivery check GSC query/page data, search-result overlap, buyer intent, actual offer, geography, evidence and useful answer coverage before choosing improve/add section/create. A separate price page or comparison section may be appropriate if evidence warrants; no fixed one-page-per-service or one-page-per-query rule. Google Search Central [performance data filtering and limits](https://developers.google.com/search/blog/2022/10/performance-data-deep-dive) and [internal link guidance](https://developers.google.com/search/docs/crawling-indexing/links-crawlable) reopened 2026-11-25; Search Console Help query/page link from F37 returned a fetch error. Google link guidance supports accessible descriptive internal links, not guaranteed indexing or ranking. No new numerical or customer outcome claims.
+
+Proposed customer copy:
+
+## Kunden skal slippe å søke to ganger.
+
+Først søker kunden på Google. Så finner kunden nettsiden din. Der skal svaret ligge, fremfor at kunden må begynne å lete på nytt.
+
+Vi undersøker hvilke sider Google viser for de forskjellige søkene, og hvilke sider som gir kunden det beste svaret.
+
+Eksempel: En bedrift som selger og monterer solskjerming i Oslo.
+
+### Tre forskjellige søk. Samme tjeneste.
+
+- Utvendig screen med montering i Oslo
+- Pris på utvendig screen
+- Motorisert screen til hus
+
+**Utvendige screens med montering**
+
+Én god tjenesteside
+
+- Produkter og motoriserte løsninger
+- Priser og hva som påvirker dem
+- Montering og levering i Oslo
+- Bilder fra utførte oppdrag
+- Bestill befaring
+
+Vi trenger ikke tre forskjellige nettsider for å besvare disse tre søkene. Vi trenger én god side som dekker behovene.
+
+### Når trenger vi en ny side?
+
+Utvendig screen eller markise?
+
+**Screen eller markise - hva passer best for huset ditt?**
+
+En egen sammenligningsside som forklarer forskjeller i solskjerming, vind, utsyn, pris og bruksområde.
+
+Lenke videre til relevante produkter og tjenester
+
+Her trenger kunden hjelp til å velge produkt før en bestilling. Det er en annen oppgave enn å bestille en screen med montering.
+
+### Dette gjør vi i praksis
+
+**Undersøker faktiske søk**
+
+Ser hvilke søk og sider som allerede får synlighet i Google.
+
+**Forbedrer eksisterende sider**
+
+Fyller inn svarene kundene leter etter, der de hører hjemme.
+
+**Lager nye sider der det mangler et godt svar**
+
+Hver ny side får en tydelig oppgave.
+
+**Sørger for at sidene er tilgjengelige**
+
+Kontrollerer at søkemotorene finner og leser sidene, og knytter relevant innhold sammen med lenker.
+
+**Målet er å dekke flest mulig verdifulle søk med færrest mulig unødvendige sider.**
+
+Presentation intent: one compact visual cluster of three query pills feeding a single service-page card, followed by a comparison query feeding a distinct comparison-page card with contextual links onward. Then four practical tasks. All names/content are illustrative, not real client pages or recommendations based on measured query data. No actual URL creation, asset production or component choice; visual structure is a preview suggestion. Retain actual proof and real results for section 10, detailed measurement for section 13. Targeted 13 copy checks passed; no full site audit/build or CMS changes. Next: OWNER review section 08 draft 1.
 
 ## Decision log
 
@@ -1122,3 +1190,4 @@ QA: zero new customer-facing copy in this section; no copy rewrite or changes to
 - 2026-11-25 OWNER explicitly approved section 05 draft 3. Section 06 draft 1 saved with exact canonical six-step questions, concrete actions and outputs. No implementation authorized.
 - 2026-11-25 OWNER requested clearer customer-facing heading Fra søk til bestillinger, changed opening and WUD process reference. Draft 2 saved for review; internal six-step method unchanged. No implementation authorized.
 - 2026-11-25 OWNER explicitly approved section 06 draft 2. Section 07 draft 1 records reuse of unchanged existing global pricing element; reviewed actual source on main. No implementation authorized.
+- 2026-11-25 OWNER explicitly approved section 07 draft 1 (unchanged global pricing reference). Section 08 draft 1 saved for review with illustrative query-to-page mapping and practical SEO tasks. No implementation authorized.
