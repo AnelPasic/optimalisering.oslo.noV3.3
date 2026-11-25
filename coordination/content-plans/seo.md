@@ -34,7 +34,7 @@ This compact handoff is embedded in the single authoritative page plan, not a se
 
 ### Current resume point
 
-Steps 1–3 complete. Step 4 active, section 14 of 19 (Investering, pakker og samarbeid). Sections 01–13 are OWNER-approved; preserve exact copy, sources, presentations, unchanged global pricing, Helt Opplagt proof selection and section 13 provider/use restrictions. Next: review section 14 draft 1, flexible priorities within agreed package capacity, responsibilities, realistic timescale and current purchasing conditions. No new offer or duplicated pricing. Section 14 not approved; section 15 pending.
+Steps 1–3 complete. Step 4 active, section 15 of 19 (SEO - KRO - Kombinasjon og kalkulator). Sections 01–14 are OWNER-approved; preserve exact copy, sources, presentations, unchanged global pricing, Helt Opplagt proof selection and section 13 use restrictions. Next: review section 15 draft 1, reuse existing global calculator with local context explaining monthly compounded traffic, assumed conversion rate, and economics. No new calculator or global changes. Section 15 not approved; section 16 pending.
 
 No verified search volumes or conversion/margin data; GSC Wizard subscription blocked Bing query-volume access. Do not present invented figures or historical price comparisons as proof of profitability. Explicitly labeled hypothetical scenarios are allowed for the OWNER-requested demonstration. Approved section 02 teaches how intent and actual offer fit change the economic opportunity; detailed methods/coverage/measurement/calculator belong to sections 06/09/13/15 respectively. No site changes or publication authorized.
 
@@ -109,8 +109,8 @@ Recommendation for decision: keep intent-led philosophy + commercial positioning
 | 11 | Autoritet og fagkunnskap | First-party expertise, commercially relevant authority, original research/tools and earned links. Backlog 242–248, 260, 380–382. | OWNER approved (draft 1) |
 | 12 | Google, AI-søk og lokal synlighet | Practical channel differences, source/retrieval/citation, local relevance and measurement. Link to specialist pages; do not repeat section 05's taxonomy argument. | OWNER approved (draft 1) |
 | 13 | Måling og kontinuerlig optimalisering | Show feedback loop and verified SeoTool/LeadProof capabilities; no claim of exact organic query-to-sale attribution without data. Backlog 169, 205, 284, 294. | OWNER approved (draft 1) |
-| 14 | Investering, pakker og samarbeid | Explain delivery, provider/client responsibilities, capacity, fit, timescale and ongoing priorities; do not duplicate section 07's package cards/prices. | Draft 1 / review |
-| 15 | SEO - KRO - Kombinasjon og kalkulator | Demonstrate the multiplicative effect of relevant traffic and conversion; transparent user-editable assumptions, no forecast disguised as results. Backlog 75, 104, 248; component feasibility assessed later. | Pending |
+| 14 | Investering, pakker og samarbeid | Explain delivery, provider/client responsibilities, capacity, fit, timescale and ongoing priorities; do not duplicate section 07's package cards/prices. | OWNER approved (draft 1) |
+| 15 | SEO - KRO - Kombinasjon og kalkulator | Demonstrate the multiplicative effect of relevant traffic and conversion; transparent user-editable assumptions, no forecast disguised as results. Backlog 75, 104, 248; component feasibility assessed later. | Draft 1 / review |
 | 16 | Gratis sjekk | Existing approved global assessment promise: 3 concrete findings within 2 working days. Primary conversion. | Pending |
 | 17 | FAQ og faglig fordypning | Answer actual remaining buyer objections; point to useful deeper pages. | Pending |
 | 18 | SEO - Nytt - Artikler | Relevant topical SEO developments and analyses, including existing November update article where appropriate. | Pending |
@@ -1445,7 +1445,7 @@ Diagram: Måle, Analysere, Forbedre, Måle effekten på nytt
 
 Presentation intent: two tool cards with clearly labeled abstract illustrative line and channel-division graphics (no actual customer data, axes, numeric share or product screenshot); the channel labels are chart legend only, not a measured data split. Do not present synthetic graphs as measured improvements or reuse an actual customer screenshot without authorization. A diagnostic table pairs observations with investigations, not unproven causes or automatic conclusions. Show a simple feedback-loop diagram. Keep link to existing measurement article, and clear distinction between visibility, visits, genuine inquiries, qualified leads, confirmed orders and estimated value. GSC aggregate query/page data does not identify an individual buyer's query; unknown source stays unknown; no exact query-to-sale attribution, automatic AI-vs-organic classification or causal proof. Comparisons require comparable periods and coverage; no new report cadence or access promise. Icons and diagrams are proposals, no components chosen. Targeted 13 copy checks passed, full CMS copy audit/build deferred. No CMS or product repository changes. OWNER approved exact draft 1 on 2026-11-26; editorial approval only, provider restrictions and paused integration unchanged.
 
-### Section 14 — draft 1: flexible priorities, cooperation and investment (not approved)
+### Section 14 — draft 1: flexible priorities, cooperation and investment (OWNER approved 2026-11-26)
 
 OWNER explicitly approved section 13 draft 1 on 2026-11-26. Preserve exact text, tool cards, diagnostic table and feedback-loop presentation; its documented SeoTool provider/customer-use restrictions and LeadProof integration pause remain binding operational constraints. Editorial approval does not authorize a new service, product access, provider disclosure or activation.
 
@@ -1513,7 +1513,35 @@ Arbeidet utføres innenfor avtalt omfang. Større prosjekter og eventuelle tille
 
 [Se pakker og priser](/priser/)
 
-Presentation intent: short eyebrow and headline, one conditional three-stage priority illustration (not month-by-month roadmap), two compact responsibility cards and concise time-to-value explanation, existing no-binding reassurance and pricing link. Icons/layout are review suggestions only. Customer need not provide more personal data than required, and access is subject to authorization. No external factual or numerical claims introduced; first-party terms verified from current main. 13 targeted copy checks passed on proposed text and labels. Full site copy audit, build and component mapping deferred. No CMS edits. Next: OWNER review section 14 draft 1.
+Presentation intent: short eyebrow and headline, one conditional three-stage priority illustration (not month-by-month roadmap), two compact responsibility cards and concise time-to-value explanation, existing no-binding reassurance and pricing link. Icons/layout are review suggestions only. Customer need not provide more personal data than required, and access is subject to authorization. No external factual or numerical claims introduced; first-party terms verified from current main. 13 targeted copy checks passed on proposed text and labels. Full site copy audit, build and component mapping deferred. No CMS edits. OWNER approved exact draft 1 on 2026-11-26; editorial approval only.
+
+### Section 15 — draft 1: SEO + CRO and the existing interactive calculator (not approved)
+
+OWNER explicitly approved section 14 draft 1 on 2026-11-26. Preserve exact text, conditional priority example, responsibilities and existing commercial terms. Read current BI Backlog 75, 104, 248, 449, Measurement Contract, relevant Fun Facts headings, Evidence Registry and Article Bank decision-guide entry. Distinct job: let the buyer explore the multiplicative effect with their own inputs; do not repeat section 04's cost examples, section 07's packages or the conversion page's fictional companies. No actual forecast or claim of profitable growth.
+
+Inspected current main [global calculator master](../../app/src/content/global-elements/regneeksempel.json), [HomeLeverage](../../app/src/components/HomeLeverage.astro), [leverage calculation](../../app/src/lib/leverage.ts), [scenario chart](../../app/src/lib/scenario-chart.ts), and existing SEO/CRO page placements. Reuse the existing global calculator, not a second calculation implementation. /seo/ currently has no calculator placement. Existing native model compounds monthly relevant traffic over 12 months, applies the new conversion rate from month 1, and compares monthly outcomes to a flat baseline. Current defaults 2,000 visits, 0.5% current conversion, 10% monthly traffic growth, 1% new conversion yield 10 current monthly conversions and 62.76856753442 in month 12 (~62.8; 6.28x). This is not the result of a one-off 10% traffic increase (which would yield 22). The existing chart explicitly says "Illustrasjon - ikke prognose". Make the compounding assumption obvious near inputs. Do not promise a 12-month result, predict growth, interpret monthly modeled outcome as cumulative orders or assume new conversion rate is achieved immediately in reality. At baseline zero the ratio is undefined, never infinite percent. Preserve current native input validation, formatting, chart, shared ownership, existing UI/labels and defaults. Chat preview uses same model with simplified controls, not a new component design.
+
+Proposed local contextual copy before the global calculator:
+
+SEO og konverteringsoptimalisering
+
+Du trenger ikke dobbelt så mange besøk for å doble antallet bestillinger. Du får samme effekt hvis dobbelt så stor andel av besøkene ender i en bestilling. Kombinerer du de to forbedringene, forsterker de hverandre.
+
+Prøv med tall fra din egen bedrift. Regneeksempelet viser hva som skjer dersom trafikken vokser med valgt prosent hver måned i 12 måneder, og den nye konverteringsraten gjelder fra første måned.
+
+Proposed existing global reference at this position (reference only, no new master):
+
+```json
+{ "_block": "global", "element": "regneeksempel" }
+```
+
+Proposed local contextual copy after the calculator:
+
+For å vurdere lønnsomheten må vi også vite hva hver bestilling gir i dekningsbidrag og hva optimaliseringen koster. Hvis nettsiden skaffer henvendelser, må vi vite hvor mange av dem som blir kunder.
+
+[Les mer om konverteringsoptimalisering](/konvertering/)
+
+The global calculator's actual heading is "Hva betyr flere relevante besøk og en bedre kjøpsvei?", eyebrow "Synlighet og konvertering forsterker hverandre". Preserve these, current labels, formula, caveat and component as sourced; local intro/closing are new proposal, not a global edit. Consider clearer global input wording separately in whole-page review only if OWNER authorizes shared copy changes. User-entered hypothetical assumptions do not establish revenue, contribution margin, actual sales, close rate, causal impact or ROI; define a conversion consistently (lead or order) and apply contribution margin and relevant costs, plus lead-to-sale rate when relevant. No fifth monetary field, second calculator, forecast, new service or price proposed. Section 15 follows commercial model and uses source link /konvertering/. 13 targeted copy checks and five calculation spot checks (default, conversion-only, traffic-only, zero baseline, no change) passed in isolated JS mirroring actual source; not full site or native browser QA. No CMS/build or global source changes. Next: OWNER review section 15 draft 1.
 
 ## Decision log
 
@@ -1553,3 +1581,4 @@ Presentation intent: short eyebrow and headline, one conditional three-stage pri
 - 2026-11-25 OWNER explicitly approved section 11 draft 1. Section 12 draft 1 saved for review, covering practical organic, local and AI-search work with illustrative query fan-out. No implementation authorized.
 - 2026-11-26 OWNER explicitly approved section 12 draft 1. Section 13 draft 1 saved for review after checking both product repositories and measurement contract; documented current restrictions and paused integration. No implementation authorized.
 - 2026-11-26 OWNER explicitly approved section 13 draft 1. Section 14 draft 1 saved for review after checking current commercial master and cooperation terms; illustrates flexible priorities, responsibilities and time expectations. No implementation authorized.
+- 2026-11-26 OWNER explicitly approved section 14 draft 1. Section 15 draft 1 saved for review, reusing the existing global calculator with explicit 12-month monthly-compounding assumptions and local copy. No implementation authorized.
