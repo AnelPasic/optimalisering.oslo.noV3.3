@@ -34,7 +34,7 @@ This compact handoff is embedded in the single authoritative page plan, not a se
 
 ### Current resume point
 
-Steps 1–3 complete. Step 4 active, section 05 of 19 (SEO, AIO og GEO). Hero, section 02 draft 6, section 03 with OWNER revised closing and section 04 draft 5 are OWNER-approved; preserve all exact wording, approved formula, labeled examples and presentation. Next: review section 05 draft 3, adding the OWNER-requested alpine skiing analogy to draft 2. All other copy, source link, diagram and platform names unchanged. No change to package scope; section 05 awaiting final approval.
+Steps 1–3 complete. Step 4 active, section 06 of 19 (Fra søkemarked til ordrebok). Hero, section 02 draft 6, section 03 with OWNER revised closing, section 04 draft 5 and section 05 draft 3 are OWNER-approved; preserve exact wording, source links, labeled examples and presentation. Next: review section 06 draft 1, the six approved method steps in canonical order with concrete work and outputs. Section 06 not approved; section 07 pending.
 
 No verified search volumes or conversion/margin data; GSC Wizard subscription blocked Bing query-volume access. Do not present invented figures or historical price comparisons as proof of profitability. Explicitly labeled hypothetical scenarios are allowed for the OWNER-requested demonstration. Approved section 02 teaches how intent and actual offer fit change the economic opportunity; detailed methods/coverage/measurement/calculator belong to sections 06/09/13/15 respectively. No site changes or publication authorized.
 
@@ -100,8 +100,8 @@ Recommendation for decision: keep intent-led philosophy + commercial positioning
 | 02 | Intensjonen bak søket | Explain the economics of search intent and BOFU versus information. Backlog 243, 257, 440, 444, 449; Article A03. | OWNER approved (draft 6) |
 | 03 | Hvem dette er for - Og ikke for - Eneste snekker/tannlege 5 mils radius. | Qualify by competition, commercial opportunity and need; the sole carpenter/dentist in a 50 km radius is an illustrative scenario, not a hard eligibility rule. | OWNER approved (revised closing) |
 | 04 | Fordeler med SEO - Senker kostnad pr. bestilling - Lavere Ads kostnad - AI-Synlighet - Konkurransefortrinn | Demonstrate mechanisms and business benefits with evidence/calculations. Lower order costs and ad CPC are possible, not guaranteed; distinguish shared landing-page quality from direct effects of organic rank. | OWNER approved (draft 5) |
-| 05 | SEO er både AIO - GEO og AI-Søk Optimalisering - Ref. en av de forrige Intelligence intakes. | Challenge artificial rebranding and selling the same fundamentals twice. SEO as umbrella and AI visibility as specialist work, not identical operationally. Backlog 302, 303, 307, 313, 314, 393; F2–3, F69–71. | Draft 3 / review |
-| 06 | Fra søkemarked til ordrebok | Present approved six-step method, explain why sequence matters. Backlog 449. | Pending |
+| 05 | SEO er både AIO - GEO og AI-Søk Optimalisering - Ref. en av de forrige Intelligence intakes. | Challenge artificial rebranding and selling the same fundamentals twice. SEO as umbrella and AI visibility as specialist work, not identical operationally. Backlog 302, 303, 307, 313, 314, 393; F2–3, F69–71. | OWNER approved (draft 3) |
+| 06 | Fra søkemarked til ordrebok | Present approved six-step method, explain why sequence matters. Backlog 449. | Draft 1 / review |
 | 07 | Pakker og Priser | Early actual global package selection/prices and approved buying conditions. No duplicated pricing master. | Pending |
 | 08 | Fra søkeintensjon til riktig nettside | Demonstrate practical implementation with a real or explicitly hypothetical example: intent mapping, improve vs create, technical accessibility, internal links. Backlog 1, 204, 231, 257, 362–364, 440. | Pending |
 | 09 | Søkemarkedsdekning | Show the distinctive analytical map of services, demand, visibility and gaps; don't invent whole-market coverage metrics. Backlog 215, 223, 362–364, 440, 444. | Pending |
@@ -910,7 +910,7 @@ Vi undersøker hvordan AI-assistentene finner informasjon, hvilke kilder de bruk
 
 Presentation intent: keep draft 1 shared-foundation diagram with exact labels: "Søkemotoroptimalisering (SEO)", "Tradisjonelt søk", "Google og Bing", "Lokalt søk", "Kart og bedrifter", "AI-søk", "AIO / GEO", "Felles fundament", "Teknisk tilgjengelighet", "Relevant innhold og søkeintensjon", "Fagkunnskap, autoritet og troverdighet". Immediately below it show platform names/logos: Google, Bing, ChatGPT, Gemini, Perplexity, Copilot. No components selected. Source link retained. The three separate acronym definitions are removed in this draft; prior wording remains available in draft 1 history. 13 targeted copy checks passed on copy and diagram labels. No CMS edits, full site audit/build, package changes or implementation. Next: OWNER review draft 2.
 
-### Section 05 — draft 3: alpine skiing analogy (not approved)
+### Section 05 — draft 3: alpine skiing analogy (OWNER approved 2026-11-25)
 
 OWNER requested an alpint/slalom/storslalom analogy and said the rest of draft 2 was good. Insert the following analogy immediately after the AIO/GEO paragraph; all other customer copy, source link, diagram labels and platform names are unchanged. Analogy is illustrative, not a claim of strict one-to-one taxonomy. Existing research and commercial scope remain unchanged.
 
@@ -936,7 +936,71 @@ Vi undersøker hvordan AI-assistentene finner informasjon, hvilke kilder de bruk
 
 **Vi optimaliserer for hele søkemarkedet, fremfor å selge deg det samme grunnarbeidet under forskjellige navn.**
 
-Presentation intent: retain draft 2 shared-foundation diagram and platform names/logos exactly. A small optional skiing illustration beside the analogy was shown in the chat preview as a presentation suggestion only, not an approved new asset or component. Keep text independently understandable. No component choice or implementation. Targeted 13 copy checks passed on copy and retained diagram labels; exact preservation verified by removing the added paragraph and comparing against draft 2. No full site audit/build or CMS changes. Next: OWNER review draft 3.
+Presentation intent: retain draft 2 shared-foundation diagram and platform names/logos exactly. A small optional skiing illustration beside the analogy was shown in the chat preview as a presentation suggestion only, not an approved new asset or component. Keep text independently understandable. No component choice or implementation. Targeted 13 copy checks passed on copy and retained diagram labels; exact preservation verified by removing the added paragraph and comparing against draft 2. No full site audit/build or CMS changes. OWNER approved exact draft 3 on 2026-11-25; editorial approval only.
+
+### Section 06 — draft 1: Fra søkemarked til ordrebok (not approved)
+
+OWNER explicitly approved section 05 draft 3 on 2026-11-25. Preserve the exact wording, analogy, Google link, shared-foundation diagram and platform names. Section 06 presents the approved six-step methodology, not a generic SEO checklist. Read on current BI main: [canonical six-step method and diagram, entry 449](https://github.com/AnelPasic/BusinessIntelligence/blob/main/seo-aio/BACKLOG.md#fra-søkemarked-til-ordrebok), entries 215, 223, 243, 440, 444. Keep all six topics, sequence and questions verbatim, including the question containing "kan" (not habitual hedging). Show how the output from one step informs the next. The distinctive prioritization is customer demand, existing coverage, realistic competitive opportunity and economics before execution. No new external numerical claims. Keep detailed query/page implementation, coverage model, proof, channel-specific workflows, measurement and calculator for sections 08–10, 12–13, 15. No new market data or claims of proprietary exclusive methods.
+
+Proposed customer copy (eyebrow "Vår metodikk" above H2):
+
+## Fra søkemarked til ordrebok
+
+Vår metodikk
+
+Før vi bruker pengene dine på søkemotoroptimalisering, vil vi vite hvor de gjør mest nytte. Derfor starter vi med markedet og bedriften din, før vi bestemmer hva som skal optimaliseres.
+
+### 01 Etterspørsel
+
+**Hva leter potensielle kunder faktisk etter?**
+
+Vi kartlegger hva kundene søker etter, hvilke behov de har og hva de ønsker å kjøpe. Vi undersøker også hvordan de formulerer spørsmålene sine i AI-søk.
+
+Resultat: Oversikt over relevante søk og kjøpsbehov.
+
+### 02 Dekning
+
+**Hvor mye av dette søkemarkedet dekker nettsiden i dag?**
+
+Vi sammenligner det kundene leter etter med innholdet og synligheten du allerede har. Slik finner vi søk og kundegrupper du går glipp av.
+
+Resultat: Oversikt over dagens synlighet og uutnyttede muligheter.
+
+### 03 Konkurranse
+
+**Hvor kan vi realistisk ta markedsandeler?**
+
+Vi undersøker hvem som får synligheten i dag, hvorfor de ligger foran deg og hva som kreves for å konkurrere med dem.
+
+Resultat: Prioritering av søk der innsatsen gir best utsikter til økt synlighet.
+
+### 04 Lønnsomhet
+
+**Hvilke søk og tjenester er mest verdifulle?**
+
+Vi vurderer hva en ny kunde er verdt, hvilke tjenester du tjener best på og hvilke du ønsker å selge mer av. Deretter veier vi verdien mot arbeidet som kreves for å vinne synlighet.
+
+Resultat: En kommersiell prioritering av SEO-investeringen.
+
+### 05 Gjennomføring
+
+**Hvilke konkrete endringer gir størst forventet effekt?**
+
+Vi forbedrer eksisterende sider, lager innhold som mangler, retter tekniske problemer og styrker nettsidens autoritet. Arbeidet følger prioriteringene vi har kommet frem til.
+
+Resultat: Konkrete forbedringer rettet mot de mest verdifulle mulighetene.
+
+### 06 Måling
+
+**Hvilke forbedringer ender faktisk i kunder?**
+
+Vi følger utviklingen i synlighet, relevante besøk, henvendelser og bestillinger. Resultatene bruker vi til å prioritere neste runde med optimalisering.
+
+Resultat: Bedre beslutninger om hvor neste SEO-krone skal brukes.
+
+Det er en grunn til at lønnsomhet kommer før gjennomføring. **Vi vil vite hva som er verdt å optimalisere før du betaler oss for å gjøre det.**
+
+Presentation intent: compact numbered six-step connected sequence, with each step's exact canonical question, concrete work and customer-facing output. Icons and vertical presentation shown in conversation are suggestions only; consider existing MWS components after whole-page editorial review. Preserve canonical order; feedback from measurement informs subsequent iterations. No new component selected. Editorial notes: initial analysis is a priority-setting activity, not a promise of free exhaustive analysis before payment; consider precise opening and closing wording at OWNER review in relation to actual scope and pricing. Demand coverage refers to the mapped relevant market, not a fabricated total-market percentage. Economic prioritization uses available margins, lead/customer values and business input; distinguish estimate and actual. Measurement depends on access and attribution quality; do not claim exact causal proof. No invented deliverable frequency, guarantee, new package scope or pricing. 13 targeted copy checks passed on draft; full site audit/build not run; no CMS changes. Next: OWNER review section 06 draft 1.
 
 ## Decision log
 
@@ -966,3 +1030,4 @@ Presentation intent: retain draft 2 shared-foundation diagram and platform names
 - 2026-11-25 OWNER explicitly approved section 04 draft 5. Section 05 draft 1 saved for review, with shared foundation, distinct AI workflows and Google's documentation. No implementation authorized.
 - 2026-11-25 OWNER requested stronger SEO umbrella positioning: AIO and GEO are names for SEO directed at AI search, with shared foundations across search engines. Draft 2 saved for review. No implementation authorized.
 - 2026-11-25 OWNER requested alpint/slalom/storslalom analogy and accepted the rest of section 05 draft 2. Draft 3 saved with only the additional analogy; final review pending. No implementation authorized.
+- 2026-11-25 OWNER explicitly approved section 05 draft 3. Section 06 draft 1 saved with exact canonical six-step questions, concrete actions and outputs. No implementation authorized.
