@@ -34,7 +34,7 @@ This compact handoff is embedded in the single authoritative page plan, not a se
 
 ### Current resume point
 
-Steps 1–3 complete. Step 4 active, section 04 of 19 (Fordeler med SEO). Hero, section 02 draft 6 (compact three cards and approved formula) and section 03 with exact OWNER revised closing are approved; preserve all. Next: review section 04 draft 2, with OWNER-requested headline and cross-channel leverage, four benefits and a concise SEO/KRO conclusion. Keep detailed calculator for section 15 and numbers illustrative; organic rank itself does not lower CPC. Section 04 not approved.
+Steps 1–3 complete. Step 4 active, section 04 of 19 (Fordeler med SEO). Hero, section 02 draft 6 (compact three cards and approved formula) and section 03 with exact OWNER revised closing are approved; preserve all. Next: review section 04 draft 3, applying the OWNER's latest request for direct, confident commercial language without habitual hedging. Retain the four benefits, exact heading, labeled examples and SEO/KRO conclusion. Do not present illustrative outcomes as actual results or guaranteed effects. Section 04 draft 3 not approved; section 05 remains pending.
 
 No verified search volumes or conversion/margin data; GSC Wizard subscription blocked Bing query-volume access. Do not present invented figures or historical price comparisons as proof of profitability. Explicitly labeled hypothetical scenarios are allowed for the OWNER-requested demonstration. Approved section 02 teaches how intent and actual offer fit change the economic opportunity; detailed methods/coverage/measurement/calculator belong to sections 06/09/13/15 respectively. No site changes or publication authorized.
 
@@ -99,7 +99,7 @@ Recommendation for decision: keep intent-led philosophy + commercial positioning
 | 01 | Hero | Distinct commercial proposition, audience, reason to read and approved next action. H1 Lab. | OWNER approved |
 | 02 | Intensjonen bak søket | Explain the economics of search intent and BOFU versus information. Backlog 243, 257, 440, 444, 449; Article A03. | OWNER approved (draft 6) |
 | 03 | Hvem dette er for - Og ikke for - Eneste snekker/tannlege 5 mils radius. | Qualify by competition, commercial opportunity and need; the sole carpenter/dentist in a 50 km radius is an illustrative scenario, not a hard eligibility rule. | OWNER approved (revised closing) |
-| 04 | Fordeler med SEO - Senker kostnad pr. bestilling - Lavere Ads kostnad - AI-Synlighet - Konkurransefortrinn | Demonstrate mechanisms and business benefits with evidence/calculations. Lower order costs and ad CPC are possible, not guaranteed; distinguish shared landing-page quality from direct effects of organic rank. | Draft 2 / review |
+| 04 | Fordeler med SEO - Senker kostnad pr. bestilling - Lavere Ads kostnad - AI-Synlighet - Konkurransefortrinn | Demonstrate mechanisms and business benefits with evidence/calculations. Lower order costs and ad CPC are possible, not guaranteed; distinguish shared landing-page quality from direct effects of organic rank. | Draft 3 / review |
 | 05 | SEO er både AIO - GEO og AI-Søk Optimalisering - Ref. en av de forrige Intelligence intakes. | Challenge artificial rebranding and selling the same fundamentals twice. SEO as umbrella and AI visibility as specialist work, not identical operationally. Backlog 302, 303, 307, 313, 314, 393; F2–3, F69–71. | Pending |
 | 06 | Fra søkemarked til ordrebok | Present approved six-step method, explain why sequence matters. Backlog 449. | Pending |
 | 07 | Pakker og Priser | Early actual global package selection/prices and approved buying conditions. No duplicated pricing master. | Pending |
@@ -652,6 +652,63 @@ Presentation intent: before the four compact cards, a small conceptual diagram c
 
 Editorial/calculation notes: maintain draft 1 assumptions of 5,000 kr added SEO expense and 20 incremental deduplicated orders, with unchanged Ads orders; 500 vs 416.67 kr/order, rounded to 417 and 17% reduction. Fixed 10,000 kr ad spend at assumed CPC 20 vs 16 gives 500 vs 625 clicks (+25%). These are not actual results, package prices or guarantees; organic ranking itself does not directly lower CPC. Better conversion permits higher allowable CPC if contribution per order and target profitability are held constant; this is not a guarantee of auction outcomes. The shared website benefits depend on which actual pages are improved and whether those channels use them. AI search mechanisms differ; content and technical SEO support discovery, not guaranteed citations. The heading is OWNER-requested, but the full section is pending approval. 13 targeted current copy checks and arithmetic passed; full site audit/build and implementation not run.
 
+### Section 04 — draft 3: direct commercial language (not approved)
+
+OWNER requested revision of draft 2 immediately after the approval message, specifically removing habitual "kan skaffe", "kan gi" and defensive caveats. Treat the latest revision as superseding the previous approval to proceed; remain on section 04 until the revised wording is accepted. Keep the exact heading, two example calculations and four-card layout from draft 2. The approved sections 01–03 remain unchanged. Apply the project voice-profile instruction on confident commercial language; state actual mechanisms rather than universal guaranteed outcomes. No new research needed for the scoped copy revision; preserve draft 2's evidence and assumptions.
+
+## SEO forbedrer økonomien i hele markedsføringen.
+
+En godt optimalisert tjenesteside jobber for deg i flere kanaler. Den svarer på det kundene søker etter på Google, gir AI-assistenter faginnhold å hente svar fra og fungerer som landingsside for annonseringen din.
+
+SEO skaffer relevante besøk. Konverteringsoptimalisering gjør flere av besøkene til bestillinger.
+
+### Lavere kostnad per bestilling
+
+Når bestillingene øker mer enn markedsføringskostnadene, faller kostnaden per bestilling.
+
+Regneeksempel per måned
+
+| | Kun Ads | Ads + SEO |
+|---|---|---|
+| Kostnad | 20 000 kr | 25 000 kr |
+| Bestillinger | 40 | 60 |
+| Kostnad per bestilling | 500 kr | 417 kr |
+
+17 % lavere kostnad per bestilling
+
+### Mer ut av annonsebudsjettet
+
+Bedre landingssidekvalitet styrker annonsens konkurranseevne i Google Ads. Lavere klikkpris gir flere besøk med samme budsjett.
+
+Regneeksempel med 10 000 kr i annonsebudsjett
+
+| | Før | Etter |
+|---|---|---|
+| Klikkpris | 20 kr | 16 kr |
+| Klikk | 500 | 625 |
+
+25 % flere klikk med samme budsjett
+
+### Synlighet i AI-søk
+
+Kundene bruker AI til å finne, sammenligne og velge leverandører. Godt faginnhold, tydelig struktur og opparbeidet autoritet styrker grunnlaget for synlighet i disse søkene.
+
+Google AI, ChatGPT, Perplexity
+
+### Et økonomisk konkurransefortrinn
+
+Konkurrentene dine trenger noen sekunder for å øke annonsebudsjettet. Å bygge faginnhold, autoritet og organisk synlighet tar tid.
+
+Med høyere konverteringsrate tåler du også en høyere klikkpris enn konkurrentene ved samme fortjeneste per bestilling.
+
+### SEO + Konverteringsoptimalisering
+
+Flere relevante besøk kombinert med høyere konverteringsrate gir en multiplikatoreffekt. Du får mer ut av Google, AI-søk, Meta Ads, e-post og resten av markedsføringen din.
+
+Det er her det virkelig interessante konkurransefortrinnet ligger.
+
+Presentation intent: retain compact channel-to-website diagram and four cards from draft 2. Regneeksempel labels next to each calculation carry the scenario distinction; remove redundant standalone disclaimer. Diagram represents objectives, not an actual result. Editorial notes: relative growth of orders versus acquisition expenses determines blended order cost; compare identical cost scopes and deduplicated orders. The CPC example assumes the stated CPC reduction rather than claiming organic rankings or page improvement mechanically determine it; Google Ads auction quality is a factor. Higher allowable CPC assumes equal contribution per order and comparable profit targets; the multiplikatoreffekt follows from traffic x conversion rate with other factors unchanged. Preserve the detailed calculation for section 15. No actual result or package-price claim. Targeted 13 copy checks passed; no occurrences of the word "kan" in this draft; arithmetic unchanged and verified. Full site audit/build not run; no CMS changes.
+
 ## Decision log
 
 - 2026-11-24 OWNER approved using a persistent project workflow and starting with philosophy and positioning; no final positioning approval yet.
@@ -674,3 +731,4 @@ Editorial/calculation notes: maintain draft 1 assumptions of 5,000 kr added SEO 
 - 2026-11-25 OWNER explicitly approved section 02 draft 6, including compact three cards and illustrative numbers. Section 03 draft 1 saved for review; no implementation authorized.
 - 2026-11-25 OWNER explicitly approved section 03 with revised final paragraph, retained verbatim. Section 04 draft 1 saved for review with illustrative arithmetic and primary Google sources. No implementation authorized.
 - 2026-11-25 OWNER requested new section 04 heading and stronger cross-channel leverage, competitive economics and SEO/KRO interaction. Draft 2 saved; no approval or implementation.
+- 2026-11-25 OWNER first approved draft 2, then immediately requested a direct-language revision. Latest request takes precedence; draft 3 saved for review, and the site-specific voice profile records the enduring preference. No implementation authorized.
