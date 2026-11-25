@@ -4,6 +4,46 @@
 **Target:** https://optimalisering.oslo.no/seo/
 **Scope:** Clean-sheet commercial flagship, structure first, one section at a time. Preserve protected facts, prices, shared content, design and existing technical rules.
 
+## START HERE — philosophy and resume contract
+
+This compact handoff is embedded in the single authoritative page plan, not a second mutable project-state document. Resume from current main; use the approved Hero, progress checklist, section table and latest active draft/decision below. Earlier drafts are history, not approved copy.
+
+### Strategic compass (approved decisions + latest OWNER correction)
+
+- **Philosophy:** Intensjonsdrevet SEO. Understand what the person wants to achieve or purchase, and match that with what the business actually offers.
+- **Positioning:** Kommersiell søkemotoroptimalisering. Optimize expected profitable business outcomes per investment, not rankings, traffic or content count as ends in themselves. Purchase intent is important; valuable informational demand, relevance, technical eligibility, authority and conversion are supporting parts of the same system.
+- **Differentiation:** Søkemarkedsdekning. Map the business's actual offer and strategically valuable demand to existing visibility, page coverage, competitive opportunities and evidence gaps. Do not invent a whole-market coverage percentage from incomplete GSC or modeled volumes.
+- **Delivery:** Fra søkemarked til ordrebok. The approved six-step sequence is recorded in [BusinessIntelligence backlog 449 and method](https://github.com/AnelPasic/BusinessIntelligence/blob/main/seo-aio/BACKLOG.md#fra-søkemarked-til-ordrebok):
+
+| Trinn | Tema | Spørsmål |
+|---|---|---|
+| 01 | Etterspørsel | Hva leter potensielle kunder faktisk etter? |
+| 02 | Dekning | Hvor mye av dette søkemarkedet dekker nettsiden i dag? |
+| 03 | Konkurranse | Hvor kan vi realistisk ta markedsandeler? |
+| 04 | Lønnsomhet | Hvilke søk og tjenester er mest verdifulle? |
+| 05 | Gjennomføring | Hvilke konkrete endringer gir størst forventet effekt? |
+| 06 | Måling | Hvilke forbedringer ender faktisk i kunder? |
+
+- **Strategic inspiration:** Edward Sturm / Compact Keywords / bottom of funnel (BI 449); integrate with actual business economics, realistic competition, query/page analysis, first-party knowledge, technical SEO, CRO, authority and measured outcomes. Not a copy of his methodology, a guarantee, a low-volume-only strategy or a new page per query.
+- **Value Equation:** desired outcome (profitable orders) x credible likelihood / (time delay x effort and sacrifice). Prioritize expected value against time, resources and investment; show what Medon actually takes responsibility for. No guarantee of speed, rankings or sales. Do not confuse higher order revenue with higher profit or value per search.
+- **SEO umbrella:** SEO is the shared foundation of organic search, local SEO and AI-search/GEO/AIO work. AI systems differ in retrieval, sources, reputation and measurement. Challenge charging for redundant work, not the legitimate extra workflows. BI 302, 313, 314, 393.
+- **Editorial objective:** convince a skeptical buyer who has seen many agencies by teaching mechanisms, relevant comparisons, useful explanations and evidence. Aim for genuinely useful and citeable content, not promised rankings/citations. Preserve the exact OWNER-approved Hero and 19-section sequence. Avoid generic agency rhetoric, repetitive arguments and irrelevant depth; supporting pages carry detailed material.
+- **OWNER correction, 2026-11-25:** "billig rullegardin" does not fit the system. Do not manufacture dramatic comparisons against an obviously irrelevant cheap product, different business model or an implausible alternative. Begin with a defined business and actual service/product portfolio. Compare plausible search opportunities it might really consider, preferably the same offer at different levels of specificity, intent, buyer requirements or business value. Irrelevant-query filtering is useful basic hygiene, not the central demonstration of this methodology. Retain earlier industry examples as research alternatives, not approved drafts. This is a project calibration, not a new generic MWS QA gate.
+
+### Current resume point
+
+Steps 1–3 complete. Step 4 active, section 02 of 19 (Intensjonen bak søket). Hero locked by OWNER approval; section 02 not approved. The cheap-rullegardin contrast in draft 2 is rejected. Do not reuse it as final copy. Next: explore stronger within-offer contrasts, then refine the section with OWNER feedback. Candidate for a defined provider of installed exterior screens: "utvendig solskjerming", "screen solskjerming pris", "utvendig screen med montering Oslo"; consider "utvendig solskjerming borettslag" only if this provider actually handles projects. All are illustrative candidates, no actual demand estimates. Avoid conflating specificity with proven buying intent or profitability. No requirement to retain solskjerming if another industry illustrates the same principle better.
+
+No verified search volumes or conversion/margin data; GSC Wizard subscription blocked Bing query-volume access. Do not invent figures or reuse historical price comparisons as proof of profitability. Section 02 should teach how intent and actual offer fit change the economic opportunity; detailed methods/coverage/measurement/calculator belong to sections 06/09/13/15 respectively. No site changes or publication authorized.
+
+### Resume workflow
+
+1. Read this plan on current main and [AGENTS.md](../../AGENTS.md). Show concise seven-step progress when resuming or changing steps. Do not reconstruct decisions from chat alone.
+2. Read current canonical [MWS Content Quality and Voice](https://github.com/AnelPasic/MedonWebSystem/blob/main/docs/CONTENT-QUALITY-AND-VOICE.md), local [COPY-STYLE](../COPY-STYLE.md), [CONTENT-TONE](../CONTENT-TONE.json), [CONTENT-VOICE-PROFILE](../CONTENT-VOICE-PROFILE.md), relevant [CREATIVE-DNA](../CREATIVE-DNA.md). H1 Lab already completed; do not reopen without OWNER instruction.
+3. Retrieve relevant full BI entries (backlog, Fun Facts, Evidence Registry, Article Bank, Copy Bank as needed) and verify material uncertain factual claims; prefer actual offer, evidence, buyer language and competing answers. Do not reread all historical notes routinely.
+4. Develop one section at a time, preserve approved decisions and save meaningful research, alternatives, rejected approaches, current draft and next action here. Continue under OWNER's requested collaborative workflow. Review complete page for repetition and commercial/factual quality before selecting components; reuse existing MWS and approved facts/design/global pricing/CTA. Full build/copy QA/preview and actual release verification at implementation. No extra approval gates or CMS status.
+5. When handing over to a new chat, provide the plan link and ask to resume from current active section. This embedded handoff is the short entrypoint; keep it current when active work changes rather than create competing state files.
+
 ## Progress
 
 - [x] 1. Establish overall philosophy and positioning
@@ -18,7 +58,7 @@
 
 **OWNER APPROVED:** Intensjonsdrevet SEO as philosophy; kommersiell søkemotoroptimalisering as positioning; søkemarkedsdekning as the distinctive analytical perspective; "Fra søkemarked til ordrebok" as the six-step methodology. The buyer must learn why the approach works through concrete mechanisms, relevant comparisons, demonstrations and evidence. Show the benefits rather than merely claiming superiority. Purchase intent and business value guide prioritization without excluding valuable informational demand. No unverified claim of market exclusivity or guaranteed outcomes. "Det er tanken som teller" is included in the approved Hero recorded in step 3.
 
-OWNER wants to explore Edward Sturm's Compact Keywords / bottom-of-funnel philosophy and differentiate from generic volume-first SEO. The working hook "Det er tanken som teller" is an OWNER-suggested creative experiment, not approved Hero copy. The six-step "Fra søkemarked til ordrebok" method is approved strategic calibration and saved in BusinessIntelligence backlog 449; its final expression remains open.
+OWNER wants to explore Edward Sturm's Compact Keywords / bottom-of-funnel philosophy and differentiate from generic volume-first SEO. The working hook "Det er tanken som teller" was originally an OWNER-suggested creative experiment and is now included in the approved Hero (step 3). The six-step "Fra søkemarked til ordrebok" method is approved strategic calibration and saved in BusinessIntelligence backlog 449; its final expression remains open.
 
 Recommended positioning for discussion: start with the commercial opportunity in the search market, not aggregate traffic. Identify what customers intend to accomplish, which services/products are economically worthwhile, where the business can win, and what page must satisfy the intent. Prioritize underserved purchase/use/contact intent without excluding valuable supporting informational content. Execute the selected work and measure outcomes where data permits. Differentiation is the combination of intent, opportunity mapping, implementation and measurement, not an unverified assertion that no other Norwegian agency does this.
 
@@ -55,7 +95,7 @@ Recommendation for decision: keep intent-led philosophy + commercial positioning
 | # | OWNER-approved theme | Editorial job / research direction | Draft |
 |---|---|---|---|
 | 01 | Hero | Distinct commercial proposition, audience, reason to read and approved next action. H1 Lab. | OWNER approved |
-| 02 | Intensjonen bak søket | Explain the economics of search intent and BOFU versus information. Backlog 243, 257, 440, 444, 449; Article A03. | Draft 2 / review; volume unavailable |
+| 02 | Intensjonen bak søket | Explain the economics of search intent and BOFU versus information. Backlog 243, 257, 440, 444, 449; Article A03. | Draft 2 contrast rejected; refining example |
 | 03 | Hvem dette er for - Og ikke for - Eneste snekker/tannlege 5 mils radius. | Qualify by competition, commercial opportunity and need; the sole carpenter/dentist in a 50 km radius is an illustrative scenario, not a hard eligibility rule. | Pending |
 | 04 | Fordeler med SEO - Senker kostnad pr. bestilling - Lavere Ads kostnad - AI-Synlighet - Konkurransefortrinn | Demonstrate mechanisms and business benefits with evidence/calculations. Lower order costs and ad CPC are possible, not guaranteed; distinguish shared landing-page quality from direct effects of organic rank. | Pending |
 | 05 | SEO er både AIO - GEO og AI-Søk Optimalisering - Ref. en av de forrige Intelligence intakes. | Challenge artificial rebranding and selling the same fundamentals twice. SEO as umbrella and AI visibility as specialist work, not identical operationally. Backlog 302, 303, 307, 313, 314, 393; F2–3, F69–71. | Pending |
@@ -291,7 +331,7 @@ Public research references:
 - [IKEA: solskjerming](https://www.ikea.com/no/no/cat/solskjerming-tl002/), [ZIP Screens: DIY measurement/installation](https://www.zipscreens.no/sporsmal-og-svar), [Bovik: screen on measure/befaring](https://bovik.no/produkter/screen/), [Solskjermingsgruppen: boligprosjekt/borettslag](https://www.solskjermingsgruppen.no/proff/boligprosjekt-og-sameie/).
 Recommendation: solar shading or workshop for the principal example, because the buyer can understand differences in what is being purchased without specialized healthcare context. Plumbing is especially useful for urgency and DIY versus hiring. Clinic demonstrates commercial fit; dentist demonstrates urgency/service distinction. Consider a compact contrast between two or three queries rather than a comprehensive keyword table in final customer copy. No numerical estimates, full SERP audit, GSC or conversion data obtained. Keep section 02 open; no new public draft yet.
 
-### Section 02 — solar shading research and draft 2 (not approved)
+### Section 02 — solar shading research and draft 2 (contrast rejected; historical)
 
 OWNER requested deeper research into solskjerming, actual prices, available search volume and the pedagogical argument. Workshop and other examples retained as alternatives.
 
@@ -338,3 +378,4 @@ Editorial note: draft refers to actual prices but uses hypothetical query-to-pur
 - OWNER selected bilverksted as the principal illustrative example for section 02. Research refinement saved; section wording still open.
 - OWNER requested retaining workshop as an option and comparing clinic, dentist, plumber and solar shading; research alternatives saved, selection pending.
 - OWNER requested solar shading deep dive. Verified price sources and illustrative project arithmetic, documented volume-access blocker, and saved draft 2 for review. Section 02 not approved.
+- OWNER rejected the cheap-rullegardin comparison as inconsistent with the commercial SEO system and requested a durable philosophy/system handoff. Embedded START HERE resume contract, preserved approved methodology/Hero/order, and recorded within-offer comparison principle. Section 02 remains open.
