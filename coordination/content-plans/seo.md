@@ -34,7 +34,7 @@ This compact handoff is embedded in the single authoritative page plan, not a se
 
 ### Current resume point
 
-Steps 1–3 complete. Step 4 active, section 06 of 19 (Fra søkemarked til ordrebok). Hero, section 02 draft 6, section 03 with OWNER revised closing, section 04 draft 5 and section 05 draft 3 are OWNER-approved; preserve exact wording, source links, labeled examples and presentation. Next: review section 06 draft 1, the six approved method steps in canonical order with concrete work and outputs. Section 06 not approved; section 07 pending.
+Steps 1–3 complete. Step 4 active, section 06 of 19 (Fra søkemarked til ordrebok). Hero, section 02 draft 6, section 03 with OWNER revised closing, section 04 draft 5 and section 05 draft 3 are OWNER-approved; preserve exact wording, source links, labeled examples and presentation. Next: review section 06 draft 2, with OWNER-requested customer-facing heading Fra søk til bestillinger, revised opening and six approved method steps presented in three understandable phases inspired by WUD. Internal BI method and canonical sequence unchanged. Section 06 not approved; section 07 pending.
 
 No verified search volumes or conversion/margin data; GSC Wizard subscription blocked Bing query-volume access. Do not present invented figures or historical price comparisons as proof of profitability. Explicitly labeled hypothetical scenarios are allowed for the OWNER-requested demonstration. Approved section 02 teaches how intent and actual offer fit change the economic opportunity; detailed methods/coverage/measurement/calculator belong to sections 06/09/13/15 respectively. No site changes or publication authorized.
 
@@ -101,7 +101,7 @@ Recommendation for decision: keep intent-led philosophy + commercial positioning
 | 03 | Hvem dette er for - Og ikke for - Eneste snekker/tannlege 5 mils radius. | Qualify by competition, commercial opportunity and need; the sole carpenter/dentist in a 50 km radius is an illustrative scenario, not a hard eligibility rule. | OWNER approved (revised closing) |
 | 04 | Fordeler med SEO - Senker kostnad pr. bestilling - Lavere Ads kostnad - AI-Synlighet - Konkurransefortrinn | Demonstrate mechanisms and business benefits with evidence/calculations. Lower order costs and ad CPC are possible, not guaranteed; distinguish shared landing-page quality from direct effects of organic rank. | OWNER approved (draft 5) |
 | 05 | SEO er både AIO - GEO og AI-Søk Optimalisering - Ref. en av de forrige Intelligence intakes. | Challenge artificial rebranding and selling the same fundamentals twice. SEO as umbrella and AI visibility as specialist work, not identical operationally. Backlog 302, 303, 307, 313, 314, 393; F2–3, F69–71. | OWNER approved (draft 3) |
-| 06 | Fra søkemarked til ordrebok | Present approved six-step method, explain why sequence matters. Backlog 449. | Draft 1 / review |
+| 06 | Fra søkemarked til ordrebok | Present approved six-step method, explain why sequence matters. Backlog 449. | Draft 2 / review |
 | 07 | Pakker og Priser | Early actual global package selection/prices and approved buying conditions. No duplicated pricing master. | Pending |
 | 08 | Fra søkeintensjon til riktig nettside | Demonstrate practical implementation with a real or explicitly hypothetical example: intent mapping, improve vs create, technical accessibility, internal links. Backlog 1, 204, 231, 257, 362–364, 440. | Pending |
 | 09 | Søkemarkedsdekning | Show the distinctive analytical map of services, demand, visibility and gaps; don't invent whole-market coverage metrics. Backlog 215, 223, 362–364, 440, 444. | Pending |
@@ -1002,6 +1002,81 @@ Det er en grunn til at lønnsomhet kommer før gjennomføring. **Vi vil vite hva
 
 Presentation intent: compact numbered six-step connected sequence, with each step's exact canonical question, concrete work and customer-facing output. Icons and vertical presentation shown in conversation are suggestions only; consider existing MWS components after whole-page editorial review. Preserve canonical order; feedback from measurement informs subsequent iterations. No new component selected. Editorial notes: initial analysis is a priority-setting activity, not a promise of free exhaustive analysis before payment; consider precise opening and closing wording at OWNER review in relation to actual scope and pricing. Demand coverage refers to the mapped relevant market, not a fabricated total-market percentage. Economic prioritization uses available margins, lead/customer values and business input; distinguish estimate and actual. Measurement depends on access and attribution quality; do not claim exact causal proof. No invented deliverable frequency, guarantee, new package scope or pricing. 13 targeted copy checks passed on draft; full site audit/build not run; no CMS changes. Next: OWNER review section 06 draft 1.
 
+### Section 06 — draft 2: Fra søk til bestillinger (not approved)
+
+OWNER requested the exact customer-facing heading "Fra søk til bestillinger", replacing the opaque "Fra søkemarked til ordrebok", and an opening beginning with "Før vi setter" rather than "Før vi bruker pengene dine". OWNER supplied [WUD Markedspartner B2B](https://www.wud.no/tjenester/markedspartner-b2b) as a process-presentation reference. Reviewed the indexed page text on 2026-11-25 (direct fetch failed, exact-page search result returned substantive content). Its useful mechanism is a small number of understandable collaboration phases with tangible work/outputs and concrete illustrative deliverables. Adapt that structural principle, not their copy, offers, prices, deadlines, client portal claims, exact layout or service scope. Keep all six internal BI 449 steps and their canonical order, grouping steps 01–04 under planning, 05 under execution, and 06 under measurement/iteration. Simplify customer-facing questions rather than changing the underlying canonical BI questions or method name. The approved internal methodology remains "Fra søkemarked til ordrebok"; the customer-facing heading is "Fra søk til bestillinger". No new research or empirical claims required; earlier BI research retained.
+
+Proposed customer copy:
+
+Slik jobber vi
+
+## Fra søk til bestillinger
+
+Før vi setter i gang med å optimalisere nettsiden, finner vi ut hvilke kunder du ønsker deg, hva de søker etter og hvor du har størst mulighet til å vinne dem. Deretter lager vi en plan for hva vi skal gjøre først.
+
+### Kartlegging og plan
+
+01 / Etterspørsel
+
+**Hva leter kundene dine etter?**
+
+Vi undersøker hvilke produkter og tjenester kundene søker etter, hvilke spørsmål de stiller og hva de ønsker å kjøpe.
+
+02 / Dekning
+
+**På hvilke av disse søkene blir du funnet i dag?**
+
+Vi kartlegger hvor du er synlig og hvilke relevante søk og kunder konkurrentene får i stedet.
+
+03 / Konkurranse
+
+**Hvilke søk har vi best mulighet til å vinne?**
+
+Vi undersøker konkurrentene, hva de gjør bedre enn deg og hva som kreves for å komme foran dem.
+
+04 / Lønnsomhet
+
+**Hvilke kunder og bestillinger er mest verdifulle?**
+
+Vi prioriterer tjenester du tjener godt på og ønsker å selge mer av. Deretter vurderer vi hvor mye arbeid som kreves for å vinne synlighet.
+
+**Dette har vi på plass før gjennomføring**
+
+- Relevante søk kartlagt
+- Dagens synlighet undersøkt
+- Konkurrenter analysert
+- De mest lønnsomme mulighetene prioritert
+
+**En konkret SEO-plan for bedriften din.**
+
+### Vi setter planen ut i livet
+
+05 / Gjennomføring
+
+Vi forbedrer nettsiden, skriver innhold som mangler, retter tekniske problemer og jobber med bedriftens synlighet og autoritet. Vi starter med oppgavene som har størst kommersiell verdi.
+
+**Eksempler på oppgaver**
+
+- Forbedre eksisterende tjenestesider
+- Lage sider for tjenester som mangler
+- Utbedre tekniske SEO-problemer
+- Bygge autoritet og omtale
+
+### Måling og videre forbedring
+
+06 / Måling
+
+Vi følger med på hvilke søk som gir synlighet, hvilke sider som tiltrekker kunder og hvor mange besøk som ender i henvendelser og bestillinger. Det vi lærer, bestemmer hva vi jobber med videre.
+
+**Dette følger vi med på**
+
+- Synlighet
+- Besøk
+- Henvendelser
+- Bestillinger
+
+Presentation intent: three phase blocks, the first containing the four numbered planning steps and a checklist of completed planning work, the second with numbered execution step and example tasks, and the third with numbered measurement step and four metric tiles (labels only, no invented figures). Eyebrow "Slik jobber vi" above H2. Icons and card arrangements are preview suggestions only; actual component choice later. Do not present example tasks or planning items as already done for a particular customer. No new guaranteed timelines, pricing, reporting frequency or portal features. Planning is part of the paid delivery as applicable, not a promise of free exhaustive assessment. Competitor visibility and commercial opportunity are inferred from available evidence, not verified customer ownership; the term "kunder konkurrentene får i stedet" is commercial shorthand, not measured competitor sales. Profitability prioritization depends on business input and available evidence. Preserve detailed tracking explanation for section 13. Targeted 13 copy checks passed; no CMS changes/full build. Next: OWNER review section 06 draft 2.
+
 ## Decision log
 
 - 2026-11-24 OWNER approved using a persistent project workflow and starting with philosophy and positioning; no final positioning approval yet.
@@ -1031,3 +1106,4 @@ Presentation intent: compact numbered six-step connected sequence, with each ste
 - 2026-11-25 OWNER requested stronger SEO umbrella positioning: AIO and GEO are names for SEO directed at AI search, with shared foundations across search engines. Draft 2 saved for review. No implementation authorized.
 - 2026-11-25 OWNER requested alpint/slalom/storslalom analogy and accepted the rest of section 05 draft 2. Draft 3 saved with only the additional analogy; final review pending. No implementation authorized.
 - 2026-11-25 OWNER explicitly approved section 05 draft 3. Section 06 draft 1 saved with exact canonical six-step questions, concrete actions and outputs. No implementation authorized.
+- 2026-11-25 OWNER requested clearer customer-facing heading Fra søk til bestillinger, changed opening and WUD process reference. Draft 2 saved for review; internal six-step method unchanged. No implementation authorized.
