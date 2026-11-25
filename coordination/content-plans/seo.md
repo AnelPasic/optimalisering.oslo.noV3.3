@@ -34,7 +34,7 @@ This compact handoff is embedded in the single authoritative page plan, not a se
 
 ### Current resume point
 
-Steps 1–3 complete. Step 4 active, section 04 of 19 (Fordeler med SEO). Hero, section 02 draft 6 (compact three cards and approved formula) and section 03 with exact OWNER revised closing are approved; preserve all. Next: review section 04 draft 5, with direct Google Ads benefit, QS 1/10 vs 10/10 and a clearly labeled historical WordStream model demonstrating the 10x contrast. Current Google diagnostic score is not a direct auction input; no claim of measured/guaranteed CPC effects. Other copy unchanged. Section 04 not approved; section 05 pending.
+Steps 1–3 complete. Step 4 active, section 05 of 19 (SEO, AIO og GEO). Hero, section 02 draft 6, section 03 with OWNER revised closing and section 04 draft 5 are OWNER-approved; preserve all exact wording, approved formula, labeled examples and presentation. Next: review section 05 draft 1, shared SEO foundation and distinct AI workflows. Challenge redundant work/invoicing without changing actual package terms or claiming identical workflows. Section 05 not approved.
 
 No verified search volumes or conversion/margin data; GSC Wizard subscription blocked Bing query-volume access. Do not present invented figures or historical price comparisons as proof of profitability. Explicitly labeled hypothetical scenarios are allowed for the OWNER-requested demonstration. Approved section 02 teaches how intent and actual offer fit change the economic opportunity; detailed methods/coverage/measurement/calculator belong to sections 06/09/13/15 respectively. No site changes or publication authorized.
 
@@ -99,8 +99,8 @@ Recommendation for decision: keep intent-led philosophy + commercial positioning
 | 01 | Hero | Distinct commercial proposition, audience, reason to read and approved next action. H1 Lab. | OWNER approved |
 | 02 | Intensjonen bak søket | Explain the economics of search intent and BOFU versus information. Backlog 243, 257, 440, 444, 449; Article A03. | OWNER approved (draft 6) |
 | 03 | Hvem dette er for - Og ikke for - Eneste snekker/tannlege 5 mils radius. | Qualify by competition, commercial opportunity and need; the sole carpenter/dentist in a 50 km radius is an illustrative scenario, not a hard eligibility rule. | OWNER approved (revised closing) |
-| 04 | Fordeler med SEO - Senker kostnad pr. bestilling - Lavere Ads kostnad - AI-Synlighet - Konkurransefortrinn | Demonstrate mechanisms and business benefits with evidence/calculations. Lower order costs and ad CPC are possible, not guaranteed; distinguish shared landing-page quality from direct effects of organic rank. | Draft 5 / review |
-| 05 | SEO er både AIO - GEO og AI-Søk Optimalisering - Ref. en av de forrige Intelligence intakes. | Challenge artificial rebranding and selling the same fundamentals twice. SEO as umbrella and AI visibility as specialist work, not identical operationally. Backlog 302, 303, 307, 313, 314, 393; F2–3, F69–71. | Pending |
+| 04 | Fordeler med SEO - Senker kostnad pr. bestilling - Lavere Ads kostnad - AI-Synlighet - Konkurransefortrinn | Demonstrate mechanisms and business benefits with evidence/calculations. Lower order costs and ad CPC are possible, not guaranteed; distinguish shared landing-page quality from direct effects of organic rank. | OWNER approved (draft 5) |
+| 05 | SEO er både AIO - GEO og AI-Søk Optimalisering - Ref. en av de forrige Intelligence intakes. | Challenge artificial rebranding and selling the same fundamentals twice. SEO as umbrella and AI visibility as specialist work, not identical operationally. Backlog 302, 303, 307, 313, 314, 393; F2–3, F69–71. | Draft 1 / review |
 | 06 | Fra søkemarked til ordrebok | Present approved six-step method, explain why sequence matters. Backlog 449. | Pending |
 | 07 | Pakker og Priser | Early actual global package selection/prices and approved buying conditions. No duplicated pricing master. | Pending |
 | 08 | Fra søkeintensjon til riktig nettside | Demonstrate practical implementation with a real or explicitly hypothetical example: intent mapping, improve vs create, technical accessibility, internal links. Backlog 1, 204, 231, 257, 362–364, 440. | Pending |
@@ -774,7 +774,7 @@ Det er her det virkelig interessante konkurransefortrinnet ligger.
 
 Editorial notes: retain draft 3 layout and assumptions except second-card example. No new component choice or CMS changes. Existing blended acquisition calculation still 500 vs 416.67 kr, rounded 417 and 17% reduction. Both examples are illustrative; no actual results or package prices. All 13 targeted copy checks passed on the draft, arithmetic checked. No full site audit/build. Next: OWNER review draft 4.
 
-### Section 04 — draft 5: source-backed Quality Score comparison (not approved)
+### Section 04 — draft 5: source-backed Quality Score comparison (OWNER approved 2026-11-25)
 
 OWNER requested removal of "ofte lavere" and deeper research into QS 1/10 versus 10/10. Keep benefit-first wording and show the actual score comparison; only Google Ads card changes. Research 2026-11-25: [WordStream's 2013 article](https://www.wordstream.com/blog/ws/2013/07/16/quality-score-cost-per-conversion) and [CPC guide](https://www.wordstream.com/cost-per-click) support the historical illustrative 400% surcharge at QS 1 and 50% discount at QS 10 relative to QS 5 (5/1 and 5/10 cost multipliers). At a hypothetical baseline of 6 kr, this gives 30 vs 3 kr, a ratio of 10. This is a theoretical historical calculation, not measured CPC elasticity, not a present-day Google pricing table, and not proof that improving landing-page quality alone produces a 10x result. WordStream's separate empirical CPA analysis is not evidence of the 10x CPC relationship. Google's current [ad quality guidance](https://support.google.com/google-ads/answer/156066), [Quality Score documentation](https://support.google.com/google-ads/answer/6167118), and [actual CPC definition](https://support.google.com/google-ads/answer/6297) distinguish real-time auction quality (expected CTR, ad relevance and landing page experience, among other factors) from the displayed diagnostic score, which is not directly an auction input. Newer [Fiera Lab October 2026 analysis](https://fiera.digital/lab/quality-score), retrieved via indexed search text (direct page open unavailable), reports a within-keyword association of -3.4% CPC per QS point versus -17.9% between keywords in the same account/month, and explicitly identifies the WordStream 10x relationship as a textbook model rather than measured elasticity. Keep these distinctions in editorial notes; present the historical model with a concise adjacent source label, no extra defensive copy. Do not claim the model predicts actual CPC. No new research-based offer or guarantee.
 
@@ -836,7 +836,51 @@ Flere relevante besøk kombinert med høyere konverteringsrate gir en multiplika
 
 Det er her det virkelig interessante konkurransefortrinnet ligger.
 
-Presentation: keep draft 4 card bars, add QS 1/10 and 10/10 score indicators above prices. Preserve the rest of the section and shared diagram. Two examples remain labeled. 10,000/30 and 10,000/3 yield 333 and 3,333 displayed whole clicks; underlying ratio 10. Other example 500 vs 416.67 kr/order, rounded 417 and 17% lower. Targeted 13 copy checks passed; no CMS changes/full site audit/build. Next: OWNER review draft 5.
+Presentation: keep draft 4 card bars, add QS 1/10 and 10/10 score indicators above prices. Preserve the rest of the section and shared diagram. Two examples remain labeled. 10,000/30 and 10,000/3 yield 333 and 3,333 displayed whole clicks; underlying ratio 10. Other example 500 vs 416.67 kr/order, rounded 417 and 17% lower. Targeted 13 copy checks passed; no CMS changes/full site audit/build. OWNER approved exact draft 5 on 2026-11-25; editorial approval only.
+
+### Section 05 — draft 1: one search foundation, distinct AI workflows (not approved)
+
+OWNER approved section 04 draft 5 on 2026-11-25. Preserve its exact copy, source links, illustrations and presentation notes. Section 05 explains the umbrella and commercial overlap, rather than repeat the AI visibility benefit in section 04 or the platform-specific detail in section 12.
+
+Knowledge retrieved on current BI main: Backlog 302, 303, 307, 313, 314, 393; Fun Facts 2, 3, 69–71; Evidence Registry OpenAI retrieval claims; Article Bank A01–A02. Google's [AI features documentation](https://developers.google.com/search/docs/appearance/ai-features) reopened 2026-11-25: normal SEO fundamentals apply, no additional technical requirements or special AI files/schema, and AI Overviews/AI Mode may use query fan-out. Eligibility requires indexing and snippet eligibility. [OpenAI crawler documentation](https://developers.openai.com/api/docs/bots) also reopened; BI F70–71 distinguish search and training crawlers. Do not imply Google rank proves AI visibility or that all platforms use the same index. AI-specific source/citation/reputation monitoring, question expansion, third-party corroboration, technical access and measurement remain distinct legitimate work. AIO and GEO are overlapping industry terms, not universally standardized mutually exclusive disciplines. The definitions describe how we use the terms; no claim of official taxonomy.
+
+Proposed customer copy:
+
+## Tre forkortelser. Du trenger ikke tre regninger.
+
+SEO, AIO, GEO. Markedsføringsbransjen er flink til å finne opp nye forkortelser. Særlig når det er plass til en ny linje på fakturaen.
+
+Søkemotoroptimalisering har utviklet seg. Kundene søker på Google, stiller spørsmål til ChatGPT og ber AI-assistenter sammenligne leverandører. Vi optimaliserer for hele dette søkemarkedet.
+
+### Hva er egentlig forskjellen?
+
+**SEO - Search Engine Optimization**
+
+Gjør nettsiden synlig i søkemotorer som Google og Bing når potensielle kunder søker etter det du tilbyr.
+
+**AIO - AI Optimization**
+
+Optimalisering for synlighet i AI-baserte søk og svar, slik at bedriften og innholdet ditt blir forstått, funnet og vurdert.
+
+**GEO - Generative Engine Optimization**
+
+Optimalisering med særlig fokus på hvordan bedriften omtales, brukes som kilde og anbefales i AI-genererte svar.
+
+### Google sier det selv
+
+Grunnleggende SEO gjelder også for Googles AI Overviews og AI Mode. Google krever verken et eget AI-schema eller spesielle AI-filer for synlighet i disse søkeresultatene.
+
+[Googles dokumentasjon om SEO og AI-søk](https://developers.google.com/search/docs/appearance/ai-features)
+
+### Nye søkevaner krever også nye arbeidsmetoder
+
+I AI-søk undersøker vi i tillegg hvilke kilder assistentene bruker, hvordan bedriften omtales, hvilke konkurrenter som anbefales, og hvilke spørsmål kundene stiller.
+
+Vi bygger videre på SEO-arbeidet fremfor å begynne på nytt under en annen forkortelse.
+
+Presentation intent: a compact shared-foundation diagram after the introduction, showing "Søkemotoroptimalisering (SEO)" as umbrella, three branches "Tradisjonelt søk" (Google og Bing), "Lokalt søk" (Kart og bedrifter), "AI-søk" (AIO / GEO), and "Felles fundament" with "Teknisk tilgjengelighet", "Relevant innhold og søkeintensjon", "Fagkunnskap, autoritet og troverdighet". Then three concise definitions, Google source and distinct AI workflows. Diagram is a conceptual commercial model, not a ranking guarantee. No new components selected.
+
+Editorial note: headline challenges duplicate invoicing for the same foundational work, not legitimate distinct AI work or different package scope; it does not amend existing offers, prices or terms or promise all specialist work in every SEO agreement. Confirm headline with OWNER. Direct language without habitual caveats; source attribution kept adjacent to the Google statement. Targeted 13 copy checks passed on draft and diagram labels; no full site audit/build or CMS changes. Next: OWNER review section 05 draft 1.
 
 ## Decision log
 
@@ -863,3 +907,4 @@ Presentation: keep draft 4 card bars, add QS 1/10 and 10/10 score indicators abo
 - 2026-11-25 OWNER first approved draft 2, then immediately requested a direct-language revision. Latest request takes precedence; draft 3 saved for review, and the site-specific voice profile records the enduring preference. No implementation authorized.
 - 2026-11-25 OWNER requested simple, benefit-first Google Ads card with concrete 10x contrast and Google sources. Draft 4 saved for review; 10x is a hypothetical calculation, not a verified effect. No implementation authorized.
 - 2026-11-25 OWNER requested direct language and research into Quality Score 1 vs 10. Draft 5 saved with Google sources and explicit historical WordStream model; newer evidence distinguishes theoretical from observed CPC. No implementation authorized.
+- 2026-11-25 OWNER explicitly approved section 04 draft 5. Section 05 draft 1 saved for review, with shared foundation, distinct AI workflows and Google's documentation. No implementation authorized.
