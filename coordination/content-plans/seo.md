@@ -32,9 +32,9 @@ This compact handoff is embedded in the single authoritative page plan, not a se
 
 ### Current resume point
 
-Steps 1–3 complete. Step 4 active, section 02 of 19 (Intensjonen bak søket). Hero locked by OWNER approval; section 02 not approved. The cheap-rullegardin contrast in draft 2 is rejected. Do not reuse it as final copy. Next: review draft 4 below (refinement of draft 3) contrasting broad "solskjerming" with "utvendig screen med montering Oslo", using the side-by-side and word-breakdown approach the OWNER liked from the brake example. Candidate for a defined provider of installed exterior screens: "utvendig solskjerming", "screen solskjerming pris", "utvendig screen med montering Oslo"; consider "utvendig solskjerming borettslag" only if this provider actually handles projects. All are illustrative candidates, no actual demand estimates. Avoid conflating specificity with proven buying intent or profitability. No requirement to retain solskjerming if another industry illustrates the same principle better.
+Steps 1–3 complete. Step 4 active, section 02 of 19 (Intensjonen bak søket). Hero locked by OWNER approval; section 02 not approved. The cheap-rullegardin contrast in draft 2 is rejected. Do not reuse it as final copy. Next: review draft 5 below, per OWNER request for three cards and a worked mathematical example contrasting "solskjerming", "utvendig ZIP screen" and "utvendig ZIP screen med montering Oslo". Use explicitly illustrative demand, offer-fit share, competitor counts, difficulty and relevant-search capture assumptions, not measured data. No claim specificity guarantees buying intent, ranking ease or profitability.
 
-No verified search volumes or conversion/margin data; GSC Wizard subscription blocked Bing query-volume access. Do not invent figures or reuse historical price comparisons as proof of profitability. Section 02 should teach how intent and actual offer fit change the economic opportunity; detailed methods/coverage/measurement/calculator belong to sections 06/09/13/15 respectively. No site changes or publication authorized.
+No verified search volumes or conversion/margin data; GSC Wizard subscription blocked Bing query-volume access. Do not present invented figures or historical price comparisons as proof of profitability. Explicitly labeled hypothetical scenarios are allowed for the OWNER-requested demonstration. Section 02 should teach how intent and actual offer fit change the economic opportunity; detailed methods/coverage/measurement/calculator belong to sections 06/09/13/15 respectively. No site changes or publication authorized.
 
 ### Resume workflow
 
@@ -95,7 +95,7 @@ Recommendation for decision: keep intent-led philosophy + commercial positioning
 | # | OWNER-approved theme | Editorial job / research direction | Draft |
 |---|---|---|---|
 | 01 | Hero | Distinct commercial proposition, audience, reason to read and approved next action. H1 Lab. | OWNER approved |
-| 02 | Intensjonen bak søket | Explain the economics of search intent and BOFU versus information. Backlog 243, 257, 440, 444, 449; Article A03. | Draft 4 / review |
+| 02 | Intensjonen bak søket | Explain the economics of search intent and BOFU versus information. Backlog 243, 257, 440, 444, 449; Article A03. | Draft 5 / review |
 | 03 | Hvem dette er for - Og ikke for - Eneste snekker/tannlege 5 mils radius. | Qualify by competition, commercial opportunity and need; the sole carpenter/dentist in a 50 km radius is an illustrative scenario, not a hard eligibility rule. | Pending |
 | 04 | Fordeler med SEO - Senker kostnad pr. bestilling - Lavere Ads kostnad - AI-Synlighet - Konkurransefortrinn | Demonstrate mechanisms and business benefits with evidence/calculations. Lower order costs and ad CPC are possible, not guaranteed; distinguish shared landing-page quality from direct effects of organic rank. | Pending |
 | 05 | SEO er både AIO - GEO og AI-Søk Optimalisering - Ref. en av de forrige Intelligence intakes. | Challenge artificial rebranding and selling the same fundamentals twice. SEO as umbrella and AI visibility as specialist work, not identical operationally. Backlog 302, 303, 307, 313, 314, 393; F2–3, F69–71. | Pending |
@@ -412,6 +412,53 @@ Begge søkene kan være verdifulle. Vi undersøker hvor stor etterspørselen er,
 
 Editorial note: illustrative hypothetical provider and inferred intentions, not observed search behavior or measured search competition. "Nesten en ferdig tilbudsforespørsel" describes the information in the query, not a guarantee of buying intent. No claim narrower query is easier to rank for or more profitable by default. Targeted draft QA passed the current forbidden character, hidden-format and all 11 phrase regexes copied from app/scripts/audit-copy-style.mjs; full site audit/build not run, no CMS changed. Next: review draft 4 with OWNER, incorporate edits and proceed to section 03 when approved.
 
+### Section 02 — draft 5: three-card intent economics (not approved)
+
+OWNER 2026-11-25 requested three cards with mathematical logic, using the broad-query assumptions of 10,000 monthly searches, 5% relevant to the installed ZIP-screen offer in Oslo, 500 competing suppliers and difficulty 10/10. Keep these as explicit fictional assumptions rather than verified market data. Added middle product query and specific installation query, modeled relevant search share and modeled relevant visit capture. Use the same hypothetical provider and consistent market/time scope; do not add overlapping queries together or equate searches with unique customers. Prior public spot checks and BI 215, 223, 243, 443–445, 449 remain the research basis; no new market measurements. The other numerical inputs and competitor/difficulty assumptions are proposed by the assistant, not OWNER-approved or calculated from the number of competitors. The illustrative score is not an SEO tool metric. Named competitors illustrate categories, not measured SERP positions or resources.
+
+Proposed customer copy (three cards, comparison table and relevant-visit bars; presentation intent only, no MWS component selection):
+
+## Hvem konkurrerer du egentlig mot på Google?
+
+Tenk deg at du selger og monterer utvendige screens i Oslo. Du vil gjerne ligge øverst på Google når noen søker etter solskjerming. Men hva vil de egentlig kjøpe?
+
+Regneeksempel med illustrative tall for søkevolum, kjøpsintensjon og konkurranse.
+
+| | Søk 01 | Søk 02 | Søk 03 |
+|---|---|---|---|
+| Søk | Solskjerming | Utvendig ZIP screen | Utvendig ZIP screen med montering Oslo |
+| Søk per måned | 10 000 | 1 000 | 200 |
+| Relevante for ditt tilbud | 5 % | 40 % | 90 % |
+| Relevante søk | 500 | 400 | 180 |
+| Konkurrenter i eksempelet | 500 | 80 | 12 |
+| Konkurrenttyper | IKEA, JYSK, varehus, nettbutikker og spesialister. | Produsenter, nettbutikker og solskjermingsleverandører. | Leverandører som selger og monterer ZIP screens i Oslo. |
+| Antatt vanskelighetsgrad | 10/10 | 7/10 | 3/10 |
+| Forklaring | Kunden kan være ute etter svært forskjellige produkter. | Produktet er valgt. Leveransen og området er fortsatt uavklart. | Produkt, leveranse og geografisk område er spesifisert. |
+
+### Hva skjer når vi regner på det?
+
+Dersom konkurransen og synligheten gir oss følgende andeler av de relevante søkene:
+
+| | Søk 01 | Søk 02 | Søk 03 |
+|---|---:|---:|---:|
+| Relevante søk | 500 | 400 | 180 |
+| Andel som besøker din side | 1 % | 5 % | 20 % |
+| Relevante besøk | 5 | 20 | 36 |
+
+Lavere søkevolum: 50 ganger.
+
+Flere relevante besøk: 7,2 ganger.
+
+Det bredeste søket ser imponerende ut i en SEO-rapport. Det mest spesifikke kan vise seg å være mer interessant for bedriften.
+
+Vi undersøker hvor stor etterspørselen er, hva kundene ønsker å kjøpe, hvem du konkurrerer mot og hva det krever å bli synlig. Slik prioriterer vi SEO-arbeidet der investeringen har best utsikt til å gi lønnsomme bestillinger.
+
+Hvis du allerede har god synlighet på det brede søket, kan regnestykket se helt annerledes ut.
+
+Editorial/calculation note: relevant searches = monthly query searches x assumed share seeking this provider's actual service and area; relevant visits = relevant searches x assumed fraction of those searches generating a visit. Arithmetic verified: 500/400/180 relevant searches, 5/20/36 visits; 50:1 volume and 7.2:1 relevant visits for search 03 versus 01. 20% is a hypothetical relevant-search capture rate, not guaranteed by specificity, number of rivals or difficulty score; no measured intent share, CTR, difficulty or competitor count. Potential supplier counts are illustrative, not competitors occupying one SERP. Buyer-fit share does not prove readiness to order. Relevant visits are a proxy, not revenue or profit; actual orders, margins, costs and effort would be needed to establish ROI. At 7.2% broad-query relevant capture, the broad query would tie the third query's 36 visits in this scenario. Reserve detailed conversion modeling for section 15. The example is not a rule that low-volume terms win. Keep a prominent assumption label adjacent to the numbers in any implementation.
+
+Targeted QA: all 13 current character/hidden-format/phrase checks passed and arithmetic verified. Full site audit/build not run; no CMS or production changes. Next: OWNER review of draft 5, including assumptions, then section 03 when approved.
+
 ## Decision log
 
 - 2026-11-24 OWNER approved using a persistent project workflow and starting with philosophy and positioning; no final positioning approval yet.
@@ -429,3 +476,4 @@ Editorial note: illustrative hypothetical provider and inferred intentions, not 
 - OWNER rejected the cheap-rullegardin comparison as inconsistent with the commercial SEO system and requested a durable philosophy/system handoff. Embedded START HERE resume contract, preserved approved methodology/Hero/order, and recorded within-offer comparison principle. Section 02 remains open.
 - OWNER clarified the desired broad-category versus specific installed-screen contrast and preferred the earlier workshop explanatory format and Hero review workflow. Draft 3 saved for review.
 - 2026-11-25 resumed on main; refined section 02 to draft 4, retaining heading, comparison and word breakdown. No OWNER approval or CMS changes.
+- 2026-11-25 OWNER requested three cards with mathematical logic, broad-query assumptions and competition/difficulty. Draft 5 saved for review, with explicit fictional scenario and correct arithmetic. No approval or implementation.
