@@ -34,7 +34,7 @@ This compact handoff is embedded in the single authoritative page plan, not a se
 
 ### Current resume point
 
-Steps 1–3 complete. Step 4 active, section 12 of 19 (Google, AI-søk og lokal synlighet). Sections 01–11 are OWNER-approved; preserve exact copy, source links, presentations, unchanged global pricing reference and approved Helt Opplagt proof selection. Next: review section 12 draft 1, three practical channel blocks and an illustrative query fan-out diagram with specialist links. Section 12 not approved; section 13 pending.
+Steps 1–3 complete. Step 4 active, section 13 of 19 (Måling og kontinuerlig optimalisering). Sections 01–12 are OWNER-approved; preserve exact copy, sources, presentations, unchanged global pricing and Helt Opplagt proof selection. Next: review section 13 draft 1, measurement-led decisions, illustrative SeoTool/LeadProof internal tool cards and feedback loop. Respect documented provider/use restrictions and paused integration; no automatic attribution or customer-access promises. Section 13 not approved; section 14 pending.
 
 No verified search volumes or conversion/margin data; GSC Wizard subscription blocked Bing query-volume access. Do not present invented figures or historical price comparisons as proof of profitability. Explicitly labeled hypothetical scenarios are allowed for the OWNER-requested demonstration. Approved section 02 teaches how intent and actual offer fit change the economic opportunity; detailed methods/coverage/measurement/calculator belong to sections 06/09/13/15 respectively. No site changes or publication authorized.
 
@@ -107,8 +107,8 @@ Recommendation for decision: keep intent-led philosophy + commercial positioning
 | 09 | Søkemarkedsdekning | Show the distinctive analytical map of services, demand, visibility and gaps; don't invent whole-market coverage metrics. Backlog 215, 223, 362–364, 440, 444. | OWNER approved (draft 1) |
 | 10 | Dokumenterte resultater | Approved proof, with Helt Opplagt search result and accurate channel/metric scope; do not imply lead or sales lift from clicks. | OWNER approved (draft 1) |
 | 11 | Autoritet og fagkunnskap | First-party expertise, commercially relevant authority, original research/tools and earned links. Backlog 242–248, 260, 380–382. | OWNER approved (draft 1) |
-| 12 | Google, AI-søk og lokal synlighet | Practical channel differences, source/retrieval/citation, local relevance and measurement. Link to specialist pages; do not repeat section 05's taxonomy argument. | Draft 1 / review |
-| 13 | Måling og kontinuerlig optimalisering | Show feedback loop and verified SeoTool/LeadProof capabilities; no claim of exact organic query-to-sale attribution without data. Backlog 169, 205, 284, 294. | Pending |
+| 12 | Google, AI-søk og lokal synlighet | Practical channel differences, source/retrieval/citation, local relevance and measurement. Link to specialist pages; do not repeat section 05's taxonomy argument. | OWNER approved (draft 1) |
+| 13 | Måling og kontinuerlig optimalisering | Show feedback loop and verified SeoTool/LeadProof capabilities; no claim of exact organic query-to-sale attribution without data. Backlog 169, 205, 284, 294. | Draft 1 / review |
 | 14 | Investering, pakker og samarbeid | Explain delivery, provider/client responsibilities, capacity, fit, timescale and ongoing priorities; do not duplicate section 07's package cards/prices. | Pending |
 | 15 | SEO - KRO - Kombinasjon og kalkulator | Demonstrate the multiplicative effect of relevant traffic and conversion; transparent user-editable assumptions, no forecast disguised as results. Backlog 75, 104, 248; component feasibility assessed later. | Pending |
 | 16 | Gratis sjekk | Existing approved global assessment promise: 3 concrete findings within 2 working days. Primary conversion. | Pending |
@@ -1285,7 +1285,7 @@ Google bruker E-E-A-T som et rammeverk for å beskrive kvalitet og troverdighet 
 
 Presentation intent: eyebrow above H2; two contrasting editorial example cards; four compact examples of first-party inputs and earned authority; a four-letter E-E-A-T explanation with a source link. Icons/card layout are preview suggestions, not selected components. No new client data, delivery quotas, guaranteed links or contractual work beyond agreed capacity. 13 targeted copy checks passed on proposed text; full site QA/build and CMS implementation deferred. OWNER approved exact draft 1 on 2026-11-25; editorial approval only.
 
-### Section 12 — draft 1: practical search-channel differences (not approved)
+### Section 12 — draft 1: practical search-channel differences (OWNER approved 2026-11-26)
 
 OWNER explicitly approved section 11 draft 1 on 2026-11-25. Preserve its exact copy, examples and E-E-A-T explanation. Distinct job: explain concrete work across search surfaces, not repeat section 05's umbrella/taxonomy argument, section 11's expertise argument, or section 13's measurement detail.
 
@@ -1375,7 +1375,75 @@ Derfor undersøker vi også søkene som ligger bak AI-svarene. Vi vil at bedrift
 
 [OpenAI om ChatGPT Search](https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt)
 
-Presentation intent: three practical channel blocks with sample search/question, work areas and goal; specialist links; compact query fan-out diagram using the listed labels. Actual arrows are graphical, not textual punctuation. Links shown separately (no ornamental middle dot); the diagram is explicitly illustrative and not a real AI result. Logos/icons are preview suggestions, not new approved assets/components. No CMS edits, new services, prices, guarantees or full build. 13 targeted copy checks passed on proposed customer copy and diagram labels. Next: OWNER review section 12 draft 1.
+Presentation intent: three practical channel blocks with sample search/question, work areas and goal; specialist links; compact query fan-out diagram using the listed labels. Actual arrows are graphical, not textual punctuation. Links shown separately (no ornamental middle dot); the diagram is explicitly illustrative and not a real AI result. Logos/icons are preview suggestions, not new approved assets/components. No CMS edits, new services, prices, guarantees or full build. 13 targeted copy checks passed on proposed customer copy and diagram labels. OWNER approved exact draft 1 on 2026-11-26; editorial approval only.
+
+### Section 13 — draft 1: measurement-led decisions and internal tools (not approved)
+
+OWNER explicitly approved section 12 draft 1 on 2026-11-26. Preserve exact customer copy, links and illustrative query fan-out diagram. Distinct job: show what measured changes mean for the next optimization decision, not repeat section 06's method, section 09's market mapping or section 15's calculator.
+
+Read current BI Backlog 169, 205, 284, 294, 307, Fun Facts 34–35, 37, 83, Measurement Contract and Article Bank measurement entry. Verified current source documents on main: [SeoTool PROJECT](https://github.com/AnelPasic/seoexpert/blob/main/PROJECT.md), [START-HERE](https://github.com/AnelPasic/seoexpert/blob/main/START-HERE.md), [ROADMAP](https://github.com/AnelPasic/seoexpert/blob/main/ROADMAP.md), [LeadProof HANDOFF](https://github.com/AnelPasic/LeadProof/blob/main/HANDOFF.md), and the existing local [measurement article](../../app/src/content/pages/managed-articles/innsikt-male-effekt-av-optimalisering.json). SeoTool has deployed crawler/issue engine, GSC page/query reporting, Core Search and AI Visibility capabilities, and Organic History; avoid promising completed backfill, universal customer access or automated recommendations. ADR-045 (2026-11-23) prioritizes real-data validation and explicitly pauses LeadProof / Conversion Layer integration. LeadProof is a separate deployed lead-only product according to the November 2 handoff; its boundary is deduplicated registered inquiries, known/unknown source, trends and clearly estimated lead value; confirmed sales/order/revenue extension and combined portal are not assumed delivered. No current production account or data check was made. IMPORTANT: SeoTool AI Visibility provider use is restricted to approved internal Medon/individually activated existing-client agency use. No customer-facing results, commercial product, customer access or automated customer reports from this module are authorized; any publication of this tool description must preserve that boundary, describe internal analysis/development only, and not promise provider-dependent output or inclusion in a package. Core Search and Local modules have separate gates; GBP API quota is zero; do not imply GBP API integration or all-project activation. LeadProof development/integration pause is not proof that the existing deployed application stopped running, but do not sell it as ready for universal onboarding. The draft names the tools as development/internal capability, not a new service offer. Revisit customer-facing wording and provider restrictions before implementation, especially "Konkurrenter og AI-synlighet" and the availability note. No new claims of real traffic, customer attribution, automatic decisions or dashboards.
+
+Proposed customer copy:
+
+Måling og kontinuerlig optimalisering
+
+## En pen rapport betaler ingen regninger.
+
+Vi vil vite hvilke tjenester som får mer synlighet, hvilke sider som tiltrekker relevante kunder, og hvilke markedsføringskanaler som skaffer henvendelser og bestillinger.
+
+Derfor utvikler vi også våre egne verktøy for analyse og måling.
+
+### SeoTool
+
+**Hvor godt blir du funnet?**
+
+Illustrasjon av søkeutvikling
+
+- Synlighet og klikk fra Google
+- Utvikling på søkeord og sider
+- Tekniske SEO-problemer
+- Konkurrenter og AI-synlighet
+
+Vårt eget analyseverktøy for søkemotoroptimalisering.
+
+### LeadProof
+
+**Hvor kommer henvendelsene fra?**
+
+Illustrasjon av kanalfordeling
+
+- Organisk søk
+- Annonser
+- AI-søk
+- Øvrig / ukjent
+
+- Registrerte henvendelser
+- Kanal og trafikkilde der den er kjent
+- Utvikling over tid
+- Estimert verdi av henvendelser
+
+Vårt eget verktøy for registrering og analyse av henvendelser.
+
+Verktøy og målinger benyttes etter tilgjengelig datagrunnlag og avtalt omfang.
+
+### Hva skal vi gjøre annerledes neste måned?
+
+Det er her målingene blir interessante. De hjelper oss med å finne ut hvor neste forbedring bør gjøres.
+
+| Det vi observerer | Det vi undersøker videre |
+|---|---|
+| Mange visninger, få klikk | Plassering, overskrift og relevans i søkeresultatet. |
+| Flere besøk, få henvendelser | Tilbudet, nettsiden og veien til bestilling. |
+| Mange henvendelser fra feil kunder | Søkeintensjon, budskap og målgruppe. |
+| Flere relevante henvendelser | Muligheter for å øke synligheten ytterligere. |
+
+Diagram: Måle, Analysere, Forbedre, Måle effekten på nytt
+
+**Du skal vite hva vi har gjort, hvilken utvikling vi ser og hvorfor vi prioriterer det neste tiltaket.**
+
+[Les mer om hvordan vi måler effekten av optimalisering](/innsikt/male-effekt-av-optimalisering/)
+
+Presentation intent: two tool cards with clearly labeled abstract illustrative line and channel-division graphics (no actual customer data, axes, numeric share or product screenshot); the channel labels are chart legend only, not a measured data split. Do not present synthetic graphs as measured improvements or reuse an actual customer screenshot without authorization. A diagnostic table pairs observations with investigations, not unproven causes or automatic conclusions. Show a simple feedback-loop diagram. Keep link to existing measurement article, and clear distinction between visibility, visits, genuine inquiries, qualified leads, confirmed orders and estimated value. GSC aggregate query/page data does not identify an individual buyer's query; unknown source stays unknown; no exact query-to-sale attribution, automatic AI-vs-organic classification or causal proof. Comparisons require comparable periods and coverage; no new report cadence or access promise. Icons and diagrams are proposals, no components chosen. Targeted 13 copy checks passed, full CMS copy audit/build deferred. No CMS or product repository changes. Next: OWNER review section 13 draft 1.
 
 ## Decision log
 
@@ -1413,3 +1481,4 @@ Presentation intent: three practical channel blocks with sample search/question,
 - 2026-11-25 OWNER explicitly approved section 09 draft 1. Section 10 draft 1 saved for review, selecting existing approved Helt Opplagt organic search proof via native ProofList. No implementation authorized.
 - 2026-11-25 OWNER explicitly approved section 10 draft 1. Section 11 draft 1 saved for review with first-party expertise, original content assets, earned authority and E-E-A-T. No implementation authorized.
 - 2026-11-25 OWNER explicitly approved section 11 draft 1. Section 12 draft 1 saved for review, covering practical organic, local and AI-search work with illustrative query fan-out. No implementation authorized.
+- 2026-11-26 OWNER explicitly approved section 12 draft 1. Section 13 draft 1 saved for review after checking both product repositories and measurement contract; documented current restrictions and paused integration. No implementation authorized.
