@@ -22,6 +22,8 @@ Changing a tone setting does not regenerate or publish existing content, change 
 - Self-aware honesty: humor must not hide limits, costs or uncertainty. Tease an inefficient system or industry habit, never the buyer.
 - Keep prices, proof, forms, legal, safety, health and transactional details nøktern, including inside mixed sections.
 
+- **OWNER 2026-11-25 - Avoid unnecessary hedging in commercial copy:** Use confident, active sentences and concrete mechanisms. Avoid habitual weakening such as "kan skaffe", "kan gi" and "kan bidra til", and avoid repetitive defensive caveats around already labeled examples. Prefer stating the actual relationship, e.g. "Høyere konverteringsrate senker kostnaden per bestilling ved samme trafikkostnad." Where an outcome is not certain, write the controllable action, the purpose, the factual mechanism or a clearly scoped relationship rather than turning a possibility into a guarantee. Keep necessary material facts, conditions, evidence labels and legal disclosures. This is an editorial style preference, not a blanket ban on a word, new hard linter rule, permission to rewrite approved content, or change to the MWS evidence standard.
+
 ## Adjustable flavor (0 none; 1 light; 2 noticeable; 3 sharp)
 
 | Dimension | Suggested default | Owner-adjustable range | Guardrail |
