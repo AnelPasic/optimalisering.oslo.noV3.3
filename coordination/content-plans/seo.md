@@ -34,7 +34,7 @@ This compact handoff is embedded in the single authoritative page plan, not a se
 
 ### Current resume point
 
-Steps 1–3 complete. Step 4 active, section 08 of 19 (Fra søkeintensjon til riktig nettside). Sections 01–07 are OWNER-approved; preserve exact copy, source links, presentations and unchanged global pricing reference. Next: review section 08 draft 1, illustrative solskjerming query-to-page mapping, improve existing page versus create distinct answer, and practical accessibility/internal linking tasks. Section 08 not approved; section 09 pending.
+Steps 1–3 complete. Step 4 active, section 09 of 19 (Søkemarkedsdekning). Sections 01–08 are OWNER-approved; preserve exact copy, source links, presentations and unchanged global pricing reference. Next: review section 09 draft 1, illustrative service/search-theme visibility matrix with distinct not-found versus unexamined states, followed by commercial prioritization. No fabricated whole-market coverage percentage. Section 09 not approved; section 10 pending.
 
 No verified search volumes or conversion/margin data; GSC Wizard subscription blocked Bing query-volume access. Do not present invented figures or historical price comparisons as proof of profitability. Explicitly labeled hypothetical scenarios are allowed for the OWNER-requested demonstration. Approved section 02 teaches how intent and actual offer fit change the economic opportunity; detailed methods/coverage/measurement/calculator belong to sections 06/09/13/15 respectively. No site changes or publication authorized.
 
@@ -103,8 +103,8 @@ Recommendation for decision: keep intent-led philosophy + commercial positioning
 | 05 | SEO er både AIO - GEO og AI-Søk Optimalisering - Ref. en av de forrige Intelligence intakes. | Challenge artificial rebranding and selling the same fundamentals twice. SEO as umbrella and AI visibility as specialist work, not identical operationally. Backlog 302, 303, 307, 313, 314, 393; F2–3, F69–71. | OWNER approved (draft 3) |
 | 06 | Fra søkemarked til ordrebok | Present approved six-step method, explain why sequence matters. Backlog 449. | OWNER approved (draft 2) |
 | 07 | Pakker og Priser | Early actual global package selection/prices and approved buying conditions. No duplicated pricing master. | OWNER approved (draft 1) |
-| 08 | Fra søkeintensjon til riktig nettside | Demonstrate practical implementation with a real or explicitly hypothetical example: intent mapping, improve vs create, technical accessibility, internal links. Backlog 1, 204, 231, 257, 362–364, 440. | Draft 1 / review |
-| 09 | Søkemarkedsdekning | Show the distinctive analytical map of services, demand, visibility and gaps; don't invent whole-market coverage metrics. Backlog 215, 223, 362–364, 440, 444. | Pending |
+| 08 | Fra søkeintensjon til riktig nettside | Demonstrate practical implementation with a real or explicitly hypothetical example: intent mapping, improve vs create, technical accessibility, internal links. Backlog 1, 204, 231, 257, 362–364, 440. | OWNER approved (draft 1) |
+| 09 | Søkemarkedsdekning | Show the distinctive analytical map of services, demand, visibility and gaps; don't invent whole-market coverage metrics. Backlog 215, 223, 362–364, 440, 444. | Draft 1 / review |
 | 10 | Dokumenterte resultater | Approved proof, with Helt Opplagt search result and accurate channel/metric scope; do not imply lead or sales lift from clicks. | Pending |
 | 11 | Autoritet og fagkunnskap | First-party expertise, commercially relevant authority, original research/tools and earned links. Backlog 242–248, 260, 380–382. | Pending |
 | 12 | Google, AI-søk og lokal synlighet | Practical channel differences, source/retrieval/citation, local relevance and measurement. Link to specialist pages; do not repeat section 05's taxonomy argument. | Pending |
@@ -1091,7 +1091,7 @@ Retain the actual global heading, intro, three package cards, existing visuals, 
 
 QA: zero new customer-facing copy in this section; no copy rewrite or changes to global pricing authorized. The existing master contains legacy wording, including "fokuserrer"; preserve as instructed rather than silently clean up shared content in this task. Existing copy QA/build deferred to implementation; no CMS changes. OWNER approved unchanged global reference placement on 2026-11-25; editorial approval only.
 
-### Section 08 — draft 1: match the customer's question to the right page (not approved)
+### Section 08 — draft 1: match the customer's question to the right page (OWNER approved 2026-11-25)
 
 OWNER explicitly approved section 07 draft 1 on 2026-11-25. Retain unchanged global pricing reference at its agreed position; no global price master edits.
 
@@ -1157,7 +1157,58 @@ Kontrollerer at søkemotorene finner og leser sidene, og knytter relevant innhol
 
 **Målet er å dekke flest mulig verdifulle søk med færrest mulig unødvendige sider.**
 
-Presentation intent: one compact visual cluster of three query pills feeding a single service-page card, followed by a comparison query feeding a distinct comparison-page card with contextual links onward. Then four practical tasks. All names/content are illustrative, not real client pages or recommendations based on measured query data. No actual URL creation, asset production or component choice; visual structure is a preview suggestion. Retain actual proof and real results for section 10, detailed measurement for section 13. Targeted 13 copy checks passed; no full site audit/build or CMS changes. Next: OWNER review section 08 draft 1.
+Presentation intent: one compact visual cluster of three query pills feeding a single service-page card, followed by a comparison query feeding a distinct comparison-page card with contextual links onward. Then four practical tasks. All names/content are illustrative, not real client pages or recommendations based on measured query data. No actual URL creation, asset production or component choice; visual structure is a preview suggestion. Retain actual proof and real results for section 10, detailed measurement for section 13. Targeted 13 copy checks passed; no full site audit/build or CMS changes. OWNER approved exact draft 1 on 2026-11-25; editorial approval only.
+
+### Section 09 — draft 1: map the relevant search market (not approved)
+
+OWNER explicitly approved section 08 draft 1 on 2026-11-25. Preserve exact copy, illustrative query mapping and presentation. Section 09 makes the approved differentiation Søkemarkedsdekning tangible at the offer/market level rather than repeating section 02's arithmetic, section 06's process or section 08's individual page decisions.
+
+Read current BI Backlog 215, 223, 362–364, 440, 444, 449; Fun Facts 34–37, 83; Evidence Registry retrieval claims and Article Bank A03. Use business-critical query universe covering actual services, commercial and informational demand, local needs and brand/entity where relevant. Link query clusters to intended pages, existing visibility, competitive evidence, business value, conversion evidence and priority. Search Console data is useful for observed query/page visibility but not a complete market census, and absence from GSC does not prove lack of visibility. Actual analysis must supplement observed queries with relevant demand research, defined location/device/date and observed search results or other appropriate evidence. Distinguish a search where the business was not found within the inspected result range from an unexamined search; define good/weak visibility thresholds and scope for actual reporting. Do not infer competitor customer acquisition, sum overlapping demand or claim a whole-market percentage from incomplete data. No new external factual or numerical claims requiring verification; prior Google sources retained in earlier sections. Extend the hypothetical solskjerming example to a business explicitly offering both screens and markiser. The eight phrases and visibility states are invented solely to explain the analytical format, not client data or a validated query universe. Categories represent search themes, not mutually exclusive funnel stages. Do not imply all product variants or query clusters require separate pages. In actual delivery prioritize economic value, credible competitive opportunity, existing coverage and effort, not automatically every missing or weak cell. No commitment to specific ranking thresholds, guaranteed customers or an existing automated SeoTool feature.
+
+Proposed customer copy:
+
+Søkemarkedsdekning
+
+## Hvor mye av markedet ditt er du egentlig synlig i?
+
+En førsteplass på Google sier lite om resten av markedet ditt. Du ligger kanskje øverst når noen søker etter én av tjenestene dine, mens konkurrentene dominerer søkene etter de andre.
+
+Vi kartlegger hvilke produkter og tjenester du tilbyr, hvordan kundene søker etter dem, og hvor du mangler synlighet.
+
+### Slik ser vi på søkemarkedet ditt
+
+Illustrativt eksempel: En bedrift som selger og monterer screens og markiser i Oslo.
+
+| | Screens | Markiser |
+|---|---|---|
+| Produktsøk | Utvendig screen: God synlighet | Terrassemarkise: Svak synlighet |
+| Prissøk | Pris på screen: Svak synlighet | Pris på markise: Ikke funnet |
+| Lokale søk | Screen i Oslo: God synlighet | Markiser i Oslo: Ikke funnet |
+| Bestilling | Screen med montering i Oslo: Svak synlighet | Markise med montering i Oslo: Ikke undersøkt |
+
+Eksempel på kartlegging av utvalgte søk, ikke faktiske søkeresultater.
+
+### Hvor ligger den neste bestillingen?
+
+I dette eksempelet har bedriften god synlighet på screens, men mangler synlighet på flere av de andre søkene.
+
+Det interessante er hvor mye de ulike mulighetene er verdt for bedriften, og hva som kreves for å bli synlig.
+
+**Behold det som fungerer**
+
+Vi tar vare på synligheten bedriften allerede har.
+
+**Utnytt det som nesten fungerer**
+
+Sider som allerede får synlighet, men ligger for langt nede i søkeresultatene, er naturlige kandidater for forbedring.
+
+**Finn nye kunder i markedet**
+
+Vi identifiserer verdifulle søk der bedriften mangler synlighet, undersøker konkurransen og prioriterer de beste mulighetene.
+
+**Du får en SEO-strategi basert på hva bedriften din selger og hvor det finnes flere kunder å hente.**
+
+Presentation intent: eyebrow "Søkemarkedsdekning" above H2, compact matrix with two service columns and four search themes, visible text labels plus restrained green/amber/red/neutral cell backgrounds for good/weak/not found/not investigated. Retain explicit illustration label adjacent to matrix. No market share percentages or simulated actual ranking scores. Three follow-on actions: protect existing visibility, improve existing opportunities, identify new commercially relevant search opportunities. No new components or CMS fields selected; actual data/technical capability review later. 13 targeted copy checks passed on the customer-facing draft. No full site audit/build or CMS changes. Next: OWNER review section 09 draft 1.
 
 ## Decision log
 
@@ -1191,3 +1242,4 @@ Presentation intent: one compact visual cluster of three query pills feeding a s
 - 2026-11-25 OWNER requested clearer customer-facing heading Fra søk til bestillinger, changed opening and WUD process reference. Draft 2 saved for review; internal six-step method unchanged. No implementation authorized.
 - 2026-11-25 OWNER explicitly approved section 06 draft 2. Section 07 draft 1 records reuse of unchanged existing global pricing element; reviewed actual source on main. No implementation authorized.
 - 2026-11-25 OWNER explicitly approved section 07 draft 1 (unchanged global pricing reference). Section 08 draft 1 saved for review with illustrative query-to-page mapping and practical SEO tasks. No implementation authorized.
+- 2026-11-25 OWNER explicitly approved section 08 draft 1. Section 09 draft 1 saved for review with illustrative search-market visibility matrix and priority approach. No implementation authorized.
