@@ -1,6 +1,6 @@
 # SEO Flagship V3 — /seo/
 
-**Status:** Active editorial project; step 4 in progress; steps 1–3 approved. No page rewrite, implementation or publication authorized in this planning phase.
+**Status:** Active editorial project; step 5 in progress; steps 1–4 complete. No page rewrite, implementation or publication authorized in this planning phase.
 **Target:** https://optimalisering.oslo.no/seo/
 **Scope:** Clean-sheet commercial flagship, structure first, one section at a time. Preserve protected facts, prices, shared content, design and existing technical rules.
 
@@ -34,7 +34,7 @@ This compact handoff is embedded in the single authoritative page plan, not a se
 
 ### Current resume point
 
-Steps 1–3 complete. Step 4 active, section 19 of 19 (SEO - Fakta og Gjør det selv - Artikler). Sections 01–18 are OWNER-approved; preserve exact copy, sources, presentations, protected global references, Helt Opplagt proof, section 13 use restrictions, section 17 FAQ scope/placement follow-ups and section 18 article freshness follow-up. Next: review section 19 draft 1, three existing evergreen article selections and five future article ideas. No article creation, CMS changes or publication. Section 19 not approved; after approval proceed to step 5 whole-page review, not implementation.
+Steps 1–4 complete. All 19 sections OWNER-approved. Step 5 active: whole-page review performed and recorded below, retain sequence and exact approved copy pending specific revisions. Next: review R1–R5 and shared package scope ambiguity, resolve tool-use boundaries and publication-sensitive wording, then complete step 5 and proceed to existing component mapping (step 6) only with authority. Preserve all protected global references, Helt Opplagt proof, FAQ placement and article freshness follow-ups. No CMS or publication authorized.
 
 No verified search volumes or conversion/margin data; GSC Wizard subscription blocked Bing query-volume access. Do not present invented figures or historical price comparisons as proof of profitability. Explicitly labeled hypothetical scenarios are allowed for the OWNER-requested demonstration. Approved section 02 teaches how intent and actual offer fit change the economic opportunity; detailed methods/coverage/measurement/calculator belong to sections 06/09/13/15 respectively. No site changes or publication authorized.
 
@@ -51,7 +51,7 @@ No verified search volumes or conversion/margin data; GSC Wizard subscription bl
 - [x] 1. Establish overall philosophy and positioning
 - [x] 2. Agree themes and section order
 - [x] 3. Develop and approve the Hero
-- [ ] 4. Develop one section at a time with relevant research
+- [x] 4. Develop one section at a time with relevant research
 - [ ] 5. Review the whole page and eliminate repetition
 - [ ] 6. Select existing MWS components and implement
 - [ ] 7. Complete QA and authorized publication
@@ -114,7 +114,7 @@ Recommendation for decision: keep intent-led philosophy + commercial positioning
 | 16 | Gratis sjekk | Existing approved global assessment promise: 3 concrete findings within 2 working days. Primary conversion. | OWNER approved (draft 1) |
 | 17 | FAQ og faglig fordypning | Answer actual remaining buyer objections; point to useful deeper pages. | OWNER approved (draft 2) |
 | 18 | SEO - Nytt - Artikler | Relevant topical SEO developments and analyses, including existing November update article where appropriate. | OWNER approved (draft 1) |
-| 19 | SEO - Fakta og Gjør det selv - Artikler | Evergreen factual and practical supporting articles; Article Bank, Fun Facts, Evidence Registry; select useful topics rather than fill a quota. | Draft 1 / review |
+| 19 | SEO - Fakta og Gjør det selv - Artikler | Evergreen factual and practical supporting articles; Article Bank, Fun Facts, Evidence Registry; select useful topics rather than fill a quota. | OWNER approved (draft 1) |
 
 **OWNER notes:** Vi må også utfordre de som prøver å selge GEO AIO , vi skal ha de tjenestene også men alt er SEO. Skal ha det viktigste for at en skeptisk kunde som har vært gjennom mange SEO byrå nettsider sier JA dette skal vi ha. Samt at du ville ha sitert siden og Google hadde rangert den godt. Er det noe overflødig, ja da finnes det undersider.
 
@@ -275,7 +275,7 @@ ctaSupport: 3 konkrete funn innen 2 virkedager.
 
 Step 3 complete. Approved editorial draft only, not authorization to change CMS or publish. SEO-system denotes the actual methodology; later sections must demonstrate its mechanisms and verified tooling.
 
-## Step 4 — section-by-section drafting (in progress)
+## Step 4 — section-by-section drafting (OWNER approved; complete)
 
 ### Section 02 — Intensjonen bak søket (draft 1, not approved)
 
@@ -1625,7 +1625,7 @@ Editorial policy: select consequential changes to organic search and AI search t
 
 **Freshness follow-up discovered 2026-11-26:** official [Google Search Status Dashboard](https://status.search.google.com/incidents/WLxcJyC6jMWMfryxsKMc) now confirms rollout completed 24 November 2026 at 06:03 PST, after existing article's 23 November written-date snapshot. The dated statement that Google had not yet announced an end at writing is historically correct, but add a clearly dated update to article and synchronize BI F129/A16 before publication/reuse; do not silently rewrite historical observation or infer causation. Respect at least one full week after confirmed completion for systematic before/after analysis as documented in the article/BI. This is a follow-up, not a claim of observed customer impact or an authorization to edit another source. No current live URL/render test or site build performed. 13 targeted copy checks passed on local heading/intro and existing listing snapshot. OWNER approved exact draft 1 on 2026-11-26; editorial approval only.
 
-### Section 19 — draft 1: evergreen SEO facts and practical guides (not approved)
+### Section 19 — draft 1: evergreen SEO facts and practical guides (OWNER approved 2026-11-26)
 
 OWNER explicitly approved section 18 draft 1 on 2026-11-26. Preserve exact heading, intro, November article selection and freshness follow-up. Distinct purpose: practical, durable reader value for businesses that want to understand or do some of the work themselves, not a second news feed or a repeat of service arguments. Read current BI Article Bank (including A01, A03, A04, A13), full Fun Facts 18–19, 34–37, 83, Backlog 248, 354, 362–364 and Evidence Registry retrieval model. Existing CMS article sources inspected on main; use three relevant existing guides, rather than create placeholder articles to fill a quota. The mixed news/DIY article /innsikt/google-ai-sok-seo/ also exists, but has topical platform and ad-study claims; do not select it as evergreen or silently add it to approved section 18. Consider topical inclusion separately after a freshness review if OWNER requests it.
 
@@ -1658,7 +1658,69 @@ Future article priorities (editorial ideas only, no new pages, URLs, published c
 4. Slik undersøker du om ChatGPT finner bedriften din — A01, Evidence Registry OPENAI-SEARCH-001/002. Separate availability, discovery, retrieval and actual mentions/citations; no guaranteed recommendation or restricted provider output.
 5. Slik ber du kunder om Google-anmeldelser — A13; supporting F105–109 referenced by Article Bank, retrieve full entries and verify current platform policy when writing. Not a new factual assertion or review-generation promise.
 
-Select only ideas that pass Page Existence Test, provide concrete independent reader value and complement existing guides. Current articles' substantive claims not re-audited as part of this listing-only task. No new external factual claims. Future writing requires source review and relevant current verification. 13 targeted copy checks passed on local heading/intro and existing listing snapshots; no full site audit/build. No CMS, global, article or BI changes authorized. Next: OWNER review section 19 draft 1. After approval, mark step 4 complete and proceed to step 5 whole-page review including all prior unresolved conditions; do not implement or publish yet.
+Select only ideas that pass Page Existence Test, provide concrete independent reader value and complement existing guides. Current articles' substantive claims not re-audited as part of this listing-only task. No new external factual claims. Future writing requires source review and relevant current verification. 13 targeted copy checks passed on local heading/intro and existing listing snapshots; no full site audit/build. No CMS, global, article or BI changes authorized. OWNER approved exact draft 1 on 2026-11-26; editorial approval only. Step 4 complete; proceed to step 5 review below.
+
+## Step 5 — whole-page review (in progress)
+
+2026-11-26: OWNER approved section 19 draft 1 and requested whole-page review. Step 4 complete, all 19 sections approved. Reviewed the actual approved Hero and latest approved text/selection of sections 02–19 from current main, excluding historical rejected drafts. Preserve all approved content until specific revisions are accepted. No CMS edits, component implementation, global source changes or publication authorized. MWS flagship quality review below is the one substantive review, not a new approval process.
+
+### Overall verdict
+
+Retain the 19-section sequence. The strongest proposition is commercial intent-led SEO, the search-market coverage map and flexible capacity-based agreement; the narrative progresses from qualification, economics and method to price, demonstrated competence, proof, cooperation and conversion. Keep shared illustrative solskjerming thread across 02/08/09/11/12; each performs a different job. Keep one primary action /seo/#sjekk, existing buying links secondary. A long page is not a problem by itself; do not turn every example into a large decorative card or introduce filler. Prior competitor research in the plan (Aiseo, Synlighet, Innovate/Solid Media and WUD reference as actually recorded) is directional, not a current exhaustive competitor census; no new market-wide uniqueness claim. The largest evidential gap is qualified leads, confirmed customers, profitability and causation, not a shortage of examples.
+
+| Section | Review result |
+|---|---|
+| 01 | Keep approved Hero exact. Specific commercial reason to read and take free check. |
+| 02 | Keep three-card arithmetic and exact formula; propose aligning "Relevant kjøpsintensjon" label with assumed offer/need/geography fit and make competition counts/difficulty unambiguously hypothetical, not SEO vendor scores. |
+| 03 | Keep qualification and OWNER closing exact; comma splice in closing is minor OWNER wording, no unrequested edit. Full capacity can still justify better customer mix; not rigid exclusions. |
+| 04 | Keep benefits and CPA calculation; historically modeled Quality Score example needs adjacent explicit 2013/theoretical label and diagnostic score distinction. Keep 10x only as model arithmetic. Specify equal contribution margin and equivalent other costs for higher affordable CPC. |
+| 05 | Keep strong taxonomy/factura angle and skiing analogy. SEO umbrella does not eliminate genuinely distinct AI workflows; maintain 12. |
+| 06 | Keep six-step method and three phases; correct unsupported inference of competitor customers and scope actual order measurement to available data. Checklist is deliverable overview, not free audit. |
+| 07 | Keep global priser reference and commercial authority; compare system icons/claims against actual product scope, shared-source commercial FAQ conflict below. |
+| 08 | Keep same service-page vs comparison-page demonstration; final four tasks overlap 06, use compact presentation. Preserve explicit illustrative status and no universal page-per-query rule. |
+| 09 | Keep distinctive service/search matrix; labels must distinguish inspected absence vs unexamined, never invented market coverage or customer counts. |
+| 10 | Keep guarded Helt Opplagt proof, exact metric, values and periods. Do not call it proven sales or lead lift. |
+| 11 | Keep field-experience hook, examples and E-E-A-T, original sources/assets. No fabricated expertise. |
+| 12 | Keep three channel differences and illustrative fan-out; distinguish inferred/observed queries, don't promise access to hidden query logs or AI ranking. |
+| 13 | Keep diagnostic table and loop, revise tool card scope before publishing, no provider-dependent customer deliverables or fake graphs posing as real data. |
+| 14 | Keep capacity/priorities and responsibilities, no-binding reassurance intentionally repeated; clarify operational scope through authoritative pricing terms. |
+| 15 | Keep global calculator reference and local compounding explanation. Clarify constant-traffic doubling example and model outcomes are not forecasts. |
+| 16 | Keep protected global sjekk, two required fields, optional comment and primary anchor, no form/offer edits. |
+| 17 | Keep seven local FAQ and owner geographic answer; resolve local-only FAQ placement without merging global questions. |
+| 18 | Keep selected November article and intro; dated freshness follow-up required before reuse. |
+| 19 | Keep three existing guide references, future ideas editorial only. No new article production dependency. |
+
+### Repetition and concrete proposals for OWNER review
+
+Do not merge sections or rewrite approved text silently. 02 (which search), 08 (which page), 09 (which market gap) are complementary. 05 (shared foundations/commercial model) and 12 (different workflows) are complementary. 06 is high-level method, 08 practical execution, 13 diagnostics: visual compression recommended for 06 checklist and 08 task list, not deletion. 04 shows financial mechanism, 15 permits own inputs: retain both; 07 price/master, 14 capacity/responsibility, 17 brief price and risk answers: purposeful buying repetition, no second price table. Same CTA reassurance in Hero, package and form is intentional. Keep concise FAQ and article selection.
+
+Proposed targeted revisions (not yet approved, preserve exact previous drafts):
+- R1 section 02: "Relevant kjøpsintensjon" -> "Andel relevante søk" (assumed fit to actual service, need and geography, not observed purchase readiness). Keep formula, numbers, and cards. Add adjacent concise "Alle tall er illustrative, også konkurranse og vanskelighetsgrad." if current caption is insufficient; avoid redundant caveats. Math 5,20,36 and 7.2x, 50x volume ratio correct.
+- R2 section 04: change source label to "Regneeksempel basert på WordStreams teoretiske Quality Score-modell fra 2013." Add next to 1/10 and 10/10 comparison "Quality Score er et diagnoseverktøy. Google bruker ikke selve poengsummen direkte til å beregne klikkprisen." Preserve 30/3 and 333/3333 only as model. Prefer modern evidence if ever available, no current auction guarantee. Qualify affordable CPC at same contribution margin and target profit per order, all else equal. CPA example 20k/40=500 and 25k/60=416.67, 16.67% reduction, rounded 417 and 17% correct. Prior section research sources unchanged; no new external search in this review.
+- R3 section 06: replace "hvilke relevante søk og kunder konkurrentene får i stedet" with "hvilke relevante søk konkurrentene er synlige på i stedet". Measurement paragraph proposed "Vi følger med på hvilke søk som gir synlighet, hvilke sider som tiltrekker kunder og hvor mange besøk som ender i henvendelser. Der vi har data om bestillinger, følger vi også disse. Det vi lærer, bestemmer hva vi jobber med videre." Retain order label with scope, avoid query-to-sale inference. Section 13 wording needs consistent distinction between registered inquiries and observed/confirmed orders.
+- R4 section 13: replace SeoTool card bullet "Konkurrenter og AI-synlighet" with "Konkurrenters synlighet i søk", with staff/internal analysis scope. Avoid marketing restricted AI Visibility module as customer deliverable, selling access, showing provider output or promising new-client activation. Consider explicit "Vi bruker egne verktøy i analysearbeidet vårt. Målinger avhenger av tilgjengelige data og avtalt omfang." Keep LeadProof independent and estimated value clearly labelled, not sales. No inference that tool integration is complete. Prefer icons or plainly labelled schematic illustrations over rising mock charts that look like actual results. Existing package master names SeoTool, LeadProof, GEO Grid and SEO surveillance; assess actual rendered claims for consistency with module restrictions, no silent global edit. Keep independently deliverable general AIO service and specialist page, not the restricted provider-dependent output. Owner confirmation and applicable provider/legal review required before customer-facing module use.
+- R5 section 15: "Du trenger ikke dobbelt så mange besøk for å doble antallet bestillinger. Med samme antall besøk gir en dobling av konverteringsraten dobbelt så mange bestillinger." Keep original multipliereffect closing, 12-month compounding assumption, model caveat and contribution-margin/lead-to-sale text. Default 10% monthly is 213.84% compounded traffic growth, ~62.77 vs 10 monthly conversions, 6.28x. Not cumulative orders, forecast or ROI. Existing master has "Bestillinger per måned" label even when conversions are inquiries; note this ambiguity locally or consider shared change only on authorization.
+
+### Outstanding conditions and evidence
+
+- Current proof registry still explicitly permits Helt Opplagt exact public organic-click claim (2,162 vs 4,181, +93%, March–September 2025 vs 2026); arithmetic +93.39%. Existing internal limitations record total forms 79 vs 67, not evidence of lead growth. Preserve protected public projection; no disclosure of private evidence fields or new live account query. Actual commercial outcome evidence absent; plan future case using qualified leads, actual orders/margin, comparable periods and consent, without blocking on invented evidence.
+- Rechecked current package master and global FAQ. FAQ promises simple new website/dedicated landing page included and 1–2 months on smallest package; master prices larger new websites/technical/redesign separately, usually included in Enterprise. Potential scope ambiguity, not necessarily logical contradiction (simple vs larger). OWNER to define actual included scope/time expectation; preserve global sources and no change to prices. Scope of free check and paid service distinct. Existing exact price source 4500/6900/from14900 excl VAT, one/two/agreed larger capacity, ad media additional.
+- Rechecked SeoTool current PROJECT and START-HERE: internal agency AI Visibility use existing-client individually approved activation only; customer results/access/commercial product/automated reports not approved. ADR-045 pauses integration; Local/GBP own gates, quota zero per documented observation. LeadProof HANDOFF lead-only, estimated values; no fresh live account verification. No new provider calls or product modifications.
+- Rechecked InnerPage and faq-items: local FAQ fallback after content; global sporsmal merges shared and page questions. For step 6 evaluate native local-only placement before articles (preferred), versus approved order adjustment if no supported mechanism. Do not globally change FAQ or introduce an unauthorized schema. ClosingCta automatically appended by InnerPage: inspect actual CTA target and ensure secondary/closing action remains consistent with primary /seo/#sjekk, no second lead form. Reuse existing components, report actual gaps for approved charts/matrix/diagram rather than custom CSS by default.
+- November article freshness follow-up from section 18: official completion 24 November (recorded prior verification), add dated correction/BI sync only when separately authorized; no new update status or causal claims verified this turn. Future articles not required for launch. No new live URL check or production test.
+- Copy QA: extracted actual 13 source regexes and checked 15 local draft/selection text excerpts (02–06,08–09,11–15,17–19); initial Hero range accidentally included historical notes, corrected to exact approved Hero and rechecked with same regexes. No failures on the 16 exact local excerpts/snapshots. Sections 07/10/16 reference protected existing content; no new copy. Full native script/build/preview not run; validate actual render and all sources at implementation. Historical source notes/Markdown links not customer copy. No approved copy altered in this review.
+
+### MWS flagship quality gate — substantive findings
+
+1. Citation: concrete explainable formula (02,15), scoped GSC proof (10), Google documentation for AI eligibility/E-E-A-T and fan-out (05/11/12), useful coverage and mapping (08/09), diagnostic table (13). These are candidate useful passages, not evidence of actual citations. Strengthen explicit model limitations and observed/inferred labels.
+2. Recommendation: genuine reason is an understandable economic prioritization methodology plus implementation responsibility, flexible capacity, transparent entry price, no binding and low-friction free assessment. Actual evidence supports visibility, not sales. No claim an assistant or customer has recommended Medon.
+3. Information gain: combined commercial intent arithmetic and service-by-search matrix, improve-vs-create decision, first-party expertise and economics are substantive compared with earlier competitor scan's broad traffic/customer promises. Not unique market-wide or novel research; do not claim exclusive method. Strong illustrative mechanism, weak firsthand commercial evidence.
+4. Demonstrated competence: actual work shown in 06,08,09,11,12,13, diagnostic differentiation and guarded measurement. Need provider boundaries and competitor inference correction. Tools are supporting infrastructure, not proof of performance.
+5. Commercial value: outcome profitable orders; likelihood through concrete method plus scoped proof; time-to-value initial assessment within two business days (not ranking promise), ongoing progress explained 14; effort reduced by actual agreed implementation and clear owner inputs, no binding, price and costs transparent. Avoid presenting all listed services/system outputs as simultaneously included. Main action /seo/#sjekk.
+6. Evidence/original reasoning: illustrations labelled, arithmetic recomputed, proof metric/period preserved, historical QS model needs sharper label, no direct causation or sales attribution, compounding assumptions adjacent. Tool use, shared price scope and current article follow-up recorded.
+7. Independent reader value: worked examples, page/market map, first-party content, channel differences, diagnostics, own-input calculator, FAQ and actual guides teach practical decisions without making the service page an encyclopedia.
+
+Conclusion: strong editorial concept, conditionally ready for step 6 after OWNER resolves/accepts the targeted revisions and scope issues above. Step 5 remains active, no implementation authorization. Next: review R1–R5 and the shared package scope ambiguity, agree targeted copy revisions; then complete step 5 and plan existing component mapping with actual FAQ/order and tool-use constraints. No need to reopen Hero, structure or 19 section decisions.
 
 ## Decision log
 
@@ -1704,3 +1766,4 @@ Select only ideas that pass Page Existence Test, provide concrete independent re
 - 2026-11-26 OWNER revised section 17 geographic FAQ answer; draft 2 saved with only that customer-facing answer changed (comma after Ja), existing specialist link retained. Other six questions unchanged. Awaiting review; no implementation authorized.
 - 2026-11-26 OWNER explicitly approved section 17 draft 2. Section 18 draft 1 saved for review; existing November article listing selected, official completion date verified and follow-up recorded. No implementation authorized.
 - 2026-11-26 OWNER explicitly approved section 18 draft 1. Section 19 draft 1 saved for review with three existing evergreen article references and five research-backed future article ideas. Step 4 remains active pending section 19 approval; next step 5 whole-page review. No implementation authorized.
+- 2026-11-26 OWNER approved section 19 draft 1; step 4 complete (19/19). Step 5 whole-page substantive review recorded, including targeted R1–R5 proposals and outstanding dependencies; all approved copy unchanged, no implementation authorized.
