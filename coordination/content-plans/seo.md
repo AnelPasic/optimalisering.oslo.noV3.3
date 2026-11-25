@@ -34,7 +34,7 @@ This compact handoff is embedded in the single authoritative page plan, not a se
 
 ### Current resume point
 
-Steps 1–3 complete. Step 4 active, section 05 of 19 (SEO, AIO og GEO). Hero, section 02 draft 6, section 03 with OWNER revised closing and section 04 draft 5 are OWNER-approved; preserve all exact wording, approved formula, labeled examples and presentation. Next: review section 05 draft 1, shared SEO foundation and distinct AI workflows. Challenge redundant work/invoicing without changing actual package terms or claiming identical workflows. Section 05 not approved.
+Steps 1–3 complete. Step 4 active, section 05 of 19 (SEO, AIO og GEO). Hero, section 02 draft 6, section 03 with OWNER revised closing and section 04 draft 5 are OWNER-approved; preserve all exact wording, approved formula, labeled examples and presentation. Next: review section 05 draft 2, presenting AIO and GEO as names for SEO directed at AI search, shared fundamentals across search services, and AI-specific workflows as a development of SEO. Retain Google source and shared-foundation diagram. No change to actual package scope; section 05 not approved.
 
 No verified search volumes or conversion/margin data; GSC Wizard subscription blocked Bing query-volume access. Do not present invented figures or historical price comparisons as proof of profitability. Explicitly labeled hypothetical scenarios are allowed for the OWNER-requested demonstration. Approved section 02 teaches how intent and actual offer fit change the economic opportunity; detailed methods/coverage/measurement/calculator belong to sections 06/09/13/15 respectively. No site changes or publication authorized.
 
@@ -100,7 +100,7 @@ Recommendation for decision: keep intent-led philosophy + commercial positioning
 | 02 | Intensjonen bak søket | Explain the economics of search intent and BOFU versus information. Backlog 243, 257, 440, 444, 449; Article A03. | OWNER approved (draft 6) |
 | 03 | Hvem dette er for - Og ikke for - Eneste snekker/tannlege 5 mils radius. | Qualify by competition, commercial opportunity and need; the sole carpenter/dentist in a 50 km radius is an illustrative scenario, not a hard eligibility rule. | OWNER approved (revised closing) |
 | 04 | Fordeler med SEO - Senker kostnad pr. bestilling - Lavere Ads kostnad - AI-Synlighet - Konkurransefortrinn | Demonstrate mechanisms and business benefits with evidence/calculations. Lower order costs and ad CPC are possible, not guaranteed; distinguish shared landing-page quality from direct effects of organic rank. | OWNER approved (draft 5) |
-| 05 | SEO er både AIO - GEO og AI-Søk Optimalisering - Ref. en av de forrige Intelligence intakes. | Challenge artificial rebranding and selling the same fundamentals twice. SEO as umbrella and AI visibility as specialist work, not identical operationally. Backlog 302, 303, 307, 313, 314, 393; F2–3, F69–71. | Draft 1 / review |
+| 05 | SEO er både AIO - GEO og AI-Søk Optimalisering - Ref. en av de forrige Intelligence intakes. | Challenge artificial rebranding and selling the same fundamentals twice. SEO as umbrella and AI visibility as specialist work, not identical operationally. Backlog 302, 303, 307, 313, 314, 393; F2–3, F69–71. | Draft 2 / review |
 | 06 | Fra søkemarked til ordrebok | Present approved six-step method, explain why sequence matters. Backlog 449. | Pending |
 | 07 | Pakker og Priser | Early actual global package selection/prices and approved buying conditions. No duplicated pricing master. | Pending |
 | 08 | Fra søkeintensjon til riktig nettside | Demonstrate practical implementation with a real or explicitly hypothetical example: intent mapping, improve vs create, technical accessibility, internal links. Backlog 1, 204, 231, 257, 362–364, 440. | Pending |
@@ -882,6 +882,34 @@ Presentation intent: a compact shared-foundation diagram after the introduction,
 
 Editorial note: headline challenges duplicate invoicing for the same foundational work, not legitimate distinct AI work or different package scope; it does not amend existing offers, prices or terms or promise all specialist work in every SEO agreement. Confirm headline with OWNER. Direct language without habitual caveats; source attribution kept adjacent to the Google statement. Targeted 13 copy checks passed on draft and diagram labels; no full site audit/build or CMS changes. Next: OWNER review section 05 draft 1.
 
+### Section 05 — draft 2: SEO as the umbrella for AIO and GEO (not approved)
+
+OWNER asked to explain explicitly that AIO and GEO are new names for SEO, and that foundational SEO improves visibility across search services. Retain draft 1 heading and shared-foundation diagram; remove the separate acronym definitions, which risk suggesting three independent disciplines, and add platform names. State this in the context of AI-search optimization, not every use of the term AIO. Use the previously retrieved BI 302, 303, 307, 313, 314, 393 and F2–3, F69–71 and existing Google source; scoped editorial revision, no new empirical claims or research required. The umbrella is our strategic positioning, not a universal industry taxonomy. Shared fundamentals support discovery and visibility across engines; platforms still differ in discovery, eligibility, ranking/retrieval, citations and reputation. Do not interpret this as every individual SEO task improving every platform, a ranking guarantee or a change to package scope. Retain platform-specific research as part of SEO rather than portraying AI optimization as a separate foundation.
+
+Proposed customer copy:
+
+## Tre forkortelser. Du trenger ikke tre regninger.
+
+SEO, AIO, GEO. Markedsføringsbransjen er flink til å finne opp nye forkortelser. Særlig når det er plass til en ny linje på fakturaen.
+
+**AIO og GEO er nye navn på søkemotoroptimalisering rettet mot AI-søk.** Kundene har fått nye måter å søke på, og SEO-faget har utviklet seg med dem.
+
+Grunnleggende SEO-arbeid styrker synligheten i både tradisjonelle søkemotorer og AI-søk. Relevant innhold, god struktur, teknisk tilgjengelighet, fagkunnskap og troverdighet er fundamentet for alle disse søketjenestene.
+
+### Google sier det selv
+
+Grunnleggende SEO gjelder også for Googles AI Overviews og AI Mode. Google krever verken et eget AI-schema eller spesielle AI-filer for synlighet i disse søkeresultatene.
+
+[Googles dokumentasjon om SEO og AI-søk](https://developers.google.com/search/docs/appearance/ai-features)
+
+### Nye søkemotorer. Nye muligheter.
+
+Vi undersøker hvordan AI-assistentene finner informasjon, hvilke kilder de bruker og hvorfor de anbefaler bestemte bedrifter. Denne kunnskapen bruker vi til å videreutvikle SEO-arbeidet ditt.
+
+**Vi optimaliserer for hele søkemarkedet, fremfor å selge deg det samme grunnarbeidet under forskjellige navn.**
+
+Presentation intent: keep draft 1 shared-foundation diagram with exact labels: "Søkemotoroptimalisering (SEO)", "Tradisjonelt søk", "Google og Bing", "Lokalt søk", "Kart og bedrifter", "AI-søk", "AIO / GEO", "Felles fundament", "Teknisk tilgjengelighet", "Relevant innhold og søkeintensjon", "Fagkunnskap, autoritet og troverdighet". Immediately below it show platform names/logos: Google, Bing, ChatGPT, Gemini, Perplexity, Copilot. No components selected. Source link retained. The three separate acronym definitions are removed in this draft; prior wording remains available in draft 1 history. 13 targeted copy checks passed on copy and diagram labels. No CMS edits, full site audit/build, package changes or implementation. Next: OWNER review draft 2.
+
 ## Decision log
 
 - 2026-11-24 OWNER approved using a persistent project workflow and starting with philosophy and positioning; no final positioning approval yet.
@@ -908,3 +936,4 @@ Editorial note: headline challenges duplicate invoicing for the same foundationa
 - 2026-11-25 OWNER requested simple, benefit-first Google Ads card with concrete 10x contrast and Google sources. Draft 4 saved for review; 10x is a hypothetical calculation, not a verified effect. No implementation authorized.
 - 2026-11-25 OWNER requested direct language and research into Quality Score 1 vs 10. Draft 5 saved with Google sources and explicit historical WordStream model; newer evidence distinguishes theoretical from observed CPC. No implementation authorized.
 - 2026-11-25 OWNER explicitly approved section 04 draft 5. Section 05 draft 1 saved for review, with shared foundation, distinct AI workflows and Google's documentation. No implementation authorized.
+- 2026-11-25 OWNER requested stronger SEO umbrella positioning: AIO and GEO are names for SEO directed at AI search, with shared foundations across search engines. Draft 2 saved for review. No implementation authorized.
