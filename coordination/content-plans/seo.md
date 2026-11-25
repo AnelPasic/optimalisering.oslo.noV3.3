@@ -34,7 +34,7 @@ This compact handoff is embedded in the single authoritative page plan, not a se
 
 ### Current resume point
 
-Steps 1–3 complete. Step 4 active, section 04 of 19 (Fordeler med SEO). Hero, section 02 draft 6 (compact three cards and approved formula) and section 03 with exact OWNER revised closing are approved; preserve all. Next: review section 04 draft 3, applying the OWNER's latest request for direct, confident commercial language without habitual hedging. Retain the four benefits, exact heading, labeled examples and SEO/KRO conclusion. Do not present illustrative outcomes as actual results or guaranteed effects. Section 04 draft 3 not approved; section 05 remains pending.
+Steps 1–3 complete. Step 4 active, section 04 of 19 (Fordeler med SEO). Hero, section 02 draft 6 (compact three cards and approved formula) and section 03 with exact OWNER revised closing are approved; preserve all. Next: review section 04 draft 4, with benefit-first ELI10 Google Ads card, concrete exterior-screen example, linked Google documentation and explicitly illustrative 10x click-price contrast. Other draft 3 copy unchanged. Section 04 not approved; section 05 pending.
 
 No verified search volumes or conversion/margin data; GSC Wizard subscription blocked Bing query-volume access. Do not present invented figures or historical price comparisons as proof of profitability. Explicitly labeled hypothetical scenarios are allowed for the OWNER-requested demonstration. Approved section 02 teaches how intent and actual offer fit change the economic opportunity; detailed methods/coverage/measurement/calculator belong to sections 06/09/13/15 respectively. No site changes or publication authorized.
 
@@ -99,7 +99,7 @@ Recommendation for decision: keep intent-led philosophy + commercial positioning
 | 01 | Hero | Distinct commercial proposition, audience, reason to read and approved next action. H1 Lab. | OWNER approved |
 | 02 | Intensjonen bak søket | Explain the economics of search intent and BOFU versus information. Backlog 243, 257, 440, 444, 449; Article A03. | OWNER approved (draft 6) |
 | 03 | Hvem dette er for - Og ikke for - Eneste snekker/tannlege 5 mils radius. | Qualify by competition, commercial opportunity and need; the sole carpenter/dentist in a 50 km radius is an illustrative scenario, not a hard eligibility rule. | OWNER approved (revised closing) |
-| 04 | Fordeler med SEO - Senker kostnad pr. bestilling - Lavere Ads kostnad - AI-Synlighet - Konkurransefortrinn | Demonstrate mechanisms and business benefits with evidence/calculations. Lower order costs and ad CPC are possible, not guaranteed; distinguish shared landing-page quality from direct effects of organic rank. | Draft 3 / review |
+| 04 | Fordeler med SEO - Senker kostnad pr. bestilling - Lavere Ads kostnad - AI-Synlighet - Konkurransefortrinn | Demonstrate mechanisms and business benefits with evidence/calculations. Lower order costs and ad CPC are possible, not guaranteed; distinguish shared landing-page quality from direct effects of organic rank. | Draft 4 / review |
 | 05 | SEO er både AIO - GEO og AI-Søk Optimalisering - Ref. en av de forrige Intelligence intakes. | Challenge artificial rebranding and selling the same fundamentals twice. SEO as umbrella and AI visibility as specialist work, not identical operationally. Backlog 302, 303, 307, 313, 314, 393; F2–3, F69–71. | Pending |
 | 06 | Fra søkemarked til ordrebok | Present approved six-step method, explain why sequence matters. Backlog 449. | Pending |
 | 07 | Pakker og Priser | Early actual global package selection/prices and approved buying conditions. No duplicated pricing master. | Pending |
@@ -709,6 +709,71 @@ Det er her det virkelig interessante konkurransefortrinnet ligger.
 
 Presentation intent: retain compact channel-to-website diagram and four cards from draft 2. Regneeksempel labels next to each calculation carry the scenario distinction; remove redundant standalone disclaimer. Diagram represents objectives, not an actual result. Editorial notes: relative growth of orders versus acquisition expenses determines blended order cost; compare identical cost scopes and deduplicated orders. The CPC example assumes the stated CPC reduction rather than claiming organic rankings or page improvement mechanically determine it; Google Ads auction quality is a factor. Higher allowable CPC assumes equal contribution per order and comparable profit targets; the multiplikatoreffekt follows from traffic x conversion rate with other factors unchanged. Preserve the detailed calculation for section 15. No actual result or package-price claim. Targeted 13 copy checks passed; no occurrences of the word "kan" in this draft; arithmetic unchanged and verified. Full site audit/build not run; no CMS changes.
 
+### Section 04 — draft 4: benefit-first Google Ads explanation (not approved)
+
+OWNER requested plain-language, ELI10 for the Google Ads benefit, leading with cheaper clicks rather than auction terminology, concrete 10x contrast and links to Google's own documentation. Only the second card changes from draft 3; other copy and conceptual diagram remain intact. Reuse the exterior-screen example from approved section 02 for continuity.
+
+Google primary sources checked for this revision: [About ad quality](https://support.google.com/google-ads/answer/156066?hl=en-419) states higher quality ads typically cost less per click; [About Ad Rank](https://support.google.com/google-ads/answer/1722122/about-ad-position-and-ad-rank) describes ad and landing-page usefulness/relevance and notes higher quality ads often lead to lower CPC; [Optimize your ads and landing pages](https://support.google.com/google-ads/answer/6238826?hl=en) explains matching the page to the ad and search keywords. These sources support the mechanism and direction, not a universal tenfold price difference from SEO or page optimization alone. Treat 30 vs 3 kr as an illustrative scenario, not measured CPC for this query, case evidence, a guaranteed discount or a comparison attributed exclusively to landing-page changes. No supporting 10x first-party evidence was supplied. Use visible Regneeksempel label before the amounts. Calculations: 10,000 / 30 = 333.33 and 10,000 / 3 = 3,333.33; exact ratio 10, displayed whole clicks rounded. Preserve the links to Google within the card. Use the two click counts with proportional bars (10% and 100% of maximum), not separate added tables in the eventual layout.
+
+## SEO forbedrer økonomien i hele markedsføringen.
+
+En godt optimalisert tjenesteside jobber for deg i flere kanaler. Den svarer på det kundene søker etter på Google, gir AI-assistenter faginnhold å hente svar fra og fungerer som landingsside for annonseringen din.
+
+SEO skaffer relevante besøk. Konverteringsoptimalisering gjør flere av besøkene til bestillinger.
+
+### Lavere kostnad per bestilling
+
+Når bestillingene øker mer enn markedsføringskostnadene, faller kostnaden per bestilling.
+
+Regneeksempel per måned
+
+| | Kun Ads | Ads + SEO |
+|---|---|---|
+| Kostnad | 20 000 kr | 25 000 kr |
+| Bestillinger | 40 | 60 |
+| Kostnad per bestilling | 500 kr | 417 kr |
+
+17 % lavere kostnad per bestilling
+
+### Billigere annonser på Google
+
+Google belønner gode annonser og relevante nettsider med bedre plasseringer og ofte lavere klikkpris.
+
+Søker en kunde etter utvendig screen med montering i Oslo, ønsker Google å sende kunden til en side som tilbyr nettopp dette. Også når du betaler for klikket.
+
+Regneeksempel med 10 000 kr i annonsebudsjett
+
+| | Eksempel A | Eksempel B |
+|---|---|
+| Klikkpris | 30 kr | 3 kr |
+| Klikk (avrundet) | 333 | 3 333 |
+
+10 ganger så mange klikk.
+
+Samme budsjett.
+
+Kilder: [Google om annonsekvalitet](https://support.google.com/google-ads/answer/156066?hl=en-419) / [Google om klikkpris og plassering](https://support.google.com/google-ads/answer/1722122/about-ad-position-and-ad-rank)
+
+### Synlighet i AI-søk
+
+Kundene bruker AI til å finne, sammenligne og velge leverandører. Godt faginnhold, tydelig struktur og opparbeidet autoritet styrker grunnlaget for synlighet i disse søkene.
+
+Google AI, ChatGPT, Perplexity
+
+### Et økonomisk konkurransefortrinn
+
+Konkurrentene dine trenger noen sekunder for å øke annonsebudsjettet. Å bygge faginnhold, autoritet og organisk synlighet tar tid.
+
+Med høyere konverteringsrate tåler du også en høyere klikkpris enn konkurrentene ved samme fortjeneste per bestilling.
+
+### SEO + Konverteringsoptimalisering
+
+Flere relevante besøk kombinert med høyere konverteringsrate gir en multiplikatoreffekt. Du får mer ut av Google, AI-søk, Meta Ads, e-post og resten av markedsføringen din.
+
+Det er her det virkelig interessante konkurransefortrinnet ligger.
+
+Editorial notes: retain draft 3 layout and assumptions except second-card example. No new component choice or CMS changes. Existing blended acquisition calculation still 500 vs 416.67 kr, rounded 417 and 17% reduction. Both examples are illustrative; no actual results or package prices. All 13 targeted copy checks passed on the draft, arithmetic checked. No full site audit/build. Next: OWNER review draft 4.
+
 ## Decision log
 
 - 2026-11-24 OWNER approved using a persistent project workflow and starting with philosophy and positioning; no final positioning approval yet.
@@ -732,3 +797,4 @@ Presentation intent: retain compact channel-to-website diagram and four cards fr
 - 2026-11-25 OWNER explicitly approved section 03 with revised final paragraph, retained verbatim. Section 04 draft 1 saved for review with illustrative arithmetic and primary Google sources. No implementation authorized.
 - 2026-11-25 OWNER requested new section 04 heading and stronger cross-channel leverage, competitive economics and SEO/KRO interaction. Draft 2 saved; no approval or implementation.
 - 2026-11-25 OWNER first approved draft 2, then immediately requested a direct-language revision. Latest request takes precedence; draft 3 saved for review, and the site-specific voice profile records the enduring preference. No implementation authorized.
+- 2026-11-25 OWNER requested simple, benefit-first Google Ads card with concrete 10x contrast and Google sources. Draft 4 saved for review; 10x is a hypothetical calculation, not a verified effect. No implementation authorized.
