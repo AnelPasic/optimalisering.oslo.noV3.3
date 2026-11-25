@@ -34,7 +34,7 @@ This compact handoff is embedded in the single authoritative page plan, not a se
 
 ### Current resume point
 
-Steps 1–3 complete. Step 4 active, section 11 of 19 (Autoritet og fagkunnskap). Sections 01–10 are OWNER-approved; preserve exact copy, source links, presentations, unchanged global pricing reference and approved Helt Opplagt proof selection. Next: review section 11 draft 1, using first-party operational expertise, original useful assets, earned recognition and scoped E-E-A-T explanation. Section 11 not approved; section 12 pending.
+Steps 1–3 complete. Step 4 active, section 12 of 19 (Google, AI-søk og lokal synlighet). Sections 01–11 are OWNER-approved; preserve exact copy, source links, presentations, unchanged global pricing reference and approved Helt Opplagt proof selection. Next: review section 12 draft 1, three practical channel blocks and an illustrative query fan-out diagram with specialist links. Section 12 not approved; section 13 pending.
 
 No verified search volumes or conversion/margin data; GSC Wizard subscription blocked Bing query-volume access. Do not present invented figures or historical price comparisons as proof of profitability. Explicitly labeled hypothetical scenarios are allowed for the OWNER-requested demonstration. Approved section 02 teaches how intent and actual offer fit change the economic opportunity; detailed methods/coverage/measurement/calculator belong to sections 06/09/13/15 respectively. No site changes or publication authorized.
 
@@ -106,8 +106,8 @@ Recommendation for decision: keep intent-led philosophy + commercial positioning
 | 08 | Fra søkeintensjon til riktig nettside | Demonstrate practical implementation with a real or explicitly hypothetical example: intent mapping, improve vs create, technical accessibility, internal links. Backlog 1, 204, 231, 257, 362–364, 440. | OWNER approved (draft 1) |
 | 09 | Søkemarkedsdekning | Show the distinctive analytical map of services, demand, visibility and gaps; don't invent whole-market coverage metrics. Backlog 215, 223, 362–364, 440, 444. | OWNER approved (draft 1) |
 | 10 | Dokumenterte resultater | Approved proof, with Helt Opplagt search result and accurate channel/metric scope; do not imply lead or sales lift from clicks. | OWNER approved (draft 1) |
-| 11 | Autoritet og fagkunnskap | First-party expertise, commercially relevant authority, original research/tools and earned links. Backlog 242–248, 260, 380–382. | Draft 1 / review |
-| 12 | Google, AI-søk og lokal synlighet | Practical channel differences, source/retrieval/citation, local relevance and measurement. Link to specialist pages; do not repeat section 05's taxonomy argument. | Pending |
+| 11 | Autoritet og fagkunnskap | First-party expertise, commercially relevant authority, original research/tools and earned links. Backlog 242–248, 260, 380–382. | OWNER approved (draft 1) |
+| 12 | Google, AI-søk og lokal synlighet | Practical channel differences, source/retrieval/citation, local relevance and measurement. Link to specialist pages; do not repeat section 05's taxonomy argument. | Draft 1 / review |
 | 13 | Måling og kontinuerlig optimalisering | Show feedback loop and verified SeoTool/LeadProof capabilities; no claim of exact organic query-to-sale attribution without data. Backlog 169, 205, 284, 294. | Pending |
 | 14 | Investering, pakker og samarbeid | Explain delivery, provider/client responsibilities, capacity, fit, timescale and ongoing priorities; do not duplicate section 07's package cards/prices. | Pending |
 | 15 | SEO - KRO - Kombinasjon og kalkulator | Demonstrate the multiplicative effect of relevant traffic and conversion; transparent user-editable assumptions, no forecast disguised as results. Backlog 75, 104, 248; component feasibility assessed later. | Pending |
@@ -1224,7 +1224,7 @@ Preview snapshot for review, not a second proof master: global eyebrow "Dokument
 
 The chat preview used a simple before/after bar comparison, a short client description and customer website link to communicate the intended result; these are preview-only, not instructions to alter the native design or add unverified metadata. Actual page should reuse existing selected-case presentation, not create a custom chart, duplicate record or bypass gates. No new customer-facing copy in the implementation proposal; retain existing approved wording. Full copy QA, proof gates, actual schema, build and responsive visual checks deferred to authorized implementation. No CMS changes. OWNER approved exact draft 1 on 2026-11-25; editorial approval only.
 
-### Section 11 — draft 1: first-party expertise and earned authority (not approved)
+### Section 11 — draft 1: first-party expertise and earned authority (OWNER approved 2026-11-25)
 
 OWNER explicitly approved section 10 draft 1 on 2026-11-25. Preserve selected Helt Opplagt proof, exact approved claim, periods and existing guarded ProofList ownership. No changes to proof or global sources.
 
@@ -1283,7 +1283,99 @@ Google bruker E-E-A-T som et rammeverk for å beskrive kvalitet og troverdighet 
 
 **Vi bruker gjerne AI til å bearbeide fagkunnskapen din. Vi bruker den ikke til å dikte den opp.**
 
-Presentation intent: eyebrow above H2; two contrasting editorial example cards; four compact examples of first-party inputs and earned authority; a four-letter E-E-A-T explanation with a source link. Icons/card layout are preview suggestions, not selected components. No new client data, delivery quotas, guaranteed links or contractual work beyond agreed capacity. 13 targeted copy checks passed on proposed text; full site QA/build and CMS implementation deferred. Next: OWNER review section 11 draft 1.
+Presentation intent: eyebrow above H2; two contrasting editorial example cards; four compact examples of first-party inputs and earned authority; a four-letter E-E-A-T explanation with a source link. Icons/card layout are preview suggestions, not selected components. No new client data, delivery quotas, guaranteed links or contractual work beyond agreed capacity. 13 targeted copy checks passed on proposed text; full site QA/build and CMS implementation deferred. OWNER approved exact draft 1 on 2026-11-25; editorial approval only.
+
+### Section 12 — draft 1: practical search-channel differences (not approved)
+
+OWNER explicitly approved section 11 draft 1 on 2026-11-25. Preserve its exact copy, examples and E-E-A-T explanation. Distinct job: explain concrete work across search surfaces, not repeat section 05's umbrella/taxonomy argument, section 11's expertise argument, or section 13's measurement detail.
+
+Read current BI Backlog 302, 303, 307, 313, 314, 393; Fun Facts 2–3, 16–17, 54, 64–67, 69–71, 82, 93–96; Evidence Registry OPENAI-SEARCH-001/002 and Article Bank A01/A02/A12/A14. Verified current specialist source pages on main: /lokal-seo/ and /ai-synlighet/. Reopened official Google AI features, Google Business Profile local ranking (https://support.google.com/business/answer/7091?hl=no), and ChatGPT Search documentation on 2026-11-25. Google and ChatGPT document related-query generation; no fixed number of subqueries or guaranteed citations. Local factors relevance, distance and prominence; no paid organic ranking or artificial locations. Google/Bing are example traditional search surfaces, not exhaustive; AI and local results overlap across platforms. The solskjerming queries and customer journey are illustrative, not observed behavior or actual AI trace. In actual AI work distinguish inferred likely subqueries from observed ones, crawler access from discovery/index/cache/retrieval and citation, and mention from recommendation; sources/answers vary. Do not promise access to hidden query logs, control over assistant outputs, complete market visibility or all channel-specific tasks in every monthly package. Retain scoped work under agreed capacity, and detailed measurement in section 13. No new numerical claims.
+
+Proposed customer copy:
+
+## Samme kunde. Flere måter å finne deg på.
+
+En kunde som skal kjøpe solskjerming, undersøker gjerne produkter på Google, finner lokale leverandører i Google Maps og bruker ChatGPT til å sammenligne alternativer.
+
+Vi jobber med synligheten din der kundene leter, undersøker og velger leverandører.
+
+### Google og Bing
+
+Kunden søker
+
+Utvendig screen med montering
+
+**Her jobber vi med**
+
+- Synlighet på relevante søk.
+- Tjenestesider, produktinformasjon og faginnhold.
+- Teknisk SEO, interne lenker og autoritet.
+
+Målet
+
+Få kunden inn på den nettsiden som best svarer på behovet.
+
+### Google Maps og lokale søk
+
+Kunden søker
+
+Solskjerming i nærheten
+
+**Her jobber vi med**
+
+- Google-bedriftsprofilen din.
+- Tjenester, bedriftsinformasjon og geografiske områder.
+- Anmeldelser, lokal omtale og relevante nettsider.
+
+Google vurderer særlig relevans, avstand og hvor kjent bedriften er.
+
+Målet
+
+Bli funnet av kunder i områdene du faktisk betjener.
+
+[Les mer om lokal SEO](/lokal-seo/)
+
+### AI-søk
+
+Kunden spør
+
+Hvilke bedrifter i Oslo leverer utvendige screens som tåler mye vind? Sammenlign leverandørene.
+
+**Her jobber vi med**
+
+- Hvilke spørsmål og relaterte søk AI-assistentene bruker.
+- Hvilke kilder de henter informasjon fra.
+- Hvordan bedriften din omtales sammenlignet med konkurrentene.
+- Tilgjengelighet og innhold på egen nettside og relevante eksterne kilder.
+
+Målet
+
+At bedriften din blir omtalt som et relevant alternativ når kunden ber AI om hjelp til å velge leverandør.
+
+[Les mer om AI-synlighet](/ai-synlighet/)
+
+### Visste du at ett AI-spørsmål kan utløse flere søk?
+
+Google og ChatGPT beskriver hvordan AI-søk kan dele opp et spørsmål i flere relaterte søk for å finne informasjon til svaret.
+
+Illustrativt diagram:
+
+- Hvem leverer screens som tåler mye vind i Oslo?
+- Vindbestandige screens
+- Lokale leverandører
+- Erfaringer og anmeldelser
+- AI sammenstiller et svar
+- Basert på informasjon fra flere kilder
+
+Illustrativt eksempel på oppdeling av et AI-spørsmål.
+
+Derfor undersøker vi også søkene som ligger bak AI-svarene. Vi vil at bedriften din skal være en god kilde til informasjonen assistentene leter etter.
+
+[Google om AI-søk](https://developers.google.com/search/docs/appearance/ai-features)
+
+[OpenAI om ChatGPT Search](https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt)
+
+Presentation intent: three practical channel blocks with sample search/question, work areas and goal; specialist links; compact query fan-out diagram using the listed labels. Actual arrows are graphical, not textual punctuation. Links shown separately (no ornamental middle dot); the diagram is explicitly illustrative and not a real AI result. Logos/icons are preview suggestions, not new approved assets/components. No CMS edits, new services, prices, guarantees or full build. 13 targeted copy checks passed on proposed customer copy and diagram labels. Next: OWNER review section 12 draft 1.
 
 ## Decision log
 
@@ -1320,3 +1412,4 @@ Presentation intent: eyebrow above H2; two contrasting editorial example cards; 
 - 2026-11-25 OWNER explicitly approved section 08 draft 1. Section 09 draft 1 saved for review with illustrative search-market visibility matrix and priority approach. No implementation authorized.
 - 2026-11-25 OWNER explicitly approved section 09 draft 1. Section 10 draft 1 saved for review, selecting existing approved Helt Opplagt organic search proof via native ProofList. No implementation authorized.
 - 2026-11-25 OWNER explicitly approved section 10 draft 1. Section 11 draft 1 saved for review with first-party expertise, original content assets, earned authority and E-E-A-T. No implementation authorized.
+- 2026-11-25 OWNER explicitly approved section 11 draft 1. Section 12 draft 1 saved for review, covering practical organic, local and AI-search work with illustrative query fan-out. No implementation authorized.
