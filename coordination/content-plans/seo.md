@@ -32,7 +32,7 @@ This compact handoff is embedded in the single authoritative page plan, not a se
 
 ### Current resume point
 
-Steps 1–3 complete. Step 4 active, section 02 of 19 (Intensjonen bak søket). Hero locked by OWNER approval; section 02 not approved. The cheap-rullegardin contrast in draft 2 is rejected. Do not reuse it as final copy. Next: explore stronger within-offer contrasts, then refine the section with OWNER feedback. Candidate for a defined provider of installed exterior screens: "utvendig solskjerming", "screen solskjerming pris", "utvendig screen med montering Oslo"; consider "utvendig solskjerming borettslag" only if this provider actually handles projects. All are illustrative candidates, no actual demand estimates. Avoid conflating specificity with proven buying intent or profitability. No requirement to retain solskjerming if another industry illustrates the same principle better.
+Steps 1–3 complete. Step 4 active, section 02 of 19 (Intensjonen bak søket). Hero locked by OWNER approval; section 02 not approved. The cheap-rullegardin contrast in draft 2 is rejected. Do not reuse it as final copy. Next: refine draft 3 contrasting broad "solskjerming" with "utvendig screen med montering Oslo", using the side-by-side and word-breakdown approach the OWNER liked from the brake example. Candidate for a defined provider of installed exterior screens: "utvendig solskjerming", "screen solskjerming pris", "utvendig screen med montering Oslo"; consider "utvendig solskjerming borettslag" only if this provider actually handles projects. All are illustrative candidates, no actual demand estimates. Avoid conflating specificity with proven buying intent or profitability. No requirement to retain solskjerming if another industry illustrates the same principle better.
 
 No verified search volumes or conversion/margin data; GSC Wizard subscription blocked Bing query-volume access. Do not invent figures or reuse historical price comparisons as proof of profitability. Section 02 should teach how intent and actual offer fit change the economic opportunity; detailed methods/coverage/measurement/calculator belong to sections 06/09/13/15 respectively. No site changes or publication authorized.
 
@@ -95,7 +95,7 @@ Recommendation for decision: keep intent-led philosophy + commercial positioning
 | # | OWNER-approved theme | Editorial job / research direction | Draft |
 |---|---|---|---|
 | 01 | Hero | Distinct commercial proposition, audience, reason to read and approved next action. H1 Lab. | OWNER approved |
-| 02 | Intensjonen bak søket | Explain the economics of search intent and BOFU versus information. Backlog 243, 257, 440, 444, 449; Article A03. | Draft 2 contrast rejected; refining example |
+| 02 | Intensjonen bak søket | Explain the economics of search intent and BOFU versus information. Backlog 243, 257, 440, 444, 449; Article A03. | Draft 3 / review |
 | 03 | Hvem dette er for - Og ikke for - Eneste snekker/tannlege 5 mils radius. | Qualify by competition, commercial opportunity and need; the sole carpenter/dentist in a 50 km radius is an illustrative scenario, not a hard eligibility rule. | Pending |
 | 04 | Fordeler med SEO - Senker kostnad pr. bestilling - Lavere Ads kostnad - AI-Synlighet - Konkurransefortrinn | Demonstrate mechanisms and business benefits with evidence/calculations. Lower order costs and ad CPC are possible, not guaranteed; distinguish shared landing-page quality from direct effects of organic rank. | Pending |
 | 05 | SEO er både AIO - GEO og AI-Søk Optimalisering - Ref. en av de forrige Intelligence intakes. | Challenge artificial rebranding and selling the same fundamentals twice. SEO as umbrella and AI visibility as specialist work, not identical operationally. Backlog 302, 303, 307, 313, 314, 393; F2–3, F69–71. | Pending |
@@ -364,6 +364,29 @@ Vi begynner med det bedriften din ønsker å selge. Deretter undersøker vi hvil
 
 Editorial note: draft refers to actual prices but uses hypothetical query-to-purchase and uptake; add direct sources near public price examples, verify prices before publication. Keep price comparison concise, no claim that largest deal is always highest value; project lead longer sales cycle and uncertain take-up. No imaginary volume chart. All draft text passes current 11 phrase regexes, forbidden punctuation and hidden formatting. Full site QA/build not run; coordination-only. Section 02 remains open.
 
+### Section 02 — draft 3: broad category versus defined purchase (not approved)
+
+OWNER clarified the desired contrast: "Solskjerming" spans parasoll, terrasse, rullegardin, persiener, so the provider competes with many kinds of suppliers and needs; "Utvendig screen med montering Oslo" is closer to purchase and matches the provider's actual offer. OWNER liked the brake-pad comparison's explanatory format and the Hero's editable review workflow. Use side-by-side searches, possible intentions and a word-level breakdown of the specific query, followed by the commercial reasoning. Do not resurrect the rejected cheap-product price contrast. This compares two plausible queries for the same hypothetical provider, not artificially different businesses. Do not claim fewer competitors, lower SEO difficulty, measured search volumes or guaranteed conversion from query specificity alone.
+
+Public web spot check 2026-11-25: [Jula broad sun/privacy protection category](https://www.jula.no/catalog/hage/utemiljo/sol-og-innsynsvern/), [Consol range](https://consol-solskjerming.no/faq/?set_visitor_type=corporate), [Bovik screen on measure in Oslo](https://bovik.no/produkter/screen/) and [Mitro installation](https://mitro.no/montering/) support the breadth of offers and actual fitted-screen service. Not a full exact-query Google SERP comparison or difficulty study. Earlier BI 215, 223, 243, 443–445, 449 remain the research basis. Query examples and intent inference illustrative.
+
+Proposed customer copy:
+
+**Hvem konkurrerer du egentlig mot på Google?**
+
+Tenk deg at du selger og monterer utvendige screens i Oslo. Det er naturlig å ønske seg en god plassering på søkeordet solskjerming. Men hva er det egentlig kunden leter etter?
+
+| Søk | Mulig intensjon og konkurranse |
+|---|---|
+| Solskjerming | Kan være ute etter parasoll, terrassemarkise, rullegardin, persienner eller utvendig screen. Du konkurrerer om oppmerksomheten med alt fra varehus til spesialforhandlere. |
+| Utvendig screen med montering Oslo | Har spesifisert produkt, leveranse og geografisk område. Du konkurrerer om en kunde som leter etter nettopp det du tilbyr. |
+
+I det første søket må kunden fremdeles finne ut hvilken løsning som passer. I det andre har kunden allerede kommet langt i kjøpsprosessen. Produktet er valgt, monteringen er ønsket og området er definert. Det er et langt bedre utgangspunkt for en relevant tilbudsforespørsel.
+
+Når vi velger hvilke søkeord vi skal jobbe med, vurderer vi både intensjonen og hva det krever å bli synlig. Det kan være mer lønnsomt å starte med konkrete søk som passer tilbudet ditt, fremfor å bruke store deler av budsjettet på de bredeste søkeordene. Brede søk er interessante når mulighetene forsvarer investeringen.
+
+Suggested explanatory illustration (not selected component): "Utvendig screen" = Produkt; "med montering" = Komplett leveranse; "Oslo" = Område. The broad query does not reveal those requirements. Treat intent as inferred, not certainty about any individual. No numeric claims. Draft fields pass current phrase, punctuation and hidden-format regexes. Full site QA/build not run. No CMS changes. Section 02 remains open.
+
 ## Decision log
 
 - 2026-11-24 OWNER approved using a persistent project workflow and starting with philosophy and positioning; no final positioning approval yet.
@@ -379,3 +402,4 @@ Editorial note: draft refers to actual prices but uses hypothetical query-to-pur
 - OWNER requested retaining workshop as an option and comparing clinic, dentist, plumber and solar shading; research alternatives saved, selection pending.
 - OWNER requested solar shading deep dive. Verified price sources and illustrative project arithmetic, documented volume-access blocker, and saved draft 2 for review. Section 02 not approved.
 - OWNER rejected the cheap-rullegardin comparison as inconsistent with the commercial SEO system and requested a durable philosophy/system handoff. Embedded START HERE resume contract, preserved approved methodology/Hero/order, and recorded within-offer comparison principle. Section 02 remains open.
+- OWNER clarified the desired broad-category versus specific installed-screen contrast and preferred the earlier workshop explanatory format and Hero review workflow. Draft 3 saved for review.
