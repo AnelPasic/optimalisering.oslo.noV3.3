@@ -84,6 +84,7 @@ export function resolvePageSections(value: unknown) {
   }
   if(row._block==='faq')return [{...localFaqPlacementSchema.parse(row),body:[]}];
   if(row._block==='proofList')return [{...row,proofList:proofListSchema.parse(row.proofList),heading:'',body:[]}];
+  if(row._block==='content'&&(row.heading===undefined||row.heading==='')&&Array.isArray(row.body)&&row.body.some((item:unknown)=>typeof item==='string'&&item.trim()))return [{...row,heading:''}];
   return [row];
  });
 }
