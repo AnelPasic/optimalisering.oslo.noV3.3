@@ -104,11 +104,9 @@
       "headingAlign": "left",
       "heading": "SEO forbedrer økonomien i hele markedsføringen.",
       "body": [
-        "En godt optimalisert tjenesteside jobber for deg i flere kanaler. Den svarer på det kundene søker etter på Google, gir AI-assistenter faginnhold å hente svar fra og fungerer som landingsside for annonseringen din.",
-        "SEO skaffer relevante besøk. Konverteringsoptimalisering gjør flere av besøkene til bestillinger.",
-        "**Google Ads / organisk søk / AI-søk**\n\nOptimalisert nettside\n\n**SEO + Konverteringsoptimalisering**\n\n- Flere bestillinger\n- Lavere kostnad per bestilling"
+        "En godt optimalisert tjenesteside jobber for deg i flere kanaler. Den svarer på det kundene søker etter på Google, gir AI-assistenter faginnhold å hente svar fra og fungerer som landingsside for annonseringen din.\n\nSEO skaffer relevante besøk. Konverteringsoptimalisering gjør flere av besøkene til bestillinger.\n\n**Google Ads / organisk søk / AI-søk**\n\nOptimalisert nettside\n\n**SEO + Konverteringsoptimalisering**\n\n- Flere bestillinger\n- Lavere kostnad per bestilling"
       ],
-      "layout": "stacked",
+      "layout": "two-columns",
       "items": [
         {
           "title": "Lavere kostnad per bestilling",
@@ -137,16 +135,12 @@
           "boxVariant": "card",
           "surface": "base-100",
           "iconName": "target"
-        },
-        {
-          "title": "SEO + Konverteringsoptimalisering",
-          "text": "Flere relevante besøk kombinert med høyere konverteringsrate gir en multiplikatoreffekt. Du får mer ut av Google, AI-søk, Meta Ads, e-post og resten av markedsføringen din.\n\nDet er her det virkelig interessante konkurransefortrinnet ligger.",
-          "boxVariant": "card",
-          "surface": "accent",
-          "iconName": "trend-up"
         }
       ],
-      "surface": "base-100"
+      "surface": "base-100",
+      "afterCards": [
+        "### SEO + Konverteringsoptimalisering\n\nFlere relevante besøk kombinert med høyere konverteringsrate gir en multiplikatoreffekt. Du får mer ut av Google, AI-søk, Meta Ads, e-post og resten av markedsføringen din.\n\nDet er her det virkelig interessante konkurransefortrinnet ligger."
+      ]
     },
     {
       "_block": "content",
