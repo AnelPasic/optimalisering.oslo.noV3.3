@@ -34,6 +34,7 @@ const defaultMode=homeChrome.themes.defaultMode;
 const defaultTheme=defaultMode==='dark'?darkTheme:lightTheme;
 const canonical = new URL(Astro.url.pathname, site.url).href;
 const organization = { '@context': 'https://schema.org', '@type': 'Organization', name: site.provider, url: site.providerUrl };
+const showTrafficPreview = site.preview && import.meta.env.TRAFFIC_PREVIEW_ENABLED === 'true';
 ---
 <!doctype html>
 <html lang={locale} data-theme={defaultTheme} data-mws-theme-mode={defaultMode} data-mws-light-theme={lightTheme} data-mws-dark-theme={darkTheme}>
@@ -62,7 +63,7 @@ const organization = { '@context': 'https://schema.org', '@type': 'Organization'
     <HomeHeader content={homeChrome} languageLinks={languageLinks} currentLocale={locale} />
     <main id="main" data-pagefind-body={noindex || Astro.url.pathname.startsWith("/design-system/") ? undefined : ""}><slot /></main>
     <HomeFooter content={homeChrome} />
-    <TrafficPreference measure={!noindex && !Astro.url.pathname.startsWith('/design-system/')} />
+    {showTrafficPreview && <TrafficPreference measure={!noindex && !Astro.url.pathname.startsWith('/design-system/')} />}
     {homeChrome.headerOptions.showSearch && <SiteSearch mode="modal" />}
     <Attribution />
     <TerminologyUI />
