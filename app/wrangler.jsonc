@@ -6,6 +6,7 @@
   "workers_dev": true,
   "preview_urls": true,
   "previews": {},
+  "services": [{ "binding": "HITCOUNTER", "service": "optimalisering-oslo-intake" }],
   "assets": {
     "directory": "./dist",
     "binding": "ASSETS",

@@ -52,6 +52,15 @@
     },
     {
       "_block": "content",
+      "id": "webstatistikk",
+      "heading": "Vi teller sidevisninger på serveren.",
+      "body": [
+        "Medon AS bruker samlet besøksstatistikk for å se hvilke sider som blir åpnet, og hvilke kanaler og kampanjer som fører trafikk hit. Cloudflare teller HTML-svar og grupperer dem etter dato, sidesti og eventuell kilde- og kampanjemerking.",
+        "Statistikken bruker ingen informasjonskapsler eller besøks-ID. Vi lagrer tellingene i Cloudflare D1 i opptil 90 dager. Statistikktabellen inneholder ingen IP-adresser, kontaktopplysninger eller individuelle klikk-ID-er."
+      ]
+    },
+    {
+      "_block": "content",
       "id": "avklaringer",
       "heading": "Lagring, sletting og rettigheter.",
       "body": [
