@@ -38,22 +38,25 @@
         "Tenk deg at du selger og monterer utvendige screens i Oslo. Du vil gjerne ligge øverst på Google når noen søker etter solskjerming. Men hva vil de egentlig kjøpe?",
         "Regneeksempel. Alle tall er illustrative, også konkurranse og vanskelighetsgrad."
       ],
-      "layout": "three-columns",
+      "layout": "default",
       "items": [
         {
           "title": "Solskjerming",
           "text": "**Behov:** Parasoller, markiser, persienner og screens.\n\n**Søk per måned:** 10 000\n\n**Andel relevante søk:** 5 %\n\n**Konkurrenter:** 500\n\n**Konkurrenttyper:** IKEA, JYSK, varehus og spesialister.\n\n**Vanskelighetsgrad:** 10/10\n\n**Andel relevante søk vi tiltrekker:** 1 %\n\n**Regnestykke:** 10 000 x 5 % x 1 %\n\n**Relevante besøk/mnd.:** 5",
-          "boxVariant": "card"
+          "boxVariant": "card",
+          "surface": "base-100"
         },
         {
           "title": "Solskjerming hus",
           "text": "**Behov:** Solskjerming til boligen, uavklart løsning.\n\n**Søk per måned:** 1 000\n\n**Andel relevante søk:** 40 %\n\n**Konkurrenter:** 80\n\n**Konkurrenttyper:** Nettbutikker og solskjermingsleverandører.\n\n**Vanskelighetsgrad:** 7/10\n\n**Andel relevante søk vi tiltrekker:** 5 %\n\n**Regnestykke:** 1 000 x 40 % x 5 %\n\n**Relevante besøk/mnd.:** 20",
-          "boxVariant": "card"
+          "boxVariant": "card",
+          "surface": "base-100"
         },
         {
           "title": "Utvendig screen montert i Oslo",
           "text": "**Behov:** Produkt, montering og område er spesifisert.\n\n**Søk per måned:** 200\n\n**Andel relevante søk:** 90 %\n\n**Konkurrenter:** 12\n\n**Konkurrenttyper:** Lokale leverandører med montering.\n\n**Vanskelighetsgrad:** 3/10\n\n**Andel relevante søk vi tiltrekker:** 20 %\n\n**Regnestykke:** 200 x 90 % x 20 %\n\n**Relevante besøk/mnd.:** 36",
-          "boxVariant": "card"
+          "boxVariant": "card",
+          "surface": "accent"
         }
       ],
       "afterCards": [
@@ -61,7 +64,8 @@
         "Lavere søkevolum: 50 ganger.\nFlere relevante besøk: 7,2 ganger.",
         "Det bredeste søket ser imponerende ut i en SEO-rapport. I dette regneeksempelet gir det mest spesifikke søket over syv ganger så mange relevante besøk.",
         "Vi undersøker hva kundene vil kjøpe, hvem du konkurrerer mot og hvor vi realistisk kan vinne synlighet. Deretter prioriterer vi søkene der SEO-investeringen har best utsikt til å gi lønnsomme bestillinger."
-      ]
+      ],
+      "surface": "base-200"
     },
     {
       "_block": "content",
@@ -72,22 +76,27 @@
         "Er du den eneste snekkeren innenfor fem mil og har arbeid frem til neste sommer, er det neppe Google du har et problem med. Du trenger sannsynligvis en snekker til.",
         "Driver du derimot en bedrift der kundene har flere leverandører å velge mellom, og du har kapasitet til å ta flere bestillinger, blir regnestykket et annet."
       ],
-      "layout": "two-columns",
+      "layout": "default",
       "items": [
         {
           "title": "Når SEO er verdt å vurdere",
           "text": "- Kundene søker etter det du selger.\n- Konkurrentene blir funnet før deg.\n- Du har kapasitet til flere kunder.\n- Nye bestillinger forsvarer investeringen.",
-          "boxVariant": "card"
+          "boxVariant": "card",
+          "surface": "base-200",
+          "iconName": "target"
         },
         {
           "title": "Når pengene kan gjøre mer nytte andre steder",
           "text": "- Du blir allerede funnet av kundene du ønsker.\n- Du har mer arbeid enn du kan håndtere.\n- Kundene dine søker sjelden etter det du selger.\n- Du får besøk, men nettsiden skaffer få bestillinger.",
-          "boxVariant": "card"
+          "boxVariant": "card",
+          "surface": "base-200",
+          "iconName": "lightbulb"
         }
       ],
       "afterCards": [
         "Før du investerer i SEO, bør vi finne ut om økt synlighet faktisk er det bedriften din trenger, fullt mulig du har all trafikk du trenger men at nettsiden skaper trøbbel slikt fikser vi selvsagt. En SEO-avtale skal være en investering med et kommersielt formål, ikke enda en fast utgift i regnskapet."
-      ]
+      ],
+      "surface": "base-100"
     },
     {
       "_block": "content",
@@ -104,29 +113,40 @@
         {
           "title": "Lavere kostnad per bestilling",
           "text": "Når bestillingene øker mer enn markedsføringskostnadene, faller kostnaden per bestilling.\n\nRegneeksempel per måned\n\n| | Kun Ads | Ads + SEO |\n|---|---|---|\n| Kostnad | 20 000 kr | 25 000 kr |\n| Bestillinger | 40 | 60 |\n| Kostnad per bestilling | 500 kr | 417 kr |\n\n17 % lavere kostnad per bestilling",
-          "boxVariant": "card"
+          "boxVariant": "card",
+          "surface": "base-200",
+          "iconName": "chart-bar"
         },
         {
           "title": "Billigere annonser på Google",
           "text": "Google belønner gode annonser og relevante nettsider. Søker en kunde etter utvendig screen med montering i Oslo, ønsker Google å sende kunden til en side som tilbyr nettopp dette. Også når du betaler for klikket.\n\nGoogle vurderer kvaliteten på både annonsen og nettsiden når klikkprisen bestemmes.\n\nRegneeksempel basert på WordStreams teoretiske Quality Score-modell fra 2013.\n\n| | Eksempel A | Eksempel B |\n|---|---|---|\n| Quality Score | 1/10 | 10/10 |\n| Per klikk | 30 kr | 3 kr |\n| Klikk for 10 000 kr (avrundet) | 333 | 3 333 |\n\n10x flere klikk.\n\nSamme annonsebudsjett.\n\nQuality Score er et diagnoseverktøy. Google bruker ikke selve poengsummen direkte til å beregne klikkprisen.\n\nKilder: [Google om annonsekvalitet](https://support.google.com/google-ads/answer/156066?hl=no), [Google om Quality Score](https://support.google.com/google-ads/answer/6167118?hl=no) og [WordStreams beregningsmodell fra 2013](https://www.wordstream.com/blog/ws/2013/07/16/quality-score-cost-per-conversion).",
-          "boxVariant": "card"
+          "boxVariant": "card",
+          "surface": "base-200",
+          "iconName": "cursor-click"
         },
         {
           "title": "Synlighet i AI-søk",
           "text": "Kundene bruker AI til å finne, sammenligne og velge leverandører. Godt faginnhold, tydelig struktur og opparbeidet autoritet styrker grunnlaget for synlighet i disse søkene.\n\nGoogle AI, ChatGPT, Perplexity",
-          "boxVariant": "card"
+          "boxVariant": "card",
+          "surface": "base-100",
+          "iconName": "chat-circle-dots"
         },
         {
           "title": "Et økonomisk konkurransefortrinn",
           "text": "Konkurrentene dine trenger noen sekunder for å øke annonsebudsjettet. Å bygge faginnhold, autoritet og organisk synlighet tar tid.\n\nMed høyere konverteringsrate tåler du en høyere klikkpris ved samme dekningsbidrag og ønsket fortjeneste per bestilling, når øvrige kostnader er like.",
-          "boxVariant": "card"
+          "boxVariant": "card",
+          "surface": "base-100",
+          "iconName": "target"
         },
         {
           "title": "SEO + Konverteringsoptimalisering",
           "text": "Flere relevante besøk kombinert med høyere konverteringsrate gir en multiplikatoreffekt. Du får mer ut av Google, AI-søk, Meta Ads, e-post og resten av markedsføringen din.\n\nDet er her det virkelig interessante konkurransefortrinnet ligger.",
-          "boxVariant": "card"
+          "boxVariant": "card",
+          "surface": "accent",
+          "iconName": "trend-up"
         }
-      ]
+      ],
+      "surface": "base-100"
     },
     {
       "_block": "content",
@@ -134,7 +154,28 @@
       "headingAlign": "left",
       "heading": "Tre forkortelser. Du trenger ikke tre regninger.",
       "body": [
-        "SEO, AIO, GEO. Markedsføringsbransjen er flink til å finne opp nye forkortelser. Særlig når det er plass til en ny linje på fakturaen.\n\n**AIO og GEO er nye navn på søkemotoroptimalisering rettet mot AI-søk.** Kundene har fått nye måter å søke på, og SEO-faget har utviklet seg med dem.\n\nSEO er som alpint, mens AIO og GEO er som slalåm og storslalåm. **Forskjellige løyper, samme grunnleggende skiteknikk.**\n\nGrunnleggende SEO-arbeid styrker synligheten i både tradisjonelle søkemotorer og AI-søk. Relevant innhold, god struktur, teknisk tilgjengelighet, fagkunnskap og troverdighet er fundamentet for alle disse søketjenestene.\n\n**Søkemotoroptimalisering (SEO)**\n\n- Tradisjonelt søk: Google og Bing\n- Lokalt søk: Kart og bedrifter\n- AI-søk: AIO / GEO\n\n**Felles fundament**\n\n- Teknisk tilgjengelighet\n- Relevant innhold og søkeintensjon\n- Fagkunnskap, autoritet og troverdighet\n\nGoogle, Bing, ChatGPT, Gemini, Perplexity, Copilot\n\n### Google sier det selv\n\nGrunnleggende SEO gjelder også for Googles AI Overviews og AI Mode. Google krever verken et eget AI-schema eller spesielle AI-filer for synlighet i disse søkeresultatene.\n\n[Googles dokumentasjon om SEO og AI-søk](https://developers.google.com/search/docs/appearance/ai-features)\n\n### Nye søkemotorer. Nye muligheter.\n\nVi undersøker hvordan AI-assistentene finner informasjon, hvilke kilder de bruker og hvorfor de anbefaler bestemte bedrifter. Denne kunnskapen bruker vi til å videreutvikle SEO-arbeidet ditt.\n\n**Vi optimaliserer for hele søkemarkedet, fremfor å selge deg det samme grunnarbeidet under forskjellige navn.**"
+        "SEO, AIO, GEO. Markedsføringsbransjen er flink til å finne opp nye forkortelser. Særlig når det er plass til en ny linje på fakturaen.\n\n**AIO og GEO er nye navn på søkemotoroptimalisering rettet mot AI-søk.** Kundene har fått nye måter å søke på, og SEO-faget har utviklet seg med dem.\n\nSEO er som alpint, mens AIO og GEO er som slalåm og storslalåm. **Forskjellige løyper, samme grunnleggende skiteknikk.**\n\nGrunnleggende SEO-arbeid styrker synligheten i både tradisjonelle søkemotorer og AI-søk. Relevant innhold, god struktur, teknisk tilgjengelighet, fagkunnskap og troverdighet er fundamentet for alle disse søketjenestene."
+      ],
+      "surface": "base-200",
+      "layout": "default",
+      "items": [
+        {
+          "title": "Søkemotoroptimalisering (SEO)",
+          "text": "- Tradisjonelt søk: Google og Bing\n- Lokalt søk: Kart og bedrifter\n- AI-søk: AIO / GEO",
+          "boxVariant": "card",
+          "surface": "base-100",
+          "iconName": "magnifying-glass"
+        },
+        {
+          "title": "Felles fundament",
+          "text": "- Teknisk tilgjengelighet\n- Relevant innhold og søkeintensjon\n- Fagkunnskap, autoritet og troverdighet",
+          "boxVariant": "card",
+          "surface": "base-100",
+          "iconName": "wrench"
+        }
+      ],
+      "afterCards": [
+        "Google, Bing, ChatGPT, Gemini, Perplexity, Copilot\n\n### Google sier det selv\n\nGrunnleggende SEO gjelder også for Googles AI Overviews og AI Mode. Google krever verken et eget AI-schema eller spesielle AI-filer for synlighet i disse søkeresultatene.\n\n[Googles dokumentasjon om SEO og AI-søk](https://developers.google.com/search/docs/appearance/ai-features)\n\n### Nye søkemotorer. Nye muligheter.\n\nVi undersøker hvordan AI-assistentene finner informasjon, hvilke kilder de bruker og hvorfor de anbefaler bestemte bedrifter. Denne kunnskapen bruker vi til å videreutvikle SEO-arbeidet ditt.\n\n**Vi optimaliserer for hele søkemarkedet, fremfor å selge deg det samme grunnarbeidet under forskjellige navn.**"
       ]
     },
     {
@@ -151,19 +192,26 @@
         {
           "title": "Kartlegging og plan",
           "text": "01 / Etterspørsel\n\n**Hva leter kundene dine etter?**\n\nVi undersøker hvilke produkter og tjenester kundene søker etter, hvilke spørsmål de stiller og hva de ønsker å kjøpe.\n\n02 / Dekning\n\n**På hvilke av disse søkene blir du funnet i dag?**\n\nVi kartlegger hvor du er synlig og hvilke relevante søk konkurrentene er synlige på i stedet.\n\n03 / Konkurranse\n\n**Hvilke søk har vi best mulighet til å vinne?**\n\nVi undersøker konkurrentene, hva de gjør bedre enn deg og hva som kreves for å komme foran dem.\n\n04 / Lønnsomhet\n\n**Hvilke kunder og bestillinger er mest verdifulle?**\n\nVi prioriterer tjenester du tjener godt på og ønsker å selge mer av. Deretter vurderer vi hvor mye arbeid som kreves for å vinne synlighet.\n\n**Dette har vi på plass før gjennomføring**\n\n- Relevante søk kartlagt\n- Dagens synlighet undersøkt\n- Konkurrenter analysert\n- De mest lønnsomme mulighetene prioritert\n\n**En konkret SEO-plan for bedriften din.**",
-          "boxVariant": "card"
+          "boxVariant": "card",
+          "surface": "base-200",
+          "iconName": "magnifying-glass"
         },
         {
           "title": "Vi setter planen ut i livet",
           "text": "05 / Gjennomføring\n\nVi forbedrer nettsiden, skriver innhold som mangler, retter tekniske problemer og jobber med bedriftens synlighet og autoritet. Vi starter med oppgavene som har størst kommersiell verdi.\n\n**Eksempler på oppgaver**\n\n- Forbedre eksisterende tjenestesider\n- Lage sider for tjenester som mangler\n- Utbedre tekniske SEO-problemer\n- Bygge autoritet og omtale",
-          "boxVariant": "card"
+          "boxVariant": "card",
+          "surface": "base-200",
+          "iconName": "wrench"
         },
         {
           "title": "Måling og videre forbedring",
           "text": "06 / Måling\n\nVi følger med på hvilke søk som gir synlighet, hvilke sider som tiltrekker kunder og hvor mange besøk som ender i henvendelser. Der vi har data om bestillinger, følger vi også disse. Det vi lærer, bestemmer hva vi jobber med videre.\n\n**Dette følger vi med på**\n\n- Synlighet\n- Besøk\n- Henvendelser\n- Bestillinger (der vi har data)",
-          "boxVariant": "card"
+          "boxVariant": "card",
+          "surface": "accent",
+          "iconName": "chart-line-up"
         }
-      ]
+      ],
+      "surface": "base-100"
     },
     {
       "_block": "global",
@@ -179,22 +227,27 @@
         "Vi undersøker hvilke sider Google viser for de forskjellige søkene, og hvilke sider som gir kunden det beste svaret.",
         "Eksempel: En bedrift som selger og monterer solskjerming i Oslo."
       ],
-      "layout": "two-columns",
+      "layout": "default",
       "items": [
         {
           "title": "Tre forskjellige søk. Samme tjeneste.",
           "text": "- Utvendig screen med montering i Oslo\n- Pris på utvendig screen\n- Motorisert screen til hus\n\n**Utvendige screens med montering**\n\nÉn god tjenesteside\n\n- Produkter og motoriserte løsninger\n- Priser og hva som påvirker dem\n- Montering og levering i Oslo\n- Bilder fra utførte oppdrag\n- Bestill befaring\n\nVi trenger ikke tre forskjellige nettsider for å besvare disse tre søkene. Vi trenger én god side som dekker behovene.",
-          "boxVariant": "card"
+          "boxVariant": "card",
+          "surface": "base-200",
+          "iconName": "magnifying-glass"
         },
         {
           "title": "Når trenger vi en ny side?",
           "text": "Utvendig screen eller markise?\n\n**Screen eller markise - hva passer best for huset ditt?**\n\nEn egen sammenligningsside som forklarer forskjeller i solskjerming, vind, utsyn, pris og bruksområde.\n\nLenke videre til relevante produkter og tjenester\n\nHer trenger kunden hjelp til å velge produkt før en bestilling. Det er en annen oppgave enn å bestille en screen med montering.",
-          "boxVariant": "card"
+          "boxVariant": "card",
+          "surface": "base-200",
+          "iconName": "lightbulb"
         }
       ],
       "afterCards": [
         "### Dette gjør vi i praksis\n\n**Undersøker faktiske søk**\n\nSer hvilke søk og sider som allerede får synlighet i Google.\n\n**Forbedrer eksisterende sider**\n\nFyller inn svarene kundene leter etter, der de hører hjemme.\n\n**Lager nye sider der det mangler et godt svar**\n\nHver ny side får en tydelig oppgave.\n\n**Sørger for at sidene er tilgjengelige**\n\nKontrollerer at søkemotorene finner og leser sidene, og knytter relevant innhold sammen med lenker.\n\n**Målet er å dekke flest mulig verdifulle søk med færrest mulig unødvendige sider.**"
-      ]
+      ],
+      "surface": "base-100"
     },
     {
       "_block": "content",
@@ -210,28 +263,35 @@
         {
           "title": "Behold det som fungerer",
           "text": "Vi tar vare på synligheten bedriften allerede har.",
-          "boxVariant": "card"
+          "boxVariant": "card",
+          "surface": "base-100",
+          "iconName": "eye"
         },
         {
           "title": "Utnytt det som nesten fungerer",
           "text": "Sider som allerede får synlighet, men ligger for langt nede i søkeresultatene, er naturlige kandidater for forbedring.",
-          "boxVariant": "card"
+          "boxVariant": "card",
+          "surface": "base-100",
+          "iconName": "chart-line-up"
         },
         {
           "title": "Finn nye kunder i markedet",
           "text": "Vi identifiserer verdifulle søk der bedriften mangler synlighet, undersøker konkurransen og prioriterer de beste mulighetene.",
-          "boxVariant": "card"
+          "boxVariant": "card",
+          "surface": "accent",
+          "iconName": "target"
         }
       ],
       "afterCards": [
         "**Du får en SEO-strategi basert på hva bedriften din selger og hvor det finnes flere kunder å hente.**"
-      ]
+      ],
+      "surface": "base-200"
     },
     {
       "_block": "proofList",
       "id": "proof-seo",
       "proofList": {
-        "layout": "inherit",
+        "layout": "alternating",
         "entries": [
           {
             "caseId": "helt-opplagt"
@@ -254,17 +314,22 @@
         {
           "title": "Generisk innhold",
           "text": "Dette bør du vite om solskjerming.\n\nGenerelle fordeler, produktbeskrivelser og informasjon som finnes på hundrevis av andre nettsider.",
-          "boxVariant": "card"
+          "boxVariant": "card",
+          "surface": "base-200",
+          "iconName": "chat-circle-dots"
         },
         {
           "title": "Innhold basert på fagkunnskap",
           "text": "Hvilken screen passer til et vindutsatt hus?\n\nMontørens erfaring, konkrete produktvalg, dokumenterte vindgrenser og bilder fra relevante oppdrag.",
-          "boxVariant": "card"
+          "boxVariant": "card",
+          "surface": "accent",
+          "iconName": "lightbulb"
         }
       ],
       "afterCards": [
         "### Gode kilder har noe eget å bidra med.\n\n**Utførte oppdrag**\n\nVis hva dere har levert, hvilke utfordringer dere løste og hvorfor dere valgte løsningen.\n\n**Kundenes spørsmål**\n\nBruk spørsmålene dere får på telefon, e-post og befaringer som utgangspunkt for nyttig innhold.\n\n**Egne data og verktøy**\n\nUtvikle prisguider, kalkulatorer, sammenligninger og analyser som hjelper kunden med å velge riktig.\n\n**Omtale og anbefalinger**\n\nJobb for å bli omtalt og lenket til av relevante fagmiljøer, samarbeidspartnere og bransjenettsteder.\n\n### Google kaller det E-E-A-T.\n\n- E: Erfaring\n- E: Ekspertise\n- A: Autoritet\n- T: Troverdighet\n\nGoogle bruker E-E-A-T som et rammeverk for å beskrive kvalitet og troverdighet i innhold. Det er ingen enkeltstående rangeringsfaktor.\n\n[Googles veiledning om kvalitet og faginnhold](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)\n\n**Vi bruker gjerne AI til å bearbeide fagkunnskapen din. Vi bruker den ikke til å dikte den opp.**"
-      ]
+      ],
+      "surface": "base-100"
     },
     {
       "_block": "content",
@@ -275,27 +340,34 @@
         "En kunde som skal kjøpe solskjerming, undersøker gjerne produkter på Google, finner lokale leverandører i Google Maps og bruker ChatGPT til å sammenligne alternativer.",
         "Vi jobber med synligheten din der kundene leter, undersøker og velger leverandører."
       ],
-      "layout": "three-columns",
+      "layout": "default",
       "items": [
         {
           "title": "Google og Bing",
           "text": "Kunden søker\n\nUtvendig screen med montering\n\n**Her jobber vi med**\n\n- Synlighet på relevante søk.\n- Tjenestesider, produktinformasjon og faginnhold.\n- Teknisk SEO, interne lenker og autoritet.\n\nMålet\n\nFå kunden inn på den nettsiden som best svarer på behovet.",
-          "boxVariant": "card"
+          "boxVariant": "card",
+          "surface": "base-100",
+          "iconName": "magnifying-glass"
         },
         {
           "title": "Google Maps og lokale søk",
           "text": "Kunden søker\n\nSolskjerming i nærheten\n\n**Her jobber vi med**\n\n- Google-bedriftsprofilen din.\n- Tjenester, bedriftsinformasjon og geografiske områder.\n- Anmeldelser, lokal omtale og relevante nettsider.\n\nGoogle vurderer særlig relevans, avstand og hvor kjent bedriften er.\n\nMålet\n\nBli funnet av kunder i områdene du faktisk betjener.\n\n[Les mer om lokal SEO](/lokal-seo/)",
-          "boxVariant": "card"
+          "boxVariant": "card",
+          "surface": "base-100",
+          "iconName": "map-pin"
         },
         {
           "title": "AI-søk",
           "text": "Kunden spør\n\nHvilke bedrifter i Oslo leverer utvendige screens som tåler mye vind? Sammenlign leverandørene.\n\n**Her jobber vi med**\n\n- Hvilke spørsmål og relaterte søk AI-assistentene bruker.\n- Hvilke kilder de henter informasjon fra.\n- Hvordan bedriften din omtales sammenlignet med konkurrentene.\n- Tilgjengelighet og innhold på egen nettside og relevante eksterne kilder.\n\nMålet\n\nAt bedriften din blir omtalt som et relevant alternativ når kunden ber AI om hjelp til å velge leverandør.\n\n[Les mer om AI-synlighet](/ai-synlighet/)",
-          "boxVariant": "card"
+          "boxVariant": "card",
+          "surface": "base-100",
+          "iconName": "chat-circle-dots"
         }
       ],
       "afterCards": [
         "### Visste du at ett AI-spørsmål kan utløse flere søk?\n\nGoogle og ChatGPT beskriver hvordan AI-søk kan dele opp et spørsmål i flere relaterte søk for å finne informasjon til svaret.\n\nIllustrativt diagram:\n\n- Hvem leverer screens som tåler mye vind i Oslo?\n- Vindbestandige screens\n- Lokale leverandører\n- Erfaringer og anmeldelser\n- AI sammenstiller et svar\n- Basert på informasjon fra flere kilder\n\nIllustrativt eksempel på oppdeling av et AI-spørsmål.\n\nDerfor undersøker vi også søkene som ligger bak AI-svarene. Vi vil at bedriften din skal være en god kilde til informasjonen assistentene leter etter.\n\n[Google om AI-søk](https://developers.google.com/search/docs/appearance/ai-features)\n\n[OpenAI om ChatGPT Search](https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt)"
-      ]
+      ],
+      "surface": "base-200"
     },
     {
       "_block": "content",
@@ -307,22 +379,27 @@
         "Vi vil vite hvilke tjenester som får mer synlighet, hvilke sider som tiltrekker relevante kunder, og hvilke markedsføringskanaler registrerte henvendelser kommer fra. Der vi har data om bestillinger, følger vi også disse.",
         "Derfor utvikler vi også våre egne verktøy for analyse og måling."
       ],
-      "layout": "two-columns",
+      "layout": "default",
       "items": [
         {
           "title": "SeoTool",
           "text": "**Hvor godt blir du funnet?**\n\nIllustrasjon av søkeutvikling\n\n- Synlighet og klikk fra Google\n- Utvikling på søkeord og sider\n- Tekniske SEO-problemer\n- Konkurrenters synlighet i søk\n\nVårt eget analyseverktøy for søkemotoroptimalisering, brukt i vårt interne analysearbeid.",
-          "boxVariant": "card"
+          "boxVariant": "card",
+          "surface": "base-200",
+          "iconName": "chart-line-up"
         },
         {
           "title": "LeadProof",
           "text": "**Hvor kommer henvendelsene fra?**\n\nIllustrasjon av kanalfordeling\n\n- Organisk søk\n- Annonser\n- AI-søk\n- Øvrig / ukjent\n\n- Registrerte henvendelser\n- Kanal og trafikkilde der den er kjent\n- Utvikling over tid\n- Estimert verdi av henvendelser\n\nVårt eget verktøy for registrering og analyse av henvendelser.",
-          "boxVariant": "card"
+          "boxVariant": "card",
+          "surface": "base-200",
+          "iconName": "chart-bar"
         }
       ],
       "afterCards": [
         "Vi bruker egne verktøy i analysearbeidet vårt. Målinger avhenger av tilgjengelige data og avtalt omfang.\n\n### Hva skal vi gjøre annerledes neste måned?\n\nDet er her målingene blir interessante. De hjelper oss med å finne ut hvor neste forbedring bør gjøres.\n\n| Det vi observerer | Det vi undersøker videre |\n|---|---|\n| Mange visninger, få klikk | Plassering, overskrift og relevans i søkeresultatet. |\n| Flere besøk, få henvendelser | Tilbudet, nettsiden og veien til bestilling. |\n| Mange henvendelser fra feil kunder | Søkeintensjon, budskap og målgruppe. |\n| Flere relevante henvendelser | Muligheter for å øke synligheten ytterligere. |\n\n**Måle -> Analysere -> Forbedre -> Måle effekten på nytt**\n\n**Du skal vite hva vi har gjort, hvilken utvikling vi ser og hvorfor vi prioriterer det neste tiltaket.**\n\n[Les mer om hvordan vi måler effekten av optimalisering](/innsikt/male-effekt-av-optimalisering/)"
-      ]
+      ],
+      "surface": "base-100"
     },
     {
       "_block": "content",
@@ -333,22 +410,27 @@
       "body": [
         "Kanskje trenger bedriften din mer synlighet på Google i dag. Om noen måneder har du trafikken du trenger, men ønsker at flere av besøkene skal ende i bestillinger.\n\nMed våre optimaliseringspakker flytter vi innsatsen dit bedriften har mest å hente, innenfor kapasiteten du har valgt.\n\n### Slik kan samarbeidet utvikle seg\n\nEksempel på endring av prioritet underveis.\n\n**SEO**\n\nØke synligheten på bedriftens viktigste tjenester.\n\nNår konvertering blir viktigere enn mer trafikk\n\n**Konverteringsoptimalisering**\n\nFå flere av de relevante besøkende til å bestille.\n\nNår bedriften ønsker å nå flere kunder\n\n**SEO eller annonsering**\n\nTiltrekke flere relevante kunder til en bedre fungerende nettside.\n\n**Samme pakke. Nye prioriteringer.**\n\n### Du kjenner bedriften. Vi kjenner faget."
       ],
-      "layout": "two-columns",
+      "layout": "default",
       "items": [
         {
           "title": "Dette tar vi oss av",
           "text": "- Analyse og prioritering av tiltak\n- Avtalte forbedringer av nettsiden\n- Måling og oppfølging\n- Anbefalinger om videre arbeid",
-          "boxVariant": "card"
+          "boxVariant": "card",
+          "surface": "base-100",
+          "iconName": "wrench"
         },
         {
           "title": "Dette trenger vi fra deg",
           "text": "- Innsikt i tjenester, kunder og lønnsomhet\n- Nødvendige tilganger og godkjenninger\n- Fagkunnskap når vi utvikler innhold\n- Tilbakemelding på kvaliteten på henvendelsene",
-          "boxVariant": "card"
+          "boxVariant": "card",
+          "surface": "base-100",
+          "iconName": "target"
         }
       ],
       "afterCards": [
         "### Hvor lang tid tar SEO?\n\nVi begynner med forbedringer på nettsiden innenfor avtalt kapasitet. Enkelte tekniske hindringer er raske å rette, mens det tar tid å bygge opp synlighet på konkurranseutsatte søk.\n\nVi vurderer utviklingen underveis og prioriterer arbeidet ut fra resultatene og mulighetene vi ser.\n\n**Ingen bindingstid.**\n\nDu skal bruke oss fordi det lønner seg, ikke fordi du må.\n\nArbeidet utføres innenfor avtalt omfang. Større prosjekter og eventuelle tilleggskostnader avklares i avtalen.\n\n[Se pakker og priser](/priser/)"
-      ]
+      ],
+      "surface": "base-200"
     },
     {
       "_block": "content",
@@ -358,7 +440,8 @@
       "body": [
         "Du trenger ikke dobbelt så mange besøk for å doble antallet bestillinger. Med samme antall besøk gir en dobling av konverteringsraten dobbelt så mange bestillinger. Kombinerer du de to forbedringene, forsterker de hverandre.",
         "Prøv med tall fra din egen bedrift. Regneeksempelet viser hva som skjer dersom trafikken vokser med valgt prosent hver måned i 12 måneder, og den nye konverteringsraten gjelder fra første måned."
-      ]
+      ],
+      "surface": "base-100"
     },
     {
       "_block": "global",
@@ -370,7 +453,8 @@
       "headingAlign": "left",
       "body": [
         "Bruk samme type konvertering gjennom hele regneeksempelet: henvendelser eller bestillinger.\n\nFor å vurdere lønnsomheten må vi også vite hva hver bestilling gir i dekningsbidrag og hva optimaliseringen koster. Hvis nettsiden skaffer henvendelser, må vi vite hvor mange av dem som blir kunder.\n\n[Les mer om konverteringsoptimalisering](/konvertering/)"
-      ]
+      ],
+      "surface": "base-100"
     },
     {
       "_block": "global",
