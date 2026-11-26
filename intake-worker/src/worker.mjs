@@ -3,13 +3,14 @@ import { saveReceipt, readReceipts, csv } from './store.mjs';
 import { authorize } from './access.mjs';
 import { notifyOne, retryDue } from './notify.mjs';
 import { dashboard } from './dashboard.mjs';
-import { collectTraffic, expireTraffic } from './traffic.mjs';
+import { acceptHit, expireTraffic, trafficEnabled } from './traffic.mjs';
 import { renderTraffic } from './traffic-dashboard.mjs';
+import { trafficServiceUrl } from '../../app/traffic-source.mjs';
 
 async function admin(request, env, url) {
   if (['/admin/', '/admin/style.css', '/admin/report', '/admin/dashboard/receipts', '/admin/dashboard/export'].includes(url.pathname)) {
     const response = await dashboard(request, env);
-    if (!response.ok || url.pathname !== '/admin/' || env.TRAFFIC_ENABLED !== 'true') return response;
+    if (!response.ok || url.pathname !== '/admin/' || !trafficEnabled(env)) return response;
     const html = (await response.text()).replace('Trafikkmåling er ikke aktivert.',
       '<a class="btn btn-outline" href="/admin/traffic">Se trafikkmålingen for Optimalisering Oslo</a>');
     return new Response(html, { headers: response.headers });
@@ -19,7 +20,9 @@ async function admin(request, env, url) {
   if ((retry && request.method !== 'POST') || (!retry && request.method !== 'GET')) return json({ ok: false }, 405);
   if (url.searchParams.has('site') && url.searchParams.get('site') !== env.SITE_ID) return json({ ok: false }, 403);
   if (url.pathname === '/admin/traffic') {
-    return env.TRAFFIC_ENABLED === 'true' ? renderTraffic(env, url.searchParams) : json({ ok: false }, 404);
+    if (!trafficEnabled(env)) return json({ ok: false }, 404);
+    if ([...url.searchParams.values()].some(value => value.length > 100)) return json({ ok: false }, 422);
+    return renderTraffic(env, url.searchParams);
   }
   if (retry) {
     if (request.headers.has('Origin') && request.headers.get('Origin') !== url.origin) return json({ ok: false }, 403);
@@ -43,10 +46,13 @@ export default {
   async fetch(request, env, ctx) {
     let cors = {};
     try {
-      const config = configuration(env), url = new URL(request.url);
+      const url = new URL(request.url);
+      // This synthetic origin has no public route. The website Worker reaches
+      // it through the account-local service binding with fresh headers.
+      if (url.href === trafficServiceUrl) return await acceptHit(request, env);
+      const config = configuration(env);
       if (url.origin !== config.ingress) return json({ ok: false }, 403);
       if (url.pathname.startsWith('/admin/')) return await admin(request, env, url);
-      if (url.pathname === '/api/traffic') return await collectTraffic(request, env);
       if (url.pathname !== '/api/leads') return json({ ok: false }, 404);
       const origin = request.headers.get('Origin');
       if (!origin || !config.origins.has(origin)) return json({ ok: false }, 403);

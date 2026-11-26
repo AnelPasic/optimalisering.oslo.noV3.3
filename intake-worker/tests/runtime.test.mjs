@@ -9,6 +9,42 @@ const require = createRequire(new URL('../../app/package.json', import.meta.url)
 const { Miniflare, convertV4MiniflareOptions } = require('miniflare');
 const { build } = require('esbuild');
 
+test('workerd counts through a private service binding into D1', { timeout: 60000 }, async () => {
+  const [website, intake] = await Promise.all(['../../app/worker.mjs', '../src/worker.mjs'].map(async entry => {
+    const bundle = await build({ entryPoints: [fileURLToPath(new URL(entry, import.meta.url))],
+      bundle: true, write: false, format: 'esm', platform: 'browser', target: 'es2022' });
+    return bundle.outputFiles[0].text;
+  }));
+  const site = 'https://optimalisering.oslo.no';
+  const ingress = 'https://ingress.example.test';
+  const common = { cf: false, modules: true, compatibilityDate: '2026-10-06' };
+  const mf = new Miniflare(convertV4MiniflareOptions({ workers: [
+    { ...common, name: 'website', script: website, serviceBindings: {
+      ASSETS: () => new Response('page', { headers: { 'Content-Type': 'text/html; charset=utf-8' } }), HITCOUNTER: 'intake',
+    } },
+    { ...common, name: 'intake', script: intake, d1Databases: ['DB'], bindings: {
+      SITE_ID: new URL(site).hostname, SITE_STAGE: 'production', INGRESS_ORIGIN: ingress,
+      ALLOWED_ORIGINS: site, HITCOUNT_ENABLED: 'true',
+    } },
+  ] }));
+  try {
+    const db = await mf.getD1Database('DB', 'intake');
+    const migration = await readFile(new URL('../migrations/0002_html_hits.sql', import.meta.url), 'utf8');
+    await db.prepare(migration).run();
+    const response = await mf.dispatchFetch(site + '/priser/?utm_source=google&utm_medium=cpc&utm_campaign=runtime');
+    assert.equal(await response.text(), 'page');
+    assert.equal(response.headers.get('Set-Cookie'), null);
+    let stored;
+    for (let i = 0; i < 50 && !stored; i++) {
+      stored = await db.prepare('SELECT channel, campaign, hits FROM html_hits').first();
+      if (!stored) await new Promise(resolve => setTimeout(resolve, 20));
+    }
+    assert.deepEqual({ ...stored }, { channel: 'paid_search', campaign: 'runtime', hits: 1 });
+    const target = await mf.getWorker('intake');
+    assert.equal((await target.fetch(ingress + '/count', { method: 'POST' })).status, 404);
+  } finally { await mf.dispose(); }
+});
+
 test('workerd + real local D1: migration, racing POSTs, write failure, default gates, and isolated Resend fetch', { timeout: 60000 }, async () => {
   const bundle = await build({ entryPoints: [fileURLToPath(new URL('../src/worker.mjs', import.meta.url))], bundle: true, write: false, format: 'esm', platform: 'browser', target: 'es2022' });
   let mails = 0; const outboundErrors = [], subjects = [];
