@@ -13,7 +13,7 @@ const pages=pageFilePaths().map(file=>({file,page:JSON.parse(readFileSync(`src/c
 const home=pages.find(p=>p.page.kind==='home')!.page;
 const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
 const normal=pages.filter(p=>p.page.kind!=='home'&&p.page.slug!=='synlighet');
-const expectedHeroFields=['layout','surface','toneOverrides','eyebrow','title','support','highlights','primaryCta','secondaryCta','featuredProofCaseId','visual'];
+const expectedHeroFields=['layout','surface','toneOverrides','eyebrow','title','support','primaryCta','secondaryCta','highlights','featuredProofCaseId','visual'];
 
 test('all ordinary pages have one canonical editable Hero, with no duplicated persisted text or image keys',()=>{
  assert.ok(normal.length>0,'service and article sources must exist');
@@ -95,7 +95,11 @@ test('Pages CMS edits one nested Hero; restores all sections, media and CTA with
   assert.deepEqual(saved.sections??[],page.sections??[],file);
   assert.deepEqual(saved.hero.visual,page.hero.visual,file);
   const result=pageSchema.safeParse(saved);assert.ok(result.success,file+': '+(result.success?'':JSON.stringify(result.error.issues).slice(0,2600)));
-  const restored=JSON.parse(cmsJsonSave(saved,page,editor,cms));
+  // An omitted optional field is retained by merge:true. Explicitly clear the
+  // synthetic layout override when restoring an originally absent field.
+  const restoreForm=structuredClone(page);
+  if(!Object.hasOwn(page.hero,'layout'))restoreForm.hero.layout='';
+  const restored=JSON.parse(cmsJsonSave(saved,restoreForm,editor,cms));
   // Native Pages CMS has no editor for the retired empty home chrome stub.
   // That obsolete {} is not a source of visible page content anymore.
   if(page.kind==='home'){
