@@ -137,3 +137,17 @@ test('global Gratis sjekk replaces the local callout with a single CMS master re
   const duplicate=structuredClone(source);duplicate.sections.push(placement('sjekk'));
   assert.equal(pageSchema.safeParse(duplicate).success,false);
 });
+
+
+test('conversion page keeps local CTA and global assessment on distinct protected anchors',()=>{
+ const source=JSON.parse(readFileSync('src/content/pages/konvertering.json','utf8'));
+ const parsed=pageSchema.parse(source);
+ const active=parsed.sections.filter(s=>s.visibility!=='hidden');
+ const assessment=active.filter(s=>s.id==='sjekk');
+ assert.equal(assessment.length,1);
+ const local=active.find(s=>s.id==='sjekk-intro');
+ if(local){assert.equal(local._block,'protected');assert.equal(assessment[0].globalElement,'sjekk');}
+ const fixture=structuredClone(source);
+ const localSource=fixture.sections.find((s:any)=>s.id==='sjekk-intro');
+ if(localSource){localSource.id='sjekk';assert.equal(pageSchema.safeParse(fixture).success,false);}
+});
