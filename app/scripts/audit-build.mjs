@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readdirSync, readFileSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { stripTerminologyLinks } from './terminology-markup.mjs';
+import { hasRichMarkdown, renderSafeMarkdown } from '../src/lib/rich-markdown.ts';
 
 // Dynamic editorial pages live in isolated folders; all rendered URLs still need full audit.
 const pageDirs=['src/content/pages','src/content/pages/managed-services','src/content/pages/managed-articles'];
@@ -12,9 +13,12 @@ for(const page of pages){if(duplicateSlugs.has(page.slug))throw new Error('Dupli
 for(const page of pages)if(page.kind==='home'){page.sections=getHomepageBlocks(page).filter(isHomepageSectionVisible);}
 const paths = new Map(pages.map(page => [page.slug === 'home' ? '/' : `/${page.slug}/`, page]));
 // The editorial glossary has its own structured source, rather than page JSON.
-paths.set('/begreper/', { slug: 'begreper', sections: [] });
-paths.set('/design-system/', { slug: 'design-system', sections: [] });
-paths.set('/design-system/global-elements/', { slug: 'design-system/global-elements', sections: [] });
+paths.set('/begreper/', { slug: 'begreper', sections: [], seo: JSON.parse(readFileSync('src/content/terminology/glossary.json','utf8')).seo });
+paths.set('/design-system/', { slug: 'design-system', sections: [], seo: { noindex: true } });
+paths.set('/design-system/global-elements/', { slug: 'design-system/global-elements', sections: [], seo: { noindex: true } });
+paths.set('/design-system/proof-list/', { slug: 'design-system/proof-list', sections: [], seo: { noindex: true } });
+paths.set('/konverteringsratekalkulator/', { slug: 'konverteringsratekalkulator', sections: [] });
+paths.set('/takk/', { slug: 'takk', sections: [], seo: { noindex: true } });
 const documents = new Map();
 const titles = new Set();
 let linksChecked = 0;
@@ -30,19 +34,19 @@ for (const [url, page] of paths) {
   assert.ok(html.includes('name="description"'), `${url}: description`);
   assert.ok(html.includes(`href="https://optimalisering.oslo.no${url}"`), `${url}: canonical`);
   assert.ok(html.includes('lang="nb"'), `${url}: Norwegian document language`);
-  if (!['404', 'design-system', 'design-system/global-elements'].includes(page.slug)) assert.ok(!html.includes('content="noindex, nofollow"'), `${url}: no global noindex; Cloudflare owns indexing`);
-  if (page.slug === 'design-system') assert.ok(html.includes('content="noindex, nofollow"'), 'Internal design-system always stays noindex');
+  assert.equal(html.includes('content="noindex, nofollow"'), page.seo?.noindex === true, `${url}: source-owned page noindex only; Cloudflare owns global indexing`);
   assert.ok(!/P10[1-5]|Oslo Privatklinikk|Tankeverksted|Oracles|Beck Maskin|Gram Car Carriers/.test(html), `${url}: no unapproved proof`);
   if (!['home', 'priser', 'synlighet', 'konvertering'].includes(page.slug)) assert.ok(!/4[\s,.]?490|6[\s,.]?990/.test(html), `${url}: frozen exploratory prices`);
   const entities = { '&amp;': '&', '&lt;': '<', '&gt;': '>', '&quot;': '"', '&apos;': "'" };
-  const text = stripTerminologyLinks(html).replace(/<[^>]*>/g, ' ').replace(/&(amp|lt|gt|quot|apos);/g, match => entities[match]).replace(/&#(\d+);/g, (_match, number) => String.fromCodePoint(Number(number))).replace(/\s+/g, ' ');
+  const normalizedText = value => stripTerminologyLinks(value).replace(/<[^>]*>/g, ' ').replace(/&(amp|lt|gt|quot|apos);/g, match => entities[match]).replace(/&#(\d+);/g, (_match, number) => String.fromCodePoint(Number(number))).replace(/\s+/g, ' ').trim();
+  const text = normalizedText(html);
   for (const section of (page.sections ?? []).filter(section=>section.visibility!=='hidden')) {
     const packages = getHomepageBlock(paths.get('/'),'packages').content;
     const body = page.slug === 'priser' && section.id === 'kostnader' ? [
       `${packages.adBudgetNote} ${packages.externalCostsNote.replace('kommer i tillegg', 'kommer også i tillegg')}`,
       packages.separateWorkNote, packages.capacityNote,
     ] : section.body ?? [];
-    for (const paragraph of body) assert.ok(text.includes(paragraph.replace(/\s+/g, ' ')), `${url}: semantic paragraph hidden in ${section.id}`);
+    for (const paragraph of body) assert.ok(text.includes(normalizedText(hasRichMarkdown(paragraph)?renderSafeMarkdown(paragraph):paragraph)), `${url}: semantic paragraph hidden in ${section.id}`);
   }
 }
 for (const [url, html] of documents) {
