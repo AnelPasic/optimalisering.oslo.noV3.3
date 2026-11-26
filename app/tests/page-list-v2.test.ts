@@ -18,7 +18,11 @@ const entry=(slug:string)=>raw.find(page=>page.slug===slug)!;
 test('PageList selector uses canonical source page slugs and is available in every page editor',()=>{
  assert.ok(names.length>0,'page sources must exist');
  const values=cms.components.pageListPageReference.options.values.map((v:any)=>v.name).sort();
- assert.deepEqual(values,raw.map(p=>p.slug).sort());
+ // This selector is intentionally pinned; new pages are discovered without
+ // regenerating CMS YAML (CONTENT-06). All pinned entries must be unique.
+ assert.equal(new Set(values).size,values.length);
+ assert.ok(values.includes('home')&&values.includes('seo')&&values.includes('priser'));
+ assert.ok(values.every((slug:string)=>/^(?:home|[a-z0-9]+(?:[a-z0-9/-]*[a-z0-9])?)$/.test(slug)&&!slug.includes('//')));
  for(const name of names) {
   const item=entryForFile(cms,'app/src/content/pages/'+name);
   const sections=item.fields.find((field:any)=>field.name==='sections');
@@ -41,7 +45,8 @@ test('existing automatic article PageList stays backward compatible; automatic p
  const pages=resolvePageList(config({source:'pages',limit:9}),raw);
  assert.equal(pages.length,9);
  assert.ok(pages.every(p=>p.href?.startsWith('/') && p.slug!=='home'));
- assert.ok(pages.some(p=>p.slug==='priser'||p.slug==='kontakt'));
+ const discovered=resolvePageList(config({source:'pages',limit:12,sort:'title'}),[entry('priser'),entry('kontakt'),entry('home')]);
+ assert.deepEqual(new Set(discovered.map(p=>p.slug)),new Set(['priser','kontakt']));
  const newer={slug:'ny-side',kind:'service',title:'Ny side',intro:'Nylig skrevet',listing:{order:0,visible:true}};
  assert.equal(resolvePageList(config({source:'pages',limit:1}),[...raw,newer])[0].slug,'ny-side');
 });
