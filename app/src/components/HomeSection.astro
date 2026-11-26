@@ -33,7 +33,7 @@ const alignment = resolveHeadingAlignment(section.headingAlign, defaults?.headin
 ---
 <section id={anchor??section.id} class:list={[`content-section section-space home-section-${visualId ?? section.id}`,{'bg-info text-info-content':infoSurface&&surface==='info'}]} data-surface={surface}>
   <div class="shell">
-    <div class="section-heading" data-heading-align={alignment}><div>{section.eyebrow && <p class="eyebrow">{section.eyebrow}</p>}<h2>{section.heading}</h2></div><div class="body-copy" data-content-layout={paragraphLayoutAttribute(section,protectedRow)}>{section.body.map(text => hasRichMarkdown(text)?<RichMarkdown text={text}/>:<p><TermText text={text} terms={terms}/></p>)}</div></div>
+    <div class="section-heading" data-heading-align={alignment}><div>{section.eyebrow && <p class="eyebrow">{section.eyebrow}</p>}{section.heading.trim()&&<h2>{section.heading}</h2>}</div><div class="body-copy" data-content-layout={paragraphLayoutAttribute(section,protectedRow)}>{section.body.map(text => hasRichMarkdown(text)?<RichMarkdown text={text}/>:<p><TermText text={text} terms={terms}/></p>)}</div></div>
     {section.items && <div class:list={serviceChoices
       ? 'mt-[44px] grid grid-cols-3 gap-(--gap-lg) max-[900px]:grid-cols-1 max-[650px]:mt-8 max-[650px]:gap-(--gap)'
       : ['section-items', { 'two-items': section.items.length === 2, 'mechanism-steps max-sm:grid-cols-1': numbered }]}

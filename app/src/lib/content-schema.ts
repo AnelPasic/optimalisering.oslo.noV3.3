@@ -97,6 +97,13 @@ export const pageSchema = z.preprocess((input,context)=>{
     try { const route = resolveRouteFamily(page); validateSynlighetSections(page, route); } catch (error) { context.addIssue({code:'custom',path:['composition'],message:error instanceof Error?error.message:'Invalid composition'}); }
     if (page.kind !== 'home') page.sections.forEach((section, index) => {
       if (section.globalElement) return;
+      if(section._block==='faq'){
+        if(page.kind!=='service'||section.id!=='sporsmal'||section.body.length||section.items||section.links||section.afterCards||section.pageList||section.proofList||section.pricingModule||
+          page.sections.some(other=>other.globalElement==='sporsmal')||page.sections.filter(other=>other._block==='faq'&&!other.globalElement).length!==1||
+          (section.visibility!=='hidden'&&!page.faq.length))
+          context.addIssue({code:'custom',path:['sections',index],message:'Lokal FAQ krever egne spørsmål og én plassering uten global FAQ'});
+        return;
+      }
       if(section._block==='pricingModule'){
         if(page.kind!=='pricing'||!section.pricingModule||section.id!==pricingModuleIds[section.pricingModule]||section.pageList||section.proofList||section.items||section.links)
           context.addIssue({code:'custom',path:['sections',index],message:'Prismodul er bare tillatt på prissiden og må ha riktig seksjonsidentitet'});

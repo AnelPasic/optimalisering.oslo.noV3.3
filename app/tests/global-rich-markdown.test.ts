@@ -102,3 +102,24 @@ test('Cards is followed by optional rich-text paragraphs in local and global sec
  assert.equal(homepageBlock._block,'content');
  assert.deepEqual(homepageBlock.afterCards,afterCards);
 });
+
+
+test('safe pipe tables retain column and row headers, inline formatting and labels',()=>{
+ const md='| | Screens | Markiser |\n|---|---|---|\n| Produktsøk | **God synlighet** | [Svak synlighet](/seo/) |';
+ assert.equal(hasRichMarkdown(md),true);
+ const html=renderSafeMarkdown(md);
+ assert.match(html,/<table class="table">/);
+ assert.match(html,/<th scope="col">Screens<\/th>/);
+ assert.match(html,/<th scope="row">Produktsøk<\/th>/);
+ assert.match(html,/<td><strong>God synlighet<\/strong><\/td>/);
+ assert.match(html,/<td><a href="\/seo\/">Svak synlighet<\/a><\/td>/);
+});
+test('tables escape executable content, reject unsafe links and leave malformed rows as text',()=>{
+ const md='| A | B |\n|---|---|\n| <img src=x onerror=alert(1)> | [x](javascript:alert(1)) |\n| malformed |';
+ const html=renderSafeMarkdown(md);
+ assert.ok(!html.includes('<img'));
+ assert.ok(!html.includes('<a href='));
+ assert.match(html,/&lt;img/);
+ assert.match(html,/<p>\| malformed \|<\/p>/);
+ assert.equal(hasRichMarkdown('| A | B |\n| invalid | invalid |'),false);
+});

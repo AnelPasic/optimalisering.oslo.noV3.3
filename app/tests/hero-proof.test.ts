@@ -44,7 +44,8 @@ test('hero follows the first publishable selection and respects anonymized publi
   assert.deepEqual(getHeroProof({publicationApproved:true,caseIds:['eurotents','nysta']},invalidFirst),getHeroProof({publicationApproved:true,caseIds:['nysta']},records));
   const anonymized = { ...eurotents, namingPermission: 'ANONYMIZED_APPROVED', anonymizedLabel: 'Norsk nettbutikk' };
   const projected=getHeroProof({publicationApproved:true,caseIds:['eurotents']},[anonymized]);
-  assert.ok(projected?.support.startsWith('Norsk nettbutikk'));
+  assert.ok(projected, 'approved anonymized proof has a public projection');
+  assert.ok(projected.support.startsWith('Norsk nettbutikk'));
   assert.ok(!projected.support.includes(eurotents.clientName));
 });
 

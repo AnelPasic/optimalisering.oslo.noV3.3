@@ -47,5 +47,7 @@ jobs:
       - name: Confirm ChatGPT Ads output and sitemap
         run: |
           test -f dist/chatgpt-ads/index.html
-          node scripts/audit-service-content.mjs chatgpt-ads
+          node scripts/audit-service-content.mjs chatgpt-ads seo konvertering
+          node scripts/audit-h017c.mjs
+          node scripts/audit-build.mjs
           grep -q '/chatgpt-ads/' dist/sitemap.xml

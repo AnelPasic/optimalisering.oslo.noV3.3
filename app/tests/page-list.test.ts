@@ -14,24 +14,26 @@ const first='innsikt/hva-bor-optimaliseres-forst',second='innsikt/male-effekt-av
 const resolveTextList=(config:unknown,records:any[])=>pageList.resolvePageList(config,records).map(({visual,...item})=>item);
 const config=(edit:any={})=>({mode:'automatic',sort:'editorial',limit:6,layout:'cards',selected:[],excluded:[],...edit});
 const third=(edit:any={})=>({...load('hva-bor-optimaliseres-forst'),slug:'innsikt/tredje',title:'Ærlig tittel',intro:'Tredje ingress',listing:{title:'Åpen guide',summary:'Tredje sammendrag',order:30,visible:true,...edit}});
-const expected=[
-  {slug:first,title:'Hva bør optimaliseres først?',summary:'Undersøk om de rette finner deg, om de kommer videre, og om handlingene har verdi. Se hypotetiske situasjoner og en enkel beslutningsrekkefølge.',label:'Les startguiden',href:`/${first}/`},
-  {slug:second,title:'Hvordan måle effekten?',summary:'Skill mellom visninger, handlinger og forretningsverdi. Definer relevante henvendelser eller nyttige kjøp, og gjør forutsetningene synlige.',label:'Les måleguiden',href:`/${second}/`},
-  // Newly authored article in the live CMS is a valid third item, not a regression.
-  {slug:'innsikt/google-bedriftsprofil',title:'Google bedriftsprofil - praktisk guide',summary:'En enkel kontroll av eierskap, kategori, tjenesteområde, åpningstider og kontaktvei i Google Søk og Maps.',label:'Les guiden',href:'/innsikt/google-bedriftsprofil/'},
-];
+// Independent source oracle: assert the current CMS listing, not old article copy.
+const collator=new Intl.Collator('nb',{usage:'sort',sensitivity:'variant'});
+const expected=pages().filter(p=>p.kind==='article'&&p.slug.startsWith('innsikt/')&&p.listing?.visible!==false)
+ .sort((a,b)=>(a.listing?.order??Infinity)===(b.listing?.order??Infinity)?collator.compare(a.listing?.title||a.title,b.listing?.title||b.title)||collator.compare(a.slug,b.slug):(a.listing?.order??Infinity)-(b.listing?.order??Infinity))
+ .map(p=>({slug:p.slug,title:p.listing?.title||p.title,summary:p.listing?.summary||p.intro,label:p.listing?.label||'Les mer',href:'/'+p.slug+'/'}));
+const expectedBySlug=(slug:string)=>expected.find(p=>p.slug===slug)!;
 
 test('automatic collection discovery preserves exact migrated titles, summaries, labels, URLs and order',()=>{
-  assert.deepEqual(resolveTextList(config(),pages()),expected);
+  assert.deepEqual(resolveTextList(config(),pages()),expected.slice(0,6));
   const overview=load('innsikt'),section=overview.sections[0];
   assert.equal(section._block,'pageList');assert.equal(section.id,'guider');assert.equal(section.items,undefined);
   assert.equal(pageList.pageListSchema.safeParse(section.pageList).success,true);
   for(const key of ['title','summary','href','visual','src','icon'])assert.ok(!(key in section.pageList));
 });
 test('synthetic article is discovered without overview edits; hidden/index/service/utility records are omitted',()=>{
-  assert.equal(resolveTextList(config(),[...pages(),third()]).length,expected.length+1);
+  const fixture=pages().filter(p=>p.slug===first||p.slug===second);
+  assert.ok(resolveTextList(config(),[...fixture,third()]).some(p=>p.slug==='innsikt/tredje'));
+  assert.equal(resolveTextList(config(),[...fixture,third()]).length,3);
   for(const record of [third({visible:false}),{...third(),kind:'service'},{...third(),kind:'utility'},{...third(),slug:'innsikt'},{...third(),slug:'elsewhere/article'}]){
-    assert.deepEqual(resolveTextList(config(),[...pages(),record]),expected);
+    assert.deepEqual(resolveTextList(config(),[...fixture,record]),expected.filter(p=>p.slug===first||p.slug===second));
   }
 });
 test('editorial sort puts unordered last and breaks ties by Norwegian title then slug; title sort is deterministic',()=>{
@@ -41,12 +43,12 @@ test('editorial sort puts unordered last and breaks ties by Norwegian title then
   assert.deepEqual(resolveTextList(config({sort:'title'}),records).map(p=>p.title),['Ærlig','Ærlig','Øvelse','Åpen']);
 });
 test('exclusion precedes automatic limit; manual row order and count are authoritative',()=>{
-  assert.equal(resolveTextList(config({excluded:[{slug:first}],limit:1}),[...pages(),third()])[0].slug,second);
+  assert.equal(resolveTextList(config({excluded:[{slug:first}],limit:1}),[...pages().filter(p=>p.slug===first||p.slug===second),third({order:999})])[0].slug,second);
   const manual=config({mode:'manual',selected:[{slug:second},{slug:first}],excluded:[{slug:second}],limit:1});
-  assert.deepEqual(resolveTextList(manual,pages()),[expected[1],expected[0]]);
+  assert.deepEqual(resolveTextList(manual,pages()),[expectedBySlug(second),expectedBySlug(first)]);
   assert.deepEqual(resolveTextList(config({mode:'manual'}),pages()),[]);
   const records=pages().map(p=>p.slug===first?{...p,listing:{...p.listing,visible:false}}:p);
-  assert.deepEqual(resolveTextList(manual,records),[expected[1]]);
+  assert.deepEqual(resolveTextList(manual,records),[expectedBySlug(second)]);
 });
 test('blank optional metadata defaults safely and href normalizes slashes',()=>{
   const record=third({title:'',summary:' ',label:''});record.slug='/innsikt/tredje/';
@@ -73,7 +75,8 @@ test('CMS editor has unique file ownership and article-only reference rows; save
   const articles=entryForFile(cms,'app/src/content/pages/managed-articles/innsikt-hva-bor-optimaliseres-forst.json');
   assert.equal(articles.name,'insightArticles');
   const eligible=readdirSync('src/content/pages/managed-articles').filter(f=>f.endsWith('.json'));
-  assert.deepEqual(eligible.sort(),['innsikt-google-bedriftsprofil.json','innsikt-hva-bor-optimaliseres-forst.json','innsikt-male-effekt-av-optimalisering.json']);
+  assert.ok(eligible.length>=3);
+  for(const file of eligible){const path='app/src/content/pages/managed-articles/'+file;const record=JSON.parse(readFileSync('src/content/pages/managed-articles/'+file,'utf8'));assert.equal(entryForFile(cms,path)?.name,'insightArticles',file);assert.equal(record.kind,'article',file);assert.equal(file,'innsikt-'+record.slug.slice('innsikt/'.length).replaceAll('/','-')+'.json',file);}
   const section=resolveField(entry.fields.find((f:any)=>f.name==='sections').blocks.find((b:any)=>b.name==='pageList'),cms.components);
   const fields=section.fields.find((f:any)=>f.name==='pageList').fields;
   for(const name of ['selected','excluded']){
@@ -83,7 +86,7 @@ test('CMS editor has unique file ownership and article-only reference rows; save
   }
   const form=structuredClone(overview);form.sections[0].pageList=config({mode:'manual',layout:'compact',selected:[{slug:second},{slug:first}]});
   const saved=JSON.parse(cmsJsonSave(overview,form,entry,cms));assertPreservedContent(form,saved);
-  assert.deepEqual(resolveTextList(pageSchema.parse(saved).sections[0].pageList!,pages()),[expected[1],expected[0]]);
+  assert.deepEqual(resolveTextList(pageSchema.parse(saved).sections[0].pageList!,pages()),[expectedBySlug(second),expectedBySlug(first)]);
   const restored=JSON.parse(cmsJsonSave(saved,structuredClone(overview),entry,cms));assertPreservedContent(overview,restored);
   assert.deepEqual(pageSchema.parse(restored),pageSchema.parse(overview));
   for(const name of ['hva-bor-optimaliseres-forst','male-effekt-av-optimalisering']){

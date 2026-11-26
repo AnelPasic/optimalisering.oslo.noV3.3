@@ -994,7 +994,11 @@ components:
         pattern: ^[a-z0-9]+(?:-[a-z0-9]+)*$
         description: Unik, stabil ID, for eksempel faglig-informasjon. Behold eksisterende ankere når du redigerer eller flytter.
       - *serviceEyebrow
-      - *serviceHeading
+      - name: heading
+        label: Overskrift
+        type: string
+        required: false
+        description: La stå tomt for et avsnitt uten overskrift, for eksempel forklaring etter en kalkulator.
       - *serviceHeadingAlign
       - *serviceLayout
       - *serviceSurface
@@ -1604,6 +1608,25 @@ content:
               - name: proofList
                 label: ProofList – kundecaser
                 component: sectionProofList
+              - name: faq
+                label: Lokal FAQ
+                fields:
+                  - name: id
+                    type: string
+                    default: sporsmal
+                    readonly: true
+                    required: true
+                    hidden: true
+                  - name: eyebrow
+                    label: Overoverskrift
+                    type: string
+                  - name: heading
+                    label: Overskrift
+                    type: string
+                    required: true
+                  - name: visibility
+                    label: Visning på denne siden
+                    component: sectionVisibility
               - name: global
                 label: Globalt element
                 component: serviceGlobalPlacement

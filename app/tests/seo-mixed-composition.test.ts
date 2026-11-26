@@ -54,10 +54,11 @@ test('native SEO page editor contains section layouts, card treatment and a shar
 
 test('SEO shares the full global catalogue while rejecting duplicates, forgeries and broken links',()=>{
  const add=(element:string)=>{const x=clone();x.sections.push({_block:'global',element});return x};
- const insert=(element:string)=>{const x=clone();x.sections=x.sections.filter((row:any)=>!(row._block==='global'&&row.element===element));x.sections.push({_block:'global',element});return x};
+ const insert=(element:string)=>{const x=clone();x.sections=x.sections.filter((row:any)=>!(row._block==='global'&&row.element===element)&&!(element==='sporsmal'&&row._block==='faq'));x.sections.push({_block:'global',element});return x};
  for(const el of ['resultater','sporsmal','behov','regneeksempel','mekanisme','passer']) {
   assert.equal(pageSchema.safeParse(insert(el)).success,true,el);
  }
+ if(source.sections.some((row:any)=>row._block==='faq'))assert.equal(pageSchema.safeParse(add('sporsmal')).success,false,'local and global FAQ cannot share a page');
  assert.equal(pageSchema.safeParse(add('untrusted')).success,false,'unknown global reference');
  for(const el of ['priser','sjekk'])assert.equal(pageSchema.safeParse(add(el)).success,false,'duplicate '+el);
  const forged=clone();forged.sections.push({...getGlobalElement('priser'),globalElement:'priser'});
@@ -79,4 +80,26 @@ test('SEO changes do not modify locked package prices, order contract or global 
  assert.ok(packages.items.every(x=>Number.isFinite(x.price)));
  assert.equal(getGlobalElement('sjekk').content.form.submitLabel,'Få 3 gratis funn');
  assert.equal(source.sections.some((s:any)=>Object.hasOwn(s,'content')),false);
+});
+
+// Durable local FAQ contract, exercised against a synthetic placement.
+test('local FAQ is ordered, single-source and mutually exclusive with the global FAQ',()=>{
+ const fixture=clone();fixture.sections=fixture.sections.filter((s:any)=>s._block!=='faq'&&s.element!=='sporsmal');
+ const local={_block:'faq',id:'sporsmal',heading:'Fixture FAQ',eyebrow:'Fixture'};
+ fixture.sections.splice(1,0,local);
+ const parsed=pageSchema.parse(fixture);
+ assert.equal(visibleServiceSections(parsed)[1].id,'sporsmal');
+ assert.deepEqual(parsed.faq,fixture.faq);
+ const entry=entryForFile(cms,'app/src/content/pages/seo.json');
+ const saved=JSON.parse(cmsJsonSave(fixture,fixture,entry,cms));
+ assertPreservedContent(fixture,saved);
+ assert.deepEqual(pageSchema.parse(saved),parsed);
+ const duplicate=structuredClone(fixture);duplicate.sections.push(local);
+ assert.equal(pageSchema.safeParse(duplicate).success,false);
+ const globalConflict=structuredClone(fixture);globalConflict.sections.push({_block:'global',element:'sporsmal'});
+ assert.equal(pageSchema.safeParse(globalConflict).success,false);
+ const copied=structuredClone(fixture);copied.sections[1].items=[{title:'duplicate',text:'duplicate'}];
+ assert.equal(pageSchema.safeParse(copied).success,false);
+ const hidden=structuredClone(fixture);hidden.sections[1].visibility='hidden';
+ assert.equal(visibleServiceSections(pageSchema.parse(hidden)).some(row=>row.id==='sporsmal'),false);
 });

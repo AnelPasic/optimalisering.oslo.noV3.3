@@ -122,6 +122,8 @@ jobs:
         run: npm run build
       - name: Audit rendered proof sections against selected approved evidence
         run: node scripts/audit-h017c.mjs
+      - name: Audit SEO and conversion service content and form contracts
+        run: node scripts/audit-service-content.mjs seo konvertering
       - name: Install Chromium for native typography parity
         run: npx playwright install --with-deps chromium
       - name: Verify Oslo computed typography unchanged and native CMS overrides functional

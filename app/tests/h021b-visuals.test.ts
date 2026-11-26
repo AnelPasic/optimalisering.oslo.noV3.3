@@ -13,11 +13,13 @@ const image={kind:'image',src:'/images/listing/test.png',alt:'Syntetisk testmøn
 test('listing supports discriminated image/icon/none and safe crop defaults',()=>{
  assert.deepEqual(listingSchema.parse({visual:image}).visual,{...image,positionX:50,positionY:50});
  for(const icon of ['search','conversion','analytics','trend','page','route'])assert.deepEqual(listingSchema.parse({visual:{kind:'icon',icon}}).visual,{kind:'icon',icon});
+ // Repository-owned local SVG artwork is supported by the approved Nov 23 change;
+ assert.equal(listingSchema.safeParse({visual:{...image,src:'/images/listing/test.svg'}}).success,true);
  assert.equal(listingSchema.parse({}).visual,undefined);
  assert.deepEqual(listingSchema.parse({visual:{kind:'none'}}).visual,{kind:'none'});
 });
-test('visual schema rejects arbitrary icons, remote/path traversal/SVG imagery, blank alt, unsafe crop and irrelevant fields',()=>{
- for(const visual of [{kind:'icon',icon:'fa-anything'},{kind:'icon',icon:'route',src:image.src},{kind:'none',alt:'ignored'},{...image,src:'https://example.com/photo.png'},{...image,src:'/images/home/test.png'},{...image,src:'/images/listing/../test.png'},{...image,src:'/images/listing/test.svg'},{...image,alt:' '},{...image,positionX:-1},{...image,positionY:101},{...image,icon:'route'}]){
+test('visual schema rejects arbitrary icons, remote/path traversal/non-image paths, blank alt, unsafe crop and irrelevant fields',()=>{
+ for(const visual of [{kind:'icon',icon:'fa-anything'},{kind:'icon',icon:'route',src:image.src},{kind:'none',alt:'ignored'},{...image,src:'https://example.com/photo.png'},{...image,src:'/images/home/test.png'},{...image,src:'/images/listing/../test.png'},{...image,src:'/images/listing/test.html'},{...image,alt:' '},{...image,positionX:-1},{...image,positionY:101},{...image,icon:'route'}]){
   assert.equal(listingSchema.safeParse({visual}).success,false,JSON.stringify(visual));
  }
 });
@@ -45,7 +47,7 @@ test('final result index remains the alternation authority after filtering, excl
 test('CMS visual blocks expose only kind-specific fields and dedicated safe raster media',()=>{
  const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
  const article=entryForFile(cms,'app/src/content/pages/managed-articles/innsikt-hva-bor-optimaliseres-forst.json');
- const listing=article.fields.find((f:any)=>f.name==='listing');
+ const listing=resolveField(article.fields.find((f:any)=>f.name==='listing'),cms.components);
  const visual=resolveField(listing.fields.find((f:any)=>f.name==='visual'),cms.components);
  assert.equal(visual.label,'Listevisual');assert.equal(visual.type,'block');assert.equal(visual.blockKey,'kind');
  assert.equal(visual.list.max,1);
