@@ -7,9 +7,9 @@ import {pageSchema} from '../src/lib/content-schema.ts';
 import {glossarySchema} from '../src/lib/terminology.ts';
 import {proofContentSchema} from '../src/lib/proof.ts';
 
-test('all authored pages are live content without redundant approval metadata',()=>{
+test('all 17 authored pages are live content without redundant approval metadata',()=>{
  const names=pageFilePaths();
- assert.ok(names.length>0,'authored pages must be discovered');
+ assert.ok(names.length>0,'discover every current CMS page');
  for(const name of names){
   const raw=JSON.parse(readFileSync('src/content/pages/'+name,'utf8'));
   assert.equal(Object.hasOwn(raw,'status'),false,name);

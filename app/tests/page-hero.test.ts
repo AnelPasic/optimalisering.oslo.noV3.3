@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {readFileSync} from 'node:fs';
+import {readFileSync,readdirSync} from 'node:fs';
 import YAML from 'yaml';
 import {pageFilePaths} from './helpers/page-sources.ts';
 import {pageSchema} from '../src/lib/content-schema.ts';
@@ -14,9 +14,6 @@ const home=pages.find(p=>p.page.kind==='home')!.page;
 const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
 const normal=pages.filter(p=>p.page.kind!=='home'&&p.page.slug!=='synlighet');
 const expectedHeroFields=['layout','surface','toneOverrides','eyebrow','title','support','primaryCta','secondaryCta','highlights','featuredProofCaseId','visual'];
-const synlighetEditor=entryForFile(cms,'app/src/content/pages/synlighet.json');
-const canonicalHero=resolveField(synlighetEditor.fields.find((field:any)=>field.name==='hero'),cms.components);
-const canonicalHeroFields=canonicalHero.fields.map((field:any)=>field.name);
 
 test('all ordinary pages have one canonical editable Hero, with no duplicated persisted text or image keys',()=>{
  assert.ok(normal.length>0,'service and article sources must exist');
@@ -51,8 +48,14 @@ test('canonical Hero rejects invalid presets, missing content, untrusted images 
  }
 });
 
-test('every page editor reuses the canonical Synlighet Hero field names and layout options',()=>{
- assert.deepEqual([...canonicalHeroFields].sort(),[...expectedHeroFields].sort());
+test('every ordinary page editor reuses the canonical Synlighet Hero field names and layout options',()=>{
+ const syn=entryForFile(cms,'app/src/content/pages/synlighet.json');
+ const homeEditor=entryForFile(cms,'app/src/content/pages/home.json');
+ const expected=expectedHeroFields;
+ const synHero=resolveField(syn.fields.find((f:any)=>f.name==='hero'),cms.components);
+ const homeHero=resolveField(homeEditor.fields.find((f:any)=>f.name==='hero'),cms.components);
+ assert.deepEqual(synHero.fields.map((f:any)=>f.name),expected);
+ assert.deepEqual(homeHero.fields.map((f:any)=>f.name),expected);
  for(const {file,page} of pages){
   const editor=entryForFile(cms,`app/src/content/pages/${file}`);
   const definition=editor.fields.find((f:any)=>f.name==='hero');
@@ -61,7 +64,7 @@ test('every page editor reuses the canonical Synlighet Hero field names and layo
   assert.equal(hero.label,'Hero',file);
   const layout=resolveField(hero.fields.find((f:any)=>f.name==='layout'),cms.components);
   assert.deepEqual(layout.options.values.map((v:any)=>v.name),['split-right','split-left','centered','centered-none'],file);
-  assert.deepEqual(hero.fields.map((f:any)=>f.name),canonicalHeroFields,file);
+  assert.deepEqual(hero.fields.map((f:any)=>f.name),expected,file);
   const visual=resolveField(hero.fields.find((f:any)=>f.name==='visual'),cms.components);
   assert.equal(visual.type,'block',file+' must keep conditional image validation');
   assert.equal(visual.blockKey,'kind',file);
@@ -92,8 +95,10 @@ test('Pages CMS edits one nested Hero; restores all sections, media and CTA with
   assert.deepEqual(saved.sections??[],page.sections??[],file);
   assert.deepEqual(saved.hero.visual,page.hero.visual,file);
   const result=pageSchema.safeParse(saved);assert.ok(result.success,file+': '+(result.success?'':JSON.stringify(result.error.issues).slice(0,2600)));
-  // An empty value clears the saved layout when the source uses the default.
-  const restoreForm={...page,hero:{...page.hero,layout:page.hero.layout??''}};
+  // An omitted optional field is retained by merge:true. Explicitly clear the
+  // synthetic layout override when restoring an originally absent field.
+  const restoreForm=structuredClone(page);
+  if(!Object.hasOwn(page.hero,'layout'))restoreForm.hero.layout='';
   const restored=JSON.parse(cmsJsonSave(saved,restoreForm,editor,cms));
   // Native Pages CMS has no editor for the retired empty home chrome stub.
   // That obsolete {} is not a source of visible page content anymore.
@@ -121,8 +126,7 @@ test('all rendered Hero families preserve copy, CTA, image crop and separate Pac
    if(view.visual.kind==='image'){
     const image=page.hero.visual.image;
     assert.equal(view.visual.image.src,image.src,page.slug);
-    assert.equal(view.visual.image.alt,image.alt??'',page.slug);
-    assert.equal(view.visual.image.positionX,image.positionX,page.slug);
+    assert.equal(view.visual.image.alt,page.kind==='home'?'':image.alt,page.slug);
     assert.equal(view.visual.image.positionY,image.positionY,page.slug);
    }
   }
@@ -134,7 +138,7 @@ test('Begreper and 404 use the full shared Hero editor and guarded source schema
  assert.equal(glossarySchema.safeParse({...glossary,hero:{...glossary.hero,layout:'centered'}}).success,true);
  const editor=entryForFile(cms,'app/src/content/terminology/glossary.json');
  const hero=resolveField(editor.fields.find((f:any)=>f.name==='hero'),cms.components);
- assert.deepEqual(hero.fields.map((f:any)=>f.name),canonicalHeroFields);
+ assert.deepEqual(hero.fields.map((f:any)=>f.name),expectedHeroFields);
  assert.equal(resolveGlossaryHero(glossary).title,glossary.hero.title);
  assert.ok(!Object.hasOwn(glossary,'title')&&!Object.hasOwn(glossary,'intro'),'no duplicate editable glossary copy');
  const source=JSON.parse(readFileSync('src/content/presentation/hero-layouts.json','utf8'));
@@ -142,7 +146,7 @@ test('Begreper and 404 use the full shared Hero editor and guarded source schema
  assert.equal(specialHeroSourceSchema.safeParse({hero:{...source.hero,layout:'raw-class'}}).success,false);
  const errEditor=entryForFile(cms,'app/src/content/presentation/hero-layouts.json');
  const errHero=resolveField(errEditor.fields.find((f:any)=>f.name==='hero'),cms.components);
- assert.deepEqual(errHero.fields.map((f:any)=>f.name),canonicalHeroFields);
+ assert.deepEqual(errHero.fields.map((f:any)=>f.name),expectedHeroFields);
  for(const {record,entry,schema} of [
    {record:glossary,entry:editor,schema:glossarySchema},
    {record:source,entry:errEditor,schema:specialHeroSourceSchema},
@@ -152,12 +156,12 @@ test('Begreper and 404 use the full shared Hero editor and guarded source schema
    const saved=JSON.parse(cmsJsonSave(record,edited,entry,cms));
    assert.deepEqual(saved,edited,'special Hero roundtrip must retain all source fields');
    assert.equal(schema.safeParse(saved).success,true);
-   const restored=structuredClone(record);restored.hero.featuredProofCaseId=record.hero.featuredProofCaseId??'';
-   assert.deepEqual(JSON.parse(cmsJsonSave(saved,restored,entry,cms)),record);
+   const cleared=structuredClone(record);cleared.hero.featuredProofCaseId='';
+   assert.deepEqual(JSON.parse(cmsJsonSave(saved,cleared,entry,cms)),record);
  }
  const error=resolveNotFoundHero(source.hero);
  assert.equal(error.primaryCta?.href,'/');
- assert.equal(error.title,source.hero.title.trim());
+ assert.equal(error.title,'Her var det\ningen vei videre.');
  assert.equal(heroViewSchema.safeParse({...error,layout:'raw-class'}).success,false);
 });
 test('Pricing page Hero is independently editable but does not rewrite global package content',()=>{

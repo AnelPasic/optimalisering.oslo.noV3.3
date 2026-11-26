@@ -9,32 +9,17 @@ import { cmsJsonSave, entryForFile, resolveField, assertPreservedContent } from 
 const page=(visual?:any,slug='innsikt/test')=>({slug,kind:'article',title:slug,intro:'Test ingress',listing:{title:slug,visible:true,visual}});
 const config=(edit:any={})=>({mode:'automatic',sort:'title',limit:6,layout:'alternating',...edit});
 const image={kind:'image',src:'/images/listing/test.png',alt:'Syntetisk testmønster'};
-const svgImage={...image,src:'/images/listing/illustrations/test.svg'};
 
 test('listing supports discriminated image/icon/none and safe crop defaults',()=>{
  assert.deepEqual(listingSchema.parse({visual:image}).visual,{...image,positionX:50,positionY:50});
- assert.deepEqual(listingSchema.parse({visual:svgImage}).visual,{...svgImage,positionX:50,positionY:50});
  for(const icon of ['search','conversion','analytics','trend','page','route'])assert.deepEqual(listingSchema.parse({visual:{kind:'icon',icon}}).visual,{kind:'icon',icon});
+ // Repository-owned local SVG artwork is supported by the approved Nov 23 change;
+ assert.equal(listingSchema.safeParse({visual:{...image,src:'/images/listing/test.svg'}}).success,true);
  assert.equal(listingSchema.parse({}).visual,undefined);
  assert.deepEqual(listingSchema.parse({visual:{kind:'none'}}).visual,{kind:'none'});
 });
-test('visual schema rejects arbitrary icons, invalid image paths, blank alt, unsafe crop and irrelevant fields',()=>{
- for(const src of [
-  'https://example.com/photo.png',
-  'https://example.com/images/listing/test.svg',
-  '//example.com/images/listing/test.svg',
-  'images/listing/test.svg',
-  '/images/home/test.png',
-  '/images/services/test.svg',
-  '/images/listing/../test.png',
-  '/images/listing/../test.svg',
-  '/images/listing/%2e%2e/test.svg',
-  '/images/listing/test.svg?version=1',
-  '/images/listing/test.html',
- ]){
-  assert.equal(listingSchema.safeParse({visual:{...image,src}}).success,false,src);
- }
- for(const visual of [{kind:'icon',icon:'fa-anything'},{kind:'icon',icon:'route',src:image.src},{kind:'none',alt:'ignored'},{...image,alt:' '},{...image,positionX:-1},{...image,positionY:101},{...image,icon:'route'}]){
+test('visual schema rejects arbitrary icons, remote/path traversal/non-image paths, blank alt, unsafe crop and irrelevant fields',()=>{
+ for(const visual of [{kind:'icon',icon:'fa-anything'},{kind:'icon',icon:'route',src:image.src},{kind:'none',alt:'ignored'},{...image,src:'https://example.com/photo.png'},{...image,src:'/images/home/test.png'},{...image,src:'/images/listing/../test.png'},{...image,src:'/images/listing/test.html'},{...image,alt:' '},{...image,positionX:-1},{...image,positionY:101},{...image,icon:'route'}]){
   assert.equal(listingSchema.safeParse({visual}).success,false,JSON.stringify(visual));
  }
 });
@@ -45,16 +30,12 @@ test('both visual layouts are explicit; config rejects duplicated page-owned med
 test('resolver carries only validated page-owned visuals and omits absent/missing/invalid assets safely',()=>{
  const directory=mkdtempSync(join(tmpdir(),'h021b-'));
  try{
-  mkdirSync(join(directory,'images/listing/illustrations'),{recursive:true});
-  mkdirSync(join(directory,'images/listing/folder.png'));
+  mkdirSync(join(directory,'images/listing'),{recursive:true});
   writeFileSync(join(directory,'images/listing/test.png'),Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Wl6d4sAAAAASUVORK5CYII=','base64'));
-  writeFileSync(join(directory,'images/listing/illustrations/test.svg'),'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"><path d="M0 0h1v1H0z"/></svg>');
-  writeFileSync(join(directory,'images/listing/empty.svg'),'');
   assert.deepEqual(resolvePageList(config(),[page(image)],directory)[0].visual,{...image,positionX:50,positionY:50});
-  assert.deepEqual(resolvePageList(config(),[page(svgImage)],directory)[0].visual,{...svgImage,positionX:50,positionY:50});
   assert.deepEqual(resolvePageList(config(),[page({kind:'icon',icon:'analytics'})],directory)[0].visual,{kind:'icon',icon:'analytics'});
-  for(const visual of [undefined,{kind:'none'},{...image,src:'/images/listing/missing.png'},{...svgImage,src:'/images/listing/missing.svg'},{...svgImage,src:'/images/listing/empty.svg'},{...image,src:'/images/listing/folder.png'},{kind:'icon',icon:'bad'},{...image,positionX:999}]){
-   assert.equal(resolvePageList(config(),[page(visual)],directory)[0].visual,undefined,JSON.stringify(visual));
+  for(const visual of [undefined,{kind:'none'},{...image,src:'/images/listing/missing.png'},{...image,src:'/images/listing/folder.png'},{kind:'icon',icon:'bad'},{...image,positionX:999}]){
+   assert.equal(resolvePageList(config(),[page(visual)],directory)[0].visual,undefined);
   }
  }finally{rmSync(directory,{recursive:true,force:true});}
 });
@@ -63,7 +44,7 @@ test('final result index remains the alternation authority after filtering, excl
  assert.deepEqual(resolvePageList(config({sort:'editorial',excluded:[{slug:'innsikt/2'}],limit:2}),records).map(p=>p.slug),['innsikt/3','innsikt/0']);
  assert.deepEqual(resolvePageList(config({mode:'manual',selected:[{slug:'innsikt/3'},{slug:'innsikt/1'},{slug:'innsikt/0'}],limit:1}),records).map(p=>p.slug),['innsikt/3','innsikt/0']);
 });
-test('CMS visual blocks expose kind-specific fields and a dedicated raster image picker',()=>{
+test('CMS visual blocks expose only kind-specific fields and dedicated safe raster media',()=>{
  const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
  const article=entryForFile(cms,'app/src/content/pages/managed-articles/innsikt-hva-bor-optimaliseres-forst.json');
  const listing=resolveField(article.fields.find((f:any)=>f.name==='listing'),cms.components);

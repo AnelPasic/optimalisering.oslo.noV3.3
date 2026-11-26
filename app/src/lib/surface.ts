@@ -32,7 +32,7 @@ export function resolveSectionSurface(value: unknown, fallback?: Surface, protec
 
 /** CMS editor metadata never grants permission to recolor a protected row. */
 export function sectionModel(slug: string, id: string): 'content' | 'protected' {
-  return ['home', 'synlighet', 'konvertering'].includes(slug) && id === 'sjekk' ? 'protected' : 'content';
+  return (['home', 'synlighet', 'konvertering'].includes(slug) && id === 'sjekk') || (slug === 'konvertering' && id === 'sjekk-intro') ? 'protected' : 'content';
 }
 
 /** Defense in depth: only approved enum values can reach a presentation attribute. */

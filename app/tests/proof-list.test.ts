@@ -99,8 +99,6 @@ test('public renderers provide a ProofList branch without disturbing legacy proo
  for(const slug of ['konvertering','nettbutikkoptimalisering']){
   const page=read('src/content/pages/'+slug+'.json');
   assert.equal(page.proof,undefined,'legacy service proof has been removed: '+slug);
-  const visibleProof = page.sections.filter((section:any)=>section.visibility!=='hidden' &&
-    (section._block==='proofList'||section._block==='global'&&section.element==='resultater'));
-  assert.equal(visibleProof.length,1,slug+' has one visible CMS-owned proof placement');
+  assert.equal(page.sections.filter((section:any)=>section.visibility!=='hidden'&&(section._block==='proofList'||section._block==='global'&&section.element==='resultater')).length,1,'one explicit proof placement: '+slug);
  }
 });

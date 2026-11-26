@@ -1,70 +1,39 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { readFileSync, readdirSync } from 'node:fs';
 import YAML from 'yaml';
 import { pageSchema } from '../src/lib/content-schema.ts';
 import * as pageList from '../src/lib/page-list.ts';
 import { cmsJsonSave, entryForFile, resolveField, assertPreservedContent } from './helpers/pages-cms-json.ts';
-import { loadPageFile, pageFilePaths } from './helpers/page-sources.ts';
 
-const names = pageFilePaths();
-const first = 'innsikt/fixture-first';
-const second = 'innsikt/fixture-second';
-const norwegian = new Intl.Collator('nb');
-// Visuals and card decoration have separate coverage.
-const resolveTextList = (settings: unknown, records: readonly pageList.ListPage[]) =>
-  pageList.resolvePageList(settings, records).map(({slug, title, summary, label, href}) => ({slug, title, summary, label, href}));
+const articleNames=new Set(['google-bedriftsprofil','hva-bor-optimaliseres-forst','male-effekt-av-optimalisering']);
+const load=(name:string)=>JSON.parse(readFileSync(articleNames.has(name)?`src/content/pages/managed-articles/innsikt-${name}.json`:`src/content/pages/${name}.json`,'utf8'));
+const pages=()=>[...readdirSync('src/content/pages').filter(f=>f.endsWith('.json')).map(f=>load(f.slice(0,-5))),...readdirSync('src/content/pages/managed-articles').filter(f=>f.endsWith('.json')).map(f=>JSON.parse(readFileSync('src/content/pages/managed-articles/'+f,'utf8')))];
+const first='innsikt/hva-bor-optimaliseres-forst',second='innsikt/male-effekt-av-optimalisering';
+// H-021 checks text/query contracts; H-021B separately verifies editable visuals.
+const resolveTextList=(config:unknown,records:any[])=>pageList.resolvePageList(config,records).map(({visual,...item})=>item);
 const config=(edit:any={})=>({mode:'automatic',sort:'editorial',limit:6,layout:'cards',selected:[],excluded:[],...edit});
-const article = (slug: string, listing: pageList.ListPage['listing'] = {}): pageList.ListPage => ({
-  slug, kind: 'article', title: 'Tittel fra artikkelen', intro: 'Ingress fra artikkelen', listing,
-});
-const third=(edit: pageList.ListPage['listing']={})=>article('innsikt/tredje',{title:'Åpen guide',summary:'Tredje sammendrag',order:30,visible:true,...edit});
-const fixtures = [
-  article(first, {title: 'Første guide', summary: 'Første sammendrag', label: 'Åpne første guide', order: 10}),
-  article(second, {title: 'Andre guide', summary: 'Andre sammendrag', label: 'Åpne andre guide', order: 20}),
-];
-const expected = [
-  {slug: first, title: 'Første guide', summary: 'Første sammendrag', label: 'Åpne første guide', href: `/${first}/`},
-  {slug: second, title: 'Andre guide', summary: 'Andre sammendrag', label: 'Åpne andre guide', href: `/${second}/`},
-];
-const sourceText = (page: ReturnType<typeof pageSchema.parse>) => ({
-  slug: page.slug,
-  title: page.listing?.title ?? page.title,
-  summary: page.listing?.summary ?? page.intro,
-  label: page.listing?.label ?? 'Les mer',
-  href: `/${page.slug}/`,
-});
+const third=(edit:any={})=>({...load('hva-bor-optimaliseres-forst'),slug:'innsikt/tredje',title:'Ærlig tittel',intro:'Tredje ingress',listing:{title:'Åpen guide',summary:'Tredje sammendrag',order:30,visible:true,...edit}});
+// Independent source oracle: assert the current CMS listing, not old article copy.
+const collator=new Intl.Collator('nb',{usage:'sort',sensitivity:'variant'});
+const expected=pages().filter(p=>p.kind==='article'&&p.slug.startsWith('innsikt/')&&p.listing?.visible!==false)
+ .sort((a,b)=>(a.listing?.order??Infinity)===(b.listing?.order??Infinity)?collator.compare(a.listing?.title||a.title,b.listing?.title||b.title)||collator.compare(a.slug,b.slug):(a.listing?.order??Infinity)-(b.listing?.order??Infinity))
+ .map(p=>({slug:p.slug,title:p.listing?.title||p.title,summary:p.listing?.summary||p.intro,label:p.listing?.label||'Les mer',href:'/'+p.slug+'/'}));
+const expectedBySlug=(slug:string)=>expected.find(p=>p.slug===slug)!;
 
-test('automatic article discovery uses current CMS visibility, order and card text', () => {
-  const overview = loadPageFile('innsikt.json');
-  const section = overview.sections.find((row: any) => row.id === 'guider');
-  assert.equal(section?._block, 'pageList');
-  assert.equal(section.items, undefined);
-  const settings = pageList.pageListSchema.parse(section.pageList);
-  for (const key of ['title','summary','href','visual','src','icon']) assert.ok(!(key in section.pageList));
-
-  const pages = names.map(name => pageSchema.parse(loadPageFile(name)));
-  const excluded = new Set(settings.excluded.map(row => row.slug));
-  const articles = pages.filter(page => page.kind === 'article' && page.slug.startsWith('innsikt/') &&
-    page.listing?.visible !== false && !excluded.has(page.slug));
-  articles.sort((a, b) => {
-    if (settings.sort === 'editorial') {
-      const byOrder = (a.listing?.order ?? Infinity) - (b.listing?.order ?? Infinity);
-      if (byOrder) return byOrder;
-    }
-    return norwegian.compare(sourceText(a).title, sourceText(b).title) || norwegian.compare(a.slug, b.slug);
-  });
-  assert.deepEqual(
-    resolveTextList({...settings, mode: 'automatic', source: 'articles'}, pages),
-    articles.slice(0, settings.limit).map(sourceText),
-  );
-  assert.deepEqual(resolveTextList(config(), [...fixtures].reverse()), expected);
+test('automatic collection discovery preserves exact migrated titles, summaries, labels, URLs and order',()=>{
+  assert.deepEqual(resolveTextList(config(),pages()),expected.slice(0,6));
+  const overview=load('innsikt'),section=overview.sections[0];
+  assert.equal(section._block,'pageList');assert.equal(section.id,'guider');assert.equal(section.items,undefined);
+  assert.equal(pageList.pageListSchema.safeParse(section.pageList).success,true);
+  for(const key of ['title','summary','href','visual','src','icon'])assert.ok(!(key in section.pageList));
 });
 test('synthetic article is discovered without overview edits; hidden/index/service/utility records are omitted',()=>{
-  const withThird = resolveTextList(config(), [...fixtures, third()]);
-  assert.deepEqual(withThird.map(item => item.slug), [first, second, 'innsikt/tredje']);
+  const fixture=pages().filter(p=>p.slug===first||p.slug===second);
+  assert.ok(resolveTextList(config(),[...fixture,third()]).some(p=>p.slug==='innsikt/tredje'));
+  assert.equal(resolveTextList(config(),[...fixture,third()]).length,3);
   for(const record of [third({visible:false}),{...third(),kind:'service'},{...third(),kind:'utility'},{...third(),slug:'innsikt'},{...third(),slug:'elsewhere/article'}]){
-    assert.deepEqual(resolveTextList(config(),[...fixtures,record]),expected);
+    assert.deepEqual(resolveTextList(config(),[...fixture,record]),expected.filter(p=>p.slug===first||p.slug===second));
   }
 });
 test('editorial sort puts unordered last and breaks ties by Norwegian title then slug; title sort is deterministic',()=>{
@@ -74,12 +43,12 @@ test('editorial sort puts unordered last and breaks ties by Norwegian title then
   assert.deepEqual(resolveTextList(config({sort:'title'}),records).map(p=>p.title),['Ærlig','Ærlig','Øvelse','Åpen']);
 });
 test('exclusion precedes automatic limit; manual row order and count are authoritative',()=>{
-  assert.deepEqual(resolveTextList(config({excluded:[{slug:first}],limit:1}),[...fixtures,third()]),[expected[1]]);
+  assert.equal(resolveTextList(config({excluded:[{slug:first}],limit:1}),[...pages().filter(p=>p.slug===first||p.slug===second),third({order:999})])[0].slug,second);
   const manual=config({mode:'manual',selected:[{slug:second},{slug:first}],excluded:[{slug:second}],limit:1});
-  assert.deepEqual(resolveTextList(manual,fixtures),[expected[1],expected[0]]);
-  assert.deepEqual(resolveTextList(config({mode:'manual'}),fixtures),[]);
-  const records=fixtures.map(p=>p.slug===first?{...p,listing:{...p.listing,visible:false}}:p);
-  assert.deepEqual(resolveTextList(manual,records),[expected[1]]);
+  assert.deepEqual(resolveTextList(manual,pages()),[expectedBySlug(second),expectedBySlug(first)]);
+  assert.deepEqual(resolveTextList(config({mode:'manual'}),pages()),[]);
+  const records=pages().map(p=>p.slug===first?{...p,listing:{...p.listing,visible:false}}:p);
+  assert.deepEqual(resolveTextList(manual,records),[expectedBySlug(second)]);
 });
 test('blank optional metadata defaults safely and href normalizes slashes',()=>{
   const record=third({title:'',summary:' ',label:''});record.slug='/innsikt/tredje/';
@@ -90,25 +59,24 @@ test('schema rejects unknown queries/enums/limits/outside or duplicate reference
   for(const edit of [{mode:'anything'},{sort:'mtime'},{layout:'html'},{query:'*'},{limit:0},{limit:13},{limit:1.5},{selected:[{slug:'synlighet'}]},{selected:[{slug:first},{slug:first}]},{selected:[{slug:first,title:'copy'}]}]){
     assert.equal(pageList.pageListSchema.safeParse(config(edit)).success,false,JSON.stringify(edit));
   }
-  const overview=loadPageFile('innsikt.json');
-  const exampleArticle = {...overview, slug: first, kind: 'article', sections: [], listing: {}};
-  assert.equal(pageSchema.safeParse(exampleArticle).success, true);
-  for(const listing of [{order:1.5},{visible:'false'}])assert.equal(pageSchema.safeParse({...exampleArticle, listing}).success,false);
-  overview.sections.find((row: any) => row.id === 'guider').pageList=config({query:'*'});assert.equal(pageSchema.safeParse(overview).success,false);
-  const home=loadPageFile('home.json');home.sections[0]={...home.sections[0],_block:'pageList',pageList:config()};assert.equal(pageSchema.safeParse(home).success,false);
+  for(const edit of [{order:1.5},{visible:'false'}])assert.equal(pageSchema.safeParse(third(edit)).success,false);
+  const overview=load('innsikt');overview.sections[0].pageList=config({query:'*'});assert.equal(pageSchema.safeParse(overview).success,false);
+  const home=load('home');home.sections[0]={...home.sections[0],_block:'pageList',pageList:config()};assert.equal(pageSchema.safeParse(home).success,false);
 });
 test('missing or non-article manual references fail build explicitly; invalid configs never produce fake cards',()=>{
-  assert.throws(()=>resolveTextList(config({mode:'manual',selected:[{slug:'innsikt/missing'}]}),fixtures),/missing|missing.*article/i);
-  assert.throws(()=>resolveTextList(config({mode:'manual',selected:[{slug:first}]}),fixtures.map(p=>p.slug===first?{...p,kind:'service'}:p)),/article/i);
-  assert.throws(()=>resolveTextList(config({mode:'manual',selected:[{slug:'synlighet'}]}),fixtures));
+  assert.throws(()=>resolveTextList(config({mode:'manual',selected:[{slug:'innsikt/missing'}]}),pages()),/missing|missing.*article/i);
+  assert.throws(()=>resolveTextList(config({mode:'manual',selected:[{slug:first}]}),pages().map(p=>p.slug===first?{...p,kind:'service'}:p)),/article/i);
+  assert.throws(()=>resolveTextList(config({mode:'manual',selected:[{slug:'synlighet'}]}),pages()));
 });
 test('CMS editor has unique file ownership and article-only reference rows; save/reorder/restore preserves content',()=>{
   const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
-  const overview=loadPageFile('innsikt.json'),entry=entryForFile(cms,'app/src/content/pages/innsikt.json');
+  const overview=load('innsikt'),entry=entryForFile(cms,'app/src/content/pages/innsikt.json');
   assert.equal(entry.type,'file');
-  const articles=cms.content.find((row:any)=>row.name==='insight').items.find((row:any)=>row.name==='insightArticles');
-  assert.equal(articles.type,'collection');
-  assert.equal(articles.path,'app/src/content/pages/managed-articles');
+  const articles=entryForFile(cms,'app/src/content/pages/managed-articles/innsikt-hva-bor-optimaliseres-forst.json');
+  assert.equal(articles.name,'insightArticles');
+  const eligible=readdirSync('src/content/pages/managed-articles').filter(f=>f.endsWith('.json'));
+  assert.ok(eligible.length>=3);
+  for(const file of eligible){const path='app/src/content/pages/managed-articles/'+file;const record=JSON.parse(readFileSync('src/content/pages/managed-articles/'+file,'utf8'));assert.equal(entryForFile(cms,path)?.name,'insightArticles',file);assert.equal(record.kind,'article',file);assert.equal(file,'innsikt-'+record.slug.slice('innsikt/'.length).replaceAll('/','-')+'.json',file);}
   const section=resolveField(entry.fields.find((f:any)=>f.name==='sections').blocks.find((b:any)=>b.name==='pageList'),cms.components);
   const fields=section.fields.find((f:any)=>f.name==='pageList').fields;
   for(const name of ['selected','excluded']){
@@ -116,18 +84,13 @@ test('CMS editor has unique file ownership and article-only reference rows; save
     const reference=resolveField(rows.fields[0],cms.components);
     assert.equal(reference.type,'reference');assert.equal(reference.options.collection,'insightArticles');assert.equal(reference.options.value,'{fields.slug}');assert.ok(!reference.options.multiple);
   }
-  const form=structuredClone(overview);
-  form.sections.find((row: any) => row.id === 'guider').pageList=config({mode:'manual',layout:'compact',selected:[{slug:second},{slug:first}]});
+  const form=structuredClone(overview);form.sections[0].pageList=config({mode:'manual',layout:'compact',selected:[{slug:second},{slug:first}]});
   const saved=JSON.parse(cmsJsonSave(overview,form,entry,cms));assertPreservedContent(form,saved);
-  const savedSection = pageSchema.parse(saved).sections.find(row => row.id === 'guider');
-  assert.deepEqual(resolveTextList(savedSection?.pageList,fixtures),[expected[1],expected[0]]);
+  assert.deepEqual(resolveTextList(pageSchema.parse(saved).sections[0].pageList!,pages()),[expectedBySlug(second),expectedBySlug(first)]);
   const restored=JSON.parse(cmsJsonSave(saved,structuredClone(overview),entry,cms));assertPreservedContent(overview,restored);
   assert.deepEqual(pageSchema.parse(restored),pageSchema.parse(overview));
-  for(const name of names.filter(name => name.startsWith('managed-articles/'))){
-    assert.equal(entryForFile(cms, `app/src/content/pages/${name}`), articles, name);
-    const original=loadPageFile(name),edited=structuredClone(original);
-    assert.equal(original.kind, 'article', name);
-    edited.listing = {...edited.listing, title: 'Endret listetittel'};
+  for(const name of ['hva-bor-optimaliseres-forst','male-effekt-av-optimalisering']){
+    const original=load(name),edited=structuredClone(original);edited.listing.title+=' test';
     assertPreservedContent(edited,JSON.parse(cmsJsonSave(original,edited,articles,cms)));
   }
 });

@@ -16,8 +16,20 @@ test('SEO page covers consultant, services and Oslo without additional competing
  assert.ok(page.seo.title.trim()&&page.hero.title.trim());
  const visible=pageSchema.parse(page).sections;
  assert.equal(new Set(visible.map(s=>s.id)).size,visible.length);
- const links=page.sections.flatMap((s:{links?:Array<{href:string}>})=>s.links??[]);
- for(const url of ['/lokal-seo/','/innsikt/google-bedriftsprofil/','/priser/']) assert.ok(links.some((l:{href:string})=>l.href===url),url);
+ // Links can be native link rows, safe Markdown links or canonical PageList references.
+ const links=new Set<string>();
+ const collect=(value:unknown)=>{
+  if(typeof value==='string'){for(const match of value.matchAll(/\]\((\/[^)]+)\)/g))links.add(match[1]);return;}
+  if(Array.isArray(value)){value.forEach(collect);return;}
+  if(value&&typeof value==='object'){
+   const row=value as Record<string,unknown>;
+   if(typeof row.href==='string')links.add(row.href);
+   if(typeof row.slug==='string'&&row.slug.startsWith('innsikt/'))links.add('/'+row.slug+'/');
+   Object.values(row).forEach(collect);
+  }
+ };
+ collect(page.sections);collect(page.faq);
+ for(const url of ['/lokal-seo/','/innsikt/google-bedriftsprofil/','/priser/'])assert.ok(links.has(url),url);
  const menu=header.navigation.find((l:{href:string})=>l.href==='/synlighet/');
  const childLinks=menu.presentation==='mega'
   ? menu.mega?.columns.flatMap((column:{links:Array<{href:string}>})=>column.links)??[]

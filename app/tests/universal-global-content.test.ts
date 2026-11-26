@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { readFileSync, readdirSync } from 'node:fs';
 import YAML from 'yaml';
 import {pageFilePaths} from './helpers/page-sources.ts';
 import { pageSchema } from '../src/lib/content-schema.ts';
@@ -12,8 +12,8 @@ const cms = YAML.parse(readFileSync('../.pages.yml','utf8'));
 const sources = pageFilePaths();
 const reference = (element: string, visibility?: 'hidden') => ({ _block: 'global', element, ...(visibility ? { visibility } : {}) });
 
-test('every native page editor offers the canonical global content references', () => {
-  assert.ok(sources.length>0,'page sources must exist');
+test('every native page editor offers the same eight canonical global content references', () => {
+  assert.ok(sources.length>0,'discover current page sources');
   for (const file of sources) {
     const entry = entryForFile(cms, 'app/src/content/pages/' + file);
     assert.ok(entry, file);
@@ -28,7 +28,7 @@ test('every native page editor offers the canonical global content references', 
   }
 });
 
-test('every page saves references in the existing section order, without copying masters or changing owned content', () => {
+test('all current pages save references in the existing section order, without copying masters or changing owned content', () => {
   for (const file of sources) {
     const original = JSON.parse(readFileSync('src/content/pages/' + file,'utf8'));
     const entry = entryForFile(cms, 'app/src/content/pages/' + file);

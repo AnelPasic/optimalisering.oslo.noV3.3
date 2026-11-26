@@ -16,8 +16,17 @@ const pricingPlacementSchema=z.object({
  pricingModule:z.enum(['valg','vekst','sammenligning']),
  visibility:z.literal('hidden').optional(),
 }).strict();
+// A local placement references page.faq; questions never live in the block.
+const localFaqPlacementSchema=z.object({
+ _block:z.literal('faq'),
+ id:z.literal('sporsmal'),
+ eyebrow:z.string().optional(),
+ heading:z.string().trim().min(1),
+ body:z.array(z.string()).max(0).optional(),
+ visibility:z.literal('hidden').optional(),
+}).strict();
 const mixedServiceSlugs = new Set(['synlighet', 'seo']);
-type Section = { id: string; visibility?: 'hidden'; globalElement?: typeof serviceGlobalIds[number] };
+type Section = { id: string; _block?: string; visibility?: 'hidden'; globalElement?: typeof serviceGlobalIds[number] };
 type ServicePage = { slug: string; sections: Section[]; faq?: readonly { question: string; answer: string }[] };
 const fixedAnchors = ['service-hero', 'resultater', 'priser', 'service-priser', 'sporsmal', 'main', 'mobile-menu'];
 
@@ -43,6 +52,7 @@ export function resolvePageSections(value: unknown) {
    if(localIds.has(id))throw new Error('Prismodul kan bare plasseres én gang: '+placement.pricingModule);
    localIds.add(id);
   }else{
+   if(row._block==='faq')localFaqPlacementSchema.parse(row);
    if(row._block==='proofList'){
     proofListAnchorSchema.parse(row.id);
     proofListSchema.parse(row.proofList);
@@ -72,7 +82,9 @@ export function resolvePageSections(value: unknown) {
    const placement=pricingPlacementSchema.parse(row);
    return [{...placement,id:pricingModuleIds[placement.pricingModule],heading:'',body:[]}];
   }
+  if(row._block==='faq')return [{...localFaqPlacementSchema.parse(row),body:[]}];
   if(row._block==='proofList')return [{...row,proofList:proofListSchema.parse(row.proofList),heading:'',body:[]}];
+  if(row._block==='content'&&(row.heading===undefined||row.heading==='')&&Array.isArray(row.body)&&row.body.some((item:unknown)=>typeof item==='string'&&item.trim()))return [{...row,heading:''}];
   return [row];
  });
 }
@@ -104,7 +116,7 @@ export function validateSynlighetSections(page: ServicePage, _route: RouteFamily
   if (!mixedServiceSlugs.has(page.slug)) return;
   const ids = new Set<string>();
   for (const section of page.sections) {
-    if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(section.id) || (!section.globalElement && (['hero', ...fixedAnchors].includes(section.id) || /^(?:calc-|scenario-|term-|package-home-|header-(?:desktop|mobile)-submenu-)/.test(section.id))) || (section.visibility !== 'hidden' && ids.has(section.id))) {
+    if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(section.id) || (!section.globalElement && !(section._block==='faq'&&section.id==='sporsmal') && (['hero', ...fixedAnchors].includes(section.id) || /^(?:calc-|scenario-|term-|package-home-|header-(?:desktop|mobile)-submenu-)/.test(section.id))) || (section.visibility !== 'hidden' && ids.has(section.id))) {
       throw new Error('Tjenestesidens seksjoner krever unike, gyldige ankre, og kan ikke bruke reserverte module-ID-er');
     }
     if (section.visibility !== 'hidden') ids.add(section.id);
@@ -116,7 +128,7 @@ export function validateSynlighetSections(page: ServicePage, _route: RouteFamily
 }
 
 function liveAnchors(page: ServicePage): Set<string> {
-  return new Set(['service-hero', 'main', 'mobile-menu', ...(page.faq?.length ? ['sporsmal'] : []), ...visibleServiceSections(page).map(section => section.id)]);
+  return new Set(['service-hero', 'main', 'mobile-menu', ...(page.faq?.length && !page.sections.some(section=>section._block==='faq') ? ['sporsmal'] : []), ...visibleServiceSections(page).map(section => section.id)]);
 }
 
 function checkServiceLinks(page: ServicePage, visibleIds: Set<string>): void {

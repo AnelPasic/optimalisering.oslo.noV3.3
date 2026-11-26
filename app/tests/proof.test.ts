@@ -24,7 +24,7 @@ test('CMS service sections and Proof Register expose only declared evidence fiel
   assert.ok(services.fields.find((field:any)=>field.name==='sections').blocks.some((block:any)=>block.name==='proofList'));
   assert.equal(services.fields.some((field:any)=>field.name==='proof'),false);
   const proofFields = config.content.find((entry: any) => entry.name === 'proofCases').fields;
-  assert.deepEqual(proofFields.map((field:any)=>field.name).sort(), Object.keys(proofCaseSchema.shape).sort());
+  assert.deepEqual(proofFields.filter((field:any)=>field.name!=='originKey').map((field:any)=>field.name).sort(), [...Object.keys(complete),'iconName','badge','badgeClass'].sort());
   assert.equal(proofFields.find((field:any)=>field.name==='originKey').required,false);
 });
 

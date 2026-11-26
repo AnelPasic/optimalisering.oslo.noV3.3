@@ -16,7 +16,7 @@
     "layout": "split-right",
     "eyebrow": "Konverteringsoptimalisering (CRO)",
     "title": "Fra 1 til 2 % høres lite ut. Helt til bestillingene dobles.",
-    "support": "Byråer elsker å selge mer trafikk. Vi foretrekker elementær barneskolematte som fyller kontoen din. Den kjedeligste prosenten i regnearket kan vise seg å være den mest lønnsomme. Og du trenger ikke kjøpe ett eneste ekstra klikk.",
+    "support": "Den kjedeligste prosenten i regnearket er som regel den mest lønnsomme. Og du trenger ikke kjøpe ett eneste ekstra klikk. Byråer elsker å selge mer trafikk. Vi foretrekker barneskolematte som gir deg flere bestillinger.",
     "primaryCta": {
       "label": "Bestill optimalisering",
       "href": "/konvertering/#priser"
@@ -264,7 +264,7 @@
     },
     {
       "_block": "protected",
-      "id": "sjekk",
+      "id": "sjekk-intro",
       "eyebrow": "DIN NETTSIDE ER NESTE REGNESTYKKE",
       "heading": "Vil du ha flere bestillinger fra trafikken du allerede betaler for?",
       "body": [
@@ -284,8 +284,7 @@
     },
     {
       "_block": "global",
-      "element": "sjekk",
-      "visibility": "hidden"
+      "element": "sjekk"
     }
   ],
   "faq": [
