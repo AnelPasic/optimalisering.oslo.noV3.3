@@ -16,6 +16,7 @@
     "PRIVACY_APPROVED": "true",
     "PUBLIC_LEADS_ENABLED": "true",
     "PUBLIC_ORDERS_ENABLED": "true",
+    "TRAFFIC_ENABLED": "true",
     "SEND_NOTIFICATIONS": "true",
     "ACCESS_ISSUER": "https://medon-anel.cloudflareaccess.com",
     "ACCESS_AUD": "42e8db3f873c79a348b108e3d5a6c3847711d2d3cf2fb235c8b13508529c65e1"

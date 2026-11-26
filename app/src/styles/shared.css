@@ -53,6 +53,9 @@ p { text-wrap: pretty; }
 .section-tint { background: var(--cream); }
 .section-heading { width: 100%; text-align: center; }
 .section-heading[data-heading-align="left"] { text-align: left; }
+@media (max-width: 650px) {
+  .section-heading h2 { hyphens: auto; overflow-wrap: anywhere; }
+}
 .section-heading > .body-copy { margin-top: 24px; }
 .section-items { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 42px; }
 .section-items.two-items { grid-template-columns: repeat(2, 1fr); }

@@ -3,15 +3,24 @@ import { saveReceipt, readReceipts, csv } from './store.mjs';
 import { authorize } from './access.mjs';
 import { notifyOne, retryDue } from './notify.mjs';
 import { dashboard } from './dashboard.mjs';
+import { collectTraffic, expireTraffic } from './traffic.mjs';
+import { renderTraffic } from './traffic-dashboard.mjs';
 
 async function admin(request, env, url) {
   if (['/admin/', '/admin/style.css', '/admin/report', '/admin/dashboard/receipts', '/admin/dashboard/export'].includes(url.pathname)) {
-    return dashboard(request, env);
+    const response = await dashboard(request, env);
+    if (!response.ok || url.pathname !== '/admin/' || env.TRAFFIC_ENABLED !== 'true') return response;
+    const html = (await response.text()).replace('Trafikkmåling er ikke aktivert.',
+      '<a class="btn btn-outline" href="/admin/traffic">Se trafikkmålingen for Optimalisering Oslo</a>');
+    return new Response(html, { headers: response.headers });
   }
   const retry = url.pathname === '/admin/retry';
   if (!await authorize(request, env, retry ? 'retry' : 'read')) return json({ ok: false }, 403);
   if ((retry && request.method !== 'POST') || (!retry && request.method !== 'GET')) return json({ ok: false }, 405);
   if (url.searchParams.has('site') && url.searchParams.get('site') !== env.SITE_ID) return json({ ok: false }, 403);
+  if (url.pathname === '/admin/traffic') {
+    return env.TRAFFIC_ENABLED === 'true' ? renderTraffic(env, url.searchParams) : json({ ok: false }, 404);
+  }
   if (retry) {
     if (request.headers.has('Origin') && request.headers.get('Origin') !== url.origin) return json({ ok: false }, 403);
     await retryDue(env); return json({ ok: true });
@@ -37,6 +46,7 @@ export default {
       const config = configuration(env), url = new URL(request.url);
       if (url.origin !== config.ingress) return json({ ok: false }, 403);
       if (url.pathname.startsWith('/admin/')) return await admin(request, env, url);
+      if (url.pathname === '/api/traffic') return await collectTraffic(request, env);
       if (url.pathname !== '/api/leads') return json({ ok: false }, 404);
       const origin = request.headers.get('Origin');
       if (!origin || !config.origins.has(origin)) return json({ ok: false }, 403);
@@ -62,7 +72,10 @@ export default {
       return json({ ok: false, error: error instanceof HttpError ? error.message : 'unavailable' }, error instanceof HttpError ? error.status : 503, cors);
     }
   },
-  async scheduled(_controller, env, ctx) {
+  async scheduled(controller, env, ctx) {
     ctx.waitUntil(retryDue(env).catch(() => console.error('notification-sweep-failed')));
+    if (new Date(controller.scheduledTime).getUTCMinutes() === 13) {
+      ctx.waitUntil(expireTraffic(env).catch(() => console.error('traffic-retention-failed')));
+    }
   },
 };
