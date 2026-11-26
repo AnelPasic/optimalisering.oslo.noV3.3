@@ -72,9 +72,13 @@ export function auditServiceContent(slug){
  }else assert.ok(!ids.includes('service-priser'),slug+': no implicit pricing bridge');
  const forms=[...html.matchAll(/<form\b[^>]*>/g)].map(m=>m[0]);
  const assessment=sections.some(s=>s.globalElement==='sjekk');
- assert.equal(forms.length,assessment?1:0,slug+': only explicitly placed assessment form');
+ const assessmentForms=forms.filter(form=>/\bdata-home-assessment\b/.test(form));
+ const orderForms=forms.filter(form=>/\bdata-package-order-form\b/.test(form));
+ const packages=sections.some(s=>s.globalElement==='priser');
+ assert.equal(assessmentForms.length,assessment?1:0,slug+': only explicitly placed assessment form');
+ assert.equal(orderForms.length,packages?getGlobalElement('priser').content.items.length:0,slug+': one guarded order form per approved package');
+ assert.equal(forms.length,assessmentForms.length+orderForms.length,slug+': no other unexpected forms');
  for(const form of forms){
-  assert.match(form,/\bdata-home-assessment\b/);
   assert.match(form,/method="post"/);
   assert.match(form,/onsubmit="return false"/);
  }
