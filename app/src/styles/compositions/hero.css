@@ -13,6 +13,10 @@
 .inner-hero{ padding-block: 28px 85px; background: var(--color-base-200); }
 .breadcrumbs{ color: var(--muted); font-size: var(--type-meta); margin-bottom: 56px; line-height: var(--leading-small); }
 .breadcrumbs a{ text-underline-offset: 4px; }
+@media (max-width: 650px) {
+  .commercial-hero .breadcrumbs > ul { flex-wrap: wrap; white-space: normal; }
+  .commercial-hero .breadcrumbs :is(li, a, span) { min-width: 0; white-space: normal; overflow-wrap: anywhere; }
+}
 
 .inner-hero-grid :is(h1,h2){ font-size: var(--type-display); max-width: 980px; line-height: var(--leading-display); }
 .inner-hero-grid .hero-intro{ max-width: 720px; font-size: var(--type-lead); line-height: var(--leading-lead); }
