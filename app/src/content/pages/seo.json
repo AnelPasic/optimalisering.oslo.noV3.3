@@ -8,15 +8,15 @@
     }
   },
   "seo": {
-    "title": "SEO-byrå i Oslo | Søkemotoroptimalisering som gir salg",
-    "description": "Vi hjelper bedrifter i Oslo og Norge med SEO som merkes på bunnlinjen. Riktige søk, tydelige tjenestesider og faste priser uten bindingstid.",
+    "title": "Intensjonsdrevet SEO og søkemotoroptimalisering | Optimalisering Oslo",
+    "description": "Vi prioriterer søkeintensjon foran tomt volum. Google og AI leter etter svaret kunden vil ha - jobben vår er å gjøre bedriften din til det svaret.",
     "noindex": false
   },
   "hero": {
     "layout": "split-right",
-    "eyebrow": "Søkemotoroptimalisering for bedrifter",
-    "title": "Google kan sende deg trafikk. Jobben vår er å gjøre den verdt noe.",
-    "support": "Mange byråer feirer trafikkvekst i fargerike grafer, selv om innboksen din forblir tom. Vi hjelper bedrifter i Oslo og resten av landet med å bli funnet av kunder som faktisk skal handle, fjerne hindringer på nettsiden og gjøre organiske besøk om til henvendelser og salg. Faste månedspriser fra 4 500 kr. Ingen bindingstid.",
+    "eyebrow": "Intensjonsdrevet SEO og søkemotoroptimalisering",
+    "title": "Google og AI leter etter svaret kunden vil ha. Jobben vår er å gjøre deg til det svaret.",
+    "support": "Det hjelper lite å ligge øverst på Google hvis kunden bare skal lese en definisjon eller finne en skoleoppgave. Vårt SEO-system prioriterer søkeintensjon foran tomt volum: Vi finner de konkrete søkene der folk leter etter leverandøren de skal velge, og bygger tjenestesider som svarer så godt at både søkemotorene og kunden sender bestillingen til deg. Faste priser fra 4 500 kr i måneden uten bindingstid.",
     "primaryCta": {
       "label": "Ta en gratis sjekk",
       "href": "#sjekk"
@@ -30,7 +30,7 @@
       "image": {
         "kind": "illustration",
         "src": "/images/services/discoveringlocalfavorite-1.png",
-        "alt": "Søkemotoroptimalisering som gir salg for bedrifter i Oslo",
+        "alt": "Søkemotoroptimalisering som gjør deg til svaret kunden leter etter",
         "positionX": 50,
         "positionY": 50
       }
@@ -41,46 +41,57 @@
       "supportPreset": "spissplus"
     },
     "highlights": [
-      "SEO inngår i alle våre pakker",
-      "Fast pris fra 4 500 kr/mnd"
+      "Søkeintensjon foran tomt klikkvolum",
+      "Optimalisert for både Google og AI-svar"
     ],
     "featuredProofCaseId": "helt-opplagt"
   },
   "sections": [
     {
-      "_block": "global",
-      "element": "priser"
-    },
-    {
       "_block": "content",
-      "id": "trafikkfellen",
-      "eyebrow": "Økonomisk realitet",
-      "heading": "Trafikk uten konvertering er bare en serverkostnad.",
+      "id": "sokeintensjon",
+      "eyebrow": "Fra søkemarked til ordrebok",
+      "heading": "Du driver bedrift, ikke en klikksamling.",
       "headingAlign": "center",
-      "layout": "two-columns",
-      "surface": "base-100",
+      "layout": "three-columns",
+      "surface": "default",
       "body": [
-        "Norske byråer elsker å snakke om synlighet, klikkvolum og førsteposisjoner på Google. Men trafikk i seg selv har aldri betalt en eneste lønning. Hvis 5 000 personer besøker nettsiden din hver måned uten å finne det de leter etter, sitter du bare igjen med en høyere driftsregning og et pent analyseverktøy.",
-        "Vi jobber ut fra elementær barneskolematte: Dobler du konverteringsraten på nettsiden din fra 1 til 2 %, trenger du halvparten så mange besøk for å få nøyaktig samme antall kunder. Når vi kombinerer målrettet søkesynlighet med sider som faktisk overbeviser, blir hvert eneste Google-klikk en investering fremfor en utgift."
+        "Mange byråer feirer trafikkvekst i fargerike grafer, selv om innboksen din forblir tom. Vi optimaliserer for søkene der kunden faktisk skal kjøpe, fjerner friksjon på landingssiden og kobler organisk synlighet direkte til henvendelser og omsetning.",
+        "Vårt regnestykke for lønnsom SEO er enkelt: Søkevolum x Andel relevante søk x Andel vi klarer å tiltrekke = Relevante henvendelser. Det hjelper lite med ti tusen treff på en oppskrift eller definisjon hvis ingen av dem trenger tjenestene dine."
       ],
       "items": [
         {
-          "title": "Den klassiske byråfellen",
-          "text": "10 000 månedlige klikk fra tilfeldige søk på irrelevante veiledninger. Konverteringsrate på 0,1 %. Resultat: 10 henvendelser og en feit konsulentfaktura.",
-          "boxVariant": "card",
-          "surface": "base-200",
+          "headline": "Klikk uten kjøpsintensjon",
+          "title": "Informative søk",
+          "badge": "Lav verdi",
           "iconName": "warning-circle",
-          "badge": "Feil fokus"
+          "text": "Tusenvis av treff på definisjoner og generelle råd pynter på trafikkgrafen. Men besøkende som bare samler informasjon fører sjelden til oppdrag. Å jage tomt volum er en dyr måte å fylle serverloggen på.",
+          "boxVariant": "card",
+          "surface": "info"
         },
         {
-          "title": "Vår tilnærming",
-          "text": "1 500 månedlige klikk fra kjøpeklare kunder som leter etter akkurat det du leverer. Konverteringsrate på 2,5 %. Resultat: 37 kvalifiserte henvendelser til fast månedspris.",
+          "headline": "Kunder som velger leverandør",
+          "title": "Transaksjonssøk",
+          "badge": "Kjøpsintensjon",
+          "iconName": "target",
+          "text": "Vi prioriterer de konkrete søkene der kunden aktivt sammenligner leverandører eller leter etter hjelp nå. Færre klikk, men henvendelser med reell betalingsvilje fra kunder i ditt markedsområde.",
           "boxVariant": "card",
-          "surface": "success",
+          "surface": "base-300"
+        },
+        {
+          "headline": "Fra klikk til bestilling",
+          "title": "Søk x Konvertering",
+          "badge": "Lønnsom vekst",
           "iconName": "chart-line-up",
-          "badge": "Lønnsomhet"
+          "text": "Når Google og AI sender kunden inn på siden, må de møte et krystallklart svar, faste priser og null tvil. Kombinasjonen av spisset rangering og enkel handling er det som gjør SEO til en forutsigbar salgskanal.",
+          "boxVariant": "card",
+          "surface": "secondary"
         }
       ]
+    },
+    {
+      "_block": "global",
+      "element": "priser"
     },
     {
       "_block": "content",
@@ -129,7 +140,7 @@
       "layout": "four-columns",
       "surface": "base-100",
       "body": [
-        "God SEO handler ikke om hemmelige triks eller å lure søkemotorene. Det handler om å svare så presist og troverdig på kundens problem at både Google, AI-tjenester og kunden selv skjønner at din bedrift er det opplagte valget."
+        "SEO krever ingen hemmelige triks eller snarveier for å lure søkemotorene. Det handler om å svare så presist og troverdig på kundens problem at både Google, AI-tjenester og kunden selv skjønner at din bedrift er det opplagte valget."
       ],
       "items": [
         {
