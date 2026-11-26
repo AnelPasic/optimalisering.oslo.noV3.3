@@ -7,6 +7,7 @@ import {resolve} from 'node:path';
 import {once} from 'node:events';
 import {readFileSync} from 'node:fs';
 import {createAppServer} from '../server/http.mjs';
+import {pageSchema} from '../src/lib/content-schema.ts';
 
 const server=createAppServer({config:{enabled:false},staticRoot:resolve('dist')});
 server.listen(0,'127.0.0.1');
@@ -14,6 +15,9 @@ await once(server,'listening');
 const browser=await chromium.launch({headless:true});
 const origin='http://127.0.0.1:'+server.address().port;
 const savedFooterSurface=JSON.parse(readFileSync(new URL('../src/content/site-chrome/footer.json',import.meta.url),'utf8')).footerSurface || 'secondary';
+const synlighet=pageSchema.parse(JSON.parse(readFileSync(new URL('../src/content/pages/synlighet.json',import.meta.url),'utf8')));
+const serviceCards=synlighet.sections.find(section=>section._block==='content'&&section.id==='behov').items;
+const serviceActions=serviceCards.map(item=>item.href&&item.label ? [{href:item.href,label:item.label}] : []);
 assert.ok(['secondary','neutral','primary','accent','info'].includes(savedFooterSurface),'Approved CMS footer surface has a semantic content token');
 
 try {
@@ -108,7 +112,8 @@ try {
       route:location.pathname,
       count:cardNodes.length,
       sectionCards:cardNodes.length>0&&cardNodes.every(x=>x.classList.contains('card')&&!x.classList.contains('info-item')&&!!x.querySelector('.card-body')),
-      sectionLink:cardNodes.length>0&&cardNodes.every(x=>!x.querySelector('a')||!!x.querySelector('.card-actions .text-link')),
+      sectionActions:cardNodes.map(card=>[...card.querySelectorAll('.card-actions a')]
+       .map(link=>({href:link.getAttribute('href'),label:link.textContent.trim()}))),
       legacyMixed:document.querySelectorAll('.info-item.card').length,
       packageCount:packages.length,
       packageNative:packages.every(p=>p.classList.contains('card')&&p.classList.contains('card-border')&&p.querySelector(':scope > .card-body')!==null),
@@ -122,9 +127,10 @@ try {
      };
     },theme);
     assert.equal(state.legacyMixed,0,'Mixed legacy info-item.card remains '+route);
-    if(route==='/synlighet/'&&state.count>0){
+    if(route==='/synlighet/'){
+     assert.equal(state.count,serviceCards.length,'Cards match the current service section');
      assert.equal(state.sectionCards,true,'Service visual cards must use native ContentCard');
-     assert.equal(state.sectionLink,true,'Existing text CTA style is preserved');
+     assert.deepEqual(state.sectionActions,serviceActions,'Card actions match the CMS links and labels');
     }
     if(route==='/priser/'){
      assert.equal(state.packageCount,3,'Three approved offers remain visible');
@@ -429,6 +435,7 @@ try {
      formula:read('.calculator-introduction .calculator-formula'),
      label:read('.calculator-field label'),
      multiplier:read('.calculator-multiplier [data-percentage]'),
+     multiplierBg:getComputedStyle(by('.calculator-multiplier')).backgroundColor,
      inputColor:read('.calculator-field input[type=number]'),
      inputBg:getComputedStyle(by('.calculator-field input[type=number]')).backgroundColor,
      resultValue:read('.leverage-result output'),
@@ -439,6 +446,7 @@ try {
      currentLine:getComputedStyle(by('.scenario-current-line')).stroke,
      improvedLine:getComputedStyle(by('.scenario-improved-line')).stroke,
      secFg,baseFg,accentFg,baseBg:token('--color-base-200','backgroundColor'),
+     badgeBg:token('--color-base-100','backgroundColor'),
      overflow:document.documentElement.scrollWidth-innerWidth
     };
    },theme);
@@ -446,8 +454,10 @@ try {
     assert.equal(pair.bg,pair.expectedBg,'calculator '+pair.name+' background mismatch at '+width+'/'+theme);
     assert.equal(pair.fg,pair.expectedFg,'calculator '+pair.name+' text mismatch at '+width+'/'+theme);
    }
-   for(const part of ['heading','intro','eyebrow','formula','label','multiplier'])
+   for(const part of ['heading','intro','eyebrow','formula','label'])
     assert.equal(d[part],d.secFg,'calculator '+part+' uses mismatched foreground '+theme);
+   assert.equal(d.multiplierBg,d.badgeBg,'Multiplier badge uses the native base surface');
+   assert.equal(d.multiplier,d.baseFg,'Multiplier text pairs with the badge surface');
    for(const part of ['resultValue','chartCaption'])
     assert.equal(d[part],d.baseFg,'calculator '+part+' uses mismatched foreground '+theme);
    assert.equal(d.comparisonValue,d.accentFg,'Scenario value text contrast '+theme);

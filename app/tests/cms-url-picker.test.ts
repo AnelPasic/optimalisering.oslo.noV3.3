@@ -41,7 +41,7 @@ test('Home Hero stored href remains unchanged after selected CMS projection',()=
 test('URL suggestions are canonical, generated and in sync',()=>{
  const run=spawnSync(process.execPath,['scripts/sync-cms-url-options.mjs','--check'],{cwd:new URL('..',import.meta.url),encoding:'utf8'});
  assert.equal(run.status,0,run.stderr||run.stdout);
- const yaml=readFileSync(new URL('../../.pages.yml',import.meta.url),'utf8');
+ const yaml=readFileSync(new URL('../../.pages.yml',import.meta.url),'utf8').replaceAll('\r\n','\n');
  assert.match(yaml,/name: suggestedHref\n\s+label: Velg side eller snarvei\n\s+component: cmsSuggestedHref/);
  assert.match(yaml,/name: href\n\s+label: Manuell URL/);
 });

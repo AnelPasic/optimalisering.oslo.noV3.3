@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 import YAML from 'yaml';
-import {pageFilePaths} from './helpers/page-sources.ts';
+import { loadPageFile, pageFilePaths } from './helpers/page-sources.ts';
 import { pageListSchema, resolvePageList } from '../src/lib/page-list.ts';
 import { pageSchema } from '../src/lib/content-schema.ts';
 import { getHomepageBlocks } from '../src/lib/home-builder.ts';
@@ -10,15 +10,23 @@ import { cmsJsonSave, entryForFile, resolveField } from './helpers/pages-cms-jso
 
 const cms=YAML.parse(readFileSync('../.pages.yml','utf8'));
 const names=pageFilePaths();
-const raw=names.map(name=>JSON.parse(readFileSync('src/content/pages/'+name,'utf8')));
+const raw=names.map(loadPageFile);
 const proofs=readdirSync('src/content/proof').filter(name=>name.endsWith('.json')).map(name=>JSON.parse(readFileSync('src/content/proof/'+name,'utf8')));
 const config=(edit:any={})=>({mode:'automatic',sort:'editorial',limit:6,layout:'cards',selected:[],excluded:[],...edit});
-const entry=(slug:string)=>raw.find(page=>page.slug===slug)!;
 
-test('PageList selector uses canonical source page slugs and is available in every page editor',()=>{
+test('Pinned PageList choices use canonical slugs and current titles; every page editor exposes the selector',()=>{
  assert.ok(names.length>0,'page sources must exist');
- const values=cms.components.pageListPageReference.options.values.map((v:any)=>v.name).sort();
- assert.deepEqual(values,raw.map(p=>p.slug).sort());
+ const choices: { name: string; label: string }[] = cms.components.pageListPageReference.options.values;
+ assert.ok(choices.length>0,'the fixed selector must offer choices');
+ assert.equal(new Set(choices.map(choice=>choice.name)).size,choices.length,'pinned slugs must be unique');
+ const pagesBySlug = new Map(raw.map(page=>[page.slug,page]));
+ for(const {name, label} of choices){
+  assert.equal(pageListSchema.safeParse(config({mode:'manual',entries:[{_block:'page',slug:name}]})).success,true,name);
+  assert.ok(label.trim(),name);
+  // The fixed list survives native Add/Delete. Existing source pages own their display title.
+  const page = pagesBySlug.get(name);
+  if(page) assert.equal(label,page.listing?.title||page.seo?.title||page.title||page.slug,name);
+ }
  for(const name of names) {
   const item=entryForFile(cms,'app/src/content/pages/'+name);
   const sections=item.fields.find((field:any)=>field.name==='sections');
@@ -34,16 +42,21 @@ test('PageList selector uses canonical source page slugs and is available in eve
  }
 });
 
-test('existing automatic article PageList stays backward compatible; automatic pages discover the website',()=>{
- const overview=entry('innsikt').sections.find((s:any)=>s._block==='pageList');
- assert.ok(resolvePageList(overview.pageList,raw).some(p=>p.slug==='innsikt/google-bedriftsprofil'));
- assert.ok(resolvePageList(overview.pageList,raw).some(p=>p.slug==='innsikt/hva-bor-optimaliseres-forst'));
- const pages=resolvePageList(config({source:'pages',limit:9}),raw);
- assert.equal(pages.length,9);
- assert.ok(pages.every(p=>p.href?.startsWith('/') && p.slug!=='home'));
- assert.ok(pages.some(p=>p.slug==='priser'||p.slug==='kontakt'));
+test('legacy settings discover articles; automatic pages discover current sources independently of the picker',()=>{
+ const article={slug:'innsikt/test-artikkel',kind:'article',title:'Artikkel',intro:'Ingress'};
  const newer={slug:'ny-side',kind:'service',title:'Ny side',intro:'Nylig skrevet',listing:{order:0,visible:true}};
- assert.equal(resolvePageList(config({source:'pages',limit:1}),[...raw,newer])[0].slug,'ny-side');
+ assert.deepEqual(resolvePageList(config(),[newer,article]).map(page=>page.slug),[article.slug]);
+ assert.deepEqual(resolvePageList(config({source:'pages',limit:1}),[article,newer]).map(page=>page.slug),[newer.slug]);
+
+ const sources = raw.map(page=>pageSchema.parse(page));
+ const title = (page: typeof sources[number]) => page.listing?.title ?? page.title;
+ const eligible = sources.filter(page=>page.kind!=='home' && page.listing?.visible!==false);
+ eligible.sort((a,b)=>title(a).localeCompare(title(b),'nb')||a.slug.localeCompare(b.slug,'nb'));
+ const settings = config({source:'pages',sort:'title',limit:9});
+ assert.deepEqual(
+  resolvePageList(settings,sources).map(({slug,href})=>({slug,href})),
+  eligible.slice(0,settings.limit).map(({slug})=>({slug,href:`/${slug}/`})),
+ );
 });
 
 test('manual PageList allows ordered pages, direct root link, external URLs and publishable cases',()=>{

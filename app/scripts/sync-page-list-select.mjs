@@ -2,7 +2,8 @@ import {readFileSync,readdirSync,writeFileSync} from 'node:fs';
 import {resolve} from 'node:path';
 
 const root=resolve('src/content/pages'),configPath=resolve('../.pages.yml');
-const current=readFileSync(configPath,'utf8');
+const source=readFileSync(configPath,'utf8');
+const current=source.replaceAll('\r\n','\n');
 const marker=/# PAGE_LIST_PAGE_OPTIONS_START\n([\s\S]*?)# PAGE_LIST_PAGE_OPTIONS_END/;
 const match=current.match(marker);
 if(!match)throw new Error('Missing PageList options markers in .pages.yml');
@@ -27,7 +28,7 @@ const choices=previous.map(old=>{
 const generated=choices.map(row=>`        - name: ${JSON.stringify(row.name)}\n          label: ${JSON.stringify(row.label)}`).join('\n');
 const updated=current.replace(marker,`# PAGE_LIST_PAGE_OPTIONS_START\n${generated}\n# PAGE_LIST_PAGE_OPTIONS_END`);
 if(process.argv.includes('--write')){
- if(updated!==current)writeFileSync(configPath,updated);
+ if(updated!==current)writeFileSync(configPath,source.includes('\r\n')?updated.replaceAll('\n','\r\n'):updated);
  console.log('Updated '+choices.length+' pinned PageList choices');
 }else if(updated!==current){
  console.error('Pinned PageList titles changed: run node scripts/sync-page-list-select.mjs --write');

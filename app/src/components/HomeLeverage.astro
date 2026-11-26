@@ -138,7 +138,7 @@ const ratio = formatScenarioRatio(result.current, result.scenario);
 <style>
   .calculator-introduction { text-align: center; margin-bottom: 40px; }
   .calculator-introduction h2 { max-width: 850px; margin: 16px auto 0; }
-  .calculator-introduction .body-copy { margin: 20px auto 0; color: inherit; font-size: var(--type-body); line-height: var(--leading-body); }
+  .calculator-introduction :global(.body-copy) { margin: 20px auto 0; color: inherit; font-size: var(--type-body); line-height: var(--leading-body); }
   :global(.site-shell) .calculator-introduction .calculator-formula { border: 0; padding: 0; margin-top: 20px; }
   :global(.site-shell) .leverage-grid { align-items: stretch; }
   :global(.site-shell) .leverage-tool { display: flex; }
