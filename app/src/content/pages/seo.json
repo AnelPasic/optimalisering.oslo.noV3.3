@@ -351,7 +351,6 @@
       "_block": "content",
       "id": "seo-kro-lonnsomhet",
       "headingAlign": "left",
-      "heading": "",
       "body": [
         "Bruk samme type konvertering gjennom hele regneeksempelet: henvendelser eller bestillinger.\n\nFor å vurdere lønnsomheten må vi også vite hva hver bestilling gir i dekningsbidrag og hva optimaliseringen koster. Hvis nettsiden skaffer henvendelser, må vi vite hvor mange av dem som blir kunder.\n\n[Les mer om konverteringsoptimalisering](/konvertering/)"
       ]
@@ -364,8 +363,7 @@
       "_block": "faq",
       "id": "sporsmal",
       "eyebrow": "Greit å vite",
-      "heading": "Før du tar neste steg.",
-      "body": []
+      "heading": "Før du tar neste steg."
     },
     {
       "_block": "pageList",
