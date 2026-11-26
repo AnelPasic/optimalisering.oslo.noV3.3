@@ -1,31 +1,94 @@
 {
   "slug": "seo",
   "kind": "service",
+  "composition": {
+    "commercialText": true,
+    "service": {
+      "closingCta": false
+    }
+  },
   "seo": {
-    "title": "SEO-byrå for bedrifter i Oslo | Optimalisering Oslo",
-    "description": "SEO-tjenester for bedrifter i Oslo og Norge. Vi vurderer søkeord, tjenestesider, tekniske hindringer og veien fra Google-søk til relevante henvendelser."
+    "title": "SEO-byrå for bedrifter i Oslo | Intensjonsdrevet søkemotoroptimalisering",
+    "description": "Vi prioriterer søkeintensjon foran tomt volum. Google og AI leter etter svaret kunden vil ha - jobben vår er å gjøre bedriften din til det svaret.",
+    "noindex": false
   },
   "hero": {
     "layout": "split-right",
-    "eyebrow": "SEO - søkemotoroptimalisering for bedrifter",
-    "title": "SEO for bedrifter som vil bli funnet av riktige kunder.",
-    "support": "SEO gjør det lettere for kunder å finne relevante tjenester i Googles organiske søkeresultater. Vi hjelper bedrifter i Oslo og resten av Norge med å vurdere hva de bør bli funnet for, hvilke sider som trenger arbeid, og hvordan besøk kan bli til henvendelser. Først finner vi ut hva som faktisk holder nettsiden tilbake.",
+    "eyebrow": "Intensjonsdrevet SEO og søkemotoroptimalisering",
+    "title": "Google og AI leter etter svaret kunden vil ha. Jobben vår er å gjøre deg til det svaret.",
+    "support": "Det hjelper lite å ligge øverst på Google hvis kunden bare skal lese en definisjon eller finne en skoleoppgave. Vårt SEO-system prioriterer søkeintensjon foran tomt volum: Vi finner de konkrete søkene der folk leter etter leverandøren de skal velge, og bygger tjenestesider som svarer så godt at både søkemotorene og kunden sender bestillingen til deg. Faste priser fra 4 500 kr i måneden uten bindingstid.",
     "primaryCta": {
       "label": "Ta en gratis sjekk",
       "href": "/seo/#sjekk"
+    },
+    "secondaryCta": {
+      "label": "Se pakker og priser",
+      "href": "#priser"
     },
     "visual": {
       "kind": "image",
       "image": {
         "kind": "illustration",
         "src": "/images/services/discoveringlocalfavorite-1.png",
-        "alt": "Funnet på Google",
+        "alt": "Søkemotoroptimalisering som gjør deg til svaret kunden leter etter",
         "positionX": 50,
         "positionY": 50
       }
-    }
+    },
+    "toneOverrides": {
+      "eyebrowPreset": "inherit",
+      "titlePreset": "spissplus",
+      "supportPreset": "spissplus"
+    },
+    "highlights": [
+      "Søkeintensjon foran tomt klikkvolum",
+      "Optimalisert for både Google og AI-svar"
+    ],
+    "featuredProofCaseId": "helt-opplagt"
   },
   "sections": [
+    {
+      "_block": "content",
+      "id": "sokeintensjon",
+      "eyebrow": "Fra søkemarked til ordrebok",
+      "heading": "Du driver bedrift, ikke en klikksamling.",
+      "headingAlign": "center",
+      "layout": "three-columns",
+      "surface": "default",
+      "body": [
+        "Mange byråer feirer trafikkvekst i fargerike grafer, selv om innboksen din forblir tom. Vi optimaliserer for søkene der kunden faktisk skal kjøpe, fjerner friksjon på landingssiden og kobler organisk synlighet direkte til henvendelser og omsetning.",
+        "Vårt regnestykke for lønnsom SEO er enkelt: Søkevolum x Andel relevante søk x Andel vi klarer å tiltrekke = Relevante henvendelser. Det hjelper lite med ti tusen treff på en oppskrift eller definisjon hvis ingen av dem trenger tjenestene dine."
+      ],
+      "items": [
+        {
+          "headline": "Klikk uten kjøpsintensjon",
+          "title": "Informative søk",
+          "badge": "Lav verdi",
+          "iconName": "warning-circle",
+          "text": "Tusenvis av treff på definisjoner og generelle råd pynter på trafikkgrafen. Men besøkende som bare samler informasjon fører sjelden til oppdrag. Å jage tomt volum er en dyr måte å fylle serverloggen på.",
+          "boxVariant": "card",
+          "surface": "info"
+        },
+        {
+          "headline": "Kunder som velger leverandør",
+          "title": "Transaksjonssøk",
+          "badge": "Kjøpsintensjon",
+          "iconName": "target",
+          "text": "Vi prioriterer de konkrete søkene der kunden aktivt sammenligner leverandører eller leter etter hjelp nå. Færre klikk, men henvendelser med reell betalingsvilje fra kunder i ditt markedsområde.",
+          "boxVariant": "card",
+          "surface": "base-300"
+        },
+        {
+          "headline": "Fra klikk til bestilling",
+          "title": "Søk x Konvertering",
+          "badge": "Lønnsom vekst",
+          "iconName": "chart-line-up",
+          "text": "Når Google og AI sender kunden inn på siden, må de møte et krystallklart svar, faste priser og null tvil. Kombinasjonen av spisset rangering og enkel handling er det som gjør SEO til en forutsigbar salgskanal.",
+          "boxVariant": "card",
+          "surface": "secondary"
+        }
+      ]
+    },
     {
       "_block": "global",
       "element": "priser"
@@ -120,7 +183,7 @@
       "_block": "content",
       "id": "prioritering",
       "eyebrow": "Prioritering før volum",
-      "heading": "En SEO-plan skal prioritere arbeid, ikke bare produsere rapporter.",
+      "heading": "En SEO-plan skal prioritere faktisk arbeid, fremfor å produsere rapporter.",
       "headingAlign": "left",
       "surface": "secondary",
       "body": [

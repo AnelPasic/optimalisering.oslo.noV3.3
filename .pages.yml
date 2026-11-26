@@ -325,7 +325,7 @@ components:
         - name: "/priser/#optimalisering"
           label: "Priser og pakker — /priser/#optimalisering"
         - name: "/seo/"
-          label: "SEO-byrå for bedrifter i Oslo | Optimalisering Oslo — /seo/"
+          label: "SEO-byrå for bedrifter i Oslo | Intensjonsdrevet søkemotoroptimalisering — /seo/"
         - name: "/synlighet/"
           label: "SEO og digital markedsføring | Organisk og betalt synlighet | Optimalisering Oslo — /synlighet/"
         - name: "/vilkar/"
