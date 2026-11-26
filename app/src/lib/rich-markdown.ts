@@ -1,6 +1,6 @@
 /** Restricted Markdown for user-authored CMS content.
  * Source is always plain Markdown; HTML is never interpreted, and every URL is validated.
- * Supported: h2-h6, paragraphs, unordered/ordered lists, emphasis and links.
+ * Supported: h2-h6, paragraphs, unordered/ordered lists, emphasis, links and pipe tables.
  * Never use this to render arbitrary raw HTML or untrusted URLs.
  */
 const html=(value:string)=>value.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
@@ -31,9 +31,25 @@ function inline(source:string,depth=0):string {
 }
 const heading=/^\s{0,3}(#{1,6})[ \t]+(.+?)\s*$/;
 const bullet=/^\s{0,3}([-+*]|\d+[.)])[ \t]+(.+?)\s*$/;
+// A deliberately small table grammar: outer pipes, a matching separator row,
+// and equal-width cells. Cell content goes through the existing safe inline renderer.
+function tableCells(line:string):string[]|undefined {
+  const value=line.trim();
+  if(!value.startsWith('|')||!value.endsWith('|'))return;
+  const cells=value.slice(1,-1).split('|').map(cell=>cell.trim());
+  return cells.length>=2?cells:undefined;
+}
+function tableHeader(lines:string[],at:number):string[]|undefined {
+  const header=tableCells(lines[at]??''),separator=tableCells(lines[at+1]??'');
+  if(!header||!separator||header.length!==separator.length||!separator.every(cell=>/^:?-{3,}:?$/.test(cell)))return;
+  return header;
+}
+
 /** Legacy plain content does not need any rewrite or additional paragraph structure. */
 export function hasRichMarkdown(source:string):boolean {
   if(!source)return false;
+  const lines=source.replace(/\r\n?/g,'\n').split('\n');
+  if(lines.some((_,i)=>Boolean(tableHeader(lines,i))))return true;
   return /(^|\n)\s{0,3}(?:#{1,6}|[-+*]|\d+[.)])[ \t]+\S/.test(source)
     || /\*\*[^*\n]+\*\*|__[^_\n]+__/.test(source)
     || /(^|[\s(])\*[^*\n]+\*(?=$|[\s.,;:!)])/m.test(source)
@@ -48,6 +64,19 @@ export function renderSafeMarkdown(source:string):string {
   while(at<lines.length){
     const line=lines[at];
     if(!line.trim()){at++;continue;}
+    const table=tableHeader(lines,at);
+    if(table){
+      const header='<thead><tr>'+table.map(cell=>'<th scope="col">'+inline(cell)+'</th>').join('')+'</tr></thead>';
+      const rows:string[]=[];at+=2;
+      while(at<lines.length){
+        const cells=tableCells(lines[at]);
+        if(!cells||cells.length!==table.length)break;
+        rows.push('<tr>'+cells.map((cell,index)=>index===0&&table[0]===''?'<th scope="row">'+inline(cell)+'</th>':'<td>'+inline(cell)+'</td>').join('')+'</tr>');
+        at++;
+      }
+      parts.push('<div class="overflow-x-auto"><table class="table">'+header+'<tbody>'+rows.join('')+'</tbody></table></div>');
+      continue;
+    }
     const h=line.match(heading);
     if(h){
       if(h[1].length===1)throw new Error('H1 is reserved for the page Hero');
@@ -65,7 +94,7 @@ export function renderSafeMarkdown(source:string):string {
       parts.push('<'+tag+'>'+items.join('')+'</'+tag+'>');continue;
     }
     const paragraph:string[]=[];
-    while(at<lines.length&&lines[at].trim()&&!heading.test(lines[at])&&!bullet.test(lines[at])){
+    while(at<lines.length&&lines[at].trim()&&!heading.test(lines[at])&&!bullet.test(lines[at])&&!tableHeader(lines,at)){
       paragraph.push(lines[at].trim());at++;
     }
     parts.push('<p>'+inline(paragraph.join(' '))+'</p>');
