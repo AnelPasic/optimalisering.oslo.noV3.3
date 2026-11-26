@@ -36,7 +36,13 @@ test('CONTENT-04 Service: delivery, context and qualified next step, without a f
  assert.ok(service.sections.some((s:any)=>s._block==='global'&&s.element==='sjekk'));
  assert.ok(service.sections.some((s:any)=>s._block==='global'&&s.element==='priser'));
  assert.equal(service.hero.primaryCta.href,'/seo/#sjekk');
- const links=service.sections.flatMap((s:any)=>s.links??[]).map((l:any)=>l.href);
+ const links:string[]=[];
+ const collect=(value:unknown)=>{
+  if(typeof value==='string'){for(const match of value.matchAll(/\]\((\/[^)]+)\)/g))links.push(match[1]);return;}
+  if(Array.isArray(value)){value.forEach(collect);return;}
+  if(value&&typeof value==='object'){const row=value as Record<string,unknown>;if(typeof row.href==='string')links.push(row.href);Object.values(row).forEach(collect);}
+ };
+ collect(service.sections);collect(service.faq);
  for(const href of ['/priser/','/lokal-seo/','/ai-synlighet/']) assert.ok(links.includes(href),href);
 });
 
