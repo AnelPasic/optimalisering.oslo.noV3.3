@@ -284,8 +284,7 @@
     },
     {
       "_block": "global",
-      "element": "sjekk",
-      "visibility": "hidden"
+      "element": "sjekk"
     }
   ],
   "faq": [
