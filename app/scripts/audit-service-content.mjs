@@ -32,7 +32,7 @@ export function auditServiceContent(slug){
  assert.equal(text(html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/)[1]),text(hero.title),slug+': H1 follows CMS');
  const heroHtml=sectionHtml(html,'service-hero');
  assert.ok(heroHtml,slug+': Hero section');
- for(const value of [hero.eyebrow,hero.support,hero.primaryCta?.label,hero.secondaryCta?.label].filter(Boolean)){
+ for(const value of [hero.eyebrow,hero.support,hero.primaryCta?.label,hero.secondaryCta?.label,...(hero.highlights??[])].filter(Boolean)){
   assert.ok(text(heroHtml).includes(plain(value)),slug+': missing CMS Hero copy '+value);
  }
  const sections=visibleServiceSections(page);
@@ -49,13 +49,14 @@ export function auditServiceContent(slug){
   const values=[section.eyebrow,section.heading,...section.body,...(section.afterCards??[]),...(section.items??[]).flatMap(item=>[item.headline||item.title,item.text]),...(section.links??[]).map(link=>link.label)].filter(Boolean);
   for(const value of values)assert.ok(text(rendered).includes(plain(value)),slug+': '+section.id+' missing source copy '+value);
  }
- if(!sections.some(s=>s.globalElement==='sporsmal')&&localFaq.length)expected.push('sporsmal');
+ const localPlacement=page.sections.find(s=>s._block==='faq'&&!s.globalElement);
+ if(!localPlacement&&!sections.some(s=>s.globalElement==='sporsmal')&&localFaq.length)expected.push('sporsmal');
  const ids=[...html.matchAll(/<section\b[^>]*\bid="([^"]+)"/g)].map(match=>match[1]);
  assert.equal(new Set(ids).size,ids.length,slug+': unique section anchors');
  const expectedSet=new Set(expected);
  assert.deepEqual(ids.filter(id=>expectedSet.has(id)),expected,slug+': rendered order follows visible CMS sequence');
  assert.equal(ids[0],'service-hero');
- const faqItems=sections.some(s=>s.globalElement==='sporsmal')?combineFaqItems(getGlobalElement('sporsmal').content.items,localFaq):localFaq;
+ const faqItems=sections.some(s=>s.globalElement==='sporsmal')?combineFaqItems(getGlobalElement('sporsmal').content.items,localFaq):localPlacement?.visibility==='hidden'?[]:localFaq;
  for(const item of faqItems){
   const rendered=sectionHtml(html,'sporsmal');
   assert.ok(rendered&&text(rendered).includes(text(item.question))&&text(rendered).includes(plain(item.answer)),slug+': FAQ follows CMS');
