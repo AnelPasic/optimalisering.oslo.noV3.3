@@ -20,7 +20,7 @@ test('repeated Partner facts include the shared prefix exactly once without alte
   const bind = createCommercialTextBinding(home, pricing, edited);
   assert.ok(bind(pricing.faq[0].answer).includes('Partner fra 14 900 kr/mnd'));
   assert.equal(bind('Partner fra 14 900 kr/mnd.'), 'Partner fra 14 900 kr/mnd.');
-  assert.equal(bind('fra 4 500 kr/mnd'), 'fra 4 500 kr/mnd');
+  assert.equal(bind('fra 975 kr/uke'), 'fra 4 500 kr/mnd');
 });
 
 test('CMS names ending in digits cannot swallow following FAQ price amounts', () => {
@@ -57,4 +57,12 @@ test('CMS global-only pricing sections keep live commercial binding valid',()=>{
  const bind=createCommercialTextBinding(home,globalOnly);
  assert.equal(typeof bind(pricing.faq[0].answer),'string');
  assert.ok(bind(pricing.faq[0].answer).includes('Vekst'));
+});
+
+ test('live mixed weekly and monthly price references bind to the shared offer', () => {
+  const bind = createCommercialTextBinding(home, pricing);
+  const answer = bind(pricing.faq[0].answer);
+  assert.match(answer, /Optimalisering Flex koster 975 kr\/uke/);
+  assert.match(answer, /Vekst 1 495 kr\/uke/);
+  assert.match(answer, /Enterprise fra 14 900 kr\/mnd/);
 });

@@ -15,7 +15,7 @@ test('All package-level Hero checks are source-owned and commercial facts match 
  const view=resolvePageHero(result);
  assert.deepEqual(view.highlights,page.hero.highlights);
  const packages=JSON.parse(read('../src/content/global-elements/priser.json')).content;
- assert.deepEqual(packages.items.map((x:any)=>x.price),[4500,6900,14900]);
+ assert.deepEqual(packages.items.map((x:any)=>x.price),[975,1495,14900]);
  assert.match(packages.adBudgetNote,/Annonsebudsjett kommer i tillegg/);
  assert.equal(pageSchema.safeParse({...page,hero:{...page.hero,highlights:['']}}).success,false);
  assert.equal(pageSchema.safeParse({...page,hero:{...page.hero,highlights:Array(5).fill('Lovnad')}}).success,false);

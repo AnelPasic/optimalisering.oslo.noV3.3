@@ -317,12 +317,12 @@
           "label": "To optimaliseringer samtidig",
           "support": "Forsterker hverandre"
         },
-        "price": 6900,
+        "price": 1495,
         "detailLink": {
           "label": "Mer om pakken",
           "href": "/priser/#begge"
         },
-        "priceSuffix": "kr/mnd",
+        "priceSuffix": "kr/uke",
         "vatSuffix": "eks. mva.",
         "recommended": true,
         "cta": {

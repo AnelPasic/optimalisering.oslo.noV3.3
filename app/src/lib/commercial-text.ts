@@ -8,7 +8,7 @@ const escape = (value: string) => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 // are bound to the same CMS fields as the cards, without a second price object.
 export function createCommercialTextBinding(home: Page, pricing: Page, shared=resolveHomepageContent(home)) {
   const source = shared.packages;
-  const reference = [...pricing.faq[0].answer.matchAll(/(^|, | og )(.+?)( koster)? (\d[\d \u00a0]*) kr\/mnd/gu)];
+  const reference = [...pricing.faq[0].answer.matchAll(/(^|, | og )(.+?)( koster)? (\d[\d \u00a0]*) kr\/(?:mnd|uke)/gu)];
   if (reference.length !== source.items.length) throw new Error('Pricing FAQ must identify the three packages in their approved order');
   if (new Set(source.items.map(item => item.vatSuffix)).size !== 1) throw new Error('The approved all-prices VAT statement requires one shared VAT suffix');
   const prices = new Map(reference.map((match, index) => [spaces(match[4]), source.items[index]]));
@@ -41,14 +41,14 @@ export function createCommercialTextBinding(home: Page, pricing: Page, shared=re
     rules.set(variant, source.externalCostsNote === externalCanonical ? variant : source.externalCostsNote);
   }
   const rulesPattern = new RegExp([...rules.keys()].sort((a, b) => b.length - a.length).map(escape).join('|'), 'gu');
-  const pattern = new RegExp(`${rulesPattern.source}|${namesPattern.source}|(?:fra )?\\d[\\d \\u00a0]*\\s+kr\\/mnd|eks\\. mva\\.`, 'gu');
+  const pattern = new RegExp(`${rulesPattern.source}|${namesPattern.source}|(?:fra )?\\d[\\d \\u00a0]*\\s+kr\\/(?:mnd|uke)|eks\\. mva\\.`, 'gu');
   // Replace only original reference text in one pass. Inserted CMS strings
   // must remain verbatim, even when they contain old names or price amounts.
   return (text: string): string => text.replace(pattern, value => {
     if (rules.has(value)) return rules.get(value)!;
     if (names.has(value)) return names.get(value)!;
     if (value === 'eks. mva.') return source.items[0].vatSuffix;
-    const amount = value.match(/^(fra )?(\d[\d \u00a0]*)\s+kr\/mnd$/u);
+    const amount = value.match(/^(fra )?(\d[\d \u00a0]*)\s+kr\/(?:mnd|uke)$/u);
     const item = amount && prices.get(spaces(amount[2]));
     return item ? `${amount![1] || (item.pricePrefix ? item.pricePrefix + ' ' : '')}${new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 0 }).format(item.price).replaceAll('\u00a0', ' ')} ${item.priceSuffix}` : value;
   });

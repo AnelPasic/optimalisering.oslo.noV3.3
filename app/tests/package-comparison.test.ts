@@ -20,7 +20,7 @@ test('Pricing CMS: one shared owner, navigable under Priser with same package ke
  assert.equal(editors[0].name,'globalPackages');
  assert.deepEqual(editors[0].operations,{create:false,rename:false,delete:false});
  assert.equal(cms.content.find((x:any)=>x.name==='globalElements').items.some((x:any)=>x.name==='globalPackages'),false);
- assert.deepEqual(source.items.map((i:any)=>[i.key,i.title,i.price]),[['optimalisering','Optimalisering',4500],['vekst','Vekst',6900],['partner','Enterprise',14900]]);
+ assert.deepEqual(source.items.map((i:any)=>[i.key,i.title,i.price,i.priceSuffix]),[['optimalisering','Optimalisering Flex',975,'kr/uke'],['vekst','Vekst',1495,'kr/uke'],['partner','Enterprise',14900,'kr/mnd']]);
  assert.ok(editors[0].fields.find((x:any)=>x.name==='content').fields.some((x:any)=>x.name==='comparison'));
  assert.equal(homeSectionDataSchema.shape.packages.safeParse(source).success,true);
 });
