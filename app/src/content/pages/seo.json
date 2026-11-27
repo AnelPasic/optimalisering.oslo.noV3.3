@@ -51,42 +51,50 @@
     {
       "_block": "content",
       "id": "sokeintensjon",
-      "eyebrow": "Fra søkemarked til ordrebok",
-      "heading": "Du driver bedrift, ikke en klikksamling.",
+      "eyebrow": "Hvorfor vanlig SEO blir et pengesluk",
+      "heading": "Pene grafer foretar ikke bestillinger.",
       "headingAlign": "center",
-      "layout": "three-columns",
+      "layout": "four-columns",
       "surface": "default",
       "body": [
-        "Mange byråer feirer trafikkvekst i fargerike grafer, selv om innboksen din forblir tom. Vi optimaliserer for søkene der kunden faktisk skal kjøpe, fjerner friksjon på landingssiden og kobler organisk synlighet direkte til henvendelser og omsetning.",
-        "Vårt regnestykke for lønnsom SEO er enkelt: Søkevolum x Andel relevante søk x Andel vi klarer å tiltrekke = Relevante henvendelser. Det hjelper lite med ti tusen treff på en oppskrift eller definisjon hvis ingen av dem trenger tjenestene dine."
+        "De fleste som kjøper SEO betaler for trafikk, men det du egentlig trenger er at telefonen ringer og ordreboken fylles. Her er de tre fellene de fleste går i - og hvorfor vårt system kutter ut svinnet:"
       ],
       "items": [
         {
-          "title": "Informative søk",
-          "headline": "Klikk uten kjøpsintensjon",
-          "text": "Tusenvis av treff på definisjoner og generelle råd pynter på trafikkgrafen. Men besøkende som bare samler informasjon fører sjelden til oppdrag. Å jage tomt volum er en dyr måte å fylle serverloggen på.",
+          "title": "1. Svinn",
+          "headline": "Trafikk fra folk som aldri vil handle",
+          "text": "Byrået optimaliserer for brede søk som \"hvorfor drypper kranen\". Det gir 10 000 klikk og grønne grafer. Men de som leser er studenter eller folk som vil fikse det gratis selv. Du betaler dyrt for besøk som aldri legger igjen en krone.",
           "boxVariant": "card",
           "surface": "info",
           "iconName": "warning-circle",
-          "badge": "Lav verdi"
+          "badge": "Kostbart svinn"
         },
         {
-          "title": "Transaksjonssøk",
-          "headline": "Kunder som velger leverandør",
-          "text": "Vi prioriterer de konkrete søkene der kunden aktivt sammenligner leverandører eller leter etter hjelp nå. Færre klikk, men henvendelser med reell betalingsvilje fra kunder i ditt markedsområde.",
+          "title": "2. Rivaler",
+          "headline": "Du kjemper mot giganter om smuler",
+          "text": "Når du jager generelle ord, slåss du mot VG, MegaFlis, Wikipedia og hele Norge. De har ti ganger større budsjett enn deg. Ett lite grep fra konkurrenten er nok til at du raser ned fra førstesiden og mister all synlighet over natten.",
+          "boxVariant": "card",
+          "surface": "base-200",
+          "iconName": "users",
+          "badge": "Høy fallhøyde"
+        },
+        {
+          "title": "3. Risiko",
+          "headline": "Google brenner innsatsen på én time",
+          "text": "Google endrer reglene hele tiden. Sider fulle av generelle oppskrifter og innkjøpt fyllmasse er de første som ryker når algoritmene strammes inn. Å bygge bedriften på tomt volum er som å bygge på kvikkleire: Plutselig forsvinner 70 % av besøkene.",
           "boxVariant": "card",
           "surface": "base-300",
-          "iconName": "target",
-          "badge": "Kjøpsintensjon"
+          "iconName": "warning-octagon",
+          "badge": "Utslettet på en dag"
         },
         {
-          "title": "Søk x Konvertering",
-          "headline": "Fra klikk til bestilling",
-          "text": "Når Google og AI sender kunden inn på siden, må de møte et krystallklart svar, faste priser og null tvil. Kombinasjonen av spisset rangering og enkel handling er det som gjør SEO til en forutsigbar salgskanal.",
+          "title": "4. Løsningen",
+          "headline": "Kun søkene der kunden vil bestille",
+          "text": "Vi kutter ut tullesøk og gjør deg synlig der kunden søker \"rørlegger akutt vannlekkasje Oslo\". Her konkurrerer du mot en håndfull lokale firmaer, sidene tåler Google-oppdateringer, og hvert eneste klikk er en kunde som faktisk trenger hjelp nå.",
           "boxVariant": "card",
           "surface": "secondary",
           "iconName": "chart-line-up",
-          "badge": "Lønnsom vekst"
+          "badge": "Reelle oppdrag"
         }
       ]
     },
