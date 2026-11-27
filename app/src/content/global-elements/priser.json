@@ -4,7 +4,7 @@
   "id": "priser",
   "name": "Pakker og priser",
   "content": {
-    "eyebrow": "Fast månedlig optimalisering. Ingen bindingstid.",
+    "eyebrow": "Fast optimalisering. Ingen bindingstid.",
     "heading": "Tre pakker. Samme mål: Mer salg for din bedrift!",
     "intro": "**Alle pakkene dekker alle optimaliseringstjenester både optimalisering av kampanjer, organisk synlighet eller konverteringsoptimalisering.** \n\nForskjellen er hvor mange områder vi forbedrer samtidig, og hvor raskt resultatene kommer. \n\n**Du kan ikke velge feil pakke.**",
     "orderIntro": "Send nettside og jobb-e-post. Vi kontakter deg for å avklare mål, omfang, pris og oppstart før du bekrefter avtalen. Ingen betaling når du sender forespørselen.",
@@ -33,7 +33,7 @@
     "decisionStrip": {
       "heading": "Hva ønsker du forbedre først?",
       "items": [
-        "Optimalisering: ett prioritert område av gangen. Har du trafikk starter vi vanligvis med konverteringsoptimalisering.",
+        "Optimalisering Flex: ett prioritert område av gangen. Har du trafikk starter vi vanligvis med konverteringsoptimalisering.",
         "Vekst: to områder som jobber sammen. Konverteringsoptimalisering kombinert med mer relevant trafikk slår alt.",
         "Enterprise: større kapasitet og flere forbedringsområder. Vekst på flere områder."
       ]
@@ -47,7 +47,7 @@
     },
     "items": [
       {
-        "title": "Optimalisering",
+        "title": "Optimalisering Flex",
         "descriptor": "Ett viktig forbedringsområde om gangen.",
         "deliveryLabel": "Dette får du",
         "deliverySummary": "En prioritert optimaliseringstjeneste per måned i riktig rekkefølge. Konkrete forbedringer og målinger over hva som ender opp i bestillinger.",
@@ -184,7 +184,7 @@
         "vatSuffix": "eks. mva.",
         "recommended": false,
         "cta": {
-          "label": "Bestill Optimalisering",
+          "label": "Bestill Optimalisering Flex",
           "href": "/priser/?pakke=optimalisering#bestill"
         }
       },
