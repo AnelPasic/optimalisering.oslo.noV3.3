@@ -71,8 +71,8 @@
         },
         {
           "title": "2. Rivaler",
-          "headline": "Du kjemper mot giganter om smuler",
-          "text": "Når du jager generelle ord, slåss du mot VG, MegaFlis, Wikipedia og hele Norge. De har ti ganger større budsjett enn deg. Ett lite grep fra konkurrenten er nok til at du raser ned fra førstesiden og mister all synlighet over natten.",
+          "headline": "Man kjemper mot mange om smuler",
+          "text": "Når en jager generelle ord, slåss man mot VG, MegaFlis, Wikipedia og hele Norge. De har mange ganger større budsjett enn deg. Ett lite grep fra konkurrenten er nok til at du raser ned fra førstesiden og mister all synlighet over natten.",
           "boxVariant": "card",
           "surface": "base-200",
           "iconName": "users",
@@ -81,7 +81,7 @@
         {
           "title": "3. Risiko",
           "headline": "Google brenner innsatsen på én time",
-          "text": "Google endrer reglene hele tiden. Sider fulle av generelle oppskrifter og innkjøpt fyllmasse er de første som ryker når algoritmene strammes inn. Å bygge bedriften på tomt volum er som å bygge på kvikkleire: Plutselig forsvinner 70 % av besøkene.",
+          "text": "Google endrer reglene hele tiden og alt beveger seg mot søkeintensjon. Sider fulle av generelle oppskrifter og innkjøpt fyllmasse er de første som ryker når algoritmene strammes inn. Å bygge synlighet på tomt volum er som å bygge på kvikkleire: Plutselig forsvinner 70 % av besøkene.",
           "boxVariant": "card",
           "surface": "base-300",
           "iconName": "warning-octagon",
