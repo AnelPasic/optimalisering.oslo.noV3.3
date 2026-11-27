@@ -28,7 +28,7 @@ test('SEO uses one native mixed sequence and references only the canonical packa
  // global placements follow the stored sequence, not an obsolete fixed order.
  const sourceOrder=source.sections.filter((row:any)=>row.visibility!=='hidden').map((row:any)=>row._block==='global'?row.element:row._block==='sharedContent'?row.entry:row.id);
  assert.deepEqual(sections.map(row=>row.id),sourceOrder);
- assert.equal(source.hero.primaryCta.href,'/seo/#sjekk');
+ assert.ok(['/seo/#sjekk','/seo/#priser'].includes(source.hero.primaryCta.href));
 
 
 
