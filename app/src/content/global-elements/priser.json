@@ -175,12 +175,12 @@
           "label": "En optimalisering om gangen",
           "support": "Riktig rekkefølge"
         },
-        "price": 4500,
+        "price": 975,
         "detailLink": {
           "label": "Mer om pakken",
           "href": "/priser/#optimalisering"
         },
-        "priceSuffix": "kr/mnd",
+        "priceSuffix": "kr/uke",
         "vatSuffix": "eks. mva.",
         "recommended": false,
         "cta": {
