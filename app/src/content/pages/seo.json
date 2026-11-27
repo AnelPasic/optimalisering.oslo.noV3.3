@@ -8,15 +8,15 @@
     }
   },
   "seo": {
-    "title": "SEO-byrå for bedrifter i Oslo | Intensjonsdrevet søkemotoroptimalisering",
-    "description": "Vi prioriterer søkeintensjon foran tomt volum. Google og AI leter etter svaret kunden vil ha - jobben vår er å gjøre bedriften din til det svaret.",
+    "title": "SEO-byrå for bedrifter i Oslo og byer i Norge | Intensjonsdrevet søkemotoroptimalisering",
+    "description": "Vi prioriterer søkeintensjon foran tomt volum. Google og AI leter etter svaret kunden vil ha, vi gjør bedriften din til det svaret.",
     "noindex": false
   },
   "hero": {
     "layout": "split-right",
     "eyebrow": "Intensjonsdrevet SEO og søkemotoroptimalisering",
     "title": "Google og AI leter etter svaret kunden vil ha. Jobben vår er å gjøre deg til det svaret.",
-    "support": "Det hjelper lite å ligge øverst på Google hvis kunden bare skal lese en definisjon eller finne en skoleoppgave. Vårt SEO-system prioriterer søkeintensjon foran tomt volum: Vi finner de konkrete søkene der folk leter etter leverandøren de skal velge, og bygger tjenestesider som svarer så godt at både søkemotorene og kunden sender bestillingen til deg. Faste priser fra 4 500 kr i måneden uten bindingstid.",
+    "support": "Det hjelper lite å ligge øverst på Google hvis kunden bare skal lese en definisjon eller finne en skoleoppgave. Vårt SEO-system prioriterer søkeintensjon foran tomt volum: Vi fokuserer på de konkrete søkene der folk leter etter leverandøren de skal velge, og bygger tjenestesider som svarer så godt at både søkemotorene og kunden sender bestillingen til deg. ",
     "primaryCta": {
       "label": "Ta en gratis sjekk",
       "href": "/seo/#sjekk"
@@ -61,31 +61,31 @@
       ],
       "items": [
         {
-          "headline": "Klikk uten kjøpsintensjon",
           "title": "Informative søk",
-          "badge": "Lav verdi",
-          "iconName": "warning-circle",
+          "headline": "Klikk uten kjøpsintensjon",
           "text": "Tusenvis av treff på definisjoner og generelle råd pynter på trafikkgrafen. Men besøkende som bare samler informasjon fører sjelden til oppdrag. Å jage tomt volum er en dyr måte å fylle serverloggen på.",
           "boxVariant": "card",
-          "surface": "info"
+          "surface": "info",
+          "iconName": "warning-circle",
+          "badge": "Lav verdi"
         },
         {
-          "headline": "Kunder som velger leverandør",
           "title": "Transaksjonssøk",
-          "badge": "Kjøpsintensjon",
-          "iconName": "target",
+          "headline": "Kunder som velger leverandør",
           "text": "Vi prioriterer de konkrete søkene der kunden aktivt sammenligner leverandører eller leter etter hjelp nå. Færre klikk, men henvendelser med reell betalingsvilje fra kunder i ditt markedsområde.",
           "boxVariant": "card",
-          "surface": "base-300"
+          "surface": "base-300",
+          "iconName": "target",
+          "badge": "Kjøpsintensjon"
         },
         {
-          "headline": "Fra klikk til bestilling",
           "title": "Søk x Konvertering",
-          "badge": "Lønnsom vekst",
-          "iconName": "chart-line-up",
+          "headline": "Fra klikk til bestilling",
           "text": "Når Google og AI sender kunden inn på siden, må de møte et krystallklart svar, faste priser og null tvil. Kombinasjonen av spisset rangering og enkel handling er det som gjør SEO til en forutsigbar salgskanal.",
           "boxVariant": "card",
-          "surface": "secondary"
+          "surface": "secondary",
+          "iconName": "chart-line-up",
+          "badge": "Lønnsom vekst"
         }
       ]
     },
@@ -297,5 +297,8 @@
       "question": "Hjelper dere bedrifter utenfor Oslo?",
       "answer": "Ja, vi vurderer SEO for bedrifter i Oslo og resten av Norge. Når kundene velger leverandør basert på hvor de befinner seg, vurderer vi også lokal SEO, Google bedriftsprofil og faktiske tjenesteområder."
     }
-  ]
+  ],
+  "listing": {
+    "visible": true
+  }
 }
