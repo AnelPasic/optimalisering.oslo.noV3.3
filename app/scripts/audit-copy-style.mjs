@@ -9,6 +9,7 @@ const forbiddenChars = /[–—‑−…→←↗↘“”‘’«»×·]/u;
 const hiddenFormatting = /[\u000B\u000C\u0085\u00AD\u200B\u2028\u2029\u2060\uFEFF]|\r(?!\n)/gu;
 const nonProseKeys = new Set(['href','src','url','path','id','uid','slug','_block','element','iconName','kind','template','code','html','svg','style','class','classes','filename','file','locale','data','schema','json','value']);
 function checkHiddenCopy(node, field) {
+  if (/ \$\.advanced\.(?:headerJs|footerJs)$/.test(field)) return;
   if (typeof node === 'string') {
     for (const match of node.matchAll(hiddenFormatting)) {
       const cp = 'U+' + match[0].codePointAt(0).toString(16).toUpperCase().padStart(4, '0');
@@ -48,6 +49,8 @@ const forbiddenPhrases = [
 ];
 
 function collectStrings(value, path = '$', out = []) {
+  // Executable advanced fields are code, not customer-facing prose.
+  if (/^\$\.advanced\.(?:headerJs|footerJs)$/.test(path)) return out;
   if (typeof value === 'string') {
     out.push({ path, value });
     return out;

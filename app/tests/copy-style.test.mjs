@@ -22,6 +22,11 @@ test('copy-style guard permits formal calculator notation but still rejects orna
     const math = '<span class="math-equation" data-current-equation>{visits} × {conversion} %</span>\ncurrentEquation.textContent = `${visits} × ${conversion} %`;\n[current, scenario, difference, percentage, currentEquation, scenarioEquation].forEach(output => output.textContent = \'–\');';
     const run = source => { writeFileSync(componentFile, source); return spawnSync(process.execPath, [guard], { cwd: root, encoding: 'utf8' }); };
     assert.equal(run(math).status, 0, 'formal math and numeric unavailable placeholder are functional notation');
+    const advanced={headerJs:'window.note="→";\u2028',footerJs:'<img src="/pixel.gif" alt="«code»">'};
+    writeFileSync(pageFile,JSON.stringify({advanced}));
+    assert.equal(run(math).status,0,'advanced JavaScript and HTML are not editorial prose');
+    writeFileSync(pageFile,JSON.stringify({advanced,hero:{title:'Vekst – for deg'}}));
+    assert.notEqual(run(math).status,0,'advanced code never exempts ordinary customer copy');
     const owner={uid:'8ac621d2-d9aa-40ae-9875-ea9c7a2c2462',body:['Avsnitt i denne seksjonen. Felles pakketekster og priser redigeres under Forside → Seksjoner → Pakker og priser.']};
     writeFileSync(pageFile,JSON.stringify({sections:[owner]}));
     assert.equal(run(math).status,0,'exact incoming OWNER sentence survives required preservation');

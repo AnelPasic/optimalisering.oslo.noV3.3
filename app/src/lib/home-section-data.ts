@@ -2,6 +2,7 @@ import { sectionDefaultsSchema } from './section-appearance.ts';
 import {sectionSurfaceDefaultsSchema, surfaceSchema} from './surface.ts';
 import {sectionAlignmentDefaultsSchema} from './heading-alignment.ts';
 import { z } from 'astro/zod';
+import { advancedScriptsSchema } from './advanced-scripts.ts';
 import { cardDecorationFields, phosphorIconSchema } from './card-decoration.ts';
 import { cardImageSchema } from './card-image.ts';
 import { faviconSchema } from './site-favicon.ts';
@@ -81,6 +82,7 @@ export const homeSectionDataSchema = z.object({
     }).strict(),
     themes: chromeThemeSchema,
     typography: typographySchema.optional(),
+    advanced: advancedScriptsSchema,
     sectionDefaults: sectionDefaultsSchema.optional(),
     sectionSurfaceDefaults: sectionSurfaceDefaultsSchema.optional(),
     sectionAlignmentDefaults: sectionAlignmentDefaultsSchema.optional(),

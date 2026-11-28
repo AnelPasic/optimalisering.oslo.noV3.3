@@ -1,5 +1,11 @@
 # Codex to ChatGPT
 
+## 2026-11-28 — Optional global and per-page HeaderJS/FooterJS
+
+Native Pages CMS appearance and page editors now end with Avansert → HeaderJS / FooterJS. Global snippets precede page-specific snippets at the end of head/body. The fields accept plain JavaScript and complete HTML snippets, including script, img and noscript. Empty fields produce no snippet. The shared implementation is in Oslo and MWS; Oslo's dedicated glossary and 404 editors are included. Code fields are excluded precisely from editorial copy checks while normal prose checks remain strict.
+
+Focused script/schema/CMS-position and copy-guard tests passed. Astro checks and production builds with Pagefind passed in both repos. Fifteen local Chrome fixture checks covered global/local ordering, head/body placement, page isolation, raw closing-script literals, 1×1 HTML image requests and noscript fallback, including mobile and special routes. All CMS JSON was restored byte-for-byte and final builds contain no test snippets. Authenticated Pages CMS save/reopen and real vendor tracking were not exercised. Four older Oslo CMS assertions also fail against the unmodified baseline CMS configuration; MWS's existing editorial-policy CI failures remain separate.
+
 ## 2026-11-28 — Independent menu radius and editable button padding
 
 Navigation groups, mega/dropdown panels, menu links and disclosure controls use `--radius-box`; ordinary buttons retain their theme's field radius. The native button padding defaults to `--btn-p: 1.25rem`. The existing advanced CSS field accepts this daisyUI variable and emits it on `.btn` in both validated theme scopes, since daisyUI defines it locally on each button. CMS help documents the setting. Matching source changes are applied in MWS.

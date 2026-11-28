@@ -1,5 +1,6 @@
 import { buttonChoice, buttonStyleSchema } from './section-buttons.ts';
 import { z } from 'astro/zod';
+import { advancedScriptsSchema } from './advanced-scripts.ts';
 import {projectSelectedLinks,safeCmsHref} from './cms-link-choice.ts';
 import { surfaceSchema, sectionModel } from './surface.ts';
 import { headingAlignSchema } from './heading-alignment.ts';
@@ -68,6 +69,7 @@ export const pageSchema = z.preprocess((input,context)=>{
     hero: z.union([heroSchema,synlighetHeroSchema,heroPresentationSchema]).optional(),
     eyebrow: z.string(), title: z.string(), intro: z.string(),
     listing: listingSchema.optional(),
+    advanced: advancedScriptsSchema,
     sections: z.array(z.object({
       uid: z.string().optional(), name: z.string().optional(), content: z.unknown().optional(), visibility: sectionVisibilitySchema,
       globalElement: z.enum(serviceGlobalIds).optional(),

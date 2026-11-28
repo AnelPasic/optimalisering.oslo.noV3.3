@@ -1,0 +1,7 @@
+---
+import { advancedCodeMarkup, type AdvancedScripts } from '../lib/advanced-scripts';
+interface Props { sources: (AdvancedScripts | undefined)[]; placement: 'headerJs' | 'footerJs'; }
+const { sources, placement } = Astro.props;
+const markup = sources.map(source => advancedCodeMarkup(source?.[placement])).filter(Boolean).join('\n');
+---
+<Fragment set:html={markup} />

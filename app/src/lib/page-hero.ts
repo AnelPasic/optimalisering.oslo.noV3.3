@@ -1,5 +1,6 @@
 import {surfaceSchema} from './surface.ts';
 import {z} from 'astro/zod';
+import { advancedScriptsSchema } from './advanced-scripts.ts';
 import {safeCmsHref,projectSelectedLinks} from './cms-link-choice.ts';
 import {heroSchema} from './home-builder.ts';
 import {heroLayoutSchema,heroPresentationSchema} from './hero-presentation.ts';
@@ -58,7 +59,7 @@ export function resolvePageHero(authoredPage:Source,commercial?:Commercial):Hero
  const crumbs=family==='pricing'?[]:[{label:'Forsiden',href:'/'},...(family==='article'?[{label:'Innsikt',href:'/innsikt/'}]:[]),{label:family==='service'?(route.service.pricingBridge?.serviceName??page.eyebrow):page.eyebrow}];
  return heroViewSchema.parse({family,layout,surface,eyebrow:copy?.eyebrow??page.eyebrow,title:copy?.heading??page.title,support:copy?.intro??page.intro,primaryCta:family==='assessment'?undefined:page.cta,secondaryCta:family==='service'&&route.service.pricingBridge?{label:'Se priser',href:route.service.pricingBridge.link.href}:undefined,visual:media?{kind:'image',image:{...media,origin:'page'}}:{kind:'none'},breadcrumbs:crumbs});
 }
-export const specialHeroSourceSchema=z.object({hero:synlighetHeroSchema}).strict();
+export const specialHeroSourceSchema=z.object({hero:synlighetHeroSchema,advanced:advancedScriptsSchema}).strict();
 
 /** 404 and glossary use the same authored Hero source/editor as service pages. */
 function resolveSpecialHero(input:unknown,family:'glossary'|'error'):HeroView{

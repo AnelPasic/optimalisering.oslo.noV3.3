@@ -1,4 +1,5 @@
 import { z } from 'astro/zod';
+import { advancedScriptsSchema } from './advanced-scripts.ts';
 import source from '../content/terminology/glossary.json' with { type: 'json' };
 import {synlighetHeroSchema} from './synlighet-hero.ts';
 import {projectSelectedLinks} from './cms-link-choice.ts';
@@ -16,6 +17,7 @@ const termSchema = z.object({
   simpleExample: optionalText,
 }).strict();
 export const glossarySchema = z.object({
+  advanced: advancedScriptsSchema,
   hero:synlighetHeroSchema,
   description: z.string().trim().min(1),
   seo: z.object({ noindex: z.boolean().optional() }).optional(),

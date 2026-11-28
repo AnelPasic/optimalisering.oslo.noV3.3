@@ -5,6 +5,6 @@ import source from '../content/presentation/hero-layouts.json';
 import {specialHeroSourceSchema,resolveNotFoundHero} from '../lib/page-hero';
 const presentation=specialHeroSourceSchema.parse(source);
 ---
-<SiteLayout title="Siden finnes ikke | Optimalisering Oslo" description="Finn tilbake til tjenestene eller en gratis sjekk." noindex>
+<SiteLayout title="Siden finnes ikke | Optimalisering Oslo" description="Finn tilbake til tjenestene eller en gratis sjekk." noindex advanced={presentation.advanced}>
  <CommercialHero content={resolveNotFoundHero(presentation.hero)}/>
 </SiteLayout>
