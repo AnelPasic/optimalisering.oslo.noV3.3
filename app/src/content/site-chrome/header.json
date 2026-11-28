@@ -110,5 +110,7 @@
     "showSearch": true,
     "showCta": true
   },
-  "logoLight": "/images/branding/logo-1x1.svg"
+  "logoLight": "/images/branding/logo-oo-web.svg",
+  "favicon": "/images/favicons/logo-1x1-1.svg",
+  "mobileLogoLight": "/images/branding/logo-oo-web.svg"
 }
