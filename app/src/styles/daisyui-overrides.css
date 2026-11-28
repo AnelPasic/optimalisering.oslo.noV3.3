@@ -1,6 +1,7 @@
 /* Approved site type/control roles. @utility lets per-element Tailwind
    utilities override them without a late component selector or !important. */
 @utility btn {
+  --btn-p: 1.25rem;
   font-family: var(--body);
   font-size: var(--type-button);
   font-weight: var(--weight-button);

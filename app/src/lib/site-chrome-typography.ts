@@ -2,9 +2,10 @@ import postcss from 'postcss';
 import { z } from 'astro/zod';
 import { parseDaisyTheme, type ChromeThemes } from './site-chrome-theme.ts';
 
-// Strictly existing Tailwind CSS v4 theme namespaces. No custom --site-* tokens.
+// Approved Tailwind typography and native daisyUI button padding. No custom --site-* tokens.
 const sizes = ['xs','sm','base','lg','xl','2xl','3xl','4xl','5xl','6xl'];
 const allowed = new Set([
+  '--btn-p',
   '--font-sans','--font-serif','--font-mono','--font-heading','--font-body',
   ...sizes.flatMap(name => ['--text-' + name, '--text-' + name + '--line-height']),
   '--font-weight-normal','--font-weight-medium','--font-weight-semibold','--font-weight-bold',
@@ -30,8 +31,11 @@ const singleSize = /^\d+(?:\.\d+)?(?:rem|px|em)$/;
 const clampSize = /^clamp\(\s*\d+(?:\.\d+)?(?:rem|px|em)\s*,\s*\d+(?:\.\d+)?(?:vw|rem|px)\s*,\s*\d+(?:\.\d+)?(?:rem|px|em)\s*\)$/;
 const trackingValue = /^-?(?:0|0?\.\d+)(?:em|rem|px)$/;
 function validate(key: string, value: string): void {
-  if (!allowed.has(key)) throw new Error('Ikke tillatt Tailwind-token: ' + key);
-  if (key.startsWith('--font-') && !key.startsWith('--font-weight-')) {
+  if (!allowed.has(key)) throw new Error('Ikke tillatt CSS-variabel: ' + key);
+  if (key === '--btn-p') {
+    if (!(value === '0' || singleSize.test(value)) || !Number.isFinite(parseFloat(value)))
+      throw new Error('Ugyldig knapp-padding for ' + key + '. Bruk 0 eller en lengde i rem, px eller em.');
+  } else if (key.startsWith('--font-') && !key.startsWith('--font-weight-')) {
     if (!fontStacks.has(value)) throw new Error('Kun innebygde/godkjente skriftstakker er tillatt for ' + key);
   } else if (/^--text-[^-]+$/.test(key)) {
     if (!(singleSize.test(value) || clampSize.test(value))) throw new Error('Ugyldig fontstørrelse for ' + key);
@@ -128,9 +132,14 @@ export function typographyVariables(typography?: ChromeTypography): Record<strin
 export function typographyOverridesCss(themes: ChromeThemes, typography?: ChromeTypography): string {
   const values = typographyVariables(typography);
   if (!Object.keys(values).length) return '';
-  const declarations = Object.entries(values).map(([key,value]) => key + ':' + value + ';').join('');
+  const buttonPadding = values['--btn-p'];
+  const declarations = Object.entries(values).filter(([key]) => key !== '--btn-p')
+    .map(([key,value]) => key + ':' + value + ';').join('');
   return (['light','dark'] as const).map(mode => {
     const name = parseDaisyTheme(themes[mode + 'Css' as 'lightCss'|'darkCss'], mode).name;
-    return 'html[data-theme="' + name + '"]{' + declarations + '}';
+    const selector = 'html[data-theme="' + name + '"]';
+    // daisyUI declares --btn-p on .btn itself, so a root-only value cannot override it.
+    return (declarations ? selector + '{' + declarations + '}' : '')
+      + (buttonPadding !== undefined ? selector + ' .btn{--btn-p:' + buttonPadding + ';}' : '');
   }).join('\n');
 }

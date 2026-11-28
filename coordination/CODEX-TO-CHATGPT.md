@@ -1,5 +1,11 @@
 # Codex to ChatGPT
 
+## 2026-11-28 — Independent menu radius and editable button padding
+
+Navigation groups, mega/dropdown panels, menu links and disclosure controls use `--radius-box`; ordinary buttons retain their theme's field radius. The native button padding defaults to `--btn-p: 1.25rem`. The existing advanced CSS field accepts this daisyUI variable and emits it on `.btn` in both validated theme scopes, since daisyUI defines it locally on each button. CMS help documents the setting. Matching source changes are applied in MWS.
+
+Twelve focused typography/variable tests, Astro checks and builds with Pagefind passed across the two repos. Chrome checks at 1440, 390 and 320 px covered both themes, mega/dropdown keyboard interaction, menu radii independent of larger button radii, default 20 px padding and a generated CMS override of 28 px, icon-control dimensions and no horizontal overlap. Authenticated Pages CMS save/reopen was not exercised. MWS copy QA passed; Oslo's general copy audit stops on an existing “ikke bare” phrase in unchanged Lokal SEO content.
+
 ## 2026-11-23 — Restore shared Hero rendering for the optimization-first article
 
 Removed the hardcoded route check, question-mark heading split and `decision-hero-highlight` styling introduced in the 02:10 article change. The article now renders its authored title through the common Hero path. The recent split-image width correction remains. No article JSON changed. MWS was inspected and already has no corresponding exception.

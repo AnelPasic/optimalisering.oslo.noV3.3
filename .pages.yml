@@ -2821,6 +2821,7 @@ content:
                 type: text
                 description: >
                   Bruk godkjente Tailwind v4-variabler, for eksempel --text-5xl: clamp(1.75rem, 4.5vw, 3.25rem);
+                  Knappenes sidepadding kan endres med --btn-p: 1.25rem; (standard). Bruk 0 eller en lengde i rem, px eller em.
                   Du kan også lime inn én :root-blokk med variablene.
           - name: themes
             label: Tema og utseende (daisyUI)

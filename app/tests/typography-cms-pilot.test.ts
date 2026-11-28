@@ -6,6 +6,20 @@ import {parseTypographyVariables,typographySchema,typographyOverridesCss,typogra
 import {siteChrome} from '../src/lib/site-chrome-data.ts';
 const read=(path:string)=>readFileSync(path,'utf8');
 const appearance=JSON.parse(read('src/content/site-chrome/appearance.json'));
+
+test('advanced CSS accepts DaisyUI button padding and applies it to buttons in both themes',()=>{
+ const input='--text-6xl: 3rem; --btn-p: 1.25rem;';
+ assert.deepEqual(parseTypographyVariables(':root { '+input+' }'),parseTypographyVariables(input));
+ assert.equal(typographySchema.safeParse({cssVariables:input}).success,true);
+ const css=typographyOverridesCss(siteChrome.themes,typographySchema.parse({cssVariables:input}));
+ for(const name of ['optimalisering','sunset']){
+  assert.ok(css.includes('html[data-theme="'+name+'"] .btn{--btn-p:1.25rem;}'));
+  assert.ok(css.includes('html[data-theme="'+name+'"]{--text-6xl:3rem;}'));
+ }
+ for(const value of ['-1rem','1rem 2rem','url(https://invalid.example/a)','var(--other)','1.25rem !important'])
+  assert.equal(typographySchema.safeParse({cssVariables:'--btn-p: '+value+';'}).success,false,value);
+ assert.equal(typographySchema.safeParse({cssVariables:'--btn-bg: red;'}).success,false);
+});
 test('OWNER saved typography is accepted without rewriting appearance or changing default theme',()=>{
  const expected=appearance.typography ? typographySchema.parse(appearance.typography) : undefined;
  assert.deepEqual(siteChrome.typography,expected);
@@ -13,7 +27,7 @@ test('OWNER saved typography is accepted without rewriting appearance or changin
  assert.match(appearance.themes.darkCss,/name: "sunset"/);
  if(expected){
   const tokens=typographyVariables(siteChrome.typography);
-  assert.ok(Object.keys(tokens).every(name=>name.startsWith('--text-')||name.startsWith('--font-')||name.startsWith('--leading-')||name.startsWith('--tracking-')));
+  assert.ok(Object.keys(tokens).every(name=>name.startsWith('--text-')||name.startsWith('--font-')||name.startsWith('--leading-')||name.startsWith('--tracking-')||name==='--btn-p'));
   const css=typographyOverridesCss(siteChrome.themes,siteChrome.typography);
   assert.match(css,/html\[data-theme="optimalisering"\]/);
   assert.match(css,/html\[data-theme="sunset"\]/);
